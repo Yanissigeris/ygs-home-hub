@@ -5,13 +5,12 @@ import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { CheckCircle2, MapPin, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const buyerProfiles = [
-  { title: "Premier acheteur", desc: "Vous achetez pour la première fois et voulez comprendre le processus de A à Z." },
-  { title: "Famille qui veut plus d'espace", desc: "Vous êtes à l'étroit et cherchez un quartier familial avec plus de pièces et un terrain." },
-  { title: "Relocalisé d'Ottawa ou Montréal", desc: "Vous arrivez de l'autre côté de la rivière et voulez un guide local qui connaît le terrain." },
-  { title: "Hésitant entre plusieurs secteurs", desc: "Vous ne savez pas encore où acheter — je vous aide à comparer les quartiers objectivement." },
+  { title: "Premier acheteur", desc: "Vous achetez pour la première fois et voulez comprendre le processus sans vous sentir dépassé." },
+  { title: "Famille qui veut plus d'espace", desc: "Vous êtes à l'étroit et cherchez un quartier familial avec plus de pièces, un terrain, et des services à proximité." },
+  { title: "Relocalisé d'Ottawa ou Montréal", desc: "Vous arrivez de l'autre côté de la rivière et avez besoin d'un guide local qui connaît vraiment le terrain." },
+  { title: "Hésitant entre plusieurs secteurs", desc: "Vous ne savez pas encore où acheter — je vous aide à comparer les quartiers objectivement pour trouver le bon fit." },
 ];
 
 const sectors = [
@@ -21,10 +20,10 @@ const sectors = [
 ];
 
 const faq = [
-  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. Lors de notre consultation, on évalue votre budget, vos priorités et les conditions actuelles du marché pour voir si c'est le bon timing pour vous." },
-  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Le processus d'achat au Québec a quelques particularités (promesse d'achat, inspection, notaire). Je vous guide à travers chaque étape pour que la transition soit simple et sans surprise." },
-  { q: "Dois-je avoir une pré-approbation hypothécaire?", a: "C'est fortement recommandé. Ça vous donne une idée claire de votre budget et renforce votre position d'acheteur quand vient le temps de faire une offre." },
-  { q: "Comment choisir le bon secteur?", a: "Ça dépend de votre mode de vie, votre budget, votre famille et vos besoins quotidiens. On regarde tout ça ensemble." },
+  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. Lors de notre consultation, on évalue votre budget, vos priorités et les conditions du marché pour voir si c'est le bon timing pour vous." },
+  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Le processus d'achat au Québec a quelques particularités (promesse d'achat, inspection, notaire). Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
+  { q: "Dois-je avoir une pré-approbation hypothécaire?", a: "C'est fortement recommandé. Ça vous donne une idée claire de votre budget et renforce votre position quand vient le temps de faire une offre." },
+  { q: "Comment choisir le bon secteur?", a: "Ça dépend de votre mode de vie, votre budget, votre famille et vos besoins au quotidien. On regarde tout ça ensemble pour cibler les bons quartiers." },
 ];
 
 const BuyerPage = () => (
@@ -32,7 +31,7 @@ const BuyerPage = () => (
     <HeroSection
       overline="Pour acheteurs · Gatineau et environs"
       title="Acheter à Gatineau avec plus de clarté et moins de stress"
-      subtitle="Que vous soyez premier acheteur, famille qui cherche plus d'espace ou acheteur venant d'Ottawa ou Montréal, je vous guide à chaque étape."
+      subtitle="Que vous soyez premier acheteur, famille qui cherche plus d'espace ou acheteur relocalisé d'Ottawa ou Montréal — je vous guide à chaque étape pour que vous achetiez avec confiance."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
@@ -41,8 +40,8 @@ const BuyerPage = () => (
       <div className="section-container max-w-3xl">
         <SectionHeading
           overline="L'achat immobilier"
-          title="Acheter ici, ce n'est pas juste trouver une maison"
-          subtitle="Il faut aussi comprendre les secteurs, la valeur réelle, les taxes municipales, les conditions du marché, le potentiel de revente et la bonne stratégie d'offre. C'est là que j'entre en jeu."
+          title="Choisir une propriété, c'est aussi choisir un secteur, un style de vie et une stratégie"
+          subtitle="Au-delà de la maison elle-même, il faut comprendre les secteurs, la valeur réelle, les taxes, les conditions du marché, le potentiel de revente et la bonne stratégie d'offre. C'est exactement là que mon accompagnement fait la différence."
         />
       </div>
     </section>
@@ -83,8 +82,8 @@ const BuyerPage = () => (
 
     <CTASection
       overline="Consultation gratuite"
-      title="Parlons de votre projet"
-      text="Je peux vous aider à clarifier votre budget, cibler les bons secteurs et éviter les erreurs coûteuses."
+      title="Parlons de votre projet d'achat"
+      text="Je peux vous aider à clarifier votre budget, cibler les bons secteurs et éviter les erreurs coûteuses — avant même de commencer les visites."
       buttons={[{ label: "Réserver ma consultation", href: "/contact-yanis" }]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

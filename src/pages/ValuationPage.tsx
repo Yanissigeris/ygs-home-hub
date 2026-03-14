@@ -14,16 +14,16 @@ import {
 import { CheckCircle2, Shield, Clock, Lock } from "lucide-react";
 
 const benefits = [
-  "Une fourchette de valeur réaliste basée sur les ventes récentes",
-  "Mon avis sur le bon positionnement prix",
+  "Une fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur",
+  "Mon avis sur le bon positionnement prix pour votre situation",
   "Les forces de votre propriété à mettre de l'avant",
-  "Les points à corriger si nécessaire",
-  "Les prochaines étapes possibles, sans engagement",
+  "Les points à corriger si nécessaire — et lesquels valent vraiment la peine",
+  "Les prochaines étapes possibles, sans engagement ni pression",
 ];
 
 const trustPoints = [
-  { icon: Lock, text: "Vos informations restent confidentielles" },
-  { icon: Clock, text: "Réponse personnalisée en 24h" },
+  { icon: Lock, text: "Vos informations restent strictement confidentielles" },
+  { icon: Clock, text: "Réponse personnalisée en 24h — pas un rapport automatisé" },
   { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
@@ -38,9 +38,9 @@ const ValuationPage = () => {
   return (
     <>
       <HeroSection
-        overline="Évaluation gratuite · Gatineau"
+        overline="Évaluation gratuite · Gatineau et Outaouais"
         title="Découvrez combien vaut votre propriété à Gatineau"
-        subtitle="Recevez une estimation personnalisée basée sur votre secteur, le type de propriété et les ventes comparables récentes."
+        subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes."
         trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
       />
 
@@ -53,14 +53,14 @@ const ValuationPage = () => {
               <p className="label-overline mb-3">Formulaire</p>
               <h2>Demandez votre évaluation gratuite</h2>
               <p className="prose-body mt-3">
-                Remplissez ce court formulaire et je vous reviens avec une analyse personnalisée de la valeur de votre propriété.
+                Remplissez ce court formulaire et je vous reviens personnellement avec une analyse de la valeur de votre propriété — pas un rapport automatisé.
               </p>
 
               {submitted ? (
                 <div className="mt-10 rounded-lg border border-accent/30 bg-accent/5 p-10 text-center">
                   <CheckCircle2 size={44} className="mx-auto text-accent" />
                   <h3 className="mt-5">Merci! Votre demande a été envoyée.</h3>
-                  <p className="mt-3 text-[0.875rem] text-muted-foreground">Je vous reviens dans les 24 prochaines heures avec votre analyse personnalisée.</p>
+                  <p className="mt-3 text-[0.875rem] text-muted-foreground">Je vous reviens personnellement dans les 24 prochaines heures.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -157,9 +157,11 @@ const ValuationPage = () => {
 
             {/* Trust sidebar */}
             <aside className="lg:col-span-2 lg:pt-14">
-              {/* Trust indicators */}
               <div className="rounded-lg border border-border bg-secondary/50 p-7">
-                <h4 className="font-body text-[0.9375rem] font-semibold text-foreground">Confidentiel et sans engagement</h4>
+                <h4 className="font-body text-[0.9375rem] font-semibold text-foreground">Une estimation utile, claire et sans pression</h4>
+                <p className="mt-3 text-[0.8125rem] leading-relaxed text-muted-foreground">
+                  Pour vous aider à mieux planifier la suite — que vous soyez prêt à vendre maintenant ou dans quelques mois.
+                </p>
                 <div className="mt-5 space-y-4">
                   {trustPoints.map((t) => (
                     <div key={t.text} className="flex items-start gap-3">
@@ -170,11 +172,10 @@ const ValuationPage = () => {
                 </div>
               </div>
 
-              {/* Testimonial placeholder */}
               <div className="mt-6 rounded-lg border border-dashed border-border bg-card p-7">
                 <p className="text-[0.6875rem] text-muted-foreground/50 mb-3">[Témoignage client — à ajouter]</p>
                 <p className="text-[0.875rem] italic leading-relaxed text-muted-foreground">
-                  "Yanis m'a donné une lecture claire et réaliste du marché. Pas de pression, juste de bons conseils."
+                  "[Témoignage d'un client vendeur qui a apprécié l'approche sans pression de Yanis]"
                 </p>
                 <p className="mt-3 text-[0.75rem] text-muted-foreground/60">— [Nom du client], [Secteur]</p>
               </div>
@@ -203,7 +204,7 @@ const ValuationPage = () => {
         <div className="section-container max-w-2xl text-center">
           <SectionHeading
             title="Pas besoin d'être prêt à vendre tout de suite"
-            subtitle="Plusieurs propriétaires veulent simplement comprendre leur valeur actuelle avant de décider. C'est correct. Je peux vous donner une lecture claire du marché sans pression et sans obligation."
+            subtitle="Beaucoup de propriétaires veulent simplement comprendre leur valeur actuelle avant de décider. C'est tout à fait correct. Je vous donne une lecture claire du marché, sans pression et sans obligation."
             centered
           />
           <Button className="mt-8" size="lg" asChild>
