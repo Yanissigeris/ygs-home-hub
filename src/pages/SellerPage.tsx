@@ -106,8 +106,8 @@ const SellerPage = () => (
       title="Vous voulez savoir quoi faire dans votre cas?"
       text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
       buttons={[
-        { label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

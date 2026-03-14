@@ -95,7 +95,7 @@ const PlexPage = () => (
       title="Recevez une lecture claire de votre situation"
       text="Vendre, acheter ou simplement comprendre votre position — je vous aide à y voir plus clair."
       buttons={[
-        { label: "Demander une analyse plex", href: "/contact-yanis" },
+        { label: "Demander une analyse plex", href: "/analyse-plex-gatineau" },
         { label: "Évaluer mon plex", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
