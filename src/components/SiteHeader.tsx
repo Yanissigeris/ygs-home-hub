@@ -36,25 +36,27 @@ const SiteHeader = () => {
         className="section-container hidden sm:flex items-center justify-between h-full"
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
-        <Link to="/" className="flex items-center shrink-0">
-          {/* Desktop logo — lg+ (vertical for readability) */}
+        <Link to="/" className="flex items-center shrink-0 mr-8">
+          {/* Desktop logo — lg+ */}
           <img
-            src={logoYgsVertical}
+            src={logoYgsHorizontal}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
-              height: scrolled ? 56 : 64,
-              width: "auto",
+              width: scrolled ? 280 : 310,
+              height: "auto",
+              maxHeight: scrolled ? 50 : 56,
             }}
           />
-          {/* Tablet logo — sm to lg (vertical for readability) */}
+          {/* Tablet logo — sm to lg */}
           <img
-            src={logoYgsVertical}
+            src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              height: scrolled ? 50 : 56,
-              width: "auto",
+              width: scrolled ? 220 : 250,
+              height: "auto",
+              maxHeight: scrolled ? 40 : 46,
             }}
           />
         </Link>
