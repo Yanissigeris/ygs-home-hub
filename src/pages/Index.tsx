@@ -157,15 +157,30 @@ const Index = () => (
     {/* Sectors */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-3xl">
-        <p className="label-overline text-center mb-2">Gatineau et environs</p>
-        <h2 className="text-center">Secteurs à surveiller</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="label-overline text-center mb-2">Gatineau et environs</p>
+          <h2 className="text-center">Secteurs à surveiller</h2>
+        </motion.div>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {sectors.map((s) => (
-            <Link key={s.name} to={s.href} className="card-elevated group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
-              <MapPin size={14} className="text-accent shrink-0" />
-              <span className="text-[0.875rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
-              <ArrowRight size={13} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
-            </Link>
+          {sectors.map((s, i) => (
+            <motion.div
+              key={s.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Link to={s.href} className="card-elevated group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
+                <MapPin size={14} className="text-accent shrink-0" />
+                <span className="text-[0.875rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
+                <ArrowRight size={13} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
