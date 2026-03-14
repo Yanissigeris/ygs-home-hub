@@ -108,7 +108,7 @@ const Index = () => (
       <div className="section-container">
         <p>Vous pensez vendre? Commencez par connaître la valeur de votre propriété.</p>
         <Button size="sm" variant="hero" asChild>
-          <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
+          <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite →</Link>
         </Button>
       </div>
     </section>
