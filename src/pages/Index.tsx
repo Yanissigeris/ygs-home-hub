@@ -10,19 +10,20 @@ import { ArrowRight, MapPin, Award, Clock, Heart } from "lucide-react";
 const audienceCards = [
   {
     title: "Vendre",
-    text: "Savoir combien vaut votre propriété, quand vendre et comment obtenir le bon prix.",
+    text: "Connaître la valeur de votre propriété, planifier le bon timing et obtenir le meilleur prix.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
+    featured: true,
   },
   {
     title: "Acheter",
-    text: "Trouver le bon secteur, le bon prix et éviter les erreurs coûteuses.",
+    text: "Trouver le bon secteur, éviter les erreurs coûteuses et acheter avec confiance.",
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
   },
   {
     title: "Plex / investissement",
-    text: "Analyser la valeur, le rendement et le bon timing pour acheter ou vendre un plex.",
+    text: "Analyser la valeur, le rendement et la stratégie avant de prendre une décision.",
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
   },
@@ -38,14 +39,14 @@ const Index = () => (
   <>
     <HeroSection
       overline="Yanis Gauthier-Sigeris · Courtier immobilier"
-      title="Votre allié en immobilier à Gatineau"
-      subtitle="Vendre, acheter ou investir avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
+      title="YGS — Votre allié en immobilier à Gatineau"
+      subtitle="Vendre, acheter ou investir à Gatineau avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
 
-    {/* Audience cards — tighter, no icons, punchier */}
+    {/* Audience cards */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-4xl">
         <div className="grid gap-5 sm:grid-cols-3">
@@ -53,7 +54,9 @@ const Index = () => (
             <Link
               key={card.title}
               to={card.href}
-              className="card-elevated group flex flex-col rounded-lg border border-border bg-card p-6 sm:p-7"
+              className={`card-elevated group flex flex-col rounded-lg border bg-card p-6 sm:p-7 ${
+                card.featured ? "border-accent/40 ring-1 ring-accent/10" : "border-border"
+              }`}
             >
               <h3 className="group-hover:text-primary transition-colors">{card.title}</h3>
               <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
@@ -66,7 +69,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Inline seller CTA — break the pattern, drive action */}
+    {/* Inline seller CTA */}
     <section className="bg-primary py-5">
       <div className="section-container flex flex-col items-center justify-between gap-3 sm:flex-row">
         <p className="text-[0.8125rem] font-medium text-primary-foreground/80">
@@ -82,22 +85,22 @@ const Index = () => (
     <section className="section-padding bg-background">
       <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-center">
         <div className="lg:col-span-2">
-          <ImagePlaceholder label="Photo professionnelle de Yanis — à ajouter" aspectRatio="aspect-[3/4]" />
+          <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
         </div>
         <div className="lg:col-span-3">
           <p className="label-overline mb-2">Pourquoi YGS</p>
-          <h2>Une approche simple, stratégique et humaine</h2>
+          <h2>Un accompagnement simple, stratégique et humain</h2>
           <p className="prose-body mt-4">
-            Mon rôle n'est pas de vous pousser. C'est de vous donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
+            En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire, locale et sans pression.
           </p>
           <p className="prose-body mt-3">
-            Depuis près de 9 ans, j'accompagne des vendeurs, des acheteurs et des investisseurs à Gatineau, Aylmer, Hull et dans les secteurs autour.
+            Son rôle n'est pas de pousser. C'est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
           </p>
 
-          {/* Credibility — tight, inline, understated */}
+          {/* Credibility */}
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.75rem] text-muted-foreground/70">
-            <span className="flex items-center gap-1.5"><Clock size={12} /> Près de 9 ans d'expérience</span>
-            <span className="flex items-center gap-1.5"><Award size={12} /> Club Platine · Club 100% · Temple de la renommée</span>
+            <span className="flex items-center gap-1.5"><Clock size={12} /> Près de 9 ans d'expérience en Outaouais</span>
+            <span className="flex items-center gap-1.5"><Award size={12} /> Club Platine · Club 100% · Temple de la renommée RE/MAX</span>
             <span className="flex items-center gap-1.5"><Heart size={12} /> Approche axée sur la confiance</span>
           </div>
 
@@ -108,7 +111,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Sectors — compact */}
+    {/* Sectors */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-4xl">
         <p className="label-overline text-center mb-2">Gatineau et environs</p>

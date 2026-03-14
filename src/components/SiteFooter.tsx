@@ -7,11 +7,11 @@ const SiteFooter = () => (
         {/* Brand */}
         <div className="lg:col-span-1">
           <span className="font-heading text-[1.75rem] font-bold">YGS</span>
-          <p className="mt-1 text-[0.8125rem] font-medium opacity-70">Votre allié en immobilier</p>
+          <p className="mt-1 text-[0.8125rem] font-medium opacity-70">Votre allié en immobilier à Gatineau</p>
           <p className="mt-4 text-[0.8125rem] leading-relaxed opacity-60">
             Stratégie claire. Zéro pression.<br />Pas de mauvaises surprises.
           </p>
-          <p className="mt-4 text-[0.6875rem] opacity-40">
+          <p className="mt-4 text-[0.6875rem] opacity-30">
             Courtier affilié RE/MAX · Équipe Marty Waite
           </p>
         </div>
@@ -39,28 +39,22 @@ const SiteFooter = () => (
         {/* Secteurs */}
         <div>
           <h4 className="mb-4 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] opacity-50">Secteurs desservis</h4>
-          <ul className="space-y-2.5 text-[0.8125rem] opacity-70">
-            <li>Gatineau</li>
-            <li>Aylmer</li>
-            <li>Hull</li>
-            <li>Plateau</li>
-            <li>Buckingham / Masson-Angers</li>
-            <li>Outaouais</li>
-          </ul>
+          <p className="text-[0.8125rem] leading-relaxed opacity-70">
+            Gatineau, Aylmer, Hull, Plateau, Buckingham, Masson-Angers et secteurs environnants
+          </p>
         </div>
 
         {/* Contact */}
         <div>
           <h4 className="mb-4 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] opacity-50">Contact</h4>
           <ul className="space-y-2.5 text-[0.8125rem] opacity-70">
-            <li>[Téléphone — à ajouter]</li>
-            <li>[Courriel — à ajouter]</li>
-            <li>[Adresse ou secteur — à ajouter]</li>
+            <li>[Téléphone]</li>
+            <li>[Courriel]</li>
+            <li>[Adresse / secteur desservi]</li>
           </ul>
           <div className="mt-5 flex gap-5">
             <a href="#" aria-label="Facebook" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[Facebook]</a>
             <a href="#" aria-label="Instagram" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[Instagram]</a>
-            <a href="#" aria-label="LinkedIn" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[LinkedIn]</a>
           </div>
         </div>
       </div>
@@ -69,7 +63,7 @@ const SiteFooter = () => (
         <p className="text-[0.6875rem] opacity-40">
           © {new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.
         </p>
-        <p className="mt-1 text-[0.6875rem] opacity-30">
+        <p className="mt-1 text-[0.6875rem] opacity-25">
           [Mentions légales] · [Politique de confidentialité]
         </p>
       </div>

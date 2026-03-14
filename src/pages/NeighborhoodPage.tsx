@@ -7,17 +7,17 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { CheckCircle2 } from "lucide-react";
 
 const reasons = [
-  "Plus d'espace à un prix encore accessible",
-  "Quartier familial — parcs, écoles, services",
+  "Plus d'espace à un prix encore accessible comparé à Ottawa",
+  "Quartier familial — parcs, écoles, services de proximité",
   "Accès pratique vers Ottawa par les ponts",
-  "Maisons plus récentes, bon rapport qualité-prix",
-  "Qualité de vie appréciée des familles et professionnels",
+  "Maisons plus récentes avec bon rapport qualité-prix",
+  "Qualité de vie appréciée des familles et jeunes professionnels",
 ];
 
 const sellerReasons = [
   "Aller vers plus grand ou plus de terrain",
-  "Se rapprocher d'un secteur plus calme",
-  "Profiter du marché actuel",
+  "Se rapprocher d'un secteur plus calme ou mieux adapté",
+  "Profiter des conditions actuelles du marché",
   "Réduire la taille après le départ des enfants",
 ];
 
@@ -48,7 +48,7 @@ const NeighborhoodPage = () => (
             ))}
           </div>
         </div>
-        <ImagePlaceholder label="Photo Plateau / Aylmer — à ajouter" />
+        <ImagePlaceholder label="Photo de secteur à ajouter" />
       </div>
     </section>
 
@@ -57,7 +57,7 @@ const NeighborhoodPage = () => (
       <div className="section-container max-w-2xl">
         <SectionHeading
           overline="Vendeurs du secteur"
-          title="Vous habitez déjà le Plateau?"
+          title="Vous habitez déjà le Plateau / Aylmer?"
           subtitle="C'est peut-être le bon moment de voir ce que votre propriété vaut dans le marché actuel."
         />
         <div className="mt-5 space-y-2">
@@ -76,7 +76,7 @@ const NeighborhoodPage = () => (
 
     <CTASection
       dark
-      title="Acheteur ou vendeur dans le Plateau?"
+      title="Acheteur ou vendeur dans le Plateau / Aylmer?"
       text="Je peux vous aider à y voir clair — que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },

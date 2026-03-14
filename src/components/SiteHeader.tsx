@@ -23,7 +23,7 @@ const SiteHeader = () => {
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="font-heading text-[1.5rem] font-bold tracking-tight text-primary">YGS</span>
           <span className="hidden text-[0.6875rem] font-medium leading-tight text-muted-foreground sm:block">
-            Courtier immobilier
+            Courtier immobilier · Gatineau
           </span>
         </Link>
 

@@ -43,7 +43,7 @@ const ContactPage = () => {
       <section className="section-padding bg-background">
         <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
           <div className="lg:col-span-2">
-            <ImagePlaceholder label="Photo professionnelle de Yanis — à ajouter" aspectRatio="aspect-[3/4]" />
+            <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
           </div>
           <div className="lg:col-span-3">
             <p className="label-overline mb-2">À propos</p>
@@ -52,10 +52,10 @@ const ContactPage = () => {
             <p className="mt-0.5 text-[0.6875rem] text-muted-foreground/40">Affilié RE/MAX · Équipe Marty Waite</p>
 
             <p className="prose-body mt-5">
-              Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+              Courtier immobilier en Outaouais, Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Son objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
             </p>
             <p className="prose-body mt-3">
-              Après près de 9 ans dans l'immobilier résidentiel en Outaouais et dans l'Équipe Marty Waite depuis le début, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
+              Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, il a eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui le motive, c'est de savoir que ses clients prennent des décisions éclairées.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4 text-[0.75rem] text-muted-foreground/60">
@@ -66,7 +66,7 @@ const ContactPage = () => {
               ))}
             </div>
 
-            {/* Credibility inline */}
+            {/* Credibility */}
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.6875rem] text-muted-foreground/50">
               <span className="flex items-center gap-1"><Clock size={10} /> Près de 9 ans d'expérience</span>
               <span className="flex items-center gap-1"><Award size={10} /> Club Platine · Club 100% · Temple de la renommée</span>
@@ -77,9 +77,9 @@ const ContactPage = () => {
             <div className="mt-8 rounded-lg border border-border bg-secondary/40 p-5">
               <p className="text-[0.8125rem] font-semibold text-foreground mb-3">Coordonnées</p>
               <div className="space-y-2 text-[0.75rem] text-muted-foreground">
-                <div className="flex items-center gap-2"><Phone size={12} className="text-muted-foreground/40" /> [Téléphone — à ajouter]</div>
-                <div className="flex items-center gap-2"><Mail size={12} className="text-muted-foreground/40" /> [Courriel — à ajouter]</div>
-                <div className="flex items-center gap-2"><MapPin size={12} className="text-muted-foreground/40" /> Gatineau, Aylmer, Hull, Plateau, Buckingham</div>
+                <div className="flex items-center gap-2"><Phone size={12} className="text-muted-foreground/40" /> [Téléphone]</div>
+                <div className="flex items-center gap-2"><Mail size={12} className="text-muted-foreground/40" /> [Courriel]</div>
+                <div className="flex items-center gap-2"><MapPin size={12} className="text-muted-foreground/40" /> [Adresse / secteur desservi]</div>
               </div>
               <div className="mt-3 flex gap-3 text-[0.6875rem] text-muted-foreground/40">
                 <span>[Facebook]</span>

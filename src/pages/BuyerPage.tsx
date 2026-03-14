@@ -4,14 +4,13 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { MapPin, ArrowRight } from "lucide-react";
 
 const buyerProfiles = [
-  { title: "Premier acheteur", desc: "Comprendre le processus sans se sentir dépassé." },
-  { title: "Famille qui veut plus d'espace", desc: "Trouver un quartier familial avec plus de pièces et un terrain." },
-  { title: "Relocalisé d'Ottawa ou Montréal", desc: "Un guide local qui connaît vraiment le terrain de l'autre côté." },
-  { title: "Hésitant entre secteurs", desc: "Comparer les quartiers objectivement pour trouver le bon fit." },
+  { title: "Premier acheteur", desc: "Comprendre le processus étape par étape sans se sentir dépassé." },
+  { title: "Famille qui veut plus d'espace", desc: "Trouver un quartier familial avec plus de pièces, un terrain et les bons services à proximité." },
+  { title: "Relocalisé d'Ottawa ou Montréal", desc: "Un guide local qui connaît vraiment le terrain — secteurs, prix, taxes et particularités du Québec." },
+  { title: "Hésitant entre secteurs", desc: "Comparer les quartiers objectivement — prix, potentiel, style de vie — pour trouver le bon fit." },
 ];
 
 const sectors = [
@@ -24,7 +23,7 @@ const faq = [
   { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. On évalue votre budget, vos priorités et les conditions du marché ensemble." },
   { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus a ses particularités. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
   { q: "Dois-je avoir une pré-approbation?", a: "Fortement recommandé. Ça clarifie votre budget et renforce votre position lors de l'offre." },
-  { q: "Comment choisir le bon secteur?", a: "Mode de vie, budget, famille, besoins quotidiens — on regarde tout ça ensemble." },
+  { q: "Comment choisir le bon secteur?", a: "Mode de vie, budget, famille, trajets quotidiens — on regarde tout ça ensemble pour trouver le meilleur équilibre." },
 ];
 
 const BuyerPage = () => (
@@ -32,7 +31,7 @@ const BuyerPage = () => (
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
-      subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress."
+      subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress et sans erreur."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
@@ -41,8 +40,8 @@ const BuyerPage = () => (
       <div className="section-container max-w-2xl">
         <SectionHeading
           overline="L'achat immobilier"
-          title="Choisir une propriété, c'est aussi choisir un secteur et une stratégie"
-          subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la stratégie d'offre."
+          title="Choisir une propriété, c'est aussi choisir un secteur, un style de vie et une stratégie"
+          subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la bonne stratégie d'offre."
         />
       </div>
     </section>
