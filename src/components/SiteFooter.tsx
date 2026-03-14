@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import logoYgsWhite from "@/assets/logo-ygs-white.png";
+import logoRemax from "@/assets/logo-remax.png";
+import logoMartyWaite from "@/assets/logo-marty-waite.png";
 
 const SiteFooter = () => (
   <footer className="border-t border-border bg-primary text-primary-foreground">
