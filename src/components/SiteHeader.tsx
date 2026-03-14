@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoYgsBlue from "@/assets/logo-ygs-blue.png";
 import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
+import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -52,10 +53,10 @@ const SiteHeader = () => {
           />
           {/* Symbol logo — tablet (sm to lg) */}
           <img
-            src={logoYgsSymbolBlue}
+            src={logoYgsVertical}
             alt="YGS"
-            className="block lg:hidden"
-            style={{ width: 38, height: 38 }}
+            className="block lg:hidden transition-all duration-300 object-contain"
+            style={{ width: scrolled ? 44 : 52, height: "auto", maxHeight: scrolled ? 56 : 64 }}
           />
         </Link>
 
