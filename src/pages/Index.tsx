@@ -6,6 +6,7 @@ import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
 import CTASection from "@/components/CTASection";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { ArrowRight, MapPin, Award, Clock, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 import cardVendreImg from "@/assets/card-vendre.jpg";
