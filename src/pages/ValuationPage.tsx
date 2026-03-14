@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import yanisPhoto from "@/assets/yanis-hero.png";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes",
