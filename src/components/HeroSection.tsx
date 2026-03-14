@@ -21,7 +21,7 @@ const anim = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
     <div className={`section-container relative ${compact ? "py-12 sm:py-16 md:py-20" : "py-16 sm:py-20 md:py-28 lg:py-32"}`}>
       <div className={`grid items-center gap-8 lg:gap-12 ${backgroundImage ? "lg:grid-cols-2" : ""}`}>
