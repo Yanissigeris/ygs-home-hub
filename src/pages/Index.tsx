@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
+import TrustStrip from "@/components/TrustStrip";
+import ConversionSection from "@/components/ConversionSection";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
 import CTASection from "@/components/CTASection";
@@ -8,7 +10,6 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { ArrowRight, MapPin, Award, Clock, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gatineau.jpg";
-import riverImg from "@/assets/gatineau-river-view.jpg";
 import cardVendreImg from "@/assets/card-vendre.jpg";
 import cardAcheterImg from "@/assets/card-acheter.jpg";
 import cardPlexImg from "@/assets/card-plex.jpg";
@@ -47,18 +48,32 @@ const sectors = [
 const Index = () => (
   <>
     <HeroSection
-      overline="Yanis Gauthier-Sigeris · Courtier immobilier"
-      title="Yanis — Votre allié en immobilier à Gatineau"
-      subtitle="Vendre, acheter ou investir à Gatineau avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
+      overline="Yanis Gauthier-Sigeris · Courtier immobilier à Gatineau"
+      title="Votre allié en immobilier à Gatineau"
+      subtitle="Vendre, acheter ou investir dans l'Outaouais avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      trustLine="Stratégie claire · Zéro pression · Pas de mauvaises surprises"
       backgroundImage={heroImg}
     />
 
-    {/* Audience cards — image-first like reference */}
-    <section className="section-padding bg-background">
+    <TrustStrip />
+
+    <ConversionSection />
+
+    {/* Audience cards */}
+    <section className="section-padding bg-secondary/30">
       <div className="section-container">
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="label-overline mb-2">À votre service</p>
+          <h2>Que cherchez-vous?</h2>
+        </motion.div>
         <div className="grid gap-6 sm:grid-cols-3">
           {audienceCards.map((card, i) => (
             <motion.div
