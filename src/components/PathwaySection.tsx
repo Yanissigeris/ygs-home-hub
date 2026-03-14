@@ -38,9 +38,9 @@ const PathwaySection = () => (
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="label-overline mb-2">Choisissez votre prochaine étape</p>
-        <h2 className="mb-4">Un accompagnement clair, selon votre projet</h2>
-        <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">
-          Que vous pensiez vendre, acheter ou analyser une opportunité d'investissement, je peux vous aider à avancer avec les bons chiffres, les bonnes stratégies et zéro pression.
+        <h2 className="mb-4">Où en êtes-vous dans votre projet?</h2>
+        <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground">
+          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire. Zéro pression.
         </p>
       </motion.div>
 
