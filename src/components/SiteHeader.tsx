@@ -29,38 +29,34 @@ const SiteHeader = () => {
   return (
     <header
       className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-all duration-300"
-      style={{ height: scrolled ? 74 : 88 }}
+      style={{ height: scrolled ? 78 : 92 }}
     >
-      {/* Desktop */}
+      {/* Desktop + Tablet (sm+) */}
       <div
         className="section-container hidden sm:flex items-center justify-between h-full"
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
-        <Link to="/" className="flex items-center shrink-0 overflow-hidden">
-          {/* Full horizontal logo — lg+ only */}
+        <Link to="/" className="flex items-center shrink-0">
+          {/* Desktop logo — lg+ */}
           <img
             src={logoYgsHorizontal}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 260 : 300,
+              width: scrolled ? 280 : 320,
               height: "auto",
-              maxHeight: scrolled ? 50 : 56,
-              marginTop: -4,
-              marginBottom: -4,
-              marginLeft: -12,
+              maxHeight: scrolled ? 52 : 58,
             }}
           />
-          {/* Horizontal logo — tablet (sm to lg) */}
+          {/* Tablet logo — sm to lg */}
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 380 : 440,
+              width: scrolled ? 220 : 250,
               height: "auto",
-              maxHeight: scrolled ? 60 : 70,
-              marginLeft: -8,
+              maxHeight: scrolled ? 42 : 48,
             }}
           />
         </Link>
@@ -85,15 +81,15 @@ const SiteHeader = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button size="default" asChild>
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide uppercase border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
         </div>
 
         {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-2.5 lg:hidden">
-          <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
@@ -114,12 +110,12 @@ const SiteHeader = () => {
           <img
             src={logoYgsSymbolBlue}
             alt="YGS"
-            style={{ width: 36, height: 36 }}
+            style={{ width: 38, height: 38 }}
           />
         </Link>
         <div className="flex items-center gap-2.5">
-          <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
