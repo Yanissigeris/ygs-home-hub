@@ -80,14 +80,14 @@ const SiteHeader = () => {
 
         <div className="hidden lg:block">
           <Button size="default" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
         </div>
 
         {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-2.5 lg:hidden">
           <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
@@ -113,7 +113,7 @@ const SiteHeader = () => {
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}

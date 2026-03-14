@@ -48,9 +48,9 @@ const Index = () => (
   <>
     <HeroSection
       overline="Yanis Gauthier-Sigeris · Courtier immobilier"
-      title="YGS — Votre allié en immobilier à Gatineau"
+      title="Yanis — Votre allié en immobilier à Gatineau"
       subtitle="Vendre, acheter ou investir à Gatineau avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
@@ -108,7 +108,7 @@ const Index = () => (
       <div className="section-container">
         <p>Vous pensez vendre? Commencez par connaître la valeur de votre propriété.</p>
         <Button size="sm" variant="hero" asChild>
-          <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
+          <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite →</Link>
         </Button>
       </div>
     </section>
@@ -194,7 +194,7 @@ const Index = () => (
       title="Commencez par la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
+        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
