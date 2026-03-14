@@ -4,21 +4,25 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import ProcessSteps from "@/components/ProcessSteps";
+import CardGrid from "@/components/CardGrid";
+import InlineCTA from "@/components/InlineCTA";
+import ContentBlock from "@/components/ContentBlock";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
-import { motion } from "framer-motion";
 import homeImg from "@/assets/home-interior.jpg";
 
 const painPoints = [
-  { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
-  { text: "Combien vaut vraiment ma propriété?", sub: "Un prix réaliste basé sur les ventes récentes — pas un chiffre gonflé pour vous attirer." },
-  { text: "Faut-il faire des travaux avant?", sub: "Certains investissements rapportent. D'autres non. On fait le tri ensemble." },
-  { text: "Comment vendre sans me retrouver coincé?", sub: "La coordination vente-achat demande un plan dès le départ." },
+  { icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
+  { icon: CheckCircle2, title: "Combien vaut vraiment ma propriété?", text: "Un prix réaliste basé sur les ventes récentes — pas un chiffre gonflé pour vous attirer." },
+  { icon: CheckCircle2, title: "Faut-il faire des travaux avant?", text: "Certains investissements rapportent. D'autres non. On fait le tri ensemble." },
+  { icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "La coordination vente-achat demande un plan dès le départ." },
 ];
 
 const fears = [
-  { text: "Sous-évaluer", sub: "Laisser des milliers sur la table par manque d'information sur les ventes récentes." },
-  { text: "Surévaluer", sub: "Rester sur le marché trop longtemps et finir par baisser le prix sous pression." },
-  { text: "Mal préparer", sub: "Subir des négociations stressantes faute de stratégie claire dès le départ." },
+  { icon: AlertTriangle, title: "Sous-évaluer", text: "Laisser des milliers sur la table par manque d'information sur les ventes récentes." },
+  { icon: AlertTriangle, title: "Surévaluer", text: "Rester sur le marché trop longtemps et finir par baisser le prix sous pression." },
+  { icon: AlertTriangle, title: "Mal préparer", text: "Subir des négociations stressantes faute de stratégie claire dès le départ." },
 ];
 
 const steps = [
@@ -27,7 +31,7 @@ const steps = [
   { num: "03", title: "Accompagnement complet", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. Aucune surprise." },
 ];
 
-const credPoints = [
+const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Club Platine · Temple de la renommée" },
   { icon: Shield, label: "Zéro pression, zéro surprise" },
@@ -52,174 +56,49 @@ const SellerPage = () => (
       backgroundImage={homeImg}
     />
 
-    {/* Credibility mini-strip */}
-    <section className="border-b border-border/30 bg-secondary/30">
-      <div className="section-container py-5 sm:py-6">
-        <motion.div
-          className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {credPoints.map((item) => (
-            <div key={item.label} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/60">
-              <item.icon size={14} className="text-accent shrink-0" />
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <TrustMiniStrip items={trustItems} />
 
-    {/* Pain points */}
-    <section className="section-padding bg-background">
-      <div className="section-container max-w-[52rem]">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading
-            overline="Vos questions"
-            title="Vous vous posez probablement ces questions"
-            centered
-          />
-        </motion.div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {painPoints.map((p, i) => (
-            <motion.div
-              key={p.text}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="card-elevated flex items-start gap-4 border border-border/40 bg-card p-7"
-            >
-              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
-              <div>
-                <p className="text-[1rem] font-semibold text-foreground">{p.text}</p>
-                <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-muted-foreground">{p.sub}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <CardGrid
+      overline="Vos questions"
+      title="Vous vous posez probablement ces questions"
+      items={painPoints}
+      variant="icon-inline"
+    />
 
-    {/* Inline CTA */}
-    <section className="cta-band">
-      <div className="section-container">
-        <p>Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement.</p>
-        <Button size="default" variant="hero" asChild>
-          <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
-        </Button>
-      </div>
-    </section>
+    <InlineCTA
+      text="Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement."
+      buttonLabel="Obtenir ma valeur →"
+      href="/evaluation-gratuite-gatineau"
+    />
 
-    {/* Fears */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container max-w-[52rem]">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading title="Ce que les vendeurs veulent éviter" centered />
-        </motion.div>
-        <div className="grid gap-5 sm:grid-cols-3">
-          {fears.map((f, i) => (
-            <motion.div
-              key={f.text}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="card-elevated border border-border/40 bg-card p-7 text-center"
-            >
-              <AlertTriangle size={20} className="mx-auto text-accent/40 mb-4" />
-              <h3 className="text-[1.0625rem] font-semibold">{f.text}</h3>
-              <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{f.sub}</p>
-            </motion.div>
-          ))}
-        </div>
-        <motion.p
-          className="prose-body mt-10 text-center mx-auto"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Ces inquiétudes sont normales. Mon rôle est de vous donner les outils et l'information pour les éviter — avant de prendre une décision.
-        </motion.p>
-      </div>
-    </section>
+    <CardGrid
+      title="Ce que les vendeurs veulent éviter"
+      items={fears}
+      columns={3}
+      background="alt"
+      variant="icon-top"
+    />
 
-    {/* Reassurance */}
-    <section className="section-padding bg-background">
-      <div className="section-container max-w-[44rem]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading
-            overline="Avant de vendre"
-            title="Vous n'avez pas besoin de tout décider aujourd'hui"
-          />
-        </motion.div>
-        <p className="prose-body mt-5">
-          Avant de vendre, plusieurs propriétaires veulent surtout comprendre leur valeur, leur timing et leurs options. Le but n'est pas de vous presser. Le but est de bâtir un plan clair.
-        </p>
-        <p className="prose-body mt-4">
-          Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
-        </p>
-        <Button className="mt-8" size="lg" asChild>
-          <Link to="/evaluation-gratuite-gatineau">
-            Commencer par une évaluation gratuite
-            <ArrowRight size={15} className="ml-1" />
-          </Link>
-        </Button>
-      </div>
-    </section>
+    <ContentBlock narrow>
+      <SectionHeading
+        overline="Avant de vendre"
+        title="Vous n'avez pas besoin de tout décider aujourd'hui"
+      />
+      <p className="prose-body mt-5">
+        Avant de vendre, plusieurs propriétaires veulent surtout comprendre leur valeur, leur timing et leurs options. Le but n'est pas de vous presser. Le but est de bâtir un plan clair.
+      </p>
+      <p className="prose-body mt-4">
+        Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
+      </p>
+      <Button className="mt-8" size="lg" asChild>
+        <Link to="/evaluation-gratuite-gatineau">
+          Commencer par une évaluation gratuite
+          <ArrowRight size={15} className="ml-1" />
+        </Link>
+      </Button>
+    </ContentBlock>
 
-    {/* Steps */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading overline="Le processus" title="Comment ça fonctionne" centered />
-        </motion.div>
-        <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.num}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="card-elevated border border-border/40 bg-card p-7 sm:p-8 h-full">
-                <span className="text-[2rem] font-heading font-bold text-accent/20 leading-none">
-                  {s.num}
-                </span>
-                <h3 className="mt-4 text-[1.125rem]">{s.title}</h3>
-                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">{s.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ProcessSteps steps={steps} background="alt" />
 
     <CTASection
       dark

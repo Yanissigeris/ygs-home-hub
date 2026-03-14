@@ -1,8 +1,10 @@
 import { useState, FormEvent } from "react";
-import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import CardGrid from "@/components/CardGrid";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import ContentBlock from "@/components/ContentBlock";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,19 +16,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users, ArrowRight } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-photo.jpg";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
 const services = [
-  { icon: Home, title: "Vente résidentielle", desc: "Stratégie, positionnement prix et mise en marché" },
-  { icon: Users, title: "Achat résidentiel", desc: "Recherche ciblée, négociation et accompagnement" },
-  { icon: TrendingUp, title: "Plex et investissement", desc: "Analyse, rendement et stratégie d'acquisition" },
-  { icon: MapPin, title: "Relocalisation", desc: "Guide local pour acheteurs d'Ottawa et Montréal" },
+  { icon: Home, title: "Vente résidentielle", text: "Stratégie, positionnement prix et mise en marché" },
+  { icon: Users, title: "Achat résidentiel", text: "Recherche ciblée, négociation et accompagnement" },
+  { icon: TrendingUp, title: "Plex et investissement", text: "Analyse, rendement et stratégie d'acquisition" },
+  { icon: MapPin, title: "Relocalisation", text: "Guide local pour acheteurs d'Ottawa et Montréal" },
 ];
 
-const credPoints = [
+const trustItems = [
   { icon: Clock, label: "Près de 9 ans d'expérience" },
   { icon: Award, label: "Club Platine · Temple de la renommée" },
   { icon: Heart, label: "Approche axée sur la confiance" },
@@ -51,24 +53,7 @@ const ContactPage = () => {
         secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       />
 
-      {/* Credibility mini-strip */}
-      <section className="border-b border-border/30 bg-secondary/30">
-        <div className="section-container py-5 sm:py-6">
-          <motion.div
-            className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {credPoints.map((item) => (
-              <div key={item.label} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/60">
-                <item.icon size={14} className="text-accent shrink-0" />
-                <span>{item.label}</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <TrustMiniStrip items={trustItems} />
 
       {/* Bio */}
       <section className="section-padding bg-background">
@@ -125,38 +110,12 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="section-padding bg-secondary/20">
-        <div className="section-container max-w-[52rem]">
-          <motion.div
-            className="text-center mb-12 max-w-[40rem] mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <SectionHeading overline="Services" title="Comment je peux vous aider" centered />
-          </motion.div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="card-elevated border border-border/40 bg-card p-7"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary mb-4">
-                  <s.icon size={20} />
-                </div>
-                <h3 className="text-[1.0625rem]">{s.title}</h3>
-                <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{s.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CardGrid
+        overline="Services"
+        title="Comment je peux vous aider"
+        items={services}
+        background="alt"
+      />
 
       {/* Form */}
       <section id="contact-form" className="section-padding bg-background">
