@@ -48,7 +48,7 @@
     --hero-gradient: linear-gradient(168deg, hsl(200 48% 11%) 0%, hsl(200 40% 16%) 50%, hsl(195 32% 22%) 100%);
     --card-shadow: 0 1px 3px 0 hsl(200 30% 14% / 0.04);
     --card-shadow-hover: 0 8px 24px -8px hsl(200 30% 14% / 0.12);
-    --section-padding: clamp(3rem, 7vw, 5rem);
+    --section-padding: clamp(3.5rem, 8vw, 6rem);
   }
 }
 
@@ -72,7 +72,7 @@
   }
 
   h1 {
-    @apply text-[1.75rem] leading-[1.1] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3rem] font-semibold;
+    @apply text-[2rem] leading-[1.08] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold;
   }
 
   h2 {
