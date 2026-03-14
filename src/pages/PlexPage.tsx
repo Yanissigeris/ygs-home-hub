@@ -21,8 +21,8 @@ const clientTypes = [
     icon: TrendingUp,
     title: "Acheteurs investisseurs",
     text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat — les chiffres avant la décision.",
-    cta: "Parler stratégie",
-    href: "/contact-yanis",
+    cta: "Demander une analyse",
+    href: "/analyse-plex-gatineau",
   },
 ];
 
