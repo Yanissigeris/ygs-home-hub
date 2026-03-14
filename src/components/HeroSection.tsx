@@ -33,7 +33,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             </p>
           )}
           <h1 className="text-primary-foreground">{title}</h1>
-          <p className="mt-5 max-w-[32rem] text-[1rem] leading-[1.7] text-primary-foreground/60">
+          <p className="mt-5 max-w-[32rem] text-[0.9375rem] leading-[1.75] text-primary-foreground/65">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
@@ -51,7 +51,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             </div>
           )}
           {trustLine && (
-            <p className="mt-6 text-[0.6875rem] tracking-[0.02em] text-primary-foreground/25">
+            <p className="mt-6 text-[0.75rem] tracking-[0.03em] text-primary-foreground/40 font-medium">
               {trustLine}
             </p>
           )}

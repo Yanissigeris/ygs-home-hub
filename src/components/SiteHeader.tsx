@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.png";
 import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
-import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -28,24 +27,23 @@ const SiteHeader = () => {
 
   return (
     <header
-      className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-all duration-300"
-      style={{ height: scrolled ? 78 : 92 }}
+      className="sticky top-0 z-50 border-b border-border/40 bg-background/97 backdrop-blur-lg supports-[backdrop-filter]:bg-background/85 transition-all duration-300"
     >
       {/* Desktop + Tablet (sm+) */}
       <div
-        className="section-container hidden sm:flex items-center justify-between h-full"
-        style={{ paddingLeft: 32, paddingRight: 32 }}
+        className="section-container hidden sm:flex items-center justify-between transition-all duration-300"
+        style={{ paddingLeft: 32, paddingRight: 32, height: scrolled ? 72 : 84 }}
       >
-        <Link to="/" className="flex items-center shrink-0 mr-10">
+        <Link to="/" className="flex items-center shrink-0 mr-12">
           {/* Desktop logo — lg+ */}
           <img
             src={logoYgsHorizontal}
-            alt="YGS - Yanis Gauthier-Sigeris"
+            alt="YGS — Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
-              width: 290,
+              width: scrolled ? 260 : 290,
               height: "auto",
-              maxHeight: 56,
+              maxHeight: scrolled ? 48 : 56,
             }}
           />
           {/* Tablet logo — sm to lg */}
@@ -54,19 +52,19 @@ const SiteHeader = () => {
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              width: 235,
+              width: scrolled ? 210 : 235,
               height: "auto",
-              maxHeight: 46,
+              maxHeight: scrolled ? 38 : 46,
             }}
           />
         </Link>
 
-        <nav className="hidden items-center gap-0 lg:flex">
+        <nav className="hidden items-center lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className={`relative rounded-md px-2.5 py-2 text-[0.8125rem] font-medium transition-colors ${
+              className={`relative rounded-md px-2 py-2 text-[0.8125rem] font-medium transition-colors whitespace-nowrap ${
                 location.pathname === link.href
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -74,21 +72,21 @@ const SiteHeader = () => {
             >
               {link.label}
               {location.pathname === link.href && (
-                <span className="absolute bottom-0.5 left-2.5 right-2.5 h-px bg-accent/60" />
+                <span className="absolute bottom-0.5 left-2 right-2 h-px bg-accent/60" />
               )}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block shrink-0">
-          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide uppercase border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors px-3.5" asChild>
+        <div className="hidden lg:block shrink-0 ml-4">
+          <Button size="sm" variant="outline" className="text-[0.6875rem] font-semibold tracking-wider uppercase border-primary/25 text-primary hover:bg-primary hover:text-primary-foreground transition-colors px-3" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
         </div>
 
         {/* Tablet: hamburger visible at sm but not lg */}
-        <div className="flex items-center gap-2.5 lg:hidden">
-          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground px-3" asChild>
+        <div className="flex items-center gap-2 lg:hidden">
+          <Button size="sm" variant="outline" className="text-[0.6875rem] font-semibold tracking-wider uppercase border-primary/25 text-primary hover:bg-primary hover:text-primary-foreground px-3" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
@@ -103,18 +101,18 @@ const SiteHeader = () => {
 
       {/* Mobile */}
       <div
-        className="flex sm:hidden items-center justify-between h-full"
-        style={{ paddingLeft: 16, paddingRight: 16, height: 70 }}
+        className="flex sm:hidden items-center justify-between"
+        style={{ paddingLeft: 16, paddingRight: 16, height: 66 }}
       >
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
             src={logoYgsSymbolBlue}
             alt="YGS"
-            style={{ width: 38, height: 38 }}
+            style={{ width: 36, height: 36 }}
           />
         </Link>
-        <div className="flex items-center gap-2.5">
-          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+        <div className="flex items-center gap-2">
+          <Button size="sm" variant="outline" className="text-[0.6875rem] font-semibold tracking-wider uppercase border-primary/25 text-primary hover:bg-primary hover:text-primary-foreground px-3" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
@@ -130,9 +128,6 @@ const SiteHeader = () => {
       {/* Mobile menu drawer */}
       {open && (
         <nav className="animate-fade-in border-t border-border/50 bg-background px-5 pb-5 pt-3 lg:hidden">
-          <div className="mb-3 flex items-center gap-2 sm:hidden">
-            <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 36, height: 36 }} />
-          </div>
           {navLinks.map((link) => (
             <Link
               key={link.href}
