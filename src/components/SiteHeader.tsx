@@ -35,12 +35,19 @@ const SiteHeader = () => {
         className="section-container hidden sm:flex items-center justify-between h-full"
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
-        <Link to="/" className="flex items-center shrink-0">
+        <Link to="/" className="flex items-center shrink-0 overflow-hidden">
           <img
             src={logoYgsBlue}
             alt="YGS - Yanis Gauthier-Sigeris"
-            style={{ width: scrolled ? 200 : 240, height: "auto", maxHeight: scrolled ? 40 : 46 }}
-            className="transition-all duration-300"
+            className="transition-all duration-300 object-contain"
+            style={{
+              width: scrolled ? 260 : 300,
+              height: "auto",
+              maxHeight: scrolled ? 50 : 56,
+              marginTop: -4,
+              marginBottom: -4,
+              marginLeft: -12,
+            }}
           />
         </Link>
 
