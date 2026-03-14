@@ -5,27 +5,27 @@ import SectionHeading from "@/components/SectionHeading";
 import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
 import CTASection from "@/components/CTASection";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
-import { ArrowRight, MapPin, Target, Shield, Users } from "lucide-react";
+import { ArrowRight, MapPin, Target, Shield, Users, Award, Clock, Heart } from "lucide-react";
 
 const audienceCards = [
   {
     title: "Vendre",
     icon: Target,
-    text: "Vous voulez savoir combien vaut vraiment votre propriété et comment la vendre au bon prix, sans mauvaises surprises?",
+    text: "Vous voulez savoir combien vaut votre propriété et comment la vendre au bon prix, au bon moment, sans mauvaises surprises?",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
   },
   {
     title: "Acheter",
     icon: Users,
-    text: "Vous cherchez une maison, un condo ou un secteur qui correspond vraiment à votre mode de vie et à votre budget?",
+    text: "Vous cherchez une maison, un condo ou un secteur qui correspond vraiment à votre mode de vie, votre famille et votre budget?",
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
   },
   {
     title: "Plex / investissement",
     icon: Shield,
-    text: "Vous possédez un plex ou vous songez à investir? Je peux vous aider à voir clair sur la valeur, le rendement et le bon timing.",
+    text: "Vous possédez un plex ou vous songez à investir? Je vous aide à voir clair sur la valeur, le rendement et le bon timing.",
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
   },
@@ -37,18 +37,18 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/plateau-aylmer" },
 ];
 
-const whyPoints = [
-  { title: "Stratégie adaptée", desc: "Chaque situation est différente. Je prends le temps de comprendre la vôtre avant de proposer un plan." },
-  { title: "Connaissance locale", desc: "Je travaille surtout Gatineau, Aylmer, Hull et les secteurs autour. Je connais le terrain." },
-  { title: "Aucune pression", desc: "Mon objectif est de vous donner les bonnes infos pour que vous preniez une bonne décision, quand vous êtes prêt." },
+const credibilityPoints = [
+  { icon: Clock, label: "Près de 9 ans d'expérience", desc: "en immobilier résidentiel en Outaouais" },
+  { icon: Award, label: "Distinctions RE/MAX", desc: "Club Platine, Club 100%, Temple de la renommée" },
+  { icon: Heart, label: "Approche axée sur la confiance", desc: "priorité à la satisfaction client et aux décisions éclairées" },
 ];
 
 const Index = () => (
   <>
     <HeroSection
       overline="Yanis Gauthier-Sigeris · Courtier immobilier"
-      title="Votre allié en immobilier à Gatineau"
-      subtitle="Acheter, vendre ou investir à Gatineau avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
+      title="YGS — Votre allié en immobilier à Gatineau"
+      subtitle="Vendre, acheter ou investir à Gatineau avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
@@ -84,48 +84,45 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Why YGS — premium split section */}
+    {/* About YGS — personal brand section */}
     <section className="section-padding bg-secondary/40">
-      <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-center">
+      <div className="section-container grid gap-14 lg:grid-cols-5 lg:items-center">
         <div className="lg:col-span-2">
           <ImagePlaceholder label="Photo professionnelle de Yanis — à ajouter" aspectRatio="aspect-[3/4]" />
         </div>
         <div className="lg:col-span-3">
           <SectionHeading
             overline="Pourquoi YGS"
-            title="Une approche locale, directe et sans pression"
+            title="Une approche simple, stratégique et humaine"
           />
-          <div className="mt-8 space-y-6">
-            {whyPoints.map((p) => (
-              <div key={p.title}>
-                <h4 className="font-body text-[0.9375rem] font-semibold text-foreground">{p.title}</h4>
-                <p className="mt-1 text-[0.875rem] leading-relaxed text-muted-foreground">{p.desc}</p>
-              </div>
-            ))}
-          </div>
+          <p className="prose-body mt-5">
+            Mon rôle n'est pas de vous pousser à prendre une décision. Mon rôle est de vous donner les bonnes informations, la bonne stratégie et un accompagnement clair à chaque étape — pour que vous avanciez avec confiance.
+          </p>
+          <p className="prose-body mt-4">
+            Depuis près de 9 ans, j'accompagne des vendeurs, des acheteurs et des investisseurs en Outaouais. Je travaille surtout à Gatineau, Aylmer, Hull et dans les secteurs autour. Chaque situation est différente, et c'est exactement pour ça que je prends le temps de comprendre la vôtre avant de proposer quoi que ce soit.
+          </p>
           <Button className="mt-8" asChild>
-            <Link to="/contact-yanis">En savoir plus</Link>
+            <Link to="/contact-yanis">En savoir plus sur Yanis</Link>
           </Button>
         </div>
       </div>
     </section>
 
-    {/* Credibility placeholder */}
+    {/* Credibility band */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <div className="rounded-lg border border-dashed border-border bg-muted/30 p-10 text-center">
-          <p className="label-overline mb-2">Crédibilité</p>
-          <h2>Faits saillants</h2>
-          <p className="mx-auto mt-3 max-w-lg text-[0.8125rem] text-muted-foreground/60">
-            [Section à compléter avec des données réelles: nombre de transactions, années d'expérience, récompenses ou distinctions confirmées. Ne pas inventer.]
-          </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            {["[Récompenses / distinctions — à confirmer]", "[Nombre de transactions — à confirmer]", "[Années d'expérience — à confirmer]"].map((s) => (
-              <div key={s} className="rounded-md border border-dashed border-border p-6">
-                <p className="text-[0.75rem] text-muted-foreground/50">{s}</p>
+        <div className="grid gap-8 sm:grid-cols-3">
+          {credibilityPoints.map((c) => (
+            <div key={c.label} className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-secondary">
+                <c.icon size={18} className="text-primary" />
               </div>
-            ))}
-          </div>
+              <div>
+                <p className="text-[0.9375rem] font-semibold text-foreground">{c.label}</p>
+                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground">{c.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

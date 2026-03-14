@@ -5,22 +5,22 @@ import FAQSection from "@/components/FAQSection";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
 
 const painPoints = [
-  { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas vendre trop tôt et perdre de la valeur, ni attendre trop longtemps." },
-  { text: "Combien vaut vraiment ma propriété aujourd'hui?", sub: "Vous voulez un chiffre réaliste, pas un prix gonflé pour vous attirer." },
-  { text: "Est-ce que je dois faire des travaux avant?", sub: "Certaines rénovations rapportent, d'autres non. C'est important de bien choisir." },
-  { text: "Comment vendre sans me retrouver coincé pour mon prochain achat?", sub: "La coordination entre la vente et le prochain achat demande un plan clair." },
+  { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas manquer la fenêtre, mais vous ne voulez pas non plus vendre trop vite sans plan." },
+  { text: "Combien vaut vraiment ma propriété?", sub: "Vous voulez un prix réaliste — pas un chiffre gonflé pour vous attirer, ni une sous-évaluation qui vous fait perdre de l'argent." },
+  { text: "Est-ce que je dois faire des travaux avant?", sub: "Certains investissements rapportent, d'autres non. Mieux vaut le savoir avant de dépenser." },
+  { text: "Comment vendre sans me retrouver coincé?", sub: "La coordination entre la vente et l'achat de votre prochaine propriété demande un plan clair dès le départ." },
 ];
 
 const fears = [
-  { icon: AlertTriangle, text: "Sous-évaluer et perdre des milliers de dollars" },
-  { icon: AlertTriangle, text: "Surévaluer et rester sur le marché trop longtemps" },
+  { icon: AlertTriangle, text: "Sous-évaluer et laisser des milliers de dollars sur la table" },
+  { icon: AlertTriangle, text: "Surévaluer et voir votre propriété stagner sur le marché" },
   { icon: AlertTriangle, text: "Être mal préparé et subir des négociations stressantes" },
 ];
 
 const steps = [
-  { num: "01", title: "Analyse de votre propriété et de votre secteur", desc: "On regarde les ventes comparables, l'état du marché et les particularités de votre propriété." },
-  { num: "02", title: "Plan vendeur personnalisé", desc: "Prix de mise en marché, préparation, améliorations stratégiques et plan de visibilité." },
-  { num: "03", title: "Accompagnement complet", desc: "Lancement, visites, négociation et suivi jusqu'à la signature chez le notaire." },
+  { num: "01", title: "Analyse de votre propriété et de votre secteur", desc: "On regarde les ventes comparables récentes, l'état du marché local et les particularités de votre propriété pour établir un portrait réaliste." },
+  { num: "02", title: "Plan vendeur personnalisé", desc: "Prix de mise en marché, préparation ciblée, améliorations stratégiques et plan de visibilité — tout est adapté à votre situation." },
+  { num: "03", title: "Accompagnement complet jusqu'à la signature", desc: "Mise en marché, visites, négociation, coordination avec votre prochain achat et suivi jusqu'au notaire." },
 ];
 
 const stats = [
@@ -30,10 +30,11 @@ const stats = [
 ];
 
 const faq = [
-  { q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation personnelle, du marché local et de vos objectifs. Lors d'une consultation, on évalue tout ça ensemble pour prendre une décision éclairée." },
-  { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Certaines améliorations ont un vrai retour sur investissement, d'autres non. Je vous aide à identifier ce qui vaut la peine, sans gaspiller votre temps ou votre argent." },
-  { q: "Combien coûte un courtier?", a: "La commission est convenue ensemble avant de commencer. Je vous explique tout de façon transparente dès le départ — pas de surprise." },
-  { q: "Combien de temps ça prend pour vendre à Gatineau?", a: "Ça varie selon le secteur, le type de propriété et le prix. On en discute lors de l'analyse initiale." },
+  { q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. En près de 9 ans en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions — avec le bon plan." },
+  { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Certaines améliorations ont un vrai retour, d'autres non. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
+  { q: "Combien coûte un courtier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent dès le départ — pas de surprise." },
+  { q: "Combien de temps ça prend pour vendre à Gatineau?", a: "Ça varie selon le secteur, le type de propriété et le positionnement prix. On en discute lors de l'analyse initiale." },
+  { q: "Et si je dois acheter en même temps que je vends?", a: "C'est très fréquent. On planifie la coordination dès le départ pour que vous ne vous retrouviez pas coincé." },
 ];
 
 const SellerPage = () => (
@@ -41,7 +42,7 @@ const SellerPage = () => (
     <HeroSection
       overline="Pour vendeurs · Gatineau et environs"
       title="Vendre votre propriété à Gatineau avec une vraie stratégie"
-      subtitle="Prix, préparation, mise en marché, négociation: chaque détail compte quand vient le temps de vendre au bon prix."
+      subtitle="Prix, préparation, mise en marché, négociation — chaque détail compte quand vient le temps de vendre. Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair."
       primaryCta={{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
@@ -52,6 +53,7 @@ const SellerPage = () => (
         <SectionHeading
           overline="Vos questions"
           title="Vous vous posez probablement ces questions"
+          subtitle="C'est normal. La plupart des vendeurs que j'accompagne commencent exactement au même endroit."
         />
         <div className="mt-10 space-y-4">
           {painPoints.map((p) => (
@@ -72,7 +74,7 @@ const SellerPage = () => (
       <div className="section-container max-w-3xl">
         <SectionHeading
           title="Ce que les vendeurs veulent éviter"
-          subtitle="Ces inquiétudes sont normales. Mon rôle est de vous donner les outils et l'information pour les éviter."
+          subtitle="Ces inquiétudes sont légitimes. Mon rôle est justement de vous donner les outils et l'information pour les éviter."
         />
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {fears.map((f, i) => (
@@ -91,8 +93,13 @@ const SellerPage = () => (
         <SectionHeading
           overline="Mon approche"
           title="Mon rôle: vous simplifier la décision"
-          subtitle="Je vous aide à voir clair sur la valeur de votre propriété, le positionnement prix, les améliorations qui valent la peine, et le plan de mise en marché pour attirer les bons acheteurs."
         />
+        <p className="prose-body mt-5">
+          Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Je vous aide à voir clair sur la valeur réelle de votre propriété, le bon positionnement prix, les améliorations qui valent la peine et la stratégie de mise en marché pour attirer les bons acheteurs.
+        </p>
+        <p className="prose-body mt-4">
+          Je ne suis pas là pour vous dire de vendre à tout prix. Je suis là pour vous donner un plan clair et vous accompagner quand vous êtes prêt.
+        </p>
       </div>
     </section>
 
@@ -135,8 +142,9 @@ const SellerPage = () => (
     <CTASection
       overline="Prochaine étape"
       title="Vous voulez savoir quoi faire dans votre cas?"
-      text="Demandez votre plan vendeur. Zéro pression — je vous donne les chiffres et les options, vous décidez."
-      buttons={[{ label: "Demander mon plan vendeur", href: "/evaluation-gratuite-gatineau" }]}
+      text="Demandez votre plan vendeur. Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
+      buttons={[{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }]}
+      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

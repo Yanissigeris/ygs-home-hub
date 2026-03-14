@@ -13,13 +13,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, MapPin, Phone, Mail } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart } from "lucide-react";
 
 const services = [
   "Vente résidentielle",
   "Achat résidentiel",
   "Relocalisation Ottawa / Montréal",
   "Plex et investissement",
+];
+
+const credPoints = [
+  { icon: Clock, text: "Près de 9 ans d'expérience en Outaouais" },
+  { icon: Award, text: "Distinctions RE/MAX: Club Platine, Club 100%, Temple de la renommée" },
+  { icon: Heart, text: "Approche axée sur la confiance et la satisfaction client" },
 ];
 
 const ContactPage = () => {
@@ -35,7 +41,7 @@ const ContactPage = () => {
       <HeroSection
         overline="Contact · Yanis Gauthier-Sigeris"
         title="Parlons de votre projet immobilier"
-        subtitle="Que vous soyez en réflexion ou prêt à passer à l'action, je peux vous aider à voir plus clair. Pas de pression — juste une conversation honnête."
+        subtitle="Que vous soyez en réflexion ou prêt à passer à l'action, je peux vous aider à voir plus clair. Pas de pression — juste une conversation honnête sur votre situation."
       />
 
       {/* Bio section */}
@@ -47,14 +53,17 @@ const ContactPage = () => {
           <div className="lg:col-span-3">
             <p className="label-overline mb-3">À propos</p>
             <h2>Yanis Gauthier-Sigeris</h2>
-            <p className="mt-1 text-[0.875rem] font-medium text-accent">Courtier immobilier · Gatineau</p>
+            <p className="mt-1 text-[0.875rem] font-medium text-accent">Courtier immobilier · Gatineau et Outaouais</p>
             <p className="mt-1 text-[0.75rem] text-muted-foreground/50">Affilié RE/MAX · Équipe Marty Waite</p>
 
             <p className="prose-body mt-6">
-              Courtier immobilier à Gatineau, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif est de vous aider à prendre une bonne décision, au bon moment, avec les bonnes infos.
+              Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
             </p>
             <p className="prose-body mt-4">
-              Je ne suis pas là pour vous pousser à agir. Je suis là pour vous donner une lecture claire et vous accompagner quand vous êtes prêt.
+              Après près de 9 ans dans l'immobilier résidentiel en Outaouais, je connais bien le marché local, les secteurs et les réalités terrain. J'ai fait partie de l'Équipe Marty Waite depuis le début, et j'ai eu la chance d'être reconnu par RE/MAX à plusieurs reprises — Club Platine, Club 100% et Temple de la renommée.
+            </p>
+            <p className="prose-body mt-4">
+              Mais au-delà des reconnaissances, ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées. Je ne suis pas là pour pousser. Je suis là pour guider.
             </p>
 
             <div className="mt-8">
@@ -67,6 +76,16 @@ const ContactPage = () => {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Credibility */}
+            <div className="mt-8 space-y-3">
+              {credPoints.map((c) => (
+                <div key={c.text} className="flex items-start gap-3">
+                  <c.icon size={15} className="mt-0.5 shrink-0 text-muted-foreground/40" />
+                  <span className="text-[0.8125rem] text-muted-foreground">{c.text}</span>
+                </div>
+              ))}
             </div>
 
             {/* Contact card */}
@@ -83,13 +102,12 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin size={15} className="text-muted-foreground/50" />
-                  <span className="text-[0.8125rem] text-muted-foreground">[Adresse ou secteur — à ajouter]</span>
+                  <span className="text-[0.8125rem] text-muted-foreground">Gatineau, Aylmer, Hull, Plateau, Buckingham, Masson-Angers</span>
                 </div>
               </div>
               <div className="mt-4 flex gap-4 text-[0.75rem] text-muted-foreground/50">
-                <span>[Facebook]</span>
-                <span>[Instagram]</span>
-                <span>[LinkedIn]</span>
+                <span>[Facebook — à ajouter]</span>
+                <span>[Instagram — à ajouter]</span>
               </div>
             </div>
           </div>
@@ -101,7 +119,7 @@ const ContactPage = () => {
         <div className="section-container max-w-2xl">
           <SectionHeading overline="Formulaire" title="Dites-moi où vous en êtes" centered />
           <p className="prose-body mx-auto mt-3 text-center">
-            Décrivez brièvement votre situation et je vous reviens rapidement.
+            Décrivez brièvement votre situation et je vous reviens rapidement — habituellement en moins de 24h.
           </p>
 
           {submitted ? (
@@ -171,7 +189,7 @@ const ContactPage = () => {
               </div>
               <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
               <p className="text-center text-[0.75rem] text-muted-foreground/70">
-                Réponse rapide, sans engagement. Zéro pression.
+                Zéro pression — je vous donne les chiffres et les options, vous décidez.
               </p>
             </form>
           )}
