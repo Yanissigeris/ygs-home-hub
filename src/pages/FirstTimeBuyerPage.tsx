@@ -1,0 +1,93 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import HeroSection from "@/components/HeroSection";
+import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
+import CardGrid from "@/components/CardGrid";
+import ProcessSteps from "@/components/ProcessSteps";
+import InlineCTA from "@/components/InlineCTA";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
+import heroImg from "@/assets/hero-gatineau.jpg";
+
+const considerations = [
+  { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles." },
+  { icon: Home, title: "Le bon type de propriété", text: "Condo, maison, jumelé — chaque option a ses avantages pour un premier achat." },
+  { icon: FileText, title: "Le processus au Québec", text: "Promesse d'achat, inspection, notaire — le processus est différent d'ailleurs au Canada." },
+  { icon: Shield, title: "Éviter les erreurs de débutant", text: "Ne pas se précipiter, bien comprendre les frais, choisir le bon quartier — je vous guide." },
+];
+
+const steps = [
+  { num: "01", title: "Consultation initiale", desc: "On parle de votre budget, vos priorités et vos questions. Zéro pression." },
+  { num: "02", title: "Recherche ciblée", desc: "Je vous présente les meilleures options dans les secteurs qui correspondent à votre profil." },
+  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire — je vous accompagne jusqu'aux clés de votre première propriété." },
+];
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Des dizaines de premiers acheteurs accompagnés" },
+  { icon: Shield, label: "Zéro pression · Transparence totale" },
+];
+
+const faq = [
+  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés. On analyse ensemble votre capacité réelle." },
+  { q: "Est-ce que je qualifie pour des programmes d'aide?", a: "Il existe des incitatifs fédéraux et provinciaux pour les premiers acheteurs. On regarde ça ensemble lors de la consultation." },
+  { q: "Qu'est-ce qui est différent au Québec?", a: "Le processus notarié, la promesse d'achat et certaines particularités fiscales. Rien de compliqué — il faut juste être bien guidé." },
+];
+
+const FirstTimeBuyerPage = () => (
+  <>
+    <HeroSection
+      overline="Premier achat · Gatineau"
+      title="Premier achat à Gatineau — par où commencer?"
+      subtitle="Devenir propriétaire pour la première fois, c'est excitant et stressant. Je vous aide à naviguer chaque étape — budget, secteur, offre et processus."
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
+      secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau" }}
+      trustLine="Accompagnement personnalisé. Zéro pression."
+      backgroundImage={heroImg}
+    />
+
+    <TrustMiniStrip items={trustItems} />
+
+    <CardGrid
+      overline="À considérer"
+      title: "Ce que tout premier acheteur doit savoir"
+      items={considerations}
+    />
+
+    <InlineCTA
+      text="Pas encore sûr de votre budget? On peut en discuter lors d'une consultation gratuite."
+      buttonLabel="Réserver une consultation →"
+      href="/consultation-acheteur"
+    />
+
+    <ProcessSteps steps={steps} background="alt" />
+
+    <ContentBlock narrow>
+      <SectionHeading title="Votre premier achat mérite un bon accompagnement" />
+      <p className="prose-body mt-5">
+        La première propriété est souvent le plus gros investissement de votre vie. Mon rôle est de m'assurer que vous prenez une décision éclairée — pas pressée, pas stressée, pas basée sur l'émotion seule.
+      </p>
+      <Button className="mt-8" size="lg" asChild>
+        <Link to="/consultation-acheteur">Réserver ma consultation</Link>
+      </Button>
+    </ContentBlock>
+
+    <CTASection
+      dark
+      title="Prêt à faire le premier pas?"
+      text="Réservez une consultation gratuite — on clarifie votre budget, vos options et les prochaines étapes."
+      buttons={[
+        { label: "Réserver une consultation", href: "/consultation-acheteur" },
+        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+      ]}
+      trustLine="Zéro pression — je vous accompagne à votre rythme."
+    />
+
+    <FAQSection items={faq} />
+  </>
+);
+
+export default FirstTimeBuyerPage;
