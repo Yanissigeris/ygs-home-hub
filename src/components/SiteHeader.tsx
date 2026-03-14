@@ -36,16 +36,16 @@ const SiteHeader = () => {
         className="section-container hidden sm:flex items-center justify-between h-full"
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
-        <Link to="/" className="flex items-center shrink-0 mr-8">
+        <Link to="/" className="flex items-center shrink-0 mr-10">
           {/* Desktop logo — lg+ */}
           <img
             src={logoYgsHorizontal}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 280 : 310,
+              width: 290,
               height: "auto",
-              maxHeight: scrolled ? 50 : 56,
+              maxHeight: 56,
             }}
           />
           {/* Tablet logo — sm to lg */}
@@ -54,19 +54,19 @@ const SiteHeader = () => {
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 220 : 250,
+              width: 235,
               height: "auto",
-              maxHeight: scrolled ? 40 : 46,
+              maxHeight: 46,
             }}
           />
         </Link>
 
-        <nav className="hidden items-center gap-0.5 lg:flex">
+        <nav className="hidden items-center gap-0 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className={`relative rounded-md px-3 py-2 text-[0.8125rem] font-medium transition-colors ${
+              className={`relative rounded-md px-2.5 py-2 text-[0.8125rem] font-medium transition-colors ${
                 location.pathname === link.href
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -74,21 +74,21 @@ const SiteHeader = () => {
             >
               {link.label}
               {location.pathname === link.href && (
-                <span className="absolute bottom-0.5 left-3 right-3 h-px bg-accent/60" />
+                <span className="absolute bottom-0.5 left-2.5 right-2.5 h-px bg-accent/60" />
               )}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide uppercase border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+        <div className="hidden lg:block shrink-0">
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide uppercase border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors px-3.5" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
         </div>
 
         {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-2.5 lg:hidden">
-          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground px-3" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
