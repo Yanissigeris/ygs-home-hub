@@ -1,7 +1,6 @@
 import { useState, FormEvent } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart } from "lucide-react";
+import yanisPhoto from "@/assets/yanis-photo.jpg";
 
 const services = [
   "Vente résidentielle",
