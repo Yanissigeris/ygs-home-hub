@@ -1,18 +1,35 @@
 import { Link } from "react-router-dom";
+import logoYgsWhite from "@/assets/logo-ygs-white.png";
+import logoRemax from "@/assets/logo-remax.png";
+import logoMartyWaite from "@/assets/logo-marty-waite.png";
 
 const SiteFooter = () => (
   <footer className="border-t border-border bg-primary text-primary-foreground">
     <div className="section-container py-12 sm:py-16">
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <span className="font-heading text-[1.5rem] font-bold">YGS</span>
+          <img 
+            src={logoYgsWhite} 
+            alt="YGS - Yanis Gauthier-Sigeris" 
+            className="h-12 w-auto mb-3"
+          />
           <p className="mt-1 text-[0.75rem] font-medium opacity-65">Votre allié en immobilier à Gatineau</p>
           <p className="mt-3 text-[0.75rem] leading-relaxed opacity-50">
             Stratégie claire. Zéro pression.<br />Pas de mauvaises surprises.
           </p>
-          <p className="mt-3 text-[0.625rem] opacity-25">
-            Courtier affilié RE/MAX · Équipe Marty Waite
-          </p>
+          
+          <div className="mt-5 flex items-center gap-4">
+            <img 
+              src={logoRemax} 
+              alt="RE/MAX" 
+              className="h-8 w-auto opacity-40"
+            />
+            <img 
+              src={logoMartyWaite} 
+              alt="Équipe Marty Waite" 
+              className="h-5 w-auto opacity-30"
+            />
+          </div>
         </div>
 
         <div>

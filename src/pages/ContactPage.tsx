@@ -1,7 +1,6 @@
 import { useState, FormEvent } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart } from "lucide-react";
+import yanisPhoto from "@/assets/yanis-photo.jpg";
 
 const services = [
   "Vente résidentielle",
@@ -43,7 +43,11 @@ const ContactPage = () => {
       <section className="section-padding bg-background">
         <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
           <div className="lg:col-span-2">
-            <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
+            <img 
+              src={yanisPhoto} 
+              alt="Yanis Gauthier-Sigeris - Courtier immobilier" 
+              className="w-full rounded-lg"
+            />
           </div>
           <div className="lg:col-span-3">
             <p className="label-overline mb-2">À propos</p>
