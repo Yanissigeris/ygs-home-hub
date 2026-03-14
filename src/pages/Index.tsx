@@ -60,37 +60,44 @@ const Index = () => (
     <section className="section-padding bg-background">
       <div className="section-container">
         <div className="grid gap-6 sm:grid-cols-3">
-          {audienceCards.map((card) => (
-            <Link
+          {audienceCards.map((card, i) => (
+            <motion.div
               key={card.title}
-              to={card.href}
-              className={`card-elevated group flex flex-col overflow-hidden rounded-xl border bg-card ${
-                card.featured
-                  ? "border-accent/30 ring-1 ring-accent/10"
-                  : "border-border"
-              }`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                {card.featured && (
-                  <span className="absolute top-3 left-3 rounded-full bg-accent px-2.5 py-0.5 text-[0.625rem] font-semibold text-white">
-                    Populaire
+              <Link
+                to={card.href}
+                className={`card-elevated group flex flex-col overflow-hidden rounded-xl border bg-card ${
+                  card.featured
+                    ? "border-accent/30 ring-1 ring-accent/10"
+                    : "border-border"
+                }`}
+              >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {card.featured && (
+                    <span className="absolute top-3 left-3 rounded-full bg-accent px-2.5 py-0.5 text-[0.625rem] font-semibold text-white">
+                      Populaire
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="text-[1.0625rem] group-hover:text-primary transition-colors">{card.title}</h3>
+                  <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary">
+                    {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </span>
-                )}
-              </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="text-[1.0625rem] group-hover:text-primary transition-colors">{card.title}</h3>
-                <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary">
-                  {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
-            </Link>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
