@@ -7,9 +7,8 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import { Link } from "react-router-dom";
-import { MapPin, ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import SectorLinks from "@/components/SectorLinks";
+import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
 
 const buyerProfiles = [
@@ -82,40 +81,7 @@ const BuyerPage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
-    {/* Sectors */}
-    <section className="section-padding bg-background">
-      <div className="section-container max-w-[52rem]">
-        <motion.div
-          className="text-center mb-10 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading overline="Quartiers" title="Secteurs à comparer" centered />
-        </motion.div>
-        <div className="grid gap-5 sm:grid-cols-3">
-          {sectors.map((s, i) => (
-            <motion.div
-              key={s.name}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Link to={s.href} className="card-elevated group flex flex-col border border-border/40 bg-card px-6 py-6">
-                <div className="flex items-center gap-3">
-                  <MapPin size={15} className="text-accent shrink-0" />
-                  <span className="text-[1rem] font-semibold text-foreground group-hover:text-primary transition-colors">{s.name}</span>
-                  <ArrowRight size={14} className="ml-auto text-muted-foreground/20 group-hover:text-primary transition-colors" />
-                </div>
-                <p className="mt-2 text-[0.875rem] text-muted-foreground/60">{s.detail}</p>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <SectorLinks sectors={sectors} />
 
     <CTASection
       dark

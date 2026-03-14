@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -7,8 +5,8 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
-import { CheckCircle2, Building2, TrendingUp, ArrowRight, Clock, Award, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import LinkedCardGrid from "@/components/LinkedCardGrid";
+import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
 
 const clientTypes = [
@@ -69,43 +67,11 @@ const PlexPage = () => (
 
     <TrustMiniStrip items={trustItems} />
 
-    {/* Client types */}
-    <section className="section-padding bg-background">
-      <div className="section-container max-w-[52rem]">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="label-overline mb-3">Pour qui</p>
-          <h2>J'aide deux types de clients</h2>
-        </motion.div>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {clientTypes.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Link to={card.href} className="card-elevated group block border border-border/40 bg-card p-7 sm:p-8 h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary mb-5">
-                  <card.icon size={24} />
-                </div>
-                <h3 className="text-[1.125rem]">{card.title}</h3>
-                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">{card.text}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
-                  {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <LinkedCardGrid
+      overline="Pour qui"
+      title="J'aide deux types de clients"
+      items={clientTypes}
+    />
 
     <InlineCTA
       text="Vous possédez un plex? Commencez par connaître sa valeur actuelle."
