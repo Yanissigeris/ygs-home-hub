@@ -43,7 +43,11 @@ const ContactPage = () => {
       <section className="section-padding bg-background">
         <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
           <div className="lg:col-span-2">
-            <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
+            <img 
+              src={yanisPhoto} 
+              alt="Yanis Gauthier-Sigeris - Courtier immobilier" 
+              className="w-full rounded-lg"
+            />
           </div>
           <div className="lg:col-span-3">
             <p className="label-overline mb-2">À propos</p>

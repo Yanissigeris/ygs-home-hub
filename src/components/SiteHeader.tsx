@@ -20,11 +20,12 @@ const SiteHeader = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <div className="section-container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="font-heading text-[1.375rem] font-bold tracking-tight text-primary">YGS</span>
-          <span className="hidden text-[0.625rem] font-medium leading-tight text-muted-foreground/60 sm:block">
-            Courtier immobilier<br />Gatineau
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img 
+            src={logoYgsBlue} 
+            alt="YGS - Yanis Gauthier-Sigeris" 
+            className="h-10 w-auto sm:h-11"
+          />
         </Link>
 
         <nav className="hidden items-center gap-0.5 lg:flex">
