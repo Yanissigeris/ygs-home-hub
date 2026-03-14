@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoYgsBlue from "@/assets/logo-ygs-blue.png";
+import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.png";
 import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
@@ -39,7 +39,7 @@ const SiteHeader = () => {
         <Link to="/" className="flex items-center shrink-0 overflow-hidden">
           {/* Full horizontal logo — lg+ only */}
           <img
-            src={logoYgsBlue}
+            src={logoYgsHorizontal}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
@@ -53,7 +53,7 @@ const SiteHeader = () => {
           />
           {/* Horizontal logo — tablet (sm to lg) */}
           <img
-            src={logoYgsBlue}
+            src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
