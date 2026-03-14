@@ -36,10 +36,11 @@ const SiteHeader = () => {
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
         <Link to="/" className="flex items-center shrink-0 overflow-hidden">
+          {/* Full horizontal logo — lg+ only */}
           <img
             src={logoYgsBlue}
             alt="YGS - Yanis Gauthier-Sigeris"
-            className="transition-all duration-300 object-contain"
+            className="hidden lg:block transition-all duration-300 object-contain"
             style={{
               width: scrolled ? 260 : 300,
               height: "auto",
@@ -48,6 +49,13 @@ const SiteHeader = () => {
               marginBottom: -4,
               marginLeft: -12,
             }}
+          />
+          {/* Symbol logo — tablet (sm to lg) */}
+          <img
+            src={logoYgsSymbolBlue}
+            alt="YGS"
+            className="block lg:hidden"
+            style={{ width: 38, height: 38 }}
           />
         </Link>
 
