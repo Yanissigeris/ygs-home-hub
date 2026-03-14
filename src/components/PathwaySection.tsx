@@ -29,36 +29,36 @@ const pathways = [
 
 const PathwaySection = () => (
   <section className="section-padding bg-background">
-    <div className="section-container max-w-6xl">
+    <div className="section-container">
       <motion.div
-        className="text-center mb-12 max-w-3xl mx-auto"
+        className="text-center mb-14 max-w-[42rem] mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="label-overline mb-2">Choisissez votre prochaine étape</p>
-        <h2 className="mb-4">Où en êtes-vous dans votre projet?</h2>
-        <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground">
-          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire. Zéro pression.
+        <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
+        <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
+        <p className="text-[1.0625rem] leading-[1.65] text-muted-foreground max-w-[38rem] mx-auto">
+          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire.
         </p>
       </motion.div>
 
-      <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+      <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
         {pathways.map((pathway, i) => (
           <motion.div
             key={pathway.title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <div className="flex flex-col h-full rounded-xl border border-border/50 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-xl hover:shadow-accent/[0.04] hover:-translate-y-0.5">
-              <h3 className="text-[1.1875rem] font-semibold mb-3 tracking-[-0.01em]">
+            <div className="card-elevated flex flex-col h-full border border-border/40 bg-card p-7 sm:p-8 transition-all duration-220 hover:border-accent/20">
+              <h3 className="mb-3">
                 {pathway.title}
               </h3>
-              <p className="flex-1 text-[0.8125rem] leading-[1.75] text-muted-foreground mb-6">
+              <p className="flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground mb-7">
                 {pathway.text}
               </p>
               <Button size="default" asChild className="w-full mb-4">
@@ -67,7 +67,7 @@ const PathwaySection = () => (
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <p className="text-[0.6875rem] text-center text-muted-foreground/50 font-medium tracking-wide">
+              <p className="text-[0.8125rem] text-center text-muted-foreground/45 font-medium tracking-wide">
                 {pathway.footer}
               </p>
             </div>
