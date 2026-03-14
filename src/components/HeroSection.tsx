@@ -11,6 +11,8 @@ interface HeroSectionProps {
   trustLine?: string;
   compact?: boolean;
   backgroundImage?: string;
+  agentImage?: string;
+  agentName?: string;
 }
 
 const anim = {
