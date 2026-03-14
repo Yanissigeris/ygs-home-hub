@@ -1,26 +1,27 @@
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const TestimonialPlaceholder = () => (
   <section className="section-padding bg-background">
-    <div className="section-container">
+    <div className="section-container max-w-4xl">
       <p className="label-overline text-center mb-3">Témoignages</p>
       <h2 className="text-center">Ce que mes clients disent</h2>
-      <p className="mx-auto mt-2 text-center text-[0.75rem] text-muted-foreground/50">
-        [Section témoignages — à compléter avec de vrais avis clients]
+      <p className="mx-auto mt-2 text-center text-[0.6875rem] text-muted-foreground/40">
+        [À compléter avec de vrais avis clients]
       </p>
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="card-elevated rounded-lg border border-border bg-card p-7">
-            <Quote size={20} className="text-accent/40 mb-4" />
-            <div className="flex gap-0.5 text-accent">
-              {[...Array(5)].map((_, j) => <Star key={j} size={14} fill="currentColor" />)}
-            </div>
-            <p className="mt-4 text-[0.875rem] leading-relaxed text-muted-foreground italic">
-              "[Témoignage client #{i} — à ajouter]"
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { context: "Vente · Aylmer" },
+          { context: "Achat · Plateau" },
+          { context: "Plex · Hull" },
+        ].map((t, i) => (
+          <div key={i} className="rounded-lg border border-border bg-card p-6">
+            <Quote size={16} className="text-accent/30 mb-3" />
+            <p className="text-[0.8125rem] leading-relaxed text-muted-foreground italic">
+              "[Témoignage — à ajouter]"
             </p>
-            <div className="mt-5 border-t border-border pt-4">
-              <p className="text-[0.8125rem] font-medium text-foreground">[Nom du client]</p>
-              <p className="text-[0.6875rem] text-muted-foreground">[Secteur, type de transaction]</p>
+            <div className="mt-4 pt-3 border-t border-border">
+              <p className="text-[0.75rem] font-medium text-foreground">[Nom]</p>
+              <p className="text-[0.625rem] text-muted-foreground/60">{t.context}</p>
             </div>
           </div>
         ))}
