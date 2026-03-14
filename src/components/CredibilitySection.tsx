@@ -17,22 +17,21 @@ const trustPoints = [
 
 const CredibilitySection = () => (
   <section className="section-padding bg-secondary/30">
-    <div className="section-container max-w-5xl">
+    <div className="section-container max-w-4xl">
       <motion.div
-        className="text-center mb-10 max-w-2xl mx-auto"
+        className="text-center mb-12 max-w-xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="label-overline mb-2">Pourquoi les clients me font confiance</p>
-        <h2 className="mb-3">Une approche simple, stratégique et sans pression</h2>
-        <p className="text-[0.875rem] leading-[1.7] text-muted-foreground">
-          Mon rôle est de vous aider à voir clair, comprendre vos options et prendre une bonne décision au bon moment.
+        <h2 className="mb-3.5 text-[1.5rem] sm:text-[1.75rem]">Simple, stratégique, sans pression</h2>
+        <p className="text-[0.875rem] leading-[1.75] text-muted-foreground/75">
+          Vous aider à voir clair et prendre la bonne décision au bon moment.
         </p>
       </motion.div>
 
-      <div className="grid gap-8 sm:gap-10 md:grid-cols-3">
+      <div className="grid gap-10 sm:gap-12 md:grid-cols-3">
         {trustPoints.map((point, i) => (
           <motion.div
             key={point.title}
