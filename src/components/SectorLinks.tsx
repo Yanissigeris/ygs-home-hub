@@ -9,7 +9,8 @@ interface Sector {
   detail?: string;
 }
 
-interface SectorLinksProps {
+export interface SectorLinksProps {
+  id?: string;
   overline?: string;
   title?: string;
   sectors: Sector[];
