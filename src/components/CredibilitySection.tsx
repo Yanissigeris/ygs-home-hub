@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const trustPoints = [
   {
-    title: "Près de 9 ans en Outaouais",
-    text: "Une connaissance concrète du marché local, des secteurs et des réalités des vendeurs, acheteurs et investisseurs.",
+    title: "9 ans en Outaouais",
+    text: "Connaissance approfondie du marché, des secteurs et des réalités locales.",
   },
   {
-    title: "Approche sans pression",
-    text: "Des conseils honnêtes, une stratégie claire et un accompagnement adapté à votre situation.",
+    title: "Zéro pression",
+    text: "Conseils honnêtes, stratégie claire, accompagnement adapté à votre rythme.",
   },
   {
-    title: "Reconnaissance et confiance",
-    text: "Distinctions RE/MAX, service personnalisé et priorité absolue à la satisfaction du client.",
+    title: "Résultats reconnus",
+    text: "Distinctions RE/MAX et priorité absolue à la satisfaction client.",
   },
 ];
 
