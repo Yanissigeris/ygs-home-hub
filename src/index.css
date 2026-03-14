@@ -6,7 +6,6 @@
 
 @layer base {
   :root {
-    /* Core brand: #17303B = hsl(200, 42%, 16%) */
     --background: 0 0% 99.5%;
     --foreground: 200 30% 14%;
 
@@ -19,11 +18,11 @@
     --primary: 200 42% 16%;
     --primary-foreground: 40 20% 97%;
 
-    --secondary: 200 12% 96%;
+    --secondary: 200 10% 96.5%;
     --secondary-foreground: 200 30% 14%;
 
-    --muted: 200 8% 94.5%;
-    --muted-foreground: 200 8% 46%;
+    --muted: 200 8% 94%;
+    --muted-foreground: 200 8% 44%;
 
     --accent: 36 60% 52%;
     --accent-foreground: 200 42% 16%;
@@ -31,8 +30,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 12% 91%;
-    --input: 200 12% 89%;
+    --border: 200 10% 92%;
+    --input: 200 10% 90%;
     --ring: 200 42% 16%;
 
     --radius: 0.5rem;
@@ -46,10 +45,10 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --hero-gradient: linear-gradient(160deg, hsl(200 42% 14%) 0%, hsl(200 35% 20%) 60%, hsl(195 28% 25%) 100%);
-    --card-shadow: 0 1px 3px 0 hsl(200 30% 14% / 0.04);
-    --card-shadow-hover: 0 8px 30px -8px hsl(200 30% 14% / 0.1);
-    --section-padding: clamp(4rem, 10vw, 7rem);
+    --hero-gradient: linear-gradient(165deg, hsl(200 45% 12%) 0%, hsl(200 38% 18%) 55%, hsl(195 30% 23%) 100%);
+    --card-shadow: 0 1px 2px 0 hsl(200 30% 14% / 0.03);
+    --card-shadow-hover: 0 8px 25px -6px hsl(200 30% 14% / 0.1);
+    --section-padding: clamp(3.5rem, 8vw, 6rem);
   }
 }
 
@@ -61,7 +60,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4 {
@@ -71,21 +70,21 @@
   }
 
   h1 {
-    @apply text-[2rem] leading-[1.15] sm:text-[2.75rem] md:text-[3.25rem] lg:text-[3.5rem];
+    @apply text-[1.875rem] leading-[1.12] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.25rem];
   }
 
   h2 {
-    @apply text-[1.625rem] leading-[1.2] sm:text-[2rem] md:text-[2.375rem];
+    @apply text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-[2.125rem];
   }
 
   h3 {
-    @apply text-xl leading-snug sm:text-[1.375rem];
+    @apply text-lg leading-snug sm:text-xl;
   }
 }
 
 @layer components {
   .section-container {
-    @apply mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-10;
+    @apply mx-auto max-w-[1080px] px-5 sm:px-8;
   }
 
   .section-padding {
@@ -99,21 +98,25 @@
 
   .card-elevated {
     box-shadow: var(--card-shadow);
-    transition: box-shadow 0.35s ease, transform 0.35s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
   .card-elevated:hover {
     box-shadow: var(--card-shadow-hover);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
   .prose-body {
-    @apply text-[0.9375rem] leading-[1.7] text-muted-foreground sm:text-base;
-    max-width: 38rem;
+    @apply text-[0.9375rem] leading-[1.7] text-muted-foreground;
+    max-width: 36rem;
   }
 
   .label-overline {
-    @apply text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-accent;
+    @apply text-[0.625rem] font-bold uppercase tracking-[0.18em] text-accent;
     font-family: 'Inter', sans-serif;
+  }
+
+  .divider-line {
+    @apply mx-auto h-px w-16 bg-accent/30;
   }
 }
