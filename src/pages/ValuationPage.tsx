@@ -45,6 +45,7 @@ const ValuationPage = () => {
         title="Découvrez combien vaut votre propriété à Gatineau"
         subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes."
         trustLine="Une estimation utile, claire et sans pression — pour vous aider à mieux planifier la suite."
+        backgroundImage={heroImg}
       />
 
       <section className="section-padding bg-background">
