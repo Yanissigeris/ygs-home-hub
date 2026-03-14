@@ -59,7 +59,7 @@ const PlexPage = () => (
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"
       subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
-      primaryCta={{ label: "Recevoir une analyse plex", href: "/contact-yanis" }}
+      primaryCta={{ label: "Recevoir une analyse plex", href: "/analyse-plex-gatineau" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
