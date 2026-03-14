@@ -10,6 +10,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const steps = [
   { num: "01", title: "Évaluation stratégique", desc: "Valeur marchande, positionnement prix et plan pour maximiser votre retour malgré le calendrier serré." },
