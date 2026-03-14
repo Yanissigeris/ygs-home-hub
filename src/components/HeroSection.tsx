@@ -57,8 +57,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
         </motion.div>
 
-        {/* Image column */}
-        {backgroundImage && (
+        {/* Background image column */}
+        {backgroundImage && !agentImage && (
           <motion.div
             className="hidden lg:block"
             initial={{ opacity: 0, scale: 0.97 }}
@@ -73,6 +73,32 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            </div>
+          </motion.div>
+        )}
+
+        {/* Agent portrait column */}
+        {agentImage && (
+          <motion.div
+            className="hidden lg:flex justify-center items-end"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          >
+            <div className="relative">
+              {/* Subtle glow behind */}
+              <div className="absolute -inset-6 rounded-full bg-primary-foreground/[0.04] blur-2xl" />
+              <img
+                src={agentImage}
+                alt={agentName || ""}
+                className="relative w-[280px] xl:w-[320px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+                loading="eager"
+              />
+              {agentName && (
+                <p className="mt-2 text-center text-[0.6875rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/35">
+                  {agentName}
+                </p>
+              )}
             </div>
           </motion.div>
         )}
