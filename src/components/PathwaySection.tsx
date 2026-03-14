@@ -5,25 +5,25 @@ import { ArrowRight } from "lucide-react";
 
 const pathways = [
   {
-    title: "Vendre",
-    text: "Obtenez une lecture claire de la valeur de votre propriété, du bon positionnement et de la meilleure stratégie pour vendre au bon moment.",
+    title: "Vendre ma propriété",
+    text: "Vous pensez vendre à Gatineau, mais vous ne savez pas si c'est le bon moment ou le bon prix? On commence par une évaluation réaliste de votre propriété — puis on bâtit une stratégie claire pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
-    footer: "Évaluation • stratégie • mise en marché",
+    footer: "Évaluation · positionnement · mise en marché",
   },
   {
-    title: "Acheter",
-    text: "Clarifiez votre budget, vos secteurs à cibler et votre stratégie d'achat pour avancer avec plus de confiance et moins de stress.",
+    title: "Acheter à Gatineau",
+    text: "Que vous arriviez d'Ottawa, de Montréal ou que vous cherchiez dans Aylmer, Hull ou le Plateau — je vous aide à cibler les bons secteurs, éviter les pièges et acheter avec confiance.",
     cta: "Explorer l'achat à Gatineau",
     href: "/acheter-a-gatineau",
-    footer: "Secteurs • stratégie • accompagnement",
+    footer: "Secteurs · budget · accompagnement terrain",
   },
   {
-    title: "Plex / investir",
-    text: "Analysez la valeur, le potentiel et le bon timing avant d'acheter, vendre ou conserver un plex ou une propriété d'investissement.",
+    title: "Plex & investissement",
+    text: "Avant d'acheter, vendre ou garder un plex en Outaouais, il faut connaître les vrais chiffres. Je vous fournis une analyse claire du rendement, de la valeur et du meilleur timing.",
     cta: "Recevoir une analyse plex",
     href: "/investir-plex-gatineau",
-    footer: "Valeur • rendement • timing",
+    footer: "Rendement · valeur marchande · timing",
   },
 ];
 
@@ -38,9 +38,9 @@ const PathwaySection = () => (
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="label-overline mb-2">Choisissez votre prochaine étape</p>
-        <h2 className="mb-4">Un accompagnement clair, selon votre projet</h2>
-        <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">
-          Que vous pensiez vendre, acheter ou analyser une opportunité d'investissement, je peux vous aider à avancer avec les bons chiffres, les bonnes stratégies et zéro pression.
+        <h2 className="mb-4">Où en êtes-vous dans votre projet?</h2>
+        <p className="text-[0.9375rem] leading-[1.8] text-muted-foreground">
+          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire. Zéro pression.
         </p>
       </motion.div>
 
@@ -54,14 +54,14 @@ const PathwaySection = () => (
             transition={{ duration: 0.5, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <div className="flex flex-col h-full rounded-xl border border-border/60 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
-              <h3 className="text-[1.25rem] font-semibold mb-3 group-hover:text-primary transition-colors">
+            <div className="flex flex-col h-full rounded-xl border border-border/50 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-xl hover:shadow-accent/[0.04] hover:-translate-y-0.5">
+              <h3 className="text-[1.1875rem] font-semibold mb-3 tracking-[-0.01em]">
                 {pathway.title}
               </h3>
-              <p className="flex-1 text-[0.875rem] leading-relaxed text-muted-foreground mb-6">
+              <p className="flex-1 text-[0.8125rem] leading-[1.75] text-muted-foreground mb-6">
                 {pathway.text}
               </p>
-              <Button size="default" variant="outline" asChild className="w-full mb-4 group-hover:border-primary/30 group-hover:bg-primary/5">
+              <Button size="default" asChild className="w-full mb-4">
                 <Link to={pathway.href}>
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
