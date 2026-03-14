@@ -6,6 +6,7 @@ import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
 import CTASection from "@/components/CTASection";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { ArrowRight, MapPin, Award, Clock, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 import cardVendreImg from "@/assets/card-vendre.jpg";
@@ -59,37 +60,44 @@ const Index = () => (
     <section className="section-padding bg-background">
       <div className="section-container">
         <div className="grid gap-6 sm:grid-cols-3">
-          {audienceCards.map((card) => (
-            <Link
+          {audienceCards.map((card, i) => (
+            <motion.div
               key={card.title}
-              to={card.href}
-              className={`card-elevated group flex flex-col overflow-hidden rounded-xl border bg-card ${
-                card.featured
-                  ? "border-accent/30 ring-1 ring-accent/10"
-                  : "border-border"
-              }`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                {card.featured && (
-                  <span className="absolute top-3 left-3 rounded-full bg-accent px-2.5 py-0.5 text-[0.625rem] font-semibold text-white">
-                    Populaire
+              <Link
+                to={card.href}
+                className={`card-elevated group flex flex-col overflow-hidden rounded-xl border bg-card ${
+                  card.featured
+                    ? "border-accent/30 ring-1 ring-accent/10"
+                    : "border-border"
+                }`}
+              >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {card.featured && (
+                    <span className="absolute top-3 left-3 rounded-full bg-accent px-2.5 py-0.5 text-[0.625rem] font-semibold text-white">
+                      Populaire
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="text-[1.0625rem] group-hover:text-primary transition-colors">{card.title}</h3>
+                  <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary">
+                    {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </span>
-                )}
-              </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="text-[1.0625rem] group-hover:text-primary transition-colors">{card.title}</h3>
-                <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary">
-                  {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
-            </Link>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -108,10 +116,22 @@ const Index = () => (
     {/* About YGS */}
     <section className="section-padding bg-background">
       <div className="section-container grid gap-10 lg:grid-cols-5 lg:items-center">
-        <div className="lg:col-span-2">
+        <motion.div 
+          className="lg:col-span-2"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
-        </div>
-        <div className="lg:col-span-3">
+        </motion.div>
+        <motion.div 
+          className="lg:col-span-3"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        >
           <p className="label-overline mb-2">Pourquoi YGS</p>
           <h2>Un accompagnement simple, stratégique et humain</h2>
           <p className="prose-body mt-4">
@@ -130,22 +150,37 @@ const Index = () => (
           <Button className="mt-8" size="lg" asChild>
             <Link to="/contact-yanis">En savoir plus</Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
 
     {/* Sectors */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-3xl">
-        <p className="label-overline text-center mb-2">Gatineau et environs</p>
-        <h2 className="text-center">Secteurs à surveiller</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="label-overline text-center mb-2">Gatineau et environs</p>
+          <h2 className="text-center">Secteurs à surveiller</h2>
+        </motion.div>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {sectors.map((s) => (
-            <Link key={s.name} to={s.href} className="card-elevated group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
-              <MapPin size={14} className="text-accent shrink-0" />
-              <span className="text-[0.875rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
-              <ArrowRight size={13} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
-            </Link>
+          {sectors.map((s, i) => (
+            <motion.div
+              key={s.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Link to={s.href} className="card-elevated group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
+                <MapPin size={14} className="text-accent shrink-0" />
+                <span className="text-[0.875rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
+                <ArrowRight size={13} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
