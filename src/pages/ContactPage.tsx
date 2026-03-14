@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart } from "lucide-react";
 import yanisPhoto from "@/assets/yanis-photo.jpg";
+import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
 const services = [
   "Vente résidentielle",
@@ -42,11 +43,16 @@ const ContactPage = () => {
       {/* Bio */}
       <section className="section-padding bg-background">
         <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
-          <div className="lg:col-span-2">
-            <img 
-              src={yanisPhoto} 
-              alt="Yanis Gauthier-Sigeris - Courtier immobilier" 
+          <div className="lg:col-span-2 space-y-6">
+            <img
+              src={yanisPhoto}
+              alt="Yanis Gauthier-Sigeris - Courtier immobilier"
               className="w-full rounded-lg"
+            />
+            <img
+              src={logoYgsVertical}
+              alt="YGS - Yanis Gauthier-Sigeris Inc."
+              className="mx-auto w-[145px] sm:w-[190px] h-auto"
             />
           </div>
           <div className="lg:col-span-3">
@@ -77,7 +83,7 @@ const ContactPage = () => {
               <span className="flex items-center gap-1"><Heart size={10} /> Approche axée sur la confiance</span>
             </div>
 
-            {/* Contact card */}
+            {/* Contact card — no secondary logos here */}
             <div className="mt-8 rounded-lg border border-border bg-secondary/40 p-5">
               <p className="text-[0.8125rem] font-semibold text-foreground mb-3">Coordonnées</p>
               <div className="space-y-2 text-[0.75rem] text-muted-foreground">
@@ -94,7 +100,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Form */}
+      {/* Form — no secondary logos above */}
       <section className="section-padding bg-secondary/40">
         <div className="section-container max-w-xl">
           <SectionHeading title="Dites-moi où vous en êtes" centered />
