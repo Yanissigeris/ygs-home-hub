@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
+import heroImg from "@/assets/hero-gatineau.jpg";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes",
