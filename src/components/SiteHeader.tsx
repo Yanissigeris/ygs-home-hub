@@ -53,7 +53,7 @@ const SiteHeader = () => {
           />
           {/* Horizontal logo — tablet (sm to lg) */}
           <img
-            src={logoYgsBlue}
+            src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
