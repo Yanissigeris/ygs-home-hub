@@ -116,10 +116,22 @@ const Index = () => (
     {/* About YGS */}
     <section className="section-padding bg-background">
       <div className="section-container grid gap-10 lg:grid-cols-5 lg:items-center">
-        <div className="lg:col-span-2">
+        <motion.div 
+          className="lg:col-span-2"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
-        </div>
-        <div className="lg:col-span-3">
+        </motion.div>
+        <motion.div 
+          className="lg:col-span-3"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        >
           <p className="label-overline mb-2">Pourquoi YGS</p>
           <h2>Un accompagnement simple, stratégique et humain</h2>
           <p className="prose-body mt-4">
@@ -138,7 +150,7 @@ const Index = () => (
           <Button className="mt-8" size="lg" asChild>
             <Link to="/contact-yanis">En savoir plus</Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
 
