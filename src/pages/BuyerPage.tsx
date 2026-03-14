@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { MapPin, ArrowRight } from "lucide-react";
+import heroImg from "@/assets/hero-gatineau.jpg";
 
 const buyerProfiles = [
   { title: "Premier acheteur", desc: "Comprendre le processus étape par étape sans se sentir dépassé." },
