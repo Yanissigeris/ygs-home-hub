@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { CheckCircle2 } from "lucide-react";
+import plateauImg from "@/assets/plateau-aylmer-lifestyle.jpg";
+import riverImg from "@/assets/gatineau-river-view.jpg";
 
 const reasons = [
   "Plus d'espace à un prix encore accessible comparé à Ottawa",
