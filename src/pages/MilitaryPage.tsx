@@ -11,6 +11,7 @@ import InlineCTA from "@/components/InlineCTA";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Users, Home, Award, Clock, CheckCircle2, MapPin, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [
   { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement ou vendre rapidement, sans compromettre le prix." },
