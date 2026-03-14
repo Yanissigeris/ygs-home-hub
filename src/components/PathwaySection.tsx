@@ -5,25 +5,25 @@ import { ArrowRight } from "lucide-react";
 
 const pathways = [
   {
-    title: "Vendre",
-    text: "Obtenez une lecture claire de la valeur de votre propriété, du bon positionnement et de la meilleure stratégie pour vendre au bon moment.",
+    title: "Vendre ma propriété",
+    text: "Vous pensez vendre à Gatineau, mais vous ne savez pas si c'est le bon moment ou le bon prix? On commence par une évaluation réaliste de votre propriété — puis on bâtit une stratégie claire pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
-    footer: "Évaluation • stratégie • mise en marché",
+    footer: "Évaluation · positionnement · mise en marché",
   },
   {
-    title: "Acheter",
-    text: "Clarifiez votre budget, vos secteurs à cibler et votre stratégie d'achat pour avancer avec plus de confiance et moins de stress.",
+    title: "Acheter à Gatineau",
+    text: "Que vous arriviez d'Ottawa, de Montréal ou que vous cherchiez dans Aylmer, Hull ou le Plateau — je vous aide à cibler les bons secteurs, éviter les pièges et acheter avec confiance.",
     cta: "Explorer l'achat à Gatineau",
     href: "/acheter-a-gatineau",
-    footer: "Secteurs • stratégie • accompagnement",
+    footer: "Secteurs · budget · accompagnement terrain",
   },
   {
-    title: "Plex / investir",
-    text: "Analysez la valeur, le potentiel et le bon timing avant d'acheter, vendre ou conserver un plex ou une propriété d'investissement.",
+    title: "Plex & investissement",
+    text: "Avant d'acheter, vendre ou garder un plex en Outaouais, il faut connaître les vrais chiffres. Je vous fournis une analyse claire du rendement, de la valeur et du meilleur timing.",
     cta: "Recevoir une analyse plex",
     href: "/investir-plex-gatineau",
-    footer: "Valeur • rendement • timing",
+    footer: "Rendement · valeur marchande · timing",
   },
 ];
 
