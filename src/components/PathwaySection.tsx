@@ -54,14 +54,14 @@ const PathwaySection = () => (
             transition={{ duration: 0.5, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <div className="flex flex-col h-full rounded-xl border border-border/60 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
-              <h3 className="text-[1.25rem] font-semibold mb-3 group-hover:text-primary transition-colors">
+            <div className="flex flex-col h-full rounded-xl border border-border/50 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-xl hover:shadow-accent/[0.04] hover:-translate-y-0.5">
+              <h3 className="text-[1.1875rem] font-semibold mb-3 tracking-[-0.01em]">
                 {pathway.title}
               </h3>
-              <p className="flex-1 text-[0.875rem] leading-relaxed text-muted-foreground mb-6">
+              <p className="flex-1 text-[0.8125rem] leading-[1.75] text-muted-foreground mb-6">
                 {pathway.text}
               </p>
-              <Button size="default" variant="outline" asChild className="w-full mb-4 group-hover:border-primary/30 group-hover:bg-primary/5">
+              <Button size="default" asChild className="w-full mb-4">
                 <Link to={pathway.href}>
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
