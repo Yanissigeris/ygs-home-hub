@@ -10,7 +10,8 @@ const navLinks = [
   { label: "Vendre", href: "/vendre-ma-maison-gatineau" },
   { label: "Acheter", href: "/acheter-a-gatineau" },
   { label: "Plex", href: "/investir-plex-gatineau" },
-  { label: "Plateau / Aylmer", href: "/plateau-aylmer" },
+  { label: "Secteurs", href: "/plateau-aylmer" },
+  { label: "Relocalisation", href: "/relocalisation-ottawa-gatineau" },
   { label: "Contact", href: "/contact-yanis" },
 ];
 
@@ -37,27 +38,17 @@ const SiteHeader = () => {
         style={{ height: scrolled ? 78 : 92 }}
       >
         <Link to="/" className="flex items-center shrink-0 mr-12">
-          {/* Desktop logo — lg+ */}
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
-            style={{
-              width: scrolled ? 270 : 300,
-              height: "auto",
-              maxHeight: scrolled ? 50 : 58,
-            }}
+            style={{ width: scrolled ? 270 : 300, height: "auto", maxHeight: scrolled ? 50 : 58 }}
           />
-          {/* Tablet logo — sm to lg */}
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
-            style={{
-              width: scrolled ? 220 : 245,
-              height: "auto",
-              maxHeight: scrolled ? 40 : 48,
-            }}
+            style={{ width: scrolled ? 220 : 245, height: "auto", maxHeight: scrolled ? 40 : 48 }}
           />
         </Link>
 
@@ -67,9 +58,7 @@ const SiteHeader = () => {
               key={link.href}
               to={link.href}
               className={`relative rounded-lg px-3 py-2 text-[0.9375rem] font-medium transition-colors whitespace-nowrap ${
-                location.pathname === link.href
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                location.pathname === link.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
@@ -86,7 +75,6 @@ const SiteHeader = () => {
           </Button>
         </div>
 
-        {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-3 lg:hidden">
           <Button size="sm" className="h-[2.625rem] px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
@@ -102,16 +90,9 @@ const SiteHeader = () => {
       </div>
 
       {/* Mobile */}
-      <div
-        className="flex sm:hidden items-center justify-between px-5"
-        style={{ height: 72 }}
-      >
+      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 72 }}>
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img
-            src={logoYgsSymbolBlue}
-            alt="YGS"
-            style={{ width: 38, height: 38 }}
-          />
+          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 38, height: 38 }} />
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>

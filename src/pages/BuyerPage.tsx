@@ -20,8 +20,8 @@ const buyerProfiles = [
 
 const sectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/plateau-aylmer", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/plateau-aylmer", detail: "Terrain, prix accessibles, nature" },
+  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
 ];
 
 const steps = [

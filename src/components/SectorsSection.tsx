@@ -1,9 +1,9 @@
 import SectorLinks from "@/components/SectorLinks";
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer" },
-  { name: "Hull", href: "/plateau-aylmer" },
-  { name: "Buckingham / Masson-Angers", href: "/plateau-aylmer" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
+  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
 ];
 
 const SectorsSection = () => (

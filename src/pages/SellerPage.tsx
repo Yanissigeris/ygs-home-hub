@@ -50,7 +50,7 @@ const SellerPage = () => (
       overline="Pour vendeurs · Gatineau et environs"
       title="Vendre votre propriété à Gatineau avec une vraie stratégie"
       subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
-      primaryCta={{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={homeImg}
@@ -106,8 +106,8 @@ const SellerPage = () => (
       title="Vous voulez savoir quoi faire dans votre cas?"
       text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
       buttons={[
-        { label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

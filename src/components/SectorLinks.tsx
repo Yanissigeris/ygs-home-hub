@@ -9,7 +9,8 @@ interface Sector {
   detail?: string;
 }
 
-interface SectorLinksProps {
+export interface SectorLinksProps {
+  id?: string;
   overline?: string;
   title?: string;
   sectors: Sector[];
@@ -17,12 +18,13 @@ interface SectorLinksProps {
 }
 
 const SectorLinks = ({
+  id,
   overline = "Quartiers",
   title = "Secteurs à comparer",
   sectors,
   background = "default",
 }: SectorLinksProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section id={id} className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
       <motion.div
         className="text-center mb-10 max-w-[40rem] mx-auto"

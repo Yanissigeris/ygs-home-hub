@@ -14,15 +14,15 @@ const clientTypes = [
     icon: Building2,
     title: "Propriétaires de plex",
     text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels — pas des suppositions.",
-    cta: "Évaluer mon plex",
-    href: "/evaluation-gratuite-gatineau",
+    cta: "Recevoir une analyse",
+    href: "/analyse-plex-gatineau",
   },
   {
     icon: TrendingUp,
     title: "Acheteurs investisseurs",
     text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat — les chiffres avant la décision.",
-    cta: "Parler stratégie",
-    href: "/contact-yanis",
+    cta: "Demander une analyse",
+    href: "/analyse-plex-gatineau",
   },
 ];
 
@@ -59,7 +59,7 @@ const PlexPage = () => (
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"
       subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
-      primaryCta={{ label: "Recevoir une analyse plex", href: "/contact-yanis" }}
+      primaryCta={{ label: "Recevoir une analyse plex", href: "/analyse-plex-gatineau" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
@@ -95,7 +95,7 @@ const PlexPage = () => (
       title="Recevez une lecture claire de votre situation"
       text="Vendre, acheter ou simplement comprendre votre position — je vous aide à y voir plus clair."
       buttons={[
-        { label: "Demander une analyse plex", href: "/contact-yanis" },
+        { label: "Demander une analyse plex", href: "/analyse-plex-gatineau" },
         { label: "Évaluer mon plex", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
