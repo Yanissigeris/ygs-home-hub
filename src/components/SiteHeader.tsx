@@ -80,7 +80,7 @@ const SiteHeader = () => {
 
         <div className="hidden lg:block">
           <Button size="default" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
         </div>
 
