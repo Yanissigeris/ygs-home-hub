@@ -53,7 +53,7 @@ const FirstTimeBuyerPage = () => (
 
     <CardGrid
       overline="À considérer"
-      title: "Ce que tout premier acheteur doit savoir"
+      title="Ce que tout premier acheteur doit savoir"
       items={considerations}
     />
 
