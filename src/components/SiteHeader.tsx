@@ -39,7 +39,7 @@ const SiteHeader = () => {
           <img
             src={logoYgsBlue}
             alt="YGS - Yanis Gauthier-Sigeris"
-            style={{ width: scrolled ? 225 : 260, height: "auto", maxHeight: 48 }}
+            style={{ width: scrolled ? 200 : 240, height: "auto", maxHeight: scrolled ? 40 : 46 }}
             className="transition-all duration-300"
           />
         </Link>
