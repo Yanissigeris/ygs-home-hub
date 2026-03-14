@@ -50,7 +50,7 @@ const NeighborhoodPage = () => (
             ))}
           </div>
         </div>
-        <ImagePlaceholder label="Photo de secteur à ajouter" />
+        <img src={plateauImg} alt="Quartier résidentiel du Plateau / Aylmer, Gatineau" className="rounded-lg object-cover aspect-[4/3] w-full" loading="lazy" />
       </div>
     </section>
 

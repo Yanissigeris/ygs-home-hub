@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
+import homeImg from "@/assets/home-interior.jpg";
 
 const painPoints = [
   { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },

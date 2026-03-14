@@ -46,6 +46,7 @@ const Index = () => (
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      backgroundImage={heroImg}
     />
 
     {/* Audience cards */}
