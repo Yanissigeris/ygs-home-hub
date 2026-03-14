@@ -8,6 +8,7 @@ import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [
   { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau — je vous guide vers les quartiers qui correspondent à vos priorités." },
@@ -44,6 +45,15 @@ const MilitaryRelocationPage = () => (
     />
 
     <TrustMiniStrip items={trustItems} />
+
+    <section className="py-8 bg-white border-y border-border/30">
+      <div className="section-container">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+        </div>
+      </div>
+    </section>
 
     <CardGrid
       overline="Les défis"

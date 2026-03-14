@@ -11,6 +11,7 @@ import InlineCTA from "@/components/InlineCTA";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Users, Home, Award, Clock, CheckCircle2, MapPin, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [
   { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement ou vendre rapidement, sans compromettre le prix." },
@@ -51,6 +52,15 @@ const MilitaryPage = () => (
     />
 
     <TrustMiniStrip items={trustItems} />
+
+    <section className="py-8 bg-white border-y border-border/30">
+      <div className="section-container">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+        </div>
+      </div>
+    </section>
 
     <CardGrid
       overline="Vos défis"

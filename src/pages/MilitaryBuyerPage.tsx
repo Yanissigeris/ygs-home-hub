@@ -10,6 +10,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, MapPin, Shield, Clock, Award, DollarSign, CheckCircle2 } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const advantages = [
   { icon: DollarSign, title: "Prix plus accessibles", text: "Le marché de Gatineau offre souvent un meilleur rapport qualité-prix que les marchés militaires saturés." },
@@ -43,6 +44,15 @@ const MilitaryBuyerPage = () => (
     />
 
     <TrustMiniStrip items={trustItems} />
+
+    <section className="py-8 bg-white border-y border-border/30">
+      <div className="section-container">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+        </div>
+      </div>
+    </section>
 
     <CardGrid
       overline="Pourquoi Gatineau"
