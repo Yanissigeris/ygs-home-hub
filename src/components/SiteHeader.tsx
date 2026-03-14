@@ -87,7 +87,7 @@ const SiteHeader = () => {
         {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-2.5 lg:hidden">
           <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
