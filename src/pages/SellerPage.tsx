@@ -8,8 +8,8 @@ import { CheckCircle2, AlertTriangle } from "lucide-react";
 
 const painPoints = [
   { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
-  { text: "Combien vaut vraiment ma propriété?", sub: "Un prix réaliste, pas un chiffre gonflé pour vous attirer." },
-  { text: "Faut-il faire des travaux avant?", sub: "Certains investissements rapportent. D'autres non." },
+  { text: "Combien vaut vraiment ma propriété?", sub: "Un prix réaliste basé sur les ventes récentes — pas un chiffre gonflé pour vous attirer." },
+  { text: "Faut-il faire des travaux avant?", sub: "Certains investissements rapportent. D'autres non. On fait le tri ensemble." },
   { text: "Comment vendre sans me retrouver coincé?", sub: "La coordination vente-achat demande un plan dès le départ." },
 ];
 
@@ -20,9 +20,9 @@ const fears = [
 ];
 
 const steps = [
-  { num: "01", title: "Analyse", desc: "Ventes comparables, état du marché, particularités de votre propriété." },
-  { num: "02", title: "Plan vendeur", desc: "Prix, préparation, améliorations stratégiques, plan de visibilité." },
-  { num: "03", title: "Accompagnement", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire." },
+  { num: "01", title: "Analyse et positionnement", desc: "Ventes comparables, état du marché, particularités de votre propriété. On établit un prix réaliste et stratégique." },
+  { num: "02", title: "Plan vendeur personnalisé", desc: "Préparation, améliorations qui valent la peine, plan de visibilité et calendrier de mise en marché." },
+  { num: "03", title: "Accompagnement complet", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. Aucune surprise." },
 ];
 
 const faq = [
@@ -37,7 +37,7 @@ const SellerPage = () => (
     <HeroSection
       overline="Pour vendeurs · Gatineau et environs"
       title="Vendre votre propriété à Gatineau avec une vraie stratégie"
-      subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez besoin d'un plan clair — prix, préparation, mise en marché, négociation."
+      subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
       primaryCta={{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
@@ -67,7 +67,7 @@ const SellerPage = () => (
     <section className="bg-primary py-5">
       <div className="section-container flex flex-col items-center justify-between gap-3 sm:flex-row">
         <p className="text-[0.8125rem] font-medium text-primary-foreground/80">
-          Commencez par connaître la valeur de votre propriété — c'est gratuit.
+          Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement.
         </p>
         <Button size="sm" variant="hero" asChild>
           <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
@@ -75,7 +75,7 @@ const SellerPage = () => (
       </div>
     </section>
 
-    {/* Fears — compact */}
+    {/* Fears */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-2xl">
         <SectionHeading title="Ce que les vendeurs veulent éviter" />
@@ -88,28 +88,28 @@ const SellerPage = () => (
           ))}
         </div>
         <p className="prose-body mt-5">
-          Ces inquiétudes sont normales. Mon rôle est de vous donner les outils pour les éviter.
+          Ces inquiétudes sont normales. Mon rôle est de vous donner les outils et l'information pour les éviter — avant de prendre une décision.
         </p>
       </div>
     </section>
 
-    {/* Approach */}
+    {/* Emotional reassurance */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-2xl">
         <SectionHeading
-          overline="Mon approche"
-          title="Mon rôle: vous simplifier la décision"
+          overline="Avant de vendre"
+          title="Vous n'avez pas besoin de tout décider aujourd'hui"
         />
         <p className="prose-body mt-4">
-          Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations qui valent la peine, mise en marché pour attirer les bons acheteurs.
+          Avant de vendre, plusieurs propriétaires veulent surtout comprendre leur valeur, leur timing et leurs options. Le but n'est pas de vous presser. Le but est de bâtir un plan clair.
         </p>
         <p className="prose-body mt-3">
-          Je ne suis pas là pour vous dire de vendre à tout prix. Je suis là pour vous donner un plan clair.
+          Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
         </p>
       </div>
     </section>
 
-    {/* Steps — tighter */}
+    {/* Steps */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-2xl">
         <SectionHeading overline="Le processus" title="Comment ça fonctionne" />
@@ -133,7 +133,7 @@ const SellerPage = () => (
       dark
       overline="Prochaine étape"
       title="Vous voulez savoir quoi faire dans votre cas?"
-      text="Je vous donne les chiffres, les options et une stratégie adaptée."
+      text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
       buttons={[{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

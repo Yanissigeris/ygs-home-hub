@@ -25,7 +25,7 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Réponse personnalisée en 24h" },
-  { icon: Shield, text: "Aucune obligation" },
+  { icon: Shield, text: "Aucune obligation — aucun engagement" },
 ];
 
 const ValuationPage = () => {
@@ -41,12 +41,12 @@ const ValuationPage = () => {
       <HeroSection
         compact
         overline="Évaluation gratuite · Gatineau"
-        title="Combien vaut votre propriété?"
-        subtitle="Recevez une estimation personnalisée basée sur votre secteur et les ventes comparables récentes."
-        trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+        title="Découvrez combien vaut votre propriété à Gatineau"
+        subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes."
+        trustLine="Une estimation utile, claire et sans pression — pour vous aider à mieux planifier la suite."
       />
 
-      {/* Form section — the core of this page */}
+      {/* Form section */}
       <section className="section-padding bg-background">
         <div className="section-container">
           <div className="grid gap-10 lg:grid-cols-5">
@@ -54,7 +54,7 @@ const ValuationPage = () => {
             <div className="lg:col-span-3">
               <h2>Demandez votre évaluation gratuite</h2>
               <p className="mt-2 text-[0.8125rem] text-muted-foreground max-w-md">
-                Remplissez ce formulaire — je vous reviens personnellement avec une analyse, pas un rapport automatisé.
+                Remplissez ce formulaire — je vous reviens personnellement avec une analyse claire, pas un rapport automatisé.
               </p>
 
               {submitted ? (
@@ -98,7 +98,7 @@ const ValuationPage = () => {
                           <SelectItem value="hull">Hull</SelectItem>
                           <SelectItem value="gatineau">Gatineau centre</SelectItem>
                           <SelectItem value="buckingham">Buckingham / Masson-Angers</SelectItem>
-                          <SelectItem value="autre">Autre</SelectItem>
+                          <SelectItem value="autre">Autre secteur</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -171,9 +171,8 @@ const ValuationPage = () => {
               </div>
 
               <div className="rounded-lg border border-dashed border-border p-6">
-                <p className="text-[0.6875rem] text-muted-foreground/40 mb-2">[Témoignage — à ajouter]</p>
                 <p className="text-[0.8125rem] italic leading-relaxed text-muted-foreground">
-                  "[Témoignage d'un vendeur qui a apprécié l'approche sans pression]"
+                  "[Témoignage client à ajouter]"
                 </p>
                 <p className="mt-2 text-[0.6875rem] text-muted-foreground/50">— [Nom], [Secteur]</p>
               </div>
@@ -192,7 +191,7 @@ const ValuationPage = () => {
         </div>
       </section>
 
-      {/* Benefits — compact */}
+      {/* Benefits */}
       <section className="section-padding bg-secondary/40">
         <div className="section-container max-w-2xl">
           <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
@@ -207,12 +206,12 @@ const ValuationPage = () => {
         </div>
       </section>
 
-      {/* Friction reduction — tight */}
+      {/* Friction reduction */}
       <section className="py-12 bg-background">
         <div className="section-container max-w-xl text-center">
           <h3>Pas besoin d'être prêt à vendre</h3>
           <p className="mt-2 text-[0.8125rem] text-muted-foreground">
-            Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est correct.
+            Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est tout à fait correct — et c'est exactement pour ça que ce service existe.
           </p>
           <Button className="mt-5" size="default" asChild>
             <a href="#top">Remplir le formulaire ↑</a>

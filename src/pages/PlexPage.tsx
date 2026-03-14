@@ -7,18 +7,18 @@ import FAQSection from "@/components/FAQSection";
 import { CheckCircle2, Building2, TrendingUp } from "lucide-react";
 
 const questions = [
-  { text: "Est-ce que je garde ou je vends?", sub: "Rendement actuel, stratégie et conditions du marché." },
-  { text: "Le prix demandé a-t-il du sens?", sub: "Il faut regarder les revenus, les dépenses et le potentiel réel." },
-  { text: "Quel est le vrai rendement?", sub: "Dépenses réelles, vacance, travaux, potentiel de croissance." },
+  { text: "Est-ce que je garde ou je vends?", sub: "Rendement actuel, conditions du marché et stratégie à long terme." },
+  { text: "Le prix demandé a-t-il du sens?", sub: "Revenus réels, dépenses réelles, potentiel locatif — pas juste le prix affiché." },
+  { text: "Quel est le vrai rendement?", sub: "Dépenses, vacance, travaux à prévoir, potentiel de croissance." },
   { text: "Quels risques surveiller?", sub: "Toiture, plomberie, électricité, fondation — certains coûts changent la donne." },
-  { text: "Comment vendre sans laisser d'argent sur la table?", sub: "Positionnement prix et stratégie font la différence sur un plex." },
+  { text: "Comment vendre sans laisser d'argent sur la table?", sub: "Positionnement prix et mise en marché font la différence sur un plex." },
 ];
 
 const faq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex locaux." },
   { q: "Est-ce encore rentable d'acheter un plex?", a: "Ça dépend du prix, des revenus et de votre stratégie. On peut analyser ça ensemble." },
   { q: "Comment vendre un plex occupé?", a: "C'est faisable — coordination locataires, visites, documentation. Je vous accompagne à chaque étape." },
-  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios ensemble pour voir ce qui fait plus de sens." },
+  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios ensemble pour voir ce qui fait plus de sens dans votre situation." },
 ];
 
 const PlexPage = () => (
@@ -26,20 +26,20 @@ const PlexPage = () => (
     <HeroSection
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"
-      subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte."
+      subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
       primaryCta={{ label: "Recevoir une analyse plex", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
     />
 
     <section className="section-padding bg-background">
       <div className="section-container max-w-3xl">
-        <SectionHeading overline="Pour qui" title="J'aide 2 types de clients" />
+        <SectionHeading overline="Pour qui" title="J'aide deux types de clients" />
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           <div className="rounded-lg border border-border bg-card p-6">
             <Building2 size={20} className="text-primary mb-3" />
             <h3 className="text-base">Propriétaires de plex</h3>
             <p className="mt-2 text-[0.8125rem] text-muted-foreground">
-              C'est le bon moment pour encaisser, refinancer ou conserver? On analyse ça ensemble.
+              Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels.
             </p>
           </div>
           <div className="rounded-lg border border-border bg-card p-6">
