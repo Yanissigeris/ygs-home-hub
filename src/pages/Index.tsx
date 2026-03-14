@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import PathwaySection from "@/components/PathwaySection";
+import CredibilitySection from "@/components/CredibilitySection";
 import ConversionSection from "@/components/ConversionSection";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
@@ -61,6 +62,8 @@ const Index = () => (
     <TrustStrip />
 
     <PathwaySection />
+
+    <CredibilitySection />
 
     <ConversionSection />
 
