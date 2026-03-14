@@ -16,28 +16,28 @@ interface HeroSectionProps {
 }
 
 const anim = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    <div className={`section-container relative ${compact ? "py-12 sm:py-16 md:py-20" : "py-16 sm:py-20 md:py-28 lg:py-32"}`}>
-      <div className={`grid items-center gap-8 lg:gap-12 ${(backgroundImage || agentImage) ? "lg:grid-cols-2" : ""}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[4.5rem] sm:pb-[5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
+      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[52%_48%]" : ""}`}>
         {/* Text column */}
         <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
           {overline && (
-            <p className="mb-4 text-[0.625rem] font-bold uppercase tracking-[0.22em] text-primary-foreground/30">
+            <p className="mb-5 text-[0.8125rem] font-medium uppercase tracking-[0.1em] text-primary-foreground/35">
               {overline}
             </p>
           )}
           <h1 className="text-primary-foreground">{title}</h1>
-          <p className="mt-5 max-w-[32rem] text-[0.9375rem] leading-[1.75] text-primary-foreground/65">
+          <p className="mt-5 max-w-[36rem] text-[1.0625rem] leading-[1.6] text-primary-foreground/60">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3.5">
               {primaryCta && (
                 <Button size="xl" variant="hero" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
@@ -51,7 +51,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             </div>
           )}
           {trustLine && (
-            <p className="mt-6 text-[0.75rem] tracking-[0.03em] text-primary-foreground/40 font-medium">
+            <p className="mt-5 text-[0.875rem] tracking-[0.02em] text-primary-foreground/40 font-medium">
               {trustLine}
             </p>
           )}
@@ -63,9 +63,9 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             className="hidden lg:block"
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
-            <div className="relative overflow-hidden rounded-xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-[1.75rem] shadow-2xl">
               <img
                 src={backgroundImage}
                 alt=""
@@ -86,7 +86,6 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
             <div className="relative">
-              {/* Subtle glow behind */}
               <div className="absolute -inset-6 rounded-full bg-primary-foreground/[0.04] blur-2xl" />
               <img
                 src={agentImage}
@@ -95,7 +94,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
                 loading="eager"
               />
               {agentName && (
-                <p className="mt-2 text-center text-[0.6875rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/35">
+                <p className="mt-2 text-center text-[0.75rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/35">
                   {agentName}
                 </p>
               )}
