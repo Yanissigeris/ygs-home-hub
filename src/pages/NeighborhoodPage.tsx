@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 import plateauImg from "@/assets/plateau-aylmer-lifestyle.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 
@@ -34,43 +35,67 @@ const NeighborhoodPage = () => (
     />
 
     <section className="section-padding bg-background">
-      <div className="section-container grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div>
+      <div className="section-container grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <SectionHeading
             overline="Le secteur"
             title="Pourquoi les gens aiment le Plateau / Aylmer"
             subtitle="Familles, jeunes professionnels, acheteurs relocalisés d'Ottawa — le secteur attire pour ses maisons récentes, ses services et son mode de vie pratique."
           />
-          <div className="mt-5 space-y-2">
+          <div className="mt-7 space-y-3.5">
             {reasons.map((r) => (
-              <div key={r} className="flex items-center gap-2.5">
-                <CheckCircle2 size={14} className="shrink-0 text-accent" />
-                <span className="text-[0.8125rem] text-foreground">{r}</span>
+              <div key={r} className="flex items-center gap-3">
+                <CheckCircle2 size={16} className="shrink-0 text-accent" />
+                <span className="text-[0.9375rem] text-foreground">{r}</span>
               </div>
             ))}
           </div>
-        </div>
-        <img src={plateauImg} alt="Quartier résidentiel du Plateau / Aylmer, Gatineau" className="rounded-lg object-cover aspect-[4/3] w-full" loading="lazy" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+        >
+          <img
+            src={plateauImg}
+            alt="Quartier résidentiel du Plateau / Aylmer, Gatineau"
+            className="rounded-[1.75rem] object-cover aspect-[4/3] w-full"
+            loading="lazy"
+          />
+        </motion.div>
       </div>
     </section>
 
     {/* Seller angle */}
-    <section className="section-padding bg-secondary/40">
-      <div className="section-container max-w-2xl">
-        <SectionHeading
-          overline="Vendeurs du secteur"
-          title="Vous habitez déjà le Plateau / Aylmer?"
-          subtitle="C'est peut-être le bon moment de voir ce que votre propriété vaut dans le marché actuel."
-        />
-        <div className="mt-5 space-y-2">
+    <section className="section-padding bg-secondary/25">
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading
+            overline="Vendeurs du secteur"
+            title="Vous habitez déjà le Plateau / Aylmer?"
+            subtitle="C'est peut-être le bon moment de voir ce que votre propriété vaut dans le marché actuel."
+          />
+        </motion.div>
+        <div className="mt-7 space-y-3.5">
           {sellerReasons.map((r) => (
-            <div key={r} className="flex items-center gap-2.5">
-              <CheckCircle2 size={14} className="shrink-0 text-accent" />
-              <span className="text-[0.8125rem] text-muted-foreground">{r}</span>
+            <div key={r} className="flex items-center gap-3">
+              <CheckCircle2 size={16} className="shrink-0 text-accent" />
+              <span className="text-[0.9375rem] text-muted-foreground">{r}</span>
             </div>
           ))}
         </div>
-        <Button className="mt-6" asChild>
+        <Button className="mt-8" size="lg" asChild>
           <Link to="/evaluation-gratuite-gatineau">Voir combien vaut ma propriété</Link>
         </Button>
       </div>

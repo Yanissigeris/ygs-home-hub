@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { MapPin, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gatineau.jpg";
 
 const buyerProfiles = [
@@ -39,51 +40,87 @@ const BuyerPage = () => (
     />
 
     <section className="section-padding bg-background">
-      <div className="section-container max-w-2xl">
-        <SectionHeading
-          overline="L'achat immobilier"
-          title="Choisir une propriété, c'est aussi choisir un secteur, un style de vie et une stratégie"
-          subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la bonne stratégie d'offre."
-        />
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading
+            overline="L'achat immobilier"
+            title="Choisir une propriété, c'est aussi choisir un secteur, un style de vie et une stratégie"
+            subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la bonne stratégie d'offre."
+          />
+        </motion.div>
       </div>
     </section>
 
-    <section className="section-padding bg-secondary/40">
-      <div className="section-container max-w-3xl">
-        <SectionHeading overline="Pour qui" title="Je peux vous aider si vous êtes…" />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {buyerProfiles.map((p) => (
-            <div key={p.title} className="rounded-lg border border-border bg-card p-5">
-              <p className="text-[0.875rem] font-semibold text-foreground">{p.title}</p>
-              <p className="mt-1 text-[0.8125rem] text-muted-foreground">{p.desc}</p>
-            </div>
+    <section className="section-padding bg-secondary/25">
+      <div className="section-container max-w-[52rem]">
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading overline="Pour qui" title="Je peux vous aider si vous êtes…" />
+        </motion.div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {buyerProfiles.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="card-elevated border border-border/40 bg-card p-7"
+            >
+              <h3 className="text-[1.125rem]">{p.title}</h3>
+              <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{p.desc}</p>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
 
     {/* Inline valuation CTA */}
-    <section className="bg-primary py-5">
-      <div className="section-container flex flex-col items-center justify-between gap-3 sm:flex-row">
-        <p className="text-[0.8125rem] font-medium text-primary-foreground/80">
-          Vous êtes aussi vendeur? Connaître la valeur de votre propriété peut clarifier votre budget d'achat.
-        </p>
-        <Button size="sm" variant="hero" asChild>
+    <section className="cta-band">
+      <div className="section-container">
+        <p>Vous êtes aussi vendeur? Connaître la valeur de votre propriété peut clarifier votre budget d'achat.</p>
+        <Button size="default" variant="hero" asChild>
           <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
         </Button>
       </div>
     </section>
 
     <section className="section-padding bg-background">
-      <div className="section-container max-w-3xl">
-        <SectionHeading overline="Quartiers" title="Secteurs à comparer" />
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
-          {sectors.map((s) => (
-            <Link key={s.name} to={s.href} className="card-elevated group flex items-center gap-3 rounded-lg border border-border bg-card px-5 py-4">
-              <MapPin size={14} className="text-accent shrink-0" />
-              <span className="text-[0.8125rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
-              <ArrowRight size={13} className="ml-auto text-muted-foreground/30 group-hover:text-primary transition-colors" />
-            </Link>
+      <div className="section-container max-w-[48rem]">
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading overline="Quartiers" title="Secteurs à comparer" />
+        </motion.div>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {sectors.map((s, i) => (
+            <motion.div
+              key={s.name}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Link to={s.href} className="card-elevated group flex items-center gap-3.5 border border-border/40 bg-card px-6 py-5">
+                <MapPin size={15} className="text-accent shrink-0" />
+                <span className="text-[1rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
+                <ArrowRight size={14} className="ml-auto text-muted-foreground/20 group-hover:text-primary transition-colors" />
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

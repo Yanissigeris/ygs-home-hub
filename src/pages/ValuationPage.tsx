@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
 
 const benefits = [
@@ -52,32 +52,38 @@ const ValuationPage = () => {
 
       <section className="section-padding bg-background">
         <div className="section-container">
-          <div className="grid gap-8 lg:grid-cols-5">
+          <div className="grid gap-10 lg:grid-cols-5">
             {/* Form */}
-            <div className="lg:col-span-3">
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8 shadow-[0_2px_12px_-4px_hsl(200_30%_14%_/_0.06)]">
-                <h2 className="text-[1.25rem] sm:text-[1.5rem]">Demandez votre évaluation gratuite</h2>
-                <p className="mt-1.5 text-[0.8125rem] text-muted-foreground">
+            <motion.div
+              className="lg:col-span-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
+                <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre évaluation gratuite</h2>
+                <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
                   Je vous reviens personnellement avec une analyse claire, pas un rapport automatisé.
                 </p>
 
                 {submitted ? (
-                  <div className="mt-6 rounded-lg border border-accent/30 bg-accent/5 p-6 text-center">
-                    <CheckCircle2 size={32} className="mx-auto text-accent" />
-                    <h3 className="mt-3 text-base">Merci! Demande envoyée.</h3>
-                    <p className="mt-1.5 text-[0.8125rem] text-muted-foreground">Je vous reviens dans les 24 prochaines heures.</p>
+                  <div className="mt-8 rounded-2xl border border-accent/25 bg-accent/5 p-8 text-center">
+                    <CheckCircle2 size={36} className="mx-auto text-accent" />
+                    <h3 className="mt-4 text-[1.125rem]">Merci! Demande envoyée.</h3>
+                    <p className="mt-2 text-[0.9375rem] text-muted-foreground">Je vous reviens dans les 24 prochaines heures.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="mt-5 space-y-3.5">
+                  <form onSubmit={handleSubmit} className="mt-7 space-y-5">
                     <div>
                       <Label htmlFor="adresse">Adresse de la propriété</Label>
-                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1" required />
+                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
                     </div>
-                    <div className="grid gap-3.5 sm:grid-cols-2">
+                    <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="type">Type de propriété</Label>
                         <Select>
-                          <SelectTrigger id="type" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="maison">Maison unifamiliale</SelectItem>
                             <SelectItem value="condo">Condo</SelectItem>
@@ -89,14 +95,14 @@ const ValuationPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="chambres">Chambres / Salles de bain</Label>
-                        <Input id="chambres" placeholder="Ex: 3 ch / 2 sdb" className="mt-1" />
+                        <Input id="chambres" placeholder="Ex: 3 ch / 2 sdb" className="mt-1.5" />
                       </div>
                     </div>
-                    <div className="grid gap-3.5 sm:grid-cols-2">
+                    <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="secteur">Secteur</Label>
                         <Select>
-                          <SelectTrigger id="secteur" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
                             <SelectItem value="hull">Hull</SelectItem>
@@ -109,7 +115,7 @@ const ValuationPage = () => {
                       <div>
                         <Label htmlFor="delai">Quand pensez-vous vendre?</Label>
                         <Select>
-                          <SelectTrigger id="delai" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
                             <SelectItem value="3mois">D'ici 3 mois</SelectItem>
@@ -120,27 +126,27 @@ const ValuationPage = () => {
                       </div>
                     </div>
 
-                    <div className="h-px bg-border" />
+                    <div className="h-px bg-border/50" />
 
-                    <div className="grid gap-3.5 sm:grid-cols-2">
+                    <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="nom">Nom</Label>
-                        <Input id="nom" className="mt-1" required />
+                        <Input id="nom" className="mt-1.5" required />
                       </div>
                       <div>
                         <Label htmlFor="courriel">Courriel</Label>
-                        <Input id="courriel" type="email" className="mt-1" required />
+                        <Input id="courriel" type="email" className="mt-1.5" required />
                       </div>
                     </div>
-                    <div className="grid gap-3.5 sm:grid-cols-2">
+                    <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="tel">Téléphone</Label>
-                        <Input id="tel" type="tel" className="mt-1" />
+                        <Input id="tel" type="tel" className="mt-1.5" />
                       </div>
                       <div>
                         <Label htmlFor="contact-pref">Comment me rejoindre?</Label>
                         <Select>
-                          <SelectTrigger id="contact-pref" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectTrigger id="contact-pref" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="appel">Appel</SelectItem>
                             <SelectItem value="texto">Texto</SelectItem>
@@ -150,77 +156,104 @@ const ValuationPage = () => {
                       </div>
                     </div>
 
-                    <Button type="submit" size="xl" className="w-full mt-1">
+                    <Button type="submit" size="xl" className="w-full mt-2">
                       Recevoir mon évaluation gratuite
                     </Button>
-                    <p className="text-center text-[0.625rem] text-muted-foreground/55">
+                    <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Zéro pression — je vous donne les chiffres et les options, vous décidez.
                     </p>
                   </form>
                 )}
               </div>
-            </div>
+            </motion.div>
 
             {/* Trust sidebar */}
-            <aside className="lg:col-span-2 space-y-4 lg:pt-2">
-              <div className="rounded-lg border border-border bg-secondary/40 p-5">
-                <p className="text-[0.8125rem] font-semibold text-foreground">Confidentiel et sans engagement</p>
-                <div className="mt-3 space-y-2.5">
+            <motion.aside
+              className="lg:col-span-2 space-y-5 lg:pt-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="card-elevated border border-border/40 bg-secondary/30 p-7">
+                <p className="text-[1rem] font-semibold text-foreground">Confidentiel et sans engagement</p>
+                <div className="mt-4 space-y-3.5">
                   {trustPoints.map((t) => (
-                    <div key={t.text} className="flex items-center gap-2">
-                      <t.icon size={13} className="shrink-0 text-accent" />
-                      <span className="text-[0.75rem] text-muted-foreground">{t.text}</span>
+                    <div key={t.text} className="flex items-center gap-3">
+                      <t.icon size={15} className="shrink-0 text-accent" />
+                      <span className="text-[0.9375rem] text-muted-foreground">{t.text}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-lg border border-dashed border-border p-5">
-                <p className="text-[0.8125rem] italic leading-relaxed text-muted-foreground">
+              <div className="card-elevated border border-dashed border-border/50 p-7">
+                <p className="text-[0.9375rem] italic leading-[1.6] text-muted-foreground">
                   "[Témoignage client à ajouter]"
                 </p>
-                <p className="mt-1.5 text-[0.625rem] text-muted-foreground/45">— [Nom], [Secteur]</p>
+                <p className="mt-2 text-[0.8125rem] text-muted-foreground/40">— [Nom], [Secteur]</p>
               </div>
 
-              <div className="rounded-lg bg-primary p-5 text-primary-foreground">
-                <p className="text-[0.8125rem] font-semibold">Vous vendez à Gatineau?</p>
-                <p className="mt-1 text-[0.75rem] leading-relaxed text-primary-foreground/65">
+              <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
+                <p className="text-[1rem] font-semibold">Vous vendez à Gatineau?</p>
+                <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Demandez aussi votre plan vendeur personnalisé — prix, préparation et stratégie.
                 </p>
-                <Button size="sm" variant="hero" className="mt-3 w-full" asChild>
+                <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/vendre-ma-maison-gatineau">Voir le plan vendeur</Link>
                 </Button>
               </div>
-            </aside>
+            </motion.aside>
           </div>
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="section-padding bg-secondary/40">
-        <div className="section-container max-w-2xl">
-          <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
-          <div className="mt-5 space-y-2">
-            {benefits.map((b) => (
-              <div key={b} className="flex items-start gap-2">
-                <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-[0.8125rem] text-foreground">{b}</span>
-              </div>
+      <section className="section-padding bg-secondary/25">
+        <div className="section-container max-w-[44rem]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
+          </motion.div>
+          <div className="mt-8 space-y-4">
+            {benefits.map((b, i) => (
+              <motion.div
+                key={b}
+                className="flex items-start gap-3.5"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.3, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
+                <span className="text-[1rem] text-foreground">{b}</span>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Friction reduction */}
-      <section className="py-10 bg-background">
-        <div className="section-container max-w-md text-center">
-          <h3>Pas besoin d'être prêt à vendre</h3>
-          <p className="mt-1.5 text-[0.8125rem] text-muted-foreground">
-            Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est exactement pour ça que ce service existe.
-          </p>
-          <Button className="mt-4" size="default" asChild>
-            <a href="#top">Remplir le formulaire ↑</a>
-          </Button>
+      <section className="section-padding-md bg-background">
+        <div className="section-container max-w-[32rem] text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <h3>Pas besoin d'être prêt à vendre</h3>
+            <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
+              Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est exactement pour ça que ce service existe.
+            </p>
+            <Button className="mt-6" size="lg" asChild>
+              <a href="#top">Remplir le formulaire ↑</a>
+            </Button>
+          </motion.div>
         </div>
       </section>
     </>
