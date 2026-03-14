@@ -10,6 +10,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, MapPin, Shield, Clock, Award, DollarSign, CheckCircle2 } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const advantages = [
   { icon: DollarSign, title: "Prix plus accessibles", text: "Le marché de Gatineau offre souvent un meilleur rapport qualité-prix que les marchés militaires saturés." },
