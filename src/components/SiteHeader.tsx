@@ -51,12 +51,17 @@ const SiteHeader = () => {
               marginLeft: -12,
             }}
           />
-          {/* Symbol logo — tablet (sm to lg) */}
+          {/* Horizontal logo — tablet (sm to lg) */}
           <img
-            src={logoYgsVertical}
+            src={logoYgsBlue}
             alt="YGS — Yanis Gauthier-Sigeris"
-            className="block lg:hidden transition-all duration-300 object-contain drop-shadow-sm"
-            style={{ width: scrolled ? 56 : 68, height: "auto", maxHeight: scrolled ? 66 : 78 }}
+            className="block lg:hidden transition-all duration-300 object-contain"
+            style={{
+              width: scrolled ? 200 : 240,
+              height: "auto",
+              maxHeight: scrolled ? 46 : 52,
+              marginLeft: -8,
+            }}
           />
         </Link>
 
