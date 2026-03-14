@@ -39,7 +39,7 @@ const SiteHeader = () => {
         <Link to="/" className="flex items-center shrink-0 overflow-hidden">
           {/* Full horizontal logo — lg+ only */}
           <img
-            src={logoYgsBlue}
+            src={logoYgsHorizontal}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
