@@ -1,19 +1,39 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
-import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import ProcessSteps from "@/components/ProcessSteps";
+import CardGrid from "@/components/CardGrid";
+import InlineCTA from "@/components/InlineCTA";
 import { CheckCircle2, Building2, TrendingUp, ArrowRight, Clock, Award, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gatineau.jpg";
 
+const clientTypes = [
+  {
+    icon: Building2,
+    title: "Propriétaires de plex",
+    text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels — pas des suppositions.",
+    cta: "Évaluer mon plex",
+    href: "/evaluation-gratuite-gatineau",
+  },
+  {
+    icon: TrendingUp,
+    title: "Acheteurs investisseurs",
+    text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat — les chiffres avant la décision.",
+    cta: "Parler stratégie",
+    href: "/contact-yanis",
+  },
+];
+
 const questions = [
-  { text: "Est-ce que je garde ou je vends?", sub: "Rendement actuel, conditions du marché et stratégie à long terme." },
-  { text: "Le prix demandé a-t-il du sens?", sub: "Revenus réels, dépenses réelles, potentiel locatif — pas juste le prix affiché." },
-  { text: "Quel est le vrai rendement?", sub: "Dépenses, vacance, travaux à prévoir, potentiel de croissance." },
-  { text: "Quels risques surveiller?", sub: "Toiture, plomberie, électricité, fondation — certains coûts changent la donne." },
-  { text: "Comment maximiser le prix de vente?", sub: "Positionnement prix et mise en marché font la différence sur un plex." },
+  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Rendement actuel, conditions du marché et stratégie à long terme." },
+  { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Revenus réels, dépenses réelles, potentiel locatif — pas juste le prix affiché." },
+  { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Dépenses, vacance, travaux à prévoir, potentiel de croissance." },
+  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation — certains coûts changent la donne." },
+  { icon: CheckCircle2, title: "Comment maximiser le prix de vente?", text: "Positionnement prix et mise en marché font la différence sur un plex." },
 ];
 
 const steps = [
@@ -22,7 +42,7 @@ const steps = [
   { num: "03", title: "Exécution et accompagnement", desc: "De la décision à la transaction, un accompagnement complet et transparent." },
 ];
 
-const credPoints = [
+const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste plex et multilogements" },
   { icon: Shield, label: "Analyse basée sur les vrais chiffres" },
@@ -47,24 +67,7 @@ const PlexPage = () => (
       backgroundImage={heroImg}
     />
 
-    {/* Credibility mini-strip */}
-    <section className="border-b border-border/30 bg-secondary/30">
-      <div className="section-container py-5 sm:py-6">
-        <motion.div
-          className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {credPoints.map((item) => (
-            <div key={item.label} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/60">
-              <item.icon size={14} className="text-accent shrink-0" />
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <TrustMiniStrip items={trustItems} />
 
     {/* Client types */}
     <section className="section-padding bg-background">
@@ -76,25 +79,11 @@ const PlexPage = () => (
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <SectionHeading overline="Pour qui" title="J'aide deux types de clients" centered />
+          <p className="label-overline mb-3">Pour qui</p>
+          <h2>J'aide deux types de clients</h2>
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              icon: Building2,
-              title: "Propriétaires de plex",
-              text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels — pas des suppositions.",
-              cta: "Évaluer mon plex",
-              href: "/evaluation-gratuite-gatineau",
-            },
-            {
-              icon: TrendingUp,
-              title: "Acheteurs investisseurs",
-              text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat — les chiffres avant la décision.",
-              cta: "Parler stratégie",
-              href: "/contact-yanis",
-            },
-          ].map((card, i) => (
+          {clientTypes.map((card, i) => (
             <motion.div
               key={card.title}
               initial={{ opacity: 0, y: 20 }}
@@ -107,9 +96,7 @@ const PlexPage = () => (
                   <card.icon size={24} />
                 </div>
                 <h3 className="text-[1.125rem]">{card.title}</h3>
-                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  {card.text}
-                </p>
+                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">{card.text}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
                   {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>
@@ -120,82 +107,21 @@ const PlexPage = () => (
       </div>
     </section>
 
-    {/* Inline valuation CTA */}
-    <section className="cta-band">
-      <div className="section-container">
-        <p>Vous possédez un plex? Commencez par connaître sa valeur actuelle.</p>
-        <Button size="default" variant="hero" asChild>
-          <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
-        </Button>
-      </div>
-    </section>
+    <InlineCTA
+      text="Vous possédez un plex? Commencez par connaître sa valeur actuelle."
+      buttonLabel="Obtenir ma valeur →"
+      href="/evaluation-gratuite-gatineau"
+    />
 
-    {/* Questions */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container max-w-[52rem]">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading overline="Analyse" title="Les vraies questions derrière un plex" centered />
-        </motion.div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {questions.map((q, i) => (
-            <motion.div
-              key={q.text}
-              className="card-elevated flex items-start gap-4 border border-border/40 bg-card p-6"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
-              <div>
-                <p className="text-[1rem] font-medium text-foreground">{q.text}</p>
-                <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-muted-foreground">{q.sub}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <CardGrid
+      overline="Analyse"
+      title="Les vraies questions derrière un plex"
+      items={questions}
+      variant="icon-inline"
+      background="alt"
+    />
 
-    {/* Process */}
-    <section className="section-padding bg-background">
-      <div className="section-container">
-        <motion.div
-          className="text-center mb-12 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <SectionHeading overline="Le processus" title="Comment ça fonctionne" centered />
-        </motion.div>
-        <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.num}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="card-elevated border border-border/40 bg-card p-7 sm:p-8 h-full">
-                <span className="text-[2rem] font-heading font-bold text-accent/20 leading-none">
-                  {s.num}
-                </span>
-                <h3 className="mt-4 text-[1.125rem]">{s.title}</h3>
-                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">{s.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ProcessSteps steps={steps} />
 
     <CTASection
       dark

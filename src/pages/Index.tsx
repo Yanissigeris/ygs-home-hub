@@ -7,11 +7,10 @@ import CredibilitySection from "@/components/CredibilitySection";
 import ConversionSection from "@/components/ConversionSection";
 import TestimonialPlaceholder from "@/components/TestimonialPlaceholder";
 import CTASection from "@/components/CTASection";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import AudienceCards from "@/components/AudienceCards";
 import AboutSection from "@/components/AboutSection";
 import SectorsSection from "@/components/SectorsSection";
-import { ArrowRight } from "lucide-react";
+import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-gatineau.jpg";
 
 const Index = () => (
@@ -36,15 +35,11 @@ const Index = () => (
 
     <AudienceCards />
 
-    {/* Inline seller CTA */}
-    <section className="cta-band">
-      <div className="section-container">
-        <p>Vous pensez vendre? Commencez par connaître la valeur de votre propriété.</p>
-        <Button size="default" variant="hero" asChild>
-          <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite →</Link>
-        </Button>
-      </div>
-    </section>
+    <InlineCTA
+      text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
+      buttonLabel="Évaluation Gratuite →"
+      href="/evaluation-gratuite-gatineau"
+    />
 
     <AboutSection />
 

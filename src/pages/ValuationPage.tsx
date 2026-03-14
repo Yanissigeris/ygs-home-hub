@@ -2,6 +2,8 @@ import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
+import BenefitsList from "@/components/BenefitsList";
+import ContentBlock from "@/components/ContentBlock";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -208,54 +210,21 @@ const ValuationPage = () => {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="section-padding bg-secondary/25">
-        <div className="section-container max-w-[44rem]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
-          </motion.div>
-          <div className="mt-8 space-y-4">
-            {benefits.map((b, i) => (
-              <motion.div
-                key={b}
-                className="flex items-start gap-3.5"
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.3, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-[1rem] text-foreground">{b}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BenefitsList
+        overline="Ce que vous recevez"
+        title="Votre évaluation inclut"
+        items={benefits}
+      />
 
-      {/* Friction reduction */}
-      <section className="section-padding-md bg-background">
-        <div className="section-container max-w-[32rem] text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <h3>Pas besoin d'être prêt à vendre</h3>
-            <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-              Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est exactement pour ça que ce service existe.
-            </p>
-            <Button className="mt-6" size="lg" asChild>
-              <a href="#top">Remplir le formulaire ↑</a>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <ContentBlock narrow centered padSize="md">
+        <h3>Pas besoin d'être prêt à vendre</h3>
+        <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
+          Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est exactement pour ça que ce service existe.
+        </p>
+        <Button className="mt-6" size="lg" asChild>
+          <a href="#top">Remplir le formulaire ↑</a>
+        </Button>
+      </ContentBlock>
     </>
   );
 };
