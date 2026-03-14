@@ -53,10 +53,10 @@ const SiteHeader = () => {
           />
           {/* Symbol logo — tablet (sm to lg) */}
           <img
-            src={logoYgsSymbolBlue}
+            src={logoYgsVertical}
             alt="YGS"
-            className="block lg:hidden"
-            style={{ width: 38, height: 38 }}
+            className="block lg:hidden transition-all duration-300 object-contain"
+            style={{ width: scrolled ? 44 : 52, height: "auto", maxHeight: scrolled ? 56 : 64 }}
           />
         </Link>
 
