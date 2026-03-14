@@ -42,10 +42,10 @@ const CredibilitySection = () => (
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-[1rem] font-semibold mb-2.5 tracking-[-0.015em]">
+            <h3 className="text-[0.9375rem] font-semibold mb-2 tracking-[-0.015em] text-foreground/90">
               {point.title}
             </h3>
-            <p className="text-[0.8125rem] leading-[1.7] text-muted-foreground">
+            <p className="text-[0.8125rem] leading-[1.75] text-muted-foreground/70 max-w-[16rem] mx-auto">
               {point.text}
             </p>
           </motion.div>
