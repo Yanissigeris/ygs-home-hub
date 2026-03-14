@@ -10,6 +10,7 @@ interface HeroSectionProps {
   secondaryCta?: { label: string; href: string };
   trustLine?: string;
   compact?: boolean;
+  backgroundImage?: string;
 }
 
 const anim = {
@@ -18,8 +19,14 @@ const anim = {
   transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
+    {backgroundImage && (
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-15"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+    )}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(195_30%_28%_/_0.1)_0%,_transparent_50%)]" />
     <div className={`section-container relative ${compact ? "py-10 sm:py-14 md:py-16" : "py-14 sm:py-20 md:py-24 lg:py-28"}`}>
       <motion.div className="max-w-[36rem]" {...anim}>

@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { CheckCircle2 } from "lucide-react";
+import plateauImg from "@/assets/plateau-aylmer-lifestyle.jpg";
+import riverImg from "@/assets/gatineau-river-view.jpg";
 
 const reasons = [
   "Plus d'espace à un prix encore accessible comparé à Ottawa",
@@ -29,6 +30,7 @@ const NeighborhoodPage = () => (
       subtitle="Vie de famille, commodités, accès à Ottawa et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
       primaryCta={{ label: "Me faire guider", href: "/contact-yanis" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
+      backgroundImage={riverImg}
     />
 
     <section className="section-padding bg-background">
@@ -48,7 +50,7 @@ const NeighborhoodPage = () => (
             ))}
           </div>
         </div>
-        <ImagePlaceholder label="Photo de secteur à ajouter" />
+        <img src={plateauImg} alt="Quartier résidentiel du Plateau / Aylmer, Gatineau" className="rounded-lg object-cover aspect-[4/3] w-full" loading="lazy" />
       </div>
     </section>
 

@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
+import homeImg from "@/assets/home-interior.jpg";
 
 const painPoints = [
   { text: "Est-ce le bon moment pour vendre?", sub: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
@@ -34,6 +35,7 @@ const SellerPage = () => (
       subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
       primaryCta={{ label: "Recevoir mon plan vendeur", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      backgroundImage={homeImg}
     />
 
     {/* Pain points */}

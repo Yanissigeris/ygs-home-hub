@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { MapPin, ArrowRight } from "lucide-react";
+import heroImg from "@/assets/hero-gatineau.jpg";
 
 const buyerProfiles = [
   { title: "Premier acheteur", desc: "Comprendre le processus étape par étape sans se sentir dépassé." },
@@ -34,6 +35,7 @@ const BuyerPage = () => (
       subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress et sans erreur."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      backgroundImage={heroImg}
     />
 
     <section className="section-padding bg-background">
