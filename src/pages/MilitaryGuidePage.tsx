@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const topics = [
   "Comprendre les réalités d'une mutation immobilière",
