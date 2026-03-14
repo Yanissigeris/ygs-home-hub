@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -11,20 +12,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, Shield, Clock, Lock } from "lucide-react";
+import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
 
 const benefits = [
-  "Une fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur",
-  "Mon avis sur le bon positionnement prix pour votre situation",
-  "Les forces de votre propriété à mettre de l'avant",
-  "Les points à corriger si nécessaire — et lesquels valent vraiment la peine",
-  "Les prochaines étapes possibles, sans engagement ni pression",
+  "Fourchette de valeur réaliste basée sur les ventes récentes",
+  "Avis sur le positionnement prix pour votre situation",
+  "Forces de votre propriété à mettre de l'avant",
+  "Points à corriger — et lesquels valent la peine",
+  "Prochaines étapes possibles, sans engagement",
 ];
 
 const trustPoints = [
-  { icon: Lock, text: "Vos informations restent strictement confidentielles" },
-  { icon: Clock, text: "Réponse personnalisée en 24h — pas un rapport automatisé" },
-  { icon: Shield, text: "Aucune obligation, aucun engagement" },
+  { icon: Lock, text: "Informations strictement confidentielles" },
+  { icon: Clock, text: "Réponse personnalisée en 24h" },
+  { icon: Shield, text: "Aucune obligation" },
 ];
 
 const ValuationPage = () => {
@@ -38,41 +39,41 @@ const ValuationPage = () => {
   return (
     <>
       <HeroSection
-        overline="Évaluation gratuite · Gatineau et Outaouais"
-        title="Découvrez combien vaut votre propriété à Gatineau"
-        subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes."
+        compact
+        overline="Évaluation gratuite · Gatineau"
+        title="Combien vaut votre propriété?"
+        subtitle="Recevez une estimation personnalisée basée sur votre secteur et les ventes comparables récentes."
         trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
       />
 
-      {/* Main form section */}
+      {/* Form section — the core of this page */}
       <section className="section-padding bg-background">
         <div className="section-container">
-          <div className="grid gap-12 lg:grid-cols-5">
+          <div className="grid gap-10 lg:grid-cols-5">
             {/* Form */}
             <div className="lg:col-span-3">
-              <p className="label-overline mb-3">Formulaire</p>
               <h2>Demandez votre évaluation gratuite</h2>
-              <p className="prose-body mt-3">
-                Remplissez ce court formulaire et je vous reviens personnellement avec une analyse de la valeur de votre propriété — pas un rapport automatisé.
+              <p className="mt-2 text-[0.8125rem] text-muted-foreground max-w-md">
+                Remplissez ce formulaire — je vous reviens personnellement avec une analyse, pas un rapport automatisé.
               </p>
 
               {submitted ? (
-                <div className="mt-10 rounded-lg border border-accent/30 bg-accent/5 p-10 text-center">
-                  <CheckCircle2 size={44} className="mx-auto text-accent" />
-                  <h3 className="mt-5">Merci! Votre demande a été envoyée.</h3>
-                  <p className="mt-3 text-[0.875rem] text-muted-foreground">Je vous reviens personnellement dans les 24 prochaines heures.</p>
+                <div className="mt-8 rounded-lg border border-accent/30 bg-accent/5 p-8 text-center">
+                  <CheckCircle2 size={36} className="mx-auto text-accent" />
+                  <h3 className="mt-4">Merci! Demande envoyée.</h3>
+                  <p className="mt-2 text-[0.8125rem] text-muted-foreground">Je vous reviens dans les 24 prochaines heures.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                   <div>
                     <Label htmlFor="adresse">Adresse de la propriété</Label>
-                    <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
+                    <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1" required />
                   </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <Label htmlFor="type">Type de propriété</Label>
                       <Select>
-                        <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <SelectTrigger id="type" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="maison">Maison unifamiliale</SelectItem>
                           <SelectItem value="condo">Condo</SelectItem>
@@ -84,58 +85,58 @@ const ValuationPage = () => {
                     </div>
                     <div>
                       <Label htmlFor="chambres">Chambres / Salles de bain</Label>
-                      <Input id="chambres" placeholder="Ex: 3 ch / 2 sdb" className="mt-1.5" />
+                      <Input id="chambres" placeholder="Ex: 3 ch / 2 sdb" className="mt-1" />
                     </div>
                   </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <Label htmlFor="secteur">Secteur</Label>
                       <Select>
-                        <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <SelectTrigger id="secteur" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
                           <SelectItem value="hull">Hull</SelectItem>
                           <SelectItem value="gatineau">Gatineau centre</SelectItem>
                           <SelectItem value="buckingham">Buckingham / Masson-Angers</SelectItem>
-                          <SelectItem value="autre">Autre secteur</SelectItem>
+                          <SelectItem value="autre">Autre</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
                       <Label htmlFor="delai">Quand pensez-vous vendre?</Label>
                       <Select>
-                        <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <SelectTrigger id="delai" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
-                          <SelectItem value="3mois">Dans les 3 prochains mois</SelectItem>
-                          <SelectItem value="6mois">Dans 6 mois ou plus</SelectItem>
+                          <SelectItem value="3mois">D'ici 3 mois</SelectItem>
+                          <SelectItem value="6mois">6 mois ou plus</SelectItem>
                           <SelectItem value="info">Juste pour savoir</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
-                  <div className="my-2 border-t border-border" />
+                  <div className="border-t border-border" />
 
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <Label htmlFor="nom">Nom complet</Label>
-                      <Input id="nom" className="mt-1.5" required />
+                      <Label htmlFor="nom">Nom</Label>
+                      <Input id="nom" className="mt-1" required />
                     </div>
                     <div>
                       <Label htmlFor="courriel">Courriel</Label>
-                      <Input id="courriel" type="email" className="mt-1.5" required />
+                      <Input id="courriel" type="email" className="mt-1" required />
                     </div>
                   </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <Label htmlFor="tel">Téléphone</Label>
-                      <Input id="tel" type="tel" className="mt-1.5" />
+                      <Input id="tel" type="tel" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="contact-pref">Comment me rejoindre?</Label>
                       <Select>
-                        <SelectTrigger id="contact-pref" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <SelectTrigger id="contact-pref" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="appel">Appel</SelectItem>
                           <SelectItem value="texto">Texto</SelectItem>
@@ -145,10 +146,10 @@ const ValuationPage = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" size="xl" className="w-full mt-2">
+                  <Button type="submit" size="xl" className="w-full">
                     Recevoir mon évaluation gratuite
                   </Button>
-                  <p className="text-center text-[0.75rem] text-muted-foreground/70">
+                  <p className="text-center text-[0.6875rem] text-muted-foreground/60">
                     Zéro pression — je vous donne les chiffres et les options, vous décidez.
                   </p>
                 </form>
@@ -156,59 +157,65 @@ const ValuationPage = () => {
             </div>
 
             {/* Trust sidebar */}
-            <aside className="lg:col-span-2 lg:pt-14">
-              <div className="rounded-lg border border-border bg-secondary/50 p-7">
-                <h4 className="font-body text-[0.9375rem] font-semibold text-foreground">Une estimation utile, claire et sans pression</h4>
-                <p className="mt-3 text-[0.8125rem] leading-relaxed text-muted-foreground">
-                  Pour vous aider à mieux planifier la suite — que vous soyez prêt à vendre maintenant ou dans quelques mois.
-                </p>
-                <div className="mt-5 space-y-4">
+            <aside className="lg:col-span-2 lg:pt-12 space-y-5">
+              <div className="rounded-lg border border-border bg-secondary/40 p-6">
+                <p className="text-[0.8125rem] font-semibold text-foreground">Confidentiel et sans engagement</p>
+                <div className="mt-4 space-y-3">
                   {trustPoints.map((t) => (
-                    <div key={t.text} className="flex items-start gap-3">
-                      <t.icon size={16} className="mt-0.5 shrink-0 text-accent" />
-                      <span className="text-[0.8125rem] text-muted-foreground">{t.text}</span>
+                    <div key={t.text} className="flex items-center gap-2.5">
+                      <t.icon size={14} className="shrink-0 text-accent" />
+                      <span className="text-[0.75rem] text-muted-foreground">{t.text}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-6 rounded-lg border border-dashed border-border bg-card p-7">
-                <p className="text-[0.6875rem] text-muted-foreground/50 mb-3">[Témoignage client — à ajouter]</p>
-                <p className="text-[0.875rem] italic leading-relaxed text-muted-foreground">
-                  "[Témoignage d'un client vendeur qui a apprécié l'approche sans pression de Yanis]"
+              <div className="rounded-lg border border-dashed border-border p-6">
+                <p className="text-[0.6875rem] text-muted-foreground/40 mb-2">[Témoignage — à ajouter]</p>
+                <p className="text-[0.8125rem] italic leading-relaxed text-muted-foreground">
+                  "[Témoignage d'un vendeur qui a apprécié l'approche sans pression]"
                 </p>
-                <p className="mt-3 text-[0.75rem] text-muted-foreground/60">— [Nom du client], [Secteur]</p>
+                <p className="mt-2 text-[0.6875rem] text-muted-foreground/50">— [Nom], [Secteur]</p>
+              </div>
+
+              <div className="rounded-lg bg-primary p-6 text-primary-foreground">
+                <p className="text-[0.8125rem] font-semibold">Vous vendez à Gatineau?</p>
+                <p className="mt-1.5 text-[0.75rem] leading-relaxed text-primary-foreground/70">
+                  Demandez aussi votre plan vendeur personnalisé — prix, préparation et stratégie.
+                </p>
+                <Button size="sm" variant="hero" className="mt-4 w-full" asChild>
+                  <Link to="/vendre-ma-maison-gatineau">Voir le plan vendeur</Link>
+                </Button>
               </div>
             </aside>
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Benefits — compact */}
       <section className="section-padding bg-secondary/40">
-        <div className="section-container max-w-3xl">
-          <SectionHeading overline="Ce que vous recevez" title="Ce que vous allez obtenir" centered />
-          <div className="mt-10 space-y-4">
+        <div className="section-container max-w-2xl">
+          <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
+          <div className="mt-6 space-y-2.5">
             {benefits.map((b) => (
-              <div key={b} className="flex items-start gap-3">
-                <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-[0.9375rem] text-foreground">{b}</span>
+              <div key={b} className="flex items-start gap-2.5">
+                <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-accent" />
+                <span className="text-[0.8125rem] text-foreground">{b}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Friction reduction */}
-      <section className="section-padding bg-background">
-        <div className="section-container max-w-2xl text-center">
-          <SectionHeading
-            title="Pas besoin d'être prêt à vendre tout de suite"
-            subtitle="Beaucoup de propriétaires veulent simplement comprendre leur valeur actuelle avant de décider. C'est tout à fait correct. Je vous donne une lecture claire du marché, sans pression et sans obligation."
-            centered
-          />
-          <Button className="mt-8" size="lg" asChild>
-            <a href="#top">Remplir le formulaire</a>
+      {/* Friction reduction — tight */}
+      <section className="py-12 bg-background">
+        <div className="section-container max-w-xl text-center">
+          <h3>Pas besoin d'être prêt à vendre</h3>
+          <p className="mt-2 text-[0.8125rem] text-muted-foreground">
+            Beaucoup de propriétaires veulent simplement comprendre leur valeur avant de décider. C'est correct.
+          </p>
+          <Button className="mt-5" size="default" asChild>
+            <a href="#top">Remplir le formulaire ↑</a>
           </Button>
         </div>
       </section>
