@@ -44,6 +44,15 @@ const MilitarySellerPage = () => (
 
     <TrustMiniStrip items={trustItems} />
 
+    <section className="py-8 bg-white border-y border-border/30">
+      <div className="section-container">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+        </div>
+      </div>
+    </section>
+
     <ProcessSteps steps={steps} />
 
     <InlineCTA
