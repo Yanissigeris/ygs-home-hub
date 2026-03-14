@@ -8,6 +8,9 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { ArrowRight, MapPin, Award, Clock, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
+import cardVendreImg from "@/assets/card-vendre.jpg";
+import cardAcheterImg from "@/assets/card-acheter.jpg";
+import cardPlexImg from "@/assets/card-plex.jpg";
 
 const audienceCards = [
   {
@@ -15,6 +18,7 @@ const audienceCards = [
     text: "Connaître la valeur de votre propriété, planifier le bon timing et obtenir le meilleur prix.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
+    image: cardVendreImg,
     featured: true,
   },
   {
@@ -22,12 +26,14 @@ const audienceCards = [
     text: "Trouver le bon secteur, éviter les erreurs coûteuses et acheter avec confiance.",
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
+    image: cardAcheterImg,
   },
   {
     title: "Plex / investissement",
     text: "Analyser la valeur, le rendement et la stratégie avant de prendre une décision.",
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
+    image: cardPlexImg,
   },
 ];
 
@@ -49,25 +55,40 @@ const Index = () => (
       backgroundImage={heroImg}
     />
 
-    {/* Audience cards */}
+    {/* Audience cards — image-first like reference */}
     <section className="section-padding bg-background">
-      <div className="section-container max-w-3xl">
-        <div className="grid gap-4 sm:grid-cols-3">
+      <div className="section-container">
+        <div className="grid gap-6 sm:grid-cols-3">
           {audienceCards.map((card) => (
             <Link
               key={card.title}
               to={card.href}
-              className={`card-elevated group flex flex-col rounded-lg border bg-card p-5 sm:p-6 ${
+              className={`card-elevated group flex flex-col overflow-hidden rounded-xl border bg-card ${
                 card.featured
-                  ? "border-accent/30 shadow-[0_0_0_1px_hsl(36_60%_52%_/_0.08)]"
+                  ? "border-accent/30 ring-1 ring-accent/10"
                   : "border-border"
               }`}
             >
-              <h3 className="text-base group-hover:text-primary transition-colors">{card.title}</h3>
-              <p className="mt-1.5 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-[0.8125rem] font-medium text-primary">
-                {card.cta} <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
-              </span>
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                {card.featured && (
+                  <span className="absolute top-3 left-3 rounded-full bg-accent px-2.5 py-0.5 text-[0.625rem] font-semibold text-white">
+                    Populaire
+                  </span>
+                )}
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="text-[1.0625rem] group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{card.text}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary">
+                  {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
             </Link>
           ))}
         </div>
@@ -91,22 +112,22 @@ const Index = () => (
           <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
         </div>
         <div className="lg:col-span-3">
-          <p className="label-overline mb-1.5">Pourquoi YGS</p>
+          <p className="label-overline mb-2">Pourquoi YGS</p>
           <h2>Un accompagnement simple, stratégique et humain</h2>
-          <p className="prose-body mt-3">
+          <p className="prose-body mt-4">
             En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire, locale et sans pression.
           </p>
-          <p className="prose-body mt-2.5">
+          <p className="prose-body mt-3">
             Son rôle n'est pas de pousser. C'est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.6875rem] text-muted-foreground/60">
-            <span className="flex items-center gap-1.5"><Clock size={11} /> Près de 9 ans d'expérience</span>
-            <span className="flex items-center gap-1.5"><Award size={11} /> Club Platine · Club 100% · Temple de la renommée</span>
-            <span className="flex items-center gap-1.5"><Heart size={11} /> Approche axée sur la confiance</span>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.75rem] text-muted-foreground/60">
+            <span className="flex items-center gap-1.5"><Clock size={12} /> Près de 9 ans d'expérience</span>
+            <span className="flex items-center gap-1.5"><Award size={12} /> Club Platine · Club 100% · Temple de la renommée</span>
+            <span className="flex items-center gap-1.5"><Heart size={12} /> Approche axée sur la confiance</span>
           </div>
 
-          <Button className="mt-6" size="default" asChild>
+          <Button className="mt-8" size="lg" asChild>
             <Link to="/contact-yanis">En savoir plus</Link>
           </Button>
         </div>
@@ -116,14 +137,14 @@ const Index = () => (
     {/* Sectors */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-3xl">
-        <p className="label-overline text-center mb-1.5">Gatineau et environs</p>
+        <p className="label-overline text-center mb-2">Gatineau et environs</p>
         <h2 className="text-center">Secteurs à surveiller</h2>
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {sectors.map((s) => (
-            <Link key={s.name} to={s.href} className="card-elevated group flex items-center gap-2.5 rounded-lg border border-border bg-card px-4 py-3.5">
-              <MapPin size={13} className="text-accent shrink-0" />
-              <span className="text-[0.8125rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
-              <ArrowRight size={12} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
+            <Link key={s.name} to={s.href} className="card-elevated group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
+              <MapPin size={14} className="text-accent shrink-0" />
+              <span className="text-[0.875rem] font-medium text-foreground group-hover:text-primary transition-colors">{s.name}</span>
+              <ArrowRight size={13} className="ml-auto text-muted-foreground/25 group-hover:text-primary transition-colors" />
             </Link>
           ))}
         </div>
