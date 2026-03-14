@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Mail } from "lucide-react";
 
 const services = [
   "Vente résidentielle",
@@ -33,29 +33,63 @@ const ContactPage = () => {
   return (
     <>
       <HeroSection
+        overline="Contact · Yanis Gauthier-Sigeris"
         title="Parlons de votre projet immobilier"
-        subtitle="Que vous soyez en réflexion ou prêt à passer à l'action, je peux vous aider à voir plus clair."
+        subtitle="Que vous soyez en réflexion ou prêt à passer à l'action, je peux vous aider à voir plus clair. Pas de pression — juste une conversation honnête."
       />
 
-      {/* Bio */}
+      {/* Bio section */}
       <section className="section-padding bg-background">
-        <div className="section-container grid gap-10 lg:grid-cols-2 lg:items-center">
-          <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
-          <div>
-            <h2 className="text-2xl sm:text-3xl text-foreground">Yanis Gauthier-Sigeris</h2>
-            <p className="mt-1 text-sm font-medium text-accent">Courtier immobilier — Gatineau</p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
+        <div className="section-container grid gap-14 lg:grid-cols-5 lg:items-start">
+          <div className="lg:col-span-2">
+            <ImagePlaceholder label="Photo professionnelle de Yanis — à ajouter" aspectRatio="aspect-[3/4]" />
+          </div>
+          <div className="lg:col-span-3">
+            <p className="label-overline mb-3">À propos</p>
+            <h2>Yanis Gauthier-Sigeris</h2>
+            <p className="mt-1 text-[0.875rem] font-medium text-accent">Courtier immobilier · Gatineau</p>
+            <p className="mt-1 text-[0.75rem] text-muted-foreground/50">Affilié RE/MAX · Équipe Marty Waite</p>
+
+            <p className="prose-body mt-6">
               Courtier immobilier à Gatineau, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif est de vous aider à prendre une bonne décision, au bon moment, avec les bonnes infos.
             </p>
-            <div className="mt-6">
-              <h3 className="font-body text-base font-semibold text-foreground">Ce que je fais</h3>
-              <div className="mt-3 space-y-2">
+            <p className="prose-body mt-4">
+              Je ne suis pas là pour vous pousser à agir. Je suis là pour vous donner une lecture claire et vous accompagner quand vous êtes prêt.
+            </p>
+
+            <div className="mt-8">
+              <h4 className="font-body text-[0.875rem] font-semibold text-foreground">Ce que je fais</h4>
+              <div className="mt-3 space-y-2.5">
                 {services.map((s) => (
-                  <div key={s} className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-accent" />
-                    <span className="text-sm text-foreground">{s}</span>
+                  <div key={s} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={15} className="text-accent" />
+                    <span className="text-[0.875rem] text-foreground">{s}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Contact card */}
+            <div className="mt-10 rounded-lg border border-border bg-secondary/40 p-6">
+              <h4 className="font-body text-[0.875rem] font-semibold text-foreground mb-4">Coordonnées</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Phone size={15} className="text-muted-foreground/50" />
+                  <span className="text-[0.8125rem] text-muted-foreground">[Téléphone — à ajouter]</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={15} className="text-muted-foreground/50" />
+                  <span className="text-[0.8125rem] text-muted-foreground">[Courriel — à ajouter]</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin size={15} className="text-muted-foreground/50" />
+                  <span className="text-[0.8125rem] text-muted-foreground">[Adresse ou secteur — à ajouter]</span>
+                </div>
+              </div>
+              <div className="mt-4 flex gap-4 text-[0.75rem] text-muted-foreground/50">
+                <span>[Facebook]</span>
+                <span>[Instagram]</span>
+                <span>[LinkedIn]</span>
               </div>
             </div>
           </div>
@@ -63,26 +97,29 @@ const ContactPage = () => {
       </section>
 
       {/* Contact form */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-secondary/40">
         <div className="section-container max-w-2xl">
-          <SectionHeading title="Dites-moi où vous en êtes" centered />
+          <SectionHeading overline="Formulaire" title="Dites-moi où vous en êtes" centered />
+          <p className="prose-body mx-auto mt-3 text-center">
+            Décrivez brièvement votre situation et je vous reviens rapidement.
+          </p>
 
           {submitted ? (
-            <div className="mt-8 rounded-lg border border-accent bg-accent/10 p-8 text-center">
-              <CheckCircle2 size={40} className="mx-auto text-accent" />
-              <p className="mt-4 text-lg font-medium text-foreground">Merci pour votre message!</p>
-              <p className="mt-2 text-sm text-muted-foreground">Je vous reviens rapidement.</p>
+            <div className="mt-10 rounded-lg border border-accent/30 bg-accent/5 p-10 text-center">
+              <CheckCircle2 size={44} className="mx-auto text-accent" />
+              <h3 className="mt-5">Merci pour votre message!</h3>
+              <p className="mt-3 text-[0.875rem] text-muted-foreground">Je vous reviens rapidement — habituellement en moins de 24h.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+            <form onSubmit={handleSubmit} className="mt-10 space-y-5">
               <div>
                 <Label htmlFor="objectif">Je veux…</Label>
                 <Select>
-                  <SelectTrigger id="objectif"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                  <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="vendre">Vendre</SelectItem>
-                    <SelectItem value="acheter">Acheter</SelectItem>
-                    <SelectItem value="investir">Investir</SelectItem>
+                    <SelectItem value="vendre">Vendre ma propriété</SelectItem>
+                    <SelectItem value="acheter">Acheter une propriété</SelectItem>
+                    <SelectItem value="investir">Investir (plex ou autre)</SelectItem>
                     <SelectItem value="info">Avoir de l'information</SelectItem>
                   </SelectContent>
                 </Select>
@@ -91,24 +128,24 @@ const ContactPage = () => {
                 <div>
                   <Label htmlFor="secteur">Secteur</Label>
                   <Select>
-                    <SelectTrigger id="secteur"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                    <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
                       <SelectItem value="hull">Hull</SelectItem>
                       <SelectItem value="gatineau">Gatineau centre</SelectItem>
                       <SelectItem value="buckingham">Buckingham / Masson-Angers</SelectItem>
-                      <SelectItem value="autre">Autre</SelectItem>
+                      <SelectItem value="autre">Autre secteur</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
                   <Label htmlFor="delai">Délais</Label>
                   <Select>
-                    <SelectTrigger id="delai"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                    <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
                       <SelectItem value="3mois">Dans les 3 prochains mois</SelectItem>
-                      <SelectItem value="6mois">Dans 6 mois</SelectItem>
+                      <SelectItem value="6mois">Dans 6 mois ou plus</SelectItem>
                       <SelectItem value="info">Juste pour savoir</SelectItem>
                     </SelectContent>
                   </Select>
@@ -117,24 +154,24 @@ const ContactPage = () => {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="nom">Nom complet</Label>
-                  <Input id="nom" required />
+                  <Input id="nom" className="mt-1.5" required />
                 </div>
                 <div>
                   <Label htmlFor="courriel">Courriel</Label>
-                  <Input id="courriel" type="email" required />
+                  <Input id="courriel" type="email" className="mt-1.5" required />
                 </div>
               </div>
               <div>
                 <Label htmlFor="tel">Téléphone</Label>
-                <Input id="tel" type="tel" />
+                <Input id="tel" type="tel" className="mt-1.5" />
               </div>
               <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" rows={4} placeholder="Décrivez brièvement votre projet ou posez votre question…" />
+                <Label htmlFor="message">Message (optionnel)</Label>
+                <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet ou posez votre question…" />
               </div>
-              <Button type="submit" size="lg" className="w-full">Envoyer ma demande</Button>
-              <p className="text-center text-xs text-muted-foreground">
-                Réponse rapide, sans engagement.
+              <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
+              <p className="text-center text-[0.75rem] text-muted-foreground/70">
+                Réponse rapide, sans engagement. Zéro pression.
               </p>
             </form>
           )}
