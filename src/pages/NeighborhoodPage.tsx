@@ -85,13 +85,22 @@ const NeighborhoodPage = () => (
       </Button>
     </ImageTextSplit>
 
+    <SectorLinks
+      overline="Autres secteurs"
+      title="Explorer d'autres quartiers"
+      sectors={[
+        { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
+        { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+      ]}
+    />
+
     <CTASection
       dark
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
       text="Je peux vous aider à y voir clair — que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Me faire guider", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
