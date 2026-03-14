@@ -52,7 +52,8 @@ const ContactPage = () => {
             <img
               src={logoYgsVertical}
               alt="YGS - Yanis Gauthier-Sigeris Inc."
-              className="mx-auto w-[145px] sm:w-[190px] h-auto"
+              className="mx-auto h-auto"
+              style={{ width: "clamp(145px, 20vw, 190px)" }}
             />
           </div>
           <div className="lg:col-span-3">
@@ -76,24 +77,19 @@ const ContactPage = () => {
               ))}
             </div>
 
-            {/* Credibility */}
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.6875rem] text-muted-foreground/50">
               <span className="flex items-center gap-1"><Clock size={10} /> Près de 9 ans d'expérience</span>
               <span className="flex items-center gap-1"><Award size={10} /> Club Platine · Club 100% · Temple de la renommée</span>
               <span className="flex items-center gap-1"><Heart size={10} /> Approche axée sur la confiance</span>
             </div>
 
-            {/* Contact card — no secondary logos here */}
+            {/* Contact card — no secondary logos */}
             <div className="mt-8 rounded-lg border border-border bg-secondary/40 p-5">
               <p className="text-[0.8125rem] font-semibold text-foreground mb-3">Coordonnées</p>
               <div className="space-y-2 text-[0.75rem] text-muted-foreground">
                 <div className="flex items-center gap-2"><Phone size={12} className="text-muted-foreground/40" /> [Téléphone]</div>
                 <div className="flex items-center gap-2"><Mail size={12} className="text-muted-foreground/40" /> [Courriel]</div>
                 <div className="flex items-center gap-2"><MapPin size={12} className="text-muted-foreground/40" /> [Adresse / secteur desservi]</div>
-              </div>
-              <div className="mt-3 flex gap-3 text-[0.6875rem] text-muted-foreground/40">
-                <span>[Facebook]</span>
-                <span>[Instagram]</span>
               </div>
             </div>
           </div>

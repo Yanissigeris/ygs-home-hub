@@ -26,22 +26,21 @@ const SiteHeader = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
-      <div className="section-container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          {/* Desktop: horizontal logo */}
+    <header
+      className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-all duration-300"
+      style={{ height: scrolled ? 74 : 88 }}
+    >
+      {/* Desktop */}
+      <div
+        className="section-container hidden sm:flex items-center justify-between h-full"
+        style={{ paddingLeft: 32, paddingRight: 32 }}
+      >
+        <Link to="/" className="flex items-center shrink-0">
           <img
             src={logoYgsBlue}
             alt="YGS - Yanis Gauthier-Sigeris"
-            className="hidden sm:block"
-            style={{ width: scrolled ? 225 : 260, height: "auto" }}
-          />
-          {/* Mobile: symbol only */}
-          <img
-            src={logoYgsSymbolBlue}
-            alt="YGS"
-            className="block sm:hidden"
-            style={{ width: 36, height: 36 }}
+            style={{ width: scrolled ? 225 : 260, height: "auto", maxHeight: 48 }}
+            className="transition-all duration-300"
           />
         </Link>
 
@@ -70,6 +69,7 @@ const SiteHeader = () => {
           </Button>
         </div>
 
+        {/* Tablet: hamburger visible at sm but not lg */}
         <div className="flex items-center gap-2.5 lg:hidden">
           <Button size="sm" asChild>
             <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
@@ -84,8 +84,38 @@ const SiteHeader = () => {
         </div>
       </div>
 
+      {/* Mobile */}
+      <div
+        className="flex sm:hidden items-center justify-between h-full"
+        style={{ paddingLeft: 16, paddingRight: 16, height: 70 }}
+      >
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img
+            src={logoYgsSymbolBlue}
+            alt="YGS"
+            style={{ width: 36, height: 36 }}
+          />
+        </Link>
+        <div className="flex items-center gap-2.5">
+          <Button size="sm" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
+          </Button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-secondary"
+            aria-label="Menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu drawer */}
       {open && (
-        <nav className="animate-fade-in border-t border-border/50 bg-background px-5 pb-5 pt-2 lg:hidden">
+        <nav className="animate-fade-in border-t border-border/50 bg-background px-5 pb-5 pt-3 lg:hidden">
+          <div className="mb-3 flex items-center gap-2 sm:hidden">
+            <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 36, height: 36 }} />
+          </div>
           {navLinks.map((link) => (
             <Link
               key={link.href}
