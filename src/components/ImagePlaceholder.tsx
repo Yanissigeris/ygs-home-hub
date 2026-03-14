@@ -7,9 +7,9 @@ interface ImagePlaceholderProps {
 }
 
 const ImagePlaceholder = ({ label, className = "", aspectRatio = "aspect-[4/3]" }: ImagePlaceholderProps) => (
-  <div className={`flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-border bg-muted ${aspectRatio} ${className}`}>
-    <ImageIcon className="mb-2 h-8 w-8 text-muted-foreground/40" />
-    <span className="text-xs text-muted-foreground/60 text-center px-4">[Placeholder: {label}]</span>
+  <div className={`flex flex-col items-center justify-center rounded-lg border border-dashed border-border bg-muted/50 ${aspectRatio} ${className}`}>
+    <ImageIcon className="mb-2 h-7 w-7 text-muted-foreground/30" />
+    <span className="text-[0.6875rem] text-muted-foreground/50 text-center px-6 leading-relaxed">[{label}]</span>
   </div>
 );
 

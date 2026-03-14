@@ -11,20 +11,21 @@ interface FAQItem {
 }
 
 interface FAQSectionProps {
+  title?: string;
   items: FAQItem[];
 }
 
-const FAQSection = ({ items }: FAQSectionProps) => (
+const FAQSection = ({ title = "Questions fréquentes", items }: FAQSectionProps) => (
   <section className="section-padding bg-background">
     <div className="section-container max-w-3xl">
-      <h2 className="text-center text-2xl sm:text-3xl text-foreground">Questions fréquentes</h2>
-      <Accordion type="single" collapsible className="mt-8">
+      <h2 className="text-center">{title}</h2>
+      <Accordion type="single" collapsible className="mt-10">
         {items.map((item, i) => (
-          <AccordionItem key={i} value={`faq-${i}`}>
-            <AccordionTrigger className="text-left font-body text-base font-medium text-foreground">
+          <AccordionItem key={i} value={`faq-${i}`} className="border-border/60">
+            <AccordionTrigger className="text-left font-body text-[0.9375rem] font-medium text-foreground hover:no-underline py-5">
               {item.q}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
+            <AccordionContent className="prose-body pb-5">
               {item.a}
             </AccordionContent>
           </AccordionItem>
