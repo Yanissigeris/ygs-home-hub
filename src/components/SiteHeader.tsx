@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoYgsBlue from "@/assets/logo-ygs-blue.png";
+import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -15,16 +16,32 @@ const navLinks = [
 
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <div className="section-container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img 
-            src={logoYgsBlue} 
-            alt="YGS - Yanis Gauthier-Sigeris" 
-            className="h-10 w-auto sm:h-11"
+          {/* Desktop: horizontal logo */}
+          <img
+            src={logoYgsBlue}
+            alt="YGS - Yanis Gauthier-Sigeris"
+            className="hidden sm:block"
+            style={{ width: scrolled ? 225 : 260, height: "auto" }}
+          />
+          {/* Mobile: symbol only */}
+          <img
+            src={logoYgsSymbolBlue}
+            alt="YGS"
+            className="block sm:hidden"
+            style={{ width: 36, height: 36 }}
           />
         </Link>
 
