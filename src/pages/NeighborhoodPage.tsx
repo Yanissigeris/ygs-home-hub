@@ -30,6 +30,7 @@ const NeighborhoodPage = () => (
       subtitle="Vie de famille, commodités, accès à Ottawa et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
       primaryCta={{ label: "Me faire guider", href: "/contact-yanis" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
+      backgroundImage={riverImg}
     />
 
     <section className="section-padding bg-background">
