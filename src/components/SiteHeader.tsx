@@ -110,12 +110,12 @@ const SiteHeader = () => {
           <img
             src={logoYgsSymbolBlue}
             alt="YGS"
-            style={{ width: 36, height: 36 }}
+            style={{ width: 38, height: 38 }}
           />
         </Link>
         <div className="flex items-center gap-2.5">
-          <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+          <Button size="sm" variant="outline" className="text-xs font-medium tracking-wide border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
