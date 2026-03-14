@@ -14,8 +14,8 @@ const clientTypes = [
     icon: Building2,
     title: "Propriétaires de plex",
     text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels — pas des suppositions.",
-    cta: "Évaluer mon plex",
-    href: "/evaluation-gratuite-gatineau",
+    cta: "Recevoir une analyse",
+    href: "/analyse-plex-gatineau",
   },
   {
     icon: TrendingUp,
