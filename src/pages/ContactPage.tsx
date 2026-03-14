@@ -22,12 +22,6 @@ const services = [
   "Plex et investissement",
 ];
 
-const credPoints = [
-  { icon: Clock, text: "Près de 9 ans d'expérience en Outaouais" },
-  { icon: Award, text: "Distinctions RE/MAX: Club Platine, Club 100%, Temple de la renommée" },
-  { icon: Heart, text: "Approche axée sur la confiance et la satisfaction client" },
-];
-
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,156 +33,108 @@ const ContactPage = () => {
   return (
     <>
       <HeroSection
-        overline="Contact · Yanis Gauthier-Sigeris"
-        title="Parlons de votre projet immobilier"
-        subtitle="Que vous soyez en réflexion ou prêt à passer à l'action, je peux vous aider à voir plus clair. Pas de pression — juste une conversation honnête sur votre situation."
+        compact
+        overline="Yanis Gauthier-Sigeris"
+        title="Parlons de votre projet"
+        subtitle="En réflexion ou prêt à bouger — je peux vous aider à voir plus clair. Pas de pression, juste une conversation honnête."
       />
 
-      {/* Bio section */}
+      {/* Bio */}
       <section className="section-padding bg-background">
-        <div className="section-container grid gap-14 lg:grid-cols-5 lg:items-start">
+        <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
           <div className="lg:col-span-2">
             <ImagePlaceholder label="Photo professionnelle de Yanis — à ajouter" aspectRatio="aspect-[3/4]" />
           </div>
           <div className="lg:col-span-3">
-            <p className="label-overline mb-3">À propos</p>
+            <p className="label-overline mb-2">À propos</p>
             <h2>Yanis Gauthier-Sigeris</h2>
-            <p className="mt-1 text-[0.875rem] font-medium text-accent">Courtier immobilier · Gatineau et Outaouais</p>
-            <p className="mt-1 text-[0.75rem] text-muted-foreground/50">Affilié RE/MAX · Équipe Marty Waite</p>
+            <p className="mt-1 text-[0.8125rem] font-medium text-accent">Courtier immobilier · Gatineau et Outaouais</p>
+            <p className="mt-0.5 text-[0.6875rem] text-muted-foreground/40">Affilié RE/MAX · Équipe Marty Waite</p>
 
-            <p className="prose-body mt-6">
+            <p className="prose-body mt-5">
               Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
             </p>
-            <p className="prose-body mt-4">
-              Après près de 9 ans dans l'immobilier résidentiel en Outaouais, je connais bien le marché local, les secteurs et les réalités terrain. J'ai fait partie de l'Équipe Marty Waite depuis le début, et j'ai eu la chance d'être reconnu par RE/MAX à plusieurs reprises — Club Platine, Club 100% et Temple de la renommée.
-            </p>
-            <p className="prose-body mt-4">
-              Mais au-delà des reconnaissances, ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées. Je ne suis pas là pour pousser. Je suis là pour guider.
+            <p className="prose-body mt-3">
+              Après près de 9 ans dans l'immobilier résidentiel en Outaouais et dans l'Équipe Marty Waite depuis le début, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
             </p>
 
-            <div className="mt-8">
-              <h4 className="font-body text-[0.875rem] font-semibold text-foreground">Ce que je fais</h4>
-              <div className="mt-3 space-y-2.5">
-                {services.map((s) => (
-                  <div key={s} className="flex items-center gap-2.5">
-                    <CheckCircle2 size={15} className="text-accent" />
-                    <span className="text-[0.875rem] text-foreground">{s}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Credibility */}
-            <div className="mt-8 space-y-3">
-              {credPoints.map((c) => (
-                <div key={c.text} className="flex items-start gap-3">
-                  <c.icon size={15} className="mt-0.5 shrink-0 text-muted-foreground/40" />
-                  <span className="text-[0.8125rem] text-muted-foreground">{c.text}</span>
-                </div>
+            <div className="mt-6 flex flex-wrap gap-4 text-[0.75rem] text-muted-foreground/60">
+              {services.map((s) => (
+                <span key={s} className="flex items-center gap-1.5">
+                  <CheckCircle2 size={12} className="text-accent" /> {s}
+                </span>
               ))}
             </div>
 
+            {/* Credibility inline */}
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.6875rem] text-muted-foreground/50">
+              <span className="flex items-center gap-1"><Clock size={10} /> Près de 9 ans d'expérience</span>
+              <span className="flex items-center gap-1"><Award size={10} /> Club Platine · Club 100% · Temple de la renommée</span>
+              <span className="flex items-center gap-1"><Heart size={10} /> Approche axée sur la confiance</span>
+            </div>
+
             {/* Contact card */}
-            <div className="mt-10 rounded-lg border border-border bg-secondary/40 p-6">
-              <h4 className="font-body text-[0.875rem] font-semibold text-foreground mb-4">Coordonnées</h4>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Phone size={15} className="text-muted-foreground/50" />
-                  <span className="text-[0.8125rem] text-muted-foreground">[Téléphone — à ajouter]</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail size={15} className="text-muted-foreground/50" />
-                  <span className="text-[0.8125rem] text-muted-foreground">[Courriel — à ajouter]</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin size={15} className="text-muted-foreground/50" />
-                  <span className="text-[0.8125rem] text-muted-foreground">Gatineau, Aylmer, Hull, Plateau, Buckingham, Masson-Angers</span>
-                </div>
+            <div className="mt-8 rounded-lg border border-border bg-secondary/40 p-5">
+              <p className="text-[0.8125rem] font-semibold text-foreground mb-3">Coordonnées</p>
+              <div className="space-y-2 text-[0.75rem] text-muted-foreground">
+                <div className="flex items-center gap-2"><Phone size={12} className="text-muted-foreground/40" /> [Téléphone — à ajouter]</div>
+                <div className="flex items-center gap-2"><Mail size={12} className="text-muted-foreground/40" /> [Courriel — à ajouter]</div>
+                <div className="flex items-center gap-2"><MapPin size={12} className="text-muted-foreground/40" /> Gatineau, Aylmer, Hull, Plateau, Buckingham</div>
               </div>
-              <div className="mt-4 flex gap-4 text-[0.75rem] text-muted-foreground/50">
-                <span>[Facebook — à ajouter]</span>
-                <span>[Instagram — à ajouter]</span>
+              <div className="mt-3 flex gap-3 text-[0.6875rem] text-muted-foreground/40">
+                <span>[Facebook]</span>
+                <span>[Instagram]</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact form */}
+      {/* Form */}
       <section className="section-padding bg-secondary/40">
-        <div className="section-container max-w-2xl">
-          <SectionHeading overline="Formulaire" title="Dites-moi où vous en êtes" centered />
-          <p className="prose-body mx-auto mt-3 text-center">
-            Décrivez brièvement votre situation et je vous reviens rapidement — habituellement en moins de 24h.
-          </p>
+        <div className="section-container max-w-xl">
+          <SectionHeading title="Dites-moi où vous en êtes" centered />
 
           {submitted ? (
-            <div className="mt-10 rounded-lg border border-accent/30 bg-accent/5 p-10 text-center">
-              <CheckCircle2 size={44} className="mx-auto text-accent" />
-              <h3 className="mt-5">Merci pour votre message!</h3>
-              <p className="mt-3 text-[0.875rem] text-muted-foreground">Je vous reviens rapidement — habituellement en moins de 24h.</p>
+            <div className="mt-8 rounded-lg border border-accent/30 bg-accent/5 p-8 text-center">
+              <CheckCircle2 size={36} className="mx-auto text-accent" />
+              <h3 className="mt-4">Merci!</h3>
+              <p className="mt-2 text-[0.8125rem] text-muted-foreground">Je vous reviens rapidement.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="mt-10 space-y-5">
+            <form onSubmit={handleSubmit} className="mt-8 space-y-4">
               <div>
                 <Label htmlFor="objectif">Je veux…</Label>
                 <Select>
-                  <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                  <SelectTrigger id="objectif" className="mt-1"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="vendre">Vendre ma propriété</SelectItem>
-                    <SelectItem value="acheter">Acheter une propriété</SelectItem>
-                    <SelectItem value="investir">Investir (plex ou autre)</SelectItem>
+                    <SelectItem value="vendre">Vendre</SelectItem>
+                    <SelectItem value="acheter">Acheter</SelectItem>
+                    <SelectItem value="investir">Investir</SelectItem>
                     <SelectItem value="info">Avoir de l'information</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="secteur">Secteur</Label>
-                  <Select>
-                    <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
-                      <SelectItem value="hull">Hull</SelectItem>
-                      <SelectItem value="gatineau">Gatineau centre</SelectItem>
-                      <SelectItem value="buckingham">Buckingham / Masson-Angers</SelectItem>
-                      <SelectItem value="autre">Autre secteur</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="delai">Délais</Label>
-                  <Select>
-                    <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
-                      <SelectItem value="3mois">Dans les 3 prochains mois</SelectItem>
-                      <SelectItem value="6mois">Dans 6 mois ou plus</SelectItem>
-                      <SelectItem value="info">Juste pour savoir</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="nom">Nom complet</Label>
-                  <Input id="nom" className="mt-1.5" required />
+                  <Label htmlFor="nom">Nom</Label>
+                  <Input id="nom" className="mt-1" required />
                 </div>
                 <div>
                   <Label htmlFor="courriel">Courriel</Label>
-                  <Input id="courriel" type="email" className="mt-1.5" required />
+                  <Input id="courriel" type="email" className="mt-1" required />
                 </div>
               </div>
               <div>
                 <Label htmlFor="tel">Téléphone</Label>
-                <Input id="tel" type="tel" className="mt-1.5" />
+                <Input id="tel" type="tel" className="mt-1" />
               </div>
               <div>
                 <Label htmlFor="message">Message (optionnel)</Label>
-                <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet ou posez votre question…" />
+                <Textarea id="message" rows={3} className="mt-1" placeholder="Décrivez brièvement votre projet…" />
               </div>
-              <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
-              <p className="text-center text-[0.75rem] text-muted-foreground/70">
+              <Button type="submit" size="lg" className="w-full">Envoyer ma demande</Button>
+              <p className="text-center text-[0.6875rem] text-muted-foreground/60">
                 Zéro pression — je vous donne les chiffres et les options, vous décidez.
               </p>
             </form>
