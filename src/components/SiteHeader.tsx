@@ -113,7 +113,7 @@ const SiteHeader = () => {
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
