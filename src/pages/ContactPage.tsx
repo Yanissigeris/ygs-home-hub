@@ -1,10 +1,12 @@
 import { useState, FormEvent } from "react";
 import HeroSection from "@/components/HeroSection";
-import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import ContentBlock from "@/components/ContentBlock";
+import ProfileSection from "@/components/ProfileSection";
+import ContactCard from "@/components/ContactCard";
+import FormSection from "@/components/FormSection";
+import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,8 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
-import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
 import yanisPhoto from "@/assets/yanis-photo.jpg";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
@@ -32,6 +33,12 @@ const trustItems = [
   { icon: Clock, label: "Près de 9 ans d'expérience" },
   { icon: Award, label: "Club Platine · Temple de la renommée" },
   { icon: Heart, label: "Approche axée sur la confiance" },
+];
+
+const contactItems = [
+  { icon: Phone, text: "[Téléphone]" },
+  { icon: Mail, text: "[Courriel]" },
+  { icon: MapPin, text: "[Adresse / secteur desservi]" },
 ];
 
 const ContactPage = () => {
@@ -55,60 +62,24 @@ const ContactPage = () => {
 
       <TrustMiniStrip items={trustItems} />
 
-      {/* Bio */}
-      <section className="section-padding bg-background">
-        <div className="section-container grid gap-12 lg:gap-16 lg:grid-cols-[38%_62%] lg:items-start">
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <img
-              src={yanisPhoto}
-              alt="Yanis Gauthier-Sigeris - Courtier immobilier"
-              className="w-full rounded-[1.75rem] object-cover aspect-[3/4]"
-            />
-            <div className="text-center">
-              <img
-                src={logoYgsVertical}
-                alt="YGS - Yanis Gauthier-Sigeris Inc."
-                className="mx-auto h-auto"
-                style={{ width: "clamp(145px, 20vw, 180px)" }}
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-          >
-            <p className="label-overline mb-3">À propos</p>
-            <h2>Yanis Gauthier-Sigeris</h2>
-            <p className="mt-2 text-[1.0625rem] font-medium text-accent">Courtier immobilier · Gatineau et Outaouais</p>
-            <p className="mt-1.5 text-[0.875rem] text-muted-foreground/45">Affilié RE/MAX · Équipe Marty Waite</p>
+      <ProfileSection
+        image={yanisPhoto}
+        imageAlt="Yanis Gauthier-Sigeris - Courtier immobilier"
+        name="Yanis Gauthier-Sigeris"
+        role="Courtier immobilier · Gatineau et Outaouais"
+        subtitle="Affilié RE/MAX · Équipe Marty Waite"
+        logo={logoYgsVertical}
+        logoAlt="YGS - Yanis Gauthier-Sigeris Inc."
+      >
+        <p className="prose-body mt-6">
+          Courtier immobilier en Outaouais, Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Son objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+        </p>
+        <p className="prose-body mt-4">
+          Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, il a eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui le motive, c'est de savoir que ses clients prennent des décisions éclairées.
+        </p>
 
-            <p className="prose-body mt-6">
-              Courtier immobilier en Outaouais, Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Son objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
-            </p>
-            <p className="prose-body mt-4">
-              Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, il a eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui le motive, c'est de savoir que ses clients prennent des décisions éclairées.
-            </p>
-
-            {/* Contact card */}
-            <div className="mt-10 card-elevated border border-border/40 bg-secondary/25 p-7">
-              <p className="text-[1.0625rem] font-semibold text-foreground mb-5">Coordonnées</p>
-              <div className="space-y-3.5 text-[0.9375rem] text-muted-foreground">
-                <div className="flex items-center gap-3"><Phone size={16} className="text-accent/50" /> [Téléphone]</div>
-                <div className="flex items-center gap-3"><Mail size={16} className="text-accent/50" /> [Courriel]</div>
-                <div className="flex items-center gap-3"><MapPin size={16} className="text-accent/50" /> [Adresse / secteur desservi]</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+        <ContactCard items={contactItems} />
+      </ProfileSection>
 
       <CardGrid
         overline="Services"
@@ -117,64 +88,48 @@ const ContactPage = () => {
         background="alt"
       />
 
-      {/* Form */}
-      <section id="contact-form" className="section-padding bg-background">
-        <div className="section-container max-w-[36rem]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <SectionHeading title="Dites-moi où vous en êtes" centered />
-
-            {submitted ? (
-              <div className="mt-10 card-elevated border border-accent/25 bg-accent/5 p-10 text-center">
-                <CheckCircle2 size={40} className="mx-auto text-accent" />
-                <h3 className="mt-5">Merci!</h3>
-                <p className="mt-3 text-[0.9375rem] text-muted-foreground">Je vous reviens rapidement.</p>
+      <FormSection id="contact-form" title="Dites-moi où vous en êtes">
+        {submitted ? (
+          <SuccessMessage />
+        ) : (
+          <form onSubmit={handleSubmit} className="mt-10 space-y-5">
+            <div>
+              <Label htmlFor="objectif">Je veux…</Label>
+              <Select>
+                <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="vendre">Vendre</SelectItem>
+                  <SelectItem value="acheter">Acheter</SelectItem>
+                  <SelectItem value="investir">Investir</SelectItem>
+                  <SelectItem value="info">Avoir de l'information</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <Label htmlFor="nom">Nom</Label>
+                <Input id="nom" className="mt-1.5" required />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="mt-10 space-y-5">
-                <div>
-                  <Label htmlFor="objectif">Je veux…</Label>
-                  <Select>
-                    <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="vendre">Vendre</SelectItem>
-                      <SelectItem value="acheter">Acheter</SelectItem>
-                      <SelectItem value="investir">Investir</SelectItem>
-                      <SelectItem value="info">Avoir de l'information</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <Label htmlFor="nom">Nom</Label>
-                    <Input id="nom" className="mt-1.5" required />
-                  </div>
-                  <div>
-                    <Label htmlFor="courriel">Courriel</Label>
-                    <Input id="courriel" type="email" className="mt-1.5" required />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="tel">Téléphone</Label>
-                  <Input id="tel" type="tel" className="mt-1.5" />
-                </div>
-                <div>
-                  <Label htmlFor="message">Message (optionnel)</Label>
-                  <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
-                </div>
-                <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
-                <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                  Zéro pression — je vous donne les chiffres et les options, vous décidez.
-                </p>
-              </form>
-            )}
-          </motion.div>
-        </div>
-      </section>
+              <div>
+                <Label htmlFor="courriel">Courriel</Label>
+                <Input id="courriel" type="email" className="mt-1.5" required />
+              </div>
+            </div>
+            <div>
+              <Label htmlFor="tel">Téléphone</Label>
+              <Input id="tel" type="tel" className="mt-1.5" />
+            </div>
+            <div>
+              <Label htmlFor="message">Message (optionnel)</Label>
+              <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
+            </div>
+            <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
+            <p className="text-center text-[0.8125rem] text-muted-foreground/50">
+              Zéro pression — je vous donne les chiffres et les options, vous décidez.
+            </p>
+          </form>
+        )}
+      </FormSection>
 
       <CTASection
         dark

@@ -1,9 +1,9 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
-import SectionHeading from "@/components/SectionHeading";
 import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
+import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,7 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
+import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
 
@@ -70,11 +70,10 @@ const ValuationPage = () => {
                 </p>
 
                 {submitted ? (
-                  <div className="mt-8 rounded-2xl border border-accent/25 bg-accent/5 p-8 text-center">
-                    <CheckCircle2 size={36} className="mx-auto text-accent" />
-                    <h3 className="mt-4 text-[1.125rem]">Merci! Demande envoyée.</h3>
-                    <p className="mt-2 text-[0.9375rem] text-muted-foreground">Je vous reviens dans les 24 prochaines heures.</p>
-                  </div>
+                  <SuccessMessage
+                    title="Merci! Demande envoyée."
+                    text="Je vous reviens dans les 24 prochaines heures."
+                  />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
                     <div>
