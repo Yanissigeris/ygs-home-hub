@@ -60,6 +60,8 @@ const Index = () => (
 
     <TrustStrip />
 
+    <PathwaySection />
+
     <ConversionSection />
 
     {/* Audience cards */}
