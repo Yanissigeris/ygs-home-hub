@@ -3,32 +3,43 @@ import { Link } from "react-router-dom";
 const SiteFooter = () => (
   <footer className="border-t border-border bg-primary text-primary-foreground">
     <div className="section-container section-padding">
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
-        <div>
-          <span className="font-heading text-2xl">YGS</span>
-          <p className="mt-3 text-sm opacity-80">
-            Votre allié en immobilier à Gatineau. Stratégie claire, zéro pression, pas de mauvaises surprises.
+        <div className="lg:col-span-1">
+          <span className="font-heading text-[1.75rem] font-bold">YGS</span>
+          <p className="mt-1 text-[0.8125rem] font-medium opacity-70">Votre allié en immobilier</p>
+          <p className="mt-4 text-[0.8125rem] leading-relaxed opacity-60">
+            Stratégie claire. Zéro pression.<br />Pas de mauvaises surprises.
+          </p>
+          <p className="mt-4 text-[0.6875rem] opacity-40">
+            Courtier affilié RE/MAX · Équipe Marty Waite
           </p>
         </div>
 
         {/* Navigation */}
         <div>
-          <h4 className="mb-3 font-body text-sm font-semibold uppercase tracking-wider opacity-60">Navigation</h4>
-          <ul className="space-y-2 text-sm opacity-80">
-            <li><Link to="/" className="hover:opacity-100">Accueil</Link></li>
-            <li><Link to="/vendre-ma-maison-gatineau" className="hover:opacity-100">Vendre</Link></li>
-            <li><Link to="/acheter-a-gatineau" className="hover:opacity-100">Acheter</Link></li>
-            <li><Link to="/investir-plex-gatineau" className="hover:opacity-100">Plex</Link></li>
-            <li><Link to="/plateau-aylmer" className="hover:opacity-100">Plateau / Aylmer</Link></li>
-            <li><Link to="/contact-yanis" className="hover:opacity-100">Contact</Link></li>
+          <h4 className="mb-4 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] opacity-50">Navigation</h4>
+          <ul className="space-y-2.5">
+            {[
+              { label: "Accueil", href: "/" },
+              { label: "Vendre", href: "/vendre-ma-maison-gatineau" },
+              { label: "Acheter", href: "/acheter-a-gatineau" },
+              { label: "Plex / Investissement", href: "/investir-plex-gatineau" },
+              { label: "Plateau / Aylmer", href: "/plateau-aylmer" },
+              { label: "Contact", href: "/contact-yanis" },
+              { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link to={l.href} className="text-[0.8125rem] opacity-70 transition-opacity hover:opacity-100">{l.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Secteurs */}
         <div>
-          <h4 className="mb-3 font-body text-sm font-semibold uppercase tracking-wider opacity-60">Secteurs desservis</h4>
-          <ul className="space-y-2 text-sm opacity-80">
+          <h4 className="mb-4 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] opacity-50">Secteurs desservis</h4>
+          <ul className="space-y-2.5 text-[0.8125rem] opacity-70">
             <li>Gatineau</li>
             <li>Aylmer</li>
             <li>Hull</li>
@@ -40,22 +51,27 @@ const SiteFooter = () => (
 
         {/* Contact */}
         <div>
-          <h4 className="mb-3 font-body text-sm font-semibold uppercase tracking-wider opacity-60">Contact</h4>
-          <ul className="space-y-2 text-sm opacity-80">
+          <h4 className="mb-4 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] opacity-50">Contact</h4>
+          <ul className="space-y-2.5 text-[0.8125rem] opacity-70">
             <li>[Téléphone — à ajouter]</li>
             <li>[Courriel — à ajouter]</li>
+            <li>[Adresse ou secteur — à ajouter]</li>
           </ul>
-          <div className="mt-4 flex gap-4">
-            <a href="#" aria-label="Facebook" className="opacity-60 hover:opacity-100">FB</a>
-            <a href="#" aria-label="Instagram" className="opacity-60 hover:opacity-100">IG</a>
-            <a href="#" aria-label="LinkedIn" className="opacity-60 hover:opacity-100">LI</a>
+          <div className="mt-5 flex gap-5">
+            <a href="#" aria-label="Facebook" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[Facebook]</a>
+            <a href="#" aria-label="Instagram" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[Instagram]</a>
+            <a href="#" aria-label="LinkedIn" className="text-[0.8125rem] opacity-50 transition-opacity hover:opacity-100">[LinkedIn]</a>
           </div>
         </div>
       </div>
 
-      <div className="mt-12 border-t border-primary-foreground/10 pt-6 text-center text-xs opacity-50">
-        <p>© {new Date().getFullYear()} Yanis Gauthier-Sigeris. Tous droits réservés.</p>
-        <p className="mt-1">[Mentions légales] · [Politique de confidentialité]</p>
+      <div className="mt-14 border-t border-primary-foreground/10 pt-6 text-center">
+        <p className="text-[0.6875rem] opacity-40">
+          © {new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.
+        </p>
+        <p className="mt-1 text-[0.6875rem] opacity-30">
+          [Mentions légales] · [Politique de confidentialité]
+        </p>
       </div>
     </div>
   </footer>
