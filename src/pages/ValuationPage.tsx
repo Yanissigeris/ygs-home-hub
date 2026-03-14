@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, Lock, Clock, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.jpg";
+import yanisPhoto from "@/assets/yanis-hero.png";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes",
@@ -45,7 +46,8 @@ const ValuationPage = () => {
         title="Découvrez combien vaut votre propriété à Gatineau"
         subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes."
         trustLine="Une estimation utile, claire et sans pression — pour vous aider à mieux planifier la suite."
-        backgroundImage={heroImg}
+        agentImage={yanisPhoto}
+        agentName="Yanis Gauthier-Sigeris"
       />
 
       <section className="section-padding bg-background">
