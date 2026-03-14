@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 interface FAQItem {
   q: string;
@@ -17,15 +18,24 @@ interface FAQSectionProps {
 
 const FAQSection = ({ title = "Questions fréquentes", items }: FAQSectionProps) => (
   <section className="section-padding bg-background">
-    <div className="section-container max-w-2xl">
-      <h2 className="text-center">{title}</h2>
-      <Accordion type="single" collapsible className="mt-8">
+    <div className="section-container max-w-[44rem]">
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <p className="label-overline mb-3">FAQ</p>
+        <h2>{title}</h2>
+      </motion.div>
+      <Accordion type="single" collapsible>
         {items.map((item, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="border-border/50">
-            <AccordionTrigger className="text-left font-body text-[0.875rem] font-medium text-foreground hover:no-underline py-4">
+          <AccordionItem key={i} value={`faq-${i}`}>
+            <AccordionTrigger className="text-left font-body text-[1rem] font-medium text-foreground hover:no-underline">
               {item.q}
             </AccordionTrigger>
-            <AccordionContent className="prose-body pb-4 text-[0.8125rem]">
+            <AccordionContent className="text-[0.9375rem] leading-[1.65] text-muted-foreground">
               {item.a}
             </AccordionContent>
           </AccordionItem>

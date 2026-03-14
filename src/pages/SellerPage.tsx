@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
+import { motion } from "framer-motion";
 import homeImg from "@/assets/home-interior.jpg";
 
 const painPoints = [
@@ -40,20 +41,34 @@ const SellerPage = () => (
 
     {/* Pain points */}
     <section className="section-padding bg-background">
-      <div className="section-container max-w-2xl">
-        <SectionHeading
-          overline="Vos questions"
-          title="Vous vous posez probablement ces questions"
-        />
-        <div className="mt-6 space-y-2.5">
-          {painPoints.map((p) => (
-            <div key={p.text} className="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
-              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading
+            overline="Vos questions"
+            title="Vous vous posez probablement ces questions"
+          />
+        </motion.div>
+        <div className="mt-8 space-y-4">
+          {painPoints.map((p, i) => (
+            <motion.div
+              key={p.text}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="card-elevated flex items-start gap-4 border border-border/40 bg-card p-6"
+            >
+              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
               <div>
-                <p className="text-[0.8125rem] font-semibold text-foreground">{p.text}</p>
-                <p className="mt-0.5 text-[0.75rem] text-muted-foreground">{p.sub}</p>
+                <p className="text-[1rem] font-semibold text-foreground">{p.text}</p>
+                <p className="mt-1 text-[0.9375rem] leading-[1.6] text-muted-foreground">{p.sub}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -63,29 +78,36 @@ const SellerPage = () => (
     <section className="cta-band">
       <div className="section-container">
         <p>Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement.</p>
-        <Button size="sm" variant="hero" asChild>
+        <Button size="default" variant="hero" asChild>
           <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
         </Button>
       </div>
     </section>
 
-    {/* Fears + reassurance merged */}
-    <section className="section-padding bg-secondary/40">
-      <div className="section-container max-w-2xl">
-        <SectionHeading title="Ce que les vendeurs veulent éviter" />
-        <div className="mt-5 space-y-1.5">
+    {/* Fears + reassurance */}
+    <section className="section-padding bg-secondary/25">
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading title="Ce que les vendeurs veulent éviter" />
+        </motion.div>
+        <div className="mt-6 space-y-3">
           {[
             "Sous-évaluer et laisser des milliers sur la table",
             "Surévaluer et rester sur le marché trop longtemps",
             "Mal préparer et subir des négociations stressantes",
           ].map((f) => (
-            <div key={f} className="flex items-center gap-2.5">
-              <AlertTriangle size={13} className="shrink-0 text-accent/50" />
-              <p className="text-[0.8125rem] text-foreground">{f}</p>
+            <div key={f} className="flex items-center gap-3">
+              <AlertTriangle size={15} className="shrink-0 text-accent/50" />
+              <p className="text-[1rem] text-foreground">{f}</p>
             </div>
           ))}
         </div>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-6">
           Ces inquiétudes sont normales. Mon rôle est de vous donner les outils et l'information pour les éviter — avant de prendre une décision.
         </p>
       </div>
@@ -93,35 +115,56 @@ const SellerPage = () => (
 
     {/* Reassurance */}
     <section className="section-padding bg-background">
-      <div className="section-container max-w-2xl">
-        <SectionHeading
-          overline="Avant de vendre"
-          title="Vous n'avez pas besoin de tout décider aujourd'hui"
-        />
-        <p className="prose-body mt-3">
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading
+            overline="Avant de vendre"
+            title="Vous n'avez pas besoin de tout décider aujourd'hui"
+          />
+        </motion.div>
+        <p className="prose-body mt-5">
           Avant de vendre, plusieurs propriétaires veulent surtout comprendre leur valeur, leur timing et leurs options. Le but n'est pas de vous presser. Le but est de bâtir un plan clair.
         </p>
-        <p className="prose-body mt-2.5">
+        <p className="prose-body mt-4">
           Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
         </p>
       </div>
     </section>
 
     {/* Steps */}
-    <section className="section-padding bg-secondary/40">
-      <div className="section-container max-w-2xl">
-        <SectionHeading overline="Le processus" title="Comment ça fonctionne" />
-        <div className="mt-7 space-y-5">
-          {steps.map((s) => (
-            <div key={s.num} className="flex gap-3.5 items-start">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-[0.8125rem] text-primary-foreground">
+    <section className="section-padding bg-secondary/25">
+      <div className="section-container max-w-[44rem]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <SectionHeading overline="Le processus" title="Comment ça fonctionne" />
+        </motion.div>
+        <div className="mt-10 space-y-6">
+          {steps.map((s, i) => (
+            <motion.div
+              key={s.num}
+              className="flex gap-5 items-start"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary font-heading text-[0.9375rem] font-bold text-primary-foreground">
                 {s.num}
               </span>
               <div>
-                <h3 className="text-[0.9375rem]">{s.title}</h3>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground">{s.desc}</p>
+                <h3 className="text-[1.125rem]">{s.title}</h3>
+                <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-muted-foreground">{s.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
