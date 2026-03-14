@@ -37,26 +37,24 @@ const SiteHeader = () => {
         style={{ paddingLeft: 32, paddingRight: 32 }}
       >
         <Link to="/" className="flex items-center shrink-0">
-          {/* Desktop logo — lg+ */}
+          {/* Desktop logo — lg+ (vertical for readability) */}
           <img
-            src={logoYgsHorizontal}
+            src={logoYgsVertical}
             alt="YGS - Yanis Gauthier-Sigeris"
             className="hidden lg:block transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 280 : 320,
-              height: "auto",
-              maxHeight: scrolled ? 52 : 58,
+              height: scrolled ? 56 : 64,
+              width: "auto",
             }}
           />
-          {/* Tablet logo — sm to lg */}
+          {/* Tablet logo — sm to lg (vertical for readability) */}
           <img
-            src={logoYgsHorizontal}
+            src={logoYgsVertical}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 220 : 250,
-              height: "auto",
-              maxHeight: scrolled ? 42 : 48,
+              height: scrolled ? 50 : 56,
+              width: "auto",
             }}
           />
         </Link>
