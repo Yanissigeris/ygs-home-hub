@@ -17,64 +17,62 @@ const SiteHeader = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/85">
-      <div className="section-container flex h-[4.25rem] items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="font-heading text-[1.5rem] font-bold tracking-tight text-primary">YGS</span>
-          <span className="hidden text-[0.6875rem] font-medium leading-tight text-muted-foreground sm:block">
-            Courtier immobilier · Gatineau
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
+      <div className="section-container flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <span className="font-heading text-[1.375rem] font-bold tracking-tight text-primary">YGS</span>
+          <span className="hidden text-[0.625rem] font-medium leading-tight text-muted-foreground/60 sm:block">
+            Courtier immobilier<br />Gatineau
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className={`rounded-md px-3.5 py-2 text-[0.8125rem] font-medium transition-colors ${
+              className={`relative rounded-md px-3 py-2 text-[0.8125rem] font-medium transition-colors ${
                 location.pathname === link.href
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
+              {location.pathname === link.href && (
+                <span className="absolute bottom-0.5 left-3 right-3 h-px bg-accent/60" />
+              )}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Button size="default" asChild>
             <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
           </Button>
         </div>
 
-        {/* Mobile */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2.5 lg:hidden">
           <Button size="sm" asChild>
             <Link to="/evaluation-gratuite-gatineau">Ma valeur</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-10 w-10 items-center justify-center rounded-md text-foreground hover:bg-secondary"
+            className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-secondary"
             aria-label="Menu"
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile nav */}
       {open && (
-        <nav className="animate-fade-in border-t border-border/60 bg-background px-5 pb-6 pt-3 lg:hidden">
+        <nav className="animate-fade-in border-t border-border/50 bg-background px-5 pb-5 pt-2 lg:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               onClick={() => setOpen(false)}
-              className={`block rounded-md px-4 py-3 text-[0.9375rem] font-medium transition-colors ${
+              className={`block rounded-md px-4 py-2.5 text-[0.9375rem] font-medium transition-colors ${
                 location.pathname === link.href
                   ? "bg-secondary text-foreground"
                   : "text-muted-foreground hover:bg-secondary hover:text-foreground"

@@ -13,12 +13,6 @@ const painPoints = [
   { text: "Comment vendre sans me retrouver coincé?", sub: "La coordination vente-achat demande un plan dès le départ." },
 ];
 
-const fears = [
-  "Sous-évaluer et laisser des milliers sur la table",
-  "Surévaluer et rester sur le marché trop longtemps",
-  "Mal préparer et subir des négociations stressantes",
-];
-
 const steps = [
   { num: "01", title: "Analyse et positionnement", desc: "Ventes comparables, état du marché, particularités de votre propriété. On établit un prix réaliste et stratégique." },
   { num: "02", title: "Plan vendeur personnalisé", desc: "Préparation, améliorations qui valent la peine, plan de visibilité et calendrier de mise en marché." },
@@ -49,13 +43,13 @@ const SellerPage = () => (
           overline="Vos questions"
           title="Vous vous posez probablement ces questions"
         />
-        <div className="mt-8 space-y-3">
+        <div className="mt-6 space-y-2.5">
           {painPoints.map((p) => (
-            <div key={p.text} className="flex items-start gap-3 rounded-lg border border-border bg-card p-5">
-              <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
+            <div key={p.text} className="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />
               <div>
-                <p className="text-[0.875rem] font-medium text-foreground">{p.text}</p>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground">{p.sub}</p>
+                <p className="text-[0.8125rem] font-semibold text-foreground">{p.text}</p>
+                <p className="mt-0.5 text-[0.75rem] text-muted-foreground">{p.sub}</p>
               </div>
             </div>
           ))}
@@ -64,46 +58,48 @@ const SellerPage = () => (
     </section>
 
     {/* Inline CTA */}
-    <section className="bg-primary py-5">
-      <div className="section-container flex flex-col items-center justify-between gap-3 sm:flex-row">
-        <p className="text-[0.8125rem] font-medium text-primary-foreground/80">
-          Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement.
-        </p>
+    <section className="cta-band">
+      <div className="section-container">
+        <p>Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement.</p>
         <Button size="sm" variant="hero" asChild>
           <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur →</Link>
         </Button>
       </div>
     </section>
 
-    {/* Fears */}
+    {/* Fears + reassurance merged */}
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-2xl">
         <SectionHeading title="Ce que les vendeurs veulent éviter" />
-        <div className="mt-6 space-y-2">
-          {fears.map((f) => (
-            <div key={f} className="flex items-center gap-3">
-              <AlertTriangle size={14} className="shrink-0 text-accent/60" />
+        <div className="mt-5 space-y-1.5">
+          {[
+            "Sous-évaluer et laisser des milliers sur la table",
+            "Surévaluer et rester sur le marché trop longtemps",
+            "Mal préparer et subir des négociations stressantes",
+          ].map((f) => (
+            <div key={f} className="flex items-center gap-2.5">
+              <AlertTriangle size={13} className="shrink-0 text-accent/50" />
               <p className="text-[0.8125rem] text-foreground">{f}</p>
             </div>
           ))}
         </div>
-        <p className="prose-body mt-5">
+        <p className="prose-body mt-4">
           Ces inquiétudes sont normales. Mon rôle est de vous donner les outils et l'information pour les éviter — avant de prendre une décision.
         </p>
       </div>
     </section>
 
-    {/* Emotional reassurance */}
+    {/* Reassurance */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-2xl">
         <SectionHeading
           overline="Avant de vendre"
           title="Vous n'avez pas besoin de tout décider aujourd'hui"
         />
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-3">
           Avant de vendre, plusieurs propriétaires veulent surtout comprendre leur valeur, leur timing et leurs options. Le but n'est pas de vous presser. Le but est de bâtir un plan clair.
         </p>
-        <p className="prose-body mt-3">
+        <p className="prose-body mt-2.5">
           Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
         </p>
       </div>
@@ -113,15 +109,15 @@ const SellerPage = () => (
     <section className="section-padding bg-secondary/40">
       <div className="section-container max-w-2xl">
         <SectionHeading overline="Le processus" title="Comment ça fonctionne" />
-        <div className="mt-8 space-y-6">
+        <div className="mt-7 space-y-5">
           {steps.map((s) => (
-            <div key={s.num} className="flex gap-4 items-start">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-sm text-primary-foreground">
+            <div key={s.num} className="flex gap-3.5 items-start">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-[0.8125rem] text-primary-foreground">
                 {s.num}
               </span>
               <div>
-                <h3 className="text-base">{s.title}</h3>
-                <p className="mt-1 text-[0.8125rem] text-muted-foreground">{s.desc}</p>
+                <h3 className="text-[0.9375rem]">{s.title}</h3>
+                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground">{s.desc}</p>
               </div>
             </div>
           ))}
