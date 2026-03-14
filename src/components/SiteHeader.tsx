@@ -57,9 +57,9 @@ const SiteHeader = () => {
             alt="YGS — Yanis Gauthier-Sigeris"
             className="block lg:hidden transition-all duration-300 object-contain"
             style={{
-              width: scrolled ? 200 : 240,
+              width: scrolled ? 380 : 440,
               height: "auto",
-              maxHeight: scrolled ? 46 : 52,
+              maxHeight: scrolled ? 60 : 70,
               marginLeft: -8,
             }}
           />
