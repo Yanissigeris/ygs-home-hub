@@ -8,6 +8,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
 import homeImg from "@/assets/home-interior.jpg";
@@ -37,6 +38,12 @@ const trustItems = [
   { icon: Shield, label: "Zéro pression, zéro surprise" },
 ];
 
+const nextSteps = [
+  { title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété — c'est gratuit, confidentiel et sans engagement.", href: "/evaluation-gratuite-gatineau", cta: "Obtenir ma valeur", highlight: true },
+  { title: "Plan vendeur", text: "Prix, préparation, mise en marché — un plan clair adapté à votre propriété et votre situation.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan" },
+  { title: "Parler à Yanis", text: "Un appel pour clarifier vos options — pas de pitch, juste des réponses.", href: "/contact-yanis", cta: "Réserver un appel" },
+];
+
 const faq = [
   { q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. En près de 9 ans en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions — avec le bon plan." },
   { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
@@ -50,8 +57,8 @@ const SellerPage = () => (
       overline="Pour vendeurs · Gatineau et environs"
       title="Vendre votre propriété à Gatineau avec une vraie stratégie"
       subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
-      primaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={homeImg}
     />
@@ -66,8 +73,8 @@ const SellerPage = () => (
     />
 
     <InlineCTA
-      text="Commencez par connaître la valeur de votre propriété — c'est gratuit et sans engagement."
-      buttonLabel="Obtenir ma valeur →"
+      text="Première étape: connaître la valeur de votre propriété — c'est gratuit et sans engagement."
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
@@ -90,24 +97,24 @@ const SellerPage = () => (
       <p className="prose-body mt-4">
         Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement prix, améliorations stratégiques, mise en marché pour attirer les bons acheteurs.
       </p>
-      <Button className="mt-8" size="lg" asChild>
-        <Link to="/evaluation-gratuite-gatineau">
-          Commencer par une évaluation gratuite
-          <ArrowRight size={15} className="ml-1" />
-        </Link>
-      </Button>
     </ContentBlock>
 
     <ProcessSteps steps={steps} background="alt" />
 
+    <FunnelNextStep
+      overline="Prochaine étape"
+      title="Par où commencer?"
+      subtitle="Chaque vendeur a une situation différente. Choisissez l'étape qui vous convient."
+      steps={nextSteps}
+    />
+
     <CTASection
       dark
-      overline="Prochaine étape"
       title="Vous voulez savoir quoi faire dans votre cas?"
       text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
       buttons={[
-        { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
+        { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

@@ -6,6 +6,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
@@ -36,6 +37,12 @@ const trustItems = [
   { icon: Shield, label: "Accompagnement sans pression" },
 ];
 
+const nextSteps = [
+  { title: "Consultation gratuite", text: "On discute de vos critères, votre budget et vos questions — pour acheter en confiance.", href: "/consultation-acheteur", cta: "Réserver ma consultation", highlight: true },
+  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau — prix, style de vie, avantages et inconvénients.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
+];
+
 const faq = [
   { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. On évalue votre budget, vos priorités et les conditions du marché ensemble." },
   { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus a ses particularités. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
@@ -49,8 +56,8 @@ const BuyerPage = () => (
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
       subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress et sans erreur."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
+      secondaryCta={{ label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
     />
@@ -77,20 +84,27 @@ const BuyerPage = () => (
 
     <InlineCTA
       text="Vous êtes aussi vendeur? Connaître la valeur de votre propriété peut clarifier votre budget d'achat."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
     <SectorLinks sectors={sectors} />
 
+    <FunnelNextStep
+      overline="Prochaine étape"
+      title="Par où commencer?"
+      subtitle="Choisissez l'étape qui correspond le mieux à votre situation."
+      steps={nextSteps}
+      background="alt"
+    />
+
     <CTASection
       dark
-      overline="Consultation"
       title="Parlons de votre projet d'achat"
       text="Budget, secteurs, stratégie — on clarifie tout ça avant de commencer les visites."
       buttons={[
-        { label: "Réserver ma consultation", href: "/contact-yanis" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Réserver ma consultation", href: "/consultation-acheteur" },
+        { label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

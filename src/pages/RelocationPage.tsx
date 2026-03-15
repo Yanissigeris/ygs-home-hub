@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -8,6 +6,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Clock, Award, Shield, MapPin, Home, DollarSign, FileText } from "lucide-react";
@@ -38,6 +37,12 @@ const trustItems = [
   { icon: Shield, label: "Accompagnement bilingue" },
 ];
 
+const nextSteps = [
+  { title: "Réserver un appel", text: "On discute de votre relocalisation, vos priorités et vos questions — 100% gratuit.", href: "/contact-yanis", cta: "Réserver un appel", highlight: true },
+  { title: "Guide relocalisation", text: "Tout ce qu'il faut savoir pour s'installer à Gatineau — secteurs, prix, processus, écoles.", href: "/guide-relocalisation-gatineau", cta: "Lire le guide" },
+  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
+];
+
 const faq = [
   { q: "Est-ce vraiment moins cher à Gatineau qu'à Ottawa?", a: "En général, oui — surtout pour les maisons unifamiliales et les terrains. Mais il faut aussi considérer les taxes, les services et le mode de vie. On regarde tout ça ensemble." },
   { q: "Comment fonctionne l'achat au Québec?", a: "Le processus est différent de l'Ontario — promesse d'achat, inspection, conditions, notaire. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
@@ -52,7 +57,7 @@ const RelocationPage = () => (
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
       subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété — sans stress."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
+      secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
     />
@@ -81,7 +86,7 @@ const RelocationPage = () => (
 
     <InlineCTA
       text="Vous êtes aussi vendeur? Connaître la valeur de votre propriété actuelle peut clarifier votre budget d'achat."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
@@ -93,14 +98,20 @@ const RelocationPage = () => (
       background="alt"
     />
 
+    <FunnelNextStep
+      overline="Prochaine étape"
+      title="Par où commencer?"
+      subtitle="Choisissez l'option qui correspond à votre situation."
+      steps={nextSteps}
+    />
+
     <CTASection
       dark
-      overline="Prochaine étape"
       title="Parlons de votre projet de relocalisation"
       text="Budget, secteurs, processus québécois — on clarifie tout ça lors d'un premier appel, sans engagement."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

@@ -5,6 +5,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
 import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-plex.jpg";
@@ -46,6 +47,12 @@ const trustItems = [
   { icon: Shield, label: "Analyse basée sur les vrais chiffres" },
 ];
 
+const nextSteps = [
+  { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses, potentiel — une lecture objective de votre situation.", href: "/analyse-plex-gatineau", cta: "Recevoir mon analyse", highlight: true },
+  { title: "Évaluation de la valeur", text: "Connaître la valeur marchande actuelle de votre plex — gratuit et confidentiel.", href: "/evaluation-gratuite-gatineau", cta: "Obtenir ma valeur" },
+  { title: "Parler à Yanis", text: "Un appel pour discuter de votre situation d'investisseur — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+];
+
 const faq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex locaux." },
   { q: "Est-ce encore rentable d'acheter un plex?", a: "Ça dépend du prix, des revenus et de votre stratégie. On peut analyser ça ensemble." },
@@ -59,7 +66,7 @@ const PlexPage = () => (
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"
       subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
-      primaryCta={{ label: "Recevoir une analyse plex", href: "/analyse-plex-gatineau" }}
+      primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
       backgroundImage={heroImg}
@@ -75,7 +82,7 @@ const PlexPage = () => (
 
     <InlineCTA
       text="Vous possédez un plex? Commencez par connaître sa valeur actuelle."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
@@ -89,14 +96,21 @@ const PlexPage = () => (
 
     <ProcessSteps steps={steps} />
 
+    <FunnelNextStep
+      overline="Prochaine étape"
+      title="Par où commencer?"
+      subtitle="Choisissez l'option qui correspond à votre situation d'investisseur."
+      steps={nextSteps}
+      background="alt"
+    />
+
     <CTASection
       dark
-      overline="Prochaine étape"
       title="Recevez une lecture claire de votre situation"
       text="Vendre, acheter ou simplement comprendre votre position — je vous aide à y voir plus clair."
       buttons={[
-        { label: "Demander une analyse plex", href: "/analyse-plex-gatineau" },
-        { label: "Évaluer mon plex", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
