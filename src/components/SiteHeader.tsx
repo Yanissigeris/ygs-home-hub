@@ -198,8 +198,8 @@ const SiteHeader = () => {
           <img
             src={logoRemax}
             alt="RE/MAX"
-            className="transition-all duration-300 object-contain opacity-30"
-            style={{ height: scrolled ? 26 : 30, width: "auto" }}
+            className="transition-all duration-300 object-contain opacity-25"
+            style={{ height: scrolled ? 24 : 28, width: "auto" }}
           />
         </Link>
 
