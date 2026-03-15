@@ -65,6 +65,7 @@ import LivingPlateauPage from "./pages/LivingPlateauPage";
 import FAQPage from "./pages/FAQPage";
 import ThankYouPage from "./pages/ThankYouPage";
 import ThankYouValuationPage from "./pages/ThankYouValuationPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
 
 const queryClient = new QueryClient();
 
