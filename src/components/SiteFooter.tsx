@@ -10,7 +10,7 @@ import logoEnfantSoleil from "@/assets/logo-enfant-soleil.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
-  { src: logoRemax, alt: "RE/MAX", height: "clamp(32px, 4.5vw, 42px)", mono: false },
+  
   { src: logoRemaxDirect, alt: "RE/MAX Direct — Agence immobilière", height: "clamp(30px, 4vw, 40px)", mono: false },
   { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)", mono: false },
   { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)", mono: false },
