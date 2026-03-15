@@ -174,10 +174,10 @@ const SiteHeader = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-background/98 backdrop-blur-xl supports-[backdrop-filter]:bg-background/90 transition-all duration-300 ${
+      className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-300 ${
         scrolled
-          ? "shadow-[0_1px_8px_-3px_hsl(200_30%_14%/0.06)] border-b border-border/30"
-          : "border-b border-border/10"
+          ? "bg-background/98 supports-[backdrop-filter]:bg-background/90 shadow-[0_1px_8px_-3px_hsl(200_30%_14%/0.06)] border-b border-border/30"
+          : "bg-[hsl(40_15%_98%)] border-b border-border/[0.06]"
       }`}
     >
       {/* ─── Desktop (lg+) ─── */}
