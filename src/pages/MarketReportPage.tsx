@@ -2,8 +2,23 @@ import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-plex.jpg";
+
+const faq = [
+  { q: "Comment accéder au rapport du marché?", a: "Contactez-moi — je vous envoie l'analyse la plus récente pour votre secteur." },
+  { q: "Les données couvrent quels secteurs?", a: "Tous les secteurs de Gatineau: Aylmer, Hull, Plateau, Buckingham, Gatineau centre et plus." },
+  { q: "Le rapport est-il gratuit?", a: "Oui — c'est un outil que j'offre à mes clients et à ceux qui s'intéressent au marché." },
+];
+
+const related = [
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Estimation en 24h.", href: "/evaluation-gratuite-gatineau" },
+  { title: "Vendu récemment", text: "Les ventes récentes dans votre secteur.", href: "/vendu-recemment" },
+  { title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", href: "/guide-vendeur-gatineau" },
+  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau" },
+];
 
 const MarketReportPage = () => (
   <>
@@ -32,6 +47,14 @@ const MarketReportPage = () => (
       text="Vous voulez connaître la valeur de votre propriété? Demandez une évaluation gratuite."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau"
+    />
+
+    <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Explorer aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection

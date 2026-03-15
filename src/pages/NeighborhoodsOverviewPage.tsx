@@ -3,8 +3,10 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import SectorLinks from "@/components/SectorLinks";
+import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import { Clock, Award, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { Clock, Award, Shield, Home, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.jpg";
 
 const trustItems = [
@@ -22,13 +24,25 @@ const sectors = [
   { name: "Plateau", href: "/plateau", detail: "Familles, développements récents, parcs" },
 ];
 
+const lifestyleGuides = [
+  { icon: MapPin, title: "Vivre à Aylmer", text: "Lac, nature, communauté et accès à Ottawa.", cta: "Lire le guide", href: "/vivre-a-aylmer" },
+  { icon: Home, title: "Vivre à Hull", text: "Culture, restaurants et proximité Ottawa.", cta: "Lire le guide", href: "/vivre-a-hull" },
+  { icon: Coffee, title: "Vivre dans le Plateau", text: "Familles, développements récents et nature.", cta: "Lire le guide", href: "/vivre-dans-le-plateau" },
+];
+
+const faq = [
+  { q: "Quel est le meilleur quartier de Gatineau?", a: "Ça dépend de votre profil — familles, investisseurs, premiers acheteurs. Chaque secteur a ses forces. Contactez-moi pour une recommandation personnalisée." },
+  { q: "Les prix varient-ils beaucoup d'un secteur à l'autre?", a: "Oui, significativement. Buckingham est plus abordable, Aylmer plus cher, et Hull offre un bon compromis. On en discute." },
+  { q: "Comment choisir entre Aylmer et le Plateau?", a: "Aylmer offre des quartiers plus établis avec le lac. Le Plateau offre des maisons neuves à meilleur prix. Vos priorités déterminent le meilleur choix." },
+];
+
 const NeighborhoodsOverviewPage = () => (
   <>
     <HeroSection
       overline="Quartiers · Gatineau et Outaouais"
       title="Les quartiers à considérer à Gatineau"
       subtitle="Chaque secteur de Gatineau a sa personnalité — familial, urbain, nature ou investissement. Explorez les quartiers pour trouver celui qui vous correspond."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Expertise locale. Zéro pression."
       backgroundImage={heroImg}
@@ -49,12 +63,22 @@ const NeighborhoodsOverviewPage = () => (
       </p>
     </ContentBlock>
 
+    <LinkedCardGrid
+      overline="Mode de vie"
+      title="Guides de vie par quartier"
+      items={lifestyleGuides}
+      columns={3}
+      background="alt"
+    />
+
+    <FAQSection title="Questions sur les quartiers" items={faq} />
+
     <CTASection
       dark
       title="Besoin d'aide pour choisir?"
       text="Parlons de vos critères — je vous recommande les secteurs les plus adaptés à votre situation."
       buttons={[
-        { label: "Réserver une consultation", href: "/contact-yanis" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
