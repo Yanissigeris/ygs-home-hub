@@ -23,10 +23,10 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
-      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : ""}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-0 sm:pt-[5rem] sm:pb-0 md:pt-[5.5rem] md:pb-0"}`}>
+      <div className={`grid items-end ${(backgroundImage || agentImage) ? "gap-8 md:gap-6 lg:gap-10 md:grid-cols-[55%_45%] lg:grid-cols-[52%_48%]" : ""}`}>
         {/* Text column */}
-        <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[5.5rem] md:pb-[4rem]" : ""}`} {...anim}>
           {overline && (
             <p className="mb-5 flex items-center gap-2.5 text-[0.8125rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/40">
               {overline.includes("·") || overline.includes("•") ? (
@@ -86,28 +86,37 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           </motion.div>
         )}
 
-        {/* Agent portrait column */}
+        {/* Agent portrait column — large cutout anchored bottom-right */}
         {agentImage && (
           <motion.div
-            className="hidden lg:flex justify-center items-end"
-            initial={{ opacity: 0, x: 30 }}
+            className="hidden md:flex justify-end items-end self-end"
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
-            <div className="relative">
-              <div className="absolute -inset-6 rounded-full bg-primary-foreground/[0.04] blur-2xl" />
-              <img
-                src={agentImage}
-                alt={agentName || ""}
-                className="relative w-[280px] xl:w-[320px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
-                loading="eager"
-              />
-              {agentName && (
-                <p className="mt-2 text-center text-[0.75rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/30">
-                  {agentName}
-                </p>
-              )}
-            </div>
+            <img
+              src={agentImage}
+              alt={agentName || ""}
+              className="relative w-[340px] lg:w-[400px] xl:w-[440px] 2xl:w-[480px] max-h-[520px] xl:max-h-[580px] object-contain object-bottom drop-shadow-[0_12px_40px_rgba(0,0,0,0.18)]"
+              loading="eager"
+            />
+          </motion.div>
+        )}
+
+        {/* Mobile portrait — stacked below text */}
+        {agentImage && (
+          <motion.div
+            className="flex md:hidden justify-center items-end -mb-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          >
+            <img
+              src={agentImage}
+              alt={agentName || ""}
+              className="w-[280px] sm:w-[320px] max-h-[420px] object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+              loading="eager"
+            />
           </motion.div>
         )}
       </div>
