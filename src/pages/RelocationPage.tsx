@@ -1,4 +1,6 @@
 import HeroSection from "@/components/HeroSection";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
