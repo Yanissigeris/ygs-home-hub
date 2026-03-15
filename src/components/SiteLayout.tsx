@@ -1,10 +1,12 @@
 import UtilityBar from "@/components/UtilityBar";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import JsonLdSchema from "@/components/JsonLdSchema";
 import { Outlet } from "react-router-dom";
 
 const SiteLayout = () => (
   <div className="flex min-h-screen flex-col font-body">
+    <JsonLdSchema />
     <UtilityBar />
     <SiteHeader />
     <main className="flex-1">
