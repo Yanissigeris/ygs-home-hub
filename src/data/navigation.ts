@@ -106,6 +106,7 @@ export const footerColumns = [
     links: [
       { label: "Guides gratuits", href: "/ressources" },
       { label: "Rapport marché", href: "/rapport-marche-gatineau" },
+      { label: "FAQ", href: "/faq" },
       { label: "À propos / Contact", href: "/contact-yanis" },
     ],
   },
