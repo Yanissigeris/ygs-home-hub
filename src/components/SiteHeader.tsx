@@ -221,7 +221,7 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div
         className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 74 : 84 }}
+        style={{ height: scrolled ? 78 : 90 }}
       >
         <Link to="/" className="flex items-center shrink-0 gap-4">
           <img
