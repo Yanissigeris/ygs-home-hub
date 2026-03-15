@@ -102,6 +102,23 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             />
           </motion.div>
         )}
+
+        {/* Mobile portrait — stacked below text */}
+        {agentImage && (
+          <motion.div
+            className="flex md:hidden justify-center items-end -mb-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          >
+            <img
+              src={agentImage}
+              alt={agentName || ""}
+              className="w-[280px] sm:w-[320px] max-h-[420px] object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+              loading="eager"
+            />
+          </motion.div>
+        )}
       </div>
     </div>
 
