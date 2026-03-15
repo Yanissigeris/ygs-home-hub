@@ -31,6 +31,7 @@ const Index = () => (
       trustLine=""
       agentImage={yanisHero}
       agentName="Yanis Gauthier-Sigeris"
+      heroBackgroundImage={lifestyleBg}
     />
 
     <TrustStrip />
