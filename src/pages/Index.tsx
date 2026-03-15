@@ -67,7 +67,7 @@ const Index = () => (
       title="Commencez par la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
+        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
