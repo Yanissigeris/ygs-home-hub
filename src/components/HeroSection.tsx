@@ -99,17 +99,17 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            {/* Gradient mask to blend left/top edges into the hero */}
+            {/* Aggressive edge mask — all 4 sides fade into hero */}
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to bottom, transparent 0%, black 8%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to bottom, transparent 0%, black 8%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 25%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to top, transparent 0%, black 6%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to top, transparent 0%, black 6%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom"
+                className="w-full max-w-[400px] lg:max-w-[460px] xl:max-w-[520px] 2xl:max-w-[560px] object-contain object-bottom"
                 loading="eager"
               />
             </div>
