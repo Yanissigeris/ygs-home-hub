@@ -23,8 +23,8 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
-      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : ""}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-0 sm:pt-[5rem] sm:pb-0 md:pt-[5.5rem] md:pb-0"}`}>
+      <div className={`grid items-end ${(backgroundImage || agentImage) ? "gap-8 md:gap-6 lg:gap-10 md:grid-cols-[55%_45%] lg:grid-cols-[52%_48%]" : ""}`}>
         {/* Text column */}
         <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
           {overline && (
