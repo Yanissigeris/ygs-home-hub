@@ -41,20 +41,20 @@ export const reviews: Review[] = [
   // — Buyers —
   {
     id: "b1",
-    name: "Melanie.",
+    name: "Geneviève et Salah.",
     location: "Plateau",
     category: "buyer",
-    short: " Yanis est rapide, efficace, professionnel et connaît très bien les rouages de l'immobilier. C'est avec un réel enthousiasme que je le recommande fortement. Un vrai passionné de l'immobilier!",
-    full: " Yanis est rapide, efficace, professionnel et connaît très bien les rouages de l'immobilier. C'est avec un réel enthousiasme que je le recommande fortement. Un vrai passionné de l'immobilier!",
+    short: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
+    full: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
     rating: 5,
   },
   {
     id: "b2",
-    name: "David R.",
+    name: "Isabelle.",
     location: "Aylmer",
     category: "buyer",
-    short: "Yanis connaît chaque rue de Gatineau. Son expertise locale a fait toute la différence.",
-    full: "Je cherchais dans trois secteurs différents et Yanis m'a aidé à comparer objectivement — prix, potentiel, qualité de vie. Sa connaissance du terrain est impressionnante. J'ai acheté exactement ce que je cherchais, au bon prix.",
+    short: "Je recommande fortement Yanis comme agent, nous avons faite affaire avec lui pour l'achat de notre premiere maison et wow quel service exceptionnel et a l'ecoute de nos besoins!! Merci pour tout Yanis!!.",
+    full: "Je recommande fortement Yanis comme agent, nous avons faite affaire avec lui pour l'achat de notre premiere maison et wow quel service exceptionnel et a l'ecoute de nos besoins!! Merci pour tout Yanis!!.",
     rating: 5,
   },
   {
