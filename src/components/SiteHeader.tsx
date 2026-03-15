@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.png";
 import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
-import logoRemax from "@/assets/logo-remax-direct.png";
+import logoRemax from "@/assets/logo-remax-balloon.png";
 import { mainNav, type NavItem } from "@/data/navigation";
 
 /* ── Desktop dropdown item ── */
