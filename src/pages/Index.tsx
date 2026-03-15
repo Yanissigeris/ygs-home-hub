@@ -44,7 +44,7 @@ const Index = () => (
 
     <InlineCTA
       text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Évaluation gratuite →"
+      buttonLabel="Évaluation Gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
