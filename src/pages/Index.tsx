@@ -14,7 +14,7 @@ import yanisHero from "@/assets/yanis-hero.png";
 const Index = () => (
   <>
     <HeroSection
-      overline="Plateau • Aylmer • Hull • Buckingham"
+      overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre allié en immobilier à Gatineau"
       subtitle="Vendre, acheter ou investir — stratégie claire, conseils honnêtes et accompagnement sans pression."
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
