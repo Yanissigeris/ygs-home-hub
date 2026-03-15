@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 
 const SiteLayout = () => (
   <div className="flex min-h-screen flex-col font-body">
+    <JsonLdSchema />
     <UtilityBar />
     <SiteHeader />
     <main className="flex-1">
