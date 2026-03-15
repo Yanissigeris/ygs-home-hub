@@ -13,7 +13,7 @@ import heroImg from "@/assets/hero-buyer.jpg";
 
 const topics = [
   "Comprendre le processus d'achat au Québec",
-  "Choisir le bon secteur à Gatineau pour votre profil",
+  "Choisir le bon secteur à Gatineau ou en Outaouais pour votre profil",
   "Premier achat vs acheteur expérimenté — ce qui change",
   "Comment formuler une offre solide",
   "L'inspection: ce qu'il faut vraiment vérifier",
