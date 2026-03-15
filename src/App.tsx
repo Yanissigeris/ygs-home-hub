@@ -62,6 +62,9 @@ import ResourcesPage from "./pages/ResourcesPage";
 import LivingAylmerPage from "./pages/LivingAylmerPage";
 import LivingHullPage from "./pages/LivingHullPage";
 import LivingPlateauPage from "./pages/LivingPlateauPage";
+import FAQPage from "./pages/FAQPage";
+import ThankYouPage from "./pages/ThankYouPage";
+import ThankYouValuationPage from "./pages/ThankYouValuationPage";
 
 const queryClient = new QueryClient();
 
