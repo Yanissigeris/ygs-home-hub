@@ -14,7 +14,6 @@ import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import yanisHero from "@/assets/yanis-hero-cutout.png";
-import lifestyleBg from "@/assets/hero-lifestyle-bg.jpg";
 
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
@@ -31,7 +30,6 @@ const Index = () => (
       trustLine=""
       agentImage={yanisHero}
       agentName="Yanis Gauthier-Sigeris"
-      heroBackgroundImage={lifestyleBg}
     />
 
     <TrustStrip />

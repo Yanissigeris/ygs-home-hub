@@ -13,7 +13,6 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentName?: string;
-  heroBackgroundImage?: string;
 }
 
 const anim = {
@@ -22,37 +21,16 @@ const anim = {
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBackgroundImage }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    {/* Full-bleed lifestyle background image */}
-    {heroBackgroundImage && (
-      <>
-        <div className="absolute inset-0">
-          <img
-            src={heroBackgroundImage}
-            alt=""
-            className="h-full w-full object-cover object-center"
-            loading="eager"
-            style={{ filter: 'blur(2.5px) brightness(0.22) saturate(0.5)' }}
-          />
-        </div>
-        {/* Deep brand overlay — cinematic cohesion */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200_48%_8%_/_0.92)] via-[hsl(200_42%_10%_/_0.8)] to-[hsl(200_38%_12%_/_0.7)]" />
-        {/* Extra darkening behind portrait area (right side) */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[hsl(200_45%_8%_/_0.5)] via-transparent to-transparent" />
-        {/* Bottom fade for seamless transition */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[hsl(200_48%_8%)] to-transparent" />
-        {/* Top fade — blends header into hero */}
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[hsl(200_48%_8%_/_0.6)] to-transparent" />
-      </>
-    )}
-
-    {/* Minimal ambient — no bright glows, just subtle depth */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_30%_50%,_hsl(200_40%_12%_/_0.3)_0%,_transparent_60%)] pointer-events-none" />
+    {/* Shared ambient lighting — unifies text + portrait */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_60%_45%,_hsl(200_38%_20%_/_0.4)_0%,_transparent_70%)] pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_20%_40%,_hsl(200_30%_22%_/_0.15)_0%,_transparent_60%)] pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_80%_35%,_hsl(200_35%_22%_/_0.2)_0%,_transparent_55%)] pointer-events-none" />
+    {/* Warm accent wash */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(36_40%_50%_/_0.02)_0%,_transparent_40%)] pointer-events-none" />
     {/* Top edge softener — blends header into hero */}
-    {!heroBackgroundImage && (
-      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-primary/30 to-transparent pointer-events-none" />
-    )}
+    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-primary/30 to-transparent pointer-events-none" />
 
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
@@ -125,8 +103,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            {/* Subtle natural shadow beneath portrait — no glow */}
-            <div className="absolute bottom-[8%] right-[18%] w-[50%] h-[40%] bg-[radial-gradient(ellipse,_hsl(200_50%_5%_/_0.6)_0%,_transparent_70%)] pointer-events-none blur-3xl" />
+            {/* Soft glow behind subject */}
+            <div className="absolute bottom-[15%] right-[20%] w-[60%] h-[50%] bg-[radial-gradient(ellipse,_hsl(200_35%_22%_/_0.4)_0%,_transparent_70%)] pointer-events-none blur-2xl" />
             
             {/* Portrait with aggressive edge masking */}
             <div className="relative" style={{
