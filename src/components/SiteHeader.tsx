@@ -221,14 +221,21 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div
         className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 68 : 78 }}
+        style={{ height: scrolled ? 74 : 84 }}
       >
-        <Link to="/" className="flex items-center shrink-0">
+        <Link to="/" className="flex items-center shrink-0 gap-4">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 200 : 225, height: "auto", maxHeight: scrolled ? 40 : 44 }}
+            style={{ height: scrolled ? 56 : 64, width: "auto" }}
+          />
+          <span className="h-6 w-px bg-border/40 shrink-0" />
+          <img
+            src={logoRemax}
+            alt="RE/MAX"
+            className="transition-all duration-300 object-contain opacity-25"
+            style={{ height: scrolled ? 20 : 24, width: "auto" }}
           />
         </Link>
         <div className="flex items-center gap-3">
