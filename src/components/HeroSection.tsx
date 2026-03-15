@@ -13,6 +13,7 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentName?: string;
+  heroBackgroundImage?: string;
 }
 
 const anim = {
