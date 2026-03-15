@@ -7,7 +7,7 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
 import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-plex.jpg";
 
 const clientTypes = [
   {

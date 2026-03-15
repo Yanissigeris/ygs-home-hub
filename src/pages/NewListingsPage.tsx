@@ -2,7 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-properties.jpg";
 
 const NewListingsPage = () => (
   <>

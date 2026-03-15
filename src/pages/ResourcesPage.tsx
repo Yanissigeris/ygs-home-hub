@@ -6,7 +6,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import { Book, Home, MapPin, Users, FileText, TrendingUp } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-resources.jpg";
 
 const resources = [
   { icon: Home, title: "Guide vendeur", text: "Tout ce qu'il faut savoir pour vendre au meilleur prix à Gatineau.", href: "/guide-vendeur-gatineau" },

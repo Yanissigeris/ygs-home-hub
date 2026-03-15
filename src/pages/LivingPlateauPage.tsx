@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, TreePine } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-plateau.jpg";
 
 const highlights = [
   { icon: MapPin, title: "Développements récents", text: "Maisons modernes dans des quartiers neufs avec parcs et pistes cyclables." },

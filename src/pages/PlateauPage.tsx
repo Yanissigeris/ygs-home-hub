@@ -7,7 +7,7 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-plateau.jpg";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
 
 const reasons = [

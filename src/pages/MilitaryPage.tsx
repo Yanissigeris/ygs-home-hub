@@ -10,7 +10,7 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Users, Home, Award, Clock, CheckCircle2, MapPin, Heart } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-military.jpg";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [
