@@ -230,7 +230,7 @@ const SiteHeader = () => {
             className="transition-all duration-300 object-contain"
             style={{ height: scrolled ? 56 : 64, width: "auto" }}
           />
-          <span className="h-6 w-px bg-border/40 shrink-0" />
+          <span className="h-6 w-px bg-border/25 shrink-0" />
           <img
             src={logoRemax}
             alt="RE/MAX"
