@@ -4,6 +4,7 @@ import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-military.jpg";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
@@ -19,7 +20,16 @@ const topics = [
 
 const faq = [
   { q: "Ce guide est-il gratuit?", a: "Oui. Mon objectif est de vous aider à planifier votre relocalisation en confiance." },
-  { q: "Comment recevoir le guide complet?", a: "Contactez-moi — je vous envoie les informations pertinentes pour votre situation militaire." },
+  { q: "Travaillez-vous avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
+  { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation financière. On en discute ensemble." },
+  { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Aylmer et le Plateau sont très populaires — écoles, familles, nature. Hull est bien aussi pour la proximité au centre." },
+];
+
+const related = [
+  { title: "Relocalisation militaire", text: "Mutation vers la NCR — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau" },
+  { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau" },
+  { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau" },
 ];
 
 const MilitaryGuidePage = () => (
@@ -62,6 +72,14 @@ const MilitaryGuidePage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Pages connexes pour militaires"
+      pages={related}
+      background="alt"
+    />
+
     <CTASection
       dark
       title="Planifions votre relocalisation militaire"
@@ -72,8 +90,6 @@ const MilitaryGuidePage = () => (
       ]}
       trustLine="Zéro pression — je m'adapte à votre rythme."
     />
-
-    <FAQSection items={faq} />
   </>
 );
 

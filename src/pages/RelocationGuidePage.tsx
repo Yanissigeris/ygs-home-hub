@@ -4,6 +4,7 @@ import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-relocation.jpg";
@@ -26,6 +27,15 @@ const sectors = [
 const faq = [
   { q: "Ce guide est-il gratuit?", a: "Oui. L'objectif est de vous donner une base solide pour planifier votre relocalisation en confiance." },
   { q: "Comment recevoir le guide complet?", a: "Contactez-moi directement — je vous envoie toutes les informations pertinentes pour votre situation." },
+  { q: "Les taxes sont-elles plus élevées au Québec?", a: "Les taxes municipales varient par secteur. L'impôt sur le revenu est différent aussi. On regarde le portrait complet ensemble." },
+  { q: "Faut-il parler français pour vivre à Gatineau?", a: "Pas nécessairement — plusieurs secteurs comme Aylmer sont très bilingues. Mais le français est un atout dans la vie quotidienne." },
+];
+
+const related = [
+  { title: "Relocalisation depuis Ottawa", text: "Plus d'espace et des prix plus accessibles de l'autre côté de la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
+  { title: "Relocalisation depuis Montréal", text: "Qualité de vie et espace pour les familles montréalaises.", href: "/relocalisation-montreal-gatineau" },
+  { title: "Relocalisation militaire", text: "Mutation vers la NCR — service adapté aux militaires.", href: "/relocalisation-militaire-gatineau" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
 ];
 
 const RelocationGuidePage = () => (
@@ -35,7 +45,7 @@ const RelocationGuidePage = () => (
       title="Guide complet pour s'installer à Gatineau"
       subtitle="Tout ce que vous devez savoir pour réussir votre relocalisation — secteurs, prix, processus, écoles et mode de vie."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
+      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       backgroundImage={heroImg}
     />
@@ -66,18 +76,24 @@ const RelocationGuidePage = () => (
       href="/contact-yanis"
     />
 
+    <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Pages connexes"
+      pages={related}
+      background="alt"
+    />
+
     <CTASection
       dark
       title="Planifions votre installation"
       text="Réservez un appel gratuit — on clarifie vos options et vos prochaines étapes."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />
-
-    <FAQSection items={faq} />
   </>
 );
 

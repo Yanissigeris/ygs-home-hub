@@ -8,7 +8,9 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Building2, Clock, Award, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-hull.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 
@@ -40,9 +42,22 @@ const sellerReasons = [
   "C'est peut-être le meilleur moment pour maximiser votre prix",
 ];
 
+const faq = [
+  { q: "Hull est-il un bon secteur pour investir?", a: "Oui — prix d'entrée encore accessibles, forte demande locative et revitalisation en cours. Demandez une analyse plex pour les détails." },
+  { q: "Quel est le prix moyen d'un condo à Hull?", a: "Ça varie beaucoup selon l'emplacement et l'état. Contactez-moi pour une analyse à jour." },
+  { q: "Hull est-il sécuritaire?", a: "Hull vit une renaissance — de nouveaux projets, restaurants et communauté dynamique. Le secteur s'améliore d'année en année." },
+];
+
 const relatedSectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+];
+
+const related = [
+  { title: "Vivre à Hull — le guide", text: "Culture, restaurants, proximité Ottawa.", href: "/vivre-a-hull" },
+  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau" },
+  { title: "Analyse plex gratuite", text: "Revenus, dépenses et rendement de votre plex.", href: "/analyse-plex-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-gratuite-gatineau" },
 ];
 
 const HullPage = () => (
@@ -51,7 +66,7 @@ const HullPage = () => (
       overline="Guide de quartier · Hull"
       title="Vivre, acheter ou investir à Hull"
       subtitle="Centre-ville, vie urbaine, proximité Ottawa et potentiel locatif — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
@@ -106,10 +121,18 @@ const HullPage = () => (
       </Button>
     </ImageTextSplit>
 
+    <FAQSection title="Questions sur Hull" items={faq} />
+
     <SectorLinks
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={relatedSectors}
+    />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
@@ -118,7 +141,7 @@ const HullPage = () => (
       text="Je peux vous aider à y voir clair — que ce soit pour acheter, vendre ou analyser un plex dans le secteur."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

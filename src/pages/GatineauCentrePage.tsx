@@ -7,7 +7,9 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Building2, Clock, Award, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 
@@ -32,10 +34,23 @@ const profiles = [
   { icon: TrendingUp, title: "Acheteurs de revente", text: "Secteur stable avec une croissance constante et une forte demande." },
 ];
 
+const faq = [
+  { q: "Gatineau centre est-il un bon choix pour les familles?", a: "Oui — quartiers établis, écoles, parcs et services de proximité. C'est un secteur résidentiel classique et fiable." },
+  { q: "Comment se comparent les prix à Gatineau centre vs Aylmer?", a: "Généralement plus accessibles qu'Aylmer, avec un bon choix de propriétés. Contactez-moi pour une analyse à jour." },
+  { q: "Y a-t-il du potentiel d'investissement?", a: "Oui — bonne demande locative, plex disponibles à des prix raisonnables et secteur stable." },
+];
+
 const relatedSectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, nature" },
   { name: "Hull", href: "/hull", detail: "Urbain, culture, proximité Ottawa" },
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles" },
+];
+
+const related = [
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Investir en plex", text: "Analyse et stratégie d'investissement.", href: "/investir-plex-gatineau" },
 ];
 
 const GatineauCentrePage = () => (
@@ -44,7 +59,7 @@ const GatineauCentrePage = () => (
       overline="Guide de quartier · Gatineau"
       title="Vivre, acheter ou investir à Gatineau"
       subtitle="Quartier résidentiel bien établi, services complets et prix compétitifs — tout ce qu'il faut savoir sur le secteur de Gatineau."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
@@ -80,10 +95,18 @@ const GatineauCentrePage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <FAQSection title="Questions sur Gatineau centre" items={faq} />
+
     <SectorLinks
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={relatedSectors}
+    />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
@@ -92,7 +115,7 @@ const GatineauCentrePage = () => (
       text="Je peux vous aider — que ce soit pour acheter, vendre ou analyser une propriété dans le secteur."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

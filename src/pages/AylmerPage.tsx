@@ -7,7 +7,9 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import { CheckCircle2, Users, Home, MapPin, Coffee, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-aylmer.jpg";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
 
@@ -29,7 +31,13 @@ const profiles = [
   { icon: Users, title: "Familles établies", text: "Quartiers matures, grandes propriétés et communauté soudée." },
   { icon: Home, title: "Acheteurs de revente", text: "Propriétés avec caractère et potentiel de rénovation dans un secteur prisé." },
   { icon: MapPin, title: "Amateurs de nature", text: "Lac Deschênes, parc de la Gatineau et sentiers à deux pas." },
-  { icon: TrendingUp, title: "Propriétaires", text: "Secteur stable avec forte demande — bon moment pour connaître sa valeur." },
+  { icon: Coffee, title: "Vie de quartier", text: "Restaurants, cafés, boutiques et marché local à distance de marche." },
+];
+
+const faq = [
+  { q: "Quel est le prix moyen d'une maison à Aylmer?", a: "Ça varie selon le quartier et le type de propriété. Contactez-moi pour une analyse à jour basée sur les ventes récentes." },
+  { q: "Aylmer est-il bon pour les familles?", a: "Absolument. Écoles bilingues, parcs, lac, communauté soudée — c'est l'un des meilleurs secteurs familiaux de l'Outaouais." },
+  { q: "Combien de temps pour se rendre à Ottawa depuis Aylmer?", a: "15-25 minutes en voiture selon l'heure. Accès par le pont Champlain et les pistes cyclables." },
 ];
 
 const relatedSectors = [
@@ -38,13 +46,20 @@ const relatedSectors = [
   { name: "Gatineau", href: "/gatineau", detail: "Résidentiel, services, accessible" },
 ];
 
+const related = [
+  { title: "Vivre à Aylmer — le guide", text: "Mode de vie, lac, communauté et tout ce qu'il faut savoir.", href: "/vivre-a-aylmer" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec, étape par étape.", href: "/guide-acheteur-gatineau" },
+  { title: "Premier achat", text: "Budget, mise de fonds et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-gratuite-gatineau" },
+];
+
 const AylmerPage = () => (
   <>
     <HeroSection
       overline="Guide de quartier · Aylmer"
       title="Vivre, acheter ou vendre à Aylmer"
       subtitle="Lac Deschênes, parcs, écoles et communauté — Aylmer offre un cadre de vie exceptionnel à deux pas d'Ottawa."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
@@ -77,10 +92,18 @@ const AylmerPage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <FAQSection title="Questions sur Aylmer" items={faq} />
+
     <SectorLinks
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={relatedSectors}
+    />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
@@ -89,7 +112,7 @@ const AylmerPage = () => (
       text="Je connais Aylmer par cœur — parlons de votre projet."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
