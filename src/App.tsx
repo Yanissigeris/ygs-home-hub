@@ -131,6 +131,11 @@ const App = () => (
             <Route path="/vivre-a-aylmer" element={<LivingAylmerPage />} />
             <Route path="/vivre-a-hull" element={<LivingHullPage />} />
             <Route path="/vivre-dans-le-plateau" element={<LivingPlateauPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+
+            {/* Thank you pages */}
+            <Route path="/merci" element={<ThankYouPage />} />
+            <Route path="/merci-evaluation" element={<ThankYouValuationPage />} />
 
             {/* Contact */}
             <Route path="/contact-yanis" element={<ContactPage />} />
