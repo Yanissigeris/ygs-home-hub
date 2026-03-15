@@ -36,6 +36,9 @@ const AboutSection = () => (
         <p className="prose-body mt-4">
           Son rôle n'est pas de pousser. C'est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
         </p>
+        <p className="prose-body mt-4">
+          Ajoutez votre texte ici.
+        </p>
 
         <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
           <span className="flex items-center gap-2"><Clock size={14} /> Près de 9 ans d'expérience</span>
