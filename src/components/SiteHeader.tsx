@@ -235,7 +235,7 @@ const SiteHeader = () => {
             src={logoRemax}
             alt="RE/MAX"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 20 : 24, width: "auto" }}
+            style={{ height: scrolled ? 32 : 38, width: "auto" }}
           />
         </Link>
         <div className="flex items-center gap-3">
