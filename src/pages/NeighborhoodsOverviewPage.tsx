@@ -34,6 +34,8 @@ const NeighborhoodsOverviewPage = () => (
       backgroundImage={heroImg}
     />
 
+    <TrustMiniStrip items={trustItems} />
+
     <SectorLinks
       overline="Explorer les secteurs"
       title="Tous les quartiers de Gatineau"
