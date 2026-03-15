@@ -184,15 +184,22 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 72 : 84 }}
+        style={{ height: scrolled ? 82 : 96 }}
       >
-        {/* Logo */}
-        <Link to="/" className="flex items-center shrink-0 mr-8">
+        {/* Logo group */}
+        <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 240 : 270, height: "auto", maxHeight: scrolled ? 46 : 52 }}
+            style={{ height: scrolled ? 64 : 78, width: "auto" }}
+          />
+          <span className="h-8 w-px bg-border/40 shrink-0" />
+          <img
+            src={logoRemax}
+            alt="RE/MAX"
+            className="transition-all duration-300 object-contain opacity-30"
+            style={{ height: scrolled ? 26 : 30, width: "auto" }}
           />
         </Link>
 
