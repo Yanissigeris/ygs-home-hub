@@ -26,7 +26,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-0 sm:pt-[5rem] sm:pb-0 md:pt-[5.5rem] md:pb-0"}`}>
       <div className={`grid items-end ${(backgroundImage || agentImage) ? "gap-8 md:gap-6 lg:gap-10 md:grid-cols-[55%_45%] lg:grid-cols-[52%_48%]" : ""}`}>
         {/* Text column */}
-        <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[5.5rem] md:pb-[4rem]" : ""}`} {...anim}>
           {overline && (
             <p className="mb-5 flex items-center gap-2.5 text-[0.8125rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/40">
               {overline.includes("·") || overline.includes("•") ? (
