@@ -6,9 +6,16 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Building2 } from "lucide-react";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { CheckCircle2, Users, Home, TrendingUp, MapPin, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Spécialiste Gatineau et environs" },
+  { icon: Shield, label: "Accompagnement sans pression" },
+];
 
 const reasons = [
   "Quartier résidentiel bien établi avec tous les services",
@@ -41,6 +48,8 @@ const GatineauCentrePage = () => (
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
+
+    <TrustMiniStrip items={trustItems} />
 
     <ImageTextSplit image={riverImg} imageAlt="Secteur Gatineau" imagePosition="right">
       <div className="label-overline">Le secteur</div>

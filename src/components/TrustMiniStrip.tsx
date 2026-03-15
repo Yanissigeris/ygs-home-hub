@@ -11,7 +11,7 @@ interface TrustMiniStripProps {
 }
 
 const TrustMiniStrip = ({ items }: TrustMiniStripProps) => (
-  <section className="border-b border-border/30 bg-secondary/30">
+  <section className="border-b border-border/40 bg-secondary/40">
     <div className="section-container py-5 sm:py-6">
       <motion.div
         className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
@@ -20,7 +20,7 @@ const TrustMiniStrip = ({ items }: TrustMiniStripProps) => (
         transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
         {items.map((item) => (
-          <div key={item.label} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/60">
+          <div key={item.label} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
             <item.icon size={14} className="text-accent shrink-0" />
             <span>{item.label}</span>
           </div>

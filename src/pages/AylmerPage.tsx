@@ -6,9 +6,16 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-aylmer.jpg";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Spécialiste Aylmer et environs" },
+  { icon: Shield, label: "Accompagnement sans pression" },
+];
 
 const reasons = [
   "Quartiers familiaux avec accès au lac Deschênes",
@@ -41,6 +48,8 @@ const AylmerPage = () => (
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
+
+    <TrustMiniStrip items={trustItems} />
 
     <ImageTextSplit image={lifestyleImg} imageAlt="Vie à Aylmer, Gatineau" imagePosition="right">
       <div className="label-overline">Le secteur</div>

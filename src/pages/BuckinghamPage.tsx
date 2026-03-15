@@ -7,9 +7,16 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import { CheckCircle2, Users, Home, TrendingUp, TreePine } from "lucide-react";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buckingham.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Spécialiste Buckingham / Masson-Angers" },
+  { icon: Shield, label: "Accompagnement sans pression" },
+];
 
 const reasons = [
   "Terrains plus grands et propriétés plus spacieuses",
@@ -48,6 +55,8 @@ const BuckinghamPage = () => (
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={riverImg}
     />
+
+    <TrustMiniStrip items={trustItems} />
 
     <ImageTextSplit image={heroImg} imageAlt="Secteur Buckingham et Masson-Angers" imagePosition="right">
       <SectionHeading

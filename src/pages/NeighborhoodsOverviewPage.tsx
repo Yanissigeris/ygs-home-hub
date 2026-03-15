@@ -3,7 +3,15 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import SectorLinks from "@/components/SectorLinks";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.jpg";
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Spécialiste de tous les secteurs" },
+  { icon: Shield, label: "Conseils locaux et sans pression" },
+];
 
 const sectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, nature et accès Ottawa" },
@@ -25,6 +33,8 @@ const NeighborhoodsOverviewPage = () => (
       trustLine="Expertise locale. Zéro pression."
       backgroundImage={heroImg}
     />
+
+    <TrustMiniStrip items={trustItems} />
 
     <SectorLinks
       overline="Explorer les secteurs"
