@@ -23,10 +23,15 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
+    {/* Unified ambient lighting */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_65%_50%,_hsl(200_35%_20%_/_0.35)_0%,_transparent_70%)] pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(195_30%_28%_/_0.12)_0%,_transparent_50%)] pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(36_50%_45%_/_0.03)_0%,_transparent_40%)] pointer-events-none" />
+
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[4.5rem] pb-0 sm:pt-[5rem] md:pt-[5.5rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
-      <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
+      <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[54%_46%] lg:grid-cols-[52%_48%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
         {/* Text column */}
-        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3rem] md:pb-[5rem] lg:pb-[6rem]" : ""}`} {...anim}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3rem] md:pb-[5rem] lg:pb-[6rem]" : ""} relative z-10`} {...anim}>
           {overline && (
             <p className="mb-5 flex items-center gap-2.5 text-[0.8125rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/40">
               {overline.includes("·") || overline.includes("•") ? (
@@ -48,7 +53,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           {(primaryCta || secondaryCta) && (
             <div className="mt-9 flex flex-wrap items-center gap-4">
               {primaryCta && (
-                <Button size="xl" variant="accent" className="shadow-md font-semibold" asChild>
+                <Button size="xl" variant="accent" className="shadow-lg font-semibold" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
                 </Button>
               )}
@@ -86,24 +91,32 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           </motion.div>
         )}
 
-        {/* Agent portrait column — large cutout anchored bottom */}
+        {/* Agent portrait — seamlessly integrated */}
         {agentImage && (
           <motion.div
-            className="hidden md:flex justify-end items-end self-end overflow-hidden"
+            className="hidden md:flex justify-end items-end self-end relative"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            <img
-              src={agentImage}
-              alt={agentName || ""}
-              className="relative w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom translate-y-[2px]"
-              loading="eager"
-            />
+            {/* Gradient mask to blend left/top edges into the hero */}
+            <div className="relative" style={{
+              maskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to bottom, transparent 0%, black 8%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to bottom, transparent 0%, black 8%)',
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'destination-in',
+            }}>
+              <img
+                src={agentImage}
+                alt={agentName || ""}
+                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom"
+                loading="eager"
+              />
+            </div>
           </motion.div>
         )}
 
-        {/* Mobile portrait — stacked below text */}
+        {/* Mobile portrait */}
         {agentImage && (
           <motion.div
             className="flex md:hidden justify-center items-end overflow-hidden"
@@ -111,20 +124,21 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
-            <img
-              src={agentImage}
-              alt={agentName || ""}
-              className="w-[300px] sm:w-[340px] object-contain object-bottom translate-y-[2px]"
-              loading="eager"
-            />
+            <div style={{
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%)',
+            }}>
+              <img
+                src={agentImage}
+                alt={agentName || ""}
+                className="w-[300px] sm:w-[340px] object-contain object-bottom"
+                loading="eager"
+              />
+            </div>
           </motion.div>
         )}
       </div>
     </div>
-
-    {/* Subtle radial accents */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(195_30%_28%_/_0.10)_0%,_transparent_50%)] pointer-events-none" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(36_60%_52%_/_0.04)_0%,_transparent_40%)] pointer-events-none" />
   </section>
 );
 
