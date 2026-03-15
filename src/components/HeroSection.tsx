@@ -86,18 +86,18 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           </motion.div>
         )}
 
-        {/* Agent portrait column — large cutout anchored bottom-right */}
+        {/* Agent portrait column — large cutout anchored bottom */}
         {agentImage && (
           <motion.div
-            className="hidden md:flex justify-end items-end self-end"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            className="hidden md:flex justify-end items-end self-end overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
             <img
               src={agentImage}
               alt={agentName || ""}
-              className="relative w-[340px] lg:w-[400px] xl:w-[440px] 2xl:w-[480px] max-h-[520px] xl:max-h-[580px] object-contain object-bottom drop-shadow-[0_12px_40px_rgba(0,0,0,0.18)]"
+              className="relative w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom drop-shadow-[0_8px_35px_rgba(0,0,0,0.12)] translate-y-[2px]"
               loading="eager"
             />
           </motion.div>
@@ -106,7 +106,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         {/* Mobile portrait — stacked below text */}
         {agentImage && (
           <motion.div
-            className="flex md:hidden justify-center items-end -mb-0"
+            className="flex md:hidden justify-center items-end overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
@@ -114,7 +114,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             <img
               src={agentImage}
               alt={agentName || ""}
-              className="w-[280px] sm:w-[320px] max-h-[420px] object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+              className="w-[300px] sm:w-[340px] object-contain object-bottom drop-shadow-[0_8px_30px_rgba(0,0,0,0.12)] translate-y-[2px]"
               loading="eager"
             />
           </motion.div>
