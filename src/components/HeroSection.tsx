@@ -97,7 +97,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             <img
               src={agentImage}
               alt={agentName || ""}
-              className="relative w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom mix-blend-multiply translate-y-[2px]"
+              className="relative w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom translate-y-[2px]"
               loading="eager"
             />
           </motion.div>
