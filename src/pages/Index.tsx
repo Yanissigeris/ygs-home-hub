@@ -25,7 +25,7 @@ const Index = () => (
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre allié en immobilier en Outaouais"
       subtitle="Vendre, acheter ou investir — stratégie claire, conseils honnêtes et accompagnement sans pression."
-      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
       agentImage={yanisHero}
