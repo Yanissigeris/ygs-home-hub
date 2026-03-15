@@ -253,9 +253,11 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile ─── */}
-      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 66 }}>
-        <Link to="/" className="flex items-center" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 36, height: 36 }} />
+      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 70 }}>
+        <Link to="/" className="flex items-center gap-3" onClick={closeMenu}>
+          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 44, height: 44 }} />
+          <span className="h-5 w-px bg-border/40 shrink-0" />
+          <img src={logoRemax} alt="RE/MAX" className="opacity-25" style={{ height: 18, width: "auto" }} />
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" variant="accent" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
