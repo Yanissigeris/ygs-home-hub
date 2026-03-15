@@ -199,7 +199,7 @@ const SiteHeader = () => {
             src={logoRemax}
             alt="RE/MAX"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 38 : 46, width: "auto" }}
+            style={{ height: scrolled ? 32 : 38, width: "auto" }}
           />
         </Link>
 
