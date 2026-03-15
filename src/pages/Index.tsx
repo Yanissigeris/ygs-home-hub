@@ -46,7 +46,7 @@ const Index = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
-    <AudienceCards />
+    
 
     <AboutSection />
 
