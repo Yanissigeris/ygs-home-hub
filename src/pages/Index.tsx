@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import PathwaySection from "@/components/PathwaySection";
