@@ -7,10 +7,10 @@ import logoTemple from "@/assets/logo-temple-renommee.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
-  { src: logoRemax, alt: "RE/MAX", height: "clamp(28px, 4vw, 34px)" },
-  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(22px, 3vw, 28px)" },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(24px, 3.5vw, 30px)" },
-  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(30px, 4.5vw, 38px)" },
+  { src: logoRemax, alt: "RE/MAX", height: "clamp(20px, 2.8vw, 24px)" },
+  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(16px, 2.2vw, 20px)" },
+  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(17px, 2.4vw, 21px)" },
+  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(22px, 3vw, 27px)" },
 ];
 
 const SiteFooter = () => (
