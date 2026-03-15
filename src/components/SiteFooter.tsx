@@ -4,10 +4,12 @@ import logoRemax from "@/assets/logo-remax.png";
 import logoMW from "@/assets/logo-mw-white.png";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.png";
 import logoTemple from "@/assets/logo-temple-renommee.png";
+import logoRemaxDirect from "@/assets/logo-remax-direct.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
   { src: logoRemax, alt: "RE/MAX", height: "clamp(32px, 4.5vw, 42px)", mono: false },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — Agence immobilière", height: "clamp(30px, 4vw, 40px)", mono: false },
   { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)", mono: false },
   { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)", mono: false },
   { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 48px)", mono: true },
