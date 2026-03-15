@@ -8,6 +8,8 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buckingham.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
@@ -40,9 +42,22 @@ const sellerReasons = [
   "Optimiser votre position pour votre prochain projet immobilier",
 ];
 
+const faq = [
+  { q: "Buckingham est-il loin de tout?", a: "Non — c'est à 25-35 minutes d'Ottawa et du centre de Gatineau. Vous avez tous les services essentiels sur place." },
+  { q: "Les prix vont-ils continuer de monter?", a: "Le secteur est en croissance avec les nouveaux développements. Contactez-moi pour une analyse à jour." },
+  { q: "Y a-t-il de bons investissements à Buckingham?", a: "Oui — les prix d'entrée sont bas avec une demande locative croissante. Bonne option pour un premier investissement." },
+];
+
 const relatedSectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
   { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
+];
+
+const related = [
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Premier achat", text: "Budget et processus pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
 ];
 
 const BuckinghamPage = () => (
@@ -51,7 +66,7 @@ const BuckinghamPage = () => (
       overline="Guide de quartier · Buckingham / Masson-Angers"
       title="Vivre à Buckingham et Masson-Angers"
       subtitle="Espace, nature, prix accessibles et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={riverImg}
     />
@@ -84,7 +99,7 @@ const BuckinghamPage = () => (
     <InlineCTA
       text="Vous pensez acheter dans le secteur? Parlons de votre budget et de vos options."
       buttonLabel="Réserver une consultation →"
-      href="/contact-yanis"
+      href="/consultation-acheteur"
     />
 
     <ImageTextSplit image={riverImg} imageAlt="Nature et rivière, Buckingham" imagePosition="left">
@@ -106,10 +121,18 @@ const BuckinghamPage = () => (
       </Button>
     </ImageTextSplit>
 
+    <FAQSection title="Questions sur Buckingham / Masson-Angers" items={faq} />
+
     <SectorLinks
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={relatedSectors}
+    />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
@@ -118,7 +141,7 @@ const BuckinghamPage = () => (
       text="Je peux vous aider à trouver la bonne propriété ou à connaître la valeur de la vôtre."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
