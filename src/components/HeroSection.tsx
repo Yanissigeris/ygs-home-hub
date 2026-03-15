@@ -114,7 +114,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             <img
               src={agentImage}
               alt={agentName || ""}
-              className="w-[300px] sm:w-[340px] object-contain object-bottom mix-blend-multiply translate-y-[2px]"
+              className="w-[300px] sm:w-[340px] object-contain object-bottom translate-y-[2px]"
               loading="eager"
             />
           </motion.div>
