@@ -125,12 +125,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            {/* Soft glow behind subject */}
-            <div className="absolute bottom-[15%] right-[20%] w-[60%] h-[50%] bg-[radial-gradient(ellipse,_hsl(200_35%_22%_/_0.4)_0%,_transparent_70%)] pointer-events-none blur-2xl" />
-            {/* Extra depth shadow when background image is present */}
-            {heroBackgroundImage && (
-              <div className="absolute bottom-[5%] right-[15%] w-[55%] h-[60%] bg-[radial-gradient(ellipse,_hsl(200_45%_8%_/_0.5)_0%,_transparent_65%)] pointer-events-none blur-3xl" />
-            )}
+            {/* Subtle natural shadow beneath portrait — no glow */}
+            <div className="absolute bottom-[8%] right-[18%] w-[50%] h-[40%] bg-[radial-gradient(ellipse,_hsl(200_50%_5%_/_0.6)_0%,_transparent_70%)] pointer-events-none blur-3xl" />
             
             {/* Portrait with aggressive edge masking */}
             <div className="relative" style={{
