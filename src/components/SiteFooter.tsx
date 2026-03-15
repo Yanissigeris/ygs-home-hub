@@ -5,6 +5,8 @@ import logoMW from "@/assets/logo-mw-white.png";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.png";
 import logoTemple from "@/assets/logo-temple-renommee.png";
 import logoRemaxDirect from "@/assets/logo-remax-direct.png";
+import logoTranquillit from "@/assets/logo-tranquillit.png";
+import logoEnfantSoleil from "@/assets/logo-enfant-soleil.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
@@ -13,6 +15,8 @@ const secondaryLogos = [
   { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)", mono: false },
   { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)", mono: false },
   { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 48px)", mono: true },
+  { src: logoTranquillit, alt: "Tranquilli-T — Programme Gallagher", height: "clamp(28px, 4vw, 36px)", mono: false },
+  { src: logoEnfantSoleil, alt: "Fière partenaire de Enfant Soleil", height: "clamp(28px, 4vw, 36px)", mono: false },
 ];
 
 const SiteFooter = () => (
