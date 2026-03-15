@@ -31,7 +31,8 @@ const related = [
 ];
 
 const LivingAylmerPage = () => (
-  <>
+   <>
+    <PageMeta title="Vivre à Aylmer — Mode de vie" description="Tout sur la vie à Aylmer: lac, restaurants, écoles, communauté et qualité de vie. Le guide pour s'installer à Aylmer." />
     <HeroSection
       overline="Vivre à Aylmer · Gatineau"
       title="Vivre à Aylmer — le guide"

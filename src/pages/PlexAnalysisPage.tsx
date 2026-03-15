@@ -45,7 +45,8 @@ const PlexAnalysisPage = () => {
   };
 
   return (
-    <>
+     <>
+      <PageMeta title="Analyse de plex à Gatineau" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel. Analyse gratuite par un courtier spécialisé." />
       <HeroSection
         compact
         overline="Analyse plex gratuite · Gatineau"

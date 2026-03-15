@@ -35,7 +35,8 @@ const related = [
 ];
 
 const BuyerGuidePage = () => (
-  <>
+   <>
+    <PageMeta title="Guide acheteur — Acheter à Gatineau" description="Guide complet pour acheter une propriété à Gatineau. Processus, budget, inspection et négociation — tout ce qu'il faut savoir." />
     <HeroSection
       overline="Guide acheteur · Gatineau"
       title="Guide complet pour acheter à Gatineau"

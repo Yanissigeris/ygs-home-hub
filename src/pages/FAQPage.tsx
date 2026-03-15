@@ -44,7 +44,8 @@ const relatedResources = [
 ];
 
 const FAQPage = () => (
-  <>
+   <>
+    <PageMeta title="FAQ — Questions fréquentes immobilier" description="Réponses aux questions fréquentes sur l'immobilier à Gatineau. Vendre, acheter, investir, relocalisation et plus." />
     <HeroSection
       overline="FAQ · YGS"
       title="Questions fréquentes"

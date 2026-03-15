@@ -54,7 +54,8 @@ const faq = [
 ];
 
 const RelocationPage = () => (
-  <>
+   <>
+    <PageMeta title="Relocalisation Ottawa vers Gatineau" description="Déménager d'Ottawa à Gatineau? Guide complet: quartiers, taxes, écoles et accompagnement immobilier personnalisé." />
     <HeroSection
       overline="Relocalisation · Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"

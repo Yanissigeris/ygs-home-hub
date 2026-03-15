@@ -46,8 +46,9 @@ const SellerPlanPage = () => {
   };
 
   return (
-    <>
-      <HeroSection
+   <>
+    <PageMeta title="Plan de vente personnalisé à Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau. Stratégie, prix, mise en marché et accompagnement étape par étape." />
+    <HeroSection
         compact
         overline="Plan vendeur personnalisé · Gatineau"
         title="Recevez votre plan vendeur personnalisé"

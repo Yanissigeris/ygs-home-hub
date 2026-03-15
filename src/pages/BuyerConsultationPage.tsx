@@ -47,7 +47,8 @@ const BuyerConsultationPage = () => {
   const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
 
   return (
-    <>
+     <>
+      <PageMeta title="Consultation acheteur gratuite" description="Réservez une consultation acheteur gratuite à Gatineau. Clarifiez vos critères, votre budget et vos options avec un courtier expérimenté." />
       <HeroSection
         compact
         overline="Consultation acheteur · Gatineau"

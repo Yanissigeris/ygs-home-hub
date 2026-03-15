@@ -18,7 +18,8 @@ const nextSteps = [
 ];
 
 const ThankYouValuationPage = () => (
-  <>
+   <>
+    <PageMeta title="Merci — Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse personnalisée et vous contacte sous 24 heures." />
     <section className="section-padding bg-background">
       <div className="section-container max-w-[36rem]">
         <motion.div

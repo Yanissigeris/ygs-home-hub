@@ -22,7 +22,8 @@ const related = [
 ];
 
 const FeaturedPropertiesPage = () => (
-  <>
+   <>
+    <PageMeta title="Propriétés vedettes à Gatineau" description="Découvrez les propriétés coup de cœur à Gatineau sélectionnées par Yanis Gauthier-Sigeris. Les meilleures opportunités du marché." />
     <HeroSection
       overline="Propriétés vedettes · Gatineau"
       title="Nos coups de cœur à Gatineau"

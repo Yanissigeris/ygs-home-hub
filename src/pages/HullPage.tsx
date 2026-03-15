@@ -62,7 +62,8 @@ const related = [
 ];
 
 const HullPage = () => (
-  <>
+   <>
+    <PageMeta title="Hull — Guide de quartier Gatineau" description="Vivre, acheter ou investir à Hull. Quartier urbain, condos, plex, culture et proximité Ottawa. Guide complet." />
     <HeroSection
       overline="Guide de quartier · Hull"
       title="Vivre, acheter ou investir à Hull"

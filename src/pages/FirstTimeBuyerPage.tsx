@@ -39,7 +39,8 @@ const faq = [
 ];
 
 const FirstTimeBuyerPage = () => (
-  <>
+   <>
+    <PageMeta title="Premier achat immobilier à Gatineau" description="Guide pour premiers acheteurs à Gatineau. Mise de fonds, budget, programmes d'aide et accompagnement personnalisé pour votre premier achat." />
     <HeroSection
       overline="Premier achat · Gatineau"
       title="Premier achat à Gatineau — par où commencer?"

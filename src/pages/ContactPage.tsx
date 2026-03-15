@@ -53,8 +53,9 @@ const ContactPage = () => {
   };
 
   return (
-    <>
-      <HeroSection
+   <>
+    <PageMeta title="Contacter Yanis Gauthier-Sigeris" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Consultation gratuite, sans pression — parlons de votre projet immobilier." />
+    <HeroSection
         compact
         overline="Yanis Gauthier-Sigeris"
         title="Parlons de votre projet"

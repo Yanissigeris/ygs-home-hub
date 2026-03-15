@@ -39,7 +39,8 @@ const faq = [
 ];
 
 const BuyFromOttawaPage = () => (
-  <>
+   <>
+    <PageMeta title="Acheter à Gatineau depuis Ottawa" description="Vous habitez Ottawa et pensez acheter à Gatineau? Taxes, quartiers, avantages et accompagnement bilingue pour votre transition." />
     <HeroSection
       overline="Acheter depuis Ottawa · Gatineau"
       title="Acheter à Gatineau depuis Ottawa"

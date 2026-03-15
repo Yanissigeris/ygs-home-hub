@@ -20,7 +20,8 @@ const related = [
 ];
 
 const NewListingsPage = () => (
-  <>
+   <>
+    <PageMeta title="Nouvelles inscriptions à Gatineau" description="Propriétés fraîchement mises en marché à Gatineau. Soyez parmi les premiers à découvrir les nouvelles inscriptions." />
     <HeroSection
       overline="Nouvelles inscriptions · Gatineau"
       title="Nouvelles propriétés sur le marché"

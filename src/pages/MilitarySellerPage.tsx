@@ -32,7 +32,8 @@ const faq = [
 ];
 
 const MilitarySellerPage = () => (
-  <>
+   <>
+    <PageMeta title="Vendre lors d'une mutation militaire" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix." />
     <HeroSection
       overline="Vendre lors d'une mutation · Gatineau"
       title="Vendre votre propriété lors d'une mutation"

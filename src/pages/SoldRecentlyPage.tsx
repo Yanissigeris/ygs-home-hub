@@ -31,7 +31,8 @@ const related = [
 ];
 
 const SoldRecentlyPage = () => (
-  <>
+   <>
+    <PageMeta title="Propriétés vendues récemment à Gatineau" description="Consultez les ventes récentes à Gatineau pour comprendre les prix du marché. Données réelles par secteur." />
     <HeroSection
       overline="Vendu récemment · Gatineau"
       title="Propriétés vendues récemment à Gatineau"

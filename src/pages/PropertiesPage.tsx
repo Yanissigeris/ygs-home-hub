@@ -30,7 +30,8 @@ const faq = [
 ];
 
 const PropertiesPage = () => (
-  <>
+   <>
+    <PageMeta title="Propriétés à vendre à Gatineau" description="Maisons, condos, plex et terrains à Gatineau. Parcourez les propriétés disponibles dans tous les secteurs de l'Outaouais." />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété à Gatineau"

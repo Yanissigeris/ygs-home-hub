@@ -29,7 +29,8 @@ const faq = [
 ];
 
 const WhenToSellPage = () => (
-  <>
+   <>
+    <PageMeta title="Quand vendre sa propriété à Gatineau" description="Le bon moment pour vendre à Gatineau dépend de votre situation. Analyse du marché, facteurs clés et conseils d'un courtier expérimenté." />
     <HeroSection
       overline="Quand vendre · Gatineau"
       title="Quand vendre sa propriété à Gatineau?"

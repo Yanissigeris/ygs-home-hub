@@ -50,7 +50,8 @@ const faq = [
 ];
 
 const MilitaryPage = () => (
-  <>
+   <>
+    <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation sans stress." />
     <HeroSection
       overline="Service militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau sans stress"

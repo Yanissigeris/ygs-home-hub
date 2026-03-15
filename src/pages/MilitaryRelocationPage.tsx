@@ -35,7 +35,8 @@ const faq = [
 ];
 
 const MilitaryRelocationPage = () => (
-  <>
+   <>
+    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau? Guide complet: processus BGRS/SIRVA, quartiers près de la base, délais et accompagnement." />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"

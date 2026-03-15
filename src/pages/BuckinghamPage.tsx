@@ -62,7 +62,8 @@ const related = [
 ];
 
 const BuckinghamPage = () => (
-  <>
+   <>
+    <PageMeta title="Buckingham / Masson-Angers — Guide" description="Buckingham et Masson-Angers: nature, terrain, prix accessibles. Guide de quartier pour acheteurs et investisseurs à Gatineau." />
     <HeroSection
       overline="Guide de quartier · Buckingham / Masson-Angers"
       title="Vivre à Buckingham et Masson-Angers"
