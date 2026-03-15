@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const items = [
   { icon: Award, text: "Club Platine RE/MAX · Temple de la renommée" },
-  { icon: MapPin, text: "Spécialiste Gatineau · Aylmer · Hull · Plateau" },
+  { icon: MapPin, text: "Spécialiste Gatineau · Aylmer · Hull · Outaouais" },
   { icon: Shield, text: "Près de 9 ans d'expérience en Outaouais" },
 ];
 
