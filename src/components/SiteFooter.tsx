@@ -7,10 +7,10 @@ import logoTemple from "@/assets/logo-temple-renommee.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
-  { src: logoRemax, alt: "RE/MAX", height: "clamp(32px, 4.5vw, 42px)" },
-  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)" },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)" },
-  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 48px)" },
+  { src: logoRemax, alt: "RE/MAX", height: "clamp(32px, 4.5vw, 42px)", mono: false },
+  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)", mono: false },
+  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)", mono: false },
+  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 48px)", mono: true },
 ];
 
 const SiteFooter = () => (
@@ -45,7 +45,11 @@ const SiteFooter = () => (
                   key={logo.alt}
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-auto shrink-0 brightness-[1.8] opacity-85 transition-all duration-300 hover:brightness-[2.2] hover:opacity-100"
+                  className={`w-auto shrink-0 opacity-85 transition-all duration-300 hover:opacity-100 ${
+                    logo.mono
+                      ? "brightness-0 invert hover:brightness-0"
+                      : "brightness-[1.8] hover:brightness-[2.2]"
+                  }`}
                   style={{ height: logo.height }}
                 />
               ))}
