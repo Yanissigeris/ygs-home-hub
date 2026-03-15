@@ -22,8 +22,27 @@ const anim = {
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBackgroundImage }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
+    {/* Full-bleed lifestyle background image */}
+    {heroBackgroundImage && (
+      <>
+        <div className="absolute inset-0">
+          <img
+            src={heroBackgroundImage}
+            alt=""
+            className="h-full w-full object-cover object-center"
+            loading="eager"
+            style={{ filter: 'blur(1.5px) brightness(0.38) saturate(0.7)' }}
+          />
+        </div>
+        {/* Brand-colored overlay for cohesion */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200_48%_10%_/_0.82)] via-[hsl(200_42%_14%_/_0.65)] to-[hsl(200_38%_16%_/_0.45)]" />
+        {/* Bottom fade for seamless transition */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(200_48%_10%)] to-transparent" />
+      </>
+    )}
+
     {/* Shared ambient lighting — unifies text + portrait */}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_60%_45%,_hsl(200_38%_20%_/_0.4)_0%,_transparent_70%)] pointer-events-none" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_20%_40%,_hsl(200_30%_22%_/_0.15)_0%,_transparent_60%)] pointer-events-none" />
