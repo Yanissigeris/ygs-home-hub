@@ -17,7 +17,7 @@ const SiteFooter = () => (
             style={{ width: "clamp(155px, 28vw, 210px)" }}
           />
           <p className="mt-5 text-[0.875rem] font-medium opacity-60">
-            Votre allié en immobilier à Gatineau
+            Votre allié en immobilier en Outaouais
           </p>
           <p className="mt-3 text-[0.8125rem] leading-[1.6] opacity-45">
             Stratégie claire. Zéro pression.
