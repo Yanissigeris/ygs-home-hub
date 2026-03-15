@@ -16,12 +16,12 @@ import heroImg from "@/assets/hero-gatineau.jpg";
 const Index = () => (
   <>
     <HeroSection
-      overline="Yanis Gauthier-Sigeris · Courtier immobilier à Gatineau"
+      overline="Plateau • Aylmer • Hull • Buckingham"
       title="Votre allié en immobilier à Gatineau"
-      subtitle="Vendre, acheter ou investir dans l'Outaouais avec une stratégie claire, des conseils honnêtes et un accompagnement sans pression."
+      subtitle="Vendre, acheter ou investir en Outaouais — stratégie claire, conseils honnêtes, accompagnement sans pression."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      trustLine="Stratégie claire · Zéro pression · Pas de mauvaises surprises"
+      trustLine="Zéro pression · Pas de mauvaises surprises"
       backgroundImage={heroImg}
     />
 

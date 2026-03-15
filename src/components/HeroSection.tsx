@@ -23,35 +23,44 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[4.5rem] sm:pb-[5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
-      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[52%_48%]" : ""}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[5rem] pb-[6rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[6rem] md:pb-[7rem]"}`}>
+      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[54%_46%]" : ""}`}>
         {/* Text column */}
         <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
           {overline && (
-            <p className="mb-5 text-[0.8125rem] font-medium uppercase tracking-[0.1em] text-primary-foreground/35">
-              {overline}
+            <p className="mb-6 flex items-center gap-2 text-[0.8125rem] font-medium tracking-[0.06em] text-primary-foreground/50">
+              {overline.includes("·") || overline.includes("•") ? (
+                overline.split(/[·•]/).map((part, i, arr) => (
+                  <span key={i} className="flex items-center gap-2">
+                    {i > 0 && <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/60" />}
+                    <span>{part.trim()}</span>
+                  </span>
+                ))
+              ) : (
+                <span>{overline}</span>
+              )}
             </p>
           )}
           <h1 className="text-primary-foreground">{title}</h1>
-          <p className="mt-5 max-w-[36rem] text-[1.0625rem] leading-[1.6] text-primary-foreground/60">
+          <p className="mt-5 max-w-[34rem] text-[1.0625rem] leading-[1.65] text-primary-foreground/55">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
-            <div className="mt-7 flex flex-wrap gap-3.5">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               {primaryCta && (
                 <Button size="xl" variant="hero" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
                 </Button>
               )}
               {secondaryCta && (
-                <Button size="xl" variant="hero-outline" asChild>
+                <Button size="xl" variant="hero-outline" className="opacity-70 hover:opacity-100" asChild>
                   <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
                 </Button>
               )}
             </div>
           )}
           {trustLine && (
-            <p className="mt-5 text-[0.875rem] tracking-[0.02em] text-primary-foreground/40 font-medium">
+            <p className="mt-6 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/30 font-medium">
               {trustLine}
             </p>
           )}
