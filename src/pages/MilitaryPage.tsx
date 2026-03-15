@@ -8,8 +8,9 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
-import { Shield, Users, Home, Award, Clock, CheckCircle2, MapPin, Heart } from "lucide-react";
+import { Shield, Home, Award, Clock, MapPin, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-military.jpg";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
@@ -30,6 +31,12 @@ const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Expérience en relocalisation militaire" },
   { icon: Shield, label: "Bilingue · Service rapide" },
+];
+
+const militaryPaths = [
+  { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille — visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau", cta: "En savoir plus", highlight: true },
+  { title: "Vendre lors d'une mutation", text: "Vendez rapidement et au bon prix, même avec un calendrier serré.", href: "/vendre-lors-dune-mutation-gatineau", cta: "En savoir plus" },
+  { title: "Guide militaire", text: "Tout ce qu'il faut savoir pour votre relocalisation immobilière à Gatineau.", href: "/guide-militaire-gatineau", cta: "Lire le guide" },
 ];
 
 const faq = [
@@ -70,11 +77,18 @@ const MilitaryPage = () => (
 
     <InlineCTA
       text="Vous devez vendre avant d'acheter? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
 
     <ProcessSteps steps={steps} background="alt" />
+
+    <FunnelNextStep
+      overline="Votre situation"
+      title="Comment puis-je vous aider?"
+      subtitle="Choisissez le service qui correspond à votre réalité."
+      steps={militaryPaths}
+    />
 
     <ContentBlock narrow>
       <SectionHeading
@@ -94,12 +108,11 @@ const MilitaryPage = () => (
 
     <CTASection
       dark
-      overline="Prochaine étape"
       title="Prêt à planifier votre relocalisation?"
       text="Parlons de votre mutation, vos critères et votre calendrier — je m'adapte à vous."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Guide militaire", href: "/guide-militaire-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />

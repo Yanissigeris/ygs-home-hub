@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,6 +30,11 @@ const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Réponse personnalisée en 24h" },
   { icon: Shield, text: "Aucune obligation — aucun engagement" },
+];
+
+const afterSteps = [
+  { title: "Plan vendeur", text: "Allez plus loin — recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
 ];
 
 const ValuationPage = () => {
@@ -174,25 +180,13 @@ const ValuationPage = () => {
         items={benefits}
       />
 
-      <section className="hero-gradient py-14 sm:py-20">
-        <div className="section-container text-center">
-          <h2 className="text-primary-foreground mx-auto max-w-lg">Vous vendez à Gatineau?</h2>
-          <p className="mt-4 text-[1.0625rem] leading-[1.6] text-primary-foreground/50 mx-auto max-w-md">
-            Demandez aussi votre plan vendeur personnalisé — prix, préparation et stratégie de mise en marché.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3.5">
-            <Button size="xl" variant="accent" className="shadow-md font-semibold" asChild>
-              <Link to="/plan-vendeur-gatineau">Recevoir mon plan vendeur</Link>
-            </Button>
-            <Button size="xl" variant="hero-outline" className="opacity-60 hover:opacity-100" asChild>
-              <Link to="/contact-yanis">Parler à Yanis</Link>
-            </Button>
-          </div>
-          <p className="mt-5 text-[0.8125rem] text-primary-foreground/25">
-            Zéro pression — je vous donne les chiffres et les options, vous décidez.
-          </p>
-        </div>
-      </section>
+      <FunnelNextStep
+        overline="Et ensuite?"
+        title="Après votre évaluation"
+        subtitle="Vous aurez les chiffres. Voici les options pour aller plus loin."
+        steps={afterSteps}
+        background="alt"
+      />
     </>
   );
 };

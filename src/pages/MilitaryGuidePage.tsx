@@ -40,7 +40,7 @@ const MilitaryGuidePage = () => (
       items={topics}
     />
 
-    <section className="py-8 bg-white border-y border-border/30">
+    <section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partenaire des programmes</p>

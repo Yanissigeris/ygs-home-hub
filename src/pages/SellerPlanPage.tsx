@@ -158,7 +158,7 @@ const SellerPlanPage = () => {
                       <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, situation particulière…" />
                     </div>
 
-                    <Button type="submit" size="xl" className="w-full mt-2">
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
                       Recevoir mon plan vendeur
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
@@ -188,20 +188,13 @@ const SellerPlanPage = () => {
                 </div>
               </div>
 
-              <div className="card-elevated border border-dashed border-border/50 p-7">
-                <p className="text-[0.9375rem] italic leading-[1.6] text-muted-foreground">
-                  "[Témoignage vendeur à ajouter]"
-                </p>
-                <p className="mt-2 text-[0.8125rem] text-muted-foreground/40">— [Nom], [Secteur]</p>
-              </div>
-
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Pas encore prêt?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Commencez par une évaluation gratuite — c'est la première étape pour comprendre votre position.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
+                  <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
                 </Button>
               </div>
             </motion.aside>

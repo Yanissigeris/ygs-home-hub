@@ -2,9 +2,9 @@ import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
-import ContentBlock from "@/components/ContentBlock";
-import SuccessMessage from "@/components/SuccessMessage";
+import FunnelNextStep from "@/components/FunnelNextStep";
 import FAQSection from "@/components/FAQSection";
+import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -28,6 +28,11 @@ const trustPoints = [
   { icon: Lock, text: "Consultation confidentielle" },
   { icon: Clock, text: "Réponse en 24h" },
   { icon: Shield, text: "Aucune obligation — aucun engagement" },
+];
+
+const afterSteps = [
+  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie, votre budget et vos priorités.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers", highlight: true },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
 ];
 
 const faq = [
@@ -136,7 +141,7 @@ const BuyerConsultationPage = () => {
                       <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Type de propriété recherché, quartier préféré, questions…" />
                     </div>
 
-                    <Button type="submit" size="xl" className="w-full mt-2">
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
                       Réserver ma consultation
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
@@ -172,7 +177,7 @@ const BuyerConsultationPage = () => {
                   Demandez votre évaluation gratuite pour clarifier votre budget d'achat.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
+                  <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
                 </Button>
               </div>
             </motion.aside>
@@ -186,15 +191,13 @@ const BuyerConsultationPage = () => {
         items={benefits}
       />
 
-      <ContentBlock narrow centered padSize="md">
-        <h3>Pas besoin d'être prêt à acheter</h3>
-        <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-          La plupart des acheteurs commencent par se renseigner. C'est exactement le bon moment pour avoir une conversation stratégique.
-        </p>
-        <Button className="mt-6" size="lg" asChild>
-          <a href="#top">Remplir le formulaire ↑</a>
-        </Button>
-      </ContentBlock>
+      <FunnelNextStep
+        overline="En attendant"
+        title="Explorez en attendant votre consultation"
+        subtitle="Familiarisez-vous avec le marché et les quartiers de Gatineau."
+        steps={afterSteps}
+        background="alt"
+      />
 
       <FAQSection items={faq} />
     </>
