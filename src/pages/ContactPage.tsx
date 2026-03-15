@@ -1,4 +1,6 @@
 import { useState, FormEvent } from "react";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
