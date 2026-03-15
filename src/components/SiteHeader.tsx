@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.png";
 import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
+import logoRemax from "@/assets/logo-remax.png";
 import { mainNav, type NavItem } from "@/data/navigation";
 
 /* ── Desktop dropdown item ── */
@@ -183,15 +184,22 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 72 : 84 }}
+        style={{ height: scrolled ? 82 : 96 }}
       >
-        {/* Logo */}
-        <Link to="/" className="flex items-center shrink-0 mr-8">
+        {/* Logo group */}
+        <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 240 : 270, height: "auto", maxHeight: scrolled ? 46 : 52 }}
+            style={{ height: scrolled ? 64 : 78, width: "auto" }}
+          />
+          <span className="h-8 w-px bg-border/40 shrink-0" />
+          <img
+            src={logoRemax}
+            alt="RE/MAX"
+            className="transition-all duration-300 object-contain opacity-30"
+            style={{ height: scrolled ? 26 : 30, width: "auto" }}
           />
         </Link>
 
@@ -213,14 +221,21 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div
         className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 68 : 78 }}
+        style={{ height: scrolled ? 74 : 84 }}
       >
-        <Link to="/" className="flex items-center shrink-0">
+        <Link to="/" className="flex items-center shrink-0 gap-4">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 200 : 225, height: "auto", maxHeight: scrolled ? 40 : 44 }}
+            style={{ height: scrolled ? 56 : 64, width: "auto" }}
+          />
+          <span className="h-6 w-px bg-border/40 shrink-0" />
+          <img
+            src={logoRemax}
+            alt="RE/MAX"
+            className="transition-all duration-300 object-contain opacity-25"
+            style={{ height: scrolled ? 20 : 24, width: "auto" }}
           />
         </Link>
         <div className="flex items-center gap-3">
@@ -238,9 +253,11 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile ─── */}
-      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 66 }}>
-        <Link to="/" className="flex items-center" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 36, height: 36 }} />
+      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 70 }}>
+        <Link to="/" className="flex items-center gap-3" onClick={closeMenu}>
+          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 44, height: 44 }} />
+          <span className="h-5 w-px bg-border/40 shrink-0" />
+          <img src={logoRemax} alt="RE/MAX" className="opacity-25" style={{ height: 18, width: "auto" }} />
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" variant="accent" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
