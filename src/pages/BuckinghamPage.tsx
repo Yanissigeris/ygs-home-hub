@@ -56,6 +56,8 @@ const BuckinghamPage = () => (
       backgroundImage={riverImg}
     />
 
+    <TrustMiniStrip items={trustItems} />
+
     <ImageTextSplit image={heroImg} imageAlt="Secteur Buckingham et Masson-Angers" imagePosition="right">
       <SectionHeading
         overline="Le secteur"
