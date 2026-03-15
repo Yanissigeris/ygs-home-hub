@@ -1,4 +1,6 @@
 import HeroSection from "@/components/HeroSection";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -98,11 +100,19 @@ const RelocationPage = () => (
       background="alt"
     />
 
+    <ReviewSection
+      overline="Témoignages relocalisation"
+      title="Ils se sont installés à Gatineau avec confiance"
+      reviews={getReviewsByCategory("relocation").slice(0, 2)}
+      columns={2}
+    />
+
     <FunnelNextStep
       overline="Prochaine étape"
       title="Par où commencer?"
       subtitle="Choisissez l'option qui correspond à votre situation."
       steps={nextSteps}
+      background="alt"
     />
 
     <CTASection

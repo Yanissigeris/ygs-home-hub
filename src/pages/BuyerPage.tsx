@@ -1,6 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
@@ -90,12 +92,19 @@ const BuyerPage = () => (
 
     <SectorLinks sectors={sectors} />
 
+    <ReviewSection
+      overline="Témoignages acheteurs"
+      title="Ils ont acheté en toute confiance"
+      reviews={getReviewsByCategory("buyer").slice(0, 2)}
+      columns={2}
+      background="alt"
+    />
+
     <FunnelNextStep
       overline="Prochaine étape"
       title="Par où commencer?"
       subtitle="Choisissez l'étape qui correspond le mieux à votre situation."
       steps={nextSteps}
-      background="alt"
     />
 
     <CTASection

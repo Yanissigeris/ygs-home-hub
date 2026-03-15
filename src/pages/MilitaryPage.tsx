@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -105,6 +107,14 @@ const MilitaryPage = () => (
         <Link to="/contact-yanis">Réserver un appel</Link>
       </Button>
     </ContentBlock>
+
+    <ReviewSection
+      overline="Témoignages militaires"
+      title="Ils ont réussi leur mutation immobilière"
+      reviews={getReviewsByCategory("military").slice(0, 2)}
+      columns={2}
+      background="alt"
+    />
 
     <CTASection
       dark

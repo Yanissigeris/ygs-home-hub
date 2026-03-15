@@ -1,4 +1,6 @@
 import HeroSection from "@/components/HeroSection";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
@@ -102,6 +104,13 @@ const PlexPage = () => (
       subtitle="Choisissez l'option qui correspond à votre situation d'investisseur."
       steps={nextSteps}
       background="alt"
+    />
+
+    <ReviewSection
+      overline="Témoignages investisseurs"
+      title="Décisions éclairées, résultats concrets"
+      reviews={getReviewsByCategory("plex").slice(0, 2)}
+      columns={2}
     />
 
     <CTASection

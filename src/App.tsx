@@ -65,6 +65,7 @@ import LivingPlateauPage from "./pages/LivingPlateauPage";
 import FAQPage from "./pages/FAQPage";
 import ThankYouPage from "./pages/ThankYouPage";
 import ThankYouValuationPage from "./pages/ThankYouValuationPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
 
 const queryClient = new QueryClient();
 
@@ -132,6 +133,7 @@ const App = () => (
             <Route path="/vivre-a-hull" element={<LivingHullPage />} />
             <Route path="/vivre-dans-le-plateau" element={<LivingPlateauPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/temoignages" element={<TestimonialsPage />} />
 
             {/* Thank you pages */}
             <Route path="/merci" element={<ThankYouPage />} />

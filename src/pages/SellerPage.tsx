@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
@@ -106,6 +108,14 @@ const SellerPage = () => (
       title="Par où commencer?"
       subtitle="Chaque vendeur a une situation différente. Choisissez l'étape qui vous convient."
       steps={nextSteps}
+    />
+
+    <ReviewSection
+      overline="Témoignages vendeurs"
+      title="Ils ont vendu avec confiance"
+      reviews={getReviewsByCategory("seller").slice(0, 2)}
+      columns={2}
+      background="alt"
     />
 
     <CTASection

@@ -1,4 +1,6 @@
 import { useState, FormEvent } from "react";
+import ReviewSection from "@/components/ReviewSection";
+import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
@@ -130,6 +132,14 @@ const ContactPage = () => {
           </form>
         )}
       </FormSection>
+
+      <ReviewSection
+        overline="Témoignages"
+        title="Ce que disent nos clients"
+        reviews={getReviewsById(["s1", "b2", "r1"])}
+        columns={3}
+        background="alt"
+      />
 
       <CTASection
         dark
