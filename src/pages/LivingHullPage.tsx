@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -30,7 +31,8 @@ const related = [
 ];
 
 const LivingHullPage = () => (
-  <>
+   <>
+    <PageMeta title="Vivre à Hull — Mode de vie" description="Tout sur la vie à Hull: culture, restaurants, proximité Ottawa et ambiance urbaine. Le guide pour s'installer à Hull." />
     <HeroSection
       overline="Vivre à Hull · Gatineau"
       title="Vivre à Hull — le guide"

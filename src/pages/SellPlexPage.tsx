@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -38,7 +39,8 @@ const faq = [
 ];
 
 const SellPlexPage = () => (
-  <>
+   <>
+    <PageMeta title="Vendre un plex à Gatineau" description="Vendez votre duplex, triplex ou immeuble à revenus à Gatineau. Évaluation précise, stratégie de mise en marché et accompagnement spécialisé." />
     <HeroSection
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"

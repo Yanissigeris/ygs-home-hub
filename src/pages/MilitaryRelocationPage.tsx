@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -34,7 +35,8 @@ const faq = [
 ];
 
 const MilitaryRelocationPage = () => (
-  <>
+   <>
+    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau? Guide complet: processus BGRS/SIRVA, quartiers près de la base, délais et accompagnement." />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"

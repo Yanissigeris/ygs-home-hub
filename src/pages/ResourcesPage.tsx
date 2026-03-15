@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -38,7 +39,8 @@ const faq = [
 ];
 
 const ResourcesPage = () => (
-  <>
+   <>
+    <PageMeta title="Guides et ressources immobilières" description="Guides gratuits pour vendeurs, acheteurs et investisseurs à Gatineau. Ressources immobilières par Yanis Gauthier-Sigeris." />
     <HeroSection
       overline="Ressources · YGS"
       title="Ressources immobilières gratuites"

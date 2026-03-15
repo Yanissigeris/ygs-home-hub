@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -43,7 +44,8 @@ const relatedResources = [
 ];
 
 const FAQPage = () => (
-  <>
+   <>
+    <PageMeta title="FAQ — Questions fréquentes immobilier" description="Réponses aux questions fréquentes sur l'immobilier à Gatineau. Vendre, acheter, investir, relocalisation et plus." />
     <HeroSection
       overline="FAQ · YGS"
       title="Questions fréquentes"

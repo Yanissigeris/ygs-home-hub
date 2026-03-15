@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -21,7 +22,8 @@ const related = [
 ];
 
 const MarketReportPage = () => (
-  <>
+   <>
+    <PageMeta title="Rapport du marché immobilier Gatineau" description="Prix, tendances et volumes de ventes à Gatineau et en Outaouais. Rapport du marché immobilier par Yanis Gauthier-Sigeris." />
     <HeroSection
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"

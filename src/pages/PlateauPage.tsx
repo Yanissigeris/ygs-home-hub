@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
@@ -52,7 +53,8 @@ const related = [
 ];
 
 const PlateauPage = () => (
-  <>
+   <>
+    <PageMeta title="Plateau — Guide de quartier Gatineau" description="Découvrez le Plateau à Gatineau. Familles, développements récents, parcs et accès rapide à Ottawa. Guide complet." />
     <HeroSection
       overline="Guide de quartier · Plateau"
       title="Vivre, acheter ou investir dans le Plateau"

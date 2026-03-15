@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -33,7 +34,8 @@ const sellerReasons = [
 ];
 
 const NeighborhoodPage = () => (
-  <>
+   <>
+    <PageMeta title="Plateau et Aylmer — Guide de quartier" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, nature, écoles et propriétés. Guide complet par un courtier local." />
     <HeroSection
       overline="Guide de quartier · Gatineau"
       title="Vivre dans le Plateau / Aylmer"

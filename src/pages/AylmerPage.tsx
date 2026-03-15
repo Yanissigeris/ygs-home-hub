@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -54,7 +55,8 @@ const related = [
 ];
 
 const AylmerPage = () => (
-  <>
+   <>
+    <PageMeta title="Aylmer — Guide de quartier Gatineau" description="Vivre, acheter ou vendre à Aylmer. Lac Deschênes, parcs, écoles et communauté — guide complet par un courtier local." />
     <HeroSection
       overline="Guide de quartier · Aylmer"
       title="Vivre, acheter ou vendre à Aylmer"

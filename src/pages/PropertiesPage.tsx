@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -29,7 +30,8 @@ const faq = [
 ];
 
 const PropertiesPage = () => (
-  <>
+   <>
+    <PageMeta title="Propriétés à vendre à Gatineau" description="Maisons, condos, plex et terrains à Gatineau. Parcourez les propriétés disponibles dans tous les secteurs de l'Outaouais." />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété à Gatineau"

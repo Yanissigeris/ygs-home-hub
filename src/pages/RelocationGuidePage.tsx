@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
@@ -39,7 +40,8 @@ const related = [
 ];
 
 const RelocationGuidePage = () => (
-  <>
+   <>
+    <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau. Quartiers, services, écoles et tout ce qu'il faut savoir avant de déménager." />
     <HeroSection
       overline="Guide relocalisation · Gatineau"
       title="Guide complet pour s'installer à Gatineau"

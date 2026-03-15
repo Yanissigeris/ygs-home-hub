@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -38,7 +39,8 @@ const faq = [
 ];
 
 const FirstTimeBuyerPage = () => (
-  <>
+   <>
+    <PageMeta title="Premier achat immobilier à Gatineau" description="Guide pour premiers acheteurs à Gatineau. Mise de fonds, budget, programmes d'aide et accompagnement personnalisé pour votre premier achat." />
     <HeroSection
       overline="Premier achat · Gatineau"
       title="Premier achat à Gatineau — par où commencer?"

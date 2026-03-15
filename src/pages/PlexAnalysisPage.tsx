@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FAQSection from "@/components/FAQSection";
@@ -44,7 +45,8 @@ const PlexAnalysisPage = () => {
   };
 
   return (
-    <>
+     <>
+      <PageMeta title="Analyse de plex à Gatineau" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel. Analyse gratuite par un courtier spécialisé." />
       <HeroSection
         compact
         overline="Analyse plex gratuite · Gatineau"

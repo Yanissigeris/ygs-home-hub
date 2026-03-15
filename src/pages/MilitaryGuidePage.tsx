@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
@@ -33,7 +34,8 @@ const related = [
 ];
 
 const MilitaryGuidePage = () => (
-  <>
+   <>
+    <PageMeta title="Guide militaire — Immobilier à Gatineau" description="Guide immobilier pour militaires à Gatineau. BGRS, SIRVA, base Uplands, quartiers recommandés et conseils pratiques." />
     <HeroSection
       overline="Guide militaire · Gatineau"
       title="Guide immobilier pour militaires à Gatineau"

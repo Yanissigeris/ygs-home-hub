@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -49,7 +50,8 @@ const faq = [
 ];
 
 const MilitaryPage = () => (
-  <>
+   <>
+    <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation sans stress." />
     <HeroSection
       overline="Service militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau sans stress"

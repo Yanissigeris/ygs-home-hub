@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -61,7 +62,8 @@ const related = [
 ];
 
 const HullPage = () => (
-  <>
+   <>
+    <PageMeta title="Hull — Guide de quartier Gatineau" description="Vivre, acheter ou investir à Hull. Quartier urbain, condos, plex, culture et proximité Ottawa. Guide complet." />
     <HeroSection
       overline="Guide de quartier · Hull"
       title="Vivre, acheter ou investir à Hull"

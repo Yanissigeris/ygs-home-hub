@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -30,7 +31,8 @@ const related = [
 ];
 
 const SoldRecentlyPage = () => (
-  <>
+   <>
+    <PageMeta title="Propriétés vendues récemment à Gatineau" description="Consultez les ventes récentes à Gatineau pour comprendre les prix du marché. Données réelles par secteur." />
     <HeroSection
       overline="Vendu récemment · Gatineau"
       title="Propriétés vendues récemment à Gatineau"

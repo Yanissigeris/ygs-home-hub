@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
@@ -46,7 +47,8 @@ const ValuationPage = () => {
   };
 
   return (
-    <>
+     <>
+      <PageMeta title="Évaluation gratuite de votre propriété" description="Obtenez une évaluation gratuite et précise de votre propriété à Gatineau. Analyse basée sur les ventes récentes par un courtier expérimenté." />
       <HeroSection
         compact
         overline="Évaluation gratuite · Gatineau"

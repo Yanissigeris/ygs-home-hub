@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -54,7 +55,8 @@ const related = [
 ];
 
 const GatineauCentrePage = () => (
-  <>
+   <>
+    <PageMeta title="Gatineau centre — Guide de quartier" description="Vivre, acheter ou investir à Gatineau centre. Quartier résidentiel établi, services complets et prix compétitifs." />
     <HeroSection
       overline="Guide de quartier · Gatineau"
       title="Vivre, acheter ou investir à Gatineau"

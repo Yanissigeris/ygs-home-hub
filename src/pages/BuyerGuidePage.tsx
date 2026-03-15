@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
@@ -34,7 +35,8 @@ const related = [
 ];
 
 const BuyerGuidePage = () => (
-  <>
+   <>
+    <PageMeta title="Guide acheteur — Acheter à Gatineau" description="Guide complet pour acheter une propriété à Gatineau. Processus, budget, inspection et négociation — tout ce qu'il faut savoir." />
     <HeroSection
       overline="Guide acheteur · Gatineau"
       title="Guide complet pour acheter à Gatineau"

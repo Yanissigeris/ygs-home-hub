@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
@@ -11,7 +12,8 @@ const nextSteps = [
 ];
 
 const ThankYouPage = () => (
-  <>
+   <>
+    <PageMeta title="Merci — Demande envoyée" description="Votre demande a été envoyée avec succès. Yanis vous contactera dans les prochaines 24 heures." />
     <section className="section-padding bg-background">
       <div className="section-container max-w-[36rem]">
         <motion.div

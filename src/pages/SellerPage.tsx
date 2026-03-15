@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -54,7 +55,8 @@ const faq = [
 ];
 
 const SellerPage = () => (
-  <>
+   <>
+    <PageMeta title="Vendre sa maison à Gatineau" description="Vendez votre propriété à Gatineau au meilleur prix. Stratégie de mise en marché, accompagnement personnalisé et résultats prouvés par Yanis Gauthier-Sigeris." />
     <HeroSection
       overline="Pour vendeurs · Gatineau et environs"
       title="Vendre votre propriété à Gatineau avec une vraie stratégie"

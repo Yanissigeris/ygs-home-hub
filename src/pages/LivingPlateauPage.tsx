@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -30,7 +31,8 @@ const related = [
 ];
 
 const LivingPlateauPage = () => (
-  <>
+   <>
+    <PageMeta title="Vivre dans le Plateau — Mode de vie" description="Tout sur la vie dans le Plateau à Gatineau: familles, parcs, développements et qualité de vie. Guide pour s'installer." />
     <HeroSection
       overline="Vivre dans le Plateau · Gatineau"
       title="Vivre dans le Plateau — le guide"

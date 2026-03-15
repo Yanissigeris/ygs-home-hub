@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -29,7 +30,8 @@ const trustItems = [
 ];
 
 const MontrealRelocationPage = () => (
-  <>
+   <>
+    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers, qualité de vie et accompagnement immobilier pour votre transition." />
     <HeroSection
       overline="Relocalisation · Montréal → Gatineau"
       title="S'installer à Gatineau depuis Montréal"

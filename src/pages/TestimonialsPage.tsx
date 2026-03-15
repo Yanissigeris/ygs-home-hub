@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -14,7 +15,8 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
 ];
 
 const TestimonialsPage = () => (
-  <>
+   <>
+    <PageMeta title="Témoignages clients — Avis vérifiés" description="Découvrez ce que disent les clients de Yanis Gauthier-Sigeris. Témoignages de vendeurs, acheteurs et militaires à Gatineau." />
     <HeroSection
       compact
       overline="Témoignages"
