@@ -39,8 +39,8 @@ const BuyerGuidePage = () => (
     <PageMeta title="Guide acheteur — Acheter à Gatineau" description="Guide complet pour acheter une propriété à Gatineau. Processus, budget, inspection et négociation — tout ce qu'il faut savoir." />
     <HeroSection
       overline="Guide acheteur · Gatineau"
-      title="Guide complet pour acheter à Gatineau"
-      subtitle="Tout ce que vous devez savoir pour trouver la bonne propriété, faire une offre solide et naviguer le processus d'achat au Québec."
+      title="Guide complet pour acheter à Gatineau et l'Outaouais"
+      subtitle="Tout ce que vous devez savoir pour trouver la bonne propriété, faire une offre solide et naviguer le processus d'achat à Gatineau et dans tout l'Outaouais."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
