@@ -110,6 +110,14 @@ const SellerPage = () => (
       steps={nextSteps}
     />
 
+    <ReviewSection
+      overline="Témoignages vendeurs"
+      title="Ils ont vendu avec confiance"
+      reviews={getReviewsByCategory("seller").slice(0, 2)}
+      columns={2}
+      background="alt"
+    />
+
     <CTASection
       dark
       title="Vous voulez savoir quoi faire dans votre cas?"

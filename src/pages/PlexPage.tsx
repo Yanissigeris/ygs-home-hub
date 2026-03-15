@@ -106,6 +106,13 @@ const PlexPage = () => (
       background="alt"
     />
 
+    <ReviewSection
+      overline="Témoignages investisseurs"
+      title="Décisions éclairées, résultats concrets"
+      reviews={getReviewsByCategory("plex").slice(0, 2)}
+      columns={2}
+    />
+
     <CTASection
       dark
       title="Recevez une lecture claire de votre situation"

@@ -133,6 +133,14 @@ const ContactPage = () => {
         )}
       </FormSection>
 
+      <ReviewSection
+        overline="Témoignages"
+        title="Ce que disent nos clients"
+        reviews={getReviewsById(["s1", "b2", "r1"])}
+        columns={3}
+        background="alt"
+      />
+
       <CTASection
         dark
         overline="Prochaine étape"

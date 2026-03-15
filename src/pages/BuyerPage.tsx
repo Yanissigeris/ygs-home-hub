@@ -92,12 +92,19 @@ const BuyerPage = () => (
 
     <SectorLinks sectors={sectors} />
 
+    <ReviewSection
+      overline="Témoignages acheteurs"
+      title="Ils ont acheté en toute confiance"
+      reviews={getReviewsByCategory("buyer").slice(0, 2)}
+      columns={2}
+      background="alt"
+    />
+
     <FunnelNextStep
       overline="Prochaine étape"
       title="Par où commencer?"
       subtitle="Choisissez l'étape qui correspond le mieux à votre situation."
       steps={nextSteps}
-      background="alt"
     />
 
     <CTASection
