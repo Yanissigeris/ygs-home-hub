@@ -1,23 +1,27 @@
 import { motion } from "framer-motion";
+import { Clock, Shield, Award } from "lucide-react";
 
 const trustPoints = [
   {
-    title: "9 ans en Outaouais",
-    text: "Connaissance approfondie du marché, des secteurs et des réalités locales.",
+    icon: Clock,
+    title: "Près de 9 ans en Outaouais",
+    text: "Connaissance terrain du marché, des secteurs et des réalités locales.",
   },
   {
-    title: "Zéro pression",
+    icon: Shield,
+    title: "Zéro pression, zéro surprise",
     text: "Conseils honnêtes, stratégie claire, accompagnement adapté à votre rythme.",
   },
   {
+    icon: Award,
     title: "Résultats reconnus",
-    text: "Distinctions RE/MAX et priorité absolue à la satisfaction client.",
+    text: "Club Platine RE/MAX, Club 100% et Temple de la renommée.",
   },
 ];
 
 const CredibilitySection = () => (
-  <section className="section-padding-md bg-secondary/25">
-    <div className="section-container max-w-[52rem]">
+  <section className="section-padding-md bg-secondary/20">
+    <div className="section-container max-w-[56rem]">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
@@ -32,22 +36,26 @@ const CredibilitySection = () => (
         </p>
       </motion.div>
 
-      <div className="grid gap-10 sm:gap-12 md:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-3">
         {trustPoints.map((point, i) => (
           <motion.div
             key={point.title}
-            className="text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-[1.125rem] font-semibold mb-3 tracking-[-0.015em] text-foreground/90">
-              {point.title}
-            </h3>
-            <p className="text-[0.9375rem] leading-[1.65] text-muted-foreground/70 max-w-[18rem] mx-auto">
-              {point.text}
-            </p>
+            <div className="text-center h-full p-6">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/[0.08] text-accent mb-5">
+                <point.icon size={20} />
+              </div>
+              <h3 className="text-[1.0625rem] font-semibold tracking-[-0.015em] text-foreground">
+                {point.title}
+              </h3>
+              <p className="mt-2.5 text-[0.9375rem] leading-[1.65] text-muted-foreground/70 max-w-[18rem] mx-auto">
+                {point.text}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

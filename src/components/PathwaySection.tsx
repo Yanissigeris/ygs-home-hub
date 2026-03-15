@@ -2,28 +2,34 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import cardVendreImg from "@/assets/card-vendre.jpg";
+import cardAcheterImg from "@/assets/card-acheter.jpg";
+import cardPlexImg from "@/assets/card-plex.jpg";
 
 const pathways = [
   {
     title: "Vendre ma propriété",
-    text: "Vous pensez vendre à Gatineau, mais vous ne savez pas si c'est le bon moment ou le bon prix? On commence par une évaluation réaliste de votre propriété — puis on bâtit une stratégie claire pour maximiser votre résultat.",
+    text: "Évaluation réaliste, stratégie de prix et mise en marché — pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
+    image: cardVendreImg,
   },
   {
     title: "Acheter à Gatineau",
-    text: "Que vous arriviez d'Ottawa, de Montréal ou que vous cherchiez dans Aylmer, Hull ou le Plateau — je vous aide à cibler les bons secteurs, éviter les pièges et acheter avec confiance.",
-    cta: "Explorer l'achat à Gatineau",
+    text: "Secteurs, budget et accompagnement terrain — pour acheter avec confiance.",
+    cta: "Explorer l'achat",
     href: "/acheter-a-gatineau",
-    footer: "Secteurs · budget · accompagnement terrain",
+    footer: "Secteurs · budget · accompagnement",
+    image: cardAcheterImg,
   },
   {
     title: "Plex & investissement",
-    text: "Avant d'acheter, vendre ou garder un plex en Outaouais, il faut connaître les vrais chiffres. Je vous fournis une analyse claire du rendement, de la valeur et du meilleur timing.",
-    cta: "Recevoir une analyse plex",
+    text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.",
+    cta: "Recevoir une analyse",
     href: "/investir-plex-gatineau",
-    footer: "Rendement · valeur marchande · timing",
+    footer: "Rendement · valeur · timing",
+    image: cardPlexImg,
   },
 ];
 
@@ -54,23 +60,31 @@ const PathwaySection = () => (
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <div className="card-elevated flex flex-col h-full border border-border/40 bg-card p-7 sm:p-8 transition-all duration-220 hover:border-accent/20">
-              <h3 className="mb-3">
-                {pathway.title}
-              </h3>
-              <p className="flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground mb-7">
-                {pathway.text}
-              </p>
-              <Button size="default" asChild className="w-full mb-4">
-                <Link to={pathway.href}>
+            <Link to={pathway.href} className="card-elevated flex flex-col h-full overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={pathway.image}
+                  alt={pathway.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-col flex-1 p-7 sm:p-8">
+                <h3 className="mb-3 group-hover:text-primary transition-colors">
+                  {pathway.title}
+                </h3>
+                <p className="flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground mb-6">
+                  {pathway.text}
+                </p>
+                <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-              <p className="text-[0.8125rem] text-center text-muted-foreground/45 font-medium tracking-wide">
-                {pathway.footer}
-              </p>
-            </div>
+                </span>
+                <p className="mt-4 text-[0.8125rem] text-muted-foreground/40 font-medium tracking-wide">
+                  {pathway.footer}
+                </p>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>
