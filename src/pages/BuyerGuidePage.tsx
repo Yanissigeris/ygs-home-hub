@@ -6,6 +6,7 @@ import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-buyer.jpg";
 
@@ -22,6 +23,14 @@ const faq = [
   { q: "Combien faut-il comme mise de fonds?", a: "Minimum 5% pour une résidence principale. Pour un plex occupé, 5% aussi. Pour un investissement pur, 20%. On peut en discuter selon votre situation." },
   { q: "Est-ce mieux d'acheter à Gatineau qu'à Ottawa?", a: "Ça dépend de vos priorités. En général, les prix sont plus accessibles côté Gatineau, mais il faut aussi considérer les taxes et les services." },
   { q: "Combien de temps prend un achat?", a: "En général, 60 à 90 jours du début de la recherche à la prise de possession, mais ça peut varier selon le marché." },
+  { q: "Quels sont les frais à prévoir?", a: "Notaire (environ 1 500$), taxe de bienvenue, assurance titre optionnelle, et inspection pré-achat. On revoit tout ça ensemble." },
+];
+
+const related = [
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Premier achat", text: "Budget, mise de fonds et processus pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+  { title: "Acheter depuis Ottawa", text: "Plus d'espace, prix accessibles — traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau" },
 ];
 
 const BuyerGuidePage = () => (
@@ -30,8 +39,8 @@ const BuyerGuidePage = () => (
       overline="Guide acheteur · Gatineau"
       title="Guide complet pour acheter à Gatineau"
       subtitle="Tout ce que vous devez savoir pour trouver la bonne propriété, faire une offre solide et naviguer le processus d'achat au Québec."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
+      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       backgroundImage={heroImg}
     />
@@ -52,7 +61,7 @@ const BuyerGuidePage = () => (
     <InlineCTA
       text="Vous ne connaissez pas les secteurs de Gatineau? Explorez les quartiers populaires."
       buttonLabel="Voir les quartiers →"
-      href="/plateau-aylmer"
+      href="/quartiers-a-considerer-a-gatineau"
     />
 
     <ContentBlock narrow>
@@ -61,22 +70,28 @@ const BuyerGuidePage = () => (
         Aylmer, le Plateau, Hull, Buckingham — chaque secteur a sa personnalité, ses avantages et ses compromis. Le bon choix dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/plateau-aylmer">Explorer les secteurs</Link>
+        <Link to="/quartiers-a-considerer-a-gatineau">Explorer les secteurs</Link>
       </Button>
     </ContentBlock>
+
+    <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Pages connexes pour acheteurs"
+      pages={related}
+      background="alt"
+    />
 
     <CTASection
       dark
       title="Prêt à commencer votre recherche?"
       text="Réservez une consultation gratuite — on clarifie vos critères et vos options."
       buttons={[
-        { label: "Réserver une consultation", href: "/contact-yanis" },
-        { label: "Voir les quartiers", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur" },
+        { label: "Voir les quartiers", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />
-
-    <FAQSection items={faq} />
   </>
 );
 

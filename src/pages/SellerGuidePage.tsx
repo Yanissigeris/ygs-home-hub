@@ -6,6 +6,7 @@ import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/home-interior.jpg";
 
@@ -22,6 +23,14 @@ const faq = [
   { q: "Quand est-ce le meilleur moment pour vendre à Gatineau?", a: "Ça dépend de votre situation personnelle, pas seulement du marché. On analyse ensemble le meilleur timing pour vous." },
   { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — pas de surprise." },
   { q: "Faut-il faire des rénovations avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
+  { q: "Combien de temps pour vendre à Gatineau?", a: "En moyenne 30 à 60 jours sur le marché, mais ça varie selon le secteur, le prix et la saison." },
+];
+
+const related = [
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une estimation en 24h.", href: "/evaluation-gratuite-gatineau" },
+  { title: "Plan vendeur", text: "Recevez un plan personnalisé: prix, préparation et mise en marché.", href: "/plan-vendeur-gatineau" },
+  { title: "Quand vendre", text: "Le bon timing dépend de votre situation — voici comment y voir clair.", href: "/quand-vendre-a-gatineau" },
+  { title: "Vendre un plex", text: "Vendre un immeuble à revenus, c'est différent d'une maison.", href: "/vendre-un-plex-a-gatineau" },
 ];
 
 const SellerGuidePage = () => (
@@ -82,6 +91,14 @@ const SellerGuidePage = () => (
       </Button>
     </ContentBlock>
 
+    <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Pages connexes pour vendeurs"
+      pages={related}
+      background="alt"
+    />
+
     <CTASection
       dark
       title="Prêt à passer à l'action?"
@@ -92,8 +109,6 @@ const SellerGuidePage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
-
-    <FAQSection items={faq} />
   </>
 );
 
