@@ -192,7 +192,7 @@ const SiteHeader = () => {
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 64 : 78, width: "auto" }}
+            style={{ height: scrolled ? 72 : 88, width: "auto" }}
           />
           <span className="h-8 w-px bg-border/25 shrink-0" />
           <img
