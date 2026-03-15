@@ -184,7 +184,7 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 82 : 96 }}
+        style={{ height: scrolled ? 88 : 108 }}
       >
         {/* Logo group */}
         <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
