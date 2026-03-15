@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoYgsWhite from "@/assets/logo-ygs-white.png";
-import logoRemax from "@/assets/logo-remax.png";
+
 import logoMW from "@/assets/logo-mw-white.png";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.png";
 import logoTemple from "@/assets/logo-temple-renommee.png";
