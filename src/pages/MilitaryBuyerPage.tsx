@@ -85,7 +85,7 @@ const MilitaryBuyerPage = () => (
       text="Parlons de votre mutation et de vos critères — je m'occupe du reste."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />

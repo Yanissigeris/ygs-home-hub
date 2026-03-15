@@ -79,7 +79,7 @@ const MilitarySellerPage = () => (
       title="Vous avez une mutation qui approche?"
       text="Parlons de votre calendrier et de vos options — plus on s'y prend tôt, plus on a de levier."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver un appel", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
