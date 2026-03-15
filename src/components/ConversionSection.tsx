@@ -73,13 +73,13 @@ const ConversionSection = () => (
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
-        <Button size="lg" asChild>
+        <Button size="lg" variant="accent" className="shadow-sm font-semibold" asChild>
           <Link to="/evaluation-gratuite-gatineau">
             Commencer par une évaluation gratuite
             <ArrowRight size={15} className="ml-1" />
           </Link>
         </Button>
-        <p className="mt-4 text-[0.8125rem] text-muted-foreground/50">
+        <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">
           Zéro pression — je vous donne les chiffres et les options, vous décidez.
         </p>
       </motion.div>

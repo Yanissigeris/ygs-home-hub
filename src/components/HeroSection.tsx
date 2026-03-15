@@ -23,16 +23,16 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[5rem] pb-[6rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[6rem] md:pb-[7rem]"}`}>
-      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[54%_46%]" : ""}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
+      <div className={`grid items-center ${(backgroundImage || agentImage) ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : ""}`}>
         {/* Text column */}
         <motion.div className={(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} {...anim}>
           {overline && (
-            <p className="mb-6 flex items-center gap-2 text-[0.8125rem] font-medium tracking-[0.06em] text-primary-foreground/50">
+            <p className="mb-5 flex items-center gap-2.5 text-[0.8125rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/40">
               {overline.includes("·") || overline.includes("•") ? (
-                overline.split(/[·•]/).map((part, i, arr) => (
-                  <span key={i} className="flex items-center gap-2">
-                    {i > 0 && <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/60" />}
+                overline.split(/[·•]/).map((part, i) => (
+                  <span key={i} className="flex items-center gap-2.5">
+                    {i > 0 && <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/50" />}
                     <span>{part.trim()}</span>
                   </span>
                 ))
@@ -42,25 +42,25 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             </p>
           )}
           <h1 className="text-primary-foreground">{title}</h1>
-          <p className="mt-5 max-w-[34rem] text-[1.0625rem] leading-[1.65] text-primary-foreground/55">
+          <p className="mt-5 max-w-[32rem] text-[1.0625rem] leading-[1.7] text-primary-foreground/50">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               {primaryCta && (
-                <Button size="xl" variant="hero" asChild>
+                <Button size="xl" variant="accent" className="shadow-md font-semibold" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
                 </Button>
               )}
               {secondaryCta && (
-                <Button size="xl" variant="hero-outline" className="opacity-70 hover:opacity-100" asChild>
+                <Button size="xl" variant="hero-outline" className="opacity-60 hover:opacity-100" asChild>
                   <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
                 </Button>
               )}
             </div>
           )}
           {trustLine && (
-            <p className="mt-6 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/30 font-medium">
+            <p className="mt-7 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/25 font-medium">
               {trustLine}
             </p>
           )}
@@ -103,7 +103,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
                 loading="eager"
               />
               {agentName && (
-                <p className="mt-2 text-center text-[0.75rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/35">
+                <p className="mt-2 text-center text-[0.75rem] font-medium tracking-[0.08em] uppercase text-primary-foreground/30">
                   {agentName}
                 </p>
               )}
@@ -113,8 +113,9 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
       </div>
     </div>
 
-    {/* Subtle radial accent */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(195_30%_28%_/_0.12)_0%,_transparent_50%)] pointer-events-none" />
+    {/* Subtle radial accents */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(195_30%_28%_/_0.10)_0%,_transparent_50%)] pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(36_60%_52%_/_0.04)_0%,_transparent_40%)] pointer-events-none" />
   </section>
 );
 

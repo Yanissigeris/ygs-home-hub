@@ -16,7 +16,6 @@ const DesktopNavItem = ({
 }) => {
   const [open, setOpen] = useState(false);
   const timeout = useRef<ReturnType<typeof setTimeout>>();
-  const ref = useRef<HTMLDivElement>(null);
 
   const enter = () => {
     clearTimeout(timeout.current);
@@ -31,12 +30,12 @@ const DesktopNavItem = ({
     return (
       <Link
         to={item.href!}
-        className={`relative whitespace-nowrap px-2.5 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
-          active ? "text-foreground" : "text-muted-foreground/80 hover:text-foreground"
+        className={`relative whitespace-nowrap px-3 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
+          active ? "text-foreground" : "text-muted-foreground/70 hover:text-foreground"
         }`}
       >
         {item.label}
-        {active && <span className="absolute bottom-0 left-2.5 right-2.5 h-[1.5px] rounded-full bg-accent/50" />}
+        {active && <span className="absolute bottom-0 left-3 right-3 h-[1.5px] rounded-full bg-accent/50" />}
       </Link>
     );
   }
@@ -44,17 +43,17 @@ const DesktopNavItem = ({
   const isChildActive = item.children.some((c) => pathname === c.href);
 
   return (
-    <div ref={ref} className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+    <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button
-        className={`flex items-center gap-0.5 whitespace-nowrap px-2.5 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
-          isChildActive ? "text-foreground" : "text-muted-foreground/80 hover:text-foreground"
+        className={`flex items-center gap-1 whitespace-nowrap px-3 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
+          isChildActive ? "text-foreground" : "text-muted-foreground/70 hover:text-foreground"
         }`}
         onClick={() => setOpen((p) => !p)}
         aria-expanded={open}
       >
         {item.label}
         <ChevronDown
-          size={12}
+          size={11}
           className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
@@ -66,7 +65,7 @@ const DesktopNavItem = ({
             : "pointer-events-none -translate-y-1.5 opacity-0"
         }`}
       >
-        <div className="min-w-[14rem] rounded-xl border border-border/40 bg-popover p-1.5 shadow-[0_12px_40px_-12px_hsl(200_30%_14%/0.12)]">
+        <div className="min-w-[13.5rem] rounded-xl border border-border/40 bg-popover p-1.5 shadow-[0_12px_40px_-12px_hsl(200_30%_14%/0.12)]">
           {item.children.map((child) => (
             <Link
               key={child.href}
@@ -178,34 +177,34 @@ const SiteHeader = () => {
       className={`sticky top-0 z-50 bg-background/98 backdrop-blur-xl supports-[backdrop-filter]:bg-background/90 transition-all duration-300 ${
         scrolled
           ? "shadow-[0_1px_8px_-3px_hsl(200_30%_14%/0.06)] border-b border-border/30"
-          : "border-b border-border/15"
+          : "border-b border-border/10"
       }`}
     >
       {/* ─── Desktop (lg+) ─── */}
       <div
-        className="section-container hidden lg:flex items-center gap-8 transition-all duration-300"
-        style={{ height: scrolled ? 76 : 88 }}
+        className="section-container hidden lg:flex items-center transition-all duration-300"
+        style={{ height: scrolled ? 72 : 84 }}
       >
-        {/* Logo — stronger presence */}
-        <Link to="/" className="flex items-center shrink-0">
+        {/* Logo */}
+        <Link to="/" className="flex items-center shrink-0 mr-8">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 260 : 290, height: "auto", maxHeight: scrolled ? 50 : 56 }}
+            style={{ width: scrolled ? 240 : 270, height: "auto", maxHeight: scrolled ? 46 : 52 }}
           />
         </Link>
 
-        {/* Nav — centered with flex-1 */}
-        <nav className="flex-1 flex items-center justify-center gap-0">
+        {/* Nav — fills the center */}
+        <nav className="flex-1 flex items-center justify-center gap-0.5">
           {mainNav.map((item) => (
             <DesktopNavItem key={item.label} item={item} pathname={location.pathname} />
           ))}
         </nav>
 
-        {/* CTA — clear and unclipped */}
-        <div className="shrink-0">
-          <Button size="sm" className="h-11 px-7 text-[0.8125rem] font-semibold tracking-wide whitespace-nowrap" asChild>
+        {/* CTA */}
+        <div className="shrink-0 ml-8">
+          <Button size="default" variant="accent" className="font-semibold tracking-wide whitespace-nowrap shadow-sm" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
           </Button>
         </div>
@@ -214,18 +213,18 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div
         className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 72 : 82 }}
+        style={{ height: scrolled ? 68 : 78 }}
       >
         <Link to="/" className="flex items-center shrink-0">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ width: scrolled ? 210 : 235, height: "auto", maxHeight: scrolled ? 40 : 46 }}
+            style={{ width: scrolled ? 200 : 225, height: "auto", maxHeight: scrolled ? 40 : 44 }}
           />
         </Link>
         <div className="flex items-center gap-3">
-          <Button size="sm" className="h-[2.625rem] px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
+          <Button size="sm" variant="accent" className="font-semibold tracking-wide" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
@@ -239,12 +238,12 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile ─── */}
-      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 70 }}>
+      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 66 }}>
         <Link to="/" className="flex items-center" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 38, height: 38 }} />
+          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 36, height: 36 }} />
         </Link>
         <div className="flex items-center gap-2.5">
-          <Button size="sm" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
+          <Button size="sm" variant="accent" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation</Link>
           </Button>
           <button
@@ -270,7 +269,7 @@ const SiteHeader = () => {
               />
             ))}
             <div className="mt-4 pt-4 border-t border-border/30">
-              <Button className="w-full h-12 text-[0.9375rem] font-semibold" asChild>
+              <Button className="w-full h-12 text-[0.9375rem] font-semibold" variant="accent" asChild>
                 <Link to="/evaluation-gratuite-gatineau" onClick={closeMenu}>
                   Évaluation gratuite
                 </Link>

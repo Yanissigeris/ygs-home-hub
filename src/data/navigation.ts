@@ -12,15 +12,6 @@ export interface NavItem {
 export const mainNav: NavItem[] = [
   { label: "Accueil", href: "/" },
   {
-    label: "Propriétés",
-    children: [
-      { label: "Propriétés", href: "/proprietes" },
-      { label: "Propriétés vedettes", href: "/proprietes-vedettes" },
-      { label: "Nouvelles inscriptions", href: "/nouvelles-inscriptions" },
-      { label: "Vendu récemment", href: "/vendu-recemment" },
-    ],
-  },
-  {
     label: "Vendre",
     children: [
       { label: "Vendre à Gatineau", href: "/vendre-ma-maison-gatineau" },
@@ -28,7 +19,6 @@ export const mainNav: NavItem[] = [
       { label: "Plan vendeur", href: "/plan-vendeur-gatineau" },
       { label: "Guide vendeur", href: "/guide-vendeur-gatineau" },
       { label: "Quand vendre", href: "/quand-vendre-a-gatineau" },
-      { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
     ],
   },
   {
@@ -47,8 +37,7 @@ export const mainNav: NavItem[] = [
       { label: "Ottawa → Gatineau", href: "/relocalisation-ottawa-gatineau" },
       { label: "Montréal → Gatineau", href: "/relocalisation-montreal-gatineau" },
       { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
-      { label: "Quartiers à considérer", href: "/quartiers-a-considerer-a-gatineau" },
-      { label: "Militaire — relocalisation", href: "/militaire-gatineau" },
+      { label: "Militaire — mutation", href: "/militaire-gatineau" },
       { label: "Militaire — achat", href: "/acheter-comme-militaire-gatineau" },
       { label: "Militaire — vente", href: "/vendre-lors-dune-mutation-gatineau" },
     ],
@@ -59,7 +48,6 @@ export const mainNav: NavItem[] = [
       { label: "Plex / Investissement", href: "/investir-plex-gatineau" },
       { label: "Analyse plex", href: "/analyse-plex-gatineau" },
       { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
-      { label: "Rapport marché", href: "/rapport-marche-gatineau" },
     ],
   },
   {
@@ -69,40 +57,19 @@ export const mainNav: NavItem[] = [
       { label: "Hull", href: "/hull" },
       { label: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers" },
       { label: "Gatineau centre", href: "/gatineau" },
-      { label: "Vivre à Aylmer", href: "/vivre-a-aylmer" },
-      { label: "Vivre à Hull", href: "/vivre-a-hull" },
-      { label: "Vivre dans le Plateau", href: "/vivre-dans-le-plateau" },
     ],
   },
-  {
-    label: "Ressources",
-    children: [
-      { label: "Ressources", href: "/ressources" },
-      { label: "Guide vendeur", href: "/guide-vendeur-gatineau" },
-      { label: "Guide acheteur", href: "/guide-acheteur-gatineau" },
-      { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
-      { label: "Guide militaire", href: "/guide-militaire-gatineau" },
-      { label: "Premier achat", href: "/premier-achat-gatineau" },
-    ],
-  },
+  { label: "Ressources", href: "/ressources" },
   { label: "À propos", href: "/contact-yanis" },
 ];
 
 export const footerColumns = [
   {
-    title: "Navigation",
-    links: [
-      { label: "Accueil", href: "/" },
-      { label: "À propos / Contact", href: "/contact-yanis" },
-      { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-    ],
-  },
-  {
     title: "Services",
     links: [
       { label: "Vendre à Gatineau", href: "/vendre-ma-maison-gatineau" },
-      { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
       { label: "Acheter à Gatineau", href: "/acheter-a-gatineau" },
+      { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
       { label: "Plex / Investissement", href: "/investir-plex-gatineau" },
     ],
   },
@@ -112,7 +79,7 @@ export const footerColumns = [
       { label: "Ottawa → Gatineau", href: "/relocalisation-ottawa-gatineau" },
       { label: "Montréal → Gatineau", href: "/relocalisation-montreal-gatineau" },
       { label: "Militaire à Gatineau", href: "/militaire-gatineau" },
-      { label: "Relocalisation militaire", href: "/relocalisation-militaire-gatineau" },
+      { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
     ],
   },
   {
@@ -121,7 +88,15 @@ export const footerColumns = [
       { label: "Plateau / Aylmer", href: "/plateau-aylmer" },
       { label: "Hull", href: "/hull" },
       { label: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers" },
-      { label: "Ressources", href: "/ressources" },
+      { label: "Tous les quartiers", href: "/quartiers-a-considerer-a-gatineau" },
+    ],
+  },
+  {
+    title: "Ressources",
+    links: [
+      { label: "Guides gratuits", href: "/ressources" },
+      { label: "Rapport marché", href: "/rapport-marche-gatineau" },
+      { label: "À propos / Contact", href: "/contact-yanis" },
     ],
   },
 ];
