@@ -39,7 +39,7 @@ const SiteFooter = () => (
             <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.14em] opacity-30">
               Affiliations et reconnaissances
             </p>
-            <div className="flex flex-wrap items-center gap-x-7 gap-y-5">
+            <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
               {secondaryLogos.map((logo) => (
                 <img
                   key={logo.alt}
