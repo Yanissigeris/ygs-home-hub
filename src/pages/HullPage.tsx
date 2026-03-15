@@ -56,6 +56,8 @@ const HullPage = () => (
       backgroundImage={heroImg}
     />
 
+    <TrustMiniStrip items={trustItems} />
+
     <ImageTextSplit image={riverImg} imageAlt="Vue du secteur Hull, Gatineau" imagePosition="right">
       <SectionHeading
         overline="Le secteur"

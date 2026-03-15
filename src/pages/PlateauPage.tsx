@@ -49,6 +49,8 @@ const PlateauPage = () => (
       backgroundImage={heroImg}
     />
 
+    <TrustMiniStrip items={trustItems} />
+
     <ImageTextSplit image={lifestyleImg} imageAlt="Vie dans le Plateau, Gatineau" imagePosition="right">
       <div className="label-overline">Le secteur</div>
       <h2 className="mt-3">Pourquoi le Plateau attire les familles</h2>

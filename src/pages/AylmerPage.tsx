@@ -49,6 +49,8 @@ const AylmerPage = () => (
       backgroundImage={heroImg}
     />
 
+    <TrustMiniStrip items={trustItems} />
+
     <ImageTextSplit image={lifestyleImg} imageAlt="Vie à Aylmer, Gatineau" imagePosition="right">
       <div className="label-overline">Le secteur</div>
       <h2 className="mt-3">Pourquoi Aylmer est si populaire</h2>
