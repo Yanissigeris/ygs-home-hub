@@ -81,6 +81,9 @@ const ContactPage = () => {
         <p className="prose-body mt-4">
           Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, il a eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui le motive, c'est de savoir que ses clients prennent des décisions éclairées.
         </p>
+        <p className="prose-body mt-4">
+          Investisseur immobilier lui-même, il sait également analyser en profondeur les opportunités en multilogement. Son expérience concrète en flips immobiliers, combinée à sa formation en gestion de projet (AEC), fait de lui un allié incontournable pour tout projet immobilier.
+        </p>
 
         <ContactCard items={contactItems} />
       </ProfileSection>
