@@ -184,7 +184,7 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 82 : 96 }}
+        style={{ height: scrolled ? 88 : 108 }}
       >
         {/* Logo group */}
         <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
@@ -192,7 +192,7 @@ const SiteHeader = () => {
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 64 : 78, width: "auto" }}
+            style={{ height: scrolled ? 72 : 88, width: "auto" }}
           />
           <span className="h-8 w-px bg-border/25 shrink-0" />
           <img
@@ -221,14 +221,14 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div
         className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 74 : 84 }}
+        style={{ height: scrolled ? 78 : 90 }}
       >
         <Link to="/" className="flex items-center shrink-0 gap-4">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 56 : 64, width: "auto" }}
+            style={{ height: scrolled ? 60 : 72, width: "auto" }}
           />
           <span className="h-6 w-px bg-border/25 shrink-0" />
           <img
