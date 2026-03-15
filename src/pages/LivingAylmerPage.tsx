@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-aylmer.jpg";
 
 const highlights = [
   { icon: MapPin, title: "Lac Deschênes", text: "Plage, sports nautiques et couchers de soleil spectaculaires — à deux pas de la maison." },

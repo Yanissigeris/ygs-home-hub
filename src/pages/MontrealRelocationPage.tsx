@@ -7,7 +7,7 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-relocation.jpg";
 
 const challenges = [
   { icon: MapPin, title: "Comprendre le marché montréalais vs gatinois", text: "Les prix, les taxes et la qualité de vie sont très différents — souvent à l'avantage de Gatineau." },

@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-hull.jpg";
 
 const highlights = [
   { icon: MapPin, title: "Centre-ville vibrant", text: "Proximité immédiate du Vieux-Hull, du Musée et de la scène culturelle." },

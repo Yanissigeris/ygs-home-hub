@@ -3,7 +3,7 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-plex.jpg";
 
 const MarketReportPage = () => (
   <>

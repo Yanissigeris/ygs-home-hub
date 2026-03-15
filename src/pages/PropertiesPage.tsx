@@ -5,7 +5,7 @@ import ContentBlock from "@/components/ContentBlock";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import { Search, Star, Home, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-properties.jpg";
 
 const features = [
   { icon: Search, title: "Recherche personnalisée", text: "Filtres par secteur, prix, type de propriété et caractéristiques — pour trouver exactement ce que vous cherchez." },

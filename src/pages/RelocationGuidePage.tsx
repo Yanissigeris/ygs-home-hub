@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-relocation.jpg";
 
 const topics = [
   "Comprendre le marché immobilier de Gatineau vs Ottawa et Montréal",

@@ -9,7 +9,7 @@ import InlineCTA from "@/components/InlineCTA";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-buyer.jpg";
 
 const buyerProfiles = [
   { icon: CheckCircle2, title: "Premier acheteur", text: "Comprendre le processus étape par étape sans se sentir dépassé." },

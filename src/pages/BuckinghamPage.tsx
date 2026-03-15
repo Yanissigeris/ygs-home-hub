@@ -8,7 +8,7 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Users, Home, TrendingUp, TreePine } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-buckingham.jpg";
 import riverImg from "@/assets/gatineau-river-view.jpg";
 
 const reasons = [

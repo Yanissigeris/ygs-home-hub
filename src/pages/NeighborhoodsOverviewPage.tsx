@@ -3,7 +3,7 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import SectorLinks from "@/components/SectorLinks";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-neighborhoods.jpg";
 
 const sectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, nature et accès Ottawa" },

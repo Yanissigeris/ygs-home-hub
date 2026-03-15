@@ -7,7 +7,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-buyer.jpg";
 
 const topics = [
   "Comprendre le processus d'achat au Québec",
