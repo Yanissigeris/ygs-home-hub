@@ -28,13 +28,13 @@ const SiteFooter = () => (
             <img
               src={logoMartyWaite}
               alt="Équipe Marty Waite"
-              className="w-auto"
+              className="w-auto transition-all duration-300 hover:scale-105 hover:opacity-80 cursor-pointer"
               style={{ height: "clamp(40px, 5.5vw, 50px)" }}
             />
             <img
               src={logoRemax}
               alt="RE/MAX"
-              className="w-auto"
+              className="w-auto transition-all duration-300 hover:scale-105 hover:opacity-80 cursor-pointer"
               style={{ height: "clamp(26px, 3.5vw, 32px)" }}
             />
           </div>
