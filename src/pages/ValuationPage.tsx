@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";

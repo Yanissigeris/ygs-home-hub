@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";

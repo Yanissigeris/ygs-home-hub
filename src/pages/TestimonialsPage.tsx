@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";

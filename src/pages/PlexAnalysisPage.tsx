@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FAQSection from "@/components/FAQSection";

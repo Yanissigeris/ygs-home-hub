@@ -20,6 +20,7 @@ const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
 const Index = () => (
   <>
+    <PageMeta title="Courtier immobilier Gatineau" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire, conseils honnêtes et zéro pression." />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre allié en immobilier en Outaouais"

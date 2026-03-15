@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";

@@ -1,3 +1,4 @@
+import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
