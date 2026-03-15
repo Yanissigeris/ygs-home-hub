@@ -199,7 +199,7 @@ const SiteHeader = () => {
             src={logoRemax}
             alt="RE/MAX"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 38 : 46, width: "auto" }}
+            style={{ height: scrolled ? 32 : 38, width: "auto" }}
           />
         </Link>
 
@@ -235,7 +235,7 @@ const SiteHeader = () => {
             src={logoRemax}
             alt="RE/MAX"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 32 : 38, width: "auto" }}
+            style={{ height: scrolled ? 26 : 32, width: "auto" }}
           />
         </Link>
         <div className="flex items-center gap-3">
@@ -257,7 +257,7 @@ const SiteHeader = () => {
         <Link to="/" className="flex items-center gap-3" onClick={closeMenu}>
           <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 44, height: 44 }} />
           <span className="h-5 w-px bg-border/25 shrink-0" />
-          <img src={logoRemax} alt="RE/MAX" style={{ height: 28, width: "auto" }} />
+          <img src={logoRemax} alt="RE/MAX" style={{ height: 24, width: "auto" }} />
         </Link>
         <div className="flex items-center gap-2.5">
           <Button size="sm" variant="accent" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
