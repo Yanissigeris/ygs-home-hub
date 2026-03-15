@@ -4,17 +4,24 @@ import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
-import CardGrid from "@/components/CardGrid";
-import { Book, Home, MapPin, Users, FileText, TrendingUp } from "lucide-react";
+import LinkedCardGrid from "@/components/LinkedCardGrid";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-resources.jpg";
 
 const resources = [
-  { icon: Home, title: "Guide vendeur", text: "Tout ce qu'il faut savoir pour vendre au meilleur prix à Gatineau.", href: "/guide-vendeur-gatineau" },
-  { icon: Users, title: "Guide acheteur", text: "Le processus d'achat au Québec, les secteurs et les étapes clés.", href: "/guide-acheteur-gatineau" },
-  { icon: MapPin, title: "Guide relocalisation", text: "S'installer à Gatineau depuis Ottawa, Montréal ou ailleurs.", href: "/guide-relocalisation-gatineau" },
-  { icon: FileText, title: "Guide militaire", text: "Tout sur l'immobilier à Gatineau pour les membres des forces.", href: "/guide-militaire-gatineau" },
-  { icon: Book, title: "Premier achat", text: "Budget, mise de fonds, processus — le guide pour les premiers acheteurs.", href: "/premier-achat-gatineau" },
-  { icon: TrendingUp, title: "Quartiers à considérer", text: "Découvrez les meilleurs secteurs de Gatineau selon votre profil.", href: "/quartiers-a-considerer-a-gatineau" },
+  { icon: Home, title: "Guide vendeur", text: "Tout ce qu'il faut savoir pour vendre au meilleur prix à Gatineau.", cta: "Lire le guide", href: "/guide-vendeur-gatineau" },
+  { icon: Users, title: "Guide acheteur", text: "Le processus d'achat au Québec, les secteurs et les étapes clés.", cta: "Lire le guide", href: "/guide-acheteur-gatineau" },
+  { icon: MapPin, title: "Guide relocalisation", text: "S'installer à Gatineau depuis Ottawa, Montréal ou ailleurs.", cta: "Lire le guide", href: "/guide-relocalisation-gatineau" },
+  { icon: FileText, title: "Guide militaire", text: "Tout sur l'immobilier à Gatineau pour les membres des forces.", cta: "Lire le guide", href: "/guide-militaire-gatineau" },
+  { icon: Book, title: "Premier achat", text: "Budget, mise de fonds, processus — le guide pour les premiers acheteurs.", cta: "Lire le guide", href: "/premier-achat-gatineau" },
+  { icon: TrendingUp, title: "Quartiers à considérer", text: "Découvrez les meilleurs secteurs de Gatineau selon votre profil.", cta: "Explorer", href: "/quartiers-a-considerer-a-gatineau" },
+];
+
+const trustItems = [
+  { icon: Clock, label: "Près de 9 ans en Outaouais" },
+  { icon: Award, label: "Club Platine · Temple de la renommée" },
+  { icon: Shield, label: "Ressources gratuites et sans engagement" },
 ];
 
 const ResourcesPage = () => (
@@ -29,29 +36,14 @@ const ResourcesPage = () => (
       backgroundImage={heroImg}
     />
 
-    <section className="section-padding bg-background">
-      <div className="section-container">
-        <SectionHeading
-          overline="Guides et outils"
-          title="Tout ce dont vous avez besoin"
-          subtitle="Des ressources concrètes et locales pour chaque étape de votre projet immobilier."
-          centered
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {resources.map((r) => (
-            <Link
-              key={r.href}
-              to={r.href}
-              className="card-elevated border border-border/40 bg-card p-7 group"
-            >
-              <r.icon size={22} className="text-accent" />
-              <h3 className="mt-4 text-[1.125rem] group-hover:text-accent transition-colors">{r.title}</h3>
-              <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{r.text}</p>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+    <TrustMiniStrip items={trustItems} />
+
+    <LinkedCardGrid
+      overline="Guides et outils"
+      title="Tout ce dont vous avez besoin"
+      items={resources}
+      columns={3}
+    />
 
     <ContentBlock narrow>
       <SectionHeading title="Besoin d'aide personnalisée?" />

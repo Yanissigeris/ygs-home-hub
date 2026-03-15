@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Clock, Award, Heart } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import yanisPhoto from "@/assets/yanis-photo.jpg";
 
 const AboutSection = () => (
   <section className="section-padding bg-background">
@@ -14,7 +14,12 @@ const AboutSection = () => (
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="overflow-hidden rounded-[1.75rem]">
-          <ImagePlaceholder label="Photo professionnelle de Yanis" aspectRatio="aspect-[3/4]" />
+          <img
+            src={yanisPhoto}
+            alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
+            className="aspect-[3/4] w-full object-cover"
+            loading="lazy"
+          />
         </div>
       </motion.div>
       <motion.div
