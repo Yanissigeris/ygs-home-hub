@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
@@ -7,6 +5,8 @@ import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.jpg";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
@@ -32,10 +32,23 @@ const profiles = [
   { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec forte demande et bons rendements potentiels." },
 ];
 
+const faq = [
+  { q: "Le Plateau est-il un bon choix pour une famille?", a: "C'est l'un des secteurs les plus populaires pour les familles — maisons récentes, parcs, écoles et communauté jeune." },
+  { q: "Les prix augmentent-ils dans le Plateau?", a: "Le Plateau est en forte croissance. Contactez-moi pour les données les plus récentes dans votre sous-secteur." },
+  { q: "Y a-t-il beaucoup de constructions neuves?", a: "Oui — plusieurs développements récents offrent des maisons neuves et des jumelés avec garantie." },
+];
+
 const relatedSectors = [
   { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis" },
   { name: "Hull", href: "/hull", detail: "Urbain, culture, condos" },
   { name: "Gatineau", href: "/gatineau", detail: "Résidentiel, services, accessible" },
+];
+
+const related = [
+  { title: "Vivre dans le Plateau — le guide", text: "Mode de vie, familles et développements récents.", href: "/vivre-dans-le-plateau" },
+  { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété dans le Plateau?", href: "/evaluation-gratuite-gatineau" },
 ];
 
 const PlateauPage = () => (
@@ -44,7 +57,7 @@ const PlateauPage = () => (
       overline="Guide de quartier · Plateau"
       title="Vivre, acheter ou investir dans le Plateau"
       subtitle="Développements récents, quartiers familiaux et excellent rapport qualité-prix — le Plateau est l'un des secteurs les plus dynamiques de Gatineau."
-      primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
       backgroundImage={heroImg}
     />
@@ -77,10 +90,18 @@ const PlateauPage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <FAQSection title="Questions sur le Plateau" items={faq} />
+
     <SectorLinks
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={relatedSectors}
+    />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
@@ -89,7 +110,7 @@ const PlateauPage = () => (
       text="Je connais le Plateau — parlons de votre projet."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />

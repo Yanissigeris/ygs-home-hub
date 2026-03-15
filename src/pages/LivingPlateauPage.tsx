@@ -3,6 +3,8 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, TreePine } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.jpg";
@@ -12,6 +14,19 @@ const highlights = [
   { icon: Home, title: "Excellent rapport qualité-prix", text: "Plus d'espace et de maison pour votre budget qu'en centre-ville." },
   { icon: TreePine, title: "Nature et plein air", text: "Proximité du parc de la Gatineau, sentiers et espaces verts." },
   { icon: Users, title: "Quartiers familiaux", text: "Écoles, garderies, parcs et communauté jeune et dynamique." },
+];
+
+const faq = [
+  { q: "Le Plateau est-il loin d'Ottawa?", a: "20-30 minutes en voiture selon l'heure. Plusieurs résidents du Plateau travaillent à Ottawa." },
+  { q: "Y a-t-il de bonnes écoles dans le Plateau?", a: "Oui — écoles françaises et anglaises, garderies et activités parascolaires." },
+  { q: "Le Plateau continue-t-il de se développer?", a: "Oui — de nouveaux projets résidentiels sont en cours, ce qui attire de plus en plus de familles." },
+];
+
+const related = [
+  { title: "Acheter dans le Plateau", text: "Guide du quartier: prix, profils et potentiel.", href: "/plateau" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
 ];
 
 const LivingPlateauPage = () => (
@@ -42,6 +57,14 @@ const LivingPlateauPage = () => (
       text="Vous êtes propriétaire dans le Plateau? Découvrez combien vaut votre propriété."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau"
+    />
+
+    <FAQSection title="Questions sur la vie dans le Plateau" items={faq} />
+
+    <RelatedPages
+      title="À lire aussi"
+      pages={related}
+      background="alt"
     />
 
     <CTASection
