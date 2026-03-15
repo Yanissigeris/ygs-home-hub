@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import logoYgsWhite from "@/assets/logo-ygs-white.png";
-import logoMartyWaite from "@/assets/logo-marty-waite.png";
 import logoRemax from "@/assets/logo-remax.png";
+import logoMW from "@/assets/logo-mw-white.png";
+import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.png";
+import logoTemple from "@/assets/logo-temple-renommee.png";
 import { footerColumns } from "@/data/navigation";
+
+const secondaryLogos = [
+  { src: logoRemax, alt: "RE/MAX", height: "clamp(28px, 4vw, 34px)" },
+  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(22px, 3vw, 28px)" },
+  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(24px, 3.5vw, 30px)" },
+  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(30px, 4.5vw, 38px)" },
+];
 
 const SiteFooter = () => (
   <footer className="border-t border-border bg-primary text-primary-foreground">
@@ -24,19 +33,23 @@ const SiteFooter = () => (
             <br />
             Pas de mauvaises surprises.
           </p>
-          <div className="mt-8 flex items-center gap-5">
-            <img
-              src={logoMartyWaite}
-              alt="Équipe Marty Waite"
-              className="w-auto transition-all duration-300 hover:scale-105 hover:opacity-80 cursor-pointer"
-              style={{ height: "clamp(40px, 5.5vw, 50px)" }}
-            />
-            <img
-              src={logoRemax}
-              alt="RE/MAX"
-              className="w-auto transition-all duration-300 hover:scale-105 hover:opacity-80 cursor-pointer"
-              style={{ height: "clamp(26px, 3.5vw, 32px)" }}
-            />
+
+          {/* Affiliations & reconnaissances */}
+          <div className="mt-10">
+            <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.14em] opacity-30">
+              Affiliations et reconnaissances
+            </p>
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-5">
+              {secondaryLogos.map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="w-auto shrink-0 brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80"
+                  style={{ height: logo.height }}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
