@@ -45,7 +45,7 @@ const SiteFooter = () => (
                   key={logo.alt}
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-auto shrink-0 opacity-50 transition-all duration-300 hover:opacity-80"
+                  className="w-auto shrink-0 opacity-85 transition-all duration-300 hover:opacity-100"
                   style={{ height: logo.height }}
                 />
               ))}
