@@ -39,9 +39,9 @@ const trustItems = [
 ];
 
 const contactItems = [
-  { icon: Phone, text: "[Téléphone]" },
-  { icon: Mail, text: "[Courriel]" },
-  { icon: MapPin, text: "[Adresse / secteur desservi]" },
+  { icon: Phone, text: "819-210-3044" },
+  { icon: Mail, text: "yanis@martywaite.com" },
+  { icon: MapPin, text: "216 Chem. d'Aylmer, Gatineau, QC" },
 ];
 
 const ContactPage = () => {
