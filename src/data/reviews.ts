@@ -12,20 +12,20 @@ export const reviews: Review[] = [
   // — Sellers —
   {
     id: "s1",
-    name: "Marie-Claude D.",
+    name: "Sylvie",
     location: "Aylmer",
     category: "seller",
-    short: "Yanis a vendu notre maison en 12 jours, au-dessus du prix demandé. Stratégie impeccable.",
-    full: "On hésitait à vendre depuis un an. Yanis nous a donné une lecture claire du marché, un plan de mise en marché précis et des conseils de préparation qui ont fait la différence. Résultat: vendu en 12 jours, au-dessus du prix demandé. Aucune surprise, aucune pression — exactement ce qu'il avait promis.",
+    short: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement. Merci encore pour tout.",
+    full: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement. Merci encore pour tout.",
     rating: 5,
   },
   {
     id: "s2",
-    name: "Jean-François L.",
-    location: "Hull",
+    name: "Bruno.",
+    location: "Gatineau",
     category: "seller",
-    short: "Zéro pression, zéro surprise. Yanis nous a guidés du début à la fin avec professionnalisme.",
-    full: "On avait eu une mauvaise expérience avec un autre courtier. Yanis a été transparent dès le premier appel. Son évaluation était réaliste, son plan clair, et il a géré les négociations avec calme et stratégie. On le recommande sans hésiter.",
+    short: "Très bon service et vente rapide 👍 Poli et dis les vrais affaires",
+    full: "Très bon service et vente rapide 👍 Poli et dis les vrais affaires",
     rating: 5,
   },
   {
@@ -41,11 +41,11 @@ export const reviews: Review[] = [
   // — Buyers —
   {
     id: "b1",
-    name: "Sophie et Marc T.",
+    name: "Melanie.",
     location: "Plateau",
     category: "buyer",
-    short: "Premier achat — Yanis nous a tout expliqué simplement, sans jamais nous presser.",
-    full: "C'était notre premier achat et on avait mille questions. Yanis a pris le temps de tout nous expliquer — le processus, les secteurs, les pièges à éviter. On a trouvé notre maison en 3 semaines et on s'est sentis accompagnés du début à la fin.",
+    short: " Yanis est rapide, efficace, professionnel et connaît très bien les rouages de l'immobilier. C'est avec un réel enthousiasme que je le recommande fortement. Un vrai passionné de l'immobilier!",
+    full: " Yanis est rapide, efficace, professionnel et connaît très bien les rouages de l'immobilier. C'est avec un réel enthousiasme que je le recommande fortement. Un vrai passionné de l'immobilier!",
     rating: 5,
   },
   {
@@ -70,11 +70,11 @@ export const reviews: Review[] = [
   // — Relocation —
   {
     id: "r1",
-    name: "James & Sarah W.",
+    name: "Alexandre.",
     location: "Ottawa → Aylmer",
     category: "relocation",
-    short: "Moving from Ottawa was seamless. Yanis explained everything about the Quebec process.",
-    full: "We were nervous about buying in Quebec — different language, different process, different taxes. Yanis walked us through everything in English, found us a great neighborhood for our family, and made the whole transition smooth. We couldn't have done it without him.",
+    short: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
+    full: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
     rating: 5,
   },
   {
