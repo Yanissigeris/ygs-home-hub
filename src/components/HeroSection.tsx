@@ -39,10 +39,14 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         </div>
         {/* Scrim with brand petrol blue tint */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.93) 0%, hsl(200 42% 16% / 0.72) 35%, hsl(200 42% 18% / 0.3) 58%, transparent 72%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.93) 0%, hsl(200 42% 16% / 0.72) 30%, hsl(200 42% 18% / 0.18) 50%, transparent 62%)',
         }} />
-        {/* Bottom anchor */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(200_42%_14%)] to-transparent" />
+        {/* Bottom anchor — only left half to avoid tinting portrait */}
+        <div className="absolute inset-x-0 bottom-0 h-28" style={{
+          background: 'linear-gradient(to top, hsl(200 42% 14% / 1) 0%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, black 50%, transparent 65%)',
+          WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 65%)',
+        }} />
       </>
     )}
 
