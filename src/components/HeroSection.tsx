@@ -23,35 +23,37 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#10242D' }}>
+  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#0E1F28' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
-        {/* Photo — darkened, desaturated, tinted */}
+        {/* Photo — heavily darkened and desaturated */}
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.30) saturate(0.35) contrast(0.85)' }}
+            style={{ filter: 'brightness(0.22) saturate(0.2) contrast(0.8)' }}
             loading="eager"
           />
         </div>
-        {/* Deep teal tint overlay — unified color wash */}
+        {/* Neutral dark wash — no colored tint */}
         <div className="absolute inset-0" style={{
-          background: 'hsl(200 42% 14% / 0.55)',
+          background: 'hsl(200 20% 12% / 0.6)',
           mixBlendMode: 'multiply',
         }} />
-        {/* Gradient scrim — strong left for text, fading to transparent right */}
+        {/* Gradient scrim — solid dark left for text readability */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 16% / 0.65) 40%, hsl(200 42% 18% / 0.15) 60%, transparent 75%)',
+          background: 'linear-gradient(to right, #0E1F28 0%, hsl(200 20% 13% / 0.95) 15%, hsl(200 18% 15% / 0.7) 38%, hsl(200 15% 16% / 0.4) 55%, hsl(200 10% 14% / 0.35) 70%, hsl(200 8% 13% / 0.45) 100%)',
         }} />
-        {/* Bottom anchor — left-biased */}
+        {/* Bottom anchor — full width, neutral */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.7) 50%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
-          WebkitMaskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
+          background: 'linear-gradient(to top, #0E1F28 0%, hsl(200 15% 13% / 0.6) 50%, transparent 100%)',
+        }} />
+        {/* Right-side darkening behind portrait — neutral, no color */}
+        <div className="absolute top-0 right-0 bottom-0 w-[50%]" style={{
+          background: 'radial-gradient(ellipse 80% 90% at 70% 60%, hsl(200 8% 10% / 0.3) 0%, transparent 70%)',
         }} />
       </>
     )}
