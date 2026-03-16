@@ -173,8 +173,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           >
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
               background: `
-                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(200 25% 8% / 0.50) 0%, transparent 60%),
-                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(200 20% 6% / 0.35) 0%, transparent 50%)
+                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
+                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
               `,
             }} />
             <div className="relative" style={{
