@@ -63,7 +63,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           <h1 className="text-primary-foreground leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/50 font-light">
+          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/65 font-light">
             {subtitle}
           </p>
 
