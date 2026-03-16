@@ -64,7 +64,7 @@ const SellerPage = () => (
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
-      backgroundImage={homeImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

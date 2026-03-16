@@ -73,7 +73,7 @@ const PlexPage = () => (
       primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

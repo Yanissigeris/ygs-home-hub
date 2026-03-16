@@ -63,7 +63,7 @@ const RelocationPage = () => (
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" }}
       trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />
