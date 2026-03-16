@@ -111,7 +111,7 @@ const ValuationPage = () => {
 
               {/* Credibility strip */}
               <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Club Platine RE/MAX</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Près de 9 ans en Outaouais</span>
               </div>
 
