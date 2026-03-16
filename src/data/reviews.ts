@@ -21,11 +21,11 @@ export const reviews: Review[] = [
   },
   {
     id: "s2",
-    name: "Bruno.",
-    location: "Gatineau",
+    name: "Camelia",
+    location: "Gatineau/Aylmer",
     category: "seller",
-    short: "Très bon service et vente rapide 👍 Poli et dis les vrais affaires",
-    full: "Très bon service et vente rapide 👍 Poli et dis les vrais affaires",
+    short: "Je recommande Yanis G-S si vous voulez vendre votre demeure. Toujours rapide à répondre et être en contact avec vous en tout temps, Merci Yanis pour ton travail!",
+    full: "Je recommande Yanis G-S si vous voulez vendre votre demeure. Toujours rapide à répondre et être en contact avec vous en tout temps, Merci Yanis pour ton travail!",
     rating: 5,
   },
   {
