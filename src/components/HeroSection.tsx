@@ -120,45 +120,14 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Asymmetric atmospheric depth — irregular, not spotlight */}
-            <div className="absolute inset-0 pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 60% 80% at 50% 70%, hsl(200 25% 8% / 0.55) 0%, transparent 60%),
-                radial-gradient(ellipse 90% 50% at 65% 85%, hsl(200 20% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 40% 60% at 35% 50%, hsl(200 20% 10% / 0.25) 0%, transparent 50%)
-              `,
-            }} />
             <div className="relative" style={{
-              filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
-              maskImage: `
-                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 4%, rgba(0,0,0,0.85) 10%, black 18%),
-                linear-gradient(to left, transparent 0%, rgba(0,0,0,0.4) 6%, rgba(0,0,0,0.8) 14%, black 24%),
-                linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 4%, rgba(0,0,0,0.8) 8%, black 14%),
-                linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 3%, rgba(0,0,0,0.7) 7%, black 14%)
-              `,
-              WebkitMaskImage: `
-                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 4%, rgba(0,0,0,0.85) 10%, black 18%),
-                linear-gradient(to left, transparent 0%, rgba(0,0,0,0.4) 6%, rgba(0,0,0,0.8) 14%, black 24%),
-                linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 4%, rgba(0,0,0,0.8) 8%, black 14%),
-                linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 3%, rgba(0,0,0,0.7) 7%, black 14%)
-              `,
-              maskComposite: 'intersect',
-              WebkitMaskComposite: 'destination-in',
+              maskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
+              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
             }}>
-              {/* Multi-layer contact shadow — sides, bottom, shoulders */}
-              <div className="absolute inset-0 pointer-events-none" style={{
-                background: `
-                  linear-gradient(to top, hsl(200 18% 6% / 0.50) 0%, hsl(200 18% 6% / 0.20) 18%, transparent 35%),
-                  linear-gradient(to right, hsl(200 15% 8% / 0.30) 0%, transparent 25%),
-                  linear-gradient(to left, hsl(200 15% 8% / 0.22) 0%, transparent 20%),
-                  radial-gradient(ellipse 80% 30% at 50% 15%, hsl(200 15% 8% / 0.18) 0%, transparent 60%)
-                `,
-                zIndex: 1,
-              }} />
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom relative z-0"
+                className="w-full max-w-[420px] lg:max-w-[480px] xl:max-w-[540px] 2xl:max-w-[580px] object-contain object-bottom relative z-0"
                 loading="eager"
               />
             </div>
