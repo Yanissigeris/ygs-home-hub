@@ -170,12 +170,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
-              `,
-            }} />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{ background: 'transparent' }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
