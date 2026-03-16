@@ -37,9 +37,9 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             loading="eager"
           />
         </div>
-        {/* Single clean scrim — left-heavy for text, fading to transparent */}
+        {/* Clean scrim — left for text, transparent right for portrait */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(105deg, hsl(200 42% 14% / 0.92) 0%, hsl(200 42% 15% / 0.72) 38%, hsl(200 42% 16% / 0.25) 62%, transparent 80%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.9) 0%, hsl(200 42% 15% / 0.65) 35%, hsl(200 42% 16% / 0.2) 58%, transparent 72%)',
         }} />
         {/* Bottom anchor */}
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
