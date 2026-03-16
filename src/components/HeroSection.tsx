@@ -33,16 +33,18 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'blur(1.5px) brightness(0.18) saturate(0.45)' }}
+            style={{ filter: 'blur(1px) brightness(0.32) saturate(0.55)' }}
             loading="eager"
           />
         </div>
         {/* Brand-tinted overlay for cohesion */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/40 to-primary/25 mix-blend-multiply" />
+        {/* Left text-area readability gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200_42%_16%_/_0.7)] via-[hsl(200_42%_16%_/_0.3)] to-transparent" />
         {/* Bottom fade to seamless transition */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
         {/* Warm accent glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_60%,_hsl(36_38%_46%_/_0.08)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_60%,_hsl(36_38%_46%_/_0.06)_0%,_transparent_70%)]" />
       </>
     )}
 
