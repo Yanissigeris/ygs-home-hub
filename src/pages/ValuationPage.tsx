@@ -20,7 +20,7 @@ const benefits = [
 ];
 
 const trustBullets = [
-  { icon: Shield, text: "Confidentiel et sans pression" },
+  { icon: Shield, text: "Gratuit et sans engagement" },
   { icon: Clock, text: "Réponse personnalisée en 24h" },
   { icon: CheckCircle2, text: "Basé sur les ventes comparables récentes" },
 ];
