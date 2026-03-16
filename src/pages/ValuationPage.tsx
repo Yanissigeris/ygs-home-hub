@@ -1,23 +1,15 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
-import { Link } from "react-router-dom";
-import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Lock, Clock, Shield, CheckCircle2 } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { Lock, Clock, Shield, CheckCircle2, Send } from "lucide-react";
 import { motion } from "framer-motion";
-import yanisPhoto from "@/assets/yanis-hero.png";
+import yanisPhoto from "@/assets/yanis-hero-cutout.png";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes",
@@ -27,16 +19,22 @@ const benefits = [
   "Prochaines étapes possibles, sans engagement",
 ];
 
-const trustPoints = [
-  { icon: Lock, text: "Informations strictement confidentielles" },
+const trustBullets = [
+  { icon: Shield, text: "Confidentiel et sans pression" },
   { icon: Clock, text: "Réponse personnalisée en 24h" },
-  { icon: Shield, text: "Aucune obligation — aucun engagement" },
+  { icon: CheckCircle2, text: "Basé sur les ventes comparables récentes" },
 ];
 
 const afterSteps = [
   { title: "Plan vendeur", text: "Allez plus loin — recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
   { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
 ];
+
+const anim = {
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+};
 
 const ValuationPage = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -47,132 +45,157 @@ const ValuationPage = () => {
   };
 
   return (
-     <>
+    <>
       <PageMeta title="Évaluation gratuite de votre propriété" description="Obtenez une évaluation gratuite et précise de votre propriété à Gatineau. Analyse basée sur les ventes récentes par un courtier expérimenté." />
-      <HeroSection
-        compact
-        overline="Évaluation gratuite · Gatineau"
-        title="Combien vaut votre propriété?"
-        subtitle="Recevez une estimation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes — en 24h."
-        trustLine="Gratuit · Confidentiel · Sans engagement"
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
-      />
 
-      {/* Trust bar */}
-      <section className="border-b border-border/40 bg-secondary/40">
-        <div className="section-container py-4 sm:py-5">
-          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-10">
-            {trustPoints.map((t) => (
-              <div key={t.text} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
-                <t.icon size={14} className="text-accent shrink-0" />
-                <span>{t.text}</span>
-              </div>
-            ))}
+      {/* ── FORM-FIRST CONVERSION HERO ── */}
+      <section className="hero-gradient relative overflow-hidden">
+        {/* Ambient light layer */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
+
+        {/* Portrait – positioned behind the form on desktop */}
+        <motion.div
+          className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 0.2, y: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          aria-hidden="true"
+        >
+          <div style={{
+            maskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
+            WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
+            maskComposite: 'intersect',
+            WebkitMaskComposite: 'destination-in',
+          }}>
+            <img
+              src={yanisPhoto}
+              alt=""
+              className="w-[380px] lg:w-[440px] xl:w-[500px] object-contain object-bottom"
+              loading="eager"
+            />
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      <section className="section-padding bg-background">
-        <div className="section-container max-w-[42rem]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="card-elevated border border-border/40 bg-card p-7 sm:p-10">
-              <h2 className="text-[1.5rem] sm:text-[1.75rem]">Demandez votre évaluation gratuite</h2>
-              <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                Je vous reviens personnellement avec une analyse claire — pas un rapport automatisé.
+        <div className="section-container relative z-10 py-12 sm:py-14 md:py-16 lg:py-20">
+          <div className="grid gap-10 md:grid-cols-[1fr_420px] lg:grid-cols-[1fr_460px] md:gap-12 lg:gap-16 items-start">
+
+            {/* ── LEFT: Value proposition ── */}
+            <motion.div className="pt-2 md:pt-6 lg:pt-10" {...anim}>
+              {/* Eyebrow */}
+              <p className="mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <span>Évaluation gratuite</span>
+                <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" />
+                <span>Gatineau</span>
               </p>
 
-              {submitted ? (
-                <SuccessMessage
-                  title="Merci! Demande envoyée."
-                  text="Je vous reviens dans les 24 prochaines heures avec votre évaluation."
-                />
-              ) : (
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                  <div>
-                    <Label htmlFor="adresse">Adresse de la propriété</Label>
-                    <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
-                  </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <Label htmlFor="type">Type de propriété</Label>
-                      <Select>
-                        <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="maison">Maison unifamiliale</SelectItem>
-                          <SelectItem value="condo">Condo</SelectItem>
-                          <SelectItem value="jumelé">Jumelé</SelectItem>
-                          <SelectItem value="rangée">Maison en rangée</SelectItem>
-                          <SelectItem value="plex">Plex (2-5 logements)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div>
-                      <Label htmlFor="secteur">Secteur</Label>
-                      <Select>
-                        <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
-                          <SelectItem value="hull">Hull</SelectItem>
-                          <SelectItem value="gatineau">Gatineau centre</SelectItem>
-                          <SelectItem value="buckingham">Buckingham / Masson-Angers</SelectItem>
-                          <SelectItem value="autre">Autre secteur</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                  <div>
-                    <Label htmlFor="delai">Quand pensez-vous vendre?</Label>
-                    <Select>
-                      <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
-                        <SelectItem value="3mois">D'ici 3 mois</SelectItem>
-                        <SelectItem value="6mois">6 mois ou plus</SelectItem>
-                        <SelectItem value="info">Juste pour savoir</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+              {/* Headline */}
+              <h1 className="text-primary-foreground max-w-[520px]">
+                Combien vaut réellement votre propriété?
+              </h1>
 
-                  <div className="h-px bg-border/50" />
+              {/* Subtitle */}
+              <p className="mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">
+                Recevez une estimation personnalisée, confidentielle et sans pression — basée sur votre propriété et les ventes comparables récentes.
+              </p>
 
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <Label htmlFor="nom">Nom</Label>
-                      <Input id="nom" className="mt-1.5" required />
-                    </div>
-                    <div>
-                      <Label htmlFor="courriel">Courriel</Label>
-                      <Input id="courriel" type="email" className="mt-1.5" required />
-                    </div>
+              {/* Trust bullets */}
+              <div className="mt-8 space-y-3">
+                {trustBullets.map((b) => (
+                  <div key={b.text} className="flex items-center gap-3 text-[0.875rem] text-primary-foreground/40">
+                    <b.icon size={15} className="text-accent shrink-0" />
+                    <span>{b.text}</span>
                   </div>
-                  <div>
-                    <Label htmlFor="tel">Téléphone (optionnel)</Label>
-                    <Input id="tel" type="tel" className="mt-1.5" />
+                ))}
+              </div>
+
+              {/* Credibility strip */}
+              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Club Platine RE/MAX</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Près de 9 ans en Outaouais</span>
+              </div>
+
+              {/* Mobile portrait */}
+              <motion.div
+                className="mt-8 flex md:hidden justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div style={{
+                  maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to right, transparent 0%, black 15%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to right, transparent 0%, black 15%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskComposite: 'destination-in',
+                }}>
+                  <img src={yanisPhoto} alt="Yanis Gauthier-Sigeris" className="w-[220px] opacity-30 object-contain" loading="eager" />
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* ── RIGHT: Form card ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
+            >
+              <div className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8">
+                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Demandez votre évaluation gratuite
+                </h2>
+                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">
+                  Je vous reviens personnellement en 24h avec une analyse claire.
+                </p>
+
+                {submitted ? (
+                  <div className="mt-8 text-center py-8">
+                    <CheckCircle2 size={36} className="mx-auto text-accent" />
+                    <h3 className="mt-4 text-primary-foreground text-[1.125rem]">Merci! Demande envoyée.</h3>
+                    <p className="mt-2 text-[0.875rem] text-primary-foreground/40">Je vous reviens dans les 24 prochaines heures avec votre évaluation.</p>
                   </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                    <div>
+                      <Label htmlFor="adresse" className="text-primary-foreground/60 text-[0.8125rem]">Adresse de la propriété</Label>
+                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                    </div>
 
-                  <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
-                    Recevoir mon évaluation gratuite
-                  </Button>
-                  <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                    Zéro pression — je vous donne les chiffres et les options, vous décidez.
-                  </p>
-                </form>
-              )}
-            </div>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div>
+                        <Label htmlFor="nom" className="text-primary-foreground/60 text-[0.8125rem]">Nom</Label>
+                        <Input id="nom" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                      </div>
+                      <div>
+                        <Label htmlFor="courriel" className="text-primary-foreground/60 text-[0.8125rem]">Courriel</Label>
+                        <Input id="courriel" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                      </div>
+                    </div>
 
-            {/* Inline trust proof */}
-            <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[0.8125rem] text-muted-foreground/50">
-              <span className="flex items-center gap-2"><CheckCircle2 size={13} className="text-accent" /> Club Platine RE/MAX</span>
-              <span className="flex items-center gap-2"><CheckCircle2 size={13} className="text-accent" /> Près de 9 ans en Outaouais</span>
-              <span className="flex items-center gap-2"><CheckCircle2 size={13} className="text-accent" /> Spécialiste Gatineau</span>
-            </div>
-          </motion.div>
+                    <div>
+                      <Label htmlFor="tel" className="text-primary-foreground/60 text-[0.8125rem]">Téléphone</Label>
+                      <Input id="tel" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" />
+                    </div>
+
+                    <div>
+                      <Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optionnel)</Label>
+                      <Textarea id="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
+                    </div>
+
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold">
+                      <Send size={16} className="mr-1.5" />
+                      Recevoir mon évaluation gratuite
+                    </Button>
+
+                    <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 pt-1 text-[0.6875rem] text-primary-foreground/25">
+                      <span className="flex items-center gap-1"><Lock size={10} /> Confidentiel</span>
+                      <span className="flex items-center gap-1"><Shield size={10} /> Sans engagement</span>
+                      <span className="flex items-center gap-1"><Clock size={10} /> Réponse en 24h</span>
+                    </div>
+                  </form>
+                )}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
