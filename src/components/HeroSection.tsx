@@ -16,150 +16,136 @@ interface HeroSectionProps {
   heroBgImage?: string;
 }
 
-const anim = {
-  initial: { opacity: 0, y: 18 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
+const fade = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 1.1, ease: "easeOut" as const },
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="hero-gradient relative overflow-hidden">
+  <section className="hero-gradient relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]">
 
-    {/* ── Luxury background image ── */}
+    {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
-            className="h-full w-full object-cover object-center"
-            style={{ filter: 'brightness(0.44) saturate(0.5)' }}
+            className="h-full w-full object-cover"
+            style={{ filter: 'brightness(0.42) saturate(0.5)' }}
             loading="eager"
           />
         </div>
-        {/* Minimal brand tint */}
-        <div className="absolute inset-0 bg-[hsl(200_42%_16%_/_0.2)]" />
-        {/* Left readability scrim — deep coverage for all text */}
+        {/* Clean scrim — left for text, transparent right for portrait */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.94) 0%, hsl(200 42% 15% / 0.85) 35%, hsl(200 42% 16% / 0.5) 55%, hsl(200 42% 16% / 0.08) 75%, transparent 92%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.9) 0%, hsl(200 42% 15% / 0.65) 35%, hsl(200 42% 16% / 0.2) 58%, transparent 72%)',
         }} />
-        {/* Bottom-left reinforcement for subtitle/buttons */}
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to top, hsl(200 42% 15% / 0.7) 0%, hsl(200 42% 15% / 0.3) 35%, transparent 55%)',
-        }} />
-        {/* Bottom seamless transition */}
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[hsl(200_42%_16%)] via-[hsl(200_42%_16%_/_0.5)] to-transparent" />
+        {/* Bottom anchor */}
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
       </>
     )}
 
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5.5rem] pb-0 sm:pt-[6rem] md:pt-[6.5rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
-      <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[54%_46%] lg:grid-cols-[52%_48%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
-        {/* Text column */}
-        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3.5rem] md:pb-[6rem] lg:pb-[7rem]" : ""} relative z-10`} {...anim}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem] lg:pt-[6.5rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
+      <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
+
+        {/* ── Text column ── */}
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3rem] md:pb-[5.5rem] lg:pb-[6.5rem]" : ""} relative z-10`} {...fade}>
+
           {overline && (
-            <p className="mb-8 flex items-center gap-4 text-[0.6875rem] font-medium tracking-[0.2em] uppercase text-primary-foreground/22" style={{ fontFamily: "'Inter', sans-serif" }}>
-              {overline.includes("·") || overline.includes("•") ? (
-                overline.split(/[·•]/).map((part, i) => (
-                  <span key={i} className="flex items-center gap-4">
-                    {i > 0 && <span className="inline-block h-[2px] w-[2px] rounded-full bg-primary-foreground/15" />}
-                    <span>{part.trim()}</span>
-                  </span>
-                ))
-              ) : (
-                <span>{overline}</span>
-              )}
-            </p>
+            <div className="mb-9 flex items-center gap-6">
+              <span className="h-px w-8 bg-accent/40" />
+              <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase text-primary-foreground/28" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {overline.replace(/[·•]/g, '  ·  ')}
+              </p>
+            </div>
           )}
-          <h1 className="text-primary-foreground leading-[1.06] tracking-[-0.015em]">{title}</h1>
-          <p className="mt-8 max-w-[27rem] text-[1.0625rem] leading-[1.8] text-primary-foreground/50">
+
+          <h1 className="text-primary-foreground leading-[1.05] tracking-[-0.02em]">{title}</h1>
+
+          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/50 font-light">
             {subtitle}
           </p>
+
           {(primaryCta || secondaryCta) && (
-            <div className="mt-12 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex items-center gap-3">
               {primaryCta && (
-                <Button size="xl" variant="accent" className="shadow-[0_2px_16px_-4px_hsl(36_40%_40%_/_0.3)] font-semibold tracking-[0.015em]" asChild>
+                <Button size="xl" variant="accent" className="tracking-[0.02em]" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
                 </Button>
               )}
               {secondaryCta && (
-                <Button size="xl" variant="hero-outline" className="border-primary-foreground/[0.1] text-primary-foreground/40 hover:text-primary-foreground/60 hover:border-primary-foreground/[0.16] hover:bg-primary-foreground/[0.03] tracking-[0.015em]" asChild>
+                <Button size="xl" variant="hero-outline" className="tracking-[0.02em]" asChild>
                   <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
                 </Button>
               )}
             </div>
           )}
+
           {trustLine && (
-            <p className="mt-10 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/16 font-medium">
+            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/18 font-normal">
               {trustLine}
             </p>
           )}
         </motion.div>
 
-        {/* Background image column */}
+        {/* Background image column (non-portrait variant) */}
         {backgroundImage && !agentImage && (
           <motion.div
             className="hidden lg:block"
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
           >
             <div className="relative overflow-hidden rounded-[1.75rem] shadow-2xl">
-              <img
-                src={backgroundImage}
-                alt=""
-                className="aspect-[4/3] w-full object-cover"
-                loading="eager"
-              />
+              <img src={backgroundImage} alt="" className="aspect-[4/3] w-full object-cover" loading="eager" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
           </motion.div>
         )}
 
-        {/* ── Agent portrait — naturally embedded ── */}
+        {/* ── Portrait — desktop/tablet ── */}
         {agentImage && (
           <motion.div
             className="hidden md:flex justify-end items-end self-end relative"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Portrait with natural edge masking — no glow, just soft fade */}
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to top, transparent 0%, black 6%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to top, transparent 0%, black 6%)',
+              maskImage: 'linear-gradient(to right, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 8%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 8%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
-              filter: 'drop-shadow(0 4px 12px hsl(200 30% 12% / 0.2))',
             }}>
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[400px] lg:max-w-[460px] xl:max-w-[520px] 2xl:max-w-[560px] object-contain object-bottom"
+                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom"
                 loading="eager"
               />
             </div>
           </motion.div>
         )}
 
-        {/* Mobile portrait */}
+        {/* Portrait — mobile */}
         {agentImage && (
           <motion.div
             className="flex md:hidden justify-center items-end overflow-hidden"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
           >
             <div style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to left, transparent 0%, black 6%), linear-gradient(to right, transparent 0%, black 6%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to left, transparent 0%, black 6%), linear-gradient(to right, transparent 0%, black 6%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
-              filter: 'drop-shadow(0 3px 10px hsl(200 30% 12% / 0.15))',
             }}>
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-[280px] sm:w-[320px] object-contain object-bottom"
+                className="w-[270px] sm:w-[310px] object-contain object-bottom"
                 loading="eager"
               />
             </div>
