@@ -38,20 +38,18 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             loading="eager"
           />
         </div>
-        {/* Deep teal tint overlay — unified color wash */}
+        {/* Uniform dark overlay — no blue hue, consistent across full width */}
         <div className="absolute inset-0" style={{
-          background: 'hsl(200 42% 14% / 0.55)',
-          mixBlendMode: 'multiply',
+          background: '#10242D',
+          opacity: 0.72,
         }} />
-        {/* Gradient scrim — strong left for text, fading to transparent right */}
+        {/* Gradient scrim — stronger left for text readability */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 16% / 0.65) 40%, hsl(200 42% 18% / 0.15) 60%, transparent 75%)',
+          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 14% / 0.55) 45%, hsl(200 42% 14% / 0.40) 70%, hsl(200 42% 14% / 0.35) 100%)',
         }} />
-        {/* Bottom anchor — left-biased */}
+        {/* Bottom anchor — full width */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.7) 50%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
-          WebkitMaskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
+          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.5) 50%, transparent 100%)',
         }} />
       </>
     )}
