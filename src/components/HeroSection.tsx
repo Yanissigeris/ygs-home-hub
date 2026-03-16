@@ -58,10 +58,10 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
 
         {/* ── Text column ── */}
-        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3rem] md:pb-[5.5rem] lg:pb-[6.5rem]" : ""} relative z-10`} {...fade}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[2.5rem] md:pb-[4rem] lg:pb-[5rem]" : ""} relative z-10`} {...fade}>
 
           {overline && (
-            <div className="mb-9 flex items-center gap-6">
+            <div className="mb-6 flex items-center gap-6">
               <span className="h-px w-8" style={{ background: 'hsl(36 38% 46% / 0.35)' }} />
               <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase" style={{ fontFamily: "'Inter', sans-serif", color: '#A7B2BA' }}>
                 {overline.replace(/[·•]/g, '  ·  ')}
@@ -71,12 +71,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           <h1 style={{ color: '#F5F1E8' }} className="leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
+          <p className="mt-5 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
             {subtitle}
           </p>
 
           {(primaryCta || secondaryCta) && (
-            <div className="mt-10 flex items-center gap-3">
+            <div className="mt-8 flex items-center gap-3">
               {primaryCta && (
                 <Button size="xl" variant="accent" className="tracking-[0.02em]" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
@@ -91,7 +91,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
 
           {trustLine && (
-            <p className="mt-10 text-[0.75rem] tracking-[0.03em] font-normal" style={{ color: 'hsl(200 15% 55% / 0.5)' }}>
+            <p className="mt-8 text-[0.75rem] tracking-[0.03em] font-normal" style={{ color: 'hsl(200 15% 55% / 0.5)' }}>
               {trustLine}
             </p>
           )}
