@@ -28,24 +28,24 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
     {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
-        {/* Photo — darkened, desaturated, tinted */}
+        {/* Photo — brightened for visibility */}
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.68) saturate(0.75) contrast(0.90)' }}
+            style={{ filter: 'brightness(0.90) saturate(0.80) contrast(0.95)' }}
             loading="eager"
           />
         </div>
-        {/* Subtle dark overlay for text readability */}
+        {/* Very subtle overlay for text readability */}
         <div className="absolute inset-0" style={{
           background: '#17242B',
-          opacity: 0.20,
+          opacity: 0.08,
         }} />
-        {/* Gradient scrim — stronger left for text readability */}
+        {/* Gradient scrim — lighter, preserves skyline visibility */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 14% / 0.55) 45%, hsl(200 42% 14% / 0.40) 70%, hsl(200 42% 14% / 0.35) 100%)',
+          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.85) 18%, hsl(200 42% 14% / 0.35) 45%, hsl(200 42% 14% / 0.20) 70%, hsl(200 42% 14% / 0.15) 100%)',
         }} />
         {/* Bottom anchor — full width */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
