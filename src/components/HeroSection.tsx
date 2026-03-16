@@ -39,10 +39,10 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         </div>
         {/* Clean scrim — left for text, transparent right for portrait */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.9) 0%, hsl(200 42% 15% / 0.65) 35%, hsl(200 42% 16% / 0.2) 58%, transparent 72%)',
+          background: 'linear-gradient(to right, hsl(0 0% 10% / 0.92) 0%, hsl(0 0% 12% / 0.7) 35%, hsl(0 0% 14% / 0.25) 58%, transparent 72%)',
         }} />
         {/* Bottom anchor */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(0_0%_12%)] to-transparent" />
       </>
     )}
 
