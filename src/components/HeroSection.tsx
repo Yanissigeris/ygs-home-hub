@@ -58,7 +58,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
 
         {/* ── Text column ── */}
-        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[2.5rem] md:pb-[4rem] lg:pb-[5rem]" : ""} relative z-10`} {...fade}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" : ""} relative z-10`} {...fade}>
 
           {overline && (
             <div className="mb-6 flex items-center gap-6">
