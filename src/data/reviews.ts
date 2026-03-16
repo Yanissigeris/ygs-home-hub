@@ -71,7 +71,7 @@ export const reviews: Review[] = [
   {
     id: "r1",
     name: "Alexandre.",
-    location: "Ottawa → Aylmer",
+    location: "Aylmer/Gatineau",
     category: "relocation",
     short: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
     full: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
