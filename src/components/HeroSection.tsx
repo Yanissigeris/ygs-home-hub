@@ -17,9 +17,9 @@ interface HeroSectionProps {
 }
 
 const anim = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 18 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+  transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
@@ -33,18 +33,22 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover object-center"
-            style={{ filter: 'blur(0.5px) brightness(0.38) saturate(0.5)' }}
+            style={{ filter: 'brightness(0.44) saturate(0.5)' }}
             loading="eager"
           />
         </div>
-        {/* Subtle brand tint — restrained, not heavy */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(200_42%_16%_/_0.55)] via-[hsl(200_42%_16%_/_0.3)] to-[hsl(200_42%_16%_/_0.15)]" />
-        {/* Left readability scrim — smooth cinematic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200_42%_14%_/_0.82)] via-[hsl(200_42%_16%_/_0.45)] via-[55%] to-transparent" />
+        {/* Minimal brand tint */}
+        <div className="absolute inset-0 bg-[hsl(200_42%_16%_/_0.2)]" />
+        {/* Left readability scrim — deep coverage for all text */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.94) 0%, hsl(200 42% 15% / 0.85) 35%, hsl(200 42% 16% / 0.5) 55%, hsl(200 42% 16% / 0.08) 75%, transparent 92%)',
+        }} />
+        {/* Bottom-left reinforcement for subtitle/buttons */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to top, hsl(200 42% 15% / 0.7) 0%, hsl(200 42% 15% / 0.3) 35%, transparent 55%)',
+        }} />
         {/* Bottom seamless transition */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[hsl(200_42%_16%)] via-[hsl(200_42%_16%_/_0.6)] to-transparent" />
-        {/* Top vignette for header blend */}
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[hsl(200_42%_16%_/_0.3)] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[hsl(200_42%_16%)] via-[hsl(200_42%_16%_/_0.5)] to-transparent" />
       </>
     )}
 
@@ -53,11 +57,11 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         {/* Text column */}
         <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3.5rem] md:pb-[6rem] lg:pb-[7rem]" : ""} relative z-10`} {...anim}>
           {overline && (
-            <p className="mb-7 flex items-center gap-3.5 text-[0.6875rem] font-medium tracking-[0.18em] uppercase text-primary-foreground/25" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.18em' }}>
+            <p className="mb-8 flex items-center gap-4 text-[0.6875rem] font-medium tracking-[0.2em] uppercase text-primary-foreground/22" style={{ fontFamily: "'Inter', sans-serif" }}>
               {overline.includes("·") || overline.includes("•") ? (
                 overline.split(/[·•]/).map((part, i) => (
-                  <span key={i} className="flex items-center gap-3.5">
-                    {i > 0 && <span className="inline-block h-[2.5px] w-[2.5px] rounded-full bg-accent/30" />}
+                  <span key={i} className="flex items-center gap-4">
+                    {i > 0 && <span className="inline-block h-[2px] w-[2px] rounded-full bg-primary-foreground/15" />}
                     <span>{part.trim()}</span>
                   </span>
                 ))
@@ -66,26 +70,26 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               )}
             </p>
           )}
-          <h1 className="text-primary-foreground leading-[1.08] tracking-[-0.01em]">{title}</h1>
-          <p className="mt-7 max-w-[28rem] text-[1.0625rem] leading-[1.8] text-primary-foreground/40">
+          <h1 className="text-primary-foreground leading-[1.06] tracking-[-0.015em]">{title}</h1>
+          <p className="mt-8 max-w-[27rem] text-[1.0625rem] leading-[1.8] text-primary-foreground/50">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
-            <div className="mt-11 flex flex-wrap items-center gap-5">
+            <div className="mt-12 flex flex-wrap items-center gap-4">
               {primaryCta && (
-                <Button size="xl" variant="accent" className="shadow-[0_4px_24px_-6px_hsl(36_45%_42%_/_0.35)] font-semibold tracking-[0.01em]" asChild>
+                <Button size="xl" variant="accent" className="shadow-[0_2px_16px_-4px_hsl(36_40%_40%_/_0.3)] font-semibold tracking-[0.015em]" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
                 </Button>
               )}
               {secondaryCta && (
-                <Button size="xl" variant="hero-outline" className="border-primary-foreground/[0.12] text-primary-foreground/45 hover:text-primary-foreground/70 hover:border-primary-foreground/20 hover:bg-primary-foreground/[0.03] tracking-[0.01em]" asChild>
+                <Button size="xl" variant="hero-outline" className="border-primary-foreground/[0.1] text-primary-foreground/40 hover:text-primary-foreground/60 hover:border-primary-foreground/[0.16] hover:bg-primary-foreground/[0.03] tracking-[0.015em]" asChild>
                   <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
                 </Button>
               )}
             </div>
           )}
           {trustLine && (
-            <p className="mt-9 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/18 font-medium">
+            <p className="mt-10 text-[0.8125rem] tracking-[0.02em] text-primary-foreground/16 font-medium">
               {trustLine}
             </p>
           )}
@@ -111,24 +115,21 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           </motion.div>
         )}
 
-        {/* ── Agent portrait — naturally integrated ── */}
+        {/* ── Agent portrait — naturally embedded ── */}
         {agentImage && (
           <motion.div
             className="hidden md:flex justify-end items-end self-end relative"
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
-            {/* Very subtle warm ambient light — restrained */}
-            <div className="absolute bottom-[12%] right-[18%] w-[55%] h-[45%] bg-[radial-gradient(ellipse,_hsl(36_30%_50%_/_0.06)_0%,_transparent_65%)] pointer-events-none blur-3xl" />
-            
-            {/* Portrait with natural edge masking + subtle depth shadow */}
+            {/* Portrait with natural edge masking — no glow, just soft fade */}
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 25%), linear-gradient(to left, transparent 0%, black 10%), linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to top, transparent 0%, black 5%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%), linear-gradient(to left, transparent 0%, black 10%), linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to top, transparent 0%, black 5%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to top, transparent 0%, black 6%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to top, transparent 0%, black 6%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
-              filter: 'drop-shadow(0 6px 20px hsl(200 42% 10% / 0.3))',
+              filter: 'drop-shadow(0 4px 12px hsl(200 30% 12% / 0.2))',
             }}>
               <img
                 src={agentImage}
@@ -144,16 +145,16 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         {agentImage && (
           <motion.div
             className="flex md:hidden justify-center items-end overflow-hidden"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
             <div style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to left, transparent 0%, black 10%), linear-gradient(to right, transparent 0%, black 10%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%), linear-gradient(to left, transparent 0%, black 10%), linear-gradient(to right, transparent 0%, black 10%)',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
-              filter: 'drop-shadow(0 4px 16px hsl(200 42% 10% / 0.25))',
+              filter: 'drop-shadow(0 3px 10px hsl(200 30% 12% / 0.15))',
             }}>
               <img
                 src={agentImage}

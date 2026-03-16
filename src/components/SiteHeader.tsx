@@ -184,26 +184,26 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 84 : 100 }}
+        style={{ height: scrolled ? 80 : 96 }}
       >
-        {/* Logo group — intentional hierarchy */}
-        <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
+        {/* Logo group — clear hierarchy */}
+        <Link to="/" className="flex items-center shrink-0 mr-12 gap-4">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 68 : 82, width: "auto" }}
+            style={{ height: scrolled ? 64 : 76, width: "auto" }}
           />
-          <span className="h-7 w-px bg-border/20 shrink-0" />
+          <span className="h-6 w-px bg-border/15 shrink-0" />
           <img
             src={logoRemax}
             alt="RE/MAX"
-            className="transition-all duration-300 object-contain opacity-70"
-            style={{ height: scrolled ? 28 : 34, width: "auto" }}
+            className="transition-all duration-300 object-contain opacity-55"
+            style={{ height: scrolled ? 26 : 30, width: "auto" }}
           />
         </Link>
 
-        {/* Nav — fills the center */}
+        {/* Nav */}
         <nav className="flex-1 flex items-center justify-center gap-0.5">
           {mainNav.map((item) => (
             <DesktopNavItem key={item.label} item={item} pathname={location.pathname} />
@@ -211,8 +211,8 @@ const SiteHeader = () => {
         </nav>
 
         {/* CTA */}
-        <div className="shrink-0 ml-8">
-          <Button size="default" variant="accent" className="font-semibold tracking-[0.01em] whitespace-nowrap shadow-sm" asChild>
+        <div className="shrink-0 ml-10">
+          <Button size="default" variant="accent" className="font-semibold tracking-[0.015em] whitespace-nowrap" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
           </Button>
         </div>
