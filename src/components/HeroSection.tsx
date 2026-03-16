@@ -55,7 +55,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           {overline && (
             <div className="mb-9 flex items-center gap-6">
               <span className="h-px w-8 bg-accent/40" />
-              <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase text-primary-foreground/28" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase text-primary-foreground/45" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {overline.replace(/[·•]/g, '  ·  ')}
               </p>
             </div>
@@ -63,7 +63,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           <h1 className="text-primary-foreground leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/50 font-light">
+          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/65 font-light">
             {subtitle}
           </p>
 
@@ -83,7 +83,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
 
           {trustLine && (
-            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/18 font-normal">
+            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/35 font-normal">
               {trustLine}
             </p>
           )}
