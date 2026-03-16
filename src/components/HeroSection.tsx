@@ -34,14 +34,14 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.30) saturate(0.35) contrast(0.85)' }}
+            style={{ filter: 'brightness(0.38) saturate(0.28) contrast(0.82) sepia(0.15)' }}
             loading="eager"
           />
         </div>
-        {/* Uniform dark overlay — no blue hue, consistent across full width */}
+        {/* Uniform warm-dark overlay — consistent across full width */}
         <div className="absolute inset-0" style={{
-          background: '#10242D',
-          opacity: 0.72,
+          background: '#17242B',
+          opacity: 0.65,
         }} />
         {/* Gradient scrim — stronger left for text readability */}
         <div className="absolute inset-0" style={{
