@@ -71,12 +71,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           <h1 style={{ color: '#F5F1E8' }} className="leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-5 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
+          <p className="mt-4 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
             {subtitle}
           </p>
 
           {(primaryCta || secondaryCta) && (
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-7 flex items-center gap-3">
               {primaryCta && (
                 <Button size="xl" variant="accent" className="tracking-[0.02em]" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
