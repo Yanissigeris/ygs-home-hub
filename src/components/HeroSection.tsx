@@ -28,20 +28,20 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
     {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
-        {/* Photo — darkened, desaturated, tinted */}
+        {/* Photo — brightened for visibility */}
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.68) saturate(0.75) contrast(0.90)' }}
+            style={{ filter: 'brightness(0.90) saturate(0.80) contrast(0.95)' }}
             loading="eager"
           />
         </div>
-        {/* Subtle dark overlay for text readability */}
+        {/* Very subtle overlay for text readability */}
         <div className="absolute inset-0" style={{
           background: '#17242B',
-          opacity: 0.20,
+          opacity: 0.08,
         }} />
         {/* Gradient scrim — stronger left for text readability */}
         <div className="absolute inset-0" style={{
