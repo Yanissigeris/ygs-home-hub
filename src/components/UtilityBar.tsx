@@ -41,7 +41,7 @@ const UtilityBar = () =>
           </Link>
           <Link
           to="/evaluation-gratuite-gatineau"
-          className="ml-1 inline-flex items-center h-[26px] px-4 rounded-full bg-white/[0.09] border border-white/[0.08] text-[0.6875rem] font-medium tracking-[0.04em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95 hover:border-white/[0.14]">
+          className="ml-1 inline-flex items-center h-[26px] px-4 rounded-full bg-[#B68A43]/15 border border-[#B68A43]/20 text-[0.6875rem] font-medium tracking-[0.04em] text-[#B68A43] transition-all duration-200 hover:bg-[#B68A43]/25 hover:text-[#B68A43] hover:border-[#B68A43]/35">
           
             Évaluation gratuite
           </Link>
