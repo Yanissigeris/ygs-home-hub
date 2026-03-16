@@ -78,7 +78,7 @@ const ValuationPage = () => {
         </motion.div>
 
         <div className="section-container relative z-10 py-12 sm:py-14 md:py-16 lg:py-20">
-          <div className="grid gap-10 md:grid-cols-[1fr_420px] lg:grid-cols-[1fr_460px] md:gap-12 lg:gap-16 items-start">
+          <div className="grid gap-10 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
 
             {/* ── LEFT: Value proposition ── */}
             <motion.div className="pt-2 md:pt-6 lg:pt-10" {...anim}>
