@@ -30,7 +30,7 @@ const FeaturedPropertiesPage = () => (
       subtitle="Découvrez les propriétés les plus intéressantes du moment — sélectionnées pour leur emplacement, leur potentiel et leur rapport qualité-prix."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       trustLine="Sélection personnalisée par Yanis Gauthier-Sigeris"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <ContentBlock narrow>

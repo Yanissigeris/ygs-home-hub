@@ -39,7 +39,7 @@ const SoldRecentlyPage = () => (
       subtitle="Consultez les ventes récentes dans votre secteur pour mieux comprendre les prix du marché."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Données de ventes réelles pour des décisions éclairées"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <ContentBlock narrow>

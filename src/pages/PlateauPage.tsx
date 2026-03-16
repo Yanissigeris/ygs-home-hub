@@ -61,7 +61,7 @@ const PlateauPage = () => (
       subtitle="Développements récents, quartiers familiaux et excellent rapport qualité-prix — le Plateau est l'un des secteurs les plus dynamiques de Gatineau."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

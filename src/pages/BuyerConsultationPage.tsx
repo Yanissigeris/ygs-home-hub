@@ -16,6 +16,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
+import heroImg from "@/assets/hero-buyer.jpg";
 
 const benefits = [
   "Échange personnalisé sur vos critères et priorités",
@@ -57,6 +58,7 @@ const BuyerConsultationPage = () => {
         trustLine="Gratuit, confidentiel et sans engagement."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">

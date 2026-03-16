@@ -28,7 +28,7 @@ const NewListingsPage = () => (
       subtitle="Les propriétés fraîchement inscrites à Gatineau — soyez parmi les premiers à les découvrir."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       trustLine="Mises à jour régulières par Yanis Gauthier-Sigeris"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <ContentBlock narrow>

@@ -70,7 +70,7 @@ const BuckinghamPage = () => (
       subtitle="Espace, nature, prix accessibles et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      backgroundImage={riverImg}
+      heroBgImage={riverImg}
     />
 
     <TrustMiniStrip items={trustItems} />

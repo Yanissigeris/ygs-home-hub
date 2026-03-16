@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
 import { reviews, getReviewsByCategory } from "@/data/reviews";
 import type { Review } from "@/data/reviews";
+import heroImg from "@/assets/hero-gatineau.jpg";
 
 const categories: { key: Review["category"]; label: string; title: string }[] = [
   { key: "seller", label: "Vendeurs", title: "Ils ont vendu avec confiance" },
@@ -24,6 +25,7 @@ const TestimonialsPage = () => (
       subtitle="Des vendeurs, acheteurs, relocalisés et investisseurs partagent leur expérience avec Yanis."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      heroBgImage={heroImg}
     />
 
     {categories.map((cat) => {

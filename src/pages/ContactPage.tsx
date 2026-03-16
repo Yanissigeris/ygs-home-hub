@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import heroImg from "@/assets/hero-gatineau.jpg";
 import { useState, FormEvent } from "react";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
@@ -62,6 +63,7 @@ const ContactPage = () => {
         subtitle="En réflexion ou prêt à bouger — je peux vous aider à voir plus clair. Pas de pression, juste une conversation honnête."
         primaryCta={{ label: "Envoyer un message", href: "#contact-form" }}
         secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+        heroBgImage={heroImg}
       />
 
       <TrustMiniStrip items={trustItems} />

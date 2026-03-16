@@ -48,7 +48,7 @@ const SellPlexPage = () => (
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau" }}
       trustLine="Spécialiste plex. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

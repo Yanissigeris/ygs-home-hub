@@ -39,7 +39,7 @@ const LivingAylmerPage = () => (
       subtitle="Découvrez le mode de vie à Aylmer: lac, nature, communauté et accès à Ottawa. Tout ce qu'il faut savoir avant de s'installer."
       primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Voir le quartier", href: "/aylmer" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <CardGrid

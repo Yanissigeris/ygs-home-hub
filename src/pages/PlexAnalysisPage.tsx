@@ -15,6 +15,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
+import heroImg from "@/assets/hero-plex.jpg";
 
 const benefits = [
   "Estimation de la valeur marchande actuelle de votre plex",
@@ -55,6 +56,7 @@ const PlexAnalysisPage = () => {
         trustLine="Une analyse utile et sans pression — pour vous aider à décider en connaissance de cause."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">

@@ -39,7 +39,7 @@ const PropertiesPage = () => (
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Accompagnement stratégique. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <LinkedCardGrid

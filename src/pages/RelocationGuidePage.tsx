@@ -49,7 +49,7 @@ const RelocationGuidePage = () => (
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <BenefitsList

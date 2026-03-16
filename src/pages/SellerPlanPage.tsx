@@ -16,6 +16,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
+import heroImg from "@/assets/hero-seller.jpg";
 
 const benefits = [
   "Évaluation réaliste basée sur les ventes comparables récentes",
@@ -56,6 +57,7 @@ const SellerPlanPage = () => {
         trustLine="Un plan stratégique, pas une pitch de vente — pour vous aider à vendre au bon prix, au bon moment."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">

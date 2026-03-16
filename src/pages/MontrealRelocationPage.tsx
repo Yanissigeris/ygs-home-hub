@@ -39,7 +39,7 @@ const MontrealRelocationPage = () => (
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
       trustLine="Spécialiste en relocalisation. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

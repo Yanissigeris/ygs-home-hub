@@ -41,7 +41,7 @@ const MilitarySellerPage = () => (
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Stratégie claire. Vente rapide. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

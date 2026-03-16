@@ -48,7 +48,7 @@ const ResourcesPage = () => (
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

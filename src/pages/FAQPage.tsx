@@ -53,7 +53,7 @@ const FAQPage = () => (
       primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <FAQSection title="Vendre à Gatineau" items={sellerFaq} />

@@ -43,7 +43,7 @@ const MilitaryRelocationPage = () => (
       subtitle="Mutation vers la région? Je vous aide à trouver la bonne propriété rapidement, sans stress et en respectant votre calendrier."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       trustLine="Service adapté aux militaires. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

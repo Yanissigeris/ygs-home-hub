@@ -48,7 +48,7 @@ const FirstTimeBuyerPage = () => (
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau" }}
       trustLine="Accompagnement personnalisé. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

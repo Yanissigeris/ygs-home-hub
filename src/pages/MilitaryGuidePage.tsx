@@ -43,7 +43,7 @@ const MilitaryGuidePage = () => (
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Voir le service militaire", href: "/militaire-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <BenefitsList

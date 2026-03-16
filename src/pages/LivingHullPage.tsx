@@ -39,7 +39,7 @@ const LivingHullPage = () => (
       subtitle="Découvrez le mode de vie urbain de Hull: culture, restaurants, proximité Ottawa et prix encore accessibles."
       primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Voir le quartier", href: "/hull" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <CardGrid
