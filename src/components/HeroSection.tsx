@@ -23,7 +23,7 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[440px] md:min-h-[480px] lg:min-h-[520px]" style={{ background: '#10242D' }}>
+  <section className="relative overflow-hidden min-h-[400px] md:min-h-[440px] lg:min-h-[480px]" style={{ background: '#10242D' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
