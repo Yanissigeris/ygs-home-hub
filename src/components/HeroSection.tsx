@@ -23,7 +23,7 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: 'hsl(0 0% 7%)' }}>
+  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#10242D' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
@@ -34,26 +34,22 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.34) saturate(0.16) contrast(0.8) grayscale(0.18)' }}
+            style={{ filter: 'brightness(0.38) saturate(0.28) contrast(0.82) sepia(0.15)' }}
             loading="eager"
           />
         </div>
-        {/* Neutral dark base overlay */}
+        {/* Uniform warm-dark overlay — consistent across full width */}
         <div className="absolute inset-0" style={{
-          background: 'hsl(0 0% 8%)',
-          opacity: 0.76,
+          background: '#17242B',
+          opacity: 0.65,
         }} />
-        {/* Text-side scrim only — ends before portrait */}
-        <div className="absolute inset-y-0 left-0 right-[46%]" style={{
-          background: 'linear-gradient(to right, hsl(0 0% 8% / 0.96) 0%, hsl(0 0% 8% / 0.88) 20%, hsl(0 0% 7% / 0.58) 54%, transparent 100%)',
+        {/* Gradient scrim — stronger left for text readability */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 14% / 0.55) 45%, hsl(200 42% 14% / 0.40) 70%, hsl(200 42% 14% / 0.35) 100%)',
         }} />
-        {/* Portrait-side neutral darkening — no glow */}
-        <div className="absolute inset-y-0 left-[54%] right-0" style={{
-          background: 'linear-gradient(to right, hsl(0 0% 6% / 0.12) 0%, hsl(0 0% 5% / 0.24) 34%, hsl(0 0% 4% / 0.38) 100%)',
-        }} />
-        {/* Bottom anchor — neutral */}
+        {/* Bottom anchor — full width */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, hsl(0 0% 5%) 0%, hsl(0 0% 5% / 0.45) 52%, transparent 100%)',
+          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.5) 50%, transparent 100%)',
         }} />
       </>
     )}
@@ -124,9 +120,13 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Ultra-subtle neutral charcoal depth */}
+            {/* Asymmetric atmospheric depth — irregular, not spotlight */}
             <div className="absolute inset-0 pointer-events-none" style={{
-              background: `radial-gradient(ellipse 55% 70% at 50% 78%, hsl(0 0% 4% / 0.32) 0%, transparent 58%)`,
+              background: `
+                radial-gradient(ellipse 60% 80% at 50% 70%, hsl(200 25% 8% / 0.55) 0%, transparent 60%),
+                radial-gradient(ellipse 90% 50% at 65% 85%, hsl(200 20% 6% / 0.40) 0%, transparent 55%),
+                radial-gradient(ellipse 40% 60% at 35% 50%, hsl(200 20% 10% / 0.25) 0%, transparent 50%)
+              `,
             }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
@@ -145,12 +145,13 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
-              {/* Neutral contact shadow — no blue tint */}
+              {/* Multi-layer contact shadow — sides, bottom, shoulders */}
               <div className="absolute inset-0 pointer-events-none" style={{
                 background: `
-                  linear-gradient(to top, hsl(0 0% 5% / 0.45) 0%, hsl(0 0% 5% / 0.15) 18%, transparent 32%),
-                  linear-gradient(to right, hsl(0 0% 7% / 0.25) 0%, transparent 22%),
-                  linear-gradient(to left, hsl(0 0% 7% / 0.18) 0%, transparent 18%)
+                  linear-gradient(to top, hsl(200 18% 6% / 0.50) 0%, hsl(200 18% 6% / 0.20) 18%, transparent 35%),
+                  linear-gradient(to right, hsl(200 15% 8% / 0.30) 0%, transparent 25%),
+                  linear-gradient(to left, hsl(200 15% 8% / 0.22) 0%, transparent 20%),
+                  radial-gradient(ellipse 80% 30% at 50% 15%, hsl(200 15% 8% / 0.18) 0%, transparent 60%)
                 `,
                 zIndex: 1,
               }} />
@@ -173,7 +174,10 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
-              background: `radial-gradient(ellipse 70% 75% at 50% 75%, hsl(0 0% 4% / 0.28) 0%, transparent 55%)`,
+              background: `
+                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(200 25% 8% / 0.50) 0%, transparent 60%),
+                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(200 20% 6% / 0.35) 0%, transparent 50%)
+              `,
             }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
@@ -191,7 +195,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               WebkitMaskComposite: 'destination-in',
             }}>
               <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'linear-gradient(to top, hsl(0 0% 5% / 0.40) 0%, transparent 28%)',
+                background: 'linear-gradient(to top, hsl(200 18% 6% / 0.45) 0%, transparent 30%)',
                 zIndex: 1,
               }} />
               <img
