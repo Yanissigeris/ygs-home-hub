@@ -34,7 +34,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.38) saturate(0.28) contrast(0.82) sepia(0.15)' }}
+            style={{ filter: 'brightness(0.34) saturate(0.16) contrast(0.8) grayscale(0.18)' }}
             loading="eager"
           />
         </div>
