@@ -124,8 +124,10 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* No glow behind portrait */}
-            <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
+            {/* Ultra-subtle neutral charcoal depth */}
+            <div className="absolute inset-0 pointer-events-none" style={{
+              background: `radial-gradient(ellipse 55% 70% at 50% 78%, hsl(0 0% 4% / 0.32) 0%, transparent 58%)`,
+            }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
@@ -170,7 +172,9 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{ background: 'transparent' }} />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
+              background: `radial-gradient(ellipse 70% 75% at 50% 75%, hsl(0 0% 4% / 0.28) 0%, transparent 55%)`,
+            }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
