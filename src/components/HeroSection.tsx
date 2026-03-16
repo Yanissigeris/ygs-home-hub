@@ -23,14 +23,10 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    {/* Shared ambient lighting — unifies text + portrait */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_60%_45%,_hsl(200_38%_20%_/_0.4)_0%,_transparent_70%)] pointer-events-none" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_20%_40%,_hsl(200_30%_22%_/_0.15)_0%,_transparent_60%)] pointer-events-none" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_80%_35%,_hsl(200_35%_22%_/_0.2)_0%,_transparent_55%)] pointer-events-none" />
-    {/* Warm accent wash */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(36_40%_50%_/_0.02)_0%,_transparent_40%)] pointer-events-none" />
-    {/* Top edge softener — blends header into hero */}
-    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-primary/30 to-transparent pointer-events-none" />
+    {/* Subtle ambient lighting */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_55%_50%,_hsl(200_30%_28%_/_0.2)_0%,_transparent_65%)] pointer-events-none" />
+    {/* Top edge softener */}
+    <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/15 to-transparent pointer-events-none" />
 
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
