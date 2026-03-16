@@ -127,7 +127,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[480px] 2xl:max-w-[520px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+                className="w-full max-w-[340px] lg:max-w-[400px] xl:max-w-[440px] 2xl:max-w-[480px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                 loading="eager"
               />
             </div>
