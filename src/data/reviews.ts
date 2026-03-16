@@ -12,11 +12,11 @@ export const reviews: Review[] = [
   // — Sellers —
   {
     id: "s1",
-    name: "Abdoulaye.",
+    name: "Sylvie",
     location: "Gatineau",
     category: "seller",
-    short: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
-    full: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
+    short: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement\nMerci encore pour tout.",
+    full: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement\nMerci encore pour tout.",
     rating: 5,
   },
   {
