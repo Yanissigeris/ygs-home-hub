@@ -120,12 +120,11 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Asymmetric atmospheric depth — irregular, not spotlight */}
+            {/* Neutral depth — no colored glow */}
             <div className="absolute inset-0 pointer-events-none" style={{
               background: `
-                radial-gradient(ellipse 60% 80% at 50% 70%, hsl(200 25% 8% / 0.55) 0%, transparent 60%),
-                radial-gradient(ellipse 90% 50% at 65% 85%, hsl(200 20% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 40% 60% at 35% 50%, hsl(200 20% 10% / 0.25) 0%, transparent 50%)
+                radial-gradient(ellipse 60% 80% at 50% 75%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
+                radial-gradient(ellipse 90% 45% at 55% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
               `,
             }} />
             <div className="relative" style={{
