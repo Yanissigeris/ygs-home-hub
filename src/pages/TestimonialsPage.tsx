@@ -25,6 +25,7 @@ const TestimonialsPage = () => (
       subtitle="Des vendeurs, acheteurs, relocalisés et investisseurs partagent leur expérience avec Yanis."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      heroBgImage={heroImg}
     />
 
     {categories.map((cat) => {

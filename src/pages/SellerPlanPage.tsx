@@ -16,6 +16,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
+import heroImg from "@/assets/hero-seller.jpg";
 
 const benefits = [
   "Évaluation réaliste basée sur les ventes comparables récentes",
