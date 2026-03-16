@@ -193,7 +193,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               WebkitMaskComposite: 'destination-in',
             }}>
               <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'linear-gradient(to top, hsl(200 18% 6% / 0.45) 0%, transparent 30%)',
+                background: 'linear-gradient(to top, hsl(0 0% 5% / 0.40) 0%, transparent 28%)',
                 zIndex: 1,
               }} />
               <img
