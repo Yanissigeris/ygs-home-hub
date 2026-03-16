@@ -22,8 +22,29 @@ const anim = {
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
+
+    {/* Luxury background image layer */}
+    {heroBgImage && (
+      <>
+        <div className="absolute inset-0">
+          <img
+            src={heroBgImage}
+            alt=""
+            className="h-full w-full object-cover"
+            style={{ filter: 'blur(1.5px) brightness(0.18) saturate(0.45)' }}
+            loading="eager"
+          />
+        </div>
+        {/* Brand-tinted overlay for cohesion */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary/40 mix-blend-multiply" />
+        {/* Bottom fade to seamless transition */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
+        {/* Warm accent glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_60%,_hsl(36_38%_46%_/_0.08)_0%,_transparent_70%)]" />
+      </>
+    )}
 
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
