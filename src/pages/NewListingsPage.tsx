@@ -5,7 +5,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import heroImg from "@/assets/hero-properties.jpg";
+import heroImg from "@/assets/hero-new-listings.jpg";
 
 const faq = [
   { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères — je vous avise dès qu'une propriété correspondante arrive sur le marché." },

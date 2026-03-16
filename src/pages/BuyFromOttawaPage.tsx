@@ -11,7 +11,7 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-relocation.jpg";
+import heroImg from "@/assets/hero-buy-from-ottawa.jpg";
 
 const advantages = [
   { icon: DollarSign, title: "Prix plus accessibles", text: "Les maisons unifamiliales et condos coûtent souvent moins cher à Gatineau qu'à Ottawa." },

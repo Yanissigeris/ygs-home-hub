@@ -7,7 +7,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-properties.jpg";
+import heroImg from "@/assets/hero-sold.jpg";
 
 const sectors = [
   { name: "Aylmer", href: "/aylmer", detail: "Lac, quartiers établis, qualité de vie" },

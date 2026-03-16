@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-hull.jpg";
+import heroImg from "@/assets/hero-living-hull.jpg";
 
 const highlights = [
   { icon: MapPin, title: "Centre-ville vibrant", text: "Proximité immédiate du Vieux-Hull, du Musée et de la scène culturelle." },
