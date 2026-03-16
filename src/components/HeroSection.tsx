@@ -39,9 +39,9 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         </div>
         {/* Minimal brand tint — just enough for cohesion */}
         <div className="absolute inset-0 bg-[hsl(200_42%_16%_/_0.25)]" />
-        {/* Left readability scrim — three-stop cinematic fade */}
+        {/* Left readability scrim — wider coverage for subtitle */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.88) 0%, hsl(200 42% 16% / 0.55) 40%, hsl(200 42% 16% / 0.15) 65%, transparent 85%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.92) 0%, hsl(200 42% 15% / 0.78) 30%, hsl(200 42% 16% / 0.45) 50%, hsl(200 42% 16% / 0.1) 72%, transparent 90%)',
         }} />
         {/* Bottom seamless transition */}
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[hsl(200_42%_16%)] via-[hsl(200_42%_16%_/_0.5)] to-transparent" />
