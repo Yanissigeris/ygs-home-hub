@@ -54,7 +54,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
       </>
     )}
 
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem] lg:pt-[6.5rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[3.5rem] pb-0 sm:pt-[4rem] md:pt-[4.5rem] lg:pt-[5rem]" : "pt-[3.5rem] pb-[4rem] sm:pt-[4rem] sm:pb-[4.5rem] md:pt-[4.5rem] md:pb-[5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
 
         {/* ── Text column ── */}
