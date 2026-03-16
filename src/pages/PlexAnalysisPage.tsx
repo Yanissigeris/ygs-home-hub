@@ -56,6 +56,7 @@ const PlexAnalysisPage = () => {
         trustLine="Une analyse utile et sans pression — pour vous aider à décider en connaissance de cause."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">

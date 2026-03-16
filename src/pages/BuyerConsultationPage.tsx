@@ -58,6 +58,7 @@ const BuyerConsultationPage = () => {
         trustLine="Gratuit, confidentiel et sans engagement."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">

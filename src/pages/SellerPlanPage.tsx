@@ -57,6 +57,7 @@ const SellerPlanPage = () => {
         trustLine="Un plan stratégique, pas une pitch de vente — pour vous aider à vendre au bon prix, au bon moment."
         agentImage={yanisPhoto}
         agentName="Yanis Gauthier-Sigeris"
+        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">
