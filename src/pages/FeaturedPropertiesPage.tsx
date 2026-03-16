@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-properties.jpg";
+import heroImg from "@/assets/hero-featured.jpg";
 
 const faq = [
   { q: "Comment sont sélectionnées les propriétés vedettes?", a: "Je sélectionne les propriétés selon leur emplacement, leur potentiel, leur rapport qualité-prix et leur pertinence pour les acheteurs actifs à Gatineau." },

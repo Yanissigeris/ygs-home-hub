@@ -11,7 +11,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import InlineCTA from "@/components/InlineCTA";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
-import heroImg from "@/assets/hero-buyer.jpg";
+import heroImg from "@/assets/hero-first-buyer.jpg";
 
 const considerations = [
   { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles." },

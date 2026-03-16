@@ -10,7 +10,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-military.jpg";
+import heroImg from "@/assets/hero-military-seller.jpg";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const steps = [
