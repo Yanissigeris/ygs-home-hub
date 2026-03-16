@@ -37,11 +37,15 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             loading="eager"
           />
         </div>
-        {/* Minimal brand tint — just enough for cohesion */}
-        <div className="absolute inset-0 bg-[hsl(200_42%_16%_/_0.25)]" />
-        {/* Left readability scrim — wider coverage for subtitle */}
+        {/* Minimal brand tint */}
+        <div className="absolute inset-0 bg-[hsl(200_42%_16%_/_0.2)]" />
+        {/* Left readability scrim — deep coverage for all text */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.92) 0%, hsl(200 42% 15% / 0.78) 30%, hsl(200 42% 16% / 0.45) 50%, hsl(200 42% 16% / 0.1) 72%, transparent 90%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.94) 0%, hsl(200 42% 15% / 0.85) 35%, hsl(200 42% 16% / 0.5) 55%, hsl(200 42% 16% / 0.08) 75%, transparent 92%)',
+        }} />
+        {/* Bottom-left reinforcement for subtitle/buttons */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to top, hsl(200 42% 15% / 0.7) 0%, hsl(200 42% 15% / 0.3) 35%, transparent 55%)',
         }} />
         {/* Bottom seamless transition */}
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[hsl(200_42%_16%)] via-[hsl(200_42%_16%_/_0.5)] to-transparent" />
