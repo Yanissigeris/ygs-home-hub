@@ -13,7 +13,7 @@ import ReviewStrip from "@/components/ReviewStrip";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import heroImg from "@/assets/hero-gatineau.jpg";
-import yanisHero from "@/assets/yanis-hero-cutout.png";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
 import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
 
 const heroReview = getReviewsById(["s1"])[0];
