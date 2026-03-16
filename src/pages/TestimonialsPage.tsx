@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
 import { reviews, getReviewsByCategory } from "@/data/reviews";
 import type { Review } from "@/data/reviews";
+import heroImg from "@/assets/hero-gatineau.jpg";
 
 const categories: { key: Review["category"]; label: string; title: string }[] = [
   { key: "seller", label: "Vendeurs", title: "Ils ont vendu avec confiance" },
