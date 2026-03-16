@@ -63,7 +63,7 @@ const AylmerPage = () => (
       subtitle="Lac Deschênes, parcs, écoles et communauté — Aylmer offre un cadre de vie exceptionnel à deux pas d'Ottawa."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />
