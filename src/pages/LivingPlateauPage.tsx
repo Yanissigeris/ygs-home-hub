@@ -39,7 +39,7 @@ const LivingPlateauPage = () => (
       subtitle="Découvrez le mode de vie dans le Plateau: développements récents, familles, nature et excellent rapport qualité-prix."
       primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Voir le quartier", href: "/plateau" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <CardGrid

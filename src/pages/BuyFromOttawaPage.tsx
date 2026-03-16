@@ -48,7 +48,7 @@ const BuyFromOttawaPage = () => (
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
       trustLine="Spécialiste en relocalisation Ottawa → Gatineau"
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

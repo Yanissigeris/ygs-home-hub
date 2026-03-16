@@ -63,7 +63,7 @@ const GatineauCentrePage = () => (
       subtitle="Quartier résidentiel bien établi, services complets et prix compétitifs — tout ce qu'il faut savoir sur le secteur de Gatineau."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />

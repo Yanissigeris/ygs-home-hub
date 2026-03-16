@@ -42,7 +42,7 @@ const MilitaryBuyerPage = () => (
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
       trustLine="Service adapté aux militaires. Zéro pression."
-      backgroundImage={heroImg}
+      heroBgImage={heroImg}
     />
 
     <TrustMiniStrip items={trustItems} />
