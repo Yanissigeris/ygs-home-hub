@@ -117,15 +117,17 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            {/* Soft glow behind subject */}
+            {/* Warm glow behind portrait for depth */}
+            <div className="absolute bottom-[10%] right-[15%] w-[70%] h-[60%] bg-[radial-gradient(ellipse,_hsl(36_38%_46%_/_0.12)_0%,_transparent_60%)] pointer-events-none blur-3xl" />
             <div className="absolute bottom-[15%] right-[20%] w-[60%] h-[50%] bg-[radial-gradient(ellipse,_hsl(200_35%_22%_/_0.4)_0%,_transparent_70%)] pointer-events-none blur-2xl" />
             
-            {/* Portrait with aggressive edge masking */}
+            {/* Portrait with aggressive edge masking + drop shadow for separation */}
             <div className="relative" style={{
               maskImage: 'linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to bottom, transparent 0%, black 15%), linear-gradient(to top, transparent 0%, black 4%)',
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to bottom, transparent 0%, black 15%), linear-gradient(to top, transparent 0%, black 4%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
+              filter: 'drop-shadow(0 8px 24px hsl(200 42% 8% / 0.45))',
             }}>
               <img
                 src={agentImage}
