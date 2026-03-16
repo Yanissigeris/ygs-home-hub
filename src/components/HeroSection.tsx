@@ -38,18 +38,18 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             loading="eager"
           />
         </div>
-        {/* Uniform warm-dark overlay — consistent across full width */}
+        {/* Neutral dark overlay — no teal tint */}
         <div className="absolute inset-0" style={{
-          background: '#17242B',
-          opacity: 0.65,
+          background: '#141C20',
+          opacity: 0.68,
         }} />
-        {/* Gradient scrim — stronger left for text readability */}
+        {/* Gradient scrim — strong on left text side, fades to neutral before portrait */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 14% / 0.55) 45%, hsl(200 42% 14% / 0.40) 70%, hsl(200 42% 14% / 0.35) 100%)',
+          background: 'linear-gradient(to right, #10242D 0%, hsl(210 12% 12% / 0.94) 16%, hsl(210 8% 12% / 0.70) 38%, hsl(220 4% 10% / 0.30) 55%, transparent 68%)',
         }} />
-        {/* Bottom anchor — full width */}
+        {/* Bottom anchor — neutral */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.5) 50%, transparent 100%)',
+          background: 'linear-gradient(to top, #111819 0%, hsl(210 6% 10% / 0.5) 50%, transparent 100%)',
         }} />
       </>
     )}
