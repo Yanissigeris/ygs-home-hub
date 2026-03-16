@@ -41,7 +41,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         {/* Subtle dark overlay for text readability */}
         <div className="absolute inset-0" style={{
           background: '#17242B',
-          opacity: 0.35,
+          opacity: 0.20,
         }} />
         {/* Gradient scrim — stronger left for text readability */}
         <div className="absolute inset-0" style={{
