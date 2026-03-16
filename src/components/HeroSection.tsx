@@ -143,13 +143,13 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
+              maskImage: 'linear-gradient(to top, transparent 0%, black 4%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 4%, black 100%)',
             }}>
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-[300px] sm:w-[340px] object-contain object-bottom relative z-0"
+                className="w-[320px] sm:w-[360px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                 loading="eager"
               />
             </div>
