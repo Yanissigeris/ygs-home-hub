@@ -83,7 +83,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
 
           {trustLine && (
-            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/18 font-normal">
+            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/35 font-normal">
               {trustLine}
             </p>
           )}
