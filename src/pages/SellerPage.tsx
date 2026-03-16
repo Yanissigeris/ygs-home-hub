@@ -14,7 +14,7 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
-import homeImg from "@/assets/home-interior.jpg";
+import heroImg from "@/assets/hero-seller.jpg";
 
 const painPoints = [
   { icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
