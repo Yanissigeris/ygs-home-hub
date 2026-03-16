@@ -29,6 +29,8 @@ const Index = () => (
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
+      agentImage={yanisPortrait}
+      agentName="Yanis Gauthier-Sigeris"
       heroBgImage={heroGatineauSkyline}
     />
 
