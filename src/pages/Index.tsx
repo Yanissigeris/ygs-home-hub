@@ -14,7 +14,7 @@ import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import yanisHero from "@/assets/yanis-hero-cutout.png";
-import heroLuxuryHome from "@/assets/hero-luxury-home.jpg";
+import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
 
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
