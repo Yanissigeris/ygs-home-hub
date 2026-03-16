@@ -12,8 +12,8 @@ export const reviews: Review[] = [
   // — Sellers —
   {
     id: "s1",
-    name: "Sylvie",
-    location: "Aylmer",
+    name: "Abdoulaye.",
+    location: "Gatineau",
     category: "seller",
     short: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
     full: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
@@ -31,7 +31,7 @@ export const reviews: Review[] = [
   {
     id: "s3",
     name: "Nathalie B.",
-    location: "Plateau",
+    location: "Aylmer",
     category: "seller",
     short: "La coordination vente-achat était stressante, mais Yanis a tout orchestré parfaitement.",
     full: "On devait vendre et acheter en même temps — un cauchemar logistique. Yanis a coordonné les deux transactions, géré les délais et gardé tout le monde calme. À aucun moment on s'est sentis perdus ou pressés. Un vrai pro.",
@@ -42,7 +42,7 @@ export const reviews: Review[] = [
   {
     id: "b1",
     name: "Geneviève et Salah.",
-    location: "Plateau",
+    location: "Aylmer",
     category: "buyer",
     short: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
     full: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
@@ -71,7 +71,7 @@ export const reviews: Review[] = [
   {
     id: "r1",
     name: "Alexandre.",
-    location: "Ottawa → Aylmer",
+    location: "Aylmer/Gatineau",
     category: "relocation",
     short: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
     full: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
