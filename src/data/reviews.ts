@@ -12,8 +12,8 @@ export const reviews: Review[] = [
   // — Sellers —
   {
     id: "s1",
-    name: "Sylvie",
-    location: "Aylmer",
+    name: "Abdoulaye.",
+    location: "Gatineau",
     category: "seller",
     short: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
     full: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
