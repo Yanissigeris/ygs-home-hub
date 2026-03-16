@@ -124,13 +124,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Neutral depth — no colored glow */}
-            <div className="absolute inset-0 pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 60% 80% at 50% 75%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 90% 45% at 55% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
-              `,
-            }} />
+            {/* No glow behind portrait */}
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
