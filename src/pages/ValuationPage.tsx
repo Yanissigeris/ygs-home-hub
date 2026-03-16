@@ -77,13 +77,13 @@ const ValuationPage = () => {
           </div>
         </motion.div>
 
-        <div className="section-container relative z-10 py-12 sm:py-14 md:py-16 lg:py-20">
-          <div className="grid gap-10 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
+        <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
 
             {/* ── LEFT: Value proposition ── */}
-            <motion.div className="pt-2 md:pt-6 lg:pt-10" {...anim}>
+            <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               {/* Eyebrow */}
-              <p className="mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <span>Évaluation gratuite</span>
                 <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" />
                 <span>Gatineau</span>
@@ -94,15 +94,19 @@ const ValuationPage = () => {
                 Combien vaut réellement votre propriété?
               </h1>
 
-              {/* Subtitle */}
-              <p className="mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">
+              {/* Subtitle - hidden on mobile to save space */}
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">
                 Recevez une estimation personnalisée, confidentielle et sans pression — basée sur votre propriété et les ventes comparables récentes.
               </p>
+              {/* Shorter mobile subtitle */}
+              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">
+                Estimation gratuite et confidentielle basée sur les ventes récentes.
+              </p>
 
-              {/* Trust bullets */}
-              <div className="mt-8 space-y-3">
+              {/* Trust bullets - compact on mobile */}
+              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">
                 {trustBullets.map((b) => (
-                  <div key={b.text} className="flex items-center gap-3 text-[0.875rem] text-primary-foreground/40">
+                  <div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/40">
                     <b.icon size={15} className="text-accent shrink-0" />
                     <span>{b.text}</span>
                   </div>
@@ -110,27 +114,10 @@ const ValuationPage = () => {
               </div>
 
               {/* Credibility strip */}
-              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
+              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Près de 9 ans en Outaouais</span>
               </div>
-
-              {/* Mobile portrait */}
-              <motion.div
-                className="mt-8 flex md:hidden justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div style={{
-                  maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to right, transparent 0%, black 15%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to right, transparent 0%, black 15%)',
-                  maskComposite: 'intersect',
-                  WebkitMaskComposite: 'destination-in',
-                }}>
-                  <img src={yanisPhoto} alt="Yanis Gauthier-Sigeris" className="w-[220px] opacity-30 object-contain" loading="eager" />
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* ── RIGHT: Form card ── */}
