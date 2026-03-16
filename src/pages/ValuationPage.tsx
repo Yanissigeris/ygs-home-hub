@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, CheckCircle2, Send } from "lucide-react";
+import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.png";
 
