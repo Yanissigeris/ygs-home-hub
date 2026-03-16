@@ -31,7 +31,7 @@ export const reviews: Review[] = [
   {
     id: "s3",
     name: "Nathalie B.",
-    location: "Plateau",
+    location: "Aylmer",
     category: "seller",
     short: "La coordination vente-achat était stressante, mais Yanis a tout orchestré parfaitement.",
     full: "On devait vendre et acheter en même temps — un cauchemar logistique. Yanis a coordonné les deux transactions, géré les délais et gardé tout le monde calme. À aucun moment on s'est sentis perdus ou pressés. Un vrai pro.",
