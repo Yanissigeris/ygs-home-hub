@@ -120,16 +120,26 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
+            {/* Localized atmospheric depth behind portrait */}
+            <div className="absolute inset-0 pointer-events-none" style={{
+              background: 'radial-gradient(ellipse 70% 85% at 55% 65%, hsl(200 30% 10% / 0.45) 0%, transparent 70%)',
+            }} />
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 6%), linear-gradient(to top, transparent 0%, black 6%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 6%), linear-gradient(to top, transparent 0%, black 6%)',
+              filter: 'brightness(0.94) saturate(0.88) contrast(0.96)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 16%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 10%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 22%), linear-gradient(to left, transparent 0%, black 16%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 10%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
+              {/* Contact shadow layer */}
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: 'linear-gradient(to top, hsl(200 20% 8% / 0.35) 0%, transparent 30%), linear-gradient(to right, hsl(200 20% 8% / 0.15) 0%, transparent 20%), linear-gradient(to left, hsl(200 20% 8% / 0.10) 0%, transparent 15%)',
+                zIndex: 1,
+              }} />
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom"
+                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] object-contain object-bottom relative z-0"
                 loading="eager"
               />
             </div>
@@ -144,16 +154,25 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to left, transparent 0%, black 6%), linear-gradient(to right, transparent 0%, black 6%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to left, transparent 0%, black 6%), linear-gradient(to right, transparent 0%, black 6%)',
+            {/* Mobile atmospheric depth */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
+              background: 'radial-gradient(ellipse 80% 90% at 50% 70%, hsl(200 30% 10% / 0.40) 0%, transparent 65%)',
+            }} />
+            <div className="relative" style={{
+              filter: 'brightness(0.94) saturate(0.88) contrast(0.96)',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to right, transparent 0%, black 8%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: 'linear-gradient(to top, hsl(200 20% 8% / 0.35) 0%, transparent 25%)',
+                zIndex: 1,
+              }} />
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-[270px] sm:w-[310px] object-contain object-bottom"
+                className="w-[270px] sm:w-[310px] object-contain object-bottom relative z-0"
                 loading="eager"
               />
             </div>
