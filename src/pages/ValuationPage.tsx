@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, CheckCircle2, Send } from "lucide-react";
+import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.png";
 
@@ -186,10 +186,11 @@ const ValuationPage = () => {
                       Recevoir mon évaluation gratuite
                     </Button>
 
-                    <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 pt-1 text-[0.6875rem] text-primary-foreground/25">
-                      <span className="flex items-center gap-1"><Lock size={10} /> Confidentiel</span>
-                      <span className="flex items-center gap-1"><Shield size={10} /> Sans engagement</span>
-                      <span className="flex items-center gap-1"><Clock size={10} /> Réponse en 24h</span>
+                    <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-primary-foreground/30">
+                      <span className="flex items-center gap-1.5"><BadgeCheck size={13} /> Gratuit</span>
+                      <span className="flex items-center gap-1.5"><Lock size={13} /> Confidentiel</span>
+                      <span className="flex items-center gap-1.5"><Shield size={13} /> Sans engagement</span>
+                      <span className="flex items-center gap-1.5"><Clock size={13} /> Réponse en 24h</span>
                     </div>
                   </form>
                 )}
