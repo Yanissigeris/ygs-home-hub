@@ -144,13 +144,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
-              {/* Multi-layer contact shadow — sides, bottom, shoulders */}
+              {/* Neutral contact shadow — no blue tint */}
               <div className="absolute inset-0 pointer-events-none" style={{
                 background: `
-                  linear-gradient(to top, hsl(200 18% 6% / 0.50) 0%, hsl(200 18% 6% / 0.20) 18%, transparent 35%),
-                  linear-gradient(to right, hsl(200 15% 8% / 0.30) 0%, transparent 25%),
-                  linear-gradient(to left, hsl(200 15% 8% / 0.22) 0%, transparent 20%),
-                  radial-gradient(ellipse 80% 30% at 50% 15%, hsl(200 15% 8% / 0.18) 0%, transparent 60%)
+                  linear-gradient(to top, hsl(0 0% 5% / 0.45) 0%, hsl(0 0% 5% / 0.15) 18%, transparent 32%),
+                  linear-gradient(to right, hsl(0 0% 7% / 0.25) 0%, transparent 22%),
+                  linear-gradient(to left, hsl(0 0% 7% / 0.18) 0%, transparent 18%)
                 `,
                 zIndex: 1,
               }} />
