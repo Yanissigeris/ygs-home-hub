@@ -42,7 +42,7 @@ export const reviews: Review[] = [
   {
     id: "b1",
     name: "Geneviève et Salah.",
-    location: "Plateau",
+    location: "Aylmer",
     category: "buyer",
     short: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
     full: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
