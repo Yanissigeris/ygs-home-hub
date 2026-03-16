@@ -23,10 +23,6 @@ const anim = {
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
-    {/* Subtle ambient lighting */}
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_55%_50%,_hsl(200_30%_28%_/_0.2)_0%,_transparent_65%)] pointer-events-none" />
-    {/* Top edge softener */}
-    <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/15 to-transparent pointer-events-none" />
 
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
