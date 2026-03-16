@@ -38,18 +38,18 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             loading="eager"
           />
         </div>
-        {/* Uniform warm-dark overlay — consistent across full width */}
+        {/* Neutral dark overlay — no teal tint */}
         <div className="absolute inset-0" style={{
-          background: '#17242B',
-          opacity: 0.65,
+          background: '#141C20',
+          opacity: 0.68,
         }} />
-        {/* Gradient scrim — stronger left for text readability */}
+        {/* Gradient scrim — strong on left text side, fades to neutral before portrait */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 14% / 0.55) 45%, hsl(200 42% 14% / 0.40) 70%, hsl(200 42% 14% / 0.35) 100%)',
+          background: 'linear-gradient(to right, #10242D 0%, hsl(210 12% 12% / 0.94) 16%, hsl(210 8% 12% / 0.70) 38%, hsl(220 4% 10% / 0.30) 55%, transparent 68%)',
         }} />
-        {/* Bottom anchor — full width */}
+        {/* Bottom anchor — neutral */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.5) 50%, transparent 100%)',
+          background: 'linear-gradient(to top, #111819 0%, hsl(210 6% 10% / 0.5) 50%, transparent 100%)',
         }} />
       </>
     )}
@@ -120,12 +120,11 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Asymmetric atmospheric depth — irregular, not spotlight */}
+            {/* Neutral depth — no colored glow */}
             <div className="absolute inset-0 pointer-events-none" style={{
               background: `
-                radial-gradient(ellipse 60% 80% at 50% 70%, hsl(200 25% 8% / 0.55) 0%, transparent 60%),
-                radial-gradient(ellipse 90% 50% at 65% 85%, hsl(200 20% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 40% 60% at 35% 50%, hsl(200 20% 10% / 0.25) 0%, transparent 50%)
+                radial-gradient(ellipse 60% 80% at 50% 75%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
+                radial-gradient(ellipse 90% 45% at 55% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
               `,
             }} />
             <div className="relative" style={{
@@ -145,13 +144,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
-              {/* Multi-layer contact shadow — sides, bottom, shoulders */}
+              {/* Neutral contact shadow — no blue tint */}
               <div className="absolute inset-0 pointer-events-none" style={{
                 background: `
-                  linear-gradient(to top, hsl(200 18% 6% / 0.50) 0%, hsl(200 18% 6% / 0.20) 18%, transparent 35%),
-                  linear-gradient(to right, hsl(200 15% 8% / 0.30) 0%, transparent 25%),
-                  linear-gradient(to left, hsl(200 15% 8% / 0.22) 0%, transparent 20%),
-                  radial-gradient(ellipse 80% 30% at 50% 15%, hsl(200 15% 8% / 0.18) 0%, transparent 60%)
+                  linear-gradient(to top, hsl(0 0% 5% / 0.45) 0%, hsl(0 0% 5% / 0.15) 18%, transparent 32%),
+                  linear-gradient(to right, hsl(0 0% 7% / 0.25) 0%, transparent 22%),
+                  linear-gradient(to left, hsl(0 0% 7% / 0.18) 0%, transparent 18%)
                 `,
                 zIndex: 1,
               }} />
@@ -175,8 +173,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           >
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
               background: `
-                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(200 25% 8% / 0.50) 0%, transparent 60%),
-                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(200 20% 6% / 0.35) 0%, transparent 50%)
+                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
+                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
               `,
             }} />
             <div className="relative" style={{
@@ -195,7 +193,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               WebkitMaskComposite: 'destination-in',
             }}>
               <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'linear-gradient(to top, hsl(200 18% 6% / 0.45) 0%, transparent 30%)',
+                background: 'linear-gradient(to top, hsl(0 0% 5% / 0.40) 0%, transparent 28%)',
                 zIndex: 1,
               }} />
               <img
