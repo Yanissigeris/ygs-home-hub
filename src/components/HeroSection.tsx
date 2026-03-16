@@ -23,7 +23,7 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#10242D' }}>
+  <section className="relative overflow-hidden min-h-[440px] md:min-h-[480px] lg:min-h-[520px]" style={{ background: '#10242D' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
@@ -54,14 +54,14 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
       </>
     )}
 
-    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem] lg:pt-[6.5rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
+    <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[3.5rem] pb-0 sm:pt-[4rem] md:pt-[4.5rem] lg:pt-[5rem]" : "pt-[3.5rem] pb-[4rem] sm:pt-[4rem] sm:pb-[4.5rem] md:pt-[4.5rem] md:pb-[5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
 
         {/* ── Text column ── */}
-        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[3rem] md:pb-[5.5rem] lg:pb-[6.5rem]" : ""} relative z-10`} {...fade}>
+        <motion.div className={`${(backgroundImage || agentImage) ? "" : "max-w-[40rem]"} ${agentImage ? "pb-[2.5rem] md:pb-[4rem] lg:pb-[5rem]" : ""} relative z-10`} {...fade}>
 
           {overline && (
-            <div className="mb-9 flex items-center gap-6">
+            <div className="mb-6 flex items-center gap-6">
               <span className="h-px w-8" style={{ background: 'hsl(36 38% 46% / 0.35)' }} />
               <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase" style={{ fontFamily: "'Inter', sans-serif", color: '#A7B2BA' }}>
                 {overline.replace(/[·•]/g, '  ·  ')}
@@ -71,12 +71,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           <h1 style={{ color: '#F5F1E8' }} className="leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
+          <p className="mt-5 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
             {subtitle}
           </p>
 
           {(primaryCta || secondaryCta) && (
-            <div className="mt-10 flex items-center gap-3">
+            <div className="mt-8 flex items-center gap-3">
               {primaryCta && (
                 <Button size="xl" variant="accent" className="tracking-[0.02em]" asChild>
                   <Link to={primaryCta.href}>{primaryCta.label}</Link>
@@ -91,7 +91,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
 
           {trustLine && (
-            <p className="mt-10 text-[0.75rem] tracking-[0.03em] font-normal" style={{ color: 'hsl(200 15% 55% / 0.5)' }}>
+            <p className="mt-8 text-[0.75rem] tracking-[0.03em] font-normal" style={{ color: 'hsl(200 15% 55% / 0.5)' }}>
               {trustLine}
             </p>
           )}
@@ -127,7 +127,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-full max-w-[460px] lg:max-w-[520px] xl:max-w-[580px] 2xl:max-w-[620px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+                className="w-full max-w-[380px] lg:max-w-[440px] xl:max-w-[480px] 2xl:max-w-[520px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                 loading="eager"
               />
             </div>
@@ -149,7 +149,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-[320px] sm:w-[360px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+                className="w-[280px] sm:w-[320px] object-contain object-bottom relative z-0 drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                 loading="eager"
               />
             </div>
