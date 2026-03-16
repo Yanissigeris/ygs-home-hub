@@ -142,35 +142,14 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(200 25% 8% / 0.50) 0%, transparent 60%),
-                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(200 20% 6% / 0.35) 0%, transparent 50%)
-              `,
-            }} />
             <div className="relative" style={{
-              filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
-              maskImage: `
-                linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 5%, black 12%),
-                linear-gradient(to left, transparent 0%, rgba(0,0,0,0.5) 5%, black 12%),
-                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 5%, black 12%)
-              `,
-              WebkitMaskImage: `
-                linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 5%, black 12%),
-                linear-gradient(to left, transparent 0%, rgba(0,0,0,0.5) 5%, black 12%),
-                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 5%, black 12%)
-              `,
-              maskComposite: 'intersect',
-              WebkitMaskComposite: 'destination-in',
+              maskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
+              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 5%)',
             }}>
-              <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'linear-gradient(to top, hsl(200 18% 6% / 0.45) 0%, transparent 30%)',
-                zIndex: 1,
-              }} />
               <img
                 src={agentImage}
                 alt={agentName || ""}
-                className="w-[270px] sm:w-[310px] object-contain object-bottom relative z-0"
+                className="w-[300px] sm:w-[340px] object-contain object-bottom relative z-0"
                 loading="eager"
               />
             </div>
