@@ -110,13 +110,8 @@ const MilitaryPage = () => (
       </Button>
     </ContentBlock>
 
-    <ReviewSection
-      overline="Témoignages militaires"
-      title="Ils ont réussi leur mutation immobilière"
-      reviews={getReviewsByCategory("military").slice(0, 2)}
-      columns={2}
-      background="alt"
-    />
+
+
 
     <CTASection
       dark
