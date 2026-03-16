@@ -71,7 +71,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             </p>
           )}
           <h1 className="text-primary-foreground leading-[1.06] tracking-[-0.015em]">{title}</h1>
-          <p className="mt-8 max-w-[27rem] text-[1.0625rem] leading-[1.8] text-primary-foreground/38">
+          <p className="mt-8 max-w-[27rem] text-[1.0625rem] leading-[1.8] text-primary-foreground/50">
             {subtitle}
           </p>
           {(primaryCta || secondaryCta) && (
