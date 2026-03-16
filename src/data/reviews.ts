@@ -79,11 +79,11 @@ export const reviews: Review[] = [
   },
   {
     id: "r2",
-    name: "Catherine M.",
-    location: "Montréal → Gatineau",
+    name: "John.",
+    location: "Ottawa → Gatineau",
     category: "relocation",
-    short: "Yanis m'a trouvé le quartier parfait en une semaine — sa connaissance locale est inégalée.",
-    full: "Je déménageais de Montréal et je ne connaissais pas du tout Gatineau. Yanis m'a fait un tour complet des secteurs, m'a présenté les avantages et les inconvénients de chacun, et m'a trouvé exactement ce que je cherchais en une semaine. Service exceptionnel.",
+    short: "En tant qu'acheteur ontarien, je suis très satisfait de l'aide précieuse que Yanis m'a apportée lors de l'achat de mon condo à Gatineau\u00a0! Il connaît parfaitement le marché local et sait comment faire la meilleure offre possible pour les propriétés concurrentielles au Québec. Merci beaucoup Yanis, je vous recommande vivement\u00a0!",
+    full: "En tant qu'acheteur ontarien, je suis très satisfait de l'aide précieuse que Yanis m'a apportée lors de l'achat de mon condo à Gatineau\u00a0! Il connaît parfaitement le marché local et sait comment faire la meilleure offre possible pour les propriétés concurrentielles au Québec. Merci beaucoup Yanis, je vous recommande vivement\u00a0!",
     rating: 5,
   },
 
