@@ -23,7 +23,7 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#10242D' }}>
+  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: 'hsl(0 0% 7%)' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
@@ -34,22 +34,26 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.38) saturate(0.28) contrast(0.82) sepia(0.15)' }}
+            style={{ filter: 'brightness(0.34) saturate(0.16) contrast(0.8) grayscale(0.18)' }}
             loading="eager"
           />
         </div>
-        {/* Neutral dark overlay — no teal tint */}
+        {/* Neutral dark base overlay */}
         <div className="absolute inset-0" style={{
-          background: '#141C20',
-          opacity: 0.68,
+          background: 'hsl(0 0% 8%)',
+          opacity: 0.76,
         }} />
-        {/* Gradient scrim — strong on left text side, fades to neutral before portrait */}
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #10242D 0%, hsl(210 12% 12% / 0.94) 16%, hsl(210 8% 12% / 0.70) 38%, hsl(220 4% 10% / 0.30) 55%, transparent 68%)',
+        {/* Text-side scrim only — ends before portrait */}
+        <div className="absolute inset-y-0 left-0 right-[46%]" style={{
+          background: 'linear-gradient(to right, hsl(0 0% 8% / 0.96) 0%, hsl(0 0% 8% / 0.88) 20%, hsl(0 0% 7% / 0.58) 54%, transparent 100%)',
+        }} />
+        {/* Portrait-side neutral darkening — no glow */}
+        <div className="absolute inset-y-0 left-[54%] right-0" style={{
+          background: 'linear-gradient(to right, hsl(0 0% 6% / 0.12) 0%, hsl(0 0% 5% / 0.24) 34%, hsl(0 0% 4% / 0.38) 100%)',
         }} />
         {/* Bottom anchor — neutral */}
         <div className="absolute inset-x-0 bottom-0 h-32" style={{
-          background: 'linear-gradient(to top, #111819 0%, hsl(210 6% 10% / 0.5) 50%, transparent 100%)',
+          background: 'linear-gradient(to top, hsl(0 0% 5%) 0%, hsl(0 0% 5% / 0.45) 52%, transparent 100%)',
         }} />
       </>
     )}
@@ -120,13 +124,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Neutral depth — no colored glow */}
-            <div className="absolute inset-0 pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 60% 80% at 50% 75%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 90% 45% at 55% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
-              `,
-            }} />
+            {/* No glow behind portrait */}
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
@@ -171,12 +170,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{
-              background: `
-                radial-gradient(ellipse 75% 85% at 50% 72%, hsl(0 0% 6% / 0.40) 0%, transparent 55%),
-                radial-gradient(ellipse 100% 40% at 50% 90%, hsl(0 0% 5% / 0.30) 0%, transparent 50%)
-              `,
-            }} />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[400px] pointer-events-none" style={{ background: 'transparent' }} />
             <div className="relative" style={{
               filter: 'brightness(0.90) saturate(0.82) contrast(0.93)',
               maskImage: `
