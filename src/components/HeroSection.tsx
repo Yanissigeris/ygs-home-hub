@@ -33,16 +33,16 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.42) saturate(0.5)' }}
+            style={{ filter: 'brightness(0.38) saturate(0.6)' }}
             loading="eager"
           />
         </div>
-        {/* Clean scrim — left for text, transparent right for portrait */}
+        {/* Scrim with brand petrol blue tint */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(0 0% 10% / 0.92) 0%, hsl(0 0% 12% / 0.7) 35%, hsl(0 0% 14% / 0.25) 58%, transparent 72%)',
+          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.93) 0%, hsl(200 42% 16% / 0.72) 35%, hsl(200 42% 18% / 0.3) 58%, transparent 72%)',
         }} />
         {/* Bottom anchor */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(0_0%_12%)] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(200_42%_14%)] to-transparent" />
       </>
     )}
 
