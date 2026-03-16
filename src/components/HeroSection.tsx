@@ -23,37 +23,37 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#0C1A22' }}>
+  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#0E1F28' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
-        {/* Photo — near-invisible, purely textural */}
+        {/* Photo — heavily darkened and desaturated */}
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.15) saturate(0.08) contrast(0.75) sepia(0.1)' }}
+            style={{ filter: 'brightness(0.22) saturate(0.2) contrast(0.8)' }}
             loading="eager"
           />
         </div>
-        {/* Full neutral overlay — kills any remaining color */}
+        {/* Neutral dark wash — no colored tint */}
         <div className="absolute inset-0" style={{
-          background: 'hsl(210 8% 10% / 0.7)',
+          background: 'hsl(200 20% 12% / 0.6)',
+          mixBlendMode: 'multiply',
         }} />
-        {/* Scrim — solid dark left, smooth dark transition right */}
+        {/* Gradient scrim — solid dark left for text readability */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, #0C1A22 0%, #0C1A22 12%, hsl(210 8% 11% / 0.95) 30%, hsl(210 6% 12% / 0.75) 50%, hsl(210 5% 11% / 0.65) 68%, hsl(210 4% 10% / 0.7) 100%)',
+          background: 'linear-gradient(to right, #0E1F28 0%, hsl(200 20% 13% / 0.95) 15%, hsl(200 18% 15% / 0.7) 38%, hsl(200 15% 16% / 0.4) 55%, hsl(200 10% 14% / 0.35) 70%, hsl(200 8% 13% / 0.45) 100%)',
         }} />
-        {/* Bottom anchor — full width */}
-        <div className="absolute inset-x-0 bottom-0 h-36" style={{
-          background: 'linear-gradient(to top, #0C1A22 0%, hsl(210 6% 11% / 0.8) 40%, transparent 100%)',
+        {/* Bottom anchor — full width, neutral */}
+        <div className="absolute inset-x-0 bottom-0 h-32" style={{
+          background: 'linear-gradient(to top, #0E1F28 0%, hsl(200 15% 13% / 0.6) 50%, transparent 100%)',
         }} />
-        {/* Top vignette */}
-        <div className="absolute inset-x-0 top-0 h-24" style={{
-          background: 'linear-gradient(to bottom, #0C1A22 0%, transparent 100%)',
-          opacity: 0.5,
+        {/* Right-side darkening behind portrait — neutral, no color */}
+        <div className="absolute top-0 right-0 bottom-0 w-[50%]" style={{
+          background: 'radial-gradient(ellipse 80% 90% at 70% 60%, hsl(200 8% 10% / 0.3) 0%, transparent 70%)',
         }} />
       </>
     )}
