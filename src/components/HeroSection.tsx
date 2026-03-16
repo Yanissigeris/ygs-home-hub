@@ -137,7 +137,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
                 linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 3%, rgba(0,0,0,0.7) 7%, black 14%)
               `,
               WebkitMaskImage: `
-                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 18%, black 30%),
+                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 4%, rgba(0,0,0,0.85) 10%, black 18%),
                 linear-gradient(to left, transparent 0%, rgba(0,0,0,0.4) 6%, rgba(0,0,0,0.8) 14%, black 24%),
                 linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 4%, rgba(0,0,0,0.8) 8%, black 14%),
                 linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 3%, rgba(0,0,0,0.7) 7%, black 14%)
