@@ -13,6 +13,7 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentName?: string;
+  heroBgImage?: string;
 }
 
 const anim = {
@@ -21,8 +22,29 @@ const anim = {
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName }: HeroSectionProps) => (
+const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
   <section className="hero-gradient relative overflow-hidden">
+
+    {/* Luxury background image layer */}
+    {heroBgImage && (
+      <>
+        <div className="absolute inset-0">
+          <img
+            src={heroBgImage}
+            alt=""
+            className="h-full w-full object-cover"
+            style={{ filter: 'blur(1.5px) brightness(0.18) saturate(0.45)' }}
+            loading="eager"
+          />
+        </div>
+        {/* Brand-tinted overlay for cohesion */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary/40 mix-blend-multiply" />
+        {/* Bottom fade to seamless transition */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(200_42%_16%)] to-transparent" />
+        {/* Warm accent glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_60%,_hsl(36_38%_46%_/_0.08)_0%,_transparent_70%)]" />
+      </>
+    )}
 
     <div className={`section-container relative ${compact ? "py-14 sm:py-18 md:py-20" : agentImage ? "pt-[5rem] pb-0 sm:pt-[5.5rem] md:pt-[6rem]" : "pt-[4.5rem] pb-[5.5rem] sm:pt-[5rem] sm:pb-[5.5rem] md:pt-[5.5rem] md:pb-[6.5rem]"}`}>
       <div className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[52%_48%] lg:grid-cols-[50%_50%]" : (backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : "")}`}>
@@ -95,15 +117,17 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           >
-            {/* Soft glow behind subject */}
+            {/* Warm glow behind portrait for depth */}
+            <div className="absolute bottom-[10%] right-[15%] w-[70%] h-[60%] bg-[radial-gradient(ellipse,_hsl(36_38%_46%_/_0.12)_0%,_transparent_60%)] pointer-events-none blur-3xl" />
             <div className="absolute bottom-[15%] right-[20%] w-[60%] h-[50%] bg-[radial-gradient(ellipse,_hsl(200_35%_22%_/_0.4)_0%,_transparent_70%)] pointer-events-none blur-2xl" />
             
-            {/* Portrait with aggressive edge masking */}
+            {/* Portrait with aggressive edge masking + drop shadow for separation */}
             <div className="relative" style={{
               maskImage: 'linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to bottom, transparent 0%, black 15%), linear-gradient(to top, transparent 0%, black 4%)',
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to left, transparent 0%, black 8%), linear-gradient(to bottom, transparent 0%, black 15%), linear-gradient(to top, transparent 0%, black 4%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
+              filter: 'drop-shadow(0 8px 24px hsl(200 42% 8% / 0.45))',
             }}>
               <img
                 src={agentImage}
