@@ -177,29 +177,29 @@ const SiteHeader = () => {
     <header
       className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-300 ${
         scrolled
-          ? "bg-background/98 supports-[backdrop-filter]:bg-background/90 shadow-[0_1px_8px_-3px_hsl(200_30%_14%/0.06)] border-b border-border/30"
-          : "bg-[hsl(40_15%_98%)] border-b border-border/[0.06]"
+          ? "bg-background/98 supports-[backdrop-filter]:bg-background/90 shadow-[0_1px_6px_-2px_hsl(200_30%_14%/0.06)] border-b border-border/25"
+          : "bg-[hsl(40_15%_98%)] border-b border-border/[0.04]"
       }`}
     >
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 88 : 108 }}
+        style={{ height: scrolled ? 84 : 100 }}
       >
-        {/* Logo group */}
+        {/* Logo group — intentional hierarchy */}
         <Link to="/" className="flex items-center shrink-0 mr-10 gap-5">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
             className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 72 : 88, width: "auto" }}
+            style={{ height: scrolled ? 68 : 82, width: "auto" }}
           />
-          <span className="h-8 w-px bg-border/25 shrink-0" />
+          <span className="h-7 w-px bg-border/20 shrink-0" />
           <img
             src={logoRemax}
             alt="RE/MAX"
-            className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 32 : 38, width: "auto" }}
+            className="transition-all duration-300 object-contain opacity-70"
+            style={{ height: scrolled ? 28 : 34, width: "auto" }}
           />
         </Link>
 
@@ -212,7 +212,7 @@ const SiteHeader = () => {
 
         {/* CTA */}
         <div className="shrink-0 ml-8">
-          <Button size="default" variant="accent" className="font-semibold tracking-wide whitespace-nowrap shadow-sm" asChild>
+          <Button size="default" variant="accent" className="font-semibold tracking-[0.01em] whitespace-nowrap shadow-sm" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
           </Button>
         </div>
