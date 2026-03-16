@@ -23,29 +23,35 @@ const fade = {
 };
 
 const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trustLine, compact, backgroundImage, agentImage, agentName, heroBgImage }: HeroSectionProps) => (
-  <section className="hero-gradient relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]">
+  <section className="relative overflow-hidden min-h-[540px] md:min-h-[600px] lg:min-h-[640px]" style={{ background: '#10242D' }}>
 
     {/* ── Background photograph ── */}
     {heroBgImage && (
       <>
+        {/* Photo — darkened, desaturated, tinted */}
         <div className="absolute inset-0">
           <img
             src={heroBgImage}
             alt=""
             className="h-full w-full object-cover"
-            style={{ filter: 'brightness(0.38) saturate(0.6)' }}
+            style={{ filter: 'brightness(0.30) saturate(0.35) contrast(0.85)' }}
             loading="eager"
           />
         </div>
-        {/* Scrim with brand petrol blue tint */}
+        {/* Deep teal tint overlay — unified color wash */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, hsl(200 42% 14% / 0.93) 0%, hsl(200 42% 16% / 0.72) 30%, hsl(200 42% 18% / 0.18) 50%, transparent 62%)',
+          background: 'hsl(200 42% 14% / 0.55)',
+          mixBlendMode: 'multiply',
         }} />
-        {/* Bottom anchor — only left half to avoid tinting portrait */}
-        <div className="absolute inset-x-0 bottom-0 h-28" style={{
-          background: 'linear-gradient(to top, hsl(200 42% 14% / 1) 0%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, black 50%, transparent 65%)',
-          WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 65%)',
+        {/* Gradient scrim — strong left for text, fading to transparent right */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.92) 18%, hsl(200 42% 16% / 0.65) 40%, hsl(200 42% 18% / 0.15) 60%, transparent 75%)',
+        }} />
+        {/* Bottom anchor — left-biased */}
+        <div className="absolute inset-x-0 bottom-0 h-32" style={{
+          background: 'linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.7) 50%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
+          WebkitMaskImage: 'linear-gradient(to right, black 55%, transparent 80%)',
         }} />
       </>
     )}
@@ -58,16 +64,16 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
 
           {overline && (
             <div className="mb-9 flex items-center gap-6">
-              <span className="h-px w-8 bg-accent/40" />
-              <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase text-primary-foreground/45" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <span className="h-px w-8" style={{ background: 'hsl(36 38% 46% / 0.35)' }} />
+              <p className="text-[0.6875rem] font-medium tracking-[0.22em] uppercase" style={{ fontFamily: "'Inter', sans-serif", color: '#A7B2BA' }}>
                 {overline.replace(/[·•]/g, '  ·  ')}
               </p>
             </div>
           )}
 
-          <h1 className="text-primary-foreground leading-[1.05] tracking-[-0.02em]">{title}</h1>
+          <h1 style={{ color: '#F5F1E8' }} className="leading-[1.05] tracking-[-0.02em]">{title}</h1>
 
-          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] text-primary-foreground/65 font-light">
+          <p className="mt-7 max-w-[26rem] text-[1rem] leading-[1.75] font-light" style={{ color: '#A7B2BA' }}>
             {subtitle}
           </p>
 
@@ -87,7 +93,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           )}
 
           {trustLine && (
-            <p className="mt-10 text-[0.75rem] tracking-[0.03em] text-primary-foreground/35 font-normal">
+            <p className="mt-10 text-[0.75rem] tracking-[0.03em] font-normal" style={{ color: 'hsl(200 15% 55% / 0.5)' }}>
               {trustLine}
             </p>
           )}
@@ -117,8 +123,8 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
             <div className="relative" style={{
-              maskImage: 'linear-gradient(to right, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 8%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 15%), linear-gradient(to bottom, transparent 0%, black 8%), linear-gradient(to top, transparent 0%, black 8%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 6%), linear-gradient(to top, transparent 0%, black 6%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to bottom, transparent 0%, black 6%), linear-gradient(to top, transparent 0%, black 6%)',
               maskComposite: 'intersect',
               WebkitMaskComposite: 'destination-in',
             }}>
