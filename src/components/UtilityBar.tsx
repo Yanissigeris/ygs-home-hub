@@ -57,7 +57,7 @@ const UtilityBar = () =>
         className="flex items-center gap-2 text-[0.7188rem] text-white/55 transition-colors hover:text-white/85">
         
           <Phone size={11} strokeWidth={1.5} className="text-white/35" />
-          <span>819 555-1234</span>
+          <span>819-210-3044</span>
         </a>
         <Link
         to="/evaluation-gratuite-gatineau"
