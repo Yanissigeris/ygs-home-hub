@@ -11,14 +11,7 @@ export interface NavItem {
 
 export const mainNav: NavItem[] = [
   { label: "Accueil", href: "/" },
-  {
-    label: "Propriétés",
-    children: [
-      { label: "Propriétés vedettes", href: "/proprietes-vedettes" },
-      { label: "Nouvelles inscriptions", href: "/nouvelles-inscriptions-gatineau" },
-      { label: "Vendues récemment", href: "/vendues-recemment-gatineau" },
-    ],
-  },
+  { label: "Propriétés", href: "/proprietes-vedettes" },
   {
     label: "Vendre",
     children: [
