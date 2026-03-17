@@ -31,8 +31,8 @@ const DesktopNavItem = ({
     return (
       <Link
         to={item.href!}
-        className={`relative whitespace-nowrap px-3 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
-          active ? "text-foreground" : "text-muted-foreground/70 hover:text-foreground"
+        className={`relative whitespace-nowrap px-2.5 py-2 text-[0.7813rem] font-medium tracking-[0.01em] transition-colors xl:px-3 ${
+          active ? "text-foreground" : "text-muted-foreground/65 hover:text-foreground"
         }`}
       >
         {item.label}
