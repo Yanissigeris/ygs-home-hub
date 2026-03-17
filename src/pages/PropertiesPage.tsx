@@ -8,6 +8,8 @@ import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
+import PropertyCard from "@/components/PropertyCard";
+import { properties } from "@/data/properties";
 import { Search, Star, Home, Building2, TrendingUp, MapPin, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-properties.jpg";
 
@@ -53,13 +55,18 @@ const PropertiesPage = () => (
       heroBgImage={heroImg}
     />
 
-    <ContentBlock narrow>
+    <ContentBlock narrow={false}>
       <SectionHeading
         overline="Inscriptions actives"
         title="Mes propriétés à vendre"
-        subtitle="Consultez toutes mes inscriptions actives sur RE/MAX — maisons, condos, plex et terrains à Gatineau et en Outaouais."
+        subtitle="Consultez mes inscriptions — maisons, condos, plex et terrains à Gatineau et en Outaouais."
       />
-      <div className="mt-8 flex flex-col items-center gap-4">
+      <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {properties.filter(p => p.status === "active").map(property => (
+          <PropertyCard key={property.id} property={property} />
+        ))}
+      </div>
+      <div className="mt-8 text-center">
         <a
           href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
           target="_blank"
@@ -67,15 +74,19 @@ const PropertiesPage = () => (
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
         >
           <Home className="h-5 w-5" />
-          Voir mes propriétés sur RE/MAX
+          Voir toutes mes propriétés sur RE/MAX
           <ExternalLink className="h-4 w-4" />
         </a>
-        <p className="text-sm text-muted-foreground">
-          Vous serez redirigé vers ma page courtier RE/MAX
-        </p>
       </div>
-      <p className="prose-body mt-8">
-        Chaque semaine, je repère les meilleures opportunités sur le marché de Gatineau. Contactez-moi pour recevoir une sélection personnalisée — y compris les propriétés qui ne sont pas encore publiques.
+    </ContentBlock>
+
+    <ContentBlock narrow>
+      <SectionHeading
+        overline="Accès prioritaire"
+        title="Recevez les meilleures propriétés en premier"
+      />
+      <p className="prose-body mt-5">
+        En tant que courtier actif à Gatineau depuis près de 9 ans, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
       </p>
     </ContentBlock>
 
