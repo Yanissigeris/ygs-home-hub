@@ -253,20 +253,27 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile ─── */}
-      <div className="flex sm:hidden items-center justify-between px-5" style={{ height: 70 }}>
-        <Link to="/" className="flex items-center gap-3" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" style={{ width: 44, height: 44 }} />
-          <span className="h-5 w-px bg-border/25 shrink-0" />
-          <img src={logoRemax} alt="RE/MAX" style={{ height: 24, width: "auto" }} />
+      <div className="flex h-[70px] items-center justify-between gap-3 px-4 sm:hidden">
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" onClick={closeMenu}>
+          <img src={logoYgsSymbolBlue} alt="YGS" className="h-10 w-10 shrink-0" />
+          <span className="h-4 w-px shrink-0 bg-border/25" />
+          <img src={logoRemax} alt="RE/MAX" className="h-5 w-auto shrink-0 opacity-80" />
         </Link>
-        <div className="flex items-center gap-2.5">
-          <Button size="sm" variant="accent" className="h-10 px-5 text-[0.8125rem] font-semibold tracking-wide" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+        <div className="flex shrink-0 items-center gap-2">
+          <Button
+            size="sm"
+            variant="accent"
+            className="h-11 min-w-[7.5rem] px-4 text-[0.7813rem] font-semibold tracking-[0.02em]"
+            asChild
+          >
+            <Link to="/evaluation-gratuite-gatineau">Évaluer</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-foreground hover:bg-secondary transition-colors"
-            aria-label="Menu"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/40 bg-background text-foreground transition-colors hover:bg-secondary"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -275,7 +282,7 @@ const SiteHeader = () => {
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
       {open && (
-        <nav className="animate-fade-in border-t border-border/40 bg-background lg:hidden max-h-[calc(100dvh-80px)] overflow-y-auto">
+        <nav id="mobile-navigation" className="animate-fade-in border-t border-border/40 bg-background lg:hidden max-h-[calc(100dvh-80px)] overflow-y-auto">
           <div className="px-5 pb-6 pt-3">
             {mainNav.map((item) => (
               <MobileNavGroup
