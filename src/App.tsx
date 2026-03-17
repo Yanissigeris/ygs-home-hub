@@ -70,12 +70,16 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 
 const queryClient = new QueryClient();
 
-const QueryClientProvider = React.forwardRef<
+const AppQueryClientProvider = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<typeof TanStackQueryClientProvider>
->(({ children, ...props }, _ref) => <TanStackQueryClientProvider {...props}>{children}</TanStackQueryClientProvider>);
+>(({ children, ...props }, ref) => (
+  <div ref={ref}>
+    <TanStackQueryClientProvider {...props}>{children}</TanStackQueryClientProvider>
+  </div>
+));
 
-QueryClientProvider.displayName = "QueryClientProvider";
+AppQueryClientProvider.displayName = "AppQueryClientProvider";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
