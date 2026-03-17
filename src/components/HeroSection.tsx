@@ -200,9 +200,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 className="relative"
                 style={{
                   maskImage:
-                    "linear-gradient(to top, transparent 0%, black 6%, black 90%, transparent 100%), linear-gradient(to right, transparent 2%, black 10%, black 90%, transparent 98%)",
+                    "linear-gradient(to top, transparent 0%, black 10%, black 84%, transparent 100%), linear-gradient(to right, transparent 4%, black 16%, black 84%, transparent 96%)",
                   WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 6%, black 90%, transparent 100%), linear-gradient(to right, transparent 2%, black 10%, black 90%, transparent 98%)",
+                    "linear-gradient(to top, transparent 0%, black 10%, black 84%, transparent 100%), linear-gradient(to right, transparent 4%, black 16%, black 84%, transparent 96%)",
                   maskComposite: "intersect",
                   WebkitMaskComposite: "destination-in",
                 }}
@@ -212,7 +212,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   alt={agentName || ""}
                   className="relative z-0 w-[260px] object-contain object-bottom sm:w-[300px]"
                   style={{
-                    filter: "drop-shadow(0 8px 30px rgba(16,36,45,0.4)) brightness(0.93) saturate(0.82)",
+                    filter: "drop-shadow(0 8px 30px rgba(16,36,45,0.45)) brightness(0.88) saturate(0.62)",
                   }}
                   loading="eager"
                 />
