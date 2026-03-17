@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import * as React from "react";
 
 interface PageMetaProps {
   title: string;
@@ -35,8 +35,8 @@ const ensureCanonicalLink = () => {
   return element;
 };
 
-const PageMeta = ({ title, description, canonical }: PageMetaProps) => {
-  useEffect(() => {
+const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical }, _ref) => {
+  React.useEffect(() => {
     document.title = `${title} | ${SITE}`;
 
     ensureMetaTag('meta[name="description"]', {
@@ -60,6 +60,8 @@ const PageMeta = ({ title, description, canonical }: PageMetaProps) => {
   }, [canonical, description, title]);
 
   return null;
-};
+});
+
+PageMeta.displayName = "PageMeta";
 
 export default PageMeta;
