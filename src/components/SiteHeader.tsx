@@ -259,7 +259,7 @@ const SiteHeader = () => {
         <Link to="/" className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
           <img src={logoYgsSymbolBlue} alt="YGS" className="h-9 w-9 shrink-0" />
           <span className="h-4 w-px shrink-0 bg-border/20" />
-          <img src={logoRemax} alt="RE/MAX" className="h-4.5 w-auto shrink-0 opacity-75" />
+          <img src={logoRemax} alt="RE/MAX" className="h-[18px] w-auto shrink-0 opacity-75" />
         </Link>
         <div className="flex shrink-0 items-center gap-2.5">
           <Button
