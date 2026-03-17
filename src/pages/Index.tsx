@@ -1,3 +1,4 @@
+import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
@@ -19,8 +20,8 @@ import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
-const Index = () => (
-  <>
+const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
+  <div ref={ref}>
     <PageMeta title="Courtier immobilier Gatineau" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire, conseils honnêtes et zéro pression." />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
@@ -50,8 +51,6 @@ const Index = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
-    
-
     <AboutSection />
 
     <SectorsSection />
@@ -74,7 +73,9 @@ const Index = () => (
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
-  </>
-);
+  </div>
+));
+
+Index.displayName = "Index";
 
 export default Index;
