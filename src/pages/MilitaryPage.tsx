@@ -53,7 +53,7 @@ const MilitaryPage = () => (
    <>
     <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation sans stress." />
     <HeroSection
-      overline="Service militaire · Gatineau"
+      overline="Militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau sans stress"
       subtitle="Mutation, relocalisation, achat ou vente — je connais les réalités militaires et je vous aide à naviguer le marché de Gatineau efficacement."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}

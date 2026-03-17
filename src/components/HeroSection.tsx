@@ -101,7 +101,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </div>
             )}
 
-            <h1 style={{ color: "#F5F1E8" }} className="max-w-[12ch] leading-[1.05] tracking-[-0.02em]">
+            <h1 style={{ color: "#F5F1E8" }} className="max-w-[11ch] leading-[1.05] tracking-[-0.02em] min-[391px]:max-w-[12ch]">
               {title}
             </h1>
 
