@@ -92,7 +92,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-full max-h-[28px] w-auto max-w-[72px] object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 sm:max-h-[32px] sm:max-w-[80px] lg:max-h-[30px] lg:max-w-[76px]"
+                  className={`h-full max-h-[28px] w-auto max-w-[72px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[32px] sm:max-w-[80px] lg:max-h-[30px] lg:max-w-[76px] ${logo.filter}`}
                 />
               </div>
             ))}
