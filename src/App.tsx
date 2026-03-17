@@ -70,10 +70,10 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 
 const queryClient = new QueryClient();
 
-const appRoutes = React.createElement(
-  BrowserRouter,
-  { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  <Routes>
+const routeTree = React.createElement(
+  Routes,
+  null,
+  <>
     <Route element={<SiteLayout />}>
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
@@ -120,7 +120,13 @@ const appRoutes = React.createElement(
       <Route path="/contact-yanis" element={<ContactPage />} />
     </Route>
     <Route path="*" element={<NotFound />} />
-  </Routes>,
+  </>,
+);
+
+const appRoutes = React.createElement(
+  BrowserRouter,
+  { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
+  routeTree,
 );
 
 const App = () =>
