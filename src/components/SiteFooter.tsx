@@ -11,12 +11,12 @@ import logoEnfantSoleil from "@/assets/logo-enfant-soleil.png";
 import { footerColumns } from "@/data/navigation";
 
 const secondaryLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct — Agence immobilière", height: "clamp(30px, 4vw, 40px)", mono: false },
-  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 34px)", mono: false },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 36px)", mono: false },
-  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 48px)", mono: true },
-  { src: logoTranquillit, alt: "Tranquilli-T — Programme Gallagher", height: "clamp(28px, 4vw, 36px)", mono: false },
-  { src: logoEnfantSoleil, alt: "Fière partenaire de Enfant Soleil", height: "clamp(28px, 4vw, 36px)", mono: false },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — Agence immobilière", height: "clamp(30px, 4vw, 46px)", mono: false },
+  { src: logoMW, alt: "Équipe Marty Waite", height: "clamp(26px, 3.5vw, 38px)", mono: false },
+  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", height: "clamp(28px, 4vw, 42px)", mono: false },
+  { src: logoTemple, alt: "RE/MAX Temple de la renommée", height: "clamp(36px, 5vw, 54px)", mono: true },
+  { src: logoTranquillit, alt: "Tranquilli-T — Programme Gallagher", height: "clamp(28px, 4vw, 42px)", mono: false },
+  { src: logoEnfantSoleil, alt: "Fière partenaire de Enfant Soleil", height: "clamp(28px, 4vw, 42px)", mono: false },
 ];
 
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
