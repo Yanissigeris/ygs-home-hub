@@ -8,6 +8,8 @@ import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
+import PropertyCard from "@/components/PropertyCard";
+import { properties } from "@/data/properties";
 import { Search, Star, Home, Building2, TrendingUp, MapPin, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-properties.jpg";
 
