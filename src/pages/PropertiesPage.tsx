@@ -55,12 +55,27 @@ const PropertiesPage = () => (
 
     <ContentBlock narrow>
       <SectionHeading
-        overline="Bientôt disponible"
-        title="Les propriétés arrivent bientôt"
-        subtitle="En attendant, contactez-moi directement pour recevoir une sélection personnalisée selon vos critères — vedettes, nouvelles inscriptions et ventes récentes."
+        overline="Inscriptions actives"
+        title="Mes propriétés à vendre"
+        subtitle="Consultez toutes mes inscriptions actives sur RE/MAX — maisons, condos, plex et terrains à Gatineau et en Outaouais."
       />
-      <p className="prose-body mt-5">
-        Chaque semaine, je repère les meilleures opportunités sur le marché de Gatineau. Inscrivez-vous pour les recevoir en priorité — y compris celles qui ne sont pas encore publiques.
+      <div className="mt-8 flex flex-col items-center gap-4">
+        <a
+          href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+        >
+          <Home className="h-5 w-5" />
+          Voir mes propriétés sur RE/MAX
+          <ExternalLink className="h-4 w-4" />
+        </a>
+        <p className="text-sm text-muted-foreground">
+          Vous serez redirigé vers ma page courtier RE/MAX
+        </p>
+      </div>
+      <p className="prose-body mt-8">
+        Chaque semaine, je repère les meilleures opportunités sur le marché de Gatineau. Contactez-moi pour recevoir une sélection personnalisée — y compris les propriétés qui ne sont pas encore publiques.
       </p>
     </ContentBlock>
 
