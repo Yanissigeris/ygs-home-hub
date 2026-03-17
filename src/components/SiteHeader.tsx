@@ -253,24 +253,24 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile ─── */}
-      <div className="flex h-[70px] items-center justify-between gap-3 px-4 sm:hidden">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" className="h-10 w-10 shrink-0" />
-          <span className="h-4 w-px shrink-0 bg-border/25" />
-          <img src={logoRemax} alt="RE/MAX" className="h-5 w-auto shrink-0 opacity-80" />
+      <div className="flex h-[72px] items-center justify-between gap-3 px-4 sm:hidden">
+        <Link to="/" className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
+          <img src={logoYgsSymbolBlue} alt="YGS" className="h-9 w-9 shrink-0" />
+          <span className="h-4 w-px shrink-0 bg-border/20" />
+          <img src={logoRemax} alt="RE/MAX" className="h-4.5 w-auto shrink-0 opacity-75" />
         </Link>
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2.5">
           <Button
             size="sm"
             variant="accent"
-            className="h-11 min-w-[7.5rem] px-4 text-[0.7813rem] font-semibold tracking-[0.02em]"
+            className="h-10 min-w-[7rem] px-3.5 text-[0.75rem] font-semibold tracking-[0.015em]"
             asChild
           >
             <Link to="/evaluation-gratuite-gatineau">Évaluer</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/40 bg-background text-foreground transition-colors hover:bg-secondary"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/35 bg-background text-foreground transition-colors hover:bg-secondary"
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={open}
             aria-controls="mobile-navigation"
