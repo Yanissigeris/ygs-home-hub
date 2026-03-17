@@ -2,11 +2,11 @@ import * as React from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from "@/components/ui/toast";
 
-export const Toaster = (props: React.HTMLAttributes<HTMLDivElement>) => {
+export const Toaster = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   const { toasts } = useToast();
 
   return (
-    <div {...props}>
+    <div ref={ref} {...props}>
       <ToastProvider>
         {toasts.map(function ({ id, title, description, action, ...toastProps }) {
           return (
@@ -24,4 +24,6 @@ export const Toaster = (props: React.HTMLAttributes<HTMLDivElement>) => {
       </ToastProvider>
     </div>
   );
-};
+});
+
+Toaster.displayName = "Toaster";
