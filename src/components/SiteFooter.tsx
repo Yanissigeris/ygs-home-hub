@@ -83,16 +83,16 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <p className="mb-8 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25 sm:mb-10">
             Affiliations & reconnaissances
           </p>
-          <div className="grid w-full max-w-[28rem] grid-cols-3 gap-x-6 gap-y-8 sm:max-w-[34rem] sm:gap-x-10 sm:gap-y-10 lg:max-w-[38rem] lg:grid-cols-6 lg:gap-x-8">
+          <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-8 gap-y-9 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
             {affiliationLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="flex h-10 items-center justify-center sm:h-11 lg:h-10"
+                className="flex h-11 items-center justify-center sm:h-12 lg:h-12"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className={`h-full max-h-[28px] w-auto max-w-[72px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[32px] sm:max-w-[80px] lg:max-h-[30px] lg:max-w-[76px] ${logo.filter}`}
+                  className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
                 />
               </div>
             ))}
