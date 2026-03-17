@@ -1,5 +1,5 @@
+import * as React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import cardVendreImg from "@/assets/card-vendre.jpg";
@@ -33,11 +33,11 @@ const pathways = [
   },
 ];
 
-const PathwaySection = () => (
-  <section className="section-padding bg-background">
+const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
+  <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-        className="text-center mb-14 max-w-[42rem] mx-auto"
+        className="mx-auto mb-14 max-w-[42rem] text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -45,7 +45,7 @@ const PathwaySection = () => (
       >
         <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
         <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
-        <p className="text-[1.0625rem] leading-[1.65] text-muted-foreground max-w-[38rem] mx-auto">
+        <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
           Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire.
         </p>
       </motion.div>
@@ -60,7 +60,7 @@ const PathwaySection = () => (
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <Link to={pathway.href} className="card-elevated flex flex-col h-full overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
+            <Link to={pathway.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={pathway.image}
@@ -69,20 +69,14 @@ const PathwaySection = () => (
                   loading="lazy"
                 />
               </div>
-              <div className="flex flex-col flex-1 p-7 sm:p-8">
-                <h3 className="mb-3 group-hover:text-primary transition-colors">
-                  {pathway.title}
-                </h3>
-                <p className="flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground mb-6">
-                  {pathway.text}
-                </p>
+              <div className="flex flex-1 flex-col p-7 sm:p-8">
+                <h3 className="mb-3 transition-colors group-hover:text-primary">{pathway.title}</h3>
+                <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{pathway.text}</p>
                 <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>
-                <p className="mt-4 text-[0.8125rem] text-muted-foreground/40 font-medium tracking-wide">
-                  {pathway.footer}
-                </p>
+                <p className="mt-4 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/40">{pathway.footer}</p>
               </div>
             </Link>
           </motion.div>
@@ -90,6 +84,8 @@ const PathwaySection = () => (
       </div>
     </div>
   </section>
-);
+));
+
+PathwaySection.displayName = "PathwaySection";
 
 export default PathwaySection;
