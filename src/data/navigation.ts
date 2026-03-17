@@ -87,6 +87,7 @@ export const footerColumns = [
       { label: "Ottawa → Gatineau", href: "/relocalisation-ottawa-gatineau" },
       { label: "Montréal → Gatineau", href: "/relocalisation-montreal-gatineau" },
       { label: "Militaire à Gatineau", href: "/militaire-gatineau" },
+      { label: "Guide militaire", href: "/guide-militaire-gatineau" },
       { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
     ],
   },
