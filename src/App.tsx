@@ -72,7 +72,7 @@ const queryClient = new QueryClient();
 
 
 const App = () => (
-    <AppQueryClientProvider client={queryClient}>
+    <TanStackQueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -127,7 +127,7 @@ const App = () => (
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-    </AppQueryClientProvider>
+    </TanStackQueryClientProvider>
 );
 
 export default App;
