@@ -11,12 +11,12 @@ import logoEnfantSoleil from "@/assets/logo-enfant-soleil.png";
 import { footerColumns } from "@/data/navigation";
 
 const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct" },
-  { src: logoMW, alt: "Équipe Marty Waite" },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS" },
-  { src: logoTemple, alt: "Temple de la renommée" },
-  { src: logoTranquillit, alt: "Tranquilli-T" },
-  { src: logoEnfantSoleil, alt: "Enfant Soleil" },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct", filter: "brightness-[1.3]" },
+  { src: logoMW, alt: "Équipe Marty Waite", filter: "brightness-[1.6]" },
+  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", filter: "brightness-[1.8] contrast-[1.1]" },
+  { src: logoTemple, alt: "Temple de la renommée", filter: "brightness-0 invert" },
+  { src: logoTranquillit, alt: "Tranquilli-T", filter: "brightness-[1.5]" },
+  { src: logoEnfantSoleil, alt: "Enfant Soleil", filter: "brightness-[1.4]" },
 ];
 
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
@@ -92,7 +92,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-full max-h-[28px] w-auto max-w-[72px] object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 sm:max-h-[32px] sm:max-w-[80px] lg:max-h-[30px] lg:max-w-[76px]"
+                  className={`h-full max-h-[28px] w-auto max-w-[72px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[32px] sm:max-w-[80px] lg:max-h-[30px] lg:max-w-[76px] ${logo.filter}`}
                 />
               </div>
             ))}
