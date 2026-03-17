@@ -15,11 +15,8 @@ import PlexPage from "./pages/PlexPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
-// Property pages
+// Property page
 import PropertiesPage from "./pages/PropertiesPage";
-import FeaturedPropertiesPage from "./pages/FeaturedPropertiesPage";
-import NewListingsPage from "./pages/NewListingsPage";
-import SoldRecentlyPage from "./pages/SoldRecentlyPage";
 
 // Seller funnel
 import SellerPlanPage from "./pages/SellerPlanPage";
