@@ -7,7 +7,7 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
 ];
 
-const SectorsSection = React.forwardRef<HTMLElement>((_, ref) => (
+const SectorsSection = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
     <SectorLinks overline="Gatineau et environs" title="Secteurs à surveiller" sectors={sectors} background="alt" />
   </div>
