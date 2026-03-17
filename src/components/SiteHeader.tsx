@@ -220,32 +220,34 @@ const SiteHeader = () => {
 
       {/* ─── Tablet (sm–lg) ─── */}
       <div
-        className="section-container hidden sm:flex lg:hidden items-center justify-between transition-all duration-300"
-        style={{ height: scrolled ? 78 : 90 }}
+        className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300"
+        style={{ height: scrolled ? 76 : 88 }}
       >
-        <Link to="/" className="flex items-center shrink-0 gap-4">
+        <Link to="/" className="flex min-w-0 shrink items-center gap-3.5">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
-            className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 60 : 72, width: "auto" }}
+            className="min-w-0 transition-all duration-300 object-contain"
+            style={{ height: scrolled ? 56 : 66, width: "auto" }}
           />
-          <span className="h-6 w-px bg-border/25 shrink-0" />
+          <span className="h-5 w-px shrink-0 bg-border/20" />
           <img
             src={logoRemax}
             alt="RE/MAX"
-            className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 26 : 32, width: "auto" }}
+            className="shrink-0 transition-all duration-300 object-contain opacity-80"
+            style={{ height: scrolled ? 24 : 28, width: "auto" }}
           />
         </Link>
-        <div className="flex items-center gap-3">
-          <Button size="sm" variant="accent" className="font-semibold tracking-wide" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Évaluation Gratuite</Link>
+        <div className="flex shrink-0 items-center gap-3.5">
+          <Button size="sm" variant="accent" className="h-10 px-4 font-semibold tracking-[0.02em]" asChild>
+            <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-foreground hover:bg-secondary transition-colors"
-            aria-label="Menu"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/35 text-foreground transition-colors hover:bg-secondary"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
