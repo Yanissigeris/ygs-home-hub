@@ -70,14 +70,9 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 
 const queryClient = new QueryClient();
 
-const AppQueryClientProvider = ({ children, ...props }: React.ComponentProps<typeof TanStackQueryClientProvider>) => (
-  <TanStackQueryClientProvider {...props}>{children}</TanStackQueryClientProvider>
-);
-
-AppQueryClientProvider.displayName = "AppQueryClientProvider";
 
 const App = () => (
-    <AppQueryClientProvider client={queryClient}>
+    <TanStackQueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -132,7 +127,7 @@ const App = () => (
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-    </AppQueryClientProvider>
+    </TanStackQueryClientProvider>
 );
 
 export default App;
