@@ -7,21 +7,25 @@ export const Toaster = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTM
 
   return (
     <div ref={ref} {...props}>
-      <ToastProvider>
-        {toasts.map(function ({ id, title, description, action, ...toastProps }) {
-          return (
-            <Toast key={id} {...toastProps}>
-              <div className="grid gap-1">
-                {title && <ToastTitle>{title}</ToastTitle>}
-                {description && <ToastDescription>{description}</ToastDescription>}
-              </div>
-              {action}
-              <ToastClose />
-            </Toast>
-          );
-        })}
-        <ToastViewport />
-      </ToastProvider>
+      {React.createElement(
+        ToastProvider,
+        null,
+        <>
+          {toasts.map(function ({ id, title, description, action, ...toastProps }) {
+            return (
+              <Toast key={id} {...toastProps}>
+                <div className="grid gap-1">
+                  {title && <ToastTitle>{title}</ToastTitle>}
+                  {description && <ToastDescription>{description}</ToastDescription>}
+                </div>
+                {action}
+                <ToastClose />
+              </Toast>
+            );
+          })}
+          <ToastViewport />
+        </>,
+      )}
     </div>
   );
 });
