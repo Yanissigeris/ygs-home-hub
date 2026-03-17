@@ -11,7 +11,7 @@ export interface NavItem {
 
 export const mainNav: NavItem[] = [
   { label: "Accueil", href: "/" },
-  { label: "Propriétés", href: "/proprietes-vedettes" },
+  { label: "Propriétés", href: "/proprietes" },
   {
     label: "Vendre",
     children: [

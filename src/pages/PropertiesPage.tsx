@@ -4,18 +4,12 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
-import LinkedCardGrid from "@/components/LinkedCardGrid";
 import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
-import { Search, Star, Home, MapPin, TrendingUp, Building2 } from "lucide-react";
+import RelatedPages from "@/components/RelatedPages";
+import SectorLinks from "@/components/SectorLinks";
+import { Search, Star, Home, Building2, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-properties.jpg";
-
-const features = [
-  { icon: Star, title: "Propriétés vedettes", text: "Découvrez nos coups de cœur et les meilleures opportunités du moment à Gatineau.", cta: "Voir les vedettes", href: "/proprietes-vedettes" },
-  { icon: Home, title: "Nouvelles inscriptions", text: "Soyez les premiers informés des propriétés fraîchement mises en marché.", cta: "Voir les nouvelles", href: "/nouvelles-inscriptions" },
-  { icon: TrendingUp, title: "Vendu récemment", text: "Consultez les ventes récentes pour mieux comprendre les prix.", cta: "Voir les ventes", href: "/vendu-recemment" },
-  { icon: MapPin, title: "Par secteur", text: "Explorez les propriétés par quartier — Aylmer, Hull, Plateau et plus.", cta: "Voir les quartiers", href: "/quartiers-a-considerer-a-gatineau" },
-];
 
 const profileCards = [
   { icon: Search, title: "Vous cherchez une maison", text: "Unifamiliale, jumelé, maison en rangée — trouvez la propriété qui correspond à votre profil." },
@@ -23,14 +17,31 @@ const profileCards = [
   { icon: Home, title: "Vous cherchez un condo", text: "Centre-ville, banlieue ou développement récent — les options ne manquent pas." },
 ];
 
+const sectors = [
+  { name: "Aylmer", href: "/aylmer", detail: "Lac, quartiers établis, qualité de vie" },
+  { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
+  { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Espace, nature, prix accessibles" },
+  { name: "Gatineau centre", href: "/gatineau", detail: "Résidentiel, services, banlieue" },
+];
+
 const faq = [
-  { q: "Comment recevoir les propriétés qui correspondent à mes critères?", a: "Contactez-moi avec vos critères — je vous envoie les meilleures options en priorité, y compris celles qui ne sont pas encore sur le marché." },
-  { q: "Est-ce que je peux visiter des propriétés avec vous?", a: "Bien sûr. On commence par une consultation pour clarifier vos critères, puis on organise les visites." },
+  { q: "Comment sont sélectionnées les propriétés vedettes?", a: "Je sélectionne les propriétés selon leur emplacement, leur potentiel, leur rapport qualité-prix et leur pertinence pour les acheteurs actifs à Gatineau." },
+  { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères — je vous avise dès qu'une propriété correspondante arrive sur le marché." },
+  { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui — les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
+  { q: "Où trouver les prix de vente réels à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données réelles — demandez votre évaluation gratuite." },
   { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis près de 9 ans, j'ai accès à des propriétés avant leur mise en marché officielle." },
 ];
 
+const related = [
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+  { title: "Rapport du marché", text: "Prix et tendances à Gatineau.", href: "/rapport-marche-gatineau" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau" },
+];
+
 const PropertiesPage = () => (
-   <>
+  <>
     <PageMeta title="Propriétés à vendre à Gatineau" description="Maisons, condos, plex et terrains à Gatineau. Parcourez les propriétés disponibles dans tous les secteurs de l'Outaouais." />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
@@ -42,12 +53,16 @@ const PropertiesPage = () => (
       heroBgImage={heroImg}
     />
 
-    <LinkedCardGrid
-      overline="Explorer"
-      title="Parcourez les propriétés par catégorie"
-      items={features}
-      columns={2}
-    />
+    <ContentBlock narrow>
+      <SectionHeading
+        overline="Bientôt disponible"
+        title="Les propriétés arrivent bientôt"
+        subtitle="En attendant, contactez-moi directement pour recevoir une sélection personnalisée selon vos critères — vedettes, nouvelles inscriptions et ventes récentes."
+      />
+      <p className="prose-body mt-5">
+        Chaque semaine, je repère les meilleures opportunités sur le marché de Gatineau. Inscrivez-vous pour les recevoir en priorité — y compris celles qui ne sont pas encore publiques.
+      </p>
+    </ContentBlock>
 
     <CardGrid
       overline="Votre profil"
@@ -67,6 +82,13 @@ const PropertiesPage = () => (
       </p>
     </ContentBlock>
 
+    <SectorLinks
+      overline="Par secteur"
+      title="Propriétés par quartier"
+      sectors={sectors}
+      background="alt"
+    />
+
     <InlineCTA
       text="Vous vendez? Découvrez combien vaut votre propriété — c'est gratuit."
       buttonLabel="Obtenir ma valeur →"
@@ -74,6 +96,12 @@ const PropertiesPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <RelatedPages
+      title="Explorer aussi"
+      pages={related}
+      background="alt"
+    />
 
     <CTASection
       dark
