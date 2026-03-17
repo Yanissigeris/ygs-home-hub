@@ -32,8 +32,7 @@ export const properties: Property[] = [
     yearBuilt: "1995",
     description:
       "Un vrai coin de nature à quelques minutes de la ville : terrain boisé de 45 793 pi², sans voisins arrière, offrant intimité, calme et un mode de vie axé sur le plein air. Maison modernisée de 3 chambres, concept aire ouverte, garage et stationnement pour plusieurs véhicules.",
-    image:
-      "https://mediaserver.remax-quebec.com/media/pub/10/6/28743871_1.jpg",
+    image: "/placeholder.svg",
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
@@ -51,8 +50,7 @@ export const properties: Property[] = [
     yearBuilt: "2004",
     description:
       "Condo rez-de-chaussée sans escaliers, idéal pour accessibilité. Cuisine accueillante, planchers bois franc et céramique, grande salle de bain avec douche et bain séparés. Grand balcon, 2 stationnements extérieurs. Près du Parc Moussette et des sentiers riverains.",
-    image:
-      "https://mediaserver.remax-quebec.com/media/pub/10/6/20453879_1.jpg",
+    image: "/placeholder.svg",
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/condo-for-sale/154-boul-de-lucerne-gatineau-hull-manoir-des-trembles-20453879",
     mls: "20453879",
