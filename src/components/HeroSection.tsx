@@ -115,7 +115,7 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
         {/* ── Portrait — desktop/tablet ── */}
         {agentImage &&
       <motion.div
-        className="hidden md:flex justify-end items-end self-end relative"
+        className="relative hidden self-end md:flex md:justify-end md:items-end"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}>
@@ -124,12 +124,12 @@ const HeroSection = ({ overline, title, subtitle, primaryCta, secondaryCta, trus
           maskImage: 'linear-gradient(to top, transparent 0%, black 4%, black 100%)',
           WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 4%, black 100%)'
         }}>
-              
-
-
-
-
-          
+              <img
+            src={agentImage}
+            alt={agentName || ""}
+            className="relative z-0 h-auto w-[320px] object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.32)] lg:w-[420px] xl:w-[460px]"
+            loading="eager" />
+            
             </div>
           </motion.div>
       }
