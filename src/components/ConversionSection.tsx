@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -24,11 +25,11 @@ const steps = [
   },
 ];
 
-const ConversionSection = () => (
-  <section className="section-padding bg-background">
+const ConversionSection = React.forwardRef<HTMLElement>((_, ref) => (
+  <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-        className="text-center mb-12"
+        className="mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -38,7 +39,7 @@ const ConversionSection = () => (
         <h2>Trois étapes vers une transaction réussie</h2>
       </motion.div>
 
-      <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-3 sm:gap-7">
         {steps.map((step, i) => (
           <motion.div
             key={step.title}
@@ -47,18 +48,11 @@ const ConversionSection = () => (
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link
-              to={step.href}
-              className="card-elevated group flex flex-col items-start border border-border/40 bg-card p-7 sm:p-8 h-full"
-            >
-              <span className="text-[2rem] font-heading font-bold text-accent/20 mb-4 leading-none">
-                {step.number}
-              </span>
+            <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8">
+              <span className="mb-4 font-heading text-[2rem] leading-none text-accent/20">{step.number}</span>
               <h3 className="text-[1.125rem] font-semibold">{step.title}</h3>
-              <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">
-                {step.text}
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{step.text}</p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-primary opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 En savoir plus <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </span>
             </Link>
@@ -73,7 +67,7 @@ const ConversionSection = () => (
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
-        <Button size="lg" variant="accent" className="shadow-sm font-semibold" asChild>
+        <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild>
           <Link to="/evaluation-gratuite-gatineau">
             Commencer par une évaluation gratuite
             <ArrowRight size={15} className="ml-1" />
@@ -85,6 +79,8 @@ const ConversionSection = () => (
       </motion.div>
     </div>
   </section>
-);
+));
+
+ConversionSection.displayName = "ConversionSection";
 
 export default ConversionSection;

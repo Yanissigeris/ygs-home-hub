@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -7,8 +8,8 @@ interface InlineCTAProps {
   href: string;
 }
 
-const InlineCTA = ({ text, buttonLabel, href }: InlineCTAProps) => (
-  <section className="cta-band">
+const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonLabel, href }, ref) => (
+  <section ref={ref} className="cta-band">
     <div className="section-container">
       <p>{text}</p>
       <Button size="default" variant="hero" asChild>
@@ -16,6 +17,8 @@ const InlineCTA = ({ text, buttonLabel, href }: InlineCTAProps) => (
       </Button>
     </div>
   </section>
-);
+));
+
+InlineCTA.displayName = "InlineCTA";
 
 export default InlineCTA;

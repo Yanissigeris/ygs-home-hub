@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -7,8 +8,8 @@ const items = [
   { icon: Shield, text: "Près de 9 ans d'expérience en Outaouais" },
 ];
 
-const TrustStrip = () => (
-  <section className="border-b border-border/40 bg-secondary/40">
+const TrustStrip = React.forwardRef<HTMLElement>((_, ref) => (
+  <section ref={ref} className="border-b border-border/40 bg-secondary/40">
     <div className="section-container py-5 sm:py-6">
       <motion.div
         className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
@@ -18,13 +19,15 @@ const TrustStrip = () => (
       >
         {items.map((item) => (
           <div key={item.text} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
-            <item.icon size={14} className="text-accent shrink-0" />
+            <item.icon size={14} className="shrink-0 text-accent" />
             <span>{item.text}</span>
           </div>
         ))}
       </motion.div>
     </div>
   </section>
-);
+));
+
+TrustStrip.displayName = "TrustStrip";
 
 export default TrustStrip;
