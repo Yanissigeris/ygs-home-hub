@@ -47,7 +47,7 @@ const PropertiesPage = () => (
     <PageMeta title="Propriétés à vendre à Gatineau" description="Maisons, condos, plex et terrains à Gatineau. Parcourez les propriétés disponibles dans tous les secteurs de l'Outaouais." />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
-      title="Trouvez votre propriété à Gatineau"
+      title="Trouvez votre propriété en Outaouais"
       subtitle="Maisons, condos, plex et terrains — parcourez les propriétés disponibles dans tous les secteurs de Gatineau et de l'Outaouais."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
