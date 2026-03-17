@@ -156,9 +156,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 className="relative"
                 style={{
                   maskImage:
-                    "linear-gradient(to top, transparent 0%, black 6%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+                    "linear-gradient(to top, transparent 0%, black 10%, black 82%, transparent 100%), linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
                   WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 6%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+                    "linear-gradient(to top, transparent 0%, black 10%, black 82%, transparent 100%), linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
                   maskComposite: "intersect",
                   WebkitMaskComposite: "destination-in",
                 }}
@@ -168,7 +168,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   alt={agentName || ""}
                   className="relative z-0 h-auto w-[320px] object-contain object-bottom lg:w-[420px] xl:w-[460px]"
                   style={{
-                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.45)) brightness(0.95) saturate(0.85)",
+                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.5)) brightness(0.90) saturate(0.65)",
                     mixBlendMode: "luminosity",
                   }}
                   loading="eager"
@@ -180,8 +180,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   aria-hidden="true"
                   className="absolute inset-0 z-[1] h-auto w-[320px] object-contain object-bottom lg:w-[420px] xl:w-[460px]"
                   style={{
-                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.45)) brightness(0.92) saturate(0.80)",
-                    opacity: 0.85,
+                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.5)) brightness(0.88) saturate(0.60)",
+                    opacity: 0.7,
                   }}
                   loading="eager"
                 />
