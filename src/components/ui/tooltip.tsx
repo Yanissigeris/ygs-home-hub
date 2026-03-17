@@ -4,7 +4,7 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { cn } from "@/lib/utils";
 
 const TooltipProvider = ({ children, ...props }: React.ComponentProps<typeof TooltipPrimitive.Provider>) =>
-  React.createElement(TooltipPrimitive.Provider, props, children);
+  React.createElement(TooltipPrimitive.Provider, { ...props, children });
 
 const Tooltip = TooltipPrimitive.Root;
 
