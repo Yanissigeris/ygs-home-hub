@@ -15,11 +15,8 @@ import PlexPage from "./pages/PlexPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
-// Property pages
+// Property page
 import PropertiesPage from "./pages/PropertiesPage";
-import FeaturedPropertiesPage from "./pages/FeaturedPropertiesPage";
-import NewListingsPage from "./pages/NewListingsPage";
-import SoldRecentlyPage from "./pages/SoldRecentlyPage";
 
 // Seller funnel
 import SellerPlanPage from "./pages/SellerPlanPage";
@@ -77,9 +74,11 @@ const routeTree = React.createElement(
     <Route element={<SiteLayout />}>
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
-      <Route path="/proprietes-vedettes" element={<FeaturedPropertiesPage />} />
-      <Route path="/nouvelles-inscriptions" element={<NewListingsPage />} />
-      <Route path="/vendu-recemment" element={<SoldRecentlyPage />} />
+      <Route path="/proprietes-vedettes" element={<PropertiesPage />} />
+      <Route path="/nouvelles-inscriptions" element={<PropertiesPage />} />
+      <Route path="/nouvelles-inscriptions-gatineau" element={<PropertiesPage />} />
+      <Route path="/vendu-recemment" element={<PropertiesPage />} />
+      <Route path="/vendues-recemment-gatineau" element={<PropertiesPage />} />
       <Route path="/vendre-ma-maison-gatineau" element={<SellerPage />} />
       <Route path="/evaluation-gratuite-gatineau" element={<ValuationPage />} />
       <Route path="/plan-vendeur-gatineau" element={<SellerPlanPage />} />
