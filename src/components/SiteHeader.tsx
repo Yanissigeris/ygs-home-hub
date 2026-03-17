@@ -184,35 +184,35 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div
         className="section-container hidden lg:flex items-center transition-all duration-300"
-        style={{ height: scrolled ? 80 : 96 }}
+        style={{ height: scrolled ? 78 : 92 }}
       >
         {/* Logo group — clear hierarchy */}
-        <Link to="/" className="flex items-center shrink-0 mr-12 gap-4">
+        <Link to="/" className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
           <img
             src={logoYgsHorizontal}
             alt="YGS — Yanis Gauthier-Sigeris"
-            className="transition-all duration-300 object-contain"
-            style={{ height: scrolled ? 64 : 76, width: "auto" }}
+            className="object-contain transition-all duration-300"
+            style={{ height: scrolled ? 60 : 70, width: "auto" }}
           />
-          <span className="h-6 w-px bg-border/15 shrink-0" />
+          <span className="h-5 w-px shrink-0 bg-border/12" />
           <img
             src={logoRemax}
             alt="RE/MAX"
-            className="transition-all duration-300 object-contain opacity-55"
-            style={{ height: scrolled ? 26 : 30, width: "auto" }}
+            className="object-contain opacity-50 transition-all duration-300"
+            style={{ height: scrolled ? 24 : 28, width: "auto" }}
           />
         </Link>
 
         {/* Nav */}
-        <nav className="flex-1 flex items-center justify-center gap-0.5">
+        <nav className="flex flex-1 items-center justify-center gap-0">
           {mainNav.map((item) => (
             <DesktopNavItem key={item.label} item={item} pathname={location.pathname} />
           ))}
         </nav>
 
         {/* CTA */}
-        <div className="shrink-0 ml-10">
-          <Button size="default" variant="accent" className="font-semibold tracking-[0.015em] whitespace-nowrap" asChild>
+        <div className="ml-8 shrink-0 xl:ml-10">
+          <Button size="default" variant="accent" className="h-10 px-5 text-[0.7813rem] font-semibold tracking-[0.0125em] whitespace-nowrap" asChild>
             <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
           </Button>
         </div>
