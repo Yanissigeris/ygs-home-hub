@@ -46,8 +46,8 @@ const DesktopNavItem = ({
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button
-        className={`flex items-center gap-1 whitespace-nowrap px-3 py-2 text-[0.8125rem] font-medium tracking-[0.01em] transition-colors ${
-          isChildActive ? "text-foreground" : "text-muted-foreground/70 hover:text-foreground"
+        className={`flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-[0.7813rem] font-medium tracking-[0.01em] transition-colors xl:px-3 ${
+          isChildActive ? "text-foreground" : "text-muted-foreground/65 hover:text-foreground"
         }`}
         onClick={() => setOpen((p) => !p)}
         aria-expanded={open}
