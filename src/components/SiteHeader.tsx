@@ -282,7 +282,7 @@ const SiteHeader = () => {
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
       {open && (
-        <nav className="animate-fade-in border-t border-border/40 bg-background lg:hidden max-h-[calc(100dvh-80px)] overflow-y-auto">
+        <nav id="mobile-navigation" className="animate-fade-in border-t border-border/40 bg-background lg:hidden max-h-[calc(100dvh-80px)] overflow-y-auto">
           <div className="px-5 pb-6 pt-3">
             {mainNav.map((item) => (
               <MobileNavGroup
