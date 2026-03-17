@@ -39,4 +39,23 @@ export const properties: Property[] = [
     mls: "28743871",
     status: "active",
   },
+  {
+    id: "20453879",
+    address: "154 Boul. de Lucerne, app. 104",
+    city: "Gatineau (Hull)",
+    price: "369 900 $",
+    type: "Condo — Appartement",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "1 037 pi²",
+    yearBuilt: "2004",
+    description:
+      "Condo rez-de-chaussée sans escaliers, idéal pour accessibilité. Cuisine accueillante, planchers bois franc et céramique, grande salle de bain avec douche et bain séparés. Grand balcon, 2 stationnements extérieurs. Près du Parc Moussette et des sentiers riverains.",
+    image:
+      "https://mediaserver.remax-quebec.com/media/pub/10/6/20453879_1.jpg",
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/condo-for-sale/154-boul-de-lucerne-gatineau-hull-manoir-des-trembles-20453879",
+    mls: "20453879",
+    status: "active",
+  },
 ];
