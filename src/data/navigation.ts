@@ -12,6 +12,14 @@ export interface NavItem {
 export const mainNav: NavItem[] = [
   { label: "Accueil", href: "/" },
   {
+    label: "Propriétés",
+    children: [
+      { label: "Propriétés vedettes", href: "/proprietes-vedettes" },
+      { label: "Nouvelles inscriptions", href: "/nouvelles-inscriptions-gatineau" },
+      { label: "Vendues récemment", href: "/vendues-recemment-gatineau" },
+    ],
+  },
+  {
     label: "Vendre",
     children: [
       { label: "Vendre à Gatineau", href: "/vendre-ma-maison-gatineau" },
@@ -48,14 +56,6 @@ export const mainNav: NavItem[] = [
       { label: "Plex / Investissement", href: "/investir-plex-gatineau" },
       { label: "Analyse plex", href: "/analyse-plex-gatineau" },
       { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
-    ],
-  },
-  {
-    label: "Propriétés",
-    children: [
-      { label: "Propriétés vedettes", href: "/proprietes-vedettes" },
-      { label: "Nouvelles inscriptions", href: "/nouvelles-inscriptions-gatineau" },
-      { label: "Vendues récemment", href: "/vendues-recemment-gatineau" },
     ],
   },
   {
