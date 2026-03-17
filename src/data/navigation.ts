@@ -51,6 +51,14 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
+    label: "Propriétés",
+    children: [
+      { label: "Propriétés vedettes", href: "/proprietes-vedettes" },
+      { label: "Nouvelles inscriptions", href: "/nouvelles-inscriptions-gatineau" },
+      { label: "Vendues récemment", href: "/vendues-recemment-gatineau" },
+    ],
+  },
+  {
     label: "Quartiers",
     children: [
       { label: "Tous les quartiers", href: "/quartiers-a-considerer-a-gatineau" },
@@ -58,16 +66,6 @@ export const mainNav: NavItem[] = [
       { label: "Hull", href: "/hull" },
       { label: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers" },
       { label: "Gatineau centre", href: "/gatineau" },
-    ],
-  },
-  {
-    label: "Ressources",
-    children: [
-      { label: "Tous les guides", href: "/ressources" },
-      { label: "Guide vendeur", href: "/guide-vendeur-gatineau" },
-      { label: "Guide acheteur", href: "/guide-acheteur-gatineau" },
-      { label: "Rapport du marché", href: "/rapport-marche-gatineau" },
-      { label: "FAQ", href: "/faq" },
     ],
   },
   { label: "À propos", href: "/contact-yanis" },
