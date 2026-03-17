@@ -57,7 +57,7 @@ const RelocationPage = () => (
    <>
     <PageMeta title="Relocalisation Ottawa vers Gatineau" description="Déménager d'Ottawa à Gatineau? Guide complet: quartiers, taxes, écoles et accompagnement immobilier personnalisé." />
     <HeroSection
-      overline="Relocalisation · Ottawa → Gatineau"
+      overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
       subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété — sans stress."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
