@@ -155,34 +155,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <div
                 className="relative"
                 style={{
-                  maskImage:
-                    "linear-gradient(to top, transparent 0%, black 10%, black 82%, transparent 100%), linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
-                  WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 10%, black 82%, transparent 100%), linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
-                  maskComposite: "intersect",
-                  WebkitMaskComposite: "destination-in",
+                  maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
+                  WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
                 }}
               >
                 <img
                   src={agentImage}
                   alt={agentName || ""}
-                  className="relative z-0 h-auto w-[320px] object-contain object-bottom lg:w-[420px] xl:w-[460px]"
-                  style={{
-                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.5)) brightness(0.90) saturate(0.65)",
-                    mixBlendMode: "luminosity",
-                  }}
-                  loading="eager"
-                />
-                {/* Color restoration layer */}
-                <img
-                  src={agentImage}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 z-[1] h-auto w-[320px] object-contain object-bottom lg:w-[420px] xl:w-[460px]"
-                  style={{
-                    filter: "drop-shadow(0 10px 40px rgba(16,36,45,0.5)) brightness(0.88) saturate(0.60)",
-                    opacity: 0.7,
-                  }}
+                  className="relative z-0 h-auto w-[320px] object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.32)] lg:w-[420px] xl:w-[460px]"
                   loading="eager"
                 />
               </div>
@@ -199,21 +179,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <div
                 className="relative"
                 style={{
-                  maskImage:
-                    "linear-gradient(to top, transparent 0%, black 10%, black 84%, transparent 100%), linear-gradient(to right, transparent 4%, black 16%, black 84%, transparent 96%)",
-                  WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 10%, black 84%, transparent 100%), linear-gradient(to right, transparent 4%, black 16%, black 84%, transparent 96%)",
-                  maskComposite: "intersect",
-                  WebkitMaskComposite: "destination-in",
+                  maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
+                  WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
                 }}
               >
                 <img
                   src={agentImage}
                   alt={agentName || ""}
-                  className="relative z-0 w-[260px] object-contain object-bottom sm:w-[300px]"
-                  style={{
-                    filter: "drop-shadow(0 8px 30px rgba(16,36,45,0.45)) brightness(0.88) saturate(0.62)",
-                  }}
+                  className="relative z-0 w-[260px] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
                   loading="eager"
                 />
               </div>
