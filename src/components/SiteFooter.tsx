@@ -44,19 +44,20 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.14em] opacity-30">
                 Affiliations et reconnaissances
               </p>
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
+              <div className="grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:flex sm:flex-wrap sm:gap-x-10 sm:gap-y-5">
                 {secondaryLogos.map((logo) => (
-                  <img
-                    key={logo.alt}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={`w-auto shrink-0 opacity-85 transition-all duration-300 hover:opacity-100 ${
-                      logo.mono
-                        ? "brightness-0 invert hover:brightness-0"
-                        : "brightness-[1.8] hover:brightness-[2.2]"
-                    }`}
-                    style={{ height: logo.height }}
-                  />
+                  <div key={logo.alt} className="flex items-center justify-start sm:block">
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className={`w-auto shrink-0 opacity-85 transition-all duration-300 hover:opacity-100 ${
+                        logo.mono
+                          ? "brightness-0 invert hover:brightness-0"
+                          : "brightness-[1.8] hover:brightness-[2.2]"
+                      }`}
+                      style={{ height: logo.height }}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
