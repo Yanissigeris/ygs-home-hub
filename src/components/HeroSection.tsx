@@ -15,6 +15,8 @@ interface HeroSectionProps {
   agentImage?: string;
   agentName?: string;
   heroBgImage?: string;
+  heroVideo?: string;
+  heroVideoPoster?: string;
 }
 
 const fade = {
@@ -37,6 +39,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       agentImage,
       agentName,
       heroBgImage,
+      heroVideo,
+      heroVideoPoster,
     },
     ref,
   ) => (
@@ -45,7 +49,41 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       className="relative min-h-[400px] overflow-x-clip overflow-y-hidden md:min-h-[440px] lg:min-h-[480px]"
       style={{ background: "#10242D" }}
     >
-      {heroBgImage && (
+      {/* VIDEO BACKGROUND LAYER */}
+      {heroVideo && (
+        <>
+          <div className="absolute inset-0 overflow-hidden">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={heroVideoPoster || heroBgImage}
+              className="h-full w-full object-cover"
+              style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+          </div>
+          {/* Dark petrol / navy overlay — stronger left, smoother right */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, hsl(200 42% 11% / 0.92) 0%, hsl(200 42% 13% / 0.78) 25%, hsl(200 42% 14% / 0.55) 50%, hsl(200 42% 14% / 0.40) 75%, hsl(200 42% 14% / 0.35) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-32"
+            style={{
+              background: "linear-gradient(to top, #10242D 0%, hsl(200 42% 14% / 0.5) 50%, transparent 100%)",
+            }}
+          />
+        </>
+      )}
+
+      {/* STATIC IMAGE BACKGROUND LAYER (fallback when no video) */}
+      {heroBgImage && !heroVideo && (
         <>
           <div className="absolute inset-0 overflow-hidden">
             <img
@@ -85,8 +123,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         <div
           className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : ""}`}
         >
+          {/* TEXT + CTA LAYER (z-20 to stay above everything) */}
           <motion.div
-            className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${agentImage ? "pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" : ""} relative z-10 min-w-0`}
+            className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${agentImage ? "pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" : ""} relative z-20 min-w-0`}
             {...fade}
           >
             {overline && (
@@ -145,9 +184,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </motion.div>
           )}
 
+          {/* PORTRAIT LAYER — z-10 to stay above video/overlay, below text */}
           {agentImage && (
             <motion.div
-              className="relative hidden self-end md:flex md:items-end md:justify-end"
+              className="relative z-10 hidden self-end md:flex md:items-end md:justify-end"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
@@ -169,9 +209,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </motion.div>
           )}
 
+          {/* PORTRAIT — MOBILE */}
           {agentImage && (
             <motion.div
-              className="flex justify-center items-end overflow-hidden md:hidden"
+              className="relative z-10 flex justify-center items-end overflow-hidden md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
