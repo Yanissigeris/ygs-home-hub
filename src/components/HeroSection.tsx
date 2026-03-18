@@ -88,7 +88,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               poster={heroVideoPoster || heroBgImage}
               src={heroVideo}
               className="h-full w-full object-cover"
-              style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
+              style={{ filter: "brightness(0.72) saturate(0.7) contrast(1.05)" }}
             />
           </motion.div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
@@ -96,7 +96,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to right, hsl(200 42% 11% / 0.92) 0%, hsl(200 42% 13% / 0.78) 25%, hsl(200 42% 14% / 0.55) 50%, hsl(200 42% 14% / 0.40) 75%, hsl(200 42% 14% / 0.35) 100%)",
+                "linear-gradient(to right, hsl(200 42% 11% / 0.88) 0%, hsl(200 42% 13% / 0.72) 25%, hsl(200 42% 14% / 0.45) 50%, hsl(200 42% 14% / 0.30) 75%, hsl(200 42% 14% / 0.22) 100%)",
             }}
           />
           <div
@@ -116,7 +116,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               src={heroBgImage}
               alt=""
               className="h-full w-full object-cover"
-              style={{ filter: "brightness(0.90) saturate(0.80) contrast(0.95)" }}
+              style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
               loading="eager"
             />
           </motion.div>
