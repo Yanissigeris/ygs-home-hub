@@ -6,6 +6,18 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import SiteLayout from "@/components/SiteLayout";
 
+// Preload critical hero assets so they're cached across navigations
+import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
+import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
+
+const preloadImage = (src: string) => {
+  const img = new Image();
+  img.src = src;
+};
+if (typeof window !== "undefined") {
+  preloadImage(yanisPortrait);
+  preloadImage(heroGatineauSkyline);
+}
 // Core pages
 import Index from "./pages/Index";
 import SellerPage from "./pages/SellerPage";
