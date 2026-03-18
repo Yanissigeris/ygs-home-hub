@@ -71,9 +71,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo && (
         <>
-          <div
-            className="absolute inset-0 overflow-hidden"
+          <motion.div
+            className="absolute inset-x-0 top-0 bottom-0 overflow-hidden"
             style={{
+              y: bgY,
               backgroundImage: heroBgImage ? `url(${heroBgImage})` : undefined,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -89,7 +90,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
             />
-          </div>
+          </motion.div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
           <div
             className="absolute inset-0"
@@ -110,7 +111,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* STATIC IMAGE BACKGROUND LAYER (fallback when no video) */}
       {heroBgImage && !heroVideo && (
         <>
-          <div className="absolute inset-0 overflow-hidden">
+          <motion.div className="absolute inset-x-0 top-0 bottom-0 overflow-hidden" style={{ y: bgY }}>
             <img
               src={heroBgImage}
               alt=""
@@ -118,7 +119,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{ filter: "brightness(0.90) saturate(0.80) contrast(0.95)" }}
               loading="eager"
             />
-          </div>
+          </motion.div>
           <div
             className="absolute inset-0"
             style={{
