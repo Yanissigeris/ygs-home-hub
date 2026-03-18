@@ -116,7 +116,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               src={heroBgImage}
               alt=""
               className="h-full w-full object-cover"
-              style={{ filter: "brightness(0.90) saturate(0.80) contrast(0.95)" }}
+              style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
               loading="eager"
             />
           </motion.div>
