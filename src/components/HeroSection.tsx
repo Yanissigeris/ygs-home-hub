@@ -261,7 +261,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         </div>
       </div>
     </section>
-  ),
+    );
+  },
 );
 
 HeroSection.displayName = "HeroSection";
