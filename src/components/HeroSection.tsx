@@ -43,9 +43,28 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       heroVideoPoster,
     },
     ref,
-  ) => (
+  ) => {
+    const sectionRef = React.useRef<HTMLElement>(null);
+    const combinedRef = React.useCallback(
+      (node: HTMLElement | null) => {
+        (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
+      },
+      [ref],
+    );
+
+    const { scrollYProgress } = useScroll({
+      target: sectionRef,
+      offset: ["start start", "end start"],
+    });
+
+    // Background moves at 30% of scroll speed → subtle parallax
+    const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+
+    return (
     <section
-      ref={ref}
+      ref={combinedRef}
       className="relative min-h-[400px] overflow-x-clip overflow-y-hidden md:min-h-[440px] lg:min-h-[480px]"
       style={{ background: "#10242D" }}
     >
