@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface HeroSectionProps {
   overline?: string;
@@ -43,18 +43,38 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       heroVideoPoster,
     },
     ref,
-  ) => (
+  ) => {
+    const sectionRef = React.useRef<HTMLElement>(null);
+    const combinedRef = React.useCallback(
+      (node: HTMLElement | null) => {
+        (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
+      },
+      [ref],
+    );
+
+    const { scrollYProgress } = useScroll({
+      target: sectionRef,
+      offset: ["start start", "end start"],
+    });
+
+    // Background moves at 30% of scroll speed → subtle parallax
+    const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+
+    return (
     <section
-      ref={ref}
+      ref={combinedRef}
       className="relative min-h-[400px] overflow-x-clip overflow-y-hidden md:min-h-[440px] lg:min-h-[480px]"
       style={{ background: "#10242D" }}
     >
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo && (
         <>
-          <div
-            className="absolute inset-0 overflow-hidden"
+          <motion.div
+            className="absolute inset-x-0 top-0 bottom-0 overflow-hidden"
             style={{
+              y: bgY,
               backgroundImage: heroBgImage ? `url(${heroBgImage})` : undefined,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -70,7 +90,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
             />
-          </div>
+          </motion.div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
           <div
             className="absolute inset-0"
@@ -91,7 +111,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* STATIC IMAGE BACKGROUND LAYER (fallback when no video) */}
       {heroBgImage && !heroVideo && (
         <>
-          <div className="absolute inset-0 overflow-hidden">
+          <motion.div className="absolute inset-x-0 top-0 bottom-0 overflow-hidden" style={{ y: bgY }}>
             <img
               src={heroBgImage}
               alt=""
@@ -99,7 +119,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{ filter: "brightness(0.90) saturate(0.80) contrast(0.95)" }}
               loading="eager"
             />
-          </div>
+          </motion.div>
           <div
             className="absolute inset-0"
             style={{
@@ -242,7 +262,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         </div>
       </div>
     </section>
-  ),
+    );
+  },
 );
 
 HeroSection.displayName = "HeroSection";
