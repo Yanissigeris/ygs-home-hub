@@ -88,7 +88,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               poster={heroVideoPoster || heroBgImage}
               src={heroVideo}
               className="h-full w-full object-cover"
-              style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
+              style={{ filter: "brightness(0.72) saturate(0.7) contrast(1.05)" }}
             />
           </motion.div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
