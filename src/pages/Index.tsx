@@ -33,7 +33,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       agentImage={yanisPortrait}
       agentName="Yanis Gauthier-Sigeris"
       heroBgImage={heroGatineauSkyline}
-      heroVideo="/__l5e/assets-v1/88f5de85-d98b-4185-b898-7741ccb2d9ae/hero-video.mp4"
+      heroVideo="/hero-video.mp4"
     />
 
     <TrustStrip />
