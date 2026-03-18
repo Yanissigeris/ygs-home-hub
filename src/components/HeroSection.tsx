@@ -96,7 +96,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to right, hsl(200 42% 11% / 0.88) 0%, hsl(200 42% 13% / 0.72) 25%, hsl(200 42% 14% / 0.45) 50%, hsl(200 42% 14% / 0.30) 75%, hsl(200 42% 14% / 0.22) 100%)",
+                "linear-gradient(to right, hsl(200 42% 11% / 0.85) 0%, hsl(200 42% 13% / 0.65) 25%, hsl(200 42% 14% / 0.38) 50%, hsl(200 42% 14% / 0.22) 75%, hsl(200 42% 14% / 0.15) 100%)",
             }}
           />
           <div
