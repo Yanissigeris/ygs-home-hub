@@ -52,7 +52,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo && (
         <>
-          <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0 overflow-hidden"
+            style={{
+              backgroundImage: heroBgImage ? `url(${heroBgImage})` : undefined,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <video
               autoPlay
               muted
