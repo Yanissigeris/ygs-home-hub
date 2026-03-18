@@ -59,11 +59,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               loop
               playsInline
               poster={heroVideoPoster || heroBgImage}
+              src={heroVideo}
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.55) saturate(0.6) contrast(1.05)" }}
-            >
-              <source src={heroVideo} type="video/mp4" />
-            </video>
+            />
           </div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
           <div
