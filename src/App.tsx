@@ -18,64 +18,49 @@ if (typeof window !== "undefined") {
   preloadImage(yanisPortrait);
   preloadImage(heroGatineauSkyline);
 }
-// Core pages
-import Index from "./pages/Index";
-import SellerPage from "./pages/SellerPage";
-import ValuationPage from "./pages/ValuationPage";
-import BuyerPage from "./pages/BuyerPage";
-import PlexPage from "./pages/PlexPage";
-import ContactPage from "./pages/ContactPage";
-import NotFound from "./pages/NotFound";
 
-// Property page
-import PropertiesPage from "./pages/PropertiesPage";
-
-// Seller funnel
-import SellerPlanPage from "./pages/SellerPlanPage";
-import SellerGuidePage from "./pages/SellerGuidePage";
-import WhenToSellPage from "./pages/WhenToSellPage";
-import SellPlexPage from "./pages/SellPlexPage";
-
-// Buyer funnel
-import BuyerConsultationPage from "./pages/BuyerConsultationPage";
-import BuyerGuidePage from "./pages/BuyerGuidePage";
-import FirstTimeBuyerPage from "./pages/FirstTimeBuyerPage";
-import BuyFromOttawaPage from "./pages/BuyFromOttawaPage";
-
-// Relocation
-import RelocationPage from "./pages/RelocationPage";
-import MontrealRelocationPage from "./pages/MontrealRelocationPage";
-import RelocationGuidePage from "./pages/RelocationGuidePage";
-import NeighborhoodsOverviewPage from "./pages/NeighborhoodsOverviewPage";
-
-// Military
-import MilitaryPage from "./pages/MilitaryPage";
-import MilitaryRelocationPage from "./pages/MilitaryRelocationPage";
-import MilitaryBuyerPage from "./pages/MilitaryBuyerPage";
-import MilitarySellerPage from "./pages/MilitarySellerPage";
-import MilitaryGuidePage from "./pages/MilitaryGuidePage";
-
-// Plex / Investment
-import PlexAnalysisPage from "./pages/PlexAnalysisPage";
-import MarketReportPage from "./pages/MarketReportPage";
-
-// Neighborhood pages
-import NeighborhoodPage from "./pages/NeighborhoodPage";
-import HullPage from "./pages/HullPage";
-import BuckinghamPage from "./pages/BuckinghamPage";
-import GatineauCentrePage from "./pages/GatineauCentrePage";
-import AylmerPage from "./pages/AylmerPage";
-import PlateauPage from "./pages/PlateauPage";
-
-// Lifestyle / Resources
-import ResourcesPage from "./pages/ResourcesPage";
-import LivingAylmerPage from "./pages/LivingAylmerPage";
-import LivingHullPage from "./pages/LivingHullPage";
-import LivingPlateauPage from "./pages/LivingPlateauPage";
-import FAQPage from "./pages/FAQPage";
-import ThankYouPage from "./pages/ThankYouPage";
-import ThankYouValuationPage from "./pages/ThankYouValuationPage";
-import TestimonialsPage from "./pages/TestimonialsPage";
+// Code-split all pages with React.lazy
+const Index = React.lazy(() => import("./pages/Index"));
+const SellerPage = React.lazy(() => import("./pages/SellerPage"));
+const ValuationPage = React.lazy(() => import("./pages/ValuationPage"));
+const BuyerPage = React.lazy(() => import("./pages/BuyerPage"));
+const PlexPage = React.lazy(() => import("./pages/PlexPage"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+const PropertiesPage = React.lazy(() => import("./pages/PropertiesPage"));
+const SellerPlanPage = React.lazy(() => import("./pages/SellerPlanPage"));
+const SellerGuidePage = React.lazy(() => import("./pages/SellerGuidePage"));
+const WhenToSellPage = React.lazy(() => import("./pages/WhenToSellPage"));
+const SellPlexPage = React.lazy(() => import("./pages/SellPlexPage"));
+const BuyerConsultationPage = React.lazy(() => import("./pages/BuyerConsultationPage"));
+const BuyerGuidePage = React.lazy(() => import("./pages/BuyerGuidePage"));
+const FirstTimeBuyerPage = React.lazy(() => import("./pages/FirstTimeBuyerPage"));
+const BuyFromOttawaPage = React.lazy(() => import("./pages/BuyFromOttawaPage"));
+const RelocationPage = React.lazy(() => import("./pages/RelocationPage"));
+const MontrealRelocationPage = React.lazy(() => import("./pages/MontrealRelocationPage"));
+const RelocationGuidePage = React.lazy(() => import("./pages/RelocationGuidePage"));
+const NeighborhoodsOverviewPage = React.lazy(() => import("./pages/NeighborhoodsOverviewPage"));
+const MilitaryPage = React.lazy(() => import("./pages/MilitaryPage"));
+const MilitaryRelocationPage = React.lazy(() => import("./pages/MilitaryRelocationPage"));
+const MilitaryBuyerPage = React.lazy(() => import("./pages/MilitaryBuyerPage"));
+const MilitarySellerPage = React.lazy(() => import("./pages/MilitarySellerPage"));
+const MilitaryGuidePage = React.lazy(() => import("./pages/MilitaryGuidePage"));
+const PlexAnalysisPage = React.lazy(() => import("./pages/PlexAnalysisPage"));
+const MarketReportPage = React.lazy(() => import("./pages/MarketReportPage"));
+const NeighborhoodPage = React.lazy(() => import("./pages/NeighborhoodPage"));
+const HullPage = React.lazy(() => import("./pages/HullPage"));
+const BuckinghamPage = React.lazy(() => import("./pages/BuckinghamPage"));
+const GatineauCentrePage = React.lazy(() => import("./pages/GatineauCentrePage"));
+const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
+const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
+const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
+const LivingAylmerPage = React.lazy(() => import("./pages/LivingAylmerPage"));
+const LivingHullPage = React.lazy(() => import("./pages/LivingHullPage"));
+const LivingPlateauPage = React.lazy(() => import("./pages/LivingPlateauPage"));
+const FAQPage = React.lazy(() => import("./pages/FAQPage"));
+const ThankYouPage = React.lazy(() => import("./pages/ThankYouPage"));
+const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuationPage"));
+const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
 
 const queryClient = new QueryClient();
 
