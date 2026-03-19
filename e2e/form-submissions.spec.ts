@@ -4,16 +4,11 @@ test("EN contact form shows success after submission", async ({ page }) => {
   await page.goto("/en/contact");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
-  // Fill required fields
   await page.getByLabel("Name").fill("Test User");
   await page.getByLabel("Email").fill("test@example.com");
-  await page.getByLabel("Phone").fill("613-555-1234");
-
-  // Submit
   await page.getByRole("button", { name: "Send my request" }).click();
 
-  // Success message should appear
-  await expect(page.getByText("Thank you")).toBeVisible();
+  await expect(page.getByRole("heading", { name: /demande envoyée|request sent/i })).toBeVisible();
 });
 
 test("EN valuation form shows success after submission", async ({ page }) => {
@@ -26,7 +21,7 @@ test("EN valuation form shows success after submission", async ({ page }) => {
 
   await page.getByRole("button", { name: "Get my free valuation" }).click();
 
-  await expect(page.getByText("Request sent")).toBeVisible();
+  await expect(page.getByText("Request sent", { exact: false })).toBeVisible();
 });
 
 test("FR contact form shows success after submission", async ({ page }) => {
@@ -36,20 +31,20 @@ test("FR contact form shows success after submission", async ({ page }) => {
   await page.getByLabel("Nom").fill("Test Utilisateur");
   await page.getByLabel("Courriel").fill("test@example.com");
 
-  await page.getByRole("button", { name: /envoyer/i }).click();
+  await page.getByRole("button", { name: "Envoyer ma demande" }).click();
 
-  await expect(page.getByText("Merci")).toBeVisible();
+  await expect(page.getByRole("heading", { name: /demande envoyée/i })).toBeVisible();
 });
 
 test("FR valuation form shows success after submission", async ({ page }) => {
   await page.goto("/evaluation-gratuite-gatineau");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
-  await page.getByLabel("Adresse de la propriété").fill("123 rue Test, Gatineau");
-  await page.getByLabel("Nom").fill("Test Utilisateur");
-  await page.getByLabel("Courriel").fill("test@example.com");
+  await page.locator("#adresse").fill("123 rue Test, Gatineau");
+  await page.locator("#nom").fill("Test Utilisateur");
+  await page.locator("#courriel").fill("test@example.com");
 
-  await page.getByRole("button", { name: /obtenir/i }).click();
+  await page.getByRole("button", { name: /évaluation gratuite/i }).click();
 
-  await expect(page.getByText("Merci")).toBeVisible();
+  await expect(page.getByText("Demande envoyée", { exact: false })).toBeVisible();
 });
