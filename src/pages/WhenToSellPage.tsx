@@ -10,7 +10,7 @@ import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Clock, TrendingUp, Home, AlertTriangle, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/home-interior.jpg";
+import heroImg from "@/assets/home-interior.webp";
 
 const factors = [
   { icon: TrendingUp, title: "Le marché local", text: "Les conditions du marché à Gatineau varient d'un secteur à l'autre et d'une saison à l'autre." },

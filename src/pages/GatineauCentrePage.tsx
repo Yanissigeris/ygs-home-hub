@@ -14,7 +14,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau-centre.webp";
-import riverImg from "@/assets/gatineau-river-view.jpg";
+import riverImg from "@/assets/gatineau-river-view.webp";
 
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },

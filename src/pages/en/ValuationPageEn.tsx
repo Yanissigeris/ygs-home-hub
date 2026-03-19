@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import yanisPhoto from "@/assets/yanis-hero-cutout.png";
+import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
 const benefits = ["Realistic value range based on recent sales","Advice on price positioning for your situation","Your property's strengths to highlight","Issues to address — and which ones are worth it","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response within 24h" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];

@@ -1,5 +1,5 @@
-import property28743871 from "@/assets/property-28743871.jpg";
-import property20453879 from "@/assets/property-20453879.jpg";
+import property28743871 from "@/assets/property-28743871.webp";
+import property20453879 from "@/assets/property-20453879.webp";
 
 export interface Property {
   id: string;

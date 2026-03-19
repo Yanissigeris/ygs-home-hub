@@ -10,7 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/plateau-aylmer-lifestyle.jpg";
+import heroImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 const highlights = [
   { icon: MapPin, title: "Lac Deschênes", text: "Plage, sports nautiques et couchers de soleil spectaculaires — à deux pas de la maison." },

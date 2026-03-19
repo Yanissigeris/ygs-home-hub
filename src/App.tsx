@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 
-import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 
 const preloadImage = (src: string) => { const img = new Image(); img.src = src; };
