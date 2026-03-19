@@ -23,6 +23,8 @@ const enPages = [
   "/en/home-valuation", "/en/thank-you",
   "/en/when-to-sell", "/en/seller-plan", "/en/sell-plex",
   "/en/montreal-relocation", "/en/market-report",
+  "/en/living-aylmer", "/en/living-hull", "/en/living-plateau",
+  "/en/gatineau", "/en/aylmer", "/en/plateau", "/en/military-relocation",
 ];
 
 const frPages = [
