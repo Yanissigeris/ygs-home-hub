@@ -73,6 +73,13 @@ const MontrealRelocationPage = () => (
       </p>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation gratuit"
+      text="Tout pour s'installer à Gatineau depuis Montréal — secteurs, prix et processus."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Prêt à explorer Gatineau?"
