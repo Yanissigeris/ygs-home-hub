@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
@@ -112,6 +113,13 @@ const SellerGuidePage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit"
+      text="Prix, préparation et stratégie — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Prêt à passer à l'action?"
@@ -122,6 +130,8 @@ const SellerGuidePage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
+
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
 

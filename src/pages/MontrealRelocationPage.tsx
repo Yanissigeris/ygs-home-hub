@@ -90,6 +90,8 @@ const MontrealRelocationPage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />
+  
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
   </>
 );
 

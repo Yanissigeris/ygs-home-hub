@@ -78,6 +78,8 @@ const MarketReportPage = () => (
       ]}
       trustLine="Zéro pression — données objectives et analyse locale."
     />
+  
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
 

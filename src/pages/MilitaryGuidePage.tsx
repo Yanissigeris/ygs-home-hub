@@ -101,6 +101,8 @@ const MilitaryGuidePage = () => (
       ]}
       trustLine="Zéro pression — je m'adapte à votre rythme."
     />
+  
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit — recevez-le par courriel" />
   </>
 );
 
