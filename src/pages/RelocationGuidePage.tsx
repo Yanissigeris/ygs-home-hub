@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
+import GuideOfferBlock from "@/components/GuideOfferBlock";
 import heroImg from "@/assets/hero-relocation-guide.jpg";
 
 const topics = [
