@@ -75,6 +75,13 @@ const NeighborhoodsOverviewPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — trouvez le bon secteur"
+      text="Tout ce qu'il faut savoir pour acheter à Gatineau — processus, budget et quartiers."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <FAQSection title="Questions sur les quartiers" items={faq} />
 
     <CTASection
