@@ -76,6 +76,13 @@ const MilitaryGuidePage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Recevez le guide relocalisation militaire"
+      text="Mutation, achat, vente — tout dans un guide clair envoyé gratuitement par courriel."
+      ctaLabel="Recevoir le guide"
+    />
+
     <FAQSection items={faq} />
 
     <RelatedPages
