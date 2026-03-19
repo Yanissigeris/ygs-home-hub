@@ -30,7 +30,7 @@ const GuideOfferBlockEn = ({ guideType, title, subtitle, ctaLabel, background = 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className={`flex flex-col h-full rounded-[var(--card-radius)] border border-border p-6 sm:p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-300 ${background === "alt" ? "bg-secondary/30" : "bg-card"}`}
+        className={`flex flex-col h-full overflow-hidden rounded-[var(--card-radius)] border border-border p-6 sm:p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-300 ${background === "alt" ? "bg-secondary/30" : "bg-card"}`}
       >
         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-4">
           <BookOpen size={20} className="text-accent" />
