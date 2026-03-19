@@ -21,7 +21,7 @@ const buyerProfiles = [
   { icon: CheckCircle2, title: "Premier acheteur", text: "Comprendre le processus étape par étape sans se sentir dépassé." },
   { icon: CheckCircle2, title: "Famille qui veut plus d'espace", text: "Trouver un quartier familial avec plus de pièces, un terrain et les bons services à proximité." },
   { icon: CheckCircle2, title: "Relocalisé d'Ottawa ou Montréal", text: "Un guide local qui connaît vraiment le terrain — secteurs, prix, taxes et particularités du Québec." },
-  { icon: CheckCircle2, title: "Hésitant entre secteurs", text: "Comparer les quartiers objectivement — prix, potentiel, style de vie — pour trouver le bon fit." },
+  { icon: CheckCircle2, title: "Hésitant entre secteurs", text: "Comparer les quartiers objectivement — prix, potentiel, style de vie — pour trouver le parfait quartier pour vous." },
 ];
 
 const sectors = [
