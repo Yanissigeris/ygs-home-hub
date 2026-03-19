@@ -61,7 +61,7 @@ const SellerPage = () => (
     <PageMeta title="Vendre sa maison à Gatineau" description="Vendez votre propriété à Gatineau au meilleur prix. Stratégie de mise en marché, accompagnement personnalisé et résultats prouvés par Yanis Gauthier-Sigeris." />
     <HeroSection
       overline="Pour vendeurs · Gatineau et environs"
-      title="Vendre votre propriété à Gatineau avec une vraie stratégie"
+      title="Vendre votre propriété à Gatineau avec une stratégie adaptée"
       subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
