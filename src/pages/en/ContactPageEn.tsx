@@ -1,7 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
 import ReviewSection from "@/components/ReviewSection";
-import { getReviewsById } from "@/data/reviews";
+import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";

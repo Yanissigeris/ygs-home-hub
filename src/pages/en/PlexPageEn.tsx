@@ -1,7 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
-import { getReviewsByCategory } from "@/data/reviews";
+import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import TrustMiniStrip from "@/components/TrustMiniStrip";

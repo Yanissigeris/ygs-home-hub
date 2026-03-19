@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ReviewSection from "@/components/ReviewSection";
-import { getReviewsByCategory } from "@/data/reviews";
+import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import PageMeta from "@/components/PageMeta";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
