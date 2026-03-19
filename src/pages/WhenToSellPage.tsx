@@ -68,6 +68,13 @@ const WhenToSellPage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit — vendez au bon moment"
+      text="Prix, préparation, timing — tout dans un guide envoyé gratuitement par courriel."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Vous hésitez sur le timing?"
