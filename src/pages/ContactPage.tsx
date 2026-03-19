@@ -23,7 +23,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
-import yanisPhoto from "@/assets/yanis-photo.jpg";
+import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
 
 const services = [

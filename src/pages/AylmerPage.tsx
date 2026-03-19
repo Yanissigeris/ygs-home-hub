@@ -14,7 +14,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import { CheckCircle2, Users, Home, MapPin, Coffee, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-aylmer.webp";
-import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
+import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },

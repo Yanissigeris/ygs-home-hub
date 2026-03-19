@@ -8,8 +8,8 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
 import SectorLinks from "@/components/SectorLinks";
-import plateauImg from "@/assets/plateau-aylmer-lifestyle.jpg";
-import riverImg from "@/assets/gatineau-river-view.jpg";
+import plateauImg from "@/assets/plateau-aylmer-lifestyle.webp";
+import riverImg from "@/assets/gatineau-river-view.webp";
 
 const reasons = [
   "Plus d'espace à un prix encore accessible comparé à Ottawa",
