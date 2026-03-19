@@ -6,6 +6,7 @@ import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import FAQSection from "@/components/FAQSection";
 import SuccessMessage from "@/components/SuccessMessage";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
