@@ -17,7 +17,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Home, Award, Clock, MapPin, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-military.webp";
-import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
   { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement ou vendre rapidement, sans compromettre le prix." },

@@ -17,7 +17,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Home, Award, Clock, MapPin, Heart } from "lucide-react";
 import heroImg from "@/assets/hero-military.webp";
-import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
   { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast — you need to find a home or sell quickly, without compromising on price." },

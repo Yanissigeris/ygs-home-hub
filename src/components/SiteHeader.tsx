@@ -4,9 +4,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.png";
-import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.png";
-import logoRemax from "@/assets/logo-remax-balloon.png";
+import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.webp";
+import logoYgsSymbolBlue from "@/assets/logo-ygs-symbol-blue.webp";
+import logoRemax from "@/assets/logo-remax-balloon.webp";
 import { mainNav, type NavItem } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
