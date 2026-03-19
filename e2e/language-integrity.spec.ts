@@ -37,7 +37,7 @@ const frPages = [
 ];
 
 // Split EN pages into chunks to stay within 30s timeout
-const enChunks = [enPages.slice(0, 7), enPages.slice(7, 14), enPages.slice(14, 21), enPages.slice(21, 28), enPages.slice(28)];
+const enChunks = [enPages.slice(0, 7), enPages.slice(7, 14), enPages.slice(14, 21), enPages.slice(21, 28), enPages.slice(28, 33), enPages.slice(33)];
 
 enChunks.forEach((chunk, ci) => {
   test(`EN pages have no French text (batch ${ci + 1})`, async ({ page }) => {
