@@ -15,7 +15,7 @@ import { getReviewsByCategory } from "@/data/reviews";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { MapPin, DollarSign, FileText, Home, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-relocation.jpg";
+import heroImg from "@/assets/hero-relocation.webp";
 
 const challenges = [
   { icon: MapPin, title: "Choosing the right neighborhood", text: "Aylmer, Hull, Plateau, Buckingham — each has its own personality. I help you find the right fit." },

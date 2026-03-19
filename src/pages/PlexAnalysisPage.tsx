@@ -16,7 +16,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.png";
-import heroImg from "@/assets/hero-plex.jpg";
+import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
   "Estimation de la valeur marchande actuelle de votre plex",

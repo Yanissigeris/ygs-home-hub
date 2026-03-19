@@ -6,7 +6,7 @@ import CardGrid from "@/components/CardGrid";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, Home, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-military-buyer.jpg";
+import heroImg from "@/assets/hero-military-buyer.webp";
 
 const tips = [
   { icon: CheckCircle2, title: "Virtual visits available", text: "Buy remotely before your arrival — I adapt to your schedule." },

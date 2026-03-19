@@ -8,7 +8,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import heroImg from "@/assets/hero-market-report.jpg";
+import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
   { q: "Comment accéder au rapport du marché?", a: "Contactez-moi — je vous envoie l'analyse la plus récente pour votre secteur." },

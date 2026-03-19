@@ -8,7 +8,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
-import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
+import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 
 const preloadImage = (src: string) => { const img = new Image(); img.src = src; };
 if (typeof window !== "undefined") { preloadImage(yanisPortrait); preloadImage(heroGatineauSkyline); }

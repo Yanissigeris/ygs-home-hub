@@ -7,7 +7,7 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { DollarSign, Home, MapPin, TrendingUp } from "lucide-react";
-import heroImg from "@/assets/hero-buy-from-ottawa.jpg";
+import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
 const reasons = [
   { icon: DollarSign, title: "More affordable prices", text: "Single-family homes in Gatineau often cost significantly less than comparable homes in Ottawa." },

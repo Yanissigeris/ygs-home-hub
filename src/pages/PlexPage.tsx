@@ -13,7 +13,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-plex.jpg";
+import heroImg from "@/assets/hero-plex.webp";
 
 const clientTypes = [
   {

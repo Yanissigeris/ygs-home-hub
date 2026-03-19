@@ -6,7 +6,7 @@ import CardGrid from "@/components/CardGrid";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, Clock, DollarSign } from "lucide-react";
-import heroImg from "@/assets/hero-military-seller.jpg";
+import heroImg from "@/assets/hero-military-seller.webp";
 
 const tips = [
   { icon: Clock, title: "Tight timeline? No problem", text: "I adapt the selling strategy to your posting schedule." },

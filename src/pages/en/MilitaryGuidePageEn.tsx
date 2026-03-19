@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import heroImg from "@/assets/hero-military-guide.jpg";
+import heroImg from "@/assets/hero-military-guide.webp";
 
 const topics = ["Understanding the Gatineau market as a military member","Best neighborhoods near military bases","Coordinating buy-sell during a posting","IRP/BGRS program navigation tips","Schools, services and bilingual community resources"];
 

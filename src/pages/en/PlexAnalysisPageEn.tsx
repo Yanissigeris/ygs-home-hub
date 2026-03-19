@@ -5,7 +5,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import heroImg from "@/assets/hero-plex.jpg";
+import heroImg from "@/assets/hero-plex.webp";
 
 const PlexAnalysisPageEn = () => (
   <>

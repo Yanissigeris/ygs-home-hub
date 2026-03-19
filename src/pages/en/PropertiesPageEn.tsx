@@ -10,7 +10,7 @@ import SectorLinks from "@/components/SectorLinks";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 import { Search, Home, Building2, ExternalLink } from "lucide-react";
-import heroImg from "@/assets/hero-properties.jpg";
+import heroImg from "@/assets/hero-properties.webp";
 
 const profileCards = [
   { icon: Search, title: "Looking for a house", text: "Single-family, semi-detached, townhouse — find the property that matches your profile." },

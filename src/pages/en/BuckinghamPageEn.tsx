@@ -7,7 +7,7 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { Users, Home, TreePine, TrendingUp } from "lucide-react";
-import heroImg from "@/assets/hero-buckingham.jpg";
+import heroImg from "@/assets/hero-buckingham.webp";
 
 const profiles = [
   { icon: Users, title: "Families", text: "More space, big yards, community schools — all at a realistic price." },

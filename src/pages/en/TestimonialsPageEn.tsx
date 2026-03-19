@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
 import { getReviewsByCategory } from "@/data/reviews";
 import type { Review } from "@/data/reviews";
-import heroImg from "@/assets/hero-testimonials.jpg";
+import heroImg from "@/assets/hero-testimonials.webp";
 
 const categories: { key: Review["category"]; label: string; title: string }[] = [
   { key: "seller", label: "Sellers", title: "They sold with confidence" },

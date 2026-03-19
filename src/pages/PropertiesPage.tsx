@@ -11,7 +11,7 @@ import SectorLinks from "@/components/SectorLinks";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 import { Search, Star, Home, Building2, TrendingUp, MapPin, ExternalLink } from "lucide-react";
-import heroImg from "@/assets/hero-properties.jpg";
+import heroImg from "@/assets/hero-properties.webp";
 
 const profileCards = [
   { icon: Search, title: "Vous cherchez une maison", text: "Unifamiliale, jumelé, maison en rangée — trouvez la propriété qui correspond à votre profil." },

@@ -10,7 +10,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
-import heroImg from "@/assets/hero-military-relocation.jpg";
+import heroImg from "@/assets/hero-military-relocation.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [

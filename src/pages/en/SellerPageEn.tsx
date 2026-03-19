@@ -14,7 +14,7 @@ import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-seller.jpg";
+import heroImg from "@/assets/hero-seller.webp";
 
 const painPoints = [
   { icon: CheckCircle2, title: "Is now the right time to sell?", text: "You don't want to miss the window, but you also don't want to sell without a plan." },

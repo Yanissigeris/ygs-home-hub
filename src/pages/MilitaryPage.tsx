@@ -16,7 +16,7 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import { Shield, Home, Award, Clock, MapPin, Heart } from "lucide-react";
-import heroImg from "@/assets/hero-military.jpg";
+import heroImg from "@/assets/hero-military.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
 
 const challenges = [

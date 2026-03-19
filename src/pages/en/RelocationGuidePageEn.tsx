@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import heroImg from "@/assets/hero-relocation-guide.jpg";
+import heroImg from "@/assets/hero-relocation-guide.webp";
 
 const topics = ["Gatineau neighborhoods compared — pros and cons","Understanding prices by area","The Québec buying process step by step","Taxes, schools and community services","Tips for a smooth transition from Ottawa or Montréal"];
 

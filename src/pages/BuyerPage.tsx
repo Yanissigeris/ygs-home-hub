@@ -15,7 +15,7 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-buyer.jpg";
+import heroImg from "@/assets/hero-buyer.webp";
 
 const buyerProfiles = [
   { icon: CheckCircle2, title: "Premier acheteur", text: "Comprendre le processus étape par étape sans se sentir dépassé." },
