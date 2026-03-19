@@ -84,6 +84,11 @@ const PlexAnalysisPageEn = React.lazy(() => import("./pages/en/PlexAnalysisPageE
 const PlateauAylmerPageEn = React.lazy(() => import("./pages/en/PlateauAylmerPageEn"));
 const HullPageEn = React.lazy(() => import("./pages/en/HullPageEn"));
 const BuckinghamPageEn = React.lazy(() => import("./pages/en/BuckinghamPageEn"));
+const WhenToSellPageEn = React.lazy(() => import("./pages/en/WhenToSellPageEn"));
+const SellerPlanPageEn = React.lazy(() => import("./pages/en/SellerPlanPageEn"));
+const SellPlexPageEn = React.lazy(() => import("./pages/en/SellPlexPageEn"));
+const MontrealRelocationPageEn = React.lazy(() => import("./pages/en/MontrealRelocationPageEn"));
+const MarketReportPageEn = React.lazy(() => import("./pages/en/MarketReportPageEn"));
 
 const queryClient = new QueryClient();
 
