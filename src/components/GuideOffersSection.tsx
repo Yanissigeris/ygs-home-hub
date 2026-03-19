@@ -7,7 +7,7 @@ interface GuideOffersSectionProps {
 
 const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-secondary/20" : ""}`}>
-    <div className="section-container max-w-[64rem]">
+    <div className="section-container max-w-[72rem]">
       <SectionHeading
         overline="Guides gratuits"
         title="Recevez votre guide immobilier"
