@@ -8,7 +8,9 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "Sell in Gatineau", href: "/en/sell" },
       { label: "Free Home Valuation", href: "/en/home-valuation" },
+      { label: "Seller Plan", href: "/en/seller-plan" },
       { label: "Seller Guide", href: "/en/seller-guide" },
+      { label: "When to Sell", href: "/en/when-to-sell" },
     ],
   },
   {
@@ -25,6 +27,7 @@ export const mainNavEn: NavItem[] = [
     label: "Relocation",
     children: [
       { label: "Ottawa → Gatineau", href: "/en/relocation" },
+      { label: "Montréal → Gatineau", href: "/en/montreal-relocation" },
       { label: "Relocation Guide", href: "/en/relocation-guide" },
       { label: "Military — Posting", href: "/en/military" },
       { label: "Military — Buying", href: "/en/military-buyer" },
@@ -36,6 +39,7 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "Plex / Investment", href: "/en/plex" },
       { label: "Plex Analysis", href: "/en/plex-analysis" },
+      { label: "Sell a Plex", href: "/en/sell-plex" },
     ],
   },
   {
@@ -82,6 +86,7 @@ export const footerColumnsEn = [
     title: "Resources",
     links: [
       { label: "Free Guides", href: "/en/resources" },
+      { label: "Market Report", href: "/en/market-report" },
       { label: "FAQ", href: "/en/faq" },
       { label: "Testimonials", href: "/en/testimonials" },
       { label: "About / Contact", href: "/en/contact" },

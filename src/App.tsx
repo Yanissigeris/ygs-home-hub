@@ -84,6 +84,11 @@ const PlexAnalysisPageEn = React.lazy(() => import("./pages/en/PlexAnalysisPageE
 const PlateauAylmerPageEn = React.lazy(() => import("./pages/en/PlateauAylmerPageEn"));
 const HullPageEn = React.lazy(() => import("./pages/en/HullPageEn"));
 const BuckinghamPageEn = React.lazy(() => import("./pages/en/BuckinghamPageEn"));
+const WhenToSellPageEn = React.lazy(() => import("./pages/en/WhenToSellPageEn"));
+const SellerPlanPageEn = React.lazy(() => import("./pages/en/SellerPlanPageEn"));
+const SellPlexPageEn = React.lazy(() => import("./pages/en/SellPlexPageEn"));
+const MontrealRelocationPageEn = React.lazy(() => import("./pages/en/MontrealRelocationPageEn"));
+const MarketReportPageEn = React.lazy(() => import("./pages/en/MarketReportPageEn"));
 
 const queryClient = new QueryClient();
 
@@ -162,6 +167,11 @@ const routeTree = React.createElement(
       <Route path="/en/plateau-aylmer" element={<PlateauAylmerPageEn />} />
       <Route path="/en/hull" element={<HullPageEn />} />
       <Route path="/en/buckingham" element={<BuckinghamPageEn />} />
+      <Route path="/en/when-to-sell" element={<WhenToSellPageEn />} />
+      <Route path="/en/seller-plan" element={<SellerPlanPageEn />} />
+      <Route path="/en/sell-plex" element={<SellPlexPageEn />} />
+      <Route path="/en/montreal-relocation" element={<MontrealRelocationPageEn />} />
+      <Route path="/en/market-report" element={<MarketReportPageEn />} />
       <Route path="/en/resources" element={<ResourcesPageEn />} />
       <Route path="/en/faq" element={<FAQPageEn />} />
       <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
