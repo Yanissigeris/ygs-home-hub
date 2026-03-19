@@ -5,36 +5,36 @@ import { Clock, Award, Heart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-const AboutSection = React.forwardRef<HTMLElement>((_, ref) => (
-  <section ref={ref} className="section-padding bg-background">
+const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
+<section ref={ref} className="section-padding bg-background">
     <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
       <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+      
         <div className="overflow-hidden rounded-[1.75rem]">
           <img
-            src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png"
-            alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
-            className="aspect-[3/4] w-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
+          src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png"
+          alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
+          className="aspect-[3/4] w-full object-cover"
+          loading="lazy"
+          decoding="async" />
+        
         </div>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-      >
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
+      
         <p className="label-overline mb-3">Pourquoi YGS</p>
         <h2>Un accompagnement simple, stratégique et humain</h2>
         <p className="prose-body mt-5">
-          En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire, locale et sans pression.
+          En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire et locale   
         </p>
         <p className="prose-body mt-4">
           Son rôle n&apos;est pas de pousser. C&apos;est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
@@ -61,7 +61,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) => (
       </motion.div>
     </div>
   </section>
-));
+);
 
 AboutSection.displayName = "AboutSection";
 
