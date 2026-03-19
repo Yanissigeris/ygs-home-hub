@@ -113,6 +113,13 @@ const GatineauCentrePage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter à Gatineau"
+      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Acheteur, vendeur ou investisseur à Gatineau?"
