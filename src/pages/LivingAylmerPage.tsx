@@ -71,6 +71,13 @@ const LivingAylmerPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — s'installer à Aylmer"
+      text="Tout pour acheter à Aylmer — processus, budget et conseils dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à découvrir Aylmer?"
