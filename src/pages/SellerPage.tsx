@@ -28,7 +28,7 @@ const painPoints = [
 const fears = [
   { icon: AlertTriangle, title: "Sous-évaluer", text: "Laisser des milliers sur la table par manque d'information sur les ventes récentes." },
   { icon: AlertTriangle, title: "Surévaluer", text: "Rester sur le marché trop longtemps et finir par baisser le prix sous pression." },
-  { icon: AlertTriangle, title: "Mal préparer", text: "Subir des négociations stressantes faute de stratégie claire dès le départ." },
+  { icon: AlertTriangle, title: "Être mal préparer", text: "Subir des négociations stressantes faute de stratégie claire dès le départ." },
 ];
 
 const steps = [
