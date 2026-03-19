@@ -119,6 +119,13 @@ const RelocationPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation gratuit"
+      text="Tout ce qu'il faut savoir pour s'installer à Gatineau — secteurs, prix, processus et écoles."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Parlons de votre projet de relocalisation"
