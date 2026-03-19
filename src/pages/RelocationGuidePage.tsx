@@ -74,17 +74,14 @@ const RelocationGuidePage = () => (
       background="alt"
     />
 
-    <section className="section-padding">
-      <div className="section-container max-w-[40rem]">
-        <GuideOfferBlock
-          guideType="relocation_guide"
-          title="Guide relocalisation gratuit"
-          subtitle="Un guide clair pour mieux comprendre un achat à Gatineau en venant d'Ottawa ou d'ailleurs, éviter les surprises et choisir le bon secteur."
-        />
-      </div>
-    </section>
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Vous déménagez à Gatineau? Recevez le guide complet."
+      text="Un guide clair pour mieux comprendre un achat à Gatineau en venant d'Ottawa ou d'ailleurs, éviter les surprises et choisir le bon secteur."
+      ctaLabel="Recevoir le guide relocalisation"
+    />
 
-    <InlineCTA
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
       text="Vous voulez un accompagnement personnalisé? Réservez un appel gratuit."
       buttonLabel="Réserver un appel →"
       href="/contact-yanis"

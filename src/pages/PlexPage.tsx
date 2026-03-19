@@ -110,15 +110,14 @@ const PlexPage = () => (
       background="alt"
     />
 
-    <section className="section-padding">
-      <div className="section-container max-w-[40rem]">
-        <GuideOfferBlock
-          guideType="investor_guide"
-          title="Guide investisseur gratuit"
-          subtitle="Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter — le guide essentiel pour investir à Gatineau."
-        />
-      </div>
-    </section>
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Investir à Gatineau? Recevez le guide complet."
+      text="Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter — le guide essentiel pour investir à Gatineau."
+      ctaLabel="Recevoir le guide investisseur"
+    />
+
+    <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
 
     <ReviewSection
       overline="Témoignages investisseurs"
