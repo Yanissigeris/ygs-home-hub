@@ -83,6 +83,13 @@ const MilitaryBuyerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation militaire gratuit"
+      text="Tout ce qu'il faut savoir pour acheter à Gatineau lors d'une mutation — dans un guide clair envoyé par courriel."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Prêt à trouver votre propriété à Gatineau?"
