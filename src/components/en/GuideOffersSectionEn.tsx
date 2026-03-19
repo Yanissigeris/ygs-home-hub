@@ -10,6 +10,7 @@ const GuideOffersSectionEn = ({ background = "default" }: Props) => (
         overline="Free Guides"
         title="Get your real estate guide"
         subtitle="Comprehensive resources to guide you at every step — free, no commitment, delivered by email."
+        centered
       />
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <GuideOfferBlockEn guideType="seller_guide" title="Seller Guide" subtitle="Pricing, preparation, marketing and negotiation — everything to sell at the best price." />
