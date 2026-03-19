@@ -1,39 +1,104 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import { DollarSign, Home, MapPin, TrendingUp } from "lucide-react";
+import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
-const reasons = [
-  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes in Gatineau often cost significantly less than comparable homes in Ottawa." },
-  { icon: Home, title: "More space", text: "Bigger lots, more rooms and newer construction — more value for your budget." },
-  { icon: MapPin, title: "Easy commute", text: "Bridges, transit and bike paths make working in Ottawa and living in Gatineau very doable." },
-  { icon: TrendingUp, title: "Strong market potential", text: "Growing demand and development make Gatineau a smart long-term investment." },
+const advantages = [
+  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes and condos often cost less in Gatineau than in Ottawa." },
+  { icon: MapPin, title: "Ottawa proximity", text: "Bridges, transit and bike paths make the commute very doable." },
+  { icon: Home, title: "More space", text: "For the same budget, you often get more space, land and quality of life." },
+  { icon: FileText, title: "Québec process", text: "The buying process in Québec has its particularities — I guide you step by step." },
 ];
+
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
   { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown Ottawa" },
-  { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, nature, space" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
 ];
+
+const trustItems = [
+  { icon: Clock, label: "Nearly 9 years in Outaouais" },
+  { icon: Award, label: "Ottawa → Gatineau relocation specialist" },
+  { icon: Shield, label: "Bilingual · Zero pressure" },
+];
+
 const faq = [
-  { q: "Is it really cheaper in Gatineau?", a: "Yes — especially for single-family homes. But consider taxes and services too. We compare everything together." },
-  { q: "How does buying work in Québec?", a: "Different from Ontario — promise to purchase, inspection, notary. I guide you through every step." },
+  { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. Generally 15-30% savings on purchase price, but municipal and school taxes should also be considered." },
+  { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec — promise to purchase, notary, etc. I guide you at every step." },
+  { q: "Are taxes higher in Québec?", a: "Municipal taxes vary by area. Income tax is different too. We look at the full picture together." },
 ];
 
 const BuyFromOttawaPageEn = () => (
   <>
-    <PageMeta title="Buy in Gatineau from Ottawa | YGS" description="More space, affordable prices — why Ottawa residents are moving to Gatineau. Complete guide for cross-river buyers." />
-    <HeroSection overline="Ottawa → Gatineau" title="Buy in Gatineau from Ottawa" subtitle="More space, more affordable prices, great quality of life — discover why Ottawa residents are crossing the river." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} heroBgImage={heroImg} />
-    <CardGrid overline="Why Gatineau" title="Why Ottawa buyers choose Gatineau" items={reasons} />
-    <SectorLinks overline="Popular areas" title="Top neighborhoods for Ottawa buyers" sectors={sectors} background="alt" />
+    <PageMeta title="Buy in Gatineau from Ottawa | YGS" description="Living in Ottawa and thinking about buying in Gatineau? Taxes, neighborhoods, advantages and bilingual support for your transition." />
+    <HeroSection
+      overline="Buy from Ottawa · Gatineau"
+      title="Buy in Gatineau from Ottawa"
+      subtitle="More space, more affordable prices, a different quality of life — without being far from work. Here's what you need to know."
+      primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }}
+      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }}
+      trustLine="Ottawa → Gatineau relocation specialist"
+      heroBgImage={heroImg}
+    />
+
+    <TrustMiniStrip items={trustItems} />
+
+    <CardGrid
+      overline="The advantages"
+      title="Why more and more Ottawa residents are crossing the river"
+      items={advantages}
+    />
+
+    <InlineCTA
+      text="Also selling in Ottawa? Knowing the value of your current property can clarify your buying budget."
+      buttonLabel="Get my valuation →"
+      href="/en/home-valuation"
+    />
+
+    <SectorLinks
+      overline="Popular areas"
+      title="Top neighborhoods for Ottawa buyers"
+      sectors={sectors}
+      background="alt"
+    />
+
+    <ContentBlock narrow>
+      <SectionHeading title="A broker who knows both sides" />
+      <p className="prose-body mt-5">
+        After nearly 9 years in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all stress-free.
+      </p>
+      <Button className="mt-8" size="lg" asChild>
+        <Link to="/en/buyer-consultation">Book my consultation</Link>
+      </Button>
+    </ContentBlock>
+
+    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget, neighborhoods and tips — all in a guide sent by email." ctaLabel="Get the Buyer Guide" />
+
+    <CTASection
+      dark
+      title="Ready to explore Gatineau?"
+      text="Book a free consultation — let's look at the neighborhoods and options that match your profile."
+      buttons={[
+        { label: "Book a consultation", href: "/en/buyer-consultation" },
+        { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" },
+      ]}
+      trustLine="Zero pressure — I give you the options, you decide."
+    />
+
     <FAQSection items={faq} />
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying from Ottawa" text="Process, budget and neighborhoods explained for Ottawa buyers." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Thinking about crossing the river?" text="Let's discuss your situation — neighborhoods, budget and process." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} />
+
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

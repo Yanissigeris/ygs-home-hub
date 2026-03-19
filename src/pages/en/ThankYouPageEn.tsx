@@ -8,6 +8,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 const nextSteps = [
   { title: "Explore neighborhoods", text: "Discover Gatineau neighborhoods — Aylmer, Hull, Plateau, Buckingham and more.", href: "/en/neighborhoods", cta: "See neighborhoods" },
   { title: "Guides and resources", text: "Browse our free guides for sellers, buyers and investors.", href: "/en/resources", cta: "See resources" },
+  { title: "Market report", text: "Prices, trends and sales volume in Gatineau and Outaouais.", href: "/en/market-report", cta: "See the report" },
 ];
 
 const ThankYouPageEn = () => (

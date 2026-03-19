@@ -22,7 +22,8 @@ const guides = [
 ];
 const tools = [
   { icon: Home, title: "Free Valuation", text: "How much is your property worth? Estimate in 24h.", cta: "Get my valuation", href: "/en/home-valuation" },
-  { icon: TrendingUp, title: "Plex Analysis", text: "Revenues, expenses and return on your plex.", cta: "Get an analysis", href: "/en/plex-analysis" },
+  { icon: TrendingUp, title: "Market Report", text: "Prices, trends and sales volume in Gatineau.", cta: "See the report", href: "/en/market-report" },
+  { icon: FileText, title: "Plex Analysis", text: "Revenues, expenses and return on your plex.", cta: "Get an analysis", href: "/en/plex-analysis" },
 ];
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
@@ -31,6 +32,7 @@ const trustItems = [
 ];
 const faq = [
   { q: "Are these resources free?", a: "Yes — all guides and tools are free and no commitment required." },
+  { q: "How can I get personalized resources?", a: "Contact me directly — I'll send you information adapted to your situation." },
   { q: "Can I get personalized advice?", a: "Absolutely. Guides are a great starting point, but every situation is unique. Book a call." },
 ];
 
