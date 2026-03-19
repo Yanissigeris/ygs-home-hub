@@ -9,6 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
+import GuideRequestForm from "@/components/GuideRequestForm";
 import heroImg from "@/assets/hero-seller-guide.jpg";
 
 const topics = [
@@ -92,6 +93,15 @@ const SellerGuidePage = () => (
         <Link to="/plan-vendeur-gatineau">Recevoir mon plan vendeur personnalisé</Link>
       </Button>
     </ContentBlock>
+
+    <GuideRequestForm
+      guideTitle="Recevez le guide vendeur"
+      headline="Recevez votre guide vendeur gratuit"
+      subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — préparation, prix, mise en marché et négociation."
+      submitLabel="Recevoir le guide vendeur"
+      successTitle="Merci! Votre guide est en route."
+      successText="Vérifiez votre boîte courriel — vous recevrez le guide vendeur dans les prochaines minutes."
+    />
 
     <FAQSection items={faq} />
 
