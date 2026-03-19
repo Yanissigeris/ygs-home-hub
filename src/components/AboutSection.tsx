@@ -20,6 +20,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) => (
             alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
             className="aspect-[3/4] w-full object-cover"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </motion.div>
