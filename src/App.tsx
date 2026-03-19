@@ -89,8 +89,14 @@ const SellerPlanPageEn = React.lazy(() => import("./pages/en/SellerPlanPageEn"))
 const SellPlexPageEn = React.lazy(() => import("./pages/en/SellPlexPageEn"));
 const MontrealRelocationPageEn = React.lazy(() => import("./pages/en/MontrealRelocationPageEn"));
 const MarketReportPageEn = React.lazy(() => import("./pages/en/MarketReportPageEn"));
+const LivingAylmerPageEn = React.lazy(() => import("./pages/en/LivingAylmerPageEn"));
+const LivingHullPageEn = React.lazy(() => import("./pages/en/LivingHullPageEn"));
+const LivingPlateauPageEn = React.lazy(() => import("./pages/en/LivingPlateauPageEn"));
+const GatineauCentrePageEn = React.lazy(() => import("./pages/en/GatineauCentrePageEn"));
+const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
+const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
+const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
 
-const queryClient = new QueryClient();
 
 const routeTree = React.createElement(
   Routes,
