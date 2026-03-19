@@ -13,7 +13,8 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
-import GuideOfferBlock from "@/components/GuideOfferBlock";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.jpg";
 
@@ -113,15 +114,14 @@ const SellerPage = () => (
       steps={nextSteps}
     />
 
-    <section className="section-padding">
-      <div className="section-container max-w-[40rem]">
-        <GuideOfferBlock
-          guideType="seller_guide"
-          title="Guide vendeur gratuit"
-          subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — dans un guide clair envoyé par courriel."
-        />
-      </div>
-    </section>
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Vous pensez vendre? Recevez le guide complet."
+      text="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — dans un guide clair envoyé par courriel."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
 
     <ReviewSection
       overline="Témoignages vendeurs"
