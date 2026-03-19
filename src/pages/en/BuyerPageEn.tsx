@@ -59,7 +59,7 @@ const BuyerPageEn = () => (
     <CardGrid overline="For you" title="I can help if you are…" items={profiles} background="alt" variant="icon-inline" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
-    <SectorLinks sectors={sectors} />
+    <SectorLinks overline="Neighborhoods" title="Areas to compare" sectors={sectors} />
     <GuideInlineCTAEn guideType="buyer_guide" headline="First time buying? Get the complete guide." text="The buying process in Québec explained simply — from search to notary, step by step." ctaLabel="Get the Buyer Guide" />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
     <ReviewSection overline="Buyer testimonials" title="They bought with confidence" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
