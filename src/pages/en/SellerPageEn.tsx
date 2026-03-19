@@ -52,7 +52,7 @@ const faq = [
 const SellerPageEn = () => (
   <>
     <PageMeta title="Sell Your Home in Gatineau | YGS" description="Sell your property in Gatineau at the best price. Marketing strategy, personalized support and proven results by Yanis Gauthier-Sigeris." />
-    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a real strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
+    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
     <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
