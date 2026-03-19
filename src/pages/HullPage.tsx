@@ -156,6 +156,8 @@ const HullPage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
+  
+    <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
   </>
 );
 

@@ -88,6 +88,8 @@ const LivingPlateauPage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />
+  
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
   </>
 );
 

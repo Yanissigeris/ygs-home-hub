@@ -88,6 +88,8 @@ const LivingHullPage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les options, vous décidez."
     />
+  
+    <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
   </>
 );
 
