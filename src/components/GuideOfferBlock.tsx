@@ -25,6 +25,8 @@ const GuideOfferBlock = ({
     ctaLabel ??
     (guideType === "seller_guide"
       ? "Recevoir le guide vendeur"
+      : guideType === "investor_guide"
+      ? "Recevoir le guide investisseur"
       : "Recevoir le guide acheteur");
 
   return (
