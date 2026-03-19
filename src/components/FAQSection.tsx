@@ -51,7 +51,8 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     </section>
     );
   },
+);
 
-FAQSection.displayName = "FAQSection";
+
 
 export default FAQSection;
