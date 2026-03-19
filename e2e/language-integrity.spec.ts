@@ -5,6 +5,11 @@ const frenchMarkers = [
   "à vendre", "voir la fiche", "courtier", "découvrez", "obtenez",
   "réservez", "envoyer", "soumettre", "courriel", "bienvenue",
   "secteur", "en savoir plus", "mise en marché", "zéro pression",
+  "votre maison", "sans engagement", "gratuit et sans", "première étape",
+  "prochaine étape", "remplissez le formulaire", "prénom", "téléphone",
+  "quartiers", "rendement", "accompagner", "personnalisé",
+  "stratégie", "négociation", "notaire", "confidentiel",
+  "prochaines minutes", "sans obligation", "immobilier",
 ];
 
 const englishMarkers = [
