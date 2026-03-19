@@ -12,6 +12,7 @@ import SectorsSection from "@/components/SectorsSection";
 import InlineCTA from "@/components/InlineCTA";
 import ReviewStrip from "@/components/ReviewStrip";
 import ReviewSection from "@/components/ReviewSection";
+import GuideOffersSection from "@/components/GuideOffersSection";
 import { getReviewsById } from "@/data/reviews";
 import heroImg from "@/assets/hero-gatineau.jpg";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
