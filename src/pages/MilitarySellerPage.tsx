@@ -17,8 +17,8 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const steps = [
   { num: "01", title: "Évaluation stratégique", desc: "Valeur marchande, positionnement prix et plan pour maximiser votre retour malgré le calendrier serré." },
-  { num: "02", title: "Mise en marché rapide", desc: "Préparation accélérée, photos professionnelles et stratégie de visibilité ciblée." },
-  { num: "03", title: "Vente et coordination", desc: "Négociation, coordination avec votre achat et accompagnement jusqu'au notaire." },
+  { num: "02", title: "Mise en marché rapide", desc: "Préparation, améliorations appropriés,  plan de visibilité et calendrier de mise en marché." },
+  { num: "03", title: "Vente et coordination", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. " },
 ];
 
 const trustItems = [
