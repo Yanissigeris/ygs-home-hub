@@ -85,6 +85,13 @@ const BuyFromOttawaPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter à Gatineau"
+      text="Processus, budget, secteurs et conseils — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à explorer Gatineau?"
