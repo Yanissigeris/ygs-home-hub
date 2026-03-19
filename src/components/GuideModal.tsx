@@ -41,6 +41,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     successTitle: "Parfait — votre guide est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
+  investor_guide: {
+    title: "Recevez le guide investisseur",
+    description: "Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter — le guide essentiel pour investir à Gatineau.",
+    submitLabel: "Envoyer mon guide investisseur",
+    successTitle: "Parfait — votre guide investisseur est en route!",
+    successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
+  },
 };
 
 const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {
