@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FAQItem {
   q: string;
@@ -18,7 +19,10 @@ interface FAQSectionProps {
 }
 
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
-  ({ title = "Questions fréquentes", items }, ref) => (
+  ({ title, items }, ref) => {
+    const lang = useLanguage();
+    const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
+    return (
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container max-w-[44rem]">
         <motion.div
