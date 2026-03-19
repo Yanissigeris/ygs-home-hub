@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Step {
   num: string;
@@ -15,11 +16,15 @@ interface ProcessStepsProps {
 }
 
 const ProcessSteps = ({
-  overline = "Le processus",
-  title = "Comment ça fonctionne",
+  overline,
+  title,
   steps,
   background = "default",
-}: ProcessStepsProps) => (
+}: ProcessStepsProps) => {
+  const lang = useLanguage();
+  const resolvedOverline = overline ?? (lang === "en" ? "The process" : "Le processus");
+  const resolvedTitle = title ?? (lang === "en" ? "How it works" : "Comment ça fonctionne");
+  return (
   <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
     <div className="section-container">
       <motion.div
