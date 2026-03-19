@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 
-export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide";
+export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide" | "relocation_guide";
 
 interface GuideModalProps {
   open: boolean;
