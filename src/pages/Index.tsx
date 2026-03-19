@@ -43,6 +43,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <PathwaySection />
 
+    <AboutSection />
+
     <CredibilitySection />
 
     <ConversionSection />
@@ -52,8 +54,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       buttonLabel="Évaluation Gratuite →"
       href="/evaluation-gratuite-gatineau"
     />
-
-    <AboutSection />
 
     <SectorsSection />
 
