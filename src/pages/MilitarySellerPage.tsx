@@ -78,6 +78,13 @@ const MilitarySellerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit — vendez au meilleur prix"
+      text="Tout ce que vous devez savoir pour vendre votre propriété à Gatineau — prix, préparation et stratégie."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Vous avez une mutation qui approche?"
