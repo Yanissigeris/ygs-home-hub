@@ -142,7 +142,7 @@ const ContactPage = () => {
 
       <ReviewSection
         overline="Témoignages"
-        title="Ce que disent nos clients"
+        title="Ce que disent mes clients"
         reviews={getReviewsById(["s1", "b2", "r1"])}
         columns={3}
         background="alt"

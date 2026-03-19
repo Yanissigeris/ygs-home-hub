@@ -21,7 +21,7 @@ const TestimonialsPage = () => (
     <HeroSection
       compact
       overline="Témoignages"
-      title="Ce que disent nos clients"
+      title="Ce que disent mes clients"
       subtitle="Des vendeurs, acheteurs, relocalisés et investisseurs partagent leur expérience avec Yanis."
       primaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
