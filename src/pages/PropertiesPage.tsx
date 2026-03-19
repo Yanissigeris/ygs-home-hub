@@ -31,7 +31,7 @@ const faq = [
   { q: "Comment sont sélectionnées les propriétés vedettes?", a: "Je sélectionne les propriétés selon leur emplacement, leur potentiel, leur rapport qualité-prix et leur pertinence pour les acheteurs actifs à Gatineau." },
   { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères — je vous avise dès qu'une propriété correspondante arrive sur le marché." },
   { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui — les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
-  { q: "Quel sont les prix des maisons déjà vendu à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données" },
+  { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données" },
   { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis près de 9 ans, j'ai accès à des propriétés avant leur mise en marché officielle." },
 ];
 
