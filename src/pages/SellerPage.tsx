@@ -13,7 +13,8 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
-import GuideOfferBlock from "@/components/GuideOfferBlock";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.jpg";
 
