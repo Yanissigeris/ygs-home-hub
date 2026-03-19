@@ -97,6 +97,8 @@ const MilitarySellerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
 

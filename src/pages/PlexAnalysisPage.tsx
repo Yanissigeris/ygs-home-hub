@@ -204,6 +204,8 @@ const PlexAnalysisPage = () => {
       />
 
       <FAQSection items={faq} />
+
+      <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
     </>
   );
 };

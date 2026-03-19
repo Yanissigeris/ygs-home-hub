@@ -102,6 +102,8 @@ const MilitaryBuyerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="relocation_guide" label="Guide militaire gratuit — recevez-le par courriel" />
   </>
 );
 

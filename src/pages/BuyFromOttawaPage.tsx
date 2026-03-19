@@ -104,6 +104,8 @@ const BuyFromOttawaPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
   </>
 );
 

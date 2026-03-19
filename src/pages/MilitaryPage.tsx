@@ -132,6 +132,8 @@ const MilitaryPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit — recevez-le par courriel" />
   </>
 );
 
