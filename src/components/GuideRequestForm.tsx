@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { Send, Lock, Shield, Clock, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface GuideRequestFormProps {
   guideTitle: string;
@@ -14,15 +15,60 @@ interface GuideRequestFormProps {
   successText?: string;
 }
 
+const i18n = {
+  fr: {
+    overline: "Guide gratuit",
+    formSubtitle: "Remplissez le formulaire pour le recevoir par courriel.",
+    bullets: [
+      { icon: Shield, text: "Gratuit et sans engagement" },
+      { icon: Clock, text: "Envoyé par courriel en quelques minutes" },
+      { icon: CheckCircle2, text: "Contenu adapté au marché de Gatineau" },
+    ],
+    firstName: "Prénom",
+    firstNamePh: "Votre prénom",
+    lastName: "Nom",
+    lastNamePh: "Votre nom",
+    email: "Courriel",
+    emailPh: "vous@exemple.com",
+    phone: "Téléphone (optionnel)",
+    badges: ["Gratuit", "Confidentiel", "Sans engagement"],
+    defaultSuccessTitle: "Merci! Votre guide est en route.",
+    defaultSuccessText: "Vous allez le recevoir par courriel dans les prochaines minutes.",
+  },
+  en: {
+    overline: "Free Guide",
+    formSubtitle: "Fill out the form to receive it by email.",
+    bullets: [
+      { icon: Shield, text: "Free, no commitment" },
+      { icon: Clock, text: "Sent by email within minutes" },
+      { icon: CheckCircle2, text: "Content tailored to the Gatineau market" },
+    ],
+    firstName: "First Name",
+    firstNamePh: "Your first name",
+    lastName: "Last Name",
+    lastNamePh: "Your last name",
+    email: "Email",
+    emailPh: "you@example.com",
+    phone: "Phone (optional)",
+    badges: ["Free", "Confidential", "No commitment"],
+    defaultSuccessTitle: "Thank you! Your guide is on its way.",
+    defaultSuccessText: "You'll receive it by email within the next few minutes.",
+  },
+};
+
 const GuideRequestForm = ({
   guideTitle,
   headline,
   subtitle,
   submitLabel,
-  successTitle = "Merci! Votre guide est en route.",
-  successText = "Vous allez le recevoir par courriel dans les prochaines minutes.",
+  successTitle,
+  successText,
 }: GuideRequestFormProps) => {
   const [submitted, setSubmitted] = useState(false);
+  const lang = useLanguage();
+  const t = i18n[lang];
+  const finalSuccessTitle = successTitle ?? t.defaultSuccessTitle;
+  const finalSuccessText = successText ?? t.defaultSuccessText;
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -43,18 +89,14 @@ const GuideRequestForm = ({
           <div className="pt-2">
             <p className="mb-3 flex items-center gap-2.5 text-[0.75rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/60">
               <BookOpen size={14} className="text-accent" />
-              <span>Guide gratuit</span>
+              <span>{t.overline}</span>
             </p>
             <h2 className="text-foreground">{headline}</h2>
             <p className="mt-4 text-[1rem] leading-relaxed text-muted-foreground max-w-[26rem]">
               {subtitle}
             </p>
             <div className="mt-6 space-y-2.5">
-              {[
-                { icon: Shield, text: "Gratuit et sans engagement" },
-                { icon: Clock, text: "Envoyé par courriel en quelques minutes" },
-                { icon: CheckCircle2, text: "Contenu adapté au marché de Gatineau" },
-              ].map((b) => (
+              {t.bullets.map((b) => (
                 <div key={b.text} className="flex items-center gap-2.5 text-[0.85rem] text-muted-foreground/70">
                   <b.icon size={15} className="text-accent shrink-0" />
                   <span>{b.text}</span>
@@ -69,35 +111,35 @@ const GuideRequestForm = ({
               {guideTitle}
             </h3>
             <p className="mt-1 text-[0.8125rem] text-muted-foreground">
-              Remplissez le formulaire pour le recevoir par courriel.
+              {t.formSubtitle}
             </p>
 
             {submitted ? (
               <div className="mt-8 text-center py-6">
                 <CheckCircle2 size={36} className="mx-auto text-accent" />
-                <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold">{successTitle}</h4>
-                <p className="mt-2 text-[0.875rem] text-muted-foreground">{successText}</p>
+                <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold">{finalSuccessTitle}</h4>
+                <p className="mt-2 text-[0.875rem] text-muted-foreground">{finalSuccessText}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-5 space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <Label htmlFor="guide-prenom" className="text-muted-foreground text-[0.8125rem]">Prénom</Label>
-                    <Input id="guide-prenom" placeholder="Votre prénom" className="mt-1 h-11" required />
+                    <Label htmlFor="guide-prenom" className="text-muted-foreground text-[0.8125rem]">{t.firstName}</Label>
+                    <Input id="guide-prenom" placeholder={t.firstNamePh} className="mt-1 h-11" required />
                   </div>
                   <div>
-                    <Label htmlFor="guide-nom" className="text-muted-foreground text-[0.8125rem]">Nom</Label>
-                    <Input id="guide-nom" placeholder="Votre nom" className="mt-1 h-11" required />
+                    <Label htmlFor="guide-nom" className="text-muted-foreground text-[0.8125rem]">{t.lastName}</Label>
+                    <Input id="guide-nom" placeholder={t.lastNamePh} className="mt-1 h-11" required />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="guide-courriel" className="text-muted-foreground text-[0.8125rem]">Courriel</Label>
-                  <Input id="guide-courriel" type="email" placeholder="vous@exemple.com" className="mt-1 h-11" required />
+                  <Label htmlFor="guide-courriel" className="text-muted-foreground text-[0.8125rem]">{t.email}</Label>
+                  <Input id="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
                 </div>
 
                 <div>
-                  <Label htmlFor="guide-tel" className="text-muted-foreground text-[0.8125rem]">Téléphone (optionnel)</Label>
+                  <Label htmlFor="guide-tel" className="text-muted-foreground text-[0.8125rem]">{t.phone}</Label>
                   <Input id="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
                 </div>
 
@@ -107,9 +149,9 @@ const GuideRequestForm = ({
                 </Button>
 
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-muted-foreground/50">
-                  <span className="flex items-center gap-1.5"><BadgeCheck size={13} /> Gratuit</span>
-                  <span className="flex items-center gap-1.5"><Lock size={13} /> Confidentiel</span>
-                  <span className="flex items-center gap-1.5"><Shield size={13} /> Sans engagement</span>
+                  <span className="flex items-center gap-1.5"><BadgeCheck size={13} /> {t.badges[0]}</span>
+                  <span className="flex items-center gap-1.5"><Lock size={13} /> {t.badges[1]}</span>
+                  <span className="flex items-center gap-1.5"><Shield size={13} /> {t.badges[2]}</span>
                 </div>
               </form>
             )}
