@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FAQItem {
   q: string;
@@ -18,7 +19,10 @@ interface FAQSectionProps {
 }
 
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
-  ({ title = "Questions fréquentes", items }, ref) => (
+  ({ title, items }, ref) => {
+    const lang = useLanguage();
+    const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
+    return (
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container max-w-[44rem]">
         <motion.div
@@ -29,7 +33,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="label-overline mb-3">FAQ</p>
-          <h2>{title}</h2>
+          <h2>{resolvedTitle}</h2>
         </motion.div>
         <Accordion type="single" collapsible>
           {items.map((item, i) => (
@@ -45,9 +49,10 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
         </Accordion>
       </div>
     </section>
-  ),
+    );
+  },
 );
 
-FAQSection.displayName = "FAQSection";
+
 
 export default FAQSection;
