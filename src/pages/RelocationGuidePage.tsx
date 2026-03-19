@@ -8,7 +8,8 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
-import GuideOfferBlock from "@/components/GuideOfferBlock";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-relocation-guide.jpg";
 
 const topics = [
