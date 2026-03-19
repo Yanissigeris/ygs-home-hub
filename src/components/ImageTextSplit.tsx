@@ -37,7 +37,6 @@ const ImageTextSplit = ({
             loading="lazy"
             decoding="async"
           />
-          />
         )}
       </motion.div>
       <motion.div
