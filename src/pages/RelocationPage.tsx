@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
@@ -117,6 +119,13 @@ const RelocationPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation gratuit"
+      text="Tout ce qu'il faut savoir pour s'installer à Gatineau — secteurs, prix, processus et écoles."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Parlons de votre projet de relocalisation"
@@ -129,6 +138,8 @@ const RelocationPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
   </>
 );
 

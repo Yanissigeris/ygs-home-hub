@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -77,6 +79,13 @@ const FirstTimeBuyerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — pour bien démarrer"
+      text="Tout ce que vous devez savoir pour acheter votre première propriété à Gatineau."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à faire le premier pas?"
@@ -89,6 +98,8 @@ const FirstTimeBuyerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
   </>
 );
 

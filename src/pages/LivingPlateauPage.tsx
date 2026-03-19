@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -67,6 +69,13 @@ const LivingPlateauPage = () => (
       title="À lire aussi"
       pages={related}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — s'installer dans le Plateau"
+      text="Tout pour acheter dans le Plateau — processus, budget et conseils envoyés par courriel."
+      ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection

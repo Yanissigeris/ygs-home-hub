@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
@@ -72,6 +74,13 @@ const MilitaryGuidePage = () => (
       text="Vous devez vendre avant d'acheter? Commencez par connaître la valeur de votre propriété."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau"
+    />
+
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Recevez le guide relocalisation militaire"
+      text="Mutation, achat, vente — tout dans un guide clair envoyé gratuitement par courriel."
+      ctaLabel="Recevoir le guide"
     />
 
     <FAQSection items={faq} />

@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -135,6 +137,13 @@ const HullPage = () => (
       title="À lire aussi"
       pages={related}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Guide investisseur gratuit — plex à Hull"
+      text="Rendement, fiscalité et stratégie d'investissement — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide investisseur"
     />
 
     <CTASection

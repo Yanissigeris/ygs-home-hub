@@ -6,6 +6,7 @@ import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
 import FAQSection from "@/components/FAQSection";
 import SuccessMessage from "@/components/SuccessMessage";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -223,6 +224,8 @@ const SellerPlanPage = () => {
       </ContentBlock>
 
       <FAQSection items={faq} />
+
+      <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
     </>
   );
 };

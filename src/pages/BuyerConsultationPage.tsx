@@ -6,6 +6,7 @@ import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import FAQSection from "@/components/FAQSection";
 import SuccessMessage from "@/components/SuccessMessage";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -204,6 +205,8 @@ const BuyerConsultationPage = () => {
       />
 
       <FAQSection items={faq} />
+
+      <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
     </>
   );
 };

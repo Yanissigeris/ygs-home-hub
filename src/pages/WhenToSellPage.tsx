@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -66,6 +68,13 @@ const WhenToSellPage = () => (
       href="/evaluation-gratuite-gatineau"
     />
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit — vendez au bon moment"
+      text="Prix, préparation, timing — tout dans un guide envoyé gratuitement par courriel."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Vous hésitez sur le timing?"
@@ -78,6 +87,8 @@ const WhenToSellPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
 

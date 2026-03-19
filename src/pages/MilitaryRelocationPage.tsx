@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -73,6 +75,13 @@ const MilitaryRelocationPage = () => (
       />
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation militaire gratuit"
+      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Planifions votre relocalisation"
@@ -85,6 +94,8 @@ const MilitaryRelocationPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
   </>
 );
 

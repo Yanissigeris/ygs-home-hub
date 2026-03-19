@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -76,6 +78,13 @@ const MilitarySellerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit — vendez au meilleur prix"
+      text="Tout ce que vous devez savoir pour vendre votre propriété à Gatineau — prix, préparation et stratégie."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Vous avez une mutation qui approche?"
@@ -88,6 +97,8 @@ const MilitarySellerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
 

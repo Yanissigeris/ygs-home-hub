@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -67,6 +69,13 @@ const LivingHullPage = () => (
       title="À lire aussi"
       pages={related}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Guide investisseur gratuit — plex à Hull"
+      text="Rendement, fiscalité et stratégie — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide investisseur"
     />
 
     <CTASection

@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
@@ -106,6 +108,13 @@ const AylmerPage = () => (
       title="À lire aussi"
       pages={related}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter à Aylmer"
+      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection

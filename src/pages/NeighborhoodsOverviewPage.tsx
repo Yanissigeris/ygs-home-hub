@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -71,6 +73,13 @@ const NeighborhoodsOverviewPage = () => (
       items={lifestyleGuides}
       columns={3}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — trouvez le bon secteur"
+      text="Tout ce qu'il faut savoir pour acheter à Gatineau — processus, budget et quartiers."
+      ctaLabel="Recevoir le guide acheteur"
     />
 
     <FAQSection title="Questions sur les quartiers" items={faq} />

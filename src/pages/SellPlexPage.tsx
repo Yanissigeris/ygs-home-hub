@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -77,6 +79,13 @@ const SellPlexPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Guide investisseur gratuit — maximisez votre plex"
+      text="Rendement, fiscalité et stratégie de vente — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide investisseur"
+    />
+
     <CTASection
       dark
       title="Prêt à explorer vos options?"
@@ -89,6 +98,8 @@ const SellPlexPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
   </>
 );
 

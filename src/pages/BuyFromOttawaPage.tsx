@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -83,6 +85,13 @@ const BuyFromOttawaPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter à Gatineau"
+      text="Processus, budget, secteurs et conseils — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à explorer Gatineau?"
@@ -95,6 +104,8 @@ const BuyFromOttawaPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
   </>
 );
 

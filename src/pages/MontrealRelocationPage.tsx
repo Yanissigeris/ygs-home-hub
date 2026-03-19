@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -70,6 +72,13 @@ const MontrealRelocationPage = () => (
         La transition de Montréal à Gatineau est plus simple qu'on pense — même processus notarié, même province. Mon rôle est de vous faire découvrir les meilleurs secteurs et de vous accompagner dans chaque étape.
       </p>
     </ContentBlock>
+
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation gratuit"
+      text="Tout pour s'installer à Gatineau depuis Montréal — secteurs, prix et processus."
+      ctaLabel="Recevoir le guide"
+    />
 
     <CTASection
       dark

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -135,6 +137,13 @@ const BuckinghamPage = () => (
       title="À lire aussi"
       pages={related}
       background="alt"
+    />
+
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter à Buckingham"
+      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection

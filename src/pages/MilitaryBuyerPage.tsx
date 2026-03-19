@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -81,6 +83,13 @@ const MilitaryBuyerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="relocation_guide"
+      headline="Guide relocalisation militaire gratuit"
+      text="Tout ce qu'il faut savoir pour acheter à Gatineau lors d'une mutation — dans un guide clair envoyé par courriel."
+      ctaLabel="Recevoir le guide"
+    />
+
     <CTASection
       dark
       title="Prêt à trouver votre propriété à Gatineau?"
@@ -93,6 +102,8 @@ const MilitaryBuyerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <StickyGuideBanner guideType="relocation_guide" label="Guide militaire gratuit — recevez-le par courriel" />
   </>
 );
 
