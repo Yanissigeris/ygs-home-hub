@@ -2,20 +2,72 @@ import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
+import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import SectorLinks from "@/components/SectorLinks";
+import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import heroImg from "@/assets/hero-relocation-guide.webp";
 
-const topics = ["Gatineau neighborhoods compared — pros and cons","Understanding prices by area","The Québec buying process step by step","Taxes, schools and community services","Tips for a smooth transition from Ottawa or Montréal"];
+const topics = [
+  "Understanding the Gatineau real estate market vs Ottawa and Montréal",
+  "Choosing the right neighborhood for your family and budget",
+  "The buying and settling process in Québec",
+  "Schools, services, transportation — what you need to know",
+  "Taxes, cost of living and tax advantages",
+  "Mistakes to avoid during a relocation",
+];
+
+const sectors = [
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
+  { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown, condos and plex" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
+];
+
+const faq = [
+  { q: "Is this guide free?", a: "Yes. The goal is to give you a solid foundation to plan your relocation with confidence." },
+  { q: "How do I get the complete guide?", a: "Contact me directly — I'll send you all the relevant information for your situation." },
+  { q: "Are taxes higher in Québec?", a: "Municipal taxes vary by neighborhood. Income tax is different too. We look at the full picture together." },
+  { q: "Do I need to speak French to live in Gatineau?", a: "Not necessarily — several areas like Aylmer are very bilingual. But French is an asset in daily life." },
+];
+
+const related = [
+  { title: "Relocation from Ottawa", text: "More space and affordable prices on the other side of the river.", href: "/en/buy-from-ottawa" },
+  { title: "Relocation from Montréal", text: "Quality of life and space for Montréal families.", href: "/en/montreal-relocation" },
+  { title: "Military Relocation", text: "Posting to the NCR — service adapted to military members.", href: "/en/military-relocation" },
+  { title: "All Neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods" },
+];
 
 const RelocationGuidePageEn = () => (
   <>
     <PageMeta title="Relocation Guide — Moving to Gatineau | YGS" description="Complete relocation guide for moving to Gatineau. Neighborhoods, prices, process and schools." />
-    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to settle in Gatineau — neighborhoods, prices, process and practical tips." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} heroBgImage={heroImg} />
+    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} heroBgImage={heroImg} />
+
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Relocation Guide" text="Neighborhoods, prices, process — everything in one guide sent to your email." ctaLabel="Get the Relocation Guide" />
-    <CTASection dark title="Planning your move?" text="Let's discuss your relocation — no commitment, just honest advice." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} />
+
+    <ContentBlock narrow>
+      <SectionHeading title="Settling in Gatineau takes preparation" />
+      <p className="prose-body mt-5">
+        Whether you're coming from Ottawa, Montréal or elsewhere in Canada, Gatineau offers an exceptional quality of life — but you need to know the terrain. This guide covers everything newcomers need to know.
+      </p>
+    </ContentBlock>
+
+    <SectorLinks overline="Popular neighborhoods" title="Neighborhoods to consider" sectors={sectors} background="alt" />
+
+    <GuideInlineCTAEn guideType="relocation_guide" headline="Moving to Gatineau? Get the complete guide." text="A clear guide to better understand buying in Gatineau from Ottawa or elsewhere, avoid surprises and choose the right neighborhood." ctaLabel="Get the Relocation Guide" />
+
     <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+
+    <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Book a call →" href="/en/contact" />
+
+    <FAQSection items={faq} />
+
+    <RelatedPages title="Related pages" pages={related} background="alt" />
+
+    <CTASection dark title="Let's plan your move" text="Book a free call — let's clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
   </>
 );
 export default RelocationGuidePageEn;

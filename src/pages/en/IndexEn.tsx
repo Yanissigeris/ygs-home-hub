@@ -194,7 +194,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <CTASection
       dark
-      overline="Next step"
+      overline="First step"
       title="Start with the right first step"
       text="Valuation, buyer consultation or plex analysis — we start where you are."
       buttons={[
