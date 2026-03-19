@@ -77,6 +77,15 @@ const BuyerGuidePage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideRequestForm
+      guideTitle="Recevez le guide acheteur"
+      headline="Recevez votre guide acheteur gratuit"
+      subtitle="Tout ce que vous devez savoir pour acheter à Gatineau — dans un guide clair, étape par étape, envoyé directement dans votre boîte courriel."
+      submitLabel="Recevoir le guide acheteur"
+      successTitle="Merci! Votre guide est en route."
+      successText="Vérifiez votre boîte courriel — vous recevrez le guide acheteur dans les prochaines minutes."
+    />
+
     <FAQSection items={faq} />
 
     <RelatedPages
