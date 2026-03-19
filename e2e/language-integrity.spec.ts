@@ -15,6 +15,13 @@ const frenchMarkers = [
 const englishMarkers = [
   "how it works", "the process", "frequently asked questions",
   "for sale", "view listing", "get started", "book a call",
+  "your home", "no obligation", "free and without", "first step",
+  "next step", "fill out the form", "first name", "phone number",
+  "neighborhoods", "return on investment", "personalized",
+  "negotiation", "confidential", "real estate",
+  "submit", "send", "email address", "welcome",
+  "learn more", "zero pressure", "no bad surprises",
+  "schedule", "download", "strategy",
 ];
 
 const enPages = [
