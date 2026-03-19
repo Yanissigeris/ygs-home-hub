@@ -21,7 +21,6 @@ const PropertyCard = ({ property }: PropertyCardProps) => (
         loading="lazy"
         decoding="async"
       />
-      />
       <div className="absolute top-3 left-3 flex gap-2">
         <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
           {property.status === "active" ? "À vendre" : property.status === "pending" ? "Offre acceptée" : "Vendue"}

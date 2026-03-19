@@ -54,7 +54,6 @@ const ImageTextSplit = ({
             loading="lazy"
             decoding="async"
           />
-          />
         ) : (
           children
         )}
