@@ -34,7 +34,7 @@ const ProcessSteps = ({
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <SectionHeading overline={overline} title={title} centered />
+        <SectionHeading overline={resolvedOverline} title={resolvedTitle} centered />
       </motion.div>
       <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
         {steps.map((s, i) => (
