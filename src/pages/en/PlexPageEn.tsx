@@ -13,7 +13,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-plex.jpg";
+import heroImg from "@/assets/hero-plex.webp";
 
 const clientTypes = [
   { icon: Building2, title: "Plex owners", text: "Sell, refinance or hold? We analyze your situation with real numbers — not assumptions.", cta: "Get an analysis", href: "/en/plex-analysis" },

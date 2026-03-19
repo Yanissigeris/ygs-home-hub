@@ -7,7 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import heroImg from "@/assets/hero-buyer-guide.jpg";
+import heroImg from "@/assets/hero-buyer-guide.webp";
 
 const topics = ["Understanding the buying process in Québec","Choosing the right neighborhood in Gatineau","First-time buyer vs experienced buyer — what changes","How to formulate a strong offer","The inspection: what to really check","The notary's role and fees to expect"];
 const faq = [

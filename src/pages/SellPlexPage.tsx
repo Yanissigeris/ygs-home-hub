@@ -13,7 +13,7 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { Building2, TrendingUp, DollarSign, Users, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-sell-plex.jpg";
+import heroImg from "@/assets/hero-sell-plex.webp";
 
 const challenges = [
   { icon: Building2, title: "Évaluer un plex correctement", text: "La valeur d'un plex dépend des revenus, des dépenses et du potentiel — pas juste des comparables." },

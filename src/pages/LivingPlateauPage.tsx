@@ -10,7 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, Users, MapPin, TreePine } from "lucide-react";
-import heroImg from "@/assets/hero-living-plateau.jpg";
+import heroImg from "@/assets/hero-living-plateau.webp";
 
 const highlights = [
   { icon: MapPin, title: "Développements récents", text: "Maisons modernes dans des quartiers neufs avec parcs et pistes cyclables." },

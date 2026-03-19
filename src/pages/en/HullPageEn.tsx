@@ -7,7 +7,7 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { Building2, Coffee, TrendingUp, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-hull.jpg";
+import heroImg from "@/assets/hero-hull.webp";
 
 const profiles = [
   { icon: Coffee, title: "Urban lifestyle", text: "Restaurants, culture, nightlife — a vibrant downtown feel close to Ottawa." },

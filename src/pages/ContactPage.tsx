@@ -1,5 +1,5 @@
 import PageMeta from "@/components/PageMeta";
-import heroImg from "@/assets/hero-gatineau.jpg";
+import heroImg from "@/assets/hero-gatineau.webp";
 import { useState, FormEvent } from "react";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";

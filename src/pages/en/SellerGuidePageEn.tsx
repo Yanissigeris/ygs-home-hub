@@ -5,7 +5,7 @@ import BenefitsList from "@/components/BenefitsList";
 import FAQSection from "@/components/FAQSection";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import heroImg from "@/assets/hero-seller-guide.jpg";
+import heroImg from "@/assets/hero-seller-guide.webp";
 
 const topics = ["Pricing your property accurately","Preparing your home for maximum impact","The marketing plan that attracts the right buyers","Negotiation strategies that protect your interests","The notary process and what to expect"];
 const faq = [

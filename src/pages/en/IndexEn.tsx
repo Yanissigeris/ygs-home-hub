@@ -7,7 +7,7 @@ import ReviewStrip from "@/components/ReviewStrip";
 import ReviewSection from "@/components/ReviewSection";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsById } from "@/data/reviews";
-import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
+import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";

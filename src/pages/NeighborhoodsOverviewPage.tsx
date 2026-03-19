@@ -10,7 +10,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import { Clock, Award, Shield, Home, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-neighborhoods.jpg";
+import heroImg from "@/assets/hero-neighborhoods.webp";
 
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },

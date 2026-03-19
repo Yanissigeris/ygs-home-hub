@@ -6,7 +6,7 @@ import CardGrid from "@/components/CardGrid";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, DollarSign, Home, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-first-buyer.jpg";
+import heroImg from "@/assets/hero-first-buyer.webp";
 
 const tips = [
   { icon: DollarSign, title: "Down payment basics", text: "5% minimum for your first home. We'll review what you need and what programs may help." },

@@ -12,7 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import GuideRequestForm from "@/components/GuideRequestForm";
-import heroImg from "@/assets/hero-seller-guide.jpg";
+import heroImg from "@/assets/hero-seller-guide.webp";
 
 const topics = [
   "Comment fixer le bon prix de vente à Gatineau",

@@ -10,7 +10,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-resources.jpg";
+import heroImg from "@/assets/hero-resources.webp";
 
 const guides = [
   { icon: Home, title: "Seller Guide", text: "Everything to sell at the best price in Gatineau.", cta: "Read the guide", href: "/en/seller-guide" },

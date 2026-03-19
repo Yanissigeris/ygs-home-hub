@@ -7,7 +7,7 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { Users, Home, TreePine, TrendingUp } from "lucide-react";
-import heroImg from "@/assets/hero-aylmer.jpg";
+import heroImg from "@/assets/hero-aylmer.webp";
 
 const profiles = [
   { icon: Users, title: "Families", text: "Parks, schools, newer homes — a top choice for families in Gatineau." },

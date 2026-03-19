@@ -11,7 +11,7 @@ import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-plateau.jpg";
+import heroImg from "@/assets/hero-plateau.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.jpg";
 
 const trustItems = [

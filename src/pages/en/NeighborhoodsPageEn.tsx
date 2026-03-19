@@ -10,7 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { Clock, Award, Shield, MapPin, Home, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-neighborhoods.jpg";
+import heroImg from "@/assets/hero-neighborhoods.webp";
 
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
