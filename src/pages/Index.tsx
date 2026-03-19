@@ -27,7 +27,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre allié en immobilier en Outaouais"
-      subtitle="Vendre, acheter ou investir — stratégie claire, conseils honnêtes et accompagnement sans pression."
+      subtitle="Vendre, acheter ou investir — stratégie claire avec conseils honnêtes."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
