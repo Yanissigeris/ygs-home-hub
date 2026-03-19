@@ -37,8 +37,8 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
           Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous à votre rythme.   
         </p>
         <p className="prose-body mt-4">
-
-      </p>
+          Il accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire et avec une excellente connaissance du marché.
+        </p>
         <p className="prose-body mt-4">
           Avec plus de 9 ans d’expérience comme courtier immobilier en Outaouais, Yanis offre à ses clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier lui-même, il sait également analyser en profondeur les opportunités en multilogement. Son expérience concrète en flips immobiliers, combinée à sa formation en gestion de projet (AEC), fait de lui un allié incontournable pour tout projet immobilier.
         </p>
