@@ -57,6 +57,7 @@ const ProcessSteps = ({
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default ProcessSteps;

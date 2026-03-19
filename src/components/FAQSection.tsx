@@ -49,8 +49,8 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
         </Accordion>
       </div>
     </section>
-  ),
-);
+    );
+  },
 
 FAQSection.displayName = "FAQSection";
 
