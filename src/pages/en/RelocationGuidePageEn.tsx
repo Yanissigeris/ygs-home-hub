@@ -44,7 +44,7 @@ const related = [
 const RelocationGuidePageEn = () => (
   <>
     <PageMeta title="Relocation Guide — Moving to Gatineau | YGS" description="Complete relocation guide for moving to Gatineau. Neighborhoods, prices, process and schools." />
-    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} heroBgImage={heroImg} />
+    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
