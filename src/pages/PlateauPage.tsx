@@ -108,6 +108,13 @@ const PlateauPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter dans le Plateau"
+      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Acheteur ou vendeur dans le Plateau?"
