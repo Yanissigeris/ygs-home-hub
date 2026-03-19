@@ -48,7 +48,10 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "All Neighborhoods", href: "/en/neighborhoods" },
       { label: "Plateau / Aylmer", href: "/en/plateau-aylmer" },
+      { label: "Aylmer", href: "/en/aylmer" },
+      { label: "Plateau", href: "/en/plateau" },
       { label: "Hull", href: "/en/hull" },
+      { label: "Gatineau Centre", href: "/en/gatineau" },
       { label: "Buckingham / Masson-Angers", href: "/en/buckingham" },
     ],
   },
