@@ -36,35 +36,31 @@ const GuideOfferBlock = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className={`rounded-[var(--card-radius)] border border-border p-6 sm:p-8 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-300 ${
+        className={`flex flex-col h-full rounded-[var(--card-radius)] border border-border p-6 sm:p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-300 ${
           background === "alt" ? "bg-secondary/30" : "bg-card"
         }`}
       >
-        <div className="flex items-start gap-4">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10">
-            <BookOpen size={20} className="text-accent" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3
-              className="text-[1.05rem] font-semibold text-foreground leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {title}
-            </h3>
-            <p className="mt-1.5 text-[0.8125rem] text-muted-foreground leading-relaxed">
-              {subtitle}
-            </p>
-            <Button
-              variant="accent"
-              size="default"
-              className="mt-4"
-              onClick={() => setOpen(true)}
-            >
-              {label}
-              <ArrowRight size={14} className="ml-1" />
-            </Button>
-          </div>
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-4">
+          <BookOpen size={20} className="text-accent" />
         </div>
+        <h3
+          className="text-[1.05rem] font-semibold text-foreground leading-tight"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          {title}
+        </h3>
+        <p className="mt-2 text-[0.8125rem] text-muted-foreground leading-relaxed flex-1">
+          {subtitle}
+        </p>
+        <Button
+          variant="accent"
+          size="default"
+          className="mt-5 w-full sm:w-auto self-start"
+          onClick={() => setOpen(true)}
+        >
+          {label}
+          <ArrowRight size={14} className="ml-1" />
+        </Button>
       </motion.div>
 
       <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} />
