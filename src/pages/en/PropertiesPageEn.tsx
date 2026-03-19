@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import PropertyCard from "@/components/PropertyCard";
-import { properties } from "@/data/properties";
+import { propertiesEn as properties } from "@/data/properties-en";
 import { Search, Home, Building2, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-properties.webp";
 
