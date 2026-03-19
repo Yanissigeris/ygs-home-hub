@@ -79,6 +79,13 @@ const SellPlexPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Guide investisseur gratuit — maximisez votre plex"
+      text="Rendement, fiscalité et stratégie de vente — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide investisseur"
+    />
+
     <CTASection
       dark
       title="Prêt à explorer vos options?"
