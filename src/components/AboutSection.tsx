@@ -34,9 +34,9 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="label-overline mb-3">Pourquoi YGS</p>
         <h2>Un accompagnement simple, stratégique et humain</h2>
         <p className="prose-body mt-5">
-          En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire et locale.   
+          Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous à votre rythme.   
         </p>
-        <p className="prose-body mt-4">Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous à votre rythme.
+        <p className="prose-body mt-4">
 
       </p>
         <p className="prose-body mt-4">
