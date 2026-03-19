@@ -12,6 +12,7 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
+import GuideOfferBlock from "@/components/GuideOfferBlock";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.jpg";
 
