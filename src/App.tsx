@@ -89,6 +89,13 @@ const SellerPlanPageEn = React.lazy(() => import("./pages/en/SellerPlanPageEn"))
 const SellPlexPageEn = React.lazy(() => import("./pages/en/SellPlexPageEn"));
 const MontrealRelocationPageEn = React.lazy(() => import("./pages/en/MontrealRelocationPageEn"));
 const MarketReportPageEn = React.lazy(() => import("./pages/en/MarketReportPageEn"));
+const LivingAylmerPageEn = React.lazy(() => import("./pages/en/LivingAylmerPageEn"));
+const LivingHullPageEn = React.lazy(() => import("./pages/en/LivingHullPageEn"));
+const LivingPlateauPageEn = React.lazy(() => import("./pages/en/LivingPlateauPageEn"));
+const GatineauCentrePageEn = React.lazy(() => import("./pages/en/GatineauCentrePageEn"));
+const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
+const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
+const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
 
 const queryClient = new QueryClient();
 
@@ -178,6 +185,13 @@ const routeTree = React.createElement(
       <Route path="/en/contact" element={<ContactPageEn />} />
       <Route path="/en/thank-you" element={<ThankYouPageEn />} />
       <Route path="/en/thank-you-valuation" element={<ThankYouPageEn />} />
+      <Route path="/en/living-aylmer" element={<LivingAylmerPageEn />} />
+      <Route path="/en/living-hull" element={<LivingHullPageEn />} />
+      <Route path="/en/living-plateau" element={<LivingPlateauPageEn />} />
+      <Route path="/en/gatineau" element={<GatineauCentrePageEn />} />
+      <Route path="/en/aylmer" element={<AylmerPageEn />} />
+      <Route path="/en/plateau" element={<PlateauPageEn />} />
+      <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </>,

@@ -30,6 +30,7 @@ export const mainNavEn: NavItem[] = [
       { label: "Montréal → Gatineau", href: "/en/montreal-relocation" },
       { label: "Relocation Guide", href: "/en/relocation-guide" },
       { label: "Military — Posting", href: "/en/military" },
+      { label: "Military — Relocation", href: "/en/military-relocation" },
       { label: "Military — Buying", href: "/en/military-buyer" },
       { label: "Military — Selling", href: "/en/military-seller" },
     ],
@@ -47,7 +48,10 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "All Neighborhoods", href: "/en/neighborhoods" },
       { label: "Plateau / Aylmer", href: "/en/plateau-aylmer" },
+      { label: "Aylmer", href: "/en/aylmer" },
+      { label: "Plateau", href: "/en/plateau" },
       { label: "Hull", href: "/en/hull" },
+      { label: "Gatineau Centre", href: "/en/gatineau" },
       { label: "Buckingham / Masson-Angers", href: "/en/buckingham" },
     ],
   },

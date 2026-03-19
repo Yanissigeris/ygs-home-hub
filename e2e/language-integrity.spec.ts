@@ -23,6 +23,8 @@ const enPages = [
   "/en/home-valuation", "/en/thank-you",
   "/en/when-to-sell", "/en/seller-plan", "/en/sell-plex",
   "/en/montreal-relocation", "/en/market-report",
+  "/en/living-aylmer", "/en/living-hull", "/en/living-plateau",
+  "/en/gatineau", "/en/aylmer", "/en/plateau", "/en/military-relocation",
 ];
 
 const frPages = [
@@ -35,7 +37,7 @@ const frPages = [
 ];
 
 // Split EN pages into chunks to stay within 30s timeout
-const enChunks = [enPages.slice(0, 8), enPages.slice(8, 16), enPages.slice(16, 24), enPages.slice(24)];
+const enChunks = [enPages.slice(0, 7), enPages.slice(7, 14), enPages.slice(14, 21), enPages.slice(21, 28), enPages.slice(28, 33), enPages.slice(33)];
 
 enChunks.forEach((chunk, ci) => {
   test(`EN pages have no French text (batch ${ci + 1})`, async ({ page }) => {
