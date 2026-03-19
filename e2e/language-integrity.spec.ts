@@ -21,6 +21,8 @@ const enPages = [
   "/en/buyer-consultation", "/en/seller-guide", "/en/hull",
   "/en/properties", "/en/faq", "/en/resources", "/en/testimonials",
   "/en/home-valuation", "/en/thank-you",
+  "/en/when-to-sell", "/en/seller-plan", "/en/sell-plex",
+  "/en/montreal-relocation", "/en/market-report",
 ];
 
 const frPages = [
