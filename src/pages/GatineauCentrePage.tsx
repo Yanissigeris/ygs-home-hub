@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
