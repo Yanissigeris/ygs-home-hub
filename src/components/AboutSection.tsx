@@ -36,9 +36,9 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="prose-body mt-5">
           En immobilier, les bonnes décisions commencent par de bonnes informations. Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs à Gatineau avec une approche claire et locale.   
         </p>
-        <p className="prose-body mt-4">
-          Son rôle n&apos;est pas de pousser. C&apos;est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous êtes prêt.
-        </p>
+        <p className="prose-body mt-4">Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous à votre rythme.
+
+      </p>
         <p className="prose-body mt-4">
           Avec plus de 9 ans d’expérience comme courtier immobilier en Outaouais, Yanis offre à ses clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier lui-même, il sait également analyser en profondeur les opportunités en multilogement. Son expérience concrète en flips immobiliers, combinée à sa formation en gestion de projet (AEC), fait de lui un allié incontournable pour tout projet immobilier.
         </p>
