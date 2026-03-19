@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoYgsWhite from "@/assets/logo-ygs-white.png";
-import logoMW from "@/assets/logo-mw-white.png";
-import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.png";
-import logoTemple from "@/assets/logo-temple-renommee.png";
-import logoRemaxDirect from "@/assets/logo-remax-direct.png";
-import logoTranquillit from "@/assets/logo-tranquillit.png";
-import logoEnfantSoleil from "@/assets/logo-enfant-soleil.png";
+import logoYgsWhite from "@/assets/logo-ygs-white.webp";
+import logoMW from "@/assets/logo-mw-white.webp";
+import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
+import logoTemple from "@/assets/logo-temple-renommee.webp";
+import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
+import logoTranquillit from "@/assets/logo-tranquillit.webp";
+import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
 import { footerColumns } from "@/data/navigation";
 import { footerColumnsEn } from "@/data/navigation-en";
 

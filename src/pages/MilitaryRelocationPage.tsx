@@ -11,7 +11,7 @@ import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-military-relocation.webp";
-import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
   { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau — je vous guide vers les quartiers qui correspondent à vos priorités." },

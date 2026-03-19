@@ -18,7 +18,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau.webp";
 import yanisPhoto from "@/assets/yanis-photo.webp";
-import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.png";
+import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
 
 const services = [
   { icon: Home, title: "Residential sales", text: "Strategy, price positioning and marketing" },

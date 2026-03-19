@@ -10,7 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-military-guide.webp";
-import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.png";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const topics = [
   "Comprendre les réalités d'une mutation immobilière",
