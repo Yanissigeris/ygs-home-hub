@@ -1,4 +1,6 @@
 import PageMeta from "@/components/PageMeta";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
