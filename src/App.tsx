@@ -4,22 +4,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 
-// Preload critical hero assets so they're cached across navigations
 import yanisPortrait from "@/assets/yanis-portrait-nobg.png";
 import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.jpg";
 
-const preloadImage = (src: string) => {
-  const img = new Image();
-  img.src = src;
-};
-if (typeof window !== "undefined") {
-  preloadImage(yanisPortrait);
-  preloadImage(heroGatineauSkyline);
-}
+const preloadImage = (src: string) => { const img = new Image(); img.src = src; };
+if (typeof window !== "undefined") { preloadImage(yanisPortrait); preloadImage(heroGatineauSkyline); }
 
-// Code-split all pages with React.lazy
+// FR pages
 const Index = React.lazy(() => import("./pages/Index"));
 const SellerPage = React.lazy(() => import("./pages/SellerPage"));
 const ValuationPage = React.lazy(() => import("./pages/ValuationPage"));
@@ -62,6 +56,35 @@ const ThankYouPage = React.lazy(() => import("./pages/ThankYouPage"));
 const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuationPage"));
 const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
 
+// EN pages
+const IndexEn = React.lazy(() => import("./pages/en/IndexEn"));
+const SellerPageEn = React.lazy(() => import("./pages/en/SellerPageEn"));
+const BuyerPageEn = React.lazy(() => import("./pages/en/BuyerPageEn"));
+const RelocationPageEn = React.lazy(() => import("./pages/en/RelocationPageEn"));
+const MilitaryPageEn = React.lazy(() => import("./pages/en/MilitaryPageEn"));
+const PlexPageEn = React.lazy(() => import("./pages/en/PlexPageEn"));
+const PropertiesPageEn = React.lazy(() => import("./pages/en/PropertiesPageEn"));
+const ContactPageEn = React.lazy(() => import("./pages/en/ContactPageEn"));
+const FAQPageEn = React.lazy(() => import("./pages/en/FAQPageEn"));
+const TestimonialsPageEn = React.lazy(() => import("./pages/en/TestimonialsPageEn"));
+const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
+const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
+const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
+const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
+const BuyerGuidePageEn = React.lazy(() => import("./pages/en/BuyerGuidePageEn"));
+const SellerGuidePageEn = React.lazy(() => import("./pages/en/SellerGuidePageEn"));
+const MilitaryBuyerPageEn = React.lazy(() => import("./pages/en/MilitaryBuyerPageEn"));
+const MilitarySellerPageEn = React.lazy(() => import("./pages/en/MilitarySellerPageEn"));
+const MilitaryGuidePageEn = React.lazy(() => import("./pages/en/MilitaryGuidePageEn"));
+const RelocationGuidePageEn = React.lazy(() => import("./pages/en/RelocationGuidePageEn"));
+const FirstTimeBuyerPageEn = React.lazy(() => import("./pages/en/FirstTimeBuyerPageEn"));
+const BuyFromOttawaPageEn = React.lazy(() => import("./pages/en/BuyFromOttawaPageEn"));
+const BuyerConsultationPageEn = React.lazy(() => import("./pages/en/BuyerConsultationPageEn"));
+const PlexAnalysisPageEn = React.lazy(() => import("./pages/en/PlexAnalysisPageEn"));
+const PlateauAylmerPageEn = React.lazy(() => import("./pages/en/PlateauAylmerPageEn"));
+const HullPageEn = React.lazy(() => import("./pages/en/HullPageEn"));
+const BuckinghamPageEn = React.lazy(() => import("./pages/en/BuckinghamPageEn"));
+
 const queryClient = new QueryClient();
 
 const routeTree = React.createElement(
@@ -69,6 +92,7 @@ const routeTree = React.createElement(
   null,
   <>
     <Route element={<SiteLayout />}>
+      {/* FR routes */}
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
       <Route path="/proprietes-vedettes" element={<PropertiesPage />} />
@@ -114,6 +138,36 @@ const routeTree = React.createElement(
       <Route path="/merci" element={<ThankYouPage />} />
       <Route path="/merci-evaluation" element={<ThankYouValuationPage />} />
       <Route path="/contact-yanis" element={<ContactPage />} />
+
+      {/* EN routes */}
+      <Route path="/en" element={<IndexEn />} />
+      <Route path="/en/properties" element={<PropertiesPageEn />} />
+      <Route path="/en/sell" element={<SellerPageEn />} />
+      <Route path="/en/home-valuation" element={<ValuationPageEn />} />
+      <Route path="/en/seller-guide" element={<SellerGuidePageEn />} />
+      <Route path="/en/buy" element={<BuyerPageEn />} />
+      <Route path="/en/buyer-consultation" element={<BuyerConsultationPageEn />} />
+      <Route path="/en/buyer-guide" element={<BuyerGuidePageEn />} />
+      <Route path="/en/first-time-buyer" element={<FirstTimeBuyerPageEn />} />
+      <Route path="/en/buy-from-ottawa" element={<BuyFromOttawaPageEn />} />
+      <Route path="/en/relocation" element={<RelocationPageEn />} />
+      <Route path="/en/relocation-guide" element={<RelocationGuidePageEn />} />
+      <Route path="/en/military" element={<MilitaryPageEn />} />
+      <Route path="/en/military-buyer" element={<MilitaryBuyerPageEn />} />
+      <Route path="/en/military-seller" element={<MilitarySellerPageEn />} />
+      <Route path="/en/military-guide" element={<MilitaryGuidePageEn />} />
+      <Route path="/en/plex" element={<PlexPageEn />} />
+      <Route path="/en/plex-analysis" element={<PlexAnalysisPageEn />} />
+      <Route path="/en/neighborhoods" element={<NeighborhoodsPageEn />} />
+      <Route path="/en/plateau-aylmer" element={<PlateauAylmerPageEn />} />
+      <Route path="/en/hull" element={<HullPageEn />} />
+      <Route path="/en/buckingham" element={<BuckinghamPageEn />} />
+      <Route path="/en/resources" element={<ResourcesPageEn />} />
+      <Route path="/en/faq" element={<FAQPageEn />} />
+      <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
+      <Route path="/en/contact" element={<ContactPageEn />} />
+      <Route path="/en/thank-you" element={<ThankYouPageEn />} />
+      <Route path="/en/thank-you-valuation" element={<ThankYouPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </>,
@@ -122,7 +176,7 @@ const routeTree = React.createElement(
 const appRoutes = React.createElement(
   BrowserRouter,
   { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  routeTree,
+  React.createElement(LanguageProvider, null, routeTree),
 );
 
 const App = () =>
