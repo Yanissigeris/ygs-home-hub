@@ -71,6 +71,13 @@ const LivingPlateauPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — s'installer dans le Plateau"
+      text="Tout pour acheter dans le Plateau — processus, budget et conseils envoyés par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à découvrir le Plateau?"
