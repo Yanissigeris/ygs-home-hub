@@ -74,7 +74,7 @@ const BuyerPage = () => (
       <SectionHeading
         overline="L'achat immobilier"
         title="Choisir une propriété, c'est aussi choisir un secteur et une stratégie"
-        subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la bonne stratégie d'offre."
+        subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur réelle, les taxes, le potentiel de revente et la bonne stratégie d'offre d'achat."
       />
     </ContentBlock>
 
