@@ -39,7 +39,7 @@ const PropertiesPageEn = () => (
         {properties.filter(p => p.status === "active").map(property => (<PropertyCard key={property.id} property={property} />))}
       </div>
       <div className="mt-8 text-center">
-        <a href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <a href="https://www.remax-quebec.com/en/real-estate-brokers/yanis.gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
           <Home className="h-5 w-5" />See all my properties on RE/MAX<ExternalLink className="h-4 w-4" />
         </a>
       </div>
