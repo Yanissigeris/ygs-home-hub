@@ -110,6 +110,30 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    {/* About Section */}
+    <section className="section-padding bg-background">
+      <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
+        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="overflow-hidden rounded-[1.75rem]">
+            <img src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png" alt="Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" />
+          </div>
+        </motion.div>
+        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
+          <p className="label-overline mb-3">Why YGS</p>
+          <h2>Simple, strategic and human guidance</h2>
+          <p className="prose-body mt-5">In real estate, good decisions start with good information. Yanis Gauthier-Sigeris supports sellers, buyers and investors in Gatineau with a clear, local and pressure-free approach.</p>
+          <p className="prose-body mt-4">His role isn't to push. It's to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.</p>
+          <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, Yanis offers his clients solid, strategic and reassuring support from start to finish. A real estate investor himself, he can also analyze multi-unit opportunities in depth. His hands-on experience in property flips, combined with his project management training, makes him an indispensable ally for any real estate project.</p>
+          <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
+            <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
+            <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
+            <span className="flex items-center gap-2"><Shield size={14} /> Trust-centered approach</span>
+          </div>
+          <Button className="mt-10" size="lg" asChild><Link to="/en/contact">Learn more</Link></Button>
+        </motion.div>
+      </div>
+    </section>
+
     {/* Credibility Section */}
     <section className="section-padding-md bg-secondary/20">
       <div className="section-container max-w-[56rem]">
@@ -161,30 +185,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </section>
 
     <InlineCTA text="Thinking about selling? Start by knowing the value of your property." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
-
-    {/* About Section */}
-    <section className="section-padding bg-background">
-      <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
-        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-          <div className="overflow-hidden rounded-[1.75rem]">
-            <img src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png" alt="Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" />
-          </div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
-          <p className="label-overline mb-3">Why YGS</p>
-          <h2>Simple, strategic and human guidance</h2>
-          <p className="prose-body mt-5">In real estate, good decisions start with good information. Yanis Gauthier-Sigeris supports sellers, buyers and investors in Gatineau with a clear, local and pressure-free approach.</p>
-          <p className="prose-body mt-4">His role isn't to push. It's to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.</p>
-          <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, Yanis offers his clients solid, strategic and reassuring support from start to finish. A real estate investor himself, he can also analyze multi-unit opportunities in depth. His hands-on experience in property flips, combined with his project management training, makes him an indispensable ally for any real estate project.</p>
-          <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
-            <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
-            <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
-            <span className="flex items-center gap-2"><Shield size={14} /> Trust-centered approach</span>
-          </div>
-          <Button className="mt-10" size="lg" asChild><Link to="/en/contact">Learn more</Link></Button>
-        </motion.div>
-      </div>
-    </section>
 
     <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
