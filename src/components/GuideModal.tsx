@@ -48,6 +48,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     successTitle: "Parfait — votre guide investisseur est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
+  relocation_guide: {
+    title: "Recevez le guide relocalisation",
+    description: "Entrez vos coordonnées et je vous envoie immédiatement le guide relocalisation par courriel. Vous y trouverez des repères utiles pour mieux comprendre le marché de Gatineau, les secteurs à considérer et les étapes à prévoir pour une transition plus simple.",
+    submitLabel: "Envoyer mon guide",
+    successTitle: "Parfait — votre guide relocalisation est en route!",
+    successText: "Vérifiez votre boîte courriel dans les prochaines minutes. Regardez aussi vos promotions ou indésirables au besoin.",
+  },
 };
 
 const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {

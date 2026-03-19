@@ -21,13 +21,13 @@ const GuideOfferBlock = ({
 }: GuideOfferBlockProps) => {
   const [open, setOpen] = useState(false);
 
-  const label =
-    ctaLabel ??
-    (guideType === "seller_guide"
-      ? "Recevoir le guide vendeur"
-      : guideType === "investor_guide"
-      ? "Recevoir le guide investisseur"
-      : "Recevoir le guide acheteur");
+  const defaultLabels: Record<string, string> = {
+    seller_guide: "Recevoir le guide vendeur",
+    buyer_guide: "Recevoir le guide acheteur",
+    investor_guide: "Recevoir le guide investisseur",
+    relocation_guide: "Recevoir le guide relocalisation",
+  };
+  const label = ctaLabel ?? defaultLabels[guideType] ?? "Recevoir le guide";
 
   return (
     <>
