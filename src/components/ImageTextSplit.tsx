@@ -53,6 +53,8 @@ const ImageTextSplit = ({
             alt={imageAlt}
             className={`rounded-[1.75rem] object-cover ${imageAspect} w-full`}
             loading="lazy"
+            decoding="async"
+          />
           />
         ) : (
           children
