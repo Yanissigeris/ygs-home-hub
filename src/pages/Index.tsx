@@ -61,7 +61,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <ReviewSection
       overline="Témoignages"
-      title="Ce que disent nos clients"
+      title="Ce que disent mes clients"
       reviews={homepageReviews}
       columns={3}
     />

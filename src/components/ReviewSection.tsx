@@ -15,7 +15,7 @@ interface ReviewSectionProps {
 const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
   ({
     overline = "Témoignages",
-    title = "Ce que disent nos clients",
+    title = "Ce que disent mes clients",
     reviews,
     variant = "compact",
     background = "default",
