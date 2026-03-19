@@ -33,7 +33,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="label-overline mb-3">FAQ</p>
-          <h2>{title}</h2>
+          <h2>{resolvedTitle}</h2>
         </motion.div>
         <Accordion type="single" collapsible>
           {items.map((item, i) => (
