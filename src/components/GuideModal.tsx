@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 
-export type GuideType = "seller_guide" | "buyer_guide";
+export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide";
 
 interface GuideModalProps {
   open: boolean;
@@ -39,6 +39,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     description: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire, étape par étape.",
     submitLabel: "Envoyer mon guide acheteur",
     successTitle: "Parfait — votre guide est en route!",
+    successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
+  },
+  investor_guide: {
+    title: "Recevez le guide investisseur",
+    description: "Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter — le guide essentiel pour investir à Gatineau.",
+    submitLabel: "Envoyer mon guide investisseur",
+    successTitle: "Parfait — votre guide investisseur est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
 };

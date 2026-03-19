@@ -13,16 +13,21 @@ const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps)
         title="Recevez votre guide immobilier"
         subtitle="Des ressources complètes pour vous accompagner à chaque étape — gratuites, sans engagement et envoyées par courriel."
       />
-      <div className="mt-8 grid gap-5 sm:grid-cols-2">
+      <div className="mt-8 grid gap-5 sm:grid-cols-3">
         <GuideOfferBlock
           guideType="seller_guide"
           title="Guide vendeur"
-          subtitle="Prix, préparation, mise en marché et négociation — tout pour vendre au meilleur prix à Gatineau."
+          subtitle="Prix, préparation, mise en marché et négociation — tout pour vendre au meilleur prix."
         />
         <GuideOfferBlock
           guideType="buyer_guide"
           title="Guide acheteur"
           subtitle="Le processus d'achat au Québec expliqué simplement, de la recherche au notaire."
+        />
+        <GuideOfferBlock
+          guideType="investor_guide"
+          title="Guide investisseur"
+          subtitle="Rendement, analyse de plex et stratégie d'acquisition pour investir à Gatineau."
         />
       </div>
     </div>
