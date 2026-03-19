@@ -79,6 +79,13 @@ const FirstTimeBuyerPage = () => (
       </Button>
     </ContentBlock>
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — pour bien démarrer"
+      text="Tout ce que vous devez savoir pour acheter votre première propriété à Gatineau."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Prêt à faire le premier pas?"
