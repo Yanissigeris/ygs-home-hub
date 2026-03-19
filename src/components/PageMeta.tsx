@@ -91,6 +91,13 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     ensureMetaTag('meta[property="og:title"]', { property: "og:title", content: title });
     ensureMetaTag('meta[property="og:description"]', { property: "og:description", content: description });
 
+    // OG locale tags
+    const isEnLocale = pathname.startsWith("/en");
+    const locale = isEnLocale ? "en_CA" : "fr_CA";
+    const altLocale = isEnLocale ? "fr_CA" : "en_CA";
+    ensureMetaTag('meta[property="og:locale"]', { property: "og:locale", content: locale });
+    ensureMetaTag('meta[property="og:locale:alternate"]', { property: "og:locale:alternate", content: altLocale });
+
     if (canonical) {
       ensureCanonicalLink().setAttribute("href", canonical);
     }
