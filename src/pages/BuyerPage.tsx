@@ -12,6 +12,7 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
+import GuideOfferBlock from "@/components/GuideOfferBlock";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.jpg";
 
@@ -93,6 +94,16 @@ const BuyerPage = () => (
     />
 
     <SectorLinks sectors={sectors} />
+
+    <section className="section-padding">
+      <div className="section-container max-w-[40rem]">
+        <GuideOfferBlock
+          guideType="buyer_guide"
+          title="Guide acheteur gratuit"
+          subtitle="Le processus d'achat au Québec expliqué simplement — de la recherche au notaire, étape par étape."
+        />
+      </div>
+    </section>
 
     <ReviewSection
       overline="Témoignages acheteurs"
