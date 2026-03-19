@@ -112,14 +112,14 @@ const SellerGuidePage = () => (
       background="alt"
     />
 
-        <GuideInlineCTA
+    <GuideInlineCTA
       guideType="seller_guide"
       headline="Guide vendeur gratuit"
       text="Prix, préparation et stratégie — tout dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide vendeur"
     />
 
-<CTASection
+    <CTASection
       dark
       title="Prêt à passer à l'action?"
       text="Demandez votre évaluation gratuite ou parlez directement à Yanis."
@@ -129,7 +129,7 @@ const SellerGuidePage = () => (
       ]}
       trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
     />
-  
+
     <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
   </>
 );
