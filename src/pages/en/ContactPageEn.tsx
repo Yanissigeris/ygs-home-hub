@@ -65,7 +65,7 @@ const ContactPageEn = () => {
         )}
       </FormSection>
       <ReviewSection overline="Testimonials" title="What our clients say" reviews={getReviewsById(["s1", "b2", "r1"])} columns={3} background="alt" />
-      <CTASection dark overline="Next step" title="Start with the right first step" text="Valuation, buyer consultation or plex analysis — we start where you are." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "See services", href: "/en/sell", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+      <CTASection dark overline="First step" title="Start with the right first step" text="Valuation, buyer consultation or plex analysis — we start where you are." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "See services", href: "/en/sell", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
     </>
   );
 };
