@@ -95,6 +95,16 @@ const BuyerPage = () => (
 
     <SectorLinks sectors={sectors} />
 
+    <section className="section-padding">
+      <div className="section-container max-w-[40rem]">
+        <GuideOfferBlock
+          guideType="buyer_guide"
+          title="Guide acheteur gratuit"
+          subtitle="Le processus d'achat au Québec expliqué simplement — de la recherche au notaire, étape par étape."
+        />
+      </div>
+    </section>
+
     <ReviewSection
       overline="Témoignages acheteurs"
       title="Ils ont acheté en toute confiance"

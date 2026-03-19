@@ -57,6 +57,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <SectorsSection />
 
+    <GuideOffersSection background="alt" />
+
     <ReviewSection
       overline="Témoignages"
       title="Ce que disent nos clients"

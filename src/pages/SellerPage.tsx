@@ -113,6 +113,16 @@ const SellerPage = () => (
       steps={nextSteps}
     />
 
+    <section className="section-padding">
+      <div className="section-container max-w-[40rem]">
+        <GuideOfferBlock
+          guideType="seller_guide"
+          title="Guide vendeur gratuit"
+          subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — dans un guide clair envoyé par courriel."
+        />
+      </div>
+    </section>
+
     <ReviewSection
       overline="Témoignages vendeurs"
       title="Ils ont vendu avec confiance"

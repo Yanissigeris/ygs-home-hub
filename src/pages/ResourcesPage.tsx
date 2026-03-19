@@ -69,6 +69,8 @@ const ResourcesPage = () => (
       background="alt"
     />
 
+    <GuideOffersSection />
+
     <ContentBlock narrow>
       <SectionHeading title="Besoin d'aide personnalisée?" />
       <p className="prose-body mt-5">
