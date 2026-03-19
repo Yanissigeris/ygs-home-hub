@@ -61,6 +61,13 @@ const MarketReportPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="seller_guide"
+      headline="Guide vendeur gratuit — vendez au meilleur prix"
+      text="Prix, préparation et stratégie — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide vendeur"
+    />
+
     <CTASection
       dark
       title="Recevez le prochain rapport marché"
