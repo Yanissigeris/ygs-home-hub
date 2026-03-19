@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutSection = React.forwardRef<HTMLElement>((_, ref) => (
   <section ref={ref} className="section-padding bg-background">
-    <div className="section-container grid gap-12 lg:grid-cols-[42%_58%] lg:items-center lg:gap-14">
+    <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[42%_58%] lg:items-center lg:gap-14">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
