@@ -7,13 +7,13 @@ interface GuideOffersSectionProps {
 
 const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-secondary/20" : ""}`}>
-    <div className="section-container max-w-[64rem]">
+    <div className="section-container max-w-[72rem]">
       <SectionHeading
         overline="Guides gratuits"
         title="Recevez votre guide immobilier"
         subtitle="Des ressources complètes pour vous accompagner à chaque étape — gratuites, sans engagement et envoyées par courriel."
       />
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <GuideOfferBlock
           guideType="seller_guide"
           title="Guide vendeur"
@@ -28,6 +28,11 @@ const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps)
           guideType="investor_guide"
           title="Guide investisseur"
           subtitle="Rendement, analyse de plex et stratégie d'acquisition pour investir à Gatineau."
+        />
+        <GuideOfferBlock
+          guideType="relocation_guide"
+          title="Guide relocalisation"
+          subtitle="Un guide clair pour mieux comprendre un achat à Gatineau en venant d'Ottawa ou d'ailleurs."
         />
       </div>
     </div>

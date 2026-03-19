@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 
-export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide";
+export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide" | "relocation_guide";
 
 interface GuideModalProps {
   open: boolean;
@@ -47,6 +47,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     submitLabel: "Envoyer mon guide investisseur",
     successTitle: "Parfait — votre guide investisseur est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
+  },
+  relocation_guide: {
+    title: "Recevez le guide relocalisation",
+    description: "Entrez vos coordonnées et je vous envoie immédiatement le guide relocalisation par courriel. Vous y trouverez des repères utiles pour mieux comprendre le marché de Gatineau, les secteurs à considérer et les étapes à prévoir pour une transition plus simple.",
+    submitLabel: "Envoyer mon guide",
+    successTitle: "Parfait — votre guide relocalisation est en route!",
+    successText: "Vérifiez votre boîte courriel dans les prochaines minutes. Regardez aussi vos promotions ou indésirables au besoin.",
   },
 };
 

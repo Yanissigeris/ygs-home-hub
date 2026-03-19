@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
+import GuideOfferBlock from "@/components/GuideOfferBlock";
 import heroImg from "@/assets/hero-relocation-guide.jpg";
 
 const topics = [
@@ -71,6 +72,16 @@ const RelocationGuidePage = () => (
       sectors={sectors}
       background="alt"
     />
+
+    <section className="section-padding">
+      <div className="section-container max-w-[40rem]">
+        <GuideOfferBlock
+          guideType="relocation_guide"
+          title="Guide relocalisation gratuit"
+          subtitle="Un guide clair pour mieux comprendre un achat à Gatineau en venant d'Ottawa ou d'ailleurs, éviter les surprises et choisir le bon secteur."
+        />
+      </div>
+    </section>
 
     <InlineCTA
       text="Vous voulez un accompagnement personnalisé? Réservez un appel gratuit."
