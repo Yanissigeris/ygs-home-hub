@@ -86,6 +86,7 @@ export const footerColumnsEn = [
     title: "Resources",
     links: [
       { label: "Free Guides", href: "/en/resources" },
+      { label: "Market Report", href: "/en/market-report" },
       { label: "FAQ", href: "/en/faq" },
       { label: "Testimonials", href: "/en/testimonials" },
       { label: "About / Contact", href: "/en/contact" },
