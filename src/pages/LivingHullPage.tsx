@@ -71,6 +71,13 @@ const LivingHullPage = () => (
       background="alt"
     />
 
+    <GuideInlineCTA
+      guideType="investor_guide"
+      headline="Guide investisseur gratuit — plex à Hull"
+      text="Rendement, fiscalité et stratégie — tout dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide investisseur"
+    />
+
     <CTASection
       dark
       title="Prêt à découvrir Hull?"
