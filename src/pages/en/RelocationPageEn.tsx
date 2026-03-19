@@ -11,7 +11,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import ReviewSection from "@/components/ReviewSection";
-import { getReviewsByCategory } from "@/data/reviews";
+import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { MapPin, DollarSign, FileText, Home, Clock, Award, Shield } from "lucide-react";
