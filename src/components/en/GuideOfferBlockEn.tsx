@@ -37,8 +37,8 @@ const GuideOfferBlockEn = ({ guideType, title, subtitle, ctaLabel, background = 
         </div>
         <h3 className="text-[1.05rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</h3>
         <p className="mt-2 text-[0.8125rem] text-muted-foreground leading-relaxed flex-1">{subtitle}</p>
-        <Button variant="accent" size="default" className="mt-5 w-full sm:w-auto self-start" onClick={() => setOpen(true)}>
-          {label}<ArrowRight size={14} className="ml-1" />
+        <Button variant="accent" size="default" className="mt-5 w-full text-[0.8125rem]" onClick={() => setOpen(true)}>
+          {label}<ArrowRight size={14} className="ml-1 shrink-0" />
         </Button>
       </motion.div>
       <GuideModalEn open={open} onOpenChange={setOpen} guideType={guideType} />
