@@ -1,31 +1,103 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
+import TrustMiniStrip from "@/components/TrustMiniStrip";
+import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
-import { CheckCircle2, Home, Shield } from "lucide-react";
+import { Home, MapPin, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-military-buyer.webp";
+import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
-const tips = [
-  { icon: CheckCircle2, title: "Virtual visits available", text: "Buy remotely before your arrival — I adapt to your schedule." },
-  { icon: Home, title: "Neighborhood guidance", text: "Base proximity, schools, services — we find the right fit for your family." },
-  { icon: Shield, title: "Full support", text: "From search to notary, I handle coordination so you can focus on your posting." },
+const advantages = [
+  { icon: DollarSign, title: "More affordable prices", text: "Gatineau's market often offers better value than saturated military markets." },
+  { icon: MapPin, title: "Close to the bases", text: "Quick access to CFB Uplands and federal facilities in the region." },
+  { icon: Home, title: "Variety of properties", text: "Houses, condos, semi-detached — in family-friendly, well-served neighborhoods." },
+  { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },
 ];
+
+const trustItems = [
+  { icon: Clock, label: "Nearly 9 years in Outaouais" },
+  { icon: Award, label: "Military buyer specialist" },
+  { icon: Shield, label: "Bilingual · Zero pressure" },
+];
+
 const faq = [
-  { q: "Can I buy before arriving in Gatineau?", a: "Absolutely. Virtual visits and remote offers are common for military buyers." },
-  { q: "Which neighborhoods are close to the base?", a: "Depends on your base. I recommend the best areas based on your commute and priorities." },
+  { q: "Which neighborhoods do you recommend for military members?", a: "It depends on your base and family priorities. Aylmer, Plateau and Hull are popular — we discuss based on your situation." },
+  { q: "Can I buy remotely?", a: "Yes. Virtual visits, remote offers and full coordination — it's common for postings." },
+  { q: "How does the buying process work in Québec?", a: "Promise to purchase, inspection, conditions, notary — it's different from Ontario. I guide you step by step." },
 ];
 
 const MilitaryBuyerPageEn = () => (
   <>
-    <PageMeta title="Military Buyer — Buy in Gatineau | YGS" description="Military posting to Gatineau? Find the right property with specialized support for CAF members." />
-    <HeroSection overline="Military · Buying" title="Buy in Gatineau during your posting" subtitle="Find the right neighborhood and property for your family — virtual visits available, timeline-adapted support." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Military Guide", href: "/en/military-guide" }} heroBgImage={heroImg} />
-    <CardGrid overline="How I help" title="Buying as a military member" items={tips} />
+    <PageMeta title="Military Buyer — Buy in Gatineau | YGS" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." />
+    <HeroSection
+      overline="Military · Buying in Gatineau"
+      title="Buy in Gatineau as a military member"
+      subtitle="Posting to the NCR? I help you find the right area, the right property and navigate the buying process in Québec."
+      primaryCta={{ label: "Book a call", href: "/en/contact" }}
+      secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer" }}
+      trustLine="Service adapted to military members. Zero pressure."
+      heroBgImage={heroImg}
+    />
+
+    <TrustMiniStrip items={trustItems} />
+
+    <section className="py-8 bg-white border-y border-border/30">
+      <div className="section-container">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-sm text-muted-foreground">Partner of programs</p>
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+        </div>
+      </div>
+    </section>
+
+    <CardGrid
+      overline="Why Gatineau"
+      title="Buying in Gatineau — the advantages for military members"
+      items={advantages}
+    />
+
+    <InlineCTA
+      text="Need to sell too? Start by knowing the value of your property."
+      buttonLabel="Get my valuation →"
+      href="/en/home-valuation"
+    />
+
+    <ContentBlock narrow>
+      <SectionHeading
+        overline="My approach"
+        title="A broker who adapts to your schedule"
+      />
+      <p className="prose-body mt-5">
+        I know postings come with tight deadlines. My role is to simplify every step so you can focus on your transition.
+      </p>
+      <Button className="mt-8" size="lg" asChild>
+        <Link to="/en/contact">Book a call</Link>
+      </Button>
+    </ContentBlock>
+
+    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know about buying in Gatineau during a posting — in a clear guide sent by email." ctaLabel="Get the guide" />
+
+    <CTASection
+      dark
+      title="Ready to find your property in Gatineau?"
+      text="Let's discuss your posting and criteria — I take care of the rest."
+      buttons={[
+        { label: "Book a call", href: "/en/contact" },
+        { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" },
+      ]}
+      trustLine="Zero pressure — I give you the options, you decide."
+    />
+
     <FAQSection items={faq} />
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything for your real estate posting to Gatineau." ctaLabel="Get the guide" />
-    <CTASection dark title="Ready to find your property?" text="Let's discuss your posting, timeline and criteria." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Military Guide", href: "/en/military-guide", variant: "outline" }]} trustLine="Zero pressure — I adapt to your schedule." />
+
     <StickyGuideBannerEn guideType="relocation_guide" label="Free Military Guide — get it by email" />
   </>
 );
