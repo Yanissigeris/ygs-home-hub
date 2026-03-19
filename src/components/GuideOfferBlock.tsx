@@ -55,10 +55,10 @@ const GuideOfferBlock = ({
         <Button
           variant="accent"
           size="default"
-          className="mt-5 w-full text-[0.8125rem]"
+          className="mt-5 w-full sm:w-auto self-start text-[0.8125rem] max-w-full"
           onClick={() => setOpen(true)}
         >
-          {label}
+          <span className="truncate">{label}</span>
           <ArrowRight size={14} className="ml-1 shrink-0" />
         </Button>
       </motion.div>
