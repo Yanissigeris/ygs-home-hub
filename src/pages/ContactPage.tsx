@@ -150,7 +150,7 @@ const ContactPage = () => {
 
       <CTASection
         dark
-        overline="Prochaine étape"
+        overline="Première étape"
         title="Commencez par la bonne première étape"
         text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
         buttons={[
