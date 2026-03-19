@@ -39,6 +39,7 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "Plex / Investment", href: "/en/plex" },
       { label: "Plex Analysis", href: "/en/plex-analysis" },
+      { label: "Sell a Plex", href: "/en/sell-plex" },
     ],
   },
   {
