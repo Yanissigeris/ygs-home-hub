@@ -68,7 +68,7 @@ const MilitarySellerPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading
         overline="My approach"
-        title="Selling fast doesn't mean selling poorly"
+        title="A fast sale can also be profitable"
       />
       <p className="prose-body mt-5">
         With the right preparation and pricing, a fast sale can also be a profitable sale. My role is to protect your price while respecting your timeline.
