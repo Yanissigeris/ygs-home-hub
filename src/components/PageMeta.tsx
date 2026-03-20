@@ -127,6 +127,18 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     /* ── og:url (matches canonical) ── */
     ensureMetaTag('meta[property="og:url"]', { property: "og:url", content: canonicalUrl });
 
+    /* ── og:image ── */
+    const imageUrl = ogImage || DEFAULT_OG_IMAGE;
+    ensureMetaTag('meta[property="og:image"]', { property: "og:image", content: imageUrl });
+    ensureMetaTag('meta[property="og:image:width"]', { property: "og:image:width", content: "1200" });
+    ensureMetaTag('meta[property="og:image:height"]', { property: "og:image:height", content: "630" });
+
+    /* ── Twitter Card ── */
+    ensureMetaTag('meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" });
+    ensureMetaTag('meta[name="twitter:title"]', { name: "twitter:title", content: title });
+    ensureMetaTag('meta[name="twitter:description"]', { name: "twitter:description", content: description });
+    ensureMetaTag('meta[name="twitter:image"]', { name: "twitter:image", content: imageUrl });
+
     /* ── Hreflang tags ── */
     removeHreflangLinks();
 
@@ -140,7 +152,7 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     }
 
     return () => { removeHreflangLinks(); };
-  }, [canonical, description, title, pathname]);
+  }, [canonical, description, ogImage, title, pathname]);
 
   return null;
 });
