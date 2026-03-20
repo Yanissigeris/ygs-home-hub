@@ -25,7 +25,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
     const tagline = lang === "en" ? "Your real estate ally in Outaouais" : "Votre allié en immobilier en Outaouais";
-    const subline = lang === "en" ? "Clear strategy · Zero pressure · No bad surprises" : "Stratégie claire · Zéro pression · Pas de mauvaises surprises";
+    const subline = lang === "en" ? "Clear strategy" : "Stratégie claire";
     const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
       ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau. All rights reserved.`
