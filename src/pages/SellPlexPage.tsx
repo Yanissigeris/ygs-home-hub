@@ -49,7 +49,7 @@ const SellPlexPage = () => (
       subtitle="Duplex, triplex ou plus — je vous aide à maximiser votre prix avec une stratégie adaptée aux propriétés à revenus."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau" }}
-      trustLine="Spécialiste plex. Zéro pression."
+      trustLine="Spécialiste plex. "
       heroBgImage={heroImg}
     />
 
