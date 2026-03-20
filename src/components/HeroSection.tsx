@@ -150,7 +150,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
  {/* TEXT + CTA LAYER (z-20 to stay above everything) */}
  <motion.div
  className={`${backgroundImage || agentImage ?"min-w-0" :"max-w-[40rem]"} ${agentImage ?"pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" :""} relative z-20 min-w-0`}
- {. .fade}
+ {...fade}
  >
  {overline && (
  <div className="mb-6 flex items-center gap-4 overflow-hidden sm:gap-6">

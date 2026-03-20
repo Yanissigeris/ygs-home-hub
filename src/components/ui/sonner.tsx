@@ -23,7 +23,7 @@ const Toaster = React.forwardRef<
  cancelButton:"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
  },
  }}
- {. .props}
+ {...props}
  />
  );
 });

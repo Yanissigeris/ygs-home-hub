@@ -32,7 +32,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
  : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
  return (
- <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join("")} {. .props}>
+ <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join("")} {...props}>
  <div className="section-container">
  <div className="flex flex-col items-center pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
  <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris" className="h-auto" style={{ width:"clamp(140px, 22vw, 195px)" }} />

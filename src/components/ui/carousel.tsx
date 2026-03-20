@@ -121,7 +121,7 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
  className={cn("relative", className)}
  role="region"
  aria-roledescription="carousel"
- {. .props}
+ {...props}
  >
  {children}
  </div>
@@ -140,7 +140,7 @@ const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HT
  <div
  ref={ref}
  className={cn("flex", orientation ==="horizontal" ?"-ml-4" :"-mt-4 flex-col", className)}
- {. .props}
+ {...props}
  />
  </div>
  );
@@ -158,7 +158,7 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
  role="group"
  aria-roledescription="slide"
  className={cn("min-w-0 shrink-0 grow-0 basis-full", orientation ==="horizontal" ?"pl-4" :"pt-4", className)}
- {. .props}
+ {...props}
  />
  );
  },
@@ -182,7 +182,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
  )}
  disabled={!canScrollPrev}
  onClick={scrollPrev}
- {. .props}
+ {...props}
  >
  <ArrowLeft className="h-4 w-4" />
  <span className="sr-only">Previous slide</span>
@@ -209,7 +209,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
  )}
  disabled={!canScrollNext}
  onClick={scrollNext}
- {. .props}
+ {...props}
  >
  <ArrowRight className="h-4 w-4" />
  <span className="sr-only">Next slide</span>
