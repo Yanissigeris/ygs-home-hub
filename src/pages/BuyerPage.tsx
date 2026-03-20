@@ -61,7 +61,7 @@ const BuyerPage = () => (
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
-      subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress et sans erreur."
+      subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans erreur."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau" }}
       trustLine="Stratégie claire."
