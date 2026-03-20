@@ -117,7 +117,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt=""
               className="h-full w-full object-cover"
               style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
-              loading="eager" />
+               loading="eager"
+               fetchPriority="high" />
             
           </motion.div>
           <div
@@ -228,7 +229,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   src={agentImage}
                   alt={agentName || ""}
                   className="relative z-0 w-[340px] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
-                  loading="eager" />
+                  loading="eager"
+                  fetchPriority="high" />
 
               </div>
             </motion.div>
@@ -253,7 +255,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   src={agentImage}
                   alt={agentName || ""}
                   className="relative z-0 w-[260px] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
-                  loading="eager" />
+                  loading="eager"
+                  fetchPriority="high" />
                 
               </div>
             </motion.div>
