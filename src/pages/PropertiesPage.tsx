@@ -51,7 +51,7 @@ const PropertiesPage = () => (
       subtitle="Maisons, condos, plex et terrains — parcourez les propriétés disponibles dans tous les secteurs de Gatineau et de l'Outaouais."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
-      trustLine="Accompagnement stratégique. Zéro pression."
+      trustLine="Accompagnement stratégique."
       heroBgImage={heroImg}
     />
 
