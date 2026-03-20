@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
