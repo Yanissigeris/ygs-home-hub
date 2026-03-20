@@ -74,7 +74,7 @@ const PlexPage = () => (
       subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
       primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
-      trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
 

@@ -65,7 +65,7 @@ const SellerPage = () =>
     subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
     primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
     secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
-    trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+    trustLine="Stratégie claire."
     heroBgImage={heroImg} />
   
 
