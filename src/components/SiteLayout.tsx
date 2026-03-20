@@ -15,6 +15,7 @@ const PageFallback = () => (
 const SiteLayout = () => (
   <div className="flex min-h-screen flex-col font-body">
     <JsonLdSchema />
+    <BreadcrumbJsonLd />
     <UtilityBar />
     <SiteHeader />
     <main className="flex-1">
