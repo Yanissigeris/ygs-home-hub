@@ -40,7 +40,7 @@ const steps = [
 const trustItems = [
 { icon: Clock, label: "Près de 9 ans en Outaouais" },
 { icon: Award, label: "Club Platine · Temple de la renommée" },
-{ icon: Shield, label: "Zéro pression, zéro surprise" }];
+{ icon: Shield, label: "Bilingue" }];
 
 
 const nextSteps = [

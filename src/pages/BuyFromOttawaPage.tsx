@@ -31,7 +31,7 @@ const sectors = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste relocalisation Ottawa → Gatineau" },
-  { icon: Shield, label: "Bilingue · Zéro pression" },
+  { icon: Shield, label: "Bilingue" },
 ];
 
 const faq = [
