@@ -77,7 +77,7 @@ const FAQPage = () => (
         { label: "Parler à Yanis", href: "/contact-yanis" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
   </>
 );

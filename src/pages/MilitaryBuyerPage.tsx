@@ -43,7 +43,7 @@ const MilitaryBuyerPage = () => (
       subtitle="Mutation vers la RCN? Je vous aide à trouver le bon secteur, la bonne propriété et à naviguer le processus d'achat au Québec."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
-      trustLine="Service adapté aux militaires. Zéro pression."
+      trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
 
@@ -98,7 +98,7 @@ const MilitaryBuyerPage = () => (
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
 
     <FAQSection items={faq} />

@@ -105,7 +105,7 @@ const RelocationGuidePage = () => (
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
   </>
 );

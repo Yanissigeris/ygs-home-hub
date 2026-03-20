@@ -86,7 +86,7 @@ const LivingHullPage = () => (
         { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Voir le quartier", href: "/hull", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
   
     <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
