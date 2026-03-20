@@ -134,7 +134,7 @@ const PlexPage = () => (
         { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

@@ -104,7 +104,7 @@ const NeighborhoodPage = () => (
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
   </>
 );

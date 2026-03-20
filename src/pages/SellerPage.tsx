@@ -139,7 +139,7 @@ const SellerPage = () =>
     { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
     { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau", variant: "outline" }]
     }
-    trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez." />
+    trustLine="Je vous donne les chiffres et les options, vous décidez." />
   
 
     <FAQSection items={faq} />

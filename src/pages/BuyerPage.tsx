@@ -128,7 +128,7 @@ const BuyerPage = () => (
         { label: "Réserver ma consultation", href: "/consultation-acheteur" },
         { label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

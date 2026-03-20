@@ -94,7 +94,7 @@ const SellPlexPage = () => (
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
         { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

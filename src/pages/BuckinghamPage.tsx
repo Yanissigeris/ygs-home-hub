@@ -154,7 +154,7 @@ const BuckinghamPage = () => (
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
   
     <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
