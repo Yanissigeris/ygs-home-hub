@@ -68,7 +68,7 @@ const MilitarySellerPage = () => (
     <ContentBlock narrow>
       <SectionHeading
         overline="Mon approche"
-        title="Vendre vite ne veut pas dire vendre mal"
+        title="Une vente rapide peut aussi être rentable"
       />
       <p className="prose-body mt-5">
         Avec la bonne préparation et le bon positionnement prix, une vente rapide peut aussi être une vente rentable. Mon rôle est de protéger votre prix tout en respectant votre échéancier.
