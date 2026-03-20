@@ -64,7 +64,7 @@ const BuyerPage = () => (
       subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans stress et sans erreur."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau" }}
-      trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
 

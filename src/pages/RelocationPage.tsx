@@ -64,7 +64,7 @@ const RelocationPage = () => (
       subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété — sans stress."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" }}
-      trustLine="Stratégie claire. Zéro pression. Pas de mauvaises surprises."
+      trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
 
