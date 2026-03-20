@@ -43,7 +43,7 @@ const SellerGuidePage = () => (
     <HeroSection
       overline="Guide vendeur · Gatineau"
       title="Guide complet pour vendre votre propriété à Gatineau"
-      subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix, sans stress et sans mauvaises surprises."
+      subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
