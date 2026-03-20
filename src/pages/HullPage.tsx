@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
@@ -66,6 +67,7 @@ const related = [
 const HullPage = () => (
    <>
     <PageMeta title="Hull — Guide de quartier Gatineau" description="Vivre, acheter ou investir à Hull. Quartier urbain, condos, plex, culture et proximité Ottawa. Guide complet." />
+    <NeighborhoodJsonLd name="Hull" description="Courtier immobilier spécialisé à Hull, Gatineau. Quartier urbain, condos, plex, culture et proximité Ottawa." lat={45.4283} lng={-75.7140} url="/hull" />
     <HeroSection
       overline="Guide de quartier · Hull"
       title="Vivre, acheter ou investir à Hull"

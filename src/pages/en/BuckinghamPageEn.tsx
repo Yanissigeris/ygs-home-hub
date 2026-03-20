@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -66,6 +67,7 @@ const related = [
 const BuckinghamPageEn = () => (
   <>
     <PageMeta title="Buckingham / Masson-Angers — Neighborhood Guide | YGS" description="Buckingham and Masson-Angers: nature, land, affordable prices. Neighborhood guide for buyers and investors." />
+    <NeighborhoodJsonLd name="Buckingham" description="Real estate broker in Buckingham and Masson-Angers. Nature, spacious land and affordable prices in Outaouais." lat={45.5864} lng={-75.4197} url="/en/buckingham" />
     <HeroSection
       overline="Neighborhood Guide · Buckingham / Masson-Angers"
       title="Living in Buckingham and Masson-Angers"

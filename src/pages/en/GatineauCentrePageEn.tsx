@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
@@ -57,6 +58,7 @@ const related = [
 const GatineauCentrePageEn = () => (
   <>
     <PageMeta title="Gatineau Centre — Neighborhood Guide | YGS" description="Live, buy or invest in Gatineau centre. Established residential area, complete services and competitive prices." />
+    <NeighborhoodJsonLd name="Gatineau" description="Real estate broker in Gatineau centre. Established residential area, complete services and competitive prices." lat={45.4765} lng={-75.7013} url="/en/gatineau" />
     <HeroSection overline="Neighborhood Guide · Gatineau" title="Live, buy or invest in Gatineau centre" subtitle="A well-established residential area, complete services and competitive prices — everything you need to know about the Gatineau sector." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <ImageTextSplit image={riverImg} imageAlt="Gatineau sector" imagePosition="right">

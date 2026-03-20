@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
@@ -57,6 +58,7 @@ const related = [
 const PlateauPage = () => (
    <>
     <PageMeta title="Plateau — Guide de quartier Gatineau" description="Découvrez le Plateau à Gatineau. Familles, développements récents, parcs et accès rapide à Ottawa. Guide complet." />
+    <NeighborhoodJsonLd name="Plateau" description="Courtier immobilier spécialisé au Plateau, Gatineau. Développements récents, familles et excellent rapport qualité-prix." lat={45.4830} lng={-75.7350} url="/plateau" />
     <HeroSection
       overline="Guide de quartier · Plateau"
       title="Vivre, acheter ou investir dans le Plateau"

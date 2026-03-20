@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -66,6 +67,7 @@ const related = [
 const HullPageEn = () => (
   <>
     <PageMeta title="Hull — Neighborhood Guide | YGS" description="Living, buying or investing in Hull. Urban neighborhood, condos, plex, culture and Ottawa proximity. Complete guide." />
+    <NeighborhoodJsonLd name="Hull" description="Real estate broker specializing in Hull, Gatineau. Urban neighborhood, condos, plex, culture and Ottawa proximity." lat={45.4283} lng={-75.7140} url="/en/hull" />
     <HeroSection
       overline="Neighborhood Guide · Hull"
       title="Living, buying or investing in Hull"

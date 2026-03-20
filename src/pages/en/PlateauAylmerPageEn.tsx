@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -27,6 +28,7 @@ const faq = [
 const PlateauAylmerPageEn = () => (
   <>
     <PageMeta title="Plateau / Aylmer — Neighborhood Guide | YGS" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. Complete neighborhood guide for buyers." />
+    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighborhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer" />
     <HeroSection overline="Neighborhood Guide · Plateau / Aylmer" title="Living in Plateau and Aylmer" subtitle="Family-friendly neighborhoods, newer homes, lake access and nature — what you need to know to buy or sell in the area." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     <CardGrid overline="For who" title="This area is ideal for…" items={profiles} background="alt" />
     <SectorLinks overline="Other neighborhoods" title="Explore other areas" sectors={relatedSectors} />
