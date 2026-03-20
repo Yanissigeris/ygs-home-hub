@@ -60,6 +60,7 @@ const related = [
 const GatineauCentrePage = () => (
    <>
     <PageMeta title="Gatineau centre — Guide de quartier" description="Vivre, acheter ou investir à Gatineau centre. Quartier résidentiel établi, services complets et prix compétitifs." />
+    <NeighborhoodJsonLd name="Gatineau" description="Courtier immobilier à Gatineau centre. Quartier résidentiel établi, services complets et prix compétitifs." lat={45.4765} lng={-75.7013} url="/gatineau" />
     <HeroSection
       overline="Guide de quartier · Gatineau"
       title="Vivre, acheter ou investir à Gatineau"

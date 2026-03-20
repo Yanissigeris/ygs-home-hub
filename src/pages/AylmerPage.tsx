@@ -60,6 +60,7 @@ const related = [
 const AylmerPage = () => (
    <>
     <PageMeta title="Aylmer — Guide de quartier Gatineau" description="Vivre, acheter ou vendre à Aylmer. Lac Deschênes, parcs, écoles et communauté — guide complet par un courtier local." />
+    <NeighborhoodJsonLd name="Aylmer" description="Courtier immobilier spécialisé à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles et communauté." lat={45.3945} lng={-75.8486} url="/aylmer" />
     <HeroSection
       overline="Guide de quartier · Aylmer"
       title="Vivre, acheter ou vendre à Aylmer"
