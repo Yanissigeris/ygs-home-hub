@@ -14,7 +14,7 @@ const highlights = [
   },
   {
     icon: Shield,
-    title: "Approche sans pression",
+    title: "Accompagnement à votre rythme",
     text: "Je vous donne les chiffres, les options et une stratégie — vous décidez à votre rythme.",
   },
 ];
