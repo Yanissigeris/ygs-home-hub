@@ -36,7 +36,7 @@ const ValuationPageEn = () => {
 
  <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
  <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
- <motion.div className="pt-1 md:pt-6 lg:pt-10" {. .anim}>
+ <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
  <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily:"'Inter', sans-serif" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
  <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
  <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized, confidential and pressure-free estimate — based on your property and recent comparable sales.</p>
