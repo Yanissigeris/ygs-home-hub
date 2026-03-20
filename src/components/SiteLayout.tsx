@@ -3,6 +3,7 @@ import UtilityBar from "@/components/UtilityBar";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLdSchema from "@/components/JsonLdSchema";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { Outlet } from "react-router-dom";
 
 const PageFallback = () => (
