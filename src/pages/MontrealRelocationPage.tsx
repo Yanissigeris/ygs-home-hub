@@ -40,7 +40,7 @@ const MontrealRelocationPage = () =>
     subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie familiale — et un marché immobilier en croissance. Découvrez pourquoi de plus en plus de Montréalais choisissent Gatineau."
     primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
     secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
-    trustLine="Spécialiste en relocalisation. Zéro pression."
+    trustLine="Spécialiste en relocalisation."
     heroBgImage={heroImg} />
   
 
