@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { jsonldPrerenderPlugin } from "./plugins/vite-plugin-jsonld-prerender";
 
 export default defineConfig(() => ({
   server: {
@@ -11,7 +10,7 @@ export default defineConfig(() => ({
       overlay: false,
     },
   },
-  plugins: [react(), jsonldPrerenderPlugin()],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
