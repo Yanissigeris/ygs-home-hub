@@ -49,7 +49,7 @@ const SellPlexPageEn = () => (
       subtitle="Duplex, triplex or more — I help you maximize your price with a strategy tailored to revenue properties."
       primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Get an analysis", href: "/en/plex-analysis" }}
-      trustLine="Plex specialist. Zero pressure."
+      trustLine="Plex specialist. "
       heroBgImage={heroImg}
     />
     <TrustMiniStrip items={trustItems} />
