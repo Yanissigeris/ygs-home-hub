@@ -42,7 +42,7 @@ const MilitarySellerPage = () => (
       subtitle="Le temps presse, mais le prix compte. Je vous aide à vendre efficacement, sans sacrifier la valeur de votre propriété."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      trustLine="Stratégie claire. Vente rapide. Zéro pression."
+      trustLine="Stratégie claire. Vente rapide."
       heroBgImage={heroImg}
     />
 
