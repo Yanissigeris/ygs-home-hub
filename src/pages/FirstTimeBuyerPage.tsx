@@ -49,7 +49,7 @@ const FirstTimeBuyerPage = () => (
       subtitle="Devenir propriétaire pour la première fois, c'est excitant et stressant. Je vous aide à naviguer chaque étape — budget, secteur, offre et processus."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau" }}
-      trustLine="Accompagnement personnalisé. Zéro pression."
+      trustLine="Accompagnement personnalisé."
       heroBgImage={heroImg}
     />
 
