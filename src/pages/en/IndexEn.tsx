@@ -59,7 +59,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Your real estate ally in Outaouais"
-      subtitle="Sell, buy or invest — clear strategy, honest advice and support without pressure."
+      subtitle="Sell, buy or invest — clear strategy, honest advice and support."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
       trustLine=""
