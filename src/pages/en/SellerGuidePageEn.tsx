@@ -91,7 +91,7 @@ const SellerGuidePageEn = () => (
 
     <FAQSection items={faq} />
 
-    <RelatedPages title="Related pages for sellers" pages={related} background="alt" />
+    <RelatedPages overline="Also worth reading" title="Related pages for sellers" pages={related} background="alt" />
 
     <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 

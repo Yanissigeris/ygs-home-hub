@@ -71,7 +71,7 @@ const BuyerGuidePageEn = () => (
 
     <FAQSection items={faq} />
 
-    <RelatedPages title="Related pages for buyers" pages={related} background="alt" />
+    <RelatedPages overline="Also worth reading" title="Related pages for buyers" pages={related} background="alt" />
 
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
 

@@ -75,7 +75,7 @@ const AylmerPageEn = () => (
     <InlineCTA text="Own property in Aylmer? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
     <FAQSection title="Questions about Aylmer" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
-    <RelatedPages title="Also read" pages={related} background="alt" />
+    <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Aylmer" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
     <CTASection dark title="Buyer or seller in Aylmer?" text="I know Aylmer inside out — let's talk about your project." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
