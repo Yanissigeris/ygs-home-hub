@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
+import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
