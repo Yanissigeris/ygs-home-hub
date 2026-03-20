@@ -57,7 +57,7 @@ const faq = [
 
 const BuyerPage = () => (
    <>
-    <PageMeta title="Acheter une propriété à Gatineau" description="Trouvez et achetez votre propriété à Gatineau avec un courtier expérimenté. Consultation personnalisée, accès prioritaire et accompagnement sans pression." />
+    <PageMeta title="Acheter une propriété à Gatineau" description="Trouvez et achetez votre propriété à Gatineau avec un courtier expérimenté. Consultation personnalisée, accès prioritaire et accompagnement à votre rythme." />
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
