@@ -61,7 +61,7 @@ const RelocationPage = () => (
     <HeroSection
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
-      subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété — sans stress."
+      subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" }}
       trustLine="Stratégie claire."
