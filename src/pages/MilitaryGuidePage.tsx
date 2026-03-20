@@ -41,7 +41,7 @@ const MilitaryGuidePage = () => (
     <HeroSection
       overline="Guide militaire · Gatineau"
       title="Guide immobilier pour militaires à Gatineau"
-      subtitle="Mutation vers la NCR? Tout ce que vous devez savoir pour acheter, vendre ou vous installer à Gatineau en tant que militaire."
+      subtitle="Mutation vers la RCN? Tout ce que vous devez savoir pour acheter, vendre ou vous installer à Gatineau en tant que militaire."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Voir le service militaire", href: "/militaire-gatineau" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"

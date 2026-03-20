@@ -37,7 +37,7 @@ const faq = [
 const related = [
   { title: "Relocalisation depuis Ottawa", text: "Plus d'espace et des prix plus accessibles de l'autre côté de la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
   { title: "Relocalisation depuis Montréal", text: "Qualité de vie et espace pour les familles montréalaises.", href: "/relocalisation-montreal-gatineau" },
-  { title: "Relocalisation militaire", text: "Mutation vers la NCR — service adapté aux militaires.", href: "/relocalisation-militaire-gatineau" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN — service adapté aux militaires.", href: "/relocalisation-militaire-gatineau" },
   { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
 ];
 

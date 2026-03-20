@@ -40,7 +40,7 @@ const MilitaryBuyerPage = () => (
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"
-      subtitle="Mutation vers la NCR? Je vous aide à trouver le bon secteur, la bonne propriété et à naviguer le processus d'achat au Québec."
+      subtitle="Mutation vers la RCN? Je vous aide à trouver le bon secteur, la bonne propriété et à naviguer le processus d'achat au Québec."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
       trustLine="Service adapté aux militaires. Zéro pression."
