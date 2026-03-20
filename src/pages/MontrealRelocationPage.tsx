@@ -88,7 +88,7 @@ const MontrealRelocationPage = () =>
     { label: "Réserver un appel", href: "/contact-yanis" },
     { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" }]
     }
-    trustLine="Zéro pression — je vous donne les options, vous décidez." />
+    trustLine="Je vous donne les options, vous décidez." />
   
   
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />

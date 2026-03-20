@@ -86,7 +86,7 @@ const LivingPlateauPage = () => (
         { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Voir le quartier", href: "/plateau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
   
     <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />

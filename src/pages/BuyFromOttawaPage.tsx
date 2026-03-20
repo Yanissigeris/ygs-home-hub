@@ -100,7 +100,7 @@ const BuyFromOttawaPage = () => (
         { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les options, vous décidez."
+      trustLine="Je vous donne les options, vous décidez."
     />
 
     <FAQSection items={faq} />
