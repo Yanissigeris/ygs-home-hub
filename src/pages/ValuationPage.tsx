@@ -76,7 +76,7 @@ const ValuationPage = () => {
  <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
 
  {/* ── LEFT: Value proposition ── */}
- <motion.div className="pt-1 md:pt-6 lg:pt-10" {. .anim}>
+ <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
  {/* Eyebrow */}
  <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily:"'Inter', sans-serif" }}>
  <span>Évaluation gratuite</span>
