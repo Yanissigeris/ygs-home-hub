@@ -95,7 +95,7 @@ const removeHreflangLinks = () => {
   document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
 };
 
-const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical }, _ref) => {
+const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical, ogImage }, _ref) => {
   const { pathname } = useLocation();
 
   React.useEffect(() => {
