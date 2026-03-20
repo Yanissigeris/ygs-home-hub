@@ -9,7 +9,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
   const ctaLabelMobile = lang === "en" ? "Valuation" : "Évaluation";
   const relocationLabel = lang === "en" ? "Relocation" : "Relocalisation";
-  const relocationHref = lang === "en" ? "/en/relocation" : "/relocalisation-gatineau";
+  const relocationHref = lang === "en" ? "/en/relocation" : "/relocalisation-ottawa-gatineau";
   const contactHref = lang === "en" ? "/en/contact" : "/contact-yanis";
 
   return (
