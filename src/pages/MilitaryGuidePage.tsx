@@ -29,7 +29,7 @@ const faq = [
 ];
 
 const related = [
-  { title: "Relocalisation militaire", text: "Mutation vers la NCR — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau" },
   { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau" },
   { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau" },
   { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau" },
