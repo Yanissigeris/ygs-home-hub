@@ -5,6 +5,7 @@ interface PageMetaProps {
   title: string;
   description: string;
   canonical?: string;
+  ogImage?: string;
 }
 
 const SITE = "YGS — Yanis Gauthier-Sigeris";
