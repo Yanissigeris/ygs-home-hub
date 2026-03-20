@@ -34,7 +34,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="label-overline mb-3">Pourquoi YGS</p>
         <h2>Un accompagnement simple, stratégique et humain</h2>
         <p className="prose-body mt-5">
-          Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance quand vous à votre rythme.   
+          Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance à votre rythme.   
         </p>
         <p className="prose-body mt-4">
           Il accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire et avec une excellente connaissance du marché.
