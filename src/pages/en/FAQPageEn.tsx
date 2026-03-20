@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import FaqJsonLd from "@/components/FaqJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
