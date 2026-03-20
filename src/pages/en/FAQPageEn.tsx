@@ -43,6 +43,7 @@ const resources = [
 const FAQPageEn = () => (
   <>
     <PageMeta title="FAQ — Real Estate Questions | YGS" description="Answers to frequently asked questions about real estate in Gatineau. Selling, buying, investing, relocation and more." />
+    <FaqJsonLd items={[...sellerFaq, ...buyerFaq, ...plexFaq, ...militaryFaq]} />
     <HeroSection overline="FAQ · YGS" title="Frequently Asked Questions" subtitle="Answers to the most common questions about selling, buying, investing and relocating in Gatineau." primaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <FAQSection title="Selling in Gatineau" items={sellerFaq} />
     <FAQSection title="Buying in Gatineau" items={buyerFaq} />
