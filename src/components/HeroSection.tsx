@@ -224,13 +224,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
                   WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)"
                 }}>
-                
-                
+                <img
+                  src={agentImage}
+                  alt={agentName || ""}
+                  className="relative z-0 w-[340px] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
+                  loading="eager" />
 
-
-
-
-                
               </div>
             </motion.div>
             }
