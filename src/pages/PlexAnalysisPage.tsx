@@ -157,7 +157,7 @@ const PlexAnalysisPage = () => {
                       Recevoir mon analyse plex
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Zéro pression — je vous donne les chiffres et les options, vous décidez.
+                      Je vous donne les chiffres et les options, vous décidez.
                     </p>
                   </form>
                 )}

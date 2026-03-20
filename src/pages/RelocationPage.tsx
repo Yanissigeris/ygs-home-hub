@@ -134,7 +134,7 @@ const RelocationPage = () => (
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

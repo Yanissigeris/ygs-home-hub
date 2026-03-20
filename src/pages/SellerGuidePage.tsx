@@ -128,7 +128,7 @@ const SellerGuidePage = () => (
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
         { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />

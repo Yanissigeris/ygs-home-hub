@@ -93,7 +93,7 @@ const MilitarySellerPage = () => (
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver un appel", href: "/contact-yanis", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous donne les chiffres et les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />
