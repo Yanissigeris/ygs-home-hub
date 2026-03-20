@@ -43,7 +43,7 @@ const steps = [
 
 const trustPoints = [
 { icon: Clock, title: "Nearly 9 years in Outaouais", text: "Deep knowledge of the market, neighborhoods and local realities." },
-{ icon: Shield, title: "Zero pressure, zero surprises", text: "Honest advice, clear strategy, support adapted to your pace." },
+{ icon: Shield, title: "zero surprises", text: "Honest advice, clear strategy, support adapted to your pace." },
 { icon: Award, title: "Recognized results", text: "RE/MAX Platinum Club, 100% Club and Hall of Fame." }];
 
 
