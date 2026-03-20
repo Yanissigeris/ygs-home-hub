@@ -117,7 +117,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt=""
               className="h-full w-full object-cover"
               style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
-              loading="eager" />
+               loading="eager"
+               fetchPriority="high" />
             
           </motion.div>
           <div
