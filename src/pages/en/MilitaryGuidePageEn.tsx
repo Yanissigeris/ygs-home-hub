@@ -64,7 +64,7 @@ const MilitaryGuidePageEn = () => (
 
     <FAQSection items={faq} />
 
-    <RelatedPages title="Related pages for military" pages={related} background="alt" />
+    <RelatedPages overline="Also worth reading" title="Related pages for military" pages={related} background="alt" />
 
     <CTASection dark title="Let's plan your military relocation" text="Book a free call — we adapt the plan to your posting and timeline." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="Zero pressure — I adapt to your pace." />
 

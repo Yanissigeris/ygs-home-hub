@@ -43,7 +43,7 @@ const LivingHullPageEn = () => (
     </ContentBlock>
     <InlineCTA text="Looking for a plex in Hull? Request a return analysis." buttonLabel="Get a plex analysis →" href="/en/plex-analysis" />
     <FAQSection title="Questions about living in Hull" items={faq} />
-    <RelatedPages title="Also read" pages={related} background="alt" />
+    <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="investor_guide" headline="Free Investor Guide — plex in Hull" text="Returns, taxes and strategy — everything in a guide sent to your email." ctaLabel="Get the Investor Guide" />
     <CTASection dark title="Ready to discover Hull?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See the neighborhood", href: "/en/hull", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
     <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
