@@ -31,7 +31,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Des dizaines de premiers acheteurs accompagnés" },
-  { icon: Shield, label: "Zéro pression · Transparence totale" },
+  { icon: Shield, label: "Transparence totale" },
 ];
 
 const faq = [
