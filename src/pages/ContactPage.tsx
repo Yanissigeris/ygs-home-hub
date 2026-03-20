@@ -60,7 +60,7 @@ const ContactPage = () => {
         compact
         overline="Yanis Gauthier-Sigeris"
         title="Parlons de votre projet"
-        subtitle="En réflexion ou prêt à bouger — je peux vous aider à voir plus clair. Pas de pression, juste une conversation honnête."
+        subtitle="En réflexion ou prêt à bouger — je peux vous aider à voir plus clair. "
         primaryCta={{ label: "Envoyer un message", href: "#contact-form" }}
         secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
         heroBgImage={heroImg}
