@@ -94,7 +94,7 @@ const FirstTimeBuyerPage = () => (
         { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je vous accompagne à votre rythme."
+      trustLine="Je vous accompagne à votre rythme."
     />
 
     <FAQSection items={faq} />
