@@ -21,7 +21,7 @@ const factors = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Club Platine · Temple de la renommée" },
-  { icon: Shield, label: "Analyse objective du marché" },
+  { icon: Shield, label: "Analyse objective" },
 ];
 
 const faq = [
