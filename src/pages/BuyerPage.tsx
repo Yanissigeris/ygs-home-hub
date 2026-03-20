@@ -39,7 +39,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste des secteurs locaux" },
-  { icon: Shield, label: "Accompagnement sans pression" },
+  { icon: Shield, label: "Accompagnement à votre rythme" },
 ];
 
 const nextSteps = [

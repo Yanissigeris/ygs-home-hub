@@ -20,7 +20,7 @@ import riverImg from "@/assets/gatineau-river-view.webp";
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste Buckingham / Masson-Angers" },
-  { icon: Shield, label: "Accompagnement sans pression" },
+  { icon: Shield, label: "Accompagnement à votre rythme" },
 ];
 
 const reasons = [
