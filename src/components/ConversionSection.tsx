@@ -20,7 +20,7 @@ const steps = [
 {
   number: "03",
   title: "Accompagnement complet",
-  text: "De la préparation à la signature, sans pression ni surprise.",
+  text: "De la préparation à la signature, à votre rythme et sans surprise.",
   href: "/contact-yanis"
 }];
 

@@ -39,7 +39,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste des secteurs locaux" },
-  { icon: Shield, label: "Accompagnement sans pression" },
+  { icon: Shield, label: "Accompagnement à votre rythme" },
 ];
 
 const nextSteps = [
@@ -57,7 +57,7 @@ const faq = [
 
 const BuyerPage = () => (
    <>
-    <PageMeta title="Acheter une propriété à Gatineau" description="Trouvez et achetez votre propriété à Gatineau avec un courtier expérimenté. Consultation personnalisée, accès prioritaire et accompagnement sans pression." />
+    <PageMeta title="Acheter une propriété à Gatineau" description="Trouvez et achetez votre propriété à Gatineau avec un courtier expérimenté. Consultation personnalisée, accès prioritaire et accompagnement à votre rythme." />
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"

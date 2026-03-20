@@ -17,7 +17,7 @@ import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste Plateau et environs" },
-  { icon: Shield, label: "Accompagnement sans pression" },
+  { icon: Shield, label: "Accompagnement à votre rythme" },
 ];
 
 const reasons = [

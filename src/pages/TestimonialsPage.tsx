@@ -61,7 +61,7 @@ const TestimonialsPage = () => (
       dark
       overline="Prochaine étape"
       title="Prêt à vivre une expérience similaire?"
-      text="Peu importe votre projet, on commence par une conversation simple et sans pression."
+      text="Peu importe votre projet, on commence par une conversation simple et à votre rythme."
       buttons={[
         { label: "Réserver une consultation", href: "/contact-yanis" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },

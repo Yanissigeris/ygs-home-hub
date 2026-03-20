@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-neighborhoods.webp";
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste de tous les secteurs" },
-  { icon: Shield, label: "Conseils locaux et sans pression" },
+  { icon: Shield, label: "Accompagnement à votre rythme" },
 ];
 
 const sectors = [
