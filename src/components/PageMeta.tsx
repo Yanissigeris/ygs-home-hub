@@ -10,31 +10,43 @@ interface PageMetaProps {
 const SITE = "YGS — Yanis Gauthier-Sigeris";
 const BASE_URL = "https://ygs-home-hub.lovable.app";
 
-/** FR→EN path mapping (single source of truth, mirrors LanguageSwitch) */
+/** FR→EN path mapping — single source of truth, mirrors LanguageSwitch */
 const frToEn: Record<string, string> = {
   "/": "/en",
   "/proprietes": "/en/properties",
   "/vendre-ma-maison-gatineau": "/en/sell",
   "/evaluation-gratuite-gatineau": "/en/home-valuation",
+  "/plan-vendeur-gatineau": "/en/seller-plan",
   "/guide-vendeur-gatineau": "/en/seller-guide",
+  "/quand-vendre-a-gatineau": "/en/when-to-sell",
+  "/vendre-un-plex-a-gatineau": "/en/sell-plex",
   "/acheter-a-gatineau": "/en/buy",
   "/consultation-acheteur": "/en/buyer-consultation",
   "/guide-acheteur-gatineau": "/en/buyer-guide",
   "/premier-achat-gatineau": "/en/first-time-buyer",
   "/acheter-a-gatineau-depuis-ottawa": "/en/buy-from-ottawa",
   "/relocalisation-ottawa-gatineau": "/en/relocation",
+  "/relocalisation-montreal-gatineau": "/en/montreal-relocation",
   "/guide-relocalisation-gatineau": "/en/relocation-guide",
+  "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
   "/militaire-gatineau": "/en/military",
+  "/relocalisation-militaire-gatineau": "/en/military-relocation",
   "/acheter-comme-militaire-gatineau": "/en/military-buyer",
   "/vendre-lors-dune-mutation-gatineau": "/en/military-seller",
   "/guide-militaire-gatineau": "/en/military-guide",
   "/investir-plex-gatineau": "/en/plex",
   "/analyse-plex-gatineau": "/en/plex-analysis",
-  "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
+  "/rapport-marche-gatineau": "/en/market-report",
   "/plateau-aylmer": "/en/plateau-aylmer",
   "/hull": "/en/hull",
   "/buckingham-masson-angers": "/en/buckingham",
+  "/gatineau": "/en/gatineau",
+  "/aylmer": "/en/aylmer",
+  "/plateau": "/en/plateau",
   "/ressources": "/en/resources",
+  "/vivre-a-aylmer": "/en/living-aylmer",
+  "/vivre-a-hull": "/en/living-hull",
+  "/vivre-dans-le-plateau": "/en/living-plateau",
   "/faq": "/en/faq",
   "/temoignages": "/en/testimonials",
   "/contact-yanis": "/en/contact",
@@ -85,27 +97,37 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
   const { pathname } = useLocation();
 
   React.useEffect(() => {
+    /* ── Title ── */
     document.title = `${title} | ${SITE}`;
 
+    /* ── html lang attribute ── */
+    const isEn = pathname.startsWith("/en");
+    document.documentElement.lang = isEn ? "en" : "fr";
+
+    /* ── Meta description ── */
     ensureMetaTag('meta[name="description"]', { name: "description", content: description });
+
+    /* ── Open Graph ── */
     ensureMetaTag('meta[property="og:title"]', { property: "og:title", content: title });
     ensureMetaTag('meta[property="og:description"]', { property: "og:description", content: description });
+    ensureMetaTag('meta[property="og:site_name"]', { property: "og:site_name", content: SITE });
+    ensureMetaTag('meta[property="og:type"]', { property: "og:type", content: "website" });
 
-    // OG locale tags
-    const isEnLocale = pathname.startsWith("/en");
-    const locale = isEnLocale ? "en_CA" : "fr_CA";
-    const altLocale = isEnLocale ? "fr_CA" : "en_CA";
+    const locale = isEn ? "en_CA" : "fr_CA";
+    const altLocale = isEn ? "fr_CA" : "en_CA";
     ensureMetaTag('meta[property="og:locale"]', { property: "og:locale", content: locale });
     ensureMetaTag('meta[property="og:locale:alternate"]', { property: "og:locale:alternate", content: altLocale });
 
-    if (canonical) {
-      ensureCanonicalLink().setAttribute("href", canonical);
-    }
+    /* ── Canonical URL (self-referencing) ── */
+    const canonicalUrl = canonical || `${BASE_URL}${pathname}`;
+    ensureCanonicalLink().setAttribute("href", canonicalUrl);
 
-    // Hreflang tags
+    /* ── og:url (matches canonical) ── */
+    ensureMetaTag('meta[property="og:url"]', { property: "og:url", content: canonicalUrl });
+
+    /* ── Hreflang tags ── */
     removeHreflangLinks();
 
-    const isEn = pathname.startsWith("/en");
     const frPath = isEn ? (enToFr[pathname] ?? null) : pathname;
     const enPath = isEn ? pathname : (frToEn[pathname] ?? null);
 
