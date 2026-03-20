@@ -24,7 +24,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Expérience en vente sous mutation" },
-  { icon: Shield, label: "Processus accéléré · Zéro pression" },
+  { icon: Shield, label: "Bilingue" },
 ];
 
 const faq = [

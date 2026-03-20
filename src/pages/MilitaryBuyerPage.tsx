@@ -25,7 +25,7 @@ const advantages = [
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Spécialiste acheteurs militaires" },
-  { icon: Shield, label: "Bilingue · Zéro pression" },
+  { icon: Shield, label: "Bilingue" },
 ];
 
 const faq = [
