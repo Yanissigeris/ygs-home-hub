@@ -25,7 +25,14 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
               <Mail size={12} strokeWidth={1.5} className="text-white/35" /><span>yanis@martywaite.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
+            <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/40 transition-colors duration-200 hover:text-white/80">
+              <Facebook size={13} strokeWidth={1.5} />
+            </a>
+            <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/40 transition-colors duration-200 hover:text-white/80">
+              <Instagram size={13} strokeWidth={1.5} />
+            </a>
+            <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
             <Link to={relocationHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{relocationLabel}</Link>
             <Link to={contactHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">Contact</Link>
             <Link to={ctaHref} className="ml-1 inline-flex h-[26px] items-center rounded-full border border-[#B68A43]/20 bg-[#B68A43]/15 px-4 text-[0.6875rem] font-medium tracking-[0.04em] text-[#B68A43] transition-all duration-200 hover:border-[#B68A43]/35 hover:bg-[#B68A43]/25 hover:text-[#B68A43]">{ctaLabel}</Link>
