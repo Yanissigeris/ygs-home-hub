@@ -29,10 +29,10 @@ const PageFallback = () => (
           <div className="hidden md:flex md:items-end md:justify-end">
             <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[3/5]" />
           </div>
-        </div>
-        {/* Portrait placeholder — mobile */}
-        <div className="flex justify-center md:hidden">
-          <div className="w-[260px] sm:w-[300px] aspect-[3/5]" />
+          {/* Portrait placeholder — mobile (inside grid, matching HeroSection) */}
+          <div className="flex justify-center items-end md:hidden">
+            <div className="w-[260px] sm:w-[300px] aspect-[3/5]" />
+          </div>
         </div>
       </div>
     </div>
