@@ -80,7 +80,6 @@ const AudienceCards = () => (
                   width={648}
                   height={441}
                 />
-                />
                 {card.featured && (
                   <span className="absolute top-3.5 left-3.5 rounded-full bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">
                     Populaire
