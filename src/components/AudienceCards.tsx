@@ -15,6 +15,7 @@ const audienceCards = [
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     image: cardVendreImg,
+    imageSm: cardVendreSm,
     imageAlt: "Vendre une maison à Gatineau — intérieur résidentiel lumineux",
     featured: true,
   },
