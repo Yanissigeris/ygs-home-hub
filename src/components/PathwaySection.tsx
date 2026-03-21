@@ -37,6 +37,7 @@ const pathways = [
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
     image: cardPlexImg,
+    imageSm: cardPlexSm,
     imageAlt: "Investissement plex à Gatineau — immeuble à revenus",
   },
 ];
