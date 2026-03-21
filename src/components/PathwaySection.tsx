@@ -17,6 +17,7 @@ const pathways = [
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
     image: cardVendreImg,
+    imageSm: cardVendreSm,
     imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne",
   },
   {
