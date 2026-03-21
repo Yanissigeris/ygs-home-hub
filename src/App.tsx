@@ -10,8 +10,18 @@ import SiteLayout from "@/components/SiteLayout";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 
-const preloadImage = (src: string) => { const img = new Image(); img.src = src; };
-if (typeof window !== "undefined") { preloadImage(yanisPortrait); preloadImage(heroGatineauSkyline); }
+const preloadAsset = (href: string, as: string) => {
+  const link = document.createElement("link");
+  link.rel = "preload";
+  link.as = as;
+  link.href = href;
+  if (as === "image") link.fetchPriority = "high";
+  document.head.appendChild(link);
+};
+if (typeof window !== "undefined") {
+  preloadAsset(yanisPortrait, "image");
+  preloadAsset(heroGatineauSkyline, "image");
+}
 
 // FR pages
 const Index = React.lazy(() => import("./pages/Index"));
