@@ -53,7 +53,7 @@ const ContactPageEn = () => {
       </ProfileSection>
       <CardGrid overline="Services" title="How I can help" items={services} background="alt" />
       <FormSection id="contact-form" title="Tell me where you are">
-        {submitted ? <SuccessMessage /> : (
+        {submitted ? <SuccessMessage title="Thank you! Message sent." text="I'll get back to you shortly." /> : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
             <div><Label htmlFor="objective">I want to…</Label><Select><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
             <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" type="email" className="mt-1.5" required /></div></div>
