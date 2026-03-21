@@ -124,9 +124,9 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 76 : 88 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris" className="min-w-0 transition-all duration-300 object-contain" style={{ height: scrolled ? 56 : 66, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 transition-all duration-300 object-contain" style={{ height: scrolled ? 56 : 66, width: "auto" }} />
           <span className="h-5 w-px shrink-0 bg-border/20" />
-          <img src={logoRemax} alt="RE/MAX" className="shrink-0 transition-all duration-300 object-contain opacity-80" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
+          <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="shrink-0 transition-all duration-300 object-contain opacity-80" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitch />
