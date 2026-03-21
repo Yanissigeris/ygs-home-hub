@@ -12,27 +12,39 @@ const PageFallback = () => (
     <div className="min-h-[400px] md:min-h-[440px] lg:min-h-[480px]" style={{ background: "#10242D" }}>
       <div className="section-container relative pt-[3rem] sm:pt-[3.5rem] md:pt-[4rem] lg:pt-[4.5rem]">
         <div className="grid items-end gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]">
-          {/* Text skeleton */}
-          <div className="space-y-5 pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]">
-            <div className="h-3 w-40 rounded bg-white/[0.06]" />
-            <div className="space-y-3">
-              <div className="h-10 w-64 rounded bg-white/[0.08] sm:h-12 sm:w-80" />
-              <div className="h-10 w-48 rounded bg-white/[0.08] sm:h-12 sm:w-64" />
+          {/* Text skeleton — heights calibrated to match real hero content */}
+          <div className="pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]">
+            {/* Overline */}
+            <div className="mb-6 flex items-center gap-4">
+              <div className="h-px w-8 bg-white/[0.06]" />
+              <div className="h-3 w-48 rounded bg-white/[0.06]" />
             </div>
-            <div className="h-4 w-72 rounded bg-white/[0.05]" />
-            <div className="flex gap-3 pt-2">
-              <div className="h-12 w-40 rounded-lg bg-white/[0.07]" />
-              <div className="h-12 w-36 rounded-lg bg-white/[0.05]" />
+            {/* H1 — 4 lines on mobile, 3 on md+ */}
+            <div className="space-y-2">
+              <div className="h-10 w-[85%] rounded bg-white/[0.08] sm:h-12" />
+              <div className="h-10 w-[75%] rounded bg-white/[0.08] sm:h-12" />
+              <div className="h-10 w-[60%] rounded bg-white/[0.08] sm:h-12" />
+              <div className="h-10 w-[40%] rounded bg-white/[0.08] sm:h-12 md:hidden" />
+            </div>
+            {/* Subtitle */}
+            <div className="mt-4 space-y-1.5">
+              <div className="h-4 w-[90%] max-w-[26rem] rounded bg-white/[0.05]" />
+              <div className="h-4 w-[70%] max-w-[20rem] rounded bg-white/[0.05]" />
+            </div>
+            {/* Buttons — stacked on ≤390, row on wider */}
+            <div className="mt-7 flex flex-col gap-3 min-[391px]:flex-row">
+              <div className="h-[52px] w-full rounded-lg bg-white/[0.07] min-[391px]:w-44" />
+              <div className="h-[52px] w-full rounded-lg bg-white/[0.05] min-[391px]:w-40" />
             </div>
           </div>
           {/* Portrait placeholder — desktop */}
           <div className="hidden md:flex md:items-end md:justify-end">
-            <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[3/5]" />
+            <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[1279/1920]" />
           </div>
-        </div>
-        {/* Portrait placeholder — mobile */}
-        <div className="flex justify-center md:hidden">
-          <div className="w-[260px] sm:w-[300px] aspect-[3/5]" />
+          {/* Portrait placeholder — mobile (inside grid, matching HeroSection) */}
+          <div className="flex justify-center items-end md:hidden">
+            <div className="w-[260px] sm:w-[300px] aspect-[1279/1920]" />
+          </div>
         </div>
       </div>
     </div>
