@@ -34,6 +34,7 @@ const audienceCards = [
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
     image: cardPlexImg,
+    imageSm: cardPlexSm,
     imageAlt: "Investir dans un plex à Gatineau — immeuble multilogement",
   },
 ];
