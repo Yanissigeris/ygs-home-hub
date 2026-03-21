@@ -72,10 +72,14 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
             <Link to={pathway.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={pathway.image}
+                  src={pathway.imageSm}
+                  srcSet={`${pathway.imageSm} 370w, ${pathway.image} 648w`}
+                  sizes="(max-width: 767px) 90vw, 33vw"
                   alt={pathway.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
+                  width={648}
+                  height={441}
                 />
               </div>
               <div className="flex flex-1 flex-col p-7 sm:p-8">
