@@ -87,6 +87,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               playsInline
               poster={heroVideoPoster || heroBgImage}
               src={heroVideo}
+              width={1920}
+              height={1080}
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.82) saturate(0.75) contrast(1.04)" }} />
             
