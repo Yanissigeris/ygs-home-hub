@@ -104,9 +104,9 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 78 : 92 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris" className="object-contain transition-all duration-300" style={{ height: scrolled ? 60 : 70, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain transition-all duration-300" style={{ height: scrolled ? 60 : 70, width: "auto" }} />
           <span className="h-5 w-px shrink-0 bg-border/12" />
-          <img src={logoRemax} alt="RE/MAX" className="object-contain opacity-50 transition-all duration-300" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
+          <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="object-contain opacity-50 transition-all duration-300" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} />))}
