@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Award, Heart } from "lucide-react";
 import yanisAbout from "@/assets/yanis-about.webp";
+import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 
 import { Button } from "@/components/ui/button";
 
