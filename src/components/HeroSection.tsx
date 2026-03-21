@@ -101,12 +101,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             }}>
             
             <video
+              ref={videoRef}
               autoPlay
               muted
               loop
               playsInline
               poster={heroVideoPoster || heroBgImage}
-              src={heroVideo}
+              preload="none"
               width={1920}
               height={1080}
               className="h-full w-full object-cover"
