@@ -208,19 +208,6 @@ const appRoutes = React.createElement(
   React.createElement(LanguageProvider, null, routeTree),
 );
 
-const App = () =>
-  React.createElement(
-    TanStackQueryClientProvider,
-    { client: queryClient },
-    React.createElement(
-      TooltipProvider,
-      null,
-      <>
-        <Toaster />
-        <Sonner />
-        {appRoutes}
-      </>,
-    ),
-  );
+const App = () => appRoutes;
 
 export default App;
