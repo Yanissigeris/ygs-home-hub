@@ -1,9 +1,5 @@
 import * as React from "react";
-import { QueryClient, QueryClientProvider as TanStackQueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 
@@ -106,7 +102,7 @@ const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
 const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
 const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
 
-const queryClient = new QueryClient();
+
 
 const routeTree = React.createElement(
   Routes,
@@ -212,19 +208,6 @@ const appRoutes = React.createElement(
   React.createElement(LanguageProvider, null, routeTree),
 );
 
-const App = () =>
-  React.createElement(
-    TanStackQueryClientProvider,
-    { client: queryClient },
-    React.createElement(
-      TooltipProvider,
-      null,
-      <>
-        <Toaster />
-        <Sonner />
-        {appRoutes}
-      </>,
-    ),
-  );
+const App = () => appRoutes;
 
 export default App;
