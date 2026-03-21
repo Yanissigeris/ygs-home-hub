@@ -9,6 +9,7 @@ import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisAbout from "@/assets/yanis-about.webp";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -115,7 +116,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
       <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
           <div className="overflow-hidden rounded-[1.75rem]">
-            <img src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png" alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" />
+            <img src={yanisAbout} alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" />
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
