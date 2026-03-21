@@ -71,6 +71,7 @@ const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
 const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
 const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
 const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
+const ThankYouValuationPageEn = React.lazy(() => import("./pages/en/ThankYouValuationPageEn"));
 const BuyerGuidePageEn = React.lazy(() => import("./pages/en/BuyerGuidePageEn"));
 const SellerGuidePageEn = React.lazy(() => import("./pages/en/SellerGuidePageEn"));
 const MilitaryBuyerPageEn = React.lazy(() => import("./pages/en/MilitaryBuyerPageEn"));
