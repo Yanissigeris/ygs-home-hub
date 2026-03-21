@@ -70,7 +70,7 @@ const ContactPage = () => {
 
       <ProfileSection
         image={yanisPhoto}
-        imageAlt="Yanis Gauthier-Sigeris - Courtier immobilier"
+        imageAlt="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau"
         name="Yanis Gauthier-Sigeris"
         role="Courtier immobilier · Gatineau et Outaouais"
         subtitle="Affilié RE/MAX · Équipe Marty Waite"

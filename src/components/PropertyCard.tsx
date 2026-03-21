@@ -26,7 +26,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={property.image}
-          alt={`${property.address}, ${property.city}`}
+          alt={`Propriété à vendre — ${property.address}, ${property.city} — ${property.type}`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"

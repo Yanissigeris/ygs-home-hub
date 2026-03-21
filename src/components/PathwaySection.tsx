@@ -14,6 +14,7 @@ const pathways = [
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
     image: cardVendreImg,
+    imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne",
   },
   {
     title: "Acheter à Gatineau",
@@ -22,6 +23,7 @@ const pathways = [
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
     image: cardAcheterImg,
+    imageAlt: "Acheter une propriété à Gatineau — rue résidentielle",
   },
   {
     title: "Plex & investissement",
@@ -30,6 +32,7 @@ const pathways = [
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
     image: cardPlexImg,
+    imageAlt: "Investissement plex à Gatineau — immeuble à revenus",
   },
 ];
 
@@ -64,7 +67,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={pathway.image}
-                  alt={pathway.title}
+                  alt={pathway.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />

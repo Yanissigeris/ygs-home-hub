@@ -13,12 +13,12 @@ import { footerColumns } from "@/data/navigation";
 import { footerColumnsEn } from "@/data/navigation-en";
 
 const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct", filter: "brightness-[1.3]" },
-  { src: logoMW, alt: "Équipe Marty Waite", filter: "brightness-[1.6]" },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", filter: "brightness-[1.8] contrast-[1.1]" },
-  { src: logoTemple, alt: "Temple de la renommée", filter: "brightness-0 invert" },
-  { src: logoTranquillit, alt: "Tranquilli-T", filter: "brightness-[1.5]" },
-  { src: logoEnfantSoleil, alt: "Enfant Soleil", filter: "brightness-[1.4]" },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
+  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
+  { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
+  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
+  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
@@ -36,7 +36,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
       <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
         <div className="section-container">
           <div className="flex flex-col items-center pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
-            <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris" className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} />
+            <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} />
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
             <p className="mt-2 max-w-[16rem] text-center text-[0.75rem] leading-[1.65] opacity-30">{subline}</p>

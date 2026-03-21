@@ -104,9 +104,9 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 78 : 92 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris" className="object-contain transition-all duration-300" style={{ height: scrolled ? 60 : 70, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain transition-all duration-300" style={{ height: scrolled ? 60 : 70, width: "auto" }} />
           <span className="h-5 w-px shrink-0 bg-border/12" />
-          <img src={logoRemax} alt="RE/MAX" className="object-contain opacity-50 transition-all duration-300" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
+          <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="object-contain opacity-50 transition-all duration-300" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} />))}
@@ -124,9 +124,9 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 76 : 88 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris" className="min-w-0 transition-all duration-300 object-contain" style={{ height: scrolled ? 56 : 66, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 transition-all duration-300 object-contain" style={{ height: scrolled ? 56 : 66, width: "auto" }} />
           <span className="h-5 w-px shrink-0 bg-border/20" />
-          <img src={logoRemax} alt="RE/MAX" className="shrink-0 transition-all duration-300 object-contain opacity-80" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
+          <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="shrink-0 transition-all duration-300 object-contain opacity-80" style={{ height: scrolled ? 24 : 28, width: "auto" }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitch />
@@ -142,9 +142,9 @@ const SiteHeader = () => {
       {/* ─── Mobile ─── */}
       <div className="flex h-[72px] items-center justify-between gap-3 px-4 sm:hidden">
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS" className="h-9 w-9 shrink-0" />
+          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" className="h-9 w-9 shrink-0" />
           <span className="h-4 w-px shrink-0 bg-border/20" />
-          <img src={logoRemax} alt="RE/MAX" className="h-[18px] w-auto shrink-0 opacity-75" />
+          <img src={logoRemax} alt="RE/MAX Direct" className="h-[18px] w-auto shrink-0 opacity-75" />
         </Link>
         <div className="flex shrink-0 items-center gap-2">
           <LanguageSwitch />
