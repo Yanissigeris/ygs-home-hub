@@ -70,7 +70,7 @@ const ValuationPage = () => {
           }}>
             <img
               src={yanisPhoto}
-              alt=""
+              alt="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau"
               className="w-[380px] lg:w-[440px] xl:w-[500px] object-contain object-bottom"
               loading="eager"
             />
