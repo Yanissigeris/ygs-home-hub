@@ -19,10 +19,14 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <div className="overflow-hidden rounded-[1.75rem]">
           <img
           src={yanisAbout}
+          srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
+          sizes="(max-width: 1023px) 90vw, 40vw"
           alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
           className="aspect-[3/4] w-full object-cover"
           loading="lazy"
-          decoding="async" />
+          decoding="async"
+          width={565}
+          height={800} />
         
         </div>
       </motion.div>
