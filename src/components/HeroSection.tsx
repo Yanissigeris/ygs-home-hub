@@ -46,6 +46,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   {
     const sectionRef = React.useRef<HTMLElement>(null);
     const videoRef = React.useRef<HTMLVideoElement>(null);
+    const [videoReady, setVideoReady] = React.useState(false);
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
         (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
@@ -73,6 +74,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         return () => clearTimeout(id);
       }
     }, [heroVideo]);
+
+    // Track when video starts playing
+    React.useEffect(() => {
+      const el = videoRef.current;
+      if (!el) return;
+      const onPlaying = () => setVideoReady(true);
+      el.addEventListener("playing", onPlaying);
+      return () => el.removeEventListener("playing", onPlaying);
+    }, []);
 
     const { scrollYProgress } = useScroll({
       target: sectionRef,
