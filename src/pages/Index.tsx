@@ -31,6 +31,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
       agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
       agentName="Yanis Gauthier-Sigeris"
       heroVideo="/hero-video-compressed.mp4"
     />
