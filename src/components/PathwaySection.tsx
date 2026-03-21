@@ -27,6 +27,7 @@ const pathways = [
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
     image: cardAcheterImg,
+    imageSm: cardAcheterSm,
     imageAlt: "Acheter une propriété à Gatineau — rue résidentielle",
   },
   {
