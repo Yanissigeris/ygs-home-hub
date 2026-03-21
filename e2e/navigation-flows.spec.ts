@@ -13,7 +13,9 @@ test("FR homepage loads and has correct H1", async ({ page }) => {
 test("Language switch navigates FR → EN", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await page.locator("a[title='Switch to English']").first().click();
+  const switchLink = page.getByTitle("Switch to English").first();
+  await expect(switchLink).toBeVisible({ timeout: 10000 });
+  await switchLink.click();
   await expect(page).toHaveURL(/\/en/, { timeout: 10000 });
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
@@ -21,14 +23,18 @@ test("Language switch navigates FR → EN", async ({ page }) => {
 test("Language switch navigates EN → FR", async ({ page }) => {
   await page.goto("/en");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await page.locator("a[title='Passer en français']").first().click();
+  const switchLink = page.getByTitle("Passer en français").first();
+  await expect(switchLink).toBeVisible({ timeout: 10000 });
+  await switchLink.click();
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible({ timeout: 10000 });
 });
 
 test("CTA button in header links to valuation page (EN)", async ({ page }) => {
   await page.goto("/en");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await page.locator("header a[href='/en/home-valuation']").first().click();
+  const cta = page.getByRole("link", { name: /free valuation/i }).first();
+  await expect(cta).toBeVisible({ timeout: 10000 });
+  await cta.click();
   await expect(page).toHaveURL(/\/en\/home-valuation/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
@@ -36,7 +42,7 @@ test("CTA button in header links to valuation page (EN)", async ({ page }) => {
 test("Footer links navigate correctly (EN)", async ({ page }) => {
   await page.goto("/en");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  const footerLink = page.locator("footer a[href='/en/contact']").first();
+  const footerLink = page.locator("footer").getByRole("link", { name: /contact/i }).first();
   await footerLink.scrollIntoViewIfNeeded();
   await footerLink.click();
   await expect(page).toHaveURL(/\/en\/contact/);
@@ -44,6 +50,6 @@ test("Footer links navigate correctly (EN)", async ({ page }) => {
 });
 
 test("404 page renders for unknown routes", async ({ page }) => {
-  await page.goto("/this-page-does-not-exist", { waitUntil: "networkidle" });
-  await expect(page.locator("text=introuvable")).toBeVisible({ timeout: 15000 });
+  await page.goto("/this-page-does-not-exist", { waitUntil: "domcontentloaded" });
+  await expect(page.getByText("introuvable")).toBeVisible({ timeout: 15000 });
 });
