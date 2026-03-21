@@ -2,40 +2,57 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { readFileSync, writeFileSync, readdirSync } from "fs";
 
 /**
- * Post-build plugin: runs Critters to inline critical CSS
- * and async-load the rest, eliminating the render-blocking stylesheet.
+ * Post-build plugin that processes the generated HTML to:
+ * 1. Inject <link rel="preload"> for the LCP image (portrait)
+ * 2. Convert the CSS <link> to non-render-blocking async pattern
+ *    with a tiny inline critical CSS fallback to prevent FOUC
  */
-function criticalCssPlugin() {
+function htmlOptimizePlugin() {
   return {
-    name: "vite-plugin-critical-css",
+    name: "vite-plugin-html-optimize",
     apply: "build" as const,
     enforce: "post" as const,
-    async closeBundle() {
-      try {
-        const Critters = (await import("critters")).default;
-        const critters = new Critters({
-          path: path.resolve(__dirname, "dist"),
-          preload: "swap",
-          inlineFonts: false,
-          compress: true,
-          pruneSource: false,
-        });
+    generateBundle(_, bundle) {
+      // Find the portrait asset (LCP element)
+      const portraitKey = Object.keys(bundle).find((k) =>
+        k.includes("yanis-portrait-nobg")
+      );
 
-        const distDir = path.resolve(__dirname, "dist");
-        const htmlFiles = readdirSync(distDir).filter((f) => f.endsWith(".html"));
+      for (const [fileName, chunk] of Object.entries(bundle)) {
+        if (!fileName.endsWith(".html") || chunk.type !== "asset") continue;
+        let html = chunk.source as string;
 
-        for (const file of htmlFiles) {
-          const filePath = path.join(distDir, file);
-          const html = readFileSync(filePath, "utf-8");
-          const inlined = await critters.process(html);
-          writeFileSync(filePath, inlined);
-          console.log(`✅ Critical CSS inlined: ${file}`);
+        // 1) Inject portrait preload right after <meta charset>
+        if (portraitKey) {
+          html = html.replace(
+            "<meta charset",
+            `<link rel="preload" as="image" href="/${portraitKey}" fetchpriority="high">\n    <meta charset`
+          );
         }
-      } catch (e) {
-        console.warn("⚠️ Critical CSS inlining skipped:", (e as Error).message);
+
+        // 2) Make CSS non-render-blocking: preload + async swap
+        //    Vite outputs: <link rel="stylesheet" crossorigin href="/assets/index-HASH.css">
+        html = html.replace(
+          /<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/g,
+          `<link rel="preload" as="style" href="$1" crossorigin>
+    <link rel="stylesheet" href="$1" media="print" onload="this.media='all'" crossorigin>
+    <noscript><link rel="stylesheet" href="$1" crossorigin></noscript>`
+        );
+
+        // 3) Inject minimal critical CSS inline to prevent FOUC
+        const criticalCss = `<style>
+      *,::after,::before{box-sizing:border-box;border:0 solid}
+      body{margin:0;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;background:#fdfdfd;color:hsl(200 30% 14%)}
+      h1,h2,h3,h4{font-family:'Playfair Display',serif;text-wrap:balance}
+      .section-container{margin-inline:auto;max-width:1200px;padding-inline:1.25rem}
+      @media(min-width:640px){.section-container{padding-inline:1.5rem}}
+      @media(min-width:768px){.section-container{padding-inline:2rem}}
+    </style>`;
+        html = html.replace("<meta charset", criticalCss + "\n    <meta charset");
+
+        (chunk as any).source = html;
       }
     },
   };
@@ -49,7 +66,7 @@ export default defineConfig(() => ({
       overlay: false,
     },
   },
-  plugins: [react(), criticalCssPlugin()],
+  plugins: [react(), htmlOptimizePlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
