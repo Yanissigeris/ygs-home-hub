@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import cardVendreImg from "@/assets/card-vendre.webp";
+import cardVendreSm from "@/assets/card-vendre-sm.webp";
 import cardAcheterImg from "@/assets/card-acheter.webp";
+import cardAcheterSm from "@/assets/card-acheter-sm.webp";
 import cardPlexImg from "@/assets/card-plex.webp";
+import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const pathways = [
   {
