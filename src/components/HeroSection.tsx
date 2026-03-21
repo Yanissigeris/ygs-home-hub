@@ -13,6 +13,7 @@ interface HeroSectionProps {
   compact?: boolean;
   backgroundImage?: string;
   agentImage?: string;
+  agentImageSm?: string;
   agentName?: string;
   heroBgImage?: string;
   heroVideo?: string;
