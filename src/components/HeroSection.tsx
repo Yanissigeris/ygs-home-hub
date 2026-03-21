@@ -315,9 +315,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <img
                   src={agentImage}
                   alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
-                  width={1279}
-                  height={1920}
-                  className="relative z-0 w-[260px] aspect-[1279/1920] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
+                  width={640}
+                  height={960}
+                  className="relative z-0 w-[260px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
                   loading="eager"
                   fetchPriority="high" />
                 
