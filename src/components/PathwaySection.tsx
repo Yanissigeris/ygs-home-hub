@@ -67,7 +67,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={pathway.image}
-                  alt={pathway.title}
+                  alt={pathway.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />

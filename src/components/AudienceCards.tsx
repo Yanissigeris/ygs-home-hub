@@ -66,7 +66,7 @@ const AudienceCards = () => (
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={card.image}
-                  alt={card.title}
+                  alt={card.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
