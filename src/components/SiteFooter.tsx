@@ -41,7 +41,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
             <p className="mt-2 max-w-[16rem] text-center text-[0.75rem] leading-[1.65] opacity-30">{subline}</p>
             <div className="mt-6 flex items-center gap-4">
-              <a href="https://www.facebook.com/YanisGSCourtier" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
+              <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
                 <Facebook size={18} />
               </a>
               <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
