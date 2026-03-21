@@ -46,6 +46,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   {
     const sectionRef = React.useRef<HTMLElement>(null);
     const videoRef = React.useRef<HTMLVideoElement>(null);
+    const [videoReady, setVideoReady] = React.useState(false);
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
         (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
@@ -74,6 +75,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       }
     }, [heroVideo]);
 
+    // Track when video starts playing
+    React.useEffect(() => {
+      const el = videoRef.current;
+      if (!el) return;
+      const onPlaying = () => setVideoReady(true);
+      el.addEventListener("playing", onPlaying);
+      return () => el.removeEventListener("playing", onPlaying);
+    }, []);
+
     const { scrollYProgress } = useScroll({
       target: sectionRef,
       offset: ["start start", "end start"]
@@ -87,7 +97,33 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         ref={combinedRef}
         className="relative min-h-[400px] overflow-x-clip overflow-y-hidden md:min-h-[440px] lg:min-h-[480px]"
         style={{ background: "#10242D" }}>
-        
+
+      {/* ANIMATED SHIMMER — visible while video loads */}
+      {heroVideo && (
+        <div
+          className="absolute inset-0 transition-opacity duration-[1.6s] ease-out"
+          style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none" }}
+          aria-hidden="true"
+        >
+          <div
+            className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]"
+            style={{
+              background:
+                "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%), " +
+                "radial-gradient(ellipse 100% 60% at 80% 30%, hsl(36 38% 46% / 0.08) 0%, transparent 50%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+              backgroundSize: "128px 128px",
+            }}
+          />
+        </div>
+      )}
+
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo &&
         <>

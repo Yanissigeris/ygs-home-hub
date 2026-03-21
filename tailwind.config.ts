@@ -84,6 +84,10 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "hero-shimmer": {
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.03)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
