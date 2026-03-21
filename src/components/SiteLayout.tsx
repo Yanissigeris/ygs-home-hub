@@ -8,24 +8,35 @@ import { Outlet } from "react-router-dom";
 
 const PageFallback = () => (
   <div className="animate-fade-in">
-    {/* Hero skeleton — matches real hero min-height + dark background */}
+    {/* Hero skeleton — matches real hero layout with portrait */}
     <div className="min-h-[400px] md:min-h-[440px] lg:min-h-[480px]" style={{ background: "#10242D" }}>
-      <div className="section-container relative pt-[3rem] sm:pt-[3.5rem] md:pt-[4rem]">
-        <div className="space-y-5">
-          <div className="h-3 w-40 rounded bg-white/[0.06]" />
-          <div className="space-y-3">
-            <div className="h-10 w-64 rounded bg-white/[0.08] sm:h-12 sm:w-80" />
-            <div className="h-10 w-48 rounded bg-white/[0.08] sm:h-12 sm:w-64" />
+      <div className="section-container relative pt-[3rem] sm:pt-[3.5rem] md:pt-[4rem] lg:pt-[4.5rem]">
+        <div className="grid items-end gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]">
+          {/* Text skeleton */}
+          <div className="space-y-5 pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]">
+            <div className="h-3 w-40 rounded bg-white/[0.06]" />
+            <div className="space-y-3">
+              <div className="h-10 w-64 rounded bg-white/[0.08] sm:h-12 sm:w-80" />
+              <div className="h-10 w-48 rounded bg-white/[0.08] sm:h-12 sm:w-64" />
+            </div>
+            <div className="h-4 w-72 rounded bg-white/[0.05]" />
+            <div className="flex gap-3 pt-2">
+              <div className="h-12 w-40 rounded-lg bg-white/[0.07]" />
+              <div className="h-12 w-36 rounded-lg bg-white/[0.05]" />
+            </div>
           </div>
-          <div className="h-4 w-72 rounded bg-white/[0.05]" />
-          <div className="flex gap-3 pt-2">
-            <div className="h-12 w-40 rounded-lg bg-white/[0.07]" />
-            <div className="h-12 w-36 rounded-lg bg-white/[0.05]" />
+          {/* Portrait placeholder — desktop */}
+          <div className="hidden md:flex md:items-end md:justify-end">
+            <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[3/5]" />
           </div>
+        </div>
+        {/* Portrait placeholder — mobile */}
+        <div className="flex justify-center md:hidden">
+          <div className="w-[260px] sm:w-[300px] aspect-[3/5]" />
         </div>
       </div>
     </div>
-    {/* Body sections skeleton — reserves ~screen height of space */}
+    {/* Body sections skeleton */}
     <div className="section-container space-y-16 py-16">
       <div className="mx-auto max-w-md space-y-3 text-center">
         <div className="mx-auto h-3 w-24 rounded bg-muted/60" />
