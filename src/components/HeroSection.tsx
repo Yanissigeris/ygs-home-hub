@@ -38,6 +38,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     compact,
     backgroundImage,
     agentImage,
+    agentImageSm,
     agentName,
     heroBgImage,
     heroVideo,
