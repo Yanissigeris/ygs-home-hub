@@ -39,7 +39,7 @@ const PageFallback = () => (
           </div>
           {/* Portrait placeholder — desktop */}
           <div className="hidden md:flex md:items-end md:justify-end">
-            <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[1279/1920]" />
+            <div className="w-[340px] lg:w-[400px] xl:w-[440px] aspect-[640/960]" />
           </div>
           {/* Portrait placeholder — mobile (inside grid, matching HeroSection) */}
           <div className="flex justify-center items-end md:hidden">
