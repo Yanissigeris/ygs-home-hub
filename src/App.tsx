@@ -8,7 +8,6 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
-import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
 
 const preloadAsset = (href: string, as: string) => {
   const link = document.createElement("link");
@@ -20,7 +19,6 @@ const preloadAsset = (href: string, as: string) => {
 };
 if (typeof window !== "undefined") {
   preloadAsset(yanisPortrait, "image");
-  preloadAsset(heroGatineauSkyline, "image");
 }
 
 // FR pages

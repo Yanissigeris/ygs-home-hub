@@ -7,7 +7,7 @@ import ReviewStrip from "@/components/ReviewStrip";
 import ReviewSection from "@/components/ReviewSection";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
-import heroGatineauSkyline from "@/assets/hero-gatineau-skyline.webp";
+
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisAbout from "@/assets/yanis-about.webp";
 import { Award, Shield, MapPin } from "lucide-react";
