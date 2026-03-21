@@ -45,6 +45,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   ref) =>
   {
     const sectionRef = React.useRef<HTMLElement>(null);
+    const videoRef = React.useRef<HTMLVideoElement>(null);
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
         (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
@@ -53,6 +54,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       },
       [ref]
     );
+
+    // Lazy-load video src after critical resources have loaded
+    React.useEffect(() => {
+      if (!heroVideo) return;
+      const load = () => {
+        const el = videoRef.current;
+        if (el && !el.src) {
+          el.src = heroVideo;
+          el.load();
+        }
+      };
+      if ("requestIdleCallback" in window) {
+        const id = (window as any).requestIdleCallback(load, { timeout: 3000 });
+        return () => (window as any).cancelIdleCallback(id);
+      } else {
+        const id = setTimeout(load, 1500);
+        return () => clearTimeout(id);
+      }
+    }, [heroVideo]);
 
     const { scrollYProgress } = useScroll({
       target: sectionRef,
