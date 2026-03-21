@@ -114,7 +114,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           <motion.div className="absolute inset-x-0 top-0 bottom-0 overflow-hidden" style={{ y: bgY }}>
             <img
               src={heroBgImage}
-              alt=""
+              alt="" role="presentation"
               className="h-full w-full object-cover"
               style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
                loading="eager"
@@ -205,7 +205,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               transition={{ duration: 0.9, delay: 0.2 }}>
               
               <div className="relative overflow-hidden rounded-[1.75rem] shadow-2xl">
-                <img src={backgroundImage} alt="" className="aspect-[4/3] w-full object-cover" loading="eager" />
+                <img src={backgroundImage} alt="" role="presentation" className="aspect-[4/3] w-full object-cover" loading="eager" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>
             </motion.div>
