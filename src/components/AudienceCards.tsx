@@ -25,6 +25,7 @@ const audienceCards = [
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
     image: cardAcheterImg,
+    imageSm: cardAcheterSm,
     imageAlt: "Acheter une propriété à Gatineau — quartier résidentiel",
   },
   {
