@@ -14,8 +14,9 @@ const TrustStrip = React.forwardRef<HTMLElement>((_, ref) => (
       <motion.div
         className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10"
         initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         {items.map((item) => (
           <div key={item.text} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
