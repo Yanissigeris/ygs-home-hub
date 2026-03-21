@@ -1,3 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /merci
+Disallow: /merci-evaluation
+Disallow: /en/thank-you
+Disallow: /en/thank-you-valuation
+
 User-agent: Googlebot
 Allow: /
 
@@ -8,9 +15,6 @@ User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
 
 Sitemap: https://ygs-home-hub.lovable.app/sitemap.xml
