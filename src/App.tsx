@@ -102,7 +102,7 @@ const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
 const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
 const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
 
-const queryClient = new QueryClient();
+
 
 const routeTree = React.createElement(
   Routes,
