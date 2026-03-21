@@ -15,6 +15,7 @@ import ReviewSection from "@/components/ReviewSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import { getReviewsById } from "@/data/reviews";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
