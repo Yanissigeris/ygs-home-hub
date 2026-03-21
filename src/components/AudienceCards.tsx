@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import cardVendreImg from "@/assets/card-vendre.webp";
+import cardVendreSm from "@/assets/card-vendre-sm.webp";
 import cardAcheterImg from "@/assets/card-acheter.webp";
+import cardAcheterSm from "@/assets/card-acheter-sm.webp";
 import cardPlexImg from "@/assets/card-plex.webp";
+import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const audienceCards = [
   {
@@ -12,6 +15,7 @@ const audienceCards = [
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     image: cardVendreImg,
+    imageSm: cardVendreSm,
     imageAlt: "Vendre une maison à Gatineau — intérieur résidentiel lumineux",
     featured: true,
   },
@@ -21,6 +25,7 @@ const audienceCards = [
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
     image: cardAcheterImg,
+    imageSm: cardAcheterSm,
     imageAlt: "Acheter une propriété à Gatineau — quartier résidentiel",
   },
   {
@@ -29,6 +34,7 @@ const audienceCards = [
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
     image: cardPlexImg,
+    imageSm: cardPlexSm,
     imageAlt: "Investir dans un plex à Gatineau — immeuble multilogement",
   },
 ];
@@ -65,10 +71,14 @@ const AudienceCards = () => (
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={card.image}
+                  src={card.imageSm}
+                  srcSet={`${card.imageSm} 370w, ${card.image} 648w`}
+                  sizes="(max-width: 639px) 90vw, 33vw"
                   alt={card.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
+                  width={648}
+                  height={441}
                 />
                 {card.featured && (
                   <span className="absolute top-3.5 left-3.5 rounded-full bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">

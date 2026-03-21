@@ -15,6 +15,7 @@ import ReviewSection from "@/components/ReviewSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import { getReviewsById } from "@/data/reviews";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
@@ -30,6 +31,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
       agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
       agentName="Yanis Gauthier-Sigeris"
       heroVideo="/hero-video-compressed.mp4"
     />

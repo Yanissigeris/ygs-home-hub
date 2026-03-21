@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Award, Heart } from "lucide-react";
 import yanisAbout from "@/assets/yanis-about.webp";
+import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,10 +19,14 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <div className="overflow-hidden rounded-[1.75rem]">
           <img
           src={yanisAbout}
+          srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
+          sizes="(max-width: 1023px) 90vw, 40vw"
           alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
           className="aspect-[3/4] w-full object-cover"
           loading="lazy"
-          decoding="async" />
+          decoding="async"
+          width={565}
+          height={800} />
         
         </div>
       </motion.div>

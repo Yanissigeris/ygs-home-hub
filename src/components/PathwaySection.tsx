@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import cardVendreImg from "@/assets/card-vendre.webp";
+import cardVendreSm from "@/assets/card-vendre-sm.webp";
 import cardAcheterImg from "@/assets/card-acheter.webp";
+import cardAcheterSm from "@/assets/card-acheter-sm.webp";
 import cardPlexImg from "@/assets/card-plex.webp";
+import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const pathways = [
   {
@@ -14,6 +17,7 @@ const pathways = [
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
     image: cardVendreImg,
+    imageSm: cardVendreSm,
     imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne",
   },
   {
@@ -23,6 +27,7 @@ const pathways = [
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
     image: cardAcheterImg,
+    imageSm: cardAcheterSm,
     imageAlt: "Acheter une propriété à Gatineau — rue résidentielle",
   },
   {
@@ -32,6 +37,7 @@ const pathways = [
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
     image: cardPlexImg,
+    imageSm: cardPlexSm,
     imageAlt: "Investissement plex à Gatineau — immeuble à revenus",
   },
 ];
@@ -66,10 +72,14 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
             <Link to={pathway.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={pathway.image}
+                  src={pathway.imageSm}
+                  srcSet={`${pathway.imageSm} 370w, ${pathway.image} 648w`}
+                  sizes="(max-width: 767px) 90vw, 33vw"
                   alt={pathway.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
+                  width={648}
+                  height={441}
                 />
               </div>
               <div className="flex flex-1 flex-col p-7 sm:p-8">

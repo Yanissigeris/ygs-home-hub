@@ -9,15 +9,20 @@ import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import yanisAbout from "@/assets/yanis-about.webp";
+import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cardVendreImg from "@/assets/card-vendre.webp";
+import cardVendreSm from "@/assets/card-vendre-sm.webp";
 import cardAcheterImg from "@/assets/card-acheter.webp";
+import cardAcheterSm from "@/assets/card-acheter-sm.webp";
 import cardPlexImg from "@/assets/card-plex.webp";
+import cardPlexSm from "@/assets/card-plex-sm.webp";
 import SectionHeading from "@/components/SectionHeading";
 import SectorLinks from "@/components/SectorLinks";
 
@@ -31,9 +36,9 @@ const trustItems = [
 
 
 const pathways = [
-{ title: "Sell my property", text: "Realistic valuation, pricing strategy and marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageAlt: "Sell a home in Gatineau — bright residential interior" },
-{ title: "Buy in Gatineau", text: "Neighborhoods, budget and hands-on guidance — to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
-{ title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageAlt: "Invest in a plex in Gatineau — multi-unit building" }];
+{ title: "Sell my property", text: "Realistic valuation, pricing strategy and marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
+{ title: "Buy in Gatineau", text: "Neighborhoods, budget and hands-on guidance — to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
+{ title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" }];
 
 
 const steps = [
@@ -65,6 +70,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
     trustLine=""
     agentImage={yanisPortrait}
+    agentImageSm={yanisPortraitSm}
     agentName="Yanis Gauthier-Sigeris"
     heroVideo="/hero-video-compressed.mp4" />
   
@@ -96,7 +102,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
           {pathways.map((p, i) =>
         <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
               <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
-                <div className="relative aspect-[16/10] overflow-hidden"><img src={p.image} alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+                <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
                 <div className="flex flex-1 flex-col p-7 sm:p-8">
                   <h3 className="mb-3 transition-colors group-hover:text-primary">{p.title}</h3>
                   <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{p.text}</p>
@@ -115,7 +121,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
       <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
           <div className="overflow-hidden rounded-[1.75rem]">
-            <img src={yanisAbout} alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" />
+            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
