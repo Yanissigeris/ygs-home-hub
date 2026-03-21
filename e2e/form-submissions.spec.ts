@@ -8,7 +8,7 @@ test("EN contact form shows success after submission", async ({ page }) => {
   await page.getByLabel("Email").fill("test@example.com");
   await page.getByRole("button", { name: "Send my request" }).click();
 
-  await expect(page.getByRole("heading", { name: /demande envoyée|request sent/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /demande envoyée|message sent/i })).toBeVisible();
 });
 
 test("EN valuation form shows success after submission", async ({ page }) => {

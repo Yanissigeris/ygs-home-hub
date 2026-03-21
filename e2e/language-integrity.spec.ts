@@ -42,9 +42,9 @@ const enPages = [
 const frPages = [
   "/", "/vendre-ma-maison-gatineau", "/acheter-a-gatineau", "/proprietes",
   "/militaire-gatineau", "/relocalisation-ottawa-gatineau",
-  "/investir-plex-gatineau", "/quartiers-gatineau",
+  "/investir-plex-gatineau", "/quartiers-a-considerer-a-gatineau",
   "/guide-vendeur-gatineau", "/guide-acheteur-gatineau",
-  "/evaluation-gratuite-gatineau", "/contact", "/faq",
+  "/evaluation-gratuite-gatineau", "/contact-yanis", "/faq",
   "/ressources", "/temoignages", "/premier-achat-gatineau",
 ];
 
