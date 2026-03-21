@@ -71,6 +71,7 @@ const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
 const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
 const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
 const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
+const ThankYouValuationPageEn = React.lazy(() => import("./pages/en/ThankYouValuationPageEn"));
 const BuyerGuidePageEn = React.lazy(() => import("./pages/en/BuyerGuidePageEn"));
 const SellerGuidePageEn = React.lazy(() => import("./pages/en/SellerGuidePageEn"));
 const MilitaryBuyerPageEn = React.lazy(() => import("./pages/en/MilitaryBuyerPageEn"));
@@ -184,7 +185,7 @@ const routeTree = React.createElement(
       <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
       <Route path="/en/contact" element={<ContactPageEn />} />
       <Route path="/en/thank-you" element={<ThankYouPageEn />} />
-      <Route path="/en/thank-you-valuation" element={<ThankYouPageEn />} />
+      <Route path="/en/thank-you-valuation" element={<ThankYouValuationPageEn />} />
       <Route path="/en/living-aylmer" element={<LivingAylmerPageEn />} />
       <Route path="/en/living-hull" element={<LivingHullPageEn />} />
       <Route path="/en/living-plateau" element={<LivingPlateauPageEn />} />
