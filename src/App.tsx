@@ -185,7 +185,7 @@ const routeTree = React.createElement(
       <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
       <Route path="/en/contact" element={<ContactPageEn />} />
       <Route path="/en/thank-you" element={<ThankYouPageEn />} />
-      <Route path="/en/thank-you-valuation" element={<ThankYouPageEn />} />
+      <Route path="/en/thank-you-valuation" element={<ThankYouValuationPageEn />} />
       <Route path="/en/living-aylmer" element={<LivingAylmerPageEn />} />
       <Route path="/en/living-hull" element={<LivingHullPageEn />} />
       <Route path="/en/living-plateau" element={<LivingPlateauPageEn />} />
