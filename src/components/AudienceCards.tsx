@@ -12,6 +12,7 @@ const audienceCards = [
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     image: cardVendreImg,
+    imageAlt: "Vendre une maison à Gatineau — intérieur résidentiel lumineux",
     featured: true,
   },
   {
@@ -20,6 +21,7 @@ const audienceCards = [
     cta: "Acheter à Gatineau",
     href: "/acheter-a-gatineau",
     image: cardAcheterImg,
+    imageAlt: "Acheter une propriété à Gatineau — quartier résidentiel",
   },
   {
     title: "Plex / investissement",
@@ -27,6 +29,7 @@ const audienceCards = [
     cta: "Voir la page plex",
     href: "/investir-plex-gatineau",
     image: cardPlexImg,
+    imageAlt: "Investir dans un plex à Gatineau — immeuble multilogement",
   },
 ];
 
