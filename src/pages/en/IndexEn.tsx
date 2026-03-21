@@ -96,7 +96,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
           {pathways.map((p, i) =>
         <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
               <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
-                <div className="relative aspect-[16/10] overflow-hidden"><img src={p.image} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+                <div className="relative aspect-[16/10] overflow-hidden"><img src={p.image} alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
                 <div className="flex flex-1 flex-col p-7 sm:p-8">
                   <h3 className="mb-3 transition-colors group-hover:text-primary">{p.title}</h3>
                   <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{p.text}</p>
