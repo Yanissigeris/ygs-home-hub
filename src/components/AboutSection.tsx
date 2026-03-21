@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Award, Heart } from "lucide-react";
+import yanisAbout from "@/assets/yanis-about.webp";
 
 import { Button } from "@/components/ui/button";
 
