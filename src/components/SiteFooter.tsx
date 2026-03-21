@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Facebook, Instagram } from "lucide-react";
 import logoYgsWhite from "@/assets/logo-ygs-white.webp";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
@@ -39,6 +40,14 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
             <p className="mt-2 max-w-[16rem] text-center text-[0.75rem] leading-[1.65] opacity-30">{subline}</p>
+            <div className="mt-6 flex items-center gap-4">
+              <a href="https://www.facebook.com/YanisGSCourtier" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
+                <Facebook size={18} />
+              </a>
+              <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
+                <Instagram size={18} />
+              </a>
+            </div>
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
           <div className="grid gap-10 py-14 sm:grid-cols-2 sm:py-16 lg:grid-cols-4 lg:gap-6 lg:py-20">
