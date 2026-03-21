@@ -13,12 +13,12 @@ import { footerColumns } from "@/data/navigation";
 import { footerColumnsEn } from "@/data/navigation-en";
 
 const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct", filter: "brightness-[1.3]" },
-  { src: logoMW, alt: "Équipe Marty Waite", filter: "brightness-[1.6]" },
-  { src: logoSirvaBgrs, alt: "SIRVA | BGRS", filter: "brightness-[1.8] contrast-[1.1]" },
-  { src: logoTemple, alt: "Temple de la renommée", filter: "brightness-0 invert" },
-  { src: logoTranquillit, alt: "Tranquilli-T", filter: "brightness-[1.5]" },
-  { src: logoEnfantSoleil, alt: "Enfant Soleil", filter: "brightness-[1.4]" },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
+  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
+  { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
+  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
+  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
