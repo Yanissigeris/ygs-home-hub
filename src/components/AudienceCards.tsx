@@ -71,10 +71,15 @@ const AudienceCards = () => (
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={card.image}
+                  src={card.imageSm}
+                  srcSet={`${card.imageSm} 370w, ${card.image} 648w`}
+                  sizes="(max-width: 639px) 90vw, 33vw"
                   alt={card.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
+                  width={648}
+                  height={441}
+                />
                 />
                 {card.featured && (
                   <span className="absolute top-3.5 left-3.5 rounded-full bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">
