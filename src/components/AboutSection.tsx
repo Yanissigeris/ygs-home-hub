@@ -17,7 +17,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
       
         <div className="overflow-hidden rounded-[1.75rem]">
           <img
-          src="/lovable-uploads/8c9ff05f-0837-4203-8947-2da11c503c80.png"
+          src={yanisAbout}
           alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
           className="aspect-[3/4] w-full object-cover"
           loading="lazy"
