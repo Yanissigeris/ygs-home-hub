@@ -58,22 +58,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       [ref]
     );
 
-    // Lazy-load video src after critical resources have loaded
+    // Load video src immediately after first paint for fast playback
     React.useEffect(() => {
       if (!heroVideo) return;
-      const load = () => {
-        const el = videoRef.current;
-        if (el && !el.src) {
+      const el = videoRef.current;
+      if (el && !el.src) {
+        // Use rAF to avoid blocking first paint, then load immediately
+        const raf = requestAnimationFrame(() => {
           el.src = heroVideo;
           el.load();
-        }
-      };
-      if ("requestIdleCallback" in window) {
-        const id = (window as any).requestIdleCallback(load, { timeout: 3000 });
-        return () => (window as any).cancelIdleCallback(id);
-      } else {
-        const id = setTimeout(load, 1500);
-        return () => clearTimeout(id);
+        });
+        return () => cancelAnimationFrame(raf);
       }
     }, [heroVideo]);
 
@@ -145,7 +140,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               loop
               playsInline
               poster={heroVideoPoster || heroBgImage}
-              preload="none"
+              preload="auto"
               width={1920}
               height={1080}
               className="h-full w-full object-cover"
