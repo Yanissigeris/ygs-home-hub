@@ -143,6 +143,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               preload="auto"
               width={1920}
               height={1080}
+              // @ts-ignore — fetchPriority is valid HTML but React 18 types don't include it
+              fetchPriority="high"
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.82) saturate(0.75) contrast(1.04)" }} />
             
