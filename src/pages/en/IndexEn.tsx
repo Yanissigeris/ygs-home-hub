@@ -1,217 +1,307 @@
 import * as React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
-import CTASection from "@/components/CTASection";
-import InlineCTA from "@/components/InlineCTA";
-import ReviewStrip from "@/components/ReviewStrip";
 import ReviewSection from "@/components/ReviewSection";
-import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
+import CTASection from "@/components/CTASection";
+import GuideModalEn, { type GuideType } from "@/components/en/GuideModalEn";
+import { Button } from "@/components/ui/button";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
-
-import yanisAbout from "@/assets/yanis-about.webp";
-import yanisAboutSm from "@/assets/yanis-about-sm.webp";
+import { motion } from "framer-motion";
+import { ArrowRight, BookOpen, Target, MapPin, MessageCircle, Users } from "lucide-react";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
-import { Award, Shield, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import cardVendreImg from "@/assets/card-vendre.webp";
-import cardVendreSm from "@/assets/card-vendre-sm.webp";
-import cardAcheterImg from "@/assets/card-acheter.webp";
-import cardAcheterSm from "@/assets/card-acheter-sm.webp";
-import cardPlexImg from "@/assets/card-plex.webp";
-import cardPlexSm from "@/assets/card-plex-sm.webp";
-import SectionHeading from "@/components/SectionHeading";
-import SectorLinks from "@/components/SectorLinks";
+import yanisAbout from "@/assets/yanis-about.webp";
+import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 
-const heroReview = getReviewsById(["r2"])[0];
-const homepageReviews = getReviewsById(["s1", "b1", "r2"]);
+const homepageReviews = getReviewsById(["s1", "b1", "r2", "m1"]);
 
-const trustItems = [
-{ icon: Award, text: "RE/MAX Platinum Club · Hall of Fame" },
-{ icon: MapPin, text: "Gatineau · Aylmer · Hull · Outaouais specialist" },
-{ icon: Shield, text: "Nearly 9 years of experience in Outaouais" }];
+/* ── PATH CARDS DATA ── */
+const paths: { title: string; text: string; cta: string; guideType: GuideType }[] = [
+  {
+    title: "Selling a home",
+    text: "Get clear on pricing, timing, preparation, and launch strategy.",
+    cta: "Get the seller guide",
+    guideType: "seller_guide",
+  },
+  {
+    title: "Buying your first home",
+    text: "Understand your budget, your options, and how to buy with confidence.",
+    cta: "Get the first-time buyer guide",
+    guideType: "buyer_guide",
+  },
+  {
+    title: "Relocating to Outaouais",
+    text: "Compare sectors, understand the local process, and plan your move clearly.",
+    cta: "Get the relocation guide",
+    guideType: "relocation_guide",
+  },
+  {
+    title: "Military relocation",
+    text: "A practical guide for CAF members and families moving to the region.",
+    cta: "Get the military relocation guide",
+    guideType: "military_guide",
+  },
+  {
+    title: "Plex / investment",
+    text: "Learn how to evaluate opportunities, understand the numbers, and move strategically.",
+    cta: "Get the plex guide",
+    guideType: "investor_guide",
+  },
+];
 
+/* ── VALUE BLOCKS DATA ── */
+const values = [
+  { icon: Target, title: "Clear strategy", text: "You get a plan, not just information." },
+  { icon: MapPin, title: "Local market knowledge", text: "Outaouais sectors, pricing, and opportunities explained clearly." },
+  { icon: MessageCircle, title: "Straight advice", text: "No fluff. No pressure. Just honest guidance." },
+  { icon: Users, title: "Support from start to finish", text: "From preparation to negotiation, you're well guided." },
+];
 
-const pathways = [
-{ title: "Sell my property", text: "Realistic valuation, pricing strategy and marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
-{ title: "Buy in Gatineau", text: "Neighborhoods, budget and hands-on guidance — to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
-{ title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" }];
+/* ── GUIDE SHOWCASE DATA ── */
+const mainGuides: { title: string; value: string; cta: string; guideType: GuideType }[] = [
+  { title: "Seller Guide", value: "Everything you need to sell at the best price — preparation, pricing, marketing.", cta: "Get the guide", guideType: "seller_guide" },
+  { title: "First-Time Buyer Guide", value: "The home buying process in Québec, step by step.", cta: "Get the guide", guideType: "buyer_guide" },
+  { title: "Relocation Guide", value: "Sectors, process, and tips for settling in Outaouais.", cta: "Get the guide", guideType: "relocation_guide" },
+];
+const secondaryGuides: { title: string; value: string; cta: string; guideType: GuideType }[] = [
+  { title: "Military Relocation Guide", value: "For CAF members: posting, BGRS/SIRVA process and local tips.", cta: "Get the guide", guideType: "military_guide" },
+  { title: "Plex / Investor Guide", value: "Returns, analysis, and acquisition strategy.", cta: "Get the guide", guideType: "investor_guide" },
+];
 
+/* ── GUIDE CTA BUTTON COMPONENT ── */
+const GuideCta = ({ guideType, label, variant = "accent", size = "default", className = "" }: {
+  guideType: GuideType; label: string; variant?: "accent" | "outline" | "default"; size?: "default" | "lg" | "xl"; className?: string;
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button variant={variant} size={size} className={className} onClick={() => setOpen(true)}>
+        <span className="truncate">{label}</span>
+        <ArrowRight size={14} className="ml-1.5 shrink-0" />
+      </Button>
+      <GuideModalEn open={open} onOpenChange={setOpen} guideType={guideType} />
+    </>
+  );
+};
 
-const steps = [
-{ number: "01", title: "Free home valuation", text: "Know the true value of your property within days.", href: "/en/home-valuation" },
-{ number: "02", title: "Clear strategy", text: "A selling plan tailored to your situation and your market.", href: "/en/sell" },
-{ number: "03", title: "Full support", text: "From preparation to closing, at your own pace.", href: "/en/contact" }];
+const anim = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-80px" } as const, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } };
 
+const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
+  <div ref={ref}>
+    <PageMeta
+      title="Real Estate Broker Gatineau | YGS"
+      description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Buy, sell, relocate or invest in Outaouais — clear strategy, no pressure."
+    />
 
-const trustPoints = [
-{ icon: Clock, title: "Nearly 9 years in Outaouais", text: "Deep knowledge of the market, neighborhoods and local realities." },
-{ icon: Shield, title: "Honest, transparent approach", text: "Clear advice, solid strategy, support adapted to your pace." },
-{ icon: Award, title: "Recognized results", text: "RE/MAX Platinum Club, 100% Club and Hall of Fame." }];
-
-
-const sectors = [
-{ name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
-{ name: "Hull", href: "/en/hull", detail: "Urban, close to downtown, condos and plex" },
-{ name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" }];
-
-
-const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
-<div ref={ref}>
-    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support." />
+    {/* ═══ SECTION 1 — HERO ═══ */}
     <HeroSection
-    overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
-    title="Your real estate ally in Outaouais"
-    subtitle="Sell, buy or invest — clear strategy, honest advice and support."
-    primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
-    secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
-    trustLine=""
-    heroVideo="/hero-video-compressed.mp4"
-    heroVideoPoster="/hero-video-poster.webp"
-    agentImage={yanisPortrait}
-    agentImageSm={yanisPortraitSm}
-    agentName="Yanis Gauthier-Sigeris" />
-  
+      overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
+      title="Strategic real estate guidance in Outaouais"
+      subtitle="Buying, selling, relocating, or investing? Get the right local strategy, the right guide, and the right next step — without pressure."
+      primaryCta={{ label: "Get my free guide", href: "#choose-your-path" }}
+      secondaryCta={{ label: "Book a strategy call", href: "/en/contact" }}
+      trustLine="YGS — Your real estate ally. Local market knowledge. Clear strategy. No pressure."
+      heroVideo="/hero-video-compressed.mp4"
+      heroVideoPoster="/hero-video-poster.webp"
+      agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
+      agentName="Yanis Gauthier-Sigeris"
+    />
 
-    {/* Trust Strip */}
-    <section className="border-b border-border/40 bg-secondary/40">
-      <div className="section-container py-5 sm:py-6">
-        <motion.div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}>
-          {trustItems.map((item) =>
-        <div key={item.text} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
-              <item.icon size={14} className="shrink-0 text-accent" /><span>{item.text}</span>
-            </div>
-        )}
-        </motion.div>
-      </div>
-    </section>
-
-    <ReviewStrip review={heroReview} />
-
-    {/* Pathway Section */}
-    <section className="section-padding bg-background">
+    {/* ═══ SECTION 2 — CHOOSE YOUR PATH ═══ */}
+    <section id="choose-your-path" className="section-padding bg-background">
       <div className="section-container">
-        <motion.div className="mx-auto mb-14 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-          <p className="label-overline mb-3">Choose your next step</p>
-          <h2 className="mb-5">Where are you in your project?</h2>
-          <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Every situation is different. Tell me where you are — I'll give you the numbers, the options and a clear strategy.</p>
+        <motion.div className="mx-auto mb-14 max-w-[42rem] text-center" {...anim}>
+          <p className="label-overline mb-3">Choose your path</p>
+          <h2>Where are you in the process?</h2>
         </motion.div>
-        <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
-          {pathways.map((p, i) =>
-        <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
-              <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
-                <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
-                <div className="flex flex-1 flex-col p-7 sm:p-8">
-                  <h3 className="mb-3 transition-colors group-hover:text-primary">{p.title}</h3>
-                  <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{p.text}</p>
-                  <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">{p.cta}<ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
-                  <p className="mt-4 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/40">{p.footer}</p>
-                </div>
-              </Link>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {paths.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col rounded-[var(--card-radius)] border border-border/40 bg-card p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-300"
+            >
+              <h3 className="text-[1.0625rem] font-semibold">{p.title}</h3>
+              <p className="mt-2.5 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{p.text}</p>
+              <GuideCta guideType={p.guideType} label={p.cta} variant="accent" size="default" className="mt-5 w-full sm:w-auto self-start text-[0.8125rem]" />
             </motion.div>
-        )}
+          ))}
         </div>
       </div>
     </section>
 
-    {/* About Section */}
+    {/* ═══ SECTION 3 — LEAD CAPTURE PROMPT ═══ */}
+    <section className="bg-secondary/30 py-16 sm:py-20">
+      <motion.div className="section-container text-center" {...anim}>
+        <p className="label-overline mb-3">Free guides</p>
+        <h2 className="mx-auto max-w-lg">Get the right guide for your next move</h2>
+        <p className="mx-auto mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-muted-foreground">
+          Choose the guide that fits your situation and I'll send it straight to you.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <GuideCta guideType="seller_guide" label="Seller guide" size="lg" />
+          <GuideCta guideType="buyer_guide" label="Buyer guide" size="lg" />
+          <GuideCta guideType="relocation_guide" label="Relocation guide" size="lg" />
+          <GuideCta guideType="investor_guide" label="Investor guide" size="lg" />
+        </div>
+        <p className="mt-5 text-[0.8125rem] text-muted-foreground/45">
+          Zero pressure — just useful local information and a clear next step.
+        </p>
+      </motion.div>
+    </section>
+
+    {/* ═══ SECTION 4 — WHY CLIENTS CHOOSE YGS ═══ */}
     <section className="section-padding bg-background">
-      <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
-        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-          <div className="overflow-hidden rounded-[1.75rem]">
-            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
-          </div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
+      <div className="section-container max-w-[60rem]">
+        <motion.div className="mb-14 text-center" {...anim}>
           <p className="label-overline mb-3">Why YGS</p>
-          <h2>Simple, strategic and human guidance</h2>
-          <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.</p>
-          <p className="prose-body mt-4">In real estate, good decisions start with the right information. I support sellers, buyers and investors in Gatineau with a clear, hands-on approach.</p>
-          <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.</p>
-          <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
-            <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
-            <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
-            <span className="flex items-center gap-2"><Shield size={14} /> Trust-centered approach</span>
-          </div>
-          <Button className="mt-10" size="lg" asChild><Link to="/en/contact">Learn more</Link></Button>
+          <h2>Why clients choose YGS</h2>
         </motion.div>
-      </div>
-    </section>
-
-    {/* Credibility Section */}
-    <section className="section-padding-md bg-secondary/20">
-      <div className="section-container max-w-[56rem]">
-        <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-          <p className="label-overline mb-3">Why clients trust me</p>
-          <h2 className="mb-4">Simple, strategic, human</h2>
-          <p className="mx-auto max-w-[34rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Helping you see clearly and make the right decision at the right time.</p>
-        </motion.div>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {trustPoints.map((point, i) =>
-        <motion.div key={point.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}>
-              <div className="h-full p-6 text-center">
-                <div className="mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/[0.08] text-accent"><point.icon size={20} /></div>
-                <h3 className="text-[1.0625rem] font-semibold tracking-[-0.015em] text-foreground">{point.title}</h3>
-                <p className="mx-auto mt-2.5 max-w-[18rem] text-[0.9375rem] leading-[1.65] text-muted-foreground/70">{point.text}</p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((v, i) => (
+            <motion.div
+              key={v.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="text-center p-6"
+            >
+              <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/[0.08] text-accent">
+                <v.icon size={22} />
               </div>
+              <h3 className="text-[1rem] font-semibold">{v.title}</h3>
+              <p className="mx-auto mt-2.5 max-w-[16rem] text-[0.9375rem] leading-[1.6] text-muted-foreground/70">{v.text}</p>
             </motion.div>
-        )}
+          ))}
         </div>
       </div>
     </section>
 
-    {/* Conversion Steps */}
-    <section className="section-padding bg-background">
+    {/* ═══ SECTION 5 — GUIDE SHOWCASE ═══ */}
+    <section className="section-padding-md bg-secondary/20">
       <div className="section-container">
-        <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-          <p className="label-overline mb-3">How it works</p>
-          <h2>Three steps to a successful transaction</h2>
+        <motion.div className="mb-14 text-center" {...anim}>
+          <p className="label-overline mb-3">Free resources</p>
+          <h2>Free guides built for real decisions</h2>
         </motion.div>
-        <div className="grid gap-6 sm:grid-cols-3 sm:gap-7">
-          {steps.map((step, i) =>
-        <motion.div key={step.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}>
-              <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8">
-                <span className="mb-4 font-heading text-[2rem] leading-none text-accent/20">{step.number}</span>
-                <h3 className="text-[1.125rem] font-semibold">{step.title}</h3>
-                <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{step.text}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-primary opacity-0 transition-opacity duration-200 group-hover:opacity-100">Learn more <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
-              </Link>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {mainGuides.map((g, i) => (
+            <motion.div
+              key={g.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col rounded-[var(--card-radius)] border border-border bg-card p-6 sm:p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-4">
+                <BookOpen size={20} className="text-accent" />
+              </div>
+              <h3 className="text-[1.05rem] font-semibold leading-tight">{g.title}</h3>
+              <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{g.value}</p>
+              <GuideCta guideType={g.guideType} label={g.cta} className="mt-5 w-full sm:w-auto self-start text-[0.8125rem]" />
             </motion.div>
-        )}
+          ))}
         </div>
-        <motion.div className="mt-12 text-center" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
-          <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild>
-            <Link to="/en/home-valuation">Start with a free valuation<ArrowRight size={15} className="ml-1" /></Link>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:max-w-[66%] lg:mx-auto">
+          {secondaryGuides.map((g, i) => (
+            <motion.div
+              key={g.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: 0.25 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col rounded-[var(--card-radius)] border border-border bg-card p-6 sm:p-7 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-4">
+                <BookOpen size={20} className="text-accent" />
+              </div>
+              <h3 className="text-[1.05rem] font-semibold leading-tight">{g.title}</h3>
+              <p className="mt-2 flex-1 text-[0.8125rem] leading-relaxed text-muted-foreground">{g.value}</p>
+              <GuideCta guideType={g.guideType} label={g.cta} className="mt-5 w-full sm:w-auto self-start text-[0.8125rem]" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ═══ SECTION 6 — PERSONAL BRAND ═══ */}
+    <section className="section-padding bg-background">
+      <div className="section-container grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-16">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="overflow-hidden rounded-[1.75rem]">
+            <img
+              src={yanisAbout}
+              srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
+              sizes="(max-width: 1023px) 90vw, 40vw"
+              alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais"
+              className="aspect-[3/4] w-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width={565}
+              height={800}
+            />
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+        >
+          <p className="label-overline mb-3">About</p>
+          <h2>Hi, I'm Yanis.</h2>
+          <p className="prose-body mt-5">
+            I help buyers, sellers, relocators, and investors make better real estate decisions in Outaouais with clear strategy, strong local knowledge, and a no-pressure approach.
+          </p>
+          <p className="prose-body mt-4">
+            With nearly 9 years of experience as a broker in Outaouais, a background in real estate investing, and project management training, I'm a strategic ally for any real estate project — simple or complex.
+          </p>
+          <Button className="mt-8" size="lg" variant="accent" asChild>
+            <Link to="/en/contact">
+              Book a strategy call
+              <ArrowRight size={15} className="ml-1.5" />
+            </Link>
           </Button>
-          <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">I give you the numbers and the options — you decide with full clarity.</p>
         </motion.div>
       </div>
     </section>
 
-    <InlineCTA text="Thinking about selling? Start by knowing the value of your property." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
+    {/* ═══ SECTION 7 — SOCIAL PROOF ═══ */}
+    <ReviewSection
+      overline="Testimonials"
+      title="Trusted guidance for real estate decisions that matter"
+      reviews={homepageReviews}
+      columns={2}
+      background="alt"
+    />
 
-    <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
-
-    <GuideOffersSectionEn background="alt" />
-
-    <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
-
+    {/* ═══ SECTION 8 — BOTTOM CTA ═══ */}
     <CTASection
-    dark
-    overline="First step"
-    title="Take the right first step"
-    text="Valuation, buyer consultation or plex analysis — we start where you are."
-    buttons={[
-    { label: "Free Home Valuation", href: "/en/home-valuation" },
-    { label: "Book a consultation", href: "/en/contact", variant: "outline" }]
-    }
-    trustLine="I give you the numbers and the options — you decide with full clarity." />
-  
+      dark
+      overline="Next step"
+      title="Not sure where to start?"
+      text="Tell me where you are in the process and I'll point you to the right guide or the right next step."
+      buttons={[
+        { label: "Get my free guide", href: "#choose-your-path" },
+        { label: "Book a strategy call", href: "/en/contact", variant: "outline" },
+      ]}
+      trustLine="Local knowledge · Clear strategy · No pressure"
+    />
   </div>
-);
+));
 
 IndexEn.displayName = "IndexEn";
 export default IndexEn;
