@@ -10,6 +10,8 @@ import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
 import yanisAbout from "@/assets/yanis-about.webp";
 import yanisAboutSm from "@/assets/yanis-about-sm.webp";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
