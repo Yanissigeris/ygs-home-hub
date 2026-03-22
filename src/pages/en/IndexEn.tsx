@@ -8,8 +8,6 @@ import ReviewSection from "@/components/ReviewSection";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
-import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
-import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import yanisAbout from "@/assets/yanis-about.webp";
 import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 import { Award, Shield, MapPin } from "lucide-react";
@@ -69,9 +67,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
     secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
     trustLine=""
-    agentImage={yanisPortrait}
-    agentImageSm={yanisPortraitSm}
-    agentName="Yanis Gauthier-Sigeris"
     heroVideo="/hero-video-compressed.mp4" />
   
 
