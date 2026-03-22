@@ -177,7 +177,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               src={heroBgImage}
               alt="" role="presentation"
               className="h-full w-full object-cover"
-              style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
+              style={{ filter: "brightness(0.88) saturate(0.85) contrast(0.95)" }}
                loading="eager"
                fetchPriority="high" />
             
@@ -189,8 +189,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               opacity: 0.08
             }} />
           
+          {/* Overlay — stronger on mobile for text readability */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 md:hidden"
+            style={{
+              background:
+              "linear-gradient(to bottom, hsl(200 42% 11% / 0.75) 0%, hsl(200 42% 13% / 0.55) 60%, hsl(200 42% 14% / 0.70) 100%)"
+            }} />
+          <div
+            className="absolute inset-0 hidden md:block"
             style={{
               background:
               "linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.85) 18%, hsl(200 42% 14% / 0.35) 45%, hsl(200 42% 14% / 0.20) 70%, hsl(200 42% 14% / 0.15) 100%)"
