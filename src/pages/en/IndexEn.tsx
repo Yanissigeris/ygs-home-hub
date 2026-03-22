@@ -44,12 +44,12 @@ const pathways = [
 const steps = [
 { number: "01", title: "Free home valuation", text: "Know the true value of your property within days.", href: "/en/home-valuation" },
 { number: "02", title: "Clear strategy", text: "A selling plan tailored to your situation and your market.", href: "/en/sell" },
-{ number: "03", title: "Full support", text: "From preparation to closing, no pressure, no surprises.", href: "/en/contact" }];
+{ number: "03", title: "Full support", text: "From preparation to closing, at your own pace.", href: "/en/contact" }];
 
 
 const trustPoints = [
 { icon: Clock, title: "Nearly 9 years in Outaouais", text: "Deep knowledge of the market, neighborhoods and local realities." },
-{ icon: Shield, title: "zero surprises", text: "Honest advice, clear strategy, support adapted to your pace." },
+{ icon: Shield, title: "Honest, transparent approach", text: "Clear advice, solid strategy, support adapted to your pace." },
 { icon: Award, title: "Recognized results", text: "RE/MAX Platinum Club, 100% Club and Hall of Fame." }];
 
 
@@ -61,7 +61,7 @@ const sectors = [
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
 <div ref={ref}>
-    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and zero pressure." />
+    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support." />
     <HeroSection
     overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
     title="Your real estate ally in Outaouais"
@@ -127,9 +127,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
           <p className="label-overline mb-3">Why YGS</p>
           <h2>Simple, strategic and human guidance</h2>
-          <p className="prose-body mt-5">                           His role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.                                                                                                            </p>
-          <p className="prose-body mt-4">In real estate, good decisions start with the right information. Yanis Gauthier-Sigeris supports sellers, buyers and investors in Gatineau with a clear approach.   </p>
-          <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, Yanis offers his clients solid, strategic and reassuring support from start to finish. A real estate investor himself, he can also analyze multi-unit opportunities in depth. His hands-on experience in property flips, combined with his project management training, makes him an indispensable ally for any real estate project.</p>
+          <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.</p>
+          <p className="prose-body mt-4">In real estate, good decisions start with the right information. I support sellers, buyers and investors in Gatineau with a clear, hands-on approach.</p>
+          <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.</p>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
             <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
             <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
@@ -145,7 +145,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
       <div className="section-container max-w-[56rem]">
         <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
           <p className="label-overline mb-3">Why clients trust me</p>
-          <h2 className="mb-4">Simple, strategic, pressure-free</h2>
+          <h2 className="mb-4">Simple, strategic, human</h2>
           <p className="mx-auto max-w-[34rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Helping you see clearly and make the right decision at the right time.</p>
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-3">
@@ -185,7 +185,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
           <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild>
             <Link to="/en/home-valuation">Start with a free valuation<ArrowRight size={15} className="ml-1" /></Link>
           </Button>
-          <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">Zero pressure — I give you the numbers and the options, you decide.</p>
+          <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">I give you the numbers and the options — you decide with full clarity.</p>
         </motion.div>
       </div>
     </section>
@@ -201,13 +201,13 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     <CTASection
     dark
     overline="First step"
-    title="Start with the right first step"
+    title="Take the right first step"
     text="Valuation, buyer consultation or plex analysis — we start where you are."
     buttons={[
     { label: "Free Home Valuation", href: "/en/home-valuation" },
     { label: "Book a consultation", href: "/en/contact", variant: "outline" }]
     }
-    trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    trustLine="I give you the numbers and the options — you decide with full clarity." />
   
   </div>
 );
