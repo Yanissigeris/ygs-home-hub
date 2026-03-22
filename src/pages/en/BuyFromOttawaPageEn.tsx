@@ -31,7 +31,7 @@ const sectors = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Ottawa → Gatineau relocation specialist" },
-  { icon: Shield, label: "Bilingual · Zero pressure" },
+  { icon: Shield, label: "Bilingual · Full transparency" },
 ];
 
 const faq = [
@@ -77,7 +77,7 @@ const BuyFromOttawaPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="A broker who knows both sides" />
       <p className="prose-body mt-5">
-        After nearly 9 years in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all stress-free.
+        After nearly 9 years in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all with confidence.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/buyer-consultation">Book my consultation</Link>
@@ -94,7 +94,7 @@ const BuyFromOttawaPageEn = () => (
         { label: "Book a consultation", href: "/en/buyer-consultation" },
         { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" },
       ]}
-      trustLine="Zero pressure — I give you the options, you decide."
+      trustLine="I give you the options — you decide with full clarity."
     />
 
     <FAQSection items={faq} />

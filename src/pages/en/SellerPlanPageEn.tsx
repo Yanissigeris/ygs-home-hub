@@ -167,7 +167,7 @@ const SellerPlanPageEn = () => {
                       Get my seller plan
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Zero pressure — I give you the numbers and options, you decide.
+                      Full transparency — I give you the numbers and options, you decide.
                     </p>
                   </form>
                 )}

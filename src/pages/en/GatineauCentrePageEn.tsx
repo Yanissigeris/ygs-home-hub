@@ -18,7 +18,7 @@ import riverImg from "@/assets/gatineau-river-view.webp";
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Gatineau area specialist" },
-  { icon: Shield, label: "Pressure-free support" },
+  { icon: Shield, label: "Support at your pace" },
 ];
 
 const reasons = [
@@ -80,7 +80,7 @@ const GatineauCentrePageEn = () => (
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Buyer, seller or investor in Gatineau?" text="I can help — whether you're buying, selling or analyzing a property in the area." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Buyer, seller or investor in Gatineau?" text="I can help — whether you're buying, selling or analyzing a property in the area." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

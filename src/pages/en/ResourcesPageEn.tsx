@@ -46,7 +46,7 @@ const ResourcesPageEn = () => (
     <GuideOffersSectionEn />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
-    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis — choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/contact", variant: "outline" }]} trustLine="Zero pressure — I support you at your pace." />
+    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis — choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/contact", variant: "outline" }]} trustLine="I support you at your pace — you decide when you're ready." />
   </>
 );
 export default ResourcesPageEn;

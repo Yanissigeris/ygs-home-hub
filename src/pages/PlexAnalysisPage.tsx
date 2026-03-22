@@ -34,7 +34,7 @@ const trustPoints = [
 
 const faq = [
   { q: "Qu'est-ce qui est inclus dans l'analyse plex?", a: "Valeur marchande estimée, analyse des revenus et dépenses, potentiel locatif, et une recommandation stratégique adaptée à votre situation." },
-  { q: "Est-ce que c'est vraiment gratuit?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez d'aller de l'avant, on en discute — mais zéro pression." },
+  { q: "Est-ce que c'est vraiment gratuit?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez d'aller de l'avant, on en discute — mais en toute transparence." },
   { q: "Je ne suis pas sûr de vouloir vendre — est-ce quand même utile?", a: "Absolument. Beaucoup de propriétaires veulent simplement comprendre leur position avant de décider. C'est exactement pour ça que ce service existe." },
 ];
 

@@ -23,7 +23,7 @@ const considerations = [
 ];
 
 const steps = [
-  { num: "01", title: "Consultation initiale", desc: "On parle de votre budget, vos priorités et vos questions. Zéro pression." },
+  { num: "01", title: "Consultation initiale", desc: "On parle de votre budget, vos priorités et vos questions. Transparence totale." },
   { num: "02", title: "Recherche ciblée", desc: "Je vous présente les meilleures options dans les secteurs qui correspondent à votre profil." },
   { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire — je vous accompagne jusqu'aux clés de votre première propriété." },
 ];

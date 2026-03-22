@@ -23,7 +23,7 @@ const considerations = [
 ];
 
 const steps = [
-  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions. Zero pressure." },
+  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions. Full transparency." },
   { num: "02", title: "Targeted search", desc: "I present the best options in neighborhoods that match your profile." },
   { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through to the keys of your first property." },
 ];
@@ -31,7 +31,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Dozens of first-time buyers supported" },
-  { icon: Shield, label: "Zero pressure · Total transparency" },
+  { icon: Shield, label: "Full transparency · At your pace" },
 ];
 
 const faq = [
@@ -49,7 +49,7 @@ const FirstTimeBuyerPageEn = () => (
       subtitle="Becoming a homeowner for the first time is exciting and stressful. I help you navigate every step — budget, neighborhood, offer and process."
       primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }}
       secondaryCta={{ label: "Buyer Guide", href: "/en/buyer-guide" }}
-      trustLine="Personalized support. Zero pressure."
+      trustLine="Personalized support at your pace."
       heroBgImage={heroImg}
     />
 
@@ -73,7 +73,7 @@ const FirstTimeBuyerPageEn = () => (
 
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — to get started right" text="Everything you need to know to buy your first property in Gatineau." ctaLabel="Get the Buyer Guide" />
 
-    <CTASection dark title="Ready to take the first step?" text="Book a free consultation — let's clarify your budget, options and next steps." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" }]} trustLine="Zero pressure — I support you at your pace." />
+    <CTASection dark title="Ready to take the first step?" text="Book a free consultation — let's clarify your budget, options and next steps." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" }]} trustLine="I support you at your pace — you decide when you're ready." />
 
     <FAQSection items={faq} />
 

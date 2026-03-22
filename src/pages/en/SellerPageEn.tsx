@@ -35,7 +35,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Zero pressure, zero surprises" },
+  { icon: Shield, label: "Full transparency, zero surprises" },
 ];
 const nextSteps = [
   { title: "Free home valuation", text: "Know the value of your property — it's free, confidential and no commitment.", href: "/en/home-valuation", cta: "Get my valuation", highlight: true },
@@ -45,14 +45,14 @@ const nextSteps = [
 const faq = [
   { q: "When is the best time to sell?", a: "It depends on your situation, not just the market. In nearly 9 years in Outaouais, I've seen sellers succeed in all conditions — with the right plan." },
   { q: "Do I need to renovate before selling?", a: "Not necessarily. I'll help you identify what's worth doing to maximize your price without wasting money." },
-  { q: "How much does a broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent — no surprises." },
+  { q: "How much does a broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "What if I need to buy at the same time?", a: "That's common. We plan the coordination from the start to avoid getting stuck." },
 ];
 
 const SellerPageEn = () => (
   <>
     <PageMeta title="Sell Your Home in Gatineau | YGS" description="Sell your property in Gatineau at the best price. Marketing strategy, personalized support and proven results by Yanis Gauthier-Sigeris." />
-    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
+    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
     <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
@@ -67,7 +67,7 @@ const SellerPageEn = () => (
     <GuideInlineCTAEn guideType="seller_guide" headline="Thinking about selling? Get the complete guide." text="Everything you need to know to sell at the best price in Gatineau — in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
     <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
     <ReviewSection overline="Seller testimonials" title="They sold with confidence" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
-    <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Get my seller plan", href: "/en/sell", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Get my seller plan", href: "/en/sell", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
   </>
 );

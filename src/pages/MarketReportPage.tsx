@@ -76,7 +76,7 @@ const MarketReportPage = () => (
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
         { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
       ]}
-      trustLine="Zéro pression — données objectives et analyse locale."
+      trustLine="Données objectives et analyse locale claire."
     />
   
     <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />

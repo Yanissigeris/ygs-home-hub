@@ -99,7 +99,7 @@ const MilitaryGuidePage = () => (
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
-      trustLine="Zéro pression — je m'adapte à votre rythme."
+      trustLine="Je m'adapte à votre rythme — vous décidez quand vous êtes prêt."
     />
   
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit — recevez-le par courriel" />

@@ -75,7 +75,7 @@ const BuyerGuidePageEn = () => (
 
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
 
-    <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

@@ -64,7 +64,7 @@ const SellPlexPageEn = () => (
       </Button>
     </ContentBlock>
     <GuideInlineCTAEn guideType="investor_guide" headline="Free Investor Guide — maximize your plex" text="Returns, taxes and selling strategy — in a guide sent to your email." ctaLabel="Get the Investor Guide" />
-    <CTASection dark title="Ready to explore your options?" text="Request an analysis of your plex — value, revenues and recommendation." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Free Plex Analysis", href: "/en/plex-analysis", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Ready to explore your options?" text="Request an analysis of your plex — value, revenues and recommendation." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Free Plex Analysis", href: "/en/plex-analysis", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
   </>

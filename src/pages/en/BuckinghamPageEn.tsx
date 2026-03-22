@@ -138,7 +138,7 @@ const BuckinghamPageEn = () => (
         { label: "Free Valuation", href: "/en/home-valuation" },
         { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" },
       ]}
-      trustLine="Zero pressure — I give you the numbers, you decide."
+      trustLine="I give you the numbers — you decide with full clarity."
     />
 
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />

@@ -53,7 +53,7 @@ const faq = [
 const RelocationPageEn = () => (
   <>
     <PageMeta title="Relocation Ottawa to Gatineau | YGS" description="Moving from Ottawa to Gatineau? Complete guide: neighborhoods, taxes, schools and personalized real estate support." />
-    <HeroSection overline="Ottawa → Gatineau" title="Relocating to Gatineau from Ottawa or beyond" subtitle="Thinking about crossing the river? I help you understand the neighborhoods, prices, process and find the right property — stress-free." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Relocation Guide", href: "/en/relocation-guide" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
+    <HeroSection overline="Ottawa → Gatineau" title="Relocating to Gatineau from Ottawa or beyond" subtitle="Thinking about crossing the river? I help you understand the neighborhoods, prices, process and find the right property — with confidence." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Relocation Guide", href: "/en/relocation-guide" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <ContentBlock narrow><SectionHeading overline="Relocation" title="Buying in Gatineau when you don't know the area" subtitle="More space, more affordable prices, a different quality of life — but you still need to know where to look and how to navigate the process." /><p className="prose-body mt-5">Every year, dozens of families and professionals cross the river. What makes the difference is having a local guide who knows both sides — and who can help you avoid the classic mistakes.</p></ContentBlock>
     <CardGrid overline="The challenges" title="What often holds back relocated buyers" items={challenges} background="alt" />
@@ -63,7 +63,7 @@ const RelocationPageEn = () => (
     <ReviewSection overline="Relocation testimonials" title="They settled in Gatineau with confidence" reviews={getReviewsByCategory("relocation").slice(0, 2)} columns={2} />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the option that fits your situation." steps={nextSteps} background="alt" />
     <GuideInlineCTAEn guideType="relocation_guide" headline="Free Relocation Guide" text="Everything you need to know to settle in Gatineau — neighborhoods, prices, process and schools." ctaLabel="Get the guide" />
-    <CTASection dark title="Let's talk about your relocation" text="Budget, neighborhoods, Québec process — we clarify everything during a first call, no commitment." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Relocation Guide", href: "/en/relocation-guide", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Let's talk about your relocation" text="Budget, neighborhoods, Québec process — we clarify everything during a first call, no commitment." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Relocation Guide", href: "/en/relocation-guide", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>

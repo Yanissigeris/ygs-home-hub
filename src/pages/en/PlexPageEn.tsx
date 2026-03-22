@@ -51,7 +51,7 @@ const faq = [
 const PlexPageEn = () => (
   <>
     <PageMeta title="Invest in a Plex in Gatineau | YGS" description="Duplex, triplex and income properties in Gatineau. Return analysis, investment strategy and support by a specialized broker." />
-    <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
+    <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <LinkedCardGrid overline="For you" title="I help two types of clients" items={clientTypes} />
     <InlineCTA text="Own a plex? Start by knowing its current value." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
@@ -61,7 +61,7 @@ const PlexPageEn = () => (
     <GuideInlineCTAEn guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid — the essential guide for investing in Gatineau." ctaLabel="Get the Investor Guide" />
     <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
     <ReviewSection overline="Investor testimonials" title="Informed decisions, real results" reviews={getReviewsByCategory("plex").slice(0, 2)} columns={2} />
-    <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position — I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position — I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
   </>
 );
