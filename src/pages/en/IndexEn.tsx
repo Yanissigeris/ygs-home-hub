@@ -44,7 +44,7 @@ const pathways = [
 const steps = [
 { number: "01", title: "Free home valuation", text: "Know the true value of your property within days.", href: "/en/home-valuation" },
 { number: "02", title: "Clear strategy", text: "A selling plan tailored to your situation and your market.", href: "/en/sell" },
-{ number: "03", title: "Full support", text: "From preparation to closing, no pressure, no surprises.", href: "/en/contact" }];
+{ number: "03", title: "Full support", text: "From preparation to closing, at your own pace.", href: "/en/contact" }];
 
 
 const trustPoints = [
