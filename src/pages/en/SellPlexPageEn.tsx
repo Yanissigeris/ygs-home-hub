@@ -31,7 +31,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Plex and investment specialist" },
-  { icon: Shield, label: "Objective, pressure-free analysis" },
+  { icon: Shield, label: "Objective, transparent analysis" },
 ];
 
 const faq = [

@@ -49,7 +49,7 @@ const PlexAnalysisPageEn = () => {
         overline="Free Plex Analysis · Gatineau"
         title="Get a clear analysis of your plex"
         subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
-        trustLine="A useful and pressure-free analysis — to help you decide with full knowledge."
+        trustLine="A useful analysis — to help you decide with full knowledge."
         heroBgImage={heroImg}
       />
 

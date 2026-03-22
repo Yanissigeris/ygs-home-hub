@@ -35,7 +35,7 @@ const TestimonialsPageEn = () => (
         </section>
       );
     })}
-    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, pressure-free conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, honest conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
   </>
 );
 export default TestimonialsPageEn;

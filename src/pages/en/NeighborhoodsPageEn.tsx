@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-neighborhoods.webp";
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "All-neighborhood specialist" },
-  { icon: Shield, label: "Local, pressure-free advice" },
+  { icon: Shield, label: "Local, honest advice" },
 ];
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, nature and Ottawa access" },
