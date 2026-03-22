@@ -144,7 +144,7 @@ const SiteHeader = () => {
             <Link to={ctaHref}>{ctaLabel}</Link>
           </Button>
           <button onClick={() => setOpen(!open)} className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/35 text-foreground transition-colors hover:bg-secondary" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
       </div>
