@@ -43,7 +43,7 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button className={`flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-[0.7813rem] font-medium tracking-[0.01em] transition-colors xl:px-3 ${isChildActive ? "text-foreground" : "text-muted-foreground/65 hover:text-foreground"}`} onClick={() => setOpen((p) => !p)} aria-expanded={open}>
         {item.label}
-        <ChevronDown size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] rounded-xl border border-border/40 bg-popover p-1.5 shadow-[0_12px_40px_-12px_hsl(200_30%_14%/0.12)]">
