@@ -10,6 +10,8 @@ import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
 import yanisAbout from "@/assets/yanis-about.webp";
 import yanisAboutSm from "@/assets/yanis-about-sm.webp";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import { Award, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -67,7 +69,10 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
     secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
     trustLine=""
-    heroVideo="/hero-video-compressed.mp4" />
+    heroVideo="/hero-video-compressed.mp4"
+    agentImage={yanisPortrait}
+    agentImageSm={yanisPortraitSm}
+    agentName="Yanis Gauthier-Sigeris" />
   
 
     {/* Trust Strip */}

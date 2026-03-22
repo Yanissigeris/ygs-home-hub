@@ -1,5 +1,7 @@
 import * as React from "react";
 import PageMeta from "@/components/PageMeta";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import PathwaySection from "@/components/PathwaySection";
@@ -29,6 +31,9 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine=""
       heroVideo="/hero-video-compressed.mp4"
+      agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
+      agentName="Yanis Gauthier-Sigeris"
     />
 
     <TrustStrip />
