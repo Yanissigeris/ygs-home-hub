@@ -201,13 +201,13 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     <CTASection
     dark
     overline="First step"
-    title="Start with the right first step"
+    title="Take the right first step"
     text="Valuation, buyer consultation or plex analysis — we start where you are."
     buttons={[
     { label: "Free Home Valuation", href: "/en/home-valuation" },
     { label: "Book a consultation", href: "/en/contact", variant: "outline" }]
     }
-    trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    trustLine="I give you the numbers and the options — you decide with full clarity." />
   
   </div>
 );
