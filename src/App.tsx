@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 
@@ -205,7 +206,7 @@ const routeTree = React.createElement(
 const appRoutes = React.createElement(
   BrowserRouter,
   { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  React.createElement(LanguageProvider, null, routeTree),
+  React.createElement(LanguageProvider, null, React.createElement(ScrollToTop), routeTree),
 );
 
 const App = () => appRoutes;
