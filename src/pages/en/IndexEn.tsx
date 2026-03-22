@@ -70,6 +70,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
     trustLine=""
     heroVideo="/hero-video-compressed.mp4"
+    heroVideoPoster="/hero-video-poster.webp"
     agentImage={yanisPortrait}
     agentImageSm={yanisPortraitSm}
     agentName="Yanis Gauthier-Sigeris" />
