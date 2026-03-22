@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import yanisPhoto from "@/assets/yanis-hero.webp";
 import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
@@ -51,8 +50,6 @@ const PlexAnalysisPageEn = () => {
         title="Get a clear analysis of your plex"
         subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
         trustLine="A useful and pressure-free analysis — to help you decide with full knowledge."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 
