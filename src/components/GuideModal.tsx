@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 
-export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide" | "relocation_guide" | "military_guide";
+export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide" | "relocation_guide";
 
 interface GuideModalProps {
   open: boolean;
@@ -54,13 +54,6 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     submitLabel: "Envoyer mon guide",
     successTitle: "Parfait — votre guide relocalisation est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes. Regardez aussi vos promotions ou indésirables au besoin.",
-  },
-  military_guide: {
-    title: "Recevez le guide relocalisation militaire",
-    description: "Un guide pratique pour les membres des FAC et leurs familles qui déménagent dans la région de Gatineau — secteurs, processus BGRS/SIRVA et conseils locaux.",
-    submitLabel: "Envoyer mon guide militaire",
-    successTitle: "Parfait — votre guide est en route!",
-    successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
 };
 
