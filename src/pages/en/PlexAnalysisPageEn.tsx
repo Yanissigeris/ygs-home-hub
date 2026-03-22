@@ -51,7 +51,6 @@ const PlexAnalysisPageEn = () => {
         subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
         trustLine="A useful and pressure-free analysis — to help you decide with full knowledge."
         heroBgImage={heroImg}
-        heroBgImage={heroImg}
       />
 
       <section className="section-padding bg-background">
