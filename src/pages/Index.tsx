@@ -68,7 +68,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <CTASection
       dark
       overline="Première étape"
-      title="Commencez par la bonne première étape"
+      title="Prenez la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
       buttons={[
         { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },

@@ -10,8 +10,8 @@ const trustPoints = [
 },
 {
   icon: Shield,
-  title: " zéro surprise",
-  text: "Conseils honnêtes, stratégie claire, accompagnement adapté à votre rythme."
+  title: "Approche honnête et transparente",
+  text: "Conseils clairs, stratégie solide, accompagnement adapté à votre rythme."
 },
 {
   icon: Award,
@@ -31,7 +31,7 @@ const CredibilitySection = React.forwardRef<HTMLElement>((_, ref) =>
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
       
         <p className="label-overline mb-3">Pourquoi les clients me font confiance</p>
-        <h2 className="mb-4">Simple, stratégique, à votre rythme    </h2>
+        <h2 className="mb-4">Simple, stratégique, humain</h2>
         <p className="mx-auto max-w-[34rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
           Vous aider à voir clair et prendre la bonne décision au bon moment.
         </p>
