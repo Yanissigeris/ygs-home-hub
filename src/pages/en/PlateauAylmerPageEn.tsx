@@ -34,7 +34,7 @@ const PlateauAylmerPageEn = () => (
     <SectorLinks overline="Other neighborhoods" title="Explore other areas" sectors={relatedSectors} />
     <FAQSection title="Questions about Plateau / Aylmer" items={faq} />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Plateau / Aylmer" text="Process, budget and tips for buying in the area." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Buyer or seller in Plateau / Aylmer?" text="I can help you find the right property or know the value of yours." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers, you decide." />
+    <CTASection dark title="Buyer or seller in Plateau / Aylmer?" text="I can help you find the right property or know the value of yours." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers — you decide with full clarity." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

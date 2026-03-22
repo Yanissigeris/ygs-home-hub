@@ -39,7 +39,7 @@ const faq = [
 const MilitaryRelocationPageEn = () => (
   <>
     <PageMeta title="Military Relocation to Gatineau | YGS" description="Military posting to Gatineau? Complete guide: BGRS/SIRVA process, neighborhoods near base, timelines and support." />
-    <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property quickly, stress-free and on your timeline." primaryCta={{ label: "Book a call", href: "/en/contact" }} trustLine="Service adapted to military members. Zero pressure." heroBgImage={heroImg} />
+    <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property quickly, with confidence and on your timeline." primaryCta={{ label: "Book a call", href: "/en/contact" }} trustLine="Service adapted to military members — at your pace." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
@@ -55,7 +55,7 @@ const MilitaryRelocationPageEn = () => (
       <SectionHeading overline="Why YGS" title="Support adapted to your pace" subtitle="Postings don't follow the normal real estate calendar. I adapt to your timeline and constraints." />
     </ContentBlock>
     <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need for your real estate posting to Gatineau — in a guide sent to your email." ctaLabel="Get the guide" />
-    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting — we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting — we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>

@@ -11,7 +11,7 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
   { key: "seller", label: "Sellers", title: "They sold with confidence" },
   { key: "buyer", label: "Buyers", title: "They bought with confidence" },
   { key: "relocation", label: "Relocation", title: "They settled in Gatineau" },
-  { key: "military", label: "Military", title: "Successful posting, stress-free" },
+  { key: "military", label: "Military", title: "Successful posting, with confidence" },
   { key: "plex", label: "Investors", title: "Informed decisions, real results" },
 ];
 
@@ -35,7 +35,7 @@ const TestimonialsPageEn = () => (
         </section>
       );
     })}
-    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, pressure-free conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, honest conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
   </>
 );
 export default TestimonialsPageEn;

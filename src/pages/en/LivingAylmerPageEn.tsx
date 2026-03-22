@@ -45,7 +45,7 @@ const LivingAylmerPageEn = () => (
     <FAQSection title="Questions about living in Aylmer" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — settling in Aylmer" text="Everything to buy in Aylmer — process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Ready to discover Aylmer?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See the neighborhood", href: "/en/aylmer", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Ready to discover Aylmer?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See the neighborhood", href: "/en/aylmer", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

@@ -51,7 +51,7 @@ const WhenToSellPageEn = () => (
     </ContentBlock>
     <InlineCTA text="Start by knowing the current value of your property — it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
     <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide — sell at the right time" text="Pricing, preparation, timing — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Unsure about the timing?" text="Get a free valuation — let's look together at whether now is the right time for you." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Unsure about the timing?" text="Get a free valuation — let's look together at whether now is the right time for you." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>

@@ -25,7 +25,7 @@ const topics = [
 
 const faq = [
   { q: "When is the best time to sell in Gatineau?", a: "It depends on your personal situation, not just the market. We analyze the best timing for you together." },
-  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent — no surprises." },
+  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "Should I renovate before selling?", a: "Not necessarily. I help you identify what's worth doing to maximize your price without wasting money." },
   { q: "How long does it take to sell in Gatineau?", a: "On average 30 to 60 days on the market, but it varies by neighborhood, price and season." },
 ];
@@ -40,7 +40,7 @@ const related = [
 const SellerGuidePageEn = () => (
   <>
     <PageMeta title="Seller Guide — Selling in Gatineau | YGS" description="Complete guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." />
-    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the best price, stress-free and without bad surprises." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the best price, with confidence and without bad surprises." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
@@ -95,7 +95,7 @@ const SellerGuidePageEn = () => (
 
     <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 
-    <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
 
     <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>

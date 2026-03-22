@@ -43,7 +43,7 @@ const MarketReportPageEn = () => (
     <FAQSection items={faq} />
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Zero pressure — objective data and local analysis." />
+    <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
     <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>
 );

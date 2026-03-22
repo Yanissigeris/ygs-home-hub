@@ -8,7 +8,7 @@ import heroImg from "@/assets/hero-faq.webp";
 
 const sellerFaq = [
   { q: "How much is my property worth in Gatineau?", a: "The value depends on recent comparable sales, the condition of your property and the neighborhood. Request a free valuation for a personalized estimate." },
-  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent — no surprises." },
+  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "Should I renovate before selling?", a: "Not necessarily. Some investments pay off — painting, decluttering — others are a waste. I'll help you sort it out." },
   { q: "How long does it take to sell in Gatineau?", a: "On average 30 to 60 days on the market, but it varies by neighborhood, price and season. The right price from the start accelerates everything." },
   { q: "Is spring the best time to sell?", a: "It's often the busiest season, but not always the most profitable. Less competition in fall or winter can work in your favor." },
@@ -49,7 +49,7 @@ const FAQPageEn = () => (
     <FAQSection title="Plex Investment" items={plexFaq} />
     <FAQSection title="Military and Relocation" items={militaryFaq} />
     <LinkedCardGrid overline="Resources" title="Guides and Tools" items={resources} columns={3} background="alt" />
-    <CTASection dark title="Have a specific question?" text="Contact me directly — I'll give you a clear and personalized answer." buttons={[{ label: "Talk to Yanis", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Have a specific question?" text="Contact me directly — I'll give you a clear and personalized answer." buttons={[{ label: "Talk to Yanis", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default FAQPageEn;

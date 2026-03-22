@@ -79,7 +79,7 @@ const PropertiesPageEn = () => (
 
     <RelatedPages overline="Explore also" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria — I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria — I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default PropertiesPageEn;

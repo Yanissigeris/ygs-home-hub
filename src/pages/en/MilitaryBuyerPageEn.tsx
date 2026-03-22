@@ -25,7 +25,7 @@ const advantages = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Military buyer specialist" },
-  { icon: Shield, label: "Bilingual · Zero pressure" },
+  { icon: Shield, label: "Bilingual · Full transparency" },
 ];
 
 const faq = [
@@ -43,7 +43,7 @@ const MilitaryBuyerPageEn = () => (
       subtitle="Posting to the NCR? I help you find the right area, the right property and navigate the buying process in Québec."
       primaryCta={{ label: "Book a call", href: "/en/contact" }}
       secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer" }}
-      trustLine="Service adapted to military members. Zero pressure."
+      trustLine="Service adapted to military members — at your pace."
       heroBgImage={heroImg}
     />
 
@@ -93,7 +93,7 @@ const MilitaryBuyerPageEn = () => (
         { label: "Book a call", href: "/en/contact" },
         { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" },
       ]}
-      trustLine="Zero pressure — I give you the options, you decide."
+      trustLine="I give you the options — you decide with full clarity."
     />
 
     <FAQSection items={faq} />

@@ -36,7 +36,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Local neighborhood specialist" },
-  { icon: Shield, label: "Pressure-free guidance" },
+  { icon: Shield, label: "Guidance at your pace" },
 ];
 const nextSteps = [
   { title: "Free consultation", text: "Let's discuss your criteria, budget and questions — to buy with confidence.", href: "/en/buyer-consultation", cta: "Book my consultation", highlight: true },
@@ -52,8 +52,8 @@ const faq = [
 
 const BuyerPageEn = () => (
   <>
-    <PageMeta title="Buy a Property in Gatineau | YGS" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and pressure-free guidance." />
-    <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First-time buyer, growing family or relocating from Ottawa — I guide you at every step to buy stress-free and mistake-free." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="Clear strategy. Zero pressure. No bad surprises." heroBgImage={heroImg} />
+    <PageMeta title="Buy a Property in Gatineau | YGS" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and guidance at your pace." />
+    <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First-time buyer, growing family or relocating from Ottawa — I guide you at every step to buy with confidence and clarity." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighborhood and a strategy" subtitle="Beyond the house, you need to understand the neighborhoods, the real value, taxes, resale potential and the right offer strategy." /></ContentBlock>
     <CardGrid overline="For you" title="I can help if you are…" items={profiles} background="alt" variant="icon-inline" />
@@ -64,7 +64,7 @@ const BuyerPageEn = () => (
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
     <ReviewSection overline="Buyer testimonials" title="They bought with confidence" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the step that best fits your situation." steps={nextSteps} />
-    <CTASection dark title="Let's talk about your buying project" text="Budget, neighborhoods, strategy — we clarify everything before starting visits." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="Zero pressure — I give you the numbers and the options, you decide." />
+    <CTASection dark title="Let's talk about your buying project" text="Budget, neighborhoods, strategy — we clarify everything before starting visits." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
   </>
 );

@@ -24,7 +24,7 @@ const steps = [
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Experience selling during postings" },
-  { icon: Shield, label: "Accelerated process · Zero pressure" },
+  { icon: Shield, label: "Accelerated process · Full transparency" },
 ];
 
 const faq = [
@@ -42,7 +42,7 @@ const MilitarySellerPageEn = () => (
       subtitle="Time is tight, but price matters. I help you sell efficiently without sacrificing the value of your property."
       primaryCta={{ label: "Get my valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
-      trustLine="Clear strategy. Fast sale. Zero pressure."
+      trustLine="Clear strategy. Fast sale. Full transparency."
       heroBgImage={heroImg}
     />
 
@@ -93,7 +93,7 @@ const MilitarySellerPageEn = () => (
         { label: "Free Valuation", href: "/en/home-valuation" },
         { label: "Book a call", href: "/en/contact", variant: "outline" },
       ]}
-      trustLine="Zero pressure — I give you the numbers and the options, you decide."
+      trustLine="I give you the numbers and the options — you decide with full clarity."
     />
 
     <FAQSection items={faq} />

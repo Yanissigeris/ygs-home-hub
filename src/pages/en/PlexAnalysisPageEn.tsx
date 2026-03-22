@@ -33,7 +33,7 @@ const trustPoints = [
 
 const faq = [
   { q: "What's included in the plex analysis?", a: "Estimated market value, revenue and expense analysis, rental potential, and a strategic recommendation tailored to your situation." },
-  { q: "Is it really free?", a: "Yes. The goal is to help you make an informed decision. If you decide to move forward, we discuss it — but zero pressure." },
+  { q: "Is it really free?", a: "Yes. The goal is to help you make an informed decision. If you decide to move forward, we discuss it — but full transparency." },
   { q: "I'm not sure I want to sell — is it still useful?", a: "Absolutely. Many owners simply want to understand their position before deciding. That's exactly what this service is for." },
 ];
 
@@ -49,7 +49,7 @@ const PlexAnalysisPageEn = () => {
         overline="Free Plex Analysis · Gatineau"
         title="Get a clear analysis of your plex"
         subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
-        trustLine="A useful and pressure-free analysis — to help you decide with full knowledge."
+        trustLine="A useful analysis — to help you decide with full knowledge."
         heroBgImage={heroImg}
       />
 
@@ -150,7 +150,7 @@ const PlexAnalysisPageEn = () => {
                       Get my plex analysis
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Zero pressure — I give you the numbers and the options, you decide.
+                      I give you the numbers and the options — you decide with full clarity.
                     </p>
                   </form>
                 )}

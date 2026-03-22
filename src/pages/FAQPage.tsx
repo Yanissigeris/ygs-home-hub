@@ -8,7 +8,7 @@ import heroImg from "@/assets/hero-faq.webp";
 
 const sellerFaq = [
   { q: "Combien vaut ma propriété à Gatineau?", a: "La valeur dépend des ventes comparables récentes, de l'état de votre propriété et du secteur. Demandez une évaluation gratuite pour obtenir une estimation personnalisée." },
-  { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — pas de surprise." },
+  { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — tout est clair dès le départ." },
   { q: "Faut-il rénover avant de vendre?", a: "Pas nécessairement. Certains investissements rapportent — peinture, désencombrement — d'autres sont du gaspillage. Je vous aide à faire le tri." },
   { q: "Combien de temps pour vendre à Gatineau?", a: "En moyenne 30 à 60 jours sur le marché, mais ça varie selon le secteur, le prix et la saison. Le bon prix dès le départ accélère tout." },
   { q: "Le printemps est-il le meilleur moment pour vendre?", a: "C'est souvent le plus actif, mais pas toujours le plus rentable. Moins de compétition en automne ou en hiver peut jouer en votre faveur." },

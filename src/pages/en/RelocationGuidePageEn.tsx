@@ -67,7 +67,7 @@ const RelocationGuidePageEn = () => (
 
     <RelatedPages overline="Also worth reading" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Let's plan your move" text="Book a free call — let's clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="Zero pressure — I give you the options, you decide." />
+    <CTASection dark title="Let's plan your move" text="Book a free call — let's clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default RelocationGuidePageEn;
