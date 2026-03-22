@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 
