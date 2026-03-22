@@ -74,7 +74,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
     <div>
       <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-[1rem] font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground" aria-expanded={expanded}>
         {item.label}
-        <ChevronDown size={16} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={16} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-1 pl-3">
