@@ -47,6 +47,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     successTitle: "Your Relocation Guide is on its way!",
     successText: "Check your inbox shortly. Also look in your promotions or spam folder if needed.",
   },
+  military_guide: {
+    title: "Get the Military Relocation Guide",
+    description: "A practical guide for CAF members and families relocating to the Gatineau area — neighborhoods, BGRS/SIRVA process and local tips.",
+    submitLabel: "Send me the Military Guide",
+    successTitle: "Your Military Guide is on its way!",
+    successText: "Check your inbox — you'll receive the guide within minutes.",
+  },
 };
 
 const GuideModalEn = ({ open, onOpenChange, guideType }: GuideModalEnProps) => {

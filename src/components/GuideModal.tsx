@@ -55,6 +55,13 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
     successTitle: "Parfait — votre guide relocalisation est en route!",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes. Regardez aussi vos promotions ou indésirables au besoin.",
   },
+  military_guide: {
+    title: "Recevez le guide relocalisation militaire",
+    description: "Un guide pratique pour les membres des FAC et leurs familles qui déménagent dans la région de Gatineau — secteurs, processus BGRS/SIRVA et conseils locaux.",
+    submitLabel: "Envoyer mon guide militaire",
+    successTitle: "Parfait — votre guide est en route!",
+    successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
+  },
 };
 
 const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {
