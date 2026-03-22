@@ -69,7 +69,10 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
     primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
     secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
     trustLine=""
-    heroVideo="/hero-video-compressed.mp4" />
+    heroVideo="/hero-video-compressed.mp4"
+    agentImage={yanisPortrait}
+    agentImageSm={yanisPortraitSm}
+    agentName="Yanis Gauthier-Sigeris" />
   
 
     {/* Trust Strip */}
