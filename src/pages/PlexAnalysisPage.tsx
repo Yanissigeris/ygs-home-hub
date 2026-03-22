@@ -55,8 +55,6 @@ const PlexAnalysisPage = () => {
         title="Recevez une analyse claire de votre plex"
         subtitle="Valeur, revenus, dépenses, potentiel — je vous donne une lecture objective de votre situation d'investisseur."
         trustLine="Une analyse utile pour vous aider à décider en toute connaissance de cause."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 
