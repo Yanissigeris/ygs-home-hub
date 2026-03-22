@@ -49,6 +49,7 @@ function htmlOptimizePlugin() {
       .section-container{margin-inline:auto;max-width:1200px;padding-inline:1.25rem}
       @media(min-width:640px){.section-container{padding-inline:1.5rem}}
       @media(min-width:768px){.section-container{padding-inline:2rem}}
+      #root{min-height:100vh;display:flex;flex-direction:column}
     </style>`;
         html = html.replace("<meta charset", criticalCss + "\n    <meta charset");
 
