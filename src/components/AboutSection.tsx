@@ -40,13 +40,13 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="label-overline mb-3">Pourquoi YGS</p>
         <h2>Un accompagnement simple, stratégique et humain</h2>
         <p className="prose-body mt-5">
-          Son rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance à votre rythme.   
+          Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance à votre rythme.
         </p>
         <p className="prose-body mt-4">
-          Il accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire et avec une excellente connaissance du marché.
+          J'accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire et une excellente connaissance du marché.
         </p>
         <p className="prose-body mt-4">
-          Avec plus de 9 ans d’expérience comme courtier immobilier en Outaouais, Yanis offre à ses clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier lui-même, il sait également analyser en profondeur les opportunités en multilogement. Son expérience concrète en flips immobiliers, combinée à sa formation en gestion de projet (AEC), fait de lui un allié incontournable pour tout projet immobilier.
+          Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">

@@ -10,8 +10,8 @@ const trustPoints = [
 },
 {
   icon: Shield,
-  title: " zéro surprise",
-  text: "Conseils honnêtes, stratégie claire, accompagnement adapté à votre rythme."
+  title: "Approche honnête et transparente",
+  text: "Conseils clairs, stratégie solide, accompagnement adapté à votre rythme."
 },
 {
   icon: Award,
