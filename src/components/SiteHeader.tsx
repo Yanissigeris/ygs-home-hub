@@ -1,6 +1,16 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+
+/* Inline SVG icons — avoids loading lucide-react in the critical path */
+const MenuIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+);
+const XIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+);
+const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m6 9 6 6 6-6"/></svg>
+);
 import { Button } from "@/components/ui/button";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -33,7 +43,7 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button className={`flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-[0.7813rem] font-medium tracking-[0.01em] transition-colors xl:px-3 ${isChildActive ? "text-foreground" : "text-muted-foreground/65 hover:text-foreground"}`} onClick={() => setOpen((p) => !p)} aria-expanded={open}>
         {item.label}
-        <ChevronDown size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] rounded-xl border border-border/40 bg-popover p-1.5 shadow-[0_12px_40px_-12px_hsl(200_30%_14%/0.12)]">
@@ -64,7 +74,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
     <div>
       <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-[1rem] font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground" aria-expanded={expanded}>
         {item.label}
-        <ChevronDown size={16} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={16} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-1 pl-3">
@@ -134,7 +144,7 @@ const SiteHeader = () => {
             <Link to={ctaHref}>{ctaLabel}</Link>
           </Button>
           <button onClick={() => setOpen(!open)} className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/35 text-foreground transition-colors hover:bg-secondary" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
       </div>
@@ -152,7 +162,7 @@ const SiteHeader = () => {
             <Link to={ctaHref}>{ctaLabelMobile}</Link>
           </Button>
           <button onClick={() => setOpen(!open)} className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/35 bg-background text-foreground transition-colors hover:bg-secondary" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
       </div>

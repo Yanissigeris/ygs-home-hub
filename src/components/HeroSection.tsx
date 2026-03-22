@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 interface HeroSectionProps {
   overline?: string;
@@ -19,12 +18,6 @@ interface HeroSectionProps {
   heroVideo?: string;
   heroVideoPoster?: string;
 }
-
-const fade = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 1.1, ease: "easeOut" as const }
-};
 
 const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
@@ -63,7 +56,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       if (!heroVideo) return;
       const el = videoRef.current;
       if (el && !el.src) {
-        // Use rAF to avoid blocking first paint, then load immediately
         const raf = requestAnimationFrame(() => {
           el.src = heroVideo;
           el.load();
@@ -80,14 +72,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       el.addEventListener("playing", onPlaying);
       return () => el.removeEventListener("playing", onPlaying);
     }, []);
-
-    const { scrollYProgress } = useScroll({
-      target: sectionRef,
-      offset: ["start start", "end start"]
-    });
-
-    // Background moves at 30% of scroll speed → subtle parallax
-    const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
     return (
       <section
@@ -124,10 +108,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo &&
         <>
-          <motion.div
+          <div
             className="absolute inset-x-0 top-0 bottom-0 overflow-hidden"
             style={{
-              y: bgY,
               backgroundImage: heroBgImage ? `url(${heroBgImage})` : undefined,
               backgroundSize: "cover",
               backgroundPosition: "center"
@@ -148,7 +131,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.82) saturate(0.75) contrast(1.04)" }} />
             
-          </motion.div>
+          </div>
           {/* Dark petrol / navy overlay — stronger left, smoother right */}
           <div
             className="absolute inset-0"
@@ -169,7 +152,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       {/* STATIC IMAGE BACKGROUND LAYER (fallback when no video) */}
       {heroBgImage && !heroVideo &&
         <>
-          <motion.div className="absolute inset-x-0 top-0 bottom-0 overflow-hidden" style={{ y: bgY }}>
+          <div className="absolute inset-x-0 top-0 bottom-0 overflow-hidden">
             <img
               src={heroBgImage}
               alt="" role="presentation"
@@ -178,7 +161,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                loading="eager"
                fetchPriority="high" />
             
-          </motion.div>
+          </div>
           <div
             className="absolute inset-0"
             style={{
@@ -216,9 +199,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className={`grid items-end ${agentImage ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]" : backgroundImage ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]" : ""}`}>
             
           {/* TEXT + CTA LAYER (z-20 to stay above everything) */}
-          <motion.div
-              className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${agentImage ? "pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" : ""} relative z-20 min-w-0`}
-              {...fade}>
+          <div
+              className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${agentImage ? "pb-[2rem] md:pb-[3.5rem] lg:pb-[4rem]" : ""} relative z-20 min-w-0 animate-fade-in`}>
               
             {overline &&
               <div className="mb-6 flex items-center gap-4 overflow-hidden sm:gap-6">
@@ -260,29 +242,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {trustLine}
               </p>
               }
-          </motion.div>
+          </div>
 
           {backgroundImage && !agentImage &&
-            <motion.div
-              className="hidden lg:block"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.2 }}>
-              
+            <div className="hidden lg:block animate-fade-in" style={{ animationDelay: "200ms" }}>
               <div className="relative overflow-hidden rounded-[1.75rem] shadow-2xl">
                 <img src={backgroundImage} alt="" role="presentation" className="aspect-[4/3] w-full object-cover" loading="eager" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>
-            </motion.div>
+            </div>
             }
 
           {/* PORTRAIT LAYER — z-10 to stay above video/overlay, below text */}
           {agentImage &&
-            <motion.div
-              className="relative z-10 hidden self-end md:flex md:items-end md:justify-end"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}>
+            <div
+              className="relative z-10 hidden self-end md:flex md:items-end md:justify-end animate-fade-in"
+              style={{ animationDelay: "200ms" }}>
               
               <div
                 className="relative"
@@ -300,16 +275,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   fetchPriority="high" />
 
               </div>
-            </motion.div>
+            </div>
             }
 
           {/* PORTRAIT — MOBILE */}
           {agentImage &&
-            <motion.div
-              className="relative z-10 flex justify-center items-end overflow-hidden md:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.15 }}>
+            <div
+              className="relative z-10 flex justify-center items-end overflow-hidden md:hidden animate-fade-in"
+              style={{ animationDelay: "150ms" }}>
               
               <div
                 className="relative"
@@ -330,7 +303,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   fetchPriority="high" />
                 
               </div>
-            </motion.div>
+            </div>
             }
         </div>
       </div>
