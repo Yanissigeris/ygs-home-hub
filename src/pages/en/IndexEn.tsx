@@ -61,7 +61,7 @@ const sectors = [
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
 <div ref={ref}>
-    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and zero pressure." />
+    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support." />
     <HeroSection
     overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
     title="Your real estate ally in Outaouais"
