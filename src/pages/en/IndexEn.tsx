@@ -145,7 +145,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
       <div className="section-container max-w-[56rem]">
         <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
           <p className="label-overline mb-3">Why clients trust me</p>
-          <h2 className="mb-4">Simple, strategic, pressure-free</h2>
+          <h2 className="mb-4">Simple, strategic, human</h2>
           <p className="mx-auto max-w-[34rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Helping you see clearly and make the right decision at the right time.</p>
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-3">
