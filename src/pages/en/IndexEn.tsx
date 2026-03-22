@@ -185,7 +185,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
           <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild>
             <Link to="/en/home-valuation">Start with a free valuation<ArrowRight size={15} className="ml-1" /></Link>
           </Button>
-          <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">Zero pressure — I give you the numbers and the options, you decide.</p>
+          <p className="mt-4 text-[0.8125rem] text-muted-foreground/45">I give you the numbers and the options — you decide with full clarity.</p>
         </motion.div>
       </div>
     </section>
