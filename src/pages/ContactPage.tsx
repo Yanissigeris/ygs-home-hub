@@ -78,13 +78,13 @@ const ContactPage = () => {
         logoAlt="YGS - Yanis Gauthier-Sigeris Inc."
       >
         <p className="prose-body mt-6">
-          Courtier immobilier en Outaouais, Yanis Gauthier-Sigeris accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Son objectif: vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+          Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
         </p>
         <p className="prose-body mt-4">
-          Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, il a eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui le motive, c'est de savoir que ses clients prennent des décisions éclairées.
+          Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
         </p>
         <p className="prose-body mt-4">
-          Investisseur immobilier lui-même, il sait également analyser en profondeur les opportunités en multilogement. Son expérience concrète en flips immobiliers, combinée à sa formation en gestion de projet (AEC), fait de lui un allié incontournable pour tout projet immobilier.
+          Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.
         </p>
 
         <ContactCard items={contactItems} />
