@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 /* Inline SVG icons — avoids loading lucide-react in the critical path */
 const MenuIcon = ({ size = 20 }: { size?: number }) => (
@@ -11,7 +12,6 @@ const XIcon = ({ size = 20 }: { size?: number }) => (
 const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m6 9 6 6 6-6"/></svg>
 );
-import { Button } from "@/components/ui/button";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoYgsHorizontal from "@/assets/logo-ygs-horizontal.webp";
