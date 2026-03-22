@@ -101,30 +101,30 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         style={{ background: "#10242D" }}>
 
       {/* ANIMATED SHIMMER — visible while video loads */}
-      {heroVideo &&
+      {heroVideo && (
         <div
           className="absolute inset-0 transition-opacity duration-[1.6s] ease-out"
           style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none" }}
-          aria-hidden="true">
-          
+          aria-hidden="true"
+        >
           <div
             className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]"
             style={{
               background:
-              "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%), " +
-              "radial-gradient(ellipse 100% 60% at 80% 30%, hsl(36 38% 46% / 0.08) 0%, transparent 50%)"
-            }} />
-          
+                "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%), " +
+                "radial-gradient(ellipse 100% 60% at 80% 30%, hsl(36 38% 46% / 0.08) 0%, transparent 50%)",
+            }}
+          />
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-              backgroundSize: "128px 128px"
-            }} />
-          
+                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+              backgroundSize: "128px 128px",
+            }}
+          />
         </div>
-        }
+      )}
 
       {/* VIDEO BACKGROUND LAYER */}
       {heroVideo &&
@@ -178,8 +178,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt="" role="presentation"
               className="h-full w-full object-cover"
               style={{ filter: "brightness(1.0) saturate(0.85) contrast(0.95)" }}
-              loading="eager"
-              fetchPriority="high" />
+               loading="eager"
+               fetchPriority="high" />
             
           </motion.div>
           <div
@@ -286,14 +286,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
                   WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)"
                 }}>
-                
-
-
-
-
-
-
-                
+                <img
+                  src={agentImage}
+                  alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+                  width={640}
+                  height={960}
+                  className="relative z-0 w-[340px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
+                  loading="eager"
+                  fetchPriority="high" />
 
               </div>
             </motion.div>
