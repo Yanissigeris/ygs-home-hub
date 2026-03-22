@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import yanisPhoto from "@/assets/yanis-hero.webp";
 import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
