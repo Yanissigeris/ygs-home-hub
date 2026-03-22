@@ -30,20 +30,20 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
       <div className="hidden border-b border-white/[0.06] bg-[hsl(200,42%,16%)] sm:block">
         <div className="section-container flex h-[38px] items-center justify-between">
           <div className="flex items-center gap-5 text-[0.75rem] tracking-[0.01em] text-white/55">
-            <a href="tel:+18192103044" className="flex items-center gap-2 transition-colors duration-200 hover:text-white/90">
-              <Phone size={12} strokeWidth={1.5} className="text-white/35" /><span>819-210-3044</span>
+             <a href="tel:+18192103044" className="flex items-center gap-2 transition-colors duration-200 hover:text-white/90">
+              <PhoneIcon size={12} className="text-white/35" /><span>819-210-3044</span>
             </a>
             <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
             <a href="mailto:yanis@martywaite.com" className="flex items-center gap-2 transition-colors duration-200 hover:text-white/90">
-              <Mail size={12} strokeWidth={1.5} className="text-white/35" /><span>yanis@martywaite.com</span>
+              <MailIcon size={12} className="text-white/35" /><span>yanis@martywaite.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/40 transition-colors duration-200 hover:text-white/80">
-              <Facebook size={13} strokeWidth={1.5} />
+              <FacebookIcon size={13} className="" />
             </a>
             <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/40 transition-colors duration-200 hover:text-white/80">
-              <Instagram size={13} strokeWidth={1.5} />
+              <InstagramIcon size={13} className="" />
             </a>
             <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
             <Link to={relocationHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{relocationLabel}</Link>
@@ -55,7 +55,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
       <div className="border-b border-white/[0.06] bg-[hsl(200,42%,16%)] sm:hidden">
         <div className="flex min-h-[38px] items-center justify-between gap-3 px-4 py-1.5">
           <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 text-[0.7188rem] text-white/60 transition-colors hover:text-white/85">
-            <Phone size={11} strokeWidth={1.5} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
+            <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
           </a>
           <Link to={ctaHref} className="inline-flex h-[26px] shrink-0 items-center rounded-full border border-white/[0.08] bg-white/[0.09] px-3 text-[0.625rem] font-medium tracking-[0.03em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95">{ctaLabelMobile}</Link>
         </div>
