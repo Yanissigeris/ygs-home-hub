@@ -4,19 +4,20 @@ import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
-import PathwaySection from "@/components/PathwaySection";
-import CredibilitySection from "@/components/CredibilitySection";
-import ConversionSection from "@/components/ConversionSection";
-import CTASection from "@/components/CTASection";
-import AudienceCards from "@/components/AudienceCards";
-import AboutSection from "@/components/AboutSection";
-import SectorsSection from "@/components/SectorsSection";
-import InlineCTA from "@/components/InlineCTA";
 import ReviewStrip from "@/components/ReviewStrip";
-import ReviewSection from "@/components/ReviewSection";
-import GuideOffersSection from "@/components/GuideOffersSection";
-import { getReviewsById } from "@/data/reviews";
 
+/* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
+const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
+const AboutSection = React.lazy(() => import("@/components/AboutSection"));
+const CredibilitySection = React.lazy(() => import("@/components/CredibilitySection"));
+const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
+const InlineCTA = React.lazy(() => import("@/components/InlineCTA"));
+const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
+const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
+const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
+const CTASection = React.lazy(() => import("@/components/CTASection"));
+
+import { getReviewsById } from "@/data/reviews";
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
@@ -41,42 +42,44 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <ReviewStrip review={heroReview} />
 
-    <PathwaySection />
+    <React.Suspense fallback={null}>
+      <PathwaySection />
 
-    <AboutSection />
+      <AboutSection />
 
-    <CredibilitySection />
+      <CredibilitySection />
 
-    <ConversionSection />
+      <ConversionSection />
 
-    <InlineCTA
-      text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Évaluation Gratuite →"
-      href="/evaluation-gratuite-gatineau"
-    />
+      <InlineCTA
+        text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
+        buttonLabel="Évaluation Gratuite →"
+        href="/evaluation-gratuite-gatineau"
+      />
 
-    <SectorsSection />
+      <SectorsSection />
 
-    <GuideOffersSection background="alt" />
+      <GuideOffersSection background="alt" />
 
-    <ReviewSection
-      overline="Témoignages"
-      title="Ce que disent mes clients"
-      reviews={homepageReviews}
-      columns={3}
-    />
+      <ReviewSection
+        overline="Témoignages"
+        title="Ce que disent mes clients"
+        reviews={homepageReviews}
+        columns={3}
+      />
 
-    <CTASection
-      dark
-      overline="Première étape"
-      title="Prenez la bonne première étape"
-      text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
-      buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
-      ]}
-      trustLine="Je vous donne les chiffres et les options, vous décidez."
-    />
+      <CTASection
+        dark
+        overline="Première étape"
+        title="Prenez la bonne première étape"
+        text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
+        buttons={[
+          { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
+          { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        ]}
+        trustLine="Je vous donne les chiffres et les options, vous décidez."
+      />
+    </React.Suspense>
   </div>
 ));
 
