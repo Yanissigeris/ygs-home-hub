@@ -4,19 +4,20 @@ import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
-import PathwaySection from "@/components/PathwaySection";
-import CredibilitySection from "@/components/CredibilitySection";
-import ConversionSection from "@/components/ConversionSection";
-import CTASection from "@/components/CTASection";
-import AudienceCards from "@/components/AudienceCards";
-import AboutSection from "@/components/AboutSection";
-import SectorsSection from "@/components/SectorsSection";
-import InlineCTA from "@/components/InlineCTA";
 import ReviewStrip from "@/components/ReviewStrip";
-import ReviewSection from "@/components/ReviewSection";
-import GuideOffersSection from "@/components/GuideOffersSection";
-import { getReviewsById } from "@/data/reviews";
 
+/* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
+const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
+const AboutSection = React.lazy(() => import("@/components/AboutSection"));
+const CredibilitySection = React.lazy(() => import("@/components/CredibilitySection"));
+const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
+const InlineCTA = React.lazy(() => import("@/components/InlineCTA"));
+const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
+const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
+const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
+const CTASection = React.lazy(() => import("@/components/CTASection"));
+
+const { getReviewsById } = await import("@/data/reviews");
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
