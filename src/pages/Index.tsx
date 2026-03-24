@@ -17,7 +17,7 @@ const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSect
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
 
-const { getReviewsById } = await import("@/data/reviews");
+import { getReviewsById } from "@/data/reviews";
 const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
