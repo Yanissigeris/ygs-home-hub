@@ -42,42 +42,44 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <ReviewStrip review={heroReview} />
 
-    <PathwaySection />
+    <React.Suspense fallback={null}>
+      <PathwaySection />
 
-    <AboutSection />
+      <AboutSection />
 
-    <CredibilitySection />
+      <CredibilitySection />
 
-    <ConversionSection />
+      <ConversionSection />
 
-    <InlineCTA
-      text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Évaluation Gratuite →"
-      href="/evaluation-gratuite-gatineau"
-    />
+      <InlineCTA
+        text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
+        buttonLabel="Évaluation Gratuite →"
+        href="/evaluation-gratuite-gatineau"
+      />
 
-    <SectorsSection />
+      <SectorsSection />
 
-    <GuideOffersSection background="alt" />
+      <GuideOffersSection background="alt" />
 
-    <ReviewSection
-      overline="Témoignages"
-      title="Ce que disent mes clients"
-      reviews={homepageReviews}
-      columns={3}
-    />
+      <ReviewSection
+        overline="Témoignages"
+        title="Ce que disent mes clients"
+        reviews={homepageReviews}
+        columns={3}
+      />
 
-    <CTASection
-      dark
-      overline="Première étape"
-      title="Prenez la bonne première étape"
-      text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
-      buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
-      ]}
-      trustLine="Je vous donne les chiffres et les options, vous décidez."
-    />
+      <CTASection
+        dark
+        overline="Première étape"
+        title="Prenez la bonne première étape"
+        text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
+        buttons={[
+          { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
+          { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        ]}
+        trustLine="Je vous donne les chiffres et les options, vous décidez."
+      />
+    </React.Suspense>
   </div>
 ));
 
