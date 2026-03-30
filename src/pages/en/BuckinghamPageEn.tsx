@@ -16,7 +16,7 @@ import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buckingham.webp";
-import riverImg from "@/assets/gatineau-river-view.webp";
+import riverImg from "@/assets/buckingham-river-nature.jpg";
 
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
