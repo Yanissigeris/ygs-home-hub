@@ -9,7 +9,8 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
 import SectorLinks from "@/components/SectorLinks";
-import plateauImg from "@/assets/plateau-aylmer-lifestyle.webp";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import riverImg from "@/assets/gatineau-river-view.webp";
 
 const reasons = [
@@ -83,6 +84,13 @@ const NeighborhoodPage = () => (
       ]}
     />
 
+    <GuideInlineCTA
+      guideType="buyer_guide"
+      headline="Guide acheteur gratuit — acheter dans le Plateau / Aylmer"
+      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      ctaLabel="Recevoir le guide acheteur"
+    />
+
     <CTASection
       dark
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
@@ -93,6 +101,8 @@ const NeighborhoodPage = () => (
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
+
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
   </>
 );
 
