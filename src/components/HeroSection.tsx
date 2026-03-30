@@ -272,7 +272,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   height={960}
                   className="relative z-0 w-[340px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
                   loading="eager"
-                  fetchPriority="high" />
+                  fetchpriority="high" />
 
               </div>
             </div>
