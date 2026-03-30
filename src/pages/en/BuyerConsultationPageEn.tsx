@@ -17,7 +17,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.webp";
-import heroImg from "@/assets/hero-buyer.webp";
+import heroImg from "@/assets/hero-buyer-consultation.webp";
 
 const benefits = [
   "Personalized discussion about your criteria and priorities",
@@ -57,8 +57,6 @@ const BuyerConsultationPageEn = () => {
         title="Book your free buyer consultation"
         subtitle="Let's discuss your criteria, budget and questions — so you can buy with confidence."
         trustLine="Free, confidential and no commitment."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 
