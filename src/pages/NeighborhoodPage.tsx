@@ -9,7 +9,8 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
 import SectorLinks from "@/components/SectorLinks";
-import plateauImg from "@/assets/plateau-aylmer-lifestyle.webp";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import riverImg from "@/assets/gatineau-river-view.webp";
 
 const reasons = [
