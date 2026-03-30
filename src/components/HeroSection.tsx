@@ -126,8 +126,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               preload="auto"
               width={1920}
               height={1080}
-              // @ts-ignore — fetchPriority is valid HTML but React 18 types don't include it
-              fetchPriority="high"
+              // @ts-ignore — fetchpriority is valid HTML but React 18 types lag behind
+              fetchpriority="high"
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.82) saturate(0.75) contrast(1.04)" }} />
             
@@ -159,7 +159,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.88) saturate(0.85) contrast(0.95)" }}
                loading="eager"
-               fetchPriority="high" />
+               // @ts-ignore
+               fetchpriority="high" />
             
           </div>
           <div
@@ -272,7 +273,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   height={960}
                   className="relative z-0 w-[340px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
                   loading="eager"
-                  fetchPriority="high" />
+                  // @ts-ignore
+                  fetchpriority="high" />
 
               </div>
             </div>
@@ -300,7 +302,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   height={480}
                   className="relative z-0 w-[260px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
                   loading="eager"
-                  fetchPriority="high" />
+                  // @ts-ignore
+                  fetchpriority="high" />
                 
               </div>
             </div>
