@@ -159,7 +159,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.88) saturate(0.85) contrast(0.95)" }}
                loading="eager"
-               fetchPriority="high" />
+               fetchpriority="high" />
             
           </div>
           <div
