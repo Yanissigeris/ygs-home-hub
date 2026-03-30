@@ -57,8 +57,6 @@ const BuyerConsultationPage = () => {
         title="Réservez votre consultation acheteur gratuite"
         subtitle="On parle de vos critères, votre budget et vos questions — pour que vous puissiez acheter en toute confiance."
         trustLine="Gratuit, confidentiel et sans engagement."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 

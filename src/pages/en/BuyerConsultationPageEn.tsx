@@ -57,8 +57,6 @@ const BuyerConsultationPageEn = () => {
         title="Book your free buyer consultation"
         subtitle="Let's discuss your criteria, budget and questions — so you can buy with confidence."
         trustLine="Free, confidential and no commitment."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 
