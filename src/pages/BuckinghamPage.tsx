@@ -153,7 +153,7 @@ const BuckinghamPage = () => (
       title="Acheteur ou vendeur à Buckingham / Masson-Angers?"
       text="Je peux vous aider à trouver la bonne propriété ou à connaître la valeur de la vôtre."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
         { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
