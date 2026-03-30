@@ -47,21 +47,6 @@ const NeighborhoodPage = () => (
       heroBgImage={riverImg}
     />
 
-    <ImageTextSplit image={plateauImg} imageAlt="Quartier résidentiel du Plateau / Aylmer, Gatineau" imagePosition="right">
-      <SectionHeading
-        overline="Le secteur"
-        title="Pourquoi les gens aiment le Plateau / Aylmer"
-        subtitle="Familles, jeunes professionnels, acheteurs relocalisés d'Ottawa — le secteur attire pour ses maisons récentes, ses services et son mode de vie pratique."
-      />
-      <div className="mt-7 space-y-3.5">
-        {reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
 
     <CardGrid
       overline="Pour qui"
