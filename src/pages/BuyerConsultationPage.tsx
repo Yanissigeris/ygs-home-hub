@@ -17,7 +17,7 @@ import {
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.webp";
-import heroImg from "@/assets/hero-buyer.webp";
+import heroImg from "@/assets/hero-buyer-consultation.webp";
 
 const benefits = [
   "Échange personnalisé sur vos critères et priorités",
