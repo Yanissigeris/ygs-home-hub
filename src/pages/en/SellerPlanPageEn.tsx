@@ -56,8 +56,6 @@ const SellerPlanPageEn = () => {
         title="Get your personalized seller plan"
         subtitle="Pricing, preparation, marketing and timeline — a clear plan tailored to your property and situation."
         trustLine="A strategic plan, not a sales pitch — to help you sell at the right price, at the right time."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 

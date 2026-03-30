@@ -56,8 +56,6 @@ const SellerPlanPage = () => {
         title="Recevez votre plan vendeur personnalisé"
         subtitle="Prix, préparation, mise en marché et calendrier — un plan clair adapté à votre propriété et votre situation."
         trustLine="Un plan stratégique, pas une pitch de vente — pour vous aider à vendre au bon prix, au bon moment."
-        agentImage={yanisPhoto}
-        agentName="Yanis Gauthier-Sigeris"
         heroBgImage={heroImg}
       />
 
