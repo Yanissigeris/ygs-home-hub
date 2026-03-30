@@ -41,7 +41,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
               className={dark && btn.variant !== "outline" ? "shadow-md" : ""}
               asChild
             >
-              <Link to={btn.href}>{btn.label}</Link>
+              <Link to={btn.href}>{btn.label === "Obtenir ma valeur" ? "Évaluation gratuite" : btn.label}</Link>
             </Button>
           ))}
         </div>
