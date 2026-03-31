@@ -260,10 +260,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <div className="mt-5 sm:mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        className="fill-[hsl(36_50%_52%/0.5)] text-[hsl(36_50%_52%/0.5)]"
-                      />
+                      <StarIcon key={i} />
                     ))}
                   </div>
                   <span
