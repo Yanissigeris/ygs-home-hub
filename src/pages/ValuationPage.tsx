@@ -156,7 +156,7 @@ const ValuationPage = () => {
                   <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                     <div>
                       <Label htmlFor="adresse" className="text-primary-foreground/60 text-[0.8125rem]">Adresse de la propriété</Label>
-                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                      <Input id="adresse" name="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-2">
