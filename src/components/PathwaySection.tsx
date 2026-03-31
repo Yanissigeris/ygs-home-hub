@@ -11,8 +11,8 @@ import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const pathways = [
   {
-    title: "Vendre ma propriété",
-    text: "Évaluation réaliste, stratégie de prix et mise en marché — pour maximiser votre résultat.",
+    title: "Vendre ma propriété en Outaouais",
+    text: "Évaluation réaliste, stratégie de prix adaptée au marché de Gatineau et mise en marché ciblée — pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
