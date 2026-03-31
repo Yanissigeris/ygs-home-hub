@@ -264,8 +264,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     ))}
                   </div>
                   <span
-                    className="text-[0.75rem] font-normal tracking-[0.02em]"
-                    style={{ color: "hsl(200 15% 55% / 0.45)" }}
+                    className="text-[0.8125rem] font-medium tracking-[0.02em]"
+                    style={{ color: "hsl(200 15% 68% / 0.6)" }}
                   >
                     {socialProof}
                   </span>
