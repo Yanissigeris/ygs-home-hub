@@ -54,8 +54,10 @@ const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
+  const lang = useLanguage();
+  const isFr = lang === "fr";
 
-  // Hreflang injection must be before any early return (hooks rules)
+  // All hooks must be before any early return
   useEffect(() => {
     if (!post || !post.published) return;
     const frSlug = post.slug;
@@ -81,15 +83,36 @@ const BlogArticlePage = () => {
     return () => { links.forEach(l => l.remove()); };
   }, [post]);
 
+  const body = post && post.published ? (isFr ? post.body : post.bodyEn) : "";
+
+  const slugify = (text: string) =>
+    text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
+
+  const tocItems = useMemo(() => {
+    if (!body) return [];
+    const items: { level: number; text: string; id: string }[] = [];
+    body.split("\n").forEach((line) => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith("## ") && !trimmed.startsWith("### ")) {
+        const text = trimmed.slice(3);
+        items.push({ level: 2, text, id: slugify(text) });
+      } else if (trimmed.startsWith("### ")) {
+        const text = trimmed.slice(4);
+        items.push({ level: 3, text, id: slugify(text) });
+      }
+    });
+    return items;
+  }, [body]);
+
+  const showToc = tocItems.filter((t) => t.level === 2).length >= 3;
+
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
   }
 
-  const isFr = lang === "fr";
   const title = isFr ? post.title : post.titleEn;
   const seoTitle = isFr ? post.seoTitle : post.seoTitleEn;
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
-  const body = isFr ? post.body : post.bodyEn;
   const category = isFr ? post.category : post.categoryEn;
   const dateStr = new Date(post.publishDate).toLocaleDateString(
     isFr ? "fr-CA" : "en-CA",
@@ -107,27 +130,6 @@ const BlogArticlePage = () => {
       return cat === category && s !== slug;
     })
     .slice(0, 3);
-
-  // Extract TOC from body
-  const slugify = (text: string) =>
-    text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
-
-  const tocItems = useMemo(() => {
-    const items: { level: number; text: string; id: string }[] = [];
-    body.split("\n").forEach((line) => {
-      const trimmed = line.trim();
-      if (trimmed.startsWith("## ") && !trimmed.startsWith("### ")) {
-        const text = trimmed.slice(3);
-        items.push({ level: 2, text, id: slugify(text) });
-      } else if (trimmed.startsWith("### ")) {
-        const text = trimmed.slice(4);
-        items.push({ level: 3, text, id: slugify(text) });
-      }
-    });
-    return items;
-  }, [body]);
-
-  const showToc = tocItems.filter((t) => t.level === 2).length >= 3;
 
   // Simple markdown-ish renderer for ## and ### headings, bold, lists, paragraphs
   const renderBody = (md: string) => {
