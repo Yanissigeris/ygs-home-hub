@@ -19,10 +19,10 @@ import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "l
 import heroImg from "@/assets/hero-seller.webp";
 
 const painPoints = [
-{ icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
-{ icon: CheckCircle2, title: "Combien vaut vraiment ma propriété?", text: "Un prix réaliste basé sur les ventes récentes — pas un chiffre gonflé pour vous attirer." },
-{ icon: CheckCircle2, title: "Faut-il faire des travaux avant?", text: "Certains investissements rapportent. D'autres non. On fait le tri ensemble." },
-{ icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "La coordination vente-achat demande un plan dès le départ." }];
+{ icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Le marché de Gatineau évolue. Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
+{ icon: CheckCircle2, title: "Combien vaut vraiment ma propriété?", text: "Un prix réaliste basé sur les ventes récentes dans votre secteur en Outaouais — pas un chiffre gonflé pour vous attirer." },
+{ icon: CheckCircle2, title: "Faut-il faire des travaux avant?", text: "Certains investissements rapportent dans le marché local. D'autres non. On fait le tri ensemble." },
+{ icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "La coordination vente-achat à Gatineau demande un plan dès le départ — surtout si vous restez dans la région." }];
 
 
 const fears = [
