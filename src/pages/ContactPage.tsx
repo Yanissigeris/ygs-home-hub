@@ -130,7 +130,7 @@ const ContactPage = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <Label htmlFor="nom">Nom</Label>
-                <Input id="nom" className="mt-1.5" required />
+                <Input id="nom" name="nom" className="mt-1.5" required />
               </div>
               <div>
                 <Label htmlFor="courriel">Courriel</Label>
