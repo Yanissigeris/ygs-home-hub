@@ -39,10 +39,12 @@ const ValDesMontsPage = () => (
       { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Abordable, rivière, nature" },
     ]}}
     related={{ pages: [
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-      { title: "Investir en plex", text: "Analyse pour investisseurs.", href: "/investir-plex-gatineau" },
+      { title: "Acheter un chalet à Val-des-Monts", text: "Guide pratique pour acheteurs.", href: "/blogue/acheter-chalet-val-des-monts" },
+      { title: "Meilleurs lacs de Val-des-Monts", text: "Quel lac choisir pour acheter?", href: "/blogue/meilleurs-lacs-val-des-monts" },
+      { title: "Résidence permanente ou chalet?", text: "Vivre à l'année à Val-des-Monts.", href: "/blogue/val-des-monts-residence-permanente" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

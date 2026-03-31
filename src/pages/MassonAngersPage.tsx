@@ -39,10 +39,12 @@ const MassonAngersPage = () => (
       { name: "Limbour", href: "/limbour", detail: "Familial, parcs, banlieue moderne" },
     ]}}
     related={{ pages: [
-      { title: "Premier achat", text: "Conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+      { title: "Masson-Angers en plein essor", text: "Pourquoi ce secteur explose.", href: "/blogue/masson-angers-secteur-en-essor" },
+      { title: "Premier achat à Masson-Angers", text: "Pourquoi c'est le bon moment.", href: "/blogue/premier-achat-masson-angers" },
+      { title: "Constructions neuves", text: "Ce qu'il faut savoir sur le neuf.", href: "/blogue/constructions-neuves-masson-angers" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Masson-Angers", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

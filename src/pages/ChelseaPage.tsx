@@ -39,10 +39,12 @@ const ChelseaPage = () => (
       { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
     ]}}
     related={{ pages: [
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec, étape par étape.", href: "/guide-acheteur-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété à Chelsea?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Premier achat", text: "Budget, mise de fonds et conseils pratiques.", href: "/premier-achat-gatineau" },
-      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs de l'Outaouais.", href: "/quartiers-a-considerer-a-gatineau" },
+      { title: "Acheter à Chelsea — guide complet", text: "Tout savoir pour acheter une maison à Chelsea.", href: "/blogue/acheter-maison-chelsea-guide" },
+      { title: "Vivre à Chelsea", text: "Style de vie, nature et communauté.", href: "/blogue/vivre-chelsea-style-de-vie" },
+      { title: "Marché immobilier Chelsea 2025", text: "Tendances et prix dans le secteur.", href: "/blogue/marche-immobilier-chelsea-2025" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Chelsea", text: "Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur à Chelsea?", text: "Je connais Chelsea par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

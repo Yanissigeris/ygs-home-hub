@@ -40,9 +40,11 @@ const PlateauPage = () => (
     ]}}
     related={{ pages: [
       { title: "Vivre dans le Plateau", text: "Guide de vie dans le secteur.", href: "/vivre-dans-le-plateau" },
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-      { title: "Premier achat", text: "Conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+      { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter dans le Plateau", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Je connais le Plateau par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
