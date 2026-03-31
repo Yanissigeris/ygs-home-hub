@@ -29,7 +29,7 @@ export const neighborhoodBlogPosts: BlogPost[] = [
     published: true,
     body: `## Pourquoi acheter à Chelsea?
 
-Chelsea est un village unique en Outaouais. Situé aux portes du parc de la Gatineau, il offre un cadre de vie exceptionnel pour ceux qui cherchent la nature sans sacrifier l'accès à la ville. À 20-30 minutes d'Ottawa, Chelsea combine le meilleur des deux mondes.
+Chelsea est un village unique en Outaouais. Situé aux portes du parc de la Gatineau, il offre un cadre de vie exceptionnel pour ceux qui cherchent la nature sans sacrifier l'accès à la ville. À 20-30 minutes d'Ottawa, [Chelsea](/chelsea) combine le meilleur des deux mondes.
 
 Le village est reconnu pour sa communauté artistique, son marché fermier et ses cafés de qualité. C'est un endroit où les voisins se connaissent et où la qualité de vie prime sur tout le reste.
 
@@ -56,7 +56,7 @@ Chelsea n'est pas pour tout le monde — c'est pour ceux qui valorisent la natur
 **Lire aussi** : [Guide acheteur complet](/guide-acheteur-gatineau) · [Tous les quartiers de Gatineau](/quartiers-a-considerer-a-gatineau)`,
     bodyEn: `## Why Buy in Chelsea?
 
-Chelsea is a unique village in the Outaouais. Located at the doorstep of Gatineau Park, it offers an exceptional lifestyle for those seeking nature without sacrificing city access. At 20-30 minutes from Ottawa, Chelsea combines the best of both worlds.
+Chelsea is a unique village in the Outaouais. Located at the doorstep of Gatineau Park, it offers an exceptional lifestyle for those seeking nature without sacrificing city access. At 20-30 minutes from Ottawa, [Chelsea](/en/chelsea) combines the best of both worlds.
 
 The village is known for its artistic community, farmers' market and quality cafés. It's a place where neighbors know each other and quality of life comes first.
 
@@ -112,7 +112,7 @@ Le vieux Chelsea offre une belle sélection de restaurants, cafés et boutiques.
 
 ## Proximité d'Ottawa
 
-Malgré son caractère rural, Chelsea est à seulement 20-30 minutes du centre-ville d'Ottawa. Plusieurs résidents font le trajet quotidiennement pour le travail, profitant du meilleur des deux mondes.
+Malgré son caractère rural, [Chelsea](/chelsea) est à seulement 20-30 minutes du centre-ville d'Ottawa. Plusieurs résidents font le trajet quotidiennement pour le travail, profitant du meilleur des deux mondes.
 
 ## Pour qui Chelsea convient
 
@@ -133,7 +133,7 @@ Old Chelsea offers a fine selection of restaurants, cafés and boutiques. Les Br
 
 ## Proximity to Ottawa
 
-Despite its rural character, Chelsea is only 20-30 minutes from downtown Ottawa. Many residents commute daily, enjoying the best of both worlds.
+Despite its rural character, [Chelsea](/en/chelsea) is only 20-30 minutes from downtown Ottawa. Many residents commute daily, enjoying the best of both worlds.
 
 ## Who Chelsea Is For
 
@@ -222,7 +222,7 @@ Chelsea is a niche market — properties sell to buyers seeking a specific lifes
     published: true,
     body: `## Pourquoi Cantley pour un grand terrain?
 
-Cantley est l'une des municipalités les plus prisées de l'Outaouais pour les grands terrains. Située à seulement 20 minutes de Gatineau, elle offre la vie rurale avec la commodité de la ville à proximité. Les terrains varient de 1 à plus de 10 acres, avec des prix encore accessibles comparés à Chelsea.
+Cantley est l'une des municipalités les plus prisées de l'Outaouais pour les grands terrains. Située à seulement 20 minutes de [Gatineau](/gatineau-centre), elle offre la vie rurale avec la commodité de la ville à proximité. Les terrains varient de 1 à plus de 10 acres, avec des prix encore accessibles comparés à Chelsea.
 
 ## Zonage et réglementation
 
@@ -243,7 +243,7 @@ Cantley est idéal si vous cherchez l'espace et la tranquillité sans être isol
 **Lire aussi** : [Guide acheteur](/guide-acheteur-gatineau) · [Page quartier Cantley](/cantley)`,
     bodyEn: `## Why Cantley for a Large Lot?
 
-Cantley is one of the most sought-after municipalities in the Outaouais for large lots. Located just 20 minutes from Gatineau, it offers rural living with city convenience nearby. Lots range from 1 to over 10 acres, with prices still accessible compared to Chelsea.
+Cantley is one of the most sought-after municipalities in the Outaouais for large lots. Located just 20 minutes from [Gatineau](/en/gatineau-centre), it offers rural living with city convenience nearby. Lots range from 1 to over 10 acres, with prices still accessible compared to [Chelsea](/en/chelsea).
 
 ## Zoning and Regulations
 
@@ -285,7 +285,7 @@ Cantley est un endroit où le temps semble ralentir. Des collines verdoyantes, d
 
 ## Activités et plein air
 
-Les amateurs de plein air adorent Cantley. Équitation, VTT, motoneige, randonnée, ski de fond — chaque saison offre des possibilités. La proximité du parc de la Gatineau ajoute encore plus d'options pour les sportifs.
+Les amateurs de plein air adorent Cantley. Équitation, VTT, motoneige, randonnée, ski de fond — chaque saison offre des possibilités. La proximité du [parc de la Gatineau](/chelsea) ajoute encore plus d'options pour les sportifs.
 
 ## Communauté et événements
 
@@ -306,7 +306,7 @@ Cantley is a place where time seems to slow down. Rolling green hills, horses in
 
 ## Activities and Outdoors
 
-Outdoor enthusiasts love Cantley. Horseback riding, ATVing, snowmobiling, hiking, cross-country skiing — every season offers possibilities. The proximity of Gatineau Park adds even more options for sports lovers.
+Outdoor enthusiasts love Cantley. Horseback riding, ATVing, snowmobiling, hiking, cross-country skiing — every season offers possibilities. The proximity of [Gatineau Park](/en/chelsea) adds even more options for sports lovers.
 
 ## Community and Events
 
@@ -340,7 +340,7 @@ If you dream of a large lot, fresh air and tranquility without complete isolatio
     published: true,
     body: `## L'attrait de l'espace
 
-Pour beaucoup de familles, l'espace est le facteur déterminant. À Cantley, les terrains de 2 à 5 acres sont courants, offrant aux enfants un terrain de jeu naturel et aux parents la tranquillité qu'ils cherchent. Comparé aux banlieues de Gatineau, le rapport espace/prix est imbattable.
+Pour beaucoup de familles, l'espace est le facteur déterminant. À Cantley, les terrains de 2 à 5 acres sont courants, offrant aux enfants un terrain de jeu naturel et aux parents la tranquillité qu'ils cherchent. Comparé aux banlieues de [Gatineau](/quartiers-a-considerer-a-gatineau), le rapport espace/prix est imbattable.
 
 ## Des écoles à proximité
 
@@ -361,7 +361,7 @@ Depuis 2020, le télétravail a rendu Cantley accessible à un nouveau groupe d'
 **Lire aussi** : [Vivre à Cantley](/blogue/vivre-cantley-campagne-gatineau) · [Quartiers familiaux de Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## The Appeal of Space
 
-For many families, space is the deciding factor. In Cantley, 2 to 5 acre lots are common, offering children a natural playground and parents the tranquility they seek. Compared to Gatineau suburbs, the space-to-price ratio is unbeatable.
+For many families, space is the deciding factor. In Cantley, 2 to 5 acre lots are common, offering children a natural playground and parents the tranquility they seek. Compared to [Gatineau](/en/neighborhoods) suburbs, the space-to-price ratio is unbeatable.
 
 ## Schools Nearby
 
@@ -403,7 +403,7 @@ Since 2020, remote work has made Cantley accessible to a new group of buyers —
     published: true,
     body: `## Val-des-Monts : le paradis des chalets
 
-Avec plus de 200 lacs, Val-des-Monts est la destination chalet par excellence en Outaouais. Située à 30-40 minutes de Gatineau, la municipalité offre des paysages exceptionnels et un accès à la nature difficile à égaler.
+Avec plus de 200 lacs, Val-des-Monts est la destination chalet par excellence en Outaouais. Située à 30-40 minutes de [Gatineau](/gatineau-centre), la municipalité offre des paysages exceptionnels et un accès à la nature difficile à égaler.
 
 ## Bord de lac vs hors bord de lac
 
@@ -429,7 +429,7 @@ Val-des-Monts est un investissement dans votre qualité de vie. Prenez le temps 
 **Lire aussi** : [Val-des-Monts — page quartier](/val-des-monts) · [Guide acheteur](/guide-acheteur-gatineau)`,
     bodyEn: `## Val-des-Monts: Cottage Paradise
 
-With over 200 lakes, Val-des-Monts is the ultimate cottage destination in the Outaouais. Located 30-40 minutes from Gatineau, the municipality offers exceptional landscapes and nature access that's hard to match.
+With over 200 lakes, Val-des-Monts is the ultimate cottage destination in the Outaouais. Located 30-40 minutes from [Gatineau](/en/gatineau-centre), the municipality offers exceptional landscapes and nature access that's hard to match.
 
 ## Waterfront vs Off-Waterfront
 
@@ -627,7 +627,7 @@ Masson-Angers is undergoing a major transformation. What was once a rural area o
 
 ## Still Affordable Prices
 
-One of Masson-Angers' biggest draws is price. New homes sell at significantly lower prices than in Aylmer or the Plateau. For a first purchase, it's often the most financially realistic area.
+One of Masson-Angers' biggest draws is price. New homes sell at significantly lower prices than in [Aylmer](/en/aylmer) or the [Plateau](/en/plateau). For a first purchase, it's often the most financially realistic area.
 
 ## New Developments
 
@@ -791,7 +791,7 @@ Le Pontiac offre une diversité impressionnante : fermes centenaires en pierre, 
 
 ## Villages à connaître
 
-Les principaux villages du Pontiac incluent Luskville (le plus proche de Gatineau), Quyon, Shawville, Bristol et Fort-Coulonge. Chaque village a son caractère et son niveau de services.
+Les principaux villages du Pontiac incluent Luskville (le plus proche de [Gatineau](/gatineau-centre)), Quyon, Shawville, Bristol et Fort-Coulonge. Chaque village a son caractère et son niveau de services.
 
 ## Considérations pratiques
 
@@ -812,7 +812,7 @@ The Pontiac offers impressive diversity: century-old stone farmhouses, renovated
 
 ## Villages to Know
 
-The main Pontiac villages include Luskville (closest to Gatineau), Quyon, Shawville, Bristol and Fort-Coulonge. Each village has its own character and service level.
+The main Pontiac villages include Luskville (closest to [Gatineau](/en/gatineau-centre)), Quyon, Shawville, Bristol and Fort-Coulonge. Each village has its own character and service level.
 
 ## Practical Considerations
 
@@ -1161,7 +1161,7 @@ Le quartier est bien situé avec un accès rapide à l'autoroute 50, ce qui perm
 
 ## Mon conseil
 
-Limbour offre un excellent compromis entre la qualité des maisons neuves et des prix plus raisonnables que les secteurs premium comme Aylmer. Si vous cherchez une maison récente dans un environnement familial bien planifié, c'est un choix judicieux.
+Limbour offre un excellent compromis entre la qualité des maisons neuves et des prix plus raisonnables que les secteurs premium comme [Aylmer](/aylmer). Si vous cherchez une maison récente dans un environnement familial bien planifié, c'est un choix judicieux.
 
 **Lire aussi** : [Page quartier Limbour](/limbour) · [Quartiers familiaux de Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## A Neighborhood That Found Its Identity
@@ -1182,7 +1182,7 @@ The neighborhood is well-located with quick access to Highway 50, allowing you t
 
 ## My Advice
 
-Limbour offers an excellent compromise between new home quality and more reasonable prices than premium areas like Aylmer. If you're looking for a recent home in a well-planned family environment, it's a wise choice.
+Limbour offers an excellent compromise between new home quality and more reasonable prices than premium areas like [Aylmer](/en/aylmer). If you're looking for a recent home in a well-planned family environment, it's a wise choice.
 
 **Read also**: [Limbour neighborhood page](/en/limbour) · [Best family neighborhoods in Gatineau](/en/blog/best-family-neighborhoods-gatineau)`,
   },
@@ -1212,7 +1212,7 @@ Limbour offre principalement des maisons unifamiliales à deux étages avec gara
 
 ## Avantage sur le neuf
 
-Acheter une maison de revente à Limbour plutôt que du neuf à Masson-Angers offre plusieurs avantages : le terrain est déjà aménagé (gazon, arbres, clôture), le sous-sol est souvent déjà fini, et vous savez exactement ce que vous achetez — pas de surprises.
+Acheter une maison de revente à [Limbour](/limbour) plutôt que du neuf à [Masson-Angers](/masson-angers) offre plusieurs avantages : le terrain est déjà aménagé (gazon, arbres, clôture), le sous-sol est souvent déjà fini, et vous savez exactement ce que vous achetez — pas de surprises.
 
 ## Quartier déjà établi
 
@@ -1220,7 +1220,7 @@ Contrairement aux nouveaux développements, Limbour a déjà ses repères : parc
 
 ## Mon conseil
 
-Si vous hésitez entre le neuf à Masson-Angers et la revente à Limbour, considérez ce que vous valorisez le plus : la personnalisation (neuf) ou un quartier déjà établi avec une maison prête à habiter (Limbour).
+Si vous hésitez entre le neuf à [Masson-Angers](/masson-angers) et la revente à [Limbour](/limbour), considérez ce que vous valorisez le plus : la personnalisation (neuf) ou un quartier déjà établi avec une maison prête à habiter (Limbour).
 
 **Lire aussi** : [Limbour quartier familial](/blogue/limbour-quartier-familial-moderne-gatineau) · [Constructions neuves à Masson-Angers](/blogue/constructions-neuves-masson-angers)`,
     bodyEn: `## Limbour's Sweet Spot
@@ -1233,7 +1233,7 @@ Limbour mainly offers two-story single-family homes with garages, townhomes and 
 
 ## Advantage Over New
 
-Buying a resale home in Limbour rather than new in Masson-Angers offers several advantages: the lot is already landscaped (lawn, trees, fence), the basement is often already finished, and you know exactly what you're buying — no surprises.
+Buying a resale home in [Limbour](/en/limbour) rather than new in [Masson-Angers](/en/masson-angers) offers several advantages: the lot is already landscaped (lawn, trees, fence), the basement is often already finished, and you know exactly what you're buying — no surprises.
 
 ## An Already Established Neighborhood
 
@@ -1241,7 +1241,7 @@ Unlike new developments, Limbour already has its landmarks: mature parks, establ
 
 ## My Advice
 
-If you're torn between new construction in Masson-Angers and resale in Limbour, consider what you value most: customization (new) or an already established neighborhood with a move-in ready home (Limbour).
+If you're torn between new construction in [Masson-Angers](/en/masson-angers) and resale in [Limbour](/en/limbour), consider what you value most: customization (new) or an already established neighborhood with a move-in ready home (Limbour).
 
 **Read also**: [Limbour family neighborhood](/en/blog/limbour-modern-family-neighborhood-gatineau) · [New construction in Masson-Angers](/en/blog/new-construction-masson-angers)`,
   },
