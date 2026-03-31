@@ -2205,6 +2205,11 @@ A Gatineau broker knows:
 I'm not a volume broker. I take a limited number of clients to offer attentive, personalized service. Every transaction deserves my full attention.`,
   },
 ];
+
+import { neighborhoodBlogPosts } from "./blog-posts-neighborhoods";
+
+// Merge all blog posts
+const allBlogPosts: BlogPost[] = [...blogPosts, ...neighborhoodBlogPosts];
 export const getPublishedPosts = (lang: "fr" | "en" = "fr") =>
   blogPosts
     .filter((p) => p.published)
