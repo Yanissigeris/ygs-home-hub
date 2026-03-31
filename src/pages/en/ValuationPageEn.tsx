@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import { Button } from "@/components/ui/button";
