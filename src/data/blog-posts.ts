@@ -35,6 +35,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "marche-immobilier-gatineau-2025",
+    featuredImage: blogMarket,
     slugEn: "gatineau-real-estate-market-2025",
     title: "Le marché immobilier à Gatineau en 2025 : ce que les chiffres révèlent",
     titleEn: "Gatineau Real Estate Market in 2025: What the Numbers Reveal",
