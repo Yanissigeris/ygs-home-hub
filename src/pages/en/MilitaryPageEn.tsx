@@ -20,10 +20,10 @@ import heroImg from "@/assets/hero-military.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast — you need to find a home or sell quickly, without compromising on price." },
-  { icon: Shield, title: "Understanding the Québec market", text: "Taxes, notary process, zoning — Québec works differently from Ontario or the rest of Canada." },
-  { icon: Home, title: "Finding the right neighborhood", text: "Base proximity, schools, bilingual services — every family has its priorities." },
-  { icon: Heart, title: "Settling as a family", text: "Coordinating sale and purchase, finding a family neighborhood, enrolling kids — all while managing posting stress." },
+  { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast — you need to find a home in Gatineau or sell quickly, without compromising on price." },
+  { icon: Shield, title: "Understanding the Québec market", text: "Municipal and school taxes, notary process, zoning — Québec works differently from Ontario or the rest of Canada." },
+  { icon: Home, title: "Finding the right neighborhood", text: "Proximity to CFB Uplands or downtown Ottawa, French and English schools, bilingual services — every family has its priorities." },
+  { icon: Heart, title: "Settling as a family in Gatineau", text: "Coordinating sale and purchase, finding a family neighborhood in Aylmer, the Plateau or Hull, enrolling kids — all while managing posting stress." },
 ];
 const steps = [
   { num: "01", title: "Discovery call", desc: "We understand your situation — posting, timeline, budget, family priorities and target neighborhoods." },
