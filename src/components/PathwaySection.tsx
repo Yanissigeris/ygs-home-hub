@@ -55,7 +55,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
         <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
         <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
         <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
-          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire.
+          Chaque situation est différente. Que vous soyez à Gatineau, Aylmer, Hull ou en transition depuis Ottawa — je vous donne les chiffres, les options et une stratégie claire.
         </p>
       </motion.div>
 
