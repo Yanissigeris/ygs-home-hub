@@ -177,7 +177,7 @@ const ValuationPage = () => {
 
                     <div>
                       <Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optionnel)</Label>
-                      <Textarea id="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
+                      <Textarea id="message" name="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold">
