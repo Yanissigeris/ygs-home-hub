@@ -1696,7 +1696,7 @@ Example for a Gatineau home:
 
 Before refinancing, get your property appraised to know its true market value. I can provide a free valuation and refer you to trusted mortgage brokers in Gatineau.
 
-**Read also**: [Notary & Closing Costs](/en/blog/notary-closing-costs-gatineau) · [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value)`,
+**Read also**: [Notary & Closing Costs](/en/blog/notary-fees-buying-home-gatineau) · [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value)`,
   },
 
   // ── Article 19 – Marché locatif Gatineau ──
