@@ -50,8 +50,8 @@ const NeighborhoodsOverviewPage = () => (
     <PageMeta title="Quartiers de Gatineau — Guide complet | YGS" description="Comparez les quartiers de Gatineau et de l'Outaouais: Aylmer, Hull, Plateau, Buckingham et Gatineau-centre. Prix, ambiance, écoles et profil de chaque secteur." />
     <HeroSection
       overline="Quartiers · Gatineau et Outaouais"
-      title="Les quartiers à considérer à Gatineau"
-      subtitle="Chaque secteur de Gatineau a sa personnalité — familial, urbain, nature ou investissement. Explorez les quartiers pour trouver celui qui vous correspond."
+      title="Les quartiers à considérer en Outaouais/Gatineau"
+      subtitle="Chaque secteur de l'Outaouais a sa personnalité — familial, urbain, nature ou investissement. Explorez les quartiers pour trouver celui qui vous correspond."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       trustLine="Expertise locale. "
@@ -62,7 +62,7 @@ const NeighborhoodsOverviewPage = () => (
 
     <SectorLinks
       overline="Explorer les secteurs"
-      title="Tous les quartiers de Gatineau"
+      title="Les quartiers en Outaouais"
       sectors={sectors}
     />
 
