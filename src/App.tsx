@@ -54,6 +54,7 @@ const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
 const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
+const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
 const LivingAylmerPage = React.lazy(() => import("./pages/LivingAylmerPage"));
 const LivingHullPage = React.lazy(() => import("./pages/LivingHullPage"));
 const LivingPlateauPage = React.lazy(() => import("./pages/LivingPlateauPage"));
@@ -151,6 +152,7 @@ const routeTree = React.createElement(
       <Route path="/plateau" element={<PlateauPage />} />
       <Route path="/ressources" element={<ResourcesPage />} />
       <Route path="/blogue" element={<BlogPage />} />
+      <Route path="/blogue/:slug" element={<BlogArticlePage />} />
       <Route path="/vivre-a-aylmer" element={<LivingAylmerPage />} />
       <Route path="/vivre-a-hull" element={<LivingHullPage />} />
       <Route path="/vivre-dans-le-plateau" element={<LivingPlateauPage />} />
@@ -190,6 +192,7 @@ const routeTree = React.createElement(
       <Route path="/en/market-report" element={<MarketReportPageEn />} />
       <Route path="/en/resources" element={<ResourcesPageEn />} />
       <Route path="/en/blog" element={<BlogPageEn />} />
+      <Route path="/en/blog/:slug" element={<BlogArticlePage />} />
       <Route path="/en/faq" element={<FAQPageEn />} />
       <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
       <Route path="/en/contact" element={<ContactPageEn />} />
