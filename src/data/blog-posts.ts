@@ -71,11 +71,11 @@ Le marché immobilier de Gatineau continue d'évoluer rapidement. Après plusieu
 
 ### Tendances des prix
 
-Les prix médians dans les secteurs les plus recherchés de Gatineau — Aylmer, le Plateau et Hull — continuent de refléter une demande soutenue. Le marché de l'Outaouais bénéficie toujours de son avantage concurrentiel par rapport à Ottawa, attirant des acheteurs ontariens en quête de valeur.
+Les prix médians dans les secteurs les plus recherchés de Gatineau — [Aylmer](/aylmer), le [Plateau](/plateau) et [Hull](/hull) — continuent de refléter une demande soutenue. Le marché de l'Outaouais bénéficie toujours de son avantage concurrentiel par rapport à Ottawa, attirant des acheteurs ontariens en quête de valeur.
 
 ### Volume des ventes
 
-Le volume des transactions reste solide, avec une activité particulièrement forte dans le segment des propriétés unifamiliales et des plex d'investissement. Les secteurs de Buckingham et Masson-Angers gagnent aussi en popularité grâce à des prix d'entrée plus accessibles.
+Le volume des transactions reste solide, avec une activité particulièrement forte dans le segment des propriétés unifamiliales et des plex d'investissement. Les secteurs de [Buckingham](/buckingham) et [Masson-Angers](/masson-angers) gagnent aussi en popularité grâce à des prix d'entrée plus accessibles.
 
 ### Secteurs à surveiller
 
@@ -93,11 +93,11 @@ Gatineau's real estate market continues to evolve rapidly. After several years o
 
 ### Price Trends
 
-Median prices in Gatineau's most sought-after areas — Aylmer, Plateau, and Hull — continue to reflect strong demand. The Outaouais market still benefits from its competitive advantage over Ottawa, attracting Ontario buyers seeking value.
+Median prices in Gatineau's most sought-after areas — [Aylmer](/en/aylmer), [Plateau](/en/plateau), and [Hull](/en/hull) — continue to reflect strong demand. The Outaouais market still benefits from its competitive advantage over Ottawa, attracting Ontario buyers seeking value.
 
 ### Sales Volume
 
-Transaction volume remains solid, with particularly strong activity in the single-family home and investment plex segments. Buckingham and Masson-Angers are also gaining popularity thanks to more accessible entry prices.
+Transaction volume remains solid, with particularly strong activity in the single-family home and investment plex segments. [Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) are also gaining popularity thanks to more accessible entry prices.
 
 ### Areas to Watch
 
@@ -203,7 +203,7 @@ Au Canada, la mise de fonds minimale est de 5% pour une propriété de moins de 
 
 ### 3. Choisir le bon quartier
 
-Gatineau offre une diversité de quartiers, chacun avec son caractère. Aylmer pour les familles, Hull pour la proximité d'Ottawa, le Plateau pour les jeunes professionnels, Buckingham pour un cadre plus rural.
+Gatineau offre une diversité de quartiers, chacun avec son caractère. [Aylmer](/aylmer) pour les familles, [Hull](/hull) pour la proximité d'Ottawa, le [Plateau](/plateau) pour les jeunes professionnels, [Buckingham](/buckingham) pour un cadre plus rural.
 
 ### 4. L'inspection préachat
 
@@ -226,7 +226,7 @@ In Canada, the minimum down payment is 5% for properties under $500,000. Several
 
 ### 3. Choosing the Right Neighborhood
 
-Gatineau offers diverse neighborhoods, each with its own character. Aylmer for families, Hull for Ottawa proximity, Plateau for young professionals, Buckingham for a more rural setting.
+Gatineau offers diverse neighborhoods, each with its own character. [Aylmer](/en/aylmer) for families, [Hull](/en/hull) for Ottawa proximity, [Plateau](/en/plateau) for young professionals, [Buckingham](/en/buckingham) for a more rural setting.
 
 ### 4. Pre-Purchase Inspection
 
@@ -270,9 +270,9 @@ De plus en plus de familles et de professionnels font le saut de l'Ontario au Qu
 
 ### Les meilleurs quartiers pour les relocalisés
 
-- **Aylmer** : Ambiance familiale, accès facile à Ottawa via le pont Champlain.
-- **Hull** : Le plus proche d'Ottawa, idéal pour les navetteurs.
-- **Plateau** : Développement récent, écoles neuves, sentiment de communauté.
+- **[Aylmer](/aylmer)** : Ambiance familiale, accès facile à Ottawa via le pont Champlain.
+- **[Hull](/hull)** : Le plus proche d'Ottawa, idéal pour les navetteurs.
+- **[Plateau](/plateau)** : Développement récent, écoles neuves, sentiment de communauté.
 
 ### Votre trajet quotidien
 
@@ -295,9 +295,9 @@ More and more families and professionals are making the leap from Ontario to Que
 
 ### Best Neighborhoods for Relocators
 
-- **Aylmer**: Family-friendly atmosphere, easy access to Ottawa via the Champlain Bridge.
-- **Hull**: Closest to Ottawa, ideal for commuters.
-- **Plateau**: Recent development, new schools, sense of community.
+- **[Aylmer](/en/aylmer)**: Family-friendly atmosphere, easy access to Ottawa via the Champlain Bridge.
+- **[Hull](/en/hull)**: Closest to Ottawa, ideal for commuters.
+- **[Plateau](/en/plateau)**: Recent development, new schools, sense of community.
 
 ### Your Daily Commute
 
@@ -336,9 +336,9 @@ Avant d'investir, une analyse rigoureuse est essentielle :
 
 ### Secteurs à surveiller
 
-- **Hull** : Fort potentiel locatif grâce à la proximité d'Ottawa et la revitalisation du centre-ville.
-- **Gatineau centre** : Prix d'achat encore accessibles avec des loyers en hausse.
-- **Buckingham** : Marché émergent avec des prix d'entrée bas.
+- **[Hull](/hull)** : Fort potentiel locatif grâce à la proximité d'Ottawa et la revitalisation du centre-ville.
+- **[Gatineau centre](/gatineau-centre)** : Prix d'achat encore accessibles avec des loyers en hausse.
+- **[Buckingham](/buckingham)** : Marché émergent avec des prix d'entrée bas.
 
 ### Erreurs à éviter
 
@@ -369,9 +369,9 @@ Before investing, a rigorous analysis is essential:
 
 ### Areas to Watch
 
-- **Hull**: Strong rental potential thanks to Ottawa proximity and downtown revitalization.
-- **Gatineau Centre**: Still accessible purchase prices with rising rents.
-- **Buckingham**: Emerging market with low entry prices.
+- **[Hull](/en/hull)**: Strong rental potential thanks to Ottawa proximity and downtown revitalization.
+- **[Gatineau Centre](/en/gatineau-centre)**: Still accessible purchase prices with rising rents.
+- **[Buckingham](/en/buckingham)**: Emerging market with low entry prices.
 
 ### Mistakes to Avoid
 
@@ -675,11 +675,11 @@ Les acheteurs prennent leur décision émotionnellement dans les **90 premières
 
 Chaque quartier de Gatineau a ses propres réalités :
 
-**Aylmer** : Les acheteurs cherchent le style de vie familial. Misez sur les espaces extérieurs, le rangement et les aires de vie lumineuses. La compétition est forte — les maisons bien présentées se démarquent nettement.
+**[Aylmer](/aylmer)** : Les acheteurs cherchent le style de vie familial. Misez sur les espaces extérieurs, le rangement et les aires de vie lumineuses. La compétition est forte — les maisons bien présentées se démarquent nettement.
 
-**Hull** : Le marché est plus urbain. Les condos et maisons de ville profitent d'une mise en scène épurée et moderne. Les acheteurs veulent du potentiel sans travaux.
+**[Hull](/hull)** : Le marché est plus urbain. Les condos et maisons de ville profitent d'une mise en scène épurée et moderne. Les acheteurs veulent du potentiel sans travaux.
 
-**Plateau** : Secteur familial et résidentiel. Montrez les espaces fonctionnels pour les familles — sous-sol aménagé, cour arrière, proximité des écoles.
+**[Plateau](/plateau)** : Secteur familial et résidentiel. Montrez les espaces fonctionnels pour les familles — sous-sol aménagé, cour arrière, proximité des écoles.
 
 ### Les 5 interventions les plus rentables
 
@@ -716,11 +716,11 @@ Buyers make their emotional decision within the **first 90 seconds** of a visit.
 
 Each Gatineau neighborhood has its own realities:
 
-**Aylmer**: Buyers seek the family lifestyle. Focus on outdoor spaces, storage, and bright living areas. Competition is fierce — well-presented homes stand out clearly.
+**[Aylmer](/en/aylmer)**: Buyers seek the family lifestyle. Focus on outdoor spaces, storage, and bright living areas. Competition is fierce — well-presented homes stand out clearly.
 
-**Hull**: The market is more urban. Condos and townhouses benefit from clean, modern staging. Buyers want potential without major renovations.
+**[Hull](/en/hull)**: The market is more urban. Condos and townhouses benefit from clean, modern staging. Buyers want potential without major renovations.
 
-**Plateau**: Family-oriented and residential. Show functional family spaces — finished basement, backyard, proximity to schools.
+**[Plateau](/en/plateau)**: Family-oriented and residential. Show functional family spaces — finished basement, backyard, proximity to schools.
 
 ### The 5 Most Profitable Interventions
 
@@ -796,7 +796,7 @@ Paradoxalement, l'extérieur offre le meilleur retour pour le plus petit investi
 
 ### Spécificités du marché de Gatineau
 
-À Aylmer, les acheteurs valorisent les espaces extérieurs et les cuisines ouvertes. À Hull, les projets de modernisation urbaine (Zibi) augmentent les attentes de finition. Dans le Plateau, les familles priorisent les sous-sols aménagés et les cours arrière fonctionnelles.
+À [Aylmer](/aylmer), les acheteurs valorisent les espaces extérieurs et les cuisines ouvertes. À [Hull](/hull), les projets de modernisation urbaine (Zibi) augmentent les attentes de finition. Dans le [Plateau](/plateau), les familles priorisent les sous-sols aménagés et les cours arrière fonctionnelles.
 
 ### Mon rôle comme courtier
 
@@ -835,7 +835,7 @@ Paradoxically, the exterior offers the best return for the smallest investment. 
 
 ### Gatineau Market Specifics
 
-In Aylmer, buyers value outdoor spaces and open kitchens. In Hull, the urban modernization projects (Zibi) raise finishing expectations. In the Plateau, families prioritize finished basements and functional backyards.
+In [Aylmer](/en/aylmer), buyers value outdoor spaces and open kitchens. In Hull, the urban modernization projects (Zibi) raise finishing expectations. In the [Plateau](/en/plateau), families prioritize finished basements and functional backyards.
 
 ### My Role as Your Broker
 
@@ -982,7 +982,7 @@ Aylmer est le secteur le plus recherché par les familles à Gatineau, et pour d
 
 **Idéal pour** : Familles avec enfants de tous âges, amoureux du plein air, professionnels travaillant à Ottawa.
 
-### Le Plateau — Résidentiel et abordable
+### Le [Plateau](/plateau) — Résidentiel et abordable
 
 **Prix médian** : 400 000 $ à 480 000 $
 
@@ -995,7 +995,7 @@ Le Plateau est un secteur résidentiel calme qui offre un excellent rapport qual
 
 **Idéal pour** : Jeunes familles, premiers acheteurs, ceux qui veulent de l'espace sans exploser le budget.
 
-### Hull — Urbain et dynamique
+### [Hull](/hull) — Urbain et dynamique
 
 **Prix médian** : 350 000 $ à 450 000 $
 
@@ -1008,11 +1008,11 @@ Hull offre un style de vie plus urbain, parfait pour les familles actives :
 
 **Idéal pour** : Familles qui travaillent à Ottawa, amateurs de vie urbaine, jeunes professionnels.
 
-### Buckingham — Nature et espace
+### [Buckingham](/buckingham) — Nature et espace
 
 **Prix médian** : 300 000 $ à 400 000 $
 
-Buckingham et Masson-Angers offrent le meilleur rapport espace-prix de Gatineau :
+[Buckingham](/buckingham) et [Masson-Angers](/masson-angers) offrent le meilleur rapport espace-prix de Gatineau :
 - **Terrains très grands** — Demi-acres et plus facilement disponibles
 - **Rivière du Lièvre** — Activités nautiques, pêche, paysages
 - **Communauté tissée serrée** — Ambiance de petite ville
@@ -1035,7 +1035,7 @@ Je vis à Gatineau et je connais chaque quartier personnellement. On fait une to
 
 Choosing the right neighborhood means choosing your family's daily life for years to come. Here's an honest portrait of the most popular areas for families in Gatineau.
 
-### Aylmer — The Premium Family Choice
+### [Aylmer](/en/aylmer) — The Premium Family Choice
 
 **Median price**: $480,000 to $550,000
 
@@ -1048,7 +1048,7 @@ Aylmer is the most sought-after area for families in Gatineau, and for good reas
 
 **Ideal for**: Families with children of all ages, outdoor enthusiasts, professionals working in Ottawa.
 
-### The Plateau — Residential and Affordable
+### The [Plateau](/en/plateau) — Residential and Affordable
 
 **Median price**: $400,000 to $480,000
 
@@ -1061,7 +1061,7 @@ The Plateau is a quiet residential area offering excellent value:
 
 **Ideal for**: Young families, first-time buyers, those wanting space without blowing the budget.
 
-### Hull — Urban and Dynamic
+### [Hull](/en/hull) — Urban and Dynamic
 
 **Median price**: $350,000 to $450,000
 
@@ -1074,11 +1074,11 @@ Hull offers a more urban lifestyle, perfect for active families:
 
 **Ideal for**: Families working in Ottawa, urban lifestyle lovers, young professionals.
 
-### Buckingham — Nature and Space
+### [Buckingham](/en/buckingham) — Nature and Space
 
 **Median price**: $300,000 to $400,000
 
-Buckingham and Masson-Angers offer the best space-to-price ratio in Gatineau:
+[Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) offer the best space-to-price ratio in Gatineau:
 - **Very large lots** — Half-acres and more readily available
 - **Lièvre River** — Water sports, fishing, scenic views
 - **Tight-knit community** — Small-town feel
@@ -1514,7 +1514,7 @@ Properties near the park sell quickly. If this lifestyle appeals to you, I can a
     published: true,
     body: `## Hull : le marché condo le plus dynamique de Gatineau
 
-Hull est devenu l'épicentre du développement condo à Gatineau, porté par le projet Zibi, la proximité d'Ottawa et le renouveau urbain du centre-ville.
+[Hull](/hull) est devenu l'épicentre du développement condo à Gatineau, porté par le projet Zibi, la proximité d'Ottawa et le renouveau urbain du centre-ville.
 
 ## Pourquoi acheter un condo à Hull?
 
@@ -1556,7 +1556,7 @@ Hull offre un excellent potentiel locatif grâce à la demande des fonctionnaire
 Hull est idéal pour les acheteurs qui veulent un mode de vie urbain avec accès rapide à Ottawa. Que ce soit pour y vivre ou investir, je vous aide à trouver le bon condo au bon prix.`,
     bodyEn: `## Hull: Gatineau's Most Dynamic Condo Market
 
-Hull has become Gatineau's condo development epicenter, driven by the Zibi project, proximity to Ottawa, and downtown urban renewal.
+[Hull](/en/hull) has become Gatineau's condo development epicenter, driven by the Zibi project, proximity to Ottawa, and downtown urban renewal.
 
 ## Why Buy a Condo in Hull?
 
@@ -1736,7 +1736,7 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 
 ## Les meilleurs secteurs pour investir
 
-### Hull — Le rendement urbain
+### [Hull](/hull) — Le rendement urbain
 - **Proximité Ottawa** — Forte demande des fonctionnaires
 - **Projet Zibi** — Hausse des valeurs anticipée
 - **Rendement** — 4,5 % à 5,5 % brut
@@ -1748,7 +1748,7 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 - **Type idéal** — Triplex et quadruplex
 - **Clientèle** — Familles, travailleurs, étudiants UQO
 
-### Buckingham — Le potentiel caché
+### [Buckingham](/buckingham) — Le potentiel caché
 - **Prix très bas** — Duplex à partir de 300 000 $
 - **Rendement** — 6 % à 8 % brut
 - **Risque** — Taux de roulement plus élevé
@@ -1786,7 +1786,7 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 
 ## Best Areas for Investment
 
-### Hull — Urban Returns
+### [Hull](/en/hull) — Urban Returns
 - **Ottawa proximity** — Strong demand from civil servants
 - **Zibi project** — Anticipated value increase
 - **Yield** — 4.5% to 5.5% gross
@@ -1798,7 +1798,7 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 - **Ideal type** — Triplex and quadruplex
 - **Tenants** — Families, workers, UQO students
 
-### Buckingham — Hidden Potential
+### [Buckingham](/en/buckingham) — Hidden Potential
 - **Very low prices** — Duplex from $300,000
 - **Yield** — 6% to 8% gross
 - **Risk** — Higher turnover rate
