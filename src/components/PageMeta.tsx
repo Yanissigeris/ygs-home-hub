@@ -9,7 +9,7 @@ interface PageMetaProps {
 }
 
 const SITE = "YGS — Yanis Gauthier-Sigeris";
-const BASE_URL = "https://ygs-home-hub.lovable.app";
+const BASE_URL = "https://yanisgauthier.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
 
 /** FR→EN path mapping — single source of truth, mirrors LanguageSwitch */
