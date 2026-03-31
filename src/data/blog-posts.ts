@@ -1655,7 +1655,7 @@ Exemple pour une maison à Gatineau :
 
 Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie valeur marchande. Je peux vous fournir une évaluation gratuite et vous référer à des courtiers hypothécaires de confiance à Gatineau.
 
-**Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-cloture-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
+**Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-achat-maison-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
     bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
 
 Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have significant equity to tap into.
