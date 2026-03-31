@@ -41,13 +41,21 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <React.Suspense fallback={null}>
       <PathwaySection />
 
+      <hr className="section-divider" />
+
       <AboutSection />
 
+      <hr className="section-divider" />
+
       <ConversionSection />
+
+      <hr className="section-divider" />
 
       <SectorsSection />
 
       <GuideOffersSection background="alt" />
+
+      <hr className="section-divider" />
 
       <ReviewSection
         overline="Témoignages"
