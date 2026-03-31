@@ -30,9 +30,10 @@ const heroReview = getReviewsById(["r2"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r2"]);
 
 const trustItems = [
-{ icon: Award, text: "RE/MAX Platinum Club · Hall of Fame" },
-{ icon: MapPin, text: "Gatineau · Aylmer · Hull · Outaouais specialist" },
-{ icon: Shield, text: "Nearly 9 years of experience in Outaouais" }];
+  { icon: MapPin, text: "Gatineau · Aylmer · Hull · Outaouais specialist" },
+  { icon: Shield, text: "Nearly 9 years of experience" },
+  { icon: Award, text: "Bilingual service · Transparent approach" },
+];
 
 
 const pathways = [
