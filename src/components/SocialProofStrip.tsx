@@ -42,7 +42,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
       <div className="section-container max-w-[64rem]">
         {/* Stats row */}
         <motion.div
-          className="mb-10 flex items-center justify-center gap-x-10 gap-y-4 sm:gap-x-14"
+          className="mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -51,10 +51,10 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
           {stats.map((stat, i) => (
             <React.Fragment key={stat.label}>
               {i > 0 && (
-                <div className="hidden h-10 w-px bg-border/40 sm:block" />
+                <div className="h-9 w-px bg-border/40" />
               )}
               <div className="text-center">
-                <p className="font-heading text-[1.75rem] font-bold leading-none tracking-tight text-foreground sm:text-[2rem]">
+                <p className="font-heading text-[1.25rem] font-bold leading-none tracking-tight text-foreground sm:text-[1.75rem]">
                   {stat.value}
                 </p>
                 <p className="mt-1.5 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/60">
