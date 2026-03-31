@@ -62,14 +62,21 @@ const BlogPageEn = () => {
       {featured && !activeCategory && (
         <ContentBlock>
           <SectionHeading overline="Featured" title="Featured Article" centered />
-          <Link to={`/en/blog/${featured.slugEn}`} className="group mt-10 block rounded-2xl border border-border/40 bg-secondary/20 p-8 sm:p-10 transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{featured.categoryEn}</span>
-              <time className="text-[0.75rem] text-muted-foreground/60">{new Date(featured.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}</time>
+          <Link to={`/en/blog/${featured.slugEn}`} className="group mt-10 block overflow-hidden rounded-2xl border border-border/40 bg-secondary/20 transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5">
+            {featured.featuredImage && (
+              <div className="aspect-[21/9] overflow-hidden">
+                <img src={featured.featuredImage} alt={featured.titleEn} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={1200} height={672} />
+              </div>
+            )}
+            <div className="p-8 sm:p-10">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{featured.categoryEn}</span>
+                <time className="text-[0.75rem] text-muted-foreground/60">{new Date(featured.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}</time>
+              </div>
+              <h3 className="mt-4 text-xl sm:text-2xl font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{featured.titleEn}</h3>
+              <p className="prose-body mt-3">{featured.excerptEn}</p>
+              <span className="mt-5 inline-flex items-center text-[0.875rem] font-medium text-accent">Read article →</span>
             </div>
-            <h3 className="mt-4 text-xl sm:text-2xl font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{featured.titleEn}</h3>
-            <p className="prose-body mt-3">{featured.excerptEn}</p>
-            <span className="mt-5 inline-flex items-center text-[0.875rem] font-medium text-accent">Read article →</span>
           </Link>
         </ContentBlock>
       )}
