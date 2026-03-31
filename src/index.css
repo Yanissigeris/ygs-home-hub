@@ -132,12 +132,12 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(var(--border) / 0.5) 20%,
-      hsl(var(--border) / 0.5) 80%,
+      hsl(var(--border) / 0.35) 25%,
+      hsl(var(--border) / 0.35) 75%,
       transparent 100%
     );
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 900px;
   }
 
   .section-padding-md {
