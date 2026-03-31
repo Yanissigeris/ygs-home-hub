@@ -48,10 +48,22 @@ const contactItems = [
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const success = await submit({
+      formType: "contact",
+      lang: "fr",
+      name: formData.get("nom") as string || "",
+      email: formData.get("courriel") as string || "",
+      phone: formData.get("tel") as string || undefined,
+      message: formData.get("message") as string || undefined,
+      objective: formData.get("objectif") as string || undefined,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
