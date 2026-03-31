@@ -16,10 +16,10 @@ import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
 const considerations = [
-  { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles." },
-  { icon: Home, title: "Le bon type de propriété", text: "Condo, maison, jumelé — chaque option a ses avantages pour un premier achat." },
-  { icon: FileText, title: "Le processus au Québec", text: "Promesse d'achat, inspection, notaire — le processus est différent d'ailleurs au Canada." },
-  { icon: Shield, title: "Éviter les erreurs de débutant", text: "Ne pas se précipiter, bien comprendre les frais, choisir le bon quartier — je vous guide." },
+  { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles au Québec." },
+  { icon: Home, title: "Le bon type de propriété", text: "Condo à Hull, maison à Aylmer, jumelé au Plateau — chaque option a ses avantages pour un premier achat à Gatineau." },
+  { icon: FileText, title: "Le processus au Québec", text: "Promesse d'achat, inspection, notaire — le processus québécois est différent d'ailleurs au Canada. Je vous guide à chaque étape." },
+  { icon: Shield, title: "Éviter les erreurs de débutant", text: "Ne pas se précipiter, bien comprendre les frais, choisir le bon quartier en Outaouais — je vous guide." },
 ];
 
 const steps = [
