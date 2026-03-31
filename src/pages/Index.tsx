@@ -20,7 +20,6 @@ const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
 const socialStatsFr = [
   { value: "~9 ans", label: "d'expérience en Outaouais" },
-  { value: "Platinum", label: "Club RE/MAX · Hall of Fame" },
   { value: "5 ★", label: "avis clients Google" },
 ];
 

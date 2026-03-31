@@ -34,7 +34,6 @@ const trustItems = [
 
 const socialStatsEn = [
   { value: "~9 yrs", label: "of experience in Outaouais" },
-  { value: "Platinum", label: "RE/MAX Club · Hall of Fame" },
   { value: "5 ★", label: "Google client reviews" },
 ];
 
