@@ -164,6 +164,13 @@ const routeTree = React.createElement(
       <Route path="/gatineau" element={<GatineauCentrePage />} />
       <Route path="/aylmer" element={<AylmerPage />} />
       <Route path="/plateau" element={<PlateauPage />} />
+      <Route path="/chelsea" element={<ChelseaPage />} />
+      <Route path="/cantley" element={<CantleyPage />} />
+      <Route path="/val-des-monts" element={<ValDesMontsPage />} />
+      <Route path="/masson-angers" element={<MassonAngersPage />} />
+      <Route path="/pontiac" element={<PontiacPage />} />
+      <Route path="/cote-dazur-gatineau" element={<CoteDazurPage />} />
+      <Route path="/limbour" element={<LimbourPage />} />
       <Route path="/ressources" element={<ResourcesPage />} />
       <Route path="/blogue" element={<BlogPage />} />
       <Route path="/blogue/:slug" element={<BlogArticlePage />} />
