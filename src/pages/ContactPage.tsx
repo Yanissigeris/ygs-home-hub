@@ -145,7 +145,9 @@ const ContactPage = () => {
               <Label htmlFor="message">Message (optionnel)</Label>
               <Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
             </div>
-            <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
+            <Button type="submit" size="xl" className="w-full" disabled={submitting}>
+              {submitting ? "Envoi en cours…" : "Envoyer ma demande"}
+            </Button>
             <p className="text-center text-[0.8125rem] text-muted-foreground/50">
               Je vous donne les chiffres et les options, vous décidez.
             </p>
