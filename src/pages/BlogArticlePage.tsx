@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import PageMeta from "@/components/PageMeta";
 import CTASection from "@/components/CTASection";
@@ -54,6 +54,32 @@ const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
+
+  // Hreflang injection must be before any early return (hooks rules)
+  useEffect(() => {
+    if (!post || !post.published) return;
+    const frSlug = post.slug;
+    const enSlug = post.slugEn;
+    const frUrl = `${BASE_URL}/blogue/${frSlug}`;
+    const enUrl = `${BASE_URL}/en/blog/${enSlug}`;
+
+    const createLink = (hreflang: string, href: string) => {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "alternate");
+      link.setAttribute("hreflang", hreflang);
+      link.setAttribute("href", href);
+      document.head.appendChild(link);
+      return link;
+    };
+
+    const links = [
+      createLink("fr-CA", frUrl),
+      createLink("en-CA", enUrl),
+      createLink("x-default", frUrl),
+    ];
+
+    return () => { links.forEach(l => l.remove()); };
+  }, [post]);
 
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
@@ -129,9 +155,10 @@ const BlogArticlePage = () => {
     return elements;
   };
 
+
   return (
     <>
-      <PageMeta title={seoTitle} description={metaDesc} />
+      <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
 
       {/* Featured image banner */}

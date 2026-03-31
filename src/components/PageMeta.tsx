@@ -143,8 +143,20 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     /* ── Hreflang tags ── */
     removeHreflangLinks();
 
-    const frPath = isEn ? (enToFr[pathname] ?? null) : pathname;
-    const enPath = isEn ? pathname : (frToEn[pathname] ?? null);
+    /* Handle dynamic blog article routes */
+    let frPath: string | null = isEn ? (enToFr[pathname] ?? null) : pathname;
+    let enPath: string | null = isEn ? pathname : (frToEn[pathname] ?? null);
+
+    const frBlogMatch = pathname.match(/^\/blogue\/(.+)$/);
+    const enBlogMatch = pathname.match(/^\/en\/blog\/(.+)$/);
+    if (frBlogMatch) {
+      frPath = pathname;
+      enPath = null;
+    }
+    if (enBlogMatch) {
+      enPath = pathname;
+      frPath = null;
+    }
 
     if (frPath && enPath) {
       ensureHreflangLink("fr-CA").setAttribute("href", `${BASE_URL}${frPath}`);
