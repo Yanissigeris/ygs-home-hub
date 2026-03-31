@@ -92,9 +92,10 @@ export const footerColumns = [
   {
     title: "Quartiers",
     links: [
-      { label: "Plateau / Aylmer", href: "/plateau-aylmer" },
+      { label: "Aylmer", href: "/aylmer" },
       { label: "Hull", href: "/hull" },
-      { label: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers" },
+      { label: "Chelsea", href: "/chelsea" },
+      { label: "Pontiac", href: "/pontiac" },
       { label: "Tous les quartiers", href: "/quartiers-a-considerer-a-gatineau" },
     ],
   },

@@ -83,9 +83,10 @@ export const footerColumnsEn = [
   {
     title: "Neighborhoods",
     links: [
-      { label: "Plateau / Aylmer", href: "/en/plateau-aylmer" },
+      { label: "Aylmer", href: "/en/aylmer" },
       { label: "Hull", href: "/en/hull" },
-      { label: "Buckingham / Masson-Angers", href: "/en/buckingham" },
+      { label: "Chelsea", href: "/en/chelsea" },
+      { label: "Pontiac", href: "/en/pontiac" },
       { label: "All Neighborhoods", href: "/en/neighborhoods" },
     ],
   },
