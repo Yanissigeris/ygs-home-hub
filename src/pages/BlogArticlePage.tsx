@@ -108,6 +108,27 @@ const BlogArticlePage = () => {
     })
     .slice(0, 3);
 
+  // Extract TOC from body
+  const slugify = (text: string) =>
+    text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
+
+  const tocItems = useMemo(() => {
+    const items: { level: number; text: string; id: string }[] = [];
+    body.split("\n").forEach((line) => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith("## ") && !trimmed.startsWith("### ")) {
+        const text = trimmed.slice(3);
+        items.push({ level: 2, text, id: slugify(text) });
+      } else if (trimmed.startsWith("### ")) {
+        const text = trimmed.slice(4);
+        items.push({ level: 3, text, id: slugify(text) });
+      }
+    });
+    return items;
+  }, [body]);
+
+  const showToc = tocItems.filter((t) => t.level === 2).length >= 3;
+
   // Simple markdown-ish renderer for ## and ### headings, bold, lists, paragraphs
   const renderBody = (md: string) => {
     const lines = md.split("\n");
@@ -137,10 +158,14 @@ const BlogArticlePage = () => {
 
       if (line.startsWith("### ")) {
         flushList();
-        elements.push(<h3 key={i} className="mt-8 mb-3 text-lg font-semibold text-foreground">{line.slice(4)}</h3>);
+        const text = line.slice(4);
+        const id = slugify(text);
+        elements.push(<h3 key={i} id={id} className="mt-8 mb-3 text-lg font-semibold text-foreground scroll-mt-24">{text}</h3>);
       } else if (line.startsWith("## ")) {
         flushList();
-        elements.push(<h2 key={i} className="mt-10 mb-4 text-xl sm:text-2xl font-bold text-foreground">{line.slice(3)}</h2>);
+        const text = line.slice(3);
+        const id = slugify(text);
+        elements.push(<h2 key={i} id={id} className="mt-10 mb-4 text-xl sm:text-2xl font-bold text-foreground scroll-mt-24">{text}</h2>);
       } else if (line.startsWith("- ")) {
         listItems.push(line.slice(2));
       } else if (/^\d+\.\s/.test(line)) {
