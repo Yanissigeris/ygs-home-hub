@@ -2205,18 +2205,23 @@ A Gatineau broker knows:
 I'm not a volume broker. I take a limited number of clients to offer attentive, personalized service. Every transaction deserves my full attention.`,
   },
 ];
+
+import { neighborhoodBlogPosts } from "./blog-posts-neighborhoods";
+
+// Merge all blog posts
+const allBlogPosts: BlogPost[] = [...blogPosts, ...neighborhoodBlogPosts];
 export const getPublishedPosts = (lang: "fr" | "en" = "fr") =>
-  blogPosts
+  allBlogPosts
     .filter((p) => p.published)
     .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
 /** Get the featured post */
 export const getFeaturedPost = () =>
-  blogPosts.find((p) => p.published && p.featured) ?? blogPosts.find((p) => p.published);
+  allBlogPosts.find((p) => p.published && p.featured) ?? allBlogPosts.find((p) => p.published);
 
 /** Get a post by slug */
 export const getPostBySlug = (slug: string) =>
-  blogPosts.find((p) => p.slug === slug || p.slugEn === slug);
+  allBlogPosts.find((p) => p.slug === slug || p.slugEn === slug);
 
 /** Get unique categories */
 export const getCategories = (lang: "fr" | "en" = "fr") => {
