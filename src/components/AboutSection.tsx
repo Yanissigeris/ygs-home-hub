@@ -46,7 +46,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
           J'accompagne acheteurs, vendeurs et investisseurs partout en Outaouais avec une approche claire et une excellente connaissance du marché local — prix par secteur, tendances, potentiel de revente et réalités terrain.
         </p>
         <p className="prose-body mt-4 hidden sm:block">
-          Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement à Gatineau et dans les environs. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
+          Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais au sein de l'équipe Marty Waite chez ReMax, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement à Gatineau et dans les environs. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
