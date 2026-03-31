@@ -9,9 +9,7 @@ import ReviewStrip from "@/components/ReviewStrip";
 /* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
 const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
 const AboutSection = React.lazy(() => import("@/components/AboutSection"));
-const CredibilitySection = React.lazy(() => import("@/components/CredibilitySection"));
 const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
-const InlineCTA = React.lazy(() => import("@/components/InlineCTA"));
 const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
@@ -40,22 +38,12 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip />
 
-    <ReviewStrip review={heroReview} />
-
     <React.Suspense fallback={null}>
       <PathwaySection />
 
       <AboutSection />
 
-      <CredibilitySection />
-
       <ConversionSection />
-
-      <InlineCTA
-        text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
-        buttonLabel="Évaluation Gratuite →"
-        href="/evaluation-gratuite-gatineau"
-      />
 
       <SectorsSection />
 
