@@ -128,7 +128,9 @@ const BlogArticlePage = () => {
     };
 
     const formatInline = (text: string) =>
-      text.replace(/\*\*(.+?)\*\*/g, "<strong class='text-foreground font-semibold'>$1</strong>");
+      text
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='text-accent underline underline-offset-2 hover:text-accent/80 transition-colors'>$1</a>")
+        .replace(/\*\*(.+?)\*\*/g, "<strong class='text-foreground font-semibold'>$1</strong>");
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();

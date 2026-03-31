@@ -146,7 +146,9 @@ La période de septembre à novembre offre souvent moins de compétition entre v
 
 ### Mon conseil
 
-Il n'y a pas de « mauvais » moment pour vendre si votre propriété est bien préparée et bien positionnée. Une stratégie de mise en marché adaptée au contexte saisonnier fera la différence.`,
+Il n'y a pas de « mauvais » moment pour vendre si votre propriété est bien préparée et bien positionnée. Une stratégie de mise en marché adaptée au contexte saisonnier fera la différence.
+
+**Lire aussi** : [Home staging à Gatineau : vendre plus vite](/blogue/home-staging-vendre-plus-vite-gatineau) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
     bodyEn: `## When Is the Best Time to Sell in Gatineau?
 
 Timing can make a significant difference in your property's sale price in Gatineau. Here's what local data reveals.
@@ -167,7 +169,9 @@ The September to November period often offers less competition among sellers, wh
 
 ### My Advice
 
-There's no "bad" time to sell if your property is well-prepared and well-positioned. A marketing strategy adapted to the seasonal context will make the difference.`,
+There's no "bad" time to sell if your property is well-prepared and well-positioned. A marketing strategy adapted to the seasonal context will make the difference.
+
+**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [Selling Your Home in Winter](/en/blog/selling-home-winter-gatineau-tips)`,
   },
   {
     slug: "premier-achat-gatineau-guide",
@@ -345,7 +349,9 @@ Avant d'investir, une analyse rigoureuse est essentielle :
 
 ### Mon approche
 
-Je vous aide à analyser chaque opportunité avec rigueur — revenus, dépenses, potentiel d'appréciation — pour que votre investissement soit un succès.`,
+Je vous aide à analyser chaque opportunité avec rigueur — revenus, dépenses, potentiel d'appréciation — pour que votre investissement soit un succès.
+
+**Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Investing in a Plex in Gatineau: Is It Still Worth It?
 
 Multi-unit real estate investment remains a popular strategy in the Outaouais. But with evolving prices and interest rates, do the numbers still work?
@@ -376,7 +382,9 @@ Before investing, a rigorous analysis is essential:
 
 ### My Approach
 
-I help you analyze each opportunity rigorously — income, expenses, appreciation potential — so your investment is a success.`,
+I help you analyze each opportunity rigorously — income, expenses, appreciation potential — so your investment is a success.
+
+**Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
@@ -590,7 +598,9 @@ Pour un achat de 400 000 $ à Gatineau, prévoyez environ **7 000 $ à 10 000 $*
 
 ### Mon conseil
 
-La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.`,
+La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.
+
+**Lire aussi** : [Inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide) · [10 conseils pour votre premier achat](/blogue/conseils-premier-achat-maison-gatineau)`,
     bodyEn: `## Notary Fees and Closing Costs in Gatineau
 
 Buying a home is exciting — but the additional fees can catch you off guard if you don't plan for them. Here's a complete breakdown of costs to expect beyond the purchase price in Gatineau and the Outaouais.
@@ -633,7 +643,9 @@ For a $400,000 purchase in Gatineau, expect approximately **$7,000 to $10,000** 
 
 ### My Advice
 
-The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.`,
+The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.
+
+**Read also**: [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide) · [10 Tips for First-Time Buyers](/en/blog/tips-buying-first-home-gatineau)`,
   },
   {
     slug: "home-staging-vendre-plus-vite-gatineau",
@@ -689,7 +701,9 @@ Chaque quartier de Gatineau a ses propres réalités :
 
 ### Mon approche
 
-Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. On identifie ensemble les interventions qui offrent le meilleur retour. Parfois, 1 000 $ investis en staging rapportent 10 000 $ de plus sur le prix de vente.`,
+Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. On identifie ensemble les interventions qui offrent le meilleur retour. Parfois, 1 000 $ investis en staging rapportent 10 000 $ de plus sur le prix de vente.
+
+**Lire aussi** : [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
     bodyEn: `## Home Staging in Gatineau: Sell Faster and for Top Dollar
 
 Home staging isn't just cleaning and decluttering. It's a marketing strategy that, when done right, can reduce your selling time by **30 to 50%** and increase the sale price.
@@ -728,7 +742,9 @@ Each Gatineau neighborhood has its own realities:
 
 ### My Approach
 
-I do a free pre-listing visit with every seller. We identify together the interventions that offer the best return. Sometimes, $1,000 invested in staging brings $10,000 more on the sale price.`,
+I do a free pre-listing visit with every seller. We identify together the interventions that offer the best return. Sometimes, $1,000 invested in staging brings $10,000 more on the sale price.
+
+**Read also**: [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
   },
   {
     slug: "renovations-qui-augmentent-valeur-maison",
@@ -1137,7 +1153,9 @@ Secteur tranquille près du lac, idéal pour les amoureux de la nature et de la 
 
 ## Mon conseil
 
-Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui protège votre investissement à long terme. Contactez-moi pour une visite personnalisée du secteur.`,
+Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui protège votre investissement à long terme. Contactez-moi pour une visite personnalisée du secteur.
+
+**Lire aussi** : [Vivre près du Parc de la Gatineau](/blogue/vivre-pres-parc-gatineau-immobilier) · [Les meilleurs quartiers pour familles](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## Aylmer: Gatineau's Residential Gem
 
 Aylmer is often considered Gatineau's most desirable neighborhood. Located at the western end, it offers an exceptional lifestyle between Lac Deschênes and Gatineau Park.
@@ -1175,7 +1193,9 @@ Quiet area near the lake, ideal for nature and tranquility lovers.
 
 ## My Advice
 
-Aylmer is a safe bet for quality of life. Demand remains strong, protecting your long-term investment. Contact me for a personalized tour of the area.`,
+Aylmer is a safe bet for quality of life. Demand remains strong, protecting your long-term investment. Contact me for a personalized tour of the area.
+
+**Read also**: [Living Near Gatineau Park](/en/blog/living-near-gatineau-park-real-estate) · [Best Family Neighborhoods](/en/blog/best-family-neighborhoods-gatineau)`,
   },
 
   // ── Article 14 – Inspection préachat ──
@@ -1633,7 +1653,9 @@ Exemple pour une maison à Gatineau :
 
 ## Mon conseil
 
-Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie valeur marchande. Je peux vous fournir une évaluation gratuite et vous référer à des courtiers hypothécaires de confiance à Gatineau.`,
+Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie valeur marchande. Je peux vous fournir une évaluation gratuite et vous référer à des courtiers hypothécaires de confiance à Gatineau.
+
+**Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-cloture-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
     bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
 
 Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have significant equity to tap into.
@@ -1672,7 +1694,9 @@ Example for a Gatineau home:
 
 ## My Advice
 
-Before refinancing, get your property appraised to know its true market value. I can provide a free valuation and refer you to trusted mortgage brokers in Gatineau.`,
+Before refinancing, get your property appraised to know its true market value. I can provide a free valuation and refer you to trusted mortgage brokers in Gatineau.
+
+**Read also**: [Notary & Closing Costs](/en/blog/notary-closing-costs-gatineau) · [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value)`,
   },
 
   // ── Article 19 – Marché locatif Gatineau ──
@@ -1739,7 +1763,9 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 
 ## Mon conseil
 
-Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.`,
+Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.
+
+**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Gatineau's Rental Market: A Golden Opportunity
 
 With one of the lowest vacancy rates in Quebec and demand fueled by federal employees, Gatineau has become one of the most attractive cities for rental investment.
@@ -1787,7 +1813,9 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 
 ## My Advice
 
-Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.`,
+Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.
+
+**Read also**: [Investing in a Plex in Gatineau](/en/blog/invest-plex-gatineau) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
 
   // ── Article 20 – Guide copropriété Gatineau ──
@@ -1855,7 +1883,9 @@ Un fonds bien garni vous protège des cotisations spéciales imprévues.
 
 ## Mon conseil
 
-Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.`,
+Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.
+
+**Lire aussi** : [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide) · [Inspection préachat](/blogue/inspection-preachat-gatineau-guide)`,
     bodyEn: `## Condo Ownership in Gatineau: The Essential Guide
 
 Condo ownership is increasingly popular in Gatineau, especially in Hull and the Plateau. Before buying, here's everything you need to understand.
@@ -1904,7 +1934,9 @@ A well-funded reserve protects you from unexpected special assessments.
 
 ## My Advice
 
-Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.`,
+Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.
+
+**Read also**: [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide) · [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide)`,
   },
 
   // ── Article 21 – Vendre en hiver ──
@@ -1976,7 +2008,9 @@ Un courtier qui ne ralentit pas en hiver fait toute la différence.
 
 ## Mon engagement
 
-Je suis actif 12 mois par année. En hiver, je déploie des stratégies adaptées : photos professionnelles, visites bien planifiées et marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.`,
+Je suis actif 12 mois par année. En hiver, je déploie des stratégies adaptées : photos professionnelles, visites bien planifiées et marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.
+
+**Lire aussi** : [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
     bodyEn: `## Selling in Winter in Gatineau: An Underestimated Strategy
 
 Many homeowners wait until spring to sell. Yet winter offers unique advantages in the Gatineau market.
@@ -2029,7 +2063,9 @@ A broker who doesn't slow down in winter makes all the difference.
 
 ## My Commitment
 
-I'm active 12 months a year. In winter, I deploy adapted strategies: professional photos, well-planned showings, and targeted marketing. Contact me for a free valuation, even in January.`,
+I'm active 12 months a year. In winter, I deploy adapted strategies: professional photos, well-planned showings, and targeted marketing. Contact me for a free valuation, even in January.
+
+**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
   },
 
   // ── Article 22 – Avantages courtier immobilier ──
