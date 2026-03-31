@@ -59,8 +59,8 @@ const SellerPageEn = () => (
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
     <ContentBlock narrow>
       <SectionHeading overline="Before selling" title="You don't need to decide everything today" />
-      <p className="prose-body mt-5">Before selling, many homeowners mainly want to understand their value, their timing and their options. The goal isn't to rush you. The goal is to build a clear plan.</p>
-      <p className="prose-body mt-4">After nearly 9 years helping sellers in Outaouais, I know that the key to a good sale is preparation. Real value, price positioning, strategic improvements, marketing to attract the right buyers.</p>
+      <p className="prose-body mt-5">Before selling, many Outaouais homeowners mainly want to understand their value, their timing and their options. The goal isn't to rush you. The goal is to build a clear plan adapted to your neighborhood — whether in Aylmer, Hull, the Plateau or Buckingham.</p>
+      <p className="prose-body mt-4">After nearly 9 years helping sellers across Outaouais, I know that the key to a good sale is preparation. Real value based on local comparables, price positioning, strategic improvements, and marketing to attract the right buyers — including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />

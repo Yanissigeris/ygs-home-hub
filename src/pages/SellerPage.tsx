@@ -98,10 +98,10 @@ const SellerPage = () =>
       title="Vous n'avez pas besoin de tout décider aujourd'hui" />
     
       <p className="prose-body mt-5">
-        Avant de vendre, les propriétaires veulent d'abord connaître la valeur de leur propriété, quel timing est idéal pour eux, et leurs options. Le but est de bâtir un plan clair.
+        Avant de vendre, les propriétaires en Outaouais veulent d'abord connaître la valeur de leur propriété, quel timing est idéal pour eux, et leurs options. Le but est de bâtir un plan clair adapté à votre secteur — que ce soit à Aylmer, Hull, au Plateau ou à Buckingham.
       </p>
       <p className="prose-body mt-4">
-        Après près de 9 ans à accompagner des vendeurs en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle, positionnement, prix, améliorations stratégiques de la propriété, et une mise en marché pour attirer les bons acheteurs.
+        Après près de 9 ans à accompagner des vendeurs partout en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle basée sur les comparables locaux, positionnement, prix, améliorations stratégiques, et une mise en marché pour attirer les bons acheteurs — incluant ceux d'Ottawa qui cherchent à traverser la rivière.
       </p>
     </ContentBlock>
 
