@@ -54,6 +54,7 @@ const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
 const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
+const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
 const LivingAylmerPage = React.lazy(() => import("./pages/LivingAylmerPage"));
 const LivingHullPage = React.lazy(() => import("./pages/LivingHullPage"));
 const LivingPlateauPage = React.lazy(() => import("./pages/LivingPlateauPage"));
