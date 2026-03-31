@@ -643,7 +643,9 @@ For a $400,000 purchase in Gatineau, expect approximately **$7,000 to $10,000** 
 
 ### My Advice
 
-The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.`,
+The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.
+
+**Read also**: [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide) · [10 Tips for First-Time Buyers](/en/blog/tips-buying-first-home-gatineau)`,
   },
   {
     slug: "home-staging-vendre-plus-vite-gatineau",
