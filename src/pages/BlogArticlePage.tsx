@@ -155,30 +155,6 @@ const BlogArticlePage = () => {
     return elements;
   };
 
-  // Inject hreflang for blog articles (PageMeta can't resolve dynamic slugs)
-  useEffect(() => {
-    const frSlug = post.slug;
-    const enSlug = post.slugEn;
-    const frUrl = `${BASE_URL}/blogue/${frSlug}`;
-    const enUrl = `${BASE_URL}/en/blog/${enSlug}`;
-
-    const createLink = (lang: string, href: string) => {
-      const link = document.createElement("link");
-      link.setAttribute("rel", "alternate");
-      link.setAttribute("hreflang", lang);
-      link.setAttribute("href", href);
-      document.head.appendChild(link);
-      return link;
-    };
-
-    const links = [
-      createLink("fr-CA", frUrl),
-      createLink("en-CA", enUrl),
-      createLink("x-default", frUrl),
-    ];
-
-    return () => { links.forEach(l => l.remove()); };
-  }, [post.slug, post.slugEn]);
 
   return (
     <>
