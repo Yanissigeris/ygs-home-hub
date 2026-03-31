@@ -8,7 +8,7 @@ const steps = [
 {
   number: "01",
   title: "Évaluation gratuite",
-  text: "Connaître la vraie valeur de votre propriété en quelques jours.",
+  text: "Connaître la vraie valeur de votre propriété à Gatineau en quelques jours.",
   href: "/evaluation-gratuite-gatineau"
 },
 {
