@@ -70,11 +70,11 @@ const ContactPageEn = () => {
       <FormSection id="contact-form" title="Tell me where you are">
         {submitted ? <SuccessMessage title="Thank you! Message sent." text="I'll get back to you shortly." /> : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
-            <div><Label htmlFor="objective">I want to…</Label><Select><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
-            <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" type="email" className="mt-1.5" required /></div></div>
-            <div><Label htmlFor="phone">Phone</Label><Input id="phone" type="tel" className="mt-1.5" /></div>
-            <div><Label htmlFor="message">Message (optional)</Label><Textarea id="message" rows={4} className="mt-1.5" placeholder="Briefly describe your project…" /></div>
-            <Button type="submit" size="xl" className="w-full">Send my request</Button>
+            <div><Label htmlFor="objective">I want to…</Label><Select name="objective"><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
+            <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" name="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" name="email" type="email" className="mt-1.5" required /></div></div>
+            <div><Label htmlFor="phone">Phone</Label><Input id="phone" name="phone" type="tel" className="mt-1.5" /></div>
+            <div><Label htmlFor="message">Message (optional)</Label><Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Briefly describe your project…" /></div>
+            <Button type="submit" size="xl" className="w-full" disabled={submitting}>{submitting ? "Sending…" : "Send my request"}</Button>
             <p className="text-center text-[0.8125rem] text-muted-foreground/50">I give you the numbers and the options — you decide with full clarity.</p>
           </form>
         )}
