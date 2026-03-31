@@ -1,3 +1,11 @@
+import blogMarket from "@/assets/blog/blog-market-2025.jpg";
+import blogWhenToSell from "@/assets/blog/blog-when-to-sell.jpg";
+import blogFirstTimeBuyer from "@/assets/blog/blog-first-time-buyer.jpg";
+import blogOttawaGatineau from "@/assets/blog/blog-ottawa-gatineau.jpg";
+import blogPlexInvestment from "@/assets/blog/blog-plex-investment.jpg";
+import blogNeighborhoods from "@/assets/blog/blog-neighborhoods.jpg";
+import blogMilitary from "@/assets/blog/blog-military.jpg";
+
 export interface BlogPost {
   slug: string;
   slugEn: string;
