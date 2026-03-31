@@ -31,9 +31,9 @@ const sectors = [
 ];
 
 const steps = [
-  { num: "01", title: "Clarifier votre projet", desc: "Budget, secteurs cibles, style de propriété, besoins familiaux — on pose les bases ensemble." },
-  { num: "02", title: "Recherche ciblée", desc: "Je vous envoie les propriétés qui correspondent vraiment. Pas de bruit, pas de perte de temps." },
-  { num: "03", title: "Offre et négociation", desc: "Stratégie d'offre, inspection, conditions — jusqu'à la signature chez le notaire." },
+  { num: "01", title: "Clarifier votre projet", desc: "Budget, secteurs cibles à Gatineau, style de propriété, besoins familiaux et accès Ottawa — on pose les bases ensemble." },
+  { num: "02", title: "Recherche ciblée", desc: "Je vous envoie les propriétés qui correspondent vraiment dans les quartiers qui vous conviennent. Pas de bruit, pas de perte de temps." },
+  { num: "03", title: "Offre et négociation", desc: "Stratégie d'offre adaptée au marché local, inspection, conditions — jusqu'à la signature chez le notaire." },
 ];
 
 const trustItems = [
