@@ -222,6 +222,28 @@ const BlogArticlePage = () => {
 
           <hr className="my-8 border-border/30" />
 
+          {/* Table of Contents */}
+          {showToc && (
+            <nav className="mb-10 rounded-2xl border border-border/30 bg-secondary/20 p-6 sm:p-8">
+              <p className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mb-4">
+                {isFr ? "Dans cet article" : "In this article"}
+              </p>
+              <ol className="space-y-1.5">
+                {tocItems.filter((t) => t.level === 2).map((item, i) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="group flex items-start gap-3 rounded-lg px-3 py-1.5 text-[0.875rem] text-muted-foreground transition-colors hover:bg-accent/5 hover:text-accent"
+                    >
+                      <span className="mt-px text-[0.75rem] font-medium text-muted-foreground/40 group-hover:text-accent/60">{i + 1}.</span>
+                      <span>{item.text}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
           {/* Body */}
           <div className="prose-article">
             {renderBody(body)}
