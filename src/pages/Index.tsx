@@ -39,7 +39,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      socialProof="Platinum Club · Hall of Fame RE/MAX"
+      socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-video-compressed.mp4"
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
@@ -65,6 +65,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       <hr className="section-divider" />
 
       <SectorsSection />
+
+      <hr className="section-divider" />
 
       <GuideOffersSection background="alt" />
 
