@@ -102,7 +102,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
           <motion.div className="mx-auto mb-14 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
             <p className="label-overline mb-3">Choose your next step</p>
             <h2 className="mb-5">Where are you in your project?</h2>
-            <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Every situation is different. Tell me where you are — I'll give you the numbers, the options and a clear strategy.</p>
+            <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Whether you're in Gatineau, Aylmer, Hull or transitioning from Ottawa — tell me where you are and I'll give you the numbers, the options and a clear strategy.</p>
           </motion.div>
           <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
             {pathways.map((p, i) => (
