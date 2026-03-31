@@ -117,7 +117,7 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
             <div>
               <Label htmlFor="objectif">Je veux…</Label>
-              <Select>
+              <Select name="objectif">
                 <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="vendre">Vendre</SelectItem>
