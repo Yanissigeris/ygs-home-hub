@@ -32,6 +32,18 @@ const trustItems = [
   { icon: Award, text: "Bilingual service · Transparent approach" },
 ];
 
+const socialStatsEn = [
+  { value: "~9 yrs", label: "of experience in Outaouais" },
+  { value: "Platinum", label: "RE/MAX Club · Hall of Fame" },
+  { value: "5 ★", label: "Google client reviews" },
+];
+
+const socialTestimonialsEn = [
+  { quote: "Yanis is very professional, respectful, honest and trustworthy.", name: "Sylvie", location: "Gatineau" },
+  { quote: "He made our first home purchase as smooth as possible despite the stress.", name: "Geneviève and Salah", location: "Aylmer" },
+  { quote: "Excellent availability, patient and honest. I highly recommend him.", name: "Alexandre", location: "Aylmer" },
+];
+
 const pathways = [
   { title: "Sell my property", text: "Realistic valuation, pricing strategy and marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
   { title: "Buy in Gatineau", text: "Neighborhoods, budget and hands-on guidance — to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
