@@ -16,7 +16,7 @@ const JsonLdSchema = () => {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       "name": "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
-      "url": "https://ygs-home-hub.lovable.app",
+      "url": "https://yanisgauthier.ca",
       review: reviews.map((r) => ({
         "@type": "Review",
         author: { "@type": "Person", name: r.name },
