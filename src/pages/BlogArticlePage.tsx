@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const BASE_URL = "https://ygs-home-hub.lovable.app";
+const BASE_URL = "https://yanisgauthier.com";
 
 const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").BlogPost; lang: "fr" | "en" }) => {
   const isFr = lang === "fr";

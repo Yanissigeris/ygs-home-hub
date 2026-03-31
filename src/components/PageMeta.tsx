@@ -9,7 +9,7 @@ interface PageMetaProps {
 }
 
 const SITE = "YGS — Yanis Gauthier-Sigeris";
-const BASE_URL = "https://ygs-home-hub.lovable.app";
+const BASE_URL = "https://yanisgauthier.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
 
 /** FR→EN path mapping — single source of truth, mirrors LanguageSwitch */
@@ -55,6 +55,13 @@ const frToEn: Record<string, string> = {
   "/merci": "/en/thank-you",
   "/merci-evaluation": "/en/thank-you-valuation",
   "/blogue": "/en/blog",
+  "/chelsea": "/en/chelsea",
+  "/cantley": "/en/cantley",
+  "/val-des-monts": "/en/val-des-monts",
+  "/masson-angers": "/en/masson-angers",
+  "/pontiac": "/en/pontiac",
+  "/cote-dazur-gatineau": "/en/cote-dazur",
+  "/limbour": "/en/limbour",
 };
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
