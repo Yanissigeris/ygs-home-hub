@@ -5,7 +5,51 @@ import CTASection from "@/components/CTASection";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const BlogArticlePage = () => {
+const BASE_URL = "https://ygs-home-hub.lovable.app";
+
+const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").BlogPost; lang: "fr" | "en" }) => {
+  const isFr = lang === "fr";
+  const slug = isFr ? post.slug : post.slugEn;
+  const url = `${BASE_URL}${isFr ? "/blogue" : "/en/blog"}/${slug}`;
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: isFr ? post.title : post.titleEn,
+      description: isFr ? post.metaDescription : post.metaDescriptionEn,
+      url,
+      datePublished: post.publishDate,
+      dateModified: post.publishDate,
+      image: post.featuredImage ? `${BASE_URL}${post.featuredImage}` : undefined,
+      author: {
+        "@type": "Person",
+        name: "Yanis Gauthier-Sigeris",
+        jobTitle: isFr ? "Courtier immobilier" : "Real Estate Broker",
+        url: BASE_URL,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "YGS — Yanis Gauthier-Sigeris",
+        url: BASE_URL,
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
+      inLanguage: isFr ? "fr-CA" : "en-CA",
+      articleSection: isFr ? post.category : post.categoryEn,
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "ygs-blogposting-jsonld";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => { script.remove(); };
+  }, [post, isFr, url]);
+
+  return null;
+};
+
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
