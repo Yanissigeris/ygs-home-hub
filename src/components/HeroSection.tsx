@@ -229,7 +229,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </p>
 
               {(primaryCta || secondaryCta) && (
-                <div className="mt-10 flex w-full flex-col items-stretch gap-4 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
+                <div className="mt-7 flex w-full flex-col items-stretch gap-4 sm:mt-10 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
                   {primaryCta && (
                     <Button
                       size="xl"
