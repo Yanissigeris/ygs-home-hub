@@ -137,7 +137,7 @@ const GuideRequestForm = ({
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <Label htmlFor="guide-prenom" className="text-muted-foreground text-[0.8125rem]">{t.firstName}</Label>
-                    <Input id="guide-prenom" placeholder={t.firstNamePh} className="mt-1 h-11" required />
+                    <Input id="guide-prenom" name="guide-prenom" placeholder={t.firstNamePh} className="mt-1 h-11" required />
                   </div>
                   <div>
                     <Label htmlFor="guide-nom" className="text-muted-foreground text-[0.8125rem]">{t.lastName}</Label>
