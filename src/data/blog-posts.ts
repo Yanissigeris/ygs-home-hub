@@ -382,7 +382,9 @@ Before investing, a rigorous analysis is essential:
 
 ### My Approach
 
-I help you analyze each opportunity rigorously — income, expenses, appreciation potential — so your investment is a success.`,
+I help you analyze each opportunity rigorously — income, expenses, appreciation potential — so your investment is a success.
+
+**Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
