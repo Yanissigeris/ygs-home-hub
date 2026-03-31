@@ -18,10 +18,10 @@ import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.webp";
 
 const profiles = [
-  { icon: CheckCircle2, title: "First-time buyer", text: "Understand the process step by step without feeling overwhelmed." },
-  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly neighborhood with more rooms, a yard and the right services nearby." },
-  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local guide who truly knows the terrain — neighborhoods, prices, taxes and Québec specifics." },
-  { icon: CheckCircle2, title: "Unsure about neighborhoods", text: "Compare areas objectively — price, potential, lifestyle — to find the perfect neighborhood for you." },
+  { icon: CheckCircle2, title: "First-time buyer in Outaouais", text: "Understand the Québec process step by step without feeling overwhelmed — promise to purchase, inspection, notary." },
+  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly Gatineau neighborhood with more rooms, a yard, good schools and the right services nearby." },
+  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local guide who truly knows Aylmer, Hull, the Plateau and Buckingham — prices, taxes and Québec specifics." },
+  { icon: CheckCircle2, title: "Unsure about neighborhoods", text: "Compare Gatineau areas objectively — price, resale potential, Ottawa access, lifestyle — to find the perfect neighborhood for you." },
 ];
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
