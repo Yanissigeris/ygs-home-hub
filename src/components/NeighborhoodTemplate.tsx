@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { LucideIcon, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import type { GuideType } from "@/components/GuideModal";
 import PageMeta from "@/components/PageMeta";
