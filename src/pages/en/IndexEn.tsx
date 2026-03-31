@@ -105,6 +105,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <hr className="section-divider" />
+
     {/* About Section */}
     <section className="section-padding bg-background">
       <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
@@ -128,6 +130,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         </motion.div>
       </div>
     </section>
+
+    <hr className="section-divider" />
 
     {/* Conversion Steps */}
     <section className="section-padding bg-background">
@@ -157,9 +161,13 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <hr className="section-divider" />
+
     <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
     <GuideOffersSectionEn background="alt" />
+
+    <hr className="section-divider" />
 
     <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
 

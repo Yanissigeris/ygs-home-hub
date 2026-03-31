@@ -126,6 +126,20 @@
     padding-bottom: var(--section-padding-lg);
   }
 
+  .section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--border) / 0.5) 20%,
+      hsl(var(--border) / 0.5) 80%,
+      transparent 100%
+    );
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
   .section-padding-md {
     padding-top: var(--section-padding-md);
     padding-bottom: var(--section-padding-md);
