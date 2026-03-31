@@ -40,7 +40,21 @@ const contactItems = [
 
 const ContactPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "contact", lang: "en",
+      name: fd.get("name") as string || "",
+      email: fd.get("email") as string || "",
+      phone: fd.get("phone") as string || undefined,
+      message: fd.get("message") as string || undefined,
+      objective: fd.get("objective") as string || undefined,
+    });
+    if (success) setSubmitted(true);
+  };
   return (
     <>
       <PageMeta title="Contact Yanis Gauthier-Sigeris | YGS" description="Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation, let's talk about your project." />
