@@ -1934,7 +1934,9 @@ A well-funded reserve protects you from unexpected special assessments.
 
 ## My Advice
 
-Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.`,
+Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.
+
+**Read also**: [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide) · [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide)`,
   },
 
   // ── Article 21 – Vendre en hiver ──
