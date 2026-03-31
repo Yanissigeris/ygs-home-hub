@@ -42,7 +42,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
       <div className="section-container max-w-[64rem]">
         {/* Stats row */}
         <motion.div
-          className="mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
+          className="mb-6 sm:mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
