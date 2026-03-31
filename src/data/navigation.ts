@@ -61,6 +61,7 @@ export const mainNav: NavItem[] = [
       { label: "Gatineau centre", href: "/gatineau" },
     ],
   },
+  { label: "Blogue", href: "/blogue" },
   { label: "À propos", href: "/contact-yanis" },
 ];
 
