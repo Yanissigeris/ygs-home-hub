@@ -349,7 +349,9 @@ Avant d'investir, une analyse rigoureuse est essentielle :
 
 ### Mon approche
 
-Je vous aide à analyser chaque opportunité avec rigueur — revenus, dépenses, potentiel d'appréciation — pour que votre investissement soit un succès.`,
+Je vous aide à analyser chaque opportunité avec rigueur — revenus, dépenses, potentiel d'appréciation — pour que votre investissement soit un succès.
+
+**Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Investing in a Plex in Gatineau: Is It Still Worth It?
 
 Multi-unit real estate investment remains a popular strategy in the Outaouais. But with evolving prices and interest rates, do the numbers still work?
