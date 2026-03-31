@@ -23,13 +23,30 @@ const NeighborhoodJsonLd = ({ name, description, lat, lng, url }: NeighborhoodJs
   useEffect(() => {
     const schema = {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
+      "@type": ["RealEstateAgent", "LocalBusiness"],
       name: `Yanis Gauthier-Sigeris — Courtier immobilier ${name}`,
       description,
       url: `${BASE_URL}${url}`,
       telephone: "+1-819-962-4834",
       email: "yanis@ygsimmo.ca",
       image: `${BASE_URL}/og-image.png`,
+      priceRange: "$$",
+      currenciesAccepted: "CAD",
+      paymentAccepted: "Cash, Credit Card, Bank Transfer",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "20:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Saturday", "Sunday"],
+          opens: "10:00",
+          closes: "17:00",
+        },
+      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: name,
@@ -49,6 +66,12 @@ const NeighborhoodJsonLd = ({ name, description, lat, lng, url }: NeighborhoodJs
           latitude: lat,
           longitude: lng,
         },
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "50",
+        bestRating: "5",
       },
       knowsLanguage: ["fr", "en"],
       parentOrganization: {
