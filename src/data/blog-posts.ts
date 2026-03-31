@@ -97,6 +97,7 @@ Whether you're thinking of selling or buying, understanding these trends gives y
   },
   {
     slug: "quand-vendre-sa-maison-gatineau",
+    featuredImage: blogWhenToSell,
     slugEn: "best-time-to-sell-gatineau",
     title: "Quand vendre sa maison à Gatineau pour maximiser son prix?",
     titleEn: "When Is the Best Time to Sell in Gatineau?",
