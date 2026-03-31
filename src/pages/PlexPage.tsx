@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
@@ -68,6 +69,7 @@ const faq = [
 const PlexPage = () => (
    <>
     <PageMeta title="Investir dans un plex à Gatineau · Outaouais | YGS" description="Duplex, triplex et immeubles à revenus à Gatineau — Hull, Aylmer et environs. Analyse de rendement et stratégie d'investissement par un courtier spécialisé." />
+    <ServiceJsonLd name="Analyse et investissement plex à Gatineau" description="Service d'analyse et d'accompagnement pour l'achat, la vente ou l'évaluation de plex et immeubles à revenus à Gatineau et en Outaouais." url="/investir-plex-gatineau" serviceType="Real Estate Investment Analysis" />
     <HeroSection
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"

@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
@@ -51,6 +52,7 @@ const faq = [
 const PlexPageEn = () => (
   <>
     <PageMeta title="Invest in a Plex in Gatineau | YGS" description="Duplex, triplex and income properties in Gatineau. Return analysis, investment strategy and support by a specialized broker." />
+    <ServiceJsonLd name="Plex Investment Analysis in Gatineau" description="Analysis and support service for buying, selling or evaluating plex and income properties in Gatineau and Outaouais." url="/en/plex" serviceType="Real Estate Investment Analysis" />
     <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <LinkedCardGrid overline="For you" title="I help two types of clients" items={clientTypes} />

@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { Link } from "react-router-dom";
 import SectorLinks from "@/components/SectorLinks";
 import RelatedPages from "@/components/RelatedPages";
@@ -61,6 +62,7 @@ const faq = [
 const SellerPage = () =>
 <>
     <PageMeta title="Vendre sa maison à Gatineau · Outaouais | YGS" description="Vendez votre propriété à Gatineau au meilleur prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet en Outaouais par Yanis Gauthier-Sigeris." />
+    <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais — évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau" serviceType="Real Estate Listing Service" />
     <HeroSection
     overline="Pour vendeurs · Gatineau et environs"
     title="Vendre votre propriété à Gatineau avec une vraie stratégie"
