@@ -105,6 +105,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <hr className="section-divider" />
+
     {/* About Section */}
     <section className="section-padding bg-background">
       <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
