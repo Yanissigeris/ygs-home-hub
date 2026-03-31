@@ -26,7 +26,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container max-w-[44rem]">
         <motion.div
-          className="text-center mb-10"
+          className="text-center mb-6 sm:mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}

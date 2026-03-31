@@ -27,7 +27,7 @@ const SectorLinks = ({
   <section id={id} className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
       <motion.div
-        className="text-center mb-10 max-w-[40rem] mx-auto"
+        className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

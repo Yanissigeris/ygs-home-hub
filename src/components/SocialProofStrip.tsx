@@ -42,7 +42,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
       <div className="section-container max-w-[64rem]">
         {/* Stats row */}
         <motion.div
-          className="mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
+          className="mb-6 sm:mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -70,7 +70,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={t.name}
-              className="relative rounded-2xl border border-border/30 bg-card p-6 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5"
+              className="relative rounded-2xl border border-border/30 bg-card p-5 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -80,7 +80,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
               <p className="text-[0.9375rem] leading-[1.65] text-foreground/80 italic">
                 {t.quote}
               </p>
-              <footer className="mt-5 flex items-center gap-3">
+              <footer className="mt-4 sm:mt-5 flex items-center gap-3">
                 <div
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.75rem] font-semibold tracking-wide text-primary-foreground"
                   style={{ backgroundColor: avatarColor(t.name) }}

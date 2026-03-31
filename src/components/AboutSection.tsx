@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
 <section ref={ref} className="section-padding bg-background">
-    <div className="section-container overflow-hidden grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
+    <div className="section-container overflow-hidden grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
       <motion.div
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -42,10 +42,10 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="prose-body mt-5">
           Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance à votre rythme, que ce soit à Gatineau, Aylmer, Hull ou ailleurs en Outaouais.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden sm:block">
           J'accompagne acheteurs, vendeurs et investisseurs partout en Outaouais avec une approche claire et une excellente connaissance du marché local — prix par secteur, tendances, potentiel de revente et réalités terrain.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden sm:block">
           Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin de la transaction. Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement à Gatineau et dans les environs. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
         </p>
 
@@ -61,7 +61,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
           </span>
         </div>
 
-        <Button className="mt-10" size="lg" asChild>
+        <Button className="mt-7 sm:mt-10" size="lg" asChild>
           <Link to="/contact-yanis">En savoir plus</Link>
         </Button>
       </motion.div>

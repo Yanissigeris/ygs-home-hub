@@ -184,10 +184,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         <div
           className={`section-container relative z-20 ${
             compact
-              ? "py-14 sm:py-18 md:py-20"
+              ? "py-10 sm:py-18 md:py-20"
               : agentImage
-              ? "pt-[5.5rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
-              : "pt-[5.5rem] pb-[5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
+              ? "pt-[4rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
+              : "pt-[4rem] pb-[3.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
           }`}
         >
           <div
@@ -222,14 +222,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </h1>
 
               <p
-                className="mt-6 max-w-[28rem] text-[1rem] leading-[1.75] font-light sm:text-[1.0625rem] max-[390px]:max-w-[22rem]"
+                className="mt-4 max-w-[28rem] text-[0.9375rem] leading-[1.65] font-light sm:mt-6 sm:text-[1.0625rem] sm:leading-[1.75] max-[390px]:max-w-[22rem]"
                 style={{ color: "hsl(200 15% 68%)" }}
               >
                 {subtitle}
               </p>
 
               {(primaryCta || secondaryCta) && (
-                <div className="mt-10 flex w-full flex-col items-stretch gap-4 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
+                <div className="mt-7 flex w-full flex-col items-stretch gap-4 sm:mt-10 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
                   {primaryCta && (
                     <Button
                       size="xl"
@@ -254,7 +254,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Social proof — minimal, quiet */}
               {socialProof && (
-                <div className="mt-8 flex items-center gap-2">
+                <div className="mt-5 sm:mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -275,7 +275,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {trustLine && (
                 <p
-                  className="mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
+                  className="mt-4 sm:mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
                   style={{ color: "hsl(200 15% 55% / 0.35)" }}
                 >
                   {trustLine}
