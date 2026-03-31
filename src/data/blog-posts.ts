@@ -1655,7 +1655,7 @@ Exemple pour une maison à Gatineau :
 
 Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie valeur marchande. Je peux vous fournir une évaluation gratuite et vous référer à des courtiers hypothécaires de confiance à Gatineau.
 
-**Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-cloture-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
+**Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-achat-maison-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
     bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
 
 Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have significant equity to tap into.
@@ -1696,7 +1696,7 @@ Example for a Gatineau home:
 
 Before refinancing, get your property appraised to know its true market value. I can provide a free valuation and refer you to trusted mortgage brokers in Gatineau.
 
-**Read also**: [Notary & Closing Costs](/en/blog/notary-closing-costs-gatineau) · [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value)`,
+**Read also**: [Notary & Closing Costs](/en/blog/notary-fees-buying-home-gatineau) · [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value)`,
   },
 
   // ── Article 19 – Marché locatif Gatineau ──
@@ -1765,7 +1765,7 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 
 Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.
 
-**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
+**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Gatineau's Rental Market: A Golden Opportunity
 
 With one of the lowest vacancy rates in Quebec and demand fueled by federal employees, Gatineau has become one of the most attractive cities for rental investment.
@@ -1815,7 +1815,7 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 
 Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.
 
-**Read also**: [Investing in a Plex in Gatineau](/en/blog/invest-plex-gatineau) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
+**Read also**: [Investing in a Plex in Gatineau](/en/blog/investing-plex-gatineau-worth-it) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
 
   // ── Article 20 – Guide copropriété Gatineau ──
