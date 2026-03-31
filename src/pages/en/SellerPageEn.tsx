@@ -17,10 +17,10 @@ import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react"
 import heroImg from "@/assets/hero-seller.webp";
 
 const painPoints = [
-  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "You don't want to miss the window, but you also don't want to sell without a plan." },
-  { icon: CheckCircle2, title: "How much is my property really worth?", text: "A realistic price based on recent sales — not an inflated number to win your listing." },
-  { icon: CheckCircle2, title: "Should I renovate first?", text: "Some investments pay off. Others don't. We'll sort through them together." },
-  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "Coordinating a sale and purchase requires a plan from the start." },
+  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "The Gatineau market is evolving. You don't want to miss the window, but you also don't want to sell without a plan." },
+  { icon: CheckCircle2, title: "How much is my property really worth?", text: "A realistic price based on recent sales in your Outaouais neighborhood — not an inflated number to win your listing." },
+  { icon: CheckCircle2, title: "Should I renovate first?", text: "Some investments pay off in the local market. Others don't. We'll sort through them together." },
+  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "Coordinating a sale and purchase in Gatineau requires a plan from the start — especially if you're staying in the area." },
 ];
 const fears = [
   { icon: AlertTriangle, title: "Underpricing", text: "Leaving thousands on the table due to lack of information on recent sales." },
