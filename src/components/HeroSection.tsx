@@ -222,7 +222,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </h1>
 
               <p
-                className="mt-6 max-w-[28rem] text-[1rem] leading-[1.75] font-light sm:text-[1.0625rem] max-[390px]:max-w-[22rem]"
+                className="mt-4 max-w-[28rem] text-[0.9375rem] leading-[1.65] font-light sm:mt-6 sm:text-[1.0625rem] sm:leading-[1.75] max-[390px]:max-w-[22rem]"
                 style={{ color: "hsl(200 15% 68%)" }}
               >
                 {subtitle}
