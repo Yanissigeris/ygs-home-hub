@@ -89,15 +89,22 @@ const BlogPageEn = () => {
             <Link
               key={post.slugEn}
               to={`/en/blog/${post.slugEn}`}
-              className="group flex flex-col rounded-2xl border border-border/40 bg-background p-6 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
             >
-              <div className="flex flex-wrap items-center gap-2.5">
-                <span className="inline-flex w-fit h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.categoryEn}</span>
-                <time className="text-[0.6875rem] text-muted-foreground/50">{new Date(post.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
+              {post.featuredImage && (
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img src={post.featuredImage} alt={post.titleEn} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={1200} height={672} />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <div className="flex flex-wrap items-center gap-2.5">
+                  <span className="inline-flex w-fit h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.categoryEn}</span>
+                  <time className="text-[0.6875rem] text-muted-foreground/50">{new Date(post.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
+                </div>
+                <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.titleEn}</h3>
+                <p className="prose-body mt-2.5 text-[0.875rem] flex-1">{post.excerptEn}</p>
+                <span className="mt-4 text-[0.8125rem] font-medium text-accent">Read →</span>
               </div>
-              <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.titleEn}</h3>
-              <p className="prose-body mt-2.5 text-[0.875rem] flex-1">{post.excerptEn}</p>
-              <span className="mt-4 text-[0.8125rem] font-medium text-accent">Read →</span>
             </Link>
           ))}
         </div>
