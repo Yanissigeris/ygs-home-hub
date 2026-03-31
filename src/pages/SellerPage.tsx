@@ -32,8 +32,8 @@ const fears = [
 
 
 const steps = [
-{ num: "01", title: "Analyse et positionnement", desc: "Ventes comparables, état du marché, particularités de votre propriété. On établit un prix réaliste et stratégique." },
-{ num: "02", title: "Plan vendeur personnalisé", desc: "Préparation, améliorations qui valent la peine, plan de visibilité et calendrier de mise en marché." },
+{ num: "01", title: "Analyse et positionnement", desc: "Ventes comparables dans votre secteur, état du marché en Outaouais, particularités de votre propriété. On établit un prix réaliste et stratégique." },
+{ num: "02", title: "Plan vendeur personnalisé", desc: "Préparation, améliorations qui valent la peine, plan de visibilité ciblé pour les acheteurs de Gatineau et Ottawa." },
 { num: "03", title: "Accompagnement complet", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. Aucune surprise." }];
 
 
