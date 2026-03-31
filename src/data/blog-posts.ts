@@ -1883,7 +1883,9 @@ Un fonds bien garni vous protège des cotisations spéciales imprévues.
 
 ## Mon conseil
 
-Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.`,
+Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.
+
+**Lire aussi** : [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide) · [Inspection préachat](/blogue/inspection-preachat-gatineau-guide)`,
     bodyEn: `## Condo Ownership in Gatineau: The Essential Guide
 
 Condo ownership is increasingly popular in Gatineau, especially in Hull and the Plateau. Before buying, here's everything you need to understand.
