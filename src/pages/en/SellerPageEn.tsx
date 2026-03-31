@@ -28,8 +28,8 @@ const fears = [
   { icon: AlertTriangle, title: "Poor preparation", text: "Facing stressful negotiations without a clear strategy from day one." },
 ];
 const steps = [
-  { num: "01", title: "Analysis & positioning", desc: "Comparable sales, market conditions, your property's strengths. We set a realistic and strategic price." },
-  { num: "02", title: "Personalized seller plan", desc: "Preparation, worthwhile improvements, visibility plan and marketing timeline." },
+  { num: "01", title: "Analysis & positioning", desc: "Comparable sales in your neighborhood, Outaouais market conditions, your property's strengths. We set a realistic and strategic price." },
+  { num: "02", title: "Personalized seller plan", desc: "Preparation, worthwhile improvements, targeted visibility plan to attract buyers from Gatineau and Ottawa." },
   { num: "03", title: "Full support", desc: "Marketing, showings, negotiation, coordination through to the notary. No surprises." },
 ];
 const trustItems = [
