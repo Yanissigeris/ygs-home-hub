@@ -20,11 +20,11 @@ const clientTypes = [
   { icon: TrendingUp, title: "Investor buyers", text: "Real value, rental potential, risks and buying strategy — the numbers before the decision.", cta: "Request an analysis", href: "/en/plex-analysis" },
 ];
 const questions = [
-  { icon: CheckCircle2, title: "Should I keep or sell?", text: "Current returns, market conditions and long-term strategy." },
-  { icon: CheckCircle2, title: "Does the asking price make sense?", text: "Real revenues, real expenses, rental potential — not just the listed price." },
-  { icon: CheckCircle2, title: "What's the true return?", text: "Expenses, vacancy, upcoming repairs, growth potential." },
-  { icon: CheckCircle2, title: "What risks to watch for?", text: "Roof, plumbing, electrical, foundation — some costs change the equation." },
-  { icon: CheckCircle2, title: "How to maximize sale price?", text: "Price positioning and marketing make a difference on a plex." },
+  { icon: CheckCircle2, title: "Should I keep or sell?", text: "Current returns, Outaouais market conditions and long-term strategy." },
+  { icon: CheckCircle2, title: "Does the asking price make sense?", text: "Real revenues, real expenses, rental potential in the area — not just the listed price." },
+  { icon: CheckCircle2, title: "What's the true return?", text: "Expenses, vacancy, upcoming repairs, growth potential in Gatineau." },
+  { icon: CheckCircle2, title: "What risks to watch for?", text: "Roof, plumbing, electrical, foundation — some costs change the equation, especially in Hull's older buildings." },
+  { icon: CheckCircle2, title: "How to maximize sale price?", text: "Price positioning and targeted marketing make a difference on a plex in Outaouais." },
 ];
 const steps = [
   { num: "01", title: "Number analysis", desc: "Revenues, expenses, market value and rental potential — we start with the facts." },
