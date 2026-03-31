@@ -58,7 +58,10 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
           <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 text-[0.7188rem] text-white/60 transition-colors hover:text-white/85">
             <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
           </a>
-          <Link to={ctaHref} className="inline-flex h-[26px] shrink-0 items-center rounded-full border border-white/[0.08] bg-white/[0.09] px-3 text-[0.625rem] font-medium tracking-[0.03em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95">{ctaLabelMobile}</Link>
+          <div className="flex shrink-0 items-center gap-3">
+            <Link to={lang === "en" ? "/en/resources" : "/ressources"} className="text-[0.6875rem] text-white/50 transition-colors hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
+            <Link to={ctaHref} className="inline-flex h-[26px] shrink-0 items-center rounded-full border border-white/[0.08] bg-white/[0.09] px-3 text-[0.625rem] font-medium tracking-[0.03em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95">{ctaLabelMobile}</Link>
+          </div>
         </div>
       </div>
     </div>
