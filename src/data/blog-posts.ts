@@ -5,6 +5,11 @@ import blogOttawaGatineau from "@/assets/blog/blog-ottawa-gatineau.jpg";
 import blogPlexInvestment from "@/assets/blog/blog-plex-investment.jpg";
 import blogNeighborhoods from "@/assets/blog/blog-neighborhoods.jpg";
 import blogMilitary from "@/assets/blog/blog-military.jpg";
+import blogNotaryClosing from "@/assets/blog/blog-notary-closing.jpg";
+import blogHomeStaging from "@/assets/blog/blog-home-staging.jpg";
+import blogRenovationValue from "@/assets/blog/blog-renovation-value.jpg";
+import blogTaxesGatineau from "@/assets/blog/blog-taxes-gatineau.jpg";
+import blogFamilyNeighborhood from "@/assets/blog/blog-family-neighborhood.jpg";
 
 export interface BlogPost {
   slug: string;
