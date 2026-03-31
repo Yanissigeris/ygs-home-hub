@@ -2008,7 +2008,9 @@ Un courtier qui ne ralentit pas en hiver fait toute la différence.
 
 ## Mon engagement
 
-Je suis actif 12 mois par année. En hiver, je déploie des stratégies adaptées : photos professionnelles, visites bien planifiées et marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.`,
+Je suis actif 12 mois par année. En hiver, je déploie des stratégies adaptées : photos professionnelles, visites bien planifiées et marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.
+
+**Lire aussi** : [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
     bodyEn: `## Selling in Winter in Gatineau: An Underestimated Strategy
 
 Many homeowners wait until spring to sell. Yet winter offers unique advantages in the Gatineau market.
