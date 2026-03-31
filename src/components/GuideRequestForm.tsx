@@ -152,7 +152,7 @@ const GuideRequestForm = ({
 
                 <div>
                   <Label htmlFor="guide-tel" className="text-muted-foreground text-[0.8125rem]">{t.phone}</Label>
-                  <Input id="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
+                  <Input id="guide-tel" name="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
                 </div>
 
                 <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold">
