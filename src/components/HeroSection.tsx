@@ -1,7 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+/* Inline star SVG — keeps lucide-react out of the critical bundle */
+const StarIcon = () => (
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="fill-[hsl(36_50%_52%/0.5)] text-[hsl(36_50%_52%/0.5)]"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+);
 
 interface HeroSectionProps {
   overline?: string;
@@ -257,11 +260,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <div className="mt-5 sm:mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={10}
-                        className="fill-[hsl(36_50%_52%/0.5)] text-[hsl(36_50%_52%/0.5)]"
-                      />
+                      <StarIcon key={i} />
                     ))}
                   </div>
                   <span
