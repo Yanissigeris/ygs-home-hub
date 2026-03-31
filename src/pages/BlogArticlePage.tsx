@@ -54,7 +54,6 @@ const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
-  const lang = useLanguage();
   const isFr = lang === "fr";
 
   // All hooks must be before any early return
