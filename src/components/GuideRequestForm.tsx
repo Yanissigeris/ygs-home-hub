@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { Send, Lock, Shield, Clock, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 
 interface GuideRequestFormProps {
   guideTitle: string;
@@ -69,10 +70,21 @@ const GuideRequestForm = ({
   const t = i18n[lang];
   const finalSuccessTitle = successTitle ?? t.defaultSuccessTitle;
   const finalSuccessText = successText ?? t.defaultSuccessText;
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "guide", lang,
+      name: fd.get("guide-prenom") as string || "",
+      lastName: fd.get("guide-nom") as string || undefined,
+      email: fd.get("guide-courriel") as string || "",
+      phone: fd.get("guide-tel") as string || undefined,
+      guideTitle,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
@@ -125,27 +137,27 @@ const GuideRequestForm = ({
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <Label htmlFor="guide-prenom" className="text-muted-foreground text-[0.8125rem]">{t.firstName}</Label>
-                    <Input id="guide-prenom" placeholder={t.firstNamePh} className="mt-1 h-11" required />
+                    <Input id="guide-prenom" name="guide-prenom" placeholder={t.firstNamePh} className="mt-1 h-11" required />
                   </div>
                   <div>
                     <Label htmlFor="guide-nom" className="text-muted-foreground text-[0.8125rem]">{t.lastName}</Label>
-                    <Input id="guide-nom" placeholder={t.lastNamePh} className="mt-1 h-11" required />
+                    <Input id="guide-nom" name="guide-nom" placeholder={t.lastNamePh} className="mt-1 h-11" required />
                   </div>
                 </div>
 
                 <div>
                   <Label htmlFor="guide-courriel" className="text-muted-foreground text-[0.8125rem]">{t.email}</Label>
-                  <Input id="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
+                  <Input id="guide-courriel" name="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
                 </div>
 
                 <div>
                   <Label htmlFor="guide-tel" className="text-muted-foreground text-[0.8125rem]">{t.phone}</Label>
-                  <Input id="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
+                  <Input id="guide-tel" name="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
                 </div>
 
-                <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold">
+                <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold" disabled={submitting}>
                   <Send size={16} className="mr-1.5" />
-                  {submitLabel}
+                  {submitting ? (lang === 'fr' ? 'Envoi…' : 'Sending…') : submitLabel}
                 </Button>
 
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-muted-foreground/50">

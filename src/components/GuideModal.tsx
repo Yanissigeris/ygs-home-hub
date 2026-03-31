@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import {
   Dialog,
   DialogContent,
@@ -60,11 +61,21 @@ const guideConfig: Record<GuideType, { title: string; description: string; submi
 const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {
   const [submitted, setSubmitted] = useState(false);
   const config = guideConfig[guideType];
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Supabase edge function
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "guide", lang: "fr",
+      name: fd.get("first_name") as string || "",
+      email: fd.get("email") as string || "",
+      phone: fd.get("phone") as string || undefined,
+      projectType: fd.get("project_type") as string || undefined,
+      guideTitle: config.title,
+    });
+    if (success) setSubmitted(true);
   };
 
   const handleOpenChange = (value: boolean) => {
@@ -182,9 +193,10 @@ const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {
                 size="lg"
                 variant="accent"
                 className="w-full mt-1 font-semibold"
+                disabled={submitting}
               >
                 <Send size={16} className="mr-1.5" />
-                {config.submitLabel}
+                {submitting ? "Envoi…" : config.submitLabel}
               </Button>
 
               <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.72rem] text-muted-foreground/50">

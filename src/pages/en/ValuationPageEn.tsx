@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,21 @@ const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, tr
 
 const ValuationPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "valuation", lang: "en",
+      name: fd.get("name") as string || "",
+      email: fd.get("email") as string || "",
+      phone: fd.get("phone") as string || undefined,
+      address: fd.get("address") as string || undefined,
+      message: fd.get("message") as string || undefined,
+    });
+    if (success) setSubmitted(true);
+  };
   return (
     <>
       <PageMeta title="Free Home Valuation — Gatineau | YGS" description="Get a free and accurate valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." />
@@ -55,11 +70,11 @@ const ValuationPageEn = () => {
                   <div className="mt-8 text-center py-8"><CheckCircle2 size={36} className="mx-auto text-accent" /><h3 className="mt-4 text-primary-foreground text-[1.125rem]">Thank you! Request sent.</h3><p className="mt-2 text-[0.875rem] text-primary-foreground/40">I'll get back to you within 24 hours with your valuation.</p></div>
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                    <div><Label htmlFor="address" className="text-primary-foreground/60 text-[0.8125rem]">Property address</Label><Input id="address" placeholder="123 Example St, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div>
-                    <div className="grid gap-4 sm:grid-cols-2"><div><Label htmlFor="name" className="text-primary-foreground/60 text-[0.8125rem]">Name</Label><Input id="name" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div><div><Label htmlFor="email" className="text-primary-foreground/60 text-[0.8125rem]">Email</Label><Input id="email" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div></div>
-                    <div><Label htmlFor="phone" className="text-primary-foreground/60 text-[0.8125rem]">Phone</Label><Input id="phone" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" /></div>
-                    <div><Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optional)</Label><Textarea id="message" rows={2} placeholder="Additional details..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" /></div>
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold"><Send size={16} className="mr-1.5" />Get my free valuation</Button>
+                    <div><Label htmlFor="address" className="text-primary-foreground/60 text-[0.8125rem]">Property address</Label><Input id="address" name="address" placeholder="123 Example St, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div>
+                    <div className="grid gap-4 sm:grid-cols-2"><div><Label htmlFor="name" className="text-primary-foreground/60 text-[0.8125rem]">Name</Label><Input id="name" name="name" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div><div><Label htmlFor="email" className="text-primary-foreground/60 text-[0.8125rem]">Email</Label><Input id="email" name="email" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required /></div></div>
+                    <div><Label htmlFor="phone" className="text-primary-foreground/60 text-[0.8125rem]">Phone</Label><Input id="phone" name="phone" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" /></div>
+                    <div><Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optional)</Label><Textarea id="message" name="message" rows={2} placeholder="Additional details..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" /></div>
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold" disabled={submitting}><Send size={16} className="mr-1.5" />{submitting ? "Sending…" : "Get my free valuation"}</Button>
                     <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-primary-foreground/30"><span className="flex items-center gap-1.5"><BadgeCheck size={13} /> Free</span><span className="flex items-center gap-1.5"><Lock size={13} /> Confidential</span><span className="flex items-center gap-1.5"><Shield size={13} /> No commitment</span><span className="flex items-center gap-1.5"><Clock size={13} /> Response in 24h</span></div>
                   </form>
                 )}

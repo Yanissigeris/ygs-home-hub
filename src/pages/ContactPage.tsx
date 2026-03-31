@@ -1,6 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import heroImg from "@/assets/hero-gatineau.webp";
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
@@ -47,10 +48,22 @@ const contactItems = [
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const success = await submit({
+      formType: "contact",
+      lang: "fr",
+      name: formData.get("nom") as string || "",
+      email: formData.get("courriel") as string || "",
+      phone: formData.get("tel") as string || undefined,
+      message: formData.get("message") as string || undefined,
+      objective: formData.get("objectif") as string || undefined,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
@@ -104,7 +117,7 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
             <div>
               <Label htmlFor="objectif">Je veux…</Label>
-              <Select>
+              <Select name="objectif">
                 <SelectTrigger id="objectif" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="vendre">Vendre</SelectItem>
@@ -117,22 +130,24 @@ const ContactPage = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <Label htmlFor="nom">Nom</Label>
-                <Input id="nom" className="mt-1.5" required />
+                <Input id="nom" name="nom" className="mt-1.5" required />
               </div>
               <div>
                 <Label htmlFor="courriel">Courriel</Label>
-                <Input id="courriel" type="email" className="mt-1.5" required />
+                <Input id="courriel" name="courriel" type="email" className="mt-1.5" required />
               </div>
             </div>
             <div>
               <Label htmlFor="tel">Téléphone</Label>
-              <Input id="tel" type="tel" className="mt-1.5" />
+              <Input id="tel" name="tel" type="tel" className="mt-1.5" />
             </div>
             <div>
               <Label htmlFor="message">Message (optionnel)</Label>
-              <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
+              <Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
             </div>
-            <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
+            <Button type="submit" size="xl" className="w-full" disabled={submitting}>
+              {submitting ? "Envoi en cours…" : "Envoyer ma demande"}
+            </Button>
             <p className="text-center text-[0.8125rem] text-muted-foreground/50">
               Je vous donne les chiffres et les options, vous décidez.
             </p>

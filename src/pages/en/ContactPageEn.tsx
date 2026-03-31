@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import HeroSection from "@/components/HeroSection";
@@ -39,7 +40,21 @@ const contactItems = [
 
 const ContactPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "contact", lang: "en",
+      name: fd.get("name") as string || "",
+      email: fd.get("email") as string || "",
+      phone: fd.get("phone") as string || undefined,
+      message: fd.get("message") as string || undefined,
+      objective: fd.get("objective") as string || undefined,
+    });
+    if (success) setSubmitted(true);
+  };
   return (
     <>
       <PageMeta title="Contact Yanis Gauthier-Sigeris | YGS" description="Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation, let's talk about your project." />
@@ -55,11 +70,11 @@ const ContactPageEn = () => {
       <FormSection id="contact-form" title="Tell me where you are">
         {submitted ? <SuccessMessage title="Thank you! Message sent." text="I'll get back to you shortly." /> : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
-            <div><Label htmlFor="objective">I want to…</Label><Select><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
-            <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" type="email" className="mt-1.5" required /></div></div>
-            <div><Label htmlFor="phone">Phone</Label><Input id="phone" type="tel" className="mt-1.5" /></div>
-            <div><Label htmlFor="message">Message (optional)</Label><Textarea id="message" rows={4} className="mt-1.5" placeholder="Briefly describe your project…" /></div>
-            <Button type="submit" size="xl" className="w-full">Send my request</Button>
+            <div><Label htmlFor="objective">I want to…</Label><Select name="objective"><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
+            <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" name="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" name="email" type="email" className="mt-1.5" required /></div></div>
+            <div><Label htmlFor="phone">Phone</Label><Input id="phone" name="phone" type="tel" className="mt-1.5" /></div>
+            <div><Label htmlFor="message">Message (optional)</Label><Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Briefly describe your project…" /></div>
+            <Button type="submit" size="xl" className="w-full" disabled={submitting}>{submitting ? "Sending…" : "Send my request"}</Button>
             <p className="text-center text-[0.8125rem] text-muted-foreground/50">I give you the numbers and the options — you decide with full clarity.</p>
           </form>
         )}

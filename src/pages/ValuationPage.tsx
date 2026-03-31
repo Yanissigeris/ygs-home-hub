@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import SuccessMessage from "@/components/SuccessMessage";
@@ -38,10 +39,21 @@ const anim = {
 
 const ValuationPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "valuation", lang: "fr",
+      name: fd.get("nom") as string || "",
+      email: fd.get("courriel") as string || "",
+      phone: fd.get("tel") as string || undefined,
+      address: fd.get("adresse") as string || undefined,
+      message: fd.get("message") as string || undefined,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
@@ -144,33 +156,33 @@ const ValuationPage = () => {
                   <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                     <div>
                       <Label htmlFor="adresse" className="text-primary-foreground/60 text-[0.8125rem]">Adresse de la propriété</Label>
-                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                      <Input id="adresse" name="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="nom" className="text-primary-foreground/60 text-[0.8125rem]">Nom</Label>
-                        <Input id="nom" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                        <Input id="nom" name="nom" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
                       </div>
                       <div>
                         <Label htmlFor="courriel" className="text-primary-foreground/60 text-[0.8125rem]">Courriel</Label>
-                        <Input id="courriel" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
+                        <Input id="courriel" name="courriel" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
                       </div>
                     </div>
 
                     <div>
                       <Label htmlFor="tel" className="text-primary-foreground/60 text-[0.8125rem]">Téléphone</Label>
-                      <Input id="tel" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" />
+                      <Input id="tel" name="tel" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" />
                     </div>
 
                     <div>
                       <Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optionnel)</Label>
-                      <Textarea id="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
+                      <Textarea id="message" name="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold">
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold" disabled={submitting}>
                       <Send size={16} className="mr-1.5" />
-                      Recevoir mon évaluation gratuite
+                      {submitting ? "Envoi en cours…" : "Recevoir mon évaluation gratuite"}
                     </Button>
 
                     <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-primary-foreground/30">
