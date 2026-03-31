@@ -25,11 +25,11 @@ const trustItems = [
 ];
 
 const reasons = [
-  "Centre-ville animé avec restaurants, culture et vie de quartier",
-  "Proximité immédiate du centre-ville d'Ottawa via les ponts",
-  "Condos, plex et maisons à prix compétitifs",
-  "Secteur en revitalisation avec potentiel de plus-value",
-  "Transports en commun et pistes cyclables bien développés",
+  "Centre-ville animé avec restaurants, galeries, culture et vie de quartier — le cœur urbain de Gatineau",
+  "Proximité immédiate du centre-ville d'Ottawa via les ponts Alexandra et du Portage",
+  "Condos, plex et maisons de caractère à prix compétitifs par rapport à Ottawa",
+  "Secteur en pleine revitalisation avec le projet Zibi et potentiel de plus-value",
+  "Transports en commun (STO), pistes cyclables et accès Rapibus bien développés",
 ];
 
 const profiles = [

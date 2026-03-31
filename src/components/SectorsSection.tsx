@@ -2,9 +2,9 @@ import * as React from "react";
 import SectorLinks from "@/components/SectorLinks";
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, lac Deschênes, accès Ottawa" },
+  { name: "Hull", href: "/hull", detail: "Urbain, restaurants, culture, condos et plex, projet Zibi" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Grands terrains, prix accessibles, rivière, nature" },
 ];
 
 const SectorsSection = React.forwardRef<HTMLDivElement>((_, ref) => (

@@ -16,10 +16,10 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "Prix plus accessibles", text: "Les maisons unifamiliales et condos coûtent souvent moins cher à Gatineau qu'à Ottawa." },
-  { icon: MapPin, title: "Proximité d'Ottawa", text: "Les ponts, le transport en commun et les pistes cyclables rendent le trajet très faisable." },
-  { icon: Home, title: "Plus d'espace", text: "Pour le même budget, vous obtenez souvent plus d'espace, de terrain et de qualité de vie." },
-  { icon: FileText, title: "Processus québécois", text: "Le processus d'achat au Québec a ses particularités — je vous guide étape par étape." },
+  { icon: DollarSign, title: "Prix plus accessibles", text: "Les maisons unifamiliales et condos coûtent souvent nettement moins cher à Gatineau qu'à Ottawa, de l'autre côté de la rivière." },
+  { icon: MapPin, title: "Proximité d'Ottawa", text: "Les ponts (Champlain, Alexandra, du Portage), le transport STO et les pistes cyclables rendent le trajet quotidien très faisable." },
+  { icon: Home, title: "Plus d'espace", text: "Pour le même budget, vous obtenez souvent plus de pièces, un plus grand terrain et une meilleure qualité de vie à Aylmer, au Plateau ou à Buckingham." },
+  { icon: FileText, title: "Processus québécois", text: "Le processus d'achat au Québec a ses propres règles — promesse d'achat, notaire, taxes scolaires. Je vous guide étape par étape." },
 ];
 
 const sectors = [

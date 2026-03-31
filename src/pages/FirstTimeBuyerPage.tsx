@@ -16,16 +16,16 @@ import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
 const considerations = [
-  { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles." },
-  { icon: Home, title: "Le bon type de propriété", text: "Condo, maison, jumelé — chaque option a ses avantages pour un premier achat." },
-  { icon: FileText, title: "Le processus au Québec", text: "Promesse d'achat, inspection, notaire — le processus est différent d'ailleurs au Canada." },
-  { icon: Shield, title: "Éviter les erreurs de débutant", text: "Ne pas se précipiter, bien comprendre les frais, choisir le bon quartier — je vous guide." },
+  { icon: DollarSign, title: "Mise de fonds et budget", text: "5% minimum pour un premier achat. On regarde ensemble votre capacité réelle et les programmes disponibles au Québec." },
+  { icon: Home, title: "Le bon type de propriété", text: "Condo à Hull, maison à Aylmer, jumelé au Plateau — chaque option a ses avantages pour un premier achat à Gatineau." },
+  { icon: FileText, title: "Le processus au Québec", text: "Promesse d'achat, inspection, notaire — le processus québécois est différent d'ailleurs au Canada. Je vous guide à chaque étape." },
+  { icon: Shield, title: "Éviter les erreurs de débutant", text: "Ne pas se précipiter, bien comprendre les frais, choisir le bon quartier en Outaouais — je vous guide." },
 ];
 
 const steps = [
-  { num: "01", title: "Consultation initiale", desc: "On parle de votre budget, vos priorités et vos questions. Transparence totale." },
-  { num: "02", title: "Recherche ciblée", desc: "Je vous présente les meilleures options dans les secteurs qui correspondent à votre profil." },
-  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire — je vous accompagne jusqu'aux clés de votre première propriété." },
+  { num: "01", title: "Consultation initiale", desc: "On parle de votre budget, vos priorités et vos questions sur l'achat à Gatineau. Transparence totale." },
+  { num: "02", title: "Recherche ciblée", desc: "Je vous présente les meilleures options à Aylmer, Hull, au Plateau ou à Buckingham — les secteurs qui correspondent à votre profil et votre budget." },
+  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire — je vous accompagne dans le processus québécois jusqu'aux clés de votre première propriété." },
 ];
 
 const trustItems = [
@@ -35,9 +35,9 @@ const trustItems = [
 ];
 
 const faq = [
-  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés. On analyse ensemble votre capacité réelle." },
-  { q: "Est-ce que je qualifie pour des programmes d'aide?", a: "Il existe des incitatifs fédéraux et provinciaux pour les premiers acheteurs. On regarde ça ensemble lors de la consultation." },
-  { q: "Qu'est-ce qui est différent au Québec?", a: "Le processus notarié, la promesse d'achat et certaines particularités fiscales. Rien de compliqué — il faut juste être bien guidé." },
+  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés en Outaouais — des condos à Hull aux maisons sur le Plateau. On analyse ensemble votre capacité réelle." },
+  { q: "Est-ce que je qualifie pour des programmes d'aide?", a: "Il existe des incitatifs fédéraux et provinciaux québécois pour les premiers acheteurs. On regarde ça ensemble lors de la consultation." },
+  { q: "Qu'est-ce qui est différent au Québec?", a: "Le processus notarié, la promesse d'achat et certaines particularités fiscales québécoises. Rien de compliqué — il faut juste être bien guidé par quelqu'un qui connaît le marché local." },
 ];
 
 const FirstTimeBuyerPage = () => (

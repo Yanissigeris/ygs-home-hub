@@ -33,11 +33,11 @@ const clientTypes = [
 ];
 
 const questions = [
-  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Rendement actuel, conditions du marché et stratégie à long terme." },
-  { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Revenus réels, dépenses réelles, potentiel locatif — pas juste le prix affiché." },
-  { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Dépenses, vacance, travaux à prévoir, potentiel de croissance." },
-  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation — certains coûts changent la donne." },
-  { icon: CheckCircle2, title: "Comment maximiser le prix de vente?", text: "Positionnement prix et mise en marché font la différence sur un plex." },
+  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Rendement actuel, conditions du marché en Outaouais et stratégie à long terme." },
+  { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Revenus réels, dépenses réelles, potentiel locatif dans le secteur — pas juste le prix affiché." },
+  { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Dépenses, vacance, travaux à prévoir, potentiel de croissance à Gatineau." },
+  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation — certains coûts changent la donne, surtout sur les bâtiments plus anciens de Hull." },
+  { icon: CheckCircle2, title: "Comment maximiser le prix de vente?", text: "Positionnement prix et mise en marché ciblée font la différence sur un plex en Outaouais." },
 ];
 
 const steps = [
@@ -59,10 +59,10 @@ const nextSteps = [
 ];
 
 const faq = [
-  { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex locaux." },
-  { q: "Est-ce encore rentable d'acheter un plex?", a: "Ça dépend du prix, des revenus et de votre stratégie. On peut analyser ça ensemble." },
-  { q: "Comment vendre un plex occupé?", a: "C'est faisable — coordination locataires, visites, documentation. Je vous accompagne à chaque étape." },
-  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios ensemble pour voir ce qui fait plus de sens dans votre situation." },
+  { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex à Hull, Gatineau-centre et dans les autres secteurs." },
+  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus et de votre stratégie. Hull, Gatineau-centre et certains coins d'Aylmer offrent encore de bonnes opportunités. On peut analyser ça ensemble." },
+  { q: "Comment vendre un plex occupé?", a: "C'est faisable — coordination locataires, visites, documentation. Le processus québécois a ses règles spécifiques. Je vous accompagne à chaque étape." },
+  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios avec les taux actuels et la valeur marchande de votre secteur pour voir ce qui fait plus de sens." },
 ];
 
 const PlexPage = () => (

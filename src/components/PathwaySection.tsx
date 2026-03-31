@@ -11,8 +11,8 @@ import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const pathways = [
   {
-    title: "Vendre ma propriété",
-    text: "Évaluation réaliste, stratégie de prix et mise en marché — pour maximiser votre résultat.",
+    title: "Vendre ma propriété en Outaouais",
+    text: "Évaluation réaliste, stratégie de prix adaptée au marché de Gatineau et mise en marché ciblée — pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
@@ -22,7 +22,7 @@ const pathways = [
   },
   {
     title: "Acheter à Gatineau",
-    text: "Secteurs, budget et accompagnement terrain — pour acheter avec confiance.",
+    text: "Aylmer, Hull, Plateau ou Buckingham — les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
     cta: "Explorer l'achat",
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
@@ -32,7 +32,7 @@ const pathways = [
   },
   {
     title: "Plex & investissement",
-    text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.",
+    text: "Rendement, valeur marchande et timing — les vrais chiffres du marché locatif en Outaouais avant la décision.",
     cta: "Recevoir une analyse",
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
@@ -55,7 +55,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
         <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
         <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
         <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
-          Chaque situation est différente. Dites-moi où vous en êtes — je vous donne les chiffres, les options et une stratégie claire.
+          Chaque situation est différente. Que vous soyez à Gatineau, Aylmer, Hull ou en transition depuis Ottawa — je vous donne les chiffres, les options et une stratégie claire.
         </p>
       </motion.div>
 

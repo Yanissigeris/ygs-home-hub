@@ -46,21 +46,21 @@ const socialTestimonialsEn = [
 ];
 
 const pathways = [
-  { title: "Sell my property", text: "Realistic valuation, pricing strategy and marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
-  { title: "Buy in Gatineau", text: "Neighborhoods, budget and hands-on guidance — to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
-  { title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" },
+  { title: "Sell my property in Outaouais", text: "Realistic valuation, pricing strategy tailored to the Gatineau market and targeted marketing plan — to maximize your result.", cta: "See the seller plan", href: "/en/sell", footer: "Valuation · positioning · marketing", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
+  { title: "Buy in Gatineau", text: "Aylmer, Hull, Plateau or Buckingham — the right neighborhoods, the right budget and hands-on guidance to buy with confidence.", cta: "Explore buying", href: "/en/buy", footer: "Neighborhoods · budget · guidance", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
+  { title: "Plex & Investment", text: "Returns, market value and timing — the real numbers from the Outaouais rental market before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" },
 ];
 
 const steps = [
-  { number: "01", title: "Free home valuation", text: "Know the true value of your property within days.", href: "/en/home-valuation" },
-  { number: "02", title: "Clear strategy", text: "A selling plan tailored to your situation and your market.", href: "/en/sell" },
-  { number: "03", title: "Full support", text: "From preparation to closing, at your own pace.", href: "/en/contact" },
+  { number: "01", title: "Free home valuation", text: "Know the true value of your Gatineau property within days.", href: "/en/home-valuation" },
+  { number: "02", title: "Clear strategy", text: "A selling plan tailored to your property and the Outaouais market.", href: "/en/sell" },
+  { number: "03", title: "Full support", text: "From preparation to closing at the notary, at your own pace.", href: "/en/contact" },
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown, condos and plex" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Lake Deschênes, Ottawa access" },
+  { name: "Hull", href: "/en/hull", detail: "Urban, restaurants, culture, condos and plex, Zibi project" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Larger lots, affordable prices, river, nature" },
 ];
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
@@ -102,7 +102,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
           <motion.div className="mx-auto mb-14 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
             <p className="label-overline mb-3">Choose your next step</p>
             <h2 className="mb-5">Where are you in your project?</h2>
-            <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Every situation is different. Tell me where you are — I'll give you the numbers, the options and a clear strategy.</p>
+            <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Whether you're in Gatineau, Aylmer, Hull or transitioning from Ottawa — tell me where you are and I'll give you the numbers, the options and a clear strategy.</p>
           </motion.div>
           <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
             {pathways.map((p, i) => (
@@ -135,9 +135,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
             <p className="label-overline mb-3">Why YGS</p>
             <h2>Simple, strategic and human guidance</h2>
-            <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready.</p>
-            <p className="prose-body mt-4">In real estate, good decisions start with the right information. I support sellers, buyers and investors in Gatineau with a clear, hands-on approach.</p>
-            <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.</p>
+            <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready, whether in Gatineau, Aylmer, Hull or anywhere in Outaouais.</p>
+            <p className="prose-body mt-4">I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market — prices by neighborhood, trends, resale potential and on-the-ground realities.</p>
+            <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in Gatineau and area in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project in Outaouais.</p>
             <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
               <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
               <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>

@@ -17,10 +17,10 @@ import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react"
 import heroImg from "@/assets/hero-seller.webp";
 
 const painPoints = [
-  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "You don't want to miss the window, but you also don't want to sell without a plan." },
-  { icon: CheckCircle2, title: "How much is my property really worth?", text: "A realistic price based on recent sales — not an inflated number to win your listing." },
-  { icon: CheckCircle2, title: "Should I renovate first?", text: "Some investments pay off. Others don't. We'll sort through them together." },
-  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "Coordinating a sale and purchase requires a plan from the start." },
+  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "The Gatineau market is evolving. You don't want to miss the window, but you also don't want to sell without a plan." },
+  { icon: CheckCircle2, title: "How much is my property really worth?", text: "A realistic price based on recent sales in your Outaouais neighborhood — not an inflated number to win your listing." },
+  { icon: CheckCircle2, title: "Should I renovate first?", text: "Some investments pay off in the local market. Others don't. We'll sort through them together." },
+  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "Coordinating a sale and purchase in Gatineau requires a plan from the start — especially if you're staying in the area." },
 ];
 const fears = [
   { icon: AlertTriangle, title: "Underpricing", text: "Leaving thousands on the table due to lack of information on recent sales." },
@@ -28,8 +28,8 @@ const fears = [
   { icon: AlertTriangle, title: "Poor preparation", text: "Facing stressful negotiations without a clear strategy from day one." },
 ];
 const steps = [
-  { num: "01", title: "Analysis & positioning", desc: "Comparable sales, market conditions, your property's strengths. We set a realistic and strategic price." },
-  { num: "02", title: "Personalized seller plan", desc: "Preparation, worthwhile improvements, visibility plan and marketing timeline." },
+  { num: "01", title: "Analysis & positioning", desc: "Comparable sales in your neighborhood, Outaouais market conditions, your property's strengths. We set a realistic and strategic price." },
+  { num: "02", title: "Personalized seller plan", desc: "Preparation, worthwhile improvements, targeted visibility plan to attract buyers from Gatineau and Ottawa." },
   { num: "03", title: "Full support", desc: "Marketing, showings, negotiation, coordination through to the notary. No surprises." },
 ];
 const trustItems = [
@@ -59,8 +59,8 @@ const SellerPageEn = () => (
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
     <ContentBlock narrow>
       <SectionHeading overline="Before selling" title="You don't need to decide everything today" />
-      <p className="prose-body mt-5">Before selling, many homeowners mainly want to understand their value, their timing and their options. The goal isn't to rush you. The goal is to build a clear plan.</p>
-      <p className="prose-body mt-4">After nearly 9 years helping sellers in Outaouais, I know that the key to a good sale is preparation. Real value, price positioning, strategic improvements, marketing to attract the right buyers.</p>
+      <p className="prose-body mt-5">Before selling, many Outaouais homeowners mainly want to understand their value, their timing and their options. The goal isn't to rush you. The goal is to build a clear plan adapted to your neighborhood — whether in Aylmer, Hull, the Plateau or Buckingham.</p>
+      <p className="prose-body mt-4">After nearly 9 years helping sellers across Outaouais, I know that the key to a good sale is preparation. Real value based on local comparables, price positioning, strategic improvements, and marketing to attract the right buyers — including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />

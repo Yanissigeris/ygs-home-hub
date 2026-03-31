@@ -22,11 +22,11 @@ const trustItems = [
 ];
 
 const reasons = [
-  "Développements récents avec maisons modernes",
-  "Quartiers familiaux avec parcs et pistes cyclables",
-  "Écoles et garderies de proximité",
-  "Accès rapide à Ottawa et au centre-ville de Gatineau",
-  "Excellent rapport qualité-prix pour les jeunes familles",
+  "Développements récents avec maisons modernes et écoénergétiques",
+  "Quartiers familiaux avec parcs, pistes cyclables et aires de jeux",
+  "Écoles, garderies et services de proximité — tout est accessible",
+  "Accès rapide à Ottawa via l'autoroute 50 et au centre-ville de Gatineau",
+  "Excellent rapport qualité-prix pour les jeunes familles par rapport à Ottawa",
 ];
 
 const profiles = [

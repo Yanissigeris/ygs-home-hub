@@ -16,16 +16,16 @@ import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
 const considerations = [
-  { icon: DollarSign, title: "Down payment and budget", text: "5% minimum for a first purchase. We look together at your real capacity and available programs." },
-  { icon: Home, title: "The right property type", text: "Condo, house, semi-detached — each option has its advantages for a first purchase." },
-  { icon: FileText, title: "The process in Québec", text: "Promise to purchase, inspection, notary — the process is different from elsewhere in Canada." },
-  { icon: Shield, title: "Avoiding beginner mistakes", text: "Don't rush, understand the fees, choose the right neighborhood — I guide you." },
+  { icon: DollarSign, title: "Down payment and budget", text: "5% minimum for a first purchase. We look together at your real capacity and available programs in Québec." },
+  { icon: Home, title: "The right property type", text: "Condo in Hull, house in Aylmer, semi-detached on the Plateau — each option has its advantages for a first purchase in Gatineau." },
+  { icon: FileText, title: "The process in Québec", text: "Promise to purchase, inspection, notary — the Québec process is different from elsewhere in Canada. I guide you through every step." },
+  { icon: Shield, title: "Avoiding beginner mistakes", text: "Don't rush, understand the fees, choose the right Gatineau neighborhood — I guide you." },
 ];
 
 const steps = [
-  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions. Full transparency." },
-  { num: "02", title: "Targeted search", desc: "I present the best options in neighborhoods that match your profile." },
-  { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through to the keys of your first property." },
+  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions about buying in Gatineau. Full transparency." },
+  { num: "02", title: "Targeted search", desc: "I present the best options in Aylmer, Hull, the Plateau or Buckingham — neighborhoods that match your profile and budget." },
+  { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through the Québec process to the keys of your first property." },
 ];
 
 const trustItems = [
@@ -35,9 +35,9 @@ const trustItems = [
 ];
 
 const faq = [
-  { q: "How much do I need for a first purchase in Gatineau?", a: "With a 5% down payment, you can access many properties. We analyze your real capacity together." },
-  { q: "Do I qualify for assistance programs?", a: "There are federal and provincial incentives for first-time buyers. We look at that together during the consultation." },
-  { q: "What's different in Québec?", a: "The notary process, the promise to purchase and certain tax specifics. Nothing complicated — you just need to be well guided." },
+  { q: "How much do I need for a first purchase in Gatineau?", a: "With a 5% down payment, you can access many properties across Outaouais — from condos in Hull to houses on the Plateau. We analyze your real capacity together." },
+  { q: "Do I qualify for assistance programs?", a: "There are federal and Québec provincial incentives for first-time buyers. We look at that together during the consultation." },
+  { q: "What's different in Québec?", a: "The notary process, the promise to purchase and certain Québec tax specifics. Nothing complicated — you just need to be well guided by someone who knows the local market." },
 ];
 
 const FirstTimeBuyerPageEn = () => (

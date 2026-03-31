@@ -25,11 +25,11 @@ const trustItems = [
 ];
 
 const reasons = [
-  "Terrains plus grands et propriétés plus spacieuses",
-  "Prix d'entrée parmi les plus accessibles de l'Outaouais",
-  "Cadre naturel — rivières, parcs, espaces verts",
-  "Idéal pour les familles qui veulent de l'espace sans quitter la région",
-  "Secteur en croissance avec de nouveaux développements",
+  "Terrains plus grands et propriétés plus spacieuses qu'ailleurs en Outaouais",
+  "Prix d'entrée parmi les plus accessibles de la région — idéal pour un premier achat",
+  "Cadre naturel exceptionnel — rivière du Lièvre, parcs, espaces verts",
+  "Idéal pour les familles qui veulent de l'espace sans quitter la grande région de Gatineau",
+  "Secteur en croissance avec de nouveaux développements résidentiels",
 ];
 
 const profiles = [

@@ -10,7 +10,7 @@ import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-reac
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
-const benefits = ["Realistic value range based on recent sales","Advice on price positioning for your situation","Your property's strengths to highlight","Issues to address — and which ones are worth it","Possible next steps, no commitment"];
+const benefits = ["Realistic value range based on recent sales in your Gatineau neighborhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address — and which ones are worth it in your market","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response within 24h" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
 const afterSteps = [{ title: "Seller plan", text: "Go further — get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/sell", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" }];
 const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
@@ -39,7 +39,7 @@ const ValuationPageEn = () => {
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
-              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized, confidential and transparent estimate — based on your property and recent comparable sales.</p>
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">Free and confidential estimate based on recent sales.</p>
               <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/40"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
               <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">

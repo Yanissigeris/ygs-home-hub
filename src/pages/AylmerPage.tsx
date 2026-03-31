@@ -24,11 +24,11 @@ const trustItems = [
 ];
 
 const reasons = [
-  "Quartiers familiaux avec accès au lac Deschênes",
-  "Proximité du parc de la Gatineau et des sentiers",
-  "Écoles réputées et services bilingues",
-  "Communauté établie avec charme de petite ville",
-  "Accès rapide à Ottawa par le pont Champlain",
+  "Quartiers familiaux avec accès au lac Deschênes et à la plage municipale",
+  "Proximité du parc de la Gatineau — randonnée, ski, vélo toute l'année",
+  "Écoles réputées françaises et anglaises, garderies et services bilingues",
+  "Communauté établie avec charme de petite ville et marché fermier local",
+  "Accès rapide à Ottawa par le pont Champlain — 15-25 minutes du centre-ville",
 ];
 
 const profiles = [

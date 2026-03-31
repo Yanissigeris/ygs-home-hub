@@ -12,10 +12,10 @@ import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
 const benefits = [
-  "Fourchette de valeur réaliste basée sur les ventes récentes",
-  "Avis sur le positionnement prix pour votre situation",
-  "Forces de votre propriété à mettre de l'avant",
-  "Points à corriger — et lesquels valent la peine",
+  "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
+  "Avis sur le positionnement prix adapté à votre quartier en Outaouais",
+  "Forces de votre propriété à mettre de l'avant pour les acheteurs locaux et d'Ottawa",
+  "Points à corriger — et lesquels valent la peine dans votre marché",
   "Prochaines étapes possibles, sans engagement",
 ];
 
@@ -96,7 +96,7 @@ const ValuationPage = () => {
 
               {/* Subtitle - hidden on mobile to save space */}
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">
-                Recevez une estimation personnalisée, confidentielle et sans pression — basée sur votre propriété et les ventes comparables récentes.
+                Recevez une estimation personnalisée et confidentielle — basée sur votre propriété et les ventes comparables récentes dans votre secteur de Gatineau, Aylmer, Hull ou Outaouais.
               </p>
               {/* Shorter mobile subtitle */}
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">

@@ -20,10 +20,10 @@ import heroImg from "@/assets/hero-military.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast — you need to find a home or sell quickly, without compromising on price." },
-  { icon: Shield, title: "Understanding the Québec market", text: "Taxes, notary process, zoning — Québec works differently from Ontario or the rest of Canada." },
-  { icon: Home, title: "Finding the right neighborhood", text: "Base proximity, schools, bilingual services — every family has its priorities." },
-  { icon: Heart, title: "Settling as a family", text: "Coordinating sale and purchase, finding a family neighborhood, enrolling kids — all while managing posting stress." },
+  { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast — you need to find a home in Gatineau or sell quickly, without compromising on price." },
+  { icon: Shield, title: "Understanding the Québec market", text: "Municipal and school taxes, notary process, zoning — Québec works differently from Ontario or the rest of Canada." },
+  { icon: Home, title: "Finding the right neighborhood", text: "Proximity to CFB Uplands or downtown Ottawa, French and English schools, bilingual services — every family has its priorities." },
+  { icon: Heart, title: "Settling as a family in Gatineau", text: "Coordinating sale and purchase, finding a family neighborhood in Aylmer, the Plateau or Hull, enrolling kids — all while managing posting stress." },
 ];
 const steps = [
   { num: "01", title: "Discovery call", desc: "We understand your situation — posting, timeline, budget, family priorities and target neighborhoods." },
@@ -43,8 +43,8 @@ const militaryPaths = [
 const faq = [
   { q: "Do you know the military programs?", a: "Yes. I understand posting realities, tight deadlines and specific needs. We adapt the approach to your situation." },
   { q: "I need to sell and buy at the same time — is that possible?", a: "It's common during postings. We plan the coordination from the start to avoid getting stuck." },
-  { q: "Which neighborhoods are close to the base?", a: "Depends on your base (Uplands, Gatineau, etc.). I recommend the best neighborhoods based on your commute and priorities." },
-  { q: "Can you do virtual visits?", a: "Absolutely. Many military members buy remotely before their arrival. I adapt to your schedule." },
+  { q: "Which neighborhoods are close to the base?", a: "Aylmer and the Plateau are popular for CFB Uplands access via the Champlain Bridge. Hull is ideal for those working in downtown Ottawa. We choose based on your commute and family priorities." },
+  { q: "Can you do virtual visits?", a: "Absolutely. Many military members buy remotely before their arrival in Gatineau. I adapt to your schedule and time zone." },
 ];
 
 const MilitaryPageEn = () => (

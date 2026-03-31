@@ -16,10 +16,10 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes and condos often cost less in Gatineau than in Ottawa." },
-  { icon: MapPin, title: "Ottawa proximity", text: "Bridges, transit and bike paths make the commute very doable." },
-  { icon: Home, title: "More space", text: "For the same budget, you often get more space, land and quality of life." },
-  { icon: FileText, title: "Québec process", text: "The buying process in Québec has its particularities — I guide you step by step." },
+  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes and condos often cost significantly less in Gatineau than across the river in Ottawa." },
+  { icon: MapPin, title: "Ottawa proximity", text: "Bridges (Champlain, Alexandra, du Portage), STO transit and bike paths make the daily commute very doable." },
+  { icon: Home, title: "More space", text: "For the same budget, you often get more rooms, a bigger yard and better quality of life in Aylmer, the Plateau or Buckingham." },
+  { icon: FileText, title: "Québec process", text: "The buying process in Québec has its own rules — promise to purchase, notary, school taxes. I guide you step by step." },
 ];
 
 const sectors = [

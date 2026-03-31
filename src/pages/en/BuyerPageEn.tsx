@@ -18,10 +18,10 @@ import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.webp";
 
 const profiles = [
-  { icon: CheckCircle2, title: "First-time buyer", text: "Understand the process step by step without feeling overwhelmed." },
-  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly neighborhood with more rooms, a yard and the right services nearby." },
-  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local guide who truly knows the terrain — neighborhoods, prices, taxes and Québec specifics." },
-  { icon: CheckCircle2, title: "Unsure about neighborhoods", text: "Compare areas objectively — price, potential, lifestyle — to find the perfect neighborhood for you." },
+  { icon: CheckCircle2, title: "First-time buyer in Outaouais", text: "Understand the Québec process step by step without feeling overwhelmed — promise to purchase, inspection, notary." },
+  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly Gatineau neighborhood with more rooms, a yard, good schools and the right services nearby." },
+  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local guide who truly knows Aylmer, Hull, the Plateau and Buckingham — prices, taxes and Québec specifics." },
+  { icon: CheckCircle2, title: "Unsure about neighborhoods", text: "Compare Gatineau areas objectively — price, resale potential, Ottawa access, lifestyle — to find the perfect neighborhood for you." },
 ];
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
@@ -29,9 +29,9 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
 ];
 const steps = [
-  { num: "01", title: "Clarify your project", desc: "Budget, target neighborhoods, property type, family needs — we lay the groundwork together." },
-  { num: "02", title: "Targeted search", desc: "I send you properties that truly match. No noise, no wasted time." },
-  { num: "03", title: "Offer & negotiation", desc: "Offer strategy, inspection, conditions — through to signing at the notary." },
+  { num: "01", title: "Clarify your project", desc: "Budget, target Gatineau neighborhoods, property type, family needs and Ottawa commute — we lay the groundwork together." },
+  { num: "02", title: "Targeted search", desc: "I send you properties that truly match in the neighborhoods that suit you. No noise, no wasted time." },
+  { num: "03", title: "Offer & negotiation", desc: "Offer strategy adapted to the local market, inspection, conditions — through to signing at the notary." },
 ];
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
@@ -44,10 +44,10 @@ const nextSteps = [
   { title: "Buyer guide", text: "The buying process in Québec explained simply — from search to notary.", href: "/en/buyer-guide", cta: "Read the guide" },
 ];
 const faq = [
-  { q: "Is now a good time to buy in Gatineau?", a: "Every situation is different. We evaluate your budget, priorities and market conditions together." },
-  { q: "I'm from Ottawa — how does it work in Québec?", a: "Promise to purchase, inspection, notary — the process has its specifics. After nearly 9 years in Outaouais, I've guided many buyers through this transition." },
-  { q: "Do I need a pre-approval?", a: "Highly recommended. It clarifies your budget and strengthens your position when making an offer." },
-  { q: "How do I choose the right neighborhood?", a: "Lifestyle, budget, family, daily commute — we look at everything together to find the best balance." },
+  { q: "Is now a good time to buy in Gatineau?", a: "Every situation is different. The Outaouais market has its own dynamics. We evaluate your budget, priorities and current conditions together." },
+  { q: "I'm from Ottawa — how does it work in Québec?", a: "Promise to purchase, inspection, notary — the Québec process has its specifics. After nearly 9 years in Outaouais, I've guided many Ontario buyers through this transition." },
+  { q: "Do I need a pre-approval?", a: "Highly recommended. It clarifies your budget and strengthens your position when making an offer, especially in popular areas like Aylmer and the Plateau." },
+  { q: "How do I choose the right Gatineau neighborhood?", a: "Lifestyle, budget, family, Ottawa commute, schools — we look at everything together to find the best balance between Aylmer, Hull, the Plateau and Buckingham." },
 ];
 
 const BuyerPageEn = () => (

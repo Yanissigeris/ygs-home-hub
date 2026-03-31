@@ -18,10 +18,10 @@ import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.webp";
 
 const buyerProfiles = [
-  { icon: CheckCircle2, title: "Premier acheteur", text: "Comprendre le processus étape par étape sans se sentir dépassé." },
-  { icon: CheckCircle2, title: "Famille qui veut plus d'espace", text: "Trouver un quartier familial avec plus de pièces, un terrain et les bons services à proximité." },
-  { icon: CheckCircle2, title: "Relocalisé d'Ottawa ou Montréal", text: "Un guide local qui connaît vraiment le terrain — secteurs, prix, taxes et particularités du Québec." },
-  { icon: CheckCircle2, title: "Hésitant entre secteurs", text: "Comparer les quartiers objectivement — prix, potentiel, style de vie — pour trouver le parfait quartier pour vous." },
+  { icon: CheckCircle2, title: "Premier acheteur en Outaouais", text: "Comprendre le processus québécois étape par étape sans se sentir dépassé — promesse d'achat, inspection, notaire." },
+  { icon: CheckCircle2, title: "Famille qui veut plus d'espace", text: "Trouver un quartier familial à Gatineau avec plus de pièces, un terrain, de bonnes écoles et les bons services à proximité." },
+  { icon: CheckCircle2, title: "Relocalisé d'Ottawa ou Montréal", text: "Un guide local qui connaît vraiment Aylmer, Hull, le Plateau et Buckingham — prix, taxes et particularités du Québec." },
+  { icon: CheckCircle2, title: "Hésitant entre secteurs", text: "Comparer objectivement les quartiers de Gatineau — prix, potentiel de revente, accès Ottawa, style de vie — pour trouver le parfait quartier pour vous." },
 ];
 
 const sectors = [
@@ -31,9 +31,9 @@ const sectors = [
 ];
 
 const steps = [
-  { num: "01", title: "Clarifier votre projet", desc: "Budget, secteurs cibles, style de propriété, besoins familiaux — on pose les bases ensemble." },
-  { num: "02", title: "Recherche ciblée", desc: "Je vous envoie les propriétés qui correspondent vraiment. Pas de bruit, pas de perte de temps." },
-  { num: "03", title: "Offre et négociation", desc: "Stratégie d'offre, inspection, conditions — jusqu'à la signature chez le notaire." },
+  { num: "01", title: "Clarifier votre projet", desc: "Budget, secteurs cibles à Gatineau, style de propriété, besoins familiaux et accès Ottawa — on pose les bases ensemble." },
+  { num: "02", title: "Recherche ciblée", desc: "Je vous envoie les propriétés qui correspondent vraiment dans les quartiers qui vous conviennent. Pas de bruit, pas de perte de temps." },
+  { num: "03", title: "Offre et négociation", desc: "Stratégie d'offre adaptée au marché local, inspection, conditions — jusqu'à la signature chez le notaire." },
 ];
 
 const trustItems = [
@@ -49,10 +49,10 @@ const nextSteps = [
 ];
 
 const faq = [
-  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. On évalue votre budget, vos priorités et les conditions du marché ensemble." },
-  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus a ses particularités. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
-  { q: "Dois-je avoir une pré-approbation?", a: "Fortement recommandé. Ça clarifie votre budget et renforce votre position lors de l'offre." },
-  { q: "Comment choisir le bon secteur?", a: "Mode de vie, budget, famille, trajets quotidiens — on regarde tout ça ensemble pour trouver le meilleur équilibre." },
+  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. Le marché de l'Outaouais a ses propres dynamiques. On évalue votre budget, vos priorités et les conditions actuelles ensemble." },
+  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus québécois a ses particularités. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs ontariens dans cette transition." },
+  { q: "Dois-je avoir une pré-approbation?", a: "Fortement recommandé. Ça clarifie votre budget et renforce votre position lors de l'offre, surtout dans les secteurs populaires comme Aylmer et le Plateau." },
+  { q: "Comment choisir le bon secteur à Gatineau?", a: "Mode de vie, budget, famille, trajet vers Ottawa, écoles — on regarde tout ça ensemble pour trouver le meilleur équilibre entre Aylmer, Hull, le Plateau et Buckingham." },
 ];
 
 const BuyerPage = () => (
