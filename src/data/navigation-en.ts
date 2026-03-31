@@ -55,6 +55,7 @@ export const mainNavEn: NavItem[] = [
       { label: "Buckingham / Masson-Angers", href: "/en/buckingham" },
     ],
   },
+  { label: "Blog", href: "/en/blog" },
   { label: "About", href: "/en/contact" },
 ];
 
