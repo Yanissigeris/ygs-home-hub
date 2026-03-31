@@ -29,7 +29,7 @@ const ConversionSection = React.forwardRef<HTMLElement>((_, ref) =>
 <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-      className="mb-12 text-center"
+      className="mb-8 sm:mb-12 text-center"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
