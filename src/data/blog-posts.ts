@@ -1813,7 +1813,9 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 
 ## My Advice
 
-Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.`,
+Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.
+
+**Read also**: [Investing in a Plex in Gatineau](/en/blog/invest-plex-gatineau) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
 
   // ── Article 20 – Guide copropriété Gatineau ──
