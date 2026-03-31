@@ -92,6 +92,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <SocialProofStrip stats={socialStatsEn} testimonials={socialTestimonialsEn} />
+
     {/* Pathway Section */}
     <section className="section-padding bg-background">
       <div className="section-container">
