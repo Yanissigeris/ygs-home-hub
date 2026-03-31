@@ -1153,7 +1153,9 @@ Secteur tranquille près du lac, idéal pour les amoureux de la nature et de la 
 
 ## Mon conseil
 
-Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui protège votre investissement à long terme. Contactez-moi pour une visite personnalisée du secteur.`,
+Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui protège votre investissement à long terme. Contactez-moi pour une visite personnalisée du secteur.
+
+**Lire aussi** : [Vivre près du Parc de la Gatineau](/blogue/vivre-pres-parc-gatineau-immobilier) · [Les meilleurs quartiers pour familles](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## Aylmer: Gatineau's Residential Gem
 
 Aylmer is often considered Gatineau's most desirable neighborhood. Located at the western end, it offers an exceptional lifestyle between Lac Deschênes and Gatineau Park.
