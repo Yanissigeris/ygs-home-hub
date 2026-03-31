@@ -10,6 +10,11 @@ import blogHomeStaging from "@/assets/blog/blog-home-staging.jpg";
 import blogRenovationValue from "@/assets/blog/blog-renovation-value.jpg";
 import blogTaxesGatineau from "@/assets/blog/blog-taxes-gatineau.jpg";
 import blogFamilyNeighborhood from "@/assets/blog/blog-family-neighborhood.jpg";
+import blogAylmerMarina from "@/assets/blog/blog-aylmer-marina.jpg";
+import blogInspection from "@/assets/blog/blog-inspection.jpg";
+import blogFirstHomeTips from "@/assets/blog/blog-first-home-tips.jpg";
+import blogGatineauPark from "@/assets/blog/blog-gatineau-park.jpg";
+import blogCondoHull from "@/assets/blog/blog-condo-hull.jpg";
 
 export interface BlogPost {
   slug: string;
