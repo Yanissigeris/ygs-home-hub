@@ -15,6 +15,11 @@ import blogInspection from "@/assets/blog/blog-inspection.jpg";
 import blogFirstHomeTips from "@/assets/blog/blog-first-home-tips.jpg";
 import blogGatineauPark from "@/assets/blog/blog-gatineau-park.jpg";
 import blogCondoHull from "@/assets/blog/blog-condo-hull.jpg";
+import blogRefinancing from "@/assets/blog/blog-refinancing.jpg";
+import blogRentalMarket from "@/assets/blog/blog-rental-market.jpg";
+import blogCopropriete from "@/assets/blog/blog-copropriete.jpg";
+import blogWinterSelling from "@/assets/blog/blog-winter-selling.jpg";
+import blogCourtierAvantages from "@/assets/blog/blog-courtier-avantages.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -1572,9 +1577,598 @@ Hull offers excellent rental potential thanks to demand from federal employees a
 
 Hull is ideal for buyers who want an urban lifestyle with quick access to Ottawa. Whether to live or invest, I'll help you find the right condo at the right price.`,
   },
-];
 
-/** Get all published posts, sorted by date (newest first) */
+  // ── Article 18 – Refinancement hypothécaire ──
+  {
+    slug: "refinancement-hypothecaire-gatineau-guide",
+    slugEn: "mortgage-refinancing-gatineau-guide",
+    title: "Refinancement hypothécaire à Gatineau : quand et comment le faire",
+    titleEn: "Mortgage Refinancing in Gatineau: When and How to Do It",
+    seoTitle: "Refinancement hypothécaire Gatineau · Guide complet | YGS",
+    seoTitleEn: "Mortgage Refinancing Gatineau · Complete Guide | YGS",
+    metaDescription: "Guide complet du refinancement hypothécaire à Gatineau : conditions, avantages, pénalités et comment tirer le maximum de votre équité.",
+    metaDescriptionEn: "Complete guide to mortgage refinancing in Gatineau: conditions, benefits, penalties, and how to maximize your home equity.",
+    excerpt: "Accédez à votre équité, consolidez vos dettes ou financez des rénovations grâce au refinancement.",
+    excerptEn: "Access your equity, consolidate debt, or fund renovations through mortgage refinancing.",
+    category: "Finances",
+    categoryEn: "Finance",
+    featuredImage: blogRefinancing,
+    publishDate: "2025-09-15",
+    published: true,
+    body: `## Refinancement hypothécaire à Gatineau : tout ce qu'il faut savoir
+
+Le refinancement hypothécaire permet d'accéder à la valeur accumulée dans votre propriété. Avec la hausse des prix à Gatineau, de nombreux propriétaires ont une équité importante à exploiter.
+
+## Qu'est-ce que le refinancement?
+
+Le refinancement consiste à remplacer votre hypothèque actuelle par une nouvelle, généralement plus élevée, pour accéder à la différence en argent. Vous pouvez refinancer jusqu'à **80 % de la valeur marchande** de votre propriété.
+
+## Quand refinancer?
+
+### Bonnes raisons de refinancer
+- **Rénovations majeures** — Cuisine, salle de bain, agrandissement
+- **Consolidation de dettes** — Regrouper des dettes à taux élevé
+- **Investissement immobilier** — Mise de fonds pour un plex ou un condo locatif
+- **Études des enfants** — Financer l'éducation à moindre coût
+- **Fonds d'urgence** — Créer un coussin financier
+
+### Mauvaises raisons de refinancer
+- **Dépenses de consommation** — Voyages, voiture de luxe
+- **Payer des dettes sans changer vos habitudes** — Risque de repiéger
+- **Marché incertain** — Si les taux montent fortement
+
+## Combien d'équité avez-vous?
+
+Exemple pour une maison à Gatineau :
+- **Valeur marchande actuelle** — 500 000 $
+- **Solde hypothécaire** — 300 000 $
+- **Équité disponible (80 %)** — 400 000 $ – 300 000 $ = **100 000 $**
+
+## Les coûts du refinancement
+
+- **Pénalité de remboursement anticipé** — 3 mois d'intérêts ou le différentiel de taux
+- **Frais de notaire** — 1 000 $ à 1 500 $
+- **Frais d'évaluation** — 300 $ à 500 $
+- **Frais d'inscription** — Variables selon l'institution
+
+## Mon conseil
+
+Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie valeur marchande. Je peux vous fournir une évaluation gratuite et vous référer à des courtiers hypothécaires de confiance à Gatineau.`,
+    bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
+
+Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have significant equity to tap into.
+
+## What Is Refinancing?
+
+Refinancing means replacing your current mortgage with a new, typically larger one, to access the difference in cash. You can refinance up to **80% of your property's market value**.
+
+## When to Refinance?
+
+### Good Reasons to Refinance
+- **Major renovations** — Kitchen, bathroom, addition
+- **Debt consolidation** — Combine high-interest debts
+- **Real estate investment** — Down payment for a plex or rental condo
+- **Children's education** — Fund education at lower cost
+- **Emergency fund** — Create a financial cushion
+
+### Bad Reasons to Refinance
+- **Consumer spending** — Travel, luxury car
+- **Paying debts without changing habits** — Risk of re-trapping
+- **Uncertain market** — If rates are rising sharply
+
+## How Much Equity Do You Have?
+
+Example for a Gatineau home:
+- **Current market value** — $500,000
+- **Mortgage balance** — $300,000
+- **Available equity (80%)** — $400,000 – $300,000 = **$100,000**
+
+## Refinancing Costs
+
+- **Early repayment penalty** — 3 months' interest or interest rate differential
+- **Notary fees** — $1,000 to $1,500
+- **Appraisal fees** — $300 to $500
+- **Registration fees** — Variable by institution
+
+## My Advice
+
+Before refinancing, get your property appraised to know its true market value. I can provide a free valuation and refer you to trusted mortgage brokers in Gatineau.`,
+  },
+
+  // ── Article 19 – Marché locatif Gatineau ──
+  {
+    slug: "marche-locatif-gatineau-investissement",
+    slugEn: "rental-market-gatineau-investment",
+    title: "Le marché locatif à Gatineau : guide pour investisseurs",
+    titleEn: "Gatineau's Rental Market: A Guide for Investors",
+    seoTitle: "Marché locatif Gatineau · Guide investisseur 2025 | YGS",
+    seoTitleEn: "Rental Market Gatineau · Investor Guide 2025 | YGS",
+    metaDescription: "Analyse du marché locatif à Gatineau : taux d'inoccupation, loyers moyens, meilleurs secteurs et rendements pour investisseurs immobiliers.",
+    metaDescriptionEn: "Analysis of Gatineau's rental market: vacancy rates, average rents, best areas, and returns for real estate investors.",
+    excerpt: "Taux d'inoccupation bas, loyers en hausse — Gatineau est un marché locatif en or pour les investisseurs.",
+    excerptEn: "Low vacancy rates, rising rents — Gatineau is a golden rental market for investors.",
+    category: "Investissement",
+    categoryEn: "Investment",
+    featuredImage: blogRentalMarket,
+    publishDate: "2025-09-01",
+    published: true,
+    body: `## Le marché locatif de Gatineau : une opportunité en or
+
+Avec un taux d'inoccupation parmi les plus bas au Québec et une demande alimentée par les fonctionnaires fédéraux, Gatineau est devenue l'une des villes les plus attractives pour l'investissement locatif.
+
+## Les chiffres clés du marché locatif
+
+### Taux d'inoccupation
+- **Gatineau global** — 2,1 % (sous le seuil d'équilibre de 3 %)
+- **Hull** — 1,8 % (le plus serré)
+- **Aylmer** — 2,5 %
+- **Plateau** — 2,3 %
+
+### Loyers moyens (2025)
+- **3½ (1 chambre)** — 950 $ à 1 200 $ / mois
+- **4½ (2 chambres)** — 1 200 $ à 1 600 $ / mois
+- **5½ (3 chambres)** — 1 500 $ à 2 000 $ / mois
+- **Logement meublé** — Prime de 30 % à 50 %
+
+## Les meilleurs secteurs pour investir
+
+### Hull — Le rendement urbain
+- **Proximité Ottawa** — Forte demande des fonctionnaires
+- **Projet Zibi** — Hausse des valeurs anticipée
+- **Rendement** — 4,5 % à 5,5 % brut
+- **Type idéal** — Plex de 2 à 6 logements
+
+### Gatineau (secteur)— Le volume abordable
+- **Prix d'entrée bas** — Plex à partir de 400 000 $
+- **Rendement** — 5 % à 6,5 % brut
+- **Type idéal** — Triplex et quadruplex
+- **Clientèle** — Familles, travailleurs, étudiants UQO
+
+### Buckingham — Le potentiel caché
+- **Prix très bas** — Duplex à partir de 300 000 $
+- **Rendement** — 6 % à 8 % brut
+- **Risque** — Taux de roulement plus élevé
+- **Potentiel** — Développement futur du secteur
+
+## Réglementation au Québec
+
+- **Tribunal administratif du logement (TAL)** — Encadre les augmentations
+- **Augmentations suggérées** — Basées sur l'indice du TAL (~3 % à 5 %)
+- **Bail type** — Obligatoire au Québec
+- **Reprise de logement** — Possible mais encadrée
+
+## Mon conseil
+
+Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.`,
+    bodyEn: `## Gatineau's Rental Market: A Golden Opportunity
+
+With one of the lowest vacancy rates in Quebec and demand fueled by federal employees, Gatineau has become one of the most attractive cities for rental investment.
+
+## Key Rental Market Figures
+
+### Vacancy Rates
+- **Overall Gatineau** — 2.1% (below the 3% equilibrium threshold)
+- **Hull** — 1.8% (tightest)
+- **Aylmer** — 2.5%
+- **Plateau** — 2.3%
+
+### Average Rents (2025)
+- **3½ (1 bedroom)** — $950 to $1,200/month
+- **4½ (2 bedrooms)** — $1,200 to $1,600/month
+- **5½ (3 bedrooms)** — $1,500 to $2,000/month
+- **Furnished unit** — 30% to 50% premium
+
+## Best Areas for Investment
+
+### Hull — Urban Returns
+- **Ottawa proximity** — Strong demand from civil servants
+- **Zibi project** — Anticipated value increase
+- **Yield** — 4.5% to 5.5% gross
+- **Ideal type** — 2 to 6-unit plex
+
+### Gatineau (sector) — Affordable Volume
+- **Low entry price** — Plex from $400,000
+- **Yield** — 5% to 6.5% gross
+- **Ideal type** — Triplex and quadruplex
+- **Tenants** — Families, workers, UQO students
+
+### Buckingham — Hidden Potential
+- **Very low prices** — Duplex from $300,000
+- **Yield** — 6% to 8% gross
+- **Risk** — Higher turnover rate
+- **Potential** — Future area development
+
+## Quebec Regulations
+
+- **Administrative Housing Tribunal (TAL)** — Regulates increases
+- **Suggested increases** — Based on TAL index (~3% to 5%)
+- **Standard lease** — Mandatory in Quebec
+- **Unit repossession** — Possible but regulated
+
+## My Advice
+
+Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.`,
+  },
+
+  // ── Article 20 – Guide copropriété Gatineau ──
+  {
+    slug: "guide-copropriete-gatineau-tout-savoir",
+    slugEn: "condo-ownership-gatineau-complete-guide",
+    title: "Copropriété à Gatineau : tout ce que vous devez savoir",
+    titleEn: "Condo Ownership in Gatineau: Everything You Need to Know",
+    seoTitle: "Copropriété Gatineau · Guide complet acheteur | YGS",
+    seoTitleEn: "Condo Ownership Gatineau · Complete Buyer Guide | YGS",
+    metaDescription: "Guide complet de la copropriété à Gatineau : frais de condo, syndicat, fonds de prévoyance, droits et obligations des copropriétaires.",
+    metaDescriptionEn: "Complete guide to condo ownership in Gatineau: condo fees, board, reserve fund, rights and obligations of co-owners.",
+    excerpt: "Frais de condo, syndicat, fonds de prévoyance — tout comprendre avant d'acheter en copropriété.",
+    excerptEn: "Condo fees, board, reserve fund — understand everything before buying a condo.",
+    category: "Acheteurs",
+    categoryEn: "Buyers",
+    featuredImage: blogCopropriete,
+    publishDate: "2025-08-18",
+    published: true,
+    body: `## Copropriété à Gatineau : le guide essentiel
+
+La copropriété est de plus en plus populaire à Gatineau, surtout dans les secteurs de Hull et du Plateau. Avant d'acheter, voici tout ce que vous devez comprendre.
+
+## Qu'est-ce qu'une copropriété?
+
+En copropriété divise, vous êtes propriétaire de votre unité (partie privative) et copropriétaire des espaces communs (halls, ascenseurs, stationnement, piscine, etc.) avec les autres résidents.
+
+## Les frais de condo
+
+### Ce qu'ils couvrent
+- **Assurance de l'immeuble** — Structure et parties communes
+- **Entretien des espaces communs** — Ménage, déneigement, aménagement
+- **Fonds de prévoyance** — Réserve pour les travaux majeurs
+- **Services** — Eau chaude, chauffage (selon l'immeuble)
+- **Administration** — Gestion du syndicat
+
+### Frais moyens à Gatineau
+- **Petit immeuble (4-12 unités)** — 150 $ à 300 $ / mois
+- **Immeuble moyen (12-50 unités)** — 250 $ à 450 $ / mois
+- **Grand immeuble avec services** — 400 $ à 700 $ / mois
+
+## Le syndicat de copropriété
+
+### Rôle du syndicat
+- **Administrer l'immeuble** — Entretien, réparations, contrats
+- **Gérer les finances** — Budget, cotisations, fonds de prévoyance
+- **Faire respecter les règlements** — Déclaration de copropriété
+- **Prendre les décisions collectives** — Assemblée des copropriétaires
+
+### Ce qu'il faut vérifier
+- **Procès-verbaux des 3 dernières années** — Conflits, travaux prévus
+- **État du fonds de prévoyance** — Minimum 5 % du budget
+- **Cotisations spéciales récentes** — Signe de mauvaise planification
+- **Carnet d'entretien** — Historique des travaux
+
+## Le fonds de prévoyance
+
+Le fonds de prévoyance est la réserve financière pour les travaux majeurs futurs :
+- **Toiture** — 30 000 $ à 100 000 $+
+- **Ascenseur** — 50 000 $ à 150 000 $
+- **Stationnement souterrain** — 100 000 $+
+- **Fenêtres communes** — Variable
+
+Un fonds bien garni vous protège des cotisations spéciales imprévues.
+
+## Mon conseil
+
+Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.`,
+    bodyEn: `## Condo Ownership in Gatineau: The Essential Guide
+
+Condo ownership is increasingly popular in Gatineau, especially in Hull and the Plateau. Before buying, here's everything you need to understand.
+
+## What Is Condo Ownership?
+
+In divided co-ownership, you own your unit (private portion) and co-own common areas (lobbies, elevators, parking, pool, etc.) with other residents.
+
+## Condo Fees
+
+### What They Cover
+- **Building insurance** — Structure and common areas
+- **Common area maintenance** — Cleaning, snow removal, landscaping
+- **Reserve fund** — Savings for major work
+- **Services** — Hot water, heating (depending on building)
+- **Administration** — Board management
+
+### Average Fees in Gatineau
+- **Small building (4-12 units)** — $150 to $300/month
+- **Medium building (12-50 units)** — $250 to $450/month
+- **Large building with amenities** — $400 to $700/month
+
+## The Condo Board (Syndicate)
+
+### Board's Role
+- **Manage the building** — Maintenance, repairs, contracts
+- **Handle finances** — Budget, fees, reserve fund
+- **Enforce bylaws** — Declaration of co-ownership
+- **Make collective decisions** — Co-owners' assembly
+
+### What to Check
+- **Last 3 years of minutes** — Conflicts, planned work
+- **Reserve fund status** — Minimum 5% of budget
+- **Recent special assessments** — Sign of poor planning
+- **Maintenance log** — Work history
+
+## The Reserve Fund
+
+The reserve fund is the financial reserve for future major work:
+- **Roof** — $30,000 to $100,000+
+- **Elevator** — $50,000 to $150,000
+- **Underground parking** — $100,000+
+- **Common windows** — Variable
+
+A well-funded reserve protects you from unexpected special assessments.
+
+## My Advice
+
+Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.`,
+  },
+
+  // ── Article 21 – Vendre en hiver ──
+  {
+    slug: "vendre-maison-hiver-gatineau-conseils",
+    slugEn: "selling-home-winter-gatineau-tips",
+    title: "Vendre sa maison en hiver à Gatineau : 7 conseils gagnants",
+    titleEn: "Selling Your Home in Winter in Gatineau: 7 Winning Tips",
+    seoTitle: "Vendre maison hiver Gatineau · 7 conseils | YGS",
+    seoTitleEn: "Sell Home Winter Gatineau · 7 Tips | YGS",
+    metaDescription: "Découvrez 7 conseils pour vendre votre maison en hiver à Gatineau : mise en valeur, photos, prix et pourquoi l'hiver peut être un avantage.",
+    metaDescriptionEn: "Discover 7 tips for selling your home in winter in Gatineau: staging, photos, pricing, and why winter can be an advantage.",
+    excerpt: "Moins de concurrence, acheteurs sérieux — vendre en hiver à Gatineau peut être une stratégie gagnante.",
+    excerptEn: "Less competition, serious buyers — selling in winter in Gatineau can be a winning strategy.",
+    category: "Vendeurs",
+    categoryEn: "Sellers",
+    featuredImage: blogWinterSelling,
+    publishDate: "2025-08-05",
+    published: true,
+    body: `## Vendre en hiver à Gatineau : une stratégie sous-estimée
+
+Beaucoup de propriétaires attendent le printemps pour vendre. Pourtant, l'hiver offre des avantages uniques sur le marché de Gatineau.
+
+## Pourquoi vendre en hiver?
+
+### Moins de concurrence
+- **Moins de propriétés sur le marché** — Votre maison se démarque
+- **Acheteurs plus sérieux** — Ceux qui cherchent en janvier veulent vraiment acheter
+- **Pouvoir de négociation** — Moins d'options = moins de pression sur le prix
+
+### Demande constante
+- **Fonctionnaires fédéraux** — Mutations toute l'année
+- **Militaires** — Affectations qui ne suivent pas les saisons
+- **Nouveaux arrivants** — Immigration continue en hiver
+
+## 7 conseils pour vendre en hiver à Gatineau
+
+### 1. L'entrée doit être impeccable
+- **Déneigez** l'entrée, les marches et le trottoir
+- **Éclairage extérieur** — Les visites se font souvent en fin de journée
+- **Sel et tapis** — Sécurité et propreté pour les visiteurs
+
+### 2. Misez sur la chaleur et le confort
+- **Température agréable** — 21-22°C lors des visites
+- **Éclairage chaud** — Toutes les lumières allumées
+- **Foyer allumé** — Si vous en avez un, c'est le moment
+
+### 3. Photos professionnelles d'été ET d'hiver
+- **Gardez vos photos d'été** — Montrez le potentiel de la cour et du terrain
+- **Ajoutez des photos d'hiver** — Montrez que la maison est belle en toute saison
+
+### 4. Montrez l'efficacité énergétique
+- **Factures de chauffage** — Préparez-les pour les acheteurs
+- **Isolation** — Mettez en valeur les améliorations
+- **Fenêtres** — Triple vitrage = argument de vente
+
+### 5. Fixez le bon prix dès le départ
+- **Analyse comparative** — Basée sur les ventes récentes du quartier
+- **Prix réaliste** — Les acheteurs d'hiver sont bien informés
+- **Marge de négociation** — Prévoyez 2 % à 3 %
+
+### 6. Flexibilité pour les visites
+- **Horaires souples** — Fin de semaine et soirées
+- **Visites virtuelles** — Pour les acheteurs d'Ottawa ou de loin
+- **Réponse rapide** — Les acheteurs d'hiver sont motivés
+
+### 7. Travaillez avec un courtier actif en hiver
+Un courtier qui ne ralentit pas en hiver fait toute la différence.
+
+## Mon engagement
+
+Je suis actif 12 mois par année. En hiver, je déploie des stratégies adaptées : photos professionnelles, visites bien planifiées et marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.`,
+    bodyEn: `## Selling in Winter in Gatineau: An Underestimated Strategy
+
+Many homeowners wait until spring to sell. Yet winter offers unique advantages in the Gatineau market.
+
+## Why Sell in Winter?
+
+### Less Competition
+- **Fewer properties on the market** — Your home stands out
+- **More serious buyers** — Those looking in January really want to buy
+- **Negotiating power** — Fewer options = less price pressure
+
+### Constant Demand
+- **Federal employees** — Transfers year-round
+- **Military** — Postings that don't follow seasons
+- **Newcomers** — Immigration continues in winter
+
+## 7 Tips for Selling in Winter in Gatineau
+
+### 1. The Entrance Must Be Impeccable
+- **Shovel** the driveway, steps, and sidewalk
+- **Outdoor lighting** — Showings often happen in the evening
+- **Salt and mats** — Safety and cleanliness for visitors
+
+### 2. Focus on Warmth and Comfort
+- **Comfortable temperature** — 21-22°C during showings
+- **Warm lighting** — All lights on
+- **Fireplace on** — If you have one, now's the time
+
+### 3. Professional Summer AND Winter Photos
+- **Keep your summer photos** — Show the yard's potential
+- **Add winter photos** — Show the home is beautiful in every season
+
+### 4. Showcase Energy Efficiency
+- **Heating bills** — Prepare them for buyers
+- **Insulation** — Highlight improvements
+- **Windows** — Triple glazing = selling point
+
+### 5. Set the Right Price from the Start
+- **Comparative analysis** — Based on recent neighborhood sales
+- **Realistic price** — Winter buyers are well-informed
+- **Negotiation margin** — Plan 2% to 3%
+
+### 6. Be Flexible for Showings
+- **Flexible schedule** — Weekends and evenings
+- **Virtual tours** — For Ottawa or out-of-town buyers
+- **Quick response** — Winter buyers are motivated
+
+### 7. Work with a Broker Active in Winter
+A broker who doesn't slow down in winter makes all the difference.
+
+## My Commitment
+
+I'm active 12 months a year. In winter, I deploy adapted strategies: professional photos, well-planned showings, and targeted marketing. Contact me for a free valuation, even in January.`,
+  },
+
+  // ── Article 22 – Avantages courtier immobilier ──
+  {
+    slug: "avantages-courtier-immobilier-gatineau",
+    slugEn: "benefits-real-estate-broker-gatineau",
+    title: "Pourquoi travailler avec un courtier immobilier à Gatineau",
+    titleEn: "Why Work with a Real Estate Broker in Gatineau",
+    seoTitle: "Courtier immobilier Gatineau · 8 avantages clés | YGS",
+    seoTitleEn: "Real Estate Broker Gatineau · 8 Key Benefits | YGS",
+    metaDescription: "Les 8 avantages de travailler avec un courtier immobilier à Gatineau : négociation, prix, protection légale et accompagnement personnalisé.",
+    metaDescriptionEn: "The 8 benefits of working with a real estate broker in Gatineau: negotiation, pricing, legal protection, and personalized guidance.",
+    excerpt: "Négociation, protection légale, connaissance du marché — voici pourquoi un courtier local fait la différence.",
+    excerptEn: "Negotiation, legal protection, market knowledge — here's why a local broker makes the difference.",
+    category: "Conseils",
+    categoryEn: "Tips",
+    featuredImage: blogCourtierAvantages,
+    publishDate: "2025-07-20",
+    published: true,
+    body: `## Pourquoi un courtier immobilier à Gatineau fait la différence
+
+Vendre ou acheter sans courtier peut sembler économique, mais les risques et le manque à gagner dépassent souvent les économies apparentes. Voici 8 raisons concrètes de travailler avec un courtier à Gatineau.
+
+## 1. Connaissance approfondie du marché local
+
+Un courtier de Gatineau connaît :
+- **Les prix réels par quartier** — Pas juste les données générales
+- **Les tendances micro-locales** — Quels secteurs montent, lesquels stagnent
+- **Les projets d'infrastructure** — Tramway, ponts, développements qui affectent la valeur
+- **Les particularités québécoises** — Taxes, réglementation, processus d'achat
+
+## 2. Évaluation juste de votre propriété
+
+- **Analyse comparative de marché (ACM)** — Basée sur les ventes réelles
+- **Ajustements précis** — Rénovations, emplacement, état de la propriété
+- **Prix stratégique** — Ni trop haut (stagnation) ni trop bas (perte d'argent)
+
+## 3. Négociation professionnelle
+
+- **Expérience des contre-offres** — Savoir quand céder et quand tenir
+- **Gestion des émotions** — Un courtier négocie avec la tête, pas le cœur
+- **Résultats prouvés** — En moyenne, les courtiers obtiennent un meilleur prix
+
+## 4. Protection légale
+
+- **Assurance responsabilité** — Vous êtes protégé en cas d'erreur
+- **Conformité OACIQ** — Code de déontologie strict
+- **Documents conformes** — Promesse d'achat, déclarations, contrats
+
+## 5. Marketing professionnel
+
+- **Photos professionnelles** — Première impression déterminante
+- **Visites virtuelles 3D** — Attire les acheteurs d'Ottawa et d'ailleurs
+- **Réseaux MLS et Centris** — Visibilité maximale
+- **Réseaux sociaux** — Ciblage précis des acheteurs potentiels
+
+## 6. Réseau de professionnels
+
+- **Notaires, inspecteurs, courtiers hypothécaires** — Références de confiance
+- **Entrepreneurs** — Pour les réparations pré-vente
+- **Autres courtiers** — Réseau de collaboration pour trouver l'acheteur
+
+## 7. Gain de temps considérable
+
+- **Filtrage des acheteurs** — Seulement les candidats sérieux
+- **Gestion des visites** — Organisation et suivi
+- **Paperasse** — Le courtier gère les documents complexes
+
+## 8. Accompagnement de A à Z
+
+- **Première rencontre** — Évaluation de vos besoins
+- **Stratégie personnalisée** — Plan adapté à votre situation
+- **Jusqu'à la signature** — Présent chez le notaire
+- **Après-vente** — Disponible pour vos questions
+
+## Mon approche
+
+Je ne suis pas un courtier de volume. Je prends un nombre limité de clients pour offrir un service attentif et personnalisé. Chaque transaction mérite toute mon attention.`,
+    bodyEn: `## Why a Real Estate Broker in Gatineau Makes the Difference
+
+Selling or buying without a broker may seem economical, but the risks and missed opportunities often exceed the apparent savings. Here are 8 concrete reasons to work with a broker in Gatineau.
+
+## 1. Deep Local Market Knowledge
+
+A Gatineau broker knows:
+- **Real prices by neighborhood** — Not just general data
+- **Micro-local trends** — Which areas are rising, which are stagnating
+- **Infrastructure projects** — LRT, bridges, developments affecting value
+- **Quebec specifics** — Taxes, regulations, purchase process
+
+## 2. Fair Property Valuation
+
+- **Comparative market analysis (CMA)** — Based on actual sales
+- **Precise adjustments** — Renovations, location, property condition
+- **Strategic pricing** — Not too high (stagnation) or too low (lost money)
+
+## 3. Professional Negotiation
+
+- **Counter-offer experience** — Knowing when to concede and when to hold
+- **Emotion management** — A broker negotiates with their head, not heart
+- **Proven results** — On average, brokers get a better price
+
+## 4. Legal Protection
+
+- **Liability insurance** — You're protected in case of error
+- **OACIQ compliance** — Strict code of ethics
+- **Compliant documents** — Purchase offer, declarations, contracts
+
+## 5. Professional Marketing
+
+- **Professional photos** — First impression is decisive
+- **3D virtual tours** — Attracts buyers from Ottawa and beyond
+- **MLS and Centris networks** — Maximum visibility
+- **Social media** — Precise targeting of potential buyers
+
+## 6. Professional Network
+
+- **Notaries, inspectors, mortgage brokers** — Trusted referrals
+- **Contractors** — For pre-sale repairs
+- **Other brokers** — Collaborative network to find the buyer
+
+## 7. Significant Time Savings
+
+- **Buyer screening** — Only serious candidates
+- **Showing management** — Organization and follow-up
+- **Paperwork** — The broker handles complex documents
+
+## 8. End-to-End Support
+
+- **First meeting** — Assessment of your needs
+- **Personalized strategy** — Plan adapted to your situation
+- **Until signing** — Present at the notary
+- **After-sale** — Available for your questions
+
+## My Approach
+
+I'm not a volume broker. I take a limited number of clients to offer attentive, personalized service. Every transaction deserves my full attention.`,
+  },
+];
 export const getPublishedPosts = (lang: "fr" | "en" = "fr") =>
   blogPosts
     .filter((p) => p.published)
