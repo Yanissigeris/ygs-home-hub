@@ -5,6 +5,11 @@ import blogOttawaGatineau from "@/assets/blog/blog-ottawa-gatineau.jpg";
 import blogPlexInvestment from "@/assets/blog/blog-plex-investment.jpg";
 import blogNeighborhoods from "@/assets/blog/blog-neighborhoods.jpg";
 import blogMilitary from "@/assets/blog/blog-military.jpg";
+import blogNotaryClosing from "@/assets/blog/blog-notary-closing.jpg";
+import blogHomeStaging from "@/assets/blog/blog-home-staging.jpg";
+import blogRenovationValue from "@/assets/blog/blog-renovation-value.jpg";
+import blogTaxesGatineau from "@/assets/blog/blog-taxes-gatineau.jpg";
+import blogFamilyNeighborhood from "@/assets/blog/blog-family-neighborhood.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -516,6 +521,556 @@ Gatineau offers several advantages for military members:
 ### My Military Expertise
 
 I regularly help military families with their relocation to Gatineau. I know the IRP process and ensure a smooth transition.`,
+  },
+  {
+    slug: "frais-notaire-achat-maison-gatineau",
+    slugEn: "notary-fees-buying-home-gatineau",
+    featuredImage: blogNotaryClosing,
+    title: "Frais de notaire et frais de clôture à Gatineau : guide complet",
+    titleEn: "Notary Fees and Closing Costs in Gatineau: Complete Guide",
+    seoTitle: "Frais de notaire achat maison Gatineau · Guide complet | YGS",
+    seoTitleEn: "Notary Fees Buying Home Gatineau · Complete Guide | YGS",
+    metaDescription: "Combien coûtent les frais de notaire, la taxe de bienvenue et les frais de clôture pour acheter une maison à Gatineau? Détails et exemples concrets.",
+    metaDescriptionEn: "How much are notary fees, welcome tax, and closing costs when buying a home in Gatineau? Details and real examples.",
+    excerpt: "Tout ce que vous devez savoir sur les frais de notaire, la taxe de bienvenue et les coûts cachés lors d'un achat immobilier à Gatineau.",
+    excerptEn: "Everything you need to know about notary fees, welcome tax, and hidden costs when buying a home in Gatineau.",
+    category: "Acheteurs",
+    categoryEn: "Buyers",
+    publishDate: "2025-02-20",
+    published: true,
+    body: `## Frais de notaire et frais de clôture à Gatineau
+
+Acheter une maison, c'est excitant — mais les frais supplémentaires peuvent surprendre si on ne les prévoit pas. Voici un portrait complet des coûts à prévoir au-delà du prix d'achat à Gatineau et en Outaouais.
+
+### Les frais de notaire
+
+Au Québec, c'est un notaire (et non un avocat) qui finalise la transaction immobilière. Les honoraires du notaire varient généralement entre **1 200 $ et 2 000 $**, selon la complexité du dossier.
+
+Le notaire s'occupe de :
+- Vérifier les titres de propriété
+- Enregistrer la vente au Registre foncier
+- Préparer l'acte de vente et l'acte hypothécaire
+- Ajuster les taxes municipales et scolaires
+
+### La taxe de bienvenue (droits de mutation)
+
+La taxe de bienvenue est un incontournable à Gatineau. Elle se calcule par tranches :
+- **0,5 %** sur les premiers 58 900 $
+- **1,0 %** de 58 900 $ à 294 600 $
+- **1,5 %** de 294 600 $ à 500 000 $
+- **3,0 %** au-delà de 500 000 $
+
+**Exemple concret** : pour une propriété de 425 000 $ à Aylmer, la taxe de bienvenue serait d'environ **4 600 $**.
+
+### L'inspection pré-achat
+
+Même si elle n'est pas obligatoire, l'inspection est fortement recommandée. Comptez entre **500 $ et 700 $** pour une maison unifamiliale. Pour un plex, ajoutez environ 100 $ par logement supplémentaire.
+
+### L'assurance titre
+
+L'assurance titre protège contre les vices de titre non détectés. Coût unique d'environ **250 $ à 350 $**. Je recommande cette protection pour la tranquillité d'esprit.
+
+### Le certificat de localisation
+
+Le vendeur doit normalement fournir un certificat de localisation à jour (moins de 10 ans ou reflétant l'état actuel). S'il n'en a pas, le coût est d'environ **1 500 $ à 2 000 $**, généralement à la charge du vendeur.
+
+### Budget total à prévoir
+
+Pour un achat de 400 000 $ à Gatineau, prévoyez environ **7 000 $ à 10 000 $** en frais de clôture en plus de votre mise de fonds. C'est un montant important à planifier dès le début de vos démarches.
+
+### Mon conseil
+
+La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.`,
+    bodyEn: `## Notary Fees and Closing Costs in Gatineau
+
+Buying a home is exciting — but the additional fees can catch you off guard if you don't plan for them. Here's a complete breakdown of costs to expect beyond the purchase price in Gatineau and the Outaouais.
+
+### Notary Fees
+
+In Québec, it's a notary (not a lawyer) who finalizes the real estate transaction. Notary fees typically range from **$1,200 to $2,000**, depending on the complexity of the file.
+
+The notary handles:
+- Verifying property titles
+- Registering the sale at the Land Registry
+- Preparing the deed of sale and mortgage deed
+- Adjusting municipal and school taxes
+
+### Welcome Tax (Transfer Duties)
+
+The welcome tax is unavoidable in Gatineau. It's calculated in brackets:
+- **0.5%** on the first $58,900
+- **1.0%** from $58,900 to $294,600
+- **1.5%** from $294,600 to $500,000
+- **3.0%** above $500,000
+
+**Real example**: for a $425,000 property in Aylmer, the welcome tax would be approximately **$4,600**.
+
+### Pre-Purchase Inspection
+
+While not mandatory, an inspection is strongly recommended. Budget **$500 to $700** for a single-family home. For a plex, add about $100 per additional unit.
+
+### Title Insurance
+
+Title insurance protects against undetected title defects. One-time cost of approximately **$250 to $350**. I recommend this protection for peace of mind.
+
+### Certificate of Location
+
+The seller must normally provide an up-to-date certificate of location (less than 10 years old or reflecting current conditions). If unavailable, the cost is approximately **$1,500 to $2,000**, typically the seller's responsibility.
+
+### Total Budget to Plan
+
+For a $400,000 purchase in Gatineau, expect approximately **$7,000 to $10,000** in closing costs on top of your down payment. This is a significant amount to plan for from the start.
+
+### My Advice
+
+The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.`,
+  },
+  {
+    slug: "home-staging-vendre-plus-vite-gatineau",
+    slugEn: "home-staging-sell-faster-gatineau",
+    featuredImage: blogHomeStaging,
+    title: "Home staging à Gatineau : vendre plus vite et au meilleur prix",
+    titleEn: "Home Staging in Gatineau: Sell Faster and for Top Dollar",
+    seoTitle: "Home staging Gatineau · Vendre plus vite | YGS",
+    seoTitleEn: "Home Staging Gatineau · Sell Faster | YGS",
+    metaDescription: "Le home staging peut accélérer la vente de votre propriété à Gatineau. Découvrez les stratégies qui fonctionnent vraiment et le retour sur investissement.",
+    metaDescriptionEn: "Home staging can speed up the sale of your Gatineau property. Discover strategies that actually work and the real return on investment.",
+    excerpt: "Les stratégies de mise en valeur qui font vendre plus rapidement à Aylmer, Hull et dans le Plateau.",
+    excerptEn: "Presentation strategies that help properties sell faster in Aylmer, Hull, and the Plateau.",
+    category: "Vendeurs",
+    categoryEn: "Sellers",
+    publishDate: "2025-03-10",
+    published: true,
+    body: `## Home staging à Gatineau : vendre plus vite et au meilleur prix
+
+Le home staging n'est pas juste du ménage et du désencombrement. C'est une stratégie de mise en marché qui, bien exécutée, peut réduire votre temps de vente de **30 à 50 %** et augmenter le prix obtenu.
+
+### Pourquoi ça fonctionne
+
+Les acheteurs prennent leur décision émotionnellement dans les **90 premières secondes** d'une visite. Le home staging crée cette première impression qui fait la différence entre une offre le jour même et des semaines d'attente.
+
+### Les priorités selon le secteur
+
+Chaque quartier de Gatineau a ses propres réalités :
+
+**Aylmer** : Les acheteurs cherchent le style de vie familial. Misez sur les espaces extérieurs, le rangement et les aires de vie lumineuses. La compétition est forte — les maisons bien présentées se démarquent nettement.
+
+**Hull** : Le marché est plus urbain. Les condos et maisons de ville profitent d'une mise en scène épurée et moderne. Les acheteurs veulent du potentiel sans travaux.
+
+**Plateau** : Secteur familial et résidentiel. Montrez les espaces fonctionnels pour les familles — sous-sol aménagé, cour arrière, proximité des écoles.
+
+### Les 5 interventions les plus rentables
+
+1. **Peinture neutre** — Budget : 500 $ à 1 500 $. Retour : jusqu'à 300 %. Les murs blancs ou gris clair agrandissent les pièces et plaisent à tous.
+
+2. **Désencombrement radical** — Coût : 0 $. Retour : immédiat. Enlevez 50 % de vos objets personnels. Louez un espace d'entreposage si nécessaire.
+
+3. **Éclairage** — Budget : 200 $ à 500 $. Remplacez les ampoules jaunes par du blanc chaud (3000K). Ajoutez des lampes d'appoint dans les coins sombres.
+
+4. **Extérieur soigné** — Budget : 300 $ à 800 $. Entrée propre, boîte aux lettres en bon état, platebandes entretenues. C'est la première chose que l'acheteur voit.
+
+5. **Cuisine et salle de bain** — Budget : 500 $ à 2 000 $. Remplacez les poignées d'armoires, ajoutez un nouveau miroir, installez un dosseret simple. Pas besoin de rénover au complet.
+
+### Ce que je ne recommande pas
+
+- Les rénovations majeures juste avant de vendre (cuisine complète, salle de bain au complet) — le retour est rarement là
+- Peindre des couleurs « tendance » — restez neutres
+- Cacher des problèmes — l'acheteur les trouvera à l'inspection
+
+### Mon approche
+
+Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. On identifie ensemble les interventions qui offrent le meilleur retour. Parfois, 1 000 $ investis en staging rapportent 10 000 $ de plus sur le prix de vente.`,
+    bodyEn: `## Home Staging in Gatineau: Sell Faster and for Top Dollar
+
+Home staging isn't just cleaning and decluttering. It's a marketing strategy that, when done right, can reduce your selling time by **30 to 50%** and increase the sale price.
+
+### Why It Works
+
+Buyers make their emotional decision within the **first 90 seconds** of a visit. Home staging creates that first impression that makes the difference between a same-day offer and weeks of waiting.
+
+### Priorities by Neighborhood
+
+Each Gatineau neighborhood has its own realities:
+
+**Aylmer**: Buyers seek the family lifestyle. Focus on outdoor spaces, storage, and bright living areas. Competition is fierce — well-presented homes stand out clearly.
+
+**Hull**: The market is more urban. Condos and townhouses benefit from clean, modern staging. Buyers want potential without major renovations.
+
+**Plateau**: Family-oriented and residential. Show functional family spaces — finished basement, backyard, proximity to schools.
+
+### The 5 Most Profitable Interventions
+
+1. **Neutral paint** — Budget: $500 to $1,500. Return: up to 300%. White or light gray walls enlarge rooms and appeal to everyone.
+
+2. **Radical decluttering** — Cost: $0. Return: immediate. Remove 50% of your personal items. Rent a storage unit if necessary.
+
+3. **Lighting** — Budget: $200 to $500. Replace yellow bulbs with warm white (3000K). Add accent lamps in dark corners.
+
+4. **Curb appeal** — Budget: $300 to $800. Clean entrance, well-maintained mailbox, tidy flower beds. It's the first thing buyers see.
+
+5. **Kitchen and bathroom** — Budget: $500 to $2,000. Replace cabinet handles, add a new mirror, install a simple backsplash. No need for a full renovation.
+
+### What I Don't Recommend
+
+- Major renovations just before selling (complete kitchen, full bathroom) — the return is rarely there
+- Painting "trendy" colors — stay neutral
+- Hiding problems — the buyer will find them at inspection
+
+### My Approach
+
+I do a free pre-listing visit with every seller. We identify together the interventions that offer the best return. Sometimes, $1,000 invested in staging brings $10,000 more on the sale price.`,
+  },
+  {
+    slug: "renovations-qui-augmentent-valeur-maison",
+    slugEn: "renovations-that-increase-home-value",
+    featuredImage: blogRenovationValue,
+    title: "Les rénovations qui augmentent réellement la valeur de votre maison à Gatineau",
+    titleEn: "Renovations That Actually Increase Your Home's Value in Gatineau",
+    seoTitle: "Rénovations valeur maison Gatineau · Guide | YGS",
+    seoTitleEn: "Renovations Home Value Gatineau · Guide | YGS",
+    metaDescription: "Quelles rénovations offrent le meilleur retour sur investissement à Gatineau? Cuisine, salle de bain, sous-sol — analyse des chiffres réels.",
+    metaDescriptionEn: "Which renovations offer the best ROI in Gatineau? Kitchen, bathroom, basement — real numbers analyzed.",
+    excerpt: "Quelles rénovations offrent le meilleur retour sur investissement en Outaouais? Voici les chiffres réels.",
+    excerptEn: "Which renovations offer the best return on investment in the Outaouais? Here are the real numbers.",
+    category: "Vendeurs",
+    categoryEn: "Sellers",
+    publishDate: "2025-04-05",
+    published: true,
+    body: `## Les rénovations qui augmentent réellement la valeur de votre maison
+
+Tous les propriétaires se posent la question : est-ce que cette rénovation va me rapporter au moment de vendre? La réponse dépend du type de travaux, du secteur et du marché actuel à Gatineau.
+
+### Les rénovations à fort retour
+
+**Cuisine** — Retour moyen : **75 à 100 %**
+La cuisine est le cœur de la maison. Mais attention : une rénovation complète à 40 000 $ ne rapporte pas toujours 40 000 $. Les interventions ciblées (comptoirs, dosserets, peinture d'armoires) offrent souvent un meilleur ratio.
+
+**Salle de bain principale** — Retour moyen : **60 à 80 %**
+Moderniser la salle de bain est l'un des investissements les plus sûrs. Douche vitrée, vanité contemporaine et éclairage LED font une différence immédiate.
+
+**Sous-sol aménagé** — Retour moyen : **50 à 75 %**
+À Gatineau, un sous-sol bien fini ajoute des pieds carrés habitables. Particulièrement rentable dans le Plateau et à Aylmer, où les familles cherchent de l'espace.
+
+### Les rénovations à rendement modéré
+
+**Fenêtres** — Retour moyen : **50 à 60 %**
+Les fenêtres neuves améliorent l'efficacité énergétique et l'apparence, mais le retour financier est modéré. Investissez si vos fenêtres sont vraiment en fin de vie.
+
+**Toiture** — Retour moyen : **40 à 60 %**
+Une toiture neuve rassure les acheteurs et peut éviter des négociations à la baisse. Mais ne refaites pas votre toit juste pour vendre — seulement s'il en a besoin.
+
+**Aménagement paysager** — Retour moyen : **100 à 200 %**
+Paradoxalement, l'extérieur offre le meilleur retour pour le plus petit investissement. Entrée soignée, haies taillées et platebandes fleuries coûtent peu et impressionnent beaucoup.
+
+### Les rénovations à éviter avant de vendre
+
+- **Piscine creusée** — Coût : 40 000 $+. Retour : souvent négatif. Beaucoup d'acheteurs voient ça comme un fardeau.
+- **Personnalisation extrême** — Mur d'accent rouge vif, comptoir en marbre rose : vos goûts ne sont pas ceux de l'acheteur.
+- **Agrandissement non conforme** — Les travaux sans permis peuvent créer des problèmes légaux et réduire la valeur.
+
+### Spécificités du marché de Gatineau
+
+À Aylmer, les acheteurs valorisent les espaces extérieurs et les cuisines ouvertes. À Hull, les projets de modernisation urbaine (Zibi) augmentent les attentes de finition. Dans le Plateau, les familles priorisent les sous-sols aménagés et les cours arrière fonctionnelles.
+
+### Mon rôle comme courtier
+
+Avant de dépenser, consultez-moi. Je connais ce que les acheteurs de votre secteur recherchent et je peux vous dire exactement quelles rénovations rapporteront le plus dans votre cas.`,
+    bodyEn: `## Renovations That Actually Increase Your Home's Value
+
+Every homeowner asks the question: will this renovation pay off when I sell? The answer depends on the type of work, the neighborhood, and the current market in Gatineau.
+
+### High-Return Renovations
+
+**Kitchen** — Average return: **75 to 100%**
+The kitchen is the heart of the home. But be careful: a $40,000 complete renovation doesn't always return $40,000. Targeted improvements (countertops, backsplashes, cabinet painting) often offer a better ratio.
+
+**Main Bathroom** — Average return: **60 to 80%**
+Modernizing the bathroom is one of the safest investments. Glass shower, contemporary vanity, and LED lighting make an immediate difference.
+
+**Finished Basement** — Average return: **50 to 75%**
+In Gatineau, a well-finished basement adds livable square footage. Particularly profitable in the Plateau and Aylmer, where families seek space.
+
+### Moderate-Return Renovations
+
+**Windows** — Average return: **50 to 60%**
+New windows improve energy efficiency and appearance, but the financial return is moderate. Invest if your windows are truly at end of life.
+
+**Roof** — Average return: **40 to 60%**
+A new roof reassures buyers and can prevent downward negotiations. But don't redo your roof just to sell — only if it needs it.
+
+**Landscaping** — Average return: **100 to 200%**
+Paradoxically, the exterior offers the best return for the smallest investment. Tidy entrance, trimmed hedges, and flower beds cost little and impress a lot.
+
+### Renovations to Avoid Before Selling
+
+- **In-ground pool** — Cost: $40,000+. Return: often negative. Many buyers see it as a burden.
+- **Extreme customization** — Bright red accent wall, pink marble countertop: your tastes aren't the buyer's.
+- **Non-conforming additions** — Work done without permits can create legal problems and reduce value.
+
+### Gatineau Market Specifics
+
+In Aylmer, buyers value outdoor spaces and open kitchens. In Hull, the urban modernization projects (Zibi) raise finishing expectations. In the Plateau, families prioritize finished basements and functional backyards.
+
+### My Role as Your Broker
+
+Before you spend, consult me. I know what buyers in your area are looking for and can tell you exactly which renovations will pay off most in your case.`,
+  },
+  {
+    slug: "taxes-municipales-gatineau-vs-ottawa",
+    slugEn: "property-taxes-gatineau-vs-ottawa",
+    featuredImage: blogTaxesGatineau,
+    title: "Taxes municipales à Gatineau vs Ottawa : la comparaison complète",
+    titleEn: "Property Taxes in Gatineau vs Ottawa: The Complete Comparison",
+    seoTitle: "Taxes municipales Gatineau vs Ottawa · Comparaison | YGS",
+    seoTitleEn: "Property Taxes Gatineau vs Ottawa · Comparison | YGS",
+    metaDescription: "Comparaison détaillée des taxes municipales, scolaires et des services entre Gatineau et Ottawa. Qui paie plus? La réponse vous surprendra.",
+    metaDescriptionEn: "Detailed comparison of municipal and school taxes and services between Gatineau and Ottawa. Who pays more? The answer may surprise you.",
+    excerpt: "Comparaison détaillée des taxes entre Gatineau et Ottawa — la réponse est plus nuancée qu'on le pense.",
+    excerptEn: "Detailed tax comparison between Gatineau and Ottawa — the answer is more nuanced than you'd think.",
+    category: "Marché",
+    categoryEn: "Market",
+    publishDate: "2025-05-12",
+    published: true,
+    featured: false,
+    body: `## Taxes municipales à Gatineau vs Ottawa : la comparaison complète
+
+C'est la question que tout le monde pose : « est-ce que les taxes sont plus élevées à Gatineau? » La réponse courte : oui, les taux sont plus élevés. Mais l'histoire complète est beaucoup plus nuancée.
+
+### Les taux de taxation
+
+**Gatineau** : Le taux combiné (municipal + scolaire) est d'environ **1,4 % à 1,6 %** de l'évaluation municipale.
+
+**Ottawa** : Le taux est d'environ **1,0 % à 1,2 %** de l'évaluation.
+
+Sur papier, Gatineau semble plus cher. Mais il faut considérer deux facteurs importants.
+
+### Le facteur d'évaluation
+
+Les évaluations municipales à Gatineau sont historiquement **plus basses** que la valeur marchande réelle. À Ottawa, les évaluations MPAC suivent de plus près le marché. Résultat : le montant réel de taxes payé est plus proche qu'on le croit.
+
+**Exemple concret** :
+- Maison à Aylmer — Valeur marchande : 500 000 $. Évaluation municipale : 380 000 $. Taxes annuelles : environ **5 700 $**
+- Maison comparable à Ottawa — Valeur marchande : 600 000 $. Évaluation MPAC : 520 000 $. Taxes annuelles : environ **5 700 $**
+
+Le résultat net est souvent similaire, surtout quand on considère que la maison à Gatineau coûte 100 000 $ de moins à l'achat.
+
+### Les services inclus
+
+À Gatineau, vos taxes incluent :
+- Collecte des ordures et recyclage
+- Service d'eau potable (pas de compteur pour les résidences)
+- Déneigement des rues
+- Accès aux parcs et installations sportives
+- Transport STO (accès au réseau OC Transpo via l'intégration tarifaire)
+
+### L'avantage fiscal québécois
+
+Le Québec offre des avantages que l'Ontario n'a pas :
+- **Garderies à 8,90 $/jour** — Économie de 10 000 $ à 15 000 $ par an par enfant vs l'Ontario
+- **Assurance médicaments** — Couverture universelle
+- **Crédits d'impôt** — RénoVert, crédit pour maintien à domicile, etc.
+
+### Le calcul global
+
+Quand on additionne tout — prix d'achat inférieur, garderies subventionnées, programmes fiscaux — une famille à Gatineau peut économiser **20 000 $ à 40 000 $ par an** comparativement à Ottawa, même avec des taxes municipales légèrement plus élevées.
+
+### Mon avis
+
+Ne laissez pas le taux de taxation vous décourager d'acheter à Gatineau. Regardez le portrait complet. Je vous aide à faire le calcul personnalisé pour votre situation.`,
+    bodyEn: `## Property Taxes in Gatineau vs Ottawa: The Complete Comparison
+
+It's the question everyone asks: "are taxes higher in Gatineau?" The short answer: yes, the rates are higher. But the full story is much more nuanced.
+
+### Tax Rates
+
+**Gatineau**: The combined rate (municipal + school) is approximately **1.4% to 1.6%** of the municipal assessment.
+
+**Ottawa**: The rate is approximately **1.0% to 1.2%** of the assessment.
+
+On paper, Gatineau looks more expensive. But two important factors must be considered.
+
+### The Assessment Factor
+
+Municipal assessments in Gatineau are historically **lower** than actual market value. In Ottawa, MPAC assessments follow the market more closely. Result: the actual tax amount paid is closer than you'd think.
+
+**Real example**:
+- Home in Aylmer — Market value: $500,000. Municipal assessment: $380,000. Annual taxes: approximately **$5,700**
+- Comparable home in Ottawa — Market value: $600,000. MPAC assessment: $520,000. Annual taxes: approximately **$5,700**
+
+The net result is often similar, especially when you consider the Gatineau home costs $100,000 less to purchase.
+
+### Services Included
+
+In Gatineau, your taxes include:
+- Garbage collection and recycling
+- Drinking water service (no meter for residences)
+- Street snow removal
+- Access to parks and sports facilities
+- STO transit (access to OC Transpo network via fare integration)
+
+### The Québec Fiscal Advantage
+
+Québec offers advantages that Ontario doesn't:
+- **$8.90/day daycare** — Savings of $10,000 to $15,000 per year per child vs Ontario
+- **Drug insurance** — Universal coverage
+- **Tax credits** — RénoVert, home maintenance credit, etc.
+
+### The Complete Picture
+
+When you add it all up — lower purchase price, subsidized daycare, tax programs — a family in Gatineau can save **$20,000 to $40,000 per year** compared to Ottawa, even with slightly higher municipal taxes.
+
+### My Take
+
+Don't let the tax rate discourage you from buying in Gatineau. Look at the complete picture. I help you make the personalized calculation for your situation.`,
+  },
+  {
+    slug: "meilleurs-quartiers-familles-gatineau",
+    slugEn: "best-family-neighborhoods-gatineau",
+    featuredImage: blogFamilyNeighborhood,
+    title: "Les meilleurs quartiers pour les familles à Gatineau en 2025",
+    titleEn: "Best Family Neighborhoods in Gatineau in 2025",
+    seoTitle: "Meilleurs quartiers familles Gatineau 2025 | YGS",
+    seoTitleEn: "Best Family Neighborhoods Gatineau 2025 | YGS",
+    metaDescription: "Aylmer, Plateau, Hull ou Buckingham? Découvrez les meilleurs quartiers pour élever une famille à Gatineau — écoles, parcs, sécurité et prix médians.",
+    metaDescriptionEn: "Aylmer, Plateau, Hull or Buckingham? Discover the best neighborhoods to raise a family in Gatineau — schools, parks, safety and median prices.",
+    excerpt: "Aylmer, Plateau, Hull ou Buckingham? Quel quartier choisir pour votre famille à Gatineau en 2025.",
+    excerptEn: "Aylmer, Plateau, Hull or Buckingham? Which neighborhood is right for your family in Gatineau in 2025.",
+    category: "Quartiers",
+    categoryEn: "Neighborhoods",
+    publishDate: "2025-06-01",
+    published: true,
+    body: `## Les meilleurs quartiers pour les familles à Gatineau en 2025
+
+Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les prochaines années. Voici un portrait honnête des secteurs les plus populaires pour les familles à Gatineau.
+
+### Aylmer — Le choix premium pour les familles
+
+**Prix médian** : 480 000 $ à 550 000 $
+
+Aylmer est le secteur le plus recherché par les familles à Gatineau, et pour de bonnes raisons :
+- **Lac Deschênes** — Plage, marina, pistes cyclables le long du lac
+- **Parc de la Gatineau** — Accès direct à des centaines de kilomètres de sentiers
+- **Écoles réputées** — Plusieurs écoles primaires et secondaires bien cotées
+- **Ambiance villageoise** — Le Vieux-Aylmer offre restos, cafés et boutiques locales
+- **Proximité Ottawa** — 15 à 20 minutes du centre-ville via le pont Champlain
+
+**Idéal pour** : Familles avec enfants de tous âges, amoureux du plein air, professionnels travaillant à Ottawa.
+
+### Le Plateau — Résidentiel et abordable
+
+**Prix médian** : 400 000 $ à 480 000 $
+
+Le Plateau est un secteur résidentiel calme qui offre un excellent rapport qualité-prix :
+- **Maisons spacieuses** — Terrains plus grands qu'à Aylmer pour un prix inférieur
+- **Parcs et espaces verts** — Parc du Lac-Beauchamp, sentiers nature
+- **Écoles de qualité** — Bonnes options en français et en anglais
+- **Accès autoroute 50** — Connexion rapide vers Aylmer ou Buckingham
+- **Commerces** — Centre commercial du Plateau, épiceries, services
+
+**Idéal pour** : Jeunes familles, premiers acheteurs, ceux qui veulent de l'espace sans exploser le budget.
+
+### Hull — Urbain et dynamique
+
+**Prix médian** : 350 000 $ à 450 000 $
+
+Hull offre un style de vie plus urbain, parfait pour les familles actives :
+- **Proximité immédiate d'Ottawa** — 5 minutes à pied du centre-ville via les ponts
+- **Projet Zibi** — Quartier en développement avec condos modernes
+- **Culture et restos** — Musée canadien de l'histoire, quartier gastronomique
+- **Transport** — Meilleur accès STO de la ville, futur tramway potentiel
+- **Prix accessibles** — Encore possible de trouver des aubaines
+
+**Idéal pour** : Familles qui travaillent à Ottawa, amateurs de vie urbaine, jeunes professionnels.
+
+### Buckingham — Nature et espace
+
+**Prix médian** : 300 000 $ à 400 000 $
+
+Buckingham et Masson-Angers offrent le meilleur rapport espace-prix de Gatineau :
+- **Terrains très grands** — Demi-acres et plus facilement disponibles
+- **Rivière du Lièvre** — Activités nautiques, pêche, paysages
+- **Communauté tissée serrée** — Ambiance de petite ville
+- **Prix les plus bas** — Maison unifamiliale spacieuse pour 350 000 $
+- **Nature omniprésente** — Forêts, lacs, sentiers à proximité
+
+**Idéal pour** : Familles cherchant de l'espace, amateurs de nature, budget plus serré.
+
+### Comment choisir?
+
+Posez-vous ces questions :
+- Où travaillez-vous? (Le trajet quotidien compte)
+- Quel est votre budget réel? (Incluant les frais de clôture)
+- Quelles sont vos priorités? (Écoles, nature, vie urbaine, espace)
+
+### Mon accompagnement
+
+Je vis à Gatineau et je connais chaque quartier personnellement. On fait une tournée ensemble pour que vous puissiez sentir l'ambiance de chaque secteur avant de décider.`,
+    bodyEn: `## Best Family Neighborhoods in Gatineau in 2025
+
+Choosing the right neighborhood means choosing your family's daily life for years to come. Here's an honest portrait of the most popular areas for families in Gatineau.
+
+### Aylmer — The Premium Family Choice
+
+**Median price**: $480,000 to $550,000
+
+Aylmer is the most sought-after area for families in Gatineau, and for good reason:
+- **Lac Deschênes** — Beach, marina, cycling paths along the lake
+- **Gatineau Park** — Direct access to hundreds of kilometers of trails
+- **Reputed schools** — Several well-rated elementary and high schools
+- **Village atmosphere** — Old Aylmer offers restaurants, cafés, and local shops
+- **Ottawa proximity** — 15 to 20 minutes from downtown via Champlain Bridge
+
+**Ideal for**: Families with children of all ages, outdoor enthusiasts, professionals working in Ottawa.
+
+### The Plateau — Residential and Affordable
+
+**Median price**: $400,000 to $480,000
+
+The Plateau is a quiet residential area offering excellent value:
+- **Spacious homes** — Larger lots than Aylmer at a lower price
+- **Parks and green spaces** — Lac-Beauchamp Park, nature trails
+- **Quality schools** — Good options in French and English
+- **Highway 50 access** — Quick connection to Aylmer or Buckingham
+- **Shopping** — Plateau shopping center, grocery stores, services
+
+**Ideal for**: Young families, first-time buyers, those wanting space without blowing the budget.
+
+### Hull — Urban and Dynamic
+
+**Median price**: $350,000 to $450,000
+
+Hull offers a more urban lifestyle, perfect for active families:
+- **Steps from Ottawa** — 5-minute walk to downtown via the bridges
+- **Zibi project** — Developing neighborhood with modern condos
+- **Culture and dining** — Canadian Museum of History, culinary quarter
+- **Transit** — Best STO access in the city, potential future light rail
+- **Affordable prices** — Still possible to find deals
+
+**Ideal for**: Families working in Ottawa, urban lifestyle lovers, young professionals.
+
+### Buckingham — Nature and Space
+
+**Median price**: $300,000 to $400,000
+
+Buckingham and Masson-Angers offer the best space-to-price ratio in Gatineau:
+- **Very large lots** — Half-acres and more readily available
+- **Lièvre River** — Water sports, fishing, scenic views
+- **Tight-knit community** — Small-town feel
+- **Lowest prices** — Spacious single-family home for $350,000
+- **Nature everywhere** — Forests, lakes, trails nearby
+
+**Ideal for**: Families seeking space, nature lovers, tighter budgets.
+
+### How to Choose?
+
+Ask yourself these questions:
+- Where do you work? (The daily commute matters)
+- What's your real budget? (Including closing costs)
+- What are your priorities? (Schools, nature, urban life, space)
+
+### My Support
+
+I live in Gatineau and know each neighborhood personally. We do a tour together so you can feel the vibe of each area before deciding.`,
   },
 ];
 
