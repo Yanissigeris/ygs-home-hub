@@ -161,6 +161,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <hr className="section-divider" />
+
     <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
     <GuideOffersSectionEn background="alt" />
