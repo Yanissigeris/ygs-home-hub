@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const BASE_URL = "https://ygs-home-hub.lovable.app";
+const BASE_URL = "https://yanisgauthier.com";
 
 interface Crumb {
   name: string;
