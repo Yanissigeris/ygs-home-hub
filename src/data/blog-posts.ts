@@ -2063,7 +2063,9 @@ A broker who doesn't slow down in winter makes all the difference.
 
 ## My Commitment
 
-I'm active 12 months a year. In winter, I deploy adapted strategies: professional photos, well-planned showings, and targeted marketing. Contact me for a free valuation, even in January.`,
+I'm active 12 months a year. In winter, I deploy adapted strategies: professional photos, well-planned showings, and targeted marketing. Contact me for a free valuation, even in January.
+
+**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
   },
 
   // ── Article 22 – Avantages courtier immobilier ──
