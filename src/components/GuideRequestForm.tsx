@@ -70,10 +70,21 @@ const GuideRequestForm = ({
   const t = i18n[lang];
   const finalSuccessTitle = successTitle ?? t.defaultSuccessTitle;
   const finalSuccessText = successText ?? t.defaultSuccessText;
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "guide", lang,
+      name: fd.get("guide-prenom") as string || "",
+      lastName: fd.get("guide-nom") as string || undefined,
+      email: fd.get("guide-courriel") as string || "",
+      phone: fd.get("guide-tel") as string || undefined,
+      guideTitle,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
