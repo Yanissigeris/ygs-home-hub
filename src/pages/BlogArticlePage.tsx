@@ -87,6 +87,7 @@ const BlogArticlePage = () => {
   return (
     <>
       <PageMeta title={seoTitle} description={metaDesc} />
+      <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
 
       {/* Featured image banner */}
       {post.featuredImage && (
