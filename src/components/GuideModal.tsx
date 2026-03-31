@@ -193,9 +193,10 @@ const GuideModal = ({ open, onOpenChange, guideType }: GuideModalProps) => {
                 size="lg"
                 variant="accent"
                 className="w-full mt-1 font-semibold"
+                disabled={submitting}
               >
                 <Send size={16} className="mr-1.5" />
-                {config.submitLabel}
+                {submitting ? "Envoi…" : config.submitLabel}
               </Button>
 
               <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.72rem] text-muted-foreground/50">
