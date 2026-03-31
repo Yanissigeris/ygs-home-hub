@@ -102,19 +102,19 @@ export const reviewsEn: Review[] = [
   // — Plex / Investors —
   {
     id: "p1",
-    name: "Alain P.",
+    name: "Tasha",
     location: "Hull",
     category: "plex",
-    short: "Thorough and honest analysis — Yanis kept me from making a bad investment.",
+    short: "Very professional and attentive. Always responds quickly, everything you look for in an agent!!! I would highly recommend his service.",
     full: "I was looking at a duplex that seemed like a good deal. Yanis did a detailed analysis and showed me the actual revenues didn't justify the asking price. We found a much better investment two weeks later. His rigor saved me big.",
     rating: 5,
   },
   {
     id: "p2",
-    name: "Stéphane and Julie R.",
+    name: "Abdoulaye",
     location: "Gatineau",
     category: "plex",
-    short: "Sold our triplex at the best price thanks to a precise marketing strategy.",
+    short: "“A big thank you, Yanis Sigeris, for your support throughout the sale of our duplex. You were a tremendous help from start to finish, and we obtained a good price in a short time.”",
     full: "We thought selling an occupied plex would be complicated. Yanis managed tenant coordination, documentation and showings with professionalism. The result exceeded our expectations — better price than we hoped for.",
     rating: 5,
   },
