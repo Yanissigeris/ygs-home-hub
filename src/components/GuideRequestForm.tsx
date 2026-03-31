@@ -155,9 +155,9 @@ const GuideRequestForm = ({
                   <Input id="guide-tel" name="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
                 </div>
 
-                <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold">
+                <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold" disabled={submitting}>
                   <Send size={16} className="mr-1.5" />
-                  {submitLabel}
+                  {submitting ? (lang === 'fr' ? 'Envoi…' : 'Sending…') : submitLabel}
                 </Button>
 
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-muted-foreground/50">
