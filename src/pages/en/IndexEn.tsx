@@ -33,8 +33,9 @@ const trustItems = [
 ];
 
 const socialStatsEn = [
-  { value: "~9 yrs", label: "of experience in Outaouais" },
-  { value: "5 ★", label: "Google client reviews" },
+  { value: "~9 yrs", label: "experience" },
+  { value: "5 ★", label: "Google reviews" },
+  { value: "Hall of Fame", label: "RE/MAX" },
 ];
 
 const socialTestimonialsEn = [
