@@ -701,7 +701,9 @@ Chaque quartier de Gatineau a ses propres réalités :
 
 ### Mon approche
 
-Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. On identifie ensemble les interventions qui offrent le meilleur retour. Parfois, 1 000 $ investis en staging rapportent 10 000 $ de plus sur le prix de vente.`,
+Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. On identifie ensemble les interventions qui offrent le meilleur retour. Parfois, 1 000 $ investis en staging rapportent 10 000 $ de plus sur le prix de vente.
+
+**Lire aussi** : [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
     bodyEn: `## Home Staging in Gatineau: Sell Faster and for Top Dollar
 
 Home staging isn't just cleaning and decluttering. It's a marketing strategy that, when done right, can reduce your selling time by **30 to 50%** and increase the sale price.
