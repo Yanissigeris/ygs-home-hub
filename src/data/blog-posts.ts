@@ -156,6 +156,7 @@ There's no "bad" time to sell if your property is well-prepared and well-positio
   },
   {
     slug: "premier-achat-gatineau-guide",
+    featuredImage: blogFirstTimeBuyer,
     slugEn: "first-time-buyer-gatineau-guide",
     title: "Premier achat à Gatineau : les étapes essentielles",
     titleEn: "First-Time Buyer in Gatineau: Essential Steps",
