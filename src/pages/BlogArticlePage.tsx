@@ -55,6 +55,32 @@ const BlogArticlePage = () => {
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
 
+  // Hreflang injection must be before any early return (hooks rules)
+  useEffect(() => {
+    if (!post || !post.published) return;
+    const frSlug = post.slug;
+    const enSlug = post.slugEn;
+    const frUrl = `${BASE_URL}/blogue/${frSlug}`;
+    const enUrl = `${BASE_URL}/en/blog/${enSlug}`;
+
+    const createLink = (hreflang: string, href: string) => {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "alternate");
+      link.setAttribute("hreflang", hreflang);
+      link.setAttribute("href", href);
+      document.head.appendChild(link);
+      return link;
+    };
+
+    const links = [
+      createLink("fr-CA", frUrl),
+      createLink("en-CA", enUrl),
+      createLink("x-default", frUrl),
+    ];
+
+    return () => { links.forEach(l => l.remove()); };
+  }, [post]);
+
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
   }
