@@ -1,3 +1,11 @@
+import blogMarket from "@/assets/blog/blog-market-2025.jpg";
+import blogWhenToSell from "@/assets/blog/blog-when-to-sell.jpg";
+import blogFirstTimeBuyer from "@/assets/blog/blog-first-time-buyer.jpg";
+import blogOttawaGatineau from "@/assets/blog/blog-ottawa-gatineau.jpg";
+import blogPlexInvestment from "@/assets/blog/blog-plex-investment.jpg";
+import blogNeighborhoods from "@/assets/blog/blog-neighborhoods.jpg";
+import blogMilitary from "@/assets/blog/blog-military.jpg";
+
 export interface BlogPost {
   slug: string;
   slugEn: string;
@@ -27,6 +35,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "marche-immobilier-gatineau-2025",
+    featuredImage: blogMarket,
     slugEn: "gatineau-real-estate-market-2025",
     title: "Le marché immobilier à Gatineau en 2025 : ce que les chiffres révèlent",
     titleEn: "Gatineau Real Estate Market in 2025: What the Numbers Reveal",
@@ -88,6 +97,7 @@ Whether you're thinking of selling or buying, understanding these trends gives y
   },
   {
     slug: "quand-vendre-sa-maison-gatineau",
+    featuredImage: blogWhenToSell,
     slugEn: "best-time-to-sell-gatineau",
     title: "Quand vendre sa maison à Gatineau pour maximiser son prix?",
     titleEn: "When Is the Best Time to Sell in Gatineau?",
@@ -146,6 +156,7 @@ There's no "bad" time to sell if your property is well-prepared and well-positio
   },
   {
     slug: "premier-achat-gatineau-guide",
+    featuredImage: blogFirstTimeBuyer,
     slugEn: "first-time-buyer-gatineau-guide",
     title: "Premier achat à Gatineau : les étapes essentielles",
     titleEn: "First-Time Buyer in Gatineau: Essential Steps",
@@ -208,6 +219,7 @@ A real estate broker who knows the local market can save you time and money. The
   },
   {
     slug: "demenager-ottawa-gatineau-guide",
+    featuredImage: blogOttawaGatineau,
     slugEn: "moving-ottawa-to-gatineau-guide",
     title: "Déménager d'Ottawa à Gatineau : guide complet",
     titleEn: "Moving from Ottawa to Gatineau: Complete Guide",
@@ -274,6 +286,7 @@ From most Gatineau neighborhoods, downtown Ottawa is accessible in 15-30 minutes
   },
   {
     slug: "investir-plex-gatineau-rentable",
+    featuredImage: blogPlexInvestment,
     slugEn: "investing-plex-gatineau-worth-it",
     title: "Investir dans un plex à Gatineau : est-ce encore rentable?",
     titleEn: "Investing in a Plex in Gatineau: Is It Still Worth It?",
@@ -352,6 +365,7 @@ I help you analyze each opportunity rigorously — income, expenses, appreciatio
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
+    featuredImage: blogNeighborhoods,
     slugEn: "aylmer-hull-plateau-which-neighborhood",
     title: "Aylmer, Hull ou Plateau : quel quartier choisir?",
     titleEn: "Aylmer, Hull, or Plateau: Which Neighborhood Is Right for You?",
@@ -430,6 +444,7 @@ The best neighborhood depends on your priorities: proximity to work, schools, bu
   },
   {
     slug: "mutation-militaire-gatineau",
+    featuredImage: blogMilitary,
     slugEn: "military-posting-gatineau",
     title: "Mutation militaire à Gatineau : ce que vous devez savoir",
     titleEn: "Military Posting to Gatineau: What You Need to Know",
