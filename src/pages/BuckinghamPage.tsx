@@ -1,166 +1,52 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import GuideInlineCTA from "@/components/GuideInlineCTA";
-import StickyGuideBanner from "@/components/StickyGuideBanner";
-import PageMeta from "@/components/PageMeta";
-import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
-import HeroSection from "@/components/HeroSection";
-import SectionHeading from "@/components/SectionHeading";
-import CTASection from "@/components/CTASection";
-import CardGrid from "@/components/CardGrid";
-import ImageTextSplit from "@/components/ImageTextSplit";
-import InlineCTA from "@/components/InlineCTA";
-import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
-import FAQSection from "@/components/FAQSection";
-import RelatedPages from "@/components/RelatedPages";
-import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
+import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
+import { Users, Home, TrendingUp, TreePine } from "lucide-react";
 import heroImg from "@/assets/hero-buckingham.webp";
-import riverImg from "@/assets/buckingham-river-nature.jpg";
-
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste Buckingham / Masson-Angers" },
-  { icon: Shield, label: "Accompagnement à votre rythme" },
-];
-
-const reasons = [
-  "Terrains plus grands et propriétés plus spacieuses qu'ailleurs en Outaouais",
-  "Prix d'entrée parmi les plus accessibles de la région — idéal pour un premier achat",
-  "Cadre naturel exceptionnel — rivière du Lièvre, parcs, espaces verts",
-  "Idéal pour les familles qui veulent de l'espace sans quitter la grande région de Gatineau",
-  "Secteur en croissance avec de nouveaux développements résidentiels",
-];
-
-const profiles = [
-  { icon: Users, title: "Familles", text: "Plus d'espace, grand terrain, école de quartier — tout ça à un prix réaliste." },
-  { icon: Home, title: "Premiers acheteurs", text: "Le meilleur rapport qualité-prix en Outaouais pour accéder à la propriété." },
-  { icon: TreePine, title: "Amateurs de nature", text: "Rivière, sentiers, espaces verts — un mode de vie plus tranquille sans être isolé." },
-  { icon: TrendingUp, title: "Investisseurs", text: "Prix d'entrée bas, croissance prévue, potentiel locatif intéressant." },
-];
-
-const sellerReasons = [
-  "La demande augmente dans le secteur avec les nouveaux développements",
-  "Les acheteurs cherchent de l'espace — votre propriété les intéresse",
-  "Profiter de la hausse de valeur avant que les prix se stabilisent",
-  "Optimiser votre position pour votre prochain projet immobilier",
-];
-
-const faq = [
-  { q: "Buckingham est-il loin de tout?", a: "Non — c'est à 25-35 minutes d'Ottawa et du centre de Gatineau. Vous avez tous les services essentiels sur place." },
-  { q: "Les prix vont-ils continuer de monter?", a: "Le secteur est en croissance avec les nouveaux développements. Contactez-moi pour une analyse à jour." },
-  { q: "Y a-t-il de bons investissements à Buckingham?", a: "Oui — les prix d'entrée sont bas avec une demande locative croissante. Bonne option pour un premier investissement." },
-];
-
-const relatedSectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-];
-
-const related = [
-  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
-  { title: "Premier achat", text: "Budget et processus pour premiers acheteurs.", href: "/premier-achat-gatineau" },
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-  { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-];
 
 const BuckinghamPage = () => (
-   <>
-    <PageMeta title="Buckingham / Masson-Angers — Guide | YGS" description="Buckingham et Masson-Angers, Gatineau: nature, grands terrains, rivière du Lièvre et prix accessibles. Guide pour acheteurs et investisseurs en Outaouais." />
-    <NeighborhoodJsonLd name="Buckingham" description="Courtier immobilier à Buckingham et Masson-Angers. Nature, terrains spacieux et prix accessibles en Outaouais." lat={45.5864} lng={-75.4197} url="/buckingham-masson-angers" />
-    <HeroSection
-      overline="Guide de quartier · Buckingham / Masson-Angers"
-      title="Vivre à Buckingham et Masson-Angers"
-      subtitle="Espace, nature, prix accessibles et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      heroBgImage={riverImg}
-    />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ImageTextSplit image={heroImg} imageAlt="Secteur Buckingham et Masson-Angers" imagePosition="right">
-      <SectionHeading
-        overline="Le secteur"
-        title="Pourquoi les gens choisissent Buckingham / Masson-Angers"
-        subtitle="Familles, premiers acheteurs et amateurs de nature choisissent ce secteur pour l'espace, les prix et le cadre de vie."
-      />
-      <div className="mt-7 space-y-3.5">
-        {reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
-
-    <CardGrid
-      overline="Pour qui"
-      title="Ce secteur est idéal pour…"
-      items={profiles}
-      background="alt"
-    />
-
-    <InlineCTA
-      text="Vous pensez acheter dans le secteur? Parlons de votre budget et de vos options."
-      buttonLabel="Réserver une consultation →"
-      href="/consultation-acheteur"
-    />
-
-    <ImageTextSplit image={riverImg} imageAlt="Nature et rivière, Buckingham" imagePosition="left">
-      <SectionHeading
-        overline="Vendeurs du secteur"
-        title="Vous êtes propriétaire à Buckingham ou Masson-Angers?"
-        subtitle="La demande augmente dans le secteur. C'est le bon moment de comprendre ce que votre propriété vaut."
-      />
-      <div className="mt-7 space-y-3.5">
-        {sellerReasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-muted-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-      <Button className="mt-8" size="lg" asChild>
-        <Link to="/evaluation-gratuite-gatineau">Obtenir ma valeur</Link>
-      </Button>
-    </ImageTextSplit>
-
-    <FAQSection title="Questions sur Buckingham / Masson-Angers" items={faq} />
-
-    <SectorLinks
-      overline="Autres secteurs"
-      title="Explorer d'autres quartiers"
-      sectors={relatedSectors}
-    />
-
-    <RelatedPages
-      title="À lire aussi"
-      pages={related}
-      background="alt"
-    />
-
-    <GuideInlineCTA
-      guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Buckingham"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
-      ctaLabel="Recevoir le guide acheteur"
-    />
-
-    <CTASection
-      dark
-      title="Acheteur ou vendeur à Buckingham / Masson-Angers?"
-      text="Je peux vous aider à trouver la bonne propriété ou à connaître la valeur de la vôtre."
-      buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
-      ]}
-      trustLine="Je vous donne les chiffres et les options, vous décidez."
-    />
-  
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
-  </>
+  <NeighborhoodTemplate
+    seoTitle="Buckingham — Guide de quartier Gatineau | YGS"
+    metaDesc="Vivre, acheter ou vendre à Buckingham, Gatineau. Nature, rivière, prix accessibles et communauté chaleureuse — guide complet par un courtier local."
+    jsonLd={{ name: "Buckingham", description: "Courtier immobilier à Buckingham, Gatineau. Nature, rivière du Lièvre, prix accessibles.", lat: 45.5860, lng: -75.4190, url: "/buckingham-masson-angers" }}
+    hero={{ overline: "Guide de quartier · Buckingham", title: "Vivre, acheter ou vendre à Buckingham", subtitle: "Rivière du Lièvre, nature, prix accessibles et communauté chaleureuse — Buckingham offre un excellent rapport qualité-prix.", image: heroImg }}
+    trustSpecialty="Spécialiste Buckingham et environs"
+    lifestyle={{ image: heroImg, imageAlt: "Buckingham, Gatineau", title: "Pourquoi Buckingham attire les acheteurs", subtitle: "Un secteur en plein renouveau avec des prix parmi les plus accessibles de Gatineau." }}
+    reasons={[
+      "Prix d'entrée les plus bas de Gatineau — excellent pour premiers acheteurs",
+      "Rivière du Lièvre et accès nature à proximité",
+      "Grands terrains résidentiels et semi-ruraux",
+      "Communauté francophone chaleureuse avec histoire et patrimoine",
+      "Accès à l'autoroute 50 — 25-30 minutes du centre de Gatineau",
+    ]}
+    profilesTitle="Buckingham est idéal pour…"
+    profiles={[
+      { icon: Users, title: "Familles à budget modeste", text: "Maisons abordables, grands terrains et communauté familiale." },
+      { icon: Home, title: "Premiers acheteurs", text: "Prix d'entrée accessibles et maisons avec potentiel." },
+      { icon: TrendingUp, title: "Investisseurs", text: "Prix bas et potentiel de plus-value à moyen terme." },
+      { icon: TreePine, title: "Amateurs de nature", text: "Rivière, forêt et grands espaces à proximité." },
+    ]}
+    inlineCta={{ text: "Propriétaire à Buckingham? Découvrez la valeur de votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
+    faq={{
+      title: "Questions sur Buckingham",
+      items: [
+        { q: "Buckingham est-il loin de Gatineau?", a: "Environ 25-30 minutes par l'autoroute 50. L'accès est direct et rapide." },
+        { q: "Les prix sont-ils vraiment plus bas?", a: "Oui — c'est l'un des secteurs les plus abordables de la grande région de Gatineau." },
+        { q: "Y a-t-il des services à Buckingham?", a: "Oui — écoles, épiceries, restaurants et services de santé. Le centre-ville a beaucoup de caractère." },
+      ],
+    }}
+    sectors={{ list: [
+      { name: "Masson-Angers", href: "/masson-angers", detail: "Neufs, familles, en croissance" },
+      { name: "Gatineau (centre)", href: "/gatineau", detail: "Services, résidentiel, central" },
+      { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, nature" },
+    ]}}
+    related={{ pages: [
+      { title: "Premier achat", text: "Conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
+      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+    ]}}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Buckingham", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
+    cta={{ title: "Acheteur ou vendeur à Buckingham?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+  />
 );
 
 export default BuckinghamPage;

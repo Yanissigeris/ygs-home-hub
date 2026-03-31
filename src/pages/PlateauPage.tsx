@@ -1,135 +1,52 @@
-import PageMeta from "@/components/PageMeta";
-import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
-import GuideInlineCTA from "@/components/GuideInlineCTA";
-import StickyGuideBanner from "@/components/StickyGuideBanner";
-import HeroSection from "@/components/HeroSection";
-import CTASection from "@/components/CTASection";
-import CardGrid from "@/components/CardGrid";
-import ImageTextSplit from "@/components/ImageTextSplit";
-import InlineCTA from "@/components/InlineCTA";
-import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
-import FAQSection from "@/components/FAQSection";
-import RelatedPages from "@/components/RelatedPages";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
+import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
+import { Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
-import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
-
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste Plateau et environs" },
-  { icon: Shield, label: "Accompagnement à votre rythme" },
-];
-
-const reasons = [
-  "Développements récents avec maisons modernes et écoénergétiques",
-  "Quartiers familiaux avec parcs, pistes cyclables et aires de jeux",
-  "Écoles, garderies et services de proximité — tout est accessible",
-  "Accès rapide à Ottawa via l'autoroute 50 et au centre-ville de Gatineau",
-  "Excellent rapport qualité-prix pour les jeunes familles par rapport à Ottawa",
-];
-
-const profiles = [
-  { icon: Users, title: "Jeunes familles", text: "Maisons récentes, quartiers sécuritaires et communauté familiale active." },
-  { icon: Home, title: "Premiers acheteurs", text: "Propriétés neuves ou récentes à des prix encore accessibles." },
-  { icon: MapPin, title: "Amateurs de plein air", text: "Proximité du parc de la Gatineau et nombreux sentiers." },
-  { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec forte demande et bons rendements potentiels." },
-];
-
-const faq = [
-  { q: "Le Plateau est-il un bon choix pour une famille?", a: "C'est l'un des secteurs les plus populaires pour les familles — maisons récentes, parcs, écoles et communauté jeune." },
-  { q: "Les prix augmentent-ils dans le Plateau?", a: "Le Plateau est en forte croissance. Contactez-moi pour les données les plus récentes dans votre sous-secteur." },
-  { q: "Y a-t-il beaucoup de constructions neuves?", a: "Oui — plusieurs développements récents offrent des maisons neuves et des jumelés avec garantie." },
-];
-
-const relatedSectors = [
-  { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis" },
-  { name: "Hull", href: "/hull", detail: "Urbain, culture, condos" },
-  { name: "Gatineau", href: "/gatineau", detail: "Résidentiel, services, accessible" },
-];
-
-const related = [
-  { title: "Vivre dans le Plateau — le guide", text: "Mode de vie, familles et développements récents.", href: "/vivre-dans-le-plateau" },
-  { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
-  { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété dans le Plateau?", href: "/evaluation-gratuite-gatineau" },
-];
 
 const PlateauPage = () => (
-   <>
-    <PageMeta title="Plateau — Guide de quartier Gatineau | YGS" description="Découvrez le Plateau à Gatineau. Familles, maisons récentes, parcs, écoles et accès rapide à Ottawa. Guide complet par un courtier local." />
-    <NeighborhoodJsonLd name="Plateau" description="Courtier immobilier spécialisé au Plateau, Gatineau. Développements récents, familles et excellent rapport qualité-prix." lat={45.4830} lng={-75.7350} url="/plateau" />
-    <HeroSection
-      overline="Guide de quartier · Plateau"
-      title="Vivre, acheter ou investir dans le Plateau"
-      subtitle="Développements récents, quartiers familiaux et excellent rapport qualité-prix — le Plateau est l'un des secteurs les plus dynamiques de Gatineau."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
-      heroBgImage={heroImg}
-    />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ImageTextSplit image={lifestyleImg} imageAlt="Vie dans le Plateau, Gatineau" imagePosition="right">
-      <div className="label-overline">Le secteur</div>
-      <h2 className="mt-3">Pourquoi le Plateau attire les familles</h2>
-      <div className="mt-7 space-y-3.5">
-        {reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
-
-    <CardGrid
-      overline="Pour qui"
-      title="Le Plateau est idéal pour…"
-      items={profiles}
-      background="alt"
-    />
-
-    <InlineCTA
-      text="Vous êtes propriétaire dans le Plateau? Découvrez combien vaut votre propriété."
-      buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
-    />
-
-    <FAQSection title="Questions sur le Plateau" items={faq} />
-
-    <SectorLinks
-      overline="Autres secteurs"
-      title="Explorer d'autres quartiers"
-      sectors={relatedSectors}
-    />
-
-    <RelatedPages
-      title="À lire aussi"
-      pages={related}
-      background="alt"
-    />
-
-    <GuideInlineCTA
-      guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter dans le Plateau"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
-      ctaLabel="Recevoir le guide acheteur"
-    />
-
-    <CTASection
-      dark
-      title="Acheteur ou vendeur dans le Plateau?"
-      text="Je connais le Plateau — parlons de votre projet."
-      buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" },
-      ]}
-      trustLine="Je vous donne les chiffres et les options, vous décidez."
-    />
-  
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
-  </>
+  <NeighborhoodTemplate
+    seoTitle="Plateau — Guide de quartier Gatineau | YGS"
+    metaDesc="Vivre, acheter ou vendre dans le Plateau à Gatineau. Maisons neuves, familles, parcs et accès rapide à Ottawa via le pont Champlain."
+    jsonLd={{ name: "Plateau", description: "Courtier immobilier dans le Plateau, Gatineau. Maisons neuves, quartier familial.", lat: 45.3850, lng: -75.8000, url: "/plateau" }}
+    hero={{ overline: "Guide de quartier · Plateau", title: "Vivre, acheter ou vendre dans le Plateau", subtitle: "Maisons neuves, quartier familial en plein essor et accès rapide à Ottawa — le Plateau a tout pour plaire.", image: heroImg }}
+    trustSpecialty="Spécialiste Plateau et environs"
+    lifestyle={{ image: heroImg, imageAlt: "Le Plateau, Gatineau", title: "Pourquoi le Plateau est si populaire", subtitle: "L'un des secteurs les plus dynamiques de Gatineau pour les jeunes familles." }}
+    reasons={[
+      "Constructions neuves et récentes — maisons modernes et écoénergétiques",
+      "Quartier familial avec parcs, sentiers et terrains de jeux",
+      "Écoles primaires et secondaires à proximité",
+      "Accès rapide à Ottawa via le pont Champlain — 15-20 minutes",
+      "Proximité du parc de la Gatineau pour le plein air",
+    ]}
+    profilesTitle="Le Plateau est idéal pour…"
+    profiles={[
+      { icon: Users, title: "Jeunes familles", text: "Maisons neuves avec garage, cour et proximité des écoles." },
+      { icon: Home, title: "Premiers acheteurs", text: "Constructions récentes à des prix compétitifs." },
+      { icon: TrendingUp, title: "Acheteurs en quête de neuf", text: "Développements récents avec garantie de maison neuve." },
+      { icon: MapPin, title: "Navetteurs Ottawa", text: "Trajet fluide vers Ottawa via le pont Champlain." },
+    ]}
+    inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
+    faq={{
+      title: "Questions sur le Plateau",
+      items: [
+        { q: "Le Plateau est-il bon pour les familles?", a: "Excellent. Maisons neuves, parcs, écoles et communauté jeune — c'est l'un des secteurs les plus prisés des familles." },
+        { q: "Le Plateau est-il proche d'Ottawa?", a: "Oui — 15-20 minutes via le pont Champlain. Accès direct par le boulevard des Allumettières." },
+        { q: "Les prix augmentent-ils dans le Plateau?", a: "Oui, le secteur est en demande. Les propriétés se vendent rapidement, surtout les maisons récentes." },
+      ],
+    }}
+    sectors={{ list: [
+      { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis" },
+      { name: "Chelsea", href: "/chelsea", detail: "Village, parc de la Gatineau" },
+      { name: "Hull", href: "/hull", detail: "Urbain, culture, condos" },
+    ]}}
+    related={{ pages: [
+      { title: "Vivre dans le Plateau", text: "Guide de vie dans le secteur.", href: "/vivre-dans-le-plateau" },
+      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
+      { title: "Premier achat", text: "Conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+    ]}}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter dans le Plateau", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
+    cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Je connais le Plateau par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+  />
 );
 
 export default PlateauPage;
