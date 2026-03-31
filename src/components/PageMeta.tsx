@@ -54,6 +54,7 @@ const frToEn: Record<string, string> = {
   "/contact-yanis": "/en/contact",
   "/merci": "/en/thank-you",
   "/merci-evaluation": "/en/thank-you-valuation",
+  "/blogue": "/en/blog",
 };
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 

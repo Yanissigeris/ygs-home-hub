@@ -533,6 +533,120 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/contact-yanis"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/contact"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/contact-yanis"/>
   </url>
+  <!-- Blog listing pages -->
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue"/>
+  </url>
+  <!-- Blog articles -->
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/marche-immobilier-gatineau-2025</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/marche-immobilier-gatineau-2025"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/gatineau-real-estate-market-2025"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/marche-immobilier-gatineau-2025"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/gatineau-real-estate-market-2025</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/marche-immobilier-gatineau-2025"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/gatineau-real-estate-market-2025"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/marche-immobilier-gatineau-2025"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/quand-vendre-sa-maison-gatineau</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/quand-vendre-sa-maison-gatineau"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/best-time-to-sell-gatineau"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/quand-vendre-sa-maison-gatineau"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/best-time-to-sell-gatineau</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/quand-vendre-sa-maison-gatineau"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/best-time-to-sell-gatineau"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/quand-vendre-sa-maison-gatineau"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/premier-achat-gatineau-guide</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/premier-achat-gatineau-guide"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/first-time-buyer-gatineau-guide"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/premier-achat-gatineau-guide"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/first-time-buyer-gatineau-guide</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/premier-achat-gatineau-guide"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/first-time-buyer-gatineau-guide"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/premier-achat-gatineau-guide"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/demenager-ottawa-gatineau-guide</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/demenager-ottawa-gatineau-guide"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/moving-ottawa-to-gatineau-guide"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/demenager-ottawa-gatineau-guide"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/moving-ottawa-to-gatineau-guide</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/demenager-ottawa-gatineau-guide"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/moving-ottawa-to-gatineau-guide"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/demenager-ottawa-gatineau-guide"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/investir-plex-gatineau-rentable</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/investir-plex-gatineau-rentable"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/investing-plex-gatineau-worth-it"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/investir-plex-gatineau-rentable"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/investing-plex-gatineau-worth-it</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/investir-plex-gatineau-rentable"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/investing-plex-gatineau-worth-it"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/investir-plex-gatineau-rentable"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/aylmer-hull-plateau-quel-quartier-choisir</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/aylmer-hull-plateau-quel-quartier-choisir"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/aylmer-hull-plateau-which-neighborhood"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/aylmer-hull-plateau-quel-quartier-choisir"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/aylmer-hull-plateau-which-neighborhood</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/aylmer-hull-plateau-quel-quartier-choisir"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/aylmer-hull-plateau-which-neighborhood"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/aylmer-hull-plateau-quel-quartier-choisir"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/blogue/mutation-militaire-gatineau</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/mutation-militaire-gatineau"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/military-posting-gatineau"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/mutation-militaire-gatineau"/>
+  </url>
+  <url>
+    <loc>https://ygs-home-hub.lovable.app/en/blog/military-posting-gatineau</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ygs-home-hub.lovable.app/blogue/mutation-militaire-gatineau"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://ygs-home-hub.lovable.app/en/blog/military-posting-gatineau"/><xhtml:link rel="alternate" hreflang="x-default" href="https://ygs-home-hub.lovable.app/blogue/mutation-militaire-gatineau"/>
+  </url>
   <url>
     <loc>https://ygs-home-hub.lovable.app/merci</loc>
     <lastmod>2026-03-21</lastmod>
