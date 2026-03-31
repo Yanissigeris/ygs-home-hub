@@ -186,8 +186,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             compact
               ? "py-14 sm:py-18 md:py-20"
               : agentImage
-              ? "pt-[4.5rem] pb-0 sm:pt-[5rem] md:pt-[5.5rem] lg:pt-[6rem]"
-              : "pt-[4.5rem] pb-[4.5rem] sm:pt-[5.5rem] sm:pb-[5rem] md:pt-[6rem] md:pb-[5.5rem]"
+              ? "pt-[5.5rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
+              : "pt-[5.5rem] pb-[5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
           }`}
         >
           <div
@@ -201,14 +201,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             {/* TEXT */}
             <div
-              className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[38rem]"} ${
-                agentImage ? "pb-[2.5rem] md:pb-[4rem] lg:pb-[4.5rem]" : ""
+              className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${
+                agentImage ? "pb-[3rem] md:pb-[4.5rem] lg:pb-[5.5rem]" : ""
               } relative min-w-0 animate-fade-in`}
             >
               {overline && (
                 <p
-                  className="mb-5 text-[0.625rem] font-medium uppercase tracking-[0.22em] sm:text-[0.6875rem]"
-                  style={{ color: "hsl(36 38% 56% / 0.7)" }}
+                  className="mb-6 text-[0.6rem] font-medium uppercase tracking-[0.28em] sm:text-[0.65rem]"
+                  style={{ color: "hsl(36 38% 56% / 0.5)" }}
                 >
                   {overline.replace(/[·•]/g, "  ·  ")}
                 </p>
@@ -216,58 +216,57 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               <h1
                 style={{ color: "#F5F1E8" }}
-                className="max-w-[14ch] leading-[1.05] tracking-[-0.025em] min-[391px]:max-w-[16ch]"
+                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] min-[391px]:max-w-[16ch]"
               >
                 {title}
               </h1>
 
               <p
-                className="mt-5 max-w-[30rem] text-[1.0625rem] leading-[1.7] font-light sm:text-[1.125rem] max-[390px]:max-w-[22rem]"
-                style={{ color: "hsl(200 15% 72%)" }}
+                className="mt-6 max-w-[28rem] text-[1rem] leading-[1.75] font-light sm:text-[1.0625rem] max-[390px]:max-w-[22rem]"
+                style={{ color: "hsl(200 15% 68%)" }}
               >
                 {subtitle}
               </p>
 
               {(primaryCta || secondaryCta) && (
-                <div className="mt-9 flex w-full flex-col items-stretch gap-3 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
+                <div className="mt-10 flex w-full flex-col items-stretch gap-4 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
                   {primaryCta && (
                     <Button
                       size="xl"
                       variant="accent"
-                      className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em]"
+                      className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em] text-[0.9375rem] h-[3.25rem] px-8"
                       asChild
                     >
                       <Link to={primaryCta.href}>{primaryCta.label}</Link>
                     </Button>
                   )}
                   {secondaryCta && (
-                    <Button
-                      size="xl"
-                      variant="hero-outline"
-                      className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em] whitespace-normal text-center leading-snug"
-                      asChild
+                    <Link
+                      to={secondaryCta.href}
+                      className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-[#F5F1E8]/80 whitespace-nowrap"
+                      style={{ color: "hsl(200 15% 60% / 0.6)" }}
                     >
-                      <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
-                    </Button>
+                      {secondaryCta.label}
+                    </Link>
                   )}
                 </div>
               )}
 
-              {/* Social proof — compact, premium */}
+              {/* Social proof — minimal, quiet */}
               {socialProof && (
-                <div className="mt-7 flex items-center gap-2.5">
+                <div className="mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        size={12}
-                        className="fill-[hsl(36_50%_52%)] text-[hsl(36_50%_52%)]"
+                        size={10}
+                        className="fill-[hsl(36_50%_52%/0.5)] text-[hsl(36_50%_52%/0.5)]"
                       />
                     ))}
                   </div>
                   <span
-                    className="text-[0.8125rem] font-medium tracking-[0.01em]"
-                    style={{ color: "hsl(200 15% 60% / 0.7)" }}
+                    className="text-[0.75rem] font-normal tracking-[0.02em]"
+                    style={{ color: "hsl(200 15% 55% / 0.45)" }}
                   >
                     {socialProof}
                   </span>
@@ -277,7 +276,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {trustLine && (
                 <p
                   className="mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
-                  style={{ color: "hsl(200 15% 55% / 0.45)" }}
+                  style={{ color: "hsl(200 15% 55% / 0.35)" }}
                 >
                   {trustLine}
                 </p>
