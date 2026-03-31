@@ -35,9 +35,9 @@ const trustItems = [
 ];
 
 const faq = [
-  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés. On analyse ensemble votre capacité réelle." },
-  { q: "Est-ce que je qualifie pour des programmes d'aide?", a: "Il existe des incitatifs fédéraux et provinciaux pour les premiers acheteurs. On regarde ça ensemble lors de la consultation." },
-  { q: "Qu'est-ce qui est différent au Québec?", a: "Le processus notarié, la promesse d'achat et certaines particularités fiscales. Rien de compliqué — il faut juste être bien guidé." },
+  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés en Outaouais — des condos à Hull aux maisons sur le Plateau. On analyse ensemble votre capacité réelle." },
+  { q: "Est-ce que je qualifie pour des programmes d'aide?", a: "Il existe des incitatifs fédéraux et provinciaux québécois pour les premiers acheteurs. On regarde ça ensemble lors de la consultation." },
+  { q: "Qu'est-ce qui est différent au Québec?", a: "Le processus notarié, la promesse d'achat et certaines particularités fiscales québécoises. Rien de compliqué — il faut juste être bien guidé par quelqu'un qui connaît le marché local." },
 ];
 
 const FirstTimeBuyerPage = () => (
