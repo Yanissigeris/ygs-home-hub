@@ -66,6 +66,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <SectorsSection />
 
+      <hr className="section-divider" />
+
       <GuideOffersSection background="alt" />
 
       <hr className="section-divider" />
