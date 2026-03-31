@@ -20,49 +20,33 @@ interface EmailRequest {
 }
 
 const NOTIFICATION_EMAIL = "yanis@martywaite.com";
-const FROM_EMAIL = Deno.env.get("RESEND_FROM_EMAIL") || "YGS <onboarding@resend.dev>";
+const DEFAULT_FROM_EMAIL = "YGS <onboarding@resend.dev>";
+
+function isValidFromEmail(value: string): boolean {
+  const plainEmailPattern = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
+  const namedEmailPattern = /^[^<>]+<\s*[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+\s*>$/;
+  return plainEmailPattern.test(value) || namedEmailPattern.test(value);
+}
+
+function getFromEmail(): string {
+  const configuredFromEmail = Deno.env.get("RESEND_FROM_EMAIL")?.trim();
+
+  if (!configuredFromEmail) {
+    return DEFAULT_FROM_EMAIL;
+  }
+
+  if (!isValidFromEmail(configuredFromEmail)) {
+    console.warn(
+      `Invalid RESEND_FROM_EMAIL format "${configuredFromEmail}", falling back to default sender.`,
+    );
+    return DEFAULT_FROM_EMAIL;
+  }
+
+  return configuredFromEmail;
+}
 
 function buildNotificationHtml(data: EmailRequest): string {
-  const fields = [
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type</td><td style="padding:8px 12px">${data.formType} (${data.lang})</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Nom</td><td style="padding:8px 12px">${data.name}${data.lastName ? ' ' + data.lastName : ''}</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Courriel</td><td style="padding:8px 12px"><a href="mailto:${data.email}">${data.email}</a></td></tr>`,
-    data.phone ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Téléphone</td><td style="padding:8px 12px">${data.phone}</td></tr>` : '',
-    data.objective ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Objectif</td><td style="padding:8px 12px">${data.objective}</td></tr>` : '',
-    data.address ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Adresse</td><td style="padding:8px 12px">${data.address}</td></tr>` : '',
-    data.projectType ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type de projet</td><td style="padding:8px 12px">${data.projectType}</td></tr>` : '',
-    data.guideTitle ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Guide</td><td style="padding:8px 12px">${data.guideTitle}</td></tr>` : '',
-    data.message ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Message</td><td style="padding:8px 12px">${data.message}</td></tr>` : '',
-  ].filter(Boolean).join('');
-
-  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande — ${data.formType === 'contact' ? 'Contact' : data.formType === 'valuation' ? 'Évaluation' : 'Guide'}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
-}
-
-function buildConfirmationHtml(data: EmailRequest): { subject: string; html: string } {
-  const isFr = data.lang === 'fr';
-  const firstName = data.name.split(' ')[0];
-
-  if (data.formType === 'contact') {
-    return {
-      subject: isFr ? 'Merci pour votre message — Yanis Gauthier-Sigeris' : 'Thank you for your message — Yanis Gauthier-Sigeris',
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? 'J\'ai bien reçu votre message et je vous reviens rapidement.' : 'I\'ve received your message and will get back to you shortly.'}</p><p style="color:#555;line-height:1.7">${isFr ? 'En attendant, n\'hésitez pas à explorer mon site pour en savoir plus sur mes services.' : 'In the meantime, feel free to explore my website to learn more about my services.'}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
-    };
-  }
-
-  if (data.formType === 'valuation') {
-    return {
-      subject: isFr ? 'Votre évaluation gratuite est en route — YGS' : 'Your free valuation is on its way — YGS',
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? 'J\'ai bien reçu votre demande d\'évaluation pour :' : 'I\'ve received your valuation request for:'}</p>${data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : ''}<p style="color:#555;line-height:1.7">${isFr ? 'Je vous reviens personnellement dans les 24 prochaines heures avec une analyse basée sur les ventes comparables récentes dans votre secteur.' : 'I\'ll get back to you personally within 24 hours with an analysis based on recent comparable sales in your area.'}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
-    };
-  }
-
-  // Guide
-  return {
-    subject: isFr ? `Votre guide est en route — YGS` : `Your guide is on its way — YGS`,
-    html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? `Votre guide « ${data.guideTitle || 'Guide'} » vous sera envoyé par courriel sous peu.` : `Your "${data.guideTitle || 'Guide'}" will be sent to your email shortly.`}</p><p style="color:#555;line-height:1.7">${isFr ? 'En attendant, n\'hésitez pas à me contacter si vous avez des questions.' : 'In the meantime, feel free to reach out if you have any questions.'}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
-  };
-}
-
+...
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -74,6 +58,7 @@ serve(async (req) => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
+    const fromEmail = getFromEmail();
     const data: EmailRequest = await req.json();
 
     // Validate required fields
@@ -85,17 +70,17 @@ serve(async (req) => {
     }
 
     // 1. Send notification email to Yanis
-    const notifSubject = data.formType === 'contact' 
-      ? `Nouveau contact — ${data.name}` 
-      : data.formType === 'valuation' 
-        ? `Nouvelle évaluation — ${data.name}` 
+    const notifSubject = data.formType === 'contact'
+      ? `Nouveau contact — ${data.name}`
+      : data.formType === 'valuation'
+        ? `Nouvelle évaluation — ${data.name}`
         : `Nouveau guide demandé — ${data.name}`;
 
     const notifRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: FROM_EMAIL,
+        from: fromEmail,
         to: [NOTIFICATION_EMAIL],
         subject: notifSubject,
         html: buildNotificationHtml(data),
@@ -114,7 +99,7 @@ serve(async (req) => {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: FROM_EMAIL,
+        from: fromEmail,
         to: [data.email],
         subject: confirmation.subject,
         html: confirmation.html,
