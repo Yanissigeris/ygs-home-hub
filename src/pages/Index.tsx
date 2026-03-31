@@ -38,22 +38,12 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip />
 
-    <ReviewStrip review={heroReview} />
-
     <React.Suspense fallback={null}>
       <PathwaySection />
 
       <AboutSection />
 
-      <CredibilitySection />
-
       <ConversionSection />
-
-      <InlineCTA
-        text="Vous pensez vendre? Commencez par connaître la valeur de votre propriété."
-        buttonLabel="Évaluation Gratuite →"
-        href="/evaluation-gratuite-gatineau"
-      />
 
       <SectorsSection />
 
