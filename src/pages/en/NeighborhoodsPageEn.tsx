@@ -18,9 +18,18 @@ const trustItems = [
   { icon: Shield, label: "Local, honest advice" },
 ];
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, nature and Ottawa access" },
+  { name: "Aylmer", href: "/en/aylmer", detail: "Lake Deschênes, established neighborhoods, quality of life" },
   { name: "Hull", href: "/en/hull", detail: "Urban, culture, close to downtown Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, countryside" },
+  { name: "Plateau", href: "/en/plateau", detail: "Family-friendly, newer homes, parks" },
+  { name: "Gatineau Centre", href: "/en/gatineau", detail: "Residential, services, accessible suburb" },
+  { name: "Chelsea", href: "/en/chelsea", detail: "Picturesque village, Gatineau Park, nature" },
+  { name: "Cantley", href: "/en/cantley", detail: "Hills, large lots, rural living" },
+  { name: "Val-des-Monts", href: "/en/val-des-monts", detail: "Lakes, cottages, wilderness" },
+  { name: "Buckingham", href: "/en/buckingham", detail: "River, affordable prices, nature" },
+  { name: "Masson-Angers", href: "/en/masson-angers", detail: "New construction, families, growing area" },
+  { name: "Pontiac", href: "/en/pontiac", detail: "Wide open spaces, river, rural living" },
+  { name: "Côte-d'Azur", href: "/en/cote-dazur", detail: "Established residential, bungalows, affordable" },
+  { name: "Limbour", href: "/en/limbour", detail: "Family-friendly, parks, modern suburb" },
 ];
 const lifestyleGuides = [
   { icon: MapPin, title: "Living in Aylmer", text: "Lake, nature, community and Ottawa access.", cta: "Read the guide", href: "/en/plateau-aylmer" },

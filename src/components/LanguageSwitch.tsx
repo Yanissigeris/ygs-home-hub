@@ -44,6 +44,13 @@ const frToEn: Record<string, string> = {
   "/aylmer": "/en/aylmer",
   "/plateau": "/en/plateau",
   "/relocalisation-militaire-gatineau": "/en/military-relocation",
+  "/chelsea": "/en/chelsea",
+  "/cantley": "/en/cantley",
+  "/val-des-monts": "/en/val-des-monts",
+  "/masson-angers": "/en/masson-angers",
+  "/pontiac": "/en/pontiac",
+  "/cote-dazur-gatineau": "/en/cote-dazur",
+  "/limbour": "/en/limbour",
 };
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
