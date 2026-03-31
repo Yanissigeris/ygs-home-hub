@@ -742,7 +742,9 @@ Each Gatineau neighborhood has its own realities:
 
 ### My Approach
 
-I do a free pre-listing visit with every seller. We identify together the interventions that offer the best return. Sometimes, $1,000 invested in staging brings $10,000 more on the sale price.`,
+I do a free pre-listing visit with every seller. We identify together the interventions that offer the best return. Sometimes, $1,000 invested in staging brings $10,000 more on the sale price.
+
+**Read also**: [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
   },
   {
     slug: "renovations-qui-augmentent-valeur-maison",
