@@ -112,6 +112,13 @@ const GatineauCentrePageEn = React.lazy(() => import("./pages/en/GatineauCentreP
 const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
 const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
 const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
+const ChelseaPageEn = React.lazy(() => import("./pages/en/ChelseaPageEn"));
+const CantleyPageEn = React.lazy(() => import("./pages/en/CantleyPageEn"));
+const ValDesMontsPageEn = React.lazy(() => import("./pages/en/ValDesMontsPageEn"));
+const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageEn"));
+const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
+const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
+const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 
 
 
