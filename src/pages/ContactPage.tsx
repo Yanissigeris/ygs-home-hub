@@ -143,7 +143,7 @@ const ContactPage = () => {
             </div>
             <div>
               <Label htmlFor="message">Message (optionnel)</Label>
-              <Textarea id="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
+              <Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
             </div>
             <Button type="submit" size="xl" className="w-full">Envoyer ma demande</Button>
             <p className="text-center text-[0.8125rem] text-muted-foreground/50">
