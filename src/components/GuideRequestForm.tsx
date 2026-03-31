@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { Send, Lock, Shield, Clock, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 
 interface GuideRequestFormProps {
   guideTitle: string;
