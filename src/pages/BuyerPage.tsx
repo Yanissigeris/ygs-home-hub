@@ -25,9 +25,18 @@ const buyerProfiles = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+  { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, familles, quartiers établis" },
+  { name: "Plateau", href: "/plateau", detail: "Maisons neuves, familial, accès Ottawa" },
+  { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
+  { name: "Chelsea", href: "/chelsea", detail: "Village, nature, parc de la Gatineau" },
+  { name: "Cantley", href: "/cantley", detail: "Rural, grands terrains, collines" },
+  { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
+  { name: "Masson-Angers", href: "/masson-angers", detail: "Neufs, familles, en croissance" },
+  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, villégiature" },
+  { name: "Pontiac", href: "/pontiac", detail: "Rural, grands espaces, rivière" },
+  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Bungalows, résidentiel établi" },
+  { name: "Limbour", href: "/limbour", detail: "Familial moderne, parcs" },
+  { name: "Gatineau-centre", href: "/gatineau", detail: "Services, central, plex" },
 ];
 
 const steps = [

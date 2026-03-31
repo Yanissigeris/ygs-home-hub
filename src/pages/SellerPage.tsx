@@ -1,5 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
+import SectorLinks from "@/components/SectorLinks";
+import RelatedPages from "@/components/RelatedPages";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -106,6 +108,32 @@ const SellerPage = () =>
     </ContentBlock>
 
     <ProcessSteps steps={steps} background="alt" />
+
+    <SectorLinks sectors={[
+      { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, familles, quartiers établis" },
+      { name: "Plateau", href: "/plateau", detail: "Maisons neuves, familial, accès Ottawa" },
+      { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
+      { name: "Chelsea", href: "/chelsea", detail: "Village, nature, parc de la Gatineau" },
+      { name: "Cantley", href: "/cantley", detail: "Rural, grands terrains, collines" },
+      { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
+      { name: "Masson-Angers", href: "/masson-angers", detail: "Neufs, familles, en croissance" },
+      { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, villégiature" },
+      { name: "Pontiac", href: "/pontiac", detail: "Rural, grands espaces, rivière" },
+      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Bungalows, résidentiel établi" },
+      { name: "Limbour", href: "/limbour", detail: "Familial moderne, parcs" },
+      { name: "Gatineau-centre", href: "/gatineau", detail: "Services, central, plex" },
+    ]} />
+
+    <RelatedPages
+      overline="À lire aussi"
+      title="Articles et ressources pour vendeurs"
+      pages={[
+        { title: "Quand vendre sa maison à Gatineau", text: "Meilleur moment pour vendre en Outaouais.", href: "/blogue/quand-vendre-maison-gatineau" },
+        { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-gatineau" },
+        { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue" },
+        { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+      ]}
+    />
 
     <FunnelNextStep
     overline="Prochaine étape"

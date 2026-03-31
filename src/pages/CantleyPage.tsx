@@ -39,10 +39,12 @@ const CantleyPage = () => (
       { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
     ]}}
     related={{ pages: [
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété à Cantley?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-      { title: "Premier achat", text: "Conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
+      { title: "Acheter un terrain à Cantley", text: "Ce qu'il faut savoir avant d'acheter.", href: "/blogue/acheter-terrain-cantley" },
+      { title: "Vivre à Cantley", text: "Campagne aux portes de Gatineau.", href: "/blogue/vivre-cantley-campagne-gatineau" },
+      { title: "Familles à Cantley", text: "Pourquoi les familles choisissent Cantley.", href: "/blogue/familles-cantley-pourquoi" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Cantley", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur à Cantley?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

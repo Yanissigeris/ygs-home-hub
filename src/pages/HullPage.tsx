@@ -41,8 +41,10 @@ const HullPage = () => (
     related={{ pages: [
       { title: "Vivre à Hull — le guide", text: "Culture, restaurants, proximité Ottawa.", href: "/vivre-a-hull" },
       { title: "Investir en plex", text: "Analyse et stratégie pour les plex.", href: "/investir-plex-gatineau" },
-      { title: "Analyse plex gratuite", text: "Revenus, dépenses et rendement.", href: "/analyse-plex-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "investor_guide", headline: "Guide investisseur gratuit — plex à Hull", text: "Rendement, fiscalité et stratégie d'investissement — dans un guide envoyé par courriel.", ctaLabel: "Recevoir le guide investisseur", stickyLabel: "Guide investisseur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur, vendeur ou investisseur à Hull?", text: "Je peux vous aider — que ce soit pour acheter, vendre ou analyser un plex.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

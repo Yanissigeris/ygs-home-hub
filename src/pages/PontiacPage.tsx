@@ -39,10 +39,12 @@ const PontiacPage = () => (
       { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, nature, abordable" },
     ]}}
     related={{ pages: [
-      { title: "Guide acheteur", text: "Le processus d'achat au Québec.", href: "/guide-acheteur-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Quartiers de Gatineau", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-      { title: "Relocalisation", text: "Guide pour s'installer en Outaouais.", href: "/relocalisation-ottawa-gatineau" },
+      { title: "Acheter dans le Pontiac", text: "Guide pour acheteurs en Outaouais.", href: "/blogue/acheter-pontiac-guide" },
+      { title: "Vie rurale dans le Pontiac", text: "À proximité d'Ottawa.", href: "/blogue/pontiac-vie-rurale-ottawa" },
+      { title: "Propriétés agricoles Pontiac", text: "Ce qu'il faut savoir.", href: "/blogue/proprietes-agricoles-pontiac" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter dans le Pontiac", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur dans le Pontiac?", text: "Je connais le territoire — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
