@@ -365,6 +365,7 @@ I help you analyze each opportunity rigorously — income, expenses, appreciatio
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
+    featuredImage: blogNeighborhoods,
     slugEn: "aylmer-hull-plateau-which-neighborhood",
     title: "Aylmer, Hull ou Plateau : quel quartier choisir?",
     titleEn: "Aylmer, Hull, or Plateau: Which Neighborhood Is Right for You?",
