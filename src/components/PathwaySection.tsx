@@ -69,7 +69,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="group"
           >
-            <Link to={pathway.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
+            <Link to={pathway.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={pathway.imageSm}

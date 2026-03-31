@@ -48,7 +48,7 @@ const ConversionSection = React.forwardRef<HTMLElement>((_, ref) =>
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}>
         
-            <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8">
+            <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
               <span className="mb-4 font-heading text-[2rem] leading-none text-accent/20">{step.number}</span>
               <h3 className="text-[1.125rem] font-semibold">{step.title}</h3>
               <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{step.text}</p>

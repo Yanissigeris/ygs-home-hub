@@ -105,7 +105,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
           {pathways.map((p, i) => (
             <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
-              <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-220 hover:border-accent/20">
+              <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                 <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
                 <div className="flex flex-1 flex-col p-7 sm:p-8">
                   <h3 className="mb-3 transition-colors group-hover:text-primary">{p.title}</h3>
@@ -158,7 +158,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         <div className="grid gap-6 sm:grid-cols-3 sm:gap-7">
           {steps.map((step, i) => (
             <motion.div key={step.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}>
-              <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8">
+              <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                 <span className="mb-4 font-heading text-[2rem] leading-none text-accent/20">{step.number}</span>
                 <h3 className="text-[1.125rem] font-semibold">{step.title}</h3>
                 <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{step.text}</p>
