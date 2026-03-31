@@ -219,6 +219,7 @@ A real estate broker who knows the local market can save you time and money. The
   },
   {
     slug: "demenager-ottawa-gatineau-guide",
+    featuredImage: blogOttawaGatineau,
     slugEn: "moving-ottawa-to-gatineau-guide",
     title: "Déménager d'Ottawa à Gatineau : guide complet",
     titleEn: "Moving from Ottawa to Gatineau: Complete Guide",
