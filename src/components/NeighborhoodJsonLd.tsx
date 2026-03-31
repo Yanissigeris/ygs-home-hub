@@ -13,7 +13,7 @@ interface NeighborhoodJsonLdProps {
   url: string;
 }
 
-const BASE_URL = "https://yanisgauthier.ca";
+const BASE_URL = "https://yanisgauthier.com";
 
 /**
  * Injects a LocalBusiness + RealEstateAgent JSON-LD scoped to a specific

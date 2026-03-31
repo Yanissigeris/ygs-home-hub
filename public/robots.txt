@@ -17,4 +17,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://yanisgauthier.ca/sitemap.xml
+Sitemap: https://yanisgauthier.com/sitemap.xml
