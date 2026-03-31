@@ -20,10 +20,10 @@ import heroImg from "@/assets/hero-military.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement ou vendre rapidement, sans compromettre le prix." },
-  { icon: Shield, title: "Comprendre le marché québécois", text: "Taxes, processus notarié, zonage — le Québec fonctionne différemment de l'Ontario ou du reste du Canada." },
-  { icon: Home, title: "Trouver le bon secteur", text: "Proximité de la base, écoles, services bilingues — chaque famille a ses priorités." },
-  { icon: Heart, title: "S'installer en famille", text: "Coordonner vente et achat, trouver un quartier familial, inscrire les enfants — tout en gérant le stress de la mutation." },
+  { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement à Gatineau ou vendre rapidement, sans compromettre le prix." },
+  { icon: Shield, title: "Comprendre le marché québécois", text: "Taxes municipales et scolaires, processus notarié, zonage — le Québec fonctionne différemment de l'Ontario ou du reste du Canada." },
+  { icon: Home, title: "Trouver le bon secteur", text: "Proximité de la BFC Uplands ou du centre d'Ottawa, écoles françaises et anglaises, services bilingues — chaque famille a ses priorités." },
+  { icon: Heart, title: "S'installer en famille à Gatineau", text: "Coordonner vente et achat, trouver un quartier familial à Aylmer, au Plateau ou à Hull, inscrire les enfants — tout en gérant le stress de la mutation." },
 ];
 
 const steps = [
