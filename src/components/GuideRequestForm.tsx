@@ -147,7 +147,7 @@ const GuideRequestForm = ({
 
                 <div>
                   <Label htmlFor="guide-courriel" className="text-muted-foreground text-[0.8125rem]">{t.email}</Label>
-                  <Input id="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
+                  <Input id="guide-courriel" name="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
                 </div>
 
                 <div>
