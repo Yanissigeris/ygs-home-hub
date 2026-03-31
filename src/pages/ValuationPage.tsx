@@ -180,9 +180,9 @@ const ValuationPage = () => {
                       <Textarea id="message" name="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold">
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold" disabled={submitting}>
                       <Send size={16} className="mr-1.5" />
-                      Recevoir mon évaluation gratuite
+                      {submitting ? "Envoi en cours…" : "Recevoir mon évaluation gratuite"}
                     </Button>
 
                     <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-primary-foreground/30">
