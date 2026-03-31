@@ -42,10 +42,10 @@ const nextSteps = [
   { title: "Talk to Yanis", text: "A call to discuss your investor situation — no commitment.", href: "/en/contact", cta: "Book a call" },
 ];
 const faq = [
-  { q: "How do you evaluate a plex's value?", a: "Revenues, building condition, rental potential and neighborhood. After nearly 9 years in Outaouais, I know the specifics of local plexes well." },
-  { q: "Is it still profitable to buy a plex?", a: "It depends on the price, revenues and your strategy. We can analyze it together." },
-  { q: "How do you sell an occupied plex?", a: "It's feasible — tenant coordination, visits, documentation. I support you at every step." },
-  { q: "Refinance or sell?", a: "We compare both scenarios together to see what makes more sense in your situation." },
+  { q: "How do you evaluate a plex's value?", a: "Revenues, building condition, rental potential and neighborhood. After nearly 9 years in Outaouais, I know the specifics of plexes in Hull, Gatineau-centre and other areas well." },
+  { q: "Is it still profitable to buy a plex in Gatineau?", a: "It depends on the area, price, revenues and your strategy. Hull, Gatineau-centre and parts of Aylmer still offer good opportunities. We can analyze it together." },
+  { q: "How do you sell an occupied plex?", a: "It's feasible — tenant coordination, visits, documentation. The Québec process has specific rules. I support you at every step." },
+  { q: "Refinance or sell?", a: "We compare both scenarios with current rates and your area's market value to see what makes more sense." },
 ];
 
 const PlexPageEn = () => (

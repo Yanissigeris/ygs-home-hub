@@ -59,10 +59,10 @@ const nextSteps = [
 ];
 
 const faq = [
-  { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex locaux." },
-  { q: "Est-ce encore rentable d'acheter un plex?", a: "Ça dépend du prix, des revenus et de votre stratégie. On peut analyser ça ensemble." },
-  { q: "Comment vendre un plex occupé?", a: "C'est faisable — coordination locataires, visites, documentation. Je vous accompagne à chaque étape." },
-  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios ensemble pour voir ce qui fait plus de sens dans votre situation." },
+  { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Après près de 9 ans en Outaouais, je connais bien les particularités des plex à Hull, Gatineau-centre et dans les autres secteurs." },
+  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus et de votre stratégie. Hull, Gatineau-centre et certains coins d'Aylmer offrent encore de bonnes opportunités. On peut analyser ça ensemble." },
+  { q: "Comment vendre un plex occupé?", a: "C'est faisable — coordination locataires, visites, documentation. Le processus québécois a ses règles spécifiques. Je vous accompagne à chaque étape." },
+  { q: "Refinancer ou vendre?", a: "On compare les deux scénarios avec les taux actuels et la valeur marchande de votre secteur pour voir ce qui fait plus de sens." },
 ];
 
 const PlexPage = () => (
