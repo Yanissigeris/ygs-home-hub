@@ -1765,7 +1765,7 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 
 Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.
 
-**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
+**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Gatineau's Rental Market: A Golden Opportunity
 
 With one of the lowest vacancy rates in Quebec and demand fueled by federal employees, Gatineau has become one of the most attractive cities for rental investment.
