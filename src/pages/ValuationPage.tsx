@@ -39,10 +39,21 @@ const anim = {
 
 const ValuationPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "valuation", lang: "fr",
+      name: fd.get("nom") as string || "",
+      email: fd.get("courriel") as string || "",
+      phone: fd.get("tel") as string || undefined,
+      address: fd.get("adresse") as string || undefined,
+      message: fd.get("message") as string || undefined,
+    });
+    if (success) setSubmitted(true);
   };
 
   return (
