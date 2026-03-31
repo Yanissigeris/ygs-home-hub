@@ -20,7 +20,7 @@ const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
 
 const socialStatsFr = [
   { value: "~9 ans", label: "d'expérience" },
-  { value: "5 ★", label: "avis Google" },
+  { value: "5 ★", label: "avis Google + Facebook" },
   { value: "Hall of Fame", label: "RE/MAX" },
 ];
 
