@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import PageMeta from "@/components/PageMeta";
 import CTASection from "@/components/CTASection";
