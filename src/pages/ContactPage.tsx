@@ -139,7 +139,7 @@ const ContactPage = () => {
             </div>
             <div>
               <Label htmlFor="tel">Téléphone</Label>
-              <Input id="tel" type="tel" className="mt-1.5" />
+              <Input id="tel" name="tel" type="tel" className="mt-1.5" />
             </div>
             <div>
               <Label htmlFor="message">Message (optionnel)</Label>
