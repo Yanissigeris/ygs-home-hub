@@ -25,7 +25,7 @@ const related = [
 
 const MarketReportPage = () => (
    <>
-    <PageMeta title="Rapport du marché immobilier Gatineau" description="Prix, tendances et volumes de ventes à Gatineau et en Outaouais. Rapport du marché immobilier par Yanis Gauthier-Sigeris." />
+    <PageMeta title="Rapport du marché immobilier · Gatineau et Outaouais | YGS" description="Prix, tendances et volumes de ventes à Gatineau, Aylmer, Hull et en Outaouais. Rapport du marché immobilier par Yanis Gauthier-Sigeris." />
     <HeroSection
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"

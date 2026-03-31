@@ -53,7 +53,7 @@ const faq = [
 
 const MilitaryPage = () => (
    <>
-    <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation sans stress." />
+    <PageMeta title="Militaire à Gatineau — Mutation FAC | YGS" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation à Aylmer, Hull ou au Plateau." />
     <HeroSection
       overline="Militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau"

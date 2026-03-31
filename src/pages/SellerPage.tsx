@@ -58,7 +58,7 @@ const faq = [
 
 const SellerPage = () =>
 <>
-    <PageMeta title="Vendre sa maison à Gatineau" description="Vendez votre propriété à Gatineau au meilleur prix. Stratégie de mise en marché, accompagnement personnalisé et résultats prouvés par Yanis Gauthier-Sigeris." />
+    <PageMeta title="Vendre sa maison à Gatineau · Outaouais | YGS" description="Vendez votre propriété à Gatineau au meilleur prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet en Outaouais par Yanis Gauthier-Sigeris." />
     <HeroSection
     overline="Pour vendeurs · Gatineau et environs"
     title="Vendre votre propriété à Gatineau avec une vraie stratégie"
