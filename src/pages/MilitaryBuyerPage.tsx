@@ -36,7 +36,7 @@ const faq = [
 
 const MilitaryBuyerPage = () => (
    <>
-    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire. Processus BGRS, quartiers stratégiques et accompagnement adapté aux FAC." />
+    <PageMeta title="Acheter comme militaire à Gatineau | YGS" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers près de la BFC Uplands et accompagnement adapté à votre mutation." />
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"

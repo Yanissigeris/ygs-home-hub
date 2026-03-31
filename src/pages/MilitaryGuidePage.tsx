@@ -37,7 +37,7 @@ const related = [
 
 const MilitaryGuidePage = () => (
    <>
-    <PageMeta title="Guide militaire — Immobilier à Gatineau" description="Guide immobilier pour militaires à Gatineau. BGRS, SIRVA, base Uplands, quartiers recommandés et conseils pratiques." />
+    <PageMeta title="Guide militaire — Immobilier à Gatineau | YGS" description="Guide immobilier pour militaires FAC à Gatineau. BGRS, SIRVA, BFC Uplands, quartiers recommandés (Aylmer, Plateau, Hull) et conseils pratiques." />
     <HeroSection
       overline="Guide militaire · Gatineau"
       title="Guide immobilier pour militaires à Gatineau"

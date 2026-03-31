@@ -66,7 +66,7 @@ const related = [
 
 const HullPage = () => (
    <>
-    <PageMeta title="Hull — Guide de quartier Gatineau" description="Vivre, acheter ou investir à Hull. Quartier urbain, condos, plex, culture et proximité Ottawa. Guide complet." />
+    <PageMeta title="Hull — Guide de quartier Gatineau | YGS" description="Vivre, acheter ou investir à Hull, Gatineau. Quartier urbain en pleine revitalisation, condos, plex, culture et proximité Ottawa." />
     <NeighborhoodJsonLd name="Hull" description="Courtier immobilier spécialisé à Hull, Gatineau. Quartier urbain, condos, plex, culture et proximité Ottawa." lat={45.4283} lng={-75.7140} url="/hull" />
     <HeroSection
       overline="Guide de quartier · Hull"

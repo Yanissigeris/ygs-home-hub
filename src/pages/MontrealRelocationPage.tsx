@@ -33,7 +33,7 @@ const trustItems = [
 
 const MontrealRelocationPage = () =>
 <>
-    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers, qualité de vie et accompagnement immobilier pour votre transition." />
+    <PageMeta title="Relocalisation Montréal vers Gatineau | YGS" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." />
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"

@@ -43,7 +43,7 @@ const related = [
 
 const RelocationGuidePage = () => (
    <>
-    <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau. Quartiers, services, écoles et tout ce qu'il faut savoir avant de déménager." />
+    <PageMeta title="Guide de relocalisation à Gatineau | YGS" description="Guide complet pour vous installer à Gatineau depuis Ottawa ou ailleurs. Aylmer, Hull, Plateau, Buckingham — quartiers, écoles, services et processus québécois." />
     <HeroSection
       overline="Guide relocalisation · Gatineau"
       title="Guide complet pour s'installer à Gatineau"

@@ -57,7 +57,7 @@ const related = [
 
 const PlateauPage = () => (
    <>
-    <PageMeta title="Plateau — Guide de quartier Gatineau" description="Découvrez le Plateau à Gatineau. Familles, développements récents, parcs et accès rapide à Ottawa. Guide complet." />
+    <PageMeta title="Plateau — Guide de quartier Gatineau | YGS" description="Découvrez le Plateau à Gatineau. Familles, maisons récentes, parcs, écoles et accès rapide à Ottawa. Guide complet par un courtier local." />
     <NeighborhoodJsonLd name="Plateau" description="Courtier immobilier spécialisé au Plateau, Gatineau. Développements récents, familles et excellent rapport qualité-prix." lat={45.4830} lng={-75.7350} url="/plateau" />
     <HeroSection
       overline="Guide de quartier · Plateau"
