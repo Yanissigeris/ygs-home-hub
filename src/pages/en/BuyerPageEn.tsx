@@ -29,9 +29,9 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
 ];
 const steps = [
-  { num: "01", title: "Clarify your project", desc: "Budget, target neighborhoods, property type, family needs — we lay the groundwork together." },
-  { num: "02", title: "Targeted search", desc: "I send you properties that truly match. No noise, no wasted time." },
-  { num: "03", title: "Offer & negotiation", desc: "Offer strategy, inspection, conditions — through to signing at the notary." },
+  { num: "01", title: "Clarify your project", desc: "Budget, target Gatineau neighborhoods, property type, family needs and Ottawa commute — we lay the groundwork together." },
+  { num: "02", title: "Targeted search", desc: "I send you properties that truly match in the neighborhoods that suit you. No noise, no wasted time." },
+  { num: "03", title: "Offer & negotiation", desc: "Offer strategy adapted to the local market, inspection, conditions — through to signing at the notary." },
 ];
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
