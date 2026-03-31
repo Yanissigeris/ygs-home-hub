@@ -3,6 +3,7 @@ import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
+import SocialProofStrip from "@/components/SocialProofStrip";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
@@ -29,6 +30,18 @@ const trustItems = [
   { icon: MapPin, text: "Gatineau · Aylmer · Hull · Outaouais specialist" },
   { icon: Shield, text: "Nearly 9 years of experience" },
   { icon: Award, text: "Bilingual service · Transparent approach" },
+];
+
+const socialStatsEn = [
+  { value: "~9 yrs", label: "of experience in Outaouais" },
+  { value: "Platinum", label: "RE/MAX Club · Hall of Fame" },
+  { value: "5 ★", label: "Google client reviews" },
+];
+
+const socialTestimonialsEn = [
+  { quote: "Yanis is very professional, respectful, honest and trustworthy.", name: "Sylvie", location: "Gatineau" },
+  { quote: "He made our first home purchase as smooth as possible despite the stress.", name: "Geneviève and Salah", location: "Aylmer" },
+  { quote: "Excellent availability, patient and honest. I highly recommend him.", name: "Alexandre", location: "Aylmer" },
 ];
 
 const pathways = [
@@ -78,6 +91,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         </motion.div>
       </div>
     </section>
+
+    <SocialProofStrip stats={socialStatsEn} testimonials={socialTestimonialsEn} />
 
     {/* Pathway Section */}
     <section className="section-padding bg-background">

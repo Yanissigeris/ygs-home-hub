@@ -4,9 +4,9 @@ import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
-import ReviewStrip from "@/components/ReviewStrip";
 
 /* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
+const SocialProofStrip = React.lazy(() => import("@/components/SocialProofStrip"));
 const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
 const AboutSection = React.lazy(() => import("@/components/AboutSection"));
 const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
@@ -16,8 +16,19 @@ const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
 
 import { getReviewsById } from "@/data/reviews";
-const heroReview = getReviewsById(["s1"])[0];
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
+
+const socialStatsFr = [
+  { value: "~9 ans", label: "d'expérience en Outaouais" },
+  { value: "Platinum", label: "Club RE/MAX · Hall of Fame" },
+  { value: "5 ★", label: "avis clients Google" },
+];
+
+const socialTestimonialsFr = [
+  { quote: "Yanis est très professionnel, respectueux, honnête, un être de confiance.", name: "Sylvie", location: "Gatineau" },
+  { quote: "Il a fait en sorte que notre premier achat se fasse le plus smooth possible.", name: "Geneviève et Salah", location: "Aylmer" },
+  { quote: "Excellente disponibilité, patient et honnête. Je le recommande fortement.", name: "Alexandre", location: "Aylmer" },
+];
 
 const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
@@ -39,6 +50,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <TrustStrip />
 
     <React.Suspense fallback={null}>
+      <SocialProofStrip stats={socialStatsFr} testimonials={socialTestimonialsFr} />
+
       <PathwaySection />
 
       <hr className="section-divider" />
