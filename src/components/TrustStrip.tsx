@@ -12,9 +12,9 @@ const ShieldIcon = () => (
 );
 
 const items = [
-  { Icon: AwardIcon, text: "Club Platine RE/MAX · Temple de la renommée" },
   { Icon: MapPinIcon, text: "Spécialiste Gatineau · Aylmer · Hull · Outaouais" },
-  { Icon: ShieldIcon, text: "Près de 9 ans d'expérience en Outaouais" },
+  { Icon: ShieldIcon, text: "Près de 9 ans d'expérience" },
+  { Icon: AwardIcon, text: "Service bilingue · Approche transparente" },
 ];
 
 const TrustStrip = React.forwardRef<HTMLElement>((_, ref) => (
