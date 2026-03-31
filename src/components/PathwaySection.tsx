@@ -82,7 +82,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
                   height={441}
                 />
               </div>
-              <div className="flex flex-1 flex-col p-7 sm:p-8">
+              <div className="flex flex-1 flex-col p-5 sm:p-8">
                 <h3 className="mb-3 transition-colors group-hover:text-primary">{pathway.title}</h3>
                 <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{pathway.text}</p>
                 <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">

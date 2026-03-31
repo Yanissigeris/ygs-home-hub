@@ -275,7 +275,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {trustLine && (
                 <p
-                  className="mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
+                  className="mt-4 sm:mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
                   style={{ color: "hsl(200 15% 55% / 0.35)" }}
                 >
                   {trustLine}

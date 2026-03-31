@@ -80,7 +80,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
               <p className="text-[0.9375rem] leading-[1.65] text-foreground/80 italic">
                 {t.quote}
               </p>
-              <footer className="mt-5 flex items-center gap-3">
+              <footer className="mt-4 sm:mt-5 flex items-center gap-3">
                 <div
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.75rem] font-semibold tracking-wide text-primary-foreground"
                   style={{ backgroundColor: avatarColor(t.name) }}

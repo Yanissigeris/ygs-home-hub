@@ -29,7 +29,7 @@ const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps)
           centered
         />
       </motion.div>
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-7 sm:mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {guides.map((guide, i) => (
           <motion.div
             key={guide.guideType}

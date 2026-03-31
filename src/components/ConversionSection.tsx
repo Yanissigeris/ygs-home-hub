@@ -61,7 +61,7 @@ const ConversionSection = React.forwardRef<HTMLElement>((_, ref) =>
       </div>
 
       <motion.div
-      className="mt-12 text-center"
+      className="mt-8 sm:mt-12 text-center"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}

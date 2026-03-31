@@ -53,6 +53,15 @@
     --section-padding-md: clamp(4rem, 7vw, 6rem);
     --section-padding-sm: clamp(3rem, 5.5vw, 4.5rem);
   }
+
+  /* ── Mobile: tighter section padding ── */
+  @media (max-width: 639px) {
+    :root {
+      --section-padding-lg: 3.25rem;
+      --section-padding-md: 2.5rem;
+      --section-padding-sm: 2rem;
+    }
+  }
 }
 
 @layer base {
