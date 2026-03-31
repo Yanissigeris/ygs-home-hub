@@ -15,6 +15,11 @@ import blogInspection from "@/assets/blog/blog-inspection.jpg";
 import blogFirstHomeTips from "@/assets/blog/blog-first-home-tips.jpg";
 import blogGatineauPark from "@/assets/blog/blog-gatineau-park.jpg";
 import blogCondoHull from "@/assets/blog/blog-condo-hull.jpg";
+import blogRefinancing from "@/assets/blog/blog-refinancing.jpg";
+import blogRentalMarket from "@/assets/blog/blog-rental-market.jpg";
+import blogCopropriete from "@/assets/blog/blog-copropriete.jpg";
+import blogWinterSelling from "@/assets/blog/blog-winter-selling.jpg";
+import blogCourtierAvantages from "@/assets/blog/blog-courtier-avantages.jpg";
 
 export interface BlogPost {
   slug: string;
