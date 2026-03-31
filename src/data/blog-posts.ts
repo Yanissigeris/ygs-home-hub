@@ -10,6 +10,11 @@ import blogHomeStaging from "@/assets/blog/blog-home-staging.jpg";
 import blogRenovationValue from "@/assets/blog/blog-renovation-value.jpg";
 import blogTaxesGatineau from "@/assets/blog/blog-taxes-gatineau.jpg";
 import blogFamilyNeighborhood from "@/assets/blog/blog-family-neighborhood.jpg";
+import blogAylmerMarina from "@/assets/blog/blog-aylmer-marina.jpg";
+import blogInspection from "@/assets/blog/blog-inspection.jpg";
+import blogFirstHomeTips from "@/assets/blog/blog-first-home-tips.jpg";
+import blogGatineauPark from "@/assets/blog/blog-gatineau-park.jpg";
+import blogCondoHull from "@/assets/blog/blog-condo-hull.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -1071,6 +1076,501 @@ Ask yourself these questions:
 ### My Support
 
 I live in Gatineau and know each neighborhood personally. We do a tour together so you can feel the vibe of each area before deciding.`,
+  },
+
+  // ── Article 13 – Vivre à Aylmer ──
+  {
+    slug: "vivre-aylmer-gatineau-guide-quartier",
+    slugEn: "living-in-aylmer-gatineau-neighborhood-guide",
+    title: "Vivre à Aylmer : le guide complet du quartier",
+    titleEn: "Living in Aylmer: The Complete Neighborhood Guide",
+    seoTitle: "Vivre à Aylmer Gatineau · Guide quartier 2025 | YGS",
+    seoTitleEn: "Living in Aylmer Gatineau · Neighborhood Guide 2025 | YGS",
+    metaDescription: "Tout savoir sur Aylmer : prix des maisons, écoles, parcs, vie de quartier et pourquoi c'est l'un des secteurs les plus prisés de Gatineau.",
+    metaDescriptionEn: "Everything about Aylmer: home prices, schools, parks, lifestyle, and why it's one of Gatineau's most sought-after neighborhoods.",
+    excerpt: "Lac Deschênes, marina, parcs et vie familiale — découvrez pourquoi Aylmer attire autant d'acheteurs.",
+    excerptEn: "Lac Deschênes, marina, parks and family life — discover why Aylmer attracts so many buyers.",
+    category: "Quartiers",
+    categoryEn: "Neighborhoods",
+    featuredImage: blogAylmerMarina,
+    publishDate: "2025-11-20",
+    published: true,
+    body: `## Aylmer : le joyau résidentiel de Gatineau
+
+Aylmer est souvent considéré comme le quartier le plus prisé de Gatineau. Situé à l'extrémité ouest, il offre un cadre de vie exceptionnel entre le Lac Deschênes et le Parc de la Gatineau.
+
+## Pourquoi choisir Aylmer?
+
+### Le Lac Deschênes et la marina
+- **Plage et baignade** — La plage d'Aylmer est un incontournable estival
+- **Marina** — Accès nautique direct, voile, kayak, paddleboard
+- **Piste cyclable** — Le sentier longe le lac sur des kilomètres
+- **Couchers de soleil** — Vue spectaculaire depuis le parc des Cèdres
+
+### Vie familiale et écoles
+- **Écoles francophones et anglophones** — Grande variété de choix
+- **Parc des Cèdres** — Jeux, piscine publique, terrains de sport
+- **Communauté active** — Marchés fermiers, festivals locaux
+- **Sécurité** — Quartier résidentiel calme et bien entretenu
+
+### Prix immobiliers à Aylmer en 2025
+- **Maison unifamiliale** — Prix médian autour de 525 000 $
+- **Jumelé** — Entre 380 000 $ et 450 000 $
+- **Condo** — À partir de 280 000 $
+- **Terrain** — Rares mais très recherchés
+
+## Les sous-secteurs d'Aylmer
+
+### Plateau d'Aylmer
+Le secteur le plus récent avec des constructions neuves, près du Parc de la Gatineau. Parfait pour les familles.
+
+### Vieux-Aylmer
+Le cœur historique avec ses commerces de proximité, cafés et restaurants. Charme villageois.
+
+### Deschênes
+Secteur tranquille près du lac, idéal pour les amoureux de la nature et de la tranquillité.
+
+## Mon conseil
+
+Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui protège votre investissement à long terme. Contactez-moi pour une visite personnalisée du secteur.`,
+    bodyEn: `## Aylmer: Gatineau's Residential Gem
+
+Aylmer is often considered Gatineau's most desirable neighborhood. Located at the western end, it offers an exceptional lifestyle between Lac Deschênes and Gatineau Park.
+
+## Why Choose Aylmer?
+
+### Lac Deschênes and the Marina
+- **Beach and swimming** — Aylmer Beach is a summer must
+- **Marina** — Direct waterfront access, sailing, kayaking, paddleboarding
+- **Bike path** — The trail runs along the lake for kilometers
+- **Sunsets** — Spectacular views from Parc des Cèdres
+
+### Family Life and Schools
+- **French and English schools** — Wide variety of choices
+- **Parc des Cèdres** — Playgrounds, public pool, sports fields
+- **Active community** — Farmers' markets, local festivals
+- **Safety** — Quiet, well-maintained residential area
+
+### Aylmer Real Estate Prices in 2025
+- **Single-family home** — Median price around $525,000
+- **Semi-detached** — Between $380,000 and $450,000
+- **Condo** — Starting at $280,000
+- **Land** — Rare but highly sought after
+
+## Aylmer Sub-Areas
+
+### Plateau d'Aylmer
+The newest area with new construction, near Gatineau Park. Perfect for families.
+
+### Old Aylmer
+The historic heart with local shops, cafés, and restaurants. Village charm.
+
+### Deschênes
+Quiet area near the lake, ideal for nature and tranquility lovers.
+
+## My Advice
+
+Aylmer is a safe bet for quality of life. Demand remains strong, protecting your long-term investment. Contact me for a personalized tour of the area.`,
+  },
+
+  // ── Article 14 – Inspection préachat ──
+  {
+    slug: "inspection-preachat-gatineau-guide",
+    slugEn: "pre-purchase-inspection-gatineau-guide",
+    title: "Inspection préachat à Gatineau : ce qu'il faut vérifier",
+    titleEn: "Pre-Purchase Home Inspection in Gatineau: What to Check",
+    seoTitle: "Inspection préachat Gatineau · Guide complet | YGS",
+    seoTitleEn: "Pre-Purchase Inspection Gatineau · Complete Guide | YGS",
+    metaDescription: "Guide complet sur l'inspection préachat à Gatineau : quoi vérifier, combien ça coûte, et comment éviter les mauvaises surprises.",
+    metaDescriptionEn: "Complete guide to pre-purchase inspections in Gatineau: what to check, costs, and how to avoid costly surprises.",
+    excerpt: "Fondation, toiture, plomberie — voici tout ce que votre inspecteur devrait vérifier avant l'achat.",
+    excerptEn: "Foundation, roof, plumbing — here's everything your inspector should check before buying.",
+    category: "Acheteurs",
+    categoryEn: "Buyers",
+    featuredImage: blogInspection,
+    publishDate: "2025-11-05",
+    published: true,
+    body: `## Pourquoi l'inspection préachat est essentielle à Gatineau
+
+L'inspection préachat est votre meilleure protection contre les mauvaises surprises. À Gatineau, certains enjeux sont plus fréquents qu'ailleurs en raison du climat et de l'âge du parc immobilier.
+
+## Les éléments clés à vérifier
+
+### La fondation
+- **Fissures** — Distinguer les fissures normales des problématiques
+- **Infiltrations d'eau** — Vérifier les traces au sous-sol
+- **Drain français** — Son état et son âge (durée de vie ~25 ans)
+- **Pyrite et ocre ferreux** — Problèmes courants dans certains secteurs de Gatineau
+
+### La toiture
+- **Âge du revêtement** — Bardeaux d'asphalte durent 20-25 ans
+- **Ventilation d'entretoit** — Prévient les problèmes de condensation
+- **Évents et solins** — Points d'entrée d'eau fréquents
+
+### Plomberie et électricité
+- **Tuyauterie en plomb** — Encore présente dans certaines maisons de Hull
+- **Panneau électrique** — Ampérage suffisant (200A recommandé)
+- **Chauffe-eau** — Âge et état (durée de vie ~10 ans)
+
+### Isolation et efficacité énergétique
+- **Isolation du grenier** — R-50 recommandé au Québec
+- **Fenêtres** — Double ou triple vitrage pour nos hivers
+- **Système de chauffage** — Type et âge de la fournaise
+
+## Combien coûte une inspection à Gatineau?
+
+- **Maison unifamiliale** — Entre 500 $ et 700 $
+- **Condo** — Entre 350 $ et 500 $
+- **Plex** — Entre 600 $ et 900 $
+- **Tests supplémentaires** (radon, pyrite, eau) — 100 $ à 300 $ chacun
+
+## Mon conseil
+
+Ne sautez jamais l'inspection, même dans un marché compétitif. Les économies potentielles dépassent largement le coût de l'inspection. Je vous recommande des inspecteurs de confiance dans la région.`,
+    bodyEn: `## Why Pre-Purchase Inspection Is Essential in Gatineau
+
+A pre-purchase inspection is your best protection against costly surprises. In Gatineau, some issues are more common due to the climate and the age of the housing stock.
+
+## Key Elements to Check
+
+### The Foundation
+- **Cracks** — Distinguish normal cracks from problematic ones
+- **Water infiltration** — Check for traces in the basement
+- **French drain** — Its condition and age (lifespan ~25 years)
+- **Pyrite and iron ochre** — Common problems in some Gatineau areas
+
+### The Roof
+- **Covering age** — Asphalt shingles last 20-25 years
+- **Attic ventilation** — Prevents condensation issues
+- **Vents and flashing** — Frequent water entry points
+
+### Plumbing and Electrical
+- **Lead pipes** — Still present in some Hull homes
+- **Electrical panel** — Sufficient amperage (200A recommended)
+- **Water heater** — Age and condition (lifespan ~10 years)
+
+### Insulation and Energy Efficiency
+- **Attic insulation** — R-50 recommended in Quebec
+- **Windows** — Double or triple glazing for our winters
+- **Heating system** — Type and age of the furnace
+
+## How Much Does an Inspection Cost in Gatineau?
+
+- **Single-family home** — Between $500 and $700
+- **Condo** — Between $350 and $500
+- **Plex** — Between $600 and $900
+- **Additional tests** (radon, pyrite, water) — $100 to $300 each
+
+## My Advice
+
+Never skip the inspection, even in a competitive market. The potential savings far outweigh the inspection cost. I can recommend trusted inspectors in the area.`,
+  },
+
+  // ── Article 15 – Conseils premier achat ──
+  {
+    slug: "conseils-premier-achat-maison-gatineau",
+    slugEn: "tips-buying-first-home-gatineau",
+    title: "10 conseils pour réussir votre premier achat immobilier à Gatineau",
+    titleEn: "10 Tips for Buying Your First Home in Gatineau",
+    seoTitle: "10 conseils premier achat maison Gatineau 2025 | YGS",
+    seoTitleEn: "10 Tips First Home Purchase Gatineau 2025 | YGS",
+    metaDescription: "Les 10 meilleurs conseils pour acheter votre première maison à Gatineau : préqualification, mise de fonds, quartiers, et pièges à éviter.",
+    metaDescriptionEn: "The 10 best tips for buying your first home in Gatineau: pre-qualification, down payment, neighborhoods, and pitfalls to avoid.",
+    excerpt: "De la préqualification au jour de la remise des clés — 10 étapes essentielles pour les premiers acheteurs.",
+    excerptEn: "From pre-qualification to closing day — 10 essential steps for first-time buyers.",
+    category: "Acheteurs",
+    categoryEn: "Buyers",
+    featuredImage: blogFirstHomeTips,
+    publishDate: "2025-10-22",
+    published: true,
+    body: `## 10 conseils pour votre premier achat à Gatineau
+
+Acheter sa première maison est excitant, mais aussi stressant. Voici mes 10 meilleurs conseils après des années à accompagner des premiers acheteurs à Gatineau.
+
+## 1. Obtenez votre préqualification hypothécaire d'abord
+Avant de visiter, sachez combien vous pouvez emprunter. La préqualification vous donne un budget réaliste et montre aux vendeurs que vous êtes sérieux.
+
+## 2. Utilisez les programmes pour premiers acheteurs
+- **RAP (Régime d'accession à la propriété)** — Retirez jusqu'à 60 000 $ de votre REER
+- **CELIAPP** — Nouveau compte libre d'impôt spécifiquement pour l'achat
+- **Crédit d'impôt pour l'achat d'une première habitation** — Crédit fédéral de 1 500 $
+
+## 3. Prévoyez tous les frais
+Au-delà du prix d'achat, prévoyez :
+- **Droits de mutation (taxe de bienvenue)** — 1 % à 1,5 % du prix
+- **Notaire** — 1 200 $ à 2 000 $
+- **Inspection** — 500 $ à 700 $
+- **Déménagement** — 1 000 $ à 3 000 $
+
+## 4. Choisissez le bon quartier pour VOUS
+Gatineau offre des réalités très différentes selon le secteur. Visitez à différentes heures et jours de la semaine.
+
+## 5. Ne négligez pas l'inspection préachat
+C'est votre protection. Les économies dépassent toujours le coût.
+
+## 6. Comprenez la promesse d'achat au Québec
+Le processus au Québec diffère de l'Ontario. Les délais, conditions et formulaires sont différents.
+
+## 7. Pensez à la revente
+Même si c'est votre première maison, pensez à sa valeur future. Proximité des transports, écoles et services.
+
+## 8. Soyez prêts à agir vite
+Le marché de Gatineau bouge rapidement. Ayez vos documents prêts et un courtier réactif.
+
+## 9. Visitez au moins 5 propriétés
+Ne tombez pas amoureux de la première maison. Comparez pour mieux apprécier.
+
+## 10. Choisissez un courtier local
+Un courtier qui connaît Gatineau peut vous faire économiser du temps, de l'argent et du stress.
+
+## Mon accompagnement
+
+J'offre un service complet aux premiers acheteurs, de la préqualification à la remise des clés. Contactez-moi pour un accompagnement personnalisé.`,
+    bodyEn: `## 10 Tips for Your First Home Purchase in Gatineau
+
+Buying your first home is exciting but also stressful. Here are my 10 best tips from years of helping first-time buyers in Gatineau.
+
+## 1. Get Your Mortgage Pre-Qualification First
+Before visiting, know how much you can borrow. Pre-qualification gives you a realistic budget and shows sellers you're serious.
+
+## 2. Use First-Time Buyer Programs
+- **HBP (Home Buyers' Plan)** — Withdraw up to $60,000 from your RRSP
+- **FHSA** — New tax-free account specifically for home purchase
+- **First-Time Home Buyers' Tax Credit** — $1,500 federal credit
+
+## 3. Plan for All Costs
+Beyond the purchase price, plan for:
+- **Welcome tax (transfer duties)** — 1% to 1.5% of price
+- **Notary** — $1,200 to $2,000
+- **Inspection** — $500 to $700
+- **Moving** — $1,000 to $3,000
+
+## 4. Choose the Right Neighborhood for YOU
+Gatineau offers very different realities by area. Visit at different times and days of the week.
+
+## 5. Don't Skip the Pre-Purchase Inspection
+It's your protection. The savings always exceed the cost.
+
+## 6. Understand Quebec's Purchase Offer
+The process in Quebec differs from Ontario. Timelines, conditions, and forms are different.
+
+## 7. Think About Resale
+Even if it's your first home, think about future value. Proximity to transit, schools, and services.
+
+## 8. Be Ready to Act Fast
+Gatineau's market moves quickly. Have your documents ready and a responsive broker.
+
+## 9. Visit at Least 5 Properties
+Don't fall in love with the first house. Compare to better appreciate.
+
+## 10. Choose a Local Broker
+A broker who knows Gatineau can save you time, money, and stress.
+
+## My Support
+
+I offer a complete service for first-time buyers, from pre-qualification to key delivery. Contact me for personalized guidance.`,
+  },
+
+  // ── Article 16 – Parc de la Gatineau ──
+  {
+    slug: "vivre-pres-parc-gatineau-immobilier",
+    slugEn: "living-near-gatineau-park-real-estate",
+    title: "Vivre près du Parc de la Gatineau : l'immobilier nature",
+    titleEn: "Living Near Gatineau Park: Nature-Adjacent Real Estate",
+    seoTitle: "Immobilier près Parc de la Gatineau · Prix et quartiers | YGS",
+    seoTitleEn: "Real Estate Near Gatineau Park · Prices & Areas | YGS",
+    metaDescription: "Découvrez les quartiers résidentiels près du Parc de la Gatineau : prix, avantages nature et qualité de vie incomparable.",
+    metaDescriptionEn: "Discover residential neighborhoods near Gatineau Park: prices, nature benefits, and unmatched quality of life.",
+    excerpt: "Sentiers, lac, ski de fond — vivre à deux pas du Parc de la Gatineau, c'est possible et abordable.",
+    excerptEn: "Trails, lakes, cross-country skiing — living steps from Gatineau Park is possible and affordable.",
+    category: "Quartiers",
+    categoryEn: "Neighborhoods",
+    featuredImage: blogGatineauPark,
+    publishDate: "2025-10-10",
+    published: true,
+    body: `## Le Parc de la Gatineau : un privilège résidentiel unique
+
+Vivre à proximité du Parc de la Gatineau, c'est avoir accès à 361 km² de nature sauvage à quelques minutes de chez soi. C'est un avantage immobilier que peu de villes canadiennes peuvent offrir.
+
+## Les quartiers aux portes du parc
+
+### Chelsea
+- **Village pittoresque** au cœur des collines
+- **Prix** — Maisons à partir de 450 000 $, propriétés de prestige au-delà de 1 M$
+- **Atouts** — Cafés, restaurants, communauté artistique
+- **Accès** — Entrée directe aux sentiers du parc
+
+### Plateau d'Aylmer
+- **Développement récent** avec maisons neuves
+- **Prix** — Entre 500 000 $ et 700 000 $
+- **Atouts** — Écoles, parcs de quartier, proximité du lac
+- **Accès** — Sentiers accessibles à pied ou vélo
+
+### Old Chelsea / Kingsmere
+- **Prestige et tranquillité** — Grandes propriétés boisées
+- **Prix** — 600 000 $ à 1,5 M$
+- **Atouts** — Domaine Mackenzie-King, Lac Kingsmere
+- **Accès** — Au cœur même du parc
+
+## Avantages de vivre près du parc
+
+### Santé et bien-être
+- **200+ km de sentiers** de randonnée et vélo
+- **Ski de fond** — Le plus grand réseau en Amérique du Nord
+- **Lac Philippe** — Baignade, camping, canot
+- **Air pur** — Forêt mature à votre porte
+
+### Valeur immobilière
+- **Appréciation supérieure** — La proximité de la nature fait monter la valeur
+- **Demande constante** — Toujours recherché par les acheteurs
+- **Qualité de vie** — Argument de vente puissant à la revente
+
+## Mon conseil
+
+Les propriétés près du parc se vendent rapidement. Si ce mode de vie vous attire, je peux vous alerter dès qu'une opportunité se présente dans le secteur.`,
+    bodyEn: `## Gatineau Park: A Unique Residential Privilege
+
+Living near Gatineau Park means having access to 361 km² of wilderness just minutes from home. It's a real estate advantage few Canadian cities can offer.
+
+## Neighborhoods at the Park's Doorstep
+
+### Chelsea
+- **Picturesque village** in the hills
+- **Prices** — Homes from $450,000, luxury properties above $1M
+- **Perks** — Cafés, restaurants, artistic community
+- **Access** — Direct entry to park trails
+
+### Plateau d'Aylmer
+- **Recent development** with new builds
+- **Prices** — Between $500,000 and $700,000
+- **Perks** — Schools, neighborhood parks, lake proximity
+- **Access** — Trails accessible on foot or bike
+
+### Old Chelsea / Kingsmere
+- **Prestige and tranquility** — Large wooded properties
+- **Prices** — $600,000 to $1.5M
+- **Perks** — Mackenzie King Estate, Kingsmere Lake
+- **Access** — At the very heart of the park
+
+## Benefits of Living Near the Park
+
+### Health and Wellness
+- **200+ km of trails** for hiking and cycling
+- **Cross-country skiing** — Largest network in North America
+- **Lac Philippe** — Swimming, camping, canoeing
+- **Fresh air** — Mature forest at your doorstep
+
+### Property Value
+- **Superior appreciation** — Nature proximity drives value up
+- **Consistent demand** — Always sought by buyers
+- **Quality of life** — Powerful selling point at resale
+
+## My Advice
+
+Properties near the park sell quickly. If this lifestyle appeals to you, I can alert you as soon as an opportunity comes up in the area.`,
+  },
+
+  // ── Article 17 – Condos à Hull ──
+  {
+    slug: "acheter-condo-hull-gatineau-guide",
+    slugEn: "buying-condo-hull-gatineau-guide",
+    title: "Acheter un condo à Hull : le guide pour investisseurs et acheteurs",
+    titleEn: "Buying a Condo in Hull: Guide for Investors and Buyers",
+    seoTitle: "Acheter condo Hull Gatineau · Guide investisseur 2025 | YGS",
+    seoTitleEn: "Buy Condo Hull Gatineau · Investor Guide 2025 | YGS",
+    metaDescription: "Guide complet pour acheter un condo à Hull-Gatineau : prix, quartiers Zibi et centre-ville, frais de condo, et potentiel locatif.",
+    metaDescriptionEn: "Complete guide to buying a condo in Hull-Gatineau: prices, Zibi and downtown areas, condo fees, and rental potential.",
+    excerpt: "Zibi, centre-ville, bord de rivière — Hull offre les meilleurs condos de Gatineau pour vivre ou investir.",
+    excerptEn: "Zibi, downtown, riverfront — Hull offers Gatineau's best condos for living or investing.",
+    category: "Investissement",
+    categoryEn: "Investment",
+    featuredImage: blogCondoHull,
+    publishDate: "2025-09-28",
+    published: true,
+    body: `## Hull : le marché condo le plus dynamique de Gatineau
+
+Hull est devenu l'épicentre du développement condo à Gatineau, porté par le projet Zibi, la proximité d'Ottawa et le renouveau urbain du centre-ville.
+
+## Pourquoi acheter un condo à Hull?
+
+### Emplacement stratégique
+- **À 5 minutes d'Ottawa** via les ponts du Portage et Alexandra
+- **Station du futur tramway** — Augmentation anticipée de la valeur
+- **Services à pied** — Épiceries, restaurants, bars, boutiques
+- **Transport en commun** — Réseau STO dense
+
+### Le projet Zibi
+- **Développement mixte** de 37 acres sur les îles Chaudières
+- **Condos neufs** — Prix à partir de 350 000 $
+- **Certifié One Planet Living** — Développement durable
+- **Vue sur les chutes et la rivière** — Emplacement unique
+
+## Prix des condos à Hull en 2025
+
+- **Studio/1 chambre** — 220 000 $ à 320 000 $
+- **2 chambres** — 300 000 $ à 450 000 $
+- **Penthouse/premium** — 500 000 $ à 800 000 $+
+- **Frais de condo** — 200 $ à 500 $ par mois selon l'immeuble
+
+## Potentiel locatif
+
+Hull offre un excellent potentiel locatif grâce à la demande des fonctionnaires fédéraux et des professionnels travaillant à Ottawa :
+- **Rendement locatif** — 4 % à 5,5 % brut
+- **Taux d'occupation** — Parmi les plus élevés de la région
+- **Location meublée** — Forte demande pour les affectations temporaires
+
+## Ce qu'il faut vérifier avant d'acheter
+
+- **Fonds de prévoyance** — Minimum 5 % du budget annuel
+- **Procès-verbaux du syndicat** — Les 3 dernières années
+- **Travaux majeurs prévus** — Toiture, ascenseurs, stationnement
+- **Règlements de copropriété** — Location court terme permise?
+
+## Mon conseil
+
+Hull est idéal pour les acheteurs qui veulent un mode de vie urbain avec accès rapide à Ottawa. Que ce soit pour y vivre ou investir, je vous aide à trouver le bon condo au bon prix.`,
+    bodyEn: `## Hull: Gatineau's Most Dynamic Condo Market
+
+Hull has become Gatineau's condo development epicenter, driven by the Zibi project, proximity to Ottawa, and downtown urban renewal.
+
+## Why Buy a Condo in Hull?
+
+### Strategic Location
+- **5 minutes from Ottawa** via Portage and Alexandra bridges
+- **Future LRT station** — Anticipated value increase
+- **Walkable services** — Groceries, restaurants, bars, shops
+- **Public transit** — Dense STO network
+
+### The Zibi Project
+- **Mixed-use development** of 37 acres on Chaudières Islands
+- **New condos** — Prices from $350,000
+- **One Planet Living certified** — Sustainable development
+- **Falls and river views** — Unique location
+
+## Hull Condo Prices in 2025
+
+- **Studio/1 bedroom** — $220,000 to $320,000
+- **2 bedrooms** — $300,000 to $450,000
+- **Penthouse/premium** — $500,000 to $800,000+
+- **Condo fees** — $200 to $500 per month depending on building
+
+## Rental Potential
+
+Hull offers excellent rental potential thanks to demand from federal employees and professionals working in Ottawa:
+- **Rental yield** — 4% to 5.5% gross
+- **Occupancy rate** — Among the highest in the region
+- **Furnished rental** — Strong demand for temporary assignments
+
+## What to Check Before Buying
+
+- **Reserve fund** — Minimum 5% of annual budget
+- **Board meeting minutes** — Last 3 years
+- **Planned major work** — Roof, elevators, parking
+- **Condo bylaws** — Short-term rental allowed?
+
+## My Advice
+
+Hull is ideal for buyers who want an urban lifestyle with quick access to Ottawa. Whether to live or invest, I'll help you find the right condo at the right price.`,
   },
 ];
 
