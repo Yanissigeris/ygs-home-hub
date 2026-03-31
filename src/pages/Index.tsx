@@ -9,9 +9,7 @@ import ReviewStrip from "@/components/ReviewStrip";
 /* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
 const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
 const AboutSection = React.lazy(() => import("@/components/AboutSection"));
-const CredibilitySection = React.lazy(() => import("@/components/CredibilitySection"));
 const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
-const InlineCTA = React.lazy(() => import("@/components/InlineCTA"));
 const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
