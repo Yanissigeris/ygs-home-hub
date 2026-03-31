@@ -23,9 +23,9 @@ const considerations = [
 ];
 
 const steps = [
-  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions. Full transparency." },
-  { num: "02", title: "Targeted search", desc: "I present the best options in neighborhoods that match your profile." },
-  { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through to the keys of your first property." },
+  { num: "01", title: "Initial consultation", desc: "We discuss your budget, priorities and questions about buying in Gatineau. Full transparency." },
+  { num: "02", title: "Targeted search", desc: "I present the best options in Aylmer, Hull, the Plateau or Buckingham — neighborhoods that match your profile and budget." },
+  { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through the Québec process to the keys of your first property." },
 ];
 
 const trustItems = [
