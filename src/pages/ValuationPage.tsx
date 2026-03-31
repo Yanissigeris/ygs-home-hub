@@ -12,10 +12,10 @@ import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
 const benefits = [
-  "Fourchette de valeur réaliste basée sur les ventes récentes",
-  "Avis sur le positionnement prix pour votre situation",
-  "Forces de votre propriété à mettre de l'avant",
-  "Points à corriger — et lesquels valent la peine",
+  "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
+  "Avis sur le positionnement prix adapté à votre quartier en Outaouais",
+  "Forces de votre propriété à mettre de l'avant pour les acheteurs locaux et d'Ottawa",
+  "Points à corriger — et lesquels valent la peine dans votre marché",
   "Prochaines étapes possibles, sans engagement",
 ];
 
