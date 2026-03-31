@@ -52,6 +52,13 @@ const BuckinghamPage = React.lazy(() => import("./pages/BuckinghamPage"));
 const GatineauCentrePage = React.lazy(() => import("./pages/GatineauCentrePage"));
 const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
 const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
+const ChelseaPage = React.lazy(() => import("./pages/ChelseaPage"));
+const CantleyPage = React.lazy(() => import("./pages/CantleyPage"));
+const ValDesMontsPage = React.lazy(() => import("./pages/ValDesMontsPage"));
+const MassonAngersPage = React.lazy(() => import("./pages/MassonAngersPage"));
+const PontiacPage = React.lazy(() => import("./pages/PontiacPage"));
+const CoteDazurPage = React.lazy(() => import("./pages/CoteDazurPage"));
+const LimbourPage = React.lazy(() => import("./pages/LimbourPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
@@ -105,6 +112,13 @@ const GatineauCentrePageEn = React.lazy(() => import("./pages/en/GatineauCentreP
 const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
 const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
 const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
+const ChelseaPageEn = React.lazy(() => import("./pages/en/ChelseaPageEn"));
+const CantleyPageEn = React.lazy(() => import("./pages/en/CantleyPageEn"));
+const ValDesMontsPageEn = React.lazy(() => import("./pages/en/ValDesMontsPageEn"));
+const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageEn"));
+const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
+const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
+const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 
 
 
@@ -150,6 +164,13 @@ const routeTree = React.createElement(
       <Route path="/gatineau" element={<GatineauCentrePage />} />
       <Route path="/aylmer" element={<AylmerPage />} />
       <Route path="/plateau" element={<PlateauPage />} />
+      <Route path="/chelsea" element={<ChelseaPage />} />
+      <Route path="/cantley" element={<CantleyPage />} />
+      <Route path="/val-des-monts" element={<ValDesMontsPage />} />
+      <Route path="/masson-angers" element={<MassonAngersPage />} />
+      <Route path="/pontiac" element={<PontiacPage />} />
+      <Route path="/cote-dazur-gatineau" element={<CoteDazurPage />} />
+      <Route path="/limbour" element={<LimbourPage />} />
       <Route path="/ressources" element={<ResourcesPage />} />
       <Route path="/blogue" element={<BlogPage />} />
       <Route path="/blogue/:slug" element={<BlogArticlePage />} />
@@ -204,6 +225,13 @@ const routeTree = React.createElement(
       <Route path="/en/gatineau" element={<GatineauCentrePageEn />} />
       <Route path="/en/aylmer" element={<AylmerPageEn />} />
       <Route path="/en/plateau" element={<PlateauPageEn />} />
+      <Route path="/en/chelsea" element={<ChelseaPageEn />} />
+      <Route path="/en/cantley" element={<CantleyPageEn />} />
+      <Route path="/en/val-des-monts" element={<ValDesMontsPageEn />} />
+      <Route path="/en/masson-angers" element={<MassonAngersPageEn />} />
+      <Route path="/en/pontiac" element={<PontiacPageEn />} />
+      <Route path="/en/cote-dazur" element={<CoteDazurPageEn />} />
+      <Route path="/en/limbour" element={<LimbourPageEn />} />
       <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
