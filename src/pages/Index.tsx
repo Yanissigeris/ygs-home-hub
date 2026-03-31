@@ -27,7 +27,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre courtier immobilier en Outaouais"
-      subtitle="Stratégie claire, conseils honnêtes et accompagnement complet — pour vendre, acheter ou investir en toute confiance."
+      subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       socialProof="Platinum Club · Hall of Fame RE/MAX"
