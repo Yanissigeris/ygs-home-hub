@@ -19,12 +19,18 @@ const trustItems = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, nature et accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, culture, proximité centre-ville Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, campagne" },
-  { name: "Gatineau (centre)", href: "/gatineau", detail: "Résidentiel, services, banlieue accessible" },
   { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis, qualité de vie" },
+  { name: "Hull", href: "/hull", detail: "Urbain, culture, proximité centre-ville Ottawa" },
   { name: "Plateau", href: "/plateau", detail: "Familles, développements récents, parcs" },
+  { name: "Gatineau (centre)", href: "/gatineau", detail: "Résidentiel, services, banlieue accessible" },
+  { name: "Chelsea", href: "/chelsea", detail: "Village pittoresque, parc de la Gatineau" },
+  { name: "Cantley", href: "/cantley", detail: "Collines, grands terrains, vie rurale" },
+  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, nature sauvage" },
+  { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
+  { name: "Masson-Angers", href: "/masson-angers", detail: "Constructions neuves, familles, en croissance" },
+  { name: "Pontiac", href: "/pontiac", detail: "Grands espaces, rivière, vie rurale" },
+  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Résidentiel établi, bungalows, abordable" },
+  { name: "Limbour", href: "/limbour", detail: "Familial, parcs, banlieue moderne" },
 ];
 
 const lifestyleGuides = [
