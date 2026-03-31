@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
 import CTASection from "@/components/CTASection";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
