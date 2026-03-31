@@ -48,7 +48,7 @@ const PlexAnalysisPage = () => {
 
   return (
      <>
-      <PageMeta title="Analyse de plex à Gatineau" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel. Analyse gratuite par un courtier spécialisé." />
+      <PageMeta title="Analyse de plex à Gatineau · Outaouais | YGS" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel par secteur. Analyse gratuite par un courtier spécialisé en Outaouais." />
       <HeroSection
         compact
         overline="Analyse plex gratuite · Gatineau"

@@ -55,7 +55,7 @@ const ContactPage = () => {
 
   return (
    <>
-    <PageMeta title="Contacter Yanis Gauthier-Sigeris" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Consultation gratuite, à votre rythme — parlons de votre projet immobilier." />
+    <PageMeta title="Contacter Yanis Gauthier-Sigeris | YGS" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau et en Outaouais. Consultation gratuite — parlons de votre projet immobilier." />
     <HeroSection
         compact
         overline="Yanis Gauthier-Sigeris"

@@ -38,7 +38,7 @@ const faq = [
 
 const MilitaryRelocationPage = () => (
    <>
-    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau? Guide complet: processus BGRS/SIRVA, quartiers près de la base, délais et accompagnement." />
+    <PageMeta title="Relocalisation militaire à Gatineau | YGS" description="Mutation militaire vers Gatineau et l'Outaouais? Guide complet: processus BGRS/SIRVA, quartiers près de la BFC Uplands, délais et accompagnement bilingue." />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"

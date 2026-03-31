@@ -32,7 +32,7 @@ const socialTestimonialsFr = [
 
 const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
-    <PageMeta title="Courtier immobilier Gatineau" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire." />
+    <PageMeta title="Courtier immobilier Gatineau · Outaouais | YGS" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir à Aylmer, Hull, Plateau ou Buckingham — stratégie claire et accompagnement complet." />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre courtier immobilier en Outaouais"

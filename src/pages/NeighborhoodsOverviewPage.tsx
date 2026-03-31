@@ -41,7 +41,7 @@ const faq = [
 
 const NeighborhoodsOverviewPage = () => (
    <>
-    <PageMeta title="Quartiers de Gatineau — Guide complet" description="Comparez les quartiers de Gatineau: Aylmer, Hull, Plateau, Buckingham et plus. Prix, ambiance et profil de chaque secteur." />
+    <PageMeta title="Quartiers de Gatineau — Guide complet | YGS" description="Comparez les quartiers de Gatineau et de l'Outaouais: Aylmer, Hull, Plateau, Buckingham et Gatineau-centre. Prix, ambiance, écoles et profil de chaque secteur." />
     <HeroSection
       overline="Quartiers · Gatineau et Outaouais"
       title="Les quartiers à considérer à Gatineau"

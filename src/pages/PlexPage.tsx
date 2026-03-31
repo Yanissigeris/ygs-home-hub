@@ -67,7 +67,7 @@ const faq = [
 
 const PlexPage = () => (
    <>
-    <PageMeta title="Investir dans un plex à Gatineau" description="Duplex, triplex et immeubles à revenus à Gatineau. Analyse de rendement, stratégie d'investissement et accompagnement par un courtier spécialisé." />
+    <PageMeta title="Investir dans un plex à Gatineau · Outaouais | YGS" description="Duplex, triplex et immeubles à revenus à Gatineau — Hull, Aylmer et environs. Analyse de rendement et stratégie d'investissement par un courtier spécialisé." />
     <HeroSection
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"

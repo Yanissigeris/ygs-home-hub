@@ -66,7 +66,7 @@ const related = [
 
 const BuckinghamPage = () => (
    <>
-    <PageMeta title="Buckingham / Masson-Angers — Guide" description="Buckingham et Masson-Angers: nature, terrain, prix accessibles. Guide de quartier pour acheteurs et investisseurs à Gatineau." />
+    <PageMeta title="Buckingham / Masson-Angers — Guide | YGS" description="Buckingham et Masson-Angers, Gatineau: nature, grands terrains, rivière du Lièvre et prix accessibles. Guide pour acheteurs et investisseurs en Outaouais." />
     <NeighborhoodJsonLd name="Buckingham" description="Courtier immobilier à Buckingham et Masson-Angers. Nature, terrains spacieux et prix accessibles en Outaouais." lat={45.5864} lng={-75.4197} url="/buckingham-masson-angers" />
     <HeroSection
       overline="Guide de quartier · Buckingham / Masson-Angers"

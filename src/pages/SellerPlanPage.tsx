@@ -49,7 +49,7 @@ const SellerPlanPage = () => {
 
   return (
    <>
-    <PageMeta title="Plan de vente personnalisé à Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau. Stratégie, prix, mise en marché et accompagnement étape par étape." />
+    <PageMeta title="Plan de vente personnalisé · Gatineau | YGS" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." />
     <HeroSection
         compact
         overline="Plan vendeur personnalisé · Gatineau"
