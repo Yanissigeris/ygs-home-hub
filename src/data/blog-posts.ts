@@ -444,6 +444,7 @@ The best neighborhood depends on your priorities: proximity to work, schools, bu
   },
   {
     slug: "mutation-militaire-gatineau",
+    featuredImage: blogMilitary,
     slugEn: "military-posting-gatineau",
     title: "Mutation militaire à Gatineau : ce que vous devez savoir",
     titleEn: "Military Posting to Gatineau: What You Need to Know",
