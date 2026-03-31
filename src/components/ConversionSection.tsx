@@ -14,7 +14,7 @@ const steps = [
 {
   number: "02",
   title: "Stratégie claire",
-  text: "Un plan de vente adapté à votre situation et à votre marché.",
+  text: "Un plan de vente adapté à votre propriété et au marché de l'Outaouais.",
   href: "/vendre-ma-maison-gatineau"
 },
 {
