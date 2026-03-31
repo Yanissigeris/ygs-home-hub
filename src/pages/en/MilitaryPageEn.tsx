@@ -43,8 +43,8 @@ const militaryPaths = [
 const faq = [
   { q: "Do you know the military programs?", a: "Yes. I understand posting realities, tight deadlines and specific needs. We adapt the approach to your situation." },
   { q: "I need to sell and buy at the same time — is that possible?", a: "It's common during postings. We plan the coordination from the start to avoid getting stuck." },
-  { q: "Which neighborhoods are close to the base?", a: "Depends on your base (Uplands, Gatineau, etc.). I recommend the best neighborhoods based on your commute and priorities." },
-  { q: "Can you do virtual visits?", a: "Absolutely. Many military members buy remotely before their arrival. I adapt to your schedule." },
+  { q: "Which neighborhoods are close to the base?", a: "Aylmer and the Plateau are popular for CFB Uplands access via the Champlain Bridge. Hull is ideal for those working in downtown Ottawa. We choose based on your commute and family priorities." },
+  { q: "Can you do virtual visits?", a: "Absolutely. Many military members buy remotely before their arrival in Gatineau. I adapt to your schedule and time zone." },
 ];
 
 const MilitaryPageEn = () => (

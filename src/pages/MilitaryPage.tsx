@@ -47,8 +47,8 @@ const militaryPaths = [
 const faq = [
   { q: "Est-ce que vous connaissez les programmes pour militaires?", a: "Oui. Je connais les réalités des mutations, les délais serrés et les besoins spécifiques. On adapte l'approche à votre situation." },
   { q: "Je dois vendre et acheter en même temps — c'est possible?", a: "C'est fréquent dans les mutations. On planifie la coordination dès le départ pour éviter d'être coincé." },
-  { q: "Quels secteurs sont proches de la base?", a: "Ça dépend de votre base (Uplands, Gatineau, etc.). Je vous recommande les meilleurs secteurs selon votre trajet et vos priorités." },
-  { q: "Est-ce que vous pouvez faire des visites virtuelles?", a: "Absolument. Beaucoup de militaires achètent à distance avant leur arrivée. Je m'adapte à votre horaire." },
+  { q: "Quels secteurs sont proches de la base?", a: "Aylmer et le Plateau sont populaires pour l'accès à la BFC Uplands via le pont Champlain. Hull est idéal pour ceux qui travaillent au centre-ville d'Ottawa. On choisit selon votre trajet et vos priorités familiales." },
+  { q: "Est-ce que vous pouvez faire des visites virtuelles?", a: "Absolument. Beaucoup de militaires achètent à distance avant leur arrivée à Gatineau. Je m'adapte à votre horaire et votre fuseau." },
 ];
 
 const MilitaryPage = () => (
