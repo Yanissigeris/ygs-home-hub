@@ -50,6 +50,7 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
   return null;
 };
 
+const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
