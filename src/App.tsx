@@ -53,6 +53,7 @@ const GatineauCentrePage = React.lazy(() => import("./pages/GatineauCentrePage")
 const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
 const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
+const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const LivingAylmerPage = React.lazy(() => import("./pages/LivingAylmerPage"));
 const LivingHullPage = React.lazy(() => import("./pages/LivingHullPage"));
 const LivingPlateauPage = React.lazy(() => import("./pages/LivingPlateauPage"));
@@ -73,6 +74,7 @@ const ContactPageEn = React.lazy(() => import("./pages/en/ContactPageEn"));
 const FAQPageEn = React.lazy(() => import("./pages/en/FAQPageEn"));
 const TestimonialsPageEn = React.lazy(() => import("./pages/en/TestimonialsPageEn"));
 const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
+const BlogPageEn = React.lazy(() => import("./pages/en/BlogPageEn"));
 const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
 const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
 const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
@@ -148,6 +150,7 @@ const routeTree = React.createElement(
       <Route path="/aylmer" element={<AylmerPage />} />
       <Route path="/plateau" element={<PlateauPage />} />
       <Route path="/ressources" element={<ResourcesPage />} />
+      <Route path="/blogue" element={<BlogPage />} />
       <Route path="/vivre-a-aylmer" element={<LivingAylmerPage />} />
       <Route path="/vivre-a-hull" element={<LivingHullPage />} />
       <Route path="/vivre-dans-le-plateau" element={<LivingPlateauPage />} />
@@ -186,6 +189,7 @@ const routeTree = React.createElement(
       <Route path="/en/montreal-relocation" element={<MontrealRelocationPageEn />} />
       <Route path="/en/market-report" element={<MarketReportPageEn />} />
       <Route path="/en/resources" element={<ResourcesPageEn />} />
+      <Route path="/en/blog" element={<BlogPageEn />} />
       <Route path="/en/faq" element={<FAQPageEn />} />
       <Route path="/en/testimonials" element={<TestimonialsPageEn />} />
       <Route path="/en/contact" element={<ContactPageEn />} />

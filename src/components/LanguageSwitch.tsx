@@ -26,6 +26,7 @@ const frToEn: Record<string, string> = {
   "/hull": "/en/hull",
   "/buckingham-masson-angers": "/en/buckingham",
   "/ressources": "/en/resources",
+  "/blogue": "/en/blog",
   "/faq": "/en/faq",
   "/temoignages": "/en/testimonials",
   "/contact-yanis": "/en/contact",

@@ -47,7 +47,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
             </a>
             <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
             <Link to={relocationHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{relocationLabel}</Link>
-            <Link to={lang === "en" ? "/en/resources" : "/ressources"} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
+            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
             <Link to={contactHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">Contact</Link>
             <Link to={ctaHref} className="ml-1 inline-flex h-[26px] items-center rounded-full border border-[#B68A43]/20 bg-[#B68A43]/15 px-4 text-[0.6875rem] font-medium tracking-[0.04em] text-[#B68A43] transition-all duration-200 hover:border-[#B68A43]/35 hover:bg-[#B68A43]/25 hover:text-[#B68A43]">{ctaLabel}</Link>
           </div>
@@ -59,7 +59,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
             <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
           </a>
           <div className="flex shrink-0 items-center gap-3">
-            <Link to={lang === "en" ? "/en/resources" : "/ressources"} className="text-[0.6875rem] text-white/50 transition-colors hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
+            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="text-[0.6875rem] text-white/50 transition-colors hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
             <Link to={ctaHref} className="inline-flex h-[26px] shrink-0 items-center rounded-full border border-white/[0.08] bg-white/[0.09] px-3 text-[0.625rem] font-medium tracking-[0.03em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95">{ctaLabelMobile}</Link>
           </div>
         </div>
