@@ -184,10 +184,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         <div
           className={`section-container relative z-20 ${
             compact
-              ? "py-14 sm:py-18 md:py-20"
+              ? "py-10 sm:py-18 md:py-20"
               : agentImage
-              ? "pt-[5.5rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
-              : "pt-[5.5rem] pb-[5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
+              ? "pt-[4rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
+              : "pt-[4rem] pb-[3.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
           }`}
         >
           <div
