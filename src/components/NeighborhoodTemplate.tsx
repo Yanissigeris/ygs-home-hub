@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { LucideIcon, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import type { GuideType } from "@/components/GuideModal";
 import PageMeta from "@/components/PageMeta";
@@ -32,10 +33,43 @@ export interface NeighborhoodProps {
   cta: { title: string; text: string; buttons: { label: string; href: string; variant?: "outline" }[]; trustLine: string };
 }
 
+const FAQPageJsonLd = ({ items, url }: { items: { q: string; a: string }[]; url: string }) => {
+  useEffect(() => {
+    const prev = document.getElementById("ygs-faqpage-jsonld");
+    if (prev) prev.remove();
+
+    if (!items.length) return;
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "ygs-faqpage-jsonld";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("ygs-faqpage-jsonld");
+      if (el) el.remove();
+    };
+  }, [items, url]);
+
+  return null;
+};
+
 const NeighborhoodTemplate = (p: NeighborhoodProps) => (
   <>
     <PageMeta title={p.seoTitle} description={p.metaDesc} />
     <NeighborhoodJsonLd {...p.jsonLd} />
+    <FAQPageJsonLd items={p.faq.items} url={p.jsonLd.url} />
     <HeroSection
       overline={p.hero.overline}
       title={p.hero.title}
