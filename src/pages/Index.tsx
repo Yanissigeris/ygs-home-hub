@@ -26,11 +26,11 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <PageMeta title="Courtier immobilier Gatineau" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire." />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
-      title="Votre allié en immobilier en Outaouais"
-      subtitle="Vendre, acheter ou investir — stratégie claire avec conseils honnêtes."
+      title="Votre courtier immobilier en Outaouais"
+      subtitle="Stratégie claire, conseils honnêtes et accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      trustLine=""
+      socialProof="Platinum Club · Hall of Fame RE/MAX"
       heroVideo="/hero-video-compressed.mp4"
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}

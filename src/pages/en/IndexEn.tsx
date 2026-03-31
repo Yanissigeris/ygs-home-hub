@@ -63,17 +63,18 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) =>
 <div ref={ref}>
     <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support." />
     <HeroSection
-    overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
-    title="Your real estate ally in Outaouais"
-    subtitle="Sell, buy or invest — clear strategy, honest advice and support."
-    primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
-    secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
-    trustLine=""
-    heroVideo="/hero-video-compressed.mp4"
-    heroVideoPoster="/hero-video-poster.webp"
-    agentImage={yanisPortrait}
-    agentImageSm={yanisPortraitSm}
-    agentName="Yanis Gauthier-Sigeris" />
+      overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
+      title="Your real estate broker in Outaouais"
+      subtitle="Clear strategy, honest advice and full support — to sell, buy or invest with confidence."
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
+      socialProof="Platinum Club · Hall of Fame RE/MAX"
+      heroVideo="/hero-video-compressed.mp4"
+      heroVideoPoster="/hero-video-poster.webp"
+      agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
+      agentName="Yanis Gauthier-Sigeris"
+    />
   
 
     {/* Trust Strip */}
