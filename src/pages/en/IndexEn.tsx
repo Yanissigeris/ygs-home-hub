@@ -131,6 +131,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       </div>
     </section>
 
+    <hr className="section-divider" />
+
     {/* Conversion Steps */}
     <section className="section-padding bg-background">
       <div className="section-container">
