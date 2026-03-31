@@ -3,6 +3,7 @@ import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
+import SocialProofStrip from "@/components/SocialProofStrip";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
