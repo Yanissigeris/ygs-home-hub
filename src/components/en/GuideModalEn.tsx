@@ -130,8 +130,8 @@ const GuideModalEn = ({ open, onOpenChange, guideType }: GuideModalEnProps) => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold">
-                <Send size={16} className="mr-1.5" />{config.submitLabel}
+              <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold" disabled={submitting}>
+                <Send size={16} className="mr-1.5" />{submitting ? "Sending…" : config.submitLabel}
               </Button>
               <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.72rem] text-muted-foreground/50">
                 <span className="flex items-center gap-1.5"><BadgeCheck size={12} /> Free</span>
