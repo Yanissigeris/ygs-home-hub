@@ -74,6 +74,7 @@ const ContactPageEn = React.lazy(() => import("./pages/en/ContactPageEn"));
 const FAQPageEn = React.lazy(() => import("./pages/en/FAQPageEn"));
 const TestimonialsPageEn = React.lazy(() => import("./pages/en/TestimonialsPageEn"));
 const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
+const BlogPageEn = React.lazy(() => import("./pages/en/BlogPageEn"));
 const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
 const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
 const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
