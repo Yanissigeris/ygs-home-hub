@@ -16,10 +16,10 @@ import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
 const considerations = [
-  { icon: DollarSign, title: "Down payment and budget", text: "5% minimum for a first purchase. We look together at your real capacity and available programs." },
-  { icon: Home, title: "The right property type", text: "Condo, house, semi-detached — each option has its advantages for a first purchase." },
-  { icon: FileText, title: "The process in Québec", text: "Promise to purchase, inspection, notary — the process is different from elsewhere in Canada." },
-  { icon: Shield, title: "Avoiding beginner mistakes", text: "Don't rush, understand the fees, choose the right neighborhood — I guide you." },
+  { icon: DollarSign, title: "Down payment and budget", text: "5% minimum for a first purchase. We look together at your real capacity and available programs in Québec." },
+  { icon: Home, title: "The right property type", text: "Condo in Hull, house in Aylmer, semi-detached on the Plateau — each option has its advantages for a first purchase in Gatineau." },
+  { icon: FileText, title: "The process in Québec", text: "Promise to purchase, inspection, notary — the Québec process is different from elsewhere in Canada. I guide you through every step." },
+  { icon: Shield, title: "Avoiding beginner mistakes", text: "Don't rush, understand the fees, choose the right Gatineau neighborhood — I guide you." },
 ];
 
 const steps = [
