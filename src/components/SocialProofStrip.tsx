@@ -70,7 +70,7 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={t.name}
-              className="relative rounded-2xl border border-border/30 bg-card p-6 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5"
+              className="relative rounded-2xl border border-border/30 bg-card p-5 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
