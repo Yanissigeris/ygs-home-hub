@@ -167,6 +167,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <GuideOffersSectionEn background="alt" />
 
+    <hr className="section-divider" />
+
     <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
 
     <CTASection
