@@ -134,7 +134,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <Label htmlFor="courriel">Courriel</Label>
-                <Input id="courriel" type="email" className="mt-1.5" required />
+                <Input id="courriel" name="courriel" type="email" className="mt-1.5" required />
               </div>
             </div>
             <div>
