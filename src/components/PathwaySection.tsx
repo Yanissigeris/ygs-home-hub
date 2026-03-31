@@ -46,7 +46,7 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
   <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-        className="mx-auto mb-14 max-w-[42rem] text-center"
+        className="mx-auto mb-8 sm:mb-14 max-w-[42rem] text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
