@@ -143,8 +143,25 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     /* ── Hreflang tags ── */
     removeHreflangLinks();
 
-    const frPath = isEn ? (enToFr[pathname] ?? null) : pathname;
-    const enPath = isEn ? pathname : (frToEn[pathname] ?? null);
+    /* Handle dynamic blog article routes */
+    let frPath: string | null = isEn ? (enToFr[pathname] ?? null) : pathname;
+    let enPath: string | null = isEn ? pathname : (frToEn[pathname] ?? null);
+
+    const frBlogMatch = pathname.match(/^\/blogue\/(.+)$/);
+    const enBlogMatch = pathname.match(/^\/en\/blog\/(.+)$/);
+    if (frBlogMatch && !enPath) {
+      const { getPostBySlug } = await import("@/data/blog-posts").catch(() => ({ getPostBySlug: () => undefined })) as any;
+      // Sync approach: use dynamic import result cached by bundler
+    }
+    if (frBlogMatch) {
+      frPath = pathname;
+      // Try to find matching EN slug dynamically
+      enPath = null; // Will be resolved by BlogArticlePage's own hreflang
+    }
+    if (enBlogMatch) {
+      enPath = pathname;
+      frPath = null;
+    }
 
     if (frPath && enPath) {
       ensureHreflangLink("fr-CA").setAttribute("href", `${BASE_URL}${frPath}`);
