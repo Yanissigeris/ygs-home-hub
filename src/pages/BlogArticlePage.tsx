@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
 import CTASection from "@/components/CTASection";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
@@ -54,8 +54,9 @@ const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const lang = useLanguage();
   const post = slug ? getPostBySlug(slug) : undefined;
+  const isFr = lang === "fr";
 
-  // Hreflang injection must be before any early return (hooks rules)
+  // All hooks must be before any early return
   useEffect(() => {
     if (!post || !post.published) return;
     const frSlug = post.slug;
@@ -81,15 +82,36 @@ const BlogArticlePage = () => {
     return () => { links.forEach(l => l.remove()); };
   }, [post]);
 
+  const body = post && post.published ? (isFr ? post.body : post.bodyEn) : "";
+
+  const slugify = (text: string) =>
+    text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
+
+  const tocItems = useMemo(() => {
+    if (!body) return [];
+    const items: { level: number; text: string; id: string }[] = [];
+    body.split("\n").forEach((line) => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith("## ") && !trimmed.startsWith("### ")) {
+        const text = trimmed.slice(3);
+        items.push({ level: 2, text, id: slugify(text) });
+      } else if (trimmed.startsWith("### ")) {
+        const text = trimmed.slice(4);
+        items.push({ level: 3, text, id: slugify(text) });
+      }
+    });
+    return items;
+  }, [body]);
+
+  const showToc = tocItems.filter((t) => t.level === 2).length >= 3;
+
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
   }
 
-  const isFr = lang === "fr";
   const title = isFr ? post.title : post.titleEn;
   const seoTitle = isFr ? post.seoTitle : post.seoTitleEn;
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
-  const body = isFr ? post.body : post.bodyEn;
   const category = isFr ? post.category : post.categoryEn;
   const dateStr = new Date(post.publishDate).toLocaleDateString(
     isFr ? "fr-CA" : "en-CA",
@@ -137,10 +159,14 @@ const BlogArticlePage = () => {
 
       if (line.startsWith("### ")) {
         flushList();
-        elements.push(<h3 key={i} className="mt-8 mb-3 text-lg font-semibold text-foreground">{line.slice(4)}</h3>);
+        const text = line.slice(4);
+        const id = slugify(text);
+        elements.push(<h3 key={i} id={id} className="mt-8 mb-3 text-lg font-semibold text-foreground scroll-mt-24">{text}</h3>);
       } else if (line.startsWith("## ")) {
         flushList();
-        elements.push(<h2 key={i} className="mt-10 mb-4 text-xl sm:text-2xl font-bold text-foreground">{line.slice(3)}</h2>);
+        const text = line.slice(3);
+        const id = slugify(text);
+        elements.push(<h2 key={i} id={id} className="mt-10 mb-4 text-xl sm:text-2xl font-bold text-foreground scroll-mt-24">{text}</h2>);
       } else if (line.startsWith("- ")) {
         listItems.push(line.slice(2));
       } else if (/^\d+\.\s/.test(line)) {
@@ -195,6 +221,28 @@ const BlogArticlePage = () => {
           </p>
 
           <hr className="my-8 border-border/30" />
+
+          {/* Table of Contents */}
+          {showToc && (
+            <nav className="mb-10 rounded-2xl border border-border/30 bg-secondary/20 p-6 sm:p-8">
+              <p className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mb-4">
+                {isFr ? "Dans cet article" : "In this article"}
+              </p>
+              <ol className="space-y-1.5">
+                {tocItems.filter((t) => t.level === 2).map((item, i) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="group flex items-start gap-3 rounded-lg px-3 py-1.5 text-[0.875rem] text-muted-foreground transition-colors hover:bg-accent/5 hover:text-accent"
+                    >
+                      <span className="mt-px text-[0.75rem] font-medium text-muted-foreground/40 group-hover:text-accent/60">{i + 1}.</span>
+                      <span>{item.text}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
 
           {/* Body */}
           <div className="prose-article">
