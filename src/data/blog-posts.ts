@@ -598,7 +598,9 @@ Pour un achat de 400 000 $ à Gatineau, prévoyez environ **7 000 $ à 10 000 $*
 
 ### Mon conseil
 
-La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.`,
+La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.
+
+**Lire aussi** : [Inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide) · [10 conseils pour votre premier achat](/blogue/conseils-premier-achat-maison-gatineau)`,
     bodyEn: `## Notary Fees and Closing Costs in Gatineau
 
 Buying a home is exciting — but the additional fees can catch you off guard if you don't plan for them. Here's a complete breakdown of costs to expect beyond the purchase price in Gatineau and the Outaouais.
