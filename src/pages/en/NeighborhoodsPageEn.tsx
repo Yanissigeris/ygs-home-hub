@@ -44,10 +44,10 @@ const faq = [
 const NeighborhoodsPageEn = () => (
   <>
     <PageMeta title="Gatineau Neighborhoods — Complete Guide | YGS" description="Compare Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham and more. Prices, vibe and profile of each area." />
-    <HeroSection overline="Neighborhoods · Gatineau and Outaouais" title="Neighborhoods to consider in Outaouais" subtitle="Each Gatineau neighborhood has its own personality — family-friendly, urban, nature or investment. Explore to find the one that fits you." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="Local expertise. Full transparency." heroBgImage={heroImg} />
+    <HeroSection overline="Neighborhoods · Gatineau and Outaouais" title="Neighbourhoods to consider in Outaouais" subtitle="Each Outaouais neighbourhood has its own personality — family-friendly, urban, nature or investment. Explore to find the one that fits you." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="Local expertise. Full transparency." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
-    <SectorLinks overline="Explore neighborhoods" title="All Gatineau neighborhoods" sectors={sectors} />
-    <ContentBlock narrow><SectionHeading title="Every neighborhood has its character" /><p className="prose-body mt-5">The right area depends on your budget, commute, lifestyle and family priorities. After nearly 9 years in Gatineau, I know the advantages and trade-offs of each neighborhood — and I can help you choose the right one.</p></ContentBlock>
+    <SectorLinks overline="Explore neighborhoods" title="Some Outaouais neighbourhoods" sectors={sectors} />
+    <ContentBlock narrow><SectionHeading title="Every neighborhood has its character" /><p className="prose-body mt-5">The right area depends on your budget, commute, lifestyle and family priorities. After nearly 9 years in Outaouais, I know the advantages and trade-offs of each neighborhood — and I can help you choose the right one.</p></ContentBlock>
     <LinkedCardGrid overline="Lifestyle" title="Neighborhood lifestyle guides" items={lifestyleGuides} columns={3} background="alt" />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — find the right neighborhood" text="Everything you need to know to buy in Gatineau — process, budget and neighborhoods." ctaLabel="Get the Buyer Guide" />
     <FAQSection title="Questions about neighborhoods" items={faq} />
