@@ -146,7 +146,9 @@ La période de septembre à novembre offre souvent moins de compétition entre v
 
 ### Mon conseil
 
-Il n'y a pas de « mauvais » moment pour vendre si votre propriété est bien préparée et bien positionnée. Une stratégie de mise en marché adaptée au contexte saisonnier fera la différence.`,
+Il n'y a pas de « mauvais » moment pour vendre si votre propriété est bien préparée et bien positionnée. Une stratégie de mise en marché adaptée au contexte saisonnier fera la différence.
+
+**Lire aussi** : [Home staging à Gatineau : vendre plus vite](/blogue/home-staging-vendre-plus-vite-gatineau) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
     bodyEn: `## When Is the Best Time to Sell in Gatineau?
 
 Timing can make a significant difference in your property's sale price in Gatineau. Here's what local data reveals.
