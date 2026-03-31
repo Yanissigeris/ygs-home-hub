@@ -286,6 +286,7 @@ From most Gatineau neighborhoods, downtown Ottawa is accessible in 15-30 minutes
   },
   {
     slug: "investir-plex-gatineau-rentable",
+    featuredImage: blogPlexInvestment,
     slugEn: "investing-plex-gatineau-worth-it",
     title: "Investir dans un plex à Gatineau : est-ce encore rentable?",
     titleEn: "Investing in a Plex in Gatineau: Is It Still Worth It?",
