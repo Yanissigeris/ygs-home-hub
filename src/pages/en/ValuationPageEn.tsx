@@ -18,7 +18,21 @@ const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, tr
 
 const ValuationPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const success = await submit({
+      formType: "valuation", lang: "en",
+      name: fd.get("name") as string || "",
+      email: fd.get("email") as string || "",
+      phone: fd.get("phone") as string || undefined,
+      address: fd.get("address") as string || undefined,
+      message: fd.get("message") as string || undefined,
+    });
+    if (success) setSubmitted(true);
+  };
   return (
     <>
       <PageMeta title="Free Home Valuation — Gatineau | YGS" description="Get a free and accurate valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." />
