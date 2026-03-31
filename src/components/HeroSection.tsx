@@ -243,8 +243,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {secondaryCta && (
                     <Link
                       to={secondaryCta.href}
-                      className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-[#F5F1E8]/80 whitespace-nowrap"
-                      style={{ color: "hsl(200 15% 60% / 0.6)" }}
+                      className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-all duration-200 hover:text-[#F5F1E8]/90 whitespace-nowrap border-b border-current/20 pb-px hover:border-current/40"
+                      style={{ color: "hsl(200 15% 72% / 0.65)" }}
                     >
                       {secondaryCta.label}
                     </Link>
