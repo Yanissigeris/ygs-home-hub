@@ -254,7 +254,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Social proof — minimal, quiet */}
               {socialProof && (
-                <div className="mt-8 flex items-center gap-2">
+                <div className="mt-5 sm:mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <Star
