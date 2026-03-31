@@ -28,7 +28,7 @@ export interface NeighborhoodProps {
   faq: { title: string; items: { q: string; a: string }[] };
   sectors: { overline?: string; title?: string; list: { name: string; href: string; detail: string }[] };
   related: { overline?: string; title?: string; pages: { title: string; text: string; href: string }[] };
-  guide: { type: string; headline: string; text: string; ctaLabel: string; stickyLabel: string };
+  guide: { type: GuideType; headline: string; text: string; ctaLabel: string; stickyLabel: string };
   cta: { title: string; text: string; buttons: { label: string; href: string; variant?: "outline" }[]; trustLine: string };
 }
 
