@@ -28,7 +28,7 @@ export const propertiesEn: Property[] = [
     id: "20453879",
     address: "154 Boul. de Lucerne, apt. 104",
     city: "Gatineau (Hull)",
-    price: "369 900 $",
+    price: "359 900 $",
     type: "Condo — Apartment",
     bedrooms: "2",
     bathrooms: "1",
