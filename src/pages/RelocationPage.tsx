@@ -57,7 +57,7 @@ const faq = [
 
 const RelocationPage = () => (
    <>
-    <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais | YGS" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham — taxes, écoles et accompagnement immobilier personnalisé." />
+    <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais | YGS" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham — taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og-relocation.jpg" />
     <HeroSection
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"

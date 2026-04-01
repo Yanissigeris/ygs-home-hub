@@ -53,7 +53,7 @@ const faq = [
 
 const BuyerPageEn = () => (
   <>
-    <PageMeta title="Buy a Property in Gatineau | YGS" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and guidance at your pace." />
+    <PageMeta title="Buy a Property in Gatineau | YGS" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and guidance at your pace." ogImage="https://yanisgauthier.com/og-buyer.jpg" />
     <ServiceJsonLd name="Buyer Agent Service in Gatineau" description="Buyer representation service in Gatineau and Outaouais — neighborhood analysis, property search, offer strategy and full support." url="/en/buy" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First-time buyer, growing family or relocating from Ottawa — I guide you at every step to buy with confidence and clarity." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
