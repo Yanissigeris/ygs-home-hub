@@ -78,6 +78,33 @@ const PropertiesPage = () => (
           <ExternalLink className="h-4 w-4" />
         </a>
       </div>
+
+      {properties.filter(p => p.status === "sold").length > 0 && (
+        <div className="mt-16">
+          <SectionHeading
+            overline="Récemment vendues"
+            title="Propriétés vendues"
+            subtitle="Des résultats concrets pour mes clients."
+          />
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {properties.filter(p => p.status === "sold").map(property => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
+        </div>
+      )}
+      <div className="mt-8 text-center">
+        <a
+          href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+        >
+          <Home className="h-5 w-5" />
+          Voir toutes mes propriétés sur RE/MAX
+          <ExternalLink className="h-4 w-4" />
+        </a>
+      </div>
     </ContentBlock>
 
     <ContentBlock narrow>
