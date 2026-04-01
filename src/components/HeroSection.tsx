@@ -58,16 +58,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       [ref]
     );
 
+    /* Lazy-load video: wait until section is near-viewport, then set src */
     React.useEffect(() => {
       if (!heroVideo) return;
+      const section = sectionRef.current;
       const el = videoRef.current;
-      if (el && !el.src) {
-        const raf = requestAnimationFrame(() => {
-          el.src = heroVideo;
-          el.load();
-        });
-        return () => cancelAnimationFrame(raf);
-      }
+      if (!section || !el) return;
+      const io = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            io.disconnect();
+            el.src = heroVideo;
+            el.load();
+          }
+        },
+        { rootMargin: "200px" }
+      );
+      io.observe(section);
+      return () => io.disconnect();
     }, [heroVideo]);
 
     React.useEffect(() => {
