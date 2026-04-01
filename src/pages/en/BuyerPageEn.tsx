@@ -15,6 +15,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import CalculatorsSection from "@/components/CalculatorsSection";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.webp";
 
@@ -64,6 +65,7 @@ const BuyerPageEn = () => (
     <SectorLinks overline="Neighborhoods" title="Areas to compare" sectors={sectors} />
     <GuideInlineCTAEn guideType="buyer_guide" headline="First time buying? Get the complete guide." text="The buying process in Québec explained simply — from search to notary, step by step." ctaLabel="Get the Buyer Guide" />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <CalculatorsSection />
     <ReviewSection overline="Buyer testimonials" title="They bought with confidence" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the step that best fits your situation." steps={nextSteps} />
     <CTASection dark title="Let's talk about your buying project" text="Budget, neighborhoods, strategy — we clarify everything before starting visits." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />

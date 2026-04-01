@@ -15,6 +15,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
+import CalculatorsSection from "@/components/CalculatorsSection";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buyer.webp";
 
@@ -115,6 +116,8 @@ const BuyerPage = () => (
     />
 
     <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+
+    <CalculatorsSection />
 
     <ReviewSection
       overline="Témoignages acheteurs"
