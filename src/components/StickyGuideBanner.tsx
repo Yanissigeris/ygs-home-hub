@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModal, { type GuideType } from "@/components/GuideModal";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface StickyGuideBannerProps {
   guideType: GuideType;
