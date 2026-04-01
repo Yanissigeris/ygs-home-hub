@@ -132,6 +132,17 @@ const MortgageCalculator = () => {
               {downMode}
             </button>
           </div>
+          <Slider
+            min={downMode === "%" ? 0 : 0}
+            max={downMode === "%" ? 100 : price}
+            step={downMode === "%" ? 1 : 1000}
+            value={[downRaw]}
+            onValueChange={([v]) => setDownRaw(v)}
+            className="mt-2"
+          />
+          <p className="text-[0.75rem] text-muted-foreground">
+            {downMode === "%" ? fmt(downPayment) : `${price > 0 ? Math.round((downRaw / price) * 100) : 0} %`}
+          </p>
         </div>
 
         {/* Rate */}
