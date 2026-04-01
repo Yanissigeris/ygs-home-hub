@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BookOpen, ArrowRight, Lock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModalEn, { type GuideType } from "@/components/en/GuideModalEn";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface GuideInlineCTAEnProps {
   guideType: GuideType;
@@ -41,7 +42,7 @@ const GuideInlineCTAEn = ({ guideType, headline, text, ctaLabel = "Get the free 
                 </div>
               </div>
               <div className="shrink-0">
-                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => setOpen(true)}>
+                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => { trackCTAClick(ctaLabel, "guide-inline-cta"); setOpen(true); }}>
                   {ctaLabel}<ArrowRight size={14} className="ml-1.5" />
                 </Button>
               </div>

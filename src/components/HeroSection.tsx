@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { trackCTAClick } from "@/lib/analytics";
 /* Inline star SVG — keeps lucide-react out of the critical bundle */
 const StarIcon = () => (
   <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="fill-[hsl(36_50%_55%/0.7)] text-[hsl(36_50%_55%/0.7)]"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -239,6 +240,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       variant="accent"
                       className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em] text-[0.9375rem] h-[3.25rem] px-8"
                       asChild
+                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
                     >
                       <Link to={primaryCta.href}>{primaryCta.label}</Link>
                     </Button>
@@ -248,6 +250,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       to={secondaryCta.href}
                       className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-all duration-200 hover:text-[#F5F1E8]/90 whitespace-nowrap border-b border-current/20 pb-px hover:border-current/40"
                       style={{ color: "hsl(200 15% 72% / 0.65)" }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
                       {secondaryCta.label}
                     </Link>

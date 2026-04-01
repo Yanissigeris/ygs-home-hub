@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface CTASectionProps {
   overline?: string;
@@ -40,6 +41,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
               }
               className={dark && btn.variant !== "outline" ? "shadow-md" : ""}
               asChild
+              onClick={() => trackCTAClick(btn.label, "cta-section")}
             >
               <Link to={btn.href}>{btn.label === "Obtenir ma valeur" ? "Évaluation gratuite" : btn.label}</Link>
             </Button>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModal, { type GuideType } from "@/components/GuideModal";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface StickyGuideBannerProps {
   guideType: GuideType;
@@ -51,7 +52,7 @@ const StickyGuideBanner = ({ guideType, label }: StickyGuideBannerProps) => {
                   variant="accent"
                   size="sm"
                   className="shrink-0 font-semibold"
-                  onClick={() => setModalOpen(true)}
+                  onClick={() => { trackCTAClick("Recevoir", "sticky-guide-banner"); setModalOpen(true); }}
                 >
                   Recevoir
                   <ArrowRight size={13} className="ml-1" />

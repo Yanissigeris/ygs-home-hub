@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModalEn, { type GuideType } from "@/components/en/GuideModalEn";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface StickyGuideBannerEnProps {
   guideType: GuideType;
@@ -34,7 +35,7 @@ const StickyGuideBannerEn = ({ guideType, label }: StickyGuideBannerEnProps) => 
               <div className="flex items-center gap-3 rounded-2xl border border-accent/20 bg-primary px-4 py-3 shadow-[0_8px_32px_-8px_hsl(200_30%_14%/0.35)]">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/15"><BookOpen size={16} className="text-accent" /></div>
                 <p className="flex-1 text-[0.8125rem] font-medium text-primary-foreground leading-snug">{label}</p>
-                <Button variant="accent" size="sm" className="shrink-0 font-semibold" onClick={() => setModalOpen(true)}>
+                <Button variant="accent" size="sm" className="shrink-0 font-semibold" onClick={() => { trackCTAClick("Get it", "sticky-guide-banner"); setModalOpen(true); }}>
                   Get it<ArrowRight size={13} className="ml-1" />
                 </Button>
                 <button onClick={handleDismiss} className="shrink-0 rounded-lg p-1.5 text-primary-foreground/40 hover:text-primary-foreground/70 hover:bg-white/5 transition-colors" aria-label="Close">

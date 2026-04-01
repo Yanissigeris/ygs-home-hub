@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface InlineCTAProps {
   text: string;
@@ -19,7 +20,7 @@ const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonL
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
       <p>{text}</p>
-      <Button size="default" variant="hero" asChild>
+      <Button size="default" variant="hero" asChild onClick={() => trackCTAClick(buttonLabel, "inline-cta")}>
         <Link to={href}>{buttonLabel}</Link>
       </Button>
     </motion.div>
