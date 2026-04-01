@@ -81,6 +81,7 @@ const SiteLayout = () => (
     <BreadcrumbJsonLd />
     <UtilityBar />
     <SiteHeader />
+    <VisibleBreadcrumb />
     <main className="flex-1">
       <React.Suspense fallback={<PageFallback />}>
         <Outlet />
