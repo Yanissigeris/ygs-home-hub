@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormSubmission, trackGuideRequest } from "@/lib/analytics";
 
 interface FormData {
   formType: "contact" | "valuation" | "guide";
@@ -37,6 +38,14 @@ export function useFormSubmit() {
           variant: "destructive",
         });
         return false;
+      }
+
+      // Track successful submission in GA4
+      trackFormSubmission(data.formType, {
+        ...(data.guideTitle ? { guide_title: data.guideTitle } : {}),
+      });
+      if (data.formType === "guide" && data.guideTitle) {
+        trackGuideRequest(data.guideTitle);
       }
 
       return true;
