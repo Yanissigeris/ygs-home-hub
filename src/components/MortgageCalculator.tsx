@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -131,12 +132,31 @@ const MortgageCalculator = () => {
               {downMode}
             </button>
           </div>
+          <Slider
+            min={downMode === "%" ? 0 : 0}
+            max={downMode === "%" ? 100 : price}
+            step={downMode === "%" ? 1 : 1000}
+            value={[downRaw]}
+            onValueChange={([v]) => setDownRaw(v)}
+            className="mt-2"
+          />
+          <p className="text-[0.75rem] text-muted-foreground">
+            {downMode === "%" ? fmt(downPayment) : `${price > 0 ? Math.round((downRaw / price) * 100) : 0} %`}
+          </p>
         </div>
 
         {/* Rate */}
         <div className="space-y-1.5">
           <Label>{l.rate}</Label>
-          <Input type="number" min={0} max={20} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
+          <Input type="number" min={0} max={15} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
+          <Slider
+            min={0}
+            max={15}
+            step={0.05}
+            value={[rate]}
+            onValueChange={([v]) => setRate(v)}
+            className="mt-2"
+          />
         </div>
 
         {/* Amort */}
