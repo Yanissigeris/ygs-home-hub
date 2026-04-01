@@ -52,7 +52,7 @@ const StickyGuideBanner = ({ guideType, label }: StickyGuideBannerProps) => {
                   variant="accent"
                   size="sm"
                   className="shrink-0 font-semibold"
-                  onClick={() => setModalOpen(true)}
+                  onClick={() => { trackCTAClick("Recevoir", "sticky-guide-banner"); setModalOpen(true); }}
                 >
                   Recevoir
                   <ArrowRight size={13} className="ml-1" />

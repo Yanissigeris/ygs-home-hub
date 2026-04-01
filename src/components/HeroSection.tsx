@@ -250,6 +250,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       to={secondaryCta.href}
                       className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-all duration-200 hover:text-[#F5F1E8]/90 whitespace-nowrap border-b border-current/20 pb-px hover:border-current/40"
                       style={{ color: "hsl(200 15% 72% / 0.65)" }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
                       {secondaryCta.label}
                     </Link>

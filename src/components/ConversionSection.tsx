@@ -68,7 +68,7 @@ const ConversionSection = React.forwardRef<HTMLElement>((_, ref) =>
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
       
-        <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild>
+        <Button size="lg" variant="accent" className="font-semibold shadow-sm" asChild onClick={() => trackCTAClick("Commencer par une évaluation gratuite", "conversion-section")}>
           <Link to="/evaluation-gratuite-gatineau">
             Commencer par une évaluation gratuite
             <ArrowRight size={15} className="ml-1" />

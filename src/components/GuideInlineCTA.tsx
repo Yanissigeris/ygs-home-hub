@@ -54,7 +54,7 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel = "Recevoir le gui
                   variant="accent"
                   size="lg"
                   className="font-semibold w-full sm:w-auto"
-                  onClick={() => setOpen(true)}
+                  onClick={() => { trackCTAClick(ctaLabel, "guide-inline-cta"); setOpen(true); }}
                 >
                   {ctaLabel}
                   <ArrowRight size={14} className="ml-1.5" />

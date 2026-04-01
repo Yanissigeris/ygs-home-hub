@@ -59,6 +59,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                     ? "border-accent/25 ring-1 ring-accent/8"
                     : "border-border/40"
                 }`}
+                onClick={() => trackCTAClick(step.cta, "funnel-next-step")}
               >
                 <h3 className="text-[1.0625rem] font-semibold group-hover:text-primary transition-colors">
                   {step.title}
