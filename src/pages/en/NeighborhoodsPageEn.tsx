@@ -43,7 +43,7 @@ const faq = [
 
 const NeighborhoodsPageEn = () => (
   <>
-    <PageMeta title="Gatineau Neighborhoods — Complete Guide | YGS" description="Compare Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham and more. Prices, vibe and profile of each area." />
+    <PageMeta title="Gatineau Neighborhoods — Complete Guide | YGS" description="Compare Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham and more. Prices, vibe and profile of each area." ogImage="https://yanisgauthier.com/og-neighborhoods.jpg" />
     <HeroSection overline="Neighborhoods · Gatineau and Outaouais" title="Neighbourhoods to consider in Outaouais" subtitle="Each Outaouais neighbourhood has its own personality — family-friendly, urban, nature or investment. Explore to find the one that fits you." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="Local expertise. Full transparency." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <SectorLinks overline="Explore neighborhoods" title="Some Outaouais neighbourhoods" sectors={sectors} />
