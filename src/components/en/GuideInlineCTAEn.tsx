@@ -42,7 +42,7 @@ const GuideInlineCTAEn = ({ guideType, headline, text, ctaLabel = "Get the free 
                 </div>
               </div>
               <div className="shrink-0">
-                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => setOpen(true)}>
+                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => { trackCTAClick(ctaLabel, "guide-inline-cta"); setOpen(true); }}>
                   {ctaLabel}<ArrowRight size={14} className="ml-1.5" />
                 </Button>
               </div>
