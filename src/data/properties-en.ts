@@ -22,7 +22,7 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
-    status: "active",
+    status: "sold",
   },
   {
     id: "20453879",
