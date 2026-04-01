@@ -42,4 +42,24 @@ export const propertiesEn: Property[] = [
     mls: "20453879",
     status: "active",
   },
+  {
+    id: "15163372",
+    address: "32 Rue de Laperrière",
+    city: "Gatineau (Limbour)",
+    price: "649 900 $",
+    type: "Two-storey house",
+    bedrooms: "4",
+    bathrooms: "2",
+    powderRooms: "1",
+    area: "1 639 sq ft",
+    lotSize: "47 271 sq ft",
+    yearBuilt: "1993",
+    description:
+      "Stunning turnkey property on a vast one-acre lot, backing onto Touraine golf course. 4 bedrooms, 2 bathrooms, garage, open-concept kitchen/dining, two living rooms including one with electric fireplace. Basement with large family room.",
+    image: property15163372,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/32-rue-de-laperriere/15163372",
+    mls: "15163372",
+    status: "active",
+  },
 ];
