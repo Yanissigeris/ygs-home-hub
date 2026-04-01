@@ -53,6 +53,15 @@ const PropertiesPageEn = () => (
           <Home className="h-5 w-5" />See all my properties on RE/MAX<ExternalLink className="h-4 w-4" />
         </a>
       </div>
+
+      {properties.filter(p => p.status === "sold").length > 0 && (
+        <div className="mt-16">
+          <SectionHeading overline="Recently sold" title="Sold properties" subtitle="Proven results for my clients." />
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {properties.filter(p => p.status === "sold").map(property => (<PropertyCard key={property.id} property={property} />))}
+          </div>
+        </div>
+      )}
     </ContentBlock>
 
     <ContentBlock narrow>
