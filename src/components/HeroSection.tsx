@@ -240,6 +240,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       variant="accent"
                       className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em] text-[0.9375rem] h-[3.25rem] px-8"
                       asChild
+                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
                     >
                       <Link to={primaryCta.href}>{primaryCta.label}</Link>
                     </Button>
