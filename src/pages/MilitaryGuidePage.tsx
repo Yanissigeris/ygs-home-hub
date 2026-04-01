@@ -58,7 +58,7 @@ const MilitaryGuidePage = () => (
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
-          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" />
+          <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" loading="lazy" />
         </div>
       </div>
     </section>
