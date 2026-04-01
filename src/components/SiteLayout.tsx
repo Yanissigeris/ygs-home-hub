@@ -4,7 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import JsonLdSchema from "@/components/JsonLdSchema";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
+
 import { Outlet } from "react-router-dom";
 
 const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
@@ -91,7 +91,7 @@ const SiteLayout = () => (
     <React.Suspense fallback={null}>
       <SiteFooter />
     </React.Suspense>
-    <StickyMobileCTA />
+    
   </div>
 );
 
