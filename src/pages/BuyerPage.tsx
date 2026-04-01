@@ -117,6 +117,8 @@ const BuyerPage = () => (
 
     <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
 
+    <CalculatorsSection />
+
     <ReviewSection
       overline="Témoignages acheteurs"
       title="Ils ont acheté en toute confiance"
