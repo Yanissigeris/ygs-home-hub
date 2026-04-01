@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface CTASectionProps {
   overline?: string;
