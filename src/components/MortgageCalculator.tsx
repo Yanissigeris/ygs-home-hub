@@ -148,7 +148,15 @@ const MortgageCalculator = () => {
         {/* Rate */}
         <div className="space-y-1.5">
           <Label>{l.rate}</Label>
-          <Input type="number" min={0} max={20} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
+          <Input type="number" min={0} max={15} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
+          <Slider
+            min={0}
+            max={15}
+            step={0.05}
+            value={[rate]}
+            onValueChange={([v]) => setRate(v)}
+            className="mt-2"
+          />
         </div>
 
         {/* Amort */}
