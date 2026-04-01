@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BookOpen, ArrowRight, Lock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModalEn, { type GuideType } from "@/components/en/GuideModalEn";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface GuideInlineCTAEnProps {
   guideType: GuideType;
