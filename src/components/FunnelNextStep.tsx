@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface FunnelStep {
   title: string;
