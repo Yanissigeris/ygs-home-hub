@@ -163,6 +163,14 @@ const MortgageCalculator = () => {
         <div className="space-y-1.5">
           <Label>{l.amort}</Label>
           <Input type="number" min={1} max={30} step={1} value={amort} onChange={(e) => setAmort(Number(e.target.value))} />
+          <Slider
+            min={1}
+            max={30}
+            step={1}
+            value={[amort]}
+            onValueChange={([v]) => setAmort(v)}
+            className="mt-2"
+          />
         </div>
 
         {/* Frequency */}
