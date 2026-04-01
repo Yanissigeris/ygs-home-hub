@@ -40,6 +40,14 @@ export function useFormSubmit() {
         return false;
       }
 
+      // Track successful submission in GA4
+      trackFormSubmission(data.formType, {
+        ...(data.guideTitle ? { guide_title: data.guideTitle } : {}),
+      });
+      if (data.formType === "guide" && data.guideTitle) {
+        trackGuideRequest(data.guideTitle);
+      }
+
       return true;
     } catch (err) {
       console.error("Form submission error:", err);
