@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
@@ -58,6 +59,7 @@ const faq = [
 const RelocationPage = () => (
    <>
     <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais | YGS" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham — taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og-relocation.jpg" />
+    <ServiceJsonLd name="Service de relocalisation immobilière Ottawa–Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau — recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
