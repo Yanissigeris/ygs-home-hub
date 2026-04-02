@@ -40,6 +40,13 @@ const faq = [
   { q: "Is the Plateau a good choice for a family?", a: "It's one of the most popular areas for families — recent homes, parks, schools and a young community." },
   { q: "Are prices increasing in the Plateau?", a: "The Plateau is experiencing strong growth. Contact me for the latest data in your sub-sector." },
   { q: "Are there many new constructions?", a: "Yes — several recent developments offer new homes and semis with warranty." },
+  { q: "Why work with a real estate broker in the Plateau?", a: "A local broker knows the developments, prices by street and market trends in the Plateau. That helps you buy at the right price or sell at the best time." },
+  { q: "What is the average home price in the Plateau?", a: "It depends on property type and year of construction. Contact me for an analysis based on recent sales in your Plateau area." },
+  { q: "Are there new homes available in the Plateau?", a: "Yes, several builders offer new homes with warranty. I can guide you toward projects that match your budget." },
+  { q: "Is the Plateau good for a first purchase?", a: "Very good — recent constructions offer excellent value, and the area is well-served by schools and services." },
+  { q: "How do I get a home valuation in the Plateau?", a: "I prepare a free valuation based on recent comparable sales on your street. It's confidential and no commitment." },
+  { q: "Are there condos in the Plateau?", a: "Yes, you'll find condos and townhomes, especially in recent developments. It's a popular option for first-time buyers." },
+  { q: "What services are available in the Plateau?", a: "Elementary and secondary schools, parks, grocery stores, pharmacies and quick access to Gatineau shopping centers. The area is complete for families." },
 ];
 
 const relatedSectors = [

@@ -47,9 +47,16 @@ const sellerReasons = [
 ];
 
 const faq = [
-  { q: "Is Buckingham far from everything?", a: "No — it's 25-35 minutes from Ottawa and downtown Gatineau. All essential services are available locally." },
-  { q: "Will prices keep going up?", a: "The area is growing with new developments. Contact me for an up-to-date analysis." },
+  { q: "Is Buckingham far from everything?", a: "No — it's 25-35 minutes from Ottawa and downtown Gatineau via Highway 50. All essential services are available locally." },
+  { q: "Will prices keep going up?", a: "The area is growing with new developments and increasing demand. Contact me for an up-to-date analysis." },
   { q: "Are there good investments in Buckingham?", a: "Yes — low entry prices with growing rental demand. Good option for a first investment." },
+  { q: "Why buy in Buckingham instead of Gatineau?", a: "For the space, affordable prices and nature. You get a bigger lot and more spacious home for the same budget as in the city." },
+  { q: "Is Buckingham good for a first purchase?", a: "Excellent — entry prices are the lowest in the region. It's often the best option to access homeownership in Outaouais." },
+  { q: "Are there schools in Buckingham?", a: "Yes, French elementary and secondary schools. English options are also available in nearby areas." },
+  { q: "How do I sell a house in Buckingham?", a: "Realistic valuation, strategic positioning and targeted marketing to attract buyers seeking space and nature." },
+  { q: "Is the Lièvre River an asset?", a: "Absolutely — waterfront properties are highly sought after, and the river offers boating, fishing and beautiful scenery." },
+  { q: "What services are available in Buckingham?", a: "Schools, groceries, restaurants, health services and a community center. The downtown has a lot of character." },
+  { q: "How do I get a home valuation in Buckingham?", a: "I prepare a free valuation based on recent comparable sales in your area. It's confidential and no commitment." },
 ];
 
 const relatedSectors = [

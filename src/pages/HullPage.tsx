@@ -28,9 +28,16 @@ const HullPage = () => (
     faq={{
       title: "Questions sur Hull",
       items: [
-        { q: "Hull est-il un bon secteur pour investir?", a: "Oui — prix d'entrée encore accessibles, forte demande locative et revitalisation en cours." },
-        { q: "Quel est le prix moyen d'un condo à Hull?", a: "Ça varie beaucoup selon l'emplacement et l'état. Contactez-moi pour une analyse à jour." },
-        { q: "Hull est-il sécuritaire?", a: "Hull vit une renaissance — de nouveaux projets, restaurants et communauté dynamique." },
+        { q: "Hull est-il un bon secteur pour investir?", a: "Oui — prix d'entrée encore accessibles, forte demande locative et revitalisation en cours avec le projet Zibi et les nouveaux développements." },
+        { q: "Quel est le prix moyen d'un condo à Hull?", a: "Ça varie beaucoup selon l'emplacement et l'état. Contactez-moi pour une analyse à jour basée sur les ventes récentes dans votre secteur de Hull." },
+        { q: "Hull est-il sécuritaire?", a: "Hull vit une renaissance — nouveaux projets résidentiels, restaurants, communauté dynamique. Le secteur s'améliore d'année en année." },
+        { q: "Pourquoi choisir un courtier immobilier à Hull?", a: "Un courtier qui connaît Hull comprend les réalités locales — plex, zonage, potentiel locatif, projets de revitalisation. Ça vous permet de prendre une décision éclairée." },
+        { q: "Combien rapporte un plex à Hull?", a: "Le rendement dépend du prix d'achat, des loyers et des dépenses. Je prépare une analyse de rendement gratuite pour chaque plex qui vous intéresse." },
+        { q: "Hull est-il proche d'Ottawa?", a: "Très proche — quelques minutes à pied ou en vélo du centre-ville d'Ottawa via les ponts Alexandra et du Portage. C'est le secteur le plus proche d'Ottawa en Outaouais." },
+        { q: "Y a-t-il des maisons unifamiliales à Hull?", a: "Oui, on trouve des maisons de caractère dans les rues résidentielles. Hull offre aussi des condos, des plex et des maisons de ville." },
+        { q: "Le projet Zibi va-t-il faire monter les prix?", a: "Zibi et les développements connexes augmentent l'attrait de Hull. Les propriétés bien situées bénéficient déjà de cette transformation." },
+        { q: "Comment vendre une propriété à Hull?", a: "Évaluation basée sur les comparables récents, positionnement stratégique et mise en marché ciblée — incluant les acheteurs d'Ottawa et les investisseurs." },
+        { q: "Hull est-il bon pour un premier achat?", a: "Excellent — les prix sont plus accessibles qu'à Ottawa ou Aylmer, le secteur est central et bien desservi en transport. Idéal pour entrer sur le marché." },
       ],
     }}
     sectors={{ list: [
