@@ -229,5 +229,6 @@ const ValuationPage = () => {
       <FAQSection title="Questions sur l'évaluation" items={valuationFaq} />
     </>
   );
+};
 
 export default ValuationPage;
