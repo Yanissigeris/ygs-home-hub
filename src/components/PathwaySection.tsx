@@ -22,7 +22,7 @@ const pathways = [
   },
   {
     title: "Acheter à Gatineau",
-    text: "Aylmer, Hull, Plateau ou Buckingham — les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
+    text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
     cta: "Explorer l'achat",
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
