@@ -83,7 +83,7 @@ const AylmerPageEn = () => (
       </div>
     </ImageTextSplit>
     <CardGrid overline="For who" title="Aylmer is ideal for…" items={profiles} background="alt" />
-    <InlineCTA text="Own property in Aylmer? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Own property in Aylmer? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation-aylmer" />
     <FAQSection title="Questions about Aylmer" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
