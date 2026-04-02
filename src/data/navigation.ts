@@ -95,6 +95,8 @@ export const footerColumns = [
       { label: "Aylmer", href: "/aylmer" },
       { label: "Hull", href: "/hull" },
       { label: "Chelsea", href: "/chelsea" },
+      { label: "Cantley", href: "/cantley" },
+      { label: "Gatineau centre", href: "/gatineau" },
       { label: "Pontiac", href: "/pontiac" },
       { label: "Tous les quartiers", href: "/quartiers-a-considerer-a-gatineau" },
     ],
@@ -109,4 +111,15 @@ export const footerColumns = [
       { label: "À propos / Contact", href: "/contact-yanis" },
     ],
   },
+];
+
+export const footerPopularLinks = [
+  { label: "Courtier immobilier Gatineau", href: "/gatineau" },
+  { label: "Courtier immobilier Aylmer", href: "/aylmer" },
+  { label: "Courtier immobilier Hull", href: "/hull" },
+  { label: "Courtier immobilier Chelsea", href: "/chelsea" },
+  { label: "Courtier immobilier Cantley", href: "/cantley" },
+  { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau" },
+  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau" },
+  { label: "Acheter à Gatineau", href: "/acheter-a-gatineau" },
 ];

@@ -86,6 +86,8 @@ export const footerColumnsEn = [
       { label: "Aylmer", href: "/en/aylmer" },
       { label: "Hull", href: "/en/hull" },
       { label: "Chelsea", href: "/en/chelsea" },
+      { label: "Cantley", href: "/en/cantley" },
+      { label: "Gatineau Centre", href: "/en/gatineau" },
       { label: "Pontiac", href: "/en/pontiac" },
       { label: "All Neighborhoods", href: "/en/neighborhoods" },
     ],
@@ -101,4 +103,14 @@ export const footerColumnsEn = [
       { label: "About / Contact", href: "/en/contact" },
     ],
   },
+];
+
+export const footerPopularLinksEn = [
+  { label: "Realtor Gatineau", href: "/en/gatineau" },
+  { label: "Real Estate Agent Aylmer", href: "/en/aylmer" },
+  { label: "Realtor Hull", href: "/en/hull" },
+  { label: "Realtor Chelsea", href: "/en/chelsea" },
+  { label: "Home Valuation Gatineau", href: "/en/home-valuation" },
+  { label: "Sell My House Gatineau", href: "/en/sell" },
+  { label: "Buy in Gatineau", href: "/en/buy" },
 ];
