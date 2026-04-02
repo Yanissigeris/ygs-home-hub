@@ -57,9 +57,10 @@ const relatedSectors = [
 
 const related = [
   { title: "Living in the Plateau — the guide", text: "Lifestyle, families and recent developments.", href: "/en/living-plateau" },
-  { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer" },
-  { title: "Buyer Guide", text: "The buying process in Québec.", href: "/en/buyer-guide" },
+  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
   { title: "Free Valuation", text: "How much is your Plateau property worth?", href: "/en/home-valuation" },
+  { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer" },
+  { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
 ];
 
 const PlateauPageEn = () => (

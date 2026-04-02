@@ -56,8 +56,9 @@ const relatedSectors = [
 ];
 
 const related = [
-  { title: "All neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods" },
+  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
   { title: "Free Valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
+  { title: "All neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods" },
   { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation" },
   { title: "Invest in Plex", text: "Analysis and investment strategy.", href: "/en/plex" },
 ];

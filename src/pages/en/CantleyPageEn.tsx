@@ -43,10 +43,11 @@ const CantleyPageEn = () => (
       { name: "Plateau", href: "/en/plateau", detail: "Families, new developments" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide" },
+      { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
       { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation" },
-      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide" },
       { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer" },
+      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Cantley", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     cta={{ title: "Buying or selling in Cantley?", text: "I know the area — let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
