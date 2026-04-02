@@ -158,6 +158,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         overline="Areas & services"
         title="Popular areas and services in Outaouais"
         links={[
+          { label: "Outaouais Real Estate Agent", href: "/en/outaouais-real-estate-agent", detail: "Full regional hub" },
           { label: "Realtor Gatineau", href: "/en/gatineau", detail: "Central, services, plex" },
           { label: "Realtor Hull", href: "/en/hull", detail: "Urban, culture, condos" },
           { label: "Realtor Aylmer", href: "/en/aylmer", detail: "Lake, families, bilingual" },
