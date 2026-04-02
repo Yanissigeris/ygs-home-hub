@@ -31,6 +31,13 @@ const ChelseaPage = () => (
         { q: "Chelsea est-il loin d'Ottawa?", a: "Non — environ 20-30 minutes par la route 5. C'est plus rapide que bien des banlieues d'Ottawa." },
         { q: "Y a-t-il des écoles à Chelsea?", a: "Oui, écoles primaires francophones et anglophones. Pour le secondaire, options à Gatineau à 15 minutes." },
         { q: "Quel type de propriétés trouve-t-on à Chelsea?", a: "Maisons unifamiliales sur grands terrains, chalets, propriétés de luxe et quelques maisons de ville. Peu de condos." },
+        { q: "Pourquoi travailler avec un courtier immobilier à Chelsea?", a: "Chelsea est un marché distinct avec ses propres comparables et ses réalités (zonage, puits, fosses septiques, terrains boisés). Un courtier local vous évite les surprises et maximise votre résultat." },
+        { q: "Combien coûte une maison à Chelsea?", a: "Les prix varient selon le type de propriété et la taille du terrain. Contactez-moi pour une analyse basée sur les ventes récentes dans votre secteur de Chelsea." },
+        { q: "Chelsea est-il un bon investissement immobilier?", a: "Oui — la demande reste forte et l'offre limitée. Les propriétés à Chelsea conservent bien leur valeur grâce à l'emplacement unique près du parc de la Gatineau." },
+        { q: "Peut-on avoir Internet haute vitesse à Chelsea?", a: "Oui, plusieurs fournisseurs offrent maintenant la fibre optique ou un service haute vitesse dans la plupart des secteurs de Chelsea." },
+        { q: "Comment vendre une maison à Chelsea?", a: "Évaluation réaliste, positionnement stratégique et mise en marché ciblée — incluant les acheteurs d'Ottawa qui cherchent la nature. Je vous accompagne de A à Z." },
+        { q: "Y a-t-il des taxes municipales élevées à Chelsea?", a: "Les taxes à Chelsea sont comparables à celles de Gatineau, avec des services adaptés au milieu semi-rural. Je peux vous fournir les chiffres exacts pour une propriété." },
+        { q: "Comment obtenir une évaluation de maison à Chelsea?", a: "Je prépare une évaluation gratuite basée sur les ventes comparables récentes dans votre secteur. C'est confidentiel et sans engagement." },
       ],
     }}
     sectors={{ list: [
