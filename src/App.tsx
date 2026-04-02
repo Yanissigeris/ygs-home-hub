@@ -59,6 +59,7 @@ const MassonAngersPage = React.lazy(() => import("./pages/MassonAngersPage"));
 const PontiacPage = React.lazy(() => import("./pages/PontiacPage"));
 const CoteDazurPage = React.lazy(() => import("./pages/CoteDazurPage"));
 const LimbourPage = React.lazy(() => import("./pages/LimbourPage"));
+const OutaouaisHubPage = React.lazy(() => import("./pages/OutaouaisHubPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
@@ -119,6 +120,7 @@ const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageE
 const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
 const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
 const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
+const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
 
 
 
@@ -182,6 +184,7 @@ const routeTree = React.createElement(
       <Route path="/merci" element={<ThankYouPage />} />
       <Route path="/merci-evaluation" element={<ThankYouValuationPage />} />
       <Route path="/contact-yanis" element={<ContactPage />} />
+      <Route path="/courtier-immobilier-outaouais" element={<OutaouaisHubPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
@@ -232,6 +235,7 @@ const routeTree = React.createElement(
       <Route path="/en/pontiac" element={<PontiacPageEn />} />
       <Route path="/en/cote-dazur" element={<CoteDazurPageEn />} />
       <Route path="/en/limbour" element={<LimbourPageEn />} />
+      <Route path="/en/outaouais-real-estate-agent" element={<OutaouaisHubPageEn />} />
       <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />

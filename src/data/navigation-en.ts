@@ -106,6 +106,7 @@ export const footerColumnsEn = [
 ];
 
 export const footerPopularLinksEn = [
+  { label: "Outaouais Real Estate Agent", href: "/en/outaouais-real-estate-agent" },
   { label: "Realtor Gatineau", href: "/en/gatineau" },
   { label: "Real Estate Agent Aylmer", href: "/en/aylmer" },
   { label: "Realtor Hull", href: "/en/hull" },

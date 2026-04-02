@@ -114,6 +114,7 @@ export const footerColumns = [
 ];
 
 export const footerPopularLinks = [
+  { label: "Courtier immobilier Outaouais", href: "/courtier-immobilier-outaouais" },
   { label: "Courtier immobilier Gatineau", href: "/gatineau" },
   { label: "Courtier immobilier Aylmer", href: "/aylmer" },
   { label: "Courtier immobilier Hull", href: "/hull" },
