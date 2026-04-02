@@ -60,12 +60,13 @@ const ValuationAylmerPageEn = () => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget as HTMLFormElement);
     const ok = await submit({
+      formType: "valuation",
+      lang: "en",
       name: fd.get("name") as string,
       email: fd.get("email") as string,
       phone: (fd.get("phone") as string) || "",
       address: fd.get("address") as string,
-      message: (fd.get("message") as string) || "",
-      source: "valuation-aylmer-en",
+      message: `[Aylmer] ${(fd.get("message") as string) || ""}`,
     });
     if (ok) setSubmitted(true);
   };
