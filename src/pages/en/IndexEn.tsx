@@ -94,7 +94,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </section>
 
     <React.Suspense fallback={null}>
-      <SocialProofStrip stats={socialStatsEn} testimonials={socialTestimonialsEn} />
+      <SocialProofStrip stats={socialStatsEn} />
 
       {/* Pathway Section */}
       <section className="section-padding bg-background">
