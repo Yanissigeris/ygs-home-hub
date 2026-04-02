@@ -27,6 +27,12 @@ const tools = [
   { icon: FileText, title: "Analyse plex", text: "Revenus, dépenses et rendement de votre plex.", cta: "Recevoir une analyse", href: "/analyse-plex-gatineau" },
 ];
 
+const trustPages = [
+  { icon: HelpCircle, title: "Combien coûte un courtier?", text: "Comment fonctionne la rémunération d'un courtier immobilier au Québec.", cta: "Lire l'article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: CheckCircle, title: "Comment choisir un courtier", text: "Les critères essentiels pour bien choisir votre courtier immobilier.", cta: "Lire l'article", href: "/comment-choisir-un-courtier-immobilier" },
+  { icon: Search, title: "Vérifier un courtier (OACIQ)", text: "Comment vérifier le permis et les antécédents d'un courtier au Québec.", cta: "Lire l'article", href: "/verifier-un-courtier-immobilier-oaciq" },
+];
+
 const trustItems = [
   { icon: Clock, label: "Près de 9 ans en Outaouais" },
   { icon: Award, label: "Club Platine · Temple de la renommée" },
