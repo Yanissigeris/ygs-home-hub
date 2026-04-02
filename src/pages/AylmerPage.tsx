@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-aylmer.webp";
 
 const AylmerPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Aylmer — Guide de quartier Gatineau | YGS"
-    metaDesc="Vivre, acheter ou vendre à Aylmer, Gatineau. Lac Deschênes, parc de la Gatineau, écoles bilingues et communauté — guide complet par un courtier local."
+    seoTitle="Courtier immobilier Aylmer · Gatineau | YGS"
+    metaDesc="Courtier immobilier à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles bilingues — accompagnement achat et vente par un courtier local."
     jsonLd={{ name: "Aylmer", description: "Courtier immobilier spécialisé à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles et communauté.", lat: 45.3945, lng: -75.8486, url: "/aylmer" }}
     hero={{ overline: "Guide de quartier · Aylmer", title: "Vivre, acheter ou vendre à Aylmer", subtitle: "Lac Deschênes, parcs, écoles et communauté — Aylmer offre un cadre de vie exceptionnel à deux pas d'Ottawa.", image: heroImg }}
     trustSpecialty="Spécialiste Aylmer et environs"
