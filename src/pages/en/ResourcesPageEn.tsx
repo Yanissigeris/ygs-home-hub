@@ -48,6 +48,7 @@ const ResourcesPageEn = () => (
     <TrustMiniStrip items={trustItems} />
     <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />
+    <LinkedCardGrid overline="Trust" title="Understanding real estate brokerage" items={trustPages} columns={3} />
     <GuideOffersSectionEn />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
