@@ -143,7 +143,7 @@ const HullPageEn = () => (
       title="Buyer, seller or investor in Hull?"
       text="I can help you see clearly — whether you're buying, selling or analyzing a plex in the area."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
+        { label: "Home valuation Hull", href: "/en/home-valuation-hull" },
         { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" },
       ]}
       trustLine="I give you the numbers — you decide with full clarity."
