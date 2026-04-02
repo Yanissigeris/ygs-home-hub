@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-cantley.jpg";
 
 const CantleyPageEn = () => (
   <NeighborhoodTemplate
-    seoTitle="Cantley QC — Neighborhood Guide | YGS"
-    metaDesc="Buy, sell or live in Cantley, Quebec. Rolling hills, large lots and rural tranquility — 20 minutes from Gatineau."
+    seoTitle="Real Estate Broker Cantley · Outaouais | YGS"
+    metaDesc="Real estate broker in Cantley, QC. Large lots, rolling hills and rural living — 20 minutes from Gatineau. Buy or sell with a local specialist."
     jsonLd={{ name: "Cantley", description: "Real estate broker in Cantley. Rolling hills, large lots and rural living near Gatineau.", lat: 45.5056, lng: -75.7833, url: "/en/cantley" }}
     hero={{ overline: "Neighborhood Guide · Cantley", title: "Buy, Sell or Live in Cantley", subtitle: "Rolling green hills, large lots and rural living — 20 minutes from downtown Gatineau.", image: heroImg }}
     trustSpecialty="Cantley & area specialist"
