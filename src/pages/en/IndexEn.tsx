@@ -146,7 +146,13 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
+      <hr className="section-divider" />
+
+      <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
+
+      <hr className="section-divider" />
+
+      <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" teaserCount={3} seeAllLabel="All neighborhoods" seeAllHref="/en/neighborhoods" />
 
       <hr className="section-divider" />
 
@@ -183,8 +189,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       />
 
       <hr className="section-divider" />
-
-      <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
 
       <CTASection
         dark
