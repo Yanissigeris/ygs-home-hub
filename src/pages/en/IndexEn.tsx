@@ -144,7 +144,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         </div>
       </section>
 
-      <hr className="section-divider" />
 
       <hr className="section-divider" />
 

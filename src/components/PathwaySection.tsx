@@ -32,7 +32,7 @@ const pathways = [
   },
   {
     title: "Plex & investissement",
-    text: "Rendement, valeur marchande et timing — les vrais chiffres du marché locatif en Outaouais avant la décision.",
+    text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.",
     cta: "Recevoir une analyse",
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
