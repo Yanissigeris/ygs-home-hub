@@ -101,6 +101,18 @@ const ValuationPageEn = () => {
       </section>
       <BenefitsList overline="What you receive" title="Your valuation includes" items={benefits} />
       <FunnelNextStep overline="What's next?" title="After your valuation" subtitle="You'll have the numbers. Here are the options to go further." steps={afterSteps} background="alt" />
+      <RelatedPages
+        overline="Also worth reading"
+        title="Related resources"
+        pages={[
+          { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell" },
+          { title: "Realtor Aylmer", text: "Market and neighborhoods.", href: "/en/aylmer" },
+          { title: "Realtor Hull", text: "Plex, condos and homes.", href: "/en/hull" },
+          { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea" },
+          { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+        ]}
+        background="alt"
+      />
       <FAQSection title="Valuation questions" items={valuationFaq} />
     </>
   );
