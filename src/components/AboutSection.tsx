@@ -55,7 +55,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
           </span>
         </div>
 
-        <Button className="mt-7 sm:mt-10" size="lg" asChild>
+        <Button className="mt-6 sm:mt-8" size="lg" asChild>
           <Link to="/contact-yanis">En savoir plus</Link>
         </Button>
       </motion.div>

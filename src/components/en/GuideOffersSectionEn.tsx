@@ -12,11 +12,11 @@ const GuideOffersSectionEn = ({ background = "default" }: Props) => (
         subtitle="Comprehensive resources to guide you at every step — free, no commitment, delivered by email."
         centered
       />
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <GuideOfferBlockEn guideType="seller_guide" title="Seller Guide" subtitle="Pricing, preparation, marketing and negotiation — everything to sell at the best price." />
-        <GuideOfferBlockEn guideType="buyer_guide" title="Buyer Guide" subtitle="The buying process in Québec explained simply, from search to notary." />
-        <GuideOfferBlockEn guideType="investor_guide" title="Investor Guide" subtitle="Returns, plex analysis and acquisition strategy for investing in Gatineau." />
-        <GuideOfferBlockEn guideType="relocation_guide" title="Relocation Guide" subtitle="A clear guide to understanding a purchase in Gatineau from Ottawa or elsewhere." />
+      <div className="mt-6 sm:mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <GuideOfferBlockEn guideType="seller_guide" title="Seller Guide" subtitle="Sell at the best price — pricing, marketing, negotiation." />
+        <GuideOfferBlockEn guideType="buyer_guide" title="Buyer Guide" subtitle="The Québec buying process, from search to notary." />
+        <GuideOfferBlockEn guideType="investor_guide" title="Investor Guide" subtitle="Returns, plex analysis and investing in Gatineau." />
+        <GuideOfferBlockEn guideType="relocation_guide" title="Relocation Guide" subtitle="Buying in Gatineau from Ottawa or elsewhere." />
       </div>
     </div>
   </section>

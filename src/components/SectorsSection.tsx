@@ -12,7 +12,7 @@ const sectors = [
 
 const SectorsSection = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
-    <SectorLinks overline="Gatineau et environs" title="Secteurs à surveiller" sectors={sectors} background="alt" />
+    <SectorLinks overline="Gatineau et environs" title="Secteurs à surveiller" sectors={sectors} background="alt" teaserCount={3} seeAllLabel="Voir tous les quartiers" seeAllHref="/quartiers-gatineau" />
   </div>
 ));
 
