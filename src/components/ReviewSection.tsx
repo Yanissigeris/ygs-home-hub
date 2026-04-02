@@ -1,5 +1,7 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import ReviewCard from "@/components/ReviewCard";
 import type { Review } from "@/data/reviews";
 
@@ -10,6 +12,8 @@ interface ReviewSectionProps {
   variant?: "compact" | "full";
   background?: "default" | "alt";
   columns?: 2 | 3;
+  reviewsPageLabel?: string;
+  reviewsPageHref?: string;
 }
 
 const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
@@ -20,6 +24,8 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
     variant = "compact",
     background = "default",
     columns = reviews.length >= 3 ? 3 : 2,
+    reviewsPageLabel,
+    reviewsPageHref,
   }, ref) => (
     <section ref={ref} className={`section-padding ${background === "alt" ? "bg-secondary/20" : "bg-background"}`}>
       <div className="section-container">
@@ -38,6 +44,14 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
             <ReviewCard key={review.id} review={review} variant={variant} index={i} />
           ))}
         </div>
+        {reviewsPageHref && reviewsPageLabel && (
+          <div className="mt-5 text-center">
+            <Link to={reviewsPageHref} className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary hover:underline">
+              {reviewsPageLabel}
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   ),

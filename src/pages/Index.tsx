@@ -40,7 +40,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Votre courtier immobilier en Outaouais"
       subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      secondaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-video-compressed.mp4"
       heroVideoPoster="/hero-video-poster.webp"
@@ -67,6 +67,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         title="Ce que disent mes clients"
         reviews={homepageReviews}
         columns={3}
+        reviewsPageLabel="Voir tous les témoignages"
+        reviewsPageHref="/temoignages"
       />
 
       <hr className="section-divider" />

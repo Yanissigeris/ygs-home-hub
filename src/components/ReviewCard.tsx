@@ -19,7 +19,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
       transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
-      <div className="card-elevated border border-border/40 bg-card p-6 sm:p-7 h-full flex flex-col">
+      <div className="card-elevated border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col">
         <div className="mb-4 flex gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star key={i} size={13} className="fill-accent text-accent" />
@@ -32,7 +32,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
           </p>
         </blockquote>
 
-        <div className="mt-5 border-t border-border/30 pt-4">
+        <div className="mt-4 border-t border-border/30 pt-3">
           <p className="text-[0.875rem] font-semibold text-foreground">{review.name}</p>
           {review.location && <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60">{review.location}</p>}
         </div>

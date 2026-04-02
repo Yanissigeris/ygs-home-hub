@@ -12,7 +12,7 @@ import cardPlexSm from "@/assets/card-plex-sm.webp";
 const pathways = [
   {
     title: "Vendre ma propriété en Outaouais",
-    text: "Évaluation réaliste, stratégie de prix adaptée au marché de Gatineau et mise en marché ciblée — pour maximiser votre résultat.",
+    text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.",
     cta: "Voir le plan vendeur",
     href: "/vendre-ma-maison-gatineau",
     footer: "Évaluation · positionnement · mise en marché",
@@ -22,7 +22,7 @@ const pathways = [
   },
   {
     title: "Acheter à Gatineau",
-    text: "Aylmer, Hull, Plateau ou Buckingham — les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
+    text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
     cta: "Explorer l'achat",
     href: "/acheter-a-gatineau",
     footer: "Secteurs · budget · accompagnement",
@@ -32,7 +32,7 @@ const pathways = [
   },
   {
     title: "Plex & investissement",
-    text: "Rendement, valeur marchande et timing — les vrais chiffres du marché locatif en Outaouais avant la décision.",
+    text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.",
     cta: "Recevoir une analyse",
     href: "/investir-plex-gatineau",
     footer: "Rendement · valeur · timing",
