@@ -99,21 +99,19 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       {/* Pathway Section */}
       <section className="section-padding bg-background">
         <div className="section-container">
-          <motion.div className="mx-auto mb-14 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+          <motion.div className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
             <p className="label-overline mb-3">Choose your next step</p>
-            <h2 className="mb-5">Where are you in your project?</h2>
-            <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">Whether you're in Gatineau, Aylmer, Hull or transitioning from Ottawa — tell me where you are and I'll give you the numbers, the options and a clear strategy.</p>
+            <h2>Where are you in your project?</h2>
           </motion.div>
           <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
             {pathways.map((p, i) => (
               <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
                 <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                   <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
-                  <div className="flex flex-1 flex-col p-7 sm:p-8">
-                    <h3 className="mb-3 transition-colors group-hover:text-primary">{p.title}</h3>
-                    <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{p.text}</p>
-                    <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">{p.cta}<ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
-                    <p className="mt-4 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/40">{p.footer}</p>
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <h3 className="mb-2 text-[1rem] transition-colors group-hover:text-primary">{p.title}</h3>
+                    <p className="mb-4 flex-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{p.text}</p>
+                    <span className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">{p.cta}<ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
                   </div>
                 </Link>
               </motion.div>
