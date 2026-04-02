@@ -46,17 +46,14 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
   <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-        className="mx-auto mb-8 sm:mb-14 max-w-[42rem] text-center"
+        className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
-        <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
-        <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
-          Chaque situation est différente. Que vous soyez à Gatineau, Aylmer, Hull ou en transition depuis Ottawa — je vous donne les chiffres, les options et une stratégie claire.
-        </p>
+        <h2>Où en êtes-vous dans votre projet?</h2>
       </motion.div>
 
       <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
@@ -82,14 +79,13 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
                   height={441}
                 />
               </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-8">
-                <h3 className="mb-3 transition-colors group-hover:text-primary">{pathway.title}</h3>
-                <p className="mb-6 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{pathway.text}</p>
-                <span className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="mb-2 text-[1rem] transition-colors group-hover:text-primary">{pathway.title}</h3>
+                <p className="mb-4 flex-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{pathway.text}</p>
+                <span className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>
-                <p className="mt-4 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/40">{pathway.footer}</p>
               </div>
             </Link>
           </motion.div>

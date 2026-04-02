@@ -15,7 +15,7 @@ interface StatItem {
 
 interface SocialProofStripProps {
   stats: StatItem[];
-  testimonials: MiniTestimonial[];
+  testimonials?: MiniTestimonial[];
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -37,13 +37,12 @@ const initials = (name: string) =>
     .join("");
 
 const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
-  ({ stats, testimonials }, ref) => (
-    <section ref={ref} className="section-padding-md bg-secondary/20">
+  ({ stats }, ref) => (
+    <section ref={ref} className="py-5 sm:py-7 bg-secondary/20">
       <div className="section-container max-w-[64rem]">
-        {/* Stats row */}
         <motion.div
-          className="mb-6 sm:mb-10 flex items-center justify-center gap-x-6 sm:gap-x-14"
-          initial={{ opacity: 0, y: 16 }}
+          className="flex items-center justify-center gap-x-6 sm:gap-x-14"
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, ease }}
@@ -64,42 +63,6 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
             </React.Fragment>
           ))}
         </motion.div>
-
-        {/* Mini testimonials */}
-        <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
-          {testimonials.map((t, i) => (
-            <motion.blockquote
-              key={t.name}
-              className="relative rounded-2xl border border-border/30 bg-card p-5 sm:p-7 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.45, delay: i * 0.08, ease }}
-            >
-              <Quote size={20} className="mb-3 text-accent/20" />
-              <p className="text-[0.9375rem] leading-[1.65] text-foreground/80 italic">
-                {t.quote}
-              </p>
-              <footer className="mt-4 sm:mt-5 flex items-center gap-3">
-                <div
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.75rem] font-semibold tracking-wide text-primary-foreground"
-                  style={{ backgroundColor: avatarColor(t.name) }}
-                >
-                  {initials(t.name)}
-                </div>
-                <div>
-                  <p className="text-[0.8125rem] font-semibold text-foreground/85">{t.name}</p>
-                  <p className="text-[0.75rem] text-muted-foreground/50">{t.location}</p>
-                </div>
-                <div className="ml-auto flex gap-0.5">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={11} className="fill-accent text-accent" />
-                  ))}
-                </div>
-              </footer>
-            </motion.blockquote>
-          ))}
-        </div>
       </div>
     </section>
   )
