@@ -10,6 +10,7 @@ const CTASection = React.lazy(() => import("@/components/CTASection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const GuideOffersSectionEn = React.lazy(() => import("@/components/en/GuideOffersSectionEn"));
 const SectorLinks = React.lazy(() => import("@/components/SectorLinks"));
+const LocalSEOCluster = React.lazy(() => import("@/components/LocalSEOCluster"));
 const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
