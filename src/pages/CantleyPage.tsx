@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-cantley.jpg";
 
 const CantleyPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Cantley — Immobilier et guide de quartier | YGS"
-    metaDesc="Vivre, acheter ou vendre à Cantley. Collines, grands terrains, nature et tranquillité — à 20 minutes de Gatineau et Ottawa."
+    seoTitle="Courtier immobilier Cantley · Outaouais | YGS"
+    metaDesc="Courtier immobilier à Cantley. Grands terrains, collines verdoyantes et vie rurale à 20 minutes de Gatineau — accompagnement achat et vente."
     jsonLd={{ name: "Cantley", description: "Courtier immobilier à Cantley. Collines, grands terrains et nature à proximité de Gatineau.", lat: 45.5056, lng: -75.7833, url: "/cantley" }}
     hero={{ overline: "Guide de quartier · Cantley", title: "Vivre, acheter ou vendre à Cantley", subtitle: "Collines verdoyantes, grands terrains et vie rurale — à 20 minutes du centre de Gatineau.", image: heroImg }}
     trustSpecialty="Spécialiste Cantley et environs"
