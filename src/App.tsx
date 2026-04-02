@@ -64,6 +64,9 @@ const SellHullPage = React.lazy(() => import("./pages/SellHullPage"));
 const SellAylmerPage = React.lazy(() => import("./pages/SellAylmerPage"));
 const ValuationHullPage = React.lazy(() => import("./pages/ValuationHullPage"));
 const ValuationAylmerPage = React.lazy(() => import("./pages/ValuationAylmerPage"));
+const CombienCouteCourtierPage = React.lazy(() => import("./pages/CombienCouteCourtierPage"));
+const CommentChoisirCourtierPage = React.lazy(() => import("./pages/CommentChoisirCourtierPage"));
+const VerifierCourtierOaciqPage = React.lazy(() => import("./pages/VerifierCourtierOaciqPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
@@ -197,6 +200,9 @@ const routeTree = React.createElement(
       <Route path="/vendre-maison-aylmer" element={<SellAylmerPage />} />
       <Route path="/evaluation-maison-hull" element={<ValuationHullPage />} />
       <Route path="/evaluation-maison-aylmer" element={<ValuationAylmerPage />} />
+      <Route path="/combien-coute-un-courtier-immobilier-au-quebec" element={<CombienCouteCourtierPage />} />
+      <Route path="/comment-choisir-un-courtier-immobilier" element={<CommentChoisirCourtierPage />} />
+      <Route path="/verifier-un-courtier-immobilier-oaciq" element={<VerifierCourtierOaciqPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
