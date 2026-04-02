@@ -9,7 +9,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
-import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search } from "lucide-react";
+import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search, DollarSign, Scale } from "lucide-react";
 import heroImg from "@/assets/hero-resources.webp";
 
 const guides = [
@@ -29,8 +29,10 @@ const tools = [
 
 const trustPages = [
   { icon: HelpCircle, title: "Combien coûte un courtier?", text: "Comment fonctionne la rémunération d'un courtier immobilier au Québec.", cta: "Lire l'article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: DollarSign, title: "Frais de courtage au Québec", text: "Détail des frais, services inclus et ce que ça signifie pour vous.", cta: "Lire l'article", href: "/frais-de-courtage-immobilier-quebec" },
   { icon: CheckCircle, title: "Comment choisir un courtier", text: "Les critères essentiels pour bien choisir votre courtier immobilier.", cta: "Lire l'article", href: "/comment-choisir-un-courtier-immobilier" },
   { icon: Search, title: "Vérifier un courtier (OACIQ)", text: "Comment vérifier le permis et les antécédents d'un courtier au Québec.", cta: "Lire l'article", href: "/verifier-un-courtier-immobilier-oaciq" },
+  { icon: Scale, title: "Courtier ou vendre seul?", text: "Comparaison honnête entre vendre avec un courtier ou par vous-même.", cta: "Lire l'article", href: "/courtier-immobilier-ou-vendre-soi-meme" },
 ];
 
 const trustItems = [
