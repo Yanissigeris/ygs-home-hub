@@ -37,9 +37,16 @@ const profiles = [
 ];
 
 const faq = [
-  { q: "What is the average home price in Aylmer?", a: "It varies by neighborhood and property type. Contact me for an up-to-date analysis based on recent sales." },
-  { q: "Is Aylmer good for families?", a: "Absolutely. Bilingual schools, parks, lake, tight-knit community — it's one of the best family areas in Outaouais." },
+  { q: "What is the average home price in Aylmer?", a: "It varies by neighborhood and property type. Contact me for an up-to-date analysis based on recent comparable sales in your Aylmer area." },
+  { q: "Is Aylmer good for families?", a: "Absolutely. Bilingual schools, parks, Lake Deschênes, tight-knit community — it's one of the best family areas in Outaouais." },
   { q: "How long to get to Ottawa from Aylmer?", a: "15-25 minutes by car depending on the time. Access via the Champlain Bridge and cycling paths." },
+  { q: "Why work with a real estate broker in Aylmer?", a: "A broker who knows Aylmer deeply understands micro-markets, real value by street and what local and Ottawa buyers expect. That makes all the difference in your result." },
+  { q: "What are the best neighborhoods in Aylmer?", a: "Old Aylmer for charm and village life, the Aylmer Plateau for newer homes, and streets near the lake for character properties. Each area has its own profile." },
+  { q: "How does buying a home in Aylmer work?", a: "Budget definition, targeted search in the right streets, offer, inspection, financing and notary. I guide you through every step." },
+  { q: "Are prices going up in Aylmer?", a: "Aylmer remains one of the most sought-after areas in Outaouais. Trends vary by property type — a personalized analysis will give you the exact picture." },
+  { q: "Can I find an affordable bungalow in Aylmer?", a: "Yes, some areas still offer bungalows at competitive prices, but you need to act fast. A targeted buying strategy makes the difference." },
+  { q: "Are there condos in Aylmer?", a: "Yes, you'll find condos in Old Aylmer and in some recent developments. It's a great option for first-time buyers or retirees." },
+  { q: "How do I get a home valuation in Aylmer?", a: "I prepare a free valuation based on recent sales on your street and in your neighborhood. It's confidential, no commitment, and you receive a clear report." },
 ];
 
 const relatedSectors = [
@@ -57,7 +64,7 @@ const related = [
 
 const AylmerPageEn = () => (
   <>
-    <PageMeta title="Aylmer — Neighborhood Guide Gatineau | YGS" description="Live, buy or sell in Aylmer. Lake Deschênes, parks, schools and community — complete guide by a local broker." />
+    <PageMeta title="Real Estate Broker Aylmer · Gatineau | YGS" description="Real estate broker in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, bilingual schools — buy or sell with a local specialist." />
     <NeighborhoodJsonLd name="Aylmer" description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, schools and community." lat={45.3945} lng={-75.8486} url="/en/aylmer" />
     <HeroSection overline="Neighborhood Guide · Aylmer" title="Live, buy or sell in Aylmer" subtitle="Lake Deschênes, parks, schools and community — Aylmer offers an exceptional living environment steps from Ottawa." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />

@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-chelsea.jpg";
 
 const ChelseaPageEn = () => (
   <NeighborhoodTemplate
-    seoTitle="Chelsea QC — Neighborhood Guide | YGS"
-    metaDesc="Buy, sell or live in Chelsea, Quebec. Picturesque village at the doorstep of Gatineau Park — nature, tranquility and quick access to Ottawa."
+    seoTitle="Real Estate Broker Chelsea · Outaouais | YGS"
+    metaDesc="Real estate broker in Chelsea, Outaouais. Buy or sell near Gatineau Park — nature, tranquility and quick access to Ottawa with a local specialist."
     jsonLd={{ name: "Chelsea", description: "Real estate broker in Chelsea. Picturesque village, Gatineau Park, nature and tranquility.", lat: 45.5200, lng: -75.7870, url: "/en/chelsea" }}
     hero={{ overline: "Neighborhood Guide · Chelsea", title: "Buy, Sell or Live in Chelsea", subtitle: "Picturesque village at the doorstep of Gatineau Park — nature, tranquility and quick access to Ottawa.", image: heroImg }}
     trustSpecialty="Chelsea & area specialist"
@@ -31,6 +31,13 @@ const ChelseaPageEn = () => (
         { q: "Is Chelsea far from Ottawa?", a: "No — about 20-30 minutes via Highway 5. Faster than many Ottawa suburbs." },
         { q: "Are there schools in Chelsea?", a: "Yes, French and English elementary schools. For high school, options in Gatineau are 15 minutes away." },
         { q: "What kind of properties are in Chelsea?", a: "Single-family homes on large lots, cottages, luxury properties and some townhomes. Very few condos." },
+        { q: "Why work with a real estate broker in Chelsea?", a: "Chelsea has its own market dynamics — zoning, wells, septic systems, wooded lots. A local broker helps you avoid surprises and maximize your result." },
+        { q: "How much does a house cost in Chelsea?", a: "Prices vary by property type and lot size. Contact me for an analysis based on recent sales in your Chelsea area." },
+        { q: "Is Chelsea a good real estate investment?", a: "Yes — demand remains strong and supply is limited. Properties in Chelsea hold their value well thanks to the unique location near Gatineau Park." },
+        { q: "Is high-speed internet available in Chelsea?", a: "Yes, several providers now offer fibre optic or high-speed service in most Chelsea areas." },
+        { q: "How do I sell a house in Chelsea?", a: "Realistic valuation, strategic positioning and targeted marketing — including Ottawa buyers seeking nature. I support you from start to finish." },
+        { q: "Are municipal taxes high in Chelsea?", a: "Chelsea taxes are comparable to Gatineau, with services adapted to the semi-rural setting. I can provide exact figures for any property." },
+        { q: "How do I get a home valuation in Chelsea?", a: "I prepare a free valuation based on recent comparable sales in your area. It's confidential and no commitment." },
       ],
     }}
     sectors={{ list: [

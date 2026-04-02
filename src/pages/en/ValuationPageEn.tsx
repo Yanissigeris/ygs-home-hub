@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
@@ -14,6 +15,20 @@ import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 const benefits = ["Realistic value range based on recent sales in your Gatineau neighborhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address — and which ones are worth it in your market","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response within 24h" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
 const afterSteps = [{ title: "Seller plan", text: "Go further — get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/sell", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" }];
+
+const valuationFaq = [
+  { q: "How do I get a home valuation in Gatineau?", a: "Fill out the form on this page with your property address. I'll get back to you within 24 hours with an analysis based on recent comparable sales in your area." },
+  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report — no obligation to sell." },
+  { q: "How much is my house worth in Gatineau?", a: "The value depends on the neighborhood, property type and recent sales. My valuation gives you a realistic range based on local comparables." },
+  { q: "What is the valuation based on?", a: "I use recent sales on your street and in your area, your property's condition, lot size and current Outaouais market conditions." },
+  { q: "How is this different from an online estimate?", a: "Online tools give an approximate estimate. My valuation accounts for local specifics and your property's actual condition — much more accurate." },
+  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a detailed analysis with a visit, we schedule at your convenience." },
+  { q: "Do I need a home visit for the valuation?", a: "Not necessarily for a first estimate. If you want a more detailed report, a visit can be arranged — no commitment." },
+  { q: "Does the valuation commit me to selling?", a: "No, not at all. Many homeowners request a valuation simply to know their value, without any immediate intention to sell." },
+  { q: "Is my area covered?", a: "Yes — I cover all of Outaouais: Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts and Pontiac." },
+  { q: "What happens after I receive my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan or answer your questions on a call." },
+];
+
 const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
 
 const ValuationPageEn = () => {
@@ -85,6 +100,7 @@ const ValuationPageEn = () => {
       </section>
       <BenefitsList overline="What you receive" title="Your valuation includes" items={benefits} />
       <FunnelNextStep overline="What's next?" title="After your valuation" subtitle="You'll have the numbers. Here are the options to go further." steps={afterSteps} background="alt" />
+      <FAQSection title="Valuation questions" items={valuationFaq} />
     </>
   );
 };
