@@ -55,6 +55,7 @@ const faq = [
 const MilitaryPage = () => (
    <>
     <PageMeta title="Militaire à Gatineau — Mutation FAC | YGS" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation à Aylmer, Hull ou au Plateau." ogImage="https://yanisgauthier.com/og-relocation.jpg" />
+    <ServiceJsonLd name="Service immobilier pour militaires — Mutation FAC à Gatineau" description="Accompagnement spécialisé pour les membres des Forces armées canadiennes en mutation à Gatineau — achat, vente, BGRS/SIRVA et installation." url="/militaire-gatineau" serviceType="Military Real Estate Relocation Service" />
     <HeroSection
       overline="Militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau"

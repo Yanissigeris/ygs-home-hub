@@ -51,6 +51,7 @@ const faq = [
 const MilitaryPageEn = () => (
   <>
     <PageMeta title="Military Relocation Gatineau — CAF Posting | YGS" description="Military posting to Gatineau? Specialized support for CAF members: buying, selling, BGRS/SIRVA and smooth settlement." ogImage="https://yanisgauthier.com/og-relocation.jpg" />
+    <ServiceJsonLd name="Military Real Estate Service — CAF Posting to Gatineau" description="Specialized real estate support for Canadian Armed Forces members posted to Gatineau — buying, selling, BGRS/SIRVA and settlement." url="/en/military" serviceType="Military Real Estate Relocation Service" />
     <HeroSection overline="Military · Gatineau" title="Military? Find your property in Gatineau" subtitle="Posting, relocation, buying or selling — I know military realities and help you navigate the Gatineau market efficiently." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Military Guide", href: "/en/military-guide" }} trustLine="Service adapted to military members." heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <section className="py-8 bg-card border-y border-border/30"><div className="section-container"><div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8"><p className="text-[0.875rem] text-muted-foreground">Program partner</p><img src={sirvaBgrsLogo} alt="SIRVA | BGRS" className="h-10 w-auto object-contain" loading="lazy" /></div></div></section>
