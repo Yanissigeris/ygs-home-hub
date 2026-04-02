@@ -1,6 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
+import RelatedPages from "@/components/RelatedPages";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
@@ -224,6 +225,19 @@ const ValuationPage = () => {
         title="Après votre évaluation"
         subtitle="Vous aurez les chiffres. Voici les options pour aller plus loin."
         steps={afterSteps}
+        background="alt"
+      />
+      <RelatedPages
+        overline="À lire aussi"
+        title="Ressources liées"
+        pages={[
+          { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau" },
+          { title: "Courtier Aylmer", text: "Marché et quartiers d'Aylmer.", href: "/aylmer" },
+          { title: "Courtier Hull", text: "Plex, condos et maisons à Hull.", href: "/hull" },
+          { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea" },
+          { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley" },
+          { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+        ]}
         background="alt"
       />
       <FAQSection title="Questions sur l'évaluation" items={valuationFaq} />

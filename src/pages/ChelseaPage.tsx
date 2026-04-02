@@ -49,8 +49,8 @@ const ChelseaPage = () => (
       { title: "Acheter à Chelsea — guide complet", text: "Tout savoir pour acheter une maison à Chelsea.", href: "/blogue/acheter-maison-chelsea-guide" },
       { title: "Vivre à Chelsea", text: "Style de vie, nature et communauté.", href: "/blogue/vivre-chelsea-style-de-vie" },
       { title: "Marché immobilier Chelsea 2025", text: "Tendances et prix dans le secteur.", href: "/blogue/marche-immobilier-chelsea-2025" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Chelsea", text: "Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}

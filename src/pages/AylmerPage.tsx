@@ -47,8 +47,8 @@ const AylmerPage = () => (
     ]}}
     related={{ pages: [
       { title: "Vivre à Aylmer — le guide", text: "Mode de vie, lac, communauté.", href: "/vivre-a-aylmer" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
       { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },

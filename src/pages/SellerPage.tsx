@@ -136,6 +136,7 @@ const SellerPage = () =>
       overline="À lire aussi"
       title="Articles et ressources pour vendeurs"
       pages={[
+        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
         { title: "Quand vendre sa maison à Gatineau", text: "Meilleur moment pour vendre en Outaouais.", href: "/blogue/quand-vendre-maison-gatineau" },
         { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-gatineau" },
         { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue" },
