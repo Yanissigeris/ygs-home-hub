@@ -39,7 +39,7 @@ const related = [
 
 const SellerGuidePage = () => (
    <>
-    <PageMeta title="Guide vendeur — Vendre à Gatineau | YGS" description="Guide complet pour vendre votre propriété à Gatineau et en Outaouais. Prix, préparation, mise en marché et négociation — par un courtier local expérimenté." />
+    <PageMeta title="Guide vendeur — Vendre à Gatineau | YGS" description="Guide complet pour vendre votre propriété à Gatineau. Prix, préparation, mise en marché et négociation par un courtier local." />
     <HeroSection
       overline="Guide vendeur · Gatineau"
       title="Guide complet pour vendre votre propriété à Gatineau"
