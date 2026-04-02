@@ -10,6 +10,7 @@ const CTASection = React.lazy(() => import("@/components/CTASection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const GuideOffersSectionEn = React.lazy(() => import("@/components/en/GuideOffersSectionEn"));
 const SectorLinks = React.lazy(() => import("@/components/SectorLinks"));
+const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import yanisAbout from "@/assets/yanis-about.webp";
@@ -61,6 +62,9 @@ const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Lake Deschênes, Ottawa access" },
   { name: "Hull", href: "/en/hull", detail: "Urban, restaurants, culture, condos and plex, Zibi project" },
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Larger lots, affordable prices, river, nature" },
+  { name: "Chelsea", href: "/en/chelsea", detail: "Nature, Gatineau Park, serenity, bilingual community" },
+  { name: "Cantley", href: "/en/cantley", detail: "Semi-rural, families, large lots, peaceful and close to the city" },
+  { name: "Val-des-Monts", href: "/en/val-des-monts", detail: "Lakes, forest, country living with quick access to Gatineau" },
 ];
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
@@ -177,6 +181,20 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
       <GuideOffersSectionEn background="alt" />
+
+      <hr className="section-divider" />
+
+      <HomeFAQTeaser
+        title="Frequently asked questions"
+        items={[
+          { q: "How much is my house worth in Gatineau?", a: "I prepare a free valuation based on recent comparables in your area — Aylmer, Hull, Plateau or elsewhere in Outaouais. You receive a clear report with the recommended listing price." },
+          { q: "How do I choose the right real estate broker in Outaouais?", a: "Look for a broker with deep local knowledge, transparent strategy and real numbers. Local experience, availability and a human approach make all the difference." },
+          { q: "What are the best neighbourhoods to buy in Gatineau?", a: "It depends on your profile: Aylmer and the Plateau are popular with families, Hull attracts young professionals, and Chelsea or Cantley appeal to those who want nature while staying close to the city." },
+          { q: "Is now a good time to sell in Gatineau?", a: "The Outaouais real estate market remains active. A property analysis helps determine the best timing and optimal pricing strategy to maximize your result." },
+        ]}
+        linkHref="/en/faq"
+        linkLabel="See all questions"
+      />
 
       <hr className="section-divider" />
 

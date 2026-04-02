@@ -35,7 +35,7 @@ const SectorLinks = ({
       >
         <SectionHeading overline={overline} title={title} centered />
       </motion.div>
-      <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
+      <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 md:grid-cols-3">
         {sectors.map((s, i) => (
           <motion.div
             key={s.name}

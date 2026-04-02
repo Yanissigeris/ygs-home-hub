@@ -14,6 +14,7 @@ const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
+const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
@@ -69,6 +70,20 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       <hr className="section-divider" />
 
       <GuideOffersSection background="alt" />
+
+      <hr className="section-divider" />
+
+      <HomeFAQTeaser
+        title="Questions fréquentes"
+        items={[
+          { q: "Combien vaut ma maison à Gatineau?", a: "Je prépare une évaluation gratuite basée sur les comparables récents dans votre secteur — Aylmer, Hull, Plateau ou ailleurs en Outaouais. Vous recevez un rapport clair avec le prix de vente recommandé." },
+          { q: "Comment choisir le bon courtier immobilier en Outaouais?", a: "Cherchez un courtier qui connaît votre secteur en profondeur, qui est transparent sur sa stratégie et qui vous donne les vrais chiffres. L'expérience locale, la disponibilité et l'approche humaine font toute la différence." },
+          { q: "Quels sont les meilleurs quartiers pour acheter à Gatineau?", a: "Ça dépend de votre profil : Aylmer et le Plateau sont populaires auprès des familles, Hull attire les jeunes professionnels, et Chelsea ou Cantley séduisent ceux qui veulent la nature tout en restant proches de la ville." },
+          { q: "Est-ce le bon moment pour vendre à Gatineau?", a: "Le marché immobilier en Outaouais reste actif. Une analyse de votre propriété permet de déterminer le meilleur timing et la stratégie de prix optimale pour maximiser votre résultat." },
+        ]}
+        linkHref="/faq"
+        linkLabel="Voir toutes les questions"
+      />
 
       <hr className="section-divider" />
 
