@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
