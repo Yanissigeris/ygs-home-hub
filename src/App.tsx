@@ -59,6 +59,7 @@ const MassonAngersPage = React.lazy(() => import("./pages/MassonAngersPage"));
 const PontiacPage = React.lazy(() => import("./pages/PontiacPage"));
 const CoteDazurPage = React.lazy(() => import("./pages/CoteDazurPage"));
 const LimbourPage = React.lazy(() => import("./pages/LimbourPage"));
+const OutaouaisHubPage = React.lazy(() => import("./pages/OutaouaisHubPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
