@@ -52,7 +52,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </div>
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="grid gap-10 py-14 sm:grid-cols-2 sm:py-16 lg:grid-cols-4 lg:gap-6 lg:py-20">
+          <div className="grid gap-8 py-10 sm:grid-cols-2 sm:py-12 lg:grid-cols-4 lg:gap-6 lg:py-14">
             {columns.map((col) => (
               <div key={col.title}>
                 <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{col.title}</p>
