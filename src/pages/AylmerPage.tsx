@@ -24,7 +24,7 @@ const AylmerPage = () => (
       { icon: MapPin, title: "Amateurs de nature", text: "Lac Deschênes, parc de la Gatineau et sentiers à deux pas." },
       { icon: Coffee, title: "Vie de quartier", text: "Restaurants, cafés, boutiques et marché local à distance de marche." },
     ]}
-    inlineCta={{ text: "Vous êtes propriétaire à Aylmer? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
+    inlineCta={{ text: "Vous êtes propriétaire à Aylmer? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-maison-aylmer" }}
     faq={{
       title: "Questions sur Aylmer",
       items: [
