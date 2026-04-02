@@ -60,6 +60,10 @@ const PontiacPage = React.lazy(() => import("./pages/PontiacPage"));
 const CoteDazurPage = React.lazy(() => import("./pages/CoteDazurPage"));
 const LimbourPage = React.lazy(() => import("./pages/LimbourPage"));
 const OutaouaisHubPage = React.lazy(() => import("./pages/OutaouaisHubPage"));
+const SellHullPage = React.lazy(() => import("./pages/SellHullPage"));
+const SellAylmerPage = React.lazy(() => import("./pages/SellAylmerPage"));
+const ValuationHullPage = React.lazy(() => import("./pages/ValuationHullPage"));
+const ValuationAylmerPage = React.lazy(() => import("./pages/ValuationAylmerPage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
@@ -121,6 +125,10 @@ const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
 const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
 const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
+const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
+const SellAylmerPageEn = React.lazy(() => import("./pages/en/SellAylmerPageEn"));
+const ValuationHullPageEn = React.lazy(() => import("./pages/en/ValuationHullPageEn"));
+const ValuationAylmerPageEn = React.lazy(() => import("./pages/en/ValuationAylmerPageEn"));
 
 
 
@@ -185,6 +193,10 @@ const routeTree = React.createElement(
       <Route path="/merci-evaluation" element={<ThankYouValuationPage />} />
       <Route path="/contact-yanis" element={<ContactPage />} />
       <Route path="/courtier-immobilier-outaouais" element={<OutaouaisHubPage />} />
+      <Route path="/vendre-maison-hull" element={<SellHullPage />} />
+      <Route path="/vendre-maison-aylmer" element={<SellAylmerPage />} />
+      <Route path="/evaluation-maison-hull" element={<ValuationHullPage />} />
+      <Route path="/evaluation-maison-aylmer" element={<ValuationAylmerPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
@@ -236,6 +248,10 @@ const routeTree = React.createElement(
       <Route path="/en/cote-dazur" element={<CoteDazurPageEn />} />
       <Route path="/en/limbour" element={<LimbourPageEn />} />
       <Route path="/en/outaouais-real-estate-agent" element={<OutaouaisHubPageEn />} />
+      <Route path="/en/sell-house-hull" element={<SellHullPageEn />} />
+      <Route path="/en/sell-house-aylmer" element={<SellAylmerPageEn />} />
+      <Route path="/en/home-valuation-hull" element={<ValuationHullPageEn />} />
+      <Route path="/en/home-valuation-aylmer" element={<ValuationAylmerPageEn />} />
       <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
