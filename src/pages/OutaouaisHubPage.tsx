@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight, CheckCircle2, Globe, Users, Home, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
