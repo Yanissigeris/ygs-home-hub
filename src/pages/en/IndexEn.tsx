@@ -52,11 +52,6 @@ const pathways = [
   { title: "Plex & Investment", text: "Returns, market value and timing — the real numbers from the Outaouais rental market before the decision.", cta: "Get an analysis", href: "/en/plex", footer: "Returns · value · timing", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" },
 ];
 
-const steps = [
-  { number: "01", title: "Free home valuation", text: "Know the true value of your Gatineau property within days.", href: "/en/home-valuation" },
-  { number: "02", title: "Clear strategy", text: "A selling plan tailored to your property and the Outaouais market.", href: "/en/sell" },
-  { number: "03", title: "Full support", text: "From preparation to closing at the notary, at your own pace.", href: "/en/contact" },
-];
 
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Lake Deschênes, Ottawa access" },
