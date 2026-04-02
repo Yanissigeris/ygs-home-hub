@@ -46,8 +46,9 @@ const ChelseaPageEn = () => (
       { name: "Plateau", href: "/en/plateau", detail: "Families, new developments" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "Buyer's Guide", text: "The home buying process in Quebec.", href: "/en/buyer-guide" },
+      { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
       { title: "Free Valuation", text: "What's your Chelsea property worth?", href: "/en/home-valuation" },
+      { title: "Buyer's Guide", text: "The home buying process in Quebec.", href: "/en/buyer-guide" },
       { title: "First-Time Buyer", text: "Budget, down payment and tips.", href: "/en/first-time-buyer" },
       { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
     ]}}
