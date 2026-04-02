@@ -7,10 +7,10 @@ interface GuideOffersSectionProps {
 }
 
 const guides = [
-  { guideType: "seller_guide" as const, title: "Guide vendeur", subtitle: "Prix, préparation, mise en marché et négociation — tout pour vendre au meilleur prix." },
-  { guideType: "buyer_guide" as const, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec expliqué simplement, de la recherche au notaire." },
-  { guideType: "investor_guide" as const, title: "Guide investisseur", subtitle: "Rendement, analyse de plex et stratégie d'acquisition pour investir à Gatineau." },
-  { guideType: "relocation_guide" as const, title: "Guide relocalisation", subtitle: "Un guide clair pour mieux comprendre un achat à Gatineau en venant d'Ottawa ou d'ailleurs." },
+  { guideType: "seller_guide" as const, title: "Guide vendeur", subtitle: "Vendre au meilleur prix — prix, mise en marché, négociation." },
+  { guideType: "buyer_guide" as const, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire." },
+  { guideType: "investor_guide" as const, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau." },
+  { guideType: "relocation_guide" as const, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs." },
 ];
 
 const GuideOffersSection = ({ background = "default" }: GuideOffersSectionProps) => (
