@@ -66,8 +66,8 @@ const relatedSectors = [
 
 const related = [
   { title: "Living in Hull — the guide", text: "Culture, restaurants, Ottawa proximity.", href: "/en/living-hull" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
-  { title: "Free valuation", text: "How much is your property in Hull worth?", href: "/en/home-valuation" },
+  { title: "Sell in Hull", text: "Selling strategy adapted to Hull.", href: "/en/sell-house-hull" },
+  { title: "Home valuation Hull", text: "How much is your Hull property worth?", href: "/en/home-valuation-hull" },
   { title: "Invest in plex", text: "Analysis and strategy for plexes in Gatineau.", href: "/en/plex" },
   { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
 ];
@@ -126,7 +126,7 @@ const HullPageEn = () => (
         ))}
       </div>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/home-valuation">Get my valuation</Link>
+        <Link to="/en/home-valuation-hull">Get my valuation</Link>
       </Button>
     </ImageTextSplit>
 
@@ -143,7 +143,7 @@ const HullPageEn = () => (
       title="Buyer, seller or investor in Hull?"
       text="I can help you see clearly — whether you're buying, selling or analyzing a plex in the area."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
+        { label: "Home valuation Hull", href: "/en/home-valuation-hull" },
         { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" },
       ]}
       trustLine="I give you the numbers — you decide with full clarity."

@@ -57,8 +57,8 @@ const relatedSectors = [
 
 const related = [
   { title: "Living in Aylmer — the guide", text: "Lifestyle, lake, community and everything you need to know.", href: "/en/living-aylmer" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
-  { title: "Free Valuation", text: "How much is your Aylmer property worth?", href: "/en/home-valuation" },
+  { title: "Sell in Aylmer", text: "Selling strategy adapted to Aylmer.", href: "/en/sell-house-aylmer" },
+  { title: "Home valuation Aylmer", text: "How much is your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
   { title: "Buyer Guide", text: "The buying process in Québec, step by step.", href: "/en/buyer-guide" },
   { title: "First-time buyer", text: "Budget, down payment and tips for first-time buyers.", href: "/en/first-time-buyer" },
   { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
@@ -83,12 +83,12 @@ const AylmerPageEn = () => (
       </div>
     </ImageTextSplit>
     <CardGrid overline="For who" title="Aylmer is ideal for…" items={profiles} background="alt" />
-    <InlineCTA text="Own property in Aylmer? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Own property in Aylmer? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation-aylmer" />
     <FAQSection title="Questions about Aylmer" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Aylmer" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Buyer or seller in Aylmer?" text="I know Aylmer inside out — let's talk about your project." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Buyer or seller in Aylmer?" text="I know Aylmer inside out — let's talk about your project." buttons={[{ label: "Home valuation Aylmer", href: "/en/home-valuation-aylmer" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
