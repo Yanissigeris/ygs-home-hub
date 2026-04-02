@@ -46,17 +46,14 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
   <section ref={ref} className="section-padding bg-background">
     <div className="section-container">
       <motion.div
-        className="mx-auto mb-8 sm:mb-14 max-w-[42rem] text-center"
+        className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="label-overline mb-3">Choisissez votre prochaine étape</p>
-        <h2 className="mb-5">Où en êtes-vous dans votre projet?</h2>
-        <p className="mx-auto max-w-[38rem] text-[1.0625rem] leading-[1.65] text-muted-foreground">
-          Chaque situation est différente. Que vous soyez à Gatineau, Aylmer, Hull ou en transition depuis Ottawa — je vous donne les chiffres, les options et une stratégie claire.
-        </p>
+        <h2>Où en êtes-vous dans votre projet?</h2>
       </motion.div>
 
       <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
