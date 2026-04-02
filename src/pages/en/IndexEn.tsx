@@ -184,6 +184,20 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
+      <HomeFAQTeaser
+        title="Frequently asked questions"
+        items={[
+          { q: "How much is my house worth in Gatineau?", a: "I prepare a free valuation based on recent comparables in your area — Aylmer, Hull, Plateau or elsewhere in Outaouais. You receive a clear report with the recommended listing price." },
+          { q: "How do I choose the right real estate broker in Outaouais?", a: "Look for a broker with deep local knowledge, transparent strategy and real numbers. Local experience, availability and a human approach make all the difference." },
+          { q: "What are the best neighbourhoods to buy in Gatineau?", a: "It depends on your profile: Aylmer and the Plateau are popular with families, Hull attracts young professionals, and Chelsea or Cantley appeal to those who want nature while staying close to the city." },
+          { q: "Is now a good time to sell in Gatineau?", a: "The Outaouais real estate market remains active. A property analysis helps determine the best timing and optimal pricing strategy to maximize your result." },
+        ]}
+        linkHref="/en/faq"
+        linkLabel="See all questions"
+      />
+
+      <hr className="section-divider" />
+
       <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
 
       <CTASection
