@@ -9,7 +9,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
-import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield } from "lucide-react";
+import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search } from "lucide-react";
 import heroImg from "@/assets/hero-resources.webp";
 
 const guides = [
@@ -24,6 +24,11 @@ const tools = [
   { icon: Home, title: "Free Valuation", text: "How much is your property worth? Estimate in 24h.", cta: "Get my valuation", href: "/en/home-valuation" },
   { icon: TrendingUp, title: "Market Report", text: "Prices, trends and sales volume in Gatineau.", cta: "See the report", href: "/en/market-report" },
   { icon: FileText, title: "Plex Analysis", text: "Revenues, expenses and return on your plex.", cta: "Get an analysis", href: "/en/plex-analysis" },
+];
+const trustPages = [
+  { icon: HelpCircle, title: "How Much Does a Realtor Cost?", text: "How realtor compensation works in Québec.", cta: "Read the article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: CheckCircle, title: "How to Choose a Realtor", text: "The essential criteria for choosing the right real estate broker.", cta: "Read the article", href: "/comment-choisir-un-courtier-immobilier" },
+  { icon: Search, title: "Verify a Broker (OACIQ)", text: "How to verify a broker's licence and background in Québec.", cta: "Read the article", href: "/verifier-un-courtier-immobilier-oaciq" },
 ];
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
@@ -43,6 +48,7 @@ const ResourcesPageEn = () => (
     <TrustMiniStrip items={trustItems} />
     <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />
+    <LinkedCardGrid overline="Trust" title="Understanding real estate brokerage" items={trustPages} columns={3} />
     <GuideOffersSectionEn />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
