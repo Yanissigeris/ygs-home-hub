@@ -71,7 +71,11 @@ const OutaouaisHubPage = () => (
       agentName="Yanis Gauthier-Sigeris"
     />
 
-    <TrustMiniStrip specialty="Courtier immobilier · Outaouais et Gatineau" />
+    <TrustMiniStrip items={[
+      { icon: Clock, label: "Près de 9 ans en Outaouais" },
+      { icon: Award, label: "Courtier immobilier · Outaouais et Gatineau" },
+      { icon: Shield, label: "Accompagnement transparent" },
+    ]} />
 
     {/* Intro */}
     <section className="section-padding bg-background">
