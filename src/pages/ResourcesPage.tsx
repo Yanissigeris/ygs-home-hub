@@ -9,7 +9,7 @@ import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
-import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield } from "lucide-react";
+import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search } from "lucide-react";
 import heroImg from "@/assets/hero-resources.webp";
 
 const guides = [
@@ -25,6 +25,12 @@ const tools = [
   { icon: Home, title: "Évaluation gratuite", text: "Combien vaut votre propriété? Estimation en 24h.", cta: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
   { icon: TrendingUp, title: "Rapport du marché", text: "Prix, tendances et volumes de ventes à Gatineau.", cta: "Voir le rapport", href: "/rapport-marche-gatineau" },
   { icon: FileText, title: "Analyse plex", text: "Revenus, dépenses et rendement de votre plex.", cta: "Recevoir une analyse", href: "/analyse-plex-gatineau" },
+];
+
+const trustPages = [
+  { icon: HelpCircle, title: "Combien coûte un courtier?", text: "Comment fonctionne la rémunération d'un courtier immobilier au Québec.", cta: "Lire l'article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: CheckCircle, title: "Comment choisir un courtier", text: "Les critères essentiels pour bien choisir votre courtier immobilier.", cta: "Lire l'article", href: "/comment-choisir-un-courtier-immobilier" },
+  { icon: Search, title: "Vérifier un courtier (OACIQ)", text: "Comment vérifier le permis et les antécédents d'un courtier au Québec.", cta: "Lire l'article", href: "/verifier-un-courtier-immobilier-oaciq" },
 ];
 
 const trustItems = [
@@ -67,6 +73,13 @@ const ResourcesPage = () => (
       items={tools}
       columns={3}
       background="alt"
+    />
+
+    <LinkedCardGrid
+      overline="Confiance"
+      title="Comprendre le courtage immobilier"
+      items={trustPages}
+      columns={3}
     />
 
     <GuideOffersSection />
