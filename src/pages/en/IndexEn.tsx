@@ -61,6 +61,9 @@ const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Lake Deschênes, Ottawa access" },
   { name: "Hull", href: "/en/hull", detail: "Urban, restaurants, culture, condos and plex, Zibi project" },
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Larger lots, affordable prices, river, nature" },
+  { name: "Chelsea", href: "/en/chelsea", detail: "Nature, Gatineau Park, serenity, bilingual community" },
+  { name: "Cantley", href: "/en/cantley", detail: "Semi-rural, families, large lots, peaceful and close to the city" },
+  { name: "Val-des-Monts", href: "/en/val-des-monts", detail: "Lakes, forest, country living with quick access to Gatineau" },
 ];
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
