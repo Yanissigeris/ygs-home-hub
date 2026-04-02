@@ -32,6 +32,12 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
         "@type": "Organization",
         name: "YGS — Yanis Gauthier-Sigeris",
         url: BASE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: `${BASE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+        },
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       inLanguage: isFr ? "fr-CA" : "en-CA",
