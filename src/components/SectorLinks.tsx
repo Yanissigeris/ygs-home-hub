@@ -15,6 +15,12 @@ export interface SectorLinksProps {
   title?: string;
   sectors: Sector[];
   background?: "default" | "alt";
+  /** Show only first N sectors + "see all" link */
+  teaserCount?: number;
+  /** Label for "see all" link */
+  seeAllLabel?: string;
+  /** Href for "see all" link */
+  seeAllHref?: string;
 }
 
 const SectorLinks = ({
