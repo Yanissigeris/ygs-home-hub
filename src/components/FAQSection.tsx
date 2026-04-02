@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Helmet } from "react-helmet-async";
 
 interface FAQItem {
   q: string;
@@ -19,29 +18,44 @@ interface FAQSectionProps {
   items: FAQItem[];
 }
 
+const FAQ_JSONLD_ID = "ygs-faq-jsonld";
+
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
   ({ title, items }, ref) => {
     const lang = useLanguage();
     const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
 
-    const faqJsonLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: items.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.a,
-        },
-      })),
-    };
+    React.useEffect(() => {
+      const prev = document.getElementById(FAQ_JSONLD_ID);
+      if (prev) prev.remove();
+
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: items.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      };
+
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = FAQ_JSONLD_ID;
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+
+      return () => {
+        const el = document.getElementById(FAQ_JSONLD_ID);
+        if (el) el.remove();
+      };
+    }, [items]);
 
     return (
     <section ref={ref} className="section-padding bg-background">
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
       <div className="section-container max-w-[44rem]">
         <motion.div
           className="text-center mb-6 sm:mb-10"
