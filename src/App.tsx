@@ -248,6 +248,10 @@ const routeTree = React.createElement(
       <Route path="/en/cote-dazur" element={<CoteDazurPageEn />} />
       <Route path="/en/limbour" element={<LimbourPageEn />} />
       <Route path="/en/outaouais-real-estate-agent" element={<OutaouaisHubPageEn />} />
+      <Route path="/en/sell-house-hull" element={<SellHullPageEn />} />
+      <Route path="/en/sell-house-aylmer" element={<SellAylmerPageEn />} />
+      <Route path="/en/home-valuation-hull" element={<ValuationHullPageEn />} />
+      <Route path="/en/home-valuation-aylmer" element={<ValuationAylmerPageEn />} />
       <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
