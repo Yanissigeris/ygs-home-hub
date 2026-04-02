@@ -22,31 +22,31 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
     <section ref={ref} className="section-padding bg-secondary/20">
       <div className="section-container max-w-[44rem]">
         <motion.div
-          className="text-center mb-6 sm:mb-10"
+          className="text-center mb-5 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="label-overline mb-3">{overline}</p>
+          <p className="label-overline mb-2">{overline}</p>
           <h2>{title}</h2>
         </motion.div>
-        <Accordion type="single" collapsible>
+        <Accordion type="single" collapsible defaultValue="faq-0">
           {items.map((item, i) => (
             <AccordionItem key={i} value={`faq-${i}`}>
-              <AccordionTrigger className="text-left font-body text-[1rem] font-medium text-foreground hover:no-underline">
+              <AccordionTrigger className="text-left font-body text-[0.9375rem] font-medium text-foreground hover:no-underline gap-3">
                 {item.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[0.9375rem] leading-[1.65] text-muted-foreground">
+              <AccordionContent className="text-[0.875rem] leading-[1.65] text-muted-foreground">
                 {item.a}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mt-6 text-center">
+        <div className="mt-5 text-center">
           <Link
             to={linkHref}
-            className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary hover:underline"
           >
             {linkLabel}
             <ArrowRight size={14} />
