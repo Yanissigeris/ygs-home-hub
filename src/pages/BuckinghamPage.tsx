@@ -28,9 +28,16 @@ const BuckinghamPage = () => (
     faq={{
       title: "Questions sur Buckingham",
       items: [
-        { q: "Buckingham est-il loin de Gatineau?", a: "Environ 25-30 minutes par l'autoroute 50. L'accès est direct et rapide." },
-        { q: "Les prix sont-ils vraiment plus bas?", a: "Oui — c'est l'un des secteurs les plus abordables de la grande région de Gatineau." },
-        { q: "Y a-t-il des services à Buckingham?", a: "Oui — écoles, épiceries, restaurants et services de santé. Le centre-ville a beaucoup de caractère." },
+        { q: "Buckingham est-il loin de Gatineau?", a: "Environ 25-30 minutes par l'autoroute 50. L'accès est direct et rapide vers le centre de Gatineau et Ottawa." },
+        { q: "Les prix sont-ils vraiment plus bas à Buckingham?", a: "Oui — c'est l'un des secteurs les plus abordables de la grande région de Gatineau, idéal pour un premier achat ou un investissement." },
+        { q: "Y a-t-il des services à Buckingham?", a: "Oui — écoles, épiceries, restaurants, services de santé et centre communautaire. Le centre-ville a beaucoup de caractère." },
+        { q: "Pourquoi acheter à Buckingham plutôt qu'à Gatineau?", a: "Pour l'espace, les prix accessibles et la nature. Vous obtenez un terrain plus grand et une maison plus spacieuse pour le même budget qu'en ville." },
+        { q: "Buckingham est-il bon pour un premier achat?", a: "Excellent — les prix d'entrée sont les plus bas de la région. C'est souvent la meilleure option pour accéder à la propriété en Outaouais." },
+        { q: "Y a-t-il des investissements intéressants à Buckingham?", a: "Oui — prix bas, demande locative croissante et nouveaux développements. Le potentiel de plus-value est réel à moyen terme." },
+        { q: "Quelles sont les écoles à Buckingham?", a: "Il y a des écoles primaires et secondaires francophones. Des options anglophones sont aussi disponibles dans les secteurs voisins." },
+        { q: "Comment vendre une maison à Buckingham?", a: "Évaluation réaliste, positionnement stratégique et mise en marché ciblée pour attirer les acheteurs qui cherchent l'espace et la nature." },
+        { q: "La rivière du Lièvre est-elle un atout?", a: "Absolument — les propriétés riveraines sont très recherchées, et la rivière offre des activités nautiques, pêche et paysages magnifiques." },
+        { q: "Comment obtenir une évaluation de maison à Buckingham?", a: "Je prépare une évaluation gratuite basée sur les ventes comparables récentes dans votre secteur. C'est confidentiel et sans engagement." },
       ],
     }}
     sectors={{ list: [

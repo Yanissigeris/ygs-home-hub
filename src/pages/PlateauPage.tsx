@@ -28,9 +28,16 @@ const PlateauPage = () => (
     faq={{
       title: "Questions sur le Plateau",
       items: [
-        { q: "Le Plateau est-il bon pour les familles?", a: "Excellent. Maisons neuves, parcs, écoles et communauté jeune — c'est l'un des secteurs les plus prisés des familles." },
+        { q: "Le Plateau est-il bon pour les familles?", a: "Excellent. Maisons neuves, parcs, écoles et communauté jeune — c'est l'un des secteurs les plus prisés des familles en Outaouais." },
         { q: "Le Plateau est-il proche d'Ottawa?", a: "Oui — 15-20 minutes via le pont Champlain. Accès direct par le boulevard des Allumettières." },
-        { q: "Les prix augmentent-ils dans le Plateau?", a: "Oui, le secteur est en demande. Les propriétés se vendent rapidement, surtout les maisons récentes." },
+        { q: "Les prix augmentent-ils dans le Plateau?", a: "Oui, le secteur est en forte demande. Les propriétés se vendent rapidement, surtout les maisons récentes avec garage." },
+        { q: "Pourquoi choisir un courtier immobilier dans le Plateau?", a: "Un courtier local connaît les développements, les prix par rue et les tendances du marché dans le Plateau. Ça vous aide à acheter au bon prix ou vendre au meilleur moment." },
+        { q: "Quel est le prix moyen d'une maison dans le Plateau?", a: "Ça dépend du type de propriété et de l'année de construction. Contactez-moi pour une analyse basée sur les ventes récentes dans votre secteur du Plateau." },
+        { q: "Y a-t-il des maisons neuves disponibles dans le Plateau?", a: "Oui, plusieurs constructeurs offrent des maisons neuves avec garantie. Je peux vous guider vers les projets qui correspondent à votre budget." },
+        { q: "Le Plateau est-il bon pour un premier achat?", a: "Très bon — les constructions récentes offrent un excellent rapport qualité-prix, et le secteur est bien desservi en écoles et services." },
+        { q: "Comment obtenir une évaluation de maison dans le Plateau?", a: "Je prépare une évaluation gratuite basée sur les ventes comparables récentes dans votre rue. C'est confidentiel et sans engagement." },
+        { q: "Y a-t-il des condos dans le Plateau?", a: "Oui, on trouve des condos et des maisons de ville, surtout dans les développements récents. C'est une option populaire pour les premiers acheteurs." },
+        { q: "Quels services sont disponibles dans le Plateau?", a: "Écoles primaires et secondaires, parcs, épiceries, pharmacies et accès rapide aux centres commerciaux de Gatineau. Le secteur est complet pour les familles." },
       ],
     }}
     sectors={{ list: [

@@ -47,9 +47,16 @@ const sellerReasons = [
 ];
 
 const faq = [
-  { q: "Is Hull good for investment?", a: "Yes — still-accessible entry prices, strong rental demand and ongoing revitalization. Ask for a plex analysis for details." },
-  { q: "What's the average price for a condo in Hull?", a: "It varies a lot by location and condition. Contact me for an up-to-date analysis." },
-  { q: "Is Hull safe?", a: "Hull is experiencing a renaissance — new projects, restaurants and a dynamic community. The area improves year after year." },
+  { q: "Is Hull good for investment?", a: "Yes — still-accessible entry prices, strong rental demand and ongoing revitalization with the Zibi project and new developments." },
+  { q: "What's the average price for a condo in Hull?", a: "It varies a lot by location and condition. Contact me for an up-to-date analysis based on recent sales in your Hull area." },
+  { q: "Is Hull safe?", a: "Hull is experiencing a renaissance — new residential projects, restaurants and a dynamic community. The area improves year after year." },
+  { q: "Why work with a real estate broker in Hull?", a: "A broker who knows Hull understands local realities — plexes, zoning, rental potential, revitalization projects. That helps you make an informed decision." },
+  { q: "How much does a plex yield in Hull?", a: "Returns depend on purchase price, rents and expenses. I prepare a free return analysis for every plex you're interested in." },
+  { q: "How close is Hull to Ottawa?", a: "Very close — a few minutes on foot or by bike from downtown Ottawa via the Alexandra and Portage bridges. It's the closest Outaouais area to Ottawa." },
+  { q: "Are there single-family homes in Hull?", a: "Yes, you'll find character homes on residential streets. Hull also offers condos, plexes and townhomes." },
+  { q: "Will the Zibi project increase prices?", a: "Zibi and related developments are increasing Hull's appeal. Well-located properties are already benefiting from this transformation." },
+  { q: "How do I sell a property in Hull?", a: "Valuation based on recent comparables, strategic positioning and targeted marketing — including Ottawa buyers and investors." },
+  { q: "Is Hull good for a first purchase?", a: "Excellent — prices are more accessible than Ottawa or Aylmer, the area is central and well-served by transit. Ideal for entering the market." },
 ];
 
 const relatedSectors = [
