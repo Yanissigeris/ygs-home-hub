@@ -67,6 +67,8 @@ const ValuationAylmerPage = React.lazy(() => import("./pages/ValuationAylmerPage
 const CombienCouteCourtierPage = React.lazy(() => import("./pages/CombienCouteCourtierPage"));
 const CommentChoisirCourtierPage = React.lazy(() => import("./pages/CommentChoisirCourtierPage"));
 const VerifierCourtierOaciqPage = React.lazy(() => import("./pages/VerifierCourtierOaciqPage"));
+const FraisCourtagePage = React.lazy(() => import("./pages/FraisCourtagePage"));
+const CourtierOuVendreSoiMemePage = React.lazy(() => import("./pages/CourtierOuVendreSoiMemePage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
