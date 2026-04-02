@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-chelsea.jpg";
 
 const ChelseaPageEn = () => (
   <NeighborhoodTemplate
-    seoTitle="Chelsea QC — Neighborhood Guide | YGS"
-    metaDesc="Buy, sell or live in Chelsea, Quebec. Picturesque village at the doorstep of Gatineau Park — nature, tranquility and quick access to Ottawa."
+    seoTitle="Real Estate Broker Chelsea · Outaouais | YGS"
+    metaDesc="Real estate broker in Chelsea, Outaouais. Buy or sell near Gatineau Park — nature, tranquility and quick access to Ottawa with a local specialist."
     jsonLd={{ name: "Chelsea", description: "Real estate broker in Chelsea. Picturesque village, Gatineau Park, nature and tranquility.", lat: 45.5200, lng: -75.7870, url: "/en/chelsea" }}
     hero={{ overline: "Neighborhood Guide · Chelsea", title: "Buy, Sell or Live in Chelsea", subtitle: "Picturesque village at the doorstep of Gatineau Park — nature, tranquility and quick access to Ottawa.", image: heroImg }}
     trustSpecialty="Chelsea & area specialist"
