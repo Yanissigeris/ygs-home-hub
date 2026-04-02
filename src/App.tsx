@@ -67,6 +67,8 @@ const ValuationAylmerPage = React.lazy(() => import("./pages/ValuationAylmerPage
 const CombienCouteCourtierPage = React.lazy(() => import("./pages/CombienCouteCourtierPage"));
 const CommentChoisirCourtierPage = React.lazy(() => import("./pages/CommentChoisirCourtierPage"));
 const VerifierCourtierOaciqPage = React.lazy(() => import("./pages/VerifierCourtierOaciqPage"));
+const FraisCourtagePage = React.lazy(() => import("./pages/FraisCourtagePage"));
+const CourtierOuVendreSoiMemePage = React.lazy(() => import("./pages/CourtierOuVendreSoiMemePage"));
 const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
@@ -132,7 +134,11 @@ const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
 const SellAylmerPageEn = React.lazy(() => import("./pages/en/SellAylmerPageEn"));
 const ValuationHullPageEn = React.lazy(() => import("./pages/en/ValuationHullPageEn"));
 const ValuationAylmerPageEn = React.lazy(() => import("./pages/en/ValuationAylmerPageEn"));
-
+const HowMuchRealtorCostPageEn = React.lazy(() => import("./pages/en/HowMuchRealtorCostPageEn"));
+const RealtorCommissionPageEn = React.lazy(() => import("./pages/en/RealtorCommissionPageEn"));
+const HowToChooseRealtorPageEn = React.lazy(() => import("./pages/en/HowToChooseRealtorPageEn"));
+const OaciqFindBrokerPageEn = React.lazy(() => import("./pages/en/OaciqFindBrokerPageEn"));
+const RealtorVsSellingByOwnerPageEn = React.lazy(() => import("./pages/en/RealtorVsSellingByOwnerPageEn"));
 
 
 const routeTree = React.createElement(
@@ -203,6 +209,8 @@ const routeTree = React.createElement(
       <Route path="/combien-coute-un-courtier-immobilier-au-quebec" element={<CombienCouteCourtierPage />} />
       <Route path="/comment-choisir-un-courtier-immobilier" element={<CommentChoisirCourtierPage />} />
       <Route path="/verifier-un-courtier-immobilier-oaciq" element={<VerifierCourtierOaciqPage />} />
+      <Route path="/frais-de-courtage-immobilier-quebec" element={<FraisCourtagePage />} />
+      <Route path="/courtier-immobilier-ou-vendre-soi-meme" element={<CourtierOuVendreSoiMemePage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
@@ -259,6 +267,11 @@ const routeTree = React.createElement(
       <Route path="/en/home-valuation-hull" element={<ValuationHullPageEn />} />
       <Route path="/en/home-valuation-aylmer" element={<ValuationAylmerPageEn />} />
       <Route path="/en/military-relocation" element={<MilitaryRelocationPageEn />} />
+      <Route path="/en/how-much-does-a-realtor-cost-in-quebec" element={<HowMuchRealtorCostPageEn />} />
+      <Route path="/en/realtor-commission-quebec" element={<RealtorCommissionPageEn />} />
+      <Route path="/en/how-to-choose-a-realtor" element={<HowToChooseRealtorPageEn />} />
+      <Route path="/en/oaciq-find-a-broker" element={<OaciqFindBrokerPageEn />} />
+      <Route path="/en/realtor-vs-selling-by-owner-quebec" element={<RealtorVsSellingByOwnerPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </>,
