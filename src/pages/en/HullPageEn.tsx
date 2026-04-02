@@ -66,8 +66,8 @@ const relatedSectors = [
 
 const related = [
   { title: "Living in Hull — the guide", text: "Culture, restaurants, Ottawa proximity.", href: "/en/living-hull" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
-  { title: "Free valuation", text: "How much is your property in Hull worth?", href: "/en/home-valuation" },
+  { title: "Sell in Hull", text: "Selling strategy adapted to Hull.", href: "/en/sell-house-hull" },
+  { title: "Home valuation Hull", text: "How much is your Hull property worth?", href: "/en/home-valuation-hull" },
   { title: "Invest in plex", text: "Analysis and strategy for plexes in Gatineau.", href: "/en/plex" },
   { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
 ];
