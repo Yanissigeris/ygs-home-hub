@@ -15,7 +15,7 @@ interface StatItem {
 
 interface SocialProofStripProps {
   stats: StatItem[];
-  testimonials: MiniTestimonial[];
+  testimonials?: MiniTestimonial[];
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
