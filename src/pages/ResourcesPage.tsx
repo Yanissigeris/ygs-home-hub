@@ -29,8 +29,10 @@ const tools = [
 
 const trustPages = [
   { icon: HelpCircle, title: "Combien coûte un courtier?", text: "Comment fonctionne la rémunération d'un courtier immobilier au Québec.", cta: "Lire l'article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: DollarSign, title: "Frais de courtage au Québec", text: "Détail des frais, services inclus et ce que ça signifie pour vous.", cta: "Lire l'article", href: "/frais-de-courtage-immobilier-quebec" },
   { icon: CheckCircle, title: "Comment choisir un courtier", text: "Les critères essentiels pour bien choisir votre courtier immobilier.", cta: "Lire l'article", href: "/comment-choisir-un-courtier-immobilier" },
   { icon: Search, title: "Vérifier un courtier (OACIQ)", text: "Comment vérifier le permis et les antécédents d'un courtier au Québec.", cta: "Lire l'article", href: "/verifier-un-courtier-immobilier-oaciq" },
+  { icon: Scale, title: "Courtier ou vendre seul?", text: "Comparaison honnête entre vendre avec un courtier ou par vous-même.", cta: "Lire l'article", href: "/courtier-immobilier-ou-vendre-soi-meme" },
 ];
 
 const trustItems = [
