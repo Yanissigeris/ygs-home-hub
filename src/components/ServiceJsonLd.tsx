@@ -24,14 +24,13 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
         "@id": `${BASE_URL}/#realestateagent`,
         name: "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
         url: BASE_URL,
-        telephone: "+1-819-962-4834",
+        telephone: "+1-819-210-3044",
         email: "yanis@ygsimmo.ca",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "1321 Boulevard Saint-Joseph",
+          streetAddress: "216 Chem. d'Aylmer",
           addressLocality: "Gatineau",
           addressRegion: "QC",
-          postalCode: "J8Z 1T7",
           addressCountry: "CA",
         },
       },
@@ -39,7 +38,7 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
       availableChannel: {
         "@type": "ServiceChannel",
         serviceUrl: `${BASE_URL}${url}`,
-        servicePhone: { "@type": "ContactPoint", telephone: "+1-819-962-4834" },
+        servicePhone: { "@type": "ContactPoint", telephone: "+1-819-210-3044" },
       },
     };
 
