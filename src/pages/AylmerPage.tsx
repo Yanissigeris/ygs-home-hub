@@ -47,14 +47,14 @@ const AylmerPage = () => (
     ]}}
     related={{ pages: [
       { title: "Vivre à Aylmer — le guide", text: "Mode de vie, lac, communauté.", href: "/vivre-a-aylmer" },
+      { title: "Vendre à Aylmer", text: "Stratégie de vente adaptée à Aylmer.", href: "/vendre-maison-aylmer" },
+      { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
       { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Aylmer", text: "Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
-    cta={{ title: "Acheteur ou vendeur à Aylmer?", text: "Je connais Aylmer par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Aylmer?", text: "Je connais Aylmer par cœur — parlons de votre projet.", buttons: [{ label: "Évaluation maison Aylmer", href: "/evaluation-maison-aylmer" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 
