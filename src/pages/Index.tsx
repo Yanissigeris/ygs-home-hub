@@ -9,7 +9,7 @@ import TrustStrip from "@/components/TrustStrip";
 const SocialProofStrip = React.lazy(() => import("@/components/SocialProofStrip"));
 const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
 const AboutSection = React.lazy(() => import("@/components/AboutSection"));
-const ConversionSection = React.lazy(() => import("@/components/ConversionSection"));
+
 const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
@@ -59,9 +59,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <AboutSection />
 
-      <hr className="section-divider" />
-
-      <ConversionSection />
 
       <hr className="section-divider" />
 
