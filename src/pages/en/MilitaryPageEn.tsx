@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
 import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
 import HeroSection from "@/components/HeroSection";
