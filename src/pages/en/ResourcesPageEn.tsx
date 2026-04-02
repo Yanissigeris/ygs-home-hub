@@ -25,6 +25,11 @@ const tools = [
   { icon: TrendingUp, title: "Market Report", text: "Prices, trends and sales volume in Gatineau.", cta: "See the report", href: "/en/market-report" },
   { icon: FileText, title: "Plex Analysis", text: "Revenues, expenses and return on your plex.", cta: "Get an analysis", href: "/en/plex-analysis" },
 ];
+const trustPages = [
+  { icon: HelpCircle, title: "How Much Does a Realtor Cost?", text: "How realtor compensation works in Québec.", cta: "Read the article", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
+  { icon: CheckCircle, title: "How to Choose a Realtor", text: "The essential criteria for choosing the right real estate broker.", cta: "Read the article", href: "/comment-choisir-un-courtier-immobilier" },
+  { icon: Search, title: "Verify a Broker (OACIQ)", text: "How to verify a broker's licence and background in Québec.", cta: "Read the article", href: "/verifier-un-courtier-immobilier-oaciq" },
+];
 const trustItems = [
   { icon: Clock, label: "Nearly 9 years in Outaouais" },
   { icon: Award, label: "Platinum Club · Hall of Fame" },
