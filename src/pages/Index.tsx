@@ -52,7 +52,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <TrustStrip />
 
     <React.Suspense fallback={null}>
-      <SocialProofStrip stats={socialStatsFr} testimonials={socialTestimonialsFr} />
+      <SocialProofStrip stats={socialStatsFr} />
 
       <PathwaySection />
 
