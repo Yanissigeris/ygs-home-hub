@@ -75,6 +75,13 @@ const ResourcesPage = () => (
       background="alt"
     />
 
+    <LinkedCardGrid
+      overline="Confiance"
+      title="Comprendre le courtage immobilier"
+      items={trustPages}
+      columns={3}
+    />
+
     <GuideOffersSection />
 
     <ContentBlock narrow>
