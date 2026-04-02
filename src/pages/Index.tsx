@@ -11,6 +11,7 @@ const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
 const AboutSection = React.lazy(() => import("@/components/AboutSection"));
 
 const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
+const LocalSEOCluster = React.lazy(() => import("@/components/LocalSEOCluster"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
