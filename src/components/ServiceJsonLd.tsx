@@ -28,9 +28,10 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
         email: "yanis@ygsimmo.ca",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "216 Chem. d'Aylmer",
+          streetAddress: "452 rue Jean-Perrin",
           addressLocality: "Gatineau",
           addressRegion: "QC",
+          postalCode: "J8V 2R3",
           addressCountry: "CA",
         },
       },
