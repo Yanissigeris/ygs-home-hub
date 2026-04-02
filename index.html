@@ -101,6 +101,21 @@
       "telephone": "+1-819-962-4834",
       "email": "yanis@ygsimmo.ca",
       "description": "Courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire avec conseils honnêtes.",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1321 Boulevard Saint-Joseph",
@@ -128,6 +143,26 @@
         "https://www.facebook.com/YanisGSCourtier",
         "https://www.instagram.com/yanissigeris/"
       ]
+    }
+    </script>
+
+    <!-- WebSite schema with SearchAction for sitelinks searchbox -->
+    <script type="application/ld+json" id="ygs-website-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YGS — Yanis Gauthier-Sigeris",
+      "alternateName": "YGS Immobilier",
+      "url": "https://yanisgauthier.com",
+      "inLanguage": ["fr-CA", "en-CA"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://yanisgauthier.com/blogue?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 
