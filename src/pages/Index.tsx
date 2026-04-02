@@ -14,6 +14,7 @@ const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
 const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
+const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
