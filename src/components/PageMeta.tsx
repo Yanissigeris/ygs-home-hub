@@ -63,6 +63,10 @@ const frToEn: Record<string, string> = {
   "/cote-dazur-gatineau": "/en/cote-dazur",
   "/limbour": "/en/limbour",
   "/courtier-immobilier-outaouais": "/en/outaouais-real-estate-agent",
+  "/vendre-maison-hull": "/en/sell-house-hull",
+  "/vendre-maison-aylmer": "/en/sell-house-aylmer",
+  "/evaluation-maison-hull": "/en/home-valuation-hull",
+  "/evaluation-maison-aylmer": "/en/home-valuation-aylmer",
 };
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
