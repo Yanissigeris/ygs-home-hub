@@ -126,7 +126,7 @@ const HullPageEn = () => (
         ))}
       </div>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/home-valuation">Get my valuation</Link>
+        <Link to="/en/home-valuation-hull">Get my valuation</Link>
       </Button>
     </ImageTextSplit>
 
