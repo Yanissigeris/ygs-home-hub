@@ -59,9 +59,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <AboutSection />
 
-      <hr className="section-divider" />
-
-      <ConversionSection />
 
       <hr className="section-divider" />
 
