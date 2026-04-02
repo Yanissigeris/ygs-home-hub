@@ -147,7 +147,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} />
+      <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
 
       <hr className="section-divider" />
 
