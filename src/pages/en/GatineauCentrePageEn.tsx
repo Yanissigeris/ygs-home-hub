@@ -40,6 +40,13 @@ const faq = [
   { q: "Is Gatineau centre a good choice for families?", a: "Yes — established neighborhoods, schools, parks and local services. It's a classic, reliable residential area." },
   { q: "How do prices compare to Aylmer?", a: "Generally more affordable than Aylmer, with a good selection of properties. Contact me for an up-to-date analysis." },
   { q: "Is there investment potential?", a: "Yes — strong rental demand, plexes available at reasonable prices and a stable market." },
+  { q: "How much does a house cost in Gatineau centre?", a: "Prices are competitive compared to Aylmer and Hull. Contact me for recent comparables in your area." },
+  { q: "Is Gatineau centre good for first-time buyers?", a: "Yes — accessible prices, complete services and Rapibus access to Ottawa. It's an excellent starting point." },
+  { q: "What types of properties are available?", a: "Bungalows, two-storey homes, condos, plexes and semi-detached — a diverse and affordable market." },
+  { q: "Is Gatineau centre well located?", a: "Yes — Highway 50, Rapibus, shops and services nearby. Quick access to Ottawa and other Gatineau sectors." },
+  { q: "Can I invest in a plex in Gatineau?", a: "Yes — strong rental demand and accessible purchase prices. I can analyze the return on any plex for you." },
+  { q: "Are there schools in Gatineau centre?", a: "Yes — French and English elementary and secondary schools, with good school transportation." },
+  { q: "How do I sell my property in Gatineau?", a: "I know the Gatineau centre market in depth. Request a free valuation to know your value and options." },
 ];
 
 const relatedSectors = [
@@ -57,8 +64,8 @@ const related = [
 
 const GatineauCentrePageEn = () => (
   <>
-    <PageMeta title="Gatineau Centre — Neighborhood Guide | YGS" description="Live, buy or invest in Gatineau centre. Established residential area, complete services and competitive prices." />
-    <NeighborhoodJsonLd name="Gatineau" description="Real estate broker in Gatineau centre. Established residential area, complete services and competitive prices." lat={45.4765} lng={-75.7013} url="/en/gatineau" />
+    <PageMeta title="Real Estate Broker Gatineau · Outaouais | YGS" description="Real estate broker in Gatineau centre. Residential, plex, condos and services — buy or sell with a local specialist." />
+    <NeighborhoodJsonLd name="Gatineau" description="Real estate broker in Gatineau centre. Residential area, complete services and competitive prices." lat={45.4765} lng={-75.7013} url="/en/gatineau" />
     <HeroSection overline="Neighborhood Guide · Gatineau" title="Live, buy or invest in Gatineau centre" subtitle="A well-established residential area, complete services and competitive prices — everything you need to know about the Gatineau sector." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     <TrustMiniStrip items={trustItems} />
     <ImageTextSplit image={riverImg} imageAlt="Gatineau sector" imagePosition="right">
