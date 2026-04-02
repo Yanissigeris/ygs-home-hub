@@ -40,10 +40,7 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="label-overline mb-3">Pourquoi YGS</p>
         <h2>Un accompagnement simple, stratégique et humain</h2>
         <p className="prose-body mt-5">
-          Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance, que ce soit à Gatineau, Aylmer, Hull ou ailleurs en Outaouais.
-        </p>
-        <p className="prose-body mt-4">
-          Avec plus de 9 ans d'expérience au sein de l'équipe Marty Waite chez ReMax, j'accompagne acheteurs, vendeurs et investisseurs avec une connaissance approfondie du marché local. Investisseur immobilier moi-même, je sais analyser les opportunités en multilogement et guider chaque transaction du début à la fin.
+          Avec plus de 9 ans d'expérience au sein de l'équipe Marty Waite chez ReMax, j'accompagne acheteurs, vendeurs et investisseurs à Gatineau, Aylmer, Hull et en Outaouais avec une stratégie claire et une connaissance approfondie du marché local.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
