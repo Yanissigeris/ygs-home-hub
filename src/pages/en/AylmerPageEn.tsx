@@ -57,8 +57,8 @@ const relatedSectors = [
 
 const related = [
   { title: "Living in Aylmer — the guide", text: "Lifestyle, lake, community and everything you need to know.", href: "/en/living-aylmer" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
-  { title: "Free Valuation", text: "How much is your Aylmer property worth?", href: "/en/home-valuation" },
+  { title: "Sell in Aylmer", text: "Selling strategy adapted to Aylmer.", href: "/en/sell-house-aylmer" },
+  { title: "Home valuation Aylmer", text: "How much is your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
   { title: "Buyer Guide", text: "The buying process in Québec, step by step.", href: "/en/buyer-guide" },
   { title: "First-time buyer", text: "Budget, down payment and tips for first-time buyers.", href: "/en/first-time-buyer" },
   { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
