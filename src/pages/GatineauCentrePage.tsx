@@ -26,11 +26,18 @@ const GatineauCentrePage = () => (
     ]}
     inlineCta={{ text: "Propriétaire à Gatineau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
     faq={{
-      title: "Questions sur Gatineau-centre",
+      title: "Questions sur Gatineau",
       items: [
         { q: "Gatineau-centre est-il abordable?", a: "Oui — c'est l'un des secteurs les plus accessibles pour les familles et les premiers acheteurs." },
         { q: "Y a-t-il des investissements intéressants à Gatineau?", a: "Oui — plex, duplex et logements locatifs sont en demande. Demandez une analyse de rendement." },
         { q: "Le transport en commun est-il bon?", a: "Oui — le Rapibus et les lignes STO offrent un accès direct au centre-ville d'Ottawa." },
+        { q: "Combien coûte une maison à Gatineau-centre?", a: "Les prix sont compétitifs par rapport à Aylmer et Hull. Contactez-moi pour les comparables récents dans votre secteur." },
+        { q: "Gatineau est-il bon pour les premiers acheteurs?", a: "Oui — les prix sont accessibles, les services sont complets et le Rapibus facilite l'accès à Ottawa. C'est un excellent point de départ." },
+        { q: "Quels types de propriétés trouve-t-on à Gatineau?", a: "Bungalows, maisons à étages, condos, plex et jumelés. Le choix est varié et les prix sont compétitifs." },
+        { q: "Gatineau-centre est-il bien situé?", a: "Oui — autoroute 50, Rapibus, commerces et services à proximité. Accès rapide à Ottawa et aux autres secteurs de Gatineau." },
+        { q: "Peut-on investir en plex à Gatineau?", a: "Oui — la demande locative est forte et les prix d'achat restent accessibles. Je peux analyser le rendement d'un plex pour vous." },
+        { q: "Y a-t-il des écoles à Gatineau-centre?", a: "Oui — écoles primaires et secondaires francophones et anglophones, avec un bon accès au transport scolaire." },
+        { q: "Comment vendre ma propriété à Gatineau?", a: "Je connais le marché de Gatineau-centre en profondeur. Demandez une évaluation gratuite pour connaître votre valeur et vos options." },
       ],
     }}
     sectors={{ list: [

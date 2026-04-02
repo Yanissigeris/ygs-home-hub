@@ -31,6 +31,13 @@ const CantleyPage = () => (
         { q: "Cantley est-il loin de Gatineau?", a: "Environ 20 minutes du centre de Gatineau. L'accès est rapide par la route 307." },
         { q: "Y a-t-il des services à Cantley?", a: "Oui — école, épicerie, restaurants, station-service. Pour les gros achats, Gatineau est à 15-20 minutes." },
         { q: "Les terrains sont-ils grands à Cantley?", a: "Oui, c'est l'un des attraits principaux. La plupart des propriétés ont 1 à 5+ acres." },
+        { q: "Combien coûte une maison à Cantley?", a: "Les prix varient selon la taille du terrain et le type de propriété. Contactez-moi pour une analyse récente des prix dans votre secteur de Cantley." },
+        { q: "Cantley est-il bon pour les familles?", a: "Oui — communauté familiale, écoles primaires, grands espaces, activités plein air et sécurité. C'est un milieu de vie idéal pour élever des enfants." },
+        { q: "Peut-on avoir un puits et une fosse septique?", a: "Oui, la majorité des propriétés à Cantley fonctionnent avec puits artésien et système septique. L'inspection est importante lors de l'achat." },
+        { q: "Y a-t-il du transport en commun à Cantley?", a: "Le service est limité. La plupart des résidents utilisent leur véhicule. La proximité de Gatineau compense pour les services." },
+        { q: "Cantley est-il un bon investissement?", a: "Les terrains et propriétés à Cantley prennent de la valeur — la demande est forte pour la qualité de vie et la proximité de Gatineau." },
+        { q: "Quelles activités peut-on faire à Cantley?", a: "Randonnée, ski, VTT, motoneige, équitation, marchés fermiers et événements communautaires — c'est un paradis quatre-saisons." },
+        { q: "Comment vendre ma propriété à Cantley?", a: "Je connais le marché de Cantley — terrain, superficie, particularités. Demandez une évaluation gratuite pour connaître votre valeur." },
       ],
     }}
     sectors={{ list: [
