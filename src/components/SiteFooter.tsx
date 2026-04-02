@@ -37,7 +37,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     return (
       <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
         <div className="section-container">
-          <div className="flex flex-col items-center pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+          <div className="flex flex-col items-center pt-14 pb-10 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
@@ -52,7 +52,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </div>
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="grid gap-10 py-14 sm:grid-cols-2 sm:py-16 lg:grid-cols-4 lg:gap-6 lg:py-20">
+          <div className="grid gap-8 py-10 sm:grid-cols-2 sm:py-12 lg:grid-cols-4 lg:gap-6 lg:py-14">
             {columns.map((col) => (
               <div key={col.title}>
                 <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{col.title}</p>
@@ -67,7 +67,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="py-10 sm:py-12">
+          <div className="py-7 sm:py-8">
             <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               {popularLinks.map((l) => (
@@ -75,7 +75,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-14 sm:py-16 lg:py-20">
+          <div className="flex flex-col items-center py-10 sm:py-12 lg:py-14">
             <p className="mb-8 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25 sm:mb-10">{affiliationsLabel}</p>
             <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-8 gap-y-9 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (

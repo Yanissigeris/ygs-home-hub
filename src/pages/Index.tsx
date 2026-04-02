@@ -60,6 +60,14 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <AboutSection />
 
+      <hr className="section-divider" />
+
+      <ReviewSection
+        overline="Témoignages"
+        title="Ce que disent mes clients"
+        reviews={homepageReviews}
+        columns={3}
+      />
 
       <hr className="section-divider" />
 
@@ -101,13 +109,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       />
 
       <hr className="section-divider" />
-
-      <ReviewSection
-        overline="Témoignages"
-        title="Ce que disent mes clients"
-        reviews={homepageReviews}
-        columns={3}
-      />
 
       <CTASection
         dark
