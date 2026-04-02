@@ -133,7 +133,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
             <p className="label-overline mb-3">Why YGS</p>
             <h2>Simple, strategic and human guidance</h2>
-            <p className="prose-body mt-5">With nearly 9 years of experience as a real estate broker in Outaouais with Team Marty Waite from ReMax, I support sellers, buyers and investors in Gatineau, Aylmer, Hull and across Outaouais with a clear strategy and deep local market knowledge.</p>
+            <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready, whether in Gatineau, Aylmer, Hull or anywhere in Outaouais.</p>
+            <p className="prose-body mt-4">I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market — prices by neighborhood, trends, resale potential and on-the-ground realities.</p>
+            <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais with Team Marty Waite from ReMax, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in Gatineau and area in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project in Outaouais.</p>
             <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
               <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
               <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
