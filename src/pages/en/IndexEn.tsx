@@ -154,30 +154,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      {/* Conversion Steps */}
-      <section className="section-padding bg-background">
-        <div className="section-container">
-          <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-            <p className="label-overline mb-3">How it works</p>
-            <h2>Three steps to a successful transaction</h2>
-          </motion.div>
-          <div className="grid gap-6 sm:grid-cols-3 sm:gap-7">
-            {steps.map((step, i) => (
-              <motion.div key={step.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}>
-                <Link to={step.href} className="card-elevated group flex h-full flex-col items-start border border-border/40 bg-card p-7 sm:p-8 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
-                  <span className="mb-4 font-heading text-[2rem] leading-none text-accent/20">{step.number}</span>
-                  <h3 className="text-[1.125rem] font-semibold">{step.title}</h3>
-                  <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.65] text-muted-foreground">{step.text}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-[0.875rem] font-semibold text-primary opacity-0 transition-opacity duration-200 group-hover:opacity-100">Learn more <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <hr className="section-divider" />
-
       <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
       <GuideOffersSectionEn background="alt" />
