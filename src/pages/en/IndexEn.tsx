@@ -152,6 +152,23 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <SectorLinks overline="Gatineau and area" title="Neighborhoods to watch" sectors={sectors} background="alt" />
 
+      <hr className="section-divider" />
+
+      <LocalSEOCluster
+        overline="Areas & services"
+        title="Popular areas and services in Outaouais"
+        links={[
+          { label: "Realtor Gatineau", href: "/en/gatineau", detail: "Central, services, plex" },
+          { label: "Realtor Hull", href: "/en/hull", detail: "Urban, culture, condos" },
+          { label: "Realtor Aylmer", href: "/en/aylmer", detail: "Lake, families, bilingual" },
+          { label: "Realtor Chelsea", href: "/en/chelsea", detail: "Nature, park, serenity" },
+          { label: "Home Valuation Gatineau", href: "/en/home-valuation", detail: "Free and no obligation" },
+          { label: "Sell My House Gatineau", href: "/en/sell", detail: "Strategy and guidance" },
+        ]}
+      />
+
+      <hr className="section-divider" />
+
       <GuideOffersSectionEn background="alt" />
 
       <hr className="section-divider" />

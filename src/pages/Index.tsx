@@ -67,6 +67,23 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
+      <LocalSEOCluster
+        overline="Services et secteurs"
+        title="Secteurs et services les plus recherchés en Outaouais"
+        links={[
+          { label: "Courtier immobilier Gatineau", href: "/gatineau", detail: "Centre, services, plex" },
+          { label: "Courtier immobilier Hull", href: "/hull", detail: "Urbain, culture, condos" },
+          { label: "Courtier immobilier Aylmer", href: "/aylmer", detail: "Lac, familles, bilingue" },
+          { label: "Courtier immobilier Chelsea", href: "/chelsea", detail: "Nature, parc, tranquillité" },
+          { label: "Courtier immobilier Cantley", href: "/cantley", detail: "Rural, grands terrains" },
+          { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau", detail: "Gratuite et sans engagement" },
+          { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau", detail: "Stratégie et accompagnement" },
+          { label: "Quartiers de l'Outaouais", href: "/quartiers-a-considerer-a-gatineau", detail: "Comparer les secteurs" },
+        ]}
+      />
+
+      <hr className="section-divider" />
+
       <GuideOffersSection background="alt" />
 
       <hr className="section-divider" />
