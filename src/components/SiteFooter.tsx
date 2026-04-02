@@ -9,8 +9,8 @@ import logoTemple from "@/assets/logo-temple-renommee.webp";
 import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
-import { footerColumns } from "@/data/navigation";
-import { footerColumnsEn } from "@/data/navigation-en";
+import { footerColumns, footerPopularLinks } from "@/data/navigation";
+import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
 
 const affiliationLogos = [
   { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
