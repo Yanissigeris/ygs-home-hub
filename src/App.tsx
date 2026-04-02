@@ -125,6 +125,10 @@ const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
 const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
 const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
+const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
+const SellAylmerPageEn = React.lazy(() => import("./pages/en/SellAylmerPageEn"));
+const ValuationHullPageEn = React.lazy(() => import("./pages/en/ValuationHullPageEn"));
+const ValuationAylmerPageEn = React.lazy(() => import("./pages/en/ValuationAylmerPageEn"));
 
 
 
