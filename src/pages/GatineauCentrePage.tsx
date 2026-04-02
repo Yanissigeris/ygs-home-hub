@@ -47,8 +47,8 @@ const GatineauCentrePage = () => (
     ]}}
     related={{ pages: [
       { title: "Investir en plex", text: "Analyse et stratégie pour les plex.", href: "/investir-plex-gatineau" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
       { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },

@@ -41,8 +41,8 @@ const LimbourPage = () => (
     related={{ pages: [
       { title: "Limbour : quartier familial moderne", text: "Découvrez ce secteur en croissance.", href: "/blogue/limbour-quartier-familial-moderne-gatineau" },
       { title: "Acheter à Limbour", text: "Maisons récentes à bon prix.", href: "/blogue/acheter-limbour-maisons-recentes" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}

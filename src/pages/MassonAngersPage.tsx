@@ -42,8 +42,8 @@ const MassonAngersPage = () => (
       { title: "Masson-Angers en plein essor", text: "Pourquoi ce secteur explose.", href: "/blogue/masson-angers-secteur-en-essor" },
       { title: "Premier achat à Masson-Angers", text: "Pourquoi c'est le bon moment.", href: "/blogue/premier-achat-masson-angers" },
       { title: "Constructions neuves", text: "Ce qu'il faut savoir sur le neuf.", href: "/blogue/constructions-neuves-masson-angers" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Masson-Angers", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}

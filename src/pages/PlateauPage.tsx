@@ -47,8 +47,8 @@ const PlateauPage = () => (
     ]}}
     related={{ pages: [
       { title: "Vivre dans le Plateau", text: "Guide de vie dans le secteur.", href: "/vivre-dans-le-plateau" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-gatineau" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
       { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },
