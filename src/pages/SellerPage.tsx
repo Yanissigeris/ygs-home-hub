@@ -55,8 +55,14 @@ const nextSteps = [
 const faq = [
 { q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. En près de 9 ans en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions — avec le bon plan." },
 { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
-{ q: "Combien coûte un courtier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — tout est clair dès le départ." },
-{ q: "Et si je dois acheter en même temps?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé." }];
+{ q: "Combien coûte un courtier immobilier à Gatineau?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — tout est clair dès le départ." },
+{ q: "Et si je dois acheter en même temps?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé." },
+{ q: "Combien de temps prend la vente d'une maison à Gatineau?", a: "En moyenne, une propriété bien positionnée se vend en quelques semaines en Outaouais. Le délai dépend du prix, du secteur et de la préparation." },
+{ q: "Pourquoi travailler avec un courtier pour vendre à Gatineau?", a: "Un courtier local connaît les comparables, les acheteurs actifs et les stratégies qui fonctionnent dans votre secteur — Aylmer, Hull, Plateau ou ailleurs en Outaouais." },
+{ q: "Comment est calculée la valeur de ma maison?", a: "Je me base sur les ventes comparables récentes dans votre rue et votre quartier, l'état de la propriété et les conditions du marché local." },
+{ q: "Faut-il faire du home staging pour vendre?", a: "Pas toujours, mais dans certains cas ça accélère la vente et améliore le prix. Je vous conseille au cas par cas selon votre propriété." },
+{ q: "Quels frais dois-je prévoir pour vendre ma maison?", a: "Commission courtier, notaire, certificat de localisation, et parfois des réparations mineures. Je vous donne le portrait complet avant de commencer." },
+{ q: "Puis-je vendre ma maison à un acheteur d'Ottawa?", a: "Absolument — beaucoup d'acheteurs d'Ottawa cherchent en Outaouais pour les prix et la qualité de vie. Ma mise en marché cible les deux marchés." }];
 
 
 const SellerPage = () =>

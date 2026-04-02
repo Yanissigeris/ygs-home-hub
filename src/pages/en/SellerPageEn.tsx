@@ -46,8 +46,14 @@ const nextSteps = [
 const faq = [
   { q: "When is the best time to sell?", a: "It depends on your situation, not just the market. In nearly 9 years in Outaouais, I've seen sellers succeed in all conditions — with the right plan." },
   { q: "Do I need to renovate before selling?", a: "Not necessarily. I'll help you identify what's worth doing to maximize your price without wasting money." },
-  { q: "How much does a broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
+  { q: "How much does a real estate broker cost in Gatineau?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "What if I need to buy at the same time?", a: "That's common. We plan the coordination from the start to avoid getting stuck." },
+  { q: "How long does it take to sell a house in Gatineau?", a: "On average, a well-positioned property sells within a few weeks in Outaouais. The timeline depends on pricing, area and preparation." },
+  { q: "Why work with a broker to sell in Gatineau?", a: "A local broker knows the comparables, active buyers and strategies that work in your area — Aylmer, Hull, Plateau or elsewhere in Outaouais." },
+  { q: "How is my home value calculated?", a: "I use recent comparable sales on your street and in your neighborhood, property condition and current local market conditions." },
+  { q: "Do I need home staging to sell?", a: "Not always, but in some cases it speeds up the sale and improves the price. I advise on a case-by-case basis depending on your property." },
+  { q: "What costs should I expect when selling my house?", a: "Broker commission, notary fees, location certificate, and sometimes minor repairs. I give you the full picture before we start." },
+  { q: "Can I sell my house to an Ottawa buyer?", a: "Absolutely — many Ottawa buyers look in Outaouais for better prices and quality of life. My marketing targets both markets." },
 ];
 
 const SellerPageEn = () => (

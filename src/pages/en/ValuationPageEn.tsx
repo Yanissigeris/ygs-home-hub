@@ -100,6 +100,7 @@ const ValuationPageEn = () => {
       </section>
       <BenefitsList overline="What you receive" title="Your valuation includes" items={benefits} />
       <FunnelNextStep overline="What's next?" title="After your valuation" subtitle="You'll have the numbers. Here are the options to go further." steps={afterSteps} background="alt" />
+      <FAQSection title="Valuation questions" items={valuationFaq} />
     </>
   );
 };
