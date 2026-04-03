@@ -42,10 +42,10 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="prose-body mt-5">
           Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance, que ce soit à Gatineau, Aylmer, Hull ou ailleurs en Outaouais.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden md:block">
           J'accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire, terrain, et une connaissance approfondie du marché local — prix par quartier, tendances, potentiel de revente et réalités du terrain.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden md:block">
           Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais au sein de l'équipe Marty Waite chez ReMax, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin. Investisseur immobilier moi-même, je sais aussi analyser en profondeur les opportunités en multilogement à Gatineau et dans la région. Mon expérience terrain en flips immobiliers, combinée à ma formation en gestion de projets, fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
         </p>
 
