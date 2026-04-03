@@ -10,10 +10,15 @@ interface GuideInlineCTAProps {
   headline: string;
   text: string;
   ctaLabel?: string;
+  lang?: "fr" | "en";
 }
 
-const GuideInlineCTA = ({ guideType, headline, text, ctaLabel = "Recevoir le guide gratuit" }: GuideInlineCTAProps) => {
+const defaults = { fr: { cta: "Recevoir le guide gratuit", overline: "Guide gratuit", free: "Gratuit", noCommitment: "Sans engagement" }, en: { cta: "Get the free guide", overline: "Free Guide", free: "Free", noCommitment: "No commitment" } };
+
+const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: GuideInlineCTAProps) => {
   const [open, setOpen] = useState(false);
+  const d = defaults[lang];
+  const label = ctaLabel ?? d.cta;
 
   return (
     <>
@@ -26,46 +31,32 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel = "Recevoir le gui
       >
         <div className="section-container max-w-[52rem]">
           <div className="relative overflow-hidden rounded-2xl border border-accent/15 bg-gradient-to-br from-primary via-primary to-[hsl(200_42%_20%)] px-6 py-8 sm:px-10 sm:py-10">
-            {/* Decorative accent line */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
-
             <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <div className="flex-1">
                 <p className="flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-accent/80 mb-2">
                   <BookOpen size={13} className="text-accent" />
-                  Guide gratuit
+                  {d.overline}
                 </p>
-                <h3
-                  className="text-[1.15rem] sm:text-[1.3rem] font-semibold text-primary-foreground leading-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                <h3 className="text-[1.15rem] sm:text-[1.3rem] font-semibold text-primary-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {headline}
                 </h3>
-                <p className="mt-2 text-[0.8125rem] text-primary-foreground/70 leading-relaxed max-w-md">
-                  {text}
-                </p>
+                <p className="mt-2 text-[0.8125rem] text-primary-foreground/70 leading-relaxed max-w-md">{text}</p>
                 <div className="mt-2 flex gap-4 text-[0.7rem] text-primary-foreground/40">
-                  <span className="flex items-center gap-1"><BadgeCheck size={11} /> Gratuit</span>
-                  <span className="flex items-center gap-1"><Lock size={11} /> Sans engagement</span>
+                  <span className="flex items-center gap-1"><BadgeCheck size={11} /> {d.free}</span>
+                  <span className="flex items-center gap-1"><Lock size={11} /> {d.noCommitment}</span>
                 </div>
               </div>
               <div className="shrink-0">
-                <Button
-                  variant="accent"
-                  size="lg"
-                  className="font-semibold w-full sm:w-auto"
-                  onClick={() => { trackCTAClick(ctaLabel, "guide-inline-cta"); setOpen(true); }}
-                >
-                  {ctaLabel}
-                  <ArrowRight size={14} className="ml-1.5" />
+                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => { trackCTAClick(label, "guide-inline-cta"); setOpen(true); }}>
+                  {label}<ArrowRight size={14} className="ml-1.5" />
                 </Button>
               </div>
             </div>
           </div>
         </div>
       </motion.section>
-
-      <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} />
+      <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} lang={lang} />
     </>
   );
 };

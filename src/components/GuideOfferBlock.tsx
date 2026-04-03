@@ -10,24 +10,30 @@ interface GuideOfferBlockProps {
   subtitle: string;
   ctaLabel?: string;
   background?: "default" | "alt";
+  lang?: "fr" | "en";
 }
 
+const defaultLabelsFr: Record<string, string> = {
+  seller_guide: "Recevoir le guide vendeur",
+  buyer_guide: "Recevoir le guide acheteur",
+  investor_guide: "Recevoir le guide investisseur",
+  relocation_guide: "Recevoir le guide relocalisation",
+};
+
+const defaultLabelsEn: Record<string, string> = {
+  seller_guide: "Get the Seller Guide",
+  buyer_guide: "Get the Buyer Guide",
+  investor_guide: "Get the Investor Guide",
+  relocation_guide: "Get the Relocation Guide",
+};
+
 const GuideOfferBlock = ({
-  guideType,
-  title,
-  subtitle,
-  ctaLabel,
-  background = "default",
+  guideType, title, subtitle, ctaLabel, background = "default", lang = "fr",
 }: GuideOfferBlockProps) => {
   const [open, setOpen] = useState(false);
-
-  const defaultLabels: Record<string, string> = {
-    seller_guide: "Recevoir le guide vendeur",
-    buyer_guide: "Recevoir le guide acheteur",
-    investor_guide: "Recevoir le guide investisseur",
-    relocation_guide: "Recevoir le guide relocalisation",
-  };
-  const label = ctaLabel ?? defaultLabels[guideType] ?? "Recevoir le guide";
+  const labels = lang === "en" ? defaultLabelsEn : defaultLabelsFr;
+  const fallback = lang === "en" ? "Get the guide" : "Recevoir le guide";
+  const label = ctaLabel ?? labels[guideType] ?? fallback;
 
   return (
     <>
@@ -43,27 +49,15 @@ const GuideOfferBlock = ({
         <div className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-3 sm:mb-4">
           <BookOpen size={20} className="text-accent" />
         </div>
-        <h3
-          className="text-[1.05rem] font-semibold text-foreground leading-tight"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+        <h3 className="text-[1.05rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
           {title}
         </h3>
-        <p className="mt-2 text-[0.8125rem] text-muted-foreground leading-relaxed flex-1">
-          {subtitle}
-        </p>
-        <Button
-          variant="accent"
-          size="default"
-          className="mt-3 sm:mt-5 w-full sm:w-auto self-start text-[0.8125rem] max-w-full"
-          onClick={() => setOpen(true)}
-        >
-          <span className="truncate">{label}</span>
-          <ArrowRight size={14} className="ml-1 shrink-0" />
+        <p className="mt-2 text-[0.8125rem] text-muted-foreground leading-relaxed flex-1">{subtitle}</p>
+        <Button variant="accent" size="default" className="mt-3 sm:mt-5 w-full sm:w-auto self-start text-[0.8125rem] max-w-full" onClick={() => setOpen(true)}>
+          <span className="truncate">{label}</span><ArrowRight size={14} className="ml-1 shrink-0" />
         </Button>
       </motion.div>
-
-      <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} />
+      <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} lang={lang} />
     </>
   );
 };
