@@ -7,8 +7,8 @@ import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-military-relocation.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
@@ -54,10 +54,10 @@ const MilitaryRelocationPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Why YGS" title="Support adapted to your pace" subtitle="Postings don't follow the normal real estate calendar. I adapt to your timeline and constraints." />
     </ContentBlock>
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need for your real estate posting to Gatineau — in a guide sent to your email." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need for your real estate posting to Gatineau — in a guide sent to your email." ctaLabel="Get the guide" />
     <CTASection dark title="Let's plan your relocation" text="Tell me about your posting — we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <FAQSection items={faq} />
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>
 );
 

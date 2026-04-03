@@ -11,8 +11,8 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-plex.webp";
 
@@ -60,8 +60,8 @@ const PlexPageEn = () => (
     <CardGrid overline="Analysis" title="The real questions behind a plex" items={questions} variant="icon-inline" background="alt" />
     <ProcessSteps steps={steps} />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the option that fits your investor situation." steps={nextSteps} background="alt" />
-    <GuideInlineCTAEn guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid — the essential guide for investing in Gatineau." ctaLabel="Get the Investor Guide" />
-    <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid — the essential guide for investing in Gatineau." ctaLabel="Get the Investor Guide" />
+    <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
     <ReviewSection overline="Investor testimonials" title="Informed decisions, real results" reviews={getReviewsByCategory("plex").slice(0, 2)} columns={2} />
     <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position — I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />

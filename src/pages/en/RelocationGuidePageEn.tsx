@@ -8,8 +8,8 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-relocation-guide.webp";
 
 const topics = [
@@ -57,9 +57,9 @@ const RelocationGuidePageEn = () => (
 
     <SectorLinks overline="Popular neighborhoods" title="Neighborhoods to consider" sectors={sectors} background="alt" />
 
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Moving to Gatineau? Get the complete guide." text="A clear guide to better understand buying in Gatineau from Ottawa or elsewhere, avoid surprises and choose the right neighborhood." ctaLabel="Get the Relocation Guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Moving to Gatineau? Get the complete guide." text="A clear guide to better understand buying in Gatineau from Ottawa or elsewhere, avoid surprises and choose the right neighborhood." ctaLabel="Get the Relocation Guide" />
 
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
 
     <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Book a call →" href="/en/contact" />
 

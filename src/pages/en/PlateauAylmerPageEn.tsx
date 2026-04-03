@@ -8,8 +8,8 @@ import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import SectorLinks from "@/components/SectorLinks";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/gatineau-river-view.webp";
 
@@ -93,7 +93,7 @@ const PlateauAylmerPageEn = () => (
       trustLine="I give you the numbers and the options — you decide."
     />
 
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 

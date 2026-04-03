@@ -173,7 +173,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <GuideOffersSectionEn background="alt" />
+      <GuideOffersSection lang="en" background="alt" />
 
       <hr className="section-divider" />
 

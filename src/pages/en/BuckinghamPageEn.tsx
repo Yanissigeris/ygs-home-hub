@@ -12,8 +12,8 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buckingham.webp";
 import riverImg from "@/assets/buckingham-river-nature.jpg";
@@ -135,7 +135,7 @@ const BuckinghamPageEn = () => (
 
     <RelatedPages overline="Also read" title="Related pages" pages={related} background="alt" />
 
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Buckingham" text="Process, budget and tips for buying in the area." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Buckingham" text="Process, budget and tips for buying in the area." ctaLabel="Get the Buyer Guide" />
 
     <CTASection
       dark
@@ -148,7 +148,7 @@ const BuckinghamPageEn = () => (
       trustLine="I give you the numbers — you decide with full clarity."
     />
 
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 export default BuckinghamPageEn;

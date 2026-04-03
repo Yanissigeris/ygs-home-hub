@@ -13,8 +13,8 @@ import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { MapPin, DollarSign, FileText, Home, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-relocation.webp";
 
@@ -64,10 +64,10 @@ const RelocationPageEn = () => (
     <SectorLinks id="sectors" overline="Popular neighborhoods" title="Most popular neighborhoods for relocators" sectors={sectors} background="alt" />
     <ReviewSection overline="Relocation testimonials" title="They settled in Gatineau with confidence" reviews={getReviewsByCategory("relocation").slice(0, 2)} columns={2} />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the option that fits your situation." steps={nextSteps} background="alt" />
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Relocation Guide" text="Everything you need to know to settle in Gatineau — neighborhoods, prices, process and schools." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="Everything you need to know to settle in Gatineau — neighborhoods, prices, process and schools." ctaLabel="Get the guide" />
     <CTASection dark title="Let's talk about your relocation" text="Budget, neighborhoods, Québec process — we clarify everything during a first call, no commitment." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Relocation Guide", href: "/en/relocation-guide", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>
 );
 

@@ -7,8 +7,8 @@ import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-montreal-relocation.webp";
 
@@ -51,9 +51,9 @@ const MontrealRelocationPageEn = () => (
       <SectionHeading title="A local broker who understands your situation" />
       <p className="prose-body mt-5">The transition from Montréal to Gatineau is simpler than you think — same notary process, same province. My role is to help you discover the best neighborhoods and support you through every step.</p>
     </ContentBlock>
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Relocation Guide" text="Everything for moving to Gatineau from Montréal — neighborhoods, prices and process." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="Everything for moving to Gatineau from Montréal — neighborhoods, prices and process." ctaLabel="Get the guide" />
     <CTASection dark title="Ready to explore Gatineau?" text="Book a free call — let's look at neighborhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>
 );
 

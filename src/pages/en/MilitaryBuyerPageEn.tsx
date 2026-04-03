@@ -9,8 +9,8 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Home, MapPin, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-military-buyer.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
@@ -83,7 +83,7 @@ const MilitaryBuyerPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know about buying in Gatineau during a posting — in a clear guide sent by email." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know about buying in Gatineau during a posting — in a clear guide sent by email." ctaLabel="Get the guide" />
 
     <CTASection
       dark
@@ -98,7 +98,7 @@ const MilitaryBuyerPageEn = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Military Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide — get it by email" />
   </>
 );
 export default MilitaryBuyerPageEn;

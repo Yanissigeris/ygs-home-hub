@@ -8,7 +8,7 @@ import SectionHeading from "@/components/SectionHeading";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
-import GuideOffersSectionEn from "@/components/en/GuideOffersSectionEn";
+import GuideOffersSection from "@/components/GuideOffersSection";
 import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search, DollarSign, Scale } from "lucide-react";
 import heroImg from "@/assets/hero-resources.webp";
 
@@ -51,7 +51,7 @@ const ResourcesPageEn = () => (
     <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />
     <LinkedCardGrid overline="Trust" title="Understanding real estate brokerage" items={trustPages} columns={3} />
-    <GuideOffersSectionEn />
+    <GuideOffersSection lang="en" />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
     <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis — choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/contact", variant: "outline" }]} trustLine="I support you at your pace — you decide when you're ready." />

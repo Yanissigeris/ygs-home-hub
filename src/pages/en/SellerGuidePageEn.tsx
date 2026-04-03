@@ -9,8 +9,8 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
 import heroImg from "@/assets/hero-seller-guide.webp";
 
@@ -93,11 +93,11 @@ const SellerGuidePageEn = () => (
 
     <RelatedPages overline="Also worth reading" title="Related pages for sellers" pages={related} background="alt" />
 
-    <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 
     <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
 
-    <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>
 );
 export default SellerGuidePageEn;
