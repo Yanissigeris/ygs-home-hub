@@ -49,6 +49,17 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
           Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais au sein de l'équipe Marty Waite chez ReMax, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin. Investisseur immobilier moi-même, je sais aussi analyser en profondeur les opportunités en multilogement à Gatineau et dans la région. Mon expérience terrain en flips immobiliers, combinée à ma formation en gestion de projets, fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
         </p>
 
+        <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
+          <span className="flex items-center gap-2">
+            <Clock size={14} /> Près de 9 ans d&apos;expérience
+          </span>
+          <span className="flex items-center gap-2">
+            <Award size={14} /> Club Platine · Club 100% · Temple de la renommée
+          </span>
+          <span className="flex items-center gap-2">
+            <Heart size={14} /> Approche axée sur la confiance
+          </span>
+        </div>
 
         <Button className="mt-6 sm:mt-8" size="lg" asChild>
           <Link to="/contact-yanis">En savoir plus</Link>

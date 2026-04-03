@@ -136,6 +136,11 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
             <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready, whether in Gatineau, Aylmer, Hull or anywhere in Outaouais.</p>
             <p className="prose-body mt-4">I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market — prices by neighborhood, trends, resale potential and on-the-ground realities.</p>
             <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais with Team Marty Waite from ReMax, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in Gatineau and area in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project in Outaouais.</p>
+            <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
+              <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
+              <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>
+              <span className="flex items-center gap-2"><Shield size={14} /> Trust-centered approach</span>
+            </div>
             <Button className="mt-6 sm:mt-8" size="lg" asChild><Link to="/en/contact">Learn more</Link></Button>
           </motion.div>
         </div>
