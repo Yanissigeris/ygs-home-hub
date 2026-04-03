@@ -37,7 +37,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     return (
       <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
         <div className="section-container">
-          <div className="flex flex-col items-center pt-14 pb-10 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
+          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
@@ -75,9 +75,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-10 sm:py-12 lg:py-14">
-            <p className="mb-8 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25 sm:mb-10">{affiliationsLabel}</p>
-            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-8 gap-y-9 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
+          <div className="flex flex-col items-center py-7 sm:py-12 lg:py-14">
+            <p className="mb-6 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
+            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-6 gap-y-6 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
                 <div key={logo.alt} className="flex h-11 items-center justify-center sm:h-12 lg:h-12">
                   <img src={logo.src} alt={logo.alt} width={100} height={38} loading="lazy" className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`} />

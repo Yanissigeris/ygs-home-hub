@@ -108,9 +108,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
               <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
                 <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                   <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <h3 className="mb-2 text-[1rem] transition-colors group-hover:text-primary">{p.title}</h3>
-                    <p className="mb-4 flex-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{p.text}</p>
+                  <div className="flex flex-1 flex-col p-4 sm:p-6">
+                    <h3 className="mb-1.5 sm:mb-2 text-[1rem] transition-colors group-hover:text-primary">{p.title}</h3>
+                    <p className="mb-3 sm:mb-4 flex-1 text-[0.8125rem] sm:text-[0.875rem] leading-[1.5] sm:leading-[1.6] text-muted-foreground line-clamp-2 sm:line-clamp-none">{p.text}</p>
                     <span className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">{p.cta}<ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
                   </div>
                 </Link>
@@ -127,15 +127,15 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         <div className="section-container overflow-hidden grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <div className="overflow-hidden rounded-[1.75rem]">
-              <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
+              <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" className="aspect-[4/5] md:aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
             <p className="label-overline mb-3">Why YGS</p>
             <h2>Simple, strategic and human guidance</h2>
             <p className="prose-body mt-5">My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready, whether in Gatineau, Aylmer, Hull or anywhere in Outaouais.</p>
-            <p className="prose-body mt-4">I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market — prices by neighborhood, trends, resale potential and on-the-ground realities.</p>
-            <p className="prose-body mt-4">With nearly 9 years of experience as a real estate broker in Outaouais with Team Marty Waite from ReMax, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in Gatineau and area in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project in Outaouais.</p>
+            <p className="prose-body mt-4 hidden md:block">I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market — prices by neighborhood, trends, resale potential and on-the-ground realities.</p>
+            <p className="prose-body mt-4 hidden md:block">With nearly 9 years of experience as a real estate broker in Outaouais with Team Marty Waite from ReMax, I offer my clients solid, strategic and reassuring support from start to finish. A real estate investor myself, I can also analyze multi-unit opportunities in Gatineau and area in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project in Outaouais.</p>
             <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
               <span className="flex items-center gap-2"><Clock size={14} /> Nearly 9 years of experience</span>
               <span className="flex items-center gap-2"><Award size={14} /> Platinum Club · 100% Club · Hall of Fame</span>

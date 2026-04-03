@@ -79,9 +79,9 @@ const PathwaySection = React.forwardRef<HTMLElement>((_, ref) => (
                   height={441}
                 />
               </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="mb-2 text-[1rem] transition-colors group-hover:text-primary">{pathway.title}</h3>
-                <p className="mb-4 flex-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{pathway.text}</p>
+              <div className="flex flex-1 flex-col p-4 sm:p-6">
+                <h3 className="mb-1.5 sm:mb-2 text-[1rem] transition-colors group-hover:text-primary">{pathway.title}</h3>
+                <p className="mb-3 sm:mb-4 flex-1 text-[0.8125rem] sm:text-[0.875rem] leading-[1.5] sm:leading-[1.6] text-muted-foreground line-clamp-2 sm:line-clamp-none">{pathway.text}</p>
                 <span className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">
                   {pathway.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />

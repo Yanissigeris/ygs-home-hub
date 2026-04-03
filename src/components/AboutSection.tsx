@@ -16,13 +16,13 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
       
-        <div className="overflow-hidden rounded-[1.75rem]">
+    <div className="overflow-hidden rounded-[1.75rem]">
           <img
           src={yanisAbout}
           srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
           sizes="(max-width: 1023px) 90vw, 40vw"
           alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
-          className="aspect-[3/4] w-full object-cover"
+          className="aspect-[4/5] md:aspect-[3/4] w-full object-cover"
           loading="lazy"
           decoding="async"
           width={565}
@@ -42,10 +42,10 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
         <p className="prose-body mt-5">
           Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance, que ce soit à Gatineau, Aylmer, Hull ou ailleurs en Outaouais.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden md:block">
           J'accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire, terrain, et une connaissance approfondie du marché local — prix par quartier, tendances, potentiel de revente et réalités du terrain.
         </p>
-        <p className="prose-body mt-4">
+        <p className="prose-body mt-4 hidden md:block">
           Avec plus de 9 ans d'expérience comme courtier immobilier en Outaouais au sein de l'équipe Marty Waite chez ReMax, j'offre à mes clients un accompagnement solide, stratégique et rassurant du début à la fin. Investisseur immobilier moi-même, je sais aussi analyser en profondeur les opportunités en multilogement à Gatineau et dans la région. Mon expérience terrain en flips immobiliers, combinée à ma formation en gestion de projets, fait de moi un allié incontournable pour tout projet immobilier en Outaouais.
         </p>
 
