@@ -8,7 +8,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 const SocialProofStrip = React.lazy(() => import("@/components/SocialProofStrip"));
 const CTASection = React.lazy(() => import("@/components/CTASection"));
 const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
-const GuideOffersSectionEn = React.lazy(() => import("@/components/en/GuideOffersSectionEn"));
+const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
 const SectorLinks = React.lazy(() => import("@/components/SectorLinks"));
 const LocalSEOCluster = React.lazy(() => import("@/components/LocalSEOCluster"));
 const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
