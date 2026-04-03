@@ -43,27 +43,27 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
   return (
     <section ref={ref} className="section-padding bg-background">
-      <div className="section-container overflow-hidden grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
+      <div className="section-container overflow-hidden grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
           <div className="overflow-hidden rounded-[1.75rem]">
-            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt={c.imgAlt} className="aspect-[4/5] md:aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
+            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt={c.imgAlt} className="aspect-[3/4] md:aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}>
-          <p className="label-overline mb-3">{c.overline}</p>
+          <p className="label-overline mb-2">{c.overline}</p>
           <h2>{c.title}</h2>
-          <p className="prose-body mt-5">{c.p1}</p>
+          <p className="prose-body mt-4">{c.p1}</p>
           <p className="prose-body mt-4 hidden md:block">{c.p2}</p>
           <p className="prose-body mt-4 hidden md:block">{c.p3}</p>
 
-          <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[0.875rem] text-muted-foreground/55">
+          <div className="mt-5 sm:mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[0.8125rem] sm:text-[0.875rem] text-muted-foreground/55">
             <span className="flex items-center gap-2"><Clock size={14} /> {c.exp}</span>
             <span className="flex items-center gap-2"><Award size={14} /> {c.awards}</span>
             <span className="flex items-center gap-2"><c.TrustIcon size={14} /> {c.trust}</span>
           </div>
 
-          <Button className="mt-6 sm:mt-8" size="lg" asChild>
+          <Button className="mt-5 sm:mt-8" size="lg" asChild>
             <Link to={c.ctaHref}>{c.cta}</Link>
           </Button>
         </motion.div>
