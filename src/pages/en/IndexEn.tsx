@@ -108,9 +108,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
               <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
                 <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                   <div className="relative aspect-[16/10] overflow-hidden"><img src={p.imageSm} srcSet={`${p.imageSm} 370w, ${p.image} 648w`} sizes="(max-width: 767px) 90vw, 33vw" alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={648} height={441} /></div>
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <h3 className="mb-2 text-[1rem] transition-colors group-hover:text-primary">{p.title}</h3>
-                    <p className="mb-4 flex-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{p.text}</p>
+                  <div className="flex flex-1 flex-col p-4 sm:p-6">
+                    <h3 className="mb-1.5 sm:mb-2 text-[1rem] transition-colors group-hover:text-primary">{p.title}</h3>
+                    <p className="mb-3 sm:mb-4 flex-1 text-[0.8125rem] sm:text-[0.875rem] leading-[1.5] sm:leading-[1.6] text-muted-foreground line-clamp-2 sm:line-clamp-none">{p.text}</p>
                     <span className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">{p.cta}<ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
                   </div>
                 </Link>
