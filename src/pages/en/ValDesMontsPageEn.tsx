@@ -36,10 +36,11 @@ const ValDesMontsPageEn = () => (
       { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, river, nature" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
+      { title: "Sell my cottage", text: "Selling strategy for recreational properties.", href: "/en/sell" },
+      { title: "Home valuation", text: "What's your cottage or land worth?", href: "/en/home-valuation" },
       { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide" },
-      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation" },
-      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
-      { title: "Plex Investment", text: "Analysis for investors.", href: "/en/plex" },
+      { title: "First-Time Buyer", text: "Budget, down payment and tips.", href: "/en/first-time-buyer" },
+      { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Val-des-Monts", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area — let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
