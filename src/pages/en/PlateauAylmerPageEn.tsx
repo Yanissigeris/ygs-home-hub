@@ -75,7 +75,7 @@ const PlateauAylmerPageEn = () => (
       ]}
     />
 
-    <GuideInlineCTAEn
+    <GuideInlineCTA lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Plateau / Aylmer"
       text="Process, budget and tips for buying in the area — in a guide sent to your email."

@@ -78,7 +78,7 @@ const MilitarySellerPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTAEn
+    <GuideInlineCTA lang="en"
       guideType="seller_guide"
       headline="Free Seller Guide — sell at the best price"
       text="Everything you need to know to sell your property in Gatineau — pricing, preparation and strategy."
