@@ -35,7 +35,7 @@ const trustItems = [
 const contactItems = [
   { icon: Phone, text: "[819-210-3044]" },
   { icon: Mail, text: "[yanis@martywaite.com]" },
-  { icon: MapPin, text: "[452 rue Jean-Perrin, Gatineau, QC J8V 2R3]" },
+  { icon: MapPin, text: "Gatineau, QC" },
 ];
 
 const ContactPageEn = () => {
