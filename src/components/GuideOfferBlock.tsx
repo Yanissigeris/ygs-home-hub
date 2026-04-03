@@ -55,7 +55,7 @@ const GuideOfferBlock = ({
         <Button
           variant="accent"
           size="default"
-          className="mt-5 w-full sm:w-auto self-start text-[0.8125rem] max-w-full"
+          className="mt-3 sm:mt-5 w-full sm:w-auto self-start text-[0.8125rem] max-w-full"
           onClick={() => setOpen(true)}
         >
           <span className="truncate">{label}</span>

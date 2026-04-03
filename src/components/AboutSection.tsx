@@ -16,13 +16,13 @@ const AboutSection = React.forwardRef<HTMLElement>((_, ref) =>
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
       
-        <div className="overflow-hidden rounded-[1.75rem]">
+    <div className="overflow-hidden rounded-[1.75rem]">
           <img
           src={yanisAbout}
           srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
           sizes="(max-width: 1023px) 90vw, 40vw"
           alt="Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau"
-          className="aspect-[3/4] w-full object-cover"
+          className="aspect-[4/5] md:aspect-[3/4] w-full object-cover"
           loading="lazy"
           decoding="async"
           width={565}
