@@ -9,8 +9,8 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
 import heroImg from "@/assets/hero-buyer-guide.webp";
 
@@ -73,10 +73,10 @@ const BuyerGuidePageEn = () => (
 
     <RelatedPages overline="Also worth reading" title="Related pages for buyers" pages={related} background="alt" />
 
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
 
     <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 export default BuyerGuidePageEn;

@@ -7,8 +7,8 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-military-guide.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
@@ -60,7 +60,7 @@ const MilitaryGuidePageEn = () => (
 
     <InlineCTA text="Need to sell before buying? Start by knowing the value of your property." buttonLabel="Get my valuation →" href="/en/home-valuation" />
 
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Get the Military Relocation Guide" text="Posting, buying, selling — everything in a clear guide sent to your email for free." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Get the Military Relocation Guide" text="Posting, buying, selling — everything in a clear guide sent to your email for free." ctaLabel="Get the guide" />
 
     <FAQSection items={faq} />
 
@@ -68,7 +68,7 @@ const MilitaryGuidePageEn = () => (
 
     <CTASection dark title="Let's plan your military relocation" text="Book a free call — we adapt the plan to your posting and timeline." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I adapt to your pace — you decide when you're ready." />
 
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Military Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide — get it by email" />
   </>
 );
 export default MilitaryGuidePageEn;

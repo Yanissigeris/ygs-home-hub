@@ -12,8 +12,8 @@ import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.webp";
 
@@ -72,8 +72,8 @@ const SellerPageEn = () => (
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
-    <GuideInlineCTAEn guideType="seller_guide" headline="Thinking about selling? Get the complete guide." text="Everything you need to know to sell at the best price in Gatineau — in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the complete guide." text="Everything you need to know to sell at the best price in Gatineau — in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
     <ReviewSection overline="Seller testimonials" title="They sold with confidence" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
     <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Get my seller plan", href: "/en/sell", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />

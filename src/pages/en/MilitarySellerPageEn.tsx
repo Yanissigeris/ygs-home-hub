@@ -9,8 +9,8 @@ import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-military-seller.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
@@ -78,7 +78,7 @@ const MilitarySellerPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTAEn
+    <GuideInlineCTA lang="en"
       guideType="seller_guide"
       headline="Free Seller Guide — sell at the best price"
       text="Everything you need to know to sell your property in Gatineau — pricing, preparation and strategy."
@@ -98,7 +98,7 @@ const MilitarySellerPageEn = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>
 );
 export default MilitarySellerPageEn;

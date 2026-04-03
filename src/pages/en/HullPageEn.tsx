@@ -12,8 +12,8 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-hull.webp";
 import riverImg from "@/assets/hull-cycling-path.jpg";
@@ -136,7 +136,7 @@ const HullPageEn = () => (
 
     <RelatedPages overline="Also read" title="Related pages" pages={related} background="alt" />
 
-    <GuideInlineCTAEn guideType="investor_guide" headline="Free Investor Guide — plex in Hull" text="Returns, taxes and investment strategy — in a guide sent by email." ctaLabel="Get the Investor Guide" />
+    <GuideInlineCTA lang="en" guideType="investor_guide" headline="Free Investor Guide — plex in Hull" text="Returns, taxes and investment strategy — in a guide sent by email." ctaLabel="Get the Investor Guide" />
 
     <CTASection
       dark
@@ -149,7 +149,7 @@ const HullPageEn = () => (
       trustLine="I give you the numbers — you decide with full clarity."
     />
 
-    <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
   </>
 );
 export default HullPageEn;

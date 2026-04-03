@@ -9,8 +9,8 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, MapPin, Coffee, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-aylmer.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
@@ -87,9 +87,9 @@ const AylmerPageEn = () => (
     <FAQSection title="Questions about Aylmer" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Aylmer" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Aylmer" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
     <CTASection dark title="Buyer or seller in Aylmer?" text="I know Aylmer inside out — let's talk about your project." buttons={[{ label: "Home valuation Aylmer", href: "/en/home-valuation-aylmer" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 

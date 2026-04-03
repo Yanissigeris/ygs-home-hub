@@ -7,8 +7,8 @@ import SectorLinks from "@/components/SectorLinks";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Clock, Award, Shield, MapPin, Home, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.webp";
 
@@ -49,10 +49,10 @@ const NeighborhoodsPageEn = () => (
     <SectorLinks overline="Explore neighborhoods" title="Some Outaouais neighbourhoods" sectors={sectors} />
     <ContentBlock narrow><SectionHeading title="Every neighborhood has its character" /><p className="prose-body mt-5">The right area depends on your budget, commute, lifestyle and family priorities. After nearly 9 years in Outaouais, I know the advantages and trade-offs of each neighborhood — and I can help you choose the right one.</p></ContentBlock>
     <LinkedCardGrid overline="Lifestyle" title="Neighborhood lifestyle guides" items={lifestyleGuides} columns={3} background="alt" />
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — find the right neighborhood" text="Everything you need to know to buy in Gatineau — process, budget and neighborhoods." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — find the right neighborhood" text="Everything you need to know to buy in Gatineau — process, budget and neighborhoods." ctaLabel="Get the Buyer Guide" />
     <FAQSection title="Questions about neighborhoods" items={faq} />
     <CTASection dark title="Need help choosing?" text="Let's talk about your criteria — I'll recommend the neighborhoods best suited to your situation." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Get my valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 export default NeighborhoodsPageEn;

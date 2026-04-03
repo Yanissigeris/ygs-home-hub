@@ -6,8 +6,8 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
@@ -42,9 +42,9 @@ const MarketReportPageEn = () => (
     <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation" />
     <FAQSection items={faq} />
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
-    <GuideInlineCTAEn guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
     <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
-    <StickyGuideBannerEn guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>
 );
 

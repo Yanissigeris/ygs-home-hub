@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FAQSection from "@/components/FAQSection";
 import SuccessMessage from "@/components/SuccessMessage";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -194,7 +194,7 @@ const PlexAnalysisPageEn = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
+      <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
     </>
   );
 };

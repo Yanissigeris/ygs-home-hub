@@ -10,8 +10,8 @@ import CardGrid from "@/components/CardGrid";
 import ProcessSteps from "@/components/ProcessSteps";
 import InlineCTA from "@/components/InlineCTA";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
@@ -71,13 +71,13 @@ const FirstTimeBuyerPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — to get started right" text="Everything you need to know to buy your first property in Gatineau." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — to get started right" text="Everything you need to know to buy your first property in Gatineau." ctaLabel="Get the Buyer Guide" />
 
     <CTASection dark title="Ready to take the first step?" text="Book a free consultation — let's clarify your budget, options and next steps." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" }]} trustLine="I support you at your pace — you decide when you're ready." />
 
     <FAQSection items={faq} />
 
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 

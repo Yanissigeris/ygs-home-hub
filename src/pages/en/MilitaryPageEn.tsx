@@ -4,8 +4,8 @@ import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -60,10 +60,10 @@ const MilitaryPageEn = () => (
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Your situation" title="How can I help?" subtitle="Choose the service that fits your reality." steps={militaryPaths} />
     <ContentBlock narrow><SectionHeading overline="Why YGS" title="A broker who understands your reality" /><p className="prose-body mt-5">Postings don't follow the normal real estate calendar. You need a broker who adapts — to your timeline, your budget, and the pressure that comes with a military move.</p><p className="prose-body mt-4">After nearly 9 years in Gatineau, I've supported military families in all kinds of situations. My role is to simplify the process so you can focus on your mission.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact">Book a call</Link></Button></ContentBlock>
-    <GuideInlineCTAEn guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know for your real estate posting to Gatineau — in a clear guide sent to your email." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know for your real estate posting to Gatineau — in a clear guide sent to your email." ctaLabel="Get the guide" />
     <CTASection dark title="Ready to plan your relocation?" text="Let's discuss your posting, criteria and timeline — I adapt to you." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Military Guide", href: "/en/military-guide", variant: "outline" }]} trustLine="" />
     <FAQSection items={faq} />
-    <StickyGuideBannerEn guideType="relocation_guide" label="Free Military Relocation Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Relocation Guide — get it by email" />
   </>
 );
 

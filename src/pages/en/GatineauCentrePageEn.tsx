@@ -9,8 +9,8 @@ import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau-centre.webp";
 import riverImg from "@/assets/gatineau-river-view.webp";
@@ -87,9 +87,9 @@ const GatineauCentrePageEn = () => (
     <FAQSection title="Questions about Gatineau centre" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
     <CTASection dark title="Buyer, seller or investor in Gatineau?" text="I can help — whether you're buying, selling or analyzing a property in the area." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 

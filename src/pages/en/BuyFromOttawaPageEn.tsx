@@ -10,8 +10,8 @@ import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
 import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
@@ -84,7 +84,7 @@ const BuyFromOttawaPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTAEn guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget, neighborhoods and tips — all in a guide sent by email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget, neighborhoods and tips — all in a guide sent by email." ctaLabel="Get the Buyer Guide" />
 
     <CTASection
       dark
@@ -99,7 +99,7 @@ const BuyFromOttawaPageEn = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBannerEn guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
 export default BuyFromOttawaPageEn;

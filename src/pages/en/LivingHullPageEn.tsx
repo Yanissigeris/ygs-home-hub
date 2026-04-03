@@ -7,8 +7,8 @@ import CardGrid from "@/components/CardGrid";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import GuideInlineCTAEn from "@/components/en/GuideInlineCTAEn";
-import StickyGuideBannerEn from "@/components/en/StickyGuideBannerEn";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Home, Users, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero-living-hull.webp";
 
@@ -44,9 +44,9 @@ const LivingHullPageEn = () => (
     <InlineCTA text="Looking for a plex in Hull? Request a return analysis." buttonLabel="Get a plex analysis →" href="/en/plex-analysis" />
     <FAQSection title="Questions about living in Hull" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTAEn guideType="investor_guide" headline="Free Investor Guide — plex in Hull" text="Returns, taxes and strategy — everything in a guide sent to your email." ctaLabel="Get the Investor Guide" />
+    <GuideInlineCTA lang="en" guideType="investor_guide" headline="Free Investor Guide — plex in Hull" text="Returns, taxes and strategy — everything in a guide sent to your email." ctaLabel="Get the Investor Guide" />
     <CTASection dark title="Ready to discover Hull?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See the neighborhood", href: "/en/hull", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBannerEn guideType="investor_guide" label="Free Investor Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
   </>
 );
 
