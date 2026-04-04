@@ -5,16 +5,15 @@ import TrustStrip from "@/components/TrustStrip";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
-/* Lazy-load below-fold sections */
-const SocialProofStrip = React.lazy(() => import("@/components/SocialProofStrip"));
-const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
-const AboutSection = React.lazy(() => import("@/components/AboutSection"));
-const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
-const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
-const LocalSEOCluster = React.lazy(() => import("@/components/LocalSEOCluster"));
-const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
-const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
-const CTASection = React.lazy(() => import("@/components/CTASection"));
+import SocialProofStrip from "@/components/SocialProofStrip";
+import PathwaySection from "@/components/PathwaySection";
+import AboutSection from "@/components/AboutSection";
+import ReviewSection from "@/components/ReviewSection";
+import SectorsSection from "@/components/SectorsSection";
+import LocalSEOCluster from "@/components/LocalSEOCluster";
+import GuideOffersSection from "@/components/GuideOffersSection";
+import HomeFAQTeaser from "@/components/HomeFAQTeaser";
+import CTASection from "@/components/CTASection";
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
@@ -45,7 +44,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip lang="en" />
 
-    <React.Suspense fallback={null}>
+    <>
       <SocialProofStrip stats={socialStatsEn} />
 
       <PathwaySection lang="en" />
@@ -109,7 +108,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         ]}
         trustLine="I give you the numbers and the options — you decide with full clarity."
       />
-    </React.Suspense>
+    </>
   </div>
 ));
 
