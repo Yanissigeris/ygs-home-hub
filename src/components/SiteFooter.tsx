@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, ChevronDown } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import logoYgsWhite from "@/assets/logo-ygs-white.webp";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
