@@ -60,11 +60,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <ReviewSection
+      <TestimonialSlider
         overline="Témoignages"
         title="Ce que disent mes clients"
         reviews={homepageReviews}
-        columns={3}
         reviewsPageLabel="Voir tous les témoignages"
         reviewsPageHref="/temoignages"
       />
