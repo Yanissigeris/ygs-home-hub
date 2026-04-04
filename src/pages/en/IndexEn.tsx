@@ -17,7 +17,7 @@ import CTASection from "@/components/CTASection";
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
-const homepageReviews = getReviewsById(["s1", "b1", "r2"]);
+const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const socialStatsEn = [
   { value: "~9 yrs", label: "experience" },
