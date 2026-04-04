@@ -8,8 +8,7 @@ import TrustStrip from "@/components/TrustStrip";
 import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
-import SectorsSection from "@/components/SectorsSection";
-import LocalSEOCluster from "@/components/LocalSEOCluster";
+import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import CTASection from "@/components/CTASection";
@@ -70,24 +69,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <SectorsSection />
-
-      <hr className="section-divider" />
-
-      <LocalSEOCluster
-        overline="Services et secteurs"
-        title="Secteurs et services les plus recherchés en Outaouais"
-        links={[
-          { label: "Courtier immobilier Outaouais", href: "/courtier-immobilier-outaouais", detail: "Hub régional complet" },
-          { label: "Courtier immobilier Gatineau", href: "/gatineau", detail: "Centre, services, plex" },
-          { label: "Courtier immobilier Hull", href: "/hull", detail: "Urbain, culture, condos" },
-          { label: "Courtier immobilier Aylmer", href: "/aylmer", detail: "Lac, familles, bilingue" },
-          { label: "Courtier immobilier Chelsea", href: "/chelsea", detail: "Nature, parc, tranquillité" },
-          { label: "Courtier immobilier Cantley", href: "/cantley", detail: "Rural, grands terrains" },
-          { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau", detail: "Gratuite et sans engagement" },
-          { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau", detail: "Stratégie et accompagnement" },
-        ]}
-      />
+      <AreasServicesSection />
 
       <hr className="section-divider" />
 

@@ -9,8 +9,7 @@ import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
-import SectorsSection from "@/components/SectorsSection";
-import LocalSEOCluster from "@/components/LocalSEOCluster";
+import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import CTASection from "@/components/CTASection";
@@ -59,23 +58,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <SectorsSection lang="en" />
-
-      <hr className="section-divider" />
-
-      <LocalSEOCluster
-        overline="Areas & services"
-        title="Popular areas and services in Outaouais"
-        links={[
-          { label: "Outaouais Real Estate Agent", href: "/en/outaouais-real-estate-agent", detail: "Full regional hub" },
-          { label: "Realtor Gatineau", href: "/en/gatineau", detail: "Central, services, plex" },
-          { label: "Realtor Hull", href: "/en/hull", detail: "Urban, culture, condos" },
-          { label: "Realtor Aylmer", href: "/en/aylmer", detail: "Lake, families, bilingual" },
-          { label: "Realtor Chelsea", href: "/en/chelsea", detail: "Nature, park, serenity" },
-          { label: "Home Valuation Gatineau", href: "/en/home-valuation", detail: "Free and no obligation" },
-          { label: "Sell My House Gatineau", href: "/en/sell", detail: "Strategy and guidance" },
-        ]}
-      />
+      <AreasServicesSection lang="en" />
 
       <hr className="section-divider" />
 
