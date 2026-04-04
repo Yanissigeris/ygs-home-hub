@@ -8,7 +8,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
-import ReviewSection from "@/components/ReviewSection";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import SectorsSection from "@/components/SectorsSection";
 import LocalSEOCluster from "@/components/LocalSEOCluster";
 import GuideOffersSection from "@/components/GuideOffersSection";

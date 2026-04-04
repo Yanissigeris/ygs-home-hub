@@ -11,7 +11,7 @@ import AboutSection from "@/components/AboutSection";
 import SectorsSection from "@/components/SectorsSection";
 import LocalSEOCluster from "@/components/LocalSEOCluster";
 import GuideOffersSection from "@/components/GuideOffersSection";
-import ReviewSection from "@/components/ReviewSection";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 
