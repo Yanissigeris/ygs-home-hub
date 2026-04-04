@@ -47,7 +47,7 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
   );
 };
 
-
+const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
   ({ className, ...props }, ref) => {
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
