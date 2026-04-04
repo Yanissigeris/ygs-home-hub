@@ -5,17 +5,15 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 
-/* Lazy-load all below-fold sections to keep framer-motion & lucide out of the critical path */
-const SocialProofStrip = React.lazy(() => import("@/components/SocialProofStrip"));
-const PathwaySection = React.lazy(() => import("@/components/PathwaySection"));
-const AboutSection = React.lazy(() => import("@/components/AboutSection"));
-
-const SectorsSection = React.lazy(() => import("@/components/SectorsSection"));
-const LocalSEOCluster = React.lazy(() => import("@/components/LocalSEOCluster"));
-const GuideOffersSection = React.lazy(() => import("@/components/GuideOffersSection"));
-const ReviewSection = React.lazy(() => import("@/components/ReviewSection"));
-const CTASection = React.lazy(() => import("@/components/CTASection"));
-const HomeFAQTeaser = React.lazy(() => import("@/components/HomeFAQTeaser"));
+import SocialProofStrip from "@/components/SocialProofStrip";
+import PathwaySection from "@/components/PathwaySection";
+import AboutSection from "@/components/AboutSection";
+import SectorsSection from "@/components/SectorsSection";
+import LocalSEOCluster from "@/components/LocalSEOCluster";
+import GuideOffersSection from "@/components/GuideOffersSection";
+import ReviewSection from "@/components/ReviewSection";
+import CTASection from "@/components/CTASection";
+import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
