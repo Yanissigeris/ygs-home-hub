@@ -16,7 +16,7 @@ import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 
 import { getReviewsById } from "@/data/reviews";
-const homepageReviews = getReviewsById(["s1", "b1", "r1"]);
+const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const socialStatsFr = [
   { value: "~9 ans", label: "d'expérience" },
