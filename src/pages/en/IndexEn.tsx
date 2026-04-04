@@ -44,7 +44,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip lang="en" />
 
-    <React.Suspense fallback={null}>
+    <>
       <SocialProofStrip stats={socialStatsEn} />
 
       <PathwaySection lang="en" />
