@@ -22,7 +22,32 @@ const affiliationLogos = [
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
-const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
+const FooterAccordion = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="border-b border-primary-foreground/[0.07]">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between py-3.5"
+        aria-expanded={open}
+      >
+        <span className="font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{title}</span>
+        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <div className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}>
+        <ul className="space-y-2.5">
+          {links.map((l) => (
+            <li key={l.href + l.label}>
+              <Link to={l.href} className="text-[0.8125rem] leading-relaxed opacity-50 transition-opacity duration-200 hover:opacity-90">{l.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+
   ({ className, ...props }, ref) => {
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
