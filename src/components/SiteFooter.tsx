@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, ChevronDown } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import logoYgsWhite from "@/assets/logo-ygs-white.webp";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
@@ -21,6 +22,31 @@ const affiliationLogos = [
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
+const FooterAccordion = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="border-b border-primary-foreground/[0.07]">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between py-3.5"
+        aria-expanded={open}
+      >
+        <span className="font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{title}</span>
+        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <div className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}>
+        <ul className="space-y-2.5">
+          {links.map((l) => (
+            <li key={l.href + l.label}>
+              <Link to={l.href} className="text-[0.8125rem] leading-relaxed opacity-50 transition-opacity duration-200 hover:opacity-90">{l.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
   ({ className, ...props }, ref) => {
     const lang = useLanguage();
@@ -37,7 +63,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     return (
       <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
         <div className="section-container">
-          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
+          <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
@@ -52,7 +78,14 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </div>
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="grid gap-8 py-10 sm:grid-cols-2 sm:py-12 lg:grid-cols-4 lg:gap-6 lg:py-14">
+          {/* Mobile: accordion columns */}
+          <div className="sm:hidden py-6">
+            {columns.map((col) => (
+              <FooterAccordion key={col.title} title={col.title} links={col.links} />
+            ))}
+          </div>
+          {/* Desktop: grid columns */}
+          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14">
             {columns.map((col) => (
               <div key={col.title}>
                 <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{col.title}</p>
@@ -67,17 +100,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="py-7 sm:py-8">
-            <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
-            <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <div className="py-5 sm:py-8">
+            <p className="mb-3 sm:mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1.5 sm:gap-x-5 sm:gap-y-2">
               {popularLinks.map((l) => (
-                <Link key={l.href} to={l.href} className="text-[0.8125rem] leading-relaxed opacity-40 transition-opacity duration-200 hover:opacity-80">{l.label}</Link>
+                <Link key={l.href} to={l.href} className="text-[0.75rem] sm:text-[0.8125rem] leading-relaxed opacity-40 transition-opacity duration-200 hover:opacity-80">{l.label}</Link>
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-7 sm:py-12 lg:py-14">
-            <p className="mb-6 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
-            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-6 gap-y-6 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
+          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
+            <p className="mb-4 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
+            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
                 <div key={logo.alt} className="flex h-11 items-center justify-center sm:h-12 lg:h-12">
                   <img src={logo.src} alt={logo.alt} width={100} height={38} loading="lazy" className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`} />
