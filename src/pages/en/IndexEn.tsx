@@ -8,7 +8,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
-import ReviewSection from "@/components/ReviewSection";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import SectorsSection from "@/components/SectorsSection";
 import LocalSEOCluster from "@/components/LocalSEOCluster";
 import GuideOffersSection from "@/components/GuideOffersSection";
@@ -17,7 +17,7 @@ import CTASection from "@/components/CTASection";
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
-const homepageReviews = getReviewsById(["s1", "b1", "r2"]);
+const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const socialStatsEn = [
   { value: "~9 yrs", label: "experience" },
@@ -55,7 +55,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       <hr className="section-divider" />
 
-      <ReviewSection overline="Testimonials" title="What our clients say" reviews={homepageReviews} columns={3} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+      <TestimonialSlider overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
 
       <hr className="section-divider" />
 
