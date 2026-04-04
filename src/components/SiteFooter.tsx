@@ -100,17 +100,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="py-7 sm:py-8">
-            <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
-            <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <div className="py-5 sm:py-8">
+            <p className="mb-3 sm:mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1.5 sm:gap-x-5 sm:gap-y-2">
               {popularLinks.map((l) => (
-                <Link key={l.href} to={l.href} className="text-[0.8125rem] leading-relaxed opacity-40 transition-opacity duration-200 hover:opacity-80">{l.label}</Link>
+                <Link key={l.href} to={l.href} className="text-[0.75rem] sm:text-[0.8125rem] leading-relaxed opacity-40 transition-opacity duration-200 hover:opacity-80">{l.label}</Link>
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-7 sm:py-12 lg:py-14">
-            <p className="mb-6 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
-            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-6 gap-y-6 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
+          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
+            <p className="mb-4 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
+            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
                 <div key={logo.alt} className="flex h-11 items-center justify-center sm:h-12 lg:h-12">
                   <img src={logo.src} alt={logo.alt} width={100} height={38} loading="lazy" className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`} />
