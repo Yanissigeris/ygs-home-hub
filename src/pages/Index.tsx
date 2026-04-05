@@ -15,7 +15,7 @@ import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
+
 import QuickActionStrip from "@/components/QuickActionStrip";
 
 import { getReviewsById } from "@/data/reviews";
