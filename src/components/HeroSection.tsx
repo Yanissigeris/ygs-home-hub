@@ -239,21 +239,23 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             )}
 
             {/* Floating stats card */}
-            <div className="absolute bottom-12 left-10 right-10 z-[3] opacity-0 animate-hero-fade-up" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
-              <div className="backdrop-blur-xl" style={{ background: "rgba(247,244,238,.96)", borderLeft: "3px solid var(--gold)", borderRadius: "3px", padding: "1.6rem 2rem" }}>
-                <p className="text-[.62rem] font-semibold uppercase tracking-[.14em] mb-4" style={{ color: "var(--gold)" }}>
-                  {lang === "en" ? "PROFESSIONAL RECOGNITION" : "RECONNAISSANCES PROFESSIONNELLES"}
-                </p>
-                <div className="grid grid-cols-3 gap-0">
-                  {stats.map((stat, i) => (
-                    <div key={stat.label} className="text-center" style={{ borderLeft: i > 0 ? "1px solid rgba(23,48,59,.1)" : "none" }}>
-                      <p className="font-heading text-[2rem] font-semibold leading-none" style={{ color: "var(--ink)", letterSpacing: "-.02em" }}>{stat.value}</p>
-                      <p className="mt-1.5 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "var(--gold)" }}>{stat.label}</p>
-                    </div>
-                  ))}
+            {!hideRecognitionCard && (
+              <div className="absolute bottom-12 left-10 right-10 z-[3] opacity-0 animate-hero-fade-up" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
+                <div className="backdrop-blur-xl" style={{ background: "rgba(247,244,238,.96)", borderLeft: "3px solid var(--gold)", borderRadius: "3px", padding: "1.6rem 2rem" }}>
+                  <p className="text-[.62rem] font-semibold uppercase tracking-[.14em] mb-4" style={{ color: "var(--gold)" }}>
+                    {lang === "en" ? "PROFESSIONAL RECOGNITION" : "RECONNAISSANCES PROFESSIONNELLES"}
+                  </p>
+                  <div className="grid grid-cols-3 gap-0">
+                    {stats.map((stat, i) => (
+                      <div key={stat.label} className="text-center" style={{ borderLeft: i > 0 ? "1px solid rgba(23,48,59,.1)" : "none" }}>
+                        <p className="font-heading text-[2rem] font-semibold leading-none" style={{ color: "var(--ink)", letterSpacing: "-.02em" }}>{stat.value}</p>
+                        <p className="mt-1.5 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "var(--gold)" }}>{stat.label}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* ─── MOBILE: Agent image below text ─── */}
