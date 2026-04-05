@@ -184,10 +184,10 @@ const AylmerPage = () => (
           <p className="label-overline">POURQUOI AYLMER</p>
           <h2>Ce qui rend Aylmer unique en Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Beauchamp. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
+            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Le secteur du Plateau-du-Lac-Beauchamp est particulièrement prisé — des maisons deux étages construites entre 2000 et 2020, proches des parcs, des écoles francophones et anglophones, et du Parc du Lac-Beauchamp. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
+            Les secteurs de Lucerne et Rivermead sont particulièrement prisés — des maisons établies sur des rues matures, proches du lac Deschênes, des parcs, des écoles francophones et anglophones. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
           </p>
           <p className="prose-body">
             Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget — ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.
