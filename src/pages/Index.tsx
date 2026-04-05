@@ -40,7 +40,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       agentName="Yanis Gauthier-Sigeris"
     />
 
-    <TrustStrip />
+    
     <AwardsMarquee />
 
     <div className="reveal">
