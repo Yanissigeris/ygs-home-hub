@@ -262,7 +262,7 @@ const AylmerPage = () => (
           <p className="label-overline">GUIDE VENDEUR</p>
           <h2>Vendre votre propriété à Aylmer au meilleur prix</h2>
           <p className="prose-body mt-5">
-            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché se vend généralement en moins de 30 jours, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher » — cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
+            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher » — cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
           </p>
           <p className="prose-body">
             Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue — pas juste par secteur — fait une différence réelle sur votre prix final.
