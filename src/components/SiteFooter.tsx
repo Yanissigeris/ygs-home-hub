@@ -118,7 +118,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="border-t border-primary-foreground/[0.06] py-7 text-center sm:py-8">
+          <div className="border-t border-primary-foreground/[0.06] py-5 text-center sm:py-8">
             <p className="text-[0.6875rem] leading-relaxed tracking-[0.02em] opacity-25">{legalText}</p>
           </div>
         </div>
