@@ -109,7 +109,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       />
     </div>
 
-    <StickyMobileCTA />
+
   </div>
 ));
 
