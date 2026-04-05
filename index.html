@@ -90,6 +90,14 @@
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
     </style>
+    <!-- Critical above-fold CSS -->
+    <style>
+      body{margin:0;background:#F7F4EE;color:#17303B;font-family:'DM Sans',system-ui,sans-serif}
+      .hero-crit{background:#17303B;min-height:88svh}
+      h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
+      @keyframes img-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+      .img-shimmer{background:linear-gradient(90deg,#F7F4EE 25%,#ede9e0 50%,#F7F4EE 75%);background-size:200% 100%;animation:img-shimmer 1.5s infinite}
+    </style>
     <link rel="preload" as="image" type="image/webp" href="/hero-video-poster.webp" fetchpriority="high" />
 
     <!-- Global RealEstateAgent JSON-LD (static — crawlable without JS) -->
