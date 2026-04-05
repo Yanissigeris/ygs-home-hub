@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TrendingUp, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-limbour.jpg";
+import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPageEn = () => (
   <NeighborhoodTemplate

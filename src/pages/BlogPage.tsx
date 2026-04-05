@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/blog-default-cover.jpg";
+import heroImg from "@/assets/blog-default-cover.webp";
 import { getPublishedPosts, getFeaturedPost, getCategories } from "@/data/blog-posts";
 
 const BlogPage = () => {

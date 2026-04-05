@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TreePine, Mountain } from "lucide-react";
-import heroImg from "@/assets/hero-cantley-gen.jpg";
+import heroImg from "@/assets/hero-cantley-gen.webp";
 
 const CantleyPageEn = () => (
   <NeighborhoodTemplate
