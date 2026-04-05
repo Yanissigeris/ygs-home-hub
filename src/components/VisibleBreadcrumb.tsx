@@ -1,17 +1,34 @@
 import * as React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { Home } from "lucide-react";
 import { breadcrumbMap } from "@/data/breadcrumbs";
+import { getPostBySlug } from "@/data/blog-posts";
 
 const VisibleBreadcrumb = () => {
   const { pathname } = useLocation();
-  const config = breadcrumbMap[pathname];
+  const params = useParams<{ slug?: string }>();
+
+  // Try static map first
+  let config = breadcrumbMap[pathname];
+
+  // Dynamic blog article breadcrumbs
+  if (!config && params.slug) {
+    const isFr = pathname.startsWith("/blogue/");
+    const isEn = pathname.startsWith("/en/blog/");
+    if (isFr || isEn) {
+      const post = getPostBySlug(params.slug);
+      if (post) {
+        config = isFr
+          ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue" }], current: post.title }
+          : { trail: [{ name: "Home", href: "/en" }, { name: "Blog", href: "/en/blog" }], current: post.titleEn };
+      }
+    }
+  }
 
   if (!config) return null;
 
   const isHome = (name: string) => name === "Accueil" || name === "Home";
 
-  // Full trail including current page for mobile logic
   const allItems = [...config.trail, { name: config.current, href: pathname }];
   const parentItem = allItems.length >= 2 ? allItems[allItems.length - 2] : null;
 
@@ -106,7 +123,6 @@ const VisibleBreadcrumb = () => {
         )}
       </div>
 
-      {/* Mobile padding override */}
       <style>{`
         @media (max-width: 767px) {
           nav[aria-label="Breadcrumb"] > div {
