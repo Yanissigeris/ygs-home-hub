@@ -71,12 +71,12 @@ const LanguageSwitch = () => {
   return (
     <Link
       to={targetPath}
-      className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[0.75rem] font-medium tracking-[0.03em] text-muted-foreground/60 transition-colors hover:text-foreground hover:bg-secondary/60"
+      className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[0.75rem] tracking-[0.03em] transition-colors hover:bg-secondary/60"
       title={lang === "fr" ? "Switch to English" : "Passer en français"}
     >
-      <span className={lang === "fr" ? "font-semibold text-foreground" : ""}>FR</span>
-      <span className="text-muted-foreground/30">|</span>
-      <span className={lang === "en" ? "font-semibold text-foreground" : ""}>EN</span>
+      <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? "var(--ink)" : "var(--muted)" }}>FR</span>
+      <span style={{ color: "var(--muted)", opacity: 0.4 }}>|</span>
+      <span style={{ fontWeight: lang === "en" ? 600 : 400, color: lang === "en" ? "var(--ink)" : "var(--muted)" }}>EN</span>
     </Link>
   );
 };
