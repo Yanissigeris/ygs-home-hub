@@ -107,7 +107,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                <div className="absolute inset-0 overflow-hidden">
                  <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
                </div>
-              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.4) 100%)" }} />
+              <div className="absolute inset-0" <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.55) 0%, rgba(23,48,59,.2) 100%)" }} /> />
             </>
           )}
           <div className="section-container relative z-20 py-16 sm:py-20 md:py-24">
