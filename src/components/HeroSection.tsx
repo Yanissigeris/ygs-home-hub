@@ -198,8 +198,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             compact
               ? "py-10 sm:py-18 md:py-20"
               : agentImage
-              ? "pt-[4rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
-              : "pt-[4rem] pb-[3.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
+              ? "pt-[2.5rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
+              : "pt-[2.5rem] pb-[2.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
           }`}
         >
           <div
