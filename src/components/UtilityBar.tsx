@@ -57,7 +57,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
       <div className="sm:hidden" style={{ background: "var(--ink)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
         <div className="flex min-h-[38px] items-center justify-between gap-3 px-4 py-1.5">
           <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 transition-colors hover:text-white" style={{ fontSize: ".72rem", color: "rgba(255,255,255,.5)" }}>
-            <PhoneIcon size={11} className="shrink-0" style={{ color: "rgba(255,255,255,.35)" }} /><span className="truncate">819-210-3044</span>
+            <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
           </a>
           <div className="flex shrink-0 items-center gap-3">
             <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="transition-colors hover:text-white" style={{ fontSize: ".69rem", color: "rgba(255,255,255,.5)" }}>{lang === "en" ? "Blog" : "Blogue"}</Link>
