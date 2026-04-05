@@ -60,6 +60,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const sectionRef = React.useRef<HTMLElement>(null);
     const videoRef = React.useRef<HTMLVideoElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
+    const [showScrollHint, setShowScrollHint] = React.useState(true);
     const lang = useLanguage();
     const stats = lang === "en" ? statsEn : statsFr;
     const combinedRef = React.useCallback(
@@ -70,6 +71,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       },
       [ref]
     );
+
+    // Hide scroll hint after first scroll
+    React.useEffect(() => {
+      const onScroll = () => {
+        if (window.scrollY > 50) setShowScrollHint(false);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     React.useEffect(() => {
       if (!heroVideo) return;
