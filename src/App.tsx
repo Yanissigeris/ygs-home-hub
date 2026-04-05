@@ -79,6 +79,8 @@ const FAQPage = React.lazy(() => import("./pages/FAQPage"));
 const ThankYouPage = React.lazy(() => import("./pages/ThankYouPage"));
 const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuationPage"));
 const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
+const PrivacyPolicyPage = React.lazy(() => import("./pages/PrivacyPolicyPage"));
+const TermsPage = React.lazy(() => import("./pages/TermsPage"));
 
 // EN pages
 import IndexEn from "./pages/en/IndexEn";
