@@ -128,6 +128,7 @@ const ValDesMontsPageEn = React.lazy(() => import("./pages/en/ValDesMontsPageEn"
 const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageEn"));
 const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
 const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
+const AdminImageGen = React.lazy(() => import("./pages/AdminImageGen"));
 const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
 const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
@@ -273,6 +274,7 @@ const routeTree = React.createElement(
       <Route path="/en/oaciq-find-a-broker" element={<OaciqFindBrokerPageEn />} />
       <Route path="/en/realtor-vs-selling-by-owner-quebec" element={<RealtorVsSellingByOwnerPageEn />} />
     </Route>
+    <Route path="/admin/image-gen" element={<AdminImageGen />} />
     <Route path="*" element={<NotFound />} />
   </>,
 );
