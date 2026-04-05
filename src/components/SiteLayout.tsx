@@ -6,7 +6,7 @@ import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 import ScrollProgress from "@/components/ScrollProgress";
-
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { Outlet } from "react-router-dom";
 
