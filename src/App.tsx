@@ -216,6 +216,8 @@ const routeTree = React.createElement(
       <Route path="/verifier-un-courtier-immobilier-oaciq" element={<VerifierCourtierOaciqPage />} />
       <Route path="/frais-de-courtage-immobilier-quebec" element={<FraisCourtagePage />} />
       <Route path="/courtier-immobilier-ou-vendre-soi-meme" element={<CourtierOuVendreSoiMemePage />} />
+      <Route path="/politique-de-confidentialite" element={<PrivacyPolicyPage />} />
+      <Route path="/conditions-utilisation" element={<TermsPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
