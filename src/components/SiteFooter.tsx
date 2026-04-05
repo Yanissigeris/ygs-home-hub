@@ -79,7 +79,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
           {/* Mobile: accordion columns */}
-          <div className="sm:hidden py-6">
+          <div className="sm:hidden py-4">
             {columns.map((col) => (
               <FooterAccordion key={col.title} title={col.title} links={col.links} />
             ))}
