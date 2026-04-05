@@ -210,7 +210,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
                 </div>
                 <div className="absolute inset-0">
-                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} />
+                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} />
                 </div>
               </>
             )}
