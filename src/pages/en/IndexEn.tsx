@@ -56,7 +56,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     <div className="reveal">
-      <TestimonialSlider overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+      <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
     </div>
 
     <div className="reveal">
