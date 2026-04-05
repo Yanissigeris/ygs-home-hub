@@ -221,7 +221,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             )}
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 z-[1]" <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.1) 100%)" }} /> />
+            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.1) 100%)" }} />
 
             {/* Yanis portrait */}
             {agentImage && (
