@@ -8,7 +8,7 @@ interface PageMetaProps {
   ogImage?: string;
 }
 
-const SITE = "YGS — Yanis Gauthier-Sigeris";
+const SITE = "YGS";
 const BASE_URL = "https://yanisgauthier.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
 
