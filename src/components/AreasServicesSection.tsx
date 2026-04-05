@@ -91,7 +91,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
       <div className="section-container max-w-[60rem]">
         {/* Section intro */}
         <motion.div
-          className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto"
+          className="text-center mb-6 sm:mb-12 max-w-[44rem] mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -101,14 +101,14 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         </motion.div>
 
         {/* Two-column grid: areas left, services right */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
           {/* Areas block */}
           <div>
             <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
               <MapPin size={13} className="inline-block mr-1.5 -mt-0.5 text-accent" />
               {cfg.areasHeading}
             </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
               {areas.map((area, i) => (
                 <motion.div
                   key={area.href}
@@ -146,7 +146,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
             <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
               {cfg.servicesHeading}
             </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
               {services.map((svc, i) => (
                 <motion.div
                   key={svc.href}

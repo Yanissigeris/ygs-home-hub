@@ -63,7 +63,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     return (
       <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
         <div className="section-container">
-          <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
+          <div className="flex flex-col items-center pt-6 pb-5 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
             <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
             <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
@@ -79,7 +79,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
           {/* Mobile: accordion columns */}
-          <div className="sm:hidden py-6">
+          <div className="sm:hidden py-4">
             {columns.map((col) => (
               <FooterAccordion key={col.title} title={col.title} links={col.links} />
             ))}
@@ -100,7 +100,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="py-5 sm:py-8">
+          <div className="py-4 sm:py-8">
             <p className="mb-3 sm:mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-1.5 sm:gap-x-5 sm:gap-y-2">
               {popularLinks.map((l) => (
@@ -108,7 +108,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
+          <div className="flex flex-col items-center py-4 sm:py-12 lg:py-14">
             <p className="mb-4 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
             <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
@@ -118,7 +118,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="border-t border-primary-foreground/[0.06] py-7 text-center sm:py-8">
+          <div className="border-t border-primary-foreground/[0.06] py-5 text-center sm:py-8">
             <p className="text-[0.6875rem] leading-relaxed tracking-[0.02em] opacity-25">{legalText}</p>
           </div>
         </div>
