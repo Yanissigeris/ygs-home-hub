@@ -2,6 +2,7 @@ import * as React from "react";
 import UtilityBar from "@/components/UtilityBar";
 import SiteHeader from "@/components/SiteHeader";
 import JsonLdSchema from "@/components/JsonLdSchema";
+import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 
