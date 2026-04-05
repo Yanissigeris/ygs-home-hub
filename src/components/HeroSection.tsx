@@ -103,10 +103,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       return (
         <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
           {heroBgImage && (
-            <>
-              <div className="absolute inset-0 overflow-hidden">
-                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" />
-              </div>
+             <>
+               <div className="absolute inset-0 overflow-hidden">
+                 <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+               </div>
               <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.4) 100%)" }} />
             </>
           )}
