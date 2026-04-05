@@ -26,10 +26,11 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={property.image}
-          alt={`Propriété à vendre — ${property.address}, ${property.city} — ${property.type}`}
+          alt={`${property.type} — ${property.address}, ${property.city} — YGS Yanis Gauthier-Sigeris`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"
+          onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
         />
         <div className="absolute top-3 left-3 flex gap-2">
           <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">

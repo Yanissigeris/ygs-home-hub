@@ -57,12 +57,13 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               src={yanisAbout}
               srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
               sizes="(max-width: 1023px) 90vw, 40vw"
-              alt={c.imgAlt}
+              alt={c.imgAlt + " — YGS Yanis Gauthier-Sigeris"}
               className="aspect-[3/4] w-full object-cover object-top"
               loading="lazy"
               decoding="async"
               width={565}
               height={800}
+              onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
             />
             {/* Bottom scrim for badge legibility */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.6), transparent)" }} aria-hidden="true" />

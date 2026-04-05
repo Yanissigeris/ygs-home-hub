@@ -56,14 +56,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               {/* Image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <img
-                  src={p.imageSm}
-                  srcSet={`${p.imageSm} 370w, ${p.image} 648w`}
-                  sizes="(max-width: 767px) 100vw, 33vw"
-                  alt={p.imageAlt}
+                  src={p.image}
+                  alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
                   className="h-full w-full object-cover transition-transform duration-[600ms] group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                   width={648}
                   height={486}
+                  onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
                 />
                 {/* Card number */}
                 <span
