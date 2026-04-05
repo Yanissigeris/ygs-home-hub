@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import BenefitsList from "@/components/BenefitsList";
@@ -44,6 +45,7 @@ const related = [
 const RelocationGuidePage = () => (
    <>
     <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." />
+    <ServiceJsonLd name="Guide de relocalisation à Gatineau" description="Guide complet pour s'installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." url="/guide-relocalisation-gatineau" serviceType="Real Estate Relocation Guide" />
     <HeroSection
       overline="Guide relocalisation · Gatineau"
       title="Guide complet pour s'installer à Gatineau"

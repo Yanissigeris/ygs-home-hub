@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
@@ -33,6 +34,7 @@ const faq = [
 const MilitaryRelocationPage = () => (
    <>
     <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau et l'Outaouais? Guide complet: processus BGRS/SIRVA, quartiers près de la BFC Uplands, délais et accompagnement bilingue." />
+    <ServiceJsonLd name="Relocalisation militaire à Gatineau" description="Guide complet pour militaires en mutation vers Gatineau — BGRS/SIRVA, quartiers, délais et accompagnement bilingue." url="/relocalisation-militaire-gatineau" serviceType="Military Relocation Service" />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"

@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
 import RelatedPages from "@/components/RelatedPages";
@@ -74,6 +75,7 @@ const ValuationPage = () => {
   return (
     <>
       <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." />
+    <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau" serviceType="Real Estate Appraisal Service" />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}
       <section className="hero-gradient relative overflow-hidden">

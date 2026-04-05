@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
@@ -27,6 +28,7 @@ const faq = [
 const WhenToSellPage = () => (
    <>
     <PageMeta title="Quand vendre sa propriété à Gatineau" description="Le bon moment pour vendre à Gatineau et en Outaouais dépend de votre situation. Analyse du marché local et conseils d'un courtier expérimenté." />
+    <ServiceJsonLd name="Quand vendre sa propriété à Gatineau" description="Analyse du marché immobilier de Gatineau pour déterminer le meilleur moment pour vendre votre propriété en Outaouais." url="/quand-vendre-a-gatineau" serviceType="Real Estate Market Analysis" />
     <HeroSection
       overline="Quand vendre · Gatineau"
       title="Quand vendre sa propriété à Gatineau?"

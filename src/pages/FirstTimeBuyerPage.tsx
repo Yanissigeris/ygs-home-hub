@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -37,6 +38,7 @@ const faq = [
 const FirstTimeBuyerPage = () => (
    <>
     <PageMeta title="Premier achat immobilier à Gatineau" description="Premier acheteur à Gatineau? Mise de fonds, budget, programmes d'aide au Québec et accompagnement personnalisé pour acheter à Aylmer, Hull ou au Plateau." />
+    <ServiceJsonLd name="Accompagnement premier acheteur — Gatineau" description="Accompagnement personnalisé pour premiers acheteurs à Gatineau. Mise de fonds, programmes d'aide au Québec et processus étape par étape." url="/premier-achat-gatineau" serviceType="First Time Home Buyer Service" />
     <HeroSection
       overline="Premier achat · Gatineau"
       title="Premier achat à Gatineau — par où commencer?"

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -37,6 +38,7 @@ const faq = [
 const SellPlexPage = () => (
    <>
     <PageMeta title="Vendre un plex à Gatineau · Outaouais" description="Vendez votre duplex, triplex ou immeuble à revenus à Gatineau. Évaluation précise et stratégie de mise en marché spécialisée." />
+    <ServiceJsonLd name="Vendre un plex à Gatineau" description="Vente spécialisée de duplex, triplex et immeubles à revenus à Gatineau. Évaluation précise et stratégie de mise en marché adaptée." url="/vendre-un-plex-a-gatineau" serviceType="Multi-Family Property Listing Service" />
     <HeroSection
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"
