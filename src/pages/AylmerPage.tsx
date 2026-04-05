@@ -16,7 +16,7 @@ import heroImg from "@/assets/hero-aylmer-gen.jpg";
 const faq = [
   {
     q: "Quel est le prix moyen d'une maison à Aylmer en 2026?",
-    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Le Plateau du Lac-Beauchamp est généralement plus cher (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
+    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Lucerne et Rivermead sont généralement plus chers (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
