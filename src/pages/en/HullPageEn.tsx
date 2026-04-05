@@ -14,7 +14,7 @@ import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-hull.webp";
+import heroImg from "@/assets/hero-hull-gen.jpg";
 import riverImg from "@/assets/hull-cycling-path.jpg";
 
 

@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, MapPin, Coffee, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-aylmer.webp";
+import heroImg from "@/assets/hero-aylmer-gen.jpg";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 
