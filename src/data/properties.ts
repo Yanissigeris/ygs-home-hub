@@ -81,4 +81,24 @@ export const properties: Property[] = [
     mls: "15163372",
     status: "active",
   },
+  {
+    id: "17113358",
+    address: "47 Rue Brook",
+    city: "Gatineau (Aylmer)",
+    price: "439 900 $",
+    type: "Maison à étages",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1 425 pi²",
+    lotSize: "4 302 pi²",
+    yearBuilt: "1885",
+    description:
+      "Située en plein cœur d'Aylmer, à quelques pas de la marina et de la rue Principale. 3 chambres, 1 salle de bain, 1 salle d'eau. Rénovée avec soin, clé en main, idéale pour un mode de vie pratique et vivant dans l'un des secteurs les plus prisés.",
+    image: property17113358,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/47-rue-brook/17113358",
+    mls: "17113358",
+    status: "active",
+  },
 ];
