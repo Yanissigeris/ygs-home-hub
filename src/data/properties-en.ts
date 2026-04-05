@@ -1,6 +1,7 @@
 import property28743871 from "@/assets/property-28743871.webp";
 import property20453879 from "@/assets/property-20453879.webp";
 import property15163372 from "@/assets/property-15163372.webp";
+import property17113358 from "@/assets/property-17113358.jpg";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -60,6 +61,26 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/32-rue-de-laperriere/15163372",
     mls: "15163372",
+    status: "active",
+  },
+  {
+    id: "17113358",
+    address: "47 Rue Brook",
+    city: "Gatineau (Aylmer)",
+    price: "439 900 $",
+    type: "Two-storey house",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1 425 sq ft",
+    lotSize: "4 302 sq ft",
+    yearBuilt: "1885",
+    description:
+      "Located in the heart of Aylmer, steps from the marina and Main Street. 3 bedrooms, 1 bathroom, 1 powder room. Carefully renovated, turnkey, ideal for a practical and vibrant lifestyle in one of Aylmer's most sought-after areas.",
+    image: property17113358,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/47-rue-brook/17113358",
+    mls: "17113358",
     status: "active",
   },
 ];
