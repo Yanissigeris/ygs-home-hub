@@ -8,7 +8,6 @@ import AwardsMarquee from "@/components/AwardsMarquee";
 import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
 
-import MarketContext2026 from "@/components/MarketContext2026";
 import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
