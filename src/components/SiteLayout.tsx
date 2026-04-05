@@ -83,26 +83,35 @@ const PageFallback = () => (
   </div>
 );
 
-const SiteLayout = () => (
-  <div className="flex min-h-screen flex-col font-body">
-    <JsonLdSchema />
-    <LangMeta />
-    <BreadcrumbJsonLd />
-    <UtilityBar />
-    <SiteHeader />
-    <VisibleBreadcrumb />
-    <ScrollProgress />
-    <main className="flex-1">
-      <React.Suspense fallback={<PageFallback />}>
-        <Outlet />
+const SiteLayout = () => {
+  const location = useLocation();
+
+  return (
+    <div className="flex min-h-screen flex-col font-body">
+      <JsonLdSchema />
+      <LangMeta />
+      <BreadcrumbJsonLd />
+      <NavigationProgress />
+      <UtilityBar />
+      <SiteHeader />
+      <VisibleBreadcrumb />
+      <ScrollProgress />
+      <main className="flex-1">
+        <AnimatePresence mode="wait">
+          <PageTransition locationKey={location.pathname}>
+            <React.Suspense fallback={<PageFallback />}>
+              <Outlet />
+            </React.Suspense>
+          </PageTransition>
+        </AnimatePresence>
+      </main>
+      <React.Suspense fallback={null}>
+        <SiteFooter />
       </React.Suspense>
-    </main>
-    <React.Suspense fallback={null}>
-      <SiteFooter />
-    </React.Suspense>
-    <WhatsAppButton />
-    <CookieConsent />
-  </div>
-);
+      <WhatsAppButton />
+      <CookieConsent />
+    </div>
+  );
+};
 
 export default SiteLayout;
