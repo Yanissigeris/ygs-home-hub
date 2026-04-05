@@ -88,9 +88,7 @@ const SiteLayout = () => (
         <Outlet />
       </React.Suspense>
     </main>
-    <React.Suspense fallback={null}>
-      <SiteFooter />
-    </React.Suspense>
+    <SiteFooter />
   </div>
 );
 
