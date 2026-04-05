@@ -94,6 +94,10 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     <div className="reveal">
+      <InstagramGrid />
+    </div>
+
+    <div className="reveal">
       <CTASection
         dark
         overline="First step"
