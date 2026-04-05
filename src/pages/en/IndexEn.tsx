@@ -8,6 +8,7 @@ import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
 import PathwaySection from "@/components/PathwaySection";
+import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import AreasServicesSection from "@/components/AreasServicesSection";
