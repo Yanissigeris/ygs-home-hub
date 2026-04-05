@@ -281,3 +281,27 @@
   .d3 { transition-delay: .25s; }
   .d4 { transition-delay: .35s; }
 }
+
+/* ── Global mobile optimizations ── */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Marquee slower on mobile */
+  .animate-marquee {
+    --marquee-speed: 40s;
+  }
+}
+
+@media (max-width: 639px) {
+  .section-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
