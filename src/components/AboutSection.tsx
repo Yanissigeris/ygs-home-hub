@@ -55,7 +55,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         {/* Photo column */}
         <div className="relative">
           {/* Mobile: centered, max 280px */}
-          <div className="mx-auto max-w-[280px] md:max-w-none" style={{ borderRadius: 2, overflow: "hidden", position: "relative" }}>
+          <div className="mx-auto max-w-[280px] md:max-w-none" style={{ borderRadius: 2, overflow: "hidden", position: "relative", background: "linear-gradient(160deg, hsl(200 42% 16% / .08) 0%, hsl(36 38% 50% / .12) 100%)" }}>
             <img
               src={yanisAbout}
               srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
