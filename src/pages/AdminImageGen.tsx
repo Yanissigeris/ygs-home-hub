@@ -62,7 +62,7 @@ const AdminImageGen = () => {
 
   return (
     <>
-      <PageMeta title="Admin — Génération d'images IA" description="Outil admin pour générer des images avec l'IA." noIndex />
+      <PageMeta title="Admin — Génération d'images IA" description="Outil admin pour générer des images avec l'IA." />
       <div className="min-h-screen bg-background py-20 px-4">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-serif text-3xl font-bold text-foreground mb-8">Génération d'images IA</h1>
