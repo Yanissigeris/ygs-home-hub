@@ -1,11 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import cardVendreImg from "@/assets/card-vendre.webp";
-import cardVendreSm from "@/assets/card-vendre-sm.webp";
-import cardAcheterImg from "@/assets/card-acheter.webp";
-import cardAcheterSm from "@/assets/card-acheter-sm.webp";
-import cardPlexImg from "@/assets/card-plex.webp";
-import cardPlexSm from "@/assets/card-plex-sm.webp";
+import cardVendreImg from "@/assets/service-vendre.jpg";
+import cardAcheterImg from "@/assets/service-acheter.jpg";
+import cardPlexImg from "@/assets/service-plex.jpg";
 
 const pathwaysFr = [
   { num: "01", title: "Vendre ma propriété en Outaouais", text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.", cta: "Voir le plan vendeur", href: "/vendre-ma-maison-gatineau", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne" },

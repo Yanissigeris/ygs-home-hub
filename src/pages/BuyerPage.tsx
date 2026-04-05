@@ -16,7 +16,7 @@ import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import CalculatorsSection from "@/components/CalculatorsSection";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-buyer.webp";
+import heroImg from "@/assets/hero-acheter.jpg";
 
 const buyerProfiles = [
   { icon: CheckCircle2, title: "Premier acheteur en Outaouais", text: "Comprendre le processus québécois étape par étape sans se sentir dépassé — promesse d'achat, inspection, notaire." },

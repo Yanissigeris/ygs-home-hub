@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-aylmer.webp";
+import heroImg from "@/assets/hero-aylmer-gen.jpg";
 
 const AylmerPage = () => (
   <NeighborhoodTemplate
