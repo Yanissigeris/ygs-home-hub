@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import yanisAbout from "@/assets/yanis-about-nobg.png";
-import yanisAboutSm from "@/assets/yanis-about-sm-nobg.png";
+import yanisAbout from "@/assets/yanis-about.webp";
+import yanisAboutSm from "@/assets/yanis-about-sm.webp";
 
 const contentFr = {
   overline: "Pourquoi YGS",
