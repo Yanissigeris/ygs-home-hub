@@ -39,9 +39,9 @@ const faq = [
 /* ── Sub-sectors ── */
 const subSectors = [
   {
-    title: "Plateau du Lac-Beauchamp",
-    text: "Le secteur le plus demandé d'Aylmer. Maisons deux étages 2000-2020, cours bien entretenues, proximité immédiate du Parc Lac-Beauchamp (plage, sentiers, patinoire). Idéal pour les familles avec enfants. Prix : 550 000 $ – 750 000 $.",
-    tag: "Familles · Maisons récentes",
+    title: "Lucerne / Rivermead",
+    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain. Prix : 550 000 $ – 750 000 $.",
+    tag: "Familles · Établi · Recherché",
   },
   {
     title: "Vieux-Aylmer",
