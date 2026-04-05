@@ -20,7 +20,11 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
-    <PageMeta title="Courtier immobilier Gatineau · Outaouais | YGS" description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir à Aylmer, Hull ou Plateau — stratégie claire et accompagnement." />
+    <PageMeta
+      title="Courtier immobilier Gatineau · Outaouais | YGS"
+      description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir à Aylmer, Hull ou Plateau — stratégie claire et accompagnement."
+      ogImage="https://yanisgauthier.com/og-image.jpg"
+    />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Votre courtier immobilier en Outaouais"
@@ -37,17 +41,20 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip />
     <AwardsMarquee />
-    <StatsSection />
 
-    <>
+    <div className="reveal">
+      <StatsSection />
+    </div>
+
+    <div className="reveal">
       <PathwaySection />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <AboutSection />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <TestimonialSlider
         overline="Témoignages"
         title="Ce que disent mes clients"
@@ -55,17 +62,17 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         reviewsPageLabel="Voir tous les témoignages"
         reviewsPageHref="/temoignages"
       />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <AreasServicesSection />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <GuideOffersSection background="alt" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <HomeFAQTeaser
         title="Questions fréquentes"
         items={[
@@ -77,9 +84,9 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         linkHref="/faq"
         linkLabel="Voir toutes les questions"
       />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <CTASection
         dark
         overline="Première étape"
@@ -91,10 +98,9 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         ]}
         trustLine="Je vous donne les chiffres et les options, vous décidez."
       />
-    </>
+    </div>
   </div>
 ));
 
 Index.displayName = "Index";
-
 export default Index;

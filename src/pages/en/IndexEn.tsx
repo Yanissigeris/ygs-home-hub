@@ -21,7 +21,11 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
-    <PageMeta title="Real Estate Broker Gatineau | YGS" description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support." />
+    <PageMeta
+      title="Real Estate Broker Gatineau | YGS"
+      description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support."
+      ogImage="https://yanisgauthier.com/og-image.jpg"
+    />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
       title="Your real estate broker in Outaouais"
@@ -38,29 +42,32 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip lang="en" />
     <AwardsMarquee />
-    <StatsSection lang="en" />
 
-    <>
+    <div className="reveal">
+      <StatsSection lang="en" />
+    </div>
+
+    <div className="reveal">
       <PathwaySection lang="en" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <AboutSection lang="en" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <TestimonialSlider overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <AreasServicesSection lang="en" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <GuideOffersSection lang="en" background="alt" />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <HomeFAQTeaser
         title="Frequently asked questions"
         items={[
@@ -72,9 +79,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         linkHref="/en/faq"
         linkLabel="See all questions"
       />
+    </div>
 
-      <hr className="section-divider" />
-
+    <div className="reveal">
       <CTASection
         dark
         overline="First step"
@@ -86,7 +93,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         ]}
         trustLine="I give you the numbers and the options — you decide with full clarity."
       />
-    </>
+    </div>
   </div>
 ));
 
