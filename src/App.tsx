@@ -142,6 +142,8 @@ const RealtorCommissionPageEn = React.lazy(() => import("./pages/en/RealtorCommi
 const HowToChooseRealtorPageEn = React.lazy(() => import("./pages/en/HowToChooseRealtorPageEn"));
 const OaciqFindBrokerPageEn = React.lazy(() => import("./pages/en/OaciqFindBrokerPageEn"));
 const RealtorVsSellingByOwnerPageEn = React.lazy(() => import("./pages/en/RealtorVsSellingByOwnerPageEn"));
+const PrivacyPolicyPageEn = React.lazy(() => import("./pages/en/PrivacyPolicyPageEn"));
+const TermsPageEn = React.lazy(() => import("./pages/en/TermsPageEn"));
 
 
 const routeTree = React.createElement(
