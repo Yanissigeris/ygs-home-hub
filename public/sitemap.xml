@@ -1244,4 +1244,25 @@
     <loc>https://yanisgauthier.com/en/realtor-vs-selling-by-owner-quebec</loc>
     <lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  </url>
+  <url>
+    <loc>https://yanisgauthier.com/politique-de-confidentialite</loc>
+    <lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://yanisgauthier.com/politique-de-confidentialite" /><xhtml:link rel="alternate" hreflang="en-CA" href="https://yanisgauthier.com/en/privacy-policy" /><xhtml:link rel="alternate" hreflang="x-default" href="https://yanisgauthier.com/politique-de-confidentialite" />
+  </url>
+  <url>
+    <loc>https://yanisgauthier.com/en/privacy-policy</loc>
+    <lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://yanisgauthier.com/politique-de-confidentialite" /><xhtml:link rel="alternate" hreflang="en-CA" href="https://yanisgauthier.com/en/privacy-policy" /><xhtml:link rel="alternate" hreflang="x-default" href="https://yanisgauthier.com/politique-de-confidentialite" />
+  </url>
+  <url>
+    <loc>https://yanisgauthier.com/conditions-utilisation</loc>
+    <lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://yanisgauthier.com/conditions-utilisation" /><xhtml:link rel="alternate" hreflang="en-CA" href="https://yanisgauthier.com/en/terms" /><xhtml:link rel="alternate" hreflang="x-default" href="https://yanisgauthier.com/conditions-utilisation" />
+  </url>
+  <url>
+    <loc>https://yanisgauthier.com/en/terms</loc>
+    <lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://yanisgauthier.com/conditions-utilisation" /><xhtml:link rel="alternate" hreflang="en-CA" href="https://yanisgauthier.com/en/terms" /><xhtml:link rel="alternate" hreflang="x-default" href="https://yanisgauthier.com/conditions-utilisation" />
+  </url>
 </urlset>

@@ -56,6 +56,8 @@ const frToEn: Record<string, string> = {
   "/vendre-maison-aylmer": "/en/sell-house-aylmer",
   "/evaluation-maison-hull": "/en/home-valuation-hull",
   "/evaluation-maison-aylmer": "/en/home-valuation-aylmer",
+  "/politique-de-confidentialite": "/en/privacy-policy",
+  "/conditions-utilisation": "/en/terms",
 };
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));

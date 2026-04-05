@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
+import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import { reviews, getReviewsByCategory } from "@/data/reviews";
 import type { Review } from "@/data/reviews";
 import heroImg from "@/assets/hero-testimonials.webp";
@@ -27,6 +28,17 @@ const TestimonialsPage = () => (
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       heroBgImage={heroImg}
     />
+
+    {/* Google Reviews badge */}
+    <section className="section-padding bg-background pb-0">
+      <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
+        <div>
+          <p className="label-overline mb-2">Avis vérifiés</p>
+          <h2>Nos clients sur Google</h2>
+        </div>
+        <GoogleReviewBadge />
+      </div>
+    </section>
 
     {categories.map((cat) => {
       const catReviews = getReviewsByCategory(cat.key);
@@ -56,6 +68,15 @@ const TestimonialsPage = () => (
         </section>
       );
     })}
+
+    {/* Google review link */}
+    <section className="section-padding bg-background pt-0">
+      <div className="section-container text-center">
+        <a href="https://www.google.com/maps/place/Yanis+Gauthier-Sigeris+-+Courtier+immobilier+RE%2FMAX" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
+          Laisser un avis Google →
+        </a>
+      </div>
+    </section>
 
     <CTASection
       dark

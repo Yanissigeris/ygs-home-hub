@@ -79,6 +79,8 @@ const FAQPage = React.lazy(() => import("./pages/FAQPage"));
 const ThankYouPage = React.lazy(() => import("./pages/ThankYouPage"));
 const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuationPage"));
 const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
+const PrivacyPolicyPage = React.lazy(() => import("./pages/PrivacyPolicyPage"));
+const TermsPage = React.lazy(() => import("./pages/TermsPage"));
 
 // EN pages
 import IndexEn from "./pages/en/IndexEn";
@@ -140,6 +142,8 @@ const RealtorCommissionPageEn = React.lazy(() => import("./pages/en/RealtorCommi
 const HowToChooseRealtorPageEn = React.lazy(() => import("./pages/en/HowToChooseRealtorPageEn"));
 const OaciqFindBrokerPageEn = React.lazy(() => import("./pages/en/OaciqFindBrokerPageEn"));
 const RealtorVsSellingByOwnerPageEn = React.lazy(() => import("./pages/en/RealtorVsSellingByOwnerPageEn"));
+const PrivacyPolicyPageEn = React.lazy(() => import("./pages/en/PrivacyPolicyPageEn"));
+const TermsPageEn = React.lazy(() => import("./pages/en/TermsPageEn"));
 
 
 const routeTree = React.createElement(
@@ -212,6 +216,8 @@ const routeTree = React.createElement(
       <Route path="/verifier-un-courtier-immobilier-oaciq" element={<VerifierCourtierOaciqPage />} />
       <Route path="/frais-de-courtage-immobilier-quebec" element={<FraisCourtagePage />} />
       <Route path="/courtier-immobilier-ou-vendre-soi-meme" element={<CourtierOuVendreSoiMemePage />} />
+      <Route path="/politique-de-confidentialite" element={<PrivacyPolicyPage />} />
+      <Route path="/conditions-utilisation" element={<TermsPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
@@ -273,6 +279,8 @@ const routeTree = React.createElement(
       <Route path="/en/how-to-choose-a-realtor" element={<HowToChooseRealtorPageEn />} />
       <Route path="/en/oaciq-find-a-broker" element={<OaciqFindBrokerPageEn />} />
       <Route path="/en/realtor-vs-selling-by-owner-quebec" element={<RealtorVsSellingByOwnerPageEn />} />
+      <Route path="/en/privacy-policy" element={<PrivacyPolicyPageEn />} />
+      <Route path="/en/terms" element={<TermsPageEn />} />
     </Route>
     <Route path="/admin/image-gen" element={<AdminImageGen />} />
     <Route path="*" element={<NotFound />} />
