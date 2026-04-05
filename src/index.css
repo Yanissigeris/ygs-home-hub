@@ -302,11 +302,42 @@
   .animate-marquee {
     --marquee-speed: 40s;
   }
+
+  /* Services description line clamp */
+  .pathway-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Typography fine-tuning */
+  h2 {
+    letter-spacing: -.015em;
+  }
+
+  .label-overline {
+    font-size: .58rem;
+    letter-spacing: .16em;
+  }
+
+  .label-overline::before {
+    width: 16px;
+  }
 }
 
 @media (max-width: 639px) {
   .section-container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
