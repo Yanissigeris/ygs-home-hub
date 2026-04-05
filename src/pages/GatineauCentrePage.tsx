@@ -10,7 +10,7 @@ const GatineauCentrePage = () => (
     jsonLd={{ name: "Gatineau", description: "Courtier immobilier dans le secteur Gatineau-centre. Résidentiel, services et commerces.", lat: 45.4765, lng: -75.7013, url: "/gatineau" }}
     hero={{ overline: "Guide de quartier · Gatineau", title: "Vivre, acheter ou vendre à Gatineau-centre", subtitle: "Résidentiel, services et commerces — le secteur central de Gatineau offre praticité et accessibilité.", image: heroImg }}
     trustSpecialty="Spécialiste Gatineau-centre"
-    lifestyle={{ image: heroImg, imageAlt: "Secteur Gatineau-centre", title: "Pourquoi Gatineau-centre est pratique", subtitle: "Un secteur résidentiel central avec tous les services à portée de main." }}
+    lifestyle={{ image: lifestyleImg, imageAlt: "Rue résidentielle à Gatineau-centre, Québec", title: "Pourquoi Gatineau-centre est pratique", subtitle: "Un secteur résidentiel central avec tous les services à portée de main." }}
     reasons={[
       "Accès facile à tous les services — hôpital, écoles, commerces et restaurants",
       "Prix résidentiels compétitifs comparé à Aylmer et Hull",
