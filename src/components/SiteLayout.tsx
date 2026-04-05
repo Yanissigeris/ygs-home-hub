@@ -98,6 +98,7 @@ const SiteLayout = () => (
       <SiteFooter />
     </React.Suspense>
     <WhatsAppButton />
+    <CookieConsent />
   </div>
 );
 

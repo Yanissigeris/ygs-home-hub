@@ -215,19 +215,10 @@
     <!-- Route-specific JSON-LD injection (deferred — non-blocking for FCP) -->
     <script src="/jsonld-routes.js" defer></script>
 
-    <!-- Google Analytics GA4 — delayed to prioritize FCP/LCP -->
+    <!-- GA4 — loaded conditionally by CookieConsent component based on Loi 25 consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-P4Y8089EGB');
-      /* Load gtag.js after page is interactive */
-      window.addEventListener('load', function() {
-        var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4Y8089EGB';
-        s.async = true;
-        document.head.appendChild(s);
-      }, {once: true});
     </script>
 
 </head>
