@@ -46,6 +46,14 @@ const TestimonialsPageEn = () => (
         </section>
       );
     })}
+    {/* Google review link */}
+    <section className="section-padding bg-background pt-0">
+      <div className="section-container text-center">
+        <a href="https://www.google.com/maps/place/Yanis+Gauthier-Sigeris+-+Courtier+immobilier+RE%2FMAX" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
+          Leave a Google review →
+        </a>
+      </div>
+    </section>
     <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, honest conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
   </>
 );
