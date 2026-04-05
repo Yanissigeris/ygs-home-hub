@@ -42,8 +42,8 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
     onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-5px)"; e.currentTarget.style.boxShadow = "0 20px 50px rgba(23,48,59,.1)"; e.currentTarget.style.borderColor = "transparent"; }}
     onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.borderColor = ""; }}
   >
-    <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
-      <img src={p.image} alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`} itemProp="image" className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]" loading="lazy" decoding="async" width={648} height={486} onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }} />
+    <div className="relative overflow-hidden img-shimmer" style={{ aspectRatio: "16/9" }}>
+      <img src={p.image} alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`} itemProp="image" className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]" loading="lazy" decoding="async" width={648} height={486} onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }} onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }} />
       <span className="absolute" style={{ top: "1rem", left: "1rem", background: "var(--gold)", color: "#fff", borderRadius: 20, fontSize: ".62rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", padding: ".25rem .75rem" }}>
         {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
       </span>
