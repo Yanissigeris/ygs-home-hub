@@ -29,6 +29,17 @@ const TestimonialsPage = () => (
       heroBgImage={heroImg}
     />
 
+    {/* Google Reviews badge */}
+    <section className="section-padding bg-background pb-0">
+      <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
+        <div>
+          <p className="label-overline mb-2">Avis vérifiés</p>
+          <h2>Nos clients sur Google</h2>
+        </div>
+        <GoogleReviewBadge />
+      </div>
+    </section>
+
     {categories.map((cat) => {
       const catReviews = getReviewsByCategory(cat.key);
       if (catReviews.length === 0) return null;
