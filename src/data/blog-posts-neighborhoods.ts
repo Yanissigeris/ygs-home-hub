@@ -1,11 +1,11 @@
 import type { BlogPost } from "./blog-posts";
 import heroChelsea from "@/assets/hero-chelsea.jpg";
-import heroCantley from "@/assets/hero-cantley.jpg";
-import heroValDesMonts from "@/assets/hero-val-des-monts.jpg";
+import heroCantley from "@/assets/hero-cantley.webp";
+import heroValDesMonts from "@/assets/hero-val-des-monts.webp";
 import heroMassonAngers from "@/assets/hero-masson-angers.jpg";
-import heroPontiac from "@/assets/hero-pontiac.jpg";
+import heroPontiac from "@/assets/hero-pontiac.webp";
 import heroCoteDazur from "@/assets/hero-cote-dazur.jpg";
-import heroLimbour from "@/assets/hero-limbour.jpg";
+import heroLimbour from "@/assets/hero-limbour.webp";
 
 export const neighborhoodBlogPosts: BlogPost[] = [
   // ═══════════════════════════════════════════

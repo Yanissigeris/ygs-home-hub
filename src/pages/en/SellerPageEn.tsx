@@ -14,7 +14,7 @@ import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-vendre.jpg";
+import heroImg from "@/assets/hero-vendre.webp";
 
 const painPoints = [
   { icon: CheckCircle2, title: "Is now the right time to sell?", text: "The Gatineau market is evolving. You don't want to miss the window, but you also don't want to sell without a plan." },

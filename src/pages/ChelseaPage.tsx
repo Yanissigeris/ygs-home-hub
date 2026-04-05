@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TreePine, Mountain } from "lucide-react";
-import heroImg from "@/assets/hero-chelsea-gen.jpg";
+import heroImg from "@/assets/hero-chelsea-gen.webp";
 
 const ChelseaPage = () => (
   <NeighborhoodTemplate
