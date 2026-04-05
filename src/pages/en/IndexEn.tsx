@@ -45,6 +45,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
+    <ValuationWidget lang="en" />
     <QuickActionStrip />
     <AwardsMarquee />
 
