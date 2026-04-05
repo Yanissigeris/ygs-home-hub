@@ -332,7 +332,7 @@ const AylmerPageEn = () => (
         { label: "Free valuation →", href: "/en/home-valuation" },
         { label: "Contact me →", href: "/en/contact", variant: "outline" },
       ]}
-      trustLine="\"I give you the numbers and the options — you decide.\""
+      trustLine={'"I give you the numbers and the options — you decide."'}
     />
 
     {/* ═══ RELATED ═══ */}
