@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-/* Inline SVG icons — avoids loading lucide-react in the critical path */
 const PhoneIcon = ({ size = 12, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 );
@@ -27,40 +26,42 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
 
   return (
     <div ref={ref}>
-      <div className="hidden border-b border-white/[0.06] bg-[hsl(200,42%,16%)] sm:block">
-        <div className="section-container flex h-[38px] items-center justify-between">
-          <div className="flex items-center gap-5 text-[0.75rem] tracking-[0.01em] text-white/55">
-             <a href="tel:+18192103044" className="flex items-center gap-2 transition-colors duration-200 hover:text-white/90">
-              <PhoneIcon size={12} className="text-white/35" /><span>819-210-3044</span>
+      {/* Desktop */}
+      <div className="hidden sm:block" style={{ background: "var(--ink)", borderBottom: "1px solid rgba(255,255,255,.06)", height: 38 }}>
+        <div className="section-container flex h-full items-center justify-between">
+          <div className="flex items-center gap-5" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>
+            <a href="tel:+18192103044" className="flex items-center gap-2 transition-colors duration-200 hover:text-white">
+              <PhoneIcon size={12} style={{ color: "rgba(255,255,255,.35)" }} /><span>819-210-3044</span>
             </a>
-            <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
-            <a href="mailto:yanis@martywaite.com" className="flex items-center gap-2 transition-colors duration-200 hover:text-white/90">
-              <MailIcon size={12} className="text-white/35" /><span>yanis@martywaite.com</span>
+            <span className="h-3 w-px" style={{ background: "rgba(255,255,255,.1)" }} aria-hidden />
+            <a href="mailto:yanis@martywaite.com" className="flex items-center gap-2 transition-colors duration-200 hover:text-white">
+              <MailIcon size={12} style={{ color: "rgba(255,255,255,.35)" }} /><span>yanis@martywaite.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/40 transition-colors duration-200 hover:text-white/80">
-              <FacebookIcon size={13} className="" />
+            <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,.4)" }}>
+              <FacebookIcon size={13} />
             </a>
-            <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/40 transition-colors duration-200 hover:text-white/80">
-              <InstagramIcon size={13} className="" />
+            <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,.4)" }}>
+              <InstagramIcon size={13} />
             </a>
-            <span className="h-3 w-px bg-white/[0.1]" aria-hidden />
-            <Link to={relocationHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{relocationLabel}</Link>
-            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
-            <Link to={contactHref} className="text-[0.75rem] tracking-[0.01em] text-white/50 transition-colors duration-200 hover:text-white/85">Contact</Link>
-            <Link to={ctaHref} className="ml-1 inline-flex h-[26px] items-center rounded-full border border-[#B68A43]/20 bg-[#B68A43]/15 px-4 text-[0.6875rem] font-medium tracking-[0.04em] text-[#B68A43] transition-all duration-200 hover:border-[#B68A43]/35 hover:bg-[#B68A43]/25 hover:text-[#B68A43]">{ctaLabel}</Link>
+            <span className="h-3 w-px" style={{ background: "rgba(255,255,255,.1)" }} aria-hidden />
+            <Link to={relocationHref} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>{relocationLabel}</Link>
+            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>{lang === "en" ? "Blog" : "Blogue"}</Link>
+            <Link to={contactHref} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>Contact</Link>
+            <Link to={ctaHref} className="ml-1 inline-flex items-center transition-all duration-200 hover:brightness-110" style={{ height: 28, borderRadius: 20, background: "var(--gold)", color: "#fff", fontSize: ".7rem", fontWeight: 600, padding: "0 1rem", letterSpacing: ".03em" }}>{ctaLabel}</Link>
           </div>
         </div>
       </div>
-      <div className="border-b border-white/[0.06] bg-[hsl(200,42%,16%)] sm:hidden">
+      {/* Mobile */}
+      <div className="sm:hidden" style={{ background: "var(--ink)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
         <div className="flex min-h-[38px] items-center justify-between gap-3 px-4 py-1.5">
-          <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 text-[0.7188rem] text-white/60 transition-colors hover:text-white/85">
-            <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
+          <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 transition-colors hover:text-white" style={{ fontSize: ".72rem", color: "rgba(255,255,255,.5)" }}>
+            <PhoneIcon size={11} className="shrink-0" style={{ color: "rgba(255,255,255,.35)" }} /><span className="truncate">819-210-3044</span>
           </a>
           <div className="flex shrink-0 items-center gap-3">
-            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="text-[0.6875rem] text-white/50 transition-colors hover:text-white/85">{lang === "en" ? "Blog" : "Blogue"}</Link>
-            <Link to={ctaHref} className="inline-flex h-[26px] shrink-0 items-center rounded-full border border-white/[0.08] bg-white/[0.09] px-3 text-[0.625rem] font-medium tracking-[0.03em] text-white/80 transition-all duration-200 hover:bg-white/[0.14] hover:text-white/95">{ctaLabelMobile}</Link>
+            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="transition-colors hover:text-white" style={{ fontSize: ".69rem", color: "rgba(255,255,255,.5)" }}>{lang === "en" ? "Blog" : "Blogue"}</Link>
+            <Link to={ctaHref} className="inline-flex shrink-0 items-center transition-all duration-200 hover:brightness-110" style={{ height: 26, borderRadius: 20, background: "var(--gold)", color: "#fff", fontSize: ".63rem", fontWeight: 600, padding: "0 .75rem", letterSpacing: ".03em" }}>{ctaLabelMobile}</Link>
           </div>
         </div>
       </div>
