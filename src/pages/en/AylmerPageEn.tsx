@@ -75,11 +75,11 @@ const buyerCols = [
   {
     title: "On the market",
     items: [
-      "Good properties sell in 10-20 days",
+      "Good properties sell quickly in popular areas",
       "Multiple offers are common in Lucerne and Rivermead",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
-      "Expect 5-10% above asking price in competitive zones",
+      "Expect to go above asking price in competitive zones",
     ],
   },
   {
