@@ -107,7 +107,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                <div className="absolute inset-0 overflow-hidden">
                  <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
                </div>
-              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.4) 100%)" }} />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.55) 0%, rgba(23,48,59,.2) 100%)" }} />
             </>
           )}
           <div className="section-container relative z-20 py-16 sm:py-20 md:py-24">
@@ -210,18 +210,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
                 </div>
                 <div className="absolute inset-0">
-                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} />
+                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} />
                 </div>
               </>
             )}
             {heroBgImage && !heroVideo && (
               <div className="absolute inset-0">
-                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
               </div>
             )}
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.2) 100%)" }} />
+            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.1) 100%)" }} />
 
             {/* Yanis portrait */}
             {agentImage && (
@@ -266,7 +266,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} />}
                 </div>
               )}
-              <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.3) 100%)" }} />
+              <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 100%)" }} />
               <img
                 src={agentImageSm || agentImage}
                 srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
