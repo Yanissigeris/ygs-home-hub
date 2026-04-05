@@ -38,7 +38,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
             </div>
 
             {/* Right — accordion */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-[0.35rem] md:gap-2">
               {items.map((item, i) => {
                 const isOpen = openIndex === i;
                 return (

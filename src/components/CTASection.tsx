@@ -22,10 +22,10 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         textAlign: "center",
       }}
     >
-      {/* Decorative radial gradient */}
+      {/* Decorative radial gradient — desktop only */}
       {dark && (
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 hidden md:block"
           style={{ background: "radial-gradient(circle 700px at center, rgba(168,138,90,.1), transparent)" }}
           aria-hidden="true"
         />
@@ -35,14 +35,14 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         {overline && (
           <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
         )}
-        <h2 className="mx-auto max-w-lg" style={{ color: dark ? "#fff" : "var(--ink)" }}>{title}</h2>
+        <h2 className="mx-auto max-w-lg" style={{ color: dark ? "#fff" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
         {text && (
           <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
             {text}
           </p>
         )}
 
-        {/* Buttons — stack vertically on mobile */}
+        {/* Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3">
           {buttons.map((btn) => {
             const isOutline = btn.variant === "outline";
@@ -54,11 +54,11 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                 style={
                   dark
                     ? isOutline
-                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 500, minHeight: 44 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, minHeight: 44 }
+                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
                     : isOutline
-                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 500, minHeight: 44 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, minHeight: 44 }
+                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
                 }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-2px)";
@@ -79,6 +79,15 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
             );
           })}
         </div>
+
+        {/* Mobile phone link */}
+        {dark && (
+          <div className="mt-4 md:hidden">
+            <a href="tel:8192103044" style={{ color: "rgba(255,255,255,.45)", fontSize: ".78rem" }}>
+              📞 819-210-3044
+            </a>
+          </div>
+        )}
 
         {trustLine && (
           <div className="mt-8 sm:mt-12 pt-8 sm:pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>

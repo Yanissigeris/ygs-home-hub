@@ -169,9 +169,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   color: "#F7F4EE",
                   animationDelay: "0.35s",
                   animationFillMode: "forwards",
-                  fontSize: "clamp(2.6rem, 9vw, 5.5rem)",
+                  fontSize: "clamp(2.8rem, 11vw, 5.5rem)",
                   lineHeight: 1.12,
                   letterSpacing: "-.01em",
+                  fontFeatureSettings: '"liga" 1, "kern" 1',
                 }}
               >
                 {lang === "fr" ? (

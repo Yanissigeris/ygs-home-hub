@@ -5,6 +5,7 @@ import JsonLdSchema from "@/components/JsonLdSchema";
 import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
+import ScrollProgress from "@/components/ScrollProgress";
 
 
 import { Outlet } from "react-router-dom";
@@ -86,6 +87,7 @@ const SiteLayout = () => (
     <UtilityBar />
     <SiteHeader />
     <VisibleBreadcrumb />
+    <ScrollProgress />
     <main className="flex-1">
       <React.Suspense fallback={<PageFallback />}>
         <Outlet />
