@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import ContentBlock from "@/components/ContentBlock";
@@ -49,7 +50,8 @@ const SellerPlanPage = () => {
 
   return (
    <>
-    <PageMeta title="Plan de vente personnalisé · Gatineau | YGS" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." />
+    <PageMeta title="Plan de vente personnalisé · Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." />
+    <ServiceJsonLd name="Plan de vente personnalisé — Gatineau" description="Plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement complet." url="/plan-vendeur-gatineau" serviceType="Real Estate Marketing Plan Service" />
     <HeroSection
         compact
         overline="Plan vendeur personnalisé · Gatineau"

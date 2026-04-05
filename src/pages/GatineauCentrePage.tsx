@@ -5,7 +5,7 @@ import lifestyleImg from "@/assets/gatineau-centre-lifestyle.jpg";
 
 const GatineauCentrePage = () => (
   <NeighborhoodTemplate
-    seoTitle="Courtier immobilier Gatineau · Outaouais | YGS"
+    seoTitle="Courtier immobilier Gatineau · Outaouais"
     metaDesc="Courtier immobilier à Gatineau. Résidentiel, plex, condos et services — accompagnement achat et vente par un courtier local en Outaouais."
     jsonLd={{ name: "Gatineau", description: "Courtier immobilier dans le secteur Gatineau-centre. Résidentiel, services et commerces.", lat: 45.4765, lng: -75.7013, url: "/gatineau" }}
     hero={{ overline: "Guide de quartier · Gatineau", title: "Vivre, acheter ou vendre à Gatineau-centre", subtitle: "Résidentiel, services et commerces — le secteur central de Gatineau offre praticité et accessibilité.", image: heroImg }}

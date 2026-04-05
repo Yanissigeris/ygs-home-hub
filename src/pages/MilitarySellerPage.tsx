@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -29,7 +30,8 @@ const faq = [
 
 const MilitarySellerPage = () => (
    <>
-    <PageMeta title="Vendre lors d'une mutation militaire | YGS" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix en Outaouais." />
+    <PageMeta title="Vendre lors d'une mutation militaire" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix en Outaouais." />
+    <ServiceJsonLd name="Vendre lors d'une mutation militaire" description="Vente immobilière spécialisée pour militaires FAC en mutation. Timing, BGRS/SIRVA et stratégie pour maximiser votre prix." url="/vendre-lors-dune-mutation-gatineau" serviceType="Military Real Estate Seller Service" />
     <HeroSection
       overline="Vendre lors d'une mutation · Gatineau"
       title="Vendre votre propriété lors d'une mutation"

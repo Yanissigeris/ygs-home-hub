@@ -17,7 +17,7 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
 
 const TestimonialsPage = () => (
    <>
-    <PageMeta title="Témoignages clients · Gatineau et Outaouais | YGS" description="Découvrez ce que disent les clients de Yanis Gauthier-Sigeris. Témoignages de vendeurs, acheteurs et militaires à Gatineau, Aylmer et Hull." />
+    <PageMeta title="Témoignages clients · Gatineau et Outaouais" description="Découvrez ce que disent les clients de Yanis Gauthier-Sigeris. Témoignages de vendeurs, acheteurs et militaires à Gatineau, Aylmer et Hull." />
     <HeroSection
       compact
       overline="Témoignages"

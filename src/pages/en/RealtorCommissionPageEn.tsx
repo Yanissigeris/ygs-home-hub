@@ -21,7 +21,7 @@ const faq = [
 const RealtorCommissionPageEn = () => (
   <>
     <PageMeta
-      title="Realtor Commission in Quebec — Clear Guide | YGS"
+      title="Realtor Commission in Quebec — Clear Guide"
       description="Understand realtor commission fees in Quebec: how they work, what's included, and what it means for selling your home in Gatineau."
     />
 

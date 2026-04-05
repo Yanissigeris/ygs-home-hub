@@ -21,7 +21,7 @@ const faq = [
 const CourtierOuVendreSoiMemePage = () => (
   <>
     <PageMeta
-      title="Courtier immobilier ou vendre seul au Québec? | YGS"
+      title="Courtier immobilier ou vendre seul au Québec?"
       description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau."
     />
 

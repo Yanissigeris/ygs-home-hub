@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-masson-angers-gen.jpg";
 
 const MassonAngersPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Masson-Angers — Immobilier et guide de quartier | YGS"
+    seoTitle="Masson-Angers — Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre à Masson-Angers, Gatineau. Secteur familial en plein essor, constructions neuves et prix compétitifs."
     jsonLd={{ name: "Masson-Angers", description: "Courtier immobilier à Masson-Angers. Secteur familial, constructions neuves et prix accessibles.", lat: 45.5328, lng: -75.4170, url: "/masson-angers" }}
     hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial en plein essor avec des constructions neuves et des prix encore accessibles.", image: heroImg }}

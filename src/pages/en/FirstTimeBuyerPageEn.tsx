@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -36,7 +37,8 @@ const faq = [
 
 const FirstTimeBuyerPageEn = () => (
   <>
-    <PageMeta title="First-Time Buyer — Gatineau | YGS" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." />
+    <PageMeta title="First-Time Buyer — Gatineau" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." />
+    <ServiceJsonLd name="First-Time Home Buyer — Gatineau" description="Personalized support for first-time buyers in Gatineau. Down payment, Quebec programs and step-by-step process." url="/en/first-time-buyer" serviceType="First Time Home Buyer Service" />
     <HeroSection
       overline="First-Time Buyer · Gatineau"
       title="First purchase in Gatineau — where to start?"

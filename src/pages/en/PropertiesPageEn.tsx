@@ -40,7 +40,7 @@ const related = [
 
 const PropertiesPageEn = () => (
   <>
-    <PageMeta title="Properties for Sale in Gatineau | YGS" description="Houses, condos, plexes and land in Gatineau. Browse available properties in all Outaouais neighborhoods." />
+    <PageMeta title="Properties for Sale in Gatineau" description="Houses, condos, plexes and land in Gatineau. Browse available properties in all Outaouais neighborhoods." />
     <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land — browse available properties in all Gatineau and Outaouais neighborhoods." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="Strategic guidance." heroBgImage={heroImg} />
 
     <ContentBlock narrow={false}>

@@ -21,7 +21,7 @@ const BlogPage = () => {
   return (
     <>
       <PageMeta
-        title="Blogue immobilier Gatineau · Conseils et analyses | YGS"
+        title="Blogue immobilier Gatineau · Conseils et analyses"
         description="Articles, analyses et conseils immobiliers pour Gatineau et l'Outaouais. Vendeurs, acheteurs, investisseurs — par Yanis Gauthier-Sigeris, courtier immobilier."
       />
       <HeroSection

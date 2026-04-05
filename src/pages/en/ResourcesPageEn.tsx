@@ -39,7 +39,7 @@ const faq = [
 
 const ResourcesPageEn = () => (
   <>
-    <PageMeta title="Free Real Estate Guides and Resources | YGS" description="Free guides for sellers, buyers and investors in Gatineau. Real estate resources by Yanis Gauthier-Sigeris." />
+    <PageMeta title="Free Real Estate Guides and Resources" description="Free guides for sellers, buyers and investors in Gatineau. Real estate resources by Yanis Gauthier-Sigeris." />
     <HeroSection overline="Resources · YGS" title="Free real estate resources" subtitle="Guides, analyses and information to help you make the best real estate decisions in Gatineau." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />

@@ -13,7 +13,7 @@ const nextSteps = [
 
 const ThankYouPageEn = () => (
   <>
-    <PageMeta title="Thank You — Request Sent | YGS" description="Your request has been sent successfully. Yanis will contact you within 24 hours." />
+    <PageMeta title="Thank You — Request Sent" description="Your request has been sent successfully. Yanis will contact you within 24 hours." />
     <section className="section-padding bg-background">
       <div className="section-container max-w-[36rem]">
         <motion.div className="text-center" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>

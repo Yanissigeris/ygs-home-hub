@@ -21,7 +21,7 @@ const faq = [
 const FraisCourtagePage = () => (
   <>
     <PageMeta
-      title="Frais de courtage immobilier au Québec — Guide clair | YGS"
+      title="Frais de courtage immobilier au Québec — Guide clair"
       description="Comprenez les frais de courtage immobilier au Québec : commission, services inclus, facteurs et ce que ça signifie pour votre vente à Gatineau."
     />
 

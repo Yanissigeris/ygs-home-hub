@@ -39,7 +39,7 @@ const related = [
 
 const SellerGuidePageEn = () => (
   <>
-    <PageMeta title="Seller Guide — Selling in Gatineau | YGS" description="Complete guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." />
+    <PageMeta title="Seller Guide — Selling in Gatineau" description="Complete guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." />
     <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the best price, with confidence and without bad surprises." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />

@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import heroImg from "@/assets/hero-contact.webp";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
@@ -62,7 +63,8 @@ const ContactPage = () => {
 
   return (
    <>
-    <PageMeta title="Contacter Yanis Gauthier-Sigeris | YGS" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau et en Outaouais. Consultation gratuite — parlons de votre projet immobilier." />
+    <PageMeta title="Contacter Yanis Gauthier-Sigeris" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau et en Outaouais. Consultation gratuite — parlons de votre projet immobilier." />
+    <ServiceJsonLd name="Consultation immobilière gratuite — Gatineau" description="Consultation gratuite avec Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Parlons de votre projet de vente, achat ou investissement." url="/contact-yanis" serviceType="Real Estate Consultation Service" />
     <HeroSection
         compact
         overline="Yanis Gauthier-Sigeris"

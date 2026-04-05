@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-buckingham-gen.jpg";
 
 const BuckinghamPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Buckingham — Guide de quartier Gatineau | YGS"
+    seoTitle="Buckingham — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou vendre à Buckingham, Gatineau. Nature, rivière, prix accessibles et communauté chaleureuse — guide complet par un courtier local."
     jsonLd={{ name: "Buckingham", description: "Courtier immobilier à Buckingham, Gatineau. Nature, rivière du Lièvre, prix accessibles.", lat: 45.5860, lng: -75.4190, url: "/buckingham-masson-angers" }}
     hero={{ overline: "Guide de quartier · Buckingham", title: "Vivre, acheter ou vendre à Buckingham", subtitle: "Rivière du Lièvre, nature, prix accessibles et communauté chaleureuse — Buckingham offre un excellent rapport qualité-prix.", image: heroImg }}

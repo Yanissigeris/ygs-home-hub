@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Limbour Gatineau — Immobilier et guide de quartier | YGS"
+    seoTitle="Limbour Gatineau — Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre dans le quartier Limbour à Gatineau. Secteur familial moderne avec parcs, écoles et accès rapide à Ottawa."
     jsonLd={{ name: "Limbour", description: "Courtier immobilier dans le quartier Limbour à Gatineau. Secteur familial moderne.", lat: 45.4850, lng: -75.6600, url: "/limbour" }}
     hero={{ overline: "Guide de quartier · Limbour", title: "Vivre, acheter ou vendre à Limbour", subtitle: "Quartier familial moderne de Gatineau — maisons récentes, parcs et vie de banlieue agréable.", image: heroImg }}

@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
@@ -50,7 +51,8 @@ const BuyerConsultationPage = () => {
 
   return (
      <>
-      <PageMeta title="Consultation acheteur gratuite · Gatineau | YGS" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." />
+      <PageMeta title="Consultation acheteur gratuite · Gatineau" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." />
+    <ServiceJsonLd name="Consultation acheteur gratuite — Gatineau" description="Consultation gratuite pour acheteurs à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." url="/consultation-acheteur" serviceType="Real Estate Buyer Consultation" />
       <HeroSection
         compact
         overline="Consultation acheteur · Gatineau"

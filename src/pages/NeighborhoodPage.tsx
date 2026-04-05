@@ -37,7 +37,7 @@ const sellerReasons = [
 
 const NeighborhoodPage = () => (
    <>
-    <PageMeta title="Plateau et Aylmer — Guide de quartier | YGS" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, lac Deschênes, nature, écoles et propriétés." />
+    <PageMeta title="Plateau et Aylmer — Guide de quartier" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, lac Deschênes, nature, écoles et propriétés." />
     <NeighborhoodJsonLd name="Plateau / Aylmer" description="Courtier immobilier spécialisé au Plateau et Aylmer, Gatineau. Quartiers familiaux, nature, écoles et propriétés." lat={45.4500} lng={-75.8100} url="/plateau-aylmer" />
     <HeroSection
       overline="Guide de quartier · Gatineau"

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -30,7 +31,8 @@ const faq = [
 
 const MilitaryBuyerPage = () => (
    <>
-    <PageMeta title="Acheter comme militaire à Gatineau | YGS" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers près de la BFC Uplands et accompagnement adapté à votre mutation." />
+    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers près de la BFC Uplands et accompagnement adapté à votre mutation." />
+    <ServiceJsonLd name="Achat immobilier militaire — Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers près de la BFC Uplands." url="/acheter-comme-militaire-gatineau" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"

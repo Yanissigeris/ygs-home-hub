@@ -36,7 +36,7 @@ const faq = [
 
 const BuyFromOttawaPageEn = () => (
   <>
-    <PageMeta title="Buy in Gatineau from Ottawa | YGS" description="Living in Ottawa and thinking about buying in Gatineau? Taxes, neighborhoods, advantages and bilingual support for your transition." />
+    <PageMeta title="Buy in Gatineau from Ottawa" description="Living in Ottawa and thinking about buying in Gatineau? Taxes, neighborhoods, advantages and bilingual support for your transition." />
     <HeroSection
       overline="Buy from Ottawa · Gatineau"
       title="Buy in Gatineau from Ottawa"

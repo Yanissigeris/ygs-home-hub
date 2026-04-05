@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import HeroSection from "@/components/HeroSection";
@@ -28,7 +29,8 @@ const sectors = [
 
 const MontrealRelocationPage = () =>
 <>
-    <PageMeta title="Relocalisation Montréal vers Gatineau | YGS" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." />
+    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." />
+    <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau — quartiers, coût de vie et processus immobilier en Outaouais." url="/relocalisation-montreal-gatineau" serviceType="Real Estate Relocation Service" />
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"

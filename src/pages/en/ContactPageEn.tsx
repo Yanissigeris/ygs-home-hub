@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import ReviewSection from "@/components/ReviewSection";
@@ -51,7 +52,8 @@ const ContactPageEn = () => {
   };
   return (
     <>
-      <PageMeta title="Contact Yanis Gauthier-Sigeris | YGS" description="Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation, let's talk about your project." />
+      <PageMeta title="Contact Yanis Gauthier-Sigeris" description="Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation, let's talk about your project." />
+    <ServiceJsonLd name="Free Real Estate Consultation — Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
       <HeroSection compact overline="Yanis Gauthier-Sigeris" title="Let's talk about your project" subtitle="Thinking it over or ready to move — I can help you see more clearly. Just an honest conversation." primaryCta={{ label: "Send a message", href: "#contact-form" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
 <ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS">
         <p className="prose-body mt-6">Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.</p>

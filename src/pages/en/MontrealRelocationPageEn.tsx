@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
@@ -27,7 +28,8 @@ const sectors = [
 
 const MontrealRelocationPageEn = () => (
   <>
-    <PageMeta title="Relocating from Montréal to Gatineau | YGS" description="Moving from Montréal to Gatineau? Cost of living, neighborhoods, quality of life and real estate support for your transition." />
+    <PageMeta title="Relocating from Montréal to Gatineau" description="Moving from Montréal to Gatineau? Cost of living, neighborhoods, quality of life and real estate support for your transition." />
+    <ServiceJsonLd name="Montreal to Gatineau Relocation" description="Support for relocating from Montreal to Gatineau — neighbourhoods, cost of living and real estate process." url="/en/montreal-relocation" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Relocation · Montréal → Gatineau"
       title="Moving to Gatineau from Montréal"
