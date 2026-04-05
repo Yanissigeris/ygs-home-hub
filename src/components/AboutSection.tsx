@@ -52,7 +52,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
       <div className="section-container relative grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-[6rem]">
         {/* Photo column */}
         <div className="relative">
-          <div style={{ borderRadius: 2, overflow: "hidden" }}>
+          <div style={{ borderRadius: 2, overflow: "hidden", position: "relative" }}>
             <img
               src={yanisAbout}
               srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
@@ -64,6 +64,8 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               width={565}
               height={800}
             />
+            {/* Bottom scrim for badge legibility */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.55), transparent)" }} aria-hidden="true" />
           </div>
           {/* Credential badges */}
           <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-2 pb-4">
