@@ -291,7 +291,7 @@ const routeTree = React.createElement(
 const appRoutes = React.createElement(
   BrowserRouter,
   { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  React.createElement(LanguageProvider, null, React.createElement(ScrollToTop), routeTree),
+  React.createElement(LanguageProvider, null, React.createElement(BrandedLoader), React.createElement(ScrollToTop), routeTree),
 );
 
 const App = () => appRoutes;
