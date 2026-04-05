@@ -40,22 +40,22 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain. Prix : 550 000 $ – 750 000 $.",
+    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain.",
     tag: "Familles · Établi · Recherché",
   },
   {
     title: "Vieux-Aylmer",
-    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable. Clientèle mixte : professionnels, couples, retraités. Prix : 450 000 $ – 650 000 $.",
+    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable. Clientèle mixte : professionnels, couples, retraités.",
     tag: "Caractère · Walkable",
   },
   {
     title: "Aylmer nord / Breckenridge",
-    text: "Secteur plus calme, lotissements récents, grandes cours, accès rapide à l'autoroute 50. Attire les jeunes familles qui cherchent plus d'espace à prix accessible. Prix : 480 000 $ – 620 000 $.",
+    text: "Secteur plus calme, lotissements récents, grandes cours, accès rapide à l'autoroute 50. Attire les jeunes familles qui cherchent plus d'espace à prix accessible.",
     tag: "Espace · Récent · Accessible",
   },
   {
     title: "Bord de l'eau · Lac Deschênes",
-    text: "Propriétés en bord de rivière et de lac, accès nautique, terrain plus grands. Marché de niche avec des propriétés exceptionnelles. Rareté = valeur stable à long terme. Prix : 700 000 $ – 1 200 000 $+",
+    text: "Propriétés en bord de rivière et de lac, accès nautique, terrains plus grands. Marché de niche avec des propriétés exceptionnelles. Rareté = valeur stable à long terme.",
     tag: "Prestige · Bord de l'eau",
   },
 ];
