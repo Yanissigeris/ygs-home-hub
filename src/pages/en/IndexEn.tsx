@@ -3,6 +3,7 @@ import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 
 import AwardsMarquee from "@/components/AwardsMarquee";
+import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
@@ -45,6 +46,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
+    <ValuationWidget lang="en" />
     <QuickActionStrip />
     <AwardsMarquee />
 

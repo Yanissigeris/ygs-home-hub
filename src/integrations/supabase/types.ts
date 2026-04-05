@@ -44,6 +44,42 @@ export type Database = {
         }
         Relationships: []
       }
+      valuation_leads: {
+        Row: {
+          address: string
+          contact: string
+          created_at: string
+          id: string
+          language: string
+          name: string
+          notes: string | null
+          property_type: string
+          source: string
+        }
+        Insert: {
+          address: string
+          contact: string
+          created_at?: string
+          id?: string
+          language?: string
+          name: string
+          notes?: string | null
+          property_type?: string
+          source?: string
+        }
+        Update: {
+          address?: string
+          contact?: string
+          created_at?: string
+          id?: string
+          language?: string
+          name?: string
+          notes?: string | null
+          property_type?: string
+          source?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

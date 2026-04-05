@@ -5,6 +5,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 
 import AwardsMarquee from "@/components/AwardsMarquee";
+import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
 
 import PathwaySection from "@/components/PathwaySection";
@@ -44,6 +45,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
+    <ValuationWidget />
     <QuickActionStrip />
     <AwardsMarquee />
 
