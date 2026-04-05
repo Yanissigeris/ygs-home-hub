@@ -15,7 +15,7 @@ import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import CTASection from "@/components/CTASection";
-
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
@@ -104,7 +104,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       />
     </div>
 
-
+    <StickyMobileCTA />
   </div>
 ));
 
