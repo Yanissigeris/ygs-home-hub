@@ -53,6 +53,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       heroVideo,
       heroVideoPoster,
       hideCredentialsStrip,
+      hideRecognitionCard,
     },
     ref
   ) => {
