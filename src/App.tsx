@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
 }
 
 // FR pages
-const Index = React.lazy(() => import("./pages/Index"));
+import Index from "./pages/Index";
 const SellerPage = React.lazy(() => import("./pages/SellerPage"));
 const ValuationPage = React.lazy(() => import("./pages/ValuationPage"));
 const BuyerPage = React.lazy(() => import("./pages/BuyerPage"));
@@ -81,7 +81,7 @@ const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuation
 const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
 
 // EN pages
-const IndexEn = React.lazy(() => import("./pages/en/IndexEn"));
+import IndexEn from "./pages/en/IndexEn";
 const SellerPageEn = React.lazy(() => import("./pages/en/SellerPageEn"));
 const BuyerPageEn = React.lazy(() => import("./pages/en/BuyerPageEn"));
 const RelocationPageEn = React.lazy(() => import("./pages/en/RelocationPageEn"));
