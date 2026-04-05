@@ -87,8 +87,8 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
         {/* Static 2-column grid */}
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {reviews.map((review) => (
-            <GridCard key={review.id} review={review} />
+          {reviews.map((review, i) => (
+            <GridCard key={review.id} review={review} index={i} />
           ))}
         </div>
 
