@@ -11,7 +11,7 @@ import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
-import TestimonialSlider from "@/components/TestimonialSlider";
+import TestimonialGrid from "@/components/TestimonialGrid";
 import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 
