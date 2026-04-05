@@ -12,7 +12,7 @@ import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau-centre-gen.jpg";
-import riverImg from "@/assets/gatineau-river-view.webp";
+import riverImg from "@/assets/gatineau-centre-lifestyle.jpg";
 
 
 const reasons = [
