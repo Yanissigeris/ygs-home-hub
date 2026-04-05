@@ -16,7 +16,7 @@ import heroImg from "@/assets/hero-aylmer-gen.jpg";
 const faq = [
   {
     q: "Quel est le prix moyen d'une maison à Aylmer en 2026?",
-    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Le Plateau du Lac-Beauchamp est généralement plus cher (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
+    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Lucerne et Rivermead sont généralement plus chers (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
-    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons sur le Plateau avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
+    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons à Lucerne et Rivermead avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
@@ -39,9 +39,9 @@ const faq = [
 /* ── Sub-sectors ── */
 const subSectors = [
   {
-    title: "Plateau du Lac-Beauchamp",
-    text: "Le secteur le plus demandé d'Aylmer. Maisons deux étages 2000-2020, cours bien entretenues, proximité immédiate du Parc Lac-Beauchamp (plage, sentiers, patinoire). Idéal pour les familles avec enfants. Prix : 550 000 $ – 750 000 $.",
-    tag: "Familles · Maisons récentes",
+    title: "Lucerne / Rivermead",
+    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain. Prix : 550 000 $ – 750 000 $.",
+    tag: "Familles · Établi · Recherché",
   },
   {
     title: "Vieux-Aylmer",
@@ -66,7 +66,7 @@ const buyerCols = [
     title: "Avant de visiter",
     items: [
       "Obtenez votre préapprobation hypothécaire",
-      "Définissez votre secteur prioritaire (Plateau vs Vieux-Aylmer)",
+      "Définissez votre secteur prioritaire (Lucerne vs Vieux-Aylmer)",
       "Vérifiez la proximité des écoles souhaitées",
       "Comprenez le marché actuel (vendeur = offres rapides)",
       "Prévoyez un budget pour l'inspection",
@@ -76,7 +76,7 @@ const buyerCols = [
     title: "Sur le marché",
     items: [
       "Les bonnes propriétés partent en 10-20 jours",
-      "Les offres multiples sont fréquentes sur le Plateau",
+      "Les offres multiples sont fréquentes à Lucerne et Rivermead",
       "Une visite rapide peut faire la différence",
       "L'inspection pré-offre est une option à considérer",
       "Prévoyez 5-10% au-dessus du prix demandé en zone compétitive",
@@ -106,7 +106,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature à deux pas", text: "Lac Beauchamp (plage, canot, sentiers), rivière des Outaouais, pistes cyclables vers Ottawa via le pont Champlain. Aylmer est l'une des rares zones urbaines avec un lac public en plein cœur du quartier résidentiel." },
+  { icon: "🌿", title: "Nature à deux pas", text: "Lac Deschênes, rivière des Outaouais, parc de la Gatineau et pistes cyclables vers Ottawa via le pont Champlain. Aylmer offre un accès exceptionnel à la nature en plein cœur du quartier résidentiel." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
@@ -184,10 +184,10 @@ const AylmerPage = () => (
           <p className="label-overline">POURQUOI AYLMER</p>
           <h2>Ce qui rend Aylmer unique en Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Beauchamp. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
+            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Le secteur du Plateau-du-Lac-Beauchamp est particulièrement prisé — des maisons deux étages construites entre 2000 et 2020, proches des parcs, des écoles francophones et anglophones, et du Parc du Lac-Beauchamp. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
+            Les secteurs de Lucerne et Rivermead sont particulièrement prisés — des maisons établies sur des rues matures, proches du lac Deschênes, des parcs, des écoles francophones et anglophones. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
           </p>
           <p className="prose-body">
             Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget — ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.
