@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Facebook, Instagram, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import logoYgsWhite from "@/assets/logo-ygs-white.webp";
 import logoMW from "@/assets/logo-mw-white.webp";
@@ -22,23 +22,27 @@ const affiliationLogos = [
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
+/* ── Social SVG icons (avoid lucide import weight) ── */
+const FacebookSvg = () => (
+  <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+);
+const InstagramSvg = () => (
+  <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+);
+
 const FooterAccordion = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
   const [open, setOpen] = React.useState(false);
   return (
-    <div className="border-b border-primary-foreground/[0.07]">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between py-3.5"
-        aria-expanded={open}
-      >
-        <span className="font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{title}</span>
+    <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" aria-expanded={open}>
+        <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
         <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}>
         <ul className="space-y-2.5">
           {links.map((l) => (
             <li key={l.href + l.label}>
-              <Link to={l.href} className="text-[0.8125rem] leading-relaxed opacity-50 transition-opacity duration-200 hover:opacity-90">{l.label}</Link>
+              <Link to={l.href} style={{ fontSize: ".8rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
             </li>
           ))}
         </ul>
@@ -52,8 +56,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
     const popularLinks = lang === "en" ? footerPopularLinksEn : footerPopularLinks;
-    const tagline = lang === "en" ? "Your real estate ally in Outaouais" : "Votre allié en immobilier en Outaouais";
-    const subline = lang === "en" ? "Clear strategy" : "Stratégie claire";
+    const tagline = lang === "en" ? "Your real estate ally in Outaouais — Clear strategy" : "Votre allié en immobilier en Outaouais — Stratégie claire";
     const popularLabel = lang === "en" ? "Popular areas & services" : "Zones et services populaires";
     const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
@@ -61,65 +64,132 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
       : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
     return (
-      <footer ref={ref} className={["border-t border-primary-foreground/[0.06] bg-primary text-primary-foreground", className].filter(Boolean).join(" ")} {...props}>
+      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "#fff" }} {...props}>
         <div className="section-container">
+          {/* ── Brand row ── */}
           <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
-            <div className="mx-auto mt-6 h-px w-8 bg-accent/30" />
-            <p className="mt-5 text-center font-body text-[0.8125rem] font-medium tracking-[0.04em] opacity-50">{tagline}</p>
-            <p className="mt-2 max-w-[16rem] text-center text-[0.75rem] leading-[1.65] opacity-30">{subline}</p>
+            <p className="mt-5 text-center" style={{ fontSize: ".8rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
+              {tagline}
+            </p>
+
+            {/* Social icons */}
             <div className="mt-6 flex items-center gap-4">
-              <a href="https://www.facebook.com/YanisGauthierSigeris" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
-                <Facebook size={18} />
-              </a>
-              <a href="https://www.instagram.com/yanissigeris/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="opacity-40 transition-opacity duration-200 hover:opacity-80">
-                <Instagram size={18} />
-              </a>
+              {[
+                { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
+                { href: "https://www.instagram.com/yanissigeris/", label: "Instagram", Icon: InstagramSvg },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex items-center justify-center rounded-full transition-colors duration-200"
+                  style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.4)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "#fff"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.1)"; e.currentTarget.style.color = "rgba(255,255,255,.4)"; }}
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
-          <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          {/* Mobile: accordion columns */}
-          <div className="sm:hidden py-6">
+
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
+
+          {/* ── Mobile: accordion columns ── */}
+          <div className="sm:hidden py-6" role="navigation" aria-label="Footer navigation">
             {columns.map((col) => (
               <FooterAccordion key={col.title} title={col.title} links={col.links} />
             ))}
           </div>
-          {/* Desktop: grid columns */}
-          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14">
+
+          {/* ── Desktop: 4 columns ── */}
+          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label="Footer navigation">
             {columns.map((col) => (
               <div key={col.title}>
-                <p className="mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{col.title}</p>
+                <p className="mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                  {col.title}
+                </p>
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} className="text-[0.8125rem] leading-relaxed opacity-50 transition-opacity duration-200 hover:opacity-90">{l.label}</Link>
+                      <Link to={l.href} style={{ fontSize: ".8rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
+                        {l.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="h-px w-full bg-primary-foreground/[0.07]" />
+
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
+
+          {/* ── SEO Popular links ── */}
           <div className="py-5 sm:py-8">
-            <p className="mb-3 sm:mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1.5 sm:gap-x-5 sm:gap-y-2">
+            <p className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+              {popularLabel}
+            </p>
+            <div className="flex flex-wrap gap-2">
               {popularLinks.map((l) => (
-                <Link key={l.href} to={l.href} className="text-[0.75rem] sm:text-[0.8125rem] leading-relaxed opacity-40 transition-opacity duration-200 hover:opacity-80">{l.label}</Link>
+                <Link
+                  key={l.href}
+                  to={l.href}
+                  className="transition-colors duration-200"
+                  style={{
+                    fontSize: ".74rem",
+                    color: "rgba(255,255,255,.28)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    borderRadius: 3,
+                    padding: ".3rem .7rem",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.28)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.06)"; }}
+                >
+                  {l.label}
+                </Link>
               ))}
             </div>
           </div>
+
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
+
+          {/* ── Affiliations — logos preserved exactly ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
-            <p className="mb-4 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
+            <p className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+              {affiliationsLabel}
+            </p>
             <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
-                <div key={logo.alt} className="flex h-11 items-center justify-center sm:h-12 lg:h-12">
-                  <img src={logo.src} alt={logo.alt} width={100} height={38} loading="lazy" className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`} />
+                <div
+                  key={logo.alt}
+                  className="flex items-center justify-center"
+                  style={{
+                    background: "rgba(255,255,255,.04)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    borderRadius: 3,
+                    padding: ".5rem 1rem",
+                    minHeight: 44,
+                  }}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={100}
+                    height={38}
+                    loading="lazy"
+                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
+                  />
                 </div>
               ))}
             </div>
           </div>
-          <div className="border-t border-primary-foreground/[0.06] py-7 text-center sm:py-8">
-            <p className="text-[0.6875rem] leading-relaxed tracking-[0.02em] opacity-25">{legalText}</p>
+
+          {/* ── Copyright ── */}
+          <div className="py-7 text-center sm:py-8" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.2)" }}>{legalText}</p>
           </div>
         </div>
       </footer>
