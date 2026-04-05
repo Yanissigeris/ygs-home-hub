@@ -1,12 +1,24 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/analytics";
 
+const HIDDEN_PATHS = [
+  "/contact-yanis", "/en/contact",
+  "/merci", "/en/thank-you",
+  "/merci-evaluation", "/en/thank-you-valuation",
+  "/evaluation-gratuite-gatineau", "/en/home-valuation",
+  "/evaluation-aylmer", "/en/home-valuation-aylmer",
+  "/evaluation-hull", "/en/home-valuation-hull",
+];
+
 const StickyMobileCTA = () => {
   const lang = useLanguage();
+  const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
   const ticking = useRef(false);
+
+  const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
   const ctaLabel = lang === "en" ? "Free Valuation →" : "Évaluation Gratuite →";
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
@@ -31,6 +43,8 @@ const StickyMobileCTA = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (hidden) return null;
 
   return (
     <div
