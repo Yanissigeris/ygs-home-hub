@@ -31,7 +31,7 @@ const WhatsAppButton = () => {
       aria-label="Contacter Yanis sur WhatsApp"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="fixed z-[490] flex items-center justify-center"
+      className="fixed z-[490] flex items-center justify-center bottom-8 right-8 md:bottom-8 md:right-8"
       style={{
         bottom: "2rem",
         right: "2rem",
