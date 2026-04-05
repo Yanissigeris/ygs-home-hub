@@ -10,7 +10,7 @@ interface TestimonialGridProps {
   reviewsPageHref?: string;
 }
 
-const GridCard = ({ review }: { review: Review }) => (
+const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => (
   <div
     itemScope
     itemType="https://schema.org/Review"
