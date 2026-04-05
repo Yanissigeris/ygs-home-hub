@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface ImageTextSplitProps {
   image: string;
@@ -30,12 +31,11 @@ const ImageTextSplit = ({
         {imagePosition === "right" ? (
           children
         ) : (
-          <img
+          <OptimizedImage
             src={image}
             alt={imageAlt}
             className={`rounded-[1.75rem] object-cover ${imageAspect} w-full`}
-            loading="lazy"
-            decoding="async"
+            fallbackColor="var(--ink)"
           />
         )}
       </motion.div>
@@ -47,12 +47,11 @@ const ImageTextSplit = ({
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
         {imagePosition === "right" ? (
-          <img
+          <OptimizedImage
             src={image}
             alt={imageAlt}
             className={`rounded-[1.75rem] object-cover ${imageAspect} w-full`}
-            loading="lazy"
-            decoding="async"
+            fallbackColor="var(--ink)"
           />
         ) : (
           children
