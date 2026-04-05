@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-chelsea-gen.webp";
 
 const ChelseaPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Courtier immobilier Chelsea · Outaouais | YGS"
+    seoTitle="Courtier immobilier Chelsea · Outaouais"
     metaDesc="Courtier immobilier à Chelsea, Outaouais. Village pittoresque aux portes du parc de la Gatineau — accompagnement achat et vente par un courtier local."
     jsonLd={{ name: "Chelsea", description: "Courtier immobilier à Chelsea. Village pittoresque, parc de la Gatineau, nature et tranquillité.", lat: 45.5200, lng: -75.7870, url: "/chelsea" }}
     hero={{ overline: "Guide de quartier · Chelsea", title: "Vivre, acheter ou vendre à Chelsea", subtitle: "Village pittoresque aux portes du parc de la Gatineau — nature, tranquillité et accès rapide à Ottawa.", image: heroImg }}

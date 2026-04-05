@@ -34,7 +34,7 @@ const related = [
 
 const LivingHullPageEn = () => (
   <>
-    <PageMeta title="Living in Hull — Lifestyle Guide | YGS" description="Everything about life in Hull: culture, restaurants, Ottawa proximity and urban vibe. Your guide to settling in Hull." />
+    <PageMeta title="Living in Hull — Lifestyle Guide" description="Everything about life in Hull: culture, restaurants, Ottawa proximity and urban vibe. Your guide to settling in Hull." />
     <HeroSection overline="Living in Hull · Gatineau" title="Living in Hull — the guide" subtitle="Discover Hull's urban lifestyle: culture, restaurants, Ottawa proximity and still-affordable prices." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "See the neighborhood", href: "/en/hull" }} heroBgImage={heroImg} />
     <CardGrid overline="Lifestyle" title="What makes Hull unique" items={highlights} />
     <ContentBlock narrow>

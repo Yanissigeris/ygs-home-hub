@@ -37,7 +37,7 @@ const related = [
 
 const MilitaryGuidePageEn = () => (
   <>
-    <PageMeta title="Military Real Estate Guide — Gatineau | YGS" description="Complete guide for military members relocating to Gatineau. Neighborhoods, process and support for CAF postings." />
+    <PageMeta title="Military Real Estate Guide — Gatineau" description="Complete guide for military members relocating to Gatineau. Neighborhoods, process and support for CAF postings." />
     <HeroSection overline="Military Guide · Gatineau" title="Military real estate guide for Gatineau" subtitle="Posting to the NCR? Everything you need to know to buy, sell or settle in Gatineau as a military member." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Military overview", href: "/en/military" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />

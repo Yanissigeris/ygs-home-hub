@@ -50,7 +50,7 @@ const BuyerConsultationPageEn = () => {
 
   return (
     <>
-      <PageMeta title="Buyer Consultation — Gatineau | YGS" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and options with an experienced broker." />
+      <PageMeta title="Buyer Consultation — Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and options with an experienced broker." />
       <HeroSection
         compact
         overline="Buyer consultation · Gatineau"

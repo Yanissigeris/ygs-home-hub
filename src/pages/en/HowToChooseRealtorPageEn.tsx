@@ -21,7 +21,7 @@ const faq = [
 const HowToChooseRealtorPageEn = () => (
   <>
     <PageMeta
-      title="How to Choose a Realtor in Quebec | YGS"
+      title="How to Choose a Realtor in Quebec"
       description="Essential criteria for choosing the right real estate broker in Quebec. Checklist, tips, and what to look for when selecting a realtor in Gatineau."
     />
 

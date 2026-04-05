@@ -36,7 +36,7 @@ const faq = [
 
 const SellPlexPageEn = () => (
   <>
-    <PageMeta title="Sell a Plex in Gatineau | YGS" description="Sell your duplex, triplex or revenue property in Gatineau. Precise valuation, marketing strategy and specialized support." />
+    <PageMeta title="Sell a Plex in Gatineau" description="Sell your duplex, triplex or revenue property in Gatineau. Precise valuation, marketing strategy and specialized support." />
     <HeroSection
       overline="Sell a Plex · Gatineau"
       title="Sell your plex in Gatineau"

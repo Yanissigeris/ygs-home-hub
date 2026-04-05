@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-pontiac.webp";
 
 const PontiacPageEn = () => (
   <NeighborhoodTemplate
-    seoTitle="Pontiac QC — Neighborhood Guide | YGS"
+    seoTitle="Pontiac QC — Neighborhood Guide"
     metaDesc="Buy, sell or live in Pontiac, Quebec. Ottawa River, large lots, authentic rural living — at the doorstep of Gatineau and Ottawa."
     jsonLd={{ name: "Pontiac", description: "Real estate broker in Pontiac. Farmland, Ottawa River and rural living.", lat: 45.5800, lng: -76.1200, url: "/en/pontiac" }}
     hero={{ overline: "Area Guide · Pontiac", title: "Buy, Sell or Live in the Pontiac", subtitle: "Wide open spaces, Ottawa River and authentic rural charm — Quebec countryside at its finest.", image: heroImg }}

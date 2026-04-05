@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-hull-gen.webp";
 
 const HullPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Hull — Guide de quartier Gatineau | YGS"
+    seoTitle="Hull — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou investir à Hull, Gatineau. Quartier urbain en pleine revitalisation, condos, plex, culture et proximité Ottawa."
     jsonLd={{ name: "Hull", description: "Courtier immobilier spécialisé à Hull, Gatineau. Quartier urbain, condos, plex, culture et proximité Ottawa.", lat: 45.4283, lng: -75.7140, url: "/hull" }}
     hero={{ overline: "Guide de quartier · Hull", title: "Vivre, acheter ou investir à Hull", subtitle: "Centre-ville, vie urbaine, proximité Ottawa et potentiel locatif — ce qu'il faut savoir pour acheter ou vendre dans le secteur.", image: heroImg }}

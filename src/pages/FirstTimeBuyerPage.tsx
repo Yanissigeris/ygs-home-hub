@@ -36,7 +36,7 @@ const faq = [
 
 const FirstTimeBuyerPage = () => (
    <>
-    <PageMeta title="Premier achat immobilier à Gatineau | YGS" description="Premier acheteur à Gatineau? Mise de fonds, budget, programmes d'aide au Québec et accompagnement personnalisé pour acheter à Aylmer, Hull ou au Plateau." />
+    <PageMeta title="Premier achat immobilier à Gatineau" description="Premier acheteur à Gatineau? Mise de fonds, budget, programmes d'aide au Québec et accompagnement personnalisé pour acheter à Aylmer, Hull ou au Plateau." />
     <HeroSection
       overline="Premier achat · Gatineau"
       title="Premier achat à Gatineau — par où commencer?"

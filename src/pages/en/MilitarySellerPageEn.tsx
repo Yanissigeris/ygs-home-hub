@@ -29,7 +29,7 @@ const faq = [
 
 const MilitarySellerPageEn = () => (
   <>
-    <PageMeta title="Sell During a Military Posting | YGS" description="Sell your property in Gatineau during a CAF posting. Timing, BGRS/SIRVA process and strategy to maximize your price." />
+    <PageMeta title="Sell During a Military Posting" description="Sell your property in Gatineau during a CAF posting. Timing, BGRS/SIRVA process and strategy to maximize your price." />
     <HeroSection
       overline="Sell during a posting · Gatineau"
       title="Sell your property during a posting"

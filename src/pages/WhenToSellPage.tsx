@@ -26,7 +26,7 @@ const faq = [
 
 const WhenToSellPage = () => (
    <>
-    <PageMeta title="Quand vendre sa propriété à Gatineau | YGS" description="Le bon moment pour vendre à Gatineau et en Outaouais dépend de votre situation. Analyse du marché local et conseils d'un courtier expérimenté." />
+    <PageMeta title="Quand vendre sa propriété à Gatineau" description="Le bon moment pour vendre à Gatineau et en Outaouais dépend de votre situation. Analyse du marché local et conseils d'un courtier expérimenté." />
     <HeroSection
       overline="Quand vendre · Gatineau"
       title="Quand vendre sa propriété à Gatineau?"

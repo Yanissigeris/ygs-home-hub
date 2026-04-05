@@ -49,7 +49,7 @@ const SellerPlanPageEn = () => {
 
   return (
     <>
-      <PageMeta title="Personalized Seller Plan — Gatineau | YGS" description="A custom selling plan for your Gatineau property. Strategy, pricing, marketing and step-by-step support." />
+      <PageMeta title="Personalized Seller Plan — Gatineau" description="A custom selling plan for your Gatineau property. Strategy, pricing, marketing and step-by-step support." />
       <HeroSection
         compact
         overline="Personalized Seller Plan · Gatineau"

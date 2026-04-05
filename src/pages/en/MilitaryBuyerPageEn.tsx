@@ -30,7 +30,7 @@ const faq = [
 
 const MilitaryBuyerPageEn = () => (
   <>
-    <PageMeta title="Military Buyer — Buy in Gatineau | YGS" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." />
+    <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." />
     <HeroSection
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"

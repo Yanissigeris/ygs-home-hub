@@ -26,7 +26,7 @@ const faq = [
 
 const WhenToSellPageEn = () => (
   <>
-    <PageMeta title="When to Sell Your Property in Gatineau | YGS" description="The best time to sell in Gatineau depends on your situation. Market analysis, key factors and advice from an experienced broker." />
+    <PageMeta title="When to Sell Your Property in Gatineau" description="The best time to sell in Gatineau depends on your situation. Market analysis, key factors and advice from an experienced broker." />
     <HeroSection
       overline="When to sell · Gatineau"
       title="When is the right time to sell in Gatineau?"

@@ -36,7 +36,7 @@ const faq = [
 
 const FirstTimeBuyerPageEn = () => (
   <>
-    <PageMeta title="First-Time Buyer — Gatineau | YGS" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." />
+    <PageMeta title="First-Time Buyer — Gatineau" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." />
     <HeroSection
       overline="First-Time Buyer · Gatineau"
       title="First purchase in Gatineau — where to start?"

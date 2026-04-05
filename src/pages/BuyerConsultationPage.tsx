@@ -50,7 +50,7 @@ const BuyerConsultationPage = () => {
 
   return (
      <>
-      <PageMeta title="Consultation acheteur gratuite · Gatineau | YGS" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." />
+      <PageMeta title="Consultation acheteur gratuite · Gatineau" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." />
       <HeroSection
         compact
         overline="Consultation acheteur · Gatineau"

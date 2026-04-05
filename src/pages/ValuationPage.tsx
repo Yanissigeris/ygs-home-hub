@@ -73,7 +73,7 @@ const ValuationPage = () => {
 
   return (
     <>
-      <PageMeta title="Évaluation gratuite · Gatineau et Outaouais | YGS" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." />
+      <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}
       <section className="hero-gradient relative overflow-hidden">

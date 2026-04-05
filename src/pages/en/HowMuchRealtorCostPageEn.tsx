@@ -21,7 +21,7 @@ const faq = [
 const HowMuchRealtorCostPageEn = () => (
   <>
     <PageMeta
-      title="How Much Does a Realtor Cost in Quebec? | YGS"
+      title="How Much Does a Realtor Cost in Quebec?"
       description="Understand how realtor compensation works in Quebec. Commission structure, services included, and what it means for your sale in Gatineau."
     />
 

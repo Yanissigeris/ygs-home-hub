@@ -26,7 +26,7 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
     <PageMeta
-      title="Real Estate Broker Gatineau | YGS"
+      title="Real Estate Broker Gatineau"
       description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support."
       ogImage="https://yanisgauthier.com/og-image.jpg"
     />

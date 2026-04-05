@@ -21,7 +21,7 @@ const faq = [
 const RealtorVsSellingByOwnerPageEn = () => (
   <>
     <PageMeta
-      title="Realtor vs Selling by Owner in Quebec | YGS"
+      title="Realtor vs Selling by Owner in Quebec"
       description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau."
     />
 

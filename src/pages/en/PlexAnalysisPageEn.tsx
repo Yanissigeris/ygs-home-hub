@@ -43,7 +43,7 @@ const PlexAnalysisPageEn = () => {
 
   return (
     <>
-      <PageMeta title="Free Plex Analysis — Gatineau | YGS" description="Get a free plex analysis in Gatineau. Revenues, expenses, return and market value — real numbers for your investment decision." />
+      <PageMeta title="Free Plex Analysis — Gatineau" description="Get a free plex analysis in Gatineau. Revenues, expenses, return and market value — real numbers for your investment decision." />
       <HeroSection
         compact
         overline="Free Plex Analysis · Gatineau"

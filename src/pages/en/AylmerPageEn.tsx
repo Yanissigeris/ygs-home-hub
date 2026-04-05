@@ -60,7 +60,7 @@ const related = [
 
 const AylmerPageEn = () => (
   <>
-    <PageMeta title="Real Estate Broker Aylmer · Gatineau | YGS" description="Real estate broker in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, bilingual schools — buy or sell with a local specialist." />
+    <PageMeta title="Real Estate Broker Aylmer · Gatineau" description="Real estate broker in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, bilingual schools — buy or sell with a local specialist." />
     <NeighborhoodJsonLd name="Aylmer" description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, schools and community." lat={45.3945} lng={-75.8486} url="/en/aylmer" />
     <HeroSection overline="Neighborhood Guide · Aylmer" title="Live, buy or sell in Aylmer" subtitle="Lake Deschênes, parks, schools and community — Aylmer offers an exceptional living environment steps from Ottawa." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
 <ImageTextSplit image={lifestyleImg} imageAlt="Life in Aylmer, Gatineau" imagePosition="right">

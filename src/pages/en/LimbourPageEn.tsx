@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPageEn = () => (
   <NeighborhoodTemplate
-    seoTitle="Limbour Gatineau — Neighborhood Guide | YGS"
+    seoTitle="Limbour Gatineau — Neighborhood Guide"
     metaDesc="Buy, sell or live in Limbour, Gatineau. Modern family neighborhood with parks, schools and quick access to Ottawa."
     jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour" }}
     hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood — newer homes, parks and pleasant suburban living.", image: heroImg }}

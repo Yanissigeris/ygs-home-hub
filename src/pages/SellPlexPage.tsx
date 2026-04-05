@@ -36,7 +36,7 @@ const faq = [
 
 const SellPlexPage = () => (
    <>
-    <PageMeta title="Vendre un plex à Gatineau · Outaouais | YGS" description="Vendez votre duplex, triplex ou immeuble à revenus à Gatineau. Évaluation précise et stratégie de mise en marché spécialisée." />
+    <PageMeta title="Vendre un plex à Gatineau · Outaouais" description="Vendez votre duplex, triplex ou immeuble à revenus à Gatineau. Évaluation précise et stratégie de mise en marché spécialisée." />
     <HeroSection
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"

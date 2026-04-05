@@ -21,7 +21,7 @@ const faq = [
 const OaciqFindBrokerPageEn = () => (
   <>
     <PageMeta
-      title="Verify a Real Estate Broker with the OACIQ | YGS"
+      title="Verify a Real Estate Broker with the OACIQ"
       description="How to verify a real estate broker's licence in Quebec using the OACIQ registry. Protect yourself and ensure your broker is in good standing."
     />
 

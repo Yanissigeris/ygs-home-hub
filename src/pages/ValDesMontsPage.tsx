@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 
 const ValDesMontsPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Val-des-Monts — Immobilier et guide de quartier | YGS"
+    seoTitle="Val-des-Monts — Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage — à 30 minutes de Gatineau."
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts" }}
     hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs cristallins, forêts et tranquillité — le paradis de villégiature de l'Outaouais.", image: heroImg }}
