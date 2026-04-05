@@ -9,7 +9,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialSlider from "@/components/TestimonialSlider";
+import TestimonialGrid from "@/components/TestimonialGrid";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
@@ -56,7 +56,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     <div className="reveal">
-      <TestimonialSlider overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+      <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
     </div>
 
     <div className="reveal">
