@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
+import BrandedLoader from "@/components/BrandedLoader";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 
@@ -290,7 +291,7 @@ const routeTree = React.createElement(
 const appRoutes = React.createElement(
   BrowserRouter,
   { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  React.createElement(LanguageProvider, null, React.createElement(ScrollToTop), routeTree),
+  React.createElement(LanguageProvider, null, React.createElement(BrandedLoader), React.createElement(ScrollToTop), routeTree),
 );
 
 const App = () => appRoutes;
