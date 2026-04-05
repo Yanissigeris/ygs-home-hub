@@ -111,13 +111,6 @@ const lifestyleCards = [
   { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (CS des Portages), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
 ];
 
-/* ── Key facts ── */
-const keyFacts = [
-  { icon: "🏠", label: "Median price — houses", value: "$567,000", trend: "↑ 3% vs last year" },
-  { icon: "⏱", label: "Average time to sell", value: "28 days" },
-  { icon: "📊", label: "Market type", value: "Seller's", note: "(favours well-positioned sellers)" },
-  { icon: "👥", label: "Approximate population", value: "~50,000" },
-];
 
 /* ── Related pages ── */
 const related = [
