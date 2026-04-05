@@ -65,7 +65,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               height={800}
             />
             {/* Bottom scrim for badge legibility */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.55), transparent)" }} aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.35), transparent)" }} aria-hidden="true" />
           </div>
           {/* Credential badges */}
           <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-2 pb-4">
