@@ -53,7 +53,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               onMouseLeave={(e) => { e.currentTarget.style.zIndex = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.transform = ""; }}
             >
               {/* Image — 3:2 on mobile, 16:9 on desktop */}
-              <div className="relative overflow-hidden aspect-[3/2] md:aspect-[16/9]">
+              <div className="relative overflow-hidden aspect-[3/2] md:aspect-[16/9] img-shimmer">
                 <img
                   src={p.image}
                   alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
@@ -62,7 +62,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
                   decoding="async"
                   width={648}
                   height={486}
-                  onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
+                  onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
+                  onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
                 />
                 <span
                   className="absolute top-4 left-4"
