@@ -59,7 +59,7 @@ const related = [
 
 const GatineauCentrePageEn = () => (
   <>
-    <PageMeta title="Real Estate Broker Gatineau · Outaouais" description="Real estate broker in Gatineau centre. Residential, plex, condos and services — buy or sell with a local specialist." />
+    <PageMeta title="Real Estate Broker Gatineau · Outaouais" description="Real estate broker in Gatineau centre. Residential, plex, condos and services — buy or sell with a local specialist." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd name="Gatineau" description="Real estate broker in Gatineau centre. Residential area, complete services and competitive prices." lat={45.4765} lng={-75.7013} url="/en/gatineau" />
     <HeroSection overline="Neighborhood Guide · Gatineau" title="Live, buy or invest in Gatineau centre" subtitle="A well-established residential area, complete services and competitive prices — everything you need to know about the Gatineau sector." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
 <ImageTextSplit image={riverImg} imageAlt="Gatineau sector" imagePosition="right">

@@ -48,7 +48,7 @@ const OutaouaisHubPage = () => (
     <PageMeta
       title="Courtier immobilier Outaouais · Gatineau"
       description="Yanis Gauthier-Sigeris, courtier immobilier en Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley — stratégie claire pour vendre, acheter ou investir."
-    />
+    ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
       name="Courtier immobilier en Outaouais"
       description="Services de courtage immobilier résidentiel en Outaouais — vente, achat, évaluation et investissement plex à Gatineau, Hull, Aylmer, Chelsea et Cantley."

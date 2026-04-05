@@ -76,7 +76,7 @@ const ValuationHullPageEn = () => {
       <PageMeta
         title="Home Valuation Hull | Free, No Commitment"
         description="Get a free home valuation in Hull. Analysis based on recent sales in your neighborhood — response within 24h, no commitment."
-      />
+      ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient relative overflow-hidden">
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">

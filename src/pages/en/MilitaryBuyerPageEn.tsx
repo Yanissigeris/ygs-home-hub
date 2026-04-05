@@ -31,7 +31,7 @@ const faq = [
 
 const MilitaryBuyerPageEn = () => (
   <>
-    <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." />
+    <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Military Home Buying — Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods near CFB Uplands." url="/en/military-buyer" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Military · Buying in Gatineau"

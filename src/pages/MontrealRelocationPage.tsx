@@ -29,7 +29,7 @@ const sectors = [
 
 const MontrealRelocationPage = () =>
 <>
-    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." />
+    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau — quartiers, coût de vie et processus immobilier en Outaouais." url="/relocalisation-montreal-gatineau" serviceType="Real Estate Relocation Service" />
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"

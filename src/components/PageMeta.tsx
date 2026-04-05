@@ -10,7 +10,7 @@ interface PageMetaProps {
 
 const SITE = "YGS";
 const BASE_URL = "https://yanisgauthier.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og/og-default.jpg`;
 
 /** FR→EN path mapping — single source of truth, mirrors LanguageSwitch */
 const frToEn: Record<string, string> = {

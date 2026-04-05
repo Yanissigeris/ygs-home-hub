@@ -50,7 +50,7 @@ const SellerPlanPage = () => {
 
   return (
    <>
-    <PageMeta title="Plan de vente personnalisé · Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." />
+    <PageMeta title="Plan de vente personnalisé · Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd name="Plan de vente personnalisé — Gatineau" description="Plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement complet." url="/plan-vendeur-gatineau" serviceType="Real Estate Marketing Plan Service" />
     <HeroSection
         compact

@@ -44,7 +44,7 @@ const related = [
 
 const PropertiesPage = () => (
   <>
-    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau — Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." />
+    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau — Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété en Outaouais"

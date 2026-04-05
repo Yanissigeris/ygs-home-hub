@@ -44,7 +44,7 @@ const OutaouaisHubPageEn = () => (
     <PageMeta
       title="Outaouais Real Estate Agent · Gatineau"
       description="Yanis Gauthier-Sigeris, bilingual real estate broker in Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley — clear strategy to buy, sell or invest."
-    />
+    ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
       name="Real Estate Broker in Outaouais"
       description="Residential real estate brokerage services in Outaouais — selling, buying, valuation and plex investment in Gatineau, Hull, Aylmer, Chelsea and Cantley."

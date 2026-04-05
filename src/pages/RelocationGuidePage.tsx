@@ -44,7 +44,7 @@ const related = [
 
 const RelocationGuidePage = () => (
    <>
-    <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." />
+    <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Guide de relocalisation à Gatineau" description="Guide complet pour s'installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." url="/guide-relocalisation-gatineau" serviceType="Real Estate Relocation Guide" />
     <HeroSection
       overline="Guide relocalisation · Gatineau"

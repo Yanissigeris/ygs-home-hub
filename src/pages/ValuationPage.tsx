@@ -74,7 +74,7 @@ const ValuationPage = () => {
 
   return (
     <>
-      <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." />
+      <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
     <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau" serviceType="Real Estate Appraisal Service" />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}

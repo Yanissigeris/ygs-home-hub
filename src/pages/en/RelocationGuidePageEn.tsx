@@ -44,7 +44,7 @@ const related = [
 
 const RelocationGuidePageEn = () => (
   <>
-    <PageMeta title="Relocation Guide — Moving to Gatineau" description="Complete relocation guide for moving to Gatineau. Neighborhoods, prices, process and schools." />
+    <PageMeta title="Relocation Guide — Moving to Gatineau" description="Complete relocation guide for moving to Gatineau. Neighborhoods, prices, process and schools." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Relocation Guide to Gatineau" description="Complete guide to settling in Gatineau from Ottawa. Neighbourhoods, schools, services and Quebec process explained." url="/en/relocation-guide" serviceType="Real Estate Relocation Guide" />
     <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 

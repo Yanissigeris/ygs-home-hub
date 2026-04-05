@@ -76,7 +76,7 @@ const ValuationAylmerPage = () => {
       <PageMeta
         title="Évaluation maison Aylmer | Gratuite et sans engagement"
         description="Obtenez une évaluation gratuite de votre maison à Aylmer. Analyse basée sur les ventes récentes dans votre quartier — réponse en 24h, sans engagement."
-      />
+      ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient relative overflow-hidden">
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">

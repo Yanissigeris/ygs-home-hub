@@ -29,7 +29,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <PageMeta
       title="Real Estate Broker Gatineau"
       description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support."
-      ogImage="https://yanisgauthier.com/og-image.jpg"
+      ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"

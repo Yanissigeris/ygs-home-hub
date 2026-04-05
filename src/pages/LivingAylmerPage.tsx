@@ -34,7 +34,7 @@ const related = [
 
 const LivingAylmerPage = () => (
    <>
-    <PageMeta title="Vivre à Aylmer · Gatineau — Mode de vie" description="Tout sur la vie à Aylmer, Gatineau: lac Deschênes, restaurants, écoles bilingues, communauté et qualité de vie. Le guide pour s'installer à Aylmer." />
+    <PageMeta title="Vivre à Aylmer · Gatineau — Mode de vie" description="Tout sur la vie à Aylmer, Gatineau: lac Deschênes, restaurants, écoles bilingues, communauté et qualité de vie. Le guide pour s'installer à Aylmer." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <HeroSection
       overline="Vivre à Aylmer · Gatineau"
       title="Vivre à Aylmer — le guide"

@@ -63,7 +63,7 @@ const ContactPage = () => {
 
   return (
    <>
-    <PageMeta title="Contacter Yanis Gauthier-Sigeris" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau et en Outaouais. Consultation gratuite — parlons de votre projet immobilier." />
+    <PageMeta title="Contacter Yanis Gauthier-Sigeris" description="Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau et en Outaouais. Consultation gratuite — parlons de votre projet immobilier." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
     <ServiceJsonLd name="Consultation immobilière gratuite — Gatineau" description="Consultation gratuite avec Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Parlons de votre projet de vente, achat ou investissement." url="/contact-yanis" serviceType="Real Estate Consultation Service" />
     <HeroSection
         compact
