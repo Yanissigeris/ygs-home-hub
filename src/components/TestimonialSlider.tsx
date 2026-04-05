@@ -14,7 +14,7 @@ interface TestimonialSliderProps {
 
 /* ── Slide card ── */
 const SlideCard = ({ review }: { review: Review }) => (
-  <div className="testimonial-card flex h-full flex-col border border-border/30 bg-card px-6 py-7 sm:px-8 sm:py-9">
+  <div className="testimonial-card flex h-full flex-col border border-border/30 bg-card px-5 py-5 sm:px-8 sm:py-9">
     {/* Stars — minimal */}
     <div className="mb-5 flex gap-[3px]">
       {Array.from({ length: 5 }).map((_, i) => (
