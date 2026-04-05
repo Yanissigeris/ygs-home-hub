@@ -1,6 +1,7 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TrendingUp, Building2 } from "lucide-react";
 import heroImg from "@/assets/hero-gatineau-centre-gen.jpg";
+import lifestyleImg from "@/assets/gatineau-centre-lifestyle.jpg";
 
 const GatineauCentrePage = () => (
   <NeighborhoodTemplate
