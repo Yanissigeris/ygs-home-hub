@@ -5,6 +5,7 @@ import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import AwardsMarquee from "@/components/AwardsMarquee";
+import StatsSection from "@/components/StatsSection";
 
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
@@ -36,6 +37,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip />
     <AwardsMarquee />
+    <StatsSection />
 
     <>
       <PathwaySection />
