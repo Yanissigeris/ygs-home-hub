@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -6,6 +8,8 @@ import { getReviewsByCategory } from "@/data/reviews";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
@@ -73,6 +77,27 @@ const PlexPage = () => (
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="Contexte 2026" title="Investir dans un plex en Outaouais en 2026 — ce que vous devez savoir" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Le marché des plexs en Outaouais reste actif en 2026. La demande locative pour les logements à prix abordables demeure soutenue, portée par une base d'emploi stable — fonctionnaires fédéraux, étudiants, professionnels.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Cela dit, le marché locatif a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un nombre important de nouvelles constructions. Ce changement rend l'analyse de rendement encore plus critique avant tout achat&nbsp;: les vrais loyers en place, les vrais coûts d'entretien, le capex à prévoir, et la stratégie à long terme doivent tous être examinés honnêtement.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter — c'est de vous donner l'analyse honnête pour que vous décidiez en toute connaissance de cause.
+      </p>
+      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
+        <strong>À noter&nbsp;:</strong> la recommandation de hausse de loyer du Tribunal administratif du logement (TAL) pour 2026 est de 3,1&nbsp;%. Il s'agit d'une recommandation officielle. <span className="italic text-xs text-muted-foreground">Source&nbsp;: gouvernement.qc.ca</span>
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: SCHL — Rapport sur le marché locatif 2025 · Chambre immobilière de l'Outaouais (CIO).</p>
+      <div className="mt-6">
+        <Button asChild><Link to="/contact-yanis">Analyser un plex avec moi →</Link></Button>
+      </div>
+    </ContentBlock>
+
 <LinkedCardGrid
       overline="Pour qui"
       title="J'aide deux types de clients"

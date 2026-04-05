@@ -13,6 +13,8 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-vendre.webp";
 
@@ -55,6 +57,24 @@ const SellerPageEn = () => (
     <PageMeta title="Sell Your Home in Gatineau" description="Sell your property in Gatineau at the best price. Marketing strategy, personalized support and proven results by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd name="Home Selling Service in Gatineau" description="Full-service home selling in Gatineau and Outaouais — valuation, pricing strategy, marketing and support from listing to closing." url="/en/sell" serviceType="Real Estate Listing Service" />
     <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="2026 Context" title="The 2026 selling market in Outaouais" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        In 2026, the Outaouais real estate market is stabilizing after several very active years. Well-positioned sellers still find buyers — but the context has changed. Available inventory has increased compared to 2022-2024, which means buyers now have more choice and more time to decide.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        The direct consequence for you: listing price, presentation, and marketing strategy now have a much bigger impact on your final result than two years ago. A well-positioned property sells quickly. An overpriced property sits on the market — and that delay sends a negative signal to buyers.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        That's exactly why my approach always starts with the reality of the market in your specific area — not a number designed to make you feel good.
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources: Gatineau Real Estate Board (CIO), CMHC — Housing Market Outlook 2026.</p>
+      <div className="mt-6">
+        <Button asChild><Link to="/en/home-valuation">Free Home Valuation →</Link></Button>
+      </div>
+    </ContentBlock>
+
 <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
     <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />

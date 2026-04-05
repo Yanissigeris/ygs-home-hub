@@ -72,6 +72,24 @@ const SellerPage = () =>
     secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
     trustLine="Stratégie claire."
     heroBgImage={heroImg} />
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="Contexte 2026" title="Le marché de la vente en Outaouais en 2026" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        En 2026, le marché immobilier en Outaouais est en phase de stabilisation après plusieurs années très actives. Les vendeurs bien positionnés trouvent toujours preneur — mais le contexte a changé. L'inventaire disponible a augmenté par rapport à 2022-2024, ce qui signifie que les acheteurs ont maintenant plus de choix et plus de temps pour décider.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Conséquence directe pour vous&nbsp;: le prix de départ, la présentation, et la stratégie de mise en marché ont maintenant un impact beaucoup plus important sur votre résultat final qu'il y a deux ans. Une propriété bien positionnée part rapidement. Une propriété surévaluée reste sur le marché — et ce délai envoie un signal négatif aux acheteurs.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        C'est exactement pour ça que mon approche commence toujours par la réalité du marché dans votre secteur précis — pas par un chiffre pour vous faire plaisir.
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: Chambre immobilière de l'Outaouais (CIO), SCHL — Perspectives du marché 2026.</p>
+      <div className="mt-6">
+        <Button asChild><Link to="/evaluation-gratuite-gatineau">Évaluation gratuite →</Link></Button>
+      </div>
+    </ContentBlock>
+
 <CardGrid
     overline="Vos questions"
     title="Vous vous posez probablement ces questions"
