@@ -58,51 +58,110 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
 );
 
 const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
-  ({ overline = "Témoignages", title = "Ce que disent mes clients", reviews, reviewsPageLabel, reviewsPageHref }, ref) => (
-    <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--ink)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
-      {/* Decorative giant quote */}
-      <span
-        className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
-        style={{ fontFamily: "var(--serif)", fontSize: "40rem", color: "rgba(255,255,255,.025)", lineHeight: .7 }}
-        aria-hidden="true"
-      >"</span>
+  ({ overline = "Témoignages", title = "Ce que disent mes clients", reviews, reviewsPageLabel, reviewsPageHref }, ref) => {
+    const [expanded, setExpanded] = React.useState(false);
+    const visibleCount = 2;
 
-      <div className="section-container relative">
-        {/* Header — stack vertically on mobile */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
-          <div>
-            {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
-            <h2 style={{ color: "#fff" }}>{title}</h2>
+    return (
+      <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--ink)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+        {/* Decorative giant quote */}
+        <span
+          className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
+          style={{ fontFamily: "var(--serif)", fontSize: "40rem", color: "rgba(255,255,255,.025)", lineHeight: .7 }}
+          aria-hidden="true"
+        >"</span>
+
+        <div className="section-container relative">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
+            <div>
+              {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
+              <h2 style={{ color: "#fff" }}>{title}</h2>
+            </div>
+            {reviewsPageHref && reviewsPageLabel && (
+              <Link
+                to={reviewsPageHref}
+                className="hidden sm:inline-flex items-center gap-2 transition-colors"
+                style={{ fontSize: ".82rem", fontWeight: 500, color: "rgba(255,255,255,.5)", borderBottom: "1px solid rgba(255,255,255,.2)" }}
+              >
+                {reviewsPageLabel} →
+              </Link>
+            )}
           </div>
+
+          {/* Desktop: all cards */}
+          <div className="hidden md:grid gap-6 md:grid-cols-2">
+            {reviews.map((review, i) => (
+              <GridCard key={review.id} review={review} index={i} />
+            ))}
+          </div>
+
+          {/* Mobile: show 2, reveal more */}
+          <div className="md:hidden">
+            <div className="grid gap-6 grid-cols-1">
+              {reviews.slice(0, visibleCount).map((review, i) => (
+                <GridCard key={review.id} review={review} index={i} />
+              ))}
+            </div>
+
+            {reviews.length > visibleCount && !expanded && (
+              <button
+                onClick={() => setExpanded(true)}
+                className="w-full mt-6 transition-colors"
+                style={{
+                  background: "rgba(255,255,255,.06)",
+                  border: "1px solid rgba(255,255,255,.15)",
+                  color: "rgba(255,255,255,.7)",
+                  borderRadius: 3,
+                  padding: ".75rem 1.5rem",
+                  textAlign: "center",
+                  fontSize: ".82rem",
+                  fontWeight: 600,
+                  minHeight: 48,
+                }}
+              >
+                Voir les {reviews.length - visibleCount} autres témoignages ↓
+              </button>
+            )}
+
+            {expanded && (
+              <div className="grid gap-6 grid-cols-1 mt-6 animate-fade-in">
+                {reviews.slice(visibleCount).map((review, i) => (
+                  <GridCard key={review.id} review={review} index={i} />
+                ))}
+                <button
+                  onClick={() => setExpanded(false)}
+                  className="w-full transition-colors"
+                  style={{
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.15)",
+                    color: "rgba(255,255,255,.7)",
+                    borderRadius: 3,
+                    padding: ".75rem 1.5rem",
+                    textAlign: "center",
+                    fontSize: ".82rem",
+                    fontWeight: 600,
+                    minHeight: 48,
+                  }}
+                >
+                  Réduire ↑
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Mobile "see all" link */}
           {reviewsPageHref && reviewsPageLabel && (
-            <Link
-              to={reviewsPageHref}
-              className="hidden sm:inline-flex items-center gap-2 transition-colors"
-              style={{ fontSize: ".82rem", fontWeight: 500, color: "rgba(255,255,255,.5)", borderBottom: "1px solid rgba(255,255,255,.2)" }}
-            >
-              {reviewsPageLabel} →
-            </Link>
+            <div className="mt-5 text-center sm:hidden">
+              <Link to={reviewsPageHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)", minHeight: 44, lineHeight: "44px" }}>
+                {reviewsPageLabel} →
+              </Link>
+            </div>
           )}
         </div>
-
-        {/* Single column on mobile, 2 cols on md+ */}
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {reviews.map((review, i) => (
-            <GridCard key={review.id} review={review} index={i} />
-          ))}
-        </div>
-
-        {/* Mobile "see all" link */}
-        {reviewsPageHref && reviewsPageLabel && (
-          <div className="mt-5 text-center sm:hidden">
-            <Link to={reviewsPageHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)", minHeight: 44, lineHeight: "44px" }}>
-              {reviewsPageLabel} →
-            </Link>
-          </div>
-        )}
-      </div>
-    </section>
-  ),
+      </section>
+    );
+  },
 );
 
 TestimonialGrid.displayName = "TestimonialGrid";
