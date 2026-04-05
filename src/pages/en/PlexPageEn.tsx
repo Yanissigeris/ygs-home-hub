@@ -52,6 +52,27 @@ const PlexPageEn = () => (
     <PageMeta title="Invest in a Plex in Gatineau" ogImage="https://yanisgauthier.com/og/og-plex.jpg" description="Duplex, triplex and income properties in Gatineau. Return analysis, investment strategy and support by a specialized broker." />
     <ServiceJsonLd name="Plex Investment Analysis in Gatineau" description="Analysis and support service for buying, selling or evaluating plex and income properties in Gatineau and Outaouais." url="/en/plex" serviceType="Real Estate Investment Analysis" />
     <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="2026 Context" title="Investing in an Outaouais plex in 2026 — what you need to know" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        The Outaouais plex market remains active in 2026. Rental demand for affordable housing stays strong, driven by a stable employment base — federal workers, students, professionals.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        That said, the rental market has rebalanced in 2025-2026 with a significant number of new builds coming online. This change makes return analysis even more critical before any purchase: actual rents in place, actual maintenance costs, anticipated capital expenditures, and long-term strategy must all be examined honestly.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        I am a real estate investor myself. My role is not to convince you to buy — it is to give you the honest analysis so you can decide with full information.
+      </p>
+      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
+        <strong>Note:</strong> The Tribunal administratif du logement (TAL) rent increase recommendation for 2026 is 3.1%. This is an official recommendation. <span className="italic text-xs text-muted-foreground">Source: gouvernement.qc.ca</span>
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources: CMHC — Rental Market Report 2025 · Gatineau Real Estate Board (CIO).</p>
+      <div className="mt-6">
+        <Button asChild><Link to="/en/contact">Analyze a plex with me →</Link></Button>
+      </div>
+    </ContentBlock>
+
 <LinkedCardGrid overline="For you" title="I help two types of clients" items={clientTypes} />
     <InlineCTA text="Own a plex? Start by knowing its current value." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
     <CardGrid overline="Analysis" title="The real questions behind a plex" items={questions} variant="icon-inline" background="alt" />
