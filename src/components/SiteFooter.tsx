@@ -100,7 +100,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
           <div className="h-px w-full bg-primary-foreground/[0.07]" />
-          <div className="py-5 sm:py-8">
+          <div className="py-4 sm:py-8">
             <p className="mb-3 sm:mb-5 font-body text-[0.6875rem] font-semibold uppercase tracking-[0.16em] opacity-30">{popularLabel}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-1.5 sm:gap-x-5 sm:gap-y-2">
               {popularLinks.map((l) => (
