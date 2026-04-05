@@ -125,8 +125,22 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
 
           <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p1}</p>
+          {/* Desktop: always show p2/p3 */}
           <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8, marginBottom: "1rem" }}>{c.p2}</p>
           <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8 }}>{c.p3}</p>
+          {/* Mobile: collapsible */}
+          <div className="md:hidden">
+            <div style={{ maxHeight: expanded ? 500 : 0, overflow: "hidden", transition: "max-height .4s ease" }}>
+              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p2}</p>
+              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85 }}>{c.p3}</p>
+            </div>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              style={{ background: "none", border: "none", color: "var(--gold)", fontSize: ".82rem", fontWeight: 600, letterSpacing: ".06em", textTransform: "uppercase", padding: ".5rem 0", cursor: "pointer" }}
+            >
+              {expanded ? readLess : readMore}
+            </button>
+          </div>
 
           {/* Credential pills */}
           <div className="mt-6 flex flex-wrap gap-2">

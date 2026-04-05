@@ -43,8 +43,8 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
             <p className="mt-3" style={{ fontSize: ".92rem", color: "rgba(255,255,255,.5)", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>
 
-          {/* Grid: 1 col <480, 2 col 480-1023, 4 col lg+ */}
-          <div className="grid grid-cols-1 min-[481px]:grid-cols-2 lg:grid-cols-4">
+          {/* Desktop: 4-col grid */}
+          <div className="hidden md:grid grid-cols-1 min-[481px]:grid-cols-2 lg:grid-cols-4">
             {guides.map((g, i) => (
               <div
                 key={g.guideType}
@@ -59,39 +59,30 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.07)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.03)"; }}
               >
-                {/* Bottom gold accent line */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
-                  style={{ background: "var(--gold)" }}
-                  aria-hidden="true"
-                />
-
-                {/* Ghosted number */}
-                <span
-                  className="pointer-events-none select-none"
-                  style={{ fontFamily: "var(--serif)", fontSize: "clamp(3.5rem, 8vw, 5rem)", color: "rgba(255,255,255,.04)", lineHeight: ".8" }}
-                  aria-hidden="true"
-                >{g.num}</span>
-
-                {/* Icon */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100" style={{ background: "var(--gold)" }} aria-hidden="true" />
+                <span className="pointer-events-none select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(3.5rem, 8vw, 5rem)", color: "rgba(255,255,255,.04)", lineHeight: ".8" }} aria-hidden="true">{g.num}</span>
                 <span className="mt-3" style={{ fontSize: "1.6rem" }} aria-hidden="true">{g.icon}</span>
+                <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.01em" }}>{g.title}</h3>
+                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "rgba(255,255,255,.45)", lineHeight: 1.75 }}>{g.subtitle}</p>
+                <span className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
+              </div>
+            ))}
+          </div>
 
-                {/* Title */}
-                <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.01em" }}>
-                  {g.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "rgba(255,255,255,.45)", lineHeight: 1.75 }}>
-                  {g.subtitle}
-                </p>
-
-                {/* CTA */}
-                <span
-                  className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2"
-                  style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}
-                >
-                  {g.cta}
+          {/* Mobile: 2x2 compact grid */}
+          <div className="md:hidden grid grid-cols-2" style={{ gap: 1, background: "rgba(255,255,255,.08)" }}>
+            {guides.map((g) => (
+              <div
+                key={g.guideType}
+                className="flex flex-col cursor-pointer"
+                style={{ padding: "1.25rem", background: "hsl(200 42% 18%)" }}
+                onClick={() => setModalGuide(g.guideType)}
+              >
+                <span style={{ fontSize: "1.25rem", marginBottom: ".75rem" }} aria-hidden="true">{g.icon}</span>
+                <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "#fff", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
+                <p className="mt-1.5 line-clamp-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "rgba(255,255,255,.45)", lineHeight: 1.6 }}>{g.subtitle}</p>
+                <span className="mt-3 inline-flex items-center" style={{ fontSize: ".68rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, whiteSpace: "nowrap", minHeight: 44 }}>
+                  {g.cta.replace(/ →$/, "")} →
                 </span>
               </div>
             ))}

@@ -89,6 +89,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
   const areas = lang === "en" ? areasEn : areasFr;
   const services = lang === "en" ? servicesEn : servicesFr;
   const cfg = lang === "en" ? cfgEn : cfgFr;
+  const [activeTab, setActiveTab] = React.useState<"areas" | "services">("areas");
 
   return (
     <section style={{ padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
@@ -100,45 +101,83 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
           <p className="mt-3" style={{ fontSize: ".88rem", color: "var(--muted)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
         </div>
 
-        {/* 2-column bordered table — stacks on mobile */}
+        {/* Desktop: 2-column bordered table */}
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
+          className="hidden md:grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
           style={{ border: "1px solid var(--border)", borderRadius: 3 }}
         >
-          {/* Areas column */}
           <div className="lg:border-r" style={{ borderRight: "none" }}>
-            {/* Column header */}
             <div style={{ background: "var(--ink)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
               <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
-                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>
-                {cfg.areasHeading}
+                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.areasHeading}
               </p>
             </div>
-            {areas.map((a) => (
-              <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />
-            ))}
-            <Link
-              to={cfg.allNeighborhoodsHref}
-              className="flex items-center justify-between transition-colors"
-              style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", background: "var(--gold3)", minHeight: 44 }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}
-            >
+            {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
+            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
-
-          {/* Services column — border-top on mobile instead of border-right */}
           <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "var(--border)" }}>
             <div style={{ background: "var(--ink)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
               <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
-                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>
-                {cfg.servicesHeading}
+                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.servicesHeading}
               </p>
             </div>
-            {services.map((s) => (
-              <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />
-            ))}
+            {services.map((s) => <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />)}
+          </div>
+        </div>
+
+        {/* Mobile: tab switcher */}
+        <div className="md:hidden overflow-hidden" style={{ border: "1px solid var(--border)", borderRadius: 3 }}>
+          {/* Tab bar */}
+          <div className="flex" style={{ background: "var(--cream)", borderBottom: "1px solid var(--border)" }}>
+            <button
+              onClick={() => setActiveTab("areas")}
+              className="flex-1 transition-colors"
+              style={{
+                padding: ".75rem",
+                fontSize: ".8rem",
+                fontWeight: 600,
+                color: activeTab === "areas" ? "var(--ink)" : "var(--muted)",
+                borderBottom: activeTab === "areas" ? "2px solid var(--gold)" : "2px solid transparent",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+            >
+              {cfg.areasHeading}
+            </button>
+            <button
+              onClick={() => setActiveTab("services")}
+              className="flex-1 transition-colors"
+              style={{
+                padding: ".75rem",
+                fontSize: ".8rem",
+                fontWeight: 600,
+                color: activeTab === "services" ? "var(--ink)" : "var(--muted)",
+                borderBottom: activeTab === "services" ? "2px solid var(--gold)" : "2px solid transparent",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+            >
+              {cfg.servicesHeading}
+            </button>
+          </div>
+
+          {/* Tab panels */}
+          <div style={{ transition: "opacity .2s ease" }}>
+            {activeTab === "areas" && (
+              <div>
+                {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
+                <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "1rem 1.25rem", background: "var(--gold3)", minHeight: 44 }}>
+                  <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
+                </Link>
+              </div>
+            )}
+            {activeTab === "services" && (
+              <div>
+                {services.map((s) => <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />)}
+              </div>
+            )}
           </div>
         </div>
       </div>
