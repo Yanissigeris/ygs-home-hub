@@ -15,8 +15,8 @@ import heroImg from "@/assets/hero-aylmer-gen.jpg";
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "Quel est le prix moyen d'une maison à Aylmer en 2026?",
-    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Lucerne et Rivermead sont généralement plus chers (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
+    q: "Combien vaut une maison à Aylmer?",
+    a: "Les prix varient selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead, Vieux-Aylmer et Breckenridge ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
-    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons à Lucerne et Rivermead avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
+    a: "Le marché d'Aylmer reste actif — une propriété bien positionnée et correctement évaluée attire rapidement les acheteurs sérieux. Le délai dépend du prix, du sous-secteur et de la présentation. Contactez-moi pour une lecture réaliste de votre situation.",
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
@@ -40,22 +40,22 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain. Prix : 550 000 $ – 750 000 $.",
+    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain.",
     tag: "Familles · Établi · Recherché",
   },
   {
     title: "Vieux-Aylmer",
-    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable. Clientèle mixte : professionnels, couples, retraités. Prix : 450 000 $ – 650 000 $.",
+    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable. Clientèle mixte : professionnels, couples, retraités.",
     tag: "Caractère · Walkable",
   },
   {
     title: "Aylmer nord / Breckenridge",
-    text: "Secteur plus calme, lotissements récents, grandes cours, accès rapide à l'autoroute 50. Attire les jeunes familles qui cherchent plus d'espace à prix accessible. Prix : 480 000 $ – 620 000 $.",
+    text: "Secteur plus calme, lotissements récents, grandes cours, accès rapide à l'autoroute 50. Attire les jeunes familles qui cherchent plus d'espace à prix accessible.",
     tag: "Espace · Récent · Accessible",
   },
   {
     title: "Bord de l'eau · Lac Deschênes",
-    text: "Propriétés en bord de rivière et de lac, accès nautique, terrain plus grands. Marché de niche avec des propriétés exceptionnelles. Rareté = valeur stable à long terme. Prix : 700 000 $ – 1 200 000 $+",
+    text: "Propriétés en bord de rivière et de lac, accès nautique, terrains plus grands. Marché de niche avec des propriétés exceptionnelles. Rareté = valeur stable à long terme.",
     tag: "Prestige · Bord de l'eau",
   },
 ];
@@ -75,11 +75,11 @@ const buyerCols = [
   {
     title: "Sur le marché",
     items: [
-      "Les bonnes propriétés partent en 10-20 jours",
+      "Les bonnes propriétés partent rapidement dans les secteurs populaires",
       "Les offres multiples sont fréquentes à Lucerne et Rivermead",
       "Une visite rapide peut faire la différence",
       "L'inspection pré-offre est une option à considérer",
-      "Prévoyez 5-10% au-dessus du prix demandé en zone compétitive",
+      "Prévoyez une marge au-dessus du prix demandé en zone compétitive",
     ],
   },
   {
@@ -111,13 +111,6 @@ const lifestyleCards = [
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
 
-/* ── Key facts ── */
-const keyFacts = [
-  { icon: "🏠", label: "Prix médian — maisons", value: "567 000 $", trend: "↑ 3% vs l'an dernier" },
-  { icon: "⏱", label: "Délai moyen de vente", value: "28 jours" },
-  { icon: "📊", label: "Type de marché", value: "Vendeur", note: "(favorise le vendeur bien positionné)" },
-  { icon: "👥", label: "Population approximative", value: "~50 000 hab." },
-];
 
 /* ── Related pages ── */
 const related = [
@@ -194,22 +187,18 @@ const AylmerPage = () => (
           </p>
         </div>
 
-        {/* Right — key facts card (2 cols) */}
+        {/* Right — CTA facts card (2 cols) */}
         <div className="lg:col-span-2">
           <div className="rounded-md border border-border bg-background p-6 space-y-5">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Aylmer en chiffres</h3>
-            {keyFacts.map((f) => (
-              <div key={f.label} className="space-y-0.5">
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>{f.icon}</span> {f.label}
-                </p>
-                <p className="text-lg font-semibold text-foreground">{f.value}</p>
-                {f.trend && <p className="text-xs text-accent">{f.trend}</p>}
-                {f.note && <p className="text-xs text-muted-foreground">{f.note}</p>}
-              </div>
-            ))}
-            <p className="text-[0.7rem] text-muted-foreground/60 pt-2 border-t border-border">
-              Données indicatives basées sur les ventes récentes. Mise à jour mensuelle.
+            <h3 className="font-serif text-lg font-semibold text-foreground">Combien vaut une propriété ici?</h3>
+            <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
+              Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
+            </p>
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            </Button>
+            <p className="text-[0.72rem] text-muted-foreground italic text-center">
+              Gratuit · Sans engagement · Réponse en 24-48h
             </p>
           </div>
         </div>
@@ -273,7 +262,7 @@ const AylmerPage = () => (
           <p className="label-overline">GUIDE VENDEUR</p>
           <h2>Vendre votre propriété à Aylmer au meilleur prix</h2>
           <p className="prose-body mt-5">
-            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché se vend généralement en moins de 30 jours, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher » — cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
+            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher » — cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
           </p>
           <p className="prose-body">
             Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue — pas juste par secteur — fait une différence réelle sur votre prix final.

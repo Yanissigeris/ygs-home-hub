@@ -15,8 +15,8 @@ import heroImg from "@/assets/hero-aylmer-gen.jpg";
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "What is the average home price in Aylmer in 2026?",
-    a: "The median price for a single-family home in Aylmer is around $567,000 in early 2026, with significant variations by sub-sector. Lucerne and Rivermead are generally more expensive ($600,000–$750,000), while some streets in Breckenridge still offer options under $500,000. Contact me for a free, personalized analysis.",
+    q: "How much is a home worth in Aylmer?",
+    a: "Prices vary by sub-sector, property type and condition. Lucerne, Rivermead, Old Aylmer and Breckenridge each have their own market realities. Contact me for a free comparative analysis based on recent sales on your street.",
   },
   {
     q: "Is Aylmer bilingual? Can my child attend an English school?",
@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "How long does it take to sell a home in Aylmer?",
-    a: "In 2025-2026, well-positioned properties in Aylmer sell on average between 20 and 35 days. Homes in Lucerne and Rivermead with good presentation and fair pricing often sell in under 15 days with multiple offers. An overpriced property can sit 60-90 days on the market, sending a negative signal to buyers.",
+    a: "The Aylmer market remains active — a well-positioned and properly priced property attracts serious buyers quickly. The timeline depends on pricing, sub-sector and presentation. Contact me for a realistic reading of your situation.",
   },
   {
     q: "Is it better to buy in Aylmer or Ottawa?",
@@ -40,22 +40,22 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "A sought-after residential area in Aylmer. Established and renovated homes, mature tree-lined streets, close to Lake Deschênes and cycling paths. Family-friendly with excellent access to the Champlain Bridge. Price: $550,000–$750,000.",
+    text: "A sought-after residential area in Aylmer. Established and renovated homes, mature tree-lined streets, close to Lake Deschênes and cycling paths. Family-friendly with excellent access to the Champlain Bridge.",
     tag: "Families · Established · In demand",
   },
   {
     title: "Old Aylmer",
-    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees. Price: $450,000–$650,000.",
+    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees.",
     tag: "Character · Walkable",
   },
   {
     title: "North Aylmer / Breckenridge",
-    text: "A quieter area with recent developments, large yards, and quick highway 50 access. Attracts young families seeking more space at accessible prices. Price: $480,000–$620,000.",
+    text: "A quieter area with recent developments, large yards, and quick highway 50 access. Attracts young families seeking more space at accessible prices.",
     tag: "Space · Recent · Affordable",
   },
   {
     title: "Waterfront · Lake Deschênes",
-    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with exceptional properties. Scarcity = long-term stable value. Price: $700,000–$1,200,000+.",
+    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with exceptional properties. Scarcity = long-term stable value.",
     tag: "Prestige · Waterfront",
   },
 ];
@@ -75,11 +75,11 @@ const buyerCols = [
   {
     title: "On the market",
     items: [
-      "Good properties sell in 10-20 days",
+      "Good properties sell quickly in popular areas",
       "Multiple offers are common in Lucerne and Rivermead",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
-      "Expect 5-10% above asking price in competitive zones",
+      "Expect to go above asking price in competitive zones",
     ],
   },
   {
@@ -111,13 +111,6 @@ const lifestyleCards = [
   { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (CS des Portages), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
 ];
 
-/* ── Key facts ── */
-const keyFacts = [
-  { icon: "🏠", label: "Median price — houses", value: "$567,000", trend: "↑ 3% vs last year" },
-  { icon: "⏱", label: "Average time to sell", value: "28 days" },
-  { icon: "📊", label: "Market type", value: "Seller's", note: "(favours well-positioned sellers)" },
-  { icon: "👥", label: "Approximate population", value: "~50,000" },
-];
 
 /* ── Related pages ── */
 const related = [
@@ -195,19 +188,15 @@ const AylmerPageEn = () => (
 
         <div className="lg:col-span-2">
           <div className="rounded-md border border-border bg-background p-6 space-y-5">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Aylmer by the numbers</h3>
-            {keyFacts.map((f) => (
-              <div key={f.label} className="space-y-0.5">
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>{f.icon}</span> {f.label}
-                </p>
-                <p className="text-lg font-semibold text-foreground">{f.value}</p>
-                {f.trend && <p className="text-xs text-accent">{f.trend}</p>}
-                {f.note && <p className="text-xs text-muted-foreground">{f.note}</p>}
-              </div>
-            ))}
-            <p className="text-[0.7rem] text-muted-foreground/60 pt-2 border-t border-border">
-              Indicative data based on recent sales. Updated monthly.
+            <h3 className="font-serif text-lg font-semibold text-foreground">What is a property worth here?</h3>
+            <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
+              Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
+            </p>
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/en/home-valuation">Get the real numbers →</Link>
+            </Button>
+            <p className="text-[0.72rem] text-muted-foreground italic text-center">
+              Free · No obligation · Response within 24-48h
             </p>
           </div>
         </div>
@@ -270,7 +259,7 @@ const AylmerPageEn = () => (
           <p className="label-overline">SELLER GUIDE</p>
           <h2>Sell your Aylmer property for the best price</h2>
           <p className="prose-body mt-5">
-            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property typically sells in under 30 days, often with multiple offers. But "well-positioned" doesn't mean "highest price" — it means the right price, the right presentation, and the right strategy.
+            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. But "well-positioned" doesn't mean "highest price" — it means the right price, the right presentation, and the right strategy.
           </p>
           <p className="prose-body">
             Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street — not just by area — makes a real difference in your final price.
