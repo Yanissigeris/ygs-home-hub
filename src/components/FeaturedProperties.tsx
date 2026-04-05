@@ -41,7 +41,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     return (
       <section ref={ref} style={{ background: "var(--cream)", padding: `clamp(3.5rem, 6vw, 7rem) 0 ${featured.length < 3 ? "4rem" : "clamp(3.5rem, 6vw, 7rem)"}` }}>
         <div className="section-container">
-          {/* Header */}
+          {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
               <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{strings.overline}</p>
@@ -62,7 +62,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
             </Link>
           </div>
 
-          {/* Grid */}
+          {/* Grid — single col on mobile */}
           <div
             className={`grid gap-5 grid-cols-1 md:grid-cols-2 ${featured.length >= 3 ? "lg:grid-cols-3" : ""}`}
             style={featured.length < 3 ? { maxWidth: 900, marginInline: "auto" } : undefined}
@@ -93,8 +93,8 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                   e.currentTarget.style.borderColor = "";
                 }}
               >
-                {/* Image */}
-                <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                {/* Image — 16:9 on mobile for space saving */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
                   <img
                     src={p.image}
                     alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
@@ -106,7 +106,6 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                     height={486}
                     onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
                   />
-                  {/* Status badge */}
                   <span
                     className="absolute"
                     style={{
@@ -129,12 +128,12 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                 </div>
 
                 {/* Card body */}
-                <div style={{ padding: "1.5rem" }}>
+                <div className="p-[1.25rem] md:p-[1.5rem]">
                   <p
                     itemProp="name"
                     style={{
                       fontFamily: "var(--serif)",
-                      fontSize: "1.5rem",
+                      fontSize: "clamp(1.35rem, 4vw, 1.5rem)",
                       fontWeight: 600,
                       color: "var(--ink)",
                       letterSpacing: "-.02em",
@@ -167,6 +166,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                       textTransform: "uppercase",
                       borderBottom: "1px solid rgba(168,138,90,.3)",
                       paddingBottom: 2,
+                      minHeight: 44,
                     }}
                   >
                     {strings.viewProperty} →
@@ -176,9 +176,9 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
             ))}
           </div>
 
-          {/* Mobile link */}
+          {/* Mobile link — centered below */}
           <div className="mt-5 text-center sm:hidden">
-            <Link to={strings.viewAllHref} style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)" }}>
+            <Link to={strings.viewAllHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)", minHeight: 44, lineHeight: "44px" }}>
               {strings.viewAll} →
             </Link>
           </div>

@@ -136,67 +136,92 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     /* Full homepage hero — 2-column layout */
     return (
       <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
-        <div className="grid min-h-[100vh] lg:grid-cols-2">
+        <div className="grid min-h-[100svh] lg:grid-cols-2">
           {/* ─── LEFT COLUMN ─── */}
-          <div className="relative flex flex-col justify-center" style={{ background: "var(--ink)", padding: "clamp(3rem, 7vw, 7rem) clamp(1.25rem, 5vw, 5rem)" }}>
-            {/* Decorative right edge line (desktop) */}
-            <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
+          <div
+            className="relative flex flex-col justify-center"
+            style={{ background: "var(--ink)" }}
+          >
+            {/* Mobile padding: 5rem top (nav), 1.5rem sides, 4rem bottom */}
+            <div className="px-[1.5rem] pt-[5rem] pb-[4rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[clamp(3rem,7vw,7rem)] sm:pb-[clamp(3rem,7vw,7rem)]">
+              {/* Decorative right edge line (desktop) */}
+              <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
 
-            {overline && (
-              <p className="label-overline mb-8 opacity-0 animate-hero-fade-up" style={{ color: "var(--gold)", animationDelay: "0.2s", animationFillMode: "forwards" }}>
-                {overline.replace(/[·•]/g, "  ·  ")}
-              </p>
-            )}
-
-            <h1 className="max-w-[16ch] opacity-0 animate-hero-fade-up" style={{ color: "#F7F4EE", animationDelay: "0.35s", animationFillMode: "forwards" }}>
-              {lang === "fr" ? (
-                <>Votre <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>courtier</em>{" "}<strong style={{ fontWeight: 700 }}>immobilier</strong><br />en Outaouais</>
-              ) : (
-                <>Your <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>real estate</em>{" "}<strong style={{ fontWeight: 700 }}>broker</strong><br />in Outaouais</>
+              {overline && (
+                <p className="label-overline mb-8 opacity-0 animate-hero-fade-up" style={{ color: "var(--gold)", animationDelay: "0.2s", animationFillMode: "forwards", fontSize: "max(.6rem, .62rem)", letterSpacing: ".15em" }}>
+                  {overline.replace(/[·•]/g, "  ·  ")}
+                </p>
               )}
-            </h1>
 
-            <p className="mt-6 max-w-[420px] text-[1rem] font-light leading-[1.8] opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.6)", animationDelay: "0.5s", animationFillMode: "forwards" }}>
-              {subtitle}
-            </p>
-
-            {(primaryCta || secondaryCta) && (
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
-                {primaryCta && (
-                  <Link
-                    to={primaryCta.href}
-                    className="inline-flex items-center justify-center px-8 py-[0.9rem] text-[0.85rem] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5"
-                    style={{ background: "var(--gold)", borderRadius: "3px", boxShadow: "0 4px 20px rgba(168,138,90,.3)" }}
-                    onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
-                  >
-                    {primaryCta.label} →
-                  </Link>
+              <h1
+                className="max-w-[16ch] opacity-0 animate-hero-fade-up"
+                style={{
+                  color: "#F7F4EE",
+                  animationDelay: "0.35s",
+                  animationFillMode: "forwards",
+                  fontSize: "clamp(2.6rem, 9vw, 5.5rem)",
+                  lineHeight: 1.12,
+                  letterSpacing: "-.01em",
+                }}
+              >
+                {lang === "fr" ? (
+                  <>Votre <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>courtier</em>{" "}<strong style={{ fontWeight: 700 }}>immobilier</strong><br />en Outaouais</>
+                ) : (
+                  <>Your <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>real estate</em>{" "}<strong style={{ fontWeight: 700 }}>broker</strong><br />in Outaouais</>
                 )}
-                {secondaryCta && (
-                  <Link
-                    to={secondaryCta.href}
-                    className="inline-flex items-center justify-center px-8 py-[0.9rem] text-[0.85rem] font-medium transition-all duration-300 hover:border-white/50 hover:text-white"
-                    style={{ color: "rgba(255,255,255,.8)", border: "1px solid rgba(255,255,255,.2)", borderRadius: "3px" }}
-                    onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
-                  >
-                    {secondaryCta.label}
-                  </Link>
-                )}
-              </div>
-            )}
+              </h1>
 
-            {/* Credentials strip — hidden on sm+ when hideCredentialsStrip is set */}
-            <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " sm:hidden" : ""}`} style={{ borderTop: "1px solid rgba(255,255,255,.08)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
-              <div className="flex items-start gap-6 sm:gap-10">
-                {stats.map((stat, i) => (
-                  <React.Fragment key={stat.label}>
-                    {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
-                    <div className="text-center sm:text-left">
-                      <p className="font-heading text-[2rem] font-semibold leading-none tracking-tight text-white sm:text-[2.4rem]" style={{ letterSpacing: "-.02em" }}>{stat.value}</p>
-                      <p className="mt-2 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "rgba(255,255,255,.35)" }}>{stat.label}</p>
-                    </div>
-                  </React.Fragment>
-                ))}
+              <p className="mt-6 max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.6)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
+                {subtitle}
+              </p>
+
+              {(primaryCta || secondaryCta) && (
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
+                  {primaryCta && (
+                    <Link
+                      to={primaryCta.href}
+                      className="inline-flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto text-center"
+                      style={{ background: "var(--gold)", borderRadius: "3px", boxShadow: "0 4px 20px rgba(168,138,90,.3)", padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600 }}
+                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
+                    >
+                      {primaryCta.label} →
+                    </Link>
+                  )}
+                  {secondaryCta && (
+                    <Link
+                      to={secondaryCta.href}
+                      className="inline-flex items-center justify-center font-medium transition-all duration-300 hover:border-white/50 hover:text-white w-full sm:w-auto text-center"
+                      style={{ color: "rgba(255,255,255,.8)", border: "1px solid rgba(255,255,255,.2)", borderRadius: "3px", padding: ".85rem 1.5rem", fontSize: ".85rem" }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
+                    >
+                      {secondaryCta.label}
+                    </Link>
+                  )}
+                </div>
+              )}
+
+              {/* Credentials strip */}
+              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " sm:hidden" : ""}`} style={{ borderTop: "1px solid rgba(255,255,255,.08)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+                <div className="flex items-start gap-5 sm:gap-10">
+                  {stats.map((stat, i) => (
+                    <React.Fragment key={stat.label}>
+                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
+                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
+                      <div className="text-center sm:text-left">
+                        <p
+                          className="font-heading font-semibold leading-none tracking-tight text-white"
+                          style={{
+                            letterSpacing: "-.02em",
+                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.2rem, 4vw, 2.4rem)" : "clamp(1.6rem, 5vw, 2.4rem)",
+                          }}
+                        >
+                          {stat.value}
+                        </p>
+                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(255,255,255,.35)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
+                      </div>
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

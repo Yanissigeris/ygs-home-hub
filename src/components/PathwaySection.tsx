@@ -28,7 +28,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
   return (
     <section ref={ref} style={{ padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
       <div className="section-container">
-        {/* Section header: 2-column on desktop */}
+        {/* Section header */}
         <div className="mb-8 sm:mb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
           <div>
             <p className="label-overline mb-2">{heading.overline}</p>
@@ -36,9 +36,9 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
           </div>
         </div>
 
-        {/* 3-column grid with separator lines */}
+        {/* Cards: single column on mobile, 3-col on md+ */}
         <div
-          className="grid md:grid-cols-3 overflow-hidden"
+          className="grid grid-cols-1 md:grid-cols-3 overflow-hidden"
           style={{ border: "1px solid var(--border)", borderRadius: 3 }}
         >
           {pathways.map((p, i) => (
@@ -47,14 +47,13 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               to={p.href}
               className="group flex flex-col transition-all duration-300 relative overflow-hidden"
               style={{
-                borderRight: i < 2 ? "1px solid var(--border)" : "none",
-                borderBottom: "none",
+                borderBottom: i < pathways.length - 1 ? "1px solid var(--border)" : "none",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.zIndex = "2"; e.currentTarget.style.boxShadow = "0 30px 80px rgba(23,48,59,.15)"; e.currentTarget.style.transform = "translateY(-5px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.zIndex = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.transform = ""; }}
             >
-              {/* Image */}
-              <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              {/* Image — 16:9 on mobile, 4:3 on desktop */}
+              <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <img
                   src={p.image}
                   alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
@@ -65,7 +64,6 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
                   height={486}
                   onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
                 />
-                {/* Card number */}
                 <span
                   className="absolute top-4 left-4"
                   style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", color: "rgba(255,255,255,.6)" }}
@@ -76,11 +74,11 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               </div>
 
               {/* Card body */}
-              <div className="flex flex-1 flex-col" style={{ padding: "2rem" }}>
-                <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", marginBottom: ".5rem" }}>
+              <div className="flex flex-1 flex-col p-[1.5rem] md:p-[2rem]">
+                <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.25rem, 3vw, 1.5rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", marginBottom: ".5rem" }}>
                   {p.title}
                 </h3>
-                <p className="flex-1" style={{ fontSize: ".88rem", color: "var(--muted)", lineHeight: 1.8 }}>
+                <p className="flex-1" style={{ fontSize: ".86rem", color: "var(--muted)", lineHeight: 1.8 }}>
                   {p.text}
                 </p>
                 <span
@@ -94,6 +92,9 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
                     borderBottom: "1px solid rgba(168,138,90,.3)",
                     paddingBottom: 2,
                     alignSelf: "flex-start",
+                    minHeight: 44,
+                    display: "inline-flex",
+                    alignItems: "center",
                   }}
                 >
                   {p.cta} →

@@ -102,25 +102,22 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
 
   if (!item.children) {
     return (
-      <Link to={item.href!} onClick={onNavigate} className="block rounded-lg px-4 py-3.5 text-[1rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)" }}
-        onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = ""; }}
-      >
+      <Link to={item.href!} onClick={onNavigate} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
         {item.label}
       </Link>
     );
   }
 
   return (
-    <div>
-      <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between rounded-lg px-4 py-3.5 text-[1rem] font-medium transition-colors" style={{ color: "var(--muted)" }} aria-expanded={expanded}>
+    <div style={{ borderBottom: "1px solid var(--border)" }}>
+      <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: "var(--muted)", minHeight: 44 }} aria-expanded={expanded}>
         {item.label}
-        <ChevronDownIcon size={16} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={14} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-1 pl-3">
           {item.children.map((child) => (
-            <Link key={child.href} to={child.href} onClick={onNavigate} className="block rounded-lg px-4 py-2.5 text-[.94rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400 }}>
+            <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
               {child.label}
             </Link>
           ))}
@@ -139,7 +136,6 @@ const SiteHeader = () => {
   const nav = lang === "en" ? mainNavEn : mainNav;
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
-  const ctaLabelMobile = lang === "en" ? "Valuation" : "Évaluer";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -149,6 +145,17 @@ const SiteHeader = () => {
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
+
+  // Close on outside tap
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      const header = document.getElementById("site-header");
+      if (header && !header.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, [open]);
 
   const headerStyle: React.CSSProperties = {
     position: "sticky",
@@ -160,10 +167,11 @@ const SiteHeader = () => {
     borderBottom: "1px solid var(--border)",
     transition: "box-shadow .3s var(--ease)",
     boxShadow: scrolled ? "0 4px 40px rgba(23,48,59,.1)" : "none",
+    paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
   return (
-    <header style={headerStyle}>
+    <header id="site-header" style={headerStyle}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden lg:flex items-center" style={{ height: 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
@@ -229,47 +237,60 @@ const SiteHeader = () => {
         </div>
       </div>
 
-      {/* ─── Mobile ─── */}
-      <div className="flex items-center justify-between gap-3 px-4 sm:hidden" style={{ height: 60 }}>
+      {/* ─── Mobile (<640px) — logo left, hamburger center-right, CTA right ─── */}
+      <div className="flex items-center justify-between gap-2 px-4 sm:hidden" style={{ height: 56 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
           <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0" />
-          <span className="h-4 w-px shrink-0" style={{ background: "var(--border)" }} />
-          <img src={logoRemax} alt="RE/MAX Direct" width={16} height={18} className="h-[18px] w-auto shrink-0 opacity-60" />
         </Link>
         <div className="flex shrink-0 items-center gap-2">
-          <LanguageSwitch />
+          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+            {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
+          </button>
           <Link
             to={ctaHref}
             className="inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 36, minWidth: "6.5rem", padding: "0 .9rem", background: "var(--gold)", color: "#fff", fontSize: ".75rem", fontWeight: 600, borderRadius: 3 }}
+            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "var(--gold)", color: "#fff", fontSize: ".75rem", fontWeight: 600, borderRadius: 3 }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
-            {ctaLabelMobile}
+            {ctaLabel}
           </Link>
-          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
-            {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
-          </button>
         </div>
       </div>
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
-      {open && (
-        <nav id="mobile-navigation" role="navigation" aria-label="Navigation principale" className="animate-fade-in lg:hidden max-h-[calc(100dvh-80px)] overflow-y-auto" style={{ borderTop: "1px solid var(--border)", background: "var(--cream)" }}>
-          <div className="px-5 pb-6 pt-3">
-            {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
-            <div className="mt-4 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
-              <Link
-                to={ctaHref}
-                onClick={closeMenu}
-                className="flex w-full items-center justify-center transition-all duration-200"
-                style={{ height: 48, background: "var(--gold)", color: "#fff", fontSize: ".94rem", fontWeight: 600, borderRadius: 3 }}
-              >
-                {ctaLabel}
-              </Link>
-            </div>
+      <div
+        id="mobile-navigation"
+        role="navigation"
+        aria-label="Navigation principale"
+        className="lg:hidden overflow-hidden"
+        style={{
+          maxHeight: open ? "calc(100dvh - 80px)" : 0,
+          opacity: open ? 1 : 0,
+          transition: "max-height .3s ease, opacity .25s ease",
+          borderTop: open ? "1px solid var(--border)" : "none",
+          background: "var(--cream)",
+          overflowY: open ? "auto" : "hidden",
+          borderBottom: open ? "1px solid var(--border)" : "none",
+        }}
+      >
+        <div>
+          {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
+          <div className="px-6 py-4" style={{ borderTop: "1px solid var(--border)" }}>
+            <Link
+              to={ctaHref}
+              onClick={closeMenu}
+              className="flex w-full items-center justify-center transition-all duration-200"
+              style={{ height: 48, background: "var(--gold)", color: "#fff", fontSize: ".94rem", fontWeight: 600, borderRadius: 3 }}
+            >
+              {ctaLabel}
+            </Link>
           </div>
-        </nav>
-      )}
+          {/* FR|EN toggle at bottom of dropdown */}
+          <div className="flex justify-center pb-4">
+            <LanguageSwitch />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

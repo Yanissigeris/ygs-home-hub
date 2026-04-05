@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import logoYgsWhite from "@/assets/logo-ygs-white.webp";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
@@ -22,7 +21,7 @@ const affiliationLogos = [
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
-/* ── Social SVG icons (avoid lucide import weight) ── */
+/* ── Social SVG icons ── */
 const FacebookSvg = () => (
   <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
 );
@@ -34,7 +33,7 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
   const [open, setOpen] = React.useState(false);
   return (
     <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" aria-expanded={open}>
+      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open}>
         <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
         <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
@@ -42,7 +41,7 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
         <ul className="space-y-2.5">
           {links.map((l) => (
             <li key={l.href + l.label}>
-              <Link to={l.href} style={{ fontSize: ".8rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
+              <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
             </li>
           ))}
         </ul>
@@ -64,12 +63,20 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
       : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
     return (
-      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "#fff" }} {...props}>
+      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "#fff", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
         <div className="section-container">
           {/* ── Brand row ── */}
           <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
-            <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={195} height={50} className="h-auto" style={{ width: "clamp(140px, 22vw, 195px)" }} loading="lazy" />
-            <p className="mt-5 text-center" style={{ fontSize: ".8rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
+            <img
+              src={logoYgsWhite}
+              alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
+              width={195}
+              height={50}
+              className="h-auto mx-auto block"
+              style={{ width: "clamp(140px, 22vw, 195px)", maxHeight: 70 }}
+              loading="lazy"
+            />
+            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
               {tagline}
             </p>
 
@@ -105,17 +112,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             ))}
           </div>
 
-          {/* ── Desktop: 4 columns ── */}
+          {/* ── Desktop: 4 columns (2-col on sm) ── */}
           <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label="Footer navigation">
             {columns.map((col) => (
               <div key={col.title}>
-                <p className="mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                <p className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
                   {col.title}
                 </p>
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} style={{ fontSize: ".8rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
+                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>
@@ -139,11 +146,11 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   to={l.href}
                   className="transition-colors duration-200"
                   style={{
-                    fontSize: ".74rem",
+                    fontSize: ".7rem",
                     color: "rgba(255,255,255,.28)",
                     border: "1px solid rgba(255,255,255,.06)",
                     borderRadius: 3,
-                    padding: ".3rem .7rem",
+                    padding: ".2rem .55rem",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.28)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.06)"; }}
@@ -156,12 +163,12 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
-          {/* ── Affiliations — logos preserved exactly ── */}
+          {/* ── Affiliations ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
             <p className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
               {affiliationsLabel}
             </p>
-            <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
               {affiliationLogos.map((logo) => (
                 <div
                   key={logo.alt}
@@ -170,8 +177,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     background: "rgba(255,255,255,.04)",
                     border: "1px solid rgba(255,255,255,.06)",
                     borderRadius: 3,
-                    padding: ".5rem 1rem",
+                    padding: ".4rem .75rem",
                     minHeight: 44,
+                    minWidth: 80,
                   }}
                 >
                   <img
@@ -188,8 +196,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Copyright ── */}
-          <div className="py-7 text-center sm:py-8" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.2)" }}>{legalText}</p>
+          <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
           </div>
         </div>
       </footer>
