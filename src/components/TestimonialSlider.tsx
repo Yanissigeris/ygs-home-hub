@@ -138,7 +138,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
       <section ref={ref} className="section-padding bg-background">
         <div className="section-container">
           {/* Heading */}
-          <div className="mx-auto mb-8 sm:mb-10 max-w-[42rem] text-center">
+          <div className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center">
             {overline && <p className="label-overline mb-3">{overline}</p>}
             <h2>{title}</h2>
           </div>

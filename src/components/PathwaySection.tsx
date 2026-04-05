@@ -33,7 +33,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
   return (
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container">
-        <motion.div className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.div className="mx-auto mb-5 sm:mb-10 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
           <p className="label-overline mb-3">{heading.overline}</p>
           <h2>{heading.title}</h2>
         </motion.div>

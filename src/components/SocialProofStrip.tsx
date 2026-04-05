@@ -53,10 +53,10 @@ const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
                 <div className="h-9 w-px bg-border/40" />
               )}
               <div className="text-center">
-                <p className="font-heading text-[1.25rem] font-bold leading-none tracking-tight text-foreground sm:text-[1.75rem]">
+                <p className="font-heading text-[1.125rem] font-bold leading-none tracking-tight text-foreground sm:text-[1.75rem]">
                   {stat.value}
                 </p>
-                <p className="mt-1.5 text-[0.8125rem] font-medium tracking-wide text-muted-foreground/60">
+                <p className="mt-1 text-[0.6875rem] sm:text-[0.8125rem] font-medium tracking-wide text-muted-foreground/60">
                   {stat.label}
                 </p>
               </div>
