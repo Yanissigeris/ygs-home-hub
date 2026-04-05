@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
+import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import { reviews, getReviewsByCategory } from "@/data/reviews";
 import type { Review } from "@/data/reviews";
 import heroImg from "@/assets/hero-testimonials.webp";
