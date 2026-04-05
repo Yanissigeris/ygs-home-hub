@@ -91,7 +91,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
       <div className="section-container max-w-[60rem]">
         {/* Section intro */}
         <motion.div
-          className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto"
+          className="text-center mb-6 sm:mb-12 max-w-[44rem] mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
