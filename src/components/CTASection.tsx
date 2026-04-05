@@ -1,7 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { trackCTAClick } from "@/lib/analytics";
 
 interface CTASectionProps {
@@ -17,44 +15,81 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
   ({ overline, title, text, buttons, trustLine, dark }, ref) => (
     <section
       ref={ref}
-      className={dark ? "py-10 sm:py-24 hero-gradient relative overflow-hidden" : "section-padding bg-secondary/30"}
+      className="relative overflow-hidden"
+      style={{
+        background: dark ? "var(--ink)" : "var(--cream)",
+        padding: dark ? "7rem 0" : "clamp(3.5rem, 6vw, 7rem) 0",
+        textAlign: "center",
+      }}
     >
-      {dark && <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(195_30%_28%_/_0.08)_0%,_transparent_50%)]" />}
-      <motion.div
-        className={`section-container relative text-center ${dark ? "text-primary-foreground" : ""}`}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      >
-        {overline && <p className={`label-overline mb-3 ${dark ? "text-primary-foreground/25" : ""}`}>{overline}</p>}
-        <h2 className={`mx-auto max-w-lg ${dark ? "text-primary-foreground" : ""}`}>{title}</h2>
-        {text && <p className={`mx-auto mt-4 max-w-md text-[1.0625rem] leading-[1.6] ${dark ? "text-primary-foreground/50" : "text-muted-foreground"}`}>{text}</p>}
-        <div className="mt-8 flex flex-wrap justify-center gap-3.5">
-          {buttons.map((btn) => (
-            <Button
-              key={btn.label}
-              size="xl"
-              variant={dark
-                ? (btn.variant === "outline" ? "hero-outline" : "accent")
-                : (btn.variant === "outline" ? "outline" : "accent")
-              }
-              className={dark && btn.variant !== "outline" ? "shadow-md" : ""}
-              asChild
-              onClick={() => trackCTAClick(btn.label, "cta-section")}
-            >
-              <Link to={btn.href}>{btn.label === "Obtenir ma valeur" ? "Évaluation gratuite" : btn.label}</Link>
-            </Button>
-          ))}
-        </div>
-        {trustLine && (
-          <p className={`mt-5 text-[0.8125rem] ${dark ? "text-primary-foreground/25" : "text-muted-foreground/45"}`}>{trustLine}</p>
+      {/* Decorative radial gradient */}
+      {dark && (
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "radial-gradient(circle 700px at center, rgba(168,138,90,.1), transparent)" }}
+          aria-hidden="true"
+        />
+      )}
+
+      <div className="section-container relative">
+        {overline && (
+          <p className="label-overline mb-3" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
         )}
-      </motion.div>
+        <h2 className="mx-auto max-w-lg" style={{ color: dark ? "#fff" : "var(--ink)" }}>{title}</h2>
+        {text && (
+          <p className="mx-auto mt-4 max-w-md" style={{ fontSize: "1.06rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
+            {text}
+          </p>
+        )}
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3.5">
+          {buttons.map((btn) => {
+            const isOutline = btn.variant === "outline";
+            return (
+              <Link
+                key={btn.label}
+                to={btn.href}
+                className="inline-flex items-center justify-center transition-all duration-200"
+                style={
+                  dark
+                    ? isOutline
+                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 500 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 600 }
+                    : isOutline
+                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 500 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 600 }
+                }
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  if (!isOutline) e.currentTarget.style.boxShadow = "0 6px 20px rgba(168,138,90,.35)";
+                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "#fff"; }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "";
+                  e.currentTarget.style.boxShadow = "";
+                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.2)"; e.currentTarget.style.color = "rgba(255,255,255,.8)"; }
+                }}
+                onClick={() => trackCTAClick(btn.label, "cta-section")}
+                aria-label={btn.label}
+              >
+                {btn.label === "Obtenir ma valeur" ? "Évaluation gratuite" : btn.label}
+                {!isOutline && " →"}
+              </Link>
+            );
+          })}
+        </div>
+
+        {trustLine && (
+          <div className="mt-12 pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
+            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "1.2rem", fontWeight: 300, color: dark ? "rgba(255,255,255,.3)" : "var(--muted)" }}>
+              « {trustLine} »
+            </p>
+          </div>
+        )}
+      </div>
     </section>
   ),
 );
 
 CTASection.displayName = "CTASection";
-
 export default CTASection;
