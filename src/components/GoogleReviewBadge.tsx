@@ -55,7 +55,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
         <span className="flex items-center gap-1.5">
           <Stars />
           <span className="text-[.88rem] font-semibold" style={{ color: "var(--ink)" }}>5.0</span>
-          <span className="text-[.7rem]" style={{ color: "hsl(var(--muted-foreground))" }}>(50+ {reviewsText})</span>
+          
         </span>
       </div>
     </a>
