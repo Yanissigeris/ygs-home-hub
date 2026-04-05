@@ -111,13 +111,6 @@ const lifestyleCards = [
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
 
-/* ── Key facts ── */
-const keyFacts = [
-  { icon: "🏠", label: "Prix médian — maisons", value: "567 000 $", trend: "↑ 3% vs l'an dernier" },
-  { icon: "⏱", label: "Délai moyen de vente", value: "28 jours" },
-  { icon: "📊", label: "Type de marché", value: "Vendeur", note: "(favorise le vendeur bien positionné)" },
-  { icon: "👥", label: "Population approximative", value: "~50 000 hab." },
-];
 
 /* ── Related pages ── */
 const related = [
