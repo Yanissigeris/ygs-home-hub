@@ -8,6 +8,8 @@ import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-e
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
+import ContentBlock from "@/components/ContentBlock";
+import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
