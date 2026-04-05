@@ -7,7 +7,7 @@ import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 
 import { Outlet } from "react-router-dom";
 
-const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
+import SiteFooter from "@/components/SiteFooter";
 
 const PageFallback = () => (
   <div className="animate-fade-in">
