@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ig1 from "@/assets/instagram-1.jpg";
-import ig2 from "@/assets/instagram-2.jpg";
-import ig3 from "@/assets/instagram-3.jpg";
-import ig4 from "@/assets/instagram-4.jpg";
-import ig5 from "@/assets/instagram-5.jpg";
-import ig6 from "@/assets/instagram-6.jpg";
+import ig1 from "@/assets/instagram-1.png";
+import ig2 from "@/assets/instagram-2.png";
+import ig3 from "@/assets/instagram-3.png";
+import ig4 from "@/assets/instagram-4.png";
+import ig5 from "@/assets/instagram-5.png";
+import ig6 from "@/assets/instagram-6.png";
 
-/* TODO: Replace with real Instagram screenshots and handle when available */
 const images = [ig1, ig2, ig3, ig4, ig5, ig6];
 const HANDLE = "yanisgauthiersigeris";
 const PROFILE_URL = `https://instagram.com/${HANDLE}`;
