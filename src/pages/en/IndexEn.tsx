@@ -91,7 +91,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
           { label: "Free Home Valuation", href: "/en/home-valuation" },
           { label: "Book a consultation", href: "/en/contact", variant: "outline" },
         ]}
-        trustLine="I give you the numbers and the options — you decide with full clarity."
+        trustLine="I give you the numbers and the options — you decide."
       />
     </div>
   </div>
