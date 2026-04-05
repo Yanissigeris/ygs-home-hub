@@ -20,6 +20,7 @@ interface HeroSectionProps {
   heroBgImage?: string;
   heroVideo?: string;
   heroVideoPoster?: string;
+  hideCredentialsStrip?: boolean;
 }
 
 /* Stats data */
