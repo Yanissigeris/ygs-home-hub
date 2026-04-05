@@ -38,6 +38,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TrustStrip lang="en" />
     <AwardsMarquee />
+    <StatsSection lang="en" />
 
     <>
       <PathwaySection lang="en" />
