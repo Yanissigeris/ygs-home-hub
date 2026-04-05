@@ -50,7 +50,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 className="group relative flex flex-col transition-all duration-300 cursor-pointer"
                 style={{
-                  padding: "2.5rem 2rem",
+                  padding: "2.5rem 2rem 2rem",
                   background: "rgba(255,255,255,.03)",
                   borderRight: i < guides.length - 1 ? "1px solid rgba(255,255,255,.08)" : "none",
                   borderBottom: "1px solid rgba(255,255,255,.08)",
@@ -89,7 +89,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 {/* CTA */}
                 <span
                   className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2"
-                  style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" }}
+                  style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".08em", textTransform: "uppercase" as const, whiteSpace: "nowrap" }}
                 >
                   {g.cta}
                 </span>
