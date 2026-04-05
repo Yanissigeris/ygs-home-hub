@@ -73,6 +73,18 @@ const BuyerPage = () => (
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="Contexte 2026" title="Acheter à Gatineau en 2026 — un contexte plus favorable" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Les acheteurs bénéficient en 2026 d'un marché plus équilibré qu'en 2022-2024. L'offre de propriétés disponibles a augmenté, les taux d'intérêt se sont stabilisés, et le phénomène de surenchère systématique s'est atténué dans plusieurs segments.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Ce n'est pas pour autant un marché d'acheteurs pur. Les propriétés bien situées et bien présentées se vendent encore rapidement. Mais vous avez maintenant plus de temps pour analyser, visiter et réfléchir avant de faire une offre — ce qui est une amélioration réelle pour les acheteurs sérieux.
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: SCHL — Perspectives du marché 2026 · Chambre immobilière de l'Outaouais.</p>
+    </ContentBlock>
+
 <ContentBlock narrow>
       <SectionHeading
         overline="L'achat immobilier"

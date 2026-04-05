@@ -56,6 +56,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     <div className="reveal">
+      <MarketContext2026 />
+    </div>
+
+    <div className="reveal">
       <PathwaySection />
     </div>
 
