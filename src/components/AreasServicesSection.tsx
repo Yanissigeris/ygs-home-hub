@@ -1,23 +1,9 @@
+import * as React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import SectionHeading from "@/components/SectionHeading";
 
-interface AreaLink {
-  name: string;
-  href: string;
-  detail: string;
-}
-
-interface ServiceLink {
-  label: string;
-  href: string;
-  detail: string;
-}
-
-interface AreasServicesSectionProps {
-  lang?: "fr" | "en";
-}
+interface AreaLink { name: string; href: string; detail: string; }
+interface ServiceLink { label: string; href: string; detail: string; }
+interface AreasServicesSectionProps { lang?: "fr" | "en"; }
 
 const areasFr: AreaLink[] = [
   { name: "Gatineau (centre)", href: "/gatineau", detail: "Centre-ville, services, plex" },
@@ -59,7 +45,7 @@ const servicesEn: ServiceLink[] = [
   { label: "Relocation", href: "/en/relocation", detail: "Ottawa → Gatineau, Montréal, military" },
 ];
 
-const configFr = {
+const cfgFr = {
   overline: "Secteurs et services",
   title: "Où j'interviens et comment je peux vous aider",
   subtitle: "Courtier immobilier actif dans toute la région de Gatineau et l'Outaouais — vente, achat, évaluation, investissement et relocalisation.",
@@ -69,7 +55,7 @@ const configFr = {
   allNeighborhoodsHref: "/quartiers-gatineau",
 };
 
-const configEn = {
+const cfgEn = {
   overline: "Areas & services",
   title: "Where I work and how I can help",
   subtitle: "Real estate broker serving the Gatineau and Outaouais region — selling, buying, valuation, investment and relocation.",
@@ -79,99 +65,81 @@ const configEn = {
   allNeighborhoodsHref: "/en/neighborhoods",
 };
 
-const ease = [0.22, 1, 0.36, 1] as const;
+/* Row component */
+const TableRow = ({ name, detail, href }: { name: string; detail: string; href: string }) => (
+  <Link
+    to={href}
+    className="group flex items-center justify-between gap-3 transition-colors"
+    style={{ padding: "1.15rem 1.75rem", borderBottom: "1px solid var(--border)" }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = ""; }}
+  >
+    <div className="min-w-0">
+      <p style={{ fontSize: ".9rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
+      <p style={{ fontSize: ".73rem", color: "var(--muted)" }} className="truncate">{detail}</p>
+    </div>
+    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "var(--border)" }}>
+      <span className="group-hover:hidden">→</span>
+      <span className="hidden group-hover:inline" style={{ color: "var(--gold)" }}>→</span>
+    </span>
+  </Link>
+);
 
 const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
   const areas = lang === "en" ? areasEn : areasFr;
   const services = lang === "en" ? servicesEn : servicesFr;
-  const cfg = lang === "en" ? configEn : configFr;
+  const cfg = lang === "en" ? cfgEn : cfgFr;
 
   return (
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container max-w-[60rem]">
-        {/* Section intro */}
-        <motion.div
-          className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease }}
-        >
-          <SectionHeading overline={cfg.overline} title={cfg.title} subtitle={cfg.subtitle} centered />
-        </motion.div>
+    <section style={{ padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <div className="section-container">
+        {/* Header */}
+        <div className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto">
+          <p className="label-overline mb-2">{cfg.overline}</p>
+          <h2>{cfg.title}</h2>
+          <p className="mt-3" style={{ fontSize: ".92rem", color: "var(--muted)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
+        </div>
 
-        {/* Two-column grid: areas left, services right */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Areas block */}
-          <div>
-            <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
-              <MapPin size={13} className="inline-block mr-1.5 -mt-0.5 text-accent" />
-              {cfg.areasHeading}
-            </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
-              {areas.map((area, i) => (
-                <motion.div
-                  key={area.href}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.3, delay: i * 0.04, ease }}
-                >
-                  <Link
-                    to={area.href}
-                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-4 py-3 transition-all duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
-                  >
-                    <div className="min-w-0">
-                      <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">
-                        {area.name}
-                      </p>
-                      <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">
-                        {area.detail}
-                      </p>
-                    </div>
-                    <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-all group-hover:text-primary group-hover:translate-x-0.5" />
-                  </Link>
-                </motion.div>
-              ))}
+        {/* 2-column bordered table */}
+        <div
+          className="grid lg:grid-cols-2 overflow-hidden"
+          style={{ border: "1px solid var(--border)", borderRadius: 3 }}
+        >
+          {/* Areas column */}
+          <div style={{ borderRight: "1px solid var(--border)" }} className="lg:border-r">
+            {/* Column header */}
+            <div style={{ background: "var(--ink)", padding: "1.2rem 1.75rem" }}>
+              <p style={{ fontSize: ".62rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
+                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>
+                {cfg.areasHeading}
+              </p>
             </div>
-            <div className="mt-3 text-center lg:text-left">
-              <Link to={cfg.allNeighborhoodsHref} className="inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary hover:underline">
-                {cfg.allNeighborhoods} <ArrowRight size={13} />
-              </Link>
-            </div>
+            {areas.map((a) => (
+              <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />
+            ))}
+            {/* "See all" row */}
+            <Link
+              to={cfg.allNeighborhoodsHref}
+              className="flex items-center justify-between transition-colors"
+              style={{ padding: "1.15rem 1.75rem", background: "var(--gold3)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}
+            >
+              <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
+            </Link>
           </div>
 
-          {/* Services block */}
+          {/* Services column */}
           <div>
-            <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
-              {cfg.servicesHeading}
-            </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
-              {services.map((svc, i) => (
-                <motion.div
-                  key={svc.href}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.3, delay: i * 0.04, ease }}
-                >
-                  <Link
-                    to={svc.href}
-                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-4 py-3 transition-all duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
-                  >
-                    <div className="min-w-0">
-                      <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">
-                        {svc.label}
-                      </p>
-                      <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">
-                        {svc.detail}
-                      </p>
-                    </div>
-                    <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-all group-hover:text-primary group-hover:translate-x-0.5" />
-                  </Link>
-                </motion.div>
-              ))}
+            <div style={{ background: "var(--ink)", padding: "1.2rem 1.75rem" }}>
+              <p style={{ fontSize: ".62rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
+                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>
+                {cfg.servicesHeading}
+              </p>
             </div>
+            {services.map((s) => (
+              <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />
+            ))}
           </div>
         </div>
       </div>
