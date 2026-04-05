@@ -30,6 +30,35 @@ const t = {
   },
 };
 
+const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string }) => (
+  <a
+    href={p.remaxUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    itemScope
+    itemType="https://schema.org/Product"
+    className="group flex flex-col h-full transition-all duration-[350ms] ease-out"
+    style={{ background: "var(--white, #fff)", border: "1px solid var(--border)", borderRadius: 3, overflow: "hidden" }}
+    onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-5px)"; e.currentTarget.style.boxShadow = "0 20px 50px rgba(23,48,59,.1)"; e.currentTarget.style.borderColor = "transparent"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.borderColor = ""; }}
+  >
+    <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
+      <img src={p.image} alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`} itemProp="image" className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]" loading="lazy" decoding="async" width={648} height={486} onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }} />
+      <span className="absolute" style={{ top: "1rem", left: "1rem", background: "var(--gold)", color: "#fff", borderRadius: 20, fontSize: ".62rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", padding: ".25rem .75rem" }}>
+        {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
+      </span>
+    </div>
+    <div className="p-[1.25rem] md:p-[1.5rem]">
+      <p itemProp="name" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.35rem, 4vw, 1.5rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.02em", marginBottom: ".5rem" }}>{p.price}</p>
+      <p style={{ fontSize: ".78rem", color: "var(--muted)" }}>{p.type} · {p.bedrooms} {lang === "fr" ? "ch" : "bd"} · {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}</p>
+      <p style={{ fontSize: ".85rem", fontWeight: 500, color: "var(--ink)", marginTop: ".35rem" }}>{p.address}, {p.city}</p>
+      <span className="inline-flex items-center gap-2 transition-all group-hover:gap-3" style={{ marginTop: "1.25rem", fontSize: ".75rem", fontWeight: 600, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase", borderBottom: "1px solid rgba(168,138,90,.3)", paddingBottom: 2, minHeight: 44 }}>
+        {strings.viewProperty} →
+      </span>
+    </div>
+  </a>
+);
+
 const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps>(
   ({ lang = "fr" }, ref) => {
     const strings = t[lang];
