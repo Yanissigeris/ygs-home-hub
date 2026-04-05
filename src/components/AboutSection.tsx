@@ -66,20 +66,21 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             />
           </div>
           {/* Credential badges */}
-          <div className="absolute right-3 top-6 flex flex-col gap-2 lg:right-[-1rem]">
+          <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-2 pb-4">
             {[c.badge1, c.badge2].map((badge) => (
               <span
                 key={badge}
                 style={{
                   background: "var(--gold)",
                   color: "#fff",
-                  fontSize: ".68rem",
+                  fontSize: ".65rem",
                   fontWeight: 700,
                   letterSpacing: ".08em",
                   textTransform: "uppercase",
-                  padding: ".55rem 1.1rem",
+                  padding: ".45rem .9rem",
                   borderRadius: 2,
                   boxShadow: "0 4px 20px rgba(168,138,90,.3)",
+                  backdropFilter: "blur(4px)",
                 }}
               >
                 {badge}
