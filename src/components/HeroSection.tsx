@@ -2,10 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
-/* Inline star SVG — keeps lucide-react out of the critical bundle */
-const StarIcon = () => (
-  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="fill-[hsl(36_50%_55%/0.7)] text-[hsl(36_50%_55%/0.7)]"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-);
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeroSectionProps {
   overline?: string;
@@ -25,6 +22,18 @@ interface HeroSectionProps {
   heroVideoPoster?: string;
 }
 
+/* Stats data */
+const statsFr = [
+  { value: "~9 ans", label: "d'expérience" },
+  { value: "5 ★", label: "Google + Facebook" },
+  { value: "Hall of Fame", label: "RE/MAX" },
+];
+const statsEn = [
+  { value: "~9 yrs", label: "experience" },
+  { value: "5 ★", label: "Google + Facebook" },
+  { value: "Hall of Fame", label: "RE/MAX" },
+];
+
 const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
     {
@@ -33,8 +42,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       subtitle,
       primaryCta,
       secondaryCta,
-      trustLine,
-      socialProof,
       compact,
       backgroundImage,
       agentImage,
@@ -49,6 +56,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const sectionRef = React.useRef<HTMLElement>(null);
     const videoRef = React.useRef<HTMLVideoElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
+    const lang = useLanguage();
+    const stats = lang === "en" ? statsEn : statsFr;
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
         (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
@@ -58,7 +67,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       [ref]
     );
 
-    /* Lazy-load video: wait until section is near-viewport, then set src */
     React.useEffect(() => {
       if (!heroVideo) return;
       const section = sectionRef.current;
@@ -86,285 +94,186 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       return () => el.removeEventListener("playing", onPlaying);
     }, []);
 
-    return (
-      <section
-        ref={combinedRef}
-        className="relative overflow-x-clip overflow-y-hidden"
-        style={{ background: "#10242D" }}
-      >
-        {/* SHIMMER — while video loads */}
-        {heroVideo && (
-          <div
-            className="absolute inset-0 transition-opacity duration-[1.6s] ease-out"
-            style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none" }}
-            aria-hidden="true"
-          >
-            <div
-              className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]"
-              style={{
-                background:
-                  "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%), " +
-                  "radial-gradient(ellipse 100% 60% at 80% 30%, hsl(36 38% 46% / 0.08) 0%, transparent 50%)",
-              }}
-            />
-          </div>
-        )}
-
-        {/* VIDEO BACKGROUND */}
-        {heroVideo && (
-          <>
-            <div
-              className="absolute inset-0 overflow-hidden"
-              style={{
-                backgroundImage: heroBgImage ? `url(${heroBgImage})` : undefined,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <video
-                ref={videoRef}
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster={heroVideoPoster || heroBgImage}
-                preload="none"
-                width={1920}
-                height={1080}
-                // @ts-ignore
-                fetchpriority="high"
-                className="h-full w-full object-cover"
-                style={{ filter: "brightness(0.78) saturate(0.7) contrast(1.05)" }}
-              />
-            </div>
-            {/* Overlay — stronger, cleaner */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to right, hsl(200 42% 10% / 0.88) 0%, hsl(200 42% 12% / 0.72) 30%, hsl(200 42% 14% / 0.50) 55%, hsl(200 42% 14% / 0.35) 80%, hsl(200 42% 14% / 0.28) 100%)",
-              }}
-            />
-            <div
-              className="absolute inset-x-0 bottom-0 h-24"
-              style={{
-                background: "linear-gradient(to top, #10242D 0%, transparent 100%)",
-              }}
-            />
-          </>
-        )}
-
-        {/* STATIC IMAGE BACKGROUND */}
-        {heroBgImage && !heroVideo && (
-          <>
-            <div className="absolute inset-0 overflow-hidden">
-              <img
-                src={heroBgImage}
-                alt=""
-                role="presentation"
-                className="h-full w-full object-cover"
-                style={{ filter: "brightness(0.85) saturate(0.8) contrast(0.95)" }}
-                loading="eager"
-                // @ts-ignore
-                fetchpriority="high"
-              />
-            </div>
-            <div
-              className="absolute inset-0 md:hidden"
-              style={{
-                background:
-                  "linear-gradient(to bottom, hsl(200 42% 11% / 0.78) 0%, hsl(200 42% 13% / 0.58) 60%, hsl(200 42% 14% / 0.72) 100%)",
-              }}
-            />
-            <div
-              className="absolute inset-0 hidden md:block"
-              style={{
-                background:
-                  "linear-gradient(to right, #10242D 0%, hsl(200 42% 14% / 0.85) 18%, hsl(200 42% 14% / 0.35) 45%, hsl(200 42% 14% / 0.20) 70%, hsl(200 42% 14% / 0.15) 100%)",
-              }}
-            />
-            <div
-              className="absolute inset-x-0 bottom-0 h-24"
-              style={{
-                background: "linear-gradient(to top, #10242D 0%, transparent 100%)",
-              }}
-            />
-          </>
-        )}
-
-        {/* CONTENT */}
-        <div
-          className={`section-container relative z-20 ${
-            compact
-              ? "py-10 sm:py-18 md:py-20"
-              : agentImage
-              ? "pt-[4rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
-              : "pt-[4rem] pb-[3.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
-          }`}
-        >
-          <div
-            className={`grid items-end ${
-              agentImage
-                ? "gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]"
-                : backgroundImage
-                ? "gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[55%_45%]"
-                : ""
-            }`}
-          >
-            {/* TEXT */}
-            <div
-              className={`${backgroundImage || agentImage ? "min-w-0" : "max-w-[40rem]"} ${
-                agentImage ? "pb-[3rem] md:pb-[4.5rem] lg:pb-[5.5rem]" : ""
-              } relative min-w-0 animate-fade-in`}
-            >
-              {overline && (
-                <p
-                  className="mb-6 text-[0.6rem] font-medium uppercase tracking-[0.28em] sm:text-[0.65rem]"
-                  style={{ color: "hsl(36 38% 56% / 0.5)" }}
-                >
-                  {overline.replace(/[·•]/g, "  ·  ")}
-                </p>
-              )}
-
-              <h1
-                style={{ color: "#F5F1E8" }}
-                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] min-[391px]:max-w-[16ch]"
-              >
-                {title}
-              </h1>
-
-              <p
-                className="mt-4 max-w-[28rem] text-[0.9375rem] leading-[1.65] font-light sm:mt-6 sm:text-[1.0625rem] sm:leading-[1.75] max-[390px]:max-w-[22rem]"
-                style={{ color: "hsl(200 15% 68%)" }}
-              >
-                {subtitle}
-              </p>
-
+    /* Compact hero for inner pages */
+    if (compact || (!agentImage && !heroVideo && !heroBgImage)) {
+      return (
+        <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
+          {heroBgImage && (
+            <>
+              <div className="absolute inset-0 overflow-hidden">
+                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" />
+              </div>
+              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.4) 100%)" }} />
+            </>
+          )}
+          <div className="section-container relative z-20 py-16 sm:py-20 md:py-24">
+            <div className="max-w-[40rem]">
+              {overline && <p className="label-overline mb-6" style={{ color: "var(--gold)" }}>{overline}</p>}
+              <h1 style={{ color: "#F7F4EE" }}>{title}</h1>
+              <p className="mt-4 max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6" style={{ color: "rgba(255,255,255,.6)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
-                <div className="mt-7 flex w-full flex-col items-stretch gap-4 sm:mt-10 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   {primaryCta && (
-                    <Button
-                      size="xl"
-                      variant="accent"
-                      className="w-full min-[391px]:w-auto min-[391px]:shrink-0 tracking-[0.02em] text-[0.9375rem] h-[3.25rem] px-8"
-                      asChild
-                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
-                    >
-                      <Link to={primaryCta.href}>{primaryCta.label}</Link>
+                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
+                      <Link to={primaryCta.href}>{primaryCta.label} →</Link>
                     </Button>
                   )}
                   {secondaryCta && (
-                    <Link
-                      to={secondaryCta.href}
-                      className="inline-flex items-center justify-center text-[0.8125rem] font-medium tracking-[0.01em] transition-all duration-200 hover:text-[#F5F1E8]/90 whitespace-nowrap border-b border-current/20 pb-px hover:border-current/40"
-                      style={{ color: "hsl(200 15% 72% / 0.65)" }}
-                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
-                    >
-                      {secondaryCta.label}
-                    </Link>
+                    <Link to={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.5)", borderBottom: "1px solid rgba(255,255,255,.2)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
                   )}
                 </div>
               )}
-
-              {/* Social proof — minimal, quiet */}
-              {socialProof && (
-                <div className="mt-5 sm:mt-8 flex items-center gap-2">
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <StarIcon key={i} />
-                    ))}
-                  </div>
-                  <span
-                    className="text-[0.8125rem] font-medium tracking-[0.02em]"
-                    style={{ color: "hsl(200 15% 68% / 0.6)" }}
-                  >
-                    {socialProof}
-                  </span>
-                </div>
-              )}
-
-              {trustLine && (
-                <p
-                  className="mt-4 sm:mt-6 max-w-[26rem] text-[0.75rem] font-normal tracking-[0.03em] max-[390px]:pr-2"
-                  style={{ color: "hsl(200 15% 55% / 0.35)" }}
-                >
-                  {trustLine}
-                </p>
-              )}
             </div>
-
-            {/* PORTRAIT — DESKTOP */}
-            {agentImage && (
-              <div
-                className="relative z-10 hidden self-end md:flex md:items-end md:justify-end animate-fade-in"
-                style={{ animationDelay: "200ms" }}
-              >
-                <div
-                  className="relative"
-                  style={{
-                    maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
-                    WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
-                  }}
-                >
-                  <img
-                    src={agentImage}
-                    alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
-                    width={640}
-                    height={960}
-                    className="relative z-0 w-[340px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
-                    loading="eager"
-                    // @ts-ignore
-                    fetchpriority="high"
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* PORTRAIT — MOBILE */}
-            {agentImage && (
-              <div
-                className="relative z-10 flex justify-center items-end overflow-hidden md:hidden animate-fade-in"
-                style={{ animationDelay: "150ms" }}
-              >
-                <div
-                  className="relative"
-                  style={{
-                    maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
-                    WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)",
-                  }}
-                >
-                  <img
-                    src={agentImageSm || agentImage}
-                    srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
-                    sizes="260px"
-                    alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
-                    width={320}
-                    height={480}
-                    className="relative z-0 w-[260px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
-                    loading="eager"
-                    // @ts-ignore
-                    fetchpriority="high"
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* BACKGROUND IMAGE DISPLAY (non-agent) */}
-            {backgroundImage && !agentImage && (
-              <div className="hidden lg:block animate-fade-in" style={{ animationDelay: "200ms" }}>
-                <div className="relative overflow-hidden rounded-[1.75rem] shadow-2xl">
-                  <img
-                    src={backgroundImage}
-                    alt=""
-                    role="presentation"
-                    className="aspect-[4/3] w-full object-cover"
-                    loading="eager"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-                </div>
-              </div>
-            )}
           </div>
+        </section>
+      );
+    }
+
+    /* Full homepage hero — 2-column layout */
+    return (
+      <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
+        <div className="grid min-h-[100vh] lg:grid-cols-2">
+          {/* ─── LEFT COLUMN ─── */}
+          <div className="relative flex flex-col justify-center" style={{ background: "var(--ink)", padding: "clamp(3rem, 7vw, 7rem) clamp(1.25rem, 5vw, 5rem)" }}>
+            {/* Decorative right edge line (desktop) */}
+            <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
+
+            {overline && (
+              <p className="label-overline mb-8 opacity-0 animate-hero-fade-up" style={{ color: "var(--gold)", animationDelay: "0.2s", animationFillMode: "forwards" }}>
+                {overline.replace(/[·•]/g, "  ·  ")}
+              </p>
+            )}
+
+            <h1 className="max-w-[16ch] opacity-0 animate-hero-fade-up" style={{ color: "#F7F4EE", animationDelay: "0.35s", animationFillMode: "forwards" }}>
+              {lang === "fr" ? (
+                <>Votre <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>courtier</em>{" "}<strong style={{ fontWeight: 700 }}>immobilier</strong><br />en Outaouais</>
+              ) : (
+                <>Your <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>real estate</em>{" "}<strong style={{ fontWeight: 700 }}>broker</strong><br />in Outaouais</>
+              )}
+            </h1>
+
+            <p className="mt-6 max-w-[420px] text-[1rem] font-light leading-[1.8] opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.6)", animationDelay: "0.5s", animationFillMode: "forwards" }}>
+              {subtitle}
+            </p>
+
+            {(primaryCta || secondaryCta) && (
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
+                {primaryCta && (
+                  <Link
+                    to={primaryCta.href}
+                    className="inline-flex items-center justify-center px-8 py-[0.9rem] text-[0.85rem] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5"
+                    style={{ background: "var(--gold)", borderRadius: "3px", boxShadow: "0 4px 20px rgba(168,138,90,.3)" }}
+                    onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
+                  >
+                    {primaryCta.label} →
+                  </Link>
+                )}
+                {secondaryCta && (
+                  <Link
+                    to={secondaryCta.href}
+                    className="inline-flex items-center justify-center px-8 py-[0.9rem] text-[0.85rem] font-medium transition-all duration-300 hover:border-white/50 hover:text-white"
+                    style={{ color: "rgba(255,255,255,.8)", border: "1px solid rgba(255,255,255,.2)", borderRadius: "3px" }}
+                    onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
+                  >
+                    {secondaryCta.label}
+                  </Link>
+                )}
+              </div>
+            )}
+
+            {/* Credentials strip */}
+            <div className="mt-10 pt-8 opacity-0 animate-hero-fade-up" style={{ borderTop: "1px solid rgba(255,255,255,.08)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+              <div className="flex items-start gap-6 sm:gap-10">
+                {stats.map((stat, i) => (
+                  <React.Fragment key={stat.label}>
+                    {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
+                    <div className="text-center sm:text-left">
+                      <p className="font-heading text-[2rem] font-semibold leading-none tracking-tight text-white sm:text-[2.4rem]" style={{ letterSpacing: "-.02em" }}>{stat.value}</p>
+                      <p className="mt-2 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "rgba(255,255,255,.35)" }}>{stat.label}</p>
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ─── RIGHT COLUMN ─── */}
+          <div className="relative hidden lg:block overflow-hidden" style={{ background: "var(--ink2)" }}>
+            {/* Background image / video */}
+            {heroVideo && (
+              <>
+                <div className="absolute inset-0 transition-opacity duration-[1.6s]" style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none" }} aria-hidden="true">
+                  <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
+                </div>
+                <div className="absolute inset-0">
+                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} />
+                </div>
+              </>
+            )}
+            {heroBgImage && !heroVideo && (
+              <div className="absolute inset-0">
+                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} loading="eager" />
+              </div>
+            )}
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.2) 100%)" }} />
+
+            {/* Yanis portrait */}
+            {agentImage && (
+              <div className="absolute inset-0 z-[2] flex items-end justify-center">
+                <img
+                  src={agentImage}
+                  alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+                  width={640}
+                  height={960}
+                  className="w-[380px] xl:w-[440px] object-contain object-bottom"
+                  style={{ height: "90%", maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
+                  loading="eager"
+                />
+              </div>
+            )}
+
+            {/* Floating stats card */}
+            <div className="absolute bottom-12 left-10 right-10 z-[3] opacity-0 animate-hero-fade-up" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
+              <div className="backdrop-blur-xl" style={{ background: "rgba(247,244,238,.96)", borderLeft: "3px solid var(--gold)", borderRadius: "3px", padding: "1.6rem 2rem" }}>
+                <p className="text-[.62rem] font-semibold uppercase tracking-[.14em] mb-4" style={{ color: "var(--gold)" }}>
+                  {lang === "en" ? "PROFESSIONAL RECOGNITION" : "RECONNAISSANCES PROFESSIONNELLES"}
+                </p>
+                <div className="grid grid-cols-3 gap-0">
+                  {stats.map((stat, i) => (
+                    <div key={stat.label} className="text-center" style={{ borderLeft: i > 0 ? "1px solid rgba(23,48,59,.1)" : "none" }}>
+                      <p className="font-heading text-[2rem] font-semibold leading-none" style={{ color: "var(--ink)", letterSpacing: "-.02em" }}>{stat.value}</p>
+                      <p className="mt-1.5 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "var(--gold)" }}>{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ─── MOBILE: Agent image below text ─── */}
+          {agentImage && (
+            <div className="relative flex justify-center items-end overflow-hidden lg:hidden" style={{ background: "var(--ink2)" }}>
+              {heroVideo && (
+                <div className="absolute inset-0">
+                  {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} />}
+                </div>
+              )}
+              <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.85) 0%, rgba(23,48,59,.3) 100%)" }} />
+              <img
+                src={agentImageSm || agentImage}
+                srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
+                sizes="260px"
+                alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+                width={320}
+                height={480}
+                className="relative z-[2] w-[260px] sm:w-[300px] object-contain object-bottom"
+                style={{ maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
+                loading="eager"
+              />
+            </div>
+          )}
         </div>
       </section>
     );
