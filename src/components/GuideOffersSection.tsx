@@ -39,7 +39,7 @@ const GuideOffersSection = ({ background = "default", lang = "fr" }: GuideOffers
         >
           <SectionHeading overline={heading.overline} title={heading.title} subtitle={heading.subtitle} centered />
         </motion.div>
-        <div className="mt-5 sm:mt-8 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 sm:mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {guides.map((guide, i) => (
             <motion.div
               key={guide.guideType}

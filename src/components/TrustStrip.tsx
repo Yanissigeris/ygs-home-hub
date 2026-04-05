@@ -29,10 +29,10 @@ const TrustStrip = React.forwardRef<HTMLElement, TrustStripProps>(({ lang = "fr"
   const items = lang === "en" ? itemsEn : itemsFr;
   return (
     <section ref={ref} className="border-b border-border/40 bg-secondary/40">
-      <div className="section-container py-3 sm:py-6">
-        <div className="flex flex-col items-center gap-2.5 sm:flex-row sm:justify-center sm:gap-10 animate-fade-in">
+      <div className="section-container py-5 sm:py-6">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10 animate-fade-in">
           {items.map((item) => (
-            <div key={item.text} className="flex items-center gap-2 text-[0.75rem] sm:text-[0.875rem] font-medium text-muted-foreground/65">
+            <div key={item.text} className="flex items-center gap-2.5 text-[0.875rem] font-medium text-muted-foreground/65">
               <item.Icon />
               <span>{item.text}</span>
             </div>

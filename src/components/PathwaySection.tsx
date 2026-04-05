@@ -33,11 +33,11 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
   return (
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container">
-        <motion.div className="mx-auto mb-5 sm:mb-10 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.div className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
           <p className="label-overline mb-3">{heading.overline}</p>
           <h2>{heading.title}</h2>
         </motion.div>
-        <div className="grid gap-4 sm:gap-7 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
           {pathways.map((p, i) => (
             <motion.div key={p.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="group">
               <Link to={p.href} className="card-elevated flex h-full flex-col overflow-hidden border border-border/40 bg-card transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">

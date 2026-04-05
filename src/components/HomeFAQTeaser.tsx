@@ -19,7 +19,7 @@ interface FAQTeaserProps {
 
 const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
   ({ overline = "FAQ", title = "Questions fréquentes", items, linkLabel = "Voir toutes les questions", linkHref = "/faq" }, ref) => (
-    <section ref={ref} className="section-padding-md bg-secondary/20">
+    <section ref={ref} className="section-padding bg-secondary/20">
       <div className="section-container max-w-[44rem]">
         <motion.div
           className="text-center mb-5 sm:mb-8"

@@ -7,7 +7,7 @@ import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 
 import { Outlet } from "react-router-dom";
 
-import SiteFooter from "@/components/SiteFooter";
+const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 
 const PageFallback = () => (
   <div className="animate-fade-in">
@@ -88,7 +88,9 @@ const SiteLayout = () => (
         <Outlet />
       </React.Suspense>
     </main>
-    <SiteFooter />
+    <React.Suspense fallback={null}>
+      <SiteFooter />
+    </React.Suspense>
   </div>
 );
 

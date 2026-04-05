@@ -198,8 +198,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             compact
               ? "py-10 sm:py-18 md:py-20"
               : agentImage
-              ? "pt-[2.5rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
-              : "pt-[2.5rem] pb-[2.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
+              ? "pt-[4rem] pb-0 sm:pt-[6rem] md:pt-[7rem] lg:pt-[8rem]"
+              : "pt-[4rem] pb-[3.5rem] sm:pt-[6.5rem] sm:pb-[5.5rem] md:pt-[7rem] md:pb-[6rem]"
           }`}
         >
           <div
@@ -228,20 +228,20 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               <h1
                 style={{ color: "#F5F1E8" }}
-                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] text-[1.875rem] min-[391px]:max-w-[16ch] sm:text-[2.875rem] md:text-[3.625rem] xl:text-[4rem]"
+                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] min-[391px]:max-w-[16ch]"
               >
                 {title}
               </h1>
 
               <p
-                className="mt-3 max-w-[28rem] text-[0.8125rem] leading-[1.55] font-light sm:mt-6 sm:text-[1.0625rem] sm:leading-[1.75] max-[390px]:max-w-[22rem]"
+                className="mt-4 max-w-[28rem] text-[0.9375rem] leading-[1.65] font-light sm:mt-6 sm:text-[1.0625rem] sm:leading-[1.75] max-[390px]:max-w-[22rem]"
                 style={{ color: "hsl(200 15% 68%)" }}
               >
                 {subtitle}
               </p>
 
               {(primaryCta || secondaryCta) && (
-                <div className="mt-5 flex w-full flex-col items-stretch gap-3 sm:mt-10 sm:gap-4 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
+                <div className="mt-7 flex w-full flex-col items-stretch gap-4 sm:mt-10 min-[391px]:flex-row min-[391px]:items-center max-[390px]:max-w-[18rem]">
                   {primaryCta && (
                     <Button
                       size="xl"
@@ -268,7 +268,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Social proof — minimal, quiet */}
               {socialProof && (
-                <div className="mt-4 sm:mt-8 flex items-center gap-2">
+                <div className="mt-5 sm:mt-8 flex items-center gap-2">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <StarIcon key={i} />
@@ -311,7 +311,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
                     width={640}
                     height={960}
-                    className="relative z-0 w-[300px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] md:w-[340px] lg:w-[400px] xl:w-[440px]"
+                    className="relative z-0 w-[340px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] lg:w-[400px] xl:w-[440px]"
                     loading="eager"
                     // @ts-ignore
                     fetchpriority="high"
@@ -340,7 +340,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
                     width={320}
                     height={480}
-                    className="relative z-0 w-[200px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] min-[391px]:w-[220px] sm:w-[300px]"
+                    className="relative z-0 w-[260px] aspect-[640/960] object-contain object-bottom drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:w-[300px]"
                     loading="eager"
                     // @ts-ignore
                     fetchpriority="high"

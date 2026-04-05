@@ -45,8 +45,8 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
     <section ref={ref} className="section-padding bg-background">
       <div className="section-container overflow-hidden grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-          <div className="overflow-hidden rounded-[1.25rem] sm:rounded-[1.75rem]">
-            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 639px) 60vw, (max-width: 1023px) 90vw, 40vw" alt={c.imgAlt} className="aspect-[4/5] sm:aspect-[3/4] w-full object-cover max-w-[280px] mx-auto sm:max-w-none" loading="lazy" decoding="async" width={565} height={800} />
+          <div className="overflow-hidden rounded-[1.75rem]">
+            <img src={yanisAbout} srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`} sizes="(max-width: 1023px) 90vw, 40vw" alt={c.imgAlt} className="aspect-[3/4] md:aspect-[3/4] w-full object-cover" loading="lazy" decoding="async" width={565} height={800} />
           </div>
         </motion.div>
 

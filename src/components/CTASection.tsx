@@ -17,7 +17,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
   ({ overline, title, text, buttons, trustLine, dark }, ref) => (
     <section
       ref={ref}
-      className={dark ? "py-8 sm:py-24 hero-gradient relative overflow-hidden" : "section-padding bg-secondary/30"}
+      className={dark ? "py-10 sm:py-24 hero-gradient relative overflow-hidden" : "section-padding bg-secondary/30"}
     >
       {dark && <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(195_30%_28%_/_0.08)_0%,_transparent_50%)]" />}
       <motion.div

@@ -14,7 +14,7 @@ interface TestimonialSliderProps {
 
 /* ── Slide card ── */
 const SlideCard = ({ review }: { review: Review }) => (
-  <div className="testimonial-card flex h-full flex-col border border-border/30 bg-card px-5 py-5 sm:px-8 sm:py-9">
+  <div className="testimonial-card flex h-full flex-col border border-border/30 bg-card px-6 py-7 sm:px-8 sm:py-9">
     {/* Stars — minimal */}
     <div className="mb-5 flex gap-[3px]">
       {Array.from({ length: 5 }).map((_, i) => (
@@ -138,7 +138,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
       <section ref={ref} className="section-padding bg-background">
         <div className="section-container">
           {/* Heading */}
-          <div className="mx-auto mb-6 sm:mb-10 max-w-[42rem] text-center">
+          <div className="mx-auto mb-8 sm:mb-10 max-w-[42rem] text-center">
             {overline && <p className="label-overline mb-3">{overline}</p>}
             <h2>{title}</h2>
           </div>
