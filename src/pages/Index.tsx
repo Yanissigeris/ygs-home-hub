@@ -16,6 +16,7 @@ import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
+import InstagramGrid from "@/components/InstagramGrid";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
 
@@ -95,6 +96,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         linkHref="/faq"
         linkLabel="Voir toutes les questions"
       />
+    </div>
+
+    <div className="reveal">
+      <InstagramGrid />
     </div>
 
     <div className="reveal">
