@@ -315,6 +315,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               />
             </div>
           )}
+          {/* Scroll indicator — mobile only */}
+          {showScrollHint && (
+            <div
+              className="absolute bottom-6 left-1/2 z-10 md:hidden"
+              style={{
+                transform: "translateX(-50%)",
+                color: "rgba(255,255,255,.4)",
+                fontSize: "1.5rem",
+                animation: "hero-bounce 2s ease infinite",
+              }}
+              aria-hidden="true"
+            >
+              ⌄
+            </div>
+          )}
         </div>
       </section>
     );
