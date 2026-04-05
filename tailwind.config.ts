@@ -108,6 +108,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "hero-fade-up": "hero-fade-up .7s var(--ease) forwards",
         "marquee": "marquee 30s linear infinite",
+        "hero-bounce": "hero-bounce 2s ease infinite",
       },
     },
   },
