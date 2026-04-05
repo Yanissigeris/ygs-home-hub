@@ -48,13 +48,13 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
             <Link
               key={p.href}
               to={p.href}
-              className="group flex flex-col transition-all duration-300 relative"
+              className="group flex flex-col transition-all duration-300 relative overflow-hidden"
               style={{
                 borderRight: i < 2 ? "1px solid var(--border)" : "none",
                 borderBottom: "none",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.zIndex = "2"; e.currentTarget.style.boxShadow = "0 30px 80px rgba(23,48,59,.15)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.zIndex = ""; e.currentTarget.style.boxShadow = ""; }}
+              onMouseEnter={(e) => { e.currentTarget.style.zIndex = "2"; e.currentTarget.style.boxShadow = "0 30px 80px rgba(23,48,59,.15)"; e.currentTarget.style.transform = "translateY(-5px)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.zIndex = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.transform = ""; }}
             >
               {/* Image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
