@@ -80,6 +80,7 @@ const PageFallback = () => (
 const SiteLayout = () => (
   <div className="flex min-h-screen flex-col font-body">
     <JsonLdSchema />
+    <LangMeta />
     <BreadcrumbJsonLd />
     <UtilityBar />
     <SiteHeader />
