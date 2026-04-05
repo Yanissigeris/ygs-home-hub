@@ -187,22 +187,18 @@ const AylmerPage = () => (
           </p>
         </div>
 
-        {/* Right — key facts card (2 cols) */}
+        {/* Right — CTA facts card (2 cols) */}
         <div className="lg:col-span-2">
           <div className="rounded-md border border-border bg-background p-6 space-y-5">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Aylmer en chiffres</h3>
-            {keyFacts.map((f) => (
-              <div key={f.label} className="space-y-0.5">
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>{f.icon}</span> {f.label}
-                </p>
-                <p className="text-lg font-semibold text-foreground">{f.value}</p>
-                {f.trend && <p className="text-xs text-accent">{f.trend}</p>}
-                {f.note && <p className="text-xs text-muted-foreground">{f.note}</p>}
-              </div>
-            ))}
-            <p className="text-[0.7rem] text-muted-foreground/60 pt-2 border-t border-border">
-              Données indicatives basées sur les ventes récentes. Mise à jour mensuelle.
+            <h3 className="font-serif text-lg font-semibold text-foreground">Combien vaut une propriété ici?</h3>
+            <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
+              Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
+            </p>
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            </Button>
+            <p className="text-[0.72rem] text-muted-foreground italic text-center">
+              Gratuit · Sans engagement · Réponse en 24-48h
             </p>
           </div>
         </div>
