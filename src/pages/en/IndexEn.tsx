@@ -8,7 +8,6 @@ import StatsSection from "@/components/StatsSection";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
-import MarketContext2026 from "@/components/MarketContext2026";
 import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
@@ -56,9 +55,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       <StatsSection lang="en" />
     </div>
 
-    <div className="reveal">
-      <MarketContext2026 lang="en" />
-    </div>
 
     <div className="reveal">
       <PathwaySection lang="en" />
