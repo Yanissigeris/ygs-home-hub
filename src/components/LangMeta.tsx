@@ -1,7 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-/** Maps FR paths to EN paths and vice-versa. */
 const frToEn: Record<string, string> = {
   "/": "/en",
   "/proprietes": "/en/properties",
@@ -22,7 +22,6 @@ const frToEn: Record<string, string> = {
   "/investir-plex-gatineau": "/en/plex",
   "/analyse-plex-gatineau": "/en/plex-analysis",
   "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
-  "/plateau-aylmer": "/en/plateau-aylmer",
   "/hull": "/en/hull",
   "/buckingham-masson-angers": "/en/buckingham",
   "/ressources": "/en/resources",
@@ -30,8 +29,6 @@ const frToEn: Record<string, string> = {
   "/faq": "/en/faq",
   "/temoignages": "/en/testimonials",
   "/contact-yanis": "/en/contact",
-  "/merci": "/en/thank-you",
-  "/merci-evaluation": "/en/thank-you-valuation",
   "/plan-vendeur-gatineau": "/en/seller-plan",
   "/quand-vendre-a-gatineau": "/en/when-to-sell",
   "/vendre-un-plex-a-gatineau": "/en/sell-plex",
@@ -60,25 +57,57 @@ const frToEn: Record<string, string> = {
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
-const LanguageSwitch = () => {
+const DOMAIN = "https://yanisgauthier.com";
+
+/**
+ * Sets <html lang> and injects hreflang <link> tags on every route change.
+ */
+const LangMeta = () => {
   const lang = useLanguage();
   const { pathname } = useLocation();
 
-  const targetPath = lang === "fr"
-    ? frToEn[pathname] ?? "/en"
-    : enToFr[pathname] ?? "/";
+  useEffect(() => {
+    // 1. Set html lang
+    document.documentElement.lang = lang === "en" ? "en-CA" : "fr-CA";
 
-  return (
-    <Link
-      to={targetPath}
-      className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[0.75rem] tracking-[0.03em] transition-colors hover:bg-secondary/60"
-      title={lang === "fr" ? "Switch to English" : "Passer en français"}
-    >
-      <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? "var(--ink)" : "var(--muted)" }}>FR</span>
-      <span style={{ color: "var(--muted)", opacity: 0.4 }}>|</span>
-      <span style={{ fontWeight: lang === "en" ? 600 : 400, color: lang === "en" ? "var(--ink)" : "var(--muted)" }}>EN</span>
-    </Link>
-  );
+    // 2. Compute FR and EN URLs
+    let frPath: string;
+    let enPath: string;
+    if (lang === "en") {
+      enPath = pathname;
+      frPath = enToFr[pathname] ?? "/";
+    } else {
+      frPath = pathname;
+      enPath = frToEn[pathname] ?? "/en";
+    }
+
+    const frUrl = `${DOMAIN}${frPath}`;
+    const enUrl = `${DOMAIN}${enPath}`;
+
+    // 3. Inject/update hreflang links
+    const setHreflang = (hreflang: string, href: string) => {
+      const id = `hreflang-${hreflang}`;
+      let link = document.getElementById(id) as HTMLLinkElement | null;
+      if (!link) {
+        link = document.createElement("link");
+        link.id = id;
+        link.rel = "alternate";
+        link.setAttribute("hreflang", hreflang);
+        document.head.appendChild(link);
+      }
+      link.href = href;
+    };
+
+    setHreflang("fr-CA", frUrl);
+    setHreflang("en-CA", enUrl);
+    setHreflang("x-default", frUrl);
+
+    return () => {
+      // cleanup on unmount (won't normally fire in SPA but good practice)
+    };
+  }, [lang, pathname]);
+
+  return null;
 };
 
-export default LanguageSwitch;
+export default LangMeta;
