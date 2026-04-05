@@ -39,7 +39,9 @@ interface AboutSectionProps { lang?: "fr" | "en"; }
 
 const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = "fr" }, ref) => {
   const c = lang === "en" ? contentEn : contentFr;
-
+  const [expanded, setExpanded] = React.useState(false);
+  const readMore = lang === "en" ? "Read more ↓" : "Lire la suite ↓";
+  const readLess = lang === "en" ? "Read less ↑" : "Lire moins ↑";
   return (
     <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--cream)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
       {/* Ghosted YGS watermark */}
