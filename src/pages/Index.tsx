@@ -44,7 +44,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
-    
+    <QuickActionStrip />
     <AwardsMarquee />
 
     <div className="reveal">
