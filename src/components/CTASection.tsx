@@ -18,7 +18,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
       className="relative overflow-hidden"
       style={{
         background: dark ? "var(--ink)" : "var(--cream)",
-        padding: dark ? "7rem 0" : "clamp(3.5rem, 6vw, 7rem) 0",
+        padding: dark ? "clamp(4rem, 8vw, 7rem) 0" : "clamp(3.5rem, 6vw, 7rem) 0",
         textAlign: "center",
       }}
     >
@@ -31,33 +31,34 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         />
       )}
 
-      <div className="section-container relative">
+      <div className="section-container relative px-[1.25rem] sm:px-6 md:px-8">
         {overline && (
-          <p className="label-overline mb-3" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
+          <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
         )}
         <h2 className="mx-auto max-w-lg" style={{ color: dark ? "#fff" : "var(--ink)" }}>{title}</h2>
         {text && (
-          <p className="mx-auto mt-4 max-w-md" style={{ fontSize: "1.06rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
+          <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
             {text}
           </p>
         )}
 
-        <div className="mt-8 flex flex-wrap justify-center gap-3.5">
+        {/* Buttons — stack vertically on mobile */}
+        <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3">
           {buttons.map((btn) => {
             const isOutline = btn.variant === "outline";
             return (
               <Link
                 key={btn.label}
                 to={btn.href}
-                className="inline-flex items-center justify-center transition-all duration-200"
+                className="inline-flex items-center justify-center transition-all duration-200 w-full sm:w-auto text-center"
                 style={
                   dark
                     ? isOutline
-                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 500 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 600 }
+                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 500, minHeight: 44 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, minHeight: 44 }
                     : isOutline
-                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 500 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 2rem", fontSize: ".85rem", fontWeight: 600 }
+                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 500, minHeight: 44 }
+                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, minHeight: 44 }
                 }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-2px)";
@@ -80,8 +81,8 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         </div>
 
         {trustLine && (
-          <div className="mt-12 pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
-            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "1.2rem", fontWeight: 300, color: dark ? "rgba(255,255,255,.3)" : "var(--muted)" }}>
+          <div className="mt-8 sm:mt-12 pt-8 sm:pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
+            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.2rem)", fontWeight: 300, color: dark ? "rgba(255,255,255,.3)" : "var(--muted)" }}>
               « {trustLine} »
             </p>
           </div>

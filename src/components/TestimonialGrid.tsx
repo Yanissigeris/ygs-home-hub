@@ -18,7 +18,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     style={{
       border: "1px solid rgba(255,255,255,.08)",
       borderRadius: 3,
-      padding: "2.5rem",
+      padding: "clamp(1.75rem, 4vw, 2.5rem)",
       background: "rgba(255,255,255,.03)",
       transitionDelay: `${index * 0.1}s`,
     }}
@@ -29,11 +29,11 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
 
     {/* Decorative quote mark */}
-    <span style={{ fontFamily: "var(--serif)", fontSize: "4.5rem", lineHeight: ".8", color: "var(--gold)", fontWeight: 300 }} aria-hidden="true">"</span>
+    <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300 }} aria-hidden="true">"</span>
 
     {/* Quote */}
     <blockquote className="flex-1 mt-2">
-      <p itemProp="reviewBody" style={{ fontSize: ".96rem", fontWeight: 300, fontStyle: "italic", color: "rgba(255,255,255,.7)", lineHeight: 1.85 }}>
+      <p itemProp="reviewBody" style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "rgba(255,255,255,.7)", lineHeight: 1.8 }}>
         {review.short}
       </p>
     </blockquote>
@@ -68,7 +68,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       >"</span>
 
       <div className="section-container relative">
-        {/* Header */}
+        {/* Header — stack vertically on mobile */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
           <div>
             {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
@@ -85,7 +85,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
           )}
         </div>
 
-        {/* Static 2-column grid */}
+        {/* Single column on mobile, 2 cols on md+ */}
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
           {reviews.map((review, i) => (
             <GridCard key={review.id} review={review} index={i} />
@@ -95,7 +95,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
         {/* Mobile "see all" link */}
         {reviewsPageHref && reviewsPageLabel && (
           <div className="mt-5 text-center sm:hidden">
-            <Link to={reviewsPageHref} style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)" }}>
+            <Link to={reviewsPageHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)", minHeight: 44, lineHeight: "44px" }}>
               {reviewsPageLabel} →
             </Link>
           </div>

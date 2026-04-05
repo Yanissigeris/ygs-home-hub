@@ -52,11 +52,12 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
       <div className="section-container relative grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-[6rem]">
         {/* Photo column */}
         <div className="relative">
-          <div style={{ borderRadius: 2, overflow: "hidden", position: "relative" }}>
+          {/* Mobile: centered, max 280px */}
+          <div className="mx-auto max-w-[280px] md:max-w-none" style={{ borderRadius: 2, overflow: "hidden", position: "relative" }}>
             <img
               src={yanisAbout}
               srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
-              sizes="(max-width: 1023px) 90vw, 40vw"
+              sizes="(max-width: 767px) 280px, (max-width: 1023px) 90vw, 40vw"
               alt={c.imgAlt + " — YGS Yanis Gauthier-Sigeris"}
               className="aspect-[3/4] w-full object-cover object-top"
               loading="lazy"
@@ -65,10 +66,10 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               height={800}
               onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
             />
-            {/* Bottom scrim for badge legibility */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.6), transparent)" }} aria-hidden="true" />
-            {/* Credential badges */}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-1.5 sm:gap-2 p-3 sm:p-4">
+            {/* Bottom scrim for badge legibility — desktop only */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 hidden md:block" style={{ background: "linear-gradient(to top, rgba(23,48,59,.6), transparent)" }} aria-hidden="true" />
+            {/* Credential badges — overlaid on desktop, below on mobile */}
+            <div className="hidden md:flex absolute bottom-0 left-0 right-0 justify-center gap-1.5 sm:gap-2 p-3 sm:p-4">
               {[c.badge1, c.badge2].map((badge) => (
                 <span
                   key={badge}
@@ -90,17 +91,38 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               ))}
             </div>
           </div>
+          {/* Mobile badges below photo */}
+          <div className="flex md:hidden flex-wrap justify-center gap-2 mt-3">
+            {[c.badge1, c.badge2].map((badge) => (
+              <span
+                key={badge}
+                className="whitespace-nowrap text-center"
+                style={{
+                  background: "var(--gold)",
+                  color: "#fff",
+                  fontSize: ".55rem",
+                  fontWeight: 700,
+                  letterSpacing: ".06em",
+                  textTransform: "uppercase",
+                  padding: ".3rem .65rem",
+                  borderRadius: 2,
+                }}
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Text column */}
-        <div>
+        <div className="px-0 md:px-0">
           {/* Eyebrow */}
           <p className="label-overline mb-2">{c.overline}</p>
           <h2>{c.title}</h2>
           {/* Gold divider */}
-          <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.2rem", marginBottom: "1.5rem" }} aria-hidden="true" />
+          <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
 
-          <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8, marginBottom: "1rem" }}>{c.p1}</p>
+          <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p1}</p>
           <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8, marginBottom: "1rem" }}>{c.p2}</p>
           <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8 }}>{c.p3}</p>
 
@@ -112,9 +134,9 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 style={{
                   background: "rgba(23,48,59,.07)",
                   borderRadius: 20,
-                  fontSize: ".74rem",
+                  fontSize: ".72rem",
                   fontWeight: 500,
-                  padding: ".35rem .9rem",
+                  padding: ".3rem .75rem",
                   color: "var(--ink)",
                 }}
               >
@@ -123,11 +145,11 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             ))}
           </div>
 
-          {/* CTA button */}
+          {/* CTA button — full width on mobile */}
           <div className="mt-6">
             <Link
               to={c.ctaHref}
-              className="inline-flex items-center justify-center transition-all duration-200"
+              className="inline-flex items-center justify-center transition-all duration-200 w-full md:w-auto"
               style={{
                 background: "var(--ink)",
                 color: "#fff",
@@ -136,6 +158,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 fontWeight: 600,
                 letterSpacing: ".04em",
                 padding: ".7rem 1.6rem",
+                minHeight: 44,
               }}
               onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(23,48,59,.2)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
@@ -147,7 +170,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
           {/* Signature block */}
           <div className="mt-8" style={{ borderTop: "1px solid rgba(23,48,59,.1)", paddingTop: "1.5rem" }}>
-            <p style={{ fontFamily: "var(--serif)", fontSize: "1.4rem", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5 }}>
+            <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.4rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5 }}>
               {c.quote}
             </p>
             <p className="mt-2" style={{ fontSize: ".72rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--muted)" }}>
