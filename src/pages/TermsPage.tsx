@@ -6,37 +6,56 @@ const TermsPage = () => (
       title="Conditions d'utilisation | YGS — Yanis Gauthier-Sigeris"
       description="Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable."
     />
-    <article className="section-padding bg-background">
-      <div className="section-container prose prose-sm max-w-[44rem] mx-auto" style={{ color: "var(--ink)" }}>
-        <p className="text-[.78rem] mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>Dernière mise à jour : 5 avril 2026</p>
-        <h1 className="font-serif">Conditions d'utilisation</h1>
+    <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
+      <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
+        <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }} className="mb-3">
+          LÉGAL · QUÉBEC
+        </p>
+        <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
+          Conditions d'utilisation
+        </h1>
+        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Dernière mise à jour : Avril 2026</p>
+        <div style={{ width: 48, height: 2, background: "var(--gold)", marginBottom: "2.5rem" }} />
 
-        <h2>1. Propriété intellectuelle</h2>
-        <p>L'ensemble du contenu de ce site — textes, images, photographies, logos, vidéos et design graphique — est la propriété de Yanis Gauthier-Sigeris ou de ses partenaires et est protégé par les lois canadiennes sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.</p>
+        <div style={{ fontSize: ".95rem", lineHeight: 1.9, color: "var(--ink)" }} className="space-y-0">
+          <Section title="1. Acceptation des conditions">
+            <p>En accédant à ce site Web et en l'utilisant, vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.</p>
+          </Section>
 
-        <h2>2. Utilisation du site</h2>
-        <p>Ce site est destiné à des fins d'information uniquement. Les renseignements présentés ne constituent pas un avis juridique, financier ou professionnel. Pour des conseils adaptés à votre situation, consultez un professionnel qualifié.</p>
+          <Section title="2. Propriété intellectuelle">
+            <p>L'ensemble du contenu de ce site — textes, images, photographies, logos, vidéos et design graphique — est la propriété de Yanis Gauthier-Sigeris ou de ses partenaires et est protégé par les lois canadiennes sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.</p>
+          </Section>
 
-        <h2>3. Limitation de responsabilité</h2>
-        <p>Yanis Gauthier-Sigeris ne peut être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site, y compris les erreurs, omissions ou interruptions de service. Les informations sur le marché immobilier sont fournies à titre indicatif et peuvent ne pas refléter les conditions actuelles du marché.</p>
+          <Section title="3. Limitation de responsabilité">
+            <p>Ce site est destiné à des fins d'information uniquement. Les renseignements présentés ne constituent pas un avis juridique, financier ou professionnel. Yanis Gauthier-Sigeris ne peut être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site, y compris les erreurs, omissions ou interruptions de service.</p>
+          </Section>
 
-        <h2>4. Liens externes</h2>
-        <p>Ce site peut contenir des liens vers des sites tiers (RE/MAX, Google Maps, etc.). Nous ne contrôlons pas le contenu de ces sites et ne sommes pas responsables de leurs pratiques en matière de confidentialité ou de leur contenu.</p>
+          <Section title="4. Exactitude des informations">
+            <p>Nous nous efforçons de maintenir les informations à jour, notamment les prix et les caractéristiques des propriétés. Cependant, les données de marché sont fournies à titre indicatif et peuvent changer sans préavis. Veuillez vérifier directement auprès de nous pour les données les plus récentes.</p>
+          </Section>
 
-        <h2>5. Exactitude des informations</h2>
-        <p>Nous nous efforçons de maintenir les informations à jour, notamment les prix et les caractéristiques des propriétés. Cependant, ces informations peuvent changer sans préavis. Veuillez vérifier directement auprès de nous pour les données les plus récentes.</p>
+          <Section title="5. Liens vers des sites tiers">
+            <p>Ce site peut contenir des liens vers des sites tiers (RE/MAX, Google Maps, etc.). Nous ne contrôlons pas le contenu de ces sites et ne sommes pas responsables de leurs pratiques en matière de confidentialité ou de leur contenu.</p>
+          </Section>
 
-        <h2>6. Modifications des conditions</h2>
-        <p>Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prennent effet dès leur publication sur cette page. La date de dernière mise à jour est indiquée en haut du document.</p>
+          <Section title="6. Droit applicable">
+            <p>Ces conditions sont régies par les lois de la province de Québec et les lois fédérales du Canada. Tout litige sera soumis à la compétence exclusive des tribunaux de la province de Québec, district de Gatineau.</p>
+          </Section>
 
-        <h2>7. Droit applicable</h2>
-        <p>Ces conditions sont régies par les lois de la province de Québec et les lois fédérales du Canada. Tout litige sera soumis à la compétence exclusive des tribunaux de la province de Québec, district de Gatineau.</p>
-
-        <h2>8. Contact</h2>
-        <p>Pour toute question concernant ces conditions :<br /><strong>Yanis Gauthier-Sigeris</strong><br />yanis@martywaite.com — 819-210-3044</p>
+          <Section title="7. Contact">
+            <p>Pour toute question concernant ces conditions :<br /><strong>Yanis Gauthier-Sigeris</strong><br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a> — 819-210-3044</p>
+          </Section>
+        </div>
       </div>
     </article>
   </>
+);
+
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div style={{ paddingTop: "2rem", marginTop: "2.5rem", borderTop: "1px solid hsl(var(--border))" }}>
+    <h2 className="font-serif" style={{ fontSize: "1.4rem", fontWeight: 600, color: "var(--ink)", marginBottom: "1rem" }}>{title}</h2>
+    {children}
+  </div>
 );
 
 export default TermsPage;

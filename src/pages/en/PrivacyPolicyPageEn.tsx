@@ -6,74 +6,109 @@ const PrivacyPolicyPageEn = () => (
       title="Privacy Policy | YGS — Yanis Gauthier-Sigeris"
       description="Privacy policy for yanisgauthier.com. Compliance with Quebec's Law 25. Personal data management and cookies."
     />
-    <article className="section-padding bg-background">
-      <div className="section-container prose prose-sm max-w-[44rem] mx-auto" style={{ color: "var(--ink)" }}>
-        <p className="text-[.78rem] mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>Last updated: April 5, 2026</p>
-        <h1 className="font-serif">Privacy Policy</h1>
+    <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
+      <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
+        <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }} className="mb-3">
+          LEGAL · QUEBEC
+        </p>
+        <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
+          Privacy Policy
+        </h1>
+        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Last updated: April 2026</p>
+        <div style={{ width: 48, height: 2, background: "var(--gold)", marginBottom: "2.5rem" }} />
 
-        <h2>1. Privacy Officer</h2>
-        <p><strong>Yanis Gauthier-Sigeris</strong><br />Real Estate Broker — RE/MAX Direct<br />Email: yanis@martywaite.com<br />Phone: 819-210-3044</p>
+        <div style={{ fontSize: ".95rem", lineHeight: 1.9, color: "var(--ink)" }} className="space-y-0">
+          <Section title="1. Data Controller">
+            <p><strong>Yanis Gauthier-Sigeris</strong><br />YANIS GAUTHIER-SIGERIS INC.<br />Residential Real Estate Broker<br />819-210-3044<br />yanis@martywaite.com</p>
+          </Section>
 
-        <h2>2. Types of Data Collected</h2>
-        <p>We collect the following personal information when you use our forms:</p>
-        <ul>
-          <li>Full name</li>
-          <li>Email address</li>
-          <li>Phone number (optional)</li>
-          <li>Property address (valuation form)</li>
-          <li>Messages and comments</li>
-        </ul>
+          <Section title="2. Personal Information Collected">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Full name (contact forms)</li>
+              <li>Email address (forms, guides)</li>
+              <li>Phone number (forms)</li>
+              <li>Property address (valuation widget)</li>
+              <li>Browsing data (analytics cookies, with consent)</li>
+            </ul>
+          </Section>
 
-        <h2>3. Purpose of Collection</h2>
-        <p>Data is used to:</p>
-        <ul>
-          <li>Respond to your inquiries</li>
-          <li>Provide a property valuation</li>
-          <li>Communicate with you about your real estate project</li>
-          <li>Improve our services and website</li>
-        </ul>
+          <Section title="3. Purpose of Collection">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Respond to contact requests</li>
+              <li>Send requested guides</li>
+              <li>Prepare property valuations</li>
+              <li>Analyze site traffic (with consent)</li>
+              <li>Improve user experience</li>
+            </ul>
+          </Section>
 
-        <h2>4. Data Retention</h2>
-        <p>Personal information is retained for a maximum of 36 months after your last contact with us, unless you request deletion before that date.</p>
+          <Section title="4. Legal Basis">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>User consent</li>
+              <li>Performance of a contract or pre-contractual measures</li>
+              <li>Legitimate interest (service improvement)</li>
+            </ul>
+          </Section>
 
-        <h2>5. User Rights</h2>
-        <p>Under Quebec's Law 25, you have the right to:</p>
-        <ul>
-          <li><strong>Access</strong> your personal information</li>
-          <li><strong>Correct</strong> any inaccurate information</li>
-          <li><strong>Request deletion</strong> of your data</li>
-          <li><strong>Withdraw your consent</strong> at any time</li>
-        </ul>
-        <p>To exercise these rights, contact us at yanis@martywaite.com.</p>
+          <Section title="5. Data Retention">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Contact requests: 24 months</li>
+              <li>Analytics data: 14 months (Google Analytics)</li>
+              <li>Lead data: 36 months or until deletion request</li>
+            </ul>
+          </Section>
 
-        <h2>6. Cookies and Tracking Technologies</h2>
-        <p>Our site uses the following cookies:</p>
-        <ul>
-          <li><strong>Necessary cookies:</strong> essential for site operation (session, language preference).</li>
-          <li><strong>Analytics cookies:</strong> Google Analytics (GA4) — collects anonymized data about site usage. Only activated with your consent.</li>
-          <li><strong>Marketing cookies:</strong> Facebook Pixel — advertising conversion tracking. Disabled by default.</li>
-        </ul>
-        <p>You can modify your preferences at any time via the 🍪 button at the bottom left of the screen.</p>
+          <Section title="6. Third-Party Sharing">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Google Analytics (web analytics — with consent)</li>
+              <li>Meta/Facebook Pixel (advertising — with consent)</li>
+              <li>Email service providers (guides)</li>
+            </ul>
+            <p className="mt-2">We do not sell data to third parties.</p>
+          </Section>
 
-        <h2>7. Third-Party Data Transfers</h2>
-        <p>Some data may be shared with:</p>
-        <ul>
-          <li><strong>Google Analytics</strong> (Google LLC) — traffic analysis</li>
-          <li><strong>Meta Platforms</strong> (Facebook Pixel) — if enabled by the user</li>
-        </ul>
-        <p>These services may process data outside of Canada. By accepting analytics or marketing cookies, you consent to this transfer.</p>
+          <Section title="7. Cookies">
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Necessary cookies:</strong> essential for site operation (session, language preference).</li>
+              <li><strong>Analytics cookies:</strong> Google Analytics (GA4) — activated only with your consent.</li>
+              <li><strong>Marketing cookies:</strong> Meta Pixel — activated only with your consent.</li>
+            </ul>
+            <p className="mt-2">You can modify your preferences via the 🍪 button at the bottom left of the screen.</p>
+          </Section>
 
-        <h2>8. Security</h2>
-        <p>We take reasonable measures to protect your personal information, including encrypted communications (HTTPS) and restricted data access.</p>
+          <Section title="8. Your Rights (Quebec Law 25)">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Right to access your information</li>
+              <li>Right to rectification</li>
+              <li>Right to erasure</li>
+              <li>Right to data portability</li>
+              <li>Right to withdraw consent</li>
+            </ul>
+            <p className="mt-2">To exercise these rights: <a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a></p>
+          </Section>
 
-        <h2>9. Changes</h2>
-        <p>This policy may be updated. The last modification date is shown at the top of this document.</p>
+          <Section title="9. Transfers Outside Quebec">
+            <p>Some services used (Google, Meta) may process data outside Quebec according to their own policies, available on their respective websites.</p>
+          </Section>
 
-        <h2>10. Contact</h2>
-        <p>For any questions about this policy, contact:<br /><strong>Yanis Gauthier-Sigeris</strong><br />yanis@martywaite.com — 819-210-3044</p>
+          <Section title="10. Changes">
+            <p>This policy may be updated. The update date is shown at the top of this page.</p>
+          </Section>
+
+          <Section title="11. Contact">
+            <p>For any questions about this policy:<br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a> | 819-210-3044</p>
+          </Section>
+        </div>
       </div>
     </article>
   </>
+);
+
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div style={{ paddingTop: "2rem", marginTop: "2.5rem", borderTop: "1px solid hsl(var(--border))" }}>
+    <h2 className="font-serif" style={{ fontSize: "1.4rem", fontWeight: 600, color: "var(--ink)", marginBottom: "1rem" }}>{title}</h2>
+    {children}
+  </div>
 );
 
 export default PrivacyPolicyPageEn;
