@@ -79,7 +79,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               </div>
 
               {/* Card body */}
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
+              <div className="flex flex-1 flex-col" style={{ padding: "2rem" }}>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", marginBottom: ".5rem" }}>
                   {p.title}
                 </h3>
