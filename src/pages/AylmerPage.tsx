@@ -106,7 +106,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature à deux pas", text: "Lac Beauchamp (plage, canot, sentiers), rivière des Outaouais, pistes cyclables vers Ottawa via le pont Champlain. Aylmer est l'une des rares zones urbaines avec un lac public en plein cœur du quartier résidentiel." },
+  { icon: "🌿", title: "Nature à deux pas", text: "Lac Deschênes, rivière des Outaouais, parc de la Gatineau et pistes cyclables vers Ottawa via le pont Champlain. Aylmer offre un accès exceptionnel à la nature en plein cœur du quartier résidentiel." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
