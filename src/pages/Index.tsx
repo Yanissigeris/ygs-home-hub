@@ -3,7 +3,7 @@ import PageMeta from "@/components/PageMeta";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
-import TrustStrip from "@/components/TrustStrip";
+
 import AwardsMarquee from "@/components/AwardsMarquee";
 import StatsSection from "@/components/StatsSection";
 
