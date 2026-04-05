@@ -266,7 +266,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} />}
                 </div>
               )}
-              <div className="absolute inset-0 z-[1]" <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 100%)" }} /> />
+              <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 100%)" }} />
               <img
                 src={agentImageSm || agentImage}
                 srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
