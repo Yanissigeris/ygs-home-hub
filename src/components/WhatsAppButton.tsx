@@ -25,6 +25,8 @@ const WhatsAppButton = () => {
 
   const tooltip = lang === "en" ? "Message on WhatsApp" : "Écrire sur WhatsApp";
 
+  if (hidden) return null;
+
   useEffect(() => {
     if (isMobile) {
       setVisible(true);
