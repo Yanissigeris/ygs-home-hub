@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
-import heroImg from "@/assets/hero-gatineau.webp";
+import heroImg from "@/assets/hero-contact.jpg";
 import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
 

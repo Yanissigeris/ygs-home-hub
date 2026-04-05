@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TrendingUp, TreePine } from "lucide-react";
-import heroImg from "@/assets/hero-buckingham.webp";
+import heroImg from "@/assets/hero-buckingham-gen.jpg";
 
 const BuckinghamPage = () => (
   <NeighborhoodTemplate

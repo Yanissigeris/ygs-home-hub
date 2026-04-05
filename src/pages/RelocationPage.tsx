@@ -15,7 +15,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import SectorLinks from "@/components/SectorLinks";
 import { CheckCircle2, Clock, Award, Shield, MapPin, Home, DollarSign, FileText } from "lucide-react";
-import heroImg from "@/assets/hero-relocation.webp";
+import heroImg from "@/assets/hero-relocalisation.jpg";
 
 const challenges = [
   { icon: MapPin, title: "Choisir le bon secteur", text: "Aylmer, Hull, Plateau, Buckingham — chaque quartier a sa personnalité. Je vous aide à trouver le bon fit." },

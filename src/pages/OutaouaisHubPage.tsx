@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import RelatedPages from "@/components/RelatedPages";
-import heroImg from "@/assets/hero-aylmer.webp";
+import heroImg from "@/assets/hero-outaouais-gen.jpg";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 

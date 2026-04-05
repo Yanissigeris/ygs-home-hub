@@ -16,7 +16,7 @@ import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import CalculatorsSection from "@/components/CalculatorsSection";
 import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-buyer.webp";
+import heroImg from "@/assets/hero-acheter.jpg";
 
 const profiles = [
   { icon: CheckCircle2, title: "First-time buyer in Outaouais", text: "Understand the Québec process step by step without feeling overwhelmed — promise to purchase, inspection, notary." },

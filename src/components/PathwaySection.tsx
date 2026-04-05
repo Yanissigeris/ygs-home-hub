@@ -1,22 +1,19 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import cardVendreImg from "@/assets/card-vendre.webp";
-import cardVendreSm from "@/assets/card-vendre-sm.webp";
-import cardAcheterImg from "@/assets/card-acheter.webp";
-import cardAcheterSm from "@/assets/card-acheter-sm.webp";
-import cardPlexImg from "@/assets/card-plex.webp";
-import cardPlexSm from "@/assets/card-plex-sm.webp";
+import cardVendreImg from "@/assets/service-vendre.jpg";
+import cardAcheterImg from "@/assets/service-acheter.jpg";
+import cardPlexImg from "@/assets/service-plex.jpg";
 
 const pathwaysFr = [
-  { num: "01", title: "Vendre ma propriété en Outaouais", text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.", cta: "Voir le plan vendeur", href: "/vendre-ma-maison-gatineau", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne" },
-  { num: "02", title: "Acheter à Gatineau", text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.", cta: "Explorer l'achat", href: "/acheter-a-gatineau", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Acheter une propriété à Gatineau — rue résidentielle" },
-  { num: "03", title: "Plex & investissement", text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.", cta: "Recevoir une analyse", href: "/investir-plex-gatineau", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Investissement plex à Gatineau — immeuble à revenus" },
+  { num: "01", title: "Vendre ma propriété en Outaouais", text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.", cta: "Voir le plan vendeur", href: "/vendre-ma-maison-gatineau", image: cardVendreImg, imageSm: cardVendreImg, imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne" },
+  { num: "02", title: "Acheter à Gatineau", text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.", cta: "Explorer l'achat", href: "/acheter-a-gatineau", image: cardAcheterImg, imageSm: cardAcheterImg, imageAlt: "Acheter une propriété à Gatineau — rue résidentielle" },
+  { num: "03", title: "Plex & investissement", text: "Rendement, valeur marchande et timing — les vrais chiffres avant la décision.", cta: "Recevoir une analyse", href: "/investir-plex-gatineau", image: cardPlexImg, imageSm: cardPlexImg, imageAlt: "Investissement plex à Gatineau — immeuble à revenus" },
 ];
 
 const pathwaysEn = [
-  { num: "01", title: "Sell my property", text: "Realistic valuation, pricing strategy and targeted marketing to maximize your result.", cta: "See the seller plan", href: "/en/sell", image: cardVendreImg, imageSm: cardVendreSm, imageAlt: "Sell a home in Gatineau — bright residential interior" },
-  { num: "02", title: "Buy in Gatineau", text: "The right neighborhoods, the right budget and hands-on guidance to buy with confidence.", cta: "Explore buying", href: "/en/buy", image: cardAcheterImg, imageSm: cardAcheterSm, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
-  { num: "03", title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", image: cardPlexImg, imageSm: cardPlexSm, imageAlt: "Invest in a plex in Gatineau — multi-unit building" },
+  { num: "01", title: "Sell my property", text: "Realistic valuation, pricing strategy and targeted marketing to maximize your result.", cta: "See the seller plan", href: "/en/sell", image: cardVendreImg, imageSm: cardVendreImg, imageAlt: "Sell a home in Gatineau — bright residential interior" },
+  { num: "02", title: "Buy in Gatineau", text: "The right neighborhoods, the right budget and hands-on guidance to buy with confidence.", cta: "Explore buying", href: "/en/buy", image: cardAcheterImg, imageSm: cardAcheterImg, imageAlt: "Buy a property in Gatineau — residential neighborhood" },
+  { num: "03", title: "Plex & Investment", text: "Returns, market value and timing — the real numbers before the decision.", cta: "Get an analysis", href: "/en/plex", image: cardPlexImg, imageSm: cardPlexImg, imageAlt: "Invest in a plex in Gatineau — multi-unit building" },
 ];
 
 const headingFr = { overline: "Choisissez votre prochaine étape", title: "Où en êtes-vous dans votre projet?" };

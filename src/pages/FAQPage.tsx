@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
 import { Book, Home, MapPin, Users, TrendingUp, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-faq.webp";
+import heroImg from "@/assets/hero-faq.jpg";
 
 const sellerFaq = [
   { q: "Combien vaut ma propriété à Gatineau?", a: "La valeur dépend des ventes comparables récentes, de l'état de votre propriété et du secteur. Demandez une évaluation gratuite pour obtenir une estimation personnalisée." },

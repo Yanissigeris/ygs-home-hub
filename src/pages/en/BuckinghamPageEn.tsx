@@ -14,7 +14,7 @@ import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-buckingham.webp";
+import heroImg from "@/assets/hero-buckingham-gen.jpg";
 import riverImg from "@/assets/buckingham-river-nature.jpg";
 
 

@@ -1,5 +1,5 @@
 import PageMeta from "@/components/PageMeta";
-import heroImg from "@/assets/hero-gatineau.webp";
+import heroImg from "@/assets/hero-contact.jpg";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import ReviewSection from "@/components/ReviewSection";
