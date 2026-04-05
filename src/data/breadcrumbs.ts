@@ -158,4 +158,12 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   "/en/how-to-choose-a-realtor": { trail: [{ name: "Home", href: "/en" }, { name: "Resources", href: "/en/resources" }], current: "Choose a Realtor" },
   "/en/oaciq-find-a-broker": { trail: [{ name: "Home", href: "/en" }, { name: "Resources", href: "/en/resources" }], current: "Find a Broker (OACIQ)" },
   "/en/realtor-vs-selling-by-owner-quebec": { trail: [{ name: "Home", href: "/en" }, { name: "Resources", href: "/en/resources" }], current: "Realtor vs. FSBO" },
+
+  // ── FR: Legal ──
+  "/politique-de-confidentialite": { trail: [{ name: "Accueil", href: "/" }], current: "Politique de confidentialité" },
+  "/conditions-utilisation": { trail: [{ name: "Accueil", href: "/" }], current: "Conditions d'utilisation" },
+
+  // ── EN: Legal ──
+  "/en/privacy-policy": { trail: [{ name: "Home", href: "/en" }], current: "Privacy Policy" },
+  "/en/terms": { trail: [{ name: "Home", href: "/en" }], current: "Terms of Use" },
 };
