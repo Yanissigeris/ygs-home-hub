@@ -66,7 +66,7 @@ const buyerCols = [
     title: "Avant de visiter",
     items: [
       "Obtenez votre préapprobation hypothécaire",
-      "Définissez votre secteur prioritaire (Plateau vs Vieux-Aylmer)",
+      "Définissez votre secteur prioritaire (Lucerne vs Vieux-Aylmer)",
       "Vérifiez la proximité des écoles souhaitées",
       "Comprenez le marché actuel (vendeur = offres rapides)",
       "Prévoyez un budget pour l'inspection",
