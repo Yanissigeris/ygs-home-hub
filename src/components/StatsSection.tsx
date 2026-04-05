@@ -18,12 +18,12 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
   const stats = lang === "en" ? statsEn : statsFr;
 
   return (
-    <section ref={ref} style={{ background: "var(--gold)", padding: "2rem 0" }}>
+    <section ref={ref} style={{ background: "var(--gold)", padding: "clamp(2rem, 4vw, 4rem) 0" }}>
       <div className="section-container">
-        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x" style={{ "--tw-divide-opacity": ".2" } as React.CSSProperties}>
+        {/* Desktop: 3 cols with vertical dividers */}
+        <div className="hidden md:grid md:grid-cols-3 md:divide-x" style={{ "--tw-divide-opacity": ".2" } as React.CSSProperties}>
           {stats.map((s, i) => (
-            <div key={i} className="relative flex flex-col items-center justify-center text-center py-4 md:py-2">
-              {/* Ghosted background number */}
+            <div key={i} className="relative flex flex-col items-center justify-center text-center py-2">
               <span
                 className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
                 style={{ fontFamily: "var(--serif)", fontSize: "6rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
@@ -33,6 +33,32 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
                 {s.value}
               </span>
               <span className="relative mt-1" style={{ fontSize: ".65rem", fontWeight: 500, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
+                {s.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: single column stack with horizontal dividers */}
+        <div className="flex flex-col md:hidden">
+          {stats.map((s, i) => (
+            <div
+              key={i}
+              className="relative flex flex-col items-center justify-center text-center"
+              style={{
+                padding: "1.75rem 1.5rem",
+                borderBottom: i < stats.length - 1 ? "1px solid rgba(255,255,255,.15)" : "none",
+              }}
+            >
+              <span
+                className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
+                style={{ fontFamily: "var(--serif)", fontSize: "6rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
+                aria-hidden="true"
+              >{s.ghost}</span>
+              <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.8rem, 10vw, 3.5rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
+                {s.value}
+              </span>
+              <span className="relative mt-1" style={{ fontSize: ".68rem", fontWeight: 500, letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
                 {s.label}
               </span>
             </div>

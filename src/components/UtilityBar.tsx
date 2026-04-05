@@ -19,14 +19,13 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
   const lang = useLanguage();
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
-  const ctaLabelMobile = lang === "en" ? "Valuation" : "Évaluation";
   const relocationLabel = lang === "en" ? "Relocation" : "Relocalisation";
   const relocationHref = lang === "en" ? "/en/relocation" : "/relocalisation-ottawa-gatineau";
   const contactHref = lang === "en" ? "/en/contact" : "/contact-yanis";
 
   return (
     <div ref={ref}>
-      {/* Desktop */}
+      {/* Desktop — hidden below 640px (sm) */}
       <div className="hidden sm:block" style={{ background: "var(--ink)", borderBottom: "1px solid rgba(255,255,255,.06)", height: 38 }}>
         <div className="section-container flex h-full items-center justify-between">
           <div className="flex items-center gap-5" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>
@@ -53,18 +52,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
           </div>
         </div>
       </div>
-      {/* Mobile */}
-      <div className="sm:hidden" style={{ background: "var(--ink)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
-        <div className="flex min-h-[38px] items-center justify-between gap-3 px-4 py-1.5">
-          <a href="tel:+18192103044" className="flex min-w-0 items-center gap-1.5 transition-colors hover:text-white" style={{ fontSize: ".72rem", color: "rgba(255,255,255,.5)" }}>
-            <PhoneIcon size={11} className="shrink-0 text-white/35" /><span className="truncate">819-210-3044</span>
-          </a>
-          <div className="flex shrink-0 items-center gap-3">
-            <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="transition-colors hover:text-white" style={{ fontSize: ".69rem", color: "rgba(255,255,255,.5)" }}>{lang === "en" ? "Blog" : "Blogue"}</Link>
-            <Link to={ctaHref} className="inline-flex shrink-0 items-center transition-all duration-200 hover:brightness-110" style={{ height: 26, borderRadius: 20, background: "var(--gold)", color: "#fff", fontSize: ".63rem", fontWeight: 600, padding: "0 .75rem", letterSpacing: ".03em" }}>{ctaLabelMobile}</Link>
-          </div>
-        </div>
-      </div>
+      {/* Mobile — completely hidden (FIX 1: hide utility bar on mobile <640px) */}
     </div>
   );
 });
