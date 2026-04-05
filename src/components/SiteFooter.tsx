@@ -70,10 +70,10 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <img
               src={logoYgsWhite}
               alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
-              width={195}
-              height={50}
+              width={120}
+              height={140}
               className="h-auto mx-auto block"
-              style={{ width: "clamp(140px, 22vw, 195px)", maxHeight: 70 }}
+              style={{ width: "clamp(80px, 18vw, 120px)" }}
               loading="lazy"
             />
             <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
