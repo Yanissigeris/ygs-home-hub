@@ -97,12 +97,14 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                 <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                   <img
                     src={p.image}
-                    alt={`${p.address}, ${p.city}`}
+                    alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
                     itemProp="image"
                     className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]"
                     loading="lazy"
+                    decoding="async"
                     width={648}
                     height={486}
+                    onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
                   />
                   {/* Status badge */}
                   <span
