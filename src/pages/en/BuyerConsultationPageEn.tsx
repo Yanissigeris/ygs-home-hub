@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
@@ -51,6 +52,7 @@ const BuyerConsultationPageEn = () => {
   return (
     <>
       <PageMeta title="Buyer Consultation — Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and options with an experienced broker." />
+    <ServiceJsonLd name="Free Buyer Consultation — Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and neighbourhood options with an experienced broker." url="/en/buyer-consultation" serviceType="Real Estate Buyer Consultation" />
       <HeroSection
         compact
         overline="Buyer consultation · Gatineau"

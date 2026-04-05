@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -27,6 +28,7 @@ const faq = [
 const WhenToSellPageEn = () => (
   <>
     <PageMeta title="When to Sell Your Property in Gatineau" description="The best time to sell in Gatineau depends on your situation. Market analysis, key factors and advice from an experienced broker." />
+    <ServiceJsonLd name="When to Sell Your Property in Gatineau" description="Market analysis to determine the best time to sell your property in Gatineau and Outaouais." url="/en/when-to-sell" serviceType="Real Estate Market Analysis" />
     <HeroSection
       overline="When to sell · Gatineau"
       title="When is the right time to sell in Gatineau?"

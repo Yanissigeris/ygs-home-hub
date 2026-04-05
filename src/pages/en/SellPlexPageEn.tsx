@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -37,6 +38,7 @@ const faq = [
 const SellPlexPageEn = () => (
   <>
     <PageMeta title="Sell a Plex in Gatineau" description="Sell your duplex, triplex or revenue property in Gatineau. Precise valuation, marketing strategy and specialized support." />
+    <ServiceJsonLd name="Sell a Plex in Gatineau" description="Specialized sale of duplexes, triplexes and revenue properties in Gatineau. Precise valuation and adapted marketing strategy." url="/en/sell-plex" serviceType="Multi-Family Property Listing Service" />
     <HeroSection
       overline="Sell a Plex · Gatineau"
       title="Sell your plex in Gatineau"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -31,6 +32,7 @@ const faq = [
 const MilitaryBuyerPageEn = () => (
   <>
     <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." />
+    <ServiceJsonLd name="Military Home Buying — Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods near CFB Uplands." url="/en/military-buyer" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"
