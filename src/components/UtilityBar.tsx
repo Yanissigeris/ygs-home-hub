@@ -31,7 +31,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
         <div className="section-container flex h-full items-center justify-between">
           <div className="flex items-center gap-5" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>
             <a href="tel:+18192103044" className="flex items-center gap-2 transition-colors duration-200 hover:text-white">
-              <PhoneIcon size={12} style={{ color: "rgba(255,255,255,.35)" }} /><span>819-210-3044</span>
+              <PhoneIcon size={12} className="text-white/35" /><span>819-210-3044</span>
             </a>
             <span className="h-3 w-px" style={{ background: "rgba(255,255,255,.1)" }} aria-hidden />
             <a href="mailto:yanis@martywaite.com" className="flex items-center gap-2 transition-colors duration-200 hover:text-white">
