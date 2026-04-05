@@ -228,7 +228,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               <h1
                 style={{ color: "#F5F1E8" }}
-                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] min-[391px]:max-w-[16ch]"
+                className="max-w-[14ch] leading-[1.02] tracking-[-0.03em] text-[1.875rem] min-[391px]:max-w-[16ch] sm:text-[2.875rem] md:text-[3.625rem] xl:text-[4rem]"
               >
                 {title}
               </h1>
