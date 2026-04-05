@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContentBlock from "@/components/ContentBlock";
 import InlineCTA from "@/components/InlineCTA";
@@ -13,11 +12,6 @@ import RelatedPages from "@/components/RelatedPages";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Bilingual · Aylmer and area" },
-];
 
 const steps = [
   { num: "01", title: "Aylmer market analysis", desc: "Comparable sales in your Aylmer neighborhood — Plateau, Lake Deschênes, established areas. A realistic and strategic price." },
@@ -65,10 +59,7 @@ const SellAylmerPageEn = () => (
       trustLine="Clear strategy · Aylmer and area"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ContentBlock narrow>
+<ContentBlock narrow>
       <SectionHeading overline="Selling in Aylmer" title="Support adapted to the Aylmer market" />
       <p className="prose-body mt-5">
         Aylmer is one of the most sought-after areas in Outaouais: established family neighborhoods, Lake Deschênes proximity, quick access to Ottawa and recognized quality of life. Whether you're selling a home on the Plateau, near the lake or in a residential area, the pricing and marketing strategy needs to match your micro-market.

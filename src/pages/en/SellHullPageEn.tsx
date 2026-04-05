@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContentBlock from "@/components/ContentBlock";
 import InlineCTA from "@/components/InlineCTA";
@@ -13,11 +12,6 @@ import RelatedPages from "@/components/RelatedPages";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Bilingual · Hull and area" },
-];
 
 const steps = [
   { num: "01", title: "Hull market analysis", desc: "Recent comparable sales on your street and in your Hull neighborhood — condos, plexes, single-family. We set a realistic price." },
@@ -65,10 +59,7 @@ const SellHullPageEn = () => (
       trustLine="Clear strategy · Hull and area"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ContentBlock narrow>
+<ContentBlock narrow>
       <SectionHeading overline="Selling in Hull" title="Support adapted to the Hull market" />
       <p className="prose-body mt-5">
         Hull is a unique area in Outaouais: immediate proximity to Ottawa, active market for condos and plexes, established residential neighborhoods and a transforming downtown. Whether you're selling a condo near Boulevard Saint-Joseph, a plex in Old Hull or a family home, the strategy needs to match your micro-market.

@@ -5,7 +5,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
@@ -25,11 +24,6 @@ const sectors = [
   { name: "Buckingham", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Relocation specialist" },
-  { icon: Shield, label: "Personalized support" },
-];
 
 const MontrealRelocationPageEn = () => (
   <>
@@ -43,8 +37,7 @@ const MontrealRelocationPageEn = () => (
       trustLine="Relocation specialist. Full transparency."
       heroBgImage={heroImg}
     />
-    <TrustMiniStrip items={trustItems} />
-    <CardGrid overline="The advantages" title="Why choose Gatineau over Montréal" items={challenges} />
+<CardGrid overline="The advantages" title="Why choose Gatineau over Montréal" items={challenges} />
     <InlineCTA text="Also selling in Montréal? Knowing the value of your current property can help clarify your budget." buttonLabel="Free Valuation →" href="/en/home-valuation" />
     <SectorLinks overline="Popular areas" title="Neighborhoods to consider" sectors={sectors} background="alt" />
     <ContentBlock narrow>

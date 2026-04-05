@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -47,11 +46,6 @@ const steps = [
   { num: "03", title: "Offre et négociation", desc: "Stratégie d'offre adaptée au marché local, inspection, conditions — jusqu'à la signature chez le notaire." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste des secteurs locaux" },
-  { icon: Shield, label: "Accompagnement à votre rythme" },
-];
 
 const nextSteps = [
   { title: "Consultation gratuite", text: "On discute de vos critères, votre budget et vos questions — pour acheter en confiance.", href: "/consultation-acheteur", cta: "Réserver ma consultation", highlight: true },
@@ -79,10 +73,7 @@ const BuyerPage = () => (
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ContentBlock narrow>
+<ContentBlock narrow>
       <SectionHeading
         overline="L'achat immobilier"
         title="Choisir une propriété, c'est aussi choisir un secteur et une stratégie"

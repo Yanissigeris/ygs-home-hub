@@ -6,7 +6,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
@@ -15,11 +14,6 @@ import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield 
 import heroImg from "@/assets/hero-gatineau-centre.webp";
 import riverImg from "@/assets/gatineau-river-view.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Gatineau area specialist" },
-  { icon: Shield, label: "Support at your pace" },
-];
 
 const reasons = [
   "Well-established residential neighborhood with all services",
@@ -68,8 +62,7 @@ const GatineauCentrePageEn = () => (
     <PageMeta title="Real Estate Broker Gatineau · Outaouais | YGS" description="Real estate broker in Gatineau centre. Residential, plex, condos and services — buy or sell with a local specialist." />
     <NeighborhoodJsonLd name="Gatineau" description="Real estate broker in Gatineau centre. Residential area, complete services and competitive prices." lat={45.4765} lng={-75.7013} url="/en/gatineau" />
     <HeroSection overline="Neighborhood Guide · Gatineau" title="Live, buy or invest in Gatineau centre" subtitle="A well-established residential area, complete services and competitive prices — everything you need to know about the Gatineau sector." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <ImageTextSplit image={riverImg} imageAlt="Gatineau sector" imagePosition="right">
+<ImageTextSplit image={riverImg} imageAlt="Gatineau sector" imagePosition="right">
       <div className="label-overline">The area</div>
       <h2 className="mt-3">Why choose Gatineau centre</h2>
       <p className="prose-body mt-4">The Gatineau sector offers a great balance of accessibility, services and pricing. It's a popular choice for families and first-time buyers looking for an established, well-served neighborhood.</p>

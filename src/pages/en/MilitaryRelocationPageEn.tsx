@@ -6,7 +6,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
@@ -25,11 +24,6 @@ const steps = [
   { num: "03", title: "Support through to the keys", desc: "Offer, inspection, notary — everything is handled to simplify your transition." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Military relocation specialist" },
-  { icon: Shield, label: "Bilingual and fast service" },
-];
 
 const faq = [
   { q: "How does a military real estate relocation work?", a: "We start by understanding your timeline and needs. Then, targeted search, visits (virtual or in-person), offer and full support." },
@@ -40,8 +34,7 @@ const MilitaryRelocationPageEn = () => (
   <>
     <PageMeta title="Military Relocation to Gatineau | YGS" description="Military posting to Gatineau? Complete guide: BGRS/SIRVA process, neighborhoods near base, timelines and support." />
     <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property quickly, with confidence and on your timeline." primaryCta={{ label: "Book a call", href: "/en/contact" }} trustLine="Service adapted to military members — at your pace." heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <section className="py-8 bg-card border-y border-border/30">
+<section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Program partner</p>

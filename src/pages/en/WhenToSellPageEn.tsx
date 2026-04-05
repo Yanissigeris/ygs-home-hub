@@ -5,7 +5,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
@@ -18,11 +17,6 @@ const factors = [
   { icon: AlertTriangle, title: "Timing traps", text: "Waiting for the 'perfect moment' can cost more than selling at the right time with the right strategy." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Objective market analysis" },
-];
 
 const faq = [
   { q: "Is spring really the best time to sell?", a: "It's often the busiest season, but not always the most profitable. Less competition in fall or winter can work in your favor." },
@@ -42,8 +36,7 @@ const WhenToSellPageEn = () => (
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
       heroBgImage={heroImg}
     />
-    <TrustMiniStrip items={trustItems} />
-    <CardGrid overline="Key factors" title="What influences the right timing" items={factors} columns={3} />
+<CardGrid overline="Key factors" title="What influences the right timing" items={factors} columns={3} />
     <ContentBlock narrow>
       <SectionHeading title="There's no perfect timing" />
       <p className="prose-body mt-5">Many sellers wait for the "perfect moment" — but that moment never truly arrives. What makes the difference is preparation: the right price, the right marketing and a solid strategy.</p>

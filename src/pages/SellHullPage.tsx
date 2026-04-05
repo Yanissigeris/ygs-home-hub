@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContentBlock from "@/components/ContentBlock";
 import InlineCTA from "@/components/InlineCTA";
@@ -13,11 +12,6 @@ import RelatedPages from "@/components/RelatedPages";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-seller.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Club Platine · Temple de la renommée" },
-  { icon: Shield, label: "Bilingue · Hull et environs" },
-];
 
 const steps = [
   { num: "01", title: "Analyse du marché à Hull", desc: "Ventes comparables récentes dans votre rue et votre secteur de Hull — condos, plex, unifamiliales. On établit un prix réaliste." },
@@ -65,10 +59,7 @@ const SellHullPage = () => (
       trustLine="Stratégie claire · Hull et environs"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ContentBlock narrow>
+<ContentBlock narrow>
       <SectionHeading overline="Vendre à Hull" title="Un accompagnement adapté au marché de Hull" />
       <p className="prose-body mt-5">
         Hull est un secteur unique en Outaouais : proximité immédiate avec Ottawa, marché actif pour les condos et les plex, quartiers résidentiels établis et un centre-ville en transformation. Que vous vendiez un condo près du boulevard Saint-Joseph, un plex dans le Vieux-Hull ou une maison dans un quartier familial, la stratégie doit être adaptée.

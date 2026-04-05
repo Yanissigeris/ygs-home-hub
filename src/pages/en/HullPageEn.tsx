@@ -9,7 +9,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
@@ -18,11 +17,6 @@ import { CheckCircle2, Users, Home, TrendingUp, Building2, Clock, Award, Shield 
 import heroImg from "@/assets/hero-hull.webp";
 import riverImg from "@/assets/hull-cycling-path.jpg";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Hull and urban area specialist" },
-  { icon: Shield, label: "Zero-pressure guidance" },
-];
 
 const reasons = [
   "Vibrant downtown with restaurants, culture and neighborhood life",
@@ -84,10 +78,7 @@ const HullPageEn = () => (
       secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ImageTextSplit image={riverImg} imageAlt="Hull area, Gatineau" imagePosition="right">
+<ImageTextSplit image={riverImg} imageAlt="Hull area, Gatineau" imagePosition="right">
       <SectionHeading
         overline="The area"
         title="Why Hull is attracting more and more people"

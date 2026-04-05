@@ -7,7 +7,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
@@ -21,11 +20,6 @@ const steps = [
   { num: "03", title: "Sale and coordination", desc: "Listing, showings, negotiation, coordination all the way to the notary." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Experience selling during postings" },
-  { icon: Shield, label: "Accelerated process · Full transparency" },
-];
 
 const faq = [
   { q: "How long does it take to sell during a posting?", a: "It depends on the market and price, but with the right strategy, we can often close in a few weeks. We adapt the plan to your schedule." },
@@ -45,10 +39,7 @@ const MilitarySellerPageEn = () => (
       trustLine="Clear strategy. Fast sale. Full transparency."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-white border-y border-border/30">
+<section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partner of programs</p>

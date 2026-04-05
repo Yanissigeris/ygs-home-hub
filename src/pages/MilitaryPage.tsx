@@ -10,7 +10,6 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -33,11 +32,6 @@ const steps = [
   { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire, coordination — je gère tout jusqu'à votre installation." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Expérience en relocalisation militaire" },
-  { icon: Shield, label: "Bilingue · Service rapide" },
-];
 
 const militaryPaths = [
   { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille — visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau", cta: "En savoir plus", highlight: true },
@@ -65,10 +59,7 @@ const MilitaryPage = () => (
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-card border-y border-border/30">
+<section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-[0.875rem] text-muted-foreground">Partenaire des programmes</p>

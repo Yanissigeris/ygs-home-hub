@@ -6,7 +6,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
@@ -15,11 +14,6 @@ import { CheckCircle2, Users, Home, MapPin, Coffee, Clock, Award, Shield } from 
 import heroImg from "@/assets/hero-aylmer.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Aylmer area specialist" },
-  { icon: Shield, label: "Support at your pace" },
-];
 
 const reasons = [
   "Family neighborhoods with access to Lake Deschênes",
@@ -69,8 +63,7 @@ const AylmerPageEn = () => (
     <PageMeta title="Real Estate Broker Aylmer · Gatineau | YGS" description="Real estate broker in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, bilingual schools — buy or sell with a local specialist." />
     <NeighborhoodJsonLd name="Aylmer" description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighborhoods, schools and community." lat={45.3945} lng={-75.8486} url="/en/aylmer" />
     <HeroSection overline="Neighborhood Guide · Aylmer" title="Live, buy or sell in Aylmer" subtitle="Lake Deschênes, parks, schools and community — Aylmer offers an exceptional living environment steps from Ottawa." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <ImageTextSplit image={lifestyleImg} imageAlt="Life in Aylmer, Gatineau" imagePosition="right">
+<ImageTextSplit image={lifestyleImg} imageAlt="Life in Aylmer, Gatineau" imagePosition="right">
       <div className="label-overline">The area</div>
       <h2 className="mt-3">Why Aylmer is so popular</h2>
       <div className="mt-7 space-y-3.5">

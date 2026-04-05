@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search, DollarSign, Scale } from "lucide-react";
@@ -32,11 +31,6 @@ const trustPages = [
   { icon: Search, title: "Verify a Broker (OACIQ)", text: "How to verify a broker's licence and background in Québec.", cta: "Read the article", href: "/en/oaciq-find-a-broker" },
   { icon: Scale, title: "Realtor vs Selling by Owner", text: "Honest comparison between selling with a broker or on your own.", cta: "Read the article", href: "/en/realtor-vs-selling-by-owner-quebec" },
 ];
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Free resources, no commitment" },
-];
 const faq = [
   { q: "Are these resources free?", a: "Yes — all guides and tools are free and no commitment required." },
   { q: "How can I get personalized resources?", a: "Contact me directly — I'll send you information adapted to your situation." },
@@ -47,8 +41,7 @@ const ResourcesPageEn = () => (
   <>
     <PageMeta title="Free Real Estate Guides and Resources | YGS" description="Free guides for sellers, buyers and investors in Gatineau. Real estate resources by Yanis Gauthier-Sigeris." />
     <HeroSection overline="Resources · YGS" title="Free real estate resources" subtitle="Guides, analyses and information to help you make the best real estate decisions in Gatineau." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
+<LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />
     <LinkedCardGrid overline="Trust" title="Understanding real estate brokerage" items={trustPages} columns={3} />
     <GuideOffersSection lang="en" />

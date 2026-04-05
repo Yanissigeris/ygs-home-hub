@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -34,11 +33,6 @@ const steps = [
   { num: "02", title: "Neighborhood tour", desc: "I introduce you to the neighborhoods that match your profile — with real pros and cons." },
   { num: "03", title: "Full support", desc: "Targeted search, visits, offer, inspection, notary — I support you through to the keys." },
 ];
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Ottawa → Gatineau relocation specialist" },
-  { icon: Shield, label: "Bilingual support" },
-];
 const nextSteps = [
   { title: "Book a call", text: "Let's discuss your relocation, priorities and questions — 100% free.", href: "/en/contact", cta: "Book a call", highlight: true },
   { title: "Relocation guide", text: "Everything you need to know to settle in Gatineau — neighborhoods, prices, process, schools.", href: "/en/relocation-guide", cta: "Read the guide" },
@@ -56,8 +50,7 @@ const RelocationPageEn = () => (
     <PageMeta title="Relocation Ottawa to Gatineau | YGS" description="Moving from Ottawa to Gatineau? Complete guide: neighborhoods, taxes, schools and personalized real estate support." ogImage="https://yanisgauthier.com/og-relocation.jpg" />
     <ServiceJsonLd name="Real Estate Relocation Service — Ottawa to Gatineau" description="Full-service relocation support from Ottawa to Gatineau — neighborhood search, visits, offer and settlement in the Outaouais region." url="/en/relocation" serviceType="Real Estate Relocation Service" />
     <HeroSection overline="Ottawa → Gatineau" title="Relocating to Gatineau from Ottawa or beyond" subtitle="Thinking about crossing the river? I help you understand the neighborhoods, prices, process and find the right property — with confidence." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Relocation Guide", href: "/en/relocation-guide" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <ContentBlock narrow><SectionHeading overline="Relocation" title="Buying in Gatineau when you don't know the area" subtitle="More space, more affordable prices, a different quality of life — but you still need to know where to look and how to navigate the process." /><p className="prose-body mt-5">Every year, dozens of families and professionals cross the river. What makes the difference is having a local guide who knows both sides — and who can help you avoid the classic mistakes.</p></ContentBlock>
+<ContentBlock narrow><SectionHeading overline="Relocation" title="Buying in Gatineau when you don't know the area" subtitle="More space, more affordable prices, a different quality of life — but you still need to know where to look and how to navigate the process." /><p className="prose-body mt-5">Every year, dozens of families and professionals cross the river. What makes the difference is having a local guide who knows both sides — and who can help you avoid the classic mistakes.</p></ContentBlock>
     <CardGrid overline="The challenges" title="What often holds back relocated buyers" items={challenges} background="alt" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your current property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />

@@ -11,7 +11,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 
@@ -78,14 +77,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => (
       secondaryCta={{ label: p.cta.buttons[1]?.label ?? "Évaluation", href: p.cta.buttons[1]?.href ?? "/evaluation-gratuite-gatineau" }}
       heroBgImage={p.hero.image}
     />
-
-    <TrustMiniStrip items={[
-      { icon: Clock, label: "Près de 9 ans en Outaouais" },
-      { icon: Award, label: p.trustSpecialty },
-      { icon: Shield, label: "Accompagnement à votre rythme" },
-    ]} />
-
-    <ImageTextSplit image={p.lifestyle.image} imageAlt={p.lifestyle.imageAlt} imagePosition="right">
+<ImageTextSplit image={p.lifestyle.image} imageAlt={p.lifestyle.imageAlt} imagePosition="right">
       <div className="label-overline">Le secteur</div>
       <h2 className="mt-3">{p.lifestyle.title}</h2>
       {p.lifestyle.subtitle && <p className="mt-2 text-muted-foreground">{p.lifestyle.subtitle}</p>}

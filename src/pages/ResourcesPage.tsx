@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import { Book, Home, MapPin, Users, FileText, TrendingUp, Clock, Award, Shield, HelpCircle, CheckCircle, Search, DollarSign, Scale } from "lucide-react";
@@ -35,11 +34,6 @@ const trustPages = [
   { icon: Scale, title: "Courtier ou vendre seul?", text: "Comparaison honnête entre vendre avec un courtier ou par vous-même.", cta: "Lire l'article", href: "/courtier-immobilier-ou-vendre-soi-meme" },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Club Platine · Temple de la renommée" },
-  { icon: Shield, label: "Ressources gratuites et sans engagement" },
-];
 
 const faq = [
   { q: "Ces ressources sont-elles gratuites?", a: "Oui — tous les guides et outils sont gratuits et sans engagement." },
@@ -59,10 +53,7 @@ const ResourcesPage = () => (
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <LinkedCardGrid
+<LinkedCardGrid
       overline="Guides"
       title="Guides complets et gratuits"
       items={guides}

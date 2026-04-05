@@ -9,7 +9,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
@@ -18,11 +17,6 @@ import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield }
 import heroImg from "@/assets/hero-buckingham.webp";
 import riverImg from "@/assets/buckingham-river-nature.jpg";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Buckingham / Masson-Angers specialist" },
-  { icon: Shield, label: "Zero-pressure guidance" },
-];
 
 const reasons = [
   "Bigger lots and more spacious properties",
@@ -83,10 +77,7 @@ const BuckinghamPageEn = () => (
       secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
       heroBgImage={riverImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ImageTextSplit image={heroImg} imageAlt="Buckingham and Masson-Angers area" imagePosition="right">
+<ImageTextSplit image={heroImg} imageAlt="Buckingham and Masson-Angers area" imagePosition="right">
       <SectionHeading
         overline="The area"
         title="Why people choose Buckingham / Masson-Angers"

@@ -7,7 +7,6 @@ import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProfileSection from "@/components/ProfileSection";
 import ContactCard from "@/components/ContactCard";
 import FormSection from "@/components/FormSection";
@@ -34,11 +33,6 @@ const services = [
   { icon: MapPin, title: "Relocalisation", text: "Guide local pour acheteurs d'Ottawa et Montréal" },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans d'expérience" },
-  { icon: Award, label: "Club Platine · Temple de la renommée" },
-  { icon: Heart, label: "Approche axée sur la confiance" },
-];
 
 const contactItems = [
   { icon: Phone, text: "[819-210-3044]" },
@@ -78,10 +72,7 @@ const ContactPage = () => {
         secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
         heroBgImage={heroImg}
       />
-
-      <TrustMiniStrip items={trustItems} />
-
-      <ProfileSection
+<ProfileSection
         image={yanisPhoto}
         imageAlt="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau"
         name="Yanis Gauthier-Sigeris"
