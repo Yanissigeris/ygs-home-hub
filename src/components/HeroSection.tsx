@@ -216,7 +216,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             )}
             {heroBgImage && !heroVideo && (
               <div className="absolute inset-0">
-                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} loading="eager" />
+                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.35, filter: "brightness(0.8) saturate(0.6)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
               </div>
             )}
 
