@@ -26,7 +26,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
   const heading = lang === "en" ? headingEn : headingFr;
 
   return (
-    <section ref={ref} style={{ padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+    <section ref={ref} className="section-pathway" style={{ padding: "clamp(3rem, 6vw, 7rem) 0" }}>
       <div className="section-container">
         {/* Section header */}
         <div className="mb-8 sm:mb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
@@ -36,9 +36,9 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
           </div>
         </div>
 
-        {/* Cards: single column on mobile, 3-col on md+ */}
+        {/* Cards */}
         <div
-          className="grid grid-cols-1 md:grid-cols-3 overflow-hidden"
+          className="grid grid-cols-1 md:grid-cols-3 gap-[0.75rem] md:gap-0 overflow-hidden"
           style={{ border: "1px solid var(--border)", borderRadius: 3 }}
         >
           {pathways.map((p, i) => (
@@ -52,8 +52,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               onMouseEnter={(e) => { e.currentTarget.style.zIndex = "2"; e.currentTarget.style.boxShadow = "0 30px 80px rgba(23,48,59,.15)"; e.currentTarget.style.transform = "translateY(-5px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.zIndex = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.transform = ""; }}
             >
-              {/* Image — 16:9 on mobile, 4:3 on desktop */}
-              <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
+              {/* Image — 3:2 on mobile, 16:9 on desktop */}
+              <div className="relative overflow-hidden aspect-[3/2] md:aspect-[16/9]">
                 <img
                   src={p.image}
                   alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
@@ -74,11 +74,11 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
               </div>
 
               {/* Card body */}
-              <div className="flex flex-1 flex-col p-[1.5rem] md:p-[2rem]">
-                <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.25rem, 3vw, 1.5rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", marginBottom: ".5rem" }}>
+              <div className="flex flex-1 flex-col p-[1.25rem] md:p-[2rem]">
+                <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.5rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", marginBottom: ".5rem" }}>
                   {p.title}
                 </h3>
-                <p className="flex-1" style={{ fontSize: ".86rem", color: "var(--muted)", lineHeight: 1.8 }}>
+                <p className="flex-1 pathway-desc" style={{ fontSize: ".9rem", color: "var(--muted)", lineHeight: 1.78 }}>
                   {p.text}
                 </p>
                 <span
