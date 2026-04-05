@@ -21,6 +21,7 @@ interface HeroSectionProps {
   heroVideo?: string;
   heroVideoPoster?: string;
   hideCredentialsStrip?: boolean;
+  hideRecognitionCard?: boolean;
 }
 
 /* Stats data */
