@@ -55,9 +55,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       <StatsSection lang="en" />
     </div>
 
-    <div className="reveal">
-      <MarketContext2026 lang="en" />
-    </div>
 
     <div className="reveal">
       <PathwaySection lang="en" />
