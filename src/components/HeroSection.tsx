@@ -216,7 +216,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             )}
             {heroBgImage && !heroVideo && (
               <div className="absolute inset-0">
-                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} /> alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} /> onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} loading="eager" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
               </div>
             )}
 
