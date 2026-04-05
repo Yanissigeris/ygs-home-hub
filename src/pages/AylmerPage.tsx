@@ -15,8 +15,8 @@ import heroImg from "@/assets/hero-aylmer-gen.jpg";
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "Quel est le prix moyen d'une maison à Aylmer en 2026?",
-    a: "Le prix médian pour une maison unifamiliale à Aylmer se situe autour de 567 000 $ en début 2026, avec des variations significatives selon le sous-secteur. Lucerne et Rivermead sont généralement plus chers (600 000 $ – 750 000 $), tandis que certaines rues de Breckenridge offrent encore des options sous les 500 000 $. Pour une estimation précise de votre propriété ou de votre budget cible, contactez-moi pour une analyse gratuite.",
+    q: "Combien vaut une maison à Aylmer?",
+    a: "Les prix varient selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead, Vieux-Aylmer et Breckenridge ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
-    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons à Lucerne et Rivermead avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
+    a: "Le marché d'Aylmer reste actif — une propriété bien positionnée et correctement évaluée attire rapidement les acheteurs sérieux. Le délai dépend du prix, du sous-secteur et de la présentation. Contactez-moi pour une lecture réaliste de votre situation.",
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
