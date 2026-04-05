@@ -7,7 +7,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Clock, TrendingUp, Home, AlertTriangle, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/home-interior.webp";
@@ -18,11 +17,6 @@ const factors = [
   { icon: AlertTriangle, title: "Les pièges du timing", text: "Attendre le 'moment parfait' peut coûter plus cher que vendre au bon moment avec la bonne stratégie." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Club Platine · Temple de la renommée" },
-  { icon: Shield, label: "Analyse objective" },
-];
 
 const faq = [
   { q: "Le printemps est-il vraiment le meilleur moment pour vendre?", a: "C'est souvent le plus actif, mais pas toujours le plus rentable. Moins de compétition en automne ou en hiver peut jouer en votre faveur." },
@@ -42,10 +36,7 @@ const WhenToSellPage = () => (
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
       overline="Les facteurs"
       title="Ce qui influence le bon timing"
       items={factors}

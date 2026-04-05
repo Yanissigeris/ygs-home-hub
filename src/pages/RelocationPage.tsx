@@ -8,7 +8,6 @@ import { getReviewsByCategory } from "@/data/reviews";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -37,11 +36,6 @@ const steps = [
   { num: "03", title: "Accompagnement complet", desc: "Recherche ciblée, visites, offre, inspection, notaire — je vous accompagne jusqu'aux clés." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste relocalisation Ottawa → Gatineau" },
-  { icon: Shield, label: "Accompagnement bilingue" },
-];
 
 const nextSteps = [
   { title: "Réserver un appel", text: "On discute de votre relocalisation, vos priorités et vos questions — 100% gratuit.", href: "/contact-yanis", cta: "Réserver un appel", highlight: true },
@@ -69,10 +63,7 @@ const RelocationPage = () => (
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <ContentBlock narrow>
+<ContentBlock narrow>
       <SectionHeading
         overline="La relocalisation"
         title="Acheter à Gatineau quand on ne connaît pas le terrain"

@@ -10,7 +10,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
@@ -28,11 +27,6 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste relocalisation Ottawa → Gatineau" },
-  { icon: Shield, label: "Bilingue" },
-];
 
 const faq = [
   { q: "Quelles sont les vraies économies en achetant à Gatineau?", a: "Ça dépend du secteur et du type de propriété. En général, 15-30% d'économie sur le prix d'achat, mais il faut aussi considérer les taxes municipales et scolaires." },
@@ -52,10 +46,7 @@ const BuyFromOttawaPage = () => (
       trustLine="Spécialiste en relocalisation Ottawa → Gatineau"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
       overline="Les avantages"
       title="Pourquoi de plus en plus d'Ottaviens traversent la rivière"
       items={advantages}

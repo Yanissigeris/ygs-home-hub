@@ -11,7 +11,6 @@ import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { Building2, TrendingUp, DollarSign, Users, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-sell-plex.webp";
 
@@ -28,11 +27,6 @@ const steps = [
   { num: "03", title: "Mise en marché et vente", desc: "Visibilité ciblée, négociation et coordination complète jusqu'au notaire." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste plex et investissement" },
-  { icon: Shield, label: "Analyse objective" },
-];
 
 const faq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "On utilise l'approche des revenus (multiplicateur de revenus bruts) et les ventes comparables. L'état du bâtiment, les loyers actuels et le potentiel d'optimisation comptent aussi." },
@@ -52,10 +46,7 @@ const SellPlexPage = () => (
       trustLine="Spécialiste plex. "
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
       overline="Les enjeux"
       title="Vendre un plex, c'est différent d'une maison"
       items={challenges}

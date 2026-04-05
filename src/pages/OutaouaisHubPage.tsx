@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
@@ -70,14 +69,7 @@ const OutaouaisHubPage = () => (
       agentImageSm={yanisPortraitSm}
       agentName="Yanis Gauthier-Sigeris"
     />
-
-    <TrustMiniStrip items={[
-      { icon: Clock, label: "Près de 9 ans en Outaouais" },
-      { icon: Award, label: "Courtier immobilier · Outaouais et Gatineau" },
-      { icon: Shield, label: "Accompagnement transparent" },
-    ]} />
-
-    {/* Intro */}
+{/* Intro */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-3xl">
         <SectionHeading overline="Votre courtier local" title="Un accompagnement clair, partout en Outaouais" centered />

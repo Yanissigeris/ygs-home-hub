@@ -7,16 +7,10 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import SectorLinks from "@/components/SectorLinks";
 import LinkedCardGrid from "@/components/LinkedCardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import { Clock, Award, Shield, Home, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste de tous les secteurs" },
-  { icon: Shield, label: "Accompagnement à votre rythme" },
-];
 
 const sectors = [
   { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis, qualité de vie" },
@@ -57,10 +51,7 @@ const NeighborhoodsOverviewPage = () => (
       trustLine="Expertise locale. "
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <SectorLinks
+<SectorLinks
       overline="Explorer les secteurs"
       title="Les quartiers en Outaouais"
       sectors={sectors}

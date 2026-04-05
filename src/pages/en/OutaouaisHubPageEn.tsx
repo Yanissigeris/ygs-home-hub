@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
@@ -66,14 +65,7 @@ const OutaouaisHubPageEn = () => (
       agentImageSm={yanisPortraitSm}
       agentName="Yanis Gauthier-Sigeris"
     />
-
-    <TrustMiniStrip items={[
-      { icon: Clock, label: "Nearly 9 years in Outaouais" },
-      { icon: Award, label: "Real Estate Broker · Outaouais & Gatineau" },
-      { icon: Shield, label: "Transparent guidance" },
-    ]} />
-
-    {/* Intro */}
+{/* Intro */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-3xl">
         <SectionHeading overline="Your local broker" title="Clear guidance across Outaouais" centered />

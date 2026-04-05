@@ -9,7 +9,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Home, MapPin, Shield, Clock, Award, DollarSign, CheckCircle2 } from "lucide-react";
 import heroImg from "@/assets/hero-military-buyer.webp";
@@ -22,11 +21,6 @@ const advantages = [
   { icon: Shield, title: "Accompagnement bilingue", text: "Service en français et en anglais, adapté à votre réalité militaire." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste acheteurs militaires" },
-  { icon: Shield, label: "Bilingue" },
-];
 
 const faq = [
   { q: "Quels secteurs recommandez-vous pour les militaires?", a: "Ça dépend de votre base et vos priorités familiales. Aylmer, le Plateau et Hull sont populaires — on en discute selon votre situation." },
@@ -46,10 +40,7 @@ const MilitaryBuyerPage = () => (
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-white border-y border-border/30">
+<section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partenaire des programmes</p>

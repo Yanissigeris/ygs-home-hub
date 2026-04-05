@@ -7,7 +7,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
@@ -22,11 +21,6 @@ const advantages = [
   { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Military buyer specialist" },
-  { icon: Shield, label: "Bilingual · Full transparency" },
-];
 
 const faq = [
   { q: "Which neighborhoods do you recommend for military members?", a: "It depends on your base and family priorities. Aylmer, Plateau and Hull are popular — we discuss based on your situation." },
@@ -46,10 +40,7 @@ const MilitaryBuyerPageEn = () => (
       trustLine="Service adapted to military members — at your pace."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-white border-y border-border/30">
+<section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partner of programs</p>

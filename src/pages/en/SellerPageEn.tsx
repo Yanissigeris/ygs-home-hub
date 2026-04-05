@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -33,11 +32,6 @@ const steps = [
   { num: "02", title: "Personalized seller plan", desc: "Preparation, worthwhile improvements, targeted visibility plan to attract buyers from Gatineau and Ottawa." },
   { num: "03", title: "Full support", desc: "Marketing, showings, negotiation, coordination through to the notary. No surprises." },
 ];
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Platinum Club · Hall of Fame" },
-  { icon: Shield, label: "Full transparency, zero surprises" },
-];
 const nextSteps = [
   { title: "Free home valuation", text: "Know the value of your property — it's free, confidential and no commitment.", href: "/en/home-valuation", cta: "Get my valuation", highlight: true },
   { title: "Seller plan", text: "Pricing, preparation, marketing — a clear plan adapted to your property and situation.", href: "/en/sell", cta: "Get my plan" },
@@ -61,8 +55,7 @@ const SellerPageEn = () => (
     <PageMeta title="Sell Your Home in Gatineau | YGS" description="Sell your property in Gatineau at the best price. Marketing strategy, personalized support and proven results by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og-seller.jpg" />
     <ServiceJsonLd name="Home Selling Service in Gatineau" description="Full-service home selling in Gatineau and Outaouais — valuation, pricing strategy, marketing and support from listing to closing." url="/en/sell" serviceType="Real Estate Listing Service" />
     <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
+<CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
     <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
     <ContentBlock narrow>

@@ -5,7 +5,6 @@ import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -47,11 +46,6 @@ const steps = [
   { num: "03", title: "Exécution et accompagnement", desc: "De la décision à la transaction, un accompagnement complet et transparent." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste plex et multilogements" },
-  { icon: Shield, label: "Analyse basée sur les vrais chiffres" },
-];
 
 const nextSteps = [
   { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses, potentiel — une lecture objective de votre situation.", href: "/analyse-plex-gatineau", cta: "Recevoir mon analyse", highlight: true },
@@ -79,10 +73,7 @@ const PlexPage = () => (
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <LinkedCardGrid
+<LinkedCardGrid
       overline="Pour qui"
       title="J'aide deux types de clients"
       items={clientTypes}

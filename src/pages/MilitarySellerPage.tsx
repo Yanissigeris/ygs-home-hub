@@ -9,7 +9,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-military-seller.webp";
@@ -21,11 +20,6 @@ const steps = [
   { num: "03", title: "Vente et coordination", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. " },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Expérience en vente sous mutation" },
-  { icon: Shield, label: "Bilingue" },
-];
 
 const faq = [
   { q: "Combien de temps faut-il pour vendre lors d'une mutation?", a: "Ça dépend du marché et du prix, mais avec une bonne stratégie, on peut souvent conclure en quelques semaines. On adapte le plan à votre calendrier." },
@@ -45,10 +39,7 @@ const MilitarySellerPage = () => (
       trustLine="Stratégie claire. Vente rapide."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-white border-y border-border/30">
+<section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partenaire des programmes</p>

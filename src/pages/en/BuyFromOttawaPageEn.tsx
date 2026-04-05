@@ -8,7 +8,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
@@ -28,11 +27,6 @@ const sectors = [
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Ottawa → Gatineau relocation specialist" },
-  { icon: Shield, label: "Bilingual · Full transparency" },
-];
 
 const faq = [
   { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. Generally 15-30% savings on purchase price, but municipal and school taxes should also be considered." },
@@ -52,10 +46,7 @@ const BuyFromOttawaPageEn = () => (
       trustLine="Ottawa → Gatineau relocation specialist"
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
       overline="The advantages"
       title="Why more and more Ottawa residents are crossing the river"
       items={advantages}

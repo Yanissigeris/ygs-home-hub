@@ -8,7 +8,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { MapPin, Home, Shield, Clock, Award, DollarSign } from "lucide-react";
 import heroImg from "@/assets/hero-military-relocation.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
@@ -25,11 +24,6 @@ const steps = [
   { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection, notaire — tout est géré pour simplifier votre transition." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Spécialiste relocalisation militaire" },
-  { icon: Shield, label: "Service bilingue et rapide" },
-];
 
 const faq = [
   { q: "Comment se passe une relocalisation militaire immobilière?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), offre et accompagnement complet." },
@@ -47,10 +41,7 @@ const MilitaryRelocationPage = () => (
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <section className="py-8 bg-card border-y border-border/30">
+<section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">Partenaire des programmes</p>

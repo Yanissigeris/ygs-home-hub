@@ -6,7 +6,6 @@ import CardGrid from "@/components/CardGrid";
 import ImageTextSplit from "@/components/ImageTextSplit";
 import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
@@ -15,11 +14,6 @@ import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } f
 import heroImg from "@/assets/hero-plateau.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Plateau area specialist" },
-  { icon: Shield, label: "Support at your pace" },
-];
 
 const reasons = [
   "Recent developments with modern homes",
@@ -68,8 +62,7 @@ const PlateauPageEn = () => (
     <PageMeta title="Plateau — Neighborhood Guide Gatineau | YGS" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." />
     <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau" />
     <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
-    <TrustMiniStrip items={trustItems} />
-    <ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">
+<ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">
       <div className="label-overline">The area</div>
       <h2 className="mt-3">Why the Plateau attracts families</h2>
       <div className="mt-7 space-y-3.5">

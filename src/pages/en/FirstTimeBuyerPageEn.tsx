@@ -9,7 +9,6 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import ProcessSteps from "@/components/ProcessSteps";
 import InlineCTA from "@/components/InlineCTA";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
@@ -28,11 +27,6 @@ const steps = [
   { num: "03", title: "Full support", desc: "Offer, inspection, notary — I support you through the Québec process to the keys of your first property." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Dozens of first-time buyers supported" },
-  { icon: Shield, label: "Full transparency · At your pace" },
-];
 
 const faq = [
   { q: "How much do I need for a first purchase in Gatineau?", a: "With a 5% down payment, you can access many properties across Outaouais — from condos in Hull to houses on the Plateau. We analyze your real capacity together." },
@@ -52,10 +46,7 @@ const FirstTimeBuyerPageEn = () => (
       trustLine="Personalized support at your pace."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid overline="To consider" title="What every first-time buyer needs to know" items={considerations} />
+<CardGrid overline="To consider" title="What every first-time buyer needs to know" items={considerations} />
 
     <InlineCTA text="Not sure about your budget? We can discuss it during a free consultation." buttonLabel="Book a consultation →" href="/en/buyer-consultation" />
 

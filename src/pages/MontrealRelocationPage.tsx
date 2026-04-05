@@ -7,7 +7,6 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import SectorLinks from "@/components/SectorLinks";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import InlineCTA from "@/components/InlineCTA";
 import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-montreal-relocation.webp";
@@ -25,10 +24,6 @@ const sectors = [
 { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" }];
 
 
-const trustItems = [
-{ icon: Clock, label: "Près de 9 ans en Outaouais" },
-{ icon: Award, label: "Spécialiste relocalisation" },
-{ icon: Shield, label: "Accompagnement personnalisé" }];
 
 
 const MontrealRelocationPage = () =>
@@ -42,11 +37,7 @@ const MontrealRelocationPage = () =>
     secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
     trustLine="Spécialiste en relocalisation."
     heroBgImage={heroImg} />
-  
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
     overline="Les avantages"
     title="Pourquoi choisir Gatineau plutôt que Montréal"
     items={challenges} />

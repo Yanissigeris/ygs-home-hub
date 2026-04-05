@@ -11,7 +11,6 @@ import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
 import ProcessSteps from "@/components/ProcessSteps";
 import InlineCTA from "@/components/InlineCTA";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import { Home, DollarSign, FileText, Shield, Clock, Award } from "lucide-react";
 import heroImg from "@/assets/hero-first-buyer.webp";
 
@@ -28,11 +27,6 @@ const steps = [
   { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire — je vous accompagne dans le processus québécois jusqu'aux clés de votre première propriété." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Près de 9 ans en Outaouais" },
-  { icon: Award, label: "Des dizaines de premiers acheteurs accompagnés" },
-  { icon: Shield, label: "Transparence totale" },
-];
 
 const faq = [
   { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Avec 5% de mise de fonds, vous pouvez accéder à plusieurs propriétés en Outaouais — des condos à Hull aux maisons sur le Plateau. On analyse ensemble votre capacité réelle." },
@@ -52,10 +46,7 @@ const FirstTimeBuyerPage = () => (
       trustLine="Accompagnement personnalisé."
       heroBgImage={heroImg}
     />
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
       overline="À considérer"
       title="Ce que tout premier acheteur doit savoir"
       items={considerations}

@@ -9,7 +9,6 @@ import SectionHeading from "@/components/SectionHeading";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Building2, TrendingUp, DollarSign, Users, Clock, Award, Shield } from "lucide-react";
@@ -28,11 +27,6 @@ const steps = [
   { num: "03", title: "Marketing and sale", desc: "Targeted visibility, negotiation and full coordination through to the notary." },
 ];
 
-const trustItems = [
-  { icon: Clock, label: "Nearly 9 years in Outaouais" },
-  { icon: Award, label: "Plex and investment specialist" },
-  { icon: Shield, label: "Objective, transparent analysis" },
-];
 
 const faq = [
   { q: "How do you value a plex?", a: "We use the income approach (gross revenue multiplier) and comparable sales. The building condition, current rents and optimization potential also matter." },
@@ -52,8 +46,7 @@ const SellPlexPageEn = () => (
       trustLine="Plex specialist. "
       heroBgImage={heroImg}
     />
-    <TrustMiniStrip items={trustItems} />
-    <CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} />
+<CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} />
     <InlineCTA text="First step: know the value of your plex — it's free." buttonLabel="Free Valuation →" href="/en/home-valuation" />
     <ProcessSteps steps={steps} background="alt" />
     <ContentBlock narrow>

@@ -10,7 +10,6 @@ import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
-import TrustMiniStrip from "@/components/TrustMiniStrip";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -40,10 +39,6 @@ const steps = [
 { num: "03", title: "Accompagnement complet", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. Aucune surprise." }];
 
 
-const trustItems = [
-{ icon: Clock, label: "Près de 9 ans en Outaouais" },
-{ icon: Award, label: "Club Platine · Temple de la renommée" },
-{ icon: Shield, label: "Bilingue" }];
 
 
 const nextSteps = [
@@ -77,11 +72,7 @@ const SellerPage = () =>
     secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
     trustLine="Stratégie claire."
     heroBgImage={heroImg} />
-  
-
-    <TrustMiniStrip items={trustItems} />
-
-    <CardGrid
+<CardGrid
     overline="Vos questions"
     title="Vous vous posez probablement ces questions"
     items={painPoints}
