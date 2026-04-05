@@ -75,11 +75,11 @@ const buyerCols = [
   {
     title: "Sur le marché",
     items: [
-      "Les bonnes propriétés partent en 10-20 jours",
+      "Les bonnes propriétés partent rapidement dans les secteurs populaires",
       "Les offres multiples sont fréquentes à Lucerne et Rivermead",
       "Une visite rapide peut faire la différence",
       "L'inspection pré-offre est une option à considérer",
-      "Prévoyez 5-10% au-dessus du prix demandé en zone compétitive",
+      "Prévoyez une marge au-dessus du prix demandé en zone compétitive",
     ],
   },
   {
