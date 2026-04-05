@@ -15,6 +15,8 @@ import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
+import QuickActionStrip from "@/components/QuickActionStrip";
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
@@ -42,7 +44,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
-    
+    <QuickActionStrip />
     <AwardsMarquee />
 
     <div className="reveal">
@@ -106,6 +108,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         trustLine="Je vous donne les chiffres et les options, vous décidez."
       />
     </div>
+
+    <StickyMobileCTA />
   </div>
 ));
 

@@ -293,6 +293,11 @@
     height: auto;
   }
 
+  /* Bottom padding for sticky CTA bar */
+  main {
+    padding-bottom: 80px;
+  }
+
   /* Marquee slower on mobile */
   .animate-marquee {
     --marquee-speed: 40s;

@@ -96,6 +96,10 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        "hero-bounce": {
+          "0%, 100%": { transform: "translateX(-50%) translateY(0)" },
+          "50%": { transform: "translateX(-50%) translateY(6px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +108,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "hero-fade-up": "hero-fade-up .7s var(--ease) forwards",
         "marquee": "marquee 30s linear infinite",
+        "hero-bounce": "hero-bounce 2s ease infinite",
       },
     },
   },
