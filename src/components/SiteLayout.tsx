@@ -96,7 +96,7 @@ const SiteLayout = () => (
     <React.Suspense fallback={null}>
       <SiteFooter />
     </React.Suspense>
-    
+    <WhatsAppButton />
   </div>
 );
 

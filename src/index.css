@@ -333,6 +333,13 @@
   }
 }
 
+/* WhatsApp pulse */
+@keyframes whatsapp-pulse {
+  0%   { transform: scale(1); opacity: .6; }
+  70%  { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
