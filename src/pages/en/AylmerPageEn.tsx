@@ -40,22 +40,22 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "A sought-after residential area in Aylmer. Established and renovated homes, mature tree-lined streets, close to Lake Deschênes and cycling paths. Family-friendly with excellent access to the Champlain Bridge. Price: $550,000–$750,000.",
+    text: "A sought-after residential area in Aylmer. Established and renovated homes, mature tree-lined streets, close to Lake Deschênes and cycling paths. Family-friendly with excellent access to the Champlain Bridge.",
     tag: "Families · Established · In demand",
   },
   {
     title: "Old Aylmer",
-    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees. Price: $450,000–$650,000.",
+    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees.",
     tag: "Character · Walkable",
   },
   {
     title: "North Aylmer / Breckenridge",
-    text: "A quieter area with recent developments, large yards, and quick highway 50 access. Attracts young families seeking more space at accessible prices. Price: $480,000–$620,000.",
+    text: "A quieter area with recent developments, large yards, and quick highway 50 access. Attracts young families seeking more space at accessible prices.",
     tag: "Space · Recent · Affordable",
   },
   {
     title: "Waterfront · Lake Deschênes",
-    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with exceptional properties. Scarcity = long-term stable value. Price: $700,000–$1,200,000+.",
+    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with exceptional properties. Scarcity = long-term stable value.",
     tag: "Prestige · Waterfront",
   },
 ];
