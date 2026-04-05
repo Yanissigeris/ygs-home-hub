@@ -4,8 +4,8 @@ import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
+import AwardsMarquee from "@/components/AwardsMarquee";
 
-import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
@@ -16,18 +16,6 @@ import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
-
-const socialStatsFr = [
-  { value: "~9 ans", label: "d'expérience" },
-  { value: "5 ★", label: "avis Google + Facebook" },
-  { value: "Hall of Fame", label: "RE/MAX" },
-];
-
-const socialTestimonialsFr = [
-  { quote: "Yanis est très professionnel, respectueux, honnête, un être de confiance.", name: "Sylvie", location: "Gatineau" },
-  { quote: "Il a fait en sorte que notre premier achat se fasse le plus smooth possible.", name: "Geneviève et Salah", location: "Aylmer" },
-  { quote: "Excellente disponibilité, patient et honnête. Je le recommande fortement.", name: "Alexandre", location: "Aylmer" },
-];
 
 const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
@@ -47,10 +35,9 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     <TrustStrip />
+    <AwardsMarquee />
 
     <>
-      <SocialProofStrip stats={socialStatsFr} />
-
       <PathwaySection />
 
       <hr className="section-divider" />

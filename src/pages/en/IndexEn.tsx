@@ -2,10 +2,10 @@ import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
+import AwardsMarquee from "@/components/AwardsMarquee";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 
-import SocialProofStrip from "@/components/SocialProofStrip";
 import PathwaySection from "@/components/PathwaySection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
@@ -17,12 +17,6 @@ import CTASection from "@/components/CTASection";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
 const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
-
-const socialStatsEn = [
-  { value: "~9 yrs", label: "experience" },
-  { value: "5 ★", label: "Google + Facebook reviews" },
-  { value: "Hall of Fame", label: "RE/MAX" },
-];
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
@@ -42,10 +36,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     <TrustStrip lang="en" />
+    <AwardsMarquee />
 
     <>
-      <SocialProofStrip stats={socialStatsEn} />
-
       <PathwaySection lang="en" />
 
       <hr className="section-divider" />
