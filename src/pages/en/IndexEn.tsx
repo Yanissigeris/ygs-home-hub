@@ -53,6 +53,10 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     <div className="reveal">
+      <FeaturedProperties lang="en" />
+    </div>
+
+    <div className="reveal">
       <AboutSection lang="en" />
     </div>
 
