@@ -103,6 +103,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         trustLine="I give you the numbers and the options — you decide."
       />
     </div>
+
+    <StickyMobileCTA />
   </div>
 ));
 
