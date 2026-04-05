@@ -35,7 +35,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
             </a>
             <span className="h-3 w-px" style={{ background: "rgba(255,255,255,.1)" }} aria-hidden />
             <a href="mailto:yanis@martywaite.com" className="flex items-center gap-2 transition-colors duration-200 hover:text-white">
-              <MailIcon size={12} style={{ color: "rgba(255,255,255,.35)" }} /><span>yanis@martywaite.com</span>
+              <MailIcon size={12} className="text-white/35" /><span>yanis@martywaite.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
