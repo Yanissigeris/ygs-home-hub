@@ -51,7 +51,19 @@ const BuyerPageEn = () => (
     <PageMeta title="Buy a Property in Gatineau" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and guidance at your pace." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="Buyer Agent Service in Gatineau" description="Buyer representation service in Gatineau and Outaouais — neighborhood analysis, property search, offer strategy and full support." url="/en/buy" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First-time buyer, growing family or relocating from Ottawa — I guide you at every step to buy with confidence and clarity." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
-<ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighborhood and a strategy" subtitle="Beyond the house, you need to understand the neighborhoods, the real value, taxes, resale potential and the right offer strategy." /></ContentBlock>
+
+    <ContentBlock narrow background="alt">
+      <SectionHeading overline="2026 Context" title="Buying in Gatineau in 2026 — a more favourable context" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Buyers benefit in 2026 from a more balanced market than in 2022-2024. Available property inventory has increased, interest rates have stabilized, and the systematic bidding war phenomenon has eased in several segments.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        This does not make it a pure buyer's market. Well-located, well-presented properties still sell quickly. But you now have more time to analyze, visit and consider before making an offer — a real improvement for serious buyers.
+      </p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Sources: CMHC — Housing Market Outlook 2026 · Gatineau Real Estate Board.</p>
+    </ContentBlock>
+
+    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighborhood and a strategy" subtitle="Beyond the house, you need to understand the neighborhoods, the real value, taxes, resale potential and the right offer strategy." /></ContentBlock>
     <CardGrid overline="For you" title="I can help if you are…" items={profiles} background="alt" variant="icon-inline" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
