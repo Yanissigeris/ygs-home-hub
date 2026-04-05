@@ -50,7 +50,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 className="group relative flex flex-col transition-all duration-300 cursor-pointer"
                 style={{
-                  padding: "2.5rem 2rem",
+                  padding: "2.5rem 2rem 2rem",
                   background: "rgba(255,255,255,.03)",
                   borderRight: i < guides.length - 1 ? "1px solid rgba(255,255,255,.08)" : "none",
                   borderBottom: "1px solid rgba(255,255,255,.08)",
