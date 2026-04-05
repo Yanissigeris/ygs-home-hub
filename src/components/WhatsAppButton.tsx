@@ -12,8 +12,11 @@ const HIDDEN_PATHS = [
 const WhatsAppButton = () => {
   const lang = useLanguage();
   const isMobile = useIsMobile();
+  const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
+
+  const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
   const waLink =
     lang === "en"
