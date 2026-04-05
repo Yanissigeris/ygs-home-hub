@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
+
+const HIDDEN_PATHS = [
+  "/contact-yanis", "/en/contact",
+  "/merci", "/en/thank-you",
+  "/merci-evaluation", "/en/thank-you-valuation",
+];
 
 const WhatsAppButton = () => {
   const lang = useLanguage();
