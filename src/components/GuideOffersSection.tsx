@@ -89,7 +89,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 {/* CTA */}
                 <span
                   className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2"
-                  style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" }}
+                  style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".08em", textTransform: "uppercase" as const, whiteSpace: "nowrap" }}
                 >
                   {g.cta}
                 </span>
