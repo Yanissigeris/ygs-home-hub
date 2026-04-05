@@ -196,9 +196,22 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </div>
           </div>
 
+          {/* ── Google Reviews badge ── */}
+          <div className="flex justify-center py-4">
+            <GoogleReviewBadge variant="compact" />
+          </div>
+
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
+            <div className="mt-2 flex justify-center gap-4">
+              <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+                {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
+              </Link>
+              <Link to={lang === "en" ? "/en/terms" : "/conditions-utilisation"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+                {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
