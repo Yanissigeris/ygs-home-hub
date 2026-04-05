@@ -38,6 +38,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
       agentName="Yanis Gauthier-Sigeris"
+      hideCredentialsStrip
     />
 
     
