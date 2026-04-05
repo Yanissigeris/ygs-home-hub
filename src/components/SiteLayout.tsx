@@ -8,8 +8,11 @@ import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
+import NavigationProgress from "@/components/NavigationProgress";
+import PageTransition from "@/components/PageTransition";
+import { AnimatePresence } from "framer-motion";
 
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 
@@ -80,26 +83,35 @@ const PageFallback = () => (
   </div>
 );
 
-const SiteLayout = () => (
-  <div className="flex min-h-screen flex-col font-body">
-    <JsonLdSchema />
-    <LangMeta />
-    <BreadcrumbJsonLd />
-    <UtilityBar />
-    <SiteHeader />
-    <VisibleBreadcrumb />
-    <ScrollProgress />
-    <main className="flex-1">
-      <React.Suspense fallback={<PageFallback />}>
-        <Outlet />
+const SiteLayout = () => {
+  const location = useLocation();
+
+  return (
+    <div className="flex min-h-screen flex-col font-body">
+      <JsonLdSchema />
+      <LangMeta />
+      <BreadcrumbJsonLd />
+      <NavigationProgress />
+      <UtilityBar />
+      <SiteHeader />
+      <VisibleBreadcrumb />
+      <ScrollProgress />
+      <main className="flex-1">
+        <AnimatePresence mode="wait">
+          <PageTransition locationKey={location.pathname}>
+            <React.Suspense fallback={<PageFallback />}>
+              <Outlet />
+            </React.Suspense>
+          </PageTransition>
+        </AnimatePresence>
+      </main>
+      <React.Suspense fallback={null}>
+        <SiteFooter />
       </React.Suspense>
-    </main>
-    <React.Suspense fallback={null}>
-      <SiteFooter />
-    </React.Suspense>
-    <WhatsAppButton />
-    <CookieConsent />
-  </div>
-);
+      <WhatsAppButton />
+      <CookieConsent />
+    </div>
+  );
+};
 
 export default SiteLayout;
