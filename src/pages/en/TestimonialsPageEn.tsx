@@ -20,6 +20,16 @@ const TestimonialsPageEn = () => (
   <>
     <PageMeta title="Client Testimonials — Verified Reviews | YGS" description="Read what sellers, buyers and military members say about working with Yanis Gauthier-Sigeris, real estate broker in Gatineau." ogImage="https://yanisgauthier.com/og/og-testimonials.jpg" />
     <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Book a consultation", href: "/en/contact" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
+    {/* Google Reviews badge */}
+    <section className="section-padding bg-background pb-0">
+      <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
+        <div>
+          <p className="label-overline mb-2">Verified reviews</p>
+          <h2>Our clients on Google</h2>
+        </div>
+        <GoogleReviewBadge />
+      </div>
+    </section>
     {categories.map((cat, idx) => {
       const catReviews = getReviewsByCategory(cat.key);
       if (!catReviews.length) return null;
