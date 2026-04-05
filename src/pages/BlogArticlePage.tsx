@@ -192,7 +192,7 @@ const BlogArticlePage = () => {
 
   return (
     <>
-      <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} />
+      <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
 
       {/* Featured image banner */}
