@@ -188,19 +188,15 @@ const AylmerPageEn = () => (
 
         <div className="lg:col-span-2">
           <div className="rounded-md border border-border bg-background p-6 space-y-5">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Aylmer by the numbers</h3>
-            {keyFacts.map((f) => (
-              <div key={f.label} className="space-y-0.5">
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>{f.icon}</span> {f.label}
-                </p>
-                <p className="text-lg font-semibold text-foreground">{f.value}</p>
-                {f.trend && <p className="text-xs text-accent">{f.trend}</p>}
-                {f.note && <p className="text-xs text-muted-foreground">{f.note}</p>}
-              </div>
-            ))}
-            <p className="text-[0.7rem] text-muted-foreground/60 pt-2 border-t border-border">
-              Indicative data based on recent sales. Updated monthly.
+            <h3 className="font-serif text-lg font-semibold text-foreground">What is a property worth here?</h3>
+            <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
+              Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
+            </p>
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/en/home-valuation">Get the real numbers →</Link>
+            </Button>
+            <p className="text-[0.72rem] text-muted-foreground italic text-center">
+              Free · No obligation · Response within 24-48h
             </p>
           </div>
         </div>
