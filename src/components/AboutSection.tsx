@@ -65,29 +65,28 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               height={800}
             />
             {/* Bottom scrim for badge legibility */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.35), transparent)" }} aria-hidden="true" />
-          </div>
-          {/* Credential badges */}
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-2 pb-4">
-            {[c.badge1, c.badge2].map((badge) => (
-              <span
-                key={badge}
-                style={{
-                  background: "var(--gold)",
-                  color: "#fff",
-                  fontSize: ".65rem",
-                  fontWeight: 700,
-                  letterSpacing: ".08em",
-                  textTransform: "uppercase",
-                  padding: ".45rem .9rem",
-                  borderRadius: 2,
-                  boxShadow: "0 4px 20px rgba(168,138,90,.3)",
-                  backdropFilter: "blur(4px)",
-                }}
-              >
-                {badge}
-              </span>
-            ))}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(23,48,59,.6), transparent)" }} aria-hidden="true" />
+            {/* Credential badges */}
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-2 p-4">
+              {[c.badge1, c.badge2].map((badge) => (
+                <span
+                  key={badge}
+                  style={{
+                    background: "var(--gold)",
+                    color: "#fff",
+                    fontSize: ".65rem",
+                    fontWeight: 700,
+                    letterSpacing: ".08em",
+                    textTransform: "uppercase",
+                    padding: ".45rem .9rem",
+                    borderRadius: 2,
+                    boxShadow: "0 4px 20px rgba(168,138,90,.3)",
+                  }}
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
