@@ -10,16 +10,17 @@ interface TestimonialGridProps {
   reviewsPageHref?: string;
 }
 
-const GridCard = ({ review }: { review: Review }) => (
+const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => (
   <div
     itemScope
     itemType="https://schema.org/Review"
-    className="flex h-full flex-col transition-all duration-300"
+    className="reveal flex h-full flex-col transition-all duration-300"
     style={{
       border: "1px solid rgba(255,255,255,.08)",
       borderRadius: 3,
       padding: "2.5rem",
       background: "rgba(255,255,255,.03)",
+      transitionDelay: `${index * 0.1}s`,
     }}
     onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.06)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
     onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.03)"; e.currentTarget.style.transform = ""; }}
@@ -86,8 +87,8 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
         {/* Static 2-column grid */}
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {reviews.map((review) => (
-            <GridCard key={review.id} review={review} />
+          {reviews.map((review, i) => (
+            <GridCard key={review.id} review={review} index={i} />
           ))}
         </div>
 
