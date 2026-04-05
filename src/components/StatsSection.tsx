@@ -25,11 +25,10 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
             <div
               key={i}
               className="relative flex flex-col items-center justify-center text-center py-6 md:py-0"
-              style={{
-                borderRight: i < 2 ? "1px solid rgba(255,255,255,.2)" : "none",
-                borderBottom: i < 2 ? "1px solid rgba(255,255,255,.2)" : "none",
-              }}
+              style={i < 2 ? { borderBottom: "1px solid rgba(255,255,255,.2)" } : {}}
             >
+              {/* On md+, use right border instead */}
+              <style>{`@media(min-width:768px){.stat-cell-${i}{border-bottom:none!important;${i < 2 ? "border-right:1px solid rgba(255,255,255,.2)!important" : ""}}}`}</style>
               {/* Ghosted background number */}
               <span
                 className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
