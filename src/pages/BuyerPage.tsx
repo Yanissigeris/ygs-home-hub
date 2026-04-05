@@ -62,7 +62,7 @@ const faq = [
 
 const BuyerPage = () => (
    <>
-    <PageMeta title="Acheter une propriété à Gatineau · Outaouais" description="Trouvez et achetez votre propriété à Gatineau — Aylmer, Hull, Plateau ou Buckingham. Consultation personnalisée et accompagnement à votre rythme." ogImage="https://yanisgauthier.com/og-buyer.jpg" />
+    <PageMeta title="Acheter une propriété à Gatineau · Outaouais" description="Trouvez et achetez votre propriété à Gatineau — Aylmer, Hull, Plateau ou Buckingham. Consultation personnalisée et accompagnement à votre rythme." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="Accompagnement acheteur à Gatineau" description="Service d'accompagnement pour l'achat immobilier à Gatineau et en Outaouais — recherche, visites, analyse de quartier, offre d'achat et inspection." url="/acheter-a-gatineau" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection
       overline="Pour acheteurs · Gatineau"

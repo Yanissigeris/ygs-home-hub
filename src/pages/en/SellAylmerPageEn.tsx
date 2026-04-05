@@ -42,7 +42,7 @@ const SellAylmerPageEn = () => (
     <PageMeta
       title="Sell Your House in Aylmer | Real Estate Broker"
       description="Sell your property in Aylmer at the best price. Free valuation, local strategy and full support from a broker who knows Aylmer."
-    />
+    ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd
       name="Real Estate Selling Service in Aylmer"
       description="Real estate selling service in Aylmer — valuation, pricing strategy, marketing and full support."

@@ -34,7 +34,7 @@ const related = [
 
 const LivingHullPage = () => (
    <>
-    <PageMeta title="Vivre à Hull · Gatineau — Mode de vie" description="Tout sur la vie à Hull, Gatineau: culture, restaurants, proximité Ottawa, projet Zibi et ambiance urbaine. Le guide pour s'installer à Hull." />
+    <PageMeta title="Vivre à Hull · Gatineau — Mode de vie" description="Tout sur la vie à Hull, Gatineau: culture, restaurants, proximité Ottawa, projet Zibi et ambiance urbaine. Le guide pour s'installer à Hull." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
     <HeroSection
       overline="Vivre à Hull · Gatineau"
       title="Vivre à Hull — le guide"

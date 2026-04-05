@@ -68,7 +68,7 @@ const related = [
 
 const HullPageEn = () => (
   <>
-    <PageMeta title="Hull — Neighborhood Guide" description="Living, buying or investing in Hull. Urban neighborhood, condos, plex, culture and Ottawa proximity. Complete guide." />
+    <PageMeta title="Hull — Neighborhood Guide" description="Living, buying or investing in Hull. Urban neighborhood, condos, plex, culture and Ottawa proximity. Complete guide." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
     <NeighborhoodJsonLd name="Hull" description="Real estate broker specializing in Hull, Gatineau. Urban neighborhood, condos, plex, culture and Ottawa proximity." lat={45.4283} lng={-75.7140} url="/en/hull" />
     <HeroSection
       overline="Neighborhood Guide · Hull"

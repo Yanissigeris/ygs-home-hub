@@ -49,7 +49,7 @@ const PlexAnalysisPage = () => {
 
   return (
      <>
-      <PageMeta title="Analyse de plex à Gatineau · Outaouais" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel par secteur. Analyse gratuite par un courtier spécialisé en Outaouais." />
+      <PageMeta title="Analyse de plex à Gatineau · Outaouais" description="Faites analyser votre plex à Gatineau: rendement, revenus, dépenses et potentiel par secteur. Analyse gratuite par un courtier spécialisé en Outaouais." ogImage="https://yanisgauthier.com/og/og-plex.jpg" />
     <ServiceJsonLd name="Analyse de plex à Gatineau" description="Analyse gratuite de plex à Gatineau — rendement, revenus, dépenses et potentiel par secteur en Outaouais." url="/analyse-plex-gatineau" serviceType="Real Estate Investment Analysis" />
       <HeroSection
         compact

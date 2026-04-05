@@ -28,7 +28,7 @@ const sectors = [
 
 const MontrealRelocationPageEn = () => (
   <>
-    <PageMeta title="Relocating from Montréal to Gatineau" description="Moving from Montréal to Gatineau? Cost of living, neighborhoods, quality of life and real estate support for your transition." />
+    <PageMeta title="Relocating from Montréal to Gatineau" description="Moving from Montréal to Gatineau? Cost of living, neighborhoods, quality of life and real estate support for your transition." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Montreal to Gatineau Relocation" description="Support for relocating from Montreal to Gatineau — neighbourhoods, cost of living and real estate process." url="/en/montreal-relocation" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Relocation · Montréal → Gatineau"

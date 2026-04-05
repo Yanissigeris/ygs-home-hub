@@ -25,7 +25,7 @@ const related = [
 
 const MarketReportPageEn = () => (
   <>
-    <PageMeta title="Gatineau Real Estate Market Report" description="Prices, trends and sales volumes in Gatineau and Outaouais. Real estate market report by Yanis Gauthier-Sigeris." />
+    <PageMeta title="Gatineau Real Estate Market Report" description="Prices, trends and sales volumes in Gatineau and Outaouais. Real estate market report by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
     <HeroSection
       overline="Market Report · Gatineau"
       title="Gatineau real estate market report"

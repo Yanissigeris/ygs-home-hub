@@ -37,7 +37,7 @@ const faq = [
 
 const FirstTimeBuyerPageEn = () => (
   <>
-    <PageMeta title="First-Time Buyer — Gatineau" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." />
+    <PageMeta title="First-Time Buyer — Gatineau" description="First-time buyer in Gatineau? Budget, process and step-by-step guidance to buy your first home with confidence." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="First-Time Home Buyer — Gatineau" description="Personalized support for first-time buyers in Gatineau. Down payment, Quebec programs and step-by-step process." url="/en/first-time-buyer" serviceType="First Time Home Buyer Service" />
     <HeroSection
       overline="First-Time Buyer · Gatineau"

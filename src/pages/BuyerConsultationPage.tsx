@@ -51,7 +51,7 @@ const BuyerConsultationPage = () => {
 
   return (
      <>
-      <PageMeta title="Consultation acheteur gratuite · Gatineau" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." />
+      <PageMeta title="Consultation acheteur gratuite · Gatineau" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="Consultation acheteur gratuite — Gatineau" description="Consultation gratuite pour acheteurs à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." url="/consultation-acheteur" serviceType="Real Estate Buyer Consultation" />
       <HeroSection
         compact

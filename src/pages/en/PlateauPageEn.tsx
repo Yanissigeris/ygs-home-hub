@@ -59,7 +59,7 @@ const related = [
 
 const PlateauPageEn = () => (
   <>
-    <PageMeta title="Plateau — Neighborhood Guide Gatineau" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." />
+    <PageMeta title="Plateau — Neighborhood Guide Gatineau" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau" />
     <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
 <ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">

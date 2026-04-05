@@ -34,7 +34,7 @@ const related = [
 
 const LivingAylmerPageEn = () => (
   <>
-    <PageMeta title="Living in Aylmer — Lifestyle Guide" description="Everything about life in Aylmer: lake, restaurants, schools, community and quality of life. Your guide to settling in Aylmer." />
+    <PageMeta title="Living in Aylmer — Lifestyle Guide" description="Everything about life in Aylmer: lake, restaurants, schools, community and quality of life. Your guide to settling in Aylmer." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <HeroSection overline="Living in Aylmer · Gatineau" title="Living in Aylmer — the guide" subtitle="Discover the Aylmer lifestyle: lake, nature, community and Ottawa access. Everything you need to know before settling in." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "See the neighborhood", href: "/en/aylmer" }} heroBgImage={heroImg} />
     <CardGrid overline="Lifestyle" title="What makes Aylmer unique" items={highlights} />
     <ContentBlock narrow>

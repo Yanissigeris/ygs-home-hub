@@ -34,7 +34,7 @@ const related = [
 
 const LivingPlateauPage = () => (
    <>
-    <PageMeta title="Vivre dans le Plateau · Gatineau — Mode de vie" description="Tout sur la vie dans le Plateau à Gatineau: familles, parcs, maisons récentes, écoles et qualité de vie. Guide pour s'installer au Plateau." />
+    <PageMeta title="Vivre dans le Plateau · Gatineau — Mode de vie" description="Tout sur la vie dans le Plateau à Gatineau: familles, parcs, maisons récentes, écoles et qualité de vie. Guide pour s'installer au Plateau." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <HeroSection
       overline="Vivre dans le Plateau · Gatineau"
       title="Vivre dans le Plateau — le guide"

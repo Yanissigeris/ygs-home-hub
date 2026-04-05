@@ -43,7 +43,7 @@ const faq = [
 
 const ResourcesPage = () => (
    <>
-    <PageMeta title="Guides et ressources immobilières · Gatineau" description="Guides gratuits pour vendeurs, acheteurs et investisseurs à Gatineau et en Outaouais. Ressources immobilières par Yanis Gauthier-Sigeris." />
+    <PageMeta title="Guides et ressources immobilières · Gatineau" description="Guides gratuits pour vendeurs, acheteurs et investisseurs à Gatineau et en Outaouais. Ressources immobilières par Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
     <HeroSection
       overline="Ressources · YGS"
       title="Ressources immobilières gratuites"

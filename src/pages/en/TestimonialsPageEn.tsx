@@ -17,7 +17,7 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
 
 const TestimonialsPageEn = () => (
   <>
-    <PageMeta title="Client Testimonials — Verified Reviews" description="Discover what clients say about Yanis Gauthier-Sigeris. Testimonials from sellers, buyers and military members in Gatineau." />
+    <PageMeta title="Client Testimonials — Verified Reviews" description="Discover what clients say about Yanis Gauthier-Sigeris. Testimonials from sellers, buyers and military members in Gatineau." ogImage="https://yanisgauthier.com/og/og-testimonials.jpg" />
     <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Book a consultation", href: "/en/contact" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     {categories.map((cat, idx) => {
       const catReviews = getReviewsByCategory(cat.key);

@@ -39,7 +39,7 @@ const related = [
 
 const BuyerGuidePage = () => (
    <>
-    <PageMeta title="Guide acheteur — Acheter à Gatineau" description="Guide complet pour acheter une propriété à Gatineau et en Outaouais. Processus québécois, budget, inspection et négociation — tout ce qu'il faut savoir." />
+    <PageMeta title="Guide acheteur — Acheter à Gatineau" description="Guide complet pour acheter une propriété à Gatineau et en Outaouais. Processus québécois, budget, inspection et négociation — tout ce qu'il faut savoir." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection
       overline="Guide acheteur · Gatineau"
       title="Guide complet pour acheter à Gatineau et l'Outaouais"

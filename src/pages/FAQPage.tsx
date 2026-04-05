@@ -45,7 +45,7 @@ const relatedResources = [
 
 const FAQPage = () => (
    <>
-    <PageMeta title="FAQ — Immobilier Gatineau et Outaouais" description="Réponses aux questions fréquentes sur l'immobilier à Gatineau et en Outaouais. Vendre, acheter, investir, relocalisation et processus québécois." />
+    <PageMeta title="FAQ — Immobilier Gatineau et Outaouais" description="Réponses aux questions fréquentes sur l'immobilier à Gatineau et en Outaouais. Vendre, acheter, investir, relocalisation et processus québécois." ogImage="https://yanisgauthier.com/og/og-faq.jpg" />
     
     <HeroSection
       overline="FAQ · YGS"

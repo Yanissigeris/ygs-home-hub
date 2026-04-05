@@ -42,7 +42,7 @@ const SellAylmerPage = () => (
     <PageMeta
       title="Vendre sa maison à Aylmer | Courtier immobilier"
       description="Vendez votre propriété à Aylmer au meilleur prix. Évaluation gratuite, stratégie locale et accompagnement complet par un courtier qui connaît Aylmer."
-    />
+    ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd
       name="Vente immobilière à Aylmer"
       description="Service de vente immobilière à Aylmer — évaluation, stratégie de prix, mise en marché et accompagnement complet."

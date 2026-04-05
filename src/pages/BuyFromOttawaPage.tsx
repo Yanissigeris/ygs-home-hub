@@ -36,7 +36,7 @@ const faq = [
 
 const BuyFromOttawaPage = () => (
    <>
-    <PageMeta title="Acheter à Gatineau depuis Ottawa" description="Vous habitez Ottawa et pensez acheter à Gatineau? Aylmer, Hull, Plateau — taxes, quartiers, avantages et accompagnement bilingue pour votre transition." />
+    <PageMeta title="Acheter à Gatineau depuis Ottawa" description="Vous habitez Ottawa et pensez acheter à Gatineau? Aylmer, Hull, Plateau — taxes, quartiers, avantages et accompagnement bilingue pour votre transition." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection
       overline="Acheter depuis Ottawa · Gatineau"
       title="Acheter à Gatineau depuis Ottawa"

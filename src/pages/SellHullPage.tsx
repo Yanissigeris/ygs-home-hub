@@ -42,7 +42,7 @@ const SellHullPage = () => (
     <PageMeta
       title="Vendre sa maison à Hull | Courtier immobilier"
       description="Vendez votre propriété à Hull au meilleur prix. Évaluation gratuite, stratégie de mise en marché locale et accompagnement complet par un courtier qui connaît Hull."
-    />
+    ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd
       name="Vente immobilière à Hull"
       description="Service de vente immobilière à Hull — évaluation, stratégie de prix, mise en marché et accompagnement complet."

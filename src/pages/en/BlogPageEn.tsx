@@ -23,7 +23,7 @@ const BlogPageEn = () => {
       <PageMeta
         title="Gatineau Real Estate Blog · Tips & Market Insights"
         description="Articles, market analysis, and real estate advice for Gatineau and the Outaouais. Sellers, buyers, investors — by Yanis Gauthier-Sigeris, Real Estate Broker."
-      />
+      ogImage="https://yanisgauthier.com/og/og-blog.jpg" />
       <HeroSection
         overline="BLOG · GATINEAU REAL ESTATE"
         title="Real Estate Blog"

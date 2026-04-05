@@ -34,7 +34,7 @@ const related = [
 
 const LivingPlateauPageEn = () => (
   <>
-    <PageMeta title="Living in the Plateau — Lifestyle Guide" description="Everything about life in the Plateau in Gatineau: families, parks, developments and quality of life. Guide to settling in." />
+    <PageMeta title="Living in the Plateau — Lifestyle Guide" description="Everything about life in the Plateau in Gatineau: families, parks, developments and quality of life. Guide to settling in." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <HeroSection overline="Living in the Plateau · Gatineau" title="Living in the Plateau — the guide" subtitle="Discover the Plateau lifestyle: recent developments, families, nature and excellent value for money." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "See the neighborhood", href: "/en/plateau" }} heroBgImage={heroImg} />
     <CardGrid overline="Lifestyle" title="What makes the Plateau unique" items={highlights} />
     <ContentBlock narrow>
