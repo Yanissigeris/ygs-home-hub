@@ -44,6 +44,8 @@ const StickyMobileCTA = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  if (hidden) return null;
+
   return (
     <div
       className="fixed bottom-0 inset-x-0 z-[500] md:hidden"
