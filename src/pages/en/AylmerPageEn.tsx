@@ -259,7 +259,7 @@ const AylmerPageEn = () => (
           <p className="label-overline">SELLER GUIDE</p>
           <h2>Sell your Aylmer property for the best price</h2>
           <p className="prose-body mt-5">
-            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property typically sells in under 30 days, often with multiple offers. But "well-positioned" doesn't mean "highest price" — it means the right price, the right presentation, and the right strategy.
+            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. But "well-positioned" doesn't mean "highest price" — it means the right price, the right presentation, and the right strategy.
           </p>
           <p className="prose-body">
             Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street — not just by area — makes a real difference in your final price.
