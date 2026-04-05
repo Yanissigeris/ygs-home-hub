@@ -34,7 +34,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
         className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
         style={{ fontSize: ".75rem", color: "rgba(255,255,255,.45)" }}
       >
-        <Stars /> 5.0 {lang === "en" ? "on Google" : "sur Google"} · 50+ {reviewsText}
+        <Stars /> 5.0 {lang === "en" ? "on Google" : "sur Google"}
       </a>
     );
   }
