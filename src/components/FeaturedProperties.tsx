@@ -39,7 +39,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     if (featured.length === 0) return null;
 
     return (
-      <section ref={ref} style={{ background: "var(--cream)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <section ref={ref} style={{ background: "var(--cream)", padding: `clamp(3.5rem, 6vw, 7rem) 0 ${featured.length < 3 ? "4rem" : "clamp(3.5rem, 6vw, 7rem)"}` }}>
         <div className="section-container">
           {/* Header */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -63,7 +63,10 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
           </div>
 
           {/* Grid */}
-          <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            className={`grid gap-5 grid-cols-1 md:grid-cols-2 ${featured.length >= 3 ? "lg:grid-cols-3" : ""}`}
+            style={featured.length < 3 ? { maxWidth: 900, marginInline: "auto" } : undefined}
+          >
             {featured.map((p) => (
               <a
                 key={p.id}
