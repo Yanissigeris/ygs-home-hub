@@ -8,6 +8,7 @@ import AwardsMarquee from "@/components/AwardsMarquee";
 import StatsSection from "@/components/StatsSection";
 
 import PathwaySection from "@/components/PathwaySection";
+import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
@@ -48,6 +49,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <div className="reveal">
       <PathwaySection />
+    </div>
+
+    <div className="reveal">
+      <FeaturedProperties />
     </div>
 
     <div className="reveal">
