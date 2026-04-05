@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
 }
 
 // FR pages
-const Index = React.lazy(() => import("./pages/Index"));
+import Index from "./pages/Index";
 const SellerPage = React.lazy(() => import("./pages/SellerPage"));
 const ValuationPage = React.lazy(() => import("./pages/ValuationPage"));
 const BuyerPage = React.lazy(() => import("./pages/BuyerPage"));
