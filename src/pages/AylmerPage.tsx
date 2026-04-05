@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
-    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons sur le Plateau avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
+    a: "En 2025-2026, les propriétés bien positionnées à Aylmer se vendent en moyenne entre 20 et 35 jours. Les maisons à Lucerne et Rivermead avec bonne présentation et prix juste partent souvent en moins de 15 jours avec offres multiples. Une propriété surévaluée peut rester 60-90 jours sur le marché, ce qui envoie un signal négatif aux acheteurs.",
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
