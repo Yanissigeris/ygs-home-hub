@@ -108,7 +108,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               <MapPin size={13} className="inline-block mr-1.5 -mt-0.5 text-accent" />
               {cfg.areasHeading}
             </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
               {areas.map((area, i) => (
                 <motion.div
                   key={area.href}
