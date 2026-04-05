@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99.5%;
+    --background: 39 29% 95%;
     --foreground: 200 30% 14%;
 
     --card: 0 0% 100%;
@@ -18,23 +18,23 @@
     --primary: 200 42% 16%;
     --primary-foreground: 40 20% 97%;
 
-    --secondary: 200 10% 96.5%;
+    --secondary: 39 20% 94%;
     --secondary-foreground: 200 30% 14%;
 
     --muted: 200 8% 94%;
-    --muted-foreground: 200 8% 44%;
+    --muted-foreground: 200 12% 46%;
 
-    --accent: 36 38% 46%;
+    --accent: 36 38% 50%;
     --accent-foreground: 200 42% 16%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 10% 92%;
+    --border: 200 14% 87%;
     --input: 200 10% 90%;
     --ring: 200 42% 16%;
 
-    --radius: 0.875rem;
+    --radius: 0.1875rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -45,16 +45,27 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
+    /* Brand tokens */
+    --ink: #17303B;
+    --ink2: #1a3645;
+    --cream: #F7F4EE;
+    --parchment: #ede9e0;
+    --gold: #A88A5A;
+    --gold2: #c4a878;
+    --gold3: rgba(168,138,90,.12);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --ease: cubic-bezier(.22,.61,.36,1);
+
     --hero-gradient: hsl(200 42% 16%);
     --card-shadow: 0 1px 4px 0 hsl(200 30% 14% / 0.03), 0 1px 2px 0 hsl(200 30% 14% / 0.02);
     --card-shadow-hover: 0 12px 32px -12px hsl(200 30% 14% / 0.1), 0 4px 8px -2px hsl(200 30% 14% / 0.04);
-    --card-radius: 1.375rem;
+    --card-radius: 3px;
     --section-padding-lg: clamp(5.5rem, 10vw, 8rem);
     --section-padding-md: clamp(4rem, 7vw, 6rem);
     --section-padding-sm: clamp(3rem, 5.5vw, 4.5rem);
   }
 
-  /* ── Mobile: tighter section padding ── */
   @media (max-width: 639px) {
     :root {
       --section-padding-lg: 2.5rem;
@@ -71,63 +82,47 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
     letter-spacing: -0.011em;
-    font-feature-settings: 'cv11', 'ss01';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.025em;
+    font-family: var(--serif);
     color: hsl(var(--foreground));
     text-wrap: balance;
   }
 
-  /* H1: 34 → 46 → 58 → 64 */
   h1 {
-    @apply text-[2.125rem] leading-[1.06] font-bold;
-  }
-  @media (min-width: 640px) {
-    h1 { @apply text-[2.875rem]; }
-  }
-  @media (min-width: 768px) {
-    h1 { @apply text-[3.625rem]; }
-  }
-  @media (min-width: 1280px) {
-    h1 { @apply text-[4rem]; }
+    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
   }
 
-  /* H2: 24 → 30 → 36 → 40 */
   h2 {
-    @apply text-[1.5rem] leading-[1.15] font-bold;
-  }
-  @media (min-width: 640px) {
-    h2 { @apply text-[1.875rem]; }
-  }
-  @media (min-width: 768px) {
-    h2 { @apply text-[2.25rem]; }
-  }
-  @media (min-width: 1280px) {
-    h2 { @apply text-[2.5rem]; }
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  /* H3: 20 → 22 → 24 */
   h3 {
-    @apply text-[1.25rem] leading-[1.2] font-semibold;
-  }
-  @media (min-width: 640px) {
-    h3 { @apply text-[1.375rem]; }
-  }
-  @media (min-width: 768px) {
-    h3 { @apply text-[1.5rem]; }
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   .section-container {
-    @apply mx-auto max-w-[1200px] px-5 sm:px-6 md:px-8;
+    @apply mx-auto px-5 sm:px-6 md:px-8;
+    max-width: 1240px;
   }
 
   .section-padding {
@@ -170,34 +165,48 @@
   }
 
   .prose-body {
-    @apply text-[1.0625rem] leading-[1.65] text-muted-foreground;
+    @apply text-[1rem] leading-[1.8] text-muted-foreground;
     max-width: 38rem;
-  }
-
-  @media (max-width: 767px) {
-    .prose-body {
-      @apply text-base;
-    }
+    font-weight: 300;
   }
 
   .label-overline {
-    @apply text-[0.8125rem] font-semibold uppercase tracking-[0.1em] text-accent;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
-  @media (max-width: 639px) {
-    .label-overline {
-      @apply text-[0.75rem];
-    }
+  .label-overline::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
   }
 
   .divider-line {
-    @apply mx-auto h-px w-12 bg-accent/25;
+    @apply mx-auto h-px w-12;
+    background: var(--gold);
+    opacity: 0.25;
+  }
+
+  .gold-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
   }
 
   /* Inline CTA band */
   .cta-band {
-    @apply bg-primary py-5;
+    @apply py-5;
+    background: var(--ink);
   }
 
   .cta-band .section-container {
@@ -208,7 +217,7 @@
     @apply text-[0.9375rem] font-medium text-primary-foreground/75;
   }
 
-  /* ── Testimonial slider ── */
+  /* Testimonial slider */
   .testimonial-card {
     border-radius: var(--card-radius);
     box-shadow: 0 1px 3px 0 hsl(200 30% 14% / 0.025);
@@ -231,11 +240,44 @@
     cursor: pointer;
   }
   .testimonial-nav-btn:hover {
-    border-color: hsl(var(--accent) / 0.35);
+    border-color: var(--gold);
     box-shadow: 0 4px 12px -4px hsl(200 30% 14% / 0.1);
   }
   .testimonial-nav-btn:disabled {
     opacity: 0.3;
     cursor: default;
   }
+
+  /* Scroll reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .d1 { transition-delay: .1s; }
+  .d2 { transition-delay: .2s; }
+  .d3 { transition-delay: .25s; }
+  .d4 { transition-delay: .35s; }
 }
