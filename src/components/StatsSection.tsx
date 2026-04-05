@@ -20,33 +20,19 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
   return (
     <section ref={ref} style={{ background: "var(--gold)", padding: "4rem 0" }}>
       <div className="section-container">
-        <div className="grid md:grid-cols-3">
+        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x" style={{ "--tw-divide-opacity": ".2" } as React.CSSProperties}>
           {stats.map((s, i) => (
-            <div
-              key={i}
-              className="relative flex flex-col items-center justify-center text-center py-6 md:py-0"
-              style={i < 2 ? { borderBottom: "1px solid rgba(255,255,255,.2)" } : {}}
-            >
-              {/* On md+, use right border instead */}
-              <style>{`@media(min-width:768px){.stat-cell-${i}{border-bottom:none!important;${i < 2 ? "border-right:1px solid rgba(255,255,255,.2)!important" : ""}}}`}</style>
+            <div key={i} className="relative flex flex-col items-center justify-center text-center py-8 md:py-4">
               {/* Ghosted background number */}
               <span
                 className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
                 style={{ fontFamily: "var(--serif)", fontSize: "10rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
                 aria-hidden="true"
-              >
-                {s.ghost}
-              </span>
-              <span
-                className="relative"
-                style={{ fontFamily: "var(--serif)", fontSize: "3.8rem", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}
-              >
+              >{s.ghost}</span>
+              <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.8rem, 5vw, 3.8rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
                 {s.value}
               </span>
-              <span
-                className="relative mt-2"
-                style={{ fontSize: ".7rem", fontWeight: 500, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}
-              >
+              <span className="relative mt-2" style={{ fontSize: ".7rem", fontWeight: 500, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
                 {s.label}
               </span>
             </div>
