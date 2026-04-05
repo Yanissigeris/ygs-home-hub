@@ -57,9 +57,9 @@
   /* ── Mobile: tighter section padding ── */
   @media (max-width: 639px) {
     :root {
-      --section-padding-lg: 2.5rem;
-      --section-padding-md: 2rem;
-      --section-padding-sm: 1.5rem;
+      --section-padding-lg: 2rem;
+      --section-padding-md: 1.75rem;
+      --section-padding-sm: 1.25rem;
     }
   }
 }

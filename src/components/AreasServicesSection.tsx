@@ -146,7 +146,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
             <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
               {cfg.servicesHeading}
             </h3>
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
               {services.map((svc, i) => (
                 <motion.div
                   key={svc.href}
