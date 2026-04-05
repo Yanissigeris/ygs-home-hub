@@ -5,6 +5,7 @@ import JsonLdSchema from "@/components/JsonLdSchema";
 import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 import { Outlet } from "react-router-dom";
 
