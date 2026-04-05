@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const WhatsAppButton = () => {
   const lang = useLanguage();
+  const isMobile = useIsMobile();
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -14,14 +16,13 @@ const WhatsAppButton = () => {
   const tooltip = lang === "en" ? "Message on WhatsApp" : "Écrire sur WhatsApp";
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
     if (isMobile) {
       setVisible(true);
       return;
     }
     const timer = setTimeout(() => setVisible(true), 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isMobile]);
 
   return (
     <a
@@ -31,10 +32,10 @@ const WhatsAppButton = () => {
       aria-label="Contacter Yanis sur WhatsApp"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="fixed z-[490] flex items-center justify-center right-5 md:right-8 md:bottom-8"
+      className="fixed z-[490] flex items-center justify-center"
       style={{
-        bottom: window.innerWidth < 768 ? 90 : undefined,
-      style={{
+        bottom: isMobile ? 90 : 32,
+        right: isMobile ? 20 : 32,
         width: 56,
         height: 56,
         borderRadius: "50%",
@@ -66,37 +67,38 @@ const WhatsAppButton = () => {
       </svg>
 
       {/* Tooltip — desktop only */}
-      <span
-        className="hidden md:block absolute pointer-events-none whitespace-nowrap"
-        style={{
-          right: 68,
-          bottom: 12,
-          background: "var(--ink)",
-          color: "#fff",
-          padding: ".5rem 1rem",
-          borderRadius: 3,
-          fontSize: ".78rem",
-          fontWeight: 500,
-          opacity: hovered ? 1 : 0,
-          transition: "opacity .2s",
-        }}
-      >
-        {tooltip}
-        {/* Arrow */}
+      {!isMobile && (
         <span
-          className="absolute"
+          className="absolute pointer-events-none whitespace-nowrap"
           style={{
-            right: -6,
-            top: "50%",
-            transform: "translateY(-50%)",
-            width: 0,
-            height: 0,
-            borderTop: "6px solid transparent",
-            borderBottom: "6px solid transparent",
-            borderLeft: "6px solid var(--ink)",
+            right: 68,
+            bottom: 12,
+            background: "var(--ink)",
+            color: "#fff",
+            padding: ".5rem 1rem",
+            borderRadius: 3,
+            fontSize: ".78rem",
+            fontWeight: 500,
+            opacity: hovered ? 1 : 0,
+            transition: "opacity .2s",
           }}
-        />
-      </span>
+        >
+          {tooltip}
+          <span
+            className="absolute"
+            style={{
+              right: -6,
+              top: "50%",
+              transform: "translateY(-50%)",
+              width: 0,
+              height: 0,
+              borderTop: "6px solid transparent",
+              borderBottom: "6px solid transparent",
+              borderLeft: "6px solid var(--ink)",
+            }}
+          />
+        </span>
+      )}
     </a>
   );
 };
