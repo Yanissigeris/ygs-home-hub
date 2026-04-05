@@ -101,7 +101,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         </motion.div>
 
         {/* Two-column grid: areas left, services right */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
           {/* Areas block */}
           <div>
             <h3 className="text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
