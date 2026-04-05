@@ -108,7 +108,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
+          <div className="flex flex-col items-center py-4 sm:py-12 lg:py-14">
             <p className="mb-4 sm:mb-10 font-body text-[0.625rem] font-semibold uppercase tracking-[0.18em] opacity-25">{affiliationsLabel}</p>
             <div className="grid w-full max-w-[30rem] grid-cols-3 gap-x-5 gap-y-4 sm:max-w-[36rem] sm:gap-x-12 sm:gap-y-11 lg:max-w-[46rem] lg:grid-cols-6 lg:gap-x-10">
               {affiliationLogos.map((logo) => (
