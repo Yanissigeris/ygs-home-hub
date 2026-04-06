@@ -6,14 +6,14 @@ const QuickActionStrip = () => {
 
   const actions = lang === "en"
     ? [
-        { emoji: "🏠", label: "Sell", href: "/en/sell-gatineau" },
-        { emoji: "🔑", label: "Buy", href: "/en/buy-gatineau" },
-        { emoji: "📊", label: "Invest", href: "/en/plex-gatineau" },
+        { emoji: "🏠", label: "Sell", href: "/en/sell" },
+        { emoji: "🔑", label: "Buy", href: "/en/buy" },
+        { emoji: "📊", label: "Invest", href: "/en/plex" },
       ]
     : [
-        { emoji: "🏠", label: "Vendre", href: "/vendre-gatineau" },
-        { emoji: "🔑", label: "Acheter", href: "/acheter-gatineau" },
-        { emoji: "📊", label: "Investir", href: "/plex-gatineau" },
+        { emoji: "🏠", label: "Vendre", href: "/vendre-ma-maison-gatineau" },
+        { emoji: "🔑", label: "Acheter", href: "/acheter-a-gatineau" },
+        { emoji: "📊", label: "Investir", href: "/investir-plex-gatineau" },
       ];
 
   return (
