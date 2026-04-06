@@ -174,6 +174,7 @@ const PropertiesPage = () => {
       trustLine="Je vous donne les options, vous décidez."
     />
   </>
-);
+  );
+};
 
 export default PropertiesPage;
