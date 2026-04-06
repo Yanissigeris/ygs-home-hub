@@ -146,15 +146,29 @@ const SiteHeader = () => {
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
 
-  // Close on outside tap
+  // Close on outside tap — use pointerdown for reliable mobile behavior
+  const justOpened = useRef(false);
+  const toggleMenu = useCallback(() => {
+    setOpen((prev) => {
+      if (!prev) justOpened.current = true;
+      return !prev;
+    });
+  }, []);
+
   useEffect(() => {
     if (!open) return;
-    const handler = (e: MouseEvent) => {
+    // Skip the pointerdown that opened the menu
+    const raf = requestAnimationFrame(() => { justOpened.current = false; });
+    const handler = (e: PointerEvent) => {
+      if (justOpened.current) return;
       const header = document.getElementById("site-header");
       if (header && !header.contains(e.target as Node)) setOpen(false);
     };
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
+    document.addEventListener("pointerdown", handler);
+    return () => {
+      cancelAnimationFrame(raf);
+      document.removeEventListener("pointerdown", handler);
+    };
   }, [open]);
 
   const headerStyle: React.CSSProperties = {
