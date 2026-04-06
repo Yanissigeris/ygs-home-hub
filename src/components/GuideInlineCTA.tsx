@@ -38,7 +38,7 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
                   <BookOpen size={13} className="text-accent" />
                   {d.overline}
                 </p>
-                <h3 className="text-[1.15rem] sm:text-[1.3rem] font-semibold text-primary-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-[1.15rem] sm:text-[1.3rem] font-semibold text-primary-foreground leading-tight" style={{ fontFamily: "var(--serif)" }}>
                   {headline}
                 </h3>
                 <p className="mt-2 text-[0.8125rem] text-primary-foreground/70 leading-relaxed max-w-md">{text}</p>

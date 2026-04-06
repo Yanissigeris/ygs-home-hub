@@ -49,7 +49,7 @@ const GuideOfferBlock = ({
         <div className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 mb-3 sm:mb-4">
           <BookOpen size={20} className="text-accent" />
         </div>
-        <h3 className="text-[1.05rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h3 className="text-[1.05rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "var(--serif)" }}>
           {title}
         </h3>
         <p className="mt-2 text-[0.8125rem] text-muted-foreground leading-relaxed flex-1">{subtitle}</p>

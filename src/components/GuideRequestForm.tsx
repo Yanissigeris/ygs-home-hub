@@ -119,7 +119,7 @@ const GuideRequestForm = ({
 
           {/* Right: form card */}
           <div className="rounded-2xl border border-border bg-card shadow-lg p-6 sm:p-8">
-            <h3 className="text-[1.175rem] font-semibold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-[1.175rem] font-semibold text-foreground" style={{ fontFamily: "var(--serif)" }}>
               {guideTitle}
             </h3>
             <p className="mt-1 text-[0.8125rem] text-muted-foreground">

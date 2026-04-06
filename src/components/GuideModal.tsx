@@ -141,7 +141,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
               <BookOpen size={13} className="text-accent" />
               {l.overline}
             </p>
-            <DialogTitle className="text-[1.25rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <DialogTitle className="text-[1.25rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "var(--serif)" }}>
               {config.title}
             </DialogTitle>
             <DialogDescription className="mt-1.5 text-[0.8125rem] text-muted-foreground leading-relaxed">
@@ -152,7 +152,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
           {submitted ? (
             <div className="mt-8 text-center py-4">
               <CheckCircle2 size={40} className="mx-auto text-accent" />
-              <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold" style={{ fontFamily: "var(--serif)" }}>
                 {config.successTitle}
               </h4>
               <p className="mt-2 text-[0.875rem] text-muted-foreground">{config.successText}</p>
