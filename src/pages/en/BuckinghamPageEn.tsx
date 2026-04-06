@@ -1,145 +1,198 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
-import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
-import CardGrid from "@/components/CardGrid";
-import ImageTextSplit from "@/components/ImageTextSplit";
-import InlineCTA from "@/components/InlineCTA";
-import SectorLinks from "@/components/SectorLinks";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
-import { CheckCircle2, Users, Home, TrendingUp, TreePine, Clock, Award, Shield } from "lucide-react";
+import GuideInlineCTA from "@/components/GuideInlineCTA";
+import ContentBlock from "@/components/ContentBlock";
 import heroImg from "@/assets/hero-buckingham-gen.jpg";
-import riverImg from "@/assets/buckingham-river-nature.jpg";
 
-
-const reasons = [
-  "Bigger lots and more spacious properties",
-  "Among the most affordable entry prices in Outaouais",
-  "Natural setting — rivers, parks, green spaces",
-  "Ideal for families who want space without leaving the region",
-  "Growing area with new developments",
-];
-
-const profiles = [
-  { icon: Users, title: "Families", text: "More space, big yards, community schools — all at a realistic price." },
-  { icon: Home, title: "First-time buyers", text: "The best value in Outaouais for accessing homeownership." },
-  { icon: TreePine, title: "Nature lovers", text: "Rivers, trails, green spaces — a quieter lifestyle without being isolated." },
-  { icon: TrendingUp, title: "Investors", text: "Low entry prices, expected growth, interesting rental potential." },
-];
-
-const sellerReasons = [
-  "Demand is growing in the area with new developments",
-  "Buyers are looking for space — your property interests them",
-  "Take advantage of rising values before prices stabilize",
-  "Optimize your position for your next real estate project",
-];
-
+/* ── FAQ data ── */
 const faq = [
-  { q: "Is Buckingham far from everything?", a: "No — it's 25-35 minutes from Ottawa and downtown Gatineau via Highway 50. All essential services are available locally." },
-  { q: "Will prices keep going up?", a: "The area is growing with new developments and increasing demand. Contact me for an up-to-date analysis." },
-  { q: "Are there good investments in Buckingham?", a: "Yes — low entry prices with growing rental demand. Good option for a first investment." },
-  { q: "Why buy in Buckingham instead of Gatineau?", a: "For the space, affordable prices and nature. You get a bigger lot and more spacious home for the same budget as in the city." },
-  { q: "Is Buckingham good for a first purchase?", a: "Excellent — entry prices are the lowest in the region. It's often the best option to access homeownership in Outaouais." },
-  { q: "Are there schools in Buckingham?", a: "Yes, French elementary and secondary schools. English options are also available in nearby areas." },
-  { q: "How do I sell a house in Buckingham?", a: "Realistic valuation, strategic positioning and targeted marketing to attract buyers seeking space and nature." },
-  { q: "Is the Lièvre River an asset?", a: "Absolutely — waterfront properties are highly sought after, and the river offers boating, fishing and beautiful scenery." },
-  { q: "What services are available in Buckingham?", a: "Schools, groceries, restaurants, health services and a community center. The downtown has a lot of character." },
-  { q: "How do I get a home valuation in Buckingham?", a: "I prepare a free valuation based on recent comparable sales in your area. It's confidential and no commitment." },
+  {
+    q: "Is Buckingham too far from Ottawa to live there?",
+    a: "Buckingham is about 45–50 minutes from Ottawa by car depending on traffic. For a daily in-person commute to Ottawa, it is indeed a significant trip. For partial remote work or a job in Gatineau, it's entirely manageable — and the gain in space and quality of life is significant. During our consultation, I can help you weigh this trade-off honestly based on your real situation.",
+  },
+  {
+    q: "Are there services in Buckingham?",
+    a: "Yes — Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. For big-box stores and medical specialists, you head to central Gatineau (30–40 minutes).",
+  },
+  {
+    q: "Do Buckingham properties have wells?",
+    a: "A large portion of Buckingham is connected to municipal water and sewer — unlike more rural areas like Cantley or L'Ange-Gardien. In the core Buckingham area, properties are generally on municipal services. On the outskirts, verification is needed. I systematically confirm this point for every property visited.",
+  },
 ];
 
-const relatedSectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown, condos and plex" },
+/* ── Sub-sectors ── */
+const subSectors = [
+  {
+    title: "Buckingham",
+    text: "The historic heart of eastern Gatineau. Downtown with full services, varied homes ranging from early 20th-century character properties to recent builds on large lots. Rooted community, small-town atmosphere.",
+  },
+  {
+    title: "Masson-Angers",
+    text: "Closer to central Gatineau, Masson-Angers runs along the Ottawa River. Quiet residential area, homes on generous lots, access to riverside trails. Attracts families who want to be a bit closer to the city while keeping space and tranquility.",
+  },
+  {
+    title: "Angers / L'Ange-Gardien",
+    text: "Transition zone toward rural MRCs. Large properties, woodlands, silence. For those truly seeking space. Wells and septic systems are common — inspection is crucial in this area.",
+  },
 ];
 
+/* ── Related pages ── */
 const related = [
-  { title: "All neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods" },
-  { title: "First-time buyer", text: "Budget and process for first-time buyers.", href: "/en/first-time-buyer" },
+  { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley" },
+  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau-centre" },
+  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
   { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
-  { title: "Buyer guide", text: "The buying process in Québec.", href: "/en/buyer-guide" },
 ];
 
 const BuckinghamPageEn = () => (
   <>
-    <PageMeta title="Buckingham / Masson-Angers — Neighborhood Guide" description="Buckingham and Masson-Angers: nature, land, affordable prices. Neighborhood guide for buyers and investors." />
-    <NeighborhoodJsonLd name="Buckingham" description="Real estate broker in Buckingham and Masson-Angers. Nature, spacious land and affordable prices in Outaouais." lat={45.5864} lng={-75.4197} url="/en/buckingham" />
+    <PageMeta
+      title="Real Estate Broker Buckingham Masson-Angers | Large Lots | YGS"
+      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices. Local Outaouais broker — Yanis Gauthier-Sigeris."
+    />
+    <NeighborhoodJsonLd
+      name="Buckingham"
+      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices."
+      lat={45.5860}
+      lng={-75.4190}
+      url="/en/buckingham"
+    />
+    <ServiceJsonLd
+      name="Real Estate Broker in Buckingham"
+      description="Real estate brokerage services in Buckingham and Masson-Angers, Gatineau."
+      url="/en/buckingham"
+      serviceType="Real Estate Brokerage"
+      areaServed={["Buckingham", "Masson-Angers", "Gatineau"]}
+    />
+
+    {/* ═══ HERO ═══ */}
     <HeroSection
-      overline="Neighborhood Guide · Buckingham / Masson-Angers"
-      title="Living in Buckingham and Masson-Angers"
-      subtitle="Space, nature, affordable prices and quality of life — what you need to know to buy or sell in the area."
-      primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }}
-      secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
-      heroBgImage={riverImg}
-    />
-<ImageTextSplit image={heroImg} imageAlt="Buckingham and Masson-Angers area" imagePosition="right">
-      <SectionHeading
-        overline="The area"
-        title="Why people choose Buckingham / Masson-Angers"
-        subtitle="Families, first-time buyers and nature lovers choose this area for the space, prices and quality of life."
-      />
-      <div className="mt-7 space-y-3.5">
-        {reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
-
-    <CardGrid overline="For who" title="This area is ideal for…" items={profiles} background="alt" />
-
-    <InlineCTA
-      text="Thinking about buying in the area? Let's discuss your budget and options."
-      buttonLabel="Book a consultation →"
-      href="/en/buyer-consultation"
+      overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
+      title="Real estate broker in Buckingham — the space Gatineau no longer offers"
+      subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. This is where lots are large, homes have space, and the pace of life is different. For buyers who've done the math and truly want space, it's often the Outaouais market's revelation."
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See properties →", href: "/en/properties?area=buckingham" }}
+      heroBgImage={heroImg}
     />
 
-    <ImageTextSplit image={riverImg} imageAlt="Nature and river, Buckingham" imagePosition="left">
-      <SectionHeading
-        overline="Sellers in the area"
-        title="Own a property in Buckingham or Masson-Angers?"
-        subtitle="Demand is growing in the area. Now is a good time to understand what your property is worth."
-      />
-      <div className="mt-7 space-y-3.5">
-        {sellerReasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-muted-foreground">{r}</span>
-          </div>
-        ))}
+    {/* ═══ SECTION 1 — Portrait ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">PORTRAIT</p>
+      <h2 className="mt-3">Buckingham and Masson-Angers — the facts</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town — its economy was built on paper mills for over a century — Buckingham is now a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
+        </p>
+        <p className="prose-body">
+          What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and — since 2020 — remote workers who no longer need to be close to Ottawa daily.
+        </p>
+        <p className="prose-body">
+          Buckingham has a lively downtown: grocery stores, pharmacy, restaurants, medical clinic, library, arena, secondary school. For big-box stores and specialized services, you head to central Gatineau (30–40 minutes).
+        </p>
       </div>
-      <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/home-valuation">Get my valuation</Link>
-      </Button>
-    </ImageTextSplit>
+    </ContentBlock>
 
-    <FAQSection title="Questions about Buckingham / Masson-Angers" items={faq} />
+    {/* ═══ SECTION 2 — Sub-sectors ═══ */}
+    <section className="section-padding bg-background">
+      <div className="section-container">
+        <p className="label-overline">THE AREAS</p>
+        <h2 className="mt-3">Buckingham vs Masson-Angers</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {subSectors.map((s) => (
+            <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
+              <h3 className="font-semibold text-foreground">{s.title}</h3>
+              <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
-    <SectorLinks overline="Other neighborhoods" title="Explore other areas" sectors={relatedSectors} />
+    {/* ═══ SECTION 3 — Distance ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">HONESTY</p>
+      <h2 className="mt-3">The distance question — an honest answer</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          The main question buyers ask about Buckingham: "Isn't it too far?"
+        </p>
+        <p className="prose-body">
+          The honest answer depends on your situation. Buckingham is about 45–50 minutes from Ottawa depending on traffic, and 30–40 minutes from central Gatineau. For someone working full-time in person in Ottawa, it is indeed a significant daily commute.
+        </p>
+        <p className="prose-body">
+          For someone working remotely part-time (2–3 days/week) or based in Gatineau, the distance becomes an advantage — you get much more space for the same budget.
+        </p>
+        <p className="prose-body">
+          It's a lifestyle decision as much as a budget one. I help you weigh it honestly, without selling you a property that wouldn't match your reality.
+        </p>
+      </div>
+    </ContentBlock>
 
-    <RelatedPages overline="Also read" title="Related pages" pages={related} background="alt" />
+    {/* ═══ QUALITY CTA ═══ */}
+    <section className="section-padding bg-background">
+      <div className="section-container max-w-3xl">
+        <div className="space-y-4">
+          {[
+            "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown with essential services on site.",
+            "Masson-Angers runs along the Ottawa River and offers the closest semi-rural atmosphere to central Gatineau in this eastern sector.",
+            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties — the Buckingham area benefits from this growing appeal for space and affordability.",
+          ].map((point) => (
+            <div key={point} className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8">
+          <Button size="lg" asChild>
+            <Link to="/en/home-valuation">Get the real numbers →</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
 
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Buckingham" text="Process, budget and tips for buying in the area." ctaLabel="Get the Buyer Guide" />
+    {/* ═══ FAQ ═══ */}
+    <FAQSection title="Frequently asked questions — Buckingham and Masson-Angers" items={faq} />
 
+    {/* ═══ RELATED ═══ */}
+    <RelatedPages
+      overline="Explore other areas"
+      title="Related reading"
+      pages={related}
+      background="alt"
+    />
+
+    <GuideInlineCTA
+      lang="en"
+      guideType="buyer_guide"
+      headline="Free Buyer Guide — buying in Buckingham"
+      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      ctaLabel="Get the Buyer Guide"
+    />
+
+    {/* ═══ CTA FINAL ═══ */}
     <CTASection
       dark
-      title="Buyer or seller in Buckingham?"
-      text="I can help you find the right property or know the value of yours."
+      title="Buying or selling in Buckingham?"
+      text="I know the area — let's talk about your project."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation" },
+        { label: "Book a consultation →", href: "/en/buyer-consultation", variant: "outline" },
       ]}
-      trustLine="I give you the numbers — you decide with full clarity."
+      trustLine="I give you the numbers and the options — you decide."
     />
 
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );
+
 export default BuckinghamPageEn;
