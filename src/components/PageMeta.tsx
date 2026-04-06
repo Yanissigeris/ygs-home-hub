@@ -67,6 +67,13 @@ const frToEn: Record<string, string> = {
   "/vendre-maison-aylmer": "/en/sell-house-aylmer",
   "/evaluation-maison-hull": "/en/home-valuation-hull",
   "/evaluation-maison-aylmer": "/en/home-valuation-aylmer",
+  "/combien-coute-un-courtier-immobilier-au-quebec": "/en/how-much-does-a-realtor-cost-in-quebec",
+  "/comment-choisir-un-courtier-immobilier": "/en/how-to-choose-a-realtor",
+  "/verifier-un-courtier-immobilier-oaciq": "/en/oaciq-find-a-broker",
+  "/frais-de-courtage-immobilier-quebec": "/en/realtor-commission-quebec",
+  "/courtier-immobilier-ou-vendre-soi-meme": "/en/realtor-vs-selling-by-owner-quebec",
+  "/politique-de-confidentialite": "/en/privacy-policy",
+  "/conditions-utilisation": "/en/terms",
 };
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
