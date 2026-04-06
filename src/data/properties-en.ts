@@ -2,6 +2,7 @@ import property28743871 from "@/assets/property-28743871.webp";
 import property20453879 from "@/assets/property-20453879.webp";
 import property15163372 from "@/assets/property-15163372.webp";
 import property17113358 from "@/assets/property-17113358.jpg";
+import property11366995 from "@/assets/property-11366995.jpg";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -81,6 +82,24 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/47-rue-brook/17113358",
     mls: "17113358",
+    status: "active",
+  },
+  {
+    id: "11366995",
+    address: "7 Rue du Chinook",
+    city: "Gatineau (Hull — Plateau de la Capitale)",
+    price: "949 900 $",
+    type: "Triplex",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "2 157 sq ft",
+    yearBuilt: "1999",
+    description:
+      "Rare detached triplex with garage in the Plateau de la Capitale, steps from Gatineau Park. 3 units of 2 bedrooms each with bathroom and laundry. Private backyard with no rear neighbours. Current rents below market — strong optimization potential.",
+    image: property11366995,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
+    mls: "11366995",
     status: "active",
   },
 ];
