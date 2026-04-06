@@ -72,7 +72,7 @@ const TestimonialsPage = () => (
     {/* Google review link */}
     <section className="section-padding bg-background pt-0">
       <div className="section-container text-center">
-        <a href="https://www.google.com/maps/place/Yanis+Gauthier-Sigeris+-+Courtier+immobilier+RE%2FMAX" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
+        <a href="https://maps.app.goo.gl/BkkH6Zrw7Yj3XdpA9" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
           Laisser un avis Google →
         </a>
       </div>
