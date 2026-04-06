@@ -258,7 +258,7 @@ const CookieConsent = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-2 md:gap-3 shrink-0">
+          <div className="flex flex-wrap gap-2 md:gap-3 shrink-0">
             <button
               onClick={handleRefuse}
               className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
