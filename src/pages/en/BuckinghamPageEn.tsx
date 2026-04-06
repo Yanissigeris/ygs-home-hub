@@ -57,8 +57,7 @@ const BuckinghamPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Buckingham Masson-Angers | Large Lots | YGS"
-      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices. Local Outaouais broker — Yanis Gauthier-Sigeris."
-    />
+      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices. Local Outaouais broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Buckingham"
       description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices."

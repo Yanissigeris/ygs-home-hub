@@ -61,8 +61,7 @@ const HullPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Hull Gatineau | Condos, Plexes, Homes | YGS"
-      description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker — Yanis Gauthier-Sigeris."
-    />
+      description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
     <NeighborhoodJsonLd
       name="Hull"
       description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker."

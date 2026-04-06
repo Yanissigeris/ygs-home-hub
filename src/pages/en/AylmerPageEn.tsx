@@ -124,8 +124,7 @@ const AylmerPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
-      description="Yanis Gauthier-Sigeris, real estate broker specializing in Aylmer, Gatineau. Single-family homes, condos, local expertise. Free home valuation, deep local knowledge."
-    />
+      description="Yanis Gauthier-Sigeris, real estate broker specializing in Aylmer, Gatineau. Single-family homes, condos, local expertise. Free home valuation, deep local knowledge." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
       description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighbourhoods, schools and community."

@@ -22,8 +22,7 @@ const FraisCourtagePage = () => (
   <>
     <PageMeta
       title="Frais de courtage immobilier au Québec — Guide clair"
-      description="Comprenez les frais de courtage immobilier au Québec : commission, services inclus, facteurs et ce que ça signifie pour votre vente à Gatineau."
-    />
+      description="Comprenez les frais de courtage immobilier au Québec : commission, services inclus, facteurs et ce que ça signifie pour votre vente à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

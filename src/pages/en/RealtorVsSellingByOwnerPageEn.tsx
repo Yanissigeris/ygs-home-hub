@@ -22,8 +22,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
   <>
     <PageMeta
       title="Realtor vs Selling by Owner in Quebec"
-      description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau."
-    />
+      description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

@@ -22,8 +22,7 @@ const CourtierOuVendreSoiMemePage = () => (
   <>
     <PageMeta
       title="Courtier immobilier ou vendre seul au Québec?"
-      description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau."
-    />
+      description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

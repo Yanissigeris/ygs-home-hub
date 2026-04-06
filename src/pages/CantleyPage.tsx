@@ -60,8 +60,7 @@ const CantleyPage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Cantley Outaouais | Familles & grands terrains | YGS"
-      description="Achetez ou vendez à Cantley, Outaouais. Grands terrains, famille, nature. Près de 9 ans d'expérience locale — Yanis Gauthier-Sigeris."
-    />
+      description="Achetez ou vendez à Cantley, Outaouais. Grands terrains, famille, nature. Près de 9 ans d'expérience locale — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Cantley"
       description="Achetez ou vendez à Cantley, Outaouais. Grands terrains, famille, nature. Courtier local."

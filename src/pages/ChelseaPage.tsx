@@ -60,8 +60,7 @@ const ChelseaPage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Chelsea Québec | Parc de la Gatineau | YGS"
-      description="Achetez ou vendez à Chelsea, Québec. Maisons sur grands terrains, Parc de la Gatineau, communauté bilingue. Courtier local — Yanis Gauthier-Sigeris."
-    />
+      description="Achetez ou vendez à Chelsea, Québec. Maisons sur grands terrains, Parc de la Gatineau, communauté bilingue. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />
     <NeighborhoodJsonLd
       name="Chelsea"
       description="Achetez ou vendez à Chelsea, Québec. Maisons sur grands terrains, Parc de la Gatineau, communauté bilingue. Courtier local."
