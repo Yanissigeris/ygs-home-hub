@@ -245,7 +245,7 @@ const SiteHeader = () => {
           >
             {ctaLabel}
           </Link>
-          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
