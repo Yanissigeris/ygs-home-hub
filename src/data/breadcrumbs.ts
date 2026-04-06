@@ -57,8 +57,6 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   "/cantley": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Cantley" },
   "/val-des-monts": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Val-des-Monts" },
   "/masson-angers": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Masson-Angers" },
-  "/buckingham": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Buckingham" },
-  "/gatineau-centre": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Gatineau (centre)" },
   "/pontiac": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Pontiac" },
   "/cote-dazur-gatineau": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Côte-d'Azur" },
   "/limbour": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Limbour" },
@@ -134,7 +132,7 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   "/en/cantley": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Cantley" },
   "/en/val-des-monts": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Val-des-Monts" },
   "/en/masson-angers": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Masson-Angers" },
-  "/en/gatineau-centre": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Gatineau Centre" },
+  
   "/en/pontiac": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Pontiac" },
   "/en/cote-dazur": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Côte-d'Azur" },
   "/en/limbour": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Limbour" },
