@@ -134,7 +134,7 @@ const AylmerPage = () => (
       lng={-75.8486}
       url="/aylmer"
     />
-    <FAQPageJsonLd items={faq} />
+    
 
     {/* ═══ HERO ═══ */}
     <HeroSection
