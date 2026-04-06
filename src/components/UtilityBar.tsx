@@ -48,7 +48,7 @@ const UtilityBar = React.forwardRef<HTMLDivElement>((_, ref) => {
             <Link to={relocationHref} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>{relocationLabel}</Link>
             <Link to={lang === "en" ? "/en/blog" : "/blogue"} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>{lang === "en" ? "Blog" : "Blogue"}</Link>
             <Link to={contactHref} className="transition-colors duration-200 hover:text-white" style={{ fontSize: ".73rem", letterSpacing: ".01em", color: "rgba(255,255,255,.5)" }}>Contact</Link>
-            <Link to={ctaHref} className="ml-1 inline-flex items-center transition-all duration-200 hover:brightness-110" style={{ height: 28, borderRadius: 20, background: "var(--gold)", color: "#fff", fontSize: ".7rem", fontWeight: 600, padding: "0 1rem", letterSpacing: ".03em" }}>{ctaLabel}</Link>
+            
           </div>
         </div>
       </div>
