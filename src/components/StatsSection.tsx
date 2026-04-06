@@ -62,10 +62,10 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
                 style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
                 aria-hidden="true"
               >{s.ghost}</span>
-              <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.1rem, 5vw, 1.6rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
+              <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.25rem, 5.5vw, 1.6rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
                 {s.value}
               </span>
-              <span className="relative mt-1" style={{ fontSize: ".5rem", fontWeight: 500, letterSpacing: ".08em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
+              <span className="relative mt-1" style={{ fontSize: ".58rem", fontWeight: 500, letterSpacing: ".08em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
                 {s.label}
               </span>
             </div>
