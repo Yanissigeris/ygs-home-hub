@@ -258,7 +258,7 @@ const SiteHeader = () => {
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <LanguageSwitch />
-          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
           <Link
