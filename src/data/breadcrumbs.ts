@@ -57,8 +57,6 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   "/cantley": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Cantley" },
   "/val-des-monts": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Val-des-Monts" },
   "/masson-angers": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Masson-Angers" },
-  "/buckingham": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Buckingham" },
-  "/gatineau-centre": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Gatineau (centre)" },
   "/pontiac": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Pontiac" },
   "/cote-dazur-gatineau": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Côte-d'Azur" },
   "/limbour": { trail: [{ name: "Accueil", href: "/" }, { name: "Quartiers", href: "/quartiers-a-considerer-a-gatineau" }], current: "Limbour" },
