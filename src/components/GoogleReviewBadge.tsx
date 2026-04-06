@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const GOOGLE_PROFILE_URL = "https://maps.app.goo.gl/BkkH6Zrw7Yj3XdpA9";
+const GOOGLE_PROFILE_URL = "https://www.google.com/maps/place/Yanis+Gauthier-Sigeris+Courtier+Immobilier+Inc/@46.5949826,-75.427924,17z/data=!4m6!3m5!1s0x480b41a66af5c1a3:0xd201993bc7cbef4a!8m2!3d46.5949826!4d-75.427924";
 
 const GoogleIcon = () => (
   <svg width={18} height={18} viewBox="0 0 48 48">
