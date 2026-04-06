@@ -53,59 +53,23 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
           ))}
         </div>
 
-        {/* Mobile: horizontal scroll with snap */}
-        <div className="md:hidden">
-          <div
-            ref={scrollRef}
-            className="flex overflow-x-auto overflow-y-hidden"
-            style={{
-              scrollSnapType: "x mandatory",
-              WebkitOverflowScrolling: "touch",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              padding: "0 1.25rem",
-            }}
-          >
-            <style>{`.stats-scroll::-webkit-scrollbar{display:none}`}</style>
-            {stats.map((s, i) => (
-              <div
-                key={i}
-                className="relative flex flex-col items-center justify-center text-center shrink-0 stats-scroll"
-                style={{
-                  flex: "0 0 75vw",
-                  scrollSnapAlign: "start",
-                  padding: "2rem 1.5rem",
-                  borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,.15)" : "none",
-                }}
-              >
-                <span
-                  className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
-                  style={{ fontFamily: "var(--serif)", fontSize: "6rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
-                  aria-hidden="true"
-                >{s.ghost}</span>
-                <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.4rem, 9vw, 3rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
-                  {s.value}
-                </span>
-                <span className="relative mt-1" style={{ fontSize: ".68rem", fontWeight: 500, letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-3">
-            {stats.map((_, i) => (
+        {/* Mobile: all 3 visible in a row */}
+        <div className="md:hidden grid grid-cols-3 divide-x" style={{ "--tw-divide-opacity": ".2" } as React.CSSProperties}>
+          {stats.map((s, i) => (
+            <div key={i} className="relative flex flex-col items-center justify-center text-center py-2 px-1">
               <span
-                key={i}
-                className="rounded-full transition-all duration-300"
-                style={{
-                  width: activeIdx === i ? 16 : 6,
-                  height: 6,
-                  background: activeIdx === i ? "#fff" : "rgba(255,255,255,.3)",
-                }}
-              />
-            ))}
-          </div>
+                className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
+                style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 700, color: "rgba(255,255,255,.06)", lineHeight: 1 }}
+                aria-hidden="true"
+              >{s.ghost}</span>
+              <span className="relative" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.1rem, 5vw, 1.6rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.03em", lineHeight: 1.1 }}>
+                {s.value}
+              </span>
+              <span className="relative mt-1" style={{ fontSize: ".5rem", fontWeight: 500, letterSpacing: ".08em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
