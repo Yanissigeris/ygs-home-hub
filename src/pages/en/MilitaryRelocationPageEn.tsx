@@ -33,7 +33,7 @@ const faq = [
 
 const MilitaryRelocationPageEn = () => (
   <>
-    <PageMeta title="Military Relocation to Gatineau" description="Military posting to Gatineau? Complete guide: BGRS/SIRVA process, neighborhoods near base, timelines and support." />
+    <PageMeta title="Military Relocation to Gatineau" description="Military posting to Gatineau? Complete guide: BGRS/SIRVA process, neighborhoods near base, timelines and support." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Military Relocation to Gatineau" description="Complete guide for military members posting to Gatineau — BGRS/SIRVA, neighbourhoods, timelines and bilingual support." url="/en/military-relocation" serviceType="Military Relocation Service" />
     <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property quickly, with confidence and on your timeline." primaryCta={{ label: "Book a call", href: "/en/contact" }} trustLine="Service adapted to military members — at your pace." heroBgImage={heroImg} />
 <section className="py-8 bg-card border-y border-border/30">

@@ -58,8 +58,7 @@ const PontiacPage = () => {
     <>
       <PageMeta
         title="Courtier immobilier Pontiac Outaouais | Luskville & Breckenridge | YGS"
-        description="Achetez ou vendez dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Grands terrains, rivière des Outaouais, bilingue. Courtier local — Yanis Gauthier-Sigeris."
-      />
+        description="Achetez ou vendez dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Grands terrains, rivière des Outaouais, bilingue. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
       <NeighborhoodJsonLd name="Pontiac" description="Courtier immobilier dans la municipalité de Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/pontiac" />
       <ServiceJsonLd name="Courtier immobilier Pontiac" description="Services immobiliers dans la municipalité de Pontiac, Outaouais" url="/pontiac" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
 

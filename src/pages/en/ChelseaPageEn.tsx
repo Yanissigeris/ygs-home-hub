@@ -60,8 +60,7 @@ const ChelseaPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Chelsea Quebec | Gatineau Park | YGS"
-      description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker — Yanis Gauthier-Sigeris."
-    />
+      description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />
     <NeighborhoodJsonLd
       name="Chelsea"
       description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker."

@@ -61,8 +61,7 @@ const HullPage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Hull Gatineau | Condos, plexs, maisons | YGS — Yanis Gauthier-Sigeris"
-      description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local — Yanis Gauthier-Sigeris."
-    />
+      description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
     <NeighborhoodJsonLd
       name="Hull"
       description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local."

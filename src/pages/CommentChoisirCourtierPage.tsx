@@ -34,8 +34,7 @@ const CommentChoisirCourtierPage = () => (
   <>
     <PageMeta
       title="Comment choisir un courtier immobilier | Guide"
-      description="Les critères essentiels pour bien choisir votre courtier immobilier au Québec. Checklist pratique, questions à poser et conseils pour prendre la bonne décision."
-    />
+      description="Les critères essentiels pour bien choisir votre courtier immobilier au Québec. Checklist pratique, questions à poser et conseils pour prendre la bonne décision." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

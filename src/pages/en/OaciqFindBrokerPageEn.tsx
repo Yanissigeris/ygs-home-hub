@@ -22,8 +22,7 @@ const OaciqFindBrokerPageEn = () => (
   <>
     <PageMeta
       title="Verify a Real Estate Broker with the OACIQ"
-      description="How to verify a real estate broker's licence in Quebec using the OACIQ registry. Protect yourself and ensure your broker is in good standing."
-    />
+      description="How to verify a real estate broker's licence in Quebec using the OACIQ registry. Protect yourself and ensure your broker is in good standing." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

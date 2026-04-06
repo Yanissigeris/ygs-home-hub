@@ -33,7 +33,7 @@ const faq = [
 
 const MilitaryRelocationPage = () => (
    <>
-    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau et l'Outaouais? Guide complet: processus BGRS/SIRVA, quartiers près de la BFC Uplands, délais et accompagnement bilingue." />
+    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau et l'Outaouais? Guide complet: processus BGRS/SIRVA, quartiers près de la BFC Uplands, délais et accompagnement bilingue." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Relocalisation militaire à Gatineau" description="Guide complet pour militaires en mutation vers Gatineau — BGRS/SIRVA, quartiers, délais et accompagnement bilingue." url="/relocalisation-militaire-gatineau" serviceType="Military Relocation Service" />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"

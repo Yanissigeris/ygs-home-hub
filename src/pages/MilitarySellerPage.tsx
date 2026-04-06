@@ -30,7 +30,7 @@ const faq = [
 
 const MilitarySellerPage = () => (
    <>
-    <PageMeta title="Vendre lors d'une mutation militaire" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix en Outaouais." />
+    <PageMeta title="Vendre lors d'une mutation militaire" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix en Outaouais." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Vendre lors d'une mutation militaire" description="Vente immobilière spécialisée pour militaires FAC en mutation. Timing, BGRS/SIRVA et stratégie pour maximiser votre prix." url="/vendre-lors-dune-mutation-gatineau" serviceType="Military Real Estate Seller Service" />
     <HeroSection
       overline="Vendre lors d'une mutation · Gatineau"

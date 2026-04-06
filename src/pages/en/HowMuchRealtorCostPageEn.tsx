@@ -22,8 +22,7 @@ const HowMuchRealtorCostPageEn = () => (
   <>
     <PageMeta
       title="How Much Does a Realtor Cost in Quebec?"
-      description="Understand how realtor compensation works in Quebec. Commission structure, services included, and what it means for your sale in Gatineau."
-    />
+      description="Understand how realtor compensation works in Quebec. Commission structure, services included, and what it means for your sale in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient relative overflow-hidden">
       <div className="section-container relative py-12 md:py-20">

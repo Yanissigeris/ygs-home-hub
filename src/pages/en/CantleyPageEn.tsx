@@ -60,8 +60,7 @@ const CantleyPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Cantley Outaouais | Families & Large Lots | YGS"
-      description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Nearly 9 years of local experience — Yanis Gauthier-Sigeris."
-    />
+      description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Nearly 9 years of local experience — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Cantley"
       description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Local broker."

@@ -58,8 +58,7 @@ const PontiacPageEn = () => {
     <>
       <PageMeta
         title="Real Estate Broker Pontiac Outaouais | Luskville & Breckenridge | YGS"
-        description="Buy or sell in the Municipality of Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Large lots, Ottawa River, bilingual. Local broker — Yanis Gauthier-Sigeris."
-      />
+        description="Buy or sell in the Municipality of Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Large lots, Ottawa River, bilingual. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
       <NeighborhoodJsonLd name="Pontiac" description="Real estate broker in the Municipality of Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/en/pontiac" />
       <ServiceJsonLd name="Real Estate Broker Pontiac" description="Real estate services in the Municipality of Pontiac, Outaouais" url="/en/pontiac" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
 

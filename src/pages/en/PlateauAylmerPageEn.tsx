@@ -29,7 +29,7 @@ const sellerReasons = [
 
 const PlateauAylmerPageEn = () => (
   <>
-    <PageMeta title="Plateau / Aylmer — Neighborhood Guide" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. Complete neighborhood guide for buyers." />
+    <PageMeta title="Plateau / Aylmer — Neighborhood Guide" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. Complete neighborhood guide for buyers." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighborhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer" />
     <HeroSection
       overline="Neighborhood Guide · Plateau / Aylmer"

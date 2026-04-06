@@ -57,8 +57,7 @@ const BuckinghamPage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Buckingham Masson-Angers | Grands terrains | YGS"
-      description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles. Courtier local Outaouais — Yanis Gauthier-Sigeris."
-    />
+      description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles. Courtier local Outaouais — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Buckingham"
       description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles."
