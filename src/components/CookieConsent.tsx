@@ -294,7 +294,7 @@ const CookieConsent = () => {
           onClick={handleReopen}
           className="fixed z-[9998] flex items-center justify-center rounded-full transition-opacity hover:opacity-80"
           style={{
-            bottom: "1rem", left: "1rem", width: 32, height: 32,
+            bottom: "5.5rem", left: "1rem", width: 32, height: 32,
             background: "var(--ink)", border: "1px solid rgba(255,255,255,.1)",
             fontSize: "1rem", lineHeight: 1,
           }}
