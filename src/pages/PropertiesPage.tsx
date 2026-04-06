@@ -43,9 +43,15 @@ const related = [
   { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau" },
 ];
 
-const PropertiesPage = () => (
+const CANONICAL = "https://yanisgauthier.com/proprietes";
+
+const PropertiesPage = () => {
+  const { pathname } = useLocation();
+  const isAlias = pathname !== "/proprietes";
+
+  return (
   <>
-    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau — Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
+    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau — Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." ogImage="https://yanisgauthier.com/og/og-seller.jpg" canonical={isAlias ? CANONICAL : undefined} />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété en Outaouais"
