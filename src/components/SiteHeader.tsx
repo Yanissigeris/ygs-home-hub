@@ -146,15 +146,29 @@ const SiteHeader = () => {
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
 
-  // Close on outside tap
+  // Close on outside tap — use pointerdown for reliable mobile behavior
+  const justOpened = useRef(false);
+  const toggleMenu = useCallback(() => {
+    setOpen((prev) => {
+      if (!prev) justOpened.current = true;
+      return !prev;
+    });
+  }, []);
+
   useEffect(() => {
     if (!open) return;
-    const handler = (e: MouseEvent) => {
+    // Skip the pointerdown that opened the menu
+    const raf = requestAnimationFrame(() => { justOpened.current = false; });
+    const handler = (e: PointerEvent) => {
+      if (justOpened.current) return;
       const header = document.getElementById("site-header");
       if (header && !header.contains(e.target as Node)) setOpen(false);
     };
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
+    document.addEventListener("pointerdown", handler);
+    return () => {
+      cancelAnimationFrame(raf);
+      document.removeEventListener("pointerdown", handler);
+    };
   }, [open]);
 
   const headerStyle: React.CSSProperties = {
@@ -231,7 +245,7 @@ const SiteHeader = () => {
           >
             {ctaLabel}
           </Link>
-          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
@@ -244,7 +258,7 @@ const SiteHeader = () => {
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <LanguageSwitch />
-          <button onClick={() => setOpen(!open)} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
           <Link
