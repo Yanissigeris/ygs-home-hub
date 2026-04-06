@@ -36,7 +36,7 @@ const SmsButton = () => {
     return () => clearTimeout(timer);
   }, [isMobile]);
 
-  if (hidden) return null;
+  if (hidden || isMobile) return null;
 
   return (
     <a
