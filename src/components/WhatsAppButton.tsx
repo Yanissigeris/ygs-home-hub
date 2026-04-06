@@ -46,7 +46,7 @@ const SmsButton = () => {
       onMouseLeave={() => setHovered(false)}
       className="fixed z-[490] flex items-center justify-center"
       style={{
-        bottom: isMobile ? 90 : 32,
+        bottom: isMobile ? 110 : 32,
         right: isMobile ? 20 : 32,
         width: 56,
         height: 56,
