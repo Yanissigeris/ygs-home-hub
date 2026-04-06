@@ -91,7 +91,7 @@ const HullPage = () => (
       lng={-75.7140}
       url="/hull"
     />
-    <FAQPageJsonLd items={faq} />
+    
 
     {/* ═══ HERO ═══ */}
     <HeroSection
