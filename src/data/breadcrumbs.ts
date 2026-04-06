@@ -132,7 +132,7 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   "/en/cantley": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Cantley" },
   "/en/val-des-monts": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Val-des-Monts" },
   "/en/masson-angers": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Masson-Angers" },
-  "/en/gatineau-centre": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Gatineau Centre" },
+  
   "/en/pontiac": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Pontiac" },
   "/en/cote-dazur": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Côte-d'Azur" },
   "/en/limbour": { trail: [{ name: "Home", href: "/en" }, { name: "Neighbourhoods", href: "/en/neighborhoods" }], current: "Limbour" },
