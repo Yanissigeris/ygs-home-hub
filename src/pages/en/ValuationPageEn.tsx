@@ -70,7 +70,7 @@ const ValuationPageEn = () => {
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">Free and confidential estimate based on recent sales.</p>
@@ -82,7 +82,7 @@ const ValuationPageEn = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
               <div className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8">
-                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>Request your free valuation</h2>
+                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "var(--serif)" }}>Request your free valuation</h2>
                 <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">I'll get back to you personally within 24h with a clear analysis.</p>
                 {submitted ? (
                   <div className="mt-8 text-center py-8"><CheckCircle2 size={36} className="mx-auto text-accent" /><h3 className="mt-4 text-primary-foreground text-[1.125rem]">Thank you! Request sent.</h3><p className="mt-2 text-[0.875rem] text-primary-foreground/40">I'll get back to you within 24 hours with your valuation.</p></div>

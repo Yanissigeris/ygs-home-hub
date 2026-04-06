@@ -112,7 +112,7 @@ const ValuationPage = () => {
             {/* ── LEFT: Value proposition ── */}
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               {/* Eyebrow */}
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}>
                 <span>Évaluation gratuite</span>
                 <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" />
                 <span>Gatineau</span>
@@ -156,7 +156,7 @@ const ValuationPage = () => {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
             >
               <div className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8">
-                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "var(--serif)" }}>
                   Demandez votre évaluation gratuite
                 </h2>
                 <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">
