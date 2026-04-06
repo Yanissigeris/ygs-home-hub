@@ -3,31 +3,29 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
+import ContentBlock from "@/components/ContentBlock";
 import heroImg from "@/assets/hero-hull-gen.webp";
 
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "What is the price of a condo in Hull in 2026?",
-    a: "The median condo price in Hull is around $299,000 in 2026, with a wide range depending on location and finishes. A studio in Vieux-Hull can be found around $200,000, while a 2-bedroom condo with river views in the Zibi area can exceed $450,000. Contact me for a precise analysis based on your budget and needs.",
+    q: "What types of properties can you buy in Hull?",
+    a: "Hull offers the widest variety in Gatineau: older and new condos, duplexes, triplexes, single-family homes, and townhouses. It's also the area with the most income properties. Depending on your goal — living, renting, or investing — the options differ. I can guide you based on your profile during a free consultation.",
   },
   {
-    q: "Is the Zibi project a good buying opportunity?",
-    a: "Zibi is an ambitious project transforming the former Domtar mill on Île de Hull and Île Chaudière. The first phases are delivered and the next ones are underway. It's an area with strong appreciation potential, but new-build prices are high. Properties in adjacent areas (Vieux-Hull, Wrightville) often benefit from the appreciation effect at more accessible prices. I can help you evaluate options based on your profile.",
+    q: "Is the Zibi project a good opportunity?",
+    a: "Zibi is an ongoing development on Île de Hull. The first residential phases are occupied. It's a modern, carbon-neutral area with beautiful river views — but new condos are generally more expensive than resale in the adjacent area. Properties in neighbourhoods around Zibi (Vieux-Hull, Wrightville) have benefited from the appreciation effect at more accessible prices. I can help you compare options.",
   },
   {
-    q: "Is it profitable to buy a plex in Hull?",
-    a: "Hull offers the best conditions for rental investment in Outaouais: low vacancy, strong demand, good appreciation. But 'profitable' depends on purchase price, rents in place, property condition and your financing. I do honest return analyses — with real numbers. If a plex doesn't pass the test, I'll tell you clearly.",
-  },
-  {
-    q: "Is Hull safe?",
-    a: "Hull has a historical reputation that no longer reflects the reality of many areas. Vieux-Hull and Île de Hull have transformed considerably. Like any city, some areas are quieter than others. During your search, I guide you toward streets and micro-areas that match your expectations in terms of lifestyle and safety.",
+    q: "Is Hull a good choice for federal public servants?",
+    a: "Yes — many federal departments and agencies have offices on the Québec side in Gatineau (Portage Complex, Tour de la Paix, etc.). And even for those working in Ottawa, bridges are accessible by bike or on foot from several Hull areas. That's one of the reasons Hull remains in high demand among public servants on both sides of the river.",
   },
 ];
 
@@ -35,226 +33,146 @@ const faq = [
 const subSectors = [
   {
     title: "Vieux-Hull",
-    text: "The historic heart with the Sentier culturel, murals, Laramée and Fournier restaurants. Character architecture, older revenue buildings, lively neighbourhood life. Ideal for investors and buyers seeking urban authenticity.",
-    tag: "Character · Investment",
+    text: "The historic heart. The Sentier culturel, murals, Laramée Street restaurants, Fournier Boulevard bars. Character architecture, older revenue buildings, lively neighbourhood life. Steps from the Canadian Museum of History.",
   },
   {
-    title: "Île de Hull — Zibi Project",
-    text: "The future of Hull. New condos, modern architecture, river views, steps from the Canadian Museum of History. Clientele: young professionals, couples, federal workers. Rapidly rising prices.",
-    tag: "New · Premium · Views",
+    title: "Île de Hull / Zibi Project",
+    text: "Ongoing development on the former Domtar mill site. New condos, river views, carbon-neutral heating system, riverfront public spaces. First phases are occupied. An area under active construction.",
   },
   {
     title: "Wrightville / Val-Tétreau",
-    text: "Central area in transition. 1960s-80s bungalows, larger lots, still-accessible prices. Strong appreciation potential with the Gatineau-Ottawa tramway line in development. Attracts visionary investors.",
-    tag: "Value · Potential · Tramway",
+    text: "Central area, 1960s–80s bungalows, larger lots, still-accessible prices. Located on the corridor of the future Gatineau-Ottawa tramway — an active infrastructure project that could transform mobility in this area.",
   },
   {
     title: "Lac Leamy",
-    text: "Hull's premium area. Near the Casino and Nordik Spa, upscale condos, homes with lake views. Affluent clientele, business tourism, lucrative short-term rentals. Niche market.",
-    tag: "Premium · Lake · Casino",
+    text: "Home to the Casino du Lac-Leamy and Lac-Leamy Park. Condos and properties with lake access, beach, trails. More affluent clientele, lively summers.",
   },
-];
-
-/* ── Investment stats ── */
-const investStats = [
-  { number: "~1.9%", label: "Vacancy rate", note: "Among the lowest in Québec" },
-  { number: "35 d.", label: "Average selling time — plex", note: "Above-average liquidity" },
-  { number: "↑ 9%", label: "Plex price increase — 1 year", note: "Sustained appreciation" },
-];
-
-/* ── Lifestyle cards ── */
-const lifestyleCards = [
-  { icon: "🎨", title: "Culture and urban life", text: "Canadian Museum of History (one of Canada's most visited), Casino du Lac-Leamy, Sentier culturel with murals and galleries, Vieux-Hull bars and restaurants, Gatineau en Feu festival. Hull offers a cultural life rare for a city this size." },
-  { icon: "🌉", title: "Ottawa in 5 minutes", text: "Alexandra Bridge, Chaudières Bridge, Portage Bridge — three direct crossings to downtown Ottawa. For federal workers or professionals working in Ontario, Hull is often the best compromise: Québec quality of life, Ontario accessibility." },
-  { icon: "🌊", title: "Nature and water in the city", text: "Leamy Park (beach, trails, water sports), Jacques-Cartier Park (Winterlude, Canada Day), riverfront promenade developing with Zibi. Hull is rare: a dense city with direct water access." },
 ];
 
 /* ── Related pages ── */
 const related = [
+  { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex" },
   { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer" },
+  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocating-from-ottawa" },
   { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau-centre" },
-  { title: "Chelsea", text: "Artistic village, Gatineau Park.", href: "/en/chelsea" },
-  { title: "Cantley", text: "Nature, countryside, families.", href: "/en/cantley" },
 ];
 
 const HullPageEn = () => (
   <>
     <PageMeta
-      title="Real Estate Broker Hull Gatineau | YGS"
-      description="Real estate broker specializing in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Free valuation."
+      title="Real Estate Broker Hull Gatineau | Condos, Plexes, Homes | YGS"
+      description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker — Yanis Gauthier-Sigeris."
     />
     <NeighborhoodJsonLd
       name="Hull"
-      description="Real estate broker specializing in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull."
+      description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker."
       lat={45.4283}
       lng={-75.7140}
       url="/en/hull"
     />
-    
+    <ServiceJsonLd
+      name="Real Estate Broker in Hull"
+      description="Real estate brokerage services in Hull, Gatineau — condos, plexes, homes."
+      url="/en/hull"
+      serviceType="Real Estate Brokerage"
+      areaServed={["Hull", "Gatineau"]}
+    />
 
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Real estate broker in Hull — at the heart of urban Outaouais"
-      subtitle="Hull is Gatineau's most dynamic area. Steps from Ottawa, transforming with the Zibi project, Hull attracts professionals and investors alike. Modern condos, profitable plexes, character homes — this is where it's happening."
+      subtitle="Hull is Gatineau's most urban area. Directly facing Ottawa, undergoing transformation with the Zibi project, Hull attracts professionals, bilingual families and investors. This is where the city moves the most."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
       secondaryCta={{ label: "See Hull properties →", href: "/en/properties?area=hull" }}
       heroBgImage={heroImg}
     />
 
-    {/* ═══ SECTION 1 — AREA PORTRAIT ═══ */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
-        <div className="lg:col-span-3 space-y-4">
-          <p className="label-overline">WHY HULL</p>
-          <h2>Hull: the area reinventing itself</h2>
-          <p className="prose-body mt-5">
-            Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's most urban neighbourhood, with the highest density of condos, plexes, restaurants and shops. For federal workers, it's often the number one choice — cross the bridge and you're in downtown Ottawa in 10 minutes.
-          </p>
-          <p className="prose-body">
-            The Zibi project, under development on Île de Hull and Chaudière Island, is transforming the area. Upscale new condos, riverfront public spaces, federal offices — it's the largest mixed-use real estate project in Outaouais in decades. Buyers positioning themselves now in adjacent areas benefit from the appreciation effect of this development.
-          </p>
-          <p className="prose-body">
-            For investors, Hull offers the best rental returns in Gatineau. The vacancy rate is historically low (under 2%), tenants are plentiful (students, civil servants, young professionals), and plexes still sell at prices that allow positive cash flow when properly analyzed.
-          </p>
-        </div>
-
-        {/* Right — Key facts card */}
-        <div className="lg:col-span-2">
-          <div className="rounded-md border border-border bg-background p-6 space-y-4">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Hull by the numbers</h3>
-            <div className="space-y-3">
-              {[
-                { label: "Median condo price", value: "$299,000", badge: "↑ 7%" },
-                { label: "Median home price", value: "$498,000", badge: "↑ 6%" },
-                { label: "Average days on market", value: "21 days", badge: null },
-                { label: "Market type", value: "Seller's", badge: null },
-                { label: "Rental vacancy rate", value: "~1.9%", badge: null },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center justify-between border-b border-border pb-2 last:border-0 last:pb-0">
-                  <span className="text-[0.85rem] text-muted-foreground">{item.label}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-foreground text-[0.9375rem]">{item.value}</span>
-                    {item.badge && (
-                      <span className="text-xs font-medium text-accent">{item.badge}</span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    {/* ═══ SECTION 1 — Why Hull ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">WHY HULL</p>
+      <h2 className="mt-3">Hull: the area reinventing itself</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's densest area — condos, plexes, character homes, restaurants, museums. For federal workers who want to cross the bridge on foot or by bike, it's often the first choice.
+        </p>
+        <p className="prose-body">
+          The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River — in both Gatineau and Ottawa — includes residential condos, office space, retail and public spaces. It's the National Capital Region's first carbon-neutral neighbourhood, using an energy system unique in North America. The first phases are occupied. (Source: zibi.ca, Radio-Canada)
+        </p>
+        <p className="prose-body">
+          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand comes from federal public servants, Université du Québec en Outaouais (UQO) students — whose campus is located in Hull — and young professionals. A rental market anchored in a stable employment base.
+        </p>
       </div>
-    </section>
+    </ContentBlock>
 
-    {/* ═══ SECTION 2 — SUB-SECTORS ═══ */}
+    {/* ═══ SECTION 2 — Sub-sectors ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">HULL'S AREAS</p>
-        <h2 className="mt-3">Hull is not just one neighbourhood</h2>
+        <p className="label-overline">THE AREAS</p>
+        <h2 className="mt-3">Hull's areas to know</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {subSectors.map((s) => (
             <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
-              <span className="inline-block text-xs font-medium text-accent">{s.tag}</span>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* ═══ SECTION 3 — INVESTING IN HULL ═══ */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container">
-        <p className="label-overline">RENTAL INVESTMENT</p>
-        <h2 className="mt-3">Why investors choose Hull</h2>
-        <p className="prose-body mt-4 max-w-2xl">
-          Hull is Gatineau's number one area for rental investment. Here's why the numbers speak for themselves.
+    {/* ═══ SECTION 3 — Investing ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">INVESTMENT</p>
+      <h2 className="mt-3">Investing in a plex in Hull — what you need to understand</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Hull is historically Gatineau's most active area for multiplex investment. Residential density, proximity to Ottawa, the presence of UQO and federal public servants create sustained rental demand — particularly for affordable housing.
         </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {investStats.map((s) => (
-            <div key={s.label} className="rounded-md border border-border bg-background p-6 text-center space-y-2">
-              <p className="text-3xl font-serif font-bold text-foreground">{s.number}</p>
-              <p className="font-semibold text-foreground text-[0.9375rem]">{s.label}</p>
-              <p className="text-sm text-muted-foreground">{s.note}</p>
+        <p className="prose-body">
+          Gatineau's rental market underwent a rebalancing in 2025–2026 with the arrival of a large number of new builds. This shift makes return analysis even more critical. Older plexes with moderate rents remain the most in demand.
+        </p>
+        <p className="prose-body">
+          I'm a real estate investor myself — my analysis is honest, not a sales pitch.
+        </p>
+      </div>
+      <div className="mt-6">
+        <Button size="lg" asChild>
+          <Link to="/en/plex">Analyze a plex with me →</Link>
+        </Button>
+      </div>
+    </ContentBlock>
+
+    {/* ═══ QUALITY CTA ═══ */}
+    <section className="section-padding bg-background">
+      <div className="section-container max-w-3xl">
+        <div className="space-y-4">
+          {[
+            "Hull is the closest area to Ottawa in Gatineau — Alexandra, Champlain, Portage and Chaudières bridges.",
+            "The Zibi project is an active, ongoing development — adjacent areas benefit from this transformation.",
+            "UQO and federal offices on the Québec side anchor stable rental demand in Hull.",
+          ].map((point) => (
+            <div key={point} className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}
         </div>
-        <p className="prose-body mt-8 max-w-2xl">
-          A well-analyzed duplex or triplex in Hull can offer a gross return of 5 to 7%, depending on property condition, rents in place, and acquisition strategy. But mistakes are costly — ignored capital expenditures, below-market rents, misunderstood zoning. That's exactly where I come in: honest analysis before the decision.
-        </p>
-        <div className="mt-6">
+        <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/plex">Get a free plex analysis →</Link>
+            <Link to="/en/home-valuation">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
     </section>
 
-    {/* ═══ SECTION 4 — BUY / SELL ═══ */}
-    <section className="section-padding bg-background">
-      <div className="section-container">
-        <h2>Buying or selling in Hull — what you need to know</h2>
-        <div className="mt-10 grid gap-12 lg:grid-cols-2">
-          <div className="space-y-4">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Buyers</h3>
-            <p className="prose-body">
-              Hull is a fast market. Well-positioned condos sell in under 2 weeks. For homes and plexes, the window is slightly wider but still short. Get your pre-approval before you start visiting.
-            </p>
-            <p className="prose-body">
-              Ottawa buyers discovering Hull are often surprised: for the same budget as a 1-bedroom condo in Centretown, you can get a 2-bedroom condo with river views in Hull. A 5-minute bridge crossing by car or bike more than compensates.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="font-serif text-lg font-semibold text-foreground">Sellers</h3>
-            <p className="prose-body">
-              Hull's market has favoured sellers for several consecutive years. But the difference between a good sale and a great one comes down to details: the right price from the start, polished presentation, and marketing that also targets buyers from the Ontario side.
-            </p>
-            <p className="prose-body">
-              If you're selling a plex, the return analysis I present to investor-buyers can justify a higher price — if the numbers support it.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ═══ SECTION 5 — LIVING IN HULL ═══ */}
-    <section className="section-padding bg-secondary/20">
-      <div className="section-container">
-        <p className="label-overline">LIVING IN HULL</p>
-        <h2 className="mt-3">What they don't tell you about Hull</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {lifestyleCards.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
-              <h3 className="font-semibold text-foreground">{c.title}</h3>
-              <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* ═══ SECTION 6 — FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Hull" items={faq} />
-
-    {/* ═══ SECTION 7 — CTA FINAL ═══ */}
-    <CTASection
-      dark
-      title="Your Hull project — where to start?"
-      text="Buying, selling, rental investment — I've known Hull for almost 9 years. Let's talk about your project."
-      buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
-        { label: "Analyze a plex →", href: "/en/plex", variant: "outline" },
-      ]}
-      trustLine="I give you the numbers and the options — you decide."
-    />
+    {/* ═══ FAQ ═══ */}
+    <FAQSection title="Frequently asked questions — Hull, Gatineau" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
       overline="Explore other areas"
-      title="Discover"
+      title="Related reading"
       pages={related}
       background="alt"
     />
@@ -265,6 +183,18 @@ const HullPageEn = () => (
       headline="Free Investor Guide — plex in Hull"
       text="Returns, taxes and investment strategy — in a guide sent by email."
       ctaLabel="Get the Investor Guide"
+    />
+
+    {/* ═══ CTA FINAL ═══ */}
+    <CTASection
+      dark
+      title="Your Hull project — where to start?"
+      text="Buying, selling, rental investment — Hull is an area I know in depth. Let's talk about your project."
+      buttons={[
+        { label: "Free valuation →", href: "/en/home-valuation" },
+        { label: "Analyze a plex →", href: "/en/plex", variant: "outline" },
+      ]}
+      trustLine="I give you the numbers and the options — you decide."
     />
 
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
