@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -120,29 +119,6 @@ const related = [
   { title: "Cantley", text: "Nature, campagne, familles.", href: "/cantley" },
 ];
 
-/* ── FAQPage JSON-LD injector ── */
-const FAQPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
-  useEffect(() => {
-    const prev = document.getElementById("ygs-faqpage-jsonld");
-    if (prev) prev.remove();
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: items.map((i) => ({
-        "@type": "Question",
-        name: i.q,
-        acceptedAnswer: { "@type": "Answer", text: i.a },
-      })),
-    };
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "ygs-faqpage-jsonld";
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-    return () => { document.getElementById("ygs-faqpage-jsonld")?.remove(); };
-  }, [items]);
-  return null;
-};
 
 const AylmerPage = () => (
   <>
@@ -157,7 +133,7 @@ const AylmerPage = () => (
       lng={-75.8486}
       url="/aylmer"
     />
-    <FAQPageJsonLd items={faq} />
+    
 
     {/* ═══ HERO ═══ */}
     <HeroSection
