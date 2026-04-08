@@ -298,7 +298,7 @@ const AylmerPage = () => (
       text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur — je suis votre courtier local."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-        { label: "Me contacter →", href: "/contact", variant: "outline" },
+        { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />
