@@ -68,7 +68,7 @@ const PontiacPage = () => {
         title="Courtier immobilier à Pontiac — entre la rivière des Outaouais et le Parc de la Gatineau"
         subtitle="La municipalité de Pontiac est nichée entre la rivière des Outaouais, la rivière Quyon et les collines du Parc de la Gatineau. C'est un territoire unique dans la Région de la capitale nationale : grand, rural, bilingue, et encore accessible. Pour les acheteurs qui veulent l'espace vrai, c'est souvent une découverte."
         primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-        secondaryCta={{ label: "Me parler de mon projet →", href: "/contact" }}
+        secondaryCta={{ label: "Me parler de mon projet →", href: "/contact-yanis" }}
         heroBgImage={heroImg}
       />
 
@@ -227,7 +227,7 @@ const PontiacPage = () => {
         text="Je couvre la municipalité de Pontiac depuis près de 9 ans. Je connais les secteurs, les comparables, et les réalités pratiques — puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
         buttons={[
           { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-          { label: "Me contacter →", href: "/contact", variant: "outline" },
+          { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
         ]}
         trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
       />

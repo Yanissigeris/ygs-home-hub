@@ -48,7 +48,7 @@ const subSectors = [
 /* ── Related pages ── */
 const related = [
   { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley" },
-  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau-centre" },
+  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau" },
   { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
   { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
 ];

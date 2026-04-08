@@ -42,8 +42,8 @@ const ValDesMontsPage = () => (
       { title: "Vendre mon chalet à Val-des-Monts", text: "Stratégie de vente pour propriétés de villégiature.", href: "/vendre-ma-maison-gatineau" },
       { title: "Évaluation chalet Val-des-Monts", text: "Combien vaut votre chalet ou terrain?", href: "/evaluation-gratuite-gatineau" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
-      { title: "Premier achat", text: "Budget, mise de fonds et conseils.", href: "/premier-achat-immobilier-gatineau" },
-      { title: "Plex et investissement", text: "Analyse pour investisseurs.", href: "/plex-gatineau" },
+      { title: "Premier achat", text: "Budget, mise de fonds et conseils.", href: "/premier-achat-gatineau" },
+      { title: "Plex et investissement", text: "Analyse pour investisseurs.", href: "/investir-plex-gatineau" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}

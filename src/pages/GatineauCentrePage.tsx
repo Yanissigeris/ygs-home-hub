@@ -63,12 +63,12 @@ const GatineauCentrePage = () => (
       description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local."
       lat={45.4765}
       lng={-75.7013}
-      url="/gatineau-centre"
+      url="/gatineau"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Gatineau centre"
       description="Services de courtage immobilier à Gatineau centre — plexs, maisons, condos."
-      url="/gatineau-centre"
+      url="/gatineau"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
     />

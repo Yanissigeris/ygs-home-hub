@@ -52,7 +52,7 @@ const activites = [
 const related = [
   { title: "Chelsea", text: "Parc de la Gatineau, village artistique.", href: "/chelsea" },
   { title: "Buckingham", text: "Espace, prix accessibles.", href: "/buckingham-masson-angers" },
-  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau-centre" },
+  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau" },
   { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
 ];
 
