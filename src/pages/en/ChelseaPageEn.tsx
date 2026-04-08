@@ -52,7 +52,7 @@ const atouts = [
 const related = [
   { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley" },
   { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer" },
-  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocating-from-ottawa" },
+  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation" },
   { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
 ];
 

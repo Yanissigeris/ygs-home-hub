@@ -48,7 +48,7 @@ const subSectors = [
 /* ── Related pages ── */
 const related = [
   { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley" },
-  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau-centre" },
+  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau" },
   { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
   { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
 ];

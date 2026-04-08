@@ -310,7 +310,7 @@ const AylmerPage = () => (
       pages={[
         ...related,
         { title: "Propriétés à Aylmer", text: "Voir les inscriptions en cours.", href: "/proprietes?secteur=aylmer" },
-        { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation" },
+        { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation-ottawa-gatineau" },
       ]}
       background="alt"
     />

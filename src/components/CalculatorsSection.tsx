@@ -15,7 +15,7 @@ const t = {
     subtitle: "Simulez vos paiements hypothécaires et votre taxe de bienvenue en quelques clics.",
     cta: "Besoin d'aide avec vos chiffres? Contactez-moi pour une estimation personnalisée.",
     ctaLabel: "Me contacter",
-    ctaHref: "/contact",
+    ctaHref: "/contact-yanis",
   },
   en: {
     overline: "Calculators",

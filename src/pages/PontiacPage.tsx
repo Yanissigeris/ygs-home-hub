@@ -227,7 +227,7 @@ const PontiacPage = () => {
         text="Je couvre la municipalité de Pontiac depuis près de 9 ans. Je connais les secteurs, les comparables, et les réalités pratiques — puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
         buttons={[
           { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-          { label: "Me contacter →", href: "/contact", variant: "outline" },
+          { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
         ]}
         trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
       />
