@@ -70,7 +70,7 @@ const ContactPage = () => {
         overline="Yanis Gauthier-Sigeris"
         title="Parlons de votre projet"
         subtitle="En réflexion ou prêt à bouger — je peux vous aider à voir plus clair. "
-        primaryCta={{ label: "Envoyer un message", href: "#contact-form" }}
+        primaryCta={{ label: "Envoyer un texto", href: "sms:+18192103044?body=Bonjour%20Yanis%2C%20j%27aimerais%20discuter%20de%20mon%20projet%20immobilier%20en%20Outaouais." }}
         secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
         heroBgImage={heroImg}
       />
