@@ -80,6 +80,7 @@ const InstagramGrid = () => {
                 width={800}
                 height={800}
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               {/* Hover overlay */}

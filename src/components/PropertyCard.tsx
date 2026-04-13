@@ -30,6 +30,8 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"
+          width={648}
+          height={405}
           onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
         />
         <div className="absolute top-3 left-3 flex gap-2">
