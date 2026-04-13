@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Fraunces', 'Georgia', 'serif'],
-        body: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        heading: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

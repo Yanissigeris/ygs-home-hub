@@ -53,8 +53,8 @@
     --gold: #A88A5A;
     --gold2: #c4a878;
     --gold3: rgba(168,138,90,.12);
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
     --hero-gradient: hsl(200 42% 16%);
@@ -85,7 +85,7 @@
     font-family: var(--sans);
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.75;
     letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -98,19 +98,17 @@
   }
 
   h1 {
-    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
-    font-weight: 400;
+    font-size: clamp(3.52rem, 6.05vw, 6.05rem);
+    font-weight: 300;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    font-variation-settings: 'opsz' 144;
   }
 
   h2 {
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    font-weight: 400;
+    font-size: clamp(2.59rem, 4.32vw, 3.89rem);
+    font-weight: 300;
     line-height: 1.1;
     letter-spacing: -0.01em;
-    font-variation-settings: 'opsz' 72;
   }
 
   h3 {
@@ -176,7 +174,7 @@
     font-family: var(--sans);
     font-size: .62rem;
     font-weight: 500;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--gold);
     display: flex;
