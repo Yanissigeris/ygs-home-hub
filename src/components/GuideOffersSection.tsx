@@ -51,36 +51,36 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 className="group relative flex flex-col transition-all duration-300 cursor-pointer"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
-                  background: "rgba(255,255,255,.03)",
-                  borderRight: i < guides.length - 1 ? "1px solid rgba(255,255,255,.08)" : "none",
-                  borderBottom: "1px solid rgba(255,255,255,.08)",
+                  background: "var(--cream)",
+                  borderRight: i < guides.length - 1 ? "1px solid var(--border)" : "none",
+                  borderBottom: "1px solid var(--border)",
                 }}
                 onClick={() => setModalGuide(g.guideType)}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.07)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.03)"; }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "var(--parchment)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
               >
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100" style={{ background: "var(--gold)" }} aria-hidden="true" />
-                <span className="pointer-events-none select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(3.5rem, 8vw, 5rem)", color: "rgba(255,255,255,.04)", lineHeight: ".8" }} aria-hidden="true">{g.num}</span>
+                <span className="pointer-events-none select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(3.5rem, 8vw, 5rem)", color: "rgba(23,48,59,.05)", lineHeight: ".8" }} aria-hidden="true">{g.num}</span>
                 <span className="mt-3" style={{ fontSize: "1.6rem" }} aria-hidden="true">{g.icon}</span>
-                <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "#fff", letterSpacing: "-.01em" }}>{g.title}</h3>
-                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "rgba(255,255,255,.45)", lineHeight: 1.75 }}>{g.subtitle}</p>
+                <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
+                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.75 }}>{g.subtitle}</p>
                 <span className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
               </div>
             ))}
           </div>
 
           {/* Mobile: 2x2 compact grid */}
-          <div className="md:hidden grid grid-cols-2" style={{ gap: 1, background: "rgba(255,255,255,.08)" }}>
+          <div className="md:hidden grid grid-cols-2" style={{ gap: 1, background: "var(--border)" }}>
             {guides.map((g) => (
               <div
                 key={g.guideType}
                 className="flex flex-col cursor-pointer"
-                style={{ padding: "1.25rem", background: "hsl(200 42% 18%)" }}
+                style={{ padding: "1.25rem", background: "#fff" }}
                 onClick={() => setModalGuide(g.guideType)}
               >
                 <span style={{ fontSize: "1.25rem", marginBottom: ".75rem" }} aria-hidden="true">{g.icon}</span>
-                <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "#fff", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
-                <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "rgba(255,255,255,.45)", lineHeight: 1.6 }}>{g.subtitle}</p>
+                <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
+                <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.6 }}>{g.subtitle}</p>
                 <span className="mt-3 inline-flex items-center" style={{ fontSize: ".62rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
                   {g.cta.replace(/ →$/, "").replace(/Recevoir le guide /i, "").replace(/Get the /i, "")} →
                 </span>
