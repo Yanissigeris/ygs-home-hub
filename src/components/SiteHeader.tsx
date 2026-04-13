@@ -31,19 +31,20 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
     return (
       <Link
         to={item.href!}
-        className="relative whitespace-nowrap transition-colors"
+        className="group relative whitespace-nowrap transition-colors"
         style={{
-          fontSize: ".78rem",
+          fontSize: "13px",
+          letterSpacing: "0.04em",
           fontWeight: active ? 600 : 500,
-          color: active ? "var(--ink)" : "var(--muted)",
+          color: active ? "#17303B" : "#4A5568",
           padding: ".4rem .7rem",
           borderRadius: 3,
         }}
-        onMouseEnter={(e) => { if (!active) e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (!active) e.currentTarget.style.color = "var(--muted)"; }}
+        onMouseEnter={(e) => { e.currentTarget.style.color = "#17303B"; }}
+        onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = "#4A5568"; }}
       >
         {item.label}
-        {active && <span className="absolute bottom-0 left-2 right-2 h-[1.5px] rounded-full" style={{ background: "var(--gold)" }} />}
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: "#17303B", transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
     );
   }
@@ -53,21 +54,23 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button
-        className="flex items-center gap-1 whitespace-nowrap transition-colors"
+        className="group relative flex items-center gap-1 whitespace-nowrap transition-colors"
         style={{
-          fontSize: ".78rem",
+          fontSize: "13px",
+          letterSpacing: "0.04em",
           fontWeight: isChildActive ? 600 : 500,
-          color: isChildActive ? "var(--ink)" : "var(--muted)",
+          color: isChildActive ? "#17303B" : "#4A5568",
           padding: ".4rem .7rem",
           borderRadius: 3,
         }}
         onClick={() => setOpen((p) => !p)}
         aria-expanded={open}
-        onMouseEnter={(e) => { if (!isChildActive) e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (!isChildActive) e.currentTarget.style.color = "var(--muted)"; }}
+        onMouseEnter={(e) => { e.currentTarget.style.color = "#17303B"; }}
+        onMouseLeave={(e) => { if (!isChildActive) e.currentTarget.style.color = "#4A5568"; }}
       >
         {item.label}
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: "#17303B", transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,.98)", boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)" }}>
@@ -78,13 +81,14 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
               onClick={() => setOpen(false)}
               className="block px-3.5 py-2.5 transition-colors"
               style={{
-                fontSize: ".81rem",
+                fontSize: "13px",
+                letterSpacing: "0.04em",
                 fontWeight: pathname === child.href ? 600 : 500,
-                color: pathname === child.href ? "var(--ink)" : "var(--muted)",
+                color: pathname === child.href ? "#17303B" : "#4A5568",
                 borderRadius: 3,
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "var(--muted)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "#17303B"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
             >
               {child.label}
             </Link>
