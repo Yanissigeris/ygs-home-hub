@@ -240,12 +240,12 @@ const SiteHeader = () => {
   return (
     <header id="site-header" style={headerStyle}>
       {/* ─── Desktop (lg+) ─── */}
-      <div className="section-container hidden lg:flex items-center" style={{ height: 70 }}>
+      <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain" style={{ height: 52, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain transition-all duration-300" style={{ height: scrolled ? 44 : 52, width: "auto", filter: logoFilter }} />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
-          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} />))}
+          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
           <LanguageSwitch />
@@ -258,16 +258,16 @@ const SiteHeader = () => {
               height: 40,
               padding: "0 1.4rem",
               background: "transparent",
-              color: "#A88A5A",
+              color: ctaTextColor,
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
               borderRadius: 999,
-              border: "1.5px solid #A88A5A",
+              border: `1.5px solid ${ctaBorderColor}`,
               transition: "all .2s ease",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
