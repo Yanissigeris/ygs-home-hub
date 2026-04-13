@@ -193,7 +193,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
     /* Full homepage hero — 2-column layout */
     return (
-      <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
+      <section ref={combinedRef} data-hero-dark className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
         <div className="grid min-h-[88svh] md:min-h-[100svh] lg:grid-cols-[40%_60%]">
           {/* ─── LEFT COLUMN ─── */}
           <div
