@@ -60,6 +60,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
 
     <InteractiveMapSection />
+    <AreasServicesSection lang="en" />
     <GuideOffersSection lang="en" background="alt" />
 
     <HomeFAQTeaser
