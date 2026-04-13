@@ -16,24 +16,24 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     itemType="https://schema.org/Review"
     className="flex h-full flex-col transition-all duration-300"
     style={{
-      border: "1px solid rgba(255,255,255,.08)",
+      border: "1px solid var(--border)",
       borderRadius: 3,
       padding: "clamp(1.75rem, 4vw, 2.5rem)",
-      background: "rgba(255,255,255,.03)",
+      background: "#fff",
       transitionDelay: `${index * 0.1}s`,
     }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.06)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,.03)"; e.currentTarget.style.transform = ""; }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = ""; }}
   >
     {/* Stars */}
     <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
 
     {/* Decorative quote mark */}
-    <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300 }} aria-hidden="true">"</span>
+    <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300, opacity: .4 }} aria-hidden="true">"</span>
 
     {/* Quote */}
     <blockquote className="flex-1 mt-2">
-      <p itemProp="reviewBody" style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "rgba(255,255,255,.7)", lineHeight: 1.8 }}>
+      <p itemProp="reviewBody" style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "var(--muted)", lineHeight: 1.8 }}>
         {review.short}
       </p>
     </blockquote>
