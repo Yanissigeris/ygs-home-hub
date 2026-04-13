@@ -13,6 +13,7 @@ import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import InteractiveMapSection from "@/components/InteractiveMapSection";
+import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import InstagramGrid from "@/components/InstagramGrid";
