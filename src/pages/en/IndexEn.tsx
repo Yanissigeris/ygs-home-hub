@@ -12,7 +12,7 @@ import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
-import AreasServicesSection from "@/components/AreasServicesSection";
+import InteractiveMapSection from "@/components/InteractiveMapSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import InstagramGrid from "@/components/InstagramGrid";
@@ -58,7 +58,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
 
-    <AreasServicesSection lang="en" />
+    <InteractiveMapSection />
     <GuideOffersSection lang="en" background="alt" />
 
     <HomeFAQTeaser
