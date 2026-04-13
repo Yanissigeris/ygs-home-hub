@@ -12,7 +12,7 @@ import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
 
 
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 
@@ -84,8 +84,6 @@ const PageFallback = () => (
 );
 
 const SiteLayout = () => {
-  const location = useLocation();
-
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
