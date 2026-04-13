@@ -1,5 +1,5 @@
 import * as React from "react";
-import UtilityBar from "@/components/UtilityBar";
+
 import SiteHeader from "@/components/SiteHeader";
 import JsonLdSchema from "@/components/JsonLdSchema";
 import LangMeta from "@/components/LangMeta";
@@ -92,7 +92,7 @@ const SiteLayout = () => {
       <LangMeta />
       <BreadcrumbJsonLd />
       <NavigationProgress />
-      <UtilityBar />
+      
       <SiteHeader />
       <VisibleBreadcrumb />
       <ScrollProgress />
