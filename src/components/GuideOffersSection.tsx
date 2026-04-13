@@ -31,16 +31,16 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
 
   return (
     <>
-      <section className="relative overflow-hidden" style={{ background: "var(--ink)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <section className="relative overflow-hidden" style={{ background: "#fff", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
         {/* Radial gradient */}
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at top center, rgba(168,138,90,.08) 0%, transparent 60%)" }} aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at top center, rgba(168,138,90,.05) 0%, transparent 60%)" }} aria-hidden="true" />
 
         <div className="section-container relative">
           {/* Header */}
           <div className="mb-8 sm:mb-12 max-w-[36rem]">
             <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{heading.overline}</p>
-            <h2 style={{ color: "#fff" }}>{heading.title}</h2>
-            <p className="mt-3" style={{ fontSize: ".92rem", color: "rgba(255,255,255,.5)", lineHeight: 1.7 }}>{heading.subtitle}</p>
+            <h2>{heading.title}</h2>
+            <p className="mt-3" style={{ fontSize: ".92rem", color: "var(--muted)", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>
 
           {/* Desktop: 4-col grid */}

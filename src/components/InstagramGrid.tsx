@@ -26,34 +26,35 @@ const InstagramGrid = () => {
   };
 
   return (
-    <section className="py-16 md:py-16 border-t border-border bg-background">
+    <section style={{ background: "var(--ink)", padding: "4rem 0" }}>
       <div className="mx-auto max-w-[1240px] px-6 md:px-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <span className="flex items-center gap-2.5 text-[.62rem] font-bold tracking-[.2em] uppercase text-primary before:content-[''] before:block before:w-[22px] before:h-px before:bg-primary">
+            <span className="flex items-center gap-2.5 text-[.62rem] font-bold tracking-[.2em] uppercase before:content-[''] before:block before:w-[22px] before:h-px before:bg-[#A88A5A]" style={{ color: "var(--gold)" }}>
               {t.eyebrow}
             </span>
-            <h2 className="mt-2 font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-light text-foreground tracking-tight leading-[1.15]">
+            <h2 className="mt-2 font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-light tracking-tight leading-[1.15]" style={{ color: "#F7F4EE" }}>
               {t.title}
               <br />
-              <em className="text-primary">{t.titleItalic}</em>
+              <em style={{ color: "var(--gold)" }}>{t.titleItalic}</em>
             </h2>
           </div>
 
           {/* Desktop handle + follow */}
           <div className="flex items-center gap-2.5">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "rgba(255,255,255,.7)" }}>
               <rect x="2" y="2" width="20" height="20" rx="5" />
               <circle cx="12" cy="12" r="5" />
               <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
             </svg>
-            <span className="text-[.85rem] font-semibold text-foreground">@{HANDLE}</span>
+            <span className="text-[.85rem] font-semibold" style={{ color: "rgba(255,255,255,.7)" }}>@{HANDLE}</span>
             <a
               href={PROFILE_URL}
               target="_blank"
               rel="me noopener"
-              className="ml-4 inline-flex items-center gap-1.5 px-5 py-2 bg-foreground text-background text-[.78rem] font-semibold tracking-[.04em] rounded-[3px] transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
+              className="ml-4 inline-flex items-center gap-1.5 px-5 py-2 text-[.78rem] font-semibold tracking-[.04em] rounded-full transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
+              style={{ background: "transparent", border: "1.5px solid #A88A5A", color: "#A88A5A" }}
             >
               {t.follow}
             </a>
@@ -94,7 +95,7 @@ const InstagramGrid = () => {
         </div>
 
         {/* Tagline */}
-        <p className="mt-5 text-center text-[.78rem] md:text-[.78rem] text-muted-foreground">
+        <p className="mt-5 text-center text-[.78rem] md:text-[.78rem]" style={{ color: "rgba(255,255,255,.4)" }}>
           {t.tagline}
         </p>
       </div>

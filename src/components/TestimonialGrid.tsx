@@ -39,7 +39,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     </blockquote>
 
     {/* Attribution */}
-    <div className="mt-6 flex items-center gap-3" style={{ borderTop: "1px solid rgba(255,255,255,.07)", paddingTop: "1.2rem" }}>
+    <div className="mt-6 flex items-center gap-3" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.2rem" }}>
       <span
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.7rem] font-semibold"
         style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "#fff" }}
@@ -48,9 +48,9 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
         {review.name.split(/[\s.]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("")}
       </span>
       <div>
-        <p itemProp="author" style={{ fontSize: ".85rem", fontWeight: 600, color: "#fff" }}>{review.name}</p>
+        <p itemProp="author" style={{ fontSize: ".85rem", fontWeight: 600, color: "var(--ink)" }}>{review.name}</p>
         {review.location && (
-          <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.4)", marginTop: 2 }}>{review.location}</p>
+          <p style={{ fontSize: ".75rem", color: "var(--muted)", marginTop: 2 }}>{review.location}</p>
         )}
       </div>
     </div>
@@ -63,11 +63,11 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const visibleCount = 2;
 
     return (
-      <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--ink)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <section ref={ref} className="relative overflow-hidden" style={{ background: "#fff", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
         {/* Decorative giant quote */}
         <span
           className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
-          style={{ fontFamily: "var(--serif)", fontSize: "40rem", color: "rgba(255,255,255,.025)", lineHeight: .7 }}
+          style={{ fontFamily: "var(--serif)", fontSize: "40rem", color: "rgba(23,48,59,.03)", lineHeight: .7 }}
           aria-hidden="true"
         >"</span>
 
@@ -76,13 +76,13 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
             <div>
               {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
-              <h2 style={{ color: "#fff" }}>{title}</h2>
+              <h2>{title}</h2>
             </div>
             {reviewsPageHref && reviewsPageLabel && (
               <Link
                 to={reviewsPageHref}
                 className="hidden sm:inline-flex items-center gap-2 transition-colors"
-                style={{ fontSize: ".82rem", fontWeight: 500, color: "rgba(255,255,255,.5)", borderBottom: "1px solid rgba(255,255,255,.2)" }}
+                style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--muted)", borderBottom: "1px solid var(--border)" }}
               >
                 {reviewsPageLabel} →
               </Link>
@@ -109,9 +109,9 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                 onClick={() => setExpanded(true)}
                 className="w-full mt-6 transition-colors"
                 style={{
-                  background: "rgba(255,255,255,.06)",
-                  border: "1px solid rgba(255,255,255,.15)",
-                  color: "rgba(255,255,255,.7)",
+                  background: "var(--cream)",
+                  border: "1px solid var(--border)",
+                  color: "var(--ink)",
                   borderRadius: 3,
                   padding: ".75rem 1.5rem",
                   textAlign: "center",
@@ -133,9 +133,9 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                   onClick={() => setExpanded(false)}
                   className="w-full transition-colors"
                   style={{
-                    background: "rgba(255,255,255,.06)",
-                    border: "1px solid rgba(255,255,255,.15)",
-                    color: "rgba(255,255,255,.7)",
+                    background: "var(--cream)",
+                    border: "1px solid var(--border)",
+                    color: "var(--ink)",
                     borderRadius: 3,
                     padding: ".75rem 1.5rem",
                     textAlign: "center",
