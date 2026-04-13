@@ -191,7 +191,7 @@ const SiteHeader = () => {
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
           <div className="flex flex-col">
             <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain" style={{ height: 52, width: "auto" }} />
-            <span style={{ fontSize: ".6rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--muted)", marginTop: 2 }}>Yanis Gauthier-Sigeris Inc.</span>
+            
           </div>
           <span className="h-5 w-px shrink-0" style={{ background: "var(--border)" }} />
           <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="object-contain opacity-50" style={{ height: 24, width: "auto" }} />
@@ -230,7 +230,7 @@ const SiteHeader = () => {
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
           <div className="flex flex-col">
             <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: 48, width: "auto" }} />
-            <span style={{ fontSize: ".55rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--muted)", marginTop: 1 }}>Yanis Gauthier-Sigeris Inc.</span>
+            
           </div>
           <span className="h-5 w-px shrink-0" style={{ background: "var(--border)" }} />
           <img src={logoRemax} alt="RE/MAX Direct" className="shrink-0 object-contain opacity-60" style={{ height: 22, width: "auto" }} />
