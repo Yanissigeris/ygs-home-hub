@@ -248,7 +248,7 @@ const SiteHeader = () => {
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
-          <LanguageSwitch />
+          <LanguageSwitch transparent={transparent} />
         </div>
         <div className="ml-4 shrink-0 xl:ml-5">
           <Link
@@ -281,7 +281,7 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain transition-all duration-300" style={{ height: scrolled ? 40 : 48, width: "auto", filter: logoFilter }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
-          <LanguageSwitch />
+          <LanguageSwitch transparent={transparent} />
           <Link
             to={ctaHref}
             className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
@@ -304,7 +304,7 @@ const SiteHeader = () => {
           <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0 transition-all duration-300" style={{ filter: logoFilter }} />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
-          <LanguageSwitch />
+          <LanguageSwitch transparent={transparent} />
           <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
