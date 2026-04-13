@@ -29,7 +29,7 @@ const InstagramGrid = () => {
     <section className="py-16 md:py-16 border-t border-border bg-background">
       <div className="mx-auto max-w-[1240px] px-6 md:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 reveal">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
             <span className="flex items-center gap-2.5 text-[.62rem] font-bold tracking-[.2em] uppercase text-primary before:content-[''] before:block before:w-[22px] before:h-px before:bg-primary">
               {t.eyebrow}
