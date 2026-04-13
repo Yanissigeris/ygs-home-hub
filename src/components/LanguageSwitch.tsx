@@ -62,7 +62,7 @@ const frToEn: Record<string, string> = {
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
-const LanguageSwitch = () => {
+const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
   const lang = useLanguage();
   const { pathname } = useLocation();
 
@@ -70,15 +70,20 @@ const LanguageSwitch = () => {
     ? frToEn[pathname] ?? "/en"
     : enToFr[pathname] ?? "/";
 
+  const activeColor = transparent ? "#FFFFFF" : "var(--ink)";
+  const inactiveColor = transparent ? "rgba(247,244,238,.55)" : "var(--muted)";
+  const separatorColor = transparent ? "rgba(247,244,238,.3)" : "var(--muted)";
+
   return (
     <Link
       to={targetPath}
       className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[0.75rem] tracking-[0.03em] transition-colors hover:bg-secondary/60"
       title={lang === "fr" ? "Switch to English" : "Passer en français"}
+      style={transparent ? { hover: undefined } : undefined}
     >
-      <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? "var(--ink)" : "var(--muted)" }}>FR</span>
-      <span style={{ color: "var(--muted)", opacity: 0.4 }}>|</span>
-      <span style={{ fontWeight: lang === "en" ? 600 : 400, color: lang === "en" ? "var(--ink)" : "var(--muted)" }}>EN</span>
+      <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? activeColor : inactiveColor }}>FR</span>
+      <span style={{ color: separatorColor, opacity: 0.4 }}>|</span>
+      <span style={{ fontWeight: lang === "en" ? 600 : 400, color: lang === "en" ? activeColor : inactiveColor }}>EN</span>
     </Link>
   );
 };
