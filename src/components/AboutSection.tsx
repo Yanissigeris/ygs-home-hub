@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import yanisAbout from "@/assets/yanis-about-nobg.png";
 
 const contentFr = {
-  overline: "À propos",
+  overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
   quote: "« Je vous donne les chiffres et les options, vous décidez. »",
-  body: "Mon rôle est de donner les bonnes informations et une stratégie claire — pour que vous avanciez avec confiance, que ce soit à Gatineau, Aylmer, Hull ou ailleurs en Outaouais. J'accompagne acheteurs, vendeurs et investisseurs en Outaouais avec une approche claire, terrain, et une connaissance approfondie du marché local.",
-  credentials: "9 ans · Club Platine · Club 100% · Temple de la renommée",
+  body: `Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+
+Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
+
+Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
+  credentials: "",
   cta: "En savoir plus",
   ctaHref: "/contact-yanis",
   imgAlt: "Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau",
@@ -78,24 +82,27 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               color: "rgba(247,244,238,0.70)",
               lineHeight: 1.8,
               marginBottom: "1.5rem",
+              whiteSpace: "pre-line",
             }}
           >
             {c.body}
           </p>
 
           {/* Credentials */}
-          <p
-            style={{
-              fontFamily: "var(--sans)",
-              fontSize: "11px",
-              fontWeight: 500,
-              letterSpacing: "0.06em",
-              color: "#A88A5A",
-              marginBottom: "2rem",
-            }}
-          >
-            {c.credentials}
-          </p>
+          {c.credentials && (
+            <p
+              style={{
+                fontFamily: "var(--sans)",
+                fontSize: "11px",
+                fontWeight: 500,
+                letterSpacing: "0.06em",
+                color: "#A88A5A",
+                marginBottom: "2rem",
+              }}
+            >
+              {c.credentials}
+            </p>
+          )}
 
           {/* CTA */}
           <Link
