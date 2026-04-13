@@ -33,7 +33,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
-      title="Your real estate broker in Outaouais"
+      title="Your real estate broker in Gatineau — Outaouais"
       subtitle="Clear strategy, advice based on facts, and full support — to sell, buy or invest with confidence."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Book a consultation", href: "/en/contact" }}

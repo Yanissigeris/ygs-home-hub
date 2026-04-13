@@ -32,7 +32,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
     <HeroSection
       overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
-      title="Votre courtier immobilier en Outaouais"
+      title="Votre courtier immobilier à Gatineau — Outaouais"
       subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Réserver une consultation", href: "/contact-yanis" }}
