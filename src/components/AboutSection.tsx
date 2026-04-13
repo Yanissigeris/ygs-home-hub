@@ -17,9 +17,13 @@ Investisseur immobilier moi-même, je sais également analyser en profondeur les
 };
 
 const contentEn = {
-  overline: "About",
+  overline: "WHY YANIS GAUTHIER-SIGERIS?",
   quote: '"I give you the numbers and the options — you decide."',
-  body: "My role is to provide the right information and a clear strategy — so you can move forward with confidence when you're ready, whether in Gatineau, Aylmer, Hull or anywhere in Outaouais. I support sellers, buyers and investors across Outaouais with a clear, hands-on approach and deep knowledge of the local market.",
+  body: `Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.
+
+A member of the Marty Waite Team since the beginning and active in residential real estate for nearly 9 years, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.
+
+A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.`,
   credentials: "9 years · Platinum Club · 100% Club · Hall of Fame",
   cta: "Learn more",
   ctaHref: "/en/contact",
