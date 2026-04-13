@@ -159,8 +159,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     /* Compact hero for inner pages */
     if (compact || (!agentImage && !heroVideo && !heroBgImage)) {
       return (
-        <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
-          {heroBgImage && (
+      <section ref={combinedRef} data-hero-dark className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
+        {heroBgImage && (
              <>
                <div className="absolute inset-0 overflow-hidden">
                  <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" decoding="auto" fetchPriority="high" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
@@ -193,7 +193,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
     /* Full homepage hero — 2-column layout */
     return (
-      <section ref={combinedRef} className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
+      <section ref={combinedRef} data-hero-dark className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
         <div className="grid min-h-[88svh] md:min-h-[100svh] lg:grid-cols-[40%_60%]">
           {/* ─── LEFT COLUMN ─── */}
           <div
