@@ -51,66 +51,41 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <QuickActionStrip />
     <AwardsMarquee />
 
-    <div className="reveal">
-      <StatsSection lang="en" />
-    </div>
+    <StatsSection lang="en" />
+    <PathwaySection lang="en" />
+    <FeaturedProperties lang="en" />
+    <AboutSection lang="en" />
 
+    <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
 
-    <div className="reveal">
-      <PathwaySection lang="en" />
-    </div>
+    <AreasServicesSection lang="en" />
+    <GuideOffersSection lang="en" background="alt" />
 
-    <div className="reveal">
-      <FeaturedProperties lang="en" />
-    </div>
+    <HomeFAQTeaser
+      title="Frequently asked questions"
+      items={[
+        { q: "How much is my house worth in Gatineau?", a: "I prepare a free valuation based on recent comparables in your area — Aylmer, Hull, Plateau or elsewhere in Outaouais. You receive a clear report with the recommended listing price." },
+        { q: "How do I choose the right real estate broker in Outaouais?", a: "Look for a broker with deep local knowledge, transparent strategy and real numbers. Local experience, availability and a human approach make all the difference." },
+        { q: "What are the best neighbourhoods to buy in Gatineau?", a: "It depends on your profile: Aylmer and the Plateau are popular with families, Hull attracts young professionals, and Chelsea or Cantley appeal to those who want nature while staying close to the city." },
+        { q: "Is now a good time to sell in Gatineau?", a: "The Outaouais real estate market remains active. A property analysis helps determine the best timing and optimal pricing strategy to maximize your result." },
+      ]}
+      linkHref="/en/faq"
+      linkLabel="See all questions"
+    />
 
-    <div className="reveal">
-      <AboutSection lang="en" />
-    </div>
+    <InstagramGrid />
 
-    <div className="reveal">
-      <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
-    </div>
-
-    <div className="reveal">
-      <AreasServicesSection lang="en" />
-    </div>
-
-    <div className="reveal">
-      <GuideOffersSection lang="en" background="alt" />
-    </div>
-
-    <div className="reveal">
-      <HomeFAQTeaser
-        title="Frequently asked questions"
-        items={[
-          { q: "How much is my house worth in Gatineau?", a: "I prepare a free valuation based on recent comparables in your area — Aylmer, Hull, Plateau or elsewhere in Outaouais. You receive a clear report with the recommended listing price." },
-          { q: "How do I choose the right real estate broker in Outaouais?", a: "Look for a broker with deep local knowledge, transparent strategy and real numbers. Local experience, availability and a human approach make all the difference." },
-          { q: "What are the best neighbourhoods to buy in Gatineau?", a: "It depends on your profile: Aylmer and the Plateau are popular with families, Hull attracts young professionals, and Chelsea or Cantley appeal to those who want nature while staying close to the city." },
-          { q: "Is now a good time to sell in Gatineau?", a: "The Outaouais real estate market remains active. A property analysis helps determine the best timing and optimal pricing strategy to maximize your result." },
-        ]}
-        linkHref="/en/faq"
-        linkLabel="See all questions"
-      />
-    </div>
-
-    <div className="reveal">
-      <InstagramGrid />
-    </div>
-
-    <div className="reveal">
-      <CTASection
-        dark
-        overline="First step"
-        title="Take the right first step"
-        text="Valuation, buyer consultation or plex analysis — we start where you are."
-        buttons={[
-          { label: "Free Home Valuation", href: "/en/home-valuation" },
-          { label: "Book a consultation", href: "/en/contact", variant: "outline" },
-        ]}
-        trustLine="I give you the numbers and the options — you decide."
-      />
-    </div>
+    <CTASection
+      dark
+      overline="First step"
+      title="Take the right first step"
+      text="Valuation, buyer consultation or plex analysis — we start where you are."
+      buttons={[
+        { label: "Free Home Valuation", href: "/en/home-valuation" },
+        { label: "Book a consultation", href: "/en/contact", variant: "outline" },
+      ]}
+      trustLine="I give you the numbers and the options — you decide."
+    />
 
     <StickyMobileCTA />
   </div>
