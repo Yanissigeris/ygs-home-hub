@@ -82,7 +82,7 @@ const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
       style={transparent ? {} : undefined}
     >
       <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? activeColor : inactiveColor }}>FR</span>
-      <span style={{ color: separatorColor, opacity: 0.4 }}>|</span>
+      <span style={{ color: separatorColor, opacity: transparent ? 0.7 : 0.4 }}>|</span>
       <span style={{ fontWeight: lang === "en" ? 600 : 400, color: lang === "en" ? activeColor : inactiveColor }}>EN</span>
     </Link>
   );
