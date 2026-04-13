@@ -10,7 +10,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
-import { AnimatePresence } from "framer-motion";
+
 
 import { Outlet, useLocation } from "react-router-dom";
 
