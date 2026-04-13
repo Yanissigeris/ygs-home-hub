@@ -276,44 +276,44 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Tablet (sm–lg) ─── */}
-      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6" style={{ height: 70 }}>
+      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: 48, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain transition-all duration-300" style={{ height: scrolled ? 40 : 48, width: "auto", filter: logoFilter }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitch />
           <Link
             to={ctaHref}
             className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: "#A88A5A", fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+            style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
             {ctaLabel}
           </Link>
-          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: "1px solid var(--border)", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: `1px solid ${transparent ? "rgba(247,244,238,.3)" : "var(--border)"}`, color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
       </div>
 
       {/* ─── Mobile (<640px) — logo left, hamburger center-right, CTA right ─── */}
-      <div className="flex items-center justify-between gap-2 px-4 sm:hidden" style={{ height: 56 }}>
+      <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0" />
+          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0 transition-all duration-300" style={{ filter: logoFilter }} />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <LanguageSwitch />
-          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: "var(--ink)" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
           <Link
             to={ctaHref}
             className="inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: "#A88A5A", fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
             {ctaLabel}
