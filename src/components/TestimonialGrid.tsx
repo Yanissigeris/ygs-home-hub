@@ -14,7 +14,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
   <div
     itemScope
     itemType="https://schema.org/Review"
-    className="reveal flex h-full flex-col transition-all duration-300"
+    className="flex h-full flex-col transition-all duration-300"
     style={{
       border: "1px solid rgba(255,255,255,.08)",
       borderRadius: 3,

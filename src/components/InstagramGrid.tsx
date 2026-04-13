@@ -14,18 +14,6 @@ const PROFILE_URL = `https://www.instagram.com/${HANDLE}/`;
 const InstagramGrid = () => {
   const lang = useLanguage();
   const gridRef = useRef<HTMLDivElement>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    const el = gridRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setRevealed(true); obs.disconnect(); } },
-      { threshold: 0.15 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   const t = {
     eyebrow: lang === "en" ? "ON INSTAGRAM" : "SUR INSTAGRAM",
