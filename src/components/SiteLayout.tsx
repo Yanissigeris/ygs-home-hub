@@ -97,13 +97,11 @@ const SiteLayout = () => {
       <VisibleBreadcrumb />
       <ScrollProgress />
       <main className="flex-1">
-        <AnimatePresence mode="wait">
-          <PageTransition locationKey={location.pathname}>
-            <React.Suspense fallback={<PageFallback />}>
-              <Outlet />
-            </React.Suspense>
-          </PageTransition>
-        </AnimatePresence>
+        <PageTransition>
+          <React.Suspense fallback={<PageFallback />}>
+            <Outlet />
+          </React.Suspense>
+        </PageTransition>
       </main>
       <React.Suspense fallback={null}>
         <SiteFooter />
