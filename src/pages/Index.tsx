@@ -50,72 +50,47 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <QuickActionStrip />
     <AwardsMarquee />
 
-    <div className="reveal">
-      <StatsSection />
-    </div>
+    <StatsSection />
+    <PathwaySection />
+    <FeaturedProperties />
+    <AboutSection />
 
+    <TestimonialGrid
+      overline="Témoignages"
+      title="Ce que disent mes clients"
+      reviews={homepageReviews}
+      reviewsPageLabel="Voir tous les témoignages"
+      reviewsPageHref="/temoignages"
+    />
 
-    <div className="reveal">
-      <PathwaySection />
-    </div>
+    <AreasServicesSection />
+    <GuideOffersSection background="alt" />
 
-    <div className="reveal">
-      <FeaturedProperties />
-    </div>
+    <HomeFAQTeaser
+      title="Questions fréquentes"
+      items={[
+        { q: "Combien vaut ma maison à Gatineau?", a: "Je prépare une évaluation gratuite basée sur les comparables récents dans votre secteur — Aylmer, Hull, Plateau ou ailleurs en Outaouais. Vous recevez un rapport clair avec le prix de vente recommandé." },
+        { q: "Comment choisir le bon courtier immobilier en Outaouais?", a: "Cherchez un courtier qui connaît votre secteur en profondeur, qui est transparent sur sa stratégie et qui vous donne les vrais chiffres. L'expérience locale, la disponibilité et l'approche humaine font toute la différence." },
+        { q: "Quels sont les meilleurs quartiers pour acheter à Gatineau?", a: "Ça dépend de votre profil : Aylmer et le Plateau sont populaires auprès des familles, Hull attire les jeunes professionnels, et Chelsea ou Cantley séduisent ceux qui veulent la nature tout en restant proches de la ville." },
+        { q: "Est-ce le bon moment pour vendre à Gatineau?", a: "Le marché immobilier en Outaouais reste actif. Une analyse de votre propriété permet de déterminer le meilleur timing et la stratégie de prix optimale pour maximiser votre résultat." },
+      ]}
+      linkHref="/faq"
+      linkLabel="Voir toutes les questions"
+    />
 
-    <div className="reveal">
-      <AboutSection />
-    </div>
+    <InstagramGrid />
 
-    <div className="reveal">
-      <TestimonialGrid
-        overline="Témoignages"
-        title="Ce que disent mes clients"
-        reviews={homepageReviews}
-        reviewsPageLabel="Voir tous les témoignages"
-        reviewsPageHref="/temoignages"
-      />
-    </div>
-
-    <div className="reveal">
-      <AreasServicesSection />
-    </div>
-
-    <div className="reveal">
-      <GuideOffersSection background="alt" />
-    </div>
-
-    <div className="reveal">
-      <HomeFAQTeaser
-        title="Questions fréquentes"
-        items={[
-          { q: "Combien vaut ma maison à Gatineau?", a: "Je prépare une évaluation gratuite basée sur les comparables récents dans votre secteur — Aylmer, Hull, Plateau ou ailleurs en Outaouais. Vous recevez un rapport clair avec le prix de vente recommandé." },
-          { q: "Comment choisir le bon courtier immobilier en Outaouais?", a: "Cherchez un courtier qui connaît votre secteur en profondeur, qui est transparent sur sa stratégie et qui vous donne les vrais chiffres. L'expérience locale, la disponibilité et l'approche humaine font toute la différence." },
-          { q: "Quels sont les meilleurs quartiers pour acheter à Gatineau?", a: "Ça dépend de votre profil : Aylmer et le Plateau sont populaires auprès des familles, Hull attire les jeunes professionnels, et Chelsea ou Cantley séduisent ceux qui veulent la nature tout en restant proches de la ville." },
-          { q: "Est-ce le bon moment pour vendre à Gatineau?", a: "Le marché immobilier en Outaouais reste actif. Une analyse de votre propriété permet de déterminer le meilleur timing et la stratégie de prix optimale pour maximiser votre résultat." },
-        ]}
-        linkHref="/faq"
-        linkLabel="Voir toutes les questions"
-      />
-    </div>
-
-    <div className="reveal">
-      <InstagramGrid />
-    </div>
-
-    <div className="reveal">
-      <CTASection
-        dark
-        overline="Première étape"
-        title="Prenez la bonne première étape"
-        text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
-        buttons={[
-          { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
-          { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
-        ]}
-        trustLine="Je vous donne les chiffres et les options, vous décidez."
-      />
-    </div>
+    <CTASection
+      dark
+      overline="Première étape"
+      title="Prenez la bonne première étape"
+      text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
+      buttons={[
+        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
+        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+      ]}
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
+    />
 
     <StickyMobileCTA />
   </div>

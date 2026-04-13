@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ig1 from "@/assets/instagram-1.png";
 import ig2 from "@/assets/instagram-2.png";
@@ -14,18 +14,6 @@ const PROFILE_URL = `https://www.instagram.com/${HANDLE}/`;
 const InstagramGrid = () => {
   const lang = useLanguage();
   const gridRef = useRef<HTMLDivElement>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    const el = gridRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setRevealed(true); obs.disconnect(); } },
-      { threshold: 0.15 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   const t = {
     eyebrow: lang === "en" ? "ON INSTAGRAM" : "SUR INSTAGRAM",
@@ -41,7 +29,7 @@ const InstagramGrid = () => {
     <section className="py-16 md:py-16 border-t border-border bg-background">
       <div className="mx-auto max-w-[1240px] px-6 md:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 reveal">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
             <span className="flex items-center gap-2.5 text-[.62rem] font-bold tracking-[.2em] uppercase text-primary before:content-[''] before:block before:w-[22px] before:h-px before:bg-primary">
               {t.eyebrow}
@@ -84,11 +72,6 @@ const InstagramGrid = () => {
               target="_blank"
               rel="noopener"
               className="group relative aspect-square overflow-hidden rounded-[2px]"
-              style={{
-                opacity: revealed ? 1 : 0,
-                transform: revealed ? "scale(1)" : "scale(.97)",
-                transition: `opacity .5s cubic-bezier(.22,.61,.36,1) ${i * 0.04}s, transform .5s cubic-bezier(.22,.61,.36,1) ${i * 0.04}s`,
-              }}
             >
               <img
                 src={src}
