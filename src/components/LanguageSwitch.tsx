@@ -79,7 +79,7 @@ const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
       to={targetPath}
       className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-[0.75rem] tracking-[0.03em] transition-colors hover:bg-secondary/60"
       title={lang === "fr" ? "Switch to English" : "Passer en français"}
-      style={transparent ? { hover: undefined } : undefined}
+      style={transparent ? {} : undefined}
     >
       <span style={{ fontWeight: lang === "fr" ? 600 : 400, color: lang === "fr" ? activeColor : inactiveColor }}>FR</span>
       <span style={{ color: separatorColor, opacity: 0.4 }}>|</span>
