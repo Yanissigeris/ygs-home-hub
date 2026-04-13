@@ -60,17 +60,8 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       </div>
 
       {/* Gold top border — visible on hover */}
-      <div
-        className="transition-all duration-[250ms] ease-out"
-        style={{ height: 1, background: "rgba(168,138,90,0)", marginTop: 0 }}
-        ref={(el) => {
-          if (!el) return;
-          const card = el.closest("a");
-          if (!card) return;
-          card.addEventListener("mouseenter", () => { el.style.background = "#A88A5A"; });
-          card.addEventListener("mouseleave", () => { el.style.background = "rgba(168,138,90,0)"; });
-        }}
-      />
+      {/* Gold top border — visible on hover */}
+      <div className="h-px transition-colors duration-[250ms] ease-out bg-transparent group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
