@@ -128,7 +128,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(primaryCta || secondaryCta) && (
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   {primaryCta && (
-                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
+                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02]" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
                       <Link to={primaryCta.href}>{primaryCta.label} →</Link>
                     </Button>
                   )}
@@ -194,7 +194,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
-                      className="inline-flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto text-center"
+                      className="inline-flex items-center justify-center text-white transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
                       style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: "999px", color: "#A88A5A", padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, transition: "all .2s ease" }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}

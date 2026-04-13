@@ -20,7 +20,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       href={property.remaxUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+      className="group block overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-[250ms] ease-out hover:-translate-y-1 hover:[box-shadow:0_8px_24px_rgba(23,48,59,0.10)]"
     >
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -82,7 +82,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
         {/* Footer */}
         <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
           <span className="text-xs text-muted-foreground">MLS® {property.mls}</span>
-          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:underline">
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors duration-[250ms] ease-out group-hover:text-[#A88A5A]">
             {t.viewListing} <ExternalLink className="h-3.5 w-3.5" />
           </span>
         </div>
