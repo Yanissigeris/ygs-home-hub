@@ -9,7 +9,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
-import heroImg from "@/assets/hero-aylmer-gen.jpg";
+import heroImg from "@/assets/hero-aylmer-gen.webp";
 
 /* ── FAQ data ── */
 const faq = [

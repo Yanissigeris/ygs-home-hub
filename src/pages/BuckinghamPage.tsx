@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-buckingham-gen.jpg";
+import heroImg from "@/assets/hero-buckingham-gen.webp";
 
 /* ── FAQ data ── */
 const faq = [
