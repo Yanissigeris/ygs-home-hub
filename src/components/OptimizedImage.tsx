@@ -94,7 +94,7 @@ const OptimizedImage = ({
       height={height}
       loading={loading}
       decoding={decoding}
-      fetchPriority={fetchPriority}
+      {...(fetchPriority ? {"fetchpriority": fetchPriority} as any : {})}
       role={role}
       itemProp={itemProp}
       onLoad={() => setLoaded(true)}
