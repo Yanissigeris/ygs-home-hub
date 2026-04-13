@@ -48,7 +48,19 @@
       @keyframes img-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
       .img-shimmer{background:linear-gradient(90deg,#F7F4EE 25%,#ede9e0 50%,#F7F4EE 75%);background-size:200% 100%;animation:img-shimmer 1.5s infinite}
     </style>
-    <link rel="preload" as="image" type="image/webp" href="/hero-video-poster.webp" fetchpriority="high" />
+    <script>
+      // Preload hero assets only on homepage
+      (function(){
+        var p = location.pathname;
+        if (p === '/' || p === '/en' || p === '/en/') {
+          var a = document.createElement('link');
+          a.rel='preload'; a.as='image'; a.type='image/webp';
+          a.href='/hero-video-poster.webp';
+          a.setAttribute('fetchpriority','high');
+          document.head.appendChild(a);
+        }
+      })();
+    </script>
 
     <!-- Global RealEstateAgent JSON-LD (static — crawlable without JS) -->
     <script type="application/ld+json" id="ygs-jsonld-static">
