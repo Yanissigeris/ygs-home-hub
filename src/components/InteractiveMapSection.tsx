@@ -181,7 +181,7 @@ const SectorMap = ({
             textAnchor="middle"
             dominantBaseline="central"
             fill="#F7F4EE"
-            fontSize={11}
+            fontSize={s.id === "val-des-monts" ? 9.5 : 10.5}
             fontWeight={600}
             letterSpacing="0.06em"
             style={{
