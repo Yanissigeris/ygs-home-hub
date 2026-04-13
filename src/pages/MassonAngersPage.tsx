@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, TrendingUp, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-masson-angers-gen.jpg";
+import heroImg from "@/assets/hero-masson-angers-gen.webp";
 
 const MassonAngersPage = () => (
   <NeighborhoodTemplate
