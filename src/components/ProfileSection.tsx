@@ -43,6 +43,10 @@ const ProfileSection = ({
           src={image}
           alt={imageAlt}
           className="w-full rounded-[1.75rem] object-cover aspect-[3/4]"
+          width={480}
+          height={640}
+          loading="lazy"
+          decoding="async"
         />
         {logo && (
           <div className="text-center">
@@ -51,6 +55,10 @@ const ProfileSection = ({
               alt={logoAlt || ""}
               className="mx-auto h-auto"
               style={{ width: "clamp(145px, 20vw, 180px)" }}
+              width={180}
+              height={60}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         )}

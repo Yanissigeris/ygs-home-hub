@@ -76,6 +76,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               className="h-auto mx-auto block"
               style={{ width: "clamp(110px, 28vw, 160px)" }}
               loading="lazy"
+              decoding="async"
             />
             <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
               {tagline}
@@ -189,6 +190,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     width={100}
                     height={38}
                     loading="lazy"
+                    decoding="async"
                     className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
                   />
                 </div>
