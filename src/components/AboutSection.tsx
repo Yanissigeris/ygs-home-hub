@@ -43,11 +43,11 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
   const readMore = lang === "en" ? "Read more ↓" : "Lire la suite ↓";
   const readLess = lang === "en" ? "Read less ↑" : "Lire moins ↑";
   return (
-    <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--cream)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+    <section ref={ref} className="relative overflow-hidden" style={{ background: "var(--ink)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
       {/* Ghosted YGS watermark */}
       <span
         className="pointer-events-none select-none absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
-        style={{ fontFamily: "var(--serif)", fontSize: "22rem", fontWeight: 700, color: "rgba(23,48,59,.03)", lineHeight: 1 }}
+        style={{ fontFamily: "var(--serif)", fontSize: "22rem", fontWeight: 700, color: "rgba(255,255,255,.04)", lineHeight: 1 }}
         aria-hidden="true"
       >YGS</span>
 
@@ -55,7 +55,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         {/* Photo column */}
         <div className="relative">
           {/* Mobile: centered, max 280px */}
-          <div className="mx-auto max-w-[280px] md:max-w-none" style={{ borderRadius: 2, overflow: "hidden", position: "relative", background: "linear-gradient(160deg, hsl(200 42% 16% / .08) 0%, hsl(36 38% 50% / .12) 100%)" }}>
+          <div className="mx-auto max-w-[280px] md:max-w-none" style={{ borderRadius: 2, overflow: "hidden", position: "relative", background: "linear-gradient(160deg, hsl(200 42% 16% / .15) 0%, hsl(36 38% 50% / .15) 100%)" }}>
             <img
               src={yanisAbout}
               srcSet={`${yanisAboutSm} 400w, ${yanisAbout} 565w`}
@@ -66,7 +66,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               decoding="async"
               width={565}
               height={800}
-              onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; }}
+              onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; }}
             />
             {/* Bottom scrim for badge legibility — desktop only */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 hidden md:block" style={{ background: "linear-gradient(to top, rgba(23,48,59,.6), transparent)" }} aria-hidden="true" />
@@ -119,20 +119,20 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         {/* Text column */}
         <div className="px-0 md:px-0">
           {/* Eyebrow */}
-          <p className="label-overline mb-2">{c.overline}</p>
-          <h2>{c.title}</h2>
+          <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{c.overline}</p>
+          <h2 style={{ color: "#F7F4EE" }}>{c.title}</h2>
           {/* Gold divider */}
           <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
 
-          <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p1}</p>
+          <p style={{ fontSize: ".92rem", fontWeight: 300, color: "rgba(255,255,255,.6)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p1}</p>
           {/* Desktop: always show p2/p3 */}
-          <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8, marginBottom: "1rem" }}>{c.p2}</p>
-          <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8 }}>{c.p3}</p>
+          <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(255,255,255,.55)", lineHeight: 1.8, marginBottom: "1rem" }}>{c.p2}</p>
+          <p className="hidden md:block" style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(255,255,255,.55)", lineHeight: 1.8 }}>{c.p3}</p>
           {/* Mobile: collapsible */}
           <div className="md:hidden">
             <div style={{ maxHeight: expanded ? 500 : 0, overflow: "hidden", transition: "max-height .4s ease" }}>
-              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p2}</p>
-              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.85 }}>{c.p3}</p>
+              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "rgba(255,255,255,.55)", lineHeight: 1.85, marginBottom: "1rem" }}>{c.p2}</p>
+              <p style={{ fontSize: ".92rem", fontWeight: 300, color: "rgba(255,255,255,.55)", lineHeight: 1.85 }}>{c.p3}</p>
             </div>
             <button
               onClick={() => setExpanded(!expanded)}
@@ -148,12 +148,12 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               <span
                 key={pill}
                 style={{
-                  background: "rgba(23,48,59,.07)",
+                  background: "rgba(255,255,255,.08)",
                   borderRadius: 20,
                   fontSize: ".72rem",
                   fontWeight: 500,
                   padding: ".3rem .75rem",
-                  color: "var(--ink)",
+                  color: "rgba(255,255,255,.7)",
                 }}
               >
                 ✓ {pill}
@@ -167,17 +167,19 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               to={c.ctaHref}
               className="inline-flex items-center justify-center transition-all duration-200 w-full md:w-auto"
               style={{
-                background: "var(--ink)",
-                color: "#fff",
-                borderRadius: 3,
+                background: "transparent",
+                color: "#A88A5A",
+                border: "1.5px solid #A88A5A",
+                borderRadius: 999,
                 fontSize: ".82rem",
                 fontWeight: 600,
                 letterSpacing: ".04em",
                 padding: ".7rem 1.6rem",
                 minHeight: 44,
+                transition: "all .2s ease",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(23,48,59,.2)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
               aria-label={lang === "en" ? "Learn more about Yanis Gauthier-Sigeris" : "En savoir plus sur Yanis Gauthier-Sigeris"}
             >
               {c.cta} →
@@ -185,11 +187,11 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           </div>
 
           {/* Signature block */}
-          <div className="mt-8" style={{ borderTop: "1px solid rgba(23,48,59,.1)", paddingTop: "1.5rem" }}>
-            <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.4rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5 }}>
+          <div className="mt-8" style={{ borderTop: "1px solid rgba(255,255,255,.1)", paddingTop: "1.5rem" }}>
+            <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.4rem)", fontWeight: 300, fontStyle: "italic", color: "rgba(255,255,255,.7)", lineHeight: 1.5 }}>
               {c.quote}
             </p>
-            <p className="mt-2" style={{ fontSize: ".72rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--muted)" }}>
+            <p className="mt-2" style={{ fontSize: ".72rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.4)" }}>
               {c.attribution}
             </p>
           </div>

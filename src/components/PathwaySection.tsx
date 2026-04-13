@@ -26,7 +26,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(({ lan
   const heading = lang === "en" ? headingEn : headingFr;
 
   return (
-    <section ref={ref} className="section-pathway" style={{ padding: "clamp(3rem, 6vw, 7rem) 0" }}>
+    <section ref={ref} className="section-pathway" style={{ padding: "clamp(3rem, 6vw, 7rem) 0", background: "#fff" }}>
       <div className="section-container">
         {/* Section header */}
         <div className="mb-8 sm:mb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
