@@ -53,7 +53,7 @@
     --gold: #A88A5A;
     --gold2: #c4a878;
     --gold3: rgba(168,138,90,.12);
-    --serif: 'Playfair Display', Georgia, serif;
+    --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
@@ -95,18 +95,19 @@
     font-family: var(--serif);
     color: hsl(var(--foreground));
     text-wrap: balance;
-    line-height: 1.15;
   }
 
   h1 {
     font-size: clamp(3.2rem, 5.5vw, 5.5rem);
     font-weight: 300;
+    line-height: 1.08;
     letter-spacing: -0.02em;
   }
 
   h2 {
     font-size: clamp(2.4rem, 4vw, 3.6rem);
     font-weight: 300;
+    line-height: 1.1;
     letter-spacing: -0.02em;
   }
 
