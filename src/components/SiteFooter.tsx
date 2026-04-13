@@ -2,7 +2,25 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
+import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import logoYgsWhite from "@/assets/ygs-footer-logo.png";
+import logoMW from "@/assets/logo-mw-white.webp";
+import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
+import logoTemple from "@/assets/logo-temple-renommee.webp";
+import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
+import logoTranquillit from "@/assets/logo-tranquillit.webp";
+import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
+import { footerColumns, footerPopularLinks } from "@/data/navigation";
+import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
+
+const affiliationLogos = [
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
+  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
+  { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
+  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
+  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
+];
 
 /* ── Social SVG icons ── */
 const FacebookSvg = () => (
@@ -12,89 +30,19 @@ const InstagramSvg = () => (
   <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
 );
 
-/* ── Data ── */
-const navLinksFr = [
-  { label: "Accueil", href: "/" },
-  { label: "Propriétés", href: "/proprietes" },
-  { label: "Vendre", href: "/vendre-ma-maison-gatineau" },
-  { label: "Acheter", href: "/acheter-a-gatineau" },
-  { label: "Relocalisation", href: "/relocalisation-ottawa-gatineau" },
-  { label: "Plex", href: "/investir-plex-gatineau" },
-  { label: "Blogue", href: "/blogue" },
-  { label: "À propos", href: "/contact-yanis" },
-];
-const navLinksEn = [
-  { label: "Home", href: "/en" },
-  { label: "Properties", href: "/en/properties" },
-  { label: "Sell", href: "/en/sell" },
-  { label: "Buy", href: "/en/buy" },
-  { label: "Relocation", href: "/en/relocation" },
-  { label: "Plex", href: "/en/plex" },
-  { label: "Blog", href: "/en/blog" },
-  { label: "About", href: "/en/contact" },
-];
-
-const sectorsFr = [
-  { label: "Gatineau", href: "/gatineau" },
-  { label: "Aylmer", href: "/aylmer" },
-  { label: "Hull", href: "/hull" },
-  { label: "Plateau", href: "/plateau" },
-  { label: "Buckingham", href: "/buckingham-masson-angers" },
-  { label: "Cantley", href: "/cantley" },
-  { label: "Chelsea", href: "/chelsea" },
-];
-const sectorsEn = [
-  { label: "Gatineau", href: "/en/gatineau" },
-  { label: "Aylmer", href: "/en/aylmer" },
-  { label: "Hull", href: "/en/hull" },
-  { label: "Plateau", href: "/en/plateau" },
-  { label: "Buckingham", href: "/en/buckingham" },
-  { label: "Cantley", href: "/en/cantley" },
-  { label: "Chelsea", href: "/en/chelsea" },
-];
-
-/* ── Shared styles ── */
-const labelStyle: React.CSSProperties = {
-  fontSize: "10px",
-  fontWeight: 700,
-  letterSpacing: ".18em",
-  textTransform: "uppercase",
-  color: "var(--gold)",
-  fontFamily: "var(--sans)",
-  marginBottom: 16,
-};
-
-const linkStyle: React.CSSProperties = {
-  fontSize: "13px",
-  fontFamily: "var(--sans)",
-  color: "rgba(247,244,238,.65)",
-  fontWeight: 400,
-  textDecoration: "none",
-  transition: "color .3s, text-decoration-color .3s",
-  textUnderlineOffset: "3px",
-};
-
-/* ── Mobile accordion ── */
 const FooterAccordion = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
   const [open, setOpen] = React.useState(false);
   return (
-    <div style={{ borderBottom: "1px solid rgba(247,244,238,.08)" }}>
+    <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
       <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open}>
-        <span style={labelStyle}>{title}</span>
-        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} style={{ color: "rgba(247,244,238,.4)" }} />
+        <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
+        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}>
         <ul className="space-y-2.5">
           {links.map((l) => (
-            <li key={l.href}>
-              <Link
-                to={l.href}
-                style={linkStyle}
-                onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(247,244,238,1)"; e.currentTarget.style.textDecoration = "underline"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(247,244,238,.65)"; e.currentTarget.style.textDecoration = "none"; }}
-              >
-                {l.label}
-              </Link>
+            <li key={l.href + l.label}>
+              <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
             </li>
           ))}
         </ul>
@@ -106,185 +54,172 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
 const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>(
   ({ className, ...props }, ref) => {
     const lang = useLanguage();
-    const navLinks = lang === "en" ? navLinksEn : navLinksFr;
-    const sectors = lang === "en" ? sectorsEn : sectorsFr;
-    const tagline = lang === "en" ? "Your real estate ally" : "Votre allié en immobilier";
-    const navLabel = lang === "en" ? "Navigation" : "Navigation";
-    const sectorsLabel = lang === "en" ? "Neighborhoods" : "Secteurs";
-    const ctaLabel = lang === "en" ? "Get Started" : "Commencer";
-    const ctaButtonText = lang === "en" ? "Free Home Valuation →" : "Évaluation gratuite →";
-    const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
+    const columns = lang === "en" ? footerColumnsEn : footerColumns;
+    const popularLinks = lang === "en" ? footerPopularLinksEn : footerPopularLinks;
+    const tagline = lang === "en" ? "Your real estate ally in Outaouais — Clear strategy" : "Votre allié en immobilier en Outaouais — Stratégie claire";
+    const popularLabel = lang === "en" ? "Popular areas & services" : "Zones et services populaires";
+    const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
-      ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris Inc. All rights reserved.`
-      : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris Inc. Tous droits réservés.`;
-    const remaxText = lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite";
+      ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau. All rights reserved.`
+      : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
     return (
-      <footer ref={ref} className={className} style={{ background: "#17303B", color: "#F7F4EE", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
+      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "#fff", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
         <div className="section-container">
+          {/* ── Brand row ── */}
+          <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
+            <img
+              src={logoYgsWhite}
+              alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
+              width={160}
+              height={180}
+              className="h-auto mx-auto block"
+              style={{ width: "clamp(110px, 28vw, 160px)" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
+              {tagline}
+            </p>
 
-          {/* ── MOBILE LAYOUT ── */}
-          <div className="lg:hidden">
-            {/* Brand block */}
-            <div className="flex flex-col items-center pt-10 pb-8">
-              <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris" width={120} height={135} className="h-auto" style={{ width: "clamp(90px,24vw,120px)" }} loading="lazy" decoding="async" />
-              <p style={{ fontSize: "13px", fontFamily: "var(--serif)", fontStyle: "italic", color: "var(--gold)", marginTop: 12 }}>{tagline}</p>
-              <p style={{ fontSize: "13px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.5)", marginTop: 8 }}>819-210-3044</p>
-              <p style={{ fontSize: "13px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.5)", marginTop: 2 }}>yanis@martywaite.com</p>
-            </div>
-
-            <div style={{ height: 1, background: "rgba(247,244,238,.08)" }} />
-
-            {/* CTA */}
-            <div className="flex flex-col items-center py-6">
-              <Link
-                to={ctaHref}
-                style={{
-                  display: "inline-block",
-                  border: "1px solid var(--gold)",
-                  color: "var(--gold)",
-                  fontFamily: "var(--sans)",
-                  fontSize: "13px",
-                  fontWeight: 500,
-                  padding: "10px 28px",
-                  borderRadius: 999,
-                  textDecoration: "none",
-                  transition: "background .3s, color .3s",
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "#17303B"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
-              >
-                {ctaButtonText}
-              </Link>
-            </div>
-
-            <div style={{ height: 1, background: "rgba(247,244,238,.08)" }} />
-
-            {/* Accordions */}
-            <div className="py-2" role="navigation" aria-label="Footer navigation">
-              <FooterAccordion title={navLabel} links={navLinks} />
-              <FooterAccordion title={sectorsLabel} links={sectors} />
-            </div>
-
-            <div style={{ height: 1, background: "rgba(247,244,238,.12)" }} />
-
-            {/* Bottom bar mobile */}
-            <div className="flex flex-col items-center gap-3 py-6">
-              <div className="flex items-center gap-4">
-                {[
-                  { href: "https://www.instagram.com/yanissigeris/", label: "Instagram", Icon: InstagramSvg },
-                  { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
-                ].map(({ href, label, Icon }) => (
-                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                    style={{ color: "rgba(247,244,238,.5)", transition: "color .3s" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(247,244,238,1)"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(247,244,238,.5)"; }}
-                  ><Icon /></a>
-                ))}
-              </div>
-              <p style={{ fontSize: "11px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.4)", textAlign: "center" }}>{legalText}</p>
-              <p style={{ fontSize: "11px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.4)" }}>{remaxText}</p>
+            {/* Social icons */}
+            <div className="mt-6 flex items-center gap-4">
+              {[
+                { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
+                { href: "https://www.instagram.com/yanissigeris/", label: "Instagram", Icon: InstagramSvg },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex items-center justify-center rounded-full transition-colors duration-200"
+                  style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.4)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "#fff"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.1)"; e.currentTarget.style.color = "rgba(255,255,255,.4)"; }}
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* ── DESKTOP LAYOUT ── */}
-          <div className="hidden lg:block">
-            {/* 4-column grid */}
-            <div className="grid grid-cols-4 gap-8 py-16" role="navigation" aria-label="Footer navigation">
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
-              {/* Col 1 — Brand */}
-              <div>
-                <img src={logoYgsWhite} alt="YGS — Yanis Gauthier-Sigeris" width={140} height={158} className="h-auto mb-4" style={{ width: 140 }} loading="lazy" decoding="async" />
-                <p style={{ fontSize: "13px", fontFamily: "var(--serif)", fontStyle: "italic", color: "var(--gold)", marginBottom: 16 }}>{tagline}</p>
-                <p style={{ fontSize: "13px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.5)", marginBottom: 2 }}>819-210-3044</p>
-                <p style={{ fontSize: "13px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.5)" }}>yanis@martywaite.com</p>
-              </div>
+          {/* ── Mobile: accordion columns ── */}
+          <div className="sm:hidden py-6" role="navigation" aria-label="Footer navigation">
+            {columns.map((col) => (
+              <FooterAccordion key={col.title} title={col.title} links={col.links} />
+            ))}
+          </div>
 
-              {/* Col 2 — Navigation */}
-              <div>
-                <p style={labelStyle}>{navLabel}</p>
-                <ul className="space-y-2.5">
-                  {navLinks.map((l) => (
-                    <li key={l.href}>
-                      <Link
-                        to={l.href}
-                        style={linkStyle}
-                        onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(247,244,238,1)"; e.currentTarget.style.textDecoration = "underline"; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(247,244,238,.65)"; e.currentTarget.style.textDecoration = "none"; }}
-                      >
+          {/* ── Desktop: 4 columns (2-col on sm) ── */}
+          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label="Footer navigation">
+            {columns.map((col) => (
+              <div key={col.title}>
+                <p className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                  {col.title}
+                </p>
+                <ul className="space-y-3">
+                  {col.links.map((l) => (
+                    <li key={l.href + l.label}>
+                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
+            ))}
+          </div>
 
-              {/* Col 3 — Secteurs */}
-              <div>
-                <p style={labelStyle}>{sectorsLabel}</p>
-                <ul className="space-y-2.5">
-                  {sectors.map((l) => (
-                    <li key={l.href}>
-                      <Link
-                        to={l.href}
-                        style={linkStyle}
-                        onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(247,244,238,1)"; e.currentTarget.style.textDecoration = "underline"; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(247,244,238,.65)"; e.currentTarget.style.textDecoration = "none"; }}
-                      >
-                        {l.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
-              {/* Col 4 — Commencer */}
-              <div>
-                <p style={labelStyle}>{ctaLabel}</p>
+          {/* ── SEO Popular links ── */}
+          <div className="py-5 sm:py-8">
+            <p className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+              {popularLabel}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {popularLinks.map((l) => (
                 <Link
-                  to={ctaHref}
+                  key={l.href}
+                  to={l.href}
+                  className="transition-colors duration-200"
                   style={{
-                    display: "inline-block",
-                    border: "1px solid var(--gold)",
-                    color: "var(--gold)",
-                    fontFamily: "var(--sans)",
-                    fontSize: "13px",
-                    fontWeight: 500,
-                    padding: "10px 24px",
-                    borderRadius: 999,
-                    textDecoration: "none",
-                    transition: "background .3s, color .3s",
-                    marginBottom: 20,
+                    fontSize: ".7rem",
+                    color: "rgba(255,255,255,.28)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    borderRadius: 3,
+                    padding: ".2rem .55rem",
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "#17303B"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.28)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.06)"; }}
                 >
-                  {ctaButtonText}
+                  {l.label}
                 </Link>
-                <p style={{ fontSize: "18px", fontFamily: "var(--sans)", fontWeight: 500, color: "rgba(247,244,238,.9)", marginBottom: 4 }}>819-210-3044</p>
-                <p style={{ fontSize: "13px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.5)" }}>yanis@martywaite.com</p>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Divider */}
-            <div style={{ height: 1, background: "rgba(247,244,238,.12)" }} />
+          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
-            {/* Bottom bar */}
-            <div className="flex items-center justify-between py-5">
-              <p style={{ fontSize: "11px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.4)" }}>{legalText}</p>
-              <p style={{ fontSize: "11px", fontFamily: "var(--sans)", color: "rgba(247,244,238,.4)" }}>{remaxText}</p>
-              <div className="flex items-center gap-4">
-                {[
-                  { href: "https://www.instagram.com/yanissigeris/", label: "Instagram", Icon: InstagramSvg },
-                  { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
-                ].map(({ href, label, Icon }) => (
-                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                    style={{ color: "rgba(247,244,238,.5)", transition: "color .3s" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(247,244,238,1)"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(247,244,238,.5)"; }}
-                  ><Icon /></a>
-                ))}
-              </div>
+          {/* ── Affiliations ── */}
+          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
+            <p className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+              {affiliationsLabel}
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
+              {affiliationLogos.map((logo) => (
+                <div
+                  key={logo.alt}
+                  className="flex items-center justify-center"
+                  style={{
+                    background: "rgba(255,255,255,.04)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    borderRadius: 3,
+                    padding: ".4rem .75rem",
+                    minHeight: 44,
+                    minWidth: 80,
+                  }}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={100}
+                    height={38}
+                    loading="lazy"
+                    decoding="async"
+                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Google Reviews badge ── */}
+          <div className="flex justify-center py-4">
+            <GoogleReviewBadge variant="compact" />
+          </div>
+
+          {/* ── RE/MAX mention ── */}
+          <div className="text-center py-3">
+            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.18)", fontWeight: 300 }}>
+              {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
+            </p>
+          </div>
+
+          {/* ── Copyright ── */}
+          <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
+            <div className="mt-2 flex justify-center gap-4">
+              <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+                {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
+              </Link>
+              <Link to={lang === "en" ? "/en/terms" : "/conditions-utilisation"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+                {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
+              </Link>
             </div>
           </div>
         </div>
