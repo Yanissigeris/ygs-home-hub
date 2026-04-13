@@ -186,19 +186,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {subtitle}
               </p>
 
-              {/* Inline hero stats — always above the fold */}
-              <div className="mt-5 flex items-center gap-3 sm:gap-5 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.58s", animationFillMode: "forwards" }}>
-                {stats.map((stat, i) => (
-                  <React.Fragment key={stat.label}>
-                    {i > 0 && <div className="h-[28px] w-px" style={{ background: "rgba(255,255,255,.12)" }} />}
-                    <div className="flex flex-col">
-                      <span style={{ fontSize: "clamp(.72rem, 2.2vw, .85rem)", fontWeight: 700, color: "var(--gold)", letterSpacing: ".01em", lineHeight: 1.2 }}>{stat.value}</span>
-                      <span style={{ fontSize: "clamp(.52rem, 1.6vw, .62rem)", color: "rgba(255,255,255,.5)", fontWeight: 400, letterSpacing: ".04em", lineHeight: 1.3 }}>{stat.label}</span>
-                    </div>
-                  </React.Fragment>
-                ))}
-              </div>
-
               {(primaryCta || secondaryCta) && (
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
                   {primaryCta && (
