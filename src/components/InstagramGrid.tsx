@@ -72,8 +72,6 @@ const InstagramGrid = () => {
               target="_blank"
               rel="noopener"
               className="group relative aspect-square overflow-hidden rounded-[2px]"
-              style={{}}
-            >
             >
               <img
                 src={src}
