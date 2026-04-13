@@ -291,7 +291,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
 
           {/* ─── RIGHT COLUMN ─── */}
-          <div className="relative hidden lg:block overflow-hidden" style={{ background: "var(--ink2)" }}>
+          <div ref={rightColRef} className="relative hidden lg:block overflow-hidden will-change-transform" style={{ background: "var(--ink2)" }}>
             {/* Background image / video */}
             {heroVideo && (
               <>
@@ -314,7 +314,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
             {/* Yanis portrait */}
             {agentImage && (
-              <div className="absolute inset-0 z-[2] flex items-end justify-center">
+              <div ref={portraitRef} className="absolute inset-0 z-[2] flex items-end justify-center will-change-transform">
                 <img
                   src={agentImage}
                   alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
