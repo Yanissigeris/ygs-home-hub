@@ -11,7 +11,6 @@ import StatsSection from "@/components/StatsSection";
 import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import AboutSection from "@/components/AboutSection";
-import InteractiveMapSection from "@/components/InteractiveMapSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
@@ -64,7 +63,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       reviewsPageHref="/temoignages"
     />
 
-    <InteractiveMapSection />
     <AreasServicesSection />
     <GuideOffersSection background="alt" />
 
