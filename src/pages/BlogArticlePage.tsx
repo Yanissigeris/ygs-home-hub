@@ -198,7 +198,7 @@ const BlogArticlePage = () => {
       {/* Featured image banner */}
       {post.featuredImage && (
         <div className="w-full aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
-          <img src={post.featuredImage} alt={title} className="h-full w-full object-cover" width={1200} height={672} loading="eager" />
+          <img src={post.featuredImage} alt={title} className="h-full w-full object-cover" width={1200} height={672} loading="eager" decoding="auto" fetchPriority="high" />
         </div>
       )}
 

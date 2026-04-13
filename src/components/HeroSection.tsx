@@ -354,7 +354,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             <div className="relative flex justify-center items-end overflow-hidden lg:hidden" style={{ background: "var(--ink2)" }}>
               {heroVideo && (
                 <div className="absolute inset-0">
-                  {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} />}
+                  {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} loading="eager" decoding="auto" />}
                 </div>
               )}
               <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 100%)" }} />
