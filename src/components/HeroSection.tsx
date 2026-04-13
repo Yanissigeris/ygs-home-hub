@@ -59,6 +59,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   ) => {
     const sectionRef = React.useRef<HTMLElement>(null);
     const videoRef = React.useRef<HTMLVideoElement>(null);
+    const rightColRef = React.useRef<HTMLDivElement>(null);
+    const portraitRef = React.useRef<HTMLDivElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
     const [showScrollHint, setShowScrollHint] = React.useState(true);
     const lang = useLanguage();
@@ -79,6 +81,52 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       };
       window.addEventListener("scroll", onScroll, { passive: true });
       return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    // Parallax effect — desktop only (≥1024px)
+    React.useEffect(() => {
+      const section = sectionRef.current;
+      const rightCol = rightColRef.current;
+      const portrait = portraitRef.current;
+      if (!section || !rightCol || !portrait) return;
+
+      let raf = 0;
+      const mql = window.matchMedia("(min-width: 1024px)");
+
+      const update = () => {
+        const scrollY = window.scrollY;
+        const sectionH = section.offsetHeight;
+        if (scrollY > sectionH) return;
+        rightCol.style.transform = `translateY(${scrollY * 0.2}px)`;
+        portrait.style.transform = `translateY(${scrollY * 0.4}px)`;
+      };
+
+      const onScroll = () => {
+        if (!mql.matches) return;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      };
+
+      const reset = () => {
+        rightCol.style.transform = "";
+        portrait.style.transform = "";
+      };
+
+      const onMediaChange = () => {
+        if (!mql.matches) { cancelAnimationFrame(raf); reset(); }
+        else update();
+      };
+
+      mql.addEventListener("change", onMediaChange);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      if (mql.matches) update();
+
+      return () => {
+        mql.removeEventListener("change", onMediaChange);
+        window.removeEventListener("scroll", onScroll);
+        cancelAnimationFrame(raf);
+        reset();
+      };
     }, []);
 
     React.useEffect(() => {
@@ -243,7 +291,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
 
           {/* ─── RIGHT COLUMN ─── */}
-          <div className="relative hidden lg:block overflow-hidden" style={{ background: "var(--ink2)" }}>
+          <div ref={rightColRef} className="relative hidden lg:block overflow-hidden will-change-transform" style={{ background: "var(--ink2)" }}>
             {/* Background image / video */}
             {heroVideo && (
               <>
@@ -266,7 +314,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
             {/* Yanis portrait */}
             {agentImage && (
-              <div className="absolute inset-0 z-[2] flex items-end justify-center">
+              <div ref={portraitRef} className="absolute inset-0 z-[2] flex items-end justify-center will-change-transform">
                 <img
                   src={agentImage}
                   alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
