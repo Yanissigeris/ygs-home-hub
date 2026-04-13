@@ -72,11 +72,8 @@ const InstagramGrid = () => {
               target="_blank"
               rel="noopener"
               className="group relative aspect-square overflow-hidden rounded-[2px]"
-              style={{
-                opacity: revealed ? 1 : 0,
-                transform: revealed ? "scale(1)" : "scale(.97)",
-                transition: `opacity .5s cubic-bezier(.22,.61,.36,1) ${i * 0.04}s, transform .5s cubic-bezier(.22,.61,.36,1) ${i * 0.04}s`,
-              }}
+              style={{}}
+            >
             >
               <img
                 src={src}
