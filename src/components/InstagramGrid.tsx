@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ig1 from "@/assets/instagram-1.png";
 import ig2 from "@/assets/instagram-2.png";
