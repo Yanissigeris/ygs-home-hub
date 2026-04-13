@@ -30,34 +30,71 @@ const t = {
   },
 };
 
-const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string }) => (
-  <a
-    href={p.remaxUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    itemScope
-    itemType="https://schema.org/Product"
-    className="group flex flex-col h-full transition-all duration-[350ms] ease-out"
-    style={{ background: "var(--white, #fff)", border: "1px solid var(--border)", borderRadius: 3, overflow: "hidden" }}
-    onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-5px)"; e.currentTarget.style.boxShadow = "0 20px 50px rgba(23,48,59,.1)"; e.currentTarget.style.borderColor = "transparent"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; e.currentTarget.style.borderColor = ""; }}
-  >
-    <div className="relative overflow-hidden img-shimmer" style={{ aspectRatio: "16/9" }}>
-      <img src={p.image} alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`} itemProp="image" className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]" loading="lazy" decoding="async" width={648} height={486} onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }} onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }} />
-      <span className="absolute" style={{ top: "1rem", left: "1rem", background: "var(--gold)", color: "#fff", borderRadius: 20, fontSize: ".62rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", padding: ".25rem .75rem" }}>
-        {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
-      </span>
-    </div>
-    <div className="p-[1.25rem] md:p-[1.5rem]">
-      <p itemProp="name" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.35rem, 4vw, 1.5rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.02em", marginBottom: ".5rem" }}>{p.price}</p>
-      <p style={{ fontSize: ".78rem", color: "var(--muted)" }}>{p.type} · {p.bedrooms} {lang === "fr" ? "ch" : "bd"} · {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}</p>
-      <p style={{ fontSize: ".85rem", fontWeight: 500, color: "var(--ink)", marginTop: ".35rem" }}>{p.address}, {p.city}</p>
-      <span className="inline-flex items-center gap-2 transition-all group-hover:gap-3" style={{ marginTop: "1.25rem", fontSize: ".75rem", fontWeight: 600, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase", borderBottom: "1px solid rgba(168,138,90,.3)", paddingBottom: 2, minHeight: 44 }}>
-        {strings.viewProperty} →
-      </span>
-    </div>
-  </a>
-);
+const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string }) => {
+  const statusLabel = p.status === "sold" ? strings.statusSold : strings.statusFeatured;
+
+  return (
+    <a
+      href={p.remaxUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      itemScope
+      itemType="https://schema.org/Product"
+      className="group flex flex-col h-full"
+      style={{ background: "#fff", borderRadius: 3, overflow: "hidden" }}
+    >
+      {/* Image */}
+      <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+        <img
+          src={p.image}
+          alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
+          itemProp="image"
+          className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          width={648}
+          height={486}
+          onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
+          onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
+        />
+      </div>
+
+      {/* Gold top border — hover only */}
+      <div className="h-px transition-colors duration-[250ms] ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+
+      {/* Card body */}
+      <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+        {/* Status label */}
+        <p style={{ fontFamily: "var(--sans)", fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A88A5A", marginBottom: ".5rem" }}>
+          {statusLabel}
+        </p>
+
+        {/* Price */}
+        <p itemProp="name" style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 700, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
+          {p.price}
+        </p>
+
+        {/* Address */}
+        <p className="truncate" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 400, color: "var(--muted)", marginBottom: ".75rem" }}>
+          {p.address}, {p.city}
+        </p>
+
+        {/* Stats */}
+        <p style={{ fontFamily: "var(--sans)", fontSize: "12px", fontWeight: 400, color: "var(--muted)", marginBottom: "1.25rem" }}>
+          {p.bedrooms} {lang === "fr" ? "ch" : "bd"}
+          <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
+          {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}
+        </p>
+
+        {/* View link */}
+        <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "#A88A5A" }}>
+          {strings.viewProperty}{" "}
+          <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1" aria-hidden>→</span>
+        </span>
+      </div>
+    </a>
+  );
+};
 
 const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps>(
   ({ lang = "fr" }, ref) => {
