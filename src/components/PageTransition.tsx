@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EASE: [number, number, number, number] = [0.76, 0, 0.24, 1];
-const DURATION = 0.6; // seconds for route transitions
-const INITIAL_DURATION = 0.4; // seconds for first-visit loader
+const DURATION = 0.35; // seconds for route transitions
+const INITIAL_DURATION = 0.25; // seconds for first-visit loader
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
