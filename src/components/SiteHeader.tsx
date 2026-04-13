@@ -134,6 +134,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [onDarkHero, setOnDarkHero] = useState(false);
   const location = useLocation();
   const lang = useLanguage();
   const nav = lang === "en" ? mainNavEn : mainNav;
@@ -141,7 +142,34 @@ const SiteHeader = () => {
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Detect dark hero section presence & overlap with header
+  useEffect(() => {
+    let io: IntersectionObserver | null = null;
+    const setup = () => {
+      const hero = document.querySelector("[data-hero-dark]");
+      if (!hero) { setOnDarkHero(false); return; }
+      io = new IntersectionObserver(
+        ([entry]) => setOnDarkHero(entry.isIntersecting && window.scrollY < 80),
+        { rootMargin: "0px 0px -90% 0px", threshold: 0 }
+      );
+      io.observe(hero);
+    };
+    // Delay slightly so DOM is ready after page transition
+    const t = setTimeout(setup, 60);
+    return () => { clearTimeout(t); io?.disconnect(); };
+  }, [location.pathname]);
+
+  // Also update onDarkHero on scroll (intersection alone isn't enough for threshold)
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY >= 80) setOnDarkHero(false);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -160,7 +188,6 @@ const SiteHeader = () => {
 
   useEffect(() => {
     if (!open) return;
-    // Skip the pointerdown that opened the menu
     const raf = requestAnimationFrame(() => { justOpened.current = false; });
     const handler = (e: PointerEvent) => {
       if (justOpened.current) return;
@@ -174,18 +201,36 @@ const SiteHeader = () => {
     };
   }, [open]);
 
+  // Transparent on dark hero, white-blur when scrolled, cream default
+  const transparent = onDarkHero && !scrolled && !open;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
     zIndex: 200,
-    background: "rgba(247,244,238,.96)",
-    backdropFilter: "blur(16px)",
-    WebkitBackdropFilter: "blur(16px)",
-    borderBottom: "1px solid var(--border)",
-    transition: "box-shadow .3s var(--ease)",
+    background: transparent
+      ? "transparent"
+      : scrolled
+        ? "rgba(255,255,255,.85)"
+        : "rgba(247,244,238,.96)",
+    backdropFilter: transparent ? "none" : "blur(12px)",
+    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
+    borderBottom: transparent
+      ? "1px solid transparent"
+      : scrolled
+        ? "1px solid rgba(23,48,59,.08)"
+        : "1px solid var(--border)",
+    transition: "all .3s ease",
     boxShadow: scrolled ? "0 4px 40px rgba(23,48,59,.1)" : "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
+
+  // Colors for nav links & icons
+  const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
+  const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
+  const iconColor = transparent ? "#F7F4EE" : "var(--ink)";
+  const ctaBorderColor = transparent ? "#F7F4EE" : "#A88A5A";
+  const ctaTextColor = transparent ? "#F7F4EE" : "#A88A5A";
+  const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
 
   return (
     <header id="site-header" style={headerStyle}>
