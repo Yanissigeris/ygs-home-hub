@@ -16,7 +16,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import ygsLogo from "@/assets/ygs-logo.png";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
-import logoRemax from "@/assets/logo-remax-balloon.webp";
 import { mainNav, type NavItem } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
@@ -189,12 +188,7 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden lg:flex items-center" style={{ height: 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <div className="flex flex-col">
-            <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain" style={{ height: 52, width: "auto" }} />
-            
-          </div>
-          <span className="h-5 w-px shrink-0" style={{ background: "var(--border)" }} />
-          <img src={logoRemax} alt="RE/MAX Direct — agence immobilière Gatineau" className="object-contain opacity-50" style={{ height: 24, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain" style={{ height: 52, width: "auto" }} />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} />))}
@@ -228,12 +222,7 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6" style={{ height: 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <div className="flex flex-col">
-            <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: 48, width: "auto" }} />
-            
-          </div>
-          <span className="h-5 w-px shrink-0" style={{ background: "var(--border)" }} />
-          <img src={logoRemax} alt="RE/MAX Direct" className="shrink-0 object-contain opacity-60" style={{ height: 22, width: "auto" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: 48, width: "auto" }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitch />

@@ -201,6 +201,13 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <GoogleReviewBadge variant="compact" />
           </div>
 
+          {/* ── RE/MAX mention ── */}
+          <div className="text-center py-3">
+            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.18)", fontWeight: 300 }}>
+              {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
+            </p>
+          </div>
+
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
