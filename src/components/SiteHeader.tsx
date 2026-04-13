@@ -44,7 +44,7 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
         onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = "#4A5568"; }}
       >
         {item.label}
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left" style={{ background: "#17303B", transform: active ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: "#17303B", transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
     );
   }
