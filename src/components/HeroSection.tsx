@@ -176,9 +176,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
               >
                 {lang === "fr" ? (
-                  <>Votre <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>courtier</em>{" "}<strong style={{ fontWeight: 700 }}>immobilier</strong><br />en Outaouais</>
+                  <>Votre <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>courtier immobilier</em>{" "}<strong style={{ fontWeight: 700 }}>à Gatineau</strong><br />— Outaouais</>
                 ) : (
-                  <>Your <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>real estate</em>{" "}<strong style={{ fontWeight: 700 }}>broker</strong><br />in Outaouais</>
+                  <>Your <em className="not-italic" style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>real estate broker</em>{" "}<strong style={{ fontWeight: 700 }}>in Gatineau</strong><br />— Outaouais</>
                 )}
               </h1>
 
