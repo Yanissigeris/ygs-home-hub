@@ -54,21 +54,19 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                 style={
                   dark
                     ? isOutline
-                      ? { border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.8)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
+                      ? { border: "1.5px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.8)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid #A88A5A", color: "#A88A5A", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                     : isOutline
-                      ? { border: "1px solid var(--border)", color: "var(--ink)", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
-                      : { background: "var(--gold)", color: "#fff", borderRadius: 3, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44 }
+                      ? { border: "1.5px solid var(--border)", color: "var(--ink)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid #A88A5A", color: "#A88A5A", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                 }
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                  if (!isOutline) e.currentTarget.style.boxShadow = "0 6px 20px rgba(168,138,90,.35)";
+                  if (!isOutline) { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }
                   if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "#fff"; }
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "";
-                  e.currentTarget.style.boxShadow = "";
-                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.2)"; e.currentTarget.style.color = "rgba(255,255,255,.8)"; }
+                  if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }
+                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.8)"; }
                 }}
                 onClick={() => trackCTAClick(btn.label, "cta-section")}
                 aria-label={btn.label}
