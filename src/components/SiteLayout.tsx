@@ -10,9 +10,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
-import { AnimatePresence } from "framer-motion";
 
-import { Outlet, useLocation } from "react-router-dom";
+
+import { Outlet } from "react-router-dom";
 
 const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 
@@ -84,8 +84,6 @@ const PageFallback = () => (
 );
 
 const SiteLayout = () => {
-  const location = useLocation();
-
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
@@ -97,13 +95,11 @@ const SiteLayout = () => {
       <VisibleBreadcrumb />
       <ScrollProgress />
       <main className="flex-1">
-        <AnimatePresence mode="wait">
-          <PageTransition locationKey={location.pathname}>
-            <React.Suspense fallback={<PageFallback />}>
-              <Outlet />
-            </React.Suspense>
-          </PageTransition>
-        </AnimatePresence>
+        <PageTransition>
+          <React.Suspense fallback={<PageFallback />}>
+            <Outlet />
+          </React.Suspense>
+        </PageTransition>
       </main>
       <React.Suspense fallback={null}>
         <SiteFooter />
