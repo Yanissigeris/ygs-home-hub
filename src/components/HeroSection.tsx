@@ -83,6 +83,52 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    // Parallax effect — desktop only (≥1024px)
+    React.useEffect(() => {
+      const section = sectionRef.current;
+      const rightCol = rightColRef.current;
+      const portrait = portraitRef.current;
+      if (!section || !rightCol || !portrait) return;
+
+      let raf = 0;
+      const mql = window.matchMedia("(min-width: 1024px)");
+
+      const update = () => {
+        const scrollY = window.scrollY;
+        const sectionH = section.offsetHeight;
+        if (scrollY > sectionH) return;
+        rightCol.style.transform = `translateY(${scrollY * 0.2}px)`;
+        portrait.style.transform = `translateY(${scrollY * 0.4}px)`;
+      };
+
+      const onScroll = () => {
+        if (!mql.matches) return;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      };
+
+      const reset = () => {
+        rightCol.style.transform = "";
+        portrait.style.transform = "";
+      };
+
+      const onMediaChange = () => {
+        if (!mql.matches) { cancelAnimationFrame(raf); reset(); }
+        else update();
+      };
+
+      mql.addEventListener("change", onMediaChange);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      if (mql.matches) update();
+
+      return () => {
+        mql.removeEventListener("change", onMediaChange);
+        window.removeEventListener("scroll", onScroll);
+        cancelAnimationFrame(raf);
+        reset();
+      };
+    }, []);
+
     React.useEffect(() => {
       if (!heroVideo) return;
       const section = sectionRef.current;
