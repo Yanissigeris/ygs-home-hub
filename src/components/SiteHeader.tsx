@@ -203,15 +203,17 @@ const SiteHeader = () => {
             style={{
               height: 40,
               padding: "0 1.4rem",
-              background: "var(--gold)",
-              color: "#fff",
+              background: "transparent",
+              color: "#A88A5A",
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
-              borderRadius: 3,
+              borderRadius: 999,
+              border: "1.5px solid #A88A5A",
+              transition: "all .2s ease",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-1px)"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(168,138,90,.35)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
@@ -229,7 +231,9 @@ const SiteHeader = () => {
           <Link
             to={ctaHref}
             className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, padding: "0 1.1rem", background: "var(--gold)", color: "#fff", fontSize: ".78rem", fontWeight: 600, borderRadius: 3 }}
+            style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: "#A88A5A", fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
             {ctaLabel}
@@ -253,7 +257,9 @@ const SiteHeader = () => {
           <Link
             to={ctaHref}
             className="inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "var(--gold)", color: "#fff", fontSize: ".75rem", fontWeight: 600, borderRadius: 3 }}
+            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: "#A88A5A", fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
             {ctaLabel}
@@ -284,7 +290,9 @@ const SiteHeader = () => {
               to={ctaHref}
               onClick={closeMenu}
               className="flex w-full items-center justify-center transition-all duration-200"
-              style={{ height: 48, background: "var(--gold)", color: "#fff", fontSize: ".94rem", fontWeight: 600, borderRadius: 3 }}
+              style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
             >
               {ctaLabel}
             </Link>
