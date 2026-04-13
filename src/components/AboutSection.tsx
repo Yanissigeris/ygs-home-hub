@@ -89,18 +89,20 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           </p>
 
           {/* Credentials */}
-          <p
-            style={{
-              fontFamily: "var(--sans)",
-              fontSize: "11px",
-              fontWeight: 500,
-              letterSpacing: "0.06em",
-              color: "#A88A5A",
-              marginBottom: "2rem",
-            }}
-          >
-            {c.credentials}
-          </p>
+          {c.credentials && (
+            <p
+              style={{
+                fontFamily: "var(--sans)",
+                fontSize: "11px",
+                fontWeight: 500,
+                letterSpacing: "0.06em",
+                color: "#A88A5A",
+                marginBottom: "2rem",
+              }}
+            >
+              {c.credentials}
+            </p>
+          )}
 
           {/* CTA */}
           <Link
