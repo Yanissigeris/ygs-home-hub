@@ -128,7 +128,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(primaryCta || secondaryCta) && (
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   {primaryCta && (
-                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
+                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02]" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
                       <Link to={primaryCta.href}>{primaryCta.label} →</Link>
                     </Button>
                   )}
