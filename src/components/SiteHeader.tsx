@@ -20,11 +20,16 @@ import { mainNav, type NavItem } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
 /* ── Desktop dropdown item ── */
-const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string }) => {
+const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathname: string; transparent?: boolean }) => {
   const [open, setOpen] = useState(false);
   const timeout = useRef<ReturnType<typeof setTimeout>>();
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
+
+  const defaultColor = transparent ? "#F7F4EE" : "#4A5568";
+  const activeColor = transparent ? "#FFFFFF" : "#17303B";
+  const hoverColor = transparent ? "#FFFFFF" : "#17303B";
+  const underlineColor = transparent ? "#F7F4EE" : "#17303B";
 
   if (!item.children) {
     const active = pathname === item.href;
@@ -36,15 +41,15 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
           fontSize: "13px",
           letterSpacing: "0.04em",
           fontWeight: active ? 600 : 500,
-          color: active ? "#17303B" : "#4A5568",
+          color: active ? activeColor : defaultColor,
           padding: ".4rem .7rem",
           borderRadius: 3,
         }}
-        onMouseEnter={(e) => { e.currentTarget.style.color = "#17303B"; }}
-        onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = "#4A5568"; }}
+        onMouseEnter={(e) => { e.currentTarget.style.color = hoverColor; }}
+        onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = defaultColor; }}
       >
         {item.label}
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: "#17303B", transform: active ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
     );
   }
@@ -59,18 +64,18 @@ const DesktopNavItem = ({ item, pathname }: { item: NavItem; pathname: string })
           fontSize: "13px",
           letterSpacing: "0.04em",
           fontWeight: isChildActive ? 600 : 500,
-          color: isChildActive ? "#17303B" : "#4A5568",
+          color: isChildActive ? activeColor : defaultColor,
           padding: ".4rem .7rem",
           borderRadius: 3,
         }}
         onClick={() => setOpen((p) => !p)}
         aria-expanded={open}
-        onMouseEnter={(e) => { e.currentTarget.style.color = "#17303B"; }}
-        onMouseLeave={(e) => { if (!isChildActive) e.currentTarget.style.color = "#4A5568"; }}
+        onMouseEnter={(e) => { e.currentTarget.style.color = hoverColor; }}
+        onMouseLeave={(e) => { if (!isChildActive) e.currentTarget.style.color = defaultColor; }}
       >
         {item.label}
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: "#17303B", transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,.98)", boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)" }}>
