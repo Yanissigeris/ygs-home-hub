@@ -252,6 +252,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               }}
             >
               <label
+                htmlFor="val-address"
                 style={{
                   fontSize: ".7rem",
                   fontWeight: 600,
@@ -265,6 +266,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                 {c.addressLabel}
               </label>
               <input
+                id="val-address"
                 ref={addressRef}
                 type="text"
                 value={address}
@@ -272,6 +274,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                 placeholder={c.addressPlaceholder}
                 onKeyDown={(e) => e.key === "Enter" && goStep2()}
                 className={shake ? "animate-shake" : ""}
+                aria-required="true"
                 style={inputStyle(shake)}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = "var(--gold)";
