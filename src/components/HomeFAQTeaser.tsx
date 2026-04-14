@@ -9,9 +9,38 @@ interface FAQTeaserProps {
   linkHref?: string;
 }
 
+const FAQ_TEASER_JSONLD_ID = "ygs-faq-teaser-jsonld";
+
 const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
   ({ overline = "FAQ", title = "Questions fréquentes", items, linkLabel = "Voir toutes les questions", linkHref = "/faq" }, ref) => {
     const [openIndex, setOpenIndex] = React.useState(0);
+
+    // Inject FAQPage JSON-LD for rich snippet eligibility
+    React.useEffect(() => {
+      const prev = document.getElementById(FAQ_TEASER_JSONLD_ID);
+      if (prev) prev.remove();
+
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: items.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      };
+
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = FAQ_TEASER_JSONLD_ID;
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+
+      return () => {
+        const el = document.getElementById(FAQ_TEASER_JSONLD_ID);
+        if (el) el.remove();
+      };
+    }, [items]);
 
     return (
       <section ref={ref} style={{ background: "var(--cream)", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
