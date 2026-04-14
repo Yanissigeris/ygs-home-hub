@@ -8,6 +8,7 @@ import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
+import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
@@ -149,6 +150,18 @@ const BuyerPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <RelatedPages
+      overline="À lire aussi"
+      title="Pages connexes"
+      pages={[
+        { title: "Guide acheteur complet", text: "Tout le processus d'achat au Québec, étape par étape.", href: "/guide-acheteur-gatineau" },
+        { title: "Premier achat à Gatineau", text: "Budget, mise de fonds et conseils pour les premiers acheteurs.", href: "/premier-achat-gatineau" },
+        { title: "Acheter depuis Ottawa", text: "Ce qu'il faut savoir pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
+        { title: "Quartiers à considérer", text: "Aylmer, Hull, Plateau — trouvez le secteur qui vous convient.", href: "/quartiers-a-considerer-a-gatineau" },
+      ]}
+      background="alt"
+    />
   </>
 );
 
