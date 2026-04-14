@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ig1 from "@/assets/instagram-1.png";
-import ig2 from "@/assets/instagram-2.png";
-import ig3 from "@/assets/instagram-3.png";
-import ig4 from "@/assets/instagram-4.png";
-import ig5 from "@/assets/instagram-5.png";
-import ig6 from "@/assets/instagram-6.png";
+import ig1 from "@/assets/instagram-1.webp";
+import ig2 from "@/assets/instagram-2.webp";
+import ig3 from "@/assets/instagram-3.webp";
+import ig4 from "@/assets/instagram-4.webp";
+import ig5 from "@/assets/instagram-5.webp";
+import ig6 from "@/assets/instagram-6.webp";
 
 const images = [ig1, ig2, ig3, ig4, ig5, ig6];
 const HANDLE = "yanissigeris";
