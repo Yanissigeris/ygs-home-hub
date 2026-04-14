@@ -8,6 +8,7 @@ import { getReviewsByCategory } from "@/data/reviews";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -131,6 +132,18 @@ const RelocationPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <RelatedPages
+      overline="À lire aussi"
+      title="Pages connexes"
+      pages={[
+        { title: "Guide relocalisation", text: "Le guide complet pour s'installer à Gatineau.", href: "/guide-relocalisation-gatineau" },
+        { title: "Acheter à Gatineau depuis Ottawa", text: "Taxes, marché et processus pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
+        { title: "Relocalisation depuis Montréal", text: "Ce qui change quand on quitte Montréal pour l'Outaouais.", href: "/relocalisation-montreal-gatineau" },
+        { title: "Quartiers à considérer", text: "Trouvez le secteur qui vous convient à Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+      ]}
+      background="alt"
+    />
 
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
   </>

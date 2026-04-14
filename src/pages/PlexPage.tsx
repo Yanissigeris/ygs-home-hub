@@ -8,6 +8,7 @@ import { getReviewsByCategory } from "@/data/reviews";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
+import RelatedPages from "@/components/RelatedPages";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
@@ -156,6 +157,18 @@ const PlexPage = () => (
     />
 
     <FAQSection items={faq} />
+
+    <RelatedPages
+      overline="À lire aussi"
+      title="Pages connexes"
+      pages={[
+        { title: "Analyse plex gratuite", text: "Revenus, dépenses, rendement — obtenez une lecture claire.", href: "/analyse-plex-gatineau" },
+        { title: "Vendre un plex à Gatineau", text: "Stratégie et accompagnement pour maximiser la vente.", href: "/vendre-un-plex-a-gatineau" },
+        { title: "Quartiers pour investir", text: "Les secteurs les plus porteurs en Outaouais.", href: "/quartiers-a-considerer-a-gatineau" },
+        { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau" },
+      ]}
+      background="alt"
+    />
   </>
 );
 
