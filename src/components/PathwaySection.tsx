@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import cardVendreImg from "@/assets/service-vendre.jpg";
+import cardVendreImg from "@/assets/service-vendre.webp";
 import cardAcheterImg from "@/assets/service-acheter.webp";
 import cardPlexImg from "@/assets/service-plex.webp";
 
