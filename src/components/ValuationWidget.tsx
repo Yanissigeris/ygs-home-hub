@@ -417,36 +417,48 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   gap: ".75rem",
                 }}
               >
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => { setName(e.target.value); setEmptyFields((p) => p.filter((f) => f !== "name")); }}
-                  placeholder={c.namePh}
-                  style={smallInputStyle(emptyFields.includes("name"))}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor = "var(--gold)";
-                    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.12)";
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor = emptyFields.includes("name") ? "#e53e3e" : "hsl(var(--border))";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                />
-                <input
-                  type="text"
-                  value={contact}
-                  onChange={(e) => { setContact(e.target.value); setEmptyFields((p) => p.filter((f) => f !== "contact")); }}
-                  placeholder={c.contactPh}
-                  style={smallInputStyle(emptyFields.includes("contact"))}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor = "var(--gold)";
-                    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.12)";
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor = emptyFields.includes("contact") ? "#e53e3e" : "hsl(var(--border))";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                />
+                <div>
+                  <label htmlFor="val-name" className="sr-only">{c.namePh}</label>
+                  <input
+                    id="val-name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => { setName(e.target.value); setEmptyFields((p) => p.filter((f) => f !== "name")); }}
+                    placeholder={c.namePh}
+                    aria-required="true"
+                    aria-invalid={emptyFields.includes("name")}
+                    style={smallInputStyle(emptyFields.includes("name"))}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = "var(--gold)";
+                      e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.12)";
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = emptyFields.includes("name") ? "#e53e3e" : "hsl(var(--border))";
+                      e.currentTarget.style.boxShadow = "none";
+                    }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="val-contact" className="sr-only">{c.contactPh}</label>
+                  <input
+                    id="val-contact"
+                    type="text"
+                    value={contact}
+                    onChange={(e) => { setContact(e.target.value); setEmptyFields((p) => p.filter((f) => f !== "contact")); }}
+                    placeholder={c.contactPh}
+                    aria-required="true"
+                    aria-invalid={emptyFields.includes("contact")}
+                    style={smallInputStyle(emptyFields.includes("contact"))}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = "var(--gold)";
+                      e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.12)";
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = emptyFields.includes("contact") ? "#e53e3e" : "hsl(var(--border))";
+                      e.currentTarget.style.boxShadow = "none";
+                    }}
+                  />
+                </div>
               </div>
 
               <textarea
