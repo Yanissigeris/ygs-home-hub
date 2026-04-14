@@ -1,6 +1,6 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
 import { Users, Home, MapPin, Coffee } from "lucide-react";
-import heroImg from "@/assets/hero-cote-dazur.jpg";
+import heroImg from "@/assets/hero-cote-dazur.webp";
 
 const CoteDazurPageEn = () => (
   <NeighborhoodTemplate
