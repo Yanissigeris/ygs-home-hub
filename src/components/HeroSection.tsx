@@ -148,6 +148,32 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       return () => io.disconnect();
     }, [heroVideo]);
 
+    /* VideoObject JSON-LD for pages with hero video */
+    React.useEffect(() => {
+      if (!heroVideo) return;
+      const BASE = "https://yanisgauthier.com";
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: title,
+        description: subtitle,
+        thumbnailUrl: heroVideoPoster ? `${BASE}${heroVideoPoster}` : undefined,
+        contentUrl: `${BASE}${heroVideo}`,
+        uploadDate: "2026-03-18",
+        publisher: {
+          "@type": "RealEstateAgent",
+          "@id": `${BASE}/#realestateagent`,
+          name: "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
+        },
+      };
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = "ygs-jsonld-video";
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+      return () => { script.remove(); };
+    }, [heroVideo, heroVideoPoster, title, subtitle]);
+
     React.useEffect(() => {
       const el = videoRef.current;
       if (!el) return;
