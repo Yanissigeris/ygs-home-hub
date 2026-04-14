@@ -78,7 +78,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.35)", fontStyle: "italic" }}>
+            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.5)", fontStyle: "italic" }}>
               {tagline}
             </p>
 

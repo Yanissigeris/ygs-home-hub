@@ -172,7 +172,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             <div className="max-w-[40rem]">
               {overline && <p className="label-overline mb-6" style={{ color: "var(--gold)" }}>{overline}</p>}
               <h1 style={{ color: "#F7F4EE" }}>{title}</h1>
-              <p className="mt-4 max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6" style={{ color: "rgba(255,255,255,.6)" }}>{subtitle}</p>
+              <p className="mt-4 max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6" style={{ color: "rgba(255,255,255,.7)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   {primaryCta && (
@@ -233,7 +233,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 )}
               </h1>
 
-              <p className="mt-6 max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.6)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
+              <p className="mt-6 max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
                 {subtitle}
               </p>
 
@@ -281,7 +281,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                         >
                           {stat.value}
                         </p>
-                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(255,255,255,.35)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
+                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(255,255,255,.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
                       </div>
                     </React.Fragment>
                   ))}
@@ -299,7 +299,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
                 </div>
                 <div className="absolute inset-0">
-                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} />
+                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} aria-hidden="true" />
                 </div>
               </>
             )}
