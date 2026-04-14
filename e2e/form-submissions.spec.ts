@@ -12,11 +12,16 @@ async function mockSupabase(page: import("@playwright/test").Page) {
   });
 }
 
+async function waitAndScroll(page: import("@playwright/test").Page, selector: string) {
+  await page.waitForSelector(selector, { timeout: 20000 });
+  await page.locator(selector).scrollIntoViewIfNeeded();
+}
+
 /* ── FR Contact ── */
 test("FR contact form — submit shows success", async ({ page }) => {
   await mockSupabase(page);
   await page.goto("/contact-yanis", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
+  await waitAndScroll(page, "#nom");
   await page.locator("#nom").fill("Test Utilisateur");
   await page.locator("#courriel").fill("test@example.com");
   await page.getByRole("button", { name: /envoyer ma demande/i }).click();
@@ -25,9 +30,8 @@ test("FR contact form — submit shows success", async ({ page }) => {
 
 test("FR contact form — validates required fields", async ({ page }) => {
   await page.goto("/contact-yanis", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
-  const btn = page.getByRole("button", { name: /envoyer ma demande/i });
-  await btn.click();
+  await waitAndScroll(page, "button:has-text('Envoyer ma demande')");
+  await page.getByRole("button", { name: /envoyer ma demande/i }).click();
   await expect(page.getByText(/demande envoyée/i)).not.toBeVisible({ timeout: 3000 });
 });
 
@@ -35,7 +39,7 @@ test("FR contact form — validates required fields", async ({ page }) => {
 test("EN contact form — submit shows success", async ({ page }) => {
   await mockSupabase(page);
   await page.goto("/en/contact", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
+  await waitAndScroll(page, "#name");
   await page.locator("#name").fill("Test User");
   await page.locator("#email").fill("test@example.com");
   await page.getByRole("button", { name: /send my request/i }).click();
@@ -44,9 +48,8 @@ test("EN contact form — submit shows success", async ({ page }) => {
 
 test("EN contact form — validates required fields", async ({ page }) => {
   await page.goto("/en/contact", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
-  const btn = page.getByRole("button", { name: /send my request/i });
-  await btn.click();
+  await waitAndScroll(page, "button:has-text('Send my request')");
+  await page.getByRole("button", { name: /send my request/i }).click();
   await expect(page.getByText(/message sent/i)).not.toBeVisible({ timeout: 3000 });
 });
 
@@ -54,7 +57,7 @@ test("EN contact form — validates required fields", async ({ page }) => {
 test("FR valuation form — submit shows success", async ({ page }) => {
   await mockSupabase(page);
   await page.goto("/evaluation-gratuite-gatineau", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
+  await waitAndScroll(page, "#adresse");
   await page.locator("#adresse").fill("123 rue Test, Gatineau");
   await page.locator("#nom").fill("Test Utilisateur");
   await page.locator("#courriel").fill("test@example.com");
@@ -66,7 +69,7 @@ test("FR valuation form — submit shows success", async ({ page }) => {
 test("EN valuation form — submit shows success", async ({ page }) => {
   await mockSupabase(page);
   await page.goto("/en/home-valuation", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(3000);
+  await waitAndScroll(page, "#address");
   await page.locator("#address").fill("123 Test St, Gatineau");
   await page.locator("#name").fill("Test User");
   await page.locator("#email").fill("test@example.com");
