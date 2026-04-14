@@ -13,7 +13,7 @@ export default defineConfig({
     viewport: { width: 1280, height: 720 },
     trace: "off",
     launchOptions: {
-      executablePath: "/nix/var/nix/profiles/sandbox/bin/chromium",
+      executablePath: "/bin/chromium",
     },
   },
   projects: [
