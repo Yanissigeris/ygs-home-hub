@@ -119,9 +119,9 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
   };
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-center justify-center" style={{ background: "rgba(0,0,0,.6)" }} onClick={onClose}>
-      <div className="relative w-[90%] max-w-[480px] rounded bg-white p-8" style={{ color: "var(--ink)" }} onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-xl" style={{ color: "hsl(var(--muted-foreground))" }} aria-label="Close">×</button>
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center" style={{ background: "rgba(0,0,0,.6)" }} onClick={onClose} role="dialog" aria-modal="true" aria-label={t.title}>
+      <div className="relative w-[90%] max-w-[480px] rounded bg-white p-8" style={{ color: "var(--ink)" }} onClick={(e) => e.stopPropagation()} role="document">
+        <button onClick={onClose} className="absolute top-4 right-4 text-xl" style={{ color: "hsl(var(--muted-foreground))", minWidth: 44, minHeight: 44 }} aria-label={lang === "en" ? "Close preferences" : "Fermer les préférences"}>×</button>
         <h3 className="font-serif text-[1.3rem] font-semibold mb-6">{t.title}</h3>
 
         <div className="space-y-5">
