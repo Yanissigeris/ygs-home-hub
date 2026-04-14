@@ -36,10 +36,12 @@
     <meta name="twitter:description" content="Courtier immobilier à Gatineau. Stratégie claire." />
     <meta name="twitter:image" content="https://yanisgauthier.com/og/og-default.jpg" />
 
-    <!-- Self-hosted fonts — inlined to remove render-blocking request -->
+    <!-- Google Fonts — non-render-blocking preload pattern -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
     <!-- Critical above-fold CSS -->
     <style>
       body{margin:0;background:#F7F4EE;color:#17303B;font-family:'DM Sans',system-ui,sans-serif}
