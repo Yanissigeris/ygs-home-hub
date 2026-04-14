@@ -18,9 +18,9 @@ const pages = [
 
 for (const pg of pages) {
   test(`WCAG 2.1 AA — ${pg.name} (${pg.path})`, async ({ page }) => {
-    await page.goto(pg.path, { waitUntil: "networkidle" });
-    // Wait for Suspense content
-    await page.waitForTimeout(1500);
+    await page.goto(pg.path, { waitUntil: "domcontentloaded" });
+    // Wait for React hydration + Suspense content
+    await page.waitForTimeout(3000);
 
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
