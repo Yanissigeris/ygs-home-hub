@@ -12,7 +12,17 @@ import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-seller-guide.webp";
+
+const sellerSteps = [
+  { name: "Get a property valuation", text: "Have your property evaluated by a local broker to set a competitive price based on the Gatineau market." },
+  { name: "Prepare your property for sale", text: "Identify improvements that maximize your price without over-investing — cleaning, photos and staging." },
+  { name: "Market with the right strategy", text: "Professional photos, optimized description and distribution on the right platforms to attract the right buyers." },
+  { name: "Manage showings and offers", text: "Organize showings strategically and evaluate each offer based on your goals — price, conditions and timelines." },
+  { name: "Negotiate and accept an offer", text: "Protect your price with a solid negotiation strategy and accept the offer that matches your criteria." },
+  { name: "Finalize the sale at the notary", text: "The notary prepares the deed of sale and manages the property transfer. The transaction is finalized." },
+];
 
 const topics = [
   "How to set the right selling price in Gatineau",
@@ -39,6 +49,7 @@ const related = [
 
 const SellerGuidePageEn = () => (
   <>
+    <HowToJsonLd name="How to sell a property in Gatineau" description="Step-by-step guide to selling your property in Gatineau — pricing, preparation, marketing and negotiation." steps={sellerSteps} totalTime="P60D" />
     <PageMeta title="Seller Guide — Selling in Gatineau" description="Complete guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the best price, with confidence and without bad surprises." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 

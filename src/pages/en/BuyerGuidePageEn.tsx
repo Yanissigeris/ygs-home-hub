@@ -12,7 +12,17 @@ import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-buyer-guide.webp";
+
+const buyerSteps = [
+  { name: "Define your budget and buying capacity", text: "Analyze your down payment (minimum 5%), borrowing capacity and available programs in Québec." },
+  { name: "Choose the right neighborhood in Gatineau", text: "Compare Aylmer, Hull, Plateau, Buckingham and other areas based on budget, commute and lifestyle." },
+  { name: "Search and visit properties", text: "Identify properties matching your criteria and visit them with a broker who knows the local market." },
+  { name: "Make a strong offer", text: "Draft a competitive promise to purchase with the right conditions — inspection, financing and timelines." },
+  { name: "Complete the pre-purchase inspection", text: "Have the property inspected by a professional to identify potential issues before finalizing." },
+  { name: "Finalize at the notary", text: "The notary verifies titles, prepares documents and finalizes the transaction. Expect approximately $1,500 in fees." },
+];
 
 const topics = [
   "Understanding the buying process in Québec",
@@ -37,6 +47,7 @@ const related = [
 
 const BuyerGuidePageEn = () => (
   <>
+    <HowToJsonLd name="How to buy a property in Gatineau" description="Step-by-step guide to buying a property in Gatineau and Outaouais — budget, search, offer, inspection and notary." steps={buyerSteps} totalTime="P90D" />
     <PageMeta title="Buyer Guide — Buying in Gatineau" description="Complete guide to buying a property in Gatineau. Process, budget, inspection and negotiation — everything you need to know." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection overline="Buyer Guide · Gatineau" title="Complete guide to buying in Gatineau and Outaouais" subtitle="Everything you need to know to find the right property, make a strong offer and navigate the buying process in Gatineau and across Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
