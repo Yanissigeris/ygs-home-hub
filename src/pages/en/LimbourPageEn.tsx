@@ -6,6 +6,7 @@ const LimbourPageEn = () => (
   <NeighborhoodTemplate
     seoTitle="Limbour Gatineau — Neighborhood Guide"
     metaDesc="Buy, sell or live in Limbour, Gatineau. Modern family neighborhood with parks, schools and quick access to Ottawa."
+    ogImage="https://yanisgauthier.com/og/og-limbour.jpg"
     jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour" }}
     hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood — newer homes, parks and pleasant suburban living.", image: heroImg }}
     trustSpecialty="Limbour specialist"

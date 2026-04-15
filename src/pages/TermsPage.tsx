@@ -5,6 +5,7 @@ const TermsPage = () => (
     <PageMeta
       title="Conditions d'utilisation | YGS — Yanis Gauthier-Sigeris"
       description="Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable."
+      ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />
     <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>

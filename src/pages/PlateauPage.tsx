@@ -6,6 +6,7 @@ const PlateauPage = () => (
   <NeighborhoodTemplate
     seoTitle="Plateau — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou vendre dans le Plateau à Gatineau. Maisons neuves, familles, parcs et accès rapide à Ottawa via le pont Champlain."
+    ogImage="https://yanisgauthier.com/og/og-plateau.jpg"
     jsonLd={{ name: "Plateau", description: "Courtier immobilier dans le Plateau, Gatineau. Maisons neuves, quartier familial.", lat: 45.3850, lng: -75.8000, url: "/plateau" }}
     hero={{ overline: "Guide de quartier · Plateau", title: "Vivre, acheter ou vendre dans le Plateau", subtitle: "Maisons neuves, quartier familial en plein essor et accès rapide à Ottawa — le Plateau a tout pour plaire.", image: heroImg }}
     trustSpecialty="Spécialiste Plateau et environs"

@@ -17,6 +17,7 @@ import RelatedPages from "@/components/RelatedPages";
 export interface NeighborhoodProps {
   seoTitle: string;
   metaDesc: string;
+  ogImage?: string;
   jsonLd: { name: string; description: string; lat: number; lng: number; url: string };
   hero: { overline: string; title: string; subtitle: string; image: string };
   trustSpecialty: string;
@@ -66,7 +67,7 @@ const FAQPageJsonLd = ({ items, url }: { items: { q: string; a: string }[]; url:
 
 const NeighborhoodTemplate = (p: NeighborhoodProps) => (
   <>
-    <PageMeta title={p.seoTitle} description={p.metaDesc} />
+    <PageMeta title={p.seoTitle} description={p.metaDesc} ogImage={p.ogImage} />
     <NeighborhoodJsonLd {...p.jsonLd} />
     <FAQPageJsonLd items={p.faq.items} url={p.jsonLd.url} />
     <HeroSection

@@ -5,6 +5,7 @@ const PrivacyPolicyPageEn = () => (
     <PageMeta
       title="Privacy Policy | YGS — Yanis Gauthier-Sigeris"
       description="Privacy policy for yanisgauthier.com. Compliance with Quebec's Law 25. Personal data management and cookies."
+      ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />
     <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
