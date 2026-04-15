@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -155,11 +155,11 @@ const routeTree = React.createElement(
       {/* FR routes */}
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
-      <Route path="/proprietes-vedettes" element={<PropertiesPage />} />
-      <Route path="/nouvelles-inscriptions" element={<PropertiesPage />} />
-      <Route path="/nouvelles-inscriptions-gatineau" element={<PropertiesPage />} />
-      <Route path="/vendu-recemment" element={<PropertiesPage />} />
-      <Route path="/vendues-recemment-gatineau" element={<PropertiesPage />} />
+      <Route path="/proprietes-vedettes" element={<Navigate to="/proprietes" replace />} />
+      <Route path="/nouvelles-inscriptions" element={<Navigate to="/proprietes" replace />} />
+      <Route path="/nouvelles-inscriptions-gatineau" element={<Navigate to="/proprietes" replace />} />
+      <Route path="/vendu-recemment" element={<Navigate to="/proprietes" replace />} />
+      <Route path="/vendues-recemment-gatineau" element={<Navigate to="/proprietes" replace />} />
       <Route path="/vendre-ma-maison-gatineau" element={<SellerPage />} />
       <Route path="/evaluation-gratuite-gatineau" element={<ValuationPage />} />
       <Route path="/plan-vendeur-gatineau" element={<SellerPlanPage />} />
