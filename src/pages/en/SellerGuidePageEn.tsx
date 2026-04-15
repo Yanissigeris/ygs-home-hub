@@ -12,7 +12,17 @@ import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-seller-guide.webp";
+
+const sellerSteps = [
+  { name: "Get a property valuation", text: "Have your property evaluated by a local broker to set a competitive price based on the Gatineau market." },
+  { name: "Prepare your property for sale", text: "Identify improvements that maximize your price without over-investing — cleaning, photos and staging." },
+  { name: "Market with the right strategy", text: "Professional photos, optimized description and distribution on the right platforms to attract the right buyers." },
+  { name: "Manage showings and offers", text: "Organize showings strategically and evaluate each offer based on your goals — price, conditions and timelines." },
+  { name: "Negotiate and accept an offer", text: "Protect your price with a solid negotiation strategy and accept the offer that matches your criteria." },
+  { name: "Finalize the sale at the notary", text: "The notary prepares the deed of sale and manages the property transfer. The transaction is finalized." },
+];
 
 const topics = [
   "How to set the right selling price in Gatineau",

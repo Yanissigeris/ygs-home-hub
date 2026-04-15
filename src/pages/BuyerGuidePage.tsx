@@ -12,7 +12,17 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-buyer-guide.webp";
+
+const buyerSteps = [
+  { name: "Définir son budget et sa capacité d'achat", text: "Analysez votre mise de fonds (minimum 5%), votre capacité d'emprunt et les programmes d'aide disponibles au Québec." },
+  { name: "Choisir le bon secteur à Gatineau", text: "Comparez Aylmer, Hull, le Plateau, Buckingham et d'autres quartiers selon votre budget, trajet et style de vie." },
+  { name: "Rechercher et visiter des propriétés", text: "Identifiez les propriétés qui correspondent à vos critères et visitez-les avec un courtier qui connaît le marché local." },
+  { name: "Formuler une offre solide", text: "Rédigez une promesse d'achat compétitive avec les bonnes conditions — inspection, financement et délais." },
+  { name: "Faire l'inspection pré-achat", text: "Faites inspecter la propriété par un professionnel pour identifier les problèmes potentiels avant de finaliser." },
+  { name: "Finaliser chez le notaire", text: "Le notaire vérifie les titres, prépare les documents et officialise la transaction. Prévoyez environ 1 500$ en frais." },
+];
 
 const topics = [
   "Comprendre le processus d'achat au Québec",

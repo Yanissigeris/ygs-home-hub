@@ -12,7 +12,17 @@ import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-buyer-guide.webp";
+
+const buyerSteps = [
+  { name: "Define your budget and buying capacity", text: "Analyze your down payment (minimum 5%), borrowing capacity and available programs in Québec." },
+  { name: "Choose the right neighborhood in Gatineau", text: "Compare Aylmer, Hull, Plateau, Buckingham and other areas based on budget, commute and lifestyle." },
+  { name: "Search and visit properties", text: "Identify properties matching your criteria and visit them with a broker who knows the local market." },
+  { name: "Make a strong offer", text: "Draft a competitive promise to purchase with the right conditions — inspection, financing and timelines." },
+  { name: "Complete the pre-purchase inspection", text: "Have the property inspected by a professional to identify potential issues before finalizing." },
+  { name: "Finalize at the notary", text: "The notary verifies titles, prepares documents and finalizes the transaction. Expect approximately $1,500 in fees." },
+];
 
 const topics = [
   "Understanding the buying process in Québec",

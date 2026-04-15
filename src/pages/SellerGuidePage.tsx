@@ -12,7 +12,17 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import GuideRequestForm from "@/components/GuideRequestForm";
+import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-seller-guide.webp";
+
+const sellerSteps = [
+  { name: "Obtenir une évaluation de votre propriété", text: "Faites évaluer votre propriété par un courtier local pour fixer un prix compétitif basé sur le marché de Gatineau." },
+  { name: "Préparer la propriété pour la vente", text: "Identifiez les améliorations qui maximisent votre prix sans surinvestir — nettoyage, photos et mise en valeur." },
+  { name: "Mettre en marché avec la bonne stratégie", text: "Photos professionnelles, description optimisée et diffusion sur les bonnes plateformes pour attirer les bons acheteurs." },
+  { name: "Gérer les visites et les offres", text: "Organisez les visites stratégiquement et évaluez chaque offre selon vos objectifs — prix, conditions et délais." },
+  { name: "Négocier et accepter une offre", text: "Protégez votre prix avec une stratégie de négociation solide et acceptez l'offre qui correspond à vos critères." },
+  { name: "Finaliser la vente chez le notaire", text: "Le notaire prépare l'acte de vente et gère le transfert de propriété. La transaction est officialisée." },
+];
 
 const topics = [
   "Comment fixer le bon prix de vente à Gatineau",
