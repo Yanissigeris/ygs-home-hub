@@ -123,8 +123,9 @@ const related = [
 const AylmerPage = () => (
   <>
     <PageMeta
-      title="Courtier immobilier Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
-      description="Yanis Gauthier-Sigeris, courtier immobilier spécialisé à Aylmer, Gatineau. Maisons unifamiliales, condos, secteur Plateau. Évaluation gratuite, connaissance locale approfondie." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
+  title="Courtier immobilier Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
+  description="Yanis Gauthier-Sigeris, courtier immobilier spécialisé à Aylmer, Gatineau. Maisons unifamiliales, condos, plex. Évaluation gratuite, connaissance locale approfondie."
+  ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
       description="Courtier immobilier spécialisé à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles et communauté."
