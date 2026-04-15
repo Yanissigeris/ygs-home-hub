@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
