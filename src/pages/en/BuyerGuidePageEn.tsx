@@ -47,6 +47,7 @@ const related = [
 
 const BuyerGuidePageEn = () => (
   <>
+    <HowToJsonLd name="How to buy a property in Gatineau" description="Step-by-step guide to buying a property in Gatineau and Outaouais — budget, search, offer, inspection and notary." steps={buyerSteps} totalTime="P90D" />
     <PageMeta title="Buyer Guide — Buying in Gatineau" description="Complete guide to buying a property in Gatineau. Process, budget, inspection and negotiation — everything you need to know." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection overline="Buyer Guide · Gatineau" title="Complete guide to buying in Gatineau and Outaouais" subtitle="Everything you need to know to find the right property, make a strong offer and navigate the buying process in Gatineau and across Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />

@@ -49,6 +49,7 @@ const related = [
 
 const SellerGuidePage = () => (
    <>
+    <HowToJsonLd name="Comment vendre une propriété à Gatineau" description="Guide étape par étape pour vendre votre propriété à Gatineau — prix, préparation, mise en marché et négociation." steps={sellerSteps} totalTime="P60D" />
     <PageMeta title="Guide vendeur — Vendre à Gatineau" description="Guide complet pour vendre votre propriété à Gatineau. Prix, préparation, mise en marché et négociation par un courtier local." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <HeroSection
       overline="Guide vendeur · Gatineau"
