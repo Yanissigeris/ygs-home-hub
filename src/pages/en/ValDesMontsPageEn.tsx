@@ -6,6 +6,7 @@ const ValDesMontsPageEn = () => (
   <NeighborhoodTemplate
     seoTitle="Val-des-Monts QC — Neighborhood Guide"
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness — 30 minutes from Gatineau."
+    ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts" }}
     hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, forests and tranquility — the Outaouais' cottage country paradise.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"

@@ -6,6 +6,7 @@ const CoteDazurPageEn = () => (
   <NeighborhoodTemplate
     seoTitle="Côte-d'Azur Gatineau — Neighborhood Guide"
     metaDesc="Buy, sell or live in Côte-d'Azur, Gatineau. Established residential area with bungalows, mature trees and quick access to Ottawa."
+    ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Real estate broker in Côte-d'Azur, Gatineau. Established residential neighborhood.", lat: 45.4700, lng: -75.7000, url: "/en/cote-dazur" }}
     hero={{ overline: "Neighborhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Established residential neighborhood — bungalows, mature trees and quiet suburban living.", image: heroImg }}
     trustSpecialty="Côte-d'Azur specialist"

@@ -6,6 +6,7 @@ const CoteDazurPage = () => (
   <NeighborhoodTemplate
     seoTitle="Côte-d'Azur Gatineau — Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial, bungalows, proximité services et accès Ottawa."
+    ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Courtier immobilier dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial.", lat: 45.4700, lng: -75.7000, url: "/cote-dazur-gatineau" }}
     hero={{ overline: "Guide de quartier · Côte-d'Azur", title: "Vivre, acheter ou vendre à Côte-d'Azur", subtitle: "Quartier résidentiel établi de Gatineau — bungalows, arbres matures et vie de quartier tranquille.", image: heroImg }}
     trustSpecialty="Spécialiste Côte-d'Azur et environs"
