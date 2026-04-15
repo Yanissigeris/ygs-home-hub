@@ -120,7 +120,7 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
 
   React.useEffect(() => {
     /* ── Title ── */
-    document.title = `${title} | ${SITE}`;
+    document.title = title;
 
     /* ── html lang attribute ── */
     const isEn = pathname.startsWith("/en");
