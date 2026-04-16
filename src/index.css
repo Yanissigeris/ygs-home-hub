@@ -371,6 +371,15 @@
     font-size: clamp(2.4rem, 9.5vw, 3.2rem) !important;
     line-height: 1.1;
   }
+
+  /* Footer tap targets mobile */
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 }
 
 /* WhatsApp pulse */
