@@ -242,7 +242,7 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="object-contain transition-all duration-300" style={{ height: scrolled ? 44 : 52, width: "auto", filter: logoFilter }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain transition-all duration-300" style={{ height: scrolled ? 44 : 52, width: "auto", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
@@ -301,7 +301,7 @@ const SiteHeader = () => {
       {/* ─── Mobile (<640px) — logo left, hamburger center-right, CTA right ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0 transition-all duration-300" style={{ filter: logoFilter }} />
+          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0 transition-all duration-300" style={{ filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <LanguageSwitch transparent={transparent} />
