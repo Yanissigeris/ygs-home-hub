@@ -276,7 +276,7 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Tablet (sm–lg) ─── */}
-      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
+      <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain transition-all duration-300" style={{ height: scrolled ? 40 : 48, width: "auto", filter: logoFilter }} />
         </Link>
