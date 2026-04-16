@@ -220,7 +220,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     /* Full homepage hero — 2-column layout */
     return (
       <section ref={combinedRef} data-hero-dark className="relative overflow-hidden" style={{ background: "var(--ink)" }}>
-        <div className="grid min-h-[88svh] md:min-h-[100svh] lg:grid-cols-[40%_60%]">
+        <div className="grid min-h-[auto] sm:min-h-[88svh] md:min-h-[100svh] lg:grid-cols-[40%_60%]">
           {/* ─── LEFT COLUMN ─── */}
           <div
             className="relative flex flex-col justify-center"
@@ -278,9 +278,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Link>
                   )}
                   {secondaryCta && (
-                    <Link
-                      to={secondaryCta.href}
-                      className="inline-flex items-center justify-center font-medium transition-all duration-300 hover:border-white/50 hover:text-white w-full sm:w-auto text-center"
+                      <Link to={secondaryCta.href}
+                      className="hidden sm:inline-flex items-center justify-center font-medium transition-all duration-300 hover:border-white/50 hover:text-white w-full sm:w-auto text-center"
                       style={{ color: "rgba(255,255,255,.8)", border: "1.5px solid rgba(255,255,255,.25)", borderRadius: "999px", padding: ".85rem 1.5rem", fontSize: ".85rem", transition: "all .2s ease" }}
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
