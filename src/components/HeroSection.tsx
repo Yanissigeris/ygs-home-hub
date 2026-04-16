@@ -253,9 +253,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
               >
                 {lang === "fr" ? (
-                  <>Votre courtier immobilier à <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</>
+                  <>
+                    <span className="sm:hidden">Courtier immobilier à <span style={{ color: "var(--gold)" }}>Gatineau</span></span>
+                    <span className="hidden sm:inline">Votre courtier immobilier à <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</span>
+                  </>
                 ) : (
-                  <>Your real estate broker in <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</>
+                  <>
+                    <span className="sm:hidden">Real estate broker in <span style={{ color: "var(--gold)" }}>Gatineau</span></span>
+                    <span className="hidden sm:inline">Your real estate broker in <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</span>
+                  </>
                 )}
               </h1>
 
