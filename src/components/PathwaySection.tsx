@@ -139,7 +139,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 }}
               >
                 {/* Image */}
-                <div className="relative overflow-hidden aspect-[3/2] md:aspect-[16/9] img-shimmer">
+                <div className="relative overflow-hidden aspect-[16/9] img-shimmer">
                   <img
                     src={p.image}
                     alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
