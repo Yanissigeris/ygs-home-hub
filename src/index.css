@@ -287,7 +287,14 @@
     opacity: 1;
     transform: translateX(0);
   }
-  
+  /* Fallback — bots & prefers-reduced-motion voient tout immédiatement */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-left, .reveal-right {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
   .d1 { transition-delay: .1s; }
   .d2 { transition-delay: .2s; }
   .d3 { transition-delay: .25s; }
