@@ -10,32 +10,37 @@ import cardPlexSm from "@/assets/card-plex-sm.webp";
 
 const audienceCards = [
   {
-    title: "Vendre",
-    text: "Connaître la valeur de votre propriété, planifier le bon timing et obtenir le meilleur prix.",
-    cta: "Voir le plan vendeur",
-    href: "/vendre-ma-maison-gatineau",
-    image: cardVendreImg,
-    imageSm: cardVendreSm,
-    imageAlt: "Vendre une maison à Gatineau — intérieur résidentiel lumineux",
-    featured: true,
-  },
-  {
-    title: "Acheter",
-    text: "Trouver le bon secteur, éviter les erreurs coûteuses et acheter avec confiance.",
-    cta: "Acheter à Gatineau",
-    href: "/acheter-a-gatineau",
-    image: cardAcheterImg,
-    imageSm: cardAcheterSm,
-    imageAlt: "Acheter une propriété à Gatineau — quartier résidentiel",
-  },
-  {
-    title: "Plex / investissement",
-    text: "Analyser la valeur, le rendement et la stratégie avant de prendre une décision.",
-    cta: "Voir la page plex",
+    title: "Plex & Investissement",
+    text: "Analyser le rendement réel, cibler les bons deals et investir avec des chiffres solides en main.",
+    cta: "Calculer mon rendement",
     href: "/investir-plex-gatineau",
     image: cardPlexImg,
     imageSm: cardPlexSm,
     imageAlt: "Investir dans un plex à Gatineau — immeuble multilogement",
+    badge: "Investisseurs",
+    featured: true,
+  },
+  {
+    title: "Vendre",
+    text: "Connaître la vraie valeur de votre propriété, vendre au bon moment et maximiser votre profit net.",
+    cta: "Estimer ma propriété",
+    href: "/vendre-ma-maison-gatineau",
+    image: cardVendreImg,
+    imageSm: cardVendreSm,
+    imageAlt: "Vendre une maison à Gatineau — intérieur résidentiel lumineux",
+    badge: null,
+    featured: false,
+  },
+  {
+    title: "Acheter",
+    text: "Trouver le bon secteur, éviter les erreurs coûteuses et acheter avec confiance à Gatineau.",
+    cta: "Voir les propriétés",
+    href: "/acheter-a-gatineau",
+    image: cardAcheterImg,
+    imageSm: cardAcheterSm,
+    imageAlt: "Acheter une propriété à Gatineau — quartier résidentiel",
+    badge: null,
+    featured: false,
   },
 ];
 
@@ -46,19 +51,20 @@ const AudienceCards = () => (
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="label-overline mb-3">À votre service</p>
         <h2>Que cherchez-vous?</h2>
       </motion.div>
+
       <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
         {audienceCards.map((card, i) => (
           <motion.div
             key={card.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link
@@ -81,17 +87,22 @@ const AudienceCards = () => (
                   width={648}
                   height={441}
                 />
-                {card.featured && (
+                {card.badge && (
                   <span className="absolute top-3.5 left-3.5 rounded-full bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">
-                    Populaire
+                    {card.badge}
                   </span>
                 )}
               </div>
               <div className="flex flex-1 flex-col p-6 sm:p-7">
-                <h3 className="text-[1.125rem] group-hover:text-primary transition-colors">{card.title}</h3>
-                <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.6] text-muted-foreground">{card.text}</p>
+                <h3 className="text-[1.125rem] group-hover:text-primary transition-colors">
+                  {card.title}
+                </h3>
+                <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.6] text-muted-foreground">
+                  {card.text}
+                </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-primary">
-                  {card.cta} <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                  {card.cta}
+                  <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
             </Link>
