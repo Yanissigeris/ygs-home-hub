@@ -139,6 +139,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
 
           {/* Mobile: horizontal scroll */}
           <div
+            aria-hidden="true"
             className="flex md:hidden overflow-x-auto overflow-y-hidden"
             style={{
               scrollSnapType: "x mandatory",
