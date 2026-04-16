@@ -12,8 +12,6 @@ interface TestimonialGridProps {
 
 const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => (
   <div
-    itemScope
-    itemType="https://schema.org/Review"
     className="flex h-full flex-col transition-all duration-300"
     style={{
       border: "1px solid var(--border)",
@@ -33,7 +31,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
 
     {/* Quote */}
     <blockquote className="flex-1 mt-2">
-      <p itemProp="reviewBody" style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "var(--muted)", lineHeight: 1.8 }}>
+      <p style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "var(--muted)", lineHeight: 1.8 }}>
         {review.short}
       </p>
     </blockquote>
@@ -48,7 +46,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
         {review.name.split(/[\s.]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("")}
       </span>
       <div>
-        <p itemProp="author" style={{ fontSize: ".85rem", fontWeight: 600, color: "var(--ink)" }}>{review.name}</p>
+        <p style={{ fontSize: ".85rem", fontWeight: 600, color: "var(--ink)" }}>{review.name}</p>
         {review.location && (
           <p style={{ fontSize: ".75rem", color: "var(--muted)", marginTop: 2 }}>{review.location}</p>
         )}
