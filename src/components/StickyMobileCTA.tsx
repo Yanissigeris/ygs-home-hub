@@ -29,7 +29,7 @@ const StickyMobileCTA = () => {
       if (ticking.current) return;
       ticking.current = true;
       requestAnimationFrame(() => {
-        const heroThreshold = window.innerHeight * 0.9;
+        const heroThreshold = window.innerHeight * 0.55;
         const footer = document.querySelector("footer");
         let footerVisible = false;
         if (footer) {
@@ -67,9 +67,10 @@ const StickyMobileCTA = () => {
           style={{
             background: "var(--gold)",
             borderRadius: "3px",
-            padding: ".7rem 1rem",
+            padding: ".85rem 1rem",
             fontSize: ".85rem",
             fontWeight: 600,
+            minHeight: "48px",
           }}
         >
           {ctaLabel}
@@ -82,8 +83,9 @@ const StickyMobileCTA = () => {
             border: "1px solid rgba(255,255,255,.25)",
             color: "rgba(255,255,255,.85)",
             borderRadius: "3px",
-            padding: ".7rem .75rem",
+            padding: ".85rem .75rem",
             fontSize: ".82rem",
+            minHeight: "48px",
             fontWeight: 500,
           }}
         >
