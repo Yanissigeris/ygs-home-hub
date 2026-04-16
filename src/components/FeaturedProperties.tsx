@@ -38,8 +38,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
       href={p.remaxUrl}
       target="_blank"
       rel="noopener noreferrer"
-      itemScope
-      itemType="https://schema.org/Product"
+      
       className="group flex flex-col h-full"
       style={{ background: "#fff", borderRadius: 3, overflow: "hidden" }}
     >
@@ -48,7 +47,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
         <img
           src={p.image}
           alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
-          itemProp="image"
+          
           className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
           loading="lazy"
           decoding="async"
@@ -70,7 +69,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
         </p>
 
         {/* Price */}
-        <p itemProp="name" style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 700, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
+        <p style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 700, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
           {p.price}
         </p>
 
