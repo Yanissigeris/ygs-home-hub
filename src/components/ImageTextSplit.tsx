@@ -36,6 +36,8 @@ const ImageTextSplit = ({
             alt={imageAlt}
             className={`rounded-[1.75rem] object-cover ${imageAspect} w-full`}
             fallbackColor="var(--ink)"
+            width={648}
+            height={486}
           />
         )}
       </motion.div>
@@ -52,6 +54,8 @@ const ImageTextSplit = ({
             alt={imageAlt}
             className={`rounded-[1.75rem] object-cover ${imageAspect} w-full`}
             fallbackColor="var(--ink)"
+            width={648}
+            height={486}
           />
         ) : (
           children

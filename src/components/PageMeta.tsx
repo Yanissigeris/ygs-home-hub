@@ -29,7 +29,7 @@ const frToEn: Record<string, string> = {
   "/acheter-a-gatineau-depuis-ottawa": "/en/buy-from-ottawa",
   "/relocalisation-ottawa-gatineau": "/en/relocation",
   "/relocalisation-montreal-gatineau": "/en/montreal-relocation",
-  "/guide-relocalisation-gatineau": "/en/relocation-guide","/guide-acheteur-gatineau": "/en/buyer-guide",
+  "/guide-relocalisation-gatineau": "/en/relocation-guide",
   "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
   "/militaire-gatineau": "/en/military",
   "/relocalisation-militaire-gatineau": "/en/military-relocation",

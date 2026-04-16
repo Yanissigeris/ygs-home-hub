@@ -19,6 +19,7 @@ import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import InstagramGrid from "@/components/InstagramGrid";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
+import LazySection from "@/components/LazySection";
 
 import { getReviewsById } from "@/data/reviews";
 const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
@@ -78,7 +79,9 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       linkLabel="Voir toutes les questions"
     />
 
-    <InstagramGrid />
+    <LazySection minHeight={300} rootMargin="300px">
+      <InstagramGrid />
+    </LazySection>
 
     <CTASection
       dark
