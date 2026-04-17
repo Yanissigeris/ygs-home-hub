@@ -48,7 +48,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
           src={p.image}
           alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
           
-          className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"
           decoding="async"
           width={648}
