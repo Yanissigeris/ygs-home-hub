@@ -91,8 +91,8 @@ async function auditRoute(route, meta) {
   else if (descCount > 1) errors.push(`[${route}] duplicate description (${descCount})`);
 
   const descMatch =
-    html.match(/name=["']description["']\s+content="([^"]*)"/) ||
-    html.match(/name=["']description["']\s+content='([^']*)'/);
+    html.match(/<meta[^>]*\sname="description"[^>]*\scontent="([^"]*)"/) ||
+    html.match(/<meta[^>]*\scontent="([^"]*)"[^>]*\sname="description"/);
   if (descMatch) {
     const desc = decodeEntities(descMatch[1]);
     if (norm(desc) !== norm(meta.description)) {
