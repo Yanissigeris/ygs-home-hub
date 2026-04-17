@@ -87,9 +87,17 @@ async function renderRoute(browser, route) {
     }
   });
 
-  // Quiet console noise from the page (we don't care about app logs here).
-  page.on("pageerror", () => {});
-  page.on("console", () => {});
+  // Capture page errors and console messages for debugging.
+  page.on("pageerror", (err) => console.log(`[pageerror ${route}]`, err.message));
+  page.on("console", (msg) => {
+    const t = msg.type();
+    if (t === "error" || t === "warning") {
+      console.log(`[console.${t} ${route}]`, msg.text());
+    }
+  });
+  page.on("requestfailed", (req) => {
+    console.log(`[reqfail ${route}]`, req.url(), req.failure()?.errorText);
+  });
 
   const url = `http://127.0.0.1:${PORT}${route}`;
   try {
