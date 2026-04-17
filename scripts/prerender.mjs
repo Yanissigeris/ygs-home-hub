@@ -104,13 +104,65 @@ const escapeHtml = (s) =>
  * The browser uses the LAST matching tag, so appending wins for canonical
  * and meta. For <title>, we string-replace the existing one.
  */
+/**
+ * Map a route to a category-specific OG image.
+ * Used as fallback when SEO_ROUTES doesn't specify an explicit ogImage.
+ * Order matters: more specific patterns first.
+ */
+function categoryOgImage(route) {
+  const r = route.toLowerCase();
+
+  // Blog
+  if (/^\/(en\/)?(blogue|blog)(\/|$)/.test(r)) return `${SITE_URL}/og/og-blog.jpg`;
+
+  // Military (specific subset of sellers/buyers — match before generic)
+  if (/militaire|military/.test(r)) return `${SITE_URL}/og/og-military.jpg`;
+
+  // Plex / investment
+  if (/plex/.test(r)) return `${SITE_URL}/og/og-plex.jpg`;
+
+  // Valuation / evaluation
+  if (/evaluation|home-valuation|valuation/.test(r)) return `${SITE_URL}/og/og-eval.jpg`;
+
+  // Market report
+  if (/rapport-marche|market-report/.test(r)) return `${SITE_URL}/og/og-market.jpg`;
+
+  // Sellers (vendre, sell, seller-*, plan-vendeur, when-to-sell, guide-vendeur)
+  if (/vendre|^\/(en\/)?sell|seller|plan-vendeur|when-to-sell|guide-vendeur/.test(r))
+    return `${SITE_URL}/og/og-seller.jpg`;
+
+  // Buyers (acheter, buy, buyer-*, premier-achat, first-time-buyer, consultation-acheteur)
+  if (/acheter|^\/(en\/)?buy|buyer|premier-achat|first-time-buyer|consultation-acheteur|relocalisation|relocation|montreal/.test(r))
+    return `${SITE_URL}/og/og-buyer.jpg`;
+
+  // Neighborhoods (specific neighborhood pages + overview + living-*)
+  if (
+    /quartiers|neighborhoods|aylmer|hull|plateau|chelsea|cantley|val-des-monts|masson-angers|pontiac|cote-dazur|limbour|buckingham|gatineau|vivre-a-|living-/.test(
+      r,
+    )
+  )
+    return `${SITE_URL}/og/og-neighborhoods.jpg`;
+
+  // Guides / resources / FAQ / how-to-choose / commission etc.
+  if (/guide|ressources|resources|faq|courtier|realtor|frais-de-courtage|oaciq/.test(r))
+    return `${SITE_URL}/og/og-guides.jpg`;
+
+  // Testimonials
+  if (/temoignages|testimonials/.test(r)) return `${SITE_URL}/og/og-testimonials.jpg`;
+
+  // Home
+  if (r === "/" || r === "/en") return `${SITE_URL}/og/og-home.jpg`;
+
+  return DEFAULT_OG;
+}
+
 function buildHtmlForRoute(shell, route, meta) {
   const isEn = route.startsWith("/en");
   const lang = isEn ? "en" : "fr";
   const locale = isEn ? "en_CA" : "fr_CA";
   const altLocale = isEn ? "fr_CA" : "en_CA";
   const canonical = `${SITE_URL}${route}`;
-  const ogImage = meta.ogImage || DEFAULT_OG;
+  const ogImage = meta.ogImage || categoryOgImage(route);
 
   // Compute alt-language URLs
   const frPath = isEn ? enToFr[route] : route;
