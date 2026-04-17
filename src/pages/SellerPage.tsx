@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { Link } from "react-router-dom";
 import SectorLinks from "@/components/SectorLinks";
@@ -62,6 +63,13 @@ const faq = [
 
 const SellerPage = () =>
 <>
+    <SEO
+      title="Vendre sa maison à Gatineau | Courtier YGS"
+      description="Vendez votre maison à Gatineau avec Yanis Gauthier-Sigeris. Évaluation gratuite, stratégie de prix, mise en marché complète. 9 ans d'expérience."
+      canonical="https://yanisgauthier.com/vendre-ma-maison-gatineau"
+      hreflangFr="https://yanisgauthier.com/vendre-ma-maison-gatineau"
+      hreflangEn="https://yanisgauthier.com/en/sell"
+    />
     <PageMeta title="Vendre sa maison à Gatineau · Outaouais" description="Vendez votre propriété à Gatineau au meilleur prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais — évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau" serviceType="Real Estate Listing Service" />
     <HeroSection

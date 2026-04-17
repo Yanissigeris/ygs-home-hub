@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
@@ -74,6 +75,13 @@ const ValuationPage = () => {
 
   return (
     <>
+      <SEO
+        title="Évaluation gratuite de maison à Gatineau | YGS"
+        description="Obtenez une évaluation gratuite de votre propriété à Gatineau. Basée sur les comparables réels de votre secteur. Sans engagement."
+        canonical="https://yanisgauthier.com/evaluation-gratuite-gatineau"
+        hreflangFr="https://yanisgauthier.com/evaluation-gratuite-gatineau"
+        hreflangEn="https://yanisgauthier.com/en/home-valuation"
+      />
       <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
     <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau" serviceType="Real Estate Appraisal Service" />
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import ReviewSection from "@/components/ReviewSection";
@@ -67,6 +68,13 @@ const faq = [
 
 const PlexPage = () => (
    <>
+    <SEO
+      title="Investir dans un plex à Gatineau | YGS Immobilier"
+      description="Achetez un duplex ou triplex à Gatineau avec un courtier spécialisé. Analyse de rentabilité, marché locatif Outaouais, accompagnement complet."
+      canonical="https://yanisgauthier.com/investir-plex-gatineau"
+      hreflangFr="https://yanisgauthier.com/investir-plex-gatineau"
+      hreflangEn="https://yanisgauthier.com/en/plex"
+    />
     <PageMeta title="Investir dans un plex à Gatineau · Outaouais" description="Duplex, triplex et immeubles à revenus à Gatineau. Analyse de rendement et stratégie d'investissement par un courtier spécialisé." ogImage="https://yanisgauthier.com/og/og-plex.jpg" />
     <ServiceJsonLd name="Analyse et investissement plex à Gatineau" description="Service d'analyse et d'accompagnement pour l'achat, la vente ou l'évaluation de plex et immeubles à revenus à Gatineau et en Outaouais." url="/investir-plex-gatineau" serviceType="Real Estate Investment Analysis" />
     <HeroSection
