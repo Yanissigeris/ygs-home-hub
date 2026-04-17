@@ -236,15 +236,154 @@ async function main() {
     })
     .join("\n");
 
+  /* ── Blog posts (dynamic /blogue/:slug + /en/blog/:slug) ──
+   * Parsed from src/data/blog-posts.ts and blog-posts-neighborhoods.ts
+   * via regex (avoids needing to execute TS w/ asset imports).
+   * Only objects with `published: true` are included.
+   */
+  const blogPosts = await extractBlogPosts();
+
+  const blogEntries = blogPosts
+    .map(({ slug, slugEn, publishDate }) => {
+      const frUrl = `${SITE_URL}/blogue/${slug}`;
+      const enUrl = `${SITE_URL}/en/blog/${slugEn}`;
+      const lastmod = publishDate || today;
+
+      const frEntry = `  <url>
+    <loc>${xmlEscape(frUrl)}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(frUrl)}" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(enUrl)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />
+  </url>`;
+
+      const enEntry = `  <url>
+    <loc>${xmlEscape(enUrl)}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(frUrl)}" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(enUrl)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />
+  </url>`;
+
+      return `${frEntry}\n${enEntry}`;
+    })
+    .join("\n");
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlEntries}
+${blogEntries}
 </urlset>
 `;
 
   await fs.writeFile(path.join(DIST, "sitemap.xml"), sitemap, "utf8");
-  console.log(`✅ Sitemap: wrote ${urls.length} URLs to dist/sitemap.xml`);
+  console.log(
+    `✅ Sitemap: wrote ${urls.length} static + ${blogPosts.length * 2} blog URLs (${
+      urls.length + blogPosts.length * 2
+    } total) to dist/sitemap.xml`,
+  );
+}
+
+/**
+ * Extract published blog posts from the TS data files via regex.
+ * Returns: [{ slug, slugEn, publishDate }]
+ */
+async function extractBlogPosts() {
+  const files = [
+    path.resolve(__dirname, "..", "src/data/blog-posts.ts"),
+    path.resolve(__dirname, "..", "src/data/blog-posts-neighborhoods.ts"),
+  ];
+
+  const posts = [];
+  for (const file of files) {
+    let src;
+    try {
+      src = await fs.readFile(file, "utf8");
+    } catch {
+      continue;
+    }
+
+    // Split on object boundaries: each blog post is a `{ ... },` block.
+    // We match each object that has `slug:`, `slugEn:`, `published: true`.
+    const objectRegex = /\{[^{}]*?slug:\s*["']([^"']+)["'][^{}]*?slugEn:\s*["']([^"']+)["'][^{}]*?published:\s*(true|false)[^{}]*?publishDate:\s*["']([^"']+)["']/gs;
+    // Note: `body` and `bodyEn` are template strings that may contain { and },
+    // so the simple [^{}] pattern won't match the full object. We need a smarter
+    // approach: scan the file with a brace-counting tokenizer per top-level object.
+    void objectRegex;
+
+    const objects = splitTopLevelObjects(src);
+    for (const obj of objects) {
+      const slug = matchField(obj, "slug");
+      const slugEn = matchField(obj, "slugEn");
+      const published = /published:\s*true\b/.test(obj);
+      const publishDate = matchField(obj, "publishDate");
+      if (slug && slugEn && published) {
+        posts.push({ slug, slugEn, publishDate });
+      }
+    }
+  }
+  return posts;
+}
+
+/**
+ * Tokenize a TS source into top-level object literals (those nested inside
+ * the `BlogPost[]` array). Tracks brace depth and string/backtick state to
+ * skip over template literals containing { and }.
+ */
+function splitTopLevelObjects(src) {
+  // Find the opening of the `[` containing blog objects.
+  const arrayStart = src.indexOf("[");
+  if (arrayStart < 0) return [];
+
+  const objects = [];
+  let depth = 0;
+  let inStr = null; // null | '"' | "'" | '`'
+  let escape = false;
+  let objStart = -1;
+
+  for (let i = arrayStart; i < src.length; i++) {
+    const c = src[i];
+
+    if (escape) {
+      escape = false;
+      continue;
+    }
+    if (inStr) {
+      if (c === "\\") {
+        escape = true;
+      } else if (c === inStr) {
+        inStr = null;
+      }
+      continue;
+    }
+    if (c === '"' || c === "'" || c === "`") {
+      inStr = c;
+      continue;
+    }
+    if (c === "{") {
+      if (depth === 0) objStart = i;
+      depth++;
+    } else if (c === "}") {
+      depth--;
+      if (depth === 0 && objStart >= 0) {
+        objects.push(src.slice(objStart, i + 1));
+        objStart = -1;
+      }
+    }
+  }
+
+  return objects;
+}
+
+function matchField(obj, name) {
+  const re = new RegExp(`(?:^|[\\s,{])${name}:\\s*["']([^"']+)["']`);
+  const m = obj.match(re);
+  return m ? m[1] : null;
 }
 
 main().catch((err) => {
