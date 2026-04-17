@@ -90,7 +90,9 @@ async function auditRoute(route, meta) {
   if (descCount === 0) errors.push(`[${route}] missing <meta name="description">`);
   else if (descCount > 1) errors.push(`[${route}] duplicate description (${descCount})`);
 
-  const descMatch = html.match(/name=["']description["']\s+content=["']([^"']*)["']/);
+  const descMatch =
+    html.match(/name=["']description["']\s+content="([^"]*)"/) ||
+    html.match(/name=["']description["']\s+content='([^']*)'/);
   if (descMatch) {
     const desc = decodeEntities(descMatch[1]);
     if (norm(desc) !== norm(meta.description)) {
@@ -104,7 +106,7 @@ async function auditRoute(route, meta) {
   if (canonCount === 0) errors.push(`[${route}] missing canonical`);
   else if (canonCount > 1) errors.push(`[${route}] duplicate canonical (${canonCount})`);
 
-  const canonMatch = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/);
+  const canonMatch = html.match(/<link[^>]+rel=["']canonical["'][^>]+href="([^"]+)"/);
   if (canonMatch && !canonMatch[1].startsWith(SITE_URL)) {
     errors.push(`[${route}] canonical does not start with ${SITE_URL}`);
   }
