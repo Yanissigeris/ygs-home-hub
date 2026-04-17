@@ -31,8 +31,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 
 const PORT = 4173;
-const CONCURRENCY = 4;
-const NAV_TIMEOUT = 25_000;
+const CONCURRENCY = 2;
+const NAV_TIMEOUT = 45_000;
 
 /** Replace the (empty) <div id="root"></div> of a static file with rendered HTML. */
 async function injectRootHtml(filePath, rootInnerHtml) {
@@ -106,23 +106,24 @@ async function renderRoute(browser, route) {
     await page.goto(url, { waitUntil: "networkidle0", timeout: NAV_TIMEOUT });
 
     // Wait for a real content element (header / main / h1) to be present.
-    // This guards against snapshotting before lazy() chunks resolve.
+    // The BrandedLoader sets position:fixed with z-index 99999 and is the only
+    // child until React mounts the routed page. Wait until #root has more than
+    // just that loader OR contains a <main>/<header>/<h1>.
     await page.waitForFunction(
       () => {
         const r = document.getElementById("root");
-        if (!r || r.children.length === 0) return false;
-        // Reject the loader-only state.
-        if (r.querySelector('[aria-hidden="true"]') && r.children.length === 1) return false;
-        // Accept once we see substantive content.
-        return !!(
-          r.querySelector("main") ||
-          r.querySelector("h1") ||
-          r.querySelector("header") ||
-          r.innerHTML.length > 2000
-        );
+        if (!r) return false;
+        if (r.querySelector("main") || r.querySelector("header") || r.querySelector("h1")) {
+          return true;
+        }
+        // Fallback: substantive HTML beyond the splash loader (~500 chars)
+        return r.innerHTML.length > 3000;
       },
-      { timeout: NAV_TIMEOUT },
+      { timeout: NAV_TIMEOUT, polling: 200 },
     );
+
+    // Give lazy-loaded sections (LazySection, framer-motion, etc.) one more tick.
+    await new Promise((r) => setTimeout(r, 300));
 
     const rootHtml = await page.evaluate(() => {
       const r = document.getElementById("root");
