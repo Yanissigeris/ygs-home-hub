@@ -143,7 +143,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   <img
                     src={p.image}
                     alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
-                    className="h-full w-full object-cover transition-transform duration-[600ms] group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width={648}

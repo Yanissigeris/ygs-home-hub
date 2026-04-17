@@ -48,7 +48,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
           src={p.image}
           alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
           
-          className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"
           decoding="async"
           width={648}
@@ -59,7 +59,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
       </div>
 
       {/* Gold top border — hover only */}
-      <div className="h-px transition-colors duration-[250ms] ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
