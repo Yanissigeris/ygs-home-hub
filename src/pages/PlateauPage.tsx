@@ -1,9 +1,12 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
+import SEO from "@/components/SEO";
 import { Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
 
 const PlateauPage = () => (
-  <NeighborhoodTemplate
+  <>
+    <SEO title="Courtier immobilier Plateau Gatineau | YGS" description="Achetez ou vendez dans le Plateau à Gatineau. Quartier familial calme, accès autoroute 50." canonical="https://yanisgauthier.com/plateau" hreflangFr="https://yanisgauthier.com/plateau" hreflangEn="https://yanisgauthier.com/en/plateau" />
+    <NeighborhoodTemplate
     seoTitle="Plateau — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou vendre dans le Plateau à Gatineau. Maisons neuves, familles, parcs et accès rapide à Ottawa via le pont Champlain."
     ogImage="https://yanisgauthier.com/og/og-plateau.jpg"
@@ -56,7 +59,8 @@ const PlateauPage = () => (
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter dans le Plateau", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
     cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Je connais le Plateau par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
-  />
+    />
+  </>
 );
 
 export default PlateauPage;

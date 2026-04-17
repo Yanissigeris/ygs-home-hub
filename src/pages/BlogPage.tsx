@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
@@ -20,6 +21,7 @@ const BlogPage = () => {
 
   return (
     <>
+      <SEO title="Blogue immobilier Gatineau | Conseils YGS" description="Conseils immobiliers pour Gatineau et l'Outaouais. Marché, vente, achat, investissement plex, relocalisation." canonical="https://yanisgauthier.com/blogue" hreflangFr="https://yanisgauthier.com/blogue" hreflangEn="https://yanisgauthier.com/en/blog" />
       <PageMeta
         title="Blogue immobilier Gatineau · Conseils et analyses"
         description="Articles, analyses et conseils immobiliers pour Gatineau et l'Outaouais. Vendeurs, acheteurs, investisseurs — par Yanis Gauthier-Sigeris, courtier immobilier."

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -58,6 +59,7 @@ const related = [
 
 const CantleyPage = () => (
   <>
+    <SEO title="Courtier immobilier Cantley Outaouais | YGS" description="Achetez ou vendez à Cantley. Grands terrains, nature à 20 min de Gatineau." canonical="https://yanisgauthier.com/cantley" hreflangFr="https://yanisgauthier.com/cantley" hreflangEn="https://yanisgauthier.com/en/cantley" />
     <PageMeta
       title="Courtier immobilier Cantley Outaouais | Familles & grands terrains | YGS"
       description="Achetez ou vendez à Cantley, Outaouais. Grands terrains, famille, nature. Près de 9 ans d'expérience locale — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -58,6 +59,7 @@ const related = [
 
 const ChelseaPage = () => (
   <>
+    <SEO title="Courtier immobilier Chelsea Québec | YGS" description="Achetez ou vendez à Chelsea. Village aux portes du parc de la Gatineau, 20 min d'Ottawa." canonical="https://yanisgauthier.com/chelsea" hreflangFr="https://yanisgauthier.com/chelsea" hreflangEn="https://yanisgauthier.com/en/chelsea" />
     <PageMeta
       title="Courtier immobilier Chelsea Québec | Parc de la Gatineau | YGS"
       description="Achetez ou vendez à Chelsea, Québec. Maisons sur grands terrains, Parc de la Gatineau, communauté bilingue. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />
