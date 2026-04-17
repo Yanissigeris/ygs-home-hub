@@ -1,0 +1,67 @@
+name: SEO Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  # ──────────────────────────────────────────────────────────────
+  # Job 1 — Build the site and verify SEO tags in dist/
+  # Fast (~30 s), runs on every push/PR.
+  # ──────────────────────────────────────────────────────────────
+  audit-tags:
+    name: Verify injected SEO tags
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (vite + prerender)
+        run: npm run build
+
+      - name: Audit injected SEO tags
+        run: node scripts/audit-seo.mjs
+
+      - name: Upload dist on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-failed-audit
+          path: dist
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────
+  # Job 2 — Lighthouse CI on key live URLs (production only)
+  # Runs against the deployed yanisgauthier.com to validate real
+  # SEO + perf scores. Skipped on PRs to avoid flakiness.
+  # ──────────────────────────────────────────────────────────────
+  lighthouse:
+    name: Lighthouse production audit
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://yanisgauthier.com/
+            https://yanisgauthier.com/aylmer
+            https://yanisgauthier.com/hull
+            https://yanisgauthier.com/evaluation-gratuite-gatineau
+            https://yanisgauthier.com/en
+            https://yanisgauthier.com/en/military-buyer
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: ./.lighthouserc.json
