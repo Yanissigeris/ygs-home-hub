@@ -13,6 +13,7 @@ interface CookiePrefs {
 }
 
 function getConsent(): ConsentValue | null {
+  if (typeof window === "undefined") return null;
   try {
     return localStorage.getItem(STORAGE_KEY) as ConsentValue | null;
   } catch {
@@ -20,6 +21,7 @@ function getConsent(): ConsentValue | null {
   }
 }
 function getPrefs(): CookiePrefs {
+  if (typeof window === "undefined") return { analytics: true, marketing: false };
   try {
     const raw = localStorage.getItem(STORAGE_PREFS_KEY);
     if (raw) return JSON.parse(raw);
@@ -27,6 +29,7 @@ function getPrefs(): CookiePrefs {
   return { analytics: true, marketing: false };
 }
 function saveConsent(value: ConsentValue, prefs?: CookiePrefs) {
+  if (typeof window === "undefined") return;
   try {
     localStorage.setItem(STORAGE_KEY, value);
     if (prefs) localStorage.setItem(STORAGE_PREFS_KEY, JSON.stringify(prefs));
@@ -35,6 +38,7 @@ function saveConsent(value: ConsentValue, prefs?: CookiePrefs) {
 
 /** Load GA4 script dynamically */
 function loadGA() {
+  if (typeof window === "undefined") return;
   if (document.getElementById("ygs-ga-script")) return;
   const s = document.createElement("script");
   s.id = "ygs-ga-script";

@@ -10,7 +10,13 @@ createRoot(document.getElementById("root")!).render(
 );
 
 /* ── Global scroll reveal observer ── */
-if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (
+  typeof window !== "undefined" &&
+  typeof document !== "undefined" &&
+  typeof IntersectionObserver !== "undefined" &&
+  typeof MutationObserver !== "undefined" &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
