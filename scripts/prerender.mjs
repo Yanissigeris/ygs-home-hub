@@ -295,11 +295,71 @@ async function main() {
    */
   const blogPosts = await extractBlogPosts();
 
+  // Resolve hashed asset filenames in dist/assets/ once
+  const distAssets = await fs.readdir(path.join(DIST, "assets")).catch(() => []);
+  const resolveHashedAsset = (sourceFilename) => {
+    if (!sourceFilename) return null;
+    const dot = sourceFilename.lastIndexOf(".");
+    const base = sourceFilename.slice(0, dot);
+    const ext = sourceFilename.slice(dot);
+    const re = new RegExp(
+      `^${base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}-[A-Za-z0-9_-]+${ext.replace(/\./g, "\\.")}$`,
+    );
+    const found = distAssets.find((f) => re.test(f));
+    return found ? `${SITE_URL}/assets/${found}` : null;
+  };
+
+  // Prerender per-article HTML files (with unique og:image, title, description)
+  let blogHtmlCount = 0;
+  for (const post of blogPosts) {
+    const ogImage =
+      resolveHashedAsset(post.featuredImageFile) || `${SITE_URL}/og/og-blog.jpg`;
+    post.ogImage = ogImage;
+
+    // FR
+    const frRoute = `/blogue/${post.slug}`;
+    const frMeta = {
+      title: `${post.title} | YGS`,
+      description: post.metaDescription || post.excerpt || "Article du blogue YGS.",
+      ogImage,
+    };
+    const frHtml = buildHtmlForRoute(shell, frRoute, frMeta, {
+      enPath: `/en/blog/${post.slugEn}`,
+      frPath: frRoute,
+    });
+    const frOut = path.join(DIST, "blogue", post.slug, "index.html");
+    await fs.mkdir(path.dirname(frOut), { recursive: true });
+    await fs.writeFile(frOut, frHtml, "utf8");
+
+    // EN
+    const enRoute = `/en/blog/${post.slugEn}`;
+    const enMeta = {
+      title: `${post.titleEn} | YGS`,
+      description: post.metaDescriptionEn || post.excerptEn || "YGS blog article.",
+      ogImage,
+    };
+    const enHtml = buildHtmlForRoute(shell, enRoute, enMeta, {
+      enPath: enRoute,
+      frPath: frRoute,
+    });
+    const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
+    await fs.mkdir(path.dirname(enOut), { recursive: true });
+    await fs.writeFile(enOut, enHtml, "utf8");
+
+    blogHtmlCount += 2;
+  }
+  console.log(`✅ Prerender: wrote ${blogHtmlCount} blog article HTML files`);
+
   const blogEntries = blogPosts
-    .map(({ slug, slugEn, publishDate }) => {
+    .map(({ slug, slugEn, publishDate, ogImage }) => {
       const frUrl = `${SITE_URL}/blogue/${slug}`;
       const enUrl = `${SITE_URL}/en/blog/${slugEn}`;
       const lastmod = publishDate || today;
+
+      const imageBlock = ogImage
+        ? `
+    <image:image><image:loc>${xmlEscape(ogImage)}</image:loc></image:image>`
+        : "";
 
       const frEntry = `  <url>
     <loc>${xmlEscape(frUrl)}</loc>
@@ -308,7 +368,7 @@ async function main() {
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(frUrl)}" />
     <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(enUrl)}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />${imageBlock}
   </url>`;
 
       const enEntry = `  <url>
@@ -318,7 +378,7 @@ async function main() {
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(frUrl)}" />
     <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(enUrl)}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(frUrl)}" />${imageBlock}
   </url>`;
 
       return `${frEntry}\n${enEntry}`;
@@ -327,7 +387,8 @@ async function main() {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urlEntries}
 ${blogEntries}
 </urlset>
