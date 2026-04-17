@@ -99,6 +99,45 @@ const escapeHtml = (s) =>
     .replace(/>/g, "&gt;");
 
 /**
+ * Inject a schema.org BlogPosting JSON-LD <script> into <head>.
+ * Placed right before </head> so it ships in the static HTML for crawlers
+ * (Google Discover, Bing, social) without waiting for React to mount.
+ */
+function injectBlogPostingJsonLd(html, { url, headline, description, image, datePublished, inLanguage }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline,
+    description,
+    image: [image],
+    datePublished,
+    dateModified: datePublished,
+    inLanguage,
+    author: {
+      "@type": "Person",
+      name: "Yanis Gauthier-Sigeris",
+      url: SITE_URL,
+      jobTitle: "Real Estate Broker",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "YGS — Yanis Gauthier-Sigeris",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og/og-default.jpg`,
+      },
+    },
+  };
+
+  // JSON.stringify produces safe content for a <script type="application/ld+json">,
+  // but we still escape "</" → "<\/" to avoid breaking out of the script tag.
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+/**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
  * The browser uses the LAST matching tag, so appending wins for canonical
