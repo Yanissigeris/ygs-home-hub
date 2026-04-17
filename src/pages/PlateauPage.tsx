@@ -1,9 +1,12 @@
 import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
+import SEO from "@/components/SEO";
 import { Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
 
 const PlateauPage = () => (
-  <NeighborhoodTemplate
+  <>
+    <SEO title="Courtier immobilier Plateau Gatineau | YGS" description="Achetez ou vendez dans le Plateau à Gatineau. Quartier familial calme, accès autoroute 50." canonical="https://yanisgauthier.com/plateau" hreflangFr="https://yanisgauthier.com/plateau" hreflangEn="https://yanisgauthier.com/en/plateau" />
+    <NeighborhoodTemplate
     seoTitle="Plateau — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou vendre dans le Plateau à Gatineau. Maisons neuves, familles, parcs et accès rapide à Ottawa via le pont Champlain."
     ogImage="https://yanisgauthier.com/og/og-plateau.jpg"
