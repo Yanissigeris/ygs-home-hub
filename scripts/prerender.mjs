@@ -421,13 +421,14 @@ async function extractBlogPosts() {
       continue;
     }
 
-    // Split on object boundaries: each blog post is a `{ ... },` block.
-    // We match each object that has `slug:`, `slugEn:`, `published: true`.
-    const objectRegex = /\{[^{}]*?slug:\s*["']([^"']+)["'][^{}]*?slugEn:\s*["']([^"']+)["'][^{}]*?published:\s*(true|false)[^{}]*?publishDate:\s*["']([^"']+)["']/gs;
-    // Note: `body` and `bodyEn` are template strings that may contain { and },
-    // so the simple [^{}] pattern won't match the full object. We need a smarter
-    // approach: scan the file with a brace-counting tokenizer per top-level object.
-    void objectRegex;
+    // Build import map: variable name → source filename
+    // Matches: `import blogMarket from "@/assets/blog/blog-market-2025.webp";`
+    const importMap = {};
+    const importRe = /import\s+(\w+)\s+from\s+["']@\/assets\/blog\/([^"']+)["']/g;
+    let im;
+    while ((im = importRe.exec(src)) !== null) {
+      importMap[im[1]] = im[2]; // varName → filename
+    }
 
     const objects = splitTopLevelObjects(src);
     for (const obj of objects) {
@@ -435,8 +436,32 @@ async function extractBlogPosts() {
       const slugEn = matchField(obj, "slugEn");
       const published = /published:\s*true\b/.test(obj);
       const publishDate = matchField(obj, "publishDate");
+      const title = matchField(obj, "title");
+      const titleEn = matchField(obj, "titleEn");
+      const metaDescription = matchField(obj, "metaDescription");
+      const metaDescriptionEn = matchField(obj, "metaDescriptionEn");
+      const excerpt = matchField(obj, "excerpt");
+      const excerptEn = matchField(obj, "excerptEn");
+
+      // featuredImage references a variable, not a string literal:
+      //   `featuredImage: blogMarket,`
+      const fiMatch = obj.match(/featuredImage:\s*(\w+)\s*[,}]/);
+      const featuredImageVar = fiMatch ? fiMatch[1] : null;
+      const featuredImageFile = featuredImageVar ? importMap[featuredImageVar] : null;
+
       if (slug && slugEn && published) {
-        posts.push({ slug, slugEn, publishDate });
+        posts.push({
+          slug,
+          slugEn,
+          publishDate,
+          title,
+          titleEn,
+          metaDescription,
+          metaDescriptionEn,
+          excerpt,
+          excerptEn,
+          featuredImageFile,
+        });
       }
     }
   }
