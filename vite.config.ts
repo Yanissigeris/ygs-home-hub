@@ -80,15 +80,12 @@ export default defineConfig(() => ({
       output: {
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
-          if (/[\\/]node_modules[\\/](react|react-dom|scheduler|react-router|react-router-dom)[\\/]/.test(id)) return "vendor";
-          if (id.includes("framer-motion")) return "motion";
-          if (id.includes("@radix-ui") || id.includes("use-callback-ref") || id.includes("use-sidecar") || id.includes("react-remove-scroll") || id.includes("react-style-singleton") || id.includes("aria-hidden") || id.includes("detect-node-es")) return "radix";
           if (id.includes("@supabase") || id.includes("@tanstack")) return "data";
+          if (id.includes("framer-motion")) return "motion";
           if (id.includes("lucide-react")) return "icons";
           if (id.includes("recharts") || id.includes("d3-")) return "charts";
           if (id.includes("embla-carousel")) return "carousel";
-          if (id.includes("react-hook-form") || id.includes("zod") || id.includes("@hookform")) return "forms";
-          return "vendor-misc";
+          return "vendor";
         },
       },
     },
