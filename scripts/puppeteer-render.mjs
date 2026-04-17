@@ -113,25 +113,21 @@ async function renderRoute(browser, route) {
 
     await page.goto(url, { waitUntil: "networkidle0", timeout: NAV_TIMEOUT });
 
-    // Wait for a real content element (header / main / h1) to be present.
-    // The BrandedLoader sets position:fixed with z-index 99999 and is the only
-    // child until React mounts the routed page. Wait until #root has more than
-    // just that loader OR contains a <main>/<header>/<h1>.
+    // Wait until the lazy-loaded page content is rendered inside <main>.
+    // The SiteHeader (with its own <h1> logo) mounts immediately, so we cannot
+    // just wait for any <h1>. We need <main> with substantial content.
     await page.waitForFunction(
       () => {
-        const r = document.getElementById("root");
-        if (!r) return false;
-        if (r.querySelector("main") || r.querySelector("header") || r.querySelector("h1")) {
-          return true;
-        }
-        // Fallback: substantive HTML beyond the splash loader (~500 chars)
-        return r.innerHTML.length > 3000;
+        const main = document.querySelector("main");
+        if (!main) return false;
+        // <main> must contain real route content, not just an empty Suspense fallback.
+        return main.innerHTML.length > 1500;
       },
       { timeout: NAV_TIMEOUT, polling: 200 },
     );
 
-    // Give lazy-loaded sections (LazySection, framer-motion, etc.) one more tick.
-    await new Promise((r) => setTimeout(r, 300));
+    // Give framer-motion / LazySection one more tick to settle.
+    await new Promise((r) => setTimeout(r, 400));
 
     const rootHtml = await page.evaluate(() => {
       const r = document.getElementById("root");
