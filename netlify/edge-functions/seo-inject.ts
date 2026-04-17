@@ -491,6 +491,14 @@ const META: Record<string, Meta> = {
 const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
+const SITE_ORIGIN = 'https://yanisgauthier.com'
+
+/** Replace a tag matched by `regex` with `replacement`, or inject it before </head> if missing. */
+const upsertTag = (html: string, regex: RegExp, replacement: string): string => {
+  if (regex.test(html)) return html.replace(regex, replacement)
+  return html.replace('</head>', `  ${replacement}\n</head>`)
+}
+
 export default async (request: Request, context: Context) => {
   const url = new URL(request.url)
   const path = url.pathname.replace(/\/$/, '') || '/'
@@ -508,9 +516,29 @@ export default async (request: Request, context: Context) => {
 
     const safeTitle = escapeHtml(page.title)
     const safeDesc = escapeHtml(page.description)
+    const canonicalUrl = `${SITE_ORIGIN}${path === '/' ? '/' : path}`
+    const safeCanonical = escapeHtml(canonicalUrl)
 
-    html = html.replace(/<title>[^<]*<\/title>/, '<title>' + safeTitle + '</title>')
-    html = html.replace(/name="description" content="[^"]*"/, 'name="description" content="' + safeDesc + '"')
+    // Title + description
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${safeTitle}</title>`)
+    html = html.replace(/name="description" content="[^"]*"/, `name="description" content="${safeDesc}"`)
+
+    // Canonical
+    html = upsertTag(
+      html,
+      /<link[^>]+rel=["']canonical["'][^>]*>/i,
+      `<link rel="canonical" href="${safeCanonical}" />`
+    )
+
+    // Open Graph
+    html = upsertTag(html, /<meta[^>]+property=["']og:title["'][^>]*>/i, `<meta property="og:title" content="${safeTitle}" />`)
+    html = upsertTag(html, /<meta[^>]+property=["']og:description["'][^>]*>/i, `<meta property="og:description" content="${safeDesc}" />`)
+    html = upsertTag(html, /<meta[^>]+property=["']og:url["'][^>]*>/i, `<meta property="og:url" content="${safeCanonical}" />`)
+
+    // Twitter Card
+    html = upsertTag(html, /<meta[^>]+name=["']twitter:card["'][^>]*>/i, `<meta name="twitter:card" content="summary_large_image" />`)
+    html = upsertTag(html, /<meta[^>]+name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${safeTitle}" />`)
+    html = upsertTag(html, /<meta[^>]+name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${safeDesc}" />`)
 
     return new Response(html, {
       status: 200,
