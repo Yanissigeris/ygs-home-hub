@@ -22,6 +22,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG } from "./seo-routes.mjs";
+import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
@@ -457,6 +458,27 @@ ${blogEntries}
       urls.length + blogPosts.length * 2
     } total) to dist/sitemap.xml`,
   );
+
+  /* ───────────────────── Puppeteer pass ─────────────────────
+   * Hydrate the empty <div id="root"> of every prerendered HTML file with
+   * the actual rendered React tree. Set SKIP_PUPPETEER=1 to skip (faster
+   * builds for local dev / when only meta changes are needed).
+   */
+  if (process.env.SKIP_PUPPETEER === "1") {
+    console.log("⏭️  SKIP_PUPPETEER=1 — skipping Puppeteer rendering pass.");
+    return;
+  }
+
+  const blogRoutes = blogPosts.flatMap((p) => [
+    `/blogue/${p.slug}`,
+    `/en/blog/${p.slugEn}`,
+  ]);
+
+  try {
+    await puppeteerRender({ extraRoutes: blogRoutes });
+  } catch (err) {
+    console.error("⚠️  Puppeteer pass failed (meta-only output preserved):", err.message);
+  }
 }
 
 /**
