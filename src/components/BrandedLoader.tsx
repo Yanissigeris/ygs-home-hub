@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const BrandedLoader = () => {
   const [visible, setVisible] = useState(() => {
+    if (typeof window === "undefined") return false;
     try {
       return !sessionStorage.getItem("ygs_loader_seen");
     } catch {
