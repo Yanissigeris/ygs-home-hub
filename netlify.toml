@@ -1,4 +1,4 @@
-: # Netlify configuration for yanisgauthier.com
+# Netlify configuration for yanisgauthier.com
 # SPA fallback is handled by public/_redirects (already in repo).
 
 [build]
