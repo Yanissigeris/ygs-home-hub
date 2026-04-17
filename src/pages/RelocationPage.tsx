@@ -54,6 +54,7 @@ const faq = [
 
 const RelocationPage = () => (
    <>
+    <SEO title="Déménager d'Ottawa à Gatineau | Courtier YGS" description="Vous déménagez d'Ottawa à Gatineau? Courtier bilingue spécialisé en relocalisation Outaouais. Quartiers, prix, processus québécois expliqués." canonical="https://yanisgauthier.com/relocalisation-ottawa-gatineau" hreflangFr="https://yanisgauthier.com/relocalisation-ottawa-gatineau" hreflangEn="https://yanisgauthier.com/en/relocation" />
     <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham — taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Service de relocalisation immobilière Ottawa–Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau — recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau" serviceType="Real Estate Relocation Service" />
     <HeroSection

@@ -49,6 +49,7 @@ const faq = [
 
 const MilitaryPage = () => (
    <>
+    <SEO title="Courtier immobilier militaire Gatineau | YGS" description="Mutation militaire à Gatineau? Courtier spécialisé IRP/BGRS, délais serrés, processus québécois. Achat et vente pour personnel des Forces canadiennes." canonical="https://yanisgauthier.com/militaire-gatineau" hreflangFr="https://yanisgauthier.com/militaire-gatineau" hreflangEn="https://yanisgauthier.com/en/military" />
     <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation à Aylmer, Hull ou au Plateau." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Service immobilier pour militaires — Mutation FAC à Gatineau" description="Accompagnement spécialisé pour les membres des Forces armées canadiennes en mutation à Gatineau — achat, vente, BGRS/SIRVA et installation." url="/militaire-gatineau" serviceType="Military Real Estate Relocation Service" />
     <HeroSection

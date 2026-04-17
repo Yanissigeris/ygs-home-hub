@@ -123,6 +123,7 @@ const related = [
 
 const AylmerPage = () => (
   <>
+    <SEO title="Courtier immobilier Aylmer Gatineau | YGS" description="Achetez ou vendez à Aylmer avec un courtier local. Lac Deschênes, parc de la Gatineau, 10 min d'Ottawa." canonical="https://yanisgauthier.com/aylmer" hreflangFr="https://yanisgauthier.com/aylmer" hreflangEn="https://yanisgauthier.com/en/aylmer" />
     <PageMeta
   title="Courtier immobilier Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
   description="Yanis Gauthier-Sigeris, courtier immobilier spécialisé à Aylmer, Gatineau. Maisons unifamiliales, condos, plex. Évaluation gratuite, connaissance locale approfondie."
