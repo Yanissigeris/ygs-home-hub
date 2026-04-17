@@ -6,6 +6,14 @@
   command = "npm run build"
 
 # ─────────────────────────────────────────────────────────────
+# Edge function: SEO meta injection for crawlers
+# Declared before headers so it runs first in the request pipeline.
+# ─────────────────────────────────────────────────────────────
+[[edge_functions]]
+  function = "seo-inject"
+  path = "/*"
+
+# ─────────────────────────────────────────────────────────────
 # Long-term immutable cache for hashed build assets
 # Vite emits files in /assets/ with content hashes — safe to cache forever.
 # ─────────────────────────────────────────────────────────────
@@ -63,12 +71,5 @@
     # - Fonts: Google Fonts CSS (googleapis) + font files (gstatic)
     # - Backend: Supabase project + storage + realtime (wildcard *.supabase.co, wss for realtime)
     # - Images: self, data: (inline SVG), blob: (generated previews), Supabase storage, og host
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://*.supabase.co https://yanisgauthier.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.supabase.co wss://*.supabase.co https://ai.gateway.lovable.dev; media-src 'self' blob:; manifest-src 'self'; worker-src 'self' blob:; upgrade-insecure-requests"
-
-# ─────────────────────────────────────────────────────────────
-# Edge function: SEO meta injection for crawlers
-# ─────────────────────────────────────────────────────────────
-[[edge_functions]]
-  function = "seo-inject"
-  path = "/*"
-
+    # - edge.netlify.com: allowed for Netlify Edge Function type imports
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://edge.netlify.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://*.supabase.co https://yanisgauthier.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.supabase.co wss://*.supabase.co https://ai.gateway.lovable.dev; media-src 'self' blob:; manifest-src 'self'; worker-src 'self' blob:; upgrade-insecure-requests"
