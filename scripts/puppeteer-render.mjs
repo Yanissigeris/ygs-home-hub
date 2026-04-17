@@ -93,13 +93,33 @@ async function renderRoute(browser, route) {
 
   const url = `http://127.0.0.1:${PORT}${route}`;
   try {
+    // Mark loader as already-seen so BrandedLoader returns null on first paint.
+    // This avoids capturing the splash screen instead of the actual page.
+    await page.evaluateOnNewDocument(() => {
+      try {
+        sessionStorage.setItem("ygs_loader_seen", "true");
+        // Pre-set cookie consent to suppress the bottom banner during snapshot.
+        localStorage.setItem("ygs_cookie_consent", "refused");
+      } catch {}
+    });
+
     await page.goto(url, { waitUntil: "networkidle0", timeout: NAV_TIMEOUT });
 
-    // Make sure #root has actual rendered children (lazy chunks done loading).
+    // Wait for a real content element (header / main / h1) to be present.
+    // This guards against snapshotting before lazy() chunks resolve.
     await page.waitForFunction(
       () => {
         const r = document.getElementById("root");
-        return r && r.children.length > 0 && r.innerHTML.length > 200;
+        if (!r || r.children.length === 0) return false;
+        // Reject the loader-only state.
+        if (r.querySelector('[aria-hidden="true"]') && r.children.length === 1) return false;
+        // Accept once we see substantive content.
+        return !!(
+          r.querySelector("main") ||
+          r.querySelector("h1") ||
+          r.querySelector("header") ||
+          r.innerHTML.length > 2000
+        );
       },
       { timeout: NAV_TIMEOUT },
     );
@@ -109,8 +129,8 @@ async function renderRoute(browser, route) {
       return r ? r.innerHTML : "";
     });
 
-    if (!rootHtml || rootHtml.length < 200) {
-      console.warn(`⚠️  ${route}: empty/short root HTML (${rootHtml.length}b), skipping.`);
+    if (!rootHtml || rootHtml.length < 500) {
+      console.warn(`⚠️  ${route}: short root HTML (${rootHtml.length}b), skipping.`);
       return false;
     }
 
