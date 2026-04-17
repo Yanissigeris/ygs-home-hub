@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
@@ -59,6 +60,7 @@ const related = [
 
 const PlateauPageEn = () => (
   <>
+    <SEO title="Real estate broker Plateau Gatineau | YGS" description="Buy or sell in the Plateau in Gatineau. Quiet family neighborhood, Highway 50 access." canonical="https://yanisgauthier.com/en/plateau" hreflangFr="https://yanisgauthier.com/plateau" hreflangEn="https://yanisgauthier.com/en/plateau" lang="en" />
     <PageMeta title="Plateau — Neighborhood Guide Gatineau" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau" />
     <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />

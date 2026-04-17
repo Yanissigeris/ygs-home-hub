@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
@@ -52,6 +53,7 @@ const ContactPageEn = () => {
   };
   return (
     <>
+      <SEO title="Contact Yanis Gauthier-Sigeris | Gatineau broker" description="Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Phone, email, or form." canonical="https://yanisgauthier.com/en/contact" hreflangFr="https://yanisgauthier.com/contact-yanis" hreflangEn="https://yanisgauthier.com/en/contact" lang="en" />
       <PageMeta title="Contact | Real Estate Broker Gatineau" description="Get in touch with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation — let's talk about your project." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
     <ServiceJsonLd name="Free Real Estate Consultation — Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
       <HeroSection compact overline="Yanis Gauthier-Sigeris" title="Let's talk about your project" subtitle="Thinking it over or ready to move — I can help you see more clearly. Just an honest conversation." primaryCta={{ label: "Send a text message", href: "sms:+18192103044?body=Hello%20Yanis%2C%20I%27d%20like%20to%20discuss%20my%20real%20estate%20project%20in%20Outaouais." }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
