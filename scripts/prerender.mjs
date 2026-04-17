@@ -156,7 +156,7 @@ function categoryOgImage(route) {
   return DEFAULT_OG;
 }
 
-function buildHtmlForRoute(shell, route, meta) {
+function buildHtmlForRoute(shell, route, meta, override = {}) {
   const isEn = route.startsWith("/en");
   const lang = isEn ? "en" : "fr";
   const locale = isEn ? "en_CA" : "fr_CA";
@@ -164,9 +164,9 @@ function buildHtmlForRoute(shell, route, meta) {
   const canonical = `${SITE_URL}${route}`;
   const ogImage = meta.ogImage || categoryOgImage(route);
 
-  // Compute alt-language URLs
-  const frPath = isEn ? enToFr[route] : route;
-  const enPath = isEn ? route : frToEn[route];
+  // Compute alt-language URLs (allow override for dynamic routes like blog posts)
+  const frPath = override.frPath || (isEn ? enToFr[route] : route);
+  const enPath = override.enPath || (isEn ? route : frToEn[route]);
 
   let html = shell;
 
