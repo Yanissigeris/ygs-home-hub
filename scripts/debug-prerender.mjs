@@ -36,6 +36,7 @@ page.setDefaultNavigationTimeout(60_000);
 
 await page.evaluateOnNewDocument(() => {
   try {
+    window.__PRERENDER__ = true;
     sessionStorage.setItem("ygs_loader_seen", "true");
     localStorage.setItem("ygs_cookie_consent", "refused");
   } catch {}
