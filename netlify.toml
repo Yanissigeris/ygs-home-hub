@@ -56,3 +56,12 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Content Security Policy
+    # - 'unsafe-inline' on script-src/style-src is required for inline JSON-LD blocks,
+    #   the GA4 bootstrap snippet, the hero preload script, and inline critical CSS.
+    # - GA4: googletagmanager.com (script) + google-analytics.com / analytics.google.com (collect)
+    # - Fonts: Google Fonts CSS (googleapis) + font files (gstatic)
+    # - Backend: Supabase project + storage + realtime (wildcard *.supabase.co, wss for realtime)
+    # - Images: self, data: (inline SVG), blob: (generated previews), Supabase storage, og host
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://*.supabase.co https://yanisgauthier.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.supabase.co wss://*.supabase.co https://ai.gateway.lovable.dev; media-src 'self' blob:; manifest-src 'self'; worker-src 'self' blob:; upgrade-insecure-requests"
+
