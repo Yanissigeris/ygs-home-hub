@@ -76,6 +76,19 @@ async function renderRoute(browser, route) {
   const page = await browser.newPage();
   page.setDefaultNavigationTimeout(NAV_TIMEOUT);
 
+  // IMPORTANT: register init scripts BEFORE navigation so they run on the
+  // very first document load (otherwise React mounts before our flags are set).
+  await page.evaluateOnNewDocument(() => {
+    try {
+      // Tells LazySection to reveal immediately (capture full page, not just above-the-fold).
+      window.__PRERENDER__ = true;
+      // Skip splash loader so we capture real route content.
+      sessionStorage.setItem("ygs_loader_seen", "true");
+      // Suppress cookie banner during snapshot.
+      localStorage.setItem("ygs_cookie_consent", "refused");
+    } catch {}
+  });
+
   // Block heavy/non-essential assets to speed things up.
   await page.setRequestInterception(true);
   page.on("request", (req) => {
@@ -101,16 +114,6 @@ async function renderRoute(browser, route) {
 
   const url = `http://127.0.0.1:${PORT}${route}`;
   try {
-    // Mark loader as already-seen so BrandedLoader returns null on first paint.
-    // This avoids capturing the splash screen instead of the actual page.
-    await page.evaluateOnNewDocument(() => {
-      try {
-        sessionStorage.setItem("ygs_loader_seen", "true");
-        // Pre-set cookie consent to suppress the bottom banner during snapshot.
-        localStorage.setItem("ygs_cookie_consent", "refused");
-      } catch {}
-    });
-
     await page.goto(url, { waitUntil: "networkidle0", timeout: NAV_TIMEOUT });
 
     // Wait until the lazy-loaded page content is rendered inside <main>.
