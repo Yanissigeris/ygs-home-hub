@@ -99,6 +99,45 @@ const escapeHtml = (s) =>
     .replace(/>/g, "&gt;");
 
 /**
+ * Inject a schema.org BlogPosting JSON-LD <script> into <head>.
+ * Placed right before </head> so it ships in the static HTML for crawlers
+ * (Google Discover, Bing, social) without waiting for React to mount.
+ */
+function injectBlogPostingJsonLd(html, { url, headline, description, image, datePublished, inLanguage }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline,
+    description,
+    image: [image],
+    datePublished,
+    dateModified: datePublished,
+    inLanguage,
+    author: {
+      "@type": "Person",
+      name: "Yanis Gauthier-Sigeris",
+      url: SITE_URL,
+      jobTitle: "Real Estate Broker",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "YGS — Yanis Gauthier-Sigeris",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og/og-default.jpg`,
+      },
+    },
+  };
+
+  // JSON.stringify produces safe content for a <script type="application/ld+json">,
+  // but we still escape "</" → "<\/" to avoid breaking out of the script tag.
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+/**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
  * The browser uses the LAST matching tag, so appending wins for canonical
@@ -318,14 +357,23 @@ async function main() {
 
     // FR
     const frRoute = `/blogue/${post.slug}`;
+    const frUrlAbs = `${SITE_URL}${frRoute}`;
     const frMeta = {
       title: `${post.title} | YGS`,
       description: post.metaDescription || post.excerpt || "Article du blogue YGS.",
       ogImage,
     };
-    const frHtml = buildHtmlForRoute(shell, frRoute, frMeta, {
+    let frHtml = buildHtmlForRoute(shell, frRoute, frMeta, {
       enPath: `/en/blog/${post.slugEn}`,
       frPath: frRoute,
+    });
+    frHtml = injectBlogPostingJsonLd(frHtml, {
+      url: frUrlAbs,
+      headline: post.title,
+      description: frMeta.description,
+      image: ogImage,
+      datePublished: post.publishDate,
+      inLanguage: "fr-CA",
     });
     const frOut = path.join(DIST, "blogue", post.slug, "index.html");
     await fs.mkdir(path.dirname(frOut), { recursive: true });
@@ -333,14 +381,23 @@ async function main() {
 
     // EN
     const enRoute = `/en/blog/${post.slugEn}`;
+    const enUrlAbs = `${SITE_URL}${enRoute}`;
     const enMeta = {
       title: `${post.titleEn} | YGS`,
       description: post.metaDescriptionEn || post.excerptEn || "YGS blog article.",
       ogImage,
     };
-    const enHtml = buildHtmlForRoute(shell, enRoute, enMeta, {
+    let enHtml = buildHtmlForRoute(shell, enRoute, enMeta, {
       enPath: enRoute,
       frPath: frRoute,
+    });
+    enHtml = injectBlogPostingJsonLd(enHtml, {
+      url: enUrlAbs,
+      headline: post.titleEn,
+      description: enMeta.description,
+      image: ogImage,
+      datePublished: post.publishDate,
+      inLanguage: "en-CA",
     });
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
@@ -348,7 +405,7 @@ async function main() {
 
     blogHtmlCount += 2;
   }
-  console.log(`✅ Prerender: wrote ${blogHtmlCount} blog article HTML files`);
+  console.log(`✅ Prerender: wrote ${blogHtmlCount} blog article HTML files (with BlogPosting JSON-LD)`);
 
   const blogEntries = blogPosts
     .map(({ slug, slugEn, publishDate, ogImage }) => {
