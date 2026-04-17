@@ -14,8 +14,7 @@ export default async (request: Request, context: Context) => {
     '/blogue': { title: 'Blogue immobilier Gatineau | YGS', description: 'Conseils immobiliers pour Gatineau.' },
   }
 
-  const indexUrl = new URL('/', url.origin)
-  const response = await fetch(indexUrl.toString())
+  const response = await context.next()
 
   const page = meta[path]
   if (!page) return context.next()
