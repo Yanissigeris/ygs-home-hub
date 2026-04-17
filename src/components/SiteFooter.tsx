@@ -210,7 +210,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
           </div>
 
-          {/* ── Copyright ── */}
+          {/* ── NAP ── */}         <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>           <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.3)", fontWeight: 300 }}>             {lang === "en" ? "819-210-3044" : "819-210-3044"}             {" · "}             <a href="mailto:yanis@ygsimmo.ca" style={{ color: "rgba(255,255,255,.3)" }}>yanis@ygsimmo.ca</a>             {" · "}             {lang === "en" ? "452 Jean-Perrin, Gatineau, QC J8V 2R3" : "452 rue Jean-Perrin, Gatineau, QC J8V 2R3"}           </p>         </div>         {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
             <div className="mt-2 flex justify-center gap-4">
