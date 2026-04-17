@@ -65,3 +65,10 @@
     # - Images: self, data: (inline SVG), blob: (generated previews), Supabase storage, og host
     Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://*.supabase.co https://yanisgauthier.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.supabase.co wss://*.supabase.co https://ai.gateway.lovable.dev; media-src 'self' blob:; manifest-src 'self'; worker-src 'self' blob:; upgrade-insecure-requests"
 
+# ─────────────────────────────────────────────────────────────
+# Edge function: SEO meta injection for crawlers
+# ─────────────────────────────────────────────────────────────
+[[edge_functions]]
+  function = "seo-inject"
+  path = "/*"
+
