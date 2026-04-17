@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";

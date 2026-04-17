@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -58,6 +59,7 @@ const related = [
 
 const ChelseaPageEn = () => (
   <>
+    <SEO title="Real estate broker Chelsea Quebec | YGS" description="Buy or sell in Chelsea. Village at the gates of Gatineau Park, 20 min from Ottawa." canonical="https://yanisgauthier.com/en/chelsea" hreflangFr="https://yanisgauthier.com/chelsea" hreflangEn="https://yanisgauthier.com/en/chelsea" lang="en" />
     <PageMeta
       title="Real Estate Broker Chelsea Quebec | Gatineau Park | YGS"
       description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />

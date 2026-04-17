@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -59,6 +60,7 @@ const related = [
 
 const HullPageEn = () => (
   <>
+    <SEO title="Real estate broker Hull Gatineau | YGS" description="Buy or sell in Hull with a local broker. Urban sector, Zibi project, proximity to Ottawa." canonical="https://yanisgauthier.com/en/hull" hreflangFr="https://yanisgauthier.com/hull" hreflangEn="https://yanisgauthier.com/en/hull" lang="en" />
     <PageMeta
       title="Real Estate Broker Hull Gatineau | Condos, Plexes, Homes | YGS"
       description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />

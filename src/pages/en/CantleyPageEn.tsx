@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -58,6 +59,7 @@ const related = [
 
 const CantleyPageEn = () => (
   <>
+    <SEO title="Real estate broker Cantley Outaouais | YGS" description="Buy or sell in Cantley. Large lots, nature 20 min from Gatineau." canonical="https://yanisgauthier.com/en/cantley" hreflangFr="https://yanisgauthier.com/cantley" hreflangEn="https://yanisgauthier.com/en/cantley" lang="en" />
     <PageMeta
       title="Real Estate Broker Cantley Outaouais | Families & Large Lots | YGS"
       description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Nearly 9 years of local experience — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
