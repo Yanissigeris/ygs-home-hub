@@ -1,5 +1,6 @@
 import * as React from "react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
@@ -26,6 +27,13 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
+    <SEO
+      title="Courtier immobilier Gatineau | Yanis Gauthier-Sigeris — YGS"
+      description="Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais — stratégie claire, chiffres honnêtes. Évaluation gratuite."
+      canonical="https://yanisgauthier.com/"
+      hreflangFr="https://yanisgauthier.com/"
+      hreflangEn="https://yanisgauthier.com/en"
+    />
     <PageMeta
       title="Courtier immobilier Gatineau · Outaouais"
       description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir à Aylmer, Hull ou Plateau — stratégie claire et accompagnement."

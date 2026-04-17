@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import { useState, FormEvent } from "react";
