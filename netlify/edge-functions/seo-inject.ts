@@ -34,6 +34,6 @@ export default async (request: Request, context: Context) => {
 
   return new Response(html, {
     status: response.status,
-    headers: response.headers,
+    headers: { 'content-type': 'text/html; charset=utf-8' },
   })
 }
