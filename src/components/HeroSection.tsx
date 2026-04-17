@@ -326,7 +326,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             {/* Background image / video */}
             {heroVideo && (
               <>
-                <div className="absolute inset-0 transition-opacity duration-[1.6s]" style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none" }} aria-hidden="true">
+                <div className="absolute inset-0 transition-opacity" style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none", transitionDuration: "1600ms" }} aria-hidden="true">
                   <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
                 </div>
                 <div className="absolute inset-0">
