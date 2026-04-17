@@ -84,7 +84,7 @@ const PrivacyPolicyPage = React.lazy(() => import("./pages/PrivacyPolicyPage"));
 const TermsPage = React.lazy(() => import("./pages/TermsPage"));
 
 // EN pages
-import IndexEn from "./pages/en/IndexEn";
+const IndexEn = React.lazy(() => import("./pages/en/IndexEn"));
 const SellerPageEn = React.lazy(() => import("./pages/en/SellerPageEn"));
 const BuyerPageEn = React.lazy(() => import("./pages/en/BuyerPageEn"));
 const RelocationPageEn = React.lazy(() => import("./pages/en/RelocationPageEn"));

@@ -75,11 +75,20 @@ export default defineConfig(() => ({
     dedupe: ["react", "react-dom", "react/jsx-runtime"],
   },
   build: {
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom"],
-          motion: ["framer-motion"],
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (/[\\/]node_modules[\\/](react|react-dom|scheduler|react-router|react-router-dom)[\\/]/.test(id)) return "vendor";
+          if (id.includes("framer-motion")) return "motion";
+          if (id.includes("@radix-ui")) return "radix";
+          if (id.includes("@supabase") || id.includes("@tanstack")) return "data";
+          if (id.includes("lucide-react")) return "icons";
+          if (id.includes("recharts") || id.includes("d3-")) return "charts";
+          if (id.includes("embla-carousel")) return "carousel";
+          if (id.includes("react-hook-form") || id.includes("zod") || id.includes("@hookform")) return "forms";
+          return "vendor-misc";
         },
       },
     },
