@@ -84,7 +84,7 @@ export const properties: Property[] = [
     id: "17113358",
     address: "47 Rue Brook",
     city: "Gatineau (Aylmer)",
-    price: "439 900 $",
+    price: "424 900 $",
     type: "Maison à étages",
     bedrooms: "3",
     bathrooms: "1",
