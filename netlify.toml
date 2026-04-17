@@ -71,4 +71,5 @@
 [[edge_functions]]
   function = "seo-inject"
   path = "/*"
+  excluded_patterns = ["/assets/*", "/*.js", "/*.css", "/*.png", "/*.jpg", "/*.webp", "/*.svg", "/*.ico", "/*.woff", "/*.woff2", "/*.xml", "/*.txt", "/*.json"]
 
