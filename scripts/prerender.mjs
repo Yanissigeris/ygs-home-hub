@@ -178,6 +178,73 @@ async function main() {
   }
 
   console.log(`✅ Prerender: wrote ${written} static HTML files (meta-only) to dist/`);
+
+  /* ───────────────────── sitemap.xml ─────────────────────
+   * Built from the same SEO_ROUTES map so the sitemap is always in sync
+   * with the prerendered routes.
+   */
+  const today = new Date().toISOString().split("T")[0];
+
+  const NOINDEX = new Set([
+    "/merci",
+    "/merci-evaluation",
+    "/en/thank-you",
+    "/en/thank-you-valuation",
+  ]);
+
+  const priorityFor = (route) => {
+    if (route === "/" || route === "/en") return "1.0";
+    if (/^\/(en\/)?(politique-de-confidentialite|conditions-utilisation|privacy-policy|terms)$/.test(route)) return "0.3";
+    if (route === "/proprietes" || route === "/en/properties") return "0.9";
+    return "0.8";
+  };
+
+  const changefreqFor = (route) => {
+    if (route === "/" || route === "/en") return "weekly";
+    if (route === "/proprietes" || route === "/en/properties") return "daily";
+    if (route.includes("rapport-marche") || route.includes("market-report")) return "weekly";
+    return "monthly";
+  };
+
+  const xmlEscape = (s) => s.replace(/&/g, "&amp;");
+
+  const urls = Object.keys(SEO_ROUTES)
+    .filter((r) => !NOINDEX.has(r))
+    .sort();
+
+  const urlEntries = urls
+    .map((route) => {
+      const loc = `${SITE_URL}${route}`;
+      const isEn = route.startsWith("/en");
+      const frPath = isEn ? enToFr[route] : route;
+      const enPath = isEn ? route : frToEn[route];
+
+      const alternates =
+        frPath && enPath
+          ? `
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(SITE_URL + frPath)}" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(SITE_URL + enPath)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(SITE_URL + frPath)}" />`
+          : "";
+
+      return `  <url>
+    <loc>${xmlEscape(loc)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${changefreqFor(route)}</changefreq>
+    <priority>${priorityFor(route)}</priority>${alternates}
+  </url>`;
+    })
+    .join("\n");
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urlEntries}
+</urlset>
+`;
+
+  await fs.writeFile(path.join(DIST, "sitemap.xml"), sitemap, "utf8");
+  console.log(`✅ Sitemap: wrote ${urls.length} URLs to dist/sitemap.xml`);
 }
 
 main().catch((err) => {
