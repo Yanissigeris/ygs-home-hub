@@ -24,11 +24,14 @@ function htmlOptimizePlugin() {
         if (!fileName.endsWith(".html") || chunk.type !== "asset") continue;
         let html = chunk.source as string;
 
-        // 1) Inject portrait preload right after <meta charset>
+        // 1) Inject conditional portrait preload — only on routes that actually
+        //    render the portrait above the fold (home FR/EN + Outaouais hub).
+        //    Avoids "preloaded but not used" warnings on the other ~140 routes.
         if (portraitKey) {
+          const conditionalPreload = `<script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/${portraitKey}';l.setAttribute('fetchpriority','high');document.head.appendChild(l);}})();</script>`;
           html = html.replace(
             "<meta charset",
-            `<link rel="preload" as="image" href="/${portraitKey}" fetchpriority="high">\n    <meta charset`
+            `${conditionalPreload}\n    <meta charset`
           );
         }
 
