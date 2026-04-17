@@ -499,18 +499,28 @@ export default async (request: Request, context: Context) => {
   const page = META[path]
   if (!page) return context.next()
 
-  // Fetch index.html directly (bypasses SPA redirect rules in _redirects)
-  const indexResponse = await fetch(new URL('/index.html', url.origin).toString())
-  let html = await indexResponse.text()
+  try {
+    // Fetch index.html directly (bypasses SPA redirect rules in _redirects)
+    const indexResponse = await fetch(new URL('/index.html', url.origin).toString())
+    if (!indexResponse.ok) return context.next()
 
-  const safeTitle = escapeHtml(page.title)
-  const safeDesc = escapeHtml(page.description)
+    let html = await indexResponse.text()
 
-  html = html.replace(/<title>[^<]*<\/title>/, '<title>' + safeTitle + '</title>')
-  html = html.replace(/name="description" content="[^"]*"/, 'name="description" content="' + safeDesc + '"')
+    const safeTitle = escapeHtml(page.title)
+    const safeDesc = escapeHtml(page.description)
 
-  return new Response(html, {
-    status: 200,
-    headers: { 'content-type': 'text/html; charset=utf-8' },
-  })
+    html = html.replace(/<title>[^<]*<\/title>/, '<title>' + safeTitle + '</title>')
+    html = html.replace(/name="description" content="[^"]*"/, 'name="description" content="' + safeDesc + '"')
+
+    return new Response(html, {
+      status: 200,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'cache-control': 'public, max-age=300, s-maxage=300',
+      },
+    })
+  } catch (err) {
+    console.error('[seo-inject] failed for', path, err)
+    return context.next()
+  }
 }
