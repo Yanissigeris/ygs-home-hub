@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import heroImg from "@/assets/hero-contact.webp";
 import { useState, FormEvent } from "react";

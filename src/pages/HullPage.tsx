@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -59,6 +60,7 @@ const related = [
 
 const HullPage = () => (
   <>
+    <SEO title="Courtier immobilier Hull Gatineau | YGS" description="Achetez ou vendez à Hull avec un courtier local. Secteur urbain, projet Zibi, proximité Ottawa." canonical="https://yanisgauthier.com/hull" hreflangFr="https://yanisgauthier.com/hull" hreflangEn="https://yanisgauthier.com/en/hull" />
     <PageMeta
       title="Courtier immobilier Hull Gatineau | Condos, plexs, maisons | YGS — Yanis Gauthier-Sigeris"
       description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
