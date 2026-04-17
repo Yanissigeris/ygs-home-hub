@@ -14,12 +14,13 @@ export default async (request: Request, context: Context) => {
     '/blogue': { title: 'Blogue immobilier Gatineau | YGS', description: 'Conseils immobiliers pour Gatineau.' },
   }
 
-  const response = await context.next()
-
   const page = meta[path]
   if (!page) return context.next()
 
-  let html = await response.text()
+  // Fetch index.html directly (bypasses SPA redirect rules in _redirects)
+  const indexResponse = await fetch(new URL('/index.html', url.origin).toString())
+  let html = await indexResponse.text()
+
   html = html.replace(/<title>[^<]+<\/title>/, '<title>' + page.title + '</title>')
   html = html.replace(/name="description" content="[^"]*"/, 'name="description" content="' + page.description + '"')
 
