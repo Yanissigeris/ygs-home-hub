@@ -47,6 +47,20 @@ const routeToFile = (route) => {
 
 const countMatches = (html, regex) => (html.match(regex) || []).length;
 
+/** Decode the HTML entities our prerender script may emit. */
+const decodeEntities = (s) =>
+  s
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ");
+
+/** Normalize whitespace for comparison (collapse runs, NBSP → space, trim). */
+const norm = (s) => s.replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim();
+
 async function auditRoute(route, meta) {
   const file = routeToFile(route);
   let html;
@@ -65,7 +79,9 @@ async function auditRoute(route, meta) {
   const titleMatch = html.match(/<title>([^<]*)<\/title>/);
   if (titleMatch) {
     const title = titleMatch[1];
-    if (title !== meta.title) errors.push(`[${route}] <title> mismatch — expected "${meta.title}", got "${title}"`);
+    if (norm(title) !== norm(meta.title)) {
+      errors.push(`[${route}] <title> mismatch — expected "${meta.title}", got "${title}"`);
+    }
     if (title.length > TITLE_MAX) warnings.push(`[${route}] <title> ${title.length} chars (>${TITLE_MAX})`);
   }
 
@@ -76,8 +92,10 @@ async function auditRoute(route, meta) {
 
   const descMatch = html.match(/name=["']description["']\s+content=["']([^"']*)["']/);
   if (descMatch) {
-    const desc = descMatch[1];
-    if (desc !== meta.description) errors.push(`[${route}] description mismatch`);
+    const desc = decodeEntities(descMatch[1]);
+    if (norm(desc) !== norm(meta.description)) {
+      errors.push(`[${route}] description mismatch\n      expected: ${JSON.stringify(meta.description)}\n      got:      ${JSON.stringify(desc)}`);
+    }
     if (desc.length > DESC_MAX) warnings.push(`[${route}] description ${desc.length} chars (>${DESC_MAX})`);
   }
 
