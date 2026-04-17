@@ -59,7 +59,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
       </div>
 
       {/* Gold top border — hover only */}
-      <div className="h-px transition-colors duration-[250ms] ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>

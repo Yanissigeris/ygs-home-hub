@@ -49,7 +49,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = defaultColor; }}
       >
         {item.label}
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
     );
   }
@@ -75,7 +75,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
       >
         {item.label}
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-[250ms] ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,.98)", boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)" }}>
