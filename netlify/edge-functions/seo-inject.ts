@@ -1,4 +1,4 @@
-export default async (request: Request) => {
+export default async (request: Request, context: any) => {
   const ua = request.headers.get('user-agent') || ''
   const isCrawler = /googlebot|bingbot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|slackbot|curl/i.test(ua)
   if (!isCrawler) return
@@ -45,7 +45,7 @@ export default async (request: Request) => {
   const page = meta[path]
   if (!page) return
 
-  const response = await fetch(request)
+  const response = await context.next()
   let html = await response.text()
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${page.title}</title>`)
   html = html.replace(/(<meta name="description" content=")[^"]*(")/, `$1${page.description}$2`)
