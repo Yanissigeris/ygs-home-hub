@@ -64,6 +64,13 @@ const faq = [
 
 const BuyerPage = () => (
    <>
+    <SEO
+      title="Acheter une maison à Gatineau | Courtier YGS"
+      description="Achetez une maison à Gatineau avec Yanis Gauthier-Sigeris. Accompagnement complet : recherche, offre, inspection, notaire. Expertise Outaouais."
+      canonical="https://yanisgauthier.com/acheter-a-gatineau"
+      hreflangFr="https://yanisgauthier.com/acheter-a-gatineau"
+      hreflangEn="https://yanisgauthier.com/en/buy"
+    />
     <PageMeta title="Acheter une propriété à Gatineau · Outaouais" description="Trouvez et achetez votre propriété à Gatineau — Aylmer, Hull, Plateau ou Buckingham. Consultation personnalisée et accompagnement à votre rythme." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="Accompagnement acheteur à Gatineau" description="Service d'accompagnement pour l'achat immobilier à Gatineau et en Outaouais — recherche, visites, analyse de quartier, offre d'achat et inspection." url="/acheter-a-gatineau" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection
