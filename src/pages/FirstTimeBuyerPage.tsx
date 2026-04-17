@@ -38,6 +38,7 @@ const faq = [
 
 const FirstTimeBuyerPage = () => (
    <>
+    <SEO title="Premier achat immobilier à Gatineau | Guide YGS" description="Guide complet pour votre premier achat à Gatineau. Mise de fonds, RAP, CELIAPP, pré-approbation, processus au Québec." canonical="https://yanisgauthier.com/premier-achat-gatineau" hreflangFr="https://yanisgauthier.com/premier-achat-gatineau" hreflangEn="https://yanisgauthier.com/en/first-time-buyer" />
     <PageMeta title="Premier achat immobilier à Gatineau" description="Premier acheteur à Gatineau? Mise de fonds, budget, programmes d'aide au Québec et accompagnement personnalisé pour acheter à Aylmer, Hull ou au Plateau." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <ServiceJsonLd name="Accompagnement premier acheteur — Gatineau" description="Accompagnement personnalisé pour premiers acheteurs à Gatineau. Mise de fonds, programmes d'aide au Québec et processus étape par étape." url="/premier-achat-gatineau" serviceType="First Time Home Buyer Service" />
     <HeroSection
