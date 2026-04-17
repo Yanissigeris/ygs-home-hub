@@ -23,6 +23,23 @@ export default async (request: Request) => {
     '/cantley': { title: 'Courtier immobilier Cantley Outaouais | YGS', description: 'Achetez ou vendez à Cantley. Grands terrains, nature à 20 min de Gatineau.' },
     '/blogue': { title: 'Blogue immobilier Gatineau | Conseils YGS', description: 'Conseils immobiliers pour Gatineau et l\'Outaouais. Marché, vente, achat, investissement plex, relocalisation.' },
     '/contact-yanis': { title: 'Contacter Yanis Gauthier-Sigeris | Courtier Gatineau', description: 'Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Téléphone, courriel, ou formulaire.' },
+
+    '/en': { title: 'Real Estate Broker Gatineau | Yanis Gauthier-Sigeris — YGS', description: 'Real estate broker in Gatineau with 9 years of experience. Sell, buy or invest in the Outaouais — clear strategy, honest numbers. Free valuation.' },
+    '/en/sell': { title: 'Sell your home in Gatineau | YGS Broker', description: 'Sell your home in Gatineau with Yanis Gauthier-Sigeris. Free valuation, pricing strategy, full marketing. 9 years of experience.' },
+    '/en/home-valuation': { title: 'Free Home Valuation in Gatineau | YGS', description: 'Get a free valuation of your Gatineau property. Based on real comparables in your area. No commitment.' },
+    '/en/plex': { title: 'Invest in a plex in Gatineau | YGS Real Estate', description: 'Buy a duplex or triplex in Gatineau with a specialized broker. Return analysis, Outaouais rental market, full support.' },
+    '/en/buy': { title: 'Buy a home in Gatineau | YGS Broker', description: 'Buy a home in Gatineau with Yanis Gauthier-Sigeris. Full support: search, offer, inspection, notary. Outaouais expertise.' },
+    '/en/first-time-buyer': { title: 'First-time home buyer in Gatineau | YGS Guide', description: 'Complete guide for your first purchase in Gatineau. Down payment, HBP, FHSA, pre-approval, Quebec process.' },
+    '/en/relocation': { title: 'Relocating from Ottawa to Gatineau | YGS Broker', description: 'Moving from Ottawa to Gatineau? Bilingual broker specialized in Outaouais relocation.' },
+    '/en/military': { title: 'Military Real Estate Broker Gatineau | YGS', description: 'Military posting to Gatineau? Broker specialized in IRP/BGRS, tight deadlines, Quebec process.' },
+    '/en/outaouais-real-estate-agent': { title: 'Outaouais Real Estate Broker | Yanis Gauthier-Sigeris', description: 'Real estate broker in the Outaouais with 9 years of experience. RE/MAX Hall of Fame.' },
+    '/en/aylmer': { title: 'Real Estate Broker Aylmer Gatineau | YGS', description: 'Buy or sell in Aylmer with a local broker. Lake Deschênes, Gatineau Park, 10 min from Ottawa.' },
+    '/en/hull': { title: 'Real Estate Broker Hull Gatineau | YGS', description: 'Buy or sell in Hull with a local broker. Urban sector, Zibi project, proximity to Ottawa.' },
+    '/en/plateau': { title: 'Real Estate Broker Plateau Gatineau | YGS', description: 'Buy or sell in the Plateau in Gatineau. Quiet family neighborhood, Highway 50 access.' },
+    '/en/chelsea': { title: 'Real Estate Broker Chelsea Quebec | YGS', description: 'Buy or sell in Chelsea. Village at the gates of Gatineau Park, 20 min from Ottawa.' },
+    '/en/cantley': { title: 'Real Estate Broker Cantley Outaouais | YGS', description: 'Buy or sell in Cantley. Large lots, nature 20 min from Gatineau.' },
+    '/en/blog': { title: 'Gatineau Real Estate Blog | YGS Tips', description: 'Real estate tips for Gatineau and the Outaouais. Market, selling, buying, plex investment, relocation.' },
+    '/en/contact': { title: 'Contact Yanis Gauthier-Sigeris | Gatineau Broker', description: 'Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Phone, email, or form.' },
   }
 
   const page = meta[path]
