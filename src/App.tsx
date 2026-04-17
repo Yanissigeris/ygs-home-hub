@@ -8,6 +8,7 @@ import BrandedLoader from "@/components/BrandedLoader";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 
 const preloadAsset = (href: string, as: string) => {
+  if (typeof document === "undefined") return;
   const link = document.createElement("link");
   link.rel = "preload";
   link.as = as;
