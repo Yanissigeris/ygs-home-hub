@@ -31,8 +31,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 
 const PORT = 4173;
-const CONCURRENCY = 2;
-const NAV_TIMEOUT = 45_000;
+const CONCURRENCY = 1; // Sequential — Chromium becomes unstable under parallel newPage() load
+const NAV_TIMEOUT = 60_000;
 
 /** Replace the (empty) <div id="root"></div> of a static file with rendered HTML. */
 async function injectRootHtml(filePath, rootInnerHtml) {
