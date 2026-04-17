@@ -36,8 +36,7 @@ const LazySection = ({ children, minHeight = 200, rootMargin = "200px", classNam
       { rootMargin }
     );
     io.observe(el);
-    return () => io.disconnect();
-  }, [rootMargin]);
+  }, [rootMargin, visible]);
 
   return (
     <div ref={ref} className={className} style={visible ? undefined : { minHeight }}>
