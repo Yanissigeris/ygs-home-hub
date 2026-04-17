@@ -96,7 +96,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                       </span>
                     </button>
                     <div
-                      className="overflow-hidden transition-all duration-[350ms]"
+                      className="overflow-hidden transition-all duration-300"
                       style={{ maxHeight: isOpen ? 500 : 0, opacity: isOpen ? 1 : 0 }}
                     >
                       <div style={{ padding: "0 clamp(1.25rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem)", fontSize: ".85rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8 }}>
