@@ -22,7 +22,7 @@ const StickyMobileCTA = () => {
 
   const ctaLabel = lang === "en" ? "Free Valuation →" : "Évaluation Gratuite →";
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
-  const callLabel = "📞 Appeler";
+  const callLabel = lang === "en" ? "📞 Call" : "📞 Appeler";
 
   useEffect(() => {
     const onScroll = () => {
