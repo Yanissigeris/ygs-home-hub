@@ -47,13 +47,13 @@ const FloatingCallButton = () => {
           e.currentTarget.style.transform = "scale(1)";
         }}
       >
-        Appeler · 819-210-3044
+        {callLabel} · 819-210-3044
       </a>
 
       {/* Mobile */}
       <a
         href="tel:8192103044"
-        aria-label="Appeler"
+        aria-label={ariaLabelMobile}
         className="fixed z-[490] md:hidden inline-flex items-center justify-center"
         style={{
           bottom: 24,
