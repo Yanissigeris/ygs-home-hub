@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HIDDEN_PATHS = [
   "/contact-yanis", "/en/contact",
@@ -8,9 +9,14 @@ const HIDDEN_PATHS = [
 
 const FloatingCallButton = () => {
   const { pathname } = useLocation();
+  const lang = useLanguage();
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
   if (hidden) return null;
+
+  const callLabel = lang === "en" ? "Call" : "Appeler";
+  const ariaLabelDesktop = lang === "en" ? "Call 819-210-3044" : "Appeler 819-210-3044";
+  const ariaLabelMobile = lang === "en" ? "Call" : "Appeler";
 
   return (
     <>
