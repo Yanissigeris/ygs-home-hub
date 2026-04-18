@@ -427,6 +427,12 @@
   }
 }
 
+/* Footer link hover — warm gold, no underline */
+footer a:hover {
+  color: #A88A5A !important;
+  text-decoration: none !important;
+}
+
 /* Hero h1 targeted override — must beat global h1 + mobile !important rule */
 h1.hero-h1-fix {
   font-size: clamp(2rem, 4.5vw, 3.6rem) !important;
