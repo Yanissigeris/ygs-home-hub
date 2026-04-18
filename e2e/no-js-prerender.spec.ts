@@ -15,29 +15,21 @@
  * Build:  `npm run build` must have produced dist/ first.
  */
 
-import { test, expect, chromium } from "@playwright/test";
+import { test, expect, chromium, type Browser } from "@playwright/test";
 import { createServer, Server } from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
 import sirv from "sirv";
+import { SEO_ROUTES } from "../scripts/seo-routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 const PORT = 4178;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 
-// Sample of representative routes (FR + EN, home + neighborhood + audience).
-const ROUTES = [
-  "/",
-  "/aylmer",
-  "/militaire-gatineau",
-  "/contact-yanis",
-  "/temoignages",
-  "/en",
-  "/en/aylmer",
-  "/en/military",
-];
+// All prerendered routes (FR + EN). Source of truth: scripts/seo-routes.mjs.
+const ROUTES = Object.keys(SEO_ROUTES);
 
 let server: Server;
 
