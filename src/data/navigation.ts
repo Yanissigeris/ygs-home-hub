@@ -3,10 +3,16 @@ export interface NavChild {
   href: string;
 }
 
+export interface NavColumn {
+  title: string;
+  links: NavChild[];
+}
+
 export interface NavItem {
   label: string;
   href?: string;
   children?: NavChild[];
+  columns?: NavColumn[];
 }
 
 export const mainNav: NavItem[] = [
@@ -24,21 +30,36 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Acheter",
-    children: [
-      { label: "Acheter à Gatineau", href: "/acheter-a-gatineau" },
-      { label: "Consultation acheteur", href: "/consultation-acheteur" },
-      { label: "Guide acheteur", href: "/guide-acheteur-gatineau" },
-      { label: "Premier achat", href: "/premier-achat-gatineau" },
-      { label: "Acheter depuis Ottawa", href: "/acheter-a-gatineau-depuis-ottawa" },
-      { label: "— Plex / Investissement", href: "/investir-plex-gatineau" },
-      { label: "Analyse plex", href: "/analyse-plex-gatineau" },
-      { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
-      { label: "— Relocalisation Ottawa", href: "/relocalisation-ottawa-gatineau" },
-      { label: "Relocalisation Montréal", href: "/relocalisation-montreal-gatineau" },
-      { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
-      { label: "Militaire — mutation", href: "/militaire-gatineau" },
-      { label: "Militaire — achat", href: "/acheter-comme-militaire-gatineau" },
-      { label: "Militaire — vente", href: "/vendre-lors-dune-mutation-gatineau" },
+    columns: [
+      {
+        title: "Acheter",
+        links: [
+          { label: "Acheter à Gatineau", href: "/acheter-a-gatineau" },
+          { label: "Consultation acheteur", href: "/consultation-acheteur" },
+          { label: "Guide acheteur", href: "/guide-acheteur-gatineau" },
+          { label: "Premier achat", href: "/premier-achat-gatineau" },
+          { label: "Acheter depuis Ottawa", href: "/acheter-a-gatineau-depuis-ottawa" },
+        ],
+      },
+      {
+        title: "Plex / Investissement",
+        links: [
+          { label: "Investir dans un plex", href: "/investir-plex-gatineau" },
+          { label: "Analyse plex", href: "/analyse-plex-gatineau" },
+          { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
+        ],
+      },
+      {
+        title: "Relocalisation",
+        links: [
+          { label: "Ottawa → Gatineau", href: "/relocalisation-ottawa-gatineau" },
+          { label: "Montréal → Gatineau", href: "/relocalisation-montreal-gatineau" },
+          { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
+          { label: "Militaire — mutation", href: "/militaire-gatineau" },
+          { label: "Militaire — achat", href: "/acheter-comme-militaire-gatineau" },
+          { label: "Militaire — vente", href: "/vendre-lors-dune-mutation-gatineau" },
+        ],
+      },
     ],
   },
   {
