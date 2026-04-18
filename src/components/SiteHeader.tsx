@@ -137,7 +137,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
     );
   }
 
-  const isChildActive = item.children.some((c) => pathname === c.href);
+  const isChildActive = item.children!.some((c) => pathname === c.href);
 
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
@@ -162,7 +162,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,.98)", boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)" }}>
-          {item.children.map((child) => (
+          {item.children!.map((child) => (
             <Link
               key={child.href}
               to={child.href}
@@ -191,7 +191,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
 const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathname: string; onNavigate: () => void }) => {
   const [expanded, setExpanded] = useState(false);
 
-  if (!item.children) {
+  if (!item.children && !item.columns) {
     return (
       <Link to={item.href!} onClick={onNavigate} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
         {item.label}
@@ -199,18 +199,41 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
     );
   }
 
+  // Flatten columns into grouped sections; otherwise use children
+  const sections: { title?: string; links: NavChild[] }[] = item.columns
+    ? item.columns.map((c) => ({ title: c.title, links: c.links }))
+    : [{ links: item.children! }];
+
   return (
     <div style={{ borderBottom: "1px solid var(--border)" }}>
       <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: "var(--muted)", minHeight: 44 }} aria-expanded={expanded}>
         {item.label}
         <ChevronDownIcon size={14} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
-      <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="pb-1 pl-3">
-          {item.children.map((child) => (
-            <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
-              {child.label}
-            </Link>
+      <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
+        <div className="pb-2 pl-3">
+          {sections.map((sec, idx) => (
+            <div key={sec.title ?? idx} className={idx > 0 ? "mt-2 pt-2" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
+              {sec.title && (
+                <div
+                  className="px-6 pt-1 pb-1.5"
+                  style={{
+                    fontSize: 11,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                    color: "#A88A5A",
+                  }}
+                >
+                  {sec.title}
+                </div>
+              )}
+              {sec.links.map((child) => (
+                <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
+                  {child.label}
+                </Link>
+              ))}
+            </div>
           ))}
         </div>
       </div>
