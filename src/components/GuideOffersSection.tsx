@@ -31,7 +31,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
 
   return (
     <>
-      <section className="relative overflow-hidden" style={{ background: "#fff", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <section className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#fff" }}>
         {/* Radial gradient */}
         <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at top center, rgba(168,138,90,.05) 0%, transparent 60%)" }} aria-hidden="true" />
 

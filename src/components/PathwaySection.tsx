@@ -98,8 +98,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway"
-        style={{ padding: "clamp(3rem, 6vw, 7rem) 0", background: "#fff" }}
+        className="section-pathway section-rhythm section-gold-divider"
+        style={{ background: "#fff" }}
       >
         <div className="section-container">
           {/* Section header */}

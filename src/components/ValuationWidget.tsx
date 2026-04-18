@@ -170,10 +170,10 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
 
   return (
     <section
+      className="section-rhythm section-gold-divider"
       style={{
         background: "#fff",
         borderBottom: "1px solid hsl(var(--border))",
-        padding: isMobile ? "2rem 0" : "2.5rem 0",
       }}
       itemScope
       itemType="https://schema.org/RealEstateAgent"
