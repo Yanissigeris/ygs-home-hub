@@ -32,6 +32,7 @@ const ORIGIN = `http://127.0.0.1:${PORT}`;
 const ROUTES = Object.keys(SEO_ROUTES);
 
 let server: Server;
+let browser: Browser;
 
 test.beforeAll(async () => {
   if (!existsSync(path.join(DIST, "index.html"))) {
@@ -45,17 +46,20 @@ test.beforeAll(async () => {
     server.once("error", reject);
     server.listen(PORT, "127.0.0.1", () => resolve());
   });
+  // Single shared browser — launching one per test for 194 routes is too slow.
+  browser = await chromium.launch({ executablePath: "/bin/chromium" });
 });
 
 test.afterAll(async () => {
+  await browser?.close().catch(() => {});
   await new Promise<void>((r) => server?.close(() => r()));
 });
 
 test.describe("Prerendered HTML is crawler-friendly (JS disabled)", () => {
+  test.describe.configure({ timeout: 15_000 });
+
   for (const route of ROUTES) {
     test(`renders content for ${route} without JavaScript`, async () => {
-      // Launch a dedicated context with JS disabled — true crawler simulation.
-      const browser = await chromium.launch({ executablePath: "/bin/chromium" });
       const context = await browser.newContext({ javaScriptEnabled: false });
       const page = await context.newPage();
 
@@ -63,23 +67,19 @@ test.describe("Prerendered HTML is crawler-friendly (JS disabled)", () => {
         const resp = await page.goto(`${ORIGIN}${route}`, { waitUntil: "load" });
         expect(resp?.status(), `HTTP status for ${route}`).toBe(200);
 
-        // Required SEO landmarks.
         await expect(page.locator("main").first()).toBeAttached();
         await expect(page.locator("footer").first()).toBeAttached();
         await expect(page.locator("h1").first()).toBeAttached();
 
-        // Headline must contain visible text (not empty).
         const h1Text = (await page.locator("h1").first().textContent()) ?? "";
         expect(h1Text.trim().length, `<h1> text for ${route}`).toBeGreaterThan(3);
 
-        // Body text length proxy — make sure we're not shipping a blank shell.
         const bodyText = (await page.locator("body").innerText()) ?? "";
         expect(
           bodyText.replace(/\s+/g, " ").trim().length,
           `body text length for ${route}`,
         ).toBeGreaterThan(800);
 
-        // SEO essentials in <head>.
         const title = await page.title();
         expect(title.length, `<title> for ${route}`).toBeGreaterThan(10);
 
@@ -94,7 +94,6 @@ test.describe("Prerendered HTML is crawler-friendly (JS disabled)", () => {
         expect(canonical, `canonical for ${route}`).toBeTruthy();
       } finally {
         await context.close();
-        await browser.close();
       }
     });
   }
