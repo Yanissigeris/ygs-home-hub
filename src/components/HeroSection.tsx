@@ -243,8 +243,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   color: "#F7F4EE",
                   animationDelay: "0.35s",
                   animationFillMode: "forwards",
-                  fontSize: "clamp(2.8rem, 11vw, 5.5rem)",
-                  lineHeight: 1.12,
+                  fontSize: "clamp(2.4rem, 5.5vw, 4.8rem)",
+                  lineHeight: 1.1,
                   letterSpacing: "-.01em",
                   fontFeatureSettings: '"liga" 1, "kern" 1',
                   fontStyle: "italic",
@@ -270,7 +270,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </p>
 
               {(primaryCta || secondaryCta) && (
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
+                <div className="mt-[1.4rem] flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
@@ -342,6 +342,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
             {/* Gradient overlay */}
             <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.1) 100%)" }} />
+
+            {/* Left edge separation overlay */}
+            <div className="absolute inset-y-0 left-0 z-[1] w-1/2 pointer-events-none" style={{ background: "linear-gradient(to right, #17303B 0%, transparent 40%)", opacity: 0.35 }} aria-hidden="true" />
 
             {/* Yanis portrait */}
             {agentImage && (
