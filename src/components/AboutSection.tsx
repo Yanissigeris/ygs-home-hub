@@ -36,7 +36,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
   const c = lang === "en" ? contentEn : contentFr;
 
   return (
-    <section ref={ref} className="relative overflow-hidden" style={{ background: "#17303B", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+    <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "#17303B" }}>
       <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16">
         {/* ─── Left column: text ─── */}
         <div className="order-2 lg:order-1">

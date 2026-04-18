@@ -61,7 +61,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const visibleCount = 2;
 
     return (
-      <section ref={ref} className="relative overflow-hidden" style={{ background: "#fff", padding: "clamp(3.5rem, 6vw, 7rem) 0" }}>
+      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#fff" }}>
         {/* Decorative giant quote */}
         <span
           className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"

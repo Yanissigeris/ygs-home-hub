@@ -26,7 +26,7 @@ const InstagramGrid = () => {
   };
 
   return (
-    <section style={{ background: "var(--ink)", padding: "4rem 0" }}>
+    <section className="section-rhythm" style={{ background: "var(--ink)" }}>
       <div className="mx-auto max-w-[1240px] px-6 md:px-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">

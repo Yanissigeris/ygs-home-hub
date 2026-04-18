@@ -92,7 +92,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
   const [activeTab, setActiveTab] = React.useState<"areas" | "services">("areas");
 
   return (
-    <section style={{ padding: "clamp(3.5rem, 6vw, 7rem) 0", background: "var(--cream)" }}>
+    <section className="section-rhythm section-gold-divider" style={{ background: "var(--cream)" }}>
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto">
