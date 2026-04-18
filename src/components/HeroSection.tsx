@@ -227,7 +227,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{ background: "var(--ink)" }}
           >
             {/* Mobile padding: 5rem top (nav), 1.5rem sides, 4rem bottom */}
-            <div className="px-[1.5rem] pt-[5rem] pb-[4rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[clamp(3rem,7vw,7rem)] sm:pb-[clamp(3rem,7vw,7rem)]">
+            <div className="px-[1.5rem] pt-[calc(5rem-40px)] pb-[4rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[calc(clamp(3rem,7vw,7rem)-40px)] sm:pb-[clamp(3rem,7vw,7rem)]">
               {/* Decorative right edge line (desktop) */}
               <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
 
@@ -238,13 +238,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               <h1
-                className="max-w-[16ch] opacity-0 animate-hero-fade-up"
+                className="max-w-[16ch] opacity-0 animate-hero-fade-up hero-h1-fix"
                 style={{
                   color: "#F7F4EE",
                   animationDelay: "0.35s",
                   animationFillMode: "forwards",
-                  fontSize: "clamp(2.4rem, 5.5vw, 4.8rem)",
-                  lineHeight: 1.1,
                   letterSpacing: "-.01em",
                   fontFeatureSettings: '"liga" 1, "kern" 1',
                   fontStyle: "italic",

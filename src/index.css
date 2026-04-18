@@ -382,6 +382,13 @@
   }
 }
 
+/* Hero h1 targeted override — must beat global h1 + mobile !important rule */
+h1.hero-h1-fix {
+  font-size: clamp(2rem, 4.5vw, 3.6rem) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 16px !important;
+}
+
 /* WhatsApp pulse */
 @keyframes whatsapp-pulse {
   0%   { transform: scale(1); opacity: .6; }
