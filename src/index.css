@@ -263,7 +263,7 @@
   .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity .7s var(--ease), transform .7s var(--ease);
+    transition: opacity .4s var(--ease), transform .4s var(--ease);
   }
   .reveal.revealed {
     opacity: 1;
@@ -272,7 +272,7 @@
   .reveal-left {
     opacity: 0;
     transform: translateX(-30px);
-    transition: opacity .7s var(--ease), transform .7s var(--ease);
+    transition: opacity .4s var(--ease), transform .4s var(--ease);
   }
   .reveal-left.revealed {
     opacity: 1;
@@ -281,7 +281,7 @@
   .reveal-right {
     opacity: 0;
     transform: translateX(30px);
-    transition: opacity .7s var(--ease), transform .7s var(--ease);
+    transition: opacity .4s var(--ease), transform .4s var(--ease);
   }
   .reveal-right.revealed {
     opacity: 1;
@@ -295,10 +295,35 @@
       transition: none !important;
     }
   }
-  .d1 { transition-delay: .1s; }
-  .d2 { transition-delay: .2s; }
-  .d3 { transition-delay: .25s; }
-  .d4 { transition-delay: .35s; }
+  /* Reveal delay caps — capped at 150ms max */
+  .d1 { transition-delay: .075s; }
+  .d2 { transition-delay: .1s; }
+  .d3 { transition-delay: .125s; }
+  .d4 { transition-delay: .15s; }
+
+  /* ── Standardized section padding (Sprint 3) ── */
+  .section-rhythm {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @media (min-width: 768px) {
+    .section-rhythm {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+
+  /* ── Gold section divider (Sprint 3) ── */
+  /* Subtle 80px gold rule centered at top of cream sections */
+  .section-gold-divider::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    margin: 0 auto 32px;
+    background-color: #A88A5A;
+    opacity: 0.35;
+  }
 }
 
 /* Fallback — bots & prefers-reduced-motion voient tout */
