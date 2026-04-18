@@ -63,8 +63,37 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
       ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau. All rights reserved.`
       : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
+    const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
+    const ctaHeading = lang === "en" ? "Ready to take action?" : "Prêt à passer à l'action?";
+    const ctaSubtext = lang === "en"
+      ? "Get your free home valuation — no commitment."
+      : "Obtenez votre évaluation gratuite — sans engagement.";
+    const ctaLabel = lang === "en" ? "Free valuation →" : "Évaluation gratuite →";
+
     return (
-      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "#fff", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
+      <footer ref={ref} className={className} style={{ background: "#17303B", color: "#F7F4EF", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
+        {/* ── Final CTA block ── */}
+        <div style={{ background: "#17303B" }}>
+          <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
+            <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "#F7F4EF", lineHeight: 1.2, margin: 0 }}>
+              {ctaHeading}
+            </h2>
+            <p style={{ fontFamily: "var(--sans)", fontSize: 14, color: "rgba(247,244,239,.7)", marginTop: 12, marginBottom: 24 }}>
+              {ctaSubtext}
+            </p>
+            <Link
+              to={ctaHref}
+              className="inline-block transition-colors duration-200"
+              style={{ background: "#A88A5A", color: "#F7F4EF", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#c4a878"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; }}
+            >
+              {ctaLabel}
+            </Link>
+          </div>
+          <div style={{ height: 1, background: "rgba(247,244,239,.2)", width: "100%" }} />
+        </div>
+
         <div className="section-container">
           {/* ── Brand row ── */}
           <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">

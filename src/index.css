@@ -427,11 +427,25 @@
   }
 }
 
+/* Footer link hover — warm gold, no underline */
+footer a:hover {
+  color: #A88A5A !important;
+  text-decoration: none !important;
+}
+
 /* Hero h1 targeted override — must beat global h1 + mobile !important rule */
 h1.hero-h1-fix {
   font-size: clamp(2rem, 4.5vw, 3.6rem) !important;
   line-height: 1.08 !important;
   margin-bottom: 16px !important;
+}
+
+/* Mobile fluid hero headline override */
+@media (max-width: 767px) {
+  h1.hero-h1-fix {
+    font-size: clamp(1.9rem, 8.5vw, 2.8rem) !important;
+    line-height: 1.1 !important;
+  }
 }
 
 /* WhatsApp pulse */
