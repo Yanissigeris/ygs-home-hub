@@ -30,25 +30,15 @@ export const mainNav: NavItem[] = [
       { label: "Guide acheteur", href: "/guide-acheteur-gatineau" },
       { label: "Premier achat", href: "/premier-achat-gatineau" },
       { label: "Acheter depuis Ottawa", href: "/acheter-a-gatineau-depuis-ottawa" },
-    ],
-  },
-  {
-    label: "Relocalisation",
-    children: [
-      { label: "Ottawa → Gatineau", href: "/relocalisation-ottawa-gatineau" },
-      { label: "Montréal → Gatineau", href: "/relocalisation-montreal-gatineau" },
+      { label: "— Plex / Investissement", href: "/investir-plex-gatineau" },
+      { label: "Analyse plex", href: "/analyse-plex-gatineau" },
+      { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
+      { label: "— Relocalisation Ottawa", href: "/relocalisation-ottawa-gatineau" },
+      { label: "Relocalisation Montréal", href: "/relocalisation-montreal-gatineau" },
       { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" },
       { label: "Militaire — mutation", href: "/militaire-gatineau" },
       { label: "Militaire — achat", href: "/acheter-comme-militaire-gatineau" },
       { label: "Militaire — vente", href: "/vendre-lors-dune-mutation-gatineau" },
-    ],
-  },
-  {
-    label: "Plex",
-    children: [
-      { label: "Plex / Investissement", href: "/investir-plex-gatineau" },
-      { label: "Analyse plex", href: "/analyse-plex-gatineau" },
-      { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau" },
     ],
   },
   {
@@ -65,8 +55,15 @@ export const mainNav: NavItem[] = [
       { label: "Pontiac", href: "/pontiac" },
     ],
   },
-  { label: "Blogue", href: "/blogue" },
-  { label: "À propos", href: "/contact-yanis" },
+  {
+    label: "À propos",
+    children: [
+      { label: "À propos / Contact", href: "/contact-yanis" },
+      { label: "Blogue", href: "/blogue" },
+      { label: "Témoignages", href: "/temoignages" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
 ];
 
 export const footerColumns = [
