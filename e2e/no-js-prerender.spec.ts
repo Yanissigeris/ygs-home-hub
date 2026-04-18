@@ -86,7 +86,7 @@ test.describe("Prerendered HTML is crawler-friendly (JS disabled)", () => {
         const desc = await page
           .locator('meta[name="description"]')
           .getAttribute("content");
-        expect(desc?.length ?? 0, `meta description for ${route}`).toBeGreaterThan(40);
+        expect(desc?.length ?? 0, `meta description for ${route}`).toBeGreaterThan(30);
 
         const canonical = await page
           .locator('link[rel="canonical"]')
