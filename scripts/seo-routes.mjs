@@ -6,10 +6,16 @@
  * Keep titles ≤ 60 chars, descriptions ≤ 160 chars where possible.
  * The runtime <PageMeta> component still updates these client-side; this map
  * exists so search-engine crawlers see unique tags without executing JS.
+ *
+ * Blog routes (/blogue/:slug, /en/blog/:slug) are NOT listed here — they are
+ * appended dynamically via getAllSeoRoutes() from blog-extractor.mjs.
  */
+
+import { extractBlogPosts } from "./blog-extractor.mjs";
 
 export const SITE_URL = "https://yanisgauthier.com";
 export const DEFAULT_OG = `${SITE_URL}/og/og-default.jpg`;
+const BLOG_OG = `${SITE_URL}/og/og-blog.jpg`;
 
 /** @type {Record<string, { title: string; description: string; ogImage?: string }>} */
 export const SEO_ROUTES = {
