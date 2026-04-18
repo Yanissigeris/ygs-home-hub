@@ -242,7 +242,7 @@ const SiteHeader = () => {
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain transition-all duration-300" style={{ height: scrolled ? 44 : 52, width: "auto", filter: logoFilter }} loading="eager" decoding="async" />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
@@ -284,7 +284,7 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain transition-all duration-300" style={{ height: scrolled ? 40 : 48, width: "auto", filter: logoFilter }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 43 : 48, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitch transparent={transparent} />

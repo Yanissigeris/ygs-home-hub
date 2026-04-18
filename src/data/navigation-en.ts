@@ -21,26 +21,16 @@ export const mainNavEn: NavItem[] = [
       { label: "Buyer Guide", href: "/en/buyer-guide" },
       { label: "First-Time Buyer", href: "/en/first-time-buyer" },
       { label: "Buy from Ottawa", href: "/en/buy-from-ottawa" },
-    ],
-  },
-  {
-    label: "Relocation",
-    children: [
-      { label: "Ottawa → Gatineau", href: "/en/relocation" },
+      { label: "— Plex / Investment", href: "/en/plex" },
+      { label: "Plex Analysis", href: "/en/plex-analysis" },
+      { label: "Sell a Plex", href: "/en/sell-plex" },
+      { label: "— Ottawa → Gatineau", href: "/en/relocation" },
       { label: "Montréal → Gatineau", href: "/en/montreal-relocation" },
       { label: "Relocation Guide", href: "/en/relocation-guide" },
       { label: "Military — Posting", href: "/en/military" },
       { label: "Military — Relocation", href: "/en/military-relocation" },
       { label: "Military — Buying", href: "/en/military-buyer" },
       { label: "Military — Selling", href: "/en/military-seller" },
-    ],
-  },
-  {
-    label: "Plex",
-    children: [
-      { label: "Plex / Investment", href: "/en/plex" },
-      { label: "Plex Analysis", href: "/en/plex-analysis" },
-      { label: "Sell a Plex", href: "/en/sell-plex" },
     ],
   },
   {
@@ -57,8 +47,15 @@ export const mainNavEn: NavItem[] = [
       { label: "Pontiac", href: "/en/pontiac" },
     ],
   },
-  { label: "Blog", href: "/en/blog" },
-  { label: "About", href: "/en/contact" },
+  {
+    label: "About",
+    children: [
+      { label: "About / Contact", href: "/en/contact" },
+      { label: "Blog", href: "/en/blog" },
+      { label: "Testimonials", href: "/en/testimonials" },
+      { label: "FAQ", href: "/en/faq" },
+    ],
+  },
 ];
 
 export const footerColumnsEn = [
