@@ -22,6 +22,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG } from "./seo-routes.mjs";
+import { extractBlogPosts } from "./blog-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
