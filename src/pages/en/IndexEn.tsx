@@ -1,6 +1,8 @@
 import * as React from "react";
 import PageMeta from "@/components/PageMeta";
+import SEO from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
+import MicroTrustStrip from "@/components/MicroTrustStrip";
 
 import AwardsMarquee from "@/components/AwardsMarquee";
 import ValuationWidget from "@/components/ValuationWidget";
@@ -19,6 +21,7 @@ import InstagramGrid from "@/components/InstagramGrid";
 import CTASection from "@/components/CTASection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
+import LazySection from "@/components/LazySection";
 
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 
@@ -26,9 +29,16 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
+    <SEO
+      title="Real Estate Broker Gatineau | Yanis Gauthier-Sigeris — YGS"
+      description="Real estate broker in Gatineau for 9 years. Sell, buy or invest in Outaouais — clear strategy, honest numbers. Free home valuation."
+      canonical="https://yanisgauthier.com/en"
+      hreflangFr="https://yanisgauthier.com/"
+      hreflangEn="https://yanisgauthier.com/en"
+    />
     <PageMeta
-      title="Real Estate Broker Gatineau"
-      description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Outaouais — clear strategy, honest advice and full support."
+      title="Real Estate Broker Gatineau · Outaouais"
+      description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Aylmer, Hull or Plateau — clear strategy and full support."
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
@@ -47,19 +57,25 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       hideRecognitionCard
     />
 
+    <MicroTrustStrip lang="en" />
     <ValuationWidget lang="en" />
     <QuickActionStrip />
     <AwardsMarquee />
 
     <StatsSection lang="en" />
     <PathwaySection lang="en" />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
     <FeaturedProperties lang="en" />
     <AboutSection lang="en" />
+    <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
 
     <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <AreasServicesSection lang="en" />
+    <div className="section-fade-bridge section-fade-bridge--cream-to-white" aria-hidden="true" />
     <GuideOffersSection lang="en" background="alt" />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <HomeFAQTeaser
       title="Frequently asked questions"
@@ -73,7 +89,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       linkLabel="See all questions"
     />
 
-    <InstagramGrid />
+    <LazySection minHeight={300} rootMargin="300px">
+      <InstagramGrid />
+    </LazySection>
 
     <CTASection
       dark
