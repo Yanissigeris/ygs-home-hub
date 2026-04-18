@@ -66,6 +66,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
     <FeaturedProperties />
     <AboutSection />
+    <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
 
     <TestimonialGrid
       overline="Témoignages"
