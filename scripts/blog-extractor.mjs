@@ -129,7 +129,12 @@ function splitTopLevelObjects(src) {
 }
 
 function matchField(obj, name) {
-  const re = new RegExp(`(?:^|[\\s,{])${name}:\\s*["']([^"']+)["']`);
+  // Match a string literal value, respecting the opening quote type so
+  // apostrophes inside double-quoted strings don't terminate the match.
+  // Supports double quotes, single quotes, and backticks.
+  const re = new RegExp(
+    `(?:^|[\\s,{])${name}:\\s*(?:"((?:[^"\\\\]|\\\\.)*)"|'((?:[^'\\\\]|\\\\.)*)'|\`((?:[^\`\\\\]|\\\\.)*)\`)`,
+  );
   const m = obj.match(re);
-  return m ? m[1] : null;
+  return m ? (m[1] ?? m[2] ?? m[3] ?? null) : null;
 }
