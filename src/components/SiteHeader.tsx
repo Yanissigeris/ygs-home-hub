@@ -16,7 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import ygsLogo from "@/assets/ygs-logo.webp";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
-import { mainNav, type NavItem } from "@/data/navigation";
+import { mainNav, type NavItem, type NavChild } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
 /* ── Desktop dropdown item ── */
