@@ -434,6 +434,14 @@ h1.hero-h1-fix {
   margin-bottom: 16px !important;
 }
 
+/* Mobile fluid hero headline override */
+@media (max-width: 767px) {
+  h1.hero-h1-fix {
+    font-size: clamp(1.9rem, 8.5vw, 2.8rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
 /* WhatsApp pulse */
 @keyframes whatsapp-pulse {
   0%   { transform: scale(1); opacity: .6; }
