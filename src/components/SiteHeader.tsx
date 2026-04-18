@@ -31,7 +31,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const hoverColor = transparent ? "#FFFFFF" : "#17303B";
   const underlineColor = transparent ? "#F7F4EE" : "#17303B";
 
-  if (!item.children) {
+  if (!item.children && !item.columns) {
     const active = pathname === item.href;
     return (
       <Link
@@ -51,6 +51,89 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         {item.label}
         <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
+    );
+  }
+
+  // Mega-menu (multi-column) variant
+  if (item.columns) {
+    const allLinks = item.columns.flatMap((c) => c.links);
+    const isChildActive = allLinks.some((l) => pathname === l.href);
+    return (
+      <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+        <button
+          className="group relative flex items-center gap-1 whitespace-nowrap transition-colors"
+          style={{
+            fontSize: "13px",
+            letterSpacing: "0.04em",
+            fontWeight: isChildActive ? 600 : 500,
+            color: isChildActive ? activeColor : defaultColor,
+            padding: ".4rem .7rem",
+            borderRadius: 3,
+          }}
+          onClick={() => setOpen((p) => !p)}
+          aria-expanded={open}
+          aria-haspopup="true"
+          onMouseEnter={(e) => { e.currentTarget.style.color = hoverColor; }}
+          onMouseLeave={(e) => { if (!isChildActive) e.currentTarget.style.color = defaultColor; }}
+        >
+          {item.label}
+          <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+          <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
+        </button>
+        <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
+          <div
+            className="overflow-hidden p-5"
+            style={{
+              borderRadius: 3,
+              border: "1px solid var(--border)",
+              background: "rgba(247,244,238,.98)",
+              boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)",
+              display: "grid",
+              gridTemplateColumns: `repeat(${item.columns.length}, minmax(13rem, 1fr))`,
+              gap: "1.25rem",
+              minWidth: `${item.columns.length * 14}rem`,
+            }}
+          >
+            {item.columns.map((col) => (
+              <div key={col.title}>
+                <div
+                  style={{
+                    fontSize: "11px",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                    color: "#A88A5A",
+                    padding: "0 .75rem .5rem",
+                    borderBottom: "1px solid rgba(168,138,90,.2)",
+                    marginBottom: ".25rem",
+                  }}
+                >
+                  {col.title}
+                </div>
+                {col.links.map((child) => (
+                  <Link
+                    key={child.href}
+                    to={child.href}
+                    onClick={() => setOpen(false)}
+                    className="block px-3 py-2 transition-colors"
+                    style={{
+                      fontSize: "13px",
+                      letterSpacing: "0.03em",
+                      fontWeight: pathname === child.href ? 600 : 500,
+                      color: pathname === child.href ? "#17303B" : "#4A5568",
+                      borderRadius: 3,
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "#17303B"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     );
   }
 
