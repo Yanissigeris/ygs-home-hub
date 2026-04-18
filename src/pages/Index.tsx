@@ -63,6 +63,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <StatsSection />
     <PathwaySection />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
     <FeaturedProperties />
     <AboutSection />
 
@@ -73,9 +74,12 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       reviewsPageLabel="Voir tous les témoignages"
       reviewsPageHref="/temoignages"
     />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <AreasServicesSection />
+    <div className="section-fade-bridge section-fade-bridge--cream-to-white" aria-hidden="true" />
     <GuideOffersSection background="alt" />
+    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <HomeFAQTeaser
       title="Questions fréquentes"

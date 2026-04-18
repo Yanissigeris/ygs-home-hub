@@ -324,6 +324,20 @@
     background-color: #A88A5A;
     opacity: 0.35;
   }
+
+  /* ── Cream ↔ White section gradient bridges (Sprint 4) ──
+     Inserted between adjacent cream and white sections to soften the seam. */
+  .section-fade-bridge {
+    height: 32px;
+    width: 100%;
+    pointer-events: none;
+  }
+  .section-fade-bridge--white-to-cream {
+    background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 100%);
+  }
+  .section-fade-bridge--cream-to-white {
+    background: linear-gradient(to bottom, var(--cream) 0%, #ffffff 100%);
+  }
 }
 
 /* Fallback — bots & prefers-reduced-motion voient tout */
