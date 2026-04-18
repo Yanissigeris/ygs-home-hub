@@ -619,3 +619,30 @@ export const SEO_ROUTES = {
     description: "Terms of use for yanisgauthier.com.",
   },
 };
+
+/**
+ * Returns SEO_ROUTES merged with one entry per published blog post (FR + EN).
+ * Lazy/async because blog data is parsed from TS source files.
+ *
+ * @returns {Promise<Record<string, { title: string; description: string; ogImage?: string }>>}
+ */
+export async function getAllSeoRoutes() {
+  const posts = await extractBlogPosts();
+  const out = { ...SEO_ROUTES };
+  for (const p of posts) {
+    out[`/blogue/${p.slug}`] = {
+      title: p.seoTitle || p.title || "Article du blogue YGS",
+      description:
+        p.metaDescription || p.excerpt || "Article du blogue YGS sur l'immobilier en Outaouais.",
+      ogImage: BLOG_OG,
+    };
+    out[`/en/blog/${p.slugEn}`] = {
+      title: p.seoTitleEn || p.titleEn || "YGS blog article",
+      description:
+        p.metaDescriptionEn || p.excerptEn || "YGS blog article on Outaouais real estate.",
+      ogImage: BLOG_OG,
+    };
+  }
+  return out;
+}
+
