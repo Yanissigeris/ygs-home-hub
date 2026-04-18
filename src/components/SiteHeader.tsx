@@ -253,21 +253,27 @@ const SiteHeader = () => {
         <div className="ml-4 shrink-0 xl:ml-5">
           <Link
             to={ctaHref}
-            className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
+            className="inline-flex items-center justify-center whitespace-nowrap"
             style={{
               height: 40,
               padding: "0 1.4rem",
-              background: "transparent",
-              color: ctaTextColor,
+              background: scrolled && !transparent ? "#17303B" : "transparent",
+              color: scrolled && !transparent ? "#F7F4EF" : ctaTextColor,
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
               borderRadius: 999,
-              border: `1.5px solid ${ctaBorderColor}`,
+              border: scrolled && !transparent ? "none" : `1.5px solid ${ctaBorderColor}`,
               transition: "all .2s ease",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
+            onMouseEnter={(e) => {
+              if (scrolled && !transparent) { e.currentTarget.style.background = "#0f2530"; }
+              else { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }
+            }}
+            onMouseLeave={(e) => {
+              if (scrolled && !transparent) { e.currentTarget.style.background = "#17303B"; }
+              else { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }
+            }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
