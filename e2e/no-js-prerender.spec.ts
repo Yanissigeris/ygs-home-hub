@@ -21,15 +21,17 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
 import sirv from "sirv";
-import { SEO_ROUTES } from "../scripts/seo-routes.mjs";
+// @ts-expect-error — .mjs ESM module imported into a .spec.ts file
+import { getAllSeoRoutes } from "../scripts/seo-routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 const PORT = 4178;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 
-// All prerendered routes (FR + EN). Source of truth: scripts/seo-routes.mjs.
-const ROUTES = Object.keys(SEO_ROUTES);
+// All prerendered routes (FR + EN, including blog articles).
+// Source of truth: scripts/seo-routes.mjs + blog data files.
+const ROUTES = Object.keys(await getAllSeoRoutes());
 
 let server: Server;
 let browser: Browser;

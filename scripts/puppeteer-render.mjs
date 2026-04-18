@@ -25,7 +25,7 @@ import { fileURLToPath } from "node:url";
 import sirv from "sirv";
 import puppeteer from "puppeteer";
 
-import { SEO_ROUTES } from "./seo-routes.mjs";
+import { getAllSeoRoutes } from "./seo-routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
@@ -173,7 +173,8 @@ async function runWithConcurrency(items, worker, limit) {
 }
 
 export async function puppeteerRender({ extraRoutes = [] } = {}) {
-  const routes = [...Object.keys(SEO_ROUTES), ...extraRoutes];
+  const allRoutes = await getAllSeoRoutes();
+  const routes = [...Object.keys(allRoutes), ...extraRoutes];
   console.log(`\n🤖 Puppeteer prerender: ${routes.length} routes…`);
 
   const server = await startStaticServer(DIST);
