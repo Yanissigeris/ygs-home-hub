@@ -49,6 +49,105 @@ export interface BlogPost {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "plex-gatineau-mars-2026",
+    featuredImage: blogPlexInvestment,
+    slugEn: "plex-gatineau-march-2026",
+    title: "Plex à Gatineau en mars 2026 : le marché qui résiste à tout",
+    titleEn: "Plex in Gatineau, March 2026: The Market That Holds Strong",
+    seoTitle: "Plex à Gatineau : le marché de mars 2026 en chiffres — Analyse YGS",
+    seoTitleEn: "Plex in Gatineau: March 2026 Market in Numbers — YGS Analysis",
+    metaDescription: "Ventes en hausse de 19 %, délai de 23 jours. Les plex à Gatineau bougent vite en 2026. Voici ce que les chiffres de mars signifient pour vous.",
+    metaDescriptionEn: "Sales up 19%, 23-day average. Plex in Gatineau move fast in 2026. Here's what March numbers mean for you.",
+    excerpt: "Pendant que les unifamiliales reculent et que les condos s'accumulent, les plex en Outaouais font exactement le contraire. Analyse de mars 2026.",
+    excerptEn: "While single-family sales drop and condos pile up, plex in the Outaouais do the exact opposite. March 2026 analysis.",
+    category: "MARCHÉ · PLEX",
+    categoryEn: "MARKET · PLEX",
+    publishDate: "2026-04-18",
+    published: true,
+    body: `Pendant que les ventes unifamiliales reculent et que les condos s'accumulent sur le marché, une catégorie fait exactement le contraire. Les plex en Outaouais.
+
+> En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours — contre 65 jours en mars 2025 — soit une compression de 42 jours en un an, selon la Chambre immobilière de l'Outaouais.
+
+### Pourquoi les plex se vendent-ils aussi vite ?
+
+L'inventaire global a augmenté de 29 % en Outaouais. La demande d'investisseurs et de propriétaires-occupants dépasse l'offre dans cette catégorie. Les bons dossiers ne restent pas longtemps sur le marché.
+
+### Ce que le prix médian de 585 500 $ signifie
+
+Un 4-logements à 585 500 $ doit générer autour de 5 850 $ à 6 000 $ de revenus bruts mensuels pour atteindre un ratio d'environ 1 % — le seuil de base en Outaouais. C'est pourquoi l'analyse avant l'offre est non négociable.
+
+### Le reste du marché
+
+Ventes unifamiliales -9 %, copropriétés -32 %, inventaire en hausse. Plus de choix pour les acheteurs, plus de pression sur le positionnement de prix.
+
+## Ce que je vois sur le terrain
+
+Les plex ne durent pas. Deux offres, parfois trois sur la même propriété. Le ralentissement des unifamiliales vient des vendeurs, pas des acheteurs — l'inventaire a explosé. Pour les condos : l'offre s'accumule, et la première semaine sur le marché est décisive.
+
+## FAQ
+
+**Q : Est-ce le bon moment pour acheter un plex à Gatineau en 2026 ?**
+R : 23 jours de délai moyen en mars 2026. Si votre financement est prêt et votre analyse tient la route, attendre ne joue pas en votre faveur.
+
+**Q : Comment évaluer la rentabilité ?**
+R : Divisez les revenus bruts mensuels par le prix d'achat. Ratio cible : 1 %. Les revenus déclarés ne sont pas toujours les revenus au marché — c'est l'écart que j'analyse avant chaque offre.
+
+**Q : Quel prix payer ?**
+R : Médian à 585 500 $ en mars 2026. Le bon prix dépend du secteur et des loyers réels.
+
+**Q : Plex sous 500 000 $ possible ?**
+R : Oui, à [Buckingham](/buckingham), [Masson-Angers](/masson-angers) et [Gatineau centre](/gatineau-centre) — avec une analyse de secteur avant toute offre.
+
+---
+
+**Vous regardez un plex en Outaouais — ou vous pensez vendre le vôtre ?** J'analyse les revenus réels, le ratio et la valeur marchande. [Demandez votre analyse plex](/analyse-plex-gatineau) ou [contactez-moi](/contact-yanis) — je reviens sous 24h, sans engagement.
+
+---
+
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau-centre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
+    bodyEn: `While single-family sales drop and condos pile up on the market, one category is doing the exact opposite. Plex in the Outaouais.
+
+> In March 2026, plex in Gatineau sell in an average of 23 days — versus 65 days in March 2025 — a 42-day compression in one year, according to the Outaouais Real Estate Board.
+
+### Why are plex selling so fast?
+
+Overall inventory rose 29% in the Outaouais. Investor and owner-occupant demand exceeds supply in this category. Good listings don't last long on the market.
+
+### What the $585,500 median price means
+
+A 4-unit at $585,500 needs to generate roughly $5,850 to $6,000 in gross monthly income to hit a ratio of about 1% — the baseline in the Outaouais. That's why pre-offer analysis is non-negotiable.
+
+### The rest of the market
+
+Single-family sales -9%, condos -32%, inventory rising. More choice for buyers, more pressure on price positioning.
+
+## What I'm seeing on the ground
+
+Plex don't last. Two offers, sometimes three on the same property. The single-family slowdown comes from sellers, not buyers — inventory has exploded. For condos: supply is piling up, and the first week on market is decisive.
+
+## FAQ
+
+**Q: Is now a good time to buy a plex in Gatineau in 2026?**
+A: 23-day average in March 2026. If your financing is ready and your analysis holds up, waiting doesn't work in your favor.
+
+**Q: How do I evaluate profitability?**
+A: Divide gross monthly income by purchase price. Target ratio: 1%. Reported income isn't always market income — that gap is what I analyze before every offer.
+
+**Q: What price should I pay?**
+A: Median is $585,500 in March 2026. The right price depends on the area and actual rents.
+
+**Q: Plex under $500,000 possible?**
+A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and [Gatineau centre](/en/gatineau-centre) — with area analysis before any offer.
+
+---
+
+**Looking at a plex in the Outaouais — or thinking of selling yours?** I analyze real income, ratio and market value. [Request a plex analysis](/en/plex-analysis) or [contact me](/en/contact) — I respond within 24h, no commitment.
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau-centre), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 transactions.*`,
+  },
+  {
     slug: "marche-immobilier-gatineau-2025",
     featuredImage: blogMarket,
     slugEn: "gatineau-real-estate-market-2025",
