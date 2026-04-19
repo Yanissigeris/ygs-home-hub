@@ -7,12 +7,17 @@ const ScrollProgress = () => {
   useEffect(() => {
     const onScroll = () => {
       if (ticking.current) return;
-      ticking.current = true;
-      requestAnimationFrame(() => {
-        const scrolled = window.scrollY;
-        const total = document.body.scrollHeight - window.innerHeight;
-        setProgress(total > 0 ? (scrolled / total) * 100 : 0);
-        ticking.current = false;
+ticking.current = true;
+requestAnimationFrame(() => {
+  const scrollEl = document.scrollingElement || document.documentElement;
+  const scrolled = window.scrollY || scrollEl.scrollTop;
+  const total = Math.max(
+    scrollEl.scrollHeight - scrollEl.clientHeight,
+    document.body.scrollHeight - window.innerHeight,
+    1
+  );
+  setProgress(total > 0 ? (scrolled / total) * 100 : 0);
+  ticking.current = false;
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
