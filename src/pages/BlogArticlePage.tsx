@@ -1,7 +1,6 @@
-import { useParams, Navigate, Link, useLocation } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
-import CTASection from "@/components/CTASection";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -32,12 +31,7 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
         "@type": "Organization",
         name: "YGS — Yanis Gauthier-Sigeris",
         url: BASE_URL,
-        logo: {
-          "@type": "ImageObject",
-          url: `${BASE_URL}/og-image.png`,
-          width: 1200,
-          height: 630,
-        },
+        logo: { "@type": "ImageObject", url: `${BASE_URL}/og-image.png`, width: 1200, height: 630 },
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       inLanguage: isFr ? "fr-CA" : "en-CA",
@@ -49,11 +43,46 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
     script.id = "ygs-blogposting-jsonld";
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
-
     return () => { script.remove(); };
   }, [post, isFr, url]);
 
   return null;
+};
+
+// Scroll progress bar — gold, 3px, top of viewport
+const ReadingProgressBar = () => {
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const update = () => {
+      const h = document.documentElement;
+      const scrollTop = h.scrollTop || document.body.scrollTop;
+      const scrollHeight = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      setProgress(scrollHeight > 0 ? Math.min(100, (scrollTop / scrollHeight) * 100) : 0);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+  return (
+    <div
+      aria-hidden="true"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        height: "3px",
+        zIndex: 100,
+        background: "rgba(168,138,90,0.12)",
+      }}
+    >
+      <div style={{ height: "100%", width: `${progress}%`, background: "#A88A5A", transition: "width 0.05s linear" }} />
+    </div>
+  );
 };
 
 const BlogArticlePage = () => {
@@ -62,14 +91,10 @@ const BlogArticlePage = () => {
   const post = slug ? getPostBySlug(slug) : undefined;
   const isFr = lang === "fr";
 
-  // All hooks must be before any early return
   useEffect(() => {
     if (!post || !post.published) return;
-    const frSlug = post.slug;
-    const enSlug = post.slugEn;
-    const frUrl = `${BASE_URL}/blogue/${frSlug}`;
-    const enUrl = `${BASE_URL}/en/blog/${enSlug}`;
-
+    const frUrl = `${BASE_URL}/blogue/${post.slug}`;
+    const enUrl = `${BASE_URL}/en/blog/${post.slugEn}`;
     const createLink = (hreflang: string, href: string) => {
       const link = document.createElement("link");
       link.setAttribute("rel", "alternate");
@@ -78,13 +103,11 @@ const BlogArticlePage = () => {
       document.head.appendChild(link);
       return link;
     };
-
     const links = [
       createLink("fr-CA", frUrl),
       createLink("en-CA", enUrl),
       createLink("x-default", frUrl),
     ];
-
     return () => { links.forEach(l => l.remove()); };
   }, [post]);
 
@@ -93,23 +116,36 @@ const BlogArticlePage = () => {
   const slugify = (text: string) =>
     text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
 
-  const tocItems = useMemo(() => {
-    if (!body) return [];
-    const items: { level: number; text: string; id: string }[] = [];
-    body.split("\n").forEach((line) => {
-      const trimmed = line.trim();
-      if (trimmed.startsWith("## ") && !trimmed.startsWith("### ")) {
-        const text = trimmed.slice(3);
-        items.push({ level: 2, text, id: slugify(text) });
-      } else if (trimmed.startsWith("### ")) {
-        const text = trimmed.slice(4);
-        items.push({ level: 3, text, id: slugify(text) });
-      }
-    });
-    return items;
+  // Reading time (200 wpm)
+  const readingTime = useMemo(() => {
+    if (!body) return 0;
+    const words = body.split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200));
   }, [body]);
 
-  const showToc = tocItems.filter((t) => t.level === 2).length >= 3;
+  // Split title into 2-3 lines for hero (ligne 3 = part after first colon if present)
+  const titleParts = useMemo(() => {
+    const t = post && post.published ? (isFr ? post.title : post.titleEn) : "";
+    const colonIdx = t.indexOf(":");
+    if (colonIdx > 0) {
+      const left = t.slice(0, colonIdx).trim();
+      const right = t.slice(colonIdx + 1).trim();
+      // Split left in two lines on first space after halfway if possible
+      const half = Math.floor(left.length / 2);
+      const spaceIdx = left.indexOf(" ", half);
+      if (spaceIdx > 0) {
+        return { line1: left.slice(0, spaceIdx).trim(), line2: left.slice(spaceIdx + 1).trim(), line3: right };
+      }
+      return { line1: left, line2: "", line3: right };
+    }
+    // No colon: split into 2 chunks
+    const half = Math.floor(t.length / 2);
+    const spaceIdx = t.indexOf(" ", half);
+    if (spaceIdx > 0) {
+      return { line1: t.slice(0, spaceIdx).trim(), line2: t.slice(spaceIdx + 1).trim(), line3: "" };
+    }
+    return { line1: t, line2: "", line3: "" };
+  }, [post, isFr]);
 
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
@@ -119,28 +155,30 @@ const BlogArticlePage = () => {
   const seoTitle = isFr ? post.seoTitle : post.seoTitleEn;
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
   const category = isFr ? post.category : post.categoryEn;
+  const excerpt = isFr ? post.excerpt : post.excerptEn;
   const dateStr = new Date(post.publishDate).toLocaleDateString(
     isFr ? "fr-CA" : "en-CA",
     { year: "numeric", month: "long", day: "numeric" }
   );
   const blogHref = isFr ? "/blogue" : "/en/blog";
   const ctaHref = isFr ? "/evaluation-gratuite-gatineau" : "/en/home-valuation";
-  const contactHref = isFr ? "/contact-yanis" : "/en/contact";
 
-  // Related posts (same category, exclude current)
-  const related = getPublishedPosts(isFr ? "fr" : "en")
-    .filter((p) => {
-      const cat = isFr ? p.category : p.categoryEn;
-      const s = isFr ? p.slug : p.slugEn;
-      return cat === category && s !== slug;
-    })
-    .slice(0, 3);
+  // Detect FAQ section
+  const hasFaq = /^##\s*(FAQ|Questions fréquentes|Frequently asked)/im.test(body);
 
-  // Simple markdown-ish renderer for ## and ### headings, bold, lists, paragraphs
+  // Next post (chronological order in published list)
+  const allPosts = getPublishedPosts(isFr ? "fr" : "en");
+  const currentIdx = allPosts.findIndex((p) => (isFr ? p.slug : p.slugEn) === slug);
+  const nextPost = currentIdx >= 0 && currentIdx < allPosts.length - 1 ? allPosts[currentIdx + 1] : null;
+
+  // Body renderer with drop cap on first paragraph + styled blockquotes + FAQ extraction
   const renderBody = (md: string) => {
     const lines = md.split("\n");
     const elements: JSX.Element[] = [];
+    const faqItems: { q: string; a: string }[] = [];
     let listItems: string[] = [];
+    let firstParagraphRendered = false;
+    let inFaq = false;
 
     const flushList = () => {
       if (listItems.length > 0) {
@@ -157,22 +195,82 @@ const BlogArticlePage = () => {
 
     const formatInline = (text: string) =>
       text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='text-accent underline underline-offset-2 hover:text-accent/80 transition-colors'>$1</a>")
-        .replace(/\*\*(.+?)\*\*/g, "<strong class='text-foreground font-semibold'>$1</strong>");
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='underline underline-offset-2 transition-colors' style='color:#A88A5A'>$1</a>")
+        .replace(/\*\*(.+?)\*\*/g, "<strong style='color:#17303B' class='font-semibold'>$1</strong>");
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
+      const raw = lines[i];
+      const line = raw.trim();
+
+      // FAQ detection — once we hit ## FAQ, capture pairs until next ##
+      if (/^##\s*(FAQ|Questions fréquentes|Frequently asked)/i.test(line)) {
+        flushList();
+        inFaq = true;
+        continue;
+      }
+      if (inFaq && line.startsWith("## ")) {
+        inFaq = false;
+        // fall through to normal handling
+      }
+
+      if (inFaq) {
+        // Q : ... / Q: ...
+        const qMatch = line.match(/^Q\s*[:：]\s*(.+)$/i);
+        const aMatch = line.match(/^R\s*[:：]\s*(.+)$/i) || line.match(/^A\s*[:：]\s*(.+)$/i);
+        if (qMatch) {
+          faqItems.push({ q: qMatch[1].trim(), a: "" });
+        } else if (aMatch && faqItems.length > 0) {
+          faqItems[faqItems.length - 1].a = aMatch[1].trim();
+        } else if (line && faqItems.length > 0 && faqItems[faqItems.length - 1].a) {
+          faqItems[faqItems.length - 1].a += " " + line;
+        }
+        continue;
+      }
 
       if (line.startsWith("### ")) {
         flushList();
         const text = line.slice(4);
-        const id = slugify(text);
-        elements.push(<h3 key={i} id={id} className="mt-8 mb-3 text-lg font-semibold text-foreground scroll-mt-24">{text}</h3>);
+        elements.push(
+          <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#17303B", fontSize: "22px", fontWeight: 500, lineHeight: 1.25 }}>
+            {text}
+          </h3>
+        );
       } else if (line.startsWith("## ")) {
         flushList();
         const text = line.slice(3);
-        const id = slugify(text);
-        elements.push(<h2 key={i} id={id} className="mt-10 mb-4 text-xl sm:text-2xl font-bold text-foreground scroll-mt-24">{text}</h2>);
+        elements.push(
+          <h2 key={i} id={slugify(text)} className="mt-12 mb-4 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#17303B", fontSize: "30px", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+            {text}
+          </h2>
+        );
+      } else if (line.startsWith("> ")) {
+        flushList();
+        const text = line.slice(2);
+        elements.push(
+          <blockquote
+            key={i}
+            className="my-7"
+            style={{
+              borderLeft: "3px solid #A88A5A",
+              background: "#ECEAE2",
+              padding: "24px 28px",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              fontSize: "20px",
+              lineHeight: 1.4,
+              color: "#17303B",
+              fontWeight: 400,
+            }}
+          >
+            <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
+            <div className="mt-4 flex items-center gap-2">
+              <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
+              <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
+              </span>
+            </div>
+          </blockquote>
+        );
       } else if (line.startsWith("- ")) {
         listItems.push(line.slice(2));
       } else if (/^\d+\.\s/.test(line)) {
@@ -182,138 +280,353 @@ const BlogArticlePage = () => {
         flushList();
       } else {
         flushList();
-        elements.push(<p key={i} className="my-3 text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: formatInline(line) }} />);
+        if (!firstParagraphRendered) {
+          firstParagraphRendered = true;
+          const first = line.charAt(0);
+          const rest = line.slice(1);
+          elements.push(
+            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }}>
+              <span
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "80px",
+                  color: "#17303B",
+                  float: "left",
+                  lineHeight: 0.8,
+                  marginRight: "8px",
+                  marginTop: "4px",
+                  fontWeight: 400,
+                }}
+              >
+                {first}
+              </span>
+              <span dangerouslySetInnerHTML={{ __html: formatInline(rest) }} />
+            </p>
+          );
+        } else {
+          elements.push(
+            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
+          );
+        }
       }
     }
     flushList();
-    return elements;
+
+    return { elements, faqItems };
   };
 
+  const { elements: bodyElements, faqItems } = renderBody(body);
+
+  // Tags = derive from category words
+  const tags = category.split(/[·•|,]/).map((t) => t.trim()).filter(Boolean);
 
   return (
     <>
       <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
+      <ReadingProgressBar />
 
-      {/* Featured image banner */}
-      {post.featuredImage && (
-        <div className="w-full aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
-          <img src={post.featuredImage} alt={title} className="h-full w-full object-cover" width={1200} height={672} loading="eager" decoding="auto" {...{"fetchpriority": "high"} as any} />
-        </div>
-      )}
-
-      {/* Article header */}
-      <article className="section-container pt-10 pb-16 sm:pt-14 sm:pb-20">
-        <div className="mx-auto max-w-3xl">
-          {/* Breadcrumb */}
-          <nav className="mb-8 flex items-center gap-2 text-[0.8125rem] text-muted-foreground/60">
-            <Link to={blogHref} className="hover:text-foreground transition-colors">
-              {isFr ? "Blogue" : "Blog"}
-            </Link>
-            <span>/</span>
-            <span className="text-foreground/80 truncate">{title}</span>
-          </nav>
-
-          {/* Meta */}
-          <div className="flex flex-wrap items-center gap-3 mb-5">
-            <span className="inline-flex h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{category}</span>
-            <time className="text-[0.8125rem] text-muted-foreground/60">{dateStr}</time>
+      {/* Editorial split hero */}
+      <section className="w-full">
+        <div className="grid md:grid-cols-2" style={{ minHeight: "360px" }}>
+          {/* Left — petrol */}
+          <div style={{ background: "#17303B", padding: "48px" }} className="flex flex-col justify-between gap-8">
+            <div>
+              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.5)" }}>
+                <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "#A88A5A" }}>
+                  {isFr ? "Blogue" : "Blog"}
+                </Link>
+                <span>/</span>
+                <span style={{ color: "rgba(247,244,239,0.7)" }} className="truncate">{category}</span>
+              </nav>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span
+                  className="inline-flex items-center uppercase font-semibold"
+                  style={{
+                    border: "1px solid #A88A5A",
+                    color: "#A88A5A",
+                    fontSize: "10px",
+                    letterSpacing: "0.16em",
+                    padding: "6px 12px",
+                    borderRadius: "999px",
+                  }}
+                >
+                  {category}
+                </span>
+                <time style={{ color: "rgba(247,244,239,0.5)", fontSize: "11px" }}>{dateStr}</time>
+              </div>
+              <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
+                <span className="block">{titleParts.line1}</span>
+                {titleParts.line2 && (
+                  <span className="block" style={{ paddingLeft: "28px" }}>{titleParts.line2}</span>
+                )}
+              </h1>
+            </div>
+            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.5)", fontSize: "10px", letterSpacing: "0.18em" }}>
+              <span style={{ width: "16px", height: "1px", background: "#A88A5A" }} />
+              {readingTime} {isFr ? "min de lecture" : "min read"}
+            </div>
           </div>
 
-          {/* Title */}
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-foreground">{title}</h1>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            {isFr ? post.excerpt : post.excerptEn}
-          </p>
-
-          <hr className="my-8 border-border/30" />
-
-          {/* Table of Contents */}
-          {showToc && (
-            <nav className="mb-10 rounded-2xl border border-border/30 bg-secondary/20 p-6 sm:p-8">
-              <p className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mb-4">
-                {isFr ? "Dans cet article" : "In this article"}
+          {/* Right — cream */}
+          <div
+            style={{ background: "#F7F4EF", borderLeft: "3px solid #A88A5A", padding: "48px" }}
+            className="flex flex-col justify-between gap-8"
+          >
+            <div>
+              {titleParts.line3 && (
+                <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: "#A88A5A", fontWeight: 300, fontSize: "clamp(2rem, 4.5vw, 56px)", lineHeight: 0.95, letterSpacing: "-0.01em" }}>
+                  {titleParts.line3}
+                </h2>
+              )}
+              <p className="mt-6" style={{ color: "#3A4D55", fontSize: "15px", lineHeight: 1.65 }}>
+                {excerpt}
               </p>
-              <ol className="space-y-1.5">
-                {tocItems.filter((t) => t.level === 2).map((item, i) => (
-                  <li key={item.id}>
-                    <a
-                      href={`#${item.id}`}
-                      className="group flex items-start gap-3 rounded-lg px-3 py-1.5 text-[0.875rem] text-muted-foreground transition-colors hover:bg-accent/5 hover:text-accent"
-                    >
-                      <span className="mt-px text-[0.75rem] font-medium text-muted-foreground/40 group-hover:text-accent/60">{i + 1}.</span>
-                      <span>{item.text}</span>
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          )}
+            </div>
+            <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
+              {[
+                { value: "+19%", label: isFr ? "Plex" : "Plex" },
+                { value: "23 j", label: isFr ? "Délai" : "Days" },
+                { value: isFr ? "585 500 $" : "$585,500", label: isFr ? "Prix médian" : "Median" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "#17303B", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
+                    {s.value}
+                  </div>
+                  <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.14em" }}>
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Body + sidebar */}
+      <article className="section-container py-12 sm:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_240px]">
           {/* Body */}
-          <div className="prose-article">
-            {renderBody(body)}
+          <div className="lg:pr-10" style={{ borderRight: "1px solid #E0DBD1" }}>
+            <div className="max-w-none" style={{ color: "#3A4D55" }}>
+              {bodyElements}
+            </div>
+
+            {/* FAQ section */}
+            {hasFaq && faqItems.length > 0 && (
+              <section className="mt-16">
+                <h2
+                  className="pb-3"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: "#17303B",
+                    fontSize: "clamp(1.875rem, 4vw, 40px)",
+                    fontWeight: 400,
+                    lineHeight: 1.1,
+                    borderBottom: "2px solid #17303B",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  FAQ
+                </h2>
+                <div className="mt-6">
+                  {faqItems.map((item, i) => (
+                    <div
+                      key={i}
+                      className="grid gap-4 py-6 sm:grid-cols-[40px_1fr]"
+                      style={{ borderTop: i === 0 ? "none" : "1px solid #E0DBD1" }}
+                    >
+                      <span style={{ fontFamily: "'Cormorant Garamond', serif", color: "#A88A5A", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <p style={{ color: "#17303B", fontSize: "14px", fontWeight: 500, lineHeight: 1.5 }}>{item.q}</p>
+                        <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.65 }}>{item.a}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
-          {/* Author */}
-          <div className="mt-12 rounded-2xl border border-border/30 bg-secondary/20 p-6 sm:p-8">
-            <p className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mb-2">
-              {isFr ? "À propos de l'auteur" : "About the Author"}
-            </p>
-            <p className="font-semibold text-foreground">Yanis Gauthier-Sigeris</p>
-            <p className="mt-1 text-[0.875rem] text-muted-foreground">
-              {isFr
-                ? "Courtier immobilier à Gatineau · RE/MAX Direct · Spécialisé en revente résidentielle et investissement en Outaouais."
-                : "Real Estate Broker in Gatineau · RE/MAX Direct · Specializing in residential resale and investment in the Outaouais."}
-            </p>
-          </div>
+          {/* Sidebar */}
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" style={{ padding: "0" }}>
+            {/* Source block */}
+            <div style={{ borderLeft: "2px solid #A88A5A", background: "#ECEAE2", padding: "20px 22px" }}>
+              <p className="uppercase" style={{ color: "#A88A5A", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+                {isFr ? "Source" : "Source"}
+              </p>
+              <p className="mt-2" style={{ color: "#17303B", fontSize: "12px", lineHeight: 1.5 }}>
+                {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
+              </p>
+            </div>
+
+            {/* CTA block */}
+            <div style={{ background: "#17303B", padding: "28px 24px" }}>
+              <p className="uppercase" style={{ color: "#A88A5A", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+                {isFr ? "Parler à Yanis" : "Talk to Yanis"}
+              </p>
+              <h3 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontSize: "22px", fontWeight: 400, lineHeight: 1.15 }}>
+                {isFr ? (
+                  <>Une analyse <em style={{ color: "#A88A5A", fontStyle: "italic" }}>sur mesure</em></>
+                ) : (
+                  <>A <em style={{ color: "#A88A5A", fontStyle: "italic" }}>tailored</em> analysis</>
+                )}
+              </h3>
+              <p className="mt-2" style={{ color: "rgba(247,244,239,0.55)", fontSize: "12px", lineHeight: 1.5 }}>
+                {isFr ? "Revenus réels, ratio, valeur. Sous 24 h." : "Real income, ratio, value. Within 24 h."}
+              </p>
+              <Link
+                to={ctaHref}
+                className="mt-5 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+                style={{
+                  border: "1px solid #A88A5A",
+                  color: "#A88A5A",
+                  fontSize: "11px",
+                  letterSpacing: "0.12em",
+                  padding: "10px 16px",
+                  textTransform: "uppercase",
+                  fontWeight: 500,
+                }}
+              >
+                {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            {/* Tags */}
+            {tags.length > 0 && (
+              <div>
+                <p className="uppercase mb-3" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+                  Tags
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {tags.map((t) => (
+                    <span
+                      key={t}
+                      style={{
+                        border: "1px solid #E0DBD1",
+                        color: "#17303B",
+                        fontSize: "10px",
+                        letterSpacing: "0.1em",
+                        padding: "5px 10px",
+                        textTransform: "uppercase",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
         </div>
       </article>
 
-      {/* Related posts */}
-      {related.length > 0 && (
-        <section className="border-t border-border/30 bg-secondary/20">
-          <div className="section-container section-spacing">
-            <h2 className="text-center text-xl font-bold text-foreground mb-8">
-              {isFr ? "Articles connexes" : "Related Articles"}
-            </h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-              {related.map((rp) => {
-                const rSlug = isFr ? rp.slug : rp.slugEn;
-                const rTitle = isFr ? rp.title : rp.titleEn;
-                const rExcerpt = isFr ? rp.excerpt : rp.excerptEn;
-                const rCat = isFr ? rp.category : rp.categoryEn;
-                const base = isFr ? "/blogue" : "/en/blog";
-                return (
-                  <Link
-                    key={rSlug}
-                    to={`${base}/${rSlug}`}
-                    className="group flex flex-col rounded-2xl border border-border/40 bg-background p-6 transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
-                  >
-                    <span className="inline-flex w-fit h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{rCat}</span>
-                    <h3 className="mt-3 text-[0.9375rem] font-semibold leading-snug group-hover:text-accent transition-colors">{rTitle}</h3>
-                    <p className="mt-2 text-[0.8125rem] text-muted-foreground flex-1">{rExcerpt}</p>
-                    <span className="mt-3 text-[0.8125rem] font-medium text-accent">{isFr ? "Lire →" : "Read →"}</span>
-                  </Link>
-                );
-              })}
-            </div>
+      {/* Full-width CTA */}
+      <section style={{ background: "#17303B", padding: "48px 0" }}>
+        <div className="section-container text-center">
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+            {isFr ? (
+              <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
+            ) : (
+              <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
+            )}
+          </h2>
+          <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
+            {isFr
+              ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
+              : "I analyze real income, the ratio and the market value. No commitment."}
+          </p>
+          <Link
+            to={ctaHref}
+            className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+            style={{
+              border: "1px solid #A88A5A",
+              color: "#A88A5A",
+              fontSize: "11px",
+              letterSpacing: "0.14em",
+              padding: "13px 22px",
+              textTransform: "uppercase",
+              fontWeight: 500,
+            }}
+          >
+            {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
+          </Link>
+          <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
+            {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
+          </p>
+        </div>
+      </section>
+
+      {/* Author bio */}
+      <section className="section-container py-12">
+        <div className="grid gap-6 sm:grid-cols-[auto_1px_1fr] items-center pt-10" style={{ borderTop: "1px solid #E0DBD1" }}>
+          <div
+            className="flex items-center justify-center shrink-0"
+            style={{
+              width: "52px",
+              height: "52px",
+              borderRadius: "50%",
+              background: "#17303B",
+              border: "1.5px solid #A88A5A",
+              color: "#F7F4EF",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "18px",
+              fontWeight: 500,
+              letterSpacing: "0.05em",
+            }}
+          >
+            YG
           </div>
+          <div className="hidden sm:block self-stretch" style={{ width: "1px", background: "#E0DBD1" }} />
+          <div>
+            <p className="uppercase" style={{ color: "#A88A5A", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              {isFr ? "À propos" : "About"}
+            </p>
+            <p className="mt-1.5" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#17303B", fontSize: "20px", fontWeight: 500, lineHeight: 1.2 }}>
+              Yanis Gauthier-Sigeris
+            </p>
+            <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.55 }}>
+              {isFr
+                ? "Courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
+                : "RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Next article */}
+      {nextPost && (
+        <section className="section-container pb-16">
+          <Link
+            to={`${blogHref}/${isFr ? nextPost.slug : nextPost.slugEn}`}
+            className="grid gap-6 sm:grid-cols-[140px_1fr] items-center pt-8 group transition-opacity hover:opacity-90"
+            style={{ borderTop: "1px solid #E0DBD1" }}
+          >
+            <div
+              className="flex items-center justify-center uppercase"
+              style={{
+                background: "#ECEAE2",
+                color: "#17303B",
+                fontSize: "10px",
+                letterSpacing: "0.18em",
+                fontWeight: 600,
+                padding: "14px 16px",
+              }}
+            >
+              {isFr ? "Article suivant" : "Next article"}
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#17303B", fontSize: "20px", fontWeight: 500, lineHeight: 1.25 }}>
+                {isFr ? nextPost.title : nextPost.titleEn}
+              </h3>
+              <span aria-hidden style={{ color: "#A88A5A", fontSize: "20px" }} className="transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </Link>
         </section>
       )}
-
-      <CTASection
-        dark
-        title={isFr ? "Besoin de conseils personnalisés?" : "Need personalized advice?"}
-        text={isFr
-          ? "Les articles sont un bon point de départ. Pour une stratégie adaptée à votre situation, parlons-en."
-          : "Articles are a great starting point. For a strategy tailored to your situation, let's talk."}
-        buttons={[
-          { label: isFr ? "Évaluation gratuite" : "Free Valuation", href: ctaHref },
-          { label: isFr ? "Réserver une consultation" : "Book a Consultation", href: contactHref, variant: "outline" },
-        ]}
-        trustLine={isFr ? "Je vous accompagne à votre rythme." : "I work at your pace."}
-      />
     </>
   );
 };
