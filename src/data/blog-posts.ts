@@ -49,6 +49,99 @@ export interface BlogPost {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
+    featuredImage: blogMarket,
+    slugEn: "sell-gatineau-spring-2026-market-rebalancing",
+    title: "Le marché de Gatineau se rééquilibre.",
+    titleEn: "The Gatineau market is rebalancing.",
+    seoTitle: "Vendre à Gatineau printemps 2026 : le marché rééquilibre",
+    seoTitleEn: "Sell in Gatineau Spring 2026: The Market Rebalances",
+    metaDescription: "Plus d'inscriptions, légère pression sur les prix. Ce que les vendeurs de Gatineau doivent savoir avant d'inscrire leur maison ce printemps.",
+    metaDescriptionEn: "More listings, slight pressure on prices. What Gatineau sellers need to know before listing their home this spring.",
+    excerpt: "Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent — et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul.",
+    excerptEn: "Q1 2026 numbers are out. Sales are down, listings up — and for the first time, the median price of single-family homes in Gatineau shows a slight decline.",
+    category: "MARCHÉ · VENDEUR",
+    categoryEn: "MARKET · SELLER",
+    publishDate: "2026-04-19",
+    published: true,
+    body: `Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent — et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul. Avant d'inscrire votre maison ce printemps, voici ce que ça change vraiment.
+
+> « À Gatineau au T1 2026, la combinaison de moins de ventes et de plus d'inscriptions a exercé une légère pression sur les prix des unifamiliales — sans renverser l'avantage des vendeurs, mais en changeant ce qu'il faut faire pour maximiser son prix. » — Analyse YGS basée sur les données APCIQ/CIO, avril 2026.
+
+### Les prix ont-ils vraiment baissé à Gatineau ?
+
+Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ — une première pour Gatineau, et la seule RMR du Québec à afficher ce recul ce trimestre. Ce n'est pas un effondrement. C'est un signal. Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché, ce qui envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
+
+### Est-ce encore un marché de vendeur à Gatineau en 2026 ?
+
+Oui — mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix. Ce qui a changé : les acheteurs ont maintenant le luxe de comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR — contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
+
+### Quel est le bon moment pour inscrire sa maison à Gatineau ce printemps ?
+
+Le printemps reste le meilleur moment, mais la fenêtre est plus courte qu'avant. Avec davantage de propriétés sur le marché, les maisons qui entrent en avril et mai font face à plus de concurrence directe. Inscrire tôt — avant la vague de printemps — avec un prix juste et une mise en marché soignée reste la stratégie qui maximise le prix final. Attendre juin ou juillet, c'est risquer de se retrouver dans un inventaire gonflé, face à des acheteurs qui ont repris leur souffle.
+
+## Ce que je vois sur le terrain
+
+Ce que je vois en ce moment sur le terrain est assez clair. Les maisons prennent plus de temps à vendre qu'il y a un an — ce n'est pas dramatique, mais c'est perceptible. Les acheteurs ont plus de choix et ils le savent : 18 % d'inscriptions supplémentaires par rapport à l'an dernier, c'est une différence réelle que tout le monde ressent dans le marché. Résultat direct : le prix médian des unifamiliales a légèrement reculé. C'est l'offre et la demande — pas de mystère. Les vendeurs qui comprennent ça et inscrivent leur maison au bon prix vendent. Les autres attendent.
+
+## FAQ
+
+**Q : Mon quartier est-il encore en marché de vendeur ?**
+R : Ça dépend du secteur et du type de propriété. Les unifamiliales en bon état dans Aylmer et Hull restent très demandées. Envoyez-moi le mot VALEUR en DM — je vous donne l'analyse de votre secteur précis, chiffres à l'appui.
+
+**Q : Faut-il baisser mon prix pour vendre rapidement en 2026 ?**
+R : Pas nécessairement. Une inscription à prix juste dès le départ est plus efficace qu'une inscription haute suivie d'une réduction — qui génère souvent moins d'offres et un prix final plus bas. Je vous donne les chiffres de votre secteur pour décider. DM : VENTE.
+
+**Q : L'augmentation des inscriptions change-t-elle la stratégie de mise en marché ?**
+R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentation, les photos et le positionnement de prix deviennent encore plus déterminants. C'est précisément ce sur quoi on travaille ensemble avant l'inscription. DM : VENTE.
+
+---
+
+**Vous pensez vendre votre maison ce printemps à Gatineau ?** Je vous donne une analyse de marché de votre secteur — sans frais, sans pression. Envoyez-moi le mot VALEUR en DM. Je vous donne les chiffres et les options, vous décidez.
+
+---
+
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau-centre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+    bodyEn: `Q1 2026 numbers are out. Sales are down, listings up — and for the first time, the median price of single-family homes in Gatineau shows a slight decline. Before listing your home this spring, here's what really changes.
+
+> "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices — without overturning the seller advantage, but changing what you need to do to maximize your price." — YGS Analysis based on APCIQ/CIO data, April 2026.
+
+### Have prices really dropped in Gatineau?
+
+Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ — a first for Gatineau, and the only CMA in Quebec to show this decline this quarter. It's not a collapse. It's a signal. With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
+
+### Is it still a seller's market in Gatineau in 2026?
+
+Yes — but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties. What has changed: buyers now have the luxury to compare. In Q1 2026, 1,394 properties were available on Centris in the CMA — versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
+
+### When is the right time to list in Gatineau this spring?
+
+Spring remains the best time, but the window is shorter than before. With more properties on the market, homes entering in April and May face more direct competition. Listing early — before the spring wave — with a fair price and polished marketing remains the strategy that maximizes final price. Waiting until June or July risks getting caught in bloated inventory, facing buyers who have regained their breath.
+
+## What I'm seeing on the ground
+
+What I'm seeing right now on the ground is quite clear. Homes are taking longer to sell than a year ago — it's not dramatic, but it's noticeable. Buyers have more choice and they know it: 18% more listings compared to last year, a real difference everyone feels in the market. Direct result: the median price of single-family homes has slightly declined. It's supply and demand — no mystery. Sellers who understand this and list at the right price sell. The others wait.
+
+## FAQ
+
+**Q: Is my neighborhood still in a seller's market?**
+A: It depends on the area and property type. Well-maintained single-family homes in Aylmer and Hull remain in high demand. Send me the word VALUE in DM — I'll give you the analysis of your specific area, with numbers to back it up.
+
+**Q: Should I lower my price to sell quickly in 2026?**
+A: Not necessarily. A listing at the right price from the start is more effective than a high listing followed by a reduction — which often generates fewer offers and a lower final price. I'll give you the numbers for your area to decide. DM: SALE.
+
+**Q: Does the increase in listings change the marketing strategy?**
+A: Yes. More inventory means more visual competition. Presentation, photos, and price positioning become even more crucial. This is precisely what we work on together before listing. DM: SALE.
+
+---
+
+**Thinking of selling your home this spring in Gatineau?** I'll give you a market analysis of your area — free, no pressure. Send me the word VALUE in DM. I'll give you the numbers and options, you decide.
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau-centre), [Hull](/en/hull), and [Aylmer](/en/aylmer). Over 200 transactions completed in the region.*`,
+  },
+  {
     slug: "plex-gatineau-mars-2026",
     featuredImage: blogPlexInvestment,
     slugEn: "plex-gatineau-march-2026",
