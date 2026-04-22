@@ -312,8 +312,8 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Transparent on dark hero, white-blur when scrolled, cream default
-  const transparent = onDarkHero && !scrolled && !open;
+  // Header always uses cream/scrolled colors — no transparent-on-hero variant
+  const transparent = false;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
