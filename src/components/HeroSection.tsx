@@ -228,12 +228,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         className="relative overflow-hidden flex flex-col justify-between"
         style={{ background: "var(--ink)" }}
       >
-        <div className="grid min-h-[auto] sm:min-h-[70svh] md:min-h-[78svh] lg:grid-cols-[40%_60%] flex-1">
+        <div className="grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
           <div
             className="relative flex flex-col justify-center"
-            style={{ background: "var(--ink)" }}
+            style={{ background: "linear-gradient(175deg, #0a1a22, #17303B)" }}
           >
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 65% 45%, rgba(168,138,90,0.05), transparent)" }} />
             {/* Mobile padding: tightened to keep proof bar above the fold */}
             <div className="px-[1.5rem] pt-[calc(4rem-64px)] pb-[2.25rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[calc(clamp(2rem,5vw,5rem)-40px)] sm:pb-[clamp(2rem,5vw,5rem)]">
               {/* Decorative right edge line (desktop) */}
