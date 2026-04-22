@@ -88,7 +88,7 @@ const AudienceCards = () => (
                   height={441}
                 />
                 {card.badge && (
-                  <span className="absolute top-3.5 left-3.5 rounded-full bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">
+                  <span className="absolute top-3.5 left-3.5 rounded-none bg-accent px-3 py-1 text-[0.75rem] font-semibold text-white">
                     {card.badge}
                   </span>
                 )}
