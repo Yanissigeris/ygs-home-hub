@@ -99,21 +99,21 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
       <section
         ref={ref}
         className="section-pathway section-rhythm section-gold-divider"
-        style={{ background: "#fff" }}
+        style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)", overflow: "hidden" }}
       >
         <div className="section-container">
           {/* Section header */}
           <div className="mb-8 sm:mb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div>
-              <p className="label-overline mb-2">{heading.overline}</p>
-              <h2>{heading.title}</h2>
+              <p className="label-overline mb-2" style={{ color: "#BFA476" }}>{heading.overline}</p>
+              <h2 style={{ color: "#F5F1EA" }}>{heading.title}</h2>
             </div>
           </div>
 
           {/* Cards */}
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-[0.75rem] md:gap-0 overflow-hidden"
-            style={{ border: "1px solid var(--border)", borderRadius: 3 }}
+            className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px overflow-hidden"
+            style={{ border: "1px solid var(--border)", borderRadius: 3, background: "rgba(255,255,255,0.06)" }}
           >
             {pathways.map((p, i) => (
               <Link
@@ -121,21 +121,32 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 to={p.href}
                 className="group flex flex-col transition-all duration-300 relative overflow-hidden"
                 style={{
-                  borderBottom:
+                  background: "rgba(255,255,255,0.03)",
+                  borderRight:
                     i < pathways.length - 1
-                      ? "1px solid var(--border)"
+                      ? "1px solid rgba(255,255,255,0.06)"
                       : "none",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.zIndex = "2";
                   e.currentTarget.style.boxShadow =
-                    "0 30px 80px rgba(23,48,59,.15)";
+                    "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)";
                   e.currentTarget.style.transform = "translateY(-5px)";
+                  e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                  const title = e.currentTarget.querySelector('h3');
+                  if (title) title.style.color = "#BFA476";
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.filter = "saturate(0.95)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.zIndex = "";
                   e.currentTarget.style.boxShadow = "";
                   e.currentTarget.style.transform = "";
+                  e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+                  const title = e.currentTarget.querySelector('h3');
+                  if (title) title.style.color = "#F5F1EA";
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.filter = "saturate(0.82)";
                 }}
               >
                 {/* Image */}
@@ -148,6 +159,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     decoding="async"
                     width={648}
                     height={486}
+                    style={{ filter: "saturate(0.82)" }}
                     onLoad={(e) => {
                       (
                         e.target as HTMLImageElement
@@ -195,7 +207,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                       fontFamily: "var(--serif)",
                       fontSize: "clamp(1.2rem, 3vw, 1.5rem)",
                       fontWeight: 600,
-                      color: "var(--ink)",
+                      color: "#F5F1EA",
                       letterSpacing: "-.01em",
                       marginBottom: ".5rem",
                     }}
@@ -206,7 +218,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     className="flex-1 pathway-desc"
                     style={{
                       fontSize: ".9rem",
-                      color: "var(--muted)",
+                      color: "rgba(245,241,234,0.38)",
                       lineHeight: 1.78,
                     }}
                   >
@@ -217,7 +229,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     style={{
                       fontSize: ".78rem",
                       fontWeight: 600,
-                      color: "var(--gold)",
+                      color: "#A88A5A",
                       letterSpacing: ".06em",
                       textTransform: "uppercase",
                       borderBottom: "1px solid rgba(168,138,90,.3)",
