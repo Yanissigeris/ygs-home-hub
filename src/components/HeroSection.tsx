@@ -225,13 +225,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden flex flex-col justify-between"
+        className="relative overflow-hidden flex flex-col justify-between min-h-dvh md:min-h-0 pb-[70px] md:pb-0"
         style={{ background: "var(--ink)" }}
       >
-        <div className="grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
+        <div className="flex flex-col lg:grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
           <div
-            className="relative flex flex-col justify-center"
+            className="relative flex flex-col justify-center order-2 md:order-none mt-[-1rem] md:mt-0 z-10"
             style={{ background: "linear-gradient(175deg, #0a1a22, #17303B)" }}
           >
             <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 65% 45%, rgba(168,138,90,0.05), transparent)" }} />
@@ -313,7 +313,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               {/* Credentials strip */}
-              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
                 <div className="flex items-start gap-5 sm:gap-10">
                   {stats.map((stat, i) => (
                     <React.Fragment key={stat.label}>
@@ -405,7 +405,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
           {/* ─── MOBILE: Agent image below text ─── */}
           {agentImage && (
-            <div className="relative flex justify-center items-end overflow-hidden lg:hidden" style={{ background: "var(--ink2)" }}>
+            <div className="relative flex justify-center items-end overflow-hidden lg:hidden order-first md:order-none" style={{ background: "var(--ink2)" }}>
               {heroVideo && (
                 <div className="absolute inset-0">
                   {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} loading="eager" decoding="auto" />}
@@ -415,16 +415,16 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <img
                 src={agentImageSm || agentImage}
                 srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
-                sizes="260px"
+                sizes="100vw"
                 alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
                 width={320}
                 height={480}
-                className="relative z-[2] w-[260px] sm:w-[300px] object-contain object-bottom"
-                style={{ maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
+                className="relative z-[2] w-full max-h-[55vh] object-cover object-top rounded-none md:rounded-lg"
                 loading="eager"
                 decoding="auto"
                 {...{"fetchpriority": "high"} as any}
               />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#17303B] to-transparent pointer-events-none z-[3]" aria-hidden="true" />
             </div>
           )}
           {/* Scroll indicator — mobile only */}
