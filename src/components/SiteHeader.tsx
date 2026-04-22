@@ -312,21 +312,66 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Header always uses cream/scrolled colors — no transparent-on-hero variant
-  const transparent = false;
+  // Auto contrast: sample background luminance under the header to pick light/dark variant
+  const [overDark, setOverDark] = useState(false);
+  useEffect(() => {
+    const parseRgb = (str: string): [number, number, number, number] | null => {
+      const m = str.match(/rgba?\(([^)]+)\)/);
+      if (!m) return null;
+      const parts = m[1].split(",").map((s) => parseFloat(s.trim()));
+      const [r, g, b, a = 1] = parts;
+      if ([r, g, b].some((n) => Number.isNaN(n))) return null;
+      return [r, g, b, a];
+    };
+    const luminance = (r: number, g: number, b: number) => (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    const sample = () => {
+      const headerEl = document.getElementById("site-header");
+      const headerH = headerEl?.offsetHeight ?? 70;
+      // Probe slightly below the header so we read the section under it, not the header itself
+      const x = window.innerWidth / 2;
+      const y = headerH + 8;
+      let el = document.elementFromPoint(x, y) as HTMLElement | null;
+      // Walk up until we find an element with a non-transparent background
+      while (el && el !== document.body) {
+        const bg = getComputedStyle(el).backgroundColor;
+        const rgba = parseRgb(bg);
+        if (rgba && rgba[3] > 0.05) {
+          setOverDark(luminance(rgba[0], rgba[1], rgba[2]) < 0.5);
+          return;
+        }
+        el = el.parentElement;
+      }
+      setOverDark(false);
+    };
+
+    sample();
+    const onScroll = () => requestAnimationFrame(sample);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    const t = setTimeout(sample, 120); // re-sample after layout settles on route change
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [location.pathname]);
+
+  // When over a dark section AND not scrolled past 80px, use light/transparent variant
+  const transparent = overDark && !scrolled && !open;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
     zIndex: 200,
     background: transparent
-      ? "transparent"
+      ? "rgba(23,48,59,.35)"
       : scrolled
         ? "rgba(255,255,255,.85)"
         : "rgba(247,244,238,.96)",
-    backdropFilter: transparent ? "none" : "blur(12px)",
-    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
     borderBottom: transparent
-      ? "1px solid transparent"
+      ? "1px solid rgba(255,255,255,.08)"
       : scrolled
         ? "1px solid rgba(23,48,59,.08)"
         : "1px solid var(--border)",
@@ -335,7 +380,7 @@ const SiteHeader = () => {
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Colors for nav links & icons
+  // Colors for nav links & icons (auto-adapt for contrast)
   const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
   const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
   const iconColor = transparent ? "#F7F4EE" : "var(--ink)";
