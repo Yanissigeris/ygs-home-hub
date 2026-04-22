@@ -363,22 +363,23 @@ const SiteHeader = () => {
             style={{
               height: 40,
               padding: "0 1.4rem",
-              background: scrolled && !transparent ? "#17303B" : "transparent",
-              color: scrolled && !transparent ? "#F7F4EF" : ctaTextColor,
+              background: "#17303B",
+              color: "#F7F4EF",
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
               borderRadius: 0,
-              border: scrolled && !transparent ? "none" : `1.5px solid ${ctaBorderColor}`,
+              border: "none",
+              boxShadow: "0 4px 14px -4px rgba(23,48,59,.35)",
               transition: "all .2s ease",
             }}
             onMouseEnter={(e) => {
-              if (scrolled && !transparent) { e.currentTarget.style.background = "#0f2530"; }
-              else { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }
+              e.currentTarget.style.background = "#0f2530";
+              e.currentTarget.style.boxShadow = "0 6px 18px -4px rgba(23,48,59,.45)";
             }}
             onMouseLeave={(e) => {
-              if (scrolled && !transparent) { e.currentTarget.style.background = "#17303B"; }
-              else { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }
+              e.currentTarget.style.background = "#17303B";
+              e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(23,48,59,.35)";
             }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
           >
