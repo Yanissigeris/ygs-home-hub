@@ -344,6 +344,12 @@
   .section-fade-bridge--dark-to-cream {
     background: linear-gradient(to bottom, #17303B 0%, var(--cream) 100%);
   }
+  .section-fade-bridge--cream-to-dark {
+    background: linear-gradient(to bottom, var(--cream) 0%, #17303B 100%);
+  }
+  .section-fade-bridge--white-to-dark {
+    background: linear-gradient(to bottom, #ffffff 0%, #17303B 100%);
+  }
 }
 
 /* Fallback — bots & prefers-reduced-motion voient tout */
