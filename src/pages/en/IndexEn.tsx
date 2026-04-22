@@ -2,7 +2,7 @@ import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
-import MicroTrustStrip from "@/components/MicroTrustStrip";
+
 
 import AwardsMarquee from "@/components/AwardsMarquee";
 import ValuationWidget from "@/components/ValuationWidget";
@@ -58,7 +58,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       showProofBar
     />
 
-    <MicroTrustStrip lang="en" />
+    
     <ValuationWidget lang="en" />
     <QuickActionStrip />
     <AwardsMarquee />
