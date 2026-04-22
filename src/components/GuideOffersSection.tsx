@@ -38,7 +38,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
         <div className="section-container relative">
           {/* Header */}
           <div className="mb-8 sm:mb-12 max-w-[36rem]">
-            <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{heading.overline}</p>
+            <p className="label-overline mb-2" style={{ color: "#7A6038" }}>{heading.overline}</p>
             <h2>{heading.title}</h2>
             <p className="mt-3" style={{ fontSize: ".92rem", color: "var(--muted)", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>
@@ -61,10 +61,10 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 onMouseEnter={(e) => { e.currentTarget.style.background = "var(--parchment)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
               >
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold)" }} aria-hidden="true" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "#7A6038" }} aria-hidden="true" />
                 <div className="flex items-baseline gap-3" aria-hidden="true">
                   <span className="select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.25rem, 4.5vw, 3rem)", fontWeight: 300, color: "var(--ink)", lineHeight: 1, letterSpacing: "-.02em" }}>{g.num}</span>
-                  <span style={{ height: 1, flex: 1, background: "var(--gold)", opacity: 0.4, transform: "translateY(-.35em)" }} />
+                  <span style={{ height: 1, flex: 1, background: "#7A6038", opacity: 0.55, transform: "translateY(-.35em)" }} />
                 </div>
                 <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
                 <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.75 }}>{g.subtitle}</p>
