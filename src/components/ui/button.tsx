@@ -15,9 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70 rounded-[0.625rem] font-semibold",
         ghost: "hover:bg-secondary hover:text-foreground rounded-[0.5rem] font-medium",
         link: "text-primary underline-offset-4 hover:underline font-medium",
-        hero: "bg-transparent border-[1.5px] border-[#A88A5A] text-[#A88A5A] hover:bg-[#A88A5A] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",
-        "hero-outline": "border border-[#F5F1E8]/15 text-[#A7B2BA] bg-transparent hover:bg-[#F5F1E8]/[0.06] hover:border-[#F5F1E8]/25 hover:text-[#F5F1E8]/80 font-medium rounded-[0.625rem]",
-        accent: "bg-transparent border-[1.5px] border-[#A88A5A] text-[#A88A5A] hover:bg-[#A88A5A] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",
+        hero: "bg-transparent border-[1.5px] border-[#A88A5A] text-[#A88A5A] hover:bg-[#A88A5A] hover:text-white font-semibold rounded-none shadow-none transition-all duration-200 ease-out",
+        "hero-outline": "border border-[#F5F1E8]/15 text-[#A7B2BA] bg-transparent hover:bg-[#F5F1E8]/[0.06] hover:border-[#F5F1E8]/25 hover:text-[#F5F1E8]/80 font-medium rounded-none",
+        accent: "bg-transparent border-[1.5px] border-[#A88A5A] text-[#A88A5A] hover:bg-[#A88A5A] hover:text-white font-semibold rounded-none shadow-none transition-all duration-200 ease-out",
       },
       size: {
         default: "h-11 px-6 py-2 text-[0.8125rem]",
