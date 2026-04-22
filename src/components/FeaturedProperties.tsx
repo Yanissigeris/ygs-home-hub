@@ -61,20 +61,21 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
           onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
           onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
         />
+        <div className="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(255,255,255,0.8), transparent)" }} />
       </div>
 
-      {/* Gold top border — hover only */}
-      <div className="h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      {/* Gold top border — always visible, intensifies on hover */}
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(168,138,90,0.2)] group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
         {/* Status label */}
-        <p style={{ fontFamily: "var(--sans)", fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A88A5A", marginBottom: ".5rem" }}>
+        <span style={{ background: "var(--ink)", color: "#fff", padding: "3px 8px", fontSize: "9px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", display: "inline-block", alignSelf: "flex-start", marginBottom: ".75rem" }}>
           {statusLabel}
-        </p>
+        </span>
 
         {/* Price */}
-        <p style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 700, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
+        <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.3rem, 2.5vw, 1.6rem)", fontWeight: 600, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
           {p.price}
         </p>
 
