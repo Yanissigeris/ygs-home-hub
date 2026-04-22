@@ -8,17 +8,17 @@ interface GuideOffersSectionProps {
 }
 
 const guidesFr = [
-  { num: "01", icon: "📄", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix — prix, mise en marché, négociation.", cta: "Recevoir le guide vendeur →" },
-  { num: "02", icon: "🏠", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide acheteur →" },
-  { num: "03", icon: "📊", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide investisseur →" },
-  { num: "04", icon: "✈️", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide relocalisation →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix — prix, mise en marché, négociation.", cta: "Recevoir le guide vendeur →" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide acheteur →" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide investisseur →" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide relocalisation →" },
 ];
 
 const guidesEn = [
-  { num: "01", icon: "📄", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price — pricing, marketing, negotiation.", cta: "Get the seller guide →" },
-  { num: "02", icon: "🏠", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the buyer guide →" },
-  { num: "03", icon: "📊", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the investor guide →" },
-  { num: "04", icon: "✈️", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the relocation guide →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price — pricing, marketing, negotiation.", cta: "Get the seller guide →" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the buyer guide →" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the investor guide →" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the relocation guide →" },
 ];
 
 const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape — gratuites, sans engagement et envoyées par courriel." };
