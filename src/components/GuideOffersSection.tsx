@@ -46,9 +46,11 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
           {/* Desktop: 4-col grid */}
           <div className="hidden md:grid grid-cols-1 min-[481px]:grid-cols-2 lg:grid-cols-4">
             {guides.map((g, i) => (
-              <div
+              <button
                 key={g.guideType}
-                className="group relative flex flex-col transition-all duration-300 cursor-pointer"
+                type="button"
+                aria-label={`${g.title} — ${g.subtitle}`}
+                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
                   background: "var(--cream)",
@@ -59,15 +61,15 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 onMouseEnter={(e) => { e.currentTarget.style.background = "var(--parchment)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
               >
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100" style={{ background: "var(--gold)" }} aria-hidden="true" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold)" }} aria-hidden="true" />
                 <div className="flex items-baseline gap-3" aria-hidden="true">
                   <span className="select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.25rem, 4.5vw, 3rem)", fontWeight: 300, color: "var(--ink)", lineHeight: 1, letterSpacing: "-.02em" }}>{g.num}</span>
                   <span style={{ height: 1, flex: 1, background: "var(--gold)", opacity: 0.4, transform: "translateY(-.35em)" }} />
                 </div>
                 <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
                 <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.75 }}>{g.subtitle}</p>
-                <span className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
-              </div>
+                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "#8a6f44", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
+              </button>
             ))}
           </div>
 
