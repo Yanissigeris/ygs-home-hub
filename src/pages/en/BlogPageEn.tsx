@@ -111,7 +111,7 @@ const BlogPageEn = () => {
             <span className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mr-2">Categories</span>
             <button
               onClick={() => setActiveCategory(null)}
-              className={`inline-flex h-8 items-center rounded-full border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${!activeCategory ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
+              className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${!activeCategory ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
             >
               All
             </button>
@@ -119,7 +119,7 @@ const BlogPageEn = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`inline-flex h-8 items-center rounded-full border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${activeCategory === cat ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
+                className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${activeCategory === cat ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
               >
                 {cat}
               </button>
@@ -204,7 +204,7 @@ const BlogPageEn = () => {
               )}
               <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="inline-flex w-fit h-6 items-center rounded-full bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.categoryEn}</span>
+                  <span className="inline-flex w-fit h-6 items-center rounded-none bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.categoryEn}</span>
                   <time className="text-[0.6875rem] text-muted-foreground/50">{new Date(post.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
                 </div>
                 <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.titleEn}</h3>

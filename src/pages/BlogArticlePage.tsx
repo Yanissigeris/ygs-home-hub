@@ -348,7 +348,7 @@ const BlogArticlePage = () => {
                     fontSize: "10px",
                     letterSpacing: "0.16em",
                     padding: "6px 12px",
-                    borderRadius: "999px",
+                    borderRadius: "0",
                   }}
                 >
                   {category}
