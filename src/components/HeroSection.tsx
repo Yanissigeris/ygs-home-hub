@@ -232,7 +232,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
 
               {overline && (
-                <p className="label-overline mb-8 opacity-0 animate-hero-fade-up" style={{ color: "var(--gold)", animationDelay: "0.2s", animationFillMode: "forwards", fontSize: "max(.6rem, .62rem)", letterSpacing: ".15em" }}>
+                <p
+                  className="mb-8 opacity-0 animate-hero-fade-up uppercase font-semibold"
+                  style={{
+                    color: "var(--gold)",
+                    animationDelay: "0.2s",
+                    animationFillMode: "forwards",
+                    fontFamily: "var(--sans)",
+                    fontSize: "max(.6rem, .62rem)",
+                    letterSpacing: ".22em",
+                  }}
+                >
                   {overline.replace(/[·•]/g, "  ·  ")}
                 </p>
               )}
