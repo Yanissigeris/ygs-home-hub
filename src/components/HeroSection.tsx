@@ -313,12 +313,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               {/* Credentials strip */}
-              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(255,255,255,.08)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
                 <div className="flex items-start gap-5 sm:gap-10">
                   {stats.map((stat, i) => (
                     <React.Fragment key={stat.label}>
-                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
-                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
+                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
+                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
                       <div className="text-center sm:text-left">
                         <p
                           className="font-heading font-semibold leading-none tracking-tight text-white"
@@ -329,7 +329,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                         >
                           {stat.value}
                         </p>
-                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(255,255,255,.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
+                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(168,138,90,0.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
                       </div>
                     </React.Fragment>
                   ))}
