@@ -228,12 +228,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         className="relative overflow-hidden flex flex-col justify-between"
         style={{ background: "var(--ink)" }}
       >
-        <div className="grid min-h-[auto] sm:min-h-[70svh] md:min-h-[78svh] lg:grid-cols-[40%_60%] flex-1">
+        <div className="grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
           <div
             className="relative flex flex-col justify-center"
-            style={{ background: "var(--ink)" }}
+            style={{ background: "linear-gradient(175deg, #0a1a22, #17303B)" }}
           >
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 65% 45%, rgba(168,138,90,0.05), transparent)" }} />
             {/* Mobile padding: tightened to keep proof bar above the fold */}
             <div className="px-[1.5rem] pt-[calc(4rem-64px)] pb-[2.25rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[calc(clamp(2rem,5vw,5rem)-40px)] sm:pb-[clamp(2rem,5vw,5rem)]">
               {/* Decorative right edge line (desktop) */}
@@ -312,12 +313,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               {/* Credentials strip */}
-              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(255,255,255,.08)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
                 <div className="flex items-start gap-5 sm:gap-10">
                   {stats.map((stat, i) => (
                     <React.Fragment key={stat.label}>
-                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
-                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "rgba(255,255,255,.08)" }} />}
+                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
+                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
                       <div className="text-center sm:text-left">
                         <p
                           className="font-heading font-semibold leading-none tracking-tight text-white"
@@ -328,7 +329,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                         >
                           {stat.value}
                         </p>
-                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(255,255,255,.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
+                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(168,138,90,0.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
                       </div>
                     </React.Fragment>
                   ))}
