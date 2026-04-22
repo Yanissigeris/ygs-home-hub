@@ -50,7 +50,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 type="button"
                 aria-label={`${g.title} — ${g.subtitle}`}
-                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A6038] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
                   background: "var(--cream)",
@@ -80,7 +80,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 type="button"
                 aria-label={`${g.title} — ${g.subtitle}`}
-                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-inset"
+                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A6038] focus-visible:ring-inset"
                 style={{ padding: "1.25rem", background: "#fff" }}
                 onClick={() => setModalGuide(g.guideType)}
               >
