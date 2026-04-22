@@ -197,13 +197,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.55) 0%, rgba(23,48,59,.2) 100%)" }} />
             </>
           )}
-          <div className="section-container relative z-20 py-16 sm:py-20 md:py-24">
+          <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
-              {overline && <p className="label-overline mb-6" style={{ color: "var(--gold)" }}>{overline}</p>}
+              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold)" }}>{overline}</p>}
               <h1 style={{ color: "#F7F4EE" }}>{title}</h1>
-              <p className="mt-4 max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6" style={{ color: "rgba(255,255,255,.7)" }}>{subtitle}</p>
+              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.7)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
                     <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02]" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
                       <Link to={primaryCta.href}>{primaryCta.label} →</Link>
