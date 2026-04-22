@@ -419,7 +419,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
                 width={320}
                 height={480}
-                className="relative z-[2] w-full max-h-[55vh] object-cover object-top rounded-none md:rounded-lg"
+                className="relative z-[2] w-auto max-w-[75%] mx-auto max-h-[42vh] object-contain object-bottom rounded-none md:rounded-lg md:w-full md:max-w-none md:max-h-[55vh] md:object-cover md:object-top"
                 loading="eager"
                 decoding="auto"
                 {...{"fetchpriority": "high"} as any}
