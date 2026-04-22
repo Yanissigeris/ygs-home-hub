@@ -22,6 +22,8 @@ interface HeroSectionProps {
   heroVideoPoster?: string;
   hideCredentialsStrip?: boolean;
   hideRecognitionCard?: boolean;
+  /** Show the 3-stat proof bar at the bottom of the hero. Home page only. */
+  showProofBar?: boolean;
 }
 
 /* Stats data */
