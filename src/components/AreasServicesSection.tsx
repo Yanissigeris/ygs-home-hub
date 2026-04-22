@@ -70,17 +70,17 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
   <Link
     to={href}
     className="group flex items-center justify-between gap-3 transition-colors"
-    style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", borderBottom: "1px solid var(--border)", minHeight: 52 }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
+    style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", borderBottom: "1px solid rgba(255,255,255,0.04)", minHeight: 52 }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,0.05)"; }}
     onMouseLeave={(e) => { e.currentTarget.style.background = ""; }}
   >
     <div className="min-w-0">
-      <p style={{ fontSize: ".88rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
-      <p style={{ fontSize: ".72rem", color: "var(--muted)" }} className="truncate">{detail}</p>
+      <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
+      <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,0.28)" }} className="truncate">{detail}</p>
     </div>
-    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "var(--border)", fontSize: ".75rem" }}>
+    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.1)", fontSize: ".75rem" }}>
       <span className="group-hover:hidden">→</span>
-      <span className="hidden group-hover:inline" style={{ color: "var(--gold)" }}>→</span>
+      <span className="hidden group-hover:inline" style={{ color: "#A88A5A" }}>→</span>
     </span>
   </Link>
 );
@@ -92,23 +92,23 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
   const [activeTab, setActiveTab] = React.useState<"areas" | "services">("areas");
 
   return (
-    <section className="section-rhythm section-gold-divider" style={{ background: "var(--cream)" }}>
+    <section className="section-rhythm section-gold-divider" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)" }}>
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto">
-          <p className="label-overline mb-2 justify-center">{cfg.overline}</p>
-          <h2>{cfg.title}</h2>
-          <p className="mt-3" style={{ fontSize: ".88rem", color: "var(--muted)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
+          <p className="label-overline mb-2 justify-center" style={{ color: "#BFA476" }}>{cfg.overline}</p>
+          <h2 style={{ color: "#F5F1EA" }}>{cfg.title}</h2>
+          <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.35)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
         </div>
 
         {/* Desktop: 2-column bordered table */}
         <div
           className="hidden md:grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
-          style={{ border: "1px solid var(--border)", borderRadius: 3 }}
+          style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 3 }}
         >
           <div className="lg:border-r" style={{ borderRight: "none" }}>
-            <div style={{ background: "var(--ink)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
+            <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
+              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.25)" }}>
                 <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.areasHeading}
               </p>
             </div>
@@ -117,9 +117,9 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
-          <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "var(--border)" }}>
-            <div style={{ background: "var(--ink)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)" }}>
+          <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
+            <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
+              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.25)" }}>
                 <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.servicesHeading}
               </p>
             </div>
@@ -128,9 +128,9 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         </div>
 
         {/* Mobile: tab switcher */}
-        <div className="md:hidden overflow-hidden" style={{ border: "1px solid var(--border)", borderRadius: 3 }}>
+        <div className="md:hidden overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 3 }}>
           {/* Tab bar */}
-          <div className="flex" style={{ background: "var(--cream)", borderBottom: "1px solid var(--border)" }}>
+          <div className="flex" style={{ background: "rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
             <button
               onClick={() => setActiveTab("areas")}
               className="flex-1 transition-colors"
@@ -138,7 +138,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "areas" ? "var(--ink)" : "var(--muted)",
+                color: activeTab === "areas" ? "#F5F1EA" : "rgba(245,241,234,0.4)",
                 borderBottom: activeTab === "areas" ? "2px solid var(--gold)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
@@ -153,7 +153,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "services" ? "var(--ink)" : "var(--muted)",
+                color: activeTab === "services" ? "#F5F1EA" : "rgba(245,241,234,0.4)",
                 borderBottom: activeTab === "services" ? "2px solid var(--gold)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
