@@ -102,7 +102,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 fontSize: "11px",
                 fontWeight: 500,
                 letterSpacing: "0.06em",
-                color: "#A88A5A",
+                color: "#BFA476",
                 marginBottom: "2rem",
               }}
             >
