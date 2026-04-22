@@ -87,7 +87,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 <span style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, color: "var(--ink)", letterSpacing: "-.02em", lineHeight: 1, marginBottom: ".75rem", display: "block" }} aria-hidden="true">{g.num}</span>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
                 <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.6 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".62rem", fontWeight: 700, color: "#7A6038", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
+                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "#7A6038", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
                   {g.cta.replace(/ →$/, "").replace(/Recevoir le guide /i, "").replace(/Get the /i, "")} →
                 </span>
               </button>
