@@ -40,7 +40,9 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
       rel="noopener noreferrer"
       
       className="group flex flex-col h-full"
-      style={{ background: "#fff", borderRadius: 3, overflow: "hidden" }}
+      style={{ background: "#fff", borderRadius: 3, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
+      onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
     >
       {/* Image */}
       <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
@@ -53,13 +55,16 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
           decoding="async"
           width={648}
           height={486}
+          style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
+          onMouseEnter={(e) => { e.currentTarget.style.filter = "saturate(1)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.filter = "saturate(0.88)"; }}
           onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
           onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
         />
       </div>
 
       {/* Gold top border — hover only */}
-      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
@@ -104,7 +109,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     if (featured.length === 0) return null;
 
     return (
-      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream)" }}>
+      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "#FAF8F3" }}>
         <div className="section-container">
           {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
