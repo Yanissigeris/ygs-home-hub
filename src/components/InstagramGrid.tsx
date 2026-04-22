@@ -53,7 +53,7 @@ const InstagramGrid = () => {
               href={PROFILE_URL}
               target="_blank"
               rel="me noopener"
-              className="ml-4 inline-flex items-center gap-1.5 px-5 py-2 text-[.78rem] font-semibold tracking-[.04em] rounded-full transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
+              className="ml-4 inline-flex items-center gap-1.5 px-5 py-2 text-[.78rem] font-semibold tracking-[.04em] rounded-none transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
               style={{ background: "transparent", border: "1.5px solid #A88A5A", color: "#A88A5A" }}
               aria-label={lang === "en" ? "Follow on Instagram" : "Suivre sur Instagram"}
             >
