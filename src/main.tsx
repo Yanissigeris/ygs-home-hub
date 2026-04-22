@@ -3,6 +3,9 @@ import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 import "./design-upgrade.css";
+import { installHmrFallback } from "./lib/hmr-fallback";
+
+installHmrFallback();
 
 createRoot(document.getElementById("root")!).render(
   <HelmetProvider>
