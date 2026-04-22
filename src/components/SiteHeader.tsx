@@ -312,8 +312,8 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Transparent at top of page; solid once scrolled or menu open
-  const transparent = !scrolled && !open;
+  // Transparent on dark hero, white-blur when scrolled, cream default
+  const transparent = onDarkHero && !scrolled && !open;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
@@ -335,13 +335,13 @@ const SiteHeader = () => {
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Colors for nav links & icons — adapt to dark hero only when transparent
-  const navLinkColor = transparent && onDarkHero ? "#F7F4EE" : "#4A5568";
-  const navLinkActiveColor = transparent && onDarkHero ? "#FFFFFF" : "#17303B";
-  const iconColor = transparent && onDarkHero ? "#F7F4EE" : "var(--ink)";
-  const ctaBorderColor = transparent && onDarkHero ? "#F7F4EE" : "#A88A5A";
-  const ctaTextColor = transparent && onDarkHero ? "#F7F4EE" : "#A88A5A";
-  const logoFilter = transparent && onDarkHero ? "brightness(0) invert(1)" : "none";
+  // Colors for nav links & icons
+  const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
+  const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
+  const iconColor = transparent ? "#F7F4EE" : "var(--ink)";
+  const ctaBorderColor = transparent ? "#F7F4EE" : "#A88A5A";
+  const ctaTextColor = transparent ? "#F7F4EE" : "#A88A5A";
+  const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
 
   return (
     <header id="site-header" style={headerStyle}>
