@@ -61,7 +61,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <QuickActionStrip />
     <AwardsMarquee />
 
-    <StatsSection />
+    
     <PathwaySection />
     <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
     <FeaturedProperties />
