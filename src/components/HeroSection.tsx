@@ -276,7 +276,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 )}
               </h1>
 
-              <p className="mt-6 max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
+              <p className="mt-4 sm:mt-6 hidden sm:block max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
                 {subtitle}
               </p>
 
