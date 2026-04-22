@@ -58,7 +58,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       showProofBar
     />
 
-    <MicroTrustStrip lang="en" />
+    
     <ValuationWidget lang="en" />
     <QuickActionStrip />
     <AwardsMarquee />
