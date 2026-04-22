@@ -46,7 +46,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Your real estate broker in Gatineau — Outaouais"
       subtitle="Clear strategy, advice based on facts, and full support — to sell, buy or invest with confidence."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Book a consultation", href: "/en/contact" }}
+      secondaryCta={{ label: "Consultation", href: "/en/contact" }}
       socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-video-compressed.mp4"
       heroVideoPoster="/hero-video-poster.webp"
