@@ -76,19 +76,21 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
           {/* Mobile: 2x2 compact grid */}
           <div className="md:hidden grid grid-cols-2" style={{ gap: 1, background: "var(--border)" }}>
             {guides.map((g) => (
-              <div
+              <button
                 key={g.guideType}
-                className="flex flex-col cursor-pointer"
+                type="button"
+                aria-label={`${g.title} — ${g.subtitle}`}
+                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-inset"
                 style={{ padding: "1.25rem", background: "#fff" }}
                 onClick={() => setModalGuide(g.guideType)}
               >
                 <span style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, color: "var(--ink)", letterSpacing: "-.02em", lineHeight: 1, marginBottom: ".75rem", display: "block" }} aria-hidden="true">{g.num}</span>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
                 <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.6 }}>{g.subtitle}</p>
-                <span className="mt-3 inline-flex items-center" style={{ fontSize: ".62rem", fontWeight: 700, color: "var(--gold)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
+                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".62rem", fontWeight: 700, color: "#8a6f44", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
                   {g.cta.replace(/ →$/, "").replace(/Recevoir le guide /i, "").replace(/Get the /i, "")} →
                 </span>
-              </div>
+              </button>
             ))}
           </div>
         </div>
