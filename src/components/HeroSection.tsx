@@ -226,7 +226,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         ref={combinedRef}
         data-hero-dark
         className="relative overflow-hidden flex flex-col justify-between"
-        style={{ background: "var(--ink)", maxHeight: "85vh" }}
+        style={{ background: "var(--ink)" }}
       >
         <div className="grid min-h-[auto] sm:min-h-[70svh] md:min-h-[78svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
