@@ -318,20 +318,12 @@ const SiteHeader = () => {
     position: "sticky",
     top: 0,
     zIndex: 200,
-    background: transparent
-      ? "transparent"
-      : scrolled
-        ? "rgba(255,255,255,.85)"
-        : "rgba(247,244,238,.96)",
-    backdropFilter: transparent ? "none" : "blur(12px)",
-    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
-    borderBottom: transparent
-      ? "1px solid transparent"
-      : scrolled
-        ? "1px solid rgba(23,48,59,.08)"
-        : "1px solid var(--border)",
+    background: "transparent",
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none",
+    borderBottom: "1px solid transparent",
     transition: "all .3s ease",
-    boxShadow: scrolled ? "0 4px 40px rgba(23,48,59,.1)" : "none",
+    boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
