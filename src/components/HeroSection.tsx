@@ -236,7 +236,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {overline && (
                 <p
-                  className="mb-8 opacity-0 animate-hero-fade-up uppercase font-semibold"
+                  className="mb-3 sm:mb-8 opacity-0 animate-hero-fade-up uppercase font-semibold"
                   style={{
                     color: "var(--gold)",
                     animationDelay: "0.2s",
