@@ -20,8 +20,8 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       background: "#fff",
       transitionDelay: `${index * 0.1}s`,
     }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = ""; }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 20px 44px rgba(168,138,90,0.08)"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
     <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
@@ -31,7 +31,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
 
     {/* Quote */}
     <blockquote className="flex-1 mt-2">
-      <p style={{ fontSize: ".9rem", fontWeight: 300, fontStyle: "italic", color: "var(--muted)", lineHeight: 1.8 }}>
+      <p style={{ fontSize: ".92rem", fontWeight: 300, fontStyle: "italic", color: "var(--muted)", lineHeight: 1.82 }}>
         {review.short}
       </p>
     </blockquote>
@@ -61,11 +61,11 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const visibleCount = 2;
 
     return (
-      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#fff" }}>
+      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#FAF8F3" }}>
         {/* Decorative giant quote */}
         <span
           className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
-          style={{ fontFamily: "var(--serif)", fontSize: "40rem", color: "rgba(23,48,59,.03)", lineHeight: .7 }}
+          style={{ fontFamily: "var(--serif)", fontSize: "clamp(24rem, 38vw, 36rem)", color: "rgba(23,48,59,0.025)", lineHeight: .7 }}
           aria-hidden="true"
         >"</span>
 
