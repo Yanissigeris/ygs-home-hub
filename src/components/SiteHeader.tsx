@@ -312,28 +312,36 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Transparent on dark hero, white-blur when scrolled, cream default
-  const transparent = onDarkHero && !scrolled && !open;
+  // Transparent at top of page; solid once scrolled or menu open
+  const transparent = !scrolled && !open;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
     zIndex: 200,
-    background: "transparent",
-    backdropFilter: "none",
-    WebkitBackdropFilter: "none",
-    borderBottom: "1px solid transparent",
+    background: transparent
+      ? "transparent"
+      : scrolled
+        ? "rgba(255,255,255,.85)"
+        : "rgba(247,244,238,.96)",
+    backdropFilter: transparent ? "none" : "blur(12px)",
+    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
+    borderBottom: transparent
+      ? "1px solid transparent"
+      : scrolled
+        ? "1px solid rgba(23,48,59,.08)"
+        : "1px solid var(--border)",
     transition: "all .3s ease",
-    boxShadow: "none",
+    boxShadow: scrolled ? "0 4px 40px rgba(23,48,59,.1)" : "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Colors for nav links & icons
-  const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
-  const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
-  const iconColor = transparent ? "#F7F4EE" : "var(--ink)";
-  const ctaBorderColor = transparent ? "#F7F4EE" : "#A88A5A";
-  const ctaTextColor = transparent ? "#F7F4EE" : "#A88A5A";
-  const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
+  // Colors for nav links & icons — adapt to dark hero only when transparent
+  const navLinkColor = transparent && onDarkHero ? "#F7F4EE" : "#4A5568";
+  const navLinkActiveColor = transparent && onDarkHero ? "#FFFFFF" : "#17303B";
+  const iconColor = transparent && onDarkHero ? "#F7F4EE" : "var(--ink)";
+  const ctaBorderColor = transparent && onDarkHero ? "#F7F4EE" : "#A88A5A";
+  const ctaTextColor = transparent && onDarkHero ? "#F7F4EE" : "#A88A5A";
+  const logoFilter = transparent && onDarkHero ? "brightness(0) invert(1)" : "none";
 
   return (
     <header id="site-header" style={headerStyle}>
