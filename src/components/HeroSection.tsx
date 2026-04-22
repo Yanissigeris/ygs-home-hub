@@ -358,10 +358,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             )}
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.1) 100%)" }} />
+            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(145deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 40%, rgba(17,37,48,.05) 100%)" }} />
 
             {/* Left edge separation overlay */}
             <div className="absolute inset-y-0 left-0 z-[1] w-1/2 pointer-events-none" style={{ background: "linear-gradient(to right, #17303B 0%, transparent 40%)", opacity: 0.35 }} aria-hidden="true" />
+
+            {/* Warm glow behind portrait */}
+            <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 50% 60% at 50% 55%, rgba(168,138,90,0.12), transparent 60%)" }} />
 
             {/* Yanis portrait */}
             {agentImage && (
@@ -371,8 +374,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
                   width={640}
                   height={960}
-                  className="w-[380px] xl:w-[440px] object-contain object-bottom"
-                  style={{ height: "90%", maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
+                  className="w-[420px] xl:w-[500px] 2xl:w-[540px] object-contain object-bottom"
+                  style={{ height: "95%", maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
                   loading="eager"
                   decoding="auto"
                   {...{"fetchpriority": "high"} as any}
