@@ -56,6 +56,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       heroVideoPoster,
       hideCredentialsStrip,
       hideRecognitionCard,
+      showProofBar = false,
     },
     ref
   ) => {
