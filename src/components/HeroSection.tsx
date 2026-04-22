@@ -273,7 +273,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <Link
                       to={primaryCta.href}
                       className="inline-flex items-center justify-center text-white transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
-                      style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: "999px", color: "#A88A5A", padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, transition: "all .2s ease" }}
+                      style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: 0, color: "#A88A5A", padding: ".9rem 1.5rem", fontSize: ".85rem", fontWeight: 600, transition: "all .2s ease" }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
                       onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
@@ -284,7 +284,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {secondaryCta && (
                       <Link to={secondaryCta.href}
                       className="hidden sm:inline-flex items-center justify-center font-medium transition-all duration-300 hover:border-white/50 hover:text-white w-full sm:w-auto text-center"
-                      style={{ color: "rgba(255,255,255,.8)", border: "1.5px solid rgba(255,255,255,.25)", borderRadius: "999px", padding: ".85rem 1.5rem", fontSize: ".85rem", transition: "all .2s ease" }}
+                      style={{ color: "rgba(255,255,255,.8)", border: "1.5px solid rgba(255,255,255,.25)", borderRadius: 0, padding: ".85rem 1.5rem", fontSize: ".85rem", transition: "all .2s ease" }}
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
                       {secondaryCta.label}
