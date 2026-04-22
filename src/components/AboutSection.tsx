@@ -36,8 +36,10 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
   const c = lang === "en" ? contentEn : contentFr;
 
   return (
-    <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "#17303B" }}>
-      <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16">
+    <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)", overflow: "hidden" }}>
+      {/* Glow effect */}
+      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 40% 55%, rgba(168,138,90,0.1), transparent)", pointerEvents: "none", zIndex: 0 }} />
+      <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16 md:min-h-[72vh]" style={{ position: "relative", zIndex: 1 }}>
         {/* ─── Left column: text ─── */}
         <div className="order-2 lg:order-1">
           {/* Overline */}
@@ -48,7 +50,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               fontWeight: 500,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#A88A5A",
+              color: "#BFA476",
               marginBottom: "1.5rem",
             }}
           >
@@ -66,7 +68,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             <p
               style={{
                 fontFamily: "var(--serif)",
-                fontSize: "clamp(1.5rem, 3.5vw, 2rem)",
+                fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
                 fontWeight: 400,
                 fontStyle: "italic",
                 color: "#F7F4EE",
