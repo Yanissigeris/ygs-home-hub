@@ -55,13 +55,16 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
           decoding="async"
           width={648}
           height={486}
+          style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
+          onMouseEnter={(e) => { e.currentTarget.style.filter = "saturate(1)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.filter = "saturate(0.88)"; }}
           onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
           onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
         />
       </div>
 
       {/* Gold top border — hover only */}
-      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
