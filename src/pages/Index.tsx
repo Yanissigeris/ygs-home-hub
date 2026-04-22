@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import HeroSection from "@/components/HeroSection";
-import MicroTrustStrip from "@/components/MicroTrustStrip";
+
 
 import AwardsMarquee from "@/components/AwardsMarquee";
 import ValuationWidget from "@/components/ValuationWidget";
