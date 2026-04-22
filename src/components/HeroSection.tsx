@@ -431,6 +431,55 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </div>
           )}
         </div>
+
+        {/* ─── PROOF BAR ─── */}
+        <div
+          className="relative z-10 w-full"
+          style={{
+            background: "var(--ink)",
+            borderTop: "1px solid rgba(255,255,255,.15)",
+          }}
+        >
+          <div className="mx-auto flex w-full max-w-[80rem] items-stretch justify-center px-4 py-6 sm:py-8">
+            {stats.map((stat, i) => (
+              <React.Fragment key={`proof-${stat.label}`}>
+                {i > 0 && (
+                  <div
+                    aria-hidden="true"
+                    className="self-stretch"
+                    style={{ width: 1, background: "rgba(255,255,255,.20)" }}
+                  />
+                )}
+                <div className="flex flex-1 flex-col items-center justify-center px-3 text-center sm:px-6">
+                  <p
+                    style={{
+                      color: "#F7F4EE",
+                      fontFamily: "var(--serif)",
+                      fontWeight: 500,
+                      fontSize: "clamp(1.25rem, 3.5vw, 2rem)",
+                      lineHeight: 1.1,
+                      letterSpacing: "-.01em",
+                    }}
+                  >
+                    {stat.value}
+                  </p>
+                  <p
+                    className="mt-2 uppercase"
+                    style={{
+                      color: "#F7F4EE",
+                      fontFamily: "var(--sans)",
+                      fontSize: ".7rem",
+                      letterSpacing: ".18em",
+                      opacity: 0.85,
+                    }}
+                  >
+                    {stat.label}
+                  </p>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
       </section>
     );
   }
