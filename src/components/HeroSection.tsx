@@ -221,8 +221,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       );
     }
 
-    /* Full-bleed immersive homepage hero */
-    const bgImage = heroBgImage || heroHomepageBg;
     return (
       <section
         ref={combinedRef}
@@ -230,14 +228,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         className="relative overflow-hidden w-full"
         style={{
           minHeight: "100svh",
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "var(--ink)",
+          backgroundColor: "#17303B",
         }}
       >
-        {/* Hidden video preload (desktop) — kept for VideoObject schema */}
+        {/* Video background — only fill */}
         {heroVideo && (
           <video
             ref={videoRef}
@@ -249,8 +243,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             preload="none"
             width={1920}
             height={1080}
-            className="absolute inset-0 h-full w-full object-cover hidden md:block"
-            style={{ opacity: videoReady ? 0.55 : 0, transition: "opacity 1.2s ease", zIndex: 1 }}
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ opacity: videoReady ? 1 : 0, transition: "opacity 1.2s ease", zIndex: 1 }}
             aria-hidden="true"
             onPlaying={() => setVideoReady(true)}
           />
