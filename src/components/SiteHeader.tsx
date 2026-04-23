@@ -412,7 +412,7 @@ const SiteHeader = () => {
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" aria-label="Yanis Gauthier-Sigeris — Accueil">
+        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }} aria-label="Yanis Gauthier-Sigeris — Accueil">
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <span
