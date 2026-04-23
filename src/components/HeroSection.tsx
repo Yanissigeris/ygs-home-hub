@@ -444,7 +444,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 >
                   <Link
                     to={primaryCta.href}
-                    className="inline-flex items-center justify-center uppercase transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
+                    className="hero-cta-btn inline-flex items-center justify-center uppercase w-full sm:w-auto text-center"
                     style={{
                       background: "#A88A5A",
                       border: "1.5px solid #A88A5A",
@@ -455,9 +455,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       fontWeight: 600,
                       letterSpacing: ".14em",
                       boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
+                      transition: "all 0.3s ease",
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.background = "#917745"; e.currentTarget.style.borderColor = "#917745"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.borderColor = "#A88A5A"; }}
                     onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
                   >
                     {primaryCta.label} →
