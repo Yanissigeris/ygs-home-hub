@@ -90,7 +90,7 @@ const VisibleBreadcrumb = () => {
               <Link
                 to={crumb.href}
                 className="ygs-breadcrumb-link no-underline"
-                style={{ color: "#888", fontSize: "0.75rem", fontWeight: 500 }}
+                style={{ color: "#999", fontSize: "0.75rem", fontWeight: 500 }}
               >
                 {crumb.name}
               </Link>
@@ -98,7 +98,7 @@ const VisibleBreadcrumb = () => {
             <li
               aria-hidden="true"
               className="select-none"
-              style={{ margin: "0 0.5rem", color: "#aaa", fontSize: "0.75rem" }}
+              style={{ margin: "0 0.5rem", color: "#bbb", fontSize: "0.75rem" }}
             >
               ›
             </li>
@@ -107,7 +107,7 @@ const VisibleBreadcrumb = () => {
         <li
           aria-current="page"
           style={{
-            color: "#888",
+            color: "#999",
             fontSize: "0.75rem",
             fontWeight: 500,
             maxWidth: "260px",
@@ -124,7 +124,7 @@ const VisibleBreadcrumb = () => {
         .ygs-breadcrumb-link { transition: color 0.15s ease; }
         .ygs-breadcrumb-link:hover { color: #222831 !important; }
         @media (max-width: 767px) {
-          .ygs-breadcrumb-nav { padding: 10px 20px !important; }
+          .ygs-breadcrumb-nav { padding: 8px 20px !important; }
           .ygs-breadcrumb-nav a,
           .ygs-breadcrumb-nav li[aria-current="page"],
           .ygs-breadcrumb-nav li[aria-hidden="true"] {
