@@ -232,8 +232,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const el = videoRef.current;
       if (!el) return;
       const onPlaying = () => setVideoReady(true);
+      const setRate = () => { try { el.playbackRate = 0.75; } catch {} };
       el.addEventListener("playing", onPlaying);
-      return () => el.removeEventListener("playing", onPlaying);
+      el.addEventListener("loadeddata", setRate);
+      setRate();
+      return () => {
+        el.removeEventListener("playing", onPlaying);
+        el.removeEventListener("loadeddata", setRate);
+      };
     }, []);
 
     /* Compact hero for inner pages */
