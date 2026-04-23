@@ -378,33 +378,32 @@ const SiteHeader = () => {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
+  // On mobile (<640px), header always stays transparent regardless of scroll.
+  const effectiveTransparent = mobile ? true : transparent;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: transparent ? "transparent" : "#F7F4EE",
+    background: effectiveTransparent ? "transparent" : "#F7F4EE",
     backdropFilter: "none",
     WebkitBackdropFilter: "none",
-    borderBottom: transparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
+    borderBottom: effectiveTransparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
     transition: "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
-    boxShadow: transparent ? "none" : "0 1px 4px rgba(0,0,0,0.08)",
+    boxShadow: effectiveTransparent ? "none" : "0 1px 4px rgba(0,0,0,0.08)",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
   // Colors swap based on transparent vs scrolled-cream state.
-  // Picked for WCAG AA contrast against each background:
-  // - transparent (over dark hero): pure white text + soft white for inactive
-  // - scrolled (cream #F7F4EE): deep ink #17303B for active, #2D3748 for inactive
-  const navLinkColor = transparent ? "rgba(247,244,238,0.92)" : "#2D3748";
-  const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
-  const iconColor = transparent ? "#FFFFFF" : "#17303B";
-  const ctaBorderColor = transparent ? "#FFFFFF" : "#17303B";
-  const ctaTextColor = transparent ? "#FFFFFF" : "#17303B";
-  const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
-  const nameColor = transparent ? "#FFFFFF" : "#17303B";
-  const dividerColor = transparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
+  const navLinkColor = effectiveTransparent ? "rgba(247,244,238,0.92)" : "#2D3748";
+  const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  const iconColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  const ctaBorderColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  const ctaTextColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  const logoFilter = effectiveTransparent ? "brightness(0) invert(1)" : "none";
+  const nameColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
 
   return (
     <header id="site-header" style={headerStyle}>
