@@ -254,7 +254,7 @@ const SiteHeader = () => {
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
