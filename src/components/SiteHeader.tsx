@@ -399,14 +399,14 @@ const SiteHeader = () => {
   const textShadow = effectiveTransparent ? "0 1px 3px rgba(0,0,0,0.3)" : "none";
 
   // Colors swap based on transparent vs scrolled-glass state.
-  const navLinkColor = effectiveTransparent ? "rgba(255,255,255,0.92)" : "#222831";
-  const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const iconColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const ctaBorderColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const ctaTextColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const logoFilter = effectiveTransparent ? "brightness(0) invert(1)" : "none";
-  const nameColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "rgba(34,40,49,0.3)";
+  const navLinkColor = "#FFFFFF";
+  const navLinkActiveColor = "#FFFFFF";
+  const iconColor = "#FFFFFF";
+  const ctaBorderColor = "#FFFFFF";
+  const ctaTextColor = "#FFFFFF";
+  const logoFilter = "brightness(0) invert(1)";
+  const nameColor = "#FFFFFF";
+  const dividerColor = "rgba(255,255,255,0.4)";
 
   return (
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
