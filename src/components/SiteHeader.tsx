@@ -442,35 +442,23 @@ const SiteHeader = () => {
             style={{
               height: 40,
               padding: "0 1.4rem",
-              background: transparent ? "#F7F4EE" : "#17303B",
-              color: transparent ? "#17303B" : "#F7F4EF",
+              background: "transparent",
+              color: ctaTextColor,
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
               borderRadius: 0,
-              border: "none",
-              boxShadow: transparent
-                ? "0 4px 14px -4px rgba(0,0,0,.4)"
-                : "0 4px 14px -4px rgba(23,48,59,.35)",
+              border: `1px solid ${ctaBorderColor}`,
+              boxShadow: "none",
               transition: "all .2s ease",
             }}
             onMouseEnter={(e) => {
-              if (transparent) {
-                e.currentTarget.style.background = "#FFFFFF";
-                e.currentTarget.style.boxShadow = "0 6px 18px -4px rgba(0,0,0,.5)";
-              } else {
-                e.currentTarget.style.background = "#0f2530";
-                e.currentTarget.style.boxShadow = "0 6px 18px -4px rgba(23,48,59,.45)";
-              }
+              e.currentTarget.style.background = ctaBorderColor;
+              e.currentTarget.style.color = transparent ? "#17303B" : "#FFFFFF";
             }}
             onMouseLeave={(e) => {
-              if (transparent) {
-                e.currentTarget.style.background = "#F7F4EE";
-                e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(0,0,0,.4)";
-              } else {
-                e.currentTarget.style.background = "#17303B";
-                e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(23,48,59,.35)";
-              }
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = ctaTextColor;
             }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
           >
