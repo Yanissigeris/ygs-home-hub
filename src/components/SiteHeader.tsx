@@ -499,23 +499,33 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
+      {/* Mobile (<sm): full-screen overlay */}
       <div
         id="mobile-navigation"
         role="navigation"
         aria-label="Navigation principale"
-        className={`lg:hidden ${open ? "fixed inset-0 z-50 overflow-y-auto sm:static sm:inset-auto sm:z-auto sm:overflow-hidden" : "overflow-hidden"}`}
+        className={`sm:hidden fixed inset-0 z-50 overflow-y-auto bg-[#17303B] transition-opacity duration-200 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         style={{
-          background: "#17303B",
-          maxHeight: open ? (typeof window !== "undefined" && window.innerWidth >= 640 ? "calc(100dvh - 80px)" : "100dvh") : 0,
-          opacity: open ? 1 : 0,
-          transition: "opacity .25s ease, max-height .3s ease",
-          borderTop: open ? "1px solid rgba(255,255,255,.08)" : "none",
-          borderBottom: open ? "1px solid rgba(255,255,255,.08)" : "none",
-          paddingTop: open ? "env(safe-area-inset-top, 0px)" : 0,
-          paddingBottom: open ? "env(safe-area-inset-bottom, 0px)" : 0,
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          paddingBottom: "env(safe-area-inset-bottom, 0px)",
         }}
       >
-        <div>
+        {/* Top bar inside full-screen overlay */}
+        <div className="flex items-center justify-between px-4 h-14 border-b border-white/10">
+          <Link to={lang === "en" ? "/en" : "/"} onClick={closeMenu} className="flex items-center">
+            <img src={logoYgsSymbolBlue} alt="YGS" width={36} height={36} className="h-9 w-9" style={{ filter: "brightness(0) invert(1)" }} />
+          </Link>
+          <button
+            onClick={toggleMenu}
+            className="flex items-center justify-center text-white"
+            style={{ height: 44, width: 44 }}
+            aria-label="Close menu"
+          >
+            <XIcon size={24} />
+          </button>
+        </div>
+
+        <div className="pt-2">
           {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
 
           {/* Tap-to-call block */}
@@ -542,7 +552,39 @@ const SiteHeader = () => {
               {ctaLabel}
             </Link>
           </div>
-          {/* FR|EN toggle at bottom of dropdown */}
+          {/* FR|EN toggle at bottom */}
+          <div className="flex justify-center pb-8">
+            <LanguageSwitch transparent />
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet (sm–lg) drawer — kept compact under header */}
+      <div
+        role="navigation"
+        aria-label="Navigation principale"
+        className="hidden sm:block lg:hidden overflow-hidden"
+        style={{
+          maxHeight: open ? "calc(100dvh - 80px)" : 0,
+          opacity: open ? 1 : 0,
+          transition: "max-height .3s ease, opacity .25s ease",
+          background: "#17303B",
+          borderTop: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          borderBottom: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          overflowY: open ? "auto" : "hidden",
+        }}
+      >
+        <div>
+          {nav.map((item) => (<MobileNavGroup key={`t-${item.label}`} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
+          <a href="tel:8192103044" className="block py-4 border-t border-white/10 mt-4 text-center" onClick={closeMenu}>
+            <div className="text-white/50 text-xs uppercase tracking-widest">{lang === "en" ? "Call" : "Appeler"}</div>
+            <div className="text-white text-xl font-medium tracking-wide mt-1">819-210-3044</div>
+          </a>
+          <div className="px-6 py-4">
+            <Link to={ctaHref} onClick={closeMenu} className="flex w-full items-center justify-center bg-[#A88A5A] text-[#17303B] font-medium border-0 rounded" style={{ height: 48, fontSize: ".94rem" }}>
+              {ctaLabel}
+            </Link>
+          </div>
           <div className="flex justify-center pb-6">
             <LanguageSwitch transparent />
           </div>
