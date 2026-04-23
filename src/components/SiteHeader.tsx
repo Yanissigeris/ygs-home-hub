@@ -193,7 +193,12 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
 
   if (!item.children && !item.columns) {
     return (
-      <Link to={item.href!} onClick={onNavigate} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
+      <Link
+        to={item.href!}
+        onClick={onNavigate}
+        className="block px-6 py-3.5 text-[.9rem] font-medium text-white/90 hover:text-white transition-colors"
+        style={{ borderBottom: "1px solid rgba(255,255,255,.08)", minHeight: 44, fontWeight: pathname === item.href ? 600 : 500 }}
+      >
         {item.label}
       </Link>
     );
@@ -205,31 +210,41 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
     : [{ links: item.children! }];
 
   return (
-    <div style={{ borderBottom: "1px solid var(--border)" }}>
-      <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: "var(--muted)", minHeight: 44 }} aria-expanded={expanded}>
+    <div style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+      <button
+        onClick={() => setExpanded((p) => !p)}
+        className="flex w-full items-center justify-between px-6 py-3.5 text-[.9rem] font-medium text-white/90 hover:text-white transition-colors"
+        style={{ minHeight: 44 }}
+        aria-expanded={expanded}
+      >
         {item.label}
-        <ChevronDownIcon size={14} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        <ChevronDownIcon size={14} className={`text-white/50 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-2 pl-3">
           {sections.map((sec, idx) => (
-            <div key={sec.title ?? idx} className={idx > 0 ? "mt-2 pt-2" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
+            <div key={sec.title ?? idx} className={idx > 0 ? "mt-2 pt-2" : ""} style={idx > 0 ? { borderTop: "1px solid rgba(255,255,255,.08)" } : undefined}>
               {sec.title && (
                 <div
-                  className="px-6 pt-1 pb-1.5"
+                  className="px-6 pt-1 pb-1.5 text-[#A88A5A]"
                   style={{
                     fontSize: 11,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
                     fontWeight: 600,
-                    color: "#A88A5A",
                   }}
                 >
                   {sec.title}
                 </div>
               )}
               {sec.links.map((child) => (
-                <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
+                <Link
+                  key={child.href}
+                  to={child.href}
+                  onClick={onNavigate}
+                  className="block px-6 py-2.5 text-[.86rem] text-white/90 hover:text-white transition-colors"
+                  style={{ fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}
+                >
                   {child.label}
                 </Link>
               ))}
@@ -488,34 +503,48 @@ const SiteHeader = () => {
         id="mobile-navigation"
         role="navigation"
         aria-label="Navigation principale"
-        className="lg:hidden overflow-hidden"
+        className={`lg:hidden ${open ? "fixed inset-0 z-50 overflow-y-auto sm:static sm:inset-auto sm:z-auto sm:overflow-hidden" : "overflow-hidden"}`}
         style={{
-          maxHeight: open ? "calc(100dvh - 80px)" : 0,
+          background: "#17303B",
+          maxHeight: open ? (typeof window !== "undefined" && window.innerWidth >= 640 ? "calc(100dvh - 80px)" : "100dvh") : 0,
           opacity: open ? 1 : 0,
-          transition: "max-height .3s ease, opacity .25s ease",
-          borderTop: open ? "1px solid var(--border)" : "none",
-          background: "var(--cream)",
-          overflowY: open ? "auto" : "hidden",
-          borderBottom: open ? "1px solid var(--border)" : "none",
+          transition: "opacity .25s ease, max-height .3s ease",
+          borderTop: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          borderBottom: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          paddingTop: open ? "env(safe-area-inset-top, 0px)" : 0,
+          paddingBottom: open ? "env(safe-area-inset-bottom, 0px)" : 0,
         }}
       >
         <div>
           {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
-          <div className="px-6 py-4" style={{ borderTop: "1px solid var(--border)" }}>
+
+          {/* Tap-to-call block */}
+          <a
+            href="tel:8192103044"
+            className="block py-4 border-t border-white/10 mt-4 text-center"
+            onClick={closeMenu}
+          >
+            <div className="text-white/50 text-xs uppercase tracking-widest">
+              {lang === "en" ? "Call" : "Appeler"}
+            </div>
+            <div className="text-white text-xl font-medium tracking-wide text-center mt-1">
+              819-210-3044
+            </div>
+          </a>
+
+          <div className="px-6 py-4">
             <Link
               to={ctaHref}
               onClick={closeMenu}
-              className="flex w-full items-center justify-center transition-all duration-200"
-              style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+              className="flex w-full items-center justify-center bg-[#A88A5A] text-[#17303B] font-medium border-0 rounded transition-all duration-200"
+              style={{ height: 48, fontSize: ".94rem" }}
             >
               {ctaLabel}
             </Link>
           </div>
           {/* FR|EN toggle at bottom of dropdown */}
-          <div className="flex justify-center pb-4">
-            <LanguageSwitch />
+          <div className="flex justify-center pb-6">
+            <LanguageSwitch transparent />
           </div>
         </div>
       </div>
