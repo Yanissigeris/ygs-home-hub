@@ -359,6 +359,23 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
               </p>
 
+              <p
+                className="mt-3 block opacity-0 animate-hero-fade-up font-light"
+                style={{
+                  color: "rgba(255,255,255,0.7)",
+                  animationDelay: "0.55s",
+                  animationFillMode: "forwards",
+                  fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
+                  lineHeight: 1.6,
+                  maxWidth: "480px",
+                  textShadow: "0 1px 6px rgba(0,0,0,0.4)",
+                }}
+              >
+                {lang === "fr"
+                  ? "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. Près de 9 ans d'expérience, Hall of Fame RE/MAX et plus de 200 transactions complétées en Outaouais."
+                  : "Yanis Gauthier-Sigeris, RE/MAX real estate broker in Gatineau. Nearly 9 years of experience, RE/MAX Hall of Fame, and over 200 completed transactions in Outaouais."}
+              </p>
+
               {primaryCta && (
                 <div className="mt-6 sm:mt-7 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
                   <Link
