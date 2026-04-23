@@ -433,7 +433,7 @@ const SiteHeader = () => {
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
-          <LanguageSwitch transparent={transparent} />
+          <LanguageSwitch transparent={true} />
         </div>
         <div className="ml-4 shrink-0 xl:ml-5">
           <Link
@@ -473,7 +473,7 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
-          <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
+          <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <Link
             to={ctaHref}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
@@ -496,7 +496,7 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(52vw, 140px)", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
-          <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
+          <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
