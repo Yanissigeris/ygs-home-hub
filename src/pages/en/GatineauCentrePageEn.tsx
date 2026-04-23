@@ -78,8 +78,8 @@ const GatineauCentrePageEn = () => (
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Real estate broker in Gatineau centre — accessibility, services and value"
       subtitle="Gatineau's central area is often underestimated. Yet it's the city's best-served sector — hospital, universities, cégep, transit, shops. And one of the most accessible for families and investors."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See properties", href: "/en/properties?area=gatineau" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}
       heroBgImage={heroImg}
     />
 

@@ -67,8 +67,8 @@ const PontiacPageEn = () => {
         overline="PONTIAC · OUTAOUAIS · NATIONAL CAPITAL REGION"
         title="Real estate broker in Pontiac — between the Ottawa River and Gatineau Park"
         subtitle="The Municipality of Pontiac is nestled between the Ottawa River, the Quyon River and the hills of Gatineau Park. It is a unique territory within the National Capital Region: large, rural, bilingual, and still accessible. For buyers who want real space, it is often a discovery."
-        primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-        secondaryCta={{ label: "Discuss my project", href: "/en/contact" }}
+        primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+        secondaryCta={{ label: "Discuss my project →", href: "/en/contact" }}
         heroBgImage={heroImg}
       />
 

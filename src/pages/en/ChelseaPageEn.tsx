@@ -83,8 +83,8 @@ const ChelseaPageEn = () => (
       overline="CHELSEA · QUÉBEC"
       title="Real estate broker in Chelsea — living between nature and Ottawa"
       subtitle="Chelsea is a distinct municipality north of Gatineau, about 10 kilometres from Ottawa. Sixty percent of its territory is occupied by Gatineau Park. It's one of the rare places in North America where you can live in a national park while being 15 minutes from a capital's downtown."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See properties", href: "/en/properties?area=chelsea" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
     />
 

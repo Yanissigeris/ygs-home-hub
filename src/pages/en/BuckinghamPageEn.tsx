@@ -78,8 +78,8 @@ const BuckinghamPageEn = () => (
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
       title="Real estate broker in Buckingham — the space Gatineau no longer offers"
       subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. This is where lots are large, homes have space, and the pace of life is different. For buyers who've done the math and truly want space, it's often the Outaouais market's revelation."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See properties", href: "/en/properties?area=buckingham" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See properties →", href: "/en/properties?area=buckingham" }}
       heroBgImage={heroImg}
     />
 

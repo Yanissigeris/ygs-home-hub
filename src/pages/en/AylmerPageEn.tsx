@@ -139,8 +139,8 @@ const AylmerPageEn = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Real estate broker in Aylmer — your local specialist"
       subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes — and a competitive market that rewards prepared buyers and well-positioned sellers."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See Aylmer properties", href: "/en/properties?area=aylmer" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
     />
 
