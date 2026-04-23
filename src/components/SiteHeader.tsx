@@ -473,7 +473,7 @@ const SiteHeader = () => {
       {/* ─── Mobile (<640px) — logo left, hamburger right (seamless with hero) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300 bg-[#17303B]" style={{ height: scrolled ? 50 : 56 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={36} height={36} className="h-9 w-9 shrink-0 transition-all duration-300" style={{ filter: "brightness(0) invert(1)" }} loading="eager" decoding="async" />
+          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={40} height={40} className="h-10 w-10 shrink-0 transition-all duration-300" style={{ filter: "brightness(0) invert(1)" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
