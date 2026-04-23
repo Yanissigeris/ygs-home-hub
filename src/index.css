@@ -570,7 +570,7 @@ h1.hero-h1-reduced {
     margin-right: auto !important;
   }
 
-  /* Credibility bar — strip glassmorphism + icons + shorten */
+  /* Credibility bar — strip glassmorphism + icons, keep readable */
   [data-hero-dark] [class*="bg-[rgba(23"],
   [data-hero-dark] div[style*="backdrop-filter"] {
     background: transparent !important;
@@ -585,8 +585,11 @@ h1.hero-h1-reduced {
   }
   [data-hero-dark] .absolute.z-\[5\][style*="bottom: 32px"],
   [data-hero-dark] .absolute.z-\[5\] {
-    font-size: 0.6rem !important;
-    color: rgba(255,255,255,0.55) !important;
+    font-size: 0.7rem !important;
+    color: rgba(255,255,255,0.8) !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+    position: absolute !important;
+    z-index: 4 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -595,13 +598,18 @@ h1.hero-h1-reduced {
   /* NAP */
   [data-hero-dark] address.absolute,
   [data-hero-dark] address span {
-    font-size: 0.55rem !important;
-    color: rgba(255,255,255,0.35) !important;
+    font-size: 0.65rem !important;
+    color: rgba(255,255,255,0.65) !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
     background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     padding: 0 !important;
     border-radius: 0 !important;
+  }
+  [data-hero-dark] address.absolute {
+    position: absolute !important;
+    z-index: 4 !important;
   }
 }
 
