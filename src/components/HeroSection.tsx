@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroHomepageBg from "@/assets/hero-homepage.webp";
 
 interface HeroSectionProps {
   overline?: string;
@@ -220,15 +221,42 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       );
     }
 
-    /* Full homepage hero — 2-column layout */
+    /* Full-bleed immersive homepage hero */
+    const bgImage = heroBgImage || heroHomepageBg;
     return (
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden flex flex-col justify-between min-h-screen pb-[70px] md:pb-0"
-        style={{ background: "var(--ink)", paddingTop: "clamp(70px, 9vh, 100px)" }}
+        className="relative overflow-hidden w-full"
+        style={{
+          minHeight: "100svh",
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "var(--ink)",
+        }}
       >
-        {/* Top gradient overlay — improves header text contrast over hero */}
+        {/* Hidden video preload (desktop) — kept for VideoObject schema */}
+        {heroVideo && (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroVideoPoster}
+            preload="none"
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover hidden md:block"
+            style={{ opacity: videoReady ? 0.55 : 0, transition: "opacity 1.2s ease", zIndex: 1 }}
+            aria-hidden="true"
+            onPlaying={() => setVideoReady(true)}
+          />
+        )}
+
+        {/* Top gradient overlay — header contrast */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-0 right-0 top-0 z-[15]"
@@ -237,21 +265,42 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             background: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0))",
           }}
         />
-        <div className="flex flex-col lg:grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
-          {/* ─── LEFT COLUMN ─── */}
-          <div
-            className="relative flex flex-col justify-center order-2 md:order-none mt-[-1rem] md:mt-0 z-20"
-            style={{ background: "linear-gradient(175deg, #0a1a22, #17303B)" }}
-          >
-            <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 65% 45%, rgba(168,138,90,0.05), transparent)" }} />
-            {/* Mobile padding: tightened to keep proof bar above the fold */}
-            <div className="px-[1.5rem] pt-[calc(4rem-64px)] pb-[2.25rem] sm:px-[clamp(1.25rem,5vw,5rem)] sm:pt-[calc(clamp(2rem,5vw,5rem)-40px)] sm:pb-[clamp(2rem,5vw,5rem)]">
-              {/* Decorative right edge line (desktop) */}
-              <div className="absolute right-0 top-0 bottom-0 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent 10%, rgba(168,138,90,.3) 50%, transparent 90%)" }} aria-hidden="true" />
 
+        {/* Main gradient overlay — desktop */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+          }}
+        />
+
+        {/* Main gradient overlay — mobile */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[2] md:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
+          }}
+        />
+
+        {/* ─── TEXT CONTENT (Layer 3) ─── */}
+        <div
+          className="relative z-[3] flex flex-col"
+          style={{ minHeight: "100svh" }}
+        >
+          <div
+            className="w-full md:max-w-[50%]"
+            style={{
+              padding: "90px 20px 0 20px",
+            }}
+          >
+            <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
                 <p
-                  className="mb-3 sm:mb-8 opacity-0 animate-hero-fade-up uppercase font-semibold"
+                  className="mb-3 sm:mb-6 opacity-0 animate-hero-fade-up uppercase font-semibold"
                   style={{
                     color: "var(--gold)",
                     animationDelay: "0.2s",
@@ -259,6 +308,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     fontFamily: "var(--sans)",
                     fontSize: "max(.6rem, .62rem)",
                     letterSpacing: ".22em",
+                    textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                   }}
                 >
                   {overline.replace(/[·•]/g, "  ·  ")}
@@ -268,280 +318,142 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <h1
                 className="opacity-0 animate-hero-fade-up"
                 style={{
-                  color: "#F7F4EE",
+                  color: "#FFFFFF",
                   animationDelay: "0.35s",
                   animationFillMode: "forwards",
                   letterSpacing: "-.01em",
-                  fontFeatureSettings: '"liga" 1, "kern" 1',
                   fontStyle: "italic",
                   fontWeight: 300,
                   fontFamily: "var(--serif)",
+                  textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                 }}
               >
                 {lang === "fr" ? (
                   <>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#F7F4EE", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#FFFFFF", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
                       Votre courtier immobilier
                     </span>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em" }}>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
                       en Outaouais
                     </span>
                   </>
                 ) : (
                   <>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#F7F4EE", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#FFFFFF", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
                       Your real estate broker
                     </span>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em" }}>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
                       in Outaouais
                     </span>
                   </>
                 )}
               </h1>
 
-              <p className="mt-4 sm:mt-6 block max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
+              <p
+                className="mt-4 sm:mt-6 block max-w-[460px] font-light opacity-0 animate-hero-fade-up"
+                style={{
+                  color: "#FFFFFF",
+                  animationDelay: "0.5s",
+                  animationFillMode: "forwards",
+                  fontSize: ".95rem",
+                  lineHeight: 1.75,
+                  textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                }}
+              >
                 {lang === "fr"
                   ? "Je vous donne les chiffres et les options, vous décidez. Stratégie claire pour vendre, acheter ou investir en Outaouais."
                   : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
               </p>
 
-              {(primaryCta || secondaryCta) && (
-                <div className="mt-[1.4rem] flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
-                  {primaryCta && (
-                    <Link
-                      to={primaryCta.href}
-                      className="inline-flex items-center justify-center uppercase transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
-                      style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: 0, color: "#FFFFFF", padding: ".9rem 1.5rem", fontSize: ".8rem", fontWeight: 600, letterSpacing: ".14em", transition: "opacity .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease" }}
-                      onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
-                    >
-                      {primaryCta.label} →
-                    </Link>
-                  )}
+              {primaryCta && (
+                <div className="mt-6 sm:mt-7 opacity-0 animate-hero-fade-up" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
+                  <Link
+                    to={primaryCta.href}
+                    className="inline-flex items-center justify-center uppercase transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
+                    style={{
+                      background: "#A88A5A",
+                      border: "1.5px solid #A88A5A",
+                      borderRadius: 0,
+                      color: "#FFFFFF",
+                      padding: ".95rem 1.75rem",
+                      fontSize: ".82rem",
+                      fontWeight: 600,
+                      letterSpacing: ".14em",
+                      boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "#917745"; e.currentTarget.style.borderColor = "#917745"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.borderColor = "#A88A5A"; }}
+                    onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
+                  >
+                    {primaryCta.label} →
+                  </Link>
                 </div>
               )}
-
-              <p className="mt-5 lg:hidden opacity-0 animate-hero-fade-up" style={{
-                fontFamily: "var(--serif)",
-                fontSize: "0.78rem",
-                fontWeight: 500,
-                color: "rgba(247,244,238,0.45)",
-                letterSpacing: "0.02em",
-                animationDelay: "0.75s",
-                animationFillMode: "forwards",
-              }}>
-                Yanis Gauthier-Sigeris — {lang === "fr" ? "Courtier RE/MAX" : "RE/MAX Broker"}
-              </p>
-
-              {/* Credentials strip */}
-              <div className={`mt-8 pt-6 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
-                {/* Mobile: original stats grid */}
-                <div className="md:hidden flex items-start justify-between gap-3 w-full">
-                  {stats.map((stat, i) => (
-                    <React.Fragment key={stat.label}>
-                      {i > 0 && <div className="h-[30px] w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
-                      <div className="text-center min-w-0 flex-1">
-                        <p
-                          className="font-heading font-semibold leading-none tracking-tight text-white"
-                          style={{
-                            letterSpacing: "-.02em",
-                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.05rem, 3.6vw, 2.4rem)" : "clamp(1.5rem, 5vw, 2.4rem)",
-                          }}
-                        >
-                          {stat.value}
-                        </p>
-                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(168,138,90,0.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </div>
-                {/* Tablet/Desktop: inline credentials line */}
-                <p className="hidden md:block" style={{
-                  fontFamily: "var(--sans)",
-                  fontSize: "0.68rem",
-                  fontWeight: 400,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "rgba(247,244,238, 0.45)",
-                  lineHeight: 2.0,
-                }}>
-                  {lang === "fr" ? (
-                    <>
-                      <span style={{ fontWeight: 600 }}>9 ans</span>{" d'expérience "}
-                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
-                      {" "}<span style={{ fontWeight: 600 }}>5★</span>{" Google & Facebook "}
-                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
-                      {" "}<span style={{ fontWeight: 600 }}>Hall of Fame</span>{" RE/MAX"}
-                    </>
-                  ) : (
-                    <>
-                      <span style={{ fontWeight: 600 }}>9 years</span>{" experience "}
-                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
-                      {" "}<span style={{ fontWeight: 600 }}>5★</span>{" Google & Facebook "}
-                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
-                      {" "}<span style={{ fontWeight: 600 }}>Hall of Fame</span>{" RE/MAX"}
-                    </>
-                  )}
-                </p>
-              </div>
             </div>
           </div>
-
-          {/* ─── RIGHT COLUMN ─── */}
-          <div ref={rightColRef} className="relative hidden lg:block overflow-hidden will-change-transform" style={{ background: "var(--ink2)" }}>
-            {/* Background image / video */}
-            {heroVideo && (
-              <>
-                <div className="absolute inset-0 transition-opacity" style={{ opacity: videoReady ? 0 : 1, pointerEvents: "none", transitionDuration: "1600ms" }} aria-hidden="true">
-                  <div className="absolute inset-0 animate-[hero-shimmer_6s_ease-in-out_infinite]" style={{ background: "radial-gradient(ellipse 120% 80% at 30% 60%, hsl(200 42% 20% / 0.5) 0%, transparent 60%)" }} />
-                </div>
-                <div className="absolute inset-0">
-                  <video ref={videoRef} autoPlay muted loop playsInline poster={heroVideoPoster} preload="none" width={1920} height={1080} className="h-full w-full object-cover" style={{ opacity: 0.5, filter: "brightness(0.88) saturate(0.65)" }} aria-hidden="true" />
-                </div>
-              </>
-            )}
-            {heroBgImage && !heroVideo && (
-              <div className="absolute inset-0">
-                <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.55, filter: "brightness(0.85) saturate(0.7)" }} loading="eager" decoding="auto" {...{"fetchpriority": "high"} as any} onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
-              </div>
-            )}
-
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(145deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 40%, rgba(17,37,48,.05) 100%)" }} />
-
-            {/* Left edge separation overlay */}
-            <div className="absolute inset-y-0 left-0 z-[1] w-1/2 pointer-events-none" style={{ background: "linear-gradient(to right, #17303B 0%, transparent 40%)", opacity: 0.35 }} aria-hidden="true" />
-
-            {/* Warm glow behind portrait */}
-            <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 50% 60% at 50% 55%, rgba(168,138,90,0.12), transparent 60%)" }} />
-
-            {/* Yanis portrait */}
-            {agentImage && (
-              <div ref={portraitRef} className="absolute inset-0 z-[2] flex items-end justify-center will-change-transform">
-                <img
-                  src={agentImage}
-                  alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
-                  width={640}
-                  height={960}
-                  className="w-[420px] xl:w-[500px] 2xl:w-[540px] object-contain object-bottom"
-                  style={{ height: "95%", maskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 4%, black 100%)" }}
-                  loading="eager"
-                  decoding="auto"
-                  {...{"fetchpriority": "high"} as any}
-                />
-              </div>
-            )}
-
-            {/* Floating stats card */}
-            {!hideRecognitionCard && (
-              <div className="absolute bottom-12 left-10 right-10 z-[3] opacity-0 animate-hero-fade-up" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
-                <div className="backdrop-blur-xl" style={{ background: "rgba(247,244,238,.96)", borderLeft: "3px solid var(--gold)", borderRadius: "3px", padding: "1.6rem 2rem" }}>
-                  <p className="text-[.62rem] font-semibold uppercase tracking-[.14em] mb-4" style={{ color: "var(--gold)" }}>
-                    {lang === "en" ? "PROFESSIONAL RECOGNITION" : "RECONNAISSANCES PROFESSIONNELLES"}
-                  </p>
-                  <div className="grid grid-cols-3 gap-0">
-                    {stats.map((stat, i) => (
-                      <div key={stat.label} className="text-center" style={{ borderLeft: i > 0 ? "1px solid rgba(23,48,59,.1)" : "none" }}>
-                        <p className="font-heading text-[2rem] font-semibold leading-none" style={{ color: "var(--ink)", letterSpacing: "-.02em" }}>{stat.value}</p>
-                        <p className="mt-1.5 text-[.65rem] font-medium uppercase tracking-[.1em]" style={{ color: "var(--gold)" }}>{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ─── MOBILE: Agent image below text ─── */}
-          {agentImage && (
-            <div className="relative flex justify-center items-end overflow-hidden lg:hidden order-first md:order-none" style={{ background: "var(--ink2)" }}>
-              {heroVideo && (
-                <div className="absolute inset-0">
-                  {heroVideoPoster && <img src={heroVideoPoster} alt="" role="presentation" className="h-full w-full object-cover" style={{ opacity: 0.2 }} loading="eager" decoding="auto" />}
-                </div>
-              )}
-              <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.45) 0%, rgba(23,48,59,.15) 100%)" }} />
-              <img
-                src={agentImageSm || agentImage}
-                srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
-                sizes="100vw"
-                alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
-                width={320}
-                height={480}
-                className="relative z-[2] w-auto max-w-[75%] mx-auto max-h-[42vh] object-contain object-bottom rounded-none md:rounded-lg md:w-full md:max-w-none md:max-h-[55vh] md:object-cover md:object-top"
-                loading="eager"
-                decoding="auto"
-                {...{"fetchpriority": "high"} as any}
-              />
-              
-            </div>
-          )}
-          {/* Scroll indicator — mobile only */}
-          {showScrollHint && (
-            <div
-              className="absolute bottom-6 left-1/2 z-10 md:hidden"
-              style={{
-                transform: "translateX(-50%)",
-                color: "rgba(255,255,255,.4)",
-                fontSize: "1.5rem",
-                animation: "hero-bounce 2s ease infinite",
-              }}
-              aria-hidden="true"
-            >
-              ⌄
-            </div>
-          )}
         </div>
 
-        {/* ─── PROOF BAR (home only) ─── */}
-        {showProofBar && (
+        {/* ─── IMAGE B: Yanis portrait (Layer 4) ─── */}
+        {agentImage && (
+          <>
+            {/* Desktop portrait */}
+            <img
+              src={agentImage}
+              alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+              width={640}
+              height={960}
+              className="hidden md:block absolute object-contain object-bottom pointer-events-none select-none"
+              style={{
+                bottom: 0,
+                right: "5%",
+                height: "92%",
+                width: "auto",
+                zIndex: 4,
+                filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.35))",
+              }}
+              loading="eager"
+              decoding="auto"
+              {...{ fetchpriority: "high" } as any}
+            />
+            {/* Mobile portrait */}
+            <img
+              src={agentImageSm || agentImage}
+              srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
+              sizes="100vw"
+              alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+              width={320}
+              height={480}
+              className="md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+              style={{
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                maxHeight: "45vh",
+                width: "auto",
+                zIndex: 4,
+                filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
+              }}
+              loading="eager"
+              decoding="auto"
+              {...{ fetchpriority: "high" } as any}
+            />
+          </>
+        )}
+
+        {/* Scroll indicator — mobile only */}
+        {showScrollHint && (
           <div
-            className="relative z-10 w-full"
+            className="absolute bottom-3 left-1/2 z-[5] md:hidden"
             style={{
-              background: "var(--ink)",
-              borderTop: "1px solid rgba(255,255,255,.15)",
+              transform: "translateX(-50%)",
+              color: "rgba(255,255,255,.7)",
+              fontSize: "1.5rem",
+              animation: "hero-bounce 2s ease infinite",
+              textShadow: "0 2px 6px rgba(0,0,0,0.4)",
             }}
+            aria-hidden="true"
           >
-            <div className="mx-auto flex w-full max-w-[80rem] items-stretch justify-center px-4 py-6 sm:py-8">
-              {stats.map((stat, i) => (
-                <React.Fragment key={`proof-${stat.label}`}>
-                  {i > 0 && (
-                    <div
-                      aria-hidden="true"
-                      className="self-stretch"
-                      style={{ width: 1, background: "rgba(255,255,255,.20)" }}
-                    />
-                  )}
-                  <div className="flex flex-1 flex-col items-center justify-center px-3 text-center sm:px-6">
-                    <p
-                      style={{
-                        color: "#F7F4EE",
-                        fontFamily: "var(--serif)",
-                        fontWeight: 500,
-                        fontSize: "clamp(1.25rem, 3.5vw, 2rem)",
-                        lineHeight: 1.1,
-                        letterSpacing: "-.01em",
-                      }}
-                    >
-                      {stat.value}
-                    </p>
-                    <p
-                      className="mt-2 uppercase"
-                      style={{
-                        color: "#F7F4EE",
-                        fontFamily: "var(--sans)",
-                        fontSize: ".7rem",
-                        letterSpacing: ".18em",
-                        opacity: 0.85,
-                      }}
-                    >
-                      {stat.label}
-                    </p>
-                  </div>
-                </React.Fragment>
-              ))}
-            </div>
+            ⌄
           </div>
         )}
       </section>
