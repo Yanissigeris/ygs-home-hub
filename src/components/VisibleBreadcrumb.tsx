@@ -35,10 +35,11 @@ const VisibleBreadcrumb = () => {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="w-full border-b"
+      className="w-full border-b relative"
       style={{
         backgroundColor: "var(--cream, #F7F4EE)",
         borderBottomColor: "var(--border, #e5e0d8)",
+        zIndex: 51,
       }}
     >
       <div
@@ -124,7 +125,9 @@ const VisibleBreadcrumb = () => {
       </div>
 
       <style>{`
+        nav[aria-label="Breadcrumb"] { margin-top: 70px; }
         @media (max-width: 767px) {
+          nav[aria-label="Breadcrumb"] { margin-top: 56px; }
           nav[aria-label="Breadcrumb"] > div {
             padding-left: 1.25rem !important;
             padding-right: 1.25rem !important;
