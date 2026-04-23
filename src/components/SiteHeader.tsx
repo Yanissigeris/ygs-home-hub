@@ -409,7 +409,7 @@ const SiteHeader = () => {
   const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
 
   return (
-    <header id="site-header" style={headerStyle}>
+    <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" aria-label="Yanis Gauthier-Sigeris — Accueil">
