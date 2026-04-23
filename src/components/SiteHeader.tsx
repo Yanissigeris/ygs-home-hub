@@ -503,34 +503,48 @@ const SiteHeader = () => {
         id="mobile-navigation"
         role="navigation"
         aria-label="Navigation principale"
-        className="lg:hidden overflow-hidden"
+        className={`lg:hidden ${open ? "fixed inset-0 z-50 overflow-y-auto sm:static sm:inset-auto sm:z-auto sm:overflow-hidden" : "overflow-hidden"}`}
         style={{
-          maxHeight: open ? "calc(100dvh - 80px)" : 0,
+          background: "#17303B",
+          maxHeight: open ? (typeof window !== "undefined" && window.innerWidth >= 640 ? "calc(100dvh - 80px)" : "100dvh") : 0,
           opacity: open ? 1 : 0,
-          transition: "max-height .3s ease, opacity .25s ease",
-          borderTop: open ? "1px solid var(--border)" : "none",
-          background: "var(--cream)",
-          overflowY: open ? "auto" : "hidden",
-          borderBottom: open ? "1px solid var(--border)" : "none",
+          transition: "opacity .25s ease, max-height .3s ease",
+          borderTop: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          borderBottom: open ? "1px solid rgba(255,255,255,.08)" : "none",
+          paddingTop: open ? "env(safe-area-inset-top, 0px)" : 0,
+          paddingBottom: open ? "env(safe-area-inset-bottom, 0px)" : 0,
         }}
       >
         <div>
           {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
-          <div className="px-6 py-4" style={{ borderTop: "1px solid var(--border)" }}>
+
+          {/* Tap-to-call block */}
+          <a
+            href="tel:8192103044"
+            className="block py-4 border-t border-white/10 mt-4 text-center"
+            onClick={closeMenu}
+          >
+            <div className="text-white/50 text-xs uppercase tracking-widest">
+              {lang === "en" ? "Call" : "Appeler"}
+            </div>
+            <div className="text-white text-xl font-medium tracking-wide text-center mt-1">
+              819-210-3044
+            </div>
+          </a>
+
+          <div className="px-6 py-4">
             <Link
               to={ctaHref}
               onClick={closeMenu}
-              className="flex w-full items-center justify-center transition-all duration-200"
-              style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+              className="flex w-full items-center justify-center bg-[#A88A5A] text-[#17303B] font-medium border-0 rounded transition-all duration-200"
+              style={{ height: 48, fontSize: ".94rem" }}
             >
               {ctaLabel}
             </Link>
           </div>
           {/* FR|EN toggle at bottom of dropdown */}
-          <div className="flex justify-center pb-4">
-            <LanguageSwitch />
+          <div className="flex justify-center pb-6">
+            <LanguageSwitch transparent />
           </div>
         </div>
       </div>
