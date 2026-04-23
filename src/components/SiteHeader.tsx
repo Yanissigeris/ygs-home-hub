@@ -369,7 +369,7 @@ const SiteHeader = () => {
 
   // Header is fixed; transparent over hero, turns cream/opaque after scrolling past 50px (desktop/tablet only — mobile stays transparent)
   const transparent = !scrolled;
-  const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 639px)").matches;
+  
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 639px)");
