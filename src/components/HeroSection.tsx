@@ -424,7 +424,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 decoding="auto"
                 {...{"fetchpriority": "high"} as any}
               />
-              <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a1a22] via-[#0a1a22]/85 to-transparent pointer-events-none z-[4]" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a1a22] via-[#0a1a22]/70 to-transparent pointer-events-none z-[4]" aria-hidden="true" />
             </div>
           )}
           {/* Scroll indicator — mobile only */}
