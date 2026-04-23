@@ -91,7 +91,7 @@ const ScrollChevron: React.FC = () => {
   );
 };
 
-
+const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
     {
       overline,
