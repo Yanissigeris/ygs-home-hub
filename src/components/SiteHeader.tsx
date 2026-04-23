@@ -252,31 +252,7 @@ const SiteHeader = () => {
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
 
-  // Detect dark hero section presence & overlap with header
-  useEffect(() => {
-    let io: IntersectionObserver | null = null;
-    const setup = () => {
-      const hero = document.querySelector("[data-hero-dark]");
-      if (!hero) { setOnDarkHero(false); return; }
-      io = new IntersectionObserver(
-        ([entry]) => setOnDarkHero(entry.isIntersecting && window.scrollY < 80),
-        { rootMargin: "0px 0px -90% 0px", threshold: 0 }
-      );
-      io.observe(hero);
-    };
-    // Delay slightly so DOM is ready after page transition
-    const t = setTimeout(setup, 60);
-    return () => { clearTimeout(t); io?.disconnect(); };
-  }, [location.pathname]);
-
-  // Also update onDarkHero on scroll (intersection alone isn't enough for threshold)
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY >= 80) setOnDarkHero(false);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // Header is permanently transparent; no dark-hero detection needed.
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
