@@ -395,6 +395,9 @@ const SiteHeader = () => {
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
+  // Text-shadow for legibility when header is transparent over hero.
+  const textShadow = effectiveTransparent ? "0 1px 3px rgba(0,0,0,0.3)" : "none";
+
   // Colors swap based on transparent vs scrolled-cream state.
   const navLinkColor = effectiveTransparent ? "rgba(247,244,238,0.92)" : "#2D3748";
   const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
@@ -406,7 +409,7 @@ const SiteHeader = () => {
   const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
 
   return (
-    <header id="site-header" style={headerStyle}>
+    <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" aria-label="Yanis Gauthier-Sigeris — Accueil">
