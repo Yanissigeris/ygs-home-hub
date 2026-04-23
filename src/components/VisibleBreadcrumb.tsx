@@ -39,7 +39,6 @@ const VisibleBreadcrumb = () => {
       style={{
         backgroundColor: "var(--cream, #F7F4EE)",
         borderBottomColor: "var(--border, #e5e0d8)",
-        marginTop: "var(--header-h, 70px)",
         zIndex: 51,
       }}
     >
