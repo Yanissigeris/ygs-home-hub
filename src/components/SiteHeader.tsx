@@ -245,20 +245,12 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
 /* ── Header ── */
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [onDarkHero, setOnDarkHero] = useState(false);
+  const scrolled = false;
   const location = useLocation();
   const lang = useLanguage();
   const nav = lang === "en" ? mainNavEn : mainNav;
   const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   // Detect dark hero section presence & overlap with header
   useEffect(() => {
