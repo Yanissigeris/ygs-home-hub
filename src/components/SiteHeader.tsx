@@ -367,8 +367,17 @@ const SiteHeader = () => {
     };
   }, [location.pathname]);
 
-  // Header is fixed; transparent over hero, turns cream/opaque after scrolling past 50px
+  // Header is fixed; transparent over hero, turns cream/opaque after scrolling past 50px (desktop/tablet only — mobile stays transparent)
   const transparent = !scrolled;
+  const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 639px)").matches;
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const update = () => setMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
