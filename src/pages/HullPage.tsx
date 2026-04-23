@@ -84,8 +84,8 @@ const HullPage = () => (
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Hull — au cœur de l'Outaouais urbain"
       subtitle="Hull est le secteur le plus urbain de Gatineau. Directement en face d'Ottawa, en pleine transformation avec le projet Zibi, Hull attire les professionnels, les familles bilingues et les investisseurs. C'est ici que la ville bouge le plus."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés à Hull →", href: "/proprietes?secteur=hull" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés à Hull", href: "/proprietes?secteur=hull" }}
       heroBgImage={heroImg}
     />
 

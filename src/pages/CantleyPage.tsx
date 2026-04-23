@@ -83,8 +83,8 @@ const CantleyPage = () => (
       overline="CANTLEY · OUTAOUAIS"
       title="Courtier immobilier à Cantley — l'espace, à 13 km d'Ottawa"
       subtitle="Cantley est à 13 kilomètres du centre-ville d'Ottawa. C'est une municipalité en pleine croissance, connue pour ses grands terrains, son développement résidentiel à faible densité, et sa qualité de vie familiale. Pour les familles qui veulent l'espace sans s'éloigner, Cantley est souvent la conclusion logique."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=cantley" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés", href: "/proprietes?secteur=cantley" }}
       heroBgImage={heroImg}
     />
 

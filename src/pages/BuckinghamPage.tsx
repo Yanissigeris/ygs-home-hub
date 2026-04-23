@@ -78,8 +78,8 @@ const BuckinghamPage = () => (
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
       title="Courtier immobilier à Buckingham — l'espace que Gatineau n'offre plus"
       subtitle="Buckingham et Masson-Angers sont les secteurs est de Gatineau. C'est ici que les terrains sont grands, que les maisons ont de l'espace, et que le rythme de vie est différent. Pour les acheteurs qui ont fait le calcul et veulent vraiment l'espace, c'est souvent la révélation du marché outaouais."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=buckingham" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés", href: "/proprietes?secteur=buckingham" }}
       heroBgImage={heroImg}
     />
 

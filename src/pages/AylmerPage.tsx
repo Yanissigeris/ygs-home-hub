@@ -142,8 +142,8 @@ const AylmerPage = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Aylmer — votre spécialiste local"
       subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes — et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés à Aylmer", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
     />
 

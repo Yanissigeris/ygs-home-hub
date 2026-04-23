@@ -83,8 +83,8 @@ const CantleyPageEn = () => (
       overline="CANTLEY · OUTAOUAIS"
       title="Real estate broker in Cantley — space, 13 km from Ottawa"
       subtitle="Cantley is 13 kilometres from downtown Ottawa. It's a fast-growing municipality known for its large lots, low-density residential development, and family-friendly quality of life. For families who want space without going far, Cantley is often the logical conclusion."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See properties →", href: "/en/properties?area=cantley" }}
+      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See properties", href: "/en/properties?area=cantley" }}
       heroBgImage={heroImg}
     />
 
