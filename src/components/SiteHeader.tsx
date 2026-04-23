@@ -494,41 +494,66 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
-      <div
-        id="mobile-navigation"
-        role="navigation"
-        aria-label="Navigation principale"
-        className="lg:hidden overflow-hidden"
-        style={{
-          maxHeight: open ? "calc(100dvh - 80px)" : 0,
-          opacity: open ? 1 : 0,
-          transition: "max-height .3s ease, opacity .25s ease",
-          borderTop: open ? "1px solid var(--border)" : "none",
-          background: "var(--cream)",
-          overflowY: open ? "auto" : "hidden",
-          borderBottom: open ? "1px solid var(--border)" : "none",
-        }}
-      >
-        <div>
-          {nav.map((item) => (<MobileNavGroup key={item.label} item={item} pathname={location.pathname} onNavigate={closeMenu} />))}
-          <div className="px-6 py-4" style={{ borderTop: "1px solid var(--border)" }}>
-            <Link
-              to={ctaHref}
-              onClick={closeMenu}
-              className="flex w-full items-center justify-center transition-all duration-200"
-              style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
-            >
-              {ctaLabel}
-            </Link>
-          </div>
-          {/* FR|EN toggle at bottom of dropdown */}
-          <div className="flex justify-center pb-4">
-            <LanguageSwitch />
-          </div>
-        </div>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            id="mobile-navigation"
+            role="navigation"
+            aria-label="Navigation principale"
+            className="lg:hidden overflow-y-auto"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+            style={{
+              maxHeight: "calc(100dvh - 80px)",
+              borderTop: "1px solid var(--border)",
+              background: "var(--cream)",
+              borderBottom: "1px solid var(--border)",
+            }}
+          >
+            <div>
+              {nav.map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <MobileNavGroup item={item} pathname={location.pathname} onNavigate={closeMenu} />
+                </motion.div>
+              ))}
+              <motion.div
+                className="px-6 py-4"
+                style={{ borderTop: "1px solid var(--border)" }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: nav.length * 0.05 }}
+              >
+                <Link
+                  to={ctaHref}
+                  onClick={closeMenu}
+                  className="flex w-full items-center justify-center transition-all duration-200"
+                  style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+                >
+                  {ctaLabel}
+                </Link>
+              </motion.div>
+              {/* FR|EN toggle at bottom of dropdown */}
+              <motion.div
+                className="flex justify-center pb-4"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: (nav.length + 1) * 0.05 }}
+              >
+                <LanguageSwitch />
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
