@@ -400,16 +400,15 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <span
+            className="text-[15px] lg:text-[17px]"
             style={{
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: 17,
               fontWeight: 500,
               color: nameColor,
               whiteSpace: "nowrap",
               letterSpacing: "0.005em",
               transition: "color 0.3s ease",
             }}
-            className="lg:text-[17px] md:text-[15px]"
           >
             Yanis Gauthier-Sigeris
           </span>
