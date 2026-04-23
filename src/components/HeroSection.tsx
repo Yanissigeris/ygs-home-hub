@@ -225,8 +225,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden flex flex-col justify-between min-h-dvh md:min-h-0 pb-[70px] md:pb-0"
-        style={{ background: "var(--ink)" }}
+        className="relative overflow-hidden flex flex-col justify-between min-h-screen pb-[70px] md:pb-0"
+        style={{ background: "var(--ink)", paddingTop: "clamp(70px, 9vh, 100px)" }}
       >
         <div className="flex flex-col lg:grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
