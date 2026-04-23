@@ -519,6 +519,92 @@ h1.hero-h1-reduced {
   transition: transform 0.15s ease;
 }
 
+/* ─── Hero MOBILE-ONLY lightening (< 768px) ─── */
+@media (max-width: 767px) {
+  /* Wrapper padding-top + tighter vertical rhythm */
+  [data-hero-dark] > .relative.z-\[3\] > div:first-child {
+    padding-top: 80px !important;
+  }
+  /* Tighten gaps between text blocks */
+  [data-hero-dark] motion\.p,
+  [data-hero-dark] .relative.z-\[3\] p,
+  [data-hero-dark] .relative.z-\[3\] h1 {
+    /* fallback no-op */
+  }
+  [data-hero-dark] .relative.z-\[3\] p.mt-3 { margin-top: 8px !important; }
+  [data-hero-dark] .relative.z-\[3\] p.mt-4 { margin-top: 8px !important; }
+  [data-hero-dark] .relative.z-\[3\] .mt-6 { margin-top: 12px !important; }
+
+  /* Overline (geo line) */
+  [data-hero-dark] p.label-overline,
+  [data-hero-dark] .relative.z-\[3\] p[class*="uppercase"] {
+    font-size: 0.65rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* H1 italic subtitle (small line above gold) */
+  [data-hero-dark] h1 > span:first-child {
+    font-size: 1rem !important;
+  }
+
+  /* Conversion paragraph */
+  [data-hero-dark] .relative.z-\[3\] p.mt-4,
+  [data-hero-dark] .relative.z-\[3\] p.sm\:mt-6 {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* GEO paragraph (the second p with grey color) */
+  [data-hero-dark] .relative.z-\[3\] p.mt-3 {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    opacity: 0.55 !important;
+  }
+
+  /* CTA button — auto width, left aligned */
+  [data-hero-dark] .hero-cta-btn {
+    width: auto !important;
+    padding: 12px 24px !important;
+    font-size: 0.8rem !important;
+    align-self: flex-start !important;
+    margin-right: auto !important;
+  }
+
+  /* Credibility bar — strip glassmorphism + icons + shorten */
+  [data-hero-dark] [class*="bg-[rgba(23"],
+  [data-hero-dark] div[style*="backdrop-filter"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+  [data-hero-dark] .absolute.z-\[5\] svg {
+    display: none !important;
+  }
+  [data-hero-dark] .absolute.z-\[5\][style*="bottom: 32px"],
+  [data-hero-dark] .absolute.z-\[5\] {
+    font-size: 0.6rem !important;
+    color: rgba(255,255,255,0.55) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* NAP */
+  [data-hero-dark] address.absolute,
+  [data-hero-dark] address span {
+    font-size: 0.55rem !important;
+    color: rgba(255,255,255,0.35) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
 /* Valuation widget animations */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
