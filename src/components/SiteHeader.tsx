@@ -290,81 +290,23 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Auto contrast: sample background luminance under the header to pick light/dark variant
-  const [overDark, setOverDark] = useState(false);
-  useEffect(() => {
-    const parseRgb = (str: string): [number, number, number, number] | null => {
-      const m = str.match(/rgba?\(([^)]+)\)/);
-      if (!m) return null;
-      const parts = m[1].split(",").map((s) => parseFloat(s.trim()));
-      const [r, g, b, a = 1] = parts;
-      if ([r, g, b].some((n) => Number.isNaN(n))) return null;
-      return [r, g, b, a];
-    };
-    const luminance = (r: number, g: number, b: number) => (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-    const sample = () => {
-      const headerEl = document.getElementById("site-header");
-      const headerH = headerEl?.offsetHeight ?? 70;
-      // Probe slightly below the header so we read the section under it, not the header itself
-      const x = window.innerWidth / 2;
-      const y = headerH + 8;
-      let el = document.elementFromPoint(x, y) as HTMLElement | null;
-      // Walk up until we find an element with a non-transparent background
-      while (el && el !== document.body) {
-        const bg = getComputedStyle(el).backgroundColor;
-        const rgba = parseRgb(bg);
-        if (rgba && rgba[3] > 0.05) {
-          setOverDark(luminance(rgba[0], rgba[1], rgba[2]) < 0.5);
-          return;
-        }
-        el = el.parentElement;
-      }
-      setOverDark(false);
-    };
-
-    sample();
-    const onScroll = () => requestAnimationFrame(sample);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    const t = setTimeout(sample, 120); // re-sample after layout settles on route change
-    return () => {
-      clearTimeout(t);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, [location.pathname]);
-
-  // Header is fixed; transparent over hero, turns cream/opaque after scrolling past 50px (desktop/tablet only — mobile stays transparent)
-  const transparent = !scrolled;
-  
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 639px)");
-    const update = () => setMobile(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-  // State 1 (top): transparent + white text. State 2 (scrolled > 50px): glassmorphism + dark text.
-  const effectiveTransparent = transparent;
+  // Header is permanently transparent with white text on all routes/breakpoints.
+  const transparent = true;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: effectiveTransparent ? "transparent" : "rgba(255,255,255,0.12)",
-    backdropFilter: effectiveTransparent ? "none" : "blur(12px)",
-    WebkitBackdropFilter: effectiveTransparent ? "none" : "blur(12px)",
-    borderBottom: effectiveTransparent ? "none" : "1px solid rgba(255,255,255,0.1)",
-    transition: "all 0.3s ease",
+    background: "transparent",
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none",
+    borderBottom: "none",
     boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Text-shadow for legibility when header is transparent over hero.
-  const textShadow = effectiveTransparent ? "0 1px 3px rgba(0,0,0,0.3)" : "none";
+  const textShadow = "0 1px 4px rgba(0,0,0,0.4)";
 
   // Colors swap based on transparent vs scrolled-glass state.
   const navLinkColor = "#FFFFFF";
