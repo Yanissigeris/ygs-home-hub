@@ -222,7 +222,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     }
 
     /* Full-bleed immersive homepage hero */
-    const bgImage = heroBgImage || "/src/assets/hero-homepage.webp";
+    const bgImage = heroBgImage || heroHomepageBg;
     return (
       <section
         ref={combinedRef}
