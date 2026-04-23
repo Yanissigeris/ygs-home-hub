@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -11,6 +12,30 @@ const FloatingCallButton = () => {
   const { pathname } = useLocation();
   const lang = useLanguage();
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
+
+  // Mobile: hide when sticky bottom bar is visible (mirrors StickyMobileCTA logic)
+  const [stickyVisible, setStickyVisible] = useState(false);
+  const ticking = useRef(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (ticking.current) return;
+      ticking.current = true;
+      requestAnimationFrame(() => {
+        const heroThreshold = window.innerHeight * 0.55;
+        const footer = document.querySelector("footer");
+        let footerVisible = false;
+        if (footer) {
+          const rect = footer.getBoundingClientRect();
+          footerVisible = rect.top < window.innerHeight;
+        }
+        setStickyVisible(window.scrollY > heroThreshold && !footerVisible);
+        ticking.current = false;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   if (hidden) return null;
 
@@ -54,7 +79,7 @@ const FloatingCallButton = () => {
       <a
         href="tel:8192103044"
         aria-label={ariaLabelMobile}
-        className="fixed z-[490] md:hidden inline-flex items-center justify-center"
+        className={`fixed z-[490] md:hidden inline-flex items-center justify-center transition-opacity duration-300 ${stickyVisible ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
         style={{
           bottom: 24,
           right: 24,
