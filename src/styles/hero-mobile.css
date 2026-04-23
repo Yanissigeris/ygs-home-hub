@@ -1,0 +1,143 @@
+/* Hero h1 targeted override — must beat global h1 + mobile !important rule */
+h1.hero-h1-fix {
+  font-size: clamp(2rem, 4.5vw, 3.6rem) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 16px !important;
+}
+
+/* H1 reduced ~12% when name line is present above */
+h1.hero-h1-reduced {
+  font-size: clamp(1.75rem, 3.95vw, 3.15rem) !important;
+}
+
+/* Hero name line — responsive sizing */
+.hero-name-line { font-size: clamp(2rem, 7vw, 2.6rem); }
+@media (min-width: 768px) {
+  .hero-name-line { font-size: clamp(2.5rem, 5vw, 3.2rem); }
+}
+@media (min-width: 1024px) {
+  .hero-name-line { font-size: clamp(3rem, 4.5vw, 4.2rem); }
+}
+
+/* Mobile fluid hero headline override */
+@media (max-width: 767px) {
+  h1.hero-h1-fix {
+    font-size: clamp(1.9rem, 8.5vw, 2.8rem) !important;
+    line-height: 1.1 !important;
+  }
+  h1.hero-h1-reduced {
+    font-size: clamp(1.65rem, 7.4vw, 2.45rem) !important;
+  }
+}
+
+/* Hero CTA — premium hover (desktop) + tactile active (mobile) */
+.hero-cta-btn {
+  transition: all 0.3s ease;
+  will-change: transform, box-shadow, background-color;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-cta-btn:hover {
+    transform: translateY(-2px);
+    background: #917745 !important;
+    border-color: #917745 !important;
+    box-shadow: 0 4px 16px rgba(168, 138, 90, 0.4) !important;
+  }
+}
+.hero-cta-btn:active {
+  transform: scale(0.98);
+  transition: transform 0.15s ease;
+}
+
+/* ─── Hero MOBILE-ONLY lightening (< 768px) ─── */
+@media (max-width: 767px) {
+  /* Wrapper padding-top + tighter vertical rhythm */
+  [data-hero-dark] > .relative.z-\[3\] > div:first-child {
+    padding-top: 80px !important;
+  }
+  /* Tighten gaps between text blocks */
+  [data-hero-dark] motion\.p,
+  [data-hero-dark] .relative.z-\[3\] p,
+  [data-hero-dark] .relative.z-\[3\] h1 {
+    /* fallback no-op */
+  }
+  [data-hero-dark] .relative.z-\[3\] p.mt-3 { margin-top: 8px !important; }
+  [data-hero-dark] .relative.z-\[3\] p.mt-4 { margin-top: 8px !important; }
+  [data-hero-dark] .relative.z-\[3\] .mt-6 { margin-top: 12px !important; }
+
+  /* Overline (geo line) */
+  [data-hero-dark] p.label-overline,
+  [data-hero-dark] .relative.z-\[3\] p[class*="uppercase"] {
+    font-size: 0.65rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* H1 italic subtitle (small line above gold) */
+  [data-hero-dark] h1 > span:first-child {
+    font-size: 1rem !important;
+  }
+
+  /* Conversion paragraph */
+  [data-hero-dark] .relative.z-\[3\] p.mt-4,
+  [data-hero-dark] .relative.z-\[3\] p.sm\:mt-6 {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* GEO paragraph (the second p with grey color) */
+  [data-hero-dark] .relative.z-\[3\] p.mt-3 {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    opacity: 0.55 !important;
+  }
+
+  /* CTA button — auto width, left aligned */
+  [data-hero-dark] .hero-cta-btn {
+    width: auto !important;
+    padding: 12px 24px !important;
+    font-size: 0.8rem !important;
+    align-self: flex-start !important;
+    margin-right: auto !important;
+  }
+
+  /* Credibility bar — strip glassmorphism + icons, keep readable */
+  [data-hero-dark] [class*="bg-[rgba(23"],
+  [data-hero-dark] div[style*="backdrop-filter"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+  [data-hero-dark] .absolute.z-\[5\] svg {
+    display: none !important;
+  }
+  [data-hero-dark] .absolute.z-\[5\][style*="bottom: 32px"],
+  [data-hero-dark] .absolute.z-\[5\] {
+    font-size: 0.7rem !important;
+    color: rgba(255,255,255,0.8) !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+    position: absolute !important;
+    z-index: 4 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* NAP */
+  [data-hero-dark] address.absolute,
+  [data-hero-dark] address span {
+    font-size: 0.65rem !important;
+    color: rgba(255,255,255,0.65) !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+  [data-hero-dark] address.absolute {
+    position: absolute !important;
+    z-index: 4 !important;
+  }
+}

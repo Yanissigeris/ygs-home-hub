@@ -1,0 +1,16 @@
+/* Footer link hover — warm gold, no underline */
+footer a:hover {
+  color: #A88A5A !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 639px) {
+  /* Footer tap targets mobile */
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
