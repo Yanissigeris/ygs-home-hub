@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Calendar, Star, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -231,8 +232,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const el = videoRef.current;
       if (!el) return;
       const onPlaying = () => setVideoReady(true);
+      const setRate = () => { try { el.playbackRate = 0.75; } catch {} };
       el.addEventListener("playing", onPlaying);
-      return () => el.removeEventListener("playing", onPlaying);
+      el.addEventListener("loadeddata", setRate);
+      setRate();
+      return () => {
+        el.removeEventListener("playing", onPlaying);
+        el.removeEventListener("loadeddata", setRate);
+      };
     }, []);
 
     /* Compact hero for inner pages */
@@ -437,7 +444,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 >
                   <Link
                     to={primaryCta.href}
-                    className="inline-flex items-center justify-center uppercase transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
+                    className="hero-cta-btn inline-flex items-center justify-center uppercase w-full sm:w-auto text-center"
                     style={{
                       background: "#A88A5A",
                       border: "1.5px solid #A88A5A",
@@ -448,9 +455,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       fontWeight: 600,
                       letterSpacing: ".14em",
                       boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
+                      transition: "all 0.3s ease",
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.background = "#917745"; e.currentTarget.style.borderColor = "#917745"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.borderColor = "#A88A5A"; }}
                     onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
                   >
                     {primaryCta.label} →
@@ -544,19 +550,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               margin: "0 16px",
             }}
           >
-            <span className="pointer-events-auto">
+            <span className="pointer-events-auto inline-flex items-center">
+              <Calendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
               {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
             </span>
             <span className="mx-2 opacity-50">|</span>
             <a
               href="#avis"
-              className="pointer-events-auto hover:underline"
+              className="pointer-events-auto hover:underline inline-flex items-center"
               style={{ color: "inherit", textDecoration: "none" }}
             >
+              <Star aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} fill="currentColor" />
               5★ Google &amp; Facebook
             </a>
             <span className="mx-2 opacity-50">|</span>
-            <span className="pointer-events-auto">
+            <span className="pointer-events-auto inline-flex items-center">
+              <Trophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
               {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
             </span>
           </div>
