@@ -463,11 +463,28 @@ h1.hero-h1-fix {
   margin-bottom: 16px !important;
 }
 
+/* H1 reduced ~12% when name line is present above */
+h1.hero-h1-reduced {
+  font-size: clamp(1.75rem, 3.95vw, 3.15rem) !important;
+}
+
+/* Hero name line — responsive sizing */
+.hero-name-line { font-size: clamp(2rem, 7vw, 2.6rem); }
+@media (min-width: 768px) {
+  .hero-name-line { font-size: clamp(2.5rem, 5vw, 3.2rem); }
+}
+@media (min-width: 1024px) {
+  .hero-name-line { font-size: clamp(3rem, 4.5vw, 4.2rem); }
+}
+
 /* Mobile fluid hero headline override */
 @media (max-width: 767px) {
   h1.hero-h1-fix {
     font-size: clamp(1.9rem, 8.5vw, 2.8rem) !important;
     line-height: 1.1 !important;
+  }
+  h1.hero-h1-reduced {
+    font-size: clamp(1.65rem, 7.4vw, 2.45rem) !important;
   }
 }
 
