@@ -410,7 +410,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             {/* Desktop portrait */}
             <img
               src={agentImage}
-              alt={agentName ? `${agentName}, courtier immobilier à Gatineau` : ""}
+              alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
               width={640}
               height={960}
               className="hidden md:block absolute object-contain object-bottom pointer-events-none select-none"
