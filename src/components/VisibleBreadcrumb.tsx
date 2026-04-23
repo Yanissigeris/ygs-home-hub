@@ -126,7 +126,9 @@ const VisibleBreadcrumb = () => {
       </div>
 
       <style>{`
+        nav[aria-label="Breadcrumb"] { margin-top: 70px; }
         @media (max-width: 767px) {
+          nav[aria-label="Breadcrumb"] { margin-top: 56px; }
           nav[aria-label="Breadcrumb"] > div {
             padding-left: 1.25rem !important;
             padding-right: 1.25rem !important;
