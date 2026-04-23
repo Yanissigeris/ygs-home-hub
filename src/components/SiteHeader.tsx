@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 /* Inline SVG icons */
 const MenuIcon = ({ size = 20 }: { size?: number }) => (
