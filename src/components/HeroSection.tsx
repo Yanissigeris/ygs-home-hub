@@ -314,17 +314,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Credentials strip */}
               <div className={`mt-10 pt-8 py-3 md:py-6 border-t border-white/10 md:border-t-0 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
-                <div className="flex items-start gap-5 sm:gap-10">
+                <div className="flex items-start justify-between sm:justify-start gap-3 sm:gap-10 w-full">
                   {stats.map((stat, i) => (
                     <React.Fragment key={stat.label}>
-                      {i > 0 && <div className="hidden sm:block h-12 w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
-                      {i > 0 && <div className="sm:hidden h-[30px] w-px" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
-                      <div className="text-center sm:text-left">
+                      {i > 0 && <div className="hidden sm:block h-12 w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
+                      {i > 0 && <div className="sm:hidden h-[30px] w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
+                      <div className="text-center sm:text-left min-w-0 flex-1 sm:flex-initial">
                         <p
                           className="font-heading font-semibold leading-none tracking-tight text-white"
                           style={{
                             letterSpacing: "-.02em",
-                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.2rem, 4vw, 2.4rem)" : "clamp(1.6rem, 5vw, 2.4rem)",
+                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.05rem, 3.6vw, 2.4rem)" : "clamp(1.5rem, 5vw, 2.4rem)",
                           }}
                         >
                           {stat.value}
