@@ -492,7 +492,7 @@ const SiteHeader = () => {
 
       {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
+        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }} onClick={closeMenu}>
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(52vw, 140px)", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
