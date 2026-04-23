@@ -27,10 +27,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
 
-  const defaultColor = transparent ? "#FFFFFF" : "#2D3748";
-  const activeColor = transparent ? "#FFFFFF" : "#17303B";
-  const hoverColor = transparent ? "#FFFFFF" : "#17303B";
-  const underlineColor = transparent ? "#FFFFFF" : "#17303B";
+  const defaultColor = "#FFFFFF";
+  const activeColor = "#FFFFFF";
+  const hoverColor = "#FFFFFF";
+  const underlineColor = "#FFFFFF";
 
   if (!item.children && !item.columns) {
     const active = pathname === item.href;
