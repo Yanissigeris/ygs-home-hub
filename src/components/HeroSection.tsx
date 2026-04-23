@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroHomepageBg from "@/assets/hero-homepage.webp";
 
 interface HeroSectionProps {
   overline?: string;
