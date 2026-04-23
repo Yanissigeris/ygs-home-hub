@@ -228,6 +228,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         className="relative overflow-hidden flex flex-col justify-between min-h-screen pb-[70px] md:pb-0"
         style={{ background: "var(--ink)", paddingTop: "clamp(70px, 9vh, 100px)" }}
       >
+        {/* Top gradient overlay — improves header text contrast over hero */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-0 right-0 top-0 z-[15]"
+          style={{
+            height: 150,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0))",
+          }}
+        />
         <div className="flex flex-col lg:grid min-h-[auto] sm:min-h-[78svh] md:min-h-[88svh] lg:grid-cols-[40%_60%] flex-1">
           {/* ─── LEFT COLUMN ─── */}
           <div
