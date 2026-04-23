@@ -138,6 +138,13 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
+
+  [role="dialog"],
+  [data-radix-scroll-area-viewport],
+  .overflow-y-auto[class*="fixed"],
+  .overflow-auto[class*="fixed"] {
+    overscroll-behavior: contain;
+  }
 }
 
 @layer components {
