@@ -378,8 +378,8 @@ const SiteHeader = () => {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
-  // On mobile (<640px), header always stays transparent regardless of scroll.
-  const effectiveTransparent = mobile ? true : transparent;
+  // Header always stays transparent regardless of scroll (desktop & mobile).
+  const effectiveTransparent = true;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
