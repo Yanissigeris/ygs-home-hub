@@ -466,6 +466,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
+        {/* ─── Scroll chevron ─── */}
+        <ScrollChevron />
+
         {/* ─── Credibility bar (Layer 5) ─── */}
         <motion.div
           initial={{ opacity: 0 }}
