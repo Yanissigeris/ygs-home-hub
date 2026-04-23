@@ -78,7 +78,7 @@ const VisibleBreadcrumb = () => {
     <nav
       aria-label="Breadcrumb"
       className="ygs-breadcrumb-nav w-full"
-      style={{ background: "transparent", padding: "12px 5%" }}
+      style={{ background: "#F7F4EE", padding: "10px 5%" }}
     >
       <ol
         className="flex items-center list-none flex-wrap"
