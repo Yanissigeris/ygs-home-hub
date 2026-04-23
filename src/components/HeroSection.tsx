@@ -138,7 +138,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const section = sectionRef.current;
       const el = videoRef.current;
       if (!section || !el) return;
-      if (window.innerWidth < 1024) return;     const io = new IntersectionObserver(
+      const io = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
             io.disconnect();
