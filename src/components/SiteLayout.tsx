@@ -93,7 +93,19 @@ const SiteLayout = () => {
       <LangMeta />
       <BreadcrumbJsonLd />
       <NavigationProgress />
-      
+
+      {/* Permanent dark gradient overlay behind the fixed header for white text legibility */}
+      <div
+        aria-hidden="true"
+        className="fixed left-0 top-0 w-full h-[100px] md:h-[120px]"
+        style={{
+          zIndex: 49,
+          pointerEvents: "none",
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)",
+        }}
+      />
+
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:rounded focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:outline-none focus:ring-2 focus:ring-ring/20">
         {skipLabel}
       </a>
