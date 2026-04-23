@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
-import logoYgsWhite from "@/assets/ygs-footer-logo.webp";
+import logoYgsWhite from "@/assets/ygs-logo.png";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
