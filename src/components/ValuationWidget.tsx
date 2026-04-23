@@ -158,7 +158,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
     background: "#fff",
     color: "var(--ink)",
     outline: "none",
-    transition: "all .2s",
+    transition: "border-color .2s, box-shadow .2s",
   });
 
   return (
@@ -253,7 +253,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                         color: active ? "#fff" : "var(--ink)",
                         background: active ? DARK : "#fff",
                         cursor: "pointer",
-                        transition: "all .2s",
+                        transition: "border-color .2s, box-shadow .2s",
                         fontFamily: "var(--sans)",
                         letterSpacing: ".01em",
                       }}
@@ -298,7 +298,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                     background: "#fff",
                     color: "var(--ink)",
                     outline: "none",
-                    transition: "all .2s",
+                    transition: "border-color .2s, box-shadow .2s",
                   }}
                   onFocus={(e) => {
                     e.currentTarget.style.borderColor = DARK;
@@ -324,7 +324,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                     borderRadius: 3,
                     border: "none",
                     cursor: "pointer",
-                    transition: "all .2s",
+                    transition: "border-color .2s, box-shadow .2s",
                     fontFamily: "var(--sans)",
                     whiteSpace: "nowrap",
                   }}
@@ -439,7 +439,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   borderRadius: 3,
                   border: "none",
                   cursor: submitting ? "wait" : "pointer",
-                  transition: "all .2s",
+                  transition: "border-color .2s, box-shadow .2s",
                   fontFamily: "var(--sans)",
                   opacity: submitting ? 0.7 : 1,
                 }}

@@ -107,8 +107,8 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               <h2>{title}</h2>
 
               <div className="flex gap-2 mt-6">
-                <button aria-label="Précédent" onClick={prev} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "all .35s", background: "transparent" }}>←</button>
-                <button aria-label="Suivant" onClick={next} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "all .35s", background: "transparent" }}>→</button>
+                <button aria-label="Précédent" onClick={prev} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>←</button>
+                <button aria-label="Suivant" onClick={next} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>→</button>
               </div>
 
               <div className="flex gap-1.5 mt-4">

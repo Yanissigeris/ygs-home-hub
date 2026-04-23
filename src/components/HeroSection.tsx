@@ -292,7 +292,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <Link
                       to={primaryCta.href}
                       className="inline-flex items-center justify-center uppercase transition-all duration-200 ease-out hover:scale-[1.02] w-full sm:w-auto text-center"
-                      style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: 0, color: "#FFFFFF", padding: ".9rem 1.5rem", fontSize: ".8rem", fontWeight: 600, letterSpacing: ".14em", transition: "all .2s ease" }}
+                      style={{ background: "transparent", border: "1.5px solid #A88A5A", borderRadius: 0, color: "#FFFFFF", padding: ".9rem 1.5rem", fontSize: ".8rem", fontWeight: 600, letterSpacing: ".14em", transition: "opacity .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease" }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                       onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
@@ -303,7 +303,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {secondaryCta && (
                       <Link to={secondaryCta.href}
                       className="hidden sm:inline-flex items-center justify-center uppercase transition-all duration-300 hover:border-white/50 w-full sm:w-auto text-center"
-                      style={{ color: "#FFFFFF", border: "1.5px solid rgba(255,255,255,.30)", borderRadius: 0, padding: ".85rem 1.5rem", fontSize: ".8rem", fontWeight: 500, letterSpacing: ".14em", transition: "all .2s ease" }}
+                      style={{ color: "#FFFFFF", border: "1.5px solid rgba(255,255,255,.30)", borderRadius: 0, padding: ".85rem 1.5rem", fontSize: ".8rem", fontWeight: 500, letterSpacing: ".14em", transition: "opacity .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease" }}
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
                       {secondaryCta.label}
