@@ -495,6 +495,12 @@ h1.hero-h1-reduced {
   100% { transform: scale(1.5); opacity: 0; }
 }
 
+/* Hero scroll chevron bounce */
+@keyframes hero-chevron-bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, 8px); }
+}
+
 /* Valuation widget animations */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
