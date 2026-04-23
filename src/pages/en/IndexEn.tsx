@@ -42,7 +42,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
-      overline="GATINEAU · AYLMER · HULL · OUTAOUAIS"
+      overline="GATINEAU · AYLMER · HULL · CHELSEA · CANTLEY · OUTAOUAIS"
       title="Your real estate broker in Gatineau — Outaouais"
       subtitle="Clear strategy, advice based on facts, and full support — to sell, buy or invest with confidence."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
