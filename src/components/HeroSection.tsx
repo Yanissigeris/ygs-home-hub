@@ -550,24 +550,31 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               margin: "0 16px",
             }}
           >
-            <span className="pointer-events-auto inline-flex items-center">
-              <Calendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-              {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
-            </span>
-            <span className="mx-2 opacity-50">|</span>
-            <a
-              href="#avis"
-              className="pointer-events-auto hover:underline inline-flex items-center"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <Star aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} fill="currentColor" />
-              5★ Google &amp; Facebook
-            </a>
-            <span className="mx-2 opacity-50">|</span>
-            <span className="pointer-events-auto inline-flex items-center">
-              <Trophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-              {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
-            </span>
+            {/* Desktop credibility (hidden on mobile) */}
+            <div className="hidden md:block">
+              <span className="pointer-events-auto inline-flex items-center">
+                <Calendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
+              </span>
+              <span className="mx-2 opacity-50">|</span>
+              <a
+                href="#avis"
+                className="pointer-events-auto hover:underline inline-flex items-center"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <Star aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} fill="currentColor" />
+                5★ Google &amp; Facebook
+              </a>
+              <span className="mx-2 opacity-50">|</span>
+              <span className="pointer-events-auto inline-flex items-center">
+                <Trophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
+              </span>
+            </div>
+            {/* Mobile shortened credibility */}
+            <div className="md:hidden">
+              {lang === "en" ? "~9 yrs | 5★ Google | Hall of Fame" : "~9 ans | 5★ Google | Hall of Fame"}
+            </div>
           </div>
         </motion.div>
 
