@@ -290,8 +290,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 )}
               </h1>
 
-              <p className="mt-4 sm:mt-6 hidden sm:block max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
-                {subtitle}
+              <p className="mt-4 sm:mt-6 block max-w-[420px] font-light opacity-0 animate-hero-fade-up" style={{ color: "rgba(255,255,255,.7)", animationDelay: "0.5s", animationFillMode: "forwards", fontSize: ".95rem", lineHeight: 1.75 }}>
+                {lang === "fr"
+                  ? "Je vous donne les chiffres et les options, vous décidez. Stratégie claire pour vendre, acheter ou investir en Outaouais."
+                  : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
               </p>
 
               {(primaryCta || secondaryCta) && (
