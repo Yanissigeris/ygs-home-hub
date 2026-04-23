@@ -451,10 +451,10 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 43 : 48, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
-          <LanguageSwitch transparent={transparent} />
+          <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
           <Link
             to={ctaHref}
-            className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
+            className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
