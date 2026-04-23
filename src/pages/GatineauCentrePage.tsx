@@ -78,8 +78,8 @@ const GatineauCentrePage = () => (
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Courtier immobilier à Gatineau centre — accessibilité, services et valeur"
       subtitle="Le secteur central de Gatineau est souvent sous-estimé. C'est pourtant le secteur le mieux desservi de la ville — hôpital, universités, cégep, transports, commerces. Et l'un des plus accessibles pour les familles et les investisseurs."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés", href: "/proprietes?secteur=gatineau" }}
       heroBgImage={heroImg}
     />
 

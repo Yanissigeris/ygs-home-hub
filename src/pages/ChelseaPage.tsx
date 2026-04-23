@@ -83,8 +83,8 @@ const ChelseaPage = () => (
       overline="CHELSEA · QUÉBEC"
       title="Courtier immobilier à Chelsea — vivre entre nature et Ottawa"
       subtitle="Chelsea est une municipalité distincte au nord de Gatineau, à environ 10 kilomètres d'Ottawa. Soixante pour cent de son territoire est occupé par le Parc de la Gatineau. C'est un des rares endroits en Amérique du Nord où l'on peut habiter dans un parc national tout en étant à 15 minutes du centre d'une capitale."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=chelsea" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      secondaryCta={{ label: "Voir les propriétés", href: "/proprietes?secteur=chelsea" }}
       heroBgImage={heroImg}
     />
 

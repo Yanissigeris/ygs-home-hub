@@ -84,8 +84,8 @@ const HullPageEn = () => (
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Real estate broker in Hull — at the heart of urban Outaouais"
       subtitle="Hull is Gatineau's most urban area. Directly facing Ottawa, undergoing transformation with the Zibi project, Hull attracts professionals, bilingual families and investors. This is where the city moves the most."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "See Hull properties →", href: "/en/properties?area=hull" }}
+      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
+      secondaryCta={{ label: "See Hull properties", href: "/en/properties?area=hull" }}
       heroBgImage={heroImg}
     />
 
