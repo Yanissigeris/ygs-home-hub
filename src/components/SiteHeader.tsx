@@ -378,35 +378,35 @@ const SiteHeader = () => {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
-  // Header always stays transparent regardless of scroll (desktop & mobile).
-  const effectiveTransparent = true;
+  // State 1 (top): transparent + white text. State 2 (scrolled > 50px): glassmorphism + dark text.
+  const effectiveTransparent = transparent;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: effectiveTransparent ? "transparent" : "#F7F4EE",
-    backdropFilter: "none",
-    WebkitBackdropFilter: "none",
-    borderBottom: mobile ? "none" : (effectiveTransparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)"),
-    transition: "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
-    boxShadow: effectiveTransparent ? "none" : "0 1px 4px rgba(0,0,0,0.08)",
+    background: effectiveTransparent ? "transparent" : "rgba(255,255,255,0.12)",
+    backdropFilter: effectiveTransparent ? "none" : "blur(12px)",
+    WebkitBackdropFilter: effectiveTransparent ? "none" : "blur(12px)",
+    borderBottom: effectiveTransparent ? "none" : "1px solid rgba(255,255,255,0.1)",
+    transition: "all 0.3s ease",
+    boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
   // Text-shadow for legibility when header is transparent over hero.
   const textShadow = effectiveTransparent ? "0 1px 3px rgba(0,0,0,0.3)" : "none";
 
-  // Colors swap based on transparent vs scrolled-cream state.
-  const navLinkColor = effectiveTransparent ? "rgba(247,244,238,0.92)" : "#2D3748";
-  const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
-  const iconColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
-  const ctaBorderColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
-  const ctaTextColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
+  // Colors swap based on transparent vs scrolled-glass state.
+  const navLinkColor = effectiveTransparent ? "rgba(255,255,255,0.92)" : "#222831";
+  const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#222831";
+  const iconColor = effectiveTransparent ? "#FFFFFF" : "#222831";
+  const ctaBorderColor = effectiveTransparent ? "#FFFFFF" : "#222831";
+  const ctaTextColor = effectiveTransparent ? "#FFFFFF" : "#222831";
   const logoFilter = effectiveTransparent ? "brightness(0) invert(1)" : "none";
-  const nameColor = effectiveTransparent ? "#FFFFFF" : "#17303B";
-  const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
+  const nameColor = effectiveTransparent ? "#FFFFFF" : "#222831";
+  const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "rgba(34,40,49,0.3)";
 
   return (
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
