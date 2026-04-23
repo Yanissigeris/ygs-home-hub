@@ -430,7 +430,7 @@ const SiteHeader = () => {
           </span>
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
-          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
+          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
           <LanguageSwitch transparent={transparent} />
