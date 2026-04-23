@@ -254,7 +254,7 @@ const SiteHeader = () => {
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -367,35 +367,51 @@ const SiteHeader = () => {
     };
   }, [location.pathname]);
 
-  // Header is always dark (#17303B) to be seamless with hero
-  const transparent = true;
+  // Header is transparent over the hero (top of page); turns white once scrolled past 60px
+  const transparent = !scrolled;
   const headerStyle: React.CSSProperties = {
     position: "sticky",
     top: 0,
     zIndex: 200,
-    background: "#17303B",
-    backdropFilter: "blur(12px)",
-    WebkitBackdropFilter: "blur(12px)",
-    borderBottom: "1px solid rgba(255,255,255,.08)",
-    transition: "all .3s ease",
-    boxShadow: scrolled ? "0 4px 40px rgba(0,0,0,.25)" : "none",
+    background: transparent ? "transparent" : "#FFFFFF",
+    backdropFilter: transparent ? "none" : "blur(12px)",
+    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
+    borderBottom: transparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
+    transition: "background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+    boxShadow: transparent ? "none" : "0 1px 4px rgba(0,0,0,0.06)",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Colors for nav links & icons (white-on-dark)
-  const navLinkColor = "#F7F4EE";
-  const navLinkActiveColor = "#FFFFFF";
-  const iconColor = "#FFFFFF";
-  const ctaBorderColor = "#F7F4EE";
-  const ctaTextColor = "#F7F4EE";
-  const logoFilter = "brightness(0) invert(1)";
+  // Colors swap based on transparent vs scrolled-white state
+  const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
+  const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
+  const iconColor = transparent ? "#FFFFFF" : "#17303B";
+  const ctaBorderColor = transparent ? "#F7F4EE" : "#17303B";
+  const ctaTextColor = transparent ? "#F7F4EE" : "#17303B";
+  const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
+  const nameColor = transparent ? "#F7F4EE" : "#17303B";
+  const dividerColor = transparent ? "rgba(247,244,238,0.35)" : "#D9E1E5";
 
   return (
     <header id="site-header" style={headerStyle}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center gap-3.5 xl:mr-12">
+        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" aria-label="Yanis Gauthier-Sigeris — Accueil">
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
+          <span
+            className="text-[15px] lg:text-[17px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontWeight: 500,
+              color: nameColor,
+              whiteSpace: "nowrap",
+              letterSpacing: "0.005em",
+              transition: "color 0.3s ease",
+            }}
+          >
+            Yanis Gauthier-Sigeris
+          </span>
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
