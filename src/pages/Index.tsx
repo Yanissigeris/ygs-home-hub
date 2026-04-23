@@ -41,7 +41,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
-      overline="GATINEAU · AYLMER · HULL · CHELSEA · CANTLEY · OUTAOUAIS"
+      overline="GATINEAU · AYLMER · HULL · CHELSEA · CANTLEY · "
       title="Votre courtier immobilier à Gatineau — Outaouais"
       subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
