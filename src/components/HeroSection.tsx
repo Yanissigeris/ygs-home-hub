@@ -520,6 +520,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
+        {/* Bottom gradient — mobile only, improves readability of credibility bar + NAP */}
+        <div
+          aria-hidden="true"
+          className="md:hidden pointer-events-none absolute left-0 bottom-0 w-full"
+          style={{
+            height: 180,
+            zIndex: 2,
+            background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)",
+          }}
+        />
+
         {/* ─── Scroll chevron ─── */}
         <ScrollChevron />
 
