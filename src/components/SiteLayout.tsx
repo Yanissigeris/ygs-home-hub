@@ -12,7 +12,7 @@ import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
 
 
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 
@@ -84,6 +84,9 @@ const PageFallback = () => (
 );
 
 const SiteLayout = () => {
+  const { pathname } = useLocation();
+  const isEn = pathname === "/en" || pathname.startsWith("/en/");
+  const skipLabel = isEn ? "Skip to content" : "Aller au contenu";
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
@@ -92,7 +95,7 @@ const SiteLayout = () => {
       <NavigationProgress />
       
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:rounded focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:outline-none focus:ring-2 focus:ring-ring/20">
-        Aller au contenu
+        {skipLabel}
       </a>
       <SiteHeader />
       <VisibleBreadcrumb />
