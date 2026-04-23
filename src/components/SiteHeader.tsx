@@ -389,7 +389,7 @@ const SiteHeader = () => {
     background: effectiveTransparent ? "transparent" : "#F7F4EE",
     backdropFilter: "none",
     WebkitBackdropFilter: "none",
-    borderBottom: effectiveTransparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
+    borderBottom: mobile ? "none" : (effectiveTransparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)"),
     transition: "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
     boxShadow: effectiveTransparent ? "none" : "0 1px 4px rgba(0,0,0,0.08)",
     paddingTop: "env(safe-area-inset-top, 0px)",
