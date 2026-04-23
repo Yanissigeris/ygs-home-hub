@@ -450,7 +450,7 @@ const SiteHeader = () => {
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 43 : 48, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
@@ -473,7 +473,7 @@ const SiteHeader = () => {
       {/* ─── Mobile (<640px) — logo left, hamburger right (seamless with hero) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300 bg-[#17303B]" style={{ height: scrolled ? 50 : 56 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
-          <img src={logoYgsSymbolBlue} alt="YGS — Yanis Gauthier-Sigeris" width={40} height={40} className="h-10 w-10 shrink-0 transition-all duration-300" style={{ filter: "brightness(0) invert(1)" }} loading="eager" decoding="async" />
+          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(52vw, 140px)", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
