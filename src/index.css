@@ -501,6 +501,24 @@ h1.hero-h1-reduced {
   50%      { transform: translate(-50%, 8px); }
 }
 
+/* Hero CTA — premium hover (desktop) + tactile active (mobile) */
+.hero-cta-btn {
+  transition: all 0.3s ease;
+  will-change: transform, box-shadow, background-color;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-cta-btn:hover {
+    transform: translateY(-2px);
+    background: #917745 !important;
+    border-color: #917745 !important;
+    box-shadow: 0 4px 16px rgba(168, 138, 90, 0.4) !important;
+  }
+}
+.hero-cta-btn:active {
+  transform: scale(0.98);
+  transition: transform 0.15s ease;
+}
+
 /* Valuation widget animations */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
