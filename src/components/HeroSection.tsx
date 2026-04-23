@@ -313,7 +313,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               {/* Credentials strip */}
-              <div className={`mt-10 pt-8 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+              <div className={`mt-10 pt-8 py-3 md:py-6 border-t border-white/10 md:border-t-0 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
                 <div className="flex items-start gap-5 sm:gap-10">
                   {stats.map((stat, i) => (
                     <React.Fragment key={stat.label}>
