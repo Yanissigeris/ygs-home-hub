@@ -256,24 +256,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </p>
               )}
 
-              <p
-                className="opacity-0 animate-hero-fade-up hero-name-line"
-                style={{
-                  color: "#F7F4EE",
-                  animationDelay: "0.3s",
-                  animationFillMode: "forwards",
-                  fontFamily: "var(--serif)",
-                  fontWeight: 700,
-                  letterSpacing: "0.04em",
-                  whiteSpace: "nowrap",
-                  marginBottom: "0.25rem",
-                  lineHeight: 1.05,
-                }}
-              >
-                Yanis Gauthier-Sigeris
-              </p>
               <h1
-                className="max-w-[16ch] opacity-0 animate-hero-fade-up hero-h1-fix hero-h1-reduced"
+                className="opacity-0 animate-hero-fade-up"
                 style={{
                   color: "#F7F4EE",
                   animationDelay: "0.35s",
@@ -287,13 +271,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               >
                 {lang === "fr" ? (
                   <>
-                    <span className="sm:hidden" aria-hidden="true">Courtier immobilier <span style={{ color: "var(--gold)" }}>en Outaouais</span></span>
-                    <span className="hidden sm:inline">Votre courtier immobilier à <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</span>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#F7F4EE", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
+                      Votre courtier immobilier
+                    </span>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em" }}>
+                      en Outaouais
+                    </span>
                   </>
                 ) : (
                   <>
-                    <span className="sm:hidden" aria-hidden="true">Real estate broker in <span style={{ color: "var(--gold)" }}>Outaouais</span></span>
-                    <span className="hidden sm:inline">Your real estate broker in <span style={{ color: "var(--gold)" }}>Gatineau</span> — Outaouais</span>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#F7F4EE", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
+                      Your real estate broker
+                    </span>
+                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em" }}>
+                      in Outaouais
+                    </span>
                   </>
                 )}
               </h1>
