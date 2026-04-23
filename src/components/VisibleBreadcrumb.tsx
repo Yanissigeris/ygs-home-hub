@@ -57,7 +57,7 @@ const VisibleBreadcrumb = () => {
 
       mountNode = document.createElement("div");
       mountNode.id = "ygs-breadcrumb-mount";
-      hero.parentNode.insertBefore(mountNode, hero.nextSibling);
+      anchor.parentNode.insertBefore(mountNode, anchor.nextSibling);
       setContainer(mountNode);
     };
 
