@@ -289,6 +289,15 @@ const SiteHeader = () => {
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
 
+  // Lock body scroll while mobile menu is open
+  useEffect(() => {
+    if (open) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => { document.body.style.overflow = prev; };
+    }
+  }, [open]);
+
   // Close on outside tap — use pointerdown for reliable mobile behavior
   const justOpened = useRef(false);
   const toggleMenu = useCallback(() => {
