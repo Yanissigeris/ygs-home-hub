@@ -27,10 +27,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
 
-  const defaultColor = transparent ? "#F7F4EE" : "#4A5568";
+  const defaultColor = transparent ? "rgba(247,244,238,0.92)" : "#2D3748";
   const activeColor = transparent ? "#FFFFFF" : "#17303B";
   const hoverColor = transparent ? "#FFFFFF" : "#17303B";
-  const underlineColor = transparent ? "#F7F4EE" : "#17303B";
+  const underlineColor = transparent ? "#FFFFFF" : "#17303B";
 
   if (!item.children && !item.columns) {
     const active = pathname === item.href;
@@ -384,15 +384,18 @@ const SiteHeader = () => {
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
-  // Colors swap based on transparent vs scrolled-white state
-  const navLinkColor = transparent ? "#F7F4EE" : "#4A5568";
+  // Colors swap based on transparent vs scrolled-cream state.
+  // Picked for WCAG AA contrast against each background:
+  // - transparent (over dark hero): pure white text + soft white for inactive
+  // - scrolled (cream #F7F4EE): deep ink #17303B for active, #2D3748 for inactive
+  const navLinkColor = transparent ? "rgba(247,244,238,0.92)" : "#2D3748";
   const navLinkActiveColor = transparent ? "#FFFFFF" : "#17303B";
   const iconColor = transparent ? "#FFFFFF" : "#17303B";
-  const ctaBorderColor = transparent ? "#F7F4EE" : "#17303B";
-  const ctaTextColor = transparent ? "#F7F4EE" : "#17303B";
+  const ctaBorderColor = transparent ? "#FFFFFF" : "#17303B";
+  const ctaTextColor = transparent ? "#FFFFFF" : "#17303B";
   const logoFilter = transparent ? "brightness(0) invert(1)" : "none";
-  const nameColor = transparent ? "#F7F4EE" : "#17303B";
-  const dividerColor = transparent ? "rgba(247,244,238,0.35)" : "#D9E1E5";
+  const nameColor = transparent ? "#FFFFFF" : "#17303B";
+  const dividerColor = transparent ? "rgba(255,255,255,0.4)" : "#D9E1E5";
 
   return (
     <header id="site-header" style={headerStyle}>
