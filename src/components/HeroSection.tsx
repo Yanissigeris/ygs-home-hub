@@ -326,27 +326,34 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </p>
 
               {/* Credentials strip */}
-              <div className={`mt-10 pt-8 py-3 md:py-6 border-t border-white/10 md:border-t-0 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
-                <div className="flex items-start justify-between sm:justify-start gap-3 sm:gap-10 w-full">
-                  {stats.map((stat, i) => (
-                    <React.Fragment key={stat.label}>
-                      {i > 0 && <div className="hidden sm:block h-12 w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
-                      {i > 0 && <div className="sm:hidden h-[30px] w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
-                      <div className="text-center sm:text-left min-w-0 flex-1 sm:flex-initial">
-                        <p
-                          className="font-heading font-semibold leading-none tracking-tight text-white"
-                          style={{
-                            letterSpacing: "-.02em",
-                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.05rem, 3.6vw, 2.4rem)" : "clamp(1.5rem, 5vw, 2.4rem)",
-                          }}
-                        >
-                          {stat.value}
-                        </p>
-                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(168,138,90,0.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </div>
+              <div className={`mt-8 pt-6 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
+                <p style={{
+                  fontFamily: "var(--sans)",
+                  fontSize: "0.68rem",
+                  fontWeight: 400,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "rgba(247,244,238, 0.45)",
+                  lineHeight: 2.0,
+                }}>
+                  {lang === "fr" ? (
+                    <>
+                      <span style={{ fontWeight: 600 }}>9 ans</span>{" d'expérience "}
+                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
+                      {" "}<span style={{ fontWeight: 600 }}>5★</span>{" Google & Facebook "}
+                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
+                      {" "}<span style={{ fontWeight: 600 }}>Hall of Fame</span>{" RE/MAX"}
+                    </>
+                  ) : (
+                    <>
+                      <span style={{ fontWeight: 600 }}>9 years</span>{" experience "}
+                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
+                      {" "}<span style={{ fontWeight: 600 }}>5★</span>{" Google & Facebook "}
+                      <span style={{ color: "rgba(168,138,90,0.4)" }}>·</span>
+                      {" "}<span style={{ fontWeight: 600 }}>Hall of Fame</span>{" RE/MAX"}
+                    </>
+                  )}
+                </p>
               </div>
             </div>
           </div>
