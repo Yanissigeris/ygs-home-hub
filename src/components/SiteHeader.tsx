@@ -27,7 +27,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
 
-  const defaultColor = transparent ? "rgba(247,244,238,0.92)" : "#2D3748";
+  const defaultColor = transparent ? "#FFFFFF" : "#2D3748";
   const activeColor = transparent ? "#FFFFFF" : "#17303B";
   const hoverColor = transparent ? "#FFFFFF" : "#17303B";
   const underlineColor = transparent ? "#FFFFFF" : "#17303B";
