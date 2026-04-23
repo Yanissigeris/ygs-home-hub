@@ -256,8 +256,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </p>
               )}
 
+              <p
+                className="opacity-0 animate-hero-fade-up hero-name-line"
+                style={{
+                  color: "#F7F4EE",
+                  animationDelay: "0.3s",
+                  animationFillMode: "forwards",
+                  fontFamily: "var(--serif)",
+                  fontWeight: 700,
+                  letterSpacing: "0.04em",
+                  whiteSpace: "nowrap",
+                  marginBottom: "0.25rem",
+                  lineHeight: 1.05,
+                }}
+              >
+                Yanis Gauthier-Sigeris
+              </p>
               <h1
-                className="max-w-[16ch] opacity-0 animate-hero-fade-up hero-h1-fix"
+                className="max-w-[16ch] opacity-0 animate-hero-fade-up hero-h1-fix hero-h1-reduced"
                 style={{
                   color: "#F7F4EE",
                   animationDelay: "0.35s",
