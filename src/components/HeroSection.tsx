@@ -40,7 +40,58 @@ const statsEn = [
   { value: "Hall of Fame", label: "RE/MAX" },
 ];
 
-const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
+/* Scroll chevron — bounces at hero bottom, fades on scroll */
+const ScrollChevron: React.FC = () => {
+  const [hidden, setHidden] = React.useState(false);
+  React.useEffect(() => {
+    const onScroll = () => setHidden(window.scrollY > 100);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const handleClick = () => {
+    const heroEl = document.querySelector("[data-hero-dark]") as HTMLElement | null;
+    const top = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : window.innerHeight;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      aria-label="Scroll to next section"
+      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto"
+      style={{
+        bottom: "84px",
+        background: "transparent",
+        border: "none",
+        padding: 8,
+        cursor: "pointer",
+        opacity: hidden ? 0 : 1,
+        transition: "opacity 0.3s ease",
+        animation: "hero-chevron-bounce 2s ease-in-out infinite",
+        color: "rgba(255,255,255,0.6)",
+      }}
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="sm:w-6 sm:h-6"
+        style={{ width: "var(--chev-size, 24px)", height: "var(--chev-size, 24px)" }}
+      >
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </button>
+  );
+};
+
+
   (
     {
       overline,
