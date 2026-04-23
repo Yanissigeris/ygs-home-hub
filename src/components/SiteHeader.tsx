@@ -491,14 +491,14 @@ const SiteHeader = () => {
         </div>
       </div>
 
-      {/* ─── Mobile (<640px) — logo left, hamburger right (seamless with hero) ─── */}
-      <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300 bg-[#17303B]" style={{ height: scrolled ? 50 : 56 }}>
+      {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
+      <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" onClick={closeMenu}>
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(52vw, 140px)", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
-          <button onClick={toggleMenu} className="flex items-center justify-center text-white transition-colors" style={{ height: 44, width: 44, border: "none", background: "none" }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
           <Link
