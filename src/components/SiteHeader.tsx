@@ -499,20 +499,15 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile / Tablet Menu Drawer ─── */}
+      {/* Mobile (<sm): full-screen overlay */}
       <div
         id="mobile-navigation"
         role="navigation"
         aria-label="Navigation principale"
-        className={`lg:hidden ${open ? "fixed inset-0 z-50 overflow-y-auto sm:static sm:inset-auto sm:z-auto sm:overflow-hidden" : "overflow-hidden"}`}
+        className={`sm:hidden fixed inset-0 z-50 overflow-y-auto bg-[#17303B] transition-opacity duration-200 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         style={{
-          background: "#17303B",
-          maxHeight: open ? (typeof window !== "undefined" && window.innerWidth >= 640 ? "calc(100dvh - 80px)" : "100dvh") : 0,
-          opacity: open ? 1 : 0,
-          transition: "opacity .25s ease, max-height .3s ease",
-          borderTop: open ? "1px solid rgba(255,255,255,.08)" : "none",
-          borderBottom: open ? "1px solid rgba(255,255,255,.08)" : "none",
-          paddingTop: open ? "env(safe-area-inset-top, 0px)" : 0,
-          paddingBottom: open ? "env(safe-area-inset-bottom, 0px)" : 0,
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          paddingBottom: "env(safe-area-inset-bottom, 0px)",
         }}
       >
         <div>
