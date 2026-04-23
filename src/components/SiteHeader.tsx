@@ -254,7 +254,7 @@ const SiteHeader = () => {
   const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -367,20 +367,20 @@ const SiteHeader = () => {
     };
   }, [location.pathname]);
 
-  // Header is always transparent, absolutely positioned over the hero
-  const transparent = true;
+  // Header is fixed; transparent over hero, turns cream/opaque after scrolling past 50px
+  const transparent = !scrolled;
   const headerStyle: React.CSSProperties = {
-    position: "absolute",
+    position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: "transparent",
+    background: transparent ? "transparent" : "#F7F4EE",
     backdropFilter: "none",
     WebkitBackdropFilter: "none",
-    borderBottom: "1px solid rgba(255,255,255,.08)",
-    transition: "background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
-    boxShadow: "none",
+    borderBottom: transparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
+    transition: "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+    boxShadow: transparent ? "none" : "0 1px 4px rgba(0,0,0,0.08)",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
