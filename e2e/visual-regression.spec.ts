@@ -61,4 +61,4 @@ for (const route of ROUTES) {
       });
     });
   }
-});
+}
