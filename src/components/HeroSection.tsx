@@ -536,7 +536,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               borderRadius: "6px",
             }}
           >
-            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:info@yanisgauthier.com" className="pointer-events-auto" style={{ color: "inherit" }}>info@yanisgauthier.com</a>
+            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto" style={{ color: "inherit" }}>yanis@martywaite.com</a>
           </span>
         </motion.address>
       </section>
