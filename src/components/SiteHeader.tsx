@@ -448,7 +448,7 @@ const SiteHeader = () => {
             to={ctaHref}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#17303B"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
