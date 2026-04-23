@@ -367,18 +367,20 @@ const SiteHeader = () => {
     };
   }, [location.pathname]);
 
-  // Header is transparent over the hero (top of page); turns white once scrolled past 60px
-  const transparent = !scrolled;
+  // Header is always transparent, absolutely positioned over the hero
+  const transparent = true;
   const headerStyle: React.CSSProperties = {
-    position: "sticky",
+    position: "absolute",
     top: 0,
-    zIndex: 200,
-    background: transparent ? "transparent" : "#FFFFFF",
-    backdropFilter: transparent ? "none" : "blur(12px)",
-    WebkitBackdropFilter: transparent ? "none" : "blur(12px)",
-    borderBottom: transparent ? "1px solid rgba(255,255,255,.08)" : "1px solid rgba(0,0,0,.04)",
+    left: 0,
+    width: "100%",
+    zIndex: 50,
+    background: "transparent",
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none",
+    borderBottom: "1px solid rgba(255,255,255,.08)",
     transition: "background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
-    boxShadow: transparent ? "none" : "0 1px 4px rgba(0,0,0,0.06)",
+    boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
   };
 
