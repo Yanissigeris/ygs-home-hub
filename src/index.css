@@ -81,6 +81,15 @@
     @apply border-border;
   }
 
+  button,
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+
   /* Visible focus ring for keyboard navigation (WCAG 2.4.7) */
   :focus-visible {
     outline: 2px solid var(--gold);
