@@ -73,8 +73,6 @@ const ScrollChevron: React.FC = () => {
       }}
     >
       <svg
-        width="24"
-        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -82,8 +80,7 @@ const ScrollChevron: React.FC = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="sm:w-6 sm:h-6"
-        style={{ width: "var(--chev-size, 24px)", height: "var(--chev-size, 24px)" }}
+        className="w-5 h-5 sm:w-6 sm:h-6"
       >
         <path d="m6 9 6 6 6-6" />
       </svg>
