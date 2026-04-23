@@ -27,10 +27,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
 
-  const defaultColor = transparent ? "#FFFFFF" : "#2D3748";
-  const activeColor = transparent ? "#FFFFFF" : "#17303B";
-  const hoverColor = transparent ? "#FFFFFF" : "#17303B";
-  const underlineColor = transparent ? "#FFFFFF" : "#17303B";
+  const defaultColor = "#FFFFFF";
+  const activeColor = "#FFFFFF";
+  const hoverColor = "#FFFFFF";
+  const underlineColor = "#FFFFFF";
 
   if (!item.children && !item.columns) {
     const active = pathname === item.href;
@@ -399,14 +399,14 @@ const SiteHeader = () => {
   const textShadow = effectiveTransparent ? "0 1px 3px rgba(0,0,0,0.3)" : "none";
 
   // Colors swap based on transparent vs scrolled-glass state.
-  const navLinkColor = effectiveTransparent ? "rgba(255,255,255,0.92)" : "#222831";
-  const navLinkActiveColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const iconColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const ctaBorderColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const ctaTextColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const logoFilter = effectiveTransparent ? "brightness(0) invert(1)" : "none";
-  const nameColor = effectiveTransparent ? "#FFFFFF" : "#222831";
-  const dividerColor = effectiveTransparent ? "rgba(255,255,255,0.4)" : "rgba(34,40,49,0.3)";
+  const navLinkColor = "#FFFFFF";
+  const navLinkActiveColor = "#FFFFFF";
+  const iconColor = "#FFFFFF";
+  const ctaBorderColor = "#FFFFFF";
+  const ctaTextColor = "#FFFFFF";
+  const logoFilter = "brightness(0) invert(1)";
+  const nameColor = "#FFFFFF";
+  const dividerColor = "rgba(255,255,255,0.4)";
 
   return (
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
@@ -430,10 +430,10 @@ const SiteHeader = () => {
           </span>
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
-          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={transparent} />))}
+          {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
-          <LanguageSwitch transparent={transparent} />
+          <LanguageSwitch transparent={true} />
         </div>
         <div className="ml-4 shrink-0 xl:ml-5">
           <Link
@@ -473,7 +473,7 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
-          <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
+          <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <Link
             to={ctaHref}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
@@ -496,7 +496,7 @@ const SiteHeader = () => {
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(52vw, 140px)", filter: logoFilter }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
-          <div className="hidden md:flex"><LanguageSwitch transparent={transparent} /></div>
+          <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
