@@ -38,13 +38,17 @@ const VisibleBreadcrumb = () => {
 
     let mountNode: HTMLDivElement | null = null;
     let cancelled = false;
+    let attempts = 0;
 
     const tryMount = () => {
       if (cancelled) return;
       const hero = document.querySelector<HTMLElement>("[data-hero-dark]");
-      if (!hero || !hero.parentNode) {
-        // Retry once DOM settles
-        requestAnimationFrame(tryMount);
+      const main = document.getElementById("main-content");
+      const anchor = hero || main?.firstElementChild;
+      if (!anchor || !anchor.parentNode) {
+        if (attempts++ < 30) {
+          requestAnimationFrame(tryMount);
+        }
         return;
       }
       // Remove any stale node
