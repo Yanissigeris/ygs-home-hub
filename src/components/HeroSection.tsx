@@ -327,7 +327,28 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Credentials strip */}
               <div className={`mt-8 pt-6 opacity-0 animate-hero-fade-up${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
-                <p style={{
+                {/* Mobile: original stats grid */}
+                <div className="md:hidden flex items-start justify-between gap-3 w-full">
+                  {stats.map((stat, i) => (
+                    <React.Fragment key={stat.label}>
+                      {i > 0 && <div className="h-[30px] w-px shrink-0" style={{ background: "linear-gradient(to bottom, transparent, rgba(168,138,90,0.2), transparent)" }} />}
+                      <div className="text-center min-w-0 flex-1">
+                        <p
+                          className="font-heading font-semibold leading-none tracking-tight text-white"
+                          style={{
+                            letterSpacing: "-.02em",
+                            fontSize: stat.value === "Hall of Fame" ? "clamp(1.05rem, 3.6vw, 2.4rem)" : "clamp(1.5rem, 5vw, 2.4rem)",
+                          }}
+                        >
+                          {stat.value}
+                        </p>
+                        <p className="mt-2 font-medium uppercase" style={{ color: "rgba(168,138,90,0.5)", fontSize: ".58rem", letterSpacing: ".08em" }}>{stat.label}</p>
+                      </div>
+                    </React.Fragment>
+                  ))}
+                </div>
+                {/* Tablet/Desktop: inline credentials line */}
+                <p className="hidden md:block" style={{
                   fontFamily: "var(--sans)",
                   fontSize: "0.68rem",
                   fontWeight: 400,
