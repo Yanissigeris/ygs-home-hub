@@ -35,10 +35,12 @@ const VisibleBreadcrumb = () => {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="w-full border-b"
+      className="w-full border-b relative"
       style={{
         backgroundColor: "var(--cream, #F7F4EE)",
         borderBottomColor: "var(--border, #e5e0d8)",
+        marginTop: "var(--header-h, 70px)",
+        zIndex: 51,
       }}
     >
       <div
