@@ -451,22 +451,50 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
-        {/* Scroll indicator — mobile only */}
-        {showScrollHint && (
-          <div
-            className="absolute bottom-3 left-1/2 z-[5] md:hidden"
-            style={{
-              transform: "translateX(-50%)",
-              color: "rgba(255,255,255,.7)",
-              fontSize: "1.5rem",
-              animation: "hero-bounce 2s ease infinite",
-              textShadow: "0 2px 6px rgba(0,0,0,0.4)",
-            }}
-            aria-hidden="true"
+        {/* ─── Credibility bar (Layer 5) ─── */}
+        <div
+          className="absolute left-0 z-[5] w-full px-4 text-center pointer-events-none"
+          style={{
+            bottom: "32px",
+            color: "rgba(255,255,255,0.75)",
+            fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+            fontFamily: "var(--sans)",
+          }}
+        >
+          <span className="pointer-events-auto">
+            {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
+          </span>
+          <span className="mx-2 opacity-50">|</span>
+          <a
+            href="#avis"
+            className="pointer-events-auto hover:underline"
+            style={{ color: "inherit", textDecoration: "none" }}
           >
-            ⌄
-          </div>
-        )}
+            5★ Google &amp; Facebook
+          </a>
+          <span className="mx-2 opacity-50">|</span>
+          <span className="pointer-events-auto">
+            {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
+          </span>
+        </div>
+
+        {/* ─── NAP (Layer 5) ─── */}
+        <address
+          className="absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
+          style={{
+            bottom: "8px",
+            color: "rgba(255,255,255,0.45)",
+            fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
+            fontStyle: "normal",
+            textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+            fontFamily: "var(--sans)",
+          }}
+        >
+          Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:info@yanisgauthier.com" className="pointer-events-auto" style={{ color: "inherit" }}>info@yanisgauthier.com</a>
+        </address>
       </section>
     );
   }
