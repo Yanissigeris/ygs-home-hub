@@ -417,7 +417,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {agentImage && (
           <>
             {/* Desktop portrait */}
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               src={agentImage}
               alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
               width={640}
@@ -436,7 +439,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {...{ fetchpriority: "high" } as any}
             />
             {/* Mobile portrait */}
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               src={agentImageSm || agentImage}
               srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
               sizes="100vw"
@@ -461,8 +467,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         )}
 
         {/* ─── Credibility bar (Layer 5) ─── */}
-        <div
-          className="absolute left-0 z-[5] w-full px-4 text-center pointer-events-none"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
             bottom: "32px",
             color: "rgba(255,255,255,0.75)",
@@ -473,37 +482,63 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             fontFamily: "var(--sans)",
           }}
         >
-          <span className="pointer-events-auto">
-            {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
-          </span>
-          <span className="mx-2 opacity-50">|</span>
-          <a
-            href="#avis"
-            className="pointer-events-auto hover:underline"
-            style={{ color: "inherit", textDecoration: "none" }}
+          <div
+            className="md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none"
+            style={{
+              background: "rgba(23,48,59,0.6)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              padding: "12px 16px",
+              borderRadius: "8px",
+              margin: "0 16px",
+            }}
           >
-            5★ Google &amp; Facebook
-          </a>
-          <span className="mx-2 opacity-50">|</span>
-          <span className="pointer-events-auto">
-            {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
-          </span>
-        </div>
+            <span className="pointer-events-auto">
+              {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
+            </span>
+            <span className="mx-2 opacity-50">|</span>
+            <a
+              href="#avis"
+              className="pointer-events-auto hover:underline"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              5★ Google &amp; Facebook
+            </a>
+            <span className="mx-2 opacity-50">|</span>
+            <span className="pointer-events-auto">
+              {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
+            </span>
+          </div>
+        </motion.div>
 
         {/* ─── NAP (Layer 5) ─── */}
-        <address
+        <motion.address
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
           style={{
             bottom: "8px",
-            color: "rgba(255,255,255,0.45)",
+            color: "rgba(255,255,255,0.6)",
             fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
             fontStyle: "normal",
             textShadow: "0 1px 4px rgba(0,0,0,0.5)",
             fontFamily: "var(--sans)",
           }}
         >
-          Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:info@yanisgauthier.com" className="pointer-events-auto" style={{ color: "inherit" }}>info@yanisgauthier.com</a>
-        </address>
+          <span
+            className="inline-block md:!bg-transparent md:!backdrop-blur-0 md:!px-0 md:!py-0 md:!rounded-none"
+            style={{
+              background: "rgba(23,48,59,0.6)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              padding: "6px 12px",
+              borderRadius: "6px",
+            }}
+          >
+            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:info@yanisgauthier.com" className="pointer-events-auto" style={{ color: "inherit" }}>info@yanisgauthier.com</a>
+          </span>
+        </motion.address>
       </section>
     );
   }
