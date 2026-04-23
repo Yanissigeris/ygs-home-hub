@@ -310,17 +310,20 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       {primaryCta.label} →
                     </Link>
                   )}
-                  {secondaryCta && (
-                      <Link to={secondaryCta.href}
-                      className="hidden sm:inline-flex items-center justify-center uppercase transition-all duration-300 hover:border-white/50 w-full sm:w-auto text-center"
-                      style={{ color: "#FFFFFF", border: "1.5px solid rgba(255,255,255,.30)", borderRadius: 0, padding: ".85rem 1.5rem", fontSize: ".8rem", fontWeight: 500, letterSpacing: ".14em", transition: "opacity .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease" }}
-                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
-                    >
-                      {secondaryCta.label}
-                    </Link>
-                  )}
                 </div>
               )}
+
+              <p className="mt-5 lg:hidden opacity-0 animate-hero-fade-up" style={{
+                fontFamily: "var(--serif)",
+                fontSize: "0.78rem",
+                fontWeight: 500,
+                color: "rgba(247,244,238,0.45)",
+                letterSpacing: "0.02em",
+                animationDelay: "0.75s",
+                animationFillMode: "forwards",
+              }}>
+                Yanis Gauthier-Sigeris — {lang === "fr" ? "Courtier RE/MAX" : "RE/MAX Broker"}
+              </p>
 
               {/* Credentials strip */}
               <div className={`mt-10 pt-8 py-3 md:py-6 border-t border-white/10 md:border-t-0 opacity-0 animate-hero-fade-up order-last md:order-none${hideCredentialsStrip ? " hidden" : ""}`} style={{ borderTop: "1px solid rgba(168,138,90,0.12)", animationDelay: "0.8s", animationFillMode: "forwards" }}>
