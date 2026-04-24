@@ -288,7 +288,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             loop
             playsInline
             poster={heroVideoPoster}
-            preload="none"
+            preload="auto"
             width={1920}
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"
