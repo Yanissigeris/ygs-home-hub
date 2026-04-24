@@ -59,7 +59,7 @@ const OutaouaisHubPageEn = () => (
       primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
       socialProof="RE/MAX Hall of Fame"
-      heroVideo="/__l5e/assets-v1/3baedf80-2bff-4d52-abe5-2c871f47b5d8/hero-video-hd.mp4"
+      heroVideo="/__l5e/assets-v1/39883d0d-a0d1-4f7a-8085-7113707a9760/hero-interior-walkthrough.mp4"
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
