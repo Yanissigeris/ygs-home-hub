@@ -185,21 +185,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
     React.useEffect(() => {
       if (!heroVideo) return;
-      const section = sectionRef.current;
       const el = videoRef.current;
-      if (!section || !el) return;
-      const io = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            io.disconnect();
-            el.src = heroVideo;
-            el.load();
-          }
-        },
-        { rootMargin: "200px" }
-      );
-      io.observe(section);
-      return () => io.disconnect();
+      if (!el) return;
+      // Load immediately on mount — no IntersectionObserver delay
+      if (el.src !== heroVideo) {
+        el.src = heroVideo;
+        el.load();
+      }
     }, [heroVideo]);
 
     /* VideoObject JSON-LD for pages with hero video */
@@ -296,7 +288,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             loop
             playsInline
             poster={heroVideoPoster}
-            preload="none"
+            preload="auto"
             width={1920}
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"

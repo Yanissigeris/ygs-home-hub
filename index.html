@@ -53,6 +53,12 @@
           a.href='/hero-video-poster.webp';
           a.setAttribute('fetchpriority','high');
           document.head.appendChild(a);
+
+          var v = document.createElement('link');
+          v.rel='preload'; v.as='video'; v.type='video/mp4';
+          v.href='/hero-interior.mp4';
+          v.setAttribute('fetchpriority','high');
+          document.head.appendChild(v);
         }
       })();
     </script>
