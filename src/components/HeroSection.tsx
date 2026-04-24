@@ -191,11 +191,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const el = videoRef.current;
       if (!el) return;
 
-      // Perf tracking — start timer on mount
+      // Pick a viewport-appropriate variant if base file follows the -720/-480 convention.
+      // E.g. heroVideo="/hero-interior-720.mp4" → on mobile we swap to -480.mp4
+      const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
+      let chosen = heroVideo;
+      if (isMobile && /-720\.mp4$/i.test(heroVideo)) {
+        chosen = heroVideo.replace(/-720\.mp4$/i, "-480.mp4");
+      }
+
+      // Perf tracking
       const t0 = performance.now();
       perfStartRef.current = t0;
-      const navStart = performance.timing?.navigationStart ?? performance.timeOrigin;
-      setPerfMetrics({ src: heroVideo, mountTime: Math.round(performance.now() - (performance.timeOrigin ? 0 : navStart)) });
+      setPerfMetrics({ src: chosen, mountTime: 0 });
 
       const mark = (key: keyof VideoPerfMetrics) => {
         const dt = performance.now() - t0;
@@ -208,22 +215,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const onLoadedData = () => mark("loadedData");
       const onCanPlay = () => mark("canPlay");
       const onPlaying = () => {
-        if (perfMetrics.firstPlay === undefined) {
-          const dt = performance.now() - t0;
-          setPerfMetrics((p) => ({ ...p, firstPlay: dt }));
-          // Read Resource Timing for size + download duration
-          setTimeout(() => {
-            const entries = performance.getEntriesByType("resource") as PerformanceResourceTiming[];
-            const match = entries.find((e) => e.name.includes(heroVideo));
-            if (match) {
-              setPerfMetrics((p) => ({
-                ...p,
-                fileSizeKB: (match.transferSize || match.encodedBodySize) / 1024,
-                durationMs: match.duration,
-              }));
-            }
-          }, 100);
-        }
+        const dt = performance.now() - t0;
+        setPerfMetrics((p) => p.firstPlay !== undefined ? p : { ...p, firstPlay: dt });
+        setTimeout(() => {
+          const entries = performance.getEntriesByType("resource") as PerformanceResourceTiming[];
+          const match = entries.find((e) => e.name.includes(chosen));
+          if (match) {
+            setPerfMetrics((p) => ({
+              ...p,
+              fileSizeKB: (match.transferSize || match.encodedBodySize) / 1024,
+              durationMs: match.duration,
+            }));
+          }
+        }, 100);
       };
 
       el.addEventListener("loadstart", onLoadStart);
@@ -233,9 +237,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       el.addEventListener("canplay", onCanPlay);
       el.addEventListener("playing", onPlaying);
 
-      // Load immediately on mount — no IntersectionObserver delay
-      if (el.src !== heroVideo) {
-        el.src = heroVideo;
+      if (el.src !== chosen) {
+        el.src = chosen;
         el.load();
       }
 
