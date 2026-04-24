@@ -65,7 +65,7 @@ const OutaouaisHubPage = () => (
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-video-compressed.mp4"
+      heroVideo="/__l5e/assets-v1/3baedf80-2bff-4d52-abe5-2c871f47b5d8/hero-video-hd.mp4"
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
