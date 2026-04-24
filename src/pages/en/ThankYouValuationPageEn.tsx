@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Clock, Shield, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import FunnelNextStep from "@/components/FunnelNextStep";
+import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 
 const whatsNext = [
   { icon: Clock, text: "Personalized response within 24 hours" },
@@ -20,7 +21,15 @@ const nextSteps = [
 const ThankYouValuationPageEn = () => (
   <>
     <PageMeta title="Thank You — Valuation Requested" description="Your valuation request has been sent. Yanis is preparing your personalized analysis and will contact you within 24 hours." />
-    <section className="section-padding bg-background">
+    <section
+      className="section-padding"
+      style={{
+        backgroundImage: `linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%), url(${heroThankYouVal})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="section-container max-w-[36rem]">
         <motion.div
           className="text-center"
