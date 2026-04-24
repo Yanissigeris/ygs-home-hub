@@ -18,8 +18,8 @@ const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
         <div className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap" style={{ animationDuration: "var(--marquee-speed, 15s)" }}>
           {/* Duplicate items twice for seamless loop */}
           {[...items, ...items].map((item, i) => (
-            <span key={i} className="inline-flex items-center text-[.65rem] sm:text-[.72rem] font-semibold uppercase tracking-[.12em]" style={{ color: "rgba(255,255,255,.35)", marginLeft: "clamp(1.25rem, 3vw, 2rem)", marginRight: "clamp(1.25rem, 3vw, 2rem)" }}>
-              <span className="mr-4 text-[8px]" style={{ color: "var(--gold)" }} aria-hidden="true">●</span>
+            <span key={i} className="inline-flex items-center text-[.7rem] sm:text-[.78rem] font-semibold uppercase tracking-[.12em]" style={{ color: "rgba(255,255,255,.85)", marginLeft: "clamp(1.25rem, 3vw, 2rem)", marginRight: "clamp(1.25rem, 3vw, 2rem)" }}>
+              <span className="mr-4 text-[10px]" style={{ color: "var(--gold)" }} aria-hidden="true">●</span>
               {item}
             </span>
           ))}
