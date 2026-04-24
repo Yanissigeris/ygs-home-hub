@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import heroPrivacy from "@/assets/hero-privacy.webp";
 
 const TermsPage = () => (
   <>
@@ -6,6 +7,16 @@ const TermsPage = () => (
       title="Conditions d'utilisation | YGS — Yanis Gauthier-Sigeris"
       description="Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable."
       ogImage="https://yanisgauthier.com/og/og-default.jpg"
+    />
+    <section
+      aria-hidden="true"
+      style={{
+        backgroundImage: `linear-gradient(135deg, rgba(23,48,59,0.88), rgba(23,48,59,0.7)), url(${heroPrivacy})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "180px",
+      }}
+      className="w-full"
     />
     <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>

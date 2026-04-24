@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import FunnelNextStep from "@/components/FunnelNextStep";
+import heroThankYou from "@/assets/hero-thank-you.webp";
 
 const nextSteps = [
   { title: "Explorer les quartiers", text: "Découvrez les secteurs de Gatineau — Aylmer, Hull, Plateau, Buckingham et plus.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
@@ -14,7 +15,15 @@ const nextSteps = [
 const ThankYouPage = () => (
    <>
     <PageMeta title="Merci — Demande envoyée" description="Votre demande a été envoyée avec succès. Yanis vous contactera dans les prochaines 24 heures." />
-    <section className="section-padding bg-background">
+    <section
+      className="section-padding"
+      style={{
+        backgroundImage: `linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%), url(${heroThankYou})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="section-container max-w-[36rem]">
         <motion.div
           className="text-center"

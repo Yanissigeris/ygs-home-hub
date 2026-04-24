@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import { getPublishedPosts, getFeaturedPost, getCategories } from "@/data/blog-posts";
+import heroBlog from "@/assets/hero-blog.webp";
 
 const BlogPageEn = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -35,7 +36,15 @@ const BlogPageEn = () => {
         ogImage="https://yanisgauthier.com/og/og-blog.jpg" />
 
       {/* Editorial hero */}
-      <section style={{ background: "#17303B", minHeight: "280px" }} className="w-full">
+      <section
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(23,48,59,0.92), rgba(23,48,59,0.78)), url(${heroBlog})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "280px",
+        }}
+        className="w-full"
+      >
         <div className="section-container" style={{ paddingTop: "48px", paddingBottom: "48px" }}>
           <div className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:gap-12 items-start">
             <div>
