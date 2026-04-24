@@ -13,13 +13,13 @@ const items = [
 
 const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="overflow-hidden" style={{ background: "var(--ink)", borderTop: "1px solid rgba(255,255,255,.05)", padding: ".9rem 0" }}>
-      <div className="relative group" style={{ maskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)" }}>
+    <section ref={ref} className="overflow-hidden" style={{ background: "var(--ink)", borderTop: "1px solid rgba(255,255,255,.12)", borderBottom: "1px solid rgba(255,255,255,.08)", padding: "1.15rem 0" }}>
+      <div className="relative group" style={{ maskImage: "linear-gradient(to right, transparent, black 4%, black 96%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 4%, black 96%, transparent)" }}>
         <div className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap" style={{ animationDuration: "var(--marquee-speed, 15s)" }}>
           {/* Duplicate items twice for seamless loop */}
           {[...items, ...items].map((item, i) => (
-            <span key={i} className="inline-flex items-center text-[.7rem] sm:text-[.78rem] font-semibold uppercase tracking-[.12em]" style={{ color: "rgba(255,255,255,.85)", marginLeft: "clamp(1.25rem, 3vw, 2rem)", marginRight: "clamp(1.25rem, 3vw, 2rem)" }}>
-              <span className="mr-4 text-[10px]" style={{ color: "var(--gold)" }} aria-hidden="true">●</span>
+            <span key={i} className="inline-flex items-center text-[.85rem] sm:text-[.95rem] font-bold uppercase tracking-[.14em]" style={{ color: "rgba(255,255,255,.98)", marginLeft: "clamp(1.75rem, 4vw, 2.75rem)", marginRight: "clamp(1.75rem, 4vw, 2.75rem)", textShadow: "0 1px 2px rgba(0,0,0,.4)" }}>
+              <span className="mr-4 text-[12px]" style={{ color: "var(--gold)", textShadow: "0 0 8px rgba(168,138,90,.6)" }} aria-hidden="true">●</span>
               {item}
             </span>
           ))}
