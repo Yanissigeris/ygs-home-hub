@@ -10,6 +10,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
+import { useHeadingHierarchyGuard } from "@/hooks/useHeadingHierarchyGuard";
 
 
 import { Outlet, useLocation } from "react-router-dom";
@@ -87,6 +88,7 @@ const SiteLayout = () => {
   const { pathname } = useLocation();
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
   const skipLabel = isEn ? "Skip to content" : "Aller au contenu";
+  useHeadingHierarchyGuard();
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
