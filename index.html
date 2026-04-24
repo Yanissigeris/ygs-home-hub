@@ -56,7 +56,9 @@
 
           var v = document.createElement('link');
           v.rel='preload'; v.as='video'; v.type='video/mp4';
-          v.href='/hero-interior.mp4';
+          v.href = window.matchMedia('(max-width: 767px)').matches
+            ? '/hero-interior-480.mp4'
+            : '/hero-interior-720.mp4';
           v.setAttribute('fetchpriority','high');
           document.head.appendChild(v);
         }
