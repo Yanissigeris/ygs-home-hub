@@ -32,6 +32,9 @@ jobs:
       - name: Audit injected SEO tags
         run: node scripts/audit-seo.mjs
 
+      - name: Audit heading hierarchy (single H1, no skipped levels)
+        run: node scripts/audit-headings.mjs
+
       - name: Upload dist on failure
         if: failure()
         uses: actions/upload-artifact@v4
