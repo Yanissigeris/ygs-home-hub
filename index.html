@@ -54,11 +54,17 @@
           a.setAttribute('fetchpriority','high');
           document.head.appendChild(a);
 
+          // Detect AV1 support to preload the smaller variant when possible
+          var probe = document.createElement('video');
+          var av1 = probe.canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '' ||
+                    probe.canPlayType('video/mp4; codecs="av01"') !== '';
+          var isMobile = window.matchMedia('(max-width: 767px)').matches;
+          var base = isMobile ? '/hero-interior-480' : '/hero-interior-720';
+          var href = base + (av1 ? '.av1.mp4' : '.mp4');
+
           var v = document.createElement('link');
           v.rel='preload'; v.as='video'; v.type='video/mp4';
-          v.href = window.matchMedia('(max-width: 767px)').matches
-            ? '/hero-interior-480.mp4'
-            : '/hero-interior-720.mp4';
+          v.href = href;
           v.setAttribute('fetchpriority','high');
           document.head.appendChild(v);
         }
