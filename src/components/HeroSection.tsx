@@ -199,6 +199,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         chosen = heroVideo.replace(/-720\.mp4$/i, "-480.mp4");
       }
 
+      // Prefer AV1 if browser supports it (~40% smaller than H.264).
+      // Convention: alongside foo.mp4 we ship foo.av1.mp4
+      const av1Supported =
+        el.canPlayType('video/mp4; codecs="av01.0.05M.08"') !== "" ||
+        el.canPlayType('video/mp4; codecs="av01"') !== "";
+      if (av1Supported && /\.mp4$/i.test(chosen) && !/\.av1\.mp4$/i.test(chosen)) {
+        chosen = chosen.replace(/\.mp4$/i, ".av1.mp4");
+      }
+
       // Perf tracking
       const t0 = performance.now();
       perfStartRef.current = t0;
