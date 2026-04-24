@@ -193,8 +193,8 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
             {c.eyebrow}
           </p>
 
-          {/* Heading */}
-          <h3
+          {/* Heading — h2 to keep document hierarchy consistent (h1 → h2) */}
+          <h2
             style={{
               fontFamily: "var(--serif)",
               fontSize: isMobile ? "1.85rem" : "2.4rem",
@@ -207,7 +207,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
             }}
           >
             {c.heading}
-          </h3>
+          </h2>
 
           {/* Subtext */}
           <p
