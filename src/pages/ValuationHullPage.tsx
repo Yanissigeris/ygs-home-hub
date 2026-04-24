@@ -79,7 +79,7 @@ const ValuationHullPage = () => {
         description="Obtenez une évaluation gratuite de votre maison à Hull. Analyse basée sur les ventes récentes dans votre secteur — réponse en 24h, sans engagement."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
-      <section className="hero-gradient relative overflow-hidden">
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
           <motion.div {...anim}>
             <p className="label-overline mb-4 text-primary-foreground/25">Évaluation gratuite · Hull</p>
