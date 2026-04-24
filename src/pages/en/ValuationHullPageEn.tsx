@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
+import heroImg from "@/assets/hero-valuation-hull.webp";
 
 const benefits = [
   "Realistic value range based on recent Hull sales",
@@ -78,7 +79,7 @@ const ValuationHullPageEn = () => {
         description="Get a free home valuation in Hull. Analysis based on recent sales in your neighborhood — response within 24h, no commitment."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
-      <section className="hero-gradient relative overflow-hidden">
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
           <motion.div {...anim}>
             <p className="label-overline mb-4 text-primary-foreground/25">Free valuation · Hull</p>
