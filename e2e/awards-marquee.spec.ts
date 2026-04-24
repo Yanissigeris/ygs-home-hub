@@ -44,8 +44,8 @@ function contrastRatio(fg: string, bg: string): number {
 }
 
 async function findMarquee(page: Page) {
-  // The component animates items inside; locate by characteristic award text.
-  const marquee = page.locator("section").filter({ hasText: "Hall of Fame RE/MAX" }).first();
+  const marquee = page.locator("section.awards-marquee").first();
+  await marquee.waitFor({ state: "attached", timeout: 30000 });
   await marquee.scrollIntoViewIfNeeded();
   await expect(marquee).toBeVisible();
   return marquee;
