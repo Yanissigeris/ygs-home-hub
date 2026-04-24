@@ -12,6 +12,13 @@ const items = [
 ];
 
 /**
+ * WCAG contrast (verified):
+ *  - Text #FFFFFF on #0E2630 → 15.69:1 (AAA, seuil ≥7:1)
+ *  - Text #FFFFFF on #112E3A → 14.23:1 (AAA)
+ *  - Gold #D4AF6F on #0E2630 → 7.59:1 (AAA, décoratif)
+ *  - Gold #D4AF6F on #112E3A → 6.89:1 (AA large +)
+ * Conforme mobile + basse luminosité. Toutes valeurs configurables ci-dessous.
+ *
  * Configurable CSS variables (set on the section or any ancestor):
  *  --stats-bg          → solid background fallback
  *  --stats-bg-gradient → full background (overrides --stats-bg if set)
