@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/yanis-portrait-nobg-Dq7My8zy.webp';l.setAttribute('fetchpriority','high');document.head.appendChild(l);}})();</script>
+    <style>
+      *,::after,::before{box-sizing:border-box;border:0 solid}
+      body{margin:0;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;background:#fdfdfd;color:hsl(200 30% 14%)}
+      h1,h2,h3,h4{font-family:'Playfair Display',serif;text-wrap:balance}
+      .section-container{margin-inline:auto;max-width:1200px;padding-inline:1.25rem}
+      @media(min-width:640px){.section-container{padding-inline:1.5rem}}
+      @media(min-width:768px){.section-container{padding-inline:2rem}}
+      #root{min-height:100vh;display:flex;flex-direction:column}
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>YGS — Courtier immobilier Gatineau · Outaouais</title>
+    <!-- title, description, canonical, og:title/description, twitter:title/description, hreflang are injected per-route by scripts/prerender.mjs at build time. -->
+    <meta name="author" content="Yanis Gauthier-Sigeris" />
+    <meta name="google-site-verification" content="jrGwJRqaD0UHGla8GoBqKR7bpQWsFGpGzPF9vA32K00" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#17303B">
+    <meta name="msapplication-TileImage" content="/android-chrome-192.png">
+    <meta name="geo.region" content="CA-QC" />
+    <meta name="geo.placename" content="Gatineau" />
+    <meta name="geo.position" content="45.4765;-75.7013" />
+    <meta name="ICBM" content="45.4765, -75.7013" />
+    <meta name="theme-color" content="#17303B" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Static OG fallbacks (route-specific overrides injected per-route at build time) -->
+    <meta property="og:image" content="https://yanisgauthier.com/og/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="YGS — Yanis Gauthier-Sigeris" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://yanisgauthier.com/og/og-default.jpg" />
+
+    <!-- Google Fonts — non-render-blocking preload pattern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
+    <!-- Critical above-fold CSS -->
+    <style>
+      body{margin:0;background:#F7F4EE;color:#17303B;font-family:'DM Sans',system-ui,sans-serif}
+      .hero-crit{background:#17303B;min-height:88svh}
+      h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
+      @keyframes img-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+      .img-shimmer{background:linear-gradient(90deg,#F7F4EE 25%,#ede9e0 50%,#F7F4EE 75%);background-size:200% 100%;animation:img-shimmer 1.5s infinite}
+    </style>
+    <script>
+      // Preload hero assets only on homepage
+      (function(){
+        var p = location.pathname;
+        if (p === '/' || p === '/en' || p === '/en/') {
+          var a = document.createElement('link');
+          a.rel='preload'; a.as='image'; a.type='image/webp';
+          a.href='/hero-video-poster.webp';
+          a.setAttribute('fetchpriority','high');
+          document.head.appendChild(a);
+        }
+      })();
+    </script>
+
+    <!-- Global RealEstateAgent JSON-LD (static — crawlable without JS) -->
+    <script type="application/ld+json" id="ygs-jsonld-static">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "@id": "https://yanisgauthier.com/#realestateagent",
+      "name": "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
+      "url": "https://yanisgauthier.com",
+      "image": "https://yanisgauthier.com/og-image.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yanisgauthier.com/og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "telephone": "+1-819-210-3044",
+      "email": "yanis@ygsimmo.ca",
+      "description": "Courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais — stratégie claire avec conseils honnêtes.",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday"],
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gatineau",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Gatineau" },
+        { "@type": "City", "name": "Aylmer" },
+        { "@type": "City", "name": "Hull" },
+        { "@type": "City", "name": "Buckingham" },
+        { "@type": "City", "name": "Masson-Angers" },
+        { "@type": "City", "name": "Chelsea" },
+        { "@type": "City", "name": "Cantley" },
+        { "@type": "City", "name": "Val-des-Monts" },
+        { "@type": "AdministrativeArea", "name": "Pontiac" }
+      ],
+      "knowsLanguage": ["fr", "en"],
+      "memberOf": { "@type": "Organization", "name": "RE/MAX Direct" },
+      "sameAs": [
+        "https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris",
+        "https://www.facebook.com/YanisGauthierSigeris",
+        "https://www.instagram.com/yanissigeris/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "25",
+        "reviewCount": "25"
+      }
+    }
+    </script>
+
+    <!-- Person schema for Knowledge Panel -->
+    <script type="application/ld+json" id="ygs-person-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://yanisgauthier.com/#person",
+      "name": "Yanis Gauthier-Sigeris",
+      "givenName": "Yanis",
+      "familyName": "Gauthier-Sigeris",
+      "jobTitle": "Courtier immobilier",
+      "description": "Courtier immobilier RE/MAX à Gatineau, spécialisé en vente, achat et investissement plex en Outaouais.",
+      "url": "https://yanisgauthier.com",
+      "image": "https://yanisgauthier.com/og-image.png",
+      "telephone": "+1-819-210-3044",
+      "email": "yanis@ygsimmo.ca",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://yanisgauthier.com/#realestateagent",
+        "name": "RE/MAX Direct"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gatineau",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "knowsLanguage": ["fr", "en"],
+      "sameAs": [
+        "https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris",
+        "https://www.facebook.com/YanisGauthierSigeris",
+        "https://www.instagram.com/yanissigeris/"
+      ]
+    }
+    </script>
+
+    <!-- WebSite schema with SearchAction for sitelinks searchbox -->
+    <script type="application/ld+json" id="ygs-website-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://yanisgauthier.com/#website",
+      "name": "YGS — Yanis Gauthier-Sigeris",
+      "alternateName": "YGS Immobilier",
+      "url": "https://yanisgauthier.com",
+      "inLanguage": ["fr-CA", "en-CA"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://yanisgauthier.com/blogue?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Route-specific JSON-LD injection (deferred — non-blocking for FCP) -->
+    <script src="/jsonld-routes.js" defer></script>
+
+    <!-- GA4 — loaded conditionally by CookieConsent component based on Loi 25 consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    </script>
+
+  <script type="module" crossorigin src="/assets/index-Bp7Dn11M.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-h0cTlA-K.js">
+  <link rel="modulepreload" crossorigin href="/assets/motion-DV2Yw-2D.js">
+  <link rel="modulepreload" crossorigin href="/assets/icons-fumR_Eqv.js">
+  <link rel="modulepreload" crossorigin href="/assets/data-DoDDItvK.js">
+  <link rel="preload" as="style" href="/assets/index-DZcCQeOq.css" crossorigin>
+    <link rel="stylesheet" href="/assets/index-DZcCQeOq.css" media="print" onload="this.media='all'" crossorigin>
+    <noscript><link rel="stylesheet" href="/assets/index-DZcCQeOq.css" crossorigin></noscript>
+
+    <!-- Prerendered SEO overrides (route: /) -->
+    <meta name="description" content="Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais — stratégie claire, chiffres honnêtes. Évaluation gratuite." />
+    <link rel="canonical" href="https://yanisgauthier.com/" />
+    <meta property="og:title" content="YGS — Courtier immobilier Gatineau · Outaouais" />
+    <meta property="og:description" content="Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais — stratégie claire, chiffres honnêtes. Évaluation gratuite." />
+    <meta property="og:url" content="https://yanisgauthier.com/" />
+    <meta property="og:image" content="https://yanisgauthier.com/og/og-home.jpg" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:locale:alternate" content="en_CA" />
+    <meta name="twitter:title" content="YGS — Courtier immobilier Gatineau · Outaouais" />
+    <meta name="twitter:description" content="Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais — stratégie claire, chiffres honnêtes. Évaluation gratuite." />
+    <meta name="twitter:image" content="https://yanisgauthier.com/og/og-home.jpg" />
+    <link rel="alternate" hreflang="fr-CA" href="https://yanisgauthier.com/" />
+    <link rel="alternate" hreflang="en-CA" href="https://yanisgauthier.com/en" />
+    <link rel="alternate" hreflang="x-default" href="https://yanisgauthier.com/" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- Noscript fallback for crawlers that don't execute JS -->
+    <noscript>
+      <div style="max-width:800px;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;color:#17303B">
+        <h1>Yanis Gauthier-Sigeris — Courtier immobilier à Gatineau</h1>
+        <p>Stratégie claire, conseils basés sur les faits, accompagnement complet pour vendre, acheter ou investir en Outaouais.</p>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="/vendre-ma-maison-gatineau">Vendre ma propriété</a></li>
+          <li><a href="/acheter-a-gatineau">Acheter une maison</a></li>
+          <li><a href="/evaluation-gratuite-gatineau">Évaluation gratuite</a></li>
+          <li><a href="/investir-plex-gatineau">Investissement plex</a></li>
+          <li><a href="/premier-achat-gatineau">Premier achat</a></li>
+          <li><a href="/relocalisation-ottawa-gatineau">Relocalisation</a></li>
+        </ul>
+        <h2>Secteurs desservis</h2>
+        <ul>
+          <li><a href="/aylmer">Aylmer</a></li>
+          <li><a href="/hull">Hull</a></li>
+          <li><a href="/plateau">Plateau</a></li>
+          <li><a href="/gatineau">Gatineau centre</a></li>
+          <li><a href="/chelsea">Chelsea</a></li>
+          <li><a href="/cantley">Cantley</a></li>
+          <li><a href="/val-des-monts">Val-des-Monts</a></li>
+          <li><a href="/pontiac">Pontiac</a></li>
+        </ul>
+        <h2>Contact</h2>
+        <p>Téléphone : <a href="tel:+18192103044">819-210-3044</a> · Courriel : <a href="mailto:yanis@ygsimmo.ca">yanis@ygsimmo.ca</a></p>
+      </div>
+    </noscript>
+  </body>
+</html>
