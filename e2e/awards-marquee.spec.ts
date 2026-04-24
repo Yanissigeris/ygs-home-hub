@@ -58,7 +58,12 @@ test.beforeAll(() => {
 for (const vp of VIEWPORTS) {
   test(`AwardsMarquee @ ${vp.name} (${vp.width}x${vp.height})`, async ({ page }) => {
     await page.setViewportSize({ width: vp.width, height: vp.height });
-    await page.goto("/", { waitUntil: "networkidle" });
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+
+    // Freeze marquee animation for deterministic snapshots / measurements.
+    await page.addStyleTag({
+      content: `*, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; }`,
+    });
 
     const marquee = await findMarquee(page);
 
