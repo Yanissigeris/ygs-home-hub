@@ -239,12 +239,23 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         }, 100);
       };
 
+      // Fallback: if AV1 file fails (404 or decode error), retry with original MP4
+      const onError = () => {
+        if (/\.av1\.mp4$/i.test(chosen)) {
+          const fallback = chosen.replace(/\.av1\.mp4$/i, ".mp4");
+          chosen = fallback;
+          el.src = fallback;
+          el.load();
+        }
+      };
+
       el.addEventListener("loadstart", onLoadStart);
       el.addEventListener("progress", onProgress);
       el.addEventListener("loadedmetadata", onLoadedMetadata);
       el.addEventListener("loadeddata", onLoadedData);
       el.addEventListener("canplay", onCanPlay);
       el.addEventListener("playing", onPlaying);
+      el.addEventListener("error", onError);
 
       if (el.src !== chosen) {
         el.src = chosen;
@@ -258,6 +269,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         el.removeEventListener("loadeddata", onLoadedData);
         el.removeEventListener("canplay", onCanPlay);
         el.removeEventListener("playing", onPlaying);
+        el.removeEventListener("error", onError);
       };
     }, [heroVideo]);
 
