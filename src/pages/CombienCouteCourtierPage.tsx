@@ -6,6 +6,7 @@ import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/hero-combien-courtier.webp";
 
 const faq = [
   { q: "Combien coûte un courtier immobilier au Québec?", a: "Au Québec, la rémunération du courtier est généralement un pourcentage du prix de vente, convenu avant la mise en marché. Il n'y a pas de tarif fixe — chaque entente est négociée entre le vendeur et le courtier." },
@@ -24,7 +25,7 @@ const CombienCouteCourtierPage = () => (
       title="Combien coûte un courtier immobilier au Québec?"
       description="Comprenez comment fonctionne la rémunération d'un courtier immobilier au Québec. Commission, services inclus et ce que ça signifie pour votre vente." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

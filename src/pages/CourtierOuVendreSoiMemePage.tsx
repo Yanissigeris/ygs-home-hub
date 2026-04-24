@@ -6,6 +6,7 @@ import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 
 const faq = [
   { q: "Est-ce mieux de vendre avec un courtier ou seul?", a: "Ça dépend de votre expérience, de votre temps disponible et de votre tolérance au risque. Un courtier offre visibilité, négociation et gestion complète — vendre seul peut réduire les frais mais demande beaucoup plus de travail et comporte des risques." },
@@ -24,7 +25,7 @@ const CourtierOuVendreSoiMemePage = () => (
       title="Courtier immobilier ou vendre seul au Québec?"
       description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
+import heroImg from "@/assets/hero-valuation-aylmer.webp";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes à Aylmer",

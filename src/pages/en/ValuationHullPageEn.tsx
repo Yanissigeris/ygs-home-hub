@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
+import heroImg from "@/assets/hero-valuation-hull.webp";
 
 const benefits = [
   "Realistic value range based on recent Hull sales",

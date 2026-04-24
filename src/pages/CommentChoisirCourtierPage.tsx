@@ -7,6 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import heroImg from "@/assets/hero-comment-choisir.webp";
 
 const checklist = [
   { title: "Connaissance locale", text: "Le courtier connaît-il votre quartier, les ventes récentes dans votre rue et les particularités du marché local?" },
@@ -36,7 +37,7 @@ const CommentChoisirCourtierPage = () => (
       title="Comment choisir un courtier immobilier | Guide"
       description="Les critères essentiels pour bien choisir votre courtier immobilier au Québec. Checklist pratique, questions à poser et conseils pour prendre la bonne décision." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

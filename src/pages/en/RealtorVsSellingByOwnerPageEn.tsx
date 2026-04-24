@@ -6,6 +6,7 @@ import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 
 const faq = [
   { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your experience, time availability, and risk tolerance. A broker provides visibility, negotiation, and full management — selling privately saves on commission but involves more work and risk." },
@@ -24,7 +25,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
       title="Realtor vs Selling by Owner in Quebec"
       description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

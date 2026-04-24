@@ -7,6 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
 import { Shield, ExternalLink } from "lucide-react";
+import heroImg from "@/assets/hero-verifier-oaciq.webp";
 
 const faq = [
   { q: "Comment vérifier un courtier immobilier au Québec?", a: "Rendez-vous sur le site de l'OACIQ (oaciq.com) et utilisez l'outil de recherche pour confirmer que le courtier détient un permis valide et n'a pas de mesures disciplinaires." },
@@ -25,7 +26,7 @@ const VerifierCourtierOaciqPage = () => (
       title="Vérifier un courtier immobilier · OACIQ"
       description="Comment vérifier qu'un courtier immobilier est en règle au Québec. Guide pratique pour consulter le registre de l'OACIQ et protéger votre transaction." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

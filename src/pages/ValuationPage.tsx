@@ -15,6 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
+import heroImg from "@/assets/hero-valuation-pro.webp";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
@@ -86,7 +87,7 @@ const ValuationPage = () => {
     <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau" serviceType="Real Estate Appraisal Service" />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}
-      <section className="hero-gradient relative overflow-hidden">
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
         {/* Ambient light layer */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />

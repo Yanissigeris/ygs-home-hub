@@ -6,6 +6,7 @@ import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/hero-combien-courtier.webp";
 
 const faq = [
   { q: "How much does a realtor cost in Quebec?", a: "In Quebec, the broker's compensation is typically a percentage of the sale price, agreed upon before listing. There is no fixed rate — every arrangement is negotiated between the seller and their broker." },
@@ -24,7 +25,7 @@ const HowMuchRealtorCostPageEn = () => (
       title="How Much Does a Realtor Cost in Quebec?"
       description="Understand how realtor compensation works in Quebec. Commission structure, services included, and what it means for your sale in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient relative overflow-hidden">
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
