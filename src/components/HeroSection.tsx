@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroHomepageBg from "@/assets/hero-homepage.webp";
+import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
 interface HeroSectionProps {
   overline?: string;
@@ -117,6 +118,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const portraitRef = React.useRef<HTMLDivElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
     const [showScrollHint, setShowScrollHint] = React.useState(true);
+    const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
+    const perfStartRef = React.useRef<number>(0);
     const lang = useLanguage();
     const stats = lang === "en" ? statsEn : statsFr;
     const combinedRef = React.useCallback(
@@ -187,11 +190,63 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       if (!heroVideo) return;
       const el = videoRef.current;
       if (!el) return;
+
+      // Perf tracking — start timer on mount
+      const t0 = performance.now();
+      perfStartRef.current = t0;
+      const navStart = performance.timing?.navigationStart ?? performance.timeOrigin;
+      setPerfMetrics({ src: heroVideo, mountTime: Math.round(performance.now() - (performance.timeOrigin ? 0 : navStart)) });
+
+      const mark = (key: keyof VideoPerfMetrics) => {
+        const dt = performance.now() - t0;
+        setPerfMetrics((p) => ({ ...p, [key]: dt }));
+      };
+
+      const onLoadStart = () => mark("loadStart");
+      const onProgress = () => setPerfMetrics((p) => p.firstByte === undefined ? { ...p, firstByte: performance.now() - t0 } : p);
+      const onLoadedMetadata = () => mark("loadedMetadata");
+      const onLoadedData = () => mark("loadedData");
+      const onCanPlay = () => mark("canPlay");
+      const onPlaying = () => {
+        if (perfMetrics.firstPlay === undefined) {
+          const dt = performance.now() - t0;
+          setPerfMetrics((p) => ({ ...p, firstPlay: dt }));
+          // Read Resource Timing for size + download duration
+          setTimeout(() => {
+            const entries = performance.getEntriesByType("resource") as PerformanceResourceTiming[];
+            const match = entries.find((e) => e.name.includes(heroVideo));
+            if (match) {
+              setPerfMetrics((p) => ({
+                ...p,
+                fileSizeKB: (match.transferSize || match.encodedBodySize) / 1024,
+                durationMs: match.duration,
+              }));
+            }
+          }, 100);
+        }
+      };
+
+      el.addEventListener("loadstart", onLoadStart);
+      el.addEventListener("progress", onProgress);
+      el.addEventListener("loadedmetadata", onLoadedMetadata);
+      el.addEventListener("loadeddata", onLoadedData);
+      el.addEventListener("canplay", onCanPlay);
+      el.addEventListener("playing", onPlaying);
+
       // Load immediately on mount — no IntersectionObserver delay
       if (el.src !== heroVideo) {
         el.src = heroVideo;
         el.load();
       }
+
+      return () => {
+        el.removeEventListener("loadstart", onLoadStart);
+        el.removeEventListener("progress", onProgress);
+        el.removeEventListener("loadedmetadata", onLoadedMetadata);
+        el.removeEventListener("loadeddata", onLoadedData);
+        el.removeEventListener("canplay", onCanPlay);
+        el.removeEventListener("playing", onPlaying);
+      };
     }, [heroVideo]);
 
     /* VideoObject JSON-LD for pages with hero video */
@@ -609,6 +664,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto" style={{ color: "inherit" }}>yanis@martywaite.com</a>
           </span>
         </motion.address>
+        {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
       </section>
     );
   }
