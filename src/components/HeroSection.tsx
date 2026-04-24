@@ -320,7 +320,20 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {heroBgImage && (
              <>
                <div className="absolute inset-0 overflow-hidden">
-                 <img src={heroBgImage} alt="" role="presentation" className="h-full w-full object-cover" style={{ filter: "brightness(0.85) saturate(0.8)" }} loading="eager" decoding="auto" {...{"fetchpriority": "high"} as any} onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                 <img
+                   src={heroBgImage}
+                   alt=""
+                   role="presentation"
+                   className="h-full w-full object-cover"
+                   style={{ filter: "brightness(0.85) saturate(0.8)" }}
+                   width={1920}
+                   height={720}
+                   sizes="100vw"
+                   loading="eager"
+                   decoding="async"
+                   {...{ fetchpriority: "high" } as any}
+                   onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                 />
                </div>
               <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.55) 0%, rgba(23,48,59,.2) 100%)" }} />
             </>
