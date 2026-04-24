@@ -387,23 +387,33 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — desktop */}
+        {/* Main gradient overlay — desktop: stronger left-side darken to guarantee text contrast */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
           style={{
             background:
-              "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+              "linear-gradient(100deg, rgba(10,22,28,0.92) 0%, rgba(15,30,38,0.82) 35%, rgba(23,48,59,0.45) 60%, rgba(0,0,0,0.15) 100%)",
           }}
         />
 
-        {/* Main gradient overlay — mobile */}
+        {/* Soft inner shadow on left edge — extra safety for H1 readability */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 90% at 0% 50%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 60%)",
+          }}
+        />
+
+        {/* Main gradient overlay — mobile: full vertical darken */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] md:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
+              "linear-gradient(to bottom, rgba(10,22,28,0.92) 0%, rgba(15,30,38,0.78) 45%, rgba(23,48,59,0.55) 75%, rgba(0,0,0,0.3) 100%)",
           }}
         />
 
