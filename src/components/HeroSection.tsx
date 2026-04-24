@@ -358,6 +358,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           backgroundColor: "#17303B",
         }}
       >
+        {/* Background image — when no video is provided */}
+        {heroBgImage && !heroVideo && (
+          <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }} aria-hidden="true">
+            <img
+              src={heroBgImage}
+              alt=""
+              role="presentation"
+              className="h-full w-full object-cover"
+              style={{ filter: "brightness(0.85) saturate(0.85)" }}
+              loading="eager"
+              decoding="async"
+              {...{ fetchpriority: "high" } as any}
+            />
+          </div>
+        )}
+
         {/* Video background — only fill */}
         {heroVideo && (
           <video
