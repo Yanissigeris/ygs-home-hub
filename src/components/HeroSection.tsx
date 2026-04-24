@@ -380,9 +380,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               role="presentation"
               className="h-full w-full object-cover"
               style={{ filter: "brightness(0.85) saturate(0.85)" }}
+              width={1920}
+              height={1080}
+              sizes="100vw"
               loading="eager"
               decoding="async"
               {...{ fetchpriority: "high" } as any}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
           </div>
         )}
