@@ -131,6 +131,23 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       [ref]
     );
 
+    // Preload hero LCP image as soon as component mounts
+    React.useEffect(() => {
+      if (!heroBgImage) return;
+      const existing = document.head.querySelector(
+        `link[rel="preload"][as="image"][href="${heroBgImage}"]`
+      );
+      if (existing) return;
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = heroBgImage;
+      link.setAttribute("fetchpriority", "high");
+      if (/\.webp$/i.test(heroBgImage)) link.type = "image/webp";
+      document.head.appendChild(link);
+      return () => { link.remove(); };
+    }, [heroBgImage]);
+
     // Hide scroll hint after first scroll
     React.useEffect(() => {
       const onScroll = () => {
