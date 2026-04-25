@@ -455,6 +455,13 @@ async function main() {
       datePublished: post.publishDate,
       inLanguage: "en-CA",
     });
+    enHtml = injectBlogBodyFallback(enHtml, {
+      title: post.titleEn,
+      description: post.excerptEn || post.metaDescriptionEn || "",
+      lang: "en-CA",
+      breadcrumbLabel: "Blog",
+      breadcrumbHref: "/en/blog",
+    });
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
     await fs.writeFile(enOut, enHtml, "utf8");
