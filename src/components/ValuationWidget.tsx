@@ -168,8 +168,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         paddingTop: isMobile ? "4rem" : "6rem",
         paddingBottom: isMobile ? "4rem" : "6rem",
       }}
-      itemScope
-      itemType="https://schema.org/RealEstateAgent"
     >
       <div className="section-container">
         <div
@@ -499,9 +497,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               </p>
             </div>
           )}
-
-          <meta itemProp="areaServed" content="Gatineau, Aylmer, Hull, Outaouais" />
-          <meta itemProp="priceRange" content="Free valuation" />
         </div>
       </div>
     </section>
