@@ -1,30 +1,24 @@
-## Update canonical email in ServiceJsonLd.tsx
+## Update noscript contact email in index.html
 
-Surgical one-line change in `src/components/ServiceJsonLd.tsx` (line 30) inside the `provider` object of the Service schema.
+Replace both occurrences of `yanis@ygsimmo.ca` with `yanis@martywaite.com` on the contact paragraph inside the `<noscript>` fallback block at the bottom of `index.html`.
 
 ### Change
 
-Replace:
-```ts
-        email: "yanis@ygsimmo.ca",
+In the line:
+```html
+<p>Téléphone : <a href="tel:+18192103044">819-210-3044</a> · Courriel : <a href="mailto:yanis@ygsimmo.ca">yanis@ygsimmo.ca</a></p>
 ```
 
-With:
-```ts
-        email: "yanis@martywaite.com",
-```
+Both `yanis@ygsimmo.ca` (mailto attribute value and visible link text) become `yanis@martywaite.com`.
 
 ### Constraints
 
-- Only this one file is touched.
-- Only the email value changes (`ygsimmo.ca` → `martywaite.com`).
-- No other field in the schema is modified: `name`, `telephone`, `address`, `serviceType`, `areaServed`, `availableChannel`, `provider.@id`, `provider.name`, `provider.url`, etc. all remain byte-identical.
-- No reformatting, no import changes, no visible content/style changes.
+- Only `index.html` is touched.
+- Only that single line changes; exactly two `ygsimmo.ca` → `martywaite.com` substitutions.
+- No JSON-LD blocks (`ygs-jsonld-static`, `ygs-person-jsonld`, `ygs-website-jsonld`) modified.
+- No other noscript content (services list, sectors list, headings, phone) touched.
+- No reformatting, no other meta/style/content changes.
 
 ### Result
 
-The Service schema's `provider` RealEstateAgent will use the canonical public email `yanis@martywaite.com`, matching `ygs-jsonld-static`, `ygs-person-jsonld`, and `ygs-neighborhood-jsonld`.
-
-### Memory update
-
-Also update `mem://project/contact-info` to confirm the canonical public email is `yanis@martywaite.com` (already established in prior passes; this just ensures it's recorded).
+The noscript crawler fallback now displays the canonical email `yanis@martywaite.com`, fully aligning `index.html` with all JSON-LD schemas updated in prior passes. Grep for `yanis@ygsimmo.ca` in `index.html` returns zero matches.
