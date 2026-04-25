@@ -1,28 +1,30 @@
-## Pass 4 — Update `ygs-neighborhood-jsonld` in `public/jsonld-routes.js`
+## Update canonical email in ServiceJsonLd.tsx
 
-Single-file, two-string edit. The targets are both on line 7, inside the `inj("ygs-neighborhood-jsonld", {...})` call.
+Surgical one-line change in `src/components/ServiceJsonLd.tsx` (line 30) inside the `provider` object of the Service schema.
 
-### Edits
+### Change
 
-1. `email:"yanis@ygsimmo.ca"` → `email:"yanis@martywaite.com"`
-2. `knowsLanguage:["fr","en"]` → `knowsLanguage:["fr-CA","en-CA"]`
+Replace:
+```ts
+        email: "yanis@ygsimmo.ca",
+```
 
-### What is NOT touched
+With:
+```ts
+        email: "yanis@martywaite.com",
+```
 
-- `bc`, `nh`, `faq`, `socials` data tables — untouched
-- `inj` function, breadcrumb logic, FAQ logic, `parentOrganization` — untouched
-- All other fields in the neighborhood block (`@context`, `@type`, `name`, `description`, `url`, `telephone`, `image`, `address`, `geo`, `areaServed`) — untouched
-- No other file (`index.html`, `ServiceJsonLd.tsx`, noscript fallback) — untouched
-- No reformatting/minifying of the rest of the file
+### Constraints
 
-### Validation
+- Only this one file is touched.
+- Only the email value changes (`ygsimmo.ca` → `martywaite.com`).
+- No other field in the schema is modified: `name`, `telephone`, `address`, `serviceType`, `areaServed`, `availableChannel`, `provider.@id`, `provider.name`, `provider.url`, etc. all remain byte-identical.
+- No reformatting, no import changes, no visible content/style changes.
 
-- `git diff` should show exactly two changed substrings on line 7
-- Rest of file byte-identical
-- JSON object remains valid (matched braces/quotes/commas preserved)
-- Aligns neighborhood schema with the canonical email + locale tags now used in the static `RealEstateAgent` and `Person` blocks
+### Result
 
-### Remaining inconsistencies (later passes, per your instruction)
+The Service schema's `provider` RealEstateAgent will use the canonical public email `yanis@martywaite.com`, matching `ygs-jsonld-static`, `ygs-person-jsonld`, and `ygs-neighborhood-jsonld`.
 
-- `<noscript>` block in `index.html` still shows `yanis@ygsimmo.ca`
-- `src/components/ServiceJsonLd.tsx` not yet reviewed for canonical email/locale alignment
+### Memory update
+
+Also update `mem://project/contact-info` to confirm the canonical public email is `yanis@martywaite.com` (already established in prior passes; this just ensures it's recorded).
