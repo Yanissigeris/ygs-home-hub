@@ -207,7 +207,10 @@ async function runWithConcurrency(items, worker, limit) {
 
 export async function puppeteerRender({ extraRoutes = [] } = {}) {
   const allRoutes = await getAllSeoRoutes();
-  const routes = [...Object.keys(allRoutes), ...extraRoutes];
+  // Dedupe — blog routes are already in getAllSeoRoutes() AND may be passed
+  // again via extraRoutes; rendering the same URL twice would corrupt the
+  // already-injected root tree.
+  const routes = Array.from(new Set([...Object.keys(allRoutes), ...extraRoutes]));
   console.log(`\n🤖 Puppeteer prerender: ${routes.length} routes…`);
 
   const server = await startStaticServer(DIST);
