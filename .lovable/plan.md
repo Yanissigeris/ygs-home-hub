@@ -1,52 +1,22 @@
-## Surgical microdata cleanup in `src/components/ValuationWidget.tsx`
+## Remove unused `socials` variable from `public/jsonld-routes.js`
 
-Identified the file by its unique markers (eyebrow, heading, `valuation_leads` insert, analytics events). Applying exactly 4 deletions, no other changes.
+Delete line 9 of `public/jsonld-routes.js` — the dead `var socials=[...]` declaration inside the IIFE — leaving the surrounding wrapper and all other data intact.
 
-### Edit 1 — `<section>` opening tag (lines 165–173)
+### Verified facts
 
-Remove only the two microdata attributes; keep `style` and the rest intact.
+- File is currently 10 lines / 28175 bytes.
+- Line 1 = `(function(){`; line 10 = `})();`. Removing line 9 leaves the IIFE wrapper intact (new line 9 becomes `})();`).
+- `rg -c socials public/jsonld-routes.js` returns `1` — the declaration is the only reference; safe to remove.
+- Canonical social URLs already live in the `sameAs` array of `ygs-jsonld-static` in `index.html`, so no information is lost.
 
-Before:
-```tsx
-<section
-  style={{
-    background: "#fff",
-    paddingTop: isMobile ? "4rem" : "6rem",
-    paddingBottom: isMobile ? "4rem" : "6rem",
-  }}
-  itemScope
-  itemType="https://schema.org/RealEstateAgent"
->
-```
+### Change
 
-After:
-```tsx
-<section
-  style={{
-    background: "#fff",
-    paddingTop: isMobile ? "4rem" : "6rem",
-    paddingBottom: isMobile ? "4rem" : "6rem",
-  }}
->
-```
+`public/jsonld-routes.js`:
+- Delete line 9 (the entire `var socials=[...];` line).
+- Lines 2–8 (breadcrumb, neighborhood, FAQ data, injection logic) remain byte-identical.
 
-### Edit 2 — Inner `<meta>` microdata tags (lines 503–504)
+### Validation
 
-Delete both lines entirely.
-
-Before:
-```tsx
-          <meta itemProp="areaServed" content="Gatineau, Aylmer, Hull, Outaouais" />
-          <meta itemProp="priceRange" content="Free valuation" />
-```
-
-After: (lines removed; surrounding `</div>` structure unchanged)
-
-### Scope guarantees
-
-- Only `src/components/ValuationWidget.tsx` is touched.
-- All visible content (heading "Combien vaut votre propriété?", eyebrow, buttons, form, success state) preserved.
-- All logic (Supabase `valuation_leads` insert, analytics `evaluation_widget_step1` / `evaluation_widget_submitted`, state, handlers) preserved.
-- No other files modified — blog markdown anchors containing "Free valuation" are untouched.
-
-Resulting diff: 2 attributes removed from the `<section>` opening tag + 2 `<meta>` elements deleted. Nothing else.
+- File becomes 9 lines, ~27996 bytes.
+- `rg "socials" public/jsonld-routes.js` returns 0 matches.
+- No other file is touched.
