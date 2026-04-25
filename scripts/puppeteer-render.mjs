@@ -34,7 +34,20 @@ const PORT = 4173;
 const CONCURRENCY = 1; // Sequential — Chromium becomes unstable under parallel newPage() load
 const NAV_TIMEOUT = 60_000;
 
-/** Replace the (empty) <div id="root"></div> of a static file with rendered HTML. */
+/**
+ * Replace the contents of <div id="root">…</div> in a static HTML file with
+ * the freshly rendered React tree.
+ *
+ * IMPORTANT: we must correctly find the MATCHING closing </div> for #root,
+ * not the first </div> we encounter. A naive non-greedy regex
+ * (`<div id="root">[\s\S]*?</div>`) breaks once the root contains nested
+ * <div> elements (which it always does after the first pass), causing
+ * subsequent injections to leave orphan React trees stacked in the file —
+ * producing duplicated <main>/<h1> tags and breaking the heading audit.
+ *
+ * Strategy: locate the opening tag, then walk forward counting <div>/</div>
+ * pairs to find the matching close.
+ */
 async function injectRootHtml(filePath, rootInnerHtml) {
   let html;
   try {
@@ -43,12 +56,32 @@ async function injectRootHtml(filePath, rootInnerHtml) {
     return false;
   }
 
-  // Match <div id="root"> ... </div> (current build always emits empty)
-  const re = /<div id="root">[\s\S]*?<\/div>/i;
-  if (!re.test(html)) return false;
+  const openTag = '<div id="root">';
+  const start = html.indexOf(openTag);
+  if (start < 0) return false;
 
-  const replacement = `<div id="root">${rootInnerHtml}</div>`;
-  html = html.replace(re, replacement);
+  // Walk div tags after the opening to find the matching close.
+  const tagRe = /<div\b[^>]*>|<\/div>/gi;
+  tagRe.lastIndex = start + openTag.length;
+  let depth = 1;
+  let endIdx = -1;
+  let m;
+  while ((m = tagRe.exec(html))) {
+    if (m[0].toLowerCase().startsWith("</")) {
+      depth--;
+      if (depth === 0) {
+        endIdx = m.index + m[0].length; // position right after </div>
+        break;
+      }
+    } else {
+      depth++;
+    }
+  }
+  if (endIdx < 0) return false;
+
+  const before = html.slice(0, start);
+  const after = html.slice(endIdx);
+  html = `${before}<div id="root">${rootInnerHtml}</div>${after}`;
   await fs.writeFile(filePath, html, "utf8");
   return true;
 }
