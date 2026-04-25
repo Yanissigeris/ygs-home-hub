@@ -68,15 +68,15 @@ export const blogPosts: BlogPost[] = [
 
 > « À Gatineau au T1 2026, la combinaison de moins de ventes et de plus d'inscriptions a exercé une légère pression sur les prix des unifamiliales — sans renverser l'avantage des vendeurs, mais en changeant ce qu'il faut faire pour maximiser son prix. » — Analyse YGS basée sur les données APCIQ/CIO, avril 2026.
 
-### Les prix ont-ils vraiment baissé à Gatineau ?
+## Les prix ont-ils vraiment baissé à Gatineau ?
 
 Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ — une première pour Gatineau, et la seule RMR du Québec à afficher ce recul ce trimestre. Ce n'est pas un effondrement. C'est un signal. Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché, ce qui envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
 
-### Est-ce encore un marché de vendeur à Gatineau en 2026 ?
+## Est-ce encore un marché de vendeur à Gatineau en 2026 ?
 
 Oui — mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix. Ce qui a changé : les acheteurs ont maintenant le luxe de comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR — contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
 
-### Quel est le bon moment pour inscrire sa maison à Gatineau ce printemps ?
+## Quel est le bon moment pour inscrire sa maison à Gatineau ce printemps ?
 
 Le printemps reste le meilleur moment, mais la fenêtre est plus courte qu'avant. Avec davantage de propriétés sur le marché, les maisons qui entrent en avril et mai font face à plus de concurrence directe. Inscrire tôt — avant la vague de printemps — avec un prix juste et une mise en marché soignée reste la stratégie qui maximise le prix final. Attendre juin ou juillet, c'est risquer de se retrouver dans un inventaire gonflé, face à des acheteurs qui ont repris leur souffle.
 
@@ -106,15 +106,15 @@ R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentati
 
 > "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices — without overturning the seller advantage, but changing what you need to do to maximize your price." — YGS Analysis based on APCIQ/CIO data, April 2026.
 
-### Have prices really dropped in Gatineau?
+## Have prices really dropped in Gatineau?
 
 Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ — a first for Gatineau, and the only CMA in Quebec to show this decline this quarter. It's not a collapse. It's a signal. With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
 
-### Is it still a seller's market in Gatineau in 2026?
+## Is it still a seller's market in Gatineau in 2026?
 
 Yes — but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties. What has changed: buyers now have the luxury to compare. In Q1 2026, 1,394 properties were available on Centris in the CMA — versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
 
-### When is the right time to list in Gatineau this spring?
+## When is the right time to list in Gatineau this spring?
 
 Spring remains the best time, but the window is shorter than before. With more properties on the market, homes entering in April and May face more direct competition. Listing early — before the spring wave — with a fair price and polished marketing remains the strategy that maximizes final price. Waiting until June or July risks getting caught in bloated inventory, facing buyers who have regained their breath.
 
