@@ -424,6 +424,13 @@ async function main() {
       datePublished: post.publishDate,
       inLanguage: "fr-CA",
     });
+    frHtml = injectBlogBodyFallback(frHtml, {
+      title: post.title,
+      description: post.excerpt || post.metaDescription || "",
+      lang: "fr-CA",
+      breadcrumbLabel: "Blogue",
+      breadcrumbHref: "/blogue",
+    });
     const frOut = path.join(DIST, "blogue", post.slug, "index.html");
     await fs.mkdir(path.dirname(frOut), { recursive: true });
     await fs.writeFile(frOut, frHtml, "utf8");
