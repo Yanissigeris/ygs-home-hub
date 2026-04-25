@@ -1,24 +1,52 @@
-## Update noscript contact email in index.html
+## Surgical microdata cleanup in `src/components/ValuationWidget.tsx`
 
-Replace both occurrences of `yanis@ygsimmo.ca` with `yanis@martywaite.com` on the contact paragraph inside the `<noscript>` fallback block at the bottom of `index.html`.
+Identified the file by its unique markers (eyebrow, heading, `valuation_leads` insert, analytics events). Applying exactly 4 deletions, no other changes.
 
-### Change
+### Edit 1 — `<section>` opening tag (lines 165–173)
 
-In the line:
-```html
-<p>Téléphone : <a href="tel:+18192103044">819-210-3044</a> · Courriel : <a href="mailto:yanis@ygsimmo.ca">yanis@ygsimmo.ca</a></p>
+Remove only the two microdata attributes; keep `style` and the rest intact.
+
+Before:
+```tsx
+<section
+  style={{
+    background: "#fff",
+    paddingTop: isMobile ? "4rem" : "6rem",
+    paddingBottom: isMobile ? "4rem" : "6rem",
+  }}
+  itemScope
+  itemType="https://schema.org/RealEstateAgent"
+>
 ```
 
-Both `yanis@ygsimmo.ca` (mailto attribute value and visible link text) become `yanis@martywaite.com`.
+After:
+```tsx
+<section
+  style={{
+    background: "#fff",
+    paddingTop: isMobile ? "4rem" : "6rem",
+    paddingBottom: isMobile ? "4rem" : "6rem",
+  }}
+>
+```
 
-### Constraints
+### Edit 2 — Inner `<meta>` microdata tags (lines 503–504)
 
-- Only `index.html` is touched.
-- Only that single line changes; exactly two `ygsimmo.ca` → `martywaite.com` substitutions.
-- No JSON-LD blocks (`ygs-jsonld-static`, `ygs-person-jsonld`, `ygs-website-jsonld`) modified.
-- No other noscript content (services list, sectors list, headings, phone) touched.
-- No reformatting, no other meta/style/content changes.
+Delete both lines entirely.
 
-### Result
+Before:
+```tsx
+          <meta itemProp="areaServed" content="Gatineau, Aylmer, Hull, Outaouais" />
+          <meta itemProp="priceRange" content="Free valuation" />
+```
 
-The noscript crawler fallback now displays the canonical email `yanis@martywaite.com`, fully aligning `index.html` with all JSON-LD schemas updated in prior passes. Grep for `yanis@ygsimmo.ca` in `index.html` returns zero matches.
+After: (lines removed; surrounding `</div>` structure unchanged)
+
+### Scope guarantees
+
+- Only `src/components/ValuationWidget.tsx` is touched.
+- All visible content (heading "Combien vaut votre propriété?", eyebrow, buttons, form, success state) preserved.
+- All logic (Supabase `valuation_leads` insert, analytics `evaluation_widget_step1` / `evaluation_widget_submitted`, state, handlers) preserved.
+- No other files modified — blog markdown anchors containing "Free valuation" are untouched.
+
+Resulting diff: 2 attributes removed from the `<section>` opening tag + 2 `<meta>` elements deleted. Nothing else.
