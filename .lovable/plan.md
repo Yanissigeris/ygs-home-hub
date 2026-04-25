@@ -1,53 +1,36 @@
-## Pass 1 — Surgical removal of conflicting JSON-LD blocks (homepage)
+## Pass 2 — Replace `ygs-jsonld-static` JSON in `index.html`
 
-### Findings: where each block lives
+Single-file edit: replace the JSON body of `<script type="application/ld+json" id="ygs-jsonld-static">` in `index.html` (currently lines ~62–119) with the new JSON you provided.
 
-All 4 blocks to remove are injected by a single file: **`public/jsonld-routes.js`** (loaded via `<script src="/jsonld-routes.js" defer>` in `index.html`).
+### What changes (vs. current block)
 
-| Block ID | Location | Action |
-|---|---|---|
-| `ygs-localbusiness-jsonld` | `public/jsonld-routes.js` line 11 (only injected when path is `""` or `"/en"` — homepage only) | **Remove** |
-| `ygs-organization-jsonld` | `public/jsonld-routes.js` line 12 (injected on every route) | **Remove** |
-| `ygs-faq-jsonld-pre` | `public/jsonld-routes.js` line 9 (injected on routes with FAQ data, including homepage `""` and `"/en"`) | **Remove** |
-| `ygs-website-jsonld` (duplicate) | `public/jsonld-routes.js` line 13 (re-injects after the static one in `index.html` line 178) | **Remove duplicate from jsonld-routes.js** — keep the static one in `index.html` |
+- **alternateName** added: `["Yanis Gauthier-Sigeris", "YGS Immobilier"]`
+- **email** changed: `yanis@ygsimmo.ca` → `yanis@martywaite.com`
+- **areaServed** adds `Outaouais` (AdministrativeArea)
+- **knowsLanguage** changed: `["fr","en"]` → `["fr-CA","en-CA"]`
+- **knowsAbout** added (9 topics)
+- **memberOf** gains `url: https://remax-direct.com`
+- **award** added: Hall of Fame, Platinum Club, 100% Club
+- **sameAs** expanded from 3 → 14 URLs (Centris FR/EN, Realtor.ca, AvecUnCourtier FR/EN, RE/MAX Québec FR/EN, RE/MAX Direct FR/EN, Marty Waite FR/EN, LinkedIn, Facebook, Instagram)
+- **aggregateRating**, telephone, address, openingHours, priceRange, description, image, logo, name, @id, @type, url: unchanged
 
-Blocks kept untouched:
-- `ygs-jsonld-static` (RealEstateAgent) — `index.html`
-- `ygs-person-jsonld` (Person) — `index.html`
-- `ygs-website-jsonld` (WebSite) — `index.html` (the kept one)
-- `ygs-faq-teaser-jsonld` (FAQPage) — injected at runtime by `src/components/HomeFAQTeaser.tsx`
-- `ygs-jsonld-video` (VideoObject) — injected at runtime by `src/components/HeroSection.tsx`
+### What is NOT touched
 
-### Cross-reference risk analysis
+- No other `<script>` tag (`ygs-person-jsonld`, `ygs-website-jsonld`)
+- No other file (`public/jsonld-routes.js`, `src/components/ServiceJsonLd.tsx`, etc.)
+- No visible content, no styles, no meta tags
 
-- The `@id` anchors `#localbusiness` and `#organization` are **not referenced anywhere else** in the codebase (verified with grep across `*.html`, `*.js`, `*.ts`, `*.tsx`, `*.mjs`).
-- The kept `ygs-website-jsonld` in `index.html` has `@id: "https://yanisgauthier.com/#website"` and **does not reference** `#organization`, so removing the org block does not orphan any reference.
-- The kept `ygs-jsonld-static` (RealEstateAgent) is self-contained and references only `#realestateagent`.
-- The kept `ygs-person-jsonld` references `#realestateagent` (still present) — safe.
-- **No risk** of orphaned references after removal.
+### ⚠️ Flag for your confirmation (will proceed as instructed unless you say otherwise)
 
-### Scope of changes
+Saved project memory states:
+- Public email = `yanis@ygsimmo.ca`
+- `yanis@martywaite.com` = notifications inbox only
 
-**Important nuance vs the original spec:** The 4 blocks live in a shared file (`public/jsonld-routes.js`) but 3 of the 4 are *already homepage-only* by their own `if (p==="" || p==="/en")` guard or only fire when FAQ data exists. The `ygs-organization-jsonld` block is currently injected on every route, so removing it from the shared file removes it from every route. Per Pass 1's intent (eliminate conflicts with the static `RealEstateAgent` schema), this is the correct outcome — `Organization` is redundant with `RealEstateAgent` site-wide, not just on the homepage. Confirming this is acceptable; if you want to keep it on inner pages, say so and I will instead scope the removal to only homepage paths.
+The new JSON exposes `yanis@martywaite.com` as the public schema email. This contradicts the existing memory rule and will also conflict with:
+- `<noscript>` block in `index.html` (still shows `yanis@ygsimmo.ca`)
+- `src/components/ServiceJsonLd.tsx` (Service schemas still emit `yanis@ygsimmo.ca`)
+- Person schema `ygs-person-jsonld` in `index.html` (still `yanis@ygsimmo.ca`)
 
-### Edits (single file)
+Result: Google will see two different emails for the same entity across schemas — exactly the kind of inconsistency Pass 2 is supposed to eliminate.
 
-**`public/jsonld-routes.js`** — remove these 4 statements only:
-- Line 9: the `inj("ygs-faq-jsonld-pre", …)` call
-- Line 11: the `if(p===""||p==="/en"){inj("ygs-localbusiness-jsonld", …)}` block
-- Line 12: the `inj("ygs-organization-jsonld", …)` call
-- Line 13: the `inj("ygs-website-jsonld", …)` call
-
-Everything else in the file (breadcrumbs, neighborhood schema, FAQ data table, socials array, IIFE wrapper) stays as-is.
-
-`index.html` is **not modified** — its `ygs-website-jsonld` (the kept one), `ygs-jsonld-static`, and `ygs-person-jsonld` remain untouched.
-
-No component, page, CSS, image, or layout file is touched.
-
-### Acceptance check after implementation
-
-- Visual diff = 0 (no DOM/CSS/content change).
-- Homepage head schemas remaining: RealEstateAgent, Person, WebSite, FAQPage (from `HomeFAQTeaser`), VideoObject (from `HeroSection`).
-- No `LocalBusiness` or `Organization` standalone schema in any route.
-- No duplicate `ygs-website-jsonld` script.
-- Kept blocks unchanged → no new validation errors possible on them.
+I will apply the change exactly as you wrote it. If the email swap was intentional, I will also update the memory rule afterward. If it was a typo, reply with the correct email before approving and I'll use that instead.
