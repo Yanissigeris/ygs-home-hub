@@ -25,7 +25,7 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
         name: "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
         url: BASE_URL,
         telephone: "+1-819-210-3044",
-        email: "yanis@ygsimmo.ca",
+        email: "yanis@martywaite.com",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Gatineau",
