@@ -140,6 +140,53 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
 }
 
 /**
+ * Inject a static body fallback for blog article pages so that crawlers (and
+ * the heading-hierarchy audit) always see a valid h1/h2/h3 structure even when
+ * the Puppeteer hydration pass is skipped or fails.
+ *
+ * Placed INSIDE <div id="root"> so puppeteer-render.mjs's regex
+ * (`<div id="root">[\s\S]*?</div>`) replaces this fallback with the fully
+ * rendered React tree when the hydration pass succeeds.
+ *
+ * Hierarchy emitted: <main> → h1 (title) → h2 (Sommaire / In summary) →
+ * h2 (À propos / About) → h3 (Auteur / Author).
+ */
+function injectBlogBodyFallback(html, { title, description, lang, breadcrumbLabel, breadcrumbHref }) {
+  const isFr = lang === "fr-CA";
+  const summaryLabel = isFr ? "Sommaire de l'article" : "Article summary";
+  const aboutLabel = isFr ? "À propos de cet article" : "About this article";
+  const authorLabel = isFr ? "Auteur" : "Author";
+  const authorBio = isFr
+    ? "Yanis Gauthier-Sigeris, courtier immobilier résidentiel à Gatineau (OACIQ)."
+    : "Yanis Gauthier-Sigeris, residential real estate broker in Gatineau (OACIQ).";
+  const backLabel = isFr ? "Retour au blogue" : "Back to blog";
+
+  const fallback = `<main id="main-content">
+      <nav aria-label="${isFr ? "Fil d'Ariane" : "Breadcrumb"}"><a href="${breadcrumbHref}">${escapeHtml(breadcrumbLabel)}</a></nav>
+      <article>
+        <header>
+          <h1>${escapeHtml(title)}</h1>
+        </header>
+        <section aria-labelledby="article-summary">
+          <h2 id="article-summary">${summaryLabel}</h2>
+          <p>${escapeHtml(description)}</p>
+        </section>
+        <section aria-labelledby="article-about">
+          <h2 id="article-about">${aboutLabel}</h2>
+          <h3>${authorLabel}</h3>
+          <p>${authorBio}</p>
+        </section>
+        <p><a href="${breadcrumbHref}">← ${backLabel}</a></p>
+      </article>
+    </main>`;
+
+  return html.replace(
+    /<div id="root">[\s\S]*?<\/div>/i,
+    `<div id="root">${fallback}</div>`,
+  );
+}
+
+/**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
  * The browser uses the LAST matching tag, so appending wins for canonical
