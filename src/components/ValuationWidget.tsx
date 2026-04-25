@@ -497,9 +497,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               </p>
             </div>
           )}
-
-          <meta itemProp="areaServed" content="Gatineau, Aylmer, Hull, Outaouais" />
-          <meta itemProp="priceRange" content="Free valuation" />
         </div>
       </div>
     </section>
