@@ -44,7 +44,7 @@ const PontiacPageEn = () => {
       areaServed: { "@type": "Place", name: "Pontiac, MRC des Collines-de-l'Outaouais, Québec, Canada" },
       description: "Real estate broker specializing in the Municipality of Pontiac, Outaouais. Luskville, Breckenridge, Quyon.",
       telephone: "+18192103044",
-      address: { "@type": "PostalAddress", addressLocality: "Gatineau", addressRegion: "QC", addressCountry: "CA" },
+      address: { "@type": "PostalAddress", streetAddress: "216 chemin d'Aylmer", addressLocality: "Gatineau", addressRegion: "QC", postalCode: "J9H 1A4", addressCountry: "CA" },
     };
     const s = document.createElement("script");
     s.type = "application/ld+json";
