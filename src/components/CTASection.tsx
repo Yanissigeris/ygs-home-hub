@@ -80,7 +80,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         {/* Mobile phone link */}
         {dark && (
           <div className="mt-4 md:hidden">
-            <a href="tel:8192103044" style={{ color: "rgba(255,255,255,.45)", fontSize: ".78rem" }}>
+            <a href="tel:+18192103044" style={{ color: "rgba(255,255,255,.45)", fontSize: ".78rem" }}>
               📞 819-210-3044
             </a>
           </div>

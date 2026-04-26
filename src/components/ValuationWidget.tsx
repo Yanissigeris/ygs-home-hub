@@ -491,7 +491,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               </p>
               <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }}>
                 {c.urgentQ}{" "}
-                <a href="tel:8192103044" style={{ color: DARK, textDecoration: "underline", fontWeight: 600 }}>
+                <a href="tel:+18192103044" style={{ color: DARK, textDecoration: "underline", fontWeight: 600 }}>
                   819-210-3044
                 </a>
               </p>

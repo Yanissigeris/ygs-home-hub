@@ -76,7 +76,7 @@ const StickyMobileCTA = () => {
           {ctaLabel}
         </Link>
         <a
-          href="tel:8192103044"
+          href="tel:+18192103044"
           className="flex-1 inline-flex items-center justify-center transition-colors"
           style={{
             background: "transparent",
