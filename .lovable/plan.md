@@ -1,24 +1,15 @@
-## Compléter les blocs PostalAddress dans index.html
+## Objectif
+Aligner `ServiceJsonLd.tsx` avec les schemas JSON-LD d'`index.html` en ajoutant `streetAddress` et `postalCode` à l'objet `address` du `RealEstateAgent` imbriqué.
 
-Ajouter `streetAddress` et `postalCode` aux deux blocs `PostalAddress` du JSON-LD pour aligner avec l'adresse OACIQ officielle (216 chemin d'Aylmer, J9H 1A4).
+## Changement
 
-### Changements
+**Fichier** : `src/components/ServiceJsonLd.tsx` (lignes 29-34)
 
-**`index.html` lignes 99–102** (bloc `address` du `RealEstateAgent`) :
+Ajouter deux champs à l'objet `address` :
+- `streetAddress: "216 chemin d'Aylmer"` (avant `addressLocality`)
+- `postalCode: "J9H 1A4"` (avant `addressCountry`)
 
-```json
-"@type": "PostalAddress",
-"streetAddress": "216 chemin d'Aylmer",
-"addressLocality": "Gatineau",
-"addressRegion": "QC",
-"postalCode": "J9H 1A4",
-"addressCountry": "CA"
-```
+Aucune autre modification dans le fichier. Le reste (telephone, email, areaServed, availableChannel, provider `@id`, etc.) reste strictement identique.
 
-**`index.html` lignes 169–172** (bloc `address` du `Person`) :
-
-Mêmes ajouts (`streetAddress` + `postalCode`) au même format.
-
-### Pourquoi
-
-Schema.org `PostalAddress` complet améliore l'éligibilité aux résultats locaux Google et la cohérence NAP entre le footer du site, Google Business Profile, Centris et la licence OACIQ.
+## Justification
+Cohérence NAP (Name, Address, Phone) entre tous les schemas du site : `index.html` (RealEstateAgent + Person) et maintenant `ServiceJsonLd`.

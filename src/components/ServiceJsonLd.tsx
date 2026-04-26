@@ -28,8 +28,10 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
         email: "yanis@martywaite.com",
         address: {
           "@type": "PostalAddress",
+          streetAddress: "216 chemin d'Aylmer",
           addressLocality: "Gatineau",
           addressRegion: "QC",
+          postalCode: "J9H 1A4",
           addressCountry: "CA",
         },
       },
