@@ -29,8 +29,8 @@ const services = [
   { icon: MapPin, title: "Relocation", text: "Local guide for buyers from Ottawa and Montréal" },
 ];
 const contactItems = [
-  { icon: Phone, text: "[819-210-3044]" },
-  { icon: Mail, text: "[yanis@martywaite.com]" },
+  { icon: Phone, text: "819-210-3044" },
+  { icon: Mail, text: "yanis@martywaite.com" },
   { icon: MapPin, text: "Gatineau, QC" },
 ];
 

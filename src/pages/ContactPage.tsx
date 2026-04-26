@@ -37,8 +37,8 @@ const services = [
 
 
 const contactItems = [
-  { icon: Phone, text: "[819-210-3044]" },
-  { icon: Mail, text: "[yanis@martywaite.com]" },
+  { icon: Phone, text: "819-210-3044" },
+  { icon: Mail, text: "yanis@martywaite.com" },
   { icon: MapPin, text: "Gatineau, QC" },
 ];
 
