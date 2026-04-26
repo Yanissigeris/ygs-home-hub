@@ -1,19 +1,16 @@
-## Convert phone links to E.164 format
+## Corriger aggregateRating dans le JSON-LD RealEstateAgent
 
-Replace `href="tel:8192103044"` with `href="tel:+18192103044"` in 5 exact locations. Display text and all other attributes remain unchanged.
+Mettre à jour `index.html` ligne 145 pour refléter le vrai compte de reviews Google Business Profile (3 au lieu de 25).
 
-### Changes
+### Changement
 
-| File | Line | Context |
-|---|---|---|
-| `src/components/StickyMobileCTA.tsx` | 79 | Sticky mobile call button |
-| `src/components/WhatsAppButton.tsx` | 50 | Phone option (1st instance) |
-| `src/components/WhatsAppButton.tsx` | 80 | Phone option (2nd instance) |
-| `src/components/ValuationWidget.tsx` | 494 | Success-state contact link |
-| `src/components/CTASection.tsx` | 83 | Footer CTA phone link |
+`index.html` ligne 145, bloc `aggregateRating` du schema `RealEstateAgent` (id `ygs-jsonld-static`) :
 
-### Rationale
+- Avant : `"ratingCount": "25", "reviewCount": "25"`
+- Après : `"ratingCount": "3", "reviewCount": "3"`
 
-E.164 format (`+1` country code prefix) ensures reliable dialing on iOS, Android, and desktop softphones across regions, and is the format expected by tracking/analytics tools that normalize click-to-call events.
+`ratingValue`, `bestRating`, `worstRating` et le reste du schema (name, telephone, etc.) restent inchangés.
 
-Verified all 5 lines exist as specified before drafting this plan.
+### Pourquoi
+
+Aligner les données structurées avec le compte réel de reviews évite un signalement Google "schema markup mismatch" dans Search Console et préserve l'éligibilité aux rich snippets.
