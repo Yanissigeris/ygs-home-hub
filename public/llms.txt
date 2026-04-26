@@ -11,7 +11,7 @@
 - **Courtage :** RE/MAX Direct — Équipe Marty Waite
 - **Langues :** Français (principal) · Anglais
 - **Téléphone :** 819-210-3044
-- **Courriel :** yanis@ygsimmo.ca
+- **Courriel :** yanis@martywaite.com
 - **Site web :** https://yanisgauthier.com
 - **Tagline :** "Votre allié en immobilier"
 - **Signature de conversion :** "Je vous donne les chiffres et les options, vous décidez."
@@ -88,4 +88,4 @@ Contenu mis à jour régulièrement. Re-crawl recommandé toutes les 2 semaines.
 Ce fichier llms.txt suit la spécification proposée par llmstxt.org (Jeremy Howard, 2024).
 Il est conçu pour aider les moteurs de recherche IA, les assistants conversationnels (ChatGPT, Claude, Perplexity, Gemini) et les systèmes RAG à comprendre avec précision l'expertise, le territoire, les services et les pages de Yanis Gauthier — courtier immobilier spécialiste du marché Outaouais/Gatineau au Québec, Canada.
 
-Pour toute question ou partenariat de contenu : yanis@ygsimmo.ca
+Pour toute question ou partenariat de contenu : yanis@martywaite.com
