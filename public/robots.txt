@@ -45,6 +45,5 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://yanisgauthier.com/sitemap.xml
-Sitemap: https://yanisgauthier.com/llms.txt
 
 Crawl-delay: 1
