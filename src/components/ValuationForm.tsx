@@ -177,7 +177,6 @@ const ValuationForm = ({
     control,
     formState: { errors },
   } = useForm<FormValues>({
-    // @ts-expect-error — zod resolver inference vs RHF generic; runtime safe
     resolver: zodResolver(makeSchema(lang)),
     mode: "onBlur",
     reValidateMode: "onChange",
