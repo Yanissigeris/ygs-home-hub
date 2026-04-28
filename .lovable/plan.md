@@ -1,86 +1,98 @@
-## Internal Linking Optimization — Local Valuation Routing
+## Plan
 
-Pure href + RelatedPages edits across 6 source files + 1 test file. No component refactors, no logic changes.
+Three small, isolated changes. No routing, no SEO impact, no edits to existing card components.
 
-### Verified current state (from grep)
+---
 
-**FR neighborhood pages — 3 hrefs each to swap:**
-- `src/pages/HullPage.tsx` lines 87, 164, 194: `/evaluation-gratuite-gatineau` ➜ `/evaluation-maison-hull`
-- `src/pages/AylmerPage.tsx` lines 145, 176, 303: `/evaluation-gratuite-gatineau` ➜ `/evaluation-maison-aylmer` (line 252 already correct, untouched)
+### 1. New data file `src/data/sold-properties.ts`
 
-**EN neighborhood pages — 3 hrefs each to swap:**
-- `src/pages/en/HullPageEn.tsx` lines 87, 164, 195: `/en/home-valuation` ➜ `/en/home-valuation-hull`
-- `src/pages/en/AylmerPageEn.tsx` lines 142, 171, 296: `/en/home-valuation` ➜ `/en/home-valuation-aylmer` (line 246 already correct, untouched)
-
-All labels preserved verbatim. Only `href`/`to` values change.
-
-### Hub RelatedPages reordering
-
-**`src/pages/ValuationPage.tsx` (lines 165–172)** — 6 entries, Hull/Aylmer valuations promoted to positions 1–2:
-
-```tsx
-pages={[
-  { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull" },
-  { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer" },
-  { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-  { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea" },
-  { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley" },
-  { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-]}
-```
-
-**`src/pages/en/ValuationPageEn.tsx` (lines 74–80)** — 6 entries (mirroring FR symmetry, with new Realtor Cantley entry at position 5):
-
-```tsx
-pages={[
-  { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull" },
-  { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell" },
-  { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea" },
-  { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley" },
-  { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
-]}
-```
-
-### Tests
-
-Append 3 tests to `e2e/navigation-flows.spec.ts`:
+Export a `SoldProperty` type and a `soldProperties` array with 6 placeholder entries (clearly marked as placeholders so the user can swap them with real Centris data).
 
 ```ts
-test("Hull page primary CTA goes to local Hull valuation", async ({ page }) => {
-  await page.goto("/hull", { waitUntil: "domcontentloaded" });
-  const cta = page.locator('a[href="/evaluation-maison-hull"]').first();
-  await expect(cta).toBeVisible({ timeout: 15000 });
-});
-
-test("Aylmer page primary CTA goes to local Aylmer valuation", async ({ page }) => {
-  await page.goto("/aylmer", { waitUntil: "domcontentloaded" });
-  const cta = page.locator('a[href="/evaluation-maison-aylmer"]').first();
-  await expect(cta).toBeVisible({ timeout: 15000 });
-});
-
-test("FR valuation hub surfaces Hull and Aylmer local valuations", async ({ page }) => {
-  await page.goto("/evaluation-gratuite-gatineau", { waitUntil: "domcontentloaded" });
-  await expect(page.locator('a[href="/evaluation-maison-hull"]').first()).toBeVisible({ timeout: 15000 });
-  await expect(page.locator('a[href="/evaluation-maison-aylmer"]').first()).toBeVisible({ timeout: 15000 });
-});
+export interface SoldProperty {
+  id: string;
+  image: string;        // imported asset or /placeholder.svg
+  city: string;
+  address: string;
+  soldPrice: string;    // pre-formatted "725 000 $" / "$725,000"
+  daysOnMarket?: number;
+  percentOfAsking?: number;
+  type: string;
+}
 ```
 
-Will not run E2E in this sprint — user republishes first.
+For images, reuse existing `@/assets/property-*.webp` files (they're already in the bundle and 4:3) so the placeholders look real until replaced. No new asset files.
 
-### Verification
+A parallel EN-formatted version isn't needed — prices are placeholder strings; the FR file is the single source of truth and the component formats labels per locale.
 
-- `rg "/evaluation-gratuite-gatineau" src/pages/HullPage.tsx src/pages/AylmerPage.tsx` → expect 0 hits
-- `rg "\"/en/home-valuation\"" src/pages/en/HullPageEn.tsx src/pages/en/AylmerPageEn.tsx` → expect 0 hits
-- Build runs automatically.
+---
 
-### Files touched (exactly 7)
-1. `src/pages/HullPage.tsx` — 3 href swaps
-2. `src/pages/AylmerPage.tsx` — 3 href swaps
-3. `src/pages/en/HullPageEn.tsx` — 3 href swaps
-4. `src/pages/en/AylmerPageEn.tsx` — 3 href swaps
-5. `src/pages/ValuationPage.tsx` — RelatedPages array (6 entries, 2 swapped in)
-6. `src/pages/en/ValuationPageEn.tsx` — RelatedPages array (6 entries, expanded from 5)
-7. `e2e/navigation-flows.spec.ts` — append 3 tests
+### 2. New component `src/components/RecentSolds.tsx`
 
-Reminder: republish before running the new E2E tests against the live host.
+Mirror `FeaturedProperties.tsx` structure exactly: `section-rhythm section-gold-divider`, `var(--cream)` background, header row with overline + H2 + desktop "see all"-style spot (omit the link since solds aren't listable — replace with subtitle line below H2 instead), 3-col desktop grid, mobile horizontal snap scroll.
+
+**Bilingual copy via `t` map (same pattern as `FeaturedProperties`):**
+
+| key | FR | EN |
+|---|---|---|
+| overline | `VENTES RÉCENTES` | `RECENT SALES` |
+| title | `Le marché en mouvement` | `The market in motion` |
+| subtitle | `300+ transactions complétées en Outaouais — voici quelques ventes des derniers mois.` | `300+ completed transactions in Outaouais — here are a few recent sales.` |
+| statusSold | `VENDU` | `SOLD` |
+| daysLabel | `Vendu en {n} jours` | `Sold in {n} days` |
+| askingLabel | `{p}% du prix demandé` | `{p}% of asking price` |
+| viewLabel | `Voir la fiche` | `View listing` |
+
+Card differences vs `FeaturedProperties`:
+- Status badge text `VENDU`/`SOLD`, background `var(--ink)` (same as existing — already ink), kept identical styling.
+- Below the price (Cormorant), add a 13px DM Sans line in `var(--gold)` with either `daysOnMarket` or `percentOfAsking` (prefer days if both present; show whichever exists).
+- Bottom "Voir la fiche →" rendered as a plain `<span>` (no `href`, no `<a>`/`<Link>`) — same gold color and arrow, but non-interactive, no hover translate.
+- Outer wrapper is a `<article>` instead of `<a>` — no link, no hover lift (or keep the lift but without click). Keep the gold top border + subtle hover for visual parity.
+
+Header: include the kicker + H2 + a subtitle paragraph beneath the H2 (not in `FeaturedProperties` but the user asked for it). No "view all" link on desktop, no mobile bottom link.
+
+Props: `lang?: "fr" | "en"` — defaults to `"fr"`.
+
+Semantics: `<section>` → `<h2>` → cards. Each card is an `<article>`. No new JSON-LD.
+
+---
+
+### 3. Insert into `src/pages/Index.tsx`
+
+Between line ~67 `<FeaturedProperties />` and the following `cream-to-dark` fade bridge, add:
+
+```tsx
+<RecentSolds />
+```
+
+Add an import. No other changes to `Index.tsx`. The EN homepage (`IndexEn.tsx`) is **not** modified per the user's request scope (only `src/pages/Index.tsx` mentioned). If the user wants EN parity later, it's a one-line add.
+
+---
+
+### 4. Soften vertical-stacked H2s
+
+**Root cause** (verified by reading the files): neither component uses word-per-line CSS. The narrow titles come from cramped grid columns:
+
+- `TestimonialGrid.tsx` line 103: `md:grid-cols-[220px_1fr]` — the 220px sidebar is too narrow for a 4-word H2 at the current heading size, forcing each word to its own line.
+- `HomeFAQTeaser.tsx` line 49: `lg:grid-cols-[1fr_2fr]` — left column is ~33% of container; "Questions fréquentes" wraps to 2-word stacks on some widths.
+
+**Fix:**
+
+- `TestimonialGrid.tsx` line 103: change `md:grid-cols-[220px_1fr]` → `md:grid-cols-[minmax(260px,300px)_1fr]` so the sidebar is wide enough for the H2 to wrap on 1–2 natural lines without changing the visual sidebar feel.
+- `HomeFAQTeaser.tsx` line 49: change `lg:grid-cols-[1fr_2fr]` → `lg:grid-cols-[minmax(280px,1fr)_2fr]` (effectively the same proportion but guarantees enough width for the H2 to breathe).
+
+No text changes. No other styles touched. All other classes preserved.
+
+---
+
+### Files changed
+
+- ➕ `src/data/sold-properties.ts`
+- ➕ `src/components/RecentSolds.tsx`
+- ✏️ `src/pages/Index.tsx` (1 import + 1 element)
+- ✏️ `src/components/TestimonialGrid.tsx` (1 class change on line 103)
+- ✏️ `src/components/HomeFAQTeaser.tsx` (1 class change on line 49)
+
+### Out of scope (not touched)
+
+- `FeaturedProperties.tsx`, routing, SEO components, EN homepage `IndexEn.tsx`, all other pages.
