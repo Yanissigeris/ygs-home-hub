@@ -52,7 +52,7 @@ const cfgFr = {
   areasHeading: "Secteurs desservis",
   servicesHeading: "Services offerts",
   allNeighborhoods: "Voir tous les quartiers",
-  allNeighborhoodsHref: "/quartiers-gatineau",
+  allNeighborhoodsHref: "/quartiers-a-considerer-a-gatineau",
 };
 
 const cfgEn = {
