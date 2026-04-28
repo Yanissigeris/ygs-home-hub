@@ -81,7 +81,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             }}
           >
           <p
-            className="about-body-text"
               style={{
                 fontFamily: "var(--serif)",
                 fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
@@ -97,6 +96,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
           {/* Body text */}
           <p
+            className="about-body-text"
             style={{
               fontFamily: "var(--sans)",
               fontSize: "14px",
