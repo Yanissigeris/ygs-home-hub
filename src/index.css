@@ -652,3 +652,17 @@ h1.hero-h1-reduced {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hero portrait — fallback when mask-image is not supported.
+   Modern browsers use the radial mask defined inline. Older engines without
+   mask-image / -webkit-mask-image get a softer drop-shadow halo so the hard
+   edge feels less abrupt. Structure unchanged. */
+@supports not ((mask-image: radial-gradient(black, transparent)) or (-webkit-mask-image: radial-gradient(black, transparent))) {
+  .hero-portrait-masked {
+    -webkit-mask-image: none !important;
+            mask-image: none !important;
+    filter:
+      drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35))
+      drop-shadow(0 0 24px rgba(0, 0, 0, 0.25)) !important;
+  }
+}
