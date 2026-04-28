@@ -493,6 +493,15 @@ const escapeHtml = (s: string) =>
 
 const SITE_ORIGIN = 'https://yanisgauthier.com'
 
+// Crawlers SEO + AI search agents that need fully-rendered HTML.
+// When detected, we hand off to the Netlify Prerender extension (next layer)
+// instead of returning the SPA shell with only meta-swapped tags.
+const CRAWLER_UA = /Googlebot|Googlebot-Image|Googlebot-Video|AdsBot-Google|Bingbot|DuckDuckBot|Slurp|YandexBot|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Discordbot|Slackbot|Applebot|AhrefsBot|SemrushBot|MJ12bot|GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Google-Extended|Applebot-Extended|Meta-ExternalAgent|Amazonbot|Bytespider/i;
+
+// The Prerender extension's own headless browser hits our SPA from inside.
+// We must NOT detect it as a crawler — otherwise we'd loop or starve it.
+const PRERENDER_SELF_UA = /Prerender|HeadlessChrome/i;
+
 /** Replace a tag matched by `regex` with `replacement`, or inject it before </head> if missing. */
 const upsertTag = (html: string, regex: RegExp, replacement: string): string => {
   if (regex.test(html)) return html.replace(regex, replacement)
@@ -503,6 +512,14 @@ export default async (request: Request, context: Context) => {
   const url = new URL(request.url)
   const path = url.pathname.replace(/\/$/, '') || '/'
   if (path.includes('.')) return context.next()
+
+  // Crawler short-circuit: hand off to the Prerender extension (runs after us).
+  // Only humans + the Prerender extension's internal browser flow through to
+  // the meta-swap path below.
+  const ua = request.headers.get('user-agent') || '';
+  if (CRAWLER_UA.test(ua) && !PRERENDER_SELF_UA.test(ua)) {
+    return context.next();
+  }
 
   const page = META[path]
   if (!page) return context.next()
