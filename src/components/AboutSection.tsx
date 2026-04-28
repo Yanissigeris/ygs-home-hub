@@ -80,7 +80,8 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               margin: "0 0 2rem 0",
             }}
           >
-            <p
+          <p
+            className="about-body-text"
               style={{
                 fontFamily: "var(--serif)",
                 fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
