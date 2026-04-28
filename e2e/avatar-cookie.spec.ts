@@ -51,18 +51,20 @@ for (const c of CASES) {
     await page.goto(BASE + "/");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
-    // Pathway section is below the fold — scroll until card is mounted/visible
-    const card = page.locator(`a[href="${c.cardHref}"]`).first();
-    for (let i = 0; i < 8; i++) {
+    // Target the PathwaySection card specifically (it contains an <img>),
+    // not the mobile-menu nav link with the same href.
+    const card = page
+      .locator(`a[href="${c.cardHref}"]`)
+      .filter({ has: page.locator("img") })
+      .first();
+    for (let i = 0; i < 12; i++) {
       if (await card.count()) break;
       await page.evaluate(() => window.scrollBy(0, window.innerHeight));
-      await page.waitForTimeout(250);
+      await page.waitForTimeout(300);
     }
-    await card.waitFor({ state: "attached", timeout: 15000 });
-    await card.scrollIntoViewIfNeeded().catch(() => {});
-    // force: true bypasses visibility/stability checks but still fires a real
-    // pointer event so React's onClick (which sets the cookie) runs.
-    await card.click({ force: true });
+    await card.waitFor({ state: "visible", timeout: 15000 });
+    await card.scrollIntoViewIfNeeded();
+    await card.click();
 
     // Wait for navigation triggered by the card
     await page.waitForURL(`**${c.cardHref}`, { timeout: 15000 });
