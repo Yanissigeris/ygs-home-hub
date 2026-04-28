@@ -1,35 +1,76 @@
-## Modification de `public/jsonld-routes.js` (ligne 7)
+## Cookie-based avatar router
 
-Modification chirurgicale du bloc `address` dans le schema neighborhood dynamique pour aligner la NAP avec les autres schemas du site.
+Personalize the mobile sticky CTA based on which pathway card the visitor clicked on the homepage (investor / seller / buyer).
 
-### Changement
+### 1. New file: `src/lib/avatar.ts`
 
-**Trouver** (occurrence unique dans le fichier) :
+SSR-safe cookie helpers:
+
+```ts
+export type AvatarIntent = "investir" | "vendre" | "acheter";
+
+const COOKIE = "ygs_avatar_intent";
+const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
+
+export function setAvatarIntent(intent: AvatarIntent): void {
+  if (typeof document === "undefined") return;
+  document.cookie = `${COOKIE}=${intent}; Max-Age=${MAX_AGE}; Path=/; SameSite=Lax`;
+}
+
+export function getAvatarIntent(): AvatarIntent | null {
+  if (typeof document === "undefined") return null;
+  const m = document.cookie.match(/(?:^|;\s*)ygs_avatar_intent=(investir|vendre|acheter)(?:;|$)/);
+  return m ? (m[1] as AvatarIntent) : null;
+}
+
+export function clearAvatarIntent(): void {
+  if (typeof document === "undefined") return;
+  document.cookie = `${COOKIE}=; Max-Age=0; Path=/; SameSite=Lax`;
+}
 ```
-address:{"@type":"PostalAddress",addressLocality:n[0],addressRegion:"QC",addressCountry:"CA"}
-```
 
-**Remplacer par** :
-```
-address:{"@type":"PostalAddress",streetAddress:"216 chemin d'Aylmer",addressLocality:"Gatineau",addressRegion:"QC",postalCode:"J9H 1A4",addressCountry:"CA"}
-```
+### 2. `src/components/PathwaySection.tsx`
 
-### Détails techniques
+- Define a `Pathway` interface that includes `intent: AvatarIntent`.
+- Type both `pathwaysFr: Pathway[]` and `pathwaysEn: Pathway[]`.
+- Add `intent` to each card: 01 → `"investir"`, 02 → `"vendre"`, 03 → `"acheter"` (in both arrays).
+- On the existing `<Link>`, add:
+  ```tsx
+  onClick={() => {
+    setAvatarIntent(p.intent);
+    trackEvent("avatar_router_select", { avatar: p.intent });
+  }}
+  ```
+- No `preventDefault`, no other changes (visuals, hover handlers, hrefs, copy untouched).
+- Imports added: `setAvatarIntent`, `AvatarIntent` from `@/lib/avatar`; `trackEvent` from `@/lib/analytics`.
 
-3 modifications en une ligne :
-1. Ajout de `streetAddress:"216 chemin d'Aylmer"` après `"@type":"PostalAddress"`
-2. `addressLocality:n[0]` (variable dynamique du nom de quartier) → `addressLocality:"Gatineau"` (chaîne fixe)
-3. Ajout de `postalCode:"J9H 1A4"` après `addressRegion:"QC"`
+### 3. `src/components/StickyMobileCTA.tsx`
 
-### Justification
+- Add `intent` state + effect to read cookie on mount (browser-only):
+  ```tsx
+  const [intent, setIntent] = useState<AvatarIntent | null>(null);
+  useEffect(() => { setIntent(getAvatarIntent()); }, []);
+  ```
+- Replace hardcoded `ctaLabel` / `ctaHref` with a per-language config map:
 
-- Les quartiers (Aylmer, Hull, Plateau, etc.) sont des secteurs de Gatineau, pas des municipalités séparées. L'adresse postale officielle reste "Gatineau".
-- Garder `addressLocality:n[0]` créait un conflit NAP avec `index.html`, `ServiceJsonLd.tsx`, `PontiacPage.tsx` et `PontiacPageEn.tsx` qui utilisent tous "Gatineau" + le streetAddress + postalCode complets.
+  | intent | FR label | FR href | EN label | EN href |
+  |--------|----------|---------|----------|---------|
+  | investir | Analyser mon projet → | /investir-plex-gatineau | Analyze my project → | /en/plex |
+  | vendre | Obtenir ma valeur → | /evaluation-gratuite-gatineau | Get my value → | /en/home-valuation |
+  | acheter | Voir les propriétés → | /proprietes | View properties → | /en/properties |
+  | (none / default) | Évaluation Gratuite → | /evaluation-gratuite-gatineau | Free Valuation → | /en/home-valuation |
 
-### Hors scope
+- `callLabel`, `trackCTAClick`, scroll trigger, `HIDDEN_PATHS`, footer detection, all styling, and the `tel:` link remain unchanged.
 
-Aucun autre bloc du fichier n'est touché : les FAQ schemas (`/chelsea`, `/cantley`, `/val-des-monts`, `/masson-angers`, `/pontiac`, `/cote-dazur-gatineau`, `/limbour` et équivalents EN), les BreadcrumbList et tout autre contenu restent strictement intacts.
+### Constraints respected
 
-### Fichier modifié
+- No new dependencies.
+- No route, schema, SEO, or heading changes.
+- Cookie is `SameSite=Lax`, `Path=/`, 30-day `Max-Age` — first-party, no consent prompt needed for a strictly functional preference cookie.
+- All cookie access guarded by `typeof document !== "undefined"` to keep prerender / SSR safe.
 
-- `public/jsonld-routes.js`
+### Files touched
+
+- `src/lib/avatar.ts` (new)
+- `src/components/PathwaySection.tsx` (typed cards + onClick)
+- `src/components/StickyMobileCTA.tsx` (intent-driven CTA)
