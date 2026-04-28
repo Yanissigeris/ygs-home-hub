@@ -37,9 +37,11 @@ const StickyMobileCTA = () => {
   const [intent, setIntent] = useState<AvatarIntent | null>(null);
   const ticking = useRef(false);
 
+  // Re-read on every route change so language switches (FR↔EN) and
+  // post-click navigations always reflect the latest cookie value.
   useEffect(() => {
     setIntent(getAvatarIntent());
-  }, []);
+  }, [pathname]);
 
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
