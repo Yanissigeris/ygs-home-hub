@@ -626,7 +626,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
               width={320}
               height={480}
-              className="md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+              className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
               style={{
                 bottom: 0,
                 left: "50%",
