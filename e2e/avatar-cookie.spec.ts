@@ -44,11 +44,17 @@ for (const c of CASES) {
     await page.setViewportSize(MOBILE);
     await page.context().clearCookies();
 
-    await page.goto("/");
+    await page.goto("/", { waitUntil: "networkidle" });
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
-    // Click the pathway card (anchor with the matching href)
+    // Pathway section is below the fold — scroll until card is mounted/visible
     const card = page.locator(`a[href="${c.cardHref}"]`).first();
+    for (let i = 0; i < 8; i++) {
+      if (await card.count()) break;
+      await page.evaluate(() => window.scrollBy(0, window.innerHeight));
+      await page.waitForTimeout(250);
+    }
+    await card.waitFor({ state: "attached", timeout: 15000 });
     await card.scrollIntoViewIfNeeded();
     await card.click();
 
