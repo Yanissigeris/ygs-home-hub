@@ -119,7 +119,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               </p>
             </div>
             {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
-            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
+            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
