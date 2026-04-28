@@ -1,8 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: "./e2e",
-  testMatch: /valuation-form\.spec\.ts$/,
+  testDir: "./e2e-live",
   fullyParallel: false,
   retries: 0,
   workers: 1,
@@ -10,7 +9,6 @@ export default defineConfig({
   timeout: 90000,
   expect: { timeout: 15000 },
   use: {
-    baseURL: "https://yanisgauthier.com",
     viewport: { width: 1280, height: 720 },
     trace: "off",
     screenshot: "only-on-failure",
