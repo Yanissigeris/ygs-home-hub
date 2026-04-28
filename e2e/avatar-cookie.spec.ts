@@ -44,7 +44,7 @@ for (const c of CASES) {
     await page.setViewportSize(MOBILE);
     await page.context().clearCookies();
 
-    await page.goto("/", { waitUntil: "networkidle" });
+    await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
     // Pathway section is below the fold — scroll until card is mounted/visible
