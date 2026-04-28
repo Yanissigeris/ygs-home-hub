@@ -32,6 +32,7 @@ const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerP
 
   return (
     <>
+      <span data-sticky-guide-banner="true" hidden aria-hidden="true" />
       <AnimatePresence>
         {visible && !dismissed && (
           <motion.div initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }} transition={{ type: "spring", stiffness: 300, damping: 30 }} className="fixed bottom-0 inset-x-0 z-50 pointer-events-none">

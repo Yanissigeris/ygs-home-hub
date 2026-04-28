@@ -1,76 +1,74 @@
-## Cookie-based avatar router
+# Hide StickyMobileCTA when StickyGuideBanner is present
 
-Personalize the mobile sticky CTA based on which pathway card the visitor clicked on the homepage (investor / seller / buyer).
+## Goal
+Prevent the two competing sticky bars from overlapping. When a page mounts `StickyGuideBanner`, the `StickyMobileCTA` should not render at all.
 
-### 1. New file: `src/lib/avatar.ts`
+## Selector strategy
+`StickyGuideBanner`'s visible banner is conditionally rendered (only after `scrollY > 600` and not dismissed), so querying its motion.div is unreliable — at initial mount on a route the banner is not yet in the DOM, so `StickyMobileCTA` would wrongly think it's safe to show.
 
-SSR-safe cookie helpers:
+**Approach:** add a tiny always-mounted, invisible marker element to `StickyGuideBanner`'s top-level fragment:
 
-```ts
-export type AvatarIntent = "investir" | "vendre" | "acheter";
-
-const COOKIE = "ygs_avatar_intent";
-const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
-
-export function setAvatarIntent(intent: AvatarIntent): void {
-  if (typeof document === "undefined") return;
-  document.cookie = `${COOKIE}=${intent}; Max-Age=${MAX_AGE}; Path=/; SameSite=Lax`;
-}
-
-export function getAvatarIntent(): AvatarIntent | null {
-  if (typeof document === "undefined") return null;
-  const m = document.cookie.match(/(?:^|;\s*)ygs_avatar_intent=(investir|vendre|acheter)(?:;|$)/);
-  return m ? (m[1] as AvatarIntent) : null;
-}
-
-export function clearAvatarIntent(): void {
-  if (typeof document === "undefined") return;
-  document.cookie = `${COOKIE}=; Max-Age=0; Path=/; SameSite=Lax`;
-}
+```tsx
+<span data-sticky-guide-banner="true" hidden aria-hidden="true" />
 ```
 
-### 2. `src/components/PathwaySection.tsx`
+This is rendered unconditionally whenever the component is mounted, regardless of scroll/dismissed state. `StickyMobileCTA` queries `document.querySelector('[data-sticky-guide-banner]')` to detect presence.
 
-- Define a `Pathway` interface that includes `intent: AvatarIntent`.
-- Type both `pathwaysFr: Pathway[]` and `pathwaysEn: Pathway[]`.
-- Add `intent` to each card: 01 → `"investir"`, 02 → `"vendre"`, 03 → `"acheter"` (in both arrays).
-- On the existing `<Link>`, add:
-  ```tsx
-  onClick={() => {
-    setAvatarIntent(p.intent);
-    trackEvent("avatar_router_select", { avatar: p.intent });
-  }}
-  ```
-- No `preventDefault`, no other changes (visuals, hover handlers, hrefs, copy untouched).
-- Imports added: `setAvatarIntent`, `AvatarIntent` from `@/lib/avatar`; `trackEvent` from `@/lib/analytics`.
+Why this over alternatives:
+- A class on the motion.div doesn't exist until scroll threshold is reached.
+- A React context would require wiring a provider in `App.tsx` and touching every page using the banner.
+- A custom event would require ordering guarantees between mounts.
+- A hidden marker is one line, has zero visual impact, and is 100% reliable.
 
-### 3. `src/components/StickyMobileCTA.tsx`
+## Changes
 
-- Add `intent` state + effect to read cookie on mount (browser-only):
-  ```tsx
-  const [intent, setIntent] = useState<AvatarIntent | null>(null);
-  useEffect(() => { setIntent(getAvatarIntent()); }, []);
-  ```
-- Replace hardcoded `ctaLabel` / `ctaHref` with a per-language config map:
+### 1. `src/components/StickyGuideBanner.tsx`
+Wrap the existing return in a fragment and add the marker as the first child:
 
-  | intent | FR label | FR href | EN label | EN href |
-  |--------|----------|---------|----------|---------|
-  | investir | Analyser mon projet → | /investir-plex-gatineau | Analyze my project → | /en/plex |
-  | vendre | Obtenir ma valeur → | /evaluation-gratuite-gatineau | Get my value → | /en/home-valuation |
-  | acheter | Voir les propriétés → | /proprietes | View properties → | /en/properties |
-  | (none / default) | Évaluation Gratuite → | /evaluation-gratuite-gatineau | Free Valuation → | /en/home-valuation |
+```tsx
+return (
+  <>
+    <span data-sticky-guide-banner="true" hidden aria-hidden="true" />
+    <AnimatePresence> ... </AnimatePresence>
+    <GuideModal ... />
+  </>
+);
+```
 
-- `callLabel`, `trackCTAClick`, scroll trigger, `HIDDEN_PATHS`, footer detection, all styling, and the `tel:` link remain unchanged.
+### 2. `src/components/StickyMobileCTA.tsx`
+Add detection state + effect, and short-circuit render:
 
-### Constraints respected
+```tsx
+const [hasGuideBanner, setHasGuideBanner] = useState(false);
 
-- No new dependencies.
-- No route, schema, SEO, or heading changes.
-- Cookie is `SameSite=Lax`, `Path=/`, 30-day `Max-Age` — first-party, no consent prompt needed for a strictly functional preference cookie.
-- All cookie access guarded by `typeof document !== "undefined"` to keep prerender / SSR safe.
+useEffect(() => {
+  const t = setTimeout(() => {
+    setHasGuideBanner(
+      typeof document !== "undefined" &&
+      !!document.querySelector('[data-sticky-guide-banner]')
+    );
+  }, 150);
+  return () => clearTimeout(t);
+}, [pathname]);
 
-### Files touched
+// ...
+if (hidden) return null;
+if (hasGuideBanner) return null;
+```
 
-- `src/lib/avatar.ts` (new)
-- `src/components/PathwaySection.tsx` (typed cards + onClick)
-- `src/components/StickyMobileCTA.tsx` (intent-driven CTA)
+All other behavior (cookie re-read, scroll threshold, footer-aware hiding, HIDDEN_PATHS) is preserved unchanged.
+
+### 3. Verification
+- Run `vite build` + prerender + audits and confirm 198/198 OK.
+- Extend `e2e/avatar-cookie.spec.ts` (or add `e2e/sticky-coexistence.spec.ts`) with three cases:
+  a) Visit `/investir-plex-gatineau` (has StickyGuideBanner), scroll >55vh, assert `div.fixed a[href]:has-text("Analyser mon projet")` is **not** visible and the `[data-sticky-guide-banner]` marker exists.
+  b) Visit `/faq` (no StickyGuideBanner), scroll >55vh, assert StickyMobileCTA **is** visible.
+  c) Re-run the existing avatar-cookie test cases unchanged to confirm cookie personalization still works on pages without the guide banner.
+
+## Files touched
+- `src/components/StickyGuideBanner.tsx` (1-line marker added)
+- `src/components/StickyMobileCTA.tsx` (state + effect + early return)
+- `e2e/avatar-cookie.spec.ts` extended OR new `e2e/sticky-coexistence.spec.ts`
+
+## Out of scope
+- `src/lib/avatar.ts`, `PathwaySection.tsx`, and all page files remain untouched.
