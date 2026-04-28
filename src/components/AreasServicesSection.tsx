@@ -70,9 +70,15 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
   <Link
     to={href}
     className="group flex items-center justify-between gap-3 transition-colors"
-    style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", borderBottom: "1px solid rgba(255,255,255,0.04)", minHeight: 52 }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,0.05)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.background = ""; }}
+    style={{ padding: "clamp(0.65rem, 1.2vw, 0.85rem) clamp(1.25rem, 2vw, 1.5rem)", borderBottom: "1px solid rgba(255,255,255,0.08)", minHeight: 44, transition: "background 200ms ease, box-shadow 200ms ease" }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.background = "rgba(168,138,90,0.06)";
+      e.currentTarget.style.boxShadow = "inset 3px 0 0 var(--gold)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.background = "";
+      e.currentTarget.style.boxShadow = "";
+    }}
   >
     <div className="min-w-0">
       <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
