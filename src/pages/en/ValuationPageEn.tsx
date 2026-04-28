@@ -72,10 +72,11 @@ const ValuationPageEn = () => {
         overline="Also worth reading"
         title="Related resources"
         pages={[
+          { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull" },
+          { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
           { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell" },
-          { title: "Realtor Aylmer", text: "Market and neighborhoods.", href: "/en/aylmer" },
-          { title: "Realtor Hull", text: "Plex, condos and homes.", href: "/en/hull" },
           { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea" },
+          { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley" },
           { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
         ]}
         background="alt"

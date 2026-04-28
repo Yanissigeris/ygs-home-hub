@@ -139,7 +139,7 @@ const AylmerPageEn = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Real estate broker in Aylmer — your local specialist"
       subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes — and a competitive market that rewards prepared buyers and well-positioned sellers."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
     />
@@ -168,7 +168,7 @@ const AylmerPageEn = () => (
               Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/en/home-valuation">Get the real numbers →</Link>
+              <Link to="/en/home-valuation-aylmer">Get the real numbers →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Free · No obligation · Response within 24-48h
@@ -293,7 +293,7 @@ const AylmerPageEn = () => (
       title="Ready to take the next step?"
       text="Whether you're selling your home in Aylmer or looking to buy in this area — I'm your local broker."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
+        { label: "Free valuation →", href: "/en/home-valuation-aylmer" },
         { label: "Contact me →", href: "/en/contact", variant: "outline" },
       ]}
       trustLine={'"I give you the numbers and the options — you decide."'}
