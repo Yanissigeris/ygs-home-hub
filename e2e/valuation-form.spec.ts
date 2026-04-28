@@ -111,5 +111,13 @@ test.describe("ValuationForm — shared component across FR pages", () => {
     }).first();
     await expect(err).toBeVisible({ timeout: 5000 });
   });
+
+  test("Hub (glass variant) shows trust signal block with broker name + Hall of Fame", async ({ page }) => {
+    await page.goto(`${BASE}/evaluation-gratuite-gatineau`, { waitUntil: "domcontentloaded" });
+    const glass = page.locator(".backdrop-blur-xl").first();
+    await expect(glass).toBeVisible();
+    await expect(glass.getByText("Yanis Gauthier-Sigeris")).toBeVisible();
+    await expect(glass.getByText(/Hall of Fame/i)).toBeVisible();
+  });
 });
 
