@@ -37,6 +37,21 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
   return (
     <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)", overflow: "hidden" }}>
+      <style>{`
+        .about-body-text::first-letter {
+          font-family: var(--serif);
+          font-size: 4em;
+          font-weight: 500;
+          color: #BFA476;
+          float: left;
+          line-height: 0.9;
+          padding: 0.05em 0.12em 0 0;
+          margin-right: 0.04em;
+        }
+        @media (max-width: 640px) {
+          .about-body-text::first-letter { font-size: 3.2em; }
+        }
+      `}</style>
       {/* Glow effect */}
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 40% 55%, rgba(168,138,90,0.1), transparent)", pointerEvents: "none", zIndex: 0 }} />
       <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16 md:min-h-[72vh]" style={{ position: "relative", zIndex: 1 }}>
@@ -65,7 +80,8 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               margin: "0 0 2rem 0",
             }}
           >
-            <p
+          <p
+            className="about-body-text"
               style={{
                 fontFamily: "var(--serif)",
                 fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",

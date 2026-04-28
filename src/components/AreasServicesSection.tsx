@@ -70,9 +70,15 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
   <Link
     to={href}
     className="group flex items-center justify-between gap-3 transition-colors"
-    style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", borderBottom: "1px solid rgba(255,255,255,0.04)", minHeight: 52 }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,0.05)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.background = ""; }}
+    style={{ padding: "clamp(0.65rem, 1.2vw, 0.85rem) clamp(1.25rem, 2vw, 1.5rem)", borderBottom: "1px solid rgba(255,255,255,0.08)", minHeight: 44, transition: "background 200ms ease, box-shadow 200ms ease" }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.background = "rgba(168,138,90,0.06)";
+      e.currentTarget.style.boxShadow = "inset 3px 0 0 var(--gold)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.background = "";
+      e.currentTarget.style.boxShadow = "";
+    }}
   >
     <div className="min-w-0">
       <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
@@ -95,7 +101,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
     <section className="section-rhythm section-gold-divider" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)" }}>
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto">
+        <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
           <p className="label-overline mb-2 justify-center" style={{ color: "#BFA476" }}>{cfg.overline}</p>
           <h2 style={{ color: "#F5F1EA" }}>{cfg.title}</h2>
           <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.35)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
@@ -113,7 +119,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               </p>
             </div>
             {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
-            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(1rem, 2vw, 1.15rem) clamp(1.25rem, 2vw, 1.75rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
+            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
