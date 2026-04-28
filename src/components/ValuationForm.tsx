@@ -240,6 +240,28 @@ const ValuationForm = ({
           <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">
             {t.glassSub}
           </p>
+          <div className="mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
+            <img
+              src={yanisPhoto}
+              alt={t.trustAlt}
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 bg-white/5"
+              loading="lazy"
+              width={48}
+              height={48}
+            />
+            <div className="min-w-0">
+              <p className="font-semibold text-[0.9375rem] leading-tight text-primary-foreground">
+                Yanis Gauthier-Sigeris
+              </p>
+              <p className="mt-0.5 text-[0.75rem] text-primary-foreground/60 flex flex-wrap items-center gap-x-1.5">
+                <span className="text-accent font-medium">★ 5/5</span>
+                <span aria-hidden>·</span>
+                <span>Hall of Fame RE/MAX</span>
+                <span aria-hidden>·</span>
+                <span>{t.trustTransactions}</span>
+              </p>
+            </div>
+          </div>
         </>
       )}
 
