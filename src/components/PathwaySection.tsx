@@ -140,6 +140,10 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
               <Link
                 key={p.href}
                 to={p.href}
+                onClick={() => {
+                  setAvatarIntent(p.intent);
+                  trackEvent("avatar_router_select", { avatar: p.intent });
+                }}
                 className="group flex flex-col transition-all duration-300 relative overflow-hidden"
                 style={{
                   background: "rgba(255,255,255,0.03)",
