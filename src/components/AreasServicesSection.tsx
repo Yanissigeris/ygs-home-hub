@@ -101,7 +101,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
     <section className="section-rhythm section-gold-divider" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)" }}>
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 max-w-[44rem] mx-auto">
+        <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
           <p className="label-overline mb-2 justify-center" style={{ color: "#BFA476" }}>{cfg.overline}</p>
           <h2 style={{ color: "#F5F1EA" }}>{cfg.title}</h2>
           <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.35)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
