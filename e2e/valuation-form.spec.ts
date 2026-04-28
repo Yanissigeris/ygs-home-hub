@@ -84,4 +84,32 @@ test.describe("ValuationForm — shared component across FR pages", () => {
     expect(typeof capturedPayload.message).toBe("string");
     expect(capturedPayload.message.startsWith("[Hull] ")).toBe(true);
   });
+
+  test("Hull (card variant) shows trust signal block with broker name + Hall of Fame", async ({ page }) => {
+    await page.goto(`${BASE}/evaluation-maison-hull`, { waitUntil: "domcontentloaded" });
+    const card = page.locator("div.card-elevated").first();
+    await expect(card).toBeVisible();
+    await expect(card.getByText("Yanis Gauthier-Sigeris")).toBeVisible();
+    await expect(card.getByText(/Hall of Fame/i)).toBeVisible();
+  });
+
+  test("Invalid email shows friendly inline error (not browser tooltip)", async ({ page }) => {
+    await page.goto(`${BASE}/evaluation-maison-hull`, { waitUntil: "domcontentloaded" });
+
+    // Form must be noValidate so we hit RHF/zod, not native validation
+    const form = page.locator("div.card-elevated form").first();
+    await expect(form).toHaveAttribute("novalidate", "");
+
+    await page.locator("input#name").fill("Test User");
+    await page.locator("input#email").fill("not-an-email");
+    await page.locator("input#address").fill("123 rue Test, Hull");
+    await page.locator("input#email").blur();
+    await page.locator('form button[type="submit"]').click();
+
+    const err = page.locator('p[role="alert"]', {
+      hasText: /courriel valide|valid email|incorrect/i,
+    }).first();
+    await expect(err).toBeVisible({ timeout: 5000 });
+  });
 });
+
