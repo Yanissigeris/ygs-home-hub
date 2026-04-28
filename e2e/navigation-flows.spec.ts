@@ -56,3 +56,21 @@ test("404 page renders for unknown routes", async ({ page }) => {
   // Wait for React to render — NotFound uses React.lazy
   await expect(page.getByText(/introuvable|not found|404/i)).toBeVisible({ timeout: 20000 });
 });
+
+test("Hull page primary CTA goes to local Hull valuation", async ({ page }) => {
+  await page.goto("/hull", { waitUntil: "domcontentloaded" });
+  const cta = page.locator('a[href="/evaluation-maison-hull"]').first();
+  await expect(cta).toBeVisible({ timeout: 15000 });
+});
+
+test("Aylmer page primary CTA goes to local Aylmer valuation", async ({ page }) => {
+  await page.goto("/aylmer", { waitUntil: "domcontentloaded" });
+  const cta = page.locator('a[href="/evaluation-maison-aylmer"]').first();
+  await expect(cta).toBeVisible({ timeout: 15000 });
+});
+
+test("FR valuation hub surfaces Hull and Aylmer local valuations", async ({ page }) => {
+  await page.goto("/evaluation-gratuite-gatineau", { waitUntil: "domcontentloaded" });
+  await expect(page.locator('a[href="/evaluation-maison-hull"]').first()).toBeVisible({ timeout: 15000 });
+  await expect(page.locator('a[href="/evaluation-maison-aylmer"]').first()).toBeVisible({ timeout: 15000 });
+});
