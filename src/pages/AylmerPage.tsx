@@ -142,7 +142,7 @@ const AylmerPage = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Aylmer — votre spécialiste local"
       subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes — et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
     />
@@ -173,7 +173,7 @@ const AylmerPage = () => (
               Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+              <Link to="/evaluation-maison-aylmer">Obtenir les vrais chiffres →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Gratuit · Sans engagement · Réponse en 24-48h
@@ -300,7 +300,7 @@ const AylmerPage = () => (
       title="Prêt à passer à l'étape suivante?"
       text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur — je suis votre courtier local."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
+        { label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer" },
         { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
