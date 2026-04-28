@@ -1,74 +1,100 @@
-# Hide StickyMobileCTA when StickyGuideBanner is present
-
 ## Goal
-Prevent the two competing sticky bars from overlapping. When a page mounts `StickyGuideBanner`, the `StickyMobileCTA` should not render at all.
 
-## Selector strategy
-`StickyGuideBanner`'s visible banner is conditionally rendered (only after `scrollY > 600` and not dismissed), so querying its motion.div is unreliable — at initial mount on a route the banner is not yet in the DOM, so `StickyMobileCTA` would wrongly think it's safe to show.
+Extract one shared `<ValuationForm>` component used by all 6 valuation pages. Standardize field names to English, always use `<SuccessMessage>` for the success state, and keep both visual variants (`glass` for the Gatineau hub, `card` for Hull/Aylmer in both FR and EN).
 
-**Approach:** add a tiny always-mounted, invisible marker element to `StickyGuideBanner`'s top-level fragment:
+## Step 1 — Create `src/components/ValuationForm.tsx`
 
-```tsx
-<span data-sticky-guide-banner="true" hidden aria-hidden="true" />
+New component encapsulating the form card + submit + success state.
+
+**Props:**
+```ts
+interface ValuationFormProps {
+  lang: "fr" | "en";
+  locationTag?: string;        // "Hull" | "Aylmer" — prepends "[Tag] " to message
+  variant?: "glass" | "card";  // default "card"
+  addressPlaceholder?: string;
+  submitLabel?: string;
+  showTrustBadges?: boolean;   // default true
+}
 ```
 
-This is rendered unconditionally whenever the component is mounted, regardless of scroll/dismissed state. `StickyMobileCTA` queries `document.querySelector('[data-sticky-guide-banner]')` to detect presence.
+**Internals:**
+- `useState<boolean>` for `submitted`
+- `useFormSubmit()` for submission
+- Field `name` attributes: `name`, `email`, `phone`, `address`, `message` (English keys for FR + EN)
+- Required: `name`, `email`, `address`. Optional: `phone`, `message`
+- On submit, if `locationTag` set → `message = \`[${locationTag}] ${rawMessage}\``
+- On success → render `<SuccessMessage title={…} text={…} />` (translated)
+- Always render Lock + "Confidentiel — aucune obligation" / "Confidential — no obligation" line at top
+- `showTrustBadges` → 4-badge row under submit (Free/Confidential/No commitment/24h response) with FR/EN translations
+- Default submit label: FR "Recevoir mon évaluation gratuite", EN "Get my free valuation"
 
-Why this over alternatives:
-- A class on the motion.div doesn't exist until scroll threshold is reached.
-- A React context would require wiring a provider in `App.tsx` and touching every page using the banner.
-- A custom event would require ordering guarantees between mounts.
-- A hidden marker is one line, has zero visual impact, and is 100% reliable.
+**Variants:**
+- `glass`: `rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8`, light input styling on dark bg (matches current hub form). Includes the small headline + sub line above the form.
+- `card`: `card-elevated space-y-4 rounded-2xl bg-card p-6 shadow-xl sm:p-8`, default Input/Label styling (matches current Hull/Aylmer form).
 
-## Changes
+After creating the file: run `vite build` only — confirm no TS error. Report status.
 
-### 1. `src/components/StickyGuideBanner.tsx`
-Wrap the existing return in a fragment and add the marker as the first child:
+## Step 2 — Refactor `src/pages/ValuationPage.tsx` (FR hub, glass)
 
+Remove: `useState`, `FormEvent`, `useFormSubmit` imports, `handleSubmit`, the entire `<motion.div>` containing the form card (lines ~162–223). Keep all surrounding hero JSX (left column, portrait, gradients, BenefitsList, FunnelNextStep, FAQ, etc.).
+
+Replace the right form `<motion.div>` with:
 ```tsx
-return (
-  <>
-    <span data-sticky-guide-banner="true" hidden aria-hidden="true" />
-    <AnimatePresence> ... </AnimatePresence>
-    <GuideModal ... />
-  </>
-);
+<motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
+  <ValuationForm lang="fr" variant="glass" addressPlaceholder="123 rue Exemple, Gatineau" />
+</motion.div>
 ```
 
-### 2. `src/components/StickyMobileCTA.tsx`
-Add detection state + effect, and short-circuit render:
+Run full build (`vite build` + prerender + audits). Report. Stop on FAIL.
 
+## Step 3 — Refactor `src/pages/ValuationHullPage.tsx`
+
+Remove form-related imports, `submitted` state, `handleSubmit`, the whole form `<motion.div>` (lines 100–134). Replace with:
 ```tsx
-const [hasGuideBanner, setHasGuideBanner] = useState(false);
-
-useEffect(() => {
-  const t = setTimeout(() => {
-    setHasGuideBanner(
-      typeof document !== "undefined" &&
-      !!document.querySelector('[data-sticky-guide-banner]')
-    );
-  }, 150);
-  return () => clearTimeout(t);
-}, [pathname]);
-
-// ...
-if (hidden) return null;
-if (hasGuideBanner) return null;
+<motion.div {...anim} transition={{ ...anim.transition, delay: 0.15 }}>
+  <ValuationForm lang="fr" variant="card" locationTag="Hull" addressPlaceholder="123 rue Exemple, Hull" />
+</motion.div>
 ```
+Drop unused imports (`Lock`, `Send`, `useState`, `FormEvent`, `useFormSubmit`, `Input`, `Label`, `Textarea`, `Button`, `SuccessMessage`).
 
-All other behavior (cookie re-read, scroll threshold, footer-aware hiding, HIDDEN_PATHS) is preserved unchanged.
+Run full build. Report. Stop on FAIL.
 
-### 3. Verification
-- Run `vite build` + prerender + audits and confirm 198/198 OK.
-- Extend `e2e/avatar-cookie.spec.ts` (or add `e2e/sticky-coexistence.spec.ts`) with three cases:
-  a) Visit `/investir-plex-gatineau` (has StickyGuideBanner), scroll >55vh, assert `div.fixed a[href]:has-text("Analyser mon projet")` is **not** visible and the `[data-sticky-guide-banner]` marker exists.
-  b) Visit `/faq` (no StickyGuideBanner), scroll >55vh, assert StickyMobileCTA **is** visible.
-  c) Re-run the existing avatar-cookie test cases unchanged to confirm cookie personalization still works on pages without the guide banner.
+## Step 4 — Refactor `src/pages/ValuationAylmerPage.tsx`
+
+Same pattern as Step 3 with `locationTag="Aylmer"` and `addressPlaceholder="123 rue Exemple, Aylmer"`. Run build. Report. Stop on FAIL.
+
+## Step 5 — Refactor the 3 EN pages
+
+- `src/pages/en/ValuationPageEn.tsx` → `<ValuationForm lang="en" variant="glass" addressPlaceholder="123 Example St, Gatineau" />`
+- `src/pages/en/ValuationHullPageEn.tsx` → `<ValuationForm lang="en" variant="card" locationTag="Hull" addressPlaceholder="123 Example St, Hull" />`
+- `src/pages/en/ValuationAylmerPageEn.tsx` → `<ValuationForm lang="en" variant="card" locationTag="Aylmer" addressPlaceholder="123 Example St, Aylmer" />`
+
+Run full build after each (3 builds). Report each. Stop on first FAIL.
+
+## Step 6 — Playwright spec
+
+Create `e2e/valuation-form.spec.ts` (project's e2e dir; `src/tests/` doesn't exist — tests live in `e2e/`). Coverage:
+1. `/evaluation-gratuite-gatineau` → form renders, address input has placeholder "123 rue Exemple, Gatineau", glass-variant container present (`backdrop-blur-xl` class).
+2. `/evaluation-maison-hull` → form renders, address placeholder mentions "Hull", card variant present (`card-elevated` class).
+3. `/evaluation-maison-aylmer` → same as #2 with "Aylmer".
+4. Fill required fields on Hull page, click submit, intercept the Supabase functions POST → assert `formType: "valuation"` and `message` starts with `[Hull] `.
+5. After successful submit (mocked 200), assert `<SuccessMessage>` content visible (title contains "envoyée" / "Merci").
+
+Run with `bunx playwright test e2e/valuation-form.spec.ts`. Report.
+
+## Final report
+
+PASS/FAIL per step, final build status, # of pages refactored, approximate lines eliminated, line counts (new component + diff per page), any drift detected.
+
+## Constraints
+
+- Do NOT modify `useFormSubmit`, `SuccessMessage`, or any unrelated files.
+- Keep all hero copy, FAQ, BenefitsList, RelatedPages, FunnelNextStep blocks intact on every page.
+- The hub success state currently shows a custom inline block; switching to `<SuccessMessage>` is an intentional standardization (per goal). Visual change on the dark hub: the success card will use the standard accent-tinted card style instead of inline white text. Acceptable since `<SuccessMessage>` already uses `bg-accent/5` + accent border which reads fine on dark backgrounds.
+- Field-name change on the FR hub (`nom`/`courriel`/`tel`/`adresse` → `name`/`email`/`phone`/`address`) is internal only (no DB schema change; `useFormSubmit` already maps to canonical English keys before sending).
 
 ## Files touched
-- `src/components/StickyGuideBanner.tsx` (1-line marker added)
-- `src/components/StickyMobileCTA.tsx` (state + effect + early return)
-- `e2e/avatar-cookie.spec.ts` extended OR new `e2e/sticky-coexistence.spec.ts`
 
-## Out of scope
-- `src/lib/avatar.ts`, `PathwaySection.tsx`, and all page files remain untouched.
+- **Created:** `src/components/ValuationForm.tsx`, `e2e/valuation-form.spec.ts`
+- **Modified:** `src/pages/ValuationPage.tsx`, `src/pages/ValuationHullPage.tsx`, `src/pages/ValuationAylmerPage.tsx`, `src/pages/en/ValuationPageEn.tsx`, `src/pages/en/ValuationHullPageEn.tsx`, `src/pages/en/ValuationAylmerPageEn.tsx`

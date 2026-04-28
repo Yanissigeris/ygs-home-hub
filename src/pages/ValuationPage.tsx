@@ -2,17 +2,11 @@ import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
-import { useState, FormEvent } from "react";
 import RelatedPages from "@/components/RelatedPages";
-import { useFormSubmit } from "@/hooks/useFormSubmit";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
-import SuccessMessage from "@/components/SuccessMessage";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
+import ValuationForm from "@/components/ValuationForm";
+import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
@@ -56,24 +50,6 @@ const anim = {
 };
 
 const ValuationPage = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const { submit, submitting } = useFormSubmit();
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const fd = new FormData(form);
-    const success = await submit({
-      formType: "valuation", lang: "fr",
-      name: fd.get("nom") as string || "",
-      email: fd.get("courriel") as string || "",
-      phone: fd.get("tel") as string || undefined,
-      address: fd.get("adresse") as string || undefined,
-      message: fd.get("message") as string || undefined,
-    });
-    if (success) setSubmitted(true);
-  };
-
   return (
     <>
       <SEO
@@ -164,62 +140,7 @@ const ValuationPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
             >
-              <div className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8">
-                <h2 className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground" style={{ fontFamily: "var(--serif)" }}>
-                  Demandez votre évaluation gratuite
-                </h2>
-                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">
-                  Je vous reviens personnellement en 24h avec une analyse claire.
-                </p>
-
-                {submitted ? (
-                  <div className="mt-8 text-center py-8">
-                    <CheckCircle2 size={36} className="mx-auto text-accent" />
-                    <h3 className="mt-4 text-primary-foreground text-[1.125rem]">Merci! Demande envoyée.</h3>
-                    <p className="mt-2 text-[0.875rem] text-primary-foreground/40">Je vous reviens dans les 24 prochaines heures avec votre évaluation.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                    <div>
-                      <Label htmlFor="adresse" className="text-primary-foreground/60 text-[0.8125rem]">Adresse de la propriété</Label>
-                      <Input id="adresse" name="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
-                    </div>
-
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div>
-                        <Label htmlFor="nom" className="text-primary-foreground/60 text-[0.8125rem]">Nom</Label>
-                        <Input id="nom" name="nom" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
-                      </div>
-                      <div>
-                        <Label htmlFor="courriel" className="text-primary-foreground/60 text-[0.8125rem]">Courriel</Label>
-                        <Input id="courriel" name="courriel" type="email" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" required />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="tel" className="text-primary-foreground/60 text-[0.8125rem]">Téléphone</Label>
-                      <Input id="tel" name="tel" type="tel" className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11" />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message" className="text-primary-foreground/60 text-[0.8125rem]">Message (optionnel)</Label>
-                      <Textarea id="message" name="message" rows={2} placeholder="Détails supplémentaires..." className="mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 min-h-[72px] resize-none" />
-                    </div>
-
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)] font-semibold" disabled={submitting}>
-                      <Send size={16} className="mr-1.5" />
-                      {submitting ? "Envoi en cours…" : "Recevoir mon évaluation gratuite"}
-                    </Button>
-
-                    <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-primary-foreground/30">
-                      <span className="flex items-center gap-1.5"><BadgeCheck size={13} /> Gratuit</span>
-                      <span className="flex items-center gap-1.5"><Lock size={13} /> Confidentiel</span>
-                      <span className="flex items-center gap-1.5"><Shield size={13} /> Sans engagement</span>
-                      <span className="flex items-center gap-1.5"><Clock size={13} /> Réponse en 24h</span>
-                    </div>
-                  </form>
-                )}
-              </div>
+              <ValuationForm lang="fr" variant="glass" addressPlaceholder="123 rue Exemple, Gatineau" />
             </motion.div>
           </div>
         </div>

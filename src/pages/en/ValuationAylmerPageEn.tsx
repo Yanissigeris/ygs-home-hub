@@ -3,15 +3,9 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
-import SuccessMessage from "@/components/SuccessMessage";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, CheckCircle2, Send, BadgeCheck } from "lucide-react";
+import ValuationForm from "@/components/ValuationForm";
+import { Clock, Shield, CheckCircle2, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, FormEvent } from "react";
-import { useFormSubmit } from "@/hooks/useFormSubmit";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-aylmer.webp";
 
@@ -54,24 +48,6 @@ const anim = {
 };
 
 const ValuationAylmerPageEn = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const { submit, submitting } = useFormSubmit();
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget as HTMLFormElement);
-    const ok = await submit({
-      formType: "valuation",
-      lang: "en",
-      name: fd.get("name") as string,
-      email: fd.get("email") as string,
-      phone: (fd.get("phone") as string) || "",
-      address: fd.get("address") as string,
-      message: `[Aylmer] ${(fd.get("message") as string) || ""}`,
-    });
-    if (ok) setSubmitted(true);
-  };
-
   return (
     <>
       <PageMeta
@@ -98,38 +74,7 @@ const ValuationAylmerPageEn = () => {
           </motion.div>
 
           <motion.div {...anim} transition={{ ...anim.transition, delay: 0.15 }}>
-            {submitted ? (
-              <SuccessMessage title="Request sent!" text="I'll get back to you within 24h with your personalized Aylmer valuation." />
-            ) : (
-              <form onSubmit={handleSubmit} className="card-elevated space-y-4 rounded-2xl bg-card p-6 shadow-xl sm:p-8">
-                <div className="flex items-center gap-2 text-[0.8125rem] text-muted-foreground">
-                  <Lock size={13} /> Confidential — no obligation
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="name">Full name</Label>
-                  <Input id="name" name="name" required placeholder="Your name" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" required placeholder="email@example.com" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="phone">Phone (optional)</Label>
-                  <Input id="phone" name="phone" type="tel" placeholder="819 000-0000" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="address">Property address in Aylmer</Label>
-                  <Input id="address" name="address" required placeholder="123 Example St, Aylmer" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="message">Details (optional)</Label>
-                  <Textarea id="message" name="message" rows={3} placeholder="Property type, number of bedrooms, etc." />
-                </div>
-                <Button type="submit" size="xl" variant="accent" className="w-full" disabled={submitting}>
-                  {submitting ? "Sending…" : <><Send size={15} className="mr-2" /> Get my valuation</>}
-                </Button>
-              </form>
-            )}
+            <ValuationForm lang="en" variant="card" locationTag="Aylmer" addressPlaceholder="123 Example St, Aylmer" />
           </motion.div>
         </div>
       </section>
