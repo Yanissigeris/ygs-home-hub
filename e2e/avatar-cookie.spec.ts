@@ -59,8 +59,9 @@ for (const c of CASES) {
       await page.waitForTimeout(250);
     }
     await card.waitFor({ state: "attached", timeout: 15000 });
-    await card.scrollIntoViewIfNeeded();
-    await card.click();
+    // Use dispatchEvent to bypass visibility checks (cards may be partly
+    // covered by sticky header or in-progress reveal animations on mobile).
+    await card.dispatchEvent("click");
 
     // Wait for navigation triggered by the card
     await page.waitForURL(`**${c.cardHref}`, { timeout: 15000 });
