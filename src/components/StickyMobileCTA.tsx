@@ -35,12 +35,25 @@ const StickyMobileCTA = () => {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
   const [intent, setIntent] = useState<AvatarIntent | null>(null);
+  const [hasGuideBanner, setHasGuideBanner] = useState(false);
   const ticking = useRef(false);
 
   // Re-read on every route change so language switches (FR↔EN) and
   // post-click navigations always reflect the latest cookie value.
   useEffect(() => {
     setIntent(getAvatarIntent());
+  }, [pathname]);
+
+  // Detect presence of StickyGuideBanner on the current page so the two
+  // sticky bars never overlap. Wait one tick for DOM mount on route change.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setHasGuideBanner(
+        typeof document !== "undefined" &&
+          !!document.querySelector("[data-sticky-guide-banner]"),
+      );
+    }, 150);
+    return () => clearTimeout(t);
   }, [pathname]);
 
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
@@ -71,6 +84,7 @@ const StickyMobileCTA = () => {
   }, []);
 
   if (hidden) return null;
+  if (hasGuideBanner) return null;
 
   return (
     <div
