@@ -100,7 +100,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
         >"</span>
 
         <div className="section-container relative">
-          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(320px,1fr)_2fr] gap-8 md:gap-12 items-start">
             {/* Left — sticky sidebar */}
             <div className="md:sticky md:top-24">
               {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
