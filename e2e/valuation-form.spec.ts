@@ -32,7 +32,7 @@ test.describe("ValuationForm — shared component across FR pages", () => {
     await expect(address).toBeVisible();
     await expect(address).toHaveAttribute("placeholder", /Hull/);
 
-    const card = page.locator("form.card-elevated").first();
+    const card = page.locator("div.card-elevated form").first();
     await expect(card).toBeVisible();
   });
 
