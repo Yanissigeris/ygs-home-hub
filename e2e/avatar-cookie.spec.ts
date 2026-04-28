@@ -59,9 +59,10 @@ for (const c of CASES) {
       await page.waitForTimeout(250);
     }
     await card.waitFor({ state: "attached", timeout: 15000 });
-    // Use dispatchEvent to bypass visibility checks (cards may be partly
-    // covered by sticky header or in-progress reveal animations on mobile).
-    await card.dispatchEvent("click");
+    await card.scrollIntoViewIfNeeded().catch(() => {});
+    // force: true bypasses visibility/stability checks but still fires a real
+    // pointer event so React's onClick (which sets the cookie) runs.
+    await card.click({ force: true });
 
     // Wait for navigation triggered by the card
     await page.waitForURL(`**${c.cardHref}`, { timeout: 15000 });
