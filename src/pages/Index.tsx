@@ -12,6 +12,7 @@ import StatsSection from "@/components/StatsSection";
 
 import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
+import RecentSolds from "@/components/RecentSolds";
 import AboutSection from "@/components/AboutSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
@@ -64,6 +65,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <PathwaySection />
     <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
     <FeaturedProperties />
+    <RecentSolds />
     <div className="section-fade-bridge section-fade-bridge--cream-to-dark" aria-hidden="true" />
     <AboutSection />
     <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
