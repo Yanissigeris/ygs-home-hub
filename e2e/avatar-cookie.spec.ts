@@ -72,15 +72,18 @@ for (const c of CASES) {
     // Cookie should now be set
     expect(await readIntentCookie(page)).toBe(c.intent);
 
-    // Go to a long page where the sticky CTA can appear without footer overlap
-    await page.goto(BASE + "/blogue");
+    // The sticky CTA only mounts on the FR home page (Index.tsx).
+    // Go back home with the cookie set and verify it personalizes correctly.
+    await page.goto(BASE + "/");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
-    // Trigger the sticky bar (visible after >55vh scroll, footer not in view)
-    await page.evaluate(() =>
-      window.scrollTo(0, Math.round(window.innerHeight * 0.7)),
-    );
-    await page.waitForTimeout(600);
+    // Scroll past the hero (>55vh) but stay above the footer.
+    await page.evaluate(() => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const target = Math.min(Math.round(window.innerHeight * 1.5), Math.round(max * 0.5));
+      window.scrollTo(0, target);
+    });
+    await page.waitForTimeout(800);
 
     // The sticky mobile CTA renders inside a fixed div with z-index 500.
     // Look for an anchor matching the expected href whose text includes the
