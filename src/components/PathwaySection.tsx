@@ -3,8 +3,23 @@ import { Link } from "react-router-dom";
 import cardVendreImg from "@/assets/service-vendre.webp";
 import cardAcheterImg from "@/assets/service-acheter.webp";
 import cardPlexImg from "@/assets/service-plex.webp";
+import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
+import { trackEvent } from "@/lib/analytics";
 
-const pathwaysFr = [
+interface Pathway {
+  num: string;
+  title: string;
+  text: string;
+  cta: string;
+  href: string;
+  image: string;
+  imageSm: string;
+  imageAlt: string;
+  badge: string | null;
+  intent: AvatarIntent;
+}
+
+const pathwaysFr: Pathway[] = [
   {
     num: "01",
     title: "Plex & investissement",
@@ -15,6 +30,7 @@ const pathwaysFr = [
     imageSm: cardPlexImg,
     imageAlt: "Investissement plex à Gatineau — immeuble à revenus",
     badge: "Priorité investisseurs",
+    intent: "investir",
   },
   {
     num: "02",
@@ -26,6 +42,7 @@ const pathwaysFr = [
     imageSm: cardVendreImg,
     imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne",
     badge: null,
+    intent: "vendre",
   },
   {
     num: "03",
@@ -37,10 +54,11 @@ const pathwaysFr = [
     imageSm: cardAcheterImg,
     imageAlt: "Acheter une propriété à Gatineau — rue résidentielle",
     badge: null,
+    intent: "acheter",
   },
 ];
 
-const pathwaysEn = [
+const pathwaysEn: Pathway[] = [
   {
     num: "01",
     title: "Plex & Investment",
@@ -51,6 +69,7 @@ const pathwaysEn = [
     imageSm: cardPlexImg,
     imageAlt: "Invest in a plex in Gatineau — multi-unit building",
     badge: "Investors first",
+    intent: "investir",
   },
   {
     num: "02",
@@ -62,6 +81,7 @@ const pathwaysEn = [
     imageSm: cardVendreImg,
     imageAlt: "Sell a home in Gatineau — bright residential interior",
     badge: null,
+    intent: "vendre",
   },
   {
     num: "03",
@@ -73,6 +93,7 @@ const pathwaysEn = [
     imageSm: cardAcheterImg,
     imageAlt: "Buy a property in Gatineau — residential neighborhood",
     badge: null,
+    intent: "acheter",
   },
 ];
 
@@ -119,6 +140,10 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
               <Link
                 key={p.href}
                 to={p.href}
+                onClick={() => {
+                  setAvatarIntent(p.intent);
+                  trackEvent("avatar_router_select", { avatar: p.intent });
+                }}
                 className="group flex flex-col transition-all duration-300 relative overflow-hidden"
                 style={{
                   background: "rgba(255,255,255,0.03)",

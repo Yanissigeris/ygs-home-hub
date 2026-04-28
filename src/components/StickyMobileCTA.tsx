@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/analytics";
+import { getAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 
 const HIDDEN_PATHS = [
   "/contact-yanis", "/en/contact",
@@ -12,16 +13,39 @@ const HIDDEN_PATHS = [
   "/evaluation-hull", "/en/home-valuation-hull",
 ];
 
+type CtaConfig = { label: string; href: string };
+
+const CTA_BY_INTENT: Record<"fr" | "en", Record<AvatarIntent | "default", CtaConfig>> = {
+  fr: {
+    investir: { label: "Analyser mon projet →", href: "/investir-plex-gatineau" },
+    vendre: { label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" },
+    acheter: { label: "Voir les propriétés →", href: "/proprietes" },
+    default: { label: "Évaluation Gratuite →", href: "/evaluation-gratuite-gatineau" },
+  },
+  en: {
+    investir: { label: "Analyze my project →", href: "/en/plex" },
+    vendre: { label: "Get my value →", href: "/en/home-valuation" },
+    acheter: { label: "View properties →", href: "/en/properties" },
+    default: { label: "Free Valuation →", href: "/en/home-valuation" },
+  },
+};
+
 const StickyMobileCTA = () => {
   const lang = useLanguage();
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
+  const [intent, setIntent] = useState<AvatarIntent | null>(null);
   const ticking = useRef(false);
+
+  useEffect(() => {
+    setIntent(getAvatarIntent());
+  }, []);
 
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
-  const ctaLabel = lang === "en" ? "Free Valuation →" : "Évaluation Gratuite →";
-  const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
+  const cta = CTA_BY_INTENT[lang][intent ?? "default"];
+  const ctaLabel = cta.label;
+  const ctaHref = cta.href;
   const callLabel = lang === "en" ? "📞 Call" : "📞 Appeler";
 
   useEffect(() => {
