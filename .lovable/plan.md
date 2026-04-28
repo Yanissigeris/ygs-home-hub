@@ -1,100 +1,155 @@
-## Goal
+# Plan — Optimize `src/components/ValuationForm.tsx`
 
-Extract one shared `<ValuationForm>` component used by all 6 valuation pages. Standardize field names to English, always use `<SuccessMessage>` for the success state, and keep both visual variants (`glass` for the Gatineau hub, `card` for Hull/Aylmer in both FR and EN).
+Single-file optimization. No pages, hooks, or unrelated files touched. Public API (props) of `ValuationForm` stays identical.
 
-## Step 1 — Create `src/components/ValuationForm.tsx`
+## 1. Migrate to `react-hook-form` + `zod`
 
-New component encapsulating the form card + submit + success state.
+Add imports (already installed):
+- `useForm` from `react-hook-form`
+- `zodResolver` from `@hookform/resolvers/zod`
+- `z` from `zod`
 
-**Props:**
+Build a `makeSchema(lang)` factory returning a zod object with locale-aware messages:
+
+| Field | Rule |
+|---|---|
+| `name` | `string().trim().min(2)` |
+| `email` | `string().trim().email()` + `.refine(notObviousTypo)` |
+| `phone` | `string().optional()` + `.refine(isValidCAPhone or empty)` |
+| `address` | `string().trim().min(5)` |
+| `message` | `string().max(500).optional()` |
+
+`notObviousTypo` rejects domains like `gmial.com`, `gmai.com`, `yahoo.cm`, `hotnail.com`, `outlok.com`, `gmail.con`, `yhaoo.com` (small inline list).
+
+`isValidCAPhone` strips non-digits and requires exactly 10 digits (or empty when optional).
+
+Form config:
 ```ts
-interface ValuationFormProps {
-  lang: "fr" | "en";
-  locationTag?: string;        // "Hull" | "Aylmer" — prepends "[Tag] " to message
-  variant?: "glass" | "card";  // default "card"
-  addressPlaceholder?: string;
-  submitLabel?: string;
-  showTrustBadges?: boolean;   // default true
-}
+useForm({
+  resolver: zodResolver(makeSchema(lang)),
+  mode: "onBlur",
+  reValidateMode: "onChange",
+  defaultValues: { name:"", email:"", phone:"", address:"", message:"" },
+});
 ```
 
-**Internals:**
-- `useState<boolean>` for `submitted`
-- `useFormSubmit()` for submission
-- Field `name` attributes: `name`, `email`, `phone`, `address`, `message` (English keys for FR + EN)
-- Required: `name`, `email`, `address`. Optional: `phone`, `message`
-- On submit, if `locationTag` set → `message = \`[${locationTag}] ${rawMessage}\``
-- On success → render `<SuccessMessage title={…} text={…} />` (translated)
-- Always render Lock + "Confidentiel — aucune obligation" / "Confidential — no obligation" line at top
-- `showTrustBadges` → 4-badge row under submit (Free/Confidential/No commitment/24h response) with FR/EN translations
-- Default submit label: FR "Recevoir mon évaluation gratuite", EN "Get my free valuation"
+`handleSubmit` calls `submit({ formType:"valuation", lang, ...values, message: locationTag ? "[tag] "+msg : msg })` exactly like today, then `setSubmitted(true)` on success. Same payload shape — `useFormSubmit` untouched.
 
-**Variants:**
-- `glass`: `rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8`, light input styling on dark bg (matches current hub form). Includes the small headline + sub line above the form.
-- `card`: `card-elevated space-y-4 rounded-2xl bg-card p-6 shadow-xl sm:p-8`, default Input/Label styling (matches current Hull/Aylmer form).
+## 2. Inline error rendering
 
-After creating the file: run `vite build` only — confirm no TS error. Report status.
+Below each input render `errors.<field>?.message` in a small line:
+```
+text-[0.75rem] mt-1
+glass: text-red-300/80
+card:  text-destructive
+```
+Add `aria-invalid` + `aria-describedby` on each input.
 
-## Step 2 — Refactor `src/pages/ValuationPage.tsx` (FR hub, glass)
+## 3. Phone masking
 
-Remove: `useState`, `FormEvent`, `useFormSubmit` imports, `handleSubmit`, the entire `<motion.div>` containing the form card (lines ~162–223). Keep all surrounding hero JSX (left column, portrait, gradients, BenefitsList, FunnelNextStep, FAQ, etc.).
+Pure inline formatter — no new dep:
+```ts
+const formatCAPhone = (raw: string) => {
+  const d = raw.replace(/\D/g, "").slice(0, 10);
+  if (d.length <= 3)  return d;
+  if (d.length <= 6)  return `(${d.slice(0,3)}) ${d.slice(3)}`;
+  return `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}`;
+};
+```
+Phone field uses `Controller` so we can intercept `onChange` and call `field.onChange(formatCAPhone(e.target.value))`. Submitted value is the formatted string (server already stores message-as-string; phone is plain text).
 
-Replace the right form `<motion.div>` with:
+## 4. Inputs: autocomplete + inputMode
+
+| Field | autoComplete | inputMode |
+|---|---|---|
+| name | `name` | — |
+| email | `email` | `email` |
+| phone | `tel` | `tel` |
+| address | `street-address` | — |
+| message | `off` | — |
+
+Apply uniformly to both glass and card branches.
+
+## 5. Loader2 spinner in submit button
+
 ```tsx
-<motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
-  <ValuationForm lang="fr" variant="glass" addressPlaceholder="123 rue Exemple, Gatineau" />
-</motion.div>
+{submitting ? <Loader2 size={16} className="mr-1.5 animate-spin"/> : <Send size={16} className="mr-1.5"/>}
+{submitting ? t.submitting : submitText}
 ```
+Button stays `disabled={submitting}`. Keeps existing styling.
 
-Run full build (`vite build` + prerender + audits). Report. Stop on FAIL.
+## 6. Card-variant trust signal block (NEW)
 
-## Step 3 — Refactor `src/pages/ValuationHullPage.tsx`
+Inside the outer wrapper, **above** the `<form>`, only when `!isGlass`:
 
-Remove form-related imports, `submitted` state, `handleSubmit`, the whole form `<motion.div>` (lines 100–134). Replace with:
 ```tsx
-<motion.div {...anim} transition={{ ...anim.transition, delay: 0.15 }}>
-  <ValuationForm lang="fr" variant="card" locationTag="Hull" addressPlaceholder="123 rue Exemple, Hull" />
-</motion.div>
+<div className="flex items-center gap-3 mb-5 pb-5 border-b border-border/50">
+  <img
+    src={yanisPhoto}
+    alt={t.trustAlt}
+    className="w-12 h-12 rounded-full object-cover ring-2 ring-accent/20"
+    loading="lazy"
+  />
+  <div className="min-w-0">
+    <p className="font-semibold text-[0.9375rem] leading-tight">Yanis Gauthier-Sigeris</p>
+    <p className="mt-0.5 text-[0.75rem] text-muted-foreground flex flex-wrap items-center gap-x-1.5">
+      <span className="text-accent">★ 5/5</span>
+      <span aria-hidden>·</span>
+      <span>Hall of Fame RE/MAX</span>
+      <span aria-hidden>·</span>
+      <span>{t.trustTransactions}</span>
+    </p>
+  </div>
+</div>
 ```
-Drop unused imports (`Lock`, `Send`, `useState`, `FormEvent`, `useFormSubmit`, `Input`, `Label`, `Textarea`, `Button`, `SuccessMessage`).
 
-Run full build. Report. Stop on FAIL.
+Asset import: `import yanisPhoto from "@/assets/yanis-hero-cutout.webp";` (verified file exists).
 
-## Step 4 — Refactor `src/pages/ValuationAylmerPage.tsx`
+Glass variant gets nothing new (already has its own header).
 
-Same pattern as Step 3 with `locationTag="Aylmer"` and `addressPlaceholder="123 rue Exemple, Aylmer"`. Run build. Report. Stop on FAIL.
+## 7. T table updates
 
-## Step 5 — Refactor the 3 EN pages
+- FR `submit`: `"Demander mon évaluation gratuite"` (was "Recevoir...")
+- EN `submit`: `"Request my free valuation"` (was "Get...")
+- Add per-lang error strings: `errName`, `errEmail`, `errEmailTypo`, `errPhone`, `errAddress`, `errMessageMax`
+- Add `trustAlt` ("Yanis Gauthier-Sigeris, courtier immobilier" / "...real estate broker") and `trustTransactions` ("300+ transactions" both languages).
 
-- `src/pages/en/ValuationPageEn.tsx` → `<ValuationForm lang="en" variant="glass" addressPlaceholder="123 Example St, Gatineau" />`
-- `src/pages/en/ValuationHullPageEn.tsx` → `<ValuationForm lang="en" variant="card" locationTag="Hull" addressPlaceholder="123 Example St, Hull" />`
-- `src/pages/en/ValuationAylmerPageEn.tsx` → `<ValuationForm lang="en" variant="card" locationTag="Aylmer" addressPlaceholder="123 Example St, Aylmer" />`
+## 8. E2E test additions — `e2e/valuation-form.spec.ts`
 
-Run full build after each (3 builds). Report each. Stop on first FAIL.
+Append two new `test(...)` cases (do NOT touch the 4 existing ones):
 
-## Step 6 — Playwright spec
+1. **Trust signal on card variant** — `/evaluation-maison-hull`
+   ```ts
+   const trust = page.locator("div.card-elevated").first();
+   await expect(trust.getByText("Yanis Gauthier-Sigeris")).toBeVisible();
+   await expect(trust.getByText(/Hall of Fame/i)).toBeVisible();
+   ```
 
-Create `e2e/valuation-form.spec.ts` (project's e2e dir; `src/tests/` doesn't exist — tests live in `e2e/`). Coverage:
-1. `/evaluation-gratuite-gatineau` → form renders, address input has placeholder "123 rue Exemple, Gatineau", glass-variant container present (`backdrop-blur-xl` class).
-2. `/evaluation-maison-hull` → form renders, address placeholder mentions "Hull", card variant present (`card-elevated` class).
-3. `/evaluation-maison-aylmer` → same as #2 with "Aylmer".
-4. Fill required fields on Hull page, click submit, intercept the Supabase functions POST → assert `formType: "valuation"` and `message` starts with `[Hull] `.
-5. After successful submit (mocked 200), assert `<SuccessMessage>` content visible (title contains "envoyée" / "Merci").
+2. **Friendly inline email error** — `/evaluation-maison-hull`
+   - Fill `input#email` with `not-an-email`, blur, click submit
+   - Assert no native `:invalid` tooltip path: check inline message is visible
+   ```ts
+   await page.locator("input#email").fill("not-an-email");
+   await page.locator("input#email").blur();
+   await page.locator('form button[type="submit"]').click();
+   await expect(page.getByText(/email|courriel/i).filter({ hasText: /incorrect|valide|spelling|orthographe/i }).first()).toBeVisible();
+   ```
 
-Run with `bunx playwright test e2e/valuation-form.spec.ts`. Report.
+Tests are written but **not executed** in this round — user must republish first.
 
-## Final report
+## 9. Build & report
 
-PASS/FAIL per step, final build status, # of pages refactored, approximate lines eliminated, line counts (new component + diff per page), any drift detected.
+Run `vite build` after edits. Report:
+- Build PASS/FAIL
+- Line count before/after `ValuationForm.tsx`
+- New imports list
+- Test assertions added
+- Reminder: republish before running E2E against live host
 
-## Constraints
+## Constraints honored
 
-- Do NOT modify `useFormSubmit`, `SuccessMessage`, or any unrelated files.
-- Keep all hero copy, FAQ, BenefitsList, RelatedPages, FunnelNextStep blocks intact on every page.
-- The hub success state currently shows a custom inline block; switching to `<SuccessMessage>` is an intentional standardization (per goal). Visual change on the dark hub: the success card will use the standard accent-tinted card style instead of inline white text. Acceptable since `<SuccessMessage>` already uses `bg-accent/5` + accent border which reads fine on dark backgrounds.
-- Field-name change on the FR hub (`nom`/`courriel`/`tel`/`adresse` → `name`/`email`/`phone`/`address`) is internal only (no DB schema change; `useFormSubmit` already maps to canonical English keys before sending).
-
-## Files touched
-
-- **Created:** `src/components/ValuationForm.tsx`, `e2e/valuation-form.spec.ts`
-- **Modified:** `src/pages/ValuationPage.tsx`, `src/pages/ValuationHullPage.tsx`, `src/pages/ValuationAylmerPage.tsx`, `src/pages/en/ValuationPageEn.tsx`, `src/pages/en/ValuationHullPageEn.tsx`, `src/pages/en/ValuationAylmerPageEn.tsx`
+- Same `ValuationFormProps` interface — no breaking change for the 6 pages.
+- `useFormSubmit`, `SuccessMessage`, all pages: untouched.
+- Both variants render; glass keeps its existing header; card gets new trust block.
+- Bottom `showTrustBadges` row: unchanged.
+- Payload to `send-email`: identical shape (`formType`, `lang`, `name`, `email`, `phone?`, `address?`, `message?` with optional `[locationTag] ` prefix).
