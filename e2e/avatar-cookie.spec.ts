@@ -77,12 +77,21 @@ for (const c of CASES) {
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
     // Trigger the sticky bar (visible after >55vh scroll, footer not in view)
-    await page.evaluate(() => window.scrollTo(0, Math.round(window.innerHeight * 0.7)));
+    await page.evaluate(() =>
+      window.scrollTo(0, Math.round(window.innerHeight * 0.7)),
+    );
+    await page.waitForTimeout(600);
 
-    const stickyCta = page
-      .locator(`a[href="${c.expectedHref}"]`, { hasText: c.expectedLabel })
-      .last();
-    await expect(stickyCta).toBeVisible({ timeout: 10000 });
-    await expect(stickyCta).toHaveText(c.expectedLabel);
+    // The sticky mobile CTA renders inside a fixed div with z-index 500.
+    // Look for an anchor matching the expected href whose text includes the
+    // intent-specific label fragment (without the trailing arrow, which can
+    // be rendered separately).
+    const labelFragment = c.expectedLabel.replace(/\s*→\s*$/, "");
+    const stickyCta = page.locator(
+      `div.fixed a[href="${c.expectedHref}"]:has-text("${labelFragment}")`,
+    );
+    // If the sticky CTA hasn't deployed to the published host yet, the
+    // assertion below will surface that gap clearly.
+    await expect(stickyCta.first()).toBeVisible({ timeout: 10000 });
   });
 }
