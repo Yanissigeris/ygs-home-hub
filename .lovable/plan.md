@@ -1,78 +1,86 @@
-# Add Trust Signal to Glass Variant of ValuationForm
+## Internal Linking Optimization — Local Valuation Routing
 
-## Scope
-Single-file component change + one new E2E test. No page edits, no API changes, no card-variant changes.
+Pure href + RelatedPages edits across 6 source files + 1 test file. No component refactors, no logic changes.
 
-## Change 1 — `src/components/ValuationForm.tsx` (glass branch only)
+### Verified current state (from grep)
 
-Inside the `isGlass &&` block, **after** the `glassSub` paragraph and **before** the `<form>` element, insert a trust signal block adapted for the dark/translucent glass aesthetic.
+**FR neighborhood pages — 3 hrefs each to swap:**
+- `src/pages/HullPage.tsx` lines 87, 164, 194: `/evaluation-gratuite-gatineau` ➜ `/evaluation-maison-hull`
+- `src/pages/AylmerPage.tsx` lines 145, 176, 303: `/evaluation-gratuite-gatineau` ➜ `/evaluation-maison-aylmer` (line 252 already correct, untouched)
 
-### Markup to add
+**EN neighborhood pages — 3 hrefs each to swap:**
+- `src/pages/en/HullPageEn.tsx` lines 87, 164, 195: `/en/home-valuation` ➜ `/en/home-valuation-hull`
+- `src/pages/en/AylmerPageEn.tsx` lines 142, 171, 296: `/en/home-valuation` ➜ `/en/home-valuation-aylmer` (line 246 already correct, untouched)
+
+All labels preserved verbatim. Only `href`/`to` values change.
+
+### Hub RelatedPages reordering
+
+**`src/pages/ValuationPage.tsx` (lines 165–172)** — 6 entries, Hull/Aylmer valuations promoted to positions 1–2:
 
 ```tsx
-<div className="mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
-  <img
-    src={yanisPhoto}
-    alt={t.trustAlt}
-    className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 bg-white/5"
-    loading="lazy"
-    width={48}
-    height={48}
-  />
-  <div className="min-w-0">
-    <p className="font-semibold text-[0.9375rem] leading-tight text-primary-foreground">
-      Yanis Gauthier-Sigeris
-    </p>
-    <p className="mt-0.5 text-[0.75rem] text-primary-foreground/60 flex flex-wrap items-center gap-x-1.5">
-      <span className="text-accent font-medium">★ 5/5</span>
-      <span aria-hidden>·</span>
-      <span>Hall of Fame RE/MAX</span>
-      <span aria-hidden>·</span>
-      <span>{t.trustTransactions}</span>
-    </p>
-  </div>
-</div>
+pages={[
+  { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull" },
+  { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer" },
+  { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau" },
+  { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea" },
+  { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+]}
 ```
 
-### Styling notes (matched to glass aesthetic)
-- Photo ring: `ring-white/20` (vs card's `ring-accent/20`)
-- Name color: `text-primary-foreground` (matches `glassHeading`)
-- Stats color: `text-primary-foreground/60` (translucent, secondary hierarchy)
-- Star kept `text-accent` (gold reads beautifully on petrol glass)
-- Border separator: `border-white/10` (very subtle)
-- Spacing: `mt-5` from sub-paragraph above, `pb-4 mb-1` to breathe before the form's `mt-6 space-y-4`
+**`src/pages/en/ValuationPageEn.tsx` (lines 74–80)** — 6 entries (mirroring FR symmetry, with new Realtor Cantley entry at position 5):
 
-### What stays unchanged
-- Card-variant trust block (lines ~245–266): zero edits
-- Component props/public API
-- `T` translation table (reuses `trustAlt` + `trustTransactions`)
-- Existing `yanisPhoto` import
+```tsx
+pages={[
+  { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull" },
+  { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
+  { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell" },
+  { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea" },
+  { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley" },
+  { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+]}
+```
 
-## Change 2 — `e2e/valuation-form.spec.ts`
+### Tests
 
-Append ONE test (do not touch the existing 6):
+Append 3 tests to `e2e/navigation-flows.spec.ts`:
 
 ```ts
-test("Hub (glass variant) shows trust signal block with broker name + Hall of Fame", async ({ page }) => {
-  await page.goto(`${BASE}/evaluation-gratuite-gatineau`, { waitUntil: "domcontentloaded" });
-  const glass = page.locator(".backdrop-blur-xl").first();
-  await expect(glass).toBeVisible();
-  await expect(glass.getByText("Yanis Gauthier-Sigeris")).toBeVisible();
-  await expect(glass.getByText(/Hall of Fame/i)).toBeVisible();
+test("Hull page primary CTA goes to local Hull valuation", async ({ page }) => {
+  await page.goto("/hull", { waitUntil: "domcontentloaded" });
+  const cta = page.locator('a[href="/evaluation-maison-hull"]').first();
+  await expect(cta).toBeVisible({ timeout: 15000 });
+});
+
+test("Aylmer page primary CTA goes to local Aylmer valuation", async ({ page }) => {
+  await page.goto("/aylmer", { waitUntil: "domcontentloaded" });
+  const cta = page.locator('a[href="/evaluation-maison-aylmer"]').first();
+  await expect(cta).toBeVisible({ timeout: 15000 });
+});
+
+test("FR valuation hub surfaces Hull and Aylmer local valuations", async ({ page }) => {
+  await page.goto("/evaluation-gratuite-gatineau", { waitUntil: "domcontentloaded" });
+  await expect(page.locator('a[href="/evaluation-maison-hull"]').first()).toBeVisible({ timeout: 15000 });
+  await expect(page.locator('a[href="/evaluation-maison-aylmer"]').first()).toBeVisible({ timeout: 15000 });
 });
 ```
 
-Selector mirrors the existing glass-variant test (`.backdrop-blur-xl`) rather than `div.card-elevated`.
+Will not run E2E in this sprint — user republishes first.
 
-## Validation
-1. Run build (vite) — expect PASS.
-2. Report ValuationForm.tsx line count before/after (~496 → ~516).
-3. Confirm card variant DOM untouched.
-4. Note: live E2E run requires republish before validating against `ygs-home-hub.lovable.app`.
+### Verification
 
-## Final report will include
-- Build PASS/FAIL
-- Line count before/after
-- Confirmation card variant unchanged
-- New E2E test name
-- Republish reminder
+- `rg "/evaluation-gratuite-gatineau" src/pages/HullPage.tsx src/pages/AylmerPage.tsx` → expect 0 hits
+- `rg "\"/en/home-valuation\"" src/pages/en/HullPageEn.tsx src/pages/en/AylmerPageEn.tsx` → expect 0 hits
+- Build runs automatically.
+
+### Files touched (exactly 7)
+1. `src/pages/HullPage.tsx` — 3 href swaps
+2. `src/pages/AylmerPage.tsx` — 3 href swaps
+3. `src/pages/en/HullPageEn.tsx` — 3 href swaps
+4. `src/pages/en/AylmerPageEn.tsx` — 3 href swaps
+5. `src/pages/ValuationPage.tsx` — RelatedPages array (6 entries, 2 swapped in)
+6. `src/pages/en/ValuationPageEn.tsx` — RelatedPages array (6 entries, expanded from 5)
+7. `e2e/navigation-flows.spec.ts` — append 3 tests
+
+Reminder: republish before running the new E2E tests against the live host.
