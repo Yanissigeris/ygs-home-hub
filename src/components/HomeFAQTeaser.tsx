@@ -46,7 +46,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
       <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream)" }}>
         <div className="section-container">
           {/* Mobile: stacked vertically. Desktop: 2-column sidebar layout */}
-          <div className="flex flex-col lg:grid lg:grid-cols-[1fr_2fr] lg:gap-[6rem]">
+          <div className="flex flex-col lg:grid lg:grid-cols-[minmax(280px,1fr)_2fr] lg:gap-[6rem]">
             {/* Left sidebar — sticky on desktop, normal block on mobile */}
             <div className="lg:sticky lg:top-[100px] lg:self-start mb-6 lg:mb-0">
               <p className="label-overline mb-2">{overline}</p>
