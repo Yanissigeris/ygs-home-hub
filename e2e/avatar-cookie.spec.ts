@@ -48,7 +48,7 @@ for (const c of CASES) {
     await page.setViewportSize(MOBILE);
     await page.context().clearCookies();
 
-    await page.goto("/");
+    await page.goto(BASE + "/");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
     // Pathway section is below the fold — scroll until card is mounted/visible
@@ -69,7 +69,7 @@ for (const c of CASES) {
     expect(await readIntentCookie(page)).toBe(c.intent);
 
     // Go to a long page where the sticky CTA can appear without footer overlap
-    await page.goto("/blogue");
+    await page.goto(BASE + "/blogue");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 
     // Trigger the sticky bar (visible after >55vh scroll, footer not in view)
