@@ -8,6 +8,10 @@ import { test, expect, type Page } from "../playwright-fixture";
  *   label + href reflect the stored intent.
  */
 
+// The id-preview host requires Lovable auth; use the published host for an
+// unauthenticated end-to-end run.
+const BASE = "https://ygs-home-hub.lovable.app";
+
 const MOBILE = { width: 390, height: 844 };
 
 const CASES = [
