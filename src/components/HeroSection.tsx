@@ -608,8 +608,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 width: "auto",
                 zIndex: 4,
                 filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.35))",
-                WebkitMaskImage: "radial-gradient(ellipse at center 40%, black 60%, transparent 92%)",
-                maskImage: "radial-gradient(ellipse at center 40%, black 60%, transparent 92%)",
+                WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
+                maskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
               }}
               loading="eager"
               decoding="auto"
@@ -635,8 +635,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 width: "auto",
                 zIndex: 4,
                 filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                WebkitMaskImage: "radial-gradient(ellipse at center 40%, black 60%, transparent 92%)",
-                maskImage: "radial-gradient(ellipse at center 40%, black 60%, transparent 92%)",
+                WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
+                maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
               }}
               loading="eager"
               decoding="auto"
