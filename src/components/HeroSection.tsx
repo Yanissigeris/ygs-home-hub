@@ -544,7 +544,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 transition={{ duration: 0.6, delay: 0.25 }}
                 className="mt-3 block font-light"
                 style={{
-                  color: "rgba(255,255,255,0.7)",
+                  color: "rgba(255,255,255,0.85)",
                   fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
                   lineHeight: 1.6,
                   maxWidth: "480px",
