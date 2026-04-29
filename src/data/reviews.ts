@@ -30,11 +30,11 @@ export const reviews: Review[] = [
   },
   {
     id: "s3",
-    name: "Nathalie B.",
+    name: "Jessica",
     location: "Aylmer",
     category: "seller",
-    short: "\n",
-    full: "\n",
+    short: "J'ai vécu une expérience formidable en travaillant avec Yanis lors de la vente de ma maison. Du début à la fin, il s'est montré professionnel, compétent et d'un soutien incroyable tout au long du processus.",
+    full: "J'ai vécu une expérience formidable en travaillant avec Yanis lors de la vente de ma maison. Du début à la fin, il s'est montré professionnel, compétent et d'un soutien incroyable tout au long du processus. Il a pris le temps de m'expliquer chaque étape, a répondu à toutes mes questions et a fait en sorte que ce qui aurait pu être une expérience stressante se déroule sans problème et de manière tout à fait agréable.\n\nSa stratégie marketing, son souci du détail et son dévouement se sont vraiment démarqués. Ma maison a été magnifiquement mise en valeur et a immédiatement attiré un vif intérêt. J’ai toujours eu le sentiment que mes intérêts étaient sa priorité absolue, et sa communication a été excellente tout au long du processus.\n\nJe lui suis extrêmement reconnaissante pour son travail acharné et je le recommande vivement à toute personne souhaitant acheter ou vendre une maison. Si vous recherchez quelqu’un de fiable, de professionnel et qui se soucie sincèrement de ses clients, Yanis est le choix idéal!",
     rating: 5,
   },
 
