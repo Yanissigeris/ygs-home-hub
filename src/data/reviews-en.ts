@@ -51,11 +51,11 @@ export const reviewsEn: Review[] = [
   },
   {
     id: "b3",
-    name: "Émilie G.",
+    name: "Christian",
     location: "Hull",
     category: "buyer",
-    short: "Strong negotiation and honest advice — Yanis saved me thousands.",
-    full: "Yanis advised me NOT to overbid on a property that had hidden issues. He then found a better option and negotiated an excellent price. It's rare to find a broker who tells you not to buy when it's not the right deal.",
+    short: "Working with Yanis was an outstanding experience from start to finish. He was professional, responsive, and incredibly knowledgeable about the market.",
+    full: "Working with Yanis was an outstanding experience from start to finish. He was professional, responsive, and incredibly knowledgeable about the market. Every step of the process was smooth, and he always made sure we felt informed and confident in our decisions. His dedication and attention to detail was truly astonishing. I would highly recommend Yanis to anyone looking to buy or sell a home!",
     rating: 5,
   },
 
