@@ -124,24 +124,31 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden"
+        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:py-24"
         style={{ background: "#F5F1EA" }}
       >
-        {/* Desktop: photo lifestyle absolute right (55% width) */}
+        {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
         <div
           aria-hidden="true"
-          className="hidden md:block absolute top-0 right-0 h-full w-[55%]"
+          className="hidden md:block absolute"
           style={{
+            top: "80px",
+            right: "4%",
+            width: "50%",
+            height: "calc(100% - 160px)",
             backgroundImage: `url(${lifestyleBgImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            boxShadow:
+              "0 20px 60px rgba(23,48,59,0.30), 0 8px 20px rgba(23,48,59,0.15)",
+            zIndex: 1,
           }}
         >
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg, rgba(245,241,234,0.85) 0%, rgba(245,241,234,0.2) 35%, rgba(23,48,59,0.25) 100%)",
+                "linear-gradient(135deg, rgba(245,241,234,0.15) 0%, rgba(23,48,59,0.10) 100%)",
             }}
           />
         </div>
@@ -179,7 +186,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
 
           {/* Floating cards block with deep shadow */}
           <div
-            className="relative z-10 mt-10 md:mt-14"
+            className="relative z-10 mt-10 md:mt-14 md:w-[62%]"
             style={{
               borderRadius: 3,
               overflow: "hidden",
