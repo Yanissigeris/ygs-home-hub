@@ -40,7 +40,7 @@ export const properties: Property[] = [
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
     mls: "11366995",
-    status: "active",
+    status: "sold",
   },
   {
     id: "20453879",
