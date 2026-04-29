@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
 
 const STORAGE_KEY = "ygs_cookie_consent";
@@ -175,6 +176,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
 /* ── Main Banner ── */
 const CookieConsent = () => {
   const lang = useLanguage();
+  const isMobile = useIsMobile();
   const [visible, setVisible] = React.useState(false);
   const [showPrefs, setShowPrefs] = React.useState(false);
   const [dismissed, setDismissed] = React.useState(false);
@@ -234,64 +236,146 @@ const CookieConsent = () => {
   return (
     <>
       {/* Banner */}
-      <div
-        className="fixed bottom-0 left-0 right-0 z-[9999]"
-        style={{
-          background: "var(--ink)",
-          borderTop: "2px solid var(--gold)",
-          boxShadow: "0 -4px 30px rgba(0,0,0,.2)",
-          transform: visible ? "translateY(0)" : "translateY(100%)",
-          transition: "transform .4s cubic-bezier(.22,.61,.36,1)",
-          paddingBottom: "calc(1.25rem + env(safe-area-inset-bottom, 0px))",
-        }}
-        role="dialog"
-        aria-label={t.title}
-      >
-        <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:justify-between md:gap-8 md:px-10 md:py-5">
-          {/* Text */}
-          <div className="max-w-[580px]">
-            <p className="flex items-center gap-2 font-serif text-[1rem] font-semibold text-white mb-1">
-              <span>🍪</span> {t.title}
-            </p>
-            <p className="text-[.78rem] leading-[1.6]" style={{ color: "rgba(255,255,255,.6)" }}>
-              {t.body}{" "}
-              <Link to={t.privacyHref} className="underline transition-colors" style={{ color: "var(--gold)", fontSize: ".75rem" }}>
-                {t.learnMore}
-              </Link>
-            </p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-2 md:gap-3 shrink-0">
+      {isMobile ? (
+        <div
+          role="dialog"
+          aria-live="polite"
+          aria-label={t.title}
+          className="fixed bottom-0 inset-x-0 z-[9999] md:hidden"
+          style={{
+            background: "var(--ink)",
+            borderTop: "2px solid var(--gold)",
+            padding: "10px 12px",
+            paddingBottom: "calc(10px + env(safe-area-inset-bottom, 0px))",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            color: "var(--cream)",
+            fontSize: "11px",
+            boxShadow: "0 -4px 16px rgba(0,0,0,0.3)",
+            transform: visible ? "translateY(0)" : "translateY(100%)",
+            transition: "transform .35s cubic-bezier(.22,.61,.36,1)",
+          }}
+        >
+          <span style={{ flex: 1, lineHeight: 1.3, fontSize: "11px" }}>
+            {lang === "fr" ? "Cookies. Loi 25 du Québec." : "Cookies. Quebec Law 25."}
+          </span>
+          <div style={{ display: "flex", gap: "5px", flexShrink: 0 }}>
             <button
               onClick={handleRefuse}
-              className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
-              style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
+              aria-label={lang === "fr" ? "Tout refuser" : "Refuse all"}
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.3)",
+                color: "var(--cream)",
+                padding: "7px 9px",
+                fontSize: "10px",
+                borderRadius: "2px",
+                cursor: "pointer",
+                fontWeight: 500,
+                minHeight: "36px",
+                whiteSpace: "nowrap",
+              }}
             >
-              {t.refuse}
+              {lang === "fr" ? "Refuser" : "Refuse"}
             </button>
             <button
               onClick={() => setShowPrefs(true)}
-              className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
-              style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
+              aria-label={lang === "fr" ? "Personnaliser les préférences" : "Customize preferences"}
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.3)",
+                color: "var(--cream)",
+                padding: "7px 9px",
+                fontSize: "10px",
+                borderRadius: "2px",
+                cursor: "pointer",
+                fontWeight: 500,
+                minHeight: "36px",
+                whiteSpace: "nowrap",
+              }}
             >
-              {t.customize}
+              {lang === "fr" ? "Options" : "Options"}
             </button>
             <button
               onClick={handleAccept}
-              className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-white transition-opacity hover:opacity-90"
-              style={{ background: "var(--gold)", border: "none", minHeight: 44 }}
+              aria-label={lang === "fr" ? "Tout accepter" : "Accept all"}
+              style={{
+                background: "var(--gold)",
+                border: "1px solid var(--gold)",
+                color: "#FFFFFF",
+                padding: "7px 12px",
+                fontSize: "10px",
+                borderRadius: "2px",
+                cursor: "pointer",
+                fontWeight: 600,
+                minHeight: "36px",
+                whiteSpace: "nowrap",
+              }}
             >
-              {t.accept}
+              OK
             </button>
           </div>
         </div>
-      </div>
+      ) : (
+        <div
+          className="fixed bottom-0 left-0 right-0 z-[9999]"
+          style={{
+            background: "var(--ink)",
+            borderTop: "2px solid var(--gold)",
+            boxShadow: "0 -4px 30px rgba(0,0,0,.2)",
+            transform: visible ? "translateY(0)" : "translateY(100%)",
+            transition: "transform .4s cubic-bezier(.22,.61,.36,1)",
+            paddingBottom: "calc(1.25rem + env(safe-area-inset-bottom, 0px))",
+          }}
+          role="dialog"
+          aria-label={t.title}
+        >
+          <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:justify-between md:gap-8 md:px-10 md:py-5">
+            {/* Text */}
+            <div className="max-w-[580px]">
+              <p className="flex items-center gap-2 font-serif text-[1rem] font-semibold text-white mb-1">
+                <span>🍪</span> {t.title}
+              </p>
+              <p className="text-[.78rem] leading-[1.6]" style={{ color: "rgba(255,255,255,.6)" }}>
+                {t.body}{" "}
+                <Link to={t.privacyHref} className="underline transition-colors" style={{ color: "var(--gold)", fontSize: ".75rem" }}>
+                  {t.learnMore}
+                </Link>
+              </p>
+            </div>
 
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-2 md:gap-3 shrink-0">
+              <button
+                onClick={handleRefuse}
+                className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
+                style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
+              >
+                {t.refuse}
+              </button>
+              <button
+                onClick={() => setShowPrefs(true)}
+                className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
+                style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
+              >
+                {t.customize}
+              </button>
+              <button
+                onClick={handleAccept}
+                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-white transition-opacity hover:opacity-90"
+                style={{ background: "var(--gold)", border: "none", minHeight: 44 }}
+              >
+                {t.accept}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Re-open cookie button (bottom-left) */}
       {dismissed && !visible && !showPrefs && (
         <button
