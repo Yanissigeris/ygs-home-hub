@@ -133,7 +133,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     if (featured.length === 0) return null;
 
     return (
-      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "#FAF8F3" }}>
+      <section ref={ref} className="section-rhythm section-gold-divider md:pt-32" style={{ background: "#FAF8F3" }}>
         <div className="section-container">
           {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
