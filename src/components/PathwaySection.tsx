@@ -124,23 +124,77 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway section-rhythm section-gold-divider"
-        style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)", overflow: "hidden" }}
+        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden"
+        style={{ background: "#F5F1EA" }}
       >
-        <div className="section-container">
-          {/* Section header */}
-          <div className="mb-8 sm:mb-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-            <div>
-              <p className="label-overline mb-2" style={{ color: "#BFA476" }}>{heading.overline}</p>
-              <h2 style={{ color: "#F5F1EA" }}>{heading.title}</h2>
-            </div>
+        {/* Desktop: photo lifestyle absolute right (55% width) */}
+        <div
+          aria-hidden="true"
+          className="hidden md:block absolute top-0 right-0 h-full w-[55%]"
+          style={{
+            backgroundImage: `url(${lifestyleBgImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(245,241,234,0.85) 0%, rgba(245,241,234,0.2) 35%, rgba(23,48,59,0.25) 100%)",
+            }}
+          />
+        </div>
+
+        {/* Mobile: photo full-width band on top */}
+        <div
+          aria-hidden="true"
+          className="md:hidden w-full h-[200px] mb-8"
+          style={{
+            backgroundImage: `url(${lifestyleBgImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <div className="section-container relative z-10">
+          {/* Editorial header on cream */}
+          <div className="max-w-[580px]">
+            <p className="label-overline mb-3" style={{ color: "#A88A5A" }}>
+              {heading.overline}
+            </p>
+            <h2 style={{ color: "#17303B" }}>
+              {heading.titleFirst}{" "}
+              <span style={{ color: "#A88A5A", fontStyle: "italic" }}>
+                {heading.titleAccent}
+              </span>
+            </h2>
+            <p
+              className="prose-body mt-4"
+              style={{ color: "rgba(23,48,59,0.7)", maxWidth: 520 }}
+            >
+              {heading.subtitle}
+            </p>
           </div>
 
-          {/* Cards */}
+          {/* Floating cards block with deep shadow */}
+          <div
+            className="relative z-10 mt-10 md:mt-14"
+            style={{
+              borderRadius: 3,
+              overflow: "hidden",
+              boxShadow: "0 30px 80px rgba(23,48,59,0.35)",
+              background: "linear-gradient(175deg, #0c1f28, #17303B)",
+            }}
+          >
+            {/* Gold top filet */}
+            <div aria-hidden="true" style={{ height: 2, background: "#A88A5A" }} />
+
           <div
             className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px overflow-hidden"
-            style={{ border: "1px solid var(--border)", borderRadius: 3, background: "rgba(255,255,255,0.06)" }}
+            style={{ background: "rgba(255,255,255,0.06)" }}
           >
+
             {pathways.map((p, i) => (
               <Link
                 key={p.href}
