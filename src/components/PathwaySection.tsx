@@ -330,6 +330,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
               </Link>
             ))}
           </div>
+          </div>
         </div>
       </section>
     );
