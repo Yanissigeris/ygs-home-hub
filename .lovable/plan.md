@@ -1,100 +1,119 @@
-# Refonte éditoriale du PathwaySection
+# Refonte typographique des cards du PathwaySection
 
-Transformation du `PathwaySection` actuel (fond dark uni, header en haut, 3 cards en dessous) vers une composition asymétrique style magazine print : fond split (cream à gauche + photo lifestyle à droite), header éditorial sur le cream, et bloc des 3 cards en dark petrol qui flotte avec ombre profonde par-dessus la photo.
+Suppression du bloc image 16:9 dans chaque card et adoption d'une présentation purement éditoriale (numéros serif italiques, titre, description, CTA), sans toucher à la structure asymétrique de la section ni à la logique métier.
 
 ## Fichier modifié
 
-Un seul fichier : `src/components/PathwaySection.tsx`. Aucun autre fichier touché.
+Un seul : `src/components/PathwaySection.tsx`.
 
 ## Ce qui reste intact (verbatim)
 
-- Imports `cardVendreImg`, `cardAcheterImg`, `cardPlexImg`, `setAvatarIntent`, `AvatarIntent`, `trackEvent`, `Link`
-- Tableaux `pathwaysFr` et `pathwaysEn` (data, badges, intents, hrefs, alt text)
-- Interface `Pathway` et `PathwaySectionProps`
-- `forwardRef<HTMLElement>` + `displayName`
-- Logique `onClick` : `setAvatarIntent(p.intent)` + `trackEvent("avatar_router_select", { avatar: p.intent })`
-- Hover handlers verbatim (translateY -5px, boxShadow gold, image saturate 0.95, h3 color #BFA476)
-- Structure interne de chaque card : aspect-[16/9], `<img>` avec lazy/decoding/onLoad/onError/img-shimmer, numéro `{p.num}` absolu top-left, badge `{p.badge}` absolu top-right, `<h3>`, `<p>`, span CTA avec border-bottom gold
+- Imports : `lifestyleBgImg`, `setAvatarIntent`, `AvatarIntent`, `trackEvent`, `Link`, `React`
+- Imports `cardVendreImg` / `cardAcheterImg` / `cardPlexImg` : conservés (les objets `pathways` y font toujours référence via `image` / `imageSm`, donc TypeScript ne signalera pas unused)
+- Tableaux `pathwaysFr` / `pathwaysEn` (champs `image`, `imageSm`, `imageAlt` gardés dans les objets)
+- Interface `Pathway`, `PathwaySectionProps`
+- `headingFr` / `headingEn` (overline, titleFirst, titleAccent, subtitle)
+- `forwardRef`, `displayName`, export
+- Section : background cream `#F5F1EA`, photo lifestyle absolute right 55% desktop, band 200px mobile
+- Header éditorial two-tone (`#17303B` + `#A88A5A` italic) + subtitle
+- Wrapper cards flottant : gradient `linear-gradient(175deg, #0c1f28, #17303B)`, boxShadow `0 30px 80px rgba(23,48,59,0.35)`, borderRadius 3, overflow hidden, filet doré 2px en haut
+- Grid `grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr]`
+- `onClick` → `setAvatarIntent(p.intent)` + `trackEvent("avatar_router_select", { avatar: p.intent })`
 
-## Changements
+## Changement précis
 
-### 1. Enrichir `headingFr` et `headingEn`
+Dans `pathways.map((p, i) => (...))`, remplacer l'intégralité du contenu interne du `<Link>` (actuellement : div image 16:9 avec `<img>`, span numéro absolute, span badge absolute + div body) par un seul body purement typographique.
 
-Remplacer `title: "..."` par 3 nouveaux champs :
+### Nouveau contenu interne du `<Link>`
 
-```ts
-const headingFr = {
-  overline: "Choisissez votre prochaine étape",
-  titleFirst: "Où en êtes-vous dans",
-  titleAccent: "votre projet?",
-  subtitle: "Trois chemins selon votre situation. Choisissez celui qui vous correspond — vous serez accompagné de A à Z.",
-};
-
-const headingEn = {
-  overline: "Choose your next step",
-  titleFirst: "Where are you in",
-  titleAccent: "your project?",
-  subtitle: "Three paths depending on your situation. Choose the one that fits — you'll be guided from A to Z.",
-};
+```tsx
+<Link
+  key={p.href}
+  to={p.href}
+  onClick={() => {
+    setAvatarIntent(p.intent);
+    trackEvent("avatar_router_select", { avatar: p.intent });
+  }}
+  className="group flex flex-col transition-all duration-300 relative overflow-hidden p-[1.5rem] md:p-[1.75rem_1.5rem]"
+  style={{
+    background: "rgba(255,255,255,0.03)",
+    borderRight: i < pathways.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none",
+    minHeight: "270px",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.zIndex = "2";
+    e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)";
+    e.currentTarget.style.transform = "translateY(-5px)";
+    e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+    const title = e.currentTarget.querySelector('h3');
+    if (title) title.style.color = "#BFA476";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.zIndex = "";
+    e.currentTarget.style.boxShadow = "";
+    e.currentTarget.style.transform = "";
+    e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+    const title = e.currentTarget.querySelector('h3');
+    if (title) title.style.color = "#F5F1EA";
+  }}
+>
+  {p.badge && (
+    <span style={{
+      fontSize: "0.56rem", color: "#A88A5A", textTransform: "uppercase",
+      letterSpacing: "0.12em", fontWeight: 600, marginBottom: "0.75rem",
+      display: "block",
+    }}>
+      — {p.badge}
+    </span>
+  )}
+  <span aria-hidden="true" style={{
+    fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(2.25rem, 4vw, 2.75rem)",
+    lineHeight: 1, color: "#A88A5A", opacity: 0.7, marginBottom: "0.75rem",
+    display: "block",
+  }}>
+    {p.num}
+  </span>
+  <h3 style={{
+    fontFamily: "var(--serif)", fontStyle: "italic",
+    fontSize: "clamp(1.05rem, 2vw, 1.2rem)", fontWeight: 600,
+    color: "#F5F1EA", letterSpacing: "-.01em", marginBottom: "0.5rem",
+  }}>
+    {p.title}
+  </h3>
+  <p className="flex-1" style={{
+    fontSize: "0.8rem", color: "rgba(245,241,234,0.55)", lineHeight: 1.55,
+  }}>
+    {p.text}
+  </p>
+  <span className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
+    style={{
+      fontSize: ".72rem", fontWeight: 600, color: "#A88A5A",
+      letterSpacing: ".06em", textTransform: "uppercase",
+      borderBottom: "1px solid rgba(168,138,90,.3)",
+      paddingBottom: 2, alignSelf: "flex-start",
+      minHeight: 44, display: "inline-flex", alignItems: "center",
+    }}>
+    {p.cta} →
+  </span>
+</Link>
 ```
 
-### 2. Ajouter import image lifestyle
+### Notes techniques
 
-```ts
-import lifestyleBgImg from "@/assets/service-vendre.webp";
-```
-
-(Réutilise `service-vendre.webp` — salon résidentiel moderne, déjà dans le repo.)
-
-### 3. Nouvelle structure JSX
-
-La `<section>` devient un conteneur `relative` sur fond cream `#F5F1EA`. À l'intérieur :
-
-```text
-<section bg=cream relative overflow=hidden>
-  ├─ [DESKTOP md+] <div absolute right-0 top-0 w-[55%] h-full> photo lifestyle + overlay petrol 0.25
-  ├─ [MOBILE]      <div md:hidden h-[200px]> photo lifestyle full-width en haut
-  └─ <div section-container relative z-10>
-       ├─ Header éditorial (max-w-[580px], texte sur cream)
-       │    ├─ overline gold #A88A5A uppercase
-       │    ├─ <h2> two-tone : titleFirst en #17303B + <span> titleAccent en #A88A5A
-       │    └─ subtitle ink/70
-       └─ Cards wrapper flottant (mt-12)
-            ├─ filet doré 2px en haut (#A88A5A)
-            ├─ background petrol gradient (#0c1f28 → #17303B)
-            ├─ boxShadow: 0 30px 80px rgba(23,48,59,0.35)
-            └─ grid 1 col / md:[1.5fr_1fr_1fr] avec les 3 <Link> verbatim
-```
-
-### 4. Détails techniques de la nouvelle section
-
-- Conteneur racine : `<section ref={ref} className="section-pathway section-rhythm section-gold-divider relative overflow-hidden" style={{ background: "#F5F1EA" }}>`
-- Photo desktop : `<div aria-hidden className="hidden md:block absolute top-0 right-0 h-full w-[55%]" style={{ backgroundImage: \`url(${lifestyleBgImg})\`, backgroundSize: "cover", backgroundPosition: "center" }}>` + un overlay enfant `absolute inset-0` avec `background: "linear-gradient(90deg, rgba(245,241,234,0.4) 0%, rgba(23,48,59,0.25) 100%)"` pour fondre vers le cream à gauche.
-- Photo mobile : `<div className="md:hidden w-full h-[200px] -mt-4 mb-8 relative" style={{ backgroundImage, backgroundSize: cover, backgroundPosition: center }}>`
-- Header bloc : `<div className="relative z-10 max-w-[580px]">`
-  - overline `<p className="label-overline mb-3" style={{ color: "#A88A5A" }}>`
-  - titre `<h2 style={{ color: "#17303B" }}>{titleFirst} <span style={{ color: "#A88A5A", fontStyle: "italic" }}>{titleAccent}</span></h2>`
-  - subtitle `<p className="prose-body mt-4" style={{ color: "rgba(23,48,59,0.7)", maxWidth: 520 }}>`
-- Cards wrapper : `<div className="relative z-10 mt-10 md:mt-14" style={{ borderRadius: 3, overflow: "hidden", boxShadow: "0 30px 80px rgba(23,48,59,0.35)", background: "linear-gradient(175deg, #0c1f28, #17303B)" }}>`
-  - filet doré : `<div aria-hidden style={{ height: 2, background: "#A88A5A" }} />`
-  - grid : `<div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px" style={{ background: "rgba(255,255,255,0.06)" }}>` puis `pathways.map(...)` avec les `<Link>` verbatim depuis le code actuel (lignes 140-269).
-
-### 5. Comportement responsive
-
-| Viewport  | Photo                              | Header                       | Cards            |
-|-----------|------------------------------------|------------------------------|------------------|
-| ≥ 768px   | absolue à droite (55% width, full h) | sur cream à gauche, max 580px | flottent par-dessus la photo, 3 col |
-| < 768px   | bandeau 200px en haut full-width    | sur cream pleine largeur     | stack vertical 1 col |
+- Suppression complète du `<div className="aspect-[16/9] img-shimmer">` et de son `<img>`.
+- Numéro et badge migrent dans le body (plus d'`absolute top-4`).
+- Hover : suppression des deux blocs `const img = ... saturate(...)` (puisqu'il n'y a plus d'image dans la card).
+- Padding appliqué directement sur le `<Link>` (plus besoin du wrapper body intérieur).
 
 ## Critères d'acceptation
 
-- Export par défaut `PathwaySection` avec `forwardRef` et `displayName` inchangés.
-- FR + EN affichent correctement `titleFirst` (ink) + `titleAccent` (gold italique) + `subtitle`.
-- Desktop ≥ 768px : split visuel cream/photo, cards flottantes avec ombre profonde.
-- Mobile < 768px : photo 200px → header cream → cards en stack.
-- Filet doré 2px visible en haut du bloc cards.
-- `boxShadow: 0 30px 80px rgba(23,48,59,0.35)` sur le wrapper cards.
-- Les 3 cards conservent : structure interne, hover (translateY-5, gold shadow, image saturate, h3 gold), badge "Priorité investisseurs" sur card 01, numéros 01/02/03.
-- `onClick` continue de tracker `avatar_router_select` et set le cookie avatar.
-- Aucun import inutilisé, TypeScript propre.
-- Aucun autre fichier modifié.
+- Plus aucune `<img>` rendue dans les cards.
+- Ordre vertical : badge optionnel → numéro serif italique gold (~44px) → h3 italique cream (~19px) → description 0.8rem → CTA gold underline.
+- Card 01 affiche le badge "— Priorité investisseurs" / "— Investors first".
+- Cards `minHeight: 270px`, padding `p-[1.5rem] md:p-[1.75rem_1.5rem]`.
+- Hover : `translateY(-5px)`, gold shadow, background lighten, h3 → `#BFA476`. Aucune référence à `<img>` dans le hover.
+- FR et EN rendent correctement.
+- Section asymétrique (cream + photo 55% droite + cards flottantes) inchangée.
+- Wrapper conserve : gradient petrol, boxShadow profonde, borderRadius 3, filet doré 2px.
+- `onClick` → `setAvatarIntent` + `trackEvent("avatar_router_select", ...)` inchangé.
+- TypeScript propre, aucun fichier autre que `PathwaySection.tsx` modifié.
