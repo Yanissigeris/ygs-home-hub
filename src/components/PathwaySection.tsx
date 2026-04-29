@@ -203,13 +203,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   setAvatarIntent(p.intent);
                   trackEvent("avatar_router_select", { avatar: p.intent });
                 }}
-                className="group flex flex-col transition-all duration-300 relative overflow-hidden"
+                className="group flex flex-col transition-all duration-300 relative overflow-hidden p-[1.5rem] md:p-[1.75rem_1.5rem]"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   borderRight:
                     i < pathways.length - 1
                       ? "1px solid rgba(255,255,255,0.06)"
                       : "none",
+                  minHeight: "270px",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.zIndex = "2";
@@ -219,8 +220,6 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   e.currentTarget.style.background = "rgba(255,255,255,0.07)";
                   const title = e.currentTarget.querySelector('h3');
                   if (title) title.style.color = "#BFA476";
-                  const img = e.currentTarget.querySelector('img');
-                  if (img) img.style.filter = "saturate(0.95)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.zIndex = "";
@@ -229,104 +228,79 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   e.currentTarget.style.background = "rgba(255,255,255,0.03)";
                   const title = e.currentTarget.querySelector('h3');
                   if (title) title.style.color = "#F5F1EA";
-                  const img = e.currentTarget.querySelector('img');
-                  if (img) img.style.filter = "saturate(0.82)";
                 }}
               >
-                {/* Image */}
-                <div className="relative overflow-hidden aspect-[16/9] img-shimmer">
-                  <img
-                    src={p.image}
-                    alt={p.imageAlt + " — YGS Yanis Gauthier-Sigeris"}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width={648}
-                    height={486}
-                    style={{ filter: "saturate(0.82)" }}
-                    onLoad={(e) => {
-                      (
-                        e.target as HTMLImageElement
-                      ).parentElement!.classList.remove("img-shimmer");
-                    }}
-                    onError={(e) => {
-                      const t = e.target as HTMLImageElement;
-                      t.style.display = "none";
-                      t.parentElement!.style.background = "var(--ink)";
-                      t.parentElement!.classList.remove("img-shimmer");
-                    }}
-                  />
+                {p.badge && (
                   <span
-                    className="absolute top-4 left-4"
                     style={{
-                      fontFamily: "var(--serif)",
-                      fontSize: "1.1rem",
-                      color: "rgba(255,255,255,.6)",
-                    }}
-                    aria-hidden="true"
-                  >
-                    {p.num}
-                  </span>
-                  {p.badge && (
-                    <span
-                      className="absolute top-4 right-4 rounded-full px-3 py-1"
-                      style={{
-                        background: "var(--gold)",
-                        color: "#fff",
-                        fontSize: ".72rem",
-                        fontWeight: 700,
-                        letterSpacing: ".04em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {p.badge}
-                    </span>
-                  )}
-                </div>
-
-                {/* Card body */}
-                <div className="flex flex-1 flex-col p-[1.25rem] md:p-[2rem]">
-                  <h3
-                    style={{
-                      fontFamily: "var(--serif)",
-                      fontSize: "clamp(1.2rem, 3vw, 1.5rem)",
-                      fontWeight: 600,
-                      color: "#F5F1EA",
-                      letterSpacing: "-.01em",
-                      marginBottom: ".5rem",
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    className="flex-1 pathway-desc"
-                    style={{
-                      fontSize: ".9rem",
-                      color: "rgba(245,241,234,0.38)",
-                      lineHeight: 1.78,
-                    }}
-                  >
-                    {p.text}
-                  </p>
-                  <span
-                    className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
-                    style={{
-                      fontSize: ".78rem",
-                      fontWeight: 600,
+                      fontSize: "0.56rem",
                       color: "#A88A5A",
-                      letterSpacing: ".06em",
                       textTransform: "uppercase",
-                      borderBottom: "1px solid rgba(168,138,90,.3)",
-                      paddingBottom: 2,
-                      alignSelf: "flex-start",
-                      minHeight: 44,
-                      display: "inline-flex",
-                      alignItems: "center",
+                      letterSpacing: "0.12em",
+                      fontWeight: 600,
+                      marginBottom: "0.75rem",
+                      display: "block",
                     }}
                   >
-                    {p.cta} →
+                    — {p.badge}
                   </span>
-                </div>
+                )}
+                <span
+                  aria-hidden="true"
+                  style={{
+                    fontFamily: "var(--serif)",
+                    fontStyle: "italic",
+                    fontSize: "clamp(2.25rem, 4vw, 2.75rem)",
+                    lineHeight: 1,
+                    color: "#A88A5A",
+                    opacity: 0.7,
+                    marginBottom: "0.75rem",
+                    display: "block",
+                  }}
+                >
+                  {p.num}
+                </span>
+                <h3
+                  style={{
+                    fontFamily: "var(--serif)",
+                    fontStyle: "italic",
+                    fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
+                    fontWeight: 600,
+                    color: "#F5F1EA",
+                    letterSpacing: "-.01em",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {p.title}
+                </h3>
+                <p
+                  className="flex-1"
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "rgba(245,241,234,0.55)",
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {p.text}
+                </p>
+                <span
+                  className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
+                  style={{
+                    fontSize: ".72rem",
+                    fontWeight: 600,
+                    color: "#A88A5A",
+                    letterSpacing: ".06em",
+                    textTransform: "uppercase",
+                    borderBottom: "1px solid rgba(168,138,90,.3)",
+                    paddingBottom: 2,
+                    alignSelf: "flex-start",
+                    minHeight: 44,
+                    display: "inline-flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {p.cta} →
+                </span>
               </Link>
             ))}
           </div>
