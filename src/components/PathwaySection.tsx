@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import cardVendreImg from "@/assets/service-vendre.webp";
 import cardAcheterImg from "@/assets/service-acheter.webp";
 import cardPlexImg from "@/assets/service-plex.webp";
+import lifestyleBgImg from "@/assets/service-vendre.webp";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
