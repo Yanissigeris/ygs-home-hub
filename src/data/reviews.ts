@@ -59,11 +59,11 @@ export const reviews: Review[] = [
   },
   {
     id: "b3",
-    name: "Émilie G.",
+    name: "Christian",
     location: "Hull",
     category: "buyer",
-    short: "Négociation solide et conseils honnêtes — Yanis m'a fait économiser des milliers.",
-    full: "Yanis m'a conseillé de ne PAS surenchérir sur une propriété qui avait des enjeux cachés. Il a ensuite trouvé une meilleure option et négocié un prix excellent. C'est rare un courtier qui vous dit de ne pas acheter quand ce n'est pas la bonne affaire.",
+    short: "Travailler avec Yanis a été une expérience exceptionnelle du début à la fin. Il a été professionnel, réactif et incroyablement bien informé sur le marché.",
+    full: "Travailler avec Yanis a été une expérience exceptionnelle du début à la fin. Il a été professionnel, réactif et incroyablement bien informé sur le marché. Chaque étape du processus s'est déroulée sans problème, et il s'est toujours assuré que nous nous sentions informés et confiants dans nos décisions. Son dévouement et son souci du détail étaient vraiment étonnants. Je recommande vivement Yanis à tous ceux qui cherchent à acheter ou à vendre une maison !",
     rating: 5,
   },
 
