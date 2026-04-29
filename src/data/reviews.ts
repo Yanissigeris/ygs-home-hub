@@ -33,8 +33,8 @@ export const reviews: Review[] = [
     name: "Nathalie B.",
     location: "Aylmer",
     category: "seller",
-    short: "La coordination vente-achat était stressante, mais Yanis a tout orchestré parfaitement.",
-    full: "On devait vendre et acheter en même temps — un cauchemar logistique. Yanis a coordonné les deux transactions, géré les délais et gardé tout le monde calme. À aucun moment on s'est sentis perdus ou pressés. Un vrai pro.",
+    short: "\n",
+    full: "\n",
     rating: 5,
   },
 
@@ -110,11 +110,11 @@ export const reviews: Review[] = [
   // — Plex / Investors —
   {
     id: "p1",
-    name: "Tasha",
+    name: "Clarisse",
     location: "Aylmer",
     category: "plex",
-    short: "Très professionnel et attentionné. Il répond toujours rapidement, exactement tout ce que l’on recherche chez un courtier !!! Je recommanderais fortement ses services.",
-    full: "Je regardais un duplex qui semblait une bonne affaire. Yanis a fait une analyse détaillée et m'a montré que les revenus réels ne justifiaient pas le prix demandé. On a trouvé un bien meilleur investissement deux semaines plus tard. Sa rigueur m'a fait économiser gros.",
+    short: "Waouh\nC'est vu ,c'est vendu, just one day.\nIncroyable pourtant vrai.\nMerci encore Yanis ,pour ton efficacité et ton professionnalisme\n\nClarisse",
+    full: "Waouh\nC'est vu ,c'est vendu, just one day.\nIncroyable pourtant vrai.\nMerci encore Yanis ,pour ton efficacité et ton professionnalisme\n\nClarisse",
     rating: 5,
   },
   {
@@ -122,8 +122,8 @@ export const reviews: Review[] = [
     name: "Abdoulaye",
     location: "Gatineau",
     category: "plex",
-    short: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais.",
-    full: "On pensait que vendre un plex occupé serait compliqué. Yanis a géré la coordination avec les locataires, la documentation et les visites avec professionnalisme. Le résultat a dépassé nos attentes — meilleur prix que ce qu'on espérait.",
+    short: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais. ",
+    full: "Un grand merci Yanis Sigeris pour ton accompagnement pour la vente de notre duplex. Tu as était d’un grand support tout le long et on a obtenu un bon prix dans un court délais. ",
     rating: 5,
   },
 ];

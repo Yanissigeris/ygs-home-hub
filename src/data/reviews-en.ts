@@ -25,8 +25,8 @@ export const reviewsEn: Review[] = [
     name: "Nathalie B.",
     location: "Aylmer",
     category: "seller",
-    short: "Coordinating a sale and purchase was stressful, but Yanis orchestrated everything perfectly.",
-    full: "We had to sell and buy at the same time — a logistical nightmare. Yanis coordinated both transactions, managed the timelines and kept everyone calm. At no point did we feel lost or rushed. A true professional.",
+    short: "\n",
+    full: "\n",
     rating: 5,
   },
 
@@ -102,11 +102,11 @@ export const reviewsEn: Review[] = [
   // — Plex / Investors —
   {
     id: "p1",
-    name: "Tasha",
+    name: "Clarisse",
     location: "Hull",
     category: "plex",
-    short: "Very professional and attentive. Always responds quickly, everything you look for in an agent!!! I would highly recommend his service.",
-    full: "I was looking at a duplex that seemed like a good deal. Yanis did a detailed analysis and showed me the actual revenues didn't justify the asking price. We found a much better investment two weeks later. His rigor saved me big.",
+    short: "Wow\nIt's seen, it's sold, just one day.\nUnbelievable yet true.\nThank you again Yanis, for your efficiency and professionalism\n\nClarisse",
+    full: "Wow\nIt's seen, it's sold, just one day.\nUnbelievable yet true.\nThank you again Yanis, for your efficiency and professionalism\n\nClarisse",
     rating: 5,
   },
   {
@@ -114,8 +114,8 @@ export const reviewsEn: Review[] = [
     name: "Abdoulaye",
     location: "Gatineau",
     category: "plex",
-    short: "“A big thank you, Yanis Sigeris, for your support throughout the sale of our duplex. You were a tremendous help from start to finish, and we obtained a good price in a short time.”",
-    full: "We thought selling an occupied plex would be complicated. Yanis managed tenant coordination, documentation and showings with professionalism. The result exceeded our expectations — better price than we hoped for.",
+    short: "A big thank you, Yanis Sigeris, for your support throughout the sale of our duplex. You were a tremendous help from start to finish, and we obtained a good price in a short time. ",
+    full: "A big thank you, Yanis Sigeris, for your support throughout the sale of our duplex. You were a tremendous help from start to finish, and we obtained a good price in a short time. ",
     rating: 5,
   },
 ];
