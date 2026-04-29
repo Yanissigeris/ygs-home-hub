@@ -556,32 +556,52 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   : "Yanis Gauthier-Sigeris, RE/MAX real estate broker in Gatineau. Nearly 9 years of experience, RE/MAX Hall of Fame, and over 300 completed transactions in Outaouais."}
               </motion.p>
 
-              {primaryCta && (
+              {(primaryCta || secondaryCta) && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mt-6 sm:mt-7"
+                  className="mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
                 >
-                  <Link
-                    to={primaryCta.href}
-                    className="hero-cta-btn inline-flex items-center justify-center uppercase w-full sm:w-auto text-center"
-                    style={{
-                      background: "#A88A5A",
-                      border: "1.5px solid #A88A5A",
-                      borderRadius: 0,
-                      color: "#FFFFFF",
-                      padding: ".95rem 1.75rem",
-                      fontSize: ".82rem",
-                      fontWeight: 600,
-                      letterSpacing: ".14em",
-                      boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
-                      transition: "all 0.3s ease",
-                    }}
-                    onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
-                  >
-                    {primaryCta.label} →
-                  </Link>
+                  {primaryCta && (
+                    <Link
+                      to={primaryCta.href}
+                      className="hero-cta-btn inline-flex items-center justify-center uppercase w-full sm:w-auto text-center"
+                      style={{
+                        background: "#A88A5A",
+                        border: "1.5px solid #A88A5A",
+                        borderRadius: 0,
+                        color: "#FFFFFF",
+                        padding: ".95rem 1.75rem",
+                        fontSize: ".82rem",
+                        fontWeight: 600,
+                        letterSpacing: ".14em",
+                        boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
+                        transition: "all 0.3s ease",
+                      }}
+                      onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
+                    >
+                      {primaryCta.label} →
+                    </Link>
+                  )}
+                  {secondaryCta && (
+                    <Link
+                      to={secondaryCta.href}
+                      className="inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      style={{
+                        color: "rgba(255,255,255,.6)",
+                        borderBottom: "1px solid rgba(255,255,255,.25)",
+                        paddingBottom: "2px",
+                        fontSize: ".85rem",
+                        fontWeight: 500,
+                        letterSpacing: ".02em",
+                        textShadow: "0 1px 4px rgba(0,0,0,0.4)",
+                      }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
+                    >
+                      {secondaryCta.label} →
+                    </Link>
+                  )}
                 </motion.div>
               )}
             </div>
