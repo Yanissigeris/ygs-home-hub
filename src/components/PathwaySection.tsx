@@ -100,12 +100,16 @@ const pathwaysEn: Pathway[] = [
 
 const headingFr = {
   overline: "Choisissez votre prochaine étape",
-  title: "Où en êtes-vous dans votre projet?",
+  titleFirst: "Où en êtes-vous dans",
+  titleAccent: "votre projet?",
+  subtitle: "Trois chemins selon votre situation. Choisissez celui qui vous correspond — vous serez accompagné de A à Z.",
 };
 
 const headingEn = {
   overline: "Choose your next step",
-  title: "Where are you in your project?",
+  titleFirst: "Where are you in",
+  titleAccent: "your project?",
+  subtitle: "Three paths depending on your situation. Choose the one that fits — you'll be guided from A to Z.",
 };
 
 interface PathwaySectionProps {
