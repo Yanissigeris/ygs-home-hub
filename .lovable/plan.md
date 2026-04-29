@@ -1,35 +1,40 @@
 ## Goal
 
-Make the main hero variant render the `secondaryCta` prop that `Index.tsx` already passes (`{ label: "Consultation", href: "/contact-yanis" }`). Currently only the compact variant renders it; the main hero ignores it.
+Replace the bulky mobile cookie banner (~165px, ~30% of viewport) with a compact ~56px slim bar so Yanis's hero portrait and primary CTA are no longer covered. Desktop rendering stays byte-identical. All Loi 25 logic (3 actions, granular toggles in the modal, GA4 conditional load, localStorage persistence) is preserved.
 
 ## File to change
 
-`src/components/HeroSection.tsx` — single surgical edit at lines 559–586.
+`src/components/CookieConsent.tsx` — single edit inside the `CookieConsent` component (the `/* ── Main Banner ── */` section, lines ~175–290). No other file is touched.
 
-## Change
+## Changes
 
-Replace the existing `{primaryCta && (<motion.div ...>...</motion.div>)}` block with a version that:
+1. **Mobile detection**: import the existing `useIsMobile` hook from `@/hooks/use-mobile` and call it inside `CookieConsent`. (Already in the codebase — uses a 768px breakpoint, matches the spec's `< 768px` requirement.)
 
-1. Gates the wrapper on `(primaryCta || secondaryCta)` instead of just `primaryCta`.
-2. Adds flex layout classes to the existing `motion.div`: `flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5` (preserves `mt-6 sm:mt-7` and the `delay: 0.4` animation).
-3. Keeps the existing primary `<Link>` exactly as-is (same styling, same `trackCTAClick(..., "hero-primary")`).
-4. Adds a second conditional `<Link>` for `secondaryCta` styled as a subtle ghost text-link with bottom-border (matching the compact variant's pattern at lines 370–372): rgba white text, 1px bottom border, `.85rem`, weight 500, with `trackCTAClick(..., "hero-secondary")`.
+2. **Branch the banner JSX** based on `isMobile`:
+   - `!isMobile` → render the existing desktop banner block exactly as it is today (lines 237–284). Zero style changes.
+   - `isMobile` → render the new compact slim bar (provided in the request): single horizontal flex row, `var(--ink)` bg, gold top border, `padding: 10px 12px` + `safe-area-inset-bottom`, short copy ("Cookies. Loi 25 du Québec." / "Cookies. Quebec Law 25."), and three inline buttons (Refuser/Refuse, Options, OK) each with `minHeight: 36px`. Same `transform: translateY(...)` slide animation driven by `visible`.
 
-Exact replacement block is the one provided in the user's request (the `{(primaryCta || secondaryCta) && ...}` snippet).
+3. **Reuse handlers as-is**: mobile buttons call the existing `handleRefuse`, `setShowPrefs(true)`, and `handleAccept` (the spec's `handleRefuseAll`/`handleAcceptAll`/`setPreferencesOpen` map to these existing names — no rename, no duplicate logic).
 
-## Out of scope (explicitly not touched)
+4. **Re-open cookie button** (the floating 🍪 at bottom-left for users who already consented): keep as-is, works on both layouts.
 
-- Compact hero variant (already correct)
-- `HeroSectionProps` interface
-- `Index.tsx` / `IndexEn.tsx` (already pass `secondaryCta`)
-- Portrait, video, gradients, other motion blocks, h1/h2/p
-- Any other component or route
+5. **PreferencesModal**: rendered once at the end, unchanged. Opens identically from desktop "Customize" and mobile "Options". Granular analytics/marketing toggles + `saveConsent("partial", prefs)` flow untouched.
+
+## Out of scope (not touched)
+
+- `PreferencesModal`, `Toggle` components
+- `STORAGE_KEY`, `STORAGE_PREFS_KEY`, `GA_ID`
+- `loadGA`, `applyConsent`, `getConsent`, `getPrefs`, `saveConsent`
+- Desktop banner markup and styling
+- The dismissed-state floating reopen button
+- Any other component, page, or route
 
 ## Acceptance
 
-- Desktop ≥640px: primary button + secondary text-link on same row with `gap-5`.
-- Mobile <640px: stacked vertically with `gap-3`.
-- Primary keeps `#A88A5A` filled styling; secondary is a subtle underlined text link, not a second button.
-- Both fire `trackCTAClick` with `"hero-primary"` / `"hero-secondary"`.
-- Animation `delay: 0.4` preserved.
-- No regression on compact variant or other pages.
+- Mobile (<768px): single ~56px bar at bottom, 3 inline buttons, 36px min touch target, safe-area padding for notched iPhones.
+- Mobile copy: "Cookies. Loi 25 du Québec." (FR) / "Cookies. Quebec Law 25." (EN).
+- Tapping "Options" opens the existing PreferencesModal with analytics/marketing toggles.
+- "Refuser" / "OK" persist consent and slide the bar out via the existing transform transition.
+- GA4 still loads conditionally via `applyConsent()` after Accept (full or partial-with-analytics).
+- Desktop rendering is byte-identical to current.
+- Hero portrait and primary CTA on `/` and `/en` are no longer obscured on mobile.

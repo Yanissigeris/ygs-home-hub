@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
 
 const STORAGE_KEY = "ygs_cookie_consent";
