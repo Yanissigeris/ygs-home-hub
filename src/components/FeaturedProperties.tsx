@@ -31,7 +31,7 @@ const t = {
 };
 
 const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string }) => {
-  const statusLabel = p.status === "sold" ? strings.statusSold : strings.statusFeatured;
+  
 
   return (
     <a
@@ -126,7 +126,9 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
   ({ lang = "fr" }, ref) => {
     const strings = t[lang];
     const allProps = lang === "en" ? propertiesEn : properties;
-    const featured = allProps.filter((p) => p.status === "active").slice(0, 3);
+    const sold = allProps.filter((p) => p.status === "sold").slice(0, 2);
+    const active = allProps.filter((p) => p.status === "active").slice(0, 1);
+    const featured = [...sold, ...active];
 
     if (featured.length === 0) return null;
 
