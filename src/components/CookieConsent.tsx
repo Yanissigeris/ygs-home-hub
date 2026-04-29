@@ -176,6 +176,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
 /* ── Main Banner ── */
 const CookieConsent = () => {
   const lang = useLanguage();
+  const isMobile = useIsMobile();
   const [visible, setVisible] = React.useState(false);
   const [showPrefs, setShowPrefs] = React.useState(false);
   const [dismissed, setDismissed] = React.useState(false);
