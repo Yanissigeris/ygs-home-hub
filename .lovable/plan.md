@@ -1,68 +1,37 @@
-## Plan: Refonte FeaturedProperties — track record + propriété actuelle
+## Effet de débord PathwaySection → FeaturedProperties
 
-Modifier uniquement `src/components/FeaturedProperties.tsx` selon la spec fournie.
+Créer un overlap éditorial : le bloc dark des cards pathway flotte par-dessus le haut de la section "Mes propriétés" sur desktop, créant une continuité visuelle entre les deux sections.
 
-### Changements
+### Fichiers modifiés (3)
 
-**1. Strings (`t.fr` / `t.en`)**
-- `t.fr.title`: "Propriétés récentes" → "Mes propriétés"
-- `t.en.title`: "Recent Properties" → "My Properties"
-- Tous les autres champs inchangés.
+**1. `src/components/PathwaySection.tsx`**
+- `<section>` racine : `md:py-24` → `md:pt-24 md:pb-12` (réduire padding-bottom pour absorber le débord sans casser la photo flottante qui dépend de la hauteur de section).
+- Wrapper cards-flottant : ajouter `md:mb-[-80px]` à la className existante `relative z-10 mt-10 md:mt-14 md:w-[62%]`.
+- `relative z-10` déjà présent → suffit à faire flotter le bloc au-dessus de la section suivante.
+- Aucun changement à la photo flottante (50% droite, marges 80px top/bottom, 4% right), ni à l'intérieur des cards (badge, numéro, hover, onClick, intent tracking).
 
-**2. Sélection des propriétés (dans le forwardRef)**
-Remplacer:
-```ts
-const featured = allProps.filter((p) => p.status === "active").slice(0, 3);
-```
-par:
-```ts
-const sold = allProps.filter((p) => p.status === "sold").slice(0, 2);
-const active = allProps.filter((p) => p.status === "active").slice(0, 1);
-const featured = [...sold, ...active];
-```
-Le `if (featured.length === 0) return null;` existant gère le fallback vide.
+**2. `src/pages/Index.tsx`**
+- Supprimer uniquement le `<div className="section-fade-bridge section-fade-bridge--dark-to-cream" />` situé entre `<PathwaySection />` et `<FeaturedProperties />`.
+- Tous les autres `section-fade-bridge` de la page restent intacts (FeaturedProperties→About, About→Testimonials, etc.).
+- Note : `src/pages/en/IndexEn.tsx` n'a actuellement PAS de fade-bridge entre ces deux sections — aucun changement nécessaire côté EN.
 
-**3. PropertyCard — déplacer le badge vers l'image**
-- Supprimer le `<span>` badge actuel dans le card body (juste avant `{p.price}`).
-- Ajouter dans la `<div>` image (après `<img>`, avant le gradient overlay) un badge absolute top-left:
-  - `position: absolute; top: 12px; left: 12px; zIndex: 2`
-  - `background: p.status === "sold" ? "#A88A5A" : "#17303B"` (gold pour VENDU, ink pour EN VEDETTE)
-  - `color: #FFFFFF; padding: 4px 10px; fontSize: 9.5px; fontWeight: 700; letterSpacing: 0.16em; textTransform: uppercase`
-  - `boxShadow: 0 2px 8px rgba(23,48,59,0.25)`
-  - Texte: `p.status === "sold" ? strings.statusSold : strings.statusFeatured`
-- Le `{p.price}` devient le premier élément du card body (padding existant conservé).
+**3. `src/components/FeaturedProperties.tsx`**
+- `<section>` racine ligne 136 : ajouter `md:pt-32` à la className → `"section-rhythm section-gold-divider md:pt-32"`.
+- 128px de padding-top desktop = 80px pour le débord pathway + 48px d'air avant le titre "Mes propriétés".
+- Aucun changement au filtering (2 sold + 1 active), aux badges, à l'aspect des cards, ou aux hover.
 
-**4. Stats line — mention "Vendu" conditionnelle**
-Sur la ligne `{bedrooms} | {bathrooms}`, ajouter conditionnellement si `p.status === "sold"`:
-```
-| <span style={{ color: "#A88A5A", fontWeight: 600 }}>Vendu / Sold</span>
-```
+### Comportement
 
-**5. View link conditionnel**
-Remplacer `{strings.viewProperty}` par:
-```ts
-{p.status === "sold" 
-  ? (lang === "fr" ? "Voir la fiche" : "View listing") 
-  : strings.viewProperty}
-```
+Desktop ≥ 768px :
+- Bloc cards pathway dépasse de 80px en bas, chevauche le haut cream de FeaturedProperties.
+- Box-shadow profonde (0 30px 80px) du bloc reste visible sur la frontière.
+- Titre "Mes propriétés" reste correctement aéré sous le débord.
 
-### Préservé (non modifié)
+Mobile < 768px :
+- Aucun débord (`md:mb-[-80px]` ne s'active qu'à partir de md).
+- Photo band 200px et stack vertical des cards inchangés.
+- Padding desktop-only (`md:pt-32`, `md:pb-12`) → mobile inchangé.
 
-- Hover: translateY(-8px), gold shadow, image scale, gold border top intensifié.
-- Scroll horizontal mobile, viewAll link (desktop + mobile centré).
-- Aspect ratio image 4/3, gradient overlay bas, clic vers `remaxUrl` (target=_blank).
-- Toutes les autres classes CSS / props.
-- Données dans `properties.ts` / `properties-en.ts` intactes.
-- Interface `Property` intacte.
+### Préservé
 
-### Résultat attendu
-
-- 3 cards: **7 Rue du Chinook** (VENDU gold), **10 Rue Laviolette** (VENDU gold), **154 Lucerne** (EN VEDETTE ink).
-- Badge sur l'image en haut-gauche, plus dans le body.
-- Prix en haut du body, stats line avec "| Vendu" gold pour les vendus.
-- CTA "Voir la fiche →" pour les vendus, "Voir la propriété →" pour l'active.
-- Titre section: "Mes propriétés" / "My Properties".
-
-### Fichiers modifiés
-
-- `src/components/FeaturedProperties.tsx` (seul fichier touché)
+Photo flottante asymétrique, titre two-tone, badge/numéro/CTA/hover des pathway cards, `setAvatarIntent` + `trackEvent`, filtering et badges de FeaturedProperties, hover des property cards, `remaxUrl`, autres fade-bridges, parité FR/EN.

@@ -124,7 +124,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:py-24"
+        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:pt-24 md:pb-12"
         style={{ background: "#F5F1EA" }}
       >
         {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
@@ -186,7 +186,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
 
           {/* Floating cards block with deep shadow */}
           <div
-            className="relative z-10 mt-10 md:mt-14 md:w-[62%]"
+            className="relative z-10 mt-10 md:mt-14 md:w-[62%] md:mb-[-80px]"
             style={{
               borderRadius: 3,
               overflow: "hidden",
