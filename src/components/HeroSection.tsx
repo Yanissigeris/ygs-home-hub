@@ -231,9 +231,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
       // Pick a viewport-appropriate variant if base file follows the -720/-480 convention.
       // E.g. heroVideo="/hero-interior-720.mp4" → on mobile we swap to -480.mp4
-      const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
+      const isMobileVw = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
       let chosen = heroVideo;
-      if (isMobile && /-720\.mp4$/i.test(heroVideo)) {
+      if (isMobileVw && /-720\.mp4$/i.test(heroVideo)) {
         chosen = heroVideo.replace(/-720\.mp4$/i, "-480.mp4");
       }
 
