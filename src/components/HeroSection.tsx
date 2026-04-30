@@ -553,16 +553,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── TEXT CONTENT (Layer 3) ─── */}
         <div
-          className="relative z-[3] flex flex-col"
-          style={{ minHeight: "100svh" }}
+          className="relative z-[3] flex flex-col md:min-h-[100svh]"
         >
+          {/* Mobile-only ink wash, scoped to the text block (covers bg image behind text only) */}
           <div
-            className="w-full md:max-w-[50%]"
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-[1] md:hidden"
             style={{
-              padding: "90px 20px 0 20px",
+              background:
+                "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 60%, rgba(23,48,59,0.40) 100%)",
+            }}
+          />
+          <div
+            className="relative z-[2] w-full md:max-w-[50%] py-12 px-6 md:py-0 md:px-0"
+            style={{
+              paddingTop: undefined,
             }}
           >
-            <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
+            <div className="md:pt-[120px] md:pl-[3%] md:pr-0">
               {overline && (
                 <p
                   className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
@@ -574,7 +582,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                   }}
                 >
-                  {overline.replace(/[·•]/g, "  ·  ")}
+                  {overline.replace(/[·•]\s*$/, "").replace(/[·•]/g, "  ·  ")}
                 </p>
               )}
 
