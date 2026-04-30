@@ -566,10 +566,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{ minHeight: "100svh" }}
         >
           <div
-            className="w-[58%] md:w-auto md:max-w-[50%]"
-            style={{
-              padding: "90px 18px 90px 18px",
-            }}
+            className="w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
