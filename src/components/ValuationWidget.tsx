@@ -1,8 +1,12 @@
 import { useState, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
 import { trackEvent } from "@/lib/analytics";
 import { useIsMobile } from "@/hooks/use-mobile";
+
+// Supabase client is dynamically imported inside the submit handler so the
+// ~127 KB @supabase/supabase-js bundle is NOT pulled into the homepage's
+// initial JS payload (this widget renders on / and /en but submits rarely).
+const loadSupabase = () => import("@/integrations/supabase/client").then(m => m.supabase);
 
 interface Props {
   lang?: "fr" | "en";
@@ -110,6 +114,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
     });
 
     try {
+      const supabase = await loadSupabase();
       await supabase.from("valuation_leads" as any).insert({
         address: address.trim(),
         property_type: propertyType,
