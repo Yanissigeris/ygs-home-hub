@@ -839,7 +839,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         >
           <div
-            className="md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none"
+            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none md:whitespace-nowrap md:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
@@ -847,6 +847,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               padding: "12px 16px",
               borderRadius: "8px",
               margin: "0 16px",
+              lineHeight: 1.5,
             }}
           >
             {/* Desktop credibility (hidden on mobile) */}
@@ -891,16 +892,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         >
           <span
-            className="inline-block md:!bg-transparent md:!backdrop-blur-0 md:!px-0 md:!py-0 md:!rounded-none"
+            className="inline-block whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!px-0 md:!py-0 md:!rounded-none md:whitespace-nowrap md:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
               WebkitBackdropFilter: "blur(4px)",
               padding: "6px 12px",
               borderRadius: "6px",
+              lineHeight: 1.5,
             }}
           >
-            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto" style={{ color: "inherit" }}>yanis@martywaite.com</a>
+            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto [overflow-wrap:anywhere] md:[overflow-wrap:normal]" style={{ color: "inherit" }}>yanis@martywaite.com</a>
           </span>
         </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
