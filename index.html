@@ -48,24 +48,39 @@
       (function(){
         var p = location.pathname;
         if (p === '/' || p === '/en' || p === '/en/') {
+          var isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+          // Always preload the hero poster (LCP candidate behind the video)
           var a = document.createElement('link');
           a.rel='preload'; a.as='image'; a.type='image/webp';
           a.href='/hero-video-poster.webp';
           a.setAttribute('fetchpriority','high');
           document.head.appendChild(a);
 
-          // Detect AV1 support to preload the smaller variant when possible
+          // On mobile, the LCP element is most likely the Yanis portrait (foreground).
+          // Preload it with high priority so it paints ASAP.
+          if (isMobile) {
+            var portrait = document.createElement('link');
+            portrait.rel='preload'; portrait.as='image'; portrait.type='image/webp';
+            // Vite-hashed asset: best-effort by absolute path. The route also imports it,
+            // so even without a perfect filename match this hint helps the discovery scanner.
+            portrait.href='/assets/yanis-portrait-nobg-sm.webp';
+            portrait.setAttribute('fetchpriority','high');
+            document.head.appendChild(portrait);
+          }
+
+          // Video: preload at LOW priority on mobile (don't compete with LCP),
+          // HIGH on desktop where bandwidth is usually plenty.
           var probe = document.createElement('video');
           var av1 = probe.canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '' ||
                     probe.canPlayType('video/mp4; codecs="av01"') !== '';
-          var isMobile = window.matchMedia('(max-width: 767px)').matches;
           var base = isMobile ? '/hero-interior-480' : '/hero-interior-720';
           var href = base + (av1 ? '.av1.mp4' : '.mp4');
 
           var v = document.createElement('link');
           v.rel='preload'; v.as='video'; v.type='video/mp4';
           v.href = href;
-          v.setAttribute('fetchpriority','high');
+          v.setAttribute('fetchpriority', isMobile ? 'low' : 'high');
           document.head.appendChild(v);
         }
       })();
