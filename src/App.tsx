@@ -6,18 +6,39 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BrandedLoader from "@/components/BrandedLoader";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 
-const preloadAsset = (href: string, as: string) => {
+const preloadAsset = (href: string, as: string, mime?: string) => {
   if (typeof document === "undefined") return;
   const link = document.createElement("link");
   link.rel = "preload";
   link.as = as;
   link.href = href;
+  if (mime) link.type = mime;
   if (as === "image") link.fetchPriority = "high";
   document.head.appendChild(link);
 };
+
+// Detect AVIF support synchronously via image MIME registry — accurate in all
+// modern browsers. Defaults to false on the server / older browsers.
+const supportsAvif = (): boolean => {
+  if (typeof document === "undefined") return false;
+  const c = document.createElement("canvas");
+  if (!c.getContext || !c.getContext("2d")) return false;
+  try {
+    return c.toDataURL("image/avif").indexOf("data:image/avif") === 0;
+  } catch {
+    return false;
+  }
+};
+
 if (typeof window !== "undefined") {
-  preloadAsset(yanisPortrait, "image");
+  // Preload the format the browser will actually use — saves ~37% bytes on AVIF-capable browsers.
+  if (supportsAvif()) {
+    preloadAsset(yanisPortraitAvif, "image", "image/avif");
+  } else {
+    preloadAsset(yanisPortrait, "image", "image/webp");
+  }
 }
 
 // FR pages
