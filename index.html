@@ -57,17 +57,9 @@
           a.setAttribute('fetchpriority','high');
           document.head.appendChild(a);
 
-          // On mobile, the LCP element is most likely the Yanis portrait (foreground).
-          // Preload it with high priority so it paints ASAP.
-          if (isMobile) {
-            var portrait = document.createElement('link');
-            portrait.rel='preload'; portrait.as='image'; portrait.type='image/webp';
-            // Vite-hashed asset: best-effort by absolute path. The route also imports it,
-            // so even without a perfect filename match this hint helps the discovery scanner.
-            portrait.href='/assets/yanis-portrait-nobg-sm.webp';
-            portrait.setAttribute('fetchpriority','high');
-            document.head.appendChild(portrait);
-          }
+          // NOTE: Yanis portrait preload is handled in src/App.tsx using the
+          // Vite-hashed asset URL + AVIF/WebP detection — preloading by hardcoded
+          // path here would miss the real hashed file in production.
 
           // Video: preload at LOW priority on mobile (don't compete with LCP),
           // HIGH on desktop where bandwidth is usually plenty.

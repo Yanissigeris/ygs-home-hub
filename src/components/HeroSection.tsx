@@ -21,6 +21,9 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentImageSm?: string;
+  /** Optional AVIF variants (preferred by Chrome/Edge/Firefox/Safari 16+) */
+  agentImageAvif?: string;
+  agentImageSmAvif?: string;
   agentName?: string;
   heroBgImage?: string;
   heroVideo?: string;
@@ -103,6 +106,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       backgroundImage,
       agentImage,
       agentImageSm,
+      agentImageAvif,
+      agentImageSmAvif,
       agentName,
       heroBgImage,
       heroVideo,
@@ -645,57 +650,71 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         </div>
 
-        {/* ─── IMAGE B: Yanis portrait (Layer 4) ─── */}
+        {/* ─── IMAGE B: Yanis portrait (Layer 4) ───
+            Wrapped in <picture> so the browser picks AVIF when supported
+            (Chrome/Edge 85+, Firefox 93+, Safari 16+) — typically 30-40% smaller
+            than WebP at equivalent quality. Falls back to WebP transparently. */}
         {agentImage && (
           <>
             {/* Desktop portrait */}
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              src={agentImage}
-              alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
-              width={640}
-              height={960}
-              className="hero-portrait-masked hidden md:block absolute object-contain object-bottom pointer-events-none select-none"
-              style={{
-                bottom: 0,
-                right: "5%",
-                height: "92%",
-                width: "auto",
-                zIndex: 4,
-                filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.35))",
-                WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
-                maskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
-              }}
-              loading="eager"
-              decoding="auto"
-              {...{ fetchpriority: "high" } as any}
-            />
-            {/* Mobile portrait — plain <img> for fastest LCP (no framer-motion delay) */}
-            <img
-              src={agentImageSm || agentImage}
-              srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
-              sizes="(max-width: 767px) 100vw, 0px"
-              alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
-              width={320}
-              height={480}
-              className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
-              style={{
-                bottom: 0,
-                left: "50%",
-                transform: "translateX(-50%)",
-                maxHeight: "45vh",
-                width: "auto",
-                zIndex: 4,
-                filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
-                maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
-              }}
-              loading="eager"
-              decoding="sync"
-              {...{ fetchpriority: "high" } as any}
-            />
+            <picture className="hidden md:block">
+              {agentImageAvif && (
+                <source type="image/avif" srcSet={agentImageAvif} />
+              )}
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                src={agentImage}
+                alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
+                width={640}
+                height={960}
+                className="hero-portrait-masked hidden md:block absolute object-contain object-bottom pointer-events-none select-none"
+                style={{
+                  bottom: 0,
+                  right: "5%",
+                  height: "92%",
+                  width: "auto",
+                  zIndex: 4,
+                  filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.35))",
+                  WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
+                  maskImage: "radial-gradient(ellipse 70% 80% at 50% 45%, black 55%, rgba(0,0,0,0.6) 78%, transparent 96%)",
+                }}
+                loading="eager"
+                decoding="auto"
+                {...{ fetchpriority: "high" } as any}
+              />
+            </picture>
+
+            {/* Mobile portrait — plain <picture><img> for fastest LCP (no framer-motion delay) */}
+            <picture className="md:hidden">
+              {agentImageSmAvif && (
+                <source type="image/avif" srcSet={agentImageSmAvif} />
+              )}
+              <img
+                src={agentImageSm || agentImage}
+                srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
+                sizes="(max-width: 767px) 100vw, 0px"
+                alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
+                width={320}
+                height={480}
+                className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+                style={{
+                  bottom: 0,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  maxHeight: "45vh",
+                  width: "auto",
+                  zIndex: 4,
+                  filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
+                  WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
+                  maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
+                }}
+                loading="eager"
+                decoding="sync"
+                {...{ fetchpriority: "high" } as any}
+              />
+            </picture>
           </>
         )}
 
