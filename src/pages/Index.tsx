@@ -64,31 +64,36 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     
-    <ValuationWidget />
-    <QuickActionStrip />
-    <AwardsMarquee />
+    <LazySection minHeight={400} rootMargin="400px">
+      <ValuationWidget />
+      <QuickActionStrip />
+      <AwardsMarquee />
+    </LazySection>
 
-    
-    <PathwaySection />
-    <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
-    <FeaturedProperties />
-    <div className="section-fade-bridge section-fade-bridge--cream-to-dark" aria-hidden="true" />
-    <AboutSection />
-    <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
+    <LazySection minHeight={500} rootMargin="400px">
+      <PathwaySection />
+      <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
+      <FeaturedProperties />
+      <div className="section-fade-bridge section-fade-bridge--cream-to-dark" aria-hidden="true" />
+      <AboutSection />
+      <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
+    </LazySection>
 
-    <TestimonialGrid
-      overline="Témoignages"
-      title="Ce que disent mes clients"
-      reviews={homepageReviews}
-      reviewsPageLabel="Voir tous les témoignages"
-      reviewsPageHref="/temoignages"
-    />
-    <div className="section-fade-bridge section-fade-bridge--white-to-dark" aria-hidden="true" />
+    <LazySection minHeight={500} rootMargin="400px">
+      <TestimonialGrid
+        overline="Témoignages"
+        title="Ce que disent mes clients"
+        reviews={homepageReviews}
+        reviewsPageLabel="Voir tous les témoignages"
+        reviewsPageHref="/temoignages"
+      />
+      <div className="section-fade-bridge section-fade-bridge--white-to-dark" aria-hidden="true" />
 
-    <AreasServicesSection />
-    <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
-    <GuideOffersSection background="alt" />
-    <div className="section-fade-bridge section-fade-bridge--cream-to-white" aria-hidden="true" />
+      <AreasServicesSection />
+      <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
+      <GuideOffersSection background="alt" />
+      <div className="section-fade-bridge section-fade-bridge--cream-to-white" aria-hidden="true" />
+    </LazySection>
 
     <HomeFAQTeaser
       title="Questions fréquentes"
