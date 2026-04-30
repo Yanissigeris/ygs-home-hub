@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackFormSubmission, trackGuideRequest } from "@/lib/analytics";
+
+// Lazy-loaded supabase client. Keeps ~127 KB out of the routes that *render*
+// a form but where most users never submit (contact, guide modal, valuation).
+const loadSupabase = () => import("@/integrations/supabase/client").then(m => m.supabase);
 
 interface FormData {
   formType: "contact" | "valuation" | "guide";
@@ -24,6 +27,7 @@ export function useFormSubmit() {
   const submit = async (data: FormData): Promise<boolean> => {
     setSubmitting(true);
     try {
+      const supabase = await loadSupabase();
       const { data: result, error } = await supabase.functions.invoke("send-email", {
         body: data,
       });
