@@ -118,7 +118,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                 {reviews.map((_, i) => (
                   <button
                     key={i}
-                    aria-label={`Témoignage ${i + 1}`}
+                    aria-label={getA11yLabel("testimonial.goTo", lang, { n: i + 1 })}
                     onClick={() => goTo(i)}
                     style={{ width: i === current ? 44 : 20, height: 2, background: i === current ? "#A88A5A" : "var(--border)", cursor: "pointer", transition: "width .45s cubic-bezier(.16,1,.3,1), background .3s", border: "none", padding: 0 }}
                   />
