@@ -6,11 +6,12 @@ import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import VisibleBreadcrumb from "@/components/VisibleBreadcrumb";
 import ScrollProgress from "@/components/ScrollProgress";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import CookieConsent from "@/components/CookieConsent";
 import NavigationProgress from "@/components/NavigationProgress";
 import PageTransition from "@/components/PageTransition";
 import { useHeadingHierarchyGuard } from "@/hooks/useHeadingHierarchyGuard";
+
+const WhatsAppButton = React.lazy(() => import("@/components/WhatsAppButton"));
+const CookieConsent = React.lazy(() => import("@/components/CookieConsent"));
 
 
 import { Outlet, useLocation } from "react-router-dom";
@@ -89,6 +90,22 @@ const SiteLayout = () => {
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
   const skipLabel = isEn ? "Skip to content" : "Aller au contenu";
   useHeadingHierarchyGuard();
+
+  // Defer non-critical UI (cookie consent, WhatsApp button, footer) to idle
+  // time to free the main thread during LCP/TBT window.
+  const [deferredReady, setDeferredReady] = React.useState(false);
+  React.useEffect(() => {
+    const ric = (window as any).requestIdleCallback as
+      | ((cb: () => void, opts?: { timeout: number }) => number)
+      | undefined;
+    const trigger = () => setDeferredReady(true);
+    const id = ric ? ric(trigger, { timeout: 2500 }) : window.setTimeout(trigger, 1800);
+    return () => {
+      if (ric && (window as any).cancelIdleCallback) (window as any).cancelIdleCallback(id);
+      else clearTimeout(id);
+    };
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
@@ -124,8 +141,12 @@ const SiteLayout = () => {
       <React.Suspense fallback={null}>
         <SiteFooter />
       </React.Suspense>
-      <WhatsAppButton />
-      <CookieConsent />
+      {deferredReady && (
+        <React.Suspense fallback={null}>
+          <WhatsAppButton />
+          <CookieConsent />
+        </React.Suspense>
+      )}
     </div>
   );
 };

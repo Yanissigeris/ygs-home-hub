@@ -13,14 +13,20 @@ createRoot(document.getElementById("root")!).render(
   </HelmetProvider>,
 );
 
-/* ── Global scroll reveal observer ── */
-if (
-  typeof window !== "undefined" &&
-  typeof document !== "undefined" &&
-  typeof IntersectionObserver !== "undefined" &&
-  typeof MutationObserver !== "undefined" &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-) {
+/* ── Global scroll reveal observer ──
+ * Deferred to idle time to keep the main thread free during LCP/TBT window.
+ * The observer + MutationObserver scan was previously running synchronously
+ * after first paint and adding ~50-100ms TBT on desktop.
+ */
+function initScrollReveal() {
+  if (
+    typeof window === "undefined" ||
+    typeof document === "undefined" ||
+    typeof IntersectionObserver === "undefined" ||
+    typeof MutationObserver === "undefined" ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) return;
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -33,21 +39,14 @@ if (
     { threshold: 0.05, rootMargin: "0px 0px -40px 0px" },
   );
 
-  // Observe initial + future elements via MutationObserver
   const scan = (root: Element | Document) => {
     root.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => {
       if (!el.classList.contains("revealed")) observer.observe(el);
     });
   };
 
-  // Initial scan after DOM ready
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => scan(document));
-  } else {
-    scan(document);
-  }
+  scan(document);
 
-  // Watch for dynamically added elements
   new MutationObserver((mutations) => {
     mutations.forEach((m) => {
       m.addedNodes.forEach((node) => {
@@ -55,4 +54,15 @@ if (
       });
     });
   }).observe(document.body, { childList: true, subtree: true });
+}
+
+if (typeof window !== "undefined") {
+  const ric = (window as any).requestIdleCallback as
+    | ((cb: () => void, opts?: { timeout: number }) => number)
+    | undefined;
+  if (ric) {
+    ric(initScrollReveal, { timeout: 2000 });
+  } else {
+    setTimeout(initScrollReveal, 1500);
+  }
 }
