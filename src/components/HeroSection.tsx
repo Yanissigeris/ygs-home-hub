@@ -565,12 +565,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             }}
           />
           <div
-            className="relative z-[2] w-full md:max-w-[50%] py-12 px-6 md:py-0 md:px-0"
-            style={{
-              paddingTop: undefined,
-            }}
+            className="relative z-[2] w-full md:max-w-[50%] py-12 px-6 md:py-0 md:px-0 md:pt-[90px] md:pl-[20px] md:pr-[20px]"
           >
-            <div className="md:pt-[120px] md:pl-[3%] md:pr-0">
+            <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
                 <p
                   className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
