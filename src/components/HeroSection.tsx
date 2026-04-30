@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
-import heroHomepageBg from "@/assets/hero-homepage.webp";
+// (hero-homepage.webp removed — was imported but never used; saves ~186KB from bundle)
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
 interface HeroSectionProps {
@@ -409,7 +409,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         )}
 
-        {/* Video background — only fill */}
+        {/* Video background — only fill. preload="metadata" on mobile to protect LCP, "auto" desktop */}
         {heroVideo && (
           <video
             ref={videoRef}
@@ -418,7 +418,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             loop
             playsInline
             poster={heroVideoPoster}
-            preload="auto"
+            preload={typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches ? "metadata" : "auto"}
             width={1920}
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"
@@ -636,14 +636,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               decoding="auto"
               {...{ fetchpriority: "high" } as any}
             />
-            {/* Mobile portrait */}
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            {/* Mobile portrait — plain <img> for fastest LCP (no framer-motion delay) */}
+            <img
               src={agentImageSm || agentImage}
               srcSet={agentImageSm ? `${agentImageSm} 320w, ${agentImage} 640w` : undefined}
-              sizes="100vw"
+              sizes="(max-width: 767px) 100vw, 0px"
               alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
               width={320}
               height={480}
@@ -660,7 +657,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
               }}
               loading="eager"
-              decoding="auto"
+              decoding="sync"
               {...{ fetchpriority: "high" } as any}
             />
           </>
