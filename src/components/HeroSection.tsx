@@ -879,7 +879,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── NAP (Layer 5) ─── */}
         <address
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
+          className="hero-fade-in absolute left-0 z-[5] w-1/2 px-4 text-left not-italic pointer-events-none md:w-full md:text-center"
           style={{
             animationDelay: "0.5s",
             bottom: "8px",
