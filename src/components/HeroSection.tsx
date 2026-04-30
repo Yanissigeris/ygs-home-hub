@@ -692,31 +692,29 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </picture>
 
             {/* Mobile portrait — plain <picture><img> for fastest LCP (no framer-motion delay).
-                Uses 3-tier srcSet (320w / 480w / 640w) so the browser picks the
-                smallest acceptable image based on viewport × DPR:
-                  - 1x phones (320 CSS px wide visible) → 320w  (~4.5 KB AVIF)
-                  - 2x phones (iPhone 12/13/14)         → 480w  (~8 KB AVIF)
-                  - 3x phones (iPhone Pro Max)          → 640w  (~14 KB AVIF) */}
+                Uses DPR descriptors (1x/2x/3x) so the browser picks EXACTLY the
+                same tier that App.tsx preloads — no double-download.
+                  - 1x phones (low-end Android)        → sm  (~7  KB AVIF)
+                  - 2x retina (iPhone 12/13/14)         → md  (~12 KB AVIF)
+                  - 3x retina (iPhone Pro Max)          → full(~17 KB AVIF) */}
             <picture className="md:hidden">
               {(agentImageSmAvif || agentImageMdAvif || agentImageAvif) && (
                 <source
                   type="image/avif"
                   srcSet={[
-                    agentImageSmAvif && `${agentImageSmAvif} 320w`,
-                    agentImageMdAvif && `${agentImageMdAvif} 480w`,
-                    agentImageAvif && `${agentImageAvif} 640w`,
+                    agentImageSmAvif && `${agentImageSmAvif} 1x`,
+                    agentImageMdAvif && `${agentImageMdAvif} 2x`,
+                    agentImageAvif && `${agentImageAvif} 3x`,
                   ].filter(Boolean).join(", ")}
-                  sizes="(max-width: 767px) 70vw, 0px"
                 />
               )}
               <img
                 src={agentImageSm || agentImage}
                 srcSet={[
-                  agentImageSm && `${agentImageSm} 320w`,
-                  agentImageMd && `${agentImageMd} 480w`,
-                  agentImage && `${agentImage} 640w`,
+                  agentImageSm && `${agentImageSm} 1x`,
+                  agentImageMd && `${agentImageMd} 2x`,
+                  agentImage && `${agentImage} 3x`,
                 ].filter(Boolean).join(", ")}
-                sizes="(max-width: 767px) 70vw, 0px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
