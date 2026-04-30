@@ -760,7 +760,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                 }}
                 loading="eager"
-                decoding="sync"
+                decoding="async"
                 {...{ fetchpriority: "high" } as any}
               />
             </picture>
