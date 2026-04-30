@@ -409,7 +409,27 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         )}
 
-        {/* Video background — only fill. preload="metadata" on mobile to protect LCP, "auto" desktop */}
+        {/* Poster image — always visible UNDER the video. Acts as the LCP candidate
+            on iOS Safari (where <video poster> is unreliable) and prevents any black
+            flicker before the video reaches its first frame. */}
+        {heroVideo && heroVideoPoster && (
+          <img
+            src={heroVideoPoster}
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ zIndex: 1 }}
+            loading="eager"
+            decoding="sync"
+            {...{ fetchpriority: "high" } as any}
+          />
+        )}
+
+        {/* Video background — fades in over the poster once the first frame plays.
+            preload="metadata" on mobile to protect LCP; "auto" on desktop. */}
         {heroVideo && (
           <video
             ref={videoRef}
@@ -417,12 +437,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             muted
             loop
             playsInline
+            // @ts-expect-error legacy iOS attribute for inline playback
+            webkit-playsinline="true"
+            // @ts-expect-error iOS hint to disable picture-in-picture
+            x-webkit-airplay="deny"
+            disablePictureInPicture
+            disableRemotePlayback
             poster={heroVideoPoster}
             preload={typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches ? "metadata" : "auto"}
             width={1920}
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"
-            style={{ opacity: videoReady ? 1 : 0, transition: "opacity 1.2s ease", zIndex: 1 }}
+            style={{ opacity: videoReady ? 1 : 0, transition: "opacity 0.6s ease", zIndex: 2 }}
             aria-hidden="true"
             onPlaying={() => setVideoReady(true)}
           />
