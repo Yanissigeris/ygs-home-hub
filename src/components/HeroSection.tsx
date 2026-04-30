@@ -714,6 +714,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(agentImageSmAvif || agentImageMdAvif || agentImageAvif) && (
                 <source
                   type="image/avif"
+                  media="(max-width: 767px)"
                   srcSet={[
                     agentImageSmAvif && `${agentImageSmAvif} 1x`,
                     agentImageMdAvif && `${agentImageMdAvif} 2x`,
@@ -721,6 +722,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   ].filter(Boolean).join(", ")}
                 />
               )}
+              <source
+                type="image/webp"
+                media="(max-width: 767px)"
+                srcSet={[
+                  agentImageSm && `${agentImageSm} 1x`,
+                  agentImageMd && `${agentImageMd} 2x`,
+                  agentImage && `${agentImage} 3x`,
+                ].filter(Boolean).join(", ")}
+              />
               <img
                 src={agentImageSm || agentImage}
                 srcSet={[
