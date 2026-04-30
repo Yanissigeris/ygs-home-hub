@@ -525,11 +525,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.4 }}
-                  className="mb-3 sm:mb-6 uppercase font-semibold"
+                <p
+                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
                   style={{
                     color: "var(--gold)",
                     fontFamily: "var(--sans)",
@@ -539,14 +536,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   }}
                 >
                   {overline.replace(/[·•]/g, "  ·  ")}
-                </motion.p>
+                </p>
               )}
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+              <h1
+                className="hero-fade-in"
                 style={{
+                  animationDelay: "0.1s",
                   color: "#FFFFFF",
                   letterSpacing: "-.01em",
                   fontStyle: "italic",
@@ -574,14 +570,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </span>
                   </>
                 )}
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
-                className="mt-4 sm:mt-6 block max-w-[460px] font-light"
+              <p
+                className="hero-fade-in mt-4 sm:mt-6 block max-w-[460px] font-light"
                 style={{
+                  animationDelay: "0.2s",
                   color: "#FFFFFF",
                   fontSize: ".95rem",
                   lineHeight: 1.75,
@@ -591,14 +585,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {lang === "fr"
                   ? "Je vous donne les chiffres et les options, vous décidez. Stratégie claire pour vendre, acheter ou investir en Outaouais."
                   : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
-              </motion.p>
+              </p>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
-                className="mt-3 block font-light"
+              <p
+                className="hero-fade-in mt-3 block font-light"
                 style={{
+                  animationDelay: "0.25s",
                   color: "rgba(255,255,255,0.85)",
                   fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
                   lineHeight: 1.6,
@@ -609,15 +601,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {lang === "fr"
                   ? "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. Près de 9 ans d'expérience, Hall of Fame RE/MAX et plus de 300 transactions complétées en Outaouais."
                   : "Yanis Gauthier-Sigeris, RE/MAX real estate broker in Gatineau. Nearly 9 years of experience, RE/MAX Hall of Fame, and over 300 completed transactions in Outaouais."}
-              </motion.p>
+              </p>
 
               {(primaryCta || secondaryCta) && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+                <div
+                  className="hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+                  style={{ animationDelay: "0.35s" }}
                 >
+
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
