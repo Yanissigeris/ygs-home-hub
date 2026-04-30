@@ -830,15 +830,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {lang === "en" ? "~9 yrs " : "~9 ans "}<span aria-hidden="true"> | </span>{"5"}<span className="sr-only">{lang === "en" ? "5 stars Google" : "5 étoiles Google"}</span><span aria-hidden="true">★</span>{" Google"}<span aria-hidden="true"> | </span>{"Hall of Fame"}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* ─── NAP (Layer 5) ─── */}
-        <motion.address
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
+        <address
+          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
           style={{
+            animationDelay: "0.5s",
             bottom: "8px",
             color: "rgba(255,255,255,0.6)",
             fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
