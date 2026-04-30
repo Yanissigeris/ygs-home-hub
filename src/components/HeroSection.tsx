@@ -661,11 +661,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             than WebP at equivalent quality. Falls back to WebP transparently. */}
         {agentImage && (
           <>
-            {/* Desktop portrait */}
+            {/* Desktop portrait — wrapped in <picture> with media="(min-width: 768px)"
+                on every <source> so mobile browsers SKIP this download entirely.
+                Note: Tailwind's `hidden md:block` only hides via CSS — the browser
+                still pre-fetches all <img> in the DOM regardless. The media query
+                on the <source> is the only reliable way to gate the network request. */}
             <picture className="hidden md:block">
               {agentImageAvif && (
-                <source type="image/avif" srcSet={agentImageAvif} />
+                <source
+                  type="image/avif"
+                  srcSet={agentImageAvif}
+                  media="(min-width: 768px)"
+                />
               )}
+              <source
+                type="image/webp"
+                srcSet={agentImage}
+                media="(min-width: 768px)"
+              />
               <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -688,6 +701,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 loading="eager"
                 decoding="auto"
                 {...{ fetchpriority: "high" } as any}
+                /* On mobile, no <source> matches and the browser would normally
+                   download this `src` (29 KB nobg.webp) as the picture fallback,
+                   wasting bandwidth that should go to the LCP portrait. We use
+                   srcSet with a tiny transparent 1×1 PNG at 1w + the real WebP
+                   at 768w, with sizes telling the browser to pick the 1px placeholder
+                   below 768 CSS px and the real image at/above 768. */
+                srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImage} 768w`}
+                sizes="(min-width: 768px) 768px, 1px"
               />
             </picture>
 
@@ -701,6 +722,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(agentImageSmAvif || agentImageMdAvif || agentImageAvif) && (
                 <source
                   type="image/avif"
+                  media="(max-width: 767px)"
                   srcSet={[
                     agentImageSmAvif && `${agentImageSmAvif} 1x`,
                     agentImageMdAvif && `${agentImageMdAvif} 2x`,
@@ -708,13 +730,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   ].filter(Boolean).join(", ")}
                 />
               )}
-              <img
-                src={agentImageSm || agentImage}
+              <source
+                type="image/webp"
+                media="(max-width: 767px)"
                 srcSet={[
                   agentImageSm && `${agentImageSm} 1x`,
                   agentImageMd && `${agentImageMd} 2x`,
                   agentImage && `${agentImage} 3x`,
                 ].filter(Boolean).join(", ")}
+              />
+              <img
+                src={agentImageSm || agentImage}
+                /* On desktop, no <source> matches and the browser would download
+                   `src` (sm.webp ~11 KB) as the picture fallback. We pin the
+                   placeholder above 768 CSS px and the real WebP below. */
+                srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
+                sizes="(max-width: 767px) 70vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
