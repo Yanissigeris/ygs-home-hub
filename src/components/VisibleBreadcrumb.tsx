@@ -2,30 +2,40 @@ import * as React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { Home } from "lucide-react";
 import { breadcrumbMap } from "@/data/breadcrumbs";
-import { getPostBySlug } from "@/data/blog-posts";
 import { getA11yLabel } from "@/lib/a11y";
+
+type BreadcrumbConfig = { trail: Array<{ name: string; href: string }>; current: string };
 
 const VisibleBreadcrumb = () => {
   const { pathname } = useLocation();
   const params = useParams<{ slug?: string }>();
+  const [dynamicConfig, setDynamicConfig] = React.useState<BreadcrumbConfig | null>(null);
 
-  // Try static map first
-  let config = breadcrumbMap[pathname];
+  // Try static map first (synchronous, covers ~140 routes)
+  const staticConfig = breadcrumbMap[pathname];
 
-  // Dynamic blog article breadcrumbs
-  if (!config && params.slug) {
+  // Dynamic blog article breadcrumbs — lazy-load blog data only on /blogue/:slug or /en/blog/:slug.
+  // This keeps ~106 KB of blog markdown out of the main bundle on every other page.
+  React.useEffect(() => {
+    if (staticConfig || !params.slug) { setDynamicConfig(null); return; }
     const isFr = pathname.startsWith("/blogue/");
     const isEn = pathname.startsWith("/en/blog/");
-    if (isFr || isEn) {
-      const post = getPostBySlug(params.slug);
-      if (post) {
-        config = isFr
+    if (!isFr && !isEn) { setDynamicConfig(null); return; }
+    let cancelled = false;
+    import("@/data/blog-posts").then(({ getPostBySlug }) => {
+      if (cancelled) return;
+      const post = getPostBySlug(params.slug!);
+      if (!post) return;
+      setDynamicConfig(
+        isFr
           ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue" }], current: post.title }
-          : { trail: [{ name: "Home", href: "/en" }, { name: "Blog", href: "/en/blog" }], current: post.titleEn };
-      }
-    }
-  }
+          : { trail: [{ name: "Home", href: "/en" }, { name: "Blog", href: "/en/blog" }], current: post.titleEn },
+      );
+    });
+    return () => { cancelled = true; };
+  }, [pathname, params.slug, staticConfig]);
 
+  const config = staticConfig || dynamicConfig;
   if (!config) return null;
 
   const isHome = (name: string) => name === "Accueil" || name === "Home";

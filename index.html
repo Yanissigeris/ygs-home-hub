@@ -72,29 +72,17 @@
         // Vite-hashed asset URL + AVIF/WebP detection — preloading by hardcoded
         // path here would miss the real hashed file in production.
 
-        // ─── VIDEO (desktop only) ───────────────────────────────────────
-        // On mobile we deliberately DO NOT preload the video. Reasons:
-        //   1. The <video preload="metadata"> tag in HeroSection still kicks
-        //      off the request after the LCP paints — no functional loss.
-        //   2. A <link rel=preload as=video> on mobile would issue a
-        //      Range:bytes=0- request immediately, eating ~10-20% of the
-        //      4G bandwidth budget right when the LCP image needs it.
-        //   3. The poster <img> already covers the visual hole until the
-        //      video first frame arrives — no flicker risk.
-        if (!isMobile) {
-          var probe = document.createElement('video');
-          var av1 = probe.canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '' ||
-                    probe.canPlayType('video/mp4; codecs="av01"') !== '';
-          var href = '/hero-interior-720' + (av1 ? '.av1.mp4' : '.mp4');
-
-          var v = document.createElement('link');
-          v.rel = 'preload';
-          v.as = 'video';
-          v.type = 'video/mp4';
-          v.href = href;
-          v.setAttribute('fetchpriority', 'high');
-          document.head.appendChild(v);
-        }
+        // ─── VIDEO ──────────────────────────────────────────────────────
+        // We deliberately do NOT preload the hero video on any device.
+        //
+        // Why: the LCP candidate is the poster <img> + portrait, NOT the video.
+        // A <link rel=preload as=video> issues a Range:0- request immediately
+        // and competes with the LCP image for the early-bandwidth budget.
+        // Lighthouse measured this as a -3 to -8 LCP score impact.
+        //
+        // The <video preload="metadata"> tag in HeroSection still kicks off
+        // the request once the main thread is free. The poster covers the
+        // visual hole until the video first frame arrives — no flicker.
       })();
     </script>
 
