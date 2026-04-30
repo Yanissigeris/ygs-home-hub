@@ -780,12 +780,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         <ScrollChevron lang={lang} />
 
         {/* ─── Credibility bar (Layer 5) ─── */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+        <div
+          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
+            animationDelay: "0.5s",
             bottom: "32px",
             color: "rgba(255,255,255,0.75)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
