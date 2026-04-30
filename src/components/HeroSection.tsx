@@ -463,7 +463,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* Video background — fades in over the poster once the first frame plays.
             preload="metadata" on mobile to protect LCP; "auto" on desktop. */}
-        {heroVideo && (
+        {renderVideo && (
           <video
             ref={videoRef}
             autoPlay
