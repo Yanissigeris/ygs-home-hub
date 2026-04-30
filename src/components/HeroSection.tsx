@@ -779,7 +779,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    `src` (sm.webp ~11 KB) as the picture fallback. We pin the
                    placeholder above 768 CSS px and the real WebP below. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
-                sizes="(max-width: 767px) 70vw, 1px"
+                sizes="(max-width: 767px) 88vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
@@ -788,7 +788,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   bottom: 0,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  maxHeight: "45vh",
+                  maxHeight: "60vh",
                   width: "auto",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
