@@ -55,8 +55,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
+      agentImageMd={yanisPortraitMd}
       agentImageAvif={yanisPortraitAvif}
       agentImageSmAvif={yanisPortraitSmAvif}
+      agentImageMdAvif={yanisPortraitMdAvif}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
