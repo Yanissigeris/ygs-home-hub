@@ -758,7 +758,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   - 1x phones (low-end Android)        → sm  (~7  KB AVIF)
                   - 2x retina (iPhone 12/13/14)         → md  (~12 KB AVIF)
                   - 3x retina (iPhone Pro Max)          → full(~17 KB AVIF) */}
-            <picture className="md:hidden">
+            <picture className="md:hidden relative z-[4] block w-full" style={{ background: "#17303B" }}>
               {(agentImageSmAvif || agentImageMdAvif || agentImageAvif) && (
                 <source
                   type="image/avif"
@@ -785,18 +785,16 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    `src` (sm.webp ~11 KB) as the picture fallback. We pin the
                    placeholder above 768 CSS px and the real WebP below. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
-                sizes="(max-width: 767px) 88vw, 1px"
+                sizes="(max-width: 767px) 100vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
-                className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+                className="hero-portrait-masked md:hidden block mx-auto w-full pointer-events-none select-none"
                 style={{
-                  bottom: 0,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  maxHeight: "60vh",
-                  width: "auto",
-                  zIndex: 4,
+                  height: "auto",
+                  maxHeight: "50vh",
+                  objectFit: "cover",
+                  objectPosition: "center top",
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
                   WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                   maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
