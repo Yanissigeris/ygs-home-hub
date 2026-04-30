@@ -704,11 +704,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 /* On mobile, no <source> matches and the browser would normally
                    download this `src` (29 KB nobg.webp) as the picture fallback,
                    wasting bandwidth that should go to the LCP portrait. We use
-                   srcSet with a tiny transparent 1×1 PNG gated to mobile, so
-                   mobile resolves to that no-op placeholder while desktop still
-                   uses the full WebP via the matching <source> above. */
+                   srcSet with a tiny transparent 1×1 PNG at 1w + the real WebP
+                   at 768w, with sizes telling the browser to pick the 1px placeholder
+                   below 768 CSS px and the real image at/above 768. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImage} 768w`}
-                sizes="(min-width: 768px) 768w, 1w"
+                sizes="(min-width: 768px) 768px, 1px"
               />
             </picture>
 
