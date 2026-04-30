@@ -340,7 +340,7 @@ const SiteHeader = () => {
             Yanis Gauthier-Sigeris
           </span>
         </Link>
-        <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label="Navigation principale">
+        <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
         </nav>
         <div className="ml-4 shrink-0 xl:ml-6">
@@ -446,7 +446,7 @@ const SiteHeader = () => {
           <motion.div
             id="mobile-navigation"
             role="navigation"
-            aria-label="Navigation principale"
+            aria-label={getA11yLabel("nav.main", lang)}
             className="lg:hidden overflow-y-auto"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}

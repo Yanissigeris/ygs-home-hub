@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getA11yLabel } from "@/lib/a11y";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import logoYgsWhite from "@/assets/ygs-logo.png";
@@ -137,14 +138,14 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── Mobile: accordion columns ── */}
-          <div className="sm:hidden py-6" role="navigation" aria-label="Footer navigation">
+          <div className="sm:hidden py-6" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <FooterAccordion key={col.title} title={col.title} links={col.links} />
             ))}
           </div>
 
           {/* ── Desktop: 4 columns (2-col on sm) ── */}
-          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label="Footer navigation">
+          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
                 <p className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
