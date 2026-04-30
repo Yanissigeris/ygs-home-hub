@@ -14,6 +14,7 @@ const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; classNa
 );
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getA11yLabel } from "@/lib/a11y";
 import ygsLogo from "@/assets/ygs-logo-updated.png";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
