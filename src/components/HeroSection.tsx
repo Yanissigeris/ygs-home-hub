@@ -786,21 +786,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    `src` (sm.webp ~11 KB) as the picture fallback. We pin the
                    placeholder above 768 CSS px and the real WebP below. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
-                sizes="(max-width: 767px) 88vw, 1px"
+                sizes="(max-width: 767px) 50vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
-                className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+                className="md:hidden absolute pointer-events-none select-none"
                 style={{
                   bottom: 0,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  maxHeight: "60vh",
-                  width: "auto",
+                  right: 0,
+                  width: "48vw",
+                  height: "auto",
+                  maxHeight: "75%",
+                  objectFit: "contain",
+                  objectPosition: "bottom right",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                  WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
-                  maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                 }}
                 loading="eager"
                 decoding="async"
