@@ -12,67 +12,66 @@ import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
 import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 
-const preloadAsset = (href: string, as: string, mime?: string) => {
+/**
+ * Hero portrait preload strategy.
+ *
+ * Goal: emit EXACTLY one preload that the <picture> element will then reuse
+ * from cache (zero double-download). The browser must end up with a single
+ * network request whose URL == currentSrc.
+ *
+ * Approach: instead of computing the tier in JS (which races AVIF detection
+ * and devicePixelRatio quirks), we let the browser pick the tier itself by
+ * using `imageSrcSet` + `imageSizes` on the <link rel="preload">. This is the
+ * SAME algorithm the browser runs for <picture>/<img srcset>, so the URL it
+ * picks here is byte-identical to what HeroSection renders → guaranteed cache
+ * hit, zero waste.
+ *
+ * AVIF: we issue an AVIF preload by default. On the rare browser without AVIF
+ * support (Safari < 16, ~3% of traffic) the preload is wasted but tiny
+ * (<10 KB) and the <picture> falls back to WebP correctly. We do NOT preload
+ * WebP at all — issuing two preloads "just in case" would double-download on
+ * the 97% AVIF-capable majority, which is the exact problem we're solving.
+ *
+ * Two media-gated preloads:
+ *   - mobile (≤767px): srcset of sm/md/full AVIF with `x` descriptors
+ *   - desktop (≥768px): single full AVIF (no responsive variants needed)
+ */
+const preloadHeroPortrait = () => {
   if (typeof document === "undefined") return;
-  const link = document.createElement("link");
-  link.rel = "preload";
-  link.as = as;
-  link.href = href;
-  if (mime) link.type = mime;
-  if (as === "image") link.fetchPriority = "high";
-  document.head.appendChild(link);
-};
 
-// AVIF support detection. canvas.toDataURL("image/avif") is unreliable (canvas
-// can't ENCODE AVIF in any current browser, so it always returns image/png).
-// We instead decode a tiny 1×1 AVIF and check whether the browser successfully
-// reports a non-zero intrinsic size. This is synchronous-ish (image already
-// inlined as data URI, no network) and finishes in <1 frame on every modern
-// browser. We cache the result so the cost is one-time per session.
-const TINY_AVIF =
-  "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQAMAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAB1tZGF0EgAKBzgADrkR8AAEAAAACoAEpoIA";
+  // Mobile preload — DPR-aware via 1x/2x/3x descriptors. Browser picks the
+  // exact tier <picture media="(max-width: 767px)"> will render.
+  const mobile = document.createElement("link");
+  mobile.rel = "preload";
+  mobile.as = "image";
+  mobile.type = "image/avif";
+  mobile.media = "(max-width: 767px)";
+  mobile.fetchPriority = "high";
+  // imagesrcset/imagesizes are the preload-specific equivalents of srcset/sizes.
+  mobile.setAttribute(
+    "imagesrcset",
+    `${yanisPortraitSmAvif} 1x, ${yanisPortraitMdAvif} 2x, ${yanisPortraitAvif} 3x`,
+  );
+  // No imagesizes needed when using `x` descriptors (DPR-only selection).
+  // href is required for spec compliance — used as fallback if imagesrcset
+  // can't be parsed. Pick `sm` since it's the most common low-end fallback.
+  mobile.href = yanisPortraitSmAvif;
+  document.head.appendChild(mobile);
 
-let _avifSupported: boolean | null = null;
-let _avifProbed = false;
-const probeAvif = () => {
-  if (_avifProbed || typeof Image === "undefined") return;
-  _avifProbed = true;
-  const img = new Image();
-  img.onload = () => { _avifSupported = img.width > 0 && img.height > 0; };
-  img.onerror = () => { _avifSupported = false; };
-  img.src = TINY_AVIF;
+  // Desktop preload — single full AVIF. <picture media="(min-width: 768px)">
+  // renders the same file.
+  const desktop = document.createElement("link");
+  desktop.rel = "preload";
+  desktop.as = "image";
+  desktop.type = "image/avif";
+  desktop.media = "(min-width: 768px)";
+  desktop.fetchPriority = "high";
+  desktop.href = yanisPortraitAvif;
+  document.head.appendChild(desktop);
 };
-probeAvif();
 
 if (typeof window !== "undefined") {
-  // Pick the smallest correct file based on viewport size × device pixel ratio.
-  // Mobile sizes (AVIF / WebP):
-  //   sm 320w → ~7 KB / ~11 KB  (1x phones, low-end Android)
-  //   md 480w → ~12 KB / ~20 KB (2x retina iPhones — most common)
-  //   full 640w → ~17 KB / ~30 KB (3x Pro Max iPhones, tablets, desktop)
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-  const dpr = typeof window.devicePixelRatio === "number" ? window.devicePixelRatio : 1;
-  // _avifSupported may still be null on very first paint — we treat null as
-  // "assume yes" because every browser that ships in 2024+ supports AVIF
-  // decoding (Chrome 85+, Firefox 93+, Safari 16+ = 96%+ of global traffic).
-  // Worst case on the rare unsupported browser: the <picture> falls back to
-  // WebP correctly, we just wasted one preload (still cached).
-  const avif = _avifSupported !== false;
-
-  let href: string;
-  if (!isMobile) {
-    href = avif ? yanisPortraitAvif : yanisPortrait;
-  } else if (dpr >= 2.5) {
-    // 3x retina: needs full-resolution to stay crisp
-    href = avif ? yanisPortraitAvif : yanisPortrait;
-  } else if (dpr >= 1.5) {
-    // 2x retina: middle tier is the sweet spot
-    href = avif ? yanisPortraitMdAvif : yanisPortraitMd;
-  } else {
-    // 1x: smallest tier
-    href = avif ? yanisPortraitSmAvif : yanisPortraitSm;
-  }
-  preloadAsset(href, "image", avif ? "image/avif" : "image/webp");
+  preloadHeroPortrait();
 }
 
 // FR pages
