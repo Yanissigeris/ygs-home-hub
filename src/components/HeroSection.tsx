@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Calendar, Star, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
@@ -8,6 +7,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 // (hero-homepage.webp removed — was imported but never used; saves ~186KB from bundle)
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
+
+/** Detect mobile synchronously at first render (SSR-safe).
+ *  Used to skip the <video> element entirely on phones — the poster
+ *  becomes the LCP element and avoids the 2-3 MB video pull on cellular. */
+const detectMobile = () => {
+  if (typeof window === "undefined") return false;
+  try { return window.matchMedia("(max-width: 767px)").matches; } catch { return false; }
+};
+
 
 interface HeroSectionProps {
   overline?: string;
@@ -128,6 +136,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const rightColRef = React.useRef<HTMLDivElement>(null);
     const portraitRef = React.useRef<HTMLDivElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
+    const [isMobile] = React.useState(detectMobile);
+    const renderVideo = !!heroVideo && !isMobile;
     const [showScrollHint, setShowScrollHint] = React.useState(true);
     const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
     const perfStartRef = React.useRef<number>(0);
@@ -215,15 +225,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     }, []);
 
     React.useEffect(() => {
-      if (!heroVideo) return;
+      if (!heroVideo || isMobile) return;
       const el = videoRef.current;
       if (!el) return;
 
       // Pick a viewport-appropriate variant if base file follows the -720/-480 convention.
       // E.g. heroVideo="/hero-interior-720.mp4" → on mobile we swap to -480.mp4
-      const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
+      const isMobileVw = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
       let chosen = heroVideo;
-      if (isMobile && /-720\.mp4$/i.test(heroVideo)) {
+      if (isMobileVw && /-720\.mp4$/i.test(heroVideo)) {
         chosen = heroVideo.replace(/-720\.mp4$/i, "-480.mp4");
       }
 
@@ -446,14 +456,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="absolute inset-0 h-full w-full object-cover"
             style={{ zIndex: 1 }}
             loading="eager"
-            decoding="sync"
+            decoding="async"
             {...{ fetchpriority: "high" } as any}
           />
         )}
 
         {/* Video background — fades in over the poster once the first frame plays.
             preload="metadata" on mobile to protect LCP; "auto" on desktop. */}
-        {heroVideo && (
+        {renderVideo && (
           <video
             ref={videoRef}
             autoPlay
@@ -517,11 +527,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.4 }}
-                  className="mb-3 sm:mb-6 uppercase font-semibold"
+                <p
+                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
                   style={{
                     color: "var(--gold)",
                     fontFamily: "var(--sans)",
@@ -531,14 +538,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   }}
                 >
                   {overline.replace(/[·•]/g, "  ·  ")}
-                </motion.p>
+                </p>
               )}
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+              <h1
+                className="hero-fade-in"
                 style={{
+                  animationDelay: "0.1s",
                   color: "#FFFFFF",
                   letterSpacing: "-.01em",
                   fontStyle: "italic",
@@ -566,14 +572,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </span>
                   </>
                 )}
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
-                className="mt-4 sm:mt-6 block max-w-[460px] font-light"
+              <p
+                className="hero-fade-in mt-4 sm:mt-6 block max-w-[460px] font-light"
                 style={{
+                  animationDelay: "0.2s",
                   color: "#FFFFFF",
                   fontSize: ".95rem",
                   lineHeight: 1.75,
@@ -583,14 +587,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {lang === "fr"
                   ? "Je vous donne les chiffres et les options, vous décidez. Stratégie claire pour vendre, acheter ou investir en Outaouais."
                   : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
-              </motion.p>
+              </p>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
-                className="mt-3 block font-light"
+              <p
+                className="hero-fade-in mt-3 block font-light"
                 style={{
+                  animationDelay: "0.25s",
                   color: "rgba(255,255,255,0.85)",
                   fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
                   lineHeight: 1.6,
@@ -601,15 +603,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {lang === "fr"
                   ? "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. Près de 9 ans d'expérience, Hall of Fame RE/MAX et plus de 300 transactions complétées en Outaouais."
                   : "Yanis Gauthier-Sigeris, RE/MAX real estate broker in Gatineau. Nearly 9 years of experience, RE/MAX Hall of Fame, and over 300 completed transactions in Outaouais."}
-              </motion.p>
+              </p>
 
               {(primaryCta || secondaryCta) && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+                <div
+                  className="hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+                  style={{ animationDelay: "0.35s" }}
                 >
+
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
@@ -649,7 +650,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       {secondaryCta.label} →
                     </Link>
                   )}
-                </motion.div>
+                </div>
               )}
             </div>
           </div>
@@ -679,10 +680,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 srcSet={agentImage}
                 media="(min-width: 768px)"
               />
-              <motion.img
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+              <img
                 src={agentImage}
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={640}
@@ -762,7 +760,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                 }}
                 loading="eager"
-                decoding="sync"
+                decoding="async"
                 {...{ fetchpriority: "high" } as any}
               />
             </picture>
@@ -784,12 +782,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         <ScrollChevron lang={lang} />
 
         {/* ─── Credibility bar (Layer 5) ─── */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+        <div
+          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
+            animationDelay: "0.5s",
             bottom: "32px",
             color: "rgba(255,255,255,0.75)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
@@ -836,15 +832,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {lang === "en" ? "~9 yrs " : "~9 ans "}<span aria-hidden="true"> | </span>{"5"}<span className="sr-only">{lang === "en" ? "5 stars Google" : "5 étoiles Google"}</span><span aria-hidden="true">★</span>{" Google"}<span aria-hidden="true"> | </span>{"Hall of Fame"}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* ─── NAP (Layer 5) ─── */}
-        <motion.address
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
+        <address
+          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
           style={{
+            animationDelay: "0.5s",
             bottom: "8px",
             color: "rgba(255,255,255,0.6)",
             fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
@@ -865,7 +859,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto" style={{ color: "inherit" }}>yanis@martywaite.com</a>
           </span>
-        </motion.address>
+        </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
       </section>
     );
