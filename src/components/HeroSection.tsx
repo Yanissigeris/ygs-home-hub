@@ -648,7 +648,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       {secondaryCta.label} →
                     </Link>
                   )}
-                </motion.div>
+                </div>
               )}
             </div>
           </div>
@@ -678,10 +678,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 srcSet={agentImage}
                 media="(min-width: 768px)"
               />
-              <motion.img
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+              <img
                 src={agentImage}
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={640}
