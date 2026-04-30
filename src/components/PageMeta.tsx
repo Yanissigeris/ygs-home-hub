@@ -129,11 +129,11 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     /* ── Meta description ── */
     ensureMetaTag('meta[name="description"]', { name: "description", content: description });
 
-    /* ── Open Graph ── */
+    /* ── Open Graph (only the per-route values; constants like og:type,
+         og:site_name and twitter:card live in index.html as a single source
+         of truth and are never rewritten here). ── */
     ensureMetaTag('meta[property="og:title"]', { property: "og:title", content: title });
     ensureMetaTag('meta[property="og:description"]', { property: "og:description", content: description });
-    ensureMetaTag('meta[property="og:site_name"]', { property: "og:site_name", content: SITE });
-    ensureMetaTag('meta[property="og:type"]', { property: "og:type", content: "website" });
 
     const locale = isEn ? "en_CA" : "fr_CA";
     const altLocale = isEn ? "fr_CA" : "en_CA";
@@ -153,8 +153,7 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     ensureMetaTag('meta[property="og:image:width"]', { property: "og:image:width", content: "1200" });
     ensureMetaTag('meta[property="og:image:height"]', { property: "og:image:height", content: "630" });
 
-    /* ── Twitter Card ── */
-    ensureMetaTag('meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" });
+    /* ── Twitter Card (only per-route values) ── */
     ensureMetaTag('meta[name="twitter:title"]', { name: "twitter:title", content: title });
     ensureMetaTag('meta[name="twitter:description"]', { name: "twitter:description", content: description });
     ensureMetaTag('meta[name="twitter:image"]', { name: "twitter:image", content: imageUrl });
