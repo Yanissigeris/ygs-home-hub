@@ -47,32 +47,47 @@
       // Preload hero assets only on homepage
       (function(){
         var p = location.pathname;
-        if (p === '/' || p === '/en' || p === '/en/') {
-          var isMobile = window.matchMedia('(max-width: 767px)').matches;
+        if (p !== '/' && p !== '/en' && p !== '/en/') return;
 
-          // Always preload the hero poster (LCP candidate behind the video)
-          var a = document.createElement('link');
-          a.rel='preload'; a.as='image'; a.type='image/webp';
-          a.href='/hero-video-poster.webp';
-          a.setAttribute('fetchpriority','high');
-          document.head.appendChild(a);
+        var isMobile = window.matchMedia('(max-width: 767px)').matches;
 
-          // NOTE: Yanis portrait preload is handled in src/App.tsx using the
-          // Vite-hashed asset URL + AVIF/WebP detection — preloading by hardcoded
-          // path here would miss the real hashed file in production.
+        // ─── POSTER (image) ─────────────────────────────────────────────
+        // Always preload the hero video poster — it's the visible LCP layer
+        // behind the <video>. On mobile it's the ONLY preload that competes
+        // with the Yanis portrait, so we boost it to the top of the queue.
+        var poster = document.createElement('link');
+        poster.rel = 'preload';
+        poster.as = 'image';
+        poster.type = 'image/webp';
+        poster.href = '/hero-video-poster.webp';
+        poster.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(poster);
 
-          // Video: preload at LOW priority on mobile (don't compete with LCP),
-          // HIGH on desktop where bandwidth is usually plenty.
+        // NOTE: Yanis portrait preload is handled in src/App.tsx using the
+        // Vite-hashed asset URL + AVIF/WebP detection — preloading by hardcoded
+        // path here would miss the real hashed file in production.
+
+        // ─── VIDEO (desktop only) ───────────────────────────────────────
+        // On mobile we deliberately DO NOT preload the video. Reasons:
+        //   1. The <video preload="metadata"> tag in HeroSection still kicks
+        //      off the request after the LCP paints — no functional loss.
+        //   2. A <link rel=preload as=video> on mobile would issue a
+        //      Range:bytes=0- request immediately, eating ~10-20% of the
+        //      4G bandwidth budget right when the LCP image needs it.
+        //   3. The poster <img> already covers the visual hole until the
+        //      video first frame arrives — no flicker risk.
+        if (!isMobile) {
           var probe = document.createElement('video');
           var av1 = probe.canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '' ||
                     probe.canPlayType('video/mp4; codecs="av01"') !== '';
-          var base = isMobile ? '/hero-interior-480' : '/hero-interior-720';
-          var href = base + (av1 ? '.av1.mp4' : '.mp4');
+          var href = '/hero-interior-720' + (av1 ? '.av1.mp4' : '.mp4');
 
           var v = document.createElement('link');
-          v.rel='preload'; v.as='video'; v.type='video/mp4';
+          v.rel = 'preload';
+          v.as = 'video';
+          v.type = 'video/mp4';
           v.href = href;
-          v.setAttribute('fetchpriority', isMobile ? 'low' : 'high');
+          v.setAttribute('fetchpriority', 'high');
           document.head.appendChild(v);
         }
       })();
