@@ -90,6 +90,22 @@ const SiteLayout = () => {
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
   const skipLabel = isEn ? "Skip to content" : "Aller au contenu";
   useHeadingHierarchyGuard();
+
+  // Defer non-critical UI (cookie consent, WhatsApp button, footer) to idle
+  // time to free the main thread during LCP/TBT window.
+  const [deferredReady, setDeferredReady] = React.useState(false);
+  React.useEffect(() => {
+    const ric = (window as any).requestIdleCallback as
+      | ((cb: () => void, opts?: { timeout: number }) => number)
+      | undefined;
+    const trigger = () => setDeferredReady(true);
+    const id = ric ? ric(trigger, { timeout: 2500 }) : window.setTimeout(trigger, 1800);
+    return () => {
+      if (ric && (window as any).cancelIdleCallback) (window as any).cancelIdleCallback(id);
+      else clearTimeout(id);
+    };
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col font-body">
       <JsonLdSchema />
