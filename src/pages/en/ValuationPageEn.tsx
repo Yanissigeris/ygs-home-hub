@@ -44,7 +44,7 @@ const ValuationPageEn = () => {
             WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
             maskComposite: 'intersect',
             WebkitMaskComposite: 'destination-in',
-          }}><img src={yanisPhoto} alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" className="w-[380px] lg:w-[440px] xl:w-[500px] object-contain object-bottom" loading="eager" /></div>
+          }}><img src={yanisPhoto} alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" width={896} height={1200} className="w-[380px] lg:w-[440px] xl:w-[500px] h-auto object-contain object-bottom" loading="eager" decoding="async" /></div>
         </motion.div>
 
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
