@@ -3,6 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { Home } from "lucide-react";
 import { breadcrumbMap } from "@/data/breadcrumbs";
 import { getPostBySlug } from "@/data/blog-posts";
+import { getA11yLabel } from "@/lib/a11y";
 
 const VisibleBreadcrumb = () => {
   const { pathname } = useLocation();
@@ -34,7 +35,7 @@ const VisibleBreadcrumb = () => {
 
   return (
     <nav
-      aria-label="Breadcrumb"
+      aria-label={getA11yLabel("nav.breadcrumb", pathname.startsWith("/en") ? "en" : "fr")}
       className="w-full border-b relative"
       style={{
         backgroundColor: "var(--cream, #F7F4EE)",

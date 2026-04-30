@@ -5,6 +5,7 @@ import { Calendar, Star, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getA11yLabel } from "@/lib/a11y";
 import heroHomepageBg from "@/assets/hero-homepage.webp";
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
@@ -43,7 +44,7 @@ const statsEn = [
 ];
 
 /* Scroll chevron — bounces at hero bottom, fades on scroll */
-const ScrollChevron: React.FC = () => {
+const ScrollChevron: React.FC<{ lang: "fr" | "en" }> = ({ lang }) => {
   const [hidden, setHidden] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => setHidden(window.scrollY > 100);
@@ -60,7 +61,7 @@ const ScrollChevron: React.FC = () => {
     <button
       type="button"
       onClick={handleClick}
-      aria-label="Scroll to next section"
+      aria-label={getA11yLabel("hero.scrollNext", lang)}
       className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto"
       style={{
         bottom: "84px",
@@ -677,7 +678,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         />
 
         {/* ─── Scroll chevron ─── */}
-        <ScrollChevron />
+        <ScrollChevron lang={lang} />
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <motion.div

@@ -47,6 +47,36 @@ const labels: Record<string, { fr: Translation; en: Translation }> = {
     fr: "5 étoiles sur 5",
     en: "5 stars",
   },
+
+  // Hero
+  "hero.scrollNext": {
+    fr: "Défiler à la section suivante",
+    en: "Scroll to next section",
+  },
+
+  // Landmarks
+  "nav.main": {
+    fr: "Navigation principale",
+    en: "Main navigation",
+  },
+  "nav.footer": {
+    fr: "Navigation du pied de page",
+    en: "Footer navigation",
+  },
+  "nav.breadcrumb": {
+    fr: "Fil d'Ariane",
+    en: "Breadcrumb",
+  },
+
+  // Generic carousel controls
+  "carousel.previous": {
+    fr: "Précédent",
+    en: "Previous",
+  },
+  "carousel.next": {
+    fr: "Suivant",
+    en: "Next",
+  },
 };
 
 export function getA11yLabel(
