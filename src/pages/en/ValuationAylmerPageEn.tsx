@@ -82,7 +82,7 @@ const ValuationAylmerPageEn = () => {
       <section className="section-padding bg-background">
         <div className="section-container max-w-[44rem]">
           <motion.div {...anim} className="flex items-center gap-4 mb-6">
-            <img src={yanisPhoto} alt="Yanis Gauthier" className="h-14 w-14 rounded-full object-cover" loading="lazy" />
+            <img src={yanisPhoto} alt="Yanis Gauthier" width={56} height={56} className="h-14 w-14 rounded-full object-cover" loading="lazy" decoding="async" />
             <div>
               <p className="font-semibold text-[0.9375rem]">Yanis Gauthier-Sigeris</p>
               <p className="text-[0.8125rem] text-muted-foreground flex items-center gap-1"><BadgeCheck size={13} className="text-accent" /> Real estate broker · Aylmer & Outaouais</p>
