@@ -14,6 +14,7 @@ const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; classNa
 );
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getA11yLabel } from "@/lib/a11y";
 import ygsLogo from "@/assets/ygs-logo-updated.png";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
@@ -394,7 +395,7 @@ const SiteHeader = () => {
           >
             {ctaLabel}
           </Link>
-          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: `1px solid ${transparent ? "rgba(247,244,238,.3)" : "var(--border)"}`, color: iconColor }} aria-label={open ? (lang === "en" ? "Close menu" : "Fermer le menu") : (lang === "en" ? "Open menu" : "Ouvrir le menu")} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: `1px solid ${transparent ? "rgba(247,244,238,.3)" : "var(--border)"}`, color: iconColor }} aria-label={getA11yLabel(open ? "menu.close" : "menu.open", lang)} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
@@ -423,7 +424,7 @@ const SiteHeader = () => {
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
-          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={open ? (lang === "en" ? "Close menu" : "Fermer le menu") : (lang === "en" ? "Open menu" : "Ouvrir le menu")} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 44, width: 44, border: "none", background: "none", color: iconColor }} aria-label={getA11yLabel(open ? "menu.close" : "menu.open", lang)} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>
           <Link
