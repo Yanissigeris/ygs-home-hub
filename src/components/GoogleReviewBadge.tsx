@@ -11,8 +11,8 @@ const GoogleIcon = () => (
   </svg>
 );
 
-const Stars = () => (
-  <span className="inline-flex gap-0.5 text-[#FBBC05]" aria-label="5 stars">
+const Stars = ({ label }: { label: string }) => (
+  <span className="inline-flex gap-0.5 text-[#FBBC05]" aria-label={label}>
     {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
   </span>
 );
@@ -24,6 +24,7 @@ interface GoogleReviewBadgeProps {
 const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
   const lang = useLanguage();
   const reviewsText = lang === "en" ? "reviews" : "avis";
+  const starsLabel = lang === "en" ? "5 stars" : "5 étoiles sur 5";
 
   if (variant === "compact") {
     return (
@@ -34,7 +35,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
         className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
         style={{ fontSize: ".75rem", color: "rgba(255,255,255,.45)" }}
       >
-        <Stars /> 5.0 {lang === "en" ? "on Google" : "sur Google"}
+        <Stars label={starsLabel} /> 5.0 {lang === "en" ? "on Google" : "sur Google"}
       </a>
     );
   }
@@ -53,7 +54,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
           Google Reviews
         </span>
         <span className="flex items-center gap-1.5">
-          <Stars />
+          <Stars label={starsLabel} />
           <span className="text-[.88rem] font-semibold" style={{ color: "var(--ink)" }}>5.0</span>
           
         </span>
