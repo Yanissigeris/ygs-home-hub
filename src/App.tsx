@@ -5,9 +5,8 @@ import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
 import BrandedLoader from "@/components/BrandedLoader";
 
-import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
-import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
-import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
+// Hero portrait — only AVIF preload variants needed (WebP fallback is handled
+// by <picture> in HeroSection without a preload, since AVIF covers 97% of UAs).
 import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
 import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
