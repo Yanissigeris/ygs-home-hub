@@ -82,12 +82,26 @@ export default defineConfig(() => ({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-          if (id.includes("@supabase") || id.includes("@tanstack")) return "data";
+          if (!id.includes("node_modules")) {
+            // Application code: keep blog markdown out of the main chunk.
+            // Loaded only when /blogue/* or /en/blog/* breadcrumb resolves a slug,
+            // or when the BlogPage / BlogArticlePage routes mount.
+            if (id.includes("/data/blog-posts")) return "blog-data";
+            return;
+          }
+          // Heavy charting lib — only used by /ui/chart.tsx (currently dead code,
+          // but keep it isolated in case a chart is added later).
+          if (id.includes("recharts") || id.includes("d3-")) return "charts";
+          // Supabase client — only loaded by ValuationWidget + form hooks.
+          // Splitting it lets routes without forms skip ~127 KB.
+          if (id.includes("@supabase")) return "supabase";
+          if (id.includes("@tanstack")) return "data";
           if (id.includes("framer-motion")) return "motion";
           if (id.includes("lucide-react")) return "icons";
-          if (id.includes("recharts") || id.includes("d3-")) return "charts";
           if (id.includes("embla-carousel")) return "carousel";
+          // Radix is huge in aggregate but each primitive is small;
+          // bundling them together compresses much better than per-package.
+          if (id.includes("@radix-ui")) return "radix";
           return "vendor";
         },
       },
