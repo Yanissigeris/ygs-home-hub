@@ -6,7 +6,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BrandedLoader from "@/components/BrandedLoader";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
+import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
 
 const preloadAsset = (href: string, as: string, mime?: string) => {
   if (typeof document === "undefined") return;
@@ -19,8 +21,8 @@ const preloadAsset = (href: string, as: string, mime?: string) => {
   document.head.appendChild(link);
 };
 
-// Detect AVIF support synchronously via image MIME registry — accurate in all
-// modern browsers. Defaults to false on the server / older browsers.
+// Synchronous AVIF support detection via canvas.toDataURL — accurate in all
+// modern browsers (Chrome/Edge 85+, Firefox 93+, Safari 16+).
 const supportsAvif = (): boolean => {
   if (typeof document === "undefined") return false;
   const c = document.createElement("canvas");
@@ -33,12 +35,14 @@ const supportsAvif = (): boolean => {
 };
 
 if (typeof window !== "undefined") {
-  // Preload the format the browser will actually use — saves ~37% bytes on AVIF-capable browsers.
-  if (supportsAvif()) {
-    preloadAsset(yanisPortraitAvif, "image", "image/avif");
-  } else {
-    preloadAsset(yanisPortrait, "image", "image/webp");
-  }
+  // Pick the smallest correct file: mobile gets -sm, AVIF-capable browsers get .avif.
+  // Mobile AVIF: ~7.6KB · Mobile WebP: ~12KB · Desktop AVIF: ~19KB · Desktop WebP: ~30KB
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const avif = supportsAvif();
+  const href = isMobile
+    ? (avif ? yanisPortraitSmAvif : yanisPortraitSm)
+    : (avif ? yanisPortraitAvif : yanisPortrait);
+  preloadAsset(href, "image", avif ? "image/avif" : "image/webp");
 }
 
 // FR pages
