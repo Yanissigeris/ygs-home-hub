@@ -846,7 +846,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               WebkitBackdropFilter: "blur(4px)",
               padding: "12px 16px",
               borderRadius: "8px",
-              margin: "0 16px",
+              margin: 0,
               lineHeight: 1.5,
             }}
           >
