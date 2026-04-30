@@ -826,7 +826,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <div
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in absolute left-0 z-[5] w-1/2 px-4 text-left pointer-events-none md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
