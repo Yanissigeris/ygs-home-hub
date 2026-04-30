@@ -53,14 +53,16 @@
 
         // ─── POSTER (image) ─────────────────────────────────────────────
         // Always preload the hero video poster — it's the visible LCP layer
-        // behind the <video>. On mobile it's the ONLY preload that competes
-        // with the Yanis portrait, so we boost it to the top of the queue.
+        // behind the <video>. On mobile the Yanis portrait IS the LCP element
+        // (poster sits behind it), so we use `auto` priority on mobile to
+        // avoid competing with the portrait preload (which is `high`).
+        // On desktop the poster covers more area and stays `high`.
         var poster = document.createElement('link');
         poster.rel = 'preload';
         poster.as = 'image';
         poster.type = 'image/webp';
         poster.href = '/hero-video-poster.webp';
-        poster.setAttribute('fetchpriority', 'high');
+        poster.setAttribute('fetchpriority', isMobile ? 'auto' : 'high');
         document.head.appendChild(poster);
 
         // NOTE: Yanis portrait preload is handled in src/App.tsx using the
