@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getA11yLabel } from "@/lib/a11y";
 
 const GOOGLE_PROFILE_URL = "https://maps.app.goo.gl/BkkH6Zrw7Yj3XdpA9";
 
@@ -24,7 +25,7 @@ interface GoogleReviewBadgeProps {
 const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
   const lang = useLanguage();
   const reviewsText = lang === "en" ? "reviews" : "avis";
-  const starsLabel = lang === "en" ? "5 stars" : "5 étoiles sur 5";
+  const starsLabel = getA11yLabel("reviews.fiveStars", lang);
 
   if (variant === "compact") {
     return (
