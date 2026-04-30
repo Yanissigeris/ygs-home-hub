@@ -549,25 +549,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — mobile */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[2] md:hidden"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
-          }}
-        />
-
-        {/* Left-side contrast overlay — mobile (slightly stronger to compensate for portrait overlap) */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[2] md:hidden"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(23,48,59,0.80) 0%, rgba(23,48,59,0) 55%)",
-          }}
-        />
+        {/* (Mobile ink overlay is now scoped inside the text block — see below) */}
 
         {/* ─── TEXT CONTENT (Layer 3) ─── */}
         <div
