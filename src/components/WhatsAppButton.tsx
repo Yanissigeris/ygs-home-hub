@@ -44,7 +44,7 @@ const FloatingCallButton = () => {
   const ariaLabelMobile = lang === "en" ? "Call" : "Appeler";
 
   return (
-    <>
+    <aside aria-label={lang === "en" ? "Quick contact" : "Contact rapide"}>
       {/* Desktop */}
       <a
         href="tel:+18192103044"
