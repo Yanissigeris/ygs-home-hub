@@ -3,6 +3,8 @@ import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
+import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
 import HeroSection from "@/components/HeroSection";
 
 
@@ -51,6 +53,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
+      agentImageAvif={yanisPortraitAvif}
+      agentImageSmAvif={yanisPortraitSmAvif}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
