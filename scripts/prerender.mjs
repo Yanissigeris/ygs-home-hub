@@ -282,6 +282,8 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
     <meta property="og:description" content="${escapeHtml(meta.description)}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="${ogImage}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="${locale}" />
     <meta property="og:locale:alternate" content="${altLocale}" />
     <meta name="twitter:title" content="${escapeHtml(meta.title)}" />
