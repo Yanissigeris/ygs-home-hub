@@ -712,7 +712,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <Calendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                 {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
               </span>
-              <span className="mx-2 opacity-50">|</span>
+              <span className="mx-2 opacity-50" aria-hidden="true">|</span>
               <a
                 href="#avis"
                 className="pointer-events-auto hover:underline inline-flex items-center"
@@ -721,7 +721,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <Star aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} fill="currentColor" />
                 5★ Google &amp; Facebook
               </a>
-              <span className="mx-2 opacity-50">|</span>
+              <span className="mx-2 opacity-50" aria-hidden="true">|</span>
               <span className="pointer-events-auto inline-flex items-center">
                 <Trophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                 {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
@@ -729,7 +729,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </div>
             {/* Mobile shortened credibility */}
             <div className="md:hidden">
-              {lang === "en" ? "~9 yrs | 5★ Google | Hall of Fame" : "~9 ans | 5★ Google | Hall of Fame"}
+              {lang === "en" ? "~9 yrs " : "~9 ans "}<span aria-hidden="true"> | </span>{"5"}<span className="sr-only">{lang === "en" ? "5 stars Google" : "5 étoiles Google"}</span><span aria-hidden="true">★</span>{" Google"}<span aria-hidden="true"> | </span>{"Hall of Fame"}
             </div>
           </div>
         </motion.div>
