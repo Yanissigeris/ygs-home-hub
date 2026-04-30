@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import yanisAbout from "@/assets/yanis-about-nobg.webp";
+import yanisAbout from "@/assets/yanis-about-new.jpg";
 
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
