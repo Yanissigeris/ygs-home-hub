@@ -452,9 +452,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden w-full"
+        className="relative overflow-hidden w-full md:min-h-[100svh] md:block flex flex-col"
         style={{
-          minHeight: "100svh",
           backgroundColor: "#17303B",
         }}
       >
