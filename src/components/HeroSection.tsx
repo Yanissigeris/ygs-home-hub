@@ -633,7 +633,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </p>
 
               <p
-                className="hero-fade-in mt-3 block font-light"
+                className="hero-fade-in mt-3 hidden font-light md:block"
                 style={{
                   animationDelay: "0.25s",
                   color: "rgba(255,255,255,0.85)",
