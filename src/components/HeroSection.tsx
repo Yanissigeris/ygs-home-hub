@@ -741,11 +741,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               />
               <img
                 src={agentImageSm || agentImage}
-                srcSet={[
-                  agentImageSm && `${agentImageSm} 1x`,
-                  agentImageMd && `${agentImageMd} 2x`,
-                  agentImage && `${agentImage} 3x`,
-                ].filter(Boolean).join(", ")}
+                /* On desktop, no <source> matches and the browser would download
+                   `src` (sm.webp ~11 KB) as the picture fallback. We pin the
+                   placeholder above 768 CSS px and the real WebP below. */
+                srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
+                sizes="(max-width: 767px) 70vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
