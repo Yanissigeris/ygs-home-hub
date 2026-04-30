@@ -456,7 +456,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="absolute inset-0 h-full w-full object-cover"
             style={{ zIndex: 1 }}
             loading="eager"
-            decoding="sync"
+            decoding="async"
             {...{ fetchpriority: "high" } as any}
           />
         )}
