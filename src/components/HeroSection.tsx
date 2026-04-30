@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Calendar, Star, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/analytics";
@@ -8,6 +7,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 // (hero-homepage.webp removed — was imported but never used; saves ~186KB from bundle)
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
+
+/** Detect mobile synchronously at first render (SSR-safe).
+ *  Used to skip the <video> element entirely on phones — the poster
+ *  becomes the LCP element and avoids the 2-3 MB video pull on cellular. */
+const detectMobile = () => {
+  if (typeof window === "undefined") return false;
+  try { return window.matchMedia("(max-width: 767px)").matches; } catch { return false; }
+};
+
 
 interface HeroSectionProps {
   overline?: string;
