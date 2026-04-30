@@ -661,11 +661,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             than WebP at equivalent quality. Falls back to WebP transparently. */}
         {agentImage && (
           <>
-            {/* Desktop portrait */}
+            {/* Desktop portrait — wrapped in <picture> with media="(min-width: 768px)"
+                on every <source> so mobile browsers SKIP this download entirely.
+                Note: Tailwind's `hidden md:block` only hides via CSS — the browser
+                still pre-fetches all <img> in the DOM regardless. The media query
+                on the <source> is the only reliable way to gate the network request. */}
             <picture className="hidden md:block">
               {agentImageAvif && (
-                <source type="image/avif" srcSet={agentImageAvif} />
+                <source
+                  type="image/avif"
+                  srcSet={agentImageAvif}
+                  media="(min-width: 768px)"
+                />
               )}
+              <source
+                type="image/webp"
+                srcSet={agentImage}
+                media="(min-width: 768px)"
+              />
               <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
