@@ -540,26 +540,33 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — mobile */}
+        {/* Main gradient overlay — mobile (atmospheric base, z-2) */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] md:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
+              "linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)",
           }}
         />
 
-        {/* ─── TEXT CONTENT (Layer 3) ─── */}
+        {/* Left-side text-protect gradient — mobile only (z-3, anchor-corner composition) */}
         <div
-          className="relative z-[3] flex flex-col"
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[3] md:hidden"
+          style={{
+            background:
+              "linear-gradient(95deg, rgba(23,48,59,0.95) 0%, rgba(23,48,59,0.88) 30%, rgba(23,48,59,0.55) 48%, rgba(23,48,59,0.18) 65%, transparent 80%)",
+          }}
+        />
+
+        {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
+        <div
+          className="relative z-[20] flex flex-col"
           style={{ minHeight: "100svh" }}
         >
           <div
-            className="w-full md:max-w-[50%]"
-            style={{
-              padding: "90px 20px 0 20px",
-            }}
+            className="w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
@@ -626,7 +633,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </p>
 
               <p
-                className="hero-fade-in mt-3 block font-light"
+                className="hero-fade-in mt-3 hidden font-light md:block"
                 style={{
                   animationDelay: "0.25s",
                   color: "rgba(255,255,255,0.85)",
@@ -779,21 +786,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    `src` (sm.webp ~11 KB) as the picture fallback. We pin the
                    placeholder above 768 CSS px and the real WebP below. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
-                sizes="(max-width: 767px) 88vw, 1px"
+                sizes="(max-width: 767px) 50vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
-                className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
+                className="md:hidden absolute pointer-events-none select-none"
                 style={{
                   bottom: 0,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  maxHeight: "60vh",
-                  width: "auto",
+                  right: 0,
+                  width: "48vw",
+                  height: "auto",
+                  maxHeight: "75%",
+                  objectFit: "contain",
+                  objectPosition: "bottom right",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                  WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
-                  maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                 }}
                 loading="eager"
                 decoding="async"
@@ -819,7 +826,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <div
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in absolute left-0 z-[5] w-1/2 px-4 text-left pointer-events-none md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
@@ -872,7 +879,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── NAP (Layer 5) ─── */}
         <address
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
+          className="hero-fade-in absolute left-0 z-[5] w-1/2 px-4 text-left not-italic pointer-events-none md:w-full md:text-center"
           style={{
             animationDelay: "0.5s",
             bottom: "8px",
