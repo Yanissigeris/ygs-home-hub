@@ -837,29 +837,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {/* ─── Scroll chevron ─── */}
         <ScrollChevron lang={lang} />
 
-        {/* ─── Credibility bar (Layer 5) ─── */}
+        {/* ─── Trust strip band: credibility + NAP, full-width ink background ─── */}
         <div
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center pointer-events-none md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in absolute left-0 right-0 bottom-0 z-[5] w-full pointer-events-none"
           style={{
             animationDelay: "0.5s",
-            bottom: "32px",
-            color: "rgba(255,255,255,0.75)",
-            fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+            background: "rgba(23,48,59,0.85)",
+            paddingTop: "16px",
+            paddingBottom: "16px",
             fontFamily: "var(--sans)",
           }}
         >
+          {/* Credibility line */}
           <div
-            className="md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none"
+            className="w-full px-4 text-center"
             style={{
-              background: "rgba(23,48,59,0.6)",
-              backdropFilter: "blur(4px)",
-              WebkitBackdropFilter: "blur(4px)",
-              padding: "12px 16px",
-              borderRadius: "8px",
-              margin: "0 16px",
+              color: "rgba(255,255,255,0.85)",
+              fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
             }}
           >
             {/* Desktop credibility (hidden on mobile) */}
@@ -888,34 +884,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {lang === "en" ? "~9 yrs " : "~9 ans "}<span aria-hidden="true"> | </span>{"5"}<span className="sr-only">{lang === "en" ? "5 stars Google" : "5 étoiles Google"}</span><span aria-hidden="true">★</span>{" Google"}<span aria-hidden="true"> | </span>{"Hall of Fame"}
             </div>
           </div>
-        </div>
 
-        {/* ─── NAP (Layer 5) ─── */}
-        <address
-          className="hero-fade-in absolute left-0 z-[5] w-full px-4 text-center not-italic pointer-events-none"
-          style={{
-            animationDelay: "0.5s",
-            bottom: "8px",
-            color: "rgba(255,255,255,0.6)",
-            fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
-            fontStyle: "normal",
-            textShadow: "0 1px 4px rgba(0,0,0,0.5)",
-            fontFamily: "var(--sans)",
-          }}
-        >
-          <span
-            className="inline-block md:!bg-transparent md:!backdrop-blur-0 md:!px-0 md:!py-0 md:!rounded-none"
+          {/* NAP line */}
+          <address
+            className="w-full px-4 text-center not-italic mt-2"
             style={{
-              background: "rgba(23,48,59,0.6)",
-              backdropFilter: "blur(4px)",
-              WebkitBackdropFilter: "blur(4px)",
-              padding: "6px 12px",
-              borderRadius: "6px",
+              color: "rgba(255,255,255,0.7)",
+              fontSize: "clamp(0.65rem, 1.4vw, 0.7rem)",
+              fontStyle: "normal",
             }}
           >
             Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto" style={{ color: "inherit" }}>yanis@martywaite.com</a>
-          </span>
-        </address>
+          </address>
+        </div>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
       </section>
     );
