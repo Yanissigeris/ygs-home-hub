@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { Review } from "@/data/reviews";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TestimonialSliderProps {
   overline?: string;
@@ -60,6 +61,7 @@ const SlideCard = ({ review }: { review: Review }) => (
 /* ── Main slider ── */
 const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
   ({ overline = "Témoignages", title = "Ce que disent mes clients", reviews, reviewsPageLabel, reviewsPageHref }, ref) => {
+    const lang = useLanguage();
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", skipSnaps: false, duration: 32 });
 
     const [canPrev, setCanPrev] = React.useState(false);
@@ -140,7 +142,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
             <button
               onClick={() => emblaApi?.scrollPrev()}
               disabled={!canPrev}
-              aria-label="Previous testimonial"
+              aria-label={lang === "en" ? "Previous testimonial" : "Témoignage précédent"}
               className="absolute -left-4 top-1/2 -translate-y-1/2 hidden lg:flex h-10 w-10 items-center justify-center rounded-full transition-colors"
               style={{ border: "1px solid rgba(255,255,255,.12)", color: "rgba(255,255,255,.5)" }}
             >
@@ -149,7 +151,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
             <button
               onClick={() => emblaApi?.scrollNext()}
               disabled={!canNext}
-              aria-label="Next testimonial"
+              aria-label={lang === "en" ? "Next testimonial" : "Témoignage suivant"}
               className="absolute -right-4 top-1/2 -translate-y-1/2 hidden lg:flex h-10 w-10 items-center justify-center rounded-full transition-colors"
               style={{ border: "1px solid rgba(255,255,255,.12)", color: "rgba(255,255,255,.5)" }}
             >
@@ -165,7 +167,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
                   key={i}
                   role="tab"
                   aria-selected={i === activeIndex}
-                  aria-label={`Go to testimonial ${i + 1}`}
+                  aria-label={lang === "en" ? `Go to testimonial ${i + 1}` : `Aller au témoignage ${i + 1}`}
                   onClick={() => emblaApi?.scrollTo(i)}
                   className="h-[5px] rounded-full transition-all duration-500"
                   style={{
