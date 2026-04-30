@@ -141,8 +141,12 @@ const SiteLayout = () => {
       <React.Suspense fallback={null}>
         <SiteFooter />
       </React.Suspense>
-      <WhatsAppButton />
-      <CookieConsent />
+      {deferredReady && (
+        <React.Suspense fallback={null}>
+          <WhatsAppButton />
+          <CookieConsent />
+        </React.Suspense>
+      )}
     </div>
   );
 };
