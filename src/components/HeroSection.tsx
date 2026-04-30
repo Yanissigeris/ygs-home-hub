@@ -452,8 +452,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden w-full md:min-h-[100svh] md:block flex flex-col"
+        className="relative overflow-hidden w-full"
         style={{
+          minHeight: "100svh",
           backgroundColor: "#17303B",
         }}
       >
@@ -549,23 +550,36 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* (Mobile ink overlay is now scoped inside the text block — see below) */}
+        {/* Main gradient overlay — mobile */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[2] md:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
+          }}
+        />
+
+        {/* Left-side contrast overlay — mobile (slightly stronger to compensate for portrait overlap) */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[2] md:hidden"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(23,48,59,0.80) 0%, rgba(23,48,59,0) 55%)",
+          }}
+        />
 
         {/* ─── TEXT CONTENT (Layer 3) ─── */}
         <div
-          className="relative z-[3] flex flex-col md:min-h-[100svh]"
+          className="relative z-[3] flex flex-col"
+          style={{ minHeight: "100svh" }}
         >
-          {/* Mobile-only ink wash, scoped to the text block (covers bg image behind text only) */}
           <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[1] md:hidden"
+            className="w-full md:max-w-[50%]"
             style={{
-              background:
-                "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 60%, rgba(23,48,59,0.40) 100%)",
+              padding: "90px 20px 0 20px",
             }}
-          />
-          <div
-            className="relative z-[2] w-full md:max-w-[50%] py-12 px-6 md:py-0 md:px-0 md:pt-[90px] md:pl-[20px] md:pr-[20px]"
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {overline && (
@@ -579,7 +593,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                   }}
                 >
-                  {overline.replace(/[·•]\s*$/, "").replace(/[·•]/g, "  ·  ")}
+                  {overline.replace(/[·•]/g, "  ·  ")}
                 </p>
               )}
 
@@ -758,7 +772,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   - 1x phones (low-end Android)        → sm  (~7  KB AVIF)
                   - 2x retina (iPhone 12/13/14)         → md  (~12 KB AVIF)
                   - 3x retina (iPhone Pro Max)          → full(~17 KB AVIF) */}
-            <picture className="md:hidden relative z-[4] block w-full" style={{ background: "#17303B" }}>
+            <picture className="md:hidden">
               {(agentImageSmAvif || agentImageMdAvif || agentImageAvif) && (
                 <source
                   type="image/avif"
@@ -785,16 +799,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    `src` (sm.webp ~11 KB) as the picture fallback. We pin the
                    placeholder above 768 CSS px and the real WebP below. */
                 srcSet={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w, ${agentImageSm || agentImage} 320w, ${agentImageMd || agentImage} 480w, ${agentImage} 640w`}
-                sizes="(max-width: 767px) 100vw, 1px"
+                sizes="(max-width: 767px) 88vw, 1px"
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
-                className="hero-portrait-masked md:hidden block mx-auto w-full pointer-events-none select-none"
+                className="hero-portrait-masked md:hidden absolute object-contain object-bottom pointer-events-none select-none"
                 style={{
-                  height: "auto",
-                  maxHeight: "50vh",
-                  objectFit: "cover",
-                  objectPosition: "center top",
+                  bottom: 0,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  maxHeight: "60vh",
+                  width: "auto",
+                  zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
                   WebkitMaskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
                   maskImage: "radial-gradient(ellipse 75% 75% at 50% 42%, black 58%, rgba(0,0,0,0.55) 80%, transparent 97%)",
@@ -807,16 +823,23 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
-        {/* (Removed mobile bottom gradient — trust strip is now in normal flow on mobile with its own opaque bg) */}
+        {/* Bottom gradient — mobile only, improves readability of credibility bar + NAP */}
+        <div
+          aria-hidden="true"
+          className="md:hidden pointer-events-none absolute left-0 bottom-0 w-full"
+          style={{
+            height: 180,
+            zIndex: 2,
+            background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)",
+          }}
+        />
 
-        {/* ─── Scroll chevron (desktop only — on mobile the trust strip sits in-flow) ─── */}
-        <div className="hidden md:block">
-          <ScrollChevron lang={lang} />
-        </div>
+        {/* ─── Scroll chevron ─── */}
+        <ScrollChevron lang={lang} />
 
         {/* ─── Trust strip band: credibility + NAP, full-width ink background ─── */}
         <div
-          className="hero-fade-in relative md:absolute md:left-0 md:right-0 md:bottom-0 z-[5] w-full pointer-events-none"
+          className="hero-fade-in absolute left-0 right-0 bottom-0 z-[5] w-full pointer-events-none"
           style={{
             animationDelay: "0.5s",
             background: "rgba(23,48,59,0.85)",
