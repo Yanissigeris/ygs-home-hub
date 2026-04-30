@@ -21,9 +21,12 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentImageSm?: string;
+  /** Optional middle tier (~480px wide) for retina mobile / small tablets */
+  agentImageMd?: string;
   /** Optional AVIF variants (preferred by Chrome/Edge/Firefox/Safari 16+) */
   agentImageAvif?: string;
   agentImageSmAvif?: string;
+  agentImageMdAvif?: string;
   agentName?: string;
   heroBgImage?: string;
   heroVideo?: string;
