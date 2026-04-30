@@ -437,10 +437,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             muted
             loop
             playsInline
-            // @ts-expect-error legacy iOS attribute for inline playback
-            webkit-playsinline="true"
-            // @ts-expect-error iOS hint to disable picture-in-picture
-            x-webkit-airplay="deny"
+            {...{ "webkit-playsinline": "true", "x-webkit-airplay": "deny" } as any}
             disablePictureInPicture
             disableRemotePlayback
             poster={heroVideoPoster}
