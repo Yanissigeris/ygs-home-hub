@@ -158,7 +158,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const portraitRef = React.useRef<HTMLDivElement>(null);
     const [videoReady, setVideoReady] = React.useState(false);
     const [isMobile] = React.useState(detectMobile);
-    const renderVideo = !!heroVideo && !isMobile;
+    /* Defer video mount until the browser is idle (after LCP + Speed Index window).
+     * The poster image stays as the visual — Speed Index measures pixels, not video. */
+    const [videoDeferReady, setVideoDeferReady] = React.useState(false);
+    React.useEffect(() => {
+      if (!heroVideo || isMobile) return;
+      const ric = (window as any).requestIdleCallback as
+        | ((cb: () => void, opts?: { timeout: number }) => number)
+        | undefined;
+      const trigger = () => setVideoDeferReady(true);
+      const id = ric ? ric(trigger, { timeout: 3000 }) : window.setTimeout(trigger, 1500);
+      return () => {
+        if (ric && (window as any).cancelIdleCallback) (window as any).cancelIdleCallback(id);
+        else clearTimeout(id);
+      };
+    }, [heroVideo, isMobile]);
+    const renderVideo = !!heroVideo && !isMobile && videoDeferReady;
     const [showScrollHint, setShowScrollHint] = React.useState(true);
     const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
     const perfStartRef = React.useRef<number>(0);
