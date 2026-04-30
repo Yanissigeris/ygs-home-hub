@@ -261,6 +261,33 @@
 
   <body>
     <div id="root"></div>
+    <!-- Pre-paint hero shell — provides FCP within ~200-400ms on mobile,
+         before the JS bundle downloads and React hydrates. The CSS rule
+         `#root:not(:empty)~.ygs-prepaint{display:none}` removes it the
+         instant React renders the real hero. Localized via inline script. -->
+    <div class="ygs-prepaint" aria-hidden="true">
+      <p class="ygs-prepaint__title" id="ygs-prepaint-title">
+        <span id="ygs-prepaint-line1">Votre courtier immobilier</span>
+        <b id="ygs-prepaint-line2">en Outaouais</b>
+      </p>
+    </div>
+    <script>
+      (function(){
+        var p = location.pathname;
+        if (p.indexOf('/en') === 0) {
+          var l1 = document.getElementById('ygs-prepaint-line1');
+          var l2 = document.getElementById('ygs-prepaint-line2');
+          if (l1) l1.textContent = 'Your real estate broker';
+          if (l2) l2.textContent = 'in Outaouais';
+          document.documentElement.lang = 'en';
+        }
+        // Only show pre-paint on home routes (where it matches the real hero)
+        if (p !== '/' && p !== '/en' && p !== '/en/') {
+          var pp = document.querySelector('.ygs-prepaint');
+          if (pp) pp.remove();
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Noscript fallback for crawlers that don't execute JS -->
