@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import cardVendreImg from "@/assets/service-vendre.webp";
 import cardAcheterImg from "@/assets/service-acheter.webp";
 import cardPlexImg from "@/assets/service-plex.webp";
-import lifestyleBgImg from "@/assets/pathway-lifestyle-bg.webp";
+import lifestyleBg1280Avif from "@/assets/pathway-lifestyle-bg-1280.avif";
+import lifestyleBg1280Webp from "@/assets/pathway-lifestyle-bg-1280.webp";
+import lifestyleBg720Avif from "@/assets/pathway-lifestyle-bg-720.avif";
+import lifestyleBg720Webp from "@/assets/pathway-lifestyle-bg-720.webp";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
