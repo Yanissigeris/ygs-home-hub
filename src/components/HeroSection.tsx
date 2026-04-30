@@ -280,12 +280,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         el.load();
       }
 
+      // iOS Safari: autoplay attribute alone is not always enough when src is set via JS.
+      // We must call play() and silently catch the rejection (e.g. Low Power Mode).
+      // If play() rejects, the poster <img> below stays visible — no black flicker.
+      const tryPlay = () => {
+        const p = el.play();
+        if (p && typeof p.catch === "function") {
+          p.catch(() => { /* poster fallback handles it */ });
+        }
+      };
+      tryPlay();
+      el.addEventListener("canplay", tryPlay, { once: true });
+
       return () => {
         el.removeEventListener("loadstart", onLoadStart);
         el.removeEventListener("progress", onProgress);
         el.removeEventListener("loadedmetadata", onLoadedMetadata);
         el.removeEventListener("loadeddata", onLoadedData);
         el.removeEventListener("canplay", onCanPlay);
+        el.removeEventListener("canplay", tryPlay);
         el.removeEventListener("playing", onPlaying);
         el.removeEventListener("error", onError);
       };
@@ -409,7 +422,27 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         )}
 
-        {/* Video background — only fill. preload="metadata" on mobile to protect LCP, "auto" desktop */}
+        {/* Poster image — always visible UNDER the video. Acts as the LCP candidate
+            on iOS Safari (where <video poster> is unreliable) and prevents any black
+            flicker before the video reaches its first frame. */}
+        {heroVideo && heroVideoPoster && (
+          <img
+            src={heroVideoPoster}
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ zIndex: 1 }}
+            loading="eager"
+            decoding="sync"
+            {...{ fetchpriority: "high" } as any}
+          />
+        )}
+
+        {/* Video background — fades in over the poster once the first frame plays.
+            preload="metadata" on mobile to protect LCP; "auto" on desktop. */}
         {heroVideo && (
           <video
             ref={videoRef}
@@ -417,12 +450,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             muted
             loop
             playsInline
+            {...{ "webkit-playsinline": "true", "x-webkit-airplay": "deny" } as any}
+            disablePictureInPicture
+            disableRemotePlayback
             poster={heroVideoPoster}
             preload={typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches ? "metadata" : "auto"}
             width={1920}
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"
-            style={{ opacity: videoReady ? 1 : 0, transition: "opacity 1.2s ease", zIndex: 1 }}
+            style={{ opacity: videoReady ? 1 : 0, transition: "opacity 0.6s ease", zIndex: 2 }}
             aria-hidden="true"
             onPlaying={() => setVideoReady(true)}
           />
