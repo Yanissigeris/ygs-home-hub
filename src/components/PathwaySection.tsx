@@ -130,6 +130,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
         <div
           aria-hidden="true"
+          role="presentation"
           className="hidden md:block absolute"
           style={{
             top: "80px",
@@ -156,6 +157,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         {/* Mobile: photo full-width band on top */}
         <div
           aria-hidden="true"
+          role="presentation"
           className="md:hidden w-full h-[200px] mb-8"
           style={{
             backgroundImage: `url(${lifestyleBgImg})`,
