@@ -515,6 +515,19 @@ h1.hero-h1-reduced {
   50%      { transform: translate(-50%, 8px); }
 }
 
+/* Hero fade-in (replaces framer-motion above-the-fold to keep critical JS lean) */
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-fade-in {
+  opacity: 0;
+  animation: hero-fade-in 0.55s cubic-bezier(.22,.61,.36,1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-in { animation: none; opacity: 1; transform: none; }
+}
+
 /* Hero CTA — premium hover (desktop) + tactile active (mobile) */
 .hero-cta-btn {
   transition: all 0.3s ease;
