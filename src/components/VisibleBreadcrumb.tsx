@@ -35,6 +35,7 @@ const VisibleBreadcrumb = () => {
 
   return (
     <nav
+      data-breadcrumb=""
       aria-label={getA11yLabel("nav.breadcrumb", pathname.startsWith("/en") ? "en" : "fr")}
       className="w-full border-b relative"
       style={{
@@ -126,10 +127,10 @@ const VisibleBreadcrumb = () => {
       </div>
 
       <style>{`
-        nav[aria-label="Breadcrumb"] { margin-top: 70px; }
+        nav[data-breadcrumb] { margin-top: 70px; }
         @media (max-width: 767px) {
-          nav[aria-label="Breadcrumb"] { margin-top: 56px; }
-          nav[aria-label="Breadcrumb"] > div {
+          nav[data-breadcrumb] { margin-top: 56px; }
+          nav[data-breadcrumb] > div {
             padding-left: 1.25rem !important;
             padding-right: 1.25rem !important;
           }
