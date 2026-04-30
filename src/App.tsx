@@ -72,15 +72,26 @@ const preloadHeroPortrait = () => {
 // Gate to routes that actually render the portrait above the fold.
 // Avoids "preloaded but not used" warnings + wasted bandwidth on the
 // other ~140 routes (blog, neighborhoods, services, etc.).
+//
+// Source of truth: only the 4 pages that render <HeroSection agentImage=...>
+//   FR: Index.tsx (/) and OutaouaisHubPage.tsx (/courtier-immobilier-outaouais)
+//   EN: IndexEn.tsx (/en) and OutaouaisHubPageEn.tsx (/en/outaouais-real-estate-agent)
+// Note: /outaouais and /en/outaouais are <Navigate> redirects — preloading
+// there is wasted (the redirect target re-mounts and re-runs nothing here,
+// but the portrait IS rendered after redirect, so we include them too to
+// cover the brief window before the redirect resolves).
 if (typeof window !== "undefined") {
-  const p = window.location.pathname;
-  const isHeroRoute =
-    p === "/" ||
-    p === "/en" ||
-    p === "/en/" ||
-    p === "/outaouais" ||
-    p === "/en/outaouais";
-  if (isHeroRoute) preloadHeroPortrait();
+  const p = window.location.pathname.replace(/\/+$/, "") || "/";
+  const HERO_ROUTES = new Set([
+    "/",
+    "/en",
+    "/courtier-immobilier-outaouais",
+    "/en/outaouais-real-estate-agent",
+    // Redirect sources — still preload so the portrait is warm post-redirect.
+    "/outaouais",
+    "/en/outaouais",
+  ]);
+  if (HERO_ROUTES.has(p)) preloadHeroPortrait();
 }
 
 // FR pages
