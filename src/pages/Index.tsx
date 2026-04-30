@@ -3,8 +3,10 @@ import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
 import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
+import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 import HeroSection from "@/components/HeroSection";
 
 
