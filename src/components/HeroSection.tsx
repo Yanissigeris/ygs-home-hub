@@ -839,7 +839,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         >
           <div
-            className="md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none"
+            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none md:whitespace-nowrap md:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
@@ -847,6 +847,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               padding: "12px 16px",
               borderRadius: "8px",
               margin: "0 16px",
+              lineHeight: 1.5,
             }}
           >
             {/* Desktop credibility (hidden on mobile) */}
