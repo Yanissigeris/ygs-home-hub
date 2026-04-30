@@ -1,68 +1,35 @@
-## Plan: Refonte FeaturedProperties — track record + propriété actuelle
+# Replace homepage hero background image
 
-Modifier uniquement `src/components/FeaturedProperties.tsx` selon la spec fournie.
+## Context
 
-### Changements
+The homepage hero (`src/pages/Index.tsx` → `<HeroSection>`) shows a video with a static poster image as the visual background. That poster is what's visible:
+- On desktop, before the video mounts (deferred via `requestIdleCallback` for performance)
+- On mobile, where the video is intentionally not mounted at all
+- As the LCP image preloaded for PageSpeed
 
-**1. Strings (`t.fr` / `t.en`)**
-- `t.fr.title`: "Propriétés récentes" → "Mes propriétés"
-- `t.en.title`: "Recent Properties" → "My Properties"
-- Tous les autres champs inchangés.
+The file currently used is `public/hero-video-poster.webp` (referenced as `heroVideoPoster="/hero-video-poster.webp"` in `Index.tsx`).
 
-**2. Sélection des propriétés (dans le forwardRef)**
-Remplacer:
-```ts
-const featured = allProps.filter((p) => p.status === "active").slice(0, 3);
-```
-par:
-```ts
-const sold = allProps.filter((p) => p.status === "sold").slice(0, 2);
-const active = allProps.filter((p) => p.status === "active").slice(0, 1);
-const featured = [...sold, ...active];
-```
-Le `if (featured.length === 0) return null;` existant gère le fallback vide.
+The user uploaded a new bright living-room photo and wants it used as the hero background.
 
-**3. PropertyCard — déplacer le badge vers l'image**
-- Supprimer le `<span>` badge actuel dans le card body (juste avant `{p.price}`).
-- Ajouter dans la `<div>` image (après `<img>`, avant le gradient overlay) un badge absolute top-left:
-  - `position: absolute; top: 12px; left: 12px; zIndex: 2`
-  - `background: p.status === "sold" ? "#A88A5A" : "#17303B"` (gold pour VENDU, ink pour EN VEDETTE)
-  - `color: #FFFFFF; padding: 4px 10px; fontSize: 9.5px; fontWeight: 700; letterSpacing: 0.16em; textTransform: uppercase`
-  - `boxShadow: 0 2px 8px rgba(23,48,59,0.25)`
-  - Texte: `p.status === "sold" ? strings.statusSold : strings.statusFeatured`
-- Le `{p.price}` devient le premier élément du card body (padding existant conservé).
+## Plan
 
-**4. Stats line — mention "Vendu" conditionnelle**
-Sur la ligne `{bedrooms} | {bathrooms}`, ajouter conditionnellement si `p.status === "sold"`:
-```
-| <span style={{ color: "#A88A5A", fontWeight: 600 }}>Vendu / Sold</span>
-```
+1. **Add the new image to `public/`** as `hero-living-room.webp` (copy from `user-uploads://Gemini_Generated_Image_9q7aob9q7aob9q7a.png`).
+   - Convert PNG → WebP at ~82% quality, max width 1920px to keep LCP fast.
+   - Also generate a smaller mobile variant `hero-living-room-mobile.webp` (max width 1080px) so mobile users (where there's no video) get a lighter file.
 
-**5. View link conditionnel**
-Remplacer `{strings.viewProperty}` par:
-```ts
-{p.status === "sold" 
-  ? (lang === "fr" ? "Voir la fiche" : "View listing") 
-  : strings.viewProperty}
-```
+2. **Update `src/pages/Index.tsx`**:
+   - Change `heroVideoPoster="/hero-video-poster.webp"` → `heroVideoPoster="/hero-living-room.webp"`.
 
-### Préservé (non modifié)
+3. **Update `index.html`** if it preloads the old poster:
+   - Check for any `<link rel="preload" as="image" href="/hero-video-poster.webp">` and swap to the new file. (The hero preload optimization is critical for LCP.)
 
-- Hover: translateY(-8px), gold shadow, image scale, gold border top intensifié.
-- Scroll horizontal mobile, viewAll link (desktop + mobile centré).
-- Aspect ratio image 4/3, gradient overlay bas, clic vers `remaxUrl` (target=_blank).
-- Toutes les autres classes CSS / props.
-- Données dans `properties.ts` / `properties-en.ts` intactes.
-- Interface `Property` intacte.
+4. **QA**:
+   - Verify the new image file is under `public/` and reachable.
+   - Spot-check that the homepage hero shows the new photo (briefly visible before video, fully visible on mobile viewport).
+   - Confirm no references to the old `hero-video-poster.webp` remain in pages we ship (other pages don't use it).
 
-### Résultat attendu
+## Notes
 
-- 3 cards: **7 Rue du Chinook** (VENDU gold), **10 Rue Laviolette** (VENDU gold), **154 Lucerne** (EN VEDETTE ink).
-- Badge sur l'image en haut-gauche, plus dans le body.
-- Prix en haut du body, stats line avec "| Vendu" gold pour les vendus.
-- CTA "Voir la fiche →" pour les vendus, "Voir la propriété →" pour l'active.
-- Titre section: "Mes propriétés" / "My Properties".
-
-### Fichiers modifiés
-
-- `src/components/FeaturedProperties.tsx` (seul fichier touché)
+- The English homepage (`src/pages/en/IndexEn.tsx`) likely uses the same poster — I'll update it in the same way if so.
+- The old `hero-video-poster.webp` file is left in place for safety (not deleted) so any cached references don't 404.
+- No layout, copy, or component-structure changes — purely an asset swap.

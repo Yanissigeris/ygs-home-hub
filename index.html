@@ -76,7 +76,7 @@
         poster.rel = 'preload';
         poster.as = 'image';
         poster.type = 'image/webp';
-        poster.href = '/hero-video-poster.webp';
+        poster.href = isMobile ? '/hero-living-room-mobile.webp' : '/hero-living-room.webp';
         poster.setAttribute('fetchpriority', isMobile ? 'auto' : 'high');
         document.head.appendChild(poster);
 
