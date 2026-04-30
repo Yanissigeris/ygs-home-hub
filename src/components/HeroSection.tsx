@@ -280,12 +280,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         el.load();
       }
 
+      // iOS Safari: autoplay attribute alone is not always enough when src is set via JS.
+      // We must call play() and silently catch the rejection (e.g. Low Power Mode).
+      // If play() rejects, the poster <img> below stays visible — no black flicker.
+      const tryPlay = () => {
+        const p = el.play();
+        if (p && typeof p.catch === "function") {
+          p.catch(() => { /* poster fallback handles it */ });
+        }
+      };
+      tryPlay();
+      el.addEventListener("canplay", tryPlay, { once: true });
+
       return () => {
         el.removeEventListener("loadstart", onLoadStart);
         el.removeEventListener("progress", onProgress);
         el.removeEventListener("loadedmetadata", onLoadedMetadata);
         el.removeEventListener("loadeddata", onLoadedData);
         el.removeEventListener("canplay", onCanPlay);
+        el.removeEventListener("canplay", tryPlay);
         el.removeEventListener("playing", onPlaying);
         el.removeEventListener("error", onError);
       };
