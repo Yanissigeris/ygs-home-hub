@@ -31,7 +31,9 @@ const i18n = {
     lastNamePh: "Votre nom",
     email: "Courriel",
     emailPh: "vous@exemple.com",
+    emailHint: "Format : vous@exemple.com",
     phone: "Téléphone (optionnel)",
+    phoneHint: "Optionnel — format : 819-000-0000",
     badges: ["Gratuit", "Confidentiel", "Sans engagement"],
     defaultSuccessTitle: "Merci! Votre guide est en route.",
     defaultSuccessText: "Vous allez le recevoir par courriel dans les prochaines minutes.",
@@ -50,7 +52,9 @@ const i18n = {
     lastNamePh: "Your last name",
     email: "Email",
     emailPh: "you@example.com",
+    emailHint: "Format: you@example.com",
     phone: "Phone (optional)",
+    phoneHint: "Optional — format: 819-000-0000",
     badges: ["Free", "Confidential", "No commitment"],
     defaultSuccessTitle: "Thank you! Your guide is on its way.",
     defaultSuccessText: "You'll receive it by email within the next few minutes.",
@@ -147,12 +151,14 @@ const GuideRequestForm = ({
 
                 <div>
                   <Label htmlFor="guide-courriel" className="text-muted-foreground text-[0.8125rem]">{t.email}</Label>
-                  <Input id="guide-courriel" name="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required />
+                  <Input id="guide-courriel" name="guide-courriel" type="email" placeholder={t.emailPh} className="mt-1 h-11" required aria-describedby="guide-courriel-help" />
+                  <p id="guide-courriel-help" className="mt-1 text-[0.7rem] text-muted-foreground/70">{t.emailHint}</p>
                 </div>
 
                 <div>
                   <Label htmlFor="guide-tel" className="text-muted-foreground text-[0.8125rem]">{t.phone}</Label>
-                  <Input id="guide-tel" name="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" />
+                  <Input id="guide-tel" name="guide-tel" type="tel" placeholder="819-000-0000" className="mt-1 h-11" aria-describedby="guide-tel-help" />
+                  <p id="guide-tel-help" className="mt-1 text-[0.7rem] text-muted-foreground/70">{t.phoneHint}</p>
                 </div>
 
                 <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold" disabled={submitting}>

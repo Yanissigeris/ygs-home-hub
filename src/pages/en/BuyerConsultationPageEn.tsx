@@ -92,13 +92,15 @@ const BuyerConsultationPageEn = () => {
                       </div>
                       <div>
                         <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" className="mt-1.5" required />
+                        <Input id="email" type="email" className="mt-1.5" required aria-describedby="bc-email-help" />
+                        <p id="bc-email-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format: you@example.com</p>
                       </div>
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" type="tel" className="mt-1.5" />
+                        <Input id="phone" type="tel" className="mt-1.5" aria-describedby="bc-phone-help" />
+                        <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optional — format: 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Approximate budget</Label>
@@ -143,7 +145,8 @@ const BuyerConsultationPageEn = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Questions or details (optional)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighborhood, questions…" />
+                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighborhood, questions…" aria-describedby="bc-notes-help" />
+                      <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">The more details you share, the more useful our meeting will be.</p>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">

@@ -92,13 +92,15 @@ const BuyerConsultationPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="courriel">Courriel</Label>
-                        <Input id="courriel" type="email" className="mt-1.5" required />
+                        <Input id="courriel" type="email" className="mt-1.5" required aria-describedby="bc-courriel-help" />
+                        <p id="bc-courriel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format : vous@exemple.com</p>
                       </div>
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="tel">Téléphone</Label>
-                        <Input id="tel" type="tel" className="mt-1.5" />
+                        <Input id="tel" type="tel" className="mt-1.5" aria-describedby="bc-tel-help" />
+                        <p id="bc-tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel — format : 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Budget approximatif</Label>
@@ -143,7 +145,8 @@ const BuyerConsultationPage = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Questions ou précisions (optionnel)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Type de propriété recherché, quartier préféré, questions…" />
+                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Type de propriété recherché, quartier préféré, questions…" aria-describedby="bc-notes-help" />
+                      <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Plus vous donnez de détails, plus la rencontre sera utile.</p>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">

@@ -129,16 +129,19 @@ const ContactPage = () => {
               </div>
               <div>
                 <Label htmlFor="courriel">Courriel</Label>
-                <Input id="courriel" name="courriel" type="email" className="mt-1.5" required />
+                <Input id="courriel" name="courriel" type="email" className="mt-1.5" required aria-describedby="courriel-help" />
+                <p id="courriel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format : vous@exemple.com</p>
               </div>
             </div>
             <div>
               <Label htmlFor="tel">Téléphone</Label>
-              <Input id="tel" name="tel" type="tel" className="mt-1.5" />
+              <Input id="tel" name="tel" type="tel" className="mt-1.5" aria-describedby="tel-help" />
+              <p id="tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel — format : 819-000-0000</p>
             </div>
             <div>
               <Label htmlFor="message">Message (optionnel)</Label>
-              <Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" />
+              <Textarea id="message" name="message" rows={4} className="mt-1.5" placeholder="Décrivez brièvement votre projet…" aria-describedby="message-help" />
+              <p id="message-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Quelques phrases suffisent pour que je vous oriente.</p>
             </div>
             <Button type="submit" size="xl" className="w-full" disabled={submitting}>
               {submitting ? "Envoi en cours…" : "Envoyer ma demande"}
