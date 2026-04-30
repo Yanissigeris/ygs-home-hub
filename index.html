@@ -20,14 +20,17 @@
     <meta name="theme-color" content="#17303B" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <!-- Static OG fallbacks (route-specific overrides injected per-route at build time) -->
-    <meta property="og:image" content="https://yanisgauthier.com/og/og-default.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <!-- Static OG/Twitter fallbacks. Only the *constant* tags live here.
+         Per-route tags (og:title, og:description, og:url, og:image[:w/h],
+         og:locale[:alternate], twitter:title, twitter:description,
+         twitter:image) are written by scripts/prerender.mjs into each
+         dist/<route>/index.html, and re-applied client-side by
+         src/components/PageMeta.tsx. Keeping them out of this shell avoids
+         duplicate <meta> tags that confused some social scrapers (Slack,
+         iMessage) into picking the wrong value when both were present. -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="YGS — Yanis Gauthier-Sigeris" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://yanisgauthier.com/og/og-default.jpg" />
 
     <!-- Google Fonts — non-render-blocking preload pattern -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
