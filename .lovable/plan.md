@@ -1,47 +1,35 @@
-## Hero — Improve text contrast (left-side gradient overlay)
+# Replace homepage hero background image
 
-**Note:** Your message appears truncated after point #1 (it ends mid-sentence at "compen…"). This plan covers point #1 exactly as specified. If you have additional points (2, 3, …), please paste them and I'll extend the plan before implementing.
+## Context
 
-### Scope
-- **File touched:** `src/components/HeroSection.tsx` only
-- **Page affected:** Home (`/` and `/en`) — the full hero variant (lines 451+)
-- **No changes to:** brand colors, fonts, images, component structure, or any other section
+The homepage hero (`src/pages/Index.tsx` → `<HeroSection>`) shows a video with a static poster image as the visual background. That poster is what's visible:
+- On desktop, before the video mounts (deferred via `requestIdleCallback` for performance)
+- On mobile, where the video is intentionally not mounted at all
+- As the LCP image preloaded for PageSpeed
 
-### Change
+The file currently used is `public/hero-video-poster.webp` (referenced as `heroVideoPoster="/hero-video-poster.webp"` in `Index.tsx`).
 
-Add one new gradient overlay layer inside the hero `<section>`, positioned:
-- **Above** the background image/video/poster (which sit at `zIndex: 1–2`)
-- **Below** the portrait of Yanis (which sits at `zIndex: 4`)
-- **Below** the text content (`zIndex: 3`) — so text contrast improves without color shift on the text itself
+The user uploaded a new bright living-room photo and wants it used as the hero background.
 
-So the new overlay goes at `zIndex: 2` (alongside the existing main gradient overlays at lines 533–551), as a sibling layer.
+## Plan
 
-### Specs
+1. **Add the new image to `public/`** as `hero-living-room.webp` (copy from `user-uploads://Gemini_Generated_Image_9q7aob9q7aob9q7a.png`).
+   - Convert PNG → WebP at ~82% quality, max width 1920px to keep LCP fast.
+   - Also generate a smaller mobile variant `hero-living-room-mobile.webp` (max width 1080px) so mobile users (where there's no video) get a lighter file.
 
-**Desktop (≥768px):**
-```
-background: linear-gradient(
-  to right,
-  rgba(23, 48, 59, 0.70) 0%,
-  rgba(23, 48, 59, 0.00) 55%
-);
-```
+2. **Update `src/pages/Index.tsx`**:
+   - Change `heroVideoPoster="/hero-video-poster.webp"` → `heroVideoPoster="/hero-living-room.webp"`.
 
-**Mobile (<768px):**
-```
-background: linear-gradient(
-  to right,
-  rgba(23, 48, 59, 0.80) 0%,
-  rgba(23, 48, 59, 0.00) 55%
-);
-```
+3. **Update `index.html`** if it preloads the old poster:
+   - Check for any `<link rel="preload" as="image" href="/hero-video-poster.webp">` and swap to the new file. (The hero preload optimization is critical for LCP.)
 
-Implementation: add **two sibling `<div>` overlays** (one with `hidden md:block`, one with `md:hidden`), mirroring the existing pattern at lines 534–551. Both `pointer-events-none`, `absolute inset-0`, `z-[2]`, `aria-hidden`.
+4. **QA**:
+   - Verify the new image file is under `public/` and reachable.
+   - Spot-check that the homepage hero shows the new photo (briefly visible before video, fully visible on mobile viewport).
+   - Confirm no references to the old `hero-video-poster.webp` remain in pages we ship (other pages don't use it).
 
-### What this achieves
-- Text column (left ~50% of hero on desktop, full width on mobile) gets a darker ink wash behind it → eyebrow, headline, subtitle, descriptive paragraph become noticeably more readable on busy parts of the living-room photo.
-- Portrait of Yanis (right side) and the right portion of the background remain fully visible — gradient fades to 0% by ~55% width.
-- No text color, font, or layout changes — purely a background contrast lift.
+## Notes
 
-### Out of scope (waiting on truncated message)
-Points 2+ from your brief — likely covering the trust strip (`MicroTrustStrip`) contrast and possibly text shadow tweaks — are not included. Send the rest of the brief and I'll fold them in.
+- The English homepage (`src/pages/en/IndexEn.tsx`) likely uses the same poster — I'll update it in the same way if so.
+- The old `hero-video-poster.webp` file is left in place for safety (not deleted) so any cached references don't 404.
+- No layout, copy, or component-structure changes — purely an asset swap.
