@@ -225,7 +225,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     }, []);
 
     React.useEffect(() => {
-      if (!heroVideo) return;
+      if (!heroVideo || isMobile) return;
       const el = videoRef.current;
       if (!el) return;
 
