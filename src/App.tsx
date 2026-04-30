@@ -7,8 +7,10 @@ import BrandedLoader from "@/components/BrandedLoader";
 
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
 import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
+import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 
 const preloadAsset = (href: string, as: string, mime?: string) => {
   if (typeof document === "undefined") return;
@@ -35,13 +37,28 @@ const supportsAvif = (): boolean => {
 };
 
 if (typeof window !== "undefined") {
-  // Pick the smallest correct file: mobile gets -sm, AVIF-capable browsers get .avif.
-  // Mobile AVIF: ~7.6KB · Mobile WebP: ~12KB · Desktop AVIF: ~19KB · Desktop WebP: ~30KB
+  // Pick the smallest correct file based on viewport size × device pixel ratio.
+  // Mobile sizes (AVIF / WebP):
+  //   sm 320w → 4.5KB / 7.3KB  (1x phones, low-end Android)
+  //   md 480w → 8.0KB / 13KB   (2x retina iPhones — most common)
+  //   full 640w → 14KB / 30KB  (3x Pro Max iPhones, tablets, desktop)
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const dpr = typeof window.devicePixelRatio === "number" ? window.devicePixelRatio : 1;
   const avif = supportsAvif();
-  const href = isMobile
-    ? (avif ? yanisPortraitSmAvif : yanisPortraitSm)
-    : (avif ? yanisPortraitAvif : yanisPortrait);
+
+  let href: string;
+  if (!isMobile) {
+    href = avif ? yanisPortraitAvif : yanisPortrait;
+  } else if (dpr >= 2.5) {
+    // 3x retina: needs full-resolution to stay crisp
+    href = avif ? yanisPortraitAvif : yanisPortrait;
+  } else if (dpr >= 1.5) {
+    // 2x retina: middle tier is the sweet spot
+    href = avif ? yanisPortraitMdAvif : yanisPortraitMd;
+  } else {
+    // 1x: smallest tier
+    href = avif ? yanisPortraitSmAvif : yanisPortraitSm;
+  }
   preloadAsset(href, "image", avif ? "image/avif" : "image/webp");
 }
 
