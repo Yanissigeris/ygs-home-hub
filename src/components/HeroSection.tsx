@@ -21,6 +21,9 @@ interface HeroSectionProps {
   backgroundImage?: string;
   agentImage?: string;
   agentImageSm?: string;
+  /** Optional AVIF variants (preferred by Chrome/Edge/Firefox/Safari 16+) */
+  agentImageAvif?: string;
+  agentImageSmAvif?: string;
   agentName?: string;
   heroBgImage?: string;
   heroVideo?: string;
@@ -103,6 +106,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       backgroundImage,
       agentImage,
       agentImageSm,
+      agentImageAvif,
+      agentImageSmAvif,
       agentName,
       heroBgImage,
       heroVideo,
