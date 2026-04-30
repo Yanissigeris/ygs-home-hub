@@ -540,25 +540,35 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — mobile */}
+        {/* Main gradient overlay — mobile (atmospheric base, z-2) */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] md:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.6) 55%, rgba(0,0,0,0.2) 100%)",
+              "linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)",
           }}
         />
 
-        {/* ─── TEXT CONTENT (Layer 3) ─── */}
+        {/* Left-side text-protect gradient — mobile only (z-3, anchor-corner composition) */}
         <div
-          className="relative z-[3] flex flex-col"
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-[3] md:hidden"
+          style={{
+            background:
+              "linear-gradient(95deg, rgba(23,48,59,0.95) 0%, rgba(23,48,59,0.88) 30%, rgba(23,48,59,0.55) 48%, rgba(23,48,59,0.18) 65%, transparent 80%)",
+          }}
+        />
+
+        {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
+        <div
+          className="relative z-[20] flex flex-col"
           style={{ minHeight: "100svh" }}
         >
           <div
-            className="w-full md:max-w-[50%]"
+            className="w-[58%] md:w-auto md:max-w-[50%]"
             style={{
-              padding: "90px 20px 0 20px",
+              padding: "90px 18px 90px 18px",
             }}
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
