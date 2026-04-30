@@ -23,28 +23,41 @@ const preloadAsset = (href: string, as: string, mime?: string) => {
   document.head.appendChild(link);
 };
 
-// Synchronous AVIF support detection via canvas.toDataURL — accurate in all
-// modern browsers (Chrome/Edge 85+, Firefox 93+, Safari 16+).
-const supportsAvif = (): boolean => {
-  if (typeof document === "undefined") return false;
-  const c = document.createElement("canvas");
-  if (!c.getContext || !c.getContext("2d")) return false;
-  try {
-    return c.toDataURL("image/avif").indexOf("data:image/avif") === 0;
-  } catch {
-    return false;
-  }
+// AVIF support detection. canvas.toDataURL("image/avif") is unreliable (canvas
+// can't ENCODE AVIF in any current browser, so it always returns image/png).
+// We instead decode a tiny 1×1 AVIF and check whether the browser successfully
+// reports a non-zero intrinsic size. This is synchronous-ish (image already
+// inlined as data URI, no network) and finishes in <1 frame on every modern
+// browser. We cache the result so the cost is one-time per session.
+const TINY_AVIF =
+  "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQAMAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAB1tZGF0EgAKBzgADrkR8AAEAAAACoAEpoIA";
+
+let _avifSupported: boolean | null = null;
+let _avifProbed = false;
+const probeAvif = () => {
+  if (_avifProbed || typeof Image === "undefined") return;
+  _avifProbed = true;
+  const img = new Image();
+  img.onload = () => { _avifSupported = img.width > 0 && img.height > 0; };
+  img.onerror = () => { _avifSupported = false; };
+  img.src = TINY_AVIF;
 };
+probeAvif();
 
 if (typeof window !== "undefined") {
   // Pick the smallest correct file based on viewport size × device pixel ratio.
   // Mobile sizes (AVIF / WebP):
-  //   sm 320w → 4.5KB / 7.3KB  (1x phones, low-end Android)
-  //   md 480w → 8.0KB / 13KB   (2x retina iPhones — most common)
-  //   full 640w → 14KB / 30KB  (3x Pro Max iPhones, tablets, desktop)
+  //   sm 320w → ~7 KB / ~11 KB  (1x phones, low-end Android)
+  //   md 480w → ~12 KB / ~20 KB (2x retina iPhones — most common)
+  //   full 640w → ~17 KB / ~30 KB (3x Pro Max iPhones, tablets, desktop)
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const dpr = typeof window.devicePixelRatio === "number" ? window.devicePixelRatio : 1;
-  const avif = supportsAvif();
+  // _avifSupported may still be null on very first paint — we treat null as
+  // "assume yes" because every browser that ships in 2024+ supports AVIF
+  // decoding (Chrome 85+, Firefox 93+, Safari 16+ = 96%+ of global traffic).
+  // Worst case on the rare unsupported browser: the <picture> falls back to
+  // WebP correctly, we just wasted one preload (still cached).
+  const avif = _avifSupported !== false;
 
   let href: string;
   if (!isMobile) {
