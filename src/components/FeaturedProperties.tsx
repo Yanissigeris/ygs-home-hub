@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
+import { propertyImages } from "@/data/property-images";
 
 interface FeaturedPropertiesProps {
   lang?: "fr" | "en";
@@ -46,21 +47,54 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
     >
       {/* Image */}
       <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
-        <img
-          src={p.image}
-          alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
-          
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-          loading="lazy"
-          decoding="async"
-          width={648}
-          height={486}
-          style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
-          onMouseEnter={(e) => { e.currentTarget.style.filter = "saturate(1)"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.filter = "saturate(0.88)"; }}
-          onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.classList.remove("img-shimmer"); }}
-          onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; t.parentElement!.style.background = "var(--ink)"; t.parentElement!.classList.remove("img-shimmer"); }}
-        />
+        {(() => {
+          const set = propertyImages[p.id as string];
+          // Fallback to legacy single image if id not in map
+          if (!set) {
+            return (
+              <img
+                src={p.image}
+                alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
+                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width={648}
+                height={486}
+                style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
+              />
+            );
+          }
+          // Cards display ~648px on desktop, ~half-viewport on tablet, full-width on mobile
+          const sizes = "(max-width: 480px) 90vw, (max-width: 1024px) 50vw, 648px";
+          return (
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={`${set.avif480} 480w, ${set.avif800} 800w`}
+                sizes={sizes}
+              />
+              <source
+                type="image/webp"
+                srcSet={`${set.webp480} 480w, ${set.webp800} 800w`}
+                sizes={sizes}
+              />
+              <img
+                src={set.webp800}
+                alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
+                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width={648}
+                height={486}
+                style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
+                onMouseEnter={(e) => { e.currentTarget.style.filter = "saturate(1)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.filter = "saturate(0.88)"; }}
+                onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.parentElement!.classList.remove("img-shimmer"); }}
+                onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; const wrap = t.parentElement!.parentElement!; wrap.style.background = "var(--ink)"; wrap.classList.remove("img-shimmer"); }}
+              />
+            </picture>
+          );
+        })()}
         <span
           style={{
             position: "absolute",

@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import cardVendreImg from "@/assets/service-vendre.webp";
 import cardAcheterImg from "@/assets/service-acheter.webp";
 import cardPlexImg from "@/assets/service-plex.webp";
-import lifestyleBgImg from "@/assets/pathway-lifestyle-bg.webp";
+import lifestyleBg1280Avif from "@/assets/pathway-lifestyle-bg-1280.avif";
+import lifestyleBg1280Webp from "@/assets/pathway-lifestyle-bg-1280.webp";
+import lifestyleBg720Avif from "@/assets/pathway-lifestyle-bg-720.avif";
+import lifestyleBg720Webp from "@/assets/pathway-lifestyle-bg-720.webp";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
@@ -131,20 +134,30 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div
           aria-hidden="true"
           role="presentation"
-          className="hidden md:block absolute"
+          className="hidden md:block absolute overflow-hidden"
           style={{
             top: "80px",
             right: "4%",
             width: "50%",
             height: "calc(100% - 160px)",
-            backgroundImage: `url(${lifestyleBgImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
             boxShadow:
               "0 20px 60px rgba(23,48,59,0.30), 0 8px 20px rgba(23,48,59,0.15)",
             zIndex: 1,
           }}
         >
+          <picture>
+            <source type="image/avif" srcSet={lifestyleBg1280Avif} />
+            <source type="image/webp" srcSet={lifestyleBg1280Webp} />
+            <img
+              src={lifestyleBg1280Webp}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width={1280}
+              height={714}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </picture>
           <div
             className="absolute inset-0"
             style={{
@@ -158,13 +171,22 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div
           aria-hidden="true"
           role="presentation"
-          className="md:hidden w-full h-[200px] mb-8"
-          style={{
-            backgroundImage: `url(${lifestyleBgImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+          className="md:hidden w-full h-[200px] mb-8 relative overflow-hidden"
+        >
+          <picture>
+            <source type="image/avif" srcSet={lifestyleBg720Avif} />
+            <source type="image/webp" srcSet={lifestyleBg720Webp} />
+            <img
+              src={lifestyleBg720Webp}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width={720}
+              height={402}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </picture>
+        </div>
 
         <div className="section-container relative z-10">
           {/* Editorial header on cream */}
