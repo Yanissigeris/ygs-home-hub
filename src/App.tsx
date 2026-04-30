@@ -69,8 +69,18 @@ const preloadHeroPortrait = () => {
   document.head.appendChild(desktop);
 };
 
+// Gate to routes that actually render the portrait above the fold.
+// Avoids "preloaded but not used" warnings + wasted bandwidth on the
+// other ~140 routes (blog, neighborhoods, services, etc.).
 if (typeof window !== "undefined") {
-  preloadHeroPortrait();
+  const p = window.location.pathname;
+  const isHeroRoute =
+    p === "/" ||
+    p === "/en" ||
+    p === "/en/" ||
+    p === "/outaouais" ||
+    p === "/en/outaouais";
+  if (isHeroRoute) preloadHeroPortrait();
 }
 
 // FR pages
