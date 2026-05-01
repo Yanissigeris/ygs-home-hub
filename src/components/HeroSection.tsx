@@ -587,8 +587,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                   }}
                 >
-                  <span className="sm:hidden">{cities.slice(0, 3).join(" · ")}</span>
-                  <span className="hidden sm:inline">{cities.join(" · ")}</span>
+                  <span>{cities.join(" · ")}</span>
                 </p>
               ) : overline ? (
                 <p
