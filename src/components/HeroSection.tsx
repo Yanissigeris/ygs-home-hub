@@ -1068,7 +1068,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             <span>{heroContact.city}</span>
             {" | "}
-            <a href={heroContact.phoneHref} style={{ color: "inherit" }}>
+            <a href={heroContact.phoneHref} style={{ color: "inherit" }} className="md:hover:text-white transition-colors relative z-10 pointer-events-auto">
               {heroContact.phoneDisplay}
             </a>
             {" | "}
