@@ -46,6 +46,8 @@ interface HeroSectionProps {
   cities?: string[];
   title: string;
   subtitle: string;
+  /** Optional shorter subtitle rendered only on mobile (<768px). Falls back to `subtitle`. */
+  subtitleShort?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   trustLine?: string;
@@ -137,6 +139,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       cities,
       title,
       subtitle,
+      subtitleShort,
       primaryCta,
       secondaryCta,
       compact,
@@ -629,19 +632,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   return (
                     <>
                       <span
-                        className="hero-fade-in block"
+                        className="hero-fade-in block hero-h1-line"
                         style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.10s" }}
                       >
                         {lines[0]}
                       </span>
                       <span
-                        className="hero-fade-in block"
+                        className="hero-fade-in block hero-h1-line"
                         style={{ ...baseStyle, fontStyle: "normal", fontWeight: 500, color: "#FFFFFF", animationDelay: "0.18s" }}
                       >
                         {lines[1]}
                       </span>
                       <span
-                        className="hero-fade-in block"
+                        className="hero-fade-in block hero-h1-line"
                         style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.26s" }}
                       >
                         {lines[2]}
@@ -652,7 +655,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               </h1>
 
               <p
-                className="hero-fade-in mt-4 sm:mt-6 block max-w-[460px] font-light"
+                className="hero-fade-in mt-4 sm:mt-6 block md:hidden max-w-[460px] font-light"
+                style={{
+                  animationDelay: "0.32s",
+                  color: "#FFFFFF",
+                  fontFamily: "var(--sans)",
+                  fontWeight: 400,
+                  fontSize: ".95rem",
+                  lineHeight: 1.75,
+                  textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                }}
+              >
+                {subtitleShort ?? subtitle}
+              </p>
+              <p
+                className="hero-fade-in mt-4 sm:mt-6 hidden md:block max-w-[460px] font-light"
                 style={{
                   animationDelay: "0.32s",
                   color: "#FFFFFF",
@@ -730,13 +747,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Trust strip — under CTAs, mobile-friendly with flex-wrap */}
               <div
-                className="hero-fade-in mt-8 md:mt-6 flex flex-wrap items-center justify-start gap-x-3 gap-y-2 uppercase font-medium"
+                className="hero-fade-in mt-8 md:mt-6 flex flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-medium tracking-[0.1em] md:tracking-[0.15em] text-[10px] md:text-[11px]"
                 style={{
                   animationDelay: "0.5s",
                   color: "rgba(168, 138, 90, 0.7)",
                   fontFamily: "var(--sans)",
-                  fontSize: "11px",
-                  letterSpacing: "0.15em",
                 }}
               >
                 <span className="hidden min-[381px]:inline">

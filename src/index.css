@@ -495,6 +495,12 @@ h1.hero-h1-reduced {
   .hero-name-line { font-size: clamp(3rem, 4.5vw, 4.2rem); }
 }
 
+/* Hero H1 — 3 spans uniform sizing, beats any descendant override */
+[data-hero-dark] h1 > span.hero-h1-line {
+  font-size: clamp(2.4rem, 5.5vw, 5rem) !important;
+  line-height: 1.0 !important;
+}
+
 /* Mobile fluid hero headline override */
 @media (max-width: 767px) {
   h1.hero-h1-fix {
@@ -573,10 +579,8 @@ h1.hero-h1-reduced {
     margin-bottom: 2px !important;
   }
 
-  /* H1 italic subtitle (small line above gold) */
-  [data-hero-dark] h1 > span:first-child {
-    font-size: 1rem !important;
-  }
+  /* (retiré) — la 1re span du H1 hero garde la même taille
+     que les 2 autres ; sa font-size est gérée par .hero-h1-line. */
 
   /* Conversion paragraph */
   [data-hero-dark] .relative.z-\[3\] p.mt-4,
