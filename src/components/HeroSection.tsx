@@ -450,6 +450,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     }
 
     return (
+      <>
       <section
         ref={combinedRef}
         data-hero-dark
