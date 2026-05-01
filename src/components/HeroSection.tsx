@@ -539,13 +539,16 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — desktop */}
+        {/* Main gradient overlay — desktop.
+            Stronger when a static hero image is used (no video), so subtitle
+            and secondary CTA stay readable over bright sky / paper textures. */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
           style={{
-            background:
-              "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+            background: heroBgImage && !heroVideo
+              ? "linear-gradient(135deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 45%, rgba(23,48,59,0.45) 75%, rgba(23,48,59,0.25) 100%)"
+              : "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
           }}
         />
 
@@ -729,13 +732,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       to={secondaryCta.href}
                       className="inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
-                        color: "rgba(255,255,255,.6)",
-                        borderBottom: "1px solid rgba(255,255,255,.25)",
+                        color: "rgba(255,255,255,.92)",
+                        borderBottom: "1px solid rgba(255,255,255,.55)",
                         paddingBottom: "2px",
                         fontSize: ".85rem",
                         fontWeight: 500,
                         letterSpacing: ".02em",
-                        textShadow: "0 1px 4px rgba(0,0,0,0.4)",
+                        textShadow: "0 2px 10px rgba(0,0,0,0.6)",
                       }}
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >

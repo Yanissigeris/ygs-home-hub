@@ -207,7 +207,7 @@ const ValuationForm = ({
 
   // Glass variant input classes
   const glassInput =
-    "mt-1 bg-white/[0.06] border-white/[0.1] text-primary-foreground placeholder:text-primary-foreground/25 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
+    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/55 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
   const glassLabel = "text-primary-foreground/60 text-[0.8125rem]";
   const errClass = cn(
     "mt-1 text-[0.75rem] leading-snug",
