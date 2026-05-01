@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /* Inline SVG icons — replaces lucide-react imports for the hero so the
@@ -41,6 +42,8 @@ const detectMobile = () => {
 
 interface HeroSectionProps {
   overline?: string;
+  /** Preferred over `overline` on the home hero. Renders 3 cities on mobile, all on desktop, joined with " · ". */
+  cities?: string[];
   title: string;
   subtitle: string;
   primaryCta?: { label: string; href: string };
@@ -98,7 +101,7 @@ const ScrollChevron: React.FC<{ lang: "fr" | "en" }> = ({ lang }) => {
       type="button"
       onClick={handleClick}
       aria-label={getA11yLabel("hero.scrollNext", lang)}
-      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto"
+      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto hidden md:block"
       style={{
         bottom: "84px",
         background: "transparent",
@@ -131,6 +134,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
     {
       overline,
+      cities,
       title,
       subtitle,
       primaryCta,
