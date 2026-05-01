@@ -27,8 +27,15 @@ const NotFound = () => {
         <meta name="robots" content="noindex, nofollow" />
         <title>{isEn ? "Page Not Found — Yanis Gauthier" : "Page introuvable — Yanis Gauthier"}</title>
       </Helmet>
+      {/* Dark backdrop strip so the permanently-transparent SiteHeader stays
+          legible on this cream-background page. Sits behind the header. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-x-0 top-0 z-[5]"
+        style={{ height: 96, background: "#17303B" }}
+      />
       <SiteHeader />
-      <main className="flex-1 flex items-center justify-center" style={{ background: "var(--cream)" }}>
+      <main className="flex-1 flex items-center justify-center pt-[96px]" style={{ background: "var(--cream)" }}>
         <div className="mx-auto max-w-[560px] px-5 py-16 text-center sm:py-20">
           {/* Ghost 404 */}
           <div
