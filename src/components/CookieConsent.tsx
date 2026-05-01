@@ -215,6 +215,46 @@ const CookieConsent = () => {
     setShowPrefs(true);
   };
 
+  /* Mobile reopen button: fade-cycle 6s + scroll-aware (>200px hide, <=50px show + reset timer). */
+  const [reopenVisible, setReopenVisible] = React.useState(true);
+  const fadeTimerRef = React.useRef<number | null>(null);
+
+  const startFadeTimer = React.useCallback(() => {
+    if (fadeTimerRef.current) {
+      window.clearTimeout(fadeTimerRef.current);
+    }
+    setReopenVisible(true);
+    fadeTimerRef.current = window.setTimeout(() => setReopenVisible(false), 6000);
+  }, []);
+
+  React.useEffect(() => {
+    if (!isMobile) return;
+    if (!dismissed || visible || showPrefs) return;
+    startFadeTimer();
+    let lastShown = true;
+    const onScroll = () => {
+      if (window.scrollY > 200 && lastShown) {
+        lastShown = false;
+        setReopenVisible(false);
+        if (fadeTimerRef.current) {
+          window.clearTimeout(fadeTimerRef.current);
+          fadeTimerRef.current = null;
+        }
+      } else if (window.scrollY <= 50 && !lastShown) {
+        lastShown = true;
+        startFadeTimer();
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (fadeTimerRef.current) {
+        window.clearTimeout(fadeTimerRef.current);
+        fadeTimerRef.current = null;
+      }
+    };
+  }, [isMobile, dismissed, visible, showPrefs, startFadeTimer]);
+
   const t = lang === "en" ? {
     title: "This site uses cookies",
     body: "We use cookies to improve your experience, analyze traffic and personalize content. In accordance with Quebec's Law 25, your consent is required.",
