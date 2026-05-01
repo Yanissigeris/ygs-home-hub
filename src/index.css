@@ -596,13 +596,14 @@ h1.hero-h1-reduced {
     opacity: 0.55 !important;
   }
 
-  /* CTA button — auto width, left aligned */
+  /* CTA button — auto width, left aligned, no wrap */
   [data-hero-dark] .hero-cta-btn {
     width: auto !important;
     padding: 12px 24px !important;
     font-size: 0.8rem !important;
     align-self: flex-start !important;
     margin-right: auto !important;
+    white-space: nowrap !important;
   }
 
   /* Credibility bar — strip glassmorphism + icons, keep readable */
