@@ -539,18 +539,29 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
-        {/* Main gradient overlay — desktop.
-            Stronger when a static hero image is used (no video), so subtitle
-            and secondary CTA stay readable over bright sky / paper textures. */}
+        {/* Main gradient overlay — desktop. */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
           style={{
-            background: heroBgImage && !heroVideo
-              ? "linear-gradient(135deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 45%, rgba(23,48,59,0.45) 75%, rgba(23,48,59,0.25) 100%)"
-              : "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+            background:
+              "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
           }}
         />
+
+        {/* Extra left-half text-protect overlay — desktop, hero-image pages only.
+            Guarantees subtitle + secondary CTA legibility over bright photo zones
+            (sky, sunlit paper, windows). Has zero effect on the home/video hero. */}
+        {heroBgImage && !heroVideo && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-[3] hidden md:block"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.62) 35%, rgba(23,48,59,0.30) 55%, transparent 70%)",
+            }}
+          />
+        )}
 
         {/* Main gradient overlay — mobile (atmospheric base, z-2) */}
         <div
