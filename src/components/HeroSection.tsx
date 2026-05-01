@@ -829,7 +829,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <div
-          className="hero-fade-in absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-none md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
@@ -891,7 +891,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── NAP (Layer 5) ─── */}
         <address
-          className="hero-fade-in absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left not-italic pointer-events-none md:w-full md:text-center md:!pl-0 md:!pr-0"
+          className="hero-fade-in absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left not-italic pointer-events-auto md:w-full md:text-center md:!pl-0 md:!pr-0"
           style={{
             animationDelay: "0.5s",
             bottom: "8px",
@@ -913,14 +913,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               lineHeight: 1.5,
             }}
           >
-            {(() => {
-              const nap = heroBottomInfo[lang === "en" ? "en" : "fr"].nap;
-              return (
-                <>
-                  {nap.city} | <a href={`tel:${nap.phoneHref}`} className="pointer-events-auto" style={{ color: "inherit" }}>{nap.phoneDisplay}</a> | <a href={`mailto:${nap.emailHref}`} className="pointer-events-auto [overflow-wrap:anywhere] md:[overflow-wrap:normal]" style={{ color: "inherit" }}>{nap.emailDisplay}</a>
-                </>
-              );
-            })()}
+            {heroBottomInfo[lang === "en" ? "en" : "fr"].nap}
           </span>
         </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
