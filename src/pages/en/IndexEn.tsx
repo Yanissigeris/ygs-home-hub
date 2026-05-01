@@ -46,10 +46,10 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
-      overline="GATINEAU · AYLMER · HULL · CHELSEA · CANTLEY · "
+      cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
       title="Your real estate broker in Gatineau — Outaouais"
-      subtitle="Clear strategy, advice based on facts, and full support — to sell, buy or invest with confidence."
-      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
+      subtitle="Real estate broker in the Outaouais and Gatineau region. Clear strategy to sell, buy or invest."
+      primaryCta={{ label: "Free home valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Consultation", href: "/en/contact" }}
       socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-interior-720.mp4"
