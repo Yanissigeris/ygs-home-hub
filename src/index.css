@@ -637,6 +637,7 @@ h1.hero-h1-reduced {
   [data-hero-dark] address.absolute {
     position: absolute !important;
     z-index: 4 !important;
+    padding-left: 18px !important;
   }
 }
 
