@@ -693,44 +693,4 @@ h1.hero-h1-reduced {
   }
 }
 
-/* Page transition (CSS-only — replaces framer-motion AnimatePresence) */
-@keyframes ygs-overlay-cover {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
-}
-@keyframes ygs-overlay-reveal {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-100%); }
-}
-@keyframes ygs-page-fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-.page-fade-in {
-  animation: ygs-page-fade .3s ease-out;
-}
-.ygs-page-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #17303B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  will-change: transform;
-}
-.ygs-page-overlay.cover {
-  animation: ygs-overlay-cover .35s cubic-bezier(.76,0,.24,1) forwards;
-}
-.ygs-page-overlay.reveal {
-  animation: ygs-overlay-reveal .35s cubic-bezier(.76,0,.24,1) forwards;
-}
-.ygs-page-overlay__mark {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 600;
-  color: #F7F4EE;
-  letter-spacing: .04em;
-  user-select: none;
-}
+/* Page transition overlay removed — PageTransition is now a passthrough. */
