@@ -1074,8 +1074,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             {" | "}
             <a
               href={heroContact.emailHref}
-              className="[overflow-wrap:anywhere] md:[overflow-wrap:normal]"
+              className="[overflow-wrap:anywhere] md:[overflow-wrap:normal] md:underline md:underline-offset-2 md:decoration-white/30 md:hover:decoration-white md:hover:text-white transition-colors cursor-pointer relative z-10 pointer-events-auto"
               style={{ color: "inherit" }}
+              aria-label={`${lang === "en" ? "Email" : "Courriel"} ${heroContact.emailDisplay}`}
             >
               {heroContact.emailDisplay}
             </a>
