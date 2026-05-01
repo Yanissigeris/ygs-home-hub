@@ -630,7 +630,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
               >
                 {lang === "fr"
-                  ? "Je vous donne les chiffres et les options, vous décidez. Stratégie claire pour vendre, acheter ou investir en Outaouais."
+                  ? "Stratégie claire pour vendre, acheter ou investir en Outaouais."
                   : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
               </p>
 
