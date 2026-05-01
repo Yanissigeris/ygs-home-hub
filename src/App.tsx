@@ -3,7 +3,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
-import BrandedLoader from "@/components/BrandedLoader";
 
 // Hero portrait — only AVIF preload variants needed (WebP fallback is handled
 // by <picture> in HeroSection without a preload, since AVIF covers 97% of UAs).
@@ -368,7 +367,7 @@ const routeTree = React.createElement(
 const appRoutes = React.createElement(
   BrowserRouter,
   { future: { v7_startTransition: true, v7_relativeSplatPath: true } },
-  React.createElement(LanguageProvider, null, React.createElement(BrandedLoader), React.createElement(ScrollToTop), routeTree),
+  React.createElement(LanguageProvider, null, React.createElement(ScrollToTop), routeTree),
 );
 
 const App = () => appRoutes;
