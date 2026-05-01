@@ -79,10 +79,6 @@ export const heroBottomInfo: Record<"fr" | "en", HeroBottomInfo> = {
       ],
       mobileLine: <span>~9 yrs | 5★ Google | Hall of Fame</span>,
     },
-    nap: (
-      <>
-        <span>Gatineau, QC</span> | <a href="tel:+18192103044" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="[overflow-wrap:anywhere] md:[overflow-wrap:normal]" style={{ color: "inherit" }}>yanis@martywaite.com</a>
-      </>
-    ),
+    nap: <NapLine />,
   },
 };
