@@ -28,6 +28,36 @@ export type HeroBottomInfo = {
   nap: ReactNode;
 };
 
+/**
+ * Shared contact links — edit phone/email in ONE place.
+ * Used by both FR and EN NAP lines below.
+ */
+export const heroContact = {
+  city: "Gatineau, QC",
+  phoneDisplay: "819-210-3044",
+  phoneHref: "tel:+18192103044",
+  emailDisplay: "yanis@martywaite.com",
+  emailHref: "mailto:yanis@martywaite.com",
+};
+
+const NapLine = () => (
+  <>
+    <span>{heroContact.city}</span>
+    {" | "}
+    <a href={heroContact.phoneHref} style={{ color: "inherit" }}>
+      {heroContact.phoneDisplay}
+    </a>
+    {" | "}
+    <a
+      href={heroContact.emailHref}
+      className="[overflow-wrap:anywhere] md:[overflow-wrap:normal]"
+      style={{ color: "inherit" }}
+    >
+      {heroContact.emailDisplay}
+    </a>
+  </>
+);
+
 export const heroBottomInfo: Record<"fr" | "en", HeroBottomInfo> = {
   fr: {
     credibility: {
