@@ -1,121 +1,324 @@
-# Mobile "Anchor Corner" Hero — Editorial Composition
+# Hero Premium — Plan révisé v2 (intégrant les 6 ajustements)
 
-## Scope
-- **Route**: `/` (and `/en` — both render `<HeroSection>` from the same component) — homepage only.
-- **Viewport gate**: every change is scoped to `max-width: 767.98px` via Tailwind mobile-default + `md:` reset, or via `@media` blocks. Desktop (≥768px) stays byte-identical to current production.
-- **Files touched**: `src/components/HeroSection.tsx`, `src/components/SiteHeader.tsx`, `src/index.css` (for one keyframe-free `@media` block if needed).
+## Pattern i18n confirmé
 
-## Findings that change the brief
+On garde le pattern existant `lang === "fr" ? FR : EN` (option a). Aucune nouvelle dépendance, aucun fichier JSON. Les chaînes haut-niveau passent en **props** depuis `Index.tsx` (FR) et `IndexEn.tsx` (EN). Les chaînes structurelles internes au hero (3 lignes du H1, trust strip, sentinelle eyebrow) utilisent le ternaire `lang` directement dans `HeroSection.tsx`.
 
-A few items in the brief don't match the current code; I'll handle them as noted:
-
-1. **No "orphan dark-blue portrait section after the hero CTAs" exists.** The mobile portrait already lives inside `<HeroSection>`, currently centered at the bottom (`left: 50%; transform: translateX(-50%); maxHeight: 60vh`). I'll **reposition** it to bottom-right rather than "hide an orphan section."
-2. **The badges (~9 ans | 5★ | Hall of Fame) and NAP (Gatineau | phone | email) are already inside the hero**, absolutely positioned at `bottom: 32px` / `bottom: 8px`. Brief says "leave them visible below hero" — they'll remain visible exactly where they are (still inside the hero box, unchanged). No DOM/SEO change.
-3. **Hero already paints at viewport top** — header is `position: fixed`, hero has `min-height: 100svh`, no cream strip exists today. No change needed there.
-4. **Existing mobile gradient overlay (z-2) and top scrim (z-15, 150px)** already exist. I'll **replace** the existing mobile gradient with the brief's 3-stop atmospheric overlay, and **add** the left-side text-protect gradient as a new layer. The existing top scrim already covers the brief's "nav scrim" requirement (it's 150px vs 110px requested — leaving as-is keeps desktop identical).
-5. **Description paragraph** (lines 628-642) stays in the DOM, hidden via `hidden md:block` on the wrapper — SEO preserved.
-
-## Changes — `src/components/HeroSection.tsx`
-
-All edits live in the main hero `<section>` branch (lines 451-901). The compact branch is untouched.
-
-### A. Mobile gradient overlay (replace, not add)
-Lines 544-551 — current mobile overlay is a vertical gradient. Replace its `background` with:
-```
-linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)
-```
-Stays at `z-[2]`, still `md:hidden` — desktop overlay (lines 534-541) untouched.
-
-### B. New left-side text-protect gradient (mobile-only, new layer at z-[3])
-Insert a new `<div>` directly after the mobile overlay, gated `md:hidden`, `pointer-events-none`, `absolute inset-0`, `z-[3]`:
-```
-linear-gradient(95deg,
-  rgba(23,48,59,0.95) 0%,
-  rgba(23,48,59,0.88) 30%,
-  rgba(23,48,59,0.55) 48%,
-  rgba(23,48,59,0.18) 65%,
-  transparent 80%)
-```
-
-### C. Text content wrapper — bump z-index and constrain width on mobile
-Lines 553-557: text container is currently `z-[3]`. Raise to `z-[20]` (above new portrait at z-4 and the new text-protect gradient at z-3 — desktop unaffected because new gradient is `md:hidden`).
-
-Lines 558-563: change wrapper to:
-- Mobile: `max-width: 58%`, `padding: 90px 18px 90px 18px`
-- Desktop: keep existing `md:max-w-[50%]` and existing `md:pt-[30px] md:pl-[3%]` via the inner div (unchanged)
-
-Implementation: use `className="w-[58%] md:max-w-[50%] md:w-auto"` and inline-style padding scoped via two style objects (mobile default + a `@media (min-width: 768px)` override is unnecessary because the inner `md:pt-[30px] md:pl-[3%]` div already drives the desktop padding). The outer wrapper's `padding` only matters on mobile.
-
-### D. Hide description paragraph on mobile
-Lines 628-642: add `hidden md:block` to the `<p>` element's className. Stays in DOM (SEO unaffected); just CSS-hidden below 768px.
-
-### E. Reposition mobile portrait (bottom-right anchor)
-Lines 776-801 (the mobile `<img>` inside the second `<picture>`):
-
-Change inline `style` for mobile only:
-- `left: 50%` → remove
-- `transform: translateX(-50%)` → remove
-- Add: `right: 0`, `bottom: 0`
-- `maxHeight: "60vh"` → `maxHeight: "75%"` (of hero height)
-- Add: `width: "42vw"`, `objectPosition: "bottom right"`
-- Remove the radial mask (`WebkitMaskImage` / `maskImage`) on mobile so the portrait is fully crisp at full opacity per brief
-- `zIndex: 4` (unchanged — sits above z-3 left-protect gradient on its right side, which has near-zero opacity in that zone)
-
-Also update `sizes` on the `<img>` from `(max-width: 767px) 88vw, 1px` → `(max-width: 767px) 42vw, 1px` so the browser fetches a tier appropriate to the new render width (still uses the existing already-preloaded sm/md tiers — no new asset).
-
-Desktop portrait (`<picture className="hidden md:block">`, lines 706-747) — completely untouched.
-
-### F. Mobile credibility bar / NAP positioning
-Currently at `bottom: 32px` and `bottom: 8px` (centered, full width). With the portrait now anchored bottom-right occupying ~42% width up to 75% height, these would visually collide with the portrait on a 390×844 viewport.
-
-Adjustment: on mobile only, constrain the credibility bar (lines 821-871) and NAP (lines 874-898) to `width: 58%` and left-align (`text-align: left`, `padding-left: 18px`) so they sit in the same left zone as the text. Desktop versions use `md:` overrides that already exist (`md:!bg-transparent md:!p-0 md:!mx-0 md:!rounded-none`) — I'll add `md:!w-full md:!text-center md:!pl-0` to fully neutralize the mobile constraints on desktop, restoring the exact current desktop layout.
-
-## Changes — `src/components/SiteHeader.tsx`
-
-The current header is **already** `position: fixed`, transparent background, white text, with `paddingTop: env(safe-area-inset-top)`. Logo + hamburger already render in cream/white over the hero. The brief asks for a transparent → solid-on-scroll transition.
-
-Add scroll-state behavior (mobile-only):
-
-1. Inside the `SiteHeader` component, add a `scrolledMobile` state. Currently `const scrolled = false;` (line 249) is hardcoded.
-2. Add a `useEffect` that:
-   - Checks `window.matchMedia('(max-width: 767.98px)').matches` — early-return if false.
-   - Adds a `scroll` listener (passive: true) using `requestAnimationFrame` debounce.
-   - Sets `scrolledMobile = true` when `window.scrollY > 80`, `false` otherwise.
-   - Re-checks on resize (re-add/remove listener if breakpoint crosses).
-3. Modify `headerStyle` so that on mobile when `scrolledMobile` is true:
-   - `background: 'rgba(23,48,59,0.92)'`
-   - `backdropFilter: 'blur(12px)'`, `WebkitBackdropFilter: 'blur(12px)'`
-   - `borderBottom: '1px solid rgba(217,225,229,0.15)'`
-   - `transition: 'background-color 220ms ease, backdrop-filter 220ms ease'`
-   - `willChange: 'background-color'`
-4. Apply the solid-state styles **only** when `scrolledMobile && isMobileViewport`. Desktop-default values (`background: transparent`, no border) are preserved on every desktop render. The state can never become `true` on desktop because the listener early-returns.
-5. Logo filter and link colors stay `#FFFFFF` always (matches the brief: cream over hero; "revert to original solid-mode colors" — current solid-mode colors ARE white over the dark blue, which still has good contrast).
-
-No DOM/structure change; only style values driven by state. Desktop branch (`hidden md:flex` block, lines 325-379) renders identical CSS because `scrolledMobile` only mutates style under the mobile media check.
-
-## Z-index map after changes (mobile)
+## Fichiers touchés
 
 ```
-z-15  top scrim (existing)
-z-50  header (fixed)
-z-20  text content
-z-6   scroll chevron
-z-5   credibility bar + NAP
-z-4   portrait (bottom-right anchor)
-z-3   left-side text-protect gradient (NEW, md:hidden)
-z-2   atmospheric base overlay (modified, md:hidden)
-z-1   poster image / video background
+src/pages/Index.tsx              ← subtitle FR, primaryCta label FR, nouvelle prop cities, title préservé pour JSON-LD
+src/pages/en/IndexEn.tsx         ← subtitle EN, primaryCta label EN, prop cities (identique), title préservé
+src/components/HeroSection.tsx   ← H1 tri-lignes, eyebrow array+responsive, CTA refondu (ArrowRight, full-width mobile, sentence case), trust strip flex-wrap, portrait mobile +60px, chevron hidden md:block
+src/components/CookieConsent.tsx ← bouton 🍪 reopen mobile : bottom-right au-dessus sticky CTA, z-30, fade-cycle 6s + scroll
+src/index.css                    ← --sticky-cta-height var + min-[381px] helper si besoin
 ```
 
-The portrait at z-4 sits **above** the left-protect gradient at z-3, so its right side stays fully clear (gradient is near-transparent past 65% width anyway). Text at z-20 sits above the portrait but is constrained to 58% width on mobile, so it never visually overlaps the portrait region.
+Aucun autre fichier modifié.
 
-## Verification plan
+---
 
-Once implemented, I'll:
-1. Take a desktop screenshot at 1440×900 of `/` and `/en` and compare against current production. Must be visually identical.
-2. Take a mobile screenshot at 390×844 and confirm: portrait bottom-right, text upper-left, no overlap, headline legible, navbar transparent at top.
-3. Scroll-test mobile: past 80px → navbar solid dark with blur; back to top → transparent.
-4. Confirm the description `<p>` is in the DOM (via view-source) but not visible on mobile.
-5. Check console: no errors, no layout shift warnings.
+## Changement 1 — H1 signature (3 lignes)
 
-If any desktop pixel changes or any mobile check fails, I'll revert the offending step and report which one.
+`HeroSection.tsx` lignes ~589-620 : remplacer le contenu du `<h1>` par 3 `<span className="block">`.
+
+Style commun (identique FR/EN) :
+- `font-family: var(--serif)` (Cormorant Garamond hérité)
+- `font-size: clamp(2.4rem, 5.5vw, 5rem)` (taille de l'actuelle grosse ligne or)
+- `line-height: 1.0`
+- `letter-spacing: -0.01em`
+
+Par ligne :
+- L1 : `font-style: italic; font-weight: 400; color: #A88A5A`
+- L2 : `font-style: normal; font-weight: 500; color: #FFFFFF`
+- L3 : `font-style: italic; font-weight: 400; color: #A88A5A`
+
+Animation : classe `hero-fade-in` conservée par span avec `animationDelay` inline `0.1s` / `0.18s` / `0.26s` (stagger 80 ms).
+
+Contenu (ternaire `lang`) :
+- FR : `Les chiffres.` / `Les options.` / `Vous décidez.`
+- EN : `The numbers.` / `The options.` / `You decide.`
+
+Reste **un seul `<h1>`** dans le DOM.
+
+---
+
+## Changement 2 — Sous-titre
+
+Props mises à jour dans les deux pages :
+- `Index.tsx` → `subtitle="Courtier immobilier en Outaouais et Gatineau. Stratégie claire pour vendre, acheter ou investir."`
+- `IndexEn.tsx` → `subtitle="Real estate broker in the Outaouais and Gatineau region. Clear strategy to sell, buy or invest."`
+
+Style du `<p>` (lignes 622-635) : DM Sans hérité, weight 400, white, **`line-height: 1.75` conservé** (pas réduit à 1.5 — ajustement #2).
+
+---
+
+## Changement 3 — Eyebrow régional (Option B : prop cities array)
+
+Nouvelle prop sur `HeroSectionProps` :
+```ts
+cities?: string[]; // priorité sur overline si défini
+```
+
+Pages (identique FR/EN, noms propres) :
+```tsx
+cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
+```
+
+Rendu dans `HeroSection.tsx` (remplace lignes 574-587, branche `if (cities)`) :
+```tsx
+<p className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold whitespace-nowrap"
+   style={{ color: "var(--gold)", fontFamily: "var(--sans)",
+            fontSize: "max(.6rem, .62rem)", letterSpacing: ".22em",
+            opacity: 0.8, textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+  <span className="sm:hidden">{cities.slice(0, 3).join(" · ")}</span>
+  <span className="hidden sm:inline">{cities.join(" · ")}</span>
+</p>
+```
+
+- Aucun `·` orphelin (joint via `.join()`)
+- Mobile (≤640px) : 3 villes
+- Desktop (>640px) : 5 villes
+- Couleur or `#A88A5A` opacity 0.8
+- `whitespace-nowrap` (1 ligne mobile garantie)
+
+**Rétrocompat** : si `cities` non défini mais `overline` défini, on rend l'ancien `{overline.replace(...)}` comme avant. Aucune autre page cassée.
+
+---
+
+## Changement 4 — CTA primaire
+
+Refonte du `<Link>` primaire (`HeroSection.tsx` lignes 659-679).
+
+Imports : ajouter `import { ArrowRight } from "lucide-react"` en haut du fichier (lucide déjà installé).
+
+Props label dans pages :
+- `Index.tsx` → `primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}`
+- `IndexEn.tsx` → `primaryCta={{ label: "Free home valuation", href: "/en/home-valuation" }}`
+
+Bouton :
+```tsx
+<Link
+  to={primaryCta.href}
+  className="hero-cta-btn inline-flex items-center justify-center gap-2
+             w-full max-w-[360px] sm:w-auto sm:max-w-none
+             py-4 px-6 sm:py-3.5 sm:px-8
+             tracking-normal
+             transition-opacity duration-200
+             hover:opacity-90 active:scale-[0.98]
+             focus-visible:outline-none focus-visible:ring-2
+             focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
+  style={{
+    background: "#A88A5A",
+    color: "#FFFFFF",
+    fontFamily: "var(--sans)",
+    fontWeight: 500,
+    fontSize: ".95rem",
+    borderRadius: 0,
+    boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
+  }}
+  onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
+>
+  {primaryCta.label}
+  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+</Link>
+```
+
+- Sentence case (label déjà ainsi dans la prop, **aucun `text-transform: uppercase`**)
+- `tracking-normal` (pas widest)
+- Hover = opacity uniquement, **aucun scale**
+- Active = `scale-[0.98]`
+- Focus ring or 50%
+- Caractère `→` retiré
+
+CTA secondaire `Consultation` : on retire aussi le `→` inline (remplacé par `<ArrowRight className="w-3.5 h-3.5" />` ou laissé sans icône — j'opte pour **sans icône** pour respecter la hiérarchie texte secondaire). Style sinon inchangé.
+
+---
+
+## Changement 5 — Trust strip sous CTA secondaire
+
+Inséré juste après le bloc des CTAs (après ligne 697), à l'intérieur du même container `.hero-fade-in` parent :
+
+```tsx
+<div className="mt-8 md:mt-6 flex flex-wrap items-center justify-start gap-x-3 gap-y-2
+                text-[11px] tracking-[0.15em] uppercase font-medium"
+     style={{ color: "rgba(168, 138, 90, 0.7)", fontFamily: "var(--sans)" }}>
+  <span className="hidden min-[381px]:inline">
+    {lang === "fr" ? "9 ans" : "9 years"}
+  </span>
+  <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
+  <span>{lang === "fr" ? "Hall of Fame RE/MAX" : "RE/MAX Hall of Fame"}</span>
+  <span aria-hidden="true">·</span>
+  <span>5★ Google</span>
+</div>
+```
+
+Ajustement #4 appliqué :
+- `flex-wrap` ajouté → wrap propre à 320 px au lieu d'overflow horizontal
+- `justify-start` (alignement gauche cohérent avec le reste du hero)
+- `gap-y-2` pour respirer si wrap effectif
+- Premier item `9 ans / 9 years` masqué sous 381 px via `min-[381px]:inline` (Tailwind arbitrary breakpoint, zéro CSS supplémentaire) — comportement de fallback demandé
+
+Caractères `·` (U+00B7) et `★` (U+2605) en UTF-8 réel, pas d'entités.
+
+---
+
+## Changement 6 — Cutout portrait mobile remonté
+
+`HeroSection.tsx` ligne ~796-806 (l'`<img>` dans `<picture className="md:hidden">`) :
+- `bottom: 0` → **`bottom: 60px`**
+- Tout le reste inchangé (`right: 0`, `width: 48vw`, `maxHeight: 75%`, `objectPosition: "bottom right"`, `zIndex: 4`)
+- Aucune Framer Motion existante à préserver sur le mobile portrait
+- Desktop portrait (`<picture className="hidden md:block">`) : **aucun changement**
+
+---
+
+## Changement 7 — Cookie 🍪 reopen mobile (fade-cycle scroll-aware)
+
+`CookieConsent.tsx` lignes 380-393. Ajustements #3 et #5 combinés.
+
+Ajout dans `src/index.css` (ajustement #5) :
+```css
+:root {
+  --sticky-cta-height: 56px; /* StickyMobileCTA mesuré : ~44px touch + 12px safe-area */
+}
+```
+
+Je vérifierai la vraie hauteur de `StickyMobileCTA` au build (lecture du composant + screenshot DevTools). Si elle diffère, j'ajuste la valeur var. Fallback dynamique via `useRef` rejeté car la var statique est suffisamment stable et plus simple à maintenir.
+
+Logique React (mobile uniquement, via `useIsMobile()` déjà utilisé) :
+
+```tsx
+const [reopenVisible, setReopenVisible] = React.useState(true);
+const fadeTimerRef = React.useRef<number | null>(null);
+
+const startFadeTimer = React.useCallback(() => {
+  if (fadeTimerRef.current) clearTimeout(fadeTimerRef.current);
+  setReopenVisible(true);
+  fadeTimerRef.current = window.setTimeout(() => setReopenVisible(false), 6000);
+}, []);
+
+React.useEffect(() => {
+  if (!dismissed || visible || showPrefs) return;
+  startFadeTimer();
+  let lastShown = true;
+  const onScroll = () => {
+    if (window.scrollY > 200 && lastShown) {
+      lastShown = false;
+      setReopenVisible(false);
+      if (fadeTimerRef.current) clearTimeout(fadeTimerRef.current);
+    } else if (window.scrollY <= 50 && !lastShown) {
+      lastShown = true;
+      startFadeTimer(); // réapparition + reset 6s
+    }
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+    if (fadeTimerRef.current) clearTimeout(fadeTimerRef.current);
+  };
+}, [dismissed, visible, showPrefs, startFadeTimer]);
+```
+
+Style du bouton (mobile) :
+```tsx
+style={{
+  position: "fixed",
+  bottom: isMobile
+    ? `calc(var(--sticky-cta-height) + 1.5rem + env(safe-area-inset-bottom, 0px))`
+    : "5.5rem",
+  right: isMobile ? "1rem" : undefined,
+  left: isMobile ? undefined : "1rem",
+  width: 32, height: 32,
+  background: "var(--ink)",
+  border: "1px solid rgba(255,255,255,.1)",
+  fontSize: "1rem", lineHeight: 1,
+  zIndex: isMobile ? 30 : 9998,
+  opacity: isMobile ? (reopenVisible ? 1 : 0) : 1,
+  pointerEvents: isMobile && !reopenVisible ? "none" : "auto",
+  transition: "opacity 0.5s ease",
+}}
+```
+
+Comportement :
+- Apparition initiale après dismissal du banner
+- Visible 6s puis fade out
+- Si scroll > 200 px : fade out immédiat
+- Si scroll back ≤ 50 px : fade in + nouveau timer 6s
+- Cycle infini possible (pas de cache permanent pour la session)
+- Desktop : comportement actuel **inchangé** (bottom-left, opacity 1, z 9998)
+
+---
+
+## Changement 8 — Chevron scroll-down retiré sur mobile
+
+`HeroSection.tsx` ligne 101 (composant `ScrollChevron`) : ajouter `hidden md:block` à la className du `<button>`. Desktop conserve l'animation bounce.
+
+---
+
+## Confirmation JSON-LD VideoObject (ajustement #6)
+
+Vérifié dans le code actuel (`HeroSection.tsx` lignes 365-388) :
+
+```ts
+const schema = {
+  "@type": "VideoObject",
+  name: title,           // ← prop title de la page
+  description: subtitle, // ← prop subtitle de la page
+  thumbnailUrl: ...,
+  contentUrl: ...,
+};
+```
+
+**Garanties** :
+- Prop `title` **préservée** dans `Index.tsx` : `title="Votre courtier immobilier à Gatineau — Outaouais"`
+- Prop `title` **préservée** dans `IndexEn.tsx` : `title="Your real estate broker in Gatineau — Outaouais"`
+- Cette prop alimente `schema.name` du VideoObject JSON-LD → SEO sémantique conservé
+- Le `<h1>` visuel ignore complètement la prop `title` et rend les 3 spans signature
+- La prop `subtitle` (mise à jour, voir §2) alimente `schema.description`
+
+Vérification post-build :
+1. DevTools → Elements → un seul `<h1>` contenant exactement 3 `<span class="block">`
+2. DevTools → `<head>` → `<script type="application/ld+json" id="ygs-jsonld-video">` contient `"name": "Votre courtier immobilier à Gatineau — Outaouais"` (FR) ou EN équivalent
+
+---
+
+## Protections non négociables — checklist
+
+- [x] `<h1>` reste un `<h1>` (1 seul, 3 spans block enfants)
+- [x] JSON-LD VideoObject : `name` = title préservé (phrase longue)
+- [x] JSON-LD RealEstateAgent / Person / BreadcrumbList / FAQ / HowTo : aucun touché
+- [x] Meta SEO + hreflang (`<SEO>`, `<PageMeta>` dans pages) : inchangés
+- [x] ARIA : chevron desktop garde `aria-label`, séparateurs trust strip `aria-hidden="true"`
+- [x] Routes `/` et `/en` : non touchées
+- [x] `hero-fade-in` animations : conservées + stagger ajouté
+- [x] Vidéo desktop : aucun changement
+- [x] Sections sous hero : aucun changement
+- [x] Palette : `#17303B` `#A88A5A` `#FFFFFF` `#F7F4EE` `#222831` `#D9E1E5` uniquement
+- [x] Fontes : `var(--serif)` Cormorant Garamond + `var(--sans)` DM Sans (identiques FR/EN)
+- [x] UTF-8 réel : `É é · ★` (jamais `&eacute;` etc.)
+- [x] `→` U+2192 supprimé partout, remplacé par `<ArrowRight />`
+- [x] Aucune nouvelle dépendance npm (lucide-react déjà présent)
+
+---
+
+## Validation post-build (mode build)
+
+1. Screenshots **320 / 375 / 390 / 768 / 1440 px** en FR puis EN (10 captures)
+2. Capture DOM : `<h1>` avec 3 `<span class="block">`
+3. Capture DOM : `<script type="application/ld+json" id="ygs-jsonld-video">` complet
+4. Console : zéro `Ã©`, zéro `&#xxx;`, zéro glyphe carré
+5. Vérifier que le bouton 🍪 mobile n'overlap pas le sticky "Appeler" et fait bien son cycle fade
+
+---
+
+## Prêt pour le go
+
+Si tu approuves, je passe en build et j'exécute les modifications dans l'ordre suivant :
+1. `Index.tsx` + `IndexEn.tsx` (props : cities, subtitle, primaryCta label)
+2. `HeroSection.tsx` (H1 3-spans, eyebrow array, CTA ArrowRight, trust strip, portrait +60px, chevron hidden mobile)
+3. `src/index.css` (`--sticky-cta-height`)
+4. `CookieConsent.tsx` (bouton 🍪 fade-cycle scroll-aware)
+5. Captures de validation
+
+Confirme avec un "go" et j'enchaîne.

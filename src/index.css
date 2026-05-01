@@ -58,6 +58,10 @@
     --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
+    /* StickyMobileCTA mesured height (button minHeight 48px + 0.85rem×2 padding ≈ 76px,
+       safe-area-inset-bottom appended via env() in calc() consumers). */
+    --sticky-cta-height: 76px;
+
     --hero-gradient: hsl(200 42% 16%);
     --card-shadow: 0 1px 4px 0 hsl(200 30% 14% / 0.03), 0 1px 2px 0 hsl(200 30% 14% / 0.02);
     --card-shadow-hover: 0 12px 32px -12px hsl(200 30% 14% / 0.1), 0 4px 8px -2px hsl(200 30% 14% / 0.04);

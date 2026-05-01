@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /* Inline SVG icons — replaces lucide-react imports for the hero so the
@@ -41,6 +42,8 @@ const detectMobile = () => {
 
 interface HeroSectionProps {
   overline?: string;
+  /** Preferred over `overline` on the home hero. Renders 3 cities on mobile, all on desktop, joined with " · ". */
+  cities?: string[];
   title: string;
   subtitle: string;
   primaryCta?: { label: string; href: string };
@@ -98,7 +101,7 @@ const ScrollChevron: React.FC<{ lang: "fr" | "en" }> = ({ lang }) => {
       type="button"
       onClick={handleClick}
       aria-label={getA11yLabel("hero.scrollNext", lang)}
-      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto"
+      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto hidden md:block"
       style={{
         bottom: "84px",
         background: "transparent",
@@ -131,6 +134,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
     {
       overline,
+      cities,
       title,
       subtitle,
       primaryCta,
@@ -571,7 +575,22 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
-              {overline && (
+              {(cities && cities.length > 0) ? (
+                <p
+                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold whitespace-nowrap"
+                  style={{
+                    color: "#A88A5A",
+                    fontFamily: "var(--sans)",
+                    fontSize: "max(.6rem, .62rem)",
+                    letterSpacing: ".22em",
+                    opacity: 0.8,
+                    textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                  }}
+                >
+                  <span className="sm:hidden">{cities.slice(0, 3).join(" · ")}</span>
+                  <span className="hidden sm:inline">{cities.join(" · ")}</span>
+                </p>
+              ) : overline ? (
                 <p
                   className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
                   style={{
@@ -584,60 +603,74 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 >
                   {overline.replace(/[·•]/g, "  ·  ")}
                 </p>
-              )}
+              ) : null}
 
               <h1
                 className="hero-fade-in"
                 style={{
                   animationDelay: "0.1s",
                   color: "#FFFFFF",
-                  letterSpacing: "-.01em",
-                  fontStyle: "italic",
-                  fontWeight: 300,
+                  letterSpacing: "-0.01em",
                   fontFamily: "var(--serif)",
                   textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                  lineHeight: 1.0,
                 }}
               >
-                {lang === "fr" ? (
-                  <>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#FFFFFF", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
-                      Votre courtier immobilier
-                    </span>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
-                      en Outaouais
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: "#FFFFFF", letterSpacing: "0.01em", marginBottom: "0.3rem" }}>
-                      Your real estate broker
-                    </span>
-                    <span className="block" style={{ fontStyle: "italic", fontWeight: 600, fontSize: "clamp(2.4rem, 5.5vw, 5rem)", color: "var(--gold)", lineHeight: 1.0, letterSpacing: "-0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
-                      in Outaouais
-                    </span>
-                  </>
-                )}
+                {(() => {
+                  const lines = lang === "fr"
+                    ? ["Les chiffres.", "Les options.", "Vous décidez."]
+                    : ["The numbers.", "The options.", "You decide."];
+                  const baseStyle: React.CSSProperties = {
+                    fontFamily: "var(--serif)",
+                    fontSize: "clamp(2.4rem, 5.5vw, 5rem)",
+                    lineHeight: 1.0,
+                    letterSpacing: "-0.01em",
+                    textShadow: "0 2px 12px rgba(0,0,0,0.5)",
+                  };
+                  return (
+                    <>
+                      <span
+                        className="hero-fade-in block"
+                        style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.10s" }}
+                      >
+                        {lines[0]}
+                      </span>
+                      <span
+                        className="hero-fade-in block"
+                        style={{ ...baseStyle, fontStyle: "normal", fontWeight: 500, color: "#FFFFFF", animationDelay: "0.18s" }}
+                      >
+                        {lines[1]}
+                      </span>
+                      <span
+                        className="hero-fade-in block"
+                        style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.26s" }}
+                      >
+                        {lines[2]}
+                      </span>
+                    </>
+                  );
+                })()}
               </h1>
 
               <p
                 className="hero-fade-in mt-4 sm:mt-6 block max-w-[460px] font-light"
                 style={{
-                  animationDelay: "0.2s",
+                  animationDelay: "0.32s",
                   color: "#FFFFFF",
+                  fontFamily: "var(--sans)",
+                  fontWeight: 400,
                   fontSize: ".95rem",
                   lineHeight: 1.75,
                   textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                 }}
               >
-                {lang === "fr"
-                  ? "Stratégie claire pour vendre, acheter ou investir en Outaouais."
-                  : "I give you the numbers and the options — you decide. Clear strategy to sell, buy, or invest in Outaouais."}
+                {subtitle}
               </p>
 
               <p
                 className="hero-fade-in mt-3 hidden font-light md:block"
                 style={{
-                  animationDelay: "0.25s",
+                  animationDelay: "0.38s",
                   color: "rgba(255,255,255,0.85)",
                   fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
                   lineHeight: 1.6,
@@ -653,28 +686,26 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(primaryCta || secondaryCta) && (
                 <div
                   className="hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
-                  style={{ animationDelay: "0.35s" }}
+                  style={{ animationDelay: "0.44s" }}
                 >
 
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
-                      className="hero-cta-btn inline-flex items-center justify-center uppercase w-full sm:w-auto text-center"
+                      className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
                       style={{
                         background: "#A88A5A",
-                        border: "1.5px solid #A88A5A",
-                        borderRadius: 0,
                         color: "#FFFFFF",
-                        padding: ".95rem 1.75rem",
-                        fontSize: ".82rem",
-                        fontWeight: 600,
-                        letterSpacing: ".14em",
+                        fontFamily: "var(--sans)",
+                        fontWeight: 500,
+                        fontSize: ".95rem",
+                        borderRadius: 0,
                         boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
-                        transition: "all 0.3s ease",
                       }}
                       onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
                     >
-                      {primaryCta.label} →
+                      {primaryCta.label}
+                      <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
                   {secondaryCta && (
@@ -692,11 +723,31 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       }}
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
-                      {secondaryCta.label} →
+                      {secondaryCta.label}
                     </Link>
                   )}
                 </div>
               )}
+
+              {/* Trust strip — under CTAs, mobile-friendly with flex-wrap */}
+              <div
+                className="hero-fade-in mt-8 md:mt-6 flex flex-wrap items-center justify-start gap-x-3 gap-y-2 uppercase font-medium"
+                style={{
+                  animationDelay: "0.5s",
+                  color: "rgba(168, 138, 90, 0.7)",
+                  fontFamily: "var(--sans)",
+                  fontSize: "11px",
+                  letterSpacing: "0.15em",
+                }}
+              >
+                <span className="hidden min-[381px]:inline">
+                  {lang === "fr" ? "9 ans" : "9 years"}
+                </span>
+                <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
+                <span>{lang === "fr" ? "Hall of Fame RE/MAX" : "RE/MAX Hall of Fame"}</span>
+                <span aria-hidden="true">·</span>
+                <span>5★ Google</span>
+              </div>
             </div>
           </div>
         </div>
@@ -794,7 +845,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 height={480}
                 className="md:hidden absolute pointer-events-none select-none"
                 style={{
-                  bottom: 0,
+                  bottom: 60,
                   right: 0,
                   width: "48vw",
                   height: "auto",

@@ -45,10 +45,10 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
-      overline="GATINEAU · AYLMER · HULL · CHELSEA · CANTLEY · "
+      cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
       title="Votre courtier immobilier à Gatineau — Outaouais"
-      subtitle="Stratégie claire, conseils basés sur les faits, et un accompagnement complet — pour vendre, acheter ou investir en toute confiance."
-      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
+      subtitle="Courtier immobilier en Outaouais et Gatineau. Stratégie claire pour vendre, acheter ou investir."
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-interior-720.mp4"
