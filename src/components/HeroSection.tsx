@@ -844,7 +844,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 height={480}
                 className="md:hidden absolute pointer-events-none select-none"
                 style={{
-                  bottom: 60,
+                  bottom: 0,
                   right: 0,
                   width: "48vw",
                   height: "auto",
