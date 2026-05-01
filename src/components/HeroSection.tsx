@@ -430,14 +430,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                  />
                </div>
-              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.55) 0%, rgba(23,48,59,.2) 100%)" }} />
+             <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.78) 0%, rgba(23,48,59,.45) 60%, rgba(23,48,59,.2) 100%)" }} />
+              {/* Left-side text-protect overlay (desktop) — guarantees subtitle/secondary CTA legibility over bright photo zones */}
+              <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true" style={{ background: "linear-gradient(90deg, rgba(23,48,59,0.72) 0%, rgba(23,48,59,0.55) 35%, rgba(23,48,59,0.25) 55%, transparent 70%)" }} />
+              {/* Mobile text-protect overlay — full-width darken since text spans the column */}
+              <div className="pointer-events-none absolute inset-0 md:hidden" aria-hidden="true" style={{ background: "linear-gradient(180deg, rgba(23,48,59,0.55) 0%, rgba(23,48,59,0.40) 50%, rgba(23,48,59,0.65) 100%)" }} />
             </>
           )}
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
-              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold)" }}>{overline}</p>}
-              <h1 style={{ color: "#F7F4EE" }}>{title}</h1>
-              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.7)" }}>{subtitle}</p>
+              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{overline}</p>}
+              <h1 style={{ color: "#F7F4EE", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
+              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
+              <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
                 <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
@@ -446,7 +451,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Button>
                   )}
                   {secondaryCta && (
-                    <Link to={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.5)", borderBottom: "1px solid rgba(255,255,255,.2)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
+                    <Link to={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
                   )}
                 </div>
               )}
