@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
  * AnimatePresence + motion components for an overlay rarely visible).
  *
  * Behavior is identical from the user's POV:
- *   - First load: no overlay (BrandedLoader handles it)
+ *   - First load: no overlay (no overlay needed)
  *   - Route change: dark overlay slides up over content (cover), swaps page,
  *     then slides off the top (reveal)
  */
