@@ -450,6 +450,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     }
 
     return (
+      <>
       <section
         ref={combinedRef}
         data-hero-dark
@@ -942,6 +943,38 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
       </section>
+      <section
+        className="md:hidden w-full"
+        style={{ background: "#0F2129", borderTop: "1px solid rgba(168,138,90,0.22)", padding: "16px 18px 18px", fontFamily: "var(--sans)" }}
+        aria-label={lang === "en" ? "Credentials and contact" : "Crédibilité et contact"}
+      >
+        <div style={{ marginBottom: "10px" }}>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#A88A5A", fontWeight: 600, margin: "0 0 4px" }}>
+            {lang === "en" ? "Experience" : "Expérience"}
+          </p>
+          <p style={{ fontSize: "0.78rem", lineHeight: 1.5, color: "rgba(247,244,238,0.92)", margin: 0 }}>
+            {lang === "en"
+              ? "~9 years of experience · 5★ Google & Facebook · RE/MAX Hall of Fame"
+              : "~9 ans d'expérience · 5★ Google & Facebook · Hall of Fame RE/MAX"}
+          </p>
+        </div>
+        <div style={{ height: "1px", background: "rgba(247,244,238,0.08)", margin: "10px 0" }} />
+        <div>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#A88A5A", fontWeight: 600, margin: "0 0 4px" }}>
+            Contact
+          </p>
+          <address style={{ fontSize: "0.78rem", lineHeight: 1.55, color: "rgba(247,244,238,0.85)", fontStyle: "normal", margin: 0 }}>
+            <span>{heroContact.city}</span>
+            <span style={{ margin: "0 6px", opacity: 0.4 }}>·</span>
+            <a href={heroContact.phoneHref} style={{ color: "inherit", textDecoration: "none" }}>{heroContact.phoneDisplay}</a>
+            <br />
+            <a href={heroContact.emailHref} style={{ color: "inherit", textDecoration: "none" }} className="[overflow-wrap:anywhere]">
+              {heroContact.emailDisplay}
+            </a>
+          </address>
+        </div>
+      </section>
+      </>
     );
   }
 );
