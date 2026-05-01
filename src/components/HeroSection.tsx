@@ -913,7 +913,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               lineHeight: 1.5,
             }}
           >
-            Gatineau, QC | <a href="tel:+18192103044" className="pointer-events-auto" style={{ color: "inherit" }}>819-210-3044</a> | <a href="mailto:yanis@martywaite.com" className="pointer-events-auto [overflow-wrap:anywhere] md:[overflow-wrap:normal]" style={{ color: "inherit" }}>yanis@martywaite.com</a>
+            {(() => {
+              const nap = heroBottomInfo[lang === "en" ? "en" : "fr"].nap;
+              return (
+                <>
+                  {nap.city} | <a href={`tel:${nap.phoneHref}`} className="pointer-events-auto" style={{ color: "inherit" }}>{nap.phoneDisplay}</a> | <a href={`mailto:${nap.emailHref}`} className="pointer-events-auto [overflow-wrap:anywhere] md:[overflow-wrap:normal]" style={{ color: "inherit" }}>{nap.emailDisplay}</a>
+                </>
+              );
+            })()}
           </span>
         </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}
