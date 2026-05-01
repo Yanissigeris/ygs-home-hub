@@ -853,31 +853,39 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               lineHeight: 1.5,
             }}
           >
-            {/* Desktop credibility (hidden on mobile) */}
+            {/* Desktop credibility (hidden on mobile) — driven by config/heroBottomInfo */}
             <div className="hidden md:block">
-              <span className="pointer-events-auto inline-flex items-center">
-                <Calendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-                {lang === "en" ? "~9 years of experience" : "~9 ans d'expérience"}
-              </span>
-              <span className="mx-2 opacity-50" aria-hidden="true">|</span>
-              <a
-                href="#avis"
-                className="pointer-events-auto hover:underline inline-flex items-center"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <Star aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} fill="currentColor" />
-                5★ Google &amp; Facebook
-              </a>
-              <span className="mx-2 opacity-50" aria-hidden="true">|</span>
-              <span className="pointer-events-auto inline-flex items-center">
-                <Trophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-                {lang === "en" ? "RE/MAX Hall of Fame" : "Hall of Fame RE/MAX"}
-              </span>
+              {heroBottomInfo[lang === "en" ? "en" : "fr"].credibility.desktopItems.map((item, idx, arr) => {
+                const Icon = HERO_ICON_MAP[item.icon];
+                const inner = (
+                  <>
+                    <Icon aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    {item.label}
+                  </>
+                );
+                return (
+                  <React.Fragment key={idx}>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="pointer-events-auto hover:underline inline-flex items-center"
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
+                        {inner}
+                      </a>
+                    ) : (
+                      <span className="pointer-events-auto inline-flex items-center">{inner}</span>
+                    )}
+                    {idx < arr.length - 1 && <span className="mx-2 opacity-50" aria-hidden="true">|</span>}
+                  </React.Fragment>
+                );
+              })}
             </div>
             {/* Mobile shortened credibility */}
             <div className="md:hidden">
-              {lang === "en" ? "~9 yrs " : "~9 ans "}<span aria-hidden="true"> | </span>{"5"}<span className="sr-only">{lang === "en" ? "5 stars Google" : "5 étoiles Google"}</span><span aria-hidden="true">★</span>{" Google"}<span aria-hidden="true"> | </span>{"Hall of Fame"}
+              {heroBottomInfo[lang === "en" ? "en" : "fr"].credibility.mobileLine}
             </div>
+
           </div>
         </div>
 
