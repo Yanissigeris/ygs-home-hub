@@ -822,7 +822,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Trust strip — under CTAs, mobile-friendly with flex-wrap */}
               <div
-                className="hero-fade-in mt-8 md:mt-6 flex flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-medium tracking-[0.1em] md:tracking-[0.15em] text-[10px] md:text-[11px]"
+                className="hero-fade-in mt-8 md:mt-6 flex md:hidden flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-medium tracking-[0.1em] md:tracking-[0.15em] text-[10px] md:text-[11px]"
                 style={{
                   animationDelay: "0.5s",
                   color: "rgba(168, 138, 90, 0.7)",
