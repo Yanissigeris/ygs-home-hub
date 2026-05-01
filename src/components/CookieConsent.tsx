@@ -416,17 +416,30 @@ const CookieConsent = () => {
           </div>
         </div>
       )}
-      {/* Re-open cookie button (bottom-left) */}
+      {/* Re-open cookie button — desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
       {dismissed && !visible && !showPrefs && (
         <button
           onClick={handleReopen}
-          className="fixed z-[9998] flex items-center justify-center rounded-full transition-opacity hover:opacity-80"
+          className="fixed flex items-center justify-center rounded-full hover:opacity-80"
           style={{
-            bottom: "5.5rem", left: "1rem", width: 32, height: 32,
-            background: "var(--ink)", border: "1px solid rgba(255,255,255,.1)",
-            fontSize: "1rem", lineHeight: 1,
+            bottom: isMobile
+              ? "calc(var(--sticky-cta-height) + 1.5rem + env(safe-area-inset-bottom, 0px))"
+              : "5.5rem",
+            right: isMobile ? "1rem" : undefined,
+            left: isMobile ? undefined : "1rem",
+            width: 32,
+            height: 32,
+            background: "var(--ink)",
+            border: "1px solid rgba(255,255,255,.1)",
+            fontSize: "1rem",
+            lineHeight: 1,
+            zIndex: isMobile ? 30 : 9998,
+            opacity: isMobile ? (reopenVisible ? 1 : 0) : 1,
+            pointerEvents: isMobile && !reopenVisible ? "none" : "auto",
+            transition: "opacity 0.5s ease",
           }}
           aria-label={lang === "en" ? "Cookie preferences" : "Préférences cookies"}
+          aria-hidden={isMobile && !reopenVisible ? true : undefined}
         >
           🍪
         </button>
