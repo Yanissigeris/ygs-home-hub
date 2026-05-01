@@ -48,6 +48,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
       title="Votre courtier immobilier à Gatineau — Outaouais"
       subtitle="Courtier immobilier en Outaouais et Gatineau. Stratégie claire pour vendre, acheter ou investir."
+      subtitleShort="Courtier immobilier en Outaouais. Stratégie claire pour vendre, acheter ou investir."
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
