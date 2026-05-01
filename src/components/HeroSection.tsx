@@ -28,9 +28,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 // (hero-homepage.webp removed — was imported but never used; saves ~186KB from bundle)
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
-import { heroBottomInfo } from "@/config/heroBottomInfo";
-
-const HERO_ICON_MAP = { calendar: IconCalendar, star: IconStar, trophy: IconTrophy } as const;
+import { heroContact } from "@/config/heroBottomInfo";
 
 /** Detect mobile synchronously at first render (SSR-safe).
  *  Used to skip the <video> element entirely on phones — the poster
@@ -853,37 +851,51 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               lineHeight: 1.5,
             }}
           >
-            {/* Desktop credibility (hidden on mobile) — driven by config/heroBottomInfo */}
+            {/* Desktop credibility (hidden on mobile) — inline JSX so text is editable via Visual Edits */}
             <div className="hidden md:block">
-              {heroBottomInfo[lang === "en" ? "en" : "fr"].credibility.desktopItems.map((item, idx, arr) => {
-                const Icon = HERO_ICON_MAP[item.icon];
-                const inner = (
-                  <>
-                    <Icon aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-                    {item.label}
-                  </>
-                );
-                return (
-                  <React.Fragment key={idx}>
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="pointer-events-auto hover:underline inline-flex items-center"
-                        style={{ color: "inherit", textDecoration: "none" }}
-                      >
-                        {inner}
-                      </a>
-                    ) : (
-                      <span className="pointer-events-auto inline-flex items-center">{inner}</span>
-                    )}
-                    {idx < arr.length - 1 && <span className="mx-2 opacity-50" aria-hidden="true">|</span>}
-                  </React.Fragment>
-                );
-              })}
+              {lang === "en" ? (
+                <>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>~9 years of experience</span>
+                  </span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>5★ Google & Facebook</span>
+                  </a>
+                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>RE/MAX Hall of Fame</span>
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>~9 ans d'expérience</span>
+                  </span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>5★ Google & Facebook</span>
+                  </a>
+                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>Hall of Fame RE/MAX</span>
+                  </span>
+                </>
+              )}
             </div>
-            {/* Mobile shortened credibility */}
+            {/* Mobile shortened credibility — inline JSX so text is editable via Visual Edits */}
             <div className="md:hidden">
-              {heroBottomInfo[lang === "en" ? "en" : "fr"].credibility.mobileLine}
+              {lang === "en" ? (
+                <span>~9 yrs | 5★ Google | Hall of Fame</span>
+              ) : (
+                <span>~9 ans | 5★ Google | Hall of Fame</span>
+              )}
             </div>
 
           </div>
@@ -913,7 +925,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               lineHeight: 1.5,
             }}
           >
-            {heroBottomInfo[lang === "en" ? "en" : "fr"].nap}
+            <span>{heroContact.city}</span>
+            {" | "}
+            <a href={heroContact.phoneHref} style={{ color: "inherit" }}>
+              {heroContact.phoneDisplay}
+            </a>
+            {" | "}
+            <a
+              href={heroContact.emailHref}
+              className="[overflow-wrap:anywhere] md:[overflow-wrap:normal]"
+              style={{ color: "inherit" }}
+            >
+              {heroContact.emailDisplay}
+            </a>
           </span>
         </address>
         {heroVideo && <VideoPerfOverlay metrics={perfMetrics} />}

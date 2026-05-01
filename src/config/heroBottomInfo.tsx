@@ -1,84 +1,17 @@
 /**
- * Hero bottom-left info — single source of truth for the credibility bar
- * and NAP (Name/Address/Phone) line shown at the bottom of <HeroSection>.
+ * Hero contact details — single source of truth for phone/email/city
+ * shown in the homepage hero NAP line.
  *
- * Edit values here to update the homepage hero. Bilingual (FR/EN) parity required.
+ * Edit these strings to update the homepage hero contact info.
+ * The visible text labels (credibility items, mobile credibility line)
+ * are now inlined directly in <HeroSection> so they can be edited via
+ * Lovable Visual Edits.
  */
 
-import type { ReactNode } from "react";
-
-export type HeroCredibilityItem = {
-  /** Icon key — maps to an inline SVG inside HeroSection */
-  icon: "calendar" | "star" | "trophy";
-  /** Optional anchor href (e.g. "#avis"). Omit for plain text. */
-  href?: string;
-  /** Desktop label (full text) */
-  label: ReactNode;
-};
-
-export type HeroCredibility = {
-  /** Items shown on desktop (≥768px), separated by " | " */
-  desktopItems: HeroCredibilityItem[];
-  /** Single shorter line shown on mobile (<768px) */
-  mobileLine: ReactNode;
-};
-
-export type HeroBottomInfo = {
-  credibility: HeroCredibility;
-  nap: ReactNode;
-};
-
-/**
- * Shared contact links — edit phone/email in ONE place.
- * Used by both FR and EN NAP lines below.
- */
 export const heroContact = {
   city: "Gatineau, QC",
   phoneDisplay: "819-210-3044",
   phoneHref: "tel:+18192103044",
   emailDisplay: "yanis@martywaite.com",
   emailHref: "mailto:yanis@martywaite.com",
-};
-
-const NapLine = () => (
-  <>
-    <span>{heroContact.city}</span>
-    {" | "}
-    <a href={heroContact.phoneHref} style={{ color: "inherit" }}>
-      {heroContact.phoneDisplay}
-    </a>
-    {" | "}
-    <a
-      href={heroContact.emailHref}
-      className="[overflow-wrap:anywhere] md:[overflow-wrap:normal]"
-      style={{ color: "inherit" }}
-    >
-      {heroContact.emailDisplay}
-    </a>
-  </>
-);
-
-export const heroBottomInfo: Record<"fr" | "en", HeroBottomInfo> = {
-  fr: {
-    credibility: {
-      desktopItems: [
-        { icon: "calendar", label: <span>~9 ans d'expérience</span> },
-        { icon: "star", href: "#avis", label: <span>5★ Google & Facebook</span> },
-        { icon: "trophy", label: <span>Hall of Fame RE/MAX</span> },
-      ],
-      mobileLine: <span>~9 ans | 5★ Google | Hall of Fame</span>,
-    },
-    nap: <NapLine />,
-  },
-  en: {
-    credibility: {
-      desktopItems: [
-        { icon: "calendar", label: <span>~9 years of experience</span> },
-        { icon: "star", href: "#avis", label: <span>5★ Google & Facebook</span> },
-        { icon: "trophy", label: <span>RE/MAX Hall of Fame</span> },
-      ],
-      mobileLine: <span>~9 yrs | 5★ Google | Hall of Fame</span>,
-    },
-    nap: <NapLine />,
-  },
 };
