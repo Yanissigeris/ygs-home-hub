@@ -408,6 +408,62 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       };
     }, []);
 
+    /* Adaptive overlay strength based on the brightness of the heroBgImage's
+     * left text region (where H1/subtitle/CTAs sit). 0 = very dark image,
+     * 1 = very bright image. Defaults to 0.5 so SSR/first paint still gets
+     * a safe overlay. Sampled once per image, in an offscreen canvas. */
+    const [bgBrightness, setBgBrightness] = React.useState<number>(0.5);
+    React.useEffect(() => {
+      if (!heroBgImage) return;
+      let cancelled = false;
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.decoding = "async";
+      img.src = heroBgImage;
+      img.onload = () => {
+        if (cancelled) return;
+        try {
+          const w = 32, h = 18; // tiny sample, cheap
+          const c = document.createElement("canvas");
+          c.width = w; c.height = h;
+          const ctx = c.getContext("2d", { willReadFrequently: true });
+          if (!ctx) return;
+          ctx.drawImage(img, 0, 0, w, h);
+          // Sample left half of the image where text sits
+          const data = ctx.getImageData(0, 0, Math.floor(w * 0.55), h).data;
+          let sum = 0, n = 0;
+          for (let i = 0; i < data.length; i += 4) {
+            // Rec. 709 luma
+            sum += 0.2126 * data[i] + 0.7152 * data[i + 1] + 0.0722 * data[i + 2];
+            n++;
+          }
+          const avg = (sum / n) / 255; // 0..1
+          setBgBrightness(avg);
+        } catch { /* CORS or decode failure → keep default */ }
+      };
+      return () => { cancelled = true; };
+    }, [heroBgImage]);
+
+    /* Map brightness → overlay alphas. Floors guarantee minimum protection on
+     * dark images; ceilings cap saturation so darks never look muddy. */
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * Math.max(0, Math.min(1, t));
+    const t = bgBrightness; // 0 dark .. 1 bright
+    // Baseline diagonal tint
+    const baseStart = lerp(0.55, 0.88, t);
+    const baseMid   = lerp(0.30, 0.60, t);
+    const baseEnd   = lerp(0.12, 0.30, t);
+    // Desktop left text-protect (90deg)
+    const leftStart = lerp(0.50, 0.82, t);
+    const leftMid   = lerp(0.35, 0.65, t);
+    const leftSoft  = lerp(0.15, 0.38, t);
+    // Mobile vertical text-protect
+    const mTop      = lerp(0.40, 0.70, t);
+    const mMid      = lerp(0.28, 0.55, t);
+    const mBot      = lerp(0.50, 0.78, t);
+    // Image filter: pull bright images down a touch more
+    const imgBrightness = lerp(0.92, 0.72, t);
+    const imgSaturate   = lerp(0.90, 0.78, t);
+
     /* Compact hero for inner pages */
     if (compact || (!agentImage && !heroVideo && !heroBgImage)) {
       return (
@@ -420,7 +476,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    alt=""
                    role="presentation"
                    className="h-full w-full object-cover"
-                   style={{ filter: "brightness(0.85) saturate(0.8)" }}
+                   style={{ filter: `brightness(${imgBrightness}) saturate(${imgSaturate})`, transition: "filter 0.4s ease" }}
                    width={1920}
                    height={720}
                    sizes="100vw"
@@ -430,11 +486,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                  />
                </div>
-             <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(23,48,59,.78) 0%, rgba(23,48,59,.45) 60%, rgba(23,48,59,.2) 100%)" }} />
-              {/* Left-side text-protect overlay (desktop) — guarantees subtitle/secondary CTA legibility over bright photo zones */}
-              <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true" style={{ background: "linear-gradient(90deg, rgba(23,48,59,0.72) 0%, rgba(23,48,59,0.55) 35%, rgba(23,48,59,0.25) 55%, transparent 70%)" }} />
+             <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(23,48,59,${baseStart}) 0%, rgba(23,48,59,${baseMid}) 60%, rgba(23,48,59,${baseEnd}) 100%)`, transition: "background 0.4s ease" }} />
+              {/* Left-side text-protect overlay (desktop) — adapts to image brightness */}
+              <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true" style={{ background: `linear-gradient(90deg, rgba(23,48,59,${leftStart}) 0%, rgba(23,48,59,${leftMid}) 35%, rgba(23,48,59,${leftSoft}) 55%, transparent 70%)`, transition: "background 0.4s ease" }} />
               {/* Mobile text-protect overlay — full-width darken since text spans the column */}
-              <div className="pointer-events-none absolute inset-0 md:hidden" aria-hidden="true" style={{ background: "linear-gradient(180deg, rgba(23,48,59,0.55) 0%, rgba(23,48,59,0.40) 50%, rgba(23,48,59,0.65) 100%)" }} />
+              <div className="pointer-events-none absolute inset-0 md:hidden" aria-hidden="true" style={{ background: `linear-gradient(180deg, rgba(23,48,59,${mTop}) 0%, rgba(23,48,59,${mMid}) 50%, rgba(23,48,59,${mBot}) 100%)`, transition: "background 0.4s ease" }} />
             </>
           )}
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
