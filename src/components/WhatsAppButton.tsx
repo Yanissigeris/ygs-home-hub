@@ -51,10 +51,11 @@ const FloatingCallButton = () => {
         aria-label={ariaLabelDesktop}
         className="group fixed z-[490] hidden md:inline-flex items-center justify-center"
         style={{
-          bottom: 28,
-          right: 28,
-          width: 56,
-          height: 56,
+          bottom: "clamp(20px, 2.5vw, 32px)",
+          right: "clamp(20px, 2.5vw, 32px)",
+          width: "clamp(48px, 4.5vw, 64px)",
+          height: "clamp(48px, 4.5vw, 64px)",
+          padding: "clamp(12px, 1.2vw, 18px)",
           borderRadius: "50%",
           background: "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)",
           color: "#F7F4EE",
@@ -74,7 +75,7 @@ const FloatingCallButton = () => {
           e.currentTarget.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
         }}
       >
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D4B483" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" width="100%" height="100%" style={{ maxWidth: 24, maxHeight: 24, minWidth: 18, minHeight: 18 }} fill="none" stroke="#D4B483" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
       </a>
