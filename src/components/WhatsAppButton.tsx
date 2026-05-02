@@ -39,6 +39,13 @@ const FloatingCallButton = () => {
 
   if (hidden) return null;
 
+  const prefersReducedMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const animate = (fn: () => void) => {
+    if (!prefersReducedMotion) fn();
+  };
+
   const callLabel = lang === "en" ? "Call" : "Appeler";
   const ariaLabelDesktop = lang === "en" ? "Call 819-210-3044" : "Appeler 819-210-3044";
   const ariaLabelMobile = lang === "en" ? "Call" : "Appeler";
