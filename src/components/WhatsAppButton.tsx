@@ -39,6 +39,13 @@ const FloatingCallButton = () => {
 
   if (hidden) return null;
 
+  const prefersReducedMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const animate = (fn: () => void) => {
+    if (!prefersReducedMotion) fn();
+  };
+
   const callLabel = lang === "en" ? "Call" : "Appeler";
   const ariaLabelDesktop = lang === "en" ? "Call 819-210-3044" : "Appeler 819-210-3044";
   const ariaLabelMobile = lang === "en" ? "Call" : "Appeler";
@@ -66,40 +73,48 @@ const FloatingCallButton = () => {
           willChange: "transform, box-shadow",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
-          e.currentTarget.style.boxShadow = "0 18px 38px -10px rgba(0,0,0,0.5), 0 6px 14px -2px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 0 4px rgba(168,138,90,0.12)";
-          e.currentTarget.style.background = "linear-gradient(135deg, #2a586c 0%, #1c3a47 100%)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "translateY(-3px) scale(1.06)"; });
+          el.style.boxShadow = "0 18px 38px -10px rgba(0,0,0,0.5), 0 6px 14px -2px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 0 4px rgba(168,138,90,0.12)";
+          el.style.background = "linear-gradient(135deg, #2a586c 0%, #1c3a47 100%)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
-          e.currentTarget.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "translateY(0) scale(1)"; });
+          el.style.boxShadow = "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
+          el.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
         }}
         onMouseDown={(e) => {
-          e.currentTarget.style.transform = "translateY(-1px) scale(0.97)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "translateY(-1px) scale(0.97)"; });
         }}
         onMouseUp={(e) => {
-          e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "translateY(-3px) scale(1.06)"; });
         }}
         onTouchStart={(e) => {
-          e.currentTarget.style.transform = "scale(0.94)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "scale(0.94)"; });
         }}
         onTouchEnd={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
+          const el = e.currentTarget;
+          animate(() => { el.style.transform = "scale(1)"; });
         }}
       >
-        {/* Pulse ring */}
-        <span
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            inset: 0,
-            borderRadius: "50%",
-            border: "1px solid rgba(212,180,131,0.45)",
-            animation: "floating-call-pulse 2.4s cubic-bezier(0.22,0.61,0.36,1) infinite",
-            pointerEvents: "none",
-          }}
-        />
+        {/* Pulse ring — disabled under reduced motion */}
+        {!prefersReducedMotion && (
+          <span
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              inset: 0,
+              borderRadius: "50%",
+              border: "1px solid rgba(212,180,131,0.45)",
+              animation: "floating-call-pulse 2.4s cubic-bezier(0.22,0.61,0.36,1) infinite",
+              pointerEvents: "none",
+            }}
+          />
+        )}
         <svg
           className="floating-call-icon"
           viewBox="0 0 24 24"
