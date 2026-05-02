@@ -49,17 +49,14 @@ const FloatingCallButton = () => {
       <a
         href="tel:+18192103044"
         aria-label={ariaLabelDesktop}
-        className="group fixed z-[490] hidden md:inline-flex items-center gap-2.5"
+        className="group fixed z-[490] hidden md:inline-flex items-center justify-center"
         style={{
           bottom: 28,
           right: 28,
-          borderRadius: 999,
+          width: 56,
+          height: 56,
+          borderRadius: "50%",
           background: "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)",
-          padding: "14px 22px 14px 18px",
-          fontFamily: "var(--sans)",
-          fontSize: "13px",
-          fontWeight: 500,
-          letterSpacing: "0.01em",
           color: "#F7F4EE",
           textDecoration: "none",
           boxShadow: "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)",
@@ -77,23 +74,9 @@ const FloatingCallButton = () => {
           e.currentTarget.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
         }}
       >
-        <span
-          className="inline-flex items-center justify-center"
-          style={{
-            width: 28,
-            height: 28,
-            borderRadius: "50%",
-            background: "rgba(168, 138, 90, 0.18)",
-            border: "1px solid rgba(168, 138, 90, 0.35)",
-          }}
-        >
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#D4B483" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-        </span>
-        <span>{callLabel}</span>
-        <span style={{ opacity: 0.4 }}>·</span>
-        <span style={{ fontVariantNumeric: "tabular-nums" }}>819-210-3044</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D4B483" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
       </a>
 
       {/* Mobile — hidden (sticky bottom bar already provides Call) */}
