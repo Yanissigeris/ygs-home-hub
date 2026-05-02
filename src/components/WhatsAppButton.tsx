@@ -49,30 +49,51 @@ const FloatingCallButton = () => {
       <a
         href="tel:+18192103044"
         aria-label={ariaLabelDesktop}
-        className="fixed z-[490] hidden md:inline-flex items-center justify-center"
+        className="group fixed z-[490] hidden md:inline-flex items-center gap-2.5"
         style={{
-          bottom: 24,
-          right: 24,
+          bottom: 28,
+          right: 28,
           borderRadius: 999,
-          background: "#17303B",
-          padding: "12px 20px",
+          background: "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)",
+          padding: "14px 22px 14px 18px",
           fontFamily: "var(--sans)",
           fontSize: "13px",
           fontWeight: 500,
+          letterSpacing: "0.01em",
           color: "#F7F4EE",
           textDecoration: "none",
-          transition: "background .2s ease, transform .2s ease",
+          boxShadow: "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)",
+          border: "1px solid rgba(247,244,238,0.08)",
+          transition: "transform .25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .25s ease, background .25s ease",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.background = "#234a5a";
-          e.currentTarget.style.transform = "scale(1.02)";
+          e.currentTarget.style.transform = "translateY(-2px)";
+          e.currentTarget.style.boxShadow = "0 14px 32px -10px rgba(0,0,0,0.45), 0 4px 10px -2px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)";
+          e.currentTarget.style.background = "linear-gradient(135deg, #234a5a 0%, #1c3a47 100%)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.background = "#17303B";
-          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
+          e.currentTarget.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
         }}
       >
-        {callLabel} · 819-210-3044
+        <span
+          className="inline-flex items-center justify-center"
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: "50%",
+            background: "rgba(168, 138, 90, 0.18)",
+            border: "1px solid rgba(168, 138, 90, 0.35)",
+          }}
+        >
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#D4B483" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+        </span>
+        <span>{callLabel}</span>
+        <span style={{ opacity: 0.4 }}>·</span>
+        <span style={{ fontVariantNumeric: "tabular-nums" }}>819-210-3044</span>
       </a>
 
       {/* Mobile — hidden (sticky bottom bar already provides Call) */}
