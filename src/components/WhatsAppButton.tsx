@@ -51,10 +51,11 @@ const FloatingCallButton = () => {
         aria-label={ariaLabelDesktop}
         className="group fixed z-[490] hidden md:inline-flex items-center justify-center"
         style={{
-          bottom: 28,
-          right: 28,
-          width: 56,
-          height: 56,
+          bottom: "clamp(20px, 2.5vw, 32px)",
+          right: "clamp(20px, 2.5vw, 32px)",
+          width: "clamp(48px, 4.5vw, 64px)",
+          height: "clamp(48px, 4.5vw, 64px)",
+          padding: "clamp(12px, 1.2vw, 18px)",
           borderRadius: "50%",
           background: "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)",
           color: "#F7F4EE",
