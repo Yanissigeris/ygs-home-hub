@@ -676,7 +676,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(cities && cities.length > 0) ? (
                 <>
                 <p
-                  className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold hidden md:block"
+                  className="hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block"
                   style={{
                     color: "#A88A5A",
                     fontFamily: "var(--sans)",
@@ -693,7 +693,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     : "Real estate broker · Gatineau · Aylmer · Hull · Outaouais"}
                 </p>
                 <h1
-                  className="hero-fade-in"
+                  className="hero-h1-reveal"
                   style={{
                     fontFamily: "var(--serif)",
                     fontWeight: 400,
@@ -707,7 +707,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     animationDelay: "0.20s",
                   }}
                 >
-                  {title}
+                  {title.split(/(Outaouais)/).map((part, i) =>
+                    part === "Outaouais" ? (
+                      <em key={i} style={{ fontStyle: "italic", fontWeight: 300 }}>{part}</em>
+                    ) : (
+                      <React.Fragment key={i}>{part}</React.Fragment>
+                    )
+                  )}
                 </h1>
                 </>
               ) : (
@@ -971,9 +977,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
-            color: "rgba(255,255,255,0.75)",
+            color: "rgba(255,255,255,0.62)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
-            letterSpacing: "0.1em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             textShadow: "0 1px 6px rgba(0,0,0,0.5)",
             fontFamily: "var(--sans)",
