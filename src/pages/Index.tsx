@@ -48,12 +48,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={yanisHero}
-      agentImage={yanisHero}
-      agentImageSm={yanisHero}
-      agentImageMd={yanisHero}
-      agentImageAvif={yanisHero}
-      agentImageSmAvif={yanisHero}
-      agentImageMdAvif={yanisHero}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
