@@ -669,8 +669,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
-                <p
-                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold whitespace-nowrap"
+                <h1
+                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
                   style={{
                     color: "#A88A5A",
                     fontFamily: "var(--sans)",
@@ -678,10 +678,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     letterSpacing: ".22em",
                     opacity: 0.8,
                     textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                    margin: 0,
+                    lineHeight: 1.4,
                   }}
                 >
-                  <span>{cities.join(" · ")}</span>
-                </p>
+                  {lang === "fr"
+                    ? "Courtier immobilier · Gatineau · Aylmer · Hull · Outaouais"
+                    : "Real estate broker · Gatineau · Aylmer · Hull · Outaouais"}
+                </h1>
               ) : overline ? (
                 <p
                   className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
