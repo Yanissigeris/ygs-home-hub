@@ -543,8 +543,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{
                 filter: atTop ? "none" : "brightness(0.85) saturate(0.85)",
                 transition: "filter 0.35s ease-out",
-                transform: "scale(0.88)",
-                transformOrigin: "right bottom",
               }}
               width={1920}
               height={1080}
