@@ -217,8 +217,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     // Hide scroll hint after first scroll
     React.useEffect(() => {
       const onScroll = () => {
-        if (window.scrollY > 50) setShowScrollHint(false);
+        const y = window.scrollY;
+        if (y > 50) setShowScrollHint(false);
+        setAtTop(y < 40);
       };
+      onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
       return () => window.removeEventListener("scroll", onScroll);
     }, []);
