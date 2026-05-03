@@ -182,7 +182,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       };
     }, [heroVideo, isMobile]);
     const renderVideo = !!heroVideo && !isMobile && videoDeferReady;
-    const [showScrollHint, setShowScrollHint] = React.useState(true);
+   const [showScrollHint, setShowScrollHint] = React.useState(true);
+   const [atTop, setAtTop] = React.useState(true);
     const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
     const perfStartRef = React.useRef<number>(0);
     const lang = useLanguage();
