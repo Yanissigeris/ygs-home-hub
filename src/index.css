@@ -486,6 +486,23 @@ h1.hero-h1-reduced {
   font-size: clamp(1.75rem, 3.95vw, 3.15rem) !important;
 }
 
+/* Hero eyebrow H1 — small uppercase variant, beats global h1 mobile !important rule */
+h1.hero-eyebrow {
+  font-family: var(--sans) !important;
+  font-size: max(.6rem, .62rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .22em !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 639px) {
+  h1.hero-eyebrow {
+    font-size: 0.65rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
 /* Hero name line — responsive sizing */
 .hero-name-line { font-size: clamp(2rem, 7vw, 2.6rem); }
 @media (min-width: 768px) {
