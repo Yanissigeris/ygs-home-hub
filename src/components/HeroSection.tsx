@@ -710,20 +710,41 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {title}
                 </h1>
                 </>
-              ) : overline ? (
-                <p
-                  className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
-                  style={{
-                    color: "var(--gold)",
-                    fontFamily: "var(--sans)",
-                    fontSize: "max(.6rem, .62rem)",
-                    letterSpacing: ".22em",
-                    textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-                  }}
-                >
-                  {overline.replace(/[·•]/g, "  ·  ")}
-                </p>
-              ) : null}
+              ) : (
+                <>
+                  {overline && (
+                    <p
+                      className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
+                      style={{
+                        color: "var(--gold)",
+                        fontFamily: "var(--sans)",
+                        fontSize: "max(.6rem, .62rem)",
+                        letterSpacing: ".22em",
+                        textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                      }}
+                    >
+                      {overline.replace(/[·•]/g, "  ·  ")}
+                    </p>
+                  )}
+                  <h1
+                    className="hero-fade-in"
+                    style={{
+                      fontFamily: "var(--serif)",
+                      fontWeight: 400,
+                      fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
+                      lineHeight: 1.05,
+                      letterSpacing: "-0.015em",
+                      color: "#F7F4EE",
+                      textShadow: "0 2px 12px rgba(0,0,0,0.5)",
+                      margin: 0,
+                      textWrap: "balance",
+                      animationDelay: "0.20s",
+                    }}
+                  >
+                    {title}
+                  </h1>
+                </>
+              )}
 
               <p
                 className="hero-fade-in mt-4 sm:mt-6 block md:hidden max-w-[460px] font-light"
