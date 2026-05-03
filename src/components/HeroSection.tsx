@@ -977,9 +977,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
-            color: "rgba(255,255,255,0.75)",
+            color: "rgba(255,255,255,0.62)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
-            letterSpacing: "0.1em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             textShadow: "0 1px 6px rgba(0,0,0,0.5)",
             fontFamily: "var(--sans)",
