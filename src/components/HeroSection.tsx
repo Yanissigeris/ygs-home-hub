@@ -611,6 +611,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
@@ -624,6 +626,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{
               background:
                 "linear-gradient(90deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.62) 35%, rgba(23,48,59,0.30) 55%, transparent 70%)",
+              opacity: atTop ? 0 : 1,
+              transition: "opacity 0.35s ease-out",
             }}
           />
         )}
@@ -635,6 +639,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
@@ -645,6 +651,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(95deg, rgba(23,48,59,0.95) 0%, rgba(23,48,59,0.88) 30%, rgba(23,48,59,0.55) 48%, rgba(23,48,59,0.18) 65%, transparent 80%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
