@@ -1,69 +1,60 @@
-# Fix mobile hero H1 size regression
+# Make EN hero/portrait identical to FR
 
 ## Problem
 
-The global mobile rule in `src/index.css` (inside `@media (max-width: 639px)`) sets:
+The EN homepage hero (`/en`) currently differs from the FR homepage (`/`) in two structural ways:
 
-```css
-h1 { font-size: clamp(2.4rem, 9.5vw, 3.2rem) !important; line-height: 1.1; }
-```
+1. **Background**: EN uses a video (`heroVideo="/hero-interior-720.mp4"` + poster) while FR uses a static image (`heroBgImage={yanisHero}` → `hero-yanis-interior.webp`).
+2. **Portrait**: EN uses a different portrait asset (`yanis-portrait-nobg.*` with full Sm/Md/AVIF responsive variant set) while FR uses a single `yanis-hero-portrait.webp` with no responsive variants.
 
-Because of `!important`, it overrides the inline `fontSize: "max(.6rem, .62rem)"` on the new SEO eyebrow `<h1>` in `HeroSection.tsx`, blowing the gold cities line up to ~38px on iPhone. Desktop is unaffected (no `!important` in the desktop rule, so inline style wins).
-
-Fix: add a dedicated class `hero-eyebrow` whose selector specificity (`h1.hero-eyebrow` = 0,1,1) beats the global `h1` (0,0,1) even with `!important`, matching the existing convention used by `h1.hero-h1-fix` and `h1.hero-h1-reduced`.
+The user wants EN to look exactly like FR.
 
 ## Scope
 
-Two files only. No other files touched.
+One file only: `src/pages/en/IndexEn.tsx`. No changes to `HeroSection.tsx`, `Index.tsx`, FR copy, or any other file.
 
-- `src/index.css`
-- `src/components/HeroSection.tsx`
+## Change — `src/pages/en/IndexEn.tsx`
 
-## Change 1 — `src/index.css` (insert after line 487)
+### Imports
 
-Insert a new block immediately after the existing `h1.hero-h1-reduced { ... }` rule and before `/* Hero name line — responsive sizing */` (line 489):
+Replace the current portrait import block (6 imports of `yanis-portrait-nobg.*`) with the two assets used by FR:
 
-```css
-/* Hero eyebrow H1 — small uppercase variant, beats global h1 mobile !important rule */
-h1.hero-eyebrow {
-  font-family: var(--sans) !important;
-  font-size: max(.6rem, .62rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: .22em !important;
-  line-height: 1.4 !important;
-  margin: 0 !important;
-}
-
-@media (max-width: 639px) {
-  h1.hero-eyebrow {
-    font-size: 0.65rem !important;
-    line-height: 1.4 !important;
-  }
-}
+```tsx
+import yanisHero from "@/assets/hero-yanis-interior.webp";
+import yanisPortrait from "@/assets/yanis-hero-portrait.webp";
 ```
 
-## Change 2 — `src/components/HeroSection.tsx` line 673
+### `<HeroSection>` props
 
-Add the `hero-eyebrow` class to the rich-variant `<h1>` (only that one):
+Replace the current EN props:
 
-```diff
-- className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
-+ className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
+```tsx
+heroVideo="/hero-interior-720.mp4"
+heroVideoPoster="/hero-living-room.webp"
+agentImage={yanisPortrait}
+agentImageSm={yanisPortraitSm}
+agentImageMd={yanisPortraitMd}
+agentImageAvif={yanisPortraitAvif}
+agentImageSmAvif={yanisPortraitSmAvif}
+agentImageMdAvif={yanisPortraitMdAvif}
 ```
 
-Inline styles (color `#A88A5A`, opacity, textShadow, fontSize, letterSpacing, lineHeight, margin) remain untouched — the new class duplicates the typographic ones with `!important` so the mobile global rule loses, while desktop visual is identical to the previous deploy.
+with the exact FR set:
+
+```tsx
+heroBgImage={yanisHero}
+agentImage={yanisPortrait}
+```
+
+All other `<HeroSection>` props on EN (cities, EN title, EN subtitle, EN CTAs, socialProof, agentName, hideRecognitionCard) stay untouched — only background source and portrait source change.
 
 ## Preservations
 
-- Compact variant `<h1>{title}</h1>` on internal pages is NOT modified (no `hero-eyebrow` class) — global serif h1 styling stays.
-- `hero-h1-fix`, `hero-h1-reduced`, `hero-h1-line`, `hero-name-line` classes untouched.
-- All inline styles on the rich `<h1>` preserved (gold color, shadow, etc.).
-- No edits to `Index.tsx`, `IndexEn.tsx`, `index.html`, `PageMeta.tsx`, routes, schemas, meta.
+- All EN copy (title, subtitle, subtitleShort, CTA labels/hrefs).
+- All sections after the hero (`ValuationWidget`, `PathwaySection`, FAQ, etc.).
+- FR homepage and `HeroSection.tsx` are not modified.
+- The shared `HeroSection` already handles the `heroBgImage` + single `agentImage` combo identically for both languages, so visual parity follows automatically.
 
 ## Expected result
 
-- Mobile (<640px), FR + EN: gold uppercase eyebrow ~10–11px, 1–2 lines max.
-- Tablet 640–767px: small eyebrow style (~10px from base rule).
-- Desktop ≥768px: visually unchanged vs previous deploy.
-- Compact-variant pages (e.g. `/aylmer`, `/contact-yanis`): big serif h1 untouched.
-- DevTools computed `font-size` on mobile h1 ≈ 10.4px.
+Loading `/en` on any breakpoint shows the same hero background photo and the same right-side portrait as `/`, with English copy overlaid.
