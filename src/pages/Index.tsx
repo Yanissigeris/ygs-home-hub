@@ -1,12 +1,7 @@
 import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
-import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
-import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
-import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
-import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
-import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
-import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
+import yanisHero from "@/assets/hero-yanis-interior.webp";
 import HeroSection from "@/components/HeroSection";
 
 
@@ -52,14 +47,13 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
       secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-living-room.webp"
-      agentImage={yanisPortrait}
-      agentImageSm={yanisPortraitSm}
-      agentImageMd={yanisPortraitMd}
-      agentImageAvif={yanisPortraitAvif}
-      agentImageSmAvif={yanisPortraitSmAvif}
-      agentImageMdAvif={yanisPortraitMdAvif}
+      heroBgImage={yanisHero}
+      agentImage={yanisHero}
+      agentImageSm={yanisHero}
+      agentImageMd={yanisHero}
+      agentImageAvif={yanisHero}
+      agentImageSmAvif={yanisHero}
+      agentImageMdAvif={yanisHero}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
