@@ -2,6 +2,7 @@ import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import yanisHero from "@/assets/hero-yanis-interior.webp";
+import yanisPortrait from "@/assets/yanis-hero-portrait.webp";
 import HeroSection from "@/components/HeroSection";
 
 
