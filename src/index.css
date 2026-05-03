@@ -512,22 +512,9 @@ h1.hero-h1-reduced {
   }
 }
 
-/* Hero combined background image — keep Yanis (right side of image) framed
-   correctly across breakpoints. Image is 16:9 with subject in right half.
-   - Mobile: pull viewport toward subject (75%) so the face stays visible
-   - Tablet: ease back to 65%
-   - Desktop: center (default object-position) */
+/* Hero background image — clean interior, no subject to track. */
 .hero-bg-image {
-  object-position: 75% center;
-}
-@media (min-width: 640px) {
-  .hero-bg-image { object-position: 70% center; }
-}
-@media (min-width: 1024px) {
-  .hero-bg-image { object-position: 60% center; }
-}
-@media (min-width: 1280px) {
-  .hero-bg-image { object-position: center center; }
+  object-position: center center;
 }
 
 /* WhatsApp pulse */
