@@ -701,53 +701,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </p>
               ) : null}
 
-              <h1
-                className="hero-fade-in"
-                style={{
-                  animationDelay: "0.1s",
-                  color: "#FFFFFF",
-                  letterSpacing: "-0.01em",
-                  fontFamily: "var(--serif)",
-                  textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-                  lineHeight: 1.0,
-                }}
-              >
-                {(() => {
-                  const lines = lang === "fr"
-                    ? ["Les chiffres.", "Les options.", "Vous décidez."]
-                    : ["The numbers.", "The options.", "You decide."];
-                  const baseStyle: React.CSSProperties = {
-                    fontFamily: "var(--serif)",
-                    fontSize: "clamp(2.4rem, 5.5vw, 5rem)",
-                    lineHeight: 1.0,
-                    letterSpacing: "-0.01em",
-                    textShadow: "0 2px 12px rgba(0,0,0,0.5)",
-                  };
-                  return (
-                    <>
-                      <span
-                        className="hero-fade-in block hero-h1-line"
-                        style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.10s" }}
-                      >
-                        {lines[0]}
-                      </span>
-                      <span
-                        className="hero-fade-in block hero-h1-line"
-                        style={{ ...baseStyle, fontStyle: "normal", fontWeight: 500, color: "#FFFFFF", animationDelay: "0.18s" }}
-                      >
-                        {lines[1]}
-                      </span>
-                      <span
-                        className="hero-fade-in block hero-h1-line"
-                        style={{ ...baseStyle, fontStyle: "italic", fontWeight: 400, color: "#A88A5A", animationDelay: "0.26s" }}
-                      >
-                        {lines[2]}
-                      </span>
-                    </>
-                  );
-                })()}
-              </h1>
-
               <p
                 className="hero-fade-in mt-4 sm:mt-6 block md:hidden max-w-[460px] font-light"
                 style={{
