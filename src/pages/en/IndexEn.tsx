@@ -7,12 +7,8 @@ import HeroSection from "@/components/HeroSection";
 import AwardsMarquee from "@/components/AwardsMarquee";
 import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
-import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
-import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
-import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
-import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
-import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
-import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
+import yanisHero from "@/assets/hero-yanis-interior.webp";
+import yanisPortrait from "@/assets/yanis-hero-portrait.webp";
 
 import PathwaySection from "@/components/PathwaySection";
 import FeaturedProperties from "@/components/FeaturedProperties";
@@ -53,14 +49,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Consultation", href: "/en/contact" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-living-room.webp"
+      heroBgImage={yanisHero}
       agentImage={yanisPortrait}
-      agentImageSm={yanisPortraitSm}
-      agentImageMd={yanisPortraitMd}
-      agentImageAvif={yanisPortraitAvif}
-      agentImageSmAvif={yanisPortraitSmAvif}
-      agentImageMdAvif={yanisPortraitMdAvif}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
