@@ -182,7 +182,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       };
     }, [heroVideo, isMobile]);
     const renderVideo = !!heroVideo && !isMobile && videoDeferReady;
-    const [showScrollHint, setShowScrollHint] = React.useState(true);
+   const [showScrollHint, setShowScrollHint] = React.useState(true);
+   const [atTop, setAtTop] = React.useState(true);
     const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
     const perfStartRef = React.useRef<number>(0);
     const lang = useLanguage();
@@ -216,8 +217,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     // Hide scroll hint after first scroll
     React.useEffect(() => {
       const onScroll = () => {
-        if (window.scrollY > 50) setShowScrollHint(false);
+        const y = window.scrollY;
+        if (y > 50) setShowScrollHint(false);
+        setAtTop(y < 40);
       };
+      onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
       return () => window.removeEventListener("scroll", onScroll);
     }, []);
@@ -536,7 +540,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt=""
               role="presentation"
               className="hero-bg-image h-full w-full object-cover"
-              style={{ filter: "brightness(0.85) saturate(0.85)" }}
+              style={{ filter: atTop ? "none" : "brightness(0.85) saturate(0.85)", transition: "filter 0.35s ease-out" }}
               width={1920}
               height={1080}
               sizes="100vw"
@@ -607,6 +611,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
@@ -620,6 +626,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{
               background:
                 "linear-gradient(90deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.62) 35%, rgba(23,48,59,0.30) 55%, transparent 70%)",
+              opacity: atTop ? 0 : 1,
+              transition: "opacity 0.35s ease-out",
             }}
           />
         )}
@@ -631,6 +639,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
@@ -641,6 +651,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{
             background:
               "linear-gradient(95deg, rgba(23,48,59,0.95) 0%, rgba(23,48,59,0.88) 30%, rgba(23,48,59,0.55) 48%, rgba(23,48,59,0.18) 65%, transparent 80%)",
+            opacity: atTop ? 0 : 1,
+            transition: "opacity 0.35s ease-out",
           }}
         />
 
