@@ -21,6 +21,11 @@ const IconTrophy = (props: React.SVGProps<SVGSVGElement>) => (
     <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
   </svg>
 );
+const IconHome = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+  </svg>
+);
 const Calendar = IconCalendar;
 const Star = IconStar;
 const Trophy = IconTrophy;
@@ -669,8 +674,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
-                <h1
-                  className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
+                <>
+                <p
+                  className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold hidden md:block"
                   style={{
                     color: "#A88A5A",
                     fontFamily: "var(--sans)",
@@ -685,7 +691,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {lang === "fr"
                     ? "Courtier immobilier · Gatineau · Aylmer · Hull · Outaouais"
                     : "Real estate broker · Gatineau · Aylmer · Hull · Outaouais"}
+                </p>
+                <h1
+                  className="hero-fade-in"
+                  style={{
+                    fontFamily: "var(--serif)",
+                    fontWeight: 400,
+                    fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
+                    lineHeight: 1.05,
+                    letterSpacing: "-0.015em",
+                    color: "#F7F4EE",
+                    textShadow: "0 2px 12px rgba(0,0,0,0.5)",
+                    margin: 0,
+                    textWrap: "balance",
+                    animationDelay: "0.20s",
+                  }}
+                >
+                  {title}
                 </h1>
+                </>
               ) : overline ? (
                 <p
                   className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
@@ -728,22 +752,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
               >
                 {subtitle}
-              </p>
-
-              <p
-                className="hero-fade-in mt-3 hidden font-light md:block"
-                style={{
-                  animationDelay: "0.38s",
-                  color: "rgba(255,255,255,0.85)",
-                  fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
-                  lineHeight: 1.6,
-                  maxWidth: "480px",
-                  textShadow: "0 1px 6px rgba(0,0,0,0.4)",
-                }}
-              >
-                {lang === "fr"
-                  ? "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. Près de 9 ans d'expérience, Hall of Fame RE/MAX et plus de 300 transactions complétées en Outaouais."
-                  : "Yanis Gauthier-Sigeris, RE/MAX real estate broker in Gatineau. Nearly 9 years of experience, RE/MAX Hall of Fame, and over 300 completed transactions in Outaouais."}
               </p>
 
               {(primaryCta || secondaryCta) && (
@@ -806,8 +814,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </span>
                 <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
                 <span>{lang === "fr" ? "Hall of Fame RE/MAX" : "RE/MAX Hall of Fame"}</span>
-                <span aria-hidden="true">·</span>
-                <span>5★ Google</span>
               </div>
             </div>
           </div>
@@ -953,7 +959,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         >
           <div
-            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none md:whitespace-nowrap md:[word-break:normal]"
+            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none lg:whitespace-nowrap lg:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
@@ -972,12 +978,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>~9 years of experience</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>300+ transactions</span>
+                  </span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>5★ Google & Facebook</span>
                   </a>
-                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>RE/MAX Hall of Fame</span>
@@ -989,12 +1000,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>~9 ans d'expérience</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="pointer-events-auto inline-flex items-center">
+                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <span>300+ transactions</span>
+                  </span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>5★ Google & Facebook</span>
                   </a>
-                  <span className="mx-2 opacity-50" aria-hidden="true">|</span>
+                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>Hall of Fame RE/MAX</span>
