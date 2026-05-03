@@ -693,7 +693,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     : "Real estate broker · Gatineau · Aylmer · Hull · Outaouais"}
                 </p>
                 <h1
-                  className="hero-fade-in"
+                  className="hero-h1-reveal"
                   style={{
                     fontFamily: "var(--serif)",
                     fontWeight: 400,
@@ -707,7 +707,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     animationDelay: "0.20s",
                   }}
                 >
-                  {title}
+                  {title.split(/(Outaouais)/).map((part, i) =>
+                    part === "Outaouais" ? (
+                      <em key={i} style={{ fontStyle: "italic", fontWeight: 300 }}>{part}</em>
+                    ) : (
+                      <React.Fragment key={i}>{part}</React.Fragment>
+                    )
+                  )}
                 </h1>
                 </>
               ) : (
