@@ -1,53 +1,69 @@
-# SEO surgery on Hero (rich variant only)
+# Fix mobile hero H1 size regression
 
-Single-file edit: `src/components/HeroSection.tsx`. No other files touched.
+## Problem
 
-## Goal
+The global mobile rule in `src/index.css` (inside `@media (max-width: 639px)`) sets:
 
-- Make the homepage have exactly **one `<h1>`**, containing SEO-optimized copy.
-- That `<h1>` is the existing gold "cities" eyebrow, rewritten as `Courtier immobilier · Gatineau · Aylmer · Hull · Outaouais` (FR) / `Real estate broker · Gatineau · Aylmer · Hull · Outaouais` (EN).
-- Remove the decorative slogan "Les chiffres. / Les options. / Vous décidez." (and its English equivalent) from the DOM entirely.
+```css
+h1 { font-size: clamp(2.4rem, 9.5vw, 3.2rem) !important; line-height: 1.1; }
+```
+
+Because of `!important`, it overrides the inline `fontSize: "max(.6rem, .62rem)"` on the new SEO eyebrow `<h1>` in `HeroSection.tsx`, blowing the gold cities line up to ~38px on iPhone. Desktop is unaffected (no `!important` in the desktop rule, so inline style wins).
+
+Fix: add a dedicated class `hero-eyebrow` whose selector specificity (`h1.hero-eyebrow` = 0,1,1) beats the global `h1` (0,0,1) even with `!important`, matching the existing convention used by `h1.hero-h1-fix` and `h1.hero-h1-reduced`.
 
 ## Scope
 
-Only the **rich** variant block at lines ~671–745 of `HeroSection.tsx`. The **compact** variant (lines 471–525) and its `<h1>{title}</h1>` stay untouched. All props, JSON-LD (VideoObject), animations, conditional logic, subtitles, and CTAs remain as-is.
+Two files only. No other files touched.
 
-## Changes
+- `src/index.css`
+- `src/components/HeroSection.tsx`
 
-### Change 1 — lines 671–685 (cities eyebrow → h1)
+## Change 1 — `src/index.css` (insert after line 487)
 
-Replace the `<p>` (with inner `<span>{cities.join(" · ")}</span>`) by an `<h1>` with hardcoded bilingual SEO copy driven by the existing `lang` variable (declared line 189 via `useLanguage()`).
+Insert a new block immediately after the existing `h1.hero-h1-reduced { ... }` rule and before `/* Hero name line — responsive sizing */` (line 489):
 
-- Tag: `<p>` → `<h1>`
-- Drop `whitespace-nowrap` so it can wrap on very narrow viewports
-- Drop the inner `<span>` wrapper
-- Replace `{cities.join(" · ")}` with:
-  - FR: `"Courtier immobilier · Gatineau · Aylmer · Hull · Outaouais"`
-  - EN: `"Real estate broker · Gatineau · Aylmer · Hull · Outaouais"`
-- Add `margin: 0` and `lineHeight: 1.4` for safe wrapping
+```css
+/* Hero eyebrow H1 — small uppercase variant, beats global h1 mobile !important rule */
+h1.hero-eyebrow {
+  font-family: var(--sans) !important;
+  font-size: max(.6rem, .62rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .22em !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
 
-The `: overline ? (...)` fallback branch is preserved unchanged.
+@media (max-width: 639px) {
+  h1.hero-eyebrow {
+    font-size: 0.65rem !important;
+    line-height: 1.4 !important;
+  }
+}
+```
 
-### Change 2 — lines 700–745 (delete slogan h1)
+## Change 2 — `src/components/HeroSection.tsx` line 673
 
-Delete the entire `<h1 className="hero-fade-in" ...>` block that renders the three italic/regular gold/white spans. Also remove the blank line immediately following so the subsequent `<p>` subtitle (mobile-only `mt-4 sm:mt-6 block md:hidden ...`) sits cleanly after the new `<h1>` from Change 1.
+Add the `hero-eyebrow` class to the rich-variant `<h1>` (only that one):
 
-## Preservations (explicitly untouched)
+```diff
+- className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
++ className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
+```
 
-- Compact variant `<h1>{title}</h1>` (lines 471–525)
-- All `<p>` subtitle/description blocks after the deleted slogan
-- `hero-fade-in` animation class
-- Outer conditional `{(cities && cities.length > 0) ? ... : overline ? ... : null}`
-- VideoObject JSON-LD (lines ~380–400) — still uses `title` / `subtitle` props
-- All other components, schemas, meta, canonical, sitemap, hreflang
-- Props `title`, `subtitle`, `subtitleShort`, `cities` remain in signature (used elsewhere and by compact variant)
-- No edits to `src/pages/Index.tsx`, `src/pages/en/IndexEn.tsx`, `index.html`, `PageMeta.tsx`, routing, or URLs
+Inline styles (color `#A88A5A`, opacity, textShadow, fontSize, letterSpacing, lineHeight, margin) remain untouched — the new class duplicates the typographic ones with `!important` so the mobile global rule loses, while desktop visual is identical to the previous deploy.
 
-## Expected results
+## Preservations
 
-- Homepage `/` and `/en` each render exactly **one** `<h1>` in the DOM.
-- FR `<h1>` text: `COURTIER IMMOBILIER · GATINEAU · AYLMER · HULL · OUTAOUAIS` (uppercase via CSS), gold `#A88A5A`, top of hero.
-- EN `<h1>` text: `REAL ESTATE BROKER · GATINEAU · AYLMER · HULL · OUTAOUAIS`.
-- Slogan strings absent from the rendered hero in both languages.
-- Visual hierarchy intact: small gold eyebrow (now h1) → white subtitle (mobile) → description → CTAs. Desktop loses the large serif slogan; subtitle/description/CTAs remain in place.
-- Build passes; no TS or React warnings introduced.
+- Compact variant `<h1>{title}</h1>` on internal pages is NOT modified (no `hero-eyebrow` class) — global serif h1 styling stays.
+- `hero-h1-fix`, `hero-h1-reduced`, `hero-h1-line`, `hero-name-line` classes untouched.
+- All inline styles on the rich `<h1>` preserved (gold color, shadow, etc.).
+- No edits to `Index.tsx`, `IndexEn.tsx`, `index.html`, `PageMeta.tsx`, routes, schemas, meta.
+
+## Expected result
+
+- Mobile (<640px), FR + EN: gold uppercase eyebrow ~10–11px, 1–2 lines max.
+- Tablet 640–767px: small eyebrow style (~10px from base rule).
+- Desktop ≥768px: visually unchanged vs previous deploy.
+- Compact-variant pages (e.g. `/aylmer`, `/contact-yanis`): big serif h1 untouched.
+- DevTools computed `font-size` on mobile h1 ≈ 10.4px.
