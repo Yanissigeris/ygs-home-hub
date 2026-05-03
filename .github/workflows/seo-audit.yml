@@ -68,3 +68,26 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: ./.lighthouserc.json
+
+  # ──────────────────────────────────────────────────────────────
+  # Job 3 — Mobile Lighthouse audit on both homepages (FR + EN)
+  # Enforces strict SEO score + key SEO audits at mobile viewport.
+  # Fails the build if title, description, canonical, hreflang,
+  # viewport, lang, or image-alt regress on either homepage.
+  # ──────────────────────────────────────────────────────────────
+  lighthouse-mobile-homepages:
+    name: Lighthouse mobile (FR + EN homepages)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI (mobile preset)
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://yanisgauthier.com/
+            https://yanisgauthier.com/en
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: ./.lighthouserc.mobile.json
