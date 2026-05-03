@@ -49,14 +49,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Consultation", href: "/en/contact" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-living-room.webp"
+      heroBgImage={yanisHero}
       agentImage={yanisPortrait}
-      agentImageSm={yanisPortraitSm}
-      agentImageMd={yanisPortraitMd}
-      agentImageAvif={yanisPortraitAvif}
-      agentImageSmAvif={yanisPortraitSmAvif}
-      agentImageMdAvif={yanisPortraitMdAvif}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
     />
