@@ -540,7 +540,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               alt=""
               role="presentation"
               className="hero-bg-image h-full w-full object-cover"
-              style={{ filter: atTop ? "none" : "brightness(0.85) saturate(0.85)", transition: "filter 0.35s ease-out" }}
+              style={{
+                filter: atTop ? "none" : "brightness(0.85) saturate(0.85)",
+                transition: "filter 0.35s ease-out",
+                transform: "scale(0.88)",
+                transformOrigin: "right bottom",
+              }}
               width={1920}
               height={1080}
               sizes="100vw"
