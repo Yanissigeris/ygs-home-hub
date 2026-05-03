@@ -43,9 +43,9 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
     <HeroSection
       cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
-      title="Your real estate broker in Gatineau — Outaouais"
-      subtitle="Real estate broker in the Outaouais and Gatineau region. Clear strategy to sell, buy or invest."
-      subtitleShort="Real estate broker in the Outaouais region. Clear strategy to sell, buy or invest."
+      title="Your real estate broker in Outaouais"
+      subtitle="Clear strategy to sell, buy, or invest."
+      subtitleShort="Clear strategy to sell, buy, or invest."
       primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
       secondaryCta={{ label: "Consultation", href: "/en/contact" }}
       socialProof="Hall of Fame RE/MAX"
