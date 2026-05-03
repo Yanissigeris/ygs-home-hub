@@ -676,7 +676,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(cities && cities.length > 0) ? (
                 <>
                 <p
-                  className="hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold hidden md:block"
+                  className="hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block"
                   style={{
                     color: "#A88A5A",
                     fontFamily: "var(--sans)",
