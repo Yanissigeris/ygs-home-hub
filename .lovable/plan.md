@@ -1,57 +1,78 @@
-# Premium Hero Refinement (FR + EN, Desktop + Mobile)
+# Hero Refinement: Editorial Italic + Dramatic Reveal + Softer Trust Strip
 
-Seven coordinated edits across exactly **3 files**. No CSS, schema, SEO meta, OG, hreflang, canonical, routing, sitemap, robots, or any other component touched. Compact-hero variant and the unreachable mobile-shortened credibility block (lines 1006–1012) will not be modified.
+Three coordinated refinements to elevate the home page hero. Touches exactly **2 files**.
 
-All "hide on mobile" behavior uses **Tailwind utility classes only** (`hidden`, `md:block`). Elements remain in the rendered DOM at every viewport — crawlers see all content.
-
----
-
-## File 1 — `src/pages/Index.tsx` (FR home)
-
-In `<HeroSection>` (lines ~45–47), change 3 props only:
-
-- `title`: `"Votre courtier immobilier à Gatineau — Outaouais"` → `"Votre courtier immobilier en Outaouais"`
-- `subtitle`: → `"Stratégie claire pour vendre, acheter ou investir."`
-- `subtitleShort`: → `"Stratégie claire pour vendre, acheter ou investir."`
-
-All other props unchanged.
-
-## File 2 — `src/pages/en/IndexEn.tsx` (EN home)
-
-In `<HeroSection>` (lines ~46–48), change 3 props only:
-
-- `title`: `"Your real estate broker in Gatineau — Outaouais"` → `"Your real estate broker in Outaouais"`
-- `subtitle`: → `"Clear strategy to sell, buy, or invest."`
-- `subtitleShort`: → `"Clear strategy to sell, buy, or invest."`
-
-All other props unchanged.
-
-## File 3 — `src/components/HeroSection.tsx` (7 edits, main render path only)
-
-- **3A — Add `IconHome` SVG** (after line 23, before `const Calendar = IconCalendar;`): inline SVG component matching the existing IconCalendar/IconStar/IconTrophy pattern.
-- **3B — Demote eyebrow `<h1>` → `<p>`** (lines 672–688): change opening/closing tag, all inline styles preserved.
-- **3F — Hide eyebrow on mobile** (combined with 3B): add `hidden md:block` to the eyebrow className. Final className: `"hero-eyebrow hero-fade-in mb-3 sm:mb-6 uppercase font-semibold hidden md:block"`. Element stays in DOM at all viewports.
-- **3C — Insert new display `<h1>` + delete redundant credentials `<p>`**:
-  - Insert new Cormorant Garamond `<h1>` (rendering `{title}`) immediately after the eyebrow `</p>` and before `) : overline ? (`. No responsive hide class — visible at all viewports.
-  - Delete the entire redundant `<p>` block at lines 733–747 (the one containing "Yanis Gauthier-Sigeris … 9 ans … 300 transactions").
-- **3D — Rebuild desktop trust strip as 4 items with middots** (lines 967–1004): replace FR/EN ternary with new 4-item structure (Calendar / Home / Star / Trophy), `·` separators (`mx-2 opacity-50`), Star item wrapped in `<a href="#avis">` for reviews link. Adds "300+ transactions" with new IconHome.
-- **3E — Allow desktop trust strip wrap at md** (line 956): on the inner wrapper div, change `md:whitespace-nowrap` → `lg:whitespace-nowrap` and `md:[word-break:normal]` → `lg:[word-break:normal]`. No other classes change.
-- **3G — Tighten mobile trust strip to 2 items** (lines 803–811): delete the trailing separator `<span aria-hidden="true">·</span>` and `<span>5★ Google</span>`. Keep "9 ans / 9 years" + middot + "Hall of Fame RE/MAX". Parent div and styles unchanged.
+## Files modified
+1. `src/index.css` — add 1 new keyframe + utility class (sibling to existing `hero-fade-in`)
+2. `src/components/HeroSection.tsx` — 3 surgical edits
 
 ---
 
-## SEO / GEO / AI search preservation
+## File 1: `src/index.css`
 
-Every key phrase remains crawlable on the page:
+Insert immediately after the existing `hero-fade-in` reduced-motion block (line 598). The existing `hero-fade-in` keyframe and class are NOT modified.
 
-- **Gatineau / Aylmer / Hull**: hidden eyebrow (still in DOM), JSON-LD address + areaServed, mobile bottom contact, other components
-- **Outaouais**: new visible H1 (mobile + desktop), eyebrow, JSON-LD
-- **9 ans / 9 years**: desktop + mobile trust strips, JSON-LD
-- **Hall of Fame RE/MAX**: desktop + mobile trust strips, JSON-LD award
-- **300+ transactions**: NEW desktop trust strip, ValuationForm, blog bios
-- **5★ Google & Facebook**: kept in desktop trust strip
-- **Yanis Gauthier-Sigeris / courtier immobilier RE/MAX**: JSON-LD, OG, AboutSection, footer, hidden eyebrow
+```css
+/* Hero H1 dramatic reveal — slower + larger translate for editorial moment */
+@keyframes hero-h1-reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-h1-reveal {
+  opacity: 0;
+  animation: hero-h1-reveal 0.85s cubic-bezier(.22,.61,.36,1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-h1-reveal { animation: none; opacity: 1; transform: none; }
+}
+```
 
-## Out of scope (not touched)
+---
 
-Compact-hero variant (472–522), subtitle `<p>` blocks (704–731), CTA block (749–793), mobile-shortened credibility (1006–1012), mobile portrait `<picture>`, gradients, NAP `<address>`, mobile bottom contact, video code, `src/index.css`, `index.html` JSON-LD, Schema.org, SEO/OG/hreflang/canonical, routing, sitemap, robots.txt.
+## File 2: `src/components/HeroSection.tsx`
+
+### Edit 2A — H1 className swap + italic `<em>` on "Outaouais"
+
+On the new display H1 (~line 695):
+- Change `className="hero-fade-in"` → `className="hero-h1-reveal"`
+- Replace child `{title}` with regex-capture split that wraps every "Outaouais" occurrence in `<em>` with **both** `fontStyle: "italic"` and `fontWeight: 300` (lighter Cormorant Garamond italic 300 variant, already loaded):
+
+```tsx
+{title.split(/(Outaouais)/).map((part, i) =>
+  part === "Outaouais" ? (
+    <em key={i} style={{ fontStyle: "italic", fontWeight: 300 }}>{part}</em>
+  ) : (
+    <React.Fragment key={i}>{part}</React.Fragment>
+  )
+)}
+```
+
+Capture group preserves "Outaouais" in the array. Handles 0/1/many occurrences. Works identically in FR + EN (same spelling).
+
+### Edit 2B — Desktop trust strip de-emphasis (~line 974, 976)
+
+Two inline style values only:
+- `color: "rgba(255,255,255,0.75)"` → `color: "rgba(255,255,255,0.62)"`
+- `letterSpacing: "0.1em"` → `letterSpacing: "0.14em"`
+
+`fontSize` and all other styles unchanged.
+
+### Edit 2C — Eyebrow margin breathing room (~line 679)
+
+Change className `mb-3 sm:mb-6` → `mb-5 sm:mb-8`. All other classes preserved in same order:
+`hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block`
+
+---
+
+## Out of scope (will NOT touch)
+- Existing `hero-fade-in` keyframe/class
+- Compact-hero variant
+- `src/pages/Index.tsx`, `src/pages/en/IndexEn.tsx`
+- SEO meta, JSON-LD, schema, OG, hreflang, canonical, sitemap, robots
+- Subtitles, CTAs, mobile trust strip, NAP, gradients, video, mobile portrait, mobile bottom contact
+
+## SEO/GEO/AI search
+Zero impact. `<em>` is semantic; "Outaouais" text content preserved identically. No keywords moved or lost.
+
+## Reduced motion
+New `hero-h1-reveal` includes `prefers-reduced-motion: reduce` guard mirroring existing pattern — H1 appears immediately at full opacity with no transform.
