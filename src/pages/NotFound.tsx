@@ -3,23 +3,58 @@ import { Helmet } from "react-helmet-async";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
+type IconProps = { width?: number; height?: number; style?: React.CSSProperties };
+
+const IconHome = ({ width = 22, height = 22, style }: IconProps) => (
+  <svg width={width} height={height} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={style} aria-hidden="true">
+    <path d="M3 10.5 12 3l9 7.5" />
+    <path d="M5 9.5V21h14V9.5" />
+    <path d="M10 21v-6h4v6" />
+  </svg>
+);
+
+const IconKey = ({ width = 22, height = 22, style }: IconProps) => (
+  <svg width={width} height={height} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={style} aria-hidden="true">
+    <circle cx="8" cy="15" r="4" />
+    <path d="m10.85 12.15 9.15-9.15" />
+    <path d="m18 5 2 2" />
+    <path d="m15 8 2 2" />
+  </svg>
+);
+
+const IconChart = ({ width = 22, height = 22, style }: IconProps) => (
+  <svg width={width} height={height} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={style} aria-hidden="true">
+    <path d="M3 3v18h18" />
+    <rect x="7" y="12" width="3" height="6" />
+    <rect x="12" y="8" width="3" height="10" />
+    <rect x="17" y="5" width="3" height="13" />
+  </svg>
+);
+
+const IconPhone = ({ width = 22, height = 22, style }: IconProps) => (
+  <svg width={width} height={height} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={style} aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z" />
+  </svg>
+);
+
 const NotFound = () => {
   const { pathname } = useLocation();
   const isEn = pathname.startsWith("/en");
 
   const links = isEn
     ? [
-        { icon: "🏠", title: "Sell", desc: "Free valuation", to: "/en/sell" },
-        { icon: "🔑", title: "Buy", desc: "Find my home", to: "/en/buy" },
-        { icon: "📊", title: "Invest", desc: "Plex & returns", to: "/en/plex" },
-        { icon: "📞", title: "Contact me", desc: "819-210-3044", to: "/en/contact" },
+        { icon: IconHome, title: "Sell", desc: "Free valuation", to: "/en/sell" },
+        { icon: IconKey, title: "Buy", desc: "Find my home", to: "/en/buy" },
+        { icon: IconChart, title: "Invest", desc: "Plex & returns", to: "/en/plex" },
+        { icon: IconPhone, title: "Contact me", desc: "819-210-3044", to: "/en/contact" },
       ]
     : [
-        { icon: "🏠", title: "Vendre", desc: "Évaluation gratuite", to: "/vendre-ma-maison-gatineau" },
-        { icon: "🔑", title: "Acheter", desc: "Trouver ma maison", to: "/acheter-a-gatineau" },
-        { icon: "📊", title: "Investir", desc: "Plex & rendement", to: "/investir-plex-gatineau" },
-        { icon: "📞", title: "Me contacter", desc: "819-210-3044", to: "/contact-yanis" },
+        { icon: IconHome, title: "Vendre", desc: "Évaluation gratuite", to: "/vendre-ma-maison-gatineau" },
+        { icon: IconKey, title: "Acheter", desc: "Trouver ma maison", to: "/acheter-a-gatineau" },
+        { icon: IconChart, title: "Investir", desc: "Plex & rendement", to: "/investir-plex-gatineau" },
+        { icon: IconPhone, title: "Me contacter", desc: "819-210-3044", to: "/contact-yanis" },
       ];
+
 
   return (
     <div className="flex min-h-screen flex-col font-body">
@@ -104,7 +139,7 @@ const NotFound = () => {
                   (e.currentTarget as HTMLElement).style.boxShadow = "none";
                 }}
               >
-                <span className="text-[1.2rem]">{l.icon}</span>
+                <l.icon width={22} height={22} style={{ color: "var(--gold)" }} />
                 <div className="mt-1 text-[.9rem] font-semibold" style={{ color: "var(--ink)" }}>
                   {l.title}
                 </div>
