@@ -94,7 +94,7 @@ const OptimizedImage = ({
       height={height}
       loading={loading}
       decoding={decoding}
-      {...(fetchPriority ? {"fetchpriority": fetchPriority} as any : {})}
+      {...(fetchPriority ? ({ fetchpriority: fetchPriority } as React.ImgHTMLAttributes<HTMLImageElement>) : {})}
       role={role}
       itemProp={itemProp}
       onLoad={() => setLoaded(true)}

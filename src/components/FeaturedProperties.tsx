@@ -31,7 +31,10 @@ const t = {
   },
 };
 
-const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string }) => {
+type PropertyLike = (typeof properties)[number];
+type Strings = (typeof t)["fr"];
+
+const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings; lang: string }) => {
   
 
   return (

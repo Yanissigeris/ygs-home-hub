@@ -115,7 +115,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
 
     try {
       const supabase = await loadSupabase();
-      await supabase.from("valuation_leads" as any).insert({
+      await (supabase.from("valuation_leads" as never) as ReturnType<typeof supabase.from>).insert({
         address: address.trim(),
         property_type: propertyType,
         name: name.trim(),
