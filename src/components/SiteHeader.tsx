@@ -28,10 +28,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
 
-  const defaultColor = "#FFFFFF";
-  const activeColor = "#FFFFFF";
-  const hoverColor = "#FFFFFF";
-  const underlineColor = "#FFFFFF";
+  const defaultColor = "var(--white)";
+  const activeColor = "var(--white)";
+  const hoverColor = "var(--white)";
+  const underlineColor = "var(--white)";
 
   if (!item.children && !item.columns) {
     const active = pathname === item.href;
@@ -362,13 +362,13 @@ const SiteHeader = () => {
   const textShadow = "0 1px 4px rgba(0,0,0,0.4)";
 
   // Colors swap based on transparent vs scrolled-glass state.
-  const navLinkColor = "#FFFFFF";
-  const navLinkActiveColor = "#FFFFFF";
-  const iconColor = "#FFFFFF";
-  const ctaBorderColor = "#FFFFFF";
-  const ctaTextColor = "#FFFFFF";
+  const navLinkColor = "var(--white)";
+  const navLinkActiveColor = "var(--white)";
+  const iconColor = "var(--white)";
+  const ctaBorderColor = "var(--white)";
+  const ctaTextColor = "var(--white)";
   const logoFilter = "brightness(0) invert(1)";
-  const nameColor = "#FFFFFF";
+  const nameColor = "var(--white)";
   const dividerColor = "rgba(255,255,255,0.4)";
 
   return (
@@ -417,7 +417,7 @@ const SiteHeader = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = ctaBorderColor;
-              e.currentTarget.style.color = transparent ? "#17303B" : "#FFFFFF";
+              e.currentTarget.style.color = transparent ? "#17303B" : "var(--white)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "transparent";

@@ -18,7 +18,7 @@ const TermsPage = () => (
       }}
       className="w-full"
     />
-    <article className="section-padding" style={{ background: "var(--white, #fff)" }}>
+    <article className="section-padding" style={{ background: "var(--white)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
         <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }} className="mb-3">
           LÉGAL · QUÉBEC

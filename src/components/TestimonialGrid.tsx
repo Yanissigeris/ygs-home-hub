@@ -19,7 +19,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       border: "1px solid var(--border)",
       borderRadius: 3,
       padding: "clamp(1.75rem, 4vw, 2.5rem)",
-      background: "#fff",
+      background: "var(--white)",
       transitionDelay: `${index * 0.1}s`,
     }}
     onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 20px 44px rgba(168,138,90,0.08)"; }}
@@ -42,7 +42,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     <div className="mt-6 flex items-center gap-3" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.2rem" }}>
       <span
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.7rem] font-semibold"
-        style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "#fff" }}
+        style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "var(--white)" }}
         aria-hidden
       >
         {review.name.split(/[\s.]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("")}
@@ -128,7 +128,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
             {/* Right — featured quote */}
             <div
-              style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 3, padding: "clamp(2rem, 4vw, 3rem)", transition: "box-shadow .5s cubic-bezier(.16,1,.3,1)" }}
+              style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 3, padding: "clamp(2rem, 4vw, 3rem)", transition: "box-shadow .5s cubic-bezier(.16,1,.3,1)" }}
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 20px 44px rgba(168,138,90,0.08)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >

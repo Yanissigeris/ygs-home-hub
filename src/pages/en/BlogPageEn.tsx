@@ -54,12 +54,12 @@ const BlogPageEn = () => {
                   YGS · Analysis & Insights
                 </span>
               </div>
-              <h1 className="mt-5 font-display" style={{ color: "#F7F4EF", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
+              <h1 className="mt-5 font-display" style={{ color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
                 Outaouais
                 <br />
                 <span style={{ color: "#A88A5A", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
               </h1>
-              <p className="mt-5 max-w-md" style={{ color: "#F7F4EF", opacity: 0.5, fontSize: "13px", lineHeight: 1.6 }}>
+              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.5, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analysis, and advice to help you buy, sell, or invest smartly in Gatineau and the Outaouais.
               </p>
             </div>
@@ -77,7 +77,7 @@ const BlogPageEn = () => {
                     borderBottom: i < 2 ? "1px solid rgba(247,244,239,0.08)" : "none",
                   }}
                 >
-                  <span className="font-display" style={{ color: "#F7F4EF", fontSize: "36px", fontWeight: 300, lineHeight: 1 }}>
+                  <span className="font-display" style={{ color: "var(--cream)", fontSize: "36px", fontWeight: 300, lineHeight: 1 }}>
                     {stat.value}
                   </span>
                   <span className="uppercase" style={{ color: "#A88A5A", fontSize: "10px", letterSpacing: "0.16em" }}>
@@ -101,7 +101,7 @@ const BlogPageEn = () => {
             <div key={loop} className="flex items-center shrink-0">
               {tickerItems.map((item, idx) => (
                 <span key={`${loop}-${idx}`} className="flex items-center">
-                  <span className="uppercase" style={{ color: "#F7F4EF", fontSize: "10px", letterSpacing: "0.18em", padding: "0 1.75rem" }}>
+                  <span className="uppercase" style={{ color: "var(--cream)", fontSize: "10px", letterSpacing: "0.18em", padding: "0 1.75rem" }}>
                     {item}
                   </span>
                   <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(247,244,239,0.5)" }} />

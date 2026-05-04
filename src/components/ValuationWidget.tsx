@@ -160,7 +160,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
     fontFamily: "var(--sans)",
     border: `1.5px solid ${isError ? "#e53e3e" : "hsl(var(--border))"}`,
     borderRadius: 3,
-    background: "#fff",
+    background: "var(--white)",
     color: "var(--ink)",
     outline: "none",
     transition: "border-color .2s, box-shadow .2s",
@@ -169,7 +169,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
   return (
     <section
       style={{
-        background: "#fff",
+        background: "var(--white)",
         paddingTop: isMobile ? "4rem" : "6rem",
         paddingBottom: isMobile ? "4rem" : "6rem",
       }}
@@ -253,8 +253,8 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                         borderRadius: 999,
                         fontSize: ".85rem",
                         fontWeight: active ? 600 : 500,
-                        color: active ? "#fff" : "var(--ink)",
-                        background: active ? DARK : "#fff",
+                        color: active ? "var(--white)" : "var(--ink)",
+                        background: active ? DARK : "var(--white)",
                         cursor: "pointer",
                         transition: "border-color .2s, box-shadow .2s",
                         fontFamily: "var(--sans)",
@@ -298,7 +298,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                     fontFamily: "var(--sans)",
                     border: `1px solid ${shake ? "#e53e3e" : "hsl(var(--border))"}`,
                     borderRadius: 3,
-                    background: "#fff",
+                    background: "var(--white)",
                     color: "var(--ink)",
                     outline: "none",
                     transition: "border-color .2s, box-shadow .2s",
@@ -319,7 +319,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                     height: 56,
                     padding: "0 2rem",
                     background: DARK,
-                    color: "#fff",
+                    color: "var(--white)",
                     fontSize: ".85rem",
                     fontWeight: 600,
                     letterSpacing: ".12em",
@@ -422,7 +422,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   resize: "none",
                   outline: "none",
                   color: "var(--ink)",
-                  background: "#fff",
+                  background: "var(--white)",
                 }}
               />
 
@@ -435,7 +435,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   height: 54,
                   marginTop: "1rem",
                   background: DARK,
-                  color: "#fff",
+                  color: "var(--white)",
                   fontSize: ".9rem",
                   fontWeight: 600,
                   letterSpacing: ".05em",

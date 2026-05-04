@@ -70,7 +70,7 @@ const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
     ? frToEn[pathname] ?? "/en"
     : enToFr[pathname] ?? "/";
 
-  const activeColor = transparent ? "#FFFFFF" : "var(--ink)";
+  const activeColor = transparent ? "var(--white)" : "var(--ink)";
   const inactiveColor = transparent ? "rgba(255,255,255,.6)" : "var(--muted)";
   const separatorColor = transparent ? "rgba(255,255,255,.45)" : "var(--muted)";
 

@@ -32,7 +32,7 @@ const defaultVars: React.CSSProperties = {
   ["--stats-bg" as any]: "#0E2630",
   ["--stats-bg-gradient" as any]:
     "linear-gradient(180deg, #0E2630 0%, #112E3A 50%, #0E2630 100%)",
-  ["--stats-text" as any]: "#FFFFFF",
+  ["--stats-text" as any]: "var(--white)",
   ["--stats-text-shadow" as any]:
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",
   ["--stats-gold" as any]: "#D4AF6F",

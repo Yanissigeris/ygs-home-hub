@@ -44,7 +44,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
         <div className="relative z-[1] mt-4 border-t border-border/30 pt-3 flex items-center gap-2.5">
           <span
             className="flex shrink-0 items-center justify-center rounded-full"
-            style={{ width: 32, height: 32, background: "#17303B", fontFamily: "var(--serif)", fontSize: 12, color: "#fff", fontWeight: 600 }}
+            style={{ width: 32, height: 32, background: "#17303B", fontFamily: "var(--serif)", fontSize: 12, color: "var(--white)", fontWeight: 600 }}
           >
             {review.name.charAt(0)}
           </span>
