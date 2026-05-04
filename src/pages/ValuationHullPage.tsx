@@ -56,16 +56,32 @@ const ValuationHullPage = () => {
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+        {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+          }}
+        />
+        {/* Mobile vertical text-protect */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+          }}
+        />
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
           <motion.div {...anim}>
-            <p className="label-overline mb-4 text-primary-foreground/25">Évaluation gratuite · Hull</p>
+            <p className="label-overline mb-4 text-primary-foreground/65">Évaluation gratuite · Hull</p>
             <h1 className="text-primary-foreground">Combien vaut votre propriété à Hull?</h1>
-            <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+            <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
               Recevez une évaluation personnalisée basée sur les ventes récentes dans votre secteur de Hull — gratuit, confidentiel et sans engagement.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (
-                <li key={b.text} className="flex items-center gap-2 text-[0.875rem] text-primary-foreground/40">
+                <li key={b.text} className="flex items-center gap-2 text-[0.875rem] text-primary-foreground/75">
                   <b.icon size={15} className="text-accent" />
                   {b.text}
                 </li>

@@ -1,11 +1,14 @@
-# ValuationPage hero legibility fix
+# Apply hero contrast fix to 4 neighborhood valuation pages
 
-## File
-`src/pages/ValuationPage.tsx` (only file touched)
+## Files (4 — all receive identical edits)
+- `src/pages/ValuationHullPage.tsx`
+- `src/pages/ValuationAylmerPage.tsx`
+- `src/pages/en/ValuationHullPageEn.tsx`
+- `src/pages/en/ValuationAylmerPageEn.tsx`
 
-## Part A — Insert two text-protect overlays after line 69
+## Part A — Insert two text-protect overlays after the `<section>` opening tag
 
-Insert immediately after the existing `top-0 h-12` overlay (line 69), before the portrait `motion.div` (line 72):
+In each file, immediately after `<section className="hero-gradient hero-gradient--with-bg ...">` (line 58) and before `<div className="section-container ...">` (line 59), insert:
 
 ```tsx
 {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
@@ -26,20 +29,21 @@ Insert immediately after the existing `top-0 h-12` overlay (line 69), before the
 />
 ```
 
-Sit naturally below the form container (line 97 has `z-10`). No z-index needed.
+The existing `.section-container` (line 59) already has `relative`, creating its own stacking context — content sits above the overlays without z-index.
 
-## Part B — Opacity bumps
+## Part B — Opacity bumps (3 changes per file)
 
-- **Line 115** subtitle (desktop): `text-primary-foreground/45` → `text-primary-foreground/85`
-- **Line 119** subtitle (mobile): `text-primary-foreground/45` → `text-primary-foreground/85`
-- **Line 126** trust bullets: `text-primary-foreground/40` → `text-primary-foreground/75`
-- **Line 134** credibility strip: `text-primary-foreground/20` → `text-primary-foreground/55`
+| Line | Element | Before | After |
+|---|---|---|---|
+| 61 | overline | `text-primary-foreground/25` | `text-primary-foreground/65` |
+| 63 | subtitle | `text-primary-foreground/50` | `text-primary-foreground/85` |
+| 68 | trust bullets | `text-primary-foreground/40` | `text-primary-foreground/75` |
 
-## Confirmations
-- `src/index.css` `.hero-gradient--with-bg` NOT touched (shared class)
-- H1 (line 110) NOT touched
-- Portrait block (lines 72–95) NOT touched
-- `<SEO>`, `<PageMeta>`, `<ServiceJsonLd>` NOT touched
-- `<ValuationForm variant="glass">` (line 146) NOT touched
-- Both new overlays `pointer-events-none`
-- Left overlay fades to transparent by 85% so portrait + form area on right stay visible
+## Confirmations / not touched
+- `src/index.css` `.hero-gradient--with-bg` — shared class, untouched
+- `src/pages/ValuationPage.tsx` and `src/pages/en/ValuationPageEn.tsx` — already shipped
+- H1 (line 62) untouched in all 4 files
+- `<ValuationForm variant="card" ...>` (line 77) untouched
+- `<PageMeta>` untouched
+- All copy strings (FR + EN) untouched
+- Both new overlays are `pointer-events-none` and `aria-hidden="true"`
