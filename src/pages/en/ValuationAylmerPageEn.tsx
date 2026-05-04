@@ -55,7 +55,7 @@ const ValuationAylmerPageEn = () => {
         description="Get a free home valuation in Aylmer. Analysis based on recent sales in your neighborhood — response within 24h, no commitment."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
-      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
         {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
         <div
           aria-hidden="true"

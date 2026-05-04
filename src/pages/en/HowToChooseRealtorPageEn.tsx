@@ -25,7 +25,7 @@ const HowToChooseRealtorPageEn = () => (
       title="How to Choose a Realtor in Quebec"
       description="Essential criteria for choosing the right real estate broker in Quebec. Checklist, tips, and what to look for when selecting a realtor in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

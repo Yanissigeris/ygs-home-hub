@@ -25,7 +25,7 @@ const CourtierOuVendreSoiMemePage = () => (
       title="Courtier immobilier ou vendre seul au Québec?"
       description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
