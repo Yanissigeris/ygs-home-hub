@@ -68,6 +68,23 @@ const ValuationPage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 
+        {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+          }}
+        />
+        {/* Mobile vertical text-protect */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+          }}
+        />
+
         {/* Portrait – positioned behind the form on desktop */}
         <motion.div
           className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none"
@@ -112,18 +129,18 @@ const ValuationPage = () => {
               </h1>
 
               {/* Subtitle - hidden on mobile to save space */}
-              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">
                 Recevez une estimation personnalisée et confidentielle — basée sur votre propriété et les ventes comparables récentes dans votre secteur de Gatineau, Aylmer, Hull ou Outaouais.
               </p>
               {/* Shorter mobile subtitle */}
-              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">
+              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">
                 Estimation gratuite et confidentielle basée sur les ventes récentes.
               </p>
 
               {/* Trust bullets - compact on mobile */}
               <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">
                 {trustBullets.map((b) => (
-                  <div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/40">
+                  <div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75">
                     <b.icon size={15} className="text-accent shrink-0" />
                     <span>{b.text}</span>
                   </div>
@@ -131,7 +148,7 @@ const ValuationPage = () => {
               </div>
 
               {/* Credibility strip */}
-              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
+              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Près de 9 ans en Outaouais</span>
               </div>
