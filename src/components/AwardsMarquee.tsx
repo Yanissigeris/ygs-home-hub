@@ -28,26 +28,26 @@ const items = [
  *  --stats-bullet-size     → bullet size
  *  --stats-item-gap        → horizontal spacing between items
  */
-const defaultVars: React.CSSProperties = {
-  ["--stats-bg" as any]: "#0E2630",
-  ["--stats-bg-gradient" as any]:
+const defaultVars = {
+  "--stats-bg": "#0E2630",
+  "--stats-bg-gradient":
     "linear-gradient(180deg, #0E2630 0%, #112E3A 50%, #0E2630 100%)",
-  ["--stats-text" as any]: "var(--white)",
-  ["--stats-text-shadow" as any]:
+  "--stats-text": "var(--white)",
+  "--stats-text-shadow":
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",
-  ["--stats-gold" as any]: "#D4AF6F",
-  ["--stats-gold-glow" as any]:
+  "--stats-gold": "#D4AF6F",
+  "--stats-gold-glow":
     "0 0 10px rgba(212,175,111,.85), 0 0 4px rgba(212,175,111,.6)",
-  ["--stats-border" as any]: "rgba(168,138,90,.35)",
-  ["--stats-border-bottom" as any]: "rgba(168,138,90,.25)",
-  ["--stats-padding-y" as any]: "1.25rem",
-  ["--stats-font-size" as any]: ".9rem",
-  ["--stats-font-size-sm" as any]: "1rem",
-  ["--stats-bullet-size" as any]: "13px",
-  ["--stats-item-gap" as any]: "clamp(1.75rem, 4vw, 2.75rem)",
-  ["--stats-inset-shadow" as any]:
+  "--stats-border": "rgba(168,138,90,.35)",
+  "--stats-border-bottom": "rgba(168,138,90,.25)",
+  "--stats-padding-y": "1.25rem",
+  "--stats-font-size": ".9rem",
+  "--stats-font-size-sm": "1rem",
+  "--stats-bullet-size": "13px",
+  "--stats-item-gap": "clamp(1.75rem, 4vw, 2.75rem)",
+  "--stats-inset-shadow":
     "inset 0 1px 0 rgba(255,255,255,.06), inset 0 -1px 0 rgba(0,0,0,.3)",
-};
+} as React.CSSProperties;
 
 const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
   return (
