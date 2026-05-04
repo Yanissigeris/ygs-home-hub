@@ -26,7 +26,7 @@ const VerifierCourtierOaciqPage = () => (
       title="Vérifier un courtier immobilier · OACIQ"
       description="Comment vérifier qu'un courtier immobilier est en règle au Québec. Guide pratique pour consulter le registre de l'OACIQ et protéger votre transaction." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

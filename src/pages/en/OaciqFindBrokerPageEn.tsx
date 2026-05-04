@@ -25,7 +25,7 @@ const OaciqFindBrokerPageEn = () => (
       title="Verify a Real Estate Broker with the OACIQ"
       description="How to verify a real estate broker's licence in Quebec using the OACIQ registry. Protect yourself and ensure your broker is in good standing." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

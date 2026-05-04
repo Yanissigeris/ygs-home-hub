@@ -25,7 +25,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
       title="Realtor vs Selling by Owner in Quebec"
       description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ "--hero-bg-image" as never: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
