@@ -1,14 +1,9 @@
 import * as React from "react";
 
 const items = [
-  "Hall of Fame RE/MAX",
   "Club Platine RE/MAX",
   "Club 100% RE/MAX",
-  "Gatineau · Aylmer · Hull",
   "Service bilingue FR/EN",
-  "Équipe Marty Waite",
-  "Près de 9 ans d'expérience",
-  "5★ Google + Facebook",
 ];
 
 /**
