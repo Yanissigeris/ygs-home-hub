@@ -69,10 +69,10 @@ const ValuationPageEn = () => {
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
-              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
-              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">Free and confidential estimate based on recent sales.</p>
-              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/40"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
-              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
+              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free and confidential estimate based on recent sales.</p>
+              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
+              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Nearly 9 years in Outaouais</span>
               </div>
