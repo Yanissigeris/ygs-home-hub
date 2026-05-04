@@ -1,24 +1,31 @@
-# AwardsMarquee: Trim items array from 8 to 3
+# Add 301 redirects for /blog → /blogue
 
-## Single file edit
-**`src/components/AwardsMarquee.tsx`** — lines 3–12
+## File modified
+`public/_redirects` (only file touched)
 
-Replace the 8-string `items` array with a 3-string array, in this exact order:
+## Final content
 
-```ts
-const items = [
-  "Club Platine RE/MAX",
-  "Club 100% RE/MAX",
-  "Service bilingue FR/EN",
-];
+```
+# 301 — English-speaker URL guesses route to the canonical FR blog.
+/blog       /blogue              301
+/blog/*     /blogue/:splat       301
+
+# SPA fallback — must remain LAST.
+/*    /index.html   200
 ```
 
 ## Confirmations
-- Only 1 file edited: `src/components/AwardsMarquee.tsx`
-- `items` array reduced from 8 → 3 strings
-- Order: Club Platine RE/MAX → Club 100% RE/MAX → Service bilingue FR/EN
-- ALL other code in the file untouched: CSS variables, defaultVars, forwardRef, JSX structure, both `{items.map(...)}` blocks (the duplicate render for the seamless loop continues to map over the same array), `animationDuration: "var(--marquee-speed, 15s)"`, mask gradients, gold bullet styling, mobile responsive `<style>` block — all unchanged
-- No other files modified: `Index.tsx`, `IndexEn.tsx`, `index.css`, hero, footer, JSON-LD, SEO meta — all untouched
 
-## Effect
-Strip cycles through 3 unique credentials instead of 8 (5 of which duplicated hero/footer/JSON-LD content). Same 15s animation duration → faster visible cycle. Net SEO impact: slightly positive (3 new surface keywords, 0 lost since removed items exist elsewhere).
+- Only `public/_redirects` edited
+- `netlify.toml` NOT touched
+- No `/en/blog` redirect added (real canonical route preserved)
+- 301 rules placed BEFORE the `/*` SPA fallback (order matters in Netlify `_redirects`)
+- Existing SPA fallback line preserved verbatim
+- `:splat` syntax used to forward the trailing path segment
+
+## Post-deploy verification (manual)
+
+- `curl -I https://yanisgauthier.com/blog` → `301` + `Location: /blogue`
+- `curl -I https://yanisgauthier.com/blog/some-slug` → `301` + `Location: /blogue/some-slug`
+- `https://yanisgauthier.com/blogue` → `200` (unchanged)
+- `https://yanisgauthier.com/en/blog` → `200` (unchanged, not matched by `/blog` rule since Netlify matches from path start)
