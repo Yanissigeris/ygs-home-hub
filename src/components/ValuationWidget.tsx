@@ -115,7 +115,8 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
 
     try {
       const supabase = await loadSupabase();
-      await (supabase.from("valuation_leads" as never) as ReturnType<typeof supabase.from>).insert({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await supabase.from("valuation_leads" as any).insert({
         address: address.trim(),
         property_type: propertyType,
         name: name.trim(),
