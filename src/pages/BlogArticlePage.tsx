@@ -355,7 +355,7 @@ const BlogArticlePage = () => {
                 </span>
                 <time style={{ color: "rgba(247,244,239,0.5)", fontSize: "11px" }}>{dateStr}</time>
               </div>
-              <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
+              <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
                 <span className="block">{titleParts.line1}</span>
                 {titleParts.line2 && (
                   <span className="block" style={{ paddingLeft: "28px" }}>{titleParts.line2}</span>
@@ -370,7 +370,7 @@ const BlogArticlePage = () => {
 
           {/* Right — cream */}
           <div
-            style={{ background: "#F7F4EF", borderLeft: "3px solid #A88A5A", padding: "48px" }}
+            style={{ background: "var(--cream)", borderLeft: "3px solid #A88A5A", padding: "48px" }}
             className="flex flex-col justify-between gap-8"
           >
             <div>
@@ -467,7 +467,7 @@ const BlogArticlePage = () => {
               <p className="uppercase" style={{ color: "#A88A5A", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {isFr ? "Parler à Yanis" : "Talk to Yanis"}
               </p>
-              <h3 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontSize: "22px", fontWeight: 400, lineHeight: 1.15 }}>
+              <h3 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "22px", fontWeight: 400, lineHeight: 1.15 }}>
                 {isFr ? (
                   <>Une analyse <em style={{ color: "#A88A5A", fontStyle: "italic" }}>sur mesure</em></>
                 ) : (
@@ -527,7 +527,7 @@ const BlogArticlePage = () => {
       {/* Full-width CTA */}
       <section style={{ background: "#17303B", padding: "48px 0" }}>
         <div className="section-container text-center">
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F7F4EF", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
             {isFr ? (
               <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
             ) : (
@@ -571,7 +571,7 @@ const BlogArticlePage = () => {
               borderRadius: "50%",
               background: "#17303B",
               border: "1.5px solid #A88A5A",
-              color: "#F7F4EF",
+              color: "var(--cream)",
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "18px",
               fontWeight: 500,

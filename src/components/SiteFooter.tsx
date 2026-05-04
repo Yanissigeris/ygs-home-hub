@@ -72,11 +72,11 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const ctaLabel = lang === "en" ? "Free valuation →" : "Évaluation gratuite →";
 
     return (
-      <footer ref={ref} className={className} style={{ background: "#17303B", color: "#F7F4EF", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
+      <footer ref={ref} className={className} style={{ background: "#17303B", color: "var(--cream)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
         {/* ── Final CTA block ── */}
         <div style={{ background: "#17303B" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "#F7F4EF", lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
               {ctaHeading}
             </h2>
             <p style={{ fontFamily: "var(--sans)", fontSize: 14, color: "rgba(247,244,239,.7)", marginTop: 12, marginBottom: 24 }}>
@@ -85,7 +85,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <Link
               to={ctaHref}
               className="inline-block transition-colors duration-200"
-              style={{ background: "#A88A5A", color: "#F7F4EF", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
+              style={{ background: "#A88A5A", color: "var(--cream)", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#c4a878"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; }}
             >

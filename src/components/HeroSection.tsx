@@ -756,7 +756,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 className="hero-fade-in mt-4 sm:mt-6 block md:hidden max-w-[460px] font-light"
                 style={{
                   animationDelay: "0.32s",
-                  color: "#FFFFFF",
+                  color: "var(--white)",
                   fontFamily: "var(--sans)",
                   fontWeight: 400,
                   fontSize: ".95rem",
@@ -770,7 +770,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 className="hero-fade-in mt-4 sm:mt-6 hidden md:block max-w-[460px] font-light"
                 style={{
                   animationDelay: "0.32s",
-                  color: "#FFFFFF",
+                  color: "var(--white)",
                   fontFamily: "var(--sans)",
                   fontWeight: 400,
                   fontSize: ".95rem",
@@ -793,7 +793,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
                       style={{
                         background: "#A88A5A",
-                        color: "#FFFFFF",
+                        color: "var(--white)",
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
                         fontSize: ".95rem",

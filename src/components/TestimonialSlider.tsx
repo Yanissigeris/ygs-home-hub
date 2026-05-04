@@ -44,13 +44,13 @@ const SlideCard = ({ review }: { review: Review }) => (
     <div className="mt-6 flex items-center gap-3" style={{ borderTop: "1px solid rgba(255,255,255,.07)", paddingTop: "1.2rem" }}>
       <span
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.7rem] font-semibold"
-        style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "#fff" }}
+        style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "var(--white)" }}
         aria-hidden
       >
         {review.name.split(/[\s.]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("")}
       </span>
       <div>
-        <p style={{ fontSize: ".85rem", fontWeight: 600, color: "#fff" }}>{review.name}</p>
+        <p style={{ fontSize: ".85rem", fontWeight: 600, color: "var(--white)" }}>{review.name}</p>
         {review.location && (
           <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.4)", marginTop: 2 }}>{review.location}</p>
         )}
@@ -114,7 +114,7 @@ const TestimonialSlider = React.forwardRef<HTMLElement, TestimonialSliderProps>(
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
             <div>
               {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
-              <h2 style={{ color: "#fff" }}>{title}</h2>
+              <h2 style={{ color: "var(--white)" }}>{title}</h2>
             </div>
             {reviewsPageHref && reviewsPageLabel && (
               <Link

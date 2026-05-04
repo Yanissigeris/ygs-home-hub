@@ -73,7 +73,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                 return (
                   <div
                     key={i}
-                    style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 3 }}
+                    style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 3 }}
                   >
                     <button
                       onClick={() => setOpenIndex(isOpen ? -1 : i)}
@@ -87,7 +87,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                         style={{
                           border: isOpen ? "1px solid var(--gold)" : "1px solid var(--border)",
                           background: isOpen ? "var(--gold)" : "transparent",
-                          color: isOpen ? "#fff" : "var(--muted)",
+                          color: isOpen ? "var(--white)" : "var(--muted)",
                           transform: isOpen ? "rotate(180deg)" : "",
                           fontSize: ".75rem",
                         }}

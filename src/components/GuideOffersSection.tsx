@@ -31,7 +31,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
 
   return (
     <>
-      <section className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#fff" }}>
+      <section className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "var(--white)" }}>
         {/* Radial gradient */}
         <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at top center, rgba(168,138,90,.05) 0%, transparent 60%)" }} aria-hidden="true" />
 
@@ -81,7 +81,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 type="button"
                 aria-label={`${g.title} — ${g.subtitle}`}
                 className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A6038] focus-visible:ring-inset"
-                style={{ padding: "1.25rem", background: "#fff" }}
+                style={{ padding: "1.25rem", background: "var(--white)" }}
                 onClick={() => setModalGuide(g.guideType)}
               >
                 <span style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, color: "var(--ink)", letterSpacing: "-.02em", lineHeight: 1, marginBottom: ".75rem", display: "block" }} aria-hidden="true">{g.num}</span>

@@ -343,7 +343,7 @@ const CookieConsent = () => {
               style={{
                 background: "var(--gold)",
                 border: "1px solid var(--gold)",
-                color: "#FFFFFF",
+                color: "var(--white)",
                 padding: "7px 12px",
                 fontSize: "10px",
                 borderRadius: "2px",

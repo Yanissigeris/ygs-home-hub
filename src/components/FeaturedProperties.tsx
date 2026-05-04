@@ -41,7 +41,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
       rel="noopener noreferrer"
       
       className="group flex flex-col h-full"
-      style={{ background: "#fff", borderRadius: 3, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
+      style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
     >
@@ -101,7 +101,7 @@ const PropertyCard = ({ p, strings, lang }: { p: any; strings: any; lang: string
             top: "12px",
             left: "12px",
             background: p.status === "sold" ? "#A88A5A" : "#17303B",
-            color: "#FFFFFF",
+            color: "var(--white)",
             padding: "4px 10px",
             fontSize: "9.5px",
             fontWeight: 700,

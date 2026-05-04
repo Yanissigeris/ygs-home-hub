@@ -32,7 +32,7 @@ const MicroTrustStrip: React.FC<MicroTrustStripProps> = ({ lang = "fr" }) => {
         justifyContent: "center",
         fontFamily: "'DM Sans', system-ui, sans-serif",
         fontSize: 13,
-        color: "#F7F4EF",
+        color: "var(--cream)",
         lineHeight: 1,
         padding: "0 1rem",
         whiteSpace: "nowrap",

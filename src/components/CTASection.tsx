@@ -34,7 +34,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         {overline && (
           <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
         )}
-        <h2 className="mx-auto max-w-lg" style={{ color: dark ? "#fff" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
+        <h2 className="mx-auto max-w-lg" style={{ color: dark ? "var(--white)" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
         {text && (
           <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
             {text}
@@ -60,8 +60,8 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                       : { border: "1.5px solid #A88A5A", color: "#A88A5A", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                 }
                 onMouseEnter={(e) => {
-                  if (!isOutline) { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }
-                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "#fff"; }
+                  if (!isOutline) { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "var(--white)"; }
+                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "var(--white)"; }
                 }}
                 onMouseLeave={(e) => {
                   if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }

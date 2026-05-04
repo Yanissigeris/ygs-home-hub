@@ -39,7 +39,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className="group flex flex-col h-full"
-      style={{ background: "#fff", borderRadius: 3, overflow: "hidden" }}
+      style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
     >
       {/* Image */}
       <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
