@@ -38,6 +38,23 @@ const ValuationPageEn = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 
+        {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+          }}
+        />
+        {/* Mobile vertical text-protect */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+          }}
+        />
+
         <motion.div className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 0.2, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }} aria-hidden="true">
           <div style={{
             maskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
