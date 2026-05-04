@@ -475,7 +475,7 @@ const BlogArticlePage = () => {
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.55)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Revenus réels, ratio, valeur. Sous 24 h." : "Real income, ratio, value. Within 24 h."}
+                {isFr ? "Pour votre projet — vente, achat ou investissement. Réponse sous 24 h." : "For your project — selling, buying or investing. Reply within 24 h."}
               </p>
               <Link
                 to={ctaHref}
@@ -490,7 +490,7 @@ const BlogArticlePage = () => {
                   fontWeight: 500,
                 }}
               >
-                {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
+                {isFr ? "Évaluation gratuite" : "Free valuation"} <span aria-hidden>→</span>
               </Link>
             </div>
 

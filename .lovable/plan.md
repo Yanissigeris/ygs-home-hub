@@ -1,31 +1,23 @@
-# Add 301 redirects for /blog → /blogue
+# Generic blog sidebar CTA copy
 
-## File modified
-`public/_redirects` (only file touched)
+## File
+`src/pages/BlogArticlePage.tsx` (only file touched)
 
-## Final content
+## Edits
 
+**Line 478** — body copy:
+```tsx
+{isFr ? "Pour votre projet — vente, achat ou investissement. Réponse sous 24 h." : "For your project — selling, buying or investing. Reply within 24 h."}
 ```
-# 301 — English-speaker URL guesses route to the canonical FR blog.
-/blog       /blogue              301
-/blog/*     /blogue/:splat       301
 
-# SPA fallback — must remain LAST.
-/*    /index.html   200
+**Line 493** — button label:
+```tsx
+{isFr ? "Évaluation gratuite" : "Free valuation"} <span aria-hidden>→</span>
 ```
 
 ## Confirmations
-
-- Only `public/_redirects` edited
-- `netlify.toml` NOT touched
-- No `/en/blog` redirect added (real canonical route preserved)
-- 301 rules placed BEFORE the `/*` SPA fallback (order matters in Netlify `_redirects`)
-- Existing SPA fallback line preserved verbatim
-- `:splat` syntax used to forward the trailing path segment
-
-## Post-deploy verification (manual)
-
-- `curl -I https://yanisgauthier.com/blog` → `301` + `Location: /blogue`
-- `curl -I https://yanisgauthier.com/blog/some-slug` → `301` + `Location: /blogue/some-slug`
-- `https://yanisgauthier.com/blogue` → `200` (unchanged)
-- `https://yanisgauthier.com/en/blog` → `200` (unchanged, not matched by `/blog` rule since Netlify matches from path start)
+- `ctaHref` (line 164) NOT changed
+- "Source" block (lines 456–463) NOT changed
+- "Une analyse sur mesure" heading (lines 470–476) NOT changed
+- Second `ctaHref` usage (line 543) NOT changed
+- All styling, classes, surrounding markup preserved
