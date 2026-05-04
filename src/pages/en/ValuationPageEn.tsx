@@ -38,6 +38,23 @@ const ValuationPageEn = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 
+        {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+          }}
+        />
+        {/* Mobile vertical text-protect */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+          }}
+        />
+
         <motion.div className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 0.2, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }} aria-hidden="true">
           <div style={{
             maskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
@@ -52,10 +69,10 @@ const ValuationPageEn = () => {
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
-              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/45">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
-              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/45">Free and confidential estimate based on recent sales.</p>
-              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/40"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
-              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/20 font-medium">
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">Get a personalized and confidential estimate — based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
+              <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free and confidential estimate based on recent sales.</p>
+              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
+              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Nearly 9 years in Outaouais</span>
               </div>
