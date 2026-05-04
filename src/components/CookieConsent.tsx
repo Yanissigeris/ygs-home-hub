@@ -26,7 +26,7 @@ function getPrefs(): CookiePrefs {
   try {
     const raw = localStorage.getItem(STORAGE_PREFS_KEY);
     if (raw) return JSON.parse(raw);
-  } catch {}
+  } catch { /* ignore */ }
   return { analytics: true, marketing: false };
 }
 function saveConsent(value: ConsentValue, prefs?: CookiePrefs) {
@@ -34,7 +34,7 @@ function saveConsent(value: ConsentValue, prefs?: CookiePrefs) {
   try {
     localStorage.setItem(STORAGE_KEY, value);
     if (prefs) localStorage.setItem(STORAGE_PREFS_KEY, JSON.stringify(prefs));
-  } catch {}
+  } catch { /* ignore */ }
 }
 
 /** Load GA4 script dynamically */
@@ -50,7 +50,7 @@ function loadGA() {
   function gtag(...args: unknown[]) { window.dataLayer!.push(args); }
   gtag("js", new Date());
   gtag("config", GA_ID);
-  (window as any).gtag = gtag;
+  (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
 }
 
 declare global {

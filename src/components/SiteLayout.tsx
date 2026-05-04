@@ -95,13 +95,16 @@ const SiteLayout = () => {
   // time to free the main thread during LCP/TBT window.
   const [deferredReady, setDeferredReady] = React.useState(false);
   React.useEffect(() => {
-    const ric = (window as any).requestIdleCallback as
-      | ((cb: () => void, opts?: { timeout: number }) => number)
-      | undefined;
+    type IdleWindow = Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    const w = window as IdleWindow;
+    const ric = w.requestIdleCallback;
     const trigger = () => setDeferredReady(true);
     const id = ric ? ric(trigger, { timeout: 2500 }) : window.setTimeout(trigger, 1800);
     return () => {
-      if (ric && (window as any).cancelIdleCallback) (window as any).cancelIdleCallback(id);
+      if (ric && w.cancelIdleCallback) w.cancelIdleCallback(id);
       else clearTimeout(id);
     };
   }, []);

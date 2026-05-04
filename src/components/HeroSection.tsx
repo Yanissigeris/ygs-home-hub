@@ -176,13 +176,16 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const [videoDeferReady, setVideoDeferReady] = React.useState(false);
     React.useEffect(() => {
       if (!heroVideo || isMobile) return;
-      const ric = (window as any).requestIdleCallback as
-        | ((cb: () => void, opts?: { timeout: number }) => number)
-        | undefined;
+      type IdleWindow = Window & {
+        requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+        cancelIdleCallback?: (id: number) => void;
+      };
+      const w = window as IdleWindow;
+      const ric = w.requestIdleCallback;
       const trigger = () => setVideoDeferReady(true);
       const id = ric ? ric(trigger, { timeout: 3000 }) : window.setTimeout(trigger, 1500);
       return () => {
-        if (ric && (window as any).cancelIdleCallback) (window as any).cancelIdleCallback(id);
+        if (ric && w.cancelIdleCallback) w.cancelIdleCallback(id);
         else clearTimeout(id);
       };
     }, [heroVideo, isMobile]);
@@ -407,7 +410,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       const el = videoRef.current;
       if (!el) return;
       const onPlaying = () => setVideoReady(true);
-      const setRate = () => { try { el.playbackRate = 0.75; } catch {} };
+      const setRate = () => { try { el.playbackRate = 0.75; } catch { /* ignore */ } };
       el.addEventListener("playing", onPlaying);
       el.addEventListener("loadeddata", setRate);
       setRate();
@@ -491,7 +494,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    sizes="100vw"
                    loading="eager"
                    decoding="async"
-                   {...{ fetchpriority: "high" } as any}
+                   {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                  />
                </div>
@@ -554,7 +557,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               sizes="100vw"
               loading="eager"
               decoding="async"
-              {...{ fetchpriority: "high" } as any}
+              {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
               onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
           </div>
@@ -575,7 +578,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{ zIndex: 1 }}
             loading="eager"
             decoding="async"
-            {...{ fetchpriority: "high" } as any}
+            {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
           />
         )}
 
@@ -588,7 +591,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             muted
             loop
             playsInline
-            {...{ "webkit-playsinline": "true", "x-webkit-airplay": "deny" } as any}
+            {...({ "webkit-playsinline": "true", "x-webkit-airplay": "deny" } as React.VideoHTMLAttributes<HTMLVideoElement>)}
             disablePictureInPicture
             disableRemotePlayback
             poster={heroVideoPoster}
@@ -888,7 +891,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
                 loading="eager"
                 decoding="auto"
-                {...{ fetchpriority: "high" } as any}
+                {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 /* On mobile, no <source> matches and the browser would normally
                    download this `src` (29 KB nobg.webp) as the picture fallback,
                    wasting bandwidth that should go to the LCP portrait. We use
@@ -951,7 +954,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
                 loading="eager"
                 decoding="async"
-                {...{ fetchpriority: "high" } as any}
+                {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
               />
             </picture>
           </>

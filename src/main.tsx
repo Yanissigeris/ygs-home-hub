@@ -57,9 +57,10 @@ function initScrollReveal() {
 }
 
 if (typeof window !== "undefined") {
-  const ric = (window as any).requestIdleCallback as
-    | ((cb: () => void, opts?: { timeout: number }) => number)
-    | undefined;
+  type IdleWindow = Window & {
+    requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+  };
+  const ric = (window as IdleWindow).requestIdleCallback;
   if (ric) {
     ric(initScrollReveal, { timeout: 2000 });
   } else {

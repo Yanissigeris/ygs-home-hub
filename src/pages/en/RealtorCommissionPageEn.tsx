@@ -25,7 +25,7 @@ const RealtorCommissionPageEn = () => (
       title="Realtor Commission in Quebec — Clear Guide"
       description="Understand realtor commission fees in Quebec: how they work, what's included, and what it means for selling your home in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

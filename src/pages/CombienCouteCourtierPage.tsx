@@ -25,7 +25,7 @@ const CombienCouteCourtierPage = () => (
       title="Combien coûte un courtier immobilier au Québec?"
       description="Comprenez comment fonctionne la rémunération d'un courtier immobilier au Québec. Commission, services inclus et ce que ça signifie pour votre vente." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as any]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

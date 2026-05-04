@@ -14,7 +14,14 @@ const AdminImageGen = () => {
   const [aspectRatio, setAspectRatio] = useState("16:9");
   const [loading, setLoading] = useState(false);
   const [generatedUrl, setGeneratedUrl] = useState<string | null>(null);
-  const [history, setHistory] = useState<any[]>([]);
+  interface GeneratedImage {
+    id: string;
+    image_url: string;
+    prompt: string;
+    aspect_ratio: string;
+    file_path: string;
+  }
+  const [history, setHistory] = useState<GeneratedImage[]>([]);
   const { toast } = useToast();
 
   const loadHistory = async () => {
@@ -41,8 +48,9 @@ const AdminImageGen = () => {
       setGeneratedUrl(data.imageUrl);
       toast({ title: "Image générée !", description: "L'image a été sauvegardée." });
       loadHistory();
-    } catch (e: any) {
-      toast({ title: "Erreur", description: e.message || "Échec de la génération", variant: "destructive" });
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : "Échec de la génération";
+      toast({ title: "Erreur", description: message, variant: "destructive" });
     } finally {
       setLoading(false);
     }
