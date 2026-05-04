@@ -14,7 +14,14 @@ const AdminImageGen = () => {
   const [aspectRatio, setAspectRatio] = useState("16:9");
   const [loading, setLoading] = useState(false);
   const [generatedUrl, setGeneratedUrl] = useState<string | null>(null);
-  const [history, setHistory] = useState<Array<Record<string, unknown>>>([]);
+  interface GeneratedImage {
+    id: string;
+    image_url: string;
+    prompt: string;
+    aspect_ratio: string;
+    file_path: string;
+  }
+  const [history, setHistory] = useState<GeneratedImage[]>([]);
   const { toast } = useToast();
 
   const loadHistory = async () => {
