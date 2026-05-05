@@ -26,6 +26,32 @@ const logoYgsSymbolBlue = ygsLogo;
 import { mainNav, type NavItem, type NavChild } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
+/* ── RE/MAX cream affiliation pill ── */
+const RemaxPill = ({ size = "md", lang }: { size?: "sm" | "md" | "lg"; lang: "fr" | "en" }) => {
+  const dims = size === "lg"
+    ? { px: "0.625rem", py: "0.25rem", logo: 18, balloon: 20, gap: "0.5rem" }
+    : size === "md"
+    ? { px: "0.5rem", py: "0.125rem", logo: 16, balloon: 18, gap: "0.375rem" }
+    : { px: "0.375rem", py: "0.125rem", logo: 14, balloon: 16, gap: "0.3rem" };
+  return (
+    <span
+      role="img"
+      aria-label={lang === "en" ? "RE/MAX Direct Inc. affiliate" : "Affilié RE/MAX Direct Inc."}
+      className="inline-flex shrink-0 items-center rounded-full"
+      style={{
+        background: "var(--ygs-cream, #F7F4EE)",
+        border: "1px solid rgba(34, 40, 49, 0.06)",
+        padding: `${dims.py} ${dims.px}`,
+        gap: dims.gap,
+        textShadow: "none",
+      }}
+    >
+      <img src={remaxLogotypeBlack} alt="Logo RE/MAX" height={dims.logo} style={{ height: dims.logo, width: "auto" }} loading="eager" decoding="async" />
+      <img src={remaxBalloonOfficial} alt="" aria-hidden="true" height={dims.balloon} style={{ height: dims.balloon, width: "auto" }} loading="eager" decoding="async" />
+    </span>
+  );
+};
+
 /* ── Desktop dropdown item ── */
 const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathname: string; transparent?: boolean }) => {
   const [open, setOpen] = useState(false);
