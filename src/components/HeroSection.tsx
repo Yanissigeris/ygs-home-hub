@@ -66,6 +66,9 @@ interface HeroSectionProps {
   agentImageAvif?: string;
   agentImageSmAvif?: string;
   agentImageMdAvif?: string;
+  /** High-res variant for desktop/tablet retina (≥768px @ 2x DPR) */
+  agentImageLg?: string;
+  agentImageLgAvif?: string;
   agentName?: string;
   heroBgImage?: string;
   /** Mobile-optimized AVIF variant of the hero background. Used in <picture>
@@ -162,6 +165,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       agentImageAvif,
       agentImageSmAvif,
       agentImageMdAvif,
+      agentImageLg,
+      agentImageLgAvif,
       agentName,
       heroBgImage,
       heroBgImageMobile,
@@ -903,13 +908,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {agentImageAvif && (
                 <source
                   type="image/avif"
-                  srcSet={agentImageAvif}
+                  srcSet={agentImageLgAvif ? `${agentImageAvif} 1x, ${agentImageLgAvif} 2x` : agentImageAvif}
                   media="(min-width: 768px)"
                 />
               )}
               <source
                 type="image/webp"
-                srcSet={agentImage}
+                srcSet={agentImageLg ? `${agentImage} 1x, ${agentImageLg} 2x` : agentImage}
                 media="(min-width: 768px)"
               />
               <img

@@ -14,6 +14,8 @@ import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
 import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
 import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
 import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
+import yanisPortraitLg from "@/assets/yanis-portrait-nobg-lg.webp";
+import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
 
 const zones = [
   { name: "Gatineau", href: "/en/gatineau", detail: "Central, services, condos" },
@@ -71,6 +73,8 @@ const OutaouaisHubPageEn = () => (
       agentImageAvif={yanisPortraitAvif}
       agentImageSmAvif={yanisPortraitSmAvif}
       agentImageMdAvif={yanisPortraitMdAvif}
+      agentImageLg={yanisPortraitLg}
+      agentImageLgAvif={yanisPortraitLgAvif}
       agentName="Yanis Gauthier-Sigeris"
     />
 {/* Intro */}
