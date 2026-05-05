@@ -19,7 +19,6 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 import ygsLogo from "@/assets/ygs-logo-updated.png";
-import remaxBalloon from "@/assets/remax-balloon.png";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
 import { mainNav, type NavItem, type NavChild } from "@/data/navigation";
@@ -298,7 +297,7 @@ const SiteHeader = () => {
   const transparent = !mobileScrolled;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
-    top: 0,
+    top: "var(--ygs-utility-bar-height, 44px)",
     left: 0,
     width: "100%",
     zIndex: 50,
@@ -344,18 +343,6 @@ const SiteHeader = () => {
           >
             Yanis Gauthier-Sigeris
           </span>
-          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
-          <img
-            src={remaxBalloon}
-            alt=""
-            aria-hidden="true"
-            width={28}
-            height={34}
-            className="object-contain"
-            style={{ height: scrolled ? 30 : 34, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }}
-            loading="eager"
-            decoding="async"
-          />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
@@ -399,8 +386,6 @@ const SiteHeader = () => {
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
-          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor }} />
-          <img src={remaxBalloon} alt="" aria-hidden="true" width={26} height={32} className="object-contain" style={{ height: scrolled ? 28 : 32, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
@@ -440,7 +425,7 @@ const SiteHeader = () => {
           >
             Yanis Gauthier-Sigeris
           </span>
-          <img src={remaxBalloon} alt="" aria-hidden="true" width={18} height={22} className="shrink-0 object-contain" style={{ height: scrolled ? 20 : 22, width: "auto", filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
+          
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
