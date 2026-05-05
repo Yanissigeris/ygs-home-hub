@@ -111,10 +111,14 @@ const SiteLayout = () => {
 
   return (
     <div className="flex min-h-screen flex-col font-body">
-      <JsonLdSchema />
-      <LangMeta />
-      <BreadcrumbJsonLd />
-      <NavigationProgress />
+      {deferredReady && (
+        <>
+          <JsonLdSchema />
+          <LangMeta />
+          <BreadcrumbJsonLd />
+          <NavigationProgress />
+        </>
+      )}
 
       {/* Permanent dark gradient overlay behind the fixed header for white text legibility */}
       <div
@@ -133,7 +137,7 @@ const SiteLayout = () => {
       </a>
       <SiteHeader />
       <VisibleBreadcrumb />
-      <ScrollProgress />
+      {deferredReady && <ScrollProgress />}
       <main id="main-content" className="flex-1">
         <PageTransition>
           <React.Suspense fallback={<PageFallback />}>
