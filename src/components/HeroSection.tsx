@@ -908,13 +908,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {agentImageAvif && (
                 <source
                   type="image/avif"
-                  srcSet={agentImageAvif}
+                  srcSet={agentImageLgAvif ? `${agentImageAvif} 1x, ${agentImageLgAvif} 2x` : agentImageAvif}
                   media="(min-width: 768px)"
                 />
               )}
               <source
                 type="image/webp"
-                srcSet={agentImage}
+                srcSet={agentImageLg ? `${agentImage} 1x, ${agentImageLg} 2x` : agentImage}
                 media="(min-width: 768px)"
               />
               <img
