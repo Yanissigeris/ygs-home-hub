@@ -1029,10 +1029,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <span>300+ transactions</span>
                   </span>
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
-                  <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                  <Link to="/en/testimonials" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>5★ Google & Facebook</span>
-                  </a>
+                  </Link>
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
@@ -1051,10 +1051,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <span>300+ transactions</span>
                   </span>
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
-                  <a href="#avis" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                  <Link to="/temoignages" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
                     <span>5★ Google & Facebook</span>
-                  </a>
+                  </Link>
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />

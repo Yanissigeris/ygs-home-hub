@@ -297,7 +297,7 @@ const ValuationForm = ({
             isGlass ? "text-primary-foreground/40" : "text-muted-foreground",
           )}
         >
-          <Lock size={13} /> {t.confidential}
+          <Lock size={13} aria-hidden="true" /> {t.confidential}
         </div>
 
         {isGlass ? (
@@ -497,16 +497,16 @@ const ValuationForm = ({
             )}
           >
             <span className="flex items-center gap-1.5">
-              <BadgeCheck size={13} /> {t.badgeFree}
+              <BadgeCheck size={13} aria-hidden="true" /> {t.badgeFree}
             </span>
             <span className="flex items-center gap-1.5">
-              <Lock size={13} /> {t.badgeConfidential}
+              <Lock size={13} aria-hidden="true" /> {t.badgeConfidential}
             </span>
             <span className="flex items-center gap-1.5">
-              <Shield size={13} /> {t.badgeNoCommit}
+              <Shield size={13} aria-hidden="true" /> {t.badgeNoCommit}
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock size={13} /> {t.badge24h}
+              <Clock size={13} aria-hidden="true" /> {t.badge24h}
             </span>
           </div>
         )}
