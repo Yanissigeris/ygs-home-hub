@@ -137,7 +137,7 @@ const SiteLayout = () => {
       </a>
       <SiteHeader />
       <VisibleBreadcrumb />
-      <ScrollProgress />
+      {deferredReady && <ScrollProgress />}
       <main id="main-content" className="flex-1">
         <PageTransition>
           <React.Suspense fallback={<PageFallback />}>
