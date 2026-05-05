@@ -28,6 +28,8 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     const lang = useLanguage();
     const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
     const [expanded, setExpanded] = React.useState(false);
+    const accordionRef = React.useRef<HTMLDivElement | null>(null);
+    const firstNewIndexRef = React.useRef<number>(initialVisible);
 
     const visibleItems = expanded ? items : items.slice(0, initialVisible);
     const hasMore = items.length > initialVisible;
@@ -62,6 +64,23 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
       };
     }, [items]);
 
+    // After expanding, move keyboard focus to the first newly revealed question
+    // so screen-reader and keyboard users land on the new content (WCAG 2.4.3 / 4.1.3).
+    React.useEffect(() => {
+      if (!expanded || !accordionRef.current) return;
+      const triggers = accordionRef.current.querySelectorAll<HTMLButtonElement>(
+        '[data-radix-collection-item] button, button[aria-expanded]'
+      );
+      const target = triggers[firstNewIndexRef.current];
+      if (target) {
+        // next tick to let Radix mount the new items
+        const id = window.setTimeout(() => target.focus(), 50);
+        return () => window.clearTimeout(id);
+      }
+    }, [expanded]);
+
+    const accordionId = React.useId();
+
     return (
       <section ref={ref} className="section-padding bg-background">
         <div className="section-container max-w-[44rem]">
@@ -76,20 +95,26 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
             <h2>{resolvedTitle}</h2>
           </motion.div>
 
-          <Accordion type="single" collapsible defaultValue="faq-0">
-            {visibleItems.map((item, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="text-left font-body text-[0.9375rem] font-medium text-foreground hover:no-underline gap-3">
-                  {item.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-[0.875rem] leading-[1.65] text-muted-foreground">
-                  {item.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div ref={accordionRef} id={accordionId}>
+            <Accordion type="single" collapsible defaultValue="faq-0">
+              {visibleItems.map((item, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left font-body text-[0.9375rem] font-medium text-foreground hover:no-underline gap-3">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[0.875rem] leading-[1.65] text-muted-foreground">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
 
-          {/* Hidden items for SEO crawlability — always in DOM */}
+          {/* Hidden items for SEO crawlability — always in DOM.
+              Note: sr-only + aria-hidden is intentional: visible to crawlers
+              (text in DOM) but excluded from screen-reader DOM since the
+              same Q&A is exposed via the interactive accordion above when
+              the user clicks "Show all". */}
           {!expanded && hasMore && (
             <div className="sr-only" aria-hidden="true">
               {items.slice(initialVisible).map((item, i) => (
@@ -104,10 +129,12 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
           {hasMore && !expanded && (
             <button
               onClick={() => setExpanded(true)}
+              aria-expanded={expanded}
+              aria-controls={accordionId}
               className="mt-4 mx-auto flex items-center gap-1.5 text-[0.875rem] font-medium text-primary hover:text-primary/80 transition-colors"
             >
               {lang === "en" ? `Show all ${items.length} questions` : `Voir les ${items.length} questions`}
-              <ChevronDown size={14} />
+              <ChevronDown size={14} aria-hidden="true" />
             </button>
           )}
         </div>
