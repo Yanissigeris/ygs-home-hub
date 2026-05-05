@@ -224,7 +224,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
               {affiliationLogos.map((logo) => {
-                const inner = (
+                const inner = logo.custom ?? (
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -232,18 +232,32 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
+                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter ?? ""}`}
                   />
                 );
+                const caption = logo.caption ? (
+                  <p
+                    className="mt-1 text-center"
+                    style={{ fontSize: 10, lineHeight: 1.3, color: "rgba(255,255,255,.55)", fontWeight: 400 }}
+                  >
+                    {logo.caption}
+                  </p>
+                ) : null;
                 const tileStyle: React.CSSProperties = {
                   background: "rgba(255,255,255,.04)",
                   border: "1px solid rgba(255,255,255,.06)",
                   borderRadius: 3,
-                  padding: ".4rem .75rem",
-                  minHeight: 44,
+                  padding: ".5rem .75rem",
+                  minHeight: 56,
                   minWidth: 80,
                 };
-                if ("href" in logo && logo.href) {
+                const content = (
+                  <>
+                    {inner}
+                    {caption}
+                  </>
+                );
+                if (logo.href) {
                   return (
                     <a
                       key={logo.alt}
@@ -251,16 +265,16 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={lang === "en" ? "Visit remax-quebec.com" : "Visiter remax-quebec.com"}
-                      className="flex items-center justify-center"
+                      className="flex flex-col items-center justify-center"
                       style={tileStyle}
                     >
-                      {inner}
+                      {content}
                     </a>
                   );
                 }
                 return (
-                  <div key={logo.alt} className="flex items-center justify-center" style={tileStyle}>
-                    {inner}
+                  <div key={logo.alt} className="flex flex-col items-center justify-center" style={tileStyle}>
+                    {content}
                   </div>
                 );
               })}
