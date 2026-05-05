@@ -22,7 +22,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       background: "var(--white)",
       transitionDelay: `${index * 0.1}s`,
     }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px rgba(168,138,90,0.08)"; }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px var(--gold-veil-faint)"; }}
     onMouseLeave={(e) => { e.currentTarget.style.background = "var(--white)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
@@ -94,7 +94,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const review = reviews[current];
 
     return (
-      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "#FAF8F3" }}>
+      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
         {/* Decorative giant quote */}
         <span
           className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
@@ -129,7 +129,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
             {/* Right — featured quote */}
             <div
               style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 3, padding: "clamp(2rem, 4vw, 3rem)", transition: "box-shadow .5s cubic-bezier(.16,1,.3,1)" }}
-              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px rgba(168,138,90,0.08)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px var(--gold-veil-faint)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >
               <div style={{ color: "var(--gold)", letterSpacing: "2px", fontSize: ".72rem", marginBottom: "22px" }}>★★★★★</div>

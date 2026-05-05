@@ -128,7 +128,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
       <section
         ref={ref}
         className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:py-24"
-        style={{ background: "#F5F1EA" }}
+        style={{ background: "var(--cream-deep)" }}
       >
         {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
         <div
@@ -258,7 +258,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   e.currentTarget.style.transform = "";
                   e.currentTarget.style.background = "rgba(255,255,255,0.03)";
                   const title = e.currentTarget.querySelector('h3');
-                  if (title) title.style.color = "#F5F1EA";
+                  if (title) title.style.color = "var(--cream-deep)";
                 }}
               >
                 {p.badge && (
@@ -297,7 +297,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     fontStyle: "italic",
                     fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
                     fontWeight: 600,
-                    color: "#F5F1EA",
+                    color: "var(--cream-deep)",
                     letterSpacing: "-.01em",
                     marginBottom: "0.5rem",
                   }}

@@ -31,7 +31,7 @@ const items = [
 const defaultVars = {
   "--stats-bg": "var(--ink-mid)",
   "--stats-bg-gradient":
-    "linear-gradient(180deg, var(--ink-mid) 0%, #112E3A 50%, var(--ink-mid) 100%)",
+    "linear-gradient(180deg, var(--ink-mid) 0%, var(--ink-mid-deep) 50%, var(--ink-mid) 100%)",
   "--stats-text": "var(--white)",
   "--stats-text-shadow":
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",

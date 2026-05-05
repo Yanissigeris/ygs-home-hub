@@ -103,7 +103,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
           <p className="label-overline mb-2 justify-center" style={{ color: "var(--gold-warm-light)" }}>{cfg.overline}</p>
-          <h2 style={{ color: "#F5F1EA" }}>{cfg.title}</h2>
+          <h2 style={{ color: "var(--cream-deep)" }}>{cfg.title}</h2>
           <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.35)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
         </div>
 
@@ -144,7 +144,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "areas" ? "#F5F1EA" : "rgba(245,241,234,0.4)",
+                color: activeTab === "areas" ? "var(--cream-deep)" : "rgba(245,241,234,0.4)",
                 borderBottom: activeTab === "areas" ? "2px solid var(--gold)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
@@ -159,7 +159,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "services" ? "#F5F1EA" : "rgba(245,241,234,0.4)",
+                color: activeTab === "services" ? "var(--cream-deep)" : "rgba(245,241,234,0.4)",
                 borderBottom: activeTab === "services" ? "2px solid var(--gold)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
