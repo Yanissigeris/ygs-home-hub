@@ -65,6 +65,7 @@ const preloadHeroPortrait = () => {
   desktop.type = "image/avif";
   desktop.media = "(min-width: 768px)";
   desktop.fetchPriority = "high";
+  desktop.setAttribute("imagesrcset", `${yanisPortraitAvif} 1x, ${yanisPortraitLgAvif} 2x`);
   desktop.href = yanisPortraitAvif;
   document.head.appendChild(desktop);
 };
