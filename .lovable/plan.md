@@ -1,36 +1,34 @@
-# Sprint A11y-Critical — Plan (révisé)
+# Hero portrait LCP fix + FR/EN parity
 
-## FIX 1 — `aria-hidden` on decorative Lucide icons
+## Problem
+- Mobile LCP = 5.1s. App.tsx preloads AVIF nobg variants, but pages only pass `agentImage` (108 KiB webp), so HeroSection falls back to that and the preloaded AVIFs are wasted.
+- EN home applies a diagonal petrol veil over the hero (default `petrolGradient=true`); FR home passes `petrolGradient={false}`. Need parity.
 
-### `src/components/ValuationForm.tsx` (5 icons)
-Add `aria-hidden="true"`:
-- L300 `<Lock size={13} />`
-- L500 `<BadgeCheck size={13} />`
-- L503 `<Lock size={13} />`
-- L506 `<Shield size={13} />`
-- L509 `<Clock size={13} />`
+## Changes
 
-L485/487 already correct.
+### FIX 1 — `src/pages/Index.tsx`
+Replace L5 import `yanis-hero-portrait.webp` with the 6 nobg imports:
+- `yanis-portrait-nobg.webp` / `-sm.webp` / `-md.webp`
+- `yanis-portrait-nobg.avif` / `-sm.avif` / `-md.avif`
 
-### `src/components/HeroSection.tsx`
-**Verified:** all 8 icon usages L1019–1064 already pass `aria-hidden="true"` and props are spread onto root `<svg>` (L9–28). **No change needed.**
+In `<HeroSection>` (current `agentImage={yanisPortrait}`), add 5 props: `agentImageSm`, `agentImageMd`, `agentImageAvif`, `agentImageSmAvif`, `agentImageMdAvif`.
 
-## FIX 2 — Dead `#avis` links → `<Link to="...">`
+### FIX 2 — `src/pages/en/IndexEn.tsx`
+Same import swap (L11) and same 5 added props in `<HeroSection>`. Additionally add `petrolGradient={false}` to match FR home.
 
-`src/components/HeroSection.tsx` — `Link` already imported L2.
+### FIX 3 — `src/pages/OutaouaisHubPage.tsx`
+Already imports `yanisPortrait` + `yanisPortraitSm` (nobg). Add 4 imports: `-md.webp`, `.avif`, `-sm.avif`, `-md.avif`. Add 4 corresponding props after `agentImageSm` in `<HeroSection>`.
 
-- L1032 (EN): `<a href="#avis" className=... style=...>` → `<Link to="/en/testimonials" className=... style=...>` (closing tag → `</Link>`). Route verified `App.tsx` L330.
-- L1054 (FR): `<a href="#avis" className=... style=...>` → `<Link to="/temoignages" className=... style=...>` (closing tag → `</Link>`). Route verified `App.tsx` L280.
+### FIX 4 — `src/pages/en/OutaouaisHubPageEn.tsx`
+Same as Fix 3: add 4 imports + 4 props.
 
-`className`, `style`, inner content unchanged. Avoids full reload, preserves `PageTransition`.
-
-## FIX 3 — `SuccessMessage` live region
-
-`src/components/SuccessMessage.tsx` — add `role="status"` and `aria-live="polite"` to root `<div>`.
+## Guardrails
+- No changes to `HeroSection.tsx`, `App.tsx`, copy, routes, JSON-LD, meta, tokens.
+- Only intentional visual change: EN home loses the petrol veil (parity with FR).
+- `yanis-hero-portrait.webp` left in repo (cleanup separately).
 
 ## Files changed
-- `src/components/ValuationForm.tsx` (5 lines)
-- `src/components/HeroSection.tsx` (2 anchors → Link)
-- `src/components/SuccessMessage.tsx` (1 line)
-
-No visual changes, no route/JSON-LD/meta/token changes.
+- `src/pages/Index.tsx`
+- `src/pages/en/IndexEn.tsx`
+- `src/pages/OutaouaisHubPage.tsx`
+- `src/pages/en/OutaouaisHubPageEn.tsx`
