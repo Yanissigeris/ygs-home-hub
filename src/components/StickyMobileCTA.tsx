@@ -62,6 +62,9 @@ const StickyMobileCTA = () => {
   const ctaLabel = cta.label;
   const ctaHref = cta.href;
   const callLabel = lang === "en" ? "📞 Call" : "📞 Appeler";
+  const callAriaLabel = lang === "en"
+    ? "Call Yanis Gauthier-Sigeris at 819-210-3044"
+    : "Appeler Yanis Gauthier-Sigeris au 819-210-3044";
 
   useEffect(() => {
     const onScroll = () => {
@@ -88,6 +91,8 @@ const StickyMobileCTA = () => {
 
   return (
     <div
+      role="region"
+      aria-label={lang === "en" ? "Quick actions" : "Actions rapides"}
       className="fixed bottom-0 inset-x-0 z-[500] md:hidden"
       style={{
         transform: visible ? "translateY(0)" : "translateY(100%)",
@@ -98,6 +103,7 @@ const StickyMobileCTA = () => {
         padding: "0.85rem 1.25rem",
         paddingBottom: "calc(0.85rem + env(safe-area-inset-bottom))",
       }}
+      aria-hidden={!visible}
     >
       <div className="flex gap-2">
         <Link
@@ -117,6 +123,8 @@ const StickyMobileCTA = () => {
         </Link>
         <a
           href="tel:+18192103044"
+          aria-label={callAriaLabel}
+          onClick={() => trackCTAClick("call", "sticky-mobile-cta")}
           className="flex-1 inline-flex items-center justify-center transition-colors"
           style={{
             background: "transparent",
@@ -129,7 +137,7 @@ const StickyMobileCTA = () => {
             fontWeight: 500,
           }}
         >
-          {callLabel}
+          <span aria-hidden="true">{callLabel}</span>
         </a>
       </div>
     </div>
