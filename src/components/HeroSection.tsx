@@ -165,6 +165,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       agentImageAvif,
       agentImageSmAvif,
       agentImageMdAvif,
+      agentImageLg,
+      agentImageLgAvif,
       agentName,
       heroBgImage,
       heroBgImageMobile,
