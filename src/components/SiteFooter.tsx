@@ -43,7 +43,7 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
         <ul className="space-y-2.5">
           {links.map((l) => (
             <li key={l.href + l.label}>
-              <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
+              <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">{l.label}</Link>
             </li>
           ))}
         </ul>
@@ -108,7 +108,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.5)", fontStyle: "italic" }}>
+            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.7)", fontStyle: "italic" }}>
               {tagline}
             </p>
 
@@ -125,7 +125,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   rel="noopener noreferrer"
                   aria-label={label}
                   className="flex items-center justify-center rounded-full transition-colors duration-200"
-                  style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.4)" }}
+                  style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.65)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "var(--white)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.1)"; e.currentTarget.style.color = "rgba(255,255,255,.4)"; }}
                 >
@@ -154,7 +154,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.4)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
+                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>
@@ -179,7 +179,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   className="transition-colors duration-200"
                   style={{
                     fontSize: ".7rem",
-                    color: "rgba(255,255,255,.28)",
+                    color: "rgba(255,255,255,.6)",
                     border: "1px solid rgba(255,255,255,.06)",
                     borderRadius: 3,
                     padding: ".2rem .55rem",
@@ -235,19 +235,19 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── RE/MAX mention ── */}
           <div className="text-center py-3">
-            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.18)", fontWeight: 300 }}>
+            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.55)", fontWeight: 300 }}>
               {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
             </p>
           </div>
 
-          {/* ── NAP ── */}         <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>           <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.3)", fontWeight: 300 }}>             {lang === "en" ? "819-210-3044" : "819-210-3044"}             {" · "}             <a href="mailto:yanis@martywaite.com" style={{ color: "rgba(255,255,255,.3)" }}>yanis@martywaite.com</a>             {" · "}             {lang === "en" ? "216 chemin d'Aylmer, Gatineau, QC J9H 1A4" : "216, chemin d'Aylmer, Gatineau, QC J9H 1A4"}           </p>         </div>         {/* ── Copyright ── */}
+          {/* ── NAP ── */}         <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>           <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }}>             {lang === "en" ? "819-210-3044" : "819-210-3044"}             {" · "}             <a href="mailto:yanis@martywaite.com" style={{ color: "rgba(255,255,255,.65)" }}>yanis@martywaite.com</a>             {" · "}             {lang === "en" ? "216 chemin d'Aylmer, Gatineau, QC J9H 1A4" : "216, chemin d'Aylmer, Gatineau, QC J9H 1A4"}           </p>         </div>         {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.2)", padding: "0 1rem" }}>{legalText}</p>
+            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
             <div className="mt-2 flex justify-center gap-4">
-              <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
-              <Link to={lang === "en" ? "/en/terms" : "/conditions-utilisation"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.2)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/terms" : "/conditions-utilisation"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
               </Link>
             </div>

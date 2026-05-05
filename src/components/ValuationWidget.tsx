@@ -163,7 +163,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
     borderRadius: 3,
     background: "var(--white)",
     color: "var(--ink)",
-    outline: "none",
     transition: "border-color .2s, box-shadow .2s",
   });
 
@@ -301,7 +300,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                     borderRadius: 3,
                     background: "var(--white)",
                     color: "var(--ink)",
-                    outline: "none",
                     transition: "border-color .2s, box-shadow .2s",
                   }}
                   onFocus={(e) => {
@@ -421,7 +419,6 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   fontSize: ".95rem",
                   fontFamily: "var(--sans)",
                   resize: "none",
-                  outline: "none",
                   color: "var(--ink)",
                   background: "var(--white)",
                 }}
