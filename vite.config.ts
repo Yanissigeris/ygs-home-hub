@@ -15,20 +15,34 @@ function htmlOptimizePlugin() {
     apply: "build" as const,
     enforce: "post" as const,
     generateBundle(_, bundle) {
-      // Find the portrait asset (LCP element)
+      // Find the portrait asset (LCP element on mobile)
       const portraitKey = Object.keys(bundle).find((k) =>
         k.includes("yanis-portrait-nobg")
+      );
+      // Find hero background variants (LCP element on desktop home).
+      const heroBgMobileAvifKey = Object.keys(bundle).find((k) =>
+        /hero-yanis-interior-mobile.*\.avif$/.test(k)
+      );
+      const heroBgDesktopAvifKey = Object.keys(bundle).find(
+        (k) => /hero-yanis-interior.*\.avif$/.test(k) && !k.includes("mobile")
       );
 
       for (const [fileName, chunk] of Object.entries(bundle)) {
         if (!fileName.endsWith(".html") || chunk.type !== "asset") continue;
         let html = chunk.source as string;
 
-        // 1) Inject conditional portrait preload — only on routes that actually
-        //    render the portrait above the fold (home FR/EN + Outaouais hub).
-        //    Avoids "preloaded but not used" warnings on the other ~140 routes.
-        if (portraitKey) {
-          const conditionalPreload = `<script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/${portraitKey}';l.setAttribute('fetchpriority','high');document.head.appendChild(l);}})();</script>`;
+        // 1) Inject conditional asset preloads — only on home + Outaouais hub.
+        if (portraitKey || heroBgMobileAvifKey || heroBgDesktopAvifKey) {
+          const portraitLink = portraitKey
+            ? `var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/${portraitKey}';l.setAttribute('fetchpriority','high');document.head.appendChild(l);`
+            : "";
+          const bgMobileLink = heroBgMobileAvifKey
+            ? `var bm=document.createElement('link');bm.rel='preload';bm.as='image';bm.type='image/avif';bm.media='(max-width: 767px)';bm.href='/${heroBgMobileAvifKey}';bm.setAttribute('fetchpriority','high');document.head.appendChild(bm);`
+            : "";
+          const bgDesktopLink = heroBgDesktopAvifKey
+            ? `var bd=document.createElement('link');bd.rel='preload';bd.as='image';bd.type='image/avif';bd.media='(min-width: 768px)';bd.href='/${heroBgDesktopAvifKey}';bd.setAttribute('fetchpriority','high');document.head.appendChild(bd);`
+            : "";
+          const conditionalPreload = `<script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){${portraitLink}${bgMobileLink}${bgDesktopLink}}})();</script>`;
           html = html.replace(
             "<meta charset",
             `${conditionalPreload}\n    <meta charset`

@@ -2,6 +2,8 @@ import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import yanisHero from "@/assets/hero-yanis-interior.webp";
+import yanisHeroAvif from "@/assets/hero-yanis-interior.avif";
+import yanisHeroMobileAvif from "@/assets/hero-yanis-interior-mobile.avif";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
@@ -54,6 +56,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={yanisHero}
+      heroBgImageMobile={yanisHeroMobileAvif}
+      heroBgImageAvif={yanisHeroAvif}
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
       agentImageMd={yanisPortraitMd}

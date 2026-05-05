@@ -640,30 +640,30 @@ h1.hero-eyebrow {
   50%      { transform: translate(-50%, 8px); }
 }
 
-/* Hero fade-in (replaces framer-motion above-the-fold to keep critical JS lean) */
+/* Hero fade-in (replaces framer-motion above-the-fold to keep critical JS lean).
+ * NOTE: starts at opacity:1 so Chrome counts the element as an LCP candidate
+ * immediately. Visual reveal is transform-only (translateY → 0). */
 @keyframes hero-fade-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(12px); }
+  to   { transform: translateY(0); }
 }
 .hero-fade-in {
-  opacity: 0;
   animation: hero-fade-in 0.55s cubic-bezier(.22,.61,.36,1) forwards;
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-fade-in { animation: none; opacity: 1; transform: none; }
+  .hero-fade-in { animation: none; transform: none; }
 }
 
-/* Hero H1 dramatic reveal — slower + larger translate for editorial moment */
+/* Hero H1 dramatic reveal — transform-only so the H1 is LCP-eligible from t=0. */
 @keyframes hero-h1-reveal {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(24px); }
+  to   { transform: translateY(0); }
 }
 .hero-h1-reveal {
-  opacity: 0;
   animation: hero-h1-reveal 0.85s cubic-bezier(.22,.61,.36,1) forwards;
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-h1-reveal { animation: none; opacity: 1; transform: none; }
+  .hero-h1-reveal { animation: none; transform: none; }
 }
 
 /* Hero CTA — premium hover (desktop) + tactile active (mobile) */
