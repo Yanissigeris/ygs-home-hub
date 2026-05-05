@@ -1,56 +1,37 @@
-# Phase 6 — Alt-Section Bleed-Through Fix + Contrast Lift
+## Goal
+Layer a diagonal petrol gradient (135°, ink → deeper ink) over the hero image on every page using `<HeroSection>`, except the homepage (`src/pages/Index.tsx`).
 
-Surgical token/class mop-up across 36 files. No logic changes.
+## Approach
+Add a new opt-out prop on `HeroSection` rather than touching ~80 page files.
 
-## Edit 1 — Swap `bg-secondary/20` → `bg-[var(--cream)]` (34 occurrences)
+### 1. `src/components/HeroSection.tsx`
+- Add prop: `petrolGradient?: boolean` (defaults to `true`).
+- In the full hero variant (line ~532+), when `petrolGradient !== false` and `heroBgImage && !heroVideo`, render an additional absolutely-positioned overlay div above the image (z-index between image and content):
+  ```tsx
+  <div
+    className="absolute inset-0 pointer-events-none"
+    aria-hidden="true"
+    style={{
+      zIndex: 2,
+      background:
+        "linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%)",
+    }}
+  />
+  ```
+  Reuses the exact stops from the existing `.hero-gradient--with-bg` utility in `src/index.css` for visual consistency.
+- In the compact variant (line ~480), the existing dynamic `baseStart/baseMid/baseEnd` overlay already provides petrol veiling — leave untouched to preserve the lerp scroll behavior.
+- Skip when no `heroBgImage` (already solid ink) or when video is used (video variant has its own overlay stack).
 
-Replace exact substring only; preserve all surrounding classes.
+### 2. `src/pages/Index.tsx`
+- Pass `petrolGradient={false}` to `<HeroSection>` (line 43) so the homepage hero remains unchanged.
 
-**Components (18):** ImageTextSplit:22, ContentBlock:19, ProcessSteps:28, ProfileSection:33, FormSection:24, CredibilitySection:24, CalculatorsSection:35, ReviewSection:30, LocalSEOCluster:20, LinkedCardGrid:29, SocialProofStrip:41, SectorLinks:38, CardGrid:30, ReviewStrip:14, FunnelNextStep:34, RelatedPages:25, TestimonialPlaceholder:23, GuideRequestForm:95.
+## Out of scope
+- `src/components/HeroSection.tsx` lerp/scroll overlays, ring, recognition card, video overlay stack — untouched.
+- `BlogArticlePage.tsx` editorial split hero — does not use `<HeroSection>`, untouched.
+- `src/index.css` tokens and `.hero-gradient*` utilities — untouched.
+- All consumer pages — no edits needed (default-on prop).
 
-**Pages (16):** VerifierCourtierOaciqPage:56, AylmerPage:151/207/275, AylmerPageEn:148/202/268, OutaouaisHubPageEn:79/123, TestimonialsPageEn:37, GatineauCentrePageEn:120, CommentChoisirCourtierPage:67, TestimonialsPage:49, GatineauCentrePage:120, OutaouaisHubPage:85/129.
-
-## Edit 2 — Pontiac card divs → `bg-card` (2 occurrences)
-
-These are cards inside an opaque cream parent; white keeps separation.
-
-- `src/pages/PontiacPage.tsx:154`
-- `src/pages/en/PontiacPageEn.tsx:154`
-
-Find: `bg-secondary/20 border border-border rounded-lg p-6 space-y-3`
-Replace: `bg-card border border-border rounded-lg p-6 space-y-3`
-
-## Edit 3 — Lift muted-foreground contrast (1 line)
-
-`src/index.css:26`
-- From: `--muted-foreground: 200 12% 46%;`
-- To:   `--muted-foreground: 200 30% 35%;`
-
-Lifts contrast on cream from 4.05:1 → ~7:1 (AAA).
-
-## Carve-outs (unchanged)
-
-- All other `:root` tokens in `src/index.css`.
-- All other `bg-secondary/N` classes (/25, /30, /40, /70, /80).
-- All `bg-background`, `bg-card` (existing), `bg-[var(--ink)]`, `bg-primary`, `bg-foreground` references.
-- `index.html` critical above-fold CSS (intentional anti-flash).
-- `tailwind.config.ts`.
-- All component logic, props, framer-motion, Suspense.
-
-## Post-edit verification
-
-Run all 6 grep checks and report:
-1. `grep -rIn "bg-secondary/20" src/` → empty
-2. `grep -rho "bg-\[var(--cream)\]" src/ | wc -l` → 34
-3. `grep -n "bg-card border border-border rounded-lg p-6 space-y-3" src/pages/PontiacPage.tsx src/pages/en/PontiacPageEn.tsx` → 2 lines
-4. `grep -n "muted-foreground: 200 30% 35%" src/index.css` → 1 hit at line 26
-5. `grep -n "muted-foreground: 200 12% 46%" src/index.css` → empty
-6. `grep -rho "bg-secondary/\(25\|30\|40\|70\|80\)" src/ | wc -l` → 5+
-
-If any check fails, halt and report. Update `.lovable/plan.md` with Phase 6 log.
-
-## Phase 6 — Applied
-- 34× `bg-secondary/20` → `bg-[var(--cream)]` (18 components, 16 pages)
-- 2× Pontiac card divs → `bg-card` (FR + EN)
-- `--muted-foreground` lifted 200 12% 46% → 200 30% 35% (AA → AAA on cream)
-- All 6 verification greps passed. Other `bg-secondary/N` (18 hits) untouched.
+## Verification
+- Homepage hero pixel-identical (prop opt-out).
+- Sample subpage heroes (Aylmer, Hull, Market Report, Thank You) show new diagonal petrol veil over image; text contrast improved or equal.
+- Build passes.
