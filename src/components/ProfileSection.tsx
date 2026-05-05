@@ -10,6 +10,7 @@ interface ProfileItem {
   subtitle?: string;
   logo?: string;
   logoAlt?: string;
+  affiliationSlot?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -26,6 +27,7 @@ const ProfileSection = ({
   subtitle,
   logo,
   logoAlt,
+  affiliationSlot,
   children,
   background = "default",
   imagePosition = "left",
@@ -54,14 +56,15 @@ const ProfileSection = ({
               src={logo}
               alt={logoAlt || ""}
               className="mx-auto h-auto"
-              style={{ width: "clamp(145px, 20vw, 180px)" }}
-              width={180}
-              height={60}
+              style={{ width: "clamp(70px, 10vw, 90px)" }}
+              width={90}
+              height={30}
               loading="lazy"
               decoding="async"
             />
           </div>
         )}
+        {affiliationSlot}
       </motion.div>
       <motion.div
         className={imagePosition === "right" ? "order-1" : ""}

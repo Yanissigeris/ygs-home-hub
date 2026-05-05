@@ -11,6 +11,7 @@ import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
 import ProfileSection from "@/components/ProfileSection";
 import ContactCard from "@/components/ContactCard";
+import RemaxAgencyBlock from "@/components/RemaxAgencyBlock";
 import FormSection from "@/components/FormSection";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
@@ -37,9 +38,10 @@ const services = [
 
 
 const contactItems = [
-  { icon: Phone, text: "819-210-3044" },
-  { icon: Mail, text: "yanis@martywaite.com" },
-  { icon: MapPin, text: "Gatineau, QC" },
+  { icon: Phone, label: "Bur.", value: "819-684-0000", href: "tel:+18196840000" },
+  { icon: Phone, label: "Cell.", value: "819-210-3044", href: "tel:+18192103044" },
+  { icon: Mail, label: "Email", value: "yanis@martywaite.com", href: "mailto:yanis@martywaite.com" },
+  { icon: MapPin, label: "Région", value: "Gatineau, Aylmer, Hull, Plateau" },
 ];
 
 const ContactPage = () => {
@@ -84,6 +86,7 @@ const ContactPage = () => {
         subtitle="Affilié RE/MAX · Équipe Marty Waite"
         logo={logoYgsVertical}
         logoAlt="YGS - Yanis Gauthier-Sigeris Inc."
+        affiliationSlot={<RemaxAgencyBlock lang="fr" />}
       >
         <p className="prose-body mt-6">
           Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
