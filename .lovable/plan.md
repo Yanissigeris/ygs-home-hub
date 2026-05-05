@@ -1,52 +1,57 @@
-## Mobile LCP optimization — Home (FR + EN)
+# Fix blurry desktop/tablet portrait
 
-### Problems found
+## Root cause
 
-1. **Wrong image preloaded.** `index.html` (lines 75-81) preloads `/hero-living-room-mobile.webp` as the "video poster". But Home no longer uses `heroVideo` — it uses `heroBgImage = hero-yanis-interior.webp`. The preload is wasted bandwidth (~30 KB on the critical path) and the actual LCP image is **not preloaded at all**.
+Currently the portrait `<picture media="(min-width: 768px)">` serves a single 640×960 WebP/AVIF. The hero portrait renders at `height: 92%` of a tall hero on desktop — on a 1440px+ screen with retina (2x DPR), the rendered size is ~700–900 CSS px wide → 1400–1800 device px wide. A 640px source upscales heavily, hence the blur. On tablets at 2x DPR (iPad ~768 CSS px), it's also undersized.
 
-2. **No mobile variant of the hero background.** `hero-yanis-interior.webp` is a single 1365×768 / 51 KB file served to phones at ~390 CSS px wide. A 768w mobile AVIF would be ~12-18 KB.
+Mobile (≤767px) currently uses sm (320), md (480), full (640) at 1x/2x/3x — those tiers are correctly sized for phone CSS widths, so we leave them alone.
 
-3. **H1 hidden by `opacity: 0` animation.** `.hero-h1-reveal` (index.css:661) starts at `opacity: 0` and animates 0.85s. Chrome won't count an `opacity: 0` element as an LCP candidate, so if the H1 is the LCP, LCP is delayed by the full animation duration (~850ms). Same issue for `.hero-fade-in` (0.55s).
+## Changes (desktop/tablet only)
 
-4. **The portrait preload uses `media="(max-width: 767px)"` with DPR `x` descriptors and Vite-hashed URLs** — already optimal. Keep as-is.
+### 1. Generate a high-res portrait variant
+From the existing `src/assets/yanis-portrait-raw.webp` (1280×1920 source, fully transparent cutout):
+- `src/assets/yanis-portrait-nobg-lg.avif` — 1280×1920, AVIF q≈55 (~50–70 KB)
+- `src/assets/yanis-portrait-nobg-lg.webp` — 1280×1920, WebP q≈80 (~90–120 KB)
 
-### Changes
+This is the same cutout (no background), just at the original resolution.
 
-**A. `index.html` lines 61-99 (inline preload script)**
-- Remove the `/hero-living-room*.webp` poster preload (no `<video>` on home).
-- Preload the hero **background** image instead. Use the new mobile AVIF on phones, the existing WebP on desktop, both via Vite-hashed paths discovered at build via `htmlOptimizePlugin`.
+### 2. `src/components/HeroSection.tsx` — desktop `<picture>` block (lines 902–943)
+Add new optional props `agentImageLg` / `agentImageLgAvif`. In the desktop `<source>` tags, switch from a single URL to a 1x/2x `srcSet`:
+- AVIF source: `${agentImageAvif} 1x, ${agentImageLgAvif} 2x`
+- WebP source: `${agentImage} 1x, ${agentImageLg} 2x`
 
-**B. `vite.config.ts` `htmlOptimizePlugin`**
-- Extend the bundle scan to find `hero-yanis-interior` and `hero-yanis-interior-mobile` (new) hashed assets.
-- Inject a conditional preload on home routes (`/`, `/en`, `/en/`) using `<link rel="preload" as="image" type="image/avif" media="(max-width: 767px)" href="…mobile.avif" fetchpriority="high">` + a desktop equivalent for the existing webp.
+The mobile `<picture md:hidden>` block stays untouched.
 
-**C. New asset variants**
-- Generate `src/assets/hero-yanis-interior-mobile.avif` (~768w, q60) and `src/assets/hero-yanis-interior.avif` (~1600w, q55) using imagemagick. Target sizes: ~14 KB mobile, ~45 KB desktop.
+### 3. `src/App.tsx` desktop preload (lines 61–68)
+Replace the single `desktop.href` with `imagesrcset`:
+```
+desktop.setAttribute('imagesrcset', `${yanisPortraitAvif} 1x, ${yanisPortraitLgAvif} 2x`);
+desktop.href = yanisPortraitAvif; // fallback
+```
+Add the new `yanisPortraitLgAvif` import.
 
-**D. `src/components/HeroSection.tsx` lines 546-566 (heroBgImage `<img>`)**
-- Wrap in `<picture>` so phones download the mobile AVIF and desktops download the existing WebP. Keep `loading="eager"`, `fetchpriority="high"`, `decoding="async"`. This guarantees the preload byte-matches what the DOM renders (zero double-download).
+### 4. `vite.config.ts` `htmlOptimizePlugin` (lines 18–45)
+Find `yanis-portrait-nobg-lg` in the bundle and inject the desktop preload as `imagesrcset="… 1x, …-lg 2x"` (the current mobile-only `fetchpriority` preload becomes a tablet/desktop-aware media-gated preload).
 
-**E. `src/components/HeroSection.tsx` lines 713-735 (H1) + `src/index.css` lines 644-666**
-- Remove `opacity: 0` starting state from `.hero-h1-reveal` and `.hero-fade-in` so the H1/eyebrow are immediately LCP-eligible. Replace with a `transform`-only animation (translateY → 0) which Chrome counts toward LCP. Keeps the visual reveal, removes the LCP penalty.
+### 5. Pages that pass portrait props
+Add the two new imports + props in:
+- `src/pages/Index.tsx`
+- `src/pages/en/IndexEn.tsx`
+- `src/pages/OutaouaisHubPage.tsx`
+- `src/pages/en/OutaouaisHubPageEn.tsx`
 
-**F. New `Index.tsx` / `IndexEn.tsx` props**
-- Pass `heroBgImageMobile` (new optional prop) so `HeroSection` can pick the mobile AVIF in the `<picture>` source.
+```ts
+import yanisPortraitLg from "@/assets/yanis-portrait-nobg-lg.webp";
+import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
+// pass to <HeroSection ... agentImageLg={yanisPortraitLg} agentImageLgAvif={yanisPortraitLgAvif} />
+```
 
-### Files touched
-- `index.html` (preload script)
-- `vite.config.ts` (htmlOptimizePlugin)
-- `src/components/HeroSection.tsx` (heroBgImage `<picture>`, prop, H1 animation class)
-- `src/index.css` (`.hero-h1-reveal`, `.hero-fade-in` keyframes)
-- `src/pages/Index.tsx`, `src/pages/en/IndexEn.tsx` (new prop)
-- `src/assets/hero-yanis-interior-mobile.avif`, `hero-yanis-interior.avif` (new)
+## Out of scope
+- Mobile portrait tiers (no quality change requested).
+- Hero background image, fonts, CSS animations, vendor chunks.
+- Any copy / SEO / JSON-LD / route changes.
 
-### Out of scope / unchanged
-- Portrait preload + `<picture>` (already optimal).
-- Vendor chunk splitting.
-- Routes, copy, JSON-LD, meta tags, fonts.
-- Other pages (only home FR/EN).
-
-### Expected outcome
-- Mobile LCP image drops from a 51 KB un-preloaded WebP to a ~14 KB preloaded AVIF.
-- H1 becomes LCP-eligible immediately on render (saves ~400-850 ms when text is the LCP).
-- Net mobile LCP improvement: ~600-1200 ms (target: under 2.5 s vs current 5.1 s, combined with prior fixes).
+## Expected impact
+- Tablet/desktop retina: portrait crisp at native pixel density (1280px source for up to ~640 CSS px wide rendering, well above current desktop layout).
+- Mobile: identical bytes as today (still serves sm/md/full AVIF via DPR).
+- Desktop LCP cost: ~+30 KB AVIF on 2x desktops (acceptable; preload + AVIF still fast). 1x desktops/laptops still get the 17 KB original.
