@@ -112,6 +112,7 @@ const SiteLayout = () => {
 
   return (
     <div className="flex min-h-screen flex-col font-body">
+      <RemaxUtilityBar />
       {deferredReady && (
         <>
           <JsonLdSchema />
@@ -124,8 +125,9 @@ const SiteLayout = () => {
       {/* Permanent dark gradient overlay behind the fixed header for white text legibility */}
       <div
         aria-hidden="true"
-        className="fixed left-0 top-0 w-full h-[100px] md:h-[120px]"
+        className="fixed left-0 w-full h-[100px] md:h-[120px]"
         style={{
+          top: "var(--ygs-utility-bar-height, 44px)",
           zIndex: 49,
           pointerEvents: "none",
           background:

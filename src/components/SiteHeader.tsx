@@ -298,7 +298,7 @@ const SiteHeader = () => {
   const transparent = !mobileScrolled;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
-    top: 0,
+    top: "var(--ygs-utility-bar-height, 44px)",
     left: 0,
     width: "100%",
     zIndex: 50,
