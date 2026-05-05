@@ -49,15 +49,15 @@ const BlogPageEn = () => {
           <div className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:gap-12 items-start">
             <div>
               <div className="flex items-center gap-3">
-                <span className="block h-px w-8" style={{ background: "#A88A5A" }} />
-                <span style={{ color: "#A88A5A", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
+                <span className="block h-px w-8" style={{ background: "var(--gold)" }} />
+                <span style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
                   YGS · Analysis & Insights
                 </span>
               </div>
               <h1 className="mt-5 font-display" style={{ color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
                 Outaouais
                 <br />
-                <span style={{ color: "#A88A5A", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
+                <span style={{ color: "var(--gold)", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
               </h1>
               <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.5, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analysis, and advice to help you buy, sell, or invest smartly in Gatineau and the Outaouais.
@@ -80,7 +80,7 @@ const BlogPageEn = () => {
                   <span className="font-display" style={{ color: "var(--cream)", fontSize: "36px", fontWeight: 300, lineHeight: 1 }}>
                     {stat.value}
                   </span>
-                  <span className="uppercase" style={{ color: "#A88A5A", fontSize: "10px", letterSpacing: "0.16em" }}>
+                  <span className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
                     {stat.label}
                   </span>
                 </div>
@@ -93,7 +93,7 @@ const BlogPageEn = () => {
       {/* Ticker */}
       <div
         className="w-full overflow-hidden"
-        style={{ background: "#A88A5A", height: "38px" }}
+        style={{ background: "var(--gold)", height: "38px" }}
         aria-hidden="true"
       >
         <div className="flex h-full items-center" style={{ animation: "blog-ticker-en 30s linear infinite", whiteSpace: "nowrap" }}>
@@ -143,31 +143,31 @@ const BlogPageEn = () => {
           <div className="grid gap-0 md:grid-cols-2 overflow-hidden rounded-lg border border-border/40">
             <div className="p-8 sm:p-10 lg:p-12 bg-background flex flex-col">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="uppercase font-semibold" style={{ color: "#A88A5A", fontSize: "10px", letterSpacing: "0.16em" }}>
+                <span className="uppercase font-semibold" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
                   {featured.categoryEn}
                 </span>
-                <span style={{ color: "#17303B", opacity: 0.4, fontSize: "11px" }}>·</span>
-                <time style={{ color: "#17303B", opacity: 0.5, fontSize: "11px" }}>
+                <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
+                <time style={{ color: "var(--ink)", opacity: 0.5, fontSize: "11px" }}>
                   {new Date(featured.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               </div>
-              <h2 className="mt-5 font-display" style={{ color: "#17303B", fontSize: "clamp(1.75rem, 3.5vw, 40px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
+              <h2 className="mt-5 font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.75rem, 3.5vw, 40px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
                 {featured.titleEn}
               </h2>
-              <p className="mt-5 flex-1" style={{ color: "#17303B", opacity: 0.7, fontSize: "14px", lineHeight: 1.65 }}>
+              <p className="mt-5 flex-1" style={{ color: "var(--ink)", opacity: 0.7, fontSize: "14px", lineHeight: 1.65 }}>
                 {featured.excerptEn}
               </p>
               <Link
                 to={`/en/blog/${featured.slugEn}`}
                 className="mt-6 inline-flex items-center gap-2 font-medium transition-opacity hover:opacity-70"
-                style={{ color: "#A88A5A", fontSize: "13px", letterSpacing: "0.04em" }}
+                style={{ color: "var(--gold)", fontSize: "13px", letterSpacing: "0.04em" }}
               >
                 Read the analysis <span aria-hidden>→</span>
               </Link>
             </div>
 
-            <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid #A88A5A" }}>
-              <blockquote className="font-display italic" style={{ color: "#17303B", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
+            <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
+              <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
                 "In March 2026, plex in Gatineau sell in an average of 23 days — down from 65 days a year earlier."
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
@@ -177,10 +177,10 @@ const BlogPageEn = () => {
                   { value: "$585,500", label: "Median price" },
                 ].map((s) => (
                   <div key={s.label}>
-                    <div className="font-display" style={{ color: "#17303B", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
+                    <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
                       {s.value}
                     </div>
-                    <div className="mt-2 uppercase" style={{ color: "#17303B", opacity: 0.5, fontSize: "10px", letterSpacing: "0.14em" }}>
+                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.5, fontSize: "10px", letterSpacing: "0.14em" }}>
                       {s.label}
                     </div>
                   </div>
@@ -204,7 +204,7 @@ const BlogPageEn = () => {
               <span
                 aria-hidden
                 className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-                style={{ background: "#A88A5A" }}
+                style={{ background: "var(--gold)" }}
               />
               {post.featuredImage && (
                 <div className="aspect-[16/9] overflow-hidden">
