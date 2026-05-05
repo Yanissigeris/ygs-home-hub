@@ -328,8 +328,8 @@ const SiteHeader = () => {
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center xl:mr-12" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }} aria-label="Yanis Gauthier-Sigeris — Accueil">
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+        <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <span
             className="text-[15px] lg:text-[17px]"
@@ -347,7 +347,8 @@ const SiteHeader = () => {
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <img
             src={remaxBalloon}
-            alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"}
+            alt=""
+            aria-hidden="true"
             width={28}
             height={34}
             className="object-contain"
@@ -396,10 +397,10 @@ const SiteHeader = () => {
 
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }}>
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor }} />
-          <img src={remaxBalloon} alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"} width={26} height={32} className="object-contain" style={{ height: scrolled ? 28 : 32, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
+          <img src={remaxBalloon} alt="" aria-hidden="true" width={26} height={32} className="object-contain" style={{ height: scrolled ? 28 : 32, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
@@ -421,8 +422,8 @@ const SiteHeader = () => {
 
       {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
-        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }} onClick={closeMenu}>
-          <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
+        <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
           <span
             style={{
               fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -439,7 +440,7 @@ const SiteHeader = () => {
           >
             Yanis Gauthier-Sigeris
           </span>
-          <img src={remaxBalloon} alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"} width={18} height={22} className="shrink-0 object-contain" style={{ height: scrolled ? 20 : 22, width: "auto", filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
+          <img src={remaxBalloon} alt="" aria-hidden="true" width={18} height={22} className="shrink-0 object-contain" style={{ height: scrolled ? 20 : 22, width: "auto", filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
