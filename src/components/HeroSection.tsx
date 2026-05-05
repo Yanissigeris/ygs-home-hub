@@ -566,6 +566,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         )}
 
+        {/* Petrol gradient overlay — diagonal ink veil over the hero image (opt-out via petrolGradient={false}). */}
+        {petrolGradient && heroBgImage && !heroVideo && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              zIndex: 2,
+              background:
+                "linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%)",
+            }}
+          />
+        )}
+
         {/* Poster image — always visible UNDER the video. Acts as the LCP candidate
             on iOS Safari (where <video poster> is unreliable) and prevents any black
             flicker before the video reaches its first frame. */}
