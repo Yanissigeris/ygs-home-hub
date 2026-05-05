@@ -30,7 +30,7 @@ const ProfileSection = ({
   background = "default",
   imagePosition = "left",
 }: ProfileSectionProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className={`section-container grid gap-12 lg:gap-16 ${imagePosition === "left" ? "lg:grid-cols-[38%_62%]" : "lg:grid-cols-[62%_38%]"} lg:items-start`}>
       <motion.div
         className={`space-y-8 ${imagePosition === "right" ? "order-2" : ""}`}

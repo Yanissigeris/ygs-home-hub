@@ -26,7 +26,7 @@ const LinkedCardGrid = ({
   columns = 2,
   background = "default",
 }: LinkedCardGridProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
       <motion.div
         className="text-center mb-12 max-w-[40rem] mx-auto"

@@ -32,7 +32,7 @@ const CalculatorsSection = () => {
   const l = t[lang];
 
   return (
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

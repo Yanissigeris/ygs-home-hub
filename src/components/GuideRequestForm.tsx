@@ -92,7 +92,7 @@ const GuideRequestForm = ({
   };
 
   return (
-    <section id="recevoir-guide" className="section-padding bg-secondary/20">
+    <section id="recevoir-guide" className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[56rem]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

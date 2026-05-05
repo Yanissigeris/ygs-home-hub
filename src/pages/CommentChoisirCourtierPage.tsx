@@ -64,7 +64,7 @@ const CommentChoisirCourtierPage = () => (
       </p>
     </ContentBlock>
 
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[44rem]">
         <SectionHeading overline="Checklist" title="8 critères pour choisir votre courtier" centered />
         <div className="mt-8 space-y-3">

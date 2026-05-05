@@ -46,7 +46,7 @@ const TestimonialsPage = () => (
       return (
         <section
           key={cat.key}
-          className={`section-padding ${categories.indexOf(cat) % 2 === 1 ? "bg-secondary/20" : "bg-background"}`}
+          className={`section-padding ${categories.indexOf(cat) % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}
         >
           <div className="section-container">
             <motion.div

@@ -1,18 +1,50 @@
-## Phase 5 — Hero + Header token consolidation
+# Phase 6 — Alt-Section Bleed-Through Fix + Contrast Lift
 
-Baseline verified ✓ (Hero: #A88A5A=4, #17303B=1, #F7F4EE=3, #0F2129=1; Header: #A88A5A=6, #17303B=6, #4A5568=4, "#fff"=2).
+Surgical token/class mop-up across 36 files. No logic changes.
 
-### Replacements (21 total, 2 files)
+## Edit 1 — Swap `bg-secondary/20` → `bg-[var(--cream)]` (34 occurrences)
 
-**HeroSection.tsx** — 7 swaps via targeted `code--line_replace` on lines 511, 540, 684, 706, 746, 798, 1111. Carve-outs preserved: line 796 (Tailwind `ring-[#A88A5A]/50`), line 1107 (`#0F2129`), lerp block 423–477, template-interp lines 491/501/503/505, all rgba() literals.
+Replace exact substring only; preserve all surrounding classes.
 
-**SiteHeader.tsx** — 14 swaps via targeted `code--line_replace` on lines 107, 125, 128, 177, 180, 227, 420, 444, 486, 536 (×2), 537 (×2), 538. Carve-outs preserved: `#4A5568` (×4) on lines 125/129/177/181, all rgba(), ctaBorderColor refs.
+**Components (18):** ImageTextSplit:22, ContentBlock:19, ProcessSteps:28, ProfileSection:33, FormSection:24, CredibilitySection:24, CalculatorsSection:35, ReviewSection:30, LocalSEOCluster:20, LinkedCardGrid:29, SocialProofStrip:41, SectorLinks:38, CardGrid:30, ReviewStrip:14, FunnelNextStep:34, RelatedPages:25, TestimonialPlaceholder:23, GuideRequestForm:95.
 
-### Mappings
-- `#A88A5A` → `var(--gold)`
-- `#17303B` → `var(--ink)`
-- `#F7F4EE` → `var(--cream)`
-- `"#fff"` → `"var(--white)"`
+**Pages (16):** VerifierCourtierOaciqPage:56, AylmerPage:151/207/275, AylmerPageEn:148/202/268, OutaouaisHubPageEn:79/123, TestimonialsPageEn:37, GatineauCentrePageEn:120, CommentChoisirCourtierPage:67, TestimonialsPage:49, GatineauCentrePage:120, OutaouaisHubPage:85/129.
 
-### Verification
-Post-edit greps to confirm: Hero `#A88A5A`=1, `#17303B`=0, `#F7F4EE`=0, `#0F2129`=1; Header `#A88A5A`=0, `#17303B`=0, `"#fff"`=0, `#4A5568`=4. lerp/template-interp counts unchanged. Build passes. Update `.lovable/plan.md` with phase log.
+## Edit 2 — Pontiac card divs → `bg-card` (2 occurrences)
+
+These are cards inside an opaque cream parent; white keeps separation.
+
+- `src/pages/PontiacPage.tsx:154`
+- `src/pages/en/PontiacPageEn.tsx:154`
+
+Find: `bg-secondary/20 border border-border rounded-lg p-6 space-y-3`
+Replace: `bg-card border border-border rounded-lg p-6 space-y-3`
+
+## Edit 3 — Lift muted-foreground contrast (1 line)
+
+`src/index.css:26`
+- From: `--muted-foreground: 200 12% 46%;`
+- To:   `--muted-foreground: 200 30% 35%;`
+
+Lifts contrast on cream from 4.05:1 → ~7:1 (AAA).
+
+## Carve-outs (unchanged)
+
+- All other `:root` tokens in `src/index.css`.
+- All other `bg-secondary/N` classes (/25, /30, /40, /70, /80).
+- All `bg-background`, `bg-card` (existing), `bg-[var(--ink)]`, `bg-primary`, `bg-foreground` references.
+- `index.html` critical above-fold CSS (intentional anti-flash).
+- `tailwind.config.ts`.
+- All component logic, props, framer-motion, Suspense.
+
+## Post-edit verification
+
+Run all 6 grep checks and report:
+1. `grep -rIn "bg-secondary/20" src/` → empty
+2. `grep -rho "bg-\[var(--cream)\]" src/ | wc -l` → 34
+3. `grep -n "bg-card border border-border rounded-lg p-6 space-y-3" src/pages/PontiacPage.tsx src/pages/en/PontiacPageEn.tsx` → 2 lines
+4. `grep -n "muted-foreground: 200 30% 35%" src/index.css` → 1 hit at line 26
+5. `grep -n "muted-foreground: 200 12% 46%" src/index.css` → empty
+6. `grep -rho "bg-secondary/\(25\|30\|40\|70\|80\)" src/ | wc -l` → 5+
+
+If any check fails, halt and report. Update `.lovable/plan.md` with Phase 6 log.

@@ -151,7 +151,7 @@ const PontiacPage = () => {
             { icon: Waves, title: "La rivière des Outaouais en façade", text: "La municipalité de Pontiac longe la rive nord de la rivière des Outaouais. Plusieurs propriétés de Breckenridge offrent un accès direct à la rivière ou une vue sur l'eau. La rivière des Outaouais est navigable, poissonneuse, et l'une des plus grandes rivières du Canada — un atout de qualité de vie rare pour une propriété résidentielle." },
             { icon: Bus, title: "Transcollines — connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais au réseau Rapibus de la STO et à OC Transpo d'Ottawa. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source: Municipalité de Pontiac / Transcollines)" },
           ].map((c) => (
-            <div key={c.title} className="bg-secondary/20 border border-border rounded-lg p-6 space-y-3">
+            <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
               <c.icon size={24} className="text-accent" />
               <h3 className="font-serif text-lg text-foreground">{c.title}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{c.text}</p>

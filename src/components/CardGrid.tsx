@@ -27,7 +27,7 @@ const CardGrid = ({
   variant = "icon-top",
   centered = true,
 }: CardGridProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
       <motion.div
         className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}

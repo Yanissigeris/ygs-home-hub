@@ -34,7 +34,7 @@ const TestimonialsPageEn = () => (
       const catReviews = getReviewsByCategory(cat.key);
       if (!catReviews.length) return null;
       return (
-        <section key={cat.key} className={`section-padding ${idx % 2 === 1 ? "bg-secondary/20" : "bg-background"}`}>
+        <section key={cat.key} className={`section-padding ${idx % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}>
           <div className="section-container">
             <motion.div className="mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
               <p className="label-overline mb-3">{cat.label}</p><h2>{cat.title}</h2>

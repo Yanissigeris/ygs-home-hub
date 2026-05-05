@@ -16,7 +16,7 @@ const ContentBlock = ({
   centered = false,
   padSize = "default",
 }: ContentBlockProps) => (
-  <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-secondary/20" : "bg-background"}`}>
+  <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-[var(--cream)]" : "bg-background"}`}>
     <div className={`section-container ${narrow ? "max-w-[44rem]" : ""} ${centered ? "text-center" : ""}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
