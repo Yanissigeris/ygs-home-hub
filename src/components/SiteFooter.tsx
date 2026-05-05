@@ -15,7 +15,7 @@ import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
 
 const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]", href: "https://www.remax-quebec.com" },
   { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
