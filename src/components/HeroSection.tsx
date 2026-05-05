@@ -32,7 +32,6 @@ const Trophy = IconTrophy;
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
-// (hero-homepage.webp removed — was imported but never used; saves ~186KB from bundle)
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 import { heroContact } from "@/config/heroBottomInfo";
 

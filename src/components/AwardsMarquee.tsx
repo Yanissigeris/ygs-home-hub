@@ -3,7 +3,7 @@ import * as React from "react";
 const items = [
   "Club Platine RE/MAX",
   "Club 100% RE/MAX",
-  "Service bilingue FR/EN",
+  "Hall of Fame RE/MAX",
 ];
 
 /**
