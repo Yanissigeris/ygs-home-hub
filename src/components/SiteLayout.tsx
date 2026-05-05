@@ -111,10 +111,14 @@ const SiteLayout = () => {
 
   return (
     <div className="flex min-h-screen flex-col font-body">
-      <JsonLdSchema />
-      <LangMeta />
-      <BreadcrumbJsonLd />
-      <NavigationProgress />
+      {deferredReady && (
+        <>
+          <JsonLdSchema />
+          <LangMeta />
+          <BreadcrumbJsonLd />
+          <NavigationProgress />
+        </>
+      )}
 
       {/* Permanent dark gradient overlay behind the fixed header for white text legibility */}
       <div
