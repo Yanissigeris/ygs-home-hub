@@ -4,15 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --ygs-utility-bar-height: 44px;
-}
-@media (max-width: 767.98px) {
-  :root {
-    --ygs-utility-bar-height: 68px;
-  }
-}
-
 @layer base {
   :root {
     color-scheme: light;

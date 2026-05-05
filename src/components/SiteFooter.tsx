@@ -15,7 +15,7 @@ import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
 
 const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]" },
+  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]", href: "https://www.remax-quebec.com" },
   { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
@@ -203,19 +203,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               {affiliationsLabel}
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
-              {affiliationLogos.map((logo) => (
-                <div
-                  key={logo.alt}
-                  className="flex items-center justify-center"
-                  style={{
-                    background: "rgba(255,255,255,.04)",
-                    border: "1px solid rgba(255,255,255,.06)",
-                    borderRadius: 3,
-                    padding: ".4rem .75rem",
-                    minHeight: 44,
-                    minWidth: 80,
-                  }}
-                >
+              {affiliationLogos.map((logo) => {
+                const inner = (
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -225,8 +214,36 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     decoding="async"
                     className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
                   />
-                </div>
-              ))}
+                );
+                const tileStyle: React.CSSProperties = {
+                  background: "rgba(255,255,255,.04)",
+                  border: "1px solid rgba(255,255,255,.06)",
+                  borderRadius: 3,
+                  padding: ".4rem .75rem",
+                  minHeight: 44,
+                  minWidth: 80,
+                };
+                if ("href" in logo && logo.href) {
+                  return (
+                    <a
+                      key={logo.alt}
+                      href={logo.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={lang === "en" ? "Visit remax-quebec.com" : "Visiter remax-quebec.com"}
+                      className="flex items-center justify-center"
+                      style={tileStyle}
+                    >
+                      {inner}
+                    </a>
+                  );
+                }
+                return (
+                  <div key={logo.alt} className="flex items-center justify-center" style={tileStyle}>
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -242,9 +259,31 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
           </div>
 
-          {/* ── NAP ── */}         <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>           <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }}>             {lang === "en" ? "819-210-3044" : "819-210-3044"}             {" · "}             <a href="mailto:yanis@martywaite.com" style={{ color: "rgba(255,255,255,.65)" }}>yanis@martywaite.com</a>             {" · "}             {lang === "en" ? "216 chemin d'Aylmer, Gatineau, QC J9H 1A4" : "216, chemin d'Aylmer, Gatineau, QC J9H 1A4"}           </p>         </div>         {/* ── Copyright ── */}
+          {/* ── Agency identification block ── */}
+          <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
+              {lang === "en"
+                ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
+                : "RE/MAX Direct Inc. — Agence immobilière · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"}
+            </p>
+            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
+              {lang === "en" ? "Office: " : "Bureau : "}
+              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }}>819-684-0000</a>
+              {"  ·  "}
+              {lang === "en" ? "Mobile: " : "Cellulaire : "}
+              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }}>819-210-3044</a>
+              {"  ·  "}
+              <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }}>yanis@martywaite.com</a>
+            </p>
+          </div>
+          {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
+            <p className="mt-2" style={{ fontSize: ".62rem", color: "rgba(255,255,255,.5)", padding: "0 1rem" }}>
+              {lang === "en"
+                ? "Independently owned and operated franchisee of RE/MAX Québec"
+                : "Franchisé indépendant et autonome de RE/MAX Québec"}
+            </p>
             <div className="mt-2 flex justify-center gap-4">
               <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}

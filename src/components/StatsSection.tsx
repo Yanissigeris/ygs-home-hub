@@ -3,13 +3,13 @@ import * as React from "react";
 const statsFr = [
   { value: "~9 ans", label: "Ans d'expérience en Outaouais", ghost: "9" },
   { value: "5 ★", label: "Avis Google + Facebook", ghost: "5" },
-  { value: "Hall of Fame", label: "RE/MAX", ghost: "H" },
+  { value: "Hall of Fame 2024", label: "RE/MAX, LLC", ghost: "H" },
 ];
 
 const statsEn = [
   { value: "~9 yrs", label: "Years of experience in Outaouais", ghost: "9" },
   { value: "5 ★", label: "Google + Facebook reviews", ghost: "5" },
-  { value: "Hall of Fame", label: "RE/MAX", ghost: "H" },
+  { value: "Hall of Fame 2024", label: "RE/MAX, LLC", ghost: "H" },
 ];
 
 interface StatsSectionProps { lang?: "fr" | "en"; }
