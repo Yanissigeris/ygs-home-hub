@@ -344,6 +344,17 @@ const SiteHeader = () => {
           >
             Yanis Gauthier-Sigeris
           </span>
+          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
+          <img
+            src={remaxBalloon}
+            alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"}
+            width={28}
+            height={34}
+            className="object-contain"
+            style={{ height: scrolled ? 30 : 34, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }}
+            loading="eager"
+            decoding="async"
+          />
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
