@@ -10,6 +10,10 @@ import SectionHeading from "@/components/SectionHeading";
 import RelatedPages from "@/components/RelatedPages";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
+import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
+import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
+import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 
 const zones = [
   { name: "Gatineau", href: "/en/gatineau", detail: "Central, services, condos" },
