@@ -15,9 +15,14 @@ function htmlOptimizePlugin() {
     apply: "build" as const,
     enforce: "post" as const,
     generateBundle(_, bundle) {
-      // Find the portrait asset (LCP element on mobile)
+      // Find portrait variants. Match exact filename roots so we don't pick
+      // an unintended -sm/-md/-lg variant when looking for the base.
       const portraitKey = Object.keys(bundle).find((k) =>
-        k.includes("yanis-portrait-nobg")
+        /yanis-portrait-nobg(-[A-Za-z0-9_]+)?\.avif$/.test(k) &&
+        !/yanis-portrait-nobg-(sm|md|lg)\./.test(k)
+      );
+      const portraitLgKey = Object.keys(bundle).find((k) =>
+        /yanis-portrait-nobg-lg(-[A-Za-z0-9_]+)?\.avif$/.test(k)
       );
       // Find hero background variants (LCP element on desktop home).
       const heroBgMobileAvifKey = Object.keys(bundle).find((k) =>
