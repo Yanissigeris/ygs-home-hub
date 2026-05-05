@@ -48,3 +48,9 @@ Run all 6 grep checks and report:
 6. `grep -rho "bg-secondary/\(25\|30\|40\|70\|80\)" src/ | wc -l` → 5+
 
 If any check fails, halt and report. Update `.lovable/plan.md` with Phase 6 log.
+
+## Phase 6 — Applied
+- 34× `bg-secondary/20` → `bg-[var(--cream)]` (18 components, 16 pages)
+- 2× Pontiac card divs → `bg-card` (FR + EN)
+- `--muted-foreground` lifted 200 12% 46% → 200 30% 35% (AA → AAA on cream)
+- All 6 verification greps passed. Other `bg-secondary/N` (18 hits) untouched.
