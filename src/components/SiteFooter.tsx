@@ -242,9 +242,31 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
           </div>
 
-          {/* ── NAP ── */}         <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>           <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }}>             {lang === "en" ? "819-210-3044" : "819-210-3044"}             {" · "}             <a href="mailto:yanis@martywaite.com" style={{ color: "rgba(255,255,255,.65)" }}>yanis@martywaite.com</a>             {" · "}             {lang === "en" ? "216 chemin d'Aylmer, Gatineau, QC J9H 1A4" : "216, chemin d'Aylmer, Gatineau, QC J9H 1A4"}           </p>         </div>         {/* ── Copyright ── */}
+          {/* ── Agency identification block ── */}
+          <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
+              {lang === "en"
+                ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
+                : "RE/MAX Direct Inc. — Agence immobilière · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"}
+            </p>
+            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
+              {lang === "en" ? "Office: " : "Bureau : "}
+              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }}>819-684-0000</a>
+              {"  ·  "}
+              {lang === "en" ? "Mobile: " : "Cellulaire : "}
+              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }}>819-210-3044</a>
+              {"  ·  "}
+              <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }}>yanis@martywaite.com</a>
+            </p>
+          </div>
+          {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
+            <p className="mt-2" style={{ fontSize: ".62rem", color: "rgba(255,255,255,.5)", padding: "0 1rem" }}>
+              {lang === "en"
+                ? "Independently owned and operated franchisee of RE/MAX Québec"
+                : "Franchisé indépendant et autonome de RE/MAX Québec"}
+            </p>
             <div className="mt-2 flex justify-center gap-4">
               <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
