@@ -553,23 +553,39 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {/* Background image — when no video is provided */}
         {heroBgImage && !heroVideo && (
           <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }} aria-hidden="true">
-            <img
-              src={heroBgImage}
-              alt=""
-              role="presentation"
-              className="hero-bg-image h-full w-full object-cover"
-              style={{
-                filter: atTop ? "none" : "brightness(0.85) saturate(0.85)",
-                transition: "filter 0.35s ease-out",
-              }}
-              width={1920}
-              height={1080}
-              sizes="100vw"
-              loading="eager"
-              decoding="async"
-              {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-            />
+            <picture>
+              {heroBgImageMobile && (
+                <source
+                  type="image/avif"
+                  media="(max-width: 767px)"
+                  srcSet={heroBgImageMobile}
+                />
+              )}
+              {heroBgImageAvif && (
+                <source
+                  type="image/avif"
+                  media="(min-width: 768px)"
+                  srcSet={heroBgImageAvif}
+                />
+              )}
+              <img
+                src={heroBgImage}
+                alt=""
+                role="presentation"
+                className="hero-bg-image h-full w-full object-cover"
+                style={{
+                  filter: atTop ? "none" : "brightness(0.85) saturate(0.85)",
+                  transition: "filter 0.35s ease-out",
+                }}
+                width={1920}
+                height={1080}
+                sizes="100vw"
+                loading="eager"
+                decoding="async"
+                {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+            </picture>
           </div>
         )}
 
