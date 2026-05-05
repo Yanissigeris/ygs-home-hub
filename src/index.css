@@ -65,6 +65,11 @@
     --ink-deep: #0C1F28;
     --ink-mid: #0E2630;
     --ink-soft: #1C3A47;
+    /* === Token additions (Phase 0.1 — closes Phase 2/3 carve-outs) === */
+    --cream-light: #FAF8F3;
+    --cream-deep: #F5F1EA;
+    --ink-mid-deep: #112E3A;
+    --gold-veil-faint: rgba(168,138,90,.08);
     /* White */
     --white: #FFFFFF;
     /* Text-on-dark stack */
