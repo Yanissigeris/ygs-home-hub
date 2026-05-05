@@ -1,57 +1,25 @@
-# Fix blurry desktop/tablet portrait
+# Add RE/MAX Pin Logo to Header
 
-## Root cause
+## Asset
+Copy `user-uploads://remax_ballon_2.png` → `src/assets/remax-balloon.png`. Import in `SiteHeader.tsx` as ES6 module.
 
-Currently the portrait `<picture media="(min-width: 768px)">` serves a single 640×960 WebP/AVIF. The hero portrait renders at `height: 92%` of a tall hero on desktop — on a 1440px+ screen with retina (2x DPR), the rendered size is ~700–900 CSS px wide → 1400–1800 device px wide. A 640px source upscales heavily, hence the blur. On tablets at 2x DPR (iPad ~768 CSS px), it's also undersized.
+## Placement strategy
+The header is permanently transparent over a dark hero with white text, so the colorful pin will pop nicely. To keep the existing YGS brand prominence, the RE/MAX pin sits **after** the YGS logo + "Yanis Gauthier-Sigeris" name, separated by a thin vertical divider — signaling brokerage affiliation, the standard editorial pattern for agent sites.
 
-Mobile (≤767px) currently uses sm (320), md (480), full (640) at 1x/2x/3x — those tiers are correctly sized for phone CSS widths, so we leave them alone.
-
-## Changes (desktop/tablet only)
-
-### 1. Generate a high-res portrait variant
-From the existing `src/assets/yanis-portrait-raw.webp` (1280×1920 source, fully transparent cutout):
-- `src/assets/yanis-portrait-nobg-lg.avif` — 1280×1920, AVIF q≈55 (~50–70 KB)
-- `src/assets/yanis-portrait-nobg-lg.webp` — 1280×1920, WebP q≈80 (~90–120 KB)
-
-This is the same cutout (no background), just at the original resolution.
-
-### 2. `src/components/HeroSection.tsx` — desktop `<picture>` block (lines 902–943)
-Add new optional props `agentImageLg` / `agentImageLgAvif`. In the desktop `<source>` tags, switch from a single URL to a 1x/2x `srcSet`:
-- AVIF source: `${agentImageAvif} 1x, ${agentImageLgAvif} 2x`
-- WebP source: `${agentImage} 1x, ${agentImageLg} 2x`
-
-The mobile `<picture md:hidden>` block stays untouched.
-
-### 3. `src/App.tsx` desktop preload (lines 61–68)
-Replace the single `desktop.href` with `imagesrcset`:
 ```
-desktop.setAttribute('imagesrcset', `${yanisPortraitAvif} 1x, ${yanisPortraitLgAvif} 2x`);
-desktop.href = yanisPortraitAvif; // fallback
+[YGS logo] | Yanis Gauthier-Sigeris  | [pin]    ...nav...    [lang] [CTA]
 ```
-Add the new `yanisPortraitLgAvif` import.
 
-### 4. `vite.config.ts` `htmlOptimizePlugin` (lines 18–45)
-Find `yanis-portrait-nobg-lg` in the bundle and inject the desktop preload as `imagesrcset="… 1x, …-lg 2x"` (the current mobile-only `fetchpriority` preload becomes a tablet/desktop-aware media-gated preload).
+### Sizes (proportional to existing logo height)
+- **Desktop** (`md+`): pin height ~28–32px, divider already exists, add 2nd divider before pin
+- **Tablet** (`sm–md`): pin height ~26–30px, after the YGS logo (no name shown on tablet)
+- **Mobile** (`<sm`): pin height ~22px, placed to the right of the inline name; only shown if it doesn't crowd the hamburger. If space is tight (very narrow phones), name takes priority — pin can sit between logo and name at ~20px.
 
-### 5. Pages that pass portrait props
-Add the two new imports + props in:
-- `src/pages/Index.tsx`
-- `src/pages/en/IndexEn.tsx`
-- `src/pages/OutaouaisHubPage.tsx`
-- `src/pages/en/OutaouaisHubPageEn.tsx`
+The pin is `loading="eager"` `decoding="async"`, no filter (full color), `alt="RE/MAX courtier immobilier"` (FR) / `alt="RE/MAX real estate broker"` (EN) using `lang` from `useLanguage()`.
 
-```ts
-import yanisPortraitLg from "@/assets/yanis-portrait-nobg-lg.webp";
-import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
-// pass to <HeroSection ... agentImageLg={yanisPortraitLg} agentImageLgAvif={yanisPortraitLgAvif} />
-```
+## Files changed
+- **new**: `src/assets/remax-balloon.png`
+- **edit**: `src/components/SiteHeader.tsx` — import asset, render `<img>` in all three layout blocks (desktop / tablet / mobile) with appropriate sizing and a subtle vertical divider before it. Localized alt text.
 
 ## Out of scope
-- Mobile portrait tiers (no quality change requested).
-- Hero background image, fonts, CSS animations, vendor chunks.
-- Any copy / SEO / JSON-LD / route changes.
-
-## Expected impact
-- Tablet/desktop retina: portrait crisp at native pixel density (1280px source for up to ~640 CSS px wide rendering, well above current desktop layout).
-- Mobile: identical bytes as today (still serves sm/md/full AVIF via DPR).
-- Desktop LCP cost: ~+30 KB AVIF on 2x desktops (acceptable; preload + AVIF still fast). 1x desktops/laptops still get the 17 KB original.
+No changes to footer, no nav changes, no CSS variables, no other pages. Pure visual addition in header only.
