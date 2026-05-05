@@ -2,7 +2,12 @@ import * as React from "react";
 import PageMeta from "@/components/PageMeta";
 import SEO from "@/components/SEO";
 import yanisHero from "@/assets/hero-yanis-interior.webp";
-import yanisPortrait from "@/assets/yanis-hero-portrait.webp";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
+import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
+import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
+import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
+import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 import HeroSection from "@/components/HeroSection";
 
 
@@ -50,6 +55,11 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={yanisHero}
       agentImage={yanisPortrait}
+      agentImageSm={yanisPortraitSm}
+      agentImageMd={yanisPortraitMd}
+      agentImageAvif={yanisPortraitAvif}
+      agentImageSmAvif={yanisPortraitSmAvif}
+      agentImageMdAvif={yanisPortraitMdAvif}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
       petrolGradient={false}

@@ -12,6 +12,10 @@ import RelatedPages from "@/components/RelatedPages";
 import heroImg from "@/assets/hero-outaouais-gen.webp";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
+import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
+import yanisPortraitAvif from "@/assets/yanis-portrait-nobg.avif";
+import yanisPortraitSmAvif from "@/assets/yanis-portrait-nobg-sm.avif";
+import yanisPortraitMdAvif from "@/assets/yanis-portrait-nobg-md.avif";
 
 const zones = [
   { name: "Gatineau (centre)", href: "/gatineau", detail: "Services, condos, plex" },
@@ -69,6 +73,10 @@ const OutaouaisHubPage = () => (
       heroVideoPoster="/hero-video-poster.webp"
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
+      agentImageMd={yanisPortraitMd}
+      agentImageAvif={yanisPortraitAvif}
+      agentImageSmAvif={yanisPortraitSmAvif}
+      agentImageMdAvif={yanisPortraitMdAvif}
       agentName="Yanis Gauthier-Sigeris"
     />
 {/* Intro */}
