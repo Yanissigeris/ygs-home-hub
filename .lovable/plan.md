@@ -1,37 +1,52 @@
-# Phase 2A — Refine vite.config.ts manualChunks
+## Mobile LCP optimization — Home (FR + EN)
 
-## Goal
-Shrink the vendor chunk (~423 KB / 134 KB gz) by isolating motion-dom/utils, zod + react-hook-form + @hookform, react-router, and react-helmet-async into their own chunks loaded only when needed.
+### Problems found
 
-## Single file change: `vite.config.ts`
+1. **Wrong image preloaded.** `index.html` (lines 75-81) preloads `/hero-living-room-mobile.webp` as the "video poster". But Home no longer uses `heroVideo` — it uses `heroBgImage = hero-yanis-interior.webp`. The preload is wasted bandwidth (~30 KB on the critical path) and the actual LCP image is **not preloaded at all**.
 
-Inside `build.rollupOptions.output.manualChunks`, only the node_modules section is touched.
+2. **No mobile variant of the hero background.** `hero-yanis-interior.webp` is a single 1365×768 / 51 KB file served to phones at ~390 CSS px wide. A 768w mobile AVIF would be ~12-18 KB.
 
-**Modify** the existing motion rule:
-```ts
-// Before
-if (id.includes("framer-motion")) return "motion";
-// After
-if (id.includes("framer-motion") || id.includes("motion-dom") || id.includes("motion-utils")) return "motion";
-```
+3. **H1 hidden by `opacity: 0` animation.** `.hero-h1-reveal` (index.css:661) starts at `opacity: 0` and animates 0.85s. Chrome won't count an `opacity: 0` element as an LCP candidate, so if the H1 is the LCP, LCP is delayed by the full animation duration (~850ms). Same issue for `.hero-fade-in` (0.55s).
 
-**Insert** three new rules immediately after the motion rule (before `lucide-react`):
-```ts
-if (id.includes("zod") || id.includes("react-hook-form") || id.includes("@hookform")) return "forms";
-if (id.includes("react-router") || id.includes("@remix-run/router")) return "router";
-if (id.includes("react-helmet-async")) return "helmet";
-```
+4. **The portrait preload uses `media="(max-width: 767px)"` with DPR `x` descriptors and Vite-hashed URLs** — already optimal. Keep as-is.
 
-Final order inside the node_modules block:
-`charts → supabase → data (@tanstack) → motion (expanded) → forms → router → helmet → icons → carousel → radix → vendor (fall-through)`
+### Changes
 
-## Guardrails
-- No edits outside `vite.config.ts`.
-- `htmlOptimizePlugin`, `resolve.alias`, `chunkSizeWarningLimit`, application-code branch (`blog-data`), and all other existing rules untouched.
-- No changes to `src/`, JSON-LD, meta, routes, or DOM.
+**A. `index.html` lines 61-99 (inline preload script)**
+- Remove the `/hero-living-room*.webp` poster preload (no `<video>` on home).
+- Preload the hero **background** image instead. Use the new mobile AVIF on phones, the existing WebP on desktop, both via Vite-hashed paths discovered at build via `htmlOptimizePlugin`.
 
-## Expected post-build
-- New chunks: `forms-*.js` (~83/23 gz), `router-*.js` (~21/8 gz), `helmet-*.js` (~14/5 gz)
-- `motion` grows ~32 → ~128 KB (now includes motion-dom/utils)
-- `vendor` drops ~423 → ~207 KB
-- App chunks (Index, OutaouaisHubPage, …) unchanged
+**B. `vite.config.ts` `htmlOptimizePlugin`**
+- Extend the bundle scan to find `hero-yanis-interior` and `hero-yanis-interior-mobile` (new) hashed assets.
+- Inject a conditional preload on home routes (`/`, `/en`, `/en/`) using `<link rel="preload" as="image" type="image/avif" media="(max-width: 767px)" href="…mobile.avif" fetchpriority="high">` + a desktop equivalent for the existing webp.
+
+**C. New asset variants**
+- Generate `src/assets/hero-yanis-interior-mobile.avif` (~768w, q60) and `src/assets/hero-yanis-interior.avif` (~1600w, q55) using imagemagick. Target sizes: ~14 KB mobile, ~45 KB desktop.
+
+**D. `src/components/HeroSection.tsx` lines 546-566 (heroBgImage `<img>`)**
+- Wrap in `<picture>` so phones download the mobile AVIF and desktops download the existing WebP. Keep `loading="eager"`, `fetchpriority="high"`, `decoding="async"`. This guarantees the preload byte-matches what the DOM renders (zero double-download).
+
+**E. `src/components/HeroSection.tsx` lines 713-735 (H1) + `src/index.css` lines 644-666**
+- Remove `opacity: 0` starting state from `.hero-h1-reveal` and `.hero-fade-in` so the H1/eyebrow are immediately LCP-eligible. Replace with a `transform`-only animation (translateY → 0) which Chrome counts toward LCP. Keeps the visual reveal, removes the LCP penalty.
+
+**F. New `Index.tsx` / `IndexEn.tsx` props**
+- Pass `heroBgImageMobile` (new optional prop) so `HeroSection` can pick the mobile AVIF in the `<picture>` source.
+
+### Files touched
+- `index.html` (preload script)
+- `vite.config.ts` (htmlOptimizePlugin)
+- `src/components/HeroSection.tsx` (heroBgImage `<picture>`, prop, H1 animation class)
+- `src/index.css` (`.hero-h1-reveal`, `.hero-fade-in` keyframes)
+- `src/pages/Index.tsx`, `src/pages/en/IndexEn.tsx` (new prop)
+- `src/assets/hero-yanis-interior-mobile.avif`, `hero-yanis-interior.avif` (new)
+
+### Out of scope / unchanged
+- Portrait preload + `<picture>` (already optimal).
+- Vendor chunk splitting.
+- Routes, copy, JSON-LD, meta tags, fonts.
+- Other pages (only home FR/EN).
+
+### Expected outcome
+- Mobile LCP image drops from a 51 KB un-preloaded WebP to a ~14 KB preloaded AVIF.
+- H1 becomes LCP-eligible immediately on render (saves ~400-850 ms when text is the LCP).
+- Net mobile LCP improvement: ~600-1200 ms (target: under 2.5 s vs current 5.1 s, combined with prior fixes).
