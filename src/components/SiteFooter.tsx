@@ -8,17 +8,37 @@ import logoYgsWhite from "@/assets/ygs-logo.png";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
-import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
+import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
+import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
 import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
 
-const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]", href: "https://www.remax-quebec.com" },
+type AffiliationLogo = {
+  alt: string;
+  filter?: string;
+  href?: string;
+  caption?: string;
+  src?: string;
+  custom?: React.ReactNode;
+};
+
+const affiliationLogos: AffiliationLogo[] = [
+  {
+    alt: "RE/MAX Direct Inc. — agence immobilière",
+    href: "https://www.remax-quebec.com",
+    caption: "RE/MAX Direct Inc.",
+    custom: (
+      <div className="flex items-center gap-1.5">
+        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+      </div>
+    ),
+  },
   { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
-  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
