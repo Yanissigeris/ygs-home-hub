@@ -38,7 +38,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
         <div className="section-container relative">
           {/* Header */}
           <div className="mb-8 sm:mb-12 max-w-[36rem]">
-            <p className="label-overline mb-2" style={{ color: "#7A6038" }}>{heading.overline}</p>
+            <p className="label-overline mb-2" style={{ color: "var(--gold-dark)" }}>{heading.overline}</p>
             <h2>{heading.title}</h2>
             <p className="mt-3" style={{ fontSize: ".92rem", color: "var(--muted)", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>
@@ -50,7 +50,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 type="button"
                 aria-label={`${g.title} — ${g.subtitle}`}
-                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A6038] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
                   background: "var(--cream)",
@@ -61,14 +61,14 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 onMouseEnter={(e) => { e.currentTarget.style.background = "var(--parchment)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
               >
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "#7A6038" }} aria-hidden="true" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold-dark)" }} aria-hidden="true" />
                 <div className="flex items-baseline gap-3" aria-hidden="true">
                   <span className="select-none" style={{ fontFamily: "var(--serif)", fontSize: "clamp(2.25rem, 4.5vw, 3rem)", fontWeight: 300, color: "var(--ink)", lineHeight: 1, letterSpacing: "-.02em" }}>{g.num}</span>
-                  <span style={{ height: 1, flex: 1, background: "#7A6038", opacity: 0.55, transform: "translateY(-.35em)" }} />
+                  <span style={{ height: 1, flex: 1, background: "var(--gold-dark)", opacity: 0.55, transform: "translateY(-.35em)" }} />
                 </div>
                 <h3 className="mt-3" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
                 <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.75 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "#7A6038", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
+                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold-dark)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
               </button>
             ))}
           </div>
@@ -80,14 +80,14 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 key={g.guideType}
                 type="button"
                 aria-label={`${g.title} — ${g.subtitle}`}
-                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A6038] focus-visible:ring-inset"
+                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-inset"
                 style={{ padding: "1.25rem", background: "var(--white)" }}
                 onClick={() => setModalGuide(g.guideType)}
               >
                 <span style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, color: "var(--ink)", letterSpacing: "-.02em", lineHeight: 1, marginBottom: ".75rem", display: "block" }} aria-hidden="true">{g.num}</span>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
                 <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.6 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "#7A6038", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
+                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "var(--gold-dark)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
                   {g.cta.replace(/ →$/, "").replace(/Recevoir le guide /i, "").replace(/Get the /i, "")} →
                 </span>
               </button>

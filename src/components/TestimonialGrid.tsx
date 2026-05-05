@@ -22,8 +22,8 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       background: "var(--white)",
       transitionDelay: `${index * 0.1}s`,
     }}
-    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 20px 44px rgba(168,138,90,0.08)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--cream)"; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px rgba(168,138,90,0.08)"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = "var(--white)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
     <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
@@ -120,7 +120,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                     key={i}
                     aria-label={getA11yLabel("testimonial.goTo", lang, { n: i + 1 })}
                     onClick={() => goTo(i)}
-                    style={{ width: i === current ? 44 : 20, height: 2, background: i === current ? "#A88A5A" : "var(--border)", cursor: "pointer", transition: "width .45s cubic-bezier(.16,1,.3,1), background .3s", border: "none", padding: 0 }}
+                    style={{ width: i === current ? 44 : 20, height: 2, background: i === current ? "var(--gold)" : "var(--border)", cursor: "pointer", transition: "width .45s cubic-bezier(.16,1,.3,1), background .3s", border: "none", padding: 0 }}
                   />
                 ))}
               </div>
@@ -129,14 +129,14 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
             {/* Right — featured quote */}
             <div
               style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 3, padding: "clamp(2rem, 4vw, 3rem)", transition: "box-shadow .5s cubic-bezier(.16,1,.3,1)" }}
-              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 20px 44px rgba(168,138,90,0.08)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px rgba(168,138,90,0.08)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >
               <div style={{ color: "var(--gold)", letterSpacing: "2px", fontSize: ".72rem", marginBottom: "22px" }}>★★★★★</div>
               <blockquote style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5, marginBottom: "26px" }}>
                 {review.short}
               </blockquote>
-              <div style={{ width: 40, height: 1, background: "#A88A5A", marginBottom: 14 }} />
+              <div style={{ width: 40, height: 1, background: "var(--gold)", marginBottom: 14 }} />
               <p style={{ fontSize: ".7rem", letterSpacing: ".15em", textTransform: "uppercase", color: "var(--ink)", fontWeight: 600 }}>{review.name}</p>
               {review.location && <p style={{ fontSize: ".75rem", fontWeight: 300, color: "var(--muted)" }}>{review.location}</p>}
             </div>

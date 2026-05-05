@@ -72,9 +72,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const ctaLabel = lang === "en" ? "Free valuation →" : "Évaluation gratuite →";
 
     return (
-      <footer ref={ref} className={className} style={{ background: "#17303B", color: "var(--cream)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
+      <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "var(--cream)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
         {/* ── Final CTA block ── */}
-        <div style={{ background: "#17303B" }}>
+        <div style={{ background: "var(--ink)" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
             <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
               {ctaHeading}
@@ -85,9 +85,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <Link
               to={ctaHref}
               className="inline-block transition-colors duration-200"
-              style={{ background: "#A88A5A", color: "var(--cream)", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#c4a878"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#A88A5A"; }}
+              style={{ background: "var(--gold)", color: "var(--cream)", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold2)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold)"; }}
             >
               {ctaLabel}
             </Link>
@@ -126,7 +126,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   aria-label={label}
                   className="flex items-center justify-center rounded-full transition-colors duration-200"
                   style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.4)" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "#fff"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "var(--white)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.1)"; e.currentTarget.style.color = "rgba(255,255,255,.4)"; }}
                 >
                   <Icon />
