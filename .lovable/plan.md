@@ -1,46 +1,42 @@
-## Phase 3 — Trust + Service Surfaces Token Consolidation
+# Phase 0.1 — Token additions + literal swaps
 
-Baseline verified — all 5 files match expected hex counts exactly. Ready to apply 26 surgical literal-to-var replacements.
+Baseline verified ✓ (matches expected exactly: FeaturedProperties #FAF8F3=1; TestimonialGrid #FAF8F3=1, rgba(...,0.08)=2; AreasServicesSection #F5F1EA=3; PathwaySection #F5F1EA=3; AwardsMarquee #112E3A=3 total).
 
-### Scope (5 files)
-- `src/components/SiteFooter.tsx` (6 replacements)
-- `src/components/TestimonialGrid.tsx` (5 replacements)
-- `src/components/AreasServicesSection.tsx` (4 replacements)
-- `src/components/GuideOffersSection.tsx` (7 replacements)
-- `src/components/AwardsMarquee.tsx` (4 replacements — code only, comments preserved)
+## Part 1 — Add 4 tokens to `src/index.css`
 
-### Replacement map (case-sensitive)
+Insert immediately after line 67 (`--ink-soft: #1C3A47;`) and before line 69 (`--white: #FFFFFF;`):
 
-| Literal | Token |
-|---|---|
-| `#17303B` | `var(--ink)` |
-| `#A88A5A` | `var(--gold)` |
-| `#c4a878` | `var(--gold2)` |
-| `#fff` | `var(--white)` |
-| `#0c1f28` | `var(--ink-deep)` |
-| `#BFA476` | `var(--gold-warm-light)` |
-| `#7A6038` | `var(--gold-dark)` |
-| `#0E2630` | `var(--ink-mid)` |
-| `#D4AF6F` | `var(--gold-bright)` |
+```css
+    /* === Token additions (Phase 0.1 — closes Phase 2/3 carve-outs) === */
+    --cream-light: #FAF8F3;
+    --cream-deep: #F5F1EA;
+    --ink-mid-deep: #112E3A;
+    --gold-veil-faint: rgba(168,138,90,.08);
+```
 
-### Special handling
+No existing tokens modified.
 
-- **GuideOffersSection lines 53 & 83**: convert `ring-[#7A6038]` → `ring-[var(--gold-dark)]` (keep as Tailwind arbitrary value; do not move to inline style).
-- **AwardsMarquee WCAG comment block (lines 8-15)**: untouched. Only code uses on lines 32, 34 (×2), 38 are replaced. The `#112E3A` on line 34 stays literal (no token exists).
+## Part 2 — Swap 11 literals across 5 files
 
-### Method
+| File | Replacement | Count |
+|---|---|---|
+| `FeaturedProperties.tsx` | `#FAF8F3` → `var(--cream-light)` | 1 |
+| `TestimonialGrid.tsx` | `#FAF8F3` → `var(--cream-light)` | 1 |
+| `TestimonialGrid.tsx` | `rgba(168,138,90,0.08)` → `var(--gold-veil-faint)` | 2 |
+| `AreasServicesSection.tsx` | `#F5F1EA` → `var(--cream-deep)` | 3 |
+| `PathwaySection.tsx` | `#F5F1EA` → `var(--cream-deep)` | 3 |
+| `AwardsMarquee.tsx` line 34 ONLY | `#112E3A` → `var(--ink-mid-deep)` | 1 |
 
-Use `code--line_replace` per file with surgically scoped search blocks. For AwardsMarquee, target only the `defaultVars` object body (lines ~30-50), not the comment block.
+**AwardsMarquee carve-out**: WCAG comment block (lines 8–15) untouched. Only the gradient stop on line 34 is rewritten via targeted `code--line_replace`, leaving the 2 `#112E3A` occurrences inside comments intact.
 
-### Post-edit verification
+Other files (incl. `PlexPage.tsx`, `PlexPageEn.tsx`) and all other deferred alpha variants untouched.
 
-- `rg -o "#17303B|#A88A5A|#c4a878|#0c1f28|#BFA476|#7A6038"` across the 4 non-AwardsMarquee files → 0
-- `rg -o '"#fff"'` in SiteFooter + TestimonialGrid → 0
-- AwardsMarquee: `#0E2630` → 2 (comments only), `#D4AF6F` → 2 (comments only), `#FFFFFF` → 2 (unchanged), `#112E3A` → 3 (unchanged)
-- Sentinels intact: `#FAF8F3` (TestimonialGrid:97), `#F5F1EA` ×3 (AreasServicesSection), `rgba(168,138,90,0.08)` ×2 (TestimonialGrid)
-- `src/index.css` and `TestimonialSlider.tsx` untouched
+## Verification after edit
+
+- `rg -o "#FAF8F3"` in 2 files → 0
+- `rg -o "#F5F1EA"` in 2 files → 0
+- `rg -o "rgba\(168,138,90,0?\.08\)"` in TestimonialGrid → 0
+- `rg -o "#112E3A"` in AwardsMarquee → 2 (comments)
+- 4 token grep-checks → 1 each
+- Out-of-scope sentinels (PlexPage 0.08, CTASection .1, PathwaySection .15) intact
 - Build passes
-
-### Success criteria
-
-26 replacements applied, comment block + `#112E3A` + all out-of-scope sentinels preserved, pixel-identical visual diff.
