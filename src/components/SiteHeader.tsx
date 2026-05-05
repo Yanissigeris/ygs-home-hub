@@ -430,6 +430,7 @@ const SiteHeader = () => {
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+          <RemaxPill size="md" lang={lang as "fr" | "en"} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
@@ -453,23 +454,38 @@ const SiteHeader = () => {
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
-          <span
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              color: nameColor,
-              fontSize: "0.75rem",
-              whiteSpace: "nowrap",
-              letterSpacing: "0.005em",
-              textShadow: "0 1px 4px rgba(0,0,0,0.4)",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              minWidth: 0,
-            }}
-          >
-            Yanis Gauthier-Sigeris
+          <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05, minWidth: 0 }}>
+            <span
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                color: nameColor,
+                fontSize: "0.75rem",
+                whiteSpace: "nowrap",
+                letterSpacing: "0.005em",
+                textShadow: "0 1px 4px rgba(0,0,0,0.4)",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              Yanis Gauthier-Sigeris
+            </span>
+            <span
+              style={{
+                fontFamily: "var(--sans)",
+                fontSize: "9px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.7)",
+                fontWeight: 500,
+                whiteSpace: "nowrap",
+                marginTop: 1,
+              }}
+            >
+              {lang === "en" ? "Real estate broker" : "Courtier immobilier"}
+            </span>
           </span>
-          
+          <RemaxPill size="sm" lang={lang as "fr" | "en"} />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
