@@ -164,6 +164,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       hideCredentialsStrip,
       hideRecognitionCard,
       showProofBar = false,
+      petrolGradient = true,
     },
     ref
   ) => {
