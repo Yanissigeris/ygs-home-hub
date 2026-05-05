@@ -75,6 +75,8 @@ interface HeroSectionProps {
   hideRecognitionCard?: boolean;
   /** Show the 3-stat proof bar at the bottom of the hero. Home page only. */
   showProofBar?: boolean;
+  /** Add a diagonal petrol gradient overlay over the hero background image. Defaults to true. Set to false on the homepage. */
+  petrolGradient?: boolean;
 }
 
 /* Stats data */
