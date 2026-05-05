@@ -199,7 +199,7 @@ const ValuationForm = ({
   };
 
   if (submitted) {
-    return <SuccessMessage title={t.successTitle} text={t.successText} />;
+    return <SuccessMessage title={t.successTitle} text={t.successText} variant={variant} />;
   }
 
   const addrPh = addressPlaceholder || t.addressPhDefault;
