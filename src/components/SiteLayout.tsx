@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import SiteHeader from "@/components/SiteHeader";
+import RemaxUtilityBar from "@/components/RemaxUtilityBar";
 import JsonLdSchema from "@/components/JsonLdSchema";
 import LangMeta from "@/components/LangMeta";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
