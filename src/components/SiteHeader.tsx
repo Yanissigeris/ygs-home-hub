@@ -358,19 +358,35 @@ const SiteHeader = () => {
         <Link to={lang === "en" ? "/en" : "/"} className="mr-10 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris — RE/MAX broker — Home" : "Yanis Gauthier-Sigeris — courtier RE/MAX — Accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
-          <span
-            className="text-[15px] lg:text-[17px]"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              color: nameColor,
-              whiteSpace: "nowrap",
-              letterSpacing: "0.005em",
-              transition: "color 0.3s ease",
-            }}
-          >
-            Yanis Gauthier-Sigeris
+          <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05 }}>
+            <span
+              className="text-[15px] lg:text-[17px]"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                color: nameColor,
+                whiteSpace: "nowrap",
+                letterSpacing: "0.005em",
+                transition: "color 0.3s ease",
+              }}
+            >
+              Yanis Gauthier-Sigeris
+            </span>
+            <span
+              style={{
+                fontFamily: "var(--sans)",
+                fontSize: "10px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.7)",
+                fontWeight: 500,
+                marginTop: 2,
+              }}
+            >
+              {lang === "en" ? "Real estate broker" : "Courtier immobilier"}
+            </span>
           </span>
+          <span className="ml-3 inline-flex items-center"><RemaxPill size="lg" lang={lang as "fr" | "en"} /></span>
         </Link>
         <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
