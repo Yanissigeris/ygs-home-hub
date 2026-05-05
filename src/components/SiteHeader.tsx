@@ -193,58 +193,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
 };
 
 /* ── Mobile accordion group ── */
-const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathname: string; onNavigate: () => void }) => {
-  const [expanded, setExpanded] = useState(false);
-
-  if (!item.children && !item.columns) {
-    return (
-      <Link to={item.href!} onClick={onNavigate} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
-        {item.label}
-      </Link>
-    );
-  }
-
-  // Flatten columns into grouped sections; otherwise use children
-  const sections: { title?: string; links: NavChild[] }[] = item.columns
-    ? item.columns.map((c) => ({ title: c.title, links: c.links }))
-    : [{ links: item.children! }];
-
-  return (
-    <div style={{ borderBottom: "1px solid var(--border)" }}>
-      <button onClick={() => setExpanded((p) => !p)} className="flex w-full items-center justify-between px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: "var(--muted)", minHeight: 44 }} aria-expanded={expanded}>
-        {item.label}
-        <ChevronDownIcon size={14} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
-      </button>
-      <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="pb-2 pl-3">
-          {sections.map((sec, idx) => (
-            <div key={sec.title ?? idx} className={idx > 0 ? "mt-2 pt-2" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
-              {sec.title && (
-                <div
-                  className="px-6 pt-1 pb-1.5"
-                  style={{
-                    fontSize: 11,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    fontWeight: 600,
-                    color: "var(--gold)",
-                  }}
-                >
-                  {sec.title}
-                </div>
-              )}
-              {sec.links.map((child) => (
-                <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
-                  {child.label}
-                </Link>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+// MobileNavGroup moved into MobileNavDrawer (lazy chunk).
 
 /* ── Header ── */
 const SiteHeader = () => {
