@@ -347,7 +347,8 @@ const SiteHeader = () => {
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <img
             src={remaxBalloon}
-            alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"}
+            alt=""
+            aria-hidden="true"
             width={28}
             height={34}
             className="object-contain"
