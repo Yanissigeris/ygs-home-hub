@@ -1,28 +1,18 @@
-# Phase 4 — Blog cluster token consolidation
+## Phase 5 — Hero + Header token consolidation
 
-Baseline verified ✓ (BlogArticlePage: #A88A5A=22, #17303B=18, rgba(168,138,90,0.12)=1; BlogPage: 9/7/0; BlogPageEn: 9/7/0). Total 73.
+Baseline verified ✓ (Hero: #A88A5A=4, #17303B=1, #F7F4EE=3, #0F2129=1; Header: #A88A5A=6, #17303B=6, #4A5568=4, "#fff"=2).
 
-## Replacements (3 files)
+### Replacements (21 total, 2 files)
 
-| Literal | Token | Files |
-|---|---|---|
-| `#A88A5A` | `var(--gold)` | BlogArticlePage (22), BlogPage (9), BlogPageEn (9) |
-| `#17303B` | `var(--ink)` | BlogArticlePage (18), BlogPage (7), BlogPageEn (7) |
-| `rgba(168,138,90,0.12)` | `var(--gold3)` | BlogArticlePage (1) |
+**HeroSection.tsx** — 7 swaps via targeted `code--line_replace` on lines 511, 540, 684, 706, 746, 798, 1111. Carve-outs preserved: line 796 (Tailwind `ring-[#A88A5A]/50`), line 1107 (`#0F2129`), lerp block 423–477, template-interp lines 491/501/503/505, all rgba() literals.
 
-Method: `sed -i` on the 3 files for each of the 3 exact patterns. The "multi-hit lines" (BlogArticlePage:456, BlogPage:173, BlogPageEn:169 each containing both `#A88A5A` and `#ECEAE2`) are safe — the sed pattern matches `#A88A5A` only and leaves `#ECEAE2` untouched.
+**SiteHeader.tsx** — 14 swaps via targeted `code--line_replace` on lines 107, 125, 128, 177, 180, 227, 420, 444, 486, 536 (×2), 537 (×2), 538. Carve-outs preserved: `#4A5568` (×4) on lines 125/129/177/181, all rgba(), ctaBorderColor refs.
 
-## Out-of-scope (NOT touched)
+### Mappings
+- `#A88A5A` → `var(--gold)`
+- `#17303B` → `var(--ink)`
+- `#F7F4EE` → `var(--cream)`
+- `"#fff"` → `"var(--white)"`
 
-- Editorial palette: `#E0DBD1`, `#ECEAE2`, `#3A4D55`, `#C9A25A`, `#5C6B73` (20 hits total)
-- Alpha drift: `rgba(247,244,239,*)` (13), `rgba(23,48,59,*)` (8)
-- All other rgba(), all !important, src/index.css, any file outside the 3 listed
-- No handler/logic/structural changes
-
-## Post-edit verification
-
-- `grep -ho "#A88A5A\|#17303B"` across 3 files → 0
-- `grep -ho "rgba(168,138,90,0.12)"` BlogArticlePage → 0
-- Editorial sentinel grep → 20
-- `rgba(247,244,239,*)` → 13; `rgba(23,48,59,*)` → 8
-- Build passes
+### Verification
+Post-edit greps to confirm: Hero `#A88A5A`=1, `#17303B`=0, `#F7F4EE`=0, `#0F2129`=1; Header `#A88A5A`=0, `#17303B`=0, `"#fff"`=0, `#4A5568`=4. lerp/template-interp counts unchanged. Build passes. Update `.lovable/plan.md` with phase log.

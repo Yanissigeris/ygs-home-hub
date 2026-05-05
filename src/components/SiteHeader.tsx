@@ -104,7 +104,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
                     fontWeight: 600,
-                    color: "#A88A5A",
+                    color: "var(--gold)",
                     padding: "0 .75rem .5rem",
                     borderBottom: "1px solid rgba(168,138,90,.2)",
                     marginBottom: ".25rem",
@@ -122,10 +122,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                       fontSize: "13px",
                       letterSpacing: "0.03em",
                       fontWeight: pathname === child.href ? 600 : 500,
-                      color: pathname === child.href ? "#17303B" : "#4A5568",
+                      color: pathname === child.href ? "var(--ink)" : "#4A5568",
                       borderRadius: 3,
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "#17303B"; }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
                   >
                     {child.label}
@@ -174,10 +174,10 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                 fontSize: "13px",
                 letterSpacing: "0.04em",
                 fontWeight: pathname === child.href ? 600 : 500,
-                color: pathname === child.href ? "#17303B" : "#4A5568",
+                color: pathname === child.href ? "var(--ink)" : "#4A5568",
                 borderRadius: 3,
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "#17303B"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
             >
               {child.label}
@@ -224,7 +224,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
                     fontWeight: 600,
-                    color: "#A88A5A",
+                    color: "var(--gold)",
                   }}
                 >
                   {sec.title}
@@ -417,7 +417,7 @@ const SiteHeader = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = ctaBorderColor;
-              e.currentTarget.style.color = transparent ? "#17303B" : "var(--white)";
+              e.currentTarget.style.color = transparent ? "var(--ink)" : "var(--white)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "transparent";
@@ -441,7 +441,7 @@ const SiteHeader = () => {
             to={ctaHref}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#17303B"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
@@ -483,7 +483,7 @@ const SiteHeader = () => {
             to={ctaHref}
             className="hidden md:inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "#fff"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
           >
@@ -533,9 +533,9 @@ const SiteHeader = () => {
                   to={ctaHref}
                   onClick={closeMenu}
                   className="flex w-full items-center justify-center transition-all duration-200"
-                  style={{ height: 48, background: "transparent", color: "#A88A5A", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid #A88A5A", transition: "all .2s ease" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+                  style={{ height: 48, background: "transparent", color: "var(--gold)", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid var(--gold)", transition: "all .2s ease" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
                 >
                   {ctaLabel}
                 </Link>

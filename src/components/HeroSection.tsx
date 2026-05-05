@@ -508,7 +508,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
               {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{overline}</p>}
-              <h1 style={{ color: "#F7F4EE", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
+              <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
               <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
@@ -537,7 +537,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         className="relative overflow-hidden w-full"
         style={{
           minHeight: "100svh",
-          backgroundColor: "#17303B",
+          backgroundColor: "var(--ink)",
         }}
       >
         {/* Background image — when no video is provided */}
@@ -681,7 +681,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <p
                   className="hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block"
                   style={{
-                    color: "#A88A5A",
+                    color: "var(--gold)",
                     fontFamily: "var(--sans)",
                     fontSize: "max(.6rem, .62rem)",
                     letterSpacing: ".22em",
@@ -703,7 +703,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
                     lineHeight: 1.05,
                     letterSpacing: "-0.015em",
-                    color: "#F7F4EE",
+                    color: "var(--cream)",
                     textShadow: "0 2px 12px rgba(0,0,0,0.5)",
                     margin: 0,
                     textWrap: "balance",
@@ -743,7 +743,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
                       lineHeight: 1.05,
                       letterSpacing: "-0.015em",
-                      color: "#F7F4EE",
+                      color: "var(--cream)",
                       textShadow: "0 2px 12px rgba(0,0,0,0.5)",
                       margin: 0,
                       textWrap: "balance",
@@ -795,7 +795,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       to={primaryCta.href}
                       className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
                       style={{
-                        background: "#A88A5A",
+                        background: "var(--gold)",
                         color: "var(--white)",
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
@@ -1108,7 +1108,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         aria-label={lang === "en" ? "Credentials and contact" : "Crédibilité et contact"}
       >
         <div>
-          <p style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#A88A5A", fontWeight: 600, margin: "0 0 4px" }}>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", fontWeight: 600, margin: "0 0 4px" }}>
             Contact
           </p>
           <address style={{ fontSize: "0.78rem", lineHeight: 1.55, color: "rgba(247,244,238,0.85)", fontStyle: "normal", margin: 0 }}>
