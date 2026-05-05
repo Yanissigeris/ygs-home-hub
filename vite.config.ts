@@ -96,7 +96,10 @@ export default defineConfig(() => ({
           // Splitting it lets routes without forms skip ~127 KB.
           if (id.includes("@supabase")) return "supabase";
           if (id.includes("@tanstack")) return "data";
-          if (id.includes("framer-motion")) return "motion";
+          if (id.includes("framer-motion") || id.includes("motion-dom") || id.includes("motion-utils")) return "motion";
+          if (id.includes("zod") || id.includes("react-hook-form") || id.includes("@hookform")) return "forms";
+          if (id.includes("react-router") || id.includes("@remix-run/router")) return "router";
+          if (id.includes("react-helmet-async")) return "helmet";
           if (id.includes("lucide-react")) return "icons";
           if (id.includes("embla-carousel")) return "carousel";
           // Radix is huge in aggregate but each primitive is small;
