@@ -54,17 +54,17 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                   dark
                     ? isOutline
                       ? { border: "1.5px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.8)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
-                      : { border: "1.5px solid #A88A5A", color: "#A88A5A", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid var(--gold)", color: "var(--gold)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                     : isOutline
                       ? { border: "1.5px solid var(--border)", color: "var(--ink)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
-                      : { border: "1.5px solid #A88A5A", color: "#A88A5A", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid var(--gold)", color: "var(--gold)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                 }
                 onMouseEnter={(e) => {
-                  if (!isOutline) { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "var(--white)"; }
+                  if (!isOutline) { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }
                   if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "var(--white)"; }
                 }}
                 onMouseLeave={(e) => {
-                  if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }
+                  if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }
                   if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.8)"; }
                 }}
                 onClick={() => trackCTAClick(btn.label, "cta-section")}

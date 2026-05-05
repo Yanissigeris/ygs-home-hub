@@ -36,13 +36,13 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
   const c = lang === "en" ? contentEn : contentFr;
 
   return (
-    <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, #0c1f28, #17303B)", overflow: "hidden" }}>
+    <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))", overflow: "hidden" }}>
       <style>{`
         .about-body-text::first-letter {
           font-family: var(--serif);
           font-size: 4em;
           font-weight: 500;
-          color: #BFA476;
+          color: var(--gold-warm-light);
           float: left;
           line-height: 0.9;
           padding: 0.05em 0.12em 0 0;
@@ -65,7 +65,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               fontWeight: 500,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#BFA476",
+              color: "var(--gold-warm-light)",
               marginBottom: "1.5rem",
             }}
           >
@@ -75,7 +75,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           {/* Pull quote */}
           <blockquote
             style={{
-              borderLeft: "3px solid #A88A5A",
+              borderLeft: "3px solid var(--gold)",
               paddingLeft: "20px",
               margin: "0 0 2rem 0",
             }}
@@ -86,7 +86,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
                 fontWeight: 400,
                 fontStyle: "italic",
-                color: "#F7F4EE",
+                color: "var(--cream)",
                 lineHeight: 1.3,
               }}
             >
@@ -118,7 +118,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 fontSize: "11px",
                 fontWeight: 500,
                 letterSpacing: "0.06em",
-                color: "#BFA476",
+                color: "var(--gold-warm-light)",
                 marginBottom: "2rem",
               }}
             >
@@ -134,13 +134,13 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               fontFamily: "var(--sans)",
               fontSize: "13px",
               fontWeight: 500,
-              color: "#F7F4EE",
+              color: "var(--cream)",
               textDecoration: "none",
               borderBottom: "1px solid transparent",
               transition: "border-color .2s ease",
               minHeight: 44,
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderBottomColor = "#F7F4EE"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderBottomColor = "var(--cream)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderBottomColor = "transparent"; }}
           >
             {c.cta}{" "}
@@ -165,7 +165,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: "#17303B",
+                background: "var(--ink)",
                 opacity: 0.2,
                 mixBlendMode: "multiply",
               }}

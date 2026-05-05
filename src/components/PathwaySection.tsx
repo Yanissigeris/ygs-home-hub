@@ -191,12 +191,12 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div className="section-container relative z-10">
           {/* Editorial header on cream */}
           <div className="max-w-[580px]">
-            <p className="label-overline mb-3" style={{ color: "#A88A5A" }}>
+            <p className="label-overline mb-3" style={{ color: "var(--gold)" }}>
               {heading.overline}
             </p>
-            <h2 style={{ color: "#17303B" }}>
+            <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
-              <span style={{ color: "#A88A5A", fontStyle: "italic" }}>
+              <span style={{ color: "var(--gold)", fontStyle: "italic" }}>
                 {heading.titleAccent}
               </span>
             </h2>
@@ -215,11 +215,11 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
               borderRadius: 3,
               overflow: "hidden",
               boxShadow: "0 30px 80px rgba(23,48,59,0.35)",
-              background: "linear-gradient(175deg, #0c1f28, #17303B)",
+              background: "linear-gradient(175deg, var(--ink-deep), var(--ink))",
             }}
           >
             {/* Gold top filet */}
-            <div aria-hidden="true" style={{ height: 2, background: "#A88A5A" }} />
+            <div aria-hidden="true" style={{ height: 2, background: "var(--gold)" }} />
 
           <div
             className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px overflow-hidden"
@@ -246,11 +246,11 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 onMouseEnter={(e) => {
                   e.currentTarget.style.zIndex = "2";
                   e.currentTarget.style.boxShadow =
-                    "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)";
+                    "0 4px 0 var(--gold), 0 24px 48px var(--gold3)";
                   e.currentTarget.style.transform = "translateY(-5px)";
                   e.currentTarget.style.background = "rgba(255,255,255,0.07)";
                   const title = e.currentTarget.querySelector('h3');
-                  if (title) title.style.color = "#BFA476";
+                  if (title) title.style.color = "var(--gold-warm-light)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.zIndex = "";
@@ -265,7 +265,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   <span
                     style={{
                       fontSize: "0.56rem",
-                      color: "#A88A5A",
+                      color: "var(--gold)",
                       textTransform: "uppercase",
                       letterSpacing: "0.12em",
                       fontWeight: 600,
@@ -283,7 +283,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     fontStyle: "italic",
                     fontSize: "clamp(2.25rem, 4vw, 2.75rem)",
                     lineHeight: 1,
-                    color: "#A88A5A",
+                    color: "var(--gold)",
                     opacity: 0.7,
                     marginBottom: "0.75rem",
                     display: "block",
@@ -319,7 +319,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   style={{
                     fontSize: ".72rem",
                     fontWeight: 600,
-                    color: "#A88A5A",
+                    color: "var(--gold)",
                     letterSpacing: ".06em",
                     textTransform: "uppercase",
                     borderBottom: "1px solid rgba(168,138,90,.3)",

@@ -58,9 +58,9 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
               <Link
                 to={linkHref}
                 className="mt-6 inline-flex items-center justify-center transition-all duration-200 w-full lg:w-auto"
-                style={{ background: "transparent", color: "#A88A5A", border: "1.5px solid #A88A5A", borderRadius: 0, fontSize: ".82rem", fontWeight: 600, padding: ".65rem 1.4rem", minHeight: 44, transition: "all .2s ease" }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "#A88A5A"; e.currentTarget.style.color = "#fff"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#A88A5A"; }}
+                style={{ background: "transparent", color: "var(--gold)", border: "1.5px solid var(--gold)", borderRadius: 0, fontSize: ".82rem", fontWeight: 600, padding: ".65rem 1.4rem", minHeight: 44, transition: "all .2s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
               >
                 {linkLabel} →
               </Link>
