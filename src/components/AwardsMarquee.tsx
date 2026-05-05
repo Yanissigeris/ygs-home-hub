@@ -29,13 +29,13 @@ const items = [
  *  --stats-item-gap        → horizontal spacing between items
  */
 const defaultVars = {
-  "--stats-bg": "#0E2630",
+  "--stats-bg": "var(--ink-mid)",
   "--stats-bg-gradient":
-    "linear-gradient(180deg, #0E2630 0%, #112E3A 50%, #0E2630 100%)",
+    "linear-gradient(180deg, var(--ink-mid) 0%, #112E3A 50%, var(--ink-mid) 100%)",
   "--stats-text": "var(--white)",
   "--stats-text-shadow":
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",
-  "--stats-gold": "#D4AF6F",
+  "--stats-gold": "var(--gold-bright)",
   "--stats-gold-glow":
     "0 0 10px rgba(212,175,111,.85), 0 0 4px rgba(212,175,111,.6)",
   "--stats-border": "rgba(168,138,90,.35)",

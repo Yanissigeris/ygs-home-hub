@@ -1,49 +1,46 @@
-## Phase 2 — Homepage Token Consolidation
+## Phase 3 — Trust + Service Surfaces Token Consolidation
 
-Surgical literal-to-var replacements in 5 homepage component files. Zero visual change, zero structural refactor.
+Baseline verified — all 5 files match expected hex counts exactly. Ready to apply 26 surgical literal-to-var replacements.
 
 ### Scope (5 files)
+- `src/components/SiteFooter.tsx` (6 replacements)
+- `src/components/TestimonialGrid.tsx` (5 replacements)
+- `src/components/AreasServicesSection.tsx` (4 replacements)
+- `src/components/GuideOffersSection.tsx` (7 replacements)
+- `src/components/AwardsMarquee.tsx` (4 replacements — code only, comments preserved)
 
-- `src/components/CTASection.tsx`
-- `src/components/FeaturedProperties.tsx`
-- `src/components/PathwaySection.tsx`
-- `src/components/AboutSection.tsx`
-- `src/components/HomeFAQTeaser.tsx`
+### Replacement map (case-sensitive)
 
-### Steps
+| Literal | Token |
+|---|---|
+| `#17303B` | `var(--ink)` |
+| `#A88A5A` | `var(--gold)` |
+| `#c4a878` | `var(--gold2)` |
+| `#fff` | `var(--white)` |
+| `#0c1f28` | `var(--ink-deep)` |
+| `#BFA476` | `var(--gold-warm-light)` |
+| `#7A6038` | `var(--gold-dark)` |
+| `#0E2630` | `var(--ink-mid)` |
+| `#D4AF6F` | `var(--gold-bright)` |
 
-1. **Baseline verify** — Run the per-file occurrence count (`grep -o … | wc -l`) for each of the 5 hex literals. Confirm exact match with the expected baseline matrix (totals: `#A88A5A`=23, `#17303B`=6, `#0c1f28`=2, `#F7F4EE`=3, `#BFA476`=4, plus 2× `rgba(168,138,90,0.12)` and 1× `"#fff"`). **If any count differs, STOP and report — do not edit.**
+### Special handling
 
-2. **Apply replacements** (case-sensitive, in scope files only) via `code--line_replace`:
+- **GuideOffersSection lines 53 & 83**: convert `ring-[#7A6038]` → `ring-[var(--gold-dark)]` (keep as Tailwind arbitrary value; do not move to inline style).
+- **AwardsMarquee WCAG comment block (lines 8-15)**: untouched. Only code uses on lines 32, 34 (×2), 38 are replaced. The `#112E3A` on line 34 stays literal (no token exists).
 
-   | Literal | Replacement |
-   |---|---|
-   | `#A88A5A` | `var(--gold)` |
-   | `#17303B` | `var(--ink)` |
-   | `#0c1f28` | `var(--ink-deep)` |
-   | `#F7F4EE` | `var(--cream)` |
-   | `#BFA476` | `var(--gold-warm-light)` |
-   | `#fff` (HomeFAQTeaser:62 only) | `var(--white)` |
-   | `rgba(168,138,90,0.12)` | `var(--gold3)` |
+### Method
 
-   Replacements apply across all contexts: inline `style={{...}}` props, embedded `<style>{`...`}</style>` template strings (AboutSection lines 40-54), boxShadow concatenated strings, and inline event-handler bodies. Multiple hits per line are expected and all must be replaced.
+Use `code--line_replace` per file with surgically scoped search blocks. For AwardsMarquee, target only the `defaultVars` object body (lines ~30-50), not the comment block.
 
-3. **Post-edit verify**:
-   - `rg -o "#A88A5A|#17303B|#0c1f28|#F7F4EE|#BFA476" <5 files>` → 0
-   - `rg -o '"#fff"' src/components/HomeFAQTeaser.tsx` → 0
-   - `rg -o "rgba\(168,138,90,0\.12\)" FeaturedProperties.tsx PathwaySection.tsx` → 0
-   - Out-of-scope sentinels still present: `#FAF8F3` in FeaturedProperties (1+), `#F5F1EA` in PathwaySection (3+), `rgba(168,138,90,.1)` in CTASection (1), `rgba(168,138,90,0.1)` in AboutSection (1).
+### Post-edit verification
 
-### Explicitly NOT touched
-
-- Cream variants `#FAF8F3`, `#F5F1EA` and their alpha rgba forms
-- `rgba(255,255,255,…)` — Phase 5+ (text-on-dark stack)
-- `rgba(23,48,59,…)` — Phase 5+ (ink-veil stack)
-- Gold alphas other than 0.12: `rgba(168,138,90,.1)`, `rgba(168,138,90,0.1)`, `rgba(168,138,90,0.2)`, `rgba(168,138,90,.3)` — different tokens, different phases
-- `--gold2` and any other existing token
-- `src/index.css` — no edits in Phase 2
-- All files outside the 5-file scope
+- `rg -o "#17303B|#A88A5A|#c4a878|#0c1f28|#BFA476|#7A6038"` across the 4 non-AwardsMarquee files → 0
+- `rg -o '"#fff"'` in SiteFooter + TestimonialGrid → 0
+- AwardsMarquee: `#0E2630` → 2 (comments only), `#D4AF6F` → 2 (comments only), `#FFFFFF` → 2 (unchanged), `#112E3A` → 3 (unchanged)
+- Sentinels intact: `#FAF8F3` (TestimonialGrid:97), `#F5F1EA` ×3 (AreasServicesSection), `rgba(168,138,90,0.08)` ×2 (TestimonialGrid)
+- `src/index.css` and `TestimonialSlider.tsx` untouched
+- Build passes
 
 ### Success criteria
 
-41 targeted values replaced, all out-of-scope sentinels intact, `src/index.css` untouched, build passes, pixel-identical visual diff.
+26 replacements applied, comment block + `#112E3A` + all out-of-scope sentinels preserved, pixel-identical visual diff.
