@@ -243,7 +243,8 @@ const ValuationForm = ({
           <div className="mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
             <img
               src={yanisPhoto}
-              alt={t.trustAlt}
+              alt=""
+              aria-hidden="true"
               className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 bg-white/5"
               loading="lazy"
               width={48}
@@ -269,7 +270,8 @@ const ValuationForm = ({
         <div className="flex items-center gap-3 mb-5 pb-5 border-b border-border/50">
           <img
             src={yanisPhoto}
-            alt={t.trustAlt}
+            alt=""
+            aria-hidden="true"
             className="w-12 h-12 rounded-full object-cover ring-2 ring-accent/20 bg-muted"
             loading="lazy"
             width={48}
