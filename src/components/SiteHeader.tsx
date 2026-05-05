@@ -19,6 +19,8 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 import ygsLogo from "@/assets/ygs-logo-updated.png";
+import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
+import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
 const logoYgsHorizontal = ygsLogo;
 const logoYgsSymbolBlue = ygsLogo;
 import { mainNav, type NavItem, type NavChild } from "@/data/navigation";
