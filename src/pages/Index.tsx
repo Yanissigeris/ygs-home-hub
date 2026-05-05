@@ -74,13 +74,13 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     
-    <LazySection minHeight={400} rootMargin="400px">
+    <LazySection minHeight={400} rootMargin="700px">
       <ValuationWidget />
       <QuickActionStrip />
       <AwardsMarquee />
     </LazySection>
 
-    <LazySection minHeight={500} rootMargin="400px">
+    <LazySection minHeight={500} rootMargin="700px">
       <PathwaySection />
       <div className="section-fade-bridge section-fade-bridge--dark-to-cream" aria-hidden="true" />
       <FeaturedProperties />
@@ -89,7 +89,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
     </LazySection>
 
-    <LazySection minHeight={500} rootMargin="400px">
+    <LazySection minHeight={500} rootMargin="700px">
       <TestimonialGrid
         overline="Témoignages"
         title="Ce que disent mes clients"
