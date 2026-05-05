@@ -398,6 +398,8 @@ const SiteHeader = () => {
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en" : "/"} className="flex min-w-0 shrink items-center gap-3.5" style={{ border: "none", outline: "none", boxShadow: "none", background: "transparent" }}>
           <img src={logoYgsHorizontal} alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor }} />
+          <img src={remaxBalloon} alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"} width={26} height={32} className="object-contain" style={{ height: scrolled ? 28 : 32, width: "auto", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
