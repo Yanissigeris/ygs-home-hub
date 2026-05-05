@@ -38,8 +38,13 @@ function htmlOptimizePlugin() {
 
         // 1) Inject conditional asset preloads — only on home + Outaouais hub.
         if (portraitKey || heroBgMobileAvifKey || heroBgDesktopAvifKey) {
+          const portraitSrcSet = portraitKey && portraitLgKey
+            ? `/${portraitKey} 1x, /${portraitLgKey} 2x`
+            : portraitKey
+              ? `/${portraitKey}`
+              : "";
           const portraitLink = portraitKey
-            ? `var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/${portraitKey}';l.setAttribute('fetchpriority','high');document.head.appendChild(l);`
+            ? `var l=document.createElement('link');l.rel='preload';l.as='image';l.type='image/avif';l.media='(min-width: 768px)';l.href='/${portraitKey}';l.setAttribute('imagesrcset',${JSON.stringify(portraitSrcSet)});l.setAttribute('fetchpriority','high');document.head.appendChild(l);`
             : "";
           const bgMobileLink = heroBgMobileAvifKey
             ? `var bm=document.createElement('link');bm.rel='preload';bm.as='image';bm.type='image/avif';bm.media='(max-width: 767px)';bm.href='/${heroBgMobileAvifKey}';bm.setAttribute('fetchpriority','high');document.head.appendChild(bm);`
