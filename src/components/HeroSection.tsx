@@ -684,11 +684,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
         <div
-          className="relative z-[20] flex flex-col"
+          className="relative z-[20] flex flex-col pointer-events-none"
           style={{ minHeight: "100svh" }}
         >
           <div
-            className="w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
+            className="pointer-events-auto w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
