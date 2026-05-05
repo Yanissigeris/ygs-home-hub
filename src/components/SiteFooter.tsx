@@ -203,19 +203,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               {affiliationsLabel}
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
-              {affiliationLogos.map((logo) => (
-                <div
-                  key={logo.alt}
-                  className="flex items-center justify-center"
-                  style={{
-                    background: "rgba(255,255,255,.04)",
-                    border: "1px solid rgba(255,255,255,.06)",
-                    borderRadius: 3,
-                    padding: ".4rem .75rem",
-                    minHeight: 44,
-                    minWidth: 80,
-                  }}
-                >
+              {affiliationLogos.map((logo) => {
+                const inner = (
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -225,8 +214,36 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     decoding="async"
                     className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
                   />
-                </div>
-              ))}
+                );
+                const tileStyle: React.CSSProperties = {
+                  background: "rgba(255,255,255,.04)",
+                  border: "1px solid rgba(255,255,255,.06)",
+                  borderRadius: 3,
+                  padding: ".4rem .75rem",
+                  minHeight: 44,
+                  minWidth: 80,
+                };
+                if ("href" in logo && logo.href) {
+                  return (
+                    <a
+                      key={logo.alt}
+                      href={logo.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={lang === "en" ? "Visit remax-quebec.com" : "Visiter remax-quebec.com"}
+                      className="flex items-center justify-center"
+                      style={tileStyle}
+                    >
+                      {inner}
+                    </a>
+                  );
+                }
+                return (
+                  <div key={logo.alt} className="flex items-center justify-center" style={tileStyle}>
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
