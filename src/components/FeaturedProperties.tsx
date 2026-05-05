@@ -163,9 +163,18 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
   ({ lang = "fr" }, ref) => {
     const strings = t[lang];
     const allProps = lang === "en" ? propertiesEn : properties;
-    const sold = allProps.filter((p) => p.status === "sold").slice(0, 2);
-    const active = allProps.filter((p) => p.status === "active").slice(0, 1);
-    const featured = [...sold, ...active];
+    // Ordre stratégique pour la home : flagship vendu en ouverture (signal
+    // volume + prix), 3 actives variées par prix/secteur, vendu en clôture.
+    const strategicOrder = [
+      "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
+      "20453879", // Condo Hull (active, accessible 359 900 $)
+      "17113358", // Maison Aylmer (active, 424 900 $)
+      "15163372", // Maison Limbour (active, 649 900 $)
+      "28743871", // Split Cantley (vendu, 559 800 $)
+    ];
+    const featured = strategicOrder
+      .map((id) => allProps.find((p) => p.id === id))
+      .filter((p): p is PropertyLike => p !== undefined);
 
     if (featured.length === 0) return null;
 
