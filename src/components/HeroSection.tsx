@@ -91,12 +91,12 @@ interface HeroSectionProps {
 const statsFr = [
   { value: "~9 ans", label: "d'expérience" },
   { value: "5 ★", label: "Google + Facebook" },
-  { value: "Hall of Fame", label: "RE/MAX" },
+  { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 const statsEn = [
   { value: "~9 yrs", label: "experience" },
   { value: "5 ★", label: "Google + Facebook" },
-  { value: "Hall of Fame", label: "RE/MAX" },
+  { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 
 /* Scroll chevron — bounces at hero bottom, fades on scroll */
@@ -834,7 +834,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {lang === "fr" ? "9 ans" : "9 years"}
                 </span>
                 <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
-                <span>{lang === "fr" ? "Hall of Fame RE/MAX" : "RE/MAX Hall of Fame"}</span>
+                <span>{lang === "fr" ? "Hall of Fame RE/MAX, LLC, 2024" : "RE/MAX, LLC Hall of Fame 2024"}</span>
               </div>
             </div>
           </div>
@@ -1012,7 +1012,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-                    <span>RE/MAX Hall of Fame</span>
+                    <span>RE/MAX, LLC Hall of Fame 2024</span>
                   </span>
                 </>
               ) : (
@@ -1034,7 +1034,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <span className="mx-2 opacity-50" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
-                    <span>Hall of Fame RE/MAX</span>
+                    <span>Hall of Fame RE/MAX, LLC, 2024</span>
                   </span>
                 </>
               )}
@@ -1042,9 +1042,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             {/* Mobile shortened credibility — inline JSX so text is editable via Visual Edits */}
             <div className="md:hidden">
               {lang === "en" ? (
-                <span>~9 yrs | 5★ Google | Hall of Fame</span>
+                <span>~9 yrs | 5★ Google | Hall of Fame 2024</span>
               ) : (
-                <span>~9 ans | 5★ Google | Hall of Fame</span>
+                <span>~9 ans | 5★ Google | Hall of Fame 2024</span>
               )}
             </div>
 
