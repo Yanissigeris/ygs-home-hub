@@ -66,6 +66,9 @@ interface HeroSectionProps {
   agentImageAvif?: string;
   agentImageSmAvif?: string;
   agentImageMdAvif?: string;
+  /** High-res variant for desktop/tablet retina (≥768px @ 2x DPR) */
+  agentImageLg?: string;
+  agentImageLgAvif?: string;
   agentName?: string;
   heroBgImage?: string;
   /** Mobile-optimized AVIF variant of the hero background. Used in <picture>
