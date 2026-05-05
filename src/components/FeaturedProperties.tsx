@@ -45,7 +45,7 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
       
       className="group flex flex-col h-full"
       style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
-      onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 #A88A5A, 0 24px 48px rgba(168,138,90,0.12)"; }}
+      onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 24px 48px var(--gold3)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
     >
       {/* Image */}
@@ -103,7 +103,7 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
             position: "absolute",
             top: "12px",
             left: "12px",
-            background: p.status === "sold" ? "#A88A5A" : "#17303B",
+            background: p.status === "sold" ? "var(--gold)" : "var(--ink)",
             color: "var(--white)",
             padding: "4px 10px",
             fontSize: "9.5px",
@@ -120,12 +120,12 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
       </div>
 
       {/* Gold top border — always visible, intensifies on hover */}
-      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(168,138,90,0.2)] group-hover:bg-[#A88A5A]" />
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(168,138,90,0.2)] group-hover:bg-[var(--gold)]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
         {/* Price */}
-        <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.3rem, 2.5vw, 1.6rem)", fontWeight: 600, color: "#17303B", lineHeight: 1.15, marginBottom: ".5rem" }}>
+        <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.3rem, 2.5vw, 1.6rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.15, marginBottom: ".5rem" }}>
           {p.price}
         </p>
 
@@ -142,13 +142,13 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
           {p.status === "sold" && (
             <>
               <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-              <span style={{ color: "#A88A5A", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
+              <span style={{ color: "var(--gold)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
             </>
           )}
         </p>
 
         {/* View link */}
-        <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "#A88A5A" }}>
+        <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "var(--gold)" }}>
           {p.status === "sold"
             ? (lang === "fr" ? "Voir la fiche" : "View listing")
             : strings.viewProperty}{" "}
