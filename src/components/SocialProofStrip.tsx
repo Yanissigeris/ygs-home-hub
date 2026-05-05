@@ -38,7 +38,7 @@ const initials = (name: string) =>
 
 const SocialProofStrip = React.forwardRef<HTMLElement, SocialProofStripProps>(
   ({ stats }, ref) => (
-    <section ref={ref} className="py-5 sm:py-7 bg-secondary/20">
+    <section ref={ref} className="py-5 sm:py-7 bg-[var(--cream)]">
       <div className="section-container max-w-[64rem]">
         <motion.div
           className="flex items-center justify-center gap-x-6 sm:gap-x-14"

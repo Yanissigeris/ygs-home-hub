@@ -117,7 +117,7 @@ const GatineauCentrePageEn = () => (
     </section>
 
     {/* ═══ QUALITY CTA ═══ */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[

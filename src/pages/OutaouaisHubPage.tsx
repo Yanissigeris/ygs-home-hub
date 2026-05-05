@@ -82,7 +82,7 @@ const OutaouaisHubPage = () => (
     </section>
 
     {/* Zones served */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[56rem]">
         <SectionHeading overline="Secteurs desservis" title="Les municipalités que je dessers en Outaouais" centered />
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -126,7 +126,7 @@ const OutaouaisHubPage = () => (
     </section>
 
     {/* Why work with me */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-3xl">
         <SectionHeading overline="Pourquoi moi" title="Un courtier local, bilingue et transparent" centered />
         <ul className="mt-8 space-y-3">

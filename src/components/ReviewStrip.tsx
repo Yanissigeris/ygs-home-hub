@@ -11,7 +11,7 @@ interface ReviewStripProps {
 }
 
 const ReviewStrip = React.forwardRef<HTMLElement, ReviewStripProps>(({ review }, ref) => (
-  <section ref={ref} className="border-y border-border/30 bg-secondary/20">
+  <section ref={ref} className="border-y border-border/30 bg-[var(--cream)]">
     <div className="section-container py-6 sm:py-7">
       <div className="mx-auto flex max-w-[36rem] flex-col items-center gap-3 text-center animate-fade-in">
         <div className="flex gap-0.5">

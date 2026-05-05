@@ -19,7 +19,7 @@ const ImageTextSplit = ({
   background = "default",
   imageAspect = "aspect-[4/3]",
 }: ImageTextSplitProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
       <motion.div
         className={imagePosition === "right" ? "" : "order-2 lg:order-1"}

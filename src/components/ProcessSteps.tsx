@@ -25,7 +25,7 @@ const ProcessSteps = ({
   const resolvedOverline = overline ?? (lang === "en" ? "The process" : "Le processus");
   const resolvedTitle = title ?? (lang === "en" ? "How it works" : "Comment ça fonctionne");
   return (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container">
       <motion.div
         className="text-center mb-12 max-w-[40rem] mx-auto"

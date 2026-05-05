@@ -151,7 +151,7 @@ const PontiacPageEn = () => {
             { icon: Waves, title: "The Ottawa River as your frontage", text: "The Municipality of Pontiac runs along the north shore of the Ottawa River. Several Breckenridge properties offer direct river access or water views. The Ottawa River is navigable, rich in fish, and one of Canada's largest rivers — a rare quality-of-life asset for a residential property." },
             { icon: Bus, title: "Transcollines — urban connection", text: "The Municipality of Pontiac is served by Transcollines, the transit service that connects the Collines-de-l'Outaouais municipalities to the STO's Rapibus network and Ottawa's OC Transpo. A city connection that makes Pontiac more accessible than one might think for those combining remote work with occasional commuting." },
           ].map((c) => (
-            <div key={c.title} className="bg-secondary/20 border border-border rounded-lg p-6 space-y-3">
+            <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
               <c.icon size={24} className="text-accent" />
               <h3 className="font-serif text-lg text-foreground">{c.title}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{c.text}</p>

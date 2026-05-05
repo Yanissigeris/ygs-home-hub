@@ -17,7 +17,7 @@ interface LocalSEOClusterProps {
 }
 
 const LocalSEOCluster = ({ overline, title, links, background = "default" }: LocalSEOClusterProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container max-w-[56rem]">
       <motion.div
         className="text-center mb-6 sm:mb-8"

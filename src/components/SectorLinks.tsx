@@ -35,7 +35,7 @@ const SectorLinks = ({
 }: SectorLinksProps) => {
   const visible = teaserCount ? sectors.slice(0, teaserCount) : sectors;
   return (
-    <section id={id} className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+    <section id={id} className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
       <div className="section-container max-w-[52rem]">
         <motion.div
           className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"

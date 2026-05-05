@@ -27,7 +27,7 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
     reviewsPageLabel,
     reviewsPageHref,
   }, ref) => (
-    <section ref={ref} className={`section-padding ${background === "alt" ? "bg-secondary/20" : "bg-background"}`}>
+    <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : "bg-background"}`}>
       <div className="section-container">
         <motion.div
           className="text-center mb-6 sm:mb-8"

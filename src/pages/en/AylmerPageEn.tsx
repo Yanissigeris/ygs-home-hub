@@ -145,7 +145,7 @@ const AylmerPageEn = () => (
     />
 
     {/* ═══ SECTION 1 — AREA PORTRAIT ═══ */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
         <div className="lg:col-span-3 space-y-4">
           <p className="label-overline">WHY AYLMER</p>
@@ -199,7 +199,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 3 — BUYING IN AYLMER ═══ */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
         <p className="label-overline">BUYER GUIDE</p>
         <h2 className="mt-3">What you need to know before buying in Aylmer</h2>
@@ -265,7 +265,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 5 — LIFE IN AYLMER ═══ */}
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
         <p className="label-overline">LIVING IN AYLMER</p>
         <h2 className="mt-3">Daily life in Aylmer</h2>

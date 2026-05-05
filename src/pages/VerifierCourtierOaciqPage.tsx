@@ -53,7 +53,7 @@ const VerifierCourtierOaciqPage = () => (
       </p>
     </ContentBlock>
 
-    <section className="section-padding bg-secondary/20">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[44rem]">
         <SectionHeading overline="Comment faire" title="3 étapes pour vérifier un courtier" centered />
         <div className="mt-8 space-y-4">

@@ -21,7 +21,7 @@ const FormSection = ({
   background = "default",
   children,
 }: FormSectionProps) => (
-  <section id={id} className={background === "alt" ? "section-padding bg-secondary/20" : "section-padding bg-background"}>
+  <section id={id} className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className={`section-container ${narrow ? "max-w-[36rem]" : ""}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}

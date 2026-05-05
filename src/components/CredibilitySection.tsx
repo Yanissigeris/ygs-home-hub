@@ -21,7 +21,7 @@ const trustPoints = [
 
 
 const CredibilitySection = React.forwardRef<HTMLElement>((_, ref) =>
-<section ref={ref} className="section-padding-md bg-secondary/20">
+<section ref={ref} className="section-padding-md bg-[var(--cream)]">
     <div className="section-container max-w-[56rem]">
       <motion.div
       className="mb-12 text-center"
