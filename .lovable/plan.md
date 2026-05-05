@@ -1,57 +1,49 @@
-## YGS Token Consolidation — Phase 0 + Phase 1
+## Phase 2 — Homepage Token Consolidation
 
-Pure design-token foundation work. Three atomic parts. Zero visual change except a deliberate cream warmth normalization (#F7F4EF typo → #F7F4EE canonical) in 5 files.
+Surgical literal-to-var replacements in 5 homepage component files. Zero visual change, zero structural refactor.
 
-### Part 1 — Add 26 tokens to `src/index.css`
+### Scope (5 files)
 
-Insert a new block immediately after the existing `--gold3: rgba(168,138,90,.12);` line (currently line 56), before `--ease`. The block defines:
+- `src/components/CTASection.tsx`
+- `src/components/FeaturedProperties.tsx`
+- `src/components/PathwaySection.tsx`
+- `src/components/AboutSection.tsx`
+- `src/components/HomeFAQTeaser.tsx`
 
-- **Gold scale** (3): `--gold-warm-light`, `--gold-dark`, `--gold-bright`
-- **Ink scale** (3): `--ink-deep`, `--ink-mid`, `--ink-soft`
-- **White** (1): `--white`
-- **Text-on-dark stack** (5): `--text-on-dark-strong/-/-muted/-whisper/-faint`
-- **Shadow stack** (3): `--shadow-soft/-mid/-strong`
-- **Ink-veil stack** (4): `--ink-veil-strong/-/-soft/-whisper`
-- **Radii** (5): `--radius-sm/-md/-lg/-pill/-circle`
-- **Status** (2): `--success`, `--warning`
+### Steps
 
-Existing tokens (including `--gold2`, which is referenced by gradients in TestimonialSlider and TestimonialGrid) are not touched.
+1. **Baseline verify** — Run the per-file occurrence count (`grep -o … | wc -l`) for each of the 5 hex literals. Confirm exact match with the expected baseline matrix (totals: `#A88A5A`=23, `#17303B`=6, `#0c1f28`=2, `#F7F4EE`=3, `#BFA476`=4, plus 2× `rgba(168,138,90,0.12)` and 1× `"#fff"`). **If any count differs, STOP and report — do not edit.**
 
-### Part 2 — Fix `#F7F4EF` typo → `var(--cream)`
+2. **Apply replacements** (case-sensitive, in scope files only) via `code--line_replace`:
 
-Replace every literal `#F7F4EF` with `var(--cream)` (canonical = `#F7F4EE`) across exactly 5 files, 17 hits total:
+   | Literal | Replacement |
+   |---|---|
+   | `#A88A5A` | `var(--gold)` |
+   | `#17303B` | `var(--ink)` |
+   | `#0c1f28` | `var(--ink-deep)` |
+   | `#F7F4EE` | `var(--cream)` |
+   | `#BFA476` | `var(--gold-warm-light)` |
+   | `#fff` (HomeFAQTeaser:62 only) | `var(--white)` |
+   | `rgba(168,138,90,0.12)` | `var(--gold3)` |
 
-- `src/components/SiteFooter.tsx` (3)
-- `src/components/MicroTrustStrip.tsx` (1)
-- `src/pages/BlogArticlePage.tsx` (5)
-- `src/pages/BlogPage.tsx` (4)
-- `src/pages/en/BlogPageEn.tsx` (4)
+   Replacements apply across all contexts: inline `style={{...}}` props, embedded `<style>{`...`}</style>` template strings (AboutSection lines 40-54), boxShadow concatenated strings, and inline event-handler bodies. Multiple hits per line are expected and all must be replaced.
 
-Case-sensitive match. I will verify counts via `rg` before editing and after.
+3. **Post-edit verify**:
+   - `rg -o "#A88A5A|#17303B|#0c1f28|#F7F4EE|#BFA476" <5 files>` → 0
+   - `rg -o '"#fff"' src/components/HomeFAQTeaser.tsx` → 0
+   - `rg -o "rgba\(168,138,90,0\.12\)" FeaturedProperties.tsx PathwaySection.tsx` → 0
+   - Out-of-scope sentinels still present: `#FAF8F3` in FeaturedProperties (1+), `#F5F1EA` in PathwaySection (3+), `rgba(168,138,90,.1)` in CTASection (1), `rgba(168,138,90,0.1)` in AboutSection (1).
 
-### Part 3 — Normalize white literals → `var(--white)`
+### Explicitly NOT touched
 
-Across `src/components/` and `src/pages/`, excluding `src/components/ui/`, `src/components/__tests__/`, `src/components/VideoPerfOverlay.tsx`, and `src/components/MarketContext2026.tsx`:
+- Cream variants `#FAF8F3`, `#F5F1EA` and their alpha rgba forms
+- `rgba(255,255,255,…)` — Phase 5+ (text-on-dark stack)
+- `rgba(23,48,59,…)` — Phase 5+ (ink-veil stack)
+- Gold alphas other than 0.12: `rgba(168,138,90,.1)`, `rgba(168,138,90,0.1)`, `rgba(168,138,90,0.2)`, `rgba(168,138,90,.3)` — different tokens, different phases
+- `--gold2` and any other existing token
+- `src/index.css` — no edits in Phase 2
+- All files outside the 5-file scope
 
-- `#fff` → `var(--white)` (inline style values)
-- `#FFFFFF` → `var(--white)` (inline style values)
-- `text-[#fff]` / `bg-[#fff]` / `text-[#FFFFFF]` / `bg-[#FFFFFF]` → `text-[var(--white)]` / `bg-[var(--white)]`
+### Success criteria
 
-Approach: enumerate every occurrence with `rg -n` first, scoped to the allowed paths, then perform per-file replacements via `code--line_replace`. Bare hex matches will use word-boundary-aware patterns (`#fff\b`) to avoid clobbering `#fff0`, `#ffffff00`, etc.
-
-### Out of scope (explicitly not touched)
-
-- `--gold2` and all other existing tokens
-- Any other hex literal (`#A88A5A`, `#17303B`, gold scale literals, etc. — later phases)
-- Any `rgba(...)` value
-- Inline-style → class refactors, hover handlers, framer-motion, `!important`
-- `src/components/ui/`, `VideoPerfOverlay.tsx`, `MarketContext2026.tsx`, test files
-
-### Verification
-
-After edits:
-- `rg -n "#F7F4EF" src/` → 0 hits
-- `rg -nE "#[fF]{3}\b|#[fF]{6}\b" src/components src/pages` (excluding ui/__tests__/VideoPerfOverlay) → 0 hits
-- `rg -n "text-\[#fff|bg-\[#fff|text-\[#FFFFFF|bg-\[#FFFFFF" src/` → 0 hits
-- `index.css` `:root` block contains the 26 new declarations
-- Build passes (auto-run by harness)
+41 targeted values replaced, all out-of-scope sentinels intact, `src/index.css` untouched, build passes, pixel-identical visual diff.
