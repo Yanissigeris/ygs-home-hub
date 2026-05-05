@@ -75,6 +75,8 @@ interface HeroSectionProps {
   hideRecognitionCard?: boolean;
   /** Show the 3-stat proof bar at the bottom of the hero. Home page only. */
   showProofBar?: boolean;
+  /** Add a diagonal petrol gradient overlay over the hero background image. Defaults to true. Set to false on the homepage. */
+  petrolGradient?: boolean;
 }
 
 /* Stats data */
@@ -162,6 +164,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       hideCredentialsStrip,
       hideRecognitionCard,
       showProofBar = false,
+      petrolGradient = true,
     },
     ref
   ) => {
@@ -561,6 +564,19 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
           </div>
+        )}
+
+        {/* Petrol gradient overlay — diagonal ink veil over the hero image (opt-out via petrolGradient={false}). */}
+        {petrolGradient && heroBgImage && !heroVideo && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              zIndex: 2,
+              background:
+                "linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%)",
+            }}
+          />
         )}
 
         {/* Poster image — always visible UNDER the video. Acts as the LCP candidate

@@ -52,6 +52,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       agentImage={yanisPortrait}
       agentName="Yanis Gauthier-Sigeris"
       hideRecognitionCard
+      petrolGradient={false}
     />
 
     
