@@ -1,73 +1,35 @@
-# Welcome to your Lovable project
+# YGS — yanisgauthier.com
 
-## Project info
+Site marketing pour Yanis Gauthier-Sigeris, courtier immobilier RE/MAX en Outaouais. SPA React/Vite bilingue (FR/EN) déployée sur Netlify avec prerender SEO et edge function de meta-injection.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Stack
 
-## How can I edit this code?
+- Vite 5 + TypeScript 5 + React 18
+- Tailwind CSS v3 + shadcn-ui
+- Supabase (Lovable Cloud) — Edge Functions, formulaires, stockage
+- Netlify — hébergement, edge functions SEO, prerender statique
 
-There are several ways of editing your application.
+## Scripts
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm run dev      # Dev server (port 8080)
+npm run build    # Build production (+ prerender + SEO inject)
+npm run lint     # ESLint
+npm run test     # Vitest (tests unitaires)
+npx playwright test   # E2E Playwright (multi-viewport)
 ```
 
-**Edit a file directly in GitHub**
+## Architecture
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `src/pages/` — pages FR servies à la racine `/`
+- `src/pages/en/` — pages EN servies sous `/en/...`
+- `src/components/` — composants partagés (HeroSection, FormSection, etc.)
+- `src/data/` — contenu statique (blog, propriétés, témoignages, navigation)
+- `src/contexts/LanguageContext.tsx` — détection FR/EN
+- `supabase/functions/` — edge functions (envoi email, génération image)
+- `scripts/prerender.mjs` — prerender SEO de toutes les routes au build
+- `netlify/edge-functions/seo-inject.ts` — injection meta côté edge
 
-**Use GitHub Codespaces**
+## Déploiement
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Push sur `main` → build Netlify → prerender HTML pour chaque route → publication. Domaine de production : `yanisgauthier.com`.
