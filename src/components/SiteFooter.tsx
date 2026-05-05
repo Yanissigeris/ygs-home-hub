@@ -8,17 +8,37 @@ import logoYgsWhite from "@/assets/ygs-logo.png";
 import logoMW from "@/assets/logo-mw-white.webp";
 import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
-import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
+import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
+import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
 import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
 
-const affiliationLogos = [
-  { src: logoRemaxDirect, alt: "RE/MAX Direct — agence immobilière Gatineau", filter: "brightness-[1.3]", href: "https://www.remax-quebec.com" },
+type AffiliationLogo = {
+  alt: string;
+  filter?: string;
+  href?: string;
+  caption?: string;
+  src?: string;
+  custom?: React.ReactNode;
+};
+
+const affiliationLogos: AffiliationLogo[] = [
+  {
+    alt: "RE/MAX Direct Inc. — agence immobilière",
+    href: "https://www.remax-quebec.com",
+    caption: "RE/MAX Direct Inc.",
+    custom: (
+      <div className="flex items-center gap-1.5">
+        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+      </div>
+    ),
+  },
   { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
-  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
@@ -204,7 +224,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
               {affiliationLogos.map((logo) => {
-                const inner = (
+                const inner = logo.custom ?? (
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -212,18 +232,32 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter}`}
+                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter ?? ""}`}
                   />
                 );
+                const caption = logo.caption ? (
+                  <p
+                    className="mt-1 text-center"
+                    style={{ fontSize: 10, lineHeight: 1.3, color: "rgba(255,255,255,.55)", fontWeight: 400 }}
+                  >
+                    {logo.caption}
+                  </p>
+                ) : null;
                 const tileStyle: React.CSSProperties = {
                   background: "rgba(255,255,255,.04)",
                   border: "1px solid rgba(255,255,255,.06)",
                   borderRadius: 3,
-                  padding: ".4rem .75rem",
-                  minHeight: 44,
+                  padding: ".5rem .75rem",
+                  minHeight: 56,
                   minWidth: 80,
                 };
-                if ("href" in logo && logo.href) {
+                const content = (
+                  <>
+                    {inner}
+                    {caption}
+                  </>
+                );
+                if (logo.href) {
                   return (
                     <a
                       key={logo.alt}
@@ -231,16 +265,16 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={lang === "en" ? "Visit remax-quebec.com" : "Visiter remax-quebec.com"}
-                      className="flex items-center justify-center"
+                      className="flex flex-col items-center justify-center"
                       style={tileStyle}
                     >
-                      {inner}
+                      {content}
                     </a>
                   );
                 }
                 return (
-                  <div key={logo.alt} className="flex items-center justify-center" style={tileStyle}>
-                    {inner}
+                  <div key={logo.alt} className="flex flex-col items-center justify-center" style={tileStyle}>
+                    {content}
                   </div>
                 );
               })}
