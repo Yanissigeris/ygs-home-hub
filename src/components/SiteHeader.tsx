@@ -439,6 +439,7 @@ const SiteHeader = () => {
           >
             Yanis Gauthier-Sigeris
           </span>
+          <img src={remaxBalloon} alt={lang === "en" ? "RE/MAX real estate broker" : "RE/MAX courtier immobilier"} width={18} height={22} className="shrink-0 object-contain" style={{ height: scrolled ? 20 : 22, width: "auto", filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }} loading="eager" decoding="async" />
         </Link>
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
