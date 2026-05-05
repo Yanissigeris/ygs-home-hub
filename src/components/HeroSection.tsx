@@ -68,6 +68,12 @@ interface HeroSectionProps {
   agentImageMdAvif?: string;
   agentName?: string;
   heroBgImage?: string;
+  /** Mobile-optimized AVIF variant of the hero background. Used in <picture>
+   *  source with media="(max-width: 767px)" so phones download a tiny file. */
+  heroBgImageMobile?: string;
+  /** Desktop AVIF variant of the hero background. Same source byte as the
+   *  <link rel="preload" media="(min-width: 768px)"> emitted by Vite. */
+  heroBgImageAvif?: string;
   heroVideo?: string;
   heroVideoPoster?: string;
   hideCredentialsStrip?: boolean;
