@@ -123,7 +123,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
               boxShadow: "0 18px 50px -10px rgba(23,48,59,.35)",
               display: "grid",
               gridTemplateColumns: `repeat(${item.columns.length}, minmax(13rem, 1fr))`,
-              gap: "1.25rem",
+              gap: 0,
               minWidth: `${item.columns.length * 14}rem`,
             }}
           >
@@ -132,7 +132,11 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                 key={col.title}
                 style={
                   colIdx > 0
-                    ? { borderLeft: "1px solid var(--border)", paddingLeft: "1.25rem" }
+                    ? {
+                        borderLeft: "1px solid var(--border)",
+                        marginLeft: "1.25rem",
+                        paddingLeft: "1.25rem",
+                      }
                     : undefined
                 }
               >
