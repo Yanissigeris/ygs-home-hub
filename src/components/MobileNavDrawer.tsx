@@ -32,14 +32,14 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
       <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-2 pl-3">
           {sections.map((sec, idx) => (
-            <div key={sec.title ?? idx} className={idx > 0 ? "mt-2 pt-2" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
+            <div key={sec.title ?? idx} className={idx > 0 ? "mt-3 pt-3" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
               {sec.title && (
-                <div className="px-6 pt-1 pb-1.5" style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600, color: "var(--gold)" }}>
+                <div className="px-6 pt-1 pb-1.5" style={{ fontSize: 10.5, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 500, color: "var(--muted)", opacity: 0.7 }}>
                   {sec.title}
                 </div>
               )}
               {sec.links.map((child) => (
-                <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.86rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--muted)", fontWeight: pathname === child.href ? 600 : 400, minHeight: 44 }}>
+                <Link key={child.href} to={child.href} onClick={onNavigate} className="block px-6 py-2.5 text-[.9rem] transition-colors" style={{ color: pathname === child.href ? "var(--ink)" : "var(--ink)", fontWeight: pathname === child.href ? 700 : 500, opacity: pathname === child.href ? 1 : 0.85, minHeight: 44 }}>
                   {child.label}
                 </Link>
               ))}
