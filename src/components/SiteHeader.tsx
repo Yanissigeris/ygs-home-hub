@@ -127,8 +127,15 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
               minWidth: `${item.columns.length * 14}rem`,
             }}
           >
-            {item.columns.map((col) => (
-              <div key={col.title}>
+            {item.columns.map((col, colIdx) => (
+              <div
+                key={col.title}
+                style={
+                  colIdx > 0
+                    ? { borderLeft: "1px solid var(--border)", paddingLeft: "1.25rem" }
+                    : undefined
+                }
+              >
                 <div
                   style={{
                     fontSize: "12px",
