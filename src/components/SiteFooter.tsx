@@ -192,9 +192,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── SEO Popular links ── */}
           <div className="py-5 sm:py-8">
-            <p className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
               {popularLabel}
-            </p>
+            </h3>
             <div className="flex flex-wrap gap-2">
               {popularLinks.map((l) => (
                 <Link
