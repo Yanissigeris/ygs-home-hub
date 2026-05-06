@@ -933,15 +933,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 height={480}
                 className="md:hidden absolute pointer-events-none select-none"
                 style={{
-                  bottom: 0,
-                  right: 0,
-                  width: "48vw",
+                  bottom: "env(safe-area-inset-bottom, 0px)",
+                  right: "-2vw",
+                  width: "62vw",
                   height: "auto",
-                  maxHeight: "75%",
+                  maxHeight: "68%",
                   objectFit: "contain",
                   objectPosition: "bottom right",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
+                  WebkitMaskImage: "linear-gradient(to left, black 72%, transparent 100%)",
+                  maskImage: "linear-gradient(to left, black 72%, transparent 100%)",
                 }}
                 loading="eager"
                 decoding="async"
