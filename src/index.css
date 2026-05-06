@@ -822,3 +822,16 @@ h1.hero-eyebrow {
 }
 
 /* Page transition overlay removed — PageTransition is now a passthrough. */
+
+/* QuickActionStrip — micro icon animation on hover/focus */
+.qas-btn:hover .qas-icon,
+.qas-btn:focus-visible .qas-icon {
+  transform: translateX(2px) scale(1.08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .qas-btn,
+  .qas-btn .qas-icon {
+    transition: none !important;
+    transform: none !important;
+  }
+}
