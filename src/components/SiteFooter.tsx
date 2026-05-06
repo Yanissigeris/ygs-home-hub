@@ -296,7 +296,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Agency identification block ── */}
-          <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+          <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
@@ -311,7 +311,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               {"  ·  "}
               <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }}>yanis@martywaite.com</a>
             </p>
-          </div>
+          </address>
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
