@@ -1,9 +1,9 @@
 import * as React from "react";
 
 const items = [
+  "Club 100% OR, RE/MAX Québec, 2020, 2022-2025",
   "Hall of Fame, RE/MAX, LLC, 2024",
   "Club Platine, RE/MAX Québec, 2021",
-  "Club 100% OR, RE/MAX Québec, 2020, 2022-2025",
   "Club 100%, RE/MAX Québec, 2019",
 ];
 
