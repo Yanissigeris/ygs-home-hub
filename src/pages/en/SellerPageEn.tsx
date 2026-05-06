@@ -16,7 +16,7 @@ import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-vendre.webp";
+import heroImg from "@/assets/hero-vendre-gatineau.webp";
 
 const painPoints = [
   { icon: CheckCircle2, title: "Is now the right time to sell?", text: "The Gatineau market is evolving. You don't want to miss the window, but you also don't want to sell without a plan." },
