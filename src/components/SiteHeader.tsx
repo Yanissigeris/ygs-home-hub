@@ -288,19 +288,19 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Header is permanently transparent with white text on all routes/breakpoints,
-  // EXCEPT mobile homepage after 80px scroll → solid dark with blur.
-  const transparent = !mobileScrolled;
+  // Header is transparent at the top and switches to solid dark with blur after 80px scroll
+  // on every breakpoint and route.
+  const transparent = !scrolled;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: mobileScrolled ? "rgba(23,48,59,0.92)" : "transparent",
-    backdropFilter: mobileScrolled ? "blur(12px)" : "none",
-    WebkitBackdropFilter: mobileScrolled ? "blur(12px)" : "none",
-    borderBottom: mobileScrolled ? "1px solid rgba(217,225,229,0.15)" : "none",
+    background: scrolled ? "rgba(23,48,59,0.92)" : "transparent",
+    backdropFilter: scrolled ? "blur(12px)" : "none",
+    WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+    borderBottom: scrolled ? "1px solid rgba(217,225,229,0.15)" : "none",
     boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
     transition: "background-color 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease",
