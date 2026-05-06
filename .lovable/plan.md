@@ -1,82 +1,61 @@
-## Sprint — Conformité RE/MAX page Contact (À propos)
+# Conformité RE/MAX p.41 — barre NAP du Hero
 
-Routes inchangées: `/contact-yanis` (FR) et `/en/contact` (EN).
+Modification chirurgicale : ajouter le numéro principal de l'agence (Bureau : 819-684-0000) à côté du cellulaire dans la barre du bas du Hero, sans toucher au reste.
 
-### 1. Nouveau composant `src/components/RemaxAgencyBlock.tsx`
+## Fichiers modifiés (2)
 
-Carte d'affiliation agence, fond crème `#F7F4EE`, texte foncé. Props: `lang: "fr" | "en"`.
+### 1. `src/config/heroBottomInfo.tsx`
+Ajouter les champs pour le numéro de l'agence à côté du cellulaire existant. Aucun champ supprimé (pour rétro-compat éventuelle).
 
-Contenu (ordre vertical):
-- Ligne logos: `remaxLogotypeBlack` (h ~32px) + montgolfière (h ~36px) côte à côte
-- Nom agence: **RE/MAX Direct inc.** (DM Sans, ~20px, semibold) — taille ≥ 50% du H2
-- Sous-titre: « Agence immobilière » (FR) / « Real estate agency » (EN), ~13px, opacity 70%
-- Adresse: `216, chemin d'Aylmer, Gatineau (Québec) J9H 1A4`
-- Téléphone bureau: `Bur. : 819-684-0000` (FR) / `Office: 819-684-0000` (EN), `tel:+18196840000`
-
-Import montgolfière (placeholder temporaire, sera switché sur signal utilisateur):
 ```ts
-// TODO: replace with @/assets/remax-balloon-color.svg once uploaded by user
-import remaxBalloonColor from "@/assets/remax-balloon-official.png";
+export const heroContact = {
+  city: "Gatineau, QC",
+  officePhoneDisplay: "819-684-0000",
+  officePhoneHref: "tel:+18196840000",
+  phoneDisplay: "819-210-3044",
+  phoneHref: "tel:+18192103044",
+  emailDisplay: "yanis@martywaite.com",
+  emailHref: "mailto:yanis@martywaite.com",
+};
 ```
 
-### 2. `src/components/ContactCard.tsx` — hiérarchie téléphone (Règlement 2.4.3)
+### 2. `src/components/HeroSection.tsx` — uniquement les 2 blocs NAP du bas
 
-Refactor `items` en `{ icon, label, value, href? }` (rétrocompat).
+**Desktop (lignes ~1078–1091)** — remplacer `Ville | Cell | Email` par :
 
-Ordre fixe:
-1. **Bur. / Office** : 819-684-0000 → `tel:+18196840000`
-2. **Cell. / Mobile** : 819-210-3044 → `tel:+18192103044` (≤ taille Bur.)
-3. **Email** : `yanis@martywaite.com` → `mailto:yanis@martywaite.com` (≤ taille Bur.)
-4. **Région / Area** : Gatineau, Aylmer, Hull, Plateau
+```
+{city} · Bureau : <a tel:+18196840000>819-684-0000</a> · Cellulaire : <a tel:+18192103044>819-210-3044</a> · <a mailto>email</a>
+```
 
-Toutes les lignes: même couleur, police, taille.
+- Séparateur `·` (cohérence footer) au lieu de `|`.
+- Labels `Bureau :` / `Cellulaire :` localisés via la prop `lang` déjà disponible (`Office`/`Mobile` en EN).
+- Strictement même classe, taille, couleur, opacité, font — aucune classe CSS modifiée, aucun token changé.
+- Liens `tel:` sur les deux numéros, conservation des classes hover existantes sur le numéro cellulaire et application identique sur le numéro bureau.
+- Le `<a mailto>` email garde toutes ses classes existantes.
 
-### 3. `src/components/ProfileSection.tsx`
+**Mobile (lignes ~1105–1112)** — même substitution :
 
-- Logo YGS: `clamp(145px, 20vw, 180px)` → `clamp(70px, 10vw, 90px)` (≈50%)
-- Nouveau prop `affiliationSlot?: ReactNode` rendu sous photo + logo YGS
+```
+{city} · Bureau : 819-684-0000 · Cellulaire : 819-210-3044
+<br />
+{email}
+```
 
-### 4. Pages
+- Mêmes labels localisés, séparateur `·` déjà présent.
+- Wrap naturel autorisé, aucune réduction de taille de police.
 
-**`src/pages/ContactPage.tsx`** (FR):
-- `contactItems` restructurés (Bur. / Cell. / Email / Région) avec `yanis@martywaite.com`
-- `affiliationSlot={<RemaxAgencyBlock lang="fr" />}`
+## Hors-scope (intacts)
 
-**`src/pages/en/ContactPageEn.tsx`** (EN):
-- Mirror avec `lang="en"`, labels Office / Mobile / Email / Area, même email `yanis@martywaite.com`
+- Footer (`SiteFooter.tsx`)
+- Header, nav, CTAs, trust badges, Framer Motion
+- H1/H2/headings, JSON-LD, meta, schema.org, URLs, routes
+- Couleurs, tokens Tailwind, typographie, line-height, assets, images, logos
+- Toutes les autres pages utilisant `819-210-3044`
 
-### 5. Responsive
+## Validation
 
-- Desktop ≥ md: colonne gauche (38%) empile photo → logo YGS → bloc agence. Coordonnées à droite.
-- Mobile: empilage vertical, bloc agence pleine largeur.
-
-### Checklist conformité
-
-- [x] Logos officiels RE/MAX (logotype noir + montgolfière couleur après upload)
-- [x] RE/MAX Direct inc. + « Agence immobilière »
-- [x] Adresse complète agence
-- [x] Bur. en premier, Cell. en second, même typo/couleur/taille
-- [x] Email `yanis@martywaite.com` ≤ taille Bur.
-- [x] Logo YGS ≤ 50% logo RE/MAX
-- [x] Nom agence ≥ 50% nom courtier
-- [x] Parité FR/EN
-- [x] Aucune régression: H1, méta, JSON-LD, bio, photo, nav, CTA, formulaire, reviews
-
-### Fichiers touchés
-
-- `src/components/RemaxAgencyBlock.tsx` (nouveau)
-- `src/components/ContactCard.tsx`
-- `src/components/ProfileSection.tsx`
-- `src/pages/ContactPage.tsx`
-- `src/pages/en/ContactPageEn.tsx`
-
-### Étapes post-implémentation
-
-1. Tu uploades `src/assets/remax-balloon-color.svg`
-2. Tu me dis « go » → je change l'import (`.png` → `.svg`) — 1 ligne
-3. Vérif visuelle FR + EN, desktop + mobile
-4. Push prod sur ton signal final (pas avant)
-
-### Mémoire à mettre à jour
-
-- `mem://project/contact-info`: email pro = `yanis@martywaite.com` (remplace ancienne valeur si présente)
+1. Hero desktop affiche : `Gatineau, QC · Bureau : 819-684-0000 · Cellulaire : 819-210-3044 · yanis@martywaite.com`
+2. Hero mobile : même contenu, wrap naturel.
+3. Les deux numéros : taille/couleur/typo identiques (héritées du même `<address>`/`<span>`).
+4. Clic sur 819-684-0000 → `tel:+18196840000`. Clic sur 819-210-3044 → `tel:+18192103044`.
+5. Footer inchangé. EN affiche `Office :` / `Mobile :`.
