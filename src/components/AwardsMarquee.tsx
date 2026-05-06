@@ -64,8 +64,72 @@ const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
         boxShadow: "var(--stats-inset-shadow)",
       }}
     >
+      {/* Mobile: static 2x2 grid */}
       <div
-        className="relative group"
+        className="sm:hidden px-4"
+        role="list"
+        aria-label="Distinctions RE/MAX"
+      >
+        <div className="grid grid-cols-2 gap-2.5">
+          {[
+            { title: "Club 100% OR", meta: "RE/MAX Québec · 2020, 2022–2025" },
+            { title: "Hall of Fame", meta: "RE/MAX, LLC · 2024" },
+            { title: "Club Platine", meta: "RE/MAX Québec · 2021" },
+            { title: "Club 100%", meta: "RE/MAX Québec · 2019" },
+          ].map((it, i) => (
+            <div
+              key={i}
+              role="listitem"
+              className="flex items-start gap-2"
+              style={{
+                background: "rgba(255,255,255,.03)",
+                border: "1px solid rgba(168,138,90,.22)",
+                padding: "10px 12px",
+              }}
+            >
+              <span
+                aria-hidden="true"
+                style={{
+                  fontSize: "9px",
+                  color: "var(--stats-gold)",
+                  textShadow: "0 0 6px rgba(212,175,111,.6)",
+                  lineHeight: 1.6,
+                }}
+              >
+                ●
+              </span>
+              <div className="flex-1 min-w-0">
+                <div
+                  className="font-bold uppercase"
+                  style={{
+                    fontSize: "11px",
+                    letterSpacing: ".12em",
+                    color: "var(--stats-text)",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {it.title}
+                </div>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    color: "var(--stats-gold)",
+                    marginTop: "2px",
+                    lineHeight: 1.35,
+                    opacity: 0.92,
+                  }}
+                >
+                  {it.meta}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop/tablet: animated marquee */}
+      <div
+        className="relative group hidden sm:block"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 4%, black 96%, transparent)",
