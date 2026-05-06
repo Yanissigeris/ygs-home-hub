@@ -975,7 +975,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            textShadow: "0 1px 8px rgba(0,0,0,0.65)",
+            textShadow: "0 0 6px rgba(0,0,0,0.85), 0 1px 2px rgba(0,0,0,0.9)",
             fontFamily: "var(--sans)",
           }}
         >
