@@ -831,7 +831,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 }}
               >
                 <span className="hidden min-[381px]:inline">
-                  {lang === "fr" ? "9 ans" : "9 years"}
+                  {lang === "fr" ? "Depuis 2017" : "Since 2017"}
                 </span>
                 <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
                 <span>{lang === "fr" ? "Hall of Fame RE/MAX, LLC, 2024" : "RE/MAX, LLC Hall of Fame 2024"}</span>
