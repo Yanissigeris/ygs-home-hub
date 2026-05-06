@@ -73,7 +73,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         style={{
           fontSize: "13px",
           letterSpacing: "0.04em",
-          fontWeight: active ? 600 : 500,
+          fontWeight: active ? 700 : 600,
           color: active ? activeColor : defaultColor,
           padding: ".4rem .7rem",
           borderRadius: 3,
@@ -98,7 +98,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           style={{
             fontSize: "13px",
             letterSpacing: "0.04em",
-            fontWeight: isChildActive ? 600 : 500,
+            fontWeight: isChildActive ? 700 : 600,
             color: isChildActive ? activeColor : defaultColor,
             padding: ".4rem .7rem",
             borderRadius: 3,
@@ -119,8 +119,8 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
             style={{
               borderRadius: 3,
               border: "1px solid var(--border)",
-              background: "rgba(247,244,238,.98)",
-              boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)",
+              background: "rgba(247,244,238,1)",
+              boxShadow: "0 18px 50px -10px rgba(23,48,59,.35)",
               display: "grid",
               gridTemplateColumns: `repeat(${item.columns.length}, minmax(13rem, 1fr))`,
               gap: "1.25rem",
@@ -152,12 +152,13 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                     style={{
                       fontSize: "13px",
                       letterSpacing: "0.03em",
-                      fontWeight: pathname === child.href ? 600 : 500,
-                      color: pathname === child.href ? "var(--ink)" : "#4A5568",
+                      fontWeight: pathname === child.href ? 700 : 600,
+                      color: pathname === child.href ? "var(--ink)" : "#1f2d3a",
                       borderRadius: 3,
+                      textShadow: "none",
                     }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#1f2d3a"; }}
                   >
                     {child.label}
                   </Link>
@@ -179,7 +180,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         style={{
           fontSize: "13px",
           letterSpacing: "0.04em",
-          fontWeight: isChildActive ? 600 : 500,
+          fontWeight: isChildActive ? 700 : 600,
           color: isChildActive ? activeColor : defaultColor,
           padding: ".4rem .7rem",
           borderRadius: 3,
@@ -194,7 +195,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
-        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,.98)", boxShadow: "0 12px 40px -12px rgba(23,48,59,.12)" }}>
+        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(23,48,59,.35)" }}>
           {item.children!.map((child) => (
             <Link
               key={child.href}
@@ -204,12 +205,13 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
               style={{
                 fontSize: "13px",
                 letterSpacing: "0.04em",
-                fontWeight: pathname === child.href ? 600 : 500,
-                color: pathname === child.href ? "var(--ink)" : "#4A5568",
+                fontWeight: pathname === child.href ? 700 : 600,
+                color: pathname === child.href ? "var(--ink)" : "#1f2d3a",
                 borderRadius: 3,
+                textShadow: "none",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#4A5568"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#1f2d3a"; }}
             >
               {child.label}
             </Link>
@@ -307,7 +309,7 @@ const SiteHeader = () => {
     willChange: "background-color",
   };
 
-  const textShadow = "0 1px 4px rgba(0,0,0,0.4)";
+  const textShadow = scrolled ? "none" : "0 1px 3px rgba(0,0,0,0.75), 0 0 14px rgba(0,0,0,0.45)";
 
   // Colors swap based on transparent vs scrolled-glass state.
   const navLinkColor = "var(--white)";
