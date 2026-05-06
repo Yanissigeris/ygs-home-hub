@@ -64,62 +64,63 @@ const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
         boxShadow: "var(--stats-inset-shadow)",
       }}
     >
-      {/* Mobile: static 2x2 grid */}
+      {/* Mobile: compact static 2x2 grid */}
       <div
         className="sm:hidden px-4"
         role="list"
         aria-label="Distinctions RE/MAX"
+        style={{ margin: "-0.35rem 0" }}
       >
-        <div className="grid grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-2 gap-1.5">
           {[
-            { title: "Club 100% OR", meta: "RE/MAX Québec · 2020, 2022–2025" },
-            { title: "Hall of Fame", meta: "RE/MAX, LLC · 2024" },
-            { title: "Club Platine", meta: "RE/MAX Québec · 2021" },
-            { title: "Club 100%", meta: "RE/MAX Québec · 2019" },
+            { title: "Club 100% OR", years: "2020, 22–25" },
+            { title: "Hall of Fame", years: "2024" },
+            { title: "Club Platine", years: "2021" },
+            { title: "Club 100%", years: "2019" },
           ].map((it, i) => (
             <div
               key={i}
               role="listitem"
-              className="flex items-start gap-2"
+              className="flex items-center gap-2"
               style={{
                 background: "rgba(255,255,255,.03)",
                 border: "1px solid rgba(168,138,90,.22)",
-                padding: "10px 12px",
+                padding: "7px 10px",
+                minHeight: "38px",
               }}
             >
               <span
                 aria-hidden="true"
                 style={{
-                  fontSize: "9px",
+                  fontSize: "8px",
                   color: "var(--stats-gold)",
                   textShadow: "0 0 6px rgba(212,175,111,.6)",
-                  lineHeight: 1.6,
+                  lineHeight: 1,
                 }}
               >
                 ●
               </span>
-              <div className="flex-1 min-w-0">
+              <div className="flex-1 min-w-0 leading-tight">
                 <div
-                  className="font-bold uppercase"
+                  className="font-bold uppercase truncate"
                   style={{
                     fontSize: "11px",
-                    letterSpacing: ".12em",
+                    letterSpacing: ".1em",
                     color: "var(--stats-text)",
-                    lineHeight: 1.3,
                   }}
                 >
                   {it.title}
                 </div>
                 <div
                   style={{
-                    fontSize: "10px",
+                    fontSize: "9.5px",
                     color: "var(--stats-gold)",
-                    marginTop: "2px",
-                    lineHeight: 1.35,
-                    opacity: 0.92,
+                    letterSpacing: ".04em",
+                    opacity: 0.9,
+                    marginTop: "1px",
                   }}
                 >
-                  {it.meta}
+                  {it.years}
                 </div>
               </div>
             </div>
