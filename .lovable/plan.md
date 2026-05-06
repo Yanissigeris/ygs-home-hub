@@ -1,54 +1,53 @@
-## Objectif
-
-Sur mobile (`<640px`), remplacer la bande défilante des awards par une **grille statique 2×2** lisible et premium. Garder le marquee animé inchangé sur tablette/desktop (≥640px).
-
 ## Fichier modifié
+- `src/components/SiteFooter.tsx` (UNIQUE fichier — composant bilingue avec rendering responsive dual via `lang` et classes Tailwind `sm:hidden`/`hidden sm:grid`).
 
-- `src/components/AwardsMarquee.tsx` (uniquement)
+FR et EN sont traités automatiquement par les mêmes JSX (les libellés viennent de `footerColumns`/`footerColumnsEn` et de variables ternaires). Aucune modification à `data/navigation*`.
 
-## Approche
+## Constats d'audit (à valider avant exécution)
 
-Rendre les **deux versions** dans le DOM et alterner la visibilité via Tailwind responsive (`sm:hidden` / `hidden sm:block`). Pas de JS, pas de hook viewport, pas de CLS — c'est purement CSS et SSR-safe (important pour le prerender).
+1. **Pas de composant Footer EN séparé.** Une seule passe couvre FR+EN.
+2. **Pas d'image balloon RE/MAX décorative isolée.** Le seul `remax-balloon-official` est déjà dans le custom RE/MAX (ligne 35) et a déjà `alt=""` ET `aria-hidden="true"`. **Changement [3] déjà appliqué — aucune action requise.**
+3. **Discrepancy logos affiliations.** Le brief mentionne « 4 logos » (MW, SIRVA, Temple, Enfant Soleil) mais le tableau `affiliationLogos` (lignes 27-44) en contient **6** (incluant RE/MAX Direct et Tranquilli-T) — et le brief lui-même dit ensuite « NE PAS retirer Tranquilli-T ou RE/MAX Direct ». Je ne retire/n'ajoute donc rien et j'uniformise la hauteur visuelle des **6** tuiles (cf. [4]).
+4. **Grille affiliations.** Le rendu actuel est `flex flex-wrap` (ligne 225), pas `grid-cols-4`. Je n'altère pas ce layout — j'ajuste seulement la hauteur des images.
 
-### Version mobile (nouvelle, `<640px`)
+## Changements
 
-- Grille 2 colonnes × 2 lignes, gap ~10px, padding horizontal cohérent avec `section-container`.
-- Chaque cellule = mini-carte sobre :
-  - fond `rgba(255,255,255,.03)`, bordure 1px `rgba(168,138,90,.22)`, radius 0 (cohérent avec le style éditorial du site).
-  - Padding `12px 14px`, alignement vertical centré.
-  - Pastille dorée `●` 9px en haut (var `--stats-gold` + glow réduit).
-  - **Ligne 1** : titre court en gras, blanc, 11px, `letter-spacing:.12em`, uppercase — ex. `CLUB 100% OR`, `HALL OF FAME`, `CLUB PLATINE`, `CLUB 100%`.
-  - **Ligne 2** : meta en doré clair, 10px, regular — ex. `RE/MAX Québec · 2020, 2022–2025`, `RE/MAX, LLC · 2024`, etc.
-- Nouveau tableau de données local au fichier :
-  ```ts
-  const itemsStatic = [
-    { title: "Club 100% OR", meta: "RE/MAX Québec · 2020, 2022–2025" },
-    { title: "Hall of Fame",  meta: "RE/MAX, LLC · 2024" },
-    { title: "Club Platine",  meta: "RE/MAX Québec · 2021" },
-    { title: "Club 100%",     meta: "RE/MAX Québec · 2019" },
-  ];
-  ```
-  (Ordre identique au marquee actuel : 100% OR → Hall of Fame → Platine → 100%.)
-- Marqué `aria-label="Distinctions RE/MAX"` sur la grille.
+### [1] `<p>` titres de colonnes → `<h3>` (visuellement identique)
 
-### Version desktop/tablette (existante, ≥640px)
+- **Ligne 173** (desktop columns) — `<p className="mb-5" style={{...}}>` → `<h3 className="mb-5" style={{...}}>` autour de `{col.title}`. Classes/style préservés à l'identique.
+- **Ligne 193** (popular links) — `<p>` → `<h3>` autour de `{popularLabel}`. Idem.
+- **Ligne 222** (affiliations) — `<p>` → `<h3>` autour de `{affiliationsLabel}`. Idem.
 
-- Bloc marquee actuel intégralement conservé, simplement enveloppé dans un wrapper `hidden sm:block`.
-- Le `<style>` media-query existant reste valide (il ne s'applique qu'au marquee visible).
+### [1-bis] Mobile accordion — wrapper `<h3>` autour du `<button>`
 
-### Conteneur `<section>`
+- **`FooterAccordion`, lignes 59-74.** Wrap le `<button>` (lignes 60-63) dans un `<h3 style={{ margin: 0 }}>` pour neutraliser le margin par défaut du h3 et préserver l'apparence/comportement.
+- Aucune classe ni handler ni `aria-expanded` du `<button>` modifié. Le panneau (`<div id={panelId}>`) reste hors du `<h3>`.
 
-- Inchangé : mêmes `defaultVars`, même background, mêmes bordures haut/bas, même padding vertical.
-- On garde un seul `<section>` racine pour ne pas casser le rythme entre `ValuationWidget`, `QuickActionStrip` et la suite.
+### [2] Wrap NAP dans `<address>`
 
-## Accessibilité
+- **Lignes 297-312** : `<div className="py-4 text-center" style={...}>` → `<address className="py-4 text-center not-italic" style={...}>`.
+- Ajout de `not-italic` (classe Tailwind) uniquement pour neutraliser l'italique par défaut UA d'`<address>` — apparence visuelle strictement préservée.
+- Contenu interne (deux `<p>`, liens `tel:` et `mailto:`, séparateurs `·`, textes FR/EN) **strictement intact**.
+- Aucun microdata schema.org ajouté.
 
-- Mobile : texte rendu directement (pas d'animation), donc lisible par screen readers et indexable. Suppression du besoin de `aria-hidden` sur le duplicata (il n'existe pas en mobile).
-- Desktop : marquee inchangé, déjà avec pause au hover et duplicata `aria-hidden`.
-- Respect implicite de `prefers-reduced-motion` côté mobile (statique). Sur desktop on laisse tel quel — pourra être traité dans un sprint séparé si demandé.
+### [3] `aria-hidden="true"` sur le ballon RE/MAX
+- **Déjà présent ligne 35.** Aucune action.
 
-## Hors scope
+### [4] Uniformisation hauteur logos affiliations
+- **Ligne 235** (img des logos non-custom) : remplacer `h-full max-h-[34px] w-auto max-w-[88px] object-contain ... sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px]` par `h-10 w-auto object-contain` (40px uniforme, ratio préservé). Filtres et opacités/transitions conservés.
+- **Lignes 34-35** (custom RE/MAX, `height: 18`) : passer à `height: 28` pour rapprocher visuellement la tuile RE/MAX des autres (l'icône+balloon en duo reste plus petite que 40px logique pour ne pas exploser la rangée). Largeur auto, ratios préservés.
+- Aucune modification au `tileStyle`, ni à la grille parent, ni aux `alt`, ni aux `href`, ni aux `src`, ni au nombre de logos.
 
-- Aucun changement aux contenus listés (mêmes 4 distinctions, même ordre).
-- Aucun changement aux tokens couleur, à `Index.tsx`, ni au reste du site.
-- Pas de modification du test e2e `awards-marquee.spec.ts` sauf si nécessaire — à vérifier en build mode et ajuster si le test cible un sélecteur disparu en mobile (dans ce cas, scoper le test au breakpoint desktop).
+## Préservé strictement (zéro changement)
+- Tous textes (CTA, taglines, NAP, copyright, liens légaux, cookie banner non touché).
+- Tous `href`, `to`, `tel:`, `mailto:`.
+- Tous `alt` existants.
+- Tous JSON-LD, meta, canonical, hreflang, robots, llms.txt (hors fichier).
+- Palette, espacements généraux, comportement accordion (state, animation, `aria-expanded`, `aria-controls`).
+- `data/navigation.ts` et `data/navigation-en.ts` (intouchés).
+- Composants autres que `SiteFooter.tsx`.
+
+## Vérifications post-implémentation (mentales)
+- Hiérarchie : les nouveaux `<h3>` du footer ne montent pas au-dessus des h1/h2 des pages (h3 est cohérent sous le h2 de la section CTA `Prêt à passer à l'action?`).
+- Apparence visuelle inchangée (même classes/styles inline).
+- Accordion mobile fonctionne (handler/aria sur `<button>` intacts).

@@ -31,8 +31,8 @@ const affiliationLogos: AffiliationLogo[] = [
     caption: "RE/MAX Direct Inc.",
     custom: (
       <div className="flex items-center gap-1.5">
-        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
-        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
       </div>
     ),
   },
