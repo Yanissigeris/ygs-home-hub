@@ -1076,11 +1076,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             }}
           >
             <span>{heroContact.city}</span>
-            {" | "}
+            {" · "}
+            <span>{lang === "en" ? "Office: " : "Bureau : "}</span>
+            <a href={heroContact.officePhoneHref} style={{ color: "inherit" }} className="md:hover:text-white transition-colors relative z-10 pointer-events-auto">
+              {heroContact.officePhoneDisplay}
+            </a>
+            {" · "}
+            <span>{lang === "en" ? "Mobile: " : "Cellulaire : "}</span>
             <a href={heroContact.phoneHref} style={{ color: "inherit" }} className="md:hover:text-white transition-colors relative z-10 pointer-events-auto">
               {heroContact.phoneDisplay}
             </a>
-            {" | "}
+            {" · "}
             <a
               href={heroContact.emailHref}
               className="[overflow-wrap:anywhere] md:[overflow-wrap:normal] md:underline md:underline-offset-2 md:decoration-white/30 md:hover:decoration-white md:hover:text-white transition-colors cursor-pointer relative z-10 pointer-events-auto"
