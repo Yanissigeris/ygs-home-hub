@@ -57,7 +57,7 @@ const nextSteps = [
 
 const faq = [
   { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Chaque situation est différente. Le marché de l'Outaouais a ses propres dynamiques. On évalue votre budget, vos priorités et les conditions actuelles ensemble." },
-  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus québécois a ses particularités. Après près de 9 ans en Outaouais, j'ai accompagné beaucoup d'acheteurs ontariens dans cette transition." },
+  { q: "Je viens d'Ottawa — comment ça fonctionne au Québec?", a: "Promesse d'achat, inspection, notaire — le processus québécois a ses particularités. Depuis 2017 en Outaouais, j'ai accompagné beaucoup d'acheteurs ontariens dans cette transition." },
   { q: "Dois-je avoir une pré-approbation?", a: "Fortement recommandé. Ça clarifie votre budget et renforce votre position lors de l'offre, surtout dans les secteurs populaires comme Aylmer et le Plateau." },
   { q: "Comment choisir le bon secteur à Gatineau?", a: "Mode de vie, budget, famille, trajet vers Ottawa, écoles — on regarde tout ça ensemble pour trouver le meilleur équilibre entre Aylmer, Hull, le Plateau et Buckingham." },
 ];

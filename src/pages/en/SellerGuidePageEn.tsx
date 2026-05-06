@@ -61,7 +61,7 @@ const SellerGuidePageEn = () => (
         The difference between a stressful sale and a successful one is preparation. This guide covers the essential steps to maximize your selling price in Gatineau — from price positioning to final negotiation.
       </p>
       <p className="prose-body mt-4">
-        After nearly 9 years supporting sellers in Outaouais, I've seen what works and what costs money. This guide summarizes the most important lessons.
+        Since 2017 supporting sellers in Outaouais, I've seen what works and what costs money. This guide summarizes the most important lessons.
       </p>
     </ContentBlock>
 

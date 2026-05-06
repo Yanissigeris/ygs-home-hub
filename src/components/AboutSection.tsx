@@ -7,9 +7,9 @@ const contentFr = {
   quote: "« Je vous donne les chiffres et les options, vous décidez. »",
   body: `Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
 
-Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis près de 9 ans, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
+Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis 2017, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
 
-Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multilogement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
+Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
   credentials: "",
   cta: "En savoir plus",
   ctaHref: "/contact-yanis",
@@ -21,10 +21,10 @@ const contentEn = {
   quote: '"I give you the numbers and the options — you decide."',
   body: `Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.
 
-A member of the Marty Waite Team since the beginning and active in residential real estate for nearly 9 years, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.
+A member of the Marty Waite Team since the beginning and active in residential real estate since 2017, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.
 
 A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.`,
-  credentials: "9 years · Platinum Club · 100% Club · Hall of Fame",
+  credentials: "Since 2017 · Platinum Club · 100% Club · Hall of Fame",
   cta: "Learn more",
   ctaHref: "/en/contact",
   imgAlt: "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais",

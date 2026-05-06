@@ -57,7 +57,7 @@ const GatineauCentrePage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Gatineau centre | Plexs, maisons, condos | YGS"
-      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local depuis près de 9 ans — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local depuis 2017 — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
       description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local."

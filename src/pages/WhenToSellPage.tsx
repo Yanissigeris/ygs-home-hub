@@ -51,7 +51,7 @@ const WhenToSellPage = () => (
         Beaucoup de vendeurs attendent le « moment parfait » — mais ce moment n'arrive jamais vraiment. Ce qui fait la différence, c'est la préparation: un bon prix, une bonne mise en marché et une stratégie solide.
       </p>
       <p className="prose-body mt-4">
-        En près de 9 ans à Gatineau, j'ai vu des vendeurs réussir dans tous les types de marchés — avec le bon plan.
+        Depuis 2017 à Gatineau, j'ai vu des vendeurs réussir dans tous les types de marchés — avec le bon plan.
       </p>
     </ContentBlock>
 

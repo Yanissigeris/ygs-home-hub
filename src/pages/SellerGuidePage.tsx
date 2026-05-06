@@ -73,7 +73,7 @@ const SellerGuidePage = () => (
         La différence entre une vente stressante et une vente réussie, c'est la préparation. Ce guide couvre les étapes essentielles pour maximiser votre prix de vente à Gatineau — du positionnement prix à la négociation finale.
       </p>
       <p className="prose-body mt-4">
-        Après près de 9 ans à accompagner des vendeurs en Outaouais, j'ai vu ce qui fonctionne et ce qui fait perdre de l'argent. Ce guide résume les leçons les plus importantes.
+        Depuis 2017 à accompagner des vendeurs en Outaouais, j'ai vu ce qui fonctionne et ce qui fait perdre de l'argent. Ce guide résume les leçons les plus importantes.
       </p>
     </ContentBlock>
 

@@ -65,7 +65,7 @@ const SellHullPageEn = () => (
         Hull is a unique area in Outaouais: immediate proximity to Ottawa, active market for condos and plexes, established residential neighborhoods and a transforming downtown. Whether you're selling a condo near Boulevard Saint-Joseph, a plex in Old Hull or a family home, the strategy needs to match your micro-market.
       </p>
       <p className="prose-body mt-4">
-        With nearly 9 years helping sellers across Outaouais, I know the comparables, active buyers and specifics of each Hull neighborhood. My goal: give you a clear plan to sell at the best price, with no surprises.
+        Since 2017 helping sellers across Outaouais, I know the comparables, active buyers and specifics of each Hull neighborhood. My goal: give you a clear plan to sell at the best price, with no surprises.
       </p>
     </ContentBlock>
 
