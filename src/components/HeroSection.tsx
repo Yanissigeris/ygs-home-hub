@@ -993,7 +993,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>~9 years of experience</span>
+                    <span>Since 2017</span>
                   </span>
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
@@ -1015,7 +1015,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <>
                   <span className="pointer-events-auto inline-flex items-center">
                     <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>~9 ans d'expérience</span>
+                    <span>Depuis 2017</span>
                   </span>
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
@@ -1068,13 +1068,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 >
                   {lang === "en" ? (
                     <>
-                      ~9 yrs <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
+                      Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
                       <br />
                       5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
                     </>
                   ) : (
                     <>
-                      ~9 ans <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
+                      Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
                       <br />
                       5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
                     </>
