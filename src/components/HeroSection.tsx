@@ -33,7 +33,7 @@ import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
-import { heroContact } from "@/config/heroBottomInfo";
+
 
 /** Detect mobile synchronously at first render (SSR-safe).
  *  Used to skip the <video> element entirely on phones — the poster
