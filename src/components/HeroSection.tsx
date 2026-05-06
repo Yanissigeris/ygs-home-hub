@@ -823,17 +823,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {/* Trust strip — under CTAs, mobile-friendly with flex-wrap */}
               <div
-                className="hero-fade-in mt-8 md:mt-6 flex md:hidden flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-medium tracking-[0.1em] md:tracking-[0.15em] text-[10px] md:text-[11px]"
+                className="hero-fade-in mt-8 md:mt-6 flex md:hidden flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-semibold tracking-[0.08em] md:tracking-[0.15em] text-[11.5px] md:text-[11px]"
                 style={{
                   animationDelay: "0.5s",
-                  color: "rgba(168, 138, 90, 0.7)",
+                  color: "var(--gold)",
                   fontFamily: "var(--sans)",
+                  textShadow: "0 1px 8px rgba(0,0,0,0.65), 0 0 2px rgba(0,0,0,0.5)",
                 }}
               >
-                <span className="hidden min-[381px]:inline">
+                <span>
                   {lang === "fr" ? "Depuis 2017" : "Since 2017"}
                 </span>
-                <span aria-hidden="true" className="hidden min-[381px]:inline">·</span>
+                <span aria-hidden="true" style={{ opacity: 0.8 }}>●</span>
                 <span>{lang === "fr" ? "Hall of Fame RE/MAX, LLC, 2024" : "RE/MAX, LLC Hall of Fame 2024"}</span>
               </div>
             </div>
