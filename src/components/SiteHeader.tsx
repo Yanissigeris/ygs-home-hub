@@ -226,8 +226,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
 /* ── Header ── */
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
-  const [mobileScrolled, setMobileScrolled] = useState(false);
-  const scrolled = false;
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const lang = useLanguage();
   const nav = lang === "en" ? mainNavEn : mainNav;
@@ -239,53 +238,22 @@ const SiteHeader = () => {
   useEffect(() => { setOpen(false); }, [location.pathname]);
   const closeMenu = useCallback(() => setOpen(false), []);
 
-  // Mobile homepage only: switch from transparent → solid dark blur after 80px scroll.
-  // Listener early-returns on desktop so desktop styling is byte-identical.
-  const isHomepage = location.pathname === "/" || location.pathname === "/en";
+  // All breakpoints, all routes: switch from transparent → solid dark blur after 80px scroll.
   useEffect(() => {
-    if (!isHomepage) {
-      setMobileScrolled(false);
-      return;
-    }
     let raf = 0;
-    let attached = false;
-    const mql = window.matchMedia("(max-width: 767.98px)");
-
     const onScroll = () => {
-      if (!mql.matches) return;
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        setMobileScrolled(window.scrollY > 80);
+        setScrolled(window.scrollY > 80);
       });
     };
-
-    const attach = () => {
-      if (attached) return;
-      window.addEventListener("scroll", onScroll, { passive: true });
-      attached = true;
-      onScroll();
-    };
-    const detach = () => {
-      if (!attached) return;
-      window.removeEventListener("scroll", onScroll);
-      attached = false;
-      setMobileScrolled(false);
-    };
-
-    const onMql = () => {
-      if (mql.matches) attach();
-      else detach();
-    };
-
-    if (mql.matches) attach();
-    mql.addEventListener("change", onMql);
-
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => {
-      mql.removeEventListener("change", onMql);
-      detach();
+      window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(raf);
     };
-  }, [isHomepage]);
+  }, []);
 
   // Lock body scroll while mobile menu is open
   useEffect(() => {
@@ -320,19 +288,19 @@ const SiteHeader = () => {
     };
   }, [open]);
 
-  // Header is permanently transparent with white text on all routes/breakpoints,
-  // EXCEPT mobile homepage after 80px scroll → solid dark with blur.
-  const transparent = !mobileScrolled;
+  // Header is transparent at the top and switches to solid dark with blur after 80px scroll
+  // on every breakpoint and route.
+  const transparent = !scrolled;
   const headerStyle: React.CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: mobileScrolled ? "rgba(23,48,59,0.92)" : "transparent",
-    backdropFilter: mobileScrolled ? "blur(12px)" : "none",
-    WebkitBackdropFilter: mobileScrolled ? "blur(12px)" : "none",
-    borderBottom: mobileScrolled ? "1px solid rgba(217,225,229,0.15)" : "none",
+    background: scrolled ? "rgba(23,48,59,0.92)" : "transparent",
+    backdropFilter: scrolled ? "blur(12px)" : "none",
+    WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+    borderBottom: scrolled ? "1px solid rgba(217,225,229,0.15)" : "none",
     boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
     transition: "background-color 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease",
