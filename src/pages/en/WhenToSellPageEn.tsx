@@ -42,7 +42,7 @@ const WhenToSellPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="There's no perfect timing" />
       <p className="prose-body mt-5">Many sellers wait for the "perfect moment" — but that moment never truly arrives. What makes the difference is preparation: the right price, the right marketing and a solid strategy.</p>
-      <p className="prose-body mt-4">In nearly 9 years in Gatineau, I've seen sellers succeed in all market conditions — with the right plan.</p>
+      <p className="prose-body mt-4">In since 2017 in Gatineau, I've seen sellers succeed in all market conditions — with the right plan.</p>
     </ContentBlock>
     <InlineCTA text="Start by knowing the current value of your property — it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the right time" text="Pricing, preparation, timing — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />

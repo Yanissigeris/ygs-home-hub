@@ -68,7 +68,7 @@ const BuyFromOttawaPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="A broker who knows both sides" />
       <p className="prose-body mt-5">
-        After nearly 9 years in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all with confidence.
+        After since 2017 in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all with confidence.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/buyer-consultation">Book my consultation</Link>

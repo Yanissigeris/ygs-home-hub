@@ -69,7 +69,7 @@ const BuyFromOttawaPage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Un courtier qui connaît les deux côtés" />
       <p className="prose-body mt-5">
-        Après près de 9 ans à Gatineau, j'ai accompagné des dizaines de familles qui traversent la rivière. Je connais les avantages, les compromis et les pièges — et je vous aide à naviguer le tout sans stress.
+        Après depuis 2017 à Gatineau, j'ai accompagné des dizaines de familles qui traversent la rivière. Je connais les avantages, les compromis et les pièges — et je vous aide à naviguer le tout sans stress.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/consultation-acheteur">Réserver ma consultation</Link>

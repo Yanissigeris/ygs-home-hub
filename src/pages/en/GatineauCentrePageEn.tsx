@@ -57,7 +57,7 @@ const GatineauCentrePageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Gatineau Centre | Plexes, Homes, Condos | YGS"
-      description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker for nearly 9 years — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker for since 2017 — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
       description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker."

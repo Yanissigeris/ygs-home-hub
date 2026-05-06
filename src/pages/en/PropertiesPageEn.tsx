@@ -29,7 +29,7 @@ const faq = [
   { q: "How can I be notified of new listings?", a: "Contact me with your criteria — I'll let you know as soon as a matching property hits the market." },
   { q: "Do properties sell quickly in Gatineau?", a: "Yes — the best ones often sell within days. Being informed first makes all the difference." },
   { q: "What are the prices of sold homes in Gatineau?", a: "Sale prices are not public in Québec. As a broker, I have access to the data." },
-  { q: "Do you have access to properties not listed publicly?", a: "Yes. As an active broker in Gatineau for nearly 9 years, I have access to properties before they hit the public market." },
+  { q: "Do you have access to properties not listed publicly?", a: "Yes. As an active broker in Gatineau for since 2017, I have access to properties before they hit the public market." },
 ];
 const related = [
   { title: "Buyer consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation" },
@@ -67,7 +67,7 @@ const PropertiesPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Priority access" title="Get the best properties first" />
       <p className="prose-body mt-5">
-        As an active broker in Gatineau for nearly 9 years, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
+        As an active broker in Gatineau for since 2017, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
       </p>
     </ContentBlock>
 
@@ -76,7 +76,7 @@ const PropertiesPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Priority access" title="Get the best properties first" />
       <p className="prose-body mt-5">
-        As an active broker in Gatineau for nearly 9 years, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
+        As an active broker in Gatineau for since 2017, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
       </p>
     </ContentBlock>
 

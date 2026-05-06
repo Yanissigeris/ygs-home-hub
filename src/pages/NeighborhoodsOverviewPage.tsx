@@ -60,7 +60,7 @@ const NeighborhoodsOverviewPage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Chaque quartier a son caractère" />
       <p className="prose-body mt-5">
-        Le bon secteur dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales. Après près de 9 ans à Gatineau, je connais les avantages et les compromis de chaque quartier — et je peux vous aider à choisir le bon.
+        Le bon secteur dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales. Après depuis 2017 à Gatineau, je connais les avantages et les compromis de chaque quartier — et je peux vous aider à choisir le bon.
       </p>
     </ContentBlock>
 

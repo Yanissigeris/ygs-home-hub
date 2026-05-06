@@ -65,7 +65,7 @@ const SellAylmerPage = () => (
         Aylmer est l'un des secteurs les plus recherchés en Outaouais : quartiers familiaux établis, proximité du lac Deschênes, accès rapide à Ottawa et qualité de vie reconnue. Que vous vendiez une maison sur le Plateau, près du lac ou dans un quartier résidentiel, la stratégie de prix et de mise en marché doit être adaptée à votre micro-marché.
       </p>
       <p className="prose-body mt-4">
-        Après près de 9 ans à accompagner des vendeurs en Outaouais, je connais les comparables, les tendances et les acheteurs actifs à Aylmer. Mon objectif : un plan clair pour vendre au meilleur prix, sans surprises.
+        Après depuis 2017 à accompagner des vendeurs en Outaouais, je connais les comparables, les tendances et les acheteurs actifs à Aylmer. Mon objectif : un plan clair pour vendre au meilleur prix, sans surprises.
       </p>
     </ContentBlock>
 

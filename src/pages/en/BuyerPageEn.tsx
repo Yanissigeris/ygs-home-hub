@@ -41,7 +41,7 @@ const nextSteps = [
 ];
 const faq = [
   { q: "Is now a good time to buy in Gatineau?", a: "Every situation is different. The Outaouais market has its own dynamics. We evaluate your budget, priorities and current conditions together." },
-  { q: "I'm from Ottawa — how does it work in Québec?", a: "Promise to purchase, inspection, notary — the Québec process has its specifics. After nearly 9 years in Outaouais, I've guided many Ontario buyers through this transition." },
+  { q: "I'm from Ottawa — how does it work in Québec?", a: "Promise to purchase, inspection, notary — the Québec process has its specifics. After since 2017 in Outaouais, I've guided many Ontario buyers through this transition." },
   { q: "Do I need a pre-approval?", a: "Highly recommended. It clarifies your budget and strengthens your position when making an offer, especially in popular areas like Aylmer and the Plateau." },
   { q: "How do I choose the right Gatineau neighborhood?", a: "Lifestyle, budget, family, Ottawa commute, schools — we look at everything together to find the best balance between Aylmer, Hull, the Plateau and Buckingham." },
 ];
