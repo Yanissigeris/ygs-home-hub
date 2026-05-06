@@ -24,7 +24,7 @@ const contentEn = {
 A member of the Marty Waite Team since the beginning and active in residential real estate since 2017, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.
 
 A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.`,
-  credentials: "9 years · Platinum Club · 100% Club · Hall of Fame",
+  credentials: "Since 2017 · Platinum Club · 100% Club · Hall of Fame",
   cta: "Learn more",
   ctaHref: "/en/contact",
   imgAlt: "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais",
