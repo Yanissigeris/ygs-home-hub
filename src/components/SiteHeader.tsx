@@ -131,13 +131,13 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
               <div key={col.title}>
                 <div
                   style={{
-                    fontSize: "11px",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
+                    fontSize: "12px",
+                    letterSpacing: "0.01em",
                     fontWeight: 600,
-                    color: "var(--gold)",
+                    color: "var(--ink)",
+                    opacity: 0.55,
                     padding: "0 .75rem .5rem",
-                    borderBottom: "1px solid rgba(168,138,90,.2)",
+                    borderBottom: "1px solid var(--border)",
                     marginBottom: ".25rem",
                   }}
                 >
