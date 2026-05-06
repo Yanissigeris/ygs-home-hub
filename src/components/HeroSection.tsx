@@ -967,26 +967,26 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <div
-          className="hero-fade-in hidden md:block absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in hidden md:block absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center"
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
-            color: "rgba(255,255,255,0.62)",
+            color: "rgba(255,255,255,0.92)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+            textShadow: "0 1px 8px rgba(0,0,0,0.65)",
             fontFamily: "var(--sans)",
           }}
         >
           <div
-            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none lg:whitespace-nowrap lg:[word-break:normal]"
+            className="inline-block whitespace-normal [word-break:keep-all] lg:whitespace-nowrap lg:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
               WebkitBackdropFilter: "blur(4px)",
-              padding: "12px 16px",
-              borderRadius: "8px",
+              padding: "10px 18px",
+              borderRadius: "9999px",
               margin: 0,
               lineHeight: 1.5,
             }}
@@ -996,56 +996,98 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {lang === "en" ? (
                 <>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>~9 years of experience</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>300+ transactions</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
-                  <Link to="/en/testimonials" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
-                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
+                  <Link to="/en/testimonials" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>5★ Google & Facebook</span>
                   </Link>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>RE/MAX, LLC Hall of Fame 2024</span>
                   </span>
                 </>
               ) : (
                 <>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>~9 ans d'expérience</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>300+ transactions</span>
                   </span>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
-                  <Link to="/temoignages" className="pointer-events-auto hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
-                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
+                  <Link to="/temoignages" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
+                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>5★ Google & Facebook</span>
                   </Link>
-                  <span className="mx-2 opacity-50" aria-hidden="true">·</span>
+                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
-                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.7)" }} />
+                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
                     <span>Hall of Fame RE/MAX, LLC, 2024</span>
                   </span>
                 </>
               )}
             </div>
             {/* Mobile shortened credibility — inline JSX so text is editable via Visual Edits */}
-            <div className="md:hidden">
-              {lang === "en" ? (
-                <span>~9 yrs | 5★ Google | Hall of Fame 2024</span>
-              ) : (
-                <span>~9 ans | 5★ Google | Hall of Fame 2024</span>
-              )}
+            <div className="md:hidden text-center">
+              <div
+                className="inline-block"
+                style={{
+                  background: "rgba(23,48,59,0.6)",
+                  backdropFilter: "blur(4px)",
+                  WebkitBackdropFilter: "blur(4px)",
+                  padding: "8px 14px",
+                  borderRadius: "10px",
+                  lineHeight: 1.45,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "0.55rem",
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "var(--gold)",
+                    fontWeight: 600,
+                    marginBottom: 4,
+                  }}
+                >
+                  {lang === "en" ? "Highlights" : "Essentiel"}
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.78rem",
+                    color: "rgba(247,244,238,0.95)",
+                    fontWeight: 500,
+                    letterSpacing: "0.04em",
+                    textTransform: "none",
+                  }}
+                >
+                  {lang === "en" ? (
+                    <>
+                      ~9 yrs <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
+                      <br />
+                      5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
+                    </>
+                  ) : (
+                    <>
+                      ~9 ans <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
+                      <br />
+                      5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
 
           </div>
