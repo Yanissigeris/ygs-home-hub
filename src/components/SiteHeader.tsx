@@ -226,8 +226,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
 /* ── Header ── */
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
-  const [mobileScrolled, setMobileScrolled] = useState(false);
-  const scrolled = false;
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const lang = useLanguage();
   const nav = lang === "en" ? mainNavEn : mainNav;
