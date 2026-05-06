@@ -31,8 +31,8 @@ const affiliationLogos: AffiliationLogo[] = [
     caption: "RE/MAX Direct Inc.",
     custom: (
       <div className="flex items-center gap-1.5">
-        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
-        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 18, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
       </div>
     ),
   },
@@ -57,10 +57,12 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
   const panelId = `footer-acc-${reactId}`;
   return (
     <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
-        <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
-        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
-      </button>
+      <h3 style={{ margin: 0 }}>
+        <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
+          <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
+          <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+        </button>
+      </h3>
       <div id={panelId} className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`} aria-hidden={!open}>
         <ul className="space-y-2.5">
           {links.map((l) => (
@@ -170,9 +172,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
-                <p className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                <h3 className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
                   {col.title}
-                </p>
+                </h3>
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
@@ -190,9 +192,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── SEO Popular links ── */}
           <div className="py-5 sm:py-8">
-            <p className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
               {popularLabel}
-            </p>
+            </h3>
             <div className="flex flex-wrap gap-2">
               {popularLinks.map((l) => (
                 <Link
@@ -219,9 +221,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── Affiliations ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
-            <p className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
               {affiliationsLabel}
-            </p>
+            </h3>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
               {affiliationLogos.map((logo) => {
                 const inner = logo.custom ?? (
@@ -232,7 +234,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter ?? ""}`}
+                    className={`h-10 w-auto object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 ${logo.filter ?? ""}`}
                   />
                 );
                 const caption = logo.caption ? (
@@ -294,7 +296,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Agency identification block ── */}
-          <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+          <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
@@ -309,7 +311,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               {"  ·  "}
               <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }}>yanis@martywaite.com</a>
             </p>
-          </div>
+          </address>
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
