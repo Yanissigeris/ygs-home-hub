@@ -1040,12 +1040,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               <div
                 className="inline-block"
                 style={{
-                  background: "rgba(23,48,59,0.6)",
-                  backdropFilter: "blur(4px)",
-                  WebkitBackdropFilter: "blur(4px)",
-                  padding: "8px 14px",
-                  borderRadius: "10px",
+                  padding: "4px 0",
                   lineHeight: 1.45,
+                  textShadow: "0 0 6px rgba(0,0,0,0.85), 0 1px 2px rgba(0,0,0,0.9)",
                 }}
               >
                 <div
