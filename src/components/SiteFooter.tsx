@@ -234,7 +234,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`h-full max-h-[34px] w-auto max-w-[88px] object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 sm:max-h-[38px] sm:max-w-[96px] lg:max-h-[38px] lg:max-w-[100px] ${logo.filter ?? ""}`}
+                    className={`h-10 w-auto object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 ${logo.filter ?? ""}`}
                   />
                 );
                 const caption = logo.caption ? (
