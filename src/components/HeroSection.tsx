@@ -982,11 +982,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           <div
             className="inline-block whitespace-normal [word-break:keep-all] lg:whitespace-nowrap lg:[word-break:normal]"
             style={{
-              background: "rgba(23,48,59,0.6)",
-              backdropFilter: "blur(4px)",
-              WebkitBackdropFilter: "blur(4px)",
               padding: "10px 18px",
-              borderRadius: "9999px",
               margin: 0,
               lineHeight: 1.5,
             }}
