@@ -65,7 +65,7 @@ const SellAylmerPageEn = () => (
         Aylmer is one of the most sought-after areas in Outaouais: established family neighborhoods, Lake Deschênes proximity, quick access to Ottawa and recognized quality of life. Whether you're selling a home on the Plateau, near the lake or in a residential area, the pricing and marketing strategy needs to match your micro-market.
       </p>
       <p className="prose-body mt-4">
-        With since 2017 helping sellers across Outaouais, I know the comparables, trends and active buyers in Aylmer. My goal: a clear plan to sell at the best price, with no surprises.
+        Since 2017 helping sellers across Outaouais, I know the comparables, trends and active buyers in Aylmer. My goal: a clear plan to sell at the best price, with no surprises.
       </p>
     </ContentBlock>
 

@@ -33,7 +33,7 @@ const faq = [
   { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères — je vous avise dès qu'une propriété correspondante arrive sur le marché." },
   { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui — les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
   { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données" },
-  { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis depuis 2017, j'ai accès à des propriétés avant leur mise en marché officielle." },
+  { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis 2017, j'ai accès à des propriétés avant leur mise en marché officielle." },
 ];
 
 const related = [
@@ -120,7 +120,7 @@ const PropertiesPage = () => {
         title="Recevez les meilleures propriétés en premier"
       />
       <p className="prose-body mt-5">
-        En tant que courtier actif à Gatineau depuis depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
+        En tant que courtier actif à Gatineau depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
       </p>
     </ContentBlock>
 
@@ -138,7 +138,7 @@ const PropertiesPage = () => {
         title="Recevez les meilleures propriétés en premier"
       />
       <p className="prose-body mt-5">
-        En tant que courtier actif à Gatineau depuis depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
+        En tant que courtier actif à Gatineau depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
       </p>
     </ContentBlock>
 

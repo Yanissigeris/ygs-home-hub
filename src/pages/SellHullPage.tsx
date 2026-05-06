@@ -65,7 +65,7 @@ const SellHullPage = () => (
         Hull est un secteur unique en Outaouais : proximité immédiate avec Ottawa, marché actif pour les condos et les plex, quartiers résidentiels établis et un centre-ville en transformation. Que vous vendiez un condo près du boulevard Saint-Joseph, un plex dans le Vieux-Hull ou une maison dans un quartier familial, la stratégie doit être adaptée.
       </p>
       <p className="prose-body mt-4">
-        Après depuis 2017 à accompagner des vendeurs en Outaouais, je connais les comparables, les acheteurs actifs et les particularités de chaque micro-marché à Hull. Mon objectif : vous donner un plan clair pour vendre au meilleur prix, sans surprises.
+        Depuis 2017 à accompagner des vendeurs en Outaouais, je connais les comparables, les acheteurs actifs et les particularités de chaque micro-marché à Hull. Mon objectif : vous donner un plan clair pour vendre au meilleur prix, sans surprises.
       </p>
     </ContentBlock>
 

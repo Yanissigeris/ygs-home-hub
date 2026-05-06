@@ -40,7 +40,7 @@ const nextSteps = [
   { title: "Talk to Yanis", text: "A call to clarify your options — no pitch, just answers.", href: "/en/contact", cta: "Book a call" },
 ];
 const faq = [
-  { q: "When is the best time to sell?", a: "It depends on your situation, not just the market. In since 2017 in Outaouais, I've seen sellers succeed in all conditions — with the right plan." },
+  { q: "When is the best time to sell?", a: "It depends on your situation, not just the market. Since 2017 in Outaouais, I've seen sellers succeed in all conditions — with the right plan." },
   { q: "Do I need to renovate before selling?", a: "Not necessarily. I'll help you identify what's worth doing to maximize your price without wasting money." },
   { q: "How much does a real estate broker cost in Gatineau?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "What if I need to buy at the same time?", a: "That's common. We plan the coordination from the start to avoid getting stuck." },
@@ -81,7 +81,7 @@ const SellerPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Before selling" title="You don't need to decide everything today" />
       <p className="prose-body mt-5">Before selling, many Outaouais homeowners mainly want to understand their value, their timing and their options. The goal isn't to rush you. The goal is to build a clear plan adapted to your neighborhood — whether in Aylmer, Hull, the Plateau or Buckingham.</p>
-      <p className="prose-body mt-4">After since 2017 helping sellers across Outaouais, I know that the key to a good sale is preparation. Real value based on local comparables, price positioning, strategic improvements, and marketing to attract the right buyers — including those from Ottawa looking to cross the river.</p>
+      <p className="prose-body mt-4">Since 2017 helping sellers across Outaouais, I know that the key to a good sale is preparation. Real value based on local comparables, price positioning, strategic improvements, and marketing to attract the right buyers — including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />

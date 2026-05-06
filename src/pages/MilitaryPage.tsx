@@ -100,7 +100,7 @@ const MilitaryPage = () => (
         Les mutations ne suivent pas le calendrier immobilier normal. Il faut un courtier qui s'adapte — à votre timeline, à votre budget, et à la pression qui vient avec un déménagement militaire.
       </p>
       <p className="prose-body mt-4">
-        Après depuis 2017 à Gatineau, j'ai accompagné des familles militaires dans toutes sortes de situations. Mon rôle est de simplifier le processus pour que vous puissiez vous concentrer sur votre mission.
+        Depuis 2017 à Gatineau, j'ai accompagné des familles militaires dans toutes sortes de situations. Mon rôle est de simplifier le processus pour que vous puissiez vous concentrer sur votre mission.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/contact-yanis">Réserver un appel</Link>

@@ -224,7 +224,7 @@ const PontiacPage = () => {
         dark
         overline="VOTRE PROJET À PONTIAC"
         title="Pontiac est un marché que peu de courtiers connaissent vraiment"
-        text="Je couvre la municipalité de Pontiac depuis depuis 2017. Je connais les secteurs, les comparables, et les réalités pratiques — puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
+        text="Je couvre la municipalité de Pontiac depuis 2017. Je connais les secteurs, les comparables, et les réalités pratiques — puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
         buttons={[
           { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
           { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },

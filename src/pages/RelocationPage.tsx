@@ -47,7 +47,7 @@ const nextSteps = [
 
 const faq = [
   { q: "Est-ce vraiment moins cher à Gatineau qu'à Ottawa?", a: "En général, oui — surtout pour les maisons unifamiliales et les terrains. Mais il faut aussi considérer les taxes, les services et le mode de vie. On regarde tout ça ensemble." },
-  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus est différent de l'Ontario — promesse d'achat, inspection, conditions, notaire. Après depuis 2017 en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
+  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus est différent de l'Ontario — promesse d'achat, inspection, conditions, notaire. Depuis 2017 en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
   { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de vos priorités — Aylmer et le Plateau sont très populaires pour les familles, mais Hull et Buckingham ont aussi leurs avantages. On en discute." },
   { q: "Est-ce que je peux travailler à Ottawa et vivre à Gatineau?", a: "Absolument. La majorité de mes clients relocalisés font exactement ça. Les ponts, le transport en commun et les pistes cyclables rendent la chose très faisable." },
 ];

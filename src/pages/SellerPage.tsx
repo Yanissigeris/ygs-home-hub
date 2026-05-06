@@ -49,7 +49,7 @@ const nextSteps = [
 
 
 const faq = [
-{ q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. En depuis 2017 en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions — avec le bon plan." },
+{ q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. Depuis 2017 en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions — avec le bon plan." },
 { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
 { q: "Combien coûte un courtier immobilier à Gatineau?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — tout est clair dès le départ." },
 { q: "Et si je dois acheter en même temps?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé." },
@@ -128,7 +128,7 @@ const SellerPage = () =>
         Avant de vendre, les propriétaires en Outaouais veulent d'abord connaître la valeur de leur propriété, quel timing est idéal pour eux, et leurs options. Le but est de bâtir un plan clair adapté à votre secteur — que ce soit à Aylmer, Hull, au Plateau ou à Buckingham.
       </p>
       <p className="prose-body mt-4">
-        Après depuis 2017 à accompagner des vendeurs partout en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle basée sur les comparables locaux, positionnement, prix, améliorations stratégiques, et une mise en marché pour attirer les bons acheteurs — incluant ceux d'Ottawa qui cherchent à traverser la rivière.
+        Depuis 2017 à accompagner des vendeurs partout en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle basée sur les comparables locaux, positionnement, prix, améliorations stratégiques, et une mise en marché pour attirer les bons acheteurs — incluant ceux d'Ottawa qui cherchent à traverser la rivière.
       </p>
     </ContentBlock>
 

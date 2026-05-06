@@ -40,7 +40,7 @@ const nextSteps = [
 ];
 const faq = [
   { q: "Is it really cheaper in Gatineau than Ottawa?", a: "Generally yes — especially for single-family homes and lots. But you also need to consider taxes, services and lifestyle. We look at everything together." },
-  { q: "How does buying work in Québec?", a: "The process is different from Ontario — promise to purchase, inspection, conditions, notary. After since 2017 in Outaouais, I've guided many buyers through this transition." },
+  { q: "How does buying work in Québec?", a: "The process is different from Ontario — promise to purchase, inspection, conditions, notary. Since 2017 in Outaouais, I've guided many buyers through this transition." },
   { q: "Which neighborhood is best for families?", a: "It depends on your priorities — Aylmer and the Plateau are very popular for families, but Hull and Buckingham also have their advantages. Let's talk about it." },
   { q: "Can I work in Ottawa and live in Gatineau?", a: "Absolutely. Most of my relocated clients do exactly that. Bridges, public transit and bike paths make it very doable." },
 ];
