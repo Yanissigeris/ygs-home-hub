@@ -1,28 +1,37 @@
 ## Goal
 
-Épurer les titres de colonnes en or (ACHETER, PLEX / INVESTISSEMENT, RELOCALISATION) qui apparaissent dans le mega-menu "Acheter" du header. Actuellement: doré (`var(--gold)`), majuscules, lettres très espacées, soulignement doré — visuellement chargé.
+Réduire l'effet "embrouillé" du mega-menu **Acheter** en limitant le nombre de colonnes et de liens visibles. C'est le seul menu en `columns` (3 colonnes, 14 liens). Tous les autres dropdowns sont déjà épurés (5-9 liens en une seule colonne).
 
-## Changement
+## Changement proposé
 
-Dans `src/components/SiteHeader.tsx` (lignes 130-145), remplacer le style des titres de colonnes par une version épurée:
+### Mega-menu "Acheter" — passer de 3 colonnes / 14 liens → 2 colonnes / 8 liens
 
-- Couleur: `var(--gold)` → `var(--ink)` (gris-bleu foncé, sobre)
-- `textTransform: "uppercase"` → retiré (casse normale: "Acheter", "Plex / Investissement", "Relocalisation")
-- `letterSpacing: 0.12em` → `0.01em`
-- `fontSize: 11px` → `12px`
-- `fontWeight: 600` → `600` (inchangé)
-- `borderBottom` doré retiré (ou remplacé par séparateur très discret `1px solid var(--border)`)
-- Léger `opacity: .55` pour bien marquer la hiérarchie sans crier
+**Colonne 1 — Acheter** (5 → 4 liens)
+- Acheter à Gatineau
+- Consultation acheteur
+- Premier achat
+- Acheter depuis Ottawa
 
-Résultat: titres de section discrets, modernes, type "label de catégorie" — les liens cliquables restent l'élément dominant du panneau.
+(Retiré du menu visible: *Guide acheteur* — accessible depuis la page Acheter et le footer.)
+
+**Colonne 2 — Plex & Relocalisation** (fusionnée, 9 → 4 liens)
+- Investir dans un plex
+- Ottawa → Gatineau
+- Montréal → Gatineau
+- Militaire à Gatineau (page hub qui couvre mutation/achat/vente)
+
+(Retirés du menu visible: *Analyse plex*, *Vendre un plex*, *Guide relocalisation*, *Militaire — achat*, *Militaire — vente*. Toutes ces pages restent accessibles via leurs pages parent, le footer, et les liens internes — aucune URL supprimée, aucun impact SEO.)
+
+### Résultat
+
+- Largeur du panneau réduite de ~42rem → ~28rem.
+- Moins de bruit visuel, hiérarchie évidente: 2 colonnes claires au lieu de 3 colonnes denses.
+- Aucune page supprimée — uniquement le menu allégé.
 
 ## Portée
 
-- Un seul fichier: `src/components/SiteHeader.tsx`, bloc lignes 132-145.
-- Affecte uniquement le mega-menu multi-colonnes (actuellement: "Acheter" FR / "Buy" EN).
-- Aucun impact SEO, structure, routes, ou autres composants.
-- Les dropdowns simples (Vendre, Quartiers, À propos) n'ont pas de titre de colonne — non concernés.
-
-## Vérification
-
-Ouvrir le menu "Acheter" sur la home et confirmer visuellement que les titres sont épurés et la hiérarchie claire.
+- Fichiers modifiés:
+  - `src/data/navigation.ts` (FR)
+  - `src/data/navigation-en.ts` (EN, miroir parfait)
+- Aucune modification du composant `SiteHeader.tsx`, des routes, du footer, du sitemap, ou du JSON-LD.
+- Aucun impact SEO: toutes les pages restent indexées et liées depuis le footer et les pages parent.
