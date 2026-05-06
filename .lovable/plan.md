@@ -1,22 +1,25 @@
-# Remplacer "9 ans" par "Depuis 2017"
+## Goal
 
-## Cible
+Replace the hero background image on `/vendre-ma-maison-gatineau` (FR) and `/en/sell` (EN) with the uploaded Gatineau skyline photo. No other changes; SEO, structure, copy, alts, canonicals, JSON-LD all preserved.
 
-`src/components/HeroSection.tsx`, ligne 834 (variant mobile du trust strip).
+## Scope
 
-## Changement
+The current hero uses `src/assets/hero-vendre.webp`, imported only by:
+- `src/pages/SellerPage.tsx`
+- `src/pages/en/SellerPageEn.tsx`
 
-- FR : `"9 ans"` → `"Depuis 2017"`
-- EN : `"9 years"` → `"Since 2017"`
+No other page imports this asset, so swapping it is fully isolated.
 
-## Vérifier ailleurs
+## Steps
 
-Recherche `"9 ans"` / `"9 yrs"` / `"9 years"` dans le repo pour confirmer s'il faut aussi mettre à jour le tableau `statsFr`/`statsEn` (lignes 92-99) qui alimente la barre de preuve. **À confirmer** : remplace-t-on uniquement le bandeau mobile, ou aussi la barre de preuve desktop "~9 ans d'expérience" ?
+1. Convert the uploaded image (`Gatineau-la-ville-etudiante-du-Quebec-par-excellence-2.jpg`) to optimized WebP and save as `src/assets/hero-vendre-gatineau.webp` (new file — keeps the old one untouched in case it's referenced later).
+2. Update the `heroImg` import in both `SellerPage.tsx` and `SellerPageEn.tsx` to point to the new asset.
+3. Leave everything else (HeroSection props, overline, title, subtitle, CTAs, trustLine, JSON-LD, canonical, hreflang, alt text on internal images) unchanged.
 
-Par défaut du plan : **uniquement le bandeau mobile sélectionné** (lignes 833-835). Les stats restent inchangées sauf demande explicite.
+## SEO safety
 
-## Préservé
+- Routes, canonicals, hreflang, meta titles/descriptions, JSON-LD: untouched.
+- HeroSection background is decorative (CSS background-image), so no alt-text impact.
+- New WebP filename only changes a hashed asset URL — not crawled separately.
 
-- Structure DOM, classes, animation, couleurs.
-- Bilingue FR/EN.
-- Reste du composant.
+No code is changed in this mode; awaiting approval.
