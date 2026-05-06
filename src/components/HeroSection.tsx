@@ -967,26 +967,26 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── Credibility bar (Layer 5) ─── */}
         <div
-          className="hero-fade-in hidden md:block absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center md:bg-transparent md:backdrop-blur-0 md:!mx-0 md:!p-0 md:!rounded-none"
+          className="hero-fade-in hidden md:block absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center"
           style={{
             animationDelay: "0.5s",
             bottom: "32px",
-            color: "rgba(255,255,255,0.62)",
+            color: "rgba(255,255,255,0.92)",
             fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+            textShadow: "0 1px 8px rgba(0,0,0,0.65)",
             fontFamily: "var(--sans)",
           }}
         >
           <div
-            className="whitespace-normal [word-break:keep-all] md:!bg-transparent md:!backdrop-blur-0 md:!p-0 md:!mx-0 md:!rounded-none lg:whitespace-nowrap lg:[word-break:normal]"
+            className="inline-block whitespace-normal [word-break:keep-all] lg:whitespace-nowrap lg:[word-break:normal]"
             style={{
               background: "rgba(23,48,59,0.6)",
               backdropFilter: "blur(4px)",
               WebkitBackdropFilter: "blur(4px)",
-              padding: "12px 16px",
-              borderRadius: "8px",
+              padding: "10px 18px",
+              borderRadius: "9999px",
               margin: 0,
               lineHeight: 1.5,
             }}
