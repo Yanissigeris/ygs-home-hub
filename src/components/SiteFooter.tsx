@@ -57,10 +57,12 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
   const panelId = `footer-acc-${reactId}`;
   return (
     <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
-        <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
-        <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
-      </button>
+      <h3 style={{ margin: 0 }}>
+        <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
+          <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
+          <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+        </button>
+      </h3>
       <div id={panelId} className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`} aria-hidden={!open}>
         <ul className="space-y-2.5">
           {links.map((l) => (
