@@ -28,7 +28,7 @@ const QuickActionStrip = () => {
             <Link
               key={a.label}
               to={a.href}
-              className="flex-1 transition-colors hover:text-white inline-flex items-center justify-center gap-1.5"
+              className="qas-btn flex-1 inline-flex items-center justify-center gap-1.5"
               style={{
                 background: "var(--cream)",
                 border: "1px solid hsl(var(--border))",
@@ -40,19 +40,45 @@ const QuickActionStrip = () => {
                 color: "var(--ink)",
                 whiteSpace: "nowrap",
                 letterSpacing: "0.02em",
+                transition: "background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease",
+                willChange: "transform",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "var(--gold)";
                 e.currentTarget.style.color = "white";
                 e.currentTarget.style.borderColor = "var(--gold)";
+                e.currentTarget.style.transform = "translateY(-1px)";
+                e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(168,138,90,.45)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "var(--cream)";
                 e.currentTarget.style.color = "var(--ink)";
                 e.currentTarget.style.borderColor = "hsl(var(--border))";
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = "var(--gold)";
+                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.2)";
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = "hsl(var(--border))";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(0) scale(.98)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-1px)";
               }}
             >
-              <Icon size={15} strokeWidth={1.75} aria-hidden="true" />
+              <Icon
+                size={15}
+                strokeWidth={1.75}
+                aria-hidden="true"
+                className="qas-icon"
+                style={{ transition: "transform .3s cubic-bezier(.22,1,.36,1)" }}
+              />
               <span>{a.label}</span>
             </Link>
           );
