@@ -42,8 +42,10 @@ export interface BlogPost {
   bodyEn: string;
   /** Optional per-post override for hero stats trio. If absent, template defaults are used. */
   heroStats?: Array<{ value: string; label: string; valueEn?: string; labelEn?: string }>;
-  /** Optional per-post sources displayed in sidebar (replaces generic Source block). */
+  /** Optional per-post override for sources displayed in sidebar (replaces generic Source block). */
   sources?: Array<{ fr: string; en: string }>;
+  /** Optional per-post override for hero title split into 3 lines. Bypasses auto colon-split. */
+  titleLines?: { line1: string; line2?: string; line3?: string; line1En: string; line2En?: string; line3En?: string };
   /** Emit a FAQPage JSON-LD schema for this article. Only enable on posts whose FAQ markdown
    *  is verified to parse cleanly. Default false to avoid retroactive schema regression. */
   emitFaqSchema?: boolean;
@@ -72,6 +74,14 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2026-05-06",
     published: true,
     emitFaqSchema: true,
+    titleLines: {
+      line1: "Les 3 erreurs de prix",
+      line2: "qui coûtent 15 000 $",
+      line3: "aux vendeurs à Gatineau en 2026",
+      line1En: "The 3 pricing mistakes",
+      line2En: "costing $15,000",
+      line3En: "to Gatineau sellers in 2026",
+    },
     heroStats: [
       { value: "+18 %", valueEn: "+18%", label: "Inscriptions T1 2026", labelEn: "Active listings Q1 2026" },
       { value: "489 950 $", valueEn: "$489,950", label: "Prix médian unifam.", labelEn: "Median single-family price" },
