@@ -673,8 +673,8 @@ const BlogArticlePage = () => {
             </p>
             <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.55 }}>
               {isFr
-                ? "Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à Gatineau, Hull et Aylmer. Plus de 200 transactions complétées dans la région."
-                : "Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais region for 9 years, specialized in plex and investment properties in Gatineau, Hull and Aylmer. Over 200 transactions completed in the region."}
+                ? "Courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
+                : "RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
             </p>
           </div>
         </div>
