@@ -37,22 +37,6 @@ function saveConsent(value: ConsentValue, prefs?: CookiePrefs) {
   } catch { /* ignore */ }
 }
 
-/** Load GA4 script dynamically */
-function loadGA() {
-  if (typeof window === "undefined") return;
-  if (document.getElementById("ygs-ga-script")) return;
-  const s = document.createElement("script");
-  s.id = "ygs-ga-script";
-  s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  s.async = true;
-  document.head.appendChild(s);
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: unknown[]) { window.dataLayer!.push(args); }
-  gtag("js", new Date());
-  gtag("config", GA_ID);
-  (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
-}
-
 declare global {
   interface Window { dataLayer?: unknown[] }
 }
@@ -70,20 +54,15 @@ function updateConsentSignal(prefs: CookiePrefs) {
   });
 }
 
-/** Execute tracking based on consent */
+/** Replay stored consent on mount so GA4 receives the signal even on repeat visits. */
 function applyConsent() {
   const consent = getConsent();
-  if (!consent || consent === "refused") {
-    // Even refused users need a consent update so GA4 doesn't keep waiting.
-    if (consent === "refused") updateConsentSignal({ analytics: false, marketing: false });
+  if (!consent) return;
+  if (consent === "refused") {
+    updateConsentSignal({ analytics: false, marketing: false });
     return;
   }
-  const prefs = getPrefs();
-  // Replay stored consent on every mount so GA4 receives the signal even on repeat visits.
-  updateConsentSignal(prefs);
-  if (consent === "accepted" || prefs.analytics) {
-    loadGA();
-  }
+  updateConsentSignal(getPrefs());
 }
 
 /* ── Toggle component ── */

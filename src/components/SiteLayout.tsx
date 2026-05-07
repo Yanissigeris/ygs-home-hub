@@ -86,10 +86,21 @@ const PageFallback = () => (
 );
 
 const SiteLayout = () => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
   const skipLabel = isEn ? "Skip to content" : "Aller au contenu";
   useHeadingHierarchyGuard();
+
+  // GA4 page_view on every route change (gtag.js loaded with send_page_view:false in index.html)
+  React.useEffect(() => {
+    const w = window as Window & { gtag?: (...args: unknown[]) => void };
+    if (typeof w.gtag !== "function") return;
+    w.gtag("event", "page_view", {
+      page_path: pathname + search,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [pathname, search]);
 
   // Defer non-critical UI (cookie consent, WhatsApp button, footer) to idle
   // time to free the main thread during LCP/TBT window.
