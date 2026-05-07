@@ -219,24 +219,27 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
-      (function(){
-        var prefs = null;
-        try {
-          var raw = localStorage.getItem('ygs_cookie_prefs');
-          if (raw) prefs = JSON.parse(raw);
-        } catch(e){}
-        var analytics = prefs && prefs.analytics ? 'granted' : 'denied';
-        var marketing = prefs && prefs.marketing ? 'granted' : 'denied';
-        gtag('consent', 'default', {
-          'ad_storage': marketing,
-          'ad_user_data': marketing,
-          'ad_personalization': marketing,
-          'analytics_storage': analytics,
-          'functionality_storage': 'granted',
-          'security_storage': 'granted',
-          'wait_for_update': 500
-        });
-      })();
+
+      var savedPrefs = localStorage.getItem('ygs_cookie_prefs');
+      var prefs = null;
+      try {
+        if (savedPrefs) prefs = JSON.parse(savedPrefs);
+      } catch(e) {
+        prefs = null;
+      }
+
+      // TOUJOURS appeler gtag('consent', 'default', ...) :
+      // - Si prefs existent : utiliser leurs valeurs
+      // - Si prefs n'existent pas : tout en 'denied' (RGPD strict)
+      gtag('consent', 'default', {
+        'ad_storage': prefs && prefs.marketing ? 'granted' : 'denied',
+        'ad_user_data': prefs && prefs.marketing ? 'granted' : 'denied',
+        'ad_personalization': prefs && prefs.marketing ? 'granted' : 'denied',
+        'analytics_storage': prefs && prefs.analytics ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
     </script>
 
 </head>
