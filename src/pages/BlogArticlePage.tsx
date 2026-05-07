@@ -452,7 +452,7 @@ const BlogArticlePage = () => {
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
                     {isFr ? s.value : (s.valueEn ?? s.value)}
                   </div>
-                  <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.14em" }}>
+                  <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.78)", fontSize: "9px", letterSpacing: "0.14em" }}>
                     {isFr ? s.label : (s.labelEn ?? s.label)}
                   </div>
                 </div>
@@ -567,7 +567,7 @@ const BlogArticlePage = () => {
             {/* Tags */}
             {tags.length > 0 && (
               <div>
-                <p className="uppercase mb-3" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+                <p className="uppercase mb-3" style={{ color: "rgba(23,48,59,0.78)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                   Tags
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -629,9 +629,9 @@ const BlogArticlePage = () => {
           <div className="section-container text-center">
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? (
-                <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
+                <>Vous regardez un plex en Outaouais ? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Parlons-en.</em></>
               ) : (
-                <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
+                <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Let's talk.</em></>
               )}
             </h2>
             <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.78)", fontSize: "13px", lineHeight: 1.6 }}>
