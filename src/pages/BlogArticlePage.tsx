@@ -245,7 +245,10 @@ const BlogArticlePage = () => {
         );
       } else if (line.startsWith("> ")) {
         flushList();
-        const text = line.slice(2);
+        let text = line.slice(2);
+        // [YGS] marker = personal commentary; skip the auto Source attribution.
+        const isPersonal = /^\[YGS\]\s*/i.test(text);
+        if (isPersonal) text = text.replace(/^\[YGS\]\s*/i, "");
         elements.push(
           <blockquote
             key={i}
@@ -263,12 +266,22 @@ const BlogArticlePage = () => {
             }}
           >
             <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
-            <div className="mt-4 flex items-center gap-2">
-              <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
-              <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
-                {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
-              </span>
-            </div>
+            {!isPersonal && (
+              <div className="mt-4 flex items-center gap-2">
+                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                  {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
+                </span>
+              </div>
+            )}
+            {isPersonal && (
+              <div className="mt-4 flex items-center gap-2">
+                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                  {isFr ? "Regard YGS" : "YGS Insight"}
+                </span>
+              </div>
+            )}
           </blockquote>
         );
       } else if (line.startsWith("- ")) {
