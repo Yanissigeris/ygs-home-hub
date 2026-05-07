@@ -49,6 +49,28 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
   return null;
 };
 
+const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
+  useEffect(() => {
+    if (!items || items.length === 0) return;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: items.map((it) => ({
+        "@type": "Question",
+        name: it.q,
+        acceptedAnswer: { "@type": "Answer", text: it.a },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "ygs-faqpage-jsonld";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, [items]);
+  return null;
+};
+
 // Scroll progress bar — gold, 3px, top of viewport
 const ReadingProgressBar = () => {
   const [progress, setProgress] = useState(0);
@@ -245,7 +267,10 @@ const BlogArticlePage = () => {
         );
       } else if (line.startsWith("> ")) {
         flushList();
-        const text = line.slice(2);
+        let text = line.slice(2);
+        // [YGS] marker = personal commentary; skip the auto Source attribution.
+        const isPersonal = /^\[YGS\]\s*/i.test(text);
+        if (isPersonal) text = text.replace(/^\[YGS\]\s*/i, "");
         elements.push(
           <blockquote
             key={i}
@@ -263,12 +288,22 @@ const BlogArticlePage = () => {
             }}
           >
             <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
-            <div className="mt-4 flex items-center gap-2">
-              <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
-              <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
-                {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
-              </span>
-            </div>
+            {!isPersonal && (
+              <div className="mt-4 flex items-center gap-2">
+                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                  {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
+                </span>
+              </div>
+            )}
+            {isPersonal && (
+              <div className="mt-4 flex items-center gap-2">
+                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                  {isFr ? "Regard YGS" : "YGS Insight"}
+                </span>
+              </div>
+            )}
           </blockquote>
         );
       } else if (line.startsWith("- ")) {
@@ -324,6 +359,7 @@ const BlogArticlePage = () => {
     <>
       <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
+      {post.emitFaqSchema && faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <ReadingProgressBar />
 
       {/* Editorial split hero */}
@@ -384,17 +420,17 @@ const BlogArticlePage = () => {
               </p>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
-              {[
+              {(post.heroStats ?? [
                 { value: "+19%", label: isFr ? "Plex" : "Plex" },
-                { value: "23 j", label: isFr ? "Délai" : "Days" },
-                { value: isFr ? "585 500 $" : "$585,500", label: isFr ? "Prix médian" : "Median" },
-              ].map((s) => (
-                <div key={s.label}>
+                { value: "23 j", valueEn: "23 days", label: isFr ? "Délai" : "Days" },
+                { value: "585 500 $", valueEn: "$585,500", label: isFr ? "Prix médian" : "Median" },
+              ]).map((s, idx) => (
+                <div key={idx}>
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
-                    {s.value}
+                    {isFr ? s.value : (s.valueEn ?? s.value)}
                   </div>
                   <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.14em" }}>
-                    {s.label}
+                    {isFr ? s.label : (s.labelEn ?? s.label)}
                   </div>
                 </div>
               ))}
@@ -455,11 +491,21 @@ const BlogArticlePage = () => {
             {/* Source block */}
             <div style={{ borderLeft: "2px solid var(--gold)", background: "#ECEAE2", padding: "20px 22px" }}>
               <p className="uppercase" style={{ color: "var(--gold)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
-                {isFr ? "Source" : "Source"}
+                {isFr ? (post.sources && post.sources.length > 1 ? "Sources" : "Source") : (post.sources && post.sources.length > 1 ? "Sources" : "Source")}
               </p>
-              <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
-              </p>
+              {post.sources && post.sources.length > 0 ? (
+                <ul className="mt-2 space-y-2 list-none">
+                  {post.sources.map((s, i) => (
+                    <li key={i} style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
+                      {isFr ? s.fr : s.en}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
+                  {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
+                </p>
+              )}
             </div>
 
             {/* CTA block */}

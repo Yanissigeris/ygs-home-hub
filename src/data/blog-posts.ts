@@ -40,6 +40,13 @@ export interface BlogPost {
   featured?: boolean;
   body: string;
   bodyEn: string;
+  /** Optional per-post override for hero stats trio. If absent, template defaults are used. */
+  heroStats?: Array<{ value: string; label: string; valueEn?: string; labelEn?: string }>;
+  /** Optional per-post sources displayed in sidebar (replaces generic Source block). */
+  sources?: Array<{ fr: string; en: string }>;
+  /** Emit a FAQPage JSON-LD schema for this article. Only enable on posts whose FAQ markdown
+   *  is verified to parse cleanly. Default false to avoid retroactive schema regression. */
+  emitFaqSchema?: boolean;
 }
 
 /**
@@ -48,6 +55,159 @@ export interface BlogPost {
  * Set `published: true` to make a post visible.
  */
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "3-erreurs-prix-vendeur-gatineau-2026",
+    featuredImage: blogMarket,
+    slugEn: "3-pricing-mistakes-gatineau-sellers-2026",
+    title: "Les 3 erreurs de prix qui coûtent 15 000 $ aux vendeurs à Gatineau en 2026",
+    titleEn: "The 3 Pricing Mistakes Costing Gatineau Sellers $15,000 in 2026",
+    seoTitle: "Les 3 erreurs de prix qui coûtent 15 000 $ à Gatineau",
+    seoTitleEn: "The 3 Pricing Mistakes Costing $15,000 in Gatineau",
+    metaDescription: "Au T1 2026, les inscriptions à Gatineau ont bondi de 18 %. Voici les 3 erreurs de prix qui coûtent 15 000 $ ou plus aux vendeurs.",
+    metaDescriptionEn: "In Q1 2026, listings in Gatineau jumped 18%. Here are the 3 pricing mistakes costing sellers $15,000 or more.",
+    excerpt: "Le marché de Gatineau s'est rééquilibré au T1 2026. La stratégie de prix qui fonctionnait en 2023 ne fonctionne plus. Voici les trois erreurs que je vois encore sur le terrain et le coût réel qu'elles génèrent.",
+    excerptEn: "The Gatineau market rebalanced in Q1 2026. The pricing strategy that worked in 2023 no longer works. Here are the three mistakes I still see on the ground and what they really cost.",
+    category: "VENDEUR · Stratégie de prix",
+    categoryEn: "SELLER · Pricing Strategy",
+    publishDate: "2026-05-06",
+    published: true,
+    emitFaqSchema: true,
+    heroStats: [
+      { value: "+18 %", valueEn: "+18%", label: "Inscriptions T1 2026", labelEn: "Active listings Q1 2026" },
+      { value: "489 950 $", valueEn: "$489,950", label: "Prix médian unifam.", labelEn: "Median single-family price" },
+      { value: "38 j", valueEn: "38 days", label: "Délai moyen de vente", labelEn: "Average days on market" },
+    ],
+    sources: [
+      {
+        fr: "Chambre immobilière de l'Outaouais et APCIQ — Baromètre résidentiel T1 2026 (publié 15 avril 2026)",
+        en: "Chambre immobilière de l'Outaouais and QPAREB — Q1 2026 Residential Barometer (published April 15, 2026)",
+      },
+      {
+        fr: "Banque du Canada — Annonce du taux directeur, 29 avril 2026",
+        en: "Bank of Canada — Policy rate announcement, April 29, 2026",
+      },
+    ],
+    body: `Le marché de Gatineau s'est rééquilibré au premier trimestre 2026. Les inscriptions ont grimpé de 18 % alors que les ventes ont reculé de 10 %, et la stratégie de prix qui fonctionnait en 2023 ne fonctionne plus aujourd'hui. Voici les trois erreurs que je vois encore sur le terrain et le coût réel qu'elles génèrent.
+
+Au premier trimestre 2026, la Chambre immobilière de l'Outaouais a enregistré 936 ventes résidentielles dans la région métropolitaine de Gatineau, une baisse de 10 % par rapport au même trimestre en 2025. Pendant ce temps, les inscriptions actives ont bondi à 1 394 en moyenne mensuelle, soit 18 % de plus qu'en T1 2025. Le délai moyen de vente sur les unifamiliales est descendu à 38 jours, mais cette moyenne cache une réalité brutale : les propriétés bien évaluées partent en moins de 30 jours, les autres trainent 60 à 90 jours et finissent par baisser leur prix.
+
+> À Gatineau au premier trimestre 2026, les inscriptions actives ont augmenté de 18 % pendant que les ventes reculaient de 10 %, faisant basculer le marché vers un rééquilibrage qui pénalise directement les vendeurs surévalués.
+
+### Quelle est la première erreur de prix qui coûte le plus aux vendeurs à Gatineau en 2026 ?
+
+Surévaluer en visant le « haut de la fourchette comparable » est l'erreur la plus coûteuse en 2026, dans un marché où l'inventaire a augmenté de 18 % au premier trimestre selon la Chambre immobilière de l'Outaouais.
+
+Quand le marché était tendu en 2022-2023 avec moins de 2 mois d'inventaire, surévaluer de 5 % fonctionnait. Un acheteur émotif finissait par mordre. Aujourd'hui, avec un inventaire qui monte et des acheteurs qui filtrent activement avant de se déplacer en visite, une maison surévaluée n'attire personne. Sans visite, pas d'offre. Sans offre, baisse forcée après 4 à 6 semaines, avec en bonus l'étiquette « stale » qui décourage les offres futures.
+
+Pour une propriété médiane unifamiliale à Gatineau (489 950 $), une surévaluation de 5 % qui débouche sur une baisse forcée à 8 semaines coûte typiquement entre 14 000 $ et 20 000 $ en perte directe et portage hypothécaire combinés.
+
+### Pourquoi le prix entre 620 000 $ et 740 000 $ devient critique à Gatineau en 2026 ?
+
+Selon le baromètre APCIQ T1 2026, l'inventaire des unifamiliales entre 620 000 $ et 740 000 $ à Gatineau correspond à 4,5 mois de ventes, et au-dessus de 740 000 $, à 7,4 mois, contre seulement 2,9 mois pour la tranche 370 000 $ à 620 000 $.
+
+Cette tranche est exactement celle des downsizers 50-70 ans qui quittent leur unifamiliale familiale d'Aylmer ou du Plateau pour un format plus petit. La stratégie classique du « gros prix d'entrée pour garder de la marge de négociation » tombe à plat dans ce segment qui a vu son temps d'absorption augmenter significativement.
+
+Si votre propriété se situe entre 620 000 $ et 740 000 $, l'erreur n'est plus de manquer 2 % de marge. C'est de rester accroché 4 mois de plus pendant que les comparables corrects se vendent autour de vous. Pour une [évaluation propriété à Aylmer](/aylmer) basée sur les comparables exacts du secteur, on peut en parler.
+
+### Comment un prix « rond » peut-il coûter une vente à Gatineau ?
+
+Choisir 559 000 $ au lieu de 549 900 $ fait disparaître une propriété des recherches Centris filtrées à 550 000 $, soit une part significative des acheteurs actifs sur cette fourchette de prix.
+
+Centris et Realtor.ca segmentent les recherches par tranches de 25 000 $ ou 50 000 $. Un prix d'affichage de 559 000 $ vous sort du filtre « 550 000 $ et moins » sans vous faire entrer dans une tranche supérieure significative en termes de visibilité. Vous payez les algorithmes de recherche pour 9 000 $ que vous ne gagnerez probablement pas en négociation.
+
+Le prix d'affichage doit être stratégique par rapport aux seuils Centris (450 k, 500 k, 550 k, 600 k, 650 k, 700 k, 750 k, 800 k), pas par rapport à votre arrondi mental ou à un chiffre rond qui « fait beau » dans une annonce.
+
+### Combien coûte vraiment une mauvaise stratégie de prix à Gatineau en 2026 ?
+
+Une stratégie de prix erronée coûte entre 14 000 $ et 25 000 $ à un vendeur à Gatineau en 2026, selon une combinaison de baisse forcée (typiquement 3 à 5 % du prix médian de 489 950 $) et de portage hypothécaire prolongé d'environ 2 750 $ par mois pour une maison médiane à un taux fixe 5 ans négocié autour de 4,19 % au printemps 2026.
+
+Le portage inclut intérêts hypothécaires, taxes municipales d'environ 1,4 % à Gatineau et assurance habitation. À chaque mois additionnel sur le marché, une propriété surévaluée accumule environ 2 750 $ de coûts directs, sans compter l'effet « stale » qui fait baisser les offres futures de 1 à 2 % supplémentaires.
+
+15 000 $, c'est le coût plancher. Le vrai chiffre peut monter à 30 000 $ ou plus si la propriété traîne au-delà de 90 jours. Pour une [évaluation propriété à Gatineau](/vendre) basée sur les comparables réels, c'est le point de départ logique.
+
+> [YGS] Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse — c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
+
+## FAQ
+
+**Q : Combien faut-il viser au-dessus du prix probable de vente pour avoir de la marge de négociation à Gatineau en 2026 ?**
+R : Entre 0 % et 2 %. Au-delà, le risque que la maison ne génère pas de visites est plus grand que le gain potentiel en négociation. Pour une analyse précise sur votre propriété, écrivez-moi le mot VALEUR en DM Instagram ou Facebook.
+
+**Q : Mon courtier m'a recommandé un prix plus haut. Pourquoi je devrais reconsidérer ?**
+R : Une recommandation de prix dépend du marché de l'époque. En 2022-2023, viser haut fonctionnait. En 2026, avec un inventaire en hausse de 18 %, ça déclenche l'effet inverse. Si vous voulez une seconde lecture sur la fourchette actuelle, écrivez-moi VALEUR.
+
+**Q : Combien de temps avant de baisser le prix si la maison ne se vend pas ?**
+R : Trois semaines. Au-delà, l'effet « stale » sur Centris commence à coûter plus cher que la baisse elle-même. Une bonne évaluation au départ vaut toujours mieux que trois corrections en cascade.
+
+**Q : Le prix médian unifamiliale à Gatineau est de 489 950 $. Est-ce que ça veut dire que ma maison vaut ça ?**
+R : Non. Le prix médian est une statistique du marché global, pas un indicateur de valeur de votre propriété. Votre maison vaut ce que les comparables exacts (mêmes pieds carrés, même secteur, même condition) se sont vendus dans les 90 derniers jours. Pour une analyse comparative, écrivez-moi VALEUR.
+
+**Q : Le marché va-t-il rebondir au printemps 2026 ?**
+R : Il faut nuancer. Au T1 2026, le marché a continué de se rééquilibrer pendant que la Banque du Canada maintenait son taux directeur à 2,25 % pour la quatrième annonce consécutive. Le printemps amène plus d'acheteurs, mais aussi plus d'inscriptions concurrentes. Ne pas confondre activité saisonnière et appréciation.
+
+---
+
+*Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+    bodyEn: `The Gatineau market rebalanced in the first quarter of 2026. Listings jumped 18% while sales fell 10%, and the pricing strategy that worked in 2023 no longer works today. Here are the three mistakes I still see on the ground and what they really cost.
+
+In Q1 2026, the Chambre immobilière de l'Outaouais recorded 936 residential sales in the Gatineau metropolitan area, a 10% drop from the same quarter in 2025. Meanwhile, active listings jumped to 1,394 on a monthly average — 18% more than Q1 2025. Average time on market for single-family homes fell to 38 days, but that average hides a brutal reality: well-priced properties sell in under 30 days, others linger 60 to 90 days and end up cutting their price.
+
+> In Gatineau in Q1 2026, active listings rose 18% while sales fell 10%, tipping the market into a rebalancing that directly penalizes overpriced sellers.
+
+### What is the first pricing mistake costing Gatineau sellers the most in 2026?
+
+Overpricing by aiming for the "top of the comparable range" is the most expensive mistake in 2026, in a market where inventory rose 18% in the first quarter according to the Chambre immobilière de l'Outaouais.
+
+When the market was tight in 2022-2023 with under 2 months of inventory, overpricing 5% worked. An emotional buyer would eventually bite. Today, with rising inventory and buyers actively filtering before booking a showing, an overpriced home attracts no one. No showings, no offers. No offers, forced reduction after 4 to 6 weeks, with the bonus "stale" label that discourages future offers.
+
+For a median single-family property in Gatineau ($489,950), a 5% overprice that leads to a forced reduction at 8 weeks typically costs between $14,000 and $20,000 in direct loss and mortgage carrying costs combined.
+
+### Why is the $620,000 to $740,000 price range becoming critical in Gatineau in 2026?
+
+According to the QPAREB Q1 2026 barometer, single-family inventory between $620,000 and $740,000 in Gatineau represents 4.5 months of sales, and above $740,000, 7.4 months — versus only 2.9 months for the $370,000 to $620,000 bracket.
+
+This bracket is exactly where 50-70 year-old downsizers leave their family single-family in Aylmer or Plateau for a smaller format. The classic "high entry price to keep negotiation room" strategy falls flat in this segment, which has seen its absorption time rise significantly.
+
+If your property sits between $620,000 and $740,000, the mistake is no longer missing 2% of margin. It's staying stuck 4 extra months while properly priced comparables sell around you. For a [property valuation in Aylmer](/en/aylmer) based on exact comparables, let's talk.
+
+### How can a "round" price cost you a sale in Gatineau?
+
+Choosing $559,000 instead of $549,900 makes a property disappear from Centris searches filtered at $550,000 — a significant share of active buyers in that price band.
+
+Centris and Realtor.ca segment searches in $25,000 or $50,000 bands. A $559,000 list price drops you out of the "$550,000 and below" filter without putting you in a meaningfully higher visibility bracket. You pay the search algorithms for $9,000 you likely won't recover in negotiation.
+
+The list price must be strategic relative to Centris thresholds (450k, 500k, 550k, 600k, 650k, 700k, 750k, 800k), not relative to your mental rounding or a round number that "looks nice" in a listing.
+
+### How much does a bad pricing strategy really cost in Gatineau in 2026?
+
+A flawed pricing strategy costs a Gatineau seller between $14,000 and $25,000 in 2026, based on a combination of forced reduction (typically 3 to 5% off the $489,950 median price) and extended mortgage carrying costs of about $2,750 per month for a median home at a 5-year fixed rate negotiated around 4.19% in spring 2026.
+
+Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatineau, and home insurance. Each additional month on the market, an overpriced property accumulates about $2,750 in direct costs — not counting the "stale" effect that lowers future offers by 1 to 2%.
+
+$15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/sell-home) based on real comparables, that's the logical starting point.
+
+> [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
+
+## FAQ
+
+**Q: How much above the likely sale price should you list to keep negotiation room in Gatineau in 2026?**
+A: Between 0% and 2%. Beyond that, the risk of generating no showings outweighs the potential gain in negotiation. For a precise analysis on your property, message me the word VALUE on Instagram or Facebook DM.
+
+**Q: My broker recommended a higher price. Why should I reconsider?**
+A: A price recommendation depends on the market of the time. In 2022-2023, aiming high worked. In 2026, with inventory up 18%, it triggers the opposite effect. If you want a second read on the current range, message me VALUE.
+
+**Q: How long before reducing the price if the home doesn't sell?**
+A: Three weeks. Beyond that, the "stale" effect on Centris starts costing more than the reduction itself. A good valuation upfront always beats three cascading corrections.
+
+**Q: The median single-family price in Gatineau is $489,950. Does that mean my home is worth that?**
+A: No. The median price is an overall market statistic, not a value indicator for your property. Your home is worth what exact comparables (same square footage, same area, same condition) sold for in the last 90 days. For a comparative analysis, message me VALUE.
+
+**Q: Will the market rebound in spring 2026?**
+A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the Bank of Canada held its policy rate at 2.25% for a fourth consecutive announcement. Spring brings more buyers, but also more competing listings. Don't confuse seasonal activity with appreciation.
+
+---
+
+*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/sell-home), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+  },
   {
     slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
     featuredImage: blogMarket,
