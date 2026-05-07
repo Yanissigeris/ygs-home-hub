@@ -343,7 +343,7 @@ const BlogArticlePage = () => {
           const first = line.charAt(0);
           const rest = line.slice(1);
           elements.push(
-            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }}>
+            <p key={i} className="my-4" style={{ color: "var(--article-body-color)", fontSize: "var(--article-body-size)", lineHeight: "var(--article-body-line-height)" }}>
               <span
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
@@ -363,7 +363,7 @@ const BlogArticlePage = () => {
           );
         } else {
           elements.push(
-            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
+            <p key={i} className="my-4" style={{ color: "var(--article-body-color)", fontSize: "var(--article-body-size)", lineHeight: "var(--article-body-line-height)" }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
           );
         }
       }
@@ -438,7 +438,7 @@ const BlogArticlePage = () => {
                   {titleParts.line3}
                 </h2>
               )}
-              <p className="mt-6" style={{ color: "#2A3940", fontSize: "16px", lineHeight: 1.7 }}>
+              <p className="mt-6" style={{ color: "var(--article-excerpt-color)", fontSize: "var(--article-excerpt-size)", lineHeight: "var(--article-excerpt-line-height)" }}>
                 {excerpt}
               </p>
             </div>

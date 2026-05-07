@@ -100,6 +100,14 @@
     --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
+    /* Article body tokens — single source of truth for blog article prose */
+    --article-body-color: #2A3940;
+    --article-body-size: 17px;
+    --article-body-line-height: 1.75;
+    --article-excerpt-color: #2A3940;
+    --article-excerpt-size: 16px;
+    --article-excerpt-line-height: 1.7;
+
     /* StickyMobileCTA mesured height (button minHeight 48px + 0.85rem×2 padding ≈ 76px,
        safe-area-inset-bottom appended via env() in calc() consumers). */
     --sticky-cta-height: 76px;
