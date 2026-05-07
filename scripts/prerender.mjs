@@ -580,4 +580,7 @@ ${blogEntries}
 main().catch((err) => {
   console.error("❌ Prerender failed:", err);
   process.exit(1);
-});
+    });
+    if (post.emitFaqSchema && post.faqItems && post.faqItems.length > 0) {
+      frHtml = injectFaqPageJsonLd(frHtml, post.faqItems);
+    }
