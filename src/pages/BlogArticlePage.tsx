@@ -391,7 +391,7 @@ const BlogArticlePage = () => {
           {/* Left — petrol */}
           <div style={{ background: "var(--ink)", padding: "48px" }} className="flex flex-col justify-between gap-8">
             <div>
-              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.5)" }}>
+              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.75)" }}>
                 <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "var(--gold)" }}>
                   {isFr ? "Blogue" : "Blog"}
                 </Link>
@@ -412,7 +412,7 @@ const BlogArticlePage = () => {
                 >
                   {category}
                 </span>
-                <time style={{ color: "rgba(247,244,239,0.5)", fontSize: "11px" }}>{dateStr}</time>
+                <time style={{ color: "rgba(247,244,239,0.75)", fontSize: "11px" }}>{dateStr}</time>
               </div>
               <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
                 <span className="block">{titleParts.line1}</span>
@@ -421,7 +421,7 @@ const BlogArticlePage = () => {
                 )}
               </h1>
             </div>
-            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.5)", fontSize: "10px", letterSpacing: "0.18em" }}>
+            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.75)", fontSize: "10px", letterSpacing: "0.18em" }}>
               <span style={{ width: "16px", height: "1px", background: "var(--gold)" }} />
               {readingTime} {isFr ? "min de lecture" : "min read"}
             </div>
