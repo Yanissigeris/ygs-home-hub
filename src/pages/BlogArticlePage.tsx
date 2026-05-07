@@ -391,7 +391,7 @@ const BlogArticlePage = () => {
           {/* Left — petrol */}
           <div style={{ background: "var(--ink)", padding: "48px" }} className="flex flex-col justify-between gap-8">
             <div>
-              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.75)" }}>
+              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.92)" }}>
                 <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "var(--gold-bright)" }}>
                   {isFr ? "Blogue" : "Blog"}
                 </Link>
@@ -412,7 +412,7 @@ const BlogArticlePage = () => {
                 >
                   {category}
                 </span>
-                <time style={{ color: "rgba(247,244,239,0.75)", fontSize: "11px" }}>{dateStr}</time>
+                <time style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>{dateStr}</time>
               </div>
               <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
                 <span className="block">{titleParts.line1}</span>
@@ -421,7 +421,7 @@ const BlogArticlePage = () => {
                 )}
               </h1>
             </div>
-            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.75)", fontSize: "10px", letterSpacing: "0.18em" }}>
+            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.92)", fontSize: "10px", letterSpacing: "0.18em" }}>
               <span style={{ width: "16px", height: "1px", background: "var(--gold)" }} />
               {readingTime} {isFr ? "min de lecture" : "min read"}
             </div>
@@ -544,7 +544,7 @@ const BlogArticlePage = () => {
                   <>A <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>tailored</em> analysis</>
                 )}
               </h3>
-              <p className="mt-2" style={{ color: "rgba(247,244,239,0.78)", fontSize: "12px", lineHeight: 1.5 }}>
+              <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
                 {isFr ? "Pour votre projet — vente, achat ou investissement. Réponse sous 24 h." : "For your project — selling, buying or investing. Reply within 24 h."}
               </p>
               <Link
@@ -634,7 +634,7 @@ const BlogArticlePage = () => {
                 <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Let's talk.</em></>
               )}
             </h2>
-            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.78)", fontSize: "13px", lineHeight: 1.6 }}>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.92)", fontSize: "13px", lineHeight: 1.6 }}>
               {isFr
                 ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
                 : "I analyze real income, the ratio and the market value. No commitment."}
@@ -654,7 +654,7 @@ const BlogArticlePage = () => {
             >
               {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
             </Link>
-            <p className="mt-3" style={{ color: "rgba(247,244,239,0.7)", fontSize: "11px" }}>
+            <p className="mt-3" style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>
               {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
             </p>
           </div>
