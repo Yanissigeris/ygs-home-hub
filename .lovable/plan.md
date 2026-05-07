@@ -1,63 +1,71 @@
-# Diagnostic clé
+# Plan — Contraste AAA sur overline & subtitle (SectionHeading global)
 
-Avant le plan, deux causes racines confirmées par lecture du code :
+## Problème mesuré
 
-1. **FAQ absente du rendu** — Le markdown contient bien `## FAQ` + 5 paires, mais sous la forme `**Q : ...**` / `R : ...`. Le parser `BlogArticlePage.tsx` (ligne 244) attend `^Q\s*[:：]` sans gérer le `**` markdown. Les questions ne sont donc jamais capturées → `faqItems` reste vide → la section ET le schéma JSON-LD sont supprimés (gate `faqItems.length > 0`).
-2. **H3 visuellement plats** — Stylés en `var(--ink)` 22px weight 500, identiques visuellement à l'oeil par rapport au body. Style à différencier.
-3. **Reading time** — Calculé automatiquement (mots / 200). Ne stocke pas. Pour harmoniser FR/EN à 6 min : ajouter un override optionnel `readingTimeOverride`.
-4. **Bio** — Code en dur dit "Plus de 300 transactions". À corriger en "Plus de 200 transactions" (FR + EN).
+| Élément | Couleur actuelle | Sur fond | Ratio | WCAG |
+|---|---|---|---|---|
+| `.label-overline` (« Articles ») | `var(--gold)` #A88A5A | cream #F7F4EE | ~2.94:1 | ❌ AA |
+| `.prose-body` subtitle | `text-muted-foreground` | cream | ~4.5:1 | ❌ AAA |
+| H2 « Derniers articles » | `var(--ink)` #17303B | cream | ~12:1 | ✅ AAA (déjà OK) |
 
-# Fichiers modifiés (2)
+Cible : **AAA partout (≥7:1 pour body, ≥4.5:1 pour large text 18pt+)**.
 
-- `src/data/blog-posts.ts` — ajout des champs optionnels + population sur ce slug uniquement
-- `src/pages/BlogArticlePage.tsx` — parser FAQ tolérant au `**`, style H3, drop cap gold, support `ctaOverride`/`readingTimeOverride`, bio 200 (au lieu 300)
+## Changements (2 fichiers)
 
-Aucun autre fichier touché. Aucun autre article modifié dans son contenu.
+### 1. `src/index.css` — `.label-overline` (L.284-303)
 
-# Détail des 7 corrections
+Préserver l'identité dorée via le **trait** uniquement, passer le **texte en ink** :
 
-### #1 — H3 stylés (template global)
-Modifier le rendu H3 dans `renderBody` :
-- Cormorant Garamond, **gold `var(--gold)`**, 28px (mobile)/32px (desktop) via `clamp(1.75rem, 3vw, 2rem)`
-- Weight 500, line-height 1.3, `mt: 48px`, `mb: 16px`
-- Impact rétro-actif sur articles existants ayant des H3 (`###`) — vérifié : style cohérent avec l'identité éditoriale (gold accent déjà utilisé partout). Pas de régression visuelle attendue ; les autres articles bénéficient du même upgrade.
+```css
+.label-overline {
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink);            /* était: var(--gold) — AAA ~12:1 */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-### #2 — Parser FAQ tolérant
-Dans `BlogArticlePage.tsx` autour des lignes 244-245, remplacer les regex par :
-```ts
-const stripped = line.replace(/^\*\*\s*/, "").replace(/\s*\*\*$/, "").trim();
-const qMatch = stripped.match(/^Q\d*\s*[:：]\s*(.+)$/i);
-const aMatch = stripped.match(/^[RA]\s*[:：]\s*(.+)$/i);
+.label-overline::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);       /* trait doré conservé = identité préservée */
+  flex-shrink: 0;
+}
 ```
-Cela gère `**Q : ...**`, `**Q1 : ...**`, `Q : ...`. Une fois capturés, la section FAQ visible (lignes 456-490) ET le schéma JSON-LD `FaqPageJsonLd` (ligne 366) s'émettent automatiquement avec les 5 paires exactes.
 
-Style FAQ existant déjà conforme (H2 Cormorant, numérotation gold, séparateurs). Aucun changement de style nécessaire — la section sera simplement visible.
+### 2. `src/index.css` — `.prose-body` (L.278-282)
 
-### #3 — CTA override (par-article)
-Ajout `BlogPost.ctaOverride?: { eyebrow, title, text, buttonLabel, buttonHref, eyebrowEn, titleEn, textEn, buttonLabelEn, buttonHrefEn }`. Lecture dans la section CTA full-width (lignes 578-611) : si `post.ctaOverride` présent, rendu avec ces valeurs ; sinon fallback "Vous regardez un plex" inchangé. Population uniquement sur l'article cible avec les copies fournies (FR vers `/vendre`, EN vers `/en/sell`).
+Remplacer `text-muted-foreground` (variable) par la variable canonique du body article déjà utilisée (`--article-body-color` = #17303B ou équivalent), avec un léger allègement contrôlé :
 
-### #4 — Date
-`publishDate: "2026-05-06"` (déjà à 2026-05-06 actuellement — vérifier et confirmer ; si besoin re-set).
+```css
+.prose-body {
+  @apply text-[1rem] leading-[1.8];
+  color: var(--ink);              /* AAA ~12:1 sur cream */
+  max-width: 38rem;
+  font-weight: 300;
+}
+```
 
-### #5 — Reading time 6 min FR/EN
-Ajout `BlogPost.readingTimeOverride?: number`. Lecture : `const readingTime = post.readingTimeOverride ?? autoCalculated;`. Set à `6` sur cet article uniquement.
+> Si `--article-body-color` existe déjà (créée lors d'une itération précédente), l'utiliser à la place de `var(--ink)` pour cohérence avec les articles de blogue.
 
-### #6 — Bio 200 transactions
-Ligne 643-644 de `BlogArticlePage.tsx` : remplacer "Plus de 300 transactions" → "Plus de 200 transactions complétées dans la région" (FR) et "Over 300 transactions" → "Over 200 transactions completed in the region" (EN). Ce texte est en dur dans le template → s'applique à tous les articles. Conforme aux specs (200 est le bon chiffre selon le brief).
+## Ce qui reste intact
 
-### #7 — Drop cap visible
-Ligne 332 : changer `color: "var(--ink)"` → `color: "var(--gold)"` pour la lettrine. Conserve 80px desktop, ajout media query non nécessaire (taille déjà responsive via float). Affecte tous les articles — cohérence éditoriale renforcée (gold accent partout).
+- H1, H2, H3 (déjà ink, AAA)
+- Boutons CTA dorés (texte ink déjà corrigé)
+- Liens « Lire → » (déjà ink + hover gold)
+- Trait doré décoratif de l'overline (identité dorée préservée)
+- Dark mode / hero overlays (overrides existants `[data-hero-dark]`)
 
-# Non-régression
+## Vérification post-implémentation
 
-- 4 nouveaux champs OPTIONNELS sur `BlogPost` → fallback inchangé sur les 13 autres articles
-- Style H3 + drop cap + bio = changements globaux assumés et cohérents
-- Parser FAQ : plus tolérant, ne casse aucun article existant (les anciens patterns continuent de matcher)
-- Schémas JSON-LD : émission FAQPage uniquement si `emitFaqSchema: true` (déjà en place)
-
-# Vérification post-impl
-
-1. Naviguer `/blogue/3-erreurs-prix-vendeur-gatineau-2026` → vérifier H3 gold, FAQ visible, CTA "Évaluation gratuite", bio "200 transactions", drop cap "L" gold
-2. Idem version EN `/en/blog/3-pricing-mistakes-gatineau-sellers-2026`
-3. Inspecter 2 articles existants (ex: market 2026, plex) → confirmer rendu cohérent
-4. Vérifier `<script type="application/ld+json">` FAQPage présent dans le DOM avec 5 paires
+Mesurer via DevTools sur `/blogue` :
+1. « ARTICLES » overline → `#17303B` sur `#F7F4EE` → **12.47:1** ✅ AAA
+2. Subtitle prose-body (sur n'importe quelle page utilisant SectionHeading avec subtitle) → **12.47:1** ✅ AAA
+3. Non-régression : trait doré toujours visible avant l'overline
+4. Non-régression : overlines blanches dans les hero sombres (via `[data-hero-dark] p.label-overline` L.712)

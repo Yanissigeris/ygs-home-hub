@@ -276,7 +276,8 @@
   }
 
   .prose-body {
-    @apply text-[1rem] leading-[1.8] text-muted-foreground;
+    @apply text-[1rem] leading-[1.8];
+    color: var(--ink);
     max-width: 38rem;
     font-weight: 300;
   }
@@ -287,7 +288,7 @@
     font-weight: 600;
     letter-spacing: .22em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--ink);
     display: flex;
     align-items: center;
     gap: 0.75rem;
