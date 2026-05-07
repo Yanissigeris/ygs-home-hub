@@ -1,37 +1,56 @@
-## Goal
+# Plan: Two surgical SEO fixes in index.html
 
-Réduire l'effet "embrouillé" du mega-menu **Acheter** en limitant le nombre de colonnes et de liens visibles. C'est le seul menu en `columns` (3 colonnes, 14 liens). Tous les autres dropdowns sont déjà épurés (5-9 liens en une seule colonne).
+## Scope
+Only `index.html` at repo root. Exactly two changes, ~10 lines total.
 
-## Changement proposé
+## Fix 1 — Remove `aggregateRating` from RealEstateAgent JSON-LD
 
-### Mega-menu "Acheter" — passer de 3 colonnes / 14 liens → 2 colonnes / 8 liens
+Replace (around lines 134–141):
 
-**Colonne 1 — Acheter** (5 → 4 liens)
-- Acheter à Gatineau
-- Consultation acheteur
-- Premier achat
-- Acheter depuis Ottawa
+```
+        "https://www.instagram.com/yanissigeris/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0", "bestRating": "5", "worstRating": "1",
+        "ratingCount": "3", "reviewCount": "3"
+      }
+    }
+```
 
-(Retiré du menu visible: *Guide acheteur* — accessible depuis la page Acheter et le footer.)
+With:
 
-**Colonne 2 — Plex & Relocalisation** (fusionnée, 9 → 4 liens)
-- Investir dans un plex
-- Ottawa → Gatineau
-- Montréal → Gatineau
-- Militaire à Gatineau (page hub qui couvre mutation/achat/vente)
+```
+        "https://www.instagram.com/yanissigeris/"
+      ]
+    }
+```
 
-(Retirés du menu visible: *Analyse plex*, *Vendre un plex*, *Guide relocalisation*, *Militaire — achat*, *Militaire — vente*. Toutes ces pages restent accessibles via leurs pages parent, le footer, et les liens internes — aucune URL supprimée, aucun impact SEO.)
+The trailing comma after `]` is removed at the same time so the JSON stays valid. `sameAs` array contents untouched.
 
-### Résultat
+## Fix 2 — Replace 3 references to og-image.png
 
-- Largeur du panneau réduite de ~42rem → ~28rem.
-- Moins de bruit visuel, hiérarchie évidente: 2 colonnes claires au lieu de 3 colonnes denses.
-- Aucune page supprimée — uniquement le menu allégé.
+In `index.html` only, replace every occurrence of:
+`https://yanisgauthier.com/og-image.png`
+with:
+`https://yanisgauthier.com/og/og-default.jpg`
 
-## Portée
+Expected 3 occurrences, all inside JSON-LD blocks:
+- RealEstateAgent `image` (~line 76)
+- RealEstateAgent `logo.url` (~line 79)
+- Person `image` (~line 157)
 
-- Fichiers modifiés:
-  - `src/data/navigation.ts` (FR)
-  - `src/data/navigation-en.ts` (EN, miroir parfait)
-- Aucune modification du composant `SiteHeader.tsx`, des routes, du footer, du sitemap, ou du JSON-LD.
-- Aucun impact SEO: toutes les pages restent indexées et liées depuis le footer et les pages parent.
+`<meta property="og:image">` tags are not touched (they are per-route and not in this file's static head anyway).
+
+## Constraints honored
+- No other files touched.
+- No changes to title/description/canonical/hreflang/og/twitter meta tags.
+- No changes to other JSON-LD fields, scripts, head order, H1/H2, or noscript fallback.
+- Both JSON-LD blocks remain valid JSON.
+
+## Post-change verification (will run after edit)
+1. `rg -n "aggregateRating" index.html` → 0 matches
+2. `rg -n "og-image\.png" index.html` → 0 matches
+3. `rg -n "og-default\.jpg" index.html` → exactly 3 matches
+4. `git status --porcelain` shows only `index.html` modified
+5. `node -e "..."` parse both JSON-LD script contents to confirm validity
