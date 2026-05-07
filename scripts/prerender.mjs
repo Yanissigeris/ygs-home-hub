@@ -495,6 +495,9 @@ async function main() {
       breadcrumbLabel: "Blog",
       breadcrumbHref: "/en/blog",
     });
+    if (post.emitFaqSchema && post.faqItemsEn && post.faqItemsEn.length > 0) {
+      enHtml = injectFaqPageJsonLd(enHtml, post.faqItemsEn);
+    }
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
     await fs.writeFile(enOut, enHtml, "utf8");
