@@ -468,11 +468,21 @@ const BlogArticlePage = () => {
             {/* Source block */}
             <div style={{ borderLeft: "2px solid var(--gold)", background: "#ECEAE2", padding: "20px 22px" }}>
               <p className="uppercase" style={{ color: "var(--gold)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
-                {isFr ? "Source" : "Source"}
+                {isFr ? (post.sources && post.sources.length > 1 ? "Sources" : "Source") : (post.sources && post.sources.length > 1 ? "Sources" : "Source")}
               </p>
-              <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
-              </p>
+              {post.sources && post.sources.length > 0 ? (
+                <ul className="mt-2 space-y-2 list-none">
+                  {post.sources.map((s, i) => (
+                    <li key={i} style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
+                      {isFr ? s.fr : s.en}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
+                  {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
+                </p>
+              )}
             </div>
 
             {/* CTA block */}
