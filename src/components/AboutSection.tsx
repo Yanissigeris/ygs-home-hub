@@ -10,7 +10,7 @@ const contentFr = {
 Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis 2017, j'ai eu la chance d'être reconnu par RE/MAX — Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
 
 Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
-  credentials: "",
+  credentials: "Depuis 2017 · Club Platine · Club 100% · Temple de la renommée",
   cta: "En savoir plus",
   ctaHref: "/contact-yanis",
   imgAlt: "Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau",
