@@ -53,6 +53,11 @@ export async function extractBlogPosts() {
       const metaDescriptionEn = matchField(obj, "metaDescriptionEn");
       const excerpt = matchField(obj, "excerpt");
       const excerptEn = matchField(obj, "excerptEn");
+      const emitFaqSchema = /emitFaqSchema:\s*true\b/.test(obj);
+      const body = matchField(obj, "body");
+      const bodyEn = matchField(obj, "bodyEn");
+      const faqItems = emitFaqSchema && body ? extractFaqPairs(body) : [];
+      const faqItemsEn = emitFaqSchema && bodyEn ? extractFaqPairs(bodyEn) : [];
 
       const fiMatch = obj.match(/featuredImage:\s*(\w+)\s*[,}]/);
       const featuredImageVar = fiMatch ? fiMatch[1] : null;
@@ -72,11 +77,52 @@ export async function extractBlogPosts() {
           excerpt,
           excerptEn,
           featuredImageFile,
+          emitFaqSchema,
+          faqItems,
+          faqItemsEn,
         });
       }
     }
   }
   return posts;
+}
+
+/**
+ * Parse a markdown body and extract Q/A pairs from a `## FAQ` (or
+ * `## Questions fréquentes` / `## Frequently asked`) section. Tolerates
+ * `**Q : ...**`, `**Q1 : ...**`, `Q: ...` and `R:` / `A:`. Returns []
+ * if no FAQ section is found or no pairs parse cleanly.
+ */
+function extractFaqPairs(body) {
+  if (!body) return [];
+  // Unescape common TS template literal escapes back to plain markdown.
+  const md = body.replace(/\\`/g, "`").replace(/\\\$/g, "$").replace(/\\n/g, "\n");
+  const lines = md.split("\n");
+  const items = [];
+  let inFaq = false;
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (/^##\s*(FAQ|Questions fréquentes|Frequently asked)/i.test(line)) {
+      inFaq = true;
+      continue;
+    }
+    if (inFaq && line.startsWith("## ")) {
+      inFaq = false;
+      continue;
+    }
+    if (!inFaq) continue;
+    const stripped = line.replace(/^\*\*\s*/, "").replace(/\s*\*\*$/, "").trim();
+    const qMatch = stripped.match(/^Q\d*\s*[:：]\s*(.+)$/i);
+    const aMatch = stripped.match(/^[RA]\d*\s*[:：]\s*(.+)$/i);
+    if (qMatch) {
+      items.push({ q: qMatch[1].replace(/\*\*$/, "").trim(), a: "" });
+    } else if (aMatch && items.length > 0) {
+      items[items.length - 1].a = aMatch[1].trim();
+    } else if (line && items.length > 0 && items[items.length - 1].a) {
+      items[items.length - 1].a += " " + line;
+    }
+  }
+  return items.filter((it) => it.q && it.a);
 }
 
 /**

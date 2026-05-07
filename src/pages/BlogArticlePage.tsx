@@ -52,6 +52,16 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
 const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
   useEffect(() => {
     if (!items || items.length === 0) return;
+    // Option A: SSR is source of truth. Skip injection if a FAQPage script
+    // already exists (either our SSR-injected one or a previous client mount).
+    const existing = document.getElementById("ygs-faqpage-jsonld");
+    if (existing) return;
+    // Also bail if SSR injected an unidentified FAQPage script.
+    const ssrFaq = Array.from(
+      document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+    ).find((s) => s.textContent && s.textContent.includes('"@type":"FAQPage"'));
+    if (ssrFaq) return;
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -258,10 +268,17 @@ const BlogArticlePage = () => {
       if (line.startsWith("### ")) {
         flushList();
         const text = line.slice(4);
+        const h3Prominent = post?.h3Style === "prominent";
         elements.push(
-          <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
-            {text}
-          </h3>
+          h3Prominent ? (
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+              {text}
+            </h3>
+          ) : (
+            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 500, lineHeight: 1.25 }}>
+              {text}
+            </h3>
+          )
         );
       } else if (line.startsWith("## ")) {
         flushList();
