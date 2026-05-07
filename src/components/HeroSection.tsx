@@ -787,7 +787,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
                       style={{
                         background: "var(--gold)",
-                        color: "var(--white)",
+                        color: "var(--ink)",
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
                         fontSize: ".95rem",
