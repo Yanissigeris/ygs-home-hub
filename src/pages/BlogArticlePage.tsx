@@ -271,7 +271,7 @@ const BlogArticlePage = () => {
         const h3Prominent = post?.h3Style === "prominent";
         elements.push(
           h3Prominent ? (
-            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold-text)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
               {text}
             </h3>
           ) : (
@@ -514,7 +514,7 @@ const BlogArticlePage = () => {
           <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" style={{ padding: "0" }}>
             {/* Source block */}
             <div style={{ borderLeft: "2px solid var(--gold)", background: "#ECEAE2", padding: "20px 22px" }}>
-              <p className="uppercase" style={{ color: "var(--gold)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {isFr ? (post.sources && post.sources.length > 1 ? "Sources" : "Source") : (post.sources && post.sources.length > 1 ? "Sources" : "Source")}
               </p>
               {post.sources && post.sources.length > 0 ? (
@@ -683,7 +683,7 @@ const BlogArticlePage = () => {
           </div>
           <div className="hidden sm:block self-stretch" style={{ width: "1px", background: "#E0DBD1" }} />
           <div>
-            <p className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+            <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? "À propos" : "About"}
             </p>
             <p className="mt-1.5" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "20px", fontWeight: 500, lineHeight: 1.2 }}>
