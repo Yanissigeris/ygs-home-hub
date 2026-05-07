@@ -343,7 +343,7 @@ const BlogArticlePage = () => {
           const first = line.charAt(0);
           const rest = line.slice(1);
           elements.push(
-            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }}>
+            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }}>
               <span
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
