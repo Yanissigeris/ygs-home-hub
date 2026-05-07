@@ -136,7 +136,7 @@ const PontiacPage = () => {
             <div key={s.name} className="bg-background border border-border rounded-lg p-6 space-y-3">
               <h3 className="font-serif text-lg text-foreground">{s.name}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{s.text}</p>
-              <span className="inline-block text-xs text-accent font-medium">{s.tag}</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[var(--gold-text)]">{s.tag}</span>
             </div>
           ))}
         </div>
