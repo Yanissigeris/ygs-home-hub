@@ -76,11 +76,11 @@
     /* White */
     --white: #FFFFFF;
     /* Text-on-dark stack */
-    --text-on-dark-strong: rgba(255,255,255,0.92);
-    --text-on-dark: rgba(255,255,255,0.7);
-    --text-on-dark-muted: rgba(255,255,255,0.5);
-    --text-on-dark-whisper: rgba(255,255,255,0.4);
-    --text-on-dark-faint: rgba(255,255,255,0.25);
+    --text-on-dark-strong: rgba(255,255,255,0.95);
+    --text-on-dark: rgba(255,255,255,0.88);
+    --text-on-dark-muted: rgba(255,255,255,0.78);
+    --text-on-dark-whisper: rgba(255,255,255,0.7);
+    --text-on-dark-faint: rgba(255,255,255,0.55);
     /* Shadow stack */
     --shadow-soft: rgba(0,0,0,0.15);
     --shadow-mid: rgba(0,0,0,0.35);
