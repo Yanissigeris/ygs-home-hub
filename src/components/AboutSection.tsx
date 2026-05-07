@@ -115,11 +115,15 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             <p
               style={{
                 fontFamily: "var(--sans)",
-                fontSize: "12px",
+                fontSize: "clamp(11px, 2.6vw, 12px)",
                 fontWeight: 500,
                 letterSpacing: "0.06em",
+                lineHeight: 1.5,
                 color: "var(--gold-warm-light)",
                 marginBottom: "2rem",
+                paddingTop: "1rem",
+                borderTop: "1px solid rgba(168,138,90,0.25)",
+                wordSpacing: "0.05em",
               }}
             >
               {c.credentials}
