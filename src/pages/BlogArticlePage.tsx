@@ -728,6 +728,7 @@ const BlogArticlePage = () => {
           </Link>
         </section>
       )}
+      </div>
     </>
   );
 };
