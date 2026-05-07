@@ -114,24 +114,19 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           {c.credentials && (
             <div
               style={{
-                marginTop: "0.5rem",
+                marginTop: "1.75rem",
                 marginBottom: "2.25rem",
-                paddingTop: "1.25rem",
+                paddingTop: "1.5rem",
                 borderTop: "1px solid rgba(168,138,90,0.22)",
                 display: "flex",
-                alignItems: "center",
+                flexDirection: "column",
+                alignItems: "flex-start",
                 gap: "0.75rem",
-                flexWrap: "wrap",
               }}
             >
               <span
                 aria-hidden="true"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  flexShrink: 0,
-                }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
               >
                 <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--gold)" }} />
                 <span
@@ -152,7 +147,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                   fontWeight: 600,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  lineHeight: 1.6,
+                  lineHeight: 1.7,
                   color: "rgba(232,210,170,0.95)",
                   margin: 0,
                 }}
