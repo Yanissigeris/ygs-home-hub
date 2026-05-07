@@ -93,6 +93,7 @@ export const blogPosts: BlogPost[] = [
     published: true,
     emitFaqSchema: true,
     readingTimeOverride: 6,
+    h3Style: "prominent",
     ctaOverride: {
       eyebrow: "ÉVALUATION PERSONNALISÉE",
       title: "Vous envisagez de vendre dans les six prochains mois ?",
