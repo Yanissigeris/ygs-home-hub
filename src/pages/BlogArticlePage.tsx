@@ -438,7 +438,7 @@ const BlogArticlePage = () => {
                   {titleParts.line3}
                 </h2>
               )}
-              <p className="mt-6" style={{ color: "#2A3940", fontSize: "16px", lineHeight: 1.7 }}>
+              <p className="mt-6" style={{ color: "var(--article-excerpt-color)", fontSize: "var(--article-excerpt-size)", lineHeight: "var(--article-excerpt-line-height)" }}>
                 {excerpt}
               </p>
             </div>
