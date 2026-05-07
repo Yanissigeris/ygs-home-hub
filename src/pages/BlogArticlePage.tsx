@@ -241,11 +241,12 @@ const BlogArticlePage = () => {
       }
 
       if (inFaq) {
-        // Q : ... / Q: ...
-        const qMatch = line.match(/^Q\s*[:：]\s*(.+)$/i);
-        const aMatch = line.match(/^R\s*[:：]\s*(.+)$/i) || line.match(/^A\s*[:：]\s*(.+)$/i);
+        // Strip surrounding ** if the question/answer is wrapped in markdown bold
+        const stripped = line.replace(/^\*\*\s*/, "").replace(/\s*\*\*$/, "").trim();
+        const qMatch = stripped.match(/^Q\d*\s*[:：]\s*(.+)$/i);
+        const aMatch = stripped.match(/^[RA]\d*\s*[:：]\s*(.+)$/i);
         if (qMatch) {
-          faqItems.push({ q: qMatch[1].trim(), a: "" });
+          faqItems.push({ q: qMatch[1].replace(/\*\*$/, "").trim(), a: "" });
         } else if (aMatch && faqItems.length > 0) {
           faqItems[faqItems.length - 1].a = aMatch[1].trim();
         } else if (line && faqItems.length > 0 && faqItems[faqItems.length - 1].a) {
