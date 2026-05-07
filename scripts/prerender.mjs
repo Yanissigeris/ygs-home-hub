@@ -140,6 +140,28 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
 }
 
 /**
+ * Inject a FAQPage JSON-LD schema into a prerendered article HTML so that
+ * crawlers (Google, IA) see the schema in the initial server-served DOM.
+ * The client-side <FaqPageJsonLd> component is dedupe-aware (Option A) and
+ * will skip re-injection when this script is present.
+ */
+function injectFaqPageJsonLd(html, items) {
+  if (!items || items.length === 0) return html;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((it) => ({
+      "@type": "Question",
+      name: it.q,
+      acceptedAnswer: { "@type": "Answer", text: it.a },
+    })),
+  };
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script id="ygs-faqpage-jsonld" type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+/**
  * Inject a static body fallback for blog article pages so that crawlers (and
  * the heading-hierarchy audit) always see a valid h1/h2/h3 structure even when
  * the Puppeteer hydration pass is skipped or fails.
