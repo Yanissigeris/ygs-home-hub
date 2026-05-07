@@ -195,7 +195,19 @@ const ValuationForm = ({
       address: values.address || undefined,
       message: message || undefined,
     });
-    if (ok) setSubmitted(true);
+    if (ok) {
+      setSubmitted(true);
+      const w = window as Window & { gtag?: (...args: unknown[]) => void };
+      if (typeof w.gtag === "function") {
+        w.gtag("event", "generate_lead", {
+          currency: "CAD",
+          value: 1.0,
+          lead_type: "home_valuation",
+          lead_language: lang,
+          page_path: window.location.pathname,
+        });
+      }
+    }
   };
 
   if (submitted) {
