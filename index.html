@@ -242,6 +242,15 @@
       });
     </script>
 
+    <!-- GA4 gtag.js — loaded globally on every page. Consent Mode v2 above
+         gates whether cookies/storage are used. send_page_view is disabled
+         so the SPA can fire page_view manually on route changes. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4Y8089EGB"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-P4Y8089EGB', { send_page_view: false });
+    </script>
+
 </head>
 
   <body>
