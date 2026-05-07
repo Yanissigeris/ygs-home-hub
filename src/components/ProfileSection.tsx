@@ -35,7 +35,7 @@ const ProfileSection = ({
   <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className={`section-container grid gap-12 lg:gap-16 ${imagePosition === "left" ? "lg:grid-cols-[38%_62%]" : "lg:grid-cols-[62%_38%]"} lg:items-start`}>
       <motion.div
-        className={`space-y-8 ${imagePosition === "right" ? "order-2" : ""}`}
+        className={imagePosition === "right" ? "order-2" : ""}
         initial={{ opacity: 0, x: imagePosition === "left" ? -20 : 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -51,20 +51,20 @@ const ProfileSection = ({
           decoding="async"
         />
         {logo && (
-          <div className="text-center">
+          <div className="text-center mt-6">
             <img
               src={logo}
               alt={logoAlt || ""}
               className="mx-auto h-auto"
-              style={{ width: "clamp(70px, 10vw, 90px)" }}
-              width={90}
-              height={30}
+              style={{ width: "clamp(80px, 11vw, 100px)" }}
+              width={100}
+              height={34}
               loading="lazy"
               decoding="async"
             />
           </div>
         )}
-        {affiliationSlot}
+        {affiliationSlot && <div className="mt-8">{affiliationSlot}</div>}
       </motion.div>
       <motion.div
         className={imagePosition === "right" ? "order-1" : ""}

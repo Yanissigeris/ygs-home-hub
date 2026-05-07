@@ -16,7 +16,7 @@ const RemaxAgencyBlock = ({ lang }: RemaxAgencyBlockProps) => {
       className="rounded-2xl p-5 text-left"
       style={{ background: "#F7F4EE", color: "#1A1A1A" }}
     >
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-end gap-4 mb-4">
         <img
           src={remaxLogotypeBlack}
           alt="RE/MAX"
