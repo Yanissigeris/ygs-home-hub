@@ -207,8 +207,8 @@ const ValuationForm = ({
 
   // Glass variant input classes
   const glassInput =
-    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/55 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
-  const glassLabel = "text-primary-foreground/60 text-[0.8125rem]";
+    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/85 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
+  const glassLabel = "text-primary-foreground text-[0.8125rem]";
   const errClass = cn(
     "mt-1 text-[0.75rem] leading-snug",
     isGlass ? "text-red-300/80" : "text-destructive",
@@ -237,7 +237,7 @@ const ValuationForm = ({
           >
             {t.glassHeading}
           </h2>
-          <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/35">
+          <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/85">
             {t.glassSub}
           </p>
           <div className="mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
@@ -254,7 +254,7 @@ const ValuationForm = ({
               <p className="font-semibold text-[0.9375rem] leading-tight text-primary-foreground">
                 Yanis Gauthier-Sigeris
               </p>
-              <p className="mt-0.5 text-[0.75rem] text-primary-foreground/60 flex flex-wrap items-center gap-x-1.5">
+              <p className="mt-0.5 text-[0.75rem] text-primary-foreground/85 flex flex-wrap items-center gap-x-1.5">
                 <span className="text-accent font-medium">★ 5/5</span>
                 <span aria-hidden>·</span>
                 <span>Hall of Fame RE/MAX</span>
@@ -296,7 +296,7 @@ const ValuationForm = ({
         <div
           className={cn(
             "flex items-center gap-2 text-[0.8125rem]",
-            isGlass ? "text-primary-foreground/40" : "text-muted-foreground",
+            isGlass ? "text-primary-foreground/80" : "text-muted-foreground",
           )}
         >
           <Lock size={13} aria-hidden="true" /> {t.confidential}
@@ -479,7 +479,7 @@ const ValuationForm = ({
           variant="accent"
           className={cn(
             "w-full font-semibold",
-            isGlass && "mt-1 shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)]",
+            isGlass && "mt-1 bg-[#A88A5A] text-[#182F3A] border-transparent hover:bg-[#8E7349] hover:text-[#182F3A] shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)]",
           )}
           disabled={submitting}
         >
