@@ -138,12 +138,13 @@ const BlogArticlePage = () => {
   const slugify = (text: string) =>
     text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
 
-  // Reading time (200 wpm)
+  // Reading time (200 wpm) — override if explicitly set on the post
   const readingTime = useMemo(() => {
+    if (post && post.published && typeof post.readingTimeOverride === "number") return post.readingTimeOverride;
     if (!body) return 0;
     const words = body.split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.round(words / 200));
-  }, [body]);
+  }, [body, post]);
 
   // Split title into 2-3 lines for hero (ligne 3 = part after first colon if present)
   const titleParts = useMemo(() => {
