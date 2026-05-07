@@ -139,6 +139,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 {c.credentials}
               </p>
             </div>
+          )}
 
           {/* CTA */}
           <Link
