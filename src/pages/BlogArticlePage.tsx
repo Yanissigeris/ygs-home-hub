@@ -397,17 +397,17 @@ const BlogArticlePage = () => {
               </p>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
-              {[
+              {(post.heroStats ?? [
                 { value: "+19%", label: isFr ? "Plex" : "Plex" },
-                { value: "23 j", label: isFr ? "Délai" : "Days" },
-                { value: isFr ? "585 500 $" : "$585,500", label: isFr ? "Prix médian" : "Median" },
-              ].map((s) => (
-                <div key={s.label}>
+                { value: "23 j", valueEn: "23 days", label: isFr ? "Délai" : "Days" },
+                { value: "585 500 $", valueEn: "$585,500", label: isFr ? "Prix médian" : "Median" },
+              ]).map((s, idx) => (
+                <div key={idx}>
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
-                    {s.value}
+                    {isFr ? s.value : (s.valueEn ?? s.value)}
                   </div>
                   <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "9px", letterSpacing: "0.14em" }}>
-                    {s.label}
+                    {isFr ? s.label : (s.labelEn ?? s.label)}
                   </div>
                 </div>
               ))}
