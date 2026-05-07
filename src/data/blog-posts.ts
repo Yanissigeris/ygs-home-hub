@@ -42,8 +42,10 @@ export interface BlogPost {
   bodyEn: string;
   /** Optional per-post override for hero stats trio. If absent, template defaults are used. */
   heroStats?: Array<{ value: string; label: string; valueEn?: string; labelEn?: string }>;
-  /** Optional per-post sources displayed in sidebar (replaces generic Source block). */
+  /** Optional per-post override for sources displayed in sidebar (replaces generic Source block). */
   sources?: Array<{ fr: string; en: string }>;
+  /** Optional per-post override for hero title split into 3 lines. Bypasses auto colon-split. */
+  titleLines?: { line1: string; line2?: string; line3?: string; line1En: string; line2En?: string; line3En?: string };
   /** Emit a FAQPage JSON-LD schema for this article. Only enable on posts whose FAQ markdown
    *  is verified to parse cleanly. Default false to avoid retroactive schema regression. */
   emitFaqSchema?: boolean;
