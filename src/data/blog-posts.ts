@@ -49,6 +49,21 @@ export interface BlogPost {
   /** Emit a FAQPage JSON-LD schema for this article. Only enable on posts whose FAQ markdown
    *  is verified to parse cleanly. Default false to avoid retroactive schema regression. */
   emitFaqSchema?: boolean;
+  /** Optional per-post override for the full-width bottom CTA. If absent, template default is used. */
+  ctaOverride?: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    buttonLabel: string;
+    buttonHref: string;
+    eyebrowEn: string;
+    titleEn: string;
+    textEn: string;
+    buttonLabelEn: string;
+    buttonHrefEn: string;
+  };
+  /** Optional override for reading time (minutes). If absent, auto-calculated from body word count. */
+  readingTimeOverride?: number;
 }
 
 /**
