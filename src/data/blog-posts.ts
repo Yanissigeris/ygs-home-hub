@@ -125,7 +125,7 @@ Le portage inclut intérêts hypothécaires, taxes municipales d'environ 1,4 % �
 
 15 000 $, c'est le coût plancher. Le vrai chiffre peut monter à 30 000 $ ou plus si la propriété traîne au-delà de 90 jours. Pour une [évaluation propriété à Gatineau](/vendre) basée sur les comparables réels, c'est le point de départ logique.
 
-> Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse — c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
+> [YGS] Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse — c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
 
 ## FAQ
 
@@ -185,7 +185,7 @@ Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatinea
 
 $15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/sell-home) based on real comparables, that's the logical starting point.
 
-> What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
+> [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
 
 ## FAQ
 
