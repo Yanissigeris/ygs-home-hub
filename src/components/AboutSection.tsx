@@ -112,22 +112,33 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
           {/* Credentials */}
           {c.credentials && (
-            <p
+            <div
               style={{
-                fontFamily: "var(--sans)",
-                fontSize: "clamp(11px, 2.6vw, 12px)",
-                fontWeight: 500,
-                letterSpacing: "0.06em",
-                lineHeight: 1.5,
-                color: "var(--gold-warm-light)",
-                marginBottom: "2rem",
-                paddingTop: "1rem",
-                borderTop: "1px solid rgba(168,138,90,0.25)",
-                wordSpacing: "0.05em",
+                marginTop: "0.5rem",
+                marginBottom: "2.25rem",
+                paddingTop: "1.25rem",
+                borderTop: "1px solid rgba(168,138,90,0.22)",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
               }}
             >
-              {c.credentials}
-            </p>
+              <span aria-hidden="true" style={{ display: "inline-block", width: 24, height: 2, background: "var(--gold)" }} />
+              <p
+                style={{
+                  fontFamily: "var(--sans)",
+                  fontSize: "clamp(10.5px, 2.4vw, 12px)",
+                  fontWeight: 500,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  lineHeight: 1.6,
+                  color: "var(--gold-warm-light)",
+                  margin: 0,
+                }}
+              >
+                {c.credentials}
+              </p>
+            </div>
           )}
 
           {/* CTA */}
