@@ -359,6 +359,7 @@ const BlogArticlePage = () => {
     <>
       <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
+      {post.emitFaqSchema && faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <ReadingProgressBar />
 
       {/* Editorial split hero */}
