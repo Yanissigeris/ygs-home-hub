@@ -147,12 +147,17 @@ const BlogArticlePage = () => {
 
   // Split title into 2-3 lines for hero (ligne 3 = part after first colon if present)
   const titleParts = useMemo(() => {
+    if (post && post.published && post.titleLines) {
+      const tl = post.titleLines;
+      return isFr
+        ? { line1: tl.line1, line2: tl.line2 ?? "", line3: tl.line3 ?? "" }
+        : { line1: tl.line1En, line2: tl.line2En ?? "", line3: tl.line3En ?? "" };
+    }
     const t = post && post.published ? (isFr ? post.title : post.titleEn) : "";
     const colonIdx = t.indexOf(":");
     if (colonIdx > 0) {
       const left = t.slice(0, colonIdx).trim();
       const right = t.slice(colonIdx + 1).trim();
-      // Split left in two lines on first space after halfway if possible
       const half = Math.floor(left.length / 2);
       const spaceIdx = left.indexOf(" ", half);
       if (spaceIdx > 0) {
@@ -160,7 +165,6 @@ const BlogArticlePage = () => {
       }
       return { line1: left, line2: "", line3: right };
     }
-    // No colon: split into 2 chunks
     const half = Math.floor(t.length / 2);
     const spaceIdx = t.indexOf(" ", half);
     if (spaceIdx > 0) {
