@@ -331,7 +331,7 @@ const BlogArticlePage = () => {
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "80px",
-                  color: "var(--ink)",
+                  color: "var(--gold)",
                   float: "left",
                   lineHeight: 0.8,
                   marginRight: "8px",
