@@ -74,6 +74,14 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2026-05-06",
     published: true,
     emitFaqSchema: true,
+    titleLines: {
+      line1: "Les 3 erreurs de prix",
+      line2: "qui coûtent 15 000 $",
+      line3: "aux vendeurs à Gatineau en 2026",
+      line1En: "The 3 pricing mistakes",
+      line2En: "costing $15,000",
+      line3En: "to Gatineau sellers in 2026",
+    },
     heroStats: [
       { value: "+18 %", valueEn: "+18%", label: "Inscriptions T1 2026", labelEn: "Active listings Q1 2026" },
       { value: "489 950 $", valueEn: "$489,950", label: "Prix médian unifam.", labelEn: "Median single-family price" },
