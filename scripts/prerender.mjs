@@ -206,6 +206,9 @@ function categoryOgImage(route) {
   // Military (specific subset of sellers/buyers — match before generic)
   if (/militaire|military/.test(r)) return `${SITE_URL}/og/og-military.jpg`;
 
+  // Relocation (Ottawa→Gatineau, Montréal→Gatineau) — after military so military wins
+  if (/relocalisation|relocation|montreal/.test(r)) return `${SITE_URL}/og/og-reloc.jpg`;
+
   // Plex / investment
   if (/plex/.test(r)) return `${SITE_URL}/og/og-plex.jpg`;
 
@@ -215,12 +218,15 @@ function categoryOgImage(route) {
   // Market report
   if (/rapport-marche|market-report/.test(r)) return `${SITE_URL}/og/og-market.jpg`;
 
+  // FAQ (before generic guides)
+  if (/^\/(en\/)?faq/.test(r)) return `${SITE_URL}/og/og-faq.jpg`;
+
   // Sellers (vendre, sell, seller-*, plan-vendeur, when-to-sell, guide-vendeur)
   if (/vendre|^\/(en\/)?sell|seller|plan-vendeur|when-to-sell|guide-vendeur/.test(r))
     return `${SITE_URL}/og/og-seller.jpg`;
 
   // Buyers (acheter, buy, buyer-*, premier-achat, first-time-buyer, consultation-acheteur)
-  if (/acheter|^\/(en\/)?buy|buyer|premier-achat|first-time-buyer|consultation-acheteur|relocalisation|relocation|montreal/.test(r))
+  if (/acheter|^\/(en\/)?buy|buyer|premier-achat|first-time-buyer|consultation-acheteur/.test(r))
     return `${SITE_URL}/og/og-buyer.jpg`;
 
   // Neighborhoods (specific neighborhood pages + overview + living-*)
@@ -231,8 +237,8 @@ function categoryOgImage(route) {
   )
     return `${SITE_URL}/og/og-neighborhoods.jpg`;
 
-  // Guides / resources / FAQ / how-to-choose / commission etc.
-  if (/guide|ressources|resources|faq|courtier|realtor|frais-de-courtage|oaciq/.test(r))
+  // Guides / resources / how-to-choose / commission etc.
+  if (/guide|ressources|resources|courtier|realtor|frais-de-courtage|oaciq/.test(r))
     return `${SITE_URL}/og/og-guides.jpg`;
 
   // Testimonials
