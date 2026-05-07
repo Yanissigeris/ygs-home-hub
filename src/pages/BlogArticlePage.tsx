@@ -52,6 +52,16 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
 const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
   useEffect(() => {
     if (!items || items.length === 0) return;
+    // Option A: SSR is source of truth. Skip injection if a FAQPage script
+    // already exists (either our SSR-injected one or a previous client mount).
+    const existing = document.getElementById("ygs-faqpage-jsonld");
+    if (existing) return;
+    // Also bail if SSR injected an unidentified FAQPage script.
+    const ssrFaq = Array.from(
+      document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+    ).find((s) => s.textContent && s.textContent.includes('"@type":"FAQPage"'));
+    if (ssrFaq) return;
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
