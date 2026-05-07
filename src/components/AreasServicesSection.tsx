@@ -82,9 +82,9 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
   >
     <div className="min-w-0">
       <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
-      <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,0.28)" }} className="truncate">{detail}</p>
+      <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,0.55)" }} className="truncate">{detail}</p>
     </div>
-    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.1)", fontSize: ".75rem" }}>
+    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.55)", fontSize: ".75rem" }}>
       <span className="group-hover:hidden">→</span>
       <span className="hidden group-hover:inline" style={{ color: "var(--gold)" }}>→</span>
     </span>
@@ -102,9 +102,9 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
-          <p className="label-overline mb-2 justify-center" style={{ color: "var(--gold-warm-light)" }}>{cfg.overline}</p>
+          <p className="label-overline mb-2 justify-center" style={{ color: "var(--gold-bright)" }}>{cfg.overline}</p>
           <h2 style={{ color: "var(--cream-deep)" }}>{cfg.title}</h2>
-          <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.35)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
+          <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.7)", lineHeight: 1.7 }}>{cfg.subtitle}</p>
         </div>
 
         {/* Desktop: 2-column bordered table */}
@@ -114,18 +114,18 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         >
           <div className="lg:border-r" style={{ borderRight: "none" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.25)" }}>
+              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
                 <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.areasHeading}
               </p>
             </div>
             {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
             <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
-              <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
+              <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold-bright)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
           <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.25)" }}>
+              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
                 <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.servicesHeading}
               </p>
             </div>
@@ -175,7 +175,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               <div>
                 {areas.map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
                 <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "1rem 1.25rem", background: "var(--gold3)", minHeight: 44 }}>
-                  <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold)" }}>{cfg.allNeighborhoods} →</span>
+                  <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold-bright)" }}>{cfg.allNeighborhoods} →</span>
                 </Link>
               </div>
             )}

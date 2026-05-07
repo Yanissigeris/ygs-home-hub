@@ -23,7 +23,7 @@
     --secondary-foreground: 200 30% 14%;
 
     --muted: 200 8% 94%;
-    --muted-foreground: 200 30% 35%;
+    --muted-foreground: 200 30% 28%;
 
     --accent: 36 38% 50%;
     --accent-foreground: 200 42% 16%;
@@ -61,6 +61,9 @@
     --gold-warm-light: #BFA476;
     --gold-dark: #7A6038;
     --gold-bright: #D4AF6F;
+    /* AAA-grade dark gold for TEXT on light backgrounds (8.29:1 on cream).
+       Use --gold for ornaments, borders, backgrounds, decorative icons. */
+    --gold-text: #5C4423;
     /* Ink scale */
     --ink-deep: #0C1F28;
     --ink-mid: #0E2630;

@@ -51,16 +51,16 @@ const BlogPage = () => {
             <div>
               <div className="flex items-center gap-3">
                 <span className="block h-px w-8" style={{ background: "var(--gold)" }} />
-                <span style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
+                <span style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
                   YGS · Analyses & perspectives
                 </span>
               </div>
               <h1 className="mt-5 font-display" style={{ color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
                 Marché immobilier
                 <br />
-                <span style={{ color: "var(--gold)", fontStyle: "italic", fontWeight: 300 }}>Outaouais</span>
+                <span style={{ color: "var(--gold-bright)", fontStyle: "italic", fontWeight: 300 }}>Outaouais</span>
               </h1>
-              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.5, fontSize: "13px", lineHeight: 1.6 }}>
+              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.75, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analyses et conseils pour vendre, acheter ou investir intelligemment à Gatineau et en Outaouais.
               </p>
             </div>
@@ -82,7 +82,7 @@ const BlogPage = () => {
                   <span className="font-display" style={{ color: "var(--cream)", fontSize: "36px", fontWeight: 300, lineHeight: 1 }}>
                     {stat.value}
                   </span>
-                  <span className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                  <span className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.16em" }}>
                     {stat.label}
                   </span>
                 </div>
@@ -146,18 +146,18 @@ const BlogPage = () => {
             {/* Left column */}
             <div className="p-8 sm:p-10 lg:p-12 bg-background flex flex-col">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="uppercase font-semibold" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                <span className="uppercase font-semibold" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.16em" }}>
                   {featured.category}
                 </span>
                 <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
-                <time style={{ color: "var(--ink)", opacity: 0.5, fontSize: "11px" }}>
+                <time style={{ color: "var(--ink)", opacity: 0.85, fontSize: "11px" }}>
                   {new Date(featured.publishDate).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               </div>
               <h2 className="mt-5 font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.75rem, 3.5vw, 40px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
                 {featured.title}
               </h2>
-              <p className="mt-5 flex-1" style={{ color: "var(--ink)", opacity: 0.7, fontSize: "14px", lineHeight: 1.65 }}>
+              <p className="mt-5 flex-1" style={{ color: "var(--ink)", opacity: 0.88, fontSize: "14px", lineHeight: 1.65 }}>
                 {featured.excerpt}
               </p>
               <Link
@@ -184,7 +184,7 @@ const BlogPage = () => {
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
                       {s.value}
                     </div>
-                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.5, fontSize: "10px", letterSpacing: "0.14em" }}>
+                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.85, fontSize: "10px", letterSpacing: "0.14em" }}>
                       {s.label}
                     </div>
                   </div>

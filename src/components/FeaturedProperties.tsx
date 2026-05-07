@@ -142,13 +142,13 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
           {p.status === "sold" && (
             <>
               <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-              <span style={{ color: "var(--gold)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
+              <span style={{ color: "var(--gold-text)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
             </>
           )}
         </p>
 
         {/* View link */}
-        <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "var(--gold)" }}>
+        <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "var(--gold-text)" }}>
           {p.status === "sold"
             ? (lang === "fr" ? "Voir la fiche" : "View listing")
             : strings.viewProperty}{" "}
@@ -184,7 +184,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
           {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{strings.overline}</p>
+              <p className="label-overline mb-2" style={{ color: "var(--gold-text)" }}>{strings.overline}</p>
               <h2>{strings.title}</h2>
             </div>
             <Link
@@ -232,7 +232,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
 
           {/* Mobile link — centered below */}
           <div className="mt-5 text-center sm:hidden">
-            <Link to={strings.viewAllHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold)", minHeight: 44, lineHeight: "44px" }}>
+            <Link to={strings.viewAllHref} className="inline-block" style={{ fontSize: ".82rem", fontWeight: 500, color: "var(--gold-text)", minHeight: 44, lineHeight: "44px" }}>
               {strings.viewAll} →
             </Link>
           </div>
