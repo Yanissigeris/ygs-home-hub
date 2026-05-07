@@ -463,6 +463,7 @@ const BlogArticlePage = () => {
       </section>
 
       {/* Body + sidebar */}
+      <div style={{ background: "var(--cream)" }}>
       <article className="section-container py-12 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_240px]">
           {/* Body */}
