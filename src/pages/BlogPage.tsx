@@ -60,7 +60,7 @@ const BlogPage = () => {
                 <br />
                 <span style={{ color: "var(--gold)", fontStyle: "italic", fontWeight: 300 }}>Outaouais</span>
               </h1>
-              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.5, fontSize: "13px", lineHeight: 1.6 }}>
+              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.75, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analyses et conseils pour vendre, acheter ou investir intelligemment à Gatineau et en Outaouais.
               </p>
             </div>

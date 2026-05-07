@@ -396,7 +396,7 @@ const BlogArticlePage = () => {
                   {isFr ? "Blogue" : "Blog"}
                 </Link>
                 <span>/</span>
-                <span style={{ color: "rgba(247,244,239,0.7)" }} className="truncate">{category}</span>
+                <span style={{ color: "rgba(247,244,239,0.85)" }} className="truncate">{category}</span>
               </nav>
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span
@@ -544,7 +544,7 @@ const BlogArticlePage = () => {
                   <>A <em style={{ color: "var(--gold)", fontStyle: "italic" }}>tailored</em> analysis</>
                 )}
               </h3>
-              <p className="mt-2" style={{ color: "rgba(247,244,239,0.55)", fontSize: "12px", lineHeight: 1.5 }}>
+              <p className="mt-2" style={{ color: "rgba(247,244,239,0.78)", fontSize: "12px", lineHeight: 1.5 }}>
                 {isFr ? "Pour votre projet — vente, achat ou investissement. Réponse sous 24 h." : "For your project — selling, buying or investing. Reply within 24 h."}
               </p>
               <Link
@@ -604,7 +604,7 @@ const BlogArticlePage = () => {
             <h2 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? post.ctaOverride.title : post.ctaOverride.titleEn}
             </h2>
-            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.7)", fontSize: "14px", lineHeight: 1.6 }}>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.85)", fontSize: "14px", lineHeight: 1.6 }}>
               {isFr ? post.ctaOverride.text : post.ctaOverride.textEn}
             </p>
             <Link
@@ -634,7 +634,7 @@ const BlogArticlePage = () => {
                 <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
               )}
             </h2>
-            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.78)", fontSize: "13px", lineHeight: 1.6 }}>
               {isFr
                 ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
                 : "I analyze real income, the ratio and the market value. No commitment."}
@@ -654,7 +654,7 @@ const BlogArticlePage = () => {
             >
               {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
             </Link>
-            <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
+            <p className="mt-3" style={{ color: "rgba(247,244,239,0.7)", fontSize: "11px" }}>
               {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
             </p>
           </div>
