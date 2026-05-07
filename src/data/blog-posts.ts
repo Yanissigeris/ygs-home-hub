@@ -64,6 +64,9 @@ export interface BlogPost {
   };
   /** Optional override for reading time (minutes). If absent, auto-calculated from body word count. */
   readingTimeOverride?: number;
+  /** Optional H3 styling variant. "prominent" = Cormorant gold 28-32px (Q&A format).
+   *  Default = legacy ink 22px. Set per-post to avoid retroactive style regression. */
+  h3Style?: "prominent" | "default";
 }
 
 /**
