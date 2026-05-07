@@ -150,14 +150,14 @@ const BlogPage = () => {
                   {featured.category}
                 </span>
                 <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
-                <time style={{ color: "var(--ink)", opacity: 0.5, fontSize: "11px" }}>
+                <time style={{ color: "var(--ink)", opacity: 0.78, fontSize: "11px" }}>
                   {new Date(featured.publishDate).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               </div>
               <h2 className="mt-5 font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.75rem, 3.5vw, 40px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
                 {featured.title}
               </h2>
-              <p className="mt-5 flex-1" style={{ color: "var(--ink)", opacity: 0.7, fontSize: "14px", lineHeight: 1.65 }}>
+              <p className="mt-5 flex-1" style={{ color: "var(--ink)", opacity: 0.88, fontSize: "14px", lineHeight: 1.65 }}>
                 {featured.excerpt}
               </p>
               <Link
@@ -184,7 +184,7 @@ const BlogPage = () => {
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
                       {s.value}
                     </div>
-                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.5, fontSize: "10px", letterSpacing: "0.14em" }}>
+                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.78, fontSize: "10px", letterSpacing: "0.14em" }}>
                       {s.label}
                     </div>
                   </div>
