@@ -1,56 +1,47 @@
-# Plan: Two surgical SEO fixes in index.html
+# Plan: Better spacing under portrait + RE/MAX logo alignment
 
 ## Scope
-Only `index.html` at repo root. Exactly two changes, ~10 lines total.
+Two files only — purely visual, no logic, no copy changes.
 
-## Fix 1 — Remove `aggregateRating` from RealEstateAgent JSON-LD
+- `src/components/ProfileSection.tsx` — spacing/rhythm of the column under the portrait
+- `src/components/RemaxAgencyBlock.tsx` — alignment only of the RE/MAX logotype + balloon inside the cream card
 
-Replace (around lines 134–141):
+Keep the three blocks **separate** (portrait → YGS logo → RE/MAX agency card), just better spaced and better aligned.
 
-```
-        "https://www.instagram.com/yanissigeris/"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0", "bestRating": "5", "worstRating": "1",
-        "ratingCount": "3", "reviewCount": "3"
-      }
-    }
-```
+## Fix 1 — RE/MAX logotype + balloon alignment (inside the cream card)
 
-With:
+**Sizing is preserved** to respect RE/MAX brand guidelines:
+- Logotype stays at `h-7`
+- Balloon stays at `h-9`
 
-```
-        "https://www.instagram.com/yanissigeris/"
-      ]
-    }
-```
+Only alignment changes:
+- Wrapper changes from `flex items-center gap-3` → `flex items-end gap-4 mb-4`
+  - `items-end` puts both marks on the same bottom baseline (RE/MAX brand convention).
+  - `gap-4` gives a touch more breathing room between the wordmark and the balloon.
+  - `mb-4` (vs `mb-3`) lets the lockup breathe before the "RE/MAX Direct inc." line.
 
-The trailing comma after `]` is removed at the same time so the JSON stays valid. `sameAs` array contents untouched.
+No size, color, or asset change inside `RemaxAgencyBlock.tsx`. Address text and phone untouched.
 
-## Fix 2 — Replace 3 references to og-image.png
+## Fix 2 — Spacing rhythm under the portrait (`ProfileSection.tsx`)
 
-In `index.html` only, replace every occurrence of:
-`https://yanisgauthier.com/og-image.png`
-with:
-`https://yanisgauthier.com/og/og-default.jpg`
+Current: column uses `space-y-8` uniformly, which makes the small YGS logo float at equal distance between the portrait and the RE/MAX card → feels disconnected.
 
-Expected 3 occurrences, all inside JSON-LD blocks:
-- RealEstateAgent `image` (~line 76)
-- RealEstateAgent `logo.url` (~line 79)
-- Person `image` (~line 157)
+Change to explicit per-block margins so the hierarchy reads cleanly:
+- Portrait: unchanged.
+- YGS logo wrapper: replace `text-center` with `text-center mt-6` and bump the logo size slightly via `clamp(80px, 11vw, 100px)` (currently 70–90px — a touch small next to the portrait). RE/MAX brand guidelines do not constrain the YGS personal mark.
+- RE/MAX card slot (`affiliationSlot`): wrap in a `mt-8` spacer so it sits clearly as its own block, not merged with the YGS logo.
+- Drop `space-y-8` from the column wrapper since we now control spacing per block.
 
-`<meta property="og:image">` tags are not touched (they are per-route and not in this file's static head anyway).
+Result: portrait → tight YGS mark → clear breathing room → RE/MAX agency card. Three distinct, well-spaced blocks.
 
-## Constraints honored
-- No other files touched.
-- No changes to title/description/canonical/hreflang/og/twitter meta tags.
-- No changes to other JSON-LD fields, scripts, head order, H1/H2, or noscript fallback.
-- Both JSON-LD blocks remain valid JSON.
+## Out of scope
+- No copy changes (address, phone, names stay).
+- No color / token changes.
+- No size change to RE/MAX logotype or balloon.
+- No changes to `ContactPage.tsx` or other pages that consume `ProfileSection`.
+- No changes to the right-hand text column.
 
-## Post-change verification (will run after edit)
-1. `rg -n "aggregateRating" index.html` → 0 matches
-2. `rg -n "og-image\.png" index.html` → 0 matches
-3. `rg -n "og-default\.jpg" index.html` → exactly 3 matches
-4. `git status --porcelain` shows only `index.html` modified
-5. `node -e "..."` parse both JSON-LD script contents to confirm validity
+## Verification
+- Visual check at 1131px (current) and at mobile (375px) — both columns should stack cleanly with the same rhythm.
+- Confirm RE/MAX logotype + balloon share the same bottom baseline and keep their guideline sizes.
+- Confirm no other pages using `ProfileSection` (e.g. About / French + EN home pages) regress — the spacing changes are additive and only affect the portrait column.
