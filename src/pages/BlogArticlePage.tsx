@@ -343,7 +343,7 @@ const BlogArticlePage = () => {
           const first = line.charAt(0);
           const rest = line.slice(1);
           elements.push(
-            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }}>
+            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }}>
               <span
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
@@ -363,7 +363,7 @@ const BlogArticlePage = () => {
           );
         } else {
           elements.push(
-            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
+            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
           );
         }
       }
@@ -438,7 +438,7 @@ const BlogArticlePage = () => {
                   {titleParts.line3}
                 </h2>
               )}
-              <p className="mt-6" style={{ color: "#3A4D55", fontSize: "15px", lineHeight: 1.65 }}>
+              <p className="mt-6" style={{ color: "#2A3940", fontSize: "16px", lineHeight: 1.7 }}>
                 {excerpt}
               </p>
             </div>
@@ -463,6 +463,7 @@ const BlogArticlePage = () => {
       </section>
 
       {/* Body + sidebar */}
+      <div style={{ background: "var(--cream)" }}>
       <article className="section-container py-12 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_240px]">
           {/* Body */}
@@ -727,6 +728,7 @@ const BlogArticlePage = () => {
           </Link>
         </section>
       )}
+      </div>
     </>
   );
 };
