@@ -392,7 +392,7 @@ const BlogArticlePage = () => {
           <div style={{ background: "var(--ink)", padding: "48px" }} className="flex flex-col justify-between gap-8">
             <div>
               <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.75)" }}>
-                <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "var(--gold)" }}>
+                <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "var(--gold-bright)" }}>
                   {isFr ? "Blogue" : "Blog"}
                 </Link>
                 <span>/</span>
@@ -403,7 +403,7 @@ const BlogArticlePage = () => {
                   className="inline-flex items-center uppercase font-semibold"
                   style={{
                     border: "1px solid var(--gold)",
-                    color: "var(--gold)",
+                    color: "var(--gold-bright)",
                     fontSize: "10px",
                     letterSpacing: "0.16em",
                     padding: "6px 12px",
@@ -434,7 +434,7 @@ const BlogArticlePage = () => {
           >
             <div>
               {titleParts.line3 && (
-                <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: "var(--gold)", fontWeight: 300, fontSize: "clamp(2rem, 4.5vw, 56px)", lineHeight: 0.95, letterSpacing: "-0.01em" }}>
+                <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: "var(--gold-text)", fontWeight: 300, fontSize: "clamp(2rem, 4.5vw, 56px)", lineHeight: 0.95, letterSpacing: "-0.01em" }}>
                   {titleParts.line3}
                 </h2>
               )}
@@ -534,14 +534,14 @@ const BlogArticlePage = () => {
 
             {/* CTA block */}
             <div style={{ background: "var(--ink)", padding: "28px 24px" }}>
-              <p className="uppercase" style={{ color: "var(--gold)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {isFr ? "Parler à Yanis" : "Talk to Yanis"}
               </p>
               <h3 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "22px", fontWeight: 400, lineHeight: 1.15 }}>
                 {isFr ? (
-                  <>Une analyse <em style={{ color: "var(--gold)", fontStyle: "italic" }}>sur mesure</em></>
+                  <>Une analyse <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>sur mesure</em></>
                 ) : (
-                  <>A <em style={{ color: "var(--gold)", fontStyle: "italic" }}>tailored</em> analysis</>
+                  <>A <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>tailored</em> analysis</>
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.78)", fontSize: "12px", lineHeight: 1.5 }}>
@@ -552,7 +552,7 @@ const BlogArticlePage = () => {
                 className="mt-5 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
                 style={{
                   border: "1px solid var(--gold)",
-                  color: "var(--gold)",
+                  color: "var(--gold-bright)",
                   fontSize: "11px",
                   letterSpacing: "0.12em",
                   padding: "10px 16px",
@@ -598,7 +598,7 @@ const BlogArticlePage = () => {
       {post.ctaOverride ? (
         <section style={{ background: "var(--ink)", padding: "48px 0" }}>
           <div className="section-container text-center">
-            <p className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+            <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
             </p>
             <h2 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
@@ -612,7 +612,7 @@ const BlogArticlePage = () => {
               className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
               style={{
                 border: "1px solid var(--gold)",
-                color: "var(--gold)",
+                color: "var(--gold-bright)",
                 fontSize: "11px",
                 letterSpacing: "0.14em",
                 padding: "13px 22px",
@@ -644,7 +644,7 @@ const BlogArticlePage = () => {
               className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
               style={{
                 border: "1px solid var(--gold)",
-                color: "var(--gold)",
+                color: "var(--gold-bright)",
                 fontSize: "11px",
                 letterSpacing: "0.14em",
                 padding: "13px 22px",
