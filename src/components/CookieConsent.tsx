@@ -57,11 +57,30 @@ declare global {
   interface Window { dataLayer?: unknown[] }
 }
 
+/** Push a Consent Mode v2 update signal to GA4 */
+function updateConsentSignal(prefs: CookiePrefs) {
+  if (typeof window === "undefined") return;
+  const w = window as Window & { gtag?: (...args: unknown[]) => void };
+  if (typeof w.gtag !== "function") return;
+  w.gtag("consent", "update", {
+    ad_storage: prefs.marketing ? "granted" : "denied",
+    ad_user_data: prefs.marketing ? "granted" : "denied",
+    ad_personalization: prefs.marketing ? "granted" : "denied",
+    analytics_storage: prefs.analytics ? "granted" : "denied",
+  });
+}
+
 /** Execute tracking based on consent */
 function applyConsent() {
   const consent = getConsent();
-  if (!consent || consent === "refused") return;
+  if (!consent || consent === "refused") {
+    // Even refused users need a consent update so GA4 doesn't keep waiting.
+    if (consent === "refused") updateConsentSignal({ analytics: false, marketing: false });
+    return;
+  }
   const prefs = getPrefs();
+  // Replay stored consent on every mount so GA4 receives the signal even on repeat visits.
+  updateConsentSignal(prefs);
   if (consent === "accepted" || prefs.analytics) {
     loadGA();
   }
@@ -193,19 +212,24 @@ const CookieConsent = () => {
   }, []);
 
   const handleAccept = () => {
-    saveConsent("accepted", { analytics: true, marketing: true });
+    const prefs: CookiePrefs = { analytics: true, marketing: true };
+    saveConsent("accepted", prefs);
+    updateConsentSignal(prefs);
     setVisible(false);
     setDismissed(true);
     applyConsent();
   };
   const handleRefuse = () => {
-    saveConsent("refused", { analytics: false, marketing: false });
+    const prefs: CookiePrefs = { analytics: false, marketing: false };
+    saveConsent("refused", prefs);
+    updateConsentSignal(prefs);
     setVisible(false);
     setDismissed(true);
   };
   const handleSavePrefs = (prefs: CookiePrefs) => {
     const value: ConsentValue = prefs.analytics || prefs.marketing ? "partial" : "refused";
     saveConsent(value, prefs);
+    updateConsentSignal(prefs);
     setShowPrefs(false);
     setVisible(false);
     setDismissed(true);

@@ -212,10 +212,31 @@
       })();
     </script>
 
-    <!-- GA4 — loaded conditionally by CookieConsent component based on Loi 25 consent -->
+    <!-- GA4 Consent Mode v2 — initialized BEFORE gtag.js is loaded by CookieConsent.
+         Reads existing prefs from localStorage so returning visitors who already
+         consented get the right default state on first paint. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      (function(){
+        var prefs = null;
+        try {
+          var raw = localStorage.getItem('ygs_cookie_prefs');
+          if (raw) prefs = JSON.parse(raw);
+        } catch(e){}
+        var analytics = prefs && prefs.analytics ? 'granted' : 'denied';
+        var marketing = prefs && prefs.marketing ? 'granted' : 'denied';
+        gtag('consent', 'default', {
+          'ad_storage': marketing,
+          'ad_user_data': marketing,
+          'ad_personalization': marketing,
+          'analytics_storage': analytics,
+          'functionality_storage': 'granted',
+          'security_storage': 'granted',
+          'wait_for_update': 500
+        });
+      })();
     </script>
 
 </head>
