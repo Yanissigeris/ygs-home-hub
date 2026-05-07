@@ -363,7 +363,7 @@ const BlogArticlePage = () => {
           );
         } else {
           elements.push(
-            <p key={i} className="my-4 leading-relaxed" style={{ color: "#3A4D55", fontSize: "15px" }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
+            <p key={i} className="my-4" style={{ color: "#2A3940", fontSize: "17px", lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
           );
         }
       }
