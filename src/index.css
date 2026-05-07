@@ -728,7 +728,7 @@ h1.hero-eyebrow {
   [data-hero-dark] .hero-cta-btn {
     width: auto !important;
     padding: 12px 24px !important;
-    font-size: 0.8rem !important;
+    
     align-self: flex-start !important;
     margin-right: auto !important;
     white-space: nowrap !important;
