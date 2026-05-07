@@ -61,7 +61,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           <p
             style={{
               fontFamily: "var(--sans)",
-              fontSize: "11px",
+              fontSize: "12px",
               fontWeight: 500,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
@@ -99,9 +99,9 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             className="about-body-text"
             style={{
               fontFamily: "var(--sans)",
-              fontSize: "14px",
+              fontSize: "clamp(16px, 1.05vw, 17px)",
               fontWeight: 400,
-              color: "rgba(247,244,238,0.70)",
+              color: "rgba(247,244,238,0.92)",
               lineHeight: 1.8,
               marginBottom: "1.5rem",
               whiteSpace: "pre-line",
@@ -115,7 +115,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             <p
               style={{
                 fontFamily: "var(--sans)",
-                fontSize: "11px",
+                fontSize: "12px",
                 fontWeight: 500,
                 letterSpacing: "0.06em",
                 color: "var(--gold-warm-light)",
@@ -132,7 +132,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             className="group inline-flex items-center gap-1.5"
             style={{
               fontFamily: "var(--sans)",
-              fontSize: "13px",
+              fontSize: "15px",
               fontWeight: 500,
               color: "var(--cream)",
               textDecoration: "none",
