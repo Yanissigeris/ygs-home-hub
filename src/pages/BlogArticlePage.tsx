@@ -138,12 +138,13 @@ const BlogArticlePage = () => {
   const slugify = (text: string) =>
     text.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿçæœ]+/g, "-").replace(/(^-|-$)/g, "");
 
-  // Reading time (200 wpm)
+  // Reading time (200 wpm) — override if explicitly set on the post
   const readingTime = useMemo(() => {
+    if (post && post.published && typeof post.readingTimeOverride === "number") return post.readingTimeOverride;
     if (!body) return 0;
     const words = body.split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.round(words / 200));
-  }, [body]);
+  }, [body, post]);
 
   // Split title into 2-3 lines for hero (ligne 3 = part after first colon if present)
   const titleParts = useMemo(() => {
@@ -240,11 +241,12 @@ const BlogArticlePage = () => {
       }
 
       if (inFaq) {
-        // Q : ... / Q: ...
-        const qMatch = line.match(/^Q\s*[:：]\s*(.+)$/i);
-        const aMatch = line.match(/^R\s*[:：]\s*(.+)$/i) || line.match(/^A\s*[:：]\s*(.+)$/i);
+        // Strip surrounding ** if the question/answer is wrapped in markdown bold
+        const stripped = line.replace(/^\*\*\s*/, "").replace(/\s*\*\*$/, "").trim();
+        const qMatch = stripped.match(/^Q\d*\s*[:：]\s*(.+)$/i);
+        const aMatch = stripped.match(/^[RA]\d*\s*[:：]\s*(.+)$/i);
         if (qMatch) {
-          faqItems.push({ q: qMatch[1].trim(), a: "" });
+          faqItems.push({ q: qMatch[1].replace(/\*\*$/, "").trim(), a: "" });
         } else if (aMatch && faqItems.length > 0) {
           faqItems[faqItems.length - 1].a = aMatch[1].trim();
         } else if (line && faqItems.length > 0 && faqItems[faqItems.length - 1].a) {
@@ -257,7 +259,7 @@ const BlogArticlePage = () => {
         flushList();
         const text = line.slice(4);
         elements.push(
-          <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 500, lineHeight: 1.25 }}>
+          <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
             {text}
           </h3>
         );
@@ -329,7 +331,7 @@ const BlogArticlePage = () => {
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "80px",
-                  color: "var(--ink)",
+                  color: "var(--gold)",
                   float: "left",
                   lineHeight: 0.8,
                   marginRight: "8px",
@@ -575,40 +577,71 @@ const BlogArticlePage = () => {
       </article>
 
       {/* Full-width CTA */}
-      <section style={{ background: "var(--ink)", padding: "48px 0" }}>
-        <div className="section-container text-center">
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
-            {isFr ? (
-              <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
-            ) : (
-              <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
-            )}
-          </h2>
-          <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
-            {isFr
-              ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
-              : "I analyze real income, the ratio and the market value. No commitment."}
-          </p>
-          <Link
-            to={ctaHref}
-            className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-            style={{
-              border: "1px solid var(--gold)",
-              color: "var(--gold)",
-              fontSize: "11px",
-              letterSpacing: "0.14em",
-              padding: "13px 22px",
-              textTransform: "uppercase",
-              fontWeight: 500,
-            }}
-          >
-            {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
-          </Link>
-          <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
-            {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
-          </p>
-        </div>
-      </section>
+      {post.ctaOverride ? (
+        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
+          <div className="section-container text-center">
+            <p className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
+            </p>
+            <h2 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+              {isFr ? post.ctaOverride.title : post.ctaOverride.titleEn}
+            </h2>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.7)", fontSize: "14px", lineHeight: 1.6 }}>
+              {isFr ? post.ctaOverride.text : post.ctaOverride.textEn}
+            </p>
+            <Link
+              to={isFr ? post.ctaOverride.buttonHref : post.ctaOverride.buttonHrefEn}
+              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+              style={{
+                border: "1px solid var(--gold)",
+                color: "var(--gold)",
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                padding: "13px 22px",
+                textTransform: "uppercase",
+                fontWeight: 500,
+              }}
+            >
+              {isFr ? post.ctaOverride.buttonLabel : post.ctaOverride.buttonLabelEn} <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </section>
+      ) : (
+        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
+          <div className="section-container text-center">
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+              {isFr ? (
+                <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
+              ) : (
+                <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
+              )}
+            </h2>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
+              {isFr
+                ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
+                : "I analyze real income, the ratio and the market value. No commitment."}
+            </p>
+            <Link
+              to={ctaHref}
+              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+              style={{
+                border: "1px solid var(--gold)",
+                color: "var(--gold)",
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                padding: "13px 22px",
+                textTransform: "uppercase",
+                fontWeight: 500,
+              }}
+            >
+              {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
+            </Link>
+            <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
+              {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Author bio */}
       <section className="section-container py-12">
@@ -640,8 +673,8 @@ const BlogArticlePage = () => {
             </p>
             <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.55 }}>
               {isFr
-                ? "Courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
-                : "RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
+                ? "Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à Gatineau, Hull et Aylmer. Plus de 200 transactions complétées dans la région."
+                : "Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais region for 9 years, specialized in plex and investment properties in Gatineau, Hull and Aylmer. Over 200 transactions completed in the region."}
             </p>
           </div>
         </div>
