@@ -40,6 +40,13 @@ export interface BlogPost {
   featured?: boolean;
   body: string;
   bodyEn: string;
+  /** Optional per-post override for hero stats trio. If absent, template defaults are used. */
+  heroStats?: Array<{ value: string; label: string; valueEn?: string; labelEn?: string }>;
+  /** Optional per-post sources displayed in sidebar (replaces generic Source block). */
+  sources?: Array<{ fr: string; en: string }>;
+  /** Emit a FAQPage JSON-LD schema for this article. Only enable on posts whose FAQ markdown
+   *  is verified to parse cleanly. Default false to avoid retroactive schema regression. */
+  emitFaqSchema?: boolean;
 }
 
 /**
