@@ -49,6 +49,28 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
   return null;
 };
 
+const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
+  useEffect(() => {
+    if (!items || items.length === 0) return;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: items.map((it) => ({
+        "@type": "Question",
+        name: it.q,
+        acceptedAnswer: { "@type": "Answer", text: it.a },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "ygs-faqpage-jsonld";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, [items]);
+  return null;
+};
+
 // Scroll progress bar — gold, 3px, top of viewport
 const ReadingProgressBar = () => {
   const [progress, setProgress] = useState(0);
