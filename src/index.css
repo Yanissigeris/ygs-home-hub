@@ -76,11 +76,11 @@
     /* White */
     --white: #FFFFFF;
     /* Text-on-dark stack */
-    --text-on-dark-strong: rgba(255,255,255,0.92);
-    --text-on-dark: rgba(255,255,255,0.7);
-    --text-on-dark-muted: rgba(255,255,255,0.5);
-    --text-on-dark-whisper: rgba(255,255,255,0.4);
-    --text-on-dark-faint: rgba(255,255,255,0.25);
+    --text-on-dark-strong: rgba(255,255,255,0.95);
+    --text-on-dark: rgba(255,255,255,0.88);
+    --text-on-dark-muted: rgba(255,255,255,0.78);
+    --text-on-dark-whisper: rgba(255,255,255,0.7);
+    --text-on-dark-faint: rgba(255,255,255,0.55);
     /* Shadow stack */
     --shadow-soft: rgba(0,0,0,0.15);
     --shadow-mid: rgba(0,0,0,0.35);
@@ -733,7 +733,7 @@ h1.hero-eyebrow {
   [data-hero-dark] .relative.z-\[3\] p.mt-3 {
     font-size: 0.7rem !important;
     line-height: 1.3 !important;
-    opacity: 0.55 !important;
+    opacity: 0.85 !important;
   }
 
   /* CTA button — auto width, left aligned, no wrap */
@@ -775,7 +775,7 @@ h1.hero-eyebrow {
   [data-hero-dark] address.absolute,
   [data-hero-dark] address span {
     font-size: 0.65rem !important;
-    color: rgba(255,255,255,0.65) !important;
+    color: rgba(255,255,255,0.85) !important;
     text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
     background: transparent !important;
     backdrop-filter: none !important;

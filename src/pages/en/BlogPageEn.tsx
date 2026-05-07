@@ -59,7 +59,7 @@ const BlogPageEn = () => {
                 <br />
                 <span style={{ color: "var(--gold-bright)", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
               </h1>
-              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.75, fontSize: "13px", lineHeight: 1.6 }}>
+              <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.92, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analysis, and advice to help you buy, sell, or invest smartly in Gatineau and the Outaouais.
               </p>
             </div>
@@ -117,7 +117,7 @@ const BlogPageEn = () => {
       <section className="border-b border-border/30 bg-secondary/30">
         <div className="section-container py-5">
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground/50 mr-2">Categories</span>
+            <span className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground mr-2">Categories</span>
             <button
               onClick={() => setActiveCategory(null)}
               className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${!activeCategory ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
@@ -146,7 +146,7 @@ const BlogPageEn = () => {
                 <span className="uppercase font-semibold" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.16em" }}>
                   {featured.categoryEn}
                 </span>
-                <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
+                <span aria-hidden style={{ color: "var(--ink)", opacity: 0.7, fontSize: "11px" }}>·</span>
                 <time style={{ color: "var(--ink)", opacity: 0.85, fontSize: "11px" }}>
                   {new Date(featured.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
@@ -214,7 +214,7 @@ const BlogPageEn = () => {
               <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <div className="flex flex-wrap items-center gap-2.5">
                   <span className="inline-flex w-fit h-6 items-center rounded-none bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.categoryEn}</span>
-                  <time className="text-[0.6875rem] text-muted-foreground/50">{new Date(post.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
+                  <time className="text-[0.6875rem] text-muted-foreground">{new Date(post.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
                 </div>
                 <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.titleEn}</h3>
                 <p className="prose-body mt-2.5 text-[0.875rem] flex-1">{post.excerptEn}</p>
