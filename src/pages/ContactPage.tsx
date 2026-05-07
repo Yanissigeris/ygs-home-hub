@@ -11,7 +11,7 @@ import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
 import ProfileSection from "@/components/ProfileSection";
 import ContactCard from "@/components/ContactCard";
-
+import RemaxAgencyBlock from "@/components/RemaxAgencyBlock";
 import FormSection from "@/components/FormSection";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,6 @@ import {
 import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } from "lucide-react";
 import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
-import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
 
 const services = [
   { icon: Home, title: "Vente résidentielle", text: "Stratégie, positionnement prix et mise en marché" },
@@ -87,9 +86,7 @@ const ContactPage = () => {
         subtitle="Affilié RE/MAX · Équipe Marty Waite"
         logo={logoYgsVertical}
         logoAlt="YGS - Yanis Gauthier-Sigeris Inc."
-        affiliateLogo={logoRemaxDirect}
-        affiliateLogoAlt="RE/MAX Direct — agence immobilière Gatineau"
-        affiliateAddress="216, chemin d'Aylmer, Gatineau, QC J9H 1A4"
+        affiliationSlot={<RemaxAgencyBlock lang="fr" />}
       >
         <p className="prose-body mt-6">
           Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.

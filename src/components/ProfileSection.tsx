@@ -10,12 +10,6 @@ interface ProfileItem {
   subtitle?: string;
   logo?: string;
   logoAlt?: string;
-  /** Optional second logo rendered beside the primary logo, separated by a thin gold rule. */
-  affiliateLogo?: string;
-  /** Alt text for the affiliate logo. Required if affiliateLogo is provided. */
-  affiliateLogoAlt?: string;
-  /** Optional one-line address caption rendered below the affiliate logo only. */
-  affiliateAddress?: string;
   affiliationSlot?: React.ReactNode;
   children: React.ReactNode;
 }
@@ -33,9 +27,6 @@ const ProfileSection = ({
   subtitle,
   logo,
   logoAlt,
-  affiliateLogo,
-  affiliateLogoAlt,
-  affiliateAddress,
   affiliationSlot,
   children,
   background = "default",
@@ -59,7 +50,7 @@ const ProfileSection = ({
           loading="lazy"
           decoding="async"
         />
-        {logo && !affiliateLogo && (
+        {logo && (
           <div className="text-center mt-6">
             <img
               src={logo}
@@ -71,38 +62,6 @@ const ProfileSection = ({
               loading="lazy"
               decoding="async"
             />
-          </div>
-        )}
-        {logo && affiliateLogo && (
-          <div className="mt-6 flex items-end justify-center gap-5">
-            {/* Primary brand — YGS */}
-            <div className="flex-shrink-0">
-              <img
-                src={logo}
-                alt={logoAlt || ""}
-                className="h-auto"
-                style={{ width: "clamp(80px, 11vw, 100px)" }}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            {/* Thin gold vertical divider */}
-            <div className="w-px h-12 bg-[var(--gold)]/40 flex-shrink-0" aria-hidden="true" />
-            {/* Affiliate brand — RE/MAX Direct + optional address caption */}
-            <div className="flex flex-col items-start flex-shrink-0">
-              <img
-                src={affiliateLogo}
-                alt={affiliateLogoAlt || ""}
-                className="h-12 w-auto"
-                loading="lazy"
-                decoding="async"
-              />
-              {affiliateAddress && (
-                <p className="mt-1.5 text-[0.6875rem] text-muted-foreground/70 whitespace-nowrap">
-                  {affiliateAddress}
-                </p>
-              )}
-            </div>
           </div>
         )}
         {affiliationSlot && <div className="mt-8">{affiliationSlot}</div>}

@@ -10,7 +10,7 @@ import CTASection from "@/components/CTASection";
 import CardGrid from "@/components/CardGrid";
 import ProfileSection from "@/components/ProfileSection";
 import ContactCard from "@/components/ContactCard";
-
+import RemaxAgencyBlock from "@/components/RemaxAgencyBlock";
 import FormSection from "@/components/FormSection";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,6 @@ import { MapPin, Phone, Mail, Award, Clock, Heart, Home, TrendingUp, Users } fro
 import heroImg from "@/assets/hero-contact.webp";
 import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
-import logoRemaxDirect from "@/assets/logo-remax-direct.webp";
 
 const services = [
   { icon: Home, title: "Residential sales", text: "Strategy, price positioning and marketing" },
@@ -60,7 +59,7 @@ const ContactPageEn = () => {
       <PageMeta title="Contact | Real Estate Broker Gatineau" description="Get in touch with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation — let's talk about your project." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
     <ServiceJsonLd name="Free Real Estate Consultation — Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
       <HeroSection compact overline="Yanis Gauthier-Sigeris" title="Let's talk about your project" subtitle="Thinking it over or ready to move — I can help you see more clearly. Just an honest conversation." primaryCta={{ label: "Send a text message", href: "sms:+18192103044?body=Hello%20Yanis%2C%20I%27d%20like%20to%20discuss%20my%20real%20estate%20project%20in%20Outaouais." }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
-<ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS" affiliateLogo={logoRemaxDirect} affiliateLogoAlt="RE/MAX Direct — real estate agency Gatineau" affiliateAddress="216 chemin d'Aylmer, Gatineau, QC J9H 1A4">
+<ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS" affiliationSlot={<RemaxAgencyBlock lang="en" />}>
         <p className="prose-body mt-6">Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.</p>
         <p className="prose-body mt-4">A member of the Marty Waite Team since the beginning and active in residential real estate since 2017, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.</p>
         <p className="prose-body mt-4">A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.</p>
