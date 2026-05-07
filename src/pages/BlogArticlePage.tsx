@@ -268,10 +268,17 @@ const BlogArticlePage = () => {
       if (line.startsWith("### ")) {
         flushList();
         const text = line.slice(4);
+        const h3Prominent = post?.h3Style === "prominent";
         elements.push(
-          <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
-            {text}
-          </h3>
+          h3Prominent ? (
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+              {text}
+            </h3>
+          ) : (
+            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 500, lineHeight: 1.25 }}>
+              {text}
+            </h3>
+          )
         );
       } else if (line.startsWith("## ")) {
         flushList();
