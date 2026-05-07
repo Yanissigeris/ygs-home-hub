@@ -577,40 +577,71 @@ const BlogArticlePage = () => {
       </article>
 
       {/* Full-width CTA */}
-      <section style={{ background: "var(--ink)", padding: "48px 0" }}>
-        <div className="section-container text-center">
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
-            {isFr ? (
-              <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
-            ) : (
-              <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
-            )}
-          </h2>
-          <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
-            {isFr
-              ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
-              : "I analyze real income, the ratio and the market value. No commitment."}
-          </p>
-          <Link
-            to={ctaHref}
-            className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-            style={{
-              border: "1px solid var(--gold)",
-              color: "var(--gold)",
-              fontSize: "11px",
-              letterSpacing: "0.14em",
-              padding: "13px 22px",
-              textTransform: "uppercase",
-              fontWeight: 500,
-            }}
-          >
-            {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
-          </Link>
-          <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
-            {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
-          </p>
-        </div>
-      </section>
+      {post.ctaOverride ? (
+        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
+          <div className="section-container text-center">
+            <p className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
+            </p>
+            <h2 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+              {isFr ? post.ctaOverride.title : post.ctaOverride.titleEn}
+            </h2>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.7)", fontSize: "14px", lineHeight: 1.6 }}>
+              {isFr ? post.ctaOverride.text : post.ctaOverride.textEn}
+            </p>
+            <Link
+              to={isFr ? post.ctaOverride.buttonHref : post.ctaOverride.buttonHrefEn}
+              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+              style={{
+                border: "1px solid var(--gold)",
+                color: "var(--gold)",
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                padding: "13px 22px",
+                textTransform: "uppercase",
+                fontWeight: 500,
+              }}
+            >
+              {isFr ? post.ctaOverride.buttonLabel : post.ctaOverride.buttonLabelEn} <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </section>
+      ) : (
+        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
+          <div className="section-container text-center">
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+              {isFr ? (
+                <>Vous regardez un plex en Outaouais ? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Parlons-en.</em></>
+              ) : (
+                <>Looking at a plex in the Outaouais? <em style={{ color: "#C9A25A", fontStyle: "italic" }}>Let's talk.</em></>
+              )}
+            </h2>
+            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.55)", fontSize: "13px", lineHeight: 1.6 }}>
+              {isFr
+                ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
+                : "I analyze real income, the ratio and the market value. No commitment."}
+            </p>
+            <Link
+              to={ctaHref}
+              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+              style={{
+                border: "1px solid var(--gold)",
+                color: "var(--gold)",
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                padding: "13px 22px",
+                textTransform: "uppercase",
+                fontWeight: 500,
+              }}
+            >
+              {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
+            </Link>
+            <p className="mt-3" style={{ color: "rgba(247,244,239,0.4)", fontSize: "11px" }}>
+              {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Author bio */}
       <section className="section-container py-12">
