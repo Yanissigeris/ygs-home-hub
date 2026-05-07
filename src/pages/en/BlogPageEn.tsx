@@ -50,14 +50,14 @@ const BlogPageEn = () => {
             <div>
               <div className="flex items-center gap-3">
                 <span className="block h-px w-8" style={{ background: "var(--gold)" }} />
-                <span style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
+                <span style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
                   YGS · Analysis & Insights
                 </span>
               </div>
               <h1 className="mt-5 font-display" style={{ color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
                 Outaouais
                 <br />
-                <span style={{ color: "var(--gold)", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
+                <span style={{ color: "var(--gold-bright)", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
               </h1>
               <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.75, fontSize: "13px", lineHeight: 1.6 }}>
                 Articles, analysis, and advice to help you buy, sell, or invest smartly in Gatineau and the Outaouais.
@@ -80,7 +80,7 @@ const BlogPageEn = () => {
                   <span className="font-display" style={{ color: "var(--cream)", fontSize: "36px", fontWeight: 300, lineHeight: 1 }}>
                     {stat.value}
                   </span>
-                  <span className="uppercase" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                  <span className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.16em" }}>
                     {stat.label}
                   </span>
                 </div>
