@@ -143,7 +143,7 @@ const BlogPageEn = () => {
           <div className="grid gap-0 md:grid-cols-2 overflow-hidden rounded-lg border border-border/40">
             <div className="p-8 sm:p-10 lg:p-12 bg-background flex flex-col">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="uppercase font-semibold" style={{ color: "var(--gold)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                <span className="uppercase font-semibold" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.16em" }}>
                   {featured.categoryEn}
                 </span>
                 <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
