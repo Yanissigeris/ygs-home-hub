@@ -121,18 +121,39 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 display: "flex",
                 alignItems: "center",
                 gap: "0.75rem",
+                flexWrap: "wrap",
               }}
             >
-              <span aria-hidden="true" style={{ display: "inline-block", width: 24, height: 2, background: "var(--gold)" }} />
+              <span
+                aria-hidden="true"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  flexShrink: 0,
+                }}
+              >
+                <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--gold)" }} />
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 5,
+                    height: 5,
+                    transform: "rotate(45deg)",
+                    background: "var(--gold)",
+                  }}
+                />
+                <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--gold)" }} />
+              </span>
               <p
                 style={{
                   fontFamily: "var(--sans)",
                   fontSize: "clamp(10.5px, 2.4vw, 12px)",
-                  fontWeight: 500,
-                  letterSpacing: "0.1em",
+                  fontWeight: 600,
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   lineHeight: 1.6,
-                  color: "var(--gold-warm-light)",
+                  color: "rgba(232,210,170,0.95)",
                   margin: 0,
                 }}
               >
