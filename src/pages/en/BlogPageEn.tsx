@@ -147,7 +147,7 @@ const BlogPageEn = () => {
                   {featured.categoryEn}
                 </span>
                 <span style={{ color: "var(--ink)", opacity: 0.4, fontSize: "11px" }}>·</span>
-                <time style={{ color: "var(--ink)", opacity: 0.78, fontSize: "11px" }}>
+                <time style={{ color: "var(--ink)", opacity: 0.85, fontSize: "11px" }}>
                   {new Date(featured.publishDate).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               </div>
@@ -180,7 +180,7 @@ const BlogPageEn = () => {
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
                       {s.value}
                     </div>
-                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.78, fontSize: "10px", letterSpacing: "0.14em" }}>
+                    <div className="mt-2 uppercase" style={{ color: "var(--ink)", opacity: 0.85, fontSize: "10px", letterSpacing: "0.14em" }}>
                       {s.label}
                     </div>
                   </div>
