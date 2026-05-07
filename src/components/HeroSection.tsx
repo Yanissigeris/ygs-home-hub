@@ -753,7 +753,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   color: "var(--white)",
                   fontFamily: "var(--sans)",
                   fontWeight: 400,
-                  fontSize: ".95rem",
+                  fontSize: "1rem",
                   lineHeight: 1.75,
                   textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                 }}
@@ -767,7 +767,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   color: "var(--white)",
                   fontFamily: "var(--sans)",
                   fontWeight: 400,
-                  fontSize: ".95rem",
+                  fontSize: "1rem",
                   lineHeight: 1.75,
                   textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                 }}
@@ -1062,7 +1062,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </div>
                 <div
                   style={{
-                    fontSize: "0.78rem",
+                    fontSize: "0.875rem",
                     color: "rgba(247,244,238,0.95)",
                     fontWeight: 500,
                     letterSpacing: "0.04em",
