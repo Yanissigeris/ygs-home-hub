@@ -78,6 +78,7 @@ const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, cl
           borderTop: "1px solid var(--border)",
           background: "var(--cream)",
           borderBottom: "1px solid var(--border)",
+          textShadow: "none",
         }}
       >
         <div>
