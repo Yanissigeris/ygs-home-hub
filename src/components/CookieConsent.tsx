@@ -343,7 +343,7 @@ const CookieConsent = () => {
               style={{
                 background: "var(--gold)",
                 border: "1px solid var(--gold)",
-                color: "var(--white)",
+                color: "var(--ink)",
                 padding: "7px 12px",
                 fontSize: "10px",
                 borderRadius: "2px",
@@ -407,7 +407,7 @@ const CookieConsent = () => {
               </button>
               <button
                 onClick={handleAccept}
-                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-white transition-opacity hover:opacity-90"
+                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-[var(--ink)] transition-opacity hover:opacity-90"
                 style={{ background: "var(--gold)", border: "none", minHeight: 44 }}
               >
                 {t.accept}

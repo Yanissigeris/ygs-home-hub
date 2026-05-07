@@ -159,8 +159,8 @@ const BlogPageEn = () => {
               </p>
               <Link
                 to={`/en/blog/${featured.slugEn}`}
-                className="mt-6 inline-flex items-center gap-2 font-medium transition-opacity hover:opacity-70"
-                style={{ color: "var(--gold)", fontSize: "13px", letterSpacing: "0.04em" }}
+                className="group mt-6 inline-flex items-center gap-2 font-medium transition-colors hover:text-[var(--gold)]"
+                style={{ color: "var(--ink)", fontSize: "13px", letterSpacing: "0.04em" }}
               >
                 Read the analysis <span aria-hidden>→</span>
               </Link>
@@ -218,7 +218,7 @@ const BlogPageEn = () => {
                 </div>
                 <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.titleEn}</h3>
                 <p className="prose-body mt-2.5 text-[0.875rem] flex-1">{post.excerptEn}</p>
-                <span className="mt-4 text-[0.8125rem] font-medium text-accent">Read →</span>
+                <span className="mt-4 text-[0.8125rem] font-medium text-[var(--ink)] group-hover:text-accent transition-colors">Read →</span>
               </div>
             </Link>
           ))}
