@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
+import ContentBlock from "@/components/ContentBlock";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
@@ -77,6 +78,21 @@ const PlateauPageEn = () => (
       </div>
     </ImageTextSplit>
     <CardGrid overline="For who" title="The Plateau is ideal for…" items={profiles} background="alt" />
+    <ContentBlock>
+      <p className="label-overline">PORTRAIT</p>
+      <h2 className="mt-3">The Plateau — what makes this Gatineau sector different</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          The Plateau is one of the youngest and most dynamic sectors of the City of Gatineau. Most of its housing stock was built between 1995 and today, with new phases still being delivered along boulevard du Plateau and in the Mont-Bleu corridor. As of May 2026, single-family homes typically trade between $475,000 and $700,000 according to active Centris listings, with semi-detached townhomes from the mid-$400,000s and recent condos starting in the high-$200,000s. Lots are smaller than in Aylmer or Buckingham, but in exchange you get newer construction, low maintenance and predictable energy costs.
+        </p>
+        <p className="prose-body">
+          Daily life is anchored by Galeries du Plateau (groceries, pharmacy, professional services), the Mont-Bleu sports complex and the linear parks that run through the residential streets. Public schools are operated by the Centre de services scolaire des Portages-de-l'Outaouais (CSSPO) — École du Plateau, École du Vieux-Verger and École secondaire Mont-Bleu serve most of the area. For English-language education, the Western Quebec School Board (WQSB) routes students to nearby schools in Aylmer and Hull. Several daycares and CPEs operate inside the Plateau itself, which removes a major friction point for working parents.
+        </p>
+        <p className="prose-body">
+          Commute-wise, the Plateau is well-positioned for cross-river workers. The Champlain Bridge is roughly 10–15 minutes by car off-peak, the Macdonald-Cartier Bridge 15–20 minutes, and the STO Rapibus and Plateau express lines connect directly to downtown Ottawa. For families relocating from Ontario, that combination — recent construction, English-school access, and a 20-minute door-to-door commute to Tunney's Pasture or Place du Portage — is what usually decides the search in favour of the Plateau over similarly priced Ottawa suburbs.
+        </p>
+      </div>
+    </ContentBlock>
     <InlineCTA text="Own property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
     <FAQSection title="Questions about the Plateau" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />

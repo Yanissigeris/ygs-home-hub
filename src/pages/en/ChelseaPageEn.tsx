@@ -28,6 +28,22 @@ const faq = [
     q: "Can my children go to an English school in Chelsea?",
     a: "Yes. Chelsea is served by the Western Quebec School Board for English-language education. Chelsea Elementary School is located in the municipality. Given Chelsea's almost equal split between francophones and anglophones, it is one of the most naturally bilingual communities in all of Outaouais.",
   },
+  {
+    q: "What does a typical Chelsea home cost in 2026?",
+    a: "Chelsea is the most expensive municipality in metropolitan Gatineau on a per-square-foot basis. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000 on Centris, while waterfront or large-acreage properties along Lac Meech and Lac Mountain can clear $1.5M. The premium is driven by scarce buildable land — Gatineau Park covers roughly 60% of the territory — and constant demand from Ottawa professionals and federal executives.",
+  },
+  {
+    q: "How long does the Ottawa commute really take from Chelsea?",
+    a: "From central Old Chelsea to downtown Ottawa is 18–25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30–40 minutes during morning rush. Transcollines runs express buses to the STO Rapibus terminal at Labrosse, where you connect to OC Transpo via the Champlain or Macdonald-Cartier Bridge. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks — roughly 35 minutes door-to-door.",
+  },
+  {
+    q: "Are wells and septic systems a problem when buying in Chelsea?",
+    a: "Most Chelsea properties operate on artesian wells and septic systems rather than municipal services. They're not problematic in themselves — they're standard in semi-rural Quebec — but they require a thorough professional inspection before purchase. Water potability testing (bacteria + minerals), well flow rate, septic tank age and percolation field condition are non-negotiable. I systematically include these in the offer's inspection clause and walk buyers through the results.",
+  },
+  {
+    q: "Is Chelsea a good place to invest in real estate long-term?",
+    a: "Yes, with one important caveat. The combination of constrained supply (Gatineau Park), constant Ottawa-side demand, and a community committed to preserving its character has historically supported strong property values through every market cycle. The caveat: Chelsea is a niche market — fewer transactions per year than Aylmer or the Plateau — so liquidity at resale takes longer. For a 10-year hold, the fundamentals are excellent. For a 2–3 year flip, less so.",
+  },
 ];
 
 /* ── Atouts cards ── */
@@ -164,6 +180,23 @@ const ChelseaPageEn = () => (
         </div>
       </div>
     </section>
+
+    {/* ═══ MARKET DATA ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">MARKET DATA</p>
+      <h2 className="mt-3">Chelsea — what the 2026 numbers say</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Chelsea is the highest-priced municipality in metropolitan Gatineau on a per-square-foot basis, and one of the very few in the National Capital Region where waterfront and large-acreage inventory still appear on Centris in any given month. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000, while waterfront properties on Lac Meech or Lac Mountain regularly clear $1.4M–$2M. The supply pipeline is structurally constrained — Gatineau Park covers roughly 60% of the territory and the MRC des Collines-de-l'Outaouais enforces strict subdivision and shoreline rules — which is the main reason Chelsea values have held up across every market cycle since the early 2000s.
+        </p>
+        <p className="prose-body">
+          On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing — it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.
+        </p>
+        <p className="prose-body">
+          For sellers, the playbook in Chelsea is different from anywhere else in the region. The qualified-buyer pool is smaller but more decisive — when the right family sees the right property, offers come quickly. Pricing has to anchor on genuine comparables (not the next sub-sector over), and presentation matters disproportionately because buyers paying $800K+ expect move-in-ready quality. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
+        </p>
+      </div>
+    </ContentBlock>
 
     {/* ═══ FAQ ═══ */}
     <FAQSection title="Frequently asked questions — Chelsea, Quebec" items={faq} />
