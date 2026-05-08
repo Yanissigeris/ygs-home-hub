@@ -8,7 +8,7 @@ const ValDesMontsPageEn = () => (
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness — 30 minutes from Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts" }}
-    hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, forests and tranquility — the Outaouais' cottage country paradise.", image: heroImg }}
+    hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, wooded lots and tranquility — the Outaouais cottage country municipality. Over 200 lakes, 30-40 minutes from Gatineau and 45 minutes from Ottawa.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Over 200 lakes, vast wooded lots and an unmatched quality of life." }}
     reasons={[
