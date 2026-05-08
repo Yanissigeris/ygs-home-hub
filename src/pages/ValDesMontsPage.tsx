@@ -13,10 +13,14 @@ const ValDesMontsPage = () => (
     lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi Val-des-Monts est unique", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande. C'est l'un des rares secteurs de l'Outaouais où on peut vivre les pieds dans l'eau à moins de 30 minutes du centre-ville d'Ottawa." }}
     reasons={[
       "Plus de 200 lacs — accès privé à un lac pour beaucoup de propriétés",
+      "Propriétés entre 200 000 $ et 750 000 $+ selon le type, l'accès au lac et le sous-secteur (données Centris, mai 2026)",
+      "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes — chacun avec sa dynamique de marché propre",
       "Terrains de 2 à 50+ acres — intimité totale en pleine nature",
-      "Chalets quatre-saisons, résidences permanentes et propriétés de luxe",
-      "Communauté active avec festivals, marchés et événements locaux",
-      "30-40 minutes de Gatineau, 45-50 minutes d'Ottawa",
+      "Chalets quatre-saisons, résidences permanentes et propriétés de luxe bord de lac",
+      "Village de Perkins comme centre de services (épicerie, école primaire, services de proximité)",
+      "27 minutes du pont Macdonald-Cartier pour accéder au centre-ville d'Ottawa",
+      "30-40 minutes du centre de Gatineau — accès aux services hospitaliers et commerciaux",
+      "Marché actif avec demande soutenue : environ 77 unifamiliales et 6 chalets disponibles sur Centris en mai 2026",
     ]}
     profilesTitle="Val-des-Monts est idéal pour…"
     profiles={[
