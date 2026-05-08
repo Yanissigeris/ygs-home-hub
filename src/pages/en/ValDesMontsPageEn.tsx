@@ -25,10 +25,11 @@ const ValDesMontsPageEn = () => (
     ]}
     profilesTitle="Val-des-Monts is ideal for…"
     profiles={[
-      { icon: TreePine, title: "Lake & nature lovers", text: "Private dock, kayaking, swimming and campfires — every day." },
-      { icon: Home, title: "Cottage seekers", text: "Four-season cottages from rustic to luxurious." },
-      { icon: Users, title: "Families seeking space", text: "Large lots, fresh air and a welcoming community." },
-      { icon: Mountain, title: "Remote workers & retirees", text: "Exceptional setting with access to services." },
+      { icon: TreePine, title: "Lake & nature lovers", text: "Private dock, kayaking, swimming, campfires. Major lakes like McGregor and Saint-Pierre offer the best conditions for four-season waterfront living." },
+      { icon: Home, title: "Cottage seekers", text: "From rustic cottages around $200,000 to luxury waterfront $750,000+. Four-season cottages have been most in demand since remote work expanded." },
+      { icon: Users, title: "Families seeking space", text: "Large 2+ acre lots, elementary school in Perkins, tight-knit community. No high school in Val-des-Monts — plan for transportation to Buckingham or Gatineau." },
+      { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape, only 27 minutes from the Macdonald-Cartier Bridge." },
+      { icon: Mountain, title: "Remote workers & retirees", text: "Exceptional living environment with high-speed Internet available in most areas. 27 minutes from Ottawa for occasional in-person meetings." },
     ]}
     inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation" }}
     faq={{ title: "Questions about Val-des-Monts", items: [
