@@ -28,6 +28,22 @@ const faq = [
     q: "Is Hull a good choice for federal public servants?",
     a: "Yes — many federal departments and agencies have offices on the Québec side in Gatineau (Portage Complex, Tour de la Paix, etc.). And even for those working in Ottawa, bridges are accessible by bike or on foot from several Hull areas. That's one of the reasons Hull remains in high demand among public servants on both sides of the river.",
   },
+  {
+    q: "What does a Hull condo or single-family home cost in 2026?",
+    a: "As of May 2026, resale condos in Vieux-Hull and Wrightville typically range from $235,000 (1-bed older buildings) to $475,000 (2-bed recent buildings with parking). New construction in the Zibi development starts around $425,000 for a 1-bed and reaches $850,000+ for larger river-view units. Single-family homes are scarcer and trade between $475,000 and $725,000 depending on sub-sector and condition. Older plexes (duplex/triplex) typically list between $625,000 and $950,000.",
+  },
+  {
+    q: "What is the rental yield on a Hull plex right now?",
+    a: "Gross yields on older Hull plexes typically run 5–7% before financing and reno reserves, depending on whether rents are at market or below market (a common situation in this sector). Net cash-on-cash returns after a conventional 25% down-payment, financing at current rates, and a 10% maintenance/vacancy reserve are usually in the 3–5% range — sometimes negative on the most overpriced listings. The 2025–2026 rebalancing of Gatineau's rental market makes return analysis more critical than ever; I run the actual numbers on every property before recommending an offer.",
+  },
+  {
+    q: "Will the Gatineau-Ottawa tramway change Hull property values?",
+    a: "The proposed Gatineau-Ottawa tramway would run a corridor through Wrightville and Val-Tétreau toward downtown Ottawa. The project is still in the planning and consultation phase — no service date is confirmed. Historically, confirmed light-rail corridors lift property values within walking distance by 5–15% over a 5–10 year horizon, but that effect is contingent on the project actually being built. I track the project monthly and factor it transparently into valuations rather than treating it as a guaranteed upside.",
+  },
+  {
+    q: "Are Hull's older buildings safe to buy as a first home?",
+    a: "Many of Hull's most attractive properties are 80–120 years old, which means knob-and-tube wiring, cast-iron plumbing, asbestos in older insulation, and occasional foundation movement are real possibilities. None of these are deal-breakers — they're well-understood by Quebec inspectors and tradespeople — but they require an experienced building inspector and a realistic renovation budget. I work with two inspectors who specialize in Hull's pre-1960 stock and I never recommend a first-time buyer go in without one.",
+  },
 ];
 
 /* ── Sub-sectors ── */
