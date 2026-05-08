@@ -10,7 +10,7 @@ const ValDesMontsPageEn = () => (
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts" }}
     hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, wooded lots and tranquility — the Outaouais cottage country municipality. Over 200 lakes, 30-40 minutes from Gatineau and 45 minutes from Ottawa.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Over 200 lakes, vast wooded lots and an unmatched quality of life." }}
+    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. The major lakes — McGregor, Saint-Pierre and Achigan — drive the demand. It's one of the rare Outaouais areas where you can live waterfront under 30 minutes from downtown Ottawa." }}
     reasons={[
       "Over 200 lakes — many properties with private lake access",
       "Lots from 2 to 50+ acres — complete privacy in nature",
