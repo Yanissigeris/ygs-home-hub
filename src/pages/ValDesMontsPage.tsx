@@ -55,6 +55,11 @@ const ValDesMontsPage = () => (
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
+    brokerPerspective={{
+      observation: "Ce que je vois à Val-des-Monts en ce moment : la demande reste forte pour les bord de lac, mais les chalets rustiques se vendent moins vite qu'avant. Mes acheteurs sont surtout des familles d'Ottawa-Gatineau qui cherchent une résidence principale en pleine nature, ou des couples 45-65 ans qui veulent un chalet quatre-saisons pour préparer leur retraite. Le télétravail a vraiment changé la donne — ce qui était une propriété de fin de semaine avant 2020 devient maintenant une résidence principale pour beaucoup de mes clients.",
+      dataPoint: "Sur les ventes que je conclus à Val-des-Monts, les bord de lac McGregor et Saint-Pierre bien préparés partent en 30-60 jours en saison forte. Les chalets rustiques ou propriétés sans accès lac direct prennent souvent 60-120 jours, et les vendeurs doivent être plus patients ou ajuster leur prix.",
+      takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le timing et la préparation comptent énormément. Inscris ta propriété au printemps idéalement, prépare-la pour les photos l'été précédent si possible, et sois réaliste sur le prix selon le type de lac et l'accès. Une propriété sur McGregor ne se compare pas à une sans accès lac — fais-toi évaluer correctement avant d'inscrire."
+    }}
     cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
