@@ -22,6 +22,7 @@ const frToEn: Record<string, string> = {
   "/investir-plex-gatineau": "/en/plex",
   "/analyse-plex-gatineau": "/en/plex-analysis",
   "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
+  "/plateau-aylmer": "/en/plateau-aylmer",
   "/hull": "/en/hull",
   "/buckingham-masson-angers": "/en/buckingham",
   "/ressources": "/en/resources",
@@ -29,6 +30,8 @@ const frToEn: Record<string, string> = {
   "/faq": "/en/faq",
   "/temoignages": "/en/testimonials",
   "/contact-yanis": "/en/contact",
+  "/merci": "/en/thank-you",
+  "/merci-evaluation": "/en/thank-you-valuation",
   "/plan-vendeur-gatineau": "/en/seller-plan",
   "/quand-vendre-a-gatineau": "/en/when-to-sell",
   "/vendre-un-plex-a-gatineau": "/en/sell-plex",
@@ -53,38 +56,72 @@ const frToEn: Record<string, string> = {
   "/vendre-maison-aylmer": "/en/sell-house-aylmer",
   "/evaluation-maison-hull": "/en/home-valuation-hull",
   "/evaluation-maison-aylmer": "/en/home-valuation-aylmer",
+  "/combien-coute-un-courtier-immobilier-au-quebec": "/en/how-much-does-a-realtor-cost-in-quebec",
+  "/comment-choisir-un-courtier-immobilier": "/en/how-to-choose-a-realtor",
+  "/verifier-un-courtier-immobilier-oaciq": "/en/oaciq-find-a-broker",
+  "/frais-de-courtage-immobilier-quebec": "/en/realtor-commission-quebec",
+  "/courtier-immobilier-ou-vendre-soi-meme": "/en/realtor-vs-selling-by-owner-quebec",
+  "/politique-de-confidentialite": "/en/privacy-policy",
+  "/conditions-utilisation": "/en/terms",
 };
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
 const DOMAIN = "https://yanisgauthier.com";
 
+const HREFLANG_IDS = ["hreflang-fr-CA", "hreflang-en-CA", "hreflang-x-default"];
+
+const removeHreflangs = () => {
+  HREFLANG_IDS.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.remove();
+  });
+};
+
 /**
  * Sets <html lang> and injects hreflang <link> tags on every route change.
+ *
+ * Skips routes that manage their own hreflangs (e.g. blog article pages map
+ * slug → slugEn) and unmappable routes (e.g. NotFound, admin) to avoid
+ * pointing to a wrong/redirected URL.
  */
 const LangMeta = () => {
   const lang = useLanguage();
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // 1. Set html lang
     document.documentElement.lang = lang === "en" ? "en-CA" : "fr-CA";
 
-    // 2. Compute FR and EN URLs
-    let frPath: string;
-    let enPath: string;
+    // Skip self-managed routes — blog article pages inject their own
+    // slug-aware hreflangs in BlogArticlePage.
+    const isBlogArticle =
+      /^\/blogue\/[^/]+/.test(pathname) || /^\/en\/blog\/[^/]+/.test(pathname);
+    if (isBlogArticle) {
+      removeHreflangs();
+      return;
+    }
+
+    // Resolve canonical FR/EN paths via the static map.
+    let frPath: string | undefined;
+    let enPath: string | undefined;
     if (lang === "en") {
       enPath = pathname;
-      frPath = enToFr[pathname] ?? "/";
+      frPath = enToFr[pathname];
     } else {
       frPath = pathname;
-      enPath = frToEn[pathname] ?? "/en";
+      enPath = frToEn[pathname];
+    }
+
+    // If we don't have BOTH sides, skip rather than emit broken/redirecting
+    // hreflangs (e.g. NotFound, /admin/image-gen, untranslated routes).
+    if (!frPath || !enPath) {
+      removeHreflangs();
+      return;
     }
 
     const frUrl = `${DOMAIN}${frPath}`;
     const enUrl = `${DOMAIN}${enPath}`;
 
-    // 3. Inject/update hreflang links
     const setHreflang = (hreflang: string, href: string) => {
       const id = `hreflang-${hreflang}`;
       let link = document.getElementById(id) as HTMLLinkElement | null;
@@ -101,10 +138,6 @@ const LangMeta = () => {
     setHreflang("fr-CA", frUrl);
     setHreflang("en-CA", enUrl);
     setHreflang("x-default", frUrl);
-
-    return () => {
-      // cleanup on unmount (won't normally fire in SPA but good practice)
-    };
   }, [lang, pathname]);
 
   return null;
