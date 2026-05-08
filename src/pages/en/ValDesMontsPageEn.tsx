@@ -13,10 +13,15 @@ const ValDesMontsPageEn = () => (
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. The major lakes — McGregor, Saint-Pierre and Achigan — drive the demand. It's one of the rare Outaouais areas where you can live waterfront under 30 minutes from downtown Ottawa." }}
     reasons={[
       "Over 200 lakes — many properties with private lake access",
+      "Properties between $200,000 and $750,000+ depending on type, lake access and sub-area (Centris data, May 2026)",
+      "Major lakes: McGregor, Saint-Pierre, Achigan, Barnes — each with its own market dynamics",
+      "Roughly $200,000+ savings vs. comparable Ottawa cottage country — Ottawa single-family median was $780,000 in Q1 2026 (Ottawa Real Estate Board)",
       "Lots from 2 to 50+ acres — complete privacy in nature",
-      "Four-season cottages, permanent residences and luxury properties",
-      "Active community with festivals, markets and local events",
-      "30-40 minutes from Gatineau, 45-50 minutes from Ottawa",
+      "Four-season cottages, permanent residences and luxury waterfront properties",
+      "Perkins village as service hub (grocery, elementary school, local amenities)",
+      "27 minutes from the Macdonald-Cartier Bridge — practical for Ottawa weekend cottage owners and full-time remote workers",
+      "30-40 minutes from central Gatineau — access to hospital and commercial services",
+      "Active market: ~77 single-family homes and ~6 cottages available on Centris in May 2026",
     ]}
     profilesTitle="Val-des-Monts is ideal for…"
     profiles={[
