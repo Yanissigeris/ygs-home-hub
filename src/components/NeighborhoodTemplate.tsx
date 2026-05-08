@@ -75,7 +75,16 @@ const BrokerPerspective = ({
   data: NonNullable<NeighborhoodProps["brokerPerspective"]>;
   neighborhoodName: string;
 }) => {
-  const title = data.title || `Mon regard sur ${neighborhoodName}`;
+  const lang = useLanguage();
+  const title = data.title || (lang === "en" ? `My take on ${neighborhoodName}` : `Mon regard sur ${neighborhoodName}`);
+  const label = lang === "en" ? "Broker's take" : "L'avis du courtier";
+  const credentials = lang === "en" 
+    ? "Real Estate Broker · RE/MAX Hall of Fame · 300+ transactions"
+    : "Courtier immobilier · Hall of Fame RE/MAX · 300+ transactions";
+  const portraitAlt = lang === "en"
+    ? "Yanis Gauthier-Sigeris, Real Estate Broker"
+    : "Yanis Gauthier-Sigeris, courtier immobilier";
+
   return (
     <section className="py-16 md:py-20" style={{ background: "var(--cream)" }}>
       <div className="container max-w-3xl">
@@ -87,7 +96,7 @@ const BrokerPerspective = ({
             className="text-xs uppercase tracking-[0.18em] font-medium"
             style={{ color: "var(--gold-text)", fontFamily: "var(--sans)" }}
           >
-            L'avis du courtier
+            {label}
           </div>
           <h2
             className="mt-3 text-3xl md:text-4xl leading-tight"
@@ -103,7 +112,7 @@ const BrokerPerspective = ({
             >
               <img
                 src={yanisPortrait}
-                alt="Yanis Gauthier-Sigeris, courtier immobilier"
+                alt={portraitAlt}
                 width={64}
                 height={64}
                 loading="lazy"
@@ -122,7 +131,7 @@ const BrokerPerspective = ({
                 className="text-sm text-muted-foreground"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                Courtier immobilier · Hall of Fame RE/MAX · 300+ transactions
+                {credentials}
               </div>
             </div>
           </div>
