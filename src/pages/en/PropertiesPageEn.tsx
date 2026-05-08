@@ -66,17 +66,23 @@ const PropertiesPageEn = () => (
 
     <ContentBlock narrow>
       <SectionHeading overline="Priority access" title="Get the best properties first" />
-      <p className="prose-body mt-5">
-        As an active broker in Gatineau since 2017, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Active in Outaouais real estate since 2017, I have access to every Centris listing across Gatineau, Hull, Aylmer, the Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac — including pre-MLS opportunities and listings not yet syndicated to public portals. Properly briefed on your criteria, I can flag a fit within hours of it surfacing instead of days.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        For most active buyers, that head-start is the difference between visiting a property unhurried and arriving to a multi-offer scenario. Tell me what you're looking for — neighborhood, price ceiling, must-haves, deal-breakers — and I do the screening work for you.
       </p>
     </ContentBlock>
 
     <CardGrid overline="Your profile" title="What type of property are you looking for?" items={profileCards} columns={3} background="alt" />
 
     <ContentBlock narrow>
-      <SectionHeading overline="Priority access" title="Get the best properties first" />
-      <p className="prose-body mt-5">
-        As an active broker in Gatineau since 2017, I have access to all market listings — including those not yet public. Tell me what you're looking for, I do the work for you.
+      <SectionHeading overline="How I work" title="Buying with a broker who represents you" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        In Québec, a buyer who works directly with the listing broker isn't independently represented. When you sign a buyer brokerage contract with me, my legal duty is to you — your budget, your interests, your downside protection. I run comparable sales, structure conditions (financing, inspection, sale of current home), negotiate the offer, and stay on the file all the way through the notary signing.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        That representation costs you nothing in most resale transactions: the listing broker's compensation typically covers the buyer's broker out of the seller's brokerage contract. It's a clear win — independent advice, full market access, and a bilingual file that travels smoothly between Ottawa and Gatineau.
       </p>
     </ContentBlock>
 
