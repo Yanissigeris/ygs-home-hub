@@ -183,6 +183,23 @@ const HullPageEn = () => (
       </div>
     </section>
 
+    {/* ═══ MARKET DATA ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">MARKET DATA</p>
+      <h2 className="mt-3">Hull — what the 2026 numbers say</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Hull is the most heterogeneous market in metropolitan Gatineau and the only sector where you can credibly compare a $235,000 1-bed condo, a $625,000 century triplex and a $1.2M new-build river-view condo on the same Centris page. As of May 2026, resale condos in Vieux-Hull and Wrightville run from $235,000 to $475,000 depending on age, parking and view; Zibi new-build inventory starts around $425,000 for a 1-bed and pushes past $850,000 for the larger waterfront units. Older single-family homes in the residential streets behind boulevard Saint-Joseph trade between $475,000 and $725,000 — an inventory pocket that's slowly being absorbed by anglophone families relocating from the Glebe and Hintonburg.
+        </p>
+        <p className="prose-body">
+          On the income side, plexes remain the structural reason Hull is on every Outaouais investor's shortlist. The Université du Québec en Outaouais (UQO) anchors a permanent rental pool of roughly 6,500 students; federal offices in the Portage Complex, Place du Centre and Tour de la Paix generate stable demand from public servants who want to walk to work. The 2025–2026 cycle did rebalance the rental market — new builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth — but older plexes with below-market tenants and untapped renovation upside continue to trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.
+        </p>
+        <p className="prose-body">
+          The wild card for the next five years is the Gatineau-Ottawa tramway. The current alignment runs through Wrightville and Val-Tétreau toward downtown Ottawa via the Macdonald-Cartier Bridge corridor. The project is in planning and consultation, not construction — but historically, confirmed light-rail corridors lift values within walking distance by 5–15% over a 5–10 year horizon. I treat the tramway as plausible upside, not a guaranteed lift, and I price every Hull listing on today's fundamentals first.
+        </p>
+      </div>
+    </ContentBlock>
+
     {/* ═══ FAQ ═══ */}
     <FAQSection title="Frequently asked questions — Hull, Gatineau" items={faq} />
 
