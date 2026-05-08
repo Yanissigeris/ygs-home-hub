@@ -13,6 +13,7 @@ import InlineCTA from "@/components/InlineCTA";
 import SectorLinks from "@/components/SectorLinks";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
+import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 
 export interface NeighborhoodProps {
   seoTitle: string;
@@ -30,6 +31,7 @@ export interface NeighborhoodProps {
   sectors: { overline?: string; title?: string; list: { name: string; href: string; detail: string }[] };
   related: { overline?: string; title?: string; pages: { title: string; text: string; href: string }[] };
   guide: { type: GuideType; headline: string; text: string; ctaLabel: string; stickyLabel: string };
+  brokerPerspective?: { title?: string; observation: string; dataPoint?: string; takeaway?: string };
   cta: { title: string; text: string; buttons: { label: string; href: string; variant?: "outline" }[]; trustLine: string };
 }
 
@@ -65,6 +67,95 @@ const FAQPageJsonLd = ({ items, url }: { items: { q: string; a: string }[]; url:
   return null;
 };
 
+const BrokerPerspective = ({
+  data,
+  neighborhoodName,
+}: {
+  data: NonNullable<NeighborhoodProps["brokerPerspective"]>;
+  neighborhoodName: string;
+}) => {
+  const title = data.title || `Mon regard sur ${neighborhoodName}`;
+  return (
+    <section className="py-16 md:py-20" style={{ background: "var(--cream)" }}>
+      <div className="container max-w-3xl">
+        <div
+          className="rounded-sm border p-8 md:p-10"
+          style={{ background: "#fff", borderColor: "hsl(var(--border))" }}
+        >
+          <div
+            className="text-xs uppercase tracking-[0.18em] font-medium"
+            style={{ color: "var(--gold-text)", fontFamily: "var(--sans)" }}
+          >
+            L'avis du courtier
+          </div>
+          <h2
+            className="mt-3 text-3xl md:text-4xl leading-tight"
+            style={{ fontFamily: "var(--serif)", color: "var(--ink)" }}
+          >
+            {title}
+          </h2>
+
+          <div className="mt-6 flex items-center gap-4">
+            <div
+              className="h-16 w-16 shrink-0 overflow-hidden rounded-full"
+              style={{ background: "var(--cream)" }}
+            >
+              <img
+                src={yanisPortrait}
+                alt="Yanis Gauthier-Sigeris, courtier immobilier"
+                width={64}
+                height={64}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <div
+                className="text-base font-medium"
+                style={{ color: "var(--ink)", fontFamily: "var(--sans)" }}
+              >
+                Yanis Gauthier-Sigeris
+              </div>
+              <div
+                className="text-sm text-muted-foreground"
+                style={{ fontFamily: "var(--sans)" }}
+              >
+                Courtier immobilier · Hall of Fame RE/MAX · 300+ transactions
+              </div>
+            </div>
+          </div>
+
+          <p
+            className="mt-7 text-[1.0625rem] leading-relaxed"
+            style={{ color: "var(--ink)", fontFamily: "var(--sans)" }}
+          >
+            {data.observation}
+          </p>
+
+          {data.dataPoint && (
+            <div
+              className="mt-5 border-l-2 pl-4 py-1 text-[0.9375rem] leading-relaxed text-muted-foreground"
+              style={{ borderColor: "var(--gold)", fontFamily: "var(--sans)" }}
+            >
+              {data.dataPoint}
+            </div>
+          )}
+
+          {data.takeaway && (
+            <p
+              className="mt-5 text-[0.9375rem] italic leading-relaxed text-muted-foreground"
+              style={{ fontFamily: "var(--sans)" }}
+            >
+              {data.takeaway}
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const NeighborhoodTemplate = (p: NeighborhoodProps) => (
   <>
     <PageMeta title={p.seoTitle} description={p.metaDesc} ogImage={p.ogImage} />
@@ -95,6 +186,10 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => (
     <CardGrid overline="Pour qui" title={p.profilesTitle} items={p.profiles} background="alt" />
 
     <InlineCTA text={p.inlineCta.text} buttonLabel={p.inlineCta.label} href={p.inlineCta.href} />
+
+    {p.brokerPerspective && (
+      <BrokerPerspective data={p.brokerPerspective} neighborhoodName={p.jsonLd.name} />
+    )}
 
     <FAQSection title={p.faq.title} items={p.faq.items} />
 
