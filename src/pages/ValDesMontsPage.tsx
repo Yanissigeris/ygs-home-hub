@@ -33,9 +33,12 @@ const ValDesMontsPage = () => (
     faq={{
       title: "Questions sur Val-des-Monts",
       items: [
-        { q: "Val-des-Monts est-il accessible à l'année?", a: "Oui, la majorité des routes sont entretenues à l'année. Certains chemins privés peuvent nécessiter du déneigement." },
-        { q: "Peut-on habiter à Val-des-Monts à l'année?", a: "Absolument. De plus en plus de résidents permanents s'y installent, attirés par le télétravail et la qualité de vie." },
-        { q: "Les prix sont-ils abordables?", a: "Comparé à Aylmer ou Chelsea, oui. On trouve des propriétés intéressantes à des prix encore accessibles, surtout hors bord de lac." },
+        { q: "Val-des-Monts est-il accessible à l'année?", a: "Oui, la majorité des routes principales sont entretenues à l'année. Certains chemins privés en bord de lac peuvent nécessiter du déneigement supplémentaire ou un véhicule 4×4 pour les accès les plus reculés." },
+        { q: "Quel est le prix d'une propriété à Val-des-Monts en 2026?", a: "Selon les inscriptions actives sur Centris en mai 2026, les propriétés se vendent généralement entre 200 000 $ pour un chalet rustique avec accès lac et 750 000 $+ pour une résidence quatre-saisons en bord de lac. Les prix dépendent fortement du lac, de l'orientation et du type de propriété." },
+        { q: "Quels sont les principaux lacs de Val-des-Monts?", a: "Les plus connus sont McGregor, Saint-Pierre, Achigan et Barnes. Chaque lac a sa propre dynamique : McGregor pour les propriétés haut de gamme et navigation, Saint-Pierre pour les chalets familiaux, Achigan pour la pêche, Barnes pour la tranquillité." },
+        { q: "Peut-on habiter à Val-des-Monts à l'année?", a: "Absolument. De plus en plus de résidents permanents s'y installent depuis 2020, attirés par le télétravail et la qualité de vie. La municipalité a investi dans l'Internet haute vitesse pour soutenir cette tendance." },
+        { q: "Y a-t-il des écoles à Val-des-Monts?", a: "Oui pour le primaire (école à Perkins notamment). Pour le secondaire, les élèves doivent généralement se rendre à Buckingham ou dans le secteur de Gatineau. C'est un facteur à considérer pour les familles avec ados." },
+        { q: "Combien de temps prend une vente à Val-des-Monts?", a: "Variable selon le type. Les propriétés en bord de lac McGregor ou Saint-Pierre bien préparées partent souvent en 30-60 jours en saison forte (printemps-été). Les chalets rustiques ou propriétés sans accès lac peuvent prendre 60-120 jours." },
       ],
     }}
     sectors={{ list: [
