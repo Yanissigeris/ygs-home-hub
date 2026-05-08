@@ -32,11 +32,18 @@ const ValDesMontsPageEn = () => (
       { icon: Mountain, title: "Remote workers & retirees", text: "Exceptional living environment with high-speed Internet available in most areas. 27 minutes from Ottawa for occasional in-person meetings." },
     ]}
     inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation" }}
-    faq={{ title: "Questions about Val-des-Monts", items: [
-      { q: "Is Val-des-Monts accessible year-round?", a: "Yes, most roads are maintained year-round. Some private roads may require plowing." },
-      { q: "Can you live in Val-des-Monts year-round?", a: "Absolutely. More and more permanent residents are moving in, attracted by remote work and quality of life." },
-      { q: "Are prices affordable?", a: "Compared to Aylmer or Chelsea, yes. Great properties at accessible prices, especially off-waterfront." },
-    ]}}
+    faq={{
+      title: "Questions about Val-des-Monts",
+      items: [
+        { q: "Is Val-des-Monts accessible year-round?", a: "Yes, most main roads are maintained year-round. Some private waterfront roads may require additional plowing or a 4×4 vehicle for the more remote accesses." },
+        { q: "What is the price of a property in Val-des-Monts in 2026?", a: "Based on active Centris listings as of May 2026, properties typically sell between $200,000 for a rustic cottage with lake access and $750,000+ for a four-season waterfront residence. Prices depend heavily on the lake, orientation and property type." },
+        { q: "What are the main lakes in Val-des-Monts?", a: "The best known are McGregor, Saint-Pierre, Achigan and Barnes. Each lake has its own dynamic: McGregor for higher-end properties and boating, Saint-Pierre for family cottages, Achigan for fishing, Barnes for tranquility." },
+        { q: "How much can I save buying in Val-des-Monts vs. comparable Ottawa cottage country?", a: "The price difference is significant. The median single-family home in Ottawa was $780,000 in Q1 2026 according to the Ottawa Real Estate Board, while properties in Val-des-Monts range from $200,000 to $750,000+ (Centris, May 2026). For a comparable property, that often translates into $200,000+ in savings. Property taxes and Quebec-specific costs should also be factored into your decision." },
+        { q: "Are there English-language schools nearby?", a: "Not directly in Val-des-Monts, but the Western Quebec School Board operates English elementary and secondary schools in the broader Gatineau area. Plan for school transportation. The WQSB School Locator on westernquebec.ca will tell you which catchment school applies to your address." },
+        { q: "Can you live in Val-des-Monts year-round?", a: "Absolutely. More and more permanent residents have settled here since 2020, attracted by remote work and quality of life. The municipality has invested in high-speed Internet to support this trend." },
+        { q: "How long does a sale take in Val-des-Monts?", a: "It varies by property type. Well-prepared waterfront properties on McGregor or Saint-Pierre often go under contract in 30-60 days during peak season (spring-summer). Rustic cottages or properties without lake access can take 60-120 days." },
+      ],
+    }}
     sectors={{ list: [
       { name: "Cantley", href: "/en/cantley", detail: "Rural, hills, large lots" },
       { name: "Chelsea", href: "/en/chelsea", detail: "Village, Gatineau Park" },
