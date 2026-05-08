@@ -1,40 +1,28 @@
-## Objective
-Bring `src/pages/en/LimbourPageEn.tsx` to E-E-A-T parity with the FR version via 7 exact prop-value replacements. No other files touched.
+## Plan : Enrichissement E-E-A-T de /masson-angers
 
-## Scope
-- File: `src/pages/en/LimbourPageEn.tsx` only
-- Untouched: `NeighborhoodTemplate.tsx`, `LimbourPage.tsx`, all other EN neighborhood pages
-- Preserved as-is: `seoTitle`, `metaDesc`, `ogImage`, `jsonLd`, hero `overline`+`title`, `trustSpecialty`, `inlineCta`, `profilesTitle`, `related`, `guide`, `cta`
+### Contexte
+La page `src/pages/MassonAngersPage.tsx` fait ~280 mots et est sous-indexée. Objectif : ~870 mots avec parité E-E-A-T, sans toucher au template ni aux autres pages.
 
-## The 7 modifications
+### Modifications (7 exactes, 1 fichier)
 
-### 1. Hero subtitle
-Replace `subtitle` with: "Modern family neighborhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, 20 minutes from downtown Ottawa."
+| # | Cible | Action | Résultat |
+|---|-------|--------|----------|
+| 1 | `hero.subtitle` | Remplacer par version longue avec "20-25 minutes du centre de Gatineau par l'autoroute 50" | SEO local + contexte géo |
+| 2 | `lifestyle.subtitle` | Remplacer par 3 phrases : acheteurs cibles, 2 sous-secteurs (Masson/Angers), rapport qualité-prix vs Hull/Aylmer | Contenu riche + différenciation |
+| 3 | `reasons` | Passer de 5 à 9 entrées : prix Centris 400-490k$, constructions 2026, écoles CSSCV (4 noms), agrandissement 20 M$, secondaire Hormisdas-Gamelin, autoroute 50/Ottawa, rivière du Lièvre, marché actif | Preuves factuelles |
+| 4 | `profiles` | Enrichir texte des 4 cartes : détails écoles, fourchettes prix 400-490k$, programmes RAP/CELIAPP, promoteurs 2026-2027, sous-secteurs | Ciblage précis |
+| 5 | `faq` | Passer de 3 à 6 questions : prix 2026, écoles, sous-secteurs, délai de vente 32 jours Q4 2025 (CIO), trajet Ottawa | FAQPage JSON-LD à 6 entrées |
+| 6 | `sectors` | Enrichir `detail` des 3 liens : Buckingham (Hormisdas-Gamelin), Gatineau centre (condos), Limbour (alternative 15 min) | Maillage interne qualifié |
+| 7 | Ajouter `brokerPerspective` | Entre `guide` et `cta` : observation (jeunes familles 25-35 ans, Ottawa vs Gatineau), dataPoint (25-40 jours, 400-490k$), takeaway (comparer Masson/Angers, vérifier promoteur, prix vs neuf) | E-E-A-T core (Expérience) |
 
-### 2. Lifestyle subtitle
-Replace `subtitle` with a 3-sentence version covering young families, Ferme Limbour sub-sector, and avoidance of major renovations typical of older neighborhoods.
+### Contraintes respectées
+- Aucune ligne supprimée (remplacements exacts)
+- Indentation 4 espaces préservée
+- Props non modifiées inchangées : `seoTitle`, `metaDesc`, `ogImage`, `jsonLd`, `trustSpecialty`, `inlineCta`, `profilesTitle`, `related`, `guide`, `cta`
+- Aucun impact sur les autres pages
 
-### 3. Reasons
-Expand from 5 to 10 entries. Add: construction era (2000-2020), Centris price range ($475k-$800k), Ottawa savings comparison ($780k Q1 2026 median), Ferme Limbour detail, WQSB English schools, Highway 50 / Macdonald-Cartier Bridge commute, federal commuter angle.
-
-### 4. Profiles
-Expand from 4 to 5 cards. Rename "Recent home buyers" → "Move-up buyers". Add "Ottawa relocators" card. Enrich all card descriptions with sub-sector and commute specifics.
-
-### 5. FAQ
-Expand from 3 to 7 questions. Add: 2026 pricing, Ottawa savings math, English-language schools (WQSB), services on Boulevard de l'Hôpital, and time-on-market (32 days Q4 2025 / CIO). Keep existing questions but enrich answers.
-
-### 6. Sectors detail
-Enrich 3 sector descriptions: Côte-d'Azur (established bungalows, direct neighbor), Gatineau centre (heart of sector), Masson-Angers (developing, accessible prices).
-
-### 7. brokerPerspective (E-E-A-T core)
-Insert `brokerPerspective` prop between `guide` and `cta` with:
-- `observation`: first-person market view on young families, move-up buyers, Ferme Limbour demand, Ottawa cross-river buyers
-- `dataPoint`: 30-40 days under contract for well-prepared homes; sub-sector alignment shortens timeline
-- `takeaway`: sub-sector impact on final price ($30k-$50k difference between Ferme Limbour and rest of Limbour)
-
-## Validation
-- Single-file diff with 7 hunks
-- TypeScript compiles (brokerPerspective already in `NeighborhoodProps`)
-- Word count ~330 → ~900 words
-- FAQ JSON-LD auto-emits 7 entries
-- Other EN neighborhood pages unaffected
+### Validation attendue
+- TS compile sans erreur
+- Word count ~280 → ~870 mots
+- Section "Mon regard sur Masson-Angers" visible entre InlineCTA et FAQ
+- FAQPage JSON-LD à 6 entrées
