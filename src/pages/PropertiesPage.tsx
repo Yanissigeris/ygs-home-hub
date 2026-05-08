@@ -119,8 +119,11 @@ const PropertiesPage = () => {
         overline="Accès prioritaire"
         title="Recevez les meilleures propriétés en premier"
       />
-      <p className="prose-body mt-5">
-        En tant que courtier actif à Gatineau depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Actif en immobilier en Outaouais depuis 2017, j'ai accès à toutes les inscriptions Centris dans Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac — y compris les opportunités pré-MLS et les inscriptions pas encore syndiquées sur les portails publics. Bien briefé sur vos critères, je peux vous signaler une propriété pertinente en quelques heures plutôt qu'en quelques jours.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Pour la plupart des acheteurs actifs, cette longueur d'avance fait la différence entre visiter une propriété sans pression et arriver dans une situation à offres multiples. Dites-moi ce que vous cherchez — secteur, plafond de prix, incontournables, dealbreakers — et je fais le travail de filtrage pour vous.
       </p>
     </ContentBlock>
 
@@ -134,11 +137,14 @@ const PropertiesPage = () => {
 
     <ContentBlock narrow>
       <SectionHeading
-        overline="Accès prioritaire"
-        title="Recevez les meilleures propriétés en premier"
+        overline="Comment je travaille"
+        title="Acheter avec un courtier qui vous représente"
       />
-      <p className="prose-body mt-5">
-        En tant que courtier actif à Gatineau depuis 2017, j'ai accès à toutes les inscriptions du marché — y compris celles qui ne sont pas encore publiques. Dites-moi ce que vous cherchez, je fais le travail pour vous.
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Au Québec, un acheteur qui traite directement avec le courtier inscripteur n'est pas représenté indépendamment. Quand vous signez un contrat de courtage acheteur avec moi, mon devoir légal est envers vous — votre budget, vos intérêts, votre protection à la baisse. Je sors les comparables, je structure les conditions (financement, inspection, vente de la propriété actuelle), je négocie l'offre et je reste sur le dossier jusqu'à la signature notariale.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Cette représentation ne vous coûte généralement rien dans la majorité des transactions de revente : la rémunération du courtier inscripteur couvre habituellement le courtier acheteur via le contrat de courtage du vendeur. C'est un gain net — conseil indépendant, accès complet au marché, et un dossier bilingue qui circule sans friction entre Ottawa et Gatineau.
       </p>
     </ContentBlock>
 

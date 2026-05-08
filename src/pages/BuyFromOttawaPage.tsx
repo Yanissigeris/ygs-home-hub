@@ -29,9 +29,13 @@ const sectors = [
 
 
 const faq = [
-  { q: "Quelles sont les vraies économies en achetant à Gatineau?", a: "Ça dépend du secteur et du type de propriété. En général, 15-30% d'économie sur le prix d'achat, mais il faut aussi considérer les taxes municipales et scolaires." },
-  { q: "Comment fonctionne l'achat quand je suis en Ontario?", a: "Vous pouvez travailler en Ontario et vivre à Gatineau. Le processus d'achat se fait au Québec — promesse d'achat, notaire, etc. Je vous guide à chaque étape." },
-  { q: "Les taxes sont-elles plus élevées au Québec?", a: "Les taxes municipales varient par secteur. L'impôt sur le revenu est différent aussi. On regarde le portrait complet ensemble." },
+  { q: "Quelles sont les vraies économies en achetant à Gatineau?", a: "Ça dépend du secteur et du type de propriété. En mai 2026, l'écart de prix d'achat se situe généralement entre 15 et 30 % par rapport à des quartiers comparables d'Ottawa, mais il faut intégrer les taxes municipales et scolaires au portrait global pour comparer net." },
+  { q: "Comment fonctionne l'achat quand je suis en Ontario?", a: "Vous pouvez travailler en Ontario et habiter Gatineau. Le processus d'achat se déroule au Québec — promesse d'achat, conditions d'inspection, signature chez le notaire — et un courtier titulaire d'un permis OACIQ est requis pour vous représenter. Je vous accompagne à chaque étape." },
+  { q: "Les taxes sont-elles plus élevées au Québec?", a: "Les taxes municipales et scolaires varient selon le secteur et sont souvent plus basses au dollar de valeur que des adresses ottaviennes équivalentes. L'impôt sur le revenu est structuré différemment au Québec — on regarde le portrait complet ensemble pour comparer net de tous les coûts." },
+  { q: "Est-ce que je peux garder mon emploi et mon médecin de famille en Ontario?", a: "Oui — beaucoup de mes clients font la navette quotidienne vers le centre-ville d'Ottawa ou travaillent en mode hybride. Vous pouvez souvent garder votre médecin de famille ontarien dans certains cas, bien que la RAMQ couvre les soins une fois résident québécois." },
+  { q: "Et l'école des enfants — français ou anglais?", a: "Les deux options existent en Outaouais. Aylmer et le Plateau ont des écoles publiques anglophones reconnues; les écoles francophones et d'immersion sont aussi très accessibles. Les règles d'admissibilité au réseau anglophone s'appliquent — on en discute tôt dans le processus." },
+  { q: "Combien de temps prend vraiment la navette par les ponts?", a: "Depuis Aylmer, Hull ou le Plateau, le centre-ville d'Ottawa se rejoint typiquement en 15 à 30 minutes en voiture selon le pont et l'heure. Les autobus STO, les pistes cyclables et les projets de tramway entrent aussi dans l'équation à moyen terme." },
+  { q: "Ai-je besoin d'une hypothèque québécoise?", a: "La plupart des prêteurs canadiens opèrent des deux côtés de la rivière, vous pouvez donc souvent garder votre banque actuelle. La souscription suit les règles provinciales — je vous présente des courtiers hypothécaires qui traitent régulièrement des dossiers Ottawa-Gatineau." },
 ];
 
 const BuyFromOttawaPage = () => (
@@ -67,9 +71,15 @@ const BuyFromOttawaPage = () => (
     />
 
     <ContentBlock narrow>
-      <SectionHeading title="Un courtier qui connaît les deux côtés" />
-      <p className="prose-body mt-5">
-        Depuis 2017 à Gatineau, j'ai accompagné des dizaines de familles qui traversent la rivière. Je connais les avantages, les compromis et les pièges — et je vous aide à naviguer le tout sans stress.
+      <SectionHeading overline="Expertise locale" title="Un courtier qui connaît les deux côtés de la rivière" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Actif en immobilier en Outaouais depuis 2017, j'ai accompagné des dizaines de ménages ontariens dans leur transition vers Gatineau — fonctionnaires fédéraux, professionnels de la santé, jeunes familles, et retraités à la recherche d'un rythme plus calme. La transition tourne rarement uniquement autour du prix au pied carré. Elle touche la fiabilité du trajet, la scolarité dans la bonne langue, l'accès à un médecin, les standards de déneigement, et la lecture concrète d'un compte de taxes québécois.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Je sais quelles rues d'Aylmer s'arrachent dès qu'une inscription paraît, quels quadrilatères de Hull cachent une plomberie vieillissante sous une couche de peinture neuve, où les phases récentes du Plateau ont des servitudes de bruit, et quelles poches de Buckingham prennent tranquillement de la valeur grâce aux investissements municipaux récents. Cette connaissance terrain protège un acheteur hors-province des hypothèses coûteuses.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        Je coordonne aussi les acteurs de soutien — notaire québécois, courtier hypothécaire bilingue, inspecteur certifié connaissant les bâtiments anciens de Hull, déménageurs habitués aux dossiers interprovinciaux. Vous n'avez pas à monter cette équipe seul depuis l'autre rive.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/consultation-acheteur">Réserver ma consultation</Link>
