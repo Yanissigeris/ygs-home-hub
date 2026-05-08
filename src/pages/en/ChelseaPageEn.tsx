@@ -181,6 +181,23 @@ const ChelseaPageEn = () => (
       </div>
     </section>
 
+    {/* ═══ MARKET DATA ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">MARKET DATA</p>
+      <h2 className="mt-3">Chelsea — what the 2026 numbers say</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          Chelsea is the highest-priced municipality in metropolitan Gatineau on a per-square-foot basis, and one of the very few in the National Capital Region where waterfront and large-acreage inventory still appear on Centris in any given month. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000, while waterfront properties on Lac Meech or Lac Mountain regularly clear $1.4M–$2M. The supply pipeline is structurally constrained — Gatineau Park covers roughly 60% of the territory and the MRC des Collines-de-l'Outaouais enforces strict subdivision and shoreline rules — which is the main reason Chelsea values have held up across every market cycle since the early 2000s.
+        </p>
+        <p className="prose-body">
+          On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing — it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.
+        </p>
+        <p className="prose-body">
+          For sellers, the playbook in Chelsea is different from anywhere else in the region. The qualified-buyer pool is smaller but more decisive — when the right family sees the right property, offers come quickly. Pricing has to anchor on genuine comparables (not the next sub-sector over), and presentation matters disproportionately because buyers paying $800K+ expect move-in-ready quality. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
+        </p>
+      </div>
+    </ContentBlock>
+
     {/* ═══ FAQ ═══ */}
     <FAQSection title="Frequently asked questions — Chelsea, Quebec" items={faq} />
 
