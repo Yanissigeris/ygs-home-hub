@@ -27,6 +27,22 @@ const faq = [
     q: "Do Buckingham properties have wells?",
     a: "A large portion of Buckingham is connected to municipal water and sewer — unlike more rural areas like Cantley or L'Ange-Gardien. In the core Buckingham area, properties are generally on municipal services. On the outskirts, verification is needed. I systematically confirm this point for every property visited.",
   },
+  {
+    q: "What does a single-family home cost in Buckingham in 2026?",
+    a: "Based on active Centris listings as of May 2026, single-family homes in the core Buckingham sector typically trade between $375,000 and $525,000 depending on year of construction, lot size and condition. Recent builds in Masson-Angers run from the high-$400,000s into the low-$600,000s. Compared with the Plateau or Aylmer for an equivalent lot and square-footage, the savings often reach $100,000–$200,000 — which is the whole point of buying east.",
+  },
+  {
+    q: "Which schools serve Buckingham and Masson-Angers?",
+    a: "Public francophone schools are operated by the Centre de services scolaire au Cœur-des-Vallées (CSSCV). Hormisdas-Gamelin is the main French secondary school in Buckingham. The Western Quebec School Board (WQSB) provides English-language education through Buckingham Elementary and routes secondary students to Hadley Junior High and Philemon Wright in Hull. I always confirm the exact catchment for each address with the school board before an offer.",
+  },
+  {
+    q: "Is the Buckingham–Masson-Angers market moving fast in 2026?",
+    a: "Demand has stayed solid through Q1 2026 because the price gap with central Gatineau is wide enough to attract first-time buyers and Ottawa cross-river families. According to the Outaouais Real Estate Board (CIO), the median time on market for a single-family home in the metropolitan Gatineau area was 32 days in Q4 2025 — turnkey properties in Buckingham priced correctly are tracking close to that. Properties needing major work sit longer; pricing strategy matters more than ever.",
+  },
+  {
+    q: "Can I get a home valuation in Buckingham specifically?",
+    a: "Yes. I prepare free, no-commitment valuations anchored on recent comparable sales on your street and in your sub-sector — Buckingham core, Masson, Angers village or rural fringe. Each of these has a different price profile and an Aylmer-trained eye won't catch the nuances. Reach out and I'll send the analysis within 24 hours.",
+  },
 ];
 
 /* ── Sub-sectors ── */
