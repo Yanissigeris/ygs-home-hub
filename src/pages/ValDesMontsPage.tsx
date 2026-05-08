@@ -8,7 +8,7 @@ const ValDesMontsPage = () => (
     metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage — à 30 minutes de Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts" }}
-    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs cristallins, forêts et tranquillité — le paradis de villégiature de l'Outaouais.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs cristallins, terrains boisés et tranquillité — la municipalité de villégiature de l'Outaouais. Plus de 200 lacs, à 30-40 minutes de Gatineau et 45 minutes d'Ottawa.", image: heroImg }}
     trustSpecialty="Spécialiste Val-des-Monts et environs"
     lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi Val-des-Monts est unique", subtitle: "Plus de 200 lacs, des terrains boisés immenses et une qualité de vie incomparable." }}
     reasons={[
