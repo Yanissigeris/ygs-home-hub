@@ -225,7 +225,7 @@ A flawed pricing strategy costs a Gatineau seller between $14,000 and $25,000 in
 
 Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatineau, and home insurance. Each additional month on the market, an overpriced property accumulates about $2,750 in direct costs — not counting the "stale" effect that lowers future offers by 1 to 2%.
 
-$15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/sell-home) based on real comparables, that's the logical starting point.
+$15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/home-valuation) based on real comparables, that's the logical starting point.
 
 > [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
 
@@ -248,7 +248,7 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
 
 ---
 
-*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/sell-home), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
   },
   {
     slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
