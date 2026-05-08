@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
+import ContentBlock from "@/components/ContentBlock";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
 import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
