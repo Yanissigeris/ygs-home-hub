@@ -77,7 +77,7 @@ const BrokerPerspective = ({
 }) => {
   const lang = useLanguage();
   const title = data.title || (lang === "en" ? `My take on ${neighborhoodName}` : `Mon regard sur ${neighborhoodName}`);
-  const label = lang === "en" ? "Broker's take" : "L'avis du courtier";
+  const label = lang === "en" ? "Broker's point of view" : "L'avis du courtier";
   const credentials = lang === "en" 
     ? "Real Estate Broker · RE/MAX Hall of Fame · 300+ transactions"
     : "Courtier immobilier · Hall of Fame RE/MAX · 300+ transactions";
