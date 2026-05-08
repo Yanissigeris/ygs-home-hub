@@ -51,7 +51,7 @@ const InstagramSvg = () => (
   <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
 );
 
-const FooterAccordion = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
+const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; links: { label: string; href: string }[]; twoColumns?: boolean }) => {
   const [open, setOpen] = React.useState(false);
   const reactId = React.useId();
   const panelId = `footer-acc-${reactId}`;
@@ -70,7 +70,7 @@ const FooterAccordion = ({ title, links }: { title: string; links: { label: stri
         aria-label={title}
         {...(!open ? { inert: "" as unknown as boolean } : {})}
       >
-        <ul className="space-y-2.5">
+        <ul className={twoColumns ? "grid grid-cols-2 gap-x-4 gap-y-2.5" : "space-y-2.5"}>
           {links.map((l) => (
             <li key={l.href + l.label}>
               <Link
@@ -177,7 +177,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           {/* ── Mobile: accordion columns ── */}
           <div className="sm:hidden py-6" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
-              <FooterAccordion key={col.title} title={col.title} links={col.links} />
+              <FooterAccordion key={col.title} title={col.title} links={col.links} twoColumns={col.title === "Quartiers" || col.title === "Neighborhoods"} />
             ))}
           </div>
 
