@@ -165,7 +165,7 @@ Une stratégie de prix erronée coûte entre 14 000 $ et 25 000 $ à un vendeur 
 
 Le portage inclut intérêts hypothécaires, taxes municipales d'environ 1,4 % à Gatineau et assurance habitation. À chaque mois additionnel sur le marché, une propriété surévaluée accumule environ 2 750 $ de coûts directs, sans compter l'effet « stale » qui fait baisser les offres futures de 1 à 2 % supplémentaires.
 
-15 000 $, c'est le coût plancher. Le vrai chiffre peut monter à 30 000 $ ou plus si la propriété traîne au-delà de 90 jours. Pour une [évaluation propriété à Gatineau](/vendre) basée sur les comparables réels, c'est le point de départ logique.
+15 000 $, c'est le coût plancher. Le vrai chiffre peut monter à 30 000 $ ou plus si la propriété traîne au-delà de 90 jours. Pour une [évaluation propriété à Gatineau](/vendre-ma-maison-gatineau) basée sur les comparables réels, c'est le point de départ logique.
 
 > [YGS] Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse — c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
 
@@ -188,7 +188,7 @@ R : Il faut nuancer. Au T1 2026, le marché a continué de se rééquilibrer pen
 
 ---
 
-*Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
     bodyEn: `The Gatineau market rebalanced in the first quarter of 2026. Listings jumped 18% while sales fell 10%, and the pricing strategy that worked in 2023 no longer works today. Here are the three mistakes I still see on the ground and what they really cost.
 
 In Q1 2026, the Chambre immobilière de l'Outaouais recorded 936 residential sales in the Gatineau metropolitan area, a 10% drop from the same quarter in 2025. Meanwhile, active listings jumped to 1,394 on a monthly average — 18% more than Q1 2025. Average time on market for single-family homes fell to 38 days, but that average hides a brutal reality: well-priced properties sell in under 30 days, others linger 60 to 90 days and end up cutting their price.
@@ -225,7 +225,7 @@ A flawed pricing strategy costs a Gatineau seller between $14,000 and $25,000 in
 
 Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatineau, and home insurance. Each additional month on the market, an overpriced property accumulates about $2,750 in direct costs — not counting the "stale" effect that lowers future offers by 1 to 2%.
 
-$15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/sell-home) based on real comparables, that's the logical starting point.
+$15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/home-valuation) based on real comparables, that's the logical starting point.
 
 > [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
 
@@ -248,7 +248,7 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
 
 ---
 
-*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/sell-home), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
   },
   {
     slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
@@ -303,7 +303,7 @@ R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentati
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau-centre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
     bodyEn: `Q1 2026 numbers are out. Sales are down, listings up — and for the first time, the median price of single-family homes in Gatineau shows a slight decline. Before listing your home this spring, here's what really changes.
 
 > "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices — without overturning the seller advantage, but changing what you need to do to maximize your price." — YGS Analysis based on APCIQ/CIO data, April 2026.
@@ -341,7 +341,7 @@ A: Yes. More inventory means more visual competition. Presentation, photos, and 
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau-centre), [Hull](/en/hull), and [Aylmer](/en/aylmer). Over 200 transactions completed in the region.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull), and [Aylmer](/en/aylmer). Over 200 transactions completed in the region.*`,
   },
   {
     slug: "plex-gatineau-mars-2026",
@@ -391,7 +391,7 @@ R : Divisez les revenus bruts mensuels par le prix d'achat. Ratio cible : 1 %. L
 R : Médian à 585 500 $ en mars 2026. Le bon prix dépend du secteur et des loyers réels.
 
 **Q : Plex sous 500 000 $ possible ?**
-R : Oui, à [Buckingham](/buckingham), [Masson-Angers](/masson-angers) et [Gatineau centre](/gatineau-centre) — avec une analyse de secteur avant toute offre.
+R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-angers) et [Gatineau centre](/gatineau) — avec une analyse de secteur avant toute offre.
 
 ---
 
@@ -399,7 +399,7 @@ R : Oui, à [Buckingham](/buckingham), [Masson-Angers](/masson-angers) et [Gatin
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau-centre), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
     bodyEn: `While single-family sales drop and condos pile up on the market, one category is doing the exact opposite. Plex in the Outaouais.
 
 > In March 2026, plex in Gatineau sell in an average of 23 days — versus 65 days in March 2025 — a 42-day compression in one year, according to the Outaouais Real Estate Board.
@@ -432,7 +432,7 @@ A: Divide gross monthly income by purchase price. Target ratio: 1%. Reported inc
 A: Median is $585,500 in March 2026. The right price depends on the area and actual rents.
 
 **Q: Plex under $500,000 possible?**
-A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and [Gatineau centre](/en/gatineau-centre) — with area analysis before any offer.
+A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and [Gatineau centre](/en/gatineau) — with area analysis before any offer.
 
 ---
 
@@ -440,7 +440,7 @@ A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) a
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau-centre), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 transactions.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 transactions.*`,
   },
   {
     slug: "marche-immobilier-gatineau-2025",
@@ -469,7 +469,7 @@ Les prix médians dans les secteurs les plus recherchés de Gatineau — [Aylmer
 
 ### Volume des ventes
 
-Le volume des transactions reste solide, avec une activité particulièrement forte dans le segment des propriétés unifamiliales et des plex d'investissement. Les secteurs de [Buckingham](/buckingham) et [Masson-Angers](/masson-angers) gagnent aussi en popularité grâce à des prix d'entrée plus accessibles.
+Le volume des transactions reste solide, avec une activité particulièrement forte dans le segment des propriétés unifamiliales et des plex d'investissement. Les secteurs de [Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) gagnent aussi en popularité grâce à des prix d'entrée plus accessibles.
 
 ### Secteurs à surveiller
 
@@ -597,7 +597,7 @@ Au Canada, la mise de fonds minimale est de 5% pour une propriété de moins de 
 
 ### 3. Choisir le bon quartier
 
-Gatineau offre une diversité de quartiers, chacun avec son caractère. [Aylmer](/aylmer) pour les familles, [Hull](/hull) pour la proximité d'Ottawa, le [Plateau](/plateau) pour les jeunes professionnels, [Buckingham](/buckingham) pour un cadre plus rural.
+Gatineau offre une diversité de quartiers, chacun avec son caractère. [Aylmer](/aylmer) pour les familles, [Hull](/hull) pour la proximité d'Ottawa, le [Plateau](/plateau) pour les jeunes professionnels, [Buckingham](/buckingham-masson-angers) pour un cadre plus rural.
 
 ### 4. L'inspection préachat
 
@@ -731,8 +731,8 @@ Avant d'investir, une analyse rigoureuse est essentielle :
 ### Secteurs à surveiller
 
 - **[Hull](/hull)** : Fort potentiel locatif grâce à la proximité d'Ottawa et la revitalisation du centre-ville.
-- **[Gatineau centre](/gatineau-centre)** : Prix d'achat encore accessibles avec des loyers en hausse.
-- **[Buckingham](/buckingham)** : Marché émergent avec des prix d'entrée bas.
+- **[Gatineau centre](/gatineau)** : Prix d'achat encore accessibles avec des loyers en hausse.
+- **[Buckingham](/buckingham-masson-angers)** : Marché émergent avec des prix d'entrée bas.
 
 ### Erreurs à éviter
 
@@ -764,7 +764,7 @@ Before investing, a rigorous analysis is essential:
 ### Areas to Watch
 
 - **[Hull](/en/hull)**: Strong rental potential thanks to Ottawa proximity and downtown revitalization.
-- **[Gatineau Centre](/en/gatineau-centre)**: Still accessible purchase prices with rising rents.
+- **[Gatineau Centre](/en/gatineau)**: Still accessible purchase prices with rising rents.
 - **[Buckingham](/en/buckingham)**: Emerging market with low entry prices.
 
 ### Mistakes to Avoid
@@ -1402,11 +1402,11 @@ Hull offre un style de vie plus urbain, parfait pour les familles actives :
 
 **Idéal pour** : Familles qui travaillent à Ottawa, amateurs de vie urbaine, jeunes professionnels.
 
-### [Buckingham](/buckingham) — Nature et espace
+### [Buckingham](/buckingham-masson-angers) — Nature et espace
 
 **Prix médian** : 300 000 $ à 400 000 $
 
-[Buckingham](/buckingham) et [Masson-Angers](/masson-angers) offrent le meilleur rapport espace-prix de Gatineau :
+[Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) offrent le meilleur rapport espace-prix de Gatineau :
 - **Terrains très grands** — Demi-acres et plus facilement disponibles
 - **Rivière du Lièvre** — Activités nautiques, pêche, paysages
 - **Communauté tissée serrée** — Ambiance de petite ville
@@ -2142,7 +2142,7 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 - **Type idéal** — Triplex et quadruplex
 - **Clientèle** — Familles, travailleurs, étudiants UQO
 
-### [Buckingham](/buckingham) — Le potentiel caché
+### [Buckingham](/buckingham-masson-angers) — Le potentiel caché
 - **Prix très bas** — Duplex à partir de 300 000 $
 - **Rendement** — 6 % à 8 % brut
 - **Risque** — Taux de roulement plus élevé

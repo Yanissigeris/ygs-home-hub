@@ -222,7 +222,7 @@ Chelsea is a niche market — properties sell to buyers seeking a specific lifes
     published: true,
     body: `## Pourquoi Cantley pour un grand terrain?
 
-Cantley est l'une des municipalités les plus prisées de l'Outaouais pour les grands terrains. Située à seulement 20 minutes de [Gatineau](/gatineau-centre), elle offre la vie rurale avec la commodité de la ville à proximité. Les terrains varient de 1 à plus de 10 acres, avec des prix encore accessibles comparés à Chelsea.
+Cantley est l'une des municipalités les plus prisées de l'Outaouais pour les grands terrains. Située à seulement 20 minutes de [Gatineau](/gatineau), elle offre la vie rurale avec la commodité de la ville à proximité. Les terrains varient de 1 à plus de 10 acres, avec des prix encore accessibles comparés à Chelsea.
 
 ## Zonage et réglementation
 
@@ -243,7 +243,7 @@ Cantley est idéal si vous cherchez l'espace et la tranquillité sans être isol
 **Lire aussi** : [Guide acheteur](/guide-acheteur-gatineau) · [Page quartier Cantley](/cantley)`,
     bodyEn: `## Why Cantley for a Large Lot?
 
-Cantley is one of the most sought-after municipalities in the Outaouais for large lots. Located just 20 minutes from [Gatineau](/en/gatineau-centre), it offers rural living with city convenience nearby. Lots range from 1 to over 10 acres, with prices still accessible compared to [Chelsea](/en/chelsea).
+Cantley is one of the most sought-after municipalities in the Outaouais for large lots. Located just 20 minutes from [Gatineau](/en/gatineau), it offers rural living with city convenience nearby. Lots range from 1 to over 10 acres, with prices still accessible compared to [Chelsea](/en/chelsea).
 
 ## Zoning and Regulations
 
@@ -403,7 +403,7 @@ Since 2020, remote work has made Cantley accessible to a new group of buyers —
     published: true,
     body: `## Val-des-Monts : le paradis des chalets
 
-Avec plus de 200 lacs, Val-des-Monts est la destination chalet par excellence en Outaouais. Située à 30-40 minutes de [Gatineau](/gatineau-centre), la municipalité offre des paysages exceptionnels et un accès à la nature difficile à égaler.
+Avec plus de 200 lacs, Val-des-Monts est la destination chalet par excellence en Outaouais. Située à 30-40 minutes de [Gatineau](/gatineau), la municipalité offre des paysages exceptionnels et un accès à la nature difficile à égaler.
 
 ## Bord de lac vs hors bord de lac
 
@@ -429,7 +429,7 @@ Val-des-Monts est un investissement dans votre qualité de vie. Prenez le temps 
 **Lire aussi** : [Val-des-Monts — page quartier](/val-des-monts) · [Guide acheteur](/guide-acheteur-gatineau)`,
     bodyEn: `## Val-des-Monts: Cottage Paradise
 
-With over 200 lakes, Val-des-Monts is the ultimate cottage destination in the Outaouais. Located 30-40 minutes from [Gatineau](/en/gatineau-centre), the municipality offers exceptional landscapes and nature access that's hard to match.
+With over 200 lakes, Val-des-Monts is the ultimate cottage destination in the Outaouais. Located 30-40 minutes from [Gatineau](/en/gatineau), the municipality offers exceptional landscapes and nature access that's hard to match.
 
 ## Waterfront vs Off-Waterfront
 
@@ -791,7 +791,7 @@ Le Pontiac offre une diversité impressionnante : fermes centenaires en pierre, 
 
 ## Villages à connaître
 
-Les principaux villages du Pontiac incluent Luskville (le plus proche de [Gatineau](/gatineau-centre)), Quyon, Shawville, Bristol et Fort-Coulonge. Chaque village a son caractère et son niveau de services.
+Les principaux villages du Pontiac incluent Luskville (le plus proche de [Gatineau](/gatineau)), Quyon, Shawville, Bristol et Fort-Coulonge. Chaque village a son caractère et son niveau de services.
 
 ## Considérations pratiques
 
@@ -812,7 +812,7 @@ The Pontiac offers impressive diversity: century-old stone farmhouses, renovated
 
 ## Villages to Know
 
-The main Pontiac villages include Luskville (closest to [Gatineau](/en/gatineau-centre)), Quyon, Shawville, Bristol and Fort-Coulonge. Each village has its own character and service level.
+The main Pontiac villages include Luskville (closest to [Gatineau](/en/gatineau)), Quyon, Shawville, Bristol and Fort-Coulonge. Each village has its own character and service level.
 
 ## Practical Considerations
 
@@ -1041,7 +1041,7 @@ Un bungalow rénové avec sous-sol aménagé peut servir de logement locatif (av
 
 Un bungalow à Côte-d'Azur est un excellent investissement si vous êtes prêt à rénover. Faites bien vos calculs : prix d'achat + budget rénovation = valeur après travaux. C'est souvent une équation gagnante.
 
-**Lire aussi** : [Rénovations qui ajoutent de la valeur](/blogue/renovations-qui-ajoutent-valeur-maison-gatineau) · [Côte-d'Azur quartier abordable](/blogue/cote-dazur-gatineau-quartier-abordable)`,
+**Lire aussi** : [Rénovations qui ajoutent de la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Côte-d'Azur quartier abordable](/blogue/cote-dazur-gatineau-quartier-abordable)`,
     bodyEn: `## Why a Bungalow in Côte-d'Azur?
 
 Côte-d'Azur bungalows are among the most affordable properties in Gatineau. With prices often between $250,000 and $350,000, they represent an excellent entry point for first-time buyers and investors.
@@ -1062,7 +1062,7 @@ A renovated bungalow with a finished basement can serve as a rental unit (with p
 
 A bungalow in Côte-d'Azur is an excellent investment if you're willing to renovate. Do your math: purchase price + renovation budget = after-renovation value. It's often a winning equation.
 
-**Read also**: [Renovations that add value](/en/blog/renovations-adding-value-gatineau) · [Côte-d'Azur affordable neighborhood](/en/blog/cote-dazur-gatineau-affordable-neighborhood)`,
+**Read also**: [Renovations that add value](/en/blog/renovations-that-increase-home-value) · [Côte-d'Azur affordable neighborhood](/en/blog/cote-dazur-gatineau-affordable-neighborhood)`,
   },
   {
     slug: "renover-cote-dazur-potentiel",

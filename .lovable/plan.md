@@ -1,71 +1,48 @@
-# Plan — Contraste AAA sur overline & subtitle (SectionHeading global)
+# Fix 22 liens internes cassés dans les articles de blog
 
-## Problème mesuré
+## Contexte
+Les champs `body` (FR) et `bodyEn` (EN) des 46 articles dans `src/data/blog-posts.ts` et `src/data/blog-posts-neighborhoods.ts` contiennent des liens markdown internes vers des routes qui n'existent pas dans `src/App.tsx`.
 
-| Élément | Couleur actuelle | Sur fond | Ratio | WCAG |
-|---|---|---|---|---|
-| `.label-overline` (« Articles ») | `var(--gold)` #A88A5A | cream #F7F4EE | ~2.94:1 | ❌ AA |
-| `.prose-body` subtitle | `text-muted-foreground` | cream | ~4.5:1 | ❌ AAA |
-| H2 « Derniers articles » | `var(--ink)` #17303B | cream | ~12:1 | ✅ AAA (déjà OK) |
+## Scope
+- Modifier UNIQUEMENT les deux fichiers `src/data/blog-posts.ts` et `src/data/blog-posts-neighborhoods.ts`
+- Ne PAS toucher : slugs, titles, SEO metadata, JSON-LD, App.tsx, pages/
+- Préserver le formatting (indentation, line endings)
 
-Cible : **AAA partout (≥7:1 pour body, ≥4.5:1 pour large text 18pt+)**.
+## Étape 1 — Search & Replace globaux (6 remplacements)
+Appliquer sur LES DEUX fichiers simultanément :
 
-## Changements (2 fichiers)
+1. `](/gatineau-centre)` → `](/gatineau)`
+2. `](/buckingham)` → `](/buckingham-masson-angers)`
+3. `](/vendre)` → `](/vendre-ma-maison-gatineau)`
+4. `](/blogue/renovations-qui-ajoutent-valeur-maison-gatineau)` → `](/blogue/renovations-qui-augmentent-valeur-maison)`
+5. `](/en/gatineau-centre)` → `](/en/gatineau)`
+6. `](/en/blog/renovations-adding-value-gatineau)` → `](/en/blog/renovations-that-increase-home-value)`
 
-### 1. `src/index.css` — `.label-overline` (L.284-303)
+Chaque pattern inclut le `]` ou `](` initial pour ne matcher que les liens markdown, pas du texte brut.
 
-Préserver l'identité dorée via le **trait** uniquement, passer le **texte en ink** :
+## Étape 2 — Fix manuel contextuel (2 occurrences)
+Article : `3-erreurs-prix-vendeur-gatineau-2026` (bodyEn uniquement)
 
-```css
-.label-overline {
-  font-family: var(--sans);
-  font-size: .62rem;
-  font-weight: 600;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--ink);            /* était: var(--gold) — AAA ~12:1 */
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+- B1 — Lien ancré "property valuation in Gatineau" : `/en/sell-home` → `/en/home-valuation`
+- B2 — Lien ancré "Gatineau" (bio courtier) : `/en/sell-home` → `/en/gatineau`
 
-.label-overline::before {
-  content: '';
-  display: inline-block;
-  width: 22px;
-  height: 1px;
-  background: var(--gold);       /* trait doré conservé = identité préservée */
-  flex-shrink: 0;
-}
+Ces 2 occurrences seront corrigées individuellement car elles ont des cibles différentes selon leur contexte.
+
+## Étape 3 — Validation post-modification
+Exécuter les 7 greps de vérification. Tous doivent retourner 0 résultat :
+```
+grep -F '](/gatineau-centre)' src/data/blog-posts*.ts
+grep -F '](/buckingham)' src/data/blog-posts*.ts
+grep -F '](/vendre)' src/data/blog-posts*.ts
+grep -F '](/blogue/renovations-qui-ajoutent-valeur-maison-gatineau)' src/data/blog-posts*.ts
+grep -F '](/en/gatineau-centre)' src/data/blog-posts*.ts
+grep -F '](/en/blog/renovations-adding-value-gatineau)' src/data/blog-posts*.ts
+grep -F '](/en/sell-home)' src/data/blog-posts*.ts
 ```
 
-### 2. `src/index.css` — `.prose-body` (L.278-282)
-
-Remplacer `text-muted-foreground` (variable) par la variable canonique du body article déjà utilisée (`--article-body-color` = #17303B ou équivalent), avec un léger allègement contrôlé :
-
-```css
-.prose-body {
-  @apply text-[1rem] leading-[1.8];
-  color: var(--ink);              /* AAA ~12:1 sur cream */
-  max-width: 38rem;
-  font-weight: 300;
-}
+Vérifier que les liens valides restent intacts :
 ```
-
-> Si `--article-body-color` existe déjà (créée lors d'une itération précédente), l'utiliser à la place de `var(--ink)` pour cohérence avec les articles de blogue.
-
-## Ce qui reste intact
-
-- H1, H2, H3 (déjà ink, AAA)
-- Boutons CTA dorés (texte ink déjà corrigé)
-- Liens « Lire → » (déjà ink + hover gold)
-- Trait doré décoratif de l'overline (identité dorée préservée)
-- Dark mode / hero overlays (overrides existants `[data-hero-dark]`)
-
-## Vérification post-implémentation
-
-Mesurer via DevTools sur `/blogue` :
-1. « ARTICLES » overline → `#17303B` sur `#F7F4EE` → **12.47:1** ✅ AAA
-2. Subtitle prose-body (sur n'importe quelle page utilisant SectionHeading avec subtitle) → **12.47:1** ✅ AAA
-3. Non-régression : trait doré toujours visible avant l'overline
-4. Non-régression : overlines blanches dans les hero sombres (via `[data-hero-dark] p.label-overline` L.712)
+grep -F '](/buckingham-masson-angers)' src/data/blog-posts*.ts  # >= 1
+grep -F '](/en/buckingham)' src/data/blog-posts*.ts             # >= 1
+grep -F '](/vendre-ma-maison-gatineau)' src/data/blog-posts*.ts # >= 1
+```
