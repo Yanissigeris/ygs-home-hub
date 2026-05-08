@@ -45,9 +45,9 @@ const ValDesMontsPageEn = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Cantley", href: "/en/cantley", detail: "Rural, hills, large lots" },
-      { name: "Chelsea", href: "/en/chelsea", detail: "Village, Gatineau Park" },
-      { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, river, nature" },
+      { name: "Cantley", href: "/en/cantley", detail: "Rural, hills, large lots — southern neighbor of Val-des-Monts" },
+      { name: "Chelsea", href: "/en/chelsea", detail: "Village, Gatineau Park — high-end alternative on the west side" },
+      { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, river, nature — with high school services" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
       { title: "Sell my cottage", text: "Selling strategy for recreational properties.", href: "/en/sell" },
