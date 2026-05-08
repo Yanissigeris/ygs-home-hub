@@ -42,9 +42,9 @@ const ValDesMontsPage = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Cantley", href: "/cantley", detail: "Rural, collines, grands terrains" },
-      { name: "Chelsea", href: "/chelsea", detail: "Village, parc de la Gatineau" },
-      { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Abordable, rivière, nature" },
+      { name: "Cantley", href: "/cantley", detail: "Rural, collines, grands terrains — voisin sud de Val-des-Monts" },
+      { name: "Chelsea", href: "/chelsea", detail: "Village, parc de la Gatineau — alternative haut de gamme côté ouest" },
+      { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Abordable, rivière, nature — avec école secondaire" },
     ]}}
     related={{ pages: [
       { title: "Vendre mon chalet à Val-des-Monts", text: "Stratégie de vente pour propriétés de villégiature.", href: "/vendre-ma-maison-gatineau" },
