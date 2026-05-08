@@ -30,6 +30,18 @@ const faq = [
     q: "Is Pontiac a good option for anglophone families?",
     a: "Yes — Pontiac is one of the most bilingual communities in the National Capital Region. With approximately 64% of residents bilingual and nearly 39% with English as mother tongue (2016 Census), it is a naturally anglophone-friendly environment. The Western Quebec School Board serves the area for English-language education. For anglophone families relocating from Ottawa who want more space at an accessible price within Quebec, Pontiac is often a compelling option that is under-explored.",
   },
+  {
+    q: "What does a Pontiac home cost in 2026?",
+    a: "Pontiac is one of the most affordable corners of the National Capital Region. As of May 2026, single-family homes on standard residential lots in Luskville and Breckenridge typically trade between $329,000 and $479,000 on Centris. Properties with acreage (2–10 acres) usually run $425,000 to $625,000 depending on house condition and waterfront access. True waterfront on the Ottawa River — increasingly rare — clears $625,000 and can reach $1M+ for protected, well-maintained estates.",
+  },
+  {
+    q: "Are wells, septic and propane standard in Pontiac?",
+    a: "Yes. Almost no Pontiac property is connected to municipal water or sewer. Artesian wells, septic systems and propane (or oil/wood) heating are the norm. None of these are problems on their own — they're standard semi-rural Quebec — but they require a thorough professional inspection: water potability, well flow rate, septic tank age and percolation field, propane tank ownership status, and (where relevant) wood-stove WETT certification. I include all of these in every Pontiac inspection clause.",
+  },
+  {
+    q: "Is Pontiac in a flood zone along the Ottawa River?",
+    a: "Parts of Pontiac do sit in the regulated 0–20-year and 20–100-year flood zones along the Ottawa River, mapped by the MRC des Collines-de-l'Outaouais after the 2017 and 2019 floods. Properties in those zones can have insurance, financing and reconstruction restrictions. Before any offer on a riverfront or near-river property, I pull the official flood-zone map and the property's location relative to the high-water mark — and I walk you through what that means for insurability and resale.",
+  },
 ];
 
 const PontiacPageEn = () => {
