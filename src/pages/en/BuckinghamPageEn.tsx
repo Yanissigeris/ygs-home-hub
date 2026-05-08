@@ -175,6 +175,23 @@ const BuckinghamPageEn = () => (
       </div>
     </section>
 
+    {/* ═══ MARKET DATA ═══ */}
+    <ContentBlock background="alt">
+      <p className="label-overline">MARKET DATA</p>
+      <h2 className="mt-3">Buckingham &amp; Masson-Angers — what the 2026 numbers say</h2>
+      <div className="mt-6 space-y-4 max-w-3xl">
+        <p className="prose-body">
+          As of May 2026, the Buckingham core sector shows roughly 35–45 active single-family listings on Centris, with an additional 25–35 in Masson-Angers village. Median asking prices sit between $399,900 and $529,000 for resale single-family homes, while new construction in Masson-Angers — driven by developers active around chemin de Montréal Est and rue des Pommiers — pushes that ceiling closer to $625,000 for a turnkey, energy-efficient build with double garage. For an Ottawa cross-river family used to Barrhaven or Orléans pricing, the same lot and floor plan represents a $200,000–$300,000 saving.
+        </p>
+        <p className="prose-body">
+          The Outaouais Real Estate Board (CIO) reported a median time on market of 32 days for single-family homes across metropolitan Gatineau in Q4 2025. Buckingham–Masson-Angers tracks slightly above that average — turnkey homes priced correctly typically receive offers within 25–45 days, while properties that need significant renovation can sit 60–90 days. The lesson for sellers: pricing strategy and pre-sale preparation matter more in this sector than in the Plateau, where shortage of inventory still rescues mistakes.
+        </p>
+        <p className="prose-body">
+          For first-time buyers, the federal Home Buyers' Plan (HBP, up to $60,000 per person from RRSP) and the Tax-Free First Home Savings Account (FHSA, up to $40,000 lifetime) stack with provincial programs. Combined with Buckingham's entry prices, the math for a couple with two solid jobs in Gatineau or partial-remote in Ottawa often beats anything available on the Ontario side at the same down-payment level. I walk every first-time buyer through this calculation before we visit a single property — it usually changes their search radius.
+        </p>
+      </div>
+    </ContentBlock>
+
     {/* ═══ FAQ ═══ */}
     <FAQSection title="Frequently asked questions — Buckingham and Masson-Angers" items={faq} />
 
