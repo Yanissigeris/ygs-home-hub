@@ -29,9 +29,13 @@ const sectors = [
 
 
 const faq = [
-  { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. Generally 15-30% savings on purchase price, but municipal and school taxes should also be considered." },
-  { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec — promise to purchase, notary, etc. I guide you at every step." },
-  { q: "Are taxes higher in Québec?", a: "Municipal taxes vary by area. Income tax is different too. We look at the full picture together." },
+  { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. As of May 2026, savings on the purchase price typically range from 15 to 30 percent compared with comparable Ottawa neighbourhoods, though municipal and school taxes should also be factored into your full cost picture." },
+  { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec — promise to purchase, inspection conditions, notary signing — and a Québec-licensed broker is required to represent you. I guide you at every step." },
+  { q: "Are taxes higher in Québec?", a: "Municipal and school taxes vary by sector and are usually lower per dollar of value than equivalent Ottawa addresses. Personal income tax is structured differently in Québec — we look at the full picture together so you can compare net of all costs." },
+  { q: "Can I keep my Ontario job and family doctor?", a: "Yes — many of my clients commute daily to downtown Ottawa or work hybrid. You can also keep an Ontario family doctor in many cases, though Québec's RAMQ provides public health coverage once you become a Québec resident." },
+  { q: "What about kids' schools — French or English?", a: "Both options exist in Outaouais. Aylmer and the Plateau have well-known English public schools; French immersion and full-French schools are widely available. School board eligibility rules apply, so we discuss your situation early." },
+  { q: "How long does the bridge commute really take?", a: "From Aylmer, Hull or the Plateau, downtown Ottawa is typically a 15 to 30 minute drive depending on bridge and time of day. STO buses, bike paths and the future tramway plans all factor into the mid-term picture." },
+  { q: "Do I need a Québec mortgage?", a: "Most Canadian lenders operate on both sides of the river, so you can often keep your existing bank. Underwriting still applies provincial rules — I introduce you to mortgage brokers who handle Ottawa-to-Gatineau files routinely." },
 ];
 
 const BuyFromOttawaPageEn = () => (
@@ -66,9 +70,15 @@ const BuyFromOttawaPageEn = () => (
     />
 
     <ContentBlock narrow>
-      <SectionHeading title="A broker who knows both sides" />
-      <p className="prose-body mt-5">
-        Since 2017 in Gatineau, I've helped dozens of families cross the river. I know the advantages, the trade-offs and the pitfalls — and I help you navigate it all with confidence.
+      <SectionHeading overline="Local expertise" title="A broker who knows both sides of the river" />
+      <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
+        Active in Outaouais real estate since 2017, I've guided dozens of Ontario households through the move to Gatineau — federal employees, healthcare professionals, young families, and retirees right-sizing for a calmer pace. The transition is rarely just about price per square foot. It's about commute reliability, schooling in the right language, access to a doctor, snow-clearing standards, and how a Québec property tax bill actually reads.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        I know which Aylmer streets fill up first when listings hit, which Hull blocks have aging plumbing under fresh paint, where the Plateau's newer phases have noise easements, and which Buckingham pockets are quietly appreciating because of recent infrastructure work. That ground-level knowledge is what protects an out-of-province buyer from costly assumptions.
+      </p>
+      <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
+        I also coordinate the supporting cast — Québec notary, bilingual mortgage broker, certified inspector familiar with older Hull stock, movers who handle interprovincial files. You don't have to assemble that team alone from across the river.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/buyer-consultation">Book my consultation</Link>
