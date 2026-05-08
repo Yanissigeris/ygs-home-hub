@@ -24,10 +24,10 @@ const ValDesMontsPage = () => (
     ]}
     profilesTitle="Val-des-Monts est idéal pour…"
     profiles={[
-      { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp — tous les jours." },
-      { icon: Home, title: "Chercheurs de chalet", text: "Chalets quatre-saisons, du rustique au luxueux." },
-      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains, air pur et communauté accueillante." },
-      { icon: Mountain, title: "Télétravailleurs et retraités", text: "Cadre de vie exceptionnel avec accès aux services." },
+      { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre offrent les meilleures conditions pour la vie nautique quatre saisons." },
+      { icon: Home, title: "Chercheurs de chalet", text: "Du chalet rustique 200 000 $ au bord de lac luxueux 750 000 $+. Les chalets quatre-saisons sont les plus demandés depuis le télétravail." },
+      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire dans Val-des-Monts — il faut prévoir le transport vers Buckingham ou Gatineau." },
+      { icon: Mountain, title: "Télétravailleurs et retraités", text: "Cadre de vie exceptionnel avec Internet haute vitesse disponible dans la majorité des secteurs. À 27 minutes d'Ottawa pour les rencontres en présentiel ponctuelles." },
     ]}
     inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
     faq={{
