@@ -93,6 +93,8 @@ const PlateauPageEn = () => (
         </p>
       </div>
     </ContentBlock>
+    <InlineCTA text="Own property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <FAQSection title="Questions about the Plateau" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in the Plateau" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
