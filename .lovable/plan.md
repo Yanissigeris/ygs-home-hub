@@ -1,24 +1,29 @@
 ## Objective
-Add the `brokerPerspective` prop to `src/pages/CoteDazurPage.tsx` to activate the broker perspective section already supported by `NeighborhoodTemplate`.
+Bring `src/pages/en/CoteDazurPageEn.tsx` to E-E-A-T parity with the FR version by applying 7 exact prop-value replacements. No template changes, no other files touched.
 
-## Context
-- `NeighborhoodTemplate` already supports the optional `brokerPerspective` prop (deployed in Phase A).
-- Only `CoteDazurPage.tsx` needs to be modified; no other file changes.
+## Scope
+- File: `src/pages/en/CoteDazurPageEn.tsx` only
+- Untouched: `NeighborhoodTemplate.tsx`, `CoteDazurPage.tsx`, all other EN neighborhood pages
+- Preserved as-is: `seoTitle`, `metaDesc`, `ogImage`, `jsonLd`, hero `overline`+`title`, `guide`, `inlineCta`, `trustSpecialty`, `profilesTitle`, `related`, `cta`
 
-## Change Detail
+## The 7 modifications
 
-Insert the `brokerPerspective` prop between the existing `guide` and `cta` props in `src/pages/CoteDazurPage.tsx`:
+1. **Hero subtitle** — longer, mentions boulevards Maloney/La Vérendrye and 1960s-1990s bungalows + 15-20 min from Ottawa.
+2. **Lifestyle subtitle** — 3-sentence version with cross-river Ottawa angle.
+3. **Reasons** — 5 → 10 entries with Centris May 2026 range, OREB Q1 2026 $780k median, WQSB schools, transit, time-on-market, etc.
+4. **Profiles** — 4 → 5 cards (adds "Ottawa relocators").
+5. **FAQ** — 3 → 7 questions, including English-school (WQSB) and Ottawa savings questions.
+6. **Sectors detail** — enriched details for Limbour, Gatineau centre, Hull.
+7. **brokerPerspective** — new prop inserted between `guide` and `cta`, with English-adapted observation/dataPoint/takeaway (mentions $780k Ottawa comparison).
 
-```tsx
-brokerPerspective={{
-  observation: "Ce que je vois à Côte-d'Azur en ce moment : les acheteurs ont plus de choix qu'avant, donc une mise en marché efficace au bon prix devient déterminante. La majorité de mes acheteurs dans le secteur sont des familles qui cherchent un quartier mature et familial. Le secteur est très demandé, et les acheteurs qui le découvrent l'adorent.",
-  dataPoint: "La majorité des bungalows que je vends à Côte-d'Azur partent en moins de 21 jours quand le prix est juste. Quand le prix est trop optimiste au départ, le délai s'allonge significativement.",
-  takeaway: "Mon conseil aux propriétaires de Côte-d'Azur qui pensent vendre : prépare bien ta maison, répare les petits détails qui font une différence, et inscris au bon prix dès le départ. Sans ça, tu ne maximises pas le montant final et la vente prend plus de temps."
-}}
-```
+Each change is a literal block-for-block replacement using the exact text in the brief, indentation preserved (4 spaces before each root prop).
 
 ## Validation
-- TypeScript compiles without error.
-- Only `CoteDazurPage.tsx` appears in the diff.
-- The "Mon regard sur Côte-d'Azur" section renders between the inline CTA and the FAQ section.
-- Other neighborhood pages remain unaffected.
+- Single-file diff with 7 hunks
+- TypeScript compiles (prop already in `NeighborhoodProps`)
+- Word count ~330 → ~800-900
+- FAQ JSON-LD auto-emits 7 entries
+- Other EN neighborhood pages unaffected (no `brokerPerspective` prop)
+
+## Technical detail
+The `brokerPerspective` insertion is performed by replacing the existing `guide={...}` line with `guide={...}\n    brokerPerspective={{ ... }}` so no existing line is removed and the new prop sits cleanly between `guide` and `cta`.
