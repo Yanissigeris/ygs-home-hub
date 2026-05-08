@@ -166,73 +166,88 @@ const BrokerPerspective = ({
   );
 };
 
-const NeighborhoodTemplate = (p: NeighborhoodProps) => (
-  <>
-    <PageMeta title={p.seoTitle} description={p.metaDesc} ogImage={p.ogImage} />
-    <NeighborhoodJsonLd {...p.jsonLd} />
-    <FAQPageJsonLd items={p.faq.items} url={p.jsonLd.url} />
-    <HeroSection
-      overline={p.hero.overline}
-      title={p.hero.title}
-      subtitle={p.hero.subtitle}
-      primaryCta={{ label: p.cta.buttons[0]?.label ?? "Consultation", href: p.cta.buttons[0]?.href ?? "/consultation-acheteur" }}
-      secondaryCta={{ label: p.cta.buttons[1]?.label ?? "Évaluation", href: p.cta.buttons[1]?.href ?? "/evaluation-gratuite-gatineau" }}
-      heroBgImage={p.hero.image}
-    />
-<ImageTextSplit image={p.lifestyle.image} imageAlt={p.lifestyle.imageAlt} imagePosition="right">
-      <div className="label-overline">Le secteur</div>
-      <h2 className="mt-3">{p.lifestyle.title}</h2>
-      {p.lifestyle.subtitle && <p className="mt-2 text-muted-foreground">{p.lifestyle.subtitle}</p>}
-      <div className="mt-7 space-y-3.5">
-        {p.reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
+const NeighborhoodTemplate = (p: NeighborhoodProps) => {
+  const lang = useLanguage();
+  
+  return (
+    <>
+      <PageMeta title={p.seoTitle} description={p.metaDesc} ogImage={p.ogImage} />
+      <NeighborhoodJsonLd {...p.jsonLd} />
+      <FAQPageJsonLd items={p.faq.items} url={p.jsonLd.url} />
+      <HeroSection
+        overline={p.hero.overline}
+        title={p.hero.title}
+        subtitle={p.hero.subtitle}
+        primaryCta={{ 
+          label: p.cta.buttons[0]?.label ?? (lang === "en" ? "Consultation" : "Consultation"), 
+          href: p.cta.buttons[0]?.href ?? (lang === "en" ? "/en/buyer-consultation" : "/consultation-acheteur") 
+        }}
+        secondaryCta={{ 
+          label: p.cta.buttons[1]?.label ?? (lang === "en" ? "Valuation" : "Évaluation"), 
+          href: p.cta.buttons[1]?.href ?? (lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau") 
+        }}
+        heroBgImage={p.hero.image}
+      />
+      <ImageTextSplit image={p.lifestyle.image} imageAlt={p.lifestyle.imageAlt} imagePosition="right">
+        <div className="label-overline">{lang === "en" ? "The area" : "Le secteur"}</div>
+        <h2 className="mt-3">{p.lifestyle.title}</h2>
+        {p.lifestyle.subtitle && <p className="mt-2 text-muted-foreground">{p.lifestyle.subtitle}</p>}
+        <div className="mt-7 space-y-3.5">
+          {p.reasons.map((r) => (
+            <div key={r} className="flex items-center gap-3">
+              <CheckCircle2 size={16} className="shrink-0 text-accent" />
+              <span className="text-[0.9375rem] text-foreground">{r}</span>
+            </div>
+          ))}
+        </div>
+      </ImageTextSplit>
 
-    <CardGrid overline="Pour qui" title={p.profilesTitle} items={p.profiles} background="alt" />
+      <CardGrid 
+        overline={lang === "en" ? "Who it's for" : "Pour qui"} 
+        title={p.profilesTitle} 
+        items={p.profiles} 
+        background="alt" 
+      />
 
-    <InlineCTA text={p.inlineCta.text} buttonLabel={p.inlineCta.label} href={p.inlineCta.href} />
+      <InlineCTA text={p.inlineCta.text} buttonLabel={p.inlineCta.label} href={p.inlineCta.href} />
 
-    {p.brokerPerspective && (
-      <BrokerPerspective data={p.brokerPerspective} neighborhoodName={p.jsonLd.name} />
-    )}
+      {p.brokerPerspective && (
+        <BrokerPerspective data={p.brokerPerspective} neighborhoodName={p.jsonLd.name} />
+      )}
 
-    <FAQSection title={p.faq.title} items={p.faq.items} />
+      <FAQSection title={p.faq.title} items={p.faq.items} />
 
-    <SectorLinks
-      overline={p.sectors.overline ?? "Autres secteurs"}
-      title={p.sectors.title ?? "Explorer d'autres quartiers"}
-      sectors={p.sectors.list}
-    />
+      <SectorLinks
+        overline={p.sectors.overline ?? (lang === "en" ? "Other sectors" : "Autres secteurs")}
+        title={p.sectors.title ?? (lang === "en" ? "Explore other neighborhoods" : "Explorer d'autres quartiers")}
+        sectors={p.sectors.list}
+      />
 
-    <RelatedPages
-      overline={p.related.overline}
-      title={p.related.title ?? "À lire aussi"}
-      pages={p.related.pages}
-      background="alt"
-    />
+      <RelatedPages
+        overline={p.related.overline}
+        title={p.related.title ?? (lang === "en" ? "Read also" : "À lire aussi")}
+        pages={p.related.pages}
+        background="alt"
+      />
 
-    <GuideInlineCTA
-      guideType={p.guide.type}
-      headline={p.guide.headline}
-      text={p.guide.text}
-      ctaLabel={p.guide.ctaLabel}
-    />
+      <GuideInlineCTA
+        guideType={p.guide.type}
+        headline={p.guide.headline}
+        text={p.guide.text}
+        ctaLabel={p.guide.ctaLabel}
+      />
 
-    <CTASection
-      dark
-      title={p.cta.title}
-      text={p.cta.text}
-      buttons={p.cta.buttons}
-      trustLine={p.cta.trustLine}
-    />
+      <CTASection
+        dark
+        title={p.cta.title}
+        text={p.cta.text}
+        buttons={p.cta.buttons}
+        trustLine={p.cta.trustLine}
+      />
 
-    <StickyGuideBanner guideType={p.guide.type} label={p.guide.stickyLabel} />
-  </>
-);
+      <StickyGuideBanner guideType={p.guide.type} label={p.guide.stickyLabel} />
+    </>
+  );
+};
 
 export default NeighborhoodTemplate;
