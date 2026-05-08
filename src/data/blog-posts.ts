@@ -798,7 +798,7 @@ I help you analyze each opportunity rigorously — income, expenses, appreciatio
     published: true,
     body: `## Aylmer, Hull ou Plateau : quel quartier choisir?
 
-Gatineau offre une diversité de quartiers, chacun avec son propre caractère. Voici un comparatif pour vous aider à trouver celui qui correspond le mieux à votre style de vie.
+Gatineau offre une diversité de quartiers, chacun avec son propre caractère. Voici un comparatif entre [le secteur d'Aylmer](/aylmer), [le quartier de Hull](/hull) et le [Plateau](/plateau) pour vous aider à trouver celui qui correspond le mieux à votre style de vie.
 
 ### Aylmer
 
@@ -823,6 +823,8 @@ Gatineau offre une diversité de quartiers, chacun avec son propre caractère. V
 - Écoles neuves et parcs aménagés
 - Sentiment de communauté fort
 - Prix d'entrée plus bas, idéal pour un premier achat
+
+**Pour aller plus loin** — [Vivre à Aylmer : le guide complet du quartier](/blogue/vivre-aylmer-gatineau-guide-quartier) · [Acheter un condo à Hull : le guide pour investisseurs et acheteurs](/blogue/acheter-condo-hull-gatineau-guide)
 
 ### Comment choisir?
 
@@ -877,7 +879,7 @@ The best neighborhood depends on your priorities: proximity to work, schools, bu
     published: true,
     body: `## Mutation militaire à Gatineau : ce que vous devez savoir
 
-Si vous êtes un membre des Forces armées canadiennes affecté à la région de Gatineau, ce guide vous aidera à préparer votre relocalisation immobilière.
+Si vous êtes un membre des [Forces armées canadiennes](/militaire-gatineau) affecté à la région de Gatineau, ce guide vous aidera à préparer votre [relocalisation immobilière](/relocalisation-militaire-gatineau).
 
 ### Le programme IRP/BGRS
 
@@ -901,9 +903,11 @@ Gatineau offre plusieurs avantages pour les militaires :
 3. **Documentation** : Gardez tous vos reçus et documents pour le remboursement IRP.
 4. **Timing** : Le marché est plus compétitif au printemps — planifiez en conséquence.
 
+**Pour aller plus loin** — [Déménager d'Ottawa à Gatineau : guide complet](/blogue/demenager-ottawa-gatineau-guide) · [Les meilleurs quartiers pour les familles à Gatineau en 2025](/blogue/meilleurs-quartiers-familles-gatineau)
+
 ### Mon expertise militaire
 
-J'accompagne régulièrement des familles militaires dans leur relocalisation à Gatineau. Je connais le processus IRP et je m'assure que la transition se fait en douceur.`,
+J'accompagne régulièrement des familles militaires dans leur relocalisation à Gatineau. Je connais le processus IRP et je m'assure que la transition se fait en douceur. Pour préparer votre dossier, je vous offre une [évaluation gratuite](/evaluation-gratuite-gatineau) de votre situation.`,
     bodyEn: `## Military Posting to Gatineau: What You Need to Know
 
 If you're a Canadian Armed Forces member posted to the Gatineau area, this guide will help you prepare for your real estate relocation.
@@ -1292,11 +1296,13 @@ Le Québec offre des avantages que l'Ontario n'a pas :
 
 ### Le calcul global
 
-Quand on additionne tout — prix d'achat inférieur, garderies subventionnées, programmes fiscaux — une famille à Gatineau peut économiser **20 000 $ à 40 000 $ par an** comparativement à Ottawa, même avec des taxes municipales légèrement plus élevées.
+Quand on additionne tout — prix d'achat inférieur, garderies subventionnées, programmes fiscaux — une [famille à Gatineau](/relocalisation-ottawa-gatineau) peut économiser **20 000 $ à 40 000 $ par an** comparativement à Ottawa, même avec des taxes municipales légèrement plus élevées.
+
+**Pour aller plus loin** — [Déménager d'Ottawa à Gatineau : guide complet](/blogue/demenager-ottawa-gatineau-guide) · [Frais de notaire et frais de clôture à Gatineau : guide complet](/blogue/frais-notaire-achat-maison-gatineau)
 
 ### Mon avis
 
-Ne laissez pas le taux de taxation vous décourager d'acheter à Gatineau. Regardez le portrait complet. Je vous aide à faire le calcul personnalisé pour votre situation.`,
+Ne laissez pas le taux de taxation vous décourager d'[acheter à Gatineau](/acheter-a-gatineau-depuis-ottawa). Regardez le portrait complet. Je vous aide à faire le [calcul personnalisé](/evaluation-gratuite-gatineau) pour votre situation.`,
     bodyEn: `## Property Taxes in Gatineau vs Ottawa: The Complete Comparison
 
 It's the question everyone asks: "are taxes higher in Gatineau?" The short answer: yes, the rates are higher. But the full story is much more nuanced.
@@ -1611,7 +1617,7 @@ Aylmer is a safe bet for quality of life. Demand remains strong, protecting your
     published: true,
     body: `## Pourquoi l'inspection préachat est essentielle à Gatineau
 
-L'inspection préachat est votre meilleure protection contre les mauvaises surprises. À Gatineau, certains enjeux sont plus fréquents qu'ailleurs en raison du climat et de l'âge du parc immobilier.
+L'inspection préachat est votre meilleure protection contre les mauvaises surprises. [À Gatineau](/acheter-a-gatineau), certains enjeux sont plus fréquents qu'ailleurs en raison du climat et de l'âge du parc immobilier.
 
 ## Les éléments clés à vérifier
 
@@ -1640,12 +1646,14 @@ L'inspection préachat est votre meilleure protection contre les mauvaises surpr
 
 - **Maison unifamiliale** — Entre 500 $ et 700 $
 - **Condo** — Entre 350 $ et 500 $
-- **Plex** — Entre 600 $ et 900 $
+- **[Plex](/investir-plex-gatineau)** — Entre 600 $ et 900 $
 - **Tests supplémentaires** (radon, pyrite, eau) — 100 $ à 300 $ chacun
+
+**Pour aller plus loin** — [10 conseils pour réussir votre premier achat immobilier à Gatineau](/blogue/conseils-premier-achat-maison-gatineau) · [Frais de notaire et frais de clôture à Gatineau : guide complet](/blogue/frais-notaire-achat-maison-gatineau)
 
 ## Mon conseil
 
-Ne sautez jamais l'inspection, même dans un marché compétitif. Les économies potentielles dépassent largement le coût de l'inspection. Je vous recommande des inspecteurs de confiance dans la région.`,
+Ne sautez jamais l'inspection, même dans un marché compétitif. Les économies potentielles dépassent largement le coût de l'inspection. Je vous recommande des inspecteurs de confiance dans la région et je vous accompagne dans votre [premier achat à Gatineau](/premier-achat-gatineau).`,
     bodyEn: `## Why Pre-Purchase Inspection Is Essential in Gatineau
 
 A pre-purchase inspection is your best protection against costly surprises. In Gatineau, some issues are more common due to the climate and the age of the housing stock.
@@ -1704,7 +1712,7 @@ Never skip the inspection, even in a competitive market. The potential savings f
     published: true,
     body: `## 10 conseils pour votre premier achat à Gatineau
 
-Acheter sa première maison est excitant, mais aussi stressant. Voici mes 10 meilleurs conseils après des années à accompagner des premiers acheteurs à Gatineau.
+Acheter sa première maison est excitant, mais aussi stressant. Voici mes 10 meilleurs conseils après des années à accompagner des [premiers acheteurs à Gatineau](/premier-achat-gatineau).
 
 ## 1. Obtenez votre préqualification hypothécaire d'abord
 Avant de visiter, sachez combien vous pouvez emprunter. La préqualification vous donne un budget réaliste et montre aux vendeurs que vous êtes sérieux.
@@ -1728,7 +1736,7 @@ Gatineau offre des réalités très différentes selon le secteur. Visitez à di
 C'est votre protection. Les économies dépassent toujours le coût.
 
 ## 6. Comprenez la promesse d'achat au Québec
-Le processus au Québec diffère de l'Ontario. Les délais, conditions et formulaires sont différents.
+Le processus [d'achat au Québec](/acheter-a-gatineau) diffère de l'Ontario. Les délais, conditions et formulaires sont différents.
 
 ## 7. Pensez à la revente
 Même si c'est votre première maison, pensez à sa valeur future. Proximité des transports, écoles et services.
@@ -1742,9 +1750,11 @@ Ne tombez pas amoureux de la première maison. Comparez pour mieux apprécier.
 ## 10. Choisissez un courtier local
 Un courtier qui connaît Gatineau peut vous faire économiser du temps, de l'argent et du stress.
 
+**Pour aller plus loin** — [Inspection préachat à Gatineau : ce qu'il faut vérifier](/blogue/inspection-preachat-gatineau-guide) · [Frais de notaire et frais de clôture à Gatineau : guide complet](/blogue/frais-notaire-achat-maison-gatineau)
+
 ## Mon accompagnement
 
-J'offre un service complet aux premiers acheteurs, de la préqualification à la remise des clés. Contactez-moi pour un accompagnement personnalisé.`,
+J'offre un service complet aux premiers acheteurs, de la préqualification à la remise des clés. [Contactez-moi](/contact-yanis) pour un accompagnement personnalisé.`,
     bodyEn: `## 10 Tips for Your First Home Purchase in Gatineau
 
 Buying your first home is exciting but also stressful. Here are my 10 best tips from years of helping first-time buyers in Gatineau.
@@ -1813,6 +1823,8 @@ Vivre à proximité du Parc de la Gatineau, c'est avoir accès à 361 km² de na
 
 ## Les quartiers aux portes du parc
 
+Les secteurs les plus recherchés en bordure du parc sont [Chelsea](/chelsea) et le [Plateau d'Aylmer](/plateau).
+
 ### Chelsea
 - **Village pittoresque** au cœur des collines
 - **Prix** — Maisons à partir de 450 000 $, propriétés de prestige au-delà de 1 M$
@@ -1844,9 +1856,11 @@ Vivre à proximité du Parc de la Gatineau, c'est avoir accès à 361 km² de na
 - **Demande constante** — Toujours recherché par les acheteurs
 - **Qualité de vie** — Argument de vente puissant à la revente
 
+**Pour aller plus loin** — [Vivre à Chelsea : style de vie, nature et communauté](/blogue/vivre-chelsea-style-de-vie) · [Vivre à Aylmer : le guide complet du quartier](/blogue/vivre-aylmer-gatineau-guide-quartier)
+
 ## Mon conseil
 
-Les propriétés près du parc se vendent rapidement. Si ce mode de vie vous attire, je peux vous alerter dès qu'une opportunité se présente dans le secteur.`,
+Les propriétés près du parc se vendent rapidement. Si ce mode de vie vous attire, je peux [vous alerter](/contact-yanis) dès qu'une opportunité se présente dans le secteur.`,
     bodyEn: `## Gatineau Park: A Unique Residential Privilege
 
 Living near Gatineau Park means having access to 361 km² of wilderness just minutes from home. It's a real estate advantage few Canadian cities can offer.
@@ -2481,7 +2495,7 @@ I'm active 12 months a year. In winter, I deploy adapted strategies: professiona
     published: true,
     body: `## Pourquoi un courtier immobilier à Gatineau fait la différence
 
-Vendre ou acheter sans courtier peut sembler économique, mais les risques et le manque à gagner dépassent souvent les économies apparentes. Voici 8 raisons concrètes de travailler avec un courtier à Gatineau.
+[Vendre](/vendre-ma-maison-gatineau) ou acheter sans courtier peut sembler économique, mais les risques et le manque à gagner dépassent souvent les économies apparentes. Voici 8 raisons concrètes de travailler avec un courtier à Gatineau.
 
 ## 1. Connaissance approfondie du marché local
 
@@ -2493,7 +2507,7 @@ Un courtier de Gatineau connaît :
 
 ## 2. Évaluation juste de votre propriété
 
-- **Analyse comparative de marché (ACM)** — Basée sur les ventes réelles
+- **[Analyse comparative de marché (ACM)](/evaluation-gratuite-gatineau)** — Basée sur les ventes réelles
 - **Ajustements précis** — Rénovations, emplacement, état de la propriété
 - **Prix stratégique** — Ni trop haut (stagnation) ni trop bas (perte d'argent)
 
@@ -2535,9 +2549,11 @@ Un courtier de Gatineau connaît :
 - **Jusqu'à la signature** — Présent chez le notaire
 - **Après-vente** — Disponible pour vos questions
 
+**Pour aller plus loin** — [Home staging à Gatineau : vendre plus vite et au meilleur prix](/blogue/home-staging-vendre-plus-vite-gatineau) · [Quand vendre sa maison à Gatineau pour maximiser son prix?](/blogue/quand-vendre-sa-maison-gatineau)
+
 ## Mon approche
 
-Je ne suis pas un courtier de volume. Je prends un nombre limité de clients pour offrir un service attentif et personnalisé. Chaque transaction mérite toute mon attention.`,
+Je ne suis pas un courtier de volume. Je prends un nombre limité de clients pour offrir un service attentif et personnalisé. Chaque transaction mérite toute mon attention. [Contactez-moi](/contact-yanis) pour parler de votre projet.`,
     bodyEn: `## Why a Real Estate Broker in Gatineau Makes the Difference
 
 Selling or buying without a broker may seem economical, but the risks and missed opportunities often exceed the apparent savings. Here are 8 concrete reasons to work with a broker in Gatineau.
