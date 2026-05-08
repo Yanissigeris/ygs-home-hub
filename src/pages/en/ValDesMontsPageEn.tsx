@@ -57,6 +57,11 @@ const ValDesMontsPageEn = () => (
       { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Val-des-Monts", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
+    brokerPerspective={{
+      observation: "What I'm seeing in Val-des-Monts right now: demand stays strong for waterfront, but rustic cottages are selling slower than before. My buyers are mostly Ottawa-Gatineau families looking for a principal residence in nature, or couples 45-65 wanting a four-season cottage to prepare for retirement. Remote work has changed everything — what used to be a weekend property before 2020 is now becoming a primary residence for many of my Ottawa clients.",
+      dataPoint: "On the sales I close in Val-des-Monts, well-prepared waterfront properties on McGregor and Saint-Pierre go under contract in 30-60 days during peak season. Rustic cottages or properties without direct lake access often take 60-120 days, and sellers need to be more patient or adjust their pricing.",
+      takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter enormously. List in spring ideally, prepare your property for photos the summer before if possible, and be realistic on price based on lake type and access. A property on McGregor doesn't compare to one without lake access — get properly evaluated before listing."
+    }}
     cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area — let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
   />
 );
