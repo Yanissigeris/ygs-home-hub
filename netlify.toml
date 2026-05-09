@@ -5,13 +5,9 @@
   publish = "dist"
   command = "npm run build"
 
-# ─────────────────────────────────────────────────────────────
-# Edge function: SEO meta injection for crawlers
-# Declared before headers so it runs first in the request pipeline.
-# ─────────────────────────────────────────────────────────────
-[[edge_functions]]
-  function = "seo-inject"
-  path = "/*"
+# No edge functions in the critical path — bots and humans both receive the
+# prerendered static HTML directly from the Netlify CDN (~50-100ms).
+# SPA fallback for non-prerendered routes is handled by public/_redirects.
 
 # ─────────────────────────────────────────────────────────────
 # Long-term immutable cache for hashed build assets
