@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
+import { withTrailingSlash } from "@/lib/url-utils";
 
 interface PageMetaProps {
   title: string;
@@ -140,8 +141,19 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     ensureMetaTag('meta[property="og:locale"]', { property: "og:locale", content: locale });
     ensureMetaTag('meta[property="og:locale:alternate"]', { property: "og:locale:alternate", content: altLocale });
 
-    /* ── Canonical URL (self-referencing) ── */
-    const canonicalUrl = canonical || `${BASE_URL}${pathname}`;
+    /* ── Canonical URL (self-referencing, normalised with trailing slash) ── */
+    const normaliseCanonical = (input: string | undefined): string => {
+      if (!input) return `${BASE_URL}${withTrailingSlash(pathname)}`;
+      if (input.startsWith(BASE_URL)) {
+        const rest = input.slice(BASE_URL.length) || "/";
+        const hashIdx = rest.search(/[?#]/);
+        const pathPart = hashIdx >= 0 ? rest.slice(0, hashIdx) : rest;
+        const tail = hashIdx >= 0 ? rest.slice(hashIdx) : "";
+        return `${BASE_URL}${withTrailingSlash(pathPart)}${tail}`;
+      }
+      return input;
+    };
+    const canonicalUrl = normaliseCanonical(canonical);
     ensureCanonicalLink().setAttribute("href", canonicalUrl);
 
     /* ── og:url (matches canonical) ── */
@@ -177,9 +189,9 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     }
 
     if (frPath && enPath) {
-      ensureHreflangLink("fr-CA").setAttribute("href", `${BASE_URL}${frPath}`);
-      ensureHreflangLink("en-CA").setAttribute("href", `${BASE_URL}${enPath}`);
-      ensureHreflangLink("x-default").setAttribute("href", `${BASE_URL}${frPath}`);
+      ensureHreflangLink("fr-CA").setAttribute("href", `${BASE_URL}${withTrailingSlash(frPath)}`);
+      ensureHreflangLink("en-CA").setAttribute("href", `${BASE_URL}${withTrailingSlash(enPath)}`);
+      ensureHreflangLink("x-default").setAttribute("href", `${BASE_URL}${withTrailingSlash(frPath)}`);
     }
 
     return () => { removeHreflangLinks(); };
