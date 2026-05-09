@@ -30,6 +30,14 @@ export async function extractBlogPosts() {
       continue;
     }
 
+    // Strip line comments (// …) before tokenizing — apostrophes inside comments
+    // (e.g. `// CÔTE-D'AZUR`) would otherwise be treated as opening a string
+    // literal and desync the brace-depth parser, dropping every object that
+    // appears after the comment. Preserve the line break so line numbers stay
+    // valid for downstream regex matches. Skip URLs (https://, http://) and
+    // ignore // sequences inside strings/template literals.
+    src = stripLineComments(src);
+
     // Build import map: variable name → source filename
     // Matches: `import blogMarket from "@/assets/blog/blog-market-2025.webp";`
     const importMap = {};
