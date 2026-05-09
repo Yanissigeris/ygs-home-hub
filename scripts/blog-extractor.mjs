@@ -30,6 +30,14 @@ export async function extractBlogPosts() {
       continue;
     }
 
+    // Strip line comments (// …) before tokenizing — apostrophes inside comments
+    // (e.g. `// CÔTE-D'AZUR`) would otherwise be treated as opening a string
+    // literal and desync the brace-depth parser, dropping every object that
+    // appears after the comment. Preserve the line break so line numbers stay
+    // valid for downstream regex matches. Skip URLs (https://, http://) and
+    // ignore // sequences inside strings/template literals.
+    src = stripLineComments(src);
+
     // Build import map: variable name → source filename
     // Matches: `import blogMarket from "@/assets/blog/blog-market-2025.webp";`
     const importMap = {};
@@ -183,4 +191,46 @@ function matchField(obj, name) {
   );
   const m = obj.match(re);
   return m ? (m[1] ?? m[2] ?? m[3] ?? null) : null;
+}
+
+/**
+ * Replace `// …` line comments with spaces (preserving newlines) while leaving
+ * string literals untouched. Required because the brace-depth tokenizer treats
+ * any unescaped quote as opening a string, so a stray apostrophe in a comment
+ * (e.g. `// CÔTE-D'AZUR`) breaks downstream parsing.
+ */
+function stripLineComments(src) {
+  let out = "";
+  let inStr = null;
+  let escape = false;
+  for (let i = 0; i < src.length; i++) {
+    const c = src[i];
+    if (escape) {
+      escape = false;
+      out += c;
+      continue;
+    }
+    if (inStr) {
+      if (c === "\\") {
+        escape = true;
+      } else if (c === inStr) {
+        inStr = null;
+      }
+      out += c;
+      continue;
+    }
+    if (c === '"' || c === "'" || c === "`") {
+      inStr = c;
+      out += c;
+      continue;
+    }
+    // Line comment — skip to end of line, preserve newline
+    if (c === "/" && src[i + 1] === "/") {
+      while (i < src.length && src[i] !== "\n") i++;
+      if (i < src.length) out += "\n";
+      continue;
+    }
+    out += c;
+  }
+  return out;
 }
