@@ -28,6 +28,14 @@ import { puppeteerRender } from "./puppeteer-render.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 
+/** Add a trailing slash to a path, preserving root, query strings and fragments. */
+const withSlash = (p) => {
+  if (!p) return "/";
+  if (p === "/") return "/";
+  if (p.includes("?") || p.includes("#")) return p;
+  return p.endsWith("/") ? p : p + "/";
+};
+
 /* ── FR ↔ EN route mapping (mirrors src/components/PageMeta.tsx) ── */
 const frToEn = {
   "/": "/en",
@@ -277,7 +285,7 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
   const lang = isEn ? "en" : "fr";
   const locale = isEn ? "en_CA" : "fr_CA";
   const altLocale = isEn ? "fr_CA" : "en_CA";
-  const canonical = `${SITE_URL}${route}`;
+  const canonical = `${SITE_URL}${withSlash(route)}`;
   const ogImage = meta.ogImage || categoryOgImage(route);
 
   // Compute alt-language URLs (allow override for dynamic routes like blog posts)
@@ -297,9 +305,9 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
   const hreflangBlock =
     frPath && enPath
       ? `
-    <link rel="alternate" hreflang="fr-CA" href="${SITE_URL}${frPath}" />
-    <link rel="alternate" hreflang="en-CA" href="${SITE_URL}${enPath}" />
-    <link rel="alternate" hreflang="x-default" href="${SITE_URL}${frPath}" />`
+    <link rel="alternate" hreflang="fr-CA" href="${SITE_URL}${withSlash(frPath)}" />
+    <link rel="alternate" hreflang="en-CA" href="${SITE_URL}${withSlash(enPath)}" />
+    <link rel="alternate" hreflang="x-default" href="${SITE_URL}${withSlash(frPath)}" />`
       : "";
 
   const seoBlock = `
@@ -384,7 +392,7 @@ async function main() {
 
   const urlEntries = urls
     .map((route) => {
-      const loc = `${SITE_URL}${route}`;
+      const loc = `${SITE_URL}${withSlash(route)}`;
       const isEn = route.startsWith("/en");
       const frPath = isEn ? enToFr[route] : route;
       const enPath = isEn ? route : frToEn[route];
@@ -392,9 +400,9 @@ async function main() {
       const alternates =
         frPath && enPath
           ? `
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(SITE_URL + frPath)}" />
-    <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(SITE_URL + enPath)}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(SITE_URL + frPath)}" />`
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="${xmlEscape(SITE_URL + withSlash(frPath))}" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="${xmlEscape(SITE_URL + withSlash(enPath))}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(SITE_URL + withSlash(frPath))}" />`
           : "";
 
       return `  <url>
@@ -508,8 +516,8 @@ async function main() {
 
   const blogEntries = blogPosts
     .map(({ slug, slugEn, publishDate, ogImage }) => {
-      const frUrl = `${SITE_URL}/blogue/${slug}`;
-      const enUrl = `${SITE_URL}/en/blog/${slugEn}`;
+      const frUrl = `${SITE_URL}/blogue/${slug}/`;
+      const enUrl = `${SITE_URL}/en/blog/${slugEn}/`;
       const lastmod = publishDate || today;
 
       const imageBlock = ogImage

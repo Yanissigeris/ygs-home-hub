@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { withTrailingSlash } from "@/lib/url-utils";
 
 const frToEn: Record<string, string> = {
   "/": "/en",
@@ -119,8 +120,8 @@ const LangMeta = () => {
       return;
     }
 
-    const frUrl = `${DOMAIN}${frPath}`;
-    const enUrl = `${DOMAIN}${enPath}`;
+    const frUrl = `${DOMAIN}${withTrailingSlash(frPath)}`;
+    const enUrl = `${DOMAIN}${withTrailingSlash(enPath)}`;
 
     const setHreflang = (hreflang: string, href: string) => {
       const id = `hreflang-${hreflang}`;

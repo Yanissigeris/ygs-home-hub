@@ -125,8 +125,8 @@ const BlogArticlePage = () => {
 
   useEffect(() => {
     if (!post || !post.published) return;
-    const frUrl = `${BASE_URL}/blogue/${post.slug}`;
-    const enUrl = `${BASE_URL}/en/blog/${post.slugEn}`;
+    const frUrl = `${BASE_URL}/blogue/${post.slug}/`;
+    const enUrl = `${BASE_URL}/en/blog/${post.slugEn}/`;
     const createLink = (hreflang: string, href: string) => {
       const link = document.createElement("link");
       link.setAttribute("rel", "alternate");
@@ -380,7 +380,7 @@ const BlogArticlePage = () => {
 
   return (
     <>
-      <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}` : `/en/blog/${post.slugEn}`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
+      <PageMeta title={seoTitle} description={metaDesc} canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}/` : `/en/blog/${post.slugEn}/`}`} ogImage={post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og/og-blog.jpg`} />
       <BlogPostingJsonLd post={post} lang={isFr ? "fr" : "en"} />
       {post.emitFaqSchema && faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <ReadingProgressBar />
