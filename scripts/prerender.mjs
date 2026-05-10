@@ -414,6 +414,9 @@ async function main() {
   const shellPath = path.join(DIST, "index.html");
   const shell = await fs.readFile(shellPath, "utf8");
 
+  // Self-check #1: the SPA shell must contain a root div the regex can match.
+  assertShellMatchesInjectionRegex(shell);
+
   let written = 0;
   for (const [route, meta] of Object.entries(SEO_ROUTES)) {
     const rawHtml = buildHtmlForRoute(shell, route, meta);
@@ -423,6 +426,9 @@ async function main() {
       description: meta.description,
       lang,
     });
+
+    // Self-check #2: the fallback was actually injected for this route.
+    assertFallbackInjected(html, route, "generic");
 
     // Output path
     let outPath;
@@ -439,6 +445,7 @@ async function main() {
   }
 
   console.log(`✅ Prerender: wrote ${written} static HTML files with body fallback to dist/`);
+
 
   /* ───────────────────── sitemap.xml ─────────────────────
    * Built from the same SEO_ROUTES map so the sitemap is always in sync
