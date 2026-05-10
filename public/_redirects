@@ -1,6 +1,21 @@
-# 301 — English-speaker URL guesses route to the canonical FR blog.
-/blog       /blogue              301
-/blog/*     /blogue/:splat       301
+# 301 — English-speaker URL guesses route to the canonical FR blog
+/blog       /blogue            301
+/blog/*     /blogue/:splat     301
 
-# SPA fallback — must remain LAST.
-/*    /index.html   200
+# 301 — Anciennes URLs propriétés vers la page canonique
+/proprietes-vedettes              /proprietes    301
+/nouvelles-inscriptions           /proprietes    301
+/nouvelles-inscriptions-gatineau  /proprietes    301
+/vendu-recemment                  /proprietes    301
+/vendues-recemment-gatineau       /proprietes    301
+
+# 301 — Anciennes URLs Outaouais vers les hubs canoniques
+/outaouais        /courtier-immobilier-outaouais       301
+/en/outaouais     /en/outaouais-real-estate-agent      301
+
+# 200 — Routes SPA-only non pré-rendues (admin)
+/admin                    /index.html    200
+/admin/*                  /index.html    200
+
+# Pas de SPA fallback global. Netlify servira automatiquement
+# public/404.html avec status 404 pour toute URL invalide.
