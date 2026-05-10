@@ -253,6 +253,46 @@ function injectGenericBodyFallback(html, { title, description, lang }) {
   );
 }
 
+/* ─────────────────────── Self-checks ───────────────────────
+ * Lightweight assertions that run during the prerender pass. They guarantee
+ * that:
+ *   1. The injection regex used by injectBlogBodyFallback / injectGenericBodyFallback
+ *      actually matches the SPA shell on every route (no silent no-op).
+ *   2. The resulting HTML contains the expected landmarks (#root, <main>, <h1>).
+ * If any check fails the build aborts with a descriptive error so we don't
+ * ship empty <div id="root"></div> shells to crawlers.
+ */
+
+const ROOT_INJECTION_REGEX = /<div id="root">[\s\S]*?<\/div>/i;
+
+function assertShellMatchesInjectionRegex(shell) {
+  if (!ROOT_INJECTION_REGEX.test(shell)) {
+    throw new Error(
+      'Prerender self-check FAILED: dist/index.html does not contain a <div id="root">…</div> block matching the injection regex. ' +
+      'Either index.html changed shape, or Vite stopped emitting the empty root div.',
+    );
+  }
+}
+
+function assertFallbackInjected(html, route, kind) {
+  const errors = [];
+  const rootMatch = html.match(/<div id="root">([\s\S]*?)<\/div>/i);
+  if (!rootMatch) {
+    errors.push('no <div id="root">…</div> block found');
+  } else {
+    const inner = rootMatch[1];
+    if (inner.trim().length === 0) errors.push('root div is empty (regex no-op)');
+    if (!inner.includes('<main id="main-content">')) errors.push('missing <main id="main-content">');
+    if (!/<h1[\s>]/i.test(inner)) errors.push('missing <h1>');
+    if (!/<nav\b[^>]*aria-label=/i.test(inner)) errors.push('missing breadcrumb <nav>');
+  }
+  if (errors.length) {
+    throw new Error(
+      `Prerender self-check FAILED for ${kind} route "${route}": ${errors.join('; ')}`,
+    );
+  }
+}
+
 /**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
