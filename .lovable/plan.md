@@ -1,115 +1,75 @@
-## Cause racine
+## Objectif
 
-Netlify Pretty URLs 301-redirige `/foo` → `/foo/`. Le code génère partout des URLs SANS slash final dans hreflang/canonical/sitemap → Screaming Frog voit des 301 et marque "Canonicalised", "Non-Indexable Canonical", "Missing Return Links" sur ~123 URLs.
+Étendre le fallback HTML dans `<div id="root">` à toutes les routes non-blog dans `scripts/prerender.mjs`, pour que tous les bots reçoivent du contenu indexable.
 
-## Fichiers à modifier (5)
+## Changements (1 seul fichier : `scripts/prerender.mjs`)
 
-| # | Fichier | Modifs |
-|---|---|---|
-| 1 | `src/lib/url-utils.ts` | **Nouveau** — exporte `withTrailingSlash(path)` |
-| 2 | `scripts/prerender.mjs` | Helper local `withSlash` + 10 lignes patchées |
-| 3 | `src/components/PageMeta.tsx` | Normalise canonical (entrant + dérivé) + 3 hreflangs |
-| 4 | `src/components/LangMeta.tsx` | Normalise frPath/enPath avant construction |
-| 5 | `src/pages/BlogArticlePage.tsx` | Slash final L. 128-129 + canonical L. 383 |
+### 1. Ajouter `injectGenericBodyFallback` (juste après `injectBlogBodyFallback`, ~ligne 230)
 
-**Contraintes respectées :** mapping `frToEn` intact, `<Link>` intacts, routes intactes. La fonction retourne le path tel quel s'il contient `?` ou `#`, donc les paramètres `?secteur=` sont préservés.
+Fonction calquée sur `injectBlogBodyFallback`, sans breadcrumb param :
 
-## Diff exact
+```js
+function injectGenericBodyFallback(html, { title, description, lang }) {
+  const isFr = lang === "fr-CA";
+  const homeLabel = isFr ? "Accueil" : "Home";
+  const homeHref = isFr ? "/" : "/en/";
+  const aboutLabel = isFr ? "À propos de cette page" : "About this page";
+  const authorLabel = isFr ? "Auteur" : "Author";
+  const authorBio = isFr
+    ? "Yanis Gauthier-Sigeris, courtier immobilier résidentiel à Gatineau (OACIQ)."
+    : "Yanis Gauthier-Sigeris, residential real estate broker in Gatineau (OACIQ).";
 
-### 1. Nouveau `src/lib/url-utils.ts`
-```ts
-/** Add a trailing slash to a path, preserving root, query strings and fragments. */
-export function withTrailingSlash(path: string): string {
-  if (!path) return "/";
-  if (path === "/") return "/";
-  if (path.includes("?") || path.includes("#")) return path;
-  return path.endsWith("/") ? path : path + "/";
+  const fallback = `<main id="main-content">
+      <nav aria-label="${isFr ? "Fil d'Ariane" : "Breadcrumb"}"><a href="${homeHref}">${homeLabel}</a></nav>
+      <article>
+        <header>
+          <h1>${escapeHtml(title)}</h1>
+        </header>
+        <section aria-labelledby="page-about">
+          <h2 id="page-about">${aboutLabel}</h2>
+          <p>${escapeHtml(description)}</p>
+          <h3>${authorLabel}</h3>
+          <p>${authorBio}</p>
+        </section>
+      </article>
+    </main>`;
+
+  return html.replace(
+    /<div id="root">[\s\S]*?<\/div>/i,
+    `<div id="root">${fallback}</div>`,
+  );
 }
 ```
 
-### 2. `scripts/prerender.mjs`
+Regex de remplacement identique à `injectBlogBodyFallback` (compatible avec le hydrate Puppeteer).
 
-Ajout en haut (après imports) :
+### 2. Appeler la fonction dans la boucle principale `SEO_ROUTES`
+
+Dans la boucle `for (const [route, meta] of Object.entries(SEO_ROUTES))`, après `buildHtmlForRoute(...)` et avant `fs.writeFile(...)` :
+
 ```js
-const withSlash = (p) => {
-  if (!p) return "/";
-  if (p === "/") return "/";
-  if (p.includes("?") || p.includes("#")) return p;
-  return p.endsWith("/") ? p : p + "/";
-};
+const lang = route.startsWith("/en") ? "en-CA" : "fr-CA";
+const htmlWithFallback = injectGenericBodyFallback(html, {
+  title: meta.title,
+  description: meta.description,
+  lang,
+});
 ```
 
-Modifications ligne par ligne :
-- L. 280 : `const canonical = \`${SITE_URL}${withSlash(route)}\`;`
-- L. 300 : `href="${SITE_URL}${withSlash(frPath)}"`
-- L. 301 : `href="${SITE_URL}${withSlash(enPath)}"`
-- L. 302 : `href="${SITE_URL}${withSlash(frPath)}"`
-- L. 387 : `const loc = \`${SITE_URL}${withSlash(route)}\`;`
-- L. 395 : `href="${xmlEscape(SITE_URL + withSlash(frPath))}"`
-- L. 396 : `href="${xmlEscape(SITE_URL + withSlash(enPath))}"`
-- L. 397 : `href="${xmlEscape(SITE_URL + withSlash(frPath))}"`
-- L. 511 : `const frUrl = \`${SITE_URL}/blogue/${slug}/\`;`
-- L. 512 : `const enUrl = \`${SITE_URL}/en/blog/${slugEn}/\`;`
+Puis `fs.writeFile(outPath, htmlWithFallback, "utf8")`.
 
-### 3. `src/components/PageMeta.tsx`
+### 3. Console log
 
-Importer : `import { withTrailingSlash } from "@/lib/url-utils";`
+Mise à jour mineure : `wrote ${written} static HTML files with body fallback`.
 
-Bloc canonical :
-```ts
-/* ── Canonical URL (self-referencing, normalised with trailing slash) ── */
-const normaliseCanonical = (input: string | undefined): string => {
-  if (!input) return `${BASE_URL}${withTrailingSlash(pathname)}`;
-  if (input.startsWith(BASE_URL)) {
-    const rest = input.slice(BASE_URL.length) || "/";
-    const hashIdx = rest.search(/[?#]/);
-    const pathPart = hashIdx >= 0 ? rest.slice(0, hashIdx) : rest;
-    const tail = hashIdx >= 0 ? rest.slice(hashIdx) : "";
-    return `${BASE_URL}${withTrailingSlash(pathPart)}${tail}`;
-  }
-  return input;
-};
-const canonicalUrl = normaliseCanonical(canonical);
-ensureCanonicalLink().setAttribute("href", canonicalUrl);
-```
+## Non-modifié
 
-Hreflang : wrapper les 3 `setAttribute("href", ...)` :
-- `\`${BASE_URL}${withTrailingSlash(frPath)}\``
-- `\`${BASE_URL}${withTrailingSlash(enPath)}\``
-- `\`${BASE_URL}${withTrailingSlash(frPath)}\`` (x-default)
+- `injectBlogBodyFallback` : inchangé caractère pour caractère
+- Boucle blog : continue d'utiliser son propre fallback
+- Skip Puppeteer : tel quel
+- Aucun autre fichier touché
 
-### 4. `src/components/LangMeta.tsx`
+## Validation
 
-- Importer : `import { withTrailingSlash } from "@/lib/url-utils";`
-- Avant `const frUrl = ...` (≈ L. 119) :
-  ```ts
-  frPath = withTrailingSlash(frPath);
-  enPath = withTrailingSlash(enPath);
-  ```
-- Les 3 `setHreflang(...)` héritent automatiquement.
-
-### 5. `src/pages/BlogArticlePage.tsx`
-
-- L. 128 : `const frUrl = \`${BASE_URL}/blogue/${post.slug}/\`;`
-- L. 129 : `const enUrl = \`${BASE_URL}/en/blog/${post.slugEn}/\`;`
-- L. 383 (canonical) :
-  ```tsx
-  canonical={`${BASE_URL}${isFr ? `/blogue/${post.slug}/` : `/en/blog/${post.slugEn}/`}`}
-  ```
-
-## Tests
-
-Aucun test/audit existant à modifier (vérifié par `rg`) :
-- `audit-seo.mjs` : vérifie présence + préfixe `SITE_URL` uniquement.
-- `no-js-prerender.spec.ts` L. 93-96 : `.toBeTruthy()` sans valeur.
-- `language-integrity`, `faq-jsonld`, `navigation-flows`, `accessibility` : pas d'assertion sur valeur exacte de canonical/hreflang.
-
-## Validation post-implémentation
-
-```bash
-npm run build && node scripts/audit-seo.mjs
-grep -E 'canonical|hreflang' dist/hull/index.html | head
-grep '<loc>' dist/sitemap.xml | head -10
-```
-
-Attendu : tous les hrefs/locs hors home se terminent par `/`. Puis re-crawl Screaming Frog avec : 0 hreflang non-200, <15 Canonicalised (≤ 7-8 paramètres `?secteur=`), <5 Non-Indexable Canonical, 0-1 Missing Return Links.
+- `npm run build` doit passer (vérifié automatiquement par le harness)
+- Diff final : 1 fonction ajoutée + 1 appel + 1 ligne `console.log` mise à jour
