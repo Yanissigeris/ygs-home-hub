@@ -562,6 +562,7 @@ async function main() {
     if (post.emitFaqSchema && post.faqItems && post.faqItems.length > 0) {
       frHtml = injectFaqPageJsonLd(frHtml, post.faqItems);
     }
+    assertFallbackInjected(frHtml, `/blogue/${post.slug}`, "blog/fr");
     const frOut = path.join(DIST, "blogue", post.slug, "index.html");
     await fs.mkdir(path.dirname(frOut), { recursive: true });
     await fs.writeFile(frOut, frHtml, "utf8");
