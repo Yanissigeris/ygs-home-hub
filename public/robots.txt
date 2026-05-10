@@ -1,8 +1,94 @@
+# YGS Immobilier — robots.txt
+# https://yanisgauthier.com/
+
+# Default — autorise tous les bots non-listés
 User-agent: *
 Allow: /
 Disallow: /merci
 Disallow: /merci-evaluation
 Disallow: /en/thank-you
 Disallow: /en/thank-you-valuation
+Disallow: /admin
+Disallow: /admin/
 
+# === Anthropic (Claude) ===
+# Documentation: https://support.claude.com/en/articles/8896518
+User-agent: ClaudeBot
+Allow: /
+Disallow: /merci
+Disallow: /merci-evaluation
+Disallow: /en/thank-you
+Disallow: /en/thank-you-valuation
+Disallow: /admin
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin
+
+# === OpenAI (ChatGPT) ===
+# Documentation: https://developers.openai.com/api/docs/bots
+User-agent: GPTBot
+Allow: /
+Disallow: /merci
+Disallow: /merci-evaluation
+Disallow: /en/thank-you
+Disallow: /en/thank-you-valuation
+Disallow: /admin
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+
+# === Perplexity ===
+User-agent: PerplexityBot
+Allow: /
+Disallow: /merci
+Disallow: /merci-evaluation
+Disallow: /en/thank-you
+Disallow: /en/thank-you-valuation
+Disallow: /admin
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin
+
+# === Google (Gemini, AI Overviews) ===
+User-agent: Google-Extended
+Allow: /
+Disallow: /merci
+Disallow: /merci-evaluation
+Disallow: /en/thank-you
+Disallow: /en/thank-you-valuation
+Disallow: /admin
+
+# === Meta (Meta AI) ===
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /admin
+
+# === Apple (Apple Intelligence) ===
+User-agent: Applebot-Extended
+Allow: /
+
+# === Common Crawl (training data pour LLMs open-source) ===
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+
+# === Bytedance (TikTok/Doubao) — bloqué ===
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Bytedance
+Disallow: /
+
+# === Sitemap ===
 Sitemap: https://yanisgauthier.com/sitemap.xml
