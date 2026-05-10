@@ -597,6 +597,7 @@ async function main() {
     if (post.emitFaqSchema && post.faqItemsEn && post.faqItemsEn.length > 0) {
       enHtml = injectFaqPageJsonLd(enHtml, post.faqItemsEn);
     }
+    assertFallbackInjected(enHtml, `/en/blog/${post.slugEn}`, "blog/en");
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
     await fs.writeFile(enOut, enHtml, "utf8");
