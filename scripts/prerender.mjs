@@ -217,6 +217,43 @@ function injectBlogBodyFallback(html, { title, description, lang, breadcrumbLabe
 }
 
 /**
+ * Inject a generic body fallback for non-blog prerendered pages so that
+ * crawlers (Google, Bing, GPTBot, ClaudeBot…) always see indexable content
+ * inside <div id="root"> even before React hydrates. The Puppeteer pass
+ * replaces this fallback with the rendered React tree via the same regex.
+ */
+function injectGenericBodyFallback(html, { title, description, lang }) {
+  const isFr = lang === "fr-CA";
+  const homeLabel = isFr ? "Accueil" : "Home";
+  const homeHref = isFr ? "/" : "/en/";
+  const aboutLabel = isFr ? "À propos de cette page" : "About this page";
+  const authorLabel = isFr ? "Auteur" : "Author";
+  const authorBio = isFr
+    ? "Yanis Gauthier-Sigeris, courtier immobilier résidentiel à Gatineau (OACIQ)."
+    : "Yanis Gauthier-Sigeris, residential real estate broker in Gatineau (OACIQ).";
+
+  const fallback = `<main id="main-content">
+      <nav aria-label="${isFr ? "Fil d'Ariane" : "Breadcrumb"}"><a href="${homeHref}">${homeLabel}</a></nav>
+      <article>
+        <header>
+          <h1>${escapeHtml(title)}</h1>
+        </header>
+        <section aria-labelledby="page-about">
+          <h2 id="page-about">${aboutLabel}</h2>
+          <p>${escapeHtml(description)}</p>
+          <h3>${authorLabel}</h3>
+          <p>${authorBio}</p>
+        </section>
+      </article>
+    </main>`;
+
+  return html.replace(
+    /<div id="root">[\s\S]*?<\/div>/i,
+    `<div id="root">${fallback}</div>`,
+  );
+}
+
+/**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
  * The browser uses the LAST matching tag, so appending wins for canonical
@@ -339,7 +376,13 @@ async function main() {
 
   let written = 0;
   for (const [route, meta] of Object.entries(SEO_ROUTES)) {
-    const html = buildHtmlForRoute(shell, route, meta);
+    const rawHtml = buildHtmlForRoute(shell, route, meta);
+    const lang = route.startsWith("/en") ? "en-CA" : "fr-CA";
+    const html = injectGenericBodyFallback(rawHtml, {
+      title: meta.title,
+      description: meta.description,
+      lang,
+    });
 
     // Output path
     let outPath;
@@ -355,7 +398,7 @@ async function main() {
     written++;
   }
 
-  console.log(`✅ Prerender: wrote ${written} static HTML files (meta-only) to dist/`);
+  console.log(`✅ Prerender: wrote ${written} static HTML files with body fallback to dist/`);
 
   /* ───────────────────── sitemap.xml ─────────────────────
    * Built from the same SEO_ROUTES map so the sitemap is always in sync
