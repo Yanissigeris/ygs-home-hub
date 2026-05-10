@@ -253,6 +253,46 @@ function injectGenericBodyFallback(html, { title, description, lang }) {
   );
 }
 
+/* ─────────────────────── Self-checks ───────────────────────
+ * Lightweight assertions that run during the prerender pass. They guarantee
+ * that:
+ *   1. The injection regex used by injectBlogBodyFallback / injectGenericBodyFallback
+ *      actually matches the SPA shell on every route (no silent no-op).
+ *   2. The resulting HTML contains the expected landmarks (#root, <main>, <h1>).
+ * If any check fails the build aborts with a descriptive error so we don't
+ * ship empty <div id="root"></div> shells to crawlers.
+ */
+
+const ROOT_INJECTION_REGEX = /<div id="root">[\s\S]*?<\/div>/i;
+
+function assertShellMatchesInjectionRegex(shell) {
+  if (!ROOT_INJECTION_REGEX.test(shell)) {
+    throw new Error(
+      'Prerender self-check FAILED: dist/index.html does not contain a <div id="root">…</div> block matching the injection regex. ' +
+      'Either index.html changed shape, or Vite stopped emitting the empty root div.',
+    );
+  }
+}
+
+function assertFallbackInjected(html, route, kind) {
+  const errors = [];
+  const rootMatch = html.match(/<div id="root">([\s\S]*?)<\/div>/i);
+  if (!rootMatch) {
+    errors.push('no <div id="root">…</div> block found');
+  } else {
+    const inner = rootMatch[1];
+    if (inner.trim().length === 0) errors.push('root div is empty (regex no-op)');
+    if (!inner.includes('<main id="main-content">')) errors.push('missing <main id="main-content">');
+    if (!/<h1[\s>]/i.test(inner)) errors.push('missing <h1>');
+    if (!/<nav\b[^>]*aria-label=/i.test(inner)) errors.push('missing breadcrumb <nav>');
+  }
+  if (errors.length) {
+    throw new Error(
+      `Prerender self-check FAILED for ${kind} route "${route}": ${errors.join('; ')}`,
+    );
+  }
+}
+
 /**
  * Patch the SPA shell HTML for a single route.
  * Strategy: drop a marker block in <head> that overrides the existing tags.
@@ -374,6 +414,9 @@ async function main() {
   const shellPath = path.join(DIST, "index.html");
   const shell = await fs.readFile(shellPath, "utf8");
 
+  // Self-check #1: the SPA shell must contain a root div the regex can match.
+  assertShellMatchesInjectionRegex(shell);
+
   let written = 0;
   for (const [route, meta] of Object.entries(SEO_ROUTES)) {
     const rawHtml = buildHtmlForRoute(shell, route, meta);
@@ -383,6 +426,9 @@ async function main() {
       description: meta.description,
       lang,
     });
+
+    // Self-check #2: the fallback was actually injected for this route.
+    assertFallbackInjected(html, route, "generic");
 
     // Output path
     let outPath;
@@ -399,6 +445,7 @@ async function main() {
   }
 
   console.log(`✅ Prerender: wrote ${written} static HTML files with body fallback to dist/`);
+
 
   /* ───────────────────── sitemap.xml ─────────────────────
    * Built from the same SEO_ROUTES map so the sitemap is always in sync
@@ -515,6 +562,7 @@ async function main() {
     if (post.emitFaqSchema && post.faqItems && post.faqItems.length > 0) {
       frHtml = injectFaqPageJsonLd(frHtml, post.faqItems);
     }
+    assertFallbackInjected(frHtml, `/blogue/${post.slug}`, "blog/fr");
     const frOut = path.join(DIST, "blogue", post.slug, "index.html");
     await fs.mkdir(path.dirname(frOut), { recursive: true });
     await fs.writeFile(frOut, frHtml, "utf8");
@@ -549,6 +597,7 @@ async function main() {
     if (post.emitFaqSchema && post.faqItemsEn && post.faqItemsEn.length > 0) {
       enHtml = injectFaqPageJsonLd(enHtml, post.faqItemsEn);
     }
+    assertFallbackInjected(enHtml, `/en/blog/${post.slugEn}`, "blog/en");
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
     await fs.writeFile(enOut, enHtml, "utf8");
