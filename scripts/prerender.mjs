@@ -376,7 +376,13 @@ async function main() {
 
   let written = 0;
   for (const [route, meta] of Object.entries(SEO_ROUTES)) {
-    const html = buildHtmlForRoute(shell, route, meta);
+    const rawHtml = buildHtmlForRoute(shell, route, meta);
+    const lang = route.startsWith("/en") ? "en-CA" : "fr-CA";
+    const html = injectGenericBodyFallback(rawHtml, {
+      title: meta.title,
+      description: meta.description,
+      lang,
+    });
 
     // Output path
     let outPath;
@@ -392,7 +398,7 @@ async function main() {
     written++;
   }
 
-  console.log(`✅ Prerender: wrote ${written} static HTML files (meta-only) to dist/`);
+  console.log(`✅ Prerender: wrote ${written} static HTML files with body fallback to dist/`);
 
   /* ───────────────────── sitemap.xml ─────────────────────
    * Built from the same SEO_ROUTES map so the sitemap is always in sync
