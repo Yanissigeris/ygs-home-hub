@@ -76,7 +76,11 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     </div>
 
     
-    <LazySection minHeight={400} rootMargin="700px">
+    <LazySection
+      minHeight={400}
+      rootMargin="700px"
+      className="relative z-10"
+    >
       <ValuationWidget />
       <QuickActionStrip />
       <AwardsMarquee />
