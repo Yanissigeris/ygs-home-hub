@@ -1,26 +1,62 @@
-## Plan : Fix soft 404 + règles bots IA
+## Résumé
+Activer `scroll-behavior: smooth` global via CSS, avec fallback instantané sur la navigation inter-routes et respect de `prefers-reduced-motion`.
 
-### 1. Créer `public/404.html`
-Nouveau fichier HTML statique avec page 404 bilingue (FR/EN), styles inline, meta noindex, canonical vers /.
+## Changement 1 — `src/index.css`
 
-### 2. Remplacer `public/_redirects`
-- Conserve les 301 /blog → /blogue
-- Ajoute les 301 anciennes URLs propriétés → /proprietes
-- Ajoute les 301 anciennes URLs Outaouais → hubs canoniques
-- Ajoute les 200 SPA-only pour /admin et /admin/*
-- **Retire** le SPA fallback global `/* /index.html 200`
-  → Netlify servira alors automatiquement `public/404.html` avec status 404 pour les URLs invalides.
+Insérer ce bloc immédiatement après `* { @apply border-border; }` (ligne 139) et avant la règle `button, [role="button"], a, input, select, textarea` :
 
-### 3. Remplacer `public/robots.txt`
-- Règles par défaut : Allow / + Disallow thank-you + /admin
-- Blocs explicites par bot IA : Claude, OpenAI (GPTBot, OAI-SearchBot, ChatGPT-User), Perplexity, Google-Extended, Meta-ExternalAgent, Applebot-Extended, CCBot
-- Bloque Bytedance (Bytespider, Bytedance) en entier
-- Sitemap inchangé
+```css
+  html {
+    scroll-behavior: smooth;
+  }
 
-### Contraintes respectées
-- Aucun autre fichier touché (pas de prerender.mjs, App.tsx, netlify.toml, index.html)
-- Build `npm run build` inchangé — ces fichiers sont statiques dans public/
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+```
 
-### Livrables
-- 1 fichier créé : public/404.html
-- 2 fichiers remplacés : public/_redirects, public/robots.txt
+## Changement 2 — `src/components/ScrollToTop.tsx`
+
+Remplacer le contenu du `useEffect` pour désactiver temporairement le smooth scroll lors d'un changement de route. Fichier final :
+
+```typescript
+import { useEffect } from "react";
+import { useLocation, useNavigationType } from "react-router-dom";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  const navigationType = useNavigationType();
+
+  useEffect(() => {
+    // Only scroll to top on PUSH (link click) or REPLACE navigation.
+    // POP (back/forward) keeps the browser's native scroll restoration.
+    if (navigationType !== "POP") {
+      const root = document.documentElement;
+      const prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = prev;
+    }
+  }, [pathname, navigationType]);
+
+  return null;
+};
+
+export default ScrollToTop;
+```
+
+## Contraintes respectées
+- Aucune librairie JS ajoutée.
+- Aucun autre fichier touché (HeroSection, sticky hero, prerender, etc. inchangés).
+- Aucune classe `.reveal*` modifiée.
+- `overflow-x: hidden` mobile inchangé.
+
+## Validation post-deploy
+1. Ancres (chevron hero) : scroll fluide natif.
+2. Navigation menu (route → route) : scroll en haut instantané.
+3. Back/forward : restauration native inchangée.
+4. Sticky hero sur `/` : se relâche normalement.
+5. `prefers-reduced-motion: reduce` : scroll instantané partout.
+6. Build : aucune erreur TS / runtime.
