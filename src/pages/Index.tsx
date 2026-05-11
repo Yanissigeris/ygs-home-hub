@@ -49,29 +49,31 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       description="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Vendre, acheter ou investir à Aylmer, Hull ou Plateau — stratégie claire et accompagnement."
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
-    <HeroSection
-      cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
-      title="Votre courtier immobilier en Outaouais"
-      subtitle="Stratégie claire pour vendre, acheter ou investir."
-      subtitleShort="Stratégie claire pour vendre, acheter ou investir."
-      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
-      socialProof="Hall of Fame RE/MAX"
-      heroBgImage={yanisHero}
-      heroBgImageMobile={yanisHeroMobileAvif}
-      heroBgImageAvif={yanisHeroAvif}
-      agentImage={yanisPortrait}
-      agentImageSm={yanisPortraitSm}
-      agentImageMd={yanisPortraitMd}
-      agentImageAvif={yanisPortraitAvif}
-      agentImageSmAvif={yanisPortraitSmAvif}
-      agentImageMdAvif={yanisPortraitMdAvif}
-      agentImageLg={yanisPortraitLg}
-      agentImageLgAvif={yanisPortraitLgAvif}
-      agentName="Yanis Gauthier-Sigeris"
-      hideRecognitionCard
-      petrolGradient={false}
-    />
+    <div className="sticky top-0 z-0 h-screen">
+      <HeroSection
+        cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
+        title="Votre courtier immobilier en Outaouais"
+        subtitle="Stratégie claire pour vendre, acheter ou investir."
+        subtitleShort="Stratégie claire pour vendre, acheter ou investir."
+        primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+        secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
+        socialProof="Hall of Fame RE/MAX"
+        heroBgImage={yanisHero}
+        heroBgImageMobile={yanisHeroMobileAvif}
+        heroBgImageAvif={yanisHeroAvif}
+        agentImage={yanisPortrait}
+        agentImageSm={yanisPortraitSm}
+        agentImageMd={yanisPortraitMd}
+        agentImageAvif={yanisPortraitAvif}
+        agentImageSmAvif={yanisPortraitSmAvif}
+        agentImageMdAvif={yanisPortraitMdAvif}
+        agentImageLg={yanisPortraitLg}
+        agentImageLgAvif={yanisPortraitLgAvif}
+        agentName="Yanis Gauthier-Sigeris"
+        hideRecognitionCard
+        petrolGradient={false}
+      />
+    </div>
 
     
     <LazySection minHeight={400} rootMargin="700px">
