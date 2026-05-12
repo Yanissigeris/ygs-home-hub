@@ -36,7 +36,7 @@ const affiliationLogos: AffiliationLogo[] = [
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-0 invert" },
+  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-0 invert" },
