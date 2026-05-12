@@ -1,24 +1,23 @@
-## Plan: passer FeaturedProperties à 4 propriétés (layout 2×2)
+## Objectif
+Améliorer la lisibilité de 3 logos dans le bloc "AFFILIATIONS & RECONNAISSANCES" du footer (`src/components/SiteFooter.tsx`).
 
-Fichier unique modifié : `src/components/FeaturedProperties.tsx`
+## Modifications dans le tableau `affiliationLogos`
 
-### Modification 1 — strategicOrder
-Retirer l'entrée `"20453879"` (condo 154 Lucerne) du tableau `strategicOrder`. Résultat : 4 ids dans l'ordre Chinook (vendu) → Brook (active) → Laperrière (active) → Laviolette (vendu).
+**1. RE/MAX** (entrée `custom`) — ajouter un wrapper cream :
+```jsx
+<div className="flex items-center gap-1.5" style={{ background: "var(--cream)", padding: "8px 12px", borderRadius: 3 }}>
+```
 
-### Modification 2 — Grid desktop
-Remplacer la className conditionnelle du desktop grid par une logique à 3 cas :
-- `featured.length === 4` → `lg:grid-cols-2` (layout 2×2)
-- `featured.length >= 3` → `lg:grid-cols-3`
-- sinon → vide (md:grid-cols-2 hérité)
+**2. Marty Waite** — `filter: "brightness-[1.6]"` → `filter: "brightness-0 invert"`
 
-### Hors scope (strictement non touché)
-- `src/data/properties.ts` et `properties-en.ts` (Lucerne reste pour /proprietes)
-- Structure des cards, hover, badges, fade-in image
-- Grid mobile (scroll horizontal)
-- Ligne `maxWidth: 900` (toujours valide car 4 ≥ 3)
+**3. Tranquilli-T** — `filter: "brightness-[1.5]"` → `filter: "brightness-0 invert"`
 
-### Validation visuelle
-- `/` desktop ≥1024px : 2×2
-- `/` tablette 768-1023px : 2×2 (md:grid-cols-2 inchangé)
-- `/` mobile : scroll horizontal inchangé
-- `/proprietes` : 5 propriétés toujours présentes
+## Hors scope (intouchable)
+- Autres entrées : SIRVA, Temple/Trophy, Enfant Soleil
+- `tileStyle` (wrapper externe avec `rgba(255,255,255,.04)`)
+- Tous les attributs alt/width/height/loading/decoding/caption/href
+- Le reste du composant (CTA, brand row, columns, popular links, badge, NAP, copyright)
+- Aucun autre fichier
+
+## Validation
+Footer → bloc Affiliations : RE/MAX sur sceau cream, MW et Tranquilli-T en blanc pur, les 3 autres logos inchangés.
