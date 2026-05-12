@@ -40,7 +40,7 @@ const affiliationLogos: AffiliationLogo[] = [
     alt: "Équipe Marty Waite — courtiers immobiliers Gatineau",
     custom: (
       <div className="flex items-center justify-center" style={{ background: "var(--cream)", padding: "8px 14px", borderRadius: 3 }}>
-        <img src={logoMW} alt="Équipe Marty Waite — courtiers immobiliers Gatineau" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
+        <img src={logoMW} alt="Équipe Marty Waite — courtiers immobiliers Gatineau" className="brightness-0" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
       </div>
     ),
   },
