@@ -22,6 +22,7 @@ const profileCards = [
 
 const sectors = [
   { name: "Aylmer", href: "/aylmer", detail: "Lac, quartiers établis, qualité de vie" },
+  { name: "Chelsea", href: "/chelsea", detail: "Parc de la Gatineau, tranquillité, bilingue" },
   { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
   { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Espace, nature, prix accessibles" },
@@ -177,7 +178,7 @@ const PropertiesPage = () => {
         { label: "Réserver une consultation", href: "/consultation-acheteur" },
         { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
       ]}
-      trustLine="Je vous donne les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
   </>
   );

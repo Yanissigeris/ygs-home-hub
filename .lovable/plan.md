@@ -1,23 +1,30 @@
-## Objectif
-Améliorer la lisibilité de 3 logos dans le bloc "AFFILIATIONS & RECONNAISSANCES" du footer (`src/components/SiteFooter.tsx`).
+## Corrections sur la page /proprietes (PropertiesPage.tsx)
 
-## Modifications dans le tableau `affiliationLogos`
+### Modification 1 — Ajouter Chelsea au tableau `sectors`
 
-**1. RE/MAX** (entrée `custom`) — ajouter un wrapper cream :
-```jsx
-<div className="flex items-center gap-1.5" style={{ background: "var(--cream)", padding: "8px 12px", borderRadius: 3 }}>
+Insérer la carte Chelsea en position 2 (après Aylmer) pour passer de 5 à 6 cartes et équilibrer la grille 2×3 :
+
+```typescript
+const sectors = [
+  { name: "Aylmer", href: "/aylmer", detail: "Lac, quartiers établis, qualité de vie" },
+  { name: "Chelsea", href: "/chelsea", detail: "Parc de la Gatineau, tranquillité, bilingue" },
+  { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
+  { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Espace, nature, prix accessibles" },
+  { name: "Gatineau centre", href: "/gatineau", detail: "Résidentiel, services, banlieue" },
+];
 ```
 
-**2. Marty Waite** — `filter: "brightness-[1.6]"` → `filter: "brightness-0 invert"`
+### Modification 2 — Corriger la signature line du CTASection final
 
-**3. Tranquilli-T** — `filter: "brightness-[1.5]"` → `filter: "brightness-0 invert"`
+Remplacer la prop `trustLine` :
 
-## Hors scope (intouchable)
-- Autres entrées : SIRVA, Temple/Trophy, Enfant Soleil
-- `tileStyle` (wrapper externe avec `rgba(255,255,255,.04)`)
-- Tous les attributs alt/width/height/loading/decoding/caption/href
-- Le reste du composant (CTA, brand row, columns, popular links, badge, NAP, copyright)
-- Aucun autre fichier
+```jsx
+trustLine="Je vous donne les chiffres et les options, vous décidez."
+```
 
-## Validation
-Footer → bloc Affiliations : RE/MAX sur sceau cream, MW et Tranquilli-T en blanc pur, les 3 autres logos inchangés.
+### Hors scope
+- Aucun autre tableau modifié (`profileCards`, `faq`, `related`)
+- Aucun autre composant modifié (`HeroSection`, `ContentBlock`, `SectionHeading`, etc.)
+- Le `trustLine` du `HeroSection` reste "Accompagnement stratégique."
+- Les grilles des sections "Mes propriétés à vendre" et "Propriétés vendues" restent inchangées.
