@@ -38,7 +38,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       href={property.remaxUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col h-full"
+      className="group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(23,48,59,0.08)]"
       style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
     >
       {/* Image */}
