@@ -75,7 +75,10 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                 >
                   {step.title}
                 </h3>
-                <p className={`mt-2.5 flex-1 text-[0.9375rem] leading-[1.6] ${step.highlight ? "text-[var(--cream)]/85" : "text-muted-foreground"}`}>
+                <p
+                  className={`mt-2.5 flex-1 text-[0.9375rem] leading-[1.6] ${step.highlight ? "" : "text-muted-foreground"}`}
+                  style={step.highlight ? { color: "color-mix(in oklab, var(--cream) 85%, transparent)" } : undefined}
+                >
                   {step.text}
                 </p>
                 <span className={`mt-5 inline-flex items-center gap-2 text-[0.875rem] font-semibold ${step.highlight ? "text-[var(--gold)]" : "text-[var(--ink)]"}`}>

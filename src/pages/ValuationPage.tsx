@@ -12,7 +12,7 @@ import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
 
 // Activer après validation des vraies valeurs (prénom, secteur, année).
-const SHOW_TESTIMONIAL = false;
+const SHOW_TESTIMONIAL = true;
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
@@ -214,8 +214,8 @@ const ValuationPage = () => {
                 <div className="relative grid grid-cols-3 gap-2">
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      Bas
+                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                      550 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Conservateur
@@ -223,8 +223,8 @@ const ValuationPage = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--gold)]" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
-                      Cible
+                    <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
+                      570 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Prix recommandé
@@ -232,8 +232,8 @@ const ValuationPage = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      Haut
+                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                      599 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Optimiste
@@ -274,7 +274,7 @@ const ValuationPage = () => {
                 className="block mt-6 not-italic text-[14px] text-[var(--ink)]/70"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                — [Sylvie.], [Aylmer], [2026]
+                — Sylvie, Aylmer, 2026
               </cite>
             </blockquote>
           </div>
