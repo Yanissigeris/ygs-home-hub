@@ -3,13 +3,16 @@ import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import BenefitsList from "@/components/BenefitsList";
+import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
+
+// Activer après validation des vraies valeurs (prénom, secteur, année).
+const SHOW_TESTIMONIAL = false;
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
