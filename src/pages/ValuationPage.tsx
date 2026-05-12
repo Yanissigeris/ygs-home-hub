@@ -185,61 +185,57 @@ const ValuationPage = () => {
               </ul>
             </div>
 
-            {/* Widget fourchette de valeur (statique) */}
+            {/* Widget fourchette de valeur (statique, illustratif) */}
             <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[var(--gold)]/30 shadow-sm">
-              <p
-                className="text-[11px] uppercase tracking-[0.14em] text-[var(--gold)]"
-                style={{ fontFamily: "var(--sans)" }}
-              >
-                Exemple d'analyse
-              </p>
+              <div className="flex items-center justify-between gap-3">
+                <p
+                  className="text-[11px] uppercase tracking-[0.14em] text-[var(--gold)]"
+                  style={{ fontFamily: "var(--sans)" }}
+                >
+                  Aperçu illustratif
+                </p>
+                <span
+                  className="text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[var(--gold)]/40 text-[var(--cream)]/70"
+                  style={{ fontFamily: "var(--sans)" }}
+                >
+                  Exemple
+                </span>
+              </div>
               <p
                 className="mt-2 text-[var(--cream)]/85 text-[0.9375rem]"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                Fourchette de valeur — secteur Aylmer
+                À quoi ressemble une fourchette de valeur
               </p>
 
               <div className="relative mt-10 mb-2">
                 {/* ligne reliant les 3 dots */}
                 <div className="absolute left-[6%] right-[6%] top-[5px] h-px bg-[var(--gold)]/50" aria-hidden="true" />
                 <div className="relative grid grid-cols-3 gap-2">
-                  {/* Conservateur */}
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      615 000 $
+                      Bas
                     </span>
-                    <span
-                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
-                      style={{ fontFamily: "var(--sans)" }}
-                    >
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Conservateur
                     </span>
                   </div>
-                  {/* Recommandé */}
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
                     <span className="mt-4 text-[var(--gold)]" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
-                      645 000 $
+                      Cible
                     </span>
-                    <span
-                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
-                      style={{ fontFamily: "var(--sans)" }}
-                    >
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Prix recommandé
                     </span>
                   </div>
-                  {/* Optimiste */}
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      680 000 $
+                      Haut
                     </span>
-                    <span
-                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
-                      style={{ fontFamily: "var(--sans)" }}
-                    >
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Optimiste
                     </span>
                   </div>
@@ -250,7 +246,7 @@ const ValuationPage = () => {
                 className="mt-8 text-[12px] leading-[1.5] text-[var(--cream)]/60"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                Exemple illustratif. Votre analyse sera basée sur les ventes comparables réelles de votre secteur.
+                Exemple illustratif — aucun montant réel. Votre analyse personnalisée sera basée sur les ventes comparables récentes de votre secteur.
               </p>
             </div>
           </div>
