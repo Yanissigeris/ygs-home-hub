@@ -54,20 +54,31 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
             >
               <Link
                 to={step.href}
-                className={`card-elevated group flex flex-col h-full border bg-card px-6 py-6 sm:px-7 sm:py-7 ${
+                className={`group relative flex flex-col h-full border px-6 py-6 sm:px-7 sm:py-7 transition-all duration-200 ${
                   step.highlight
-                    ? "border-accent/25 ring-1 ring-accent/8"
-                    : "border-border/40"
+                    ? "bg-[var(--ink)] border-[var(--ink)] hover:shadow-lg"
+                    : "bg-transparent border-[#D9E1E5] hover:border-[var(--gold)]/40"
                 }`}
                 onClick={() => trackCTAClick(step.cta, "funnel-next-step")}
               >
-                <h3 className="text-[1.0625rem] font-semibold group-hover:text-primary transition-colors">
+                {step.highlight && (
+                  <span
+                    className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] bg-[var(--gold)] text-[var(--cream)]"
+                    style={{ fontFamily: "var(--sans)" }}
+                  >
+                    Recommandé
+                  </span>
+                )}
+                <h3
+                  className={`text-[1.25rem] leading-tight ${step.highlight ? "text-[var(--cream)]" : "text-[var(--ink)] font-semibold"}`}
+                  style={step.highlight ? { fontFamily: "var(--serif)" } : undefined}
+                >
                   {step.title}
                 </h3>
-                <p className="mt-2.5 flex-1 text-[0.9375rem] leading-[1.6] text-muted-foreground">
+                <p className={`mt-2.5 flex-1 text-[0.9375rem] leading-[1.6] ${step.highlight ? "text-[var(--cream)]/85" : "text-muted-foreground"}`}>
                   {step.text}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary">
+                <span className={`mt-5 inline-flex items-center gap-2 text-[0.875rem] font-semibold ${step.highlight ? "text-[var(--gold)]" : "text-[var(--ink)]"}`}>
                   {step.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>

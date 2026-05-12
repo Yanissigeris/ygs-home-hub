@@ -3,13 +3,16 @@ import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
-import BenefitsList from "@/components/BenefitsList";
+import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
+
+// Activer après validation des vraies valeurs (prénom, secteur, année).
+const SHOW_TESTIMONIAL = false;
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes dans votre secteur de Gatineau",
@@ -166,11 +169,93 @@ const ValuationPage = () => {
         </div>
       </section>
 
-      <BenefitsList
-        overline="Ce que vous recevez"
-        title="Votre évaluation inclut"
-        items={benefits}
-      />
+      {/* ── Votre évaluation inclut — 2 cols + widget fourchette ── */}
+      <section className="bg-background py-16 md:py-20">
+        <div className="section-container">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-center">
+            <div>
+              <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
+              <ul className="mt-8 space-y-4">
+                {benefits.map((item) => (
+                  <li key={item} className="flex items-start gap-3.5">
+                    <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
+                    <span className="text-[1rem] text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Widget fourchette de valeur (statique) */}
+            <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[var(--gold)]/30 shadow-sm">
+              <p
+                className="text-[11px] uppercase tracking-[0.14em] text-[var(--gold)]"
+                style={{ fontFamily: "var(--sans)" }}
+              >
+                Exemple d'analyse
+              </p>
+              <p
+                className="mt-2 text-[var(--cream)]/85 text-[0.9375rem]"
+                style={{ fontFamily: "var(--sans)" }}
+              >
+                Fourchette de valeur — secteur Aylmer
+              </p>
+
+              <div className="relative mt-10 mb-2">
+                {/* ligne reliant les 3 dots */}
+                <div className="absolute left-[6%] right-[6%] top-[5px] h-px bg-[var(--gold)]/50" aria-hidden="true" />
+                <div className="relative grid grid-cols-3 gap-2">
+                  {/* Conservateur */}
+                  <div className="flex flex-col items-center text-center">
+                    <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
+                    <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                      615 000 $
+                    </span>
+                    <span
+                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
+                      style={{ fontFamily: "var(--sans)" }}
+                    >
+                      Conservateur
+                    </span>
+                  </div>
+                  {/* Recommandé */}
+                  <div className="flex flex-col items-center text-center">
+                    <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
+                    <span className="mt-4 text-[var(--gold)]" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
+                      645 000 $
+                    </span>
+                    <span
+                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
+                      style={{ fontFamily: "var(--sans)" }}
+                    >
+                      Prix recommandé
+                    </span>
+                  </div>
+                  {/* Optimiste */}
+                  <div className="flex flex-col items-center text-center">
+                    <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
+                    <span className="mt-4 text-[var(--cream)]" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                      680 000 $
+                    </span>
+                    <span
+                      className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70"
+                      style={{ fontFamily: "var(--sans)" }}
+                    >
+                      Optimiste
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <p
+                className="mt-8 text-[12px] leading-[1.5] text-[var(--cream)]/60"
+                style={{ fontFamily: "var(--sans)" }}
+              >
+                Exemple illustratif. Votre analyse sera basée sur les ventes comparables réelles de votre secteur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <FunnelNextStep
         overline="Et ensuite?"
@@ -179,6 +264,26 @@ const ValuationPage = () => {
         steps={afterSteps}
         background="alt"
       />
+
+      {SHOW_TESTIMONIAL && (
+        <section className="bg-[var(--cream)] py-14 md:py-20">
+          <div className="section-container max-w-3xl mx-auto text-center">
+            <div className="mx-auto h-px w-10 bg-[var(--gold)] mb-4" aria-hidden="true" />
+            <blockquote
+              className="text-[var(--ink)] italic"
+              style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", lineHeight: 1.4 }}
+            >
+              « C'est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. »
+              <cite
+                className="block mt-6 not-italic text-[14px] text-[var(--ink)]/70"
+                style={{ fontFamily: "var(--sans)" }}
+              >
+                — [Sylvie.], [Aylmer], [2026]
+              </cite>
+            </blockquote>
+          </div>
+        </section>
+      )}
       <RelatedPages
         overline="À lire aussi"
         title="Ressources liées"
