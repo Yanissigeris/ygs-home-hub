@@ -1,74 +1,24 @@
-## Fichier ciblé
-`src/components/PropertyCard.tsx` — uniquement.
+## Plan: passer FeaturedProperties à 4 propriétés (layout 2×2)
 
-## Partie A — Placeholder cream sur le wrapper image
+Fichier unique modifié : `src/components/FeaturedProperties.tsx`
 
-Ligne 43 actuelle :
-```tsx
-<div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
-```
+### Modification 1 — strategicOrder
+Retirer l'entrée `"20453879"` (condo 154 Lucerne) du tableau `strategicOrder`. Résultat : 4 ids dans l'ordre Chinook (vendu) → Brook (active) → Laperrière (active) → Laviolette (vendu).
 
-Devient :
-```tsx
-<div className="relative overflow-hidden bg-[var(--cream-deep)]" style={{ aspectRatio: "4/3" }}>
-```
+### Modification 2 — Grid desktop
+Remplacer la className conditionnelle du desktop grid par une logique à 3 cas :
+- `featured.length === 4` → `lg:grid-cols-2` (layout 2×2)
+- `featured.length >= 3` → `lg:grid-cols-3`
+- sinon → vide (md:grid-cols-2 hérité)
 
-- Ajout d'UNE seule classe : `bg-[var(--cream-deep)]`
-- L'inline style `aspectRatio: "4/3"` reste **inchangé**
-- Aucune classe `aspect-*` ajoutée
+### Hors scope (strictement non touché)
+- `src/data/properties.ts` et `properties-en.ts` (Lucerne reste pour /proprietes)
+- Structure des cards, hover, badges, fade-in image
+- Grid mobile (scroll horizontal)
+- Ligne `maxWidth: 900` (toujours valide car 4 ≥ 3)
 
-## Partie B — Fade-in image avec gestion cache
-
-### B.1 Imports (haut du fichier)
-Ajout d'une ligne au-dessus des imports existants :
-```tsx
-import { useState, useRef, useEffect } from "react";
-```
-
-### B.2 State local dans PropertyCard (après `const t = i18n[lang];`)
-```tsx
-const imgRef = useRef<HTMLImageElement>(null);
-const [imageLoaded, setImageLoaded] = useState(false);
-
-useEffect(() => {
-  if (imgRef.current?.complete) {
-    setImageLoaded(true);
-  }
-}, []);
-```
-
-`useState` / `useRef` / `useEffect` sont **locaux à chaque instance** de `PropertyCard`.
-
-### B.3 Image (lignes 44-57 actuelles)
-Modifications sur le `<img>` existant :
-
-- Ajout `ref={imgRef}`
-- `transition-transform` → `transition-all`
-- Ajout conditionnel `${imageLoaded ? "opacity-100" : "opacity-0"}`
-- Ajout `onLoad={() => setImageLoaded(true)}` (en plus du `onError` existant qui reste)
-- Tout le reste inchangé : `src`, `alt`, `loading="lazy"`, `decoding="async"`, `width`, `height`, `onError`
-
-className final :
-```
-h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}
-```
-
-## Zones explicitement non touchées
-
-- Inline style `aspectRatio: "4/3"` du wrapper — préservé
-- `filter: saturate(0.88)` (défini hors composant) — non touché
-- Wrapper `<a>` ligne 41 avec hover (`hover:-translate-y-1`, `hover:shadow-[…]`) — préservé
-- `group-hover:bg-[#A88A5A]` (bordure dorée) — préservé
-- `group-hover:translate-x-1` (flèche) — préservé
-- `group-hover:scale-105` sur l'image — préservé (toujours présent dans la nouvelle className)
-- `onError` handler de l'image — préservé
-- `loading="lazy"` et `decoding="async"` — préservés
-
-## Vérifications demandées
-- (a) Wrapper reçoit uniquement `bg-[var(--cream-deep)]` ✓
-- (b) Inline `aspect-ratio: 4/3` non modifié ✓
-- (c) `useRef` + `useEffect` (cache) + `onLoad` (network) tous présents ✓
-- (d) Hooks locaux à `PropertyCard.tsx` ✓
-- (e) `saturate(0.88)` non touché ✓
-- (f) Hover du card non touché ✓
-- (g) `transition-transform` → `transition-all` ✓
+### Validation visuelle
+- `/` desktop ≥1024px : 2×2
+- `/` tablette 768-1023px : 2×2 (md:grid-cols-2 inchangé)
+- `/` mobile : scroll horizontal inchangé
+- `/proprietes` : 5 propriétés toujours présentes
