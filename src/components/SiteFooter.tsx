@@ -30,16 +30,16 @@ const affiliationLogos: AffiliationLogo[] = [
     href: "https://www.remax-quebec.com",
     caption: "RE/MAX Direct Inc.",
     custom: (
-      <div className="flex items-center gap-1.5">
+      <div className="flex items-center gap-1.5" style={{ background: "var(--cream)", padding: "8px 12px", borderRadius: 3 }}>
         <img src={remaxLogotypeBlack} alt="Logo RE/MAX" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
         <img src={remaxBalloonOfficial} alt="" aria-hidden="true" style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-[1.6]" },
+  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau", filter: "brightness-0 invert" },
   { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
-  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-[1.5]" },
+  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-0 invert" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
