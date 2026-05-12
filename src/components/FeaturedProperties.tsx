@@ -167,7 +167,6 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     // volume + prix), 3 actives variées par prix/secteur, vendu en clôture.
     const strategicOrder = [
       "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
-      "20453879", // Condo Hull (active, accessible 359 900 $)
       "17113358", // Maison Aylmer (active, 424 900 $)
       "15163372", // Maison Limbour (active, 649 900 $)
       "28743871", // Split Cantley (vendu, 559 800 $)
@@ -204,7 +203,10 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
 
           {/* Desktop grid */}
           <div
-            className={`hidden md:grid gap-5 md:grid-cols-2 ${featured.length >= 3 ? "lg:grid-cols-3" : ""}`}
+            className={`hidden md:grid gap-5 md:grid-cols-2 ${
+              featured.length === 4 ? "lg:grid-cols-2" :
+              featured.length >= 3 ? "lg:grid-cols-3" : ""
+            }`}
             style={featured.length < 3 ? { maxWidth: 900, marginInline: "auto" } : undefined}
           >
             {featured.map((p) => (
