@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import type { Property } from "@/data/properties";
 import { useLanguage } from "@/contexts/LanguageContext";
 
