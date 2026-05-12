@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import type { Property } from "@/data/properties";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -30,6 +31,15 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
   const lang = useLanguage();
   const t = i18n[lang];
 
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      setImageLoaded(true);
+    }
+  }, []);
+
   const statusLabel =
     property.status === "active" ? t.active : property.status === "pending" ? t.pending : t.sold;
 
@@ -42,15 +52,17 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+      <div className="relative overflow-hidden bg-[var(--cream-deep)]" style={{ aspectRatio: "4/3" }}>
         <img
+          ref={imgRef}
           src={property.image}
           alt={`${property.type} — ${property.address}, ${property.city} — YGS Yanis Gauthier-Sigeris`}
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          className={`h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           loading="lazy"
           decoding="async"
           width={648}
           height={486}
+          onLoad={() => setImageLoaded(true)}
           onError={(e) => {
             const el = e.target as HTMLImageElement;
             el.style.display = "none";

@@ -1,62 +1,74 @@
-## Résumé
-Activer `scroll-behavior: smooth` global via CSS, avec fallback instantané sur la navigation inter-routes et respect de `prefers-reduced-motion`.
+## Fichier ciblé
+`src/components/PropertyCard.tsx` — uniquement.
 
-## Changement 1 — `src/index.css`
+## Partie A — Placeholder cream sur le wrapper image
 
-Insérer ce bloc immédiatement après `* { @apply border-border; }` (ligne 139) et avant la règle `button, [role="button"], a, input, select, textarea` :
-
-```css
-  html {
-    scroll-behavior: smooth;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
+Ligne 43 actuelle :
+```tsx
+<div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
 ```
 
-## Changement 2 — `src/components/ScrollToTop.tsx`
-
-Remplacer le contenu du `useEffect` pour désactiver temporairement le smooth scroll lors d'un changement de route. Fichier final :
-
-```typescript
-import { useEffect } from "react";
-import { useLocation, useNavigationType } from "react-router-dom";
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  const navigationType = useNavigationType();
-
-  useEffect(() => {
-    // Only scroll to top on PUSH (link click) or REPLACE navigation.
-    // POP (back/forward) keeps the browser's native scroll restoration.
-    if (navigationType !== "POP") {
-      const root = document.documentElement;
-      const prev = root.style.scrollBehavior;
-      root.style.scrollBehavior = "auto";
-      window.scrollTo(0, 0);
-      root.style.scrollBehavior = prev;
-    }
-  }, [pathname, navigationType]);
-
-  return null;
-};
-
-export default ScrollToTop;
+Devient :
+```tsx
+<div className="relative overflow-hidden bg-[var(--cream-deep)]" style={{ aspectRatio: "4/3" }}>
 ```
 
-## Contraintes respectées
-- Aucune librairie JS ajoutée.
-- Aucun autre fichier touché (HeroSection, sticky hero, prerender, etc. inchangés).
-- Aucune classe `.reveal*` modifiée.
-- `overflow-x: hidden` mobile inchangé.
+- Ajout d'UNE seule classe : `bg-[var(--cream-deep)]`
+- L'inline style `aspectRatio: "4/3"` reste **inchangé**
+- Aucune classe `aspect-*` ajoutée
 
-## Validation post-deploy
-1. Ancres (chevron hero) : scroll fluide natif.
-2. Navigation menu (route → route) : scroll en haut instantané.
-3. Back/forward : restauration native inchangée.
-4. Sticky hero sur `/` : se relâche normalement.
-5. `prefers-reduced-motion: reduce` : scroll instantané partout.
-6. Build : aucune erreur TS / runtime.
+## Partie B — Fade-in image avec gestion cache
+
+### B.1 Imports (haut du fichier)
+Ajout d'une ligne au-dessus des imports existants :
+```tsx
+import { useState, useRef, useEffect } from "react";
+```
+
+### B.2 State local dans PropertyCard (après `const t = i18n[lang];`)
+```tsx
+const imgRef = useRef<HTMLImageElement>(null);
+const [imageLoaded, setImageLoaded] = useState(false);
+
+useEffect(() => {
+  if (imgRef.current?.complete) {
+    setImageLoaded(true);
+  }
+}, []);
+```
+
+`useState` / `useRef` / `useEffect` sont **locaux à chaque instance** de `PropertyCard`.
+
+### B.3 Image (lignes 44-57 actuelles)
+Modifications sur le `<img>` existant :
+
+- Ajout `ref={imgRef}`
+- `transition-transform` → `transition-all`
+- Ajout conditionnel `${imageLoaded ? "opacity-100" : "opacity-0"}`
+- Ajout `onLoad={() => setImageLoaded(true)}` (en plus du `onError` existant qui reste)
+- Tout le reste inchangé : `src`, `alt`, `loading="lazy"`, `decoding="async"`, `width`, `height`, `onError`
+
+className final :
+```
+h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}
+```
+
+## Zones explicitement non touchées
+
+- Inline style `aspectRatio: "4/3"` du wrapper — préservé
+- `filter: saturate(0.88)` (défini hors composant) — non touché
+- Wrapper `<a>` ligne 41 avec hover (`hover:-translate-y-1`, `hover:shadow-[…]`) — préservé
+- `group-hover:bg-[#A88A5A]` (bordure dorée) — préservé
+- `group-hover:translate-x-1` (flèche) — préservé
+- `group-hover:scale-105` sur l'image — préservé (toujours présent dans la nouvelle className)
+- `onError` handler de l'image — préservé
+- `loading="lazy"` et `decoding="async"` — préservés
+
+## Vérifications demandées
+- (a) Wrapper reçoit uniquement `bg-[var(--cream-deep)]` ✓
+- (b) Inline `aspect-ratio: 4/3` non modifié ✓
+- (c) `useRef` + `useEffect` (cache) + `onLoad` (network) tous présents ✓
+- (d) Hooks locaux à `PropertyCard.tsx` ✓
+- (e) `saturate(0.88)` non touché ✓
+- (f) Hover du card non touché ✓
+- (g) `transition-transform` → `transition-all` ✓
