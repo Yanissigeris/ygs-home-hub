@@ -63,8 +63,8 @@ const BreadcrumbJsonLd = () => {
       const post = getPostBySlug(params.slug!);
       if (!post) return;
       const dyn: BreadcrumbConfig = isFr
-        ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue" }], current: post.title }
-        : { trail: [{ name: "Home", href: "/en" }, { name: "Blog", href: "/en/blog" }], current: post.titleEn };
+        ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue/" }], current: post.title }
+        : { trail: [{ name: "Home", href: "/en/" }, { name: "Blog", href: "/en/blog/" }], current: post.titleEn };
       writeJsonLd(pathname, dyn);
     });
 
