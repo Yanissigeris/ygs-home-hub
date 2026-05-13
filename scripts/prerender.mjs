@@ -587,6 +587,7 @@ async function main() {
     let enHtml = buildHtmlForRoute(shell, enRoute, enMeta, {
       enPath: enRoute,
       frPath: frRoute,
+      ogType: "article",
     });
     enHtml = injectBlogPostingJsonLd(enHtml, {
       url: enUrlAbs,
