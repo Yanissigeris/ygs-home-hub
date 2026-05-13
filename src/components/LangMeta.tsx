@@ -126,11 +126,10 @@ const LangMeta = () => {
     const enUrl = `${DOMAIN}${withTrailingSlash(enPath)}`;
 
     const setHreflang = (hreflang: string, href: string) => {
-      const id = `hreflang-${hreflang}`;
-      let link = document.getElementById(id) as HTMLLinkElement | null;
+      const selector = `link[rel="alternate"][hreflang="${hreflang}"]`;
+      let link = document.head.querySelector<HTMLLinkElement>(selector);
       if (!link) {
         link = document.createElement("link");
-        link.id = id;
         link.rel = "alternate";
         link.setAttribute("hreflang", hreflang);
         document.head.appendChild(link);
