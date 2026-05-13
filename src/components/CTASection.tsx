@@ -36,7 +36,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         )}
         <h2 className="mx-auto max-w-lg" style={{ color: dark ? "var(--white)" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
         {text && (
-          <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.5)" : "var(--muted)" }}>
+          <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.65)" : "hsl(var(--muted-foreground))" }}>
             {text}
           </p>
         )}
@@ -80,7 +80,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         {/* Mobile phone link */}
         {dark && (
           <div className="mt-4 md:hidden">
-            <a href="tel:+18192103044" style={{ color: "rgba(255,255,255,.45)", fontSize: ".78rem" }}>
+            <a href="tel:+18192103044" style={{ color: "rgba(255,255,255,.65)", fontSize: ".78rem" }}>
               📞 819-210-3044
             </a>
           </div>
@@ -88,7 +88,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
 
         {trustLine && (
           <div className="mt-8 sm:mt-12 pt-8 sm:pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
-            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.2rem)", fontWeight: 300, color: dark ? "rgba(255,255,255,.3)" : "var(--muted)" }}>
+            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.2rem)", fontWeight: 300, color: dark ? "rgba(255,255,255,.55)" : "hsl(var(--muted-foreground))" }}>
               « {trustLine} »
             </p>
           </div>

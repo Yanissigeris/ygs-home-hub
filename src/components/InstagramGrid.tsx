@@ -103,7 +103,7 @@ const InstagramGrid = () => {
         </div>
 
         {/* Tagline */}
-        <p className="mt-5 text-center text-[.78rem] md:text-[.78rem]" style={{ color: "rgba(255,255,255,.4)" }}>
+        <p className="mt-5 text-center text-[.78rem] md:text-[.78rem]" style={{ color: "rgba(255,255,255,.65)" }}>
           {t.tagline}
         </p>
       </div>
