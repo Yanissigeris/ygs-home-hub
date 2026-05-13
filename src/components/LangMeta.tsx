@@ -70,12 +70,13 @@ const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k])
 
 const DOMAIN = "https://yanisgauthier.com";
 
-const HREFLANG_IDS = ["hreflang-fr-CA", "hreflang-en-CA", "hreflang-x-default"];
+const HREFLANG_VALUES = ["fr-CA", "en-CA", "x-default"];
 
 const removeHreflangs = () => {
-  HREFLANG_IDS.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.remove();
+  HREFLANG_VALUES.forEach((value) => {
+    document.head
+      .querySelectorAll(`link[rel="alternate"][hreflang="${value}"]`)
+      .forEach((el) => el.remove());
   });
 };
 
