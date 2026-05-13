@@ -99,7 +99,6 @@ const LangMeta = () => {
     const isBlogArticle =
       /^\/blogue\/[^/]+/.test(pathname) || /^\/en\/blog\/[^/]+/.test(pathname);
     if (isBlogArticle) {
-      removeHreflangs();
       return;
     }
 
