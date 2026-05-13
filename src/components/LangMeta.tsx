@@ -70,12 +70,13 @@ const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k])
 
 const DOMAIN = "https://yanisgauthier.com";
 
-const HREFLANG_IDS = ["hreflang-fr-CA", "hreflang-en-CA", "hreflang-x-default"];
+const HREFLANG_VALUES = ["fr-CA", "en-CA", "x-default"];
 
 const removeHreflangs = () => {
-  HREFLANG_IDS.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.remove();
+  HREFLANG_VALUES.forEach((value) => {
+    document.head
+      .querySelectorAll(`link[rel="alternate"][hreflang="${value}"]`)
+      .forEach((el) => el.remove());
   });
 };
 
@@ -125,11 +126,10 @@ const LangMeta = () => {
     const enUrl = `${DOMAIN}${withTrailingSlash(enPath)}`;
 
     const setHreflang = (hreflang: string, href: string) => {
-      const id = `hreflang-${hreflang}`;
-      let link = document.getElementById(id) as HTMLLinkElement | null;
+      const selector = `link[rel="alternate"][hreflang="${hreflang}"]`;
+      let link = document.head.querySelector<HTMLLinkElement>(selector);
       if (!link) {
         link = document.createElement("link");
-        link.id = id;
         link.rel = "alternate";
         link.setAttribute("hreflang", hreflang);
         document.head.appendChild(link);
