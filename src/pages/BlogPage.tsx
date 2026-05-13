@@ -161,7 +161,7 @@ const BlogPage = () => {
                 {featured.excerpt}
               </p>
               <Link
-                to={`/blogue/${featured.slug}`}
+                to={`/blogue/${featured.slug}/`}
                 className="group mt-6 inline-flex items-center gap-2 font-medium transition-colors hover:text-[var(--gold)]"
                 style={{ color: "var(--ink)", fontSize: "13px", letterSpacing: "0.04em" }}
               >
@@ -202,7 +202,7 @@ const BlogPage = () => {
           {nonFeaturedPosts.map((post) => (
             <Link
               key={post.slug}
-              to={`/blogue/${post.slug}`}
+              to={`/blogue/${post.slug}/`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
             >
               <span

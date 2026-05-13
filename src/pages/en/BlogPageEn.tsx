@@ -158,7 +158,7 @@ const BlogPageEn = () => {
                 {featured.excerptEn}
               </p>
               <Link
-                to={`/en/blog/${featured.slugEn}`}
+                to={`/en/blog/${featured.slugEn}/`}
                 className="group mt-6 inline-flex items-center gap-2 font-medium transition-colors hover:text-[var(--gold)]"
                 style={{ color: "var(--ink)", fontSize: "13px", letterSpacing: "0.04em" }}
               >
@@ -198,7 +198,7 @@ const BlogPageEn = () => {
           {nonFeaturedPosts.map((post) => (
             <Link
               key={post.slugEn}
-              to={`/en/blog/${post.slugEn}`}
+              to={`/en/blog/${post.slugEn}/`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
             >
               <span
