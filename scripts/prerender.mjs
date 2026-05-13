@@ -21,7 +21,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { SEO_ROUTES, SITE_URL, DEFAULT_OG } from "./seo-routes.mjs";
+import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
@@ -494,6 +494,7 @@ async function main() {
       const isEn = route.startsWith("/en");
       const frPath = isEn ? enToFr[route] : route;
       const enPath = isEn ? route : frToEn[route];
+      const meta = SEO_ROUTES[route];
 
       const alternates =
         frPath && enPath
@@ -505,7 +506,7 @@ async function main() {
 
       return `  <url>
     <loc>${xmlEscape(loc)}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${meta?.lastmod || SITE_LAST_UPDATE}</lastmod>
     <changefreq>${changefreqFor(route)}</changefreq>
     <priority>${priorityFor(route)}</priority>${alternates}
   </url>`;

@@ -1,5 +1,5 @@
 /**
- * Central SEO map: route → { title, description }
+ * Central SEO map: route → { title, description, ogImage?, lastmod? }
  * Used by scripts/prerender.mjs to inject unique <title>, <meta description>,
  * and <link rel="canonical"> into a static HTML per route at build time.
  *
@@ -9,12 +9,21 @@
  *
  * Blog routes (/blogue/:slug, /en/blog/:slug) are NOT listed here — they are
  * appended dynamically via getAllSeoRoutes() from blog-extractor.mjs.
+ *
+ * Sitemap <lastmod> policy:
+ *   • SITE_LAST_UPDATE — bump manually for site-wide changes (header,
+ *     footer, global template). Used as the default <lastmod> for every
+ *     static route in the sitemap.
+ *   • Optional per-route `lastmod: "YYYY-MM-DD"` — add to a specific
+ *     SEO_ROUTES entry when that page receives a meaningful content
+ *     update so it overrides SITE_LAST_UPDATE for that URL only.
  */
 
 import { extractBlogPosts } from "./blog-extractor.mjs";
 
 export const SITE_URL = "https://yanisgauthier.com";
 export const DEFAULT_OG = `${SITE_URL}/og/og-default.jpg`;
+export const SITE_LAST_UPDATE = "2026-05-13";
 const BLOG_OG = `${SITE_URL}/og/og-blog.jpg`;
 
 /** @type {Record<string, { title: string; description: string; ogImage?: string }>} */
