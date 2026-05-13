@@ -43,9 +43,9 @@ const steps = [
 
 
 const nextSteps = [
-{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété — c'est gratuit, confidentiel et sans engagement.", href: "/evaluation-gratuite-gatineau", cta: "Obtenir ma valeur", highlight: true },
-{ title: "Plan vendeur", text: "Prix, préparation, mise en marché — un plan clair adapté à votre propriété et votre situation.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan" },
-{ title: "Parler à Yanis", text: "Un appel pour clarifier vos options — pas de pitch, juste des réponses.", href: "/contact-yanis", cta: "Réserver un appel" }];
+{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété — c'est gratuit, confidentiel et sans engagement.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur", highlight: true },
+{ title: "Plan vendeur", text: "Prix, préparation, mise en marché — un plan clair adapté à votre propriété et votre situation.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
+{ title: "Parler à Yanis", text: "Un appel pour clarifier vos options — pas de pitch, juste des réponses.", href: "/contact-yanis/", cta: "Réserver un appel" }];
 
 
 const faq = [
@@ -71,13 +71,13 @@ const SellerPage = () =>
       hreflangEn="https://yanisgauthier.com/en/sell"
     />
     <PageMeta title="Vendre sa maison à Gatineau · Outaouais" description="Vendez votre propriété à Gatineau au meilleur prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais — évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau" serviceType="Real Estate Listing Service" />
+    <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais — évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau/" serviceType="Real Estate Listing Service" />
     <HeroSection
     overline="Pour vendeurs · Gatineau et environs"
     title="Vendre votre propriété à Gatineau avec une vraie stratégie"
     subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair — prix, préparation, mise en marché, négociation."
-    primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
-    secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
+    primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
+    secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/" }}
     trustLine="Stratégie claire."
     heroBgImage={heroImg} />
 
@@ -94,7 +94,7 @@ const SellerPage = () =>
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: Chambre immobilière de l'Outaouais (CIO), SCHL — Perspectives du marché 2026.</p>
       <div className="mt-6">
-        <Button asChild><Link to="/evaluation-gratuite-gatineau">Évaluation gratuite →</Link></Button>
+        <Button asChild><Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite →</Link></Button>
       </div>
     </ContentBlock>
 
@@ -108,7 +108,7 @@ const SellerPage = () =>
     <InlineCTA
     text="Première étape: connaître la valeur de votre propriété — c'est gratuit et sans engagement."
     buttonLabel="Évaluation gratuite →"
-    href="/evaluation-gratuite-gatineau" />
+    href="/evaluation-gratuite-gatineau/" />
   
 
     <CardGrid
@@ -135,29 +135,29 @@ const SellerPage = () =>
     <ProcessSteps steps={steps} background="alt" />
 
     <SectorLinks sectors={[
-      { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, familles, quartiers établis" },
-      { name: "Plateau", href: "/plateau", detail: "Maisons neuves, familial, accès Ottawa" },
-      { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
-      { name: "Chelsea", href: "/chelsea", detail: "Village, nature, parc de la Gatineau" },
-      { name: "Cantley", href: "/cantley", detail: "Rural, grands terrains, collines" },
-      { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
-      { name: "Masson-Angers", href: "/masson-angers", detail: "Neufs, familles, en croissance" },
-      { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, villégiature" },
-      { name: "Pontiac", href: "/pontiac", detail: "Rural, grands espaces, rivière" },
-      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Bungalows, résidentiel établi" },
-      { name: "Limbour", href: "/limbour", detail: "Familial moderne, parcs" },
-      { name: "Gatineau-centre", href: "/gatineau", detail: "Services, central, plex" },
+      { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, familles, quartiers établis" },
+      { name: "Plateau", href: "/plateau/", detail: "Maisons neuves, familial, accès Ottawa" },
+      { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
+      { name: "Chelsea", href: "/chelsea/", detail: "Village, nature, parc de la Gatineau" },
+      { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains, collines" },
+      { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Rivière, prix accessibles, nature" },
+      { name: "Masson-Angers", href: "/masson-angers/", detail: "Neufs, familles, en croissance" },
+      { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets, villégiature" },
+      { name: "Pontiac", href: "/pontiac/", detail: "Rural, grands espaces, rivière" },
+      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Bungalows, résidentiel établi" },
+      { name: "Limbour", href: "/limbour/", detail: "Familial moderne, parcs" },
+      { name: "Gatineau-centre", href: "/gatineau/", detail: "Services, central, plex" },
     ]} />
 
     <RelatedPages
       overline="À lire aussi"
       title="Articles et ressources pour vendeurs"
       pages={[
-        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
         { title: "Quand vendre sa maison à Gatineau", text: "Meilleur moment pour vendre en Outaouais.", href: "/blogue/quand-vendre-maison-gatineau" },
         { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-gatineau" },
-        { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue" },
-        { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+        { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
+        { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}
     />
 
@@ -190,8 +190,8 @@ const SellerPage = () =>
     title="Vous voulez savoir quoi faire dans votre cas?"
     text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
     buttons={[
-    { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-    { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau", variant: "outline" }]
+    { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
+    { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/", variant: "outline" }]
     }
     trustLine="Je vous donne les chiffres et les options, vous décidez." />
   

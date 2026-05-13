@@ -27,9 +27,9 @@ const challenges = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
 ];
 
 const steps = [
@@ -40,9 +40,9 @@ const steps = [
 
 
 const nextSteps = [
-  { title: "Réserver un appel", text: "On discute de votre relocalisation, vos priorités et vos questions — 100% gratuit.", href: "/contact-yanis", cta: "Réserver un appel", highlight: true },
-  { title: "Guide relocalisation", text: "Tout ce qu'il faut savoir pour s'installer à Gatineau — secteurs, prix, processus, écoles.", href: "/guide-relocalisation-gatineau", cta: "Lire le guide" },
-  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
+  { title: "Réserver un appel", text: "On discute de votre relocalisation, vos priorités et vos questions — 100% gratuit.", href: "/contact-yanis/", cta: "Réserver un appel", highlight: true },
+  { title: "Guide relocalisation", text: "Tout ce qu'il faut savoir pour s'installer à Gatineau — secteurs, prix, processus, écoles.", href: "/guide-relocalisation-gatineau/", cta: "Lire le guide" },
+  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau/", cta: "Voir les quartiers" },
 ];
 
 const faq = [
@@ -56,13 +56,13 @@ const RelocationPage = () => (
    <>
     <SEO title="Déménager d'Ottawa à Gatineau | Courtier YGS" description="Vous déménagez d'Ottawa à Gatineau? Courtier bilingue spécialisé en relocalisation Outaouais. Quartiers, prix, processus québécois expliqués." canonical="https://yanisgauthier.com/relocalisation-ottawa-gatineau" hreflangFr="https://yanisgauthier.com/relocalisation-ottawa-gatineau" hreflangEn="https://yanisgauthier.com/en/relocation" />
     <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham — taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Service de relocalisation immobilière Ottawa–Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau — recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau" serviceType="Real Estate Relocation Service" />
+    <ServiceJsonLd name="Service de relocalisation immobilière Ottawa–Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau — recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau/" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
       subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau" }}
+      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/" }}
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
@@ -89,7 +89,7 @@ const RelocationPage = () => (
     <InlineCTA
       text="Vous êtes aussi vendeur? Connaître la valeur de votre propriété actuelle peut clarifier votre budget d'achat."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <SectorLinks
@@ -127,8 +127,8 @@ const RelocationPage = () => (
       title="Parlons de votre projet de relocalisation"
       text="Budget, secteurs, processus québécois — on clarifie tout ça lors d'un premier appel, sans engagement."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau", variant: "outline" },
+        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
@@ -139,10 +139,10 @@ const RelocationPage = () => (
       overline="À lire aussi"
       title="Pages connexes"
       pages={[
-        { title: "Guide relocalisation", text: "Le guide complet pour s'installer à Gatineau.", href: "/guide-relocalisation-gatineau" },
-        { title: "Acheter à Gatineau depuis Ottawa", text: "Taxes, marché et processus pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
-        { title: "Relocalisation depuis Montréal", text: "Ce qui change quand on quitte Montréal pour l'Outaouais.", href: "/relocalisation-montreal-gatineau" },
-        { title: "Quartiers à considérer", text: "Trouvez le secteur qui vous convient à Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+        { title: "Guide relocalisation", text: "Le guide complet pour s'installer à Gatineau.", href: "/guide-relocalisation-gatineau/" },
+        { title: "Acheter à Gatineau depuis Ottawa", text: "Taxes, marché et processus pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+        { title: "Relocalisation depuis Montréal", text: "Ce qui change quand on quitte Montréal pour l'Outaouais.", href: "/relocalisation-montreal-gatineau/" },
+        { title: "Quartiers à considérer", text: "Trouvez le secteur qui vous convient à Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}
       background="alt"
     />

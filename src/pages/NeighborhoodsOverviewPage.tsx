@@ -13,24 +13,24 @@ import heroImg from "@/assets/hero-neighborhoods.webp";
 
 
 const sectors = [
-  { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis, qualité de vie" },
-  { name: "Hull", href: "/hull", detail: "Urbain, culture, proximité centre-ville Ottawa" },
-  { name: "Plateau", href: "/plateau", detail: "Familles, développements récents, parcs" },
-  { name: "Gatineau (centre)", href: "/gatineau", detail: "Résidentiel, services, banlieue accessible" },
-  { name: "Chelsea", href: "/chelsea", detail: "Village pittoresque, parc de la Gatineau" },
-  { name: "Cantley", href: "/cantley", detail: "Collines, grands terrains, vie rurale" },
-  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, nature sauvage" },
-  { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
-  { name: "Masson-Angers", href: "/masson-angers", detail: "Constructions neuves, familles, en croissance" },
-  { name: "Pontiac", href: "/pontiac", detail: "Grands espaces, rivière, vie rurale" },
-  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Résidentiel établi, bungalows, abordable" },
-  { name: "Limbour", href: "/limbour", detail: "Familial, parcs, banlieue moderne" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, quartiers établis, qualité de vie" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, culture, proximité centre-ville Ottawa" },
+  { name: "Plateau", href: "/plateau/", detail: "Familles, développements récents, parcs" },
+  { name: "Gatineau (centre)", href: "/gatineau/", detail: "Résidentiel, services, banlieue accessible" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Village pittoresque, parc de la Gatineau" },
+  { name: "Cantley", href: "/cantley/", detail: "Collines, grands terrains, vie rurale" },
+  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets, nature sauvage" },
+  { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Rivière, prix accessibles, nature" },
+  { name: "Masson-Angers", href: "/masson-angers/", detail: "Constructions neuves, familles, en croissance" },
+  { name: "Pontiac", href: "/pontiac/", detail: "Grands espaces, rivière, vie rurale" },
+  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Résidentiel établi, bungalows, abordable" },
+  { name: "Limbour", href: "/limbour/", detail: "Familial, parcs, banlieue moderne" },
 ];
 
 const lifestyleGuides = [
-  { icon: MapPin, title: "Vivre à Aylmer", text: "Lac, nature, communauté et accès à Ottawa.", cta: "Lire le guide", href: "/vivre-a-aylmer" },
-  { icon: Home, title: "Vivre à Hull", text: "Culture, restaurants et proximité Ottawa.", cta: "Lire le guide", href: "/vivre-a-hull" },
-  { icon: Coffee, title: "Vivre dans le Plateau", text: "Familles, développements récents et nature.", cta: "Lire le guide", href: "/vivre-dans-le-plateau" },
+  { icon: MapPin, title: "Vivre à Aylmer", text: "Lac, nature, communauté et accès à Ottawa.", cta: "Lire le guide", href: "/vivre-a-aylmer/" },
+  { icon: Home, title: "Vivre à Hull", text: "Culture, restaurants et proximité Ottawa.", cta: "Lire le guide", href: "/vivre-a-hull/" },
+  { icon: Coffee, title: "Vivre dans le Plateau", text: "Familles, développements récents et nature.", cta: "Lire le guide", href: "/vivre-dans-le-plateau/" },
 ];
 
 const faq = [
@@ -50,8 +50,8 @@ const NeighborhoodsOverviewPage = () => (
       overline="Quartiers · Gatineau et Outaouais"
       title="Les quartiers à considérer en Outaouais/Gatineau"
       subtitle="Chaque secteur de l'Outaouais a sa personnalité — familial, urbain, nature ou investissement. Explorez les quartiers pour trouver celui qui vous correspond."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       trustLine="Expertise locale. "
       heroBgImage={heroImg}
     />
@@ -96,8 +96,8 @@ const NeighborhoodsOverviewPage = () => (
       title="Besoin d'aide pour choisir?"
       text="Parlons de vos critères — je vous recommande les secteurs les plus adaptés à votre situation."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />
