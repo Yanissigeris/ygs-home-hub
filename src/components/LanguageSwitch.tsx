@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { stripTrailingSlash } from "@/lib/url-utils";
 
 /** Maps FR paths to EN paths and vice-versa. */
 const frToEn: Record<string, string> = {
@@ -66,9 +67,10 @@ const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
   const lang = useLanguage();
   const { pathname } = useLocation();
 
-  const targetPath = lang === "fr"
-    ? frToEn[pathname] ?? "/en"
-    : enToFr[pathname] ?? "/";
+    const lookupKey = stripTrailingSlash(pathname);
+    const targetPath = lang === "fr"
+      ? frToEn[lookupKey] ?? "/en"
+      : enToFr[lookupKey] ?? "/";
 
   const activeColor = transparent ? "var(--white)" : "var(--ink)";
   const inactiveColor = transparent ? "rgba(255,255,255,.6)" : "var(--muted)";
