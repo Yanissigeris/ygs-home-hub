@@ -21,7 +21,7 @@ interface FAQSectionProps {
   initialVisible?: number;
 }
 
-const FAQ_JSONLD_ID = "ygs-faq-jsonld";
+const FAQ_JSONLD_PREFIX = "ygs-faq-jsonld";
 
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
   ({ title, items, initialVisible = 5 }, ref) => {
@@ -30,13 +30,18 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     const [expanded, setExpanded] = React.useState(false);
     const accordionRef = React.useRef<HTMLDivElement | null>(null);
     const firstNewIndexRef = React.useRef<number>(initialVisible);
+    // Stable per-instance id so multiple <FAQSection> on the same page
+    // (e.g. /faq has 4) each emit their own JSON-LD instead of overwriting
+    // a shared element id. Google accepts multiple FAQPage blocks per page.
+    const instanceId = React.useId().replace(/[^a-zA-Z0-9_-]/g, "");
+    const jsonLdId = `${FAQ_JSONLD_PREFIX}-${instanceId}`;
 
     const visibleItems = expanded ? items : items.slice(0, initialVisible);
     const hasMore = items.length > initialVisible;
 
     // Full schema with ALL items (not just visible) for SEO
     React.useEffect(() => {
-      const prev = document.getElementById(FAQ_JSONLD_ID);
+      const prev = document.getElementById(jsonLdId);
       if (prev) prev.remove();
 
       const schema = {
@@ -54,15 +59,15 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
 
       const script = document.createElement("script");
       script.type = "application/ld+json";
-      script.id = FAQ_JSONLD_ID;
+      script.id = jsonLdId;
       script.textContent = JSON.stringify(schema);
       document.head.appendChild(script);
 
       return () => {
-        const el = document.getElementById(FAQ_JSONLD_ID);
+        const el = document.getElementById(jsonLdId);
         if (el) el.remove();
       };
-    }, [items]);
+    }, [items, jsonLdId]);
 
     // After expanding, move keyboard focus to the first newly revealed question
     // so screen-reader and keyboard users land on the new content (WCAG 2.4.3 / 4.1.3).
