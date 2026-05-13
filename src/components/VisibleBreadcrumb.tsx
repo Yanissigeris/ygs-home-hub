@@ -28,8 +28,8 @@ const VisibleBreadcrumb = () => {
       if (!post) return;
       setDynamicConfig(
         isFr
-          ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue" }], current: post.title }
-          : { trail: [{ name: "Home", href: "/en" }, { name: "Blog", href: "/en/blog" }], current: post.titleEn },
+          ? { trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue/" }], current: post.title }
+          : { trail: [{ name: "Home", href: "/en/" }, { name: "Blog", href: "/en/blog/" }], current: post.titleEn },
       );
     });
     return () => { cancelled = true; };
