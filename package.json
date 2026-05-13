@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs && node scripts/audit-prerender.mjs && node scripts/audit-headings.mjs",
-    "build:dev": "vite build --mode development && node scripts/prerender.mjs && node scripts/audit-prerender.mjs && node scripts/audit-headings.mjs",
+    "build": "vite build && node scripts/prerender.mjs && node scripts/audit-prerender.mjs && node scripts/audit-headings.mjs && node scripts/audit-hreflang.mjs",
+    "build:dev": "vite build --mode development && node scripts/prerender.mjs && node scripts/audit-prerender.mjs && node scripts/audit-headings.mjs && node scripts/audit-hreflang.mjs",
     "audit:prerender": "node scripts/audit-prerender.mjs",
     "audit:headings": "node scripts/audit-headings.mjs",
+    "audit:hreflang": "node scripts/audit-hreflang.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
