@@ -51,10 +51,10 @@ const activities = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Chelsea", text: "Gatineau Park, artistic village.", href: "/en/chelsea" },
-  { title: "Buckingham", text: "Space, affordable prices.", href: "/en/buckingham" },
-  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau" },
-  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
+  { title: "Chelsea", text: "Gatineau Park, artistic village.", href: "/en/chelsea/" },
+  { title: "Buckingham", text: "Space, affordable prices.", href: "/en/buckingham/" },
+  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau/" },
+  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy/" },
 ];
 
 const CantleyPageEn = () => (
@@ -68,12 +68,12 @@ const CantleyPageEn = () => (
       description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Local broker."
       lat={45.5056}
       lng={-75.7833}
-      url="/en/cantley"
+      url="/en/cantley/"
     />
     <ServiceJsonLd
       name="Real Estate Broker in Cantley"
       description="Real estate brokerage services in Cantley, Outaouais — homes, land, family properties."
-      url="/en/cantley"
+      url="/en/cantley/"
       serviceType="Real Estate Brokerage"
       areaServed={["Cantley", "Outaouais"]}
     />
@@ -83,7 +83,7 @@ const CantleyPageEn = () => (
       overline="CANTLEY · OUTAOUAIS"
       title="Real estate broker in Cantley — space, 13 km from Ottawa"
       subtitle="Cantley is 13 kilometres from downtown Ottawa. It's a fast-growing municipality known for its large lots, low-density residential development, and family-friendly quality of life. For families who want space without going far, Cantley is often the logical conclusion."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=cantley" }}
       heroBgImage={heroImg}
     />
@@ -159,7 +159,7 @@ const CantleyPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
@@ -190,8 +190,8 @@ const CantleyPageEn = () => (
       title="Buying or selling in Cantley?"
       text="I know the area — let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
-        { label: "Book a consultation →", href: "/en/buyer-consultation", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

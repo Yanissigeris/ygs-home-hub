@@ -59,16 +59,16 @@ const PontiacPage = () => {
       <PageMeta
         title="Courtier immobilier Pontiac Outaouais | Luskville & Breckenridge | YGS"
         description="Achetez ou vendez dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Grands terrains, rivière des Outaouais, bilingue. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-      <NeighborhoodJsonLd name="Pontiac" description="Courtier immobilier dans la municipalité de Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/pontiac" />
-      <ServiceJsonLd name="Courtier immobilier Pontiac" description="Services immobiliers dans la municipalité de Pontiac, Outaouais" url="/pontiac" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
+      <NeighborhoodJsonLd name="Pontiac" description="Courtier immobilier dans la municipalité de Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/pontiac/" />
+      <ServiceJsonLd name="Courtier immobilier Pontiac" description="Services immobiliers dans la municipalité de Pontiac, Outaouais" url="/pontiac/" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
 
       {/* HERO */}
       <HeroSection
         overline="PONTIAC · OUTAOUAIS · RÉGION DE LA CAPITALE NATIONALE"
         title="Courtier immobilier à Pontiac — entre la rivière des Outaouais et le Parc de la Gatineau"
         subtitle="La municipalité de Pontiac est nichée entre la rivière des Outaouais, la rivière Quyon et les collines du Parc de la Gatineau. C'est un territoire unique dans la Région de la capitale nationale : grand, rural, bilingue, et encore accessible. Pour les acheteurs qui veulent l'espace vrai, c'est souvent une découverte."
-        primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
-        secondaryCta={{ label: "Me parler de mon projet →", href: "/contact-yanis" }}
+        primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
+        secondaryCta={{ label: "Me parler de mon projet →", href: "/contact-yanis/" }}
         heroBgImage={heroImg}
       />
 
@@ -115,7 +115,7 @@ const PontiacPage = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/evaluation-gratuite-gatineau" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+              <Link to="/evaluation-gratuite-gatineau/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
                 Obtenir les vrais chiffres →
               </Link>
             </div>
@@ -188,7 +188,7 @@ const PontiacPage = () => {
               </div>
             ))}
           </div>
-          <Link to="/evaluation-gratuite-gatineau" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+          <Link to="/evaluation-gratuite-gatineau/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
             Obtenir les vrais chiffres →
           </Link>
           <p className="text-center text-xs text-muted-foreground">Gratuit · Sans engagement · Réponse en 24-48h</p>
@@ -211,10 +211,10 @@ const PontiacPage = () => {
         overline="Explorer d'autres secteurs desservis"
         title="Secteurs à proximité"
         pages={[
-          { title: "Chelsea", text: "Village, Parc de la Gatineau.", href: "/chelsea" },
-          { title: "Cantley", text: "Grands terrains, familles.", href: "/cantley" },
-          { title: "Aylmer", text: "Lac Deschênes, quartiers familiaux.", href: "/aylmer" },
-          { title: "Val-des-Monts", text: "Lacs, nature, tranquillité.", href: "/val-des-monts" },
+          { title: "Chelsea", text: "Village, Parc de la Gatineau.", href: "/chelsea/" },
+          { title: "Cantley", text: "Grands terrains, familles.", href: "/cantley/" },
+          { title: "Aylmer", text: "Lac Deschênes, quartiers familiaux.", href: "/aylmer/" },
+          { title: "Val-des-Monts", text: "Lacs, nature, tranquillité.", href: "/val-des-monts/" },
         ]}
         background="alt"
       />
@@ -226,8 +226,8 @@ const PontiacPage = () => {
         title="Pontiac est un marché que peu de courtiers connaissent vraiment"
         text="Je couvre la municipalité de Pontiac depuis 2017. Je connais les secteurs, les comparables, et les réalités pratiques — puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
         buttons={[
-          { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-          { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
+          { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
+          { label: "Me contacter →", href: "/contact-yanis/", variant: "outline" },
         ]}
         trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
       />

@@ -47,10 +47,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex" },
-  { title: "Hull", text: "Urban, culture, condos.", href: "/en/hull" },
-  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer" },
-  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
+  { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex/" },
+  { title: "Hull", text: "Urban, culture, condos.", href: "/en/hull/" },
+  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer/" },
+  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy/" },
 ];
 
 const GatineauCentrePageEn = () => (
@@ -63,12 +63,12 @@ const GatineauCentrePageEn = () => (
       description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker."
       lat={45.4765}
       lng={-75.7013}
-      url="/en/gatineau"
+      url="/en/gatineau/"
     />
     <ServiceJsonLd
       name="Real Estate Broker in Gatineau Centre"
       description="Real estate brokerage services in Gatineau centre — plexes, homes, condos."
-      url="/en/gatineau"
+      url="/en/gatineau/"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
     />
@@ -78,7 +78,7 @@ const GatineauCentrePageEn = () => (
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Real estate broker in Gatineau centre — accessibility, services and value"
       subtitle="Gatineau's central area is often underestimated. Yet it's the city's best-served sector — hospital, universities, cégep, transit, shops. And one of the most accessible for families and investors."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}
       heroBgImage={heroImg}
     />
@@ -133,7 +133,7 @@ const GatineauCentrePageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
@@ -164,8 +164,8 @@ const GatineauCentrePageEn = () => (
       title="Buyer or seller in Gatineau centre?"
       text="I know the area — let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
-        { label: "Analyze a plex →", href: "/en/plex", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

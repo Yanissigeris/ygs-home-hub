@@ -81,7 +81,7 @@ const CourtierOuVendreSoiMemePage = () => (
     <InlineCTA
       text="Curieux de savoir combien vaut votre propriété? Obtenez une estimation gratuite en 24h."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -105,10 +105,10 @@ const CourtierOuVendreSoiMemePage = () => (
       overline="Explorer"
       title="Pages connexes"
       pages={[
-        { title: "Combien coûte un courtier?", text: "Guide sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
-        { title: "Frais de courtage au Québec", text: "Détail des frais et services.", href: "/frais-de-courtage-immobilier-quebec" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+        { title: "Combien coûte un courtier?", text: "Guide sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
+        { title: "Frais de courtage au Québec", text: "Détail des frais et services.", href: "/frais-de-courtage-immobilier-quebec/" },
+        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"
     />
@@ -118,8 +118,8 @@ const CourtierOuVendreSoiMemePage = () => (
       title="Vous hésitez encore?"
       text="Discutons de votre situation — sans engagement. Je vous aide à comprendre vos options et à prendre la meilleure décision."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Accompagnement transparent, à votre rythme."
     />

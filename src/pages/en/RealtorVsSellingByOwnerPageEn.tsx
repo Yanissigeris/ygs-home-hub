@@ -81,7 +81,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     <InlineCTA
       text="Curious about your property's value? Get a free estimate in 24 hours."
       buttonLabel="Free Home Valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <ContentBlock narrow>
@@ -105,10 +105,10 @@ const RealtorVsSellingByOwnerPageEn = () => (
       overline="Explore"
       title="Related pages"
       pages={[
-        { title: "How much does a realtor cost?", text: "Guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec" },
-        { title: "Realtor commission in Quebec", text: "Details on fees and services.", href: "/en/realtor-commission-quebec" },
-        { title: "Sell in Gatineau", text: "Strategy and support.", href: "/en/sell" },
-        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
+        { title: "How much does a realtor cost?", text: "Guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
+        { title: "Realtor commission in Quebec", text: "Details on fees and services.", href: "/en/realtor-commission-quebec/" },
+        { title: "Sell in Gatineau", text: "Strategy and support.", href: "/en/sell/" },
+        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
       ]}
       background="alt"
     />
@@ -118,8 +118,8 @@ const RealtorVsSellingByOwnerPageEn = () => (
       title="Still deciding?"
       text="Let's discuss your situation — no commitment. I'll help you understand your options and make the best decision."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Transparent guidance, at your pace."
     />

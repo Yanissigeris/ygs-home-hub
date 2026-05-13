@@ -20,34 +20,34 @@ const challenges = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, recent homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, downtown proximity, condos and plex" },
-  { name: "Buckingham", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family-friendly, recent homes, Ottawa access" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, downtown proximity, condos and plex" },
+  { name: "Buckingham", href: "/en/buckingham/", detail: "Land, affordable prices, nature" },
 ];
 
 
 const MontrealRelocationPageEn = () => (
   <>
     <PageMeta title="Relocating from Montréal to Gatineau" description="Moving from Montréal to Gatineau? Cost of living, neighborhoods, quality of life and real estate support for your transition." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Montreal to Gatineau Relocation" description="Support for relocating from Montreal to Gatineau — neighbourhoods, cost of living and real estate process." url="/en/montreal-relocation" serviceType="Real Estate Relocation Service" />
+    <ServiceJsonLd name="Montreal to Gatineau Relocation" description="Support for relocating from Montreal to Gatineau — neighbourhoods, cost of living and real estate process." url="/en/montreal-relocation/" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Relocation · Montréal → Gatineau"
       title="Moving to Gatineau from Montréal"
       subtitle="More space, more affordable prices, a family-friendly lifestyle — and a growing real estate market. Discover why more Montréalers are choosing Gatineau."
-      primaryCta={{ label: "Book a call", href: "/en/contact" }}
-      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }}
+      primaryCta={{ label: "Book a call", href: "/en/contact/" }}
+      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }}
       trustLine="Relocation specialist. Full transparency."
       heroBgImage={heroImg}
     />
 <CardGrid overline="The advantages" title="Why choose Gatineau over Montréal" items={challenges} />
-    <InlineCTA text="Also selling in Montréal? Knowing the value of your current property can help clarify your budget." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Also selling in Montréal? Knowing the value of your current property can help clarify your budget." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <SectorLinks overline="Popular areas" title="Neighborhoods to consider" sectors={sectors} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="A local broker who understands your situation" />
       <p className="prose-body mt-5">The transition from Montréal to Gatineau is simpler than you think — same notary process, same province. My role is to help you discover the best neighborhoods and support you through every step.</p>
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="Everything for moving to Gatineau from Montréal — neighborhoods, prices and process." ctaLabel="Get the guide" />
-    <CTASection dark title="Ready to explore Gatineau?" text="Book a free call — let's look at neighborhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Ready to explore Gatineau?" text="Book a free call — let's look at neighborhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
   </>
 );

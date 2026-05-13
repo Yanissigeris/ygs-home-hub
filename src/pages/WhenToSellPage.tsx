@@ -28,13 +28,13 @@ const faq = [
 const WhenToSellPage = () => (
    <>
     <PageMeta title="Quand vendre sa propriété à Gatineau" description="Le bon moment pour vendre à Gatineau et en Outaouais dépend de votre situation. Analyse du marché local et conseils d'un courtier expérimenté." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Quand vendre sa propriété à Gatineau" description="Analyse du marché immobilier de Gatineau pour déterminer le meilleur moment pour vendre votre propriété en Outaouais." url="/quand-vendre-a-gatineau" serviceType="Real Estate Market Analysis" />
+    <ServiceJsonLd name="Quand vendre sa propriété à Gatineau" description="Analyse du marché immobilier de Gatineau pour déterminer le meilleur moment pour vendre votre propriété en Outaouais." url="/quand-vendre-a-gatineau/" serviceType="Real Estate Market Analysis" />
     <HeroSection
       overline="Quand vendre · Gatineau"
       title="Quand vendre sa propriété à Gatineau?"
       subtitle="Le bon moment pour vendre dépend de votre situation, pas seulement du marché. Voici comment y voir plus clair."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -58,7 +58,7 @@ const WhenToSellPage = () => (
     <InlineCTA
       text="Commencez par connaître la valeur actuelle de votre propriété — c'est gratuit."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <GuideInlineCTA
@@ -73,8 +73,8 @@ const WhenToSellPage = () => (
       title="Vous hésitez sur le timing?"
       text="Demandez une évaluation gratuite — on regarde ensemble si le moment est bon pour vous."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

@@ -12,7 +12,7 @@ import heroImg from "@/assets/hero-valuation-pro.webp";
 
 const benefits = ["Realistic value range based on recent sales in your Gatineau neighborhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address — and which ones are worth it in your market","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response within 24h" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
-const afterSteps = [{ title: "Seller plan", text: "Go further — get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/sell", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" }];
+const afterSteps = [{ title: "Seller plan", text: "Go further — get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/sell/", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 const valuationFaq = [
   { q: "How do I get a home valuation in Gatineau?", a: "Fill out the form on this page with your property address. I'll get back to you within 24 hours with an analysis based on recent comparable sales in your area." },
@@ -33,7 +33,7 @@ const ValuationPageEn = () => {
   return (
     <>
       <PageMeta title="Free Home Valuation — Gatineau" description="Get a free and accurate valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
-    <ServiceJsonLd name="Free Home Valuation in Gatineau" description="Get a free property valuation in Gatineau, Aylmer, Hull or Outaouais. Analysis based on recent comparable sales in your area." url="/en/home-valuation" serviceType="Real Estate Appraisal Service" />
+    <ServiceJsonLd name="Free Home Valuation in Gatineau" description="Get a free property valuation in Gatineau, Aylmer, Hull or Outaouais. Analysis based on recent comparable sales in your area." url="/en/home-valuation/" serviceType="Real Estate Appraisal Service" />
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
@@ -89,12 +89,12 @@ const ValuationPageEn = () => {
         overline="Also worth reading"
         title="Related resources"
         pages={[
-          { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull" },
-          { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
-          { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell" },
-          { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea" },
-          { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley" },
-          { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+          { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull/" },
+          { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer/" },
+          { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell/" },
+          { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea/" },
+          { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley/" },
+          { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
         ]}
         background="alt"
       />

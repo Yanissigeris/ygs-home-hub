@@ -41,10 +41,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une estimation en 24h.", href: "/evaluation-gratuite-gatineau" },
-  { title: "Plan vendeur", text: "Recevez un plan personnalisé: prix, préparation et mise en marché.", href: "/plan-vendeur-gatineau" },
-  { title: "Quand vendre", text: "Le bon timing dépend de votre situation — voici comment y voir clair.", href: "/quand-vendre-a-gatineau" },
-  { title: "Vendre un plex", text: "Vendre un immeuble à revenus, c'est différent d'une maison.", href: "/vendre-un-plex-a-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une estimation en 24h.", href: "/evaluation-gratuite-gatineau/" },
+  { title: "Plan vendeur", text: "Recevez un plan personnalisé: prix, préparation et mise en marché.", href: "/plan-vendeur-gatineau/" },
+  { title: "Quand vendre", text: "Le bon timing dépend de votre situation — voici comment y voir clair.", href: "/quand-vendre-a-gatineau/" },
+  { title: "Vendre un plex", text: "Vendre un immeuble à revenus, c'est différent d'une maison.", href: "/vendre-un-plex-a-gatineau/" },
 ];
 
 const SellerGuidePage = () => (
@@ -55,8 +55,8 @@ const SellerGuidePage = () => (
       overline="Guide vendeur · Gatineau"
       title="Guide complet pour vendre votre propriété à Gatineau"
       subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau" }}
+      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -80,7 +80,7 @@ const SellerGuidePage = () => (
     <InlineCTA
       text="Vous voulez une analyse personnalisée? Demandez votre évaluation gratuite."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -103,7 +103,7 @@ const SellerGuidePage = () => (
         Évaluation → prix → préparation → mise en marché → visites → offres → négociation → inspection → notaire → clés. Chaque étape a ses pièges — et ses opportunités. C'est pour ça qu'un bon accompagnement fait la différence.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/plan-vendeur-gatineau">Recevoir mon plan vendeur personnalisé</Link>
+        <Link to="/plan-vendeur-gatineau/">Recevoir mon plan vendeur personnalisé</Link>
       </Button>
     </ContentBlock>
 
@@ -136,8 +136,8 @@ const SellerGuidePage = () => (
       title="Prêt à passer à l'action?"
       text="Demandez votre évaluation gratuite ou parlez directement à Yanis."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

@@ -9,14 +9,14 @@ const QuickActionStrip = () => {
 
   const actions: Action[] = lang === "en"
     ? [
-        { icon: Home, label: "Sell", href: "/en/sell" },
-        { icon: Key, label: "Buy", href: "/en/buy" },
-        { icon: TrendingUp, label: "Invest", href: "/en/plex" },
+        { icon: Home, label: "Sell", href: "/en/sell/" },
+        { icon: Key, label: "Buy", href: "/en/buy/" },
+        { icon: TrendingUp, label: "Invest", href: "/en/plex/" },
       ]
     : [
-        { icon: Home, label: "Vendre", href: "/vendre-ma-maison-gatineau" },
-        { icon: Key, label: "Acheter", href: "/acheter-a-gatineau" },
-        { icon: TrendingUp, label: "Investir", href: "/investir-plex-gatineau" },
+        { icon: Home, label: "Vendre", href: "/vendre-ma-maison-gatineau/" },
+        { icon: Key, label: "Acheter", href: "/acheter-a-gatineau/" },
+        { icon: TrendingUp, label: "Investir", href: "/investir-plex-gatineau/" },
       ];
 
   return (

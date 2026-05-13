@@ -20,8 +20,8 @@ const steps = [
 ];
 
 const nextSteps = [
-  { title: "Évaluation gratuite à Aylmer", text: "Connaître la valeur de votre propriété à Aylmer — gratuit et sans engagement.", href: "/evaluation-maison-aylmer", cta: "Obtenir ma valeur", highlight: true },
-  { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Aylmer.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Évaluation gratuite à Aylmer", text: "Connaître la valeur de votre propriété à Aylmer — gratuit et sans engagement.", href: "/evaluation-maison-aylmer/", cta: "Obtenir ma valeur", highlight: true },
+  { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Aylmer.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const faq = [
@@ -46,7 +46,7 @@ const SellAylmerPage = () => (
     <ServiceJsonLd
       name="Vente immobilière à Aylmer"
       description="Service de vente immobilière à Aylmer — évaluation, stratégie de prix, mise en marché et accompagnement complet."
-      url="/vendre-maison-aylmer"
+      url="/vendre-maison-aylmer/"
       serviceType="Real Estate Listing Service"
     />
 
@@ -54,8 +54,8 @@ const SellAylmerPage = () => (
       overline="Vendre à Aylmer · Outaouais"
       title="Vendre votre propriété à Aylmer avec un courtier local"
       subtitle="Aylmer est un secteur prisé — familles, lac Deschênes, quartiers établis. Votre stratégie de vente doit refléter la valeur réelle de votre quartier."
-      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-maison-aylmer" }}
-      secondaryCta={{ label: "Voir le processus", href: "/plan-vendeur-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-maison-aylmer/" }}
+      secondaryCta={{ label: "Voir le processus", href: "/plan-vendeur-gatineau/" }}
       trustLine="Stratégie claire · Aylmer et environs"
       heroBgImage={heroImg}
     />
@@ -72,7 +72,7 @@ const SellAylmerPage = () => (
     <InlineCTA
       text="Première étape : connaître la valeur de votre propriété à Aylmer — c'est gratuit."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-maison-aylmer"
+      href="/evaluation-maison-aylmer/"
     />
 
     <ProcessSteps steps={steps} background="alt" />
@@ -81,10 +81,10 @@ const SellAylmerPage = () => (
       overline="Explorer Aylmer"
       title="Pages connexes"
       pages={[
-        { title: "Aylmer — portrait du quartier", text: "Marché, profil et tendances à Aylmer.", href: "/aylmer" },
-        { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer" },
-        { title: "Vendre à Gatineau", text: "Le guide complet pour vendre en Outaouais.", href: "/vendre-ma-maison-gatineau" },
-        { title: "Courtier immobilier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais" },
+        { title: "Aylmer — portrait du quartier", text: "Marché, profil et tendances à Aylmer.", href: "/aylmer/" },
+        { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer/" },
+        { title: "Vendre à Gatineau", text: "Le guide complet pour vendre en Outaouais.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Courtier immobilier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais/" },
       ]}
     />
 
@@ -100,8 +100,8 @@ const SellAylmerPage = () => (
       title="Vous pensez vendre à Aylmer?"
       text="Je vous donne les chiffres, les options et une stratégie adaptée au marché d'Aylmer."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-maison-aylmer" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-maison-aylmer/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Gratuit, confidentiel et sans engagement."
     />

@@ -20,8 +20,8 @@ const steps = [
 ];
 
 const nextSteps = [
-  { title: "Évaluation gratuite à Hull", text: "Connaître la valeur de votre propriété à Hull — c'est gratuit et sans engagement.", href: "/evaluation-maison-hull", cta: "Obtenir ma valeur", highlight: true },
-  { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Hull.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Évaluation gratuite à Hull", text: "Connaître la valeur de votre propriété à Hull — c'est gratuit et sans engagement.", href: "/evaluation-maison-hull/", cta: "Obtenir ma valeur", highlight: true },
+  { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Hull.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const faq = [
@@ -46,7 +46,7 @@ const SellHullPage = () => (
     <ServiceJsonLd
       name="Vente immobilière à Hull"
       description="Service de vente immobilière à Hull — évaluation, stratégie de prix, mise en marché et accompagnement complet."
-      url="/vendre-maison-hull"
+      url="/vendre-maison-hull/"
       serviceType="Real Estate Listing Service"
     />
 
@@ -54,8 +54,8 @@ const SellHullPage = () => (
       overline="Vendre à Hull · Outaouais"
       title="Vendre votre propriété à Hull avec un courtier local"
       subtitle="Hull est un secteur dynamique — condos, plex, unifamiliales. Vous avez besoin d'un plan adapté à votre type de propriété et à votre quartier."
-      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-maison-hull" }}
-      secondaryCta={{ label: "Voir le processus", href: "/plan-vendeur-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-maison-hull/" }}
+      secondaryCta={{ label: "Voir le processus", href: "/plan-vendeur-gatineau/" }}
       trustLine="Stratégie claire · Hull et environs"
       heroBgImage={heroImg}
     />
@@ -72,7 +72,7 @@ const SellHullPage = () => (
     <InlineCTA
       text="Première étape : connaître la valeur de votre propriété à Hull — c'est gratuit."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-maison-hull"
+      href="/evaluation-maison-hull/"
     />
 
     <ProcessSteps steps={steps} background="alt" />
@@ -81,10 +81,10 @@ const SellHullPage = () => (
       overline="Explorer Hull"
       title="Pages connexes"
       pages={[
-        { title: "Hull — portrait du quartier", text: "Marché, profil et tendances à Hull.", href: "/hull" },
-        { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull" },
-        { title: "Vendre à Gatineau", text: "Le guide complet pour vendre en Outaouais.", href: "/vendre-ma-maison-gatineau" },
-        { title: "Courtier immobilier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais" },
+        { title: "Hull — portrait du quartier", text: "Marché, profil et tendances à Hull.", href: "/hull/" },
+        { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull/" },
+        { title: "Vendre à Gatineau", text: "Le guide complet pour vendre en Outaouais.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Courtier immobilier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais/" },
       ]}
     />
 
@@ -100,8 +100,8 @@ const SellHullPage = () => (
       title="Vous pensez vendre à Hull?"
       text="Je vous donne les chiffres, les options et une stratégie adaptée au marché de Hull."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-maison-hull" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-maison-hull/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Gratuit, confidentiel et sans engagement."
     />

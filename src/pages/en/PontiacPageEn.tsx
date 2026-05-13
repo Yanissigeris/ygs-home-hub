@@ -71,16 +71,16 @@ const PontiacPageEn = () => {
       <PageMeta
         title="Real Estate Broker Pontiac Outaouais | Luskville & Breckenridge | YGS"
         description="Buy or sell in the Municipality of Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Large lots, Ottawa River, bilingual. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-      <NeighborhoodJsonLd name="Pontiac" description="Real estate broker in the Municipality of Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/en/pontiac" />
-      <ServiceJsonLd name="Real Estate Broker Pontiac" description="Real estate services in the Municipality of Pontiac, Outaouais" url="/en/pontiac" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
+      <NeighborhoodJsonLd name="Pontiac" description="Real estate broker in the Municipality of Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/en/pontiac/" />
+      <ServiceJsonLd name="Real Estate Broker Pontiac" description="Real estate services in the Municipality of Pontiac, Outaouais" url="/en/pontiac/" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
 
       {/* HERO */}
       <HeroSection
         overline="PONTIAC · OUTAOUAIS · NATIONAL CAPITAL REGION"
         title="Real estate broker in Pontiac — between the Ottawa River and Gatineau Park"
         subtitle="The Municipality of Pontiac is nestled between the Ottawa River, the Quyon River and the hills of Gatineau Park. It is a unique territory within the National Capital Region: large, rural, bilingual, and still accessible. For buyers who want real space, it is often a discovery."
-        primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
-        secondaryCta={{ label: "Discuss my project →", href: "/en/contact" }}
+        primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+        secondaryCta={{ label: "Discuss my project →", href: "/en/contact/" }}
         heroBgImage={heroImg}
       />
 
@@ -127,7 +127,7 @@ const PontiacPageEn = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/en/home-valuation" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+              <Link to="/en/home-valuation/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
                 Get the real numbers →
               </Link>
             </div>
@@ -200,7 +200,7 @@ const PontiacPageEn = () => {
               </div>
             ))}
           </div>
-          <Link to="/en/home-valuation" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+          <Link to="/en/home-valuation/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
             Get the real numbers →
           </Link>
           <p className="text-center text-xs text-muted-foreground">Free · No obligation · Response within 24-48h</p>
@@ -223,10 +223,10 @@ const PontiacPageEn = () => {
         overline="Explore other areas I serve"
         title="Nearby areas"
         pages={[
-          { title: "Chelsea", text: "Village, Gatineau Park.", href: "/en/chelsea" },
-          { title: "Cantley", text: "Large lots, families.", href: "/en/cantley" },
-          { title: "Aylmer", text: "Lac Deschênes, family neighbourhoods.", href: "/en/aylmer" },
-          { title: "Val-des-Monts", text: "Lakes, nature, tranquility.", href: "/en/val-des-monts" },
+          { title: "Chelsea", text: "Village, Gatineau Park.", href: "/en/chelsea/" },
+          { title: "Cantley", text: "Large lots, families.", href: "/en/cantley/" },
+          { title: "Aylmer", text: "Lac Deschênes, family neighbourhoods.", href: "/en/aylmer/" },
+          { title: "Val-des-Monts", text: "Lakes, nature, tranquility.", href: "/en/val-des-monts/" },
         ]}
         background="alt"
       />
@@ -238,8 +238,8 @@ const PontiacPageEn = () => {
         title="Pontiac is a market that few brokers truly know"
         text="I have been covering the Municipality of Pontiac since 2017. I know the areas, the comparables, and the practical realities — wells, septic systems, zoning, access. If you have a project here, I am your local broker."
         buttons={[
-          { label: "Free valuation →", href: "/en/home-valuation" },
-          { label: "Contact me →", href: "/en/contact", variant: "outline" },
+          { label: "Free valuation →", href: "/en/home-valuation/" },
+          { label: "Contact me →", href: "/en/contact/", variant: "outline" },
         ]}
         trustLine="« I give you the numbers and options, you decide. »"
       />

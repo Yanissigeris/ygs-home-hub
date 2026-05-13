@@ -20,8 +20,8 @@ const steps = [
 ];
 
 const nextSteps = [
-  { title: "Free valuation in Hull", text: "Know the value of your Hull property — free and no commitment.", href: "/en/home-valuation-hull", cta: "Get my valuation", highlight: true },
-  { title: "Talk to Yanis", text: "A call to clarify your selling options in Hull.", href: "/en/contact", cta: "Book a call" },
+  { title: "Free valuation in Hull", text: "Know the value of your Hull property — free and no commitment.", href: "/en/home-valuation-hull/", cta: "Get my valuation", highlight: true },
+  { title: "Talk to Yanis", text: "A call to clarify your selling options in Hull.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const faq = [
@@ -46,7 +46,7 @@ const SellHullPageEn = () => (
     <ServiceJsonLd
       name="Real Estate Selling Service in Hull"
       description="Real estate selling service in Hull — valuation, pricing strategy, marketing and full support."
-      url="/en/sell-house-hull"
+      url="/en/sell-house-hull/"
       serviceType="Real Estate Listing Service"
     />
 
@@ -54,8 +54,8 @@ const SellHullPageEn = () => (
       overline="Sell in Hull · Outaouais"
       title="Sell your property in Hull with a local broker"
       subtitle="Hull is a dynamic market — condos, plexes, single-family homes. You need a plan adapted to your property type and neighborhood."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation-hull" }}
-      secondaryCta={{ label: "See the process", href: "/en/seller-plan" }}
+      primaryCta={{ label: "Free valuation", href: "/en/home-valuation-hull/" }}
+      secondaryCta={{ label: "See the process", href: "/en/seller-plan/" }}
       trustLine="Clear strategy · Hull and area"
       heroBgImage={heroImg}
     />
@@ -69,7 +69,7 @@ const SellHullPageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="First step: know what your Hull property is worth — it's free." buttonLabel="Free valuation →" href="/en/home-valuation-hull" />
+    <InlineCTA text="First step: know what your Hull property is worth — it's free." buttonLabel="Free valuation →" href="/en/home-valuation-hull/" />
 
     <ProcessSteps steps={steps} background="alt" />
 
@@ -77,10 +77,10 @@ const SellHullPageEn = () => (
       overline="Explore Hull"
       title="Related pages"
       pages={[
-        { title: "Hull — neighborhood profile", text: "Market, profile and trends in Hull.", href: "/en/hull" },
-        { title: "Home valuation Hull", text: "How much is your Hull property worth?", href: "/en/home-valuation-hull" },
-        { title: "Sell in Gatineau", text: "The complete guide to selling in Outaouais.", href: "/en/sell" },
-        { title: "Outaouais real estate agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent" },
+        { title: "Hull — neighborhood profile", text: "Market, profile and trends in Hull.", href: "/en/hull/" },
+        { title: "Home valuation Hull", text: "How much is your Hull property worth?", href: "/en/home-valuation-hull/" },
+        { title: "Sell in Gatineau", text: "The complete guide to selling in Outaouais.", href: "/en/sell/" },
+        { title: "Outaouais real estate agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
       ]}
     />
 
@@ -91,8 +91,8 @@ const SellHullPageEn = () => (
       title="Thinking of selling in Hull?"
       text="I'll give you the numbers, options and a strategy adapted to the Hull market."
       buttons={[
-        { label: "Free valuation", href: "/en/home-valuation-hull" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free valuation", href: "/en/home-valuation-hull/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Free, confidential and no commitment."
     />

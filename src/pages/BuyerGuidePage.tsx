@@ -41,10 +41,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
-  { title: "Premier achat", text: "Budget, mise de fonds et processus pour premiers acheteurs.", href: "/premier-achat-gatineau" },
-  { title: "Acheter depuis Ottawa", text: "Plus d'espace, prix accessibles — traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
-  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
+  { title: "Premier achat", text: "Budget, mise de fonds et processus pour premiers acheteurs.", href: "/premier-achat-gatineau/" },
+  { title: "Acheter depuis Ottawa", text: "Plus d'espace, prix accessibles — traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
 const BuyerGuidePage = () => (
@@ -55,8 +55,8 @@ const BuyerGuidePage = () => (
       overline="Guide acheteur · Gatineau"
       title="Guide complet pour acheter à Gatineau et l'Outaouais"
       subtitle="Tout ce que vous devez savoir pour trouver la bonne propriété, faire une offre solide et naviguer le processus d'achat à Gatineau et dans tout l'Outaouais."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -77,7 +77,7 @@ const BuyerGuidePage = () => (
     <InlineCTA
       text="Vous ne connaissez pas les secteurs de Gatineau? Explorez les quartiers populaires."
       buttonLabel="Voir les quartiers →"
-      href="/quartiers-a-considerer-a-gatineau"
+      href="/quartiers-a-considerer-a-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -86,7 +86,7 @@ const BuyerGuidePage = () => (
         Aylmer, le Plateau, Hull, Buckingham — chaque secteur a sa personnalité, ses avantages et ses compromis. Le bon choix dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/quartiers-a-considerer-a-gatineau">Explorer les secteurs</Link>
+        <Link to="/quartiers-a-considerer-a-gatineau/">Explorer les secteurs</Link>
       </Button>
     </ContentBlock>
 
@@ -119,8 +119,8 @@ const BuyerGuidePage = () => (
       title="Prêt à commencer votre recherche?"
       text="Réservez une consultation gratuite — on clarifie vos critères et vos options."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Voir les quartiers", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Voir les quartiers", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

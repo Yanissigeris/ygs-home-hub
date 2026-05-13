@@ -51,10 +51,10 @@ const atouts = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer" },
-  { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau" },
-  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+  { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley/" },
+  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau/" },
+  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
 ];
 
 const ChelseaPage = () => (
@@ -68,12 +68,12 @@ const ChelseaPage = () => (
       description="Achetez ou vendez à Chelsea, Québec. Maisons sur grands terrains, Parc de la Gatineau, communauté bilingue. Courtier local."
       lat={45.5200}
       lng={-75.7870}
-      url="/chelsea"
+      url="/chelsea/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Chelsea"
       description="Services de courtage immobilier à Chelsea, Québec — maisons, terrains, propriétés de caractère."
-      url="/chelsea"
+      url="/chelsea/"
       serviceType="Real Estate Brokerage"
       areaServed={["Chelsea", "Québec"]}
     />
@@ -83,7 +83,7 @@ const ChelseaPage = () => (
       overline="CHELSEA · QUÉBEC"
       title="Courtier immobilier à Chelsea — vivre entre nature et Ottawa"
       subtitle="Chelsea est une municipalité distincte au nord de Gatineau, à environ 10 kilomètres d'Ottawa. Soixante pour cent de son territoire est occupé par le Parc de la Gatineau. C'est un des rares endroits en Amérique du Nord où l'on peut habiter dans un parc national tout en étant à 15 minutes du centre d'une capitale."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=chelsea" }}
       heroBgImage={heroImg}
     />
@@ -159,7 +159,7 @@ const ChelseaPage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-gratuite-gatineau/">Obtenir les vrais chiffres →</Link>
           </Button>
         </div>
       </div>
@@ -189,8 +189,8 @@ const ChelseaPage = () => (
       title="Acheteur ou vendeur à Chelsea?"
       text="Je connais Chelsea par cœur — parlons de votre projet."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation →", href: "/consultation-acheteur", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation →", href: "/consultation-acheteur/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />

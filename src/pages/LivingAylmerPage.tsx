@@ -26,10 +26,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Acheter à Aylmer", text: "Guide du quartier: prix, profils d'acheteurs et pourquoi Aylmer.", href: "/aylmer" },
-  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
-  { title: "Guide relocalisation", text: "S'installer à Gatineau depuis Ottawa ou Montréal.", href: "/guide-relocalisation-gatineau" },
-  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Acheter à Aylmer", text: "Guide du quartier: prix, profils d'acheteurs et pourquoi Aylmer.", href: "/aylmer/" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
+  { title: "Guide relocalisation", text: "S'installer à Gatineau depuis Ottawa ou Montréal.", href: "/guide-relocalisation-gatineau/" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
 ];
 
 const LivingAylmerPage = () => (
@@ -39,8 +39,8 @@ const LivingAylmerPage = () => (
       overline="Vivre à Aylmer · Gatineau"
       title="Vivre à Aylmer — le guide"
       subtitle="Découvrez le mode de vie à Aylmer: lac, nature, communauté et accès à Ottawa. Tout ce qu'il faut savoir avant de s'installer."
-      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Voir le quartier", href: "/aylmer" }}
+      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Voir le quartier", href: "/aylmer/" }}
       heroBgImage={heroImg}
     />
 
@@ -60,7 +60,7 @@ const LivingAylmerPage = () => (
     <InlineCTA
       text="Vous pensez vous installer à Aylmer? Réservez une consultation gratuite."
       buttonLabel="Réserver une consultation →"
-      href="/consultation-acheteur"
+      href="/consultation-acheteur/"
     />
 
     <FAQSection title="Questions sur la vie à Aylmer" items={faq} />
@@ -83,8 +83,8 @@ const LivingAylmerPage = () => (
       title="Prêt à découvrir Aylmer?"
       text="Parlons de vos critères — je vous montre les meilleures options du secteur."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Voir le quartier", href: "/aylmer", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Voir le quartier", href: "/aylmer/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

@@ -22,9 +22,9 @@ const advantages = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
 ];
 
 
@@ -45,7 +45,7 @@ const BuyFromOttawaPage = () => (
       overline="Acheter depuis Ottawa · Gatineau"
       title="Acheter à Gatineau depuis Ottawa"
       subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie différente — sans être loin du travail. Voici ce qu'il faut savoir."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
       trustLine="Spécialiste en relocalisation Ottawa → Gatineau"
       heroBgImage={heroImg}
@@ -59,7 +59,7 @@ const BuyFromOttawaPage = () => (
     <InlineCTA
       text="Vous vendez aussi à Ottawa? Connaître la valeur de votre propriété actuelle peut clarifier votre budget d'achat."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <SectorLinks
@@ -82,7 +82,7 @@ const BuyFromOttawaPage = () => (
         Je coordonne aussi les acteurs de soutien — notaire québécois, courtier hypothécaire bilingue, inspecteur certifié connaissant les bâtiments anciens de Hull, déménageurs habitués aux dossiers interprovinciaux. Vous n'avez pas à monter cette équipe seul depuis l'autre rive.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/consultation-acheteur">Réserver ma consultation</Link>
+        <Link to="/consultation-acheteur/">Réserver ma consultation</Link>
       </Button>
     </ContentBlock>
 
@@ -98,8 +98,8 @@ const BuyFromOttawaPage = () => (
       title="Prêt à explorer Gatineau?"
       text="Réservez une consultation gratuite — on regarde ensemble les secteurs et les options qui correspondent à votre profil."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

@@ -31,13 +31,13 @@ const faq = [
 const MilitarySellerPageEn = () => (
   <>
     <PageMeta title="Sell During a Military Posting" description="Sell your property in Gatineau during a CAF posting. Timing, BGRS/SIRVA process and strategy to maximize your price." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Selling During a Military Posting" description="Specialized real estate service for CAF members on posting. Timing, BGRS/SIRVA and strategy to maximize your price." url="/en/military-seller" serviceType="Military Real Estate Seller Service" />
+    <ServiceJsonLd name="Selling During a Military Posting" description="Specialized real estate service for CAF members on posting. Timing, BGRS/SIRVA and strategy to maximize your price." url="/en/military-seller/" serviceType="Military Real Estate Seller Service" />
     <HeroSection
       overline="Sell during a posting · Gatineau"
       title="Sell your property during a posting"
       subtitle="Time is tight, but price matters. I help you sell efficiently without sacrificing the value of your property."
-      primaryCta={{ label: "Get my valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
+      primaryCta={{ label: "Get my valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="Clear strategy. Fast sale. Full transparency."
       heroBgImage={heroImg}
     />
@@ -55,7 +55,7 @@ const MilitarySellerPageEn = () => (
     <InlineCTA
       text="First step: know the value of your property — it's free and fast."
       buttonLabel="Get my valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <ContentBlock narrow>
@@ -67,7 +67,7 @@ const MilitarySellerPageEn = () => (
         With the right preparation and pricing, a fast sale can also be a profitable sale. My role is to protect your price while respecting your timeline.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/home-valuation">Start with a valuation</Link>
+        <Link to="/en/home-valuation/">Start with a valuation</Link>
       </Button>
     </ContentBlock>
 
@@ -83,8 +83,8 @@ const MilitarySellerPageEn = () => (
       title="Posting coming up?"
       text="Let's discuss your timeline and options — the sooner we start, the more leverage we have."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Book a call", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Book a call", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide with full clarity."
     />

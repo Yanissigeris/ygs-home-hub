@@ -35,9 +35,9 @@ const steps = [
 
 
 const militaryPaths = [
-  { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille — visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau", cta: "En savoir plus", highlight: true },
-  { title: "Vendre lors d'une mutation", text: "Vendez rapidement et au bon prix, même avec un calendrier serré.", href: "/vendre-lors-dune-mutation-gatineau", cta: "En savoir plus" },
-  { title: "Guide militaire", text: "Tout ce qu'il faut savoir pour votre relocalisation immobilière à Gatineau.", href: "/guide-militaire-gatineau", cta: "Lire le guide" },
+  { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille — visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau/", cta: "En savoir plus", highlight: true },
+  { title: "Vendre lors d'une mutation", text: "Vendez rapidement et au bon prix, même avec un calendrier serré.", href: "/vendre-lors-dune-mutation-gatineau/", cta: "En savoir plus" },
+  { title: "Guide militaire", text: "Tout ce qu'il faut savoir pour votre relocalisation immobilière à Gatineau.", href: "/guide-militaire-gatineau/", cta: "Lire le guide" },
 ];
 
 const faq = [
@@ -51,13 +51,13 @@ const MilitaryPage = () => (
    <>
     <SEO title="Courtier immobilier militaire Gatineau | YGS" description="Mutation militaire à Gatineau? Courtier spécialisé IRP/BGRS, délais serrés, processus québécois. Achat et vente pour personnel des Forces canadiennes." canonical="https://yanisgauthier.com/militaire-gatineau" hreflangFr="https://yanisgauthier.com/militaire-gatineau" hreflangEn="https://yanisgauthier.com/en/military" />
     <PageMeta title="Militaire à Gatineau — Mutation FAC" description="Mutation militaire à Gatineau? Accompagnement spécialisé pour membres des FAC: achat, vente, BGRS/SIRVA et installation à Aylmer, Hull ou au Plateau." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Service immobilier pour militaires — Mutation FAC à Gatineau" description="Accompagnement spécialisé pour les membres des Forces armées canadiennes en mutation à Gatineau — achat, vente, BGRS/SIRVA et installation." url="/militaire-gatineau" serviceType="Military Real Estate Relocation Service" />
+    <ServiceJsonLd name="Service immobilier pour militaires — Mutation FAC à Gatineau" description="Accompagnement spécialisé pour les membres des Forces armées canadiennes en mutation à Gatineau — achat, vente, BGRS/SIRVA et installation." url="/militaire-gatineau/" serviceType="Military Real Estate Relocation Service" />
     <HeroSection
       overline="Militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau"
       subtitle="Mutation, relocalisation, achat ou vente — je connais les réalités militaires et je vous aide à naviguer le marché de Gatineau efficacement."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Guide militaire", href: "/guide-militaire-gatineau" }}
+      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Guide militaire", href: "/guide-militaire-gatineau/" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
@@ -79,7 +79,7 @@ const MilitaryPage = () => (
     <InlineCTA
       text="Vous devez vendre avant d'acheter? Commencez par connaître la valeur de votre propriété."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ProcessSteps steps={steps} background="alt" />
@@ -103,7 +103,7 @@ const MilitaryPage = () => (
         Depuis 2017 à Gatineau, j'ai accompagné des familles militaires dans toutes sortes de situations. Mon rôle est de simplifier le processus pour que vous puissiez vous concentrer sur votre mission.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/contact-yanis">Réserver un appel</Link>
+        <Link to="/contact-yanis/">Réserver un appel</Link>
       </Button>
     </ContentBlock>
 
@@ -120,8 +120,8 @@ const MilitaryPage = () => (
       title="Prêt à planifier votre relocalisation?"
       text="Parlons de votre mutation, vos critères et votre calendrier — je m'adapte à vous."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Guide militaire", href: "/guide-militaire-gatineau", variant: "outline" },
+        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Guide militaire", href: "/guide-militaire-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

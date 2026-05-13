@@ -7,7 +7,7 @@ const MassonAngersPageEn = () => (
     seoTitle="Masson-Angers — Neighborhood Guide Gatineau"
     metaDesc="Buy, sell or live in Masson-Angers, Gatineau. Growing family-friendly area with new construction and competitive prices."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
-    jsonLd={{ name: "Masson-Angers", description: "Real estate broker in Masson-Angers. Growing family area with new homes.", lat: 45.5328, lng: -75.4170, url: "/en/masson-angers" }}
+    jsonLd={{ name: "Masson-Angers", description: "Real estate broker in Masson-Angers. Growing family area with new homes.", lat: 45.5328, lng: -75.4170, url: "/en/masson-angers/" }}
     hero={{ overline: "Neighborhood Guide · Masson-Angers", title: "Buy, Sell or Live in Masson-Angers", subtitle: "Growing family-friendly area in east Gatineau — new construction, accessible entry prices and quality of life. 20-25 minutes from central Gatineau via Highway 50.", image: heroImg }}
     trustSpecialty="Masson-Angers specialist"
     lifestyle={{ image: heroImg, imageAlt: "Masson-Angers residential area", title: "Why Masson-Angers is booming", subtitle: "Masson-Angers mainly attracts young families and first-time buyers looking for a new or recent home without paying Hull or Aylmer prices. The area has two distinct sub-sectors — Masson and Angers — with several active residential developments and builders delivering new homes in 2026. It's one of the best price-to-quality ratios in Gatineau for buyers willing to accept a longer daily commute to downtown Ottawa." }}
@@ -31,7 +31,7 @@ const MassonAngersPageEn = () => (
       { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighborhoods, willing to commute 35-40 minutes via Highway 50 in exchange for $300,000+ savings." },
       { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. 20-25 minutes from central Gatineau via Highway 50." },
     ]}
-    inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Get my value →", href: "/en/home-valuation" }}
+    inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Masson-Angers", items: [
       { q: "Is Masson-Angers far from downtown Gatineau?", a: "About 20-25 minutes via Highway 50. Quick and direct access. For downtown Ottawa, plan 35-40 minutes depending on traffic and the bridge used (Macdonald-Cartier or Champlain)." },
       { q: "What is the price of a home in Masson-Angers in 2026?", a: "Based on active Centris listings as of May 2026, semi-detached and single-family homes typically sell between $400,000 and $490,000+ depending on type, year of construction and sub-sector. New builds are often positioned around $465,000 for 5 bedrooms with finished basement." },
@@ -42,15 +42,15 @@ const MassonAngersPageEn = () => (
       { q: "What are the sub-sectors of Masson-Angers?", a: "The area splits into two: Masson (west side, more mature, near the Rivière du Lièvre) and Angers (east side, more developing with recent new construction). Each sub-sector has its own pricing and inventory dynamics." },
     ]}}
     sectors={{ list: [
-      { name: "Buckingham", href: "/en/buckingham", detail: "Direct eastern neighbor, Rivière du Lièvre, Hormisdas-Gamelin secondary school" },
-      { name: "Gatineau (centre)", href: "/en/gatineau", detail: "Heart of the Gatineau sector — services, condos and residential" },
-      { name: "Limbour", href: "/en/limbour", detail: "Family, parks, modern suburb — alternative 15 minutes west" },
+      { name: "Buckingham", href: "/en/buckingham/", detail: "Direct eastern neighbor, Rivière du Lièvre, Hormisdas-Gamelin secondary school" },
+      { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "Heart of the Gatineau sector — services, condos and residential" },
+      { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb — alternative 15 minutes west" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer" },
-      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation" },
-      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide" },
-      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },
+      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation/" },
+      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide/" },
+      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Masson-Angers", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     brokerPerspective={{
@@ -58,7 +58,7 @@ const MassonAngersPageEn = () => (
       dataPoint: "On the sales I close in Masson-Angers, new semi-detached and well-prepared recent homes typically go under contract in 25-40 days. Builders are delivering models between $400-490k with quick possession, and competition for first-time buyers stays strong despite the increase in supply.",
       takeaway: "My advice to buyers considering Masson-Angers: compare Masson vs. Angers carefully before deciding — they're two different dynamics. And if you're targeting new construction, verify the builder, real delivery timelines, and negotiate inclusions. My advice to owners thinking about selling: your price should reflect your sub-sector and the competing supply of new builds, not a generic neighborhood average."
     }}
-    cta={{ title: "Buying or selling in Masson-Angers?", text: "I know the area — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
+    cta={{ title: "Buying or selling in Masson-Angers?", text: "I know the area — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
   />
 );
 

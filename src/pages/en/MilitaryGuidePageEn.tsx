@@ -29,16 +29,16 @@ const faq = [
 ];
 
 const related = [
-  { title: "Military Relocation", text: "Posting to the NCR — find the right property quickly.", href: "/en/military-relocation" },
-  { title: "Buy as Military", text: "Support adapted to posting constraints.", href: "/en/military-buyer" },
-  { title: "Sell During a Posting", text: "Sell quickly without sacrificing price.", href: "/en/military-seller" },
-  { title: "Explore Neighborhoods", text: "Find the area that matches your priorities.", href: "/en/neighborhoods" },
+  { title: "Military Relocation", text: "Posting to the NCR — find the right property quickly.", href: "/en/military-relocation/" },
+  { title: "Buy as Military", text: "Support adapted to posting constraints.", href: "/en/military-buyer/" },
+  { title: "Sell During a Posting", text: "Sell quickly without sacrificing price.", href: "/en/military-seller/" },
+  { title: "Explore Neighborhoods", text: "Find the area that matches your priorities.", href: "/en/neighborhoods/" },
 ];
 
 const MilitaryGuidePageEn = () => (
   <>
     <PageMeta title="Military Real Estate Guide — Gatineau" description="Complete guide for military members relocating to Gatineau. Neighborhoods, process and support for CAF postings." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <HeroSection overline="Military Guide · Gatineau" title="Military real estate guide for Gatineau" subtitle="Posting to the NCR? Everything you need to know to buy, sell or settle in Gatineau as a military member." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Military overview", href: "/en/military" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Military Guide · Gatineau" title="Military real estate guide for Gatineau" subtitle="Posting to the NCR? Everything you need to know to buy, sell or settle in Gatineau as a military member." primaryCta={{ label: "Book a call", href: "/en/contact/" }} secondaryCta={{ label: "Military overview", href: "/en/military/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
@@ -58,7 +58,7 @@ const MilitaryGuidePageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="Need to sell before buying? Start by knowing the value of your property." buttonLabel="Get my valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Need to sell before buying? Start by knowing the value of your property." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
 
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Get the Military Relocation Guide" text="Posting, buying, selling — everything in a clear guide sent to your email for free." ctaLabel="Get the guide" />
 
@@ -66,7 +66,7 @@ const MilitaryGuidePageEn = () => (
 
     <RelatedPages overline="Also worth reading" title="Related pages for military" pages={related} background="alt" />
 
-    <CTASection dark title="Let's plan your military relocation" text="Book a free call — we adapt the plan to your posting and timeline." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I adapt to your pace — you decide when you're ready." />
+    <CTASection dark title="Let's plan your military relocation" text="Book a free call — we adapt the plan to your posting and timeline." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I adapt to your pace — you decide when you're ready." />
 
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide — get it by email" />
   </>

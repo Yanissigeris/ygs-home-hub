@@ -31,25 +31,25 @@ const militaryFaq = [
   { q: "Should I buy or rent during a posting?", a: "It depends on the length of your assignment and your situation. We discuss it together to find the best option." },
 ];
 const resources = [
-  { icon: Home, title: "Seller Guide", text: "Everything to sell at the best price.", cta: "Read the guide", href: "/en/seller-guide" },
-  { icon: Users, title: "Buyer Guide", text: "The buying process in Québec.", cta: "Read the guide", href: "/en/buyer-guide" },
-  { icon: MapPin, title: "Relocation Guide", text: "Settling in Gatineau.", cta: "Read the guide", href: "/en/relocation-guide" },
-  { icon: Shield, title: "Military Guide", text: "Real estate and postings.", cta: "Read the guide", href: "/en/military-guide" },
-  { icon: TrendingUp, title: "Plex Investment", text: "Analysis and strategy.", cta: "Explore", href: "/en/plex" },
-  { icon: Book, title: "First-Time Buyer", text: "Budget, process and tips.", cta: "Read the guide", href: "/en/first-time-buyer" },
+  { icon: Home, title: "Seller Guide", text: "Everything to sell at the best price.", cta: "Read the guide", href: "/en/seller-guide/" },
+  { icon: Users, title: "Buyer Guide", text: "The buying process in Québec.", cta: "Read the guide", href: "/en/buyer-guide/" },
+  { icon: MapPin, title: "Relocation Guide", text: "Settling in Gatineau.", cta: "Read the guide", href: "/en/relocation-guide/" },
+  { icon: Shield, title: "Military Guide", text: "Real estate and postings.", cta: "Read the guide", href: "/en/military-guide/" },
+  { icon: TrendingUp, title: "Plex Investment", text: "Analysis and strategy.", cta: "Explore", href: "/en/plex/" },
+  { icon: Book, title: "First-Time Buyer", text: "Budget, process and tips.", cta: "Read the guide", href: "/en/first-time-buyer/" },
 ];
 
 const FAQPageEn = () => (
   <>
     <PageMeta title="FAQ — Real Estate Questions Gatineau | YGS" description="Answers to frequently asked questions about selling, buying, investing and relocating in Gatineau. Expert advice by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-faq.jpg" />
     
-    <HeroSection overline="FAQ · YGS" title="Frequently Asked Questions" subtitle="Answers to the most common questions about selling, buying, investing and relocating in Gatineau." primaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="FAQ · YGS" title="Frequently Asked Questions" subtitle="Answers to the most common questions about selling, buying, investing and relocating in Gatineau." primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <FAQSection title="Selling in Gatineau" items={sellerFaq} />
     <FAQSection title="Buying in Gatineau" items={buyerFaq} />
     <FAQSection title="Plex Investment" items={plexFaq} />
     <FAQSection title="Military and Relocation" items={militaryFaq} />
     <LinkedCardGrid overline="Resources" title="Guides and Tools" items={resources} columns={3} background="alt" />
-    <CTASection dark title="Have a specific question?" text="Contact me directly — I'll give you a clear and personalized answer." buttons={[{ label: "Talk to Yanis", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Have a specific question?" text="Contact me directly — I'll give you a clear and personalized answer." buttons={[{ label: "Talk to Yanis", href: "/en/contact/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default FAQPageEn;

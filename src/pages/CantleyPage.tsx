@@ -51,10 +51,10 @@ const activites = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Chelsea", text: "Parc de la Gatineau, village artistique.", href: "/chelsea" },
-  { title: "Buckingham", text: "Espace, prix accessibles.", href: "/buckingham-masson-angers" },
-  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau" },
-  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+  { title: "Chelsea", text: "Parc de la Gatineau, village artistique.", href: "/chelsea/" },
+  { title: "Buckingham", text: "Espace, prix accessibles.", href: "/buckingham-masson-angers/" },
+  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau/" },
+  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
 ];
 
 const CantleyPage = () => (
@@ -68,12 +68,12 @@ const CantleyPage = () => (
       description="Achetez ou vendez à Cantley, Outaouais. Grands terrains, famille, nature. Courtier local."
       lat={45.5056}
       lng={-75.7833}
-      url="/cantley"
+      url="/cantley/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Cantley"
       description="Services de courtage immobilier à Cantley, Outaouais — maisons, terrains, propriétés familiales."
-      url="/cantley"
+      url="/cantley/"
       serviceType="Real Estate Brokerage"
       areaServed={["Cantley", "Outaouais"]}
     />
@@ -83,7 +83,7 @@ const CantleyPage = () => (
       overline="CANTLEY · OUTAOUAIS"
       title="Courtier immobilier à Cantley — l'espace, à 13 km d'Ottawa"
       subtitle="Cantley est à 13 kilomètres du centre-ville d'Ottawa. C'est une municipalité en pleine croissance, connue pour ses grands terrains, son développement résidentiel à faible densité, et sa qualité de vie familiale. Pour les familles qui veulent l'espace sans s'éloigner, Cantley est souvent la conclusion logique."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=cantley" }}
       heroBgImage={heroImg}
     />
@@ -159,7 +159,7 @@ const CantleyPage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-gratuite-gatineau/">Obtenir les vrais chiffres →</Link>
           </Button>
         </div>
       </div>
@@ -189,8 +189,8 @@ const CantleyPage = () => (
       title="Acheteur ou vendeur à Cantley?"
       text="Je connais le secteur — parlons de votre projet."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation →", href: "/consultation-acheteur", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation →", href: "/consultation-acheteur/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />

@@ -38,28 +38,28 @@ const faq = [
 const SellPlexPageEn = () => (
   <>
     <PageMeta title="Sell a Plex in Gatineau" description="Sell your duplex, triplex or revenue property in Gatineau. Precise valuation, marketing strategy and specialized support." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Sell a Plex in Gatineau" description="Specialized sale of duplexes, triplexes and revenue properties in Gatineau. Precise valuation and adapted marketing strategy." url="/en/sell-plex" serviceType="Multi-Family Property Listing Service" />
+    <ServiceJsonLd name="Sell a Plex in Gatineau" description="Specialized sale of duplexes, triplexes and revenue properties in Gatineau. Precise valuation and adapted marketing strategy." url="/en/sell-plex/" serviceType="Multi-Family Property Listing Service" />
     <HeroSection
       overline="Sell a Plex · Gatineau"
       title="Sell your plex in Gatineau"
       subtitle="Duplex, triplex or more — I help you maximize your price with a strategy tailored to revenue properties."
-      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Get an analysis", href: "/en/plex-analysis" }}
+      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Get an analysis", href: "/en/plex-analysis/" }}
       trustLine="Plex specialist. "
       heroBgImage={heroImg}
     />
 <CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} />
-    <InlineCTA text="First step: know the value of your plex — it's free." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="First step: know the value of your plex — it's free." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <ProcessSteps steps={steps} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="Maximize without overcomplicating" />
       <p className="prose-body mt-5">Many plex owners underestimate their building's value — or don't know how to maximize it before selling. My role is to give you a clear picture of your situation and a strategy to get the best price.</p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/plex-analysis">Get my plex analysis</Link>
+        <Link to="/en/plex-analysis/">Get my plex analysis</Link>
       </Button>
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="investor_guide" headline="Free Investor Guide — maximize your plex" text="Returns, taxes and selling strategy — in a guide sent to your email." ctaLabel="Get the Investor Guide" />
-    <CTASection dark title="Ready to explore your options?" text="Request an analysis of your plex — value, revenues and recommendation." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Free Plex Analysis", href: "/en/plex-analysis", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Ready to explore your options?" text="Request an analysis of your plex — value, revenues and recommendation." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Free Plex Analysis", href: "/en/plex-analysis/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
   </>

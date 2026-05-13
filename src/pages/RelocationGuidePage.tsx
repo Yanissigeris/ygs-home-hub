@@ -23,9 +23,9 @@ const topics = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
 ];
 
 const faq = [
@@ -36,22 +36,22 @@ const faq = [
 ];
 
 const related = [
-  { title: "Relocalisation depuis Ottawa", text: "Plus d'espace et des prix plus accessibles de l'autre côté de la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
-  { title: "Relocalisation depuis Montréal", text: "Qualité de vie et espace pour les familles montréalaises.", href: "/relocalisation-montreal-gatineau" },
-  { title: "Relocalisation militaire", text: "Mutation vers la RCN — service adapté aux militaires.", href: "/relocalisation-militaire-gatineau" },
-  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Relocalisation depuis Ottawa", text: "Plus d'espace et des prix plus accessibles de l'autre côté de la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+  { title: "Relocalisation depuis Montréal", text: "Qualité de vie et espace pour les familles montréalaises.", href: "/relocalisation-montreal-gatineau/" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN — service adapté aux militaires.", href: "/relocalisation-militaire-gatineau/" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
 const RelocationGuidePage = () => (
    <>
     <PageMeta title="Guide de relocalisation à Gatineau" description="Guide complet pour vous installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Guide de relocalisation à Gatineau" description="Guide complet pour s'installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." url="/guide-relocalisation-gatineau" serviceType="Real Estate Relocation Guide" />
+    <ServiceJsonLd name="Guide de relocalisation à Gatineau" description="Guide complet pour s'installer à Gatineau depuis Ottawa. Quartiers, écoles, services et processus québécois expliqués." url="/guide-relocalisation-gatineau/" serviceType="Real Estate Relocation Guide" />
     <HeroSection
       overline="Guide relocalisation · Gatineau"
       title="Guide complet pour s'installer à Gatineau"
       subtitle="Tout ce que vous devez savoir pour réussir votre relocalisation — secteurs, prix, processus, écoles et mode de vie."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau" }}
+      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -88,7 +88,7 @@ const RelocationGuidePage = () => (
     <InlineCTA
       text="Vous voulez un accompagnement personnalisé? Réservez un appel gratuit."
       buttonLabel="Réserver un appel →"
-      href="/contact-yanis"
+      href="/contact-yanis/"
     />
 
     <FAQSection items={faq} />
@@ -104,8 +104,8 @@ const RelocationGuidePage = () => (
       title="Planifions votre installation"
       text="Réservez un appel gratuit — on clarifie vos options et vos prochaines étapes."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
+        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

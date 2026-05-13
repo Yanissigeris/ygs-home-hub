@@ -17,10 +17,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Free Valuation", text: "How much is your property worth? Estimate within 24h.", href: "/en/home-valuation" },
-  { title: "Properties", text: "Browse active listings in Gatineau.", href: "/en/properties" },
-  { title: "Seller Guide", text: "Everything to sell at the best price.", href: "/en/seller-guide" },
-  { title: "Invest in Plex", text: "Analysis and strategy for plexes in Gatineau.", href: "/en/plex" },
+  { title: "Free Valuation", text: "How much is your property worth? Estimate within 24h.", href: "/en/home-valuation/" },
+  { title: "Properties", text: "Browse active listings in Gatineau.", href: "/en/properties/" },
+  { title: "Seller Guide", text: "Everything to sell at the best price.", href: "/en/seller-guide/" },
+  { title: "Invest in Plex", text: "Analysis and strategy for plexes in Gatineau.", href: "/en/plex/" },
 ];
 
 const MarketReportPageEn = () => (
@@ -30,8 +30,8 @@ const MarketReportPageEn = () => (
       overline="Market Report · Gatineau"
       title="Gatineau real estate market report"
       subtitle="Prices, trends, sales volumes — a clear reading of the Gatineau and Outaouais real estate market."
-      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
       heroBgImage={heroImg}
     />
@@ -39,11 +39,11 @@ const MarketReportPageEn = () => (
       <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
       <p className="prose-body mt-5">Every quarter, I prepare an analysis of the Gatineau real estate market — median prices, sales volume, trends by area and forecasts. Contact me to receive the next edition.</p>
     </ContentBlock>
-    <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <FAQSection items={faq} />
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
+    <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>
 );

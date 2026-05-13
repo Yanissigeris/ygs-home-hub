@@ -42,8 +42,8 @@ const valuationFaq = [
 ];
 
 const afterSteps = [
-  { title: "Plan vendeur", text: "Allez plus loin — recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Plan vendeur", text: "Allez plus loin — recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -63,7 +63,7 @@ const ValuationPage = () => {
         hreflangEn="https://yanisgauthier.com/en/home-valuation"
       />
       <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
-    <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau" serviceType="Real Estate Appraisal Service" />
+    <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais — analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau/" serviceType="Real Estate Appraisal Service" />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
@@ -284,12 +284,12 @@ const ValuationPage = () => {
         overline="À lire aussi"
         title="Ressources liées"
         pages={[
-          { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull" },
-          { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer" },
-          { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-          { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea" },
-          { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley" },
-          { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
+          { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull/" },
+          { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer/" },
+          { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+          { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea/" },
+          { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley/" },
+          { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
         ]}
         background="alt"
       />

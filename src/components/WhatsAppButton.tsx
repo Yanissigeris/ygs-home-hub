@@ -3,9 +3,9 @@ import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HIDDEN_PATHS = [
-  "/contact-yanis", "/en/contact",
-  "/merci", "/en/thank-you",
-  "/merci-evaluation", "/en/thank-you-valuation",
+  "/contact-yanis/", "/en/contact/",
+  "/merci/", "/en/thank-you/",
+  "/merci-evaluation/", "/en/thank-you-valuation/",
 ];
 
 const FloatingCallButton = () => {

@@ -31,13 +31,13 @@ const faq = [
 const MilitarySellerPage = () => (
    <>
     <PageMeta title="Vendre lors d'une mutation militaire" description="Vendez votre propriété à Gatineau lors d'une mutation FAC. Timing, processus BGRS/SIRVA et stratégie pour maximiser votre prix en Outaouais." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Vendre lors d'une mutation militaire" description="Vente immobilière spécialisée pour militaires FAC en mutation. Timing, BGRS/SIRVA et stratégie pour maximiser votre prix." url="/vendre-lors-dune-mutation-gatineau" serviceType="Military Real Estate Seller Service" />
+    <ServiceJsonLd name="Vendre lors d'une mutation militaire" description="Vente immobilière spécialisée pour militaires FAC en mutation. Timing, BGRS/SIRVA et stratégie pour maximiser votre prix." url="/vendre-lors-dune-mutation-gatineau/" serviceType="Military Real Estate Seller Service" />
     <HeroSection
       overline="Vendre lors d'une mutation · Gatineau"
       title="Vendre votre propriété lors d'une mutation"
       subtitle="Le temps presse, mais le prix compte. Je vous aide à vendre efficacement, sans sacrifier la valeur de votre propriété."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Stratégie claire. Vente rapide."
       heroBgImage={heroImg}
     />
@@ -55,7 +55,7 @@ const MilitarySellerPage = () => (
     <InlineCTA
       text="Première étape: connaître la valeur de votre propriété — c'est gratuit et rapide."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -67,7 +67,7 @@ const MilitarySellerPage = () => (
         Avec la bonne préparation et le bon positionnement prix, une vente rapide peut aussi être une vente rentable. Mon rôle est de protéger votre prix tout en respectant votre échéancier.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/evaluation-gratuite-gatineau">Commencer par une évaluation</Link>
+        <Link to="/evaluation-gratuite-gatineau/">Commencer par une évaluation</Link>
       </Button>
     </ContentBlock>
 
@@ -83,8 +83,8 @@ const MilitarySellerPage = () => (
       title="Vous avez une mutation qui approche?"
       text="Parlons de votre calendrier et de vos options — plus on s'y prend tôt, plus on a de levier."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver un appel", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver un appel", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

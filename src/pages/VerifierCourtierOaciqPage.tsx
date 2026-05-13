@@ -91,7 +91,7 @@ const VerifierCourtierOaciqPage = () => (
     <InlineCTA
       text="Vous cherchez un courtier en règle en Outaouais? Vérifions ensemble."
       buttonLabel="Parler à Yanis →"
-      href="/contact-yanis"
+      href="/contact-yanis/"
     />
 
     <ContentBlock narrow>
@@ -115,10 +115,10 @@ const VerifierCourtierOaciqPage = () => (
       overline="Explorer"
       title="Pages connexes"
       pages={[
-        { title: "Comment choisir un courtier?", text: "Les critères pour bien choisir.", href: "/comment-choisir-un-courtier-immobilier" },
-        { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission.", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-        { title: "Contact", text: "Discuter de votre projet.", href: "/contact-yanis" },
+        { title: "Comment choisir un courtier?", text: "Les critères pour bien choisir.", href: "/comment-choisir-un-courtier-immobilier/" },
+        { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
+        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Contact", text: "Discuter de votre projet.", href: "/contact-yanis/" },
       ]}
       background="alt"
     />
@@ -128,8 +128,8 @@ const VerifierCourtierOaciqPage = () => (
       title="Vous voulez un courtier transparent et en règle?"
       text="Discutons de votre projet — je réponds à toutes vos questions, clairement."
       buttons={[
-        { label: "Parler à Yanis", href: "/contact-yanis" },
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Permis OACIQ valide · Transparent dès le départ."
     />

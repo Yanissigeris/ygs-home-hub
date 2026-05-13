@@ -55,8 +55,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Your real estate broker in Outaouais"
       subtitle="Clear strategy to sell, buy, or invest."
       subtitleShort="Clear strategy to sell, buy, or invest."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Consultation", href: "/en/contact" }}
+      primaryCta={{ label: "Free valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Consultation", href: "/en/contact/" }}
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={yanisHero}
       heroBgImageMobile={yanisHeroMobileAvif}
@@ -86,7 +86,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <AboutSection lang="en" />
     <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
 
-    <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials" />
+    <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials/" />
     <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <AreasServicesSection lang="en" />
@@ -102,7 +102,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
         { q: "What are the best neighbourhoods to buy in Gatineau?", a: "It depends on your profile: Aylmer and the Plateau are popular with families, Hull attracts young professionals, and Chelsea or Cantley appeal to those who want nature while staying close to the city." },
         { q: "Is now a good time to sell in Gatineau?", a: "The Outaouais real estate market remains active. A property analysis helps determine the best timing and optimal pricing strategy to maximize your result." },
       ]}
-      linkHref="/en/faq"
+      linkHref="/en/faq/"
       linkLabel="See all questions"
     />
 
@@ -116,8 +116,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Take the right first step"
       text="Valuation, buyer consultation or plex analysis — we start where you are."
       buttons={[
-        { label: "Free Home Valuation", href: "/en/home-valuation" },
-        { label: "Book a consultation", href: "/en/contact", variant: "outline" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
+        { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

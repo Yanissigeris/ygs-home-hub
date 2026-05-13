@@ -22,9 +22,9 @@ const advantages = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family-friendly, newer homes, Ottawa access" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, close to downtown Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Land, affordable prices, nature" },
 ];
 
 
@@ -45,8 +45,8 @@ const BuyFromOttawaPageEn = () => (
       overline="Buy from Ottawa · Gatineau"
       title="Buy in Gatineau from Ottawa"
       subtitle="More space, more affordable prices, a different quality of life — without being far from work. Here's what you need to know."
-      primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }}
-      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }}
+      primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }}
+      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }}
       trustLine="Ottawa → Gatineau relocation specialist"
       heroBgImage={heroImg}
     />
@@ -59,7 +59,7 @@ const BuyFromOttawaPageEn = () => (
     <InlineCTA
       text="Also selling in Ottawa? Knowing the value of your current property can clarify your buying budget."
       buttonLabel="Get my valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <SectorLinks
@@ -81,7 +81,7 @@ const BuyFromOttawaPageEn = () => (
         I also coordinate the supporting cast — Québec notary, bilingual mortgage broker, certified inspector familiar with older Hull stock, movers who handle interprovincial files. You don't have to assemble that team alone from across the river.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/buyer-consultation">Book my consultation</Link>
+        <Link to="/en/buyer-consultation/">Book my consultation</Link>
       </Button>
     </ContentBlock>
 
@@ -92,8 +92,8 @@ const BuyFromOttawaPageEn = () => (
       title="Ready to explore Gatineau?"
       text="Book a free consultation — let's look at the neighborhoods and options that match your profile."
       buttons={[
-        { label: "Book a consultation", href: "/en/buyer-consultation" },
-        { label: "Explore neighborhoods", href: "/en/plateau-aylmer", variant: "outline" },
+        { label: "Book a consultation", href: "/en/buyer-consultation/" },
+        { label: "Explore neighborhoods", href: "/en/plateau-aylmer/", variant: "outline" },
       ]}
       trustLine="I give you the options — you decide with full clarity."
     />

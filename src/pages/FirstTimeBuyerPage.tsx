@@ -40,13 +40,13 @@ const FirstTimeBuyerPage = () => (
    <>
     <SEO title="Premier achat immobilier à Gatineau | Guide YGS" description="Guide complet pour votre premier achat à Gatineau. Mise de fonds, RAP, CELIAPP, pré-approbation, processus au Québec." canonical="https://yanisgauthier.com/premier-achat-gatineau" hreflangFr="https://yanisgauthier.com/premier-achat-gatineau" hreflangEn="https://yanisgauthier.com/en/first-time-buyer" />
     <PageMeta title="Premier achat immobilier à Gatineau" description="Premier acheteur à Gatineau? Mise de fonds, budget, programmes d'aide au Québec et accompagnement personnalisé pour acheter à Aylmer, Hull ou au Plateau." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <ServiceJsonLd name="Accompagnement premier acheteur — Gatineau" description="Accompagnement personnalisé pour premiers acheteurs à Gatineau. Mise de fonds, programmes d'aide au Québec et processus étape par étape." url="/premier-achat-gatineau" serviceType="First Time Home Buyer Service" />
+    <ServiceJsonLd name="Accompagnement premier acheteur — Gatineau" description="Accompagnement personnalisé pour premiers acheteurs à Gatineau. Mise de fonds, programmes d'aide au Québec et processus étape par étape." url="/premier-achat-gatineau/" serviceType="First Time Home Buyer Service" />
     <HeroSection
       overline="Premier achat · Gatineau"
       title="Premier achat à Gatineau — par où commencer?"
       subtitle="Devenir propriétaire pour la première fois, c'est excitant et stressant. Je vous aide à naviguer chaque étape — budget, secteur, offre et processus."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau/" }}
       trustLine="Accompagnement personnalisé."
       heroBgImage={heroImg}
     />
@@ -59,7 +59,7 @@ const FirstTimeBuyerPage = () => (
     <InlineCTA
       text="Pas encore sûr de votre budget? On peut en discuter lors d'une consultation gratuite."
       buttonLabel="Réserver une consultation →"
-      href="/consultation-acheteur"
+      href="/consultation-acheteur/"
     />
 
     <ProcessSteps steps={steps} background="alt" />
@@ -70,7 +70,7 @@ const FirstTimeBuyerPage = () => (
         La première propriété est souvent le plus gros investissement de votre vie. Mon rôle est de m'assurer que vous prenez une décision éclairée — pas pressée, pas stressée, pas basée sur l'émotion seule.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/consultation-acheteur">Réserver ma consultation</Link>
+        <Link to="/consultation-acheteur/">Réserver ma consultation</Link>
       </Button>
     </ContentBlock>
 
@@ -86,8 +86,8 @@ const FirstTimeBuyerPage = () => (
       title="Prêt à faire le premier pas?"
       text="Réservez une consultation gratuite — on clarifie votre budget, vos options et les prochaines étapes."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" },
       ]}
       trustLine="Je vous accompagne à votre rythme."
     />

@@ -7,7 +7,7 @@ const CoteDazurPageEn = () => (
     seoTitle="Côte-d'Azur Gatineau — Neighborhood Guide"
     metaDesc="Buy, sell or live in Côte-d'Azur, Gatineau. Established residential area with bungalows, mature trees and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
-    jsonLd={{ name: "Côte-d'Azur", description: "Real estate broker in Côte-d'Azur, Gatineau. Established residential neighborhood.", lat: 45.4700, lng: -75.7000, url: "/en/cote-dazur" }}
+    jsonLd={{ name: "Côte-d'Azur", description: "Real estate broker in Côte-d'Azur, Gatineau. Established residential neighborhood.", lat: 45.4700, lng: -75.7000, url: "/en/cote-dazur/" }}
     hero={{ overline: "Neighborhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Mature residential neighborhood in central Gatineau, between Boulevard Maloney and Boulevard La Vérendrye. 1960s-1990s bungalows, quiet streets, 15-20 minutes from downtown Ottawa.", image: heroImg }}
     trustSpecialty="Côte-d'Azur specialist"
     lifestyle={{ image: heroImg, imageAlt: "Côte-d'Azur neighborhood, Gatineau", title: "Why Côte-d'Azur is appreciated", subtitle: "Côte-d'Azur attracts families looking for an established neighborhood close to services, without paying Aylmer, Plateau, or Ottawa prices. Most properties are bungalows and split-levels, often on lots of 4,000 to 6,000 sq ft. The area remains one of the most accessible parts of central Gatineau to step into a single-family home — and increasingly popular with cross-river buyers from Ottawa." }}
@@ -31,7 +31,7 @@ const CoteDazurPageEn = () => (
       { icon: Coffee, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa looking for more space, a mature neighborhood, and meaningful savings. Quick commute via Highway 50 and the Macdonald-Cartier Bridge." },
       { icon: Coffee, title: "Resale buyers", text: "1960s-1980s bungalows with solid bones: lot, brick, structure. Real appreciation potential with a well-executed kitchen and bathroom renovation." },
     ]}
-    inlineCta={{ text: "Own a property in Côte-d'Azur? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation" }}
+    inlineCta={{ text: "Own a property in Côte-d'Azur? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{
       title: "Questions about Côte-d'Azur",
       items: [
@@ -44,15 +44,15 @@ const CoteDazurPageEn = () => (
         { q: "Will a Côte-d'Azur bungalow need renovations?", a: "Often yes, and that's actually one of the area's advantages. Properties typically date from the 1960s to 1990s, and many have kept their original kitchen, bathroom or flooring. It's the number-one objection during showings — but it's also what allows buyers to enter the market at a fair price with appreciation potential." },
       ]}}
     sectors={{ list: [
-      { name: "Limbour", href: "/en/limbour", detail: "Family, parks, modern suburb — direct neighbor of Côte-d'Azur" },
-      { name: "Gatineau (centre)", href: "/en/gatineau", detail: "Heart of the Gatineau sector — services, condos and residential" },
-      { name: "Hull", href: "/en/hull", detail: "Urban, culture, condos, Zibi project — direct access to Ottawa" },
+      { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb — direct neighbor of Côte-d'Azur" },
+      { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "Heart of the Gatineau sector — services, condos and residential" },
+      { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos, Zibi project — direct access to Ottawa" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer" },
-      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation" },
-      { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide" },
-      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },
+      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation/" },
+      { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide/" },
+      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — Côte-d'Azur", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     brokerPerspective={{
@@ -60,7 +60,7 @@ const CoteDazurPageEn = () => (
       dataPoint: "Most of the bungalows I sell in Côte-d'Azur go under contract in under 21 days when priced right. When the asking price is too optimistic from the start, the timeline stretches significantly.",
       takeaway: "My advice to Côte-d'Azur owners thinking about selling: prep your home properly, fix the small details that make a difference, and list at the right price from day one. Without that, you won't maximize your final sale price and the listing takes longer."
     }}
-    cta={{ title: "Buying or selling in Côte-d'Azur?", text: "I know the neighborhood — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
+    cta={{ title: "Buying or selling in Côte-d'Azur?", text: "I know the neighborhood — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
   />
 );
 

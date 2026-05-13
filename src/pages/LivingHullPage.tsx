@@ -26,10 +26,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Acheter ou investir à Hull", text: "Guide du quartier: prix, profils et potentiel.", href: "/hull" },
-  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau" },
-  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
-  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Acheter ou investir à Hull", text: "Guide du quartier: prix, profils et potentiel.", href: "/hull/" },
+  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau/" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
 ];
 
 const LivingHullPage = () => (
@@ -39,8 +39,8 @@ const LivingHullPage = () => (
       overline="Vivre à Hull · Gatineau"
       title="Vivre à Hull — le guide"
       subtitle="Découvrez le mode de vie urbain de Hull: culture, restaurants, proximité Ottawa et prix encore accessibles."
-      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Voir le quartier", href: "/hull" }}
+      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Voir le quartier", href: "/hull/" }}
       heroBgImage={heroImg}
     />
 
@@ -60,7 +60,7 @@ const LivingHullPage = () => (
     <InlineCTA
       text="Vous cherchez un plex à Hull? Demandez une analyse de rendement."
       buttonLabel="Recevoir une analyse plex →"
-      href="/analyse-plex-gatineau"
+      href="/analyse-plex-gatineau/"
     />
 
     <FAQSection title="Questions sur la vie à Hull" items={faq} />
@@ -83,8 +83,8 @@ const LivingHullPage = () => (
       title="Prêt à découvrir Hull?"
       text="Parlons de vos critères — je vous montre les meilleures options du secteur."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Voir le quartier", href: "/hull", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Voir le quartier", href: "/hull/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />
