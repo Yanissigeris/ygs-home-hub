@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
-import { withTrailingSlash } from "@/lib/url-utils";
+import { withTrailingSlash, stripTrailingSlash } from "@/lib/url-utils";
 
 interface PageMetaProps {
   title: string;
@@ -174,8 +174,9 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     removeHreflangLinks();
 
     /* Handle dynamic blog article routes */
-    let frPath: string | null = isEn ? (enToFr[pathname] ?? null) : pathname;
-    let enPath: string | null = isEn ? pathname : (frToEn[pathname] ?? null);
+    const lookupKey = stripTrailingSlash(pathname);
+    let frPath: string | null = isEn ? (enToFr[lookupKey] ?? null) : pathname;
+    let enPath: string | null = isEn ? pathname : (frToEn[lookupKey] ?? null);
 
     const frBlogMatch = pathname.match(/^\/blogue\/(.+)$/);
     const enBlogMatch = pathname.match(/^\/en\/blog\/(.+)$/);

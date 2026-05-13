@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { withTrailingSlash } from "@/lib/url-utils";
+import { withTrailingSlash, stripTrailingSlash } from "@/lib/url-utils";
 
 const frToEn: Record<string, string> = {
   "/": "/en",
@@ -105,12 +105,13 @@ const LangMeta = () => {
     // Resolve canonical FR/EN paths via the static map.
     let frPath: string | undefined;
     let enPath: string | undefined;
+    const lookupKey = stripTrailingSlash(pathname);
     if (lang === "en") {
       enPath = pathname;
-      frPath = enToFr[pathname];
+      frPath = enToFr[lookupKey];
     } else {
       frPath = pathname;
-      enPath = frToEn[pathname];
+      enPath = frToEn[lookupKey];
     }
 
     // If we don't have BOTH sides, skip rather than emit broken/redirecting
