@@ -155,7 +155,7 @@ const SellerPage = () =>
       pages={[
         { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
         { title: "Quand vendre sa maison à Gatineau", text: "Meilleur moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
-        { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-gatineau" },
+        { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
         { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
         { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}
