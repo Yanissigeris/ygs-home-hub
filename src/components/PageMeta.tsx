@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
-import { withTrailingSlash, stripTrailingSlash } from "@/lib/url-utils";
+import { withTrailingSlash } from "@/lib/url-utils";
 
 interface PageMetaProps {
   title: string;
@@ -12,71 +12,6 @@ interface PageMetaProps {
 // (og:site_name lives statically in index.html — single source of truth)
 const BASE_URL = "https://yanisgauthier.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og/og-default.jpg`;
-
-/** FR→EN path mapping — single source of truth, mirrors LanguageSwitch */
-const frToEn: Record<string, string> = {
-  "/": "/en",
-  "/proprietes": "/en/properties",
-  "/vendre-ma-maison-gatineau": "/en/sell",
-  "/evaluation-gratuite-gatineau": "/en/home-valuation",
-  "/plan-vendeur-gatineau": "/en/seller-plan",
-  "/guide-vendeur-gatineau": "/en/seller-guide",
-  "/quand-vendre-a-gatineau": "/en/when-to-sell",
-  "/vendre-un-plex-a-gatineau": "/en/sell-plex",
-  "/acheter-a-gatineau": "/en/buy",
-  "/consultation-acheteur": "/en/buyer-consultation",
-  "/guide-acheteur-gatineau": "/en/buyer-guide",
-  "/premier-achat-gatineau": "/en/first-time-buyer",
-  "/acheter-a-gatineau-depuis-ottawa": "/en/buy-from-ottawa",
-  "/relocalisation-ottawa-gatineau": "/en/relocation",
-  "/relocalisation-montreal-gatineau": "/en/montreal-relocation",
-  "/guide-relocalisation-gatineau": "/en/relocation-guide",
-  "/quartiers-a-considerer-a-gatineau": "/en/neighborhoods",
-  "/militaire-gatineau": "/en/military",
-  "/relocalisation-militaire-gatineau": "/en/military-relocation",
-  "/acheter-comme-militaire-gatineau": "/en/military-buyer",
-  "/vendre-lors-dune-mutation-gatineau": "/en/military-seller",
-  "/guide-militaire-gatineau": "/en/military-guide",
-  "/investir-plex-gatineau": "/en/plex",
-  "/analyse-plex-gatineau": "/en/plex-analysis",
-  "/rapport-marche-gatineau": "/en/market-report",
-  "/plateau-aylmer": "/en/plateau-aylmer",
-  "/hull": "/en/hull",
-  "/buckingham-masson-angers": "/en/buckingham",
-  "/gatineau": "/en/gatineau",
-  "/aylmer": "/en/aylmer",
-  "/plateau": "/en/plateau",
-  "/ressources": "/en/resources",
-  "/vivre-a-aylmer": "/en/living-aylmer",
-  "/vivre-a-hull": "/en/living-hull",
-  "/vivre-dans-le-plateau": "/en/living-plateau",
-  "/faq": "/en/faq",
-  "/temoignages": "/en/testimonials",
-  "/contact-yanis": "/en/contact",
-  "/merci": "/en/thank-you",
-  "/merci-evaluation": "/en/thank-you-valuation",
-  "/blogue": "/en/blog",
-  "/chelsea": "/en/chelsea",
-  "/cantley": "/en/cantley",
-  "/val-des-monts": "/en/val-des-monts",
-  "/masson-angers": "/en/masson-angers",
-  "/pontiac": "/en/pontiac",
-  "/cote-dazur-gatineau": "/en/cote-dazur",
-  "/limbour": "/en/limbour",
-  "/courtier-immobilier-outaouais": "/en/outaouais-real-estate-agent",
-  "/vendre-maison-hull": "/en/sell-house-hull",
-  "/vendre-maison-aylmer": "/en/sell-house-aylmer",
-  "/evaluation-maison-hull": "/en/home-valuation-hull",
-  "/evaluation-maison-aylmer": "/en/home-valuation-aylmer",
-  "/combien-coute-un-courtier-immobilier-au-quebec": "/en/how-much-does-a-realtor-cost-in-quebec",
-  "/comment-choisir-un-courtier-immobilier": "/en/how-to-choose-a-realtor",
-  "/verifier-un-courtier-immobilier-oaciq": "/en/oaciq-find-a-broker",
-  "/frais-de-courtage-immobilier-quebec": "/en/realtor-commission-quebec",
-  "/courtier-immobilier-ou-vendre-soi-meme": "/en/realtor-vs-selling-by-owner-quebec",
-  "/politique-de-confidentialite": "/en/privacy-policy",
-  "/conditions-utilisation": "/en/terms",
-};
-const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
 const ensureMetaTag = (selector: string, attributes: Record<string, string>) => {
   let element = document.head.querySelector<HTMLMetaElement>(selector);
@@ -98,22 +33,6 @@ const ensureCanonicalLink = () => {
     document.head.appendChild(element);
   }
   return element;
-};
-
-const ensureHreflangLink = (lang: string): HTMLLinkElement => {
-  const selector = `link[rel="alternate"][hreflang="${lang}"]`;
-  let element = document.head.querySelector<HTMLLinkElement>(selector);
-  if (!element) {
-    element = document.createElement("link");
-    element.setAttribute("rel", "alternate");
-    element.setAttribute("hreflang", lang);
-    document.head.appendChild(element);
-  }
-  return element;
-};
-
-const removeHreflangLinks = () => {
-  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
 };
 
 const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical, ogImage }, _ref) => {
@@ -170,32 +89,8 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     ensureMetaTag('meta[name="twitter:description"]', { name: "twitter:description", content: description });
     ensureMetaTag('meta[name="twitter:image"]', { name: "twitter:image", content: imageUrl });
 
-    /* ── Hreflang tags ── */
-    removeHreflangLinks();
-
-    /* Handle dynamic blog article routes */
-    const lookupKey = stripTrailingSlash(pathname);
-    let frPath: string | null = isEn ? (enToFr[lookupKey] ?? null) : pathname;
-    let enPath: string | null = isEn ? pathname : (frToEn[lookupKey] ?? null);
-
-    const frBlogMatch = pathname.match(/^\/blogue\/(.+)$/);
-    const enBlogMatch = pathname.match(/^\/en\/blog\/(.+)$/);
-    if (frBlogMatch) {
-      frPath = pathname;
-      enPath = null;
-    }
-    if (enBlogMatch) {
-      enPath = pathname;
-      frPath = null;
-    }
-
-    if (frPath && enPath) {
-      ensureHreflangLink("fr-CA").setAttribute("href", `${BASE_URL}${withTrailingSlash(frPath)}`);
-      ensureHreflangLink("en-CA").setAttribute("href", `${BASE_URL}${withTrailingSlash(enPath)}`);
-      ensureHreflangLink("x-default").setAttribute("href", `${BASE_URL}${withTrailingSlash(frPath)}`);
-    }
-
-    return () => { removeHreflangLinks(); };
+    /* ── Hreflang tags are owned by LangMeta (non-blog routes) and
+         BlogArticlePage (blog routes) to avoid duplicate annotations. ── */
   }, [canonical, description, ogImage, title, pathname]);
 
   return null;
