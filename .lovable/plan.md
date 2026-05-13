@@ -1,65 +1,83 @@
-# Phase 3 Batch 2 — Trailing Slash Normalization
+# Phase 3 Batch 3 — Trailing Slash Normalization (90 medium-density files)
 
-Apply the pilot pattern from commit b89f971 to the 12 remaining large files. Add a trailing slash to every internal route path string literal that qualifies, leaving 2 known-broken URLs in `SellerPage.tsx` untouched.
-
-## Target files (exactly 12)
-
-| File | Expected URL fixes |
-|---|---|
-| src/pages/SellerPage.tsx | 25 (excl. lines 157–158) |
-| src/pages/BuyerPage.tsx | 25 |
-| src/components/StickyMobileCTA.tsx | 20 (incl. HIDDEN_PATHS) |
-| src/pages/OutaouaisHubPage.tsx | 20 |
-| src/pages/NeighborhoodsOverviewPage.tsx | 19 |
-| src/pages/ResourcesPage.tsx | 19 |
-| src/pages/en/ResourcesPageEn.tsx | 19 |
-| src/pages/en/NeighborhoodsPageEn.tsx | 19 |
-| src/pages/en/OutaouaisHubPageEn.tsx | 17 |
-| src/pages/PropertiesPage.tsx | 16 |
-| src/pages/RelocationPage.tsx | 16 |
-| src/pages/PlexPage.tsx | 16 |
-
-Total: 231 URLs.
+Extend the proven pattern from b89f971 (pilot) and 2e07fd9 (batch 2) to all remaining medium-density files (6–15 qualifying URLs each), targeting ~837 URL fixes across ~90 files.
 
 ## Approach
 
-For each file:
+Reuse the same automated Node script from batch 2 (`/tmp/fix-slashes.mjs`), adapted to:
 
-1. Read the full file.
-2. Identify every quoted string that qualifies under the rule (starts with `/` + letter, no trailing `/`, no `#`/`?`, no file-extension suffix, not under `/api/`, `/og/`, `/assets/`, `/images/`, `/fonts/`, `/icons/`, `/logos/`, not `/`, not `/this-page-does-not-exist`).
-3. Append `/` before the closing quote, preserving the original quote style, indentation, and trailing commas.
-4. For `SellerPage.tsx`: explicitly skip the two strings on lines 157–158 (`/blogue/quand-vendre-maison-gatineau` and `/blogue/home-staging-gatineau`).
-5. Apply edits via `code--line_replace` (or `code--write` only when a wholesale rewrite is clearly cleaner — preferred path is targeted line replacements).
+1. **Discover targets**: walk `src/`, parse every `.ts`/`.tsx`/`.js`/`.jsx` file, count qualifying URL string literals using regex `(['"])(/[A-Za-z][^\s<>"']*)\1` + the `qualifies()` filter.
+2. **Filter**: keep only files with 6–15 qualifying URLs.
+3. **Subtract exclusions**: hard-skip the 26 files in the EXCLUSIONS list (previously fixed files + `NotFound.tsx` + infra/route files), plus any `.d.ts` and `.test.*` files.
+4. **Rewrite**: for each kept file, append `/` before the closing quote of every qualifying string, preserving original quote style, indentation, and trailing commas.
 
-## Scope guards
+## qualifies() rule (identical to pilot/batch 2)
 
-- No other files modified (App.tsx, AreasServicesSection.tsx, prerender/audit scripts, sitemap, robots.txt all untouched).
-- Quote style and formatting preserved exactly.
-- The 2 broken `SellerPage.tsx` entries remain bit-identical.
+A string literal qualifies iff:
+- starts with `/` + letter
+- no trailing `/`
+- no `#` or `?`
+- no file-extension suffix (`.css .js .json .png .jpg .jpeg .pdf .webp .svg .ico .xml .txt .html .woff .woff2 .mp4`)
+- not under `/api/ /og/ /assets/ /images/ /fonts/ /icons/ /logos/`
+- not `/` and not `/this-page-does-not-exist`
 
-## Verification (all must pass before committing)
+## Hard exclusions (must NOT appear in diff)
 
-1. `npx tsc --noEmit` — 0 errors.
-2. `npx vite build` — completes (includes `audit-hreflang.mjs`).
-3. `npm run lint` — no new errors vs. baseline of 18.
-4. Diff scope check:
-   - `git diff --name-only` lists exactly the 12 files.
-   - Total ≈ 221 insertions / 221 deletions (231 URL changes; some lines hold 2 URLs).
-   - `grep -n "/blogue/quand-vendre-maison-gatineau\"" src/pages/SellerPage.tsx` and `…/home-staging-gatineau"` still present without trailing slash.
+```
+src/data/navigation.ts
+src/data/navigation-en.ts
+src/data/breadcrumbs.ts
+src/data/blog-posts.ts
+src/App.tsx
+src/components/SiteHeader.tsx
+src/components/SiteFooter.tsx
+src/components/PageMeta.tsx
+src/components/LangMeta.tsx
+src/components/LanguageSwitch.tsx
+src/components/AreasServicesSection.tsx
+src/components/StickyMobileCTA.tsx
+src/lib/url-utils.ts
+src/pages/BlogArticlePage.tsx
+src/pages/SellerPage.tsx
+src/pages/BuyerPage.tsx
+src/pages/OutaouaisHubPage.tsx
+src/pages/NeighborhoodsOverviewPage.tsx
+src/pages/ResourcesPage.tsx
+src/pages/PropertiesPage.tsx
+src/pages/RelocationPage.tsx
+src/pages/PlexPage.tsx
+src/pages/NotFound.tsx                  ← contains startsWith("/en")
+src/pages/en/ResourcesPageEn.tsx
+src/pages/en/NeighborhoodsPageEn.tsx
+src/pages/en/OutaouaisHubPageEn.tsx
+```
 
-If any check fails: stop, report, do not commit.
+Plus all `*.d.ts` and `*.test.*` files.
 
-## Deliverables
+Out of script scope by directory: `scripts/**`, `public/**`, `e2e/**`, `supabase/**`, `tests/**` — script only walks `src/`.
 
-After commit, report per spec:
-1. ✅/❌ per verification step.
-2. Per-file line-count change.
-3. Confirmation `SellerPage.tsx` lines 157–158 unchanged.
-4. Commit pushed (auto by Lovable) with the supplied title/body.
-5. Deploy URL: https://ygs-home-hub.lovable.app
+## Scope guard
 
-## Technical notes
+Before edits, the script prints the list of selected files with URL counts. The plan is to commit only if the count lands between **85 and 95** files (spec allows this slack).
 
-- `StickyMobileCTA.tsx` `HIDDEN_PATHS` is already compared with both `p` and `p + "/"` in `pathname === p || pathname === p + "/"`, so adding trailing slashes there is safe — the OR keeps both forms matching.
-- `CTA_BY_INTENT` hrefs in the same file feed `<Link to={...}>` and benefit from the slash like the pilot.
-- All 12 files are presentation/data layers; no business logic touched.
+## Verification (all must pass)
+
+1. `npx tsc --noEmit` — 0 errors
+2. `npx vite build` — completes (audit-hreflang.mjs runs as part of build)
+3. `npm run lint` — no new errors vs. 18 baseline
+4. Diff scope:
+   - 85–95 files in `git diff --name-only`
+   - ≈ 789 insertions / 789 deletions
+   - `NotFound.tsx` NOT in diff
+   - No EXCLUSIONS file in diff (checked programmatically)
+
+If any check fails: stop, report, no commit.
+
+## Deliverables (after commit)
+
+1. ✅/❌ per verification step
+2. Full list of modified files with per-file URL fix counts
+3. Confirmation `NotFound.tsx` not in diff
+4. Confirmation no excluded file in diff
+5. Commit pushed (auto by Lovable)
+6. Deploy URL: https://ygs-home-hub.lovable.app
