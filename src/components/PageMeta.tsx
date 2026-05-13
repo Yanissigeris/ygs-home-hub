@@ -101,11 +101,10 @@ const ensureCanonicalLink = () => {
 };
 
 const ensureHreflangLink = (lang: string): HTMLLinkElement => {
-  const id = `hreflang-${lang}`;
-  let element = document.getElementById(id) as HTMLLinkElement | null;
+  const selector = `link[rel="alternate"][hreflang="${lang}"]`;
+  let element = document.head.querySelector<HTMLLinkElement>(selector);
   if (!element) {
     element = document.createElement("link");
-    element.id = id;
     element.setAttribute("rel", "alternate");
     element.setAttribute("hreflang", lang);
     document.head.appendChild(element);
