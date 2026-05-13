@@ -371,6 +371,14 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
 
   let html = shell;
 
+  // 0. Replace og:type if override provided (e.g. "article" for blog posts)
+  if (override.ogType) {
+    html = html.replace(
+      /<meta property="og:type" content="[^"]*"/,
+      `<meta property="og:type" content="${override.ogType}"`
+    );
+  }
+
   // 1. Replace <html lang="..."> attribute
   html = html.replace(/<html\s+lang="[^"]*"/i, `<html lang="${lang}"`);
 
@@ -543,6 +551,7 @@ async function main() {
     let frHtml = buildHtmlForRoute(shell, frRoute, frMeta, {
       enPath: `/en/blog/${post.slugEn}`,
       frPath: frRoute,
+      ogType: "article",
     });
     frHtml = injectBlogPostingJsonLd(frHtml, {
       url: frUrlAbs,
@@ -578,6 +587,7 @@ async function main() {
     let enHtml = buildHtmlForRoute(shell, enRoute, enMeta, {
       enPath: enRoute,
       frPath: frRoute,
+      ogType: "article",
     });
     enHtml = injectBlogPostingJsonLd(enHtml, {
       url: enUrlAbs,
