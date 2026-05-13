@@ -6,43 +6,43 @@ interface ServiceLink { label: string; href: string; detail: string; }
 interface AreasServicesSectionProps { lang?: "fr" | "en"; }
 
 const areasFr: AreaLink[] = [
-  { name: "Gatineau (centre)", href: "/gatineau", detail: "Centre-ville, services, plex" },
-  { name: "Aylmer / Plateau", href: "/plateau-aylmer", detail: "Lac, familles, bilingue, maisons récentes" },
-  { name: "Hull", href: "/hull", detail: "Urbain, culture, condos, projet Zibi" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Grands terrains, prix accessibles, nature" },
-  { name: "Chelsea", href: "/chelsea", detail: "Parc de la Gatineau, tranquillité, bilingue" },
-  { name: "Cantley", href: "/cantley", detail: "Semi-rural, familles, grands terrains" },
-  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, forêt, vie champêtre" },
-  { name: "Outaouais (hub régional)", href: "/courtier-immobilier-outaouais", detail: "Vue d'ensemble de la région" },
+  { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre-ville, services, plex" },
+  { name: "Aylmer / Plateau", href: "/plateau-aylmer/", detail: "Lac, familles, bilingue, maisons récentes" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos, projet Zibi" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Grands terrains, prix accessibles, nature" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Parc de la Gatineau, tranquillité, bilingue" },
+  { name: "Cantley", href: "/cantley/", detail: "Semi-rural, familles, grands terrains" },
+  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, forêt, vie champêtre" },
+  { name: "Outaouais (hub régional)", href: "/courtier-immobilier-outaouais/", detail: "Vue d'ensemble de la région" },
 ];
 
 const areasEn: AreaLink[] = [
-  { name: "Gatineau (centre)", href: "/en/gatineau", detail: "City core, services, plex" },
-  { name: "Aylmer / Plateau", href: "/en/plateau-aylmer", detail: "Lake, families, bilingual, newer homes" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, culture, condos, Zibi project" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Larger lots, affordable, nature" },
-  { name: "Chelsea", href: "/en/chelsea", detail: "Gatineau Park, serenity, bilingual" },
-  { name: "Cantley", href: "/en/cantley", detail: "Semi-rural, families, large lots" },
-  { name: "Val-des-Monts", href: "/en/val-des-monts", detail: "Lakes, forest, country living" },
-  { name: "Outaouais (regional hub)", href: "/en/outaouais-real-estate-agent", detail: "Full regional overview" },
+  { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "City core, services, plex" },
+  { name: "Aylmer / Plateau", href: "/en/plateau-aylmer/", detail: "Lake, families, bilingual, newer homes" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos, Zibi project" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Larger lots, affordable, nature" },
+  { name: "Chelsea", href: "/en/chelsea/", detail: "Gatineau Park, serenity, bilingual" },
+  { name: "Cantley", href: "/en/cantley/", detail: "Semi-rural, families, large lots" },
+  { name: "Val-des-Monts", href: "/en/val-des-monts/", detail: "Lakes, forest, country living" },
+  { name: "Outaouais (regional hub)", href: "/en/outaouais-real-estate-agent/", detail: "Full regional overview" },
 ];
 
 const servicesFr: ServiceLink[] = [
-  { label: "Vendre ma propriété", href: "/vendre-ma-maison-gatineau", detail: "Stratégie et accompagnement" },
-  { label: "Acheter une maison", href: "/acheter-a-gatineau", detail: "Recherche, négociation, conseils" },
-  { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", detail: "Valeur marchande, sans engagement" },
-  { label: "Premier achat", href: "/premier-achat-gatineau", detail: "Guide et accompagnement dédié" },
-  { label: "Investissement plex", href: "/investir-plex-gatineau", detail: "Analyse, rendement, stratégie" },
-  { label: "Relocalisation", href: "/relocalisation-ottawa-gatineau", detail: "Ottawa → Gatineau, Montréal, militaires" },
+  { label: "Vendre ma propriété", href: "/vendre-ma-maison-gatineau/", detail: "Stratégie et accompagnement" },
+  { label: "Acheter une maison", href: "/acheter-a-gatineau/", detail: "Recherche, négociation, conseils" },
+  { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", detail: "Valeur marchande, sans engagement" },
+  { label: "Premier achat", href: "/premier-achat-gatineau/", detail: "Guide et accompagnement dédié" },
+  { label: "Investissement plex", href: "/investir-plex-gatineau/", detail: "Analyse, rendement, stratégie" },
+  { label: "Relocalisation", href: "/relocalisation-ottawa-gatineau/", detail: "Ottawa → Gatineau, Montréal, militaires" },
 ];
 
 const servicesEn: ServiceLink[] = [
-  { label: "Sell your property", href: "/en/sell", detail: "Strategy and full support" },
-  { label: "Buy a home", href: "/en/buy", detail: "Search, negotiation, guidance" },
-  { label: "Free home valuation", href: "/en/home-valuation", detail: "Market value, no obligation" },
-  { label: "First-time buyer", href: "/en/first-time-buyer", detail: "Dedicated guidance and support" },
-  { label: "Plex investment", href: "/en/plex", detail: "Analysis, returns, strategy" },
-  { label: "Relocation", href: "/en/relocation", detail: "Ottawa → Gatineau, Montréal, military" },
+  { label: "Sell your property", href: "/en/sell/", detail: "Strategy and full support" },
+  { label: "Buy a home", href: "/en/buy/", detail: "Search, negotiation, guidance" },
+  { label: "Free home valuation", href: "/en/home-valuation/", detail: "Market value, no obligation" },
+  { label: "First-time buyer", href: "/en/first-time-buyer/", detail: "Dedicated guidance and support" },
+  { label: "Plex investment", href: "/en/plex/", detail: "Analysis, returns, strategy" },
+  { label: "Relocation", href: "/en/relocation/", detail: "Ottawa → Gatineau, Montréal, military" },
 ];
 
 const cfgFr = {
@@ -52,7 +52,7 @@ const cfgFr = {
   areasHeading: "Secteurs desservis",
   servicesHeading: "Services offerts",
   allNeighborhoods: "Voir tous les quartiers",
-  allNeighborhoodsHref: "/quartiers-a-considerer-a-gatineau",
+  allNeighborhoodsHref: "/quartiers-a-considerer-a-gatineau/",
 };
 
 const cfgEn = {
@@ -62,7 +62,7 @@ const cfgEn = {
   areasHeading: "Areas served",
   servicesHeading: "Services offered",
   allNeighborhoods: "All neighborhoods",
-  allNeighborhoodsHref: "/en/neighborhoods",
+  allNeighborhoodsHref: "/en/neighborhoods/",
 };
 
 /* Row component */
