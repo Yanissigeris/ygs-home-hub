@@ -231,11 +231,11 @@ const routeTree = React.createElement(
       {/* FR routes */}
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
-      <Route path="/proprietes-vedettes" element={<Navigate to="/proprietes" replace />} />
-      <Route path="/nouvelles-inscriptions" element={<Navigate to="/proprietes" replace />} />
-      <Route path="/nouvelles-inscriptions-gatineau" element={<Navigate to="/proprietes" replace />} />
-      <Route path="/vendu-recemment" element={<Navigate to="/proprietes" replace />} />
-      <Route path="/vendues-recemment-gatineau" element={<Navigate to="/proprietes" replace />} />
+      <Route path="/proprietes-vedettes" element={<Navigate to="/proprietes/" replace />} />
+      <Route path="/nouvelles-inscriptions" element={<Navigate to="/proprietes/" replace />} />
+      <Route path="/nouvelles-inscriptions-gatineau" element={<Navigate to="/proprietes/" replace />} />
+      <Route path="/vendu-recemment" element={<Navigate to="/proprietes/" replace />} />
+      <Route path="/vendues-recemment-gatineau" element={<Navigate to="/proprietes/" replace />} />
       <Route path="/vendre-ma-maison-gatineau" element={<SellerPage />} />
       <Route path="/evaluation-gratuite-gatineau" element={<ValuationPage />} />
       <Route path="/plan-vendeur-gatineau" element={<SellerPlanPage />} />
@@ -284,7 +284,7 @@ const routeTree = React.createElement(
       <Route path="/merci-evaluation" element={<ThankYouValuationPage />} />
       <Route path="/contact-yanis" element={<ContactPage />} />
       <Route path="/courtier-immobilier-outaouais" element={<OutaouaisHubPage />} />
-      <Route path="/outaouais" element={<Navigate to="/courtier-immobilier-outaouais" replace />} />
+      <Route path="/outaouais" element={<Navigate to="/courtier-immobilier-outaouais/" replace />} />
       <Route path="/vendre-maison-hull" element={<SellHullPage />} />
       <Route path="/vendre-maison-aylmer" element={<SellAylmerPage />} />
       <Route path="/evaluation-maison-hull" element={<ValuationHullPage />} />
@@ -347,7 +347,7 @@ const routeTree = React.createElement(
       <Route path="/en/cote-dazur" element={<CoteDazurPageEn />} />
       <Route path="/en/limbour" element={<LimbourPageEn />} />
       <Route path="/en/outaouais-real-estate-agent" element={<OutaouaisHubPageEn />} />
-      <Route path="/en/outaouais" element={<Navigate to="/en/outaouais-real-estate-agent" replace />} />
+      <Route path="/en/outaouais" element={<Navigate to="/en/outaouais-real-estate-agent/" replace />} />
       <Route path="/en/sell-house-hull" element={<SellHullPageEn />} />
       <Route path="/en/sell-house-aylmer" element={<SellAylmerPageEn />} />
       <Route path="/en/home-valuation-hull" element={<ValuationHullPageEn />} />

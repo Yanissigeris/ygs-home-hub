@@ -101,7 +101,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
       ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau. All rights reserved.`
       : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
 
-    const ctaHref = lang === "en" ? "/en/home-valuation" : "/evaluation-gratuite-gatineau";
+    const ctaHref = lang === "en" ? "/en/home-valuation/" : "/evaluation-gratuite-gatineau/";
     const ctaHeading = lang === "en" ? "Ready to take action?" : "Prêt à passer à l'action?";
     const ctaSubtext = lang === "en"
       ? "Get your free home valuation — no commitment."
@@ -334,10 +334,10 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
             <div className="mt-2 flex justify-center gap-4">
-              <Link to={lang === "en" ? "/en/privacy-policy" : "/politique-de-confidentialite"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
-              <Link to={lang === "en" ? "/en/terms" : "/conditions-utilisation"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
               </Link>
             </div>
