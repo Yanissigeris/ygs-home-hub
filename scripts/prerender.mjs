@@ -551,6 +551,7 @@ async function main() {
     let frHtml = buildHtmlForRoute(shell, frRoute, frMeta, {
       enPath: `/en/blog/${post.slugEn}`,
       frPath: frRoute,
+      ogType: "article",
     });
     frHtml = injectBlogPostingJsonLd(frHtml, {
       url: frUrlAbs,
