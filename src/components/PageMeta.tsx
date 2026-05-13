@@ -101,11 +101,10 @@ const ensureCanonicalLink = () => {
 };
 
 const ensureHreflangLink = (lang: string): HTMLLinkElement => {
-  const id = `hreflang-${lang}`;
-  let element = document.getElementById(id) as HTMLLinkElement | null;
+  const selector = `link[rel="alternate"][hreflang="${lang}"]`;
+  let element = document.head.querySelector<HTMLLinkElement>(selector);
   if (!element) {
     element = document.createElement("link");
-    element.id = id;
     element.setAttribute("rel", "alternate");
     element.setAttribute("hreflang", lang);
     document.head.appendChild(element);
@@ -114,10 +113,7 @@ const ensureHreflangLink = (lang: string): HTMLLinkElement => {
 };
 
 const removeHreflangLinks = () => {
-  ["hreflang-fr-CA", "hreflang-en-CA", "hreflang-x-default"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.remove();
-  });
+  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
 };
 
 const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical, ogImage }, _ref) => {
