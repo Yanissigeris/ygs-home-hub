@@ -27,14 +27,14 @@ const clientTypes = [
     title: "Propriétaires de plex",
     text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels — pas des suppositions.",
     cta: "Recevoir une analyse",
-    href: "/analyse-plex-gatineau",
+    href: "/analyse-plex-gatineau/",
   },
   {
     icon: TrendingUp,
     title: "Acheteurs investisseurs",
     text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat — les chiffres avant la décision.",
     cta: "Demander une analyse",
-    href: "/analyse-plex-gatineau",
+    href: "/analyse-plex-gatineau/",
   },
 ];
 
@@ -54,9 +54,9 @@ const steps = [
 
 
 const nextSteps = [
-  { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses, potentiel — une lecture objective de votre situation.", href: "/analyse-plex-gatineau", cta: "Recevoir mon analyse", highlight: true },
-  { title: "Évaluation de la valeur", text: "Connaître la valeur marchande actuelle de votre plex — gratuit et confidentiel.", href: "/evaluation-gratuite-gatineau", cta: "Obtenir ma valeur" },
-  { title: "Parler à Yanis", text: "Un appel pour discuter de votre situation d'investisseur — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses, potentiel — une lecture objective de votre situation.", href: "/analyse-plex-gatineau/", cta: "Recevoir mon analyse", highlight: true },
+  { title: "Évaluation de la valeur", text: "Connaître la valeur marchande actuelle de votre plex — gratuit et confidentiel.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur" },
+  { title: "Parler à Yanis", text: "Un appel pour discuter de votre situation d'investisseur — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const faq = [
@@ -76,13 +76,13 @@ const PlexPage = () => (
       hreflangEn="https://yanisgauthier.com/en/plex"
     />
     <PageMeta title="Investir dans un plex à Gatineau · Outaouais" description="Duplex, triplex et immeubles à revenus à Gatineau. Analyse de rendement et stratégie d'investissement par un courtier spécialisé." ogImage="https://yanisgauthier.com/og/og-plex.jpg" />
-    <ServiceJsonLd name="Analyse et investissement plex à Gatineau" description="Service d'analyse et d'accompagnement pour l'achat, la vente ou l'évaluation de plex et immeubles à revenus à Gatineau et en Outaouais." url="/investir-plex-gatineau" serviceType="Real Estate Investment Analysis" />
+    <ServiceJsonLd name="Analyse et investissement plex à Gatineau" description="Service d'analyse et d'accompagnement pour l'achat, la vente ou l'évaluation de plex et immeubles à revenus à Gatineau et en Outaouais." url="/investir-plex-gatineau/" serviceType="Real Estate Investment Analysis" />
     <HeroSection
       overline="Plex et investissement · Gatineau"
       title="Plex à Gatineau: acheter, vendre ou analyser"
       subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel — chaque facteur compte dans la décision."
-      primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" }}
-      secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/" }}
+      secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau/" }}
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
@@ -103,7 +103,7 @@ const PlexPage = () => (
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: SCHL — Rapport sur le marché locatif 2025 · Chambre immobilière de l'Outaouais (CIO).</p>
       <div className="mt-6">
-        <Button asChild><Link to="/contact-yanis">Analyser un plex avec moi →</Link></Button>
+        <Button asChild><Link to="/contact-yanis/">Analyser un plex avec moi →</Link></Button>
       </div>
     </ContentBlock>
 
@@ -116,7 +116,7 @@ const PlexPage = () => (
     <InlineCTA
       text="Vous possédez un plex? Commencez par connaître sa valeur actuelle."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <CardGrid
@@ -158,8 +158,8 @@ const PlexPage = () => (
       title="Recevez une lecture claire de votre situation"
       text="Vendre, acheter ou simplement comprendre votre position — je vous aide à y voir plus clair."
       buttons={[
-        { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau" },
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
@@ -170,10 +170,10 @@ const PlexPage = () => (
       overline="À lire aussi"
       title="Pages connexes"
       pages={[
-        { title: "Analyse plex gratuite", text: "Revenus, dépenses, rendement — obtenez une lecture claire.", href: "/analyse-plex-gatineau" },
-        { title: "Vendre un plex à Gatineau", text: "Stratégie et accompagnement pour maximiser la vente.", href: "/vendre-un-plex-a-gatineau" },
-        { title: "Quartiers pour investir", text: "Les secteurs les plus porteurs en Outaouais.", href: "/quartiers-a-considerer-a-gatineau" },
-        { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau" },
+        { title: "Analyse plex gratuite", text: "Revenus, dépenses, rendement — obtenez une lecture claire.", href: "/analyse-plex-gatineau/" },
+        { title: "Vendre un plex à Gatineau", text: "Stratégie et accompagnement pour maximiser la vente.", href: "/vendre-un-plex-a-gatineau/" },
+        { title: "Quartiers pour investir", text: "Les secteurs les plus porteurs en Outaouais.", href: "/quartiers-a-considerer-a-gatineau/" },
+        { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau/" },
       ]}
       background="alt"
     />

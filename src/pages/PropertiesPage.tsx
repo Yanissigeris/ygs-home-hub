@@ -21,12 +21,12 @@ const profileCards = [
 ];
 
 const sectors = [
-  { name: "Aylmer", href: "/aylmer", detail: "Lac, quartiers établis, qualité de vie" },
-  { name: "Chelsea", href: "/chelsea", detail: "Parc de la Gatineau, tranquillité, bilingue" },
-  { name: "Plateau", href: "/plateau", detail: "Familles, développements récents" },
-  { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Espace, nature, prix accessibles" },
-  { name: "Gatineau centre", href: "/gatineau", detail: "Résidentiel, services, banlieue" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Lac, quartiers établis, qualité de vie" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Parc de la Gatineau, tranquillité, bilingue" },
+  { name: "Plateau", href: "/plateau/", detail: "Familles, développements récents" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Espace, nature, prix accessibles" },
+  { name: "Gatineau centre", href: "/gatineau/", detail: "Résidentiel, services, banlieue" },
 ];
 
 const faq = [
@@ -38,17 +38,17 @@ const faq = [
 ];
 
 const related = [
-  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-  { title: "Rapport du marché", text: "Prix et tendances à Gatineau.", href: "/rapport-marche-gatineau" },
-  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
+  { title: "Rapport du marché", text: "Prix et tendances à Gatineau.", href: "/rapport-marche-gatineau/" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
 const CANONICAL = "https://yanisgauthier.com/proprietes";
 
 const PropertiesPage = () => {
   const { pathname } = useLocation();
-  const isAlias = pathname !== "/proprietes";
+  const isAlias = pathname !== "/proprietes/";
 
   return (
   <>
@@ -57,8 +57,8 @@ const PropertiesPage = () => {
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété en Outaouais"
       subtitle="Maisons, condos, plex et terrains — parcourez les propriétés disponibles dans tous les secteurs de Gatineau et de l'Outaouais."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       trustLine="Accompagnement stratégique."
       heroBgImage={heroImg}
     />
@@ -159,7 +159,7 @@ const PropertiesPage = () => {
     <InlineCTA
       text="Vous vendez? Découvrez combien vaut votre propriété — c'est gratuit."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <FAQSection items={faq} />
@@ -175,8 +175,8 @@ const PropertiesPage = () => {
       title="Vous cherchez une propriété à Gatineau?"
       text="Dites-moi vos critères — je vous envoie les meilleures options avant tout le monde."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

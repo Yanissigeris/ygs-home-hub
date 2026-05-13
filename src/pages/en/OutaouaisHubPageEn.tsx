@@ -18,18 +18,18 @@ import yanisPortraitLg from "@/assets/yanis-portrait-nobg-lg.webp";
 import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
 
 const zones = [
-  { name: "Gatineau", href: "/en/gatineau", detail: "Central, services, condos" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, culture, museums" },
-  { name: "Aylmer", href: "/en/aylmer", detail: "Lake, families, bilingual" },
-  { name: "Chelsea", href: "/en/chelsea", detail: "Nature, Gatineau Park" },
-  { name: "Cantley", href: "/en/cantley", detail: "Rural, large lots" },
+  { name: "Gatineau", href: "/en/gatineau/", detail: "Central, services, condos" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, culture, museums" },
+  { name: "Aylmer", href: "/en/aylmer/", detail: "Lake, families, bilingual" },
+  { name: "Chelsea", href: "/en/chelsea/", detail: "Nature, Gatineau Park" },
+  { name: "Cantley", href: "/en/cantley/", detail: "Rural, large lots" },
 ];
 
 const services = [
-  { label: "Home Valuation Gatineau", href: "/en/home-valuation", detail: "Free and no obligation" },
-  { label: "Sell My House Gatineau", href: "/en/sell", detail: "Strategy and guidance" },
-  { label: "Buy a Home in Gatineau", href: "/en/buy", detail: "Complete buyer guide" },
-  { label: "Contact / Consultation", href: "/en/contact", detail: "Let's talk about your project" },
+  { label: "Home Valuation Gatineau", href: "/en/home-valuation/", detail: "Free and no obligation" },
+  { label: "Sell My House Gatineau", href: "/en/sell/", detail: "Strategy and guidance" },
+  { label: "Buy a Home in Gatineau", href: "/en/buy/", detail: "Complete buyer guide" },
+  { label: "Contact / Consultation", href: "/en/contact/", detail: "Let's talk about your project" },
 ];
 
 const faqItems = [
@@ -54,7 +54,7 @@ const OutaouaisHubPageEn = () => (
     <ServiceJsonLd
       name="Real Estate Broker in Outaouais"
       description="Residential real estate brokerage services in Outaouais — selling, buying, valuation and plex investment in Gatineau, Hull, Aylmer, Chelsea and Cantley."
-      url="/en/outaouais-real-estate-agent"
+      url="/en/outaouais-real-estate-agent/"
       serviceType="Real Estate Brokerage"
     />
 
@@ -62,8 +62,8 @@ const OutaouaisHubPageEn = () => (
       overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
       title="Your Real Estate Agent in Outaouais"
       subtitle="Sell, buy or invest in the region — with local, bilingual guidance based on facts."
-      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
+      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="RE/MAX Hall of Fame"
       heroVideo="/hero-interior-720.mp4"
       heroVideoPoster="/hero-video-poster.webp"
@@ -161,9 +161,9 @@ const OutaouaisHubPageEn = () => (
       overline="Also worth reading"
       title="Explore areas and services"
       pages={[
-        { title: "All Neighbourhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
-        { title: "Market Report", text: "Gatineau real estate trends.", href: "/en/market-report" },
-        { title: "Blog", text: "Articles and local tips.", href: "/en/blog" },
+        { title: "All Neighbourhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
+        { title: "Market Report", text: "Gatineau real estate trends.", href: "/en/market-report/" },
+        { title: "Blog", text: "Articles and local tips.", href: "/en/blog/" },
       ]}
     />
 
@@ -173,8 +173,8 @@ const OutaouaisHubPageEn = () => (
       title="Start your real estate project in Outaouais"
       text="Valuation, buyer consultation or plex analysis — we start where you are."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Book a Consultation", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Book a Consultation", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and options — you decide."
     />

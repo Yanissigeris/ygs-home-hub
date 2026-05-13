@@ -20,21 +20,21 @@ import yanisPortraitLg from "@/assets/yanis-portrait-nobg-lg.webp";
 import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
 
 const zones = [
-  { name: "Gatineau (centre)", href: "/gatineau", detail: "Services, condos, plex" },
-  { name: "Hull", href: "/hull", detail: "Urbain, culture, musées" },
-  { name: "Aylmer", href: "/aylmer", detail: "Lac, familles, bilingue" },
-  { name: "Chelsea", href: "/chelsea", detail: "Nature, parc de la Gatineau" },
-  { name: "Cantley", href: "/cantley", detail: "Rural, grands terrains" },
-  { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Abordable, en croissance" },
-  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, tranquillité" },
-  { name: "Pontiac", href: "/pontiac", detail: "Campagne, grands espaces" },
+  { name: "Gatineau (centre)", href: "/gatineau/", detail: "Services, condos, plex" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, culture, musées" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Lac, familles, bilingue" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Nature, parc de la Gatineau" },
+  { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains" },
+  { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Abordable, en croissance" },
+  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, tranquillité" },
+  { name: "Pontiac", href: "/pontiac/", detail: "Campagne, grands espaces" },
 ];
 
 const services = [
-  { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau", detail: "Gratuite et sans engagement" },
-  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau", detail: "Stratégie et accompagnement" },
-  { label: "Acheter à Gatineau", href: "/acheter-a-gatineau", detail: "Guide acheteur complet" },
-  { label: "Consultation personnalisée", href: "/contact-yanis", detail: "Parlons de votre projet" },
+  { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau/", detail: "Gratuite et sans engagement" },
+  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau/", detail: "Stratégie et accompagnement" },
+  { label: "Acheter à Gatineau", href: "/acheter-a-gatineau/", detail: "Guide acheteur complet" },
+  { label: "Consultation personnalisée", href: "/contact-yanis/", detail: "Parlons de votre projet" },
 ];
 
 const faqItems = [
@@ -60,7 +60,7 @@ const OutaouaisHubPage = () => (
     <ServiceJsonLd
       name="Courtier immobilier en Outaouais"
       description="Services de courtage immobilier résidentiel en Outaouais — vente, achat, évaluation et investissement plex à Gatineau, Hull, Aylmer, Chelsea et Cantley."
-      url="/courtier-immobilier-outaouais"
+      url="/courtier-immobilier-outaouais/"
       serviceType="Real Estate Brokerage"
     />
 
@@ -68,8 +68,8 @@ const OutaouaisHubPage = () => (
       overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
       title="Votre courtier immobilier en Outaouais"
       subtitle="Vendre, acheter ou investir dans la région — avec un accompagnement local, bilingue et basé sur les faits."
-      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"
       heroVideo="/hero-interior-720.mp4"
       heroVideoPoster="/hero-video-poster.webp"
@@ -167,9 +167,9 @@ const OutaouaisHubPage = () => (
       overline="À explorer"
       title="Découvrez les secteurs et services"
       pages={[
-        { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-        { title: "Rapport de marché", text: "Tendances immobilières à Gatineau.", href: "/rapport-marche-gatineau" },
-        { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },
+        { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
+        { title: "Rapport de marché", text: "Tendances immobilières à Gatineau.", href: "/rapport-marche-gatineau/" },
+        { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue/" },
       ]}
     />
 
@@ -179,8 +179,8 @@ const OutaouaisHubPage = () => (
       title="Commençons votre projet immobilier en Outaouais"
       text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
       buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

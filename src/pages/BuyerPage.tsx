@@ -28,18 +28,18 @@ const buyerProfiles = [
 ];
 
 const sectors = [
-  { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, familles, quartiers établis" },
-  { name: "Plateau", href: "/plateau", detail: "Maisons neuves, familial, accès Ottawa" },
-  { name: "Hull", href: "/hull", detail: "Urbain, condos, plex, proximité Ottawa" },
-  { name: "Chelsea", href: "/chelsea", detail: "Village, nature, parc de la Gatineau" },
-  { name: "Cantley", href: "/cantley", detail: "Rural, grands terrains, collines" },
-  { name: "Buckingham", href: "/buckingham-masson-angers", detail: "Rivière, prix accessibles, nature" },
-  { name: "Masson-Angers", href: "/masson-angers", detail: "Neufs, familles, en croissance" },
-  { name: "Val-des-Monts", href: "/val-des-monts", detail: "Lacs, chalets, villégiature" },
-  { name: "Pontiac", href: "/pontiac", detail: "Rural, grands espaces, rivière" },
-  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau", detail: "Bungalows, résidentiel établi" },
-  { name: "Limbour", href: "/limbour", detail: "Familial moderne, parcs" },
-  { name: "Gatineau-centre", href: "/gatineau", detail: "Services, central, plex" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, familles, quartiers établis" },
+  { name: "Plateau", href: "/plateau/", detail: "Maisons neuves, familial, accès Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Village, nature, parc de la Gatineau" },
+  { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains, collines" },
+  { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Rivière, prix accessibles, nature" },
+  { name: "Masson-Angers", href: "/masson-angers/", detail: "Neufs, familles, en croissance" },
+  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets, villégiature" },
+  { name: "Pontiac", href: "/pontiac/", detail: "Rural, grands espaces, rivière" },
+  { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Bungalows, résidentiel établi" },
+  { name: "Limbour", href: "/limbour/", detail: "Familial moderne, parcs" },
+  { name: "Gatineau-centre", href: "/gatineau/", detail: "Services, central, plex" },
 ];
 
 const steps = [
@@ -50,9 +50,9 @@ const steps = [
 
 
 const nextSteps = [
-  { title: "Consultation gratuite", text: "On discute de vos critères, votre budget et vos questions — pour acheter en confiance.", href: "/consultation-acheteur", cta: "Réserver ma consultation", highlight: true },
-  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau — prix, style de vie, avantages et inconvénients.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
-  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
+  { title: "Consultation gratuite", text: "On discute de vos critères, votre budget et vos questions — pour acheter en confiance.", href: "/consultation-acheteur/", cta: "Réserver ma consultation", highlight: true },
+  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau — prix, style de vie, avantages et inconvénients.", href: "/quartiers-a-considerer-a-gatineau/", cta: "Voir les quartiers" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire.", href: "/guide-acheteur-gatineau/", cta: "Lire le guide" },
 ];
 
 const faq = [
@@ -72,13 +72,13 @@ const BuyerPage = () => (
       hreflangEn="https://yanisgauthier.com/en/buy"
     />
     <PageMeta title="Acheter une propriété à Gatineau · Outaouais" description="Trouvez et achetez votre propriété à Gatineau — Aylmer, Hull, Plateau ou Buckingham. Consultation personnalisée et accompagnement à votre rythme." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <ServiceJsonLd name="Accompagnement acheteur à Gatineau" description="Service d'accompagnement pour l'achat immobilier à Gatineau et en Outaouais — recherche, visites, analyse de quartier, offre d'achat et inspection." url="/acheter-a-gatineau" serviceType="Real Estate Buyer Agent Service" />
+    <ServiceJsonLd name="Accompagnement acheteur à Gatineau" description="Service d'accompagnement pour l'achat immobilier à Gatineau et en Outaouais — recherche, visites, analyse de quartier, offre d'achat et inspection." url="/acheter-a-gatineau/" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
       subtitle="Premier acheteur, famille qui grandit ou relocalisé d'Ottawa — je vous guide à chaque étape pour acheter sans erreur."
-      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau" }}
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau/" }}
       trustLine="Stratégie claire."
       heroBgImage={heroImg}
     />
@@ -115,7 +115,7 @@ const BuyerPage = () => (
     <InlineCTA
       text="Vous êtes aussi vendeur? Connaître la valeur de votre propriété peut clarifier votre budget d'achat."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <SectorLinks sectors={sectors} />
@@ -151,8 +151,8 @@ const BuyerPage = () => (
       title="Parlons de votre projet d'achat"
       text="Budget, secteurs, stratégie — on clarifie tout ça avant de commencer les visites."
       buttons={[
-        { label: "Réserver ma consultation", href: "/consultation-acheteur" },
-        { label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau", variant: "outline" },
+        { label: "Réserver ma consultation", href: "/consultation-acheteur/" },
+        { label: "Explorer les quartiers", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
@@ -163,10 +163,10 @@ const BuyerPage = () => (
       overline="À lire aussi"
       title="Pages connexes"
       pages={[
-        { title: "Guide acheteur complet", text: "Tout le processus d'achat au Québec, étape par étape.", href: "/guide-acheteur-gatineau" },
-        { title: "Premier achat à Gatineau", text: "Budget, mise de fonds et conseils pour les premiers acheteurs.", href: "/premier-achat-gatineau" },
-        { title: "Acheter depuis Ottawa", text: "Ce qu'il faut savoir pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa" },
-        { title: "Quartiers à considérer", text: "Aylmer, Hull, Plateau — trouvez le secteur qui vous convient.", href: "/quartiers-a-considerer-a-gatineau" },
+        { title: "Guide acheteur complet", text: "Tout le processus d'achat au Québec, étape par étape.", href: "/guide-acheteur-gatineau/" },
+        { title: "Premier achat à Gatineau", text: "Budget, mise de fonds et conseils pour les premiers acheteurs.", href: "/premier-achat-gatineau/" },
+        { title: "Acheter depuis Ottawa", text: "Ce qu'il faut savoir pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+        { title: "Quartiers à considérer", text: "Aylmer, Hull, Plateau — trouvez le secteur qui vous convient.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}
       background="alt"
     />

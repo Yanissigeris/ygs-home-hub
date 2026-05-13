@@ -5,28 +5,28 @@ import { trackCTAClick } from "@/lib/analytics";
 import { getAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 
 const HIDDEN_PATHS = [
-  "/contact-yanis", "/en/contact",
-  "/merci", "/en/thank-you",
-  "/merci-evaluation", "/en/thank-you-valuation",
-  "/evaluation-gratuite-gatineau", "/en/home-valuation",
-  "/evaluation-aylmer", "/en/home-valuation-aylmer",
-  "/evaluation-hull", "/en/home-valuation-hull",
+  "/contact-yanis/", "/en/contact/",
+  "/merci/", "/en/thank-you/",
+  "/merci-evaluation/", "/en/thank-you-valuation/",
+  "/evaluation-gratuite-gatineau/", "/en/home-valuation/",
+  "/evaluation-aylmer/", "/en/home-valuation-aylmer/",
+  "/evaluation-hull/", "/en/home-valuation-hull/",
 ];
 
 type CtaConfig = { label: string; href: string };
 
 const CTA_BY_INTENT: Record<"fr" | "en", Record<AvatarIntent | "default", CtaConfig>> = {
   fr: {
-    investir: { label: "Analyser mon projet →", href: "/investir-plex-gatineau" },
-    vendre: { label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" },
-    acheter: { label: "Voir les propriétés →", href: "/proprietes" },
-    default: { label: "Évaluation Gratuite →", href: "/evaluation-gratuite-gatineau" },
+    investir: { label: "Analyser mon projet →", href: "/investir-plex-gatineau/" },
+    vendre: { label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" },
+    acheter: { label: "Voir les propriétés →", href: "/proprietes/" },
+    default: { label: "Évaluation Gratuite →", href: "/evaluation-gratuite-gatineau/" },
   },
   en: {
-    investir: { label: "Analyze my project →", href: "/en/plex" },
-    vendre: { label: "Get my value →", href: "/en/home-valuation" },
-    acheter: { label: "View properties →", href: "/en/properties" },
-    default: { label: "Free Valuation →", href: "/en/home-valuation" },
+    investir: { label: "Analyze my project →", href: "/en/plex/" },
+    vendre: { label: "Get my value →", href: "/en/home-valuation/" },
+    acheter: { label: "View properties →", href: "/en/properties/" },
+    default: { label: "Free Valuation →", href: "/en/home-valuation/" },
   },
 };
 
