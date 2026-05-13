@@ -7,7 +7,7 @@ const LimbourPageEn = () => (
     seoTitle="Limbour Gatineau — Neighborhood Guide"
     metaDesc="Buy, sell or live in Limbour, Gatineau. Modern family neighborhood with parks, schools and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
-    jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour" }}
+    jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour/" }}
     hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, 20 minutes from downtown Ottawa.", image: heroImg }}
     trustSpecialty="Limbour specialist"
     lifestyle={{ image: heroImg, imageAlt: "Limbour neighborhood, Gatineau", title: "Why families love Limbour", subtitle: "Limbour attracts young families and second-time buyers looking for newer homes, open lots, and a growing neighborhood. The Ferme Limbour sub-sector is especially sought after for higher-end properties. The area remains accessible for buyers who want to avoid the major renovations typical of older neighborhoods." }}
@@ -31,7 +31,7 @@ const LimbourPageEn = () => (
       { icon: MapPin, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa wanting modern construction without paying Ottawa prices. Quick commute via Highway 50." },
       { icon: MapPin, title: "Commuters", text: "Quick access to Highway 50, 20 minutes from downtown Ottawa via the Macdonald-Cartier Bridge." },
     ]}
-    inlineCta={{ text: "Own a property in Limbour? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation" }}
+    inlineCta={{ text: "Own a property in Limbour? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Limbour", items: [
       { q: "Is Limbour a new neighborhood?", a: "Yes, mostly. Most developments date from the 2000s-2020s, with a few older properties in certain pockets. The Ferme Limbour sub-sector is especially sought after for its quality construction." },
       { q: "What is the price of a home in Limbour in 2026?", a: "Based on active Centris listings as of May 2026, single-family and semi-detached homes typically sell between $475,000 and $800,000 depending on size, year of construction, and sub-sector. The higher-end properties are in Ferme Limbour." },
@@ -42,15 +42,15 @@ const LimbourPageEn = () => (
       { q: "How long does a sale take in Limbour?", a: "Well-prepared recent homes typically go under contract in 25-40 days in the current market. The average time on market for a single-family home in the Gatineau metropolitan area was 32 days in Q4 2025 according to the Outaouais Real Estate Board." },
     ]}}
     sectors={{ list: [
-      { name: "Côte-d'Azur", href: "/en/cote-dazur", detail: "Established mature neighborhood, renovation-ready bungalows — direct neighbor of Limbour" },
-      { name: "Gatineau (centre)", href: "/en/gatineau", detail: "Heart of the Gatineau sector — services, condos and residential" },
-      { name: "Masson-Angers", href: "/en/masson-angers", detail: "Developing area with new builds at accessible prices" },
+      { name: "Côte-d'Azur", href: "/en/cote-dazur/", detail: "Established mature neighborhood, renovation-ready bungalows — direct neighbor of Limbour" },
+      { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "Heart of the Gatineau sector — services, condos and residential" },
+      { name: "Masson-Angers", href: "/en/masson-angers/", detail: "Developing area with new builds at accessible prices" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer" },
-      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation" },
-      { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide" },
-      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods" },
+      { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },
+      { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation/" },
+      { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide/" },
+      { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Limbour", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     brokerPerspective={{
@@ -58,7 +58,7 @@ const LimbourPageEn = () => (
       dataPoint: "On the sales I close in Limbour, well-prepared homes priced right typically go under contract in 30-40 days. When the asking price is aligned with the sub-sector (Ferme Limbour vs. the rest of Limbour), the timeline shortens.",
       takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. An equivalent home in Ferme Limbour vs. another street in Limbour can mean a $30,000-$50,000 difference. List at the right price for your specific zone, not an average for the whole neighborhood."
     }}
-    cta={{ title: "Buying or selling in Limbour?", text: "I know the neighborhood — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
+    cta={{ title: "Buying or selling in Limbour?", text: "I know the neighborhood — let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
   />
 );
 

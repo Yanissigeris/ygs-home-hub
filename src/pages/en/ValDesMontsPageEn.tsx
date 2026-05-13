@@ -7,7 +7,7 @@ const ValDesMontsPageEn = () => (
     seoTitle="Val-des-Monts QC — Neighborhood Guide"
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness — 30 minutes from Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
-    jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts" }}
+    jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts/" }}
     hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, wooded lots and tranquility — the Outaouais cottage country municipality. Over 200 lakes, 30-40 minutes from Gatineau and 45 minutes from Ottawa.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. The major lakes — McGregor, Saint-Pierre and Achigan — drive the demand. It's one of the rare Outaouais areas where you can live waterfront under 30 minutes from downtown Ottawa." }}
@@ -31,7 +31,7 @@ const ValDesMontsPageEn = () => (
       { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape, only 27 minutes from the Macdonald-Cartier Bridge." },
       { icon: Mountain, title: "Remote workers & retirees", text: "Exceptional living environment with high-speed Internet available in most areas. 27 minutes from Ottawa for occasional in-person meetings." },
     ]}
-    inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation" }}
+    inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{
       title: "Questions about Val-des-Monts",
       items: [
@@ -45,16 +45,16 @@ const ValDesMontsPageEn = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Cantley", href: "/en/cantley", detail: "Rural, hills, large lots — southern neighbor of Val-des-Monts" },
-      { name: "Chelsea", href: "/en/chelsea", detail: "Village, Gatineau Park — high-end alternative on the west side" },
-      { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, river, nature — with high school services" },
+      { name: "Cantley", href: "/en/cantley/", detail: "Rural, hills, large lots — southern neighbor of Val-des-Monts" },
+      { name: "Chelsea", href: "/en/chelsea/", detail: "Village, Gatineau Park — high-end alternative on the west side" },
+      { name: "Buckingham", href: "/en/buckingham/", detail: "Affordable, river, nature — with high school services" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "Sell my cottage", text: "Selling strategy for recreational properties.", href: "/en/sell" },
-      { title: "Home valuation", text: "What's your cottage or land worth?", href: "/en/home-valuation" },
-      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide" },
-      { title: "First-Time Buyer", text: "Budget, down payment and tips.", href: "/en/first-time-buyer" },
-      { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
+      { title: "Sell my cottage", text: "Selling strategy for recreational properties.", href: "/en/sell/" },
+      { title: "Home valuation", text: "What's your cottage or land worth?", href: "/en/home-valuation/" },
+      { title: "Buyer's Guide", text: "Home buying process in Quebec.", href: "/en/buyer-guide/" },
+      { title: "First-Time Buyer", text: "Budget, down payment and tips.", href: "/en/first-time-buyer/" },
+      { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide — buying in Val-des-Monts", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide — get it by email" }}
     brokerPerspective={{
@@ -62,7 +62,7 @@ const ValDesMontsPageEn = () => (
       dataPoint: "On the sales I close in Val-des-Monts, well-prepared waterfront properties on McGregor and Saint-Pierre go under contract in 30-60 days during peak season. Rustic cottages or properties without direct lake access often take 60-120 days, and sellers need to be more patient or adjust their pricing.",
       takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter enormously. List in spring ideally, prepare your property for photos the summer before if possible, and be realistic on price based on lake type and access. A property on McGregor doesn't compare to one without lake access — get properly evaluated before listing."
     }}
-    cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area — let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
+    cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area — let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options — you decide." }}
   />
 );
 

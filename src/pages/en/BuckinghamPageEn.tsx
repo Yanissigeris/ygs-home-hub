@@ -63,10 +63,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley" },
-  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau" },
-  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
-  { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
+  { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley/" },
+  { title: "Gatineau centre", text: "Services, residential, central.", href: "/en/gatineau/" },
+  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy/" },
+  { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
 ];
 
 const BuckinghamPageEn = () => (
@@ -79,12 +79,12 @@ const BuckinghamPageEn = () => (
       description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices."
       lat={45.5860}
       lng={-75.4190}
-      url="/en/buckingham"
+      url="/en/buckingham/"
     />
     <ServiceJsonLd
       name="Real Estate Broker in Buckingham"
       description="Real estate brokerage services in Buckingham and Masson-Angers, Gatineau."
-      url="/en/buckingham"
+      url="/en/buckingham/"
       serviceType="Real Estate Brokerage"
       areaServed={["Buckingham", "Masson-Angers", "Gatineau"]}
     />
@@ -94,7 +94,7 @@ const BuckinghamPageEn = () => (
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
       title="Real estate broker in Buckingham — the space Gatineau no longer offers"
       subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. This is where lots are large, homes have space, and the pace of life is different. For buyers who've done the math and truly want space, it's often the Outaouais market's revelation."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=buckingham" }}
       heroBgImage={heroImg}
     />
@@ -169,7 +169,7 @@ const BuckinghamPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
@@ -217,8 +217,8 @@ const BuckinghamPageEn = () => (
       title="Buying or selling in Buckingham?"
       text="I know the area — let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
-        { label: "Book a consultation →", href: "/en/buyer-consultation", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

@@ -67,10 +67,10 @@ const atouts = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley" },
-  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer" },
-  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation" },
-  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy" },
+  { title: "Cantley", text: "Rural, large lots, hills.", href: "/en/cantley/" },
+  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer/" },
+  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation/" },
+  { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy/" },
 ];
 
 const ChelseaPageEn = () => (
@@ -84,12 +84,12 @@ const ChelseaPageEn = () => (
       description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker."
       lat={45.5200}
       lng={-75.7870}
-      url="/en/chelsea"
+      url="/en/chelsea/"
     />
     <ServiceJsonLd
       name="Real Estate Broker in Chelsea"
       description="Real estate brokerage services in Chelsea, Quebec — homes, land, character properties."
-      url="/en/chelsea"
+      url="/en/chelsea/"
       serviceType="Real Estate Brokerage"
       areaServed={["Chelsea", "Quebec"]}
     />
@@ -99,7 +99,7 @@ const ChelseaPageEn = () => (
       overline="CHELSEA · QUÉBEC"
       title="Real estate broker in Chelsea — living between nature and Ottawa"
       subtitle="Chelsea is a distinct municipality north of Gatineau, about 10 kilometres from Ottawa. Sixty percent of its territory is occupied by Gatineau Park. It's one of the rare places in North America where you can live in a national park while being 15 minutes from a capital's downtown."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
     />
@@ -175,7 +175,7 @@ const ChelseaPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
@@ -223,8 +223,8 @@ const ChelseaPageEn = () => (
       title="Buying or selling in Chelsea?"
       text="I know Chelsea inside out — let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation" },
-        { label: "Book a consultation →", href: "/en/buyer-consultation", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

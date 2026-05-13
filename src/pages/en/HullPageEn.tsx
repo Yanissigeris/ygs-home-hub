@@ -68,10 +68,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex" },
-  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer" },
-  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation" },
-  { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau" },
+  { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex/" },
+  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer/" },
+  { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation/" },
+  { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau/" },
 ];
 
 const HullPageEn = () => (
@@ -85,12 +85,12 @@ const HullPageEn = () => (
       description="Buy or sell in Hull, Gatineau. Condos, plexes, homes near Ottawa. Zibi project, Île de Hull, Vieux-Hull. Local broker."
       lat={45.4283}
       lng={-75.7140}
-      url="/en/hull"
+      url="/en/hull/"
     />
     <ServiceJsonLd
       name="Real Estate Broker in Hull"
       description="Real estate brokerage services in Hull, Gatineau — condos, plexes, homes."
-      url="/en/hull"
+      url="/en/hull/"
       serviceType="Real Estate Brokerage"
       areaServed={["Hull", "Gatineau"]}
     />
@@ -100,7 +100,7 @@ const HullPageEn = () => (
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Real estate broker in Hull — at the heart of urban Outaouais"
       subtitle="Hull is Gatineau's most urban area. Directly facing Ottawa, undergoing transformation with the Zibi project, Hull attracts professionals, bilingual families and investors. This is where the city moves the most."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-hull" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-hull/" }}
       secondaryCta={{ label: "See Hull properties →", href: "/en/properties?area=hull" }}
       heroBgImage={heroImg}
     />
@@ -155,7 +155,7 @@ const HullPageEn = () => (
       </div>
       <div className="mt-6">
         <Button size="lg" asChild>
-          <Link to="/en/plex">Analyze a plex with me →</Link>
+          <Link to="/en/plex/">Analyze a plex with me →</Link>
         </Button>
       </div>
     </ContentBlock>
@@ -177,7 +177,7 @@ const HullPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation-hull">Get the real numbers →</Link>
+            <Link to="/en/home-valuation-hull/">Get the real numbers →</Link>
           </Button>
         </div>
       </div>
@@ -225,8 +225,8 @@ const HullPageEn = () => (
       title="Your Hull project — where to start?"
       text="Buying, selling, rental investment — Hull is an area I know in depth. Let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation-hull" },
-        { label: "Analyze a plex →", href: "/en/plex", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation-hull/" },
+        { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

@@ -38,13 +38,13 @@ const sellerReasons = [
 const NeighborhoodPage = () => (
    <>
     <PageMeta title="Plateau et Aylmer — Guide de quartier" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, lac Deschênes, nature, écoles et propriétés." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Courtier immobilier spécialisé au Plateau et Aylmer, Gatineau. Quartiers familiaux, nature, écoles et propriétés." lat={45.4500} lng={-75.8100} url="/plateau-aylmer" />
+    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Courtier immobilier spécialisé au Plateau et Aylmer, Gatineau. Quartiers familiaux, nature, écoles et propriétés." lat={45.4500} lng={-75.8100} url="/plateau-aylmer/" />
     <HeroSection
       overline="Guide de quartier · Gatineau"
       title="Vivre dans le Plateau / Aylmer"
       subtitle="Vie de famille, commodités, accès à Ottawa et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
-      primaryCta={{ label: "Me faire guider", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Me faire guider", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau/" }}
       heroBgImage={riverImg}
     />
 
@@ -71,7 +71,7 @@ const NeighborhoodPage = () => (
         ))}
       </div>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/evaluation-gratuite-gatineau">Voir combien vaut ma propriété</Link>
+        <Link to="/evaluation-gratuite-gatineau/">Voir combien vaut ma propriété</Link>
       </Button>
     </ImageTextSplit>
 
@@ -79,8 +79,8 @@ const NeighborhoodPage = () => (
       overline="Autres secteurs"
       title="Explorer d'autres quartiers"
       sectors={[
-        { name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-        { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" },
+        { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
+        { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
       ]}
     />
 
@@ -96,8 +96,8 @@ const NeighborhoodPage = () => (
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
       text="Je peux vous aider à y voir clair — que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

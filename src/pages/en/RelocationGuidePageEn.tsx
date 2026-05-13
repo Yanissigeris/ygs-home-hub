@@ -23,9 +23,9 @@ const topics = [
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer", detail: "Family-friendly, newer homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, close to downtown, condos and plex" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham", detail: "Land, affordable prices, nature" },
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family-friendly, newer homes, Ottawa access" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, close to downtown, condos and plex" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Land, affordable prices, nature" },
 ];
 
 const faq = [
@@ -36,17 +36,17 @@ const faq = [
 ];
 
 const related = [
-  { title: "Relocation from Ottawa", text: "More space and affordable prices on the other side of the river.", href: "/en/buy-from-ottawa" },
-  { title: "Relocation from Montréal", text: "Quality of life and space for Montréal families.", href: "/en/montreal-relocation" },
-  { title: "Military Relocation", text: "Posting to the NCR — service adapted to military members.", href: "/en/military-relocation" },
-  { title: "All Neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods" },
+  { title: "Relocation from Ottawa", text: "More space and affordable prices on the other side of the river.", href: "/en/buy-from-ottawa/" },
+  { title: "Relocation from Montréal", text: "Quality of life and space for Montréal families.", href: "/en/montreal-relocation/" },
+  { title: "Military Relocation", text: "Posting to the NCR — service adapted to military members.", href: "/en/military-relocation/" },
+  { title: "All Neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods/" },
 ];
 
 const RelocationGuidePageEn = () => (
   <>
     <PageMeta title="Relocation Guide — Moving to Gatineau" description="Complete relocation guide for moving to Gatineau. Neighborhoods, prices, process and schools." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Relocation Guide to Gatineau" description="Complete guide to settling in Gatineau from Ottawa. Neighbourhoods, schools, services and Quebec process explained." url="/en/relocation-guide" serviceType="Real Estate Relocation Guide" />
-    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <ServiceJsonLd name="Relocation Guide to Gatineau" description="Complete guide to settling in Gatineau from Ottawa. Neighbourhoods, schools, services and Quebec process explained." url="/en/relocation-guide/" serviceType="Real Estate Relocation Guide" />
+    <HeroSection overline="Relocation Guide · Gatineau" title="Complete guide to relocating to Gatineau" subtitle="Everything you need to know to succeed in your relocation — neighborhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact/" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
@@ -63,13 +63,13 @@ const RelocationGuidePageEn = () => (
 
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
 
-    <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Book a call →" href="/en/contact" />
+    <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Book a call →" href="/en/contact/" />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Also worth reading" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Let's plan your move" text="Book a free call — let's clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Let's plan your move" text="Book a free call — let's clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default RelocationGuidePageEn;

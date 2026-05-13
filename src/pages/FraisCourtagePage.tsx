@@ -65,7 +65,7 @@ const FraisCourtagePage = () => (
     <InlineCTA
       text="Première étape : connaître la valeur réelle de votre propriété — c'est gratuit."
       buttonLabel="Évaluation gratuite →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -89,10 +89,10 @@ const FraisCourtagePage = () => (
       overline="Explorer"
       title="Pages connexes"
       pages={[
-        { title: "Combien coûte un courtier?", text: "Guide complet sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
-        { title: "Courtier ou vendre seul?", text: "Les avantages et les risques comparés.", href: "/courtier-immobilier-ou-vendre-soi-meme" },
-        { title: "Comment choisir un courtier?", text: "Les critères essentiels.", href: "/comment-choisir-un-courtier-immobilier" },
-        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+        { title: "Combien coûte un courtier?", text: "Guide complet sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
+        { title: "Courtier ou vendre seul?", text: "Les avantages et les risques comparés.", href: "/courtier-immobilier-ou-vendre-soi-meme/" },
+        { title: "Comment choisir un courtier?", text: "Les critères essentiels.", href: "/comment-choisir-un-courtier-immobilier/" },
+        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"
     />
@@ -102,8 +102,8 @@ const FraisCourtagePage = () => (
       title="Envie d'y voir clair?"
       text="Je vous explique tout — frais, services, stratégie — avant même de commencer. Transparent et sans engagement."
       buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Clarté et transparence, dès le premier appel."
     />

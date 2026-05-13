@@ -37,8 +37,8 @@ const faq = [
 ];
 
 const afterSteps = [
-  { title: "Sell in Aylmer", text: "Go further — get a complete plan to sell your Aylmer property.", href: "/en/sell-house-aylmer", cta: "See the process", highlight: true },
-  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" },
+  { title: "Sell in Aylmer", text: "Go further — get a complete plan to sell your Aylmer property.", href: "/en/sell-house-aylmer/", cta: "See the process", highlight: true },
+  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const anim = {
@@ -112,10 +112,10 @@ const ValuationAylmerPageEn = () => {
         overline="Explore"
         title="Related pages"
         pages={[
-          { title: "Sell in Aylmer", text: "Process and strategy for selling in Aylmer.", href: "/en/sell-house-aylmer" },
-          { title: "Aylmer — neighborhood profile", text: "Market, profile and trends.", href: "/en/aylmer" },
-          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation" },
-          { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent" },
+          { title: "Sell in Aylmer", text: "Process and strategy for selling in Aylmer.", href: "/en/sell-house-aylmer/" },
+          { title: "Aylmer — neighborhood profile", text: "Market, profile and trends.", href: "/en/aylmer/" },
+          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation/" },
+          { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
         ]}
         background="alt"
       />

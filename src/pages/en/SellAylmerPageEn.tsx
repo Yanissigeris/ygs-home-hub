@@ -20,8 +20,8 @@ const steps = [
 ];
 
 const nextSteps = [
-  { title: "Free valuation in Aylmer", text: "Know the value of your Aylmer property — free and no commitment.", href: "/en/home-valuation-aylmer", cta: "Get my valuation", highlight: true },
-  { title: "Talk to Yanis", text: "A call to clarify your selling options in Aylmer.", href: "/en/contact", cta: "Book a call" },
+  { title: "Free valuation in Aylmer", text: "Know the value of your Aylmer property — free and no commitment.", href: "/en/home-valuation-aylmer/", cta: "Get my valuation", highlight: true },
+  { title: "Talk to Yanis", text: "A call to clarify your selling options in Aylmer.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const faq = [
@@ -46,7 +46,7 @@ const SellAylmerPageEn = () => (
     <ServiceJsonLd
       name="Real Estate Selling Service in Aylmer"
       description="Real estate selling service in Aylmer — valuation, pricing strategy, marketing and full support."
-      url="/en/sell-house-aylmer"
+      url="/en/sell-house-aylmer/"
       serviceType="Real Estate Listing Service"
     />
 
@@ -54,8 +54,8 @@ const SellAylmerPageEn = () => (
       overline="Sell in Aylmer · Outaouais"
       title="Sell your property in Aylmer with a local broker"
       subtitle="Aylmer is a sought-after area — families, Lake Deschênes, established neighborhoods. Your selling strategy should reflect the real value of your area."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation-aylmer" }}
-      secondaryCta={{ label: "See the process", href: "/en/seller-plan" }}
+      primaryCta={{ label: "Free valuation", href: "/en/home-valuation-aylmer/" }}
+      secondaryCta={{ label: "See the process", href: "/en/seller-plan/" }}
       trustLine="Clear strategy · Aylmer and area"
       heroBgImage={heroImg}
     />
@@ -69,7 +69,7 @@ const SellAylmerPageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="First step: know what your Aylmer property is worth — it's free." buttonLabel="Free valuation →" href="/en/home-valuation-aylmer" />
+    <InlineCTA text="First step: know what your Aylmer property is worth — it's free." buttonLabel="Free valuation →" href="/en/home-valuation-aylmer/" />
 
     <ProcessSteps steps={steps} background="alt" />
 
@@ -77,10 +77,10 @@ const SellAylmerPageEn = () => (
       overline="Explore Aylmer"
       title="Related pages"
       pages={[
-        { title: "Aylmer — neighborhood profile", text: "Market, profile and trends in Aylmer.", href: "/en/aylmer" },
-        { title: "Home valuation Aylmer", text: "How much is your Aylmer property worth?", href: "/en/home-valuation-aylmer" },
-        { title: "Sell in Gatineau", text: "The complete guide to selling in Outaouais.", href: "/en/sell" },
-        { title: "Outaouais real estate agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent" },
+        { title: "Aylmer — neighborhood profile", text: "Market, profile and trends in Aylmer.", href: "/en/aylmer/" },
+        { title: "Home valuation Aylmer", text: "How much is your Aylmer property worth?", href: "/en/home-valuation-aylmer/" },
+        { title: "Sell in Gatineau", text: "The complete guide to selling in Outaouais.", href: "/en/sell/" },
+        { title: "Outaouais real estate agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
       ]}
     />
 
@@ -91,8 +91,8 @@ const SellAylmerPageEn = () => (
       title="Thinking of selling in Aylmer?"
       text="I'll give you the numbers, options and a strategy adapted to the Aylmer market."
       buttons={[
-        { label: "Free valuation", href: "/en/home-valuation-aylmer" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free valuation", href: "/en/home-valuation-aylmer/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Free, confidential and no commitment."
     />

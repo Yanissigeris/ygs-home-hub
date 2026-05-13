@@ -30,13 +30,13 @@ const sellerReasons = [
 const PlateauAylmerPageEn = () => (
   <>
     <PageMeta title="Plateau / Aylmer — Neighborhood Guide" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. Complete neighborhood guide for buyers." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighborhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer" />
+    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighborhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer/" />
     <HeroSection
       overline="Neighborhood Guide · Plateau / Aylmer"
       title="Living in Plateau and Aylmer"
       subtitle="Family life, amenities, Ottawa access and quality of life — what you need to know to buy or sell in the area."
-      primaryCta={{ label: "Get guidance", href: "/en/contact" }}
-      secondaryCta={{ label: "My property value", href: "/en/home-valuation" }}
+      primaryCta={{ label: "Get guidance", href: "/en/contact/" }}
+      secondaryCta={{ label: "My property value", href: "/en/home-valuation/" }}
       heroBgImage={heroImg}
     />
 
@@ -62,7 +62,7 @@ const PlateauAylmerPageEn = () => (
         ))}
       </div>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/home-valuation">See how much my property is worth</Link>
+        <Link to="/en/home-valuation/">See how much my property is worth</Link>
       </Button>
     </ImageTextSplit>
 
@@ -70,8 +70,8 @@ const PlateauAylmerPageEn = () => (
       overline="Other neighborhoods"
       title="Explore other areas"
       sectors={[
-        { name: "Hull", href: "/en/hull", detail: "Urban, downtown, condos and plex" },
-        { name: "Buckingham", href: "/en/buckingham", detail: "Affordable, nature, space" },
+        { name: "Hull", href: "/en/hull/", detail: "Urban, downtown, condos and plex" },
+        { name: "Buckingham", href: "/en/buckingham/", detail: "Affordable, nature, space" },
       ]}
     />
 
@@ -87,8 +87,8 @@ const PlateauAylmerPageEn = () => (
       title="Buyer or seller in Plateau / Aylmer?"
       text="I can help you see clearly — whether you're buying in the area or want to know your property's value."
       buttons={[
-        { label: "Get my value", href: "/en/home-valuation" },
-        { label: "Book a consultation", href: "/en/contact", variant: "outline" },
+        { label: "Get my value", href: "/en/home-valuation/" },
+        { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options — you decide."
     />

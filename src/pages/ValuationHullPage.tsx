@@ -37,8 +37,8 @@ const faq = [
 ];
 
 const afterSteps = [
-  { title: "Vendre à Hull", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Hull.", href: "/vendre-maison-hull", cta: "Voir le processus", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Vendre à Hull", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Hull.", href: "/vendre-maison-hull/", cta: "Voir le processus", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -112,10 +112,10 @@ const ValuationHullPage = () => {
         overline="Explorer"
         title="Pages connexes"
         pages={[
-          { title: "Vendre à Hull", text: "Processus et stratégie pour vendre à Hull.", href: "/vendre-maison-hull" },
-          { title: "Hull — portrait du quartier", text: "Marché, profil et tendances.", href: "/hull" },
-          { title: "Évaluation Gatineau", text: "Évaluation pour tout l'Outaouais.", href: "/evaluation-gratuite-gatineau" },
-          { title: "Courtier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais" },
+          { title: "Vendre à Hull", text: "Processus et stratégie pour vendre à Hull.", href: "/vendre-maison-hull/" },
+          { title: "Hull — portrait du quartier", text: "Marché, profil et tendances.", href: "/hull/" },
+          { title: "Évaluation Gatineau", text: "Évaluation pour tout l'Outaouais.", href: "/evaluation-gratuite-gatineau/" },
+          { title: "Courtier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais/" },
         ]}
         background="alt"
       />

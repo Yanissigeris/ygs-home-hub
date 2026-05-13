@@ -32,13 +32,13 @@ const faq = [
 const MilitaryBuyerPageEn = () => (
   <>
     <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Military Home Buying — Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods near CFB Uplands." url="/en/military-buyer" serviceType="Military Real Estate Buyer Service" />
+    <ServiceJsonLd name="Military Home Buying — Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods near CFB Uplands." url="/en/military-buyer/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"
       subtitle="Posting to the NCR? I help you find the right area, the right property and navigate the buying process in Québec."
-      primaryCta={{ label: "Book a call", href: "/en/contact" }}
-      secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer" }}
+      primaryCta={{ label: "Book a call", href: "/en/contact/" }}
+      secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer/" }}
       trustLine="Service adapted to military members — at your pace."
       heroBgImage={heroImg}
     />
@@ -60,7 +60,7 @@ const MilitaryBuyerPageEn = () => (
     <InlineCTA
       text="Need to sell too? Start by knowing the value of your property."
       buttonLabel="Get my valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <ContentBlock narrow>
@@ -72,7 +72,7 @@ const MilitaryBuyerPageEn = () => (
         I know postings come with tight deadlines. My role is to simplify every step so you can focus on your transition.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/contact">Book a call</Link>
+        <Link to="/en/contact/">Book a call</Link>
       </Button>
     </ContentBlock>
 
@@ -83,8 +83,8 @@ const MilitaryBuyerPageEn = () => (
       title="Ready to find your property in Gatineau?"
       text="Let's discuss your posting and criteria — I take care of the rest."
       buttons={[
-        { label: "Book a call", href: "/en/contact" },
-        { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" },
+        { label: "Book a call", href: "/en/contact/" },
+        { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" },
       ]}
       trustLine="I give you the options — you decide with full clarity."
     />

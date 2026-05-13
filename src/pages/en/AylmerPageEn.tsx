@@ -113,10 +113,10 @@ const lifestyleCards = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Hull", text: "Urban, culture, condos and plex.", href: "/en/hull" },
-  { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau" },
-  { title: "Chelsea", text: "Artist village, Gatineau Park.", href: "/en/chelsea" },
-  { title: "Cantley", text: "Nature, countryside, families.", href: "/en/cantley" },
+  { title: "Hull", text: "Urban, culture, condos and plex.", href: "/en/hull/" },
+  { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau/" },
+  { title: "Chelsea", text: "Artist village, Gatineau Park.", href: "/en/chelsea/" },
+  { title: "Cantley", text: "Nature, countryside, families.", href: "/en/cantley/" },
 ];
 
 
@@ -130,7 +130,7 @@ const AylmerPageEn = () => (
       description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighbourhoods, schools and community."
       lat={45.3945}
       lng={-75.8486}
-      url="/en/aylmer"
+      url="/en/aylmer/"
     />
     
 
@@ -139,7 +139,7 @@ const AylmerPageEn = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Real estate broker in Aylmer — your local specialist"
       subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes — and a competitive market that rewards prepared buyers and well-positioned sellers."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer" }}
+      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
     />
@@ -168,7 +168,7 @@ const AylmerPageEn = () => (
               Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/en/home-valuation-aylmer">Get the real numbers →</Link>
+              <Link to="/en/home-valuation-aylmer/">Get the real numbers →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Free · No obligation · Response within 24-48h
@@ -221,7 +221,7 @@ const AylmerPageEn = () => (
         <div className="mt-10 text-center">
           <p className="prose-body mb-4">First time visiting Aylmer? I'll guide you neighbourhood by neighbourhood.</p>
           <Button size="lg" asChild>
-            <Link to="/en/buyer-consultation">Book a consultation →</Link>
+            <Link to="/en/buyer-consultation/">Book a consultation →</Link>
           </Button>
         </div>
       </div>
@@ -243,7 +243,7 @@ const AylmerPageEn = () => (
             What I bring: a valuation based on real recent sales in your micro-sector, professional photos, a pricing strategy defined with you, and targeted marketing to reach serious buyers — including Ottawa relocators actively looking in Aylmer.
           </p>
           <Button className="mt-4" size="lg" asChild>
-            <Link to="/en/home-valuation-aylmer">Free property valuation →</Link>
+            <Link to="/en/home-valuation-aylmer/">Free property valuation →</Link>
           </Button>
         </div>
 
@@ -293,8 +293,8 @@ const AylmerPageEn = () => (
       title="Ready to take the next step?"
       text="Whether you're selling your home in Aylmer or looking to buy in this area — I'm your local broker."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation-aylmer" },
-        { label: "Contact me →", href: "/en/contact", variant: "outline" },
+        { label: "Free valuation →", href: "/en/home-valuation-aylmer/" },
+        { label: "Contact me →", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine={'"I give you the numbers and the options — you decide."'}
     />
@@ -306,7 +306,7 @@ const AylmerPageEn = () => (
       pages={[
         ...related,
         { title: "Aylmer properties", text: "See current listings.", href: "/en/properties?area=aylmer" },
-        { title: "Ottawa → Gatineau relocation", text: "Complete guide for crossing the river.", href: "/en/relocation" },
+        { title: "Ottawa → Gatineau relocation", text: "Complete guide for crossing the river.", href: "/en/relocation/" },
       ]}
       background="alt"
     />

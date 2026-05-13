@@ -64,7 +64,7 @@ const HowToChooseRealtorPageEn = () => (
     <InlineCTA
       text="Want to see if we're a good fit? Let's talk — no commitment required."
       buttonLabel="Book a consultation →"
-      href="/en/contact"
+      href="/en/contact/"
     />
 
     <ContentBlock narrow background="alt">
@@ -81,10 +81,10 @@ const HowToChooseRealtorPageEn = () => (
       overline="Explore"
       title="Related pages"
       pages={[
-        { title: "Verify a broker (OACIQ)", text: "How to check a broker's licence.", href: "/en/oaciq-find-a-broker" },
-        { title: "How much does a realtor cost?", text: "Understanding compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec" },
-        { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell" },
-        { title: "About Yanis", text: "Experience, approach, and contact.", href: "/en/contact" },
+        { title: "Verify a broker (OACIQ)", text: "How to check a broker's licence.", href: "/en/oaciq-find-a-broker/" },
+        { title: "How much does a realtor cost?", text: "Understanding compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
+        { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell/" },
+        { title: "About Yanis", text: "Experience, approach, and contact.", href: "/en/contact/" },
       ]}
       background="alt"
     />
@@ -94,8 +94,8 @@ const HowToChooseRealtorPageEn = () => (
       title="Ready to find the right broker?"
       text="Let's discuss your project. I'll explain my approach, my strategy for your property, and what to expect — transparently."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Local expertise, honest advice, no pressure."
     />

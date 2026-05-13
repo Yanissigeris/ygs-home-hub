@@ -39,17 +39,17 @@ const faq = [
   { q: "What fees should I expect?", a: "Notary (approximately $1,500), welcome tax, optional title insurance, and pre-purchase inspection. We review everything together." },
 ];
 const related = [
-  { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation" },
-  { title: "First-Time Buyer", text: "Budget, down payment and process for first-time buyers.", href: "/en/first-time-buyer" },
-  { title: "Buy from Ottawa", text: "More space, affordable prices — cross the river.", href: "/en/buy-from-ottawa" },
-  { title: "Explore Neighborhoods", text: "Find the area that fits you.", href: "/en/neighborhoods" },
+  { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
+  { title: "First-Time Buyer", text: "Budget, down payment and process for first-time buyers.", href: "/en/first-time-buyer/" },
+  { title: "Buy from Ottawa", text: "More space, affordable prices — cross the river.", href: "/en/buy-from-ottawa/" },
+  { title: "Explore Neighborhoods", text: "Find the area that fits you.", href: "/en/neighborhoods/" },
 ];
 
 const BuyerGuidePageEn = () => (
   <>
     <HowToJsonLd name="How to buy a property in Gatineau" description="Step-by-step guide to buying a property in Gatineau and Outaouais — budget, search, offer, inspection and notary." steps={buyerSteps} totalTime="P90D" />
     <PageMeta title="Buyer Guide — Buying in Gatineau" description="Complete guide to buying a property in Gatineau. Process, budget, inspection and negotiation — everything you need to know." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <HeroSection overline="Buyer Guide · Gatineau" title="Complete guide to buying in Gatineau and Outaouais" subtitle="Everything you need to know to find the right property, make a strong offer and navigate the buying process in Gatineau and across Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Buyer Guide · Gatineau" title="Complete guide to buying in Gatineau and Outaouais" subtitle="Everything you need to know to find the right property, make a strong offer and navigate the buying process in Gatineau and across Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
     <ContentBlock narrow>
@@ -59,7 +59,7 @@ const BuyerGuidePageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="Don't know Gatineau neighborhoods? Explore the popular areas." buttonLabel="See neighborhoods →" href="/en/neighborhoods" />
+    <InlineCTA text="Don't know Gatineau neighborhoods? Explore the popular areas." buttonLabel="See neighborhoods →" href="/en/neighborhoods/" />
 
     <ContentBlock narrow>
       <SectionHeading title="Finding the right neighborhood" />
@@ -67,7 +67,7 @@ const BuyerGuidePageEn = () => (
         Aylmer, the Plateau, Hull, Buckingham — each area has its own personality, advantages and trade-offs. The right choice depends on your budget, commute, lifestyle and family priorities.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/neighborhoods">Explore neighborhoods</Link>
+        <Link to="/en/neighborhoods/">Explore neighborhoods</Link>
       </Button>
     </ContentBlock>
 
@@ -86,7 +86,7 @@ const BuyerGuidePageEn = () => (
 
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
 
-    <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "See neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

@@ -47,10 +47,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau" },
-  { title: "Hull", text: "Urbain, culture, condos.", href: "/hull" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer" },
-  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
+  { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau/" },
+  { title: "Hull", text: "Urbain, culture, condos.", href: "/hull/" },
+  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
 ];
 
 const GatineauCentrePage = () => (
@@ -63,12 +63,12 @@ const GatineauCentrePage = () => (
       description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local."
       lat={45.4765}
       lng={-75.7013}
-      url="/gatineau"
+      url="/gatineau/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Gatineau centre"
       description="Services de courtage immobilier à Gatineau centre — plexs, maisons, condos."
-      url="/gatineau"
+      url="/gatineau/"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
     />
@@ -78,7 +78,7 @@ const GatineauCentrePage = () => (
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Courtier immobilier à Gatineau centre — accessibilité, services et valeur"
       subtitle="Le secteur central de Gatineau est souvent sous-estimé. C'est pourtant le secteur le mieux desservi de la ville — hôpital, universités, cégep, transports, commerces. Et l'un des plus accessibles pour les familles et les investisseurs."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=gatineau" }}
       heroBgImage={heroImg}
     />
@@ -133,7 +133,7 @@ const GatineauCentrePage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-gratuite-gatineau/">Obtenir les vrais chiffres →</Link>
           </Button>
         </div>
       </div>
@@ -163,8 +163,8 @@ const GatineauCentrePage = () => (
       title="Acheteur ou vendeur à Gatineau centre?"
       text="Je connais le secteur — parlons de votre projet."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-        { label: "Analyser un plex →", href: "/investir-plex-gatineau", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Analyser un plex →", href: "/investir-plex-gatineau/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />

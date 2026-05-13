@@ -26,10 +26,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Acheter dans le Plateau", text: "Guide du quartier: prix, profils et potentiel.", href: "/plateau" },
-  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau" },
-  { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau" },
-  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur" },
+  { title: "Acheter dans le Plateau", text: "Guide du quartier: prix, profils et potentiel.", href: "/plateau/" },
+  { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
+  { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau/" },
+  { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
 ];
 
 const LivingPlateauPage = () => (
@@ -39,8 +39,8 @@ const LivingPlateauPage = () => (
       overline="Vivre dans le Plateau · Gatineau"
       title="Vivre dans le Plateau — le guide"
       subtitle="Découvrez le mode de vie dans le Plateau: développements récents, familles, nature et excellent rapport qualité-prix."
-      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur" }}
-      secondaryCta={{ label: "Voir le quartier", href: "/plateau" }}
+      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur/" }}
+      secondaryCta={{ label: "Voir le quartier", href: "/plateau/" }}
       heroBgImage={heroImg}
     />
 
@@ -60,7 +60,7 @@ const LivingPlateauPage = () => (
     <InlineCTA
       text="Vous êtes propriétaire dans le Plateau? Découvrez combien vaut votre propriété."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <FAQSection title="Questions sur la vie dans le Plateau" items={faq} />
@@ -83,8 +83,8 @@ const LivingPlateauPage = () => (
       title="Prêt à découvrir le Plateau?"
       text="Parlons de vos critères — je vous montre les meilleures options du secteur."
       buttons={[
-        { label: "Réserver une consultation", href: "/consultation-acheteur" },
-        { label: "Voir le quartier", href: "/plateau", variant: "outline" },
+        { label: "Réserver une consultation", href: "/consultation-acheteur/" },
+        { label: "Voir le quartier", href: "/plateau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

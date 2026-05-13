@@ -65,7 +65,7 @@ const RealtorCommissionPageEn = () => (
     <InlineCTA
       text="First step: find out your property's real market value — free and no commitment."
       buttonLabel="Free Home Valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <ContentBlock narrow>
@@ -89,10 +89,10 @@ const RealtorCommissionPageEn = () => (
       overline="Explore"
       title="Related pages"
       pages={[
-        { title: "How much does a realtor cost?", text: "Complete guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec" },
-        { title: "Realtor vs selling by owner", text: "Advantages and risks compared.", href: "/en/realtor-vs-selling-by-owner-quebec" },
-        { title: "How to choose a realtor", text: "The essential criteria.", href: "/en/how-to-choose-a-realtor" },
-        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
+        { title: "How much does a realtor cost?", text: "Complete guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
+        { title: "Realtor vs selling by owner", text: "Advantages and risks compared.", href: "/en/realtor-vs-selling-by-owner-quebec/" },
+        { title: "How to choose a realtor", text: "The essential criteria.", href: "/en/how-to-choose-a-realtor/" },
+        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
       ]}
       background="alt"
     />
@@ -102,8 +102,8 @@ const RealtorCommissionPageEn = () => (
       title="Want clarity on costs?"
       text="I'll explain everything — fees, services, strategy — before we even start. Transparent and no commitment."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Clarity and transparency, from the first call."
     />

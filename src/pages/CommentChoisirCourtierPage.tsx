@@ -91,7 +91,7 @@ const CommentChoisirCourtierPage = () => (
     <InlineCTA
       text="Vous cherchez un courtier local en Outaouais? Parlons de votre projet."
       buttonLabel="Réserver un appel →"
-      href="/contact-yanis"
+      href="/contact-yanis/"
     />
 
     <ContentBlock narrow>
@@ -105,10 +105,10 @@ const CommentChoisirCourtierPage = () => (
       overline="Explorer"
       title="Pages connexes"
       pages={[
-        { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission au Québec.", href: "/combien-coute-un-courtier-immobilier-au-quebec" },
-        { title: "Vérifier un courtier (OACIQ)", text: "Comment confirmer qu'un courtier est en règle.", href: "/verifier-un-courtier-immobilier-oaciq" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement pour vendeurs.", href: "/vendre-ma-maison-gatineau" },
-        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+        { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission au Québec.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
+        { title: "Vérifier un courtier (OACIQ)", text: "Comment confirmer qu'un courtier est en règle.", href: "/verifier-un-courtier-immobilier-oaciq/" },
+        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement pour vendeurs.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"
     />
@@ -118,8 +118,8 @@ const CommentChoisirCourtierPage = () => (
       title="Vous voulez rencontrer un courtier local?"
       text="On discute de votre projet, de vos questions et de vos options — sans engagement."
       buttons={[
-        { label: "Parler à Yanis", href: "/contact-yanis" },
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Près de 9 ans en Outaouais · Transparent dès le départ."
     />

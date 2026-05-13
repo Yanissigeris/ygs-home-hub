@@ -47,10 +47,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley" },
-  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau" },
-  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
+  { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley/" },
+  { title: "Gatineau centre", text: "Services, résidentiel, central.", href: "/gatineau/" },
+  { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
 ];
 
 const BuckinghamPage = () => (
@@ -63,12 +63,12 @@ const BuckinghamPage = () => (
       description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles."
       lat={45.5860}
       lng={-75.4190}
-      url="/buckingham-masson-angers"
+      url="/buckingham-masson-angers/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Buckingham"
       description="Services de courtage immobilier à Buckingham et Masson-Angers, Gatineau."
-      url="/buckingham-masson-angers"
+      url="/buckingham-masson-angers/"
       serviceType="Real Estate Brokerage"
       areaServed={["Buckingham", "Masson-Angers", "Gatineau"]}
     />
@@ -78,7 +78,7 @@ const BuckinghamPage = () => (
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
       title="Courtier immobilier à Buckingham — l'espace que Gatineau n'offre plus"
       subtitle="Buckingham et Masson-Angers sont les secteurs est de Gatineau. C'est ici que les terrains sont grands, que les maisons ont de l'espace, et que le rythme de vie est différent. Pour les acheteurs qui ont fait le calcul et veulent vraiment l'espace, c'est souvent la révélation du marché outaouais."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=buckingham" }}
       heroBgImage={heroImg}
     />
@@ -153,7 +153,7 @@ const BuckinghamPage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-gratuite-gatineau">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-gratuite-gatineau/">Obtenir les vrais chiffres →</Link>
           </Button>
         </div>
       </div>
@@ -183,8 +183,8 @@ const BuckinghamPage = () => (
       title="Acheteur ou vendeur à Buckingham?"
       text="Je connais le secteur — parlons de votre projet."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation →", href: "/consultation-acheteur", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation →", href: "/consultation-acheteur/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />

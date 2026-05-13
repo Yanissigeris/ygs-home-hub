@@ -19,10 +19,10 @@ const profileCards = [
   { icon: Home, title: "Looking for a condo", text: "Downtown, suburb or new development — options are plentiful." },
 ];
 const sectors = [
-  { name: "Aylmer", href: "/en/plateau-aylmer", detail: "Lake, established neighborhoods, quality of life" },
-  { name: "Plateau", href: "/en/plateau-aylmer", detail: "Families, recent developments" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, condos, plex, Ottawa proximity" },
-  { name: "Buckingham", href: "/en/buckingham", detail: "Space, nature, affordable prices" },
+  { name: "Aylmer", href: "/en/plateau-aylmer/", detail: "Lake, established neighborhoods, quality of life" },
+  { name: "Plateau", href: "/en/plateau-aylmer/", detail: "Families, recent developments" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, condos, plex, Ottawa proximity" },
+  { name: "Buckingham", href: "/en/buckingham/", detail: "Space, nature, affordable prices" },
 ];
 const faq = [
   { q: "How are featured properties selected?", a: "I select properties based on location, potential, value and relevance for active buyers in Gatineau." },
@@ -32,16 +32,16 @@ const faq = [
   { q: "Do you have access to properties not listed publicly?", a: "Yes. As an active broker in Gatineau since 2017, I have access to properties before they hit the public market." },
 ];
 const related = [
-  { title: "Buyer consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation" },
-  { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
-  { title: "Market report", text: "Prices and trends in Gatineau.", href: "/en/market-report" },
-  { title: "Explore neighborhoods", text: "Find the area that fits you.", href: "/en/neighborhoods" },
+  { title: "Buyer consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
+  { title: "Free valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
+  { title: "Market report", text: "Prices and trends in Gatineau.", href: "/en/market-report/" },
+  { title: "Explore neighborhoods", text: "Find the area that fits you.", href: "/en/neighborhoods/" },
 ];
 
 const PropertiesPageEn = () => (
   <>
     <PageMeta title="Properties for Sale in Gatineau" description="Houses, condos, plexes and land in Gatineau. Browse available properties in all Outaouais neighborhoods." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land — browse available properties in all Gatineau and Outaouais neighborhoods." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} trustLine="Strategic guidance." heroBgImage={heroImg} />
+    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land — browse available properties in all Gatineau and Outaouais neighborhoods." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Strategic guidance." heroBgImage={heroImg} />
 
     <ContentBlock narrow={false}>
       <SectionHeading overline="Active listings" title="My properties for sale" subtitle="Browse my listings — houses, condos, plexes and land in Gatineau and Outaouais." />
@@ -88,13 +88,13 @@ const PropertiesPageEn = () => (
 
     <SectorLinks overline="By neighborhood" title="Properties by area" sectors={sectors} background="alt" />
 
-    <InlineCTA text="Selling? Find out how much your property is worth — it's free." buttonLabel="Get my valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Selling? Find out how much your property is worth — it's free." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Explore also" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria — I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation" }, { label: "Explore neighborhoods", href: "/en/neighborhoods", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria — I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
   </>
 );
 export default PropertiesPageEn;

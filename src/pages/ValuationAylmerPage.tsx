@@ -37,8 +37,8 @@ const faq = [
 ];
 
 const afterSteps = [
-  { title: "Vendre à Aylmer", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Aylmer.", href: "/vendre-maison-aylmer", cta: "Voir le processus", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Vendre à Aylmer", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Aylmer.", href: "/vendre-maison-aylmer/", cta: "Voir le processus", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -112,10 +112,10 @@ const ValuationAylmerPage = () => {
         overline="Explorer"
         title="Pages connexes"
         pages={[
-          { title: "Vendre à Aylmer", text: "Processus et stratégie pour vendre à Aylmer.", href: "/vendre-maison-aylmer" },
-          { title: "Aylmer — portrait du quartier", text: "Marché, profil et tendances.", href: "/aylmer" },
-          { title: "Évaluation Gatineau", text: "Évaluation pour tout l'Outaouais.", href: "/evaluation-gratuite-gatineau" },
-          { title: "Courtier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais" },
+          { title: "Vendre à Aylmer", text: "Processus et stratégie pour vendre à Aylmer.", href: "/vendre-maison-aylmer/" },
+          { title: "Aylmer — portrait du quartier", text: "Marché, profil et tendances.", href: "/aylmer/" },
+          { title: "Évaluation Gatineau", text: "Évaluation pour tout l'Outaouais.", href: "/evaluation-gratuite-gatineau/" },
+          { title: "Courtier Outaouais", text: "Services dans toute la région.", href: "/courtier-immobilier-outaouais/" },
         ]}
         background="alt"
       />

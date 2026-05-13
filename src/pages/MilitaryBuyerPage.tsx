@@ -32,13 +32,13 @@ const faq = [
 const MilitaryBuyerPage = () => (
    <>
     <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers près de la BFC Uplands et accompagnement adapté à votre mutation." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Achat immobilier militaire — Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers près de la BFC Uplands." url="/acheter-comme-militaire-gatineau" serviceType="Military Real Estate Buyer Service" />
+    <ServiceJsonLd name="Achat immobilier militaire — Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers près de la BFC Uplands." url="/acheter-comme-militaire-gatineau/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"
       subtitle="Mutation vers la RCN? Je vous aide à trouver le bon secteur, la bonne propriété et à naviguer le processus d'achat au Québec."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer" }}
+      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer/" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
@@ -60,7 +60,7 @@ const MilitaryBuyerPage = () => (
     <InlineCTA
       text="Vous devez aussi vendre? Commencez par connaître la valeur de votre propriété."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ContentBlock narrow>
@@ -72,7 +72,7 @@ const MilitaryBuyerPage = () => (
         Je sais que les mutations imposent des délais serrés. Mon rôle est de simplifier chaque étape pour que vous puissiez vous concentrer sur votre transition.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/contact-yanis">Réserver un appel</Link>
+        <Link to="/contact-yanis/">Réserver un appel</Link>
       </Button>
     </ContentBlock>
 
@@ -88,8 +88,8 @@ const MilitaryBuyerPage = () => (
       title="Prêt à trouver votre propriété à Gatineau?"
       text="Parlons de votre mutation et de vos critères — je m'occupe du reste."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

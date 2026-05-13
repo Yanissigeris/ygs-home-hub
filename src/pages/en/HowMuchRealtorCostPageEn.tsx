@@ -65,7 +65,7 @@ const HowMuchRealtorCostPageEn = () => (
     <InlineCTA
       text="First step: find out your property's value — it's free and no commitment required."
       buttonLabel="Free Home Valuation →"
-      href="/en/home-valuation"
+      href="/en/home-valuation/"
     />
 
     <ContentBlock narrow>
@@ -89,10 +89,10 @@ const HowMuchRealtorCostPageEn = () => (
       overline="Explore"
       title="Related pages"
       pages={[
-        { title: "How to choose a realtor", text: "The essential criteria for choosing.", href: "/en/how-to-choose-a-realtor" },
-        { title: "Verify a broker (OACIQ)", text: "How to verify a broker is in good standing.", href: "/en/oaciq-find-a-broker" },
-        { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell" },
-        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation" },
+        { title: "How to choose a realtor", text: "The essential criteria for choosing.", href: "/en/how-to-choose-a-realtor/" },
+        { title: "Verify a broker (OACIQ)", text: "How to verify a broker is in good standing.", href: "/en/oaciq-find-a-broker/" },
+        { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell/" },
+        { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
       ]}
       background="alt"
     />
@@ -102,8 +102,8 @@ const HowMuchRealtorCostPageEn = () => (
       title="Want to understand your options?"
       text="I'll explain everything clearly — commission, services, strategy — before we even begin."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation" },
-        { label: "Talk to Yanis", href: "/en/contact", variant: "outline" },
+        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Transparent, clear, and no commitment."
     />

@@ -114,10 +114,10 @@ const lifestyleCards = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Hull", text: "Urbain, culture, condos et plex.", href: "/hull" },
-  { title: "Gatineau centre", text: "Résidentiel, services, abordable.", href: "/gatineau" },
-  { title: "Chelsea", text: "Village artistique, parc de la Gatineau.", href: "/chelsea" },
-  { title: "Cantley", text: "Nature, campagne, familles.", href: "/cantley" },
+  { title: "Hull", text: "Urbain, culture, condos et plex.", href: "/hull/" },
+  { title: "Gatineau centre", text: "Résidentiel, services, abordable.", href: "/gatineau/" },
+  { title: "Chelsea", text: "Village artistique, parc de la Gatineau.", href: "/chelsea/" },
+  { title: "Cantley", text: "Nature, campagne, familles.", href: "/cantley/" },
 ];
 
 
@@ -133,7 +133,7 @@ const AylmerPage = () => (
       description="Courtier immobilier spécialisé à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles et communauté."
       lat={45.3945}
       lng={-75.8486}
-      url="/aylmer"
+      url="/aylmer/"
     />
     
 
@@ -142,7 +142,7 @@ const AylmerPage = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Aylmer — votre spécialiste local"
       subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes — et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
     />
@@ -173,7 +173,7 @@ const AylmerPage = () => (
               Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/evaluation-maison-aylmer">Obtenir les vrais chiffres →</Link>
+              <Link to="/evaluation-maison-aylmer/">Obtenir les vrais chiffres →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Gratuit · Sans engagement · Réponse en 24-48h
@@ -226,7 +226,7 @@ const AylmerPage = () => (
         <div className="mt-10 text-center">
           <p className="prose-body mb-4">Première visite à Aylmer? Je vous guide secteur par secteur.</p>
           <Button size="lg" asChild>
-            <Link to="/consultation-acheteur">Réserver une consultation →</Link>
+            <Link to="/consultation-acheteur/">Réserver une consultation →</Link>
           </Button>
         </div>
       </div>
@@ -249,7 +249,7 @@ const AylmerPage = () => (
             Ce que j'apporte concrètement : une évaluation basée sur les vraies ventes récentes dans votre micro-secteur, des photos professionnelles, une stratégie de prix définie avec vous, et une mise en marché ciblée pour atteindre les acheteurs sérieux — incluant les relocalisateurs d'Ottawa qui cherchent activement à Aylmer.
           </p>
           <Button className="mt-4" size="lg" asChild>
-            <Link to="/evaluation-maison-aylmer">Évaluation gratuite de votre propriété →</Link>
+            <Link to="/evaluation-maison-aylmer/">Évaluation gratuite de votre propriété →</Link>
           </Button>
         </div>
 
@@ -300,8 +300,8 @@ const AylmerPage = () => (
       title="Prêt à passer à l'étape suivante?"
       text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur — je suis votre courtier local."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer" },
-        { label: "Me contacter →", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" },
+        { label: "Me contacter →", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />
@@ -313,7 +313,7 @@ const AylmerPage = () => (
       pages={[
         ...related,
         { title: "Propriétés à Aylmer", text: "Voir les inscriptions en cours.", href: "/proprietes?secteur=aylmer" },
-        { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation-ottawa-gatineau" },
+        { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation-ottawa-gatineau/" },
       ]}
       background="alt"
     />

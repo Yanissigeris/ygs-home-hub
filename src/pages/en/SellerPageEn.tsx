@@ -35,9 +35,9 @@ const steps = [
   { num: "03", title: "Full support", desc: "Marketing, showings, negotiation, coordination through to the notary. No surprises." },
 ];
 const nextSteps = [
-  { title: "Free home valuation", text: "Know the value of your property — it's free, confidential and no commitment.", href: "/en/home-valuation", cta: "Get my valuation", highlight: true },
-  { title: "Seller plan", text: "Pricing, preparation, marketing — a clear plan adapted to your property and situation.", href: "/en/sell", cta: "Get my plan" },
-  { title: "Talk to Yanis", text: "A call to clarify your options — no pitch, just answers.", href: "/en/contact", cta: "Book a call" },
+  { title: "Free home valuation", text: "Know the value of your property — it's free, confidential and no commitment.", href: "/en/home-valuation/", cta: "Get my valuation", highlight: true },
+  { title: "Seller plan", text: "Pricing, preparation, marketing — a clear plan adapted to your property and situation.", href: "/en/sell/", cta: "Get my plan" },
+  { title: "Talk to Yanis", text: "A call to clarify your options — no pitch, just answers.", href: "/en/contact/", cta: "Book a call" },
 ];
 const faq = [
   { q: "When is the best time to sell?", a: "It depends on your situation, not just the market. Since 2017 in Outaouais, I've seen sellers succeed in all conditions — with the right plan." },
@@ -55,8 +55,8 @@ const faq = [
 const SellerPageEn = () => (
   <>
     <PageMeta title="Sell Your Home in Gatineau" description="Sell your property in Gatineau at the best price. Marketing strategy, personalized support and proven results by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Home Selling Service in Gatineau" description="Full-service home selling in Gatineau and Outaouais — valuation, pricing strategy, marketing and support from listing to closing." url="/en/sell" serviceType="Real Estate Listing Service" />
-    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
+    <ServiceJsonLd name="Home Selling Service in Gatineau" description="Full-service home selling in Gatineau and Outaouais — valuation, pricing strategy, marketing and support from listing to closing." url="/en/sell/" serviceType="Real Estate Listing Service" />
+    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan — pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell/" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
       <SectionHeading overline="2026 Context" title="The 2026 selling market in Outaouais" />
@@ -71,12 +71,12 @@ const SellerPageEn = () => (
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Sources: Gatineau Real Estate Board (CIO), CMHC — Housing Market Outlook 2026.</p>
       <div className="mt-6">
-        <Button asChild><Link to="/en/home-valuation">Free Home Valuation →</Link></Button>
+        <Button asChild><Link to="/en/home-valuation/">Free Home Valuation →</Link></Button>
       </div>
     </ContentBlock>
 
 <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
-    <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="First step: know the value of your property — it's free and no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
     <ContentBlock narrow>
       <SectionHeading overline="Before selling" title="You don't need to decide everything today" />
@@ -88,7 +88,7 @@ const SellerPageEn = () => (
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the complete guide." text="Everything you need to know to sell at the best price in Gatineau — in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
     <ReviewSection overline="Seller testimonials" title="They sold with confidence" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
-    <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Get my seller plan", href: "/en/sell", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Get my seller plan", href: "/en/sell/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
   </>
 );

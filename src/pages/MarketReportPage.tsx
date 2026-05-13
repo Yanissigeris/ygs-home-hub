@@ -17,10 +17,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Estimation en 24h.", href: "/evaluation-gratuite-gatineau" },
-  { title: "Vendu récemment", text: "Les ventes récentes dans votre secteur.", href: "/vendu-recemment" },
-  { title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", href: "/guide-vendeur-gatineau" },
-  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Estimation en 24h.", href: "/evaluation-gratuite-gatineau/" },
+  { title: "Vendu récemment", text: "Les ventes récentes dans votre secteur.", href: "/vendu-recemment/" },
+  { title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", href: "/guide-vendeur-gatineau/" },
+  { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau/" },
 ];
 
 const MarketReportPage = () => (
@@ -30,8 +30,8 @@ const MarketReportPage = () => (
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"
       subtitle="Prix, tendances, volumes de ventes — une lecture claire du marché immobilier de Gatineau et de l'Outaouais."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
+      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -50,7 +50,7 @@ const MarketReportPage = () => (
     <InlineCTA
       text="Vous voulez connaître la valeur de votre propriété? Demandez une évaluation gratuite."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <FAQSection items={faq} />
@@ -73,8 +73,8 @@ const MarketReportPage = () => (
       title="Recevez le prochain rapport marché"
       text="Contactez-moi pour être sur la liste — vous recevrez l'analyse dès sa publication."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Données objectives et analyse locale claire."
     />

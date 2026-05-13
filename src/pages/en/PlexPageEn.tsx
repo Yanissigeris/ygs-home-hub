@@ -20,8 +20,8 @@ import { CheckCircle2, Building2, TrendingUp, Clock, Award, Shield } from "lucid
 import heroImg from "@/assets/hero-plex.webp";
 
 const clientTypes = [
-  { icon: Building2, title: "Plex owners", text: "Sell, refinance or hold? We analyze your situation with real numbers — not assumptions.", cta: "Get an analysis", href: "/en/plex-analysis" },
-  { icon: TrendingUp, title: "Investor buyers", text: "Real value, rental potential, risks and buying strategy — the numbers before the decision.", cta: "Request an analysis", href: "/en/plex-analysis" },
+  { icon: Building2, title: "Plex owners", text: "Sell, refinance or hold? We analyze your situation with real numbers — not assumptions.", cta: "Get an analysis", href: "/en/plex-analysis/" },
+  { icon: TrendingUp, title: "Investor buyers", text: "Real value, rental potential, risks and buying strategy — the numbers before the decision.", cta: "Request an analysis", href: "/en/plex-analysis/" },
 ];
 const questions = [
   { icon: CheckCircle2, title: "Should I keep or sell?", text: "Current returns, Outaouais market conditions and long-term strategy." },
@@ -36,9 +36,9 @@ const steps = [
   { num: "03", title: "Execution and support", desc: "From decision to transaction, complete and transparent support." },
 ];
 const nextSteps = [
-  { title: "Free plex analysis", text: "Value, revenues, expenses, potential — an objective reading of your situation.", href: "/en/plex-analysis", cta: "Get my analysis", highlight: true },
-  { title: "Property valuation", text: "Know the current market value of your plex — free and confidential.", href: "/en/home-valuation", cta: "Get my valuation" },
-  { title: "Talk to Yanis", text: "A call to discuss your investor situation — no commitment.", href: "/en/contact", cta: "Book a call" },
+  { title: "Free plex analysis", text: "Value, revenues, expenses, potential — an objective reading of your situation.", href: "/en/plex-analysis/", cta: "Get my analysis", highlight: true },
+  { title: "Property valuation", text: "Know the current market value of your plex — free and confidential.", href: "/en/home-valuation/", cta: "Get my valuation" },
+  { title: "Talk to Yanis", text: "A call to discuss your investor situation — no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 const faq = [
   { q: "How do you evaluate a plex's value?", a: "Revenues, building condition, rental potential and neighborhood. Since 2017 in Outaouais, I know the specifics of plexes in Hull, Gatineau-centre and other areas well." },
@@ -50,8 +50,8 @@ const faq = [
 const PlexPageEn = () => (
   <>
     <PageMeta title="Invest in a Plex in Gatineau" ogImage="https://yanisgauthier.com/og/og-plex.jpg" description="Duplex, triplex and income properties in Gatineau. Return analysis, investment strategy and support by a specialized broker." />
-    <ServiceJsonLd name="Plex Investment Analysis in Gatineau" description="Analysis and support service for buying, selling or evaluating plex and income properties in Gatineau and Outaouais." url="/en/plex" serviceType="Real Estate Investment Analysis" />
-    <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
+    <ServiceJsonLd name="Plex Investment Analysis in Gatineau" description="Analysis and support service for buying, selling or evaluating plex and income properties in Gatineau and Outaouais." url="/en/plex/" serviceType="Real Estate Investment Analysis" />
+    <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation/" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
       <SectionHeading overline="2026 Context" title="Investing in an Outaouais plex in 2026 — what you need to know" />
@@ -69,19 +69,19 @@ const PlexPageEn = () => (
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Sources: CMHC — Rental Market Report 2025 · Gatineau Real Estate Board (CIO).</p>
       <div className="mt-6">
-        <Button asChild><Link to="/en/contact">Analyze a plex with me →</Link></Button>
+        <Button asChild><Link to="/en/contact/">Analyze a plex with me →</Link></Button>
       </div>
     </ContentBlock>
 
 <LinkedCardGrid overline="For you" title="I help two types of clients" items={clientTypes} />
-    <InlineCTA text="Own a plex? Start by knowing its current value." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Own a plex? Start by knowing its current value." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <CardGrid overline="Analysis" title="The real questions behind a plex" items={questions} variant="icon-inline" background="alt" />
     <ProcessSteps steps={steps} />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the option that fits your investor situation." steps={nextSteps} background="alt" />
     <GuideInlineCTA lang="en" guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid — the essential guide for investing in Gatineau." ctaLabel="Get the Investor Guide" />
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
     <ReviewSection overline="Investor testimonials" title="Informed decisions, real results" reviews={getReviewsByCategory("plex").slice(0, 2)} columns={2} />
-    <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position — I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position — I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
   </>
 );

@@ -29,10 +29,10 @@ const faq = [
 ];
 
 const related = [
-  { title: "Relocalisation militaire", text: "Mutation vers la RCN — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau" },
-  { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau" },
-  { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau" },
-  { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau/" },
+  { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau/" },
+  { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau/" },
+  { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
 const MilitaryGuidePage = () => (
@@ -42,8 +42,8 @@ const MilitaryGuidePage = () => (
       overline="Guide militaire · Gatineau"
       title="Guide immobilier pour militaires à Gatineau"
       subtitle="Mutation vers la RCN? Tout ce que vous devez savoir pour acheter, vendre ou vous installer à Gatineau en tant que militaire."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Voir le service militaire", href: "/militaire-gatineau" }}
+      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Voir le service militaire", href: "/militaire-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -73,7 +73,7 @@ const MilitaryGuidePage = () => (
     <InlineCTA
       text="Vous devez vendre avant d'acheter? Commencez par connaître la valeur de votre propriété."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <GuideInlineCTA
@@ -96,8 +96,8 @@ const MilitaryGuidePage = () => (
       title="Planifions votre relocalisation militaire"
       text="Réservez un appel gratuit — on adapte le plan à votre mutation et votre calendrier."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je m'adapte à votre rythme — vous décidez quand vous êtes prêt."
     />

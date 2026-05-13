@@ -37,8 +37,8 @@ const faq = [
 ];
 
 const afterSteps = [
-  { title: "Sell in Hull", text: "Go further — get a complete plan to sell your Hull property.", href: "/en/sell-house-hull", cta: "See the process", highlight: true },
-  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" },
+  { title: "Sell in Hull", text: "Go further — get a complete plan to sell your Hull property.", href: "/en/sell-house-hull/", cta: "See the process", highlight: true },
+  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const anim = {
@@ -112,10 +112,10 @@ const ValuationHullPageEn = () => {
         overline="Explore"
         title="Related pages"
         pages={[
-          { title: "Sell in Hull", text: "Process and strategy for selling in Hull.", href: "/en/sell-house-hull" },
-          { title: "Hull — neighborhood profile", text: "Market, profile and trends.", href: "/en/hull" },
-          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation" },
-          { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent" },
+          { title: "Sell in Hull", text: "Process and strategy for selling in Hull.", href: "/en/sell-house-hull/" },
+          { title: "Hull — neighborhood profile", text: "Market, profile and trends.", href: "/en/hull/" },
+          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation/" },
+          { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
         ]}
         background="alt"
       />

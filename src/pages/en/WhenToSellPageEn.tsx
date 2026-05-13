@@ -28,13 +28,13 @@ const faq = [
 const WhenToSellPageEn = () => (
   <>
     <PageMeta title="When to Sell Your Property in Gatineau" description="The best time to sell in Gatineau depends on your situation. Market analysis, key factors and advice from an experienced broker." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="When to Sell Your Property in Gatineau" description="Market analysis to determine the best time to sell your property in Gatineau and Outaouais." url="/en/when-to-sell" serviceType="Real Estate Market Analysis" />
+    <ServiceJsonLd name="When to Sell Your Property in Gatineau" description="Market analysis to determine the best time to sell your property in Gatineau and Outaouais." url="/en/when-to-sell/" serviceType="Real Estate Market Analysis" />
     <HeroSection
       overline="When to sell · Gatineau"
       title="When is the right time to sell in Gatineau?"
       subtitle="The best time to sell depends on your situation, not just the market. Here's how to see things more clearly."
-      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }}
-      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
       heroBgImage={heroImg}
     />
@@ -44,9 +44,9 @@ const WhenToSellPageEn = () => (
       <p className="prose-body mt-5">Many sellers wait for the "perfect moment" — but that moment never truly arrives. What makes the difference is preparation: the right price, the right marketing and a solid strategy.</p>
       <p className="prose-body mt-4">Since 2017 in Gatineau, I've seen sellers succeed in all market conditions — with the right plan.</p>
     </ContentBlock>
-    <InlineCTA text="Start by knowing the current value of your property — it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Start by knowing the current value of your property — it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the right time" text="Pricing, preparation, timing — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Unsure about the timing?" text="Get a free valuation — let's look together at whether now is the right time for you." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation" }, { label: "Talk to Yanis", href: "/en/contact", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Unsure about the timing?" text="Get a free valuation — let's look together at whether now is the right time for you." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <FAQSection items={faq} />
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
   </>

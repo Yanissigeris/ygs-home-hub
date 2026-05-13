@@ -20,9 +20,9 @@ const challenges = [
 
 
 const sectors = [
-{ name: "Plateau / Aylmer", href: "/plateau-aylmer", detail: "Familial, maisons récentes, accès Ottawa" },
-{ name: "Hull", href: "/hull", detail: "Urbain, proche centre-ville, condos et plex" },
-{ name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers", detail: "Terrain, prix accessibles, nature" }];
+{ name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
+{ name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
+{ name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" }];
 
 
 
@@ -30,12 +30,12 @@ const sectors = [
 const MontrealRelocationPage = () =>
 <>
     <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau — quartiers, coût de vie et processus immobilier en Outaouais." url="/relocalisation-montreal-gatineau" serviceType="Real Estate Relocation Service" />
+    <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau — quartiers, coût de vie et processus immobilier en Outaouais." url="/relocalisation-montreal-gatineau/" serviceType="Real Estate Relocation Service" />
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"
     subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie familiale — et un marché immobilier en croissance. Découvrez pourquoi de plus en plus de Montréalais choisissent Gatineau."
-    primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
+    primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
     secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
     trustLine="Spécialiste en relocalisation."
     heroBgImage={heroImg} />
@@ -48,7 +48,7 @@ const MontrealRelocationPage = () =>
     <InlineCTA
     text="Vous vendez aussi à Montréal? Connaître la valeur de votre propriété actuelle peut clarifier votre budget."
     buttonLabel="Obtenir ma valeur →"
-    href="/evaluation-gratuite-gatineau" />
+    href="/evaluation-gratuite-gatineau/" />
   
 
     <SectorLinks
@@ -78,8 +78,8 @@ const MontrealRelocationPage = () =>
     title="Prêt à explorer Gatineau?"
     text="Réservez un appel gratuit — on regarde ensemble les secteurs et les options."
     buttons={[
-    { label: "Réserver un appel", href: "/contact-yanis" },
-    { label: "Explorer les secteurs", href: "/plateau-aylmer", variant: "outline" }]
+    { label: "Réserver un appel", href: "/contact-yanis/" },
+    { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" }]
     }
     trustLine="Je vous donne les options, vous décidez." />
   

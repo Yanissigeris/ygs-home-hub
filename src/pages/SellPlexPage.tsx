@@ -38,13 +38,13 @@ const faq = [
 const SellPlexPage = () => (
    <>
     <PageMeta title="Vendre un plex à Gatineau · Outaouais" description="Vendez votre duplex, triplex ou immeuble à revenus à Gatineau. Évaluation précise et stratégie de mise en marché spécialisée." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Vendre un plex à Gatineau" description="Vente spécialisée de duplex, triplex et immeubles à revenus à Gatineau. Évaluation précise et stratégie de mise en marché adaptée." url="/vendre-un-plex-a-gatineau" serviceType="Multi-Family Property Listing Service" />
+    <ServiceJsonLd name="Vendre un plex à Gatineau" description="Vente spécialisée de duplex, triplex et immeubles à revenus à Gatineau. Évaluation précise et stratégie de mise en marché adaptée." url="/vendre-un-plex-a-gatineau/" serviceType="Multi-Family Property Listing Service" />
     <HeroSection
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"
       subtitle="Duplex, triplex ou plus — je vous aide à maximiser votre prix avec une stratégie adaptée aux propriétés à revenus."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }}
-      secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau" }}
+      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau/" }}
       trustLine="Spécialiste plex. "
       heroBgImage={heroImg}
     />
@@ -57,7 +57,7 @@ const SellPlexPage = () => (
     <InlineCTA
       text="Première étape: connaître la valeur de votre plex — c'est gratuit."
       buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau"
+      href="/evaluation-gratuite-gatineau/"
     />
 
     <ProcessSteps steps={steps} background="alt" />
@@ -68,7 +68,7 @@ const SellPlexPage = () => (
         Beaucoup de propriétaires de plex sous-estiment la valeur de leur immeuble — ou ne savent pas comment la maximiser avant de vendre. Mon rôle est de vous donner une lecture claire de votre situation et une stratégie pour en tirer le meilleur prix.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/analyse-plex-gatineau">Recevoir mon analyse plex</Link>
+        <Link to="/analyse-plex-gatineau/">Recevoir mon analyse plex</Link>
       </Button>
     </ContentBlock>
 
@@ -84,8 +84,8 @@ const SellPlexPage = () => (
       title="Prêt à explorer vos options?"
       text="Demandez une analyse de votre plex — valeur, revenus et recommandation."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" },
-        { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau", variant: "outline" },
+        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

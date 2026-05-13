@@ -35,12 +35,12 @@ const militaryFaq = [
 ];
 
 const relatedResources = [
-  { icon: Home, title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", cta: "Lire le guide", href: "/guide-vendeur-gatineau" },
-  { icon: Users, title: "Guide acheteur", text: "Le processus d'achat au Québec.", cta: "Lire le guide", href: "/guide-acheteur-gatineau" },
-  { icon: MapPin, title: "Guide relocalisation", text: "S'installer à Gatineau.", cta: "Lire le guide", href: "/guide-relocalisation-gatineau" },
-  { icon: Shield, title: "Guide militaire", text: "Immobilier et mutations.", cta: "Lire le guide", href: "/guide-militaire-gatineau" },
-  { icon: TrendingUp, title: "Investir en plex", text: "Analyse et stratégie.", cta: "Explorer", href: "/investir-plex-gatineau" },
-  { icon: Book, title: "Premier achat", text: "Budget, processus et conseils.", cta: "Lire le guide", href: "/premier-achat-gatineau" },
+  { icon: Home, title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", cta: "Lire le guide", href: "/guide-vendeur-gatineau/" },
+  { icon: Users, title: "Guide acheteur", text: "Le processus d'achat au Québec.", cta: "Lire le guide", href: "/guide-acheteur-gatineau/" },
+  { icon: MapPin, title: "Guide relocalisation", text: "S'installer à Gatineau.", cta: "Lire le guide", href: "/guide-relocalisation-gatineau/" },
+  { icon: Shield, title: "Guide militaire", text: "Immobilier et mutations.", cta: "Lire le guide", href: "/guide-militaire-gatineau/" },
+  { icon: TrendingUp, title: "Investir en plex", text: "Analyse et stratégie.", cta: "Explorer", href: "/investir-plex-gatineau/" },
+  { icon: Book, title: "Premier achat", text: "Budget, processus et conseils.", cta: "Lire le guide", href: "/premier-achat-gatineau/" },
 ];
 
 const FAQPage = () => (
@@ -51,8 +51,8 @@ const FAQPage = () => (
       overline="FAQ · YGS"
       title="Questions fréquentes"
       subtitle="Les réponses aux questions les plus courantes sur la vente, l'achat, l'investissement et la relocalisation immobilière à Gatineau."
-      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
-      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
+      secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
@@ -75,8 +75,8 @@ const FAQPage = () => (
       title="Vous avez une question spécifique?"
       text="Contactez-moi directement — je vous donne une réponse claire et personnalisée."
       buttons={[
-        { label: "Parler à Yanis", href: "/contact-yanis" },
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

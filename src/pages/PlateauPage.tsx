@@ -10,7 +10,7 @@ const PlateauPage = () => (
     seoTitle="Plateau — Guide de quartier Gatineau"
     metaDesc="Vivre, acheter ou vendre dans le Plateau à Gatineau. Maisons neuves, familles, parcs et accès rapide à Ottawa via le pont Champlain."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
-    jsonLd={{ name: "Plateau", description: "Courtier immobilier dans le Plateau, Gatineau. Maisons neuves, quartier familial.", lat: 45.3850, lng: -75.8000, url: "/plateau" }}
+    jsonLd={{ name: "Plateau", description: "Courtier immobilier dans le Plateau, Gatineau. Maisons neuves, quartier familial.", lat: 45.3850, lng: -75.8000, url: "/plateau/" }}
     hero={{ overline: "Guide de quartier · Plateau", title: "Vivre, acheter ou vendre dans le Plateau", subtitle: "Maisons neuves, quartier familial en plein essor et accès rapide à Ottawa — le Plateau a tout pour plaire.", image: heroImg }}
     trustSpecialty="Spécialiste Plateau et environs"
     lifestyle={{ image: heroImg, imageAlt: "Le Plateau, Gatineau", title: "Pourquoi le Plateau est si populaire", subtitle: "L'un des secteurs les plus dynamiques de Gatineau pour les jeunes familles." }}
@@ -28,7 +28,7 @@ const PlateauPage = () => (
       { icon: TrendingUp, title: "Acheteurs en quête de neuf", text: "Développements récents avec garantie de maison neuve." },
       { icon: MapPin, title: "Navetteurs Ottawa", text: "Trajet fluide vers Ottawa via le pont Champlain." },
     ]}
-    inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau" }}
+    inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur le Plateau",
       items: [
@@ -45,20 +45,20 @@ const PlateauPage = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Aylmer", href: "/aylmer", detail: "Lac Deschênes, quartiers établis" },
-      { name: "Chelsea", href: "/chelsea", detail: "Village, parc de la Gatineau" },
-      { name: "Hull", href: "/hull", detail: "Urbain, culture, condos" },
+      { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, quartiers établis" },
+      { name: "Chelsea", href: "/chelsea/", detail: "Village, parc de la Gatineau" },
+      { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos" },
     ]}}
     related={{ pages: [
-      { title: "Vivre dans le Plateau", text: "Guide de vie dans le secteur.", href: "/vivre-dans-le-plateau" },
-      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau" },
-      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau" },
-      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau" },
-      { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue" },
+      { title: "Vivre dans le Plateau", text: "Guide de vie dans le secteur.", href: "/vivre-dans-le-plateau/" },
+      { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
+      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
+      { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
+      { title: "Blogue immobilier", text: "Articles et conseils locaux.", href: "/blogue/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter dans le Plateau", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
-    cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Je connais le Plateau par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau" }, { label: "Réserver une consultation", href: "/consultation-acheteur", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Je connais le Plateau par cœur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
     />
   </>
 );

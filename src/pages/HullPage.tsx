@@ -52,10 +52,10 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer" },
-  { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau" },
-  { title: "Gatineau centre", text: "Résidentiel, services, abordable.", href: "/gatineau" },
+  { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau/" },
+  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau/" },
+  { title: "Gatineau centre", text: "Résidentiel, services, abordable.", href: "/gatineau/" },
 ];
 
 const HullPage = () => (
@@ -69,12 +69,12 @@ const HullPage = () => (
       description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local."
       lat={45.4283}
       lng={-75.7140}
-      url="/hull"
+      url="/hull/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Hull"
       description="Services de courtage immobilier à Hull, Gatineau — condos, plexs, maisons."
-      url="/hull"
+      url="/hull/"
       serviceType="Real Estate Brokerage"
       areaServed={["Hull", "Gatineau"]}
     />
@@ -84,7 +84,7 @@ const HullPage = () => (
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Hull — au cœur de l'Outaouais urbain"
       subtitle="Hull est le secteur le plus urbain de Gatineau. Directement en face d'Ottawa, en pleine transformation avec le projet Zibi, Hull attire les professionnels, les familles bilingues et les investisseurs. C'est ici que la ville bouge le plus."
-      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-hull" }}
+      primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-hull/" }}
       secondaryCta={{ label: "Voir les propriétés à Hull →", href: "/proprietes?secteur=hull" }}
       heroBgImage={heroImg}
     />
@@ -139,7 +139,7 @@ const HullPage = () => (
       </div>
       <div className="mt-6">
         <Button size="lg" asChild>
-          <Link to="/investir-plex-gatineau">Analyser un plex avec moi →</Link>
+          <Link to="/investir-plex-gatineau/">Analyser un plex avec moi →</Link>
         </Button>
       </div>
     </ContentBlock>
@@ -161,7 +161,7 @@ const HullPage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-maison-hull">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-maison-hull/">Obtenir les vrais chiffres →</Link>
           </Button>
         </div>
       </div>
@@ -191,8 +191,8 @@ const HullPage = () => (
       title="Votre projet à Hull — par où commencer?"
       text="Achat, vente, investissement locatif — Hull est un secteur que je connais en profondeur. Parlons de votre projet."
       buttons={[
-        { label: "Évaluation gratuite →", href: "/evaluation-maison-hull" },
-        { label: "Analyser un plex →", href: "/investir-plex-gatineau", variant: "outline" },
+        { label: "Évaluation gratuite →", href: "/evaluation-maison-hull/" },
+        { label: "Analyser un plex →", href: "/investir-plex-gatineau/", variant: "outline" },
       ]}
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />

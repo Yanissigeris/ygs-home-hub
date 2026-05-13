@@ -46,25 +46,25 @@ const faq = [
 ];
 
 const relatedSectors = [
-  { name: "Aylmer", href: "/en/aylmer", detail: "Lake Deschênes, established neighborhoods" },
-  { name: "Hull", href: "/en/hull", detail: "Urban, culture, condos" },
-  { name: "Gatineau centre", href: "/en/gatineau", detail: "Residential, services, affordable" },
+  { name: "Aylmer", href: "/en/aylmer/", detail: "Lake Deschênes, established neighborhoods" },
+  { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos" },
+  { name: "Gatineau centre", href: "/en/gatineau/", detail: "Residential, services, affordable" },
 ];
 
 const related = [
-  { title: "Living in the Plateau — the guide", text: "Lifestyle, families and recent developments.", href: "/en/living-plateau" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell" },
-  { title: "Free Valuation", text: "How much is your Plateau property worth?", href: "/en/home-valuation" },
-  { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer" },
-  { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods" },
+  { title: "Living in the Plateau — the guide", text: "Lifestyle, families and recent developments.", href: "/en/living-plateau/" },
+  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell/" },
+  { title: "Free Valuation", text: "How much is your Plateau property worth?", href: "/en/home-valuation/" },
+  { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer/" },
+  { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods/" },
 ];
 
 const PlateauPageEn = () => (
   <>
     <SEO title="Real estate broker Plateau Gatineau | YGS" description="Buy or sell in the Plateau in Gatineau. Quiet family neighborhood, Highway 50 access." canonical="https://yanisgauthier.com/en/plateau" hreflangFr="https://yanisgauthier.com/plateau" hreflangEn="https://yanisgauthier.com/en/plateau" lang="en" />
     <PageMeta title="Plateau — Neighborhood Guide Gatineau" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau" />
-    <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
+    <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau/" />
+    <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} heroBgImage={heroImg} />
 <ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">
       <div className="label-overline">The area</div>
       <h2 className="mt-3">Why the Plateau attracts families</h2>
@@ -93,12 +93,12 @@ const PlateauPageEn = () => (
         </p>
       </div>
     </ContentBlock>
-    <InlineCTA text="Own property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation" />
+    <InlineCTA text="Own property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <FAQSection title="Questions about the Plateau" items={faq} />
     <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in the Plateau" text="Process, budget and tips for buying in the area — in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Buyer or seller in the Plateau?" text="I know the Plateau — let's talk about your project." buttons={[{ label: "Free Valuation", href: "/en/home-valuation" }, { label: "Book a consultation", href: "/en/buyer-consultation", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Buyer or seller in the Plateau?" text="I know the Plateau — let's talk about your project." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
   </>
 );

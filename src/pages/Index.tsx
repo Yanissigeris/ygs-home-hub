@@ -56,8 +56,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
           title="Votre courtier immobilier en Outaouais"
           subtitle="Stratégie claire pour vendre, acheter ou investir."
           subtitleShort="Stratégie claire pour vendre, acheter ou investir."
-          primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" }}
-          secondaryCta={{ label: "Consultation", href: "/contact-yanis" }}
+          primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
+          secondaryCta={{ label: "Consultation", href: "/contact-yanis/" }}
           socialProof="Hall of Fame RE/MAX"
           heroBgImage={yanisHero}
           heroBgImageMobile={yanisHeroMobileAvif}
@@ -102,7 +102,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         title="Ce que disent mes clients"
         reviews={homepageReviews}
         reviewsPageLabel="Voir tous les témoignages"
-        reviewsPageHref="/temoignages"
+        reviewsPageHref="/temoignages/"
       />
       <div className="section-fade-bridge section-fade-bridge--white-to-dark" aria-hidden="true" />
 
@@ -120,7 +120,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         { q: "Quels sont les meilleurs quartiers pour acheter à Gatineau?", a: "Ça dépend de votre profil : Aylmer et le Plateau sont populaires auprès des familles, Hull attire les jeunes professionnels, et Chelsea ou Cantley séduisent ceux qui veulent la nature tout en restant proches de la ville." },
         { q: "Est-ce le bon moment pour vendre à Gatineau?", a: "Le marché immobilier en Outaouais reste actif. Une analyse de votre propriété permet de déterminer le meilleur timing et la stratégie de prix optimale pour maximiser votre résultat." },
       ]}
-      linkHref="/faq"
+      linkHref="/faq/"
       linkLabel="Voir toutes les questions"
     />
 
@@ -134,8 +134,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Prenez la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
       buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau" },
-        { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
