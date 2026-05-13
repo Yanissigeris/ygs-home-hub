@@ -127,20 +127,20 @@ const BlogArticlePage = () => {
     if (!post || !post.published) return;
     const frUrl = `${BASE_URL}/blogue/${post.slug}/`;
     const enUrl = `${BASE_URL}/en/blog/${post.slugEn}/`;
-    const createLink = (hreflang: string, href: string) => {
-      const link = document.createElement("link");
-      link.setAttribute("rel", "alternate");
-      link.setAttribute("hreflang", hreflang);
+    const setHreflang = (hreflang: string, href: string) => {
+      const selector = `link[rel="alternate"][hreflang="${hreflang}"]`;
+      let link = document.head.querySelector<HTMLLinkElement>(selector);
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "alternate");
+        link.setAttribute("hreflang", hreflang);
+        document.head.appendChild(link);
+      }
       link.setAttribute("href", href);
-      document.head.appendChild(link);
-      return link;
     };
-    const links = [
-      createLink("fr-CA", frUrl),
-      createLink("en-CA", enUrl),
-      createLink("x-default", frUrl),
-    ];
-    return () => { links.forEach(l => l.remove()); };
+    setHreflang("fr-CA", frUrl);
+    setHreflang("en-CA", enUrl);
+    setHreflang("x-default", frUrl);
   }, [post]);
 
   const body = post && post.published ? (isFr ? post.body : post.bodyEn) : "";
