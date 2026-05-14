@@ -23,6 +23,7 @@ import { fileURLToPath } from "node:url";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
+import { extractFaqFr, extractFaqEn } from "./faq-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -429,7 +430,7 @@ async function main() {
   for (const [route, meta] of Object.entries(SEO_ROUTES)) {
     const rawHtml = buildHtmlForRoute(shell, route, meta);
     const lang = route.startsWith("/en") ? "en-CA" : "fr-CA";
-    const html = injectGenericBodyFallback(rawHtml, {
+    let html = injectGenericBodyFallback(rawHtml, {
       title: meta.title,
       description: meta.description,
       lang,
@@ -437,6 +438,15 @@ async function main() {
 
     // Self-check #2: the fallback was actually injected for this route.
     assertFallbackInjected(html, route, "generic");
+
+    // Inject FAQPage JSON-LD for /faq and /en/faq (server-side, crawler-visible)
+    if (route === "/faq") {
+      const faqItems = await extractFaqFr();
+      html = injectFaqPageJsonLd(html, faqItems);
+    } else if (route === "/en/faq") {
+      const faqItems = await extractFaqEn();
+      html = injectFaqPageJsonLd(html, faqItems);
+    }
 
     // Output path
     let outPath;

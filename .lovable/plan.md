@@ -1,32 +1,30 @@
-## Plan : Sitemap lastmod fix (5 étapes)
+## Objectif
 
-### Étape 1 — `scripts/seo-routes.mjs`
-- Ajouter `export const SITE_LAST_UPDATE = "2026-05-13";` sous les exports existants (`SITE_URL`, `DEFAULT_OG`).
-- Mettre à jour le JSDoc en haut du fichier pour documenter :
-  - `SITE_LAST_UPDATE` : à bumper manuellement lors des changements site-wide (header, footer, template global).
-  - `lastmod` optionnel par route : à ajouter dans une entrée `SEO_ROUTES` quand une page reçoit une modif significative de contenu.
-- Le type `@type` de `SEO_ROUTES` reste inchangé pour l'instant ; le champ `lastmod` n'est pas ajouté aux entrées existantes.
+Injecter le schema JSON-LD `FAQPage` côté serveur pour `/faq/` et `/en/faq/` afin que Googlebot le voie dans le HTML pré-rendu (actuellement injecté seulement via `useEffect`, invisible aux crawlers).
 
-### Étape 2 — `scripts/prerender.mjs` (import)
-- Modifier l'import ligne 24 pour inclure `SITE_LAST_UPDATE` :
-  `import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";`
+## Plan (3 étapes)
 
-### Étape 3 — `scripts/prerender.mjs` (logique sitemap)
-- Dans le bloc `Object.keys(SEO_ROUTES)` (vers ligne 487), ajouter `const meta = SEO_ROUTES[route];` pour accéder à la meta de la route.
-- Remplacer ligne 508 `<lastmod>${today}</lastmod>` par `<lastmod>${meta?.lastmod || SITE_LAST_UPDATE}</lastmod>`.
-- NE PAS supprimer `const today = new Date()...` ligne 462 : elle sert encore de fallback pour les blogues ligne 623.
-- NE PAS toucher à la section blogues (lignes ~580-650).
+### 1. Créer `scripts/faq-extractor.mjs` (nouveau fichier)
 
-### Étape 4 — Build
-- Exécuter `npm run build` pour valider que le build passe sans erreur.
+Module qui lit `src/pages/FAQPage.tsx` et `src/pages/en/FAQPageEn.tsx` via regex (sans compilation TS) et extrait les 4 tableaux (`sellerFaq`, `buyerFaq`, `plexFaq`, `militaryFaq`) en une liste plate `{q, a}` par langue. Exporte `extractFaqFr()` et `extractFaqEn()`. Suit le même pattern que `blog-extractor.mjs`.
 
-### Étape 5 — Vérification post-build
-- Confirmer que `dist/sitemap.xml` existe et contient les ~208 URLs.
-- Confirmer que la majorité des URLs statiques ont `<lastmod>2026-05-13</lastmod>` (valeur de `SITE_LAST_UPDATE`).
-- Confirmer que les URLs de blogues conservent leur `<lastmod>` respective (`publishDate` ou fallback `today`).
-- Confirmer zéro régression TypeScript / ESLint.
+### 2. Modifier `scripts/prerender.mjs` (2 hunks, ~12 lignes)
 
----
+- **Hunk 1** (après ligne 25) : importer `extractFaqFr, extractFaqEn` depuis `./faq-extractor.mjs`.
+- **Hunk 2** (lignes 432-439) : changer `const html` → `let html`, et après `assertFallbackInjected(...)` ajouter un bloc qui appelle `injectFaqPageJsonLd(html, faqItems)` quand `route === "/faq"` ou `"/en/faq"`. Le helper `injectFaqPageJsonLd` existe déjà ligne 156 et est déjà utilisé pour les blogues (lignes 573/609).
 
-**Fichiers modifiés :** `scripts/seo-routes.mjs`, `scripts/prerender.mjs`
-**Aucun changement** aux composants React, pages, styles, ni aux scripts `audit-*.mjs`.
+### 3. Vérifications post-build
+
+- `npx tsc --noEmit` (0 erreur)
+- `npx vite build` (succès)
+- `node scripts/prerender.mjs` (succès)
+- `dist/faq/index.html` et `dist/en/faq/index.html` contiennent `<script id="ygs-faqpage-jsonld">` avec `"@type":"FAQPage"` et 16 entrées `"@type":"Question"`
+- `dist/index.html` ne contient AUCUN `"@type":"FAQPage"`
+- Diff scope : 1 nouveau fichier + 1 fichier modifié, aucun autre
+
+## Fichiers touchés
+
+- **Nouveau** : `scripts/faq-extractor.mjs`
+- **Modifié** : `scripts/prerender.mjs`
+
+Aucun changement à `FAQSection.tsx`, `FAQPage.tsx`, `FAQPageEn.tsx` (le useEffect client continue de fonctionner ; Google tolère plusieurs blocs `FAQPage` sur la même page).
