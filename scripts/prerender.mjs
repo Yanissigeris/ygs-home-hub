@@ -683,7 +683,7 @@ ${blogEntries}
    * the actual rendered React tree. Set SKIP_PUPPETEER=1 to skip (faster
    * builds for local dev / when only meta changes are needed).
    */
-  if (process.env.SKIP_PUPPETEER === "1" || process.env.NETLIFY === "true") {
+  if (process.env.SKIP_PUPPETEER === "1") {
     console.log("⏭️  SKIP_PUPPETEER=1 — skipping Puppeteer rendering pass.");
     return;
   }
