@@ -31,7 +31,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 
 const PORT = 4173;
-const CONCURRENCY = 1; // Sequential — Chromium becomes unstable under parallel newPage() load
+const CONCURRENCY = 4; // Parallel — stable on Puppeteer 23+ with --no-sandbox flags
 const NAV_TIMEOUT = 60_000;
 
 /**
