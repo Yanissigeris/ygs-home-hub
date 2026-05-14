@@ -7,7 +7,7 @@
 
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npx puppeteer browsers install chrome && npm run build"
 
 # No edge functions in the critical path — bots and humans both receive the
 # prerendered static HTML directly from the Netlify CDN (~50-100ms).
