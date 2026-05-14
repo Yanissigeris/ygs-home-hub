@@ -11,10 +11,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-if (process.env.NETLIFY === 'true') {
-  console.log('⏭️  Audit skipped on Netlify (meta-only prerender, no Puppeteer).');
-  process.exit(0);
-}
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
 
