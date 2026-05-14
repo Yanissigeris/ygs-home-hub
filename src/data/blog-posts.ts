@@ -266,6 +266,7 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
     categoryEn: "MARKET · SELLER",
     publishDate: "2026-04-19",
     published: true,
+    emitFaqSchema: true,
     body: `Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent — et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul. Avant d'inscrire votre maison ce printemps, voici ce que ça change vraiment.
 
 > « À Gatineau au T1 2026, la combinaison de moins de ventes et de plus d'inscriptions a exercé une légère pression sur les prix des unifamiliales — sans renverser l'avantage des vendeurs, mais en changeant ce qu'il faut faire pour maximiser son prix. » — Analyse YGS basée sur les données APCIQ/CIO, avril 2026.
@@ -359,6 +360,7 @@ A: Yes. More inventory means more visual competition. Presentation, photos, and 
     categoryEn: "MARKET · PLEX",
     publishDate: "2026-04-18",
     published: true,
+    emitFaqSchema: true,
     body: `Pendant que les ventes unifamiliales reculent et que les condos s'accumulent sur le marché, une catégorie fait exactement le contraire. Les plex en Outaouais.
 
 > En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours — contre 65 jours en mars 2025 — soit une compression de 42 jours en un an, selon la Chambre immobilière de l'Outaouais.
