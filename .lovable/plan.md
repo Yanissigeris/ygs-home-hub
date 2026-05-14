@@ -1,30 +1,47 @@
-## Objectif
+## Summary
+Enrich the existing `RealEstateAgent` JSON-LD in `index.html` with `geo` coordinates, `hasMap`, and the Google Business Profile URL to strengthen Google Maps Pack signals across all 208 prerendered routes.
 
-Injecter le schema JSON-LD `FAQPage` côté serveur pour `/faq/` et `/en/faq/` afin que Googlebot le voie dans le HTML pré-rendu (actuellement injecté seulement via `useEffect`, invisible aux crawlers).
+## Files to modify
+- `index.html` — 1 file only
 
-## Plan (3 étapes)
+## Changes
 
-### 1. Créer `scripts/faq-extractor.mjs` (nouveau fichier)
+### Change 1 — Add `geo` block after `address`
+Insert immediately after the closing `}` of the existing `"address"` object (after `"addressCountry": "CA"`):
 
-Module qui lit `src/pages/FAQPage.tsx` et `src/pages/en/FAQPageEn.tsx` via regex (sans compilation TS) et extrait les 4 tableaux (`sellerFaq`, `buyerFaq`, `plexFaq`, `militaryFaq`) en une liste plate `{q, a}` par langue. Exporte `extractFaqFr()` et `extractFaqEn()`. Suit le même pattern que `blog-extractor.mjs`.
+```json
+,
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.3956722,
+    "longitude": -75.8305061
+  }
+```
 
-### 2. Modifier `scripts/prerender.mjs` (2 hunks, ~12 lignes)
+### Change 2 — Add `hasMap` after `geo`
+Insert immediately after the closing `}` of the new `"geo"` object:
 
-- **Hunk 1** (après ligne 25) : importer `extractFaqFr, extractFaqEn` depuis `./faq-extractor.mjs`.
-- **Hunk 2** (lignes 432-439) : changer `const html` → `let html`, et après `assertFallbackInjected(...)` ajouter un bloc qui appelle `injectFaqPageJsonLd(html, faqItems)` quand `route === "/faq"` ou `"/en/faq"`. Le helper `injectFaqPageJsonLd` existe déjà ligne 156 et est déjà utilisé pour les blogues (lignes 573/609).
+```json
+,
+  "hasMap": "https://maps.app.goo.gl/JCxqwYWnv9S3ZUxVA"
+```
 
-### 3. Vérifications post-build
+### Change 3 — Append GBP URL to `sameAs` array
+The `sameAs` array currently ends with `"https://www.instagram.com/yanissigeris/"`. Add a comma to that line and append a new final entry:
 
-- `npx tsc --noEmit` (0 erreur)
-- `npx vite build` (succès)
-- `node scripts/prerender.mjs` (succès)
-- `dist/faq/index.html` et `dist/en/faq/index.html` contiennent `<script id="ygs-faqpage-jsonld">` avec `"@type":"FAQPage"` et 16 entrées `"@type":"Question"`
-- `dist/index.html` ne contient AUCUN `"@type":"FAQPage"`
-- Diff scope : 1 nouveau fichier + 1 fichier modifié, aucun autre
+```json
+,
+  "https://maps.app.goo.gl/JCxqwYWnv9S3ZUxVA"
+```
 
-## Fichiers touchés
+## Constraints preserved
+- No other fields of the `RealEstateAgent` block are modified.
+- The `Person` and `WebSite` JSON-LD blocks that follow are untouched.
+- No other project files are modified.
+- Existing 2-space indentation is preserved.
+- The `sameAs` deduplication is left as-is (FR/EN variants intentionally kept).
 
-- **Nouveau** : `scripts/faq-extractor.mjs`
-- **Modifié** : `scripts/prerender.mjs`
-
-Aucun changement à `FAQSection.tsx`, `FAQPage.tsx`, `FAQPageEn.tsx` (le useEffect client continue de fonctionner ; Google tolère plusieurs blocs `FAQPage` sur la même page).
+## Validation
+- Post-edit: verify the modified JSON-LD is valid JSON (no missing/extra commas).
+- Post-deploy: confirm `geo` and `hasMap` appear in View Source on both `/` and `/aylmer/`.
+- Optionally test via https://search.google.com/test/rich-results.
