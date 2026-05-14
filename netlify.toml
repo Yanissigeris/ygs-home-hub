@@ -1,6 +1,10 @@
 # Netlify configuration for yanisgauthier.com
 # SPA fallback is handled by public/_redirects (already in repo).
 
+[build.environment]
+
+  PUPPETEER_CACHE_DIR = "/opt/build/repo/node_modules/.cache/puppeteer"
+
 [build]
   publish = "dist"
   command = "npm run build"
