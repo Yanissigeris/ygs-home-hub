@@ -583,8 +583,7 @@ A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) a
     category: "Marché",
     categoryEn: "Market",
     publishDate: "2025-01-15",
-    published: true,
-    featured: true,
+    published: false,
     body: `## Le marché immobilier à Gatineau en 2025
 
 Le marché immobilier de Gatineau continue d'évoluer rapidement. Après plusieurs années de croissance soutenue, 2025 présente des tendances intéressantes pour les acheteurs comme pour les vendeurs.
