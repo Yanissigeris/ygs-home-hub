@@ -3,9 +3,9 @@
 /blog/*     /blogue/:splat     301
 
 # 301 — Ancien article de marché remplacé par l'update mensuel
-/blogue/marche-immobilier-gatineau-2025      /blogue/marche-immobilier-gatineau-avril-2026     301
+/blogue/marche-immobilier-gatineau-2025      /blogue/marche-immobilier-gatineau-avril-2026/     301
 /blogue/marche-immobilier-gatineau-2025/     /blogue/marche-immobilier-gatineau-avril-2026/    301
-/en/blog/gatineau-real-estate-market-2025    /en/blog/gatineau-real-estate-market-april-2026   301
+/en/blog/gatineau-real-estate-market-2025    /en/blog/gatineau-real-estate-market-april-2026/   301
 /en/blog/gatineau-real-estate-market-2025/   /en/blog/gatineau-real-estate-market-april-2026/  301
 
 # 301 — Anciennes URLs propriétés vers la page canonique
