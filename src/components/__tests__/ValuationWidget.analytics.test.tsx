@@ -2,9 +2,16 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import ValuationWidget from "../ValuationWidget";
 
-// Mock analytics module to capture trackEvent calls
+// Mock analytics module to capture trackEvent calls.
+// trackLead / trackGuideRequest are also exported and used by useFormSubmit;
+// they must be present here or the hook crashes (undefined is not a function).
 vi.mock("@/lib/analytics", () => ({
   trackEvent: vi.fn(),
+  trackLead: vi.fn(),
+  trackGuideRequest: vi.fn(),
+  trackContactTap: vi.fn(),
+  trackCTAClick: vi.fn(),
+  trackFormSubmission: vi.fn(),
 }));
 
 // Mock supabase client (insert + functions.invoke used in handleSubmit)
@@ -29,7 +36,7 @@ vi.mock("@/hooks/use-mobile", () => ({
   useIsMobile: () => false,
 }));
 
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackLead } from "@/lib/analytics";
 
 describe("ValuationWidget analytics events (post schema-attribute removal)", () => {
   beforeEach(() => {
@@ -57,7 +64,7 @@ describe("ValuationWidget analytics events (post schema-attribute removal)", () 
     );
   });
 
-  it("fires evaluation_widget_submitted after successful form completion", async () => {
+  it("fires generate_lead via trackLead after successful form completion", async () => {
     render(<ValuationWidget />);
 
     // Step 1 — address
@@ -83,12 +90,12 @@ describe("ValuationWidget analytics events (post schema-attribute removal)", () 
     fireEvent.click(screen.getByText(/Recevoir mon évaluation/i));
 
     await waitFor(() => {
-      expect(trackEvent).toHaveBeenCalledWith(
-        "evaluation_widget_submitted",
+      expect(trackLead).toHaveBeenCalledWith(
         expect.objectContaining({
-          event_category: "lead_generation",
-          event_label: "form_completed",
-          value: 1,
+          avatar: "vendeur",
+          offer: "evaluation_gratuite",
+          form_type: "valuation",
+          lang: "fr",
         }),
       );
     });

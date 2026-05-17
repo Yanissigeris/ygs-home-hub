@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -42,10 +43,34 @@ const faq = [
 
 const SellerPlanPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
+  const [address, setAddress] = useState("");
+  const [type, setType] = useState("");
+  const [secteur, setSecteur] = useState("");
+  const [delai, setDelai] = useState("");
+  const [achat, setAchat] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [notes, setNotes] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const ok = await submit({
+      formType: "consultation",
+      lang: "fr",
+      name,
+      email,
+      phone,
+      address,
+      message: notes,
+      projectType: type,
+      objective: `secteur:${secteur}|delai:${delai}|achat_parallele:${achat}`,
+      avatar: "vendeur",
+      offer: "consultation_vendeur",
+      sourcePage: "/plan-vendeur-gatineau",
+    });
+    if (ok) setSubmitted(true);
   };
 
   return (
@@ -86,12 +111,12 @@ const SellerPlanPage = () => {
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
                     <div>
                       <Label htmlFor="adresse">Adresse de la propriété</Label>
-                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
+                      <Input id="adresse" name="address" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required value={address} onChange={(e) => setAddress(e.target.value)} />
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="type">Type de propriété</Label>
-                        <Select>
+                        <Select value={type} onValueChange={setType}>
                           <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="maison">Maison unifamiliale</SelectItem>
@@ -104,7 +129,7 @@ const SellerPlanPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="secteur">Secteur</Label>
-                        <Select>
+                        <Select value={secteur} onValueChange={setSecteur}>
                           <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
@@ -119,7 +144,7 @@ const SellerPlanPage = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="delai">Quand pensez-vous vendre?</Label>
-                        <Select>
+                        <Select value={delai} onValueChange={setDelai}>
                           <SelectTrigger id="delai" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="maintenant">Le plus tôt possible</SelectItem>
@@ -131,7 +156,7 @@ const SellerPlanPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="achat">Achetez-vous en parallèle?</Label>
-                        <Select>
+                        <Select value={achat} onValueChange={setAchat}>
                           <SelectTrigger id="achat" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="oui">Oui</SelectItem>
@@ -147,24 +172,24 @@ const SellerPlanPage = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="nom">Nom</Label>
-                        <Input id="nom" className="mt-1.5" required />
+                        <Input id="nom" name="name" className="mt-1.5" required value={name} onChange={(e) => setName(e.target.value)} />
                       </div>
                       <div>
                         <Label htmlFor="courriel">Courriel</Label>
-                        <Input id="courriel" type="email" className="mt-1.5" required />
+                        <Input id="courriel" name="email" type="email" className="mt-1.5" required value={email} onChange={(e) => setEmail(e.target.value)} />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="tel">Téléphone</Label>
-                      <Input id="tel" type="tel" className="mt-1.5" />
+                      <Input id="tel" name="phone" type="tel" className="mt-1.5" value={phone} onChange={(e) => setPhone(e.target.value)} />
                     </div>
                     <div>
                       <Label htmlFor="notes">Notes (optionnel)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, situation particulière…" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, situation particulière…" value={notes} onChange={(e) => setNotes(e.target.value)} />
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
-                      Recevoir mon plan vendeur
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
+                      {submitting ? "Envoi…" : "Recevoir mon plan vendeur"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Je vous donne les chiffres et les options, vous décidez.
