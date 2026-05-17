@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import { trackContactTap, type ContactChannel } from "@/lib/analytics";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import HeroSection from "@/components/HeroSection";
