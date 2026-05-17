@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackLead, trackContactTap } from "@/lib/analytics";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 // Supabase client is dynamically imported inside the submit handler so the
@@ -139,10 +139,11 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         },
       });
 
-      trackEvent("evaluation_widget_submitted", {
-        event_category: "lead_generation",
-        event_label: "form_completed",
-        value: 1,
+      trackLead({
+        avatar: "vendeur",
+        offer: "evaluation_gratuite",
+        form_type: "valuation",
+        lang,
       });
 
       setStep(3);
@@ -494,7 +495,11 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               </p>
               <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }}>
                 {c.urgentQ}{" "}
-                <a href="tel:+18192103044" style={{ color: DARK, textDecoration: "underline", fontWeight: 600 }}>
+                <a
+                  href="tel:+18192103044"
+                  onClick={() => trackContactTap({ channel: "phone", location: "inline", destination: "+18192103044" })}
+                  style={{ color: DARK, textDecoration: "underline", fontWeight: 600 }}
+                >
                   819-210-3044
                 </a>
               </p>
