@@ -4,6 +4,7 @@ import ServiceJsonLd from "@/components/ServiceJsonLd";
 import heroImg from "@/assets/hero-contact.webp";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import { trackContactTap, type ContactChannel } from "@/lib/analytics";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
