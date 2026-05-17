@@ -63,6 +63,7 @@ const RemaxAgencyBlock = ({ lang }: RemaxAgencyBlockProps) => {
           href="tel:+18196840000"
           className="underline-offset-2 hover:underline"
           style={{ color: "inherit" }}
+          onClick={() => trackContactTap({ channel: "phone", location: "inline", destination: "+18196840000" })}
         >
           819-684-0000
         </a>
