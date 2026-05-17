@@ -36,7 +36,7 @@ vi.mock("@/hooks/use-mobile", () => ({
   useIsMobile: () => false,
 }));
 
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackLead } from "@/lib/analytics";
 
 describe("ValuationWidget analytics events (post schema-attribute removal)", () => {
   beforeEach(() => {
@@ -64,7 +64,7 @@ describe("ValuationWidget analytics events (post schema-attribute removal)", () 
     );
   });
 
-  it("fires evaluation_widget_submitted after successful form completion", async () => {
+  it("fires generate_lead via trackLead after successful form completion", async () => {
     render(<ValuationWidget />);
 
     // Step 1 — address
@@ -90,12 +90,12 @@ describe("ValuationWidget analytics events (post schema-attribute removal)", () 
     fireEvent.click(screen.getByText(/Recevoir mon évaluation/i));
 
     await waitFor(() => {
-      expect(trackEvent).toHaveBeenCalledWith(
-        "evaluation_widget_submitted",
+      expect(trackLead).toHaveBeenCalledWith(
         expect.objectContaining({
-          event_category: "lead_generation",
-          event_label: "form_completed",
-          value: 1,
+          avatar: "vendeur",
+          offer: "evaluation_gratuite",
+          form_type: "valuation",
+          lang: "fr",
         }),
       );
     });
