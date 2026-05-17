@@ -91,6 +91,8 @@ const BuyerGuidePage = () => (
     </ContentBlock>
 
     <GuideRequestForm
+      avatar="acheteur"
+      offer="guide_acheteur"
       guideTitle="Recevez le guide acheteur"
       headline="Recevez votre guide acheteur gratuit"
       subtitle="Tout ce que vous devez savoir pour acheter à Gatineau — dans un guide clair, étape par étape, envoyé directement dans votre boîte courriel."

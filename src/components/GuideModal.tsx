@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import type { Avatar, Offer } from "@/lib/analytics";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
 } from "@/components/ui/dialog";
@@ -12,6 +13,13 @@ import {
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 
 export type GuideType = "seller_guide" | "buyer_guide" | "investor_guide" | "relocation_guide";
+
+const GUIDE_META: Record<GuideType, { avatar: Avatar; offer: Offer }> = {
+  seller_guide:     { avatar: "vendeur",        offer: "guide_vendeur" },
+  buyer_guide:      { avatar: "acheteur",       offer: "guide_acheteur" },
+  investor_guide:   { avatar: "investisseur",   offer: "guide_investisseur" },
+  relocation_guide: { avatar: "relocalisation", offer: "guide_relocalisation" },
+};
 
 interface GuideModalProps {
   open: boolean;
@@ -115,6 +123,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const fd = new FormData(form);
+    const meta = GUIDE_META[guideType];
     const success = await submit({
       formType: "guide", lang,
       name: fd.get("first_name") as string || "",
@@ -122,6 +131,8 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
       phone: fd.get("phone") as string || undefined,
       projectType: fd.get("project_type") as string || undefined,
       guideTitle: config.title,
+      avatar: meta.avatar,
+      offer: meta.offer,
     });
     if (success) setSubmitted(true);
   };

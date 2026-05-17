@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
@@ -40,7 +41,31 @@ const faq = [
 
 const PlexAnalysisPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const [plexType, setPlexType] = useState("");
+  const [area, setArea] = useState("");
+  const [situation, setSituation] = useState("");
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const ok = await submit({
+      formType: "analysis", lang: "en",
+      name: String(fd.get("name") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      phone: String(fd.get("phone") ?? "") || undefined,
+      address: String(fd.get("address") ?? "") || undefined,
+      projectType: plexType || undefined,
+      objective: situation || undefined,
+      message: [
+        area ? `Area: ${area}` : "",
+        fd.get("revenues") ? `Monthly revenues: ${fd.get("revenues")}` : "",
+        fd.get("notes") ? `Notes: ${fd.get("notes")}` : "",
+      ].filter(Boolean).join(" | ") || undefined,
+      avatar: "investisseur",
+      offer: "plex_analyse",
+    });
+    if (ok) setSubmitted(true);
+  };
 
   return (
     <>

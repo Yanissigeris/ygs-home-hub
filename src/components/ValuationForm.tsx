@@ -194,19 +194,11 @@ const ValuationForm = ({
       phone: values.phone || undefined,
       address: values.address || undefined,
       message: message || undefined,
+      avatar: "vendeur",
+      offer: "evaluation_gratuite",
     });
     if (ok) {
       setSubmitted(true);
-      const w = window as Window & { gtag?: (...args: unknown[]) => void };
-      if (typeof w.gtag === "function") {
-        w.gtag("event", "generate_lead", {
-          currency: "CAD",
-          value: 1.0,
-          lead_type: "home_valuation",
-          lead_language: lang,
-          page_path: window.location.pathname,
-        });
-      }
     }
   };
 
