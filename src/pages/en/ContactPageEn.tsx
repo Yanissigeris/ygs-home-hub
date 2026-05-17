@@ -39,6 +39,15 @@ const contactItems = [
   { icon: MapPin, label: "Area", value: "Gatineau, Aylmer, Hull, Plateau" },
 ];
 
+const objectiveToAvatarOffer = (objective: string | undefined) => {
+  switch (objective) {
+    case "sell":    return { avatar: "vendeur" as const,       offer: "consultation_vendeur" as const };
+    case "buy":     return { avatar: "acheteur" as const,      offer: "consultation_acheteur" as const };
+    case "invest":  return { avatar: "investisseur" as const,  offer: "plex_analyse" as const };
+    default:        return { avatar: "mixed" as const,         offer: "contact_general" as const };
+  }
+};
+
 const ContactPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
   const { submit, submitting } = useFormSubmit();
@@ -46,13 +55,17 @@ const ContactPageEn = () => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const fd = new FormData(form);
+    const objective = fd.get("objective") as string || undefined;
+    const { avatar, offer } = objectiveToAvatarOffer(objective);
     const success = await submit({
       formType: "contact", lang: "en",
       name: fd.get("name") as string || "",
       email: fd.get("email") as string || "",
       phone: fd.get("phone") as string || undefined,
       message: fd.get("message") as string || undefined,
-      objective: fd.get("objective") as string || undefined,
+      objective,
+      avatar,
+      offer,
     });
     if (success) setSubmitted(true);
   };

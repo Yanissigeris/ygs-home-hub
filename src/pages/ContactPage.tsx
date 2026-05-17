@@ -47,6 +47,15 @@ const contactItems = [
   { icon: MapPin, label: "Région", value: "Gatineau, Aylmer, Hull, Plateau" },
 ];
 
+const objectiveToAvatarOffer = (objectif: string | undefined) => {
+  switch (objectif) {
+    case "vendre":  return { avatar: "vendeur" as const,       offer: "consultation_vendeur" as const };
+    case "acheter": return { avatar: "acheteur" as const,      offer: "consultation_acheteur" as const };
+    case "investir":return { avatar: "investisseur" as const,  offer: "plex_analyse" as const };
+    default:        return { avatar: "mixed" as const,         offer: "contact_general" as const };
+  }
+};
+
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const { submit, submitting } = useFormSubmit();
@@ -55,6 +64,8 @@ const ContactPage = () => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const objectif = formData.get("objectif") as string || undefined;
+    const { avatar, offer } = objectiveToAvatarOffer(objectif);
     const success = await submit({
       formType: "contact",
       lang: "fr",
@@ -62,7 +73,9 @@ const ContactPage = () => {
       email: formData.get("courriel") as string || "",
       phone: formData.get("tel") as string || undefined,
       message: formData.get("message") as string || undefined,
-      objective: formData.get("objectif") as string || undefined,
+      objective: objectif,
+      avatar,
+      offer,
     });
     if (success) setSubmitted(true);
   };
