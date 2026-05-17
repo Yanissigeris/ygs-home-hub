@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackCTAClick } from "@/lib/analytics";
+import { trackCTAClick, trackContactTap } from "@/lib/analytics";
 import { getAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 
 const HIDDEN_PATHS = [
