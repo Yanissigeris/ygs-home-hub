@@ -124,7 +124,10 @@ const StickyMobileCTA = () => {
         <a
           href="tel:+18192103044"
           aria-label={callAriaLabel}
-          onClick={() => trackCTAClick("call", "sticky-mobile-cta")}
+          onClick={() => {
+            trackCTAClick("call", "sticky-mobile-cta");
+            trackContactTap({ channel: "phone", location: "sticky_cta", destination: "+18192103044" });
+          }}
           className="flex-1 inline-flex items-center justify-center transition-colors"
           style={{
             background: "transparent",
