@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
@@ -40,7 +41,7 @@ const faq = [
 
 const PlexAnalysisPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const { submit, submitting } = (require("@/hooks/useFormSubmit") as typeof import("@/hooks/useFormSubmit")).useFormSubmit();
+  const { submit, submitting } = useFormSubmit();
   const [plexType, setPlexType] = useState("");
   const [area, setArea] = useState("");
   const [situation, setSituation] = useState("");
