@@ -92,6 +92,8 @@ const SellerGuidePageEn = () => (
     </ContentBlock>
 
     <GuideRequestForm
+      avatar="vendeur"
+      offer="guide_vendeur"
       guideTitle="Get the Seller Guide"
       headline="Get your free seller guide"
       subtitle="Everything you need to know to sell at the best price in Gatineau — preparation, pricing, marketing and negotiation."
