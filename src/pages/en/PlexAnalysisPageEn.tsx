@@ -105,12 +105,12 @@ const PlexAnalysisPageEn = () => {
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
                     <div>
                       <Label htmlFor="address">Plex address</Label>
-                      <Input id="address" placeholder="123 Example St, Gatineau" className="mt-1.5" required />
+                      <Input id="address" name="address" placeholder="123 Example St, Gatineau" className="mt-1.5" required />
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="type">Plex type</Label>
-                        <Select>
+                        <Select value={plexType} onValueChange={setPlexType}>
                           <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="duplex">Duplex</SelectItem>
@@ -122,7 +122,7 @@ const PlexAnalysisPageEn = () => {
                       </div>
                       <div>
                         <Label htmlFor="area">Area</Label>
-                        <Select>
+                        <Select value={area} onValueChange={setArea}>
                           <SelectTrigger id="area" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="hull">Hull</SelectItem>
@@ -137,7 +137,7 @@ const PlexAnalysisPageEn = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="situation">Your situation</Label>
-                        <Select>
+                        <Select value={situation} onValueChange={setSituation}>
                           <SelectTrigger id="situation" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="owner">I own this plex</SelectItem>
@@ -148,7 +148,7 @@ const PlexAnalysisPageEn = () => {
                       </div>
                       <div>
                         <Label htmlFor="revenues">Monthly gross revenues (approx.)</Label>
-                        <Input id="revenues" placeholder="e.g. $3,200" className="mt-1.5" />
+                        <Input id="revenues" name="revenues" placeholder="e.g. $3,200" className="mt-1.5" />
                       </div>
                     </div>
 
@@ -157,24 +157,24 @@ const PlexAnalysisPageEn = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="name">Name</Label>
-                        <Input id="name" className="mt-1.5" required />
+                        <Input id="name" name="name" className="mt-1.5" required />
                       </div>
                       <div>
                         <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" className="mt-1.5" required />
+                        <Input id="email" name="email" type="email" className="mt-1.5" required />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" type="tel" className="mt-1.5" />
+                      <Input id="phone" name="phone" type="tel" className="mt-1.5" />
                     </div>
                     <div>
                       <Label htmlFor="notes">Additional notes (optional)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Context, questions, relevant details…" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Context, questions, relevant details…" />
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
-                      Get my plex analysis
+                    <Button type="submit" size="xl" variant="accent" disabled={submitting} className="w-full mt-2 shadow-md font-semibold">
+                      {submitting ? "Sending…" : "Get my plex analysis"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       I give you the numbers and the options — you decide with full clarity.
