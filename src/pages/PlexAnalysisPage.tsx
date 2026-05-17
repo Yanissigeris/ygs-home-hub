@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 
 import heroImg from "@/assets/hero-plex.webp";
 
@@ -41,10 +42,32 @@ const faq = [
 
 const PlexAnalysisPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { submit, submitting } = useFormSubmit();
+  const [plexType, setPlexType] = useState("");
+  const [secteur, setSecteur] = useState("");
+  const [situation, setSituation] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    const fd = new FormData(e.currentTarget);
+    const ok = await submit({
+      formType: "analysis",
+      lang: "fr",
+      name: String(fd.get("nom") ?? ""),
+      email: String(fd.get("courriel") ?? ""),
+      phone: String(fd.get("tel") ?? "") || undefined,
+      address: String(fd.get("adresse") ?? "") || undefined,
+      projectType: plexType || undefined,
+      objective: situation || undefined,
+      message: [
+        secteur ? `Secteur: ${secteur}` : "",
+        fd.get("revenus") ? `Revenus mensuels: ${fd.get("revenus")}` : "",
+        fd.get("notes") ? `Notes: ${fd.get("notes")}` : "",
+      ].filter(Boolean).join(" | ") || undefined,
+      avatar: "investisseur",
+      offer: "plex_analyse",
+    });
+    if (ok) setSubmitted(true);
   };
 
   return (
@@ -85,12 +108,12 @@ const PlexAnalysisPage = () => {
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
                     <div>
                       <Label htmlFor="adresse">Adresse du plex</Label>
-                      <Input id="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
+                      <Input id="adresse" name="adresse" placeholder="123 rue Exemple, Gatineau" className="mt-1.5" required />
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="type">Type de plex</Label>
-                        <Select>
+                        <Select value={plexType} onValueChange={setPlexType}>
                           <SelectTrigger id="type" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="duplex">Duplex</SelectItem>
@@ -102,7 +125,7 @@ const PlexAnalysisPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="secteur">Secteur</Label>
-                        <Select>
+                        <Select value={secteur} onValueChange={setSecteur}>
                           <SelectTrigger id="secteur" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="hull">Hull</SelectItem>
@@ -117,7 +140,7 @@ const PlexAnalysisPage = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="situation">Votre situation</Label>
-                        <Select>
+                        <Select value={situation} onValueChange={setSituation}>
                           <SelectTrigger id="situation" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="proprietaire">Je possède ce plex</SelectItem>
@@ -128,7 +151,7 @@ const PlexAnalysisPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="revenus">Revenus mensuels bruts (approx.)</Label>
-                        <Input id="revenus" placeholder="Ex: 3 200 $" className="mt-1.5" />
+                        <Input id="revenus" name="revenus" placeholder="Ex: 3 200 $" className="mt-1.5" />
                       </div>
                     </div>
 
@@ -137,24 +160,24 @@ const PlexAnalysisPage = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="nom">Nom</Label>
-                        <Input id="nom" className="mt-1.5" required />
+                        <Input id="nom" name="nom" className="mt-1.5" required />
                       </div>
                       <div>
                         <Label htmlFor="courriel">Courriel</Label>
-                        <Input id="courriel" type="email" className="mt-1.5" required />
+                        <Input id="courriel" name="courriel" type="email" className="mt-1.5" required />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="tel">Téléphone</Label>
-                      <Input id="tel" type="tel" className="mt-1.5" />
+                      <Input id="tel" name="tel" type="tel" className="mt-1.5" />
                     </div>
                     <div>
                       <Label htmlFor="notes">Notes additionnelles (optionnel)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, détails pertinents…" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, détails pertinents…" />
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
-                      Recevoir mon analyse plex
+                    <Button type="submit" size="xl" variant="accent" disabled={submitting} className="w-full mt-2 shadow-md font-semibold">
+                      {submitting ? "Envoi…" : "Recevoir mon analyse plex"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Je vous donne les chiffres et les options, vous décidez.
