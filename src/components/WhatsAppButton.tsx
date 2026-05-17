@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackContactTap } from "@/lib/analytics";
 
 const HIDDEN_PATHS = [
   "/contact-yanis/", "/en/contact/",
@@ -56,6 +57,7 @@ const FloatingCallButton = () => {
       <a
         href="tel:+18192103044"
         aria-label={ariaLabelDesktop}
+        onClick={() => trackContactTap({ channel: "phone", location: "sticky_cta", destination: "+18192103044" })}
         className="floating-call-btn group fixed z-[490] hidden md:inline-flex items-center justify-center"
         style={{
           bottom: "clamp(20px, 2.5vw, 32px)",

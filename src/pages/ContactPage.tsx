@@ -4,6 +4,7 @@ import ServiceJsonLd from "@/components/ServiceJsonLd";
 import heroImg from "@/assets/hero-contact.webp";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import { trackContactTap, type ContactChannel } from "@/lib/analytics";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsById } from "@/data/reviews";
 import HeroSection from "@/components/HeroSection";
@@ -114,7 +115,25 @@ const ContactPage = () => {
           Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.
         </p>
 
-        <ContactCard items={contactItems} />
+        <ContactCard
+          items={contactItems}
+          onTap={(item) => {
+            if (!item.href) return;
+            const channel: ContactChannel | null = item.href.startsWith("tel:")
+              ? "phone"
+              : item.href.startsWith("mailto:")
+                ? "email"
+                : item.href.startsWith("sms:")
+                  ? "sms"
+                  : null;
+            if (!channel) return;
+            trackContactTap({
+              channel,
+              location: "contact_page",
+              destination: item.href.replace(/^(tel:|mailto:|sms:)/, ""),
+            });
+          }}
+        />
       </ProfileSection>
 
       <CardGrid

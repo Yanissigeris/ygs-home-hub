@@ -14,6 +14,7 @@ import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
 import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
 import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
+import { trackContactTap } from "@/lib/analytics";
 
 type AffiliationLogo = {
   alt: string;
@@ -317,12 +318,12 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
             <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
-              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }}>819-684-0000</a>
+              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
               {"  ·  "}
               {lang === "en" ? "Mobile: " : "Cellulaire : "}
-              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }}>819-210-3044</a>
+              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18192103044" })}>819-210-3044</a>
               {"  ·  "}
-              <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }}>yanis@martywaite.com</a>
+              <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "email", location: "footer", destination: "yanis@martywaite.com" })}>yanis@martywaite.com</a>
             </p>
           </address>
           {/* ── Copyright ── */}

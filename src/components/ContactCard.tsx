@@ -15,16 +15,22 @@ export interface ContactItem {
 interface ContactCardProps {
   title?: string;
   items: ContactItem[];
+  /** Optional handler fired when a contact link is clicked — used for analytics. */
+  onTap?: (item: ContactItem) => void;
 }
 
-const ContactCard = ({ title = "Coordonnées", items }: ContactCardProps) => (
+const ContactCard = ({ title = "Coordonnées", items, onTap }: ContactCardProps) => (
   <div className="mt-10 card-elevated border border-border/40 bg-secondary/25 p-7">
     <p className="text-[1.0625rem] font-semibold text-foreground mb-5">{title}</p>
     <div className="space-y-3.5 text-[0.9375rem] text-muted-foreground">
       {items.map((item, idx) => {
         const display = item.value ?? item.text ?? "";
         const inner = item.href ? (
-          <a href={item.href} className="hover:text-foreground transition-colors">
+          <a
+            href={item.href}
+            className="hover:text-foreground transition-colors"
+            onClick={() => onTap?.(item)}
+          >
             {display}
           </a>
         ) : (

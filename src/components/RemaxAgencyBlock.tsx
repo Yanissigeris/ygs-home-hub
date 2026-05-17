@@ -1,6 +1,7 @@
 import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
 // TODO: replace with @/assets/remax-balloon-color.svg once uploaded by user (official RE/MAX color balloon required by Guide section 1.4)
 import remaxBalloonColor from "@/assets/remax-balloon-official.png";
+import { trackContactTap } from "@/lib/analytics";
 
 interface RemaxAgencyBlockProps {
   lang: "fr" | "en";
@@ -62,6 +63,7 @@ const RemaxAgencyBlock = ({ lang }: RemaxAgencyBlockProps) => {
           href="tel:+18196840000"
           className="underline-offset-2 hover:underline"
           style={{ color: "inherit" }}
+          onClick={() => trackContactTap({ channel: "phone", location: "inline", destination: "+18196840000" })}
         >
           819-684-0000
         </a>

@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { useState, FormEvent } from "react";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import { trackContactTap, type ContactChannel } from "@/lib/analytics";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByIdEn as getReviewsById } from "@/data/reviews-en";
 import HeroSection from "@/components/HeroSection";
@@ -79,7 +80,25 @@ const ContactPageEn = () => {
         <p className="prose-body mt-6">Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.</p>
         <p className="prose-body mt-4">A member of the Marty Waite Team since the beginning and active in residential real estate since 2017, I've been recognized by RE/MAX — Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.</p>
         <p className="prose-body mt-4">A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.</p>
-        <ContactCard items={contactItems} />
+        <ContactCard
+          items={contactItems}
+          onTap={(item) => {
+            if (!item.href) return;
+            const channel: ContactChannel | null = item.href.startsWith("tel:")
+              ? "phone"
+              : item.href.startsWith("mailto:")
+                ? "email"
+                : item.href.startsWith("sms:")
+                  ? "sms"
+                  : null;
+            if (!channel) return;
+            trackContactTap({
+              channel,
+              location: "contact_page",
+              destination: item.href.replace(/^(tel:|mailto:|sms:)/, ""),
+            });
+          }}
+        />
       </ProfileSection>
       <CardGrid overline="Services" title="How I can help" items={services} background="alt" />
       <FormSection id="contact-form" title="Tell me where you are">
