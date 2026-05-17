@@ -2,9 +2,16 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import ValuationWidget from "../ValuationWidget";
 
-// Mock analytics module to capture trackEvent calls
+// Mock analytics module to capture trackEvent calls.
+// trackLead / trackGuideRequest are also exported and used by useFormSubmit;
+// they must be present here or the hook crashes (undefined is not a function).
 vi.mock("@/lib/analytics", () => ({
   trackEvent: vi.fn(),
+  trackLead: vi.fn(),
+  trackGuideRequest: vi.fn(),
+  trackContactTap: vi.fn(),
+  trackCTAClick: vi.fn(),
+  trackFormSubmission: vi.fn(),
 }));
 
 // Mock supabase client (insert + functions.invoke used in handleSubmit)
