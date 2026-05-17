@@ -6,7 +6,7 @@ const corsHeaders = {
 };
 
 interface EmailRequest {
-  formType: "contact" | "valuation" | "guide";
+  formType: "contact" | "valuation" | "guide" | "analysis" | "consultation";
   lang: "fr" | "en";
   name: string;
   email: string;
@@ -45,6 +45,16 @@ function getFromEmail(): string {
   return configuredFromEmail;
 }
 
+function labelForFormType(t: EmailRequest["formType"]): string {
+  switch (t) {
+    case "contact": return "Contact";
+    case "valuation": return "Évaluation";
+    case "guide": return "Guide";
+    case "analysis": return "Analyse plex";
+    case "consultation": return "Consultation";
+  }
+}
+
 function buildNotificationHtml(data: EmailRequest): string {
   const fields = [
     `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type</td><td style="padding:8px 12px">${data.formType} (${data.lang})</td></tr>`,
@@ -58,7 +68,7 @@ function buildNotificationHtml(data: EmailRequest): string {
     data.message ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Message</td><td style="padding:8px 12px">${data.message}</td></tr>` : "",
   ].filter(Boolean).join("");
 
-  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande — ${data.formType === "contact" ? "Contact" : data.formType === "valuation" ? "Évaluation" : "Guide"}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
+  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande — ${labelForFormType(data.formType)}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
 }
 
 function buildConfirmationHtml(data: EmailRequest): { subject: string; html: string } {
@@ -76,6 +86,20 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
     return {
       subject: isFr ? "Votre évaluation gratuite est en route — YGS" : "Your free valuation is on its way — YGS",
       html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande d'évaluation pour :" : "I've received your valuation request for:"}</p>${data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : ""}<p style="color:#555;line-height:1.7">${isFr ? "Je vous reviens personnellement dans les 24 prochaines heures avec une analyse basée sur les ventes comparables récentes dans votre secteur." : "I'll get back to you personally within 24 hours with an analysis based on recent comparable sales in your area."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+    };
+  }
+
+  if (data.formType === "analysis") {
+    return {
+      subject: isFr ? "Votre analyse plex est en préparation — YGS" : "Your plex analysis is in progress — YGS",
+      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens personnellement dans les 48 prochaines heures avec une analyse complète — pas un rapport générique." : "I've received your plex analysis request. I'll get back to you personally within 48 hours with a complete analysis — not a generic report."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+    };
+  }
+
+  if (data.formType === "consultation") {
+    return {
+      subject: isFr ? "Votre demande de consultation est reçue — YGS" : "Your consultation request was received — YGS",
+      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande de consultation. Je vous reviens personnellement dans les 24 à 48 prochaines heures." : "I've received your consultation request. I'll get back to you personally within 24-48 hours."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
     };
   }
 
@@ -110,7 +134,11 @@ serve(async (req) => {
       ? `Nouveau contact — ${data.name}`
       : data.formType === "valuation"
         ? `Nouvelle évaluation — ${data.name}`
-        : `Nouveau guide demandé — ${data.name}`;
+        : data.formType === "analysis"
+          ? `Nouvelle analyse plex — ${data.name}`
+          : data.formType === "consultation"
+            ? `Nouvelle consultation — ${data.name}`
+            : `Nouveau guide demandé — ${data.name}`;
 
     const notifRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
