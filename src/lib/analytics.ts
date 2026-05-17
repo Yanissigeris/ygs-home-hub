@@ -9,7 +9,34 @@ declare global {
   }
 }
 
-type FormType = "contact" | "valuation" | "guide";
+type FormType = "contact" | "valuation" | "guide" | "analysis" | "consultation";
+
+export type Avatar =
+  | "vendeur"
+  | "acheteur"
+  | "investisseur"
+  | "relocalisation"
+  | "militaire"
+  | "mixed";
+
+export type Offer =
+  | "evaluation_gratuite"
+  | "consultation_vendeur"
+  | "consultation_acheteur"
+  | "plex_analyse"
+  | "guide_vendeur"
+  | "guide_acheteur"
+  | "guide_investisseur"
+  | "guide_relocalisation"
+  | "contact_general";
+
+export type ContactChannel = "phone" | "email" | "sms" | "whatsapp";
+export type ContactLocation =
+  | "footer"
+  | "hero"
+  | "inline"
+  | "sticky_cta"
+  | "contact_page";
 
 /**
  * Debug mode for analytics.
@@ -50,12 +77,44 @@ export function trackEvent(
   }
 }
 
-/** Track successful form submission */
+/** Track successful form submission (legacy — prefer trackLead) */
 export function trackFormSubmission(formType: FormType, extra?: Record<string, string>) {
   trackEvent("generate_lead", {
     form_type: formType,
     ...extra,
   });
+}
+
+/**
+ * Track a lead generation event tagged by avatar segment + offer.
+ * Single source of truth for the `generate_lead` GA4 event.
+ */
+export function trackLead(params: {
+  avatar: Avatar;
+  offer: Offer;
+  source_page?: string;
+  form_type?: string;
+  lang?: "fr" | "en";
+  extra?: Record<string, string | number | boolean>;
+}) {
+  const { extra, source_page, ...rest } = params;
+  const resolvedSource =
+    source_page ??
+    (typeof window !== "undefined" ? window.location.pathname : "");
+  trackEvent("generate_lead", {
+    ...rest,
+    source_page: resolvedSource,
+    ...(extra ?? {}),
+  });
+}
+
+/** Track a phone / email / sms / whatsapp tap. */
+export function trackContactTap(params: {
+  channel: ContactChannel;
+  location: ContactLocation;
+  destination: string;
+}) {
+  trackEvent("contact_tap", params);
 }
 
 /** Track CTA click */
