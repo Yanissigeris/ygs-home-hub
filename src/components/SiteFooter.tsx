@@ -14,6 +14,7 @@ import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
 import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
 import { footerColumns, footerPopularLinks } from "@/data/navigation";
 import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
+import { trackContactTap } from "@/lib/analytics";
 
 type AffiliationLogo = {
   alt: string;
