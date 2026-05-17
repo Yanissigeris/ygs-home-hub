@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackContactTap } from "@/lib/analytics";
 
 const HIDDEN_PATHS = [
   "/contact-yanis/", "/en/contact/",
