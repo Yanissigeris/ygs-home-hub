@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Send, Lock, Shield, Clock, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import type { Avatar, Offer } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 interface GuideRequestFormProps {
@@ -18,6 +19,8 @@ interface GuideRequestFormProps {
   submitLabel: string;
   successTitle?: string;
   successText?: string;
+  avatar: Avatar;
+  offer: Offer;
 }
 
 const i18n = {
@@ -108,6 +111,8 @@ const GuideRequestForm = ({
   submitLabel,
   successTitle,
   successText,
+  avatar,
+  offer,
 }: GuideRequestFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const lang = useLanguage();
@@ -137,6 +142,8 @@ const GuideRequestForm = ({
       email: values.email,
       phone: values.phone || undefined,
       guideTitle,
+      avatar,
+      offer,
     });
     if (ok) setSubmitted(true);
   };
