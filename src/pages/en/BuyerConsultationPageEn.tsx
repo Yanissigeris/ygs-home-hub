@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { useFormSubmit } from "@/hooks/useFormSubmit";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -47,7 +48,31 @@ const faq = [
 
 const BuyerConsultationPageEn = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const { submit, submitting } = useFormSubmit();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [budget, setBudget] = useState("");
+  const [area, setArea] = useState("");
+  const [timeline, setTimeline] = useState("");
+  const [notes, setNotes] = useState("");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const ok = await submit({
+      formType: "consultation",
+      lang: "en",
+      name,
+      email,
+      phone,
+      message: notes,
+      objective: `budget:${budget}|area:${area}|timeline:${timeline}`,
+      avatar: "acheteur",
+      offer: "consultation_acheteur",
+      sourcePage: "/en/buyer-consultation",
+    });
+    if (ok) setSubmitted(true);
+  };
 
   return (
     <>
@@ -88,23 +113,23 @@ const BuyerConsultationPageEn = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="name">Name</Label>
-                        <Input id="name" className="mt-1.5" required />
+                        <Input id="name" name="name" className="mt-1.5" required value={name} onChange={(e) => setName(e.target.value)} />
                       </div>
                       <div>
                         <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" className="mt-1.5" required aria-describedby="bc-email-help" />
+                        <Input id="email" name="email" type="email" className="mt-1.5" required aria-describedby="bc-email-help" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <p id="bc-email-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format: you@example.com</p>
                       </div>
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" type="tel" className="mt-1.5" aria-describedby="bc-phone-help" />
+                        <Input id="phone" name="phone" type="tel" className="mt-1.5" aria-describedby="bc-phone-help" value={phone} onChange={(e) => setPhone(e.target.value)} />
                         <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optional — format: 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Approximate budget</Label>
-                        <Select>
+                        <Select value={budget} onValueChange={setBudget}>
                           <SelectTrigger id="budget" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="300">Under $300,000</SelectItem>
@@ -119,7 +144,7 @@ const BuyerConsultationPageEn = () => {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="area">Area of interest</Label>
-                        <Select>
+                        <Select value={area} onValueChange={setArea}>
                           <SelectTrigger id="area" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="aylmer">Aylmer / Plateau</SelectItem>
@@ -132,7 +157,7 @@ const BuyerConsultationPageEn = () => {
                       </div>
                       <div>
                         <Label htmlFor="timeline">When are you thinking of buying?</Label>
-                        <Select>
+                        <Select value={timeline} onValueChange={setTimeline}>
                           <SelectTrigger id="timeline" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="asap">As soon as possible</SelectItem>
@@ -145,12 +170,12 @@ const BuyerConsultationPageEn = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Questions or details (optional)</Label>
-                      <Textarea id="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighborhood, questions…" aria-describedby="bc-notes-help" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighborhood, questions…" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
                       <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">The more details you share, the more useful our meeting will be.</p>
                     </div>
 
-                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold">
-                      Book my consultation
+                    <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
+                      {submitting ? "Sending…" : "Book my consultation"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Free and no commitment — I help you see more clearly.
