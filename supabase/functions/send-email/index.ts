@@ -74,38 +74,70 @@ function buildNotificationHtml(data: EmailRequest): string {
 function buildConfirmationHtml(data: EmailRequest): { subject: string; html: string } {
   const isFr = data.lang === "fr";
   const firstName = data.name.split(" ")[0];
+  const signature = isFr
+    ? `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p>`
+    : `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Real Estate Broker · RE/MAX · The Marty Waite Experience<br>819-210-3044</p>`;
+  const hr = `<hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">`;
+  const wrapOpen = `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px">`;
+  const h2 = (text: string) => `<h2 style="color:#1e3a5f">${text}</h2>`;
+  const p = (text: string) => `<p style="color:#555;line-height:1.7">${text}</p>`;
 
   if (data.formType === "contact") {
+    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const body = isFr
+      ? `${p("J'ai bien reçu votre message et je vous reviens rapidement.")}${p("En attendant, n'hésitez pas à explorer mon site pour en savoir plus sur mes services.")}`
+      : `${p("I got your message and I'll be in touch shortly.")}${p("In the meantime, feel free to browse the site to see how I work.")}`;
     return {
       subject: isFr ? "Merci pour votre message — Yanis Gauthier-Sigeris" : "Thank you for your message — Yanis Gauthier-Sigeris",
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre message et je vous reviens rapidement." : "I've received your message and will get back to you shortly."}</p><p style="color:#555;line-height:1.7">${isFr ? "En attendant, n'hésitez pas à explorer mon site pour en savoir plus sur mes services." : "In the meantime, feel free to explore my website to learn more about my services."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+      html: `${wrapOpen}${h2(heading)}${body}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "valuation") {
+    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const intro = isFr ? "J'ai bien reçu votre demande d'évaluation pour :" : "I got your valuation request for:";
+    const addressBlock = data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : "";
+    const closing = isFr
+      ? "Je vous reviens personnellement dans les 24 prochaines heures avec une analyse basée sur les ventes comparables récentes dans votre secteur."
+      : "I'll send you a personal analysis within 24 hours, based on recent comparable sales in your neighbourhood.";
     return {
       subject: isFr ? "Votre évaluation gratuite est en route — YGS" : "Your free valuation is on its way — YGS",
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande d'évaluation pour :" : "I've received your valuation request for:"}</p>${data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : ""}<p style="color:#555;line-height:1.7">${isFr ? "Je vous reviens personnellement dans les 24 prochaines heures avec une analyse basée sur les ventes comparables récentes dans votre secteur." : "I'll get back to you personally within 24 hours with an analysis based on recent comparable sales in your area."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+      html: `${wrapOpen}${h2(heading)}${p(intro)}${addressBlock}${p(closing)}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "analysis") {
+    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const body = isFr
+      ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens personnellement dans les 48 prochaines heures avec une analyse complète — pas un rapport générique."
+      : "I got your plex analysis request. I'll send you a full analysis within 48 hours. Real numbers on the property you asked about, not a generic template report.";
     return {
       subject: isFr ? "Votre analyse plex est en préparation — YGS" : "Your plex analysis is in progress — YGS",
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens personnellement dans les 48 prochaines heures avec une analyse complète — pas un rapport générique." : "I've received your plex analysis request. I'll get back to you personally within 48 hours with a complete analysis — not a generic report."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+      html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "consultation") {
+    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const body = isFr
+      ? "J'ai bien reçu votre demande de consultation. Je vous reviens personnellement dans les 24 à 48 prochaines heures."
+      : "I got your consultation request. I'll be in touch personally within 24 to 48 hours to set up a time.";
     return {
       subject: isFr ? "Votre demande de consultation est reçue — YGS" : "Your consultation request was received — YGS",
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? "J'ai bien reçu votre demande de consultation. Je vous reviens personnellement dans les 24 à 48 prochaines heures." : "I've received your consultation request. I'll get back to you personally within 24-48 hours."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+      html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,
     };
   }
 
+  const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+  const p1 = isFr
+    ? `Votre guide « ${data.guideTitle || "Guide"} » vous sera envoyé par courriel sous peu.`
+    : `Your guide "${data.guideTitle || "Guide"}" will arrive by email shortly.`;
+  const p2 = isFr
+    ? "En attendant, n'hésitez pas à me contacter si vous avez des questions."
+    : "If you have questions in the meantime, contact me directly at 819-210-3044 or reply to this email.";
   return {
     subject: isFr ? "Votre guide est en route — YGS" : "Your guide is on its way — YGS",
-    html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#1e3a5f">${isFr ? `Merci ${firstName}!` : `Thank you ${firstName}!`}</h2><p style="color:#555;line-height:1.7">${isFr ? `Votre guide « ${data.guideTitle || "Guide"} » vous sera envoyé par courriel sous peu.` : `Your "${data.guideTitle || "Guide"}" will be sent to your email shortly.`}</p><p style="color:#555;line-height:1.7">${isFr ? "En attendant, n'hésitez pas à me contacter si vous avez des questions." : "In the meantime, feel free to reach out if you have any questions."}</p><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"><p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p></div>`,
+    html: `${wrapOpen}${h2(heading)}${p(p1)}${p(p2)}${hr}${signature}</div>`,
   };
 }
 
