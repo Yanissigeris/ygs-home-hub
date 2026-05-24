@@ -11,6 +11,7 @@ const i18n = {
     active: "À VENDRE",
     pending: "OFFRE ACCEPTÉE",
     sold: "VENDUE",
+    rent: "À LOUER",
     bed: "ch.",
     bath: "sdb",
     powder: "s.e.",
@@ -20,6 +21,7 @@ const i18n = {
     active: "FOR SALE",
     pending: "OFFER ACCEPTED",
     sold: "SOLD",
+    rent: "FOR RENT",
     bed: "bed",
     bath: "bath",
     powder: "pw",
@@ -41,7 +43,14 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
   }, []);
 
   const statusLabel =
-    property.status === "active" ? t.active : property.status === "pending" ? t.pending : t.sold;
+    property.status === "active"
+      ? t.active
+      : property.status === "pending"
+        ? t.pending
+        : property.status === "rent"
+          ? t.rent
+          : t.sold;
+  const isRent = property.status === "rent";
 
   return (
     <a
@@ -79,13 +88,14 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
         {/* Status label */}
         <p
+          className={isRent ? "inline-block self-start bg-[#A88A5A] text-[#F7F4EE] px-2 py-0.5 rounded-sm" : undefined}
           style={{
             fontFamily: "var(--sans)",
             fontSize: "10px",
             fontWeight: 500,
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "#A88A5A",
+            color: isRent ? "#F7F4EE" : "#A88A5A",
             marginBottom: ".5rem",
           }}
         >

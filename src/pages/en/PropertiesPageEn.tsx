@@ -44,9 +44,9 @@ const PropertiesPageEn = () => (
     <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land — browse available properties in all Gatineau and Outaouais neighborhoods." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Strategic guidance." heroBgImage={heroImg} />
 
     <ContentBlock narrow={false}>
-      <SectionHeading overline="Active listings" title="My properties for sale" subtitle="Browse my listings — houses, condos, plexes and land in Gatineau and Outaouais." />
+      <SectionHeading overline="Active listings" title="My current listings" subtitle="Browse my listings — houses, condos, plexes and land in Gatineau and Outaouais." />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {properties.filter(p => p.status === "active").map(property => (<PropertyCard key={property.id} property={property} />))}
+        {properties.filter(p => ["active", "rent"].includes(p.status)).map(property => (<PropertyCard key={property.id} property={property} />))}
       </div>
       <div className="mt-8 text-center">
         <a href="https://www.remax-quebec.com/en/real-estate-brokers/yanis.gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
