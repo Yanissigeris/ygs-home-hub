@@ -3,6 +3,7 @@ import property20453879 from "@/assets/property-20453879.webp";
 import property15163372 from "@/assets/property-15163372.webp";
 import property17113358 from "@/assets/property-17113358.webp";
 import property11366995 from "@/assets/property-11366995.webp";
+import property19674845 from "@/assets/property-19674845.webp";
 
 export interface Property {
   id: string;
@@ -20,7 +21,7 @@ export interface Property {
   image: string;
   remaxUrl: string;
   mls: string;
-  status: "active" | "sold" | "pending";
+  status: "active" | "sold" | "pending" | "rent";
 }
 
 export const properties: Property[] = [
@@ -119,5 +120,23 @@ export const properties: Property[] = [
       "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
     status: "sold",
+  },
+  {
+    id: "19674845",
+    address: "310 Boul. d'Europe, app. 6",
+    city: "Gatineau (Aylmer — Plateau de la Capitale)",
+    price: "2 050 $/mois",
+    type: "Condo — Appartement (location)",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "1 240 pi²",
+    yearBuilt: "2009",
+    description:
+      "Condo lumineux de 2 chambres au Plateau de la Capitale. Plafonds de 9 pieds, électros inclus, climatiseur mural, 1 stationnement, remise et patio privés. Disponible le 1er juin 2026.",
+    image: property19674845,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
+    mls: "19674845",
+    status: "rent",
   },
 ];

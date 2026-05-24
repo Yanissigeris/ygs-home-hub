@@ -66,11 +66,11 @@ const PropertiesPage = () => {
     <ContentBlock narrow={false}>
       <SectionHeading
         overline="Inscriptions actives"
-        title="Mes propriétés à vendre"
+        title="Mes propriétés actuelles"
         subtitle="Consultez mes inscriptions — maisons, condos, plex et terrains à Gatineau et en Outaouais."
       />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {properties.filter(p => p.status === "active").map(property => (
+        {properties.filter(p => ["active", "rent"].includes(p.status)).map(property => (
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>
