@@ -3,6 +3,7 @@ import property20453879 from "@/assets/property-20453879.webp";
 import property15163372 from "@/assets/property-15163372.webp";
 import property17113358 from "@/assets/property-17113358.webp";
 import property11366995 from "@/assets/property-11366995.webp";
+import property19674845 from "@/assets/property-19674845.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [

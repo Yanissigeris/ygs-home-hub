@@ -121,4 +121,22 @@ export const properties: Property[] = [
     mls: "28743871",
     status: "sold",
   },
+  {
+    id: "19674845",
+    address: "310 Boul. d'Europe, app. 6",
+    city: "Gatineau (Aylmer — Plateau de la Capitale)",
+    price: "2 050 $/mois",
+    type: "Condo — Appartement (location)",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "1 240 pi²",
+    yearBuilt: "2009",
+    description:
+      "Condo lumineux de 2 chambres au Plateau de la Capitale. Plafonds de 9 pieds, électros inclus, climatiseur mural, 1 stationnement, remise et patio privés. Disponible le 1er juin 2026.",
+    image: property19674845,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
+    mls: "19674845",
+    status: "rent",
+  },
 ];
