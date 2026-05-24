@@ -1,31 +1,37 @@
-## Fix: EN client confirmation email body + signature
+## Goal
+Add the new rental listing (310 boul. d'Europe, **app. 6**, MLS 19674845) to both data files and surface it on `/proprietes` and `/en/properties`.
 
-Single file change: `supabase/functions/send-email/index.ts` (lines 73-118).
+## Changes
 
-### Changes to `buildConfirmationHtml`
+### 1. `src/data/properties.ts`
+- Extend `Property.status` union: `"active" | "sold" | "pending" | "rent"`.
+- Append FR entry:
+  - id/mls `19674845`, status `"rent"`
+  - address `310 Boul. d'Europe, app. 6`
+  - city `Gatineau (Aylmer — Plateau de la Capitale)`
+  - price `2 050 $/mois`, type `Condo — Appartement (location)`
+  - bedrooms `2`, bathrooms `1`, area `1 240 pi²`, yearBuilt `2009`
+  - description (FR): plafonds 9 pi, électros inclus, climatiseur mural, 1 stationnement, remise + patio privés, dispo 1er juin 2026
+  - remaxUrl: provided listing URL
+  - image: `@/assets/property-19674845.webp`
 
-1. Hoist a `signature` const at the top of the function:
-   ```ts
-   const signature = isFr
-     ? `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p>`
-     : `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Real Estate Broker · RE/MAX · The Marty Waite Experience<br>819-210-3044</p>`;
-   ```
+### 2. `src/data/properties-en.ts`
+- Same entry, EN: `apt. 6`, `$2,050/month`, `Condo — Apartment (for rent)`, `1,240 sq ft`, translated description.
 
-2. Replace each of the 5 hardcoded FR signature `<p>` blocks with `${signature}`.
+### 3. `src/assets/property-19674845.webp`
+- Download `https://media.remax-quebec.com/img/www_full/0315/m19674845-pri01-01.jpg` (high-res) and convert to webp via imagemagick.
 
-3. Per-formType, branch H2 + body paragraphs via `isFr ? frHtml : enHtml`:
+### 4. `src/components/PropertyCard.tsx`
+- Add i18n: `rent: "À LOUER"` / `rent: "FOR RENT"`.
+- Extend `statusLabel` ternary to handle `"rent"`.
+- Render the status label as a pill **only when `status === "rent"`** using Tailwind utilities (consistent with the rest of the file): wrap the label in `<span className="inline-block bg-[#A88A5A] text-[#F7F4EE] px-2 py-0.5 rounded-sm">…</span>`. Other statuses keep the existing gold-text-no-background look unchanged.
+- Card click: no change. The card is already an `<a target="_blank" rel="noopener noreferrer" href={property.remaxUrl}>`, so rentals already open the RE/MAX listing in a new tab as required.
 
-   - **contact**: H2 `Thanks ${firstName}.` · P1 "I got your message and I'll be in touch shortly." · P2 "In the meantime, feel free to browse the site to see how I work."
-   - **valuation**: H2 `Thanks ${firstName}.` · P1 "I got your valuation request for:" · address block unchanged · P2 "I'll send you a personal analysis within 24 hours, based on recent comparable sales in your neighbourhood."
-   - **analysis**: H2 `Thanks ${firstName}.` · P1 "I got your plex analysis request. I'll send you a full analysis within 48 hours. Real numbers on the property you asked about, not a generic template report."
-   - **consultation**: H2 `Thanks ${firstName}.` · P1 "I got your consultation request. I'll be in touch personally within 24 to 48 hours to set up a time."
-   - **guide** (fallback): H2 `Thanks ${firstName}.` · P1 `Your guide "${data.guideTitle || "Guide"}" will arrive by email shortly.` · P2 "If you have questions in the meantime, contact me directly at 819-210-3044 or reply to this email."
+### 5. `src/pages/PropertiesPage.tsx` + `src/pages/en/PropertiesPageEn.tsx`
+- Active-section filter: `["active","rent"].includes(p.status)` (Option A).
+- Section heading copy update:
+  - FR: `Mes propriétés à vendre` → `Mes propriétés actuelles`
+  - EN: `My properties for sale` → `My current listings`
+- Sold section unchanged.
 
-### Untouched
-- `buildNotificationHtml` (Yanis inbox stays FR)
-- All subject lines (already branch on `isFr`)
-- Wrapper `<div>`, `<h2 style="color:#1e3a5f">`, `<hr>`, valuation address block styling
-- Frontend forms, analytics, request validation, handler
-
-### Deploy
-After edit, call `supabase--deploy_edge_functions(["send-email"])` so the deploy preview serves the new template. Then confirm in chat for QA (1 FR + 1 EN submission per formType).
+No other files, copy, analytics, routes, or styles change.
