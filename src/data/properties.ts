@@ -79,7 +79,7 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/32-rue-de-laperriere/15163372",
     mls: "15163372",
-    status: "active",
+    status: "sold",
   },
   {
     id: "17113358",
