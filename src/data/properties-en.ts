@@ -122,4 +122,24 @@ export const propertiesEn: Property[] = [
     mls: "19674845",
     status: "rent",
   },
+  {
+    id: "28167244",
+    address: "1535 Rue Atmec",
+    city: "Gatineau (Gatineau — Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
+    price: "$499,900",
+    type: "Semi-detached two-storey",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,355 sq ft",
+    lotSize: "2,906 sq ft",
+    yearBuilt: "2012",
+    description:
+      "Semi-detached home built in 2012 in a quiet family neighbourhood of Gatineau. Bright open-concept main floor with island and stainless appliances, 3 bedrooms including primary with walk-in, full bathroom with separate shower and tub. Fully finished basement. Fenced yard with saltwater above-ground pool, shed, and paved parking for 5 cars. Wall-mounted A/C, air exchanger and central vacuum included. 2 min from Highway 50, 20 min from Ottawa.",
+    image: property28167244,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/28167244",
+    mls: "28167244",
+    status: "active",
+  },
 ];
