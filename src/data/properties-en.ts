@@ -4,6 +4,7 @@ import property15163372 from "@/assets/property-15163372.webp";
 import property17113358 from "@/assets/property-17113358.webp";
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
+import property28167244 from "@/assets/property-28167244.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -120,5 +121,25 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     mls: "19674845",
     status: "rent",
+  },
+  {
+    id: "28167244",
+    address: "1535 Rue Atmec",
+    city: "Gatineau (Gatineau — Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
+    price: "$499,900",
+    type: "Semi-detached two-storey",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,355 sq ft",
+    lotSize: "2,906 sq ft",
+    yearBuilt: "2012",
+    description:
+      "Semi-detached home built in 2012 in a quiet family neighbourhood of Gatineau. Bright open-concept main floor with island and stainless appliances, 3 bedrooms including primary with walk-in, full bathroom with separate shower and tub. Fully finished basement. Fenced yard with saltwater above-ground pool, shed, and paved parking for 5 cars. Wall-mounted A/C, air exchanger and central vacuum included. 2 min from Highway 50, 20 min from Ottawa.",
+    image: property28167244,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/28167244",
+    mls: "28167244",
+    status: "active",
   },
 ];
