@@ -167,7 +167,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     // volume + prix), 3 actives variées par prix/secteur, vendu en clôture.
     const strategicOrder = [
       "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
-      "17113358", // Maison Aylmer (active, 424 900 $)
+      
       "28167244", // Maison Gatineau (active, 499 900 $)
       "15163372", // Maison Limbour (vendu, 649 900 $)
       "28743871", // Split Cantley (vendu, 559 800 $)
