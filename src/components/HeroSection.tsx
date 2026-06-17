@@ -525,17 +525,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 alt=""
                 role="presentation"
                 className="hero-bg-image h-full w-full object-cover"
-                style={{
-                  filter: atTop ? "none" : "brightness(0.85) saturate(0.85)",
-                  transition: "filter 0.35s ease-out",
-                }}
+                style={{ transition: "filter 0.35s ease-out" }}
                 width={1920}
                 height={1080}
                 sizes="100vw"
                 loading="eager"
                 decoding="async"
                 {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </picture>
           </div>
