@@ -71,18 +71,10 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
           const sizes = "(max-width: 480px) 90vw, (max-width: 1024px) 50vw, 648px";
           return (
             <picture>
-              <source
-                type="image/avif"
-                srcSet={`${set.avif480} 480w, ${set.avif800} 800w`}
-                sizes={sizes}
-              />
-              <source
-                type="image/webp"
-                srcSet={`${set.webp480} 480w, ${set.webp800} 800w`}
-                sizes={sizes}
-              />
+              <source type="image/avif" srcSet={set.avifSrcSet} sizes={sizes} />
+              <source type="image/webp" srcSet={set.webpSrcSet} sizes={sizes} />
               <img
-                src={set.webp800}
+                src={set.fallback}
                 alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 loading="lazy"

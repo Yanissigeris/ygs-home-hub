@@ -97,6 +97,7 @@ export default defineConfig(() => ({
   },
   plugins: [
     react(),
+    imagetools(),
     ViteImageOptimizer({
       png: { quality: 80 },
       jpeg: { quality: 80, mozjpeg: true },

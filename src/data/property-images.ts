@@ -1,43 +1,36 @@
 // Responsive image sources for property cards.
-// Generated variants: 800w (default desktop) and 480w (mobile), in AVIF + WebP.
-// Cards render ~648×486 max → 800w is plenty; 480w covers ≤480 CSS px viewports.
+// vite-imagetools generates 400 / 640 / 900-wide AVIF + WebP variants at build,
+// returning a <picture>-shaped object with srcsets for each format.
 
-import p28743871_800_avif from "@/assets/property-28743871-800.avif";
-import p28743871_800_webp from "@/assets/property-28743871-800.webp";
-import p28743871_480_avif from "@/assets/property-28743871-480.avif";
-import p28743871_480_webp from "@/assets/property-28743871-480.webp";
+import p28167244 from "@/assets/property-28167244.webp?w=400;640;900&format=avif;webp&as=picture";
+import p28743871 from "@/assets/property-28743871.webp?w=400;640;900&format=avif;webp&as=picture";
+import p20453879 from "@/assets/property-20453879.webp?w=400;640;900&format=avif;webp&as=picture";
+import p15163372 from "@/assets/property-15163372.webp?w=400;640;900&format=avif;webp&as=picture";
+import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif;webp&as=picture";
+import p11366995 from "@/assets/property-11366995.webp?w=400;640;900&format=avif;webp&as=picture";
 
-import p20453879_800_avif from "@/assets/property-20453879-800.avif";
-import p20453879_800_webp from "@/assets/property-20453879-800.webp";
-import p20453879_480_avif from "@/assets/property-20453879-480.avif";
-import p20453879_480_webp from "@/assets/property-20453879-480.webp";
-
-import p15163372_800_avif from "@/assets/property-15163372-800.avif";
-import p15163372_800_webp from "@/assets/property-15163372-800.webp";
-import p15163372_480_avif from "@/assets/property-15163372-480.avif";
-import p15163372_480_webp from "@/assets/property-15163372-480.webp";
-
-import p17113358_800_avif from "@/assets/property-17113358-800.avif";
-import p17113358_800_webp from "@/assets/property-17113358-800.webp";
-import p17113358_480_avif from "@/assets/property-17113358-480.avif";
-import p17113358_480_webp from "@/assets/property-17113358-480.webp";
-
-import p11366995_800_avif from "@/assets/property-11366995-800.avif";
-import p11366995_800_webp from "@/assets/property-11366995-800.webp";
-import p11366995_480_avif from "@/assets/property-11366995-480.avif";
-import p11366995_480_webp from "@/assets/property-11366995-480.webp";
-
-export interface PropertyImageSet {
-  avif800: string;
-  webp800: string;
-  avif480: string;
-  webp480: string;
+interface PictureImport {
+  sources: { avif?: string; webp?: string };
+  img: { src: string; w: number; h: number };
 }
 
+export interface PropertyImageSet {
+  avifSrcSet: string;
+  webpSrcSet: string;
+  fallback: string;
+}
+
+const toSet = (p: PictureImport): PropertyImageSet => ({
+  avifSrcSet: p.sources.avif ?? "",
+  webpSrcSet: p.sources.webp ?? "",
+  fallback: p.img.src,
+});
+
 export const propertyImages: Record<string, PropertyImageSet> = {
-  "28743871": { avif800: p28743871_800_avif, webp800: p28743871_800_webp, avif480: p28743871_480_avif, webp480: p28743871_480_webp },
-  "20453879": { avif800: p20453879_800_avif, webp800: p20453879_800_webp, avif480: p20453879_480_avif, webp480: p20453879_480_webp },
-  "15163372": { avif800: p15163372_800_avif, webp800: p15163372_800_webp, avif480: p15163372_480_avif, webp480: p15163372_480_webp },
-  "17113358": { avif800: p17113358_800_avif, webp800: p17113358_800_webp, avif480: p17113358_480_avif, webp480: p17113358_480_webp },
-  "11366995": { avif800: p11366995_800_avif, webp800: p11366995_800_webp, avif480: p11366995_480_avif, webp480: p11366995_480_webp },
+  "28167244": toSet(p28167244 as PictureImport),
+  "28743871": toSet(p28743871 as PictureImport),
+  "20453879": toSet(p20453879 as PictureImport),
+  "15163372": toSet(p15163372 as PictureImport),
+  "17113358": toSet(p17113358 as PictureImport),
+  "11366995": toSet(p11366995 as PictureImport),
 };
