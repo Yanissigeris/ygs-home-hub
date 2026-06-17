@@ -119,10 +119,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           }}
         >
           <picture>
-            <source type="image/avif" srcSet={lifestyleBg1280Avif} />
-            <source type="image/webp" srcSet={lifestyleBg1280Webp} />
+            {lifestyleBg.sources.avif && (
+              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="(min-width: 1280px) 640px, 50vw" />
+            )}
+            {lifestyleBg.sources.webp && (
+              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="(min-width: 1280px) 640px, 50vw" />
+            )}
             <img
-              src={lifestyleBg1280Webp}
+              src={lifestyleBg.img.src}
               alt=""
               loading="lazy"
               decoding="async"
@@ -147,10 +151,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           className="md:hidden w-full h-[200px] mb-8 relative overflow-hidden"
         >
           <picture>
-            <source type="image/avif" srcSet={lifestyleBg720Avif} />
-            <source type="image/webp" srcSet={lifestyleBg720Webp} />
+            {lifestyleBg.sources.avif && (
+              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="100vw" />
+            )}
+            {lifestyleBg.sources.webp && (
+              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="100vw" />
+            )}
             <img
-              src={lifestyleBg720Webp}
+              src={lifestyleBg.img.src}
               alt=""
               loading="lazy"
               decoding="async"
