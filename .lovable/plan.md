@@ -1,55 +1,64 @@
-# Image Optimization — Phase 1
+# Image Optimization — Phase 2 (Responsive Listing Photos)
 
-Low-risk wins: install a build-time compressor, shrink oversized source logos in place, recompress one photo, and add explicit dimensions to two `<img>` tags. No visual, layout, routing, or content changes.
+Generate 400 / 640 / 900-wide AVIF+WebP variants for the 6 listing-card photos and serve them via `srcset`/`sizes` so phones download the small variant while desktop stays sharp.
 
-## 1. Build-time compressor
+## Approach
 
-- Add `vite-plugin-image-optimizer` (+ `sharp` if not already present) as a dev dependency.
-- Register it in `vite.config.ts` alongside the existing `htmlOptimizePlugin`, with quality settings: PNG 80, JPG 80, WebP 80, AVIF 60. SVGO left at defaults.
-- No import changes — assets continue to be referenced as today; compression happens at bundle time.
+Use **`vite-imagetools`** (build-time generator) — preferred over manually maintained files. One import per photo returns the full picture/source set; no committed variant files.
 
-## 2. Downscale oversized logo sources (in place, same filename/extension)
+Source originals (verified):
 
-Audit every usage (header, footer, RE/MAX block, anywhere else) to find the max rendered size, then cap each source at ~2× that:
+| id | original |
+|---|---|
+| 28167244 | 1621×1080 (currently NO responsive variants) |
+| 28743871 | 1621×1080 |
+| 20453879 | 1536×1024 |
+| 11366995 | 1600×1074 |
+| 15163372 | 1095×730 |
+| 17113358 | 1087×730 |
 
-| File | Current | New cap |
-|---|---|---|
-| `src/assets/ygs-logo-updated.png` | 1920×1920 | 320×320 |
-| `src/assets/ygs-logo.png` | 1920×1920 | 320×320 |
-| `src/assets/remax-balloon-official.png` | 1000×1132 | ~71×80 (height-capped at 80) |
-| `src/assets/remax-logotype-black.png` | 999×229 | 300×~69 |
-| `src/assets/logo-temple-renommee.webp` | 100×161 | ~62×100 (height-capped at 100) |
+All originals are ≥ 900px wide except 15163372 / 17113358 (~1090) — still well above 900. Variants requested at **400, 640, 900** with `withoutEnlargement` for safety.
 
-Resampled with sharp, same path/filename/format. Never upscale. No import changes needed.
+Cap check for 28167244: desktop card ≈ 387–580 CSS px wide in the 2- and 3-col grids. 900px largest variant ≈ ~2× max display, satisfying the ceiling.
 
-Note: `ygs-logo.webp` and `ygs-logo-Dt0x-8Xz.webp` also exist — will check their usage and downscale to the same cap if referenced; leave untouched if unused.
+## Tasks
 
-## 3. Recompress `src/assets/yanis-about-new.jpg`
+1. **Install** `vite-imagetools` as devDependency. Register in `vite.config.ts` plugins array (before `ViteImageOptimizer` so output of imagetools then passes through the compressor).
 
-- Keep pixel dimensions (1170×1216).
-- Strategy: re-encode as JPEG at quality ~72 in place (safe path — zero reference changes). The WebP-conversion path is skipped to avoid touching every reference.
+2. **Rewrite `src/data/property-images.ts`** to import each photo once via imagetools query and return a `{ avif: srcset, webp: srcset }` set:
+   ```ts
+   import p28167244 from "@/assets/property-28167244.webp?w=400;640;900&format=avif;webp&as=picture";
+   ```
+   Export a shape:
+   ```ts
+   { avifSrcSet: string; webpSrcSet: string; fallback: string; width: number; height: number }
+   ```
+   Add an entry for `28167244` (currently missing).
 
-## 4. Explicit width/height on RE/MAX `<img>` tags
+3. **Update `src/components/FeaturedProperties.tsx`** `<picture>` block:
+   - Replace the two `<source>` `srcSet` lines with `set.avifSrcSet` / `set.webpSrcSet` (already comma-separated `<url> 400w, <url> 640w, <url> 900w`).
+   - Keep the same `sizes` attribute (`(max-width: 480px) 90vw, (max-width: 1024px) 50vw, 648px`).
+   - Use `set.fallback` for the `<img src>`.
+   - Remove the now-dead `if (!set)` fallback for 28167244 (it will have a set after change).
+   - **Keep unchanged**: `alt`, `loading="lazy"`, `decoding="async"`, `width={648}`, `height={486}`, the `filter: saturate(0.88)` style, hover handlers, error handler.
 
-In `src/components/RemaxAgencyBlock.tsx`:
-- Balloon: add `width={71} height={80}` (aspect 1000:1132).
-- Logotype: add `width={300} height={69}` (aspect 999:229).
-- Keep existing inline `style` and all other attributes unchanged.
+4. **Delete obsolete pre-generated files** under `src/assets/`:
+   - `property-{28743871,20453879,15163372,17113358,11366995}-{480,800}.{avif,webp}` (10 files × 2 fmts = 20 files).
+   - Keep the original `property-{id}.webp` source files (imagetools consumes them).
 
 ## Out of scope (explicit)
 
-- No changes to alt text, cropping, position, or visual appearance.
-- No listing/property photos modified.
-- Hero AVIFs and `/og/og-home.jpg` untouched.
-- No changes to prerendered HTML text, meta tags, JSON-LD, layout, or routing.
+- Pathway lifestyle background — not a listing card; left alone.
+- `src/components/PropertyCard.tsx` — used by other routes, not on home; not modified in this phase.
+- No changes to alt text, cropping, card layout, listing fetch/storage, prerendered text, meta tags, or JSON-LD.
 
 ## Verification
 
-- Run the build; confirm logo asset sizes drop dramatically in `dist/assets/`.
-- Preview the home page at mobile + desktop viewports; visually confirm header logo, footer logo, and RE/MAX block render crisp with no 404s.
-- Spot-check `yanis-about-new.jpg` still renders on the About section.
+- `bun run build` succeeds; `dist/assets/` contains 400/640/900 AVIF+WebP variants for all 6 ids.
+- Preview at mobile (≤480px) shows the 400w variants downloading via DevTools Network; desktop shows 900w (or 640w in 3-col).
+- All 4 home featured cards render correctly, no broken images, no 404s.
 
 ## Technical notes
 
-- Files touched: `package.json` (dep), `vite.config.ts` (plugin registration), 5–7 binary assets under `src/assets/` (in-place resample/recompress), `src/components/RemaxAgencyBlock.tsx` (two `<img>` dimension attributes).
-- Sharp resampling: `withMetadata({ orientation: undefined })` to drop EXIF, `kernel: 'lanczos3'` for downscale quality.
+- Files touched: `package.json`, `vite.config.ts`, `src/data/property-images.ts`, `src/components/FeaturedProperties.tsx`, plus deletion of 20 pre-generated variant files.
+- `vite-imagetools` `as=picture` returns `{ sources: { avif, webp }, img: { src, w, h } }`; we'll map that into the existing data-driven shape so callers stay simple.
