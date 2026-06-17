@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ig1 from "@/assets/instagram-1.webp";
-import ig2 from "@/assets/instagram-2.webp";
-import ig3 from "@/assets/instagram-3.webp";
-import ig4 from "@/assets/instagram-4.webp";
-import ig5 from "@/assets/instagram-5.webp";
-import ig6 from "@/assets/instagram-6.webp";
+import ig1 from "@/assets/instagram-1.webp?w=320;640&format=avif;webp&as=picture";
+import ig2 from "@/assets/instagram-2.webp?w=320;640&format=avif;webp&as=picture";
+import ig3 from "@/assets/instagram-3.webp?w=320;640&format=avif;webp&as=picture";
+import ig4 from "@/assets/instagram-4.webp?w=320;640&format=avif;webp&as=picture";
+import ig5 from "@/assets/instagram-5.webp?w=320;640&format=avif;webp&as=picture";
+import ig6 from "@/assets/instagram-6.webp?w=320;640&format=avif;webp&as=picture";
 
 const images = [ig1, ig2, ig3, ig4, ig5, ig6];
 const HANDLE = "yanissigeris";
@@ -67,10 +67,11 @@ const InstagramGrid = () => {
           ref={gridRef}
           className="grid grid-cols-3 md:grid-cols-6 gap-[3px] md:gap-1"
         >
-          {images.map((src, i) => {
+          {images.map((pic, i) => {
             const altTexts = lang === "en"
               ? ["Real estate listing in Gatineau", "Sold property in Aylmer", "Market update Outaouais", "Home for sale in Hull", "Neighbourhood spotlight", "Client success story"]
               : ["Propriété à vendre à Gatineau", "Propriété vendue à Aylmer", "Mise à jour du marché Outaouais", "Maison à vendre à Hull", "Coup d'œil quartier", "Succès client"];
+            const sizes = "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px";
             return (
             <a
               key={i}
@@ -80,15 +81,19 @@ const InstagramGrid = () => {
               className="group relative aspect-square overflow-hidden rounded-[2px]"
               aria-label={`Instagram — ${altTexts[i]}`}
             >
-              <img
-                src={src}
-                alt={altTexts[i]}
-                width={800}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              <picture>
+                {pic.sources.avif && <source type="image/avif" srcSet={pic.sources.avif} sizes={sizes} />}
+                {pic.sources.webp && <source type="image/webp" srcSet={pic.sources.webp} sizes={sizes} />}
+                <img
+                  src={pic.img.src}
+                  alt={altTexts[i]}
+                  width={800}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </picture>
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-foreground/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="scale-75 group-hover:scale-100 transition-transform duration-300" aria-hidden="true">

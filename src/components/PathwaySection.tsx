@@ -1,12 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import cardVendreImg from "@/assets/service-vendre.webp";
-import cardAcheterImg from "@/assets/service-acheter.webp";
-import cardPlexImg from "@/assets/service-plex.webp";
-import lifestyleBg1280Avif from "@/assets/pathway-lifestyle-bg-1280.avif";
-import lifestyleBg1280Webp from "@/assets/pathway-lifestyle-bg-1280.webp";
-import lifestyleBg720Avif from "@/assets/pathway-lifestyle-bg-720.avif";
-import lifestyleBg720Webp from "@/assets/pathway-lifestyle-bg-720.webp";
+import lifestyleBg from "@/assets/pathway-lifestyle-bg.webp?w=720;1080;1280&format=avif;webp&as=picture";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
@@ -16,9 +10,6 @@ interface Pathway {
   text: string;
   cta: string;
   href: string;
-  image: string;
-  imageSm: string;
-  imageAlt: string;
   badge: string | null;
   intent: AvatarIntent;
 }
@@ -30,9 +21,6 @@ const pathwaysFr: Pathway[] = [
     text: "Rendement réel, valeur marchande et timing — les vrais chiffres avant de prendre une décision.",
     cta: "Calculer mon rendement",
     href: "/investir-plex-gatineau/",
-    image: cardPlexImg,
-    imageSm: cardPlexImg,
-    imageAlt: "Investissement plex à Gatineau — immeuble à revenus",
     badge: "Priorité investisseurs",
     intent: "investir",
   },
@@ -42,9 +30,6 @@ const pathwaysFr: Pathway[] = [
     text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.",
     cta: "Estimer ma propriété",
     href: "/vendre-ma-maison-gatineau/",
-    image: cardVendreImg,
-    imageSm: cardVendreImg,
-    imageAlt: "Vendre sa maison à Gatineau — salon résidentiel moderne",
     badge: null,
     intent: "vendre",
   },
@@ -54,9 +39,6 @@ const pathwaysFr: Pathway[] = [
     text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
     cta: "Voir les propriétés",
     href: "/acheter-a-gatineau/",
-    image: cardAcheterImg,
-    imageSm: cardAcheterImg,
-    imageAlt: "Acheter une propriété à Gatineau — rue résidentielle",
     badge: null,
     intent: "acheter",
   },
@@ -69,9 +51,6 @@ const pathwaysEn: Pathway[] = [
     text: "Returns, market value and timing — the real numbers before the decision.",
     cta: "Get an analysis",
     href: "/en/plex/",
-    image: cardPlexImg,
-    imageSm: cardPlexImg,
-    imageAlt: "Invest in a plex in Gatineau — multi-unit building",
     badge: "Investors first",
     intent: "investir",
   },
@@ -81,9 +60,6 @@ const pathwaysEn: Pathway[] = [
     text: "Realistic valuation, pricing strategy and targeted marketing to maximize your result.",
     cta: "Get a free valuation",
     href: "/en/sell/",
-    image: cardVendreImg,
-    imageSm: cardVendreImg,
-    imageAlt: "Sell a home in Gatineau — bright residential interior",
     badge: null,
     intent: "vendre",
   },
@@ -93,9 +69,6 @@ const pathwaysEn: Pathway[] = [
     text: "The right neighborhoods, the right budget and hands-on guidance to buy with confidence.",
     cta: "Explore buying",
     href: "/en/buy/",
-    image: cardAcheterImg,
-    imageSm: cardAcheterImg,
-    imageAlt: "Buy a property in Gatineau — residential neighborhood",
     badge: null,
     intent: "acheter",
   },
@@ -146,10 +119,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           }}
         >
           <picture>
-            <source type="image/avif" srcSet={lifestyleBg1280Avif} />
-            <source type="image/webp" srcSet={lifestyleBg1280Webp} />
+            {lifestyleBg.sources.avif && (
+              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="(min-width: 1280px) 640px, 50vw" />
+            )}
+            {lifestyleBg.sources.webp && (
+              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="(min-width: 1280px) 640px, 50vw" />
+            )}
             <img
-              src={lifestyleBg1280Webp}
+              src={lifestyleBg.img.src}
               alt=""
               loading="lazy"
               decoding="async"
@@ -174,10 +151,14 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           className="md:hidden w-full h-[200px] mb-8 relative overflow-hidden"
         >
           <picture>
-            <source type="image/avif" srcSet={lifestyleBg720Avif} />
-            <source type="image/webp" srcSet={lifestyleBg720Webp} />
+            {lifestyleBg.sources.avif && (
+              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="100vw" />
+            )}
+            {lifestyleBg.sources.webp && (
+              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="100vw" />
+            )}
             <img
-              src={lifestyleBg720Webp}
+              src={lifestyleBg.img.src}
               alt=""
               loading="lazy"
               decoding="async"

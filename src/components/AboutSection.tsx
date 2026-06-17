@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import yanisAbout from "@/assets/yanis-about-new.jpg";
+import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;640;900&format=avif;webp&as=picture";
 
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
@@ -182,16 +182,32 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         {/* ─── Right column: photo ─── */}
         <div className="order-1 lg:order-2 relative mx-auto max-w-[320px] lg:max-w-none">
           <div className="relative overflow-hidden" style={{ borderRadius: 0 }}>
-            <img
-              src={yanisAbout}
-              alt={c.imgAlt + " — YGS"}
-              className="aspect-[3/4] w-full object-cover object-top"
-              loading="lazy"
-              decoding="async"
-              width={565}
-              height={800}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-            />
+            <picture>
+              {yanisAbout.sources.avif && (
+                <source
+                  type="image/avif"
+                  srcSet={yanisAbout.sources.avif}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 565px"
+                />
+              )}
+              {yanisAbout.sources.webp && (
+                <source
+                  type="image/webp"
+                  srcSet={yanisAbout.sources.webp}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 565px"
+                />
+              )}
+              <img
+                src={yanisAbout.img.src}
+                alt={c.imgAlt + " — YGS"}
+                className="aspect-[3/4] w-full object-cover object-top"
+                loading="lazy"
+                decoding="async"
+                width={565}
+                height={800}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+            </picture>
             {/* Warm overlay */}
             <div
               className="absolute inset-0 pointer-events-none"
