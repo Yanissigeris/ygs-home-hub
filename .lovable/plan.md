@@ -1,31 +1,14 @@
-# Fix FOUC: Make main stylesheet render-blocking
+The hero background image in `HeroSection.tsx` will be made unconditionally visible from the initial/server render, removing any JS-gated display logic.
 
-## Problem
-In `vite.config.ts`, the `htmlOptimizePlugin` rewrites Vite's `<link rel="stylesheet">` into an async pattern (`media="print" onload="this.media='all'"`) with a `<noscript>` fallback. Since the site is prerendered, HTML paints before the CSS loads → flash of unstyled content.
+### Target file
+- `src/components/HeroSection.tsx`
 
-## Change
-File: `vite.config.ts` (the regex replacement inside `htmlOptimizePlugin`, around the section that matches `<link rel="stylesheet" crossorigin href="...css">`).
+### What will change
+1. **Remove JS-gated visibility on the background image.** Any `display:none`, conditional `style` attribute, `loaded` state, or `onLoad`/`onError` handler that toggles the visibility of the `heroBgImage` `<img>` will be stripped so the photo is present as soon as the browser decodes it.
+2. **Keep all existing performance attributes.** The `<picture>` wrapper with mobile/desktop AVIF `source`s, `loading="eager"`, `decoding="async"`, `fetchpriority="high"`, `sizes="100vw"`, and the build-time `<link rel="preload">` for the background AVIF in `vite.config.ts` remain untouched.
+3. **Blur-to-sharp effect.** If a blur-up or opacity transition tied to an `onLoad` event exists on the background image, it will be reimplemented as a pure CSS transition (e.g. `opacity` or `filter` on the image with a short CSS transition) or removed entirely. No JavaScript state will gate the reveal.
+4. **Preserve the section placeholder color.** The `<section>` keeps `backgroundColor: "var(--ink)"` so any micro-gap before the image paints stays on-brand.
+5. **No changes to other hero elements.** The portrait image (`agentImage`), all prerendered text content, JSON-LD schema, CTA buttons, and gradient overlays are left exactly as-is. Only the background image's visibility logic is touched.
 
-Replace the current 3-line output (preload + async stylesheet + noscript) with:
-- Keep: `<link rel="preload" as="style" href="$1" crossorigin>` (early download)
-- Add back the normal render-blocking stylesheet: `<link rel="stylesheet" href="$1" crossorigin>`
-- Remove the `<noscript>` duplicate
-- Remove the `media="print" onload="this.media='all'"` attributes
-
-Resulting injected markup:
-```html
-<link rel="preload" as="style" href="$1" crossorigin>
-<link rel="stylesheet" href="$1" crossorigin>
-```
-
-## Not touched
-- Prerendered HTML body content, meta tags, JSON-LD
-- Critical inline CSS block (harmless to keep; can stay as a safety net)
-- Image preload logic
-- Any other plugin or prerender script
-
-## Verification
-Inspect a built `dist/**/index.html` and confirm:
-- One `<link rel="preload" as="style" ...>` for the CSS
-- One normal `<link rel="stylesheet" href="/assets/index-*.css" crossorigin>` (no `media="print"`, no `onload`)
-- No `<noscript>` wrapping that stylesheet
+### Result
+The interior photo behind the hero will appear immediately on first paint instead of waiting for the JS bundle to hydrate, eliminating the flash-of-delayed-background and the preload race condition.
