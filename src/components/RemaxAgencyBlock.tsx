@@ -21,6 +21,8 @@ const RemaxAgencyBlock = ({ lang }: RemaxAgencyBlockProps) => {
         <img
           src={remaxLogotypeBlack}
           alt="RE/MAX"
+          width={300}
+          height={69}
           className="h-7 w-auto"
           loading="lazy"
           decoding="async"
@@ -29,6 +31,8 @@ const RemaxAgencyBlock = ({ lang }: RemaxAgencyBlockProps) => {
           src={remaxBalloonColor}
           alt=""
           aria-hidden="true"
+          width={71}
+          height={80}
           className="h-9 w-auto"
           loading="lazy"
           decoding="async"

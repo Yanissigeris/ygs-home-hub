@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 /**
  * Post-build plugin that processes the generated HTML to:
@@ -93,7 +94,17 @@ export default defineConfig(() => ({
       overlay: false,
     },
   },
-  plugins: [react(), htmlOptimizePlugin()],
+  plugins: [
+    react(),
+    ViteImageOptimizer({
+      png: { quality: 80 },
+      jpeg: { quality: 80, mozjpeg: true },
+      jpg: { quality: 80, mozjpeg: true },
+      webp: { quality: 80 },
+      avif: { quality: 60 },
+    }),
+    htmlOptimizePlugin(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
