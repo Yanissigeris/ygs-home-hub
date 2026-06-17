@@ -64,8 +64,7 @@ function htmlOptimizePlugin() {
         html = html.replace(
           /<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/g,
           `<link rel="preload" as="style" href="$1" crossorigin>
-    <link rel="stylesheet" href="$1" media="print" onload="this.media='all'" crossorigin>
-    <noscript><link rel="stylesheet" href="$1" crossorigin></noscript>`
+    <link rel="stylesheet" href="$1" crossorigin>`
         );
 
         // 3) Inject minimal critical CSS inline to prevent FOUC
