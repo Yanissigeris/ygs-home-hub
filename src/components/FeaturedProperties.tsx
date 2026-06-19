@@ -162,7 +162,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       
       "28167244", // Maison Gatineau (active, 499 900 $)
       "15163372", // Maison Limbour (vendu, 649 900 $)
-      "20453879", // Condo Lucerne (à vendre, 359 900 $)
+      "20453879", // Condo Lucerne (à vendre, 344 900 $)
     ];
     const featured = strategicOrder
       .map((id) => allProps.find((p) => p.id === id))
