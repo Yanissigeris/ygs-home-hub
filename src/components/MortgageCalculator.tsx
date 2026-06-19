@@ -49,8 +49,8 @@ const freqPayments: Record<Freq, number> = {
   weekly: 52,
 };
 
-function fmt(n: number) {
-  return n.toLocaleString("fr-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
+function fmt(n: number, lang: "fr" | "en" = "fr") {
+  return n.toLocaleString(lang === "en" ? "en-CA" : "fr-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
 }
 
 const MortgageCalculator = () => {
@@ -141,7 +141,7 @@ const MortgageCalculator = () => {
             className="mt-2"
           />
           <p className="text-[0.75rem] text-muted-foreground">
-            {downMode === "%" ? fmt(downPayment) : `${price > 0 ? Math.round((downRaw / price) * 100) : 0} %`}
+            {downMode === "%" ? fmt(downPayment, lang) : `${price > 0 ? Math.round((downRaw / price) * 100) : 0}${lang === "en" ? "%" : " %"}`}
           </p>
         </div>
 
