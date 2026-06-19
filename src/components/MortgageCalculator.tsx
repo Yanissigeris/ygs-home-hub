@@ -200,20 +200,20 @@ const MortgageCalculator = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl bg-primary/[0.04] border border-primary/10 p-4">
             <p className="text-[0.8125rem] text-muted-foreground">{l.result}</p>
-            <p className="mt-1 font-heading text-[1.75rem] font-bold text-foreground leading-tight">{fmt(result.payment)}</p>
+            <p className="mt-1 font-heading text-[1.75rem] font-bold text-foreground leading-tight">{fmt(result.payment, lang)}</p>
           </div>
           <div className="rounded-xl bg-secondary/40 border border-border p-4 space-y-2">
             <div className="flex justify-between text-[0.875rem]">
               <span className="text-muted-foreground">{l.totalMortgage}</span>
-              <span className="font-medium text-foreground">{fmt(result.principal)}</span>
+              <span className="font-medium text-foreground">{fmt(result.principal, lang)}</span>
             </div>
             <div className="flex justify-between text-[0.875rem]">
               <span className="text-muted-foreground">{l.totalInterest}</span>
-              <span className="font-medium text-foreground">{fmt(result.totalInterest)}</span>
+              <span className="font-medium text-foreground">{fmt(result.totalInterest, lang)}</span>
             </div>
             <div className="flex justify-between text-[0.875rem] border-t border-border pt-2">
               <span className="text-muted-foreground">{l.totalCost}</span>
-              <span className="font-semibold text-foreground">{fmt(result.totalCost)}</span>
+              <span className="font-semibold text-foreground">{fmt(result.totalCost, lang)}</span>
             </div>
           </div>
         </div>
