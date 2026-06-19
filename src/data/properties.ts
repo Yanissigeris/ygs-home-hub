@@ -106,7 +106,7 @@ export const properties: Property[] = [
     id: "19674845",
     address: "310 Boul. d'Europe, app. 6",
     city: "Gatineau (Aylmer — Plateau de la Capitale)",
-    price: "2 050 $/mois",
+    price: "1 975 $/mois",
     type: "Condo — Appartement (location)",
     bedrooms: "2",
     bathrooms: "1",
