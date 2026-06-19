@@ -31,12 +31,12 @@ const t = {
   },
 };
 
-function fmt(n: number) {
-  return n.toLocaleString("fr-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
+function fmt(n: number, lang: "fr" | "en" = "fr") {
+  return n.toLocaleString(lang === "en" ? "en-CA" : "fr-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
 }
 
-function fmtPct(n: number) {
-  return (n * 100).toFixed(1) + " %";
+function fmtPct(n: number, lang: "fr" | "en" = "fr") {
+  return (n * 100).toFixed(1) + (lang === "en" ? "%" : " %");
 }
 
 const WelcomeTaxCalculator = () => {
