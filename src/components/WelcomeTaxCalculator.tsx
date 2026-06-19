@@ -87,7 +87,7 @@ const WelcomeTaxCalculator = () => {
           {/* Total */}
           <div className="rounded-xl bg-primary/[0.04] border border-primary/10 p-4">
             <p className="text-[0.8125rem] text-muted-foreground">{l.result}</p>
-            <p className="mt-1 font-heading text-[1.75rem] font-bold text-foreground leading-tight">{fmt(result.total)}</p>
+            <p className="mt-1 font-heading text-[1.75rem] font-bold text-foreground leading-tight">{fmt(result.total, lang)}</p>
           </div>
 
           {/* Breakdown table */}
@@ -105,10 +105,10 @@ const WelcomeTaxCalculator = () => {
                 {result.breakdown.map((b, i) => (
                   <tr key={i} className="border-b border-border/50 last:border-0">
                     <td className="py-1.5 text-foreground">
-                      {fmt(b.from)} — {fmt(b.to)}
+                      {fmt(b.from, lang)} — {fmt(b.to, lang)}
                     </td>
-                    <td className="py-1.5 text-right text-muted-foreground">{fmtPct(b.rate)}</td>
-                    <td className="py-1.5 text-right font-medium text-foreground">{fmt(b.tax)}</td>
+                    <td className="py-1.5 text-right text-muted-foreground">{fmtPct(b.rate, lang)}</td>
+                    <td className="py-1.5 text-right font-medium text-foreground">{fmt(b.tax, lang)}</td>
                   </tr>
                 ))}
               </tbody>
