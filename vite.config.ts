@@ -107,6 +107,7 @@ export default defineConfig(() => ({
       avif: { quality: 60 },
     }),
     htmlOptimizePlugin(),
+    mcpPlugin(),
   ],
   resolve: {
     alias: {
