@@ -6,6 +6,7 @@ import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property28167244 from "@/assets/property-28167244.webp";
 import property14073975 from "@/assets/property-14073975.webp";
+import property19326119 from "@/assets/property-19326119.webp";
 
 export interface Property {
   id: string;
@@ -157,6 +158,24 @@ export const properties: Property[] = [
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/14-rue-de-la-cime-gatineau-hull-richelieu-hautes-plaines-dome-14073975",
     mls: "14073975",
+    status: "active",
+  },
+  {
+    id: "19326119",
+    address: "71 Rue Lessard",
+    city: "Gatineau (Hull — Lac des Fées / Wrightville)",
+    price: "1 029 900 $",
+    type: "Quadruplex",
+    bedrooms: "3",
+    bathrooms: "1",
+    area: "673,30 m² (terrain)",
+    yearBuilt: "1968",
+    description:
+      "Opportunité d'investissement rare. Évaluation agréée 2025 en main (1,15 M$). Revenu potentiel de 64 140 $/an avec 2 logements de 3 chambres aux étages et 2 logements d'une chambre au sous-sol — entièrement reconstruits en 2024-2025 (charpente, électricité, plomberie, finition, fenêtres Energy Star). Canalisation sous-dalle en PVC, échangeur d'air, entrée électrique refaite avec compteurs individuels à l'extérieur. Chauffage à l'eau chaude au gaz naturel. Garage détaché double, 9 stationnements. Rue tranquille en coin, à distance de marche des commerces, écoles et transport en commun.",
+    image: property19326119,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/71-rue-lessard/19326119",
+    mls: "19326119",
     status: "active",
   },
 ];
