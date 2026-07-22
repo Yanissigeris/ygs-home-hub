@@ -5,6 +5,7 @@ import property15163372 from "@/assets/property-15163372.webp";
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property28167244 from "@/assets/property-28167244.webp";
+import property14073975 from "@/assets/property-14073975.webp";
 
 export interface Property {
   id: string;
@@ -138,6 +139,24 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/28167244",
     mls: "28167244",
+    status: "active",
+  },
+  {
+    id: "14073975",
+    address: "14 Rue de la Cime",
+    city: "Gatineau (Hull — Richelieu / Hautes-Plaines / Dôme)",
+    price: "1 079 900 $",
+    type: "Triplex",
+    bedrooms: "3",
+    bathrooms: "1",
+    area: "617,70 m² (terrain)",
+    yearBuilt: "2003",
+    description:
+      "Superbe triplex offrant un excellent potentiel d'investissement avec un revenu locatif annuel d'environ 60 600 $. Soigneusement entretenu, il comprend 2 logements de 2 chambres et 1 logement de 3 chambres. Situé dans un cul-de-sac du secteur prisé des Hautes-Plaines, sans voisin à l'arrière, à quelques minutes du parc de la Gatineau. Inclus : 3 lave-vaisselle, 3 climatiseurs muraux et 3 échangeurs d'air.",
+    image: property14073975,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/14-rue-de-la-cime-gatineau-hull-richelieu-hautes-plaines-dome-14073975",
+    mls: "14073975",
     status: "active",
   },
 ];
