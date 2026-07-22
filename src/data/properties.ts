@@ -6,6 +6,7 @@ import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property28167244 from "@/assets/property-28167244.webp";
 import property14073975 from "@/assets/property-14073975.webp";
+import property19326119 from "@/assets/property-19326119.webp";
 
 export interface Property {
   id: string;
