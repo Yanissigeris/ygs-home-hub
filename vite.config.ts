@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { imagetools } from "vite-imagetools";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 /**
  * Post-build plugin that processes the generated HTML to:
@@ -106,6 +107,7 @@ export default defineConfig(() => ({
       avif: { quality: 60 },
     }),
     htmlOptimizePlugin(),
+    mcpPlugin(),
   ],
   resolve: {
     alias: {
