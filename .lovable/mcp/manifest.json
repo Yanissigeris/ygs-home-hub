@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "yanisgauthier-mcp",
+      "version": "0.1.0",
+      "title": "Yanis Gauthier-Sigeris — Real Estate MCP"
+    },
+    "tools": [
+      {
+        "name": "list_properties",
+        "title": "List Yanis Gauthier-Sigeris properties",
+        "description": "List real-estate properties currently or previously represented by Yanis Gauthier-Sigeris (RE/MAX, Gatineau / Outaouais). Optionally filter by status (active, sold, rent, pending).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "sold",
+                "rent",
+                "pending",
+                "all"
+              ],
+              "description": "Filter by listing status. Defaults to 'all'."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
