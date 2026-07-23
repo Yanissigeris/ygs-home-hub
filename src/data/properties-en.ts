@@ -161,4 +161,24 @@ export const propertiesEn: Property[] = [
     mls: "19326119",
     status: "active",
   },
+  {
+    id: "16828271",
+    address: "312 Rue Le Gallois",
+    city: "Gatineau (Gatineau — Ferme Limbour, Limbour)",
+    price: "$669,900",
+    type: "Two-storey house",
+    bedrooms: "4",
+    bathrooms: "2",
+    powderRooms: "1",
+    area: "1,485 sq ft",
+    lotSize: "4,844 sq ft",
+    yearBuilt: "2004",
+    description:
+      "Family favourite in Ferme Limbour, walking distance to École du Vallon and its park. Detached two-storey home offering 1,485 sq ft with 4 bedrooms, 2 full bathrooms and a powder room. Kitchen with ample cabinetry opens onto the dining room. Fully finished basement. Large backyard with above-ground pool, balcony, large shed and attached garage. Turnkey.",
+    image: property16828271,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/312-rue-le-gallois/16828271",
+    mls: "16828271",
+    status: "active",
+  },
 ];
