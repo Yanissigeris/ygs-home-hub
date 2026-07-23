@@ -7,6 +7,7 @@ import property19674845 from "@/assets/property-19674845.webp";
 import property28167244 from "@/assets/property-28167244.webp";
 import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
+import property16828271 from "@/assets/property-16828271.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -158,6 +159,26 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/71-rue-lessard/19326119",
     mls: "19326119",
+    status: "active",
+  },
+  {
+    id: "16828271",
+    address: "312 Rue Le Gallois",
+    city: "Gatineau (Gatineau — Ferme Limbour, Limbour)",
+    price: "$669,900",
+    type: "Two-storey house",
+    bedrooms: "4",
+    bathrooms: "2",
+    powderRooms: "1",
+    area: "1,485 sq ft",
+    lotSize: "4,844 sq ft",
+    yearBuilt: "2004",
+    description:
+      "Family favourite in Ferme Limbour, walking distance to École du Vallon and its park. Detached two-storey home offering 1,485 sq ft with 4 bedrooms, 2 full bathrooms and a powder room. Kitchen with ample cabinetry opens onto the dining room. Fully finished basement. Large backyard with above-ground pool, balcony, large shed and attached garage. Turnkey.",
+    image: property16828271,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/312-rue-le-gallois/16828271",
+    mls: "16828271",
     status: "active",
   },
 ];
