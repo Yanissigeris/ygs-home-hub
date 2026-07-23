@@ -243,6 +243,17 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
 
     if (featured.length === 0) return null;
 
+    // Mobile: show 3 cards — 2 active + 1 sold (flagship)
+    const actives = featured.filter((p) => p.status === "active").slice(0, 2);
+    const sold = featured.find((p) => p.status === "sold");
+    const mobileList = [...actives, ...(sold ? [sold] : [])];
+
+    // Preload mobile listing images so skeletons can swap to real cards smoothly
+    const mobileImageSrcs = mobileList
+      .map((p) => propertyImages[p.id as string]?.fallback ?? p.image)
+      .filter(Boolean);
+    const mobileImagesReady = useImagePreload(mobileImageSrcs);
+
     return (
       <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
         <div className="section-container">
@@ -280,7 +291,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
             ))}
           </div>
 
-          {/* Mobile: horizontal scroll */}
+          {/* Mobile: horizontal scroll with skeleton loading */}
           <div
             className="flex md:hidden overflow-x-auto overflow-y-hidden"
             style={{
@@ -291,17 +302,17 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
               padding: "0 1.25rem 1rem",
             }}
           >
-            {(() => {
-              // Mobile: show 3 cards — 2 active + 1 sold (flagship)
-              const actives = featured.filter((p) => p.status === "active").slice(0, 2);
-              const sold = featured.find((p) => p.status === "sold");
-              const mobileList = [...actives, ...(sold ? [sold] : [])];
-              return mobileList.map((p) => (
-                <div key={p.id} className="shrink-0" style={{ flex: "0 0 82vw", scrollSnapAlign: "start" }}>
-                  <PropertyCard p={p} strings={strings} lang={lang} />
-                </div>
-              ));
-            })()}
+            {!mobileImagesReady
+              ? Array.from({ length: mobileList.length || 3 }).map((_, i) => (
+                  <div key={`skeleton-${i}`} className="shrink-0" style={{ flex: "0 0 82vw", scrollSnapAlign: "start" }}>
+                    <PropertyCardSkeleton />
+                  </div>
+                ))
+              : mobileList.map((p) => (
+                  <div key={p.id} className="shrink-0" style={{ flex: "0 0 82vw", scrollSnapAlign: "start" }}>
+                    <PropertyCard p={p} strings={strings} lang={lang} />
+                  </div>
+                ))}
           </div>
 
           {/* Mobile link — centered below */}
