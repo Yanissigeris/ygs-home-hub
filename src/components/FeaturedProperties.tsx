@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { propertyImages } from "@/data/property-images";
+
 
 interface FeaturedPropertiesProps {
   lang?: "fr" | "en";
@@ -254,9 +256,37 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       .filter(Boolean);
     const mobileImagesReady = useImagePreload(mobileImageSrcs);
 
+    // Preload hints for mobile cards — injected only on mobile viewports so
+    // desktop doesn't fetch these before its own grid, and used with high
+    // fetchpriority for near-instant skeleton → content swap.
+    const mobilePreloads = mobileList.map((p) => {
+      const set = propertyImages[p.id as string];
+      return {
+        id: p.id,
+        href: set?.fallback ?? p.image,
+        imageSrcSet: set?.webpSrcSet,
+      };
+    });
+
     return (
       <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
+        <Helmet>
+          {mobilePreloads.map((pl) => (
+            <link
+              key={`preload-${pl.id}`}
+              rel="preload"
+              as="image"
+              href={pl.href}
+              {...(pl.imageSrcSet
+                ? { imagesrcset: pl.imageSrcSet, imagesizes: "82vw" }
+                : {})}
+              media="(max-width: 767px)"
+              fetchPriority="high"
+            />
+          ))}
+        </Helmet>
         <div className="section-container">
+
           {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
