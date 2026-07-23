@@ -857,3 +857,15 @@ h1.hero-eyebrow {
     transform: none !important;
   }
 }
+
+/* Featured property badges — larger, more distinct on mobile */
+@media (max-width: 768px) {
+  .featured-badge {
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    padding: 7px 13px !important;
+    top: 10px !important;
+    left: 10px !important;
+    border-radius: 2px !important;
+  }
+}
