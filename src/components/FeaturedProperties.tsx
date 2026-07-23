@@ -91,19 +91,23 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
           );
         })()}
         <span
+          className="featured-badge"
           style={{
             position: "absolute",
             top: "12px",
             left: "12px",
             background: p.status === "sold" ? "var(--gold)" : "var(--ink)",
             color: "var(--white)",
-            padding: "4px 10px",
-            fontSize: "9.5px",
+            padding: "6px 12px",
+            fontSize: "10.5px",
             fontWeight: 700,
-            letterSpacing: "0.16em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             zIndex: 2,
-            boxShadow: "0 2px 8px rgba(23,48,59,0.25)",
+            borderRadius: "2px",
+            boxShadow: p.status === "sold"
+              ? "0 3px 10px rgba(168,138,90,0.35)"
+              : "0 3px 10px rgba(23,48,59,0.30)",
           }}
         >
           {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
