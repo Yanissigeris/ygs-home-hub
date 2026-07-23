@@ -220,11 +220,17 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
               padding: "0 1.25rem 1rem",
             }}
           >
-            {featured.map((p) => (
-              <div key={p.id} className="shrink-0" style={{ flex: "0 0 82vw", scrollSnapAlign: "start" }}>
-                <PropertyCard p={p} strings={strings} lang={lang} />
-              </div>
-            ))}
+            {(() => {
+              // Mobile: show 3 cards — 2 active + 1 sold (flagship)
+              const actives = featured.filter((p) => p.status === "active").slice(0, 2);
+              const sold = featured.find((p) => p.status === "sold");
+              const mobileList = [...actives, ...(sold ? [sold] : [])];
+              return mobileList.map((p) => (
+                <div key={p.id} className="shrink-0" style={{ flex: "0 0 82vw", scrollSnapAlign: "start" }}>
+                  <PropertyCard p={p} strings={strings} lang={lang} />
+                </div>
+              ));
+            })()}
           </div>
 
           {/* Mobile link — centered below */}
