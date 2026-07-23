@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { propertyImages } from "@/data/property-images";
+
 
 interface FeaturedPropertiesProps {
   lang?: "fr" | "en";
