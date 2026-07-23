@@ -281,7 +281,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
                 ? { imagesrcset: pl.imageSrcSet, imagesizes: "82vw" }
                 : {})}
               media="(max-width: 767px)"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           ))}
         </Helmet>
