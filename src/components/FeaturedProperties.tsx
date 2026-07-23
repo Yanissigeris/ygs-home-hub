@@ -161,6 +161,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
       "14073975", // Triplex 14 rue de la Cime (actif, 1 079 900 $)
       "19326119", // Quadruplex 71 rue Lessard (actif, 1 029 900 $)
+      "16828271", // Maison 312 rue Le Gallois (actif, 669 900 $)
       "28167244", // Maison Gatineau (active, 499 900 $)
       "15163372", // Maison Limbour (vendu, 649 900 $)
       "20453879", // Condo Lucerne (à vendre, 344 900 $)
