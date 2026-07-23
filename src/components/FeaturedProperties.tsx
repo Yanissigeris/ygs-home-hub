@@ -34,6 +34,73 @@ const t = {
 type PropertyLike = (typeof properties)[number];
 type Strings = (typeof t)["fr"];
 
+const useImagePreload = (srcs: string[]) => {
+  const [ready, setReady] = React.useState(false);
+
+  React.useEffect(() => {
+    let mounted = true;
+    if (srcs.length === 0) {
+      setReady(true);
+      return;
+    }
+
+    let resolved = 0;
+    const onResolve = () => {
+      resolved += 1;
+      if (resolved >= srcs.length && mounted) {
+        setReady(true);
+      }
+    };
+
+    const images = srcs.map((src) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.onload = onResolve;
+      img.onerror = onResolve;
+      img.src = src;
+      return img;
+    });
+
+    // Safety cap: show real cards after 2.2s even if images stall
+    const timer = window.setTimeout(() => {
+      if (mounted) setReady(true);
+    }, 2200);
+
+    return () => {
+      mounted = false;
+      window.clearTimeout(timer);
+      images.forEach((img) => {
+        img.onload = null;
+        img.onerror = null;
+      });
+    };
+  }, [srcs]);
+
+  return ready;
+};
+
+const PropertyCardSkeleton = () => (
+  <div
+    className="featured-property-skeleton flex flex-col h-full"
+    style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
+    aria-hidden="true"
+  >
+    {/* Image placeholder */}
+    <div className="skeleton-pulse relative overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--cream-deep)" }} />
+
+    {/* Gold top border placeholder */}
+    <div className="h-[2px]" style={{ background: "rgba(168,138,90,0.12)" }} />
+
+    {/* Body placeholders */}
+    <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+      <div className="skeleton-pulse" style={{ width: "58%", height: "1.35rem", borderRadius: 2, marginBottom: ".65rem" }} />
+      <div className="skeleton-pulse" style={{ width: "82%", height: 13, borderRadius: 2, marginBottom: ".85rem" }} />
+      <div className="skeleton-pulse" style={{ width: "45%", height: 12, borderRadius: 2, marginBottom: "1.35rem" }} />
+      <div className="skeleton-pulse mt-auto" style={{ width: "40%", height: 13, borderRadius: 2 }} />
+    </div>
+  </div>
+);
+
 const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings; lang: string }) => {
   
 
