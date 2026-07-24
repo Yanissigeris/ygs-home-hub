@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import { getPublishedPosts, getFeaturedPost, getCategories } from "@/data/blog-posts";
+import { currentBlogStats } from "@/data/blog-market-stats";
 import heroBlog from "@/assets/hero-blog.webp";
 
 const BlogPageEn = () => {
@@ -17,15 +18,9 @@ const BlogPageEn = () => {
     : allPosts;
   const nonFeaturedPosts = posts.filter((p) => p.slugEn !== featured?.slugEn);
 
-  const tickerItems = [
-    "Q2 2026",
-    "Plex +7%",
-    "Plex days 32",
-    "Median plex $599,600",
-    "Single-family $523,500",
-    "Listings +30%",
-    "Source: Outaouais Real Estate Board",
-  ];
+  const stats = currentBlogStats();
+  const tickerItems = stats.ticker.en;
+  const heroStats = stats.hero.en;
 
   return (
     <>
@@ -65,11 +60,7 @@ const BlogPageEn = () => {
             </div>
 
             <div className="md:pl-8 md:border-l" style={{ borderColor: "rgba(247,244,239,0.08)" }}>
-              {[
-                { value: "+7%", label: "Median plex price" },
-                { value: "32 d", label: "Avg. plex days" },
-                { value: "$599,600", label: "Plex · Q2 2026" },
-              ].map((stat, i) => (
+              {heroStats.map((stat, i) => (
                 <div
                   key={stat.label}
                   className="flex items-baseline justify-between gap-4 py-4"
