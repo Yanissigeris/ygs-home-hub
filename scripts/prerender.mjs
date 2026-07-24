@@ -549,6 +549,8 @@ async function main() {
     .filter((r) => !NOINDEX.has(r))
     .sort();
 
+  const routeGitDates = await buildRouteGitDates();
+
   const urlEntries = urls
     .map((route) => {
       const loc = `${SITE_URL}${withSlash(route)}`;
