@@ -29,6 +29,56 @@ import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
+const ROOT = path.resolve(__dirname, "..");
+
+/* ── Lastmod par route via git ──
+ * Route → composant (parsé de src/App.tsx) → fichier source → date du
+ * dernier commit ayant touché ce fichier.
+ * Priorité : SEO_ROUTES[route].lastmod > date git > SITE_LAST_UPDATE.
+ */
+async function buildRouteGitDates() {
+  /* Guard : dans un clone shallow, git log retourne la date du HEAD
+   * pour tous les fichiers (sans erreur) — dates fausses. On désactive. */
+  try {
+    const shallow = execSync("git rev-parse --is-shallow-repository", { cwd: ROOT })
+      .toString().trim();
+    if (shallow !== "false") {
+      console.log("⚠️ Sitemap: clone git shallow — lastmod git désactivé, fallback SITE_LAST_UPDATE");
+      return {};
+    }
+  } catch {
+    console.log("⚠️ Sitemap: git indisponible — fallback SITE_LAST_UPDATE");
+    return {};
+  }
+
+  const appSrc = await fs.readFile(path.join(ROOT, "src/App.tsx"), "utf8");
+
+  const compToFile = {};
+  for (const m of appSrc.matchAll(/import\s+(\w+)\s+from\s+["']\.\/pages\/([^"']+)["']/g))
+    compToFile[m[1]] = `src/pages/${m[2]}`;
+  for (const m of appSrc.matchAll(/const\s+(\w+)\s*=\s*React\.lazy\(\(\)\s*=>\s*import\(["']\.\/pages\/([^"']+)["']\)\)/g))
+    compToFile[m[1]] = `src/pages/${m[2]}`;
+
+  const routeToComp = {};
+  for (const m of appSrc.matchAll(/<Route\s+path=["']([^"']+)["']\s+element=\{<(\w+)\s*\/?\s*>\}/g))
+    routeToComp[m[1]] = m[2];
+
+  const dates = {};
+  for (const [route, comp] of Object.entries(routeToComp)) {
+    let file = compToFile[comp];
+    if (!file) continue;
+    if (!file.endsWith(".tsx")) file += ".tsx";
+    try {
+      const d = execSync(`git log -1 --format=%cs -- "${file}"`, { cwd: ROOT })
+        .toString().trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(d)) dates[route] = d;
+    } catch {
+      /* fichier hors git — fallback */
+    }
+  }
+  console.log(`✅ Sitemap: lastmod git résolu pour ${Object.keys(dates).length} routes`);
+  return dates;
+}
 
 /** Add a trailing slash to a path, preserving root, query strings and fragments. */
 const withSlash = (p) => {
