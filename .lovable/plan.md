@@ -1,49 +1,56 @@
-# Image Optimization — Phase 3 (Listing-Adjacent Images)
+## Objectif
 
-Apply the same `vite-imagetools` responsive pattern (already wired in Phase 2) to the remaining image-bearing sections on the home page. No layout, no alt-text, no behavior changes.
+Ajouter un nouvel article bilingue au blog dans `src/data/blog-posts.ts`, sans toucher à aucun autre fichier.
 
-## Targets
+## Fichier modifié
 
-| Section | File(s) | Current source | Displayed at |
-|---|---|---|---|
-| `InstagramGrid` | `src/assets/instagram-{1..6}.webp` | 854–1206 wide, 30–92 KB each | aspect-square; ~3-col desktop (~280px), 2-col mobile (~200px) → ≤560 device px |
-| `AboutSection` (portrait) | `src/assets/yanis-about-new.jpg` | 1170×1216, 109 KB | `max-w-[320px]` mobile, ~565 CSS px desktop → ≤1130 device px |
-| `PathwaySection` (lifestyle bg) | `pathway-lifestyle-bg.webp` (1280×714) | currently two pre-rendered split files per format | desktop floating frame ~50vw; mobile band 100vw × 200px |
+- `src/data/blog-posts.ts` — ajouter un seul nouvel objet `BlogPost` en tête de tableau (position la plus récente par date), en réutilisant l'image `blogMarket` déjà importée.
 
-## Tasks
+## Contenu de l'article (FR)
 
-### 1. Instagram tiles — `src/components/InstagramGrid.tsx`
-- Replace each static `import ig{n} from "@/assets/instagram-{n}.webp"` with a single imagetools picture import:
-  `?w=320;640&format=avif;webp&as=picture`.
-- In the `.map()`, render `<picture><source type="image/avif" .../><source type="image/webp" .../><img ... /></picture>` with `sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"`.
-- Keep `alt={altTexts[i]}`, `width={800}`, `height={800}`, `loading="lazy"`, `decoding="async"`, the `className` (`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110`), and the hover overlay markup unchanged.
+- `slug`: `inventaire-gatineau-2026-30-pourcent-inscriptions`
+- `category`: `MARCHÉ · UPDATE T2 2026`
+- `publishDate`: `2026-07-24`
+- `seoTitle` / `metaDescription`: exactement les valeurs fournies
+- `titleLines`: ligne 1 « 2 007 propriétés à vendre », ligne 2 « à Gatineau », ligne 3 « ce que ça change pour votre prix » (italic via convention existante)
+- `heroStats`: `2 007` / `+30 %` / `27 j` avec les 3 labels fournis
+- `excerpt`: le lead fourni
+- `body`: markdown contenant, dans l'ordre :
+  - Lead
+  - Phrase GEO en italique/citation
+  - 3 sections `## H3` avec titres et corps exacts fournis, y compris le lien interne markdown `[évaluation de propriété à Gatineau](/evaluation-gratuite-gatineau/)` et le paragraphe downsizer
+  - Bloc « Regard YGS »
+  - Section `## FAQ` avec 3 paires Q/R au format `**Q : …**` / `**R : …**` (compatible avec `extractFaqPairs` de `scripts/blog-extractor.mjs`)
+  - Signature bio
+- `emitFaqSchema`: `true`
+- `h3Style`: `"prominent"`
+- `readingTimeOverride`: `4`
+- `sources`: entrée « Chambre immobilière de l'Outaouais / APCIQ — Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026 » (FR + EN)
+- `ctaOverride`: eyebrow/title/text repris du bloc CTA fourni, bouton « Demander VALEUR » → `/evaluation-gratuite-gatineau/`
 
-### 2. AboutSection portrait — `src/components/AboutSection.tsx`
-- Replace `import yanisAbout from "@/assets/yanis-about-new.jpg"` with imagetools picture import: `?w=400;640;900&format=avif;webp&as=picture`.
-- Wrap the existing `<img>` in `<picture>` with AVIF + WebP `<source>` srcsets and `sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 565px"`.
-- Keep `alt={c.imgAlt + " — YGS"}`, `className`, `loading="lazy"`, `decoding="async"`, `width={565}`, `height={800}`, the warm overlay `<div>`, and the `onError` handler unchanged.
+## Contenu de l'article (EN)
 
-### 3. Pathway lifestyle background — `src/components/PathwaySection.tsx`
-- Replace the four pre-rendered imports (`-720.{avif,webp}`, `-1280.{avif,webp}`) with one imagetools picture import from the master source `pathway-lifestyle-bg.webp`: `?w=720;1080;1280&format=avif;webp&as=picture`.
-- Desktop `<picture>` (the floating frame): use the AVIF/WebP srcsets with `sizes="(min-width: 1280px) 640px, 50vw"`.
-- Mobile `<picture>` (the band): same imagetools result reused; `sizes="100vw"`.
-- Keep both wrappers' positions, dimensions, gradient overlays, `aria-hidden`, `role="presentation"`, `width`/`height` attributes, and empty `alt=""` unchanged.
-- Delete the four obsolete files: `pathway-lifestyle-bg-{720,1280}.{avif,webp}` (8 files).
-- Drop the dead imports `cardVendreImg`, `cardAcheterImg`, `cardPlexImg` (assigned to variables never read in JSX).
+Traduction fidèle et localisée en anglais canadien :
 
-## Out of scope (explicit)
+- `slugEn`: `gatineau-inventory-2026-30-percent-listings`
+- `categoryEn`: `MARKET · Q2 2026 UPDATE`
+- `titleEn` + `titleLinesEn`: « 2,007 homes for sale » / « in Gatineau » / « what it means for your price »
+- `seoTitleEn`: « Gatineau listings up 30%: what it means for your price »
+- `metaDescriptionEn`: équivalent EN sous 160 caractères
+- `heroStats` EN: `2,007` / `+30%` / `27 d` avec labels traduits
+- `excerptEn`, `bodyEn` : traduction complète (lead, phrase GEO, 3 H3, downsizer, Regard YGS = « What I'm seeing », FAQ 3 Q/A, bio)
+- Lien interne EN : `[home valuation in Gatineau](/en/home-valuation/)` (route EN équivalente existante)
+- `ctaOverride` EN : version anglaise du CTA
 
-- Hero AVIFs, `/og/og-home.jpg`, listing photos (already done Phase 2), header/footer logos (Phase 1), `GuideOffersSection` (no images).
-- No alt-text, cropping, layout, hover, or behavior changes.
-- No prerendered text / meta / JSON-LD changes.
+## Détails techniques
 
-## Verification
+- Insérer l'objet **avant** l'article d'avril 2026 pour que le tri par `publishDate` place le nouvel article en tête / featured.
+- `featured`: pas activé (l'article d'avril reste featured) — sauf indication contraire.
+- Format markdown FAQ vérifié compatible avec le parser (`**Q : …**` / `**R : …**`) pour émettre correctement le JSON-LD `FAQPage`.
+- Aucun nouvel import d'image : `featuredImage: blogMarket`.
+- Aucun autre fichier touché : pas de changement à `_redirects`, `sitemap`, `breadcrumbs`, etc. (les listes de blog et le sitemap sont générés automatiquement à partir de `blog-posts.ts`).
 
-- `bun run build` succeeds; `dist/assets/` contains new 320/640 and 400/640/900 and 720/1080/1280 variants where requested.
-- Preview at mobile + desktop: every Instagram tile, the About portrait, and the Pathway lifestyle photo render correctly with no 404s.
-- DevTools Network at 375×812 confirms phones download the smaller variants.
+## Vérifications post-édition
 
-## Technical notes
-
-- Files touched: `src/components/InstagramGrid.tsx`, `src/components/AboutSection.tsx`, `src/components/PathwaySection.tsx`, plus deletion of 8 obsolete `pathway-lifestyle-bg-*` files.
-- All transforms run through the existing `imagetools()` plugin registered in `vite.config.ts`; their output is further compressed by `ViteImageOptimizer`.
+- `tsgo` sur le fichier modifié.
+- Confirmer visuellement le rendu FR (`/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions/`) et EN (`/en/blog/gatineau-inventory-2026-30-percent-listings/`) via lecture du fichier — pas de build manuel requis.

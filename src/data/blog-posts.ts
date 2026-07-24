@@ -76,6 +76,125 @@ export interface BlogPost {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "inventaire-gatineau-2026-30-pourcent-inscriptions",
+    featuredImage: blogMarket,
+    slugEn: "gatineau-inventory-2026-30-percent-listings",
+    title: "Inscriptions +30 % à Gatineau : l'impact sur votre prix",
+    titleEn: "Gatineau Listings Up 30%: What It Means for Your Price",
+    seoTitle: "Inscriptions +30 % à Gatineau : l'impact sur votre prix",
+    seoTitleEn: "Gatineau listings up 30%: what it means for your price",
+    metaDescription: "2 007 propriétés à vendre à Gatineau au T2 2026, +30 % en un an. Ce que la montée de l'inventaire change pour votre prix de vente. Chiffres et stratégie.",
+    metaDescriptionEn: "2,007 homes for sale in Gatineau in Q2 2026, up 30% year-over-year. What rising inventory means for your list price. Numbers and strategy.",
+    excerpt: "Vous pensez vendre votre maison à Gatineau cet automne et vous entendez que le marché ralentit. La réalité est plus précise que ça : les acheteurs ont maintenant 30 % plus de choix qu'il y a un an, et c'est votre stratégie de prix qui absorbe la différence. Voici les chiffres du deuxième trimestre, et ce qu'ils veulent dire pour vous.",
+    excerptEn: "You're thinking of selling your Gatineau home this fall and you keep hearing the market is slowing. The reality is more precise: buyers now have 30% more choice than a year ago, and your pricing strategy is absorbing the difference. Here are the Q2 numbers, and what they mean for you.",
+    category: "MARCHÉ · UPDATE T2 2026",
+    categoryEn: "MARKET · Q2 2026 UPDATE",
+    publishDate: "2026-07-24",
+    published: true,
+    emitFaqSchema: true,
+    readingTimeOverride: 4,
+    h3Style: "prominent",
+    titleLines: {
+      line1: "2 007 propriétés à vendre",
+      line2: "à Gatineau",
+      line3: "ce que ça change pour votre prix",
+      line1En: "2,007 homes for sale",
+      line2En: "in Gatineau",
+      line3En: "what it means for your price",
+    },
+    heroStats: [
+      { value: "2 007", valueEn: "2,007", label: "Inscriptions en vigueur T2", labelEn: "Active listings Q2" },
+      { value: "+30 %", valueEn: "+30%", label: "Hausse de l'offre sur un an", labelEn: "Year-over-year supply increase" },
+      { value: "27 j", valueEn: "27 days", label: "Délai moyen unifamiliale", labelEn: "Single-family days on market" },
+    ],
+    sources: [
+      {
+        fr: "Chambre immobilière de l'Outaouais / APCIQ — Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026",
+        en: "Chambre immobilière de l'Outaouais / QPAREB — Q2 2026 Statistics, Gatineau CMA, published July 14, 2026",
+      },
+    ],
+    ctaOverride: {
+      eyebrow: "ÉVALUATION PERSONNALISÉE",
+      title: "Votre maison vaut-elle plus ou moins qu'il y a un an ?",
+      text: "Avec 30 % plus de concurrence sur le marché, la réponse dépend de votre secteur et des ventes des 90 derniers jours. Écrivez-moi VALEUR et je vous prépare une évaluation gratuite basée sur les comparables réels de votre quartier, livrée en 24 à 48 heures. Les chiffres et les options. Vous décidez.",
+      buttonLabel: "Demander VALEUR",
+      buttonHref: "/evaluation-gratuite-gatineau/",
+      eyebrowEn: "PERSONALIZED VALUATION",
+      titleEn: "Is your home worth more or less than a year ago?",
+      textEn: "With 30% more competition on the market, the answer depends on your area and the last 90 days of sales. Message me VALUE and I'll prepare a free valuation based on real comparables from your neighbourhood, delivered in 24 to 48 hours. The numbers and the options. You decide.",
+      buttonLabelEn: "Request VALUE",
+      buttonHrefEn: "/en/home-valuation/",
+    },
+    body: `Vous pensez vendre votre maison à Gatineau cet automne et vous entendez que le marché ralentit. La réalité est plus précise que ça : les acheteurs ont maintenant 30 % plus de choix qu'il y a un an, et c'est votre stratégie de prix qui absorbe la différence. Voici les chiffres du deuxième trimestre, et ce qu'ils veulent dire pour vous.
+
+> Au deuxième trimestre de 2026, 2 007 propriétés étaient à vendre sur Centris dans la RMR de Gatineau, une hausse de 30 % sur un an et un quatrième trimestre consécutif de croissance de l'inventaire, selon la Chambre immobilière de l'Outaouais et l'APCIQ.
+
+### Pourquoi y a-t-il autant de propriétés à vendre à Gatineau en 2026 ?
+
+L'inventaire de la RMR de Gatineau croît depuis quatre trimestres consécutifs et atteint 2 007 inscriptions en vigueur, selon les données Centris du T2 2026. Deux forces se croisent : les ventes reculent de 15 % pendant que les propriétaires continuent d'inscrire. Résultat, les mois d'inventaire augmentent autant en unifamiliale qu'en copropriété. Pour vous comme vendeur, ça veut dire une chose concrète : votre maison n'est plus comparée à trois propriétés semblables, mais à cinq ou six. Chaque détail de présentation et chaque dollar de prix compte davantage qu'en 2025.
+
+### Est-ce encore un marché de vendeurs à Gatineau ?
+
+Oui pour l'unifamiliale et le plex, selon la Chambre immobilière de l'Outaouais, mais le rapport de force s'effrite. Une maison se vend encore en 27 jours en moyenne, un délai stable sur un an, et le prix médian a monté de 2 % à 523 500 $. Le segment condo, lui, se dirige vers l'équilibre : prix médian en baisse de 5 % et délai allongé à 40 jours. Traduction pratique : si vous vendez une unifamiliale bien préparée et bien positionnée, le marché répond encore vite. Si vous vendez un condo, la marge d'erreur sur le prix a pratiquement disparu.
+
+### Comment fixer son prix de vente avec 30 % plus de concurrence ?
+
+En partant des ventes comparables des 90 derniers jours, pas de ce que le voisin demandait au printemps 2025. La hausse médiane de 2 % en unifamiliale cache un marché où les propriétés surévaluées restent inscrites pendant que les autres partent en moins d'un mois. Avec 30 % plus d'inscriptions, un acheteur qui trouve votre prix trop haut ne négocie plus : il passe à la suivante. Le bon prix d'entrée n'a jamais été aussi payant. Voir l'[évaluation de propriété à Gatineau](/evaluation-gratuite-gatineau/).
+
+Si vous vendez une unifamiliale pour acheter un condo, ce trimestre joue pour vous des deux côtés. Vous vendez dans le segment qui monte (+2 %) et vous achetez dans celui qui recule (−5 %). Cet écart-là ne durera pas éternellement.
+
+> [YGS] Ce que je vois en ce moment : le marché est encore résilient quand la maison est inscrite au bon prix et bien présentée. Les unifamiliales que j'ai vendues à Gatineau en 2026 ont trouvé preneur rapidement quand le prix était celui du marché et que la préparation était bien exécutée. Le délai de vente se situe autour d'un mois pour ce segment. Bref, si vous êtes vendeur, le marché est encore favorable si on est bien positionné.
+
+## FAQ
+
+**Q : Est-ce le bon moment pour vendre sa maison à Gatineau ?**
+R : Oui pour une unifamiliale : les délais restent à 27 jours et le prix médian monte encore de 2 % au T2 2026. Mais la fenêtre se resserre à mesure que l'inventaire grimpe. Demandez le mot-clé VALEUR pour savoir où votre propriété se situe.
+
+**Q : Les prix vont-ils baisser à Gatineau en 2026 ?**
+R : Pas en unifamiliale pour l'instant : le prix médian a atteint 523 500 $ au T2, en hausse de 2 %. Le segment condo, lui, a déjà reculé de 5 %. La pression vient de l'offre : quatre trimestres de hausse d'inventaire finissent par modérer la croissance des prix.
+
+**Q : Combien de temps pour vendre une maison à Gatineau en ce moment ?**
+R : 27 jours en moyenne pour une unifamiliale au T2 2026, un délai stable sur un an selon la Chambre immobilière de l'Outaouais. Un plex part en 32 jours, un condo en 40. Le prix d'entrée fait toute la différence entre ces moyennes et le double.
+
+---
+
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+    bodyEn: `You're thinking of selling your Gatineau home this fall and you keep hearing the market is slowing. The reality is more precise: buyers now have 30% more choice than a year ago, and your pricing strategy is absorbing the difference. Here are the Q2 numbers, and what they mean for you.
+
+> In the second quarter of 2026, 2,007 properties were for sale on Centris in the Gatineau CMA, a 30% year-over-year increase and a fourth consecutive quarter of inventory growth, according to the Chambre immobilière de l'Outaouais and QPAREB.
+
+### Why are there so many homes for sale in Gatineau in 2026?
+
+Gatineau CMA inventory has grown for four consecutive quarters and now sits at 2,007 active listings, according to Centris Q2 2026 data. Two forces are crossing: sales are down 15% while owners keep listing. The result is that months of inventory are rising in both single-family and condo segments. For you as a seller, this means one concrete thing: your home is no longer being compared to three similar properties, but to five or six. Every staging detail and every dollar of price counts more than it did in 2025.
+
+### Is Gatineau still a seller's market?
+
+Yes for single-family homes and plex, according to the Chambre immobilière de l'Outaouais, but the balance is shifting. A house still sells in an average of 27 days, a stable timeline year-over-year, and the median price is up 2% to $523,500. The condo segment is moving toward equilibrium: median price down 5% and days on market stretching to 40. In practical terms: if you're selling a well-prepared and well-positioned single-family home, the market still responds quickly. If you're selling a condo, the margin of error on price has practically disappeared.
+
+### How do you set your list price with 30% more competition?
+
+By starting from comparable sales in the last 90 days, not from what your neighbour was asking in spring 2025. The median 2% gain on single-family homes hides a market where overpriced properties sit while others sell in under a month. With 30% more listings, a buyer who finds your price too high doesn't negotiate anymore: they move on to the next one. The right list price has never paid off more. See the [home valuation in Gatineau](/en/home-valuation/).
+
+If you're selling a single-family home to buy a condo, this quarter works in your favour on both sides. You're selling in the segment that's rising (+2%) and buying in the one that's pulling back (−5%). That gap won't last forever.
+
+> [YGS] What I'm seeing right now: the market is still resilient when the home is listed at the right price and well presented. The single-family homes I've sold in Gatineau in 2026 have found buyers quickly when the price matched the market and the prep work was done well. Days on market sit around one month for this segment. Bottom line, if you're a seller, the market is still favourable when you're well positioned.
+
+## FAQ
+
+**Q: Is now a good time to sell a home in Gatineau?**
+A: Yes for single-family homes: days on market stay at 27 and the median price is still up 2% in Q2 2026. But the window is tightening as inventory climbs. Message me the keyword VALUE to see where your property stands.
+
+**Q: Will prices drop in Gatineau in 2026?**
+A: Not for single-family homes yet: the median price reached $523,500 in Q2, up 2%. The condo segment, however, has already pulled back 5%. Pressure is coming from supply: four straight quarters of inventory growth eventually moderate price growth.
+
+**Q: How long does it take to sell a home in Gatineau right now?**
+A: 27 days on average for a single-family home in Q2 2026, a stable timeline year-over-year according to the Chambre immobilière de l'Outaouais. A plex sells in 32 days, a condo in 40. The list price makes all the difference between these averages and double.
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+  },
+  {
     slug: "marche-immobilier-gatineau-avril-2026",
     featuredImage: blogMarket,
     slugEn: "gatineau-real-estate-market-april-2026",
