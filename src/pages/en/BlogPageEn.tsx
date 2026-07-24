@@ -18,12 +18,12 @@ const BlogPageEn = () => {
   const nonFeaturedPosts = posts.filter((p) => p.slugEn !== featured?.slugEn);
 
   const tickerItems = [
-    "March 2026",
-    "Plex +19%",
-    "23-day average",
-    "Median price $585,500",
-    "Single-family −9%",
-    "Condo −32%",
+    "Q2 2026",
+    "Plex +7%",
+    "Plex days 32",
+    "Median plex $599,600",
+    "Single-family $523,500",
+    "Listings +30%",
     "Source: Outaouais Real Estate Board",
   ];
 
@@ -66,9 +66,9 @@ const BlogPageEn = () => {
 
             <div className="md:pl-8 md:border-l" style={{ borderColor: "rgba(247,244,239,0.08)" }}>
               {[
-                { value: "+19%", label: "Plex sales" },
-                { value: "23 d", label: "Avg. days" },
-                { value: "$585,500", label: "Median plex price" },
+                { value: "+7%", label: "Median plex price" },
+                { value: "32 d", label: "Avg. plex days" },
+                { value: "$599,600", label: "Plex · Q2 2026" },
               ].map((stat, i) => (
                 <div
                   key={stat.label}
