@@ -117,6 +117,14 @@ export default defineConfig(() => ({
   },
   build: {
     chunkSizeWarningLimit: 600,
+    assetsInlineLimit: (filePath: string) => {
+      // Logos répétés sur toutes les pages (RE/MAX, YGS) : toujours en
+      // fichiers hachés dans /assets/ pour profiter du cache CDN immutable,
+      // au lieu d'être dupliqués en base64 dans chaque HTML prerendered.
+      if (/(?:remax-[^/]*|ygs-logo[^/]*)\.png$/i.test(filePath)) return false;
+      // Tout le reste : comportement Vite par défaut (inline sous 4 KB).
+      return undefined;
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
