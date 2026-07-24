@@ -1,56 +1,28 @@
-## Objectif
+# Confirmation — Template appliqué à `inventaire-gatineau-2026-30-pourcent-inscriptions`
 
-Ajouter un nouvel article bilingue au blog dans `src/data/blog-posts.ts`, sans toucher à aucun autre fichier.
+L'article utilise la route partagée `BlogArticlePage.tsx` (`/blogue/:slug`), donc tous les éléments du template s'appliquent automatiquement, sans changement de code.
 
-## Fichier modifié
+## Vérification (référence `src/pages/BlogArticlePage.tsx`)
 
-- `src/data/blog-posts.ts` — ajouter un seul nouvel objet `BlogPost` en tête de tableau (position la plus récente par date), en réutilisant l'image `blogMarket` déjà importée.
+| Élément demandé | Statut | Emplacement |
+|---|---|---|
+| Hero split 2 colonnes (gauche `#17303B` crème / droite `#F7F4EF` border-left 3px `#A88A5A`) avec H1 Cormorant 56px, ligne 3 italic dorée, lead, stats 3 col | Appliqué | l.417, l.437, l.445-452 (stats bordées `#E0DBD1`, valeurs Cormorant 22px) |
+| Barre de progression 3px `#A88A5A` en haut | Appliqué | l.84-115 (`background: var(--gold)`, hauteur 3px, top viewport) |
+| Drop cap Cormorant 80px `#17303B` float left sur 1er paragraphe | Appliqué | l.481 (renderer markdown, premier `<p>` reçoit le drop cap) |
+| Blockquotes fond `#ECEAE2`, border-left 3px `#A88A5A`, Cormorant italic 20px `#17303B` | Appliqué | l.303-305 |
+| Sidebar 220px : source (border-left 2px `#A88A5A` + fond `#ECEAE2`) + CTA fond `#17303B` (eyebrow doré, titre Cormorant 22px italic `#C9A25A`, bouton border `#A88A5A`) | Appliqué | l.513-578 |
+| CTA full width `#17303B`, titre Cormorant 36px, bouton border doré | Appliqué | l.604, l.630 |
+| Bio auteur : avatar cercle 52px fond `#17303B` border 1.5px `#A88A5A` initiales YG + nom Cormorant 20px + bio 13px | Appliqué | l.666-689 |
+| Nav article suivant border-top `#E0DBD1` | Appliqué | l.707 |
 
-## Contenu de l'article (FR)
+## Contenu spécifique à cet article
 
-- `slug`: `inventaire-gatineau-2026-30-pourcent-inscriptions`
-- `category`: `MARCHÉ · UPDATE T2 2026`
-- `publishDate`: `2026-07-24`
-- `seoTitle` / `metaDescription`: exactement les valeurs fournies
-- `titleLines`: ligne 1 « 2 007 propriétés à vendre », ligne 2 « à Gatineau », ligne 3 « ce que ça change pour votre prix » (italic via convention existante)
-- `heroStats`: `2 007` / `+30 %` / `27 j` avec les 3 labels fournis
-- `excerpt`: le lead fourni
-- `body`: markdown contenant, dans l'ordre :
-  - Lead
-  - Phrase GEO en italique/citation
-  - 3 sections `## H3` avec titres et corps exacts fournis, y compris le lien interne markdown `[évaluation de propriété à Gatineau](/evaluation-gratuite-gatineau/)` et le paragraphe downsizer
-  - Bloc « Regard YGS »
-  - Section `## FAQ` avec 3 paires Q/R au format `**Q : …**` / `**R : …**` (compatible avec `extractFaqPairs` de `scripts/blog-extractor.mjs`)
-  - Signature bio
-- `emitFaqSchema`: `true`
-- `h3Style`: `"prominent"`
-- `readingTimeOverride`: `4`
-- `sources`: entrée « Chambre immobilière de l'Outaouais / APCIQ — Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026 » (FR + EN)
-- `ctaOverride`: eyebrow/title/text repris du bloc CTA fourni, bouton « Demander VALEUR » → `/evaluation-gratuite-gatineau/`
+- `titleLines[2]` (« ce que ça change pour votre prix ») rendu en italic doré via la ligne 3 du hero.
+- `h3Style: "prominent"` déclenche le style H3 doré Cormorant 32px (l.274), utilisé pour les 3 sections `##`.
+- `ctaOverride` FR/EN alimente le CTA sidebar et le CTA full-width.
+- `sources[0]` alimente le bloc source de la sidebar.
+- `emitFaqSchema: true` émet le JSON-LD `FAQPage` à partir des paires `**Q : …**` / `**R : …**` de la section `## FAQ`.
 
-## Contenu de l'article (EN)
+## Action
 
-Traduction fidèle et localisée en anglais canadien :
-
-- `slugEn`: `gatineau-inventory-2026-30-percent-listings`
-- `categoryEn`: `MARKET · Q2 2026 UPDATE`
-- `titleEn` + `titleLinesEn`: « 2,007 homes for sale » / « in Gatineau » / « what it means for your price »
-- `seoTitleEn`: « Gatineau listings up 30%: what it means for your price »
-- `metaDescriptionEn`: équivalent EN sous 160 caractères
-- `heroStats` EN: `2,007` / `+30%` / `27 d` avec labels traduits
-- `excerptEn`, `bodyEn` : traduction complète (lead, phrase GEO, 3 H3, downsizer, Regard YGS = « What I'm seeing », FAQ 3 Q/A, bio)
-- Lien interne EN : `[home valuation in Gatineau](/en/home-valuation/)` (route EN équivalente existante)
-- `ctaOverride` EN : version anglaise du CTA
-
-## Détails techniques
-
-- Insérer l'objet **avant** l'article d'avril 2026 pour que le tri par `publishDate` place le nouvel article en tête / featured.
-- `featured`: pas activé (l'article d'avril reste featured) — sauf indication contraire.
-- Format markdown FAQ vérifié compatible avec le parser (`**Q : …**` / `**R : …**`) pour émettre correctement le JSON-LD `FAQPage`.
-- Aucun nouvel import d'image : `featuredImage: blogMarket`.
-- Aucun autre fichier touché : pas de changement à `_redirects`, `sitemap`, `breadcrumbs`, etc. (les listes de blog et le sitemap sont générés automatiquement à partir de `blog-posts.ts`).
-
-## Vérifications post-édition
-
-- `tsgo` sur le fichier modifié.
-- Confirmer visuellement le rendu FR (`/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions/`) et EN (`/en/blog/gatineau-inventory-2026-30-percent-listings/`) via lecture du fichier — pas de build manuel requis.
+Aucune modification requise. Le rendu FR (`/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions/`) et EN (`/en/blog/gatineau-inventory-2026-30-percent-listings/`) hérite intégralement du template.
