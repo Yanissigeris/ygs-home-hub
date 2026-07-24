@@ -569,7 +569,7 @@ async function main() {
 
       return `  <url>
     <loc>${xmlEscape(loc)}</loc>
-    <lastmod>${meta?.lastmod || SITE_LAST_UPDATE}</lastmod>
+    <lastmod>${meta?.lastmod || routeGitDates[route] || SITE_LAST_UPDATE}</lastmod>
     <changefreq>${changefreqFor(route)}</changefreq>
     <priority>${priorityFor(route)}</priority>${alternates}
   </url>`;
