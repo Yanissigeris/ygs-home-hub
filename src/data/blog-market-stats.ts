@@ -56,5 +56,13 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
 
 export const CURRENT_QUARTER_KEY = "2026-Q2";
 
-export const currentBlogStats = (): BlogQuarterStats =>
-  BLOG_MARKET_STATS[CURRENT_QUARTER_KEY];
+export const currentBlogStats = (): BlogQuarterStats => {
+  if (BLOG_MARKET_STATS[CURRENT_QUARTER_KEY]) {
+    return BLOG_MARKET_STATS[CURRENT_QUARTER_KEY];
+  }
+  const fallbackKey = Object.keys(BLOG_MARKET_STATS).sort().pop();
+  if (!fallbackKey) {
+    throw new Error("No blog market stats available.");
+  }
+  return BLOG_MARKET_STATS[fallbackKey];
+};
