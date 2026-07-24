@@ -66,9 +66,9 @@ const BlogPageEn = () => {
 
             <div className="md:pl-8 md:border-l" style={{ borderColor: "rgba(247,244,239,0.08)" }}>
               {[
-                { value: "+19%", label: "Plex sales" },
-                { value: "23 d", label: "Avg. days" },
-                { value: "$585,500", label: "Median plex price" },
+                { value: "+7%", label: "Median plex price" },
+                { value: "32 d", label: "Avg. plex days" },
+                { value: "$599,600", label: "Plex · Q2 2026" },
               ].map((stat, i) => (
                 <div
                   key={stat.label}
