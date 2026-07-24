@@ -18,12 +18,12 @@ const BlogPageEn = () => {
   const nonFeaturedPosts = posts.filter((p) => p.slugEn !== featured?.slugEn);
 
   const tickerItems = [
-    "March 2026",
-    "Plex +19%",
-    "23-day average",
-    "Median price $585,500",
-    "Single-family −9%",
-    "Condo −32%",
+    "Q2 2026",
+    "Plex +7%",
+    "Plex days 32",
+    "Median plex $599,600",
+    "Single-family $523,500",
+    "Listings +30%",
     "Source: Outaouais Real Estate Board",
   ];
 
