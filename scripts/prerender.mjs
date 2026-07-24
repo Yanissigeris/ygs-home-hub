@@ -20,6 +20,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
