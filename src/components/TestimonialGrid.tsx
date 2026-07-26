@@ -136,7 +136,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px var(--gold-veil-faint)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >
-              <div style={{ color: "var(--gold)", letterSpacing: "2px", fontSize: ".72rem", marginBottom: "22px" }}>★★★★★</div>
+              <div style={{ color: "var(--gold-dark)", letterSpacing: "2px", fontSize: ".75rem", marginBottom: "22px" }}>★★★★★</div>
               <blockquote style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5, marginBottom: "26px" }}>
                 {review.short}
               </blockquote>
