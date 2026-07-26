@@ -897,3 +897,90 @@ h1.hero-eyebrow {
     background-position: -200% 0;
   }
 }
+
+/* =========================================================================
+   YGS Utility Classes — WCAG contrast & inline-style migration
+   Reference: Item 1 (gold tokens), Item 5 (inline → classes)
+   ========================================================================= */
+
+/* Overline eyebrow — light backgrounds (cream/white). Uses --gold-dark for AA. */
+.eyebrow-light {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+/* Overline eyebrow — dark backgrounds (ink). Uses --gold2 (small text safe). */
+.eyebrow-dark {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold2);
+}
+
+/* Arrow tertiary link — light background variant (default). */
+.cta-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-dark);
+  border-bottom: 1px solid var(--border);
+  transition: color .2s ease, gap .2s ease;
+}
+.cta-arrow-link:hover { color: var(--ink); gap: 0.55rem; }
+.cta-arrow-link--dark { color: var(--gold2); border-bottom-color: rgba(255,255,255,.18); }
+.cta-arrow-link--dark:hover { color: var(--white); }
+
+/* Pill toggle — carousel dot / pagination target. Wrapper is 44×44, bar is inner. */
+.pill-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.pill-toggle > span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--border);
+  transition: width .45s cubic-bezier(.16,1,.3,1), background .3s;
+}
+.pill-toggle[aria-current="true"] > span,
+.pill-toggle.is-active > span {
+  width: 44px;
+  background: var(--gold-dark);
+}
+
+/* Footer heading — uppercase label on dark ink surface. */
+.footer-heading {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin: 0;
+}
+
+/* 16px input scope — used on /evaluation-gratuite-gatineau to prevent iOS zoom. */
+.form-16-inputs input,
+.form-16-inputs textarea,
+.form-16-inputs select {
+  font-size: 16px;
+}
+
