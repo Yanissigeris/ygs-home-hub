@@ -245,8 +245,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 {p.badge && (
                   <span
                     style={{
-                      fontSize: "0.56rem",
-                      color: "var(--gold)",
+                      fontSize: "0.75rem",
+                      color: "var(--gold2)",
                       textTransform: "uppercase",
                       letterSpacing: "0.12em",
                       fontWeight: 600,
