@@ -304,7 +304,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── RE/MAX mention ── */}
           <div className="text-center py-3">
-            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.55)", fontWeight: 300 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 300 }}>
               {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
             </p>
           </div>
