@@ -328,17 +328,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </address>
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
-            <p className="mt-2" style={{ fontSize: ".62rem", color: "rgba(255,255,255,.5)", padding: "0 1rem" }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", padding: "0 1rem" }}>{legalText}</p>
+            <p className="mt-2" style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)", padding: "0 1rem" }}>
               {lang === "en"
                 ? "Independently owned and operated franchisee of RE/MAX Québec"
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
             <div className="mt-2 flex justify-center gap-4">
-              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
-              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
               </Link>
             </div>
