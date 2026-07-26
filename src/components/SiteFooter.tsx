@@ -235,7 +235,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── Affiliations ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
-            <h3 className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="footer-heading mb-4 sm:mb-10">
               {affiliationsLabel}
             </h3>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
