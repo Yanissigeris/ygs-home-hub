@@ -25,7 +25,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
       {dark && (
         <div
           className="pointer-events-none absolute inset-0 hidden md:block"
-          style={{ background: "radial-gradient(circle 700px at center, rgba(168,138,90,.1), transparent)" }}
+          style={{ background: "radial-gradient(circle 700px at center, rgba(196,168,120,.1), transparent)" }}
           aria-hidden="true"
         />
       )}
