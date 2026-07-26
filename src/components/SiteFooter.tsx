@@ -60,7 +60,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
     <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
       <h3 style={{ margin: 0 }}>
         <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
-          <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
+          <span className="footer-heading">{title}</span>
           <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
         </button>
       </h3>
@@ -186,7 +186,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
-                <h3 className="mb-5" style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                <h3 className="footer-heading mb-5">
                   {col.title}
                 </h3>
                 <ul className="space-y-3">
@@ -206,7 +206,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── SEO Popular links ── */}
           <div className="py-5 sm:py-8">
-            <h3 className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="footer-heading mb-3 sm:mb-5">
               {popularLabel}
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -216,7 +216,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   to={l.href}
                   className="transition-colors duration-200"
                   style={{
-                    fontSize: ".7rem",
+                    fontSize: ".75rem",
                     color: "rgba(255,255,255,.6)",
                     border: "1px solid rgba(255,255,255,.06)",
                     borderRadius: 3,
@@ -235,7 +235,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── Affiliations ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
-            <h3 className="mb-4 sm:mb-10" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="footer-heading mb-4 sm:mb-10">
               {affiliationsLabel}
             </h3>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
@@ -254,7 +254,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 const caption = logo.caption ? (
                   <p
                     className="mt-1 text-center"
-                    style={{ fontSize: 10, lineHeight: 1.3, color: "rgba(255,255,255,.55)", fontWeight: 400 }}
+                    style={{ fontSize: 12, lineHeight: 1.3, color: "rgba(255,255,255,.7)", fontWeight: 400 }}
                   >
                     {logo.caption}
                   </p>
@@ -304,19 +304,19 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── RE/MAX mention ── */}
           <div className="text-center py-3">
-            <p style={{ fontSize: ".62rem", color: "rgba(255,255,255,.55)", fontWeight: 300 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 300 }}>
               {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
             </p>
           </div>
 
           {/* ── Agency identification block ── */}
           <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
                 : "RE/MAX Direct Inc. — Agence immobilière · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"}
             </p>
-            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
               <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
               {"  ·  "}
@@ -328,17 +328,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </address>
           {/* ── Copyright ── */}
           <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.6)", padding: "0 1rem" }}>{legalText}</p>
-            <p className="mt-2" style={{ fontSize: ".62rem", color: "rgba(255,255,255,.5)", padding: "0 1rem" }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", padding: "0 1rem" }}>{legalText}</p>
+            <p className="mt-2" style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)", padding: "0 1rem" }}>
               {lang === "en"
                 ? "Independently owned and operated franchisee of RE/MAX Québec"
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
             <div className="mt-2 flex justify-center gap-4">
-              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
-              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".65rem", color: "rgba(255,255,255,.6)" }} className="hover:text-white/50 transition-colors">
+              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
               </Link>
             </div>

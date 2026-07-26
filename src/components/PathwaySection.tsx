@@ -172,12 +172,12 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div className="section-container relative z-10">
           {/* Editorial header on cream */}
           <div className="max-w-[580px]">
-            <p className="label-overline mb-3" style={{ color: "var(--gold)" }}>
+            <p className="eyebrow-light mb-3">
               {heading.overline}
             </p>
             <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
-              <span style={{ color: "var(--gold)", fontStyle: "italic" }}>
+              <span style={{ color: "var(--gold-dark)", fontStyle: "italic" }}>
                 {heading.titleAccent}
               </span>
             </h2>
@@ -245,8 +245,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 {p.badge && (
                   <span
                     style={{
-                      fontSize: "0.56rem",
-                      color: "var(--gold)",
+                      fontSize: "0.75rem",
+                      color: "var(--gold2)",
                       textTransform: "uppercase",
                       letterSpacing: "0.12em",
                       fontWeight: 600,
@@ -298,12 +298,12 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 <span
                   className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
                   style={{
-                    fontSize: ".72rem",
+                    fontSize: ".78rem",
                     fontWeight: 600,
-                    color: "var(--gold)",
+                    color: "var(--gold2)",
                     letterSpacing: ".06em",
                     textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(168,138,90,.3)",
+                    borderBottom: "1px solid rgba(196,168,120,.3)",
                     paddingBottom: 2,
                     alignSelf: "flex-start",
                     minHeight: 44,

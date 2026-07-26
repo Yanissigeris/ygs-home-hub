@@ -25,14 +25,14 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
       {dark && (
         <div
           className="pointer-events-none absolute inset-0 hidden md:block"
-          style={{ background: "radial-gradient(circle 700px at center, rgba(168,138,90,.1), transparent)" }}
+          style={{ background: "radial-gradient(circle 700px at center, rgba(196,168,120,.1), transparent)" }}
           aria-hidden="true"
         />
       )}
 
       <div className="section-container relative px-[1.25rem] sm:px-6 md:px-8">
         {overline && (
-          <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold)" : undefined }}>{overline}</p>
+          <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold2)" : undefined }}>{overline}</p>
         )}
         <h2 className="mx-auto max-w-lg" style={{ color: dark ? "var(--white)" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
         {text && (
@@ -53,19 +53,19 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                 style={
                   dark
                     ? isOutline
-                      ? { border: "1.5px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.8)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
-                      : { border: "1.5px solid var(--gold)", color: "var(--gold)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      ? { border: "1.5px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.85)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid var(--gold2)", color: "var(--gold2)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                     : isOutline
                       ? { border: "1.5px solid var(--border)", color: "var(--ink)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
-                      : { border: "1.5px solid var(--gold)", color: "var(--gold)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
+                      : { border: "1.5px solid var(--gold-dark)", color: "var(--gold-dark)", borderRadius: 999, padding: ".9rem 1.5rem", fontSize: ".84rem", fontWeight: 600, letterSpacing: ".025em", minHeight: 44, background: "transparent", transition: "all .2s ease" }
                 }
                 onMouseEnter={(e) => {
-                  if (!isOutline) { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }
+                  if (!isOutline) { e.currentTarget.style.background = dark ? "var(--gold2)" : "var(--gold-dark)"; e.currentTarget.style.color = dark ? "var(--ink)" : "var(--white)"; }
                   if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.55)"; e.currentTarget.style.color = "var(--white)"; }
                 }}
                 onMouseLeave={(e) => {
-                  if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }
-                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.8)"; }
+                  if (!isOutline) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = dark ? "var(--gold2)" : "var(--gold-dark)"; }
+                  if (isOutline && dark) { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.85)"; }
                 }}
                 onClick={() => trackCTAClick(btn.label, "cta-section")}
                 aria-label={btn.label}

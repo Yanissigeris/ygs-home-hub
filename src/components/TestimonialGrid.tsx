@@ -26,7 +26,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     onMouseLeave={(e) => { e.currentTarget.style.background = "var(--white)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
-    <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
+    <div className="mb-4" style={{ color: "var(--gold-dark)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
 
     {/* Decorative quote mark */}
     <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300, opacity: .4 }} aria-hidden="true">"</span>
@@ -106,22 +106,26 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
           <div className="grid grid-cols-1 md:grid-cols-[minmax(320px,1fr)_2fr] gap-8 md:gap-12 items-start">
             {/* Left — sticky sidebar */}
             <div className="md:sticky md:top-24">
-              {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
+              {overline && <p className="eyebrow-light mb-2">{overline}</p>}
               <h2>{title}</h2>
 
               <div className="flex gap-2 mt-6">
-                <button aria-label={getA11yLabel("carousel.previous", lang)} onClick={prev} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>←</button>
-                <button aria-label={getA11yLabel("carousel.next", lang)} onClick={next} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>→</button>
+                <button aria-label={getA11yLabel("carousel.previous", lang)} onClick={prev} style={{ width: 44, height: 44, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>←</button>
+                <button aria-label={getA11yLabel("carousel.next", lang)} onClick={next} style={{ width: 44, height: 44, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>→</button>
               </div>
 
               <div className="flex gap-1.5 mt-4">
                 {reviews.map((_, i) => (
                   <button
                     key={i}
+                    type="button"
                     aria-label={getA11yLabel("testimonial.goTo", lang, { n: i + 1 })}
+                    aria-current={i === current ? "true" : undefined}
                     onClick={() => goTo(i)}
-                    style={{ width: i === current ? 44 : 20, height: 2, background: i === current ? "var(--gold)" : "var(--border)", cursor: "pointer", transition: "width .45s cubic-bezier(.16,1,.3,1), background .3s", border: "none", padding: 0 }}
-                  />
+                    className={`pill-toggle${i === current ? " is-active" : ""}`}
+                  >
+                    <span />
+                  </button>
                 ))}
               </div>
             </div>
@@ -132,12 +136,12 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px var(--gold-veil-faint)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >
-              <div style={{ color: "var(--gold)", letterSpacing: "2px", fontSize: ".72rem", marginBottom: "22px" }}>★★★★★</div>
+              <div style={{ color: "var(--gold-dark)", letterSpacing: "2px", fontSize: ".75rem", marginBottom: "22px" }}>★★★★★</div>
               <blockquote style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5, marginBottom: "26px" }}>
                 {review.short}
               </blockquote>
               <div style={{ width: 40, height: 1, background: "var(--gold)", marginBottom: 14 }} />
-              <p style={{ fontSize: ".7rem", letterSpacing: ".15em", textTransform: "uppercase", color: "var(--ink)", fontWeight: 600 }}>{review.name}</p>
+              <p style={{ fontSize: ".75rem", letterSpacing: ".15em", textTransform: "uppercase", color: "var(--ink)", fontWeight: 600 }}>{review.name}</p>
               {review.location && <p style={{ fontSize: ".75rem", fontWeight: 300, color: "var(--muted)" }}>{review.location}</p>}
             </div>
           </div>
