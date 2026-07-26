@@ -172,12 +172,12 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div className="section-container relative z-10">
           {/* Editorial header on cream */}
           <div className="max-w-[580px]">
-            <p className="label-overline mb-3" style={{ color: "var(--gold)" }}>
+            <p className="eyebrow-light mb-3">
               {heading.overline}
             </p>
             <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
-              <span style={{ color: "var(--gold)", fontStyle: "italic" }}>
+              <span style={{ color: "var(--gold-dark)", fontStyle: "italic" }}>
                 {heading.titleAccent}
               </span>
             </h2>
