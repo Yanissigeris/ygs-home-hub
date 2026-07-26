@@ -106,22 +106,26 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
           <div className="grid grid-cols-1 md:grid-cols-[minmax(320px,1fr)_2fr] gap-8 md:gap-12 items-start">
             {/* Left — sticky sidebar */}
             <div className="md:sticky md:top-24">
-              {overline && <p className="label-overline mb-2" style={{ color: "var(--gold)" }}>{overline}</p>}
+              {overline && <p className="eyebrow-light mb-2">{overline}</p>}
               <h2>{title}</h2>
 
               <div className="flex gap-2 mt-6">
-                <button aria-label={getA11yLabel("carousel.previous", lang)} onClick={prev} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>←</button>
-                <button aria-label={getA11yLabel("carousel.next", lang)} onClick={next} style={{ width: 40, height: 40, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>→</button>
+                <button aria-label={getA11yLabel("carousel.previous", lang)} onClick={prev} style={{ width: 44, height: 44, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>←</button>
+                <button aria-label={getA11yLabel("carousel.next", lang)} onClick={next} style={{ width: 44, height: 44, border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", color: "var(--muted)", cursor: "pointer", transition: "border-color .35s, color .35s, background-color .35s", background: "transparent" }}>→</button>
               </div>
 
               <div className="flex gap-1.5 mt-4">
                 {reviews.map((_, i) => (
                   <button
                     key={i}
+                    type="button"
                     aria-label={getA11yLabel("testimonial.goTo", lang, { n: i + 1 })}
+                    aria-current={i === current ? "true" : undefined}
                     onClick={() => goTo(i)}
-                    style={{ width: i === current ? 44 : 20, height: 2, background: i === current ? "var(--gold)" : "var(--border)", cursor: "pointer", transition: "width .45s cubic-bezier(.16,1,.3,1), background .3s", border: "none", padding: 0 }}
-                  />
+                    className={`pill-toggle${i === current ? " is-active" : ""}`}
+                  >
+                    <span />
+                  </button>
                 ))}
               </div>
             </div>
