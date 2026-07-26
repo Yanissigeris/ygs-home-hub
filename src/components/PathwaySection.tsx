@@ -298,12 +298,12 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 <span
                   className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
                   style={{
-                    fontSize: ".72rem",
+                    fontSize: ".78rem",
                     fontWeight: 600,
-                    color: "var(--gold)",
+                    color: "var(--gold2)",
                     letterSpacing: ".06em",
                     textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(168,138,90,.3)",
+                    borderBottom: "1px solid rgba(196,168,120,.3)",
                     paddingBottom: 2,
                     alignSelf: "flex-start",
                     minHeight: 44,
