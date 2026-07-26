@@ -141,7 +141,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                 {review.short}
               </blockquote>
               <div style={{ width: 40, height: 1, background: "var(--gold)", marginBottom: 14 }} />
-              <p style={{ fontSize: ".7rem", letterSpacing: ".15em", textTransform: "uppercase", color: "var(--ink)", fontWeight: 600 }}>{review.name}</p>
+              <p style={{ fontSize: ".75rem", letterSpacing: ".15em", textTransform: "uppercase", color: "var(--ink)", fontWeight: 600 }}>{review.name}</p>
               {review.location && <p style={{ fontSize: ".75rem", fontWeight: 300, color: "var(--muted)" }}>{review.location}</p>}
             </div>
           </div>
