@@ -26,7 +26,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     onMouseLeave={(e) => { e.currentTarget.style.background = "var(--white)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
-    <div className="mb-4" style={{ color: "var(--gold)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
+    <div className="mb-4" style={{ color: "var(--gold-dark)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
 
     {/* Decorative quote mark */}
     <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300, opacity: .4 }} aria-hidden="true">"</span>
