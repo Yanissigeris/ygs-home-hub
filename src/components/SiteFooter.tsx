@@ -311,12 +311,12 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── Agency identification block ── */}
           <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.78)", fontWeight: 500, lineHeight: 1.6 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
                 : "RE/MAX Direct Inc. — Agence immobilière · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"}
             </p>
-            <p style={{ fontSize: ".68rem", color: "rgba(255,255,255,.65)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
               <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
               {"  ·  "}
