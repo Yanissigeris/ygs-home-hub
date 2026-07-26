@@ -216,7 +216,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   to={l.href}
                   className="transition-colors duration-200"
                   style={{
-                    fontSize: ".7rem",
+                    fontSize: ".75rem",
                     color: "rgba(255,255,255,.6)",
                     border: "1px solid rgba(255,255,255,.06)",
                     borderRadius: 3,
