@@ -254,7 +254,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 const caption = logo.caption ? (
                   <p
                     className="mt-1 text-center"
-                    style={{ fontSize: 10, lineHeight: 1.3, color: "rgba(255,255,255,.55)", fontWeight: 400 }}
+                    style={{ fontSize: 12, lineHeight: 1.3, color: "rgba(255,255,255,.7)", fontWeight: 400 }}
                   >
                     {logo.caption}
                   </p>
