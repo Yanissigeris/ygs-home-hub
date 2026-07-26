@@ -60,7 +60,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
     <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
       <h3 style={{ margin: 0 }}>
         <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between py-3.5" style={{ minHeight: 44 }} aria-expanded={open} aria-controls={panelId}>
-          <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>{title}</span>
+          <span className="footer-heading">{title}</span>
           <ChevronDown size={14} className={`opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
         </button>
       </h3>
