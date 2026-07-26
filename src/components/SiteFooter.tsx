@@ -206,7 +206,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── SEO Popular links ── */}
           <div className="py-5 sm:py-8">
-            <h3 className="mb-3 sm:mb-5" style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <h3 className="footer-heading mb-3 sm:mb-5">
               {popularLabel}
             </h3>
             <div className="flex flex-wrap gap-2">
