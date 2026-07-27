@@ -46,8 +46,9 @@ const RemaxPill = ({ size = "md", lang }: { size?: "sm" | "md" | "lg"; lang: "fr
         textShadow: "none",
       }}
     >
-      <img src={remaxLogotypeBlack} alt="Logo RE/MAX" height={dims.logo} style={{ height: dims.logo, width: "auto" }} loading="eager" decoding="async" />
-      <img src={remaxBalloonOfficial} alt="" aria-hidden="true" height={dims.balloon} style={{ height: dims.balloon, width: "auto" }} loading="eager" decoding="async" />
+      <img src={remaxLogotypeBlack} alt="Logo RE/MAX" width={Math.round(dims.logo * 300 / 69)} height={dims.logo} style={{ height: dims.logo, width: "auto" }} loading="eager" decoding="async" />
+      <img src={remaxBalloonOfficial} alt="" aria-hidden="true" width={Math.round(dims.balloon * 71 / 80)} height={dims.balloon} style={{ height: dims.balloon, width: "auto" }} loading="eager" decoding="async" />
+
     </span>
   );
 };
