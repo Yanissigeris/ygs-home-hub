@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import lifestyleBg from "@/assets/pathway-lifestyle-bg.webp?w=720;1080;1280&format=avif;webp&as=picture";
+import lifestyleBg from "@/assets/pathway-lifestyle-bg.webp?w=480;720;900;1280&format=avif;webp&as=picture";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
