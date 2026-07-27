@@ -7,7 +7,13 @@ import p28743871 from "@/assets/property-28743871.webp?w=400;640;900&format=avif
 import p20453879 from "@/assets/property-20453879.webp?w=400;640;900&format=avif;webp&as=picture";
 import p15163372 from "@/assets/property-15163372.webp?w=400;640;900&format=avif;webp&as=picture";
 import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif;webp&as=picture";
-import p11366995 from "@/assets/property-11366995.webp?w=400;640;900&format=avif;webp&as=picture";
+// 11366995 : ajout du palier 500 pour que mobile (~452 CSS px @2×) pioche ~500w au lieu de 900w
+import p11366995 from "@/assets/property-11366995.webp?w=400;500;640;900&format=avif;webp&as=picture";
+// Fiches précédemment servies en .webp brut hors pipeline — passage <picture>
+// AVIF + WebP avec mêmes paliers que les autres cartes.
+import p14073975 from "@/assets/property-14073975.webp?w=400;640;900&format=avif;webp&as=picture";
+import p19326119 from "@/assets/property-19326119.webp?w=400;640;900&format=avif;webp&as=picture";
+import p16828271 from "@/assets/property-16828271.webp?w=400;640;900&format=avif;webp&as=picture";
 
 interface PictureImport {
   sources: { avif?: string; webp?: string };
@@ -33,4 +39,7 @@ export const propertyImages: Record<string, PropertyImageSet> = {
   "15163372": toSet(p15163372 as PictureImport),
   "17113358": toSet(p17113358 as PictureImport),
   "11366995": toSet(p11366995 as PictureImport),
+  "14073975": toSet(p14073975 as PictureImport),
+  "19326119": toSet(p19326119 as PictureImport),
+  "16828271": toSet(p16828271 as PictureImport),
 };
