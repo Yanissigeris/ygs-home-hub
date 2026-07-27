@@ -27,6 +27,15 @@ function htmlOptimizePlugin() {
       const portraitLgKey = Object.keys(bundle).find((k) =>
         /yanis-portrait-nobg-lg(-[A-Za-z0-9_]+)?\.avif$/.test(k)
       );
+      // Mobile portrait variants — same tiers the <picture> mobile srcset uses
+      // (sm 1x, md 2x, base 3x). Preloading these makes the mobile LCP element
+      // (Yanis portrait on ≤767px) start downloading before the JS bundle.
+      const portraitSmKey = Object.keys(bundle).find((k) =>
+        /yanis-portrait-nobg-sm(-[A-Za-z0-9_]+)?\.avif$/.test(k)
+      );
+      const portraitMdKey = Object.keys(bundle).find((k) =>
+        /yanis-portrait-nobg-md(-[A-Za-z0-9_]+)?\.avif$/.test(k)
+      );
       // Find hero background variants (LCP element on desktop home).
       const heroBgMobileAvifKey = Object.keys(bundle).find((k) =>
         /hero-yanis-interior-mobile.*\.avif$/.test(k)
@@ -49,13 +58,31 @@ function htmlOptimizePlugin() {
           const portraitLink = portraitKey
             ? `var l=document.createElement('link');l.rel='preload';l.as='image';l.type='image/avif';l.media='(min-width: 768px)';l.href='/${portraitKey}';l.setAttribute('imagesrcset',${JSON.stringify(portraitSrcSet)});l.setAttribute('fetchpriority','high');document.head.appendChild(l);`
             : "";
+          // Mobile portrait preload — matches the mobile <picture> exactly
+          // (sm 1x, md 2x, base 3x) so the browser reuses the preload response.
+          const portraitMobileSrcSetParts = [
+            portraitSmKey ? `/${portraitSmKey} 1x` : "",
+            portraitMdKey ? `/${portraitMdKey} 2x` : "",
+            portraitKey ? `/${portraitKey} 3x` : "",
+          ].filter(Boolean);
+          const portraitMobileSrcSet = portraitMobileSrcSetParts.join(", ");
+          const portraitMobileHref = portraitSmKey
+            ? `/${portraitSmKey}`
+            : portraitMdKey
+              ? `/${portraitMdKey}`
+              : portraitKey
+                ? `/${portraitKey}`
+                : "";
+          const portraitMobileLink = portraitMobileHref
+            ? `var lm=document.createElement('link');lm.rel='preload';lm.as='image';lm.type='image/avif';lm.media='(max-width: 767px)';lm.href='${portraitMobileHref}';lm.setAttribute('imagesrcset',${JSON.stringify(portraitMobileSrcSet)});lm.setAttribute('fetchpriority','high');document.head.appendChild(lm);`
+            : "";
           const bgMobileLink = heroBgMobileAvifKey
             ? `var bm=document.createElement('link');bm.rel='preload';bm.as='image';bm.type='image/avif';bm.media='(max-width: 767px)';bm.href='/${heroBgMobileAvifKey}';bm.setAttribute('fetchpriority','high');document.head.appendChild(bm);`
             : "";
           const bgDesktopLink = heroBgDesktopAvifKey
             ? `var bd=document.createElement('link');bd.rel='preload';bd.as='image';bd.type='image/avif';bd.media='(min-width: 768px)';bd.href='/${heroBgDesktopAvifKey}';bd.setAttribute('fetchpriority','high');document.head.appendChild(bd);`
             : "";
-          const conditionalPreload = `<script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){${portraitLink}${bgMobileLink}${bgDesktopLink}}})();</script>`;
+          const conditionalPreload = `<script>(function(){var p=location.pathname;if(p==='/'||p==='/en'||p==='/en/'||p==='/outaouais'||p==='/en/outaouais'){${portraitLink}${portraitMobileLink}${bgMobileLink}${bgDesktopLink}}})();</script>`;
           html = html.replace(
             "<meta charset",
             `${conditionalPreload}\n    <meta charset`
