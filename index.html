@@ -258,13 +258,29 @@
       });
     </script>
 
-    <!-- GA4 gtag.js — loaded globally on every page. Consent Mode v2 above
-         gates whether cookies/storage are used. send_page_view is disabled
-         so the SPA can fire page_view manually on route changes. -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4Y8089EGB"></script>
+    <!-- GA4 gtag.js — DEFERRED until after window.load. Consent Mode v2 above
+         is initialized synchronously so all gtag() calls made before the
+         script arrives queue in window.dataLayer and are processed once it
+         loads. send_page_view is disabled so the SPA fires page_view manually
+         on route changes. This removes ~158 KiB of blocking JS from the
+         critical path (biggest single script) and eliminates the forced
+         reflow it triggers during LCP window. -->
     <script>
       gtag('js', new Date());
       gtag('config', 'G-P4Y8089EGB', { send_page_view: false });
+      (function(){
+        function load(){
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4Y8089EGB';
+          document.head.appendChild(s);
+        }
+        if (document.readyState === 'complete') {
+          setTimeout(load, 0);
+        } else {
+          window.addEventListener('load', function(){ setTimeout(load, 0); }, { once: true });
+        }
+      })();
     </script>
 
 </head>
