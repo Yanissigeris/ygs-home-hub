@@ -1,22 +1,21 @@
-Modifier le fichier `public/_redirects` uniquement.
+## Objectif
 
-1. Ajouter un nouveau bloc après "# 301 — Anciennes URLs propriétés vers la page canonique" pour les URLs courtes devinées :
-   - `/plex` → `/investir-plex-gatineau/`
-   - `/plex/` → `/investir-plex-gatineau/`
-   - `/contact` → `/contact-yanis/`
-   - `/contact/` → `/contact-yanis/`
-   - `/vendre` → `/vendre-ma-maison-gatineau/`
-   - `/vendre/` → `/vendre-ma-maison-gatineau/`
+Supprimer tout mouvement « bouncy » au chargement de la page d'accueil, sur toutes les versions (FR/EN, desktop/mobile) — le contenu du hero apparaît directement en place.
 
-2. Nettoyer les destinations existantes sans slash final :
-   - `/blog` → `/blogue/` (ligne 2)
-   - `/blog/*` → `/blogue/:splat` (inchangé, car le splat conserve le chemin interne)
-   - `/proprietes-vedettes` → `/proprietes/` (ligne 12)
-   - `/nouvelles-inscriptions` → `/proprietes/` (ligne 13)
-   - `/nouvelles-inscriptions-gatineau` → `/proprietes/` (ligne 14)
-   - `/vendu-recemment` → `/proprietes/` (ligne 15)
-   - `/vendues-recemment-gatineau` → `/proprietes/` (ligne 16)
-   - `/outaouais` → `/courtier-immobilier-outaouais/` (ligne 19)
-   - `/en/outaouais` → `/en/outaouais-real-estate-agent/` (ligne 20)
+## Changements
 
-Les règles `/admin` (200) restent inchangées.
+**1. `src/index.css` — neutraliser les animations d'entrée du hero**
+- `.hero-fade-in` : retirer l'animation (plus de `translateY(12px) → 0`), l'élément reste à sa position finale.
+- `.hero-h1-reveal` : idem (plus de `translateY(24px) → 0`).
+- `@keyframes hero-chevron-bounce` : supprimer le rebond (le chevron reste fixe).
+- Nettoyer les keyframes devenues inutilisées et les blocs `prefers-reduced-motion` correspondants.
+
+**2. `src/components/HeroSection.tsx` — chevron**
+- Retirer la propriété `animation: "hero-chevron-bounce …"` du bouton `ScrollChevron`.
+- Le chevron reste visible, cliquable, et conserve son fondu à l'opacité au scroll.
+
+## Notes techniques
+
+- Les classes `hero-fade-in` / `hero-h1-reveal` restent en place dans le JSX (aucun risque de casse, aucune modification de structure ou de texte) ; seules leurs règles CSS deviennent inertes. Les `animationDelay` inline n'ont alors plus d'effet.
+- Les animations d'entrée étaient déjà transform-only (opacité à 1 dès t=0), donc aucun impact sur le LCP ni sur le CLS.
+- Aucun changement de texte, de meta, de JSON-LD ni de route. Les autres animations du site (reveal au scroll, hovers, marquee) ne sont pas touchées.
