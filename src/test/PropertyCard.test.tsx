@@ -30,14 +30,14 @@ describe("PropertyCard price display", () => {
   });
 
   it("renders a rent listing with /mois in FR", () => {
-    const rent = properties.find((p) => p.status === "rent")!;
+    const rent = properties.find((p) => p.status === "rent" || p.status === "rented")!;
     renderAt("/", <PropertyCard property={rent} />);
     expect(screen.getByText(rent.price)).toBeInTheDocument();
     expect(rent.price).toMatch(/\/mois$/);
   });
 
   it("renders a rent listing with /month in EN", () => {
-    const rent = propertiesEn.find((p) => p.status === "rent")!;
+    const rent = propertiesEn.find((p) => p.status === "rent" || p.status === "rented")!;
     renderAt("/en/", <PropertyCard property={rent} />);
     expect(screen.getByText(rent.price)).toBeInTheDocument();
     expect(rent.price).toMatch(/\/month$/);

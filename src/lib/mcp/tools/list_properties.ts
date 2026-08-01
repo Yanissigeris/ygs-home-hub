@@ -1,7 +1,7 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 
-type Status = "active" | "sold" | "pending" | "rent";
+type Status = "active" | "sold" | "pending" | "rent" | "rented";
 interface Listing {
   id: string;
   mls: string;
@@ -66,7 +66,7 @@ const listings: Listing[] = [
     address: "310 Boul. d'Europe, app. 6", city: "Gatineau (Aylmer — Plateau de la Capitale)",
     price_fr: "1 975 $/mois", price_en: "$1,975/month",
     type: "Condo — Appartement (location / rental)", bedrooms: "2", bathrooms: "1", area: "1 240 pi² / sq ft", year_built: "2009",
-    status: "rent",
+    status: "rented",
     remax_url: "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     description_fr: "Condo lumineux de 2 chambres, plafonds de 9 pi, climatiseur mural. Dispo 1er juin 2026.",
     description_en: "Bright 2-bedroom condo, 9 ft ceilings, wall AC. Available June 1, 2026.",
@@ -90,7 +90,7 @@ export default defineTool({
     "List real-estate properties currently or previously represented by Yanis Gauthier-Sigeris (RE/MAX, Gatineau / Outaouais). Optionally filter by status (active, sold, rent, pending).",
   inputSchema: {
     status: z
-      .enum(["active", "sold", "rent", "pending", "all"])
+      .enum(["active", "sold", "rent", "rented", "pending", "all"])
       .optional()
       .describe("Filter by listing status. Defaults to 'all'."),
   },

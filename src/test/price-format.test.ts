@@ -25,8 +25,8 @@ describe("property price formatting", () => {
   });
 
   it("rent listings use /mois in FR and /month in EN consistently", () => {
-    const frRent = properties.filter((p) => p.status === "rent");
-    const enRent = propertiesEn.filter((p) => p.status === "rent");
+    const frRent = properties.filter((p) => p.status === "rent" || p.status === "rented");
+    const enRent = propertiesEn.filter((p) => p.status === "rent" || p.status === "rented");
     expect(frRent.length).toBeGreaterThan(0);
     expect(frRent.length).toEqual(enRent.length);
     for (const p of frRent) expect(p.price).toMatch(/\/mois$/);

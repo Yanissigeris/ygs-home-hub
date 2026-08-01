@@ -30,6 +30,7 @@
                 "active",
                 "sold",
                 "rent",
+                "rented",
                 "pending",
                 "all"
               ],
