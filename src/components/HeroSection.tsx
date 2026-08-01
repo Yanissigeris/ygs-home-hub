@@ -127,7 +127,7 @@ const ScrollChevron: React.FC<{ lang: "fr" | "en" }> = ({ lang }) => {
         cursor: "pointer",
         opacity: hidden ? 0 : 1,
         transition: "opacity 0.3s ease",
-        animation: "hero-chevron-bounce 2s ease-in-out infinite",
+        color: "rgba(255,255,255,0.6)",
         color: "rgba(255,255,255,0.6)",
       }}
     >
