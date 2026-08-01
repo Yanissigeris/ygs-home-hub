@@ -25,7 +25,7 @@ export interface Property {
   image: string;
   remaxUrl: string;
   mls: string;
-  status: "active" | "sold" | "pending" | "rent";
+  status: "active" | "sold" | "pending" | "rent" | "rented";
 }
 
 export const properties: Property[] = [
@@ -121,7 +121,7 @@ export const properties: Property[] = [
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     mls: "19674845",
-    status: "rent",
+    status: "rented",
   },
   {
     id: "28167244",

@@ -12,6 +12,7 @@ const i18n = {
     pending: "OFFRE ACCEPTÉE",
     sold: "VENDUE",
     rent: "À LOUER",
+    rented: "LOUÉ",
     bed: "ch.",
     bath: "sdb",
     powder: "s.e.",
@@ -22,6 +23,7 @@ const i18n = {
     pending: "OFFER ACCEPTED",
     sold: "SOLD",
     rent: "FOR RENT",
+    rented: "RENTED",
     bed: "bed",
     bath: "bath",
     powder: "pw",
@@ -49,8 +51,10 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
         ? t.pending
         : property.status === "rent"
           ? t.rent
-          : t.sold;
-  const isRent = property.status === "rent";
+          : property.status === "rented"
+            ? t.rented
+            : t.sold;
+  const isRent = property.status === "rent" || property.status === "rented";
 
   return (
     <a

@@ -89,7 +89,7 @@ var listings = [
     bathrooms: "1",
     area: "1 240 pi\xB2 / sq ft",
     year_built: "2009",
-    status: "rent",
+    status: "rented",
     remax_url: "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     description_fr: "Condo lumineux de 2 chambres, plafonds de 9 pi, climatiseur mural. Dispo 1er juin 2026.",
     description_en: "Bright 2-bedroom condo, 9 ft ceilings, wall AC. Available June 1, 2026."
@@ -117,7 +117,7 @@ var list_properties_default = defineTool({
   title: "List Yanis Gauthier-Sigeris properties",
   description: "List real-estate properties currently or previously represented by Yanis Gauthier-Sigeris (RE/MAX, Gatineau / Outaouais). Optionally filter by status (active, sold, rent, pending).",
   inputSchema: {
-    status: z.enum(["active", "sold", "rent", "pending", "all"]).optional().describe("Filter by listing status. Defaults to 'all'.")
+    status: z.enum(["active", "sold", "rent", "rented", "pending", "all"]).optional().describe("Filter by listing status. Defaults to 'all'.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ status }) => {
