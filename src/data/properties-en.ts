@@ -8,6 +8,7 @@ import property28167244 from "@/assets/property-28167244.webp";
 import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
+import property27736954 from "@/assets/property-27736954.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -179,6 +180,24 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/312-rue-le-gallois/16828271",
     mls: "16828271",
+    status: "active",
+  },
+  {
+    id: "27736954",
+    address: "188 Rue des Hautes-Rives",
+    city: "Gatineau (Aylmer — Old Aylmer, Des Cèdres, Marina)",
+    price: "$494,900",
+    type: "Two-storey house",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,455 sq ft",
+    description:
+      "Charming 3-bedroom semi-detached home in a family-friendly Old Aylmer neighbourhood. Newly renovated bathroom with corner glass shower and freestanding tub. Finished basement offering extra living space, ready to personalize. Walking distance to the Aylmer marina, Des Cèdres park and beach, the riverfront bike path and Old Aylmer's restaurants and cafés. Available immediately — quick possession possible.",
+    image: property27736954,
+    remaxUrl:
+      "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-27736954",
+    mls: "27736954",
     status: "active",
   },
 ];
