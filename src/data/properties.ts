@@ -184,7 +184,7 @@ export const properties: Property[] = [
     id: "16828271",
     address: "312 Rue Le Gallois",
     city: "Gatineau (Gatineau — Ferme Limbour, Limbour)",
-    price: "669 900 $",
+    price: "649 900 $",
     type: "Maison à étages",
     bedrooms: "4",
     bathrooms: "2",
