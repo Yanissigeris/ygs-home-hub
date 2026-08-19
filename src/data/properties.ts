@@ -178,7 +178,7 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/71-rue-lessard/19326119",
     mls: "19326119",
-    status: "active",
+    status: "sold",
   },
   {
     id: "16828271",
