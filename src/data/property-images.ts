@@ -16,6 +16,8 @@ import p19326119 from "@/assets/property-19326119.webp?w=400;640;900&format=avif
 import p16828271 from "@/assets/property-16828271.webp?w=400;640;900&format=avif;webp&as=picture";
 import p27736954 from "@/assets/property-27736954.webp?w=400;640;900&format=avif;webp&as=picture";
 import p18249217 from "@/assets/property-18249217.webp?w=400;640;900&format=avif;webp&as=picture";
+// Photo source 640×480 (terrain) — paliers limités à la résolution native.
+import p15159365 from "@/assets/property-15159365.webp?w=400;640&format=avif;webp&as=picture";
 
 interface PictureImport {
   sources: { avif?: string; webp?: string };
@@ -46,4 +48,5 @@ export const propertyImages: Record<string, PropertyImageSet> = {
   "16828271": toSet(p16828271 as PictureImport),
   "27736954": toSet(p27736954 as PictureImport),
   "18249217": toSet(p18249217 as PictureImport),
+  "15159365": toSet(p15159365 as PictureImport),
 };
