@@ -15,6 +15,7 @@ import p14073975 from "@/assets/property-14073975.webp?w=400;640;900&format=avif
 import p19326119 from "@/assets/property-19326119.webp?w=400;640;900&format=avif;webp&as=picture";
 import p16828271 from "@/assets/property-16828271.webp?w=400;640;900&format=avif;webp&as=picture";
 import p27736954 from "@/assets/property-27736954.webp?w=400;640;900&format=avif;webp&as=picture";
+import p18249217 from "@/assets/property-18249217.webp?w=400;640;900&format=avif;webp&as=picture";
 
 interface PictureImport {
   sources: { avif?: string; webp?: string };
@@ -44,4 +45,5 @@ export const propertyImages: Record<string, PropertyImageSet> = {
   "19326119": toSet(p19326119 as PictureImport),
   "16828271": toSet(p16828271 as PictureImport),
   "27736954": toSet(p27736954 as PictureImport),
+  "18249217": toSet(p18249217 as PictureImport),
 };

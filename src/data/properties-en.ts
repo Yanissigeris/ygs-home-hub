@@ -9,6 +9,7 @@ import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
 import property27736954 from "@/assets/property-27736954.webp";
+import property18249217 from "@/assets/property-18249217.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -198,6 +199,26 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-27736954",
     mls: "27736954",
+    status: "active",
+  },
+  {
+    id: "18249217",
+    address: "1609 Boul. St-René E.",
+    city: "Gatineau (Gatineau — Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
+    price: "$499,900",
+    type: "Two-storey house",
+    bedrooms: "3",
+    bathrooms: "3",
+    powderRooms: "1",
+    area: "3,664 sq ft (lot)",
+    lotSize: "3,664 sq ft",
+    yearBuilt: "2024",
+    description:
+      "Built in 2024, this detached home offers a rare layout in Gatineau: 3 bedrooms and 3 full bathrooms plus a powder room, including a private bathroom for each upstairs bedroom. Open-concept main floor, kitchen with central island, appliances included. Primary bedroom with ensuite and walk-in closet. Fully finished basement with family room, 3rd bedroom, bathroom and laundry. Central air conditioning, air exchanger, parking for 5 cars. Family neighbourhood close to schools, parks and bus routes, less than 20 minutes from Ottawa. Occupancy in 30 days.",
+    image: property18249217,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1609-boul-st-rene-e/18249217",
+    mls: "18249217",
     status: "active",
   },
 ];
