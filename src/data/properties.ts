@@ -10,6 +10,7 @@ import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
 import property27736954 from "@/assets/property-27736954.webp";
 import property18249217 from "@/assets/property-18249217.webp";
+import property15159365 from "@/assets/property-15159365.webp";
 
 export interface Property {
   id: string;
@@ -237,6 +238,24 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1609-boul-st-rene-e/18249217",
     mls: "18249217",
+    status: "active",
+  },
+  {
+    id: "15159365",
+    address: "767 Ch. du Fort",
+    city: "Val-des-Monts (Perkins)",
+    price: "59 999 $",
+    type: "Terrain (résidentiel)",
+    bedrooms: "—",
+    bathrooms: "—",
+    area: "1,7 acre (6 884,7 m²)",
+    lotSize: "1,7 acre",
+    description:
+      "Magnifique terrain boisé de 1,7 acre (6 884,7 m²) offrant une possibilité de vue sur le lac Newcombe. Fait rare : les droits acquis et l'accès sont confirmés par écrit par la Municipalité, lettre à l'appui, et le terrain bénéficie d'un droit de passage notarié et perpétuel depuis le chemin du Fort, à pied comme en véhicule. Situé en retrait du chemin, à environ 30 minutes de Gatineau, il offre un environnement paisible et privé, entouré par la nature, idéal pour concrétiser votre projet de construction. Électricité disponible au chemin.",
+    image: property15159365,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/val-des-monts/767-ch-du-fort/15159365",
+    mls: "15159365",
     status: "active",
   },
 ];
