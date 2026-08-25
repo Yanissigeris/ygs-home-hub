@@ -139,7 +139,7 @@ const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
         }}
       >
         <div
-          className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap"
+          className="flex animate-marquee group-hover:[animation-play-state:paused] motion-reduce:[animation-play-state:paused] whitespace-nowrap"
           style={{ animationDuration: "var(--marquee-speed, 15s)" }}
         >
           {items.map((item, i) => (

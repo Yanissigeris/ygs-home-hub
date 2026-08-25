@@ -289,7 +289,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   className="flex-1"
                   style={{
                     fontSize: "0.8rem",
-                    color: "rgba(245,241,234,0.55)",
+                    color: "rgba(245,241,234,0.72)",
                     lineHeight: 1.55,
                   }}
                 >
