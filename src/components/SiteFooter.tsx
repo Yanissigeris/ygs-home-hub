@@ -193,7 +193,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }} className="transition-colors duration-200 hover:text-white/80">
+                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>

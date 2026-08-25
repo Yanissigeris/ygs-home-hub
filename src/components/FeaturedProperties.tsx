@@ -245,6 +245,8 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
 
     if (featured.length === 0) return null;
 
+    const desktopList = featured.slice(0, 6);
+
     // Mobile: show 3 cards — 2 active + 1 sold (flagship)
     const actives = featured.filter((p) => p.status === "active").slice(0, 2);
     const sold = featured.find((p) => p.status === "sold");
@@ -311,12 +313,12 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
           {/* Desktop grid */}
           <div
             className={`hidden md:grid gap-5 md:grid-cols-2 ${
-              featured.length === 4 ? "lg:grid-cols-2" :
-              featured.length >= 3 ? "lg:grid-cols-3" : ""
+              desktopList.length === 4 ? "lg:grid-cols-2" :
+              desktopList.length >= 3 ? "lg:grid-cols-3" : ""
             }`}
-            style={featured.length < 3 ? { maxWidth: 900, marginInline: "auto" } : undefined}
+            style={desktopList.length < 3 ? { maxWidth: 900, marginInline: "auto" } : undefined}
           >
-            {featured.map((p) => (
+            {desktopList.map((p) => (
               <PropertyCard key={p.id} p={p} strings={strings} lang={lang} />
             ))}
           </div>

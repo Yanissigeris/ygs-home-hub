@@ -468,7 +468,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           )}
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
-              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{overline}</p>}
+              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold2)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{overline}</p>}
               <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
               <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
@@ -667,11 +667,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <p
                   className="hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block"
                   style={{
-                    color: "var(--gold)",
+                    color: "var(--gold2)",
                     fontFamily: "var(--sans)",
-                    fontSize: "max(.6rem, .62rem)",
+                    fontSize: ".72rem",
                     letterSpacing: ".22em",
-                    opacity: 0.8,
+                    opacity: 1,
                     textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                     margin: 0,
                     lineHeight: 1.4,
@@ -711,9 +711,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <p
                       className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
                       style={{
-                        color: "var(--gold)",
+                        color: "var(--gold2)",
                         fontFamily: "var(--sans)",
-                        fontSize: "max(.6rem, .62rem)",
+                        fontSize: ".72rem",
                         letterSpacing: ".22em",
                         textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                       }}
@@ -781,7 +781,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       to={primaryCta.href}
                       className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
                       style={{
-                        background: "var(--gold)",
+                        background: "var(--gold-bright)",
                         color: "var(--ink)",
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
@@ -798,7 +798,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {secondaryCta && (
                     <Link
                       to={secondaryCta.href}
-                      className="inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
                         borderBottom: "1px solid rgba(255,255,255,.55)",
@@ -821,7 +821,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 className="hero-fade-in mt-8 md:mt-6 flex md:hidden flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-semibold tracking-[0.08em] md:tracking-[0.15em] text-[11.5px] md:text-[11px]"
                 style={{
                   animationDelay: "0.5s",
-                  color: "var(--gold)",
+                  color: "var(--gold2)",
                   fontFamily: "var(--sans)",
                   textShadow: "0 1px 8px rgba(0,0,0,0.65), 0 0 2px rgba(0,0,0,0.5)",
                 }}
@@ -1045,10 +1045,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               >
                 <div
                   style={{
-                    fontSize: "0.55rem",
+                    fontSize: "0.65rem",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: "var(--gold)",
+                    color: "var(--gold2)",
                     fontWeight: 600,
                     marginBottom: 4,
                   }}
