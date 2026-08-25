@@ -297,7 +297,7 @@
 
   .label-overline {
     font-family: var(--sans);
-    font-size: .62rem;
+    font-size: .7rem;
     font-weight: 600;
     letter-spacing: .22em;
     text-transform: uppercase;
@@ -510,7 +510,7 @@
   }
 
   .label-overline {
-    font-size: .58rem;
+    font-size: .66rem;
   }
 
   .label-overline::before {
@@ -567,7 +567,7 @@ h1.hero-h1-reduced {
 /* Hero eyebrow H1 — small uppercase variant, beats global h1 mobile !important rule */
 h1.hero-eyebrow {
   font-family: var(--sans) !important;
-  font-size: max(.6rem, .62rem) !important;
+  font-size: .72rem !important;
   font-weight: 600 !important;
   letter-spacing: .22em !important;
   line-height: 1.4 !important;
@@ -576,7 +576,7 @@ h1.hero-eyebrow {
 
 @media (max-width: 639px) {
   h1.hero-eyebrow {
-    font-size: 0.65rem !important;
+    font-size: 0.7rem !important;
     line-height: 1.4 !important;
   }
 }
@@ -664,6 +664,11 @@ h1.hero-eyebrow {
   transform: none;
 }
 
+/* Hero secondary text link — invisible extended hit area (≥44px tap target) */
+.hero-secondary-cta { position: relative; }
+
+.hero-secondary-cta::after { content: ""; position: absolute; inset: -12px -10px; }
+
 /* Hero CTA — premium hover (desktop) + tactile active (mobile) */
 .hero-cta-btn {
   transition: all 0.3s ease;
@@ -672,8 +677,8 @@ h1.hero-eyebrow {
 @media (hover: hover) and (pointer: fine) {
   .hero-cta-btn:hover {
     transform: translateY(-2px);
-    background: #917745 !important;
-    border-color: #917745 !important;
+    background: #C4A878 !important;
+    border-color: #C4A878 !important;
     box-shadow: 0 4px 16px rgba(168, 138, 90, 0.4) !important;
   }
 }
