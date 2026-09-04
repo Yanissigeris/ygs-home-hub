@@ -200,7 +200,7 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/312-rue-le-gallois/16828271",
     mls: "16828271",
-    status: "active",
+    status: "sold",
   },
   {
     id: "27736954",
