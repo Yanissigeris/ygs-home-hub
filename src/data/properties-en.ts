@@ -1,5 +1,4 @@
 import property28743871 from "@/assets/property-28743871.webp";
-import property20453879 from "@/assets/property-20453879.webp";
 import property15163372 from "@/assets/property-15163372.webp";
 
 import property11366995 from "@/assets/property-11366995.webp";
@@ -31,24 +30,6 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
     mls: "11366995",
     status: "sold",
-  },
-  {
-    id: "20453879",
-    address: "154 Boul. de Lucerne, apt. 104",
-    city: "Gatineau (Hull)",
-    price: "$344,900",
-    type: "Condo — Apartment",
-    bedrooms: "2",
-    bathrooms: "1",
-    area: "1 037 sq ft",
-    yearBuilt: "2004",
-    description:
-      "Ground-floor condo with no stairs, ideal for accessibility. Welcoming kitchen, hardwood and ceramic floors, large bathroom with separate shower and tub. Large balcony, 2 outdoor parking spots. Near Parc Moussette and riverfront trails.",
-    image: property20453879,
-    remaxUrl:
-      "https://www.remax-quebec.com/en/properties/condo-for-sale/154-boul-de-lucerne-gatineau-hull-manoir-des-trembles-20453879",
-    mls: "20453879",
-    status: "active",
   },
   {
     id: "15163372",

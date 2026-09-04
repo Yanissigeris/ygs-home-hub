@@ -27,23 +27,6 @@ var listings = [
     description_en: "Rare detached triplex with garage in Plateau de la Capitale, steps from Gatineau Park."
   },
   {
-    id: "20453879",
-    mls: "20453879",
-    address: "154 Boul. de Lucerne, app. 104",
-    city: "Gatineau (Hull)",
-    price_fr: "344 900 $",
-    price_en: "$344,900",
-    type: "Condo \u2014 Appartement",
-    bedrooms: "2",
-    bathrooms: "1",
-    area: "1 037 pi\xB2 / sq ft",
-    year_built: "2004",
-    status: "active",
-    remax_url: "https://www.remax-quebec.com/fr/proprietes/condo-for-sale/154-boul-de-lucerne-gatineau-hull-manoir-des-trembles-20453879",
-    description_fr: "Condo rez-de-chauss\xE9e sans escaliers, id\xE9al pour accessibilit\xE9. Grand balcon, 2 stationnements.",
-    description_en: "Ground-floor condo, no stairs \u2014 great for accessibility. Large balcony, 2 parking spots."
-  },
-  {
     id: "15163372",
     mls: "15163372",
     address: "32 Rue de Laperri\xE8re",
