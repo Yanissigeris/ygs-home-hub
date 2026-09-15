@@ -344,8 +344,8 @@ const CookieConsent = () => {
               onClick={handleAccept}
               aria-label={lang === "fr" ? "Tout accepter" : "Accept all"}
               style={{
-                background: "var(--gold)",
-                border: "1px solid var(--gold)",
+                background: "var(--gold-bright)",
+                border: "1px solid var(--gold-bright)",
                 color: "var(--ink)",
                 padding: "7px 12px",
                 fontSize: "10px",
@@ -382,7 +382,7 @@ const CookieConsent = () => {
               </p>
               <p className="text-[.78rem] leading-[1.6]" style={{ color: "rgba(255,255,255,.6)" }}>
                 {t.body}{" "}
-                <Link to={t.privacyHref} className="underline transition-colors" style={{ color: "var(--gold)", fontSize: ".75rem" }}>
+                <Link to={t.privacyHref} className="underline transition-colors" style={{ color: "var(--gold-bright)", fontSize: ".75rem" }}>
                   {t.learnMore}
                 </Link>
               </p>
@@ -411,7 +411,7 @@ const CookieConsent = () => {
               <button
                 onClick={handleAccept}
                 className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-[var(--ink)] transition-opacity hover:opacity-90"
-                style={{ background: "var(--gold)", border: "none", minHeight: 44 }}
+                style={{ background: "var(--gold-bright)", border: "none", minHeight: 44 }}
               >
                 {t.accept}
               </button>

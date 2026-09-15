@@ -124,9 +124,9 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <Link
               to={ctaHref}
               className="inline-block transition-colors duration-200"
-              style={{ background: "var(--gold)", color: "var(--ink)", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 600, textDecoration: "none" }}
+              style={{ background: "var(--gold-bright)", color: "var(--ink)", borderRadius: 4, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 600, textDecoration: "none" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold2)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold-bright)"; }}
             >
               {ctaLabel}
             </Link>

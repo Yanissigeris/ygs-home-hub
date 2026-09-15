@@ -109,9 +109,9 @@ const StickyMobileCTA = () => {
         <Link
           to={ctaHref}
           onClick={() => trackCTAClick(ctaLabel, "sticky-mobile-cta")}
-          className="flex-[1.5] inline-flex items-center justify-center text-white transition-colors"
+          className="flex-[1.5] inline-flex items-center justify-center text-[var(--ink)] transition-colors"
           style={{
-            background: "var(--gold)",
+            background: "var(--gold-bright)",
             borderRadius: "3px",
             padding: ".85rem 1rem",
             fontSize: ".85rem",

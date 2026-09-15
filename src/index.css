@@ -523,7 +523,7 @@
 
 /* Footer link hover — warm gold, no underline */
 footer a:hover {
-  color: #A88A5A !important;
+  color: var(--gold-bright) !important;
   text-decoration: none !important;
 }
 
