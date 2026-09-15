@@ -439,31 +439,6 @@
     opacity: 0.35;
   }
 
-  /* ── Cream ↔ White section gradient bridges (Sprint 4) ──
-     Inserted between adjacent cream and white sections to soften the seam. */
-  .section-fade-bridge {
-    height: 50px;
-    width: 100%;
-    pointer-events: none;
-  }
-  .section-fade-bridge--white-to-cream {
-    background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 100%);
-  }
-  .section-fade-bridge--cream-to-white {
-    background: linear-gradient(to bottom, var(--cream) 0%, #ffffff 100%);
-  }
-  .section-fade-bridge--dark-to-white {
-    background: linear-gradient(to bottom, #17303B 0%, #ffffff 100%);
-  }
-  .section-fade-bridge--dark-to-cream {
-    background: linear-gradient(to bottom, #17303B 0%, var(--cream) 100%);
-  }
-  .section-fade-bridge--cream-to-dark {
-    background: linear-gradient(to bottom, var(--cream) 0%, #17303B 100%);
-  }
-  .section-fade-bridge--white-to-dark {
-    background: linear-gradient(to bottom, #ffffff 0%, #17303B 100%);
-  }
 }
 
 /* Fallback — bots & prefers-reduced-motion voient tout */

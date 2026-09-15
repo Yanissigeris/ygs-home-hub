@@ -81,18 +81,13 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     
     <PathwaySection lang="en" />
-    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
     <FeaturedProperties lang="en" />
     <AboutSection lang="en" />
-    <div className="section-fade-bridge section-fade-bridge--dark-to-white" aria-hidden="true" />
 
     <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials/" />
-    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <AreasServicesSection lang="en" />
-    <div className="section-fade-bridge section-fade-bridge--cream-to-white" aria-hidden="true" />
     <GuideOffersSection lang="en" background="alt" />
-    <div className="section-fade-bridge section-fade-bridge--white-to-cream" aria-hidden="true" />
 
     <HomeFAQTeaser
       title="Frequently asked questions"
