@@ -419,18 +419,6 @@
     }
   }
 
-  /* ── Gold section divider (Sprint 3) ── */
-  /* Subtle 80px gold rule centered at top of cream sections */
-  .section-gold-divider::before {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 1px;
-    margin: 0 auto 32px;
-    background-color: #A88A5A;
-    opacity: 0.35;
-  }
-
 }
 
 /* Fallback — bots & prefers-reduced-motion voient tout */

@@ -94,7 +94,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const review = reviews[current];
 
     return (
-      <section ref={ref} className="relative overflow-hidden section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
+      <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "var(--cream-light)" }}>
         {/* Decorative giant quote */}
         <span
           className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"

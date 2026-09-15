@@ -271,7 +271,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     });
 
     return (
-      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
+      <section ref={ref} className="section-rhythm" style={{ background: "var(--cream-light)" }}>
         <Helmet>
           {mobilePreloads.map((pl) => (
             <link

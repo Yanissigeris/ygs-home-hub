@@ -100,7 +100,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:py-24"
+        className="section-pathway section-rhythm relative overflow-hidden md:py-24"
         style={{ background: "var(--cream-deep)" }}
       >
         {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}

@@ -102,7 +102,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
   const [activeTab, setActiveTab] = React.useState<"areas" | "services">("areas");
 
   return (
-    <section className="section-rhythm section-gold-divider" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))" }}>
+    <section className="section-rhythm" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))" }}>
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
