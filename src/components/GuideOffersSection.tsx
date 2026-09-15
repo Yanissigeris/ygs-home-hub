@@ -21,8 +21,8 @@ const guidesEn = [
   { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the guide →" },
 ];
 
-const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape — gratuites, sans engagement et envoyées par courriel." };
-const headingEn = { overline: "Free Guides", title: "Get your real estate guide", subtitle: "Comprehensive resources to guide you at every step — free, no commitment, delivered by email." };
+const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape : gratuites, sans engagement et envoyées par courriel." };
+const headingEn = { overline: "Free Guides", title: "Get your real estate guide", subtitle: "Comprehensive resources to guide you at every step: free, no commitment, delivered by email." };
 
 const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
   const guides = lang === "en" ? guidesEn : guidesFr;
@@ -49,7 +49,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               <button
                 key={g.guideType}
                 type="button"
-                aria-label={`${g.title} — ${g.subtitle}`}
+                aria-label={`${g.title} : ${g.subtitle}`}
                 className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
@@ -79,7 +79,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               <button
                 key={g.guideType}
                 type="button"
-                aria-label={`${g.title} — ${g.subtitle}`}
+                aria-label={`${g.title} : ${g.subtitle}`}
                 className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-inset"
                 style={{ padding: "1.25rem", background: "var(--white)" }}
                 onClick={() => setModalGuide(g.guideType)}

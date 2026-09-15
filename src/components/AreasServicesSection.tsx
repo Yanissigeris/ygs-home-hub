@@ -48,7 +48,7 @@ const servicesEn: ServiceLink[] = [
 const cfgFr = {
   overline: "Secteurs et services",
   title: "Où j'interviens et comment je peux vous aider",
-  subtitle: "Courtier immobilier actif dans toute la région de Gatineau et l'Outaouais — vente, achat, évaluation, investissement et relocalisation.",
+  subtitle: "Courtier immobilier actif dans toute la région de Gatineau et l'Outaouais : vente, achat, évaluation, investissement et relocalisation.",
   areasHeading: "Secteurs desservis",
   servicesHeading: "Services offerts",
   allNeighborhoods: "Voir tous les quartiers",
@@ -60,7 +60,7 @@ const cfgFr = {
 const cfgEn = {
   overline: "Areas & services",
   title: "Where I work and how I can help",
-  subtitle: "Real estate broker serving the Gatineau and Outaouais region — selling, buying, valuation, investment and relocation.",
+  subtitle: "Real estate broker serving the Gatineau and Outaouais region: selling, buying, valuation, investment and relocation.",
   areasHeading: "Areas served",
   servicesHeading: "Services offered",
   allNeighborhoods: "All neighborhoods",

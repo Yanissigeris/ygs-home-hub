@@ -79,7 +79,7 @@ const InstagramGrid = () => {
               target="_blank"
               rel="noopener"
               className="group relative aspect-square overflow-hidden rounded-[2px]"
-              aria-label={`Instagram — ${altTexts[i]}`}
+              aria-label={`Instagram : ${altTexts[i]}`}
             >
               <picture>
                 {pic.sources.avif && <source type="image/avif" srcSet={pic.sources.avif} sizes={sizes} />}
