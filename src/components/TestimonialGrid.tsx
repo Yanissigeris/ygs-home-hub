@@ -61,7 +61,8 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
   ({ overline = "Témoignages", title = "Ce que disent mes clients", reviews, reviewsPageLabel, reviewsPageHref }, ref) => {
@@ -101,13 +102,6 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
     return (
       <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "var(--cream-light)" }}>
-        {/* Decorative giant quote */}
-        <span
-          className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
-          style={{ fontFamily: "var(--serif)", fontSize: "clamp(24rem, 38vw, 36rem)", color: "rgba(23,48,59,0.025)", lineHeight: .7 }}
-          aria-hidden="true"
-        >"</span>
-
         <div className="section-container relative">
           <div className="grid grid-cols-1 md:grid-cols-[minmax(320px,1fr)_2fr] gap-8 md:gap-12 items-start">
             {/* Left — sticky sidebar */}
