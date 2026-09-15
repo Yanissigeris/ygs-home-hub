@@ -8,7 +8,7 @@ interface GuideOffersSectionProps {
 }
 
 const guidesFr = [
-  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix : prix, mise en marché, négociation.", cta: "Recevoir le guide →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix\u00a0: prix, mise en marché, négociation.", cta: "Recevoir le guide →" },
   { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide →" },
   { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide →" },
   { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide →" },
@@ -88,7 +88,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
                 <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
                 <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
-                  {g.cta}
+                  {lang === "en" ? "Get it →" : "Recevoir →"}
                 </span>
               </button>
             ))}
