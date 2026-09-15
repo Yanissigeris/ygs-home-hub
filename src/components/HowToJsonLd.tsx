@@ -16,6 +16,10 @@ const BASE = "https://yanisgauthier.com";
 
 const HowToJsonLd = ({ name, description, steps, totalTime }: HowToJsonLdProps) => {
   useEffect(() => {
+    // The prerendered HTML already ships this schema server-side on some routes.
+    // Skip client injection (and cleanup) so we never duplicate or remove it.
+    if (document.getElementById("ygs-jsonld-howto")) return;
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "HowTo",
