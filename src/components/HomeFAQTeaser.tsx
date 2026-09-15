@@ -106,13 +106,6 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                   </div>
                 );
               })}
-
-              {/* "See all" link — right aligned */}
-              <div className="mt-2 text-right">
-                <Link to={linkHref} className="cta-arrow-link">
-                  {linkLabel} →
-                </Link>
-              </div>
             </div>
           </div>
         </div>
