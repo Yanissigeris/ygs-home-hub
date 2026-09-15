@@ -1,8 +1,15 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { Star } from "lucide-react";
 import type { Review } from "@/data/reviews";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
+
+const Stars = ({ lang }: { lang: "fr" | "en" }) => (
+  <span role="img" aria-label={lang === "en" ? "5 out of 5 stars" : "5 étoiles sur 5"} style={{ color: "var(--gold-dark)", display: "inline-flex", gap: 2 }}>
+    {[0, 1, 2, 3, 4].map((i) => <Star key={i} size={12} strokeWidth={1.5} fill="currentColor" />)}
+  </span>
+);
 
 interface TestimonialGridProps {
   overline?: string;
@@ -12,7 +19,9 @@ interface TestimonialGridProps {
   reviewsPageHref?: string;
 }
 
-const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => (
+const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => {
+  const lang = useLanguage();
+  return (
   <div
     className="flex h-full flex-col transition-all duration-300"
     style={{
@@ -26,10 +35,7 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
     onMouseLeave={(e) => { e.currentTarget.style.background = "var(--white)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
   >
     {/* Stars */}
-    <div className="mb-4" style={{ color: "var(--gold-dark)", fontSize: ".75rem", letterSpacing: "2px" }}>★★★★★</div>
-
-    {/* Decorative quote mark */}
-    <span className="text-[3rem] md:text-[4.5rem]" style={{ fontFamily: "var(--serif)", lineHeight: ".8", color: "var(--gold)", fontWeight: 300, opacity: .4 }} aria-hidden="true">"</span>
+    <div className="mb-4"><Stars lang={lang} /></div>
 
     {/* Quote */}
     <blockquote className="flex-1 mt-2">
@@ -55,7 +61,8 @@ const GridCard = ({ review, index = 0 }: { review: Review; index?: number }) => 
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
   ({ overline = "Témoignages", title = "Ce que disent mes clients", reviews, reviewsPageLabel, reviewsPageHref }, ref) => {
@@ -95,13 +102,6 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
     return (
       <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "var(--cream-light)" }}>
-        {/* Decorative giant quote */}
-        <span
-          className="pointer-events-none select-none absolute top-0 left-0 hidden lg:block"
-          style={{ fontFamily: "var(--serif)", fontSize: "clamp(24rem, 38vw, 36rem)", color: "rgba(23,48,59,0.025)", lineHeight: .7 }}
-          aria-hidden="true"
-        >"</span>
-
         <div className="section-container relative">
           <div className="grid grid-cols-1 md:grid-cols-[minmax(320px,1fr)_2fr] gap-8 md:gap-12 items-start">
             {/* Left — sticky sidebar */}
@@ -136,7 +136,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 20px 44px var(--gold-veil-faint)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = ""; }}
             >
-              <div style={{ color: "var(--gold-dark)", letterSpacing: "2px", fontSize: ".75rem", marginBottom: "22px" }}>★★★★★</div>
+              <div style={{ marginBottom: "22px" }}><Stars lang={lang} /></div>
               <blockquote style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontWeight: 300, fontStyle: "italic", color: "var(--ink)", lineHeight: 1.5, marginBottom: "26px" }}>
                 {review.short}
               </blockquote>

@@ -119,7 +119,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
           <div className="lg:border-r" style={{ borderRight: "none" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
               <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
-                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.areasHeading}
+                {cfg.areasHeading}
               </p>
             </div>
             {areas.slice(0, 6).map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
@@ -130,7 +130,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
           <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
               <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
-                <span style={{ color: "var(--gold)", marginRight: 8 }}>●</span>{cfg.servicesHeading}
+                {cfg.servicesHeading}
               </p>
             </div>
             {services.map((s) => <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />)}
