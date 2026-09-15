@@ -52,7 +52,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <HeroSection
-      cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
+      
       title="Your real estate broker in Outaouais"
       subtitle="Clear strategy to sell, buy, or invest."
       subtitleShort="Clear strategy to sell, buy, or invest."
@@ -103,7 +103,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <CTASection
       dark
-      overline="First step"
+      
       title="Take the right first step"
       text="Valuation, buyer consultation or plex analysis, we start where you are."
       buttons={[

@@ -53,7 +53,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
     <div className="relative">
       <div className="sticky top-0 z-0 h-screen">
         <HeroSection
-          cities={["GATINEAU", "AYLMER", "HULL", "CHELSEA", "CANTLEY"]}
+          
           title="Votre courtier immobilier en Outaouais"
           subtitle="Stratégie claire pour vendre, acheter ou investir."
           subtitleShort="Stratégie claire pour vendre, acheter ou investir."
@@ -120,7 +120,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
 
     <CTASection
       dark
-      overline="Première étape"
+      
       title="Prenez la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
       buttons={[

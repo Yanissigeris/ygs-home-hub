@@ -38,7 +38,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
         <div className="section-container relative">
           {/* Header */}
           <div className="mb-8 sm:mb-12 max-w-[36rem]">
-            <p className="label-overline mb-2" style={{ color: "var(--gold-text)" }}>{heading.overline}</p>
+            
             <h2>{heading.title}</h2>
             <p className="mt-3" style={{ fontSize: ".92rem", color: "hsl(var(--muted-foreground))", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>

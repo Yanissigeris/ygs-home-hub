@@ -31,9 +31,6 @@ const InstagramGrid = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <span className="flex items-center gap-2.5 text-[.62rem] font-bold tracking-[.2em] uppercase before:content-[''] before:block before:w-[22px] before:h-px before:bg-[#A88A5A]" style={{ color: "var(--gold)" }}>
-              {t.eyebrow}
-            </span>
             <h2 className="mt-2 font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-light tracking-tight leading-[1.15]" style={{ color: "#F7F4EE" }}>
               {t.title}
               <br />

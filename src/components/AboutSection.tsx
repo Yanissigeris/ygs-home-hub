@@ -57,20 +57,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
       <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16 md:min-h-[72vh]" style={{ position: "relative", zIndex: 1 }}>
         {/* ─── Left column: text ─── */}
         <div className="order-2 lg:order-1">
-          {/* Overline */}
-          <p
-            style={{
-              fontFamily: "var(--sans)",
-              fontSize: "12px",
-              fontWeight: 500,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "var(--gold-bright)",
-              marginBottom: "1.5rem",
-            }}
-          >
-            {c.overline}
-          </p>
 
           {/* Pull quote */}
           <blockquote
