@@ -25,6 +25,7 @@ import { execSync } from "node:child_process";
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
 import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn } from "./faq-extractor.mjs";
+import { extractSellerGuideFr, extractSellerGuideEn } from "./guide-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
