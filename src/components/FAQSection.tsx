@@ -41,6 +41,9 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
 
     // Full schema with ALL items (not just visible) for SEO
     React.useEffect(() => {
+      // A prerendered FAQPage schema (server-side) already covers this page.
+      if (document.getElementById("ygs-faqpage-jsonld")) return;
+
       const prev = document.getElementById(jsonLdId);
       if (prev) prev.remove();
 

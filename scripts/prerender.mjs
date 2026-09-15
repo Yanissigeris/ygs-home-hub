@@ -25,6 +25,7 @@ import { execSync } from "node:child_process";
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
 import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn } from "./faq-extractor.mjs";
+import { extractSellerGuideFr, extractSellerGuideEn } from "./guide-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -220,6 +221,38 @@ function injectFaqPageJsonLd(html, items) {
   const tag = `\n    <script id="ygs-faqpage-jsonld" type="application/ld+json">${json}</script>\n`;
   return html.replace("</head>", `${tag}  </head>`);
 }
+
+/**
+ * Inject a HowTo JSON-LD schema (guide pages) into the prerendered HTML.
+ * Mirrors src/components/HowToJsonLd.tsx exactly, including the element id,
+ * so the client component skips re-injection when this script is present.
+ */
+function injectHowToJsonLd(html, { name, description, steps, totalTime }) {
+  if (!steps || steps.length === 0) return html;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    ...(totalTime ? { totalTime } : {}),
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+    author: {
+      "@type": "RealEstateAgent",
+      "@id": `${SITE_URL}/#realestateagent`,
+      name: "Yanis Gauthier-Sigeris",
+    },
+  };
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script id="ygs-jsonld-howto" type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+
 
 /**
  * Inject a static body fallback for blog article pages so that crawlers (and
@@ -510,6 +543,30 @@ async function main() {
       }
       html = injectFaqPageJsonLd(html, homeFaqItems);
     }
+
+    // Inject HowTo + FAQPage JSON-LD for the seller guide pages (server-side)
+    if (route === "/guide-vendeur-gatineau" || route === "/en/seller-guide") {
+      const isFr = route === "/guide-vendeur-gatineau";
+      const guide = isFr ? await extractSellerGuideFr() : await extractSellerGuideEn();
+      if (guide.steps.length === 0 || guide.faq.length === 0) {
+        throw new Error(
+          `Prerender: seller guide extraction returned ${guide.steps.length} steps / ` +
+          `${guide.faq.length} FAQ items for route "${route}" — check the format of the ` +
+          `sellerSteps and faq arrays in the seller guide page source.`
+        );
+      }
+      html = injectHowToJsonLd(html, {
+        name: isFr ? "Comment vendre une propriété à Gatineau" : "How to sell a property in Gatineau",
+        description: isFr
+          ? "Guide étape par étape pour vendre votre propriété à Gatineau — prix, préparation, mise en marché et négociation."
+          : "Step-by-step guide to selling your property in Gatineau — pricing, preparation, marketing and negotiation.",
+        steps: guide.steps,
+        totalTime: "P60D",
+      });
+      html = injectFaqPageJsonLd(html, guide.faq);
+    }
+
+
 
     // Output path
     let outPath;
