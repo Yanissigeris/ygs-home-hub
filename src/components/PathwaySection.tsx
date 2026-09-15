@@ -18,7 +18,7 @@ const pathwaysFr: Pathway[] = [
   {
     num: "01",
     title: "Plex & investissement",
-    text: "Rendement réel, valeur marchande et timing — les vrais chiffres avant de prendre une décision.",
+    text: "Rendement réel, valeur marchande et timing : les vrais chiffres avant de prendre une décision.",
     cta: "Calculer mon rendement",
     href: "/investir-plex-gatineau/",
     badge: "Priorité investisseurs",
@@ -48,7 +48,7 @@ const pathwaysEn: Pathway[] = [
   {
     num: "01",
     title: "Plex & Investment",
-    text: "Returns, market value and timing — the real numbers before the decision.",
+    text: "Returns, market value and timing: the real numbers before the decision.",
     cta: "Get an analysis",
     href: "/en/plex/",
     badge: "Investors first",
@@ -78,14 +78,14 @@ const headingFr = {
   overline: "Choisissez votre prochaine étape",
   titleFirst: "Où en êtes-vous dans",
   titleAccent: "votre projet?",
-  subtitle: "Trois chemins selon votre situation. Choisissez celui qui vous correspond — vous serez accompagné de A à Z.",
+  subtitle: "Trois chemins selon votre situation. Choisissez celui qui vous correspond, vous serez accompagné de A à Z.",
 };
 
 const headingEn = {
   overline: "Choose your next step",
   titleFirst: "Where are you in",
   titleAccent: "your project?",
-  subtitle: "Three paths depending on your situation. Choose the one that fits — you'll be guided from A to Z.",
+  subtitle: "Three paths depending on your situation. Choose the one that fits, you'll be guided from A to Z.",
 };
 
 interface PathwaySectionProps {
@@ -254,7 +254,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                       display: "block",
                     }}
                   >
-                    — {p.badge}
+                    {p.badge}
                   </span>
                 )}
                 <span

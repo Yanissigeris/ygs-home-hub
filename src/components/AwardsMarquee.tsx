@@ -73,7 +73,7 @@ const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
       >
         <div className="grid grid-cols-2 gap-1.5">
           {[
-            { title: "Club 100% OR", years: "2020, 22–25" },
+            { title: "Club 100% OR", years: "2020, 2022-2025" },
             { title: "Hall of Fame", years: "2024" },
             { title: "Club Platine", years: "2021" },
             { title: "Club 100%", years: "2019" },

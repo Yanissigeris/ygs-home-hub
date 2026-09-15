@@ -27,7 +27,7 @@ type AffiliationLogo = {
 
 const affiliationLogos: AffiliationLogo[] = [
   {
-    alt: "RE/MAX Direct Inc. — agence immobilière",
+    alt: "RE/MAX Direct Inc., agence immobilière",
     href: "https://www.remax-quebec.com",
     caption: "RE/MAX Direct Inc.",
     custom: (
@@ -38,11 +38,11 @@ const affiliationLogos: AffiliationLogo[] = [
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite — courtiers immobiliers Gatineau" },
-  { src: logoSirvaBgrs, alt: "SIRVA BGRS — programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
-  { src: logoTemple, alt: "Temple de la renommée RE/MAX — distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
-  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX — garantie immobilière", filter: "brightness-0 invert" },
-  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil — partenaire caritatif", filter: "brightness-[1.4]" },
+  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau" },
+  { src: logoSirvaBgrs, alt: "SIRVA BGRS, programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
+  { src: logoTemple, alt: "Temple de la renommée RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
+  { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
+  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-[1.4]" },
 ];
 
 /* ── Social SVG icons ── */
@@ -96,18 +96,18 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
     const popularLinks = lang === "en" ? footerPopularLinksEn : footerPopularLinks;
-    const tagline = lang === "en" ? "Your real estate ally in Outaouais — Clear strategy" : "Votre allié en immobilier en Outaouais — Stratégie claire";
+    const tagline = lang === "en" ? "Your real estate ally in Outaouais. Clear strategy." : "Votre allié en immobilier en Outaouais. Stratégie claire.";
     const popularLabel = lang === "en" ? "Popular areas & services" : "Zones et services populaires";
     const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
-      ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Real Estate Broker, Gatineau. All rights reserved.`
-      : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris — Courtier immobilier, Gatineau. Tous droits réservés.`;
+      ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris, Real Estate Broker, Gatineau. All rights reserved.`
+      : `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris, courtier immobilier, Gatineau. Tous droits réservés.`;
 
     const ctaHref = lang === "en" ? "/en/home-valuation/" : "/evaluation-gratuite-gatineau/";
     const ctaHeading = lang === "en" ? "Ready to take action?" : "Prêt à passer à l'action?";
     const ctaSubtext = lang === "en"
-      ? "Get your free home valuation — no commitment."
-      : "Obtenez votre évaluation gratuite — sans engagement.";
+      ? "Get your free home valuation, no commitment."
+      : "Obtenez votre évaluation gratuite, sans engagement.";
     const ctaLabel = lang === "en" ? "Free valuation →" : "Évaluation gratuite →";
 
     return (
@@ -139,7 +139,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
             <img
               src={logoYgsWhite}
-              alt="YGS — Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
+              alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
               width={160}
               height={180}
               className="h-auto mx-auto block"
@@ -306,7 +306,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           {/* ── RE/MAX mention ── */}
           <div className="text-center py-3">
             <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 300 }}>
-              {lang === "en" ? "Member of RE/MAX — Marty Waite Team" : "Membre de RE/MAX — Équipe Marty Waite"}
+              {lang === "en" ? "Member of RE/MAX, Marty Waite Team" : "Membre de RE/MAX, Équipe Marty Waite"}
             </p>
           </div>
 
@@ -314,8 +314,20 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
-                ? "RE/MAX Direct Inc. — Real estate agency · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"
-                : "RE/MAX Direct Inc. — Agence immobilière · 216 Chemin d'Aylmer, Gatineau, QC J9H 1A4"}
+                ? (
+                  <>
+                    RE/MAX Direct Inc., real estate agency
+                    <br />
+                    216 Chemin d'Aylmer, Gatineau, QC J9H 1A4
+                  </>
+                )
+                : (
+                  <>
+                    RE/MAX Direct Inc., agence immobilière
+                    <br />
+                    216 Chemin d'Aylmer, Gatineau, QC J9H 1A4
+                  </>
+                )}
             </p>
             <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
