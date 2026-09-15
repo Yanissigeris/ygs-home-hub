@@ -707,20 +707,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </>
               ) : (
                 <>
-                  {overline && (
-                    <p
-                      className="hero-fade-in mb-3 sm:mb-6 uppercase font-semibold"
-                      style={{
-                        color: "var(--gold2)",
-                        fontFamily: "var(--sans)",
-                        fontSize: ".72rem",
-                        letterSpacing: ".22em",
-                        textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-                      }}
-                    >
-                      {overline.replace(/[·•]/g, "  ·  ")}
-                    </p>
-                  )}
+                  {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
+
                   <h1
                     className="hero-fade-in"
                     style={{
