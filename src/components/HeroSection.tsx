@@ -468,7 +468,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           )}
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
-              {overline && <p className="label-overline mb-3 sm:mb-6" style={{ color: "var(--gold2)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{overline}</p>}
+              {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
               <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
               <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
