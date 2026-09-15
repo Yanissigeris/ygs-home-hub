@@ -1,21 +1,43 @@
 ## Objectif
 
-Supprimer tout mouvement « bouncy » au chargement de la page d'accueil, sur toutes les versions (FR/EN, desktop/mobile) — le contenu du hero apparaît directement en place.
+Appliquer uniquement le correctif visuel demandé sur les pages d’accueil française et anglaise : supprimer les bandes de fondu entre sections et faire fonctionner les utilitaires Tailwind `font-serif` / `font-sans` avec les polices déjà présentes.
 
-## Changements
+## Plan fichier par fichier
 
-**1. `src/index.css` — neutraliser les animations d'entrée du hero**
-- `.hero-fade-in` : retirer l'animation (plus de `translateY(12px) → 0`), l'élément reste à sa position finale.
-- `.hero-h1-reveal` : idem (plus de `translateY(24px) → 0`).
-- `@keyframes hero-chevron-bounce` : supprimer le rebond (le chevron reste fixe).
-- Nettoyer les keyframes devenues inutilisées et les blocs `prefers-reduced-motion` correspondants.
+### `src/pages/Index.tsx`
+- Supprimer les 6 éléments décoratifs `section-fade-bridge`.
+- Ne modifier ni l’ordre, ni le contenu, ni la structure des sections elles-mêmes.
 
-**2. `src/components/HeroSection.tsx` — chevron**
-- Retirer la propriété `animation: "hero-chevron-bounce …"` du bouton `ScrollChevron`.
-- Le chevron reste visible, cliquable, et conserve son fondu à l'opacité au scroll.
+### `src/pages/en/IndexEn.tsx`
+- Supprimer les 5 éléments décoratifs `section-fade-bridge` équivalents.
+- Conserver strictement tous les contenus et l’ordre des sections.
 
-## Notes techniques
+### `src/index.css`
+- Supprimer le bloc `.section-fade-bridge`, ses 6 variantes de transition et le commentaire « Sprint 4 » associé.
+- Préserver l’accolade fermante du `@layer components`.
+- Ne modifier aucune valeur de token, aucune autre règle et aucune animation.
 
-- Les classes `hero-fade-in` / `hero-h1-reveal` restent en place dans le JSX (aucun risque de casse, aucune modification de structure ou de texte) ; seules leurs règles CSS deviennent inertes. Les `animationDelay` inline n'ont alors plus d'effet.
-- Les animations d'entrée étaient déjà transform-only (opacité à 1 dès t=0), donc aucun impact sur le LCP ni sur le CLS.
-- Aucun changement de texte, de meta, de JSON-LD ni de route. Les autres animations du site (reveal au scroll, hovers, marquee) ne sont pas touchées.
+### `tailwind.config.ts`
+- Ajouter dans `theme.extend.fontFamily`, sans toucher aux entrées `heading` et `body` :
+  - `serif: ['Cormorant Garamond', 'Georgia', 'serif']`
+  - `sans: ['DM Sans', 'system-ui', 'sans-serif']`
+- Les usages existants de `font-serif` et `font-sans` adopteront ainsi les familles attendues sans modification de composant.
+
+### `src/components/CookieConsent.tsx` — uniquement si nécessaire après contrôle visuel
+- Aucun changement prévu par défaut.
+- Si la capture montre que le titre de la bannière est réellement trop petit une fois Cormorant appliquée, changer uniquement `text-[1rem]` en `text-[1.15rem]` sur ce titre.
+
+## Vérifications
+
+- Rechercher `section-fade-bridge` dans tout le projet et confirmer qu’il ne reste aucune occurrence.
+- Vérifier l’absence d’erreurs TypeScript et de compilation.
+- Contrôler à 1440 px et 390 px :
+  - la jonction « Parcours / Mes propriétés » ;
+  - la jonction « Guides / FAQ » ;
+  - le titre « Suivez le marché » dans la section Instagram ;
+  - la bannière de consentement, avec l’ajustement conditionnel ci-dessus seulement si nécessaire.
+- Confirmer visuellement que les sections se touchent net et qu’aucun autre aspect n’a changé.
+
+## Hors périmètre garanti
+
+Aucun changement aux slugs, redirections, libellés de navigation, H1, métadonnées, formulaire, suivi analytique, consentement, prérendu, JSON-LD, tokens, dépendances ou animations.
