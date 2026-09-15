@@ -20,9 +20,6 @@ const InstagramGrid = () => {
     title: lang === "en" ? "Follow the market" : "Suivez le marché",
     titleItalic: lang === "en" ? "in real time" : "en temps réel",
     follow: lang === "en" ? "Follow →" : "Suivre →",
-    tagline: lang === "en"
-      ? "Local market · Recent listings · Real estate tips"
-      : "Marché local · Propriétés récentes · Conseils immobiliers",
   };
 
   return (
@@ -103,11 +100,6 @@ const InstagramGrid = () => {
             );
           })}
         </div>
-
-        {/* Tagline */}
-        <p className="mt-5 text-center text-[.78rem] md:text-[.78rem]" style={{ color: "rgba(255,255,255,.65)" }}>
-          {t.tagline}
-        </p>
       </div>
     </section>
   );
