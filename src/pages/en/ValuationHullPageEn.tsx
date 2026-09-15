@@ -74,7 +74,6 @@ const ValuationHullPageEn = () => {
         />
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
           <motion.div {...anim}>
-            <p className="label-overline mb-4 text-primary-foreground/65">Free valuation · Hull</p>
             <h1 className="text-primary-foreground">How much is your Hull property worth?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
               Receive a personalized valuation based on recent sales in your Hull neighborhood, free, confidential and no commitment.

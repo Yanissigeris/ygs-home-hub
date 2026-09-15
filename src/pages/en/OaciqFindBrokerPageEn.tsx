@@ -33,7 +33,6 @@ const OaciqFindBrokerPageEn = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Trust & verification</p>
           <h1 className="text-primary-foreground">Verify a broker with the OACIQ</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             Before working with a real estate broker in Quebec, you can verify their licence and standing. Here's how and why it matters.

@@ -33,7 +33,6 @@ const HowToChooseRealtorPageEn = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Choosing a broker</p>
           <h1 className="text-primary-foreground">How to choose a realtor in Quebec</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             Choosing the right broker is one of the most important decisions in your real estate journey. Here's what to look for.

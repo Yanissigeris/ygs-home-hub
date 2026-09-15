@@ -34,7 +34,6 @@ const VerifierCourtierOaciqPage = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Confiance et vérification</p>
           <h1 className="text-primary-foreground">Vérifier un courtier immobilier avec l'OACIQ</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             Avant de confier la vente ou l'achat de votre propriété à un courtier, vérifiez qu'il est en règle. C'est simple, rapide et gratuit.

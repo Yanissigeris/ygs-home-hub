@@ -85,7 +85,6 @@ const BuckinghamPage = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">PORTRAIT</p>
       <h2 className="mt-3">Buckingham et Masson-Angers, les faits</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -103,7 +102,6 @@ const BuckinghamPage = () => (
     {/* ═══ SECTION 2 — Sous-secteurs ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">LES SECTEURS</p>
         <h2 className="mt-3">Buckingham vs Masson-Angers</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {subSectors.map((s) => (
@@ -118,7 +116,6 @@ const BuckinghamPage = () => (
 
     {/* ═══ SECTION 3 — La distance ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">HONNÊTETÉ</p>
       <h2 className="mt-3">La question de la distance, une réponse honnête</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

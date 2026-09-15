@@ -85,7 +85,6 @@ const GatineauCentrePage = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">PORTRAIT DU SECTEUR</p>
       <h2 className="mt-3">Gatineau centre, bien desservi, bien positionné</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -103,7 +102,6 @@ const GatineauCentrePage = () => (
     {/* ═══ SECTION 2 — Sous-secteurs ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">LES QUARTIERS</p>
         <h2 className="mt-3">Les quartiers de Gatineau centre à connaître</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {subSectors.map((s) => (

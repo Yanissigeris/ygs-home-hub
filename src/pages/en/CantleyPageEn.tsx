@@ -90,7 +90,6 @@ const CantleyPageEn = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">PORTRAIT</p>
       <h2 className="mt-3">Cantley, verified facts about this growing municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -108,7 +107,6 @@ const CantleyPageEn = () => (
     {/* ═══ SECTION 2 — Activities ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">LIFE IN CANTLEY</p>
         <h2 className="mt-3">Life in Cantley, what sets this area apart</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {activities.map((c) => (
@@ -124,7 +122,6 @@ const CantleyPageEn = () => (
 
     {/* ═══ SECTION 3 — Buying ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">BEFORE YOU BUY</p>
       <h2 className="mt-3">What you need to know before buying in Cantley</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

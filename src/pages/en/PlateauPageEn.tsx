@@ -66,7 +66,6 @@ const PlateauPageEn = () => (
     <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau/" />
     <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} heroBgImage={heroImg} />
 <ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">
-      <div className="label-overline">The area</div>
       <h2 className="mt-3">Why the Plateau attracts families</h2>
       <div className="mt-7 space-y-3.5">
         {reasons.map((r) => (
@@ -79,7 +78,6 @@ const PlateauPageEn = () => (
     </ImageTextSplit>
     <CardGrid overline="For who" title="The Plateau is ideal for…" items={profiles} background="alt" />
     <ContentBlock>
-      <p className="label-overline">PORTRAIT</p>
       <h2 className="mt-3">The Plateau, what makes this Gatineau sector different</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

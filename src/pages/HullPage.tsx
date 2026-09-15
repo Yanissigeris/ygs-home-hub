@@ -91,7 +91,6 @@ const HullPage = () => (
 
     {/* ═══ SECTION 1 — Pourquoi Hull ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">POURQUOI HULL</p>
       <h2 className="mt-3">Hull : le secteur qui se réinvente</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -109,7 +108,6 @@ const HullPage = () => (
     {/* ═══ SECTION 2 — Sous-secteurs ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">LES SECTEURS</p>
         <h2 className="mt-3">Les secteurs de Hull à connaître</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {subSectors.map((s) => (
@@ -124,7 +122,6 @@ const HullPage = () => (
 
     {/* ═══ SECTION 3 — Investir ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">INVESTISSEMENT</p>
       <h2 className="mt-3">Investir dans un plex à Hull, ce qu'il faut comprendre</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

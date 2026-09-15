@@ -74,7 +74,6 @@ const ValuationAylmerPage = () => {
         />
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
           <motion.div {...anim}>
-            <p className="label-overline mb-4 text-primary-foreground/65">Évaluation gratuite · Aylmer</p>
             <h1 className="text-primary-foreground">Combien vaut votre propriété à Aylmer?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
               Recevez une évaluation personnalisée basée sur les ventes récentes dans votre quartier d'Aylmer, gratuit, confidentiel et sans engagement.

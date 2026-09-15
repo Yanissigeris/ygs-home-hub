@@ -24,7 +24,6 @@ const TestimonialsPageEn = () => (
     <section className="section-padding bg-background pb-0">
       <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
         <div>
-          <p className="label-overline mb-2">Verified reviews</p>
           <h2>Our clients on Google</h2>
         </div>
         <GoogleReviewBadge />
