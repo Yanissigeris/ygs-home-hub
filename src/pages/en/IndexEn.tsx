@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
 
 
-import AwardsMarquee from "@/components/AwardsMarquee";
+import AwardsStrip from "@/components/AwardsStrip";
 import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
 import yanisHero from "@/assets/hero-yanis-interior.webp";
@@ -78,7 +78,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     
     <ValuationWidget lang="en" />
     <QuickActionStrip />
-    <AwardsMarquee lang="en" />
+    <AwardsStrip lang="en" />
 
     
     <PathwaySection lang="en" />

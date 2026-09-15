@@ -15,7 +15,7 @@ import yanisPortraitLgAvif from "@/assets/yanis-portrait-nobg-lg.avif";
 import HeroSection from "@/components/HeroSection";
 
 
-import AwardsMarquee from "@/components/AwardsMarquee";
+import AwardsStrip from "@/components/AwardsStrip";
 import ValuationWidget from "@/components/ValuationWidget";
 import StatsSection from "@/components/StatsSection";
 
@@ -84,7 +84,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       >
         <ValuationWidget />
         <QuickActionStrip />
-        <AwardsMarquee />
+        <AwardsStrip />
       </LazySection>
     </div>
 

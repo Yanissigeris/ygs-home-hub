@@ -43,7 +43,7 @@ const defaultVars = {
     "inset 0 1px 0 rgba(255,255,255,.06), inset 0 -1px 0 rgba(0,0,0,.3)",
 } as React.CSSProperties;
 
-const AwardsMarquee = React.forwardRef<HTMLElement, AwardsStripProps>(
+const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(
   ({ lang = "fr" }, ref) => {
     const isEn = lang === "en";
     const entries: Array<{ label: string; href?: string }> = isEn
@@ -166,5 +166,5 @@ const AwardsMarquee = React.forwardRef<HTMLElement, AwardsStripProps>(
   }
 );
 
-AwardsMarquee.displayName = "AwardsMarquee";
-export default AwardsMarquee;
+AwardsStrip.displayName = "AwardsStrip";
+export default AwardsStrip;
