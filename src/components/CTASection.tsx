@@ -31,9 +31,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
       )}
 
       <div className="section-container relative px-[1.25rem] sm:px-6 md:px-8">
-        {overline && (
-          <p className="label-overline mb-3 justify-center" style={{ color: dark ? "var(--gold2)" : undefined }}>{overline}</p>
-        )}
+        {/* overline retiré (cohérence accueil) */}
         <h2 className="mx-auto max-w-lg" style={{ color: dark ? "var(--white)" : "var(--ink)", fontSize: "clamp(2rem, 8vw, 3.6rem)" }}>{title}</h2>
         {text && (
           <p className="mx-auto mt-4 max-w-md" style={{ fontSize: ".92rem", lineHeight: 1.6, color: dark ? "rgba(255,255,255,.65)" : "hsl(var(--muted-foreground))" }}>
