@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, Send, BadgeCheck, Loader2 } from "lucide-react";
+import { Lock, Clock, Shield, Send, BadgeCheck, Loader2, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
@@ -259,7 +259,7 @@ const ValuationForm = ({
                 Yanis Gauthier-Sigeris
               </p>
               <p className="mt-0.5 text-[0.75rem] text-primary-foreground/85 flex flex-wrap items-center gap-x-1.5">
-                <span className="text-accent font-medium">★ 5/5</span>
+                <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" aria-hidden="true" />5/5</span>
                 <span aria-hidden>·</span>
                 <span>Hall of Fame RE/MAX</span>
                 <span aria-hidden>·</span>
@@ -286,7 +286,7 @@ const ValuationForm = ({
               Yanis Gauthier-Sigeris
             </p>
             <p className="mt-0.5 text-[0.75rem] text-muted-foreground flex flex-wrap items-center gap-x-1.5">
-              <span className="text-accent font-medium">★ 5/5</span>
+              <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" aria-hidden="true" />5/5</span>
               <span aria-hidden>·</span>
               <span>Hall of Fame RE/MAX</span>
               <span aria-hidden>·</span>

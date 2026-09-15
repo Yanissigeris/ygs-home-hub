@@ -90,12 +90,12 @@ interface HeroSectionProps {
 /* Stats data */
 const statsFr = [
   { value: "~9 ans", label: "d'expérience" },
-  { value: "5 ★", label: "Google + Facebook" },
+  { value: "5/5", label: "Google + Facebook" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 const statsEn = [
   { value: "~9 yrs", label: "experience" },
-  { value: "5 ★", label: "Google + Facebook" },
+  { value: "5/5", label: "Google + Facebook" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 
@@ -817,7 +817,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <span>
                   {lang === "fr" ? "Depuis 2017" : "Since 2017"}
                 </span>
-                <span aria-hidden="true" style={{ opacity: 0.8 }}>●</span>
+                <span aria-hidden="true" style={{ opacity: 0.55, margin: "0 4px" }}>·</span>
                 <span>{lang === "fr" ? "Hall of Fame RE/MAX, LLC, 2024" : "RE/MAX, LLC Hall of Fame 2024"}</span>
               </div>
             </div>
@@ -989,7 +989,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <Link to="/en/testimonials" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>5★ Google & Facebook</span>
+                    <span>5/5 Google & Facebook</span>
                   </Link>
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
@@ -1011,7 +1011,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <Link to="/temoignages" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
                     <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>5★ Google & Facebook</span>
+                    <span>5/5 Google & Facebook</span>
                   </Link>
                   <span className="mx-2 opacity-70" aria-hidden="true">·</span>
                   <span className="pointer-events-auto inline-flex items-center">
@@ -1056,13 +1056,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     <>
                       Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
                       <br />
-                      5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
+                      5/5 Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
                     </>
                   ) : (
                     <>
                       Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
                       <br />
-                      5★ Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
+                      5/5 Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
                     </>
                   )}
                 </div>
