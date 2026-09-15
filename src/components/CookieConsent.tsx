@@ -105,7 +105,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
     necessaryDesc: "Essential for the site to function.",
     alwaysOn: "Always active",
     analyticsLabel: "Analytics cookies",
-    analyticsDesc: "Google Analytics, helps us understand how you use the site.",
+    analyticsDesc: "Google Analytics: helps us understand how you use the site.",
     marketingLabel: "Marketing cookies",
     marketingDesc: "Facebook Pixel, personalized ads.",
     save: "Save my choices",
@@ -115,7 +115,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
     necessaryDesc: "Essentiels au fonctionnement du site.",
     alwaysOn: "Toujours actifs",
     analyticsLabel: "Cookies analytiques",
-    analyticsDesc: "Google Analytics, nous aide à comprendre comment vous utilisez le site.",
+    analyticsDesc: "Google Analytics : nous aide à comprendre comment vous utilisez le site.",
     marketingLabel: "Cookies marketing",
     marketingDesc: "Facebook Pixel, publicités personnalisées.",
     save: "Sauvegarder mes choix",
@@ -419,7 +419,7 @@ const CookieConsent = () => {
           </div>
         </div>
       )}
-      {/* Re-open cookie button — desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
+      {/* Re-open cookie button: desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
       {dismissed && !visible && !showPrefs && (
         <button
           onClick={handleReopen}

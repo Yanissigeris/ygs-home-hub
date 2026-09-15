@@ -50,13 +50,13 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(
       ? [
           { label: "Since 2017" },
           { label: "300+ transactions" },
-          { label: "5.0 on Google and Facebook", href: "/en/testimonials" },
+          { label: "5.0 on Google and Facebook", href: "/en/testimonials/" },
           { label: "RE/MAX, LLC Hall of Fame 2024" },
         ]
       : [
           { label: "Depuis 2017" },
           { label: "300+ transactions" },
-          { label: "5,0 sur Google et Facebook", href: "/temoignages" },
+          { label: "5,0 sur Google et Facebook", href: "/temoignages/" },
           { label: "Hall of Fame RE/MAX, LLC, 2024" },
         ];
 
