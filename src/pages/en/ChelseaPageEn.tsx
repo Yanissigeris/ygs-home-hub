@@ -106,7 +106,6 @@ const ChelseaPageEn = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">PORTRAIT</p>
       <h2 className="mt-3">Chelsea, verified facts about this unique municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -124,7 +123,6 @@ const ChelseaPageEn = () => (
     {/* ═══ SECTION 2 — Highlights ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">DISCOVER</p>
         <h2 className="mt-3">What you'll find in Chelsea</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {atouts.map((c) => (
@@ -140,7 +138,6 @@ const ChelseaPageEn = () => (
 
     {/* ═══ SECTION 3 — Buying in Chelsea ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">BEFORE YOU BUY</p>
       <h2 className="mt-3">What you need to know before buying in Chelsea</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -183,7 +180,6 @@ const ChelseaPageEn = () => (
 
     {/* ═══ MARKET DATA ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">MARKET DATA</p>
       <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

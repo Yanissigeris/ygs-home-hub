@@ -467,10 +467,6 @@
   .label-overline {
     font-size: .66rem;
   }
-
-  .label-overline::before {
-    width: 16px;
-  }
 }
 
 @media (max-width: 639px) {

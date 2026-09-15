@@ -90,7 +90,6 @@ const ChelseaPage = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">PORTRAIT</p>
       <h2 className="mt-3">Chelsea, des faits vérifiés sur cette municipalité unique</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -108,7 +107,6 @@ const ChelseaPage = () => (
     {/* ═══ SECTION 2 — Atouts ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">À DÉCOUVRIR</p>
         <h2 className="mt-3">Ce que l'on trouve à Chelsea</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {atouts.map((c) => (
@@ -124,7 +122,6 @@ const ChelseaPage = () => (
 
     {/* ═══ SECTION 3 — Acheter à Chelsea ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">AVANT D'ACHETER</p>
       <h2 className="mt-3">Ce qu'il faut savoir avant d'acheter à Chelsea</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

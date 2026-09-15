@@ -10,7 +10,7 @@ interface SectionHeadingProps {
 const SectionHeading = React.forwardRef<HTMLDivElement, SectionHeadingProps>(
   ({ overline, title, subtitle, centered }, ref) => (
     <div ref={ref} className={centered ? "text-center" : ""}>
-      {overline && <p className="label-overline mb-3">{overline}</p>}
+      {/* overline retiré (cohérence accueil) */}
       <h2>{title}</h2>
       {subtitle && (
         <p className={`prose-body mt-4 ${centered ? "mx-auto" : ""}`}>{subtitle}</p>

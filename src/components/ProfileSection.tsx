@@ -73,7 +73,7 @@ const ProfileSection = ({
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
-        <p className="label-overline mb-3">À propos</p>
+        {/* overline retiré (cohérence accueil) */}
         <h2>{name}</h2>
         <p className="mt-2 text-[1.0625rem] font-medium text-accent">{role}</p>
         {subtitle && <p className="mt-1.5 text-[0.875rem] text-muted-foreground/45">{subtitle}</p>}

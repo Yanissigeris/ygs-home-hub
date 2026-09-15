@@ -33,7 +33,6 @@ const CombienCouteCourtierPage = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Vendre au Québec</p>
           <h1 className="text-primary-foreground">Combien coûte un courtier immobilier au Québec?</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             La rémunération d'un courtier est l'une des premières questions que se posent les vendeurs. Voici comment ça fonctionne, simplement.

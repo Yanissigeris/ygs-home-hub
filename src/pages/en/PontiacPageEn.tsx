@@ -98,7 +98,6 @@ const PontiacPageEn = () => {
 
       {/* SECTION 2 — Portrait */}
       <ContentBlock>
-        <div className="label-overline mb-2">PONTIAC AT A GLANCE</div>
         <h2 className="mb-8">The Municipality of Pontiac, verified facts</h2>
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
           <div className="md:col-span-3 space-y-5 text-[0.9375rem] text-muted-foreground leading-relaxed">

@@ -107,7 +107,6 @@ const HullPageEn = () => (
 
     {/* ═══ SECTION 1 — Why Hull ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">WHY HULL</p>
       <h2 className="mt-3">Hull: the area reinventing itself</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -125,7 +124,6 @@ const HullPageEn = () => (
     {/* ═══ SECTION 2 — Sub-sectors ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">THE AREAS</p>
         <h2 className="mt-3">Hull's areas to know</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {subSectors.map((s) => (
@@ -140,7 +138,6 @@ const HullPageEn = () => (
 
     {/* ═══ SECTION 3 — Investing ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">INVESTMENT</p>
       <h2 className="mt-3">Investing in a plex in Hull, what you need to understand</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
@@ -185,7 +182,6 @@ const HullPageEn = () => (
 
     {/* ═══ MARKET DATA ═══ */}
     <ContentBlock background="alt">
-      <p className="label-overline">MARKET DATA</p>
       <h2 className="mt-3">Hull, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">

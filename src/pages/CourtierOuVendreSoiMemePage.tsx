@@ -33,7 +33,6 @@ const CourtierOuVendreSoiMemePage = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Vendre au Québec</p>
           <h1 className="text-primary-foreground">Courtier immobilier ou vendre seul?</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             Les deux options sont légitimes. Voici une comparaison honnête pour vous aider à faire le bon choix selon votre situation.

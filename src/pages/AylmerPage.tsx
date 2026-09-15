@@ -152,7 +152,6 @@ const AylmerPage = () => (
       <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
         {/* Left — text (3 cols) */}
         <div className="lg:col-span-3 space-y-4">
-          <p className="label-overline">POURQUOI AYLMER</p>
           <h2>Ce qui rend Aylmer unique en Outaouais</h2>
           <p className="prose-body mt-5">
             Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
@@ -186,7 +185,6 @@ const AylmerPage = () => (
     {/* ═══ SECTION 2 — SOUS-SECTEURS ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <p className="label-overline">LES SOUS-SECTEURS D'AYLMER</p>
         <h2 className="mt-3">Choisir le bon quartier à Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
           Aylmer n'est pas homogène. Chaque sous-secteur a sa personnalité, son profil d'acheteur et ses prix. Voici ce qu'il faut savoir avant de chercher.
@@ -206,7 +204,6 @@ const AylmerPage = () => (
     {/* ═══ SECTION 3 — ACHETER À AYLMER ═══ */}
     <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
-        <p className="label-overline">GUIDE ACHETEUR</p>
         <h2 className="mt-3">Ce que vous devez savoir avant d'acheter à Aylmer</h2>
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           {buyerCols.map((col) => (
@@ -237,7 +234,6 @@ const AylmerPage = () => (
       <div className="section-container grid gap-12 lg:grid-cols-2 lg:items-start">
         {/* Left — body */}
         <div className="space-y-4">
-          <p className="label-overline">GUIDE VENDEUR</p>
           <h2>Vendre votre propriété à Aylmer au meilleur prix</h2>
           <p className="prose-body mt-5">
             Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher », cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
@@ -274,7 +270,6 @@ const AylmerPage = () => (
     {/* ═══ SECTION 5 — VIE À AYLMER ═══ */}
     <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
-        <p className="label-overline">VIVRE À AYLMER</p>
         <h2 className="mt-3">La vie quotidienne à Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
           Ce que les chiffres ne disent pas sur Aylmer, la qualité de vie réelle au quotidien.

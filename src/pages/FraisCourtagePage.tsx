@@ -33,7 +33,6 @@ const FraisCourtagePage = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="label-overline mb-4 text-primary-foreground/25">Guide · Courtage au Québec</p>
           <h1 className="text-primary-foreground">Frais de courtage immobilier au Québec</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
             Combien coûte un courtier? Quels services sont inclus? Voici un guide clair pour comprendre les frais de courtage au Québec.
