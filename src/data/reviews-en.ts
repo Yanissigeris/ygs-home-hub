@@ -45,8 +45,8 @@ export const reviewsEn: Review[] = [
     name: "Isabelle",
     location: "Aylmer",
     category: "buyer",
-    short: "I highly recommend Yanis as an agent. We worked with him to buy our first home and wow — exceptional service and truly listening to our needs! Thank you for everything Yanis!",
-    full: "I highly recommend Yanis as an agent. We worked with him to buy our first home and wow — exceptional service and truly listening to our needs! Thank you for everything Yanis!",
+    short: "I highly recommend Yanis as an agent. We worked with him to buy our first home and wow, exceptional service and truly listening to our needs! Thank you for everything Yanis!",
+    full: "I highly recommend Yanis as an agent. We worked with him to buy our first home and wow, exceptional service and truly listening to our needs! Thank you for everything Yanis!",
     rating: 5,
   },
   {
@@ -85,7 +85,7 @@ export const reviewsEn: Review[] = [
     name: "Cpl. Patrick H.",
     location: "Petawawa → Gatineau",
     category: "military",
-    short: "Quick posting — Yanis handled everything remotely. We bought before even arriving.",
+    short: "Quick posting, Yanis handled everything remotely. We bought before even arriving.",
     full: "With a short-notice posting, we didn't have time to search in person. Yanis organized virtual tours, answered all our questions about neighborhoods near the base, and finalized the purchase before we arrived. Impressive.",
     rating: 5,
   },
@@ -95,7 +95,7 @@ export const reviewsEn: Review[] = [
     location: "Valcartier → Gatineau",
     category: "military",
     short: "Yanis understands military realities. Sale and purchase coordinated without stress.",
-    full: "Third posting in 6 years — we know the stress. Yanis was by far the best broker we've had. He understood our reality, coordinated the sale and purchase simultaneously, and everything was done on time. A true professional.",
+    full: "Third posting in 6 years, we know the stress. Yanis was by far the best broker we've had. He understood our reality, coordinated the sale and purchase simultaneously, and everything was done on time. A true professional.",
     rating: 5,
   },
 

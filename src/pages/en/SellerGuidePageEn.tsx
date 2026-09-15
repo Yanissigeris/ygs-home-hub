@@ -17,9 +17,9 @@ import heroImg from "@/assets/hero-seller-guide.webp";
 
 const sellerSteps = [
   { name: "Get a property valuation", text: "Have your property evaluated by a local broker to set a competitive price based on the Gatineau market." },
-  { name: "Prepare your property for sale", text: "Identify improvements that maximize your price without over-investing — cleaning, photos and staging." },
+  { name: "Prepare your property for sale", text: "Identify improvements that maximize your price without over-investing, cleaning, photos and staging." },
   { name: "Market with the right strategy", text: "Professional photos, optimized description and distribution on the right platforms to attract the right buyers." },
-  { name: "Manage showings and offers", text: "Organize showings strategically and evaluate each offer based on your goals — price, conditions and timelines." },
+  { name: "Manage showings and offers", text: "Organize showings strategically and evaluate each offer based on your goals, price, conditions and timelines." },
   { name: "Negotiate and accept an offer", text: "Protect your price with a solid negotiation strategy and accept the offer that matches your criteria." },
   { name: "Finalize the sale at the notary", text: "The notary prepares the deed of sale and manages the property transfer. The transaction is finalized." },
 ];
@@ -43,7 +43,7 @@ const faq = [
 const related = [
   { title: "Free Valuation", text: "How much is your property worth? Get an estimate within 24h.", href: "/en/home-valuation/" },
   { title: "Seller Plan", text: "Get a personalized plan: pricing, preparation and marketing.", href: "/en/seller-plan/" },
-  { title: "When to Sell", text: "The right timing depends on your situation — here's how to see clearly.", href: "/en/when-to-sell/" },
+  { title: "When to Sell", text: "The right timing depends on your situation, here's how to see clearly.", href: "/en/when-to-sell/" },
   { title: "Sell a Plex", text: "Selling an income property is different from selling a house.", href: "/en/sell-plex/" },
 ];
 
@@ -58,7 +58,7 @@ const SellerGuidePageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="Selling takes preparation" />
       <p className="prose-body mt-5">
-        The difference between a stressful sale and a successful one is preparation. This guide covers the essential steps to maximize your selling price in Gatineau — from price positioning to final negotiation.
+        The difference between a stressful sale and a successful one is preparation. This guide covers the essential steps to maximize your selling price in Gatineau, from price positioning to final negotiation.
       </p>
       <p className="prose-body mt-4">
         Since 2017 supporting sellers in Outaouais, I've seen what works and what costs money. This guide summarizes the most important lessons.
@@ -77,14 +77,14 @@ const SellerGuidePageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="Prepare without overspending" />
       <p className="prose-body mt-5">
-        Some investments pay off — neutral paint, decluttering, staging. Others are wasted money. I help you sort through them so you invest only where it counts.
+        Some investments pay off, neutral paint, decluttering, staging. Others are wasted money. I help you sort through them so you invest only where it counts.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow>
       <SectionHeading title="The selling process in Québec" />
       <p className="prose-body mt-5">
-        Valuation → pricing → preparation → marketing → showings → offers → negotiation → inspection → notary → keys. Each step has its pitfalls — and its opportunities. That's why good support makes all the difference.
+        Valuation → pricing → preparation → marketing → showings → offers → negotiation → inspection → notary → keys. Each step has its pitfalls, and its opportunities. That's why good support makes all the difference.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/seller-plan/">Get my personalized seller plan</Link>
@@ -99,18 +99,18 @@ const SellerGuidePageEn = () => (
       subtitle="Everything you need to know to sell at the best price in Gatineau — preparation, pricing, marketing and negotiation."
       submitLabel="Get the Seller Guide"
       successTitle="Thank you! Your guide is on its way."
-      successText="Check your inbox — you'll receive the seller guide within the next few minutes."
+      successText="Check your inbox, you'll receive the seller guide within the next few minutes."
     />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Also worth reading" title="Related pages for sellers" pages={related} background="alt" />
 
-    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 
-    <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options — you decide with full clarity." />
+    <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
 
-    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>
 );
 export default SellerGuidePageEn;

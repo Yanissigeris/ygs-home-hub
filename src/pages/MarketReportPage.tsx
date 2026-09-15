@@ -11,9 +11,9 @@ import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
-  { q: "Comment accéder au rapport du marché?", a: "Contactez-moi — je vous envoie l'analyse la plus récente pour votre secteur." },
+  { q: "Comment accéder au rapport du marché?", a: "Contactez-moi, je vous envoie l'analyse la plus récente pour votre secteur." },
   { q: "Les données couvrent quels secteurs?", a: "Tous les secteurs de Gatineau: Aylmer, Hull, Plateau, Buckingham, Gatineau centre et plus." },
-  { q: "Le rapport est-il gratuit?", a: "Oui — c'est un outil que j'offre à mes clients et à ceux qui s'intéressent au marché." },
+  { q: "Le rapport est-il gratuit?", a: "Oui, c'est un outil que j'offre à mes clients et à ceux qui s'intéressent au marché." },
 ];
 
 const related = [
@@ -43,7 +43,7 @@ const MarketReportPage = () => (
         subtitle="En attendant, contactez-moi pour recevoir une analyse personnalisée du marché dans votre secteur."
       />
       <p className="prose-body mt-5">
-        Chaque trimestre, je prépare une analyse du marché immobilier de Gatineau — prix médians, volume de ventes, tendances par secteur et prévisions. Contactez-moi pour recevoir la prochaine édition.
+        Chaque trimestre, je prépare une analyse du marché immobilier de Gatineau, prix médians, volume de ventes, tendances par secteur et prévisions. Contactez-moi pour recevoir la prochaine édition.
       </p>
     </ContentBlock>
 
@@ -64,14 +64,14 @@ const MarketReportPage = () => (
     <GuideInlineCTA
       guideType="seller_guide"
       headline="Guide vendeur gratuit — vendez au meilleur prix"
-      text="Prix, préparation et stratégie — tout dans un guide envoyé par courriel."
+      text="Prix, préparation et stratégie, tout dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide vendeur"
     />
 
     <CTASection
       dark
       title="Recevez le prochain rapport marché"
-      text="Contactez-moi pour être sur la liste — vous recevrez l'analyse dès sa publication."
+      text="Contactez-moi pour être sur la liste, vous recevrez l'analyse dès sa publication."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
@@ -79,7 +79,7 @@ const MarketReportPage = () => (
       trustLine="Données objectives et analyse locale claire."
     />
   
-    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit, recevez-le par courriel" />
   </>
 );
 

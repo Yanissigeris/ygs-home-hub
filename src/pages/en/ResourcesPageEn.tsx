@@ -32,8 +32,8 @@ const trustPages = [
   { icon: Scale, title: "Realtor vs Selling by Owner", text: "Honest comparison between selling with a broker or on your own.", cta: "Read the article", href: "/en/realtor-vs-selling-by-owner-quebec/" },
 ];
 const faq = [
-  { q: "Are these resources free?", a: "Yes — all guides and tools are free and no commitment required." },
-  { q: "How can I get personalized resources?", a: "Contact me directly — I'll send you information adapted to your situation." },
+  { q: "Are these resources free?", a: "Yes, all guides and tools are free and no commitment required." },
+  { q: "How can I get personalized resources?", a: "Contact me directly, I'll send you information adapted to your situation." },
   { q: "Can I get personalized advice?", a: "Absolutely. Guides are a great starting point, but every situation is unique. Book a call." },
 ];
 
@@ -47,7 +47,7 @@ const ResourcesPageEn = () => (
     <GuideOffersSection lang="en" />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact/">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
-    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis — choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/contact/", variant: "outline" }]} trustLine="I support you at your pace — you decide when you're ready." />
+    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis, choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/contact/", variant: "outline" }]} trustLine="I support you at your pace, you decide when you're ready." />
   </>
 );
 export default ResourcesPageEn;

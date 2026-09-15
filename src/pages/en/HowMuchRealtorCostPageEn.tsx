@@ -9,14 +9,14 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-combien-courtier.webp";
 
 const faq = [
-  { q: "How much does a realtor cost in Quebec?", a: "In Quebec, the broker's compensation is typically a percentage of the sale price, agreed upon before listing. There is no fixed rate — every arrangement is negotiated between the seller and their broker." },
+  { q: "How much does a realtor cost in Quebec?", a: "In Quebec, the broker's compensation is typically a percentage of the sale price, agreed upon before listing. There is no fixed rate, every arrangement is negotiated between the seller and their broker." },
   { q: "Who pays the realtor's commission?", a: "In practice, the seller pays the listing broker's compensation. Buyers generally do not pay a commission directly." },
-  { q: "Is the commission negotiable?", a: "Yes. The OACIQ does not regulate commission rates — the compensation is freely agreed between the parties in the brokerage contract." },
+  { q: "Is the commission negotiable?", a: "Yes. The OACIQ does not regulate commission rates, the compensation is freely agreed between the parties in the brokerage contract." },
   { q: "What services are included in the commission?", a: "Price evaluation, marketing strategy, professional photos, showings, negotiation, and coordination through to closing with the notary." },
   { q: "Is a realtor more expensive than selling privately?", a: "A broker involves a cost, but they can also maximize your sale price through better exposure, a data-driven pricing strategy and professional negotiation." },
-  { q: "Are there hidden fees with a realtor?", a: "No — everything must be clearly stated in the brokerage contract. A good broker explains all costs (commission, notary, location certificate) upfront." },
+  { q: "Are there hidden fees with a realtor?", a: "No, everything must be clearly stated in the brokerage contract. A good broker explains all costs (commission, notary, location certificate) upfront." },
   { q: "How much does it cost to buy with a realtor?", a: "Buyers generally do not pay a commission directly. The collaborating broker's compensation is covered through the seller's listing agreement." },
-  { q: "How do I know if the commission is fair?", a: "Compare services offered, local experience, and proposed strategy. The lowest price isn't always the best choice — what matters is your net result." },
+  { q: "How do I know if the commission is fair?", a: "Compare services offered, local experience, and proposed strategy. The lowest price isn't always the best choice, what matters is your net result." },
 ];
 
 const HowMuchRealtorCostPageEn = () => (
@@ -45,7 +45,7 @@ const HowMuchRealtorCostPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Understanding" title="How does the commission work?" />
       <p className="prose-body mt-5">
-        In Quebec, the real estate broker's compensation is agreed upon <strong>before listing</strong> in the brokerage contract. It typically takes the form of a percentage of the final sale price. There is no fixed rate set by the OACIQ — every agreement is personalized.
+        In Quebec, the real estate broker's compensation is agreed upon <strong>before listing</strong> in the brokerage contract. It typically takes the form of a percentage of the final sale price. There is no fixed rate set by the OACIQ, every agreement is personalized.
       </p>
       <p className="prose-body mt-4">
         This compensation covers the full range of professional services: market value analysis, pricing strategy, professional photography, marketing, showings, negotiation, and coordination through to the notary.
@@ -63,7 +63,7 @@ const HowMuchRealtorCostPageEn = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="First step: find out your property's value — it's free and no commitment required."
+      text="First step: find out your property's value, it's free and no commitment required."
       buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
@@ -72,9 +72,9 @@ const HowMuchRealtorCostPageEn = () => (
       <SectionHeading overline="Factors" title="What influences the cost?" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Property type", text: "Single-family home, condo, plex — the complexity of the transaction can vary." },
+          { title: "Property type", text: "Single-family home, condo, plex, the complexity of the transaction can vary." },
           { title: "Local market", text: "Market conditions in Outaouais influence strategy and time to sell." },
-          { title: "Services offered", text: "Professional photos, virtual tours, targeted marketing — the level of service varies." },
+          { title: "Services offered", text: "Professional photos, virtual tours, targeted marketing, the level of service varies." },
           { title: "Broker's experience", text: "A locally experienced broker can make a significant difference in the final price." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
@@ -100,7 +100,7 @@ const HowMuchRealtorCostPageEn = () => (
     <CTASection
       dark
       title="Want to understand your options?"
-      text="I'll explain everything clearly — commission, services, strategy — before we even begin."
+      text="I'll explain everything clearly, commission, services, strategy, before we even begin."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },

@@ -48,8 +48,8 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
       ],
     },
     source: {
-      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ — T2 2026",
-      en: "Source: Outaouais Real Estate Board / QPAREB — Q2 2026",
+      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T2 2026",
+      en: "Source: Outaouais Real Estate Board / QPAREB, Q2 2026",
     },
   },
 };

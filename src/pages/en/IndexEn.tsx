@@ -105,12 +105,12 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       dark
       overline="First step"
       title="Take the right first step"
-      text="Valuation, buyer consultation or plex analysis — we start where you are."
+      text="Valuation, buyer consultation or plex analysis, we start where you are."
       buttons={[
         { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
     <StickyMobileCTA />

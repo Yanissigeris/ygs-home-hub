@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 
 const faq = [
-  { q: "Est-ce mieux de vendre avec un courtier ou seul?", a: "Ça dépend de votre expérience, de votre temps disponible et de votre tolérance au risque. Un courtier offre visibilité, négociation et gestion complète — vendre seul peut réduire les frais mais demande beaucoup plus de travail et comporte des risques." },
+  { q: "Est-ce mieux de vendre avec un courtier ou seul?", a: "Ça dépend de votre expérience, de votre temps disponible et de votre tolérance au risque. Un courtier offre visibilité, négociation et gestion complète, vendre seul peut réduire les frais mais demande beaucoup plus de travail et comporte des risques." },
   { q: "Combien peut-on économiser en vendant sans courtier?", a: "En théorie, on économise la commission. En pratique, les ventes sans courtier se concluent souvent à un prix inférieur, ce qui peut annuler l'économie. L'accès au marché MLS et la portée marketing sont aussi réduits." },
   { q: "Est-ce légal de vendre seul au Québec?", a: "Oui, la vente privée est tout à fait légale au Québec. Cependant, vous devez respecter les mêmes obligations légales (déclaration du vendeur, inspections, etc.)." },
   { q: "Quels risques y a-t-il à vendre sans courtier?", a: "Sous-évaluer le prix, mauvaise négociation, erreurs dans les documents, exposition limitée, litiges potentiels et stress important. Un courtier professionnel réduit significativement ces risques." },
-  { q: "Un courtier peut-il vraiment vendre plus cher?", a: "Oui — grâce à une stratégie de prix basée sur des comparables, une exposition MLS maximale, des photos professionnelles, une mise en valeur et une négociation experte." },
+  { q: "Un courtier peut-il vraiment vendre plus cher?", a: "Oui, grâce à une stratégie de prix basée sur des comparables, une exposition MLS maximale, des photos professionnelles, une mise en valeur et une négociation experte." },
   { q: "Quels services un courtier offre-t-il vs vendre seul?", a: "Évaluation professionnelle, accès MLS, photos, marketing, gestion des visites, négociation, rédaction des offres et coordination notariale. Seul, vous gérez tout vous-même." },
   { q: "Comment décider si j'ai besoin d'un courtier?", a: "Si vous avez le temps, les connaissances juridiques et la capacité de négocier fermement, la vente privée est une option. Sinon, un courtier peut vous faire gagner en prix et en tranquillité d'esprit." },
   { q: "Est-ce que les acheteurs préfèrent un vendeur avec courtier?", a: "Beaucoup d'acheteurs (et leurs courtiers) préfèrent traiter avec un courtier inscripteur, car ça simplifie les négociations et réduit les risques de malentendus." },
@@ -71,7 +71,7 @@ const CourtierOuVendreSoiMemePage = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Réalité" title="Ce qu'il faut vraiment considérer" />
       <p className="prose-body mt-5">
-        La question n'est pas seulement « combien je peux économiser? » mais plutôt « quel sera mon résultat net? ». Un courtier compétent peut souvent obtenir un prix de vente supérieur qui compense largement sa commission — surtout dans un marché comme celui de Gatineau.
+        La question n'est pas seulement « combien je peux économiser? » mais plutôt « quel sera mon résultat net? ». Un courtier compétent peut souvent obtenir un prix de vente supérieur qui compense largement sa commission, surtout dans un marché comme celui de Gatineau.
       </p>
       <p className="prose-body mt-4">
         La vente privée peut fonctionner si vous avez le temps, les connaissances et la capacité de négocier. Mais pour la plupart des vendeurs, l'accompagnement d'un professionnel local réduit le stress, les risques et le temps sur le marché.
@@ -91,7 +91,7 @@ const CourtierOuVendreSoiMemePage = () => (
           { title: "Prix trop bas", text: "Sans accès aux comparables et à l'analyse de marché, vous risquez de sous-évaluer votre propriété." },
           { title: "Exposition limitée", text: "Sans MLS, votre propriété atteint beaucoup moins d'acheteurs potentiels." },
           { title: "Négociation directe", text: "Négocier seul face à un acheteur (ou son courtier) peut être désavantageux sans expérience." },
-          { title: "Erreurs administratives", text: "La documentation immobilière est complexe — une erreur peut entraîner des litiges coûteux." },
+          { title: "Erreurs administratives", text: "La documentation immobilière est complexe, une erreur peut entraîner des litiges coûteux." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -116,7 +116,7 @@ const CourtierOuVendreSoiMemePage = () => (
     <CTASection
       dark
       title="Vous hésitez encore?"
-      text="Discutons de votre situation — sans engagement. Je vous aide à comprendre vos options et à prendre la meilleure décision."
+      text="Discutons de votre situation, sans engagement. Je vous aide à comprendre vos options et à prendre la meilleure décision."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },

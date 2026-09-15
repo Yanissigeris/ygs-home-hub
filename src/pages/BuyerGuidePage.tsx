@@ -19,7 +19,7 @@ const buyerSteps = [
   { name: "Définir son budget et sa capacité d'achat", text: "Analysez votre mise de fonds (minimum 5%), votre capacité d'emprunt et les programmes d'aide disponibles au Québec." },
   { name: "Choisir le bon secteur à Gatineau", text: "Comparez Aylmer, Hull, le Plateau, Buckingham et d'autres quartiers selon votre budget, trajet et style de vie." },
   { name: "Rechercher et visiter des propriétés", text: "Identifiez les propriétés qui correspondent à vos critères et visitez-les avec un courtier qui connaît le marché local." },
-  { name: "Formuler une offre solide", text: "Rédigez une promesse d'achat compétitive avec les bonnes conditions — inspection, financement et délais." },
+  { name: "Formuler une offre solide", text: "Rédigez une promesse d'achat compétitive avec les bonnes conditions, inspection, financement et délais." },
   { name: "Faire l'inspection pré-achat", text: "Faites inspecter la propriété par un professionnel pour identifier les problèmes potentiels avant de finaliser." },
   { name: "Finaliser chez le notaire", text: "Le notaire vérifie les titres, prépare les documents et officialise la transaction. Prévoyez environ 1 500$ en frais." },
 ];
@@ -27,7 +27,7 @@ const buyerSteps = [
 const topics = [
   "Comprendre le processus d'achat au Québec",
   "Choisir le bon secteur à Gatineau ou en Outaouais pour votre profil",
-  "Premier achat vs acheteur expérimenté — ce qui change",
+  "Premier achat vs acheteur expérimenté, ce qui change",
   "Comment formuler une offre solide",
   "L'inspection: ce qu'il faut vraiment vérifier",
   "Le rôle du notaire et les frais à prévoir",
@@ -43,7 +43,7 @@ const faq = [
 const related = [
   { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
   { title: "Premier achat", text: "Budget, mise de fonds et processus pour premiers acheteurs.", href: "/premier-achat-gatineau/" },
-  { title: "Acheter depuis Ottawa", text: "Plus d'espace, prix accessibles — traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+  { title: "Acheter depuis Ottawa", text: "Plus d'espace, prix accessibles, traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
   { title: "Explorer les quartiers", text: "Trouvez le secteur qui vous correspond.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
@@ -70,7 +70,7 @@ const BuyerGuidePage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Acheter à Gatineau, c'est différent" />
       <p className="prose-body mt-5">
-        Le processus d'achat au Québec a ses particularités — promesse d'achat, inspection, conditions, notaire. Que vous veniez d'Ottawa, de Montréal ou d'ailleurs, ce guide vous prépare à chaque étape.
+        Le processus d'achat au Québec a ses particularités, promesse d'achat, inspection, conditions, notaire. Que vous veniez d'Ottawa, de Montréal ou d'ailleurs, ce guide vous prépare à chaque étape.
       </p>
     </ContentBlock>
 
@@ -83,7 +83,7 @@ const BuyerGuidePage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Trouver le bon secteur" />
       <p className="prose-body mt-5">
-        Aylmer, le Plateau, Hull, Buckingham — chaque secteur a sa personnalité, ses avantages et ses compromis. Le bon choix dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales.
+        Aylmer, le Plateau, Hull, Buckingham, chaque secteur a sa personnalité, ses avantages et ses compromis. Le bon choix dépend de votre budget, votre trajet, votre style de vie et vos priorités familiales.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/quartiers-a-considerer-a-gatineau/">Explorer les secteurs</Link>
@@ -98,7 +98,7 @@ const BuyerGuidePage = () => (
       subtitle="Tout ce que vous devez savoir pour acheter à Gatineau — dans un guide clair, étape par étape, envoyé directement dans votre boîte courriel."
       submitLabel="Recevoir le guide acheteur"
       successTitle="Merci! Votre guide est en route."
-      successText="Vérifiez votre boîte courriel — vous recevrez le guide acheteur dans les prochaines minutes."
+      successText="Vérifiez votre boîte courriel, vous recevrez le guide acheteur dans les prochaines minutes."
     />
 
     <FAQSection items={faq} />
@@ -112,14 +112,14 @@ const BuyerGuidePage = () => (
         <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit"
-      text="Tout pour acheter à Gatineau — processus, budget et conseils dans un guide envoyé par courriel."
+      text="Tout pour acheter à Gatineau, processus, budget et conseils dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
 <CTASection
       dark
       title="Prêt à commencer votre recherche?"
-      text="Réservez une consultation gratuite — on clarifie vos critères et vos options."
+      text="Réservez une consultation gratuite, on clarifie vos critères et vos options."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Voir les quartiers", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
@@ -127,7 +127,7 @@ const BuyerGuidePage = () => (
       trustLine="Je vous donne les options, vous décidez."
     />
   
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

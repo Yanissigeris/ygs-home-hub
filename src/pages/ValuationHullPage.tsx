@@ -12,7 +12,7 @@ import heroImg from "@/assets/hero-valuation-hull.webp";
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes à Hull",
   "Avis sur le positionnement prix adapté à votre secteur de Hull",
-  "Forces de votre propriété à mettre de l'avant — condo, plex ou maison",
+  "Forces de votre propriété à mettre de l'avant, condo, plex ou maison",
   "Points à corriger et lesquels valent la peine dans le marché de Hull",
   "Prochaines étapes possibles, sans engagement",
 ];
@@ -25,20 +25,20 @@ const trustBullets = [
 
 const faq = [
   { q: "Comment obtenir une évaluation de maison à Hull?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Hull. Je vous reviens en 24h avec une analyse basée sur les ventes comparables récentes dans votre secteur." },
-  { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair — aucune obligation de vendre." },
+  { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
   { q: "Combien vaut ma maison à Hull?", a: "La valeur dépend de votre rue, du type de propriété (condo, plex, unifamiliale) et des ventes récentes dans votre secteur de Hull." },
   { q: "Sur quoi se base l'évaluation à Hull?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur de Hull, l'état de votre propriété, la taille du terrain et les conditions du marché local." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales de Hull et de l'état réel de votre propriété." },
   { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures. Pour une analyse approfondie avec visite à Hull, on planifie un rendez-vous." },
-  { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée — sans engagement." },
+  { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée, sans engagement." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non, absolument pas. Beaucoup de propriétaires à Hull demandent une évaluation simplement pour connaître leur valeur." },
-  { q: "Les condos de Hull sont-ils couverts?", a: "Oui — je couvre tous les types de propriétés à Hull : condos, plex, unifamiliales, peu importe le quartier." },
+  { q: "Les condos de Hull sont-ils couverts?", a: "Oui, je couvre tous les types de propriétés à Hull : condos, plex, unifamiliales, peu importe le quartier." },
   { q: "Que faire après avoir reçu mon évaluation?", a: "Vous aurez les chiffres et les options. Si vous voulez aller plus loin, je peux préparer un plan vendeur complet pour Hull." },
 ];
 
 const afterSteps = [
-  { title: "Vendre à Hull", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Hull.", href: "/vendre-maison-hull/", cta: "Voir le processus", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
+  { title: "Vendre à Hull", text: "Allez plus loin, recevez un plan complet pour vendre votre propriété à Hull.", href: "/vendre-maison-hull/", cta: "Voir le processus", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -77,7 +77,7 @@ const ValuationHullPage = () => {
             <p className="label-overline mb-4 text-primary-foreground/65">Évaluation gratuite · Hull</p>
             <h1 className="text-primary-foreground">Combien vaut votre propriété à Hull?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
-              Recevez une évaluation personnalisée basée sur les ventes récentes dans votre secteur de Hull — gratuit, confidentiel et sans engagement.
+              Recevez une évaluation personnalisée basée sur les ventes récentes dans votre secteur de Hull, gratuit, confidentiel et sans engagement.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (

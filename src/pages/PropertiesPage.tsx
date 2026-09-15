@@ -15,9 +15,9 @@ import { useLocation } from "react-router-dom";
 import heroImg from "@/assets/hero-properties.webp";
 
 const profileCards = [
-  { icon: Search, title: "Vous cherchez une maison", text: "Unifamiliale, jumelé, maison en rangée — trouvez la propriété qui correspond à votre profil." },
-  { icon: Building2, title: "Vous cherchez un plex", text: "Duplex, triplex ou plus — analysez le rendement avant d'acheter." },
-  { icon: Home, title: "Vous cherchez un condo", text: "Centre-ville, banlieue ou développement récent — les options ne manquent pas." },
+  { icon: Search, title: "Vous cherchez une maison", text: "Unifamiliale, jumelé, maison en rangée, trouvez la propriété qui correspond à votre profil." },
+  { icon: Building2, title: "Vous cherchez un plex", text: "Duplex, triplex ou plus, analysez le rendement avant d'acheter." },
+  { icon: Home, title: "Vous cherchez un condo", text: "Centre-ville, banlieue ou développement récent, les options ne manquent pas." },
 ];
 
 const sectors = [
@@ -31,8 +31,8 @@ const sectors = [
 
 const faq = [
   { q: "Comment sont sélectionnées les propriétés vedettes?", a: "Je sélectionne les propriétés selon leur emplacement, leur potentiel, leur rapport qualité-prix et leur pertinence pour les acheteurs actifs à Gatineau." },
-  { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères — je vous avise dès qu'une propriété correspondante arrive sur le marché." },
-  { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui — les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
+  { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères, je vous avise dès qu'une propriété correspondante arrive sur le marché." },
+  { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui, les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
   { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données" },
   { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis 2017, j'ai accès à des propriétés avant leur mise en marché officielle." },
 ];
@@ -121,10 +121,10 @@ const PropertiesPage = () => {
         title="Recevez les meilleures propriétés en premier"
       />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Actif en immobilier en Outaouais depuis 2017, j'ai accès à toutes les inscriptions Centris dans Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac — y compris les opportunités pré-MLS et les inscriptions pas encore syndiquées sur les portails publics. Bien briefé sur vos critères, je peux vous signaler une propriété pertinente en quelques heures plutôt qu'en quelques jours.
+        Actif en immobilier en Outaouais depuis 2017, j'ai accès à toutes les inscriptions Centris dans Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac, y compris les opportunités pré-MLS et les inscriptions pas encore syndiquées sur les portails publics. Bien briefé sur vos critères, je peux vous signaler une propriété pertinente en quelques heures plutôt qu'en quelques jours.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Pour la plupart des acheteurs actifs, cette longueur d'avance fait la différence entre visiter une propriété sans pression et arriver dans une situation à offres multiples. Dites-moi ce que vous cherchez — secteur, plafond de prix, incontournables, dealbreakers — et je fais le travail de filtrage pour vous.
+        Pour la plupart des acheteurs actifs, cette longueur d'avance fait la différence entre visiter une propriété sans pression et arriver dans une situation à offres multiples. Dites-moi ce que vous cherchez, secteur, plafond de prix, incontournables, dealbreakers, et je fais le travail de filtrage pour vous.
       </p>
     </ContentBlock>
 
@@ -142,10 +142,10 @@ const PropertiesPage = () => {
         title="Acheter avec un courtier qui vous représente"
       />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Au Québec, un acheteur qui traite directement avec le courtier inscripteur n'est pas représenté indépendamment. Quand vous signez un contrat de courtage acheteur avec moi, mon devoir légal est envers vous — votre budget, vos intérêts, votre protection à la baisse. Je sors les comparables, je structure les conditions (financement, inspection, vente de la propriété actuelle), je négocie l'offre et je reste sur le dossier jusqu'à la signature notariale.
+        Au Québec, un acheteur qui traite directement avec le courtier inscripteur n'est pas représenté indépendamment. Quand vous signez un contrat de courtage acheteur avec moi, mon devoir légal est envers vous, votre budget, vos intérêts, votre protection à la baisse. Je sors les comparables, je structure les conditions (financement, inspection, vente de la propriété actuelle), je négocie l'offre et je reste sur le dossier jusqu'à la signature notariale.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Cette représentation ne vous coûte généralement rien dans la majorité des transactions de revente : la rémunération du courtier inscripteur couvre habituellement le courtier acheteur via le contrat de courtage du vendeur. C'est un gain net — conseil indépendant, accès complet au marché, et un dossier bilingue qui circule sans friction entre Ottawa et Gatineau.
+        Cette représentation ne vous coûte généralement rien dans la majorité des transactions de revente : la rémunération du courtier inscripteur couvre habituellement le courtier acheteur via le contrat de courtage du vendeur. C'est un gain net, conseil indépendant, accès complet au marché, et un dossier bilingue qui circule sans friction entre Ottawa et Gatineau.
       </p>
     </ContentBlock>
 
@@ -157,7 +157,7 @@ const PropertiesPage = () => {
     />
 
     <InlineCTA
-      text="Vous vendez? Découvrez combien vaut votre propriété — c'est gratuit."
+      text="Vous vendez? Découvrez combien vaut votre propriété, c'est gratuit."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -173,7 +173,7 @@ const PropertiesPage = () => {
     <CTASection
       dark
       title="Vous cherchez une propriété à Gatineau?"
-      text="Dites-moi vos critères — je vous envoie les meilleures options avant tout le monde."
+      text="Dites-moi vos critères, je vous envoie les meilleures options avant tout le monde."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },

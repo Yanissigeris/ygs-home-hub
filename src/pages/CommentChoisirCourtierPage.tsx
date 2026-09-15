@@ -13,7 +13,7 @@ const checklist = [
   { title: "Connaissance locale", text: "Le courtier connaît-il votre quartier, les ventes récentes dans votre rue et les particularités du marché local?" },
   { title: "Communication claire", text: "Est-il facile à joindre? Vous répond-il rapidement et clairement? Vous sentez-vous écouté?" },
   { title: "Stratégie de prix", text: "Propose-t-il un prix basé sur des comparables réels ou un chiffre gonflé juste pour obtenir votre contrat?" },
-  { title: "Plan de mise en marché", text: "Photos professionnelles, visibilité en ligne, ciblage des bons acheteurs — a-t-il un plan concret?" },
+  { title: "Plan de mise en marché", text: "Photos professionnelles, visibilité en ligne, ciblage des bons acheteurs, a-t-il un plan concret?" },
   { title: "Négociation", text: "A-t-il l'expérience pour défendre vos intérêts face aux acheteurs et à leurs courtiers?" },
   { title: "Transparence", text: "Vous explique-t-il clairement sa commission, les frais, le processus et ce à quoi vous attendre?" },
   { title: "Résultats vérifiables", text: "Peut-il montrer des témoignages, des ventes récentes et un historique de résultats concrets?" },
@@ -22,10 +22,10 @@ const checklist = [
 
 const faq = [
   { q: "Comment choisir un bon courtier immobilier?", a: "Évaluez sa connaissance locale, sa stratégie de prix, sa communication, son plan de mise en marché et sa transparence. Le bon courtier est celui qui vous donne un plan clair, pas celui qui promet le prix le plus élevé." },
-  { q: "Faut-il toujours choisir le courtier qui propose le prix le plus haut?", a: "Non — un prix gonflé pour obtenir votre contrat peut vous coûter cher. Un bon courtier vous donne un prix réaliste basé sur les ventes comparables récentes dans votre secteur." },
-  { q: "Combien de courtiers devrais-je rencontrer?", a: "Rencontrer 2-3 courtiers est une bonne pratique. Comparez leurs stratégies, leur connaissance locale et leur transparence — pas seulement le prix proposé." },
+  { q: "Faut-il toujours choisir le courtier qui propose le prix le plus haut?", a: "Non, un prix gonflé pour obtenir votre contrat peut vous coûter cher. Un bon courtier vous donne un prix réaliste basé sur les ventes comparables récentes dans votre secteur." },
+  { q: "Combien de courtiers devrais-je rencontrer?", a: "Rencontrer 2-3 courtiers est une bonne pratique. Comparez leurs stratégies, leur connaissance locale et leur transparence, pas seulement le prix proposé." },
   { q: "Comment vérifier qu'un courtier est en règle?", a: "Consultez le registre de l'OACIQ (Organisme d'autoréglementation du courtage immobilier du Québec) pour confirmer que son permis est valide et qu'il n'a pas de mesures disciplinaires." },
-  { q: "Un courtier local est-il vraiment mieux?", a: "Oui — un courtier qui connaît votre quartier comprend les comparables, les tendances du marché local et les attentes des acheteurs. C'est un avantage concret pour le résultat." },
+  { q: "Un courtier local est-il vraiment mieux?", a: "Oui, un courtier qui connaît votre quartier comprend les comparables, les tendances du marché local et les attentes des acheteurs. C'est un avantage concret pour le résultat." },
   { q: "Quelles questions poser à un courtier avant de signer?", a: "Demandez : quelle est votre stratégie de prix? Comment allez-vous mettre ma propriété en marché? Quelle est votre commission? Comment communiquez-vous avec vos clients? Montrez-moi des résultats récents." },
   { q: "Est-ce que le courtier le moins cher est le meilleur choix?", a: "Pas nécessairement. L'important est le résultat net : un courtier qui obtient un meilleur prix de vente grâce à une bonne stratégie peut vous rapporter plus, même avec une commission standard." },
   { q: "Puis-je changer de courtier si ça ne fonctionne pas?", a: "Le contrat de courtage a une durée définie. Discutez des conditions de résiliation dès le départ pour être clair sur vos options." },
@@ -57,7 +57,7 @@ const CommentChoisirCourtierPage = () => (
     <ContentBlock narrow>
       <SectionHeading overline="L'essentiel" title="Ce qui compte vraiment" />
       <p className="prose-body mt-5">
-        Choisir un courtier immobilier est une décision importante — vous lui confiez la vente ou l'achat de l'un de vos actifs les plus précieux. Au Québec, tous les courtiers sont encadrés par l'OACIQ, mais l'expérience, la stratégie et la communication varient énormément d'un courtier à l'autre.
+        Choisir un courtier immobilier est une décision importante, vous lui confiez la vente ou l'achat de l'un de vos actifs les plus précieux. Au Québec, tous les courtiers sont encadrés par l'OACIQ, mais l'expérience, la stratégie et la communication varient énormément d'un courtier à l'autre.
       </p>
       <p className="prose-body mt-4">
         Voici les critères concrets à évaluer avant de faire votre choix.
@@ -116,7 +116,7 @@ const CommentChoisirCourtierPage = () => (
     <CTASection
       dark
       title="Vous voulez rencontrer un courtier local?"
-      text="On discute de votre projet, de vos questions et de vos options — sans engagement."
+      text="On discute de votre projet, de vos questions et de vos options, sans engagement."
       buttons={[
         { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },

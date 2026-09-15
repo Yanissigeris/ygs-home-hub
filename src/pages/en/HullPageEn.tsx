@@ -18,15 +18,15 @@ import heroImg from "@/assets/hero-hull-gen.webp";
 const faq = [
   {
     q: "What types of properties can you buy in Hull?",
-    a: "Hull offers the widest variety in Gatineau: older and new condos, duplexes, triplexes, single-family homes, and townhouses. It's also the area with the most income properties. Depending on your goal — living, renting, or investing — the options differ. I can guide you based on your profile during a free consultation.",
+    a: "Hull offers the widest variety in Gatineau: older and new condos, duplexes, triplexes, single-family homes, and townhouses. It's also the area with the most income properties. Depending on your goal, living, renting, or investing, the options differ. I can guide you based on your profile during a free consultation.",
   },
   {
     q: "Is the Zibi project a good opportunity?",
-    a: "Zibi is an ongoing development on Île de Hull. The first residential phases are occupied. It's a modern, carbon-neutral area with beautiful river views — but new condos are generally more expensive than resale in the adjacent area. Properties in neighbourhoods around Zibi (Vieux-Hull, Wrightville) have benefited from the appreciation effect at more accessible prices. I can help you compare options.",
+    a: "Zibi is an ongoing development on Île de Hull. The first residential phases are occupied. It's a modern, carbon-neutral area with beautiful river views, but new condos are generally more expensive than resale in the adjacent area. Properties in neighbourhoods around Zibi (Vieux-Hull, Wrightville) have benefited from the appreciation effect at more accessible prices. I can help you compare options.",
   },
   {
     q: "Is Hull a good choice for federal public servants?",
-    a: "Yes — many federal departments and agencies have offices on the Québec side in Gatineau (Portage Complex, Tour de la Paix, etc.). And even for those working in Ottawa, bridges are accessible by bike or on foot from several Hull areas. That's one of the reasons Hull remains in high demand among public servants on both sides of the river.",
+    a: "Yes, many federal departments and agencies have offices on the Québec side in Gatineau (Portage Complex, Tour de la Paix, etc.). And even for those working in Ottawa, bridges are accessible by bike or on foot from several Hull areas. That's one of the reasons Hull remains in high demand among public servants on both sides of the river.",
   },
   {
     q: "What does a Hull condo or single-family home cost in 2026?",
@@ -34,15 +34,15 @@ const faq = [
   },
   {
     q: "What is the rental yield on a Hull plex right now?",
-    a: "Gross yields on older Hull plexes typically run 5–7% before financing and reno reserves, depending on whether rents are at market or below market (a common situation in this sector). Net cash-on-cash returns after a conventional 25% down-payment, financing at current rates, and a 10% maintenance/vacancy reserve are usually in the 3–5% range — sometimes negative on the most overpriced listings. The 2025–2026 rebalancing of Gatineau's rental market makes return analysis more critical than ever; I run the actual numbers on every property before recommending an offer.",
+    a: "Gross yields on older Hull plexes typically run 5-7% before financing and reno reserves, depending on whether rents are at market or below market (a common situation in this sector). Net cash-on-cash returns after a conventional 25% down-payment, financing at current rates, and a 10% maintenance/vacancy reserve are usually in the 3-5% range, sometimes negative on the most overpriced listings. The 2025-2026 rebalancing of Gatineau's rental market makes return analysis more critical than ever; I run the actual numbers on every property before recommending an offer.",
   },
   {
     q: "Will the Gatineau-Ottawa tramway change Hull property values?",
-    a: "The proposed Gatineau-Ottawa tramway would run a corridor through Wrightville and Val-Tétreau toward downtown Ottawa. The project is still in the planning and consultation phase — no service date is confirmed. Historically, confirmed light-rail corridors lift property values within walking distance by 5–15% over a 5–10 year horizon, but that effect is contingent on the project actually being built. I track the project monthly and factor it transparently into valuations rather than treating it as a guaranteed upside.",
+    a: "The proposed Gatineau-Ottawa tramway would run a corridor through Wrightville and Val-Tétreau toward downtown Ottawa. The project is still in the planning and consultation phase, no service date is confirmed. Historically, confirmed light-rail corridors lift property values within walking distance by 5-15% over a 5-10 year horizon, but that effect is contingent on the project actually being built. I track the project monthly and factor it transparently into valuations rather than treating it as a guaranteed upside.",
   },
   {
     q: "Are Hull's older buildings safe to buy as a first home?",
-    a: "Many of Hull's most attractive properties are 80–120 years old, which means knob-and-tube wiring, cast-iron plumbing, asbestos in older insulation, and occasional foundation movement are real possibilities. None of these are deal-breakers — they're well-understood by Quebec inspectors and tradespeople — but they require an experienced building inspector and a realistic renovation budget. I work with two inspectors who specialize in Hull's pre-1960 stock and I never recommend a first-time buyer go in without one.",
+    a: "Many of Hull's most attractive properties are 80-120 years old, which means knob-and-tube wiring, cast-iron plumbing, asbestos in older insulation, and occasional foundation movement are real possibilities. None of these are deal-breakers, they're well-understood by Quebec inspectors and tradespeople, but they require an experienced building inspector and a realistic renovation budget. I work with two inspectors who specialize in Hull's pre-1960 stock and I never recommend a first-time buyer go in without one.",
   },
 ];
 
@@ -58,7 +58,7 @@ const subSectors = [
   },
   {
     title: "Wrightville / Val-Tétreau",
-    text: "Central area, 1960s–80s bungalows, larger lots, still-accessible prices. Located on the corridor of the future Gatineau-Ottawa tramway — an active infrastructure project that could transform mobility in this area.",
+    text: "Central area, 1960s, 80s bungalows, larger lots, still-accessible prices. Located on the corridor of the future Gatineau-Ottawa tramway, an active infrastructure project that could transform mobility in this area.",
   },
   {
     title: "Lac Leamy",
@@ -111,13 +111,13 @@ const HullPageEn = () => (
       <h2 className="mt-3">Hull: the area reinventing itself</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's densest area — condos, plexes, character homes, restaurants, museums. For federal workers who want to cross the bridge on foot or by bike, it's often the first choice.
+          Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's densest area, condos, plexes, character homes, restaurants, museums. For federal workers who want to cross the bridge on foot or by bike, it's often the first choice.
         </p>
         <p className="prose-body">
-          The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River — in both Gatineau and Ottawa — includes residential condos, office space, retail and public spaces. It's the National Capital Region's first carbon-neutral neighbourhood, using an energy system unique in North America. The first phases are occupied. (Source: zibi.ca, Radio-Canada)
+          The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River, in both Gatineau and Ottawa, includes residential condos, office space, retail and public spaces. It's the National Capital Region's first carbon-neutral neighbourhood, using an energy system unique in North America. The first phases are occupied. (Source: zibi.ca, Radio-Canada)
         </p>
         <p className="prose-body">
-          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand comes from federal public servants, Université du Québec en Outaouais (UQO) students — whose campus is located in Hull — and young professionals. A rental market anchored in a stable employment base.
+          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand comes from federal public servants, Université du Québec en Outaouais (UQO) students, whose campus is located in Hull, and young professionals. A rental market anchored in a stable employment base.
         </p>
       </div>
     </ContentBlock>
@@ -141,16 +141,16 @@ const HullPageEn = () => (
     {/* ═══ SECTION 3 — Investing ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">INVESTMENT</p>
-      <h2 className="mt-3">Investing in a plex in Hull — what you need to understand</h2>
+      <h2 className="mt-3">Investing in a plex in Hull, what you need to understand</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull is historically Gatineau's most active area for multiplex investment. Residential density, proximity to Ottawa, the presence of UQO and federal public servants create sustained rental demand — particularly for affordable housing.
+          Hull is historically Gatineau's most active area for multiplex investment. Residential density, proximity to Ottawa, the presence of UQO and federal public servants create sustained rental demand, particularly for affordable housing.
         </p>
         <p className="prose-body">
-          Gatineau's rental market underwent a rebalancing in 2025–2026 with the arrival of a large number of new builds. This shift makes return analysis even more critical. Older plexes with moderate rents remain the most in demand.
+          Gatineau's rental market underwent a rebalancing in 2025-2026 with the arrival of a large number of new builds. This shift makes return analysis even more critical. Older plexes with moderate rents remain the most in demand.
         </p>
         <p className="prose-body">
-          I'm a real estate investor myself — my analysis is honest, not a sales pitch.
+          I'm a real estate investor myself, my analysis is honest, not a sales pitch.
         </p>
       </div>
       <div className="mt-6">
@@ -165,8 +165,8 @@ const HullPageEn = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Hull is the closest area to Ottawa in Gatineau — Alexandra, Champlain, Portage and Chaudières bridges.",
-            "The Zibi project is an active, ongoing development — adjacent areas benefit from this transformation.",
+            "Hull is the closest area to Ottawa in Gatineau, Alexandra, Champlain, Portage and Chaudières bridges.",
+            "The Zibi project is an active, ongoing development, adjacent areas benefit from this transformation.",
             "UQO and federal offices on the Québec side anchor stable rental demand in Hull.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
@@ -186,16 +186,16 @@ const HullPageEn = () => (
     {/* ═══ MARKET DATA ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">MARKET DATA</p>
-      <h2 className="mt-3">Hull — what the 2026 numbers say</h2>
+      <h2 className="mt-3">Hull, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull is the most heterogeneous market in metropolitan Gatineau and the only sector where you can credibly compare a $235,000 1-bed condo, a $625,000 century triplex and a $1.2M new-build river-view condo on the same Centris page. As of May 2026, resale condos in Vieux-Hull and Wrightville run from $235,000 to $475,000 depending on age, parking and view; Zibi new-build inventory starts around $425,000 for a 1-bed and pushes past $850,000 for the larger waterfront units. Older single-family homes in the residential streets behind boulevard Saint-Joseph trade between $475,000 and $725,000 — an inventory pocket that's slowly being absorbed by anglophone families relocating from the Glebe and Hintonburg.
+          Hull is the most heterogeneous market in metropolitan Gatineau and the only sector where you can credibly compare a $235,000 1-bed condo, a $625,000 century triplex and a $1.2M new-build river-view condo on the same Centris page. As of May 2026, resale condos in Vieux-Hull and Wrightville run from $235,000 to $475,000 depending on age, parking and view; Zibi new-build inventory starts around $425,000 for a 1-bed and pushes past $850,000 for the larger waterfront units. Older single-family homes in the residential streets behind boulevard Saint-Joseph trade between $475,000 and $725,000, an inventory pocket that's slowly being absorbed by anglophone families relocating from the Glebe and Hintonburg.
         </p>
         <p className="prose-body">
-          On the income side, plexes remain the structural reason Hull is on every Outaouais investor's shortlist. The Université du Québec en Outaouais (UQO) anchors a permanent rental pool of roughly 6,500 students; federal offices in the Portage Complex, Place du Centre and Tour de la Paix generate stable demand from public servants who want to walk to work. The 2025–2026 cycle did rebalance the rental market — new builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth — but older plexes with below-market tenants and untapped renovation upside continue to trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.
+          On the income side, plexes remain the structural reason Hull is on every Outaouais investor's shortlist. The Université du Québec en Outaouais (UQO) anchors a permanent rental pool of roughly 6,500 students; federal offices in the Portage Complex, Place du Centre and Tour de la Paix generate stable demand from public servants who want to walk to work. The 2025-2026 cycle did rebalance the rental market, new builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth, but older plexes with below-market tenants and untapped renovation upside continue to trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.
         </p>
         <p className="prose-body">
-          The wild card for the next five years is the Gatineau-Ottawa tramway. The current alignment runs through Wrightville and Val-Tétreau toward downtown Ottawa via the Macdonald-Cartier Bridge corridor. The project is in planning and consultation, not construction — but historically, confirmed light-rail corridors lift values within walking distance by 5–15% over a 5–10 year horizon. I treat the tramway as plausible upside, not a guaranteed lift, and I price every Hull listing on today's fundamentals first.
+          The wild card for the next five years is the Gatineau-Ottawa tramway. The current alignment runs through Wrightville and Val-Tétreau toward downtown Ottawa via the Macdonald-Cartier Bridge corridor. The project is in planning and consultation, not construction, but historically, confirmed light-rail corridors lift values within walking distance by 5-15% over a 5-10 year horizon. I treat the tramway as plausible upside, not a guaranteed lift, and I price every Hull listing on today's fundamentals first.
         </p>
       </div>
     </ContentBlock>
@@ -215,7 +215,7 @@ const HullPageEn = () => (
       lang="en"
       guideType="investor_guide"
       headline="Free Investor Guide — plex in Hull"
-      text="Returns, taxes and investment strategy — in a guide sent by email."
+      text="Returns, taxes and investment strategy, in a guide sent by email."
       ctaLabel="Get the Investor Guide"
     />
 
@@ -223,15 +223,15 @@ const HullPageEn = () => (
     <CTASection
       dark
       title="Your Hull project — where to start?"
-      text="Buying, selling, rental investment — Hull is an area I know in depth. Let's talk about your project."
+      text="Buying, selling, rental investment, Hull is an area I know in depth. Let's talk about your project."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation-hull/" },
         { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide, get it by email" />
   </>
 );
 

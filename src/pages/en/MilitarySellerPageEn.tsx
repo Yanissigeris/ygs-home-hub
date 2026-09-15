@@ -25,7 +25,7 @@ const steps = [
 const faq = [
   { q: "How long does it take to sell during a posting?", a: "It depends on the market and price, but with the right strategy, we can often close in a few weeks. We adapt the plan to your schedule." },
   { q: "What if I have to leave before the sale?", a: "It's manageable. We set up a plan to handle showings and the transaction remotely." },
-  { q: "Will I risk selling below market value?", a: "Not if the pricing is done right from the start. That's exactly my role — maximize your price even with a tight timeline." },
+  { q: "Will I risk selling below market value?", a: "Not if the pricing is done right from the start. That's exactly my role, maximize your price even with a tight timeline." },
 ];
 
 const MilitarySellerPageEn = () => (
@@ -53,7 +53,7 @@ const MilitarySellerPageEn = () => (
     <ProcessSteps steps={steps} />
 
     <InlineCTA
-      text="First step: know the value of your property — it's free and fast."
+      text="First step: know the value of your property, it's free and fast."
       buttonLabel="Get my valuation →"
       href="/en/home-valuation/"
     />
@@ -74,24 +74,24 @@ const MilitarySellerPageEn = () => (
     <GuideInlineCTA lang="en"
       guideType="seller_guide"
       headline="Free Seller Guide — sell at the best price"
-      text="Everything you need to know to sell your property in Gatineau — pricing, preparation and strategy."
+      text="Everything you need to know to sell your property in Gatineau, pricing, preparation and strategy."
       ctaLabel="Get the Seller Guide"
     />
 
     <CTASection
       dark
       title="Posting coming up?"
-      text="Let's discuss your timeline and options — the sooner we start, the more leverage we have."
+      text="Let's discuss your timeline and options, the sooner we start, the more leverage we have."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Book a call", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide with full clarity."
+      trustLine="I give you the numbers and the options, you decide with full clarity."
     />
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>
 );
 export default MilitarySellerPageEn;

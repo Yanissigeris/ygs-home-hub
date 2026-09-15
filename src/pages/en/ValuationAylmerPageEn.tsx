@@ -25,20 +25,20 @@ const trustBullets = [
 
 const faq = [
   { q: "How do I get a home valuation in Aylmer?", a: "Fill out the form on this page with your Aylmer property address. I'll get back to you within 24h with an analysis based on recent comparable sales." },
-  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report — no obligation to sell." },
-  { q: "How much is my house worth in Aylmer?", a: "The value depends on your neighborhood — Plateau, Lake Deschênes, residential areas — and recent sales. The valuation gives you a realistic range." },
+  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report, no obligation to sell." },
+  { q: "How much is my house worth in Aylmer?", a: "The value depends on your neighborhood, Plateau, Lake Deschênes, residential areas, and recent sales. The valuation gives you a realistic range." },
   { q: "What is the valuation based on?", a: "I use recent sales on your street and in your Aylmer area, your property's condition, lot size and local market conditions." },
   { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Aylmer's local specifics and your property's actual condition." },
   { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a more detailed analysis with a visit in Aylmer, we schedule an appointment." },
-  { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report — no commitment." },
+  { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report, no commitment." },
   { q: "Does the valuation commit me to selling?", a: "No. Many Aylmer homeowners request a valuation simply to know their value, without any immediate intention to sell." },
-  { q: "Which Aylmer neighborhoods do you cover?", a: "All of them — Plateau, Lake Deschênes, Lucerne, Des Jardins, Lakeview and all residential areas of Aylmer." },
+  { q: "Which Aylmer neighborhoods do you cover?", a: "All of them, Plateau, Lake Deschênes, Lucerne, Des Jardins, Lakeview and all residential areas of Aylmer." },
   { q: "What do I do after receiving my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan for Aylmer." },
 ];
 
 const afterSteps = [
-  { title: "Sell in Aylmer", text: "Go further — get a complete plan to sell your Aylmer property.", href: "/en/sell-house-aylmer/", cta: "See the process", highlight: true },
-  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact/", cta: "Book a call" },
+  { title: "Sell in Aylmer", text: "Go further, get a complete plan to sell your Aylmer property.", href: "/en/sell-house-aylmer/", cta: "See the process", highlight: true },
+  { title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const anim = {
@@ -77,7 +77,7 @@ const ValuationAylmerPageEn = () => {
             <p className="label-overline mb-4 text-primary-foreground/65">Free valuation · Aylmer</p>
             <h1 className="text-primary-foreground">How much is your Aylmer property worth?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
-              Receive a personalized valuation based on recent sales in your Aylmer neighborhood — free, confidential and no commitment.
+              Receive a personalized valuation based on recent sales in your Aylmer neighborhood, free, confidential and no commitment.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (

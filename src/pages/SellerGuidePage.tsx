@@ -17,9 +17,9 @@ import heroImg from "@/assets/hero-seller-guide.webp";
 
 const sellerSteps = [
   { name: "Obtenir une évaluation de votre propriété", text: "Faites évaluer votre propriété par un courtier local pour fixer un prix compétitif basé sur le marché de Gatineau." },
-  { name: "Préparer la propriété pour la vente", text: "Identifiez les améliorations qui maximisent votre prix sans surinvestir — nettoyage, photos et mise en valeur." },
+  { name: "Préparer la propriété pour la vente", text: "Identifiez les améliorations qui maximisent votre prix sans surinvestir, nettoyage, photos et mise en valeur." },
   { name: "Mettre en marché avec la bonne stratégie", text: "Photos professionnelles, description optimisée et diffusion sur les bonnes plateformes pour attirer les bons acheteurs." },
-  { name: "Gérer les visites et les offres", text: "Organisez les visites stratégiquement et évaluez chaque offre selon vos objectifs — prix, conditions et délais." },
+  { name: "Gérer les visites et les offres", text: "Organisez les visites stratégiquement et évaluez chaque offre selon vos objectifs, prix, conditions et délais." },
   { name: "Négocier et accepter une offre", text: "Protégez votre prix avec une stratégie de négociation solide et acceptez l'offre qui correspond à vos critères." },
   { name: "Finaliser la vente chez le notaire", text: "Le notaire prépare l'acte de vente et gère le transfert de propriété. La transaction est officialisée." },
 ];
@@ -35,7 +35,7 @@ const topics = [
 
 const faq = [
   { q: "Quand est-ce le meilleur moment pour vendre à Gatineau?", a: "Ça dépend de votre situation personnelle, pas seulement du marché. On analyse ensemble le meilleur timing pour vous." },
-  { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent — tout est clair dès le départ." },
+  { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent, tout est clair dès le départ." },
   { q: "Faut-il faire des rénovations avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
   { q: "Combien de temps pour vendre à Gatineau?", a: "En moyenne 30 à 60 jours sur le marché, mais ça varie selon le secteur, le prix et la saison." },
 ];
@@ -43,7 +43,7 @@ const faq = [
 const related = [
   { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une estimation en 24h.", href: "/evaluation-gratuite-gatineau/" },
   { title: "Plan vendeur", text: "Recevez un plan personnalisé: prix, préparation et mise en marché.", href: "/plan-vendeur-gatineau/" },
-  { title: "Quand vendre", text: "Le bon timing dépend de votre situation — voici comment y voir clair.", href: "/quand-vendre-a-gatineau/" },
+  { title: "Quand vendre", text: "Le bon timing dépend de votre situation, voici comment y voir clair.", href: "/quand-vendre-a-gatineau/" },
   { title: "Vendre un plex", text: "Vendre un immeuble à revenus, c'est différent d'une maison.", href: "/vendre-un-plex-a-gatineau/" },
 ];
 
@@ -70,7 +70,7 @@ const SellerGuidePage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Vendre, ça se prépare" />
       <p className="prose-body mt-5">
-        La différence entre une vente stressante et une vente réussie, c'est la préparation. Ce guide couvre les étapes essentielles pour maximiser votre prix de vente à Gatineau — du positionnement prix à la négociation finale.
+        La différence entre une vente stressante et une vente réussie, c'est la préparation. Ce guide couvre les étapes essentielles pour maximiser votre prix de vente à Gatineau, du positionnement prix à la négociation finale.
       </p>
       <p className="prose-body mt-4">
         Depuis 2017 à accompagner des vendeurs en Outaouais, j'ai vu ce qui fonctionne et ce qui fait perdre de l'argent. Ce guide résume les leçons les plus importantes.
@@ -93,14 +93,14 @@ const SellerGuidePage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Préparer sans se ruiner" />
       <p className="prose-body mt-5">
-        Certains investissements rapportent — peinture neutre, désencombrement, mise en valeur. D'autres sont de l'argent gaspillé. Je vous aide à faire le tri pour investir seulement où ça compte.
+        Certains investissements rapportent, peinture neutre, désencombrement, mise en valeur. D'autres sont de l'argent gaspillé. Je vous aide à faire le tri pour investir seulement où ça compte.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow>
       <SectionHeading title="Le processus de vente au Québec" />
       <p className="prose-body mt-5">
-        Évaluation → prix → préparation → mise en marché → visites → offres → négociation → inspection → notaire → clés. Chaque étape a ses pièges — et ses opportunités. C'est pour ça qu'un bon accompagnement fait la différence.
+        Évaluation → prix → préparation → mise en marché → visites → offres → négociation → inspection → notaire → clés. Chaque étape a ses pièges, et ses opportunités. C'est pour ça qu'un bon accompagnement fait la différence.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/plan-vendeur-gatineau/">Recevoir mon plan vendeur personnalisé</Link>
@@ -115,7 +115,7 @@ const SellerGuidePage = () => (
       subtitle="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — préparation, prix, mise en marché et négociation."
       submitLabel="Recevoir le guide vendeur"
       successTitle="Merci! Votre guide est en route."
-      successText="Vérifiez votre boîte courriel — vous recevrez le guide vendeur dans les prochaines minutes."
+      successText="Vérifiez votre boîte courriel, vous recevrez le guide vendeur dans les prochaines minutes."
     />
 
     <FAQSection items={faq} />
@@ -129,7 +129,7 @@ const SellerGuidePage = () => (
     <GuideInlineCTA
       guideType="seller_guide"
       headline="Guide vendeur gratuit"
-      text="Prix, préparation et stratégie — tout dans un guide envoyé par courriel."
+      text="Prix, préparation et stratégie, tout dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide vendeur"
     />
 
@@ -144,7 +144,7 @@ const SellerGuidePage = () => (
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
-    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit, recevez-le par courriel" />
   </>
 );
 

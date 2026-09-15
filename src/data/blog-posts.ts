@@ -109,8 +109,8 @@ export const blogPosts: BlogPost[] = [
     ],
     sources: [
       {
-        fr: "Chambre immobilière de l'Outaouais / APCIQ — Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026",
-        en: "Chambre immobilière de l'Outaouais / QPAREB — Q2 2026 Statistics, Gatineau CMA, published July 14, 2026",
+        fr: "Chambre immobilière de l'Outaouais / APCIQ, Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026",
+        en: "Chambre immobilière de l'Outaouais / QPAREB, Q2 2026 Statistics, Gatineau CMA, published July 14, 2026",
       },
     ],
     ctaOverride: {
@@ -204,8 +204,8 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
     seoTitleEn: "Gatineau Real Estate Market April 2026: 3 Opposing Speeds",
     metaDescription: "Avril 2026 : plex en 30 jours, copro -34%, unifamiliale stable. Les 3 segments du marché Gatineau divergent. Recevez le rapport mensuel.",
     metaDescriptionEn: "April 2026: plex in 30 days, condos -34%, single-family stable. The 3 segments of the Gatineau market diverge. Get the monthly report.",
-    excerpt: "Le marché à Gatineau ne bouge plus comme un bloc. En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. Voici ce que la divergence signifie pour vous — vendeur, acheteur ou investisseur.",
-    excerptEn: "The Gatineau market no longer moves as a block. In April 2026, a plex sells in 30 days while condos pile up. Here's what the divergence means for you — seller, buyer, or investor.",
+    excerpt: "Le marché à Gatineau ne bouge plus comme un bloc. En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. Voici ce que la divergence signifie pour vous, vendeur, acheteur ou investisseur.",
+    excerptEn: "The Gatineau market no longer moves as a block. In April 2026, a plex sells in 30 days while condos pile up. Here's what the divergence means for you, seller, buyer, or investor.",
     category: "MARCHÉ · UPDATE MENSUEL",
     categoryEn: "MARKET · MONTHLY UPDATE",
     publishDate: "2026-05-14",
@@ -229,12 +229,12 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
     ],
     sources: [
       {
-        fr: "Chambre immobilière de l'Outaouais — Statistiques du marché résidentiel, avril 2026",
-        en: "Chambre immobilière de l'Outaouais — Residential Market Statistics, April 2026",
+        fr: "Chambre immobilière de l'Outaouais, Statistiques du marché résidentiel, avril 2026",
+        en: "Chambre immobilière de l'Outaouais, Residential Market Statistics, April 2026",
       },
       {
-        fr: "APCIQ via Centris — Cumulatif janvier-avril 2026, RMR de Gatineau",
-        en: "QPAREB via Centris — Year-to-date January-April 2026, Gatineau CMA",
+        fr: "APCIQ via Centris, Cumulatif janvier-avril 2026, RMR de Gatineau",
+        en: "QPAREB via Centris, Year-to-date January-April 2026, Gatineau CMA",
       },
     ],
     ctaOverride: {
@@ -249,30 +249,30 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
       buttonLabelEn: "Request the report",
       buttonHrefEn: "/en/contact/",
     },
-    body: `Le marché à Gatineau ne bouge plus comme un bloc. En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. Voici ce que la divergence signifie pour vous — vendeur, acheteur ou investisseur.
+    body: `Le marché à Gatineau ne bouge plus comme un bloc. En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. Voici ce que la divergence signifie pour vous, vendeur, acheteur ou investisseur.
 
-En avril 2026, les inscriptions en vigueur dans la RMR de Gatineau ont grimpé à 1 837 — une hausse de 30 % sur un an, selon la Chambre immobilière de l'Outaouais. Mais cette hausse globale masque trois marchés distincts qui ne bougent plus au même rythme. Le plex se compresse. La copropriété s'effondre. L'unifamiliale tient.
+En avril 2026, les inscriptions en vigueur dans la RMR de Gatineau ont grimpé à 1 837, une hausse de 30 % sur un an, selon la Chambre immobilière de l'Outaouais. Mais cette hausse globale masque trois marchés distincts qui ne bougent plus au même rythme. Le plex se compresse. La copropriété s'effondre. L'unifamiliale tient.
 
-> En avril 2026, un plex se vend à Gatineau en 30 jours en moyenne (-21 jours sur un an), contre 49 jours pour une copropriété en cumul 2026 — l'écart le plus large jamais observé entre les deux segments dans la RMR, selon la Chambre immobilière de l'Outaouais et l'APCIQ via Centris.
+> En avril 2026, un plex se vend à Gatineau en 30 jours en moyenne (-21 jours sur un an), contre 49 jours pour une copropriété en cumul 2026, l'écart le plus large jamais observé entre les deux segments dans la RMR, selon la Chambre immobilière de l'Outaouais et l'APCIQ via Centris.
 
 ### Pourquoi le marché des plex à Gatineau se contracte-t-il aussi vite en avril 2026 ?
 
-Le délai moyen pour vendre un plex à Gatineau est passé de 51 à 30 jours en avril 2026, avec 44 ventes (+33 % vs avril 2025) selon la Chambre immobilière de l'Outaouais. L'inventaire de plex en vigueur a reculé de 3 % sur le cumul janvier-avril, alors que la demande est restée constante. Le prix médian a augmenté à 604 800 $ (+1 % sur le mois, +2 % en cumul). Pour un vendeur de plex, c'est le moment où la liste est la plus mince et les offres les plus rapides — pour un acheteur-investisseur, attendre veut dire payer plus. Voir l'[analyse plex à Gatineau](/plex).
+Le délai moyen pour vendre un plex à Gatineau est passé de 51 à 30 jours en avril 2026, avec 44 ventes (+33 % vs avril 2025) selon la Chambre immobilière de l'Outaouais. L'inventaire de plex en vigueur a reculé de 3 % sur le cumul janvier-avril, alors que la demande est restée constante. Le prix médian a augmenté à 604 800 $ (+1 % sur le mois, +2 % en cumul). Pour un vendeur de plex, c'est le moment où la liste est la plus mince et les offres les plus rapides, pour un acheteur-investisseur, attendre veut dire payer plus. Voir l'[analyse plex à Gatineau](/plex).
 
 ### Pourquoi les copropriétés à Gatineau s'accumulent-elles en avril 2026 ?
 
-Les ventes de copropriétés dans la RMR de Gatineau ont chuté de 34 % sur le cumul janvier-avril 2026 (195 ventes), pendant que les inscriptions en vigueur ont bondi de 40 % (341 unités), selon l'APCIQ via Centris. Le prix médian a reculé à 309 900 $ (-1 % cumul, -6 % sur le seul mois d'avril). Le délai moyen est passé à 49 jours (+4 jours sur un an). Pour un vendeur de copro, le marché est devenu acheteur — le prix d'inscription doit refléter avril 2026, pas l'évaluation municipale de 2024. Voir l'[évaluation propriété à Hull](/vendre).
+Les ventes de copropriétés dans la RMR de Gatineau ont chuté de 34 % sur le cumul janvier-avril 2026 (195 ventes), pendant que les inscriptions en vigueur ont bondi de 40 % (341 unités), selon l'APCIQ via Centris. Le prix médian a reculé à 309 900 $ (-1 % cumul, -6 % sur le seul mois d'avril). Le délai moyen est passé à 49 jours (+4 jours sur un an). Pour un vendeur de copro, le marché est devenu acheteur, le prix d'inscription doit refléter avril 2026, pas l'évaluation municipale de 2024. Voir l'[évaluation propriété à Hull](/vendre).
 
 ### Que signifie ce déséquilibre pour un vendeur d'unifamiliale à Gatineau ?
 
-L'unifamiliale garde un prix médian stable à 510 000 $ en avril 2026 (0 % sur un an), avec 370 ventes (=) et un délai moyen de 30 jours (-2 jours), selon la Chambre immobilière de l'Outaouais. L'inventaire grimpe (+19 % en cumul, +30 % en vigueur en avril), mais l'absorption suit. C'est le segment le plus stable des trois. Pour un vendeur unifamilial, la fenêtre de tarification serrée est encore ouverte — mais avec plus d'options pour les acheteurs, surévaluer coûte aujourd'hui plus cher qu'en 2025. Voir l'[évaluation propriété à Aylmer](/vendre).
+L'unifamiliale garde un prix médian stable à 510 000 $ en avril 2026 (0 % sur un an), avec 370 ventes (=) et un délai moyen de 30 jours (-2 jours), selon la Chambre immobilière de l'Outaouais. L'inventaire grimpe (+19 % en cumul, +30 % en vigueur en avril), mais l'absorption suit. C'est le segment le plus stable des trois. Pour un vendeur unifamilial, la fenêtre de tarification serrée est encore ouverte, mais avec plus d'options pour les acheteurs, surévaluer coûte aujourd'hui plus cher qu'en 2025. Voir l'[évaluation propriété à Aylmer](/vendre).
 
-> [YGS] Ce que je vois en ce moment : les délais s'allongent pour mes vendeurs de copropriétés, parce que l'offre grandit plus vite que la demande. Un client vendeur de copro récemment a voulu tester le marché avec un prix au-dessus de ce que les chiffres dictaient — résultat, pas de visites. Du côté plex, c'est l'inverse : un triplex inscrit le mois dernier a reçu une offre au-dessus de la valeur en moins de 24 heures, dès que le prix était aligné sur le marché. Le délai moyen de 30 jours sur les plex correspond exactement à ce que j'observe sur mes dossiers. Tous les segments ne sont pas à la même cote — un vendeur de copro et un vendeur de plex doivent jouer deux stratégies différentes en 2026.
+> [YGS] Ce que je vois en ce moment : les délais s'allongent pour mes vendeurs de copropriétés, parce que l'offre grandit plus vite que la demande. Un client vendeur de copro récemment a voulu tester le marché avec un prix au-dessus de ce que les chiffres dictaient, résultat, pas de visites. Du côté plex, c'est l'inverse : un triplex inscrit le mois dernier a reçu une offre au-dessus de la valeur en moins de 24 heures, dès que le prix était aligné sur le marché. Le délai moyen de 30 jours sur les plex correspond exactement à ce que j'observe sur mes dossiers. Tous les segments ne sont pas à la même cote, un vendeur de copro et un vendeur de plex doivent jouer deux stratégies différentes en 2026.
 
 ## FAQ
 
 **Q : Le marché immobilier de Gatineau est-il en baisse en 2026 ?**
-R : Les ventes résidentielles totales dans la RMR de Gatineau ont reculé de 8 % sur le cumul janvier-avril 2026 (1 410 unités), mais le volume des ventes en avril a augmenté de 2 % selon la Chambre immobilière de l'Outaouais. La baisse est concentrée dans la copropriété (-34 %) — les plex (+10 %) et l'unifamiliale (-4 %) tiennent mieux. Envoyez-moi RAPPORT pour la ventilation par segment.
+R : Les ventes résidentielles totales dans la RMR de Gatineau ont reculé de 8 % sur le cumul janvier-avril 2026 (1 410 unités), mais le volume des ventes en avril a augmenté de 2 % selon la Chambre immobilière de l'Outaouais. La baisse est concentrée dans la copropriété (-34 %), les plex (+10 %) et l'unifamiliale (-4 %) tiennent mieux. Envoyez-moi RAPPORT pour la ventilation par segment.
 
 **Q : Quel segment immobilier performe le mieux à Gatineau en avril 2026 ?**
 R : Les plex 2-5 logements dominent le marché Gatineau en avril 2026 avec 44 ventes (+33 % vs avril 2025), un délai moyen de 30 jours (-21 j) et un prix médian de 604 800 $ (+1 %), selon la Chambre immobilière de l'Outaouais. C'est le seul segment où la demande dépasse encore l'offre.
@@ -283,30 +283,30 @@ R : Le délai moyen pour vendre une unifamiliale dans la RMR de Gatineau est de 
 ---
 
 *Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
-    bodyEn: `The Gatineau market no longer moves as a block. In April 2026, a plex sells in 30 days while condos pile up. Here's what the divergence means for you — seller, buyer, or investor.
+    bodyEn: `The Gatineau market no longer moves as a block. In April 2026, a plex sells in 30 days while condos pile up. Here's what the divergence means for you, seller, buyer, or investor.
 
-In April 2026, active listings in the Gatineau CMA climbed to 1,837 — a 30% year-over-year increase, according to the Chambre immobilière de l'Outaouais. But this overall increase masks three distinct markets that no longer move at the same pace. Plex are tightening. Condos are collapsing. Single-family is holding.
+In April 2026, active listings in the Gatineau CMA climbed to 1,837, a 30% year-over-year increase, according to the Chambre immobilière de l'Outaouais. But this overall increase masks three distinct markets that no longer move at the same pace. Plex are tightening. Condos are collapsing. Single-family is holding.
 
-> In April 2026, a plex sells in Gatineau in an average of 30 days (-21 days year-over-year), versus 49 days for a condo year-to-date 2026 — the widest gap ever observed between the two segments in the CMA, according to the Chambre immobilière de l'Outaouais and QPAREB via Centris.
+> In April 2026, a plex sells in Gatineau in an average of 30 days (-21 days year-over-year), versus 49 days for a condo year-to-date 2026, the widest gap ever observed between the two segments in the CMA, according to the Chambre immobilière de l'Outaouais and QPAREB via Centris.
 
 ### Why is the Gatineau plex market tightening so fast in April 2026?
 
-The average days on market for a plex in Gatineau dropped from 51 to 30 days in April 2026, with 44 sales (+33% vs April 2025) according to the Chambre immobilière de l'Outaouais. Active plex inventory fell 3% year-to-date January-April, while demand stayed constant. The median price rose to $604,800 (+1% on the month, +2% YTD). For a plex seller, this is when the listing pool is thinnest and offers fastest — for an investor-buyer, waiting means paying more. See the [Gatineau plex analysis](/en/plex).
+The average days on market for a plex in Gatineau dropped from 51 to 30 days in April 2026, with 44 sales (+33% vs April 2025) according to the Chambre immobilière de l'Outaouais. Active plex inventory fell 3% year-to-date January-April, while demand stayed constant. The median price rose to $604,800 (+1% on the month, +2% YTD). For a plex seller, this is when the listing pool is thinnest and offers fastest, for an investor-buyer, waiting means paying more. See the [Gatineau plex analysis](/en/plex).
 
 ### Why are condos in Gatineau piling up in April 2026?
 
-Condo sales in the Gatineau CMA fell 34% year-to-date January-April 2026 (195 sales), while active listings jumped 40% (341 units), according to QPAREB via Centris. The median price dropped to $309,900 (-1% YTD, -6% in April alone). Average days on market rose to 49 days (+4 days year-over-year). For a condo seller, the market has turned to a buyer's market — the list price must reflect April 2026, not the 2024 municipal assessment. See the [Hull property valuation](/en/home-valuation).
+Condo sales in the Gatineau CMA fell 34% year-to-date January-April 2026 (195 sales), while active listings jumped 40% (341 units), according to QPAREB via Centris. The median price dropped to $309,900 (-1% YTD, -6% in April alone). Average days on market rose to 49 days (+4 days year-over-year). For a condo seller, the market has turned to a buyer's market, the list price must reflect April 2026, not the 2024 municipal assessment. See the [Hull property valuation](/en/home-valuation).
 
 ### What does this imbalance mean for a single-family seller in Gatineau?
 
-Single-family homes hold a stable median price of $510,000 in April 2026 (0% year-over-year), with 370 sales (=) and an average of 30 days on market (-2 days), according to the Chambre immobilière de l'Outaouais. Inventory is climbing (+19% YTD, +30% active in April), but absorption is keeping pace. It's the most stable segment of the three. For a single-family seller, the tight pricing window is still open — but with more options for buyers, overpricing now costs more than it did in 2025. See the [Aylmer property valuation](/en/home-valuation).
+Single-family homes hold a stable median price of $510,000 in April 2026 (0% year-over-year), with 370 sales (=) and an average of 30 days on market (-2 days), according to the Chambre immobilière de l'Outaouais. Inventory is climbing (+19% YTD, +30% active in April), but absorption is keeping pace. It's the most stable segment of the three. For a single-family seller, the tight pricing window is still open, but with more options for buyers, overpricing now costs more than it did in 2025. See the [Aylmer property valuation](/en/home-valuation).
 
-> [YGS] What I see right now: days on market are stretching for my condo sellers, because supply is growing faster than demand. A condo seller client recently wanted to test the market with a price above what the numbers dictated — result, no showings. On the plex side, it's the opposite: a triplex listed last month received an above-value offer in under 24 hours, as soon as the price was aligned with the market. The 30-day average on plex matches exactly what I'm seeing on my files. All segments are not at the same level — a condo seller and a plex seller need to play two different strategies in 2026.
+> [YGS] What I see right now: days on market are stretching for my condo sellers, because supply is growing faster than demand. A condo seller client recently wanted to test the market with a price above what the numbers dictated, result, no showings. On the plex side, it's the opposite: a triplex listed last month received an above-value offer in under 24 hours, as soon as the price was aligned with the market. The 30-day average on plex matches exactly what I'm seeing on my files. All segments are not at the same level, a condo seller and a plex seller need to play two different strategies in 2026.
 
 ## FAQ
 
 **Q: Is the Gatineau real estate market declining in 2026?**
-A: Total residential sales in the Gatineau CMA fell 8% year-to-date January-April 2026 (1,410 units), but April sales volume rose 2% according to the Chambre immobilière de l'Outaouais. The decline is concentrated in condos (-34%) — plex (+10%) and single-family (-4%) hold up better. Message me REPORT for the segment breakdown.
+A: Total residential sales in the Gatineau CMA fell 8% year-to-date January-April 2026 (1,410 units), but April sales volume rose 2% according to the Chambre immobilière de l'Outaouais. The decline is concentrated in condos (-34%), plex (+10%) and single-family (-4%) hold up better. Message me REPORT for the segment breakdown.
 
 **Q: Which real estate segment performs best in Gatineau in April 2026?**
 A: 2-5 unit plex dominate the Gatineau market in April 2026 with 44 sales (+33% vs April 2025), an average 30 days on market (-21 d) and a median price of $604,800 (+1%), according to the Chambre immobilière de l'Outaouais. It's the only segment where demand still exceeds supply.
@@ -364,12 +364,12 @@ A: The average days on market for a single-family home in the Gatineau CMA is 30
     ],
     sources: [
       {
-        fr: "Chambre immobilière de l'Outaouais et APCIQ — Baromètre résidentiel T1 2026 (publié 15 avril 2026)",
-        en: "Chambre immobilière de l'Outaouais and QPAREB — Q1 2026 Residential Barometer (published April 15, 2026)",
+        fr: "Chambre immobilière de l'Outaouais et APCIQ, Baromètre résidentiel T1 2026 (publié 15 avril 2026)",
+        en: "Chambre immobilière de l'Outaouais and QPAREB, Q1 2026 Residential Barometer (published April 15, 2026)",
       },
       {
-        fr: "Banque du Canada — Annonce du taux directeur, 29 avril 2026",
-        en: "Bank of Canada — Policy rate announcement, April 29, 2026",
+        fr: "Banque du Canada, Annonce du taux directeur, 29 avril 2026",
+        en: "Bank of Canada, Policy rate announcement, April 29, 2026",
       },
     ],
     body: `Le marché de Gatineau s'est rééquilibré au premier trimestre 2026. Les inscriptions ont grimpé de 18 % alors que les ventes ont reculé de 10 %, et la stratégie de prix qui fonctionnait en 2023 ne fonctionne plus aujourd'hui. Voici les trois erreurs que je vois encore sur le terrain et le coût réel qu'elles génèrent.
@@ -410,7 +410,7 @@ Le portage inclut intérêts hypothécaires, taxes municipales d'environ 1,4 % �
 
 15 000 $, c'est le coût plancher. Le vrai chiffre peut monter à 30 000 $ ou plus si la propriété traîne au-delà de 90 jours. Pour une [évaluation propriété à Gatineau](/vendre-ma-maison-gatineau) basée sur les comparables réels, c'est le point de départ logique.
 
-> [YGS] Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse — c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
+> [YGS] Ce que je vois en ce moment sur le terrain : les acheteurs sont devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils ont plus de choix, donc plus de pouvoir. J'ai un condo en mise en marché présentement où la compétition directe est forte et où les frais de condo sont au-dessus de la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Le vendeur voulait son prix de départ. Le marché a décidé autrement. Les plex, par contre, restent dans une dynamique inverse, c'est le segment le plus actif en ce moment et la marge de manœuvre du vendeur y est encore réelle.
 
 ## FAQ
 
@@ -434,7 +434,7 @@ R : Il faut nuancer. Au T1 2026, le marché a continué de se rééquilibrer pen
 *Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
     bodyEn: `The Gatineau market rebalanced in the first quarter of 2026. Listings jumped 18% while sales fell 10%, and the pricing strategy that worked in 2023 no longer works today. Here are the three mistakes I still see on the ground and what they really cost.
 
-In Q1 2026, the Chambre immobilière de l'Outaouais recorded 936 residential sales in the Gatineau metropolitan area, a 10% drop from the same quarter in 2025. Meanwhile, active listings jumped to 1,394 on a monthly average — 18% more than Q1 2025. Average time on market for single-family homes fell to 38 days, but that average hides a brutal reality: well-priced properties sell in under 30 days, others linger 60 to 90 days and end up cutting their price.
+In Q1 2026, the Chambre immobilière de l'Outaouais recorded 936 residential sales in the Gatineau metropolitan area, a 10% drop from the same quarter in 2025. Meanwhile, active listings jumped to 1,394 on a monthly average, 18% more than Q1 2025. Average time on market for single-family homes fell to 38 days, but that average hides a brutal reality: well-priced properties sell in under 30 days, others linger 60 to 90 days and end up cutting their price.
 
 > In Gatineau in Q1 2026, active listings rose 18% while sales fell 10%, tipping the market into a rebalancing that directly penalizes overpriced sellers.
 
@@ -448,7 +448,7 @@ For a median single-family property in Gatineau ($489,950), a 5% overprice that 
 
 ### Why is the $620,000 to $740,000 price range becoming critical in Gatineau in 2026?
 
-According to the QPAREB Q1 2026 barometer, single-family inventory between $620,000 and $740,000 in Gatineau represents 4.5 months of sales, and above $740,000, 7.4 months — versus only 2.9 months for the $370,000 to $620,000 bracket.
+According to the QPAREB Q1 2026 barometer, single-family inventory between $620,000 and $740,000 in Gatineau represents 4.5 months of sales, and above $740,000, 7.4 months, versus only 2.9 months for the $370,000 to $620,000 bracket.
 
 This bracket is exactly where 50-70 year-old downsizers leave their family single-family in Aylmer or Plateau for a smaller format. The classic "high entry price to keep negotiation room" strategy falls flat in this segment, which has seen its absorption time rise significantly.
 
@@ -456,7 +456,7 @@ If your property sits between $620,000 and $740,000, the mistake is no longer mi
 
 ### How can a "round" price cost you a sale in Gatineau?
 
-Choosing $559,000 instead of $549,900 makes a property disappear from Centris searches filtered at $550,000 — a significant share of active buyers in that price band.
+Choosing $559,000 instead of $549,900 makes a property disappear from Centris searches filtered at $550,000, a significant share of active buyers in that price band.
 
 Centris and Realtor.ca segment searches in $25,000 or $50,000 bands. A $559,000 list price drops you out of the "$550,000 and below" filter without putting you in a meaningfully higher visibility bracket. You pay the search algorithms for $9,000 you likely won't recover in negotiation.
 
@@ -466,11 +466,11 @@ The list price must be strategic relative to Centris thresholds (450k, 500k, 550
 
 A flawed pricing strategy costs a Gatineau seller between $14,000 and $25,000 in 2026, based on a combination of forced reduction (typically 3 to 5% off the $489,950 median price) and extended mortgage carrying costs of about $2,750 per month for a median home at a 5-year fixed rate negotiated around 4.19% in spring 2026.
 
-Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatineau, and home insurance. Each additional month on the market, an overpriced property accumulates about $2,750 in direct costs — not counting the "stale" effect that lowers future offers by 1 to 2%.
+Carrying costs include mortgage interest, municipal taxes around 1.4% in Gatineau, and home insurance. Each additional month on the market, an overpriced property accumulates about $2,750 in direct costs, not counting the "stale" effect that lowers future offers by 1 to 2%.
 
 $15,000 is the floor. The real number can climb to $30,000 or more if the property lingers beyond 90 days. For a [property valuation in Gatineau](/en/home-valuation) based on real comparables, that's the logical starting point.
 
-> [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic — it's the most active segment right now and seller leverage is still real.
+> [YGS] What I see right now on the ground: buyers have become noticeably more selective on single-family homes and condos than two years ago. They have more choice, so more leverage. I have a condo on the market right now where direct competition is strong and condo fees are above the area average. We had to cut the price twice before showings started. The seller wanted his starting price. The market decided otherwise. Plex, on the other hand, remain in the opposite dynamic, it's the most active segment right now and seller leverage is still real.
 
 ## FAQ
 
@@ -504,39 +504,39 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
     metaDescription: "Plus d'inscriptions, légère pression sur les prix. Ce que les vendeurs de Gatineau doivent savoir avant d'inscrire leur maison ce printemps.",
     metaDescriptionEn: "More listings, slight pressure on prices. What Gatineau sellers need to know before listing their home this spring.",
     excerpt: "Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent — et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul.",
-    excerptEn: "Q1 2026 numbers are out. Sales are down, listings up — and for the first time, the median price of single-family homes in Gatineau shows a slight decline.",
+    excerptEn: "Q1 2026 numbers are out. Sales are down, listings up, and for the first time, the median price of single-family homes in Gatineau shows a slight decline.",
     category: "MARCHÉ · VENDEUR",
     categoryEn: "MARKET · SELLER",
     publishDate: "2026-04-19",
     published: true,
     emitFaqSchema: true,
-    body: `Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent — et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul. Avant d'inscrire votre maison ce printemps, voici ce que ça change vraiment.
+    body: `Les chiffres du T1 2026 sont sortis. Les ventes reculent, les inscriptions augmentent, et pour la première fois, le prix médian des unifamiliales à Gatineau affiche un léger recul. Avant d'inscrire votre maison ce printemps, voici ce que ça change vraiment.
 
-> « À Gatineau au T1 2026, la combinaison de moins de ventes et de plus d'inscriptions a exercé une légère pression sur les prix des unifamiliales — sans renverser l'avantage des vendeurs, mais en changeant ce qu'il faut faire pour maximiser son prix. » — Analyse YGS basée sur les données APCIQ/CIO, avril 2026.
+> « À Gatineau au T1 2026, la combinaison de moins de ventes et de plus d'inscriptions a exercé une légère pression sur les prix des unifamiliales, sans renverser l'avantage des vendeurs, mais en changeant ce qu'il faut faire pour maximiser son prix. », Analyse YGS basée sur les données APCIQ/CIO, avril 2026.
 
 ## Les prix ont-ils vraiment baissé à Gatineau ?
 
-Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ — une première pour Gatineau, et la seule RMR du Québec à afficher ce recul ce trimestre. Ce n'est pas un effondrement. C'est un signal. Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché, ce qui envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
+Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ, une première pour Gatineau, et la seule RMR du Québec à afficher ce recul ce trimestre. Ce n'est pas un effondrement. C'est un signal. Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché, ce qui envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
 
 ## Est-ce encore un marché de vendeur à Gatineau en 2026 ?
 
-Oui — mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix. Ce qui a changé : les acheteurs ont maintenant le luxe de comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR — contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
+Oui, mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix. Ce qui a changé : les acheteurs ont maintenant le luxe de comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR, contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
 
 ## Quel est le bon moment pour inscrire sa maison à Gatineau ce printemps ?
 
-Le printemps reste le meilleur moment, mais la fenêtre est plus courte qu'avant. Avec davantage de propriétés sur le marché, les maisons qui entrent en avril et mai font face à plus de concurrence directe. Inscrire tôt — avant la vague de printemps — avec un prix juste et une mise en marché soignée reste la stratégie qui maximise le prix final. Attendre juin ou juillet, c'est risquer de se retrouver dans un inventaire gonflé, face à des acheteurs qui ont repris leur souffle.
+Le printemps reste le meilleur moment, mais la fenêtre est plus courte qu'avant. Avec davantage de propriétés sur le marché, les maisons qui entrent en avril et mai font face à plus de concurrence directe. Inscrire tôt, avant la vague de printemps, avec un prix juste et une mise en marché soignée reste la stratégie qui maximise le prix final. Attendre juin ou juillet, c'est risquer de se retrouver dans un inventaire gonflé, face à des acheteurs qui ont repris leur souffle.
 
 ## Ce que je vois sur le terrain
 
-Ce que je vois en ce moment sur le terrain est assez clair. Les maisons prennent plus de temps à vendre qu'il y a un an — ce n'est pas dramatique, mais c'est perceptible. Les acheteurs ont plus de choix et ils le savent : 18 % d'inscriptions supplémentaires par rapport à l'an dernier, c'est une différence réelle que tout le monde ressent dans le marché. Résultat direct : le prix médian des unifamiliales a légèrement reculé. C'est l'offre et la demande — pas de mystère. Les vendeurs qui comprennent ça et inscrivent leur maison au bon prix vendent. Les autres attendent.
+Ce que je vois en ce moment sur le terrain est assez clair. Les maisons prennent plus de temps à vendre qu'il y a un an, ce n'est pas dramatique, mais c'est perceptible. Les acheteurs ont plus de choix et ils le savent : 18 % d'inscriptions supplémentaires par rapport à l'an dernier, c'est une différence réelle que tout le monde ressent dans le marché. Résultat direct : le prix médian des unifamiliales a légèrement reculé. C'est l'offre et la demande, pas de mystère. Les vendeurs qui comprennent ça et inscrivent leur maison au bon prix vendent. Les autres attendent.
 
 ## FAQ
 
 **Q : Mon quartier est-il encore en marché de vendeur ?**
-R : Ça dépend du secteur et du type de propriété. Les unifamiliales en bon état dans Aylmer et Hull restent très demandées. Envoyez-moi le mot VALEUR en DM — je vous donne l'analyse de votre secteur précis, chiffres à l'appui.
+R : Ça dépend du secteur et du type de propriété. Les unifamiliales en bon état dans Aylmer et Hull restent très demandées. Envoyez-moi le mot VALEUR en DM, je vous donne l'analyse de votre secteur précis, chiffres à l'appui.
 
 **Q : Faut-il baisser mon prix pour vendre rapidement en 2026 ?**
-R : Pas nécessairement. Une inscription à prix juste dès le départ est plus efficace qu'une inscription haute suivie d'une réduction — qui génère souvent moins d'offres et un prix final plus bas. Je vous donne les chiffres de votre secteur pour décider. DM : VENTE.
+R : Pas nécessairement. Une inscription à prix juste dès le départ est plus efficace qu'une inscription haute suivie d'une réduction, qui génère souvent moins d'offres et un prix final plus bas. Je vous donne les chiffres de votre secteur pour décider. DM : VENTE.
 
 **Q : L'augmentation des inscriptions change-t-elle la stratégie de mise en marché ?**
 R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentation, les photos et le positionnement de prix deviennent encore plus déterminants. C'est précisément ce sur quoi on travaille ensemble avant l'inscription. DM : VENTE.
@@ -548,33 +548,33 @@ R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentati
 ---
 
 *Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
-    bodyEn: `Q1 2026 numbers are out. Sales are down, listings up — and for the first time, the median price of single-family homes in Gatineau shows a slight decline. Before listing your home this spring, here's what really changes.
+    bodyEn: `Q1 2026 numbers are out. Sales are down, listings up, and for the first time, the median price of single-family homes in Gatineau shows a slight decline. Before listing your home this spring, here's what really changes.
 
-> "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices — without overturning the seller advantage, but changing what you need to do to maximize your price." — YGS Analysis based on APCIQ/CIO data, April 2026.
+> "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices, without overturning the seller advantage, but changing what you need to do to maximize your price.", YGS Analysis based on APCIQ/CIO data, April 2026.
 
 ## Have prices really dropped in Gatineau?
 
-Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ — a first for Gatineau, and the only CMA in Quebec to show this decline this quarter. It's not a collapse. It's a signal. With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
+Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ, a first for Gatineau, and the only CMA in Quebec to show this decline this quarter. It's not a collapse. It's a signal. With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
 
 ## Is it still a seller's market in Gatineau in 2026?
 
-Yes — but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties. What has changed: buyers now have the luxury to compare. In Q1 2026, 1,394 properties were available on Centris in the CMA — versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
+Yes, but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties. What has changed: buyers now have the luxury to compare. In Q1 2026, 1,394 properties were available on Centris in the CMA, versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
 
 ## When is the right time to list in Gatineau this spring?
 
-Spring remains the best time, but the window is shorter than before. With more properties on the market, homes entering in April and May face more direct competition. Listing early — before the spring wave — with a fair price and polished marketing remains the strategy that maximizes final price. Waiting until June or July risks getting caught in bloated inventory, facing buyers who have regained their breath.
+Spring remains the best time, but the window is shorter than before. With more properties on the market, homes entering in April and May face more direct competition. Listing early, before the spring wave, with a fair price and polished marketing remains the strategy that maximizes final price. Waiting until June or July risks getting caught in bloated inventory, facing buyers who have regained their breath.
 
 ## What I'm seeing on the ground
 
-What I'm seeing right now on the ground is quite clear. Homes are taking longer to sell than a year ago — it's not dramatic, but it's noticeable. Buyers have more choice and they know it: 18% more listings compared to last year, a real difference everyone feels in the market. Direct result: the median price of single-family homes has slightly declined. It's supply and demand — no mystery. Sellers who understand this and list at the right price sell. The others wait.
+What I'm seeing right now on the ground is quite clear. Homes are taking longer to sell than a year ago, it's not dramatic, but it's noticeable. Buyers have more choice and they know it: 18% more listings compared to last year, a real difference everyone feels in the market. Direct result: the median price of single-family homes has slightly declined. It's supply and demand, no mystery. Sellers who understand this and list at the right price sell. The others wait.
 
 ## FAQ
 
 **Q: Is my neighborhood still in a seller's market?**
-A: It depends on the area and property type. Well-maintained single-family homes in Aylmer and Hull remain in high demand. Send me the word VALUE in DM — I'll give you the analysis of your specific area, with numbers to back it up.
+A: It depends on the area and property type. Well-maintained single-family homes in Aylmer and Hull remain in high demand. Send me the word VALUE in DM, I'll give you the analysis of your specific area, with numbers to back it up.
 
 **Q: Should I lower my price to sell quickly in 2026?**
-A: Not necessarily. A listing at the right price from the start is more effective than a high listing followed by a reduction — which often generates fewer offers and a lower final price. I'll give you the numbers for your area to decide. DM: SALE.
+A: Not necessarily. A listing at the right price from the start is more effective than a high listing followed by a reduction, which often generates fewer offers and a lower final price. I'll give you the numbers for your area to decide. DM: SALE.
 
 **Q: Does the increase in listings change the marketing strategy?**
 A: Yes. More inventory means more visual competition. Presentation, photos, and price positioning become even more crucial. This is precisely what we work on together before listing. DM: SALE.
@@ -594,7 +594,7 @@ A: Yes. More inventory means more visual competition. Presentation, photos, and 
     title: "Plex à Gatineau en mars 2026 : le marché qui résiste à tout",
     titleEn: "Plex in Gatineau, March 2026: The Market That Holds Strong",
     seoTitle: "Plex à Gatineau : le marché de mars 2026 en chiffres — Analyse YGS",
-    seoTitleEn: "Plex in Gatineau: March 2026 Market in Numbers — YGS Analysis",
+    seoTitleEn: "Plex in Gatineau: March 2026 Market in Numbers, YGS Analysis",
     metaDescription: "Ventes en hausse de 19 %, délai de 23 jours. Les plex à Gatineau bougent vite en 2026. Voici ce que les chiffres de mars signifient pour vous.",
     metaDescriptionEn: "Sales up 19%, 23-day average. Plex in Gatineau move fast in 2026. Here's what March numbers mean for you.",
     excerpt: "Pendant que les unifamiliales reculent et que les condos s'accumulent, les plex en Outaouais font exactement le contraire. Analyse de mars 2026.",
@@ -606,7 +606,7 @@ A: Yes. More inventory means more visual competition. Presentation, photos, and 
     emitFaqSchema: true,
     body: `Pendant que les ventes unifamiliales reculent et que les condos s'accumulent sur le marché, une catégorie fait exactement le contraire. Les plex en Outaouais.
 
-> En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours — contre 65 jours en mars 2025 — soit une compression de 42 jours en un an, selon la Chambre immobilière de l'Outaouais.
+> En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours, contre 65 jours en mars 2025, soit une compression de 42 jours en un an, selon la Chambre immobilière de l'Outaouais.
 
 ### Pourquoi les plex se vendent-ils aussi vite ?
 
@@ -614,7 +614,7 @@ L'inventaire global a augmenté de 29 % en Outaouais. La demande d'investisseurs
 
 ### Ce que le prix médian de 585 500 $ signifie
 
-Un 4-logements à 585 500 $ doit générer autour de 5 850 $ à 6 000 $ de revenus bruts mensuels pour atteindre un ratio d'environ 1 % — le seuil de base en Outaouais. C'est pourquoi l'analyse avant l'offre est non négociable.
+Un 4-logements à 585 500 $ doit générer autour de 5 850 $ à 6 000 $ de revenus bruts mensuels pour atteindre un ratio d'environ 1 %, le seuil de base en Outaouais. C'est pourquoi l'analyse avant l'offre est non négociable.
 
 ### Le reste du marché
 
@@ -622,7 +622,7 @@ Ventes unifamiliales -9 %, copropriétés -32 %, inventaire en hausse. Plus de c
 
 ## Ce que je vois sur le terrain
 
-Les plex ne durent pas. Deux offres, parfois trois sur la même propriété. Le ralentissement des unifamiliales vient des vendeurs, pas des acheteurs — l'inventaire a explosé. Pour les condos : l'offre s'accumule, et la première semaine sur le marché est décisive.
+Les plex ne durent pas. Deux offres, parfois trois sur la même propriété. Le ralentissement des unifamiliales vient des vendeurs, pas des acheteurs, l'inventaire a explosé. Pour les condos : l'offre s'accumule, et la première semaine sur le marché est décisive.
 
 ## FAQ
 
@@ -630,13 +630,13 @@ Les plex ne durent pas. Deux offres, parfois trois sur la même propriété. Le 
 R : 23 jours de délai moyen en mars 2026. Si votre financement est prêt et votre analyse tient la route, attendre ne joue pas en votre faveur.
 
 **Q : Comment évaluer la rentabilité ?**
-R : Divisez les revenus bruts mensuels par le prix d'achat. Ratio cible : 1 %. Les revenus déclarés ne sont pas toujours les revenus au marché — c'est l'écart que j'analyse avant chaque offre.
+R : Divisez les revenus bruts mensuels par le prix d'achat. Ratio cible : 1 %. Les revenus déclarés ne sont pas toujours les revenus au marché, c'est l'écart que j'analyse avant chaque offre.
 
 **Q : Quel prix payer ?**
 R : Médian à 585 500 $ en mars 2026. Le bon prix dépend du secteur et des loyers réels.
 
 **Q : Plex sous 500 000 $ possible ?**
-R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-angers) et [Gatineau centre](/gatineau) — avec une analyse de secteur avant toute offre.
+R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-angers) et [Gatineau centre](/gatineau), avec une analyse de secteur avant toute offre.
 
 ---
 
@@ -647,7 +647,7 @@ R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-ang
 *Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
     bodyEn: `While single-family sales drop and condos pile up on the market, one category is doing the exact opposite. Plex in the Outaouais.
 
-> In March 2026, plex in Gatineau sell in an average of 23 days — versus 65 days in March 2025 — a 42-day compression in one year, according to the Outaouais Real Estate Board.
+> In March 2026, plex in Gatineau sell in an average of 23 days, versus 65 days in March 2025, a 42-day compression in one year, according to the Outaouais Real Estate Board.
 
 ### Why are plex selling so fast?
 
@@ -655,7 +655,7 @@ Overall inventory rose 29% in the Outaouais. Investor and owner-occupant demand 
 
 ### What the $585,500 median price means
 
-A 4-unit at $585,500 needs to generate roughly $5,850 to $6,000 in gross monthly income to hit a ratio of about 1% — the baseline in the Outaouais. That's why pre-offer analysis is non-negotiable.
+A 4-unit at $585,500 needs to generate roughly $5,850 to $6,000 in gross monthly income to hit a ratio of about 1%, the baseline in the Outaouais. That's why pre-offer analysis is non-negotiable.
 
 ### The rest of the market
 
@@ -663,7 +663,7 @@ Single-family sales -9%, condos -32%, inventory rising. More choice for buyers, 
 
 ## What I'm seeing on the ground
 
-Plex don't last. Two offers, sometimes three on the same property. The single-family slowdown comes from sellers, not buyers — inventory has exploded. For condos: supply is piling up, and the first week on market is decisive.
+Plex don't last. Two offers, sometimes three on the same property. The single-family slowdown comes from sellers, not buyers, inventory has exploded. For condos: supply is piling up, and the first week on market is decisive.
 
 ## FAQ
 
@@ -671,13 +671,13 @@ Plex don't last. Two offers, sometimes three on the same property. The single-fa
 A: 23-day average in March 2026. If your financing is ready and your analysis holds up, waiting doesn't work in your favor.
 
 **Q: How do I evaluate profitability?**
-A: Divide gross monthly income by purchase price. Target ratio: 1%. Reported income isn't always market income — that gap is what I analyze before every offer.
+A: Divide gross monthly income by purchase price. Target ratio: 1%. Reported income isn't always market income, that gap is what I analyze before every offer.
 
 **Q: What price should I pay?**
 A: Median is $585,500 in March 2026. The right price depends on the area and actual rents.
 
 **Q: Plex under $500,000 possible?**
-A: Yes — in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and [Gatineau centre](/en/gatineau) — with area analysis before any offer.
+A: Yes, in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and [Gatineau centre](/en/gatineau), with area analysis before any offer.
 
 ---
 
@@ -709,7 +709,7 @@ Le marché immobilier de Gatineau continue d'évoluer rapidement. Après plusieu
 
 ### Tendances des prix
 
-Les prix médians dans les secteurs les plus recherchés de Gatineau — [Aylmer](/aylmer), le [Plateau](/plateau) et [Hull](/hull) — continuent de refléter une demande soutenue. Le marché de l'Outaouais bénéficie toujours de son avantage concurrentiel par rapport à Ottawa, attirant des acheteurs ontariens en quête de valeur.
+Les prix médians dans les secteurs les plus recherchés de Gatineau, [Aylmer](/aylmer), le [Plateau](/plateau) et [Hull](/hull), continuent de refléter une demande soutenue. Le marché de l'Outaouais bénéficie toujours de son avantage concurrentiel par rapport à Ottawa, attirant des acheteurs ontariens en quête de valeur.
 
 ### Volume des ventes
 
@@ -731,7 +731,7 @@ Gatineau's real estate market continues to evolve rapidly. After several years o
 
 ### Price Trends
 
-Median prices in Gatineau's most sought-after areas — [Aylmer](/en/aylmer), [Plateau](/en/plateau), and [Hull](/en/hull) — continue to reflect strong demand. The Outaouais market still benefits from its competitive advantage over Ottawa, attracting Ontario buyers seeking value.
+Median prices in Gatineau's most sought-after areas, [Aylmer](/en/aylmer), [Plateau](/en/plateau), and [Hull](/en/hull), continue to reflect strong demand. The Outaouais market still benefits from its competitive advantage over Ottawa, attracting Ontario buyers seeking value.
 
 ### Sales Volume
 
@@ -820,9 +820,9 @@ There's no "bad" time to sell if your property is well-prepared and well-positio
     seoTitle: "Premier achat immobilier Gatineau · Guide complet | YGS",
     seoTitleEn: "First-Time Home Buyer Gatineau · Complete Guide | YGS",
     metaDescription: "Mise de fonds, préqualification, inspection — tout ce qu'un premier acheteur doit savoir pour acheter à Gatineau.",
-    metaDescriptionEn: "Down payment, pre-approval, inspection — everything a first-time buyer needs to know about buying in Gatineau.",
+    metaDescriptionEn: "Down payment, pre-approval, inspection, everything a first-time buyer needs to know about buying in Gatineau.",
     excerpt: "Mise de fonds, préqualification, inspection — tout ce qu'un premier acheteur doit savoir en Outaouais.",
-    excerptEn: "Down payment, pre-approval, inspection — everything a first-time buyer needs to know.",
+    excerptEn: "Down payment, pre-approval, inspection, everything a first-time buyer needs to know.",
     category: "Acheteurs",
     categoryEn: "Buyers",
     publishDate: "2025-03-05",
@@ -885,7 +885,7 @@ A real estate broker who knows the local market can save you time and money. The
     metaDescription: "Tout ce qu'il faut savoir pour déménager d'Ottawa à Gatineau : impôts, écoles, quartiers, accès et style de vie.",
     metaDescriptionEn: "Everything you need to know about moving from Ottawa to Gatineau: taxes, schools, neighborhoods, access, and lifestyle.",
     excerpt: "Impôts, écoles, quartiers, accès — tout pour planifier une relocalisation réussie.",
-    excerptEn: "Taxes, schools, neighborhoods, commute — everything you need to plan a smooth relocation.",
+    excerptEn: "Taxes, schools, neighborhoods, commute, everything you need to plan a smooth relocation.",
     category: "Relocalisation",
     categoryEn: "Relocation",
     publishDate: "2025-03-20",
@@ -987,7 +987,7 @@ Avant d'investir, une analyse rigoureuse est essentielle :
 
 ### Mon approche
 
-Je vous aide à analyser chaque opportunité avec rigueur — revenus, dépenses, potentiel d'appréciation — pour que votre investissement soit un succès.
+Je vous aide à analyser chaque opportunité avec rigueur, revenus, dépenses, potentiel d'appréciation, pour que votre investissement soit un succès.
 
 **Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
     bodyEn: `## Investing in a Plex in Gatineau: Is It Still Worth It?
@@ -1020,7 +1020,7 @@ Before investing, a rigorous analysis is essential:
 
 ### My Approach
 
-I help you analyze each opportunity rigorously — income, expenses, appreciation potential — so your investment is a success.
+I help you analyze each opportunity rigorously, income, expenses, appreciation potential, so your investment is a success.
 
 **Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
   },
@@ -1145,7 +1145,7 @@ Gatineau offre plusieurs avantages pour les militaires :
 1. **Commencez tôt** : Dès la confirmation de votre mutation, contactez un courtier local.
 2. **Visite de recherche** : Profitez de votre visite DRA pour explorer les quartiers.
 3. **Documentation** : Gardez tous vos reçus et documents pour le remboursement IRP.
-4. **Timing** : Le marché est plus compétitif au printemps — planifiez en conséquence.
+4. **Timing** : Le marché est plus compétitif au printemps, planifiez en conséquence.
 
 **Pour aller plus loin** — [Déménager d'Ottawa à Gatineau : guide complet](/blogue/demenager-ottawa-gatineau-guide) · [Les meilleurs quartiers pour les familles à Gatineau en 2025](/blogue/meilleurs-quartiers-familles-gatineau)
 
@@ -1176,7 +1176,7 @@ Gatineau offers several advantages for military members:
 1. **Start early**: As soon as your posting is confirmed, contact a local broker.
 2. **House-hunting trip**: Use your DIT visit to explore neighborhoods.
 3. **Documentation**: Keep all receipts and documents for IRP reimbursement.
-4. **Timing**: The market is more competitive in spring — plan accordingly.
+4. **Timing**: The market is more competitive in spring, plan accordingly.
 
 ### My Military Expertise
 
@@ -1200,7 +1200,7 @@ I regularly help military families with their relocation to Gatineau. I know the
     published: true,
     body: `## Frais de notaire et frais de clôture à Gatineau
 
-Acheter une maison, c'est excitant — mais les frais supplémentaires peuvent surprendre si on ne les prévoit pas. Voici un portrait complet des coûts à prévoir au-delà du prix d'achat à Gatineau et en Outaouais.
+Acheter une maison, c'est excitant, mais les frais supplémentaires peuvent surprendre si on ne les prévoit pas. Voici un portrait complet des coûts à prévoir au-delà du prix d'achat à Gatineau et en Outaouais.
 
 ### Les frais de notaire
 
@@ -1240,12 +1240,12 @@ Pour un achat de 400 000 $ à Gatineau, prévoyez environ **7 000 $ à 10 000 $*
 
 ### Mon conseil
 
-La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre — pas de surprise le jour de la signature.
+La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre, pour que vous sachiez exactement à quoi vous attendre, pas de surprise le jour de la signature.
 
 **Lire aussi** : [Inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide) · [10 conseils pour votre premier achat](/blogue/conseils-premier-achat-maison-gatineau)`,
     bodyEn: `## Notary Fees and Closing Costs in Gatineau
 
-Buying a home is exciting — but the additional fees can catch you off guard if you don't plan for them. Here's a complete breakdown of costs to expect beyond the purchase price in Gatineau and the Outaouais.
+Buying a home is exciting, but the additional fees can catch you off guard if you don't plan for them. Here's a complete breakdown of costs to expect beyond the purchase price in Gatineau and the Outaouais.
 
 ### Notary Fees
 
@@ -1285,7 +1285,7 @@ For a $400,000 purchase in Gatineau, expect approximately **$7,000 to $10,000** 
 
 ### My Advice
 
-The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect — no surprises on signing day.
+The key is preparation. I provide a detailed estimate of all these costs at our first meeting, so you know exactly what to expect, no surprises on signing day.
 
 **Read also**: [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide) · [10 Tips for First-Time Buyers](/en/blog/tips-buying-first-home-gatineau)`,
   },
@@ -1325,21 +1325,21 @@ Chaque quartier de Gatineau a ses propres réalités :
 
 ### Les 5 interventions les plus rentables
 
-1. **Peinture neutre** — Budget : 500 $ à 1 500 $. Retour : jusqu'à 300 %. Les murs blancs ou gris clair agrandissent les pièces et plaisent à tous.
+1. **Peinture neutre**: Budget : 500 $ à 1 500 $. Retour : jusqu'à 300 %. Les murs blancs ou gris clair agrandissent les pièces et plaisent à tous.
 
-2. **Désencombrement radical** — Coût : 0 $. Retour : immédiat. Enlevez 50 % de vos objets personnels. Louez un espace d'entreposage si nécessaire.
+2. **Désencombrement radical**: Coût : 0 $. Retour : immédiat. Enlevez 50 % de vos objets personnels. Louez un espace d'entreposage si nécessaire.
 
-3. **Éclairage** — Budget : 200 $ à 500 $. Remplacez les ampoules jaunes par du blanc chaud (3000K). Ajoutez des lampes d'appoint dans les coins sombres.
+3. **Éclairage**: Budget : 200 $ à 500 $. Remplacez les ampoules jaunes par du blanc chaud (3000K). Ajoutez des lampes d'appoint dans les coins sombres.
 
-4. **Extérieur soigné** — Budget : 300 $ à 800 $. Entrée propre, boîte aux lettres en bon état, platebandes entretenues. C'est la première chose que l'acheteur voit.
+4. **Extérieur soigné**: Budget : 300 $ à 800 $. Entrée propre, boîte aux lettres en bon état, platebandes entretenues. C'est la première chose que l'acheteur voit.
 
-5. **Cuisine et salle de bain** — Budget : 500 $ à 2 000 $. Remplacez les poignées d'armoires, ajoutez un nouveau miroir, installez un dosseret simple. Pas besoin de rénover au complet.
+5. **Cuisine et salle de bain**: Budget : 500 $ à 2 000 $. Remplacez les poignées d'armoires, ajoutez un nouveau miroir, installez un dosseret simple. Pas besoin de rénover au complet.
 
 ### Ce que je ne recommande pas
 
-- Les rénovations majeures juste avant de vendre (cuisine complète, salle de bain au complet) — le retour est rarement là
-- Peindre des couleurs « tendance » — restez neutres
-- Cacher des problèmes — l'acheteur les trouvera à l'inspection
+- Les rénovations majeures juste avant de vendre (cuisine complète, salle de bain au complet), le retour est rarement là
+- Peindre des couleurs « tendance », restez neutres
+- Cacher des problèmes, l'acheteur les trouvera à l'inspection
 
 ### Mon approche
 
@@ -1366,21 +1366,21 @@ Each Gatineau neighborhood has its own realities:
 
 ### The 5 Most Profitable Interventions
 
-1. **Neutral paint** — Budget: $500 to $1,500. Return: up to 300%. White or light gray walls enlarge rooms and appeal to everyone.
+1. **Neutral paint**: Budget: $500 to $1,500. Return: up to 300%. White or light gray walls enlarge rooms and appeal to everyone.
 
-2. **Radical decluttering** — Cost: $0. Return: immediate. Remove 50% of your personal items. Rent a storage unit if necessary.
+2. **Radical decluttering**: Cost: $0. Return: immediate. Remove 50% of your personal items. Rent a storage unit if necessary.
 
-3. **Lighting** — Budget: $200 to $500. Replace yellow bulbs with warm white (3000K). Add accent lamps in dark corners.
+3. **Lighting**: Budget: $200 to $500. Replace yellow bulbs with warm white (3000K). Add accent lamps in dark corners.
 
-4. **Curb appeal** — Budget: $300 to $800. Clean entrance, well-maintained mailbox, tidy flower beds. It's the first thing buyers see.
+4. **Curb appeal**: Budget: $300 to $800. Clean entrance, well-maintained mailbox, tidy flower beds. It's the first thing buyers see.
 
-5. **Kitchen and bathroom** — Budget: $500 to $2,000. Replace cabinet handles, add a new mirror, install a simple backsplash. No need for a full renovation.
+5. **Kitchen and bathroom**: Budget: $500 to $2,000. Replace cabinet handles, add a new mirror, install a simple backsplash. No need for a full renovation.
 
 ### What I Don't Recommend
 
-- Major renovations just before selling (complete kitchen, full bathroom) — the return is rarely there
-- Painting "trendy" colors — stay neutral
-- Hiding problems — the buyer will find them at inspection
+- Major renovations just before selling (complete kitchen, full bathroom), the return is rarely there
+- Painting "trendy" colors, stay neutral
+- Hiding problems, the buyer will find them at inspection
 
 ### My Approach
 
@@ -1397,7 +1397,7 @@ I do a free pre-listing visit with every seller. We identify together the interv
     seoTitle: "Rénovations valeur maison Gatineau · Guide | YGS",
     seoTitleEn: "Renovations Home Value Gatineau · Guide | YGS",
     metaDescription: "Quelles rénovations offrent le meilleur retour sur investissement à Gatineau? Cuisine, salle de bain, sous-sol — analyse des chiffres réels.",
-    metaDescriptionEn: "Which renovations offer the best ROI in Gatineau? Kitchen, bathroom, basement — real numbers analyzed.",
+    metaDescriptionEn: "Which renovations offer the best ROI in Gatineau? Kitchen, bathroom, basement, real numbers analyzed.",
     excerpt: "Quelles rénovations offrent le meilleur retour sur investissement en Outaouais? Voici les chiffres réels.",
     excerptEn: "Which renovations offer the best return on investment in the Outaouais? Here are the real numbers.",
     category: "Vendeurs",
@@ -1425,16 +1425,16 @@ Moderniser la salle de bain est l'un des investissements les plus sûrs. Douche 
 Les fenêtres neuves améliorent l'efficacité énergétique et l'apparence, mais le retour financier est modéré. Investissez si vos fenêtres sont vraiment en fin de vie.
 
 **Toiture** — Retour moyen : **40 à 60 %**
-Une toiture neuve rassure les acheteurs et peut éviter des négociations à la baisse. Mais ne refaites pas votre toit juste pour vendre — seulement s'il en a besoin.
+Une toiture neuve rassure les acheteurs et peut éviter des négociations à la baisse. Mais ne refaites pas votre toit juste pour vendre, seulement s'il en a besoin.
 
 **Aménagement paysager** — Retour moyen : **100 à 200 %**
 Paradoxalement, l'extérieur offre le meilleur retour pour le plus petit investissement. Entrée soignée, haies taillées et platebandes fleuries coûtent peu et impressionnent beaucoup.
 
 ### Les rénovations à éviter avant de vendre
 
-- **Piscine creusée** — Coût : 40 000 $+. Retour : souvent négatif. Beaucoup d'acheteurs voient ça comme un fardeau.
-- **Personnalisation extrême** — Mur d'accent rouge vif, comptoir en marbre rose : vos goûts ne sont pas ceux de l'acheteur.
-- **Agrandissement non conforme** — Les travaux sans permis peuvent créer des problèmes légaux et réduire la valeur.
+- **Piscine creusée**: Coût : 40 000 $+. Retour : souvent négatif. Beaucoup d'acheteurs voient ça comme un fardeau.
+- **Personnalisation extrême**: Mur d'accent rouge vif, comptoir en marbre rose : vos goûts ne sont pas ceux de l'acheteur.
+- **Agrandissement non conforme**: Les travaux sans permis peuvent créer des problèmes légaux et réduire la valeur.
 
 ### Spécificités du marché de Gatineau
 
@@ -1464,16 +1464,16 @@ In Gatineau, a well-finished basement adds livable square footage. Particularly 
 New windows improve energy efficiency and appearance, but the financial return is moderate. Invest if your windows are truly at end of life.
 
 **Roof** — Average return: **40 to 60%**
-A new roof reassures buyers and can prevent downward negotiations. But don't redo your roof just to sell — only if it needs it.
+A new roof reassures buyers and can prevent downward negotiations. But don't redo your roof just to sell, only if it needs it.
 
 **Landscaping** — Average return: **100 to 200%**
 Paradoxically, the exterior offers the best return for the smallest investment. Tidy entrance, trimmed hedges, and flower beds cost little and impress a lot.
 
 ### Renovations to Avoid Before Selling
 
-- **In-ground pool** — Cost: $40,000+. Return: often negative. Many buyers see it as a burden.
-- **Extreme customization** — Bright red accent wall, pink marble countertop: your tastes aren't the buyer's.
-- **Non-conforming additions** — Work done without permits can create legal problems and reduce value.
+- **In-ground pool**: Cost: $40,000+. Return: often negative. Many buyers see it as a burden.
+- **Extreme customization**: Bright red accent wall, pink marble countertop: your tastes aren't the buyer's.
+- **Non-conforming additions**: Work done without permits can create legal problems and reduce value.
 
 ### Gatineau Market Specifics
 
@@ -1494,7 +1494,7 @@ Before you spend, consult me. I know what buyers in your area are looking for an
     metaDescription: "Comparaison détaillée des taxes municipales, scolaires et des services entre Gatineau et Ottawa. Qui paie plus? La réponse vous surprendra.",
     metaDescriptionEn: "Detailed comparison of municipal and school taxes and services between Gatineau and Ottawa. Who pays more? The answer may surprise you.",
     excerpt: "Comparaison détaillée des taxes entre Gatineau et Ottawa — la réponse est plus nuancée qu'on le pense.",
-    excerptEn: "Detailed tax comparison between Gatineau and Ottawa — the answer is more nuanced than you'd think.",
+    excerptEn: "Detailed tax comparison between Gatineau and Ottawa, the answer is more nuanced than you'd think.",
     category: "Marché",
     categoryEn: "Market",
     publishDate: "2025-05-12",
@@ -1517,8 +1517,8 @@ Sur papier, Gatineau semble plus cher. Mais il faut considérer deux facteurs im
 Les évaluations municipales à Gatineau sont historiquement **plus basses** que la valeur marchande réelle. À Ottawa, les évaluations MPAC suivent de plus près le marché. Résultat : le montant réel de taxes payé est plus proche qu'on le croit.
 
 **Exemple concret** :
-- Maison à Aylmer — Valeur marchande : 500 000 $. Évaluation municipale : 380 000 $. Taxes annuelles : environ **5 700 $**
-- Maison comparable à Ottawa — Valeur marchande : 600 000 $. Évaluation MPAC : 520 000 $. Taxes annuelles : environ **5 700 $**
+- Maison à Aylmer, Valeur marchande : 500 000 $. Évaluation municipale : 380 000 $. Taxes annuelles : environ **5 700 $**
+- Maison comparable à Ottawa, Valeur marchande : 600 000 $. Évaluation MPAC : 520 000 $. Taxes annuelles : environ **5 700 $**
 
 Le résultat net est souvent similaire, surtout quand on considère que la maison à Gatineau coûte 100 000 $ de moins à l'achat.
 
@@ -1534,13 +1534,13 @@ Le résultat net est souvent similaire, surtout quand on considère que la maiso
 ### L'avantage fiscal québécois
 
 Le Québec offre des avantages que l'Ontario n'a pas :
-- **Garderies à 8,90 $/jour** — Économie de 10 000 $ à 15 000 $ par an par enfant vs l'Ontario
-- **Assurance médicaments** — Couverture universelle
-- **Crédits d'impôt** — RénoVert, crédit pour maintien à domicile, etc.
+- **Garderies à 8,90 $/jour**: Économie de 10 000 $ à 15 000 $ par an par enfant vs l'Ontario
+- **Assurance médicaments**: Couverture universelle
+- **Crédits d'impôt**: RénoVert, crédit pour maintien à domicile, etc.
 
 ### Le calcul global
 
-Quand on additionne tout — prix d'achat inférieur, garderies subventionnées, programmes fiscaux — une [famille à Gatineau](/relocalisation-ottawa-gatineau) peut économiser **20 000 $ à 40 000 $ par an** comparativement à Ottawa, même avec des taxes municipales légèrement plus élevées.
+Quand on additionne tout, prix d'achat inférieur, garderies subventionnées, programmes fiscaux, une [famille à Gatineau](/relocalisation-ottawa-gatineau) peut économiser **20 000 $ à 40 000 $ par an** comparativement à Ottawa, même avec des taxes municipales légèrement plus élevées.
 
 **Pour aller plus loin** — [Déménager d'Ottawa à Gatineau : guide complet](/blogue/demenager-ottawa-gatineau-guide) · [Frais de notaire et frais de clôture à Gatineau : guide complet](/blogue/frais-notaire-achat-maison-gatineau)
 
@@ -1564,8 +1564,8 @@ On paper, Gatineau looks more expensive. But two important factors must be consi
 Municipal assessments in Gatineau are historically **lower** than actual market value. In Ottawa, MPAC assessments follow the market more closely. Result: the actual tax amount paid is closer than you'd think.
 
 **Real example**:
-- Home in Aylmer — Market value: $500,000. Municipal assessment: $380,000. Annual taxes: approximately **$5,700**
-- Comparable home in Ottawa — Market value: $600,000. MPAC assessment: $520,000. Annual taxes: approximately **$5,700**
+- Home in Aylmer, Market value: $500,000. Municipal assessment: $380,000. Annual taxes: approximately **$5,700**
+- Comparable home in Ottawa, Market value: $600,000. MPAC assessment: $520,000. Annual taxes: approximately **$5,700**
 
 The net result is often similar, especially when you consider the Gatineau home costs $100,000 less to purchase.
 
@@ -1581,13 +1581,13 @@ In Gatineau, your taxes include:
 ### The Québec Fiscal Advantage
 
 Québec offers advantages that Ontario doesn't:
-- **$8.90/day daycare** — Savings of $10,000 to $15,000 per year per child vs Ontario
-- **Drug insurance** — Universal coverage
-- **Tax credits** — RénoVert, home maintenance credit, etc.
+- **$8.90/day daycare**: Savings of $10,000 to $15,000 per year per child vs Ontario
+- **Drug insurance**: Universal coverage
+- **Tax credits**: RénoVert, home maintenance credit, etc.
 
 ### The Complete Picture
 
-When you add it all up — lower purchase price, subsidized daycare, tax programs — a family in Gatineau can save **$20,000 to $40,000 per year** compared to Ottawa, even with slightly higher municipal taxes.
+When you add it all up, lower purchase price, subsidized daycare, tax programs, a family in Gatineau can save **$20,000 to $40,000 per year** compared to Ottawa, even with slightly higher municipal taxes.
 
 ### My Take
 
@@ -1602,7 +1602,7 @@ Don't let the tax rate discourage you from buying in Gatineau. Look at the compl
     seoTitle: "Meilleurs quartiers familles Gatineau 2025 | YGS",
     seoTitleEn: "Best Family Neighborhoods Gatineau 2025 | YGS",
     metaDescription: "Aylmer, Plateau, Hull ou Buckingham? Découvrez les meilleurs quartiers pour élever une famille à Gatineau — écoles, parcs, sécurité et prix médians.",
-    metaDescriptionEn: "Aylmer, Plateau, Hull or Buckingham? Discover the best neighborhoods to raise a family in Gatineau — schools, parks, safety and median prices.",
+    metaDescriptionEn: "Aylmer, Plateau, Hull or Buckingham? Discover the best neighborhoods to raise a family in Gatineau, schools, parks, safety and median prices.",
     excerpt: "Aylmer, Plateau, Hull ou Buckingham? Quel quartier choisir pour votre famille à Gatineau en 2025.",
     excerptEn: "Aylmer, Plateau, Hull or Buckingham? Which neighborhood is right for your family in Gatineau in 2025.",
     category: "Quartiers",
@@ -1613,55 +1613,55 @@ Don't let the tax rate discourage you from buying in Gatineau. Look at the compl
 
 Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les prochaines années. Voici un portrait honnête des secteurs les plus populaires pour les familles à Gatineau.
 
-### Aylmer — Le choix premium pour les familles
+### Aylmer, Le choix premium pour les familles
 
 **Prix médian** : 480 000 $ à 550 000 $
 
 Aylmer est le secteur le plus recherché par les familles à Gatineau, et pour de bonnes raisons :
-- **Lac Deschênes** — Plage, marina, pistes cyclables le long du lac
-- **Parc de la Gatineau** — Accès direct à des centaines de kilomètres de sentiers
-- **Écoles réputées** — Plusieurs écoles primaires et secondaires bien cotées
-- **Ambiance villageoise** — Le Vieux-Aylmer offre restos, cafés et boutiques locales
-- **Proximité Ottawa** — 15 à 20 minutes du centre-ville via le pont Champlain
+- **Lac Deschênes**: Plage, marina, pistes cyclables le long du lac
+- **Parc de la Gatineau**: Accès direct à des centaines de kilomètres de sentiers
+- **Écoles réputées**: Plusieurs écoles primaires et secondaires bien cotées
+- **Ambiance villageoise**: Le Vieux-Aylmer offre restos, cafés et boutiques locales
+- **Proximité Ottawa**: 15 à 20 minutes du centre-ville via le pont Champlain
 
 **Idéal pour** : Familles avec enfants de tous âges, amoureux du plein air, professionnels travaillant à Ottawa.
 
-### Le [Plateau](/plateau) — Résidentiel et abordable
+### Le [Plateau](/plateau), Résidentiel et abordable
 
 **Prix médian** : 400 000 $ à 480 000 $
 
 Le Plateau est un secteur résidentiel calme qui offre un excellent rapport qualité-prix :
-- **Maisons spacieuses** — Terrains plus grands qu'à Aylmer pour un prix inférieur
-- **Parcs et espaces verts** — Parc du Lac-Beauchamp, sentiers nature
-- **Écoles de qualité** — Bonnes options en français et en anglais
-- **Accès autoroute 50** — Connexion rapide vers Aylmer ou Buckingham
-- **Commerces** — Centre commercial du Plateau, épiceries, services
+- **Maisons spacieuses**: Terrains plus grands qu'à Aylmer pour un prix inférieur
+- **Parcs et espaces verts**: Parc du Lac-Beauchamp, sentiers nature
+- **Écoles de qualité**: Bonnes options en français et en anglais
+- **Accès autoroute 50**: Connexion rapide vers Aylmer ou Buckingham
+- **Commerces**: Centre commercial du Plateau, épiceries, services
 
 **Idéal pour** : Jeunes familles, premiers acheteurs, ceux qui veulent de l'espace sans exploser le budget.
 
-### [Hull](/hull) — Urbain et dynamique
+### [Hull](/hull), Urbain et dynamique
 
 **Prix médian** : 350 000 $ à 450 000 $
 
 Hull offre un style de vie plus urbain, parfait pour les familles actives :
-- **Proximité immédiate d'Ottawa** — 5 minutes à pied du centre-ville via les ponts
-- **Projet Zibi** — Quartier en développement avec condos modernes
-- **Culture et restos** — Musée canadien de l'histoire, quartier gastronomique
-- **Transport** — Meilleur accès STO de la ville, futur tramway potentiel
-- **Prix accessibles** — Encore possible de trouver des aubaines
+- **Proximité immédiate d'Ottawa**: 5 minutes à pied du centre-ville via les ponts
+- **Projet Zibi**: Quartier en développement avec condos modernes
+- **Culture et restos**: Musée canadien de l'histoire, quartier gastronomique
+- **Transport**: Meilleur accès STO de la ville, futur tramway potentiel
+- **Prix accessibles**: Encore possible de trouver des aubaines
 
 **Idéal pour** : Familles qui travaillent à Ottawa, amateurs de vie urbaine, jeunes professionnels.
 
-### [Buckingham](/buckingham-masson-angers) — Nature et espace
+### [Buckingham](/buckingham-masson-angers), Nature et espace
 
 **Prix médian** : 300 000 $ à 400 000 $
 
 [Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) offrent le meilleur rapport espace-prix de Gatineau :
-- **Terrains très grands** — Demi-acres et plus facilement disponibles
-- **Rivière du Lièvre** — Activités nautiques, pêche, paysages
-- **Communauté tissée serrée** — Ambiance de petite ville
-- **Prix les plus bas** — Maison unifamiliale spacieuse pour 350 000 $
-- **Nature omniprésente** — Forêts, lacs, sentiers à proximité
+- **Terrains très grands**: Demi-acres et plus facilement disponibles
+- **Rivière du Lièvre**: Activités nautiques, pêche, paysages
+- **Communauté tissée serrée**: Ambiance de petite ville
+- **Prix les plus bas**: Maison unifamiliale spacieuse pour 350 000 $
+- **Nature omniprésente**: Forêts, lacs, sentiers à proximité
 
 **Idéal pour** : Familles cherchant de l'espace, amateurs de nature, budget plus serré.
 
@@ -1679,55 +1679,55 @@ Je vis à Gatineau et je connais chaque quartier personnellement. On fait une to
 
 Choosing the right neighborhood means choosing your family's daily life for years to come. Here's an honest portrait of the most popular areas for families in Gatineau.
 
-### [Aylmer](/en/aylmer) — The Premium Family Choice
+### [Aylmer](/en/aylmer), The Premium Family Choice
 
 **Median price**: $480,000 to $550,000
 
 Aylmer is the most sought-after area for families in Gatineau, and for good reason:
-- **Lac Deschênes** — Beach, marina, cycling paths along the lake
-- **Gatineau Park** — Direct access to hundreds of kilometers of trails
-- **Reputed schools** — Several well-rated elementary and high schools
-- **Village atmosphere** — Old Aylmer offers restaurants, cafés, and local shops
-- **Ottawa proximity** — 15 to 20 minutes from downtown via Champlain Bridge
+- **Lac Deschênes**: Beach, marina, cycling paths along the lake
+- **Gatineau Park**: Direct access to hundreds of kilometers of trails
+- **Reputed schools**: Several well-rated elementary and high schools
+- **Village atmosphere**: Old Aylmer offers restaurants, cafés, and local shops
+- **Ottawa proximity**: 15 to 20 minutes from downtown via Champlain Bridge
 
 **Ideal for**: Families with children of all ages, outdoor enthusiasts, professionals working in Ottawa.
 
-### The [Plateau](/en/plateau) — Residential and Affordable
+### The [Plateau](/en/plateau), Residential and Affordable
 
 **Median price**: $400,000 to $480,000
 
 The Plateau is a quiet residential area offering excellent value:
-- **Spacious homes** — Larger lots than Aylmer at a lower price
-- **Parks and green spaces** — Lac-Beauchamp Park, nature trails
-- **Quality schools** — Good options in French and English
-- **Highway 50 access** — Quick connection to Aylmer or Buckingham
-- **Shopping** — Plateau shopping center, grocery stores, services
+- **Spacious homes**: Larger lots than Aylmer at a lower price
+- **Parks and green spaces**: Lac-Beauchamp Park, nature trails
+- **Quality schools**: Good options in French and English
+- **Highway 50 access**: Quick connection to Aylmer or Buckingham
+- **Shopping**: Plateau shopping center, grocery stores, services
 
 **Ideal for**: Young families, first-time buyers, those wanting space without blowing the budget.
 
-### [Hull](/en/hull) — Urban and Dynamic
+### [Hull](/en/hull), Urban and Dynamic
 
 **Median price**: $350,000 to $450,000
 
 Hull offers a more urban lifestyle, perfect for active families:
-- **Steps from Ottawa** — 5-minute walk to downtown via the bridges
-- **Zibi project** — Developing neighborhood with modern condos
-- **Culture and dining** — Canadian Museum of History, culinary quarter
-- **Transit** — Best STO access in the city, potential future light rail
-- **Affordable prices** — Still possible to find deals
+- **Steps from Ottawa**: 5-minute walk to downtown via the bridges
+- **Zibi project**: Developing neighborhood with modern condos
+- **Culture and dining**: Canadian Museum of History, culinary quarter
+- **Transit**: Best STO access in the city, potential future light rail
+- **Affordable prices**: Still possible to find deals
 
 **Ideal for**: Families working in Ottawa, urban lifestyle lovers, young professionals.
 
-### [Buckingham](/en/buckingham) — Nature and Space
+### [Buckingham](/en/buckingham), Nature and Space
 
 **Median price**: $300,000 to $400,000
 
 [Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) offer the best space-to-price ratio in Gatineau:
-- **Very large lots** — Half-acres and more readily available
-- **Lièvre River** — Water sports, fishing, scenic views
-- **Tight-knit community** — Small-town feel
-- **Lowest prices** — Spacious single-family home for $350,000
-- **Nature everywhere** — Forests, lakes, trails nearby
+- **Very large lots**: Half-acres and more readily available
+- **Lièvre River**: Water sports, fishing, scenic views
+- **Tight-knit community**: Small-town feel
+- **Lowest prices**: Spacious single-family home for $350,000
+- **Nature everywhere**: Forests, lakes, trails nearby
 
 **Ideal for**: Families seeking space, nature lovers, tighter budgets.
 
@@ -1754,7 +1754,7 @@ I live in Gatineau and know each neighborhood personally. We do a tour together 
     metaDescription: "Tout savoir sur Aylmer : prix des maisons, écoles, parcs, vie de quartier et pourquoi c'est l'un des secteurs les plus prisés de Gatineau.",
     metaDescriptionEn: "Everything about Aylmer: home prices, schools, parks, lifestyle, and why it's one of Gatineau's most sought-after neighborhoods.",
     excerpt: "Lac Deschênes, marina, parcs et vie familiale — découvrez pourquoi Aylmer attire autant d'acheteurs.",
-    excerptEn: "Lac Deschênes, marina, parks and family life — discover why Aylmer attracts so many buyers.",
+    excerptEn: "Lac Deschênes, marina, parks and family life, discover why Aylmer attracts so many buyers.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: blogAylmerMarina,
@@ -1767,22 +1767,22 @@ Aylmer est souvent considéré comme le quartier le plus prisé de Gatineau. Sit
 ## Pourquoi choisir Aylmer?
 
 ### Le Lac Deschênes et la marina
-- **Plage et baignade** — La plage d'Aylmer est un incontournable estival
-- **Marina** — Accès nautique direct, voile, kayak, paddleboard
-- **Piste cyclable** — Le sentier longe le lac sur des kilomètres
-- **Couchers de soleil** — Vue spectaculaire depuis le parc des Cèdres
+- **Plage et baignade**: La plage d'Aylmer est un incontournable estival
+- **Marina**: Accès nautique direct, voile, kayak, paddleboard
+- **Piste cyclable**: Le sentier longe le lac sur des kilomètres
+- **Couchers de soleil**: Vue spectaculaire depuis le parc des Cèdres
 
 ### Vie familiale et écoles
-- **Écoles francophones et anglophones** — Grande variété de choix
-- **Parc des Cèdres** — Jeux, piscine publique, terrains de sport
-- **Communauté active** — Marchés fermiers, festivals locaux
-- **Sécurité** — Quartier résidentiel calme et bien entretenu
+- **Écoles francophones et anglophones**: Grande variété de choix
+- **Parc des Cèdres**: Jeux, piscine publique, terrains de sport
+- **Communauté active**: Marchés fermiers, festivals locaux
+- **Sécurité**: Quartier résidentiel calme et bien entretenu
 
 ### Prix immobiliers à Aylmer en 2025
-- **Maison unifamiliale** — Prix médian autour de 525 000 $
-- **Jumelé** — Entre 380 000 $ et 450 000 $
-- **Condo** — À partir de 280 000 $
-- **Terrain** — Rares mais très recherchés
+- **Maison unifamiliale**: Prix médian autour de 525 000 $
+- **Jumelé**: Entre 380 000 $ et 450 000 $
+- **Condo**: À partir de 280 000 $
+- **Terrain**: Rares mais très recherchés
 
 ## Les sous-secteurs d'Aylmer
 
@@ -1807,22 +1807,22 @@ Aylmer is often considered Gatineau's most desirable neighborhood. Located at th
 ## Why Choose Aylmer?
 
 ### Lac Deschênes and the Marina
-- **Beach and swimming** — Aylmer Beach is a summer must
-- **Marina** — Direct waterfront access, sailing, kayaking, paddleboarding
-- **Bike path** — The trail runs along the lake for kilometers
-- **Sunsets** — Spectacular views from Parc des Cèdres
+- **Beach and swimming**: Aylmer Beach is a summer must
+- **Marina**: Direct waterfront access, sailing, kayaking, paddleboarding
+- **Bike path**: The trail runs along the lake for kilometers
+- **Sunsets**: Spectacular views from Parc des Cèdres
 
 ### Family Life and Schools
-- **French and English schools** — Wide variety of choices
-- **Parc des Cèdres** — Playgrounds, public pool, sports fields
-- **Active community** — Farmers' markets, local festivals
-- **Safety** — Quiet, well-maintained residential area
+- **French and English schools**: Wide variety of choices
+- **Parc des Cèdres**: Playgrounds, public pool, sports fields
+- **Active community**: Farmers' markets, local festivals
+- **Safety**: Quiet, well-maintained residential area
 
 ### Aylmer Real Estate Prices in 2025
-- **Single-family home** — Median price around $525,000
-- **Semi-detached** — Between $380,000 and $450,000
-- **Condo** — Starting at $280,000
-- **Land** — Rare but highly sought after
+- **Single-family home**: Median price around $525,000
+- **Semi-detached**: Between $380,000 and $450,000
+- **Condo**: Starting at $280,000
+- **Land**: Rare but highly sought after
 
 ## Aylmer Sub-Areas
 
@@ -1853,7 +1853,7 @@ Aylmer is a safe bet for quality of life. Demand remains strong, protecting your
     metaDescription: "Guide complet sur l'inspection préachat à Gatineau : quoi vérifier, combien ça coûte, et comment éviter les mauvaises surprises.",
     metaDescriptionEn: "Complete guide to pre-purchase inspections in Gatineau: what to check, costs, and how to avoid costly surprises.",
     excerpt: "Fondation, toiture, plomberie — voici tout ce que votre inspecteur devrait vérifier avant l'achat.",
-    excerptEn: "Foundation, roof, plumbing — here's everything your inspector should check before buying.",
+    excerptEn: "Foundation, roof, plumbing, here's everything your inspector should check before buying.",
     category: "Acheteurs",
     categoryEn: "Buyers",
     featuredImage: blogInspection,
@@ -1866,32 +1866,32 @@ L'inspection préachat est votre meilleure protection contre les mauvaises surpr
 ## Les éléments clés à vérifier
 
 ### La fondation
-- **Fissures** — Distinguer les fissures normales des problématiques
-- **Infiltrations d'eau** — Vérifier les traces au sous-sol
-- **Drain français** — Son état et son âge (durée de vie ~25 ans)
-- **Pyrite et ocre ferreux** — Problèmes courants dans certains secteurs de Gatineau
+- **Fissures**: Distinguer les fissures normales des problématiques
+- **Infiltrations d'eau**: Vérifier les traces au sous-sol
+- **Drain français**: Son état et son âge (durée de vie ~25 ans)
+- **Pyrite et ocre ferreux**: Problèmes courants dans certains secteurs de Gatineau
 
 ### La toiture
-- **Âge du revêtement** — Bardeaux d'asphalte durent 20-25 ans
-- **Ventilation d'entretoit** — Prévient les problèmes de condensation
-- **Évents et solins** — Points d'entrée d'eau fréquents
+- **Âge du revêtement**: Bardeaux d'asphalte durent 20-25 ans
+- **Ventilation d'entretoit**: Prévient les problèmes de condensation
+- **Évents et solins**: Points d'entrée d'eau fréquents
 
 ### Plomberie et électricité
-- **Tuyauterie en plomb** — Encore présente dans certaines maisons de Hull
-- **Panneau électrique** — Ampérage suffisant (200A recommandé)
-- **Chauffe-eau** — Âge et état (durée de vie ~10 ans)
+- **Tuyauterie en plomb**: Encore présente dans certaines maisons de Hull
+- **Panneau électrique**: Ampérage suffisant (200A recommandé)
+- **Chauffe-eau**: Âge et état (durée de vie ~10 ans)
 
 ### Isolation et efficacité énergétique
-- **Isolation du grenier** — R-50 recommandé au Québec
-- **Fenêtres** — Double ou triple vitrage pour nos hivers
-- **Système de chauffage** — Type et âge de la fournaise
+- **Isolation du grenier**: R-50 recommandé au Québec
+- **Fenêtres**: Double ou triple vitrage pour nos hivers
+- **Système de chauffage**: Type et âge de la fournaise
 
 ## Combien coûte une inspection à Gatineau?
 
-- **Maison unifamiliale** — Entre 500 $ et 700 $
-- **Condo** — Entre 350 $ et 500 $
-- **[Plex](/investir-plex-gatineau)** — Entre 600 $ et 900 $
-- **Tests supplémentaires** (radon, pyrite, eau) — 100 $ à 300 $ chacun
+- **Maison unifamiliale**: Entre 500 $ et 700 $
+- **Condo**: Entre 350 $ et 500 $
+- **[Plex](/investir-plex-gatineau)**: Entre 600 $ et 900 $
+- **Tests supplémentaires** (radon, pyrite, eau), 100 $ à 300 $ chacun
 
 **Pour aller plus loin** — [10 conseils pour réussir votre premier achat immobilier à Gatineau](/blogue/conseils-premier-achat-maison-gatineau) · [Frais de notaire et frais de clôture à Gatineau : guide complet](/blogue/frais-notaire-achat-maison-gatineau)
 
@@ -1905,32 +1905,32 @@ A pre-purchase inspection is your best protection against costly surprises. In G
 ## Key Elements to Check
 
 ### The Foundation
-- **Cracks** — Distinguish normal cracks from problematic ones
-- **Water infiltration** — Check for traces in the basement
-- **French drain** — Its condition and age (lifespan ~25 years)
-- **Pyrite and iron ochre** — Common problems in some Gatineau areas
+- **Cracks**: Distinguish normal cracks from problematic ones
+- **Water infiltration**: Check for traces in the basement
+- **French drain**: Its condition and age (lifespan ~25 years)
+- **Pyrite and iron ochre**: Common problems in some Gatineau areas
 
 ### The Roof
-- **Covering age** — Asphalt shingles last 20-25 years
-- **Attic ventilation** — Prevents condensation issues
-- **Vents and flashing** — Frequent water entry points
+- **Covering age**: Asphalt shingles last 20-25 years
+- **Attic ventilation**: Prevents condensation issues
+- **Vents and flashing**: Frequent water entry points
 
 ### Plumbing and Electrical
-- **Lead pipes** — Still present in some Hull homes
-- **Electrical panel** — Sufficient amperage (200A recommended)
-- **Water heater** — Age and condition (lifespan ~10 years)
+- **Lead pipes**: Still present in some Hull homes
+- **Electrical panel**: Sufficient amperage (200A recommended)
+- **Water heater**: Age and condition (lifespan ~10 years)
 
 ### Insulation and Energy Efficiency
-- **Attic insulation** — R-50 recommended in Quebec
-- **Windows** — Double or triple glazing for our winters
-- **Heating system** — Type and age of the furnace
+- **Attic insulation**: R-50 recommended in Quebec
+- **Windows**: Double or triple glazing for our winters
+- **Heating system**: Type and age of the furnace
 
 ## How Much Does an Inspection Cost in Gatineau?
 
-- **Single-family home** — Between $500 and $700
-- **Condo** — Between $350 and $500
-- **Plex** — Between $600 and $900
-- **Additional tests** (radon, pyrite, water) — $100 to $300 each
+- **Single-family home**: Between $500 and $700
+- **Condo**: Between $350 and $500
+- **Plex**: Between $600 and $900
+- **Additional tests** (radon, pyrite, water), $100 to $300 each
 
 ## My Advice
 
@@ -1948,7 +1948,7 @@ Never skip the inspection, even in a competitive market. The potential savings f
     metaDescription: "Les 10 meilleurs conseils pour acheter votre première maison à Gatineau : préqualification, mise de fonds, quartiers, et pièges à éviter.",
     metaDescriptionEn: "The 10 best tips for buying your first home in Gatineau: pre-qualification, down payment, neighborhoods, and pitfalls to avoid.",
     excerpt: "De la préqualification au jour de la remise des clés — 10 étapes essentielles pour les premiers acheteurs.",
-    excerptEn: "From pre-qualification to closing day — 10 essential steps for first-time buyers.",
+    excerptEn: "From pre-qualification to closing day, 10 essential steps for first-time buyers.",
     category: "Acheteurs",
     categoryEn: "Buyers",
     featuredImage: blogFirstHomeTips,
@@ -1962,16 +1962,16 @@ Acheter sa première maison est excitant, mais aussi stressant. Voici mes 10 mei
 Avant de visiter, sachez combien vous pouvez emprunter. La préqualification vous donne un budget réaliste et montre aux vendeurs que vous êtes sérieux.
 
 ## 2. Utilisez les programmes pour premiers acheteurs
-- **RAP (Régime d'accession à la propriété)** — Retirez jusqu'à 60 000 $ de votre REER
-- **CELIAPP** — Nouveau compte libre d'impôt spécifiquement pour l'achat
-- **Crédit d'impôt pour l'achat d'une première habitation** — Crédit fédéral de 1 500 $
+- **RAP (Régime d'accession à la propriété)**: Retirez jusqu'à 60 000 $ de votre REER
+- **CELIAPP**: Nouveau compte libre d'impôt spécifiquement pour l'achat
+- **Crédit d'impôt pour l'achat d'une première habitation**: Crédit fédéral de 1 500 $
 
 ## 3. Prévoyez tous les frais
 Au-delà du prix d'achat, prévoyez :
-- **Droits de mutation (taxe de bienvenue)** — 1 % à 1,5 % du prix
-- **Notaire** — 1 200 $ à 2 000 $
-- **Inspection** — 500 $ à 700 $
-- **Déménagement** — 1 000 $ à 3 000 $
+- **Droits de mutation (taxe de bienvenue)**: 1 % à 1,5 % du prix
+- **Notaire**: 1 200 $ à 2 000 $
+- **Inspection**: 500 $ à 700 $
+- **Déménagement**: 1 000 $ à 3 000 $
 
 ## 4. Choisissez le bon quartier pour VOUS
 Gatineau offre des réalités très différentes selon le secteur. Visitez à différentes heures et jours de la semaine.
@@ -2007,16 +2007,16 @@ Buying your first home is exciting but also stressful. Here are my 10 best tips 
 Before visiting, know how much you can borrow. Pre-qualification gives you a realistic budget and shows sellers you're serious.
 
 ## 2. Use First-Time Buyer Programs
-- **HBP (Home Buyers' Plan)** — Withdraw up to $60,000 from your RRSP
-- **FHSA** — New tax-free account specifically for home purchase
-- **First-Time Home Buyers' Tax Credit** — $1,500 federal credit
+- **HBP (Home Buyers' Plan)**: Withdraw up to $60,000 from your RRSP
+- **FHSA**: New tax-free account specifically for home purchase
+- **First-Time Home Buyers' Tax Credit**: $1,500 federal credit
 
 ## 3. Plan for All Costs
 Beyond the purchase price, plan for:
-- **Welcome tax (transfer duties)** — 1% to 1.5% of price
-- **Notary** — $1,200 to $2,000
-- **Inspection** — $500 to $700
-- **Moving** — $1,000 to $3,000
+- **Welcome tax (transfer duties)**: 1% to 1.5% of price
+- **Notary**: $1,200 to $2,000
+- **Inspection**: $500 to $700
+- **Moving**: $1,000 to $3,000
 
 ## 4. Choose the Right Neighborhood for YOU
 Gatineau offers very different realities by area. Visit at different times and days of the week.
@@ -2055,7 +2055,7 @@ I offer a complete service for first-time buyers, from pre-qualification to key 
     metaDescription: "Découvrez les quartiers résidentiels près du Parc de la Gatineau : prix, avantages nature et qualité de vie incomparable.",
     metaDescriptionEn: "Discover residential neighborhoods near Gatineau Park: prices, nature benefits, and unmatched quality of life.",
     excerpt: "Sentiers, lac, ski de fond — vivre à deux pas du Parc de la Gatineau, c'est possible et abordable.",
-    excerptEn: "Trails, lakes, cross-country skiing — living steps from Gatineau Park is possible and affordable.",
+    excerptEn: "Trails, lakes, cross-country skiing, living steps from Gatineau Park is possible and affordable.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: blogGatineauPark,
@@ -2071,34 +2071,34 @@ Les secteurs les plus recherchés en bordure du parc sont [Chelsea](/chelsea) et
 
 ### Chelsea
 - **Village pittoresque** au cœur des collines
-- **Prix** — Maisons à partir de 450 000 $, propriétés de prestige au-delà de 1 M$
-- **Atouts** — Cafés, restaurants, communauté artistique
-- **Accès** — Entrée directe aux sentiers du parc
+- **Prix**: Maisons à partir de 450 000 $, propriétés de prestige au-delà de 1 M$
+- **Atouts**: Cafés, restaurants, communauté artistique
+- **Accès**: Entrée directe aux sentiers du parc
 
 ### Plateau d'Aylmer
 - **Développement récent** avec maisons neuves
-- **Prix** — Entre 500 000 $ et 700 000 $
-- **Atouts** — Écoles, parcs de quartier, proximité du lac
-- **Accès** — Sentiers accessibles à pied ou vélo
+- **Prix**: Entre 500 000 $ et 700 000 $
+- **Atouts**: Écoles, parcs de quartier, proximité du lac
+- **Accès**: Sentiers accessibles à pied ou vélo
 
 ### Old Chelsea / Kingsmere
-- **Prestige et tranquillité** — Grandes propriétés boisées
-- **Prix** — 600 000 $ à 1,5 M$
-- **Atouts** — Domaine Mackenzie-King, Lac Kingsmere
-- **Accès** — Au cœur même du parc
+- **Prestige et tranquillité**: Grandes propriétés boisées
+- **Prix**: 600 000 $ à 1,5 M$
+- **Atouts**: Domaine Mackenzie-King, Lac Kingsmere
+- **Accès**: Au cœur même du parc
 
 ## Avantages de vivre près du parc
 
 ### Santé et bien-être
 - **200+ km de sentiers** de randonnée et vélo
-- **Ski de fond** — Le plus grand réseau en Amérique du Nord
-- **Lac Philippe** — Baignade, camping, canot
-- **Air pur** — Forêt mature à votre porte
+- **Ski de fond**: Le plus grand réseau en Amérique du Nord
+- **Lac Philippe**: Baignade, camping, canot
+- **Air pur**: Forêt mature à votre porte
 
 ### Valeur immobilière
-- **Appréciation supérieure** — La proximité de la nature fait monter la valeur
-- **Demande constante** — Toujours recherché par les acheteurs
-- **Qualité de vie** — Argument de vente puissant à la revente
+- **Appréciation supérieure**: La proximité de la nature fait monter la valeur
+- **Demande constante**: Toujours recherché par les acheteurs
+- **Qualité de vie**: Argument de vente puissant à la revente
 
 **Pour aller plus loin** — [Vivre à Chelsea : style de vie, nature et communauté](/blogue/vivre-chelsea-style-de-vie) · [Vivre à Aylmer : le guide complet du quartier](/blogue/vivre-aylmer-gatineau-guide-quartier)
 
@@ -2113,34 +2113,34 @@ Living near Gatineau Park means having access to 361 km² of wilderness just min
 
 ### Chelsea
 - **Picturesque village** in the hills
-- **Prices** — Homes from $450,000, luxury properties above $1M
-- **Perks** — Cafés, restaurants, artistic community
-- **Access** — Direct entry to park trails
+- **Prices**: Homes from $450,000, luxury properties above $1M
+- **Perks**: Cafés, restaurants, artistic community
+- **Access**: Direct entry to park trails
 
 ### Plateau d'Aylmer
 - **Recent development** with new builds
-- **Prices** — Between $500,000 and $700,000
-- **Perks** — Schools, neighborhood parks, lake proximity
-- **Access** — Trails accessible on foot or bike
+- **Prices**: Between $500,000 and $700,000
+- **Perks**: Schools, neighborhood parks, lake proximity
+- **Access**: Trails accessible on foot or bike
 
 ### Old Chelsea / Kingsmere
-- **Prestige and tranquility** — Large wooded properties
-- **Prices** — $600,000 to $1.5M
-- **Perks** — Mackenzie King Estate, Kingsmere Lake
-- **Access** — At the very heart of the park
+- **Prestige and tranquility**: Large wooded properties
+- **Prices**: $600,000 to $1.5M
+- **Perks**: Mackenzie King Estate, Kingsmere Lake
+- **Access**: At the very heart of the park
 
 ## Benefits of Living Near the Park
 
 ### Health and Wellness
 - **200+ km of trails** for hiking and cycling
-- **Cross-country skiing** — Largest network in North America
-- **Lac Philippe** — Swimming, camping, canoeing
-- **Fresh air** — Mature forest at your doorstep
+- **Cross-country skiing**: Largest network in North America
+- **Lac Philippe**: Swimming, camping, canoeing
+- **Fresh air**: Mature forest at your doorstep
 
 ### Property Value
-- **Superior appreciation** — Nature proximity drives value up
-- **Consistent demand** — Always sought by buyers
-- **Quality of life** — Powerful selling point at resale
+- **Superior appreciation**: Nature proximity drives value up
+- **Consistent demand**: Always sought by buyers
+- **Quality of life**: Powerful selling point at resale
 
 ## My Advice
 
@@ -2158,7 +2158,7 @@ Properties near the park sell quickly. If this lifestyle appeals to you, I can a
     metaDescription: "Guide complet pour acheter un condo à Hull-Gatineau : prix, quartiers Zibi et centre-ville, frais de condo, et potentiel locatif.",
     metaDescriptionEn: "Complete guide to buying a condo in Hull-Gatineau: prices, Zibi and downtown areas, condo fees, and rental potential.",
     excerpt: "Zibi, centre-ville, bord de rivière — Hull offre les meilleurs condos de Gatineau pour vivre ou investir.",
-    excerptEn: "Zibi, downtown, riverfront — Hull offers Gatineau's best condos for living or investing.",
+    excerptEn: "Zibi, downtown, riverfront, Hull offers Gatineau's best condos for living or investing.",
     category: "Investissement",
     categoryEn: "Investment",
     featuredImage: blogCondoHull,
@@ -2172,36 +2172,36 @@ Properties near the park sell quickly. If this lifestyle appeals to you, I can a
 
 ### Emplacement stratégique
 - **À 5 minutes d'Ottawa** via les ponts du Portage et Alexandra
-- **Station du futur tramway** — Augmentation anticipée de la valeur
-- **Services à pied** — Épiceries, restaurants, bars, boutiques
-- **Transport en commun** — Réseau STO dense
+- **Station du futur tramway**: Augmentation anticipée de la valeur
+- **Services à pied**: Épiceries, restaurants, bars, boutiques
+- **Transport en commun**: Réseau STO dense
 
 ### Le projet Zibi
 - **Développement mixte** de 37 acres sur les îles Chaudières
-- **Condos neufs** — Prix à partir de 350 000 $
-- **Certifié One Planet Living** — Développement durable
-- **Vue sur les chutes et la rivière** — Emplacement unique
+- **Condos neufs**: Prix à partir de 350 000 $
+- **Certifié One Planet Living**: Développement durable
+- **Vue sur les chutes et la rivière**: Emplacement unique
 
 ## Prix des condos à Hull en 2025
 
-- **Studio/1 chambre** — 220 000 $ à 320 000 $
-- **2 chambres** — 300 000 $ à 450 000 $
-- **Penthouse/premium** — 500 000 $ à 800 000 $+
-- **Frais de condo** — 200 $ à 500 $ par mois selon l'immeuble
+- **Studio/1 chambre**: 220 000 $ à 320 000 $
+- **2 chambres**: 300 000 $ à 450 000 $
+- **Penthouse/premium**: 500 000 $ à 800 000 $+
+- **Frais de condo**: 200 $ à 500 $ par mois selon l'immeuble
 
 ## Potentiel locatif
 
 Hull offre un excellent potentiel locatif grâce à la demande des fonctionnaires fédéraux et des professionnels travaillant à Ottawa :
-- **Rendement locatif** — 4 % à 5,5 % brut
-- **Taux d'occupation** — Parmi les plus élevés de la région
-- **Location meublée** — Forte demande pour les affectations temporaires
+- **Rendement locatif**: 4 % à 5,5 % brut
+- **Taux d'occupation**: Parmi les plus élevés de la région
+- **Location meublée**: Forte demande pour les affectations temporaires
 
 ## Ce qu'il faut vérifier avant d'acheter
 
-- **Fonds de prévoyance** — Minimum 5 % du budget annuel
-- **Procès-verbaux du syndicat** — Les 3 dernières années
-- **Travaux majeurs prévus** — Toiture, ascenseurs, stationnement
-- **Règlements de copropriété** — Location court terme permise?
+- **Fonds de prévoyance**: Minimum 5 % du budget annuel
+- **Procès-verbaux du syndicat**: Les 3 dernières années
+- **Travaux majeurs prévus**: Toiture, ascenseurs, stationnement
+- **Règlements de copropriété**: Location court terme permise?
 
 ## Mon conseil
 
@@ -2214,36 +2214,36 @@ Hull est idéal pour les acheteurs qui veulent un mode de vie urbain avec accès
 
 ### Strategic Location
 - **5 minutes from Ottawa** via Portage and Alexandra bridges
-- **Future LRT station** — Anticipated value increase
-- **Walkable services** — Groceries, restaurants, bars, shops
-- **Public transit** — Dense STO network
+- **Future LRT station**: Anticipated value increase
+- **Walkable services**: Groceries, restaurants, bars, shops
+- **Public transit**: Dense STO network
 
 ### The Zibi Project
 - **Mixed-use development** of 37 acres on Chaudières Islands
-- **New condos** — Prices from $350,000
-- **One Planet Living certified** — Sustainable development
-- **Falls and river views** — Unique location
+- **New condos**: Prices from $350,000
+- **One Planet Living certified**: Sustainable development
+- **Falls and river views**: Unique location
 
 ## Hull Condo Prices in 2025
 
-- **Studio/1 bedroom** — $220,000 to $320,000
-- **2 bedrooms** — $300,000 to $450,000
-- **Penthouse/premium** — $500,000 to $800,000+
-- **Condo fees** — $200 to $500 per month depending on building
+- **Studio/1 bedroom**: $220,000 to $320,000
+- **2 bedrooms**: $300,000 to $450,000
+- **Penthouse/premium**: $500,000 to $800,000+
+- **Condo fees**: $200 to $500 per month depending on building
 
 ## Rental Potential
 
 Hull offers excellent rental potential thanks to demand from federal employees and professionals working in Ottawa:
-- **Rental yield** — 4% to 5.5% gross
-- **Occupancy rate** — Among the highest in the region
-- **Furnished rental** — Strong demand for temporary assignments
+- **Rental yield**: 4% to 5.5% gross
+- **Occupancy rate**: Among the highest in the region
+- **Furnished rental**: Strong demand for temporary assignments
 
 ## What to Check Before Buying
 
-- **Reserve fund** — Minimum 5% of annual budget
-- **Board meeting minutes** — Last 3 years
-- **Planned major work** — Roof, elevators, parking
-- **Condo bylaws** — Short-term rental allowed?
+- **Reserve fund**: Minimum 5% of annual budget
+- **Board meeting minutes**: Last 3 years
+- **Planned major work**: Roof, elevators, parking
+- **Condo bylaws**: Short-term rental allowed?
 
 ## My Advice
 
@@ -2278,30 +2278,30 @@ Le refinancement consiste à remplacer votre hypothèque actuelle par une nouvel
 ## Quand refinancer?
 
 ### Bonnes raisons de refinancer
-- **Rénovations majeures** — Cuisine, salle de bain, agrandissement
-- **Consolidation de dettes** — Regrouper des dettes à taux élevé
-- **Investissement immobilier** — Mise de fonds pour un plex ou un condo locatif
-- **Études des enfants** — Financer l'éducation à moindre coût
-- **Fonds d'urgence** — Créer un coussin financier
+- **Rénovations majeures**: Cuisine, salle de bain, agrandissement
+- **Consolidation de dettes**: Regrouper des dettes à taux élevé
+- **Investissement immobilier**: Mise de fonds pour un plex ou un condo locatif
+- **Études des enfants**: Financer l'éducation à moindre coût
+- **Fonds d'urgence**: Créer un coussin financier
 
 ### Mauvaises raisons de refinancer
-- **Dépenses de consommation** — Voyages, voiture de luxe
-- **Payer des dettes sans changer vos habitudes** — Risque de repiéger
-- **Marché incertain** — Si les taux montent fortement
+- **Dépenses de consommation**: Voyages, voiture de luxe
+- **Payer des dettes sans changer vos habitudes**: Risque de repiéger
+- **Marché incertain**: Si les taux montent fortement
 
 ## Combien d'équité avez-vous?
 
 Exemple pour une maison à Gatineau :
-- **Valeur marchande actuelle** — 500 000 $
-- **Solde hypothécaire** — 300 000 $
-- **Équité disponible (80 %)** — 400 000 $ – 300 000 $ = **100 000 $**
+- **Valeur marchande actuelle**: 500 000 $
+- **Solde hypothécaire**: 300 000 $
+- **Équité disponible (80 %)**: 400 000 $, 300 000 $ = **100 000 $**
 
 ## Les coûts du refinancement
 
-- **Pénalité de remboursement anticipé** — 3 mois d'intérêts ou le différentiel de taux
-- **Frais de notaire** — 1 000 $ à 1 500 $
-- **Frais d'évaluation** — 300 $ à 500 $
-- **Frais d'inscription** — Variables selon l'institution
+- **Pénalité de remboursement anticipé**: 3 mois d'intérêts ou le différentiel de taux
+- **Frais de notaire**: 1 000 $ à 1 500 $
+- **Frais d'évaluation**: 300 $ à 500 $
+- **Frais d'inscription**: Variables selon l'institution
 
 ## Mon conseil
 
@@ -2319,30 +2319,30 @@ Refinancing means replacing your current mortgage with a new, typically larger o
 ## When to Refinance?
 
 ### Good Reasons to Refinance
-- **Major renovations** — Kitchen, bathroom, addition
-- **Debt consolidation** — Combine high-interest debts
-- **Real estate investment** — Down payment for a plex or rental condo
-- **Children's education** — Fund education at lower cost
-- **Emergency fund** — Create a financial cushion
+- **Major renovations**: Kitchen, bathroom, addition
+- **Debt consolidation**: Combine high-interest debts
+- **Real estate investment**: Down payment for a plex or rental condo
+- **Children's education**: Fund education at lower cost
+- **Emergency fund**: Create a financial cushion
 
 ### Bad Reasons to Refinance
-- **Consumer spending** — Travel, luxury car
-- **Paying debts without changing habits** — Risk of re-trapping
-- **Uncertain market** — If rates are rising sharply
+- **Consumer spending**: Travel, luxury car
+- **Paying debts without changing habits**: Risk of re-trapping
+- **Uncertain market**: If rates are rising sharply
 
 ## How Much Equity Do You Have?
 
 Example for a Gatineau home:
-- **Current market value** — $500,000
-- **Mortgage balance** — $300,000
-- **Available equity (80%)** — $400,000 – $300,000 = **$100,000**
+- **Current market value**: $500,000
+- **Mortgage balance**: $300,000
+- **Available equity (80%)**: $400,000, $300,000 = **$100,000**
 
 ## Refinancing Costs
 
-- **Early repayment penalty** — 3 months' interest or interest rate differential
-- **Notary fees** — $1,000 to $1,500
-- **Appraisal fees** — $300 to $500
-- **Registration fees** — Variable by institution
+- **Early repayment penalty**: 3 months' interest or interest rate differential
+- **Notary fees**: $1,000 to $1,500
+- **Appraisal fees**: $300 to $500
+- **Registration fees**: Variable by institution
 
 ## My Advice
 
@@ -2361,8 +2361,8 @@ Before refinancing, get your property appraised to know its true market value. I
     seoTitleEn: "Rental Market Gatineau · Investor Guide 2025 | YGS",
     metaDescription: "Analyse du marché locatif à Gatineau : taux d'inoccupation, loyers moyens, meilleurs secteurs et rendements pour investisseurs immobiliers.",
     metaDescriptionEn: "Analysis of Gatineau's rental market: vacancy rates, average rents, best areas, and returns for real estate investors.",
-    excerpt: "Taux d'inoccupation bas, loyers en hausse — Gatineau est un marché locatif en or pour les investisseurs.",
-    excerptEn: "Low vacancy rates, rising rents — Gatineau is a golden rental market for investors.",
+    excerpt: "Taux d'inoccupation bas, loyers en hausse, Gatineau est un marché locatif en or pour les investisseurs.",
+    excerptEn: "Low vacancy rates, rising rents, Gatineau is a golden rental market for investors.",
     category: "Investissement",
     categoryEn: "Investment",
     featuredImage: blogRentalMarket,
@@ -2375,43 +2375,43 @@ Avec un taux d'inoccupation parmi les plus bas au Québec et une demande aliment
 ## Les chiffres clés du marché locatif
 
 ### Taux d'inoccupation
-- **Gatineau global** — 2,1 % (sous le seuil d'équilibre de 3 %)
-- **Hull** — 1,8 % (le plus serré)
-- **Aylmer** — 2,5 %
-- **Plateau** — 2,3 %
+- **Gatineau global**: 2,1 % (sous le seuil d'équilibre de 3 %)
+- **Hull**: 1,8 % (le plus serré)
+- **Aylmer**: 2,5 %
+- **Plateau**: 2,3 %
 
 ### Loyers moyens (2025)
-- **3½ (1 chambre)** — 950 $ à 1 200 $ / mois
-- **4½ (2 chambres)** — 1 200 $ à 1 600 $ / mois
-- **5½ (3 chambres)** — 1 500 $ à 2 000 $ / mois
-- **Logement meublé** — Prime de 30 % à 50 %
+- **3½ (1 chambre)**: 950 $ à 1 200 $ / mois
+- **4½ (2 chambres)**: 1 200 $ à 1 600 $ / mois
+- **5½ (3 chambres)**: 1 500 $ à 2 000 $ / mois
+- **Logement meublé**: Prime de 30 % à 50 %
 
 ## Les meilleurs secteurs pour investir
 
-### [Hull](/hull) — Le rendement urbain
-- **Proximité Ottawa** — Forte demande des fonctionnaires
-- **Projet Zibi** — Hausse des valeurs anticipée
-- **Rendement** — 4,5 % à 5,5 % brut
-- **Type idéal** — Plex de 2 à 6 logements
+### [Hull](/hull), Le rendement urbain
+- **Proximité Ottawa**: Forte demande des fonctionnaires
+- **Projet Zibi**: Hausse des valeurs anticipée
+- **Rendement**: 4,5 % à 5,5 % brut
+- **Type idéal**: Plex de 2 à 6 logements
 
-### Gatineau (secteur)— Le volume abordable
-- **Prix d'entrée bas** — Plex à partir de 400 000 $
-- **Rendement** — 5 % à 6,5 % brut
-- **Type idéal** — Triplex et quadruplex
-- **Clientèle** — Familles, travailleurs, étudiants UQO
+### Gatineau (secteur), Le volume abordable
+- **Prix d'entrée bas**: Plex à partir de 400 000 $
+- **Rendement**: 5 % à 6,5 % brut
+- **Type idéal**: Triplex et quadruplex
+- **Clientèle**: Familles, travailleurs, étudiants UQO
 
-### [Buckingham](/buckingham-masson-angers) — Le potentiel caché
-- **Prix très bas** — Duplex à partir de 300 000 $
-- **Rendement** — 6 % à 8 % brut
-- **Risque** — Taux de roulement plus élevé
-- **Potentiel** — Développement futur du secteur
+### [Buckingham](/buckingham-masson-angers), Le potentiel caché
+- **Prix très bas**: Duplex à partir de 300 000 $
+- **Rendement**: 6 % à 8 % brut
+- **Risque**: Taux de roulement plus élevé
+- **Potentiel**: Développement futur du secteur
 
 ## Réglementation au Québec
 
-- **Tribunal administratif du logement (TAL)** — Encadre les augmentations
-- **Augmentations suggérées** — Basées sur l'indice du TAL (~3 % à 5 %)
-- **Bail type** — Obligatoire au Québec
-- **Reprise de logement** — Possible mais encadrée
+- **Tribunal administratif du logement (TAL)**: Encadre les augmentations
+- **Augmentations suggérées**: Basées sur l'indice du TAL (~3 % à 5 %)
+- **Bail type**: Obligatoire au Québec
+- **Reprise de logement**: Possible mais encadrée
 
 ## Mon conseil
 
@@ -2425,43 +2425,43 @@ With one of the lowest vacancy rates in Quebec and demand fueled by federal empl
 ## Key Rental Market Figures
 
 ### Vacancy Rates
-- **Overall Gatineau** — 2.1% (below the 3% equilibrium threshold)
-- **Hull** — 1.8% (tightest)
-- **Aylmer** — 2.5%
-- **Plateau** — 2.3%
+- **Overall Gatineau**: 2.1% (below the 3% equilibrium threshold)
+- **Hull**: 1.8% (tightest)
+- **Aylmer**: 2.5%
+- **Plateau**: 2.3%
 
 ### Average Rents (2025)
-- **3½ (1 bedroom)** — $950 to $1,200/month
-- **4½ (2 bedrooms)** — $1,200 to $1,600/month
-- **5½ (3 bedrooms)** — $1,500 to $2,000/month
-- **Furnished unit** — 30% to 50% premium
+- **3½ (1 bedroom)**: $950 to $1,200/month
+- **4½ (2 bedrooms)**: $1,200 to $1,600/month
+- **5½ (3 bedrooms)**: $1,500 to $2,000/month
+- **Furnished unit**: 30% to 50% premium
 
 ## Best Areas for Investment
 
-### [Hull](/en/hull) — Urban Returns
-- **Ottawa proximity** — Strong demand from civil servants
-- **Zibi project** — Anticipated value increase
-- **Yield** — 4.5% to 5.5% gross
-- **Ideal type** — 2 to 6-unit plex
+### [Hull](/en/hull), Urban Returns
+- **Ottawa proximity**: Strong demand from civil servants
+- **Zibi project**: Anticipated value increase
+- **Yield**: 4.5% to 5.5% gross
+- **Ideal type**: 2 to 6-unit plex
 
-### Gatineau (sector) — Affordable Volume
-- **Low entry price** — Plex from $400,000
-- **Yield** — 5% to 6.5% gross
-- **Ideal type** — Triplex and quadruplex
-- **Tenants** — Families, workers, UQO students
+### Gatineau (sector), Affordable Volume
+- **Low entry price**: Plex from $400,000
+- **Yield**: 5% to 6.5% gross
+- **Ideal type**: Triplex and quadruplex
+- **Tenants**: Families, workers, UQO students
 
-### [Buckingham](/en/buckingham) — Hidden Potential
-- **Very low prices** — Duplex from $300,000
-- **Yield** — 6% to 8% gross
-- **Risk** — Higher turnover rate
-- **Potential** — Future area development
+### [Buckingham](/en/buckingham), Hidden Potential
+- **Very low prices**: Duplex from $300,000
+- **Yield**: 6% to 8% gross
+- **Risk**: Higher turnover rate
+- **Potential**: Future area development
 
 ## Quebec Regulations
 
-- **Administrative Housing Tribunal (TAL)** — Regulates increases
-- **Suggested increases** — Based on TAL index (~3% to 5%)
-- **Standard lease** — Mandatory in Quebec
-- **Unit repossession** — Possible but regulated
+- **Administrative Housing Tribunal (TAL)**: Regulates increases
+- **Suggested increases**: Based on TAL index (~3% to 5%)
+- **Standard lease**: Mandatory in Quebec
+- **Unit repossession**: Possible but regulated
 
 ## My Advice
 
@@ -2481,7 +2481,7 @@ Before investing, analyze the numbers with a local broker. I provide free profit
     metaDescription: "Guide complet de la copropriété à Gatineau : frais de condo, syndicat, fonds de prévoyance, droits et obligations des copropriétaires.",
     metaDescriptionEn: "Complete guide to condo ownership in Gatineau: condo fees, board, reserve fund, rights and obligations of co-owners.",
     excerpt: "Frais de condo, syndicat, fonds de prévoyance — tout comprendre avant d'acheter en copropriété.",
-    excerptEn: "Condo fees, board, reserve fund — understand everything before buying a condo.",
+    excerptEn: "Condo fees, board, reserve fund, understand everything before buying a condo.",
     category: "Acheteurs",
     categoryEn: "Buyers",
     featuredImage: blogCopropriete,
@@ -2498,38 +2498,38 @@ En copropriété divise, vous êtes propriétaire de votre unité (partie privat
 ## Les frais de condo
 
 ### Ce qu'ils couvrent
-- **Assurance de l'immeuble** — Structure et parties communes
-- **Entretien des espaces communs** — Ménage, déneigement, aménagement
-- **Fonds de prévoyance** — Réserve pour les travaux majeurs
-- **Services** — Eau chaude, chauffage (selon l'immeuble)
-- **Administration** — Gestion du syndicat
+- **Assurance de l'immeuble**: Structure et parties communes
+- **Entretien des espaces communs**: Ménage, déneigement, aménagement
+- **Fonds de prévoyance**: Réserve pour les travaux majeurs
+- **Services**: Eau chaude, chauffage (selon l'immeuble)
+- **Administration**: Gestion du syndicat
 
 ### Frais moyens à Gatineau
-- **Petit immeuble (4-12 unités)** — 150 $ à 300 $ / mois
-- **Immeuble moyen (12-50 unités)** — 250 $ à 450 $ / mois
-- **Grand immeuble avec services** — 400 $ à 700 $ / mois
+- **Petit immeuble (4-12 unités)**: 150 $ à 300 $ / mois
+- **Immeuble moyen (12-50 unités)**: 250 $ à 450 $ / mois
+- **Grand immeuble avec services**: 400 $ à 700 $ / mois
 
 ## Le syndicat de copropriété
 
 ### Rôle du syndicat
-- **Administrer l'immeuble** — Entretien, réparations, contrats
-- **Gérer les finances** — Budget, cotisations, fonds de prévoyance
-- **Faire respecter les règlements** — Déclaration de copropriété
-- **Prendre les décisions collectives** — Assemblée des copropriétaires
+- **Administrer l'immeuble**: Entretien, réparations, contrats
+- **Gérer les finances**: Budget, cotisations, fonds de prévoyance
+- **Faire respecter les règlements**: Déclaration de copropriété
+- **Prendre les décisions collectives**: Assemblée des copropriétaires
 
 ### Ce qu'il faut vérifier
-- **Procès-verbaux des 3 dernières années** — Conflits, travaux prévus
-- **État du fonds de prévoyance** — Minimum 5 % du budget
-- **Cotisations spéciales récentes** — Signe de mauvaise planification
-- **Carnet d'entretien** — Historique des travaux
+- **Procès-verbaux des 3 dernières années**: Conflits, travaux prévus
+- **État du fonds de prévoyance**: Minimum 5 % du budget
+- **Cotisations spéciales récentes**: Signe de mauvaise planification
+- **Carnet d'entretien**: Historique des travaux
 
 ## Le fonds de prévoyance
 
 Le fonds de prévoyance est la réserve financière pour les travaux majeurs futurs :
-- **Toiture** — 30 000 $ à 100 000 $+
-- **Ascenseur** — 50 000 $ à 150 000 $
-- **Stationnement souterrain** — 100 000 $+
-- **Fenêtres communes** — Variable
+- **Toiture**: 30 000 $ à 100 000 $+
+- **Ascenseur**: 50 000 $ à 150 000 $
+- **Stationnement souterrain**: 100 000 $+
+- **Fenêtres communes**: Variable
 
 Un fonds bien garni vous protège des cotisations spéciales imprévues.
 
@@ -2549,38 +2549,38 @@ In divided co-ownership, you own your unit (private portion) and co-own common a
 ## Condo Fees
 
 ### What They Cover
-- **Building insurance** — Structure and common areas
-- **Common area maintenance** — Cleaning, snow removal, landscaping
-- **Reserve fund** — Savings for major work
-- **Services** — Hot water, heating (depending on building)
-- **Administration** — Board management
+- **Building insurance**: Structure and common areas
+- **Common area maintenance**: Cleaning, snow removal, landscaping
+- **Reserve fund**: Savings for major work
+- **Services**: Hot water, heating (depending on building)
+- **Administration**: Board management
 
 ### Average Fees in Gatineau
-- **Small building (4-12 units)** — $150 to $300/month
-- **Medium building (12-50 units)** — $250 to $450/month
-- **Large building with amenities** — $400 to $700/month
+- **Small building (4-12 units)**: $150 to $300/month
+- **Medium building (12-50 units)**: $250 to $450/month
+- **Large building with amenities**: $400 to $700/month
 
 ## The Condo Board (Syndicate)
 
 ### Board's Role
-- **Manage the building** — Maintenance, repairs, contracts
-- **Handle finances** — Budget, fees, reserve fund
-- **Enforce bylaws** — Declaration of co-ownership
-- **Make collective decisions** — Co-owners' assembly
+- **Manage the building**: Maintenance, repairs, contracts
+- **Handle finances**: Budget, fees, reserve fund
+- **Enforce bylaws**: Declaration of co-ownership
+- **Make collective decisions**: Co-owners' assembly
 
 ### What to Check
-- **Last 3 years of minutes** — Conflicts, planned work
-- **Reserve fund status** — Minimum 5% of budget
-- **Recent special assessments** — Sign of poor planning
-- **Maintenance log** — Work history
+- **Last 3 years of minutes**: Conflicts, planned work
+- **Reserve fund status**: Minimum 5% of budget
+- **Recent special assessments**: Sign of poor planning
+- **Maintenance log**: Work history
 
 ## The Reserve Fund
 
 The reserve fund is the financial reserve for future major work:
-- **Roof** — $30,000 to $100,000+
-- **Elevator** — $50,000 to $150,000
-- **Underground parking** — $100,000+
-- **Common windows** — Variable
+- **Roof**: $30,000 to $100,000+
+- **Elevator**: $50,000 to $150,000
+- **Underground parking**: $100,000+
+- **Common windows**: Variable
 
 A well-funded reserve protects you from unexpected special assessments.
 
@@ -2602,7 +2602,7 @@ Before buying a condo in Gatineau, always request: meeting minutes, reserve fund
     metaDescription: "Découvrez 7 conseils pour vendre votre maison en hiver à Gatineau : mise en valeur, photos, prix et pourquoi l'hiver peut être un avantage.",
     metaDescriptionEn: "Discover 7 tips for selling your home in winter in Gatineau: staging, photos, pricing, and why winter can be an advantage.",
     excerpt: "Moins de concurrence, acheteurs sérieux — vendre en hiver à Gatineau peut être une stratégie gagnante.",
-    excerptEn: "Less competition, serious buyers — selling in winter in Gatineau can be a winning strategy.",
+    excerptEn: "Less competition, serious buyers, selling in winter in Gatineau can be a winning strategy.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     featuredImage: blogWinterSelling,
@@ -2615,45 +2615,45 @@ Beaucoup de propriétaires attendent le printemps pour vendre. Pourtant, l'hiver
 ## Pourquoi vendre en hiver?
 
 ### Moins de concurrence
-- **Moins de propriétés sur le marché** — Votre maison se démarque
-- **Acheteurs plus sérieux** — Ceux qui cherchent en janvier veulent vraiment acheter
-- **Pouvoir de négociation** — Moins d'options = moins de pression sur le prix
+- **Moins de propriétés sur le marché**: Votre maison se démarque
+- **Acheteurs plus sérieux**: Ceux qui cherchent en janvier veulent vraiment acheter
+- **Pouvoir de négociation**: Moins d'options = moins de pression sur le prix
 
 ### Demande constante
-- **Fonctionnaires fédéraux** — Mutations toute l'année
-- **Militaires** — Affectations qui ne suivent pas les saisons
-- **Nouveaux arrivants** — Immigration continue en hiver
+- **Fonctionnaires fédéraux**: Mutations toute l'année
+- **Militaires**: Affectations qui ne suivent pas les saisons
+- **Nouveaux arrivants**: Immigration continue en hiver
 
 ## 7 conseils pour vendre en hiver à Gatineau
 
 ### 1. L'entrée doit être impeccable
 - **Déneigez** l'entrée, les marches et le trottoir
-- **Éclairage extérieur** — Les visites se font souvent en fin de journée
-- **Sel et tapis** — Sécurité et propreté pour les visiteurs
+- **Éclairage extérieur**: Les visites se font souvent en fin de journée
+- **Sel et tapis**: Sécurité et propreté pour les visiteurs
 
 ### 2. Misez sur la chaleur et le confort
-- **Température agréable** — 21-22°C lors des visites
-- **Éclairage chaud** — Toutes les lumières allumées
-- **Foyer allumé** — Si vous en avez un, c'est le moment
+- **Température agréable**: 21-22°C lors des visites
+- **Éclairage chaud**: Toutes les lumières allumées
+- **Foyer allumé**: Si vous en avez un, c'est le moment
 
 ### 3. Photos professionnelles d'été ET d'hiver
-- **Gardez vos photos d'été** — Montrez le potentiel de la cour et du terrain
-- **Ajoutez des photos d'hiver** — Montrez que la maison est belle en toute saison
+- **Gardez vos photos d'été**: Montrez le potentiel de la cour et du terrain
+- **Ajoutez des photos d'hiver**: Montrez que la maison est belle en toute saison
 
 ### 4. Montrez l'efficacité énergétique
-- **Factures de chauffage** — Préparez-les pour les acheteurs
-- **Isolation** — Mettez en valeur les améliorations
-- **Fenêtres** — Triple vitrage = argument de vente
+- **Factures de chauffage**: Préparez-les pour les acheteurs
+- **Isolation**: Mettez en valeur les améliorations
+- **Fenêtres**: Triple vitrage = argument de vente
 
 ### 5. Fixez le bon prix dès le départ
-- **Analyse comparative** — Basée sur les ventes récentes du quartier
-- **Prix réaliste** — Les acheteurs d'hiver sont bien informés
-- **Marge de négociation** — Prévoyez 2 % à 3 %
+- **Analyse comparative**: Basée sur les ventes récentes du quartier
+- **Prix réaliste**: Les acheteurs d'hiver sont bien informés
+- **Marge de négociation**: Prévoyez 2 % à 3 %
 
 ### 6. Flexibilité pour les visites
-- **Horaires souples** — Fin de semaine et soirées
-- **Visites virtuelles** — Pour les acheteurs d'Ottawa ou de loin
-- **Réponse rapide** — Les acheteurs d'hiver sont motivés
+- **Horaires souples**: Fin de semaine et soirées
+- **Visites virtuelles**: Pour les acheteurs d'Ottawa ou de loin
+- **Réponse rapide**: Les acheteurs d'hiver sont motivés
 
 ### 7. Travaillez avec un courtier actif en hiver
 Un courtier qui ne ralentit pas en hiver fait toute la différence.
@@ -2670,45 +2670,45 @@ Many homeowners wait until spring to sell. Yet winter offers unique advantages i
 ## Why Sell in Winter?
 
 ### Less Competition
-- **Fewer properties on the market** — Your home stands out
-- **More serious buyers** — Those looking in January really want to buy
-- **Negotiating power** — Fewer options = less price pressure
+- **Fewer properties on the market**: Your home stands out
+- **More serious buyers**: Those looking in January really want to buy
+- **Negotiating power**: Fewer options = less price pressure
 
 ### Constant Demand
-- **Federal employees** — Transfers year-round
-- **Military** — Postings that don't follow seasons
-- **Newcomers** — Immigration continues in winter
+- **Federal employees**: Transfers year-round
+- **Military**: Postings that don't follow seasons
+- **Newcomers**: Immigration continues in winter
 
 ## 7 Tips for Selling in Winter in Gatineau
 
 ### 1. The Entrance Must Be Impeccable
 - **Shovel** the driveway, steps, and sidewalk
-- **Outdoor lighting** — Showings often happen in the evening
-- **Salt and mats** — Safety and cleanliness for visitors
+- **Outdoor lighting**: Showings often happen in the evening
+- **Salt and mats**: Safety and cleanliness for visitors
 
 ### 2. Focus on Warmth and Comfort
-- **Comfortable temperature** — 21-22°C during showings
-- **Warm lighting** — All lights on
-- **Fireplace on** — If you have one, now's the time
+- **Comfortable temperature**: 21-22°C during showings
+- **Warm lighting**: All lights on
+- **Fireplace on**: If you have one, now's the time
 
 ### 3. Professional Summer AND Winter Photos
-- **Keep your summer photos** — Show the yard's potential
-- **Add winter photos** — Show the home is beautiful in every season
+- **Keep your summer photos**: Show the yard's potential
+- **Add winter photos**: Show the home is beautiful in every season
 
 ### 4. Showcase Energy Efficiency
-- **Heating bills** — Prepare them for buyers
-- **Insulation** — Highlight improvements
-- **Windows** — Triple glazing = selling point
+- **Heating bills**: Prepare them for buyers
+- **Insulation**: Highlight improvements
+- **Windows**: Triple glazing = selling point
 
 ### 5. Set the Right Price from the Start
-- **Comparative analysis** — Based on recent neighborhood sales
-- **Realistic price** — Winter buyers are well-informed
-- **Negotiation margin** — Plan 2% to 3%
+- **Comparative analysis**: Based on recent neighborhood sales
+- **Realistic price**: Winter buyers are well-informed
+- **Negotiation margin**: Plan 2% to 3%
 
 ### 6. Be Flexible for Showings
-- **Flexible schedule** — Weekends and evenings
-- **Virtual tours** — For Ottawa or out-of-town buyers
-- **Quick response** — Winter buyers are motivated
+- **Flexible schedule**: Weekends and evenings
+- **Virtual tours**: For Ottawa or out-of-town buyers
+- **Quick response**: Winter buyers are motivated
 
 ### 7. Work with a Broker Active in Winter
 A broker who doesn't slow down in winter makes all the difference.
@@ -2731,7 +2731,7 @@ I'm active 12 months a year. In winter, I deploy adapted strategies: professiona
     metaDescription: "Les 8 avantages de travailler avec un courtier immobilier à Gatineau : négociation, prix, protection légale et accompagnement personnalisé.",
     metaDescriptionEn: "The 8 benefits of working with a real estate broker in Gatineau: negotiation, pricing, legal protection, and personalized guidance.",
     excerpt: "Négociation, protection légale, connaissance du marché — voici pourquoi un courtier local fait la différence.",
-    excerptEn: "Negotiation, legal protection, market knowledge — here's why a local broker makes the difference.",
+    excerptEn: "Negotiation, legal protection, market knowledge, here's why a local broker makes the difference.",
     category: "Conseils",
     categoryEn: "Tips",
     featuredImage: blogCourtierAvantages,
@@ -2744,54 +2744,54 @@ I'm active 12 months a year. In winter, I deploy adapted strategies: professiona
 ## 1. Connaissance approfondie du marché local
 
 Un courtier de Gatineau connaît :
-- **Les prix réels par quartier** — Pas juste les données générales
-- **Les tendances micro-locales** — Quels secteurs montent, lesquels stagnent
-- **Les projets d'infrastructure** — Tramway, ponts, développements qui affectent la valeur
-- **Les particularités québécoises** — Taxes, réglementation, processus d'achat
+- **Les prix réels par quartier**: Pas juste les données générales
+- **Les tendances micro-locales**: Quels secteurs montent, lesquels stagnent
+- **Les projets d'infrastructure**: Tramway, ponts, développements qui affectent la valeur
+- **Les particularités québécoises**: Taxes, réglementation, processus d'achat
 
 ## 2. Évaluation juste de votre propriété
 
-- **[Analyse comparative de marché (ACM)](/evaluation-gratuite-gatineau)** — Basée sur les ventes réelles
-- **Ajustements précis** — Rénovations, emplacement, état de la propriété
-- **Prix stratégique** — Ni trop haut (stagnation) ni trop bas (perte d'argent)
+- **[Analyse comparative de marché (ACM)](/evaluation-gratuite-gatineau)**: Basée sur les ventes réelles
+- **Ajustements précis**: Rénovations, emplacement, état de la propriété
+- **Prix stratégique**: Ni trop haut (stagnation) ni trop bas (perte d'argent)
 
 ## 3. Négociation professionnelle
 
-- **Expérience des contre-offres** — Savoir quand céder et quand tenir
-- **Gestion des émotions** — Un courtier négocie avec la tête, pas le cœur
-- **Résultats prouvés** — En moyenne, les courtiers obtiennent un meilleur prix
+- **Expérience des contre-offres**: Savoir quand céder et quand tenir
+- **Gestion des émotions**: Un courtier négocie avec la tête, pas le cœur
+- **Résultats prouvés**: En moyenne, les courtiers obtiennent un meilleur prix
 
 ## 4. Protection légale
 
-- **Assurance responsabilité** — Vous êtes protégé en cas d'erreur
-- **Conformité OACIQ** — Code de déontologie strict
-- **Documents conformes** — Promesse d'achat, déclarations, contrats
+- **Assurance responsabilité**: Vous êtes protégé en cas d'erreur
+- **Conformité OACIQ**: Code de déontologie strict
+- **Documents conformes**: Promesse d'achat, déclarations, contrats
 
 ## 5. Marketing professionnel
 
-- **Photos professionnelles** — Première impression déterminante
-- **Visites virtuelles 3D** — Attire les acheteurs d'Ottawa et d'ailleurs
-- **Réseaux MLS et Centris** — Visibilité maximale
-- **Réseaux sociaux** — Ciblage précis des acheteurs potentiels
+- **Photos professionnelles**: Première impression déterminante
+- **Visites virtuelles 3D**: Attire les acheteurs d'Ottawa et d'ailleurs
+- **Réseaux MLS et Centris**: Visibilité maximale
+- **Réseaux sociaux**: Ciblage précis des acheteurs potentiels
 
 ## 6. Réseau de professionnels
 
-- **Notaires, inspecteurs, courtiers hypothécaires** — Références de confiance
-- **Entrepreneurs** — Pour les réparations pré-vente
-- **Autres courtiers** — Réseau de collaboration pour trouver l'acheteur
+- **Notaires, inspecteurs, courtiers hypothécaires**: Références de confiance
+- **Entrepreneurs**: Pour les réparations pré-vente
+- **Autres courtiers**: Réseau de collaboration pour trouver l'acheteur
 
 ## 7. Gain de temps considérable
 
-- **Filtrage des acheteurs** — Seulement les candidats sérieux
-- **Gestion des visites** — Organisation et suivi
-- **Paperasse** — Le courtier gère les documents complexes
+- **Filtrage des acheteurs**: Seulement les candidats sérieux
+- **Gestion des visites**: Organisation et suivi
+- **Paperasse**: Le courtier gère les documents complexes
 
 ## 8. Accompagnement de A à Z
 
-- **Première rencontre** — Évaluation de vos besoins
-- **Stratégie personnalisée** — Plan adapté à votre situation
-- **Jusqu'à la signature** — Présent chez le notaire
-- **Après-vente** — Disponible pour vos questions
+- **Première rencontre**: Évaluation de vos besoins
+- **Stratégie personnalisée**: Plan adapté à votre situation
+- **Jusqu'à la signature**: Présent chez le notaire
+- **Après-vente**: Disponible pour vos questions
 
 **Pour aller plus loin** — [Home staging à Gatineau : vendre plus vite et au meilleur prix](/blogue/home-staging-vendre-plus-vite-gatineau) · [Quand vendre sa maison à Gatineau pour maximiser son prix?](/blogue/quand-vendre-sa-maison-gatineau)
 
@@ -2805,54 +2805,54 @@ Selling or buying without a broker may seem economical, but the risks and missed
 ## 1. Deep Local Market Knowledge
 
 A Gatineau broker knows:
-- **Real prices by neighborhood** — Not just general data
-- **Micro-local trends** — Which areas are rising, which are stagnating
-- **Infrastructure projects** — LRT, bridges, developments affecting value
-- **Quebec specifics** — Taxes, regulations, purchase process
+- **Real prices by neighborhood**: Not just general data
+- **Micro-local trends**: Which areas are rising, which are stagnating
+- **Infrastructure projects**: LRT, bridges, developments affecting value
+- **Quebec specifics**: Taxes, regulations, purchase process
 
 ## 2. Fair Property Valuation
 
-- **Comparative market analysis (CMA)** — Based on actual sales
-- **Precise adjustments** — Renovations, location, property condition
-- **Strategic pricing** — Not too high (stagnation) or too low (lost money)
+- **Comparative market analysis (CMA)**: Based on actual sales
+- **Precise adjustments**: Renovations, location, property condition
+- **Strategic pricing**: Not too high (stagnation) or too low (lost money)
 
 ## 3. Professional Negotiation
 
-- **Counter-offer experience** — Knowing when to concede and when to hold
-- **Emotion management** — A broker negotiates with their head, not heart
-- **Proven results** — On average, brokers get a better price
+- **Counter-offer experience**: Knowing when to concede and when to hold
+- **Emotion management**: A broker negotiates with their head, not heart
+- **Proven results**: On average, brokers get a better price
 
 ## 4. Legal Protection
 
-- **Liability insurance** — You're protected in case of error
-- **OACIQ compliance** — Strict code of ethics
-- **Compliant documents** — Purchase offer, declarations, contracts
+- **Liability insurance**: You're protected in case of error
+- **OACIQ compliance**: Strict code of ethics
+- **Compliant documents**: Purchase offer, declarations, contracts
 
 ## 5. Professional Marketing
 
-- **Professional photos** — First impression is decisive
-- **3D virtual tours** — Attracts buyers from Ottawa and beyond
-- **MLS and Centris networks** — Maximum visibility
-- **Social media** — Precise targeting of potential buyers
+- **Professional photos**: First impression is decisive
+- **3D virtual tours**: Attracts buyers from Ottawa and beyond
+- **MLS and Centris networks**: Maximum visibility
+- **Social media**: Precise targeting of potential buyers
 
 ## 6. Professional Network
 
-- **Notaries, inspectors, mortgage brokers** — Trusted referrals
-- **Contractors** — For pre-sale repairs
-- **Other brokers** — Collaborative network to find the buyer
+- **Notaries, inspectors, mortgage brokers**: Trusted referrals
+- **Contractors**: For pre-sale repairs
+- **Other brokers**: Collaborative network to find the buyer
 
 ## 7. Significant Time Savings
 
-- **Buyer screening** — Only serious candidates
-- **Showing management** — Organization and follow-up
-- **Paperwork** — The broker handles complex documents
+- **Buyer screening**: Only serious candidates
+- **Showing management**: Organization and follow-up
+- **Paperwork**: The broker handles complex documents
 
 ## 8. End-to-End Support
 
-- **First meeting** — Assessment of your needs
-- **Personalized strategy** — Plan adapted to your situation
-- **Until signing** — Present at the notary
-- **After-sale** — Available for your questions
+- **First meeting**: Assessment of your needs
+- **Personalized strategy**: Plan adapted to your situation
+- **Until signing**: Present at the notary
+- **After-sale**: Available for your questions
 
 ## My Approach
 

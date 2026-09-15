@@ -14,15 +14,15 @@ import heroImg from "@/assets/hero-military-relocation.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau — je vous guide vers les quartiers qui correspondent à vos priorités." },
+  { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau, je vous guide vers les quartiers qui correspondent à vos priorités." },
   { icon: Home, title: "Coordonner vente et achat", text: "Vendre votre propriété actuelle tout en achetant à Gatineau demande une coordination serrée." },
-  { icon: DollarSign, title: "Comprendre le marché", text: "Les prix, les taxes et le processus au Québec sont différents — il faut un guide local." },
+  { icon: DollarSign, title: "Comprendre le marché", text: "Les prix, les taxes et le processus au Québec sont différents, il faut un guide local." },
 ];
 
 const steps = [
   { num: "01", title: "Évaluation de la situation", desc: "Calendrier de mutation, budget, priorités familiales et secteurs ciblés." },
   { num: "02", title: "Recherche ciblée", desc: "Visites virtuelles ou en personne, sélection adaptée à votre profil militaire." },
-  { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection, notaire — tout est géré pour simplifier votre transition." },
+  { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection, notaire, tout est géré pour simplifier votre transition." },
 ];
 
 
@@ -71,14 +71,14 @@ const MilitaryRelocationPage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Guide relocalisation militaire gratuit"
-      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau — dans un guide envoyé par courriel."
+      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide"
     />
 
     <CTASection
       dark
       title="Planifions votre relocalisation"
-      text="Parlez-moi de votre mutation — on bâtit un plan ensemble."
+      text="Parlez-moi de votre mutation, on bâtit un plan ensemble."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
@@ -88,7 +88,7 @@ const MilitaryRelocationPage = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit, recevez-le par courriel" />
   </>
 );
 

@@ -17,15 +17,15 @@ import heroImg from "@/assets/hero-buckingham-gen.webp";
 const faq = [
   {
     q: "Buckingham est-il trop loin d'Ottawa pour y habiter?",
-    a: "Buckingham est à environ 45-50 minutes d'Ottawa en voiture selon le trafic. Pour un travail en présentiel quotidien à Ottawa, c'est effectivement un trajet important. Pour du télétravail partiel ou un emploi à Gatineau, c'est tout à fait gérable — et le gain en espace et en qualité de vie est significatif. Lors de notre consultation, je peux vous aider à peser honnêtement ce compromis selon votre situation réelle.",
+    a: "Buckingham est à environ 45-50 minutes d'Ottawa en voiture selon le trafic. Pour un travail en présentiel quotidien à Ottawa, c'est effectivement un trajet important. Pour du télétravail partiel ou un emploi à Gatineau, c'est tout à fait gérable, et le gain en espace et en qualité de vie est significatif. Lors de notre consultation, je peux vous aider à peser honnêtement ce compromis selon votre situation réelle.",
   },
   {
     q: "Y a-t-il des services à Buckingham?",
-    a: "Oui — Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. Pour les grandes surfaces et les spécialistes médicaux, on va vers le centre de Gatineau (30-40 minutes).",
+    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. Pour les grandes surfaces et les spécialistes médicaux, on va vers le centre de Gatineau (30-40 minutes).",
   },
   {
     q: "Les propriétés à Buckingham ont-elles des puits?",
-    a: "Une bonne partie de Buckingham est connectée à l'aqueduc et aux égouts municipaux — contrairement aux secteurs plus ruraux comme Cantley ou L'Ange-Gardien. Dans le cœur du secteur Buckingham, les propriétés sont généralement sur les services municipaux. En périphérie, vérification nécessaire. Je confirme systématiquement ce point pour chaque propriété visitée.",
+    a: "Une bonne partie de Buckingham est connectée à l'aqueduc et aux égouts municipaux, contrairement aux secteurs plus ruraux comme Cantley ou L'Ange-Gardien. Dans le cœur du secteur Buckingham, les propriétés sont généralement sur les services municipaux. En périphérie, vérification nécessaire. Je confirme systématiquement ce point pour chaque propriété visitée.",
   },
 ];
 
@@ -41,7 +41,7 @@ const subSectors = [
   },
   {
     title: "Angers / L'Ange-Gardien",
-    text: "Zone de transition vers les MRC rurales. Grandes propriétés, boisés, silence. Pour ceux qui cherchent vraiment l'espace. Puits et fosses septiques fréquents — l'inspection est cruciale dans ce secteur.",
+    text: "Zone de transition vers les MRC rurales. Grandes propriétés, boisés, silence. Pour ceux qui cherchent vraiment l'espace. Puits et fosses septiques fréquents, l'inspection est cruciale dans ce secteur.",
   },
 ];
 
@@ -86,13 +86,13 @@ const BuckinghamPage = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT</p>
-      <h2 className="mt-3">Buckingham et Masson-Angers — les faits</h2>
+      <h2 className="mt-3">Buckingham et Masson-Angers, les faits</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle — son économie était fondée sur les papetières pendant plus d'un siècle — Buckingham est aujourd'hui un secteur résidentiel tranquille avec une identité communautaire forte et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
+          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle, son économie était fondée sur les papetières pendant plus d'un siècle, Buckingham est aujourd'hui un secteur résidentiel tranquille avec une identité communautaire forte et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
         </p>
         <p className="prose-body">
-          Ce qui distingue fondamentalement ce secteur de tous les autres à Gatineau : l'espace. Les terrains sont plus grands, les maisons sont plus spacieuses, et les rues sont plus calmes. Ce secteur attire principalement des familles établies, des acheteurs en upsizing qui veulent plus d'espace, et — depuis 2020 — des travailleurs en télétravail qui n'ont plus besoin d'être proches d'Ottawa au quotidien.
+          Ce qui distingue fondamentalement ce secteur de tous les autres à Gatineau : l'espace. Les terrains sont plus grands, les maisons sont plus spacieuses, et les rues sont plus calmes. Ce secteur attire principalement des familles établies, des acheteurs en upsizing qui veulent plus d'espace, et, depuis 2020, des travailleurs en télétravail qui n'ont plus besoin d'être proches d'Ottawa au quotidien.
         </p>
         <p className="prose-body">
           Buckingham dispose d'un centre-ville vivant : épiceries, pharmacie, restaurants, clinique médicale, bibliothèque, aréna, école secondaire. Pour les grandes surfaces et les services spécialisés, on se dirige vers le centre de Gatineau (30-40 minutes).
@@ -119,7 +119,7 @@ const BuckinghamPage = () => (
     {/* ═══ SECTION 3 — La distance ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">HONNÊTETÉ</p>
-      <h2 className="mt-3">La question de la distance — une réponse honnête</h2>
+      <h2 className="mt-3">La question de la distance, une réponse honnête</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
           La principale question que les acheteurs posent sur Buckingham : « N'est-ce pas trop loin? »
@@ -128,7 +128,7 @@ const BuckinghamPage = () => (
           La réponse honnête dépend de votre situation. Buckingham est à environ 45-50 minutes d'Ottawa selon le trafic, et à 30-40 minutes du centre de Gatineau. Pour quelqu'un qui travaille à temps plein en présentiel à Ottawa, c'est effectivement un trajet significatif au quotidien.
         </p>
         <p className="prose-body">
-          Pour quelqu'un en télétravail partiel (2-3 jours/semaine) ou qui travaille à Gatineau, la distance devient un avantage — vous obtenez beaucoup plus d'espace pour le même budget.
+          Pour quelqu'un en télétravail partiel (2-3 jours/semaine) ou qui travaille à Gatineau, la distance devient un avantage, vous obtenez beaucoup plus d'espace pour le même budget.
         </p>
         <p className="prose-body">
           C'est une décision de style de vie autant que de budget. Je vous aide à la peser honnêtement, sans vous vendre une propriété qui ne correspondrait pas à votre réalité.
@@ -143,7 +143,7 @@ const BuckinghamPage = () => (
           {[
             "Buckingham est un des cinq secteurs historiques qui ont formé la ville de Gatineau. Centre-ville fonctionnel avec services essentiels sur place.",
             "Masson-Angers longe la rivière des Outaouais et offre l'ambiance semi-rurale la plus proche du centre de Gatineau dans ce secteur est.",
-            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main — le secteur Buckingham bénéficie de cet attrait croissant pour l'espace et l'accessibilité.",
+            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main, le secteur Buckingham bénéficie de cet attrait croissant pour l'espace et l'accessibilité.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -173,7 +173,7 @@ const BuckinghamPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — acheter à Buckingham"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
@@ -181,7 +181,7 @@ const BuckinghamPage = () => (
     <CTASection
       dark
       title="Acheteur ou vendeur à Buckingham?"
-      text="Je connais le secteur — parlons de votre projet."
+      text="Je connais le secteur, parlons de votre projet."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation →", href: "/consultation-acheteur/", variant: "outline" },
@@ -189,7 +189,7 @@ const BuckinghamPage = () => (
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />
 
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

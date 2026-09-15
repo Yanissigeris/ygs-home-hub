@@ -159,7 +159,7 @@ const BlogPageEn = () => {
 
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                "In March 2026, plex in Gatineau sell in an average of 23 days — down from 65 days a year earlier."
+                "In March 2026, plex in Gatineau sell in an average of 23 days, down from 65 days a year earlier."
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[

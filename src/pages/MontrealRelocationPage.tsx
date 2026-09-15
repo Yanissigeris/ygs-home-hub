@@ -13,10 +13,10 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-montreal-relocation.webp";
 
 const challenges = [
-{ icon: MapPin, title: "Comprendre le marché montréalais vs gatinois", text: "Les prix, les taxes et la qualité de vie sont très différents — souvent à l'avantage de Gatineau." },
+{ icon: MapPin, title: "Comprendre le marché montréalais vs gatinois", text: "Les prix, les taxes et la qualité de vie sont très différents, souvent à l'avantage de Gatineau." },
 { icon: DollarSign, title: "Plus d'espace pour moins cher", text: "Pour le même budget, vous obtenez souvent beaucoup plus d'espace et de terrain à Gatineau." },
 { icon: Home, title: "Quartiers familiaux", text: "Aylmer, le Plateau et d'autres secteurs offrent une qualité de vie difficilement accessible à Montréal." },
-{ icon: FileText, title: "Processus simplifié", text: "Même province, même processus notarié — la transition est plus facile que depuis l'Ontario." }];
+{ icon: FileText, title: "Processus simplifié", text: "Même province, même processus notarié, la transition est plus facile que depuis l'Ontario." }];
 
 
 const sectors = [
@@ -34,7 +34,7 @@ const MontrealRelocationPage = () =>
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"
-    subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie familiale — et un marché immobilier en croissance. Découvrez pourquoi de plus en plus de Montréalais choisissent Gatineau."
+    subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie familiale, et un marché immobilier en croissance. Découvrez pourquoi de plus en plus de Montréalais choisissent Gatineau."
     primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
     secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
     trustLine="Spécialiste en relocalisation."
@@ -61,7 +61,7 @@ const MontrealRelocationPage = () =>
 
     <ContentBlock narrow>
       <SectionHeading title="Un courtier local qui comprend votre situation" />
-      <p className="prose-body mt-5">La transition de Montréal à Gatineau est plus simple qu'on pense — même processus notarié, même province. Mon rôle est de vous faire découvrir les meilleurs secteurs et de vous accompagner à chaque étape.
+      <p className="prose-body mt-5">La transition de Montréal à Gatineau est plus simple qu'on pense, même processus notarié, même province. Mon rôle est de vous faire découvrir les meilleurs secteurs et de vous accompagner à chaque étape.
 
     </p>
     </ContentBlock>
@@ -69,14 +69,14 @@ const MontrealRelocationPage = () =>
     <GuideInlineCTA
     guideType="relocation_guide"
     headline="Guide relocalisation gratuit"
-    text="Tout pour s'installer à Gatineau depuis Montréal — secteurs, prix et processus."
+    text="Tout pour s'installer à Gatineau depuis Montréal, secteurs, prix et processus."
     ctaLabel="Recevoir le guide" />
   
 
     <CTASection
     dark
     title="Prêt à explorer Gatineau?"
-    text="Réservez un appel gratuit — on regarde ensemble les secteurs et les options."
+    text="Réservez un appel gratuit, on regarde ensemble les secteurs et les options."
     buttons={[
     { label: "Réserver un appel", href: "/contact-yanis/" },
     { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" }]
@@ -84,7 +84,7 @@ const MontrealRelocationPage = () =>
     trustLine="Je vous donne les options, vous décidez." />
   
   
-    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit, recevez-le par courriel" />
   </>;
 
 

@@ -32,12 +32,12 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Consultation confidentielle" },
   { icon: Clock, text: "Réponse en 24h" },
-  { icon: Shield, text: "Aucune obligation — aucun engagement" },
+  { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
 const afterSteps = [
   { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie, votre budget et vos priorités.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers", highlight: true },
-  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement — de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
+  { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement, de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
 ];
 
 const faq = [
@@ -100,7 +100,7 @@ const BuyerConsultationPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Réservez votre consultation</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Dites-moi ce que vous cherchez — je vous reviens avec un plan personnalisé.
+                  Dites-moi ce que vous cherchez, je vous reviens avec un plan personnalisé.
                 </p>
 
                 {submitted ? (
@@ -125,7 +125,7 @@ const BuyerConsultationPage = () => {
                       <div>
                         <Label htmlFor="tel">Téléphone</Label>
                         <Input id="tel" name="phone" type="tel" className="mt-1.5" aria-describedby="bc-tel-help" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <p id="bc-tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel — format : 819-000-0000</p>
+                        <p id="bc-tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel, format : 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Budget approximatif</Label>
@@ -178,7 +178,7 @@ const BuyerConsultationPage = () => {
                       {submitting ? "Envoi…" : "Réserver ma consultation"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Gratuit et sans engagement — je vous aide à y voir plus clair.
+                      Gratuit et sans engagement, je vous aide à y voir plus clair.
                     </p>
                   </form>
                 )}
@@ -234,7 +234,7 @@ const BuyerConsultationPage = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+      <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
     </>
   );
 };

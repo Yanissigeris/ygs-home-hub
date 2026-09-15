@@ -18,15 +18,15 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 const advantages = [
   { icon: DollarSign, title: "Prix plus accessibles", text: "Le marché de Gatineau offre souvent un meilleur rapport qualité-prix que les marchés militaires saturés." },
   { icon: MapPin, title: "Proximité des bases", text: "Accès rapide à la base d'Uplands et aux installations fédérales de la région." },
-  { icon: Home, title: "Variété de propriétés", text: "Maisons, condos, jumelés — dans des quartiers familiaux bien desservis." },
+  { icon: Home, title: "Variété de propriétés", text: "Maisons, condos, jumelés, dans des quartiers familiaux bien desservis." },
   { icon: Shield, title: "Accompagnement bilingue", text: "Service en français et en anglais, adapté à votre réalité militaire." },
 ];
 
 
 const faq = [
-  { q: "Quels secteurs recommandez-vous pour les militaires?", a: "Ça dépend de votre base et vos priorités familiales. Aylmer, le Plateau et Hull sont populaires — on en discute selon votre situation." },
-  { q: "Est-ce que je peux acheter à distance?", a: "Oui. Visites virtuelles, offres à distance et coordination complète — c'est courant pour les mutations." },
-  { q: "Comment fonctionne le processus d'achat au Québec?", a: "Promesse d'achat, inspection, conditions, notaire — c'est différent de l'Ontario. Je vous guide étape par étape." },
+  { q: "Quels secteurs recommandez-vous pour les militaires?", a: "Ça dépend de votre base et vos priorités familiales. Aylmer, le Plateau et Hull sont populaires, on en discute selon votre situation." },
+  { q: "Est-ce que je peux acheter à distance?", a: "Oui. Visites virtuelles, offres à distance et coordination complète, c'est courant pour les mutations." },
+  { q: "Comment fonctionne le processus d'achat au Québec?", a: "Promesse d'achat, inspection, conditions, notaire, c'est différent de l'Ontario. Je vous guide étape par étape." },
 ];
 
 const MilitaryBuyerPage = () => (
@@ -79,14 +79,14 @@ const MilitaryBuyerPage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Guide relocalisation militaire gratuit"
-      text="Tout ce qu'il faut savoir pour acheter à Gatineau lors d'une mutation — dans un guide clair envoyé par courriel."
+      text="Tout ce qu'il faut savoir pour acheter à Gatineau lors d'une mutation, dans un guide clair envoyé par courriel."
       ctaLabel="Recevoir le guide"
     />
 
     <CTASection
       dark
       title="Prêt à trouver votre propriété à Gatineau?"
-      text="Parlons de votre mutation et de vos critères — je m'occupe du reste."
+      text="Parlons de votre mutation et de vos critères, je m'occupe du reste."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
@@ -96,7 +96,7 @@ const MilitaryBuyerPage = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner guideType="relocation_guide" label="Guide militaire gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="relocation_guide" label="Guide militaire gratuit, recevez-le par courriel" />
   </>
 );
 

@@ -12,11 +12,11 @@ const faq = [
   { q: "How do I choose the right realtor?", a: "Look for local expertise, a clear communication style, a proven marketing strategy, and strong negotiation skills. Ask for references and check their track record in your area." },
   { q: "What questions should I ask a realtor?", a: "How well do you know my neighbourhood? What's your marketing strategy? How do you communicate? What's your track record? Can I see recent sales?" },
   { q: "Is local experience important for a realtor?", a: "Absolutely. A broker who knows the neighbourhoods, the market, and the buyers in your area can price more accurately and sell faster." },
-  { q: "Should I interview multiple realtors?", a: "Yes — meeting 2-3 brokers gives you a good basis for comparison. Look beyond the commission rate and evaluate the overall service and strategy." },
+  { q: "Should I interview multiple realtors?", a: "Yes, meeting 2-3 brokers gives you a good basis for comparison. Look beyond the commission rate and evaluate the overall service and strategy." },
   { q: "How do I verify a realtor's credentials?", a: "You can verify any broker's licence and standing on the OACIQ registry. This ensures they are legally authorized to practice." },
   { q: "What's the difference between a realtor and a broker?", a: "In Quebec, real estate professionals are called 'courtiers immobiliers' (brokers). They must hold an OACIQ licence. The term 'realtor' is used more broadly in English Canada." },
   { q: "Does a higher commission mean better service?", a: "Not automatically. What matters is the strategy, the services included, the local knowledge, and the results achieved for past clients." },
-  { q: "Can I change realtors if I'm not satisfied?", a: "The brokerage contract has specific terms. Discuss expectations upfront. If issues arise, communicate with your broker first — most situations can be resolved." },
+  { q: "Can I change realtors if I'm not satisfied?", a: "The brokerage contract has specific terms. Discuss expectations upfront. If issues arise, communicate with your broker first, most situations can be resolved." },
 ];
 
 const HowToChooseRealtorPageEn = () => (
@@ -48,10 +48,10 @@ const HowToChooseRealtorPageEn = () => (
         {[
           { title: "Local knowledge", text: "Do they know your neighbourhood, comparable sales, and buyer profiles in your area?" },
           { title: "Communication style", text: "Are they responsive, clear, and proactive? You'll want regular updates throughout the process." },
-          { title: "Marketing strategy", text: "Professional photos, virtual tours, MLS optimization, social media — what's their plan to attract buyers?" },
+          { title: "Marketing strategy", text: "Professional photos, virtual tours, MLS optimization, social media, what's their plan to attract buyers?" },
           { title: "Negotiation skills", text: "How do they handle multiple offers? What's their approach to getting you the best price?" },
           { title: "Track record", text: "Ask for recent sales in your area. Look at average days on market and list-to-sale price ratios." },
-          { title: "Trust and transparency", text: "A good broker explains everything upfront — fees, process, timeline, and realistic expectations." },
+          { title: "Trust and transparency", text: "A good broker explains everything upfront, fees, process, timeline, and realistic expectations." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -62,7 +62,7 @@ const HowToChooseRealtorPageEn = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Want to see if we're a good fit? Let's talk — no commitment required."
+      text="Want to see if we're a good fit? Let's talk, no commitment required."
       buttonLabel="Book a consultation →"
       href="/en/contact/"
     />
@@ -70,7 +70,7 @@ const HowToChooseRealtorPageEn = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Advice" title="Common mistakes when choosing a broker" />
       <p className="prose-body mt-5">
-        Many people choose a broker based on commission alone. While cost matters, the most important factor is your <strong>net result</strong> — the price you actually receive minus all costs. A skilled broker often achieves a higher sale price that more than compensates for a slightly higher fee.
+        Many people choose a broker based on commission alone. While cost matters, the most important factor is your <strong>net result</strong>, the price you actually receive minus all costs. A skilled broker often achieves a higher sale price that more than compensates for a slightly higher fee.
       </p>
       <p className="prose-body mt-4">
         Also avoid choosing based on the highest estimated price. Some brokers inflate valuations to win the listing. A trustworthy broker gives you a realistic, data-backed assessment from the start.
@@ -92,7 +92,7 @@ const HowToChooseRealtorPageEn = () => (
     <CTASection
       dark
       title="Ready to find the right broker?"
-      text="Let's discuss your project. I'll explain my approach, my strategy for your property, and what to expect — transparently."
+      text="Let's discuss your project. I'll explain my approach, my strategy for your property, and what to expect, transparently."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },

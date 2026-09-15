@@ -31,12 +31,12 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Analyse personnalisée en 48h" },
-  { icon: Shield, text: "Aucune obligation — aucun engagement" },
+  { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
 const faq = [
   { q: "Qu'est-ce qui est inclus dans l'analyse plex?", a: "Valeur marchande estimée, analyse des revenus et dépenses, potentiel locatif, et une recommandation stratégique adaptée à votre situation." },
-  { q: "Est-ce que c'est vraiment gratuit?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez d'aller de l'avant, on en discute — mais en toute transparence." },
+  { q: "Est-ce que c'est vraiment gratuit?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez d'aller de l'avant, on en discute, mais en toute transparence." },
   { q: "Je ne suis pas sûr de vouloir vendre — est-ce quand même utile?", a: "Absolument. Beaucoup de propriétaires veulent simplement comprendre leur position avant de décider. C'est exactement pour ça que ce service existe." },
 ];
 
@@ -96,7 +96,7 @@ const PlexAnalysisPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre analyse plex</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Je vous reviens personnellement avec une analyse complète — pas un rapport générique.
+                  Je vous reviens personnellement avec une analyse complète, pas un rapport générique.
                 </p>
 
                 {submitted ? (
@@ -209,7 +209,7 @@ const PlexAnalysisPage = () => {
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Vous pensez vendre votre plex?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
-                  Connaître la valeur actuelle est la première étape — avant de décider quoi que ce soit.
+                  Connaître la valeur actuelle est la première étape, avant de décider quoi que ce soit.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
@@ -228,7 +228,7 @@ const PlexAnalysisPage = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit — recevez-le par courriel" />
+      <StickyGuideBanner guideType="investor_guide" label="Guide investisseur gratuit, recevez-le par courriel" />
     </>
   );
 };

@@ -33,7 +33,7 @@ const subSectors = [
   },
   {
     title: "Manoir-des-Trembles / La Gappe",
-    text: "Planned neighbourhoods developed mainly in the 1990s–2000s. Two-storey homes, quiet streets, schools nearby. Popular with young families settling in Gatineau.",
+    text: "Planned neighbourhoods developed mainly in the 1990s, 2000s. Two-storey homes, quiet streets, schools nearby. Popular with young families settling in Gatineau.",
   },
   {
     title: "Plex area — centre",
@@ -77,7 +77,7 @@ const GatineauCentrePageEn = () => (
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Real estate broker in Gatineau centre — accessibility, services and value"
-      subtitle="Gatineau's central area is often underestimated. Yet it's the city's best-served sector — hospital, universities, cégep, transit, shops. And one of the most accessible for families and investors."
+      subtitle="Gatineau's central area is often underestimated. Yet it's the city's best-served sector, hospital, universities, cégep, transit, shops. And one of the most accessible for families and investors."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}
       heroBgImage={heroImg}
@@ -86,13 +86,13 @@ const GatineauCentrePageEn = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">AREA PORTRAIT</p>
-      <h2 className="mt-3">Gatineau centre — well served, well positioned</h2>
+      <h2 className="mt-3">Gatineau centre, well served, well positioned</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city — including the Limbour, La Gappe, Manoir-des-Trembles neighbourhoods, and the areas around Boulevard Maloney. It's Gatineau's residential core, with the highest concentration of public services: Gatineau Hospital, Cégep de l'Outaouais, several secondary schools, the STO public transit network, and major retail centres.
+          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city, including the Limbour, La Gappe, Manoir-des-Trembles neighbourhoods, and the areas around Boulevard Maloney. It's Gatineau's residential core, with the highest concentration of public services: Gatineau Hospital, Cégep de l'Outaouais, several secondary schools, the STO public transit network, and major retail centres.
         </p>
         <p className="prose-body">
-          For families who work in Gatineau (rather than Ottawa), this area often offers the best balance between access to services and residential quality of life. For investors, Gatineau centre holds a significant share of the existing plex inventory — well-located duplexes and triplexes, close to services and transit corridors.
+          For families who work in Gatineau (rather than Ottawa), this area often offers the best balance between access to services and residential quality of life. For investors, Gatineau centre holds a significant share of the existing plex inventory, well-located duplexes and triplexes, close to services and transit corridors.
         </p>
         <p className="prose-body">
           The City of Gatineau, with a population of 298,000, is the fourth-largest city in Québec. (Source: Ville de Gatineau, 2024). The central area benefits directly from all municipal infrastructure investments.
@@ -123,7 +123,7 @@ const GatineauCentrePageEn = () => (
           {[
             "Gatineau is the 4th-largest city in Québec with 298,000 residents. (Source: Ville de Gatineau, 2024)",
             "Gatineau Hospital, Cégep de l'Outaouais and the STO transit network are all located in this area.",
-            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties — this area benefits from that trend.",
+            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties, this area benefits from that trend.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -154,7 +154,7 @@ const GatineauCentrePageEn = () => (
       lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Gatineau"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
@@ -162,15 +162,15 @@ const GatineauCentrePageEn = () => (
     <CTASection
       dark
       title="Buyer or seller in Gatineau centre?"
-      text="I know the area — let's talk about your project."
+      text="I know the area, let's talk about your project."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation/" },
         { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

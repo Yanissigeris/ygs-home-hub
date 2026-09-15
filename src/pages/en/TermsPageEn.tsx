@@ -13,7 +13,7 @@ const TermsPageEn = () => (
         <h1 className="font-serif">Terms of Use</h1>
 
         <h2>1. Intellectual Property</h2>
-        <p>All content on this site — text, images, photographs, logos, videos and graphic design — is the property of Yanis Gauthier-Sigeris or his partners and is protected by Canadian intellectual property laws. Any reproduction, distribution or use without prior written authorization is prohibited.</p>
+        <p>All content on this site, text, images, photographs, logos, videos and graphic design, is the property of Yanis Gauthier-Sigeris or his partners and is protected by Canadian intellectual property laws. Any reproduction, distribution or use without prior written authorization is prohibited.</p>
 
         <h2>2. Use of the Site</h2>
         <p>This site is intended for informational purposes only. The information presented does not constitute legal, financial or professional advice. For advice tailored to your situation, consult a qualified professional.</p>
@@ -34,7 +34,7 @@ const TermsPageEn = () => (
         <p>These terms are governed by the laws of the Province of Quebec and the federal laws of Canada. Any dispute shall be subject to the exclusive jurisdiction of the courts of the Province of Quebec, District of Gatineau.</p>
 
         <h2>8. Contact</h2>
-        <p>For any questions about these terms:<br /><strong>Yanis Gauthier-Sigeris</strong><br />yanis@martywaite.com — 819-210-3044</p>
+        <p>For any questions about these terms:<br /><strong>Yanis Gauthier-Sigeris</strong><br />yanis@martywaite.com, 819-210-3044</p>
       </div>
     </article>
   </>

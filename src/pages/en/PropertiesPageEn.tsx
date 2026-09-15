@@ -14,9 +14,9 @@ import { Search, Home, Building2, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-properties.webp";
 
 const profileCards = [
-  { icon: Search, title: "Looking for a house", text: "Single-family, semi-detached, townhouse — find the property that matches your profile." },
-  { icon: Building2, title: "Looking for a plex", text: "Duplex, triplex or more — analyze the return before buying." },
-  { icon: Home, title: "Looking for a condo", text: "Downtown, suburb or new development — options are plentiful." },
+  { icon: Search, title: "Looking for a house", text: "Single-family, semi-detached, townhouse, find the property that matches your profile." },
+  { icon: Building2, title: "Looking for a plex", text: "Duplex, triplex or more, analyze the return before buying." },
+  { icon: Home, title: "Looking for a condo", text: "Downtown, suburb or new development, options are plentiful." },
 ];
 const sectors = [
   { name: "Aylmer", href: "/en/plateau-aylmer/", detail: "Lake, established neighborhoods, quality of life" },
@@ -26,8 +26,8 @@ const sectors = [
 ];
 const faq = [
   { q: "How are featured properties selected?", a: "I select properties based on location, potential, value and relevance for active buyers in Gatineau." },
-  { q: "How can I be notified of new listings?", a: "Contact me with your criteria — I'll let you know as soon as a matching property hits the market." },
-  { q: "Do properties sell quickly in Gatineau?", a: "Yes — the best ones often sell within days. Being informed first makes all the difference." },
+  { q: "How can I be notified of new listings?", a: "Contact me with your criteria, I'll let you know as soon as a matching property hits the market." },
+  { q: "Do properties sell quickly in Gatineau?", a: "Yes, the best ones often sell within days. Being informed first makes all the difference." },
   { q: "What are the prices of sold homes in Gatineau?", a: "Sale prices are not public in Québec. As a broker, I have access to the data." },
   { q: "Do you have access to properties not listed publicly?", a: "Yes. As an active broker in Gatineau since 2017, I have access to properties before they hit the public market." },
 ];
@@ -67,10 +67,10 @@ const PropertiesPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Priority access" title="Get the best properties first" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Active in Outaouais real estate since 2017, I have access to every Centris listing across Gatineau, Hull, Aylmer, the Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac — including pre-MLS opportunities and listings not yet syndicated to public portals. Properly briefed on your criteria, I can flag a fit within hours of it surfacing instead of days.
+        Active in Outaouais real estate since 2017, I have access to every Centris listing across Gatineau, Hull, Aylmer, the Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac, including pre-MLS opportunities and listings not yet syndicated to public portals. Properly briefed on your criteria, I can flag a fit within hours of it surfacing instead of days.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        For most active buyers, that head-start is the difference between visiting a property unhurried and arriving to a multi-offer scenario. Tell me what you're looking for — neighborhood, price ceiling, must-haves, deal-breakers — and I do the screening work for you.
+        For most active buyers, that head-start is the difference between visiting a property unhurried and arriving to a multi-offer scenario. Tell me what you're looking for, neighborhood, price ceiling, must-haves, deal-breakers, and I do the screening work for you.
       </p>
     </ContentBlock>
 
@@ -79,22 +79,22 @@ const PropertiesPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="How I work" title="Buying with a broker who represents you" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        In Québec, a buyer who works directly with the listing broker isn't independently represented. When you sign a buyer brokerage contract with me, my legal duty is to you — your budget, your interests, your downside protection. I run comparable sales, structure conditions (financing, inspection, sale of current home), negotiate the offer, and stay on the file all the way through the notary signing.
+        In Québec, a buyer who works directly with the listing broker isn't independently represented. When you sign a buyer brokerage contract with me, my legal duty is to you, your budget, your interests, your downside protection. I run comparable sales, structure conditions (financing, inspection, sale of current home), negotiate the offer, and stay on the file all the way through the notary signing.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        That representation costs you nothing in most resale transactions: the listing broker's compensation typically covers the buyer's broker out of the seller's brokerage contract. It's a clear win — independent advice, full market access, and a bilingual file that travels smoothly between Ottawa and Gatineau.
+        That representation costs you nothing in most resale transactions: the listing broker's compensation typically covers the buyer's broker out of the seller's brokerage contract. It's a clear win, independent advice, full market access, and a bilingual file that travels smoothly between Ottawa and Gatineau.
       </p>
     </ContentBlock>
 
     <SectorLinks overline="By neighborhood" title="Properties by area" sectors={sectors} background="alt" />
 
-    <InlineCTA text="Selling? Find out how much your property is worth — it's free." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Selling? Find out how much your property is worth, it's free." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Explore also" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria — I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
+    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria, I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
   </>
 );
 export default PropertiesPageEn;

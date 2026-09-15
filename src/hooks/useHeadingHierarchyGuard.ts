@@ -69,7 +69,7 @@ export function useHeadingHierarchyGuard() {
       if (issues.length > 0) {
         // eslint-disable-next-line no-console
         console.warn(
-          `[heading-guard] ${pathname} — ${issues.length} issue(s):\n` +
+          `[heading-guard] ${pathname}, ${issues.length} issue(s):\n` +
             issues.map((i) => `  • [${i.kind}] ${i.detail}`).join("\n"),
         );
       }

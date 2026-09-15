@@ -36,8 +36,8 @@ const trustPages = [
 
 
 const faq = [
-  { q: "Ces ressources sont-elles gratuites?", a: "Oui — tous les guides et outils sont gratuits et sans engagement." },
-  { q: "Comment recevoir une ressource personnalisée?", a: "Contactez-moi directement — je vous envoie les informations adaptées à votre situation." },
+  { q: "Ces ressources sont-elles gratuites?", a: "Oui, tous les guides et outils sont gratuits et sans engagement." },
+  { q: "Comment recevoir une ressource personnalisée?", a: "Contactez-moi directement, je vous envoie les informations adaptées à votre situation." },
   { q: "Puis-je obtenir des conseils personnalisés?", a: "Absolument. Les guides sont un bon point de départ, mais chaque situation est unique. Réservez un appel." },
 ];
 
@@ -92,7 +92,7 @@ const ResourcesPage = () => (
     <CTASection
       dark
       title="Commencez votre projet immobilier"
-      text="Évaluation gratuite, consultation acheteur ou analyse plex — choisissez votre prochaine étape."
+      text="Évaluation gratuite, consultation acheteur ou analyse plex, choisissez votre prochaine étape."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },

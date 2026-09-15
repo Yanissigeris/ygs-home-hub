@@ -9,13 +9,13 @@ import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 const whatsNext = [
   { icon: Clock, text: "Réponse personnalisée en moins de 24h" },
   { icon: FileText, text: "Analyse basée sur les ventes comparables récentes" },
-  { icon: Shield, text: "Aucune obligation — aucun engagement" },
+  { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
 const nextSteps = [
-  { title: "Plan vendeur", text: "Allez plus loin — recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
+  { title: "Plan vendeur", text: "Allez plus loin, recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
   { title: "Guide vendeur", text: "Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau.", href: "/guide-vendeur-gatineau", cta: "Lire le guide" },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options, sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
 ];
 
 const ThankYouValuationPage = () => (

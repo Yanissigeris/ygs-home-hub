@@ -11,9 +11,9 @@ import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
-  { q: "How can I access the market report?", a: "Contact me — I'll send you the most recent analysis for your area." },
+  { q: "How can I access the market report?", a: "Contact me, I'll send you the most recent analysis for your area." },
   { q: "What areas does the data cover?", a: "All Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham, Gatineau centre and more." },
-  { q: "Is the report free?", a: "Yes — it's a tool I offer to my clients and anyone interested in the market." },
+  { q: "Is the report free?", a: "Yes, it's a tool I offer to my clients and anyone interested in the market." },
 ];
 
 const related = [
@@ -37,14 +37,14 @@ const MarketReportPageEn = () => (
     />
     <ContentBlock narrow>
       <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
-      <p className="prose-body mt-5">Every quarter, I prepare an analysis of the Gatineau real estate market — median prices, sales volume, trends by area and forecasts. Contact me to receive the next edition.</p>
+      <p className="prose-body mt-5">Every quarter, I prepare an analysis of the Gatineau real estate market, median prices, sales volume, trends by area and forecasts. Contact me to receive the next edition.</p>
     </ContentBlock>
     <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <FAQSection items={faq} />
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
-    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy — everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Get the next market report" text="Contact me to be on the list — you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
-    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <CTASection dark title="Get the next market report" text="Contact me to be on the list, you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
+    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>
 );
 

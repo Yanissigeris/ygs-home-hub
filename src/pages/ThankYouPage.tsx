@@ -7,7 +7,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import heroThankYou from "@/assets/hero-thank-you.webp";
 
 const nextSteps = [
-  { title: "Explorer les quartiers", text: "Découvrez les secteurs de Gatineau — Aylmer, Hull, Plateau, Buckingham et plus.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
+  { title: "Explorer les quartiers", text: "Découvrez les secteurs de Gatineau, Aylmer, Hull, Plateau, Buckingham et plus.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers" },
   { title: "Guides et ressources", text: "Consultez nos guides gratuits pour vendeurs, acheteurs et investisseurs.", href: "/ressources", cta: "Voir les ressources" },
   { title: "Rapport du marché", text: "Prix, tendances et volumes de ventes à Gatineau et en Outaouais.", href: "/rapport-marche-gatineau", cta: "Voir le rapport" },
 ];

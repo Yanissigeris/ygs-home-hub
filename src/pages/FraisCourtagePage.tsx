@@ -10,13 +10,13 @@ import heroImg from "@/assets/hero-frais-courtage.webp";
 
 const faq = [
   { q: "Quels sont les frais de courtage immobilier au Québec?", a: "Les frais de courtage prennent généralement la forme d'un pourcentage du prix de vente, convenu entre le vendeur et le courtier avant la mise en marché. Il n'y a pas de tarif réglementé." },
-  { q: "La commission est-elle réglementée?", a: "Non. L'OACIQ ne fixe pas de tarif — la rémunération est librement négociée entre les parties dans le contrat de courtage." },
+  { q: "La commission est-elle réglementée?", a: "Non. L'OACIQ ne fixe pas de tarif, la rémunération est librement négociée entre les parties dans le contrat de courtage." },
   { q: "Que couvrent les frais de courtage?", a: "Évaluation du prix, mise en marché, photos, visites, négociation, coordination avec le notaire et suivi de la transaction complète." },
   { q: "Y a-t-il des frais supplémentaires?", a: "En plus de la commission, prévoyez le notaire, le certificat de localisation et le remboursement de la taxe de bienvenue (pour l'acheteur). Votre courtier doit tout expliquer clairement." },
   { q: "Qui paie les frais de courtage?", a: "En pratique, c'est le vendeur qui assume la rémunération du courtier inscripteur. L'acheteur ne paie généralement pas de commission directement." },
-  { q: "Comment comparer les frais entre courtiers?", a: "Ne comparez pas uniquement le pourcentage — évaluez l'ensemble : services offerts, expérience locale, stratégie de mise en marché et résultats passés." },
+  { q: "Comment comparer les frais entre courtiers?", a: "Ne comparez pas uniquement le pourcentage, évaluez l'ensemble : services offerts, expérience locale, stratégie de mise en marché et résultats passés." },
   { q: "Un courtier moins cher est-il un meilleur choix?", a: "Pas nécessairement. L'important est le résultat net pour vous : prix de vente obtenu, délai et qualité de l'accompagnement." },
-  { q: "Est-ce que les frais varient selon le type de propriété?", a: "Oui — un plex, un condo ou une maison unifamiliale peuvent impliquer des niveaux de complexité différents, ce qui peut influencer l'entente." },
+  { q: "Est-ce que les frais varient selon le type de propriété?", a: "Oui, un plex, un condo ou une maison unifamiliale peuvent impliquer des niveaux de complexité différents, ce qui peut influencer l'entente." },
 ];
 
 const FraisCourtagePage = () => (
@@ -45,7 +45,7 @@ const FraisCourtagePage = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Comprendre" title="Comment sont calculés les frais de courtage?" />
       <p className="prose-body mt-5">
-        Au Québec, la rémunération du courtier est convenue <strong>avant la mise en marché</strong> dans le contrat de courtage. Elle prend généralement la forme d'un pourcentage du prix de vente final. Il n'y a pas de barème imposé par l'OACIQ — chaque entente est personnalisée.
+        Au Québec, la rémunération du courtier est convenue <strong>avant la mise en marché</strong> dans le contrat de courtage. Elle prend généralement la forme d'un pourcentage du prix de vente final. Il n'y a pas de barème imposé par l'OACIQ, chaque entente est personnalisée.
       </p>
       <p className="prose-body mt-4">
         Cette rémunération couvre l'ensemble des services professionnels : analyse de la valeur marchande, stratégie de prix, marketing, visites, négociation et coordination jusqu'à la signature chez le notaire.
@@ -58,12 +58,12 @@ const FraisCourtagePage = () => (
         En plus de la commission, une vente immobilière implique d'autres frais : notaire, certificat de localisation, et dans certains cas des ajustements de taxes. Un bon courtier vous présente <strong>l'ensemble des coûts</strong> dès le départ pour éviter les surprises.
       </p>
       <p className="prose-body mt-4">
-        Votre courtier devrait aussi vous aider à calculer votre <strong>produit net de vente</strong> — ce qui reste dans vos poches une fois tous les frais déduits. C'est la meilleure façon de prendre une décision éclairée.
+        Votre courtier devrait aussi vous aider à calculer votre <strong>produit net de vente</strong>, ce qui reste dans vos poches une fois tous les frais déduits. C'est la meilleure façon de prendre une décision éclairée.
       </p>
     </ContentBlock>
 
     <InlineCTA
-      text="Première étape : connaître la valeur réelle de votre propriété — c'est gratuit."
+      text="Première étape : connaître la valeur réelle de votre propriété, c'est gratuit."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -72,10 +72,10 @@ const FraisCourtagePage = () => (
       <SectionHeading overline="Conseils" title="Comment évaluer si les frais sont justes?" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Comparez les services", text: "Photos, visites virtuelles, marketing ciblé — regardez ce qui est inclus, pas seulement le pourcentage." },
+          { title: "Comparez les services", text: "Photos, visites virtuelles, marketing ciblé, regardez ce qui est inclus, pas seulement le pourcentage." },
           { title: "Vérifiez l'expérience locale", text: "Un courtier qui connaît Gatineau et l'Outaouais peut faire une vraie différence sur le prix obtenu." },
           { title: "Demandez le produit net", text: "Un courtier transparent vous montrera le calcul complet avant de signer." },
-          { title: "Évaluez la stratégie", text: "Un bon courtier ne vend pas au rabais — il maximise votre résultat avec une stratégie adaptée." },
+          { title: "Évaluez la stratégie", text: "Un bon courtier ne vend pas au rabais, il maximise votre résultat avec une stratégie adaptée." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -100,7 +100,7 @@ const FraisCourtagePage = () => (
     <CTASection
       dark
       title="Envie d'y voir clair?"
-      text="Je vous explique tout — frais, services, stratégie — avant même de commencer. Transparent et sans engagement."
+      text="Je vous explique tout, frais, services, stratégie, avant même de commencer. Transparent et sans engagement."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },

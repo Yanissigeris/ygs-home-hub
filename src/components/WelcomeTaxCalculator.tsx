@@ -105,7 +105,7 @@ const WelcomeTaxCalculator = () => {
                 {result.breakdown.map((b, i) => (
                   <tr key={i} className="border-b border-border/50 last:border-0">
                     <td className="py-1.5 text-foreground">
-                      {fmt(b.from, lang)} — {fmt(b.to, lang)}
+                      {fmt(b.from, lang)}, {fmt(b.to, lang)}
                     </td>
                     <td className="py-1.5 text-right text-muted-foreground">{fmtPct(b.rate, lang)}</td>
                     <td className="py-1.5 text-right font-medium text-foreground">{fmt(b.tax, lang)}</td>

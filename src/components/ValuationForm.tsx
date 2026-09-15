@@ -23,7 +23,7 @@ export interface ValuationFormProps {
 
 const T = {
   fr: {
-    confidential: "Confidentiel — aucune obligation",
+    confidential: "Confidentiel, aucune obligation",
     name: "Nom complet",
     namePh: "Votre nom",
     email: "Courriel",
@@ -54,7 +54,7 @@ const T = {
     trustTransactions: "300+ transactions",
   },
   en: {
-    confidential: "Confidential — no obligation",
+    confidential: "Confidential, no obligation",
     name: "Full name",
     namePh: "Your name",
     email: "Email",

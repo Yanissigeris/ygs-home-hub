@@ -25,20 +25,20 @@ const trustBullets = [
 
 const faq = [
   { q: "Comment obtenir une évaluation de maison à Aylmer?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Aylmer. Je vous reviens en 24h avec une analyse basée sur les ventes comparables récentes." },
-  { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair — aucune obligation de vendre." },
-  { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend de votre quartier — Plateau, lac Deschênes, secteurs résidentiels — et des ventes récentes. L'évaluation vous donne une fourchette réaliste." },
+  { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
+  { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend de votre quartier, Plateau, lac Deschênes, secteurs résidentiels, et des ventes récentes. L'évaluation vous donne une fourchette réaliste." },
   { q: "Sur quoi se base l'évaluation à Aylmer?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur d'Aylmer, l'état de votre propriété, le terrain et les conditions du marché." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales d'Aylmer et de l'état réel de votre propriété." },
   { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Une visite peut être planifiée pour un rapport plus détaillé." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Beaucoup de propriétaires à Aylmer demandent une évaluation simplement pour connaître leur valeur, sans intention immédiate de vendre." },
-  { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous — Plateau, lac Deschênes, Lucerne, Des Jardins, Lakeview et tous les secteurs résidentiels d'Aylmer." },
+  { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous, Plateau, lac Deschênes, Lucerne, Des Jardins, Lakeview et tous les secteurs résidentiels d'Aylmer." },
   { q: "Que faire après avoir reçu mon évaluation?", a: "Vous aurez les chiffres et les options. Si vous voulez aller plus loin, je peux préparer un plan vendeur complet pour Aylmer." },
 ];
 
 const afterSteps = [
-  { title: "Vendre à Aylmer", text: "Allez plus loin — recevez un plan complet pour vendre votre propriété à Aylmer.", href: "/vendre-maison-aylmer/", cta: "Voir le processus", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options — sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
+  { title: "Vendre à Aylmer", text: "Allez plus loin, recevez un plan complet pour vendre votre propriété à Aylmer.", href: "/vendre-maison-aylmer/", cta: "Voir le processus", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -77,7 +77,7 @@ const ValuationAylmerPage = () => {
             <p className="label-overline mb-4 text-primary-foreground/65">Évaluation gratuite · Aylmer</p>
             <h1 className="text-primary-foreground">Combien vaut votre propriété à Aylmer?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
-              Recevez une évaluation personnalisée basée sur les ventes récentes dans votre quartier d'Aylmer — gratuit, confidentiel et sans engagement.
+              Recevez une évaluation personnalisée basée sur les ventes récentes dans votre quartier d'Aylmer, gratuit, confidentiel et sans engagement.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (

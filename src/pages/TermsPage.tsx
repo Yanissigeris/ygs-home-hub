@@ -4,7 +4,7 @@ import heroPrivacy from "@/assets/hero-privacy.webp";
 const TermsPage = () => (
   <>
     <PageMeta
-      title="Conditions d'utilisation | YGS — Yanis Gauthier-Sigeris"
+      title="Conditions d'utilisation | YGS, Yanis Gauthier-Sigeris"
       description="Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable."
       ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />
@@ -35,7 +35,7 @@ const TermsPage = () => (
           </Section>
 
           <Section title="2. Propriété intellectuelle">
-            <p>L'ensemble du contenu de ce site — textes, images, photographies, logos, vidéos et design graphique — est la propriété de Yanis Gauthier-Sigeris ou de ses partenaires et est protégé par les lois canadiennes sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.</p>
+            <p>L'ensemble du contenu de ce site, textes, images, photographies, logos, vidéos et design graphique, est la propriété de Yanis Gauthier-Sigeris ou de ses partenaires et est protégé par les lois canadiennes sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.</p>
           </Section>
 
           <Section title="3. Limitation de responsabilité">
@@ -55,7 +55,7 @@ const TermsPage = () => (
           </Section>
 
           <Section title="7. Contact">
-            <p>Pour toute question concernant ces conditions :<br /><strong>Yanis Gauthier-Sigeris</strong><br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a> — 819-210-3044</p>
+            <p>Pour toute question concernant ces conditions :<br /><strong>Yanis Gauthier-Sigeris</strong><br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a>, 819-210-3044</p>
           </Section>
         </div>
       </div>

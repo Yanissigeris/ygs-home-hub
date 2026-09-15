@@ -23,7 +23,7 @@ interface Listing {
 const listings: Listing[] = [
   {
     id: "11366995", mls: "11366995",
-    address: "7 Rue du Chinook", city: "Gatineau (Hull — Plateau de la Capitale)",
+    address: "7 Rue du Chinook", city: "Gatineau (Hull, Plateau de la Capitale)",
     price_fr: "949 900 $", price_en: "$949,900",
     type: "Triplex", bedrooms: "2", bathrooms: "1", area: "2 157 pi² / sq ft", year_built: "1999",
     status: "sold",
@@ -53,9 +53,9 @@ const listings: Listing[] = [
   },
   {
     id: "19674845", mls: "19674845",
-    address: "310 Boul. d'Europe, app. 6", city: "Gatineau (Aylmer — Plateau de la Capitale)",
+    address: "310 Boul. d'Europe, app. 6", city: "Gatineau (Aylmer, Plateau de la Capitale)",
     price_fr: "1 975 $/mois", price_en: "$1,975/month",
-    type: "Condo — Appartement (location / rental)", bedrooms: "2", bathrooms: "1", area: "1 240 pi² / sq ft", year_built: "2009",
+    type: "Condo, Appartement (location / rental)", bedrooms: "2", bathrooms: "1", area: "1 240 pi² / sq ft", year_built: "2009",
     status: "rented",
     remax_url: "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     description_fr: "Condo lumineux de 2 chambres, plafonds de 9 pi, climatiseur mural. Dispo 1er juin 2026.",

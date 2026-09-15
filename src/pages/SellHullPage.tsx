@@ -14,25 +14,25 @@ import heroImg from "@/assets/hero-seller.webp";
 
 
 const steps = [
-  { num: "01", title: "Analyse du marché à Hull", desc: "Ventes comparables récentes dans votre rue et votre secteur de Hull — condos, plex, unifamiliales. On établit un prix réaliste." },
+  { num: "01", title: "Analyse du marché à Hull", desc: "Ventes comparables récentes dans votre rue et votre secteur de Hull, condos, plex, unifamiliales. On établit un prix réaliste." },
   { num: "02", title: "Plan de mise en marché", desc: "Préparation ciblée, photos professionnelles, visibilité maximale auprès des acheteurs de Hull, Gatineau et Ottawa." },
   { num: "03", title: "Accompagnement complet", desc: "Visites, négociation, coordination jusqu'au notaire. Aucune surprise, du début à la fin." },
 ];
 
 const nextSteps = [
-  { title: "Évaluation gratuite à Hull", text: "Connaître la valeur de votre propriété à Hull — c'est gratuit et sans engagement.", href: "/evaluation-maison-hull/", cta: "Obtenir ma valeur", highlight: true },
+  { title: "Évaluation gratuite à Hull", text: "Connaître la valeur de votre propriété à Hull, c'est gratuit et sans engagement.", href: "/evaluation-maison-hull/", cta: "Obtenir ma valeur", highlight: true },
   { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Hull.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const faq = [
-  { q: "Comment vendre une maison à Hull?", a: "On commence par une évaluation basée sur les ventes récentes dans votre secteur de Hull. Ensuite, on bâtit un plan de mise en marché adapté à votre type de propriété — condo, plex ou unifamiliale." },
+  { q: "Comment vendre une maison à Hull?", a: "On commence par une évaluation basée sur les ventes récentes dans votre secteur de Hull. Ensuite, on bâtit un plan de mise en marché adapté à votre type de propriété, condo, plex ou unifamiliale." },
   { q: "Combien de temps prend la vente d'une maison à Hull?", a: "En moyenne, une propriété bien positionnée à Hull se vend en quelques semaines. Le délai dépend du prix, du type de propriété et de la préparation." },
   { q: "Combien vaut ma maison à Hull?", a: "La valeur dépend de votre rue, du type de propriété et des ventes récentes. Demandez une évaluation gratuite pour connaître votre fourchette de prix." },
   { q: "Faut-il rénover avant de vendre à Hull?", a: "Pas nécessairement. Certaines améliorations valent la peine dans le marché de Hull, d'autres non. Je vous conseille au cas par cas." },
   { q: "Quels sont les frais pour vendre à Hull?", a: "Commission courtier, notaire, certificat de localisation et parfois des réparations mineures. Tout est transparent dès le départ." },
   { q: "Est-ce un bon moment pour vendre à Hull?", a: "Hull reste un secteur recherché grâce à sa proximité avec Ottawa et ses services. Le bon moment dépend aussi de votre situation personnelle." },
-  { q: "Pourquoi travailler avec un courtier local à Hull?", a: "Un courtier qui connaît Hull comprend les comparables, les acheteurs actifs et les particularités du secteur — condos du centre-ville, plex, quartiers résidentiels." },
-  { q: "Puis-je vendre à un acheteur d'Ottawa?", a: "Absolument — beaucoup d'acheteurs d'Ottawa cherchent à Hull pour la proximité et les prix. Ma mise en marché cible les deux marchés." },
+  { q: "Pourquoi travailler avec un courtier local à Hull?", a: "Un courtier qui connaît Hull comprend les comparables, les acheteurs actifs et les particularités du secteur, condos du centre-ville, plex, quartiers résidentiels." },
+  { q: "Puis-je vendre à un acheteur d'Ottawa?", a: "Absolument, beaucoup d'acheteurs d'Ottawa cherchent à Hull pour la proximité et les prix. Ma mise en marché cible les deux marchés." },
   { q: "Comment se passe la coordination vente-achat?", a: "C'est fréquent à Hull. On planifie la coordination dès le départ pour éviter d'être coincé entre deux transactions." },
   { q: "Quelle est la différence entre vendre un condo et une maison à Hull?", a: "Les stratégies de prix et de mise en marché diffèrent. Un condo demande une attention particulière aux frais de copropriété et à la concurrence dans l'immeuble." },
 ];
@@ -70,7 +70,7 @@ const SellHullPage = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Première étape : connaître la valeur de votre propriété à Hull — c'est gratuit."
+      text="Première étape : connaître la valeur de votre propriété à Hull, c'est gratuit."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-maison-hull/"
     />

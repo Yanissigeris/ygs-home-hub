@@ -27,7 +27,7 @@ const BlogPage = () => {
       <SEO title="Blogue immobilier Gatineau | Conseils YGS" description="Conseils immobiliers pour Gatineau et l'Outaouais. Marché, vente, achat, investissement plex, relocalisation." canonical="https://yanisgauthier.com/blogue" hreflangFr="https://yanisgauthier.com/blogue" hreflangEn="https://yanisgauthier.com/en/blog" />
       <PageMeta
         title="Blogue immobilier Gatineau · Conseils et analyses"
-        description="Articles, analyses et conseils immobiliers pour Gatineau et l'Outaouais. Vendeurs, acheteurs, investisseurs — par Yanis Gauthier-Sigeris, courtier immobilier."
+        description="Articles, analyses et conseils immobiliers pour Gatineau et l'Outaouais. Vendeurs, acheteurs, investisseurs, par Yanis Gauthier-Sigeris, courtier immobilier."
         ogImage="https://yanisgauthier.com/og/og-blog.jpg" />
 
       {/* Editorial hero */}
@@ -163,7 +163,7 @@ const BlogPage = () => {
             {/* Right column — pull-quote + stats */}
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                « En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours — contre 65 jours un an plus tôt. »
+                « En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours, contre 65 jours un an plus tôt. »
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[

@@ -35,7 +35,7 @@ Le village est reconnu pour sa communauté artistique, son marché fermier et se
 
 ## Types de propriétés disponibles
 
-À Chelsea, vous trouverez principalement des maisons unifamiliales sur de grands terrains boisés. Les propriétés varient du chalet quatre-saisons rénové à la résidence haut de gamme avec vue sur les collines. Les condos sont rares — Chelsea est avant tout un village de maisons.
+À Chelsea, vous trouverez principalement des maisons unifamiliales sur de grands terrains boisés. Les propriétés varient du chalet quatre-saisons rénové à la résidence haut de gamme avec vue sur les collines. Les condos sont rares, Chelsea est avant tout un village de maisons.
 
 Les terrains sont généralement grands (1 à 5+ acres), ce qui assure intimité et contact avec la nature. Plusieurs propriétés ont accès à des sentiers directement depuis la cour arrière.
 
@@ -51,7 +51,7 @@ Chelsea dispose d'écoles primaires francophones et anglophones. Pour le seconda
 
 ## Mon conseil
 
-Chelsea n'est pas pour tout le monde — c'est pour ceux qui valorisent la nature, la communauté et la tranquillité. Si c'est votre profil, c'est l'un des meilleurs endroits de l'Outaouais.
+Chelsea n'est pas pour tout le monde, c'est pour ceux qui valorisent la nature, la communauté et la tranquillité. Si c'est votre profil, c'est l'un des meilleurs endroits de l'Outaouais.
 
 **Lire aussi** : [Guide acheteur complet](/guide-acheteur-gatineau) · [Tous les quartiers de Gatineau](/quartiers-a-considerer-a-gatineau)`,
     bodyEn: `## Why Buy in Chelsea?
@@ -62,7 +62,7 @@ The village is known for its artistic community, farmers' market and quality caf
 
 ## Property Types Available
 
-In Chelsea, you'll find mainly single-family homes on large wooded lots. Properties range from renovated four-season cottages to high-end residences with hilltop views. Condos are rare — Chelsea is primarily a village of houses.
+In Chelsea, you'll find mainly single-family homes on large wooded lots. Properties range from renovated four-season cottages to high-end residences with hilltop views. Condos are rare, Chelsea is primarily a village of houses.
 
 Lots are generally large (1 to 5+ acres), ensuring privacy and contact with nature. Many properties have trail access directly from the backyard.
 
@@ -78,7 +78,7 @@ Chelsea has French and English elementary schools. For high school, options are 
 
 ## My Advice
 
-Chelsea isn't for everyone — it's for those who value nature, community and tranquility. If that's your profile, it's one of the best places in the Outaouais.
+Chelsea isn't for everyone, it's for those who value nature, community and tranquility. If that's your profile, it's one of the best places in the Outaouais.
 
 **Read also**: [Complete buyer's guide](/en/buyer-guide) · [All Gatineau neighborhoods](/en/neighborhoods)`,
   },
@@ -92,7 +92,7 @@ Chelsea isn't for everyone — it's for those who value nature, community and tr
     metaDescription: "Découvrez le style de vie à Chelsea : parc de la Gatineau, marché fermier, art, randonnée et communauté. Guide par un courtier local.",
     metaDescriptionEn: "Discover the Chelsea lifestyle: Gatineau Park, farmers' market, art, hiking and community. Guide by a local broker.",
     excerpt: "Parc de la Gatineau, marché fermier, art et communauté — voici à quoi ressemble la vie à Chelsea.",
-    excerptEn: "Gatineau Park, farmers' market, art and community — here's what life in Chelsea looks like.",
+    excerptEn: "Gatineau Park, farmers' market, art and community, here's what life in Chelsea looks like.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: heroChelsea,
@@ -100,7 +100,7 @@ Chelsea isn't for everyone — it's for those who value nature, community and tr
     published: true,
     body: `## Le parc de la Gatineau à votre porte
 
-Vivre à Chelsea, c'est avoir le parc de la Gatineau comme cour arrière. Ski de fond en hiver, randonnée au printemps, vélo en été, couleurs d'automne — chaque saison apporte son lot d'activités. Les sentiers sont accessibles à pied depuis plusieurs quartiers du village.
+Vivre à Chelsea, c'est avoir le parc de la Gatineau comme cour arrière. Ski de fond en hiver, randonnée au printemps, vélo en été, couleurs d'automne, chaque saison apporte son lot d'activités. Les sentiers sont accessibles à pied depuis plusieurs quartiers du village.
 
 ## Une communauté artistique et engagée
 
@@ -121,7 +121,7 @@ Chelsea est parfait pour les familles qui veulent élever leurs enfants dans la 
 **Lire aussi** : [Acheter à Chelsea](/blogue/acheter-maison-chelsea-guide) · [Page quartier Chelsea](/chelsea)`,
     bodyEn: `## Gatineau Park at Your Doorstep
 
-Living in Chelsea means having Gatineau Park as your backyard. Cross-country skiing in winter, hiking in spring, cycling in summer, fall colors — every season brings its share of activities. Trails are accessible on foot from several village neighborhoods.
+Living in Chelsea means having Gatineau Park as your backyard. Cross-country skiing in winter, hiking in spring, cycling in summer, fall colors, every season brings its share of activities. Trails are accessible on foot from several village neighborhoods.
 
 ## An Artistic and Engaged Community
 
@@ -175,7 +175,7 @@ La tendance au télétravail continue de soutenir la demande. Les acheteurs d'Ot
 
 ## Mon analyse
 
-Chelsea est un marché de niche — les propriétés se vendent à des acheteurs qui cherchent un style de vie spécifique. Si vous envisagez de vendre, c'est un bon moment. Si vous achetez, soyez prêt à agir vite quand la bonne propriété se présente.
+Chelsea est un marché de niche, les propriétés se vendent à des acheteurs qui cherchent un style de vie spécifique. Si vous envisagez de vendre, c'est un bon moment. Si vous achetez, soyez prêt à agir vite quand la bonne propriété se présente.
 
 **Lire aussi** : [Évaluation gratuite](/evaluation-gratuite-gatineau) · [Rapport du marché Gatineau](/rapport-marche-gatineau)`,
     bodyEn: `## The State of the Chelsea Market
@@ -196,7 +196,7 @@ The remote work trend continues to support demand. Ottawa buyers represent a sig
 
 ## My Analysis
 
-Chelsea is a niche market — properties sell to buyers seeking a specific lifestyle. If you're considering selling, it's a good time. If you're buying, be ready to act quickly when the right property comes up.
+Chelsea is a niche market, properties sell to buyers seeking a specific lifestyle. If you're considering selling, it's a good time. If you're buying, be ready to act quickly when the right property comes up.
 
 **Read also**: [Free valuation](/en/home-valuation) · [Gatineau market report](/en/market-report)`,
   },
@@ -212,7 +212,7 @@ Chelsea is a niche market — properties sell to buyers seeking a specific lifes
     seoTitle: "Acheter un terrain à Cantley · Guide pratique | YGS",
     seoTitleEn: "Buying Land in Cantley QC · Practical Guide | YGS",
     metaDescription: "Guide pour acheter un terrain à Cantley. Zonage, puits, fosse septique, grands terrains et réglementation — conseils de courtier local.",
-    metaDescriptionEn: "Guide to buying land in Cantley. Zoning, wells, septic systems, large lots and regulations — local broker advice.",
+    metaDescriptionEn: "Guide to buying land in Cantley. Zoning, wells, septic systems, large lots and regulations, local broker advice.",
     excerpt: "Cantley offre des terrains de 1 à 10+ acres. Voici ce qu'il faut vérifier avant d'acheter.",
     excerptEn: "Cantley offers lots from 1 to 10+ acres. Here's what to check before buying.",
     category: "Quartiers",
@@ -234,7 +234,7 @@ La majorité des propriétés à Cantley fonctionnent avec un puits artésien et
 
 ## Accès et services
 
-L'accès à Internet haute vitesse s'améliore à Cantley, mais vérifiez la couverture avant d'acheter — surtout si vous êtes en télétravail. La route 307 est l'artère principale et offre un accès direct à Gatineau.
+L'accès à Internet haute vitesse s'améliore à Cantley, mais vérifiez la couverture avant d'acheter, surtout si vous êtes en télétravail. La route 307 est l'artère principale et offre un accès direct à Gatineau.
 
 ## Mon conseil
 
@@ -255,7 +255,7 @@ Most Cantley properties run on artesian wells and septic systems. When buying, a
 
 ## Access and Services
 
-High-speed internet coverage is improving in Cantley, but check availability before buying — especially if you work remotely. Route 307 is the main artery and provides direct access to Gatineau.
+High-speed internet coverage is improving in Cantley, but check availability before buying, especially if you work remotely. Route 307 is the main artery and provides direct access to Gatineau.
 
 ## My Advice
 
@@ -273,7 +273,7 @@ Cantley is ideal if you're looking for space and tranquility without isolation. 
     metaDescription: "Découvrez la vie à Cantley : collines, chevaux, marchés fermiers et communauté rurale à 20 minutes de Gatineau.",
     metaDescriptionEn: "Discover life in Cantley: hills, horses, farmers' markets and rural community 20 minutes from Gatineau.",
     excerpt: "Collines verdoyantes, chevaux et marchés fermiers — Cantley offre la campagne à 20 minutes de la ville.",
-    excerptEn: "Rolling green hills, horses and farmers' markets — Cantley offers country living 20 minutes from the city.",
+    excerptEn: "Rolling green hills, horses and farmers' markets, Cantley offers country living 20 minutes from the city.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: heroCantley,
@@ -281,11 +281,11 @@ Cantley is ideal if you're looking for space and tranquility without isolation. 
     published: true,
     body: `## Le charme rural de Cantley
 
-Cantley est un endroit où le temps semble ralentir. Des collines verdoyantes, des chevaux dans les pâturages, des routes sinueuses bordées d'arbres — c'est la campagne québécoise à son meilleur, à seulement 20 minutes du centre de Gatineau.
+Cantley est un endroit où le temps semble ralentir. Des collines verdoyantes, des chevaux dans les pâturages, des routes sinueuses bordées d'arbres, c'est la campagne québécoise à son meilleur, à seulement 20 minutes du centre de Gatineau.
 
 ## Activités et plein air
 
-Les amateurs de plein air adorent Cantley. Équitation, VTT, motoneige, randonnée, ski de fond — chaque saison offre des possibilités. La proximité du [parc de la Gatineau](/chelsea) ajoute encore plus d'options pour les sportifs.
+Les amateurs de plein air adorent Cantley. Équitation, VTT, motoneige, randonnée, ski de fond, chaque saison offre des possibilités. La proximité du [parc de la Gatineau](/chelsea) ajoute encore plus d'options pour les sportifs.
 
 ## Communauté et événements
 
@@ -293,7 +293,7 @@ Cantley a une communauté active avec des marchés fermiers, des festivals saiso
 
 ## Pour les familles
 
-Les familles à Cantley profitent d'un cadre sécuritaire avec beaucoup d'espace pour jouer. Les écoles primaires sont sur place, et les activités parascolaires reflètent le mode de vie rural — camps de jour en nature, cours d'équitation, etc.
+Les familles à Cantley profitent d'un cadre sécuritaire avec beaucoup d'espace pour jouer. Les écoles primaires sont sur place, et les activités parascolaires reflètent le mode de vie rural, camps de jour en nature, cours d'équitation, etc.
 
 ## Est-ce fait pour vous?
 
@@ -302,11 +302,11 @@ Si vous rêvez d'un grand terrain, d'air frais et de tranquillité sans être co
 **Lire aussi** : [Acheter un terrain à Cantley](/blogue/acheter-terrain-cantley) · [Chelsea — village voisin](/chelsea)`,
     bodyEn: `## Cantley's Rural Charm
 
-Cantley is a place where time seems to slow down. Rolling green hills, horses in pastures, winding tree-lined roads — it's Quebec countryside at its best, just 20 minutes from downtown Gatineau.
+Cantley is a place where time seems to slow down. Rolling green hills, horses in pastures, winding tree-lined roads, it's Quebec countryside at its best, just 20 minutes from downtown Gatineau.
 
 ## Activities and Outdoors
 
-Outdoor enthusiasts love Cantley. Horseback riding, ATVing, snowmobiling, hiking, cross-country skiing — every season offers possibilities. The proximity of [Gatineau Park](/en/chelsea) adds even more options for sports lovers.
+Outdoor enthusiasts love Cantley. Horseback riding, ATVing, snowmobiling, hiking, cross-country skiing, every season offers possibilities. The proximity of [Gatineau Park](/en/chelsea) adds even more options for sports lovers.
 
 ## Community and Events
 
@@ -314,7 +314,7 @@ Cantley has an active community with farmers' markets, seasonal festivals and co
 
 ## For Families
 
-Families in Cantley enjoy a safe setting with plenty of space to play. Elementary schools are on-site, and extracurricular activities reflect the rural lifestyle — nature day camps, horseback riding lessons, etc.
+Families in Cantley enjoy a safe setting with plenty of space to play. Elementary schools are on-site, and extracurricular activities reflect the rural lifestyle, nature day camps, horseback riding lessons, etc.
 
 ## Is It for You?
 
@@ -330,9 +330,9 @@ If you dream of a large lot, fresh air and tranquility without complete isolatio
     seoTitle: "Familles à Cantley · Pourquoi ce choix en 2025 | YGS",
     seoTitleEn: "Families in Cantley · Why They Choose It in 2025 | YGS",
     metaDescription: "De plus en plus de familles choisissent Cantley. Espace, nature, écoles et communauté — découvrez pourquoi.",
-    metaDescriptionEn: "More and more families are choosing Cantley. Space, nature, schools and community — find out why.",
+    metaDescriptionEn: "More and more families are choosing Cantley. Space, nature, schools and community, find out why.",
     excerpt: "Espace, nature et communauté — voici pourquoi les familles s'installent à Cantley.",
-    excerptEn: "Space, nature and community — here's why families are settling in Cantley.",
+    excerptEn: "Space, nature and community, here's why families are settling in Cantley.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: heroCantley,
@@ -344,11 +344,11 @@ Pour beaucoup de familles, l'espace est le facteur déterminant. À Cantley, les
 
 ## Des écoles à proximité
 
-Cantley dispose d'écoles primaires francophones et anglophones directement dans la municipalité. Pour le secondaire, les options à Gatineau sont à 15-20 minutes — un trajet que beaucoup de familles considèrent acceptable.
+Cantley dispose d'écoles primaires francophones et anglophones directement dans la municipalité. Pour le secondaire, les options à Gatineau sont à 15-20 minutes, un trajet que beaucoup de familles considèrent acceptable.
 
 ## Un mode de vie actif
 
-Les enfants à Cantley grandissent en plein air. Vélo, randonnée, ski, équitation — le mode de vie rural encourage l'activité physique naturellement. C'est un contraste rafraîchissant avec la vie en banlieue traditionnelle.
+Les enfants à Cantley grandissent en plein air. Vélo, randonnée, ski, équitation, le mode de vie rural encourage l'activité physique naturellement. C'est un contraste rafraîchissant avec la vie en banlieue traditionnelle.
 
 ## Sécurité et communauté
 
@@ -356,7 +356,7 @@ Le taux de criminalité à Cantley est parmi les plus bas de la région. La comm
 
 ## Le télétravail change la donne
 
-Depuis 2020, le télétravail a rendu Cantley accessible à un nouveau groupe d'acheteurs — des professionnels qui n'ont plus besoin d'être au bureau tous les jours. Cette tendance continue en 2025 et soutient la demande.
+Depuis 2020, le télétravail a rendu Cantley accessible à un nouveau groupe d'acheteurs, des professionnels qui n'ont plus besoin d'être au bureau tous les jours. Cette tendance continue en 2025 et soutient la demande.
 
 **Lire aussi** : [Vivre à Cantley](/blogue/vivre-cantley-campagne-gatineau) · [Quartiers familiaux de Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## The Appeal of Space
@@ -365,11 +365,11 @@ For many families, space is the deciding factor. In Cantley, 2 to 5 acre lots ar
 
 ## Schools Nearby
 
-Cantley has both French and English elementary schools right in the municipality. For high school, options in Gatineau are 15-20 minutes away — a commute many families consider acceptable.
+Cantley has both French and English elementary schools right in the municipality. For high school, options in Gatineau are 15-20 minutes away, a commute many families consider acceptable.
 
 ## An Active Lifestyle
 
-Kids in Cantley grow up outdoors. Cycling, hiking, skiing, horseback riding — rural living naturally encourages physical activity. It's a refreshing contrast to traditional suburban life.
+Kids in Cantley grow up outdoors. Cycling, hiking, skiing, horseback riding, rural living naturally encourages physical activity. It's a refreshing contrast to traditional suburban life.
 
 ## Safety and Community
 
@@ -377,7 +377,7 @@ Cantley's crime rate is among the lowest in the region. The community is tight-k
 
 ## Remote Work Changes Everything
 
-Since 2020, remote work has made Cantley accessible to a new group of buyers — professionals who no longer need to be in the office every day. This trend continues in 2025 and supports demand.
+Since 2020, remote work has made Cantley accessible to a new group of buyers, professionals who no longer need to be in the office every day. This trend continues in 2025 and supports demand.
 
 **Read also**: [Living in Cantley](/en/blog/living-cantley-country-near-gatineau) · [Best family neighborhoods in Gatineau](/en/blog/best-family-neighborhoods-gatineau)`,
   },
@@ -407,7 +407,7 @@ Avec plus de 200 lacs, Val-des-Monts est la destination chalet par excellence en
 
 ## Bord de lac vs hors bord de lac
 
-La différence de prix entre une propriété en bord de lac et hors bord de lac est significative — souvent 30 à 50% de plus pour un accès direct au lac. Si votre budget est limité, les propriétés avec accès communautaire à un lac offrent un excellent compromis.
+La différence de prix entre une propriété en bord de lac et hors bord de lac est significative, souvent 30 à 50% de plus pour un accès direct au lac. Si votre budget est limité, les propriétés avec accès communautaire à un lac offrent un excellent compromis.
 
 ## Vérifications essentielles
 
@@ -424,7 +424,7 @@ De plus en plus d'acheteurs transforment leur chalet en résidence permanente. V
 
 ## Mon conseil
 
-Val-des-Monts est un investissement dans votre qualité de vie. Prenez le temps de bien choisir votre lac — chaque lac a sa personnalité, sa taille et son niveau de développement.
+Val-des-Monts est un investissement dans votre qualité de vie. Prenez le temps de bien choisir votre lac, chaque lac a sa personnalité, sa taille et son niveau de développement.
 
 **Lire aussi** : [Val-des-Monts — page quartier](/val-des-monts) · [Guide acheteur](/guide-acheteur-gatineau)`,
     bodyEn: `## Val-des-Monts: Cottage Paradise
@@ -433,7 +433,7 @@ With over 200 lakes, Val-des-Monts is the ultimate cottage destination in the Ou
 
 ## Waterfront vs Off-Waterfront
 
-The price difference between waterfront and off-waterfront properties is significant — often 30 to 50% more for direct lake access. If your budget is limited, properties with community lake access offer an excellent compromise.
+The price difference between waterfront and off-waterfront properties is significant, often 30 to 50% more for direct lake access. If your budget is limited, properties with community lake access offer an excellent compromise.
 
 ## Essential Checks
 
@@ -450,7 +450,7 @@ More and more buyers are converting their cottages to year-round residences. Che
 
 ## My Advice
 
-Val-des-Monts is an investment in your quality of life. Take the time to choose your lake carefully — each lake has its own personality, size and development level.
+Val-des-Monts is an investment in your quality of life. Take the time to choose your lake carefully, each lake has its own personality, size and development level.
 
 **Read also**: [Val-des-Monts neighborhood page](/en/val-des-monts) · [Buyer's guide](/en/buyer-guide)`,
   },
@@ -492,7 +492,7 @@ La valeur d'une propriété lacustre dépend de : la taille et la profondeur du 
 
 ## Mon conseil
 
-Visitez le lac à différentes périodes — un lac magnifique en été peut être très isolé en hiver. Discutez avec les voisins pour comprendre la dynamique du lac avant d'acheter.
+Visitez le lac à différentes périodes, un lac magnifique en été peut être très isolé en hiver. Discutez avec les voisins pour comprendre la dynamique du lac avant d'acheter.
 
 **Lire aussi** : [Acheter un chalet à Val-des-Monts](/blogue/acheter-chalet-val-des-monts) · [Évaluation gratuite](/evaluation-gratuite-gatineau)`,
     bodyEn: `## A Lake for Every Profile
@@ -517,7 +517,7 @@ A lakefront property's value depends on: lake size and depth, water quality, ori
 
 ## My Advice
 
-Visit the lake at different times — a magnificent summer lake can be very isolated in winter. Talk to neighbors to understand the lake's dynamics before buying.
+Visit the lake at different times, a magnificent summer lake can be very isolated in winter. Talk to neighbors to understand the lake's dynamics before buying.
 
 **Read also**: [Buying a cottage in Val-des-Monts](/en/blog/buying-cottage-val-des-monts) · [Free valuation](/en/home-valuation)`,
   },
@@ -592,7 +592,7 @@ The cottage-to-residence conversion is increasingly common and successful. Plan 
     seoTitle: "Masson-Angers en plein essor · Immobilier Gatineau | YGS",
     seoTitleEn: "Masson-Angers Booming · Gatineau Real Estate | YGS",
     metaDescription: "Masson-Angers est le secteur en plus forte croissance de Gatineau. Constructions neuves, prix compétitifs et familles — analyse complète.",
-    metaDescriptionEn: "Masson-Angers is Gatineau's fastest growing area. New construction, competitive prices and families — complete analysis.",
+    metaDescriptionEn: "Masson-Angers is Gatineau's fastest growing area. New construction, competitive prices and families, complete analysis.",
     excerpt: "Masson-Angers connaît un boom immobilier. Voici pourquoi les acheteurs s'y intéressent.",
     excerptEn: "Masson-Angers is experiencing a real estate boom. Here's why buyers are interested.",
     category: "Marché",
@@ -669,11 +669,11 @@ L'avantage d'acheter du neuf, c'est la garantie de maison neuve (GCR). Moins de 
 
 ## Financement et mise de fonds
 
-Avec des prix plus bas, la mise de fonds est plus accessible. Pour une maison à 380 000 $, la mise de fonds minimale (5%) est de 19 000 $ — plus réaliste que dans les secteurs plus chers.
+Avec des prix plus bas, la mise de fonds est plus accessible. Pour une maison à 380 000 $, la mise de fonds minimale (5%) est de 19 000 $, plus réaliste que dans les secteurs plus chers.
 
 ## Qualité de vie
 
-Masson-Angers n'est pas juste abordable — c'est aussi un bel endroit pour vivre. Les nouveaux quartiers sont bien planifiés, avec des parcs, des sentiers et des espaces verts. Les jeunes familles y trouvent un environnement agréable.
+Masson-Angers n'est pas juste abordable, c'est aussi un bel endroit pour vivre. Les nouveaux quartiers sont bien planifiés, avec des parcs, des sentiers et des espaces verts. Les jeunes familles y trouvent un environnement agréable.
 
 ## Mon conseil
 
@@ -690,11 +690,11 @@ The advantage of buying new is the new home warranty (GCR). Fewer surprises, few
 
 ## Financing and Down Payment
 
-With lower prices, the down payment is more accessible. For a $380,000 home, the minimum down payment (5%) is $19,000 — more realistic than in pricier areas.
+With lower prices, the down payment is more accessible. For a $380,000 home, the minimum down payment (5%) is $19,000, more realistic than in pricier areas.
 
 ## Quality of Life
 
-Masson-Angers isn't just affordable — it's also a great place to live. New neighborhoods are well-planned with parks, trails and green spaces. Young families find a pleasant environment.
+Masson-Angers isn't just affordable, it's also a great place to live. New neighborhoods are well-planned with parks, trails and green spaces. Young families find a pleasant environment.
 
 ## My Advice
 
@@ -795,7 +795,7 @@ Les principaux villages du Pontiac incluent Luskville (le plus proche de [Gatine
 
 ## Considérations pratiques
 
-Le Pontiac est plus rural et éloigné que les autres secteurs. Le trajet vers Ottawa est plus long (40-55 minutes depuis les secteurs centraux). Les services sont plus limités — prévoyez vos courses à Gatineau. Internet haute vitesse n'est pas disponible partout.
+Le Pontiac est plus rural et éloigné que les autres secteurs. Le trajet vers Ottawa est plus long (40-55 minutes depuis les secteurs centraux). Les services sont plus limités, prévoyez vos courses à Gatineau. Internet haute vitesse n'est pas disponible partout.
 
 ## Mon conseil
 
@@ -816,7 +816,7 @@ The main Pontiac villages include Luskville (closest to [Gatineau](/en/gatineau)
 
 ## Practical Considerations
 
-The Pontiac is more rural and remote than other areas. The commute to Ottawa is longer (40-55 minutes from central areas). Services are more limited — plan your shopping in Gatineau. High-speed internet isn't available everywhere.
+The Pontiac is more rural and remote than other areas. The commute to Ottawa is longer (40-55 minutes from central areas). Services are more limited, plan your shopping in Gatineau. High-speed internet isn't available everywhere.
 
 ## My Advice
 
@@ -842,7 +842,7 @@ The Pontiac is ideal for buyers seeking space, tranquility and unbeatable prices
     published: true,
     body: `## Vivre au bord de la rivière
 
-Le Pontiac longe la rivière des Outaouais sur des dizaines de kilomètres. Plusieurs propriétés offrent un accès direct à la rivière — kayak, pêche, canot et simplement la contemplation du coucher de soleil sur l'eau.
+Le Pontiac longe la rivière des Outaouais sur des dizaines de kilomètres. Plusieurs propriétés offrent un accès direct à la rivière, kayak, pêche, canot et simplement la contemplation du coucher de soleil sur l'eau.
 
 ## Communauté bilingue et chaleureuse
 
@@ -850,7 +850,7 @@ Le Pontiac est l'une des régions les plus bilingues du Québec. La communauté 
 
 ## Agriculture et terroir
 
-Le Pontiac est un territoire agricole riche. Plusieurs fermes produisent des aliments locaux — fromages, viandes, légumes et produits de l'érable. Vivre dans le Pontiac, c'est avoir accès à un terroir exceptionnel directement de la ferme.
+Le Pontiac est un territoire agricole riche. Plusieurs fermes produisent des aliments locaux, fromages, viandes, légumes et produits de l'érable. Vivre dans le Pontiac, c'est avoir accès à un terroir exceptionnel directement de la ferme.
 
 ## Le patrimoine bâti
 
@@ -863,7 +863,7 @@ Le Pontiac n'est pas pour les gens pressés. C'est pour ceux qui cherchent un ry
 **Lire aussi** : [Acheter dans le Pontiac](/blogue/acheter-pontiac-guide) · [Aylmer — plus proche d'Ottawa](/aylmer)`,
     bodyEn: `## Living by the River
 
-The Pontiac runs along the Ottawa River for dozens of kilometers. Many properties offer direct river access — kayaking, fishing, canoeing and simply watching the sunset over the water.
+The Pontiac runs along the Ottawa River for dozens of kilometers. Many properties offer direct river access, kayaking, fishing, canoeing and simply watching the sunset over the water.
 
 ## Bilingual and Warm Community
 
@@ -871,7 +871,7 @@ The Pontiac is one of Quebec's most bilingual regions. The community is warm and
 
 ## Agriculture and Local Food
 
-The Pontiac is rich agricultural territory. Several farms produce local food — cheeses, meats, vegetables and maple products. Living in the Pontiac means access to exceptional terroir directly from the farm.
+The Pontiac is rich agricultural territory. Several farms produce local food, cheeses, meats, vegetables and maple products. Living in the Pontiac means access to exceptional terroir directly from the farm.
 
 ## Built Heritage
 
@@ -893,7 +893,7 @@ The Pontiac isn't for people in a hurry. It's for those seeking a different pace
     metaDescription: "Guide pour acheter une propriété agricole dans le Pontiac. Zonage, terres, fermes et réglementation en Outaouais.",
     metaDescriptionEn: "Guide to buying farm property in the Pontiac. Zoning, land, farms and regulations in the Outaouais.",
     excerpt: "Fermes, terres agricoles et propriétés rurales — le Pontiac est un territoire unique pour les acheteurs.",
-    excerptEn: "Farms, agricultural land and rural properties — the Pontiac is a unique territory for buyers.",
+    excerptEn: "Farms, agricultural land and rural properties, the Pontiac is a unique territory for buyers.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: heroPontiac,
@@ -905,7 +905,7 @@ Le Pontiac est l'un des rares territoires de l'Outaouais où l'agriculture est e
 
 ## Zonage agricole
 
-Une grande partie du Pontiac est en zone agricole protégée par la CPTAQ. Cela signifie que l'usage des terres est réglementé — vous ne pouvez pas subdiviser ou développer librement une terre agricole. Vérifiez le zonage avant d'acheter.
+Une grande partie du Pontiac est en zone agricole protégée par la CPTAQ. Cela signifie que l'usage des terres est réglementé, vous ne pouvez pas subdiviser ou développer librement une terre agricole. Vérifiez le zonage avant d'acheter.
 
 ## Types de fermes disponibles
 
@@ -926,7 +926,7 @@ The Pontiac is one of the few Outaouais territories where agriculture is still a
 
 ## Agricultural Zoning
 
-A large portion of the Pontiac is in protected agricultural zone by the CPTAQ. This means land use is regulated — you can't freely subdivide or develop agricultural land. Check zoning before buying.
+A large portion of the Pontiac is in protected agricultural zone by the CPTAQ. This means land use is regulated, you can't freely subdivide or develop agricultural land. Check zoning before buying.
 
 ## Types of Farms Available
 
@@ -1098,7 +1098,7 @@ Vérifiez toujours auprès de la Ville de Gatineau avant de commencer des travau
 
 ## Mon conseil
 
-Le quartier Côte-d'Azur est un terrain de jeu idéal pour les acheteurs-rénovateurs. Achetez un bungalow à bon prix, rénovez intelligemment et vous aurez une propriété moderne dans un quartier établi — le tout à un coût total bien inférieur aux maisons neuves.
+Le quartier Côte-d'Azur est un terrain de jeu idéal pour les acheteurs-rénovateurs. Achetez un bungalow à bon prix, rénovez intelligemment et vous aurez une propriété moderne dans un quartier établi, le tout à un coût total bien inférieur aux maisons neuves.
 
 **Lire aussi** : [Acheter un bungalow à Côte-d'Azur](/blogue/acheter-bungalow-cote-dazur-gatineau) · [Évaluation gratuite](/evaluation-gratuite-gatineau)`,
     bodyEn: `## Côte-d'Azur's Potential
@@ -1119,7 +1119,7 @@ Always check with the City of Gatineau before starting major work. A permit is r
 
 ## My Advice
 
-Côte-d'Azur is an ideal playground for buyer-renovators. Buy a bungalow at a good price, renovate smartly and you'll have a modern property in an established neighborhood — all at a total cost well below new construction.
+Côte-d'Azur is an ideal playground for buyer-renovators. Buy a bungalow at a good price, renovate smartly and you'll have a modern property in an established neighborhood, all at a total cost well below new construction.
 
 **Read also**: [Buying a bungalow in Côte-d'Azur](/en/blog/buying-bungalow-cote-dazur-gatineau) · [Free valuation](/en/home-valuation)`,
   },
@@ -1135,7 +1135,7 @@ Côte-d'Azur is an ideal playground for buyer-renovators. Buy a bungalow at a go
     seoTitle: "Limbour Gatineau · Quartier familial moderne | YGS",
     seoTitleEn: "Limbour Gatineau · Modern Family Neighborhood | YGS",
     metaDescription: "Découvrez Limbour, le quartier familial moderne de Gatineau. Maisons récentes, parcs, écoles et qualité de vie — guide complet.",
-    metaDescriptionEn: "Discover Limbour, Gatineau's modern family neighborhood. Recent homes, parks, schools and quality of life — complete guide.",
+    metaDescriptionEn: "Discover Limbour, Gatineau's modern family neighborhood. Recent homes, parks, schools and quality of life, complete guide.",
     excerpt: "Limbour est l'un des quartiers les plus prisés des jeunes familles à Gatineau. Découvrez pourquoi.",
     excerptEn: "Limbour is one of the most popular neighborhoods for young families in Gatineau. Find out why.",
     category: "Quartiers",
@@ -1212,7 +1212,7 @@ Limbour offre principalement des maisons unifamiliales à deux étages avec gara
 
 ## Avantage sur le neuf
 
-Acheter une maison de revente à [Limbour](/limbour) plutôt que du neuf à [Masson-Angers](/masson-angers) offre plusieurs avantages : le terrain est déjà aménagé (gazon, arbres, clôture), le sous-sol est souvent déjà fini, et vous savez exactement ce que vous achetez — pas de surprises.
+Acheter une maison de revente à [Limbour](/limbour) plutôt que du neuf à [Masson-Angers](/masson-angers) offre plusieurs avantages : le terrain est déjà aménagé (gazon, arbres, clôture), le sous-sol est souvent déjà fini, et vous savez exactement ce que vous achetez, pas de surprises.
 
 ## Quartier déjà établi
 
@@ -1233,7 +1233,7 @@ Limbour mainly offers two-story single-family homes with garages, townhomes and 
 
 ## Advantage Over New
 
-Buying a resale home in [Limbour](/en/limbour) rather than new in [Masson-Angers](/en/masson-angers) offers several advantages: the lot is already landscaped (lawn, trees, fence), the basement is often already finished, and you know exactly what you're buying — no surprises.
+Buying a resale home in [Limbour](/en/limbour) rather than new in [Masson-Angers](/en/masson-angers) offers several advantages: the lot is already landscaped (lawn, trees, fence), the basement is often already finished, and you know exactly what you're buying, no surprises.
 
 ## An Already Established Neighborhood
 
@@ -1253,9 +1253,9 @@ If you're torn between new construction in [Masson-Angers](/en/masson-angers) an
     seoTitle: "Jeunes familles à Limbour · Pourquoi ce choix | YGS",
     seoTitleEn: "Young Families in Limbour · Why They Choose It | YGS",
     metaDescription: "De plus en plus de jeunes familles choisissent Limbour à Gatineau. Parcs, écoles, sécurité et proximité — découvrez pourquoi.",
-    metaDescriptionEn: "More young families are choosing Limbour in Gatineau. Parks, schools, safety and proximity — find out why.",
+    metaDescriptionEn: "More young families are choosing Limbour in Gatineau. Parks, schools, safety and proximity, find out why.",
     excerpt: "Parcs, écoles et maisons modernes — voici pourquoi les jeunes familles s'installent à Limbour.",
-    excerptEn: "Parks, schools and modern homes — here's why young families are settling in Limbour.",
+    excerptEn: "Parks, schools and modern homes, here's why young families are settling in Limbour.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: heroLimbour,
@@ -1263,7 +1263,7 @@ If you're torn between new construction in [Masson-Angers](/en/masson-angers) an
     published: true,
     body: `## Un quartier conçu pour les familles
 
-Limbour n'est pas un quartier qui est devenu familial par accident — il a été conçu pour ça. Les développeurs ont planifié les rues, les parcs et les espaces verts avec les familles en tête. Le résultat est un quartier où tout est à distance de marche.
+Limbour n'est pas un quartier qui est devenu familial par accident, il a été conçu pour ça. Les développeurs ont planifié les rues, les parcs et les espaces verts avec les familles en tête. Le résultat est un quartier où tout est à distance de marche.
 
 ## La proximité des écoles
 
@@ -1284,7 +1284,7 @@ Comparé à Aylmer ou au Plateau, Limbour offre des maisons familiales à un pri
 **Lire aussi** : [Acheter à Limbour](/blogue/acheter-limbour-maisons-recentes) · [Page quartier Limbour](/limbour)`,
     bodyEn: `## A Neighborhood Designed for Families
 
-Limbour isn't a neighborhood that became family-friendly by accident — it was designed for it. Developers planned streets, parks and green spaces with families in mind. The result is a neighborhood where everything is within walking distance.
+Limbour isn't a neighborhood that became family-friendly by accident, it was designed for it. Developers planned streets, parks and green spaces with families in mind. The result is a neighborhood where everything is within walking distance.
 
 ## School Proximity
 

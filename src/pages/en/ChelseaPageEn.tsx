@@ -18,11 +18,11 @@ import heroImg from "@/assets/hero-chelsea-gen.webp";
 const faq = [
   {
     q: "Is Chelsea too expensive compared to Gatineau?",
-    a: "Chelsea is indeed a premium market compared to the City of Gatineau — large-lot properties, scarce inventory, and quality of life are reflected in the prices. But 'too expensive' depends on what you're looking for. If access to nature, tranquility, bilingualism, and quality of life are your priorities, Chelsea is often the right choice. I can help you compare Chelsea with Cantley or Aylmer based on your budget and criteria.",
+    a: "Chelsea is indeed a premium market compared to the City of Gatineau, large-lot properties, scarce inventory, and quality of life are reflected in the prices. But 'too expensive' depends on what you're looking for. If access to nature, tranquility, bilingualism, and quality of life are your priorities, Chelsea is often the right choice. I can help you compare Chelsea with Cantley or Aylmer based on your budget and criteria.",
   },
   {
     q: "Can I build on a lot in Chelsea?",
-    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, riparian buffers (10–15 metres), and MRC constraints can limit or regulate projects. Before any land purchase, a thorough verification with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais is essential.",
+    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, riparian buffers (10-15 metres), and MRC constraints can limit or regulate projects. Before any land purchase, a thorough verification with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais is essential.",
   },
   {
     q: "Can my children go to an English school in Chelsea?",
@@ -30,19 +30,19 @@ const faq = [
   },
   {
     q: "What does a typical Chelsea home cost in 2026?",
-    a: "Chelsea is the most expensive municipality in metropolitan Gatineau on a per-square-foot basis. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000 on Centris, while waterfront or large-acreage properties along Lac Meech and Lac Mountain can clear $1.5M. The premium is driven by scarce buildable land — Gatineau Park covers roughly 60% of the territory — and constant demand from Ottawa professionals and federal executives.",
+    a: "Chelsea is the most expensive municipality in metropolitan Gatineau on a per-square-foot basis. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000 on Centris, while waterfront or large-acreage properties along Lac Meech and Lac Mountain can clear $1.5M. The premium is driven by scarce buildable land, Gatineau Park covers roughly 60% of the territory, and constant demand from Ottawa professionals and federal executives.",
   },
   {
     q: "How long does the Ottawa commute really take from Chelsea?",
-    a: "From central Old Chelsea to downtown Ottawa is 18–25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30–40 minutes during morning rush. Transcollines runs express buses to the STO Rapibus terminal at Labrosse, where you connect to OC Transpo via the Champlain or Macdonald-Cartier Bridge. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks — roughly 35 minutes door-to-door.",
+    a: "From central Old Chelsea to downtown Ottawa is 18-25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30-40 minutes during morning rush. Transcollines runs express buses to the STO Rapibus terminal at Labrosse, where you connect to OC Transpo via the Champlain or Macdonald-Cartier Bridge. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks, roughly 35 minutes door-to-door.",
   },
   {
     q: "Are wells and septic systems a problem when buying in Chelsea?",
-    a: "Most Chelsea properties operate on artesian wells and septic systems rather than municipal services. They're not problematic in themselves — they're standard in semi-rural Quebec — but they require a thorough professional inspection before purchase. Water potability testing (bacteria + minerals), well flow rate, septic tank age and percolation field condition are non-negotiable. I systematically include these in the offer's inspection clause and walk buyers through the results.",
+    a: "Most Chelsea properties operate on artesian wells and septic systems rather than municipal services. They're not problematic in themselves, they're standard in semi-rural Quebec, but they require a thorough professional inspection before purchase. Water potability testing (bacteria + minerals), well flow rate, septic tank age and percolation field condition are non-negotiable. I systematically include these in the offer's inspection clause and walk buyers through the results.",
   },
   {
     q: "Is Chelsea a good place to invest in real estate long-term?",
-    a: "Yes, with one important caveat. The combination of constrained supply (Gatineau Park), constant Ottawa-side demand, and a community committed to preserving its character has historically supported strong property values through every market cycle. The caveat: Chelsea is a niche market — fewer transactions per year than Aylmer or the Plateau — so liquidity at resale takes longer. For a 10-year hold, the fundamentals are excellent. For a 2–3 year flip, less so.",
+    a: "Yes, with one important caveat. The combination of constrained supply (Gatineau Park), constant Ottawa-side demand, and a community committed to preserving its character has historically supported strong property values through every market cycle. The caveat: Chelsea is a niche market, fewer transactions per year than Aylmer or the Plateau, so liquidity at resale takes longer. For a 10-year hold, the fundamentals are excellent. For a 2-3 year flip, less so.",
   },
 ];
 
@@ -51,7 +51,7 @@ const atouts = [
   {
     icon: "🌲",
     title: "Gatineau Park",
-    text: "Gatineau Park covers 360 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities with Chelsea as the main gateway. Hiking, cycling, cross-country skiing, snowshoeing, swimming at Lac Meech — activities accessible on foot or by bike from residential properties. (Source: National Capital Commission)",
+    text: "Gatineau Park covers 360 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities with Chelsea as the main gateway. Hiking, cycling, cross-country skiing, snowshoeing, swimming at Lac Meech, activities accessible on foot or by bike from residential properties. (Source: National Capital Commission)",
   },
   {
     icon: "♨️",
@@ -107,16 +107,16 @@ const ChelseaPageEn = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT</p>
-      <h2 className="mt-3">Chelsea — verified facts about this unique municipality</h2>
+      <h2 className="mt-3">Chelsea, verified facts about this unique municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was approximately 8,000 at the 2021 census, in steady growth. What fundamentally distinguishes it: approximately 60% of its territory belongs to Gatineau Park, managed by the National Capital Commission. This reality significantly limits available buildable land — which explains the scarcity of properties and their stable long-term value. (Source: Wikipedia/Chelsea, National Capital Commission)
+          Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was approximately 8,000 at the 2021 census, in steady growth. What fundamentally distinguishes it: approximately 60% of its territory belongs to Gatineau Park, managed by the National Capital Commission. This reality significantly limits available buildable land, which explains the scarcity of properties and their stable long-term value. (Source: Wikipedia/Chelsea, National Capital Commission)
         </p>
         <p className="prose-body">
-          Chelsea's population is almost equally split between francophones and anglophones — approximately 70% of households speak both official languages. Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics — bilingualism and environmental awareness — define the community's identity. (Source: Wikipedia/Chelsea, Quebec)
+          Chelsea's population is almost equally split between francophones and anglophones, approximately 70% of households speak both official languages. Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Source: Wikipedia/Chelsea, Quebec)
         </p>
         <p className="prose-body">
-          Highway 5 — known as the Gatineau Highway — connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service serves Chelsea and connects it to the STO Rapibus network and OC Transpo in Ottawa. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
+          Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service serves Chelsea and connects it to the STO Rapibus network and OC Transpo in Ottawa. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
         </p>
       </div>
     </ContentBlock>
@@ -153,7 +153,7 @@ const ChelseaPageEn = () => (
           Second, Chelsea is not served by municipal water and sewer services across its entire territory. Many properties operate with artesian wells and septic systems. A thorough inspection of these systems before purchase is non-negotiable.
         </p>
         <p className="prose-body">
-          Third, Chelsea is a semi-rural municipality: nearby services (grocery, clinic, pharmacy) are limited locally. Most residents shop in Gatineau or Ottawa (15–20 minutes).
+          Third, Chelsea is a semi-rural municipality: nearby services (grocery, clinic, pharmacy) are limited locally. Most residents shop in Gatineau or Ottawa (15-20 minutes).
         </p>
       </div>
     </ContentBlock>
@@ -163,8 +163,8 @@ const ChelseaPageEn = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Chelsea is the main gateway to Gatineau Park — 360 km² of nature accessible from your property. (Source: National Capital Commission)",
-            "~70% of Chelsea households are bilingual — a unique environment for both francophone and anglophone families. (Source: Wikipedia/Chelsea, Quebec)",
+            "Chelsea is the main gateway to Gatineau Park, 360 km² of nature accessible from your property. (Source: National Capital Commission)",
+            "~70% of Chelsea households are bilingual, a unique environment for both francophone and anglophone families. (Source: Wikipedia/Chelsea, Quebec)",
             "Approximately 60% of the territory is Gatineau Park, which limits buildable supply and supports existing property values long-term. (Source: National Capital Commission)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
@@ -184,16 +184,16 @@ const ChelseaPageEn = () => (
     {/* ═══ MARKET DATA ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">MARKET DATA</p>
-      <h2 className="mt-3">Chelsea — what the 2026 numbers say</h2>
+      <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea is the highest-priced municipality in metropolitan Gatineau on a per-square-foot basis, and one of the very few in the National Capital Region where waterfront and large-acreage inventory still appear on Centris in any given month. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000, while waterfront properties on Lac Meech or Lac Mountain regularly clear $1.4M–$2M. The supply pipeline is structurally constrained — Gatineau Park covers roughly 60% of the territory and the MRC des Collines-de-l'Outaouais enforces strict subdivision and shoreline rules — which is the main reason Chelsea values have held up across every market cycle since the early 2000s.
+          Chelsea is the highest-priced municipality in metropolitan Gatineau on a per-square-foot basis, and one of the very few in the National Capital Region where waterfront and large-acreage inventory still appear on Centris in any given month. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000, while waterfront properties on Lac Meech or Lac Mountain regularly clear $1.4M, $2M. The supply pipeline is structurally constrained, Gatineau Park covers roughly 60% of the territory and the MRC des Collines-de-l'Outaouais enforces strict subdivision and shoreline rules, which is the main reason Chelsea values have held up across every market cycle since the early 2000s.
         </p>
         <p className="prose-body">
-          On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing — it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.
+          On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing, it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.
         </p>
         <p className="prose-body">
-          For sellers, the playbook in Chelsea is different from anywhere else in the region. The qualified-buyer pool is smaller but more decisive — when the right family sees the right property, offers come quickly. Pricing has to anchor on genuine comparables (not the next sub-sector over), and presentation matters disproportionately because buyers paying $800K+ expect move-in-ready quality. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
+          For sellers, the playbook in Chelsea is different from anywhere else in the region. The qualified-buyer pool is smaller but more decisive, when the right family sees the right property, offers come quickly. Pricing has to anchor on genuine comparables (not the next sub-sector over), and presentation matters disproportionately because buyers paying $800K+ expect move-in-ready quality. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
         </p>
       </div>
     </ContentBlock>
@@ -213,7 +213,7 @@ const ChelseaPageEn = () => (
       lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Chelsea"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
@@ -221,15 +221,15 @@ const ChelseaPageEn = () => (
     <CTASection
       dark
       title="Buying or selling in Chelsea?"
-      text="I know Chelsea inside out — let's talk about your project."
+      text="I know Chelsea inside out, let's talk about your project."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

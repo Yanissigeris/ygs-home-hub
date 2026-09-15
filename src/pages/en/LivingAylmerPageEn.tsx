@@ -13,14 +13,14 @@ import { Home, Users, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 const highlights = [
-  { icon: MapPin, title: "Lake Deschênes", text: "Beach, water sports and stunning sunsets — steps from home." },
+  { icon: MapPin, title: "Lake Deschênes", text: "Beach, water sports and stunning sunsets, steps from home." },
   { icon: Home, title: "Charming neighborhoods", text: "Tree-lined streets, character homes and a tight-knit community." },
-  { icon: Coffee, title: "Village life", text: "Restaurants, cafés, boutiques and a local market — all within walking distance." },
+  { icon: Coffee, title: "Village life", text: "Restaurants, cafés, boutiques and a local market, all within walking distance." },
   { icon: Users, title: "Bilingual community", text: "French and English schools, community activities and local services." },
 ];
 
 const faq = [
-  { q: "Is Aylmer bilingual?", a: "Yes — French and English schools, bilingual services and a mixed community." },
+  { q: "Is Aylmer bilingual?", a: "Yes, French and English schools, bilingual services and a mixed community." },
   { q: "What are the popular activities in Aylmer?", a: "Lake Deschênes beach, Gatineau Park, farmers market, local restaurants and an active community life." },
   { q: "Is Aylmer well-served by transit?", a: "Access via the Champlain Bridge, public transit and cycling paths to Ottawa." },
 ];
@@ -44,9 +44,9 @@ const LivingAylmerPageEn = () => (
     <InlineCTA text="Thinking about settling in Aylmer? Book a free consultation." buttonLabel="Book a consultation →" href="/en/buyer-consultation/" />
     <FAQSection title="Questions about living in Aylmer" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — settling in Aylmer" text="Everything to buy in Aylmer — process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Ready to discover Aylmer?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighborhood", href: "/en/aylmer/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — settling in Aylmer" text="Everything to buy in Aylmer, process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
+    <CTASection dark title="Ready to discover Aylmer?" text="Let's talk about your criteria, I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighborhood", href: "/en/aylmer/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

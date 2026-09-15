@@ -30,13 +30,13 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Strictly confidential information" },
   { icon: Clock, text: "Personalized analysis within 48h" },
-  { icon: Shield, text: "No obligation — no commitment" },
+  { icon: Shield, text: "No obligation, no commitment" },
 ];
 
 const faq = [
   { q: "What's included in the plex analysis?", a: "Estimated market value, revenue and expense analysis, rental potential, and a strategic recommendation tailored to your situation." },
-  { q: "Is it really free?", a: "Yes. The goal is to help you make an informed decision. If you decide to move forward, we discuss it — but full transparency." },
-  { q: "I'm not sure I want to sell — is it still useful?", a: "Absolutely. Many owners simply want to understand their position before deciding. That's exactly what this service is for." },
+  { q: "Is it really free?", a: "Yes. The goal is to help you make an informed decision. If you decide to move forward, we discuss it, but full transparency." },
+  { q: "I'm not sure I want to sell, is it still useful?", a: "Absolutely. Many owners simply want to understand their position before deciding. That's exactly what this service is for." },
 ];
 
 const PlexAnalysisPageEn = () => {
@@ -76,7 +76,7 @@ const PlexAnalysisPageEn = () => {
         overline="Free Plex Analysis · Gatineau"
         title="Get a clear analysis of your plex"
         subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
-        trustLine="A useful analysis — to help you decide with full knowledge."
+        trustLine="A useful analysis, to help you decide with full knowledge."
         heroBgImage={heroImg}
       />
 
@@ -93,7 +93,7 @@ const PlexAnalysisPageEn = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Request your plex analysis</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  I'll get back to you personally with a complete analysis — not a generic report.
+                  I'll get back to you personally with a complete analysis, not a generic report.
                 </p>
 
                 {submitted ? (
@@ -177,7 +177,7 @@ const PlexAnalysisPageEn = () => {
                       {submitting ? "Sending…" : "Get my plex analysis"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      I give you the numbers and the options — you decide with full clarity.
+                      I give you the numbers and the options, you decide with full clarity.
                     </p>
                   </form>
                 )}
@@ -206,7 +206,7 @@ const PlexAnalysisPageEn = () => {
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Thinking about selling your plex?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
-                  Knowing the current value is the first step — before deciding anything.
+                  Knowing the current value is the first step, before deciding anything.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/en/home-valuation">Free Valuation</Link>
@@ -221,7 +221,7 @@ const PlexAnalysisPageEn = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide — get it by email" />
+      <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide, get it by email" />
     </>
   );
 };
