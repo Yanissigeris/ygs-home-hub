@@ -1,11 +1,9 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
-const items = [
-  "Club 100% OR, RE/MAX Québec, 2020, 2022-2025",
-  "Hall of Fame, RE/MAX, LLC, 2024",
-  "Club Platine, RE/MAX Québec, 2021",
-  "Club 100%, RE/MAX Québec, 2019",
-];
+interface AwardsStripProps {
+  lang?: "fr" | "en";
+}
 
 /**
  * WCAG contrast (verified):
@@ -18,15 +16,13 @@ const items = [
  * Configurable CSS variables (set on the section or any ancestor):
  *  --stats-bg          → solid background fallback
  *  --stats-bg-gradient → full background (overrides --stats-bg if set)
- *  --stats-text        → marquee text color
- *  --stats-text-shadow → marquee text shadow
- *  --stats-gold        → bullet/dot color
- *  --stats-gold-glow   → bullet glow shadow
+ *  --stats-text        → strip text color
+ *  --stats-text-shadow → strip text shadow
+ *  --stats-gold        → accent color
  *  --stats-border      → top/bottom border color
  *  --stats-padding-y   → vertical padding
  *  --stats-font-size       → mobile font size
  *  --stats-font-size-sm    → ≥sm font size
- *  --stats-bullet-size     → bullet size
  *  --stats-item-gap        → horizontal spacing between items
  */
 const defaultVars = {
@@ -37,176 +33,138 @@ const defaultVars = {
   "--stats-text-shadow":
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",
   "--stats-gold": "var(--gold-bright)",
-  "--stats-gold-glow":
-    "0 0 10px rgba(212,175,111,.85), 0 0 4px rgba(212,175,111,.6)",
   "--stats-border": "rgba(168,138,90,.35)",
   "--stats-border-bottom": "rgba(168,138,90,.25)",
   "--stats-padding-y": "1.25rem",
   "--stats-font-size": ".9rem",
   "--stats-font-size-sm": "1rem",
-  "--stats-bullet-size": "13px",
-  "--stats-item-gap": "clamp(1.75rem, 4vw, 2.75rem)",
+  "--stats-item-gap": "clamp(1.25rem, 3vw, 2.25rem)",
   "--stats-inset-shadow":
     "inset 0 1px 0 rgba(255,255,255,.06), inset 0 -1px 0 rgba(0,0,0,.3)",
 } as React.CSSProperties;
 
-const AwardsMarquee = React.forwardRef<HTMLElement>((_, ref) => {
-  return (
-    <section
-      ref={ref}
-      className="overflow-hidden awards-marquee"
-      style={{
-        ...defaultVars,
-        background: "var(--stats-bg-gradient, var(--stats-bg))",
-        borderTop: "1px solid var(--stats-border)",
-        borderBottom: "1px solid var(--stats-border-bottom)",
-        padding: "var(--stats-padding-y) 0",
-        boxShadow: "var(--stats-inset-shadow)",
-      }}
-    >
-      {/* Mobile: compact static 2x2 grid */}
-      <div
-        className="sm:hidden px-4"
-        role="list"
-        aria-label="Distinctions RE/MAX"
-        style={{ margin: "-0.35rem 0" }}
+const AwardsMarquee = React.forwardRef<HTMLElement, AwardsStripProps>(
+  ({ lang = "fr" }, ref) => {
+    const isEn = lang === "en";
+    const entries: Array<{ label: string; href?: string }> = isEn
+      ? [
+          { label: "Since 2017" },
+          { label: "300+ transactions" },
+          { label: "5.0 on Google and Facebook", href: "/en/testimonials" },
+          { label: "RE/MAX, LLC Hall of Fame 2024" },
+        ]
+      : [
+          { label: "Depuis 2017" },
+          { label: "300+ transactions" },
+          { label: "5,0 sur Google et Facebook", href: "/temoignages" },
+          { label: "Hall of Fame RE/MAX, LLC, 2024" },
+        ];
+
+    const itemStyle: React.CSSProperties = {
+      fontSize: "var(--stats-font-size)",
+      color: "var(--stats-text)",
+      textShadow: "var(--stats-text-shadow)",
+    };
+
+    const renderLabel = (entry: { label: string; href?: string }) =>
+      entry.href ? (
+        <Link
+          to={entry.href}
+          className="hover:underline"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          {entry.label}
+        </Link>
+      ) : (
+        <>{entry.label}</>
+      );
+
+    return (
+      <section
+        ref={ref}
+        className="overflow-hidden awards-strip"
+        style={{
+          ...defaultVars,
+          background: "var(--stats-bg-gradient, var(--stats-bg))",
+          borderTop: "1px solid var(--stats-border)",
+          borderBottom: "1px solid var(--stats-border-bottom)",
+          padding: "var(--stats-padding-y) 0",
+          boxShadow: "var(--stats-inset-shadow)",
+        }}
       >
-        <div className="grid grid-cols-2 gap-1.5">
-          {[
-            { title: "Club 100% OR", years: "2020, 2022-2025" },
-            { title: "Hall of Fame", years: "2024" },
-            { title: "Club Platine", years: "2021" },
-            { title: "Club 100%", years: "2019" },
-          ].map((it, i) => (
-            <div
-              key={i}
-              role="listitem"
-              className="flex items-center gap-2"
-              style={{
-                background: "rgba(255,255,255,.03)",
-                border: "1px solid rgba(168,138,90,.22)",
-                padding: "7px 10px",
-                minHeight: "38px",
-              }}
-            >
-              <span
-                aria-hidden="true"
+        {/* Mobile: compact static 2x2 grid */}
+        <div
+          className="sm:hidden px-4"
+          role="list"
+          aria-label={isEn ? "RE/MAX distinctions" : "Distinctions RE/MAX"}
+          style={{ margin: "-0.35rem 0" }}
+        >
+          <div className="grid grid-cols-2 gap-1.5">
+            {entries.map((entry, i) => (
+              <div
+                key={i}
+                role="listitem"
+                className="flex items-center"
                 style={{
-                  fontSize: "8px",
-                  color: "var(--stats-gold)",
-                  textShadow: "0 0 6px rgba(212,175,111,.6)",
-                  lineHeight: 1,
+                  background: "rgba(255,255,255,.03)",
+                  border: "1px solid rgba(168,138,90,.22)",
+                  padding: "7px 10px",
+                  minHeight: "38px",
                 }}
               >
-                ●
-              </span>
-              <div className="flex-1 min-w-0 leading-tight">
                 <div
-                  className="font-bold uppercase truncate"
+                  className="flex-1 min-w-0 leading-tight font-bold uppercase"
                   style={{
                     fontSize: "11px",
-                    letterSpacing: ".1em",
+                    letterSpacing: ".08em",
                     color: "var(--stats-text)",
                   }}
                 >
-                  {it.title}
-                </div>
-                <div
-                  style={{
-                    fontSize: "9.5px",
-                    color: "var(--stats-gold)",
-                    letterSpacing: ".04em",
-                    opacity: 0.9,
-                    marginTop: "1px",
-                  }}
-                >
-                  {it.years}
+                  {renderLabel(entry)}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Desktop/tablet: animated marquee */}
-      <div
-        className="relative group hidden sm:block"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 4%, black 96%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 4%, black 96%, transparent)",
-        }}
-      >
-        <div
-          className="flex animate-marquee group-hover:[animation-play-state:paused] motion-reduce:[animation-play-state:paused] whitespace-nowrap"
-          style={{ animationDuration: "var(--marquee-speed, 15s)" }}
-        >
-          {items.map((item, i) => (
-            <span
-              key={i}
-              className="inline-flex items-center font-bold uppercase tracking-[.14em]"
-              style={{
-                fontSize: "var(--stats-font-size)",
-                color: "var(--stats-text)",
-                marginLeft: "var(--stats-item-gap)",
-                marginRight: "var(--stats-item-gap)",
-                textShadow: "var(--stats-text-shadow)",
-              }}
-            >
-              <span
-                className="mr-4"
-                style={{
-                  fontSize: "var(--stats-bullet-size)",
-                  color: "var(--stats-gold)",
-                  textShadow: "var(--stats-gold-glow)",
-                }}
-                aria-hidden="true"
-              >
-                ●
-              </span>
-              {item}
-            </span>
-          ))}
-          {items.map((item, i) => (
-            <span
-              key={`dup-${i}`}
-              aria-hidden="true"
-              className="inline-flex items-center font-bold uppercase tracking-[.14em]"
-              style={{
-                fontSize: "var(--stats-font-size)",
-                color: "var(--stats-text)",
-                marginLeft: "var(--stats-item-gap)",
-                marginRight: "var(--stats-item-gap)",
-                textShadow: "var(--stats-text-shadow)",
-              }}
-            >
-              <span
-                className="mr-4"
-                style={{
-                  fontSize: "var(--stats-bullet-size)",
-                  color: "var(--stats-gold)",
-                  textShadow: "var(--stats-gold-glow)",
-                }}
-                aria-hidden="true"
-              >
-                ●
-              </span>
-              {item}
-            </span>
-          ))}
+        {/* Desktop/tablet: static centered row with 1px separators */}
+        <div className="relative hidden sm:block">
+          <div className="flex items-center justify-center flex-wrap">
+            {entries.map((entry, i) => (
+              <React.Fragment key={i}>
+                {i > 0 && (
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      width: 1,
+                      height: "1.1em",
+                      background: "rgba(255,255,255,.18)",
+                      marginLeft: "var(--stats-item-gap)",
+                      marginRight: "var(--stats-item-gap)",
+                    }}
+                  />
+                )}
+                <span
+                  className="inline-flex items-center font-bold uppercase tracking-[.14em]"
+                  style={itemStyle}
+                >
+                  {renderLabel(entry)}
+                </span>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
-      </div>
-      <style>{`
-        @media (min-width: 640px) {
-          .awards-marquee span.inline-flex {
-            font-size: var(--stats-font-size-sm) !important;
+        <style>{`
+          @media (min-width: 640px) {
+            .awards-strip span.inline-flex {
+              font-size: var(--stats-font-size-sm) !important;
+            }
           }
-        }
-      `}</style>
-    </section>
-  );
-});
+        `}</style>
+      </section>
+    );
+  }
+);
 
 AwardsMarquee.displayName = "AwardsMarquee";
 export default AwardsMarquee;

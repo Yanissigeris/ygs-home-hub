@@ -78,7 +78,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     
     <ValuationWidget lang="en" />
     <QuickActionStrip />
-    <AwardsMarquee />
+    <AwardsMarquee lang="en" />
 
     
     <PathwaySection lang="en" />
