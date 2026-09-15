@@ -19,16 +19,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
       transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
-      <div className="card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col overflow-hidden">
-        {/* Decorative quotation mark */}
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-2 left-3 select-none"
-          style={{ fontFamily: "var(--serif)", fontSize: 120, lineHeight: 1, color: "#17303B", opacity: 0.06, zIndex: 0 }}
-        >
-          &ldquo;
-        </span>
-
+      <div className="card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col">
         <div className="relative z-[1] mb-4 flex gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star key={i} size={13} className="fill-accent text-accent" />

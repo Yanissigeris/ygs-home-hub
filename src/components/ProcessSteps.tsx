@@ -46,10 +46,7 @@ const ProcessSteps = ({
             transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="card-elevated border border-border/40 bg-card p-7 sm:p-8 h-full">
-              <span className="text-[2rem] font-heading font-bold text-accent/20 leading-none">
-                {s.num}
-              </span>
-              <h3 className="mt-4 text-[1.125rem]">{s.title}</h3>
+              <h3 className="text-[1.125rem]">{s.title}</h3>
               <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">{s.desc}</p>
             </div>
           </motion.div>
