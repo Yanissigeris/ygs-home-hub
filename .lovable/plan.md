@@ -31,4 +31,4 @@ Objectif : les quatre questions de l'accueil sont visibles par Google dans le HT
 Routes, meta, H1, contenu des questions, `audit-*.mjs`, tout autre fichier.
 
 ## Vérification
-Typecheck, puis build : confirmer que `dist/index.html` et `dist/en/index.html` contiennent un `ygs-faqpage-jsonld` avec 4 questions, et qu'un seul bloc FAQPage est présent par page.
+Typecheck seulement (`tsgo`). **Pas de build local** : `npm run build` lance `prerender.mjs`, qui requiert Chrome via Puppeteer — garanti au build Netlify, pas ici. Si un build échoue à l'étape Puppeteer : arrêt immédiat, sans toucher à `prerender.mjs`, `puppeteer-render.mjs`, `netlify.toml` ni aux scripts `audit-*`. La preuve de l'injection se fait sur Netlify (vérifier que les pages publiées `/` et `/en/` contiennent `ygs-faqpage-jsonld` avec 4 questions).
