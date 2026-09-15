@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 
@@ -13,8 +14,10 @@ const GoogleIcon = () => (
 );
 
 const Stars = ({ label }: { label: string }) => (
-  <span className="inline-flex gap-0.5 text-[#FBBC05]" aria-label={label}>
-    {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+  <span className="inline-flex items-center gap-0.5 text-[#FBBC05]" role="img" aria-label={label}>
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} size={12} strokeWidth={1.5} fill="currentColor" />
+    ))}
   </span>
 );
 

@@ -63,13 +63,12 @@ const VerifierCourtierOaciqPage = () => (
           ].map((step) => (
             <motion.div
               key={step.num}
-              className="rounded-xl border border-border/40 bg-card p-5 flex gap-4"
+              className="rounded-xl border border-border/40 bg-card p-5"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="text-[1.5rem] font-bold text-accent/30">{step.num}</span>
               <div>
                 <h3 className="text-[0.9375rem] font-semibold">{step.title}</h3>
                 <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{step.text}</p>
