@@ -36,7 +36,7 @@ const TestimonialsPageEn = () => (
         <section key={cat.key} className={`section-padding ${idx % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}>
           <div className="section-container">
             <motion.div className="mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-              <p className="label-overline mb-3">{cat.label}</p><h2>{cat.title}</h2>
+              <h2>{cat.title}</h2>
             </motion.div>
             <div className={`grid gap-6 ${catReviews.length >= 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"}`}>
               {catReviews.map((r, i) => <ReviewCard key={r.id} review={r} variant="full" index={i} />)}
