@@ -16,13 +16,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const FAQ_FR_FILE = path.resolve(__dirname, "..", "src/pages/FAQPage.tsx");
 const FAQ_EN_FILE = path.resolve(__dirname, "..", "src/pages/en/FAQPageEn.tsx");
+const HOME_FAQ_FILE = path.resolve(__dirname, "..", "src/data/home-faq.ts");
 
 /**
- * Extract an array of {q, a} pairs from a TSX file by reading the
- * constants sellerFaq, buyerFaq, plexFaq, militaryFaq.
+ * Extract an array of {q, a} pairs from a source file by reading the
+ * constants named in arrayNames (defaults: sellerFaq, buyerFaq,
+ * plexFaq, militaryFaq — the /faq page sections).
  */
-function extractFaqItemsFromSource(src) {
-  const arrayNames = ["sellerFaq", "buyerFaq", "plexFaq", "militaryFaq"];
+function extractFaqItemsFromSource(src, arrayNames = ["sellerFaq", "buyerFaq", "plexFaq", "militaryFaq"]) {
   const items = [];
 
   for (const name of arrayNames) {
@@ -61,4 +62,16 @@ export async function extractFaqFr() {
 export async function extractFaqEn() {
   const src = await fs.readFile(FAQ_EN_FILE, "utf8");
   return extractFaqItemsFromSource(src);
+}
+
+/** Return the FR home page FAQ items from src/data/home-faq.ts. */
+export async function extractHomeFaqFr() {
+  const src = await fs.readFile(HOME_FAQ_FILE, "utf8");
+  return extractFaqItemsFromSource(src, ["homeFaqFr"]);
+}
+
+/** Return the EN home page FAQ items from src/data/home-faq.ts. */
+export async function extractHomeFaqEn() {
+  const src = await fs.readFile(HOME_FAQ_FILE, "utf8");
+  return extractFaqItemsFromSource(src, ["homeFaqEn"]);
 }
