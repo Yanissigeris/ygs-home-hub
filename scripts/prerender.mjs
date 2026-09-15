@@ -223,6 +223,38 @@ function injectFaqPageJsonLd(html, items) {
 }
 
 /**
+ * Inject a HowTo JSON-LD schema (guide pages) into the prerendered HTML.
+ * Mirrors src/components/HowToJsonLd.tsx exactly, including the element id,
+ * so the client component skips re-injection when this script is present.
+ */
+function injectHowToJsonLd(html, { name, description, steps, totalTime }) {
+  if (!steps || steps.length === 0) return html;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    ...(totalTime ? { totalTime } : {}),
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+    author: {
+      "@type": "RealEstateAgent",
+      "@id": `${SITE_URL}/#realestateagent`,
+      name: "Yanis Gauthier-Sigeris",
+    },
+  };
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script id="ygs-jsonld-howto" type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+
+
+/**
  * Inject a static body fallback for blog article pages so that crawlers (and
  * the heading-hierarchy audit) always see a valid h1/h2/h3 structure even when
  * the Puppeteer hydration pass is skipped or fails.
