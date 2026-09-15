@@ -13,10 +13,10 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-montreal-relocation.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Understanding the Montréal vs Gatineau market", text: "Prices, taxes and quality of life are very different — often in Gatineau's favor." },
+  { icon: MapPin, title: "Understanding the Montréal vs Gatineau market", text: "Prices, taxes and quality of life are very different, often in Gatineau's favor." },
   { icon: DollarSign, title: "More space for less money", text: "For the same budget, you often get much more space and land in Gatineau." },
   { icon: Home, title: "Family-friendly neighborhoods", text: "Aylmer, the Plateau and other areas offer a quality of life hard to find in Montréal." },
-  { icon: FileText, title: "Simplified process", text: "Same province, same notary process — the transition is easier than from Ontario." },
+  { icon: FileText, title: "Simplified process", text: "Same province, same notary process, the transition is easier than from Ontario." },
 ];
 
 const sectors = [
@@ -44,11 +44,11 @@ const MontrealRelocationPageEn = () => (
     <SectorLinks overline="Popular areas" title="Neighborhoods to consider" sectors={sectors} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="A local broker who understands your situation" />
-      <p className="prose-body mt-5">The transition from Montréal to Gatineau is simpler than you think — same notary process, same province. My role is to help you discover the best neighborhoods and support you through every step.</p>
+      <p className="prose-body mt-5">The transition from Montréal to Gatineau is simpler than you think, same notary process, same province. My role is to help you discover the best neighborhoods and support you through every step.</p>
     </ContentBlock>
-    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="Everything for moving to Gatineau from Montréal — neighborhoods, prices and process." ctaLabel="Get the guide" />
-    <CTASection dark title="Ready to explore Gatineau?" text="Book a free call — let's look at neighborhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="Everything for moving to Gatineau from Montréal, neighborhoods, prices and process." ctaLabel="Get the guide" />
+    <CTASection dark title="Ready to explore Gatineau?" text="Book a free call, let's look at neighborhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide, get it by email" />
   </>
 );
 

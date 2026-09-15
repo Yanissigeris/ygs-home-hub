@@ -13,14 +13,14 @@ import { Home, Users, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 const highlights = [
-  { icon: MapPin, title: "Lac Deschênes", text: "Plage, sports nautiques et couchers de soleil spectaculaires — à deux pas de la maison." },
+  { icon: MapPin, title: "Lac Deschênes", text: "Plage, sports nautiques et couchers de soleil spectaculaires, à deux pas de la maison." },
   { icon: Home, title: "Quartiers de caractère", text: "Rues arborées, maisons avec cachet et communauté soudée." },
-  { icon: Coffee, title: "Vie de quartier", text: "Restaurants, cafés, boutiques et marché local — tout à distance de marche." },
+  { icon: Coffee, title: "Vie de quartier", text: "Restaurants, cafés, boutiques et marché local, tout à distance de marche." },
   { icon: Users, title: "Communauté bilingue", text: "Écoles françaises et anglaises, activités communautaires et services de proximité." },
 ];
 
 const faq = [
-  { q: "Aylmer est-il bilingue?", a: "Oui — écoles françaises et anglaises, services bilingues et communauté mixte." },
+  { q: "Aylmer est-il bilingue?", a: "Oui, écoles françaises et anglaises, services bilingues et communauté mixte." },
   { q: "Quelles sont les activités populaires à Aylmer?", a: "Plage du lac Deschênes, parc de la Gatineau, marché fermier, restaurants locaux et vie communautaire active." },
   { q: "Aylmer est-il bien desservi par les transports?", a: "Accès par le pont Champlain, transport en commun et pistes cyclables vers Ottawa." },
 ];
@@ -74,14 +74,14 @@ const LivingAylmerPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — s'installer à Aylmer"
-      text="Tout pour acheter à Aylmer — processus, budget et conseils dans un guide envoyé par courriel."
+      text="Tout pour acheter à Aylmer, processus, budget et conseils dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection
       dark
       title="Prêt à découvrir Aylmer?"
-      text="Parlons de vos critères — je vous montre les meilleures options du secteur."
+      text="Parlons de vos critères, je vous montre les meilleures options du secteur."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Voir le quartier", href: "/aylmer/", variant: "outline" },
@@ -89,7 +89,7 @@ const LivingAylmerPage = () => (
       trustLine="Je vous donne les options, vous décidez."
     />
   
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

@@ -60,7 +60,7 @@ const NotFound = () => {
     <div className="flex min-h-screen flex-col font-body">
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
-        <title>{isEn ? "Page Not Found — Yanis Gauthier" : "Page introuvable — Yanis Gauthier"}</title>
+        <title>{isEn ? "Page Not Found, Yanis Gauthier" : "Page introuvable, Yanis Gauthier"}</title>
       </Helmet>
       {/* Dark backdrop strip so the permanently-transparent SiteHeader stays
           legible on this cream-background page. Sits behind the header. */}

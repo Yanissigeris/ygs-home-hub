@@ -14,25 +14,25 @@ import heroImg from "@/assets/hero-seller.webp";
 
 
 const steps = [
-  { num: "01", title: "Aylmer market analysis", desc: "Comparable sales in your Aylmer neighborhood — Plateau, Lake Deschênes, established areas. A realistic and strategic price." },
+  { num: "01", title: "Aylmer market analysis", desc: "Comparable sales in your Aylmer neighborhood, Plateau, Lake Deschênes, established areas. A realistic and strategic price." },
   { num: "02", title: "Marketing plan", desc: "Preparation, photos, targeted visibility to attract buyers from Aylmer, Gatineau and Ottawa." },
   { num: "03", title: "Full support", desc: "Showings, negotiation, coordination through to the notary. Zero surprises." },
 ];
 
 const nextSteps = [
-  { title: "Free valuation in Aylmer", text: "Know the value of your Aylmer property — free and no commitment.", href: "/en/home-valuation-aylmer/", cta: "Get my valuation", highlight: true },
+  { title: "Free valuation in Aylmer", text: "Know the value of your Aylmer property, free and no commitment.", href: "/en/home-valuation-aylmer/", cta: "Get my valuation", highlight: true },
   { title: "Talk to Yanis", text: "A call to clarify your selling options in Aylmer.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const faq = [
   { q: "How do I sell my house in Aylmer?", a: "We start with a valuation based on recent sales in your Aylmer neighborhood. Then we build a marketing plan adapted to your area and property type." },
   { q: "How long does it take to sell a house in Aylmer?", a: "A well-positioned property in Aylmer typically sells within a few weeks. The timeline depends on pricing, neighborhood and preparation." },
-  { q: "How much is my house worth in Aylmer?", a: "The value depends on your neighborhood — Plateau, Lake Deschênes, established areas. Request a free valuation for a realistic price range." },
+  { q: "How much is my house worth in Aylmer?", a: "The value depends on your neighborhood, Plateau, Lake Deschênes, established areas. Request a free valuation for a realistic price range." },
   { q: "Should I renovate before selling in Aylmer?", a: "Not always. Some investments pay off in Aylmer's market, others don't. I advise based on your specific situation." },
   { q: "What are the costs of selling in Aylmer?", a: "Commission, notary fees, location certificate and sometimes minor repairs. Everything is clear from the start." },
   { q: "Is it a good time to sell in Aylmer?", a: "Aylmer remains highly sought-after by families and Ottawa buyers. The best time also depends on your personal situation." },
-  { q: "Why work with a local broker in Aylmer?", a: "A broker who knows Aylmer understands the micro-markets, active buyers and the specifics of each neighborhood — from the Plateau to Lake Deschênes." },
-  { q: "Can I sell my Aylmer house to an Ottawa buyer?", a: "Absolutely — Aylmer attracts many Ottawa buyers thanks to its quality of life and proximity. My marketing targets both markets." },
+  { q: "Why work with a local broker in Aylmer?", a: "A broker who knows Aylmer understands the micro-markets, active buyers and the specifics of each neighborhood, from the Plateau to Lake Deschênes." },
+  { q: "Can I sell my Aylmer house to an Ottawa buyer?", a: "Absolutely, Aylmer attracts many Ottawa buyers thanks to its quality of life and proximity. My marketing targets both markets." },
   { q: "How does buy-sell coordination work in Aylmer?", a: "It's common. We plan the coordination from the start to avoid getting stuck between two transactions." },
   { q: "Which Aylmer neighborhoods are most in demand?", a: "The Plateau, Lake Deschênes area and established family neighborhoods are highly sought-after. Each neighborhood has its strengths." },
 ];
@@ -69,7 +69,7 @@ const SellAylmerPageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="First step: know what your Aylmer property is worth — it's free." buttonLabel="Free valuation →" href="/en/home-valuation-aylmer/" />
+    <InlineCTA text="First step: know what your Aylmer property is worth, it's free." buttonLabel="Free valuation →" href="/en/home-valuation-aylmer/" />
 
     <ProcessSteps steps={steps} background="alt" />
 

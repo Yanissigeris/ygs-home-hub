@@ -18,15 +18,15 @@ import heroImg from "@/assets/hero-cantley-gen.webp";
 const faq = [
   {
     q: "Are there services in Cantley?",
-    a: "Cantley has basic services — daycares, grocery store, local shops, three francophone elementary schools. For everything else (hospital, big-box stores, high school, varied restaurants), residents head to Gatineau (15–20 minutes) or Ottawa (25–30 minutes depending on the area). Most families adapt quickly and don't regret the choice — but it's important to factor this into your decision.",
+    a: "Cantley has basic services, daycares, grocery store, local shops, three francophone elementary schools. For everything else (hospital, big-box stores, high school, varied restaurants), residents head to Gatineau (15-20 minutes) or Ottawa (25-30 minutes depending on the area). Most families adapt quickly and don't regret the choice, but it's important to factor this into your decision.",
   },
   {
     q: "Do Cantley properties have wells and septic systems?",
-    a: "Yes, the majority of Cantley's territory is not served by municipal water and sewer. Properties operate with artesian wells and septic systems. These systems work well when properly maintained — but a thorough inspection before purchase is non-negotiable. A well or septic system at end of life can represent a significant expense. I ensure this aspect is rigorously verified for every transaction in Cantley.",
+    a: "Yes, the majority of Cantley's territory is not served by municipal water and sewer. Properties operate with artesian wells and septic systems. These systems work well when properly maintained, but a thorough inspection before purchase is non-negotiable. A well or septic system at end of life can represent a significant expense. I ensure this aspect is rigorously verified for every transaction in Cantley.",
   },
   {
     q: "Is Cantley suitable for remote work?",
-    a: "Yes — and it's actually one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers an exceptional quality of life within reasonable access to Gatineau and Ottawa.",
+    a: "Yes, and it's actually one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers an exceptional quality of life within reasonable access to Gatineau and Ottawa.",
   },
 ];
 
@@ -40,7 +40,7 @@ const activities = [
   {
     icon: "🌊",
     title: "Nature and river",
-    text: "Cantley is bordered by the Gatineau River to the west. The territory features rolling terrain typical of the Collines-de-l'Outaouais — forests, climbs, panoramic views. Surrounded by mountainous forests, Cantley has officially positioned itself as a municipality of 'welcoming nature.' (Source: Municipality of Cantley)",
+    text: "Cantley is bordered by the Gatineau River to the west. The territory features rolling terrain typical of the Collines-de-l'Outaouais, forests, climbs, panoramic views. Surrounded by mountainous forests, Cantley has officially positioned itself as a municipality of 'welcoming nature.' (Source: Municipality of Cantley)",
   },
   {
     icon: "📡",
@@ -91,13 +91,13 @@ const CantleyPageEn = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT</p>
-      <h2 className="mt-3">Cantley — verified facts about this growing municipality</h2>
+      <h2 className="mt-3">Cantley, verified facts about this growing municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, 13 kilometres from downtown Ottawa. Its population was 11,449 at the 2021 census, up 7% since 2016 — sustained growth that reflects the area's enduring appeal. French is the mother tongue of 86.7% of residents. (Source: Statistics Canada, 2021 Census)
+          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, 13 kilometres from downtown Ottawa. Its population was 11,449 at the 2021 census, up 7% since 2016, sustained growth that reflects the area's enduring appeal. French is the mother tongue of 86.7% of residents. (Source: Statistics Canada, 2021 Census)
         </p>
         <p className="prose-body">
-          Cantley is known as a low-density residential municipality — one of its main draws. Updated urban planning bylaws in 2025 set the minimum lot size within the urban perimeter at 5,000 m². This preserves the municipality's semi-rural character. (Source: Municipality of Cantley, Urban Plan 2025)
+          Cantley is known as a low-density residential municipality, one of its main draws. Updated urban planning bylaws in 2025 set the minimum lot size within the urban perimeter at 5,000 m². This preserves the municipality's semi-rural character. (Source: Municipality of Cantley, Urban Plan 2025)
         </p>
         <p className="prose-body">
           Cantley has three francophone elementary schools: école Sainte-Élisabeth, école de la Rose-des-Vents, and école de l'Orée-des-Bois (opened in 2014). For high school and specialized services, residents head to Gatineau. The Transcollines transit service connects Cantley to the STO Rapibus network and OC Transpo in Ottawa. (Source: Municipality of Cantley, Wikipedia)
@@ -109,7 +109,7 @@ const CantleyPageEn = () => (
     <section className="section-padding bg-background">
       <div className="section-container">
         <p className="label-overline">LIFE IN CANTLEY</p>
-        <h2 className="mt-3">Life in Cantley — what sets this area apart</h2>
+        <h2 className="mt-3">Life in Cantley, what sets this area apart</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {activities.map((c) => (
             <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
@@ -131,10 +131,10 @@ const CantleyPageEn = () => (
           Cantley is a semi-rural municipality. Several important realities to understand before buying:
         </p>
         <p className="prose-body">
-          The majority of Cantley properties operate with artesian wells and septic systems — the territory is not served by municipal water and sewer across its entirety. A thorough inspection of these systems is non-negotiable before any purchase.
+          The majority of Cantley properties operate with artesian wells and septic systems, the territory is not served by municipal water and sewer across its entirety. A thorough inspection of these systems is non-negotiable before any purchase.
         </p>
         <p className="prose-body">
-          Nearby services are limited within Cantley itself — a few shops, a grocery store, daycares, the three elementary schools. For big-box stores, medical specialists, and high school, you head to Gatineau (15–20 minutes).
+          Nearby services are limited within Cantley itself, a few shops, a grocery store, daycares, the three elementary schools. For big-box stores, medical specialists, and high school, you head to Gatineau (15-20 minutes).
         </p>
         <p className="prose-body">
           Remote work has profoundly changed the buyer profile in Cantley. Families who previously commuted to Ottawa or Gatineau have been able to settle here since 2020 and have found a quality of life they wouldn't trade.
@@ -149,7 +149,7 @@ const CantleyPageEn = () => (
           {[
             "Cantley is 13 km from downtown Ottawa. Population grew 7% between 2016 and 2021. (Source: Statistics Canada, 2021 Census)",
             "3 francophone elementary schools on the territory, plus Transcollines transit service to Ottawa and Gatineau. (Source: Municipality of Cantley)",
-            "Minimum residential lots of 5,000 m² within the urban perimeter — this bylaw preserves the spacious, semi-rural character. (Source: Urban Plan 2025)",
+            "Minimum residential lots of 5,000 m² within the urban perimeter, this bylaw preserves the spacious, semi-rural character. (Source: Urban Plan 2025)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -180,7 +180,7 @@ const CantleyPageEn = () => (
       lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Cantley"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
@@ -188,15 +188,15 @@ const CantleyPageEn = () => (
     <CTASection
       dark
       title="Buying or selling in Cantley?"
-      text="I know the area — let's talk about your project."
+      text="I know the area, let's talk about your project."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

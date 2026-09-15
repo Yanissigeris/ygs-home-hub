@@ -24,15 +24,15 @@ const faq = [
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
-    a: "Le marché d'Aylmer reste actif — une propriété bien positionnée et correctement évaluée attire rapidement les acheteurs sérieux. Le délai dépend du prix, du sous-secteur et de la présentation. Contactez-moi pour une lecture réaliste de votre situation.",
+    a: "Le marché d'Aylmer reste actif, une propriété bien positionnée et correctement évaluée attire rapidement les acheteurs sérieux. Le délai dépend du prix, du sous-secteur et de la présentation. Contactez-moi pour une lecture réaliste de votre situation.",
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
-    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace, une maison plus récente, et une qualité de vie comparable — voire supérieure pour les familles cherchant la nature. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options honnêtement.",
+    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace, une maison plus récente, et une qualité de vie comparable, voire supérieure pour les familles cherchant la nature. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options honnêtement.",
   },
   {
     q: "Est-ce que vous travaillez spécifiquement à Aylmer?",
-    a: "Aylmer est l'un de mes secteurs principaux depuis presque 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance locale se traduit directement en résultats — que vous vendiez ou achetiez.",
+    a: "Aylmer est l'un de mes secteurs principaux depuis presque 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance locale se traduit directement en résultats, que vous vendiez ou achetiez.",
   },
 ];
 
@@ -97,10 +97,10 @@ const buyerCols = [
 /* ── Seller steps ── */
 const sellerSteps = [
   { title: "Analyse comparative de marché", text: "Comparables récents par secteur, par rue, par type de propriété." },
-  { title: "Estimation juste et documentée", text: "Pas d'inflation pour gagner votre confiance — la vérité du marché." },
+  { title: "Estimation juste et documentée", text: "Pas d'inflation pour gagner votre confiance, la vérité du marché." },
   { title: "Préparation et photos pro", text: "Photographe professionnel inclus. Home staging conseillé si utile." },
   { title: "Mise en marché ciblée", text: "Centris, sites web, réseaux sociaux, réseau de courtiers." },
-  { title: "Gestion des offres", text: "Stratégie de réponse, contre-offres, conditions — je vous guide." },
+  { title: "Gestion des offres", text: "Stratégie de réponse, contre-offres, conditions, je vous guide." },
   { title: "Jusqu'au notaire", text: "Accompagnement complet jusqu'à la remise des clés." },
 ];
 
@@ -141,7 +141,7 @@ const AylmerPage = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Aylmer — votre spécialiste local"
-      subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes — et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
+      subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes, et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
@@ -158,10 +158,10 @@ const AylmerPage = () => (
             Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Les secteurs de Lucerne et Rivermead sont particulièrement prisés — des maisons établies sur des rues matures, proches du lac Deschênes, des parcs, des écoles francophones et anglophones. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
+            Les secteurs de Lucerne et Rivermead sont particulièrement prisés, des maisons établies sur des rues matures, proches du lac Deschênes, des parcs, des écoles francophones et anglophones. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
           </p>
           <p className="prose-body">
-            Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget — ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.
+            Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.
           </p>
         </div>
 
@@ -240,13 +240,13 @@ const AylmerPage = () => (
           <p className="label-overline">GUIDE VENDEUR</p>
           <h2>Vendre votre propriété à Aylmer au meilleur prix</h2>
           <p className="prose-body mt-5">
-            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher » — cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
+            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher », cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
           </p>
           <p className="prose-body">
-            Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue — pas juste par secteur — fait une différence réelle sur votre prix final.
+            Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue, pas juste par secteur, fait une différence réelle sur votre prix final.
           </p>
           <p className="prose-body">
-            Ce que j'apporte concrètement : une évaluation basée sur les vraies ventes récentes dans votre micro-secteur, des photos professionnelles, une stratégie de prix définie avec vous, et une mise en marché ciblée pour atteindre les acheteurs sérieux — incluant les relocalisateurs d'Ottawa qui cherchent activement à Aylmer.
+            Ce que j'apporte concrètement : une évaluation basée sur les vraies ventes récentes dans votre micro-secteur, des photos professionnelles, une stratégie de prix définie avec vous, et une mise en marché ciblée pour atteindre les acheteurs sérieux, incluant les relocalisateurs d'Ottawa qui cherchent activement à Aylmer.
           </p>
           <Button className="mt-4" size="lg" asChild>
             <Link to="/evaluation-maison-aylmer/">Évaluation gratuite de votre propriété →</Link>
@@ -255,7 +255,7 @@ const AylmerPage = () => (
 
         {/* Right — steps */}
         <div className="space-y-2">
-          <h3 className="font-serif text-lg font-semibold text-foreground mb-6">Mon plan vendeur — Aylmer</h3>
+          <h3 className="font-serif text-lg font-semibold text-foreground mb-6">Mon plan vendeur, Aylmer</h3>
           {sellerSteps.map((s, i) => (
             <div key={s.title} className="flex gap-4 items-start py-4 border-b border-border last:border-0">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm shrink-0">
@@ -277,7 +277,7 @@ const AylmerPage = () => (
         <p className="label-overline">VIVRE À AYLMER</p>
         <h2 className="mt-3">La vie quotidienne à Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
-          Ce que les chiffres ne disent pas sur Aylmer — la qualité de vie réelle au quotidien.
+          Ce que les chiffres ne disent pas sur Aylmer, la qualité de vie réelle au quotidien.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
@@ -298,7 +298,7 @@ const AylmerPage = () => (
     <CTASection
       dark
       title="Prêt à passer à l'étape suivante?"
-      text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur — je suis votre courtier local."
+      text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur, je suis votre courtier local."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" },
         { label: "Me contacter →", href: "/contact-yanis/", variant: "outline" },
@@ -321,11 +321,11 @@ const AylmerPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — acheter à Aylmer"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

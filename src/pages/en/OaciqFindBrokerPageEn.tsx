@@ -48,7 +48,7 @@ const OaciqFindBrokerPageEn = () => (
         The OACIQ protects the public by ensuring all brokers meet professional standards. Verifying your broker's licence confirms they have the <strong>required training, insurance, and ethical obligations</strong> to act in your interest.
       </p>
       <p className="prose-body mt-4">
-        It's a quick and free step that gives you peace of mind — especially for the largest financial transaction of your life.
+        It's a quick and free step that gives you peace of mind, especially for the largest financial transaction of your life.
       </p>
     </ContentBlock>
 
@@ -81,7 +81,7 @@ const OaciqFindBrokerPageEn = () => (
         A valid OACIQ licence means your broker has completed <strong>recognized professional training</strong>, carries mandatory liability insurance, and is bound by a strict code of ethics that prioritizes your interests.
       </p>
       <p className="prose-body mt-4">
-        This gives you a formal recourse mechanism if something goes wrong — something that doesn't exist with unlicensed individuals or private sellers acting outside the regulated framework.
+        This gives you a formal recourse mechanism if something goes wrong, something that doesn't exist with unlicensed individuals or private sellers acting outside the regulated framework.
       </p>
     </ContentBlock>
 
@@ -100,7 +100,7 @@ const OaciqFindBrokerPageEn = () => (
     <CTASection
       dark
       title="Work with a trusted broker"
-      text="Licensed, experienced, and transparent. Let's discuss your project — no commitment required."
+      text="Licensed, experienced, and transparent. Let's discuss your project, no commitment required."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },

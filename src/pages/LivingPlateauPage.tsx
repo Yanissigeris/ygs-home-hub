@@ -21,8 +21,8 @@ const highlights = [
 
 const faq = [
   { q: "Le Plateau est-il loin d'Ottawa?", a: "20-30 minutes en voiture selon l'heure. Plusieurs résidents du Plateau travaillent à Ottawa." },
-  { q: "Y a-t-il de bonnes écoles dans le Plateau?", a: "Oui — écoles françaises et anglaises, garderies et activités parascolaires." },
-  { q: "Le Plateau continue-t-il de se développer?", a: "Oui — de nouveaux projets résidentiels sont en cours, ce qui attire de plus en plus de familles." },
+  { q: "Y a-t-il de bonnes écoles dans le Plateau?", a: "Oui, écoles françaises et anglaises, garderies et activités parascolaires." },
+  { q: "Le Plateau continue-t-il de se développer?", a: "Oui, de nouveaux projets résidentiels sont en cours, ce qui attire de plus en plus de familles." },
 ];
 
 const related = [
@@ -53,7 +53,7 @@ const LivingPlateauPage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Le Plateau, c'est pour les familles" />
       <p className="prose-body mt-5">
-        Le Plateau est devenu l'un des secteurs les plus populaires de Gatineau pour les jeunes familles. Maisons neuves, parcs, écoles et accès rapide à tout — c'est un choix de vie qui fait de plus en plus d'adeptes.
+        Le Plateau est devenu l'un des secteurs les plus populaires de Gatineau pour les jeunes familles. Maisons neuves, parcs, écoles et accès rapide à tout, c'est un choix de vie qui fait de plus en plus d'adeptes.
       </p>
     </ContentBlock>
 
@@ -74,14 +74,14 @@ const LivingPlateauPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — s'installer dans le Plateau"
-      text="Tout pour acheter dans le Plateau — processus, budget et conseils envoyés par courriel."
+      text="Tout pour acheter dans le Plateau, processus, budget et conseils envoyés par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection
       dark
       title="Prêt à découvrir le Plateau?"
-      text="Parlons de vos critères — je vous montre les meilleures options du secteur."
+      text="Parlons de vos critères, je vous montre les meilleures options du secteur."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Voir le quartier", href: "/plateau/", variant: "outline" },
@@ -89,7 +89,7 @@ const LivingPlateauPage = () => (
       trustLine="Je vous donne les options, vous décidez."
     />
   
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

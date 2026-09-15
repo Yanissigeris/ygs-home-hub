@@ -527,7 +527,7 @@ const BlogArticlePage = () => {
                 </ul>
               ) : (
                 <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                  {isFr ? "Chambre immobilière de l'Outaouais — données de mars 2026." : "Outaouais Real Estate Board — March 2026 data."}
+                  {isFr ? "Chambre immobilière de l'Outaouais, données de mars 2026." : "Outaouais Real Estate Board, March 2026 data."}
                 </p>
               )}
             </div>
@@ -545,7 +545,7 @@ const BlogArticlePage = () => {
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Pour votre projet — vente, achat ou investissement. Réponse sous 24 h." : "For your project — selling, buying or investing. Reply within 24 h."}
+                {isFr ? "Pour votre projet, vente, achat ou investissement. Réponse sous 24 h." : "For your project, selling, buying or investing. Reply within 24 h."}
               </p>
               <Link
                 to={ctaHref}

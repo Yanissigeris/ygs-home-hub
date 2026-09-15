@@ -135,7 +135,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
           phone: !contact.includes("@") ? contact.trim() : "",
           address: address.trim(),
           message: `Type: ${propertyType}${notes.trim() ? `\n\nNotes: ${notes.trim()}` : ""}`,
-          objective: `Évaluation — ${propertyType}`,
+          objective: `Évaluation, ${propertyType}`,
         },
       });
 

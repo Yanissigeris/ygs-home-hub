@@ -19,7 +19,7 @@ const LimbourPage = () => (
       "Services médicaux et pharmacies sur le boulevard de l'Hôpital : Hôpital de Gatineau, Pharmaprix, Uniprix",
       "Tim Hortons et restaurants accessibles à courte distance (boul. Maloney, boul. La Vérendrye)",
       "Écoles secondaires desservant le secteur : Polyvalente de l'Érablière et École secondaire du Versant (CSSD Draveurs)",
-      "Accès rapide à l'autoroute 50 — environ 20 minutes du centre-ville d'Ottawa",
+      "Accès rapide à l'autoroute 50, environ 20 minutes du centre-ville d'Ottawa",
       "Quartier en croissance : peu de rénovations à prévoir comparé aux quartiers plus anciens",
     ]}
     profilesTitle="Limbour est idéal pour…"
@@ -42,7 +42,7 @@ const LimbourPage = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Quartier établi mature, bungalows à rénover — voisin direct de Limbour" },
+      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Quartier établi mature, bungalows à rénover, voisin direct de Limbour" },
       { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre du secteur Gatineau, services, condos et résidentiel" },
       { name: "Masson-Angers", href: "/masson-angers/", detail: "Secteur en développement avec maisons neuves à prix accessibles" },
     ]}}
@@ -54,13 +54,13 @@ const LimbourPage = () => (
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
-    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
-      observation: "Ce que je vois à Limbour en ce moment : la plupart de mes acheteurs sont des jeunes familles ou des couples qui veulent upgrader depuis un condo ou une première maison. Ils cherchent une propriété récente, sans grosses rénovations à faire, avec un garage et un terrain aéré. Le sous-secteur Ferme Limbour est particulièrement recherché — les acheteurs viennent souvent y faire des visites avant de décider d'élargir leur recherche.",
+      observation: "Ce que je vois à Limbour en ce moment : la plupart de mes acheteurs sont des jeunes familles ou des couples qui veulent upgrader depuis un condo ou une première maison. Ils cherchent une propriété récente, sans grosses rénovations à faire, avec un garage et un terrain aéré. Le sous-secteur Ferme Limbour est particulièrement recherché, les acheteurs viennent souvent y faire des visites avant de décider d'élargir leur recherche.",
       dataPoint: "Sur les ventes que je conclus à Limbour, les maisons bien préparées au bon prix partent généralement en 30-40 jours. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
       takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estime pas l'effet du sous-secteur sur ton prix. Une maison équivalente dans Ferme Limbour vs une autre rue de Limbour, ça peut faire 30-50k$ d'écart. Inscris au juste prix selon ta vraie zone, pas une moyenne globale du quartier."
     }}
-    cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

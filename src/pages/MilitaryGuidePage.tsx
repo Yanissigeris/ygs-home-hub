@@ -16,7 +16,7 @@ const topics = [
   "Comprendre les réalités d'une mutation immobilière",
   "Acheter vs louer lors d'une relocalisation militaire",
   "Les meilleurs secteurs de Gatineau pour les familles militaires",
-  "Le processus d'achat au Québec — étape par étape",
+  "Le processus d'achat au Québec, étape par étape",
   "Vendre rapidement lors d'une mutation sans sacrifier le prix",
   "Programmes et ressources disponibles pour les militaires",
 ];
@@ -25,11 +25,11 @@ const faq = [
   { q: "Ce guide est-il gratuit?", a: "Oui. Mon objectif est de vous aider à planifier votre relocalisation en confiance." },
   { q: "Travaillez-vous avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
   { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation financière. On en discute ensemble." },
-  { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Aylmer et le Plateau sont très populaires — écoles, familles, nature. Hull est bien aussi pour la proximité au centre." },
+  { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Aylmer et le Plateau sont très populaires, écoles, familles, nature. Hull est bien aussi pour la proximité au centre." },
 ];
 
 const related = [
-  { title: "Relocalisation militaire", text: "Mutation vers la RCN — trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau/" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN, trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau/" },
   { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau/" },
   { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau/" },
   { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau/" },
@@ -79,7 +79,7 @@ const MilitaryGuidePage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Recevez le guide relocalisation militaire"
-      text="Mutation, achat, vente — tout dans un guide clair envoyé gratuitement par courriel."
+      text="Mutation, achat, vente, tout dans un guide clair envoyé gratuitement par courriel."
       ctaLabel="Recevoir le guide"
     />
 
@@ -94,15 +94,15 @@ const MilitaryGuidePage = () => (
     <CTASection
       dark
       title="Planifions votre relocalisation militaire"
-      text="Réservez un appel gratuit — on adapte le plan à votre mutation et votre calendrier."
+      text="Réservez un appel gratuit, on adapte le plan à votre mutation et votre calendrier."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
-      trustLine="Je m'adapte à votre rythme — vous décidez quand vous êtes prêt."
+      trustLine="Je m'adapte à votre rythme, vous décidez quand vous êtes prêt."
     />
   
-    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit, recevez-le par courriel" />
   </>
 );
 

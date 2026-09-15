@@ -18,7 +18,7 @@ import heroImg from "@/assets/hero-chelsea-gen.webp";
 const faq = [
   {
     q: "Chelsea est-il trop cher comparé à Gatineau?",
-    a: "Chelsea est effectivement un marché premium par rapport à la ville de Gatineau — les propriétés sur grands terrains, la rareté de l'inventaire, et la qualité du cadre de vie se reflètent dans les prix. Mais « trop cher » dépend de ce que vous cherchez. Si l'accès à la nature, la tranquillité, le bilinguisme, et la qualité de vie sont vos priorités, Chelsea est souvent le bon choix. Je peux vous aider à comparer Chelsea avec Cantley ou Aylmer selon votre budget et vos critères.",
+    a: "Chelsea est effectivement un marché premium par rapport à la ville de Gatineau, les propriétés sur grands terrains, la rareté de l'inventaire, et la qualité du cadre de vie se reflètent dans les prix. Mais « trop cher » dépend de ce que vous cherchez. Si l'accès à la nature, la tranquillité, le bilinguisme, et la qualité de vie sont vos priorités, Chelsea est souvent le bon choix. Je peux vous aider à comparer Chelsea avec Cantley ou Aylmer selon votre budget et vos critères.",
   },
   {
     q: "Puis-je construire sur un terrain à Chelsea?",
@@ -35,7 +35,7 @@ const atouts = [
   {
     icon: "🌲",
     title: "Parc de la Gatineau",
-    text: "Le Parc de la Gatineau couvre 360 km² de forêts, lacs et rivières. Créé en 1938, il s'étend sur plusieurs municipalités dont Chelsea en est la porte d'entrée principale. Randonnée, vélo, ski de fond, raquettes, baignade au Lac Meech — les activités sont accessibles à pied ou à vélo depuis les propriétés résidentielles. (Source: Commission de la capitale nationale)",
+    text: "Le Parc de la Gatineau couvre 360 km² de forêts, lacs et rivières. Créé en 1938, il s'étend sur plusieurs municipalités dont Chelsea en est la porte d'entrée principale. Randonnée, vélo, ski de fond, raquettes, baignade au Lac Meech, les activités sont accessibles à pied ou à vélo depuis les propriétés résidentielles. (Source: Commission de la capitale nationale)",
   },
   {
     icon: "♨️",
@@ -91,16 +91,16 @@ const ChelseaPage = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT</p>
-      <h2 className="mt-3">Chelsea — des faits vérifiés sur cette municipalité unique</h2>
+      <h2 className="mt-3">Chelsea, des faits vérifiés sur cette municipalité unique</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea est une municipalité de la MRC des Collines-de-l'Outaouais, chef-lieu de cette MRC. Sa population était d'environ 8 000 habitants au recensement de 2021, en croissance constante. Ce qui la distingue fondamentalement : environ 60 % de son territoire appartient au Parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité limite considérablement les terrains constructibles disponibles — ce qui explique la rareté des propriétés et leur valeur stable dans le temps. (Source: Wikipedia/Chelsea, Commission de la capitale nationale)
+          Chelsea est une municipalité de la MRC des Collines-de-l'Outaouais, chef-lieu de cette MRC. Sa population était d'environ 8 000 habitants au recensement de 2021, en croissance constante. Ce qui la distingue fondamentalement : environ 60 % de son territoire appartient au Parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité limite considérablement les terrains constructibles disponibles, ce qui explique la rareté des propriétés et leur valeur stable dans le temps. (Source: Wikipedia/Chelsea, Commission de la capitale nationale)
         </p>
         <p className="prose-body">
-          La population de Chelsea est presque également divisée entre francophones et anglophones — environ 70 % des ménages parlent les deux langues officielles. Chelsea fut l'une des premières municipalités au Canada à interdire l'utilisation des pesticides. Ces deux caractéristiques — bilinguisme et sensibilité environnementale — définissent l'identité de la communauté. (Source: Wikipedia/Chelsea, Québec)
+          La population de Chelsea est presque également divisée entre francophones et anglophones, environ 70 % des ménages parlent les deux langues officielles. Chelsea fut l'une des premières municipalités au Canada à interdire l'utilisation des pesticides. Ces deux caractéristiques, bilinguisme et sensibilité environnementale, définissent l'identité de la communauté. (Source: Wikipedia/Chelsea, Québec)
         </p>
         <p className="prose-body">
-          L'autoroute 5 — dite autoroute de la Gatineau — relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines dessert Chelsea et la connecte au réseau Rapibus de la STO et à OC Transpo d'Ottawa. Le Centre sportif Meredith (hockey, soccer, espaces communautaires) est le cœur des activités familiales de Chelsea. (Source: Wikipedia/Chelsea, Municipalité de Chelsea)
+          L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines dessert Chelsea et la connecte au réseau Rapibus de la STO et à OC Transpo d'Ottawa. Le Centre sportif Meredith (hockey, soccer, espaces communautaires) est le cœur des activités familiales de Chelsea. (Source: Wikipedia/Chelsea, Municipalité de Chelsea)
         </p>
       </div>
     </ContentBlock>
@@ -147,8 +147,8 @@ const ChelseaPage = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Chelsea est la porte principale du Parc de la Gatineau — 360 km² de nature accessible depuis votre propriété. (Source: Commission de la capitale nationale)",
-            "~70 % des ménages de Chelsea sont bilingues — un environnement unique pour les familles francophones et anglophones. (Source: Wikipedia/Chelsea, Québec)",
+            "Chelsea est la porte principale du Parc de la Gatineau, 360 km² de nature accessible depuis votre propriété. (Source: Commission de la capitale nationale)",
+            "~70 % des ménages de Chelsea sont bilingues, un environnement unique pour les familles francophones et anglophones. (Source: Wikipedia/Chelsea, Québec)",
             "Environ 60 % du territoire est le Parc de la Gatineau, ce qui limite l'offre constructible et soutient la valeur des propriétés existantes à long terme. (Source: Commission de la capitale nationale)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
@@ -179,7 +179,7 @@ const ChelseaPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — acheter à Chelsea"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
@@ -187,7 +187,7 @@ const ChelseaPage = () => (
     <CTASection
       dark
       title="Acheteur ou vendeur à Chelsea?"
-      text="Je connais Chelsea par cœur — parlons de votre projet."
+      text="Je connais Chelsea par cœur, parlons de votre projet."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation →", href: "/consultation-acheteur/", variant: "outline" },
@@ -195,7 +195,7 @@ const ChelseaPage = () => (
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />
 
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

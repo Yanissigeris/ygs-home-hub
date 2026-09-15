@@ -15,7 +15,7 @@ import riverImg from "@/assets/gatineau-river-view.webp";
 
 const reasons = [
   "Plus d'espace à un prix encore accessible comparé à Ottawa",
-  "Quartier familial — parcs, écoles, services de proximité",
+  "Quartier familial, parcs, écoles, services de proximité",
   "Accès pratique vers Ottawa par les ponts",
   "Maisons plus récentes avec bon rapport qualité-prix",
   "Qualité de vie appréciée des familles et jeunes professionnels",
@@ -25,7 +25,7 @@ const profiles = [
   { icon: Users, title: "Familles", text: "Plus d'espace, cour, écoles francophones et anglophones à proximité." },
   { icon: Home, title: "Premiers acheteurs", text: "Prix d'entrée plus accessibles qu'Ottawa avec une qualité de vie supérieure." },
   { icon: TrendingUp, title: "Investisseurs", text: "Potentiel de revente solide dans un secteur en développement constant." },
-  { icon: MapPin, title: "Relocalisés d'Ottawa", text: "Transition simple — je connais les deux côtés de la rivière." },
+  { icon: MapPin, title: "Relocalisés d'Ottawa", text: "Transition simple, je connais les deux côtés de la rivière." },
 ];
 
 const sellerReasons = [
@@ -87,14 +87,14 @@ const NeighborhoodPage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — acheter dans le Plateau / Aylmer"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
     <CTASection
       dark
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
-      text="Je peux vous aider à y voir clair — que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
+      text="Je peux vous aider à y voir clair, que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
@@ -102,7 +102,7 @@ const NeighborhoodPage = () => (
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

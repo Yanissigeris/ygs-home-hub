@@ -23,15 +23,15 @@ const faq = [
   },
   {
     q: "How long does it take to sell a home in Aylmer?",
-    a: "The Aylmer market remains active — a well-positioned and properly priced property attracts serious buyers quickly. The timeline depends on pricing, sub-sector and presentation. Contact me for a realistic reading of your situation.",
+    a: "The Aylmer market remains active, a well-positioned and properly priced property attracts serious buyers quickly. The timeline depends on pricing, sub-sector and presentation. Contact me for a realistic reading of your situation.",
   },
   {
     q: "Is it better to buy in Aylmer or Ottawa?",
-    a: "I hear this question often. For the same budget, Aylmer typically offers more space, a newer home, and a comparable — or even better — quality of life for families seeking nature. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options honestly.",
+    a: "I hear this question often. For the same budget, Aylmer typically offers more space, a newer home, and a comparable, or even better, quality of life for families seeking nature. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options honestly.",
   },
   {
     q: "Do you specialize in Aylmer specifically?",
-    a: "Aylmer has been one of my primary areas for almost 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. This local knowledge translates directly into results — whether you're selling or buying.",
+    a: "Aylmer has been one of my primary areas for almost 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. This local knowledge translates directly into results, whether you're selling or buying.",
   },
 ];
 
@@ -96,10 +96,10 @@ const buyerCols = [
 /* ── Seller steps ── */
 const sellerSteps = [
   { title: "Comparative market analysis", text: "Recent comparables by area, by street, by property type." },
-  { title: "Fair and documented estimate", text: "No inflated numbers to win your trust — the market truth." },
+  { title: "Fair and documented estimate", text: "No inflated numbers to win your trust, the market truth." },
   { title: "Preparation and pro photos", text: "Professional photographer included. Home staging advised when useful." },
   { title: "Targeted marketing", text: "Centris, websites, social media, broker network." },
-  { title: "Offer management", text: "Response strategy, counter-offers, conditions — I guide you." },
+  { title: "Offer management", text: "Response strategy, counter-offers, conditions, I guide you." },
   { title: "All the way to the notary", text: "Full support until keys are handed over." },
 ];
 
@@ -138,7 +138,7 @@ const AylmerPageEn = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Real estate broker in Aylmer — your local specialist"
-      subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes — and a competitive market that rewards prepared buyers and well-positioned sellers."
+      subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes, and a competitive market that rewards prepared buyers and well-positioned sellers."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
@@ -154,10 +154,10 @@ const AylmerPageEn = () => (
             Aylmer is the western sector of Gatineau, bordered by the Ottawa River and Lake Deschênes. It's the number one choice for bilingual families who want a suburban quality of life without being far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
           </p>
           <p className="prose-body">
-            The Lucerne and Rivermead areas are particularly popular — established homes on mature streets, close to Lake Deschênes, parks, and both French and English schools. Old Aylmer offers a distinct heritage charm, with character properties, local shops and a preserved village atmosphere.
+            The Lucerne and Rivermead areas are particularly popular, established homes on mature streets, close to Lake Deschênes, parks, and both French and English schools. Old Aylmer offers a distinct heritage charm, with character properties, local shops and a preserved village atmosphere.
           </p>
           <p className="prose-body">
-            For buyers coming from Ottawa, Aylmer often means an immediate gain in space and quality of life for the same budget — or less. For sellers, it's a market where presentation and fair pricing make the difference between a quick sale and a property that sits.
+            For buyers coming from Ottawa, Aylmer often means an immediate gain in space and quality of life for the same budget, or less. For sellers, it's a market where presentation and fair pricing make the difference between a quick sale and a property that sits.
           </p>
         </div>
 
@@ -234,13 +234,13 @@ const AylmerPageEn = () => (
           <p className="label-overline">SELLER GUIDE</p>
           <h2>Sell your Aylmer property for the best price</h2>
           <p className="prose-body mt-5">
-            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. But "well-positioned" doesn't mean "highest price" — it means the right price, the right presentation, and the right strategy.
+            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. But "well-positioned" doesn't mean "highest price", it means the right price, the right presentation, and the right strategy.
           </p>
           <p className="prose-body">
-            Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street — not just by area — makes a real difference in your final price.
+            Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street, not just by area, makes a real difference in your final price.
           </p>
           <p className="prose-body">
-            What I bring: a valuation based on real recent sales in your micro-sector, professional photos, a pricing strategy defined with you, and targeted marketing to reach serious buyers — including Ottawa relocators actively looking in Aylmer.
+            What I bring: a valuation based on real recent sales in your micro-sector, professional photos, a pricing strategy defined with you, and targeted marketing to reach serious buyers, including Ottawa relocators actively looking in Aylmer.
           </p>
           <Button className="mt-4" size="lg" asChild>
             <Link to="/en/home-valuation-aylmer/">Free property valuation →</Link>
@@ -248,7 +248,7 @@ const AylmerPageEn = () => (
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-serif text-lg font-semibold text-foreground mb-6">My seller plan — Aylmer</h3>
+          <h3 className="font-serif text-lg font-semibold text-foreground mb-6">My seller plan, Aylmer</h3>
           {sellerSteps.map((s, i) => (
             <div key={s.title} className="flex gap-4 items-start py-4 border-b border-border last:border-0">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm shrink-0">
@@ -270,7 +270,7 @@ const AylmerPageEn = () => (
         <p className="label-overline">LIVING IN AYLMER</p>
         <h2 className="mt-3">Daily life in Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
-          What the numbers don't tell you about Aylmer — the real quality of life, day to day.
+          What the numbers don't tell you about Aylmer, the real quality of life, day to day.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
@@ -291,12 +291,12 @@ const AylmerPageEn = () => (
     <CTASection
       dark
       title="Ready to take the next step?"
-      text="Whether you're selling your home in Aylmer or looking to buy in this area — I'm your local broker."
+      text="Whether you're selling your home in Aylmer or looking to buy in this area, I'm your local broker."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation-aylmer/" },
         { label: "Contact me →", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine={'"I give you the numbers and the options — you decide."'}
+      trustLine={'"I give you the numbers and the options, you decide."'}
     />
 
     {/* ═══ RELATED ═══ */}
@@ -315,11 +315,11 @@ const AylmerPageEn = () => (
       lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Aylmer"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

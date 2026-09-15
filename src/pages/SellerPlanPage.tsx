@@ -32,13 +32,13 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Plan personnalisé en 48h" },
-  { icon: Shield, text: "Aucune obligation — aucun engagement" },
+  { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
 const faq = [
-  { q: "En quoi le plan vendeur est différent d'une évaluation?", a: "L'évaluation vous donne la valeur. Le plan vendeur va plus loin — positionnement prix, préparation, améliorations stratégiques, calendrier de mise en marché et coordination achat-vente si nécessaire." },
+  { q: "En quoi le plan vendeur est différent d'une évaluation?", a: "L'évaluation vous donne la valeur. Le plan vendeur va plus loin, positionnement prix, préparation, améliorations stratégiques, calendrier de mise en marché et coordination achat-vente si nécessaire." },
   { q: "Est-ce que c'est gratuit?", a: "Oui. L'objectif est de vous donner assez d'information pour prendre une décision éclairée, à votre rythme." },
-  { q: "Je ne suis pas sûr de vouloir vendre tout de suite", a: "Parfait — c'est exactement le bon moment pour planifier. La plupart de mes vendeurs commencent par un plan bien avant de mettre en vente." },
+  { q: "Je ne suis pas sûr de vouloir vendre tout de suite", a: "Parfait, c'est exactement le bon moment pour planifier. La plupart de mes vendeurs commencent par un plan bien avant de mettre en vente." },
 ];
 
 const SellerPlanPage = () => {
@@ -82,7 +82,7 @@ const SellerPlanPage = () => {
         overline="Plan vendeur personnalisé · Gatineau"
         title="Recevez votre plan vendeur personnalisé"
         subtitle="Prix, préparation, mise en marché et calendrier — un plan clair adapté à votre propriété et votre situation."
-        trustLine="Un plan stratégique, pas une pitch de vente — pour vous aider à vendre au bon prix, au bon moment."
+        trustLine="Un plan stratégique, pas une pitch de vente, pour vous aider à vendre au bon prix, au bon moment."
         heroBgImage={heroImg}
       />
 
@@ -99,7 +99,7 @@ const SellerPlanPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre plan vendeur</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Je prépare un plan adapté à votre propriété — pas un template générique.
+                  Je prépare un plan adapté à votre propriété, pas un template générique.
                 </p>
 
                 {submitted ? (
@@ -221,7 +221,7 @@ const SellerPlanPage = () => {
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Pas encore prêt?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
-                  Commencez par une évaluation gratuite — c'est la première étape pour comprendre votre position.
+                  Commencez par une évaluation gratuite, c'est la première étape pour comprendre votre position.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
@@ -241,7 +241,7 @@ const SellerPlanPage = () => {
       <ContentBlock narrow centered padSize="md">
         <h3>Planifier ne veut pas dire s'engager</h3>
         <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-          Les meilleurs résultats de vente commencent par une bonne planification. Ce plan est un premier pas — pas un contrat.
+          Les meilleurs résultats de vente commencent par une bonne planification. Ce plan est un premier pas, pas un contrat.
         </p>
         <Button className="mt-6" size="lg" asChild>
           <a href="#top">Remplir le formulaire ↑</a>
@@ -250,7 +250,7 @@ const SellerPlanPage = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
+      <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit, recevez-le par courriel" />
     </>
   );
 };

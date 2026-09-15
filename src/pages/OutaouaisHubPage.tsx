@@ -38,13 +38,13 @@ const services = [
 ];
 
 const faqItems = [
-  { q: "Pourquoi travailler avec un courtier immobilier en Outaouais?", a: "Un courtier local connaît les micro-marchés, les tendances de prix par secteur et les particularités de chaque quartier. En Outaouais, la proximité avec Ottawa crée une dynamique unique — un courtier qui comprend cette réalité vous aide à prendre de meilleures décisions." },
-  { q: "Quels secteurs couvrez-vous en Outaouais?", a: "Je couvre l'ensemble de l'Outaouais urbain et périurbain : Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac. Chaque secteur a son profil — je vous aide à trouver celui qui correspond à vos besoins." },
+  { q: "Pourquoi travailler avec un courtier immobilier en Outaouais?", a: "Un courtier local connaît les micro-marchés, les tendances de prix par secteur et les particularités de chaque quartier. En Outaouais, la proximité avec Ottawa crée une dynamique unique, un courtier qui comprend cette réalité vous aide à prendre de meilleures décisions." },
+  { q: "Quels secteurs couvrez-vous en Outaouais?", a: "Je couvre l'ensemble de l'Outaouais urbain et périurbain : Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac. Chaque secteur a son profil, je vous aide à trouver celui qui correspond à vos besoins." },
   { q: "Est-ce que vous servez Aylmer, Hull et Gatineau?", a: "Oui, Aylmer, Hull et Gatineau-centre sont mes secteurs principaux. J'y ai réalisé de nombreuses transactions et je connais les rues, les écoles, les prix et les tendances locales en profondeur." },
-  { q: "Comment obtenir une évaluation de maison en Outaouais?", a: "Je prépare une évaluation gratuite basée sur les ventes récentes dans votre secteur. Vous recevez un rapport clair avec le prix de vente recommandé — sans engagement et en toute confidentialité." },
+  { q: "Comment obtenir une évaluation de maison en Outaouais?", a: "Je prépare une évaluation gratuite basée sur les ventes récentes dans votre secteur. Vous recevez un rapport clair avec le prix de vente recommandé, sans engagement et en toute confidentialité." },
   { q: "Quel est le meilleur secteur pour acheter en Outaouais?", a: "Ça dépend de votre budget, de votre style de vie et de vos priorités. Aylmer est idéal pour les familles, Hull pour les jeunes professionnels, Chelsea pour les amateurs de nature, et Gatineau-centre pour l'accessibilité. On en discute ensemble." },
   { q: "Combien coûte une maison en Outaouais?", a: "Les prix varient beaucoup selon le secteur et le type de propriété. En 2024-2025, les maisons unifamiliales vont de 350 000 $ à plus de 700 000 $ selon l'emplacement. Contactez-moi pour une analyse actuelle de votre secteur cible." },
-  { q: "Est-ce que le marché immobilier en Outaouais est actif?", a: "Oui, le marché reste dynamique grâce à la proximité d'Ottawa, à la demande bilingue et à l'attractivité croissante de la région. Les conditions varient par secteur — une analyse personnalisée vous donnera un portrait exact." },
+  { q: "Est-ce que le marché immobilier en Outaouais est actif?", a: "Oui, le marché reste dynamique grâce à la proximité d'Ottawa, à la demande bilingue et à l'attractivité croissante de la région. Les conditions varient par secteur, une analyse personnalisée vous donnera un portrait exact." },
   { q: "Offrez-vous un service bilingue?", a: "Absolument. Je travaille en français et en anglais, ce qui est essentiel dans une région bilingue comme l'Outaouais. Que vous veniez d'Ottawa, de Montréal ou de l'étranger, je m'adapte à votre langue." },
   { q: "Pourquoi choisir un courtier local plutôt qu'un courtier d'Ottawa?", a: "Un courtier licencié au Québec connaît les lois, les taxes (taxe de bienvenue, taxe scolaire) et les particularités du marché québécois. Un courtier ontarien ne peut pas légalement vous représenter au Québec." },
   { q: "Comment commencer mon projet immobilier en Outaouais?", a: "Contactez-moi pour une consultation gratuite. On discute de vos objectifs, je vous donne les faits et les chiffres, et on définit ensemble la meilleure stratégie pour votre situation." },
@@ -88,7 +88,7 @@ const OutaouaisHubPage = () => (
       <div className="section-container max-w-3xl">
         <SectionHeading overline="Votre courtier local" title="Un accompagnement clair, partout en Outaouais" centered />
         <p className="mt-6 text-base leading-relaxed text-muted-foreground text-center">
-          Je suis Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. J'accompagne les vendeurs, acheteurs et investisseurs dans l'ensemble de l'Outaouais — de Hull à Chelsea, d'Aylmer à Cantley. Mon approche : des conseils basés sur les données, une stratégie personnalisée et un accompagnement transparent du début à la fin.
+          Je suis Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. J'accompagne les vendeurs, acheteurs et investisseurs dans l'ensemble de l'Outaouais, de Hull à Chelsea, d'Aylmer à Cantley. Mon approche : des conseils basés sur les données, une stratégie personnalisée et un accompagnement transparent du début à la fin.
         </p>
       </div>
     </section>
@@ -143,12 +143,12 @@ const OutaouaisHubPage = () => (
         <SectionHeading overline="Pourquoi moi" title="Un courtier local, bilingue et transparent" centered />
         <ul className="mt-8 space-y-3">
           {[
-            "Courtier RE/MAX — Hall of Fame, reconnu en Outaouais",
-            "Bilingue français-anglais — essentiel pour la clientèle Ottawa-Gatineau",
+            "Courtier RE/MAX, Hall of Fame, reconnu en Outaouais",
+            "Bilingue français-anglais, essentiel pour la clientèle Ottawa-Gatineau",
             "Spécialisé en revente résidentielle, premier achat et investissement plex",
-            "Évaluations basées sur des données réelles — pas des estimations en ligne",
+            "Évaluations basées sur des données réelles, pas des estimations en ligne",
             "Accompagnement de la relocalisation Ottawa → Gatineau et Montréal → Gatineau",
-            "Approche honnête — je vous donne les chiffres et les options, vous décidez",
+            "Approche honnête, je vous donne les chiffres et les options, vous décidez",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />
@@ -177,7 +177,7 @@ const OutaouaisHubPage = () => (
       dark
       overline="Première étape"
       title="Commençons votre projet immobilier en Outaouais"
-      text="Évaluation, consultation achat ou analyse plex — on commence là où vous êtes rendu."
+      text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
       buttons={[
         { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },

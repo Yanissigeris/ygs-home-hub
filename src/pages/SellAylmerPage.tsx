@@ -14,25 +14,25 @@ import heroImg from "@/assets/hero-seller.webp";
 
 
 const steps = [
-  { num: "01", title: "Analyse du marché à Aylmer", desc: "Ventes comparables dans votre quartier d'Aylmer — Plateau, lac Deschênes, secteurs établis. Un prix réaliste et stratégique." },
+  { num: "01", title: "Analyse du marché à Aylmer", desc: "Ventes comparables dans votre quartier d'Aylmer, Plateau, lac Deschênes, secteurs établis. Un prix réaliste et stratégique." },
   { num: "02", title: "Plan de mise en marché", desc: "Préparation, photos, visibilité ciblée pour attirer les acheteurs d'Aylmer, Gatineau et Ottawa." },
   { num: "03", title: "Accompagnement complet", desc: "Visites, négociation, coordination jusqu'au notaire. Zéro surprise." },
 ];
 
 const nextSteps = [
-  { title: "Évaluation gratuite à Aylmer", text: "Connaître la valeur de votre propriété à Aylmer — gratuit et sans engagement.", href: "/evaluation-maison-aylmer/", cta: "Obtenir ma valeur", highlight: true },
+  { title: "Évaluation gratuite à Aylmer", text: "Connaître la valeur de votre propriété à Aylmer, gratuit et sans engagement.", href: "/evaluation-maison-aylmer/", cta: "Obtenir ma valeur", highlight: true },
   { title: "Parler à Yanis", text: "Un appel pour clarifier vos options de vente à Aylmer.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const faq = [
   { q: "Comment vendre une maison à Aylmer?", a: "On commence par une évaluation basée sur les ventes récentes dans votre secteur d'Aylmer. Ensuite, un plan de mise en marché adapté à votre quartier et votre type de propriété." },
   { q: "Combien de temps prend la vente d'une maison à Aylmer?", a: "Une propriété bien positionnée à Aylmer se vend généralement en quelques semaines. Le délai dépend du prix, du quartier et de la préparation." },
-  { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend du quartier — Plateau, lac Deschênes, secteurs établis. Demandez une évaluation gratuite pour une fourchette de prix réaliste." },
+  { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend du quartier, Plateau, lac Deschênes, secteurs établis. Demandez une évaluation gratuite pour une fourchette de prix réaliste." },
   { q: "Faut-il rénover avant de vendre à Aylmer?", a: "Pas toujours. Certains investissements valent la peine dans le marché d'Aylmer, d'autres non. Je vous conseille selon votre situation." },
   { q: "Quels sont les frais pour vendre à Aylmer?", a: "Commission, notaire, certificat de localisation et parfois des réparations mineures. Tout est clair dès le départ." },
   { q: "Est-ce un bon moment pour vendre à Aylmer?", a: "Aylmer reste très recherché par les familles et les acheteurs d'Ottawa. Le bon moment dépend aussi de votre situation personnelle." },
-  { q: "Pourquoi travailler avec un courtier local à Aylmer?", a: "Un courtier qui connaît Aylmer comprend les micro-marchés, les acheteurs actifs et les particularités de chaque quartier — du Plateau au lac Deschênes." },
-  { q: "Puis-je vendre ma maison d'Aylmer à un acheteur d'Ottawa?", a: "Absolument — Aylmer attire beaucoup d'acheteurs d'Ottawa grâce à la qualité de vie et la proximité. Ma mise en marché cible les deux marchés." },
+  { q: "Pourquoi travailler avec un courtier local à Aylmer?", a: "Un courtier qui connaît Aylmer comprend les micro-marchés, les acheteurs actifs et les particularités de chaque quartier, du Plateau au lac Deschênes." },
+  { q: "Puis-je vendre ma maison d'Aylmer à un acheteur d'Ottawa?", a: "Absolument, Aylmer attire beaucoup d'acheteurs d'Ottawa grâce à la qualité de vie et la proximité. Ma mise en marché cible les deux marchés." },
   { q: "Comment se passe la coordination vente-achat à Aylmer?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé entre deux transactions." },
   { q: "Quels quartiers d'Aylmer sont les plus recherchés?", a: "Le Plateau, les secteurs près du lac Deschênes et les quartiers familiaux établis sont très demandés. Chaque quartier a ses forces." },
 ];
@@ -70,7 +70,7 @@ const SellAylmerPage = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Première étape : connaître la valeur de votre propriété à Aylmer — c'est gratuit."
+      text="Première étape : connaître la valeur de votre propriété à Aylmer, c'est gratuit."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-maison-aylmer/"
     />

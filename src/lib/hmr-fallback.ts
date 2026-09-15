@@ -25,7 +25,7 @@ function scheduleReload(reason: string) {
   if (typeof window === "undefined") return;
   reloadScheduled = true;
   // eslint-disable-next-line no-console
-  console.warn(`[hmr-fallback] ${reason} — reloading preview…`);
+  console.warn(`[hmr-fallback] ${reason}, reloading preview…`);
   window.setTimeout(() => {
     try {
       window.location.reload();

@@ -17,7 +17,7 @@ const profiles = [
   { icon: Users, title: "Families", text: "More space, yard, French and English schools nearby." },
   { icon: Home, title: "First-time buyers", text: "More affordable entry prices than Ottawa with a better quality of life." },
   { icon: TrendingUp, title: "Investors", text: "Strong resale potential in a constantly growing area." },
-  { icon: MapPin, title: "Relocating from Ottawa", text: "Smooth transition — I know both sides of the river." },
+  { icon: MapPin, title: "Relocating from Ottawa", text: "Smooth transition, I know both sides of the river." },
 ];
 
 const sellerReasons = [
@@ -78,22 +78,22 @@ const PlateauAylmerPageEn = () => (
     <GuideInlineCTA lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Plateau / Aylmer"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
     <CTASection
       dark
       title="Buyer or seller in Plateau / Aylmer?"
-      text="I can help you see clearly — whether you're buying in the area or want to know your property's value."
+      text="I can help you see clearly, whether you're buying in the area or want to know your property's value."
       buttons={[
         { label: "Get my value", href: "/en/home-valuation/" },
         { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

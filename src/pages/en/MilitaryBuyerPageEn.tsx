@@ -18,15 +18,15 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 const advantages = [
   { icon: DollarSign, title: "More affordable prices", text: "Gatineau's market often offers better value than saturated military markets." },
   { icon: MapPin, title: "Close to the bases", text: "Quick access to CFB Uplands and federal facilities in the region." },
-  { icon: Home, title: "Variety of properties", text: "Houses, condos, semi-detached — in family-friendly, well-served neighborhoods." },
+  { icon: Home, title: "Variety of properties", text: "Houses, condos, semi-detached, in family-friendly, well-served neighborhoods." },
   { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },
 ];
 
 
 const faq = [
-  { q: "Which neighborhoods do you recommend for military members?", a: "It depends on your base and family priorities. Aylmer, Plateau and Hull are popular — we discuss based on your situation." },
-  { q: "Can I buy remotely?", a: "Yes. Virtual visits, remote offers and full coordination — it's common for postings." },
-  { q: "How does the buying process work in Québec?", a: "Promise to purchase, inspection, conditions, notary — it's different from Ontario. I guide you step by step." },
+  { q: "Which neighborhoods do you recommend for military members?", a: "It depends on your base and family priorities. Aylmer, Plateau and Hull are popular, we discuss based on your situation." },
+  { q: "Can I buy remotely?", a: "Yes. Virtual visits, remote offers and full coordination, it's common for postings." },
+  { q: "How does the buying process work in Québec?", a: "Promise to purchase, inspection, conditions, notary, it's different from Ontario. I guide you step by step." },
 ];
 
 const MilitaryBuyerPageEn = () => (
@@ -39,7 +39,7 @@ const MilitaryBuyerPageEn = () => (
       subtitle="Posting to the NCR? I help you find the right area, the right property and navigate the buying process in Québec."
       primaryCta={{ label: "Book a call", href: "/en/contact/" }}
       secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer/" }}
-      trustLine="Service adapted to military members — at your pace."
+      trustLine="Service adapted to military members, at your pace."
       heroBgImage={heroImg}
     />
 <section className="py-8 bg-white border-y border-border/30">
@@ -76,22 +76,22 @@ const MilitaryBuyerPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know about buying in Gatineau during a posting — in a clear guide sent by email." ctaLabel="Get the guide" />
+    <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="Everything you need to know about buying in Gatineau during a posting, in a clear guide sent by email." ctaLabel="Get the guide" />
 
     <CTASection
       dark
       title="Ready to find your property in Gatineau?"
-      text="Let's discuss your posting and criteria — I take care of the rest."
+      text="Let's discuss your posting and criteria, I take care of the rest."
       buttons={[
         { label: "Book a call", href: "/en/contact/" },
         { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" },
       ]}
-      trustLine="I give you the options — you decide with full clarity."
+      trustLine="I give you the options, you decide with full clarity."
     />
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide, get it by email" />
   </>
 );
 export default MilitaryBuyerPageEn;

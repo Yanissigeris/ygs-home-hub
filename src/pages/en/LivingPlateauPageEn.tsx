@@ -21,8 +21,8 @@ const highlights = [
 
 const faq = [
   { q: "Is the Plateau far from Ottawa?", a: "20-30 minutes by car depending on the time. Many Plateau residents work in Ottawa." },
-  { q: "Are there good schools in the Plateau?", a: "Yes — French and English schools, daycares and after-school activities." },
-  { q: "Is the Plateau still growing?", a: "Yes — new residential projects are underway, attracting more and more families." },
+  { q: "Are there good schools in the Plateau?", a: "Yes, French and English schools, daycares and after-school activities." },
+  { q: "Is the Plateau still growing?", a: "Yes, new residential projects are underway, attracting more and more families." },
 ];
 
 const related = [
@@ -39,14 +39,14 @@ const LivingPlateauPageEn = () => (
     <CardGrid overline="Lifestyle" title="What makes the Plateau unique" items={highlights} />
     <ContentBlock narrow>
       <SectionHeading title="The Plateau is for families" />
-      <p className="prose-body mt-5">The Plateau has become one of Gatineau's most popular areas for young families. New homes, parks, schools and quick access to everything — it's a lifestyle choice that's gaining more and more followers.</p>
+      <p className="prose-body mt-5">The Plateau has become one of Gatineau's most popular areas for young families. New homes, parks, schools and quick access to everything, it's a lifestyle choice that's gaining more and more followers.</p>
     </ContentBlock>
     <InlineCTA text="Own a property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <FAQSection title="Questions about living in the Plateau" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — settling in the Plateau" text="Everything to buy in the Plateau — process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Ready to discover the Plateau?" text="Let's talk about your criteria — I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighborhood", href: "/en/plateau/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — settling in the Plateau" text="Everything to buy in the Plateau, process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
+    <CTASection dark title="Ready to discover the Plateau?" text="Let's talk about your criteria, I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighborhood", href: "/en/plateau/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

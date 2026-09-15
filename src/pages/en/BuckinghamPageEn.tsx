@@ -17,19 +17,19 @@ import heroImg from "@/assets/hero-buckingham-gen.webp";
 const faq = [
   {
     q: "Is Buckingham too far from Ottawa to live there?",
-    a: "Buckingham is about 45–50 minutes from Ottawa by car depending on traffic. For a daily in-person commute to Ottawa, it is indeed a significant trip. For partial remote work or a job in Gatineau, it's entirely manageable — and the gain in space and quality of life is significant. During our consultation, I can help you weigh this trade-off honestly based on your real situation.",
+    a: "Buckingham is about 45-50 minutes from Ottawa by car depending on traffic. For a daily in-person commute to Ottawa, it is indeed a significant trip. For partial remote work or a job in Gatineau, it's entirely manageable, and the gain in space and quality of life is significant. During our consultation, I can help you weigh this trade-off honestly based on your real situation.",
   },
   {
     q: "Are there services in Buckingham?",
-    a: "Yes — Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. For big-box stores and medical specialists, you head to central Gatineau (30–40 minutes).",
+    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. For big-box stores and medical specialists, you head to central Gatineau (30-40 minutes).",
   },
   {
     q: "Do Buckingham properties have wells?",
-    a: "A large portion of Buckingham is connected to municipal water and sewer — unlike more rural areas like Cantley or L'Ange-Gardien. In the core Buckingham area, properties are generally on municipal services. On the outskirts, verification is needed. I systematically confirm this point for every property visited.",
+    a: "A large portion of Buckingham is connected to municipal water and sewer, unlike more rural areas like Cantley or L'Ange-Gardien. In the core Buckingham area, properties are generally on municipal services. On the outskirts, verification is needed. I systematically confirm this point for every property visited.",
   },
   {
     q: "What does a single-family home cost in Buckingham in 2026?",
-    a: "Based on active Centris listings as of May 2026, single-family homes in the core Buckingham sector typically trade between $375,000 and $525,000 depending on year of construction, lot size and condition. Recent builds in Masson-Angers run from the high-$400,000s into the low-$600,000s. Compared with the Plateau or Aylmer for an equivalent lot and square-footage, the savings often reach $100,000–$200,000 — which is the whole point of buying east.",
+    a: "Based on active Centris listings as of May 2026, single-family homes in the core Buckingham sector typically trade between $375,000 and $525,000 depending on year of construction, lot size and condition. Recent builds in Masson-Angers run from the high-$400,000s into the low-$600,000s. Compared with the Plateau or Aylmer for an equivalent lot and square-footage, the savings often reach $100,000, $200,000, which is the whole point of buying east.",
   },
   {
     q: "Which schools serve Buckingham and Masson-Angers?",
@@ -37,11 +37,11 @@ const faq = [
   },
   {
     q: "Is the Buckingham–Masson-Angers market moving fast in 2026?",
-    a: "Demand has stayed solid through Q1 2026 because the price gap with central Gatineau is wide enough to attract first-time buyers and Ottawa cross-river families. According to the Outaouais Real Estate Board (CIO), the median time on market for a single-family home in the metropolitan Gatineau area was 32 days in Q4 2025 — turnkey properties in Buckingham priced correctly are tracking close to that. Properties needing major work sit longer; pricing strategy matters more than ever.",
+    a: "Demand has stayed solid through Q1 2026 because the price gap with central Gatineau is wide enough to attract first-time buyers and Ottawa cross-river families. According to the Outaouais Real Estate Board (CIO), the median time on market for a single-family home in the metropolitan Gatineau area was 32 days in Q4 2025, turnkey properties in Buckingham priced correctly are tracking close to that. Properties needing major work sit longer; pricing strategy matters more than ever.",
   },
   {
     q: "Can I get a home valuation in Buckingham specifically?",
-    a: "Yes. I prepare free, no-commitment valuations anchored on recent comparable sales on your street and in your sub-sector — Buckingham core, Masson, Angers village or rural fringe. Each of these has a different price profile and an Aylmer-trained eye won't catch the nuances. Reach out and I'll send the analysis within 24 hours.",
+    a: "Yes. I prepare free, no-commitment valuations anchored on recent comparable sales on your street and in your sub-sector, Buckingham core, Masson, Angers village or rural fringe. Each of these has a different price profile and an Aylmer-trained eye won't catch the nuances. Reach out and I'll send the analysis within 24 hours.",
   },
 ];
 
@@ -57,7 +57,7 @@ const subSectors = [
   },
   {
     title: "Angers / L'Ange-Gardien",
-    text: "Transition zone toward rural MRCs. Large properties, woodlands, silence. For those truly seeking space. Wells and septic systems are common — inspection is crucial in this area.",
+    text: "Transition zone toward rural MRCs. Large properties, woodlands, silence. For those truly seeking space. Wells and septic systems are common, inspection is crucial in this area.",
   },
 ];
 
@@ -102,16 +102,16 @@ const BuckinghamPageEn = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT</p>
-      <h2 className="mt-3">Buckingham and Masson-Angers — the facts</h2>
+      <h2 className="mt-3">Buckingham and Masson-Angers, the facts</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town — its economy was built on paper mills for over a century — Buckingham is now a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
+          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town, its economy was built on paper mills for over a century, Buckingham is now a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
         </p>
         <p className="prose-body">
-          What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and — since 2020 — remote workers who no longer need to be close to Ottawa daily.
+          What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and, since 2020, remote workers who no longer need to be close to Ottawa daily.
         </p>
         <p className="prose-body">
-          Buckingham has a lively downtown: grocery stores, pharmacy, restaurants, medical clinic, library, arena, secondary school. For big-box stores and specialized services, you head to central Gatineau (30–40 minutes).
+          Buckingham has a lively downtown: grocery stores, pharmacy, restaurants, medical clinic, library, arena, secondary school. For big-box stores and specialized services, you head to central Gatineau (30-40 minutes).
         </p>
       </div>
     </ContentBlock>
@@ -135,16 +135,16 @@ const BuckinghamPageEn = () => (
     {/* ═══ SECTION 3 — Distance ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">HONESTY</p>
-      <h2 className="mt-3">The distance question — an honest answer</h2>
+      <h2 className="mt-3">The distance question, an honest answer</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
           The main question buyers ask about Buckingham: "Isn't it too far?"
         </p>
         <p className="prose-body">
-          The honest answer depends on your situation. Buckingham is about 45–50 minutes from Ottawa depending on traffic, and 30–40 minutes from central Gatineau. For someone working full-time in person in Ottawa, it is indeed a significant daily commute.
+          The honest answer depends on your situation. Buckingham is about 45-50 minutes from Ottawa depending on traffic, and 30-40 minutes from central Gatineau. For someone working full-time in person in Ottawa, it is indeed a significant daily commute.
         </p>
         <p className="prose-body">
-          For someone working remotely part-time (2–3 days/week) or based in Gatineau, the distance becomes an advantage — you get much more space for the same budget.
+          For someone working remotely part-time (2-3 days/week) or based in Gatineau, the distance becomes an advantage, you get much more space for the same budget.
         </p>
         <p className="prose-body">
           It's a lifestyle decision as much as a budget one. I help you weigh it honestly, without selling you a property that wouldn't match your reality.
@@ -159,7 +159,7 @@ const BuckinghamPageEn = () => (
           {[
             "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown with essential services on site.",
             "Masson-Angers runs along the Ottawa River and offers the closest semi-rural atmosphere to central Gatineau in this eastern sector.",
-            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties — the Buckingham area benefits from this growing appeal for space and affordability.",
+            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties, the Buckingham area benefits from this growing appeal for space and affordability.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -178,16 +178,16 @@ const BuckinghamPageEn = () => (
     {/* ═══ MARKET DATA ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">MARKET DATA</p>
-      <h2 className="mt-3">Buckingham &amp; Masson-Angers — what the 2026 numbers say</h2>
+      <h2 className="mt-3">Buckingham &amp; Masson-Angers, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          As of May 2026, the Buckingham core sector shows roughly 35–45 active single-family listings on Centris, with an additional 25–35 in Masson-Angers village. Median asking prices sit between $399,900 and $529,000 for resale single-family homes, while new construction in Masson-Angers — driven by developers active around chemin de Montréal Est and rue des Pommiers — pushes that ceiling closer to $625,000 for a turnkey, energy-efficient build with double garage. For an Ottawa cross-river family used to Barrhaven or Orléans pricing, the same lot and floor plan represents a $200,000–$300,000 saving.
+          As of May 2026, the Buckingham core sector shows roughly 35-45 active single-family listings on Centris, with an additional 25-35 in Masson-Angers village. Median asking prices sit between $399,900 and $529,000 for resale single-family homes, while new construction in Masson-Angers, driven by developers active around chemin de Montréal Est and rue des Pommiers, pushes that ceiling closer to $625,000 for a turnkey, energy-efficient build with double garage. For an Ottawa cross-river family used to Barrhaven or Orléans pricing, the same lot and floor plan represents a $200,000, $300,000 saving.
         </p>
         <p className="prose-body">
-          The Outaouais Real Estate Board (CIO) reported a median time on market of 32 days for single-family homes across metropolitan Gatineau in Q4 2025. Buckingham–Masson-Angers tracks slightly above that average — turnkey homes priced correctly typically receive offers within 25–45 days, while properties that need significant renovation can sit 60–90 days. The lesson for sellers: pricing strategy and pre-sale preparation matter more in this sector than in the Plateau, where shortage of inventory still rescues mistakes.
+          The Outaouais Real Estate Board (CIO) reported a median time on market of 32 days for single-family homes across metropolitan Gatineau in Q4 2025. Buckingham, Masson-Angers tracks slightly above that average, turnkey homes priced correctly typically receive offers within 25-45 days, while properties that need significant renovation can sit 60-90 days. The lesson for sellers: pricing strategy and pre-sale preparation matter more in this sector than in the Plateau, where shortage of inventory still rescues mistakes.
         </p>
         <p className="prose-body">
-          For first-time buyers, the federal Home Buyers' Plan (HBP, up to $60,000 per person from RRSP) and the Tax-Free First Home Savings Account (FHSA, up to $40,000 lifetime) stack with provincial programs. Combined with Buckingham's entry prices, the math for a couple with two solid jobs in Gatineau or partial-remote in Ottawa often beats anything available on the Ontario side at the same down-payment level. I walk every first-time buyer through this calculation before we visit a single property — it usually changes their search radius.
+          For first-time buyers, the federal Home Buyers' Plan (HBP, up to $60,000 per person from RRSP) and the Tax-Free First Home Savings Account (FHSA, up to $40,000 lifetime) stack with provincial programs. Combined with Buckingham's entry prices, the math for a couple with two solid jobs in Gatineau or partial-remote in Ottawa often beats anything available on the Ontario side at the same down-payment level. I walk every first-time buyer through this calculation before we visit a single property, it usually changes their search radius.
         </p>
       </div>
     </ContentBlock>
@@ -207,7 +207,7 @@ const BuckinghamPageEn = () => (
       lang="en"
       guideType="buyer_guide"
       headline="Free Buyer Guide — buying in Buckingham"
-      text="Process, budget and tips for buying in the area — in a guide sent to your email."
+      text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
 
@@ -215,15 +215,15 @@ const BuckinghamPageEn = () => (
     <CTASection
       dark
       title="Buying or selling in Buckingham?"
-      text="I know the area — let's talk about your project."
+      text="I know the area, let's talk about your project."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and the options — you decide."
+      trustLine="I give you the numbers and the options, you decide."
     />
 
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 

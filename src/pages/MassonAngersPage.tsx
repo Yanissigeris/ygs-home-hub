@@ -8,18 +8,18 @@ const MassonAngersPage = () => (
     metaDesc="Vivre, acheter ou vendre à Masson-Angers, Gatineau. Secteur familial en plein essor, constructions neuves et prix compétitifs."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Courtier immobilier à Masson-Angers. Secteur familial, constructions neuves et prix accessibles.", lat: 45.5328, lng: -75.4170, url: "/masson-angers/" }}
-    hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial en plein essor à l'est de Gatineau — constructions neuves, prix d'entrée accessibles et qualité de vie. À 20-25 minutes du centre de Gatineau par l'autoroute 50.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial en plein essor à l'est de Gatineau, constructions neuves, prix d'entrée accessibles et qualité de vie. À 20-25 minutes du centre de Gatineau par l'autoroute 50.", image: heroImg }}
     trustSpecialty="Spécialiste Masson-Angers"
-    lifestyle={{ image: heroImg, imageAlt: "Quartier résidentiel Masson-Angers", title: "Pourquoi Masson-Angers est en plein essor", subtitle: "Masson-Angers attire principalement les jeunes familles et les premiers acheteurs qui cherchent une maison neuve ou récente sans payer le prix de Hull ou d'Aylmer. Le secteur compte deux sous-secteurs distincts — Masson et Angers — avec plusieurs développements résidentiels actifs et des promoteurs qui livrent du neuf en 2026. C'est l'un des meilleurs rapports qualité-prix dans Gatineau pour qui accepte un déplacement quotidien plus long vers le centre-ville d'Ottawa." }}
+    lifestyle={{ image: heroImg, imageAlt: "Quartier résidentiel Masson-Angers", title: "Pourquoi Masson-Angers est en plein essor", subtitle: "Masson-Angers attire principalement les jeunes familles et les premiers acheteurs qui cherchent une maison neuve ou récente sans payer le prix de Hull ou d'Aylmer. Le secteur compte deux sous-secteurs distincts, Masson et Angers, avec plusieurs développements résidentiels actifs et des promoteurs qui livrent du neuf en 2026. C'est l'un des meilleurs rapports qualité-prix dans Gatineau pour qui accepte un déplacement quotidien plus long vers le centre-ville d'Ottawa." }}
     reasons={[
-      "Prix d'entrée parmi les plus accessibles de Gatineau — jumelés et maisons neuves entre 400 000 $ et 490 000 $+ selon le type et l'année (données Centris, mai 2026)",
+      "Prix d'entrée parmi les plus accessibles de Gatineau, jumelés et maisons neuves entre 400 000 $ et 490 000 $+ selon le type et l'année (données Centris, mai 2026)",
       "Constructions neuves actives : plusieurs promoteurs livrent en 2026 avec possession printemps disponible",
       "Deux sous-secteurs distincts : Masson (côté ouest, plus mature) et Angers (côté est, plus en développement)",
       "Écoles primaires francophones de la Commission scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "École du Sacré-Cœur a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec",
       "École secondaire Hormisdas-Gamelin à Buckingham (12 km, programme international IB et option sport)",
-      "Accès rapide à l'autoroute 50 — 20-25 minutes du centre de Gatineau, environ 35-40 minutes du centre-ville d'Ottawa",
-      "Rivière du Lièvre et marais aux Grenouillettes — accès à la nature en zone résidentielle",
+      "Accès rapide à l'autoroute 50-20-25 minutes du centre de Gatineau, environ 35-40 minutes du centre-ville d'Ottawa",
+      "Rivière du Lièvre et marais aux Grenouillettes, accès à la nature en zone résidentielle",
       "Marché actif avec plusieurs développements en cours et demande croissante des premiers acheteurs",
     ]}
     profilesTitle="Masson-Angers est idéal pour…"
@@ -44,7 +44,7 @@ const MassonAngersPage = () => (
     sectors={{ list: [
       { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Voisin direct à l'est, rivière du Lièvre, école secondaire Hormisdas-Gamelin" },
       { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre du secteur Gatineau, services, condos et résidentiel" },
-      { name: "Limbour", href: "/limbour/", detail: "Familial, parcs, banlieue moderne — alternative à 15 minutes à l'ouest" },
+      { name: "Limbour", href: "/limbour/", detail: "Familial, parcs, banlieue moderne, alternative à 15 minutes à l'ouest" },
     ]}}
     related={{ pages: [
       { title: "Masson-Angers en plein essor", text: "Pourquoi ce secteur explose.", href: "/blogue/masson-angers-secteur-en-essor/" },
@@ -54,13 +54,13 @@ const MassonAngersPage = () => (
       { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
-    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Masson-Angers", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit — recevez-le par courriel" }}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Masson-Angers", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
       observation: "Ce que je vois à Masson-Angers en ce moment : c'est devenu un secteur parfait pour un premier achat à Gatineau. Mes acheteurs sont surtout des jeunes familles et des couples 25-35 ans qui veulent une maison neuve ou récente avec un budget de 400-500k$. Beaucoup viennent d'Ottawa où ils ne peuvent pas acheter, ou sont des premiers acheteurs gatinois qui voulaient Aylmer mais se rabattent ici pour le prix. Le côté Angers est plus en développement avec les constructions neuves, le côté Masson est plus mature avec des reventes.",
       dataPoint: "Sur les ventes que je conclus à Masson-Angers, les jumelés neufs et les maisons récentes bien préparées partent généralement en 25-40 jours. Les promoteurs livrent des modèles entre 400-490k$ avec possession rapide, et la concurrence pour les premiers acheteurs reste forte malgré l'augmentation de l'offre.",
-      takeaway: "Mon conseil aux acheteurs qui considèrent Masson-Angers : compare bien Masson vs Angers avant de te décider — ce sont deux dynamiques différentes. Et si tu vises une construction neuve, vérifie le promoteur, les délais réels de livraison, et négocie les inclusions. Mon conseil aux propriétaires qui pensent vendre : ton prix doit refléter ton sous-secteur et l'offre concurrente du neuf, pas une moyenne globale du quartier."
+      takeaway: "Mon conseil aux acheteurs qui considèrent Masson-Angers : compare bien Masson vs Angers avant de te décider, ce sont deux dynamiques différentes. Et si tu vises une construction neuve, vérifie le promoteur, les délais réels de livraison, et négocie les inclusions. Mon conseil aux propriétaires qui pensent vendre : ton prix doit refléter ton sous-secteur et l'offre concurrente du neuf, pas une moyenne globale du quartier."
     }}
-    cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur — parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

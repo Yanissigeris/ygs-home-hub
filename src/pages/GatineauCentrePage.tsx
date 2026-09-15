@@ -77,7 +77,7 @@ const GatineauCentrePage = () => (
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Courtier immobilier à Gatineau centre — accessibilité, services et valeur"
-      subtitle="Le secteur central de Gatineau est souvent sous-estimé. C'est pourtant le secteur le mieux desservi de la ville — hôpital, universités, cégep, transports, commerces. Et l'un des plus accessibles pour les familles et les investisseurs."
+      subtitle="Le secteur central de Gatineau est souvent sous-estimé. C'est pourtant le secteur le mieux desservi de la ville, hôpital, universités, cégep, transports, commerces. Et l'un des plus accessibles pour les familles et les investisseurs."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=gatineau" }}
       heroBgImage={heroImg}
@@ -86,13 +86,13 @@ const GatineauCentrePage = () => (
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
       <p className="label-overline">PORTRAIT DU SECTEUR</p>
-      <h2 className="mt-3">Gatineau centre — bien desservi, bien positionné</h2>
+      <h2 className="mt-3">Gatineau centre, bien desservi, bien positionné</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville — incluant les quartiers Limbour, La Gappe, Manoir-des-Trembles, et les abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec la plus forte concentration de services publics : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires, le réseau de transports en commun STO, et les grandes surfaces commerciales.
+          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville, incluant les quartiers Limbour, La Gappe, Manoir-des-Trembles, et les abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec la plus forte concentration de services publics : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires, le réseau de transports en commun STO, et les grandes surfaces commerciales.
         </p>
         <p className="prose-body">
-          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent le meilleur équilibre entre accessibilité aux services et qualité de vie résidentielle. Pour les investisseurs, Gatineau centre concentre une forte proportion du parc de plexs existants — des duplex et triplex bien situés, proches des services et des axes de transport.
+          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent le meilleur équilibre entre accessibilité aux services et qualité de vie résidentielle. Pour les investisseurs, Gatineau centre concentre une forte proportion du parc de plexs existants, des duplex et triplex bien situés, proches des services et des axes de transport.
         </p>
         <p className="prose-body">
           La Ville de Gatineau, avec une population de 298 000 habitants, est la quatrième ville en importance au Québec. (Source: Ville de Gatineau, 2024). Le secteur central bénéficie directement de tous les investissements municipaux en infrastructure.
@@ -123,7 +123,7 @@ const GatineauCentrePage = () => (
           {[
             "Gatineau est la 4e ville en importance au Québec avec 298 000 habitants. (Source: Ville de Gatineau, 2024)",
             "L'Hôpital de Gatineau, le Cégep de l'Outaouais et le réseau STO sont tous situés dans ce secteur.",
-            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main — ce secteur bénéficie de cette tendance.",
+            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main, ce secteur bénéficie de cette tendance.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -153,7 +153,7 @@ const GatineauCentrePage = () => (
     <GuideInlineCTA
       guideType="buyer_guide"
       headline="Guide acheteur gratuit — acheter à Gatineau"
-      text="Processus, budget et conseils pour acheter dans le secteur — dans un guide envoyé par courriel."
+      text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
 
@@ -161,7 +161,7 @@ const GatineauCentrePage = () => (
     <CTASection
       dark
       title="Acheteur ou vendeur à Gatineau centre?"
-      text="Je connais le secteur — parlons de votre projet."
+      text="Je connais le secteur, parlons de votre projet."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
         { label: "Analyser un plex →", href: "/investir-plex-gatineau/", variant: "outline" },
@@ -169,7 +169,7 @@ const GatineauCentrePage = () => (
       trustLine="« Je vous donne les chiffres et les options, vous décidez. »"
     />
 
-    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="buyer_guide" label="Guide acheteur gratuit, recevez-le par courriel" />
   </>
 );
 

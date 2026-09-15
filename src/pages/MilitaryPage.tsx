@@ -21,21 +21,21 @@ import heroImg from "@/assets/hero-military.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite — il faut trouver un logement à Gatineau ou vendre rapidement, sans compromettre le prix." },
-  { icon: Shield, title: "Comprendre le marché québécois", text: "Taxes municipales et scolaires, processus notarié, zonage — le Québec fonctionne différemment de l'Ontario ou du reste du Canada." },
-  { icon: Home, title: "Trouver le bon secteur", text: "Proximité de la BFC Uplands ou du centre d'Ottawa, écoles françaises et anglaises, services bilingues — chaque famille a ses priorités." },
-  { icon: Heart, title: "S'installer en famille à Gatineau", text: "Coordonner vente et achat, trouver un quartier familial à Aylmer, au Plateau ou à Hull, inscrire les enfants — tout en gérant le stress de la mutation." },
+  { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite, il faut trouver un logement à Gatineau ou vendre rapidement, sans compromettre le prix." },
+  { icon: Shield, title: "Comprendre le marché québécois", text: "Taxes municipales et scolaires, processus notarié, zonage, le Québec fonctionne différemment de l'Ontario ou du reste du Canada." },
+  { icon: Home, title: "Trouver le bon secteur", text: "Proximité de la BFC Uplands ou du centre d'Ottawa, écoles françaises et anglaises, services bilingues, chaque famille a ses priorités." },
+  { icon: Heart, title: "S'installer en famille à Gatineau", text: "Coordonner vente et achat, trouver un quartier familial à Aylmer, au Plateau ou à Hull, inscrire les enfants, tout en gérant le stress de la mutation." },
 ];
 
 const steps = [
-  { num: "01", title: "Appel de découverte", desc: "On comprend votre situation — mutation, calendrier, budget, priorités familiales et secteurs ciblés." },
+  { num: "01", title: "Appel de découverte", desc: "On comprend votre situation, mutation, calendrier, budget, priorités familiales et secteurs ciblés." },
   { num: "02", title: "Plan personnalisé", desc: "Recherche ciblée, visites virtuelles ou en personne, coordination avec votre horaire de mutation." },
-  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire, coordination — je gère tout jusqu'à votre installation." },
+  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire, coordination, je gère tout jusqu'à votre installation." },
 ];
 
 
 const militaryPaths = [
-  { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille — visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau/", cta: "En savoir plus", highlight: true },
+  { title: "Acheter à Gatineau", text: "Trouvez le bon secteur et la bonne propriété pour votre famille, visites virtuelles disponibles.", href: "/acheter-comme-militaire-gatineau/", cta: "En savoir plus", highlight: true },
   { title: "Vendre lors d'une mutation", text: "Vendez rapidement et au bon prix, même avec un calendrier serré.", href: "/vendre-lors-dune-mutation-gatineau/", cta: "En savoir plus" },
   { title: "Guide militaire", text: "Tout ce qu'il faut savoir pour votre relocalisation immobilière à Gatineau.", href: "/guide-militaire-gatineau/", cta: "Lire le guide" },
 ];
@@ -97,7 +97,7 @@ const MilitaryPage = () => (
         title="Un courtier qui comprend votre réalité"
       />
       <p className="prose-body mt-5">
-        Les mutations ne suivent pas le calendrier immobilier normal. Il faut un courtier qui s'adapte — à votre timeline, à votre budget, et à la pression qui vient avec un déménagement militaire.
+        Les mutations ne suivent pas le calendrier immobilier normal. Il faut un courtier qui s'adapte, à votre timeline, à votre budget, et à la pression qui vient avec un déménagement militaire.
       </p>
       <p className="prose-body mt-4">
         Depuis 2017 à Gatineau, j'ai accompagné des familles militaires dans toutes sortes de situations. Mon rôle est de simplifier le processus pour que vous puissiez vous concentrer sur votre mission.
@@ -110,7 +110,7 @@ const MilitaryPage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Guide relocalisation militaire — recevez-le gratuitement"
-      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau — dans un guide clair envoyé par courriel."
+      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau, dans un guide clair envoyé par courriel."
       ctaLabel="Recevoir le guide"
     />
 
@@ -118,7 +118,7 @@ const MilitaryPage = () => (
     <CTASection
       dark
       title="Prêt à planifier votre relocalisation?"
-      text="Parlons de votre mutation, vos critères et votre calendrier — je m'adapte à vous."
+      text="Parlons de votre mutation, vos critères et votre calendrier, je m'adapte à vous."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Guide militaire", href: "/guide-militaire-gatineau/", variant: "outline" },
@@ -128,7 +128,7 @@ const MilitaryPage = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit, recevez-le par courriel" />
   </>
 );
 

@@ -19,7 +19,7 @@ const buyerSteps = [
   { name: "Define your budget and buying capacity", text: "Analyze your down payment (minimum 5%), borrowing capacity and available programs in Québec." },
   { name: "Choose the right neighborhood in Gatineau", text: "Compare Aylmer, Hull, Plateau, Buckingham and other areas based on budget, commute and lifestyle." },
   { name: "Search and visit properties", text: "Identify properties matching your criteria and visit them with a broker who knows the local market." },
-  { name: "Make a strong offer", text: "Draft a competitive promise to purchase with the right conditions — inspection, financing and timelines." },
+  { name: "Make a strong offer", text: "Draft a competitive promise to purchase with the right conditions, inspection, financing and timelines." },
   { name: "Complete the pre-purchase inspection", text: "Have the property inspected by a professional to identify potential issues before finalizing." },
   { name: "Finalize at the notary", text: "The notary verifies titles, prepares documents and finalizes the transaction. Expect approximately $1,500 in fees." },
 ];
@@ -27,7 +27,7 @@ const buyerSteps = [
 const topics = [
   "Understanding the buying process in Québec",
   "Choosing the right neighborhood in Gatineau or Outaouais for your profile",
-  "First-time buyer vs experienced buyer — what changes",
+  "First-time buyer vs experienced buyer, what changes",
   "How to formulate a strong offer",
   "The inspection: what to really check",
   "The notary's role and fees to expect",
@@ -41,7 +41,7 @@ const faq = [
 const related = [
   { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
   { title: "First-Time Buyer", text: "Budget, down payment and process for first-time buyers.", href: "/en/first-time-buyer/" },
-  { title: "Buy from Ottawa", text: "More space, affordable prices — cross the river.", href: "/en/buy-from-ottawa/" },
+  { title: "Buy from Ottawa", text: "More space, affordable prices, cross the river.", href: "/en/buy-from-ottawa/" },
   { title: "Explore Neighborhoods", text: "Find the area that fits you.", href: "/en/neighborhoods/" },
 ];
 
@@ -55,7 +55,7 @@ const BuyerGuidePageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="Buying in Gatineau is different" />
       <p className="prose-body mt-5">
-        The buying process in Québec has its specifics — promise to purchase, inspection, conditions, notary. Whether you're coming from Ottawa, Montréal or elsewhere, this guide prepares you for every step.
+        The buying process in Québec has its specifics, promise to purchase, inspection, conditions, notary. Whether you're coming from Ottawa, Montréal or elsewhere, this guide prepares you for every step.
       </p>
     </ContentBlock>
 
@@ -64,7 +64,7 @@ const BuyerGuidePageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="Finding the right neighborhood" />
       <p className="prose-body mt-5">
-        Aylmer, the Plateau, Hull, Buckingham — each area has its own personality, advantages and trade-offs. The right choice depends on your budget, commute, lifestyle and family priorities.
+        Aylmer, the Plateau, Hull, Buckingham, each area has its own personality, advantages and trade-offs. The right choice depends on your budget, commute, lifestyle and family priorities.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/neighborhoods/">Explore neighborhoods</Link>
@@ -79,17 +79,17 @@ const BuyerGuidePageEn = () => (
       subtitle="Everything you need to know to buy in Gatineau — in a clear, step-by-step guide sent directly to your email."
       submitLabel="Get the Buyer Guide"
       successTitle="Thank you! Your guide is on its way."
-      successText="Check your inbox — you'll receive the buyer guide within the next few minutes."
+      successText="Check your inbox, you'll receive the buyer guide within the next few minutes."
     />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Also worth reading" title="Related pages for buyers" pages={related} background="alt" />
 
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau — process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide" text="Everything to buy in Gatineau, process, budget and tips in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
 
-    <CTASection dark title="Ready to start your search?" text="Book a free consultation — let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options — you decide with full clarity." />
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+    <CTASection dark title="Ready to start your search?" text="Book a free consultation, let's clarify your criteria and options." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );
 export default BuyerGuidePageEn;

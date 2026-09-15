@@ -32,18 +32,18 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Confidential consultation" },
   { icon: Clock, text: "Response within 24h" },
-  { icon: Shield, text: "No obligation — no commitment" },
+  { icon: Shield, text: "No obligation, no commitment" },
 ];
 
 const afterSteps = [
   { title: "Explore neighborhoods", text: "Compare Gatineau neighborhoods based on your lifestyle, budget and priorities.", href: "/en/neighborhoods", cta: "See neighborhoods", highlight: true },
-  { title: "Buyer guide", text: "The buying process in Québec explained simply — from search to notary.", href: "/en/buyer-guide", cta: "Read the guide" },
+  { title: "Buyer guide", text: "The buying process in Québec explained simply, from search to notary.", href: "/en/buyer-guide", cta: "Read the guide" },
 ];
 
 const faq = [
   { q: "How much does the consultation cost?", a: "It's free and no commitment. The goal is to understand your situation and see if I can help." },
   { q: "How long does the consultation last?", a: "About 20-30 minutes. We cover your criteria, the current market and next steps." },
-  { q: "I'm not ready to buy yet — is it still useful?", a: "Absolutely. Most buyers start by gathering information. The better you understand the market, the better your decision will be." },
+  { q: "I'm not ready to buy yet, is it still useful?", a: "Absolutely. Most buyers start by gathering information. The better you understand the market, the better your decision will be." },
 ];
 
 const BuyerConsultationPageEn = () => {
@@ -82,7 +82,7 @@ const BuyerConsultationPageEn = () => {
         compact
         overline="Buyer consultation · Gatineau"
         title="Book your free buyer consultation"
-        subtitle="Let's discuss your criteria, budget and questions — so you can buy with confidence."
+        subtitle="Let's discuss your criteria, budget and questions, so you can buy with confidence."
         trustLine="Free, confidential and no commitment."
         heroBgImage={heroImg}
       />
@@ -100,7 +100,7 @@ const BuyerConsultationPageEn = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Book your consultation</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Tell me what you're looking for — I'll get back to you with a personalized plan.
+                  Tell me what you're looking for, I'll get back to you with a personalized plan.
                 </p>
 
                 {submitted ? (
@@ -125,7 +125,7 @@ const BuyerConsultationPageEn = () => {
                       <div>
                         <Label htmlFor="phone">Phone</Label>
                         <Input id="phone" name="phone" type="tel" className="mt-1.5" aria-describedby="bc-phone-help" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optional — format: 819-000-0000</p>
+                        <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optional, format: 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Approximate budget</Label>
@@ -178,7 +178,7 @@ const BuyerConsultationPageEn = () => {
                       {submitting ? "Sending…" : "Book my consultation"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Free and no commitment — I help you see more clearly.
+                      Free and no commitment, I help you see more clearly.
                     </p>
                   </form>
                 )}
@@ -230,7 +230,7 @@ const BuyerConsultationPageEn = () => {
 
       <FAQSection items={faq} />
 
-      <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide — get it by email" />
+      <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
     </>
   );
 };

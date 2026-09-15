@@ -9,14 +9,14 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-combien-courtier.webp";
 
 const faq = [
-  { q: "Combien coûte un courtier immobilier au Québec?", a: "Au Québec, la rémunération du courtier est généralement un pourcentage du prix de vente, convenu avant la mise en marché. Il n'y a pas de tarif fixe — chaque entente est négociée entre le vendeur et le courtier." },
+  { q: "Combien coûte un courtier immobilier au Québec?", a: "Au Québec, la rémunération du courtier est généralement un pourcentage du prix de vente, convenu avant la mise en marché. Il n'y a pas de tarif fixe, chaque entente est négociée entre le vendeur et le courtier." },
   { q: "Qui paie la commission du courtier immobilier?", a: "En pratique, c'est le vendeur qui assume la rémunération du courtier inscripteur. L'acheteur ne paie généralement pas de commission directement." },
-  { q: "Est-ce que la commission est négociable?", a: "Oui. La commission n'est pas réglementée par l'OACIQ — elle est convenue librement entre le vendeur et son courtier avant de signer le contrat de courtage." },
-  { q: "Quels services sont inclus dans la commission?", a: "Évaluation du prix, stratégie de mise en marché, photos, visites, négociation, coordination jusqu'au notaire. Le détail varie selon le courtier — c'est une question importante à poser." },
+  { q: "Est-ce que la commission est négociable?", a: "Oui. La commission n'est pas réglementée par l'OACIQ, elle est convenue librement entre le vendeur et son courtier avant de signer le contrat de courtage." },
+  { q: "Quels services sont inclus dans la commission?", a: "Évaluation du prix, stratégie de mise en marché, photos, visites, négociation, coordination jusqu'au notaire. Le détail varie selon le courtier, c'est une question importante à poser." },
   { q: "Un courtier coûte-t-il plus cher que vendre seul?", a: "Un courtier représente un coût, mais il peut aussi maximiser votre prix de vente grâce à une meilleure exposition, une stratégie de prix réaliste et une négociation professionnelle." },
-  { q: "Y a-t-il des frais cachés avec un courtier?", a: "Non — tout doit être clair dans le contrat de courtage. Un bon courtier vous explique l'ensemble des frais (commission, notaire, certificat de localisation) avant de commencer." },
+  { q: "Y a-t-il des frais cachés avec un courtier?", a: "Non, tout doit être clair dans le contrat de courtage. Un bon courtier vous explique l'ensemble des frais (commission, notaire, certificat de localisation) avant de commencer." },
   { q: "Combien coûte un courtier pour acheter?", a: "En général, l'acheteur ne paie pas de commission directement. La rémunération du courtier collaborateur est prévue dans l'entente du côté vendeur." },
-  { q: "Comment savoir si la commission est juste?", a: "Comparez les services offerts, l'expérience locale et la stratégie proposée. Le prix le plus bas n'est pas toujours le meilleur choix — l'important, c'est le résultat net pour vous." },
+  { q: "Comment savoir si la commission est juste?", a: "Comparez les services offerts, l'expérience locale et la stratégie proposée. Le prix le plus bas n'est pas toujours le meilleur choix, l'important, c'est le résultat net pour vous." },
 ];
 
 const CombienCouteCourtierPage = () => (
@@ -45,7 +45,7 @@ const CombienCouteCourtierPage = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Comprendre" title="Comment fonctionne la commission?" />
       <p className="prose-body mt-5">
-        Au Québec, la rémunération du courtier immobilier est convenue entre le vendeur et le courtier <strong>avant la mise en marché</strong>. Elle prend généralement la forme d'un pourcentage du prix de vente final. Il n'y a pas de tarif fixe imposé — chaque entente est personnalisée.
+        Au Québec, la rémunération du courtier immobilier est convenue entre le vendeur et le courtier <strong>avant la mise en marché</strong>. Elle prend généralement la forme d'un pourcentage du prix de vente final. Il n'y a pas de tarif fixe imposé, chaque entente est personnalisée.
       </p>
       <p className="prose-body mt-4">
         Cette commission couvre l'ensemble des services : analyse de la valeur de votre propriété, stratégie de prix, photos professionnelles, mise en marché, visites, négociation avec les acheteurs et coordination jusqu'à la signature chez le notaire.
@@ -63,7 +63,7 @@ const CombienCouteCourtierPage = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Première étape : connaître la valeur de votre propriété — c'est gratuit et sans engagement."
+      text="Première étape : connaître la valeur de votre propriété, c'est gratuit et sans engagement."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -72,9 +72,9 @@ const CombienCouteCourtierPage = () => (
       <SectionHeading overline="Facteurs" title="Qu'est-ce qui influence le coût?" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Type de propriété", text: "Maison unifamiliale, condo, plex — la complexité de la transaction peut varier." },
+          { title: "Type de propriété", text: "Maison unifamiliale, condo, plex, la complexité de la transaction peut varier." },
           { title: "Marché local", text: "Les conditions du marché en Outaouais influencent la stratégie et le temps de vente." },
-          { title: "Services offerts", text: "Photos professionnelles, visites virtuelles, marketing ciblé — le niveau de service varie." },
+          { title: "Services offerts", text: "Photos professionnelles, visites virtuelles, marketing ciblé, le niveau de service varie." },
           { title: "Expérience du courtier", text: "Un courtier expérimenté localement peut faire une différence significative sur le prix final." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
@@ -100,7 +100,7 @@ const CombienCouteCourtierPage = () => (
     <CTASection
       dark
       title="Vous voulez comprendre vos options?"
-      text="Je vous explique tout clairement — commission, services, stratégie — avant même de commencer."
+      text="Je vous explique tout clairement, commission, services, stratégie, avant même de commencer."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },

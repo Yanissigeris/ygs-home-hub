@@ -34,13 +34,13 @@ const services = [
 
 const faqItems = [
   { q: "Do I need a bilingual real estate agent in Outaouais?", a: "In a bilingual region like Outaouais, working with an agent fluent in both French and English is a major advantage. I handle all negotiations, paperwork and communications in your preferred language." },
-  { q: "Which areas do you serve in Outaouais?", a: "I serve the entire Outaouais urban region: Gatineau, Hull, Aylmer, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac. Each area has its own character — I help you find the right fit." },
+  { q: "Which areas do you serve in Outaouais?", a: "I serve the entire Outaouais urban region: Gatineau, Hull, Aylmer, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac. Each area has its own character, I help you find the right fit." },
   { q: "Can you help if I am moving from Ottawa to Gatineau?", a: "Absolutely. I specialize in Ottawa-to-Gatineau relocations. I know the tax differences, school systems, commute patterns and neighbourhood dynamics that matter when crossing the bridge." },
   { q: "How do I get a home valuation in Outaouais?", a: "I prepare a free, no-obligation valuation based on recent comparable sales in your specific area. You receive a clear report with a recommended listing price." },
   { q: "What is the best area to buy in Outaouais?", a: "It depends on your budget, lifestyle and priorities. Aylmer is great for families, Hull for young professionals, Chelsea for nature lovers, and Gatineau centre for accessibility. Let's discuss your needs." },
   { q: "How much does a house cost in Outaouais?", a: "Prices vary significantly by area and property type. In 2024-2025, single-family homes range from $350,000 to over $700,000 depending on location. Contact me for a current market analysis." },
   { q: "Why choose a Quebec-licensed broker instead of an Ontario agent?", a: "Only a Quebec-licensed broker can legally represent you in a real estate transaction in Quebec. I understand the local laws, welcome tax, school taxes and market dynamics specific to the Outaouais." },
-  { q: "Is the Outaouais real estate market active?", a: "Yes, the market remains dynamic thanks to Ottawa's proximity, bilingual demand and the region's growing appeal. Conditions vary by sector — a personalized analysis will give you the full picture." },
+  { q: "Is the Outaouais real estate market active?", a: "Yes, the market remains dynamic thanks to Ottawa's proximity, bilingual demand and the region's growing appeal. Conditions vary by sector, a personalized analysis will give you the full picture." },
   { q: "Do you help with military relocations?", a: "Yes. I am an approved BGRS/SIRVA broker and I understand the IRP posting process. I help military families buy, sell and relocate smoothly in Outaouais." },
   { q: "How do I start my real estate project in Outaouais?", a: "Contact me for a free consultation. We discuss your goals, I give you the facts and numbers, and together we define the best strategy for your situation." },
 ];
@@ -82,7 +82,7 @@ const OutaouaisHubPageEn = () => (
       <div className="section-container max-w-3xl">
         <SectionHeading overline="Your local broker" title="Clear guidance across Outaouais" centered />
         <p className="mt-6 text-base leading-relaxed text-muted-foreground text-center">
-          I'm Yanis Gauthier-Sigeris, a RE/MAX real estate broker based in Gatineau. I help sellers, buyers and investors across the Outaouais region — from Hull to Chelsea, Aylmer to Cantley. My approach: data-driven advice, a personalized strategy and transparent guidance from start to finish.
+          I'm Yanis Gauthier-Sigeris, a RE/MAX real estate broker based in Gatineau. I help sellers, buyers and investors across the Outaouais region, from Hull to Chelsea, Aylmer to Cantley. My approach: data-driven advice, a personalized strategy and transparent guidance from start to finish.
         </p>
       </div>
     </section>
@@ -137,12 +137,12 @@ const OutaouaisHubPageEn = () => (
         <SectionHeading overline="Why me" title="A local, bilingual and transparent broker" centered />
         <ul className="mt-8 space-y-3">
           {[
-            "RE/MAX Hall of Fame — recognized across Outaouais",
-            "Fully bilingual (French & English) — essential for the Ottawa-Gatineau market",
+            "RE/MAX Hall of Fame, recognized across Outaouais",
+            "Fully bilingual (French & English), essential for the Ottawa-Gatineau market",
             "Specialized in resale, first-time buying and plex investment",
-            "Valuations based on real data — not online estimates",
+            "Valuations based on real data, not online estimates",
             "Expert in Ottawa → Gatineau and Montréal → Gatineau relocations",
-            "Honest approach — I give you the numbers and options, you decide",
+            "Honest approach, I give you the numbers and options, you decide",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />
@@ -171,12 +171,12 @@ const OutaouaisHubPageEn = () => (
       dark
       overline="First step"
       title="Start your real estate project in Outaouais"
-      text="Valuation, buyer consultation or plex analysis — we start where you are."
+      text="Valuation, buyer consultation or plex analysis, we start where you are."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Book a Consultation", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="I give you the numbers and options — you decide."
+      trustLine="I give you the numbers and options, you decide."
     />
   </div>
 );

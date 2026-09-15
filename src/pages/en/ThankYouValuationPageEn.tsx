@@ -9,13 +9,13 @@ import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 const whatsNext = [
   { icon: Clock, text: "Personalized response within 24 hours" },
   { icon: FileText, text: "Analysis based on recent comparable sales" },
-  { icon: Shield, text: "No obligation — no commitment" },
+  { icon: Shield, text: "No obligation, no commitment" },
 ];
 
 const nextSteps = [
-  { title: "Seller plan", text: "Go further — get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan", cta: "Get my plan", highlight: true },
+  { title: "Seller plan", text: "Go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan", cta: "Get my plan", highlight: true },
   { title: "Seller guide", text: "Everything you need to know to sell at the best price in Gatineau.", href: "/en/seller-guide", cta: "Read the guide" },
-  { title: "Talk to Yanis", text: "Discuss your situation and options — no commitment.", href: "/en/contact", cta: "Book a call" },
+  { title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact", cta: "Book a call" },
 ];
 
 const ThankYouValuationPageEn = () => (

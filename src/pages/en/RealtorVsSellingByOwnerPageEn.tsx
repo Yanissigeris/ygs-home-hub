@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 
 const faq = [
-  { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your experience, time availability, and risk tolerance. A broker provides visibility, negotiation, and full management — selling privately saves on commission but involves more work and risk." },
+  { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your experience, time availability, and risk tolerance. A broker provides visibility, negotiation, and full management, selling privately saves on commission but involves more work and risk." },
   { q: "How much can I save selling without a realtor?", a: "In theory, you save the commission. In practice, private sales often close at a lower price, which can offset the savings. MLS access and marketing reach are also reduced." },
   { q: "Is it legal to sell by owner in Quebec?", a: "Yes, private sales are legal in Quebec. However, you must still comply with all legal obligations (seller's declaration, inspections, etc.)." },
   { q: "What are the risks of selling without a broker?", a: "Underpricing, poor negotiation, documentation errors, limited exposure, potential legal disputes, and significant stress." },
-  { q: "Can a broker actually sell for more?", a: "Yes — through a data-driven pricing strategy, maximum MLS exposure, professional photography, staging advice, and expert negotiation." },
+  { q: "Can a broker actually sell for more?", a: "Yes, through a data-driven pricing strategy, maximum MLS exposure, professional photography, staging advice, and expert negotiation." },
   { q: "What services does a broker provide vs selling alone?", a: "Professional valuation, MLS listing, photos, marketing, showing management, negotiation, offer drafting, and notary coordination. Alone, you handle everything yourself." },
   { q: "How do I decide if I need a broker?", a: "If you have the time, legal knowledge, and ability to negotiate firmly, private sale is an option. Otherwise, a broker can improve your result and peace of mind." },
   { q: "Do buyers prefer sellers who have a broker?", a: "Many buyers (and their brokers) prefer working with a listing broker because it simplifies negotiation and reduces misunderstandings." },
@@ -71,7 +71,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Reality" title="What you really need to consider" />
       <p className="prose-body mt-5">
-        The question isn't just "how much can I save?" but rather "what will my net result be?" A skilled broker can often achieve a sale price that more than compensates for the commission — especially in a market like Gatineau.
+        The question isn't just "how much can I save?" but rather "what will my net result be?" A skilled broker can often achieve a sale price that more than compensates for the commission, especially in a market like Gatineau.
       </p>
       <p className="prose-body mt-4">
         Private sales can work if you have the time, knowledge, and negotiation skills. But for most sellers, a local professional reduces stress, risk, and time on market.
@@ -91,7 +91,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
           { title: "Underpricing", text: "Without access to comparables and market analysis, you risk undervaluing your property." },
           { title: "Limited exposure", text: "Without MLS, your property reaches far fewer potential buyers." },
           { title: "Direct negotiation", text: "Negotiating alone against a buyer (or their broker) can be disadvantageous without experience." },
-          { title: "Administrative errors", text: "Real estate documentation is complex — a mistake can lead to costly disputes." },
+          { title: "Administrative errors", text: "Real estate documentation is complex, a mistake can lead to costly disputes." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -116,7 +116,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     <CTASection
       dark
       title="Still deciding?"
-      text="Let's discuss your situation — no commitment. I'll help you understand your options and make the best decision."
+      text="Let's discuss your situation, no commitment. I'll help you understand your options and make the best decision."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },

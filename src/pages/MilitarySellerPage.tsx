@@ -25,7 +25,7 @@ const steps = [
 const faq = [
   { q: "Combien de temps faut-il pour vendre lors d'une mutation?", a: "Ça dépend du marché et du prix, mais avec une bonne stratégie, on peut souvent conclure en quelques semaines. On adapte le plan à votre calendrier." },
   { q: "Et si je dois partir avant la vente?", a: "C'est gérable. On met en place un plan pour gérer les visites et la transaction à distance." },
-  { q: "Est-ce que je risque de vendre en dessous de la valeur?", a: "Non, si le positionnement prix est bien fait dès le départ. C'est exactement mon rôle — maximiser votre prix même avec un calendrier serré." },
+  { q: "Est-ce que je risque de vendre en dessous de la valeur?", a: "Non, si le positionnement prix est bien fait dès le départ. C'est exactement mon rôle, maximiser votre prix même avec un calendrier serré." },
 ];
 
 const MilitarySellerPage = () => (
@@ -53,7 +53,7 @@ const MilitarySellerPage = () => (
     <ProcessSteps steps={steps} />
 
     <InlineCTA
-      text="Première étape: connaître la valeur de votre propriété — c'est gratuit et rapide."
+      text="Première étape: connaître la valeur de votre propriété, c'est gratuit et rapide."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -74,14 +74,14 @@ const MilitarySellerPage = () => (
     <GuideInlineCTA
       guideType="seller_guide"
       headline="Guide vendeur gratuit — vendez au meilleur prix"
-      text="Tout ce que vous devez savoir pour vendre votre propriété à Gatineau — prix, préparation et stratégie."
+      text="Tout ce que vous devez savoir pour vendre votre propriété à Gatineau, prix, préparation et stratégie."
       ctaLabel="Recevoir le guide vendeur"
     />
 
     <CTASection
       dark
       title="Vous avez une mutation qui approche?"
-      text="Parlons de votre calendrier et de vos options — plus on s'y prend tôt, plus on a de levier."
+      text="Parlons de votre calendrier et de vos options, plus on s'y prend tôt, plus on a de levier."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver un appel", href: "/contact-yanis/", variant: "outline" },
@@ -91,7 +91,7 @@ const MilitarySellerPage = () => (
 
     <FAQSection items={faq} />
 
-    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit — recevez-le par courriel" />
+    <StickyGuideBanner guideType="seller_guide" label="Guide vendeur gratuit, recevez-le par courriel" />
   </>
 );
 

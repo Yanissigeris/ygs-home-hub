@@ -838,13 +838,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
         {/* ─── IMAGE B: Yanis portrait (Layer 4) ───
             Wrapped in <picture> so the browser picks AVIF when supported
-            (Chrome/Edge 85+, Firefox 93+, Safari 16+) — typically 30-40% smaller
+            (Chrome/Edge 85+, Firefox 93+, Safari 16+), typically 30-40% smaller
             than WebP at equivalent quality. Falls back to WebP transparently. */}
         {agentImage && (
           <>
             {/* Desktop portrait — wrapped in <picture> with media="(min-width: 768px)"
                 on every <source> so mobile browsers SKIP this download entirely.
-                Note: Tailwind's `hidden md:block` only hides via CSS — the browser
+                Note: Tailwind's `hidden md:block` only hides via CSS, the browser
                 still pre-fetches all <img> in the DOM regardless. The media query
                 on the <source> is the only reliable way to gate the network request. */}
             <picture className="hidden md:block">
@@ -892,7 +892,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
             {/* Mobile portrait — plain <picture><img> for fastest LCP (no framer-motion delay).
                 Uses DPR descriptors (1x/2x/3x) so the browser picks EXACTLY the
-                same tier that App.tsx preloads — no double-download.
+                same tier that App.tsx preloads, no double-download.
                   - 1x phones (low-end Android)        → sm  (~7  KB AVIF)
                   - 2x retina (iPhone 12/13/14)         → md  (~12 KB AVIF)
                   - 3x retina (iPhone Pro Max)          → full(~17 KB AVIF) */}

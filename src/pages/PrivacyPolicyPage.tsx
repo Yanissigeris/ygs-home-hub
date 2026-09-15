@@ -73,8 +73,8 @@ const PrivacyPolicyPage = () => (
 
           <Section title="6. Partage avec des tiers">
             <ul className="list-disc pl-5 space-y-1">
-              <li>Google Analytics (analytique web — avec consentement)</li>
-              <li>Meta/Facebook Pixel (publicité — avec consentement)</li>
+              <li>Google Analytics (analytique web, avec consentement)</li>
+              <li>Meta/Facebook Pixel (publicité, avec consentement)</li>
               <li>Fournisseurs de service courriel (guides)</li>
             </ul>
             <p className="mt-2">Aucune vente de données à des tiers.</p>
@@ -83,8 +83,8 @@ const PrivacyPolicyPage = () => (
           <Section title="7. Cookies">
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Cookies nécessaires :</strong> essentiels au fonctionnement du site (session, préférence de langue).</li>
-              <li><strong>Cookies analytiques :</strong> Google Analytics (GA4) — activés uniquement avec votre consentement.</li>
-              <li><strong>Cookies marketing :</strong> Meta Pixel — activés uniquement avec votre consentement.</li>
+              <li><strong>Cookies analytiques :</strong> Google Analytics (GA4), activés uniquement avec votre consentement.</li>
+              <li><strong>Cookies marketing :</strong> Meta Pixel, activés uniquement avec votre consentement.</li>
             </ul>
             <p className="mt-2">Vous pouvez modifier vos préférences via le bouton 🍪 en bas à gauche de l'écran.</p>
           </Section>
