@@ -100,7 +100,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section
         ref={ref}
-        className="section-pathway section-rhythm section-gold-divider relative overflow-hidden md:py-24"
+        className="section-pathway section-rhythm relative overflow-hidden md:py-24"
         style={{ background: "var(--cream-deep)" }}
       >
         {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
@@ -172,9 +172,6 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         <div className="section-container relative z-10">
           {/* Editorial header on cream */}
           <div className="max-w-[580px]">
-            <p className="eyebrow-light mb-3">
-              {heading.overline}
-            </p>
             <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
               <span style={{ color: "var(--gold-dark)", fontStyle: "italic" }}>

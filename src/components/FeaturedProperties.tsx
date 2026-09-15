@@ -271,7 +271,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     });
 
     return (
-      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream-light)" }}>
+      <section ref={ref} className="section-rhythm" style={{ background: "var(--cream-light)" }}>
         <Helmet>
           {mobilePreloads.map((pl) => (
             <link
@@ -292,7 +292,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
           {/* Header — stack vertically on mobile */}
           <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="label-overline mb-2" style={{ color: "var(--gold-text)" }}>{strings.overline}</p>
+              
               <h2>{strings.title}</h2>
             </div>
             <Link

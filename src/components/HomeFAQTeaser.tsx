@@ -51,7 +51,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
     }, [items]);
 
     return (
-      <section ref={ref} className="section-rhythm section-gold-divider" style={{ background: "var(--cream)" }}>
+      <section ref={ref} className="section-rhythm" style={{ background: "var(--cream)" }}>
         <div className="section-container">
           {/* Mobile: stacked vertically. Desktop: 2-column sidebar layout */}
           <div className="flex flex-col lg:grid lg:grid-cols-[minmax(360px,1.1fr)_2fr] lg:gap-[6rem]">
