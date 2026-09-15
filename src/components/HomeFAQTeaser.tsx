@@ -17,6 +17,14 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
 
     // Inject FAQPage JSON-LD for rich snippet eligibility
     React.useEffect(() => {
+      // SSR (prerender) is the source of truth: skip if a FAQPage script
+      // already exists in the document (same guard as BlogArticlePage).
+      if (document.getElementById("ygs-faqpage-jsonld")) return;
+      const ssrFaq = Array.from(
+        document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+      ).find((s) => s.textContent && s.textContent.includes('"@type":"FAQPage"'));
+      if (ssrFaq) return;
+
       const prev = document.getElementById(FAQ_TEASER_JSONLD_ID);
       if (prev) prev.remove();
 

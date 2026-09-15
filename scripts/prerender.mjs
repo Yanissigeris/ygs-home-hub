@@ -24,7 +24,7 @@ import { execSync } from "node:child_process";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
-import { extractFaqFr, extractFaqEn } from "./faq-extractor.mjs";
+import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn } from "./faq-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -497,6 +497,18 @@ async function main() {
     } else if (route === "/en/faq") {
       const faqItems = await extractFaqEn();
       html = injectFaqPageJsonLd(html, faqItems);
+    }
+
+    // Inject FAQPage JSON-LD for the home pages (server-side, crawler-visible)
+    if (route === "/" || route === "/en") {
+      const homeFaqItems = route === "/" ? await extractHomeFaqFr() : await extractHomeFaqEn();
+      if (homeFaqItems.length === 0) {
+        throw new Error(
+          `Prerender: FAQ extraction returned 0 items for home route "${route}" — ` +
+          `check the format of src/data/home-faq.ts (double-quoted { q, a } objects).`
+        );
+      }
+      html = injectFaqPageJsonLd(html, homeFaqItems);
     }
 
     // Output path
