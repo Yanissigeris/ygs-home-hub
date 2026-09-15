@@ -155,7 +155,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
         heroBgImage={p.hero.image}
       />
       <ImageTextSplit image={p.lifestyle.image} imageAlt={p.lifestyle.imageAlt} imagePosition="right">
-        <div className="label-overline">{lang === "en" ? "The area" : "Le secteur"}</div>
+        {/* overline retiré (cohérence accueil) */}
         <h2 className="mt-3">{p.lifestyle.title}</h2>
         {p.lifestyle.subtitle && <p className="mt-2 text-muted-foreground">{p.lifestyle.subtitle}</p>}
         <div className="mt-7 space-y-3.5">
