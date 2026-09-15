@@ -3,35 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-/* Inline SVG icons — replaces lucide-react imports for the hero so the
- * 159KB lucide chunk is no longer in the critical render path.
- * Improves Speed Index by ~150-300ms on desktop. */
-const IconCalendar = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
-  </svg>
-);
-const IconStar = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-  </svg>
-);
-const IconTrophy = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-  </svg>
-);
-const IconHome = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-  </svg>
-);
-const Calendar = IconCalendar;
-const Star = IconStar;
-const Trophy = IconTrophy;
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getA11yLabel } from "@/lib/a11y";
+
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
 
@@ -99,52 +73,6 @@ const statsEn = [
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 
-/* Scroll chevron — bounces at hero bottom, fades on scroll */
-const ScrollChevron: React.FC<{ lang: "fr" | "en" }> = ({ lang }) => {
-  const [hidden, setHidden] = React.useState(false);
-  React.useEffect(() => {
-    const onScroll = () => setHidden(window.scrollY > 100);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  const handleClick = () => {
-    const heroEl = document.querySelector("[data-hero-dark]") as HTMLElement | null;
-    const top = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : window.innerHeight;
-    window.scrollTo({ top, behavior: "smooth" });
-  };
-  return (
-    <button
-      type="button"
-      onClick={handleClick}
-      aria-label={getA11yLabel("hero.scrollNext", lang)}
-      className="absolute left-1/2 z-[6] -translate-x-1/2 pointer-events-auto hidden md:block"
-      style={{
-        bottom: "84px",
-        background: "transparent",
-        border: "none",
-        padding: 8,
-        cursor: "pointer",
-        opacity: hidden ? 0 : 1,
-        transition: "opacity 0.3s ease",
-        color: "rgba(255,255,255,0.6)",
-      }}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-        className="w-5 h-5 sm:w-6 sm:h-6"
-      >
-        <path d="m6 9 6 6 6-6" />
-      </svg>
-    </button>
-  );
-};
 
 const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
   (
@@ -804,22 +732,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </div>
               )}
 
-              {/* Trust strip — under CTAs, mobile-friendly with flex-wrap */}
-              <div
-                className="hero-fade-in mt-8 md:mt-6 flex md:hidden flex-wrap items-center justify-start gap-x-2 md:gap-x-3 gap-y-2 uppercase font-semibold tracking-[0.08em] md:tracking-[0.15em] text-[11.5px] md:text-[11px]"
-                style={{
-                  animationDelay: "0.5s",
-                  color: "var(--gold2)",
-                  fontFamily: "var(--sans)",
-                  textShadow: "0 1px 8px rgba(0,0,0,0.65), 0 0 2px rgba(0,0,0,0.5)",
-                }}
-              >
-                <span>
-                  {lang === "fr" ? "Depuis 2017" : "Since 2017"}
-                </span>
-                <span aria-hidden="true" style={{ opacity: 0.55, margin: "0 4px" }}>·</span>
-                <span>{lang === "fr" ? "Hall of Fame RE/MAX, LLC, 2024" : "RE/MAX, LLC Hall of Fame 2024"}</span>
-              </div>
             </div>
           </div>
         </div>
@@ -937,140 +849,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
-        {/* Bottom gradient — mobile only, improves readability of credibility bar + NAP */}
-        <div
-          aria-hidden="true"
-          className="md:hidden pointer-events-none absolute left-0 bottom-0 w-full"
-          style={{
-            height: 180,
-            zIndex: 2,
-            background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)",
-          }}
-        />
-
-        {/* ─── Scroll chevron ─── */}
-        <ScrollChevron lang={lang} />
-
-        {/* ─── Credibility bar (Layer 5) ─── */}
-        <div
-          className="hero-fade-in hidden md:block absolute left-0 z-[5] w-[58%] pl-[18px] pr-4 text-left pointer-events-auto md:w-full md:text-center"
-          style={{
-            animationDelay: "0.5s",
-            bottom: "32px",
-            color: "rgba(255,255,255,0.92)",
-            fontSize: "clamp(0.7rem, 1.6vw, 0.85rem)",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            textShadow: "0 0 6px rgba(0,0,0,0.85), 0 1px 2px rgba(0,0,0,0.9)",
-            fontFamily: "var(--sans)",
-          }}
-        >
-          <div
-            className="inline-block whitespace-normal [word-break:keep-all] lg:whitespace-nowrap lg:[word-break:normal]"
-            style={{
-              padding: "10px 18px",
-              margin: 0,
-              lineHeight: 1.5,
-            }}
-          >
-            {/* Desktop credibility (hidden on mobile) — inline JSX so text is editable via Visual Edits */}
-            <div className="hidden md:block">
-              {lang === "en" ? (
-                <>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>Since 2017</span>
-                  </span>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>300+ transactions</span>
-                  </span>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <Link to="/en/testimonials" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
-                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>5/5 Google & Facebook</span>
-                  </Link>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>RE/MAX, LLC Hall of Fame 2024</span>
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconCalendar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>Depuis 2017</span>
-                  </span>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconHome aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>300+ transactions</span>
-                  </span>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <Link to="/temoignages" className="pointer-events-auto md:hover:text-white transition-colors hover:underline inline-flex items-center" style={{ color: "inherit", textDecoration: "none" }}>
-                    <IconStar aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>5/5 Google & Facebook</span>
-                  </Link>
-                  <span className="mx-2 opacity-70" aria-hidden="true">·</span>
-                  <span className="pointer-events-auto inline-flex items-center">
-                    <IconTrophy aria-hidden="true" className="w-[14px] h-[14px] sm:w-4 sm:h-4 mr-1.5" style={{ color: "rgba(255,255,255,0.95)" }} />
-                    <span>Hall of Fame RE/MAX, LLC, 2024</span>
-                  </span>
-                </>
-              )}
-            </div>
-            {/* Mobile shortened credibility — inline JSX so text is editable via Visual Edits */}
-            <div className="md:hidden text-center">
-              <div
-                className="inline-block"
-                style={{
-                  padding: "4px 0",
-                  lineHeight: 1.45,
-                  textShadow: "0 0 6px rgba(0,0,0,0.85), 0 1px 2px rgba(0,0,0,0.9)",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "0.65rem",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "var(--gold2)",
-                    fontWeight: 600,
-                    marginBottom: 4,
-                  }}
-                >
-                  {lang === "en" ? "Highlights" : "Essentiel"}
-                </div>
-                <div
-                  style={{
-                    fontSize: "0.875rem",
-                    color: "rgba(247,244,238,0.95)",
-                    fontWeight: 500,
-                    letterSpacing: "0.04em",
-                    textTransform: "none",
-                  }}
-                >
-                  {lang === "en" ? (
-                    <>
-                      Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
-                      <br />
-                      5/5 Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
-                    </>
-                  ) : (
-                    <>
-                      Depuis 2017 <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> 300+ transactions
-                      <br />
-                      5/5 Google <span style={{ opacity: 0.55, margin: "0 4px" }}>·</span> Hall of Fame 2024
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
 
       </section>
       </>
