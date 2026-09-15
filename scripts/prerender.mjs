@@ -544,6 +544,30 @@ async function main() {
       html = injectFaqPageJsonLd(html, homeFaqItems);
     }
 
+    // Inject HowTo + FAQPage JSON-LD for the seller guide pages (server-side)
+    if (route === "/guide-vendeur-gatineau" || route === "/en/seller-guide") {
+      const isFr = route === "/guide-vendeur-gatineau";
+      const guide = isFr ? await extractSellerGuideFr() : await extractSellerGuideEn();
+      if (guide.steps.length === 0 || guide.faq.length === 0) {
+        throw new Error(
+          `Prerender: seller guide extraction returned ${guide.steps.length} steps / ` +
+          `${guide.faq.length} FAQ items for route "${route}" — check the format of the ` +
+          `sellerSteps and faq arrays in the seller guide page source.`
+        );
+      }
+      html = injectHowToJsonLd(html, {
+        name: isFr ? "Comment vendre une propriété à Gatineau" : "How to sell a property in Gatineau",
+        description: isFr
+          ? "Guide étape par étape pour vendre votre propriété à Gatineau — prix, préparation, mise en marché et négociation."
+          : "Step-by-step guide to selling your property in Gatineau — pricing, preparation, marketing and negotiation.",
+        steps: guide.steps,
+        totalTime: "P60D",
+      });
+      html = injectFaqPageJsonLd(html, guide.faq);
+    }
+
+
+
     // Output path
     let outPath;
     if (route === "/") {
