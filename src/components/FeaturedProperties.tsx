@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { propertyImages } from "@/data/property-images";
+import { formatSector } from "@/lib/format-sector";
 
 
 interface FeaturedPropertiesProps {
@@ -195,8 +196,8 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
         </p>
 
         {/* Address */}
-        <p className="truncate" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 400, color: "var(--muted)", marginBottom: ".75rem" }}>
-          {p.address}, {p.city}
+        <p style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 400, color: "var(--muted)", marginBottom: ".75rem" }}>
+          {p.address}, {formatSector(p.city)}
         </p>
 
         {/* Stats */}

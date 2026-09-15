@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import type { Property } from "@/data/properties";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatSector } from "@/lib/format-sector";
 
 interface PropertyCardProps {
   property: Property;
@@ -122,7 +123,6 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
 
         {/* Address */}
         <p
-          className="truncate"
           style={{
             fontFamily: "var(--sans)",
             fontSize: "13px",
@@ -131,7 +131,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
             marginBottom: ".75rem",
           }}
         >
-          {property.address}, {property.city}
+          {property.address}, {formatSector(property.city)}
         </p>
 
         {/* Stats */}

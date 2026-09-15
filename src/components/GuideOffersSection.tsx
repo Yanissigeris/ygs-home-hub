@@ -8,17 +8,17 @@ interface GuideOffersSectionProps {
 }
 
 const guidesFr = [
-  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix — prix, mise en marché, négociation.", cta: "Recevoir le guide vendeur →" },
-  { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide acheteur →" },
-  { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide investisseur →" },
-  { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide relocalisation →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix : prix, mise en marché, négociation.", cta: "Recevoir le guide →" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide →" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide →" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide →" },
 ];
 
 const guidesEn = [
-  { num: "01", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price — pricing, marketing, negotiation.", cta: "Get the seller guide →" },
-  { num: "02", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the buyer guide →" },
-  { num: "03", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the investor guide →" },
-  { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the relocation guide →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price: pricing, marketing, negotiation.", cta: "Get the guide →" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the guide →" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the guide →" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the guide →" },
 ];
 
 const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape — gratuites, sans engagement et envoyées par courriel." };
@@ -86,9 +86,9 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               >
                 <span style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, color: "var(--ink)", letterSpacing: "-.02em", lineHeight: 1, marginBottom: ".75rem", display: "block" }} aria-hidden="true">{g.num}</span>
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
-                <p className="mt-1.5 line-clamp-2 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
+                <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
                 <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
-                  {g.cta.replace(/ →$/, "").replace(/Recevoir le guide /i, "").replace(/Get the /i, "")} →
+                  {g.cta}
                 </span>
               </button>
             ))}
