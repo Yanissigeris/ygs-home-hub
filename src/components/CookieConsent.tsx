@@ -419,7 +419,7 @@ const CookieConsent = () => {
           </div>
         </div>
       )}
-      {/* Re-open cookie button — desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
+      {/* Re-open cookie button: desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
       {dismissed && !visible && !showPrefs && (
         <button
           onClick={handleReopen}

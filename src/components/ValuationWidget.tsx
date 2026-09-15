@@ -197,7 +197,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
             {c.eyebrow}
           </p>
 
-          {/* Heading — h2 to keep document hierarchy consistent (h1 → h2) */}
+          {/* Heading: h2 to keep document hierarchy consistent (h1 → h2) */}
           <h2
             style={{
               fontFamily: "var(--serif)",
@@ -462,7 +462,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
             </div>
           )}
 
-          {/* STEP 3 — Success */}
+          {/* STEP 3: Success */}
           {step === 3 && (
             <div style={{ marginTop: isMobile ? "2rem" : "2.5rem" }}>
               <div style={{ margin: "0 auto 1.25rem", width: 60, height: 60 }}>
