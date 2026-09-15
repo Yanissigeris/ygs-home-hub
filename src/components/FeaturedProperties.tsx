@@ -127,7 +127,7 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
             return (
               <img
                 src={p.image}
-                alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
+alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
@@ -145,7 +145,7 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
               <source type="image/webp" srcSet={set.webpSrcSet} sizes={sizes} />
               <img
                 src={set.fallback}
-                alt={`${p.type} à ${p.city} — ${p.address} — YGS Yanis Gauthier-Sigeris`}
+                alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 loading="lazy"
                 decoding="async"

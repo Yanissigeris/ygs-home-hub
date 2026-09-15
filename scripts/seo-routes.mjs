@@ -30,9 +30,9 @@ const BLOG_OG = `${SITE_URL}/og/og-blog.jpg`;
 export const SEO_ROUTES = {
   // ───────────────────────── FR ─────────────────────────
   "/": {
-    title: "YGS — Courtier immobilier Gatineau · Outaouais",
+    title: "YGS | Courtier immobilier Gatineau · Outaouais",
     description:
-      "Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais — stratégie claire, chiffres honnêtes. Évaluation gratuite.",
+      "Courtier immobilier à Gatineau depuis 9 ans. Vendre, acheter ou investir en Outaouais : stratégie claire, chiffres honnêtes. Évaluation gratuite.",
   },
   "/proprietes": {
     title: "Propriétés à vendre · Gatineau et Outaouais | YGS",
@@ -330,9 +330,9 @@ export const SEO_ROUTES = {
 
   // ───────────────────────── EN ─────────────────────────
   "/en": {
-    title: "YGS — Real Estate Broker Gatineau · Outaouais",
+    title: "YGS | Real Estate Broker Gatineau · Outaouais",
     description:
-      "Real estate broker in Gatineau with 9 years experience. Selling, buying or investing in Outaouais — clear strategy, honest numbers. Free home valuation.",
+      "Real estate broker in Gatineau with 9 years experience. Selling, buying or investing in Outaouais: clear strategy, honest numbers. Free home valuation.",
   },
   "/en/properties": {
     title: "Properties for sale · Gatineau and Outaouais | YGS",

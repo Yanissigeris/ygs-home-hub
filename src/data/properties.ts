@@ -34,7 +34,7 @@ export const properties: Property[] = [
   {
     id: "11366995",
     address: "7 Rue du Chinook",
-    city: "Gatineau (Hull — Plateau de la Capitale)",
+    city: "Gatineau (Hull, Plateau de la Capitale)",
     price: "949 900 $",
     type: "Triplex",
     bedrooms: "2",
@@ -92,7 +92,7 @@ export const properties: Property[] = [
   {
     id: "19674845",
     address: "310 Boul. d'Europe, app. 6",
-    city: "Gatineau (Aylmer — Plateau de la Capitale)",
+    city: "Gatineau (Aylmer, Plateau de la Capitale)",
     price: "1 975 $/mois",
     type: "Condo — Appartement (location)",
     bedrooms: "2",
@@ -110,7 +110,7 @@ export const properties: Property[] = [
   {
     id: "28167244",
     address: "1535 Rue Atmec",
-    city: "Gatineau (Gatineau — Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
+    city: "Gatineau (Gatineau, Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
     price: "499 900 $",
     type: "Maison à étages (jumelée)",
     bedrooms: "3",
@@ -130,7 +130,7 @@ export const properties: Property[] = [
   {
     id: "14073975",
     address: "14 Rue de la Cime",
-    city: "Gatineau (Hull — Richelieu / Hautes-Plaines / Dôme)",
+    city: "Gatineau (Hull, Richelieu / Hautes-Plaines / Dôme)",
     price: "1 079 900 $",
     type: "Triplex",
     bedrooms: "3",
@@ -148,7 +148,7 @@ export const properties: Property[] = [
   {
     id: "19326119",
     address: "71 Rue Lessard",
-    city: "Gatineau (Hull — Lac des Fées / Wrightville)",
+    city: "Gatineau (Hull, Lac des Fées / Wrightville)",
     price: "1 029 900 $",
     type: "Quadruplex",
     bedrooms: "3",
@@ -166,7 +166,7 @@ export const properties: Property[] = [
   {
     id: "16828271",
     address: "312 Rue Le Gallois",
-    city: "Gatineau (Gatineau — Ferme Limbour, Limbour)",
+    city: "Gatineau (Gatineau, Ferme Limbour, Limbour)",
     price: "649 900 $",
     type: "Maison à étages",
     bedrooms: "4",
@@ -186,7 +186,7 @@ export const properties: Property[] = [
   {
     id: "27736954",
     address: "188 Rue des Hautes-Rives",
-    city: "Gatineau (Aylmer — Vieux-Aylmer, Des Cèdres, Marina)",
+    city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
     price: "494 900 $",
     type: "Maison à étages",
     bedrooms: "3",
@@ -204,7 +204,7 @@ export const properties: Property[] = [
   {
     id: "18249217",
     address: "1609 Boul. St-René E.",
-    city: "Gatineau (Gatineau — Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
+    city: "Gatineau (Gatineau, Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
     price: "499 900 $",
     type: "Maison à étages",
     bedrooms: "3",
