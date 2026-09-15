@@ -36,7 +36,7 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          {overline && <p className="label-overline mb-3">{overline}</p>}
+          {/* overline retiré (cohérence accueil) */}
           <h2>{title}</h2>
         </motion.div>
         <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} max-w-[52rem] ${columns === 3 ? "lg:max-w-none" : ""} mx-auto`}>
