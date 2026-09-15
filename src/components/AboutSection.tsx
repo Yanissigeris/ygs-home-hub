@@ -37,21 +37,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
   return (
     <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))", overflow: "hidden" }}>
-      <style>{`
-        .about-body-text::first-letter {
-          font-family: var(--serif);
-          font-size: 4em;
-          font-weight: 500;
-          color: var(--gold-warm-light);
-          float: left;
-          line-height: 0.9;
-          padding: 0.05em 0.12em 0 0;
-          margin-right: 0.04em;
-        }
-        @media (max-width: 640px) {
-          .about-body-text::first-letter { font-size: 3.2em; }
-        }
-      `}</style>
       {/* Glow effect */}
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 40% 55%, rgba(168,138,90,0.1), transparent)", pointerEvents: "none", zIndex: 0 }} />
       <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16 md:min-h-[72vh]" style={{ position: "relative", zIndex: 1 }}>
@@ -96,52 +81,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
             {c.body}
           </p>
 
-          {/* Credentials */}
-          {c.credentials && (
-            <div
-              style={{
-                marginTop: "1.75rem",
-                marginBottom: "2.25rem",
-                paddingTop: "1.5rem",
-                borderTop: "1px solid rgba(168,138,90,0.22)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "0.75rem",
-              }}
-            >
-              <span
-                aria-hidden="true"
-                style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
-              >
-                <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--gold)" }} />
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 5,
-                    height: 5,
-                    transform: "rotate(45deg)",
-                    background: "var(--gold)",
-                  }}
-                />
-                <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--gold)" }} />
-              </span>
-              <p
-                style={{
-                  fontFamily: "var(--sans)",
-                  fontSize: "clamp(10.5px, 2.4vw, 12px)",
-                  fontWeight: 600,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  lineHeight: 1.7,
-                  color: "rgba(232,210,170,0.95)",
-                  margin: 0,
-                }}
-              >
-                {c.credentials}
-              </p>
-            </div>
-          )}
 
           {/* CTA */}
           <Link

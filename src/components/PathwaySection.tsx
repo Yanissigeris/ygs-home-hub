@@ -254,21 +254,6 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     {p.badge}
                   </span>
                 )}
-                <span
-                  aria-hidden="true"
-                  style={{
-                    fontFamily: "var(--serif)",
-                    fontStyle: "italic",
-                    fontSize: "clamp(2.25rem, 4vw, 2.75rem)",
-                    lineHeight: 1,
-                    color: "var(--gold)",
-                    opacity: 0.7,
-                    marginBottom: "0.75rem",
-                    display: "block",
-                  }}
-                >
-                  {p.num}
-                </span>
                 <h3
                   style={{
                     fontFamily: "var(--serif)",
