@@ -47,7 +47,7 @@ export const SEO_ROUTES = {
   "/evaluation-gratuite-gatineau": {
     title: "Évaluation gratuite · Maison Gatineau | YGS",
     description:
-      "Obtenez l'évaluation gratuite de votre propriété à Gatineau en 24-48h. Analyse comparative locale, ventes récentes, prix de mise en marché réaliste.",
+      "Obtenez l'évaluation gratuite de votre propriété à Gatineau. Réponse personnalisée, analyse comparative locale et prix de mise en marché réaliste.",
   },
   "/plan-vendeur-gatineau": {
     title: "Plan vendeur · Vendre à Gatineau étape par étape | YGS",
@@ -257,7 +257,7 @@ export const SEO_ROUTES = {
   "/contact-yanis": {
     title: "Contact Yanis Gauthier-Sigeris · Courtier Gatineau | YGS",
     description:
-      "Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Téléphone, courriel, WhatsApp, formulaire. Réponse en 24h.",
+      "Contactez Yanis Gauthier-Sigeris, courtier immobilier à Gatineau. Téléphone, courriel, WhatsApp, formulaire et réponse personnalisée.",
   },
   "/merci": {
     title: "Merci · Demande reçue | YGS",
@@ -266,7 +266,7 @@ export const SEO_ROUTES = {
   "/merci-evaluation": {
     title: "Merci · Évaluation demandée | YGS",
     description:
-      "Merci pour votre demande d'évaluation. Yanis prépare votre analyse comparative et vous recontacte sous 24-48h.",
+      "Merci pour votre demande d'évaluation. Yanis prépare votre analyse comparative et votre réponse personnalisée.",
   },
   "/courtier-immobilier-outaouais": {
     title: "Courtier immobilier Outaouais · YGS",
@@ -286,12 +286,12 @@ export const SEO_ROUTES = {
   "/evaluation-maison-hull": {
     title: "Évaluation gratuite maison Hull · Gatineau | YGS",
     description:
-      "Évaluation gratuite de votre propriété à Hull en 24-48h. Analyse comparative basée sur les ventes récentes du secteur.",
+      "Évaluation gratuite de votre propriété à Hull. Réponse personnalisée et analyse comparative basée sur les ventes récentes du secteur.",
   },
   "/evaluation-maison-aylmer": {
     title: "Évaluation gratuite maison Aylmer · Gatineau | YGS",
     description:
-      "Évaluation gratuite de votre propriété à Aylmer en 24-48h. Analyse comparative basée sur les ventes récentes du secteur.",
+      "Évaluation gratuite de votre propriété à Aylmer. Réponse personnalisée et analyse comparative basée sur les ventes récentes du secteur.",
   },
   "/combien-coute-un-courtier-immobilier-au-quebec": {
     title: "Combien coûte un courtier immobilier au Québec ? | YGS",
@@ -347,7 +347,7 @@ export const SEO_ROUTES = {
   "/en/home-valuation": {
     title: "Free home valuation · Gatineau | YGS",
     description:
-      "Get a free valuation of your Gatineau property in 24-48h. Local comparative analysis, recent sales, realistic listing price.",
+      "Get a free valuation of your Gatineau property. Personalized response, local comparative analysis and realistic listing price.",
   },
   "/en/seller-plan": {
     title: "Seller plan · Sell in Gatineau step by step | YGS",
@@ -557,7 +557,7 @@ export const SEO_ROUTES = {
   "/en/contact": {
     title: "Contact Yanis Gauthier-Sigeris · Gatineau Broker | YGS",
     description:
-      "Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Phone, email, WhatsApp, form. Reply within 24h.",
+      "Contact Yanis Gauthier-Sigeris, real estate broker in Gatineau. Phone, email, WhatsApp, form and a personalized response.",
   },
   "/en/thank-you": {
     title: "Thank you · Message received | YGS",
@@ -566,7 +566,7 @@ export const SEO_ROUTES = {
   "/en/thank-you-valuation": {
     title: "Thank you · Valuation requested | YGS",
     description:
-      "Thank you for your valuation request. Yanis is preparing your comparative analysis and will reply within 24-48h.",
+      "Thank you for your valuation request. Yanis is preparing your comparative analysis and personalized response.",
   },
   "/en/outaouais-real-estate-agent": {
     title: "Real Estate Agent Outaouais · YGS",
@@ -586,12 +586,12 @@ export const SEO_ROUTES = {
   "/en/home-valuation-hull": {
     title: "Free home valuation Hull · Gatineau | YGS",
     description:
-      "Free valuation of your Hull property in 24-48h. Comparative analysis based on recent area sales.",
+      "Free valuation of your Hull property. Personalized response and comparative analysis based on recent area sales.",
   },
   "/en/home-valuation-aylmer": {
     title: "Free home valuation Aylmer · Gatineau | YGS",
     description:
-      "Free valuation of your Aylmer property in 24-48h. Comparative analysis based on recent area sales.",
+      "Free valuation of your Aylmer property. Personalized response and comparative analysis based on recent area sales.",
   },
   "/en/how-much-does-a-realtor-cost-in-quebec": {
     title: "How much does a realtor cost in Quebec? | YGS",

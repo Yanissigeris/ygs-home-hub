@@ -20,7 +20,7 @@ const guides = [
   { icon: TrendingUp, title: "Neighborhoods", text: "Best Gatineau neighborhoods for your profile.", cta: "Explore", href: "/en/neighborhoods/" },
 ];
 const tools = [
-  { icon: Home, title: "Free Valuation", text: "How much is your property worth? Estimate in 24h.", cta: "Get my valuation", href: "/en/home-valuation/" },
+  { icon: Home, title: "Free Valuation", text: "How much is your property worth? Personalized response.", cta: "Get my valuation", href: "/en/home-valuation/" },
   { icon: TrendingUp, title: "Market Report", text: "Prices, trends and sales volume in Gatineau.", cta: "See the report", href: "/en/market-report/" },
   { icon: FileText, title: "Plex Analysis", text: "Revenues, expenses and return on your plex.", cta: "Get an analysis", href: "/en/plex-analysis/" },
 ];

@@ -41,7 +41,7 @@ const faq = [
 ];
 
 const related = [
-  { title: "Free Valuation", text: "How much is your property worth? Get an estimate within 24h.", href: "/en/home-valuation/" },
+  { title: "Free Valuation", text: "How much is your property worth? Get a personalized response.", href: "/en/home-valuation/" },
   { title: "Seller Plan", text: "Get a personalized plan: pricing, preparation and marketing.", href: "/en/seller-plan/" },
   { title: "When to Sell", text: "The right timing depends on your situation, here's how to see clearly.", href: "/en/when-to-sell/" },
   { title: "Sell a Plex", text: "Selling an income property is different from selling a house.", href: "/en/sell-plex/" },

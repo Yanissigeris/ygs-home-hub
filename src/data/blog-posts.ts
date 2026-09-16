@@ -116,12 +116,12 @@ export const blogPosts: BlogPost[] = [
     ctaOverride: {
       eyebrow: "ÉVALUATION PERSONNALISÉE",
       title: "Votre maison vaut-elle plus ou moins qu'il y a un an ?",
-      text: "Avec 30 % plus de concurrence sur le marché, la réponse dépend de votre secteur et des ventes des 90 derniers jours. Écrivez-moi VALEUR et je vous prépare une évaluation gratuite basée sur les comparables réels de votre quartier, livrée en 24 à 48 heures. Les chiffres et les options. Vous décidez.",
+      text: "Avec 30 % plus de concurrence sur le marché, la réponse dépend de votre secteur et des ventes des 90 derniers jours. Écrivez-moi VALEUR et je vous prépare une évaluation gratuite basée sur les comparables réels de votre quartier, avec une réponse personnalisée. Les chiffres et les options. Vous décidez.",
       buttonLabel: "Demander VALEUR",
       buttonHref: "/evaluation-gratuite-gatineau/",
       eyebrowEn: "PERSONALIZED VALUATION",
       titleEn: "Is your home worth more or less than a year ago?",
-      textEn: "With 30% more competition on the market, the answer depends on your area and the last 90 days of sales. Message me VALUE and I'll prepare a free valuation based on real comparables from your neighbourhood, delivered in 24 to 48 hours. The numbers and the options. You decide.",
+      textEn: "With 30% more competition on the market, the answer depends on your area and the last 90 days of sales. Message me VALUE and I'll prepare a free valuation based on real comparables from your neighbourhood, with a personalized response. The numbers and the options. You decide.",
       buttonLabelEn: "Request VALUE",
       buttonHrefEn: "/en/home-valuation/",
     },
@@ -240,12 +240,12 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
     ctaOverride: {
       eyebrow: "RAPPORT MENSUEL DU MARCHÉ",
       title: "Vous voulez le rapport mensuel détaillé du marché Gatineau ?",
-      text: "Ventilation par segment et chiffres bruts de la Chambre immobilière. Envoyez-moi RAPPORT en DM. Je vous l'envoie sous 24 h, sans suivi commercial.",
+      text: "Ventilation par segment et chiffres bruts de la Chambre immobilière. Envoyez-moi RAPPORT en DM pour une réponse personnalisée, sans suivi commercial.",
       buttonLabel: "Demander le rapport",
       buttonHref: "/contact/",
       eyebrowEn: "MONTHLY MARKET REPORT",
       titleEn: "Want the detailed monthly Gatineau market report?",
-      textEn: "Segment breakdown and raw numbers from the Chambre immobilière. Message me REPORT on DM. I'll send it within 24 h, no sales follow-up.",
+      textEn: "Segment breakdown and raw numbers from the Chambre immobilière. Message me REPORT on DM for a personalized response, no sales follow-up.",
       buttonLabelEn: "Request the report",
       buttonHrefEn: "/en/contact/",
     },
@@ -640,7 +640,7 @@ R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-ang
 
 ---
 
-**Vous regardez un plex en Outaouais — ou vous pensez vendre le vôtre ?** J'analyse les revenus réels, le ratio et la valeur marchande. [Demandez votre analyse plex](/analyse-plex-gatineau) ou [contactez-moi](/contact-yanis) — je reviens sous 24h, sans engagement.
+**Vous regardez un plex en Outaouais — ou vous pensez vendre le vôtre ?** J'analyse les revenus réels, le ratio et la valeur marchande. [Demandez votre analyse plex](/analyse-plex-gatineau) ou [contactez-moi](/contact-yanis) pour une réponse personnalisée, sans engagement.
 
 ---
 
@@ -681,7 +681,7 @@ A: Yes, in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and 
 
 ---
 
-**Looking at a plex in the Outaouais — or thinking of selling yours?** I analyze real income, ratio and market value. [Request a plex analysis](/en/plex-analysis) or [contact me](/en/contact) — I respond within 24h, no commitment.
+**Looking at a plex in the Outaouais — or thinking of selling yours?** I analyze real income, ratio and market value. [Request a plex analysis](/en/plex-analysis) or [contact me](/en/contact) for a personalized response, no commitment.
 
 ---
 

@@ -24,17 +24,17 @@ const benefits = [
 
 const trustBullets = [
   { icon: Shield, text: "Gratuit et sans engagement" },
-  { icon: Clock, text: "Réponse personnalisée en 24h" },
+  { icon: Clock, text: "Réponse personnalisée" },
   { icon: CheckCircle2, text: "Basé sur les ventes comparables récentes" },
 ];
 
 const valuationFaq = [
-  { q: "Comment obtenir une évaluation de maison à Gatineau?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété. Je vous reviens en 24h avec une analyse basée sur les ventes comparables récentes dans votre secteur." },
+  { q: "Comment obtenir une évaluation de maison à Gatineau?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété. Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur." },
   { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
   { q: "Combien vaut ma maison à Gatineau?", a: "La valeur dépend du quartier, du type de propriété et des ventes récentes. Mon évaluation vous donne une fourchette réaliste basée sur les comparables locaux." },
   { q: "Sur quoi se base l'évaluation?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur, l'état de votre propriété, la taille du terrain et les conditions du marché en Outaouais." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales et de l'état réel de votre propriété, c'est beaucoup plus précis." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures. Pour une analyse approfondie avec visite, on planifie un rendez-vous à votre convenance." },
+  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée. Pour une analyse approfondie avec visite, on planifie un rendez-vous à votre convenance." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée, sans engagement." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non, absolument pas. Beaucoup de propriétaires demandent une évaluation simplement pour connaître leur valeur, sans intention immédiate de vendre." },
   { q: "Mon secteur est-il couvert?", a: "Oui, je couvre tout l'Outaouais : Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts et Pontiac." },

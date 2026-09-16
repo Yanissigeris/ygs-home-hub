@@ -19,17 +19,17 @@ const benefits = [
 
 const trustBullets = [
   { icon: Shield, text: "Gratuit et sans engagement" },
-  { icon: Clock, text: "Réponse personnalisée en 24h" },
+  { icon: Clock, text: "Réponse personnalisée" },
   { icon: CheckCircle2, text: "Basé sur les ventes récentes à Hull" },
 ];
 
 const faq = [
-  { q: "Comment obtenir une évaluation de maison à Hull?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Hull. Je vous reviens en 24h avec une analyse basée sur les ventes comparables récentes dans votre secteur." },
+  { q: "Comment obtenir une évaluation de maison à Hull?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Hull. Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur." },
   { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
   { q: "Combien vaut ma maison à Hull?", a: "La valeur dépend de votre rue, du type de propriété (condo, plex, unifamiliale) et des ventes récentes dans votre secteur de Hull." },
   { q: "Sur quoi se base l'évaluation à Hull?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur de Hull, l'état de votre propriété, la taille du terrain et les conditions du marché local." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales de Hull et de l'état réel de votre propriété." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures. Pour une analyse approfondie avec visite à Hull, on planifie un rendez-vous." },
+  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée. Pour une analyse approfondie avec visite à Hull, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée, sans engagement." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non, absolument pas. Beaucoup de propriétaires à Hull demandent une évaluation simplement pour connaître leur valeur." },
   { q: "Les condos de Hull sont-ils couverts?", a: "Oui, je couvre tous les types de propriétés à Hull : condos, plex, unifamiliales, peu importe le quartier." },
@@ -52,7 +52,7 @@ const ValuationHullPage = () => {
     <>
       <PageMeta
         title="Évaluation maison Hull | Gratuite et sans engagement"
-        description="Obtenez une évaluation gratuite de votre maison à Hull. Analyse basée sur les ventes récentes dans votre secteur — réponse en 24h, sans engagement."
+        description="Obtenez une évaluation gratuite de votre maison à Hull. Analyse basée sur les ventes récentes dans votre secteur. Réponse personnalisée, sans engagement."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>

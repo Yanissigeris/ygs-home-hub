@@ -44,12 +44,12 @@ const faq = [
   { q: "Do I need to renovate before selling?", a: "Not necessarily. I'll help you identify what's worth doing to maximize your price without wasting money." },
   { q: "How much does a real estate broker cost in Gatineau?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "What if I need to buy at the same time?", a: "That's common. We plan the coordination from the start to avoid getting stuck." },
-  { q: "How long does it take to sell a house in Gatineau?", a: "On average, a well-positioned property sells within a few weeks in Outaouais. The timeline depends on pricing, area and preparation." },
+  { q: "How long does it take to sell a house in Gatineau?", a: "The timeline depends on pricing, area, property type, preparation and market conditions when the property is listed." },
   { q: "Why work with a broker to sell in Gatineau?", a: "A local broker knows the comparables, active buyers and strategies that work in your area, Aylmer, Hull, Plateau or elsewhere in Outaouais." },
   { q: "How is my home value calculated?", a: "I use recent comparable sales on your street and in your neighborhood, property condition and current local market conditions." },
   { q: "Do I need home staging to sell?", a: "Not always, but in some cases it speeds up the sale and improves the price. I advise on a case-by-case basis depending on your property." },
   { q: "What costs should I expect when selling my house?", a: "Broker commission, notary fees, location certificate, and sometimes minor repairs. I give you the full picture before we start." },
-  { q: "Can I sell my house to an Ottawa buyer?", a: "Absolutely, many Ottawa buyers look in Outaouais for better prices and quality of life. My marketing targets both markets." },
+  { q: "Can I sell my house to an Ottawa buyer?", a: "Yes. Depending on the property and its target audience, the marketing can also reach buyers in Ottawa." },
 ];
 
 const SellerPageEn = () => (
@@ -59,17 +59,16 @@ const SellerPageEn = () => (
     <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a tailored strategy" subtitle="You don't have to decide everything today. What you need most is a clear plan, pricing, preparation, marketing, negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/sell/" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="2026 Context" title="The 2026 selling market in Outaouais" />
+      <SectionHeading overline="Local strategy" title="Adapting your sale to your local market" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        In 2026, the Outaouais real estate market is stabilizing after several very active years. Well-positioned sellers still find buyers, but the context has changed. Available inventory has increased compared to 2022-2024, which means buyers now have more choice and more time to decide.
+        Selling conditions vary by area, property type and price range. Reviewing recent comparable sales helps establish a strategy suited to your property when it enters the market.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        The direct consequence for you: listing price, presentation, and marketing strategy now have a much bigger impact on your final result than two years ago. A well-positioned property sells quickly. An overpriced property sits on the market, and that delay sends a negative signal to buyers.
+        Listing price, presentation and marketing strategy influence buyer interest. A local analysis helps position the property according to its features and the competition at the time of sale.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         That's exactly why my approach always starts with the reality of the market in your specific area, not a number designed to make you feel good.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Sources: Gatineau Real Estate Board (CIO), CMHC, Housing Market Outlook 2026.</p>
       <div className="mt-6">
         <Button asChild><Link to="/en/home-valuation/">Free Home Valuation →</Link></Button>
       </div>

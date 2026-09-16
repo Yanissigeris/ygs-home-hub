@@ -98,8 +98,8 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
     const intro = isFr ? "J'ai bien reçu votre demande d'évaluation pour :" : "I got your valuation request for:";
     const addressBlock = data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : "";
     const closing = isFr
-      ? "Je vous reviens personnellement dans les 24 prochaines heures avec une analyse basée sur les ventes comparables récentes dans votre secteur."
-      : "I'll send you a personal analysis within 24 hours, based on recent comparable sales in your neighbourhood.";
+      ? "Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur."
+      : "I'll send you a personalized response and analysis based on recent comparable sales in your neighbourhood.";
     return {
       subject: isFr ? "Votre évaluation gratuite est en route — YGS" : "Your free valuation is on its way — YGS",
       html: `${wrapOpen}${h2(heading)}${p(intro)}${addressBlock}${p(closing)}${hr}${signature}</div>`,
@@ -109,8 +109,8 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
   if (data.formType === "analysis") {
     const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
     const body = isFr
-      ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens personnellement dans les 48 prochaines heures avec une analyse complète — pas un rapport générique."
-      : "I got your plex analysis request. I'll send you a full analysis within 48 hours. Real numbers on the property you asked about, not a generic template report.";
+      ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens avec une réponse personnalisée et une analyse complète — pas un rapport générique."
+      : "I got your plex analysis request. I'll send you a personalized response and a full analysis with real numbers on the property you asked about, not a generic template report.";
     return {
       subject: isFr ? "Votre analyse plex est en préparation — YGS" : "Your plex analysis is in progress — YGS",
       html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,
@@ -120,8 +120,8 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
   if (data.formType === "consultation") {
     const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
     const body = isFr
-      ? "J'ai bien reçu votre demande de consultation. Je vous reviens personnellement dans les 24 à 48 prochaines heures."
-      : "I got your consultation request. I'll be in touch personally within 24 to 48 hours to set up a time.";
+      ? "J'ai bien reçu votre demande de consultation. Je vous reviens avec une réponse personnalisée."
+      : "I got your consultation request. I'll be in touch with a personalized response to set up a time.";
     return {
       subject: isFr ? "Votre demande de consultation est reçue — YGS" : "Your consultation request was received — YGS",
       html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,

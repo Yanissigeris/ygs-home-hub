@@ -19,17 +19,17 @@ const benefits = [
 
 const trustBullets = [
   { icon: Shield, text: "Gratuit et sans engagement" },
-  { icon: Clock, text: "Réponse personnalisée en 24h" },
+  { icon: Clock, text: "Réponse personnalisée" },
   { icon: CheckCircle2, text: "Basé sur les ventes récentes à Aylmer" },
 ];
 
 const faq = [
-  { q: "Comment obtenir une évaluation de maison à Aylmer?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Aylmer. Je vous reviens en 24h avec une analyse basée sur les ventes comparables récentes." },
+  { q: "Comment obtenir une évaluation de maison à Aylmer?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété à Aylmer. Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes." },
   { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
   { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend de votre quartier, Plateau, lac Deschênes, secteurs résidentiels, et des ventes récentes. L'évaluation vous donne une fourchette réaliste." },
   { q: "Sur quoi se base l'évaluation à Aylmer?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur d'Aylmer, l'état de votre propriété, le terrain et les conditions du marché." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales d'Aylmer et de l'état réel de votre propriété." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
+  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Une visite peut être planifiée pour un rapport plus détaillé." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Beaucoup de propriétaires à Aylmer demandent une évaluation simplement pour connaître leur valeur, sans intention immédiate de vendre." },
   { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous, Plateau, lac Deschênes, Lucerne, Des Jardins, Lakeview et tous les secteurs résidentiels d'Aylmer." },
@@ -52,7 +52,7 @@ const ValuationAylmerPage = () => {
     <>
       <PageMeta
         title="Évaluation maison Aylmer | Gratuite et sans engagement"
-        description="Obtenez une évaluation gratuite de votre maison à Aylmer. Analyse basée sur les ventes récentes dans votre quartier — réponse en 24h, sans engagement."
+        description="Obtenez une évaluation gratuite de votre maison à Aylmer. Analyse basée sur les ventes récentes dans votre quartier. Réponse personnalisée, sans engagement."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>

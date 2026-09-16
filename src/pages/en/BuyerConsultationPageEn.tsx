@@ -31,7 +31,7 @@ const benefits = [
 
 const trustPoints = [
   { icon: Lock, text: "Confidential consultation" },
-  { icon: Clock, text: "Response within 24h" },
+  { icon: Clock, text: "Personalized response" },
   { icon: Shield, text: "No obligation, no commitment" },
 ];
 
@@ -106,7 +106,7 @@ const BuyerConsultationPageEn = () => {
                 {submitted ? (
                   <SuccessMessage
                     title="Thank you! Request sent."
-                    text="I'll get back to you within 24 hours."
+                    text="I'll get back to you with a personalized response."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">

@@ -202,7 +202,7 @@ const PontiacPageEn = () => {
           <Link to="/en/home-valuation/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
             Get the real numbers →
           </Link>
-          <p className="text-center text-xs text-muted-foreground">Free · No obligation · Response within 24-48h</p>
+          <p className="text-center text-xs text-muted-foreground">Free · No obligation · Personalized response</p>
         </div>
       </ContentBlock>
 

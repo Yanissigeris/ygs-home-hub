@@ -118,10 +118,10 @@ const ContactPageEn = () => {
       <ContentBlock narrow>
         <SectionHeading overline="What to expect" title="What happens after you reach out" />
         <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-          Most messages get a reply the same business day, often within a few hours. The first exchange is just a conversation, your situation, your timing, your questions. I don't push for a meeting, a contract, or a commitment until you've had the time to think it through. Many of my best client relationships started with a quick text six or twelve months before anyone was ready to buy or sell.
+          Every message receives a personalized response. The first exchange is just a conversation, your situation, your timing, your questions. I don't push for a meeting, a contract, or a commitment until you've had the time to think it through. Many of my best client relationships started with a quick text six or twelve months before anyone was ready to buy or sell.
         </p>
         <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-          If your project is well-defined, we can move quickly: a free property valuation usually lands within 24 hours, a buyer consultation can be booked the same week, and a plex analysis is ready within a few days of receiving the financials. If you're earlier in the process, I'll point you to the right guide or calculator and stay in the background until you signal that you're ready.
+          If your project is well-defined, we can identify the right next step, whether that is a free property valuation, a buyer consultation or a plex analysis after receiving the financials. If you're earlier in the process, I'll point you to the right guide or calculator and stay in the background until you signal that you're ready.
         </p>
         <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
           Communication is bilingual (French or English), and I work mainly across Aylmer, Hull, the Plateau, Gatineau Centre, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac.
@@ -131,7 +131,7 @@ const ContactPageEn = () => {
       <FAQSection
         title="Common questions before reaching out"
         items={[
-          { q: "How quickly do you reply?", a: "I aim for a same-day reply on business days, and within 24 hours otherwise. Texts and emails are the fastest channels." },
+          { q: "How quickly do you reply?", a: "Every request receives a personalized response. Text and email are the most direct channels." },
           { q: "Do I have to commit to anything to talk with you?", a: "No. The first call, valuation or consultation is free and no-obligation. You only sign something if and when you choose to engage formally." },
           { q: "Do you work in English?", a: "Yes, I work fully in both French and English, including all paperwork, negotiations and notary coordination. This matters in a bilingual region like Outaouais." },
           { q: "What areas do you cover?", a: "All of Outaouais: Aylmer, Hull, the Plateau, Gatineau Centre, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac." },

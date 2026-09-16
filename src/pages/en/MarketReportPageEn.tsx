@@ -17,7 +17,7 @@ const faq = [
 ];
 
 const related = [
-  { title: "Free Valuation", text: "How much is your property worth? Estimate within 24h.", href: "/en/home-valuation/" },
+  { title: "Free Valuation", text: "How much is your property worth? Personalized response.", href: "/en/home-valuation/" },
   { title: "Properties", text: "Browse active listings in Gatineau.", href: "/en/properties/" },
   { title: "Seller Guide", text: "Everything to sell at the best price.", href: "/en/seller-guide/" },
   { title: "Invest in Plex", text: "Analysis and strategy for plexes in Gatineau.", href: "/en/plex/" },

@@ -14,7 +14,7 @@ const nextSteps = [
 
 const ThankYouPage = () => (
    <>
-    <PageMeta title="Merci — Demande envoyée" description="Votre demande a été envoyée avec succès. Yanis vous contactera dans les prochaines 24 heures." />
+    <PageMeta title="Merci — Demande envoyée" description="Votre demande a été envoyée avec succès. Yanis vous donnera une réponse personnalisée." />
     <section
       className="section-padding"
       style={{
@@ -34,7 +34,7 @@ const ThankYouPage = () => (
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Merci! Votre demande a été envoyée.</h1>
           <p className="prose-body mt-4">
-            Je vous reviens personnellement dans les prochaines 24 heures avec une réponse adaptée à votre situation. En attendant, explorez les ressources ci-dessous.
+            Je vous reviens avec une réponse personnalisée adaptée à votre situation. En attendant, explorez les ressources ci-dessous.
           </p>
           <Button className="mt-8" size="lg" asChild>
             <Link to="/">Retour à l'accueil</Link>

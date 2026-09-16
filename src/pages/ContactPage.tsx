@@ -202,10 +202,10 @@ const ContactPage = () => {
       <ContentBlock narrow>
         <SectionHeading overline="À quoi vous attendre" title="Ce qui se passe après votre message" />
         <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-          La plupart des messages reçoivent une réponse la même journée ouvrable, souvent en quelques heures. Le premier échange est simplement une conversation, votre situation, votre échéancier, vos questions. Je ne pousse pas pour une rencontre, un contrat ou un engagement avant que vous ayez eu le temps d'y réfléchir. Plusieurs de mes meilleures relations clients ont commencé par un texto rapide six ou douze mois avant que la personne ne soit prête à acheter ou vendre.
+          Chaque message reçoit une réponse personnalisée. Le premier échange est simplement une conversation, votre situation, votre échéancier, vos questions. Je ne pousse pas pour une rencontre, un contrat ou un engagement avant que vous ayez eu le temps d'y réfléchir. Plusieurs de mes meilleures relations clients ont commencé par un texto rapide six ou douze mois avant que la personne ne soit prête à acheter ou vendre.
         </p>
         <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-          Si votre projet est bien défini, on peut avancer rapidement : une évaluation gratuite arrive habituellement en moins de 24 heures, une consultation acheteur peut se réserver dans la même semaine, et une analyse de plex est prête en quelques jours après réception des chiffres. Si vous êtes plus tôt dans le processus, je vous oriente vers le bon guide ou calculateur et je reste en arrière-plan jusqu'à ce que vous soyez prêt.
+          Si votre projet est bien défini, on peut déterminer la prochaine étape adaptée, qu'il s'agisse d'une évaluation gratuite, d'une consultation acheteur ou d'une analyse de plex après réception des chiffres. Si vous êtes plus tôt dans le processus, je vous oriente vers le bon guide ou calculateur et je reste en arrière-plan jusqu'à ce que vous soyez prêt.
         </p>
         <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
           Les communications se font en français ou en anglais, et je travaille principalement à Aylmer, Hull, le Plateau, Gatineau-centre, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac.
@@ -215,7 +215,7 @@ const ContactPage = () => {
       <FAQSection
         title="Questions fréquentes avant de me contacter"
         items={[
-          { q: "À quelle vitesse répondez-vous?", a: "Je vise une réponse la même journée ouvrable, et en moins de 24 heures autrement. Le texto et le courriel sont les canaux les plus rapides." },
+          { q: "À quelle vitesse répondez-vous?", a: "Chaque demande reçoit une réponse personnalisée. Le texto et le courriel sont les canaux les plus directs." },
           { q: "Dois-je m'engager à quelque chose pour vous parler?", a: "Non. Le premier appel, l'évaluation ou la consultation est gratuit et sans engagement. Vous ne signez quelque chose que si et quand vous choisissez de vous engager formellement." },
           { q: "Travaillez-vous en anglais?", a: "Oui, je travaille pleinement en français et en anglais, incluant tous les documents, négociations et coordination notariale. C'est essentiel dans une région bilingue comme l'Outaouais." },
           { q: "Quels secteurs couvrez-vous?", a: "Tout l'Outaouais : Aylmer, Hull, le Plateau, Gatineau-centre, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac." },

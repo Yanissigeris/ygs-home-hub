@@ -53,12 +53,12 @@ const faq = [
 { q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
 { q: "Combien coûte un courtier immobilier à Gatineau?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent, tout est clair dès le départ." },
 { q: "Et si je dois acheter en même temps?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé." },
-{ q: "Combien de temps prend la vente d'une maison à Gatineau?", a: "En moyenne, une propriété bien positionnée se vend en quelques semaines en Outaouais. Le délai dépend du prix, du secteur et de la préparation." },
+{ q: "Combien de temps prend la vente d'une maison à Gatineau?", a: "Le délai dépend du prix, du secteur, du type de propriété, de sa préparation et des conditions au moment de la mise en marché." },
 { q: "Pourquoi travailler avec un courtier pour vendre à Gatineau?", a: "Un courtier local connaît les comparables, les acheteurs actifs et les stratégies qui fonctionnent dans votre secteur, Aylmer, Hull, Plateau ou ailleurs en Outaouais." },
 { q: "Comment est calculée la valeur de ma maison?", a: "Je me base sur les ventes comparables récentes dans votre rue et votre quartier, l'état de la propriété et les conditions du marché local." },
 { q: "Faut-il faire du home staging pour vendre?", a: "Pas toujours, mais dans certains cas ça accélère la vente et améliore le prix. Je vous conseille au cas par cas selon votre propriété." },
 { q: "Quels frais dois-je prévoir pour vendre ma maison?", a: "Commission courtier, notaire, certificat de localisation, et parfois des réparations mineures. Je vous donne le portrait complet avant de commencer." },
-{ q: "Puis-je vendre ma maison à un acheteur d'Ottawa?", a: "Absolument, beaucoup d'acheteurs d'Ottawa cherchent en Outaouais pour les prix et la qualité de vie. Ma mise en marché cible les deux marchés." }];
+{ q: "Puis-je vendre ma maison à un acheteur d'Ottawa?", a: "Oui. Selon la propriété et sa clientèle cible, la mise en marché peut aussi rejoindre des acheteurs d'Ottawa." }];
 
 
 const SellerPage = () =>
@@ -82,17 +82,16 @@ const SellerPage = () =>
     heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Contexte 2026" title="Le marché de la vente en Outaouais en 2026" />
+      <SectionHeading overline="Stratégie locale" title="Adapter votre vente au marché de votre secteur" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        En 2026, le marché immobilier en Outaouais est en phase de stabilisation après plusieurs années très actives. Les vendeurs bien positionnés trouvent toujours preneur, mais le contexte a changé. L'inventaire disponible a augmenté par rapport à 2022-2024, ce qui signifie que les acheteurs ont maintenant plus de choix et plus de temps pour décider.
+        Les conditions de vente varient selon le secteur, le type de propriété et la gamme de prix. L'analyse des comparables récents permet d'établir une stratégie adaptée à votre propriété au moment de sa mise en marché.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Conséquence directe pour vous&nbsp;: le prix de départ, la présentation, et la stratégie de mise en marché ont maintenant un impact beaucoup plus important sur votre résultat final qu'il y a deux ans. Une propriété bien positionnée part rapidement. Une propriété surévaluée reste sur le marché, et ce délai envoie un signal négatif aux acheteurs.
+        Le prix de départ, la présentation et la stratégie de mise en marché influencent l'intérêt des acheteurs. Une analyse locale aide à positionner la propriété en fonction de ses caractéristiques et de la concurrence au moment de la vente.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         C'est exactement pour ça que mon approche commence toujours par la réalité du marché dans votre secteur précis, pas par un chiffre pour vous faire plaisir.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: Chambre immobilière de l'Outaouais (CIO), SCHL, Perspectives du marché 2026.</p>
       <div className="mt-6">
         <Button asChild><Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite →</Link></Button>
       </div>
