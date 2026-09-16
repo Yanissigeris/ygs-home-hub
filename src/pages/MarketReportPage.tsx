@@ -11,7 +11,7 @@ import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
-  { q: "Comment accéder au rapport du marché?", a: "Contactez-moi, je vous envoie l'analyse la plus récente pour votre secteur." },
+  { q: "Comment accéder au rapport du marché?", a: "Contactez-moi pour être informé de la publication du prochain rapport. En attendant, vous pouvez demander une analyse personnalisée de votre secteur." },
   { q: "Les données couvrent quels secteurs?", a: "Tous les secteurs de Gatineau: Aylmer, Hull, Plateau, Buckingham, Gatineau centre et plus." },
   { q: "Le rapport est-il gratuit?", a: "Oui, c'est un outil que j'offre à mes clients et à ceux qui s'intéressent au marché." },
 ];
@@ -25,11 +25,11 @@ const related = [
 
 const MarketReportPage = () => (
    <>
-    <PageMeta title="Rapport du marché immobilier · Gatineau et Outaouais" description="Prix, tendances et volumes de ventes à Gatineau, Aylmer, Hull et en Outaouais. Rapport du marché immobilier par Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
+    <PageMeta title="Rapport immobilier Gatineau · À venir | YGS" description="Le prochain rapport du marché immobilier de Gatineau est à venir. Contactez Yanis pour être informé de sa publication ou demander une analyse de votre secteur." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
     <HeroSection
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"
-      subtitle="Prix, tendances, volumes de ventes — une lecture claire du marché immobilier de Gatineau et de l'Outaouais."
+      subtitle="Le prochain rapport est en préparation. En attendant, demandez une analyse personnalisée du marché dans votre secteur."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
@@ -43,7 +43,7 @@ const MarketReportPage = () => (
         subtitle="En attendant, contactez-moi pour recevoir une analyse personnalisée du marché dans votre secteur."
       />
       <p className="prose-body mt-5">
-        Chaque trimestre, je prépare une analyse du marché immobilier de Gatineau, prix médians, volume de ventes, tendances par secteur et prévisions. Contactez-moi pour recevoir la prochaine édition.
+        Le prochain rapport du marché immobilier de Gatineau est en préparation. Contactez-moi pour être informé de sa publication ou pour discuter dès maintenant du marché dans votre secteur.
       </p>
     </ContentBlock>
 

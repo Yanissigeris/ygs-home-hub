@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
-import SEO from "@/components/SEO";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import FAQSection from "@/components/FAQSection";
@@ -52,7 +51,6 @@ const faqItems = [
 
 const OutaouaisHubPage = () => (
   <div>
-    <SEO title="Courtier immobilier Outaouais | Yanis Gauthier-Sigeris" description="Courtier immobilier en Outaouais avec 9 ans d'expérience. Hall of Fame RE/MAX. Gatineau, Aylmer, Hull, Chelsea, Cantley, Val-des-Monts." canonical="https://yanisgauthier.com/courtier-immobilier-outaouais" hreflangFr="https://yanisgauthier.com/courtier-immobilier-outaouais" hreflangEn="https://yanisgauthier.com/en/outaouais-real-estate-agent" />
     <PageMeta
       title="Courtier immobilier Outaouais · Gatineau"
       description="Yanis Gauthier-Sigeris, courtier immobilier en Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley — stratégie claire pour vendre, acheter ou investir."

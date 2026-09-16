@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const BASE_URL = "https://yanisgauthier.com";
 
-const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").BlogPost; lang: "fr" | "en" }) => {
+export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").BlogPost; lang: "fr" | "en" }) => {
   const isFr = lang === "fr";
   const slug = isFr ? post.slug : post.slugEn;
   const url = `${BASE_URL}${isFr ? "/blogue" : "/en/blog"}/${slug}`;
@@ -38,8 +38,8 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
       articleSection: isFr ? post.category : post.categoryEn,
     };
 
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
+    const script = document.getElementById("ygs-blogposting-jsonld") || document.createElement("script");
+    script.setAttribute("type", "application/ld+json");
     script.id = "ygs-blogposting-jsonld";
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
@@ -49,19 +49,9 @@ const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").B
   return null;
 };
 
-const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
+export const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
   useEffect(() => {
     if (!items || items.length === 0) return;
-    // Option A: SSR is source of truth. Skip injection if a FAQPage script
-    // already exists (either our SSR-injected one or a previous client mount).
-    const existing = document.getElementById("ygs-faqpage-jsonld");
-    if (existing) return;
-    // Also bail if SSR injected an unidentified FAQPage script.
-    const ssrFaq = Array.from(
-      document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
-    ).find((s) => s.textContent && s.textContent.includes('"@type":"FAQPage"'));
-    if (ssrFaq) return;
-
     const schema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -71,8 +61,8 @@ const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
         acceptedAnswer: { "@type": "Answer", text: it.a },
       })),
     };
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
+    const script = document.getElementById("ygs-faqpage-jsonld") || document.createElement("script");
+    script.setAttribute("type", "application/ld+json");
     script.id = "ygs-faqpage-jsonld";
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
@@ -189,7 +179,7 @@ const BlogArticlePage = () => {
   }
 
   const title = isFr ? post.title : post.titleEn;
-  const seoTitle = isFr ? post.seoTitle : post.seoTitleEn;
+  const seoTitle = `${title} | YGS`;
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
   const category = isFr ? post.category : post.categoryEn;
   const excerpt = isFr ? post.excerpt : post.excerptEn;
