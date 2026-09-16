@@ -1,4 +1,5 @@
 import * as React from "react";
+import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { trackCTAClick, trackContactTap } from "@/lib/analytics";
 
@@ -46,7 +47,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
             return (
               <Link
                 key={btn.label}
-                to={btn.href}
+                to={canonicalPath(btn.href)}
                 className="inline-flex items-center justify-center transition-all duration-200 w-full sm:w-auto text-center"
                 style={
                   dark

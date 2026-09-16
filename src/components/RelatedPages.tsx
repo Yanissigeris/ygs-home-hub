@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { canonicalPath } from "@/lib/url-utils";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
@@ -43,7 +44,7 @@ const RelatedPages = ({
             transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link
-              to={page.href}
+              to={canonicalPath(page.href)}
               className="card-elevated group flex items-start gap-4 border border-border/40 bg-card px-6 py-5 h-full"
             >
               <div className="flex-1">

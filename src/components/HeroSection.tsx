@@ -1,4 +1,5 @@
 import * as React from "react";
+import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -407,11 +408,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
                     <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02]" asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
-                      <Link to={primaryCta.href}>{primaryCta.label} →</Link>
+                      <Link to={canonicalPath(primaryCta.href)}>{primaryCta.label} →</Link>
                     </Button>
                   )}
                   {secondaryCta && (
-                    <Link to={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
+                    <Link to={canonicalPath(secondaryCta.href)} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
                   )}
                 </div>
               )}
@@ -714,7 +715,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
                   {primaryCta && (
                     <Link
-                      to={primaryCta.href}
+                      to={canonicalPath(primaryCta.href)}
                       className={`hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50${headline ? " sm:whitespace-nowrap" : ""}`}
                       style={{
                         background: "var(--gold-bright)",
@@ -733,7 +734,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   )}
                   {secondaryCta && (headline ? (
                     <Link
-                      to={secondaryCta.href}
+                      to={canonicalPath(secondaryCta.href)}
                       className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
@@ -752,7 +753,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Link>
                   ) : (
                     <Link
-                      to={secondaryCta.href}
+                      to={canonicalPath(secondaryCta.href)}
                       className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",

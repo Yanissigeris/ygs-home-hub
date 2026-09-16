@@ -210,7 +210,7 @@ const BuyerConsultationPage = () => {
                   Demandez votre évaluation gratuite pour clarifier votre budget d'achat.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
+                  <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
                 </Button>
               </div>
             </motion.aside>
