@@ -23,6 +23,8 @@ interface HeroSectionProps {
   /** Preferred over `overline` on the home hero. Renders 3 cities on mobile, all on desktop, joined with " · ". */
   cities?: string[];
   title: string;
+  /** Optional supporting headline rendered between the H1 and the subtitle. Not a heading (keeps one H1 per page). */
+  headline?: string;
   subtitle: string;
   /** Optional shorter subtitle rendered only on mobile (<768px). Falls back to `subtitle`. */
   subtitleShort?: string;
