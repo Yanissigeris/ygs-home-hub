@@ -31,7 +31,11 @@ const t = {
     privacy: "Vos informations restent confidentielles.",
     successTitle: "Demande reçue !",
     successText: "Je vous contacte avec une réponse personnalisée et une analyse claire de votre propriété.",
+    savedTitle: "Demande enregistrée",
+    savedText: "Votre demande est bien enregistrée et je la traite. Pour une réponse plus rapide, appelez-moi directement.",
+    errorText: "Votre demande n'a pas pu être enregistrée. Vos renseignements sont conservés ici : veuillez réessayer.",
     urgentQ: "Une question urgente? →",
+
     changeAddr: "Modifier",
   },
   en: {
@@ -52,7 +56,11 @@ const t = {
     privacy: "Your information stays private.",
     successTitle: "Request received!",
     successText: "I'll follow up with a personalized response and a clear analysis of your property.",
+    savedTitle: "Request saved",
+    savedText: "Your request is saved and I am working on it. For a faster reply, call me directly.",
+    errorText: "Your request could not be saved. Your details are still here: please try again.",
     urgentQ: "Urgent question? →",
+
     changeAddr: "Edit",
   },
 };
