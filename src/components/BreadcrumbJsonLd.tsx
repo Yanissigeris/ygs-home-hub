@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { breadcrumbMap } from "@/data/breadcrumbs";
+import { stripTrailingSlash, withTrailingSlash } from "@/lib/url-utils";
 
 const BASE_URL = "https://yanisgauthier.com";
 
@@ -18,7 +19,7 @@ const writeJsonLd = (pathname: string, config: BreadcrumbConfig) => {
       "@type": "ListItem" as const,
       position: config.trail.length + 1,
       name: config.current,
-      item: `${BASE_URL}${pathname}`,
+      item: `${BASE_URL}${withTrailingSlash(pathname)}`,
     },
   ];
 
@@ -44,7 +45,8 @@ const BreadcrumbJsonLd = () => {
     if (prev) prev.remove();
 
     // Static map covers ~140 routes — synchronous, no extra fetch.
-    const config = breadcrumbMap[pathname];
+    // Keys have no trailing slash; canonical pathnames do (see VisibleBreadcrumb).
+    const config = breadcrumbMap[stripTrailingSlash(pathname)];
     if (config) {
       writeJsonLd(pathname, config);
       return () => { document.getElementById("ygs-breadcrumb-jsonld")?.remove(); };

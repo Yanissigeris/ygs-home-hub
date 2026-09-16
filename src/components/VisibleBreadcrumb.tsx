@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { Home } from "lucide-react";
 import { breadcrumbMap } from "@/data/breadcrumbs";
+import { stripTrailingSlash } from "@/lib/url-utils";
 import { getA11yLabel } from "@/lib/a11y";
 
 type BreadcrumbConfig = { trail: Array<{ name: string; href: string }>; current: string };
@@ -11,8 +12,12 @@ const VisibleBreadcrumb = () => {
   const params = useParams<{ slug?: string }>();
   const [dynamicConfig, setDynamicConfig] = React.useState<BreadcrumbConfig | null>(null);
 
-  // Try static map first (synchronous, covers ~140 routes)
-  const staticConfig = breadcrumbMap[pathname];
+  // Try static map first (synchronous, covers ~140 routes).
+  // Canonical URLs end with "/" but the map keys do not: without the strip the
+  // lookup failed in the browser and the breadcrumb vanished after hydration
+  // (it only survived in the prerendered HTML, which Puppeteer renders without
+  // the trailing slash).
+  const staticConfig = breadcrumbMap[stripTrailingSlash(pathname)];
 
   // Dynamic blog article breadcrumbs — lazy-load blog data only on /blogue/:slug or /en/blog/:slug.
   // This keeps ~106 KB of blog markdown out of the main bundle on every other page.
