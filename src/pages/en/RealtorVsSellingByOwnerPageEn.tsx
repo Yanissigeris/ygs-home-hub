@@ -78,7 +78,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Curious about your property's value? Get a free estimate in 24 hours."
+      text="Curious about your property's value? Get a personalized response and a free estimate."
       buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />

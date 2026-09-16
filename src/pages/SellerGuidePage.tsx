@@ -41,7 +41,7 @@ const faq = [
 ];
 
 const related = [
-  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une estimation en 24h.", href: "/evaluation-gratuite-gatineau/" },
+  { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Recevez une réponse personnalisée.", href: "/evaluation-gratuite-gatineau/" },
   { title: "Plan vendeur", text: "Recevez un plan personnalisé: prix, préparation et mise en marché.", href: "/plan-vendeur-gatineau/" },
   { title: "Quand vendre", text: "Le bon timing dépend de votre situation, voici comment y voir clair.", href: "/quand-vendre-a-gatineau/" },
   { title: "Vendre un plex", text: "Vendre un immeuble à revenus, c'est différent d'une maison.", href: "/vendre-un-plex-a-gatineau/" },

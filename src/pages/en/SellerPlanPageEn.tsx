@@ -31,7 +31,7 @@ const benefits = [
 
 const trustPoints = [
   { icon: Lock, text: "Strictly confidential information" },
-  { icon: Clock, text: "Personalized plan within 48h" },
+  { icon: Clock, text: "Personalized response" },
   { icon: Shield, text: "No obligation, no commitment" },
 ];
 
@@ -105,7 +105,7 @@ const SellerPlanPageEn = () => {
                 {submitted ? (
                   <SuccessMessage
                     title="Thank you! Request sent."
-                    text="I'll get back to you within 48 hours with your seller plan."
+                    text="I'll get back to you with a personalized response and your seller plan."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">

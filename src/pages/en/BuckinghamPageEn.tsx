@@ -41,7 +41,7 @@ const faq = [
   },
   {
     q: "Can I get a home valuation in Buckingham specifically?",
-    a: "Yes. I prepare free, no-commitment valuations anchored on recent comparable sales on your street and in your sub-sector, Buckingham core, Masson, Angers village or rural fringe. Each of these has a different price profile and an Aylmer-trained eye won't catch the nuances. Reach out and I'll send the analysis within 24 hours.",
+    a: "Yes. I prepare free, no-commitment valuations anchored on recent comparable sales on your street and in your sub-sector, Buckingham core, Masson, Angers village or rural fringe. Each of these has a different price profile and an Aylmer-trained eye won't catch the nuances. Reach out for a personalized response and analysis.",
   },
 ];
 

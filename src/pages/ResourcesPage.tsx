@@ -21,7 +21,7 @@ const guides = [
 ];
 
 const tools = [
-  { icon: Home, title: "Évaluation gratuite", text: "Combien vaut votre propriété? Estimation en 24h.", cta: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+  { icon: Home, title: "Évaluation gratuite", text: "Combien vaut votre propriété? Réponse personnalisée.", cta: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
   { icon: TrendingUp, title: "Rapport du marché", text: "Prix, tendances et volumes de ventes à Gatineau.", cta: "Voir le rapport", href: "/rapport-marche-gatineau/" },
   { icon: FileText, title: "Analyse plex", text: "Revenus, dépenses et rendement de votre plex.", cta: "Recevoir une analyse", href: "/analyse-plex-gatineau/" },
 ];

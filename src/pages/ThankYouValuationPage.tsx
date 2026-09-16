@@ -7,7 +7,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 
 const whatsNext = [
-  { icon: Clock, text: "Réponse personnalisée en moins de 24h" },
+  { icon: Clock, text: "Réponse personnalisée" },
   { icon: FileText, text: "Analyse basée sur les ventes comparables récentes" },
   { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
@@ -20,7 +20,7 @@ const nextSteps = [
 
 const ThankYouValuationPage = () => (
    <>
-    <PageMeta title="Merci — Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse personnalisée et vous contacte sous 24 heures." />
+    <PageMeta title="Merci — Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse et votre réponse personnalisées." />
     <section
       className="section-padding"
       style={{

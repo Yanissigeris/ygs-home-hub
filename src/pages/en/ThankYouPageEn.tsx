@@ -14,7 +14,7 @@ const nextSteps = [
 
 const ThankYouPageEn = () => (
   <>
-    <PageMeta title="Thank You — Request Sent" description="Your request has been sent successfully. Yanis will contact you within 24 hours." />
+    <PageMeta title="Thank You — Request Sent" description="Your request has been sent successfully. Yanis will provide a personalized response." />
     <section
       className="section-padding"
       style={{
@@ -28,7 +28,7 @@ const ThankYouPageEn = () => (
         <motion.div className="text-center" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Thank you! Your request has been sent.</h1>
-          <p className="prose-body mt-4">I'll get back to you personally within 24 hours with a response adapted to your situation. In the meantime, explore the resources below.</p>
+          <p className="prose-body mt-4">I'll get back to you with a personalized response adapted to your situation. In the meantime, explore the resources below.</p>
           <Button className="mt-8" size="lg" asChild><Link to="/en">Back to home</Link></Button>
         </motion.div>
       </div>

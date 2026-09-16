@@ -78,7 +78,7 @@ const CourtierOuVendreSoiMemePage = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Curieux de savoir combien vaut votre propriété? Obtenez une estimation gratuite en 24h."
+      text="Curieux de savoir combien vaut votre propriété? Obtenez une réponse personnalisée et une estimation gratuite."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />

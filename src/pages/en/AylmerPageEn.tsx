@@ -170,7 +170,7 @@ const AylmerPageEn = () => (
               <Link to="/en/home-valuation-aylmer/">Get the real numbers →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
-              Free · No obligation · Response within 24-48h
+              Free · No obligation · Personalized response
             </p>
           </div>
         </div>

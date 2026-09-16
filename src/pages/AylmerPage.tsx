@@ -175,7 +175,7 @@ const AylmerPage = () => (
               <Link to="/evaluation-maison-aylmer/">Obtenir les vrais chiffres →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
-              Gratuit · Sans engagement · Réponse en 24-48h
+              Gratuit · Sans engagement · Réponse personnalisée
             </p>
           </div>
         </div>
