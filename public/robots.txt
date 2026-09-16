@@ -4,10 +4,9 @@
 # Default — autorise tous les bots non-listés
 User-agent: *
 Allow: /
-Disallow: /merci
-Disallow: /merci-evaluation
-Disallow: /en/thank-you
-Disallow: /en/thank-you-valuation
+# Pages merci/thank-you : plus de Disallow ici — elles portent maintenant
+# <meta name="robots" content="noindex, follow"> (Google doit pouvoir les
+# crawler pour voir la balise). Elles restent hors sitemap.
 Disallow: /admin
 Disallow: /admin/
 
