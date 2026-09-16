@@ -17,7 +17,7 @@
  * Zero React component changes. Zero Puppeteer. Zero new runtime deps.
  */
 
-import { promises as fs } from "node:fs";
+import { promises as fs, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
@@ -27,6 +27,39 @@ import { extractBlogPosts } from "./blog-extractor.mjs";
 import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn } from "./faq-extractor.mjs";
 import { extractSellerGuideFr, extractSellerGuideEn } from "./guide-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
+
+/**
+ * Breadcrumb trails — read from src/data/breadcrumbs.ts, the same map that
+ * VisibleBreadcrumb.tsx and BreadcrumbJsonLd.tsx use, so the server-side
+ * BreadcrumbList always matches the visible breadcrumb. The file is a plain
+ * object literal (no imports, no expressions), so after stripping the TS
+ * annotations it evaluates as JavaScript. Keys have no trailing slash.
+ */
+function loadBreadcrumbMap() {
+  const src = readFileSync(new URL("../src/data/breadcrumbs.ts", import.meta.url), "utf8");
+  const start = src.indexOf("export const breadcrumbMap");
+  const eq = src.indexOf("=", start);
+  const end = src.indexOf("\n};", eq);
+  if (start < 0 || eq < 0 || end < 0) {
+    throw new Error("Prerender: could not locate `export const breadcrumbMap = {…};` in src/data/breadcrumbs.ts");
+  }
+  const literal = src.slice(eq + 1, end + 2).replace(/^\s*\/\/.*$/gm, "");
+  const map = new Function(`return (${literal});`)();
+  const n = Object.keys(map).length;
+  if (n < 100) throw new Error(`Prerender: breadcrumbMap parsed with only ${n} entries — check src/data/breadcrumbs.ts`);
+  return map;
+}
+const BREADCRUMBS = loadBreadcrumbMap();
+
+/** Thank-you pages: reachable only after a form submit. Excluded from the
+ *  sitemap AND tagged noindex in the static HTML so Google can honour it
+ *  (a robots.txt Disallow alone hides the noindex from the crawler). */
+const NOINDEX_ROUTES = new Set([
+  "/merci",
+  "/merci-evaluation",
+  "/en/thank-you",
+  "/en/thank-you-valuation",
+]);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "..", "dist");
@@ -219,6 +252,35 @@ function injectFaqPageJsonLd(html, items) {
   };
   const json = JSON.stringify(data).replace(/<\//g, "<\\/");
   const tag = `\n    <script id="ygs-faqpage-jsonld" type="application/ld+json">${json}</script>\n`;
+  return html.replace("</head>", `${tag}  </head>`);
+}
+
+/**
+ * Inject a BreadcrumbList JSON-LD into the prerendered HTML.
+ * Mirrors src/components/BreadcrumbJsonLd.tsx (same element id, same data) so
+ * the client component replaces rather than duplicates it after hydration.
+ * The client-only version writes to <head> from a useEffect, which the
+ * Puppeteer pass never captures (it serialises #root only) — hence server-side.
+ */
+function injectBreadcrumbJsonLd(html, route, config) {
+  if (!config || !Array.isArray(config.trail)) return html;
+  const items = [
+    ...config.trail.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: `${SITE_URL}${withSlash(c.href)}`,
+    })),
+    {
+      "@type": "ListItem",
+      position: config.trail.length + 1,
+      name: config.current,
+      item: `${SITE_URL}${withSlash(route)}`,
+    },
+  ];
+  const data = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items };
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/");
+  const tag = `\n    <script id="ygs-breadcrumb-jsonld" type="application/ld+json">${json}</script>\n`;
   return html.replace("</head>", `${tag}  </head>`);
 }
 
@@ -480,8 +542,12 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
     <link rel="alternate" hreflang="x-default" href="${SITE_URL}${withSlash(frPath)}" />`
       : "";
 
+  const robotsBlock = NOINDEX_ROUTES.has(route)
+    ? `\n    <meta name="robots" content="noindex, follow" />`
+    : "";
+
   const seoBlock = `
-    <!-- Prerendered SEO overrides (route: ${route}) -->
+    <!-- Prerendered SEO overrides (route: ${route}) -->${robotsBlock}
     <meta name="description" content="${escapeHtml(meta.description)}" />
     <link rel="canonical" href="${canonical}" />
     <meta property="og:title" content="${escapeHtml(meta.title)}" />
@@ -568,6 +634,10 @@ async function main() {
 
 
 
+    // BreadcrumbList JSON-LD for every static route that has a trail
+    // (home, /en and the thank-you pages have none by design).
+    html = injectBreadcrumbJsonLd(html, route, BREADCRUMBS[route]);
+
     // Output path
     let outPath;
     if (route === "/") {
@@ -591,12 +661,7 @@ async function main() {
    */
   const today = new Date().toISOString().split("T")[0];
 
-  const NOINDEX = new Set([
-    "/merci",
-    "/merci-evaluation",
-    "/en/thank-you",
-    "/en/thank-you-valuation",
-  ]);
+  const NOINDEX = NOINDEX_ROUTES;
 
   const priorityFor = (route) => {
     if (route === "/" || route === "/en") return "1.0";
@@ -699,11 +764,15 @@ async function main() {
       description: post.excerpt || post.metaDescription || "",
       lang: "fr-CA",
       breadcrumbLabel: "Blogue",
-      breadcrumbHref: "/blogue",
+      breadcrumbHref: "/blogue/",
     });
     if (post.emitFaqSchema && post.faqItems && post.faqItems.length > 0) {
       frHtml = injectFaqPageJsonLd(frHtml, post.faqItems);
     }
+    frHtml = injectBreadcrumbJsonLd(frHtml, frRoute, {
+      trail: [{ name: "Accueil", href: "/" }, { name: "Blogue", href: "/blogue/" }],
+      current: post.title,
+    });
     assertFallbackInjected(frHtml, `/blogue/${post.slug}`, "blog/fr");
     const frOut = path.join(DIST, "blogue", post.slug, "index.html");
     await fs.mkdir(path.dirname(frOut), { recursive: true });
@@ -735,11 +804,15 @@ async function main() {
       description: post.excerptEn || post.metaDescriptionEn || "",
       lang: "en-CA",
       breadcrumbLabel: "Blog",
-      breadcrumbHref: "/en/blog",
+      breadcrumbHref: "/en/blog/",
     });
     if (post.emitFaqSchema && post.faqItemsEn && post.faqItemsEn.length > 0) {
       enHtml = injectFaqPageJsonLd(enHtml, post.faqItemsEn);
     }
+    enHtml = injectBreadcrumbJsonLd(enHtml, enRoute, {
+      trail: [{ name: "Home", href: "/en/" }, { name: "Blog", href: "/en/blog/" }],
+      current: post.titleEn,
+    });
     assertFallbackInjected(enHtml, `/en/blog/${post.slugEn}`, "blog/en");
     const enOut = path.join(DIST, "en", "blog", post.slugEn, "index.html");
     await fs.mkdir(path.dirname(enOut), { recursive: true });
