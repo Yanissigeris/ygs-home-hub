@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { stripTrailingSlash } from "@/lib/url-utils";
+import { stripTrailingSlash, withTrailingSlash } from "@/lib/url-utils";
 
 /** Maps FR paths to EN paths and vice-versa. */
 const frToEn: Record<string, string> = {
@@ -68,9 +69,34 @@ const LanguageSwitch = ({ transparent }: { transparent?: boolean }) => {
   const { pathname } = useLocation();
 
     const lookupKey = stripTrailingSlash(pathname);
-    const targetPath = lang === "fr"
-      ? frToEn[lookupKey] ?? "/en"
-      : enToFr[lookupKey] ?? "/";
+
+    // Blog articles are not in the static map: resolve the twin article from the
+    // blog data (lazy import, same chunk BlogArticlePage already loads) so the
+    // switch goes to the translated article, not to the other language's home.
+    // The prerender captures the resolved link, so crawlers get it too.
+    const [blogTwin, setBlogTwin] = useState<string | null>(null);
+    useEffect(() => {
+      const m = pathname.match(/^\/(blogue|en\/blog)\/([^/]+)\/?$/);
+      if (!m) {
+        setBlogTwin(null);
+        return;
+      }
+      let cancelled = false;
+      import("@/data/blog-posts").then(({ getPostBySlug }) => {
+        if (cancelled) return;
+        const post = getPostBySlug(m[2]);
+        if (!post) return;
+        setBlogTwin(m[1] === "blogue" ? `/en/blog/${post.slugEn}/` : `/blogue/${post.slug}/`);
+      });
+      return () => {
+        cancelled = true;
+      };
+    }, [pathname]);
+
+    // Canonical URLs end with a slash; linking without it costs a 301 on every page.
+    const targetPath =
+      blogTwin ??
+      withTrailingSlash(lang === "fr" ? frToEn[lookupKey] ?? "/en" : enToFr[lookupKey] ?? "/");
 
   const activeColor = transparent ? "var(--white)" : "var(--ink)";
   const inactiveColor = transparent ? "rgba(255,255,255,.6)" : "var(--muted)";

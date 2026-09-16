@@ -242,7 +242,7 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
       title: "Vous voulez le rapport mensuel détaillé du marché Gatineau ?",
       text: "Ventilation par segment et chiffres bruts de la Chambre immobilière. Envoyez-moi RAPPORT en DM pour une réponse personnalisée, sans suivi commercial.",
       buttonLabel: "Demander le rapport",
-      buttonHref: "/contact/",
+      buttonHref: "/contact-yanis/",
       eyebrowEn: "MONTHLY MARKET REPORT",
       titleEn: "Want the detailed monthly Gatineau market report?",
       textEn: "Segment breakdown and raw numbers from the Chambre immobilière. Message me REPORT on DM for a personalized response, no sales follow-up.",
