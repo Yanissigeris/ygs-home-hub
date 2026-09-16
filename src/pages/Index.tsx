@@ -57,6 +57,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
           title="Votre courtier immobilier à Gatineau et en Outaouais"
           headline="Je vous donne les chiffres et les options, vous décidez."
           subtitle="Pour vendre, acheter ou investir, profitez d'un accompagnement fondé sur les comparables locaux, l'expérience terrain et une stratégie adaptée à votre projet."
+          subtitleShort="Vendre, acheter ou investir. Une stratégie adaptée à votre projet."
           primaryCta={{ label: "Obtenir mon évaluation", href: "/evaluation-gratuite-gatineau/" }}
           secondaryCta={{ label: "Parlons de votre projet", href: "/contact-yanis/" }}
           socialProof="Hall of Fame RE/MAX"

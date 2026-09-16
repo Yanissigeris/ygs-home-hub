@@ -590,7 +590,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{ minHeight: "100svh" }}
         >
           <div
-            className={`pointer-events-auto ${headline ? "w-[82%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
+            className={`pointer-events-auto ${headline ? "w-[92%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
@@ -678,7 +678,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               <p
-                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-light`}
+                className={`hero-fade-in ${headline ? (subtitleShort ? "mt-2.5 sm:mt-4" : "mt-3 sm:mt-4") : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-light`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -708,7 +708,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {(primaryCta || secondaryCta) && (
                 <div
-                  className={`hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
+                  className={`hero-fade-in ${subtitleShort ? "mt-5" : "mt-6"} sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
                   style={{ animationDelay: "0.44s" }}
                 >
 
