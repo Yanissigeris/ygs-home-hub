@@ -83,6 +83,9 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
   const [shake, setShake] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [emptyFields, setEmptyFields] = useState<string[]>([]);
+  const [submitError, setSubmitError] = useState(false);
+  const [outcome, setOutcome] = useState<"full" | "saved-only">("full");
+
   const addressRef = useRef<HTMLInputElement>(null);
 
   const typeLabels: Record<string, string> = {
@@ -121,10 +124,11 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
       event_label: "contact_info_entered",
     });
 
+    let saved = false;
     try {
       const supabase = await loadSupabase();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await supabase.from("valuation_leads" as any).insert({
+      const { error: insertError } = await supabase.from("valuation_leads" as any).insert({
         address: address.trim(),
         property_type: propertyType,
         name: name.trim(),
@@ -134,7 +138,23 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         language: lang,
       });
 
-      await supabase.functions.invoke("send-email", {
+      if (insertError) {
+        // Nothing was persisted: keep the entered values and allow a retry.
+        console.error("Valuation lead insert failed:", insertError.message);
+        setSubmitError(true);
+        setSubmitting(false);
+        return;
+      }
+
+      saved = true;
+      trackLead({
+        avatar: "vendeur",
+        offer: "evaluation_gratuite",
+        form_type: "valuation",
+        lang,
+      });
+
+      const { data: emailResult, error: emailError } = await supabase.functions.invoke("send-email", {
         body: {
           formType: "valuation",
           lang,
@@ -147,20 +167,29 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         },
       });
 
-      trackLead({
-        avatar: "vendeur",
-        offer: "evaluation_gratuite",
-        form_type: "valuation",
-        lang,
-      });
-
+      // Technical failure (transport/HTTP) OR application-level error returned
+      // by the function: the lead is saved, but no email is confirmed.
+      const notified = !emailError && !(emailResult && (emailResult as { error?: unknown }).error);
+      if (!notified) {
+        console.error("Valuation notification not confirmed for a saved lead");
+      }
+      setOutcome(notified ? "full" : "saved-only");
       setStep(3);
-    } catch {
-      setStep(3);
+    } catch (err) {
+      if (saved) {
+        // The lead exists: never ask the visitor to submit a second request.
+        console.error("Valuation notification threw after a saved lead");
+        setOutcome("saved-only");
+        setStep(3);
+      } else {
+        console.error("Valuation lead submission failed before saving:", err);
+        setSubmitError(true);
+      }
     } finally {
       setSubmitting(false);
     }
   };
+
 
   const smallInputStyle = (isError?: boolean): React.CSSProperties => ({
     width: "100%",
