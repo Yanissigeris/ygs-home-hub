@@ -692,7 +692,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {subtitleShort ?? subtitle}
               </p>
               <p
-                className="hero-fade-in mt-4 sm:mt-6 hidden md:block max-w-[460px] font-light"
+                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-light`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
