@@ -708,7 +708,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {(primaryCta || secondaryCta) && (
                 <div
-                  className={`hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
+                  className={`hero-fade-in ${subtitleShort ? "mt-5" : "mt-6"} sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
                   style={{ animationDelay: "0.44s" }}
                 >
 
