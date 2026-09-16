@@ -117,7 +117,9 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
       return;
     }
     setEmptyFields([]);
+    setSubmitError(false);
     setSubmitting(true);
+
 
     trackEvent("evaluation_widget_step2", {
       event_category: "lead_generation",
@@ -485,6 +487,23 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
               >
                 {submitting ? "..." : c.submitCta}
               </button>
+
+              {submitError && (
+                <p
+                  role="alert"
+                  style={{
+                    fontSize: ".85rem",
+                    color: "#b42318",
+                    textAlign: "center",
+                    marginTop: ".75rem",
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {c.errorText}
+                </p>
+              )}
+
+
 
               <p
                 style={{
