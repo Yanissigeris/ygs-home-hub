@@ -7,6 +7,7 @@ import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-market-report.webp";
 
@@ -59,6 +60,12 @@ const MarketReportPage = () => (
       title="Explorer aussi"
       pages={related}
       background="alt"
+    />
+    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+    <RelatedPages
+      overline={marketBlockCopy.fr.overline}
+      title={marketBlockCopy.fr.title}
+      pages={marketArticlePages("fr", "market")}
     />
 
     <GuideInlineCTA

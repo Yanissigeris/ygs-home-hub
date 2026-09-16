@@ -9,6 +9,7 @@ import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
 import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
 import CardGrid from "@/components/CardGrid";
@@ -167,6 +168,12 @@ const PlexPage = () => (
         { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau/" },
       ]}
       background="alt"
+    />
+    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+    <RelatedPages
+      overline={marketBlockCopy.fr.overline}
+      title={marketBlockCopy.fr.title}
+      pages={marketArticlePages("fr", "investor")}
     />
   </>
 );

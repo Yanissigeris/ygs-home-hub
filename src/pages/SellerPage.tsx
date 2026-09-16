@@ -3,6 +3,7 @@ import ServiceJsonLd from "@/components/ServiceJsonLd";
 import { Link } from "react-router-dom";
 import SectorLinks from "@/components/SectorLinks";
 import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -150,6 +151,12 @@ const SellerPage = () =>
         { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
         { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}
+    />
+    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+    <RelatedPages
+      overline={marketBlockCopy.fr.overline}
+      title={marketBlockCopy.fr.title}
+      pages={marketArticlePages("fr", "seller")}
     />
 
     <FunnelNextStep
