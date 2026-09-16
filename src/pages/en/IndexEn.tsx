@@ -1,6 +1,5 @@
 import * as React from "react";
 import PageMeta from "@/components/PageMeta";
-import SEO from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
 
 
@@ -39,13 +38,6 @@ const homepageReviews = getReviewsById(["s1", "b1", "r2", "p2", "s2", "b3"]);
 
 const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref}>
-    <SEO
-      title="Real Estate Broker Gatineau | Yanis Gauthier-Sigeris, YGS"
-      description="Real estate broker in Gatineau for 9 years. Sell, buy or invest in Outaouais: clear strategy, honest numbers. Free home valuation."
-      canonical="https://yanisgauthier.com/en"
-      hreflangFr="https://yanisgauthier.com/"
-      hreflangEn="https://yanisgauthier.com/en"
-    />
     <PageMeta
       title="Real Estate Broker Gatineau · Outaouais"
       description="Yanis Gauthier-Sigeris, real estate broker in Gatineau. Sell, buy or invest in Aylmer, Hull or Plateau: clear strategy and full support."

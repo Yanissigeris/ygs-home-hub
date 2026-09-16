@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
-import SEO from "@/components/SEO";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import { getPublishedPosts, getFeaturedPost, getCategories } from "@/data/blog-posts";
@@ -24,7 +23,6 @@ const BlogPageEn = () => {
 
   return (
     <>
-      <SEO title="Gatineau real estate blog | YGS tips" description="Real estate tips for Gatineau and the Outaouais. Market, selling, buying, plex investment, relocation." canonical="https://yanisgauthier.com/en/blog" hreflangFr="https://yanisgauthier.com/blogue" hreflangEn="https://yanisgauthier.com/en/blog" lang="en" />
       <PageMeta
         title="Gatineau Real Estate Blog · Tips & Market Insights"
         description="Articles, market analysis, and real estate advice for Gatineau and the Outaouais. Sellers, buyers, investors — by Yanis Gauthier-Sigeris, Real Estate Broker."

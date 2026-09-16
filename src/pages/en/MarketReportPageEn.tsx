@@ -11,7 +11,7 @@ import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-market-report.webp";
 
 const faq = [
-  { q: "How can I access the market report?", a: "Contact me, I'll send you the most recent analysis for your area." },
+  { q: "How can I access the market report?", a: "Contact me for updates when the next report is published. In the meantime, you can request a personalized analysis of your area." },
   { q: "What areas does the data cover?", a: "All Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham, Gatineau centre and more." },
   { q: "Is the report free?", a: "Yes, it's a tool I offer to my clients and anyone interested in the market." },
 ];
@@ -25,11 +25,11 @@ const related = [
 
 const MarketReportPageEn = () => (
   <>
-    <PageMeta title="Gatineau Real Estate Market Report" description="Prices, trends and sales volumes in Gatineau and Outaouais. Real estate market report by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
+    <PageMeta title="Gatineau market report · Coming soon | YGS" description="The next Gatineau real estate market report is coming soon. Contact Yanis for publication updates or to request an analysis of your area." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
     <HeroSection
       overline="Market Report · Gatineau"
       title="Gatineau real estate market report"
-      subtitle="Prices, trends, sales volumes — a clear reading of the Gatineau and Outaouais real estate market."
+      subtitle="The next report is being prepared. In the meantime, request a personalized market analysis for your area."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
@@ -37,7 +37,7 @@ const MarketReportPageEn = () => (
     />
     <ContentBlock narrow>
       <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
-      <p className="prose-body mt-5">Every quarter, I prepare an analysis of the Gatineau real estate market, median prices, sales volume, trends by area and forecasts. Contact me to receive the next edition.</p>
+      <p className="prose-body mt-5">The next Gatineau real estate market report is being prepared. Contact me for publication updates or to discuss the market in your area now.</p>
     </ContentBlock>
     <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
     <FAQSection items={faq} />

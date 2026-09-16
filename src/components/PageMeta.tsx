@@ -1,4 +1,5 @@
 import * as React from "react";
+import routeMetadata from "@/data/seo-routes.json";
 import { useLocation } from "react-router-dom";
 import { withTrailingSlash } from "@/lib/url-utils";
 
@@ -37,23 +38,35 @@ const ensureCanonicalLink = () => {
 
 const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, description, canonical, ogImage }, _ref) => {
   const { pathname } = useLocation();
+  // Preserve the published metadata for static routes; dynamic articles supply
+  // their metadata from the same post fields used during prerendering.
+  const route = pathname.replace(/\/+$/, "") || "/";
+  const entry = (routeMetadata as Record<string, { title: string; description: string; ogImage?: string }>)[route];
+  const resolvedTitle = entry?.title ?? title;
+  const resolvedDescription = entry?.description ?? description;
+  const imageUrl = entry?.ogImage || ogImage || DEFAULT_OG_IMAGE;
 
   React.useEffect(() => {
     /* ── Title ── */
-    document.title = title;
+    document.title = resolvedTitle;
 
     /* ── html lang attribute ── */
     const isEn = pathname.startsWith("/en");
     document.documentElement.lang = isEn ? "en" : "fr";
 
     /* ── Meta description ── */
-    ensureMetaTag('meta[name="description"]', { name: "description", content: description });
+    ensureMetaTag('meta[name="description"]', { name: "description", content: resolvedDescription });
 
-    /* ── Open Graph (only the per-route values; constants like og:type,
+    /* ── Open Graph (only the per-route values; constants like
          og:site_name and twitter:card live in index.html as a single source
          of truth and are never rewritten here). ── */
-    ensureMetaTag('meta[property="og:title"]', { property: "og:title", content: title });
-    ensureMetaTag('meta[property="og:description"]', { property: "og:description", content: description });
+    ensureMetaTag('meta[property="og:title"]', { property: "og:title", content: resolvedTitle });
+    ensureMetaTag('meta[property="og:description"]', { property: "og:description", content: resolvedDescription });
+
+    ensureMetaTag('meta[property="og:type"]', {
+      property: "og:type",
+      content: /^\/(?:blogue|en\/blog)\/[^/]+/.test(pathname) ? "article" : "website",
+    });
 
     const locale = isEn ? "en_CA" : "fr_CA";
     const altLocale = isEn ? "fr_CA" : "en_CA";
@@ -79,19 +92,18 @@ const PageMeta = React.forwardRef<HTMLSpanElement, PageMetaProps>(({ title, desc
     ensureMetaTag('meta[property="og:url"]', { property: "og:url", content: canonicalUrl });
 
     /* ── og:image ── */
-    const imageUrl = ogImage || DEFAULT_OG_IMAGE;
     ensureMetaTag('meta[property="og:image"]', { property: "og:image", content: imageUrl });
     ensureMetaTag('meta[property="og:image:width"]', { property: "og:image:width", content: "1200" });
     ensureMetaTag('meta[property="og:image:height"]', { property: "og:image:height", content: "630" });
 
     /* ── Twitter Card (only per-route values) ── */
-    ensureMetaTag('meta[name="twitter:title"]', { name: "twitter:title", content: title });
-    ensureMetaTag('meta[name="twitter:description"]', { name: "twitter:description", content: description });
+    ensureMetaTag('meta[name="twitter:title"]', { name: "twitter:title", content: resolvedTitle });
+    ensureMetaTag('meta[name="twitter:description"]', { name: "twitter:description", content: resolvedDescription });
     ensureMetaTag('meta[name="twitter:image"]', { name: "twitter:image", content: imageUrl });
 
     /* ── Hreflang tags are owned by LangMeta (non-blog routes) and
          BlogArticlePage (blog routes) to avoid duplicate annotations. ── */
-  }, [canonical, description, ogImage, title, pathname]);
+  }, [canonical, resolvedDescription, imageUrl, resolvedTitle, pathname]);
 
   return null;
 });

@@ -196,15 +196,15 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
   // JSON.stringify produces safe content for a <script type="application/ld+json">,
   // but we still escape "</" → "<\/" to avoid breaking out of the script tag.
   const json = JSON.stringify(data).replace(/<\//g, "<\\/");
-  const tag = `\n    <script type="application/ld+json">${json}</script>\n`;
+  const tag = `\n    <script id="ygs-blogposting-jsonld" type="application/ld+json">${json}</script>\n`;
   return html.replace("</head>", `${tag}  </head>`);
 }
 
 /**
  * Inject a FAQPage JSON-LD schema into a prerendered article HTML so that
  * crawlers (Google, IA) see the schema in the initial server-served DOM.
- * The client-side <FaqPageJsonLd> component is dedupe-aware (Option A) and
- * will skip re-injection when this script is present.
+ * At app startup React takes ownership of route schemas; its components
+ * update them on navigation and remove them on unmount.
  */
 function injectFaqPageJsonLd(html, items) {
   if (!items || items.length === 0) return html;
