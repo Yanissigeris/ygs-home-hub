@@ -276,6 +276,23 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  /* Responsive variants supplied by heroBgStyle() (src/lib/hero-backgrounds.ts):
+     AVIF where supported, 768 px on phones, 1280 px above. Browsers without
+     image-set()/AVIF keep the WebP in --hero-bg-image above. */
+  @supports (background-image: image-set(url("x.avif") type("image/avif"))) {
+    .hero-gradient--with-bg {
+      background-image:
+        linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%),
+        image-set(var(--hero-bg-avif, var(--hero-bg-image)) type("image/avif"), var(--hero-bg-image) type("image/webp"));
+    }
+    @media (max-width: 767px) {
+      .hero-gradient--with-bg {
+        background-image:
+          linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%),
+          image-set(var(--hero-bg-avif-sm, var(--hero-bg-avif, var(--hero-bg-image))) type("image/avif"), var(--hero-bg-image) type("image/webp"));
+      }
+    }
+  }
 
   /* Blog article drop cap (first paragraph). Pure CSS so the text node stays
      intact for crawlers, screen readers and AI extraction. */
