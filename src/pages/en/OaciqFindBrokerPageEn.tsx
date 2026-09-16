@@ -7,6 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-verifier-oaciq.webp";
+import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
   { q: "What is the OACIQ?", a: "The Organisme d'autoréglementation du courtage immobilier du Québec (OACIQ) is the regulatory body for real estate brokers in Quebec. It protects the public by ensuring brokers meet professional standards." },
@@ -25,7 +26,7 @@ const OaciqFindBrokerPageEn = () => (
       title="Verify a Real Estate Broker with the OACIQ"
       description="How to verify a real estate broker's licence in Quebec using the OACIQ registry. Protect yourself and ensure your broker is in good standing." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
