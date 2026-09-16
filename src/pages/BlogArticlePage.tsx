@@ -1,4 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import { canonicalPath } from "@/lib/url-utils";
 import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
@@ -187,8 +188,8 @@ const BlogArticlePage = () => {
     isFr ? "fr-CA" : "en-CA",
     { year: "numeric", month: "long", day: "numeric" }
   );
-  const blogHref = isFr ? "/blogue" : "/en/blog";
-  const ctaHref = isFr ? "/evaluation-gratuite-gatineau" : "/en/home-valuation";
+  const blogHref = isFr ? "/blogue/" : "/en/blog/";
+  const ctaHref = isFr ? "/evaluation-gratuite-gatineau/" : "/en/home-valuation/";
 
   // Detect FAQ section
   const hasFaq = /^##\s*(FAQ|Questions fréquentes|Frequently asked)/im.test(body);
@@ -197,6 +198,15 @@ const BlogArticlePage = () => {
   const allPosts = getPublishedPosts(isFr ? "fr" : "en");
   const currentIdx = allPosts.findIndex((p) => (isFr ? p.slug : p.slugEn) === slug);
   const nextPost = currentIdx >= 0 && currentIdx < allPosts.length - 1 ? allPosts[currentIdx + 1] : null;
+
+  // Related articles: same topic first (category keyword), then newest.
+  // Gives every post 3 contextual inlinks instead of the single one from the blog index.
+  const topicKey = (c: string) =>
+    c.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[·•|,]/)[0].trim().replace(/s$/, "");
+  const currentKey = topicKey(isFr ? post.category : post.categoryEn || post.category);
+  const sameTopic = allPosts.filter((p) => p.slug !== post.slug && topicKey(isFr ? p.category : p.categoryEn || p.category) === currentKey);
+  const others = allPosts.filter((p) => p.slug !== post.slug && !sameTopic.includes(p));
+  const relatedPosts = [...sameTopic, ...others].slice(0, 3);
 
   // Body renderer with drop cap on first paragraph + styled blockquotes + FAQ extraction
   const renderBody = (md: string) => {
@@ -222,7 +232,7 @@ const BlogArticlePage = () => {
 
     const formatInline = (text: string) =>
       text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>$1</a>")
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>${label}</a>`)
         .replace(/\*\*(.+?)\*\*/g, "<strong style='color:var(--ink)' class='font-semibold'>$1</strong>");
 
     for (let i = 0; i < lines.length; i++) {
@@ -330,26 +340,16 @@ const BlogArticlePage = () => {
         flushList();
         if (!firstParagraphRendered) {
           firstParagraphRendered = true;
-          const first = line.charAt(0);
-          const rest = line.slice(1);
+          // Drop cap via CSS ::first-letter (see .article-dropcap in index.css).
+          // Splitting the first character into its own <span> made crawlers and
+          // AI engines read "L e timing" instead of "Le timing".
           elements.push(
-            <p key={i} className="my-4" style={{ color: "var(--article-body-color)", fontSize: "var(--article-body-size)", lineHeight: "var(--article-body-line-height)" }}>
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "80px",
-                  color: "var(--gold)",
-                  float: "left",
-                  lineHeight: 0.8,
-                  marginRight: "8px",
-                  marginTop: "4px",
-                  fontWeight: 400,
-                }}
-              >
-                {first}
-              </span>
-              <span dangerouslySetInnerHTML={{ __html: formatInline(rest) }} />
-            </p>
+            <p
+              key={i}
+              className="my-4 article-dropcap"
+              style={{ color: "var(--article-body-color)", fontSize: "var(--article-body-size)", lineHeight: "var(--article-body-line-height)" }}
+              dangerouslySetInnerHTML={{ __html: formatInline(line) }}
+            />
           );
         } else {
           elements.push(
@@ -688,11 +688,44 @@ const BlogArticlePage = () => {
         </div>
       </section>
 
+      {/* Related articles (same topic first) */}
+      {relatedPosts.length > 0 && (
+        <section className="section-container pb-12" aria-labelledby="related-articles-title">
+          <div className="pt-8" style={{ borderTop: "1px solid #E0DBD1" }}>
+            <p
+              id="related-articles-title"
+              className="uppercase"
+              style={{ color: "var(--ink)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600, marginBottom: "16px" }}
+            >
+              {isFr ? "À lire aussi" : "Related reading"}
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-3" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+              {relatedPosts.map((rp) => (
+                <li key={rp.slug}>
+                  <Link
+                    to={`${blogHref}${isFr ? rp.slug : rp.slugEn}/`}
+                    className="group block h-full transition-opacity hover:opacity-90"
+                    style={{ background: "#F7F5F0", padding: "18px 20px", borderLeft: "3px solid var(--gold)" }}
+                  >
+                    <span className="block uppercase" style={{ color: "var(--muted)", fontSize: "10px", letterSpacing: "0.14em", marginBottom: "8px" }}>
+                      {isFr ? rp.category : rp.categoryEn || rp.category}
+                    </span>
+                    <span style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "18px", fontWeight: 500, lineHeight: 1.3 }}>
+                      {isFr ? rp.title : rp.titleEn}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* Next article */}
       {nextPost && (
         <section className="section-container pb-16">
           <Link
-            to={`${blogHref}/${isFr ? nextPost.slug : nextPost.slugEn}`}
+            to={`${blogHref}${isFr ? nextPost.slug : nextPost.slugEn}/`}
             className="grid gap-6 sm:grid-cols-[140px_1fr] items-center pt-8 group transition-opacity hover:opacity-90"
             style={{ borderTop: "1px solid #E0DBD1" }}
           >
