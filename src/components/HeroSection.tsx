@@ -82,6 +82,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       overline,
       cities,
       title,
+      headline,
       subtitle,
       subtitleShort,
       primaryCta,
