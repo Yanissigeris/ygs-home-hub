@@ -277,6 +277,19 @@
     background-repeat: no-repeat;
   }
 
+  /* Blog article drop cap (first paragraph). Pure CSS so the text node stays
+     intact for crawlers, screen readers and AI extraction. */
+  .article-dropcap::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    line-height: 0.8;
+    font-weight: 400;
+    color: var(--gold);
+    float: left;
+    margin-right: 8px;
+    margin-top: 4px;
+  }
+
   .card-elevated {
     box-shadow: var(--card-shadow);
     border-radius: var(--card-radius);
