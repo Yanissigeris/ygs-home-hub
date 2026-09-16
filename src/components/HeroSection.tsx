@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getHeroPicture, type HeroPicture } from "@/lib/hero-pictures";
 
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
@@ -54,6 +55,10 @@ interface HeroSectionProps {
   /** Desktop AVIF variant of the hero background. Same source byte as the
    *  <link rel="preload" media="(min-width: 768px)"> emitted by Vite. */
   heroBgImageAvif?: string;
+  /** Responsive AVIF/WebP srcsets (see src/lib/hero-pictures.ts). When omitted,
+   *  HeroSection looks `heroBgImage` up in HERO_PICTURES so the 83 pages that
+   *  pass a plain import get responsive sources with no page edit. */
+  heroBgPicture?: HeroPicture;
   heroVideo?: string;
   heroVideoPoster?: string;
   hideCredentialsStrip?: boolean;
@@ -102,6 +107,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       heroBgImage,
       heroBgImageMobile,
       heroBgImageAvif,
+      heroBgPicture,
       heroVideo,
       heroVideoPoster,
       hideCredentialsStrip,
@@ -141,6 +147,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const [perfMetrics, setPerfMetrics] = React.useState<VideoPerfMetrics>({ src: heroVideo || "", mountTime: 0 });
     const perfStartRef = React.useRef<number>(0);
     const lang = useLanguage();
+    const responsiveHero = heroBgPicture ?? getHeroPicture(heroBgImage);
     const stats = lang === "en" ? statsEn : statsFr;
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
@@ -450,6 +457,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   media="(min-width: 768px)"
                   srcSet={heroBgImageAvif}
                 />
+              )}
+              {/* Width-based sources (768/1280/1920) for every other hero.
+                  Explicit heroBgImageMobile/Avif props above win when present. */}
+              {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
+                <source type="image/avif" srcSet={responsiveHero.avif} sizes="100vw" />
+              )}
+              {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
+                <source type="image/webp" srcSet={responsiveHero.webp} sizes="100vw" />
               )}
               <img
                 src={heroBgImage}
