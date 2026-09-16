@@ -210,7 +210,7 @@ const BuyerConsultationPageEn = () => {
                   Get your free valuation to clarify your buying budget.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/en/home-valuation">Free Valuation</Link>
+                  <Link to="/en/home-valuation/">Free Valuation</Link>
                 </Button>
               </div>
             </motion.aside>

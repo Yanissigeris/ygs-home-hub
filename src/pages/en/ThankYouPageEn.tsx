@@ -29,7 +29,7 @@ const ThankYouPageEn = () => (
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Thank you! Your request has been sent.</h1>
           <p className="prose-body mt-4">I'll get back to you with a personalized response adapted to your situation. In the meantime, explore the resources below.</p>
-          <Button className="mt-8" size="lg" asChild><Link to="/en">Back to home</Link></Button>
+          <Button className="mt-8" size="lg" asChild><Link to="/en/">Back to home</Link></Button>
         </motion.div>
       </div>
     </section>

@@ -224,7 +224,7 @@ const SellerPlanPage = () => {
                   Commencez par une évaluation gratuite, c'est la première étape pour comprendre votre position.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
+                  <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
                 </Button>
               </div>
             </motion.aside>
