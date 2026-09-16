@@ -536,7 +536,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   margin: "0 0 .75rem",
                 }}
               >
-                {c.successTitle}
+                {outcome === "full" ? c.successTitle : c.savedTitle}
               </h3>
               <p
                 style={{
@@ -547,7 +547,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   margin: "0 auto 1rem",
                 }}
               >
-                {c.successText}
+                {outcome === "full" ? c.successText : c.savedText}
               </p>
               <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }}>
                 {c.urgentQ}{" "}
