@@ -7,6 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-frais-courtage.webp";
+import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
   { q: "What is the typical realtor commission in Quebec?", a: "There is no fixed rate. The commission is a percentage of the sale price, freely negotiated between the seller and their broker before listing." },
@@ -25,7 +26,7 @@ const RealtorCommissionPageEn = () => (
       title="Realtor Commission in Quebec — Clear Guide"
       description="Understand realtor commission fees in Quebec: how they work, what's included, and what it means for selling your home in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
