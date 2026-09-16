@@ -209,7 +209,7 @@ const PlexAnalysisPageEn = () => {
                   Knowing the current value is the first step, before deciding anything.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/en/home-valuation">Free Valuation</Link>
+                  <Link to="/en/home-valuation/">Free Valuation</Link>
                 </Button>
               </div>
             </motion.aside>

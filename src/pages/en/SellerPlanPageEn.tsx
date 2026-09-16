@@ -224,7 +224,7 @@ const SellerPlanPageEn = () => {
                   Start with a free valuation, it's the first step to understanding your position.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/en/home-valuation">Free Valuation</Link>
+                  <Link to="/en/home-valuation/">Free Valuation</Link>
                 </Button>
               </div>
             </motion.aside>

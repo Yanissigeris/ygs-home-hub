@@ -60,7 +60,7 @@ const ThankYouValuationPageEn = () => (
 
         <div className="mt-8 text-center">
           <Button size="lg" asChild>
-            <Link to="/en">Back to home</Link>
+            <Link to="/en/">Back to home</Link>
           </Button>
         </div>
       </div>
