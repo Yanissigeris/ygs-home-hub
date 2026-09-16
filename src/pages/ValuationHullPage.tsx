@@ -8,6 +8,7 @@ import { Clock, Shield, CheckCircle2, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-hull.webp";
+import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = [
   "Fourchette de valeur réaliste basée sur les ventes récentes à Hull",
@@ -55,7 +56,7 @@ const ValuationHullPage = () => {
         description="Obtenez une évaluation gratuite de votre maison à Hull. Analyse basée sur les ventes récentes dans votre secteur. Réponse personnalisée, sans engagement."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
-      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
         {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
         <div
           aria-hidden="true"
