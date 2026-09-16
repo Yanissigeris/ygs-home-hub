@@ -1,4 +1,5 @@
 import * as React from "react";
+import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -53,7 +54,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
               transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
-                to={step.href}
+                to={canonicalPath(step.href)}
                 className={`group relative flex flex-col h-full border px-6 py-6 sm:px-7 sm:py-7 transition-all duration-200 ${
                   step.highlight
                     ? "bg-[var(--ink)] border-[var(--ink)] hover:shadow-lg"

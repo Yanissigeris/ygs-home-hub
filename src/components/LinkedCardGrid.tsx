@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { canonicalPath } from "@/lib/url-utils";
 import { ArrowRight, LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
@@ -46,7 +47,7 @@ const LinkedCardGrid = ({
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link to={card.href} className="card-elevated group block border border-border/40 bg-card p-7 sm:p-8 h-full">
+            <Link to={canonicalPath(card.href)} className="card-elevated group block border border-border/40 bg-card p-7 sm:p-8 h-full">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary mb-5">
                 <card.icon size={24} />
               </div>
