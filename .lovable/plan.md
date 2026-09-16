@@ -40,7 +40,9 @@
 - Remplacer les affirmations non directement vérifiables sur l’activité du marché, la demande locative, les nouvelles constructions et les « bonnes opportunités » par des conseils neutres selon le secteur, le type d’immeuble, les loyers, les dépenses et l’état du bâtiment.
 - Retirer la ligne de sources générique devenue sans objet, tout en conservant le lien officiel du TAL.
 
-Aucune statistique, tendance, date ou source de remplacement ne sera inventée. Les titres, métadonnées SEO, données structurées et routes resteront inchangés.
+Aucune statistique, tendance, date ou source de remplacement ne sera inventée. Les titres des blocs « Contexte 2026 » seront adaptés pour annoncer un conseil général plutôt qu’une analyse datée. Les autres titres et les routes resteront inchangés.
+
+La structure SEO et les métadonnées existantes seront préservées par défaut. Si une métadonnée ou une donnée structurée reprend exactement une promesse chiffrée ou une affirmation neutralisée dans le contenu visible, son texte sera harmonisé sans ajouter d’affirmation, notamment dans les réponses FAQ utilisées pour les données structurées.
 
 ### 4. Cohérence des délais de réponse
 
@@ -88,13 +90,15 @@ Remplacer uniquement les promesses de service chiffrées par « Réponse personn
 - `src/data/blog-posts.ts` : modifier seulement les appels à l’action qui promettent un délai de réponse; conserver les mentions de durée décrivant une vente ou un événement de marché.
 - `supabase/functions/send-email/index.ts` : retirer les délais chiffrés des confirmations FR/EN sans changer la logique, les destinataires ni les données transmises.
 
-Les métadonnées SEO resteront intactes, conformément à la demande; seules les phrases visibles et les confirmations envoyées seront harmonisées.
+Après modification, déployer uniquement la fonction `send-email` afin que ses formulations soient réellement mises à jour indépendamment du déploiement du site. Le bilan distinguera le code modifié, le déploiement effectif de la fonction et ce qui reste à confirmer en production.
 
 ## Vérification
 
 - Contrôler les pages rendues avant et après sur ordinateur et mobile afin de confirmer qu’aucun texte responsive légitime n’a été supprimé.
 - Vérifier les quatre destinations depuis les cartes de l’accueil en français et en anglais.
 - Vérifier les pages vendeur et plex FR/EN, le lien TAL, les formulaires et les états de confirmation.
+- Vérifier la cohérence des métadonnées et des réponses FAQ structurées avec les corrections visibles.
 - Rechercher les promesses de réponse chiffrées restantes et distinguer explicitement les durées immobilières légitimes.
 - Exécuter le contrôle TypeScript et le contrôle de compilation disponible.
+- Ne soumettre aucun formulaire et ne déclencher aucun courriel de test.
 - Fournir la liste exacte des textes modifiés, des routes touchées et des affirmations qui n’ont pas pu être vérifiées.
