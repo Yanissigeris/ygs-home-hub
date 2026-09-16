@@ -23,6 +23,8 @@ interface HeroSectionProps {
   /** Preferred over `overline` on the home hero. Renders 3 cities on mobile, all on desktop, joined with " · ". */
   cities?: string[];
   title: string;
+  /** Optional supporting headline rendered between the H1 and the subtitle. Not a heading (keeps one H1 per page). */
+  headline?: string;
   subtitle: string;
   /** Optional shorter subtitle rendered only on mobile (<768px). Falls back to `subtitle`. */
   subtitleShort?: string;
@@ -80,6 +82,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       overline,
       cities,
       title,
+      headline,
       subtitle,
       subtitleShort,
       primaryCta,
@@ -587,7 +590,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{ minHeight: "100svh" }}
         >
           <div
-            className="pointer-events-auto w-[58%] pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]"
+            className={`pointer-events-auto ${headline ? "w-[82%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
@@ -657,8 +660,25 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 </>
               )}
 
+              {headline && (
+                <p
+                  className="hero-fade-in mt-3 sm:mt-4 max-w-[520px]"
+                  style={{
+                    animationDelay: "0.26s",
+                    color: "var(--cream)",
+                    fontFamily: "var(--serif)",
+                    fontWeight: 400,
+                    fontSize: "clamp(1.15rem, 2vw, 1.6rem)",
+                    lineHeight: 1.35,
+                    textShadow: "0 2px 10px rgba(0,0,0,0.5)",
+                  }}
+                >
+                  {headline}
+                </p>
+              )}
+
               <p
-                className="hero-fade-in mt-4 sm:mt-6 block md:hidden max-w-[460px] font-light"
+                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-light`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -672,7 +692,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {subtitleShort ?? subtitle}
               </p>
               <p
-                className="hero-fade-in mt-4 sm:mt-6 hidden md:block max-w-[460px] font-light"
+                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-light`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -688,14 +708,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {(primaryCta || secondaryCta) && (
                 <div
-                  className="hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+                  className={`hero-fade-in mt-6 sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
                   style={{ animationDelay: "0.44s" }}
                 >
 
                   {primaryCta && (
                     <Link
                       to={primaryCta.href}
-                      className="hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50"
+                      className={`hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50${headline ? " sm:whitespace-nowrap" : ""}`}
                       style={{
                         background: "var(--gold-bright)",
                         color: "var(--ink)",
@@ -711,7 +731,26 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
-                  {secondaryCta && (
+                  {secondaryCta && (headline ? (
+                    <Link
+                      to={secondaryCta.href}
+                      className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      style={{
+                        color: "rgba(255,255,255,.92)",
+                        minHeight: 44,
+                        minWidth: 44,
+                        fontSize: ".9rem",
+                        fontWeight: 500,
+                        letterSpacing: ".02em",
+                        textShadow: "0 2px 10px rgba(0,0,0,0.6)",
+                      }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
+                    >
+                      <span style={{ borderBottom: "1px solid rgba(255,255,255,.55)", paddingBottom: "2px" }}>
+                        {secondaryCta.label}
+                      </span>
+                    </Link>
+                  ) : (
                     <Link
                       to={secondaryCta.href}
                       className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
@@ -728,7 +767,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     >
                       {secondaryCta.label}
                     </Link>
-                  )}
+                  ))}
                 </div>
               )}
 
