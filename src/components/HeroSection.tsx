@@ -731,7 +731,26 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
-                  {secondaryCta && (
+                  {secondaryCta && (headline ? (
+                    <Link
+                      to={secondaryCta.href}
+                      className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      style={{
+                        color: "rgba(255,255,255,.92)",
+                        minHeight: 44,
+                        minWidth: 44,
+                        fontSize: ".9rem",
+                        fontWeight: 500,
+                        letterSpacing: ".02em",
+                        textShadow: "0 2px 10px rgba(0,0,0,0.6)",
+                      }}
+                      onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
+                    >
+                      <span style={{ borderBottom: "1px solid rgba(255,255,255,.55)", paddingBottom: "2px" }}>
+                        {secondaryCta.label}
+                      </span>
+                    </Link>
+                  ) : (
                     <Link
                       to={secondaryCta.href}
                       className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
@@ -748,7 +767,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     >
                       {secondaryCta.label}
                     </Link>
-                  )}
+                  ))}
                 </div>
               )}
 
