@@ -9,6 +9,7 @@ import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
+import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = ["Realistic value range based on recent sales in your Gatineau neighborhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address, and which ones are worth it in your market","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
@@ -34,7 +35,7 @@ const ValuationPageEn = () => {
     <>
       <PageMeta title="Free Home Valuation — Gatineau" description="Get a free and accurate valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
     <ServiceJsonLd name="Free Home Valuation in Gatineau" description="Get a free property valuation in Gatineau, Aylmer, Hull or Outaouais. Analysis based on recent comparable sales in your area." url="/en/home-valuation/" serviceType="Real Estate Appraisal Service" />
-      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
+      <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 

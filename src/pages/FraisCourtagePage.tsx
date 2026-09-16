@@ -7,6 +7,7 @@ import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-frais-courtage.webp";
+import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
   { q: "Quels sont les frais de courtage immobilier au Québec?", a: "Les frais de courtage prennent généralement la forme d'un pourcentage du prix de vente, convenu entre le vendeur et le courtier avant la mise en marché. Il n'y a pas de tarif réglementé." },
@@ -25,7 +26,7 @@ const FraisCourtagePage = () => (
       title="Frais de courtage immobilier au Québec — Guide clair"
       description="Comprenez les frais de courtage immobilier au Québec : commission, services inclus, facteurs et ce que ça signifie pour votre vente à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
-    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={{ ["--hero-bg-image" as string]: `url(${heroImg})` }}>
+    <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
