@@ -31,8 +31,8 @@ Only the homepage hero text (FR `/` and EN `/en/`). Portrait, background image, 
 - Primary CTA: `Get my home valuation` → `/en/home-valuation/`
 - Secondary CTA: `Let's discuss your plans` → `/en/contact/`
 
-### 4. Deduplication
-- On both homepages, remove the `trustLine` (the now-duplicated sentence) from the bottom `CTASection`; the section itself, its title and buttons stay.
+### 4. Bottom CTA section
+- The existing `trustLine` stays unchanged in FR and EN. The repetition far below the hero is acceptable; the bottom `CTASection` is not touched at all.
 
 ### 5. Notes
 - SEO `<title>`/meta descriptions are **not** changed (hero-only scope).
@@ -45,9 +45,10 @@ Only the homepage hero text (FR `/` and EN `/en/`). Portrait, background image, 
 1. Typecheck (`bunx tsgo -p tsconfig.app.json --noEmit`).
 2. Playwright at **390px, 768px, 1440px** on `/` and `/en/`:
    - exactly one `<h1>` per page with the new copy;
-   - supporting headline + paragraph visible and not clipped at 390px;
-   - both CTAs rendered, tappable (≥44px primary button height), correct hrefs;
-   - screenshots confirm the portrait is not obscured by the new text.
-3. Confirm the bottom CTA section no longer repeats the headline sentence.
+   - the full paragraph measured in the real render on mobile — no clipping, no overflow, natural spacing. Readability wins over fitting everything above the fold; the hero may extend past the first screen if needed;
+   - bounding-box check that hero text does not overlap the portrait image;
+   - both CTAs measured at **≥44 × 44 px** tap area, with correct hrefs.
+3. Regression check on a page that does not pass `headline` (for example a compact inner-page hero and a full hero such as `/contact-yanis/`): rendered spacing and layout identical to before the change.
+4. Screenshots of FR and EN at 390px and 1440px, reported back.
 
 No forms submitted, no test emails, no metadata or route changes.
