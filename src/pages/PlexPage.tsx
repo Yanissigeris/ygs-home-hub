@@ -61,7 +61,7 @@ const nextSteps = [
 
 const faq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Depuis 2017 en Outaouais, je connais bien les particularités des plex à Hull, Gatineau-centre et dans les autres secteurs." },
-  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus et de votre stratégie. Hull, Gatineau-centre et certains coins d'Aylmer offrent encore de bonnes opportunités. On peut analyser ça ensemble." },
+  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus, des dépenses, de l'état de l'immeuble et de votre stratégie. Une analyse propre à la propriété permet d'évaluer la situation." },
   { q: "Comment vendre un plex occupé?", a: "C'est faisable, coordination locataires, visites, documentation. Le processus québécois a ses règles spécifiques. Je vous accompagne à chaque étape." },
   { q: "Refinancer ou vendre?", a: "On compare les deux scénarios avec les taux actuels et la valeur marchande de votre secteur pour voir ce qui fait plus de sens." },
 ];
@@ -88,20 +88,19 @@ const PlexPage = () => (
     />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Contexte 2026" title="Investir dans un plex en Outaouais en 2026 — ce que vous devez savoir" />
+      <SectionHeading overline="Analyse" title="Ce qu'il faut analyser avant d'investir dans un plex en Outaouais" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Le marché des plexs en Outaouais reste actif en 2026. La demande locative pour les logements à prix abordables demeure soutenue, portée par une base d'emploi stable, fonctionnaires fédéraux, étudiants, professionnels.
+        Les conditions varient selon le secteur et le type d'immeuble. Avant d'acheter, il faut examiner les loyers réels, les dépenses, la vacance, l'état du bâtiment et le potentiel propre à la propriété.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Cela dit, le marché locatif a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un nombre important de nouvelles constructions. Ce changement rend l'analyse de rendement encore plus critique avant tout achat&nbsp;: les vrais loyers en place, les vrais coûts d'entretien, le capex à prévoir, et la stratégie à long terme doivent tous être examinés honnêtement.
+        Une analyse de rendement doit tenir compte des loyers en place, des coûts d'entretien, des travaux à prévoir et de votre stratégie à long terme. Ces facteurs peuvent différer sensiblement d'un immeuble et d'un secteur à l'autre.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter, c'est de vous donner l'analyse honnête pour que vous décidiez en toute connaissance de cause.
       </p>
       <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
-        <strong>À noter&nbsp;:</strong> la recommandation de hausse de loyer du Tribunal administratif du logement (TAL) pour 2026 est de 3,1&nbsp;%. Il s'agit d'une recommandation officielle. <span className="italic text-xs text-muted-foreground">Source&nbsp;: gouvernement.qc.ca</span>
+        L'ajustement d'un loyer dépend des critères applicables et de la situation de l'immeuble. Le TAL propose un outil de calcul pour aider propriétaires et locataires à établir l'ajustement; il ne fixe pas un taux unique applicable à tous les logements. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Consulter les critères du TAL</a>.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: SCHL, Rapport sur le marché locatif 2025 · Chambre immobilière de l'Outaouais (CIO).</p>
       <div className="mt-6">
         <Button asChild><Link to="/contact-yanis/">Analyser un plex avec moi →</Link></Button>
       </div>

@@ -42,7 +42,7 @@ const nextSteps = [
 ];
 const faq = [
   { q: "How do you evaluate a plex's value?", a: "Revenues, building condition, rental potential and neighborhood. Since 2017 in Outaouais, I know the specifics of plexes in Hull, Gatineau-centre and other areas well." },
-  { q: "Is it still profitable to buy a plex in Gatineau?", a: "It depends on the area, price, revenues and your strategy. Hull, Gatineau-centre and parts of Aylmer still offer good opportunities. We can analyze it together." },
+  { q: "Is it still profitable to buy a plex in Gatineau?", a: "It depends on the area, price, revenues, expenses, building condition and your strategy. A property-specific analysis helps assess the situation." },
   { q: "How do you sell an occupied plex?", a: "It's feasible, tenant coordination, visits, documentation. The Québec process has specific rules. I support you at every step." },
   { q: "Refinance or sell?", a: "We compare both scenarios with current rates and your area's market value to see what makes more sense." },
 ];
@@ -54,20 +54,19 @@ const PlexPageEn = () => (
     <HeroSection overline="Plex and investment · Gatineau" title="Plex in Gatineau: buy, sell or analyze" subtitle="You need to look beyond the listed price. Revenues, expenses, building condition, potential — every factor counts in the decision." primaryCta={{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }} secondaryCta={{ label: "Value of my plex", href: "/en/home-valuation/" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="2026 Context" title="Investing in an Outaouais plex in 2026 — what you need to know" />
+      <SectionHeading overline="Analysis" title="What to analyze before investing in an Outaouais plex" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        The Outaouais plex market remains active in 2026. Rental demand for affordable housing stays strong, driven by a stable employment base, federal workers, students, professionals.
+        Conditions vary by area and property type. Before buying, review actual rents, expenses, vacancy, building condition and the property's specific potential.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        That said, the rental market has rebalanced in 2025-2026 with a significant number of new builds coming online. This change makes return analysis even more critical before any purchase: actual rents in place, actual maintenance costs, anticipated capital expenditures, and long-term strategy must all be examined honestly.
+        A return analysis should account for rents in place, maintenance costs, anticipated capital expenditures and your long-term strategy. These factors can vary significantly from one property and area to another.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         I am a real estate investor myself. My role is not to convince you to buy, it is to give you the honest analysis so you can decide with full information.
       </p>
       <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
-        <strong>Note:</strong> The Tribunal administratif du logement (TAL) rent increase recommendation for 2026 is 3.1%. This is an official recommendation. <span className="italic text-xs text-muted-foreground">Source: gouvernement.qc.ca</span>
+        A rent adjustment depends on the applicable criteria and the building's circumstances. The TAL provides a calculation tool to help landlords and tenants establish the adjustment; it does not set a single rate that applies to every dwelling. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Review the TAL criteria</a>.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Sources: CMHC, Rental Market Report 2025 · Gatineau Real Estate Board (CIO).</p>
       <div className="mt-6">
         <Button asChild><Link to="/en/contact/">Analyze a plex with me →</Link></Button>
       </div>
