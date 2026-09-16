@@ -545,7 +545,7 @@ const BlogArticlePage = () => {
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Pour votre projet, vente, achat ou investissement. Réponse sous 24 h." : "For your project, selling, buying or investing. Reply within 24 h."}
+                {isFr ? "Pour votre projet, vente, achat ou investissement. Réponse personnalisée." : "For your project, selling, buying or investing. Personalized response."}
               </p>
               <Link
                 to={ctaHref}
@@ -655,7 +655,7 @@ const BlogArticlePage = () => {
               {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
             </Link>
             <p className="mt-3" style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>
-              {isFr ? "Réponse sous 24 h" : "Reply within 24 h"}
+              {isFr ? "Réponse personnalisée" : "Personalized response"}
             </p>
           </div>
         </section>
