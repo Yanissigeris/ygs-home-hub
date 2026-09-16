@@ -1,35 +1,30 @@
 # Blog article page: CSS drop cap, canonical hrefs, related articles
 
-Only two files are touched: `src/pages/BlogArticlePage.tsx` and `src/index.css`. No renames, no deletes, no `npm run build`, no refactoring of surrounding code, every existing string/class/style preserved.
+Scope: only `src/pages/BlogArticlePage.tsx` and `src/index.css`. No renames, no deletes, no `npm run build`, no refactoring, existing strings/classes/styles preserved.
 
-## A. src/pages/BlogArticlePage.tsx
+Per your rule, I stopped where the pasted code is incomplete instead of reconstructing it. Here is the exact status of each hunk.
 
-1. **Import (line 1-2):** add `import { canonicalPath } from "@/lib/url-utils";` after the react-router import. The helper already exists in `src/lib/url-utils.ts` (built last task). It is used by the related-articles links (point 5), so the import is not unused.
+## Ready now (complete and verified against the current files)
 
-2. **Trailing-slash hrefs (lines 190-191), applied exactly as given:**
-   - `blogHref` → `"/blogue/"` / `"/en/blog/"`
-   - `ctaHref` → `"/evaluation-gratuite-gatineau/"` / `"/en/home-valuation/"`
+- **B) src/index.css**: insert the `.article-dropcap::first-letter` rule (with its comment) immediately before `.card-elevated {` (currently line 280), inside the same `@layer` block. Harmless on its own — the class is only used once the drop-cap hunk lands.
 
-3. **Related posts (inserted after line 199), applied exactly as given:** `topicKey` normalizer (strip accents, lowercase, cut at `·•|,`, trim, drop trailing `s`), `currentKey` from the current category, `sameTopic` (same key, excluding the current post), `others` (the rest), `relatedPosts = [...sameTopic, ...others].slice(0, 3)`.
+## Held — nothing else in A is safe to apply alone
 
-4. **Drop cap hunk (lines 331-353):** the pasted diff lost its JSX in transit; reconstructed to match the diff's stated intent ("drop cap via CSS `::first-letter`, first character stays inside the text node"):
-   - The first-paragraph branch becomes a single `<p className="my-4 article-dropcap">` with the same inline style as today, whose entire content is `dangerouslySetInnerHTML={{ __html: formatInline(line) }}` — the full line including the first letter, so crawlers/screen readers read "Le timing", not "L e timing".
-   - The inline 80px Cormorant span and the `first`/`rest` split are removed; the visual result is reproduced by the new `.article-dropcap::first-letter` rule in index.css.
+- Hunks **1 (import)** and **3 (relatedPosts)** create an import and variables used only by hunk 6; without it they fail the typecheck as unused.
+- Hunk **2 (blogHref/ctaHref trailing slash)** without hunk 7 produces `/blogue//slug` (double slash) on the "Article suivant" link.
 
-5. **Related-articles section (inserted between the author-bio `</section>` and `{/* Next article */}`, ~line 690):** the pasted diff lost its JSX in transit; reconstructed with the page's existing patterns so it looks native:
-   - `<section className="section-container pb-16">` with `borderTop: "1px solid #E0DBD1"`, matching the "Article suivant" block.
-   - Uppercase eyebrow heading: "À lire aussi" (FR) / "Related reading" (EN), gold, 10px, 0.18em tracking — same style as the "Tags" and "À propos" eyebrows.
-   - Three `Link`s, one per related post, each to `canonicalPath(\`${blogHref}/${isFr ? rp.slug : rp.slugEn}\`)`, showing the category eyebrow (same `topicKey`-safe raw category) and the Cormorant title, with hover opacity like neighbouring links.
-   - Rendered only when `relatedPosts.length > 0`.
+## Blocked — please resend these complete
 
-6. **formatInline (line 225) — left unchanged.** The diff expects a `"$1"` variant that does not exist in the current file; the file already renders markdown links as gold underlined anchors, and the pasted `+` line's HTML appears to have been stripped in transit (applying the visible text would turn every in-article link into plain text, which contradicts the inlink goal of this task). If you want body links stripped to plain text, say so and that one line will be changed.
+1. **Hunk 5, drop cap (`@@ -330,26 +340,16 @@`):** the `+` JSX was stripped in transit; only empty tag remnants are visible, so the new `<p>` (its class, presumably `article-dropcap`, and its content) is unknown.
+2. **Hunk 6, related-articles section (`@@ -688,11 +688,44 @@`):** the entire section JSX was stripped in transit; only the comment, the `relatedPosts.length > 0` guard and the two `{isFr ? ... : ...}` expressions are visible. The surrounding `<section>`, heading and `Link` markup are unknown.
+3. **Hunk 7, "Article suivant" link:** the diff ends mid-hunk with context lines only — no `-`/`+` lines at all. From your note I expect `to={\`${blogHref}${...}/\`}`, but I need the exact lines.
+4. **Hunk 4, formatInline:** the `-` line does not match the file. Current line 225 is:
+   `.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>$1</a>")`
+   — markdown links currently render as gold underlined anchors, not `"$1"`. Also, the visible `+` line outputs only the label, which would turn every in-article link into plain text. Please confirm the intended `+` line (full code), or confirm that body links should become plain text.
 
-## B. src/index.css
+## After the complete hunks arrive
 
-Insert immediately before `.card-elevated {` (line 280), inside the same `@layer` block, exactly the given rule: `.article-dropcap::first-letter` with Cormorant Garamond, 80px, line-height 0.8, weight 400, `var(--gold)`, float left, 8px right / 4px top margin.
-
-## Verification
-
-- `bunx tsgo -p tsconfig.app.json --noEmit` (typecheck only — no build, per your rule).
-- Playwright against the local preview: open one FR and one EN article at 390px and 1440px, screenshot to confirm the drop cap renders once, links stay clickable and gold, the "À lire aussi / Related reading" block shows 3 posts and no layout shift to the "Article suivant" block; confirm no horizontal overflow.
+- Apply all remaining hunks exactly as given, then run `bunx tsgo -p tsconfig.app.json --noEmit` (typecheck only; no build, per your rule).
+- Self-check C: zero matches for `${blogHref}/` in the file.
+- Playwright on the local preview: one FR and one EN article at 390px and 1440px — drop cap renders once, links still gold and clickable, related block shows 3 posts, no horizontal overflow.
 - No forms submitted, no emails, no other files touched.
