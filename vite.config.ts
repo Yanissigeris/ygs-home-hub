@@ -127,6 +127,11 @@ export default defineConfig(() => ({
     react(),
     imagetools(),
     ViteImageOptimizer({
+      // Responsive hero variants are already encoded by vite-imagetools at the
+      // intended quality (src/lib/hero-pictures.ts, src/lib/hero-backgrounds.ts).
+      // Re-optimising them costs ~5 build minutes and is skipped anyway
+      // (the re-encoded file is larger), so leave the hero families alone.
+      exclude: /\/(hero-[^/]+|gatineau-river-view-[^/]+|home-interior-[^/]+|plateau-aylmer-lifestyle-[^/]+)\.(avif|webp)$/,
       png: { quality: 80 },
       jpeg: { quality: 80, mozjpeg: true },
       jpg: { quality: 80, mozjpeg: true },

@@ -8,3 +8,14 @@ declare module "*&as=picture" {
   };
   export default out;
 }
+
+declare module "*&as=srcset" {
+  const out: string;
+  export default out;
+}
+
+/** vite-imagetools single-output imports (…&as=url) resolve to the built asset URL. */
+declare module "*&as=url" {
+  const out: string;
+  export default out;
+}
