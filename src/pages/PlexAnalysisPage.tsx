@@ -30,7 +30,7 @@ const benefits = [
 
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
-  { icon: Clock, text: "Analyse personnalisée en 48h" },
+  { icon: Clock, text: "Réponse personnalisée" },
   { icon: Shield, text: "Aucune obligation, aucun engagement" },
 ];
 
@@ -102,7 +102,7 @@ const PlexAnalysisPage = () => {
                 {submitted ? (
                   <SuccessMessage
                     title="Merci! Demande envoyée."
-                    text="Je vous reviens dans les 48 prochaines heures avec votre analyse."
+                    text="Je vous reviens avec une réponse personnalisée et votre analyse."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
