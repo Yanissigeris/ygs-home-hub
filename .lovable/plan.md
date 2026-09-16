@@ -42,7 +42,7 @@
 
 Aucune statistique, tendance, date ou source de remplacement ne sera inventée. Les titres des blocs « Contexte 2026 » seront adaptés pour annoncer un conseil général plutôt qu’une analyse datée. Les autres titres et les routes resteront inchangés.
 
-La structure SEO et les métadonnées existantes seront préservées par défaut. Si une métadonnée ou une donnée structurée reprend exactement une promesse chiffrée ou une affirmation neutralisée dans le contenu visible, son texte sera harmonisé sans ajouter d’affirmation, notamment dans les réponses FAQ utilisées pour les données structurées.
+La structure SEO et les métadonnées existantes seront préservées par défaut. Si une métadonnée ou une donnée structurée reprend une promesse chiffrée ou une affirmation neutralisée dans le contenu visible, même avec une formulation équivalente plutôt qu’identique, son texte sera harmonisé sans ajouter d’affirmation, notamment dans les réponses FAQ utilisées pour les données structurées.
 
 ### 4. Cohérence des délais de réponse
 
