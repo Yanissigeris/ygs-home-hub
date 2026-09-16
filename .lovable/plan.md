@@ -31,8 +31,8 @@ Only the homepage hero text (FR `/` and EN `/en/`). Portrait, background image, 
 - Primary CTA: `Get my home valuation` → `/en/home-valuation/`
 - Secondary CTA: `Let's discuss your plans` → `/en/contact/`
 
-### 4. Deduplication
-- On both homepages, remove the `trustLine` (the now-duplicated sentence) from the bottom `CTASection`; the section itself, its title and buttons stay.
+### 4. Bottom CTA section
+- The existing `trustLine` stays unchanged in FR and EN. The repetition far below the hero is acceptable; the bottom `CTASection` is not touched at all.
 
 ### 5. Notes
 - SEO `<title>`/meta descriptions are **not** changed (hero-only scope).
