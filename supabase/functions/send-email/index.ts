@@ -184,10 +184,14 @@ serve(async (req) => {
     });
 
     if (!notifRes.ok) {
-      const err = await notifRes.text();
-      console.error("Resend notification error:", notifRes.status, err);
-      throw new Error(`Notification email failed [${notifRes.status}]: ${err}`);
+      // Internal notification failure. Log metadata only: no name, email,
+      // phone, address or message content ever reaches the logs.
+      console.error(
+        `Internal notification email failed [status=${notifRes.status}] formType=${data.formType} lang=${data.lang}`,
+      );
+      throw new Error(`Notification email failed [${notifRes.status}]`);
     }
+
 
     const confirmation = buildConfirmationHtml(data);
     const confirmRes = await fetch("https://api.resend.com/emails", {
@@ -202,9 +206,13 @@ serve(async (req) => {
     });
 
     if (!confirmRes.ok) {
-      const err = await confirmRes.text();
-      console.error("Resend confirmation error:", confirmRes.status, err);
+      // Visitor confirmation failure, distinct from the internal notification.
+      // Metadata only, never personal data.
+      console.error(
+        `Visitor confirmation email failed [status=${confirmRes.status}] formType=${data.formType} lang=${data.lang}`,
+      );
     }
+
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,

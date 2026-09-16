@@ -31,7 +31,11 @@ const t = {
     privacy: "Vos informations restent confidentielles.",
     successTitle: "Demande reçue !",
     successText: "Je vous contacte avec une réponse personnalisée et une analyse claire de votre propriété.",
+    savedTitle: "Demande enregistrée",
+    savedText: "Votre demande est bien enregistrée et je la traite. Pour une réponse plus rapide, appelez-moi directement.",
+    errorText: "Votre demande n'a pas pu être enregistrée. Vos renseignements sont conservés ici : veuillez réessayer.",
     urgentQ: "Une question urgente? →",
+
     changeAddr: "Modifier",
   },
   en: {
@@ -52,7 +56,11 @@ const t = {
     privacy: "Your information stays private.",
     successTitle: "Request received!",
     successText: "I'll follow up with a personalized response and a clear analysis of your property.",
+    savedTitle: "Request saved",
+    savedText: "Your request is saved and I am working on it. For a faster reply, call me directly.",
+    errorText: "Your request could not be saved. Your details are still here: please try again.",
     urgentQ: "Urgent question? →",
+
     changeAddr: "Edit",
   },
 };
@@ -75,6 +83,9 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
   const [shake, setShake] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [emptyFields, setEmptyFields] = useState<string[]>([]);
+  const [submitError, setSubmitError] = useState(false);
+  const [outcome, setOutcome] = useState<"full" | "saved-only">("full");
+
   const addressRef = useRef<HTMLInputElement>(null);
 
   const typeLabels: Record<string, string> = {
@@ -106,17 +117,20 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
       return;
     }
     setEmptyFields([]);
+    setSubmitError(false);
     setSubmitting(true);
+
 
     trackEvent("evaluation_widget_step2", {
       event_category: "lead_generation",
       event_label: "contact_info_entered",
     });
 
+    let saved = false;
     try {
       const supabase = await loadSupabase();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await supabase.from("valuation_leads" as any).insert({
+      const { error: insertError } = await supabase.from("valuation_leads" as any).insert({
         address: address.trim(),
         property_type: propertyType,
         name: name.trim(),
@@ -126,7 +140,23 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         language: lang,
       });
 
-      await supabase.functions.invoke("send-email", {
+      if (insertError) {
+        // Nothing was persisted: keep the entered values and allow a retry.
+        console.error("Valuation lead insert failed:", insertError.message);
+        setSubmitError(true);
+        setSubmitting(false);
+        return;
+      }
+
+      saved = true;
+      trackLead({
+        avatar: "vendeur",
+        offer: "evaluation_gratuite",
+        form_type: "valuation",
+        lang,
+      });
+
+      const { data: emailResult, error: emailError } = await supabase.functions.invoke("send-email", {
         body: {
           formType: "valuation",
           lang,
@@ -139,20 +169,29 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
         },
       });
 
-      trackLead({
-        avatar: "vendeur",
-        offer: "evaluation_gratuite",
-        form_type: "valuation",
-        lang,
-      });
-
+      // Technical failure (transport/HTTP) OR application-level error returned
+      // by the function: the lead is saved, but no email is confirmed.
+      const notified = !emailError && !(emailResult && (emailResult as { error?: unknown }).error);
+      if (!notified) {
+        console.error("Valuation notification not confirmed for a saved lead");
+      }
+      setOutcome(notified ? "full" : "saved-only");
       setStep(3);
-    } catch {
-      setStep(3);
+    } catch (err) {
+      if (saved) {
+        // The lead exists: never ask the visitor to submit a second request.
+        console.error("Valuation notification threw after a saved lead");
+        setOutcome("saved-only");
+        setStep(3);
+      } else {
+        console.error("Valuation lead submission failed before saving:", err);
+        setSubmitError(true);
+      }
     } finally {
       setSubmitting(false);
     }
   };
+
 
   const smallInputStyle = (isError?: boolean): React.CSSProperties => ({
     width: "100%",
@@ -449,6 +488,23 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                 {submitting ? "..." : c.submitCta}
               </button>
 
+              {submitError && (
+                <p
+                  role="alert"
+                  style={{
+                    fontSize: ".85rem",
+                    color: "#b42318",
+                    textAlign: "center",
+                    marginTop: ".75rem",
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {c.errorText}
+                </p>
+              )}
+
+
+
               <p
                 style={{
                   fontSize: ".75rem",
@@ -480,7 +536,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   margin: "0 0 .75rem",
                 }}
               >
-                {c.successTitle}
+                {outcome === "full" ? c.successTitle : c.savedTitle}
               </h3>
               <p
                 style={{
@@ -491,7 +547,7 @@ const ValuationWidget = ({ lang: langProp }: Props) => {
                   margin: "0 auto 1rem",
                 }}
               >
-                {c.successText}
+                {outcome === "full" ? c.successText : c.savedText}
               </p>
               <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }}>
                 {c.urgentQ}{" "}
