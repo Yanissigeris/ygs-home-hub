@@ -212,7 +212,7 @@ const PlexAnalysisPage = () => {
                   Connaître la valeur actuelle est la première étape, avant de décider quoi que ce soit.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
-                  <Link to="/evaluation-gratuite-gatineau">Évaluation gratuite</Link>
+                  <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
                 </Button>
               </div>
             </motion.aside>
