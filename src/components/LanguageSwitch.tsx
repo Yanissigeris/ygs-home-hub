@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { stripTrailingSlash } from "@/lib/url-utils";
+import { stripTrailingSlash, withTrailingSlash } from "@/lib/url-utils";
 
 /** Maps FR paths to EN paths and vice-versa. */
 const frToEn: Record<string, string> = {

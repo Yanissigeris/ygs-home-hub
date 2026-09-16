@@ -7,7 +7,7 @@ interface AreasServicesSectionProps { lang?: "fr" | "en"; }
 
 const areasFr: AreaLink[] = [
   { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre-ville, services, plex" },
-  { name: "Aylmer / Plateau", href: "/plateau-aylmer/", detail: "Lac, familles, bilingue, maisons récentes" },
+  { name: "Aylmer / Plateau", href: "/aylmer/", detail: "Lac, familles, bilingue, maisons récentes" },
   { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos, projet Zibi" },
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Grands terrains, prix accessibles, nature" },
   { name: "Chelsea", href: "/chelsea/", detail: "Parc de la Gatineau, tranquillité, bilingue" },
@@ -18,7 +18,7 @@ const areasFr: AreaLink[] = [
 
 const areasEn: AreaLink[] = [
   { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "City core, services, plex" },
-  { name: "Aylmer / Plateau", href: "/en/plateau-aylmer/", detail: "Lake, families, bilingual, newer homes" },
+  { name: "Aylmer / Plateau", href: "/en/aylmer/", detail: "Lake, families, bilingual, newer homes" },
   { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos, Zibi project" },
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Larger lots, affordable, nature" },
   { name: "Chelsea", href: "/en/chelsea/", detail: "Gatineau Park, serenity, bilingual" },
