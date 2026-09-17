@@ -96,6 +96,12 @@ const SiteLayout = () => {
   // Defer non-critical UI (cookie consent, WhatsApp button, footer) to idle
   // time to free the main thread during LCP/TBT window.
   const [deferredReady, setDeferredReady] = React.useState(false);
+  // Puppeteer prerender (scripts/puppeteer-render.mjs) sets window.__PRERENDER__.
+  // Floating widgets mount on idle, so without this they landed in some static
+  // snapshots and not others. Visitors are unaffected: the app re-renders on load.
+  const isPrerender =
+    typeof window !== "undefined" &&
+    Boolean((window as unknown as { __PRERENDER__?: boolean }).__PRERENDER__);
   React.useEffect(() => {
     type IdleWindow = Window & {
       requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
@@ -151,7 +157,7 @@ const SiteLayout = () => {
       <React.Suspense fallback={null}>
         <SiteFooter />
       </React.Suspense>
-      {deferredReady && (
+      {deferredReady && !isPrerender && (
         <React.Suspense fallback={null}>
           <WhatsAppButton />
           <CookieConsent />
