@@ -2,6 +2,7 @@ import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
@@ -99,6 +100,8 @@ const ValuationPageEn = () => {
         ]}
         background="alt"
       />
+      {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+      <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
       <FAQSection title="Valuation questions" items={valuationFaq} />
     </>
   );
