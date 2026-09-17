@@ -2,6 +2,7 @@ import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
@@ -287,6 +288,12 @@ const ValuationPage = () => {
           { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
         ]}
         background="alt"
+      />
+      {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+      <RelatedPages
+        overline={marketBlockCopy.fr.overline}
+        title={marketBlockCopy.fr.title}
+        pages={marketArticlePages("fr", "seller")}
       />
       <FAQSection title="Questions sur l'évaluation" items={valuationFaq} />
     </>
