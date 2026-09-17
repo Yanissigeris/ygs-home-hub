@@ -7,6 +7,8 @@ import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContentBlock from "@/components/ContentBlock";
 import SectionHeading from "@/components/SectionHeading";
@@ -81,6 +83,8 @@ const PlexPageEn = () => (
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide, get it by email" />
     <ReviewSection overline="Investor testimonials" title="Informed decisions, real results" reviews={getReviewsByCategory("plex").slice(0, 2)} columns={2} />
     <CTASection dark title="Get a clear reading of your situation" text="Sell, buy or simply understand your position, I help you see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
+    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+    <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "investor")} />
     <FAQSection items={faq} />
   </>
 );

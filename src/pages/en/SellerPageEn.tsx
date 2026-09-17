@@ -6,6 +6,8 @@ import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import FAQSection from "@/components/FAQSection";
+import RelatedPages from "@/components/RelatedPages";
+import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import InlineCTA from "@/components/InlineCTA";
@@ -88,6 +90,8 @@ const SellerPageEn = () => (
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
     <ReviewSection overline="Seller testimonials" title="They sold with confidence" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
     <CTASection dark title="Want to know what to do in your situation?" text="I'll give you the numbers, the options and a strategy adapted to your situation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Get my seller plan", href: "/en/sell/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
+    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
+    <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
     <FAQSection items={faq} />
   </>
 );
