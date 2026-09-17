@@ -35,7 +35,7 @@ const RealtorCommissionPageEn = () => (
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Realtor commission in Quebec</h1>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             How much is a real estate commission? What does it cover? Here's a clear guide to understanding broker fees in Quebec.
           </p>
         </motion.div>

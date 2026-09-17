@@ -35,7 +35,7 @@ const HowMuchRealtorCostPageEn = () => (
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">How much does a realtor cost in Quebec?</h1>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Realtor compensation is one of the first questions sellers ask. Here's how it works, explained clearly.
           </p>
         </motion.div>

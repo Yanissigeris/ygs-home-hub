@@ -47,7 +47,7 @@ const CommentChoisirCourtierPage = () => (
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Comment choisir un courtier immobilier?</h1>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Le bon courtier n'est pas celui qui promet le prix le plus haut. C'est celui qui vous donne un plan clair, une stratégie réaliste et un accompagnement transparent du début à la fin.
           </p>
         </motion.div>

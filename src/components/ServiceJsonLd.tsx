@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { withTrailingSlash } from "@/lib/url-utils";
 
 const BASE_URL = "https://yanisgauthier.com";
 
@@ -17,7 +18,7 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
       "@type": "Service",
       name,
       description,
-      url: `${BASE_URL}${url}`,
+      url: `${BASE_URL}${withTrailingSlash(url)}`,
       serviceType,
       provider: {
         "@type": "RealEstateAgent",
@@ -38,7 +39,7 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
       areaServed: areaServed.map((city) => ({ "@type": "City", name: city })),
       availableChannel: {
         "@type": "ServiceChannel",
-        serviceUrl: `${BASE_URL}${url}`,
+        serviceUrl: `${BASE_URL}${withTrailingSlash(url)}`,
         servicePhone: { "@type": "ContactPoint", telephone: "+1-819-210-3044" },
       },
     };

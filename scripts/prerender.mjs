@@ -221,7 +221,9 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
       name: "YGS — Yanis Gauthier-Sigeris",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/og/og-default.jpg`,
+        url: `${SITE_URL}/apple-touch-icon.png`,
+        width: 180,
+        height: 180,
       },
     },
   };
@@ -752,7 +754,7 @@ async function main() {
       ogType: "article",
     });
     frHtml = injectBlogPostingJsonLd(frHtml, {
-      url: frUrlAbs,
+      url: `${frUrlAbs}/`,
       headline: post.title,
       description: frMeta.description,
       image: ogImage,
@@ -792,7 +794,7 @@ async function main() {
       ogType: "article",
     });
     enHtml = injectBlogPostingJsonLd(enHtml, {
-      url: enUrlAbs,
+      url: `${enUrlAbs}/`,
       headline: post.titleEn,
       description: enMeta.description,
       image: ogImage,

@@ -10,7 +10,7 @@ const BASE_URL = "https://yanisgauthier.com";
 export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-posts").BlogPost; lang: "fr" | "en" }) => {
   const isFr = lang === "fr";
   const slug = isFr ? post.slug : post.slugEn;
-  const url = `${BASE_URL}${isFr ? "/blogue" : "/en/blog"}/${slug}`;
+  const url = `${BASE_URL}${isFr ? "/blogue" : "/en/blog"}/${slug}/`;
 
   useEffect(() => {
     const schema = {
@@ -32,7 +32,7 @@ export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-po
         "@type": "Organization",
         name: "YGS — Yanis Gauthier-Sigeris",
         url: BASE_URL,
-        logo: { "@type": "ImageObject", url: `${BASE_URL}/og-image.png`, width: 1200, height: 630 },
+        logo: { "@type": "ImageObject", url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       inLanguage: isFr ? "fr-CA" : "en-CA",

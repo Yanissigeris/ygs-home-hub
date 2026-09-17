@@ -12,7 +12,7 @@ Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résiden
 Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
   credentials: "Depuis 2017 · Club Platine · Club 100% · Temple de la renommée",
   cta: "En savoir plus",
-  ctaHref: "/contact-yanis",
+  ctaHref: "/contact-yanis/",
   imgAlt: "Yanis Gauthier-Sigeris, Courtier immobilier, Gatineau",
 };
 
@@ -26,7 +26,7 @@ A member of the Marty Waite Team since the beginning and active in residential r
 A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.`,
   credentials: "Since 2017 · Platinum Club · 100% Club · Hall of Fame",
   cta: "Learn more",
-  ctaHref: "/en/contact",
+  ctaHref: "/en/contact/",
   imgAlt: "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais",
 };
 

@@ -20,6 +20,40 @@ const detectMobile = () => {
 };
 
 
+/** Hero CTA link. In-page anchors ("#secteurs") scroll to the section, below the
+ *  fixed header; every other href is a router link with the canonical trailing slash. */
+const HeroCtaLink = ({
+  href,
+  onClick,
+  children,
+  ...rest
+}: { href: string } & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">) => {
+  if (href.startsWith("#")) {
+    return (
+      <a
+        href={href}
+        {...rest}
+        onClick={(e) => {
+          onClick?.(e);
+          const el = document.getElementById(href.slice(1));
+          if (!el) return;
+          e.preventDefault();
+          const top = el.getBoundingClientRect().top + window.scrollY - 96;
+          window.scrollTo({ top, behavior: "smooth" });
+          window.history.replaceState(window.history.state, "", href);
+        }}
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link to={canonicalPath(href)} {...rest} onClick={onClick}>
+      {children}
+    </Link>
+  );
+};
+
 interface HeroSectionProps {
   overline?: string;
   /** Preferred over `overline` on the home hero. Renders 3 cities on mobile, all on desktop, joined with " · ". */
@@ -419,7 +453,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Button>
                   )}
                   {secondaryCta && (
-                    <Link to={canonicalPath(secondaryCta.href)} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</Link>
+                    <HeroCtaLink href={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</HeroCtaLink>
                   )}
                 </div>
               )}
@@ -748,8 +782,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Link>
                   )}
                   {secondaryCta && (headline ? (
-                    <Link
-                      to={canonicalPath(secondaryCta.href)}
+                    <HeroCtaLink
+                      href={secondaryCta.href}
                       className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
@@ -765,10 +799,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       <span style={{ borderBottom: "1px solid rgba(255,255,255,.55)", paddingBottom: "2px" }}>
                         {secondaryCta.label}
                       </span>
-                    </Link>
+                    </HeroCtaLink>
                   ) : (
-                    <Link
-                      to={canonicalPath(secondaryCta.href)}
+                    <HeroCtaLink
+                      href={secondaryCta.href}
                       className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
@@ -782,7 +816,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}
                     >
                       {secondaryCta.label}
-                    </Link>
+                    </HeroCtaLink>
                   ))}
                 </div>
               )}
