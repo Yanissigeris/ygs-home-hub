@@ -35,7 +35,7 @@ const CombienCouteCourtierPage = () => (
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Combien coûte un courtier immobilier au Québec?</h1>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             La rémunération d'un courtier est l'une des premières questions que se posent les vendeurs. Voici comment ça fonctionne, simplement.
           </p>
         </motion.div>

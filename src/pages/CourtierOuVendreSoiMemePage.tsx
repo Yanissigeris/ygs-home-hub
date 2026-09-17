@@ -35,7 +35,7 @@ const CourtierOuVendreSoiMemePage = () => (
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Courtier immobilier ou vendre seul?</h1>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/50">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Les deux options sont légitimes. Voici une comparaison honnête pour vous aider à faire le bon choix selon votre situation.
           </p>
         </motion.div>
