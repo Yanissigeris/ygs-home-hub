@@ -305,7 +305,8 @@ const AylmerPage = () => (
       title="Découvrir"
       pages={[
         ...related,
-        { title: "Propriétés à Aylmer", text: "Voir les inscriptions en cours.", href: "/proprietes?secteur=aylmer" },
+        { title: "Vivre à Aylmer — le guide", text: "Quotidien, écoles, parcs et vie de quartier.", href: "/vivre-a-aylmer/" },
+        { title: "Propriétés à Aylmer", text: "Voir les inscriptions en cours.", href: "/proprietes/" },
         { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation-ottawa-gatineau/" },
       ]}
       background="alt"

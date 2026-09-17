@@ -300,7 +300,8 @@ const AylmerPageEn = () => (
       title="Discover"
       pages={[
         ...related,
-        { title: "Aylmer properties", text: "See current listings.", href: "/en/properties?area=aylmer" },
+        { title: "Living in Aylmer — the guide", text: "Daily life, schools, parks and neighbourhood feel.", href: "/en/living-aylmer/" },
+        { title: "Aylmer properties", text: "See current listings.", href: "/en/properties/" },
         { title: "Ottawa → Gatineau relocation", text: "Complete guide for crossing the river.", href: "/en/relocation/" },
       ]}
       background="alt"
