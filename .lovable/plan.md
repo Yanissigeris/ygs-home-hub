@@ -29,7 +29,7 @@ Pas de suffixe « | YGS » dans `title` (le script de build l'ajoute).
 |---|---|---|
 | guide-copropriete-gatineau-tout-savoir (ligne ~2475) | title | Copropriété à Gatineau : frais de condo et syndicat |
 | | metaDescription | Frais de condo, rôle du syndicat, fonds de prévoyance, ce que vous achetez vraiment. Le guide de la copropriété à Gatineau avant de signer. |
-| taxes-municipales-gatineau-vs-ottawa (ligne ~1487) | title | Taxes municipales : Gatineau ou Ottawa, qui paie plus? |
+| taxes-municipales-gatineau-vs-ottawa (ligne ~1487) | title | Taxes municipales Gatineau ou Ottawa : qui paie plus? |
 | | metaDescription | Taux de taxation, taxe scolaire, services inclus : la comparaison chiffrée entre Gatineau et Ottawa pour une maison de valeur équivalente. |
 | meilleurs-quartiers-familles-gatineau (ligne ~1597) | title | Les meilleurs quartiers pour une famille à Gatineau |
 | | metaDescription | Aylmer, Plateau, Hull ou Buckingham : écoles, parcs, sécurité et prix médians. Le comparatif des quartiers de Gatineau pour élever une famille. |
