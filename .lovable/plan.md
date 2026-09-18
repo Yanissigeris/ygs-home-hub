@@ -1,30 +1,44 @@
-# Blog article page: CSS drop cap, canonical hrefs, related articles
+# Mise à jour des titres et descriptions SEO (2 fichiers de données)
 
-Scope: only `src/pages/BlogArticlePage.tsx` and `src/index.css`. No renames, no deletes, no `npm run build`, no refactoring, existing strings/classes/styles preserved.
+## Portée
+Deux fichiers uniquement, aucun autre fichier touché :
+1. `src/data/seo-routes.json` — 7 clés (title + description), ogImage inchangé
+2. `src/data/blog-posts.ts` — 4 articles (title et/ou metaDescription FR), titleEn/metaDescriptionEn et contenu inchangés
 
-Per your rule, I stopped where the pasted code is incomplete instead of reconstructing it. Here is the exact status of each hunk.
+## 1. src/data/seo-routes.json
 
-## Ready now (complete and verified against the current files)
+Les 7 clés existent, sans barre oblique finale. Remplacement de `title` et `description` uniquement :
 
-- **B) src/index.css**: insert the `.article-dropcap::first-letter` rule (with its comment) immediately before `.card-elevated {` (currently line 280), inside the same `@layer` block. Harmless on its own — the class is only used once the drop-cap hunk lands.
+| Clé | Nouveau title | Nouvelle description |
+|---|---|---|
+| /quartiers-a-considerer-a-gatineau | Quartiers de Gatineau : lequel choisir? Comparatif \| YGS | Aylmer, Hull, Plateau, Buckingham, Masson-Angers : prix médians, profil des familles, accès à Ottawa. Le comparatif secteur par secteur pour choisir. |
+| /en/neighborhoods | Gatineau Neighbourhoods: Which One Is Right for You? \| YGS | Aylmer, Hull, Plateau, Buckingham, Masson-Angers: median prices, family profile, commute to Ottawa. A side-by-side guide to pick your area. |
+| /verifier-un-courtier-immobilier-oaciq | Registre OACIQ : vérifier ou trouver un courtier \| YGS | Consulter le registre public de l'OACIQ pour vérifier le permis d'un courtier ou en trouver un dans votre secteur. Les étapes, et ce qu'il faut regarder. |
+| /limbour | Limbour, Gatineau : prix, écoles, services du quartier \| YGS | Le quartier Limbour à Gatineau : fourchettes de prix, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre. |
+| /en/limbour | Limbour, Gatineau: Prices, Schools and What to Know \| YGS | The Limbour neighbourhood in Gatineau: price ranges, schools, parks and services, access to Highway 50. What to know before you buy or sell. |
+| /cote-dazur-gatineau | Côte-d'Azur, Gatineau : maisons à vendre et prix \| YGS | Le quartier Côte-d'Azur à Gatineau : bungalows, fourchettes de prix, ce qui attire les familles, les premiers acheteurs et les retraités. |
+| /en/cote-dazur | Côte-d'Azur, Gatineau: Homes for Sale and Prices \| YGS | The Côte-d'Azur neighbourhood in Gatineau: bungalows, price ranges, schools, and why families, first-time buyers and retirees pick it. |
 
-## Held — nothing else in A is safe to apply alone
+Champ `ogImage` des 7 entrées : inchangé. Les 113 autres clés : inchangées.
 
-- Hunks **1 (import)** and **3 (relatedPosts)** create an import and variables used only by hunk 6; without it they fail the typecheck as unused.
-- Hunk **2 (blogHref/ctaHref trailing slash)** without hunk 7 produces `/blogue//slug` (double slash) on the "Article suivant" link.
+## 2. src/data/blog-posts.ts
 
-## Blocked — please resend these complete
+Pas de suffixe « | YGS » dans `title` (le script de build l'ajoute).
 
-1. **Hunk 5, drop cap (`@@ -330,26 +340,16 @@`):** the `+` JSX was stripped in transit; only empty tag remnants are visible, so the new `<p>` (its class, presumably `article-dropcap`, and its content) is unknown.
-2. **Hunk 6, related-articles section (`@@ -688,11 +688,44 @@`):** the entire section JSX was stripped in transit; only the comment, the `relatedPosts.length > 0` guard and the two `{isFr ? ... : ...}` expressions are visible. The surrounding `<section>`, heading and `Link` markup are unknown.
-3. **Hunk 7, "Article suivant" link:** the diff ends mid-hunk with context lines only — no `-`/`+` lines at all. From your note I expect `to={\`${blogHref}${...}/\`}`, but I need the exact lines.
-4. **Hunk 4, formatInline:** the `-` line does not match the file. Current line 225 is:
-   `.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href='$2' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>$1</a>")`
-   — markdown links currently render as gold underlined anchors, not `"$1"`. Also, the visible `+` line outputs only the label, which would turn every in-article link into plain text. Please confirm the intended `+` line (full code), or confirm that body links should become plain text.
+| Slug | Champ | Nouvelle valeur |
+|---|---|---|
+| guide-copropriete-gatineau-tout-savoir (ligne ~2475) | title | Copropriété à Gatineau : frais de condo et syndicat |
+| | metaDescription | Frais de condo, rôle du syndicat, fonds de prévoyance, ce que vous achetez vraiment. Le guide de la copropriété à Gatineau avant de signer. |
+| taxes-municipales-gatineau-vs-ottawa (ligne ~1487) | title | Taxes municipales : Gatineau ou Ottawa, qui paie plus? |
+| | metaDescription | Taux de taxation, taxe scolaire, services inclus : la comparaison chiffrée entre Gatineau et Ottawa pour une maison de valeur équivalente. |
+| meilleurs-quartiers-familles-gatineau (ligne ~1597) | title | Les meilleurs quartiers pour une famille à Gatineau |
+| | metaDescription | Aylmer, Plateau, Hull ou Buckingham : écoles, parcs, sécurité et prix médians. Le comparatif des quartiers de Gatineau pour élever une famille. |
+| inventaire-gatineau-2026-30-pourcent-inscriptions (ligne ~79) | title | Inventaire +30 % à Gatineau : baissez-vous votre prix? |
+| | metaDescription | (inchangée) |
 
-## After the complete hunks arrive
+`titleEn`, `metaDescriptionEn` et tout le contenu des articles : inchangés.
 
-- Apply all remaining hunks exactly as given, then run `bunx tsgo -p tsconfig.app.json --noEmit` (typecheck only; no build, per your rule).
-- Self-check C: zero matches for `${blogHref}/` in the file.
-- Playwright on the local preview: one FR and one EN article at 390px and 1440px — drop cap renders once, links still gold and clickable, related block shows 3 posts, no horizontal overflow.
-- No forms submitted, no emails, no other files touched.
+## Vérifications après modification
+- JSON valide : `python3 -m json.tool src/data/seo-routes.json` (ou équivalent)
+- Les 7 clés et 4 articles relus pour confirmer les valeurs exactes et que rien d'autre n'a bougé
+- Typecheck non requis (données) ; aucun build lancé
