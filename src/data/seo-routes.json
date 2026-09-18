@@ -80,8 +80,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/quartiers-a-considerer-a-gatineau": {
-    "title": "Quartiers à considérer à Gatineau · Guide | YGS",
-    "description": "Comparatif des quartiers de Gatineau : Aylmer, Hull, Plateau, Buckingham, Masson-Angers. Profil, prix, ambiance, accès à Ottawa.",
+    "title": "Quartiers de Gatineau : lequel choisir? Comparatif | YGS",
+    "description": "Aylmer, Hull, Plateau, Buckingham, Masson-Angers : prix médians, profil des familles, accès à Ottawa. Le comparatif secteur par secteur pour choisir.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/militaire-gatineau": {
@@ -180,13 +180,13 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/cote-dazur-gatineau": {
-    "title": "Côte-d'Azur · Quartier Gatineau | YGS",
-    "description": "Quartier Côte-d'Azur à Gatineau : profil, prix, services, écoles. Guide pour acheter ou vendre dans ce secteur recherché.",
+    "title": "Côte-d'Azur, Gatineau : maisons à vendre et prix | YGS",
+    "description": "Le quartier Côte-d'Azur à Gatineau : bungalows, fourchettes de prix, ce qui attire les familles, les premiers acheteurs et les retraités.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/limbour": {
-    "title": "Limbour · Quartier Gatineau | YGS",
-    "description": "Quartier Limbour à Gatineau : maisons familiales, écoles, services. Profil du secteur et opportunités immobilières actuelles.",
+    "title": "Limbour, Gatineau : prix, écoles, services du quartier | YGS",
+    "description": "Le quartier Limbour à Gatineau : fourchettes de prix, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/ressources": {
@@ -275,8 +275,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/verifier-un-courtier-immobilier-oaciq": {
-    "title": "Vérifier un courtier sur l'OACIQ · Guide | YGS",
-    "description": "Comment vérifier qu'un courtier immobilier est bien inscrit à l'OACIQ ? Étapes, registre public, points à valider.",
+    "title": "Registre OACIQ : vérifier ou trouver un courtier | YGS",
+    "description": "Consulter le registre public de l'OACIQ pour vérifier le permis d'un courtier ou en trouver un dans votre secteur. Les étapes, et ce qu'il faut regarder.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/frais-de-courtage-immobilier-quebec": {
@@ -380,8 +380,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/en/neighborhoods": {
-    "title": "Gatineau neighborhoods to consider · Guide | YGS",
-    "description": "Compare Gatineau neighborhoods: Aylmer, Hull, Plateau, Buckingham, Masson-Angers. Profile, prices, vibe, access to Ottawa.",
+    "title": "Gatineau Neighbourhoods: Which One Is Right for You? | YGS",
+    "description": "Aylmer, Hull, Plateau, Buckingham, Masson-Angers: median prices, family profile, commute to Ottawa. A side-by-side guide to pick your area.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/military": {
@@ -480,13 +480,13 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/cote-dazur": {
-    "title": "Côte-d'Azur · Gatineau neighborhood | YGS",
-    "description": "Côte-d'Azur neighborhood in Gatineau: profile, prices, services, schools. Guide to buy or sell in this sought-after area.",
+    "title": "Côte-d'Azur, Gatineau: Homes for Sale and Prices | YGS",
+    "description": "The Côte-d'Azur neighbourhood in Gatineau: bungalows, price ranges, schools, and why families, first-time buyers and retirees pick it.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/limbour": {
-    "title": "Limbour · Gatineau neighborhood | YGS",
-    "description": "Limbour neighborhood in Gatineau: family homes, schools, services. Area profile and current real estate opportunities.",
+    "title": "Limbour, Gatineau: Prices, Schools and What to Know | YGS",
+    "description": "The Limbour neighbourhood in Gatineau: price ranges, schools, parks and services, access to Highway 50. What to know before you buy or sell.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/resources": {
