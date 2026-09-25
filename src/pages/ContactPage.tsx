@@ -115,6 +115,18 @@ const ContactPage = () => {
         <p className="prose-body mt-4">
           Je détiens un permis de courtier immobilier résidentiel de l'OACIQ (n° 112201). Je travaille en français et en anglais, surtout à Aylmer, Hull, au Plateau, à Gatineau-centre, à Chelsea et à Cantley.
         </p>
+        <p className="prose-body mt-4">
+          Mes profils officiels :{" "}
+          <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Registre de l'OACIQ</a>
+          {" · "}
+          <a href="https://www.centris.ca/fr/courtier-immobilier~yanis-gauthier-sigeris~re-max-direct-inc./g8867" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Centris</a>
+          {" · "}
+          <a href="https://www.realtor.ca/agent/2043379/yanis-gauthier-sigeris-216-ch-daylmer-gatineau-quebec-j9h1a4" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">REALTOR.ca</a>
+          {" · "}
+          <a href="https://avecuncourtier.com/fr/courtiers/nos-courtiers/112201-yanis-gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Chambre immobilière de l'Outaouais</a>
+          {" · "}
+          <a href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">RE/MAX Québec</a>
+        </p>
 
         <ContactCard
           items={contactItems}
