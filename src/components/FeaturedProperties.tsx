@@ -236,7 +236,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       "14073975", // Triplex 14 rue de la Cime (actif, 1 079 900 $)
       "19326119", // Quadruplex 71 rue Lessard (actif, 1 029 900 $)
       "16828271", // Maison 312 rue Le Gallois (vendu, 649 900 $)
-      "28167244", // Maison Gatineau (active, 499 900 $)
+      "24069166", // Maison Gatineau (active, 479 900 $)
       "15163372", // Maison Limbour (vendu, 649 900 $)
     ];
     const featured = strategicOrder

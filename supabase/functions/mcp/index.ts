@@ -78,21 +78,21 @@ var listings = [
     description_en: "Bright 2-bedroom condo, 9 ft ceilings, wall AC. Available June 1, 2026."
   },
   {
-    id: "28167244",
-    mls: "28167244",
+    id: "24069166",
+    mls: "24069166",
     address: "1535 Rue Atmec",
     city: "Gatineau (Des Fleurs / R\xE9mi Berthiaume / Cheval Blanc)",
-    price_fr: "499 900 $",
-    price_en: "$499,900",
+    price_fr: "479 900 $",
+    price_en: "$479,900",
     type: "Maison \xE0 \xE9tages (jumel\xE9e) / Semi-detached",
     bedrooms: "3",
     bathrooms: "1",
     area: "1 355 pi\xB2 / sq ft",
     year_built: "2012",
     status: "active",
-    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/28167244",
-    description_fr: "Jumel\xE9 2012, aire ouverte, 3 ch., sous-sol am\xE9nag\xE9, piscine hors terre au sel, 2 min de l'A-50.",
-    description_en: "2012 semi-detached, open concept, 3 bed, finished basement, salt above-ground pool, 2 min from Hwy 50."
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
+    description_fr: "Jumel\xE9 2012, 3 chambres, sous-sol am\xE9nag\xE9, cour cl\xF4tur\xE9e avec gazebo et stationnement pour 5 voitures, \xE0 2 min de l'A-50.",
+    description_en: "2012 semi-detached home, 3 bedrooms, finished basement, fenced yard with gazebo and parking for 5 cars, 2 min from Hwy 50."
   }
 ];
 var list_properties_default = defineTool({
