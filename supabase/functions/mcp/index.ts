@@ -93,6 +93,23 @@ var listings = [
     remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
     description_fr: "Jumel\xE9 2012, 3 chambres, sous-sol am\xE9nag\xE9, cour cl\xF4tur\xE9e avec gazebo et stationnement pour 5 voitures, \xE0 2 min de l'A-50.",
     description_en: "2012 semi-detached home, 3 bedrooms, finished basement, fenced yard with gazebo and parking for 5 cars, 2 min from Hwy 50."
+  },
+  {
+    id: "26501194",
+    mls: "26501194",
+    address: "383 Boul. des Grives, app. 4",
+    city: "Gatineau (Hull, Plateau de la Capitale)",
+    price_fr: "294 900 $",
+    price_en: "$294,900",
+    type: "Appartement / Condominium apartment",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "1 144 pi\xB2 / sq ft",
+    year_built: "2006",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
+    description_fr: "Unit\xE9 de coin au dernier \xE9tage, 2 chambres, aire ouverte avec foyer \xE9lectrique, climatiseur mural et 1 144 pi\xB2 au coeur du Plateau.",
+    description_en: "Top-floor corner unit with 2 bedrooms, open living area with electric fireplace, wall-mounted air conditioner and 1,144 sq ft in the heart of the Plateau."
   }
 ];
 var list_properties_default = defineTool({

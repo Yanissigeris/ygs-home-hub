@@ -4,6 +4,7 @@ import property15163372 from "@/assets/property-15163372.webp";
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property24069166 from "@/assets/property-24069166.webp.asset.json";
+import property26501194 from "@/assets/property-26501194.webp.asset.json";
 import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
@@ -88,6 +89,24 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/fr/proprietes/condo-a-louer-outaouais/310-boul-d-europe-gatineau-aylmer-plateau-de-la-capitale-19674845",
     mls: "19674845",
     status: "rented",
+  },
+  {
+    id: "26501194",
+    address: "383 Boul. des Grives, apt. 4",
+    city: "Gatineau (Hull, Plateau de la Capitale)",
+    price: "$294,900",
+    type: "Condominium apartment",
+    bedrooms: "2",
+    bathrooms: "1",
+    area: "1,144 sq ft",
+    yearBuilt: "2006",
+    description:
+      "Top-floor corner unit with no neighbours above. Bright 1,144 sq ft condo in the heart of the Plateau with 2 large bedrooms, including a primary bedroom with walk-in closet. Open living area with electric fireplace and patio door, functional kitchen, bathroom, laundry room and storage. Wall-mounted air conditioner, dishwasher and stove included. Walking distance to schools, a park and the bike path, close to the highway and services. Well-managed building with a reserve fund study.",
+    image: property26501194.url,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
+    mls: "26501194",
+    status: "active",
   },
   {
     id: "24069166",
