@@ -7,7 +7,7 @@ import property28167244 from "@/assets/property-28167244.webp";
 import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
-import property27736954 from "@/assets/property-27736954.webp";
+import property22872864 from "@/assets/property-22872864.webp.asset.json";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
 
@@ -184,21 +184,23 @@ export const properties: Property[] = [
     status: "sold",
   },
   {
-    id: "27736954",
+    id: "22872864",
     address: "188 Rue des Hautes-Rives",
     city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
-    price: "494 900 $",
+    price: "479 900 $",
     type: "Maison à étages",
     bedrooms: "3",
     bathrooms: "1",
     powderRooms: "1",
     area: "1 455 pi²",
+    lotSize: "4 718 pi²",
+    yearBuilt: "1994",
     description:
-      "Charmante maison jumelée de 3 chambres dans un secteur familial du Vieux-Aylmer. Salle de bain nouvellement rénovée avec douche vitrée en coin et bain autoportant. Sous-sol aménagé offrant un espace de vie supplémentaire, prêt à être personnalisé. À distance de marche de la marina d'Aylmer, du parc et de la plage des Cèdres, de la piste cyclable riveraine et des restaurants du Vieux-Aylmer. Libre immédiatement — prise de possession rapide possible.",
-    image: property27736954,
+      "Charmante maison jumelée de 3 chambres dans un secteur familial du Vieux-Aylmer. Salle de bain rénovée avec douche vitrée en coin et bain autoportant. Le sous-sol aménagé offre un espace de vie supplémentaire. À proximité de la marina d'Aylmer, des parcs, des commerces et des services. Libre immédiatement avec possibilité de prise de possession rapide.",
+    image: property22872864.url,
     remaxUrl:
-      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-27736954",
-    mls: "27736954",
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
+    mls: "22872864",
     status: "active",
   },
   {
