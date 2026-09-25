@@ -2,7 +2,7 @@
 // vite-imagetools generates 400 / 640 / 900-wide AVIF + WebP variants at build,
 // returning a <picture>-shaped object with srcsets for each format.
 
-import p28167244 from "@/assets/property-28167244.webp?w=400;640;900&format=avif;webp&as=picture";
+import p24069166 from "@/assets/property-24069166.webp.asset.json";
 import p28743871 from "@/assets/property-28743871.webp?w=400;640;900&format=avif;webp&as=picture";
 import p15163372 from "@/assets/property-15163372.webp?w=400;640;900&format=avif;webp&as=picture";
 import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif;webp&as=picture";
@@ -36,7 +36,11 @@ const toSet = (p: PictureImport): PropertyImageSet => ({
 });
 
 export const propertyImages: Record<string, PropertyImageSet> = {
-  "28167244": toSet(p28167244 as PictureImport),
+  "24069166": {
+    avifSrcSet: "",
+    webpSrcSet: "",
+    fallback: p24069166.url,
+  },
   "28743871": toSet(p28743871 as PictureImport),
   "15163372": toSet(p15163372 as PictureImport),
   "17113358": toSet(p17113358 as PictureImport),
