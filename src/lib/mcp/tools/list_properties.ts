@@ -71,6 +71,16 @@ const listings: Listing[] = [
     description_fr: "Jumelé 2012, 3 chambres, sous-sol aménagé, cour clôturée avec gazebo et stationnement pour 5 voitures, à 2 min de l'A-50.",
     description_en: "2012 semi-detached home, 3 bedrooms, finished basement, fenced yard with gazebo and parking for 5 cars, 2 min from Hwy 50.",
   },
+  {
+    id: "26501194", mls: "26501194",
+    address: "383 Boul. des Grives, app. 4", city: "Gatineau (Hull, Plateau de la Capitale)",
+    price_fr: "294 900 $", price_en: "$294,900",
+    type: "Appartement / Condominium apartment", bedrooms: "2", bathrooms: "1", area: "1 144 pi² / sq ft", year_built: "2006",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
+    description_fr: "Unité de coin au dernier étage, 2 chambres, aire ouverte avec foyer électrique, climatiseur mural et 1 144 pi² au coeur du Plateau.",
+    description_en: "Top-floor corner unit with 2 bedrooms, open living area with electric fireplace, wall-mounted air conditioner and 1,144 sq ft in the heart of the Plateau.",
+  },
 ];
 
 export default defineTool({
