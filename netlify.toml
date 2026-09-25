@@ -9,6 +9,11 @@
   publish = "dist"
   command = "npm ci --include=dev && npx --no-install puppeteer browsers install chrome && npm run build"
 
+     # IndexNow : soumet à Bing les URLs modifiées, après chaque déploiement de
+   # production réussi (voir netlify/plugins/indexnow/index.js).
+   [[plugins]]
+     package = "./netlify/plugins/indexnow"
+
 # No edge functions in the critical path — bots and humans both receive the
 # prerendered static HTML directly from the Netlify CDN (~50-100ms).
 # SPA fallback for non-prerendered routes is handled by public/_redirects.
