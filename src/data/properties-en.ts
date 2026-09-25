@@ -3,7 +3,7 @@ import property15163372 from "@/assets/property-15163372.webp";
 
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
-import property28167244 from "@/assets/property-28167244.webp";
+import property24069166 from "@/assets/property-24069166.webp.asset.json";
 import property14073975 from "@/assets/property-14073975.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
@@ -90,10 +90,10 @@ export const propertiesEn: Property[] = [
     status: "rented",
   },
   {
-    id: "28167244",
+    id: "24069166",
     address: "1535 Rue Atmec",
     city: "Gatineau (Gatineau, Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
-    price: "$499,900",
+    price: "$479,900",
     type: "Semi-detached two-storey",
     bedrooms: "3",
     bathrooms: "1",
@@ -102,11 +102,11 @@ export const propertiesEn: Property[] = [
     lotSize: "2,906 sq ft",
     yearBuilt: "2012",
     description:
-      "Semi-detached home built in 2012 in a quiet family neighbourhood of Gatineau. Bright open-concept main floor with island and stainless appliances, 3 bedrooms including primary with walk-in, full bathroom with separate shower and tub. Fully finished basement. Fenced yard with saltwater above-ground pool, shed, and paved parking for 5 cars. Wall-mounted A/C, air exchanger and central vacuum included. 2 min from Highway 50, 20 min from Ottawa.",
-    image: property28167244,
+      "Semi-detached home built in 2012 with three finished levels, 2 minutes from Highway 50. Kitchen with island and stainless steel appliances, 3 bedrooms including a primary bedroom with walk-in closet, and bathroom with separate shower and tub. Finished basement with 8-foot ceiling and large family room. Fenced yard with gazebo and cedar hedge, shed, and paved parking for 5 cars. Wall-mounted heat pump and air exchanger.",
+    image: property24069166.url,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/28167244",
-    mls: "28167244",
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
+    mls: "24069166",
     status: "active",
   },
   {
