@@ -8,6 +8,17 @@
 /en/blog/gatineau-real-estate-market-2025    /en/blog/gatineau-real-estate-market-april-2026/   301
 /en/blog/gatineau-real-estate-market-2025/   /en/blog/gatineau-real-estate-market-april-2026/  301
 
+# 301 — Consolidation Limbour (sept. 2026) : articles quasi identiques au hub,
+# contenu absorbé dans /limbour/ et /en/limbour/ (sections question + réponse)
+/blogue/limbour-quartier-familial-moderne-gatineau        /limbour/       301
+/blogue/limbour-quartier-familial-moderne-gatineau/       /limbour/       301
+/blogue/pourquoi-jeunes-familles-limbour                  /limbour/       301
+/blogue/pourquoi-jeunes-familles-limbour/                 /limbour/       301
+/en/blog/limbour-modern-family-neighborhood-gatineau      /en/limbour/    301
+/en/blog/limbour-modern-family-neighborhood-gatineau/     /en/limbour/    301
+/en/blog/why-young-families-choose-limbour                /en/limbour/    301
+/en/blog/why-young-families-choose-limbour/               /en/limbour/    301
+
 # 301 — Anciennes URLs propriétés vers la page canonique
 /proprietes-vedettes              /proprietes/    301
 /nouvelles-inscriptions           /proprietes/    301
