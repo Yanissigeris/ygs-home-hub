@@ -34,13 +34,23 @@ const AccordionTrigger = React.forwardRef<
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
+/**
+ * SEO/AEO: Radix only renders an item's children while it is open, so the
+ * prerendered HTML contained the questions but EMPTY answers for every closed
+ * item (331 answers on 101 pages, Sept 2026 audit). `forceMount` keeps the
+ * answer in the DOM at all times; closed items are hidden with CSS
+ * (display:none via data-state), which Google indexes normally and which
+ * non-JS crawlers (GPTBot, ClaudeBot, PerplexityBot, Bingbot) read as text.
+ * The open animation is kept; the close is instant.
+ */
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="overflow-hidden text-sm transition-all data-[state=closed]:hidden data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-3.5 pt-0", className)}>{children}</div>
