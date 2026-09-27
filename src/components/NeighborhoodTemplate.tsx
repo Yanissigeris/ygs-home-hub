@@ -24,6 +24,13 @@ export interface NeighborhoodProps {
   trustSpecialty: string;
   lifestyle: { image: string; imageAlt: string; title: string; subtitle?: string };
   reasons: string[];
+  /**
+   * Optional answer blocks (AEO/GEO): each question is an <h2>, followed by a
+   * short self-contained answer (first paragraph, ~40-60 words) and optional
+   * detail. Rendered right after the lifestyle section. Pages without this
+   * prop render exactly as before.
+   */
+  answers?: { q: string; a: string; detail?: string }[];
   profilesTitle: string;
   profiles: { icon: LucideIcon; title: string; text: string }[];
   inlineCta: { text: string; label: string; href: string };
@@ -167,6 +174,22 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
           ))}
         </div>
       </ImageTextSplit>
+
+      {p.answers && p.answers.length > 0 && (
+        <section className="section-padding bg-background">
+          <div className="section-container max-w-[44rem] space-y-12">
+            {p.answers.map((item) => (
+              <div key={item.q}>
+                <h2>{item.q}</h2>
+                <p className="mt-4 text-[1.0625rem] leading-relaxed text-foreground">{item.a}</p>
+                {item.detail && (
+                  <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">{item.detail}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <CardGrid 
         overline={lang === "en" ? "Who it's for" : "Pour qui"} 
