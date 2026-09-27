@@ -5,7 +5,7 @@ import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property24069166 from "@/assets/property-24069166.webp.asset.json";
 import property26501194 from "@/assets/property-26501194.webp.asset.json";
-import property14073975 from "@/assets/property-14073975.webp";
+import property17464620 from "@/assets/property-17464620.webp.asset.json";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
 import property22872864 from "@/assets/property-22872864.webp.asset.json";
@@ -147,21 +147,22 @@ export const properties: Property[] = [
     status: "active",
   },
   {
-    id: "14073975",
+    id: "17464620",
     address: "14 Rue de la Cime",
     city: "Gatineau (Hull, Richelieu / Hautes-Plaines / Dôme)",
-    price: "1 079 900 $",
-    type: "Triplex",
-    bedrooms: "3",
-    bathrooms: "1",
-    area: "617,70 m² (terrain)",
+    price: "1 029 900 $",
+    type: "Triplex détaché",
+    bedrooms: "7",
+    bathrooms: "3",
+    area: "6 649 pi² (terrain)",
+    lotSize: "6 649 pi²",
     yearBuilt: "2003",
     description:
-      "Superbe triplex offrant un excellent potentiel d'investissement avec un revenu locatif annuel d'environ 60 600 $. Soigneusement entretenu, il comprend 2 logements de 2 chambres et 1 logement de 3 chambres. Situé dans un cul-de-sac du secteur prisé des Hautes-Plaines, sans voisin à l'arrière, à quelques minutes du parc de la Gatineau. Inclus : 3 lave-vaisselle, 3 climatiseurs muraux et 3 échangeurs d'air.",
-    image: property14073975,
+      "Rare triplex détaché construit en 2003 dans un cul-de-sac des Hautes-Plaines, sans voisin à l'arrière. Idéal pour propriétaire-occupant avec un logement 5½ au rez-de-jardin libre, ou pour investisseur. Grand 6½ de 3 chambres avec plafond cathédrale, revenus potentiels de 60 600 $ par année, 6 stationnements et cabanon. À proximité du parc de la Gatineau, des écoles et d'Ottawa.",
+    image: property17464620.url,
     remaxUrl:
-      "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/14-rue-de-la-cime-gatineau-hull-richelieu-hautes-plaines-dome-14073975",
-    mls: "14073975",
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
+    mls: "17464620",
     status: "active",
   },
   {

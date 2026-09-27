@@ -233,7 +233,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
     // volume + prix), 3 actives variées par prix/secteur, vendu en clôture.
     const strategicOrder = [
       "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
-      "14073975", // Triplex 14 rue de la Cime (actif, 1 079 900 $)
+      "17464620", // Triplex 14 rue de la Cime (actif, 1 029 900 $)
       "26501194", // Condo 383 boul. des Grives (actif, 294 900 $)
       "19326119", // Quadruplex 71 rue Lessard (actif, 1 029 900 $)
       "16828271", // Maison 312 rue Le Gallois (vendu, 649 900 $)

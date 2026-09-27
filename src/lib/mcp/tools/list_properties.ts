@@ -81,6 +81,16 @@ const listings: Listing[] = [
     description_fr: "Unité de coin au dernier étage, 2 chambres, aire ouverte avec foyer électrique, climatiseur mural et 1 144 pi² au coeur du Plateau.",
     description_en: "Top-floor corner unit with 2 bedrooms, open living area with electric fireplace, wall-mounted air conditioner and 1,144 sq ft in the heart of the Plateau.",
   },
+  {
+    id: "17464620", mls: "17464620",
+    address: "14 Rue de la Cime", city: "Gatineau (Hull, Hautes-Plaines)",
+    price_fr: "1 029 900 $", price_en: "$1,029,900",
+    type: "Triplex détaché / Detached triplex", bedrooms: "7", bathrooms: "3", area: "6 649 pi² / 6,649 sq ft (terrain / lot)", year_built: "2003",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
+    description_fr: "Triplex détaché de 2003 dans un cul-de-sac, sans voisin arrière, avec 7 chambres au total, 6 stationnements et revenus potentiels de 60 600 $ par année.",
+    description_en: "Detached 2003 triplex on a cul-de-sac with no rear neighbours, 7 bedrooms in total, 6 parking spaces and potential revenue of $60,600 per year.",
+  },
 ];
 
 export default defineTool({
