@@ -1142,7 +1142,7 @@ Côte-d'Azur is an ideal playground for buyer-renovators. Buy a bungalow at a go
     categoryEn: "Neighborhoods",
     featuredImage: heroLimbour,
     publishDate: "2025-09-08",
-    published: true,
+    published: false, // 2026-09: consolidé dans le hub /limbour/ (301 dans public/_redirects)
     body: `## Un quartier qui a trouvé son identité
 
 Limbour s'est développé rapidement au cours des 15 dernières années et a trouvé son identité : un quartier familial moderne avec des maisons récentes, des parcs bien aménagés et une communauté jeune et dynamique.
@@ -1222,7 +1222,7 @@ Contrairement aux nouveaux développements, Limbour a déjà ses repères : parc
 
 Si vous hésitez entre le neuf à [Masson-Angers](/masson-angers) et la revente à [Limbour](/limbour), considérez ce que vous valorisez le plus : la personnalisation (neuf) ou un quartier déjà établi avec une maison prête à habiter (Limbour).
 
-**Lire aussi** : [Limbour quartier familial](/blogue/limbour-quartier-familial-moderne-gatineau) · [Constructions neuves à Masson-Angers](/blogue/constructions-neuves-masson-angers)`,
+**Lire aussi** : [Page quartier Limbour](/limbour/) · [Constructions neuves à Masson-Angers](/blogue/constructions-neuves-masson-angers/)`,
     bodyEn: `## Limbour's Sweet Spot
 
 Buying in Limbour means finding the sweet spot: homes recent enough to be modern and well-insulated, but not new enough to pay the new-build premium. Properties aged 5 to 15 years offer the best value.
@@ -1243,7 +1243,7 @@ Unlike new developments, Limbour already has its landmarks: mature parks, establ
 
 If you're torn between new construction in [Masson-Angers](/en/masson-angers) and resale in [Limbour](/en/limbour), consider what you value most: customization (new) or an already established neighborhood with a move-in ready home (Limbour).
 
-**Read also**: [Limbour family neighborhood](/en/blog/limbour-modern-family-neighborhood-gatineau) · [New construction in Masson-Angers](/en/blog/new-construction-masson-angers)`,
+**Read also**: [Limbour neighborhood page](/en/limbour/) · [New construction in Masson-Angers](/en/blog/new-construction-masson-angers/)`,
   },
   {
     slug: "pourquoi-jeunes-familles-limbour",
@@ -1260,7 +1260,7 @@ If you're torn between new construction in [Masson-Angers](/en/masson-angers) an
     categoryEn: "Neighborhoods",
     featuredImage: heroLimbour,
     publishDate: "2025-08-20",
-    published: true,
+    published: false, // 2026-09: consolidé dans le hub /limbour/ (301 dans public/_redirects)
     body: `## Un quartier conçu pour les familles
 
 Limbour n'est pas un quartier qui est devenu familial par accident, il a été conçu pour ça. Les développeurs ont planifié les rues, les parcs et les espaces verts avec les familles en tête. Le résultat est un quartier où tout est à distance de marche.
