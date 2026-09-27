@@ -10,7 +10,7 @@ const LimbourPage = () => (
     jsonLd={{ name: "Limbour", description: "Courtier immobilier dans le quartier Limbour à Gatineau. Secteur familial moderne.", lat: 45.4850, lng: -75.6600, url: "/limbour/" }}
     hero={{ overline: "Guide de quartier · Limbour", title: "Vivre, acheter ou vendre à Limbour", subtitle: "Quartier familial moderne du secteur Gatineau, près de l'Hôpital de Gatineau et de l'autoroute 50. Maisons des années 2000-2020, parcs, sentiers, à 20 minutes d'Ottawa.", image: heroImg }}
     trustSpecialty="Spécialiste Limbour et environs"
-    lifestyle={{ image: heroImg, imageAlt: "Quartier Limbour, Gatineau", title: "Pourquoi Limbour est prisé des familles", subtitle: "Limbour attire les jeunes familles et les acheteurs de deuxième propriété qui cherchent une maison récente, des terrains aérés et un quartier en croissance. Le sous-secteur Ferme Limbour est particulièrement recherché pour ses propriétés plus haut de gamme. Le secteur reste accessible pour des acheteurs qui veulent éviter les rénovations majeures qu'on retrouve dans les quartiers plus anciens." }}
+    lifestyle={{ image: heroImg, imageAlt: "Quartier Limbour, Gatineau", title: "Limbour est-il un bon quartier pour une famille?", subtitle: "Oui. C'est le profil d'acheteur que je vois le plus souvent à Limbour : de jeunes familles et des couples qui quittent un condo ou une première maison. Le quartier a été planifié pour eux, avec des rues en boucle et des culs-de-sac qui limitent la circulation de transit, des parcs et des sentiers intégrés au développement, et des écoles primaires du Centre de services scolaire des Draveurs à proximité. Le sous-secteur Ferme Limbour regroupe les propriétés plus grandes et plus haut de gamme." }}
     reasons={[
       "Maisons récentes et développements résidentiels modernes (constructions 2000-2020 majoritairement)",
       "Maisons unifamiliales et semi-détachées entre 475 000 $ et 800 000 $ selon le sous-secteur et le type (données Centris, mai 2026)",
@@ -21,6 +21,18 @@ const LimbourPage = () => (
       "Écoles secondaires desservant le secteur : Polyvalente de l'Érablière et École secondaire du Versant (CSSD Draveurs)",
       "Accès rapide à l'autoroute 50, environ 20 minutes du centre-ville d'Ottawa",
       "Quartier en croissance : peu de rénovations à prévoir comparé aux quartiers plus anciens",
+    ]}
+    answers={[
+      {
+        q: "Quel type de maisons trouve-t-on à Limbour?",
+        a: "Surtout des maisons unifamiliales à deux étages avec garage, construites entre 2000 et 2020, plus des maisons de ville et quelques jumelées. Les superficies courantes vont de 1 400 à 2 200 pi², avec un sous-sol souvent fini ou aménageable.",
+        detail: "Pour un acheteur, ça veut dire des matériaux, une isolation et une mécanique récents, donc peu de rénovations majeures à prévoir comparé aux quartiers plus anciens comme Côte-d'Azur. Les terrains sont déjà aménagés et les parcs sont matures. Dans Ferme Limbour, les terrains sont plus grands et souvent boisés, et une maison équivalente peut valoir de 30 000 $ à 50 000 $ de plus qu'ailleurs dans Limbour.",
+      },
+      {
+        q: "Limbour, Aylmer, Plateau ou Masson-Angers : lequel choisir?",
+        a: "Limbour offre des maisons récentes à un prix plus accessible qu'Aylmer ou le Plateau, avec un accès plus direct à Ottawa que Masson-Angers : environ 20 minutes du centre-ville par l'autoroute 50 et le pont Macdonald-Cartier.",
+        detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Si vous tenez au lac Deschênes ou aux commerces du vieux Aylmer, regardez Aylmer. Si vous préférez une construction neuve personnalisée et que le trajet compte moins, regardez Masson-Angers.",
+      },
     ]}
     profilesTitle="Limbour est idéal pour…"
     profiles={[
@@ -47,8 +59,8 @@ const LimbourPage = () => (
       { name: "Masson-Angers", href: "/masson-angers/", detail: "Secteur en développement avec maisons neuves à prix accessibles" },
     ]}}
     related={{ pages: [
-      { title: "Limbour : quartier familial moderne", text: "Découvrez ce secteur en croissance.", href: "/blogue/limbour-quartier-familial-moderne-gatineau/" },
       { title: "Acheter à Limbour", text: "Maisons récentes à bon prix.", href: "/blogue/acheter-limbour-maisons-recentes/" },
+      { title: "Acheter depuis Ottawa", text: "Traverser la rivière sans surprise.", href: "/acheter-a-gatineau-depuis-ottawa/" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
       { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
