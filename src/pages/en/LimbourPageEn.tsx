@@ -10,7 +10,7 @@ const LimbourPageEn = () => (
     jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour/" }}
     hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, 20 minutes from downtown Ottawa.", image: heroImg }}
     trustSpecialty="Limbour specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Limbour neighborhood, Gatineau", title: "Why families love Limbour", subtitle: "Limbour attracts young families and second-time buyers looking for newer homes, open lots, and a growing neighborhood. The Ferme Limbour sub-sector is especially sought after for higher-end properties. The area remains accessible for buyers who want to avoid the major renovations typical of older neighborhoods." }}
+    lifestyle={{ image: heroImg, imageAlt: "Limbour neighborhood, Gatineau", title: "Is Limbour a good neighborhood for families?", subtitle: "Yes. It's the buyer profile I see most often in Limbour: young families and couples moving up from a condo or a first home. The neighborhood was planned for them, with loop streets and cul-de-sacs that keep through traffic down, parks and trails built into the development, and both French and English schools within the Gatineau sector. The Ferme Limbour sub-sector has the larger, higher-end properties." }}
     reasons={[
       "Recent homes and modern residential developments (mostly 2000-2020 builds)",
       "Single-family homes and semi-detached between $475,000 and $800,000 depending on sub-sector and type (Centris data, May 2026)",
@@ -22,6 +22,18 @@ const LimbourPageEn = () => (
       "Quick access to Highway 50, about 20 minutes from downtown Ottawa",
       "Growing area with little renovation work needed compared to older neighborhoods",
       "Practical for federal commuters and Ottawa cross-river buyers seeking modern construction",
+    ]}
+    answers={[
+      {
+        q: "What kind of homes are in Limbour?",
+        a: "Mostly two-storey single-family homes with a garage, built between 2000 and 2020, plus townhomes and some semi-detached homes. Typical sizes range from 1,400 to 2,200 sq. ft., with a basement that is often finished or ready to finish.",
+        detail: "For a buyer, that means recent materials, insulation and mechanical systems, so few major renovations compared to older areas like Côte-d'Azur. Lots are already landscaped and parks are mature. In Ferme Limbour, lots are larger and often wooded, and an equivalent home can be worth $30,000 to $50,000 more than elsewhere in Limbour.",
+      },
+      {
+        q: "Limbour, Aylmer, the Plateau or Masson-Angers: which one should I choose?",
+        a: "Limbour offers recent homes at a more accessible price than Aylmer or the Plateau, with a more direct commute to Ottawa than Masson-Angers: about 20 minutes to downtown via Highway 50 and the Macdonald-Cartier Bridge.",
+        detail: "If you want a move-in ready home in an established neighborhood without over-leveraging, Limbour is often the right compromise. If Lac Deschênes or the shops of old Aylmer matter to you, look at Aylmer. If you prefer a customized new build and the commute matters less, look at Masson-Angers.",
+      },
     ]}
     profilesTitle="Limbour is ideal for…"
     profiles={[
@@ -47,10 +59,12 @@ const LimbourPageEn = () => (
       { name: "Masson-Angers", href: "/en/masson-angers/", detail: "Developing area with new builds at accessible prices" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
+      { title: "Buying in Limbour", text: "Recent homes at good prices.", href: "/en/blog/buying-limbour-recent-homes/" },
       { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },
       { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation/" },
       { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide/" },
       { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
+      { title: "Buy from Ottawa", text: "Crossing the river without surprises.", href: "/en/buy-from-ottawa/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide, buying in Limbour", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide, get it by email" }}
     brokerPerspective={{
