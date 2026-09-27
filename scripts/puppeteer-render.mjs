@@ -48,7 +48,7 @@ const NAV_TIMEOUT = 60_000;
  * Strategy: locate the opening tag, then walk forward counting <div>/</div>
  * pairs to find the matching close.
  */
-async function injectRootHtml(filePath, rootInnerHtml) {
+async function injectRootHtml(filePath, rootInnerHtml, headJsonLd = []) {
   let html;
   try {
     html = await fs.readFile(filePath, "utf8");
@@ -82,6 +82,18 @@ async function injectRootHtml(filePath, rootInnerHtml) {
   const before = html.slice(0, start);
   const after = html.slice(endIdx);
   html = `${before}<div id="root">${rootInnerHtml}</div>${after}`;
+
+  // Persist route JSON-LD that React / jsonld-routes.js injected client-side
+  // into <head>, so non-JS crawlers (GPTBot, ClaudeBot, PerplexityBot, Bing)
+  // get it in the static HTML. Skipped when a block with the same id was
+  // already injected server-side by prerender.mjs (no duplicates).
+  const tags = headJsonLd
+    .filter(({ id }) => !html.includes(`id="${id}"`))
+    .map(({ id, json }) =>
+      `\n    <script id="${id}" type="application/ld+json">${json.replace(/</g, "\\u003c")}</script>`,
+    )
+    .join("");
+  if (tags) html = html.replace("</head>", () => `${tags}\n  </head>`); // fn: "$" in answers stays literal
   await fs.writeFile(filePath, html, "utf8");
   return true;
 }
@@ -181,7 +193,46 @@ async function renderRoute(browser, route) {
         ? path.join(DIST, "index.html")
         : path.join(DIST, route.replace(/^\//, ""), "index.html");
 
-    const ok = await injectRootHtml(filePath, rootHtml);
+    // Collect client-injected JSON-LD worth persisting:
+    //  - FAQSection blocks (ygs-faq-jsonld-*) merged into ONE FAQPage under
+    //    the server-side id "ygs-faqpage-jsonld" (FAQSection skips its own
+    //    injection at runtime when that id exists, so no duplicate).
+    //  - Neighborhood RealEstateAgent (ygs-neighborhood-jsonld) from
+    //    public/jsonld-routes.js (inj() skips ids that already exist).
+    const headJsonLd = await page.evaluate(() => {
+      const out = [];
+      const faqNodes = Array.from(
+        document.querySelectorAll('script[type="application/ld+json"][id^="ygs-faq-jsonld"]'),
+      );
+      const seen = new Set();
+      const mainEntity = [];
+      for (const n of faqNodes) {
+        try {
+          const d = JSON.parse(n.textContent || "{}");
+          for (const q of d.mainEntity || []) {
+            if (q && q.name && !seen.has(q.name)) {
+              seen.add(q.name);
+              mainEntity.push(q);
+            }
+          }
+        } catch {}
+      }
+      if (mainEntity.length) {
+        out.push({
+          id: "ygs-faqpage-jsonld",
+          json: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity }),
+        });
+      }
+      const nh = document.getElementById("ygs-neighborhood-jsonld");
+      if (nh && nh.textContent) {
+        try {
+          out.push({ id: "ygs-neighborhood-jsonld", json: JSON.stringify(JSON.parse(nh.textContent)) });
+        } catch {}
+      }
+      return out;
+    });
+
+    const ok = await injectRootHtml(filePath, rootHtml, headJsonLd);
     return ok;
   } catch (err) {
     console.warn(`⚠️  ${route}: ${err.message}`);
