@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Y a-t-il des services à Buckingham?",
-    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. Pour les grandes surfaces et les spécialistes médicaux, on va vers le centre de Gatineau (30-40 minutes).",
+    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. L'Hôpital de Papineau est aussi à Buckingham. Pour les grandes surfaces, on va vers le centre de Gatineau (30-40 minutes).",
   },
   {
     q: "Les propriétés à Buckingham ont-elles des puits?",

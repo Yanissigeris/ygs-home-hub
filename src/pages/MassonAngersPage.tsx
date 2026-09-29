@@ -15,7 +15,7 @@ const MassonAngersPage = () => (
       "Prix d'entrée parmi les plus accessibles de Gatineau, jumelés et maisons neuves entre 400 000 $ et 490 000 $+ selon le type et l'année (données Centris, mai 2026)",
       "Constructions neuves actives : plusieurs promoteurs livrent en 2026 avec possession printemps disponible",
       "Deux sous-secteurs distincts : Masson (côté ouest, plus mature) et Angers (côté est, plus en développement)",
-      "Écoles primaires francophones de la Commission scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
+      "Écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "École du Sacré-Cœur a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec",
       "École secondaire Hormisdas-Gamelin à Buckingham (12 km, programme international IB et option sport)",
       "Accès rapide à l'autoroute 50-20-25 minutes du centre de Gatineau, environ 35-40 minutes du centre-ville d'Ottawa",
@@ -33,10 +33,10 @@ const MassonAngersPage = () => (
     faq={{
       title: "Questions sur Masson-Angers",
       items: [
-        { q: "Masson-Angers est-il loin du centre de Gatineau?", a: "Environ 20-25 minutes par l'autoroute 50. L'accès est rapide et direct. Pour le centre-ville d'Ottawa, prévoir 35-40 minutes selon le trafic et le pont utilisé (Macdonald-Cartier ou Champlain)." },
+        { q: "Masson-Angers est-il loin du centre de Gatineau?", a: "Environ 20-25 minutes par l'autoroute 50. L'accès est rapide et direct. Pour le centre-ville d'Ottawa, prévoir 35-40 minutes selon le trafic et le pont utilisé." },
         { q: "Quel est le prix d'une maison à Masson-Angers en 2026?", a: "Selon les inscriptions actives sur Centris en mai 2026, les jumelés et maisons unifamiliales se vendent généralement entre 400 000 $ et 490 000 $+ selon le type, l'année de construction et le sous-secteur. Les constructions neuves se positionnent souvent autour de 465 000 $ pour 5 chambres avec sous-sol fini." },
         { q: "Y a-t-il des maisons neuves à Masson-Angers?", a: "Oui, c'est l'un des secteurs avec le plus de constructions neuves à Gatineau. Plusieurs promoteurs sont actifs avec possession printemps 2026 dans certains projets." },
-        { q: "Quelles écoles desservent Masson-Angers?", a: "Quatre écoles primaires francophones de la Commission scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (qui a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec) et St-Jean-de-Brébeuf. Pour le secondaire, l'École secondaire Hormisdas-Gamelin à Buckingham (12 km) avec programme IB et option sport." },
+        { q: "Quelles écoles desservent Masson-Angers?", a: "Quatre écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (qui a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec) et St-Jean-de-Brébeuf. Pour le secondaire, l'École secondaire Hormisdas-Gamelin à Buckingham (12 km) avec programme IB et option sport." },
         { q: "Le marché est-il en hausse à Masson-Angers?", a: "Le marché reste actif avec une demande soutenue des premiers acheteurs et des jeunes familles. Le délai moyen de vente pour une unifamiliale dans la région métropolitaine de Gatineau était de 32 jours au quatrième trimestre 2025 (Chambre immobilière de l'Outaouais)." },
         { q: "Quels sont les sous-secteurs de Masson-Angers?", a: "Le territoire se divise en deux : Masson (côté ouest, plus mature, près de la rivière du Lièvre) et Angers (côté est, plus en développement avec les constructions neuves récentes). Chaque sous-secteur a sa propre dynamique de prix et d'inventaire." },
       ],

@@ -21,11 +21,11 @@ const faq = [
   },
   {
     q: "Puis-je construire sur un terrain à Chelsea?",
-    a: "Chelsea a des règlements stricts sur la construction, particulièrement en zones adjacentes au Parc de la Gatineau et en bord de rivière. Le zonage agricole, les bandes riveraines (10-15 mètres), et les contraintes de la MRC peuvent limiter ou encadrer les projets. Avant tout achat de terrain, une vérification complète auprès de la municipalité de Chelsea et de la MRC des Collines-de-l'Outaouais est indispensable.",
+    a: "Chelsea a des règlements stricts sur la construction, particulièrement en zones adjacentes au Parc de la Gatineau et en bord de rivière. Le zonage agricole, la bande de protection riveraine de 15 mètres et les contraintes de la MRC peuvent limiter ou encadrer les projets. Avant tout achat de terrain, une vérification complète auprès de la municipalité de Chelsea et de la MRC des Collines-de-l'Outaouais est indispensable.",
   },
   {
     q: "Mes enfants peuvent-ils fréquenter une école anglophone à Chelsea?",
-    a: "Oui. Chelsea est desservie par la Commission scolaire Western Québec pour l'éducation en anglais. L'école élémentaire Chelsea Elementary School est située dans la municipalité. Étant donné la répartition presque égale entre francophones et anglophones, Chelsea est l'une des communautés les plus naturellement bilingues de tout l'Outaouais.",
+    a: "Oui, si votre enfant est admissible à l'enseignement en anglais (certificat d'admissibilité). L'école primaire Chelsea Elementary, du Western Québec School Board, est dans la municipalité. Pour le secondaire, les écoles anglophones les plus proches sont à Gatineau, dans les secteurs Hull et Aylmer. Selon le recensement de 2021, la population de Chelsea se partage presque également entre francophones et anglophones.",
   },
 ];
 
@@ -97,7 +97,7 @@ const ChelseaPage = () => (
           La population de Chelsea est presque également divisée entre francophones et anglophones, environ 70 % des ménages parlent les deux langues officielles. Chelsea fut l'une des premières municipalités au Canada à interdire l'utilisation des pesticides. Ces deux caractéristiques, bilinguisme et sensibilité environnementale, définissent l'identité de la communauté. (Source: Wikipedia/Chelsea, Québec)
         </p>
         <p className="prose-body">
-          L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines dessert Chelsea et la connecte au réseau Rapibus de la STO et à OC Transpo d'Ottawa. Le Centre sportif Meredith (hockey, soccer, espaces communautaires) est le cœur des activités familiales de Chelsea. (Source: Wikipedia/Chelsea, Municipalité de Chelsea)
+          L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines relie Chelsea à Gatineau, avec correspondance vers le réseau de la STO. Le Centre sportif Meredith (hockey, soccer, espaces communautaires) est le cœur des activités familiales de Chelsea. (Source: Wikipedia/Chelsea, Municipalité de Chelsea)
         </p>
       </div>
     </ContentBlock>

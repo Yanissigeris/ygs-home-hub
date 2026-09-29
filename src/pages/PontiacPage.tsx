@@ -16,11 +16,11 @@ import heroImg from "@/assets/hero-pontiac.webp";
 const faq = [
   {
     q: "La municipalité de Pontiac, c'est la même chose que le Pontiac (MRC)?",
-    a: "Non, et c'est une confusion très fréquente. La municipalité de Pontiac (secteurs Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale. La MRC Pontiac est un territoire beaucoup plus vaste et beaucoup plus à l'ouest (Fort-Coulonge, Shawville, Campbell's Bay), il est hors de la RCN et d'un autre bassin de marché complètement différent. (Source: Wikipedia/Pontiac, Quebec)",
+    a: "Non, et c'est une confusion très fréquente. La municipalité de Pontiac (secteurs Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale. La MRC Pontiac est un territoire beaucoup plus vaste et beaucoup plus à l'ouest (Fort-Coulonge, Shawville, Campbell's Bay), elle est hors de la RCN et forme un bassin de marché complètement différent. (Source: Wikipedia/Pontiac, Quebec)",
   },
   {
     q: "Y a-t-il des écoles à Pontiac?",
-    a: "La municipalité de Pontiac a des établissements scolaires primaires sur son territoire. Pour le secondaire et les services éducatifs spécialisés, les familles se dirigent généralement vers Gatineau ou vers les établissements du secteur Chelsea. Pour les familles anglophones, le Western Quebec School Board dessert la région. Je vous recommande de vérifier directement avec les commissions scolaires compétentes pour confirmer la carte scolaire de la propriété qui vous intéresse.",
+    a: "La municipalité de Pontiac a des établissements scolaires primaires sur son territoire. Pour le secondaire et les services éducatifs spécialisés, les familles se dirigent généralement vers Gatineau. Pour les familles anglophones, le Western Quebec School Board a l'école primaire Onslow Elementary à Quyon, sous réserve de l'admissibilité à l'enseignement en anglais. Je vous recommande de vérifier directement auprès du centre de services scolaire et de la commission scolaire concernés pour confirmer la carte scolaire de la propriété qui vous intéresse.",
   },
   {
     q: "Pontiac est-il trop éloigné pour y habiter en travaillant à Ottawa ou Gatineau?",
@@ -28,7 +28,7 @@ const faq = [
   },
   {
     q: "Pontiac est-il une bonne option pour les familles anglophones?",
-    a: "Oui, Pontiac est l'une des communautés les plus bilingues de la Région de la capitale nationale. Avec environ 64 % des résidents bilingues et près de 39 % ayant l'anglais comme langue maternelle (Recensement 2016), c'est un environnement naturellement accueillant pour les anglophones. Le Western Quebec School Board dessert la région pour l'éducation en anglais.",
+    a: "Oui. Selon le recensement de 2016, environ 64 % des résidents sont bilingues et près de 39 % ont l'anglais comme langue maternelle. Pour l'école en anglais, le Western Quebec School Board a l'école Onslow Elementary à Quyon, sous réserve de l'admissibilité (certificat d'admissibilité).",
   },
 ];
 
@@ -148,7 +148,7 @@ const PontiacPage = () => {
           {[
             { icon: TreePine, title: "Le Parc de la Gatineau — dans votre cour", text: "Une grande partie du territoire de Pontiac est incluse dans le Parc de la Gatineau (360 km² de forêts, lacs et rivières, créé en 1938). Le sentier des Chutes Luskville est directement accessible depuis le secteur Luskville. Les résidents ont accès à des centaines de kilomètres de sentiers de randonnée, de ski de fond et de raquettes. (Source: Commission de la capitale nationale)" },
             { icon: Waves, title: "La rivière des Outaouais en façade", text: "La municipalité de Pontiac longe la rive nord de la rivière des Outaouais. Plusieurs propriétés de Breckenridge offrent un accès direct à la rivière ou une vue sur l'eau. La rivière des Outaouais est navigable, poissonneuse, et l'une des plus grandes rivières du Canada, un atout de qualité de vie rare pour une propriété résidentielle." },
-            { icon: Bus, title: "Transcollines — connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais au réseau Rapibus de la STO et à OC Transpo d'Ottawa. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source: Municipalité de Pontiac / Transcollines)" },
+            { icon: Bus, title: "Transcollines : connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais à Gatineau, avec correspondance vers le réseau de la STO. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source: Municipalité de Pontiac / Transcollines)" },
           ].map((c) => (
             <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
               <c.icon size={24} className="text-accent" />

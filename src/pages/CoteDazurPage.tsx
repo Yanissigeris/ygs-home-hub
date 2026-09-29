@@ -8,7 +8,7 @@ const CoteDazurPage = () => (
     metaDesc="Vivre, acheter ou vendre dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial, bungalows, proximité services et accès Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Courtier immobilier dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial.", lat: 45.4700, lng: -75.7000, url: "/cote-dazur-gatineau/" }}
-    hero={{ overline: "Guide de quartier · Côte-d'Azur", title: "Vivre, acheter ou vendre à Côte-d'Azur", subtitle: "Quartier résidentiel mature du secteur Gatineau, entre les boulevards Maloney et La Vérendrye. Bungalows des années 60-90, rues paisibles, accès Ottawa en 15-20 minutes.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Côte-d'Azur", title: "Vivre, acheter ou vendre à Côte-d'Azur", subtitle: "Quartier résidentiel mature du secteur Gatineau. Bungalows des années 60-90, rues paisibles, accès Ottawa en 15-20 minutes.", image: heroImg }}
     trustSpecialty="Spécialiste Côte-d'Azur et environs"
     lifestyle={{ image: heroImg, imageAlt: "Quartier Côte-d'Azur, Gatineau", title: "Pourquoi Côte-d'Azur est apprécié", subtitle: "Côte-d'Azur attire surtout les familles qui cherchent un quartier établi près des services, sans payer le prix d'Aylmer ou du Plateau. La majorité des propriétés sont des bungalows et split-levels, plusieurs sur des terrains de 4 000 à 6 000 pi². Le secteur reste l'un des plus accessibles du centre de Gatineau pour entrer dans une maison unifamiliale." }}
     reasons={[
@@ -32,7 +32,7 @@ const CoteDazurPage = () => (
     faq={{
       title: "Questions sur Côte-d'Azur",
       items: [
-        { q: "Où se situe le quartier Côte-d'Azur à Gatineau?", a: "Dans le secteur Gatineau (ancienne ville), entre le boulevard Maloney au nord et le boulevard La Vérendrye au sud. Central, bien desservi, à 15-20 minutes du centre-ville d'Ottawa." },
+        { q: "Où se situe le quartier Côte-d'Azur à Gatineau?", a: "Dans le secteur Gatineau (ancienne ville). Central, bien desservi, à 15-20 minutes du centre-ville d'Ottawa." },
         { q: "Quel est le prix d'une maison à Côte-d'Azur en 2026?", a: "Selon les inscriptions actives sur Centris en mai 2026, les bungalows et semi-détachés se vendent généralement entre 500 000 $ et 730 000 $ selon la superficie habitable, l'état de la propriété et la grandeur du terrain. Les bungalows non rénovés se situent dans le bas de la fourchette, les propriétés modernisées avec garage dans le haut." },
         { q: "Combien de temps prend une vente à Côte-d'Azur?", a: "D'après les ventes récentes dans le secteur, un bungalow bien préparé et au bon prix se vend généralement en 30 à 45 jours. Le délai moyen pour une unifamiliale dans la région métropolitaine de Gatineau était de 32 jours au quatrième trimestre 2025 selon la Chambre immobilière de l'Outaouais." },
         { q: "Quels commerces et services sont accessibles?", a: "Le boulevard Maloney concentre les services essentiels : épiceries IGA et Metro, pharmacie Jean Coutu, Tim Hortons, restaurant Poulet Rouge, plus plusieurs autres commerces, restaurants et services. Tout est accessible à pied ou en quelques minutes de voiture." },

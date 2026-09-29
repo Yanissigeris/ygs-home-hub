@@ -97,7 +97,7 @@ const CantleyPage = () => (
           Cantley est reconnue comme une municipalité à faible densité résidentielle, c'est l'un de ses attraits principaux. Les règlements urbanistiques révisés en 2025 fixent la superficie minimale des lots dans le périmètre urbain à 5 000 m². Cela maintient le caractère semi-rural de la municipalité. (Source: Municipalité de Cantley, Plan d'urbanisme 2025)
         </p>
         <p className="prose-body">
-          Cantley dispose de trois écoles primaires francophones : l'école Sainte-Élisabeth, l'école de la Rose-des-Vents, et l'école de l'Orée-des-Bois (ouverte en 2014). Pour le secondaire et les services spécialisés, les résidents se dirigent vers Gatineau. Le service de transport en commun Transcollines relie Cantley au réseau Rapibus de la STO et à OC Transpo d'Ottawa. (Source: Municipalité de Cantley, Wikipedia)
+          Cantley dispose de trois écoles primaires francophones : l'école Sainte-Élisabeth, l'école de la Rose-des-Vents, et l'école de l'Orée-des-Bois (ouverte en 2014). Pour le secondaire et les services spécialisés, les résidents se dirigent vers Gatineau. Le service de transport en commun Transcollines relie Cantley à Gatineau, avec correspondance vers le réseau de la STO. (Source: Municipalité de Cantley, Wikipedia)
         </p>
       </div>
     </ContentBlock>

@@ -17,7 +17,7 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
   { icon: DollarSign, title: "Prix plus accessibles", text: "Le marché de Gatineau offre souvent un meilleur rapport qualité-prix que les marchés militaires saturés." },
-  { icon: MapPin, title: "Proximité des bases", text: "Accès rapide à la base d'Uplands et aux installations fédérales de la région." },
+  { icon: MapPin, title: "Proximité du travail", text: "Accès au campus Carling de la Défense nationale et aux autres installations fédérales de la région, selon le secteur choisi." },
   { icon: Home, title: "Variété de propriétés", text: "Maisons, condos, jumelés, dans des quartiers familiaux bien desservis." },
   { icon: Shield, title: "Accompagnement bilingue", text: "Service en français et en anglais, adapté à votre réalité militaire." },
 ];
@@ -31,8 +31,8 @@ const faq = [
 
 const MilitaryBuyerPage = () => (
    <>
-    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers près de la BFC Uplands et accompagnement adapté à votre mutation." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Achat immobilier militaire — Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers près de la BFC Uplands." url="/acheter-comme-militaire-gatineau/" serviceType="Military Real Estate Buyer Service" />
+    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers selon votre lieu de travail et accompagnement adapté à votre mutation." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
+    <ServiceJsonLd name="Achat immobilier militaire à Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers selon votre lieu de travail." url="/acheter-comme-militaire-gatineau/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"

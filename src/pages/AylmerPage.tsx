@@ -15,11 +15,11 @@ import heroImg from "@/assets/hero-aylmer-gen.webp";
 const faq = [
   {
     q: "Combien vaut une maison à Aylmer?",
-    a: "Les prix varient selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead, Vieux-Aylmer et Breckenridge ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
+    a: "Les prix varient selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead et le Vieux-Aylmer ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
-    a: "Aylmer est effectivement l'un des secteurs les plus bilingues de Gatineau. On y trouve des écoles francophones (Commission scolaire des Portages de l'Outaouais) et anglophones (Western Québec School Board). C'est un attrait majeur pour les familles d'Ottawa ou les fonctionnaires fédéraux qui souhaitent conserver un environnement anglophone tout en vivant au Québec.",
+    a: "Aylmer est effectivement l'un des secteurs les plus bilingues de Gatineau. On y trouve des écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais) et anglophones (Western Québec School Board). L'accès à l'école publique anglaise demande un certificat d'admissibilité. C'est un attrait majeur pour les familles d'Ottawa ou les fonctionnaires fédéraux qui souhaitent conserver un environnement anglophone tout en vivant au Québec.",
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
@@ -48,8 +48,8 @@ const subSectors = [
     tag: "Caractère · Walkable",
   },
   {
-    title: "Aylmer nord / Breckenridge",
-    text: "Secteur plus calme, lotissements récents, grandes cours, accès rapide à l'autoroute 50. Attire les jeunes familles qui cherchent plus d'espace à prix accessible.",
+    title: "Aylmer nord",
+    text: "Secteur plus calme, lotissements récents, grandes cours, accès au boulevard des Allumettières. Attire les jeunes familles qui cherchent plus d'espace à prix accessible.",
     tag: "Espace · Récent · Accessible",
   },
   {

@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: "Hull est-il un bon choix pour les fonctionnaires fédéraux?",
-    a: "Oui, beaucoup de ministères et organismes fédéraux ont leurs bureaux du côté québécois à Gatineau (Complex Portage, Tour de la Paix, etc.). Et même pour ceux qui travaillent à Ottawa, les ponts sont à vélo ou à pied depuis plusieurs secteurs de Hull. C'est une des raisons pour lesquelles Hull reste très demandé par les fonctionnaires des deux côtés de la rivière.",
+    a: "Oui, plusieurs ministères et organismes fédéraux ont leurs bureaux à Hull, notamment à Place du Portage et aux Terrasses de la Chaudière. Pour ceux qui travaillent à Ottawa, on traverse les ponts à pied ou à vélo depuis plusieurs secteurs de Hull.",
   },
 ];
 
@@ -41,7 +41,7 @@ const subSectors = [
   },
   {
     title: "Wrightville / Val-Tétreau",
-    text: "Secteur central, bungalows des années 60-80, terrain plus grand, prix encore accessibles. Situé sur le corridor du futur tramway Gatineau-Ottawa, un projet d'infrastructure en développement actif qui pourrait transformer la mobilité de ce secteur.",
+    text: "Secteur central, bungalows des années 60-80, terrain plus grand, prix encore accessibles.",
   },
   {
     title: "Lac Leamy",

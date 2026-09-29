@@ -26,7 +26,7 @@ const ValDesMontsPage = () => (
     profiles={[
       { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre offrent les meilleures conditions pour la vie nautique quatre saisons." },
       { icon: Home, title: "Chercheurs de chalet", text: "Du chalet rustique 200 000 $ au bord de lac luxueux 750 000 $+. Les chalets quatre-saisons sont les plus demandés depuis le télétravail." },
-      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire dans Val-des-Monts, il faut prévoir le transport vers Buckingham ou Gatineau." },
+      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
       { icon: Mountain, title: "Télétravailleurs et retraités", text: "Cadre de vie exceptionnel avec Internet haute vitesse disponible dans la majorité des secteurs. À 27 minutes d'Ottawa pour les rencontres en présentiel ponctuelles." },
     ]}
     inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
@@ -37,7 +37,7 @@ const ValDesMontsPage = () => (
         { q: "Quel est le prix d'une propriété à Val-des-Monts en 2026?", a: "Selon les inscriptions actives sur Centris en mai 2026, les propriétés se vendent généralement entre 200 000 $ pour un chalet rustique avec accès lac et 750 000 $+ pour une résidence quatre-saisons en bord de lac. Les prix dépendent fortement du lac, de l'orientation et du type de propriété." },
         { q: "Quels sont les principaux lacs de Val-des-Monts?", a: "Les plus connus sont McGregor, Saint-Pierre, Achigan et Barnes. Chaque lac a sa propre dynamique : McGregor pour les propriétés haut de gamme et navigation, Saint-Pierre pour les chalets familiaux, Achigan pour la pêche, Barnes pour la tranquillité." },
         { q: "Peut-on habiter à Val-des-Monts à l'année?", a: "Absolument. De plus en plus de résidents permanents s'y installent depuis 2020, attirés par le télétravail et la qualité de vie. La municipalité a investi dans l'Internet haute vitesse pour soutenir cette tendance." },
-        { q: "Y a-t-il des écoles à Val-des-Monts?", a: "Oui pour le primaire (école à Perkins notamment). Pour le secondaire, les élèves doivent généralement se rendre à Buckingham ou dans le secteur de Gatineau. C'est un facteur à considérer pour les familles avec ados." },
+        { q: "Y a-t-il des écoles à Val-des-Monts?", a: "Oui pour le primaire : le Centre de services scolaire des Draveurs y compte trois écoles primaires (de la Colline, L'Équipage et du Sommet). Au secondaire, ses élèves fréquentent des écoles du secteur Gatineau, un facteur à considérer pour les familles avec des ados. En anglais, l'école primaire Poltimore (Western Québec School Board) est à Val-des-Monts, sous réserve de l'admissibilité." },
         { q: "Combien de temps prend une vente à Val-des-Monts?", a: "Variable selon le type. Les propriétés en bord de lac McGregor ou Saint-Pierre bien préparées partent souvent en 30-60 jours en saison forte (printemps-été). Les chalets rustiques ou propriétés sans accès lac peuvent prendre 60-120 jours." },
       ],
     }}

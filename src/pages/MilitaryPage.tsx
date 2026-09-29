@@ -22,7 +22,7 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 const challenges = [
   { icon: MapPin, title: "Mutation à court préavis", text: "Le déménagement approche vite, il faut trouver un logement à Gatineau ou vendre rapidement, sans compromettre le prix." },
   { icon: Shield, title: "Comprendre le marché québécois", text: "Taxes municipales et scolaires, processus notarié, zonage, le Québec fonctionne différemment de l'Ontario ou du reste du Canada." },
-  { icon: Home, title: "Trouver le bon secteur", text: "Proximité de la BFC Uplands ou du centre d'Ottawa, écoles françaises et anglaises, services bilingues, chaque famille a ses priorités." },
+  { icon: Home, title: "Trouver le bon secteur", text: "Proximité du campus Carling de la Défense nationale ou du centre-ville d'Ottawa, écoles françaises et anglaises, services bilingues, chaque famille a ses priorités." },
   { icon: Heart, title: "S'installer en famille à Gatineau", text: "Coordonner vente et achat, trouver un quartier familial à Aylmer, au Plateau ou à Hull, inscrire les enfants, tout en gérant le stress de la mutation." },
 ];
 
@@ -42,7 +42,7 @@ const militaryPaths = [
 const faq = [
   { q: "Est-ce que vous connaissez les programmes pour militaires?", a: "Oui. Je connais les réalités des mutations, les délais serrés et les besoins spécifiques. On adapte l'approche à votre situation." },
   { q: "Je dois vendre et acheter en même temps — c'est possible?", a: "C'est fréquent dans les mutations. On planifie la coordination dès le départ pour éviter d'être coincé." },
-  { q: "Quels secteurs sont proches de la base?", a: "Aylmer et le Plateau sont populaires pour l'accès à la BFC Uplands via le pont Champlain. Hull est idéal pour ceux qui travaillent au centre-ville d'Ottawa. On choisit selon votre trajet et vos priorités familiales." },
+  { q: "Quels secteurs sont proches des installations militaires?", a: "Ça dépend de votre lieu de travail. Depuis 2017, la Défense nationale regroupe plusieurs de ses bureaux au campus Carling, sur l'avenue Carling dans l'ouest d'Ottawa : depuis Aylmer et le Plateau, on y va par le pont Champlain. D'autres bureaux sont au centre-ville d'Ottawa, plus près de Hull. On compare vos trajets selon votre affectation et vos priorités familiales." },
   { q: "Est-ce que vous pouvez faire des visites virtuelles?", a: "Absolument. Beaucoup de militaires achètent à distance avant leur arrivée à Gatineau. Je m'adapte à votre horaire et votre fuseau." },
 ];
 

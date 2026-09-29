@@ -16,7 +16,7 @@ const LimbourPage = () => (
       "Maisons unifamiliales et semi-détachées entre 475 000 $ et 800 000 $ selon le sous-secteur et le type (données Centris, mai 2026)",
       "Sous-secteur Ferme Limbour : résidentiel haut de gamme avec sentiers boisés et propriétés plus grandes",
       "Parcs, sentiers pédestres et espaces verts abondants",
-      "Services médicaux et pharmacies sur le boulevard de l'Hôpital : Hôpital de Gatineau, Pharmaprix, Uniprix",
+      "Hôpital de Gatineau (909, boulevard La Vérendrye Ouest) à quelques minutes en voiture",
       "Tim Hortons et restaurants accessibles à courte distance (boul. Maloney, boul. La Vérendrye)",
       "Écoles secondaires desservant le secteur : Polyvalente de l'Érablière et École secondaire du Versant (CSSD Draveurs)",
       "Accès rapide à l'autoroute 50, environ 20 minutes du centre-ville d'Ottawa",
@@ -48,9 +48,9 @@ const LimbourPage = () => (
         { q: "Limbour est-il un quartier récent?", a: "Oui, majoritairement. La plupart des développements datent des années 2000-2020, avec quelques propriétés plus anciennes dans certains coins. Le sous-secteur Ferme Limbour est particulièrement recherché pour ses constructions de qualité." },
         { q: "Quel est le prix d'une maison à Limbour en 2026?", a: "Selon les inscriptions actives sur Centris en mai 2026, les maisons unifamiliales et semi-détachées se vendent généralement entre 475 000 $ et 800 000 $, selon la grandeur, l'année de construction, et le sous-secteur. Les propriétés plus haut de gamme se trouvent dans Ferme Limbour." },
         { q: "Y a-t-il des parcs et sentiers à Limbour?", a: "Oui, le quartier est reconnu pour ses espaces verts, sentiers pédestres et parcs de quartier. Le sous-secteur Ferme Limbour est entouré de zones boisées, ce qui contribue au cachet du secteur." },
-        { q: "Quels services sont accessibles près de Limbour?", a: "Le boulevard de l'Hôpital concentre les services essentiels : Hôpital de Gatineau, pharmacies Pharmaprix et Uniprix. Plusieurs Tim Hortons et restaurants sont accessibles en quelques minutes sur les boulevards Maloney et La Vérendrye." },
+        { q: "Quels services sont accessibles près de Limbour?", a: "La rue Saint-Louis regroupe des commerces de proximité, dont une épicerie et une pharmacie. L'Hôpital de Gatineau, au 909, boulevard La Vérendrye Ouest, est à quelques minutes en voiture." },
         { q: "Combien de temps prend une vente à Limbour?", a: "Les maisons récentes bien préparées se vendent généralement en 25-40 jours dans le marché actuel. Le délai moyen pour une unifamiliale dans la région métropolitaine de Gatineau était de 32 jours au quatrième trimestre 2025 (Chambre immobilière de l'Outaouais)." },
-        { q: "Quelles écoles desservent Limbour?", a: "Plusieurs écoles primaires francophones de la Commission scolaire des Draveurs sont à proximité. Au secondaire, la Polyvalente de l'Érablière et l'École secondaire du Versant desservent le secteur. Pour le catchment exact, consultez votre commission scolaire." },
+        { q: "Quelles écoles desservent Limbour?", a: "Plusieurs écoles primaires francophones du Centre de services scolaire des Draveurs sont à proximité. Au secondaire, la Polyvalente de l'Érablière et l'École secondaire du Versant desservent le secteur. Pour connaître l'école de votre adresse, consultez le Centre de services scolaire des Draveurs." },
       ],
     }}
     sectors={{ list: [
