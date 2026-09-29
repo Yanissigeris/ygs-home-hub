@@ -13,20 +13,21 @@ import { Home, Users, MapPin, TreePine } from "lucide-react";
 import heroImg from "@/assets/hero-living-plateau.webp";
 
 const highlights = [
-  { icon: MapPin, title: "Développements récents", text: "Maisons modernes dans des quartiers neufs avec parcs et pistes cyclables." },
-  { icon: Home, title: "Excellent rapport qualité-prix", text: "Plus d'espace et de maison pour votre budget qu'en centre-ville." },
+  { icon: MapPin, title: "Un quartier récent", text: "Développé surtout depuis la fin des années 1990, avec des parcs dans les rues résidentielles." },
+  { icon: Home, title: "Maisons, maisons de ville et condos", text: "Surtout des maisons unifamiliales récentes, avec aussi des maisons de ville et des condos." },
   { icon: TreePine, title: "Nature et plein air", text: "Proximité du parc de la Gatineau, sentiers et espaces verts." },
-  { icon: Users, title: "Quartiers familiaux", text: "Écoles, garderies, parcs et communauté jeune et dynamique." },
+  { icon: Users, title: "Pour les familles", text: "Trois écoles primaires dans le quartier et une école secondaire sur le boulevard du Plateau." },
 ];
 
 const faq = [
-  { q: "Le Plateau est-il loin d'Ottawa?", a: "20-30 minutes en voiture selon l'heure. Plusieurs résidents du Plateau travaillent à Ottawa." },
-  { q: "Y a-t-il de bonnes écoles dans le Plateau?", a: "Oui, écoles françaises et anglaises, garderies et activités parascolaires." },
-  { q: "Le Plateau continue-t-il de se développer?", a: "Oui, de nouveaux projets résidentiels sont en cours, ce qui attire de plus en plus de familles." },
+  { q: "Le Plateau est-il loin d'Ottawa?", a: "Le Plateau est à l'ouest du centre-ville de Hull. On rejoint Ottawa par le boulevard des Allumettières et les ponts, et le temps de trajet varie selon l'heure et la destination." },
+  { q: "Quelles écoles trouve-t-on dans le Plateau?", a: "Le quartier compte trois écoles primaires du CSSPO (École du Plateau, École des Deux-Ruisseaux et École du Grand-Héron) et l'École secondaire de la Cité, sur le boulevard du Plateau. L'école attribuée dépend de l'adresse : vérifiez auprès du CSSPO." },
+  { q: "Le Plateau est-il un quartier récent?", a: "Oui. Le quartier s'est développé surtout depuis la fin des années 1990 : le boulevard du Plateau a été officialisé en 1997. On y trouve donc surtout des constructions récentes." },
 ];
 
 const related = [
-  { title: "Acheter dans le Plateau", text: "Guide du quartier: prix, profils et potentiel.", href: "/plateau/" },
+  { title: "Acheter ou vendre dans le Plateau", text: "Mon travail de courtier dans le quartier.", href: "/plateau/" },
+  { title: "Aylmer, Hull ou Plateau?", text: "Comparatif des trois secteurs.", href: "/blogue/aylmer-hull-plateau-quel-quartier-choisir/" },
   { title: "Tous les quartiers", text: "Comparez les secteurs de Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
   { title: "Premier achat", text: "Budget, processus et conseils pour premiers acheteurs.", href: "/premier-achat-gatineau/" },
   { title: "Consultation acheteur", text: "Clarifiez vos critères et vos options.", href: "/consultation-acheteur/" },
@@ -34,12 +35,12 @@ const related = [
 
 const LivingPlateauPage = () => (
    <>
-    <PageMeta title="Vivre dans le Plateau · Gatineau — Mode de vie" description="Tout sur la vie dans le Plateau à Gatineau: familles, parcs, maisons récentes, écoles et qualité de vie. Guide pour s'installer au Plateau." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+    <PageMeta title="Vivre dans le Plateau · Gatineau · Mode de vie" description="Tout sur la vie dans le Plateau à Gatineau: familles, parcs, maisons récentes, écoles et qualité de vie. Guide pour s'installer au Plateau." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <HeroSection
       overline="Vivre dans le Plateau · Gatineau"
-      title="Vivre dans le Plateau — le guide"
-      subtitle="Découvrez le mode de vie dans le Plateau: développements récents, familles, nature et excellent rapport qualité-prix."
-      primaryCta={{ label: "Explorer les propriétés", href: "/consultation-acheteur/" }}
+      title="Vivre dans le Plateau : le guide"
+      subtitle="Le quotidien dans le Plateau, à Gatineau : maisons récentes, écoles, parcs et le parc de la Gatineau à proximité."
+      primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Voir le quartier", href: "/plateau/" }}
       heroBgImage={heroImg}
     />
@@ -51,9 +52,9 @@ const LivingPlateauPage = () => (
     />
 
     <ContentBlock narrow>
-      <SectionHeading title="Le Plateau, c'est pour les familles" />
+      <SectionHeading title="Vivre dans le Plateau avec des enfants" />
       <p className="prose-body mt-5">
-        Le Plateau est devenu l'un des secteurs les plus populaires de Gatineau pour les jeunes familles. Maisons neuves, parcs, écoles et accès rapide à tout, c'est un choix de vie qui fait de plus en plus d'adeptes.
+        Le quartier compte trois écoles primaires du CSSPO et touche au parc de la Gatineau. Comme le quartier s'est développé surtout depuis la fin des années 1990, une famille y trouve surtout des propriétés récentes, avec moins de rénovations majeures à prévoir qu'ailleurs.
       </p>
     </ContentBlock>
 
@@ -73,7 +74,7 @@ const LivingPlateauPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — s'installer dans le Plateau"
+      headline="Guide acheteur gratuit : s'installer dans le Plateau"
       text="Tout pour acheter dans le Plateau, processus, budget et conseils envoyés par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
