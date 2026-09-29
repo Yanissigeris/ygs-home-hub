@@ -30,7 +30,7 @@ const steps = [
 
 
 const faq = [
-  { q: "How much do I need for a first purchase in Gatineau?", a: "With a 5% down payment, you can access many properties across Outaouais, from condos in Hull to houses on the Plateau. We analyze your real capacity together." },
+  { q: "How much do I need for a first purchase in Gatineau?", a: "With as little as 5% down on the first $500,000, you can access many properties across Outaouais, from condos in Hull to houses on the Plateau. We analyze your real capacity together." },
   { q: "Do I qualify for assistance programs?", a: "There are federal and Québec provincial incentives for first-time buyers. We look at that together during the consultation." },
   { q: "What's different in Québec?", a: "The notary process, the promise to purchase and certain Québec tax specifics. Nothing complicated, you just need to be well guided by someone who knows the local market." },
 ];

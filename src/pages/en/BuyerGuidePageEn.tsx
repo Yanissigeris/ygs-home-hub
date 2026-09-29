@@ -21,7 +21,7 @@ const buyerSteps = [
   { name: "Search and visit properties", text: "Identify properties matching your criteria and visit them with a broker who knows the local market." },
   { name: "Make a strong offer", text: "Draft a competitive promise to purchase with the right conditions, inspection, financing and timelines." },
   { name: "Complete the pre-purchase inspection", text: "Have the property inspected by a professional to identify potential issues before finalizing." },
-  { name: "Finalize at the notary", text: "The notary verifies titles, prepares documents and finalizes the transaction. Expect approximately $1,500 in fees." },
+  { name: "Finalize at the notary", text: "The notary verifies titles, prepares documents and finalizes the transaction. Ask for a quote on their fees." },
 ];
 
 const topics = [
@@ -33,10 +33,10 @@ const topics = [
   "The notary's role and fees to expect",
 ];
 const faq = [
-  { q: "How much do I need for a down payment?", a: "Minimum 5% for a primary residence. For an owner-occupied plex, 5% too. For a pure investment, 20%. We can discuss based on your situation." },
+  { q: "How much do I need for a down payment?", a: "For a home or a duplex you live in, under $1.5M: 5% on the first $500,000 and 10% on the rest (CMHC). An owner-occupied triplex or fourplex needs at least 10%. At $1.5M and above, or for a rental property you don't live in, expect 20% or more depending on the lender. We can go over your situation." },
   { q: "Is it better to buy in Gatineau than Ottawa?", a: "It depends on your priorities. Generally, prices are more affordable on the Gatineau side, but you need to consider taxes and services." },
   { q: "How long does a purchase take?", a: "Generally 60 to 90 days from the start of your search to taking possession, but it can vary with market conditions." },
-  { q: "What fees should I expect?", a: "Notary (approximately $1,500), welcome tax, optional title insurance, and pre-purchase inspection. We review everything together." },
+  { q: "What fees should I expect?", a: "Notary fees (ask for a quote), the land transfer duties (welcome tax), a pre-purchase inspection, municipal and school tax adjustments, and the 9% Québec tax on the mortgage insurance premium if it applies. First-time buyers can recover part of the transfer duties through Revenu Québec's tax credit, up to $5,875 subject to conditions. We review everything together." },
 ];
 const related = [
   { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },

@@ -11,11 +11,11 @@ import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
   { q: "What is the OACIQ?", a: "The Organisme d'autoréglementation du courtage immobilier du Québec (OACIQ) is the regulatory body for real estate brokers in Quebec. It protects the public by ensuring brokers meet professional standards." },
-  { q: "How do I verify a broker with the OACIQ?", a: "Visit the OACIQ registry online and search by name. You can check a broker's licence status, any disciplinary history, and their current standing." },
-  { q: "Why should I verify my broker?", a: "It ensures your broker is legally authorized to practice, has no unresolved complaints, and meets all professional requirements. It's a simple step that protects you." },
+  { q: "How do I verify a broker with the OACIQ?", a: "Visit the OACIQ register of licence holders online and search by name. It shows whether the licence is valid and whether it is suspended or subject to conditions. Disciplinary decisions are published separately on SOQUIJ (citoyens.soquij.qc.ca)." },
+  { q: "Why should I verify my broker?", a: "It confirms your broker is legally authorized to practice and that the licence is not suspended or subject to conditions. It's a simple step that protects you." },
   { q: "What does a valid OACIQ licence mean?", a: "It means the broker has completed the required training, holds professional liability insurance, and is subject to the OACIQ's code of ethics." },
   { q: "Can a broker practice without an OACIQ licence?", a: "No. In Quebec, it is illegal to act as a real estate broker without a valid OACIQ licence. Anyone doing so is acting outside the law." },
-  { q: "What if I find a complaint against a broker?", a: "A complaint doesn't necessarily mean wrongdoing. Review the details and outcome. You can also contact the OACIQ directly for more information." },
+  { q: "What if I find a disciplinary decision about a broker?", a: "Read the decision and its outcome: the sanction and its date matter. Complaints themselves are not published in the register. You can contact the OACIQ directly for more information." },
   { q: "Is the OACIQ registry free to use?", a: "Yes. The OACIQ public registry is free and accessible online. You can search for any broker licensed in Quebec." },
   { q: "Does the OACIQ set commission rates?", a: "No. The OACIQ regulates professional conduct and ethics, but does not set or regulate commission rates. Fees are agreed between the parties." },
 ];
@@ -59,7 +59,7 @@ const OaciqFindBrokerPageEn = () => (
           { title: "1. Visit the OACIQ registry", text: "Go to oaciq.com and use the public registry search." },
           { title: "2. Search by name", text: "Enter the broker's full name to find their profile." },
           { title: "3. Check licence status", text: "Confirm the licence is active and in good standing." },
-          { title: "4. Review any history", text: "Check for any disciplinary decisions or complaints on file." },
+          { title: "4. Review any history", text: "Check the licence for suspensions or conditions, and search SOQUIJ for disciplinary decisions." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>

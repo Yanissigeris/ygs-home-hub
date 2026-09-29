@@ -14,11 +14,11 @@ const sellerFaq = [
   { q: "Is spring the best time to sell?", a: "It's often the busiest season, but not always the most profitable. Less competition in fall or winter can work in your favor." },
 ];
 const buyerFaq = [
-  { q: "How much do I need for a down payment?", a: "5% minimum for a primary residence. For an owner-occupied plex, 5% as well. For a pure investment, 20%." },
+  { q: "How much do I need for a down payment?", a: "For a home or a duplex you live in, under $1.5M: 5% on the first $500,000 and 10% on the rest (CMHC). An owner-occupied triplex or fourplex needs at least 10%. At $1.5M and above, or for a rental property you don't live in, expect 20% or more depending on the lender." },
   { q: "Buy in Gatineau or Ottawa?", a: "It depends on your priorities. Generally, prices are more affordable on the Gatineau side, but you need to consider taxes and services." },
   { q: "How long does a purchase take?", a: "60 to 90 days generally from the start of your search to taking possession." },
   { q: "Is the process different in Québec?", a: "Yes, promise to purchase, inspection, notary (not a lawyer). I guide you every step of the way." },
-  { q: "What additional fees should I expect beyond the purchase price?", a: "Notary (approximately $1,500), welcome tax, optional title insurance, and pre-purchase inspection." },
+  { q: "What additional fees should I expect beyond the purchase price?", a: "Notary fees (ask for a quote), the land transfer duties (welcome tax), a pre-purchase inspection, municipal and school tax adjustments, and the 9% Québec tax on the mortgage insurance premium if it applies. First-time buyers can recover part of the transfer duties through Revenu Québec's tax credit, up to $5,875 subject to conditions." },
 ];
 const plexFaq = [
   { q: "How do you evaluate a plex's value?", a: "Income approach (GRM), comparable sales, building condition and rent optimization potential." },

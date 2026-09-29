@@ -12,9 +12,9 @@ import { heroBgStyle } from "@/lib/hero-backgrounds";
 const faq = [
   { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your experience, time availability, and risk tolerance. A broker provides visibility, negotiation, and full management, selling privately saves on commission but involves more work and risk." },
   { q: "How much can I save selling without a realtor?", a: "In theory, you save the commission. In practice, private sales often close at a lower price, which can offset the savings. MLS access and marketing reach are also reduced." },
-  { q: "Is it legal to sell by owner in Quebec?", a: "Yes, private sales are legal in Quebec. However, you must still comply with all legal obligations (seller's declaration, inspections, etc.)." },
+  { q: "Is it legal to sell by owner in Quebec?", a: "Yes, private sales are legal in Quebec. The seller is still bound by the legal warranty of quality and must disclose what they know about the property. The OACIQ Declarations by the seller form is mandatory when a broker is involved." },
   { q: "What are the risks of selling without a broker?", a: "Underpricing, poor negotiation, documentation errors, limited exposure, potential legal disputes, and significant stress." },
-  { q: "Can a broker actually sell for more?", a: "Yes, through a data-driven pricing strategy, maximum MLS exposure, professional photography, staging advice, and expert negotiation." },
+  { q: "Can a broker actually sell for more?", a: "A broker can help you get a better price through pricing based on comparable sales, MLS exposure and negotiation. The result always depends on the property and the market." },
   { q: "What services does a broker provide vs selling alone?", a: "Professional valuation, MLS listing, photos, marketing, showing management, negotiation, offer drafting, and notary coordination. Alone, you handle everything yourself." },
   { q: "How do I decide if I need a broker?", a: "If you have the time, legal knowledge, and ability to negotiate firmly, private sale is an option. Otherwise, a broker can improve your result and peace of mind." },
   { q: "Do buyers prefer sellers who have a broker?", a: "Many buyers (and their brokers) prefer working with a listing broker because it simplifies negotiation and reduces misunderstandings." },

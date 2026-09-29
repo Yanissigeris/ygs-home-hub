@@ -30,12 +30,12 @@ const sectors = [
 
 const faq = [
   { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. As of May 2026, savings on the purchase price typically range from 15 to 30 percent compared with comparable Ottawa neighbourhoods, though municipal and school taxes should also be factored into your full cost picture." },
-  { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec, promise to purchase, inspection conditions, notary signing, and a Québec-licensed broker is required to represent you. I guide you at every step." },
-  { q: "Are taxes higher in Québec?", a: "Municipal and school taxes vary by sector and are usually lower per dollar of value than equivalent Ottawa addresses. Personal income tax is structured differently in Québec, we look at the full picture together so you can compare net of all costs." },
+  { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec, promise to purchase, inspection conditions, notary signing. If you are represented, your broker must hold an OACIQ licence. I guide you at every step." },
+  { q: "Are taxes higher in Québec?", a: "Municipal and school taxes vary by sector, and Ottawa and Gatineau calculate them differently. To compare, we look at the actual tax bills of similar homes. Personal income tax is also structured differently in Québec, so we look at the full picture together." },
   { q: "Can I keep my Ontario job and family doctor?", a: "Yes, many of my clients commute daily to downtown Ottawa or work hybrid. You can also keep an Ontario family doctor in many cases, though Québec's RAMQ provides public health coverage once you become a Québec resident." },
   { q: "What about kids' schools, French or English?", a: "Both options exist in Outaouais. Aylmer and the Plateau have well-known English public schools; French immersion and full-French schools are widely available. School board eligibility rules apply, so we discuss your situation early." },
   { q: "How long does the bridge commute really take?", a: "From Aylmer, Hull or the Plateau, downtown Ottawa is typically a 15 to 30 minute drive depending on bridge and time of day. STO buses, bike paths and the future tramway plans all factor into the mid-term picture." },
-  { q: "Do I need a Québec mortgage?", a: "Most Canadian lenders operate on both sides of the river, so you can often keep your existing bank. Underwriting still applies provincial rules, I introduce you to mortgage brokers who handle Ottawa-to-Gatineau files routinely." },
+  { q: "Do I need a Québec mortgage?", a: "Most Canadian lenders operate on both sides of the river, so you can often keep your existing bank. The mortgage is registered in Québec by the notary, under Québec law. I introduce you to mortgage brokers who handle Ottawa-to-Gatineau files routinely." },
 ];
 
 const BuyFromOttawaPageEn = () => (
