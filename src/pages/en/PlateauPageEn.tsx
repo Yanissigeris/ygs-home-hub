@@ -1,102 +1,92 @@
-import PageMeta from "@/components/PageMeta";
-import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
-import HeroSection from "@/components/HeroSection";
-import CTASection from "@/components/CTASection";
-import CardGrid from "@/components/CardGrid";
-import ImageTextSplit from "@/components/ImageTextSplit";
-import InlineCTA from "@/components/InlineCTA";
-import SectorLinks from "@/components/SectorLinks";
-import FAQSection from "@/components/FAQSection";
-import RelatedPages from "@/components/RelatedPages";
-import GuideInlineCTA from "@/components/GuideInlineCTA";
-import StickyGuideBanner from "@/components/StickyGuideBanner";
-import ContentBlock from "@/components/ContentBlock";
-import { CheckCircle2, Users, Home, TrendingUp, MapPin, Clock, Award, Shield } from "lucide-react";
+import NeighborhoodTemplate from "@/components/NeighborhoodTemplate";
+import { Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-plateau.webp";
-import lifestyleImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
-
-const reasons = [
-  "Recent developments with modern homes",
-  "Family neighborhoods with parks and cycling paths",
-  "Schools and daycares nearby",
-  "Quick access to Ottawa and downtown Gatineau",
-  "Excellent value for young families",
-];
-
-const profiles = [
-  { icon: Users, title: "Young families", text: "Recent homes, safe neighborhoods and an active family community." },
-  { icon: Home, title: "First-time buyers", text: "New or recent properties at still-accessible prices." },
-  { icon: MapPin, title: "Outdoor enthusiasts", text: "Proximity to Gatineau Park and numerous trails." },
-  { icon: TrendingUp, title: "Investors", text: "Growing area with strong demand and good return potential." },
-];
-
-const faq = [
-  { q: "Is the Plateau a good choice for a family?", a: "It's one of the most popular areas for families, recent homes, parks, schools and a young community." },
-  { q: "Are prices increasing in the Plateau?", a: "The Plateau is experiencing strong growth. Contact me for the latest data in your sub-sector." },
-  { q: "Are there many new constructions?", a: "Yes, several recent developments offer new homes and semis with warranty." },
-  { q: "Why work with a real estate broker in the Plateau?", a: "A local broker knows the developments, prices by street and market trends in the Plateau. That helps you buy at the right price or sell at the best time." },
-  { q: "What is the average home price in the Plateau?", a: "It depends on property type and year of construction. Contact me for an analysis based on recent sales in your Plateau area." },
-  { q: "Are there new homes available in the Plateau?", a: "Yes, several builders offer new homes with warranty. I can guide you toward projects that match your budget." },
-  { q: "Is the Plateau good for a first purchase?", a: "Very good, recent constructions offer excellent value, and the area is well-served by schools and services." },
-  { q: "How do I get a home valuation in the Plateau?", a: "I prepare a free valuation based on recent comparable sales on your street. It's confidential and no commitment." },
-  { q: "Are there condos in the Plateau?", a: "Yes, you'll find condos and townhomes, especially in recent developments. It's a popular option for first-time buyers." },
-  { q: "What services are available in the Plateau?", a: "Elementary and secondary schools, parks, grocery stores, pharmacies and quick access to Gatineau shopping centers. The area is complete for families." },
-];
-
-const relatedSectors = [
-  { name: "Aylmer", href: "/en/aylmer/", detail: "Lake Deschênes, established neighborhoods" },
-  { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos" },
-  { name: "Gatineau centre", href: "/en/gatineau/", detail: "Residential, services, affordable" },
-];
-
-const related = [
-  { title: "Living in the Plateau — the guide", text: "Lifestyle, families and recent developments.", href: "/en/living-plateau/" },
-  { title: "Sell in Gatineau", text: "Strategy, pricing and full support.", href: "/en/sell/" },
-  { title: "Free Valuation", text: "How much is your Plateau property worth?", href: "/en/home-valuation/" },
-  { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer/" },
-  { title: "All Neighborhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods/" },
-];
-
+// Title and meta description are published from src/data/seo-routes.json (route "/en/plateau").
+// seoTitle / metaDesc below are fallbacks only and are kept identical in intent.
 const PlateauPageEn = () => (
-  <>
-    <PageMeta title="Plateau — Neighborhood Guide Gatineau" description="Discover the Plateau in Gatineau. Families, recent developments, parks and quick Ottawa access. Complete guide." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <NeighborhoodJsonLd name="Plateau" description="Real estate broker specializing in the Plateau, Gatineau. Recent developments, families and excellent value." lat={45.4830} lng={-75.7350} url="/en/plateau/" />
-    <HeroSection overline="Neighborhood Guide · Plateau" title="Live, buy or invest in the Plateau" subtitle="Recent developments, family neighborhoods and excellent value — the Plateau is one of Gatineau's most dynamic areas." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} heroBgImage={heroImg} />
-<ImageTextSplit image={lifestyleImg} imageAlt="Life in the Plateau, Gatineau" imagePosition="right">
-      <h2 className="mt-3">Why the Plateau attracts families</h2>
-      <div className="mt-7 space-y-3.5">
-        {reasons.map((r) => (
-          <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
-            <span className="text-[0.9375rem] text-foreground">{r}</span>
-          </div>
-        ))}
-      </div>
-    </ImageTextSplit>
-    <CardGrid overline="For who" title="The Plateau is ideal for…" items={profiles} background="alt" />
-    <ContentBlock>
-      <h2 className="mt-3">The Plateau, what makes this Gatineau sector different</h2>
-      <div className="mt-6 space-y-4 max-w-3xl">
-        <p className="prose-body">
-          The Plateau is one of the youngest and most dynamic sectors of the City of Gatineau. Most of its housing stock was built between 1995 and today, with new phases still being delivered along boulevard du Plateau and in the Mont-Bleu corridor. As of May 2026, single-family homes typically trade between $475,000 and $700,000 according to active Centris listings, with semi-detached townhomes from the mid-$400,000s and recent condos starting in the high-$200,000s. Lots are smaller than in Aylmer or Buckingham, but in exchange you get newer construction, low maintenance and predictable energy costs.
-        </p>
-        <p className="prose-body">
-          Daily life is anchored by Galeries du Plateau (groceries, pharmacy, professional services), the Mont-Bleu sports complex and the linear parks that run through the residential streets. Public schools are operated by the Centre de services scolaire des Portages-de-l'Outaouais (CSSPO), École du Plateau, École du Vieux-Verger and École secondaire Mont-Bleu serve most of the area. For English-language education, the Western Quebec School Board (WQSB) routes students to nearby schools in Aylmer and Hull. Several daycares and CPEs operate inside the Plateau itself, which removes a major friction point for working parents.
-        </p>
-        <p className="prose-body">
-          Commute-wise, the Plateau is well-positioned for cross-river workers. The Champlain Bridge is roughly 10-15 minutes by car off-peak, the Macdonald-Cartier Bridge 15-20 minutes, and the STO Rapibus and Plateau express lines connect directly to downtown Ottawa. For families relocating from Ontario, that combination, recent construction, English-school access, and a 20-minute door-to-door commute to Tunney's Pasture or Place du Portage, is what usually decides the search in favour of the Plateau over similarly priced Ottawa suburbs.
-        </p>
-      </div>
-    </ContentBlock>
-    <InlineCTA text="Own property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
-    <FAQSection title="Questions about the Plateau" items={faq} />
-    <SectorLinks overline="Other areas" title="Explore other neighborhoods" sectors={relatedSectors} />
-    <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in the Plateau" text="Process, budget and tips for buying in the area, in a guide sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Buyer or seller in the Plateau?" text="I know the Plateau, let's talk about your project." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
-    <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
-  </>
+  <NeighborhoodTemplate
+    seoTitle="Real Estate Broker Plateau · Gatineau | Yanis Gauthier"
+    metaDesc="Yanis Gauthier-Sigeris, RE/MAX broker with 300+ transactions in the Outaouais. Buy or sell in the Plateau, Gatineau, with a free home valuation."
+    ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
+    jsonLd={{ name: "Plateau", description: "Yanis Gauthier-Sigeris, RE/MAX broker with 300+ transactions in the Outaouais. Buy or sell in the Plateau, Gatineau, with a free home valuation.", lat: 45.4405, lng: -75.7797, url: "/en/plateau/" }}
+    hero={{ overline: "Real estate broker · Plateau, Gatineau", title: "Real estate broker in the Plateau, Gatineau", subtitle: "I help buyers and sellers across the Plateau, on both the Hull and the Aylmer side. I give you the numbers and the options, you decide.", image: heroImg }}
+    trustSpecialty="Active broker in the Plateau"
+    lifestyle={{ image: heroImg, imageAlt: "The Plateau, Gatineau", title: "Where is the Plateau in Gatineau?", subtitle: "The Plateau runs west from Boulevard Saint-Raymond to Chemin Vanier, between Gatineau Park to the north and Boulevard des Allumettières to the south. Boulevard de l'Europe is the dividing line: addresses east of it are in the Hull sector, addresses west of it are in the Aylmer sector." }}
+    reasons={[
+      "Developed mostly since the late 1990s (Boulevard du Plateau was officially named in 1997)",
+      "Mostly recent single-family homes, plus townhouses and condos",
+      "Borders Gatineau Park, with access to the trails",
+      "French-language elementary schools (CSSPO) in the neighbourhood: École du Plateau, École des Deux-Ruisseaux, École du Grand-Héron",
+      "École secondaire de la Cité on Boulevard du Plateau, École secondaire Mont-Bleu nearby",
+      "Access to Ottawa via Boulevard des Allumettières, with commute times that vary by time of day and destination",
+      "Served by STO bus routes",
+    ]}
+    answers={[
+      {
+        q: "Is the Plateau in Hull or Aylmer?",
+        a: "Both. Between Boulevard Saint-Raymond and Boulevard de l'Europe, Plateau addresses are in the Hull sector. Between Boulevard de l'Europe and Chemin Vanier, they are in the Aylmer sector. It is one neighbourhood split by an administrative boundary.",
+        detail: "For sellers, this matters: I always compare a property with recent sales on the same side of Boulevard de l'Europe and, ideally, on the same street. An average for the whole Plateau would give a less accurate price.",
+      },
+      {
+        q: "What kind of homes are in the Plateau?",
+        a: "Mostly single-family homes built since the late 1990s, plus townhouses and condos in the newer developments. Being right next to Gatineau Park is a big part of the appeal.",
+        detail: "Prices vary with the type of property, the year it was built and the street. Rather than quoting a neighbourhood average, I prepare a valuation based on recent comparable sales in your part of the Plateau.",
+      },
+      {
+        q: "Can my children attend English school in the Plateau?",
+        a: "English-language public schools in the area are run by the Western Quebec School Board (WQSB). In Quebec, access to English public school depends on eligibility, usually confirmed by a certificate of eligibility. Check your situation before you choose a neighbourhood.",
+        detail: "For families moving from Ontario, the answer can change which schools, and which neighbourhoods, make sense for you. The Western Quebec School Board explains the eligibility rules on its website.",
+      },
+      {
+        q: "Aylmer, Hull or the Plateau: which one should I choose?",
+        a: "It depends on what matters most to you. The Plateau appeals to buyers who want a recent home near Gatineau Park. Aylmer offers Lac Deschênes and more established neighbourhoods, while Hull suits people who want an urban lifestyle close to the bridges.",
+        detail: "I wrote a detailed comparison of the three areas. You will find it in the \"Read also\" section further down this page.",
+      },
+    ]}
+    profilesTitle="The Plateau is a good fit for…"
+    profiles={[
+      { icon: Users, title: "Families", text: "Recent homes with yards and elementary schools in the neighbourhood." },
+      { icon: Home, title: "First-time buyers", text: "Recent townhouses and condos, an entry point into the neighbourhood." },
+      { icon: TrendingUp, title: "Buyers who want newer homes", text: "Recent construction, often with fewer major renovations ahead." },
+      { icon: MapPin, title: "Ottawa commuters", text: "Access via Boulevard des Allumettières toward the bridges." },
+    ]}
+    inlineCta={{ text: "Own property in the Plateau? Find out how much it's worth.", label: "Get my valuation →", href: "/en/home-valuation/" }}
+    brokerPerspective={{
+      title: "My take on the Plateau",
+      observation: "I work with buyers and sellers on both sides of Boulevard de l'Europe, in the Hull sector and in the Aylmer sector. In February 2026, I helped a first-time buyer purchase a home in the Plateau.",
+      dataPoint: "7 Rue du Chinook: sold in one week, at $945,000 (April 2026).",
+      takeaway: "My advice to Plateau homeowners: your price is set by recent sales on your side of the neighbourhood and on your street, not by an average for the whole area.",
+    }}
+    faq={{
+      title: "Questions about the Plateau",
+      items: [
+        { q: "Is the Plateau a good neighbourhood for families?", a: "For many families, yes: recent homes, elementary schools in the neighbourhood and direct access to Gatineau Park. The right choice also depends on your budget and your daily commute." },
+        { q: "How far is the Plateau from Ottawa?", a: "The Plateau is west of downtown Hull. You reach Ottawa via Boulevard des Allumettières and the bridges, and commute times vary by time of day and destination. Send me your work address and I will help you compare the options." },
+        { q: "Which schools serve the Plateau?", a: "For French-language public schools, the CSSPO has École du Plateau, École des Deux-Ruisseaux and École du Grand-Héron in the neighbourhood, with École secondaire de la Cité on Boulevard du Plateau and École secondaire Mont-Bleu nearby. The assigned school depends on your address. English-language public schools are run by the Western Quebec School Board, subject to eligibility." },
+        { q: "What is the price of a house in the Plateau?", a: "It depends on the type of property, the year it was built and the side of the neighbourhood. Contact me for an analysis based on recent sales in your part of the Plateau." },
+        { q: "Are there condos and townhouses in the Plateau?", a: "Yes, mostly in the newer developments. They are often how first-time buyers get into the neighbourhood." },
+        { q: "Is the Plateau served by public transit?", a: "Yes, by STO bus routes. The Rapibus does not reach the Plateau: its western end is Taché-UQO station." },
+        { q: "Why work with a broker who knows the Plateau?", a: "Because price is decided street by street and by side of the neighbourhood. A broker active in the area knows the recent sales and the buyers who are looking. That helps you buy at the right price or sell at the right time." },
+        { q: "How do I get a home valuation in the Plateau?", a: "I prepare a free valuation based on recent comparable sales in your area. It is confidential and there is no commitment." },
+      ],
+    }}
+    sectors={{ list: [
+      { name: "Aylmer", href: "/en/aylmer/", detail: "Lac Deschênes, established neighbourhoods" },
+      { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos" },
+      { name: "Chelsea", href: "/en/chelsea/", detail: "Village, Gatineau Park" },
+    ]}}
+    related={{ pages: [
+      { title: "Aylmer, Hull or the Plateau?", text: "A comparison of the three areas.", href: "/en/blog/aylmer-hull-plateau-which-neighborhood/" },
+      { title: "Living in the Plateau", text: "Day-to-day life in the neighbourhood.", href: "/en/living-plateau/" },
+      { title: "Free home valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
+      { title: "Buy in Gatineau from Ottawa", text: "Crossing the river without surprises.", href: "/en/buy-from-ottawa/" },
+      { title: "First-time buyer", text: "Budget, process and tips.", href: "/en/first-time-buyer/" },
+      { title: "All neighbourhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods/" },
+    ]}}
+    guide={{ type: "buyer_guide", headline: "Free Buyer Guide: buying in the Plateau", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the Buyer Guide", stickyLabel: "Free Buyer Guide, get it by email" }}
+    cta={{ title: "Buyer or seller in the Plateau?", text: "Let's talk about your project. I know the neighbourhood on both sides of Boulevard de l'Europe.", buttons: [{ label: "Free valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and the options, you decide." }}
+  />
 );
 
 export default PlateauPageEn;
