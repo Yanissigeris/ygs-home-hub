@@ -21,7 +21,7 @@ const buyerSteps = [
   { name: "Rechercher et visiter des propriétés", text: "Identifiez les propriétés qui correspondent à vos critères et visitez-les avec un courtier qui connaît le marché local." },
   { name: "Formuler une offre solide", text: "Rédigez une promesse d'achat compétitive avec les bonnes conditions, inspection, financement et délais." },
   { name: "Faire l'inspection pré-achat", text: "Faites inspecter la propriété par un professionnel pour identifier les problèmes potentiels avant de finaliser." },
-  { name: "Finaliser chez le notaire", text: "Le notaire vérifie les titres, prépare les documents et officialise la transaction. Prévoyez environ 1 500$ en frais." },
+  { name: "Finaliser chez le notaire", text: "Le notaire vérifie les titres, prépare les documents et officialise la transaction. Demandez une soumission pour ses honoraires." },
 ];
 
 const topics = [
@@ -34,10 +34,10 @@ const topics = [
 ];
 
 const faq = [
-  { q: "Combien faut-il comme mise de fonds?", a: "Minimum 5% pour une résidence principale. Pour un plex occupé, 5% aussi. Pour un investissement pur, 20%. On peut en discuter selon votre situation." },
+  { q: "Combien faut-il comme mise de fonds?", a: "Pour une résidence ou un duplex que vous habitez, sous 1,5 M$ : 5 % sur les premiers 500 000 $ et 10 % sur l'excédent (SCHL). Un triplex ou un quadruplex occupé par le propriétaire demande au moins 10 %. À 1,5 M$ et plus, ou pour un immeuble locatif que vous n'habitez pas, prévoyez 20 % ou plus selon le prêteur. On en discute selon votre situation." },
   { q: "Est-ce mieux d'acheter à Gatineau qu'à Ottawa?", a: "Ça dépend de vos priorités. En général, les prix sont plus accessibles côté Gatineau, mais il faut aussi considérer les taxes et les services." },
   { q: "Combien de temps prend un achat?", a: "En général, 60 à 90 jours du début de la recherche à la prise de possession, mais ça peut varier selon le marché." },
-  { q: "Quels sont les frais à prévoir?", a: "Notaire (environ 1 500$), taxe de bienvenue, assurance titre optionnelle, et inspection pré-achat. On revoit tout ça ensemble." },
+  { q: "Quels sont les frais à prévoir?", a: "Les honoraires du notaire (demandez une soumission), les droits de mutation (taxe de bienvenue), l'inspection préachat, les ajustements de taxes municipales et scolaires, et la taxe de 9 % sur la prime d'assurance prêt hypothécaire s'il y a lieu. Un premier acheteur peut récupérer une partie des droits de mutation avec le crédit d'impôt de Revenu Québec, jusqu'à 5 875 $ selon les conditions. On revoit tout ça ensemble." },
 ];
 
 const related = [

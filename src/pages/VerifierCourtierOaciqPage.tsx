@@ -11,14 +11,14 @@ import heroImg from "@/assets/hero-verifier-oaciq.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "Comment vérifier un courtier immobilier au Québec?", a: "Rendez-vous sur le site de l'OACIQ (oaciq.com) et utilisez l'outil de recherche pour confirmer que le courtier détient un permis valide et n'a pas de mesures disciplinaires." },
+  { q: "Comment vérifier un courtier immobilier au Québec?", a: "Rendez-vous sur le site de l'OACIQ (oaciq.com) et utilisez le registre des titulaires de permis pour confirmer que le courtier détient un permis valide, ni suspendu ni assorti de conditions." },
   { q: "Qu'est-ce que l'OACIQ?", a: "L'Organisme d'autoréglementation du courtage immobilier du Québec. Il encadre tous les courtiers immobiliers et s'assure qu'ils respectent les règles de la profession." },
-  { q: "Pourquoi vérifier un courtier avant de signer?", a: "Pour vous assurer que son permis est valide, qu'il est en règle et qu'il n'a pas fait l'objet de plaintes ou de mesures disciplinaires. C'est une étape de base pour protéger votre transaction." },
+  { q: "Pourquoi vérifier un courtier avant de signer?", a: "Pour vous assurer que son permis est valide, sans suspension ni condition. Vous pouvez aussi consulter les décisions disciplinaires, publiées sur le site de SOQUIJ. C'est une étape de base pour protéger votre transaction." },
   { q: "Que faire si un courtier n'est pas inscrit à l'OACIQ?", a: "Au Québec, il est illégal d'exercer le courtage immobilier sans permis de l'OACIQ. Si un courtier n'apparaît pas au registre, ne signez rien et contactez l'OACIQ." },
   { q: "Est-ce que tous les courtiers au Québec sont inscrits à l'OACIQ?", a: "Oui, c'est obligatoire. Tout courtier qui exerce légalement au Québec doit détenir un permis valide de l'OACIQ." },
   { q: "Comment porter plainte contre un courtier immobilier?", a: "L'OACIQ a un processus de plainte formel. Vous pouvez déposer une plainte en ligne ou par téléphone si vous estimez qu'un courtier n'a pas respecté ses obligations." },
   { q: "L'OACIQ protège-t-il les acheteurs et les vendeurs?", a: "Oui, l'OACIQ encadre la profession pour protéger le public. Il vérifie les compétences, impose des règles déontologiques et gère un fonds d'indemnisation en cas de fraude." },
-  { q: "Comment savoir si un courtier a des mesures disciplinaires?", a: "Le registre de l'OACIQ affiche les mesures disciplinaires publiques. Vous pouvez vérifier le dossier de n'importe quel courtier en ligne." },
+  { q: "Comment savoir si un courtier a des mesures disciplinaires?", a: "Le registre de l'OACIQ indique si un permis est suspendu ou assorti de conditions. Les décisions disciplinaires, elles, sont publiées sur le site de SOQUIJ (citoyens.soquij.qc.ca), et l'OACIQ affiche les avis de suspension pendant qu'ils sont en vigueur." },
 ];
 
 const VerifierCourtierOaciqPage = () => (
@@ -60,7 +60,7 @@ const VerifierCourtierOaciqPage = () => (
           {[
             { num: "01", title: "Visitez le registre de l'OACIQ", text: "Rendez-vous sur oaciq.com et utilisez l'outil de recherche « Trouver un courtier »." },
             { num: "02", title: "Cherchez par nom", text: "Entrez le nom du courtier pour voir son permis, son agence et son statut actuel." },
-            { num: "03", title: "Vérifiez le statut", text: "Assurez-vous que le permis est actif et qu'il n'y a pas de mesures disciplinaires en cours." },
+            { num: "03", title: "Vérifiez le statut", text: "Assurez-vous que le permis est actif, ni suspendu ni assorti de conditions." },
           ].map((step) => (
             <motion.div
               key={step.num}
