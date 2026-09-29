@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Are there services in Buckingham?",
-    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. For big-box stores and medical specialists, you head to central Gatineau (30-40 minutes).",
+    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. Hôpital de Papineau is also in Buckingham. For big-box stores, you head to central Gatineau (30-40 minutes).",
   },
   {
     q: "Do Buckingham properties have wells?",

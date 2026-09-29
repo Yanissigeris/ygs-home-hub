@@ -21,11 +21,11 @@ const faq = [
   },
   {
     q: "Can I build on a lot in Chelsea?",
-    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, riparian buffers (10-15 metres), and MRC constraints can limit or regulate projects. Before any land purchase, a thorough verification with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais is essential.",
+    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, the 15-metre riparian protection strip and MRC constraints can limit or regulate projects. Before any land purchase, a thorough verification with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais is essential.",
   },
   {
     q: "Can my children go to an English school in Chelsea?",
-    a: "Yes. Chelsea is served by the Western Quebec School Board for English-language education. Chelsea Elementary School is located in the municipality. Given Chelsea's almost equal split between francophones and anglophones, it is one of the most naturally bilingual communities in all of Outaouais.",
+    a: "Yes, if your child is eligible for English instruction (certificate of eligibility). Chelsea Elementary, a Western Quebec School Board school, is in the municipality. For high school, the closest English schools are in Gatineau, in the Hull and Aylmer sectors. According to the 2021 Census, Chelsea's population is split almost evenly between francophones and anglophones.",
   },
   {
     q: "What does a typical Chelsea home cost in 2026?",
@@ -33,7 +33,7 @@ const faq = [
   },
   {
     q: "How long does the Ottawa commute really take from Chelsea?",
-    a: "From central Old Chelsea to downtown Ottawa is 18-25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30-40 minutes during morning rush. Transcollines runs express buses to the STO Rapibus terminal at Labrosse, where you connect to OC Transpo via the Champlain or Macdonald-Cartier Bridge. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks, roughly 35 minutes door-to-door.",
+    a: "From central Old Chelsea to downtown Ottawa is 18-25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30-40 minutes during morning rush. Transcollines buses link Chelsea to Gatineau, with transfers to the STO network. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks, roughly 35 minutes door-to-door.",
   },
   {
     q: "Are wells and septic systems a problem when buying in Chelsea?",
@@ -113,7 +113,7 @@ const ChelseaPageEn = () => (
           Chelsea's population is almost equally split between francophones and anglophones, approximately 70% of households speak both official languages. Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Source: Wikipedia/Chelsea, Quebec)
         </p>
         <p className="prose-body">
-          Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service serves Chelsea and connects it to the STO Rapibus network and OC Transpo in Ottawa. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
+          Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service links Chelsea to Gatineau, with transfers to the STO network. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
         </p>
       </div>
     </ContentBlock>

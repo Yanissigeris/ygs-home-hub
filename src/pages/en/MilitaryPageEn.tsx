@@ -22,7 +22,7 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 const challenges = [
   { icon: MapPin, title: "Short-notice posting", text: "The move is coming fast, you need to find a home in Gatineau or sell quickly, without compromising on price." },
   { icon: Shield, title: "Understanding the Québec market", text: "Municipal and school taxes, notary process, zoning, Québec works differently from Ontario or the rest of Canada." },
-  { icon: Home, title: "Finding the right neighborhood", text: "Proximity to CFB Uplands or downtown Ottawa, French and English schools, bilingual services, every family has its priorities." },
+  { icon: Home, title: "Finding the right neighborhood", text: "Proximity to National Defence's Carling Campus or downtown Ottawa, French and English schools, bilingual services, every family has its priorities." },
   { icon: Heart, title: "Settling as a family in Gatineau", text: "Coordinating sale and purchase, finding a family neighborhood in Aylmer, the Plateau or Hull, enrolling kids, all while managing posting stress." },
 ];
 const steps = [
@@ -38,7 +38,7 @@ const militaryPaths = [
 const faq = [
   { q: "Do you know the military programs?", a: "Yes. I understand posting realities, tight deadlines and specific needs. We adapt the approach to your situation." },
   { q: "I need to sell and buy at the same time — is that possible?", a: "It's common during postings. We plan the coordination from the start to avoid getting stuck." },
-  { q: "Which neighborhoods are close to the base?", a: "Aylmer and the Plateau are popular for CFB Uplands access via the Champlain Bridge. Hull is ideal for those working in downtown Ottawa. We choose based on your commute and family priorities." },
+  { q: "Which neighborhoods are close to military workplaces?", a: "It depends on where you work. Since 2017, National Defence has been consolidating many of its offices at the Carling Campus, on Carling Avenue in west Ottawa: from Aylmer and the Plateau, you get there via the Champlain Bridge. Other offices are in downtown Ottawa, closer to Hull. We compare your commutes based on your posting and family priorities." },
   { q: "Can you do virtual visits?", a: "Absolutely. Many military members buy remotely before their arrival in Gatineau. I adapt to your schedule and time zone." },
 ];
 

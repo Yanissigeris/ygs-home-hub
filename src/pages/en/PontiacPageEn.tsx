@@ -20,7 +20,7 @@ const faq = [
   },
   {
     q: "Are there schools in Pontiac?",
-    a: "The Municipality of Pontiac has elementary schools on its territory. For secondary school and specialized educational services, families generally travel toward Gatineau or schools in the Chelsea area. For anglophone families, the Western Quebec School Board serves the region. I recommend verifying directly with the relevant school boards to confirm the school zone for any property you're considering.",
+    a: "The Municipality of Pontiac has elementary schools on its territory. For secondary school and specialized educational services, families generally travel toward Gatineau. For anglophone families, the Western Quebec School Board runs Onslow Elementary in Quyon, subject to eligibility for English instruction. I recommend verifying directly with the relevant school boards to confirm the school zone for any property you're considering.",
   },
   {
     q: "Is Pontiac too far to live while working in Ottawa or Gatineau?",
@@ -28,7 +28,7 @@ const faq = [
   },
   {
     q: "Is Pontiac a good option for anglophone families?",
-    a: "Yes, Pontiac is one of the most bilingual communities in the National Capital Region. With approximately 64% of residents bilingual and nearly 39% with English as mother tongue (2016 Census), it is a naturally anglophone-friendly environment. The Western Quebec School Board serves the area for English-language education. For anglophone families relocating from Ottawa who want more space at an accessible price within Quebec, Pontiac is often a compelling option that is under-explored.",
+    a: "Yes. According to the 2016 Census, about 64% of residents are bilingual and nearly 39% have English as their mother tongue. For English school, the Western Quebec School Board runs Onslow Elementary in Quyon, subject to eligibility (certificate of eligibility).",
   },
   {
     q: "What does a Pontiac home cost in 2026?",
@@ -36,7 +36,7 @@ const faq = [
   },
   {
     q: "Are wells, septic and propane standard in Pontiac?",
-    a: "Yes. Almost no Pontiac property is connected to municipal water or sewer. Artesian wells, septic systems and propane (or oil/wood) heating are the norm. None of these are problems on their own, they're standard semi-rural Quebec, but they require a thorough professional inspection: water potability, well flow rate, septic tank age and percolation field, propane tank ownership status, and (where relevant) wood-stove WETT certification. I include all of these in every Pontiac inspection clause.",
+    a: "Mostly, yes. The Municipality provides water and sewer service in the Quyon sector. Elsewhere, artesian wells and septic systems are the norm, and propane (or oil/wood) heating is common. None of these are problems on their own, they're standard semi-rural Quebec, but they require a thorough professional inspection: water potability, well flow rate, septic tank age and percolation field, propane tank ownership status, and (where relevant) wood-stove WETT certification. I include all of these in every Pontiac inspection clause.",
   },
   {
     q: "Is Pontiac in a flood zone along the Ottawa River?",
@@ -160,7 +160,7 @@ const PontiacPageEn = () => {
           {[
             { icon: TreePine, title: "Gatineau Park — in your backyard", text: "A large portion of Pontiac's territory is included in Gatineau Park (360 km² of forests, lakes and rivers, created in 1938). The Luskville Falls trail is directly accessible from the Luskville area. Residents have access to hundreds of kilometres of hiking, cross-country skiing and snowshoeing trails. (Source: National Capital Commission)" },
             { icon: Waves, title: "The Ottawa River as your frontage", text: "The Municipality of Pontiac runs along the north shore of the Ottawa River. Several Breckenridge properties offer direct river access or water views. The Ottawa River is navigable, rich in fish, and one of Canada's largest rivers, a rare quality-of-life asset for a residential property." },
-            { icon: Bus, title: "Transcollines — urban connection", text: "The Municipality of Pontiac is served by Transcollines, the transit service that connects the Collines-de-l'Outaouais municipalities to the STO's Rapibus network and Ottawa's OC Transpo. A city connection that makes Pontiac more accessible than one might think for those combining remote work with occasional commuting." },
+            { icon: Bus, title: "Transcollines: urban connection", text: "The Municipality of Pontiac is served by Transcollines, the transit service that links the Collines-de-l'Outaouais municipalities to Gatineau, with transfers to the STO network. A city connection that makes Pontiac more accessible than one might think for those combining remote work with occasional commuting." },
           ].map((c) => (
             <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
               <c.icon size={24} className="text-accent" />

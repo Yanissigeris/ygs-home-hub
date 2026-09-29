@@ -97,7 +97,7 @@ const CantleyPageEn = () => (
           Cantley is known as a low-density residential municipality, one of its main draws. Updated urban planning bylaws in 2025 set the minimum lot size within the urban perimeter at 5,000 m². This preserves the municipality's semi-rural character. (Source: Municipality of Cantley, Urban Plan 2025)
         </p>
         <p className="prose-body">
-          Cantley has three francophone elementary schools: école Sainte-Élisabeth, école de la Rose-des-Vents, and école de l'Orée-des-Bois (opened in 2014). For high school and specialized services, residents head to Gatineau. The Transcollines transit service connects Cantley to the STO Rapibus network and OC Transpo in Ottawa. (Source: Municipality of Cantley, Wikipedia)
+          Cantley has three francophone elementary schools: école Sainte-Élisabeth, école de la Rose-des-Vents, and école de l'Orée-des-Bois (opened in 2014). For high school and specialized services, residents head to Gatineau. The Transcollines transit service links Cantley to Gatineau, with transfers to the STO network. (Source: Municipality of Cantley, Wikipedia)
         </p>
       </div>
     </ContentBlock>

@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: "Is Hull a good choice for federal public servants?",
-    a: "Yes, many federal departments and agencies have offices on the Québec side in Gatineau (Portage Complex, Tour de la Paix, etc.). And even for those working in Ottawa, bridges are accessible by bike or on foot from several Hull areas. That's one of the reasons Hull remains in high demand among public servants on both sides of the river.",
+    a: "Yes, several federal departments and agencies have offices in Hull, including Place du Portage and Terrasses de la Chaudière. For those who work in Ottawa, several parts of Hull let you cross the bridges on foot or by bike.",
   },
   {
     q: "What does a Hull condo or single-family home cost in 2026?",
@@ -37,7 +37,7 @@ const faq = [
   },
   {
     q: "Will the Gatineau-Ottawa tramway change Hull property values?",
-    a: "The proposed Gatineau-Ottawa tramway would run a corridor through Wrightville and Val-Tétreau toward downtown Ottawa. The project is still in the planning and consultation phase, no service date is confirmed. Historically, confirmed light-rail corridors lift property values within walking distance by 5-15% over a 5-10 year horizon, but that effect is contingent on the project actually being built. I track the project monthly and factor it transparently into valuations rather than treating it as a guaranteed upside.",
+    a: "Possibly, but nothing is certain yet. In February 2026, Québec gave Mobilité Infra Québec a nine-month mandate to review the tramway project, which would link Aylmer and the Plateau to downtown Ottawa. In June 2026, Mobilité Infra Québec estimated its cost at about $8 billion for 24 km, to be built in several phases. The 2035 opening targeted by the former project office remains to be confirmed. Any effect on values depends on the project being built, so I price Hull properties on today's sales and treat the tramway as a possibility, not a given.",
   },
   {
     q: "Are Hull's older buildings safe to buy as a first home?",
@@ -57,7 +57,7 @@ const subSectors = [
   },
   {
     title: "Wrightville / Val-Tétreau",
-    text: "Central area, 1960s, 80s bungalows, larger lots, still-accessible prices. Located on the corridor of the future Gatineau-Ottawa tramway, an active infrastructure project that could transform mobility in this area.",
+    text: "Central area, 1960s to 1980s bungalows, larger lots, still-accessible prices.",
   },
   {
     title: "Lac Leamy",
@@ -187,10 +187,10 @@ const HullPageEn = () => (
           Hull is the most heterogeneous market in metropolitan Gatineau and the only sector where you can credibly compare a $235,000 1-bed condo, a $625,000 century triplex and a $1.2M new-build river-view condo on the same Centris page. As of May 2026, resale condos in Vieux-Hull and Wrightville run from $235,000 to $475,000 depending on age, parking and view; Zibi new-build inventory starts around $425,000 for a 1-bed and pushes past $850,000 for the larger waterfront units. Older single-family homes in the residential streets behind boulevard Saint-Joseph trade between $475,000 and $725,000, an inventory pocket that's slowly being absorbed by anglophone families relocating from the Glebe and Hintonburg.
         </p>
         <p className="prose-body">
-          On the income side, plexes remain the structural reason Hull is on every Outaouais investor's shortlist. The Université du Québec en Outaouais (UQO) anchors a permanent rental pool of roughly 6,500 students; federal offices in the Portage Complex, Place du Centre and Tour de la Paix generate stable demand from public servants who want to walk to work. The 2025-2026 cycle did rebalance the rental market, new builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth, but older plexes with below-market tenants and untapped renovation upside continue to trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.
+          On the income side, plexes remain the structural reason Hull is on every Outaouais investor's shortlist. The Université du Québec en Outaouais (UQO) anchors a permanent rental pool of roughly 6,500 students; federal offices at Place du Portage, Place du Centre and Terrasses de la Chaudière generate stable demand from public servants who want to walk to work. The 2025-2026 cycle did rebalance the rental market, new builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth, but older plexes with below-market tenants and untapped renovation upside continue to trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.
         </p>
         <p className="prose-body">
-          The wild card for the next five years is the Gatineau-Ottawa tramway. The current alignment runs through Wrightville and Val-Tétreau toward downtown Ottawa via the Macdonald-Cartier Bridge corridor. The project is in planning and consultation, not construction, but historically, confirmed light-rail corridors lift values within walking distance by 5-15% over a 5-10 year horizon. I treat the tramway as plausible upside, not a guaranteed lift, and I price every Hull listing on today's fundamentals first.
+          The wild card for the next few years is the tramway. Under review by Mobilité Infra Québec since February 2026, the project would link Aylmer and the Plateau to downtown Ottawa. In June 2026, its cost was estimated at about $8 billion for 24 km, to be built in several phases, and the 2035 opening targeted by the former project office remains to be confirmed. I treat the tramway as a possibility, not a guaranteed lift, and I price every Hull listing on today's fundamentals first.
         </p>
       </div>
     </ContentBlock>

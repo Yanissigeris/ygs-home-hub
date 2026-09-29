@@ -17,8 +17,8 @@ const LimbourPageEn = () => (
       "Roughly $100,000+ savings vs. comparable Ottawa neighborhoods, Ottawa single-family median was $780,000 in Q1 2026 (Ottawa Real Estate Board)",
       "Ferme Limbour sub-sector: higher-end residential with wooded trails and larger properties",
       "Abundant parks, walking trails and green spaces",
-      "Medical services and pharmacies on Boulevard de l'Hôpital: Gatineau Hospital, Pharmaprix, Uniprix",
-      "Western Quebec School Board (English) elementary and secondary schools available in the Gatineau sector",
+      "Gatineau Hospital (909 Boulevard La Vérendrye Ouest) a few minutes away by car",
+      "Western Quebec School Board (English): Greater Gatineau Elementary in the Gatineau sector, high schools in Hull, subject to eligibility",
       "Quick access to Highway 50, about 20 minutes from downtown Ottawa",
       "Growing area with little renovation work needed compared to older neighborhoods",
       "Practical for federal commuters and Ottawa cross-river buyers seeking modern construction",
@@ -48,9 +48,9 @@ const LimbourPageEn = () => (
       { q: "Is Limbour a new neighborhood?", a: "Yes, mostly. Most developments date from the 2000s-2020s, with a few older properties in certain pockets. The Ferme Limbour sub-sector is especially sought after for its quality construction." },
       { q: "What is the price of a home in Limbour in 2026?", a: "Based on active Centris listings as of May 2026, single-family and semi-detached homes typically sell between $475,000 and $800,000 depending on size, year of construction, and sub-sector. The higher-end properties are in Ferme Limbour." },
       { q: "How much can I save buying in Limbour vs. Ottawa?", a: "The price difference is meaningful. The median single-family home in Ottawa was $780,000 in Q1 2026 according to the Ottawa Real Estate Board, while homes in Limbour range from $475,000 to $800,000 (Centris, May 2026). For a comparable property, that often translates into $100,000+ in savings. Property taxes and Quebec-specific costs should also be factored into your decision." },
-      { q: "Are there English-language schools nearby?", a: "Yes. The Western Quebec School Board operates English-language elementary and secondary schools across the Gatineau sector. To find your specific catchment school, the WQSB has a School Locator tool on their website (westernquebec.ca). I can also point you to the right contacts during a property visit." },
+      { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has elementary schools in the Gatineau and Hull sectors (Greater Gatineau Elementary, Pierre Elliott Trudeau Elementary), and its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). To find the school for your address, use the WQSB School Locator on westernquebec.ca. I can also point you to the right contacts during a property visit." },
       { q: "Are there parks and trails in Limbour?", a: "Yes, the neighborhood is known for its green spaces, walking trails and neighborhood parks. The Ferme Limbour sub-sector is surrounded by wooded areas, which contributes to the area's appeal." },
-      { q: "What services are accessible near Limbour?", a: "Boulevard de l'Hôpital concentrates the essential services: Gatineau Hospital, Pharmaprix and Uniprix pharmacies. Tim Hortons and restaurants are accessible within minutes via Boulevard Maloney and Boulevard La Vérendrye." },
+      { q: "What services are accessible near Limbour?", a: "Rue Saint-Louis has local shops, including a grocery store and a pharmacy. Gatineau Hospital, at 909 Boulevard La Vérendrye Ouest, is a few minutes away by car." },
       { q: "How long does a sale take in Limbour?", a: "Well-prepared recent homes typically go under contract in 25-40 days in the current market. The average time on market for a single-family home in the Gatineau metropolitan area was 32 days in Q4 2025 according to the Outaouais Real Estate Board." },
     ]}}
     sectors={{ list: [

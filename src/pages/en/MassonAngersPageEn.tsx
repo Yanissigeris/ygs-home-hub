@@ -16,9 +16,9 @@ const MassonAngersPageEn = () => (
       "Roughly $300,000+ savings vs. comparable Ottawa neighborhoods, Ottawa single-family median was $780,000 in Q1 2026 (Ottawa Real Estate Board)",
       "Active new construction: multiple builders delivering in 2026 with spring possession available",
       "Two distinct sub-sectors: Masson (west, more mature) and Angers (east, more developing)",
-      "French elementary schools (Commission scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
+      "French elementary schools (Centre de services scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "Hormisdas-Gamelin secondary school in Buckingham (12 km, IB international program and sport option)",
-      "Western Quebec School Board (English) elementary and secondary schools available in the broader east Gatineau area",
+      "Western Quebec School Board (English): Buckingham Elementary in Buckingham, high schools in Hull, subject to eligibility",
       "Quick access to Highway 50-20-25 minutes from central Gatineau, about 35-40 minutes from downtown Ottawa",
       "Rivière du Lièvre and Grenouillettes marsh, nature access within a residential area",
       "Practical for federal commuters and first-time buyers priced out of Ottawa",
@@ -33,12 +33,12 @@ const MassonAngersPageEn = () => (
     ]}
     inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Masson-Angers", items: [
-      { q: "Is Masson-Angers far from downtown Gatineau?", a: "About 20-25 minutes via Highway 50. Quick and direct access. For downtown Ottawa, plan 35-40 minutes depending on traffic and the bridge used (Macdonald-Cartier or Champlain)." },
+      { q: "Is Masson-Angers far from downtown Gatineau?", a: "About 20-25 minutes via Highway 50. Quick and direct access. For downtown Ottawa, plan 35-40 minutes depending on traffic and the bridge used." },
       { q: "What is the price of a home in Masson-Angers in 2026?", a: "Based on active Centris listings as of May 2026, semi-detached and single-family homes typically sell between $400,000 and $490,000+ depending on type, year of construction and sub-sector. New builds are often positioned around $465,000 for 5 bedrooms with finished basement." },
       { q: "How much can I save buying in Masson-Angers vs. Ottawa?", a: "The price difference is substantial. The median single-family home in Ottawa was $780,000 in Q1 2026 according to the Ottawa Real Estate Board, while homes in Masson-Angers range from $400,000 to $490,000+ (Centris, May 2026). For a comparable property, that often translates into $300,000+ in savings. Property taxes and Quebec-specific costs should also be factored into your decision." },
-      { q: "Are there English-language schools nearby?", a: "Yes. The Western Quebec School Board operates English-language elementary and secondary schools across the broader east Gatineau area. To find your specific catchment school, the WQSB has a School Locator tool on their website (westernquebec.ca). Plan for some school transportation since the closest English schools may not be in Masson-Angers itself." },
+      { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has Buckingham Elementary in Buckingham and Greater Gatineau Elementary in the Gatineau sector; its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). Plan for school transportation, and use the WQSB School Locator on westernquebec.ca to find the school for your address." },
       { q: "Are there new homes in Masson-Angers?", a: "Yes, it's one of the areas with the most new construction in Gatineau. Multiple builders are active with spring 2026 possession available in some projects." },
-      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Commission scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (which has been the subject of a major $20M expansion announced by the Quebec government) and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham (12 km) with IB program and sport option." },
+      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (which has been the subject of a major $20M expansion announced by the Quebec government) and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham (12 km) with IB program and sport option." },
       { q: "What are the sub-sectors of Masson-Angers?", a: "The area splits into two: Masson (west side, more mature, near the Rivière du Lièvre) and Angers (east side, more developing with recent new construction). Each sub-sector has its own pricing and inventory dynamics." },
     ]}}
     sectors={{ list: [

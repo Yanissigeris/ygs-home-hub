@@ -17,7 +17,7 @@ import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
   { icon: DollarSign, title: "More affordable prices", text: "Gatineau's market often offers better value than saturated military markets." },
-  { icon: MapPin, title: "Close to the bases", text: "Quick access to CFB Uplands and federal facilities in the region." },
+  { icon: MapPin, title: "Close to work", text: "Access to National Defence's Carling Campus and other federal facilities in the region, depending on the area you choose." },
   { icon: Home, title: "Variety of properties", text: "Houses, condos, semi-detached, in family-friendly, well-served neighborhoods." },
   { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },
 ];
@@ -32,7 +32,7 @@ const faq = [
 const MilitaryBuyerPageEn = () => (
   <>
     <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Military Home Buying — Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods near CFB Uplands." url="/en/military-buyer/" serviceType="Military Real Estate Buyer Service" />
+    <ServiceJsonLd name="Military Home Buying in Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods matched to your workplace." url="/en/military-buyer/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"
