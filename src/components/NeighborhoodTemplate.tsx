@@ -224,6 +224,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
         headline={p.guide.headline}
         text={p.guide.text}
         ctaLabel={p.guide.ctaLabel}
+        lang={lang}
       />
 
       <CTASection
@@ -234,7 +235,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
         trustLine={p.cta.trustLine}
       />
 
-      <StickyGuideBanner guideType={p.guide.type} label={p.guide.stickyLabel} />
+      <StickyGuideBanner guideType={p.guide.type} label={p.guide.stickyLabel} lang={lang} />
     </>
   );
 };
