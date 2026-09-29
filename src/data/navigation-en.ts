@@ -125,6 +125,7 @@ export const footerPopularLinksEn = [
   { label: "Realtor Gatineau", href: "/en/gatineau/" },
   { label: "Real Estate Agent Aylmer", href: "/en/aylmer/" },
   { label: "Realtor Hull", href: "/en/hull/" },
+  { label: "Real Estate Broker Plateau", href: "/en/plateau/" },
   { label: "Realtor Chelsea", href: "/en/chelsea/" },
   { label: "Home Valuation Gatineau", href: "/en/home-valuation/" },
   { label: "Sell My House Gatineau", href: "/en/sell/" },

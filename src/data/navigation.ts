@@ -140,6 +140,7 @@ export const footerPopularLinks = [
   { label: "Courtier immobilier Gatineau", href: "/gatineau/" },
   { label: "Courtier immobilier Aylmer", href: "/aylmer/" },
   { label: "Courtier immobilier Hull", href: "/hull/" },
+  { label: "Courtier immobilier Plateau", href: "/plateau/" },
   { label: "Courtier immobilier Chelsea", href: "/chelsea/" },
   { label: "Courtier immobilier Cantley", href: "/cantley/" },
   { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau/" },
