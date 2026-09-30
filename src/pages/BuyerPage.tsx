@@ -76,14 +76,14 @@ const BuyerPage = () => (
     />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Contexte 2026" title="Acheter à Gatineau en 2026 — un contexte plus favorable" />
+      <SectionHeading overline="Contexte 2026" title="Acheter à Gatineau en 2026 : un contexte plus favorable" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Les acheteurs bénéficient en 2026 d'un marché plus équilibré qu'en 2022-2024. L'offre de propriétés disponibles a augmenté, les taux d'intérêt se sont stabilisés, et le phénomène de surenchère systématique s'est atténué dans plusieurs segments.
+        Les acheteurs ont plus de choix en 2026. Au 2e trimestre, le nombre de propriétés résidentielles en vigueur dans la région métropolitaine de Gatineau était en hausse de 30 % sur un an, alors que les ventes baissaient de 15 % (APCIQ, données Centris).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Ce n'est pas pour autant un marché d'acheteurs pur. Les propriétés bien situées et bien présentées se vendent encore rapidement. Mais vous avez maintenant plus de temps pour analyser, visiter et réfléchir avant de faire une offre, ce qui est une amélioration réelle pour les acheteurs sérieux.
+        Ce n'est pas pour autant un marché d'acheteurs. Selon l'APCIQ, sur les 12 mois terminés en juin 2026, les conditions restaient favorables aux vendeurs pour les unifamiliales dans toutes les gammes de prix. Les propriétés bien situées et bien présentées se vendent encore rapidement, mais vous avez plus de temps pour analyser, visiter et réfléchir avant de faire une offre.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Sources&nbsp;: SCHL, Perspectives du marché 2026 · Chambre immobilière de l'Outaouais.</p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 2e trimestre 2026, région métropolitaine de Gatineau.</p>
     </ContentBlock>
 
 <ContentBlock narrow>

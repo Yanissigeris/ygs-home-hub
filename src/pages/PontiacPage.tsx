@@ -178,7 +178,7 @@ const PontiacPage = () => {
           <div className="space-y-3.5">
             {[
               "Pontiac attire un profil d'acheteur spécifique : familles en télétravail, amoureux de la nature, personnes qui cherchent l'espace vrai dans la RCN. La demande pour ce profil reste constante.",
-              "Le marché en Outaouais en 2026 offre plus de choix aux acheteurs qu'en 2022-2024, selon la Chambre immobilière de l'Outaouais. Pontiac bénéficie de ce contexte de stabilisation.",
+              "Au 2e trimestre 2026, 535 unifamiliales étaient en vigueur dans la périphérie de Gatineau, qui inclut Pontiac, soit 13 % de plus qu'un an plus tôt (APCIQ). Les acheteurs y ont plus de choix.",
               "Les transactions à Pontiac sont moins fréquentes que dans les secteurs urbains, ce qui rend l'évaluation précise encore plus critique. Un courtier qui surveille activement ce marché est un avantage réel.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">

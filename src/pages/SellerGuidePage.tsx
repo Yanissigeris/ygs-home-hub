@@ -37,7 +37,7 @@ const faq = [
   { q: "Quand est-ce le meilleur moment pour vendre à Gatineau?", a: "Ça dépend de votre situation personnelle, pas seulement du marché. On analyse ensemble le meilleur timing pour vous." },
   { q: "Combien coûte un courtier immobilier?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent, tout est clair dès le départ." },
   { q: "Faut-il faire des rénovations avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
-  { q: "Combien de temps pour vendre à Gatineau?", a: "En moyenne 30 à 60 jours sur le marché, mais ça varie selon le secteur, le prix et la saison." },
+  { q: "Combien de temps pour vendre à Gatineau?", a: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 27 jours en moyenne dans la région métropolitaine de Gatineau, et une copropriété en 40 jours (APCIQ, données Centris). Ça varie selon le secteur, le prix et la saison." },
 ];
 
 const related = [

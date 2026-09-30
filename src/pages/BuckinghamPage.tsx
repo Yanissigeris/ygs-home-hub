@@ -140,7 +140,7 @@ const BuckinghamPage = () => (
           {[
             "Buckingham est un des cinq secteurs historiques qui ont formé la ville de Gatineau. Centre-ville fonctionnel avec services essentiels sur place.",
             "Masson-Angers longe la rivière des Outaouais et offre l'ambiance semi-rurale la plus proche du centre de Gatineau dans ce secteur est.",
-            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main, le secteur Buckingham bénéficie de cet attrait croissant pour l'espace et l'accessibilité.",
+            "Au 2e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Buckingham/Masson-Angers était de 419 545 $, le plus bas des quatre secteurs de la ville de Gatineau (APCIQ).",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

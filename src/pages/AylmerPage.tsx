@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-aylmer-gen.webp";
 const faq = [
   {
     q: "Combien vaut une maison à Aylmer?",
-    a: "Les prix varient selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead et le Vieux-Aylmer ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
+    a: "Au 2e trimestre 2026, le prix médian d'une unifamiliale à Aylmer était de 572 750 $, et celui d'une copropriété de 325 000 $ (APCIQ, données Centris). Les prix varient ensuite selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead et le Vieux-Aylmer ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",

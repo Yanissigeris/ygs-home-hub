@@ -121,7 +121,7 @@ const GatineauCentrePage = () => (
           {[
             "Gatineau est la 4e ville en importance au Québec avec 298 000 habitants. (Source: Ville de Gatineau, 2024)",
             "L'Hôpital de Gatineau, le Cégep de l'Outaouais et le réseau STO sont tous situés dans ce secteur.",
-            "En 2026, la Chambre immobilière de l'Outaouais note un intérêt accru pour les propriétés clé en main, ce secteur bénéficie de cette tendance.",
+            "Au 2e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Gatineau de l'APCIQ était de 490 000 $, en hausse de 3 % sur un an.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
