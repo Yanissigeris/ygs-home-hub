@@ -29,7 +29,7 @@ const sectors = [
 
 
 const faq = [
-  { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. As of May 2026, savings on the purchase price typically range from 15 to 30 percent compared with comparable Ottawa neighbourhoods, though municipal and school taxes should also be factored into your full cost picture." },
+  { q: "What are the real savings buying in Gatineau?", a: "It depends on the area and property type. Two official reference points: the median single-family price was $740,000 in Ottawa in August 2026 (Ottawa Real Estate Board) and $508,000 in the city of Gatineau in Q2 2026 (APCIQ). They don't cover the same period or identical homes, so to compare the real cost I put similar properties side by side and factor in municipal and school taxes." },
   { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process is done in Québec, promise to purchase, inspection conditions, notary signing. If you are represented, your broker must hold an OACIQ licence. I guide you at every step." },
   { q: "Are taxes higher in Québec?", a: "Municipal and school taxes vary by sector, and Ottawa and Gatineau calculate them differently. To compare, we look at the actual tax bills of similar homes. Personal income tax is also structured differently in Québec, so we look at the full picture together." },
   { q: "Can I keep my Ontario job and family doctor?", a: "Yes, many of my clients commute daily to downtown Ottawa or work hybrid. You can also keep an Ontario family doctor in many cases, though Québec's RAMQ provides public health coverage once you become a Québec resident." },

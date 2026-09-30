@@ -32,7 +32,7 @@ const faq = [
   },
   {
     q: "What does a Pontiac home cost in 2026?",
-    a: "Pontiac is one of the most affordable corners of the National Capital Region. As of May 2026, single-family homes on standard residential lots in Luskville and Breckenridge typically trade between $329,000 and $479,000 on Centris. Properties with acreage (2-10 acres) usually run $425,000 to $625,000 depending on house condition and waterfront access. True waterfront on the Ottawa River, increasingly rare, clears $625,000 and can reach $1M+ for protected, well-maintained estates.",
+    a: "Pontiac is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Chelsea, Cantley and Val-des-Monts, so it's a broad reference. In Pontiac, prices depend mostly on lot size, the condition of the house and access to the Ottawa River. For a precise figure, I compare recent Pontiac sales.",
   },
   {
     q: "Are wells, septic and propane standard in Pontiac?",
@@ -190,7 +190,7 @@ const PontiacPageEn = () => {
           <div className="space-y-3.5">
             {[
               "Pontiac attracts a specific buyer profile: remote workers, nature lovers, people seeking real space within the NCR. Demand for this profile remains steady.",
-              "The 2026 Outaouais market offers buyers more choice than in 2022-2024, according to the Gatineau Real Estate Board. Pontiac benefits from this stabilization context.",
+              "In Q2 2026, there were 535 active single-family listings in the Gatineau periphery area, which includes Pontiac, 13% more than a year earlier (APCIQ). Buyers there have more choice.",
               "Transactions in Pontiac are less frequent than in urban areas, which makes accurate valuation even more critical. A broker who actively monitors this market is a real advantage.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">

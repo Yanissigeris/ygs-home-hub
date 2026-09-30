@@ -29,7 +29,7 @@ const faq = [
   },
   {
     q: "What does a typical Chelsea home cost in 2026?",
-    a: "Chelsea is the most expensive municipality in metropolitan Gatineau on a per-square-foot basis. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000 on Centris, while waterfront or large-acreage properties along Lac Meech and Lac Mountain can clear $1.5M. The premium is driven by scarce buildable land, Gatineau Park covers roughly 60% of the territory, and constant demand from Ottawa professionals and federal executives.",
+    a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Gatineau Park covers roughly 60% of the territory, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
   },
   {
     q: "How long does the Ottawa commute really take from Chelsea?",
@@ -181,7 +181,7 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea is the highest-priced municipality in metropolitan Gatineau on a per-square-foot basis, and one of the very few in the National Capital Region where waterfront and large-acreage inventory still appear on Centris in any given month. As of May 2026, single-family homes on standard residential lots typically trade between $675,000 and $1,100,000, while waterfront properties on Lac Meech or Lac Mountain regularly clear $1.4M, $2M. The supply pipeline is structurally constrained, Gatineau Park covers roughly 60% of the territory and the MRC des Collines-de-l'Outaouais enforces strict subdivision and shoreline rules, which is the main reason Chelsea values have held up across every market cycle since the early 2000s.
+          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data); that area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Gatineau Park covers roughly 60% of the territory, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
         </p>
         <p className="prose-body">
           On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing, it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.

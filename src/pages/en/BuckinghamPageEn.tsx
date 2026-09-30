@@ -29,15 +29,15 @@ const faq = [
   },
   {
     q: "What does a single-family home cost in Buckingham in 2026?",
-    a: "Based on active Centris listings as of May 2026, single-family homes in the core Buckingham sector typically trade between $375,000 and $525,000 depending on year of construction, lot size and condition. Recent builds in Masson-Angers run from the high-$400,000s into the low-$600,000s. Compared with the Plateau or Aylmer for an equivalent lot and square-footage, the savings often reach $100,000, $200,000, which is the whole point of buying east.",
+    a: "In Q2 2026, the median single-family price in APCIQ's Buckingham/Masson-Angers sector was $419,545, the lowest of the four sectors of the city of Gatineau (Centris data). For comparison, it was $572,750 in Aylmer over the same period. In Buckingham, prices then vary with year of construction, lot size and condition.",
   },
   {
     q: "Which schools serve Buckingham and Masson-Angers?",
     a: "Public francophone schools are operated by the Centre de services scolaire au Cœur-des-Vallées (CSSCV). Hormisdas-Gamelin is the main French secondary school in Buckingham. The Western Quebec School Board (WQSB) provides English-language education through Buckingham Elementary and routes secondary students to Hadley Junior High and Philemon Wright in Hull. I always confirm the exact catchment for each address with the school board before an offer.",
   },
   {
-    q: "Is the Buckingham–Masson-Angers market moving fast in 2026?",
-    a: "Demand has stayed solid through Q1 2026 because the price gap with central Gatineau is wide enough to attract first-time buyers and Ottawa cross-river families. According to the Outaouais Real Estate Board (CIO), the median time on market for a single-family home in the metropolitan Gatineau area was 32 days in Q4 2025, turnkey properties in Buckingham priced correctly are tracking close to that. Properties needing major work sit longer; pricing strategy matters more than ever.",
+    q: "Is the Buckingham and Masson-Angers market moving fast in 2026?",
+    a: "In Q2 2026, single-family homes in APCIQ's Buckingham/Masson-Angers sector sold in 27 days on average, the same as the metropolitan average. Sales fell 20% from a year earlier while active listings rose 31%, so buyers have more choice (Centris data). Pricing strategy and the home's condition affect how long it takes.",
   },
   {
     q: "Can I get a home valuation in Buckingham specifically?",
@@ -156,7 +156,7 @@ const BuckinghamPageEn = () => (
           {[
             "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown with essential services on site.",
             "Masson-Angers runs along the Ottawa River and offers the closest semi-rural atmosphere to central Gatineau in this eastern sector.",
-            "In 2026, the Outaouais real estate board notes increased interest in turnkey properties, the Buckingham area benefits from this growing appeal for space and affordability.",
+            "In Q2 2026, the median single-family price in the Buckingham/Masson-Angers sector was $419,545, the lowest of the four sectors of the city of Gatineau (APCIQ).",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -177,10 +177,10 @@ const BuckinghamPageEn = () => (
       <h2 className="mt-3">Buckingham &amp; Masson-Angers, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          As of May 2026, the Buckingham core sector shows roughly 35-45 active single-family listings on Centris, with an additional 25-35 in Masson-Angers village. Median asking prices sit between $399,900 and $529,000 for resale single-family homes, while new construction in Masson-Angers, driven by developers active around chemin de Montréal Est and rue des Pommiers, pushes that ceiling closer to $625,000 for a turnkey, energy-efficient build with double garage. For an Ottawa cross-river family used to Barrhaven or Orléans pricing, the same lot and floor plan represents a $200,000, $300,000 saving.
+          In Q2 2026, APCIQ counted 121 active single-family listings in the Buckingham/Masson-Angers sector, 31% more than a year earlier, with 94 sales (down 20%) and a median price of $419,545 (Centris data). For an Ottawa family, a useful reference is Ottawa's single-family median of $740,000 in August 2026 (Ottawa Real Estate Board), keeping in mind that the two boards don't cover the same period or identical homes.
         </p>
         <p className="prose-body">
-          The Outaouais Real Estate Board (CIO) reported a median time on market of 32 days for single-family homes across metropolitan Gatineau in Q4 2025. Buckingham, Masson-Angers tracks slightly above that average, turnkey homes priced correctly typically receive offers within 25-45 days, while properties that need significant renovation can sit 60-90 days. The lesson for sellers: pricing strategy and pre-sale preparation matter more in this sector than in the Plateau, where shortage of inventory still rescues mistakes.
+          Single-family homes in the sector sold in 27 days on average in Q2 2026 (APCIQ), in line with the metropolitan Gatineau average. The lesson for sellers: pricing strategy and pre-sale preparation affect how long a home stays on the market.
         </p>
         <p className="prose-body">
           For first-time buyers, the federal Home Buyers' Plan (HBP, up to $60,000 per person from RRSP) and the Tax-Free First Home Savings Account (FHSA, up to $40,000 lifetime) stack with provincial programs. Combined with Buckingham's entry prices, the math for a couple with two solid jobs in Gatineau or partial-remote in Ottawa often beats anything available on the Ontario side at the same down-payment level. I walk every first-time buyer through this calculation before we visit a single property, it usually changes their search radius.

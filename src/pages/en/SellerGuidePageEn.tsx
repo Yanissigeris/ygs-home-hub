@@ -37,7 +37,7 @@ const faq = [
   { q: "When is the best time to sell in Gatineau?", a: "It depends on your personal situation, not just the market. We analyze the best timing for you together." },
   { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
   { q: "Should I renovate before selling?", a: "Not necessarily. I help you identify what's worth doing to maximize your price without wasting money." },
-  { q: "How long does it take to sell in Gatineau?", a: "On average 30 to 60 days on the market, but it varies by neighborhood, price and season." },
+  { q: "How long does it take to sell in Gatineau?", a: "In Q2 2026, single-family homes in the Gatineau metropolitan area sold in 27 days on average, and condos in 40 days (APCIQ, Centris data). It varies by neighborhood, price and season." },
 ];
 
 const related = [
