@@ -181,12 +181,12 @@
   },
   "/cote-dazur-gatineau": {
     "title": "Côte-d'Azur, Gatineau : maisons à vendre et prix | YGS",
-    "description": "Le quartier Côte-d'Azur à Gatineau : bungalows, fourchettes de prix, ce qui attire les familles, les premiers acheteurs et les retraités.",
+    "description": "Le quartier Côte-d'Azur à Gatineau : bungalows, prix médian du secteur, ce qui attire les familles, les premiers acheteurs et les retraités.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/limbour": {
     "title": "Limbour, Gatineau : prix, écoles, services du quartier | YGS",
-    "description": "Le quartier Limbour à Gatineau : fourchettes de prix, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre.",
+    "description": "Le quartier Limbour à Gatineau : prix médian du secteur, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/ressources": {
@@ -481,12 +481,12 @@
   },
   "/en/cote-dazur": {
     "title": "Côte-d'Azur, Gatineau: Homes for Sale and Prices | YGS",
-    "description": "The Côte-d'Azur neighbourhood in Gatineau: bungalows, price ranges, schools, and why families, first-time buyers and retirees pick it.",
+    "description": "The Côte-d'Azur neighbourhood in Gatineau: bungalows, median prices, schools, and why families, first-time buyers and retirees pick it.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/limbour": {
     "title": "Limbour, Gatineau: Prices, Schools and What to Know | YGS",
-    "description": "The Limbour neighbourhood in Gatineau: price ranges, schools, parks and services, access to Highway 50. What to know before you buy or sell.",
+    "description": "The Limbour neighbourhood in Gatineau: median prices, schools, parks and services, access to Highway 50. What to know before you buy or sell.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/resources": {
