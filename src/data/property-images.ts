@@ -2,8 +2,8 @@
 // vite-imagetools generates 400 / 640 / 900-wide AVIF + WebP variants at build,
 // returning a <picture>-shaped object with srcsets for each format.
 
-import p24069166 from "@/assets/property-24069166.webp.asset.json";
-import p26501194 from "@/assets/property-26501194.webp.asset.json";
+import p24069166 from "@/assets/property-24069166.webp?w=400;640;900&format=avif;webp&as=picture";
+import p26501194 from "@/assets/property-26501194.webp?w=400;640;900&format=avif;webp&as=picture";
 import p28743871 from "@/assets/property-28743871.webp?w=400;640;900&format=avif;webp&as=picture";
 import p15163372 from "@/assets/property-15163372.webp?w=400;640;900&format=avif;webp&as=picture";
 import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif;webp&as=picture";
@@ -11,10 +11,10 @@ import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif
 import p11366995 from "@/assets/property-11366995.webp?w=400;500;640;900&format=avif;webp&as=picture";
 // Fiches précédemment servies en .webp brut hors pipeline — passage <picture>
 // AVIF + WebP avec mêmes paliers que les autres cartes.
-import p17464620 from "@/assets/property-17464620.webp.asset.json";
+import p17464620 from "@/assets/property-17464620.webp?w=400;640;900&format=avif;webp&as=picture";
 import p19326119 from "@/assets/property-19326119.webp?w=400;640;900&format=avif;webp&as=picture";
 import p16828271 from "@/assets/property-16828271.webp?w=400;640;900&format=avif;webp&as=picture";
-import p22872864 from "@/assets/property-22872864.webp.asset.json";
+import p22872864 from "@/assets/property-22872864.webp?w=400;640;900&format=avif;webp&as=picture";
 import p18249217 from "@/assets/property-18249217.webp?w=400;640;900&format=avif;webp&as=picture";
 // Photo source 640×480 (terrain) — paliers limités à la résolution native.
 import p15159365 from "@/assets/property-15159365.webp?w=400;640&format=avif;webp&as=picture";
@@ -37,32 +37,16 @@ const toSet = (p: PictureImport): PropertyImageSet => ({
 });
 
 export const propertyImages: Record<string, PropertyImageSet> = {
-  "26501194": {
-    avifSrcSet: "",
-    webpSrcSet: "",
-    fallback: p26501194.url,
-  },
-  "24069166": {
-    avifSrcSet: "",
-    webpSrcSet: "",
-    fallback: p24069166.url,
-  },
+  "26501194": toSet(p26501194 as PictureImport),
+  "24069166": toSet(p24069166 as PictureImport),
   "28743871": toSet(p28743871 as PictureImport),
   "15163372": toSet(p15163372 as PictureImport),
   "17113358": toSet(p17113358 as PictureImport),
   "11366995": toSet(p11366995 as PictureImport),
-  "17464620": {
-    avifSrcSet: "",
-    webpSrcSet: "",
-    fallback: p17464620.url,
-  },
+  "17464620": toSet(p17464620 as PictureImport),
   "19326119": toSet(p19326119 as PictureImport),
   "16828271": toSet(p16828271 as PictureImport),
-  "22872864": {
-    avifSrcSet: "",
-    webpSrcSet: "",
-    fallback: p22872864.url,
-  },
+  "22872864": toSet(p22872864 as PictureImport),
   "18249217": toSet(p18249217 as PictureImport),
   "15159365": toSet(p15159365 as PictureImport),
 };
