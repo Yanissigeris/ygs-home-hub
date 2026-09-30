@@ -3,12 +3,12 @@ import property15163372 from "@/assets/property-15163372.webp";
 
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
-import property24069166 from "@/assets/property-24069166.webp.asset.json";
-import property26501194 from "@/assets/property-26501194.webp.asset.json";
-import property17464620 from "@/assets/property-17464620.webp.asset.json";
+import property24069166 from "@/assets/property-24069166.webp";
+import property26501194 from "@/assets/property-26501194.webp";
+import property17464620 from "@/assets/property-17464620.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
-import property22872864 from "@/assets/property-22872864.webp.asset.json";
+import property22872864 from "@/assets/property-22872864.webp";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
 
@@ -120,7 +120,7 @@ export const properties: Property[] = [
     yearBuilt: "2006",
     description:
       "Unité de coin au dernier étage sans voisin au-dessus. Condo lumineux de 1 144 pi² au coeur du Plateau avec 2 grandes chambres, dont la principale avec walk-in. Aire ouverte avec foyer électrique et porte-patio, cuisine fonctionnelle, salle de bain, salle de lavage et rangement. Climatiseur mural, lave-vaisselle et cuisinière inclus. À distance de marche des écoles, d'un parc et de la piste cyclable, près de l'autoroute et des services. Bâtiment bien géré avec étude de fonds de prévoyance.",
-    image: property26501194.url,
+    image: property26501194,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
     mls: "26501194",
@@ -140,7 +140,7 @@ export const properties: Property[] = [
     yearBuilt: "2012",
     description:
       "Jumelé de 2012 sur trois niveaux finis, à 2 minutes de l'autoroute 50. Cuisine avec îlot et électroménagers en inox, 3 chambres dont la principale avec walk-in, salle de bain avec douche séparée et baignoire. Sous-sol aménagé avec plafond de 8 pieds et grande salle familiale. Cour clôturée avec gazebo et haie de cèdres, remise et stationnement asphalté pour 5 voitures. Thermopompe murale et échangeur d'air.",
-    image: property24069166.url,
+    image: property24069166,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
     mls: "24069166",
@@ -159,7 +159,7 @@ export const properties: Property[] = [
     yearBuilt: "2003",
     description:
       "Rare triplex détaché construit en 2003 dans un cul-de-sac des Hautes-Plaines, sans voisin à l'arrière. Idéal pour propriétaire-occupant avec un logement 5½ au rez-de-jardin libre, ou pour investisseur. Grand 6½ de 3 chambres avec plafond cathédrale, revenus potentiels de 60 600 $ par année, 6 stationnements et cabanon. À proximité du parc de la Gatineau, des écoles et d'Ottawa.",
-    image: property17464620.url,
+    image: property17464620,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
     mls: "17464620",
@@ -217,7 +217,7 @@ export const properties: Property[] = [
     yearBuilt: "1994",
     description:
       "Charmante maison jumelée de 3 chambres dans un secteur familial du Vieux-Aylmer. Salle de bain rénovée avec douche vitrée en coin et bain autoportant. Le sous-sol aménagé offre un espace de vie supplémentaire. À proximité de la marina d'Aylmer, des parcs, des commerces et des services. Libre immédiatement avec possibilité de prise de possession rapide.",
-    image: property22872864.url,
+    image: property22872864,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
     mls: "22872864",

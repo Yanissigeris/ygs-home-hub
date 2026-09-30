@@ -3,12 +3,12 @@ import property15163372 from "@/assets/property-15163372.webp";
 
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
-import property24069166 from "@/assets/property-24069166.webp.asset.json";
-import property26501194 from "@/assets/property-26501194.webp.asset.json";
-import property17464620 from "@/assets/property-17464620.webp.asset.json";
+import property24069166 from "@/assets/property-24069166.webp";
+import property26501194 from "@/assets/property-26501194.webp";
+import property17464620 from "@/assets/property-17464620.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
-import property22872864 from "@/assets/property-22872864.webp.asset.json";
+import property22872864 from "@/assets/property-22872864.webp";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
 import type { Property } from "./properties";
@@ -102,7 +102,7 @@ export const propertiesEn: Property[] = [
     yearBuilt: "2006",
     description:
       "Top-floor corner unit with no neighbours above. Bright 1,144 sq ft condo in the heart of the Plateau with 2 large bedrooms, including a primary bedroom with walk-in closet. Open living area with electric fireplace and patio door, functional kitchen, bathroom, laundry room and storage. Wall-mounted air conditioner, dishwasher and stove included. Walking distance to schools, a park and the bike path, close to the highway and services. Well-managed building with a reserve fund study.",
-    image: property26501194.url,
+    image: property26501194,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
     mls: "26501194",
@@ -122,7 +122,7 @@ export const propertiesEn: Property[] = [
     yearBuilt: "2012",
     description:
       "Semi-detached home built in 2012 with three finished levels, 2 minutes from Highway 50. Kitchen with island and stainless steel appliances, 3 bedrooms including a primary bedroom with walk-in closet, and bathroom with separate shower and tub. Finished basement with 8-foot ceiling and large family room. Fenced yard with gazebo and cedar hedge, shed, and paved parking for 5 cars. Wall-mounted heat pump and air exchanger.",
-    image: property24069166.url,
+    image: property24069166,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
     mls: "24069166",
@@ -141,7 +141,7 @@ export const propertiesEn: Property[] = [
     yearBuilt: "2003",
     description:
       "Rare detached triplex built in 2003 on a cul-de-sac in Hautes-Plaines, with no rear neighbours. Ideal for an owner-occupant with a vacant garden-level 5½ unit, or for an investor. Spacious 3-bedroom 6½ with cathedral ceilings, potential revenue of $60,600 per year, 6 parking spaces and a shed. Close to Gatineau Park, schools and Ottawa.",
-    image: property17464620.url,
+    image: property17464620,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
     mls: "17464620",
@@ -199,7 +199,7 @@ export const propertiesEn: Property[] = [
     yearBuilt: "1994",
     description:
       "Charming 3-bedroom semi-detached home in a family-friendly Old Aylmer neighbourhood. Renovated bathroom with a corner glass shower and freestanding tub. The finished basement provides valuable additional living space. Close to the Aylmer marina, parks, shops and services. Available immediately with quick possession possible.",
-    image: property22872864.url,
+    image: property22872864,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
     mls: "22872864",
