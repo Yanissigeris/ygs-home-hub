@@ -8,14 +8,14 @@ const CoteDazurPageEn = () => (
     metaDesc="Buy, sell or live in Côte-d'Azur, Gatineau. Established residential area with bungalows, mature trees and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Real estate broker in Côte-d'Azur, Gatineau. Established residential neighborhood.", lat: 45.4700, lng: -75.7000, url: "/en/cote-dazur/" }}
-    hero={{ overline: "Neighborhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Mature residential neighborhood in the Gatineau sector. 1960s-1990s bungalows, quiet streets, 15-20 minutes from downtown Ottawa.", image: heroImg }}
+    hero={{ overline: "Neighborhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Mature residential neighborhood in the Gatineau sector, around Parc Saint-Exupéry. 1960s-1990s bungalows, quiet streets.", image: heroImg }}
     trustSpecialty="Côte-d'Azur specialist"
     lifestyle={{ image: heroImg, imageAlt: "Côte-d'Azur neighborhood, Gatineau", title: "Why Côte-d'Azur is appreciated", subtitle: "Côte-d'Azur attracts families looking for an established neighborhood close to services, without paying Aylmer, Plateau, or Ottawa prices. Most properties are bungalows and split-levels, often on lots of 4,000 to 6,000 sq ft. The area remains one of the most accessible parts of central Gatineau to step into a single-family home, and increasingly popular with cross-river buyers from Ottawa." }}
     reasons={[
       "Established residential neighborhood with mature trees and peaceful streets",
       "Bungalows, split-levels and renovated homes; median single-family price of $490,000 in Q2 2026 in APCIQ's Gatineau sector, which includes Côte-d'Azur",
       "Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), for comparison",
-      "15-20 minutes from downtown Ottawa via Highway 50 and the Macdonald-Cartier Bridge, practical for federal commuters",
+      "About 11 km from downtown Ottawa by road. Plan extra time at rush hour.",
       "Local shops and services on Boulevard Maloney: IGA, Metro, Jean Coutu, Tim Hortons, Poulet Rouge and more",
       "Western Quebec School Board (English): Greater Gatineau Elementary in the Gatineau sector, high schools in Hull, subject to eligibility",
       "STO public transit with bus lines into Hull and downtown Ottawa",
@@ -35,7 +35,7 @@ const CoteDazurPageEn = () => (
     faq={{
       title: "Questions about Côte-d'Azur",
       items: [
-        { q: "Where is Côte-d'Azur located in Gatineau?", a: "In the Gatineau sector (the former city). Central, well-served by STO transit, and 15-20 minutes from downtown Ottawa." },
+        { q: "Where is Côte-d'Azur located in Gatineau?", a: "In the Gatineau sector (the former city), around Parc Saint-Exupéry and near Rue Saint-Louis. Its streets are named after places on the French Riviera: Rue de Cannes, Rue de Monte-Carlo, Rue de Menton, Rue de Saint-Tropez. Downtown Ottawa is about 11 km away by road, and the drive time depends mostly on when you leave." },
         { q: "What is the price of a home in Côte-d'Azur in 2026?", a: "Côte-d'Azur is part of APCIQ's Gatineau sector. In Q2 2026, the median single-family price there was $490,000 (Centris data). In Côte-d'Azur, prices then depend on living area, property condition and lot size: unrenovated bungalows sit lower, modernized properties with garages higher. For a precise figure, I compare recent sales of homes like yours." },
         { q: "How much can I save buying in Côte-d'Azur vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $490,000 in Q2 2026 in APCIQ's Gatineau sector, which includes Côte-d'Azur. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
         { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has elementary schools in the Gatineau and Hull sectors (Greater Gatineau Elementary, Pierre Elliott Trudeau Elementary), and its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). To find the school for your address, use the WQSB School Locator on westernquebec.ca. I can also point you to the right contacts during a property visit." },

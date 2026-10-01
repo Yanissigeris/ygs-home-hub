@@ -17,11 +17,11 @@ import heroImg from "@/assets/hero-buckingham-gen.webp";
 const faq = [
   {
     q: "Is Buckingham too far from Ottawa to live there?",
-    a: "Buckingham is about 45-50 minutes from Ottawa by car depending on traffic. For a daily in-person commute to Ottawa, it is indeed a significant trip. For partial remote work or a job in Gatineau, it's entirely manageable, and the gain in space and quality of life is significant. During our consultation, I can help you weigh this trade-off honestly based on your real situation.",
+    a: "Central Buckingham is about 38 km from downtown Ottawa by road. At rush hour, plan for more time. If you commute to Ottawa in person every day, it's a long trip. With partial remote work or a job in Gatineau, it's manageable, and you gain space. During our consultation, we look at this trade-off together based on your situation.",
   },
   {
     q: "Are there services in Buckingham?",
-    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. Hôpital de Papineau is also in Buckingham. For big-box stores, you head to central Gatineau (30-40 minutes).",
+    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. Hôpital de Papineau is also in Buckingham. For big-box stores, you head to central Gatineau: Les Promenades Gatineau are 30 to 36 km away by road, depending on the route.",
   },
   {
     q: "Do Buckingham properties have wells?",
@@ -110,7 +110,7 @@ const BuckinghamPageEn = () => (
           What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and, since 2020, remote workers who no longer need to be close to Ottawa daily.
         </p>
         <p className="prose-body">
-          Buckingham has a lively downtown: grocery stores, pharmacy, restaurants, medical clinic, library, arena, secondary school. For big-box stores and specialized services, you head to central Gatineau (30-40 minutes).
+          Buckingham has a lively downtown: grocery stores, pharmacy, restaurants, medical clinic, library, arena, secondary school. For big-box stores and specialized services, you head to central Gatineau, roughly 30 to 36 km away by road (Les Promenades Gatineau, depending on the route).
         </p>
       </div>
     </ContentBlock>
@@ -138,7 +138,7 @@ const BuckinghamPageEn = () => (
           The main question buyers ask about Buckingham: "Isn't it too far?"
         </p>
         <p className="prose-body">
-          The honest answer depends on your situation. Buckingham is about 45-50 minutes from Ottawa depending on traffic, and 30-40 minutes from central Gatineau. For someone working full-time in person in Ottawa, it is indeed a significant daily commute.
+          It depends on your situation. Buckingham is about 38 km from downtown Ottawa and 30 to 36 km from Les Promenades Gatineau by road, so the drive time depends a lot on traffic. For someone working full-time in person in Ottawa, it's a long daily commute.
         </p>
         <p className="prose-body">
           For someone working remotely part-time (2-3 days/week) or based in Gatineau, the distance becomes an advantage, you get much more space for the same budget.

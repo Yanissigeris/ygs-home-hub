@@ -21,7 +21,7 @@ const highlights = [
 
 const faq = [
   { q: "Is Hull a good place to live?", a: "Hull is going through a real transformation, restaurants, culture, new projects and a dynamic community. It's increasingly popular." },
-  { q: "How do you get to Ottawa from Hull?", a: "5-10 minutes by car, bus or bike via the bridges. It's the closest Gatineau neighborhood to Ottawa." },
+  { q: "How do you get to Ottawa from Hull?", a: "Downtown Ottawa is about 2 km from Gatineau city hall, in Hull, via the Portage Bridge. You can also get there by bus or by bike. It's the closest Gatineau neighborhood to Ottawa." },
   { q: "Are there families in Hull?", a: "Yes, more and more families are settling in Hull for the proximity, prices and neighborhood life." },
 ];
 

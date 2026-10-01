@@ -8,7 +8,7 @@ const MassonAngersPageEn = () => (
     metaDesc="Buy, sell or live in Masson-Angers, Gatineau. Growing family-friendly area with new construction and competitive prices."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Real estate broker in Masson-Angers. Growing family area with new homes.", lat: 45.5328, lng: -75.4170, url: "/en/masson-angers/" }}
-    hero={{ overline: "Neighborhood Guide · Masson-Angers", title: "Buy, Sell or Live in Masson-Angers", subtitle: "Growing family-friendly area in east Gatineau — new construction, accessible entry prices and quality of life. 20-25 minutes from central Gatineau via Highway 50.", image: heroImg }}
+    hero={{ overline: "Neighborhood Guide · Masson-Angers", title: "Buy, Sell or Live in Masson-Angers", subtitle: "Family-friendly area in east Gatineau, with new construction and some of the lowest entry prices in the city. about 36 km from downtown Ottawa and 28 to 33 km from Les Promenades Gatineau by road, depending on the route.", image: heroImg }}
     trustSpecialty="Masson-Angers specialist"
     lifestyle={{ image: heroImg, imageAlt: "Masson-Angers residential area", title: "Why Masson-Angers is booming", subtitle: "Masson-Angers mainly attracts young families and first-time buyers looking for a new or recent home without paying Hull or Aylmer prices. The area has two distinct sub-sectors — Masson and Angers — with several active residential developments and builders delivering new homes in 2026. It's one of the best price-to-quality ratios in Gatineau for buyers willing to accept a longer daily commute to downtown Ottawa." }}
     reasons={[
@@ -19,7 +19,7 @@ const MassonAngersPageEn = () => (
       "French elementary schools (Centre de services scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "Hormisdas-Gamelin secondary school in Buckingham (12 km, IB international program and sport option)",
       "Western Quebec School Board (English): Buckingham Elementary in Buckingham, high schools in Hull, subject to eligibility",
-      "Quick access to Highway 50-20-25 minutes from central Gatineau, about 35-40 minutes from downtown Ottawa",
+      "Direct access to Highway 50",
       "Rivière du Lièvre and Grenouillettes marsh, nature access within a residential area",
       "Practical for federal commuters and first-time buyers priced out of Ottawa",
     ]}
@@ -28,12 +28,12 @@ const MassonAngersPageEn = () => (
       { icon: Users, title: "Young families", text: "Affordable new homes, 4 CSSCV French elementary schools nearby, parks and trails in new developments. Rivière du Lièvre and green spaces add to the quality of life." },
       { icon: Home, title: "First-time buyers", text: "Accessible entry prices between $400,000 and $490,000 for a semi-detached or new home. Quebec down-payment programs applicable. Easier financing than Hull or Aylmer." },
       { icon: TrendingUp, title: "Investors", text: "Growing area with stable rental demand and multiple new developments delivering in 2026-2027. Medium-term appreciation potential." },
-      { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighborhoods, willing to commute 35-40 minutes via Highway 50 in exchange for a lower purchase price." },
-      { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. 20-25 minutes from central Gatineau via Highway 50." },
+      { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighborhoods, willing to commute to downtown Ottawa in exchange for a lower purchase price." },
+      { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. Central Buckingham is about 5 km away by road." },
     ]}
     inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Masson-Angers", items: [
-      { q: "Is Masson-Angers far from downtown Gatineau?", a: "About 20-25 minutes via Highway 50. Quick and direct access. For downtown Ottawa, plan 35-40 minutes depending on traffic and the bridge used." },
+      { q: "Is Masson-Angers far from downtown Gatineau?", a: "Les Promenades Gatineau are 28 to 33 km away by road depending on the route, and downtown Ottawa about 36 km. Drive time depends on the hour and the bridge you take." },
       { q: "What is the price of a home in Masson-Angers in 2026?", a: "Masson-Angers is part of APCIQ's Buckingham/Masson-Angers sector. In Q2 2026, the median single-family price there was $419,545, the lowest of the four sectors of the city of Gatineau (Centris data). Prices then vary with type, year of construction and sub-sector: I'll show you the recent comparable sales." },
       { q: "How much can I save buying in Masson-Angers vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $419,545 in Q2 2026 in APCIQ's Buckingham/Masson-Angers sector. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
       { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has Buckingham Elementary in Buckingham and Greater Gatineau Elementary in the Gatineau sector; its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). Plan for school transportation, and use the WQSB School Locator on westernquebec.ca to find the school for your address." },
@@ -44,7 +44,7 @@ const MassonAngersPageEn = () => (
     sectors={{ list: [
       { name: "Buckingham", href: "/en/buckingham/", detail: "Direct eastern neighbor, Rivière du Lièvre, Hormisdas-Gamelin secondary school" },
       { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "Heart of the Gatineau sector, services, condos and residential" },
-      { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb, alternative 15 minutes west" },
+      { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb, alternative about 29 km west" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
       { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },

@@ -33,7 +33,7 @@ const faq = [
   },
   {
     q: "How long does the Ottawa commute really take from Chelsea?",
-    a: "From central Old Chelsea to downtown Ottawa is 18-25 minutes off-peak via Highway 5 and the Macdonald-Cartier Bridge, and 30-40 minutes during morning rush. Transcollines buses link Chelsea to Gatineau, with transfers to the STO network. Several Chelsea residents commute by bicycle to downtown Ottawa in summer using the Voyageurs and Capital Pathway networks, roughly 35 minutes door-to-door.",
+    a: "Old Chelsea village is about 15 km from downtown Ottawa by road, via Highway 5, and the drive takes longer at the morning rush. Transcollines buses link Chelsea to Gatineau, with transfers to the STO network.",
   },
   {
     q: "Are wells and septic systems a problem when buying in Chelsea?",
@@ -60,7 +60,7 @@ const atouts = [
   {
     icon: "⛷️",
     title: "Old Chelsea / Camp Fortune",
-    text: "Old Chelsea village is the historic heart of the municipality. A few local shops, restaurants, and a preserved village character. Camp Fortune, nearby, is a ski club 15 minutes from downtown Ottawa. (Source: Wikipedia/Chelsea)",
+    text: "Old Chelsea village is the historic heart of the municipality. A few local shops, restaurants, and a preserved village character. Camp Fortune, nearby, is a ski club about 21 km from downtown Ottawa by road. (Source: Wikipedia/Chelsea)",
   },
 ];
 
@@ -96,7 +96,7 @@ const ChelseaPageEn = () => (
     <HeroSection
       overline="CHELSEA · QUÉBEC"
       title="Real estate broker in Chelsea — living between nature and Ottawa"
-      subtitle="Chelsea is a distinct municipality north of Gatineau, about 10 kilometres from Ottawa. Sixty percent of its territory is occupied by Gatineau Park. It's one of the rare places in North America where you can live in a national park while being 15 minutes from a capital's downtown."
+      subtitle="Chelsea is a distinct municipality north of Gatineau. Sixty percent of its territory is occupied by Gatineau Park. Old Chelsea village is about 15 km from downtown Ottawa by road."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
@@ -148,7 +148,7 @@ const ChelseaPageEn = () => (
           Second, Chelsea is not served by municipal water and sewer services across its entire territory. Many properties operate with artesian wells and septic systems. A thorough inspection of these systems before purchase is non-negotiable.
         </p>
         <p className="prose-body">
-          Third, Chelsea is a semi-rural municipality: nearby services (grocery, clinic, pharmacy) are limited locally. Most residents shop in Gatineau or Ottawa (15-20 minutes).
+          Third, Chelsea is a semi-rural municipality: nearby services (grocery, clinic, pharmacy) are limited locally. For shopping, residents go to Gatineau or Ottawa: Les Galeries de Hull are about 10 km from Old Chelsea village by road.
         </p>
       </div>
     </ContentBlock>

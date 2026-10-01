@@ -5,21 +5,21 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 const ValDesMontsPageEn = () => (
   <NeighborhoodTemplate
     seoTitle="Val-des-Monts QC — Neighborhood Guide"
-    metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness, 30 minutes from Gatineau."
+    metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness, north of Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts/" }}
-    hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Crystal-clear lakes, wooded lots and tranquility — the Outaouais cottage country municipality. Over 200 lakes, 30-40 minutes from Gatineau and 45 minutes from Ottawa.", image: heroImg }}
+    hero={{ overline: "Neighborhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. Over 125 lakes, and Perkins village 28 to 30 km from downtown Ottawa by road.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why Val-des-Monts is unique", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. The major lakes — McGregor, Saint-Pierre and Achigan — drive the demand. It's one of the rare Outaouais areas where you can live waterfront under 30 minutes from downtown Ottawa." }}
+    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. Major lakes like McGregor, Saint-Pierre and Achigan drive the demand." }}
     reasons={[
-      "Over 200 lakes, many properties with private lake access",
+      "Over 125 lakes according to the municipality, many properties with private lake access",
       "Median single-family price of $595,000 in Q2 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts",
       "Major lakes: McGregor, Saint-Pierre, Achigan, Barnes, each with its own market dynamics",
       "Lots from 2 to 50+ acres, complete privacy in nature",
       "Four-season cottages, permanent residences and luxury waterfront properties",
       "Perkins village as service hub (grocery, elementary school, local amenities)",
-      "27 minutes from the Macdonald-Cartier Bridge, practical for Ottawa weekend cottage owners and full-time remote workers",
-      "30-40 minutes from central Gatineau, access to hospital and commercial services",
+      "Perkins village 28 to 30 km from downtown Ottawa by road, practical for Ottawa weekend cottage owners and full-time remote workers",
+      "Les Promenades Gatineau 20 to 22 km from Perkins by road, for commercial services",
       "More choice for buyers: 535 active single-family listings in Q2 2026 in the Gatineau periphery area, 13% more than a year earlier (APCIQ)",
     ]}
     profilesTitle="Val-des-Monts is ideal for…"
@@ -27,8 +27,8 @@ const ValDesMontsPageEn = () => (
       { icon: TreePine, title: "Lake & nature lovers", text: "Private dock, kayaking, swimming, campfires. Major lakes like McGregor and Saint-Pierre offer the best conditions for four-season waterfront living." },
       { icon: Home, title: "Cottage seekers", text: "From rustic cottages around $200,000 to luxury waterfront $750,000+. Four-season cottages have been most in demand since remote work expanded." },
       { icon: Users, title: "Families seeking space", text: "Large 2+ acre lots, elementary school in Perkins, tight-knit community. No high school in Val-des-Monts: students in the French school system attend high school in the Gatineau sector." },
-      { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape, only 27 minutes from the Macdonald-Cartier Bridge." },
-      { icon: Mountain, title: "Remote workers & retirees", text: "Exceptional living environment with high-speed Internet available in most areas. 27 minutes from Ottawa for occasional in-person meetings." },
+      { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape." },
+      { icon: Mountain, title: "Remote workers & retirees", text: "Life in nature, with high-speed Internet available in much of the territory. Downtown Ottawa stays within reach for occasional in-person meetings." },
     ]}
     inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{

@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Is Pontiac too far to live while working in Ottawa or Gatineau?",
-    a: "It depends on your work situation. The Luskville area is the most accessible, about 35-40 minutes from Ottawa and 25-30 minutes from Gatineau. Quyon, more remote, requires a longer commute. For someone fully or mostly working remotely, Pontiac offers exceptional quality of life at prices no longer found in closer areas. For daily in-person work in Ottawa, it is a commute commitment to weigh seriously. I help you compare honestly based on your actual situation.",
+    a: "It depends on your work situation. From Luskville, downtown Ottawa is about 35 km away and Old Aylmer about 21 km by road. Quyon, farther west, is about 54 km from downtown Ottawa. For someone fully or mostly working remotely, Pontiac offers large lots and rural living. If you work in person in Ottawa every day, it's a commute to weigh seriously. I help you compare based on your situation.",
   },
   {
     q: "Is Pontiac a good option for anglophone families?",
@@ -177,7 +177,7 @@ const PontiacPageEn = () => {
         <div className="space-y-4 text-[0.9375rem] text-muted-foreground leading-relaxed">
           <p>Pontiac is a rural municipality. Several important realities to understand before making an offer:</p>
           <p>The vast majority of properties operate with artesian wells and septic systems. A complete inspection of these systems before purchase is essential, not optional. An end-of-life system represents a significant expense to anticipate.</p>
-          <p>On-site services are limited. Pontiac has no large grocery chains, specialized clinics or hospital. For these needs, residents travel toward Gatineau (30-45 minutes depending on the area) or Ottawa. Residents live with this reality and factor it into their decision.</p>
+          <p>On-site services are limited. Pontiac has no large grocery chains, specialized clinics or hospital. For these needs, residents travel toward Gatineau (Old Aylmer is about 21 km from Luskville and 41 km from Quyon by road) or Ottawa. Residents live with this reality and factor it into their decision.</p>
           <p>Zoning in Pontiac is influenced by the MRC des Collines-de-l'Outaouais regulations and by National Capital Commission requirements for areas adjacent to Gatineau Park. Before any construction project or major renovation, a zoning verification with the municipality is essential.</p>
           <p>The Pontiac real estate market is a niche market. Transactions are less frequent than in Gatineau or Aylmer, which means that accurate comparable assessment is even more important. I know this area and monitor the transactions that close here.</p>
         </div>

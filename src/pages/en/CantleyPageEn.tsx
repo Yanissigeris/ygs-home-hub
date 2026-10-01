@@ -17,7 +17,7 @@ import heroImg from "@/assets/hero-cantley-gen.webp";
 const faq = [
   {
     q: "Are there services in Cantley?",
-    a: "Cantley has basic services, daycares, grocery store, local shops, three francophone elementary schools. For everything else (hospital, big-box stores, high school, varied restaurants), residents head to Gatineau (15-20 minutes) or Ottawa (25-30 minutes depending on the area). Most families adapt quickly and don't regret the choice, but it's important to factor this into your decision.",
+    a: "Cantley has basic services, daycares, grocery store, local shops, three francophone elementary schools. For everything else (hospital, big-box stores, high school, varied restaurants), residents head to Gatineau or Ottawa. From Cantley's town hall, Les Promenades Gatineau are about 14 km away and downtown Ottawa about 20 km by road. It's important to factor this into your decision.",
   },
   {
     q: "Do Cantley properties have wells and septic systems?",
@@ -129,7 +129,7 @@ const CantleyPageEn = () => (
           The majority of Cantley properties operate with artesian wells and septic systems, the territory is not served by municipal water and sewer across its entirety. A thorough inspection of these systems is non-negotiable before any purchase.
         </p>
         <p className="prose-body">
-          Nearby services are limited within Cantley itself, a few shops, a grocery store, daycares, the three elementary schools. For big-box stores, medical specialists, and high school, you head to Gatineau (15-20 minutes).
+          Nearby services are limited within Cantley itself, a few shops, a grocery store, daycares, the three elementary schools. For big-box stores, medical specialists, and high school, you head to Gatineau: Les Promenades Gatineau are about 14 km from Cantley's town hall by road.
         </p>
         <p className="prose-body">
           Remote work has profoundly changed the buyer profile in Cantley. Families who previously commuted to Ottawa or Gatineau have been able to settle here since 2020 and have found a quality of life they wouldn't trade.

@@ -8,7 +8,7 @@ const LimbourPageEn = () => (
     metaDesc="Buy, sell or live in Limbour, Gatineau. Modern family neighborhood with parks, schools and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
     jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighborhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour/" }}
-    hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, 20 minutes from downtown Ottawa.", image: heroImg }}
+    hero={{ overline: "Neighborhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighborhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, about 12 km from downtown Ottawa.", image: heroImg }}
     trustSpecialty="Limbour specialist"
     lifestyle={{ image: heroImg, imageAlt: "Limbour neighborhood, Gatineau", title: "Is Limbour a good neighborhood for families?", subtitle: "Yes. It's the buyer profile I see most often in Limbour: young families and couples moving up from a condo or a first home. The neighborhood was planned for them, with loop streets and cul-de-sacs that keep through traffic down, parks and trails built into the development, and both French and English schools within the Gatineau sector. The Ferme Limbour sub-sector has the larger, higher-end properties." }}
     reasons={[
@@ -19,7 +19,7 @@ const LimbourPageEn = () => (
       "Abundant parks, walking trails and green spaces",
       "Gatineau Hospital (909 Boulevard La Vérendrye Ouest) a few minutes away by car",
       "Western Quebec School Board (English): Greater Gatineau Elementary in the Gatineau sector, high schools in Hull, subject to eligibility",
-      "Quick access to Highway 50, about 20 minutes from downtown Ottawa",
+      "Access to Highway 50, about 12 km from downtown Ottawa by road",
       "Growing area with little renovation work needed compared to older neighborhoods",
       "Practical for federal commuters and Ottawa cross-river buyers seeking modern construction",
     ]}
@@ -31,7 +31,7 @@ const LimbourPageEn = () => (
       },
       {
         q: "Limbour, Aylmer, the Plateau or Masson-Angers: which one should I choose?",
-        a: "Limbour offers recent homes at a more accessible price than Aylmer or the Plateau, with a more direct commute to Ottawa than Masson-Angers: about 20 minutes to downtown via Highway 50 and the Macdonald-Cartier Bridge.",
+        a: "Limbour offers recent homes at a more accessible price than Aylmer or the Plateau. It is also closer to Ottawa than Masson-Angers: about 12 km from downtown by road, compared with about 36 km from Masson-Angers.",
         detail: "If you want a move-in ready home in an established neighborhood without over-leveraging, Limbour is often the right compromise. If Lac Deschênes or the shops of old Aylmer matter to you, look at Aylmer. If you prefer a customized new build and the commute matters less, look at Masson-Angers.",
       },
     ]}
@@ -41,7 +41,7 @@ const LimbourPageEn = () => (
       { icon: Home, title: "Move-up buyers", text: "Families upgrading from a condo or smaller first home. The Ferme Limbour sub-sector offers larger properties with wooded lots." },
       { icon: TrendingUp, title: "Investors", text: "Growing area with stable rental demand from young families and Gatineau Hospital workers." },
       { icon: MapPin, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa wanting modern construction without paying Ottawa prices. Quick commute via Highway 50." },
-      { icon: MapPin, title: "Commuters", text: "Quick access to Highway 50, 20 minutes from downtown Ottawa via the Macdonald-Cartier Bridge." },
+      { icon: MapPin, title: "Commuters", text: "Access to Highway 50, which leads to the bridges into Ottawa." },
     ]}
     inlineCta={{ text: "Own a property in Limbour? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Limbour", items: [
