@@ -17,7 +17,7 @@ import heroImg from "@/assets/hero-cantley-gen.webp";
 const faq = [
   {
     q: "Y a-t-il des services à Cantley?",
-    a: "Cantley a des services de base, garderies, épicerie, commerces de proximité, trois écoles primaires francophones. Pour tout le reste (hôpital, grandes surfaces, école secondaire, restaurants variés), les résidents se dirigent vers Gatineau (15-20 minutes) ou Ottawa (25-30 minutes selon le secteur). La majorité des familles s'adaptent rapidement et ne regrettent pas le choix, mais c'est important d'en tenir compte dans votre décision.",
+    a: "Cantley a des services de base, garderies, épicerie, commerces de proximité, trois écoles primaires francophones. Pour tout le reste (hôpital, grandes surfaces, école secondaire, restaurants variés), les résidents se dirigent vers Gatineau ou Ottawa. Depuis l'hôtel de ville de Cantley, Les Promenades Gatineau sont à environ 14 km et le centre-ville d'Ottawa à environ 20 km par la route. C'est important d'en tenir compte dans votre décision.",
   },
   {
     q: "Les propriétés à Cantley ont-elles des puits et fosses?",
@@ -129,7 +129,7 @@ const CantleyPage = () => (
           La majorité des propriétés à Cantley fonctionnent avec puits artésien et fosse septique, le territoire n'est pas desservi par l'aqueduc et les égouts municipaux sur l'ensemble de son territoire. L'inspection complète de ces systèmes est non négociable avant tout achat.
         </p>
         <p className="prose-body">
-          Les services de proximité sont limités à Cantley même, quelques commerces, une épicerie, des garderies, les trois écoles primaires. Pour les grandes surfaces, les spécialistes médicaux, et le secondaire, on se dirige vers Gatineau (15-20 minutes).
+          Les services de proximité sont limités à Cantley même, quelques commerces, une épicerie, des garderies, les trois écoles primaires. Pour les grandes surfaces, les spécialistes médicaux, et le secondaire, on se dirige vers Gatineau : Les Promenades Gatineau sont à environ 14 km de l'hôtel de ville de Cantley par la route.
         </p>
         <p className="prose-body">
           Le télétravail a profondément changé le profil des acheteurs à Cantley. Des familles qui travaillaient en présentiel à Ottawa ou Gatineau ont pu s'y installer depuis 2020 et y trouvent une qualité de vie qu'elles ne quitteraient plus.

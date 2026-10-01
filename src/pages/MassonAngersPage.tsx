@@ -8,7 +8,7 @@ const MassonAngersPage = () => (
     metaDesc="Vivre, acheter ou vendre à Masson-Angers, Gatineau. Secteur familial en plein essor, constructions neuves et prix compétitifs."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Courtier immobilier à Masson-Angers. Secteur familial, constructions neuves et prix accessibles.", lat: 45.5328, lng: -75.4170, url: "/masson-angers/" }}
-    hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial en plein essor à l'est de Gatineau, constructions neuves, prix d'entrée accessibles et qualité de vie. À 20-25 minutes du centre de Gatineau par l'autoroute 50.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial à l'est de Gatineau, avec des constructions neuves et des prix d'entrée parmi les plus bas de la ville. À environ 36 km du centre-ville d'Ottawa et à une trentaine de kilomètres des Promenades Gatineau par la route.", image: heroImg }}
     trustSpecialty="Spécialiste Masson-Angers"
     lifestyle={{ image: heroImg, imageAlt: "Quartier résidentiel Masson-Angers", title: "Pourquoi Masson-Angers est en plein essor", subtitle: "Masson-Angers attire principalement les jeunes familles et les premiers acheteurs qui cherchent une maison neuve ou récente sans payer le prix de Hull ou d'Aylmer. Le secteur compte deux sous-secteurs distincts, Masson et Angers, avec plusieurs développements résidentiels actifs et des promoteurs qui livrent du neuf en 2026. C'est l'un des meilleurs rapports qualité-prix dans Gatineau pour qui accepte un déplacement quotidien plus long vers le centre-ville d'Ottawa." }}
     reasons={[
@@ -18,7 +18,7 @@ const MassonAngersPage = () => (
       "Écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "École du Sacré-Cœur a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec",
       "École secondaire Hormisdas-Gamelin à Buckingham (12 km, programme international IB et option sport)",
-      "Accès rapide à l'autoroute 50-20-25 minutes du centre de Gatineau, environ 35-40 minutes du centre-ville d'Ottawa",
+      "Accès direct à l'autoroute 50",
       "Rivière du Lièvre et marais aux Grenouillettes, accès à la nature en zone résidentielle",
       "Marché actif avec plusieurs développements en cours et demande croissante des premiers acheteurs",
     ]}
@@ -27,13 +27,13 @@ const MassonAngersPage = () => (
       { icon: Users, title: "Jeunes familles", text: "Maisons neuves abordables, 4 écoles primaires CSSCV à proximité, parcs et sentiers dans les nouveaux développements. La rivière du Lièvre et les espaces verts ajoutent à la qualité de vie." },
       { icon: Home, title: "Premiers acheteurs", text: "Prix d'entrée accessibles entre 400 000 $ et 490 000 $ pour un jumelé ou une maison neuve. Programmes RAP/CELIAPP applicables. Financement plus facile qu'à Hull ou Aylmer." },
       { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec demande locative stable et plusieurs développements neufs en livraison 2026-2027. Potentiel de plus-value à moyen terme." },
-      { icon: MapPin, title: "Travailleurs de l'est", text: "Accès direct aux zones d'emploi de Gatineau-est, Buckingham et Thurso. À 20-25 minutes du centre de Gatineau par l'autoroute 50." },
+      { icon: MapPin, title: "Travailleurs de l'est", text: "Accès direct aux zones d'emploi de Gatineau-est, Buckingham et Thurso. Le centre de Buckingham est à environ 5 km par la route." },
     ]}
     inlineCta={{ text: "Propriétaire à Masson-Angers? Découvrez la valeur actuelle de votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur Masson-Angers",
       items: [
-        { q: "Masson-Angers est-il loin du centre de Gatineau?", a: "Environ 20-25 minutes par l'autoroute 50. L'accès est rapide et direct. Pour le centre-ville d'Ottawa, prévoir 35-40 minutes selon le trafic et le pont utilisé." },
+        { q: "Masson-Angers est-il loin du centre de Gatineau?", a: "Les Promenades Gatineau sont à une trentaine de kilomètres par la route (de 28 à 33 km selon l'itinéraire), et le centre-ville d'Ottawa à environ 36 km. Le trajet dépend de l'heure et du pont utilisé." },
         { q: "Quel est le prix d'une maison à Masson-Angers en 2026?", a: "Masson-Angers fait partie du secteur Buckingham/Masson-Angers dans les statistiques de l'APCIQ. Au 2e trimestre 2026, le prix médian d'une unifamiliale y était de 419 545 $, le plus bas des quatre secteurs de la ville de Gatineau (données Centris). Le prix varie ensuite selon le type, l'année de construction et le sous-secteur : je vous montre les ventes récentes comparables." },
         { q: "Y a-t-il des maisons neuves à Masson-Angers?", a: "Oui, plusieurs promoteurs sont actifs à Masson-Angers. Les dates de possession varient d'un projet à l'autre : je vérifie avec vous celles des projets disponibles." },
         { q: "Quelles écoles desservent Masson-Angers?", a: "Quatre écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (qui a fait l'objet d'un agrandissement majeur de 20 M$ annoncé par le gouvernement du Québec) et St-Jean-de-Brébeuf. Pour le secondaire, l'École secondaire Hormisdas-Gamelin à Buckingham (12 km) avec programme IB et option sport." },
@@ -44,7 +44,7 @@ const MassonAngersPage = () => (
     sectors={{ list: [
       { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Voisin direct à l'est, rivière du Lièvre, école secondaire Hormisdas-Gamelin" },
       { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre du secteur Gatineau, services, condos et résidentiel" },
-      { name: "Limbour", href: "/limbour/", detail: "Familial, parcs, banlieue moderne, alternative à 15 minutes à l'ouest" },
+      { name: "Limbour", href: "/limbour/", detail: "Familial, parcs, banlieue moderne, alternative à environ 29 km à l'ouest" },
     ]}}
     related={{ pages: [
       { title: "Masson-Angers en plein essor", text: "Pourquoi ce secteur explose.", href: "/blogue/masson-angers-secteur-en-essor/" },

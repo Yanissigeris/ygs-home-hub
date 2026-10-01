@@ -17,11 +17,11 @@ import heroImg from "@/assets/hero-buckingham-gen.webp";
 const faq = [
   {
     q: "Buckingham est-il trop loin d'Ottawa pour y habiter?",
-    a: "Buckingham est à environ 45-50 minutes d'Ottawa en voiture selon le trafic. Pour un travail en présentiel quotidien à Ottawa, c'est effectivement un trajet important. Pour du télétravail partiel ou un emploi à Gatineau, c'est tout à fait gérable, et le gain en espace et en qualité de vie est significatif. Lors de notre consultation, je peux vous aider à peser honnêtement ce compromis selon votre situation réelle.",
+    a: "Le centre de Buckingham est à environ 38 km du centre-ville d'Ottawa par la route. Aux heures de pointe, il faut prévoir plus de temps. Si vous travaillez en présentiel tous les jours à Ottawa, c'est un trajet important. En télétravail partiel ou avec un emploi à Gatineau, ça se gère bien, et vous gagnez de l'espace. Lors de notre consultation, on regarde ce compromis ensemble selon votre situation.",
   },
   {
     q: "Y a-t-il des services à Buckingham?",
-    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. L'Hôpital de Papineau est aussi à Buckingham. Pour les grandes surfaces, on va vers le centre de Gatineau (30-40 minutes).",
+    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. L'Hôpital de Papineau est aussi à Buckingham. Pour les grandes surfaces, on va vers le centre de Gatineau : Les Promenades Gatineau sont à une trentaine de kilomètres par la route (de 30 à 36 km selon l'itinéraire).",
   },
   {
     q: "Les propriétés à Buckingham ont-elles des puits?",
@@ -94,7 +94,7 @@ const BuckinghamPage = () => (
           Ce qui distingue fondamentalement ce secteur de tous les autres à Gatineau : l'espace. Les terrains sont plus grands, les maisons sont plus spacieuses, et les rues sont plus calmes. Ce secteur attire principalement des familles établies, des acheteurs en upsizing qui veulent plus d'espace, et, depuis 2020, des travailleurs en télétravail qui n'ont plus besoin d'être proches d'Ottawa au quotidien.
         </p>
         <p className="prose-body">
-          Buckingham dispose d'un centre-ville vivant : épiceries, pharmacie, restaurants, clinique médicale, bibliothèque, aréna, école secondaire. Pour les grandes surfaces et les services spécialisés, on se dirige vers le centre de Gatineau (30-40 minutes).
+          Buckingham dispose d'un centre-ville vivant : épiceries, pharmacie, restaurants, clinique médicale, bibliothèque, aréna, école secondaire. Pour les grandes surfaces et les services spécialisés, on se dirige vers le centre de Gatineau, à une trentaine de kilomètres par la route (de 30 à 36 km jusqu'aux Promenades Gatineau, selon l'itinéraire).
         </p>
       </div>
     </ContentBlock>
@@ -122,7 +122,7 @@ const BuckinghamPage = () => (
           La principale question que les acheteurs posent sur Buckingham : « N'est-ce pas trop loin? »
         </p>
         <p className="prose-body">
-          La réponse honnête dépend de votre situation. Buckingham est à environ 45-50 minutes d'Ottawa selon le trafic, et à 30-40 minutes du centre de Gatineau. Pour quelqu'un qui travaille à temps plein en présentiel à Ottawa, c'est effectivement un trajet significatif au quotidien.
+          Ça dépend de votre situation. Buckingham est à environ 38 km du centre-ville d'Ottawa et à une trentaine de kilomètres des Promenades Gatineau par la route, et la durée du trajet dépend beaucoup de la circulation. Pour quelqu'un qui travaille à temps plein en présentiel à Ottawa, c'est un long trajet au quotidien.
         </p>
         <p className="prose-body">
           Pour quelqu'un en télétravail partiel (2-3 jours/semaine) ou qui travaille à Gatineau, la distance devient un avantage, vous obtenez beaucoup plus d'espace pour le même budget.

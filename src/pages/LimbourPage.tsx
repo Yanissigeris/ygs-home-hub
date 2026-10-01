@@ -8,7 +8,7 @@ const LimbourPage = () => (
     metaDesc="Vivre, acheter ou vendre dans le quartier Limbour à Gatineau. Secteur familial moderne avec parcs, écoles et accès rapide à Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
     jsonLd={{ name: "Limbour", description: "Courtier immobilier dans le quartier Limbour à Gatineau. Secteur familial moderne.", lat: 45.4850, lng: -75.6600, url: "/limbour/" }}
-    hero={{ overline: "Guide de quartier · Limbour", title: "Vivre, acheter ou vendre à Limbour", subtitle: "Quartier familial moderne du secteur Gatineau, près de l'Hôpital de Gatineau et de l'autoroute 50. Maisons des années 2000-2020, parcs, sentiers, à 20 minutes d'Ottawa.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Limbour", title: "Vivre, acheter ou vendre à Limbour", subtitle: "Quartier familial moderne du secteur Gatineau, près de l'Hôpital de Gatineau et de l'autoroute 50. Maisons des années 2000-2020, parcs, sentiers, à environ 12 km du centre-ville d'Ottawa.", image: heroImg }}
     trustSpecialty="Spécialiste Limbour et environs"
     lifestyle={{ image: heroImg, imageAlt: "Quartier Limbour, Gatineau", title: "Limbour est-il un bon quartier pour une famille?", subtitle: "Oui. C'est le profil d'acheteur que je vois le plus souvent à Limbour : de jeunes familles et des couples qui quittent un condo ou une première maison. Le quartier a été planifié pour eux, avec des rues en boucle et des culs-de-sac qui limitent la circulation de transit, des parcs et des sentiers intégrés au développement, et des écoles primaires du Centre de services scolaire des Draveurs à proximité. Le sous-secteur Ferme Limbour regroupe les propriétés plus grandes et plus haut de gamme." }}
     reasons={[
@@ -19,7 +19,7 @@ const LimbourPage = () => (
       "Hôpital de Gatineau (909, boulevard La Vérendrye Ouest) à quelques minutes en voiture",
       "Tim Hortons et restaurants accessibles à courte distance (boul. Maloney, boul. La Vérendrye)",
       "Écoles secondaires desservant le secteur : Polyvalente de l'Érablière et École secondaire du Versant (CSSD Draveurs)",
-      "Accès rapide à l'autoroute 50, environ 20 minutes du centre-ville d'Ottawa",
+      "Accès à l'autoroute 50, à environ 12 km du centre-ville d'Ottawa par la route",
       "Quartier en croissance : peu de rénovations à prévoir comparé aux quartiers plus anciens",
     ]}
     answers={[
@@ -30,7 +30,7 @@ const LimbourPage = () => (
       },
       {
         q: "Limbour, Aylmer, Plateau ou Masson-Angers : lequel choisir?",
-        a: "Limbour offre des maisons récentes à un prix plus accessible qu'Aylmer ou le Plateau, avec un accès plus direct à Ottawa que Masson-Angers : environ 20 minutes du centre-ville par l'autoroute 50 et le pont Macdonald-Cartier.",
+        a: "Limbour offre des maisons récentes à un prix plus accessible qu'Aylmer ou le Plateau. Le quartier est aussi plus près d'Ottawa que Masson-Angers : environ 12 km du centre-ville par la route, contre environ 36 km depuis Masson-Angers.",
         detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Si vous tenez au lac Deschênes ou aux commerces du vieux Aylmer, regardez Aylmer. Si vous préférez une construction neuve personnalisée et que le trajet compte moins, regardez Masson-Angers.",
       },
     ]}
@@ -39,7 +39,7 @@ const LimbourPage = () => (
       { icon: Users, title: "Jeunes familles", text: "Maisons récentes 5-20 ans avec garage, terrains aérés, écoles, parcs et sentiers à proximité. Pas de rénovations urgentes." },
       { icon: Home, title: "Acheteurs deuxième maison", text: "Familles qui upgradent depuis un condo ou une première maison plus petite. Le sous-secteur Ferme Limbour offre des propriétés plus grandes avec terrains boisés." },
       { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec demande locative stable des jeunes familles et travailleurs de l'Hôpital de Gatineau." },
-      { icon: MapPin, title: "Navetteurs", text: "Accès rapide à l'autoroute 50, à 20 minutes du centre-ville d'Ottawa par le pont Macdonald-Cartier." },
+      { icon: MapPin, title: "Navetteurs", text: "Accès à l'autoroute 50 pour rejoindre les ponts vers Ottawa." },
     ]}
     inlineCta={{ text: "Propriétaire à Limbour? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{

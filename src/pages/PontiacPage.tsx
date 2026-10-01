@@ -24,7 +24,7 @@ const faq = [
   },
   {
     q: "Pontiac est-il trop éloigné pour y habiter en travaillant à Ottawa ou Gatineau?",
-    a: "Tout dépend de votre situation de travail. Le secteur Luskville est le plus accessible, à environ 35-40 minutes d'Ottawa et 25-30 minutes de Gatineau. Quyon, plus éloigné, demande un trajet plus important. Pour quelqu'un en télétravail à temps plein ou presque, Pontiac offre une qualité de vie exceptionnelle à des prix qu'on ne trouve plus dans les secteurs plus proches. Pour un travail en présentiel quotidien à Ottawa, c'est un engagement de trajet à peser sérieusement. Je vous aide à comparer honnêtement selon votre réalité.",
+    a: "Tout dépend de votre situation de travail. Depuis Luskville, le centre-ville d'Ottawa est à environ 35 km et le Vieux-Aylmer à environ 21 km par la route. Quyon, plus à l'ouest, est à environ 54 km du centre-ville d'Ottawa. Pour quelqu'un en télétravail à temps plein ou presque, Pontiac offre de grands terrains et une vie rurale. Si vous travaillez en présentiel tous les jours à Ottawa, c'est un trajet à peser sérieusement. Je vous aide à comparer selon votre situation.",
   },
   {
     q: "Pontiac est-il une bonne option pour les familles anglophones?",
@@ -165,7 +165,7 @@ const PontiacPage = () => {
         <div className="space-y-4 text-[0.9375rem] text-muted-foreground leading-relaxed">
           <p>Pontiac est une municipalité rurale. Plusieurs réalités importantes à comprendre avant de faire une offre&nbsp;:</p>
           <p>La grande majorité des propriétés fonctionnent avec puits artésien et fosse septique. L'inspection complète de ces systèmes avant l'achat est indispensable, et non optionnelle. Un système en fin de vie représente une dépense significative à anticiper.</p>
-          <p>Les services sur place sont limités. Pontiac n'a pas de grandes surfaces, de cliniques spécialisées ou d'hôpital. Pour ces besoins, on se dirige vers Gatineau (30-45 minutes selon le secteur) ou Ottawa. Les résidents vivent avec cette réalité et en font le calcul lors de leur décision.</p>
+          <p>Les services sur place sont limités. Pontiac n'a pas de grandes surfaces, de cliniques spécialisées ou d'hôpital. Pour ces besoins, on se dirige vers Gatineau (le Vieux-Aylmer est à environ 21 km de Luskville et 41 km de Quyon par la route) ou Ottawa. Les résidents vivent avec cette réalité et en font le calcul lors de leur décision.</p>
           <p>Le zonage à Pontiac est influencé par les règlements de la MRC des Collines-de-l'Outaouais et par les exigences de la Commission de la capitale nationale pour les zones adjacentes au Parc de la Gatineau. Avant tout projet de construction ou de rénovation majeure, une vérification du zonage auprès de la municipalité est indispensable.</p>
           <p>Le marché immobilier de Pontiac est un marché de niche. Les transactions sont moins fréquentes qu'à Gatineau ou Aylmer, ce qui signifie que l'évaluation précise des comparables est encore plus importante. Je connais ce secteur et je surveille les ventes qui y sont conclues.</p>
         </div>

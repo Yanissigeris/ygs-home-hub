@@ -44,7 +44,7 @@ const atouts = [
   {
     icon: "⛷️",
     title: "Old Chelsea / Camp Fortune",
-    text: "Le village d'Old Chelsea est le cœur historique de la municipalité. Quelques commerces, restaurants locaux, et un caractère de village préservé. Camp Fortune, tout proche, est un club de ski alpin à 15 minutes du centre d'Ottawa. (Source: Wikipedia/Chelsea)",
+    text: "Le village d'Old Chelsea est le cœur historique de la municipalité. Quelques commerces, restaurants locaux, et un caractère de village préservé. Camp Fortune, tout proche, est un club de ski alpin à environ 21 km du centre-ville d'Ottawa par la route. (Source: Wikipedia/Chelsea)",
   },
 ];
 
@@ -80,7 +80,7 @@ const ChelseaPage = () => (
     <HeroSection
       overline="CHELSEA · QUÉBEC"
       title="Courtier immobilier à Chelsea — vivre entre nature et Ottawa"
-      subtitle="Chelsea est une municipalité distincte au nord de Gatineau, à environ 10 kilomètres d'Ottawa. Soixante pour cent de son territoire est occupé par le Parc de la Gatineau. C'est un des rares endroits en Amérique du Nord où l'on peut habiter dans un parc national tout en étant à 15 minutes du centre d'une capitale."
+      subtitle="Chelsea est une municipalité distincte au nord de Gatineau. Soixante pour cent de son territoire est occupé par le parc de la Gatineau. Le village d'Old Chelsea est à environ 15 km du centre-ville d'Ottawa par la route."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=chelsea" }}
       heroBgImage={heroImg}
@@ -132,7 +132,7 @@ const ChelseaPage = () => (
           Deuxièmement, Chelsea n'est pas desservie par les services d'aqueduc et d'égouts municipaux sur l'ensemble de son territoire. Beaucoup de propriétés fonctionnent avec puits artésien et fosse septique. L'inspection complète de ces systèmes avant l'achat est non négociable.
         </p>
         <p className="prose-body">
-          Troisièmement, Chelsea est une municipalité semi-rurale : les services de proximité (épicerie, clinique, pharmacie) sont limités sur place. La majorité des résidents font leurs courses à Gatineau ou à Ottawa (15-20 minutes).
+          Troisièmement, Chelsea est une municipalité semi-rurale : les services de proximité (épicerie, clinique, pharmacie) sont limités sur place. Pour les courses, on se rend à Gatineau ou à Ottawa : Les Galeries de Hull sont à environ 10 km du village d'Old Chelsea par la route.
         </p>
       </div>
     </ContentBlock>

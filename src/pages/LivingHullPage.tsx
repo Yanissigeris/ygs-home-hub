@@ -21,7 +21,7 @@ const highlights = [
 
 const faq = [
   { q: "Hull est-il un bon endroit pour vivre?", a: "Hull vit une véritable transformation, restaurants, culture, projets et communauté dynamique. C'est de plus en plus populaire." },
-  { q: "Comment se rendre à Ottawa depuis Hull?", a: "5-10 minutes en voiture, en bus ou à vélo via les ponts. C'est le secteur le plus proche d'Ottawa." },
+  { q: "Comment se rendre à Ottawa depuis Hull?", a: "Le centre-ville d'Ottawa est à environ 2 km de l'hôtel de ville de Gatineau, à Hull, par le pont du Portage. On peut aussi y aller en autobus ou à vélo. C'est le secteur le plus proche d'Ottawa." },
   { q: "Y a-t-il des familles à Hull?", a: "Oui, de plus en plus de familles s'y installent pour la proximité, les prix et la vie de quartier." },
 ];
 

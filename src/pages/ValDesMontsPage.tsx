@@ -5,21 +5,21 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 const ValDesMontsPage = () => (
   <NeighborhoodTemplate
     seoTitle="Val-des-Monts — Immobilier et guide de quartier"
-    metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage, à 30 minutes de Gatineau."
+    metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage, au nord de Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts/" }}
-    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs cristallins, terrains boisés et tranquillité — la municipalité de villégiature de l'Outaouais. Plus de 200 lacs, à 30-40 minutes de Gatineau et 45 minutes d'Ottawa.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs, terrains boisés et chalets, dans une municipalité de villégiature de l'Outaouais. Plus de 125 lacs, et le village de Perkins à près de 30 km du centre-ville d'Ottawa par la route.", image: heroImg }}
     trustSpecialty="Spécialiste Val-des-Monts et environs"
-    lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi Val-des-Monts est unique", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande. C'est l'un des rares secteurs de l'Outaouais où on peut vivre les pieds dans l'eau à moins de 30 minutes du centre-ville d'Ottawa." }}
+    lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi choisir Val-des-Monts", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande." }}
     reasons={[
-      "Plus de 200 lacs, accès privé à un lac pour beaucoup de propriétés",
+      "Plus de 125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
       "Prix médian d'une unifamiliale de 595 000 $ au 2e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
       "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes, chacun avec sa dynamique de marché propre",
       "Terrains de 2 à 50+ acres, intimité totale en pleine nature",
       "Chalets quatre-saisons, résidences permanentes et propriétés de luxe bord de lac",
       "Village de Perkins comme centre de services (épicerie, école primaire, services de proximité)",
-      "27 minutes du pont Macdonald-Cartier pour accéder au centre-ville d'Ottawa",
-      "30-40 minutes du centre de Gatineau, accès aux services hospitaliers et commerciaux",
+      "Village de Perkins à près de 30 km du centre-ville d'Ottawa par la route",
+      "Les Promenades Gatineau à une vingtaine de kilomètres de Perkins par la route, pour les services commerciaux",
       "Plus de choix pour les acheteurs : 535 unifamiliales en vigueur au 2e trimestre 2026 dans la périphérie de Gatineau, 13 % de plus qu'un an plus tôt (APCIQ)",
     ]}
     profilesTitle="Val-des-Monts est idéal pour…"
@@ -27,7 +27,7 @@ const ValDesMontsPage = () => (
       { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre offrent les meilleures conditions pour la vie nautique quatre saisons." },
       { icon: Home, title: "Chercheurs de chalet", text: "Du chalet rustique 200 000 $ au bord de lac luxueux 750 000 $+. Les chalets quatre-saisons sont les plus demandés depuis le télétravail." },
       { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
-      { icon: Mountain, title: "Télétravailleurs et retraités", text: "Cadre de vie exceptionnel avec Internet haute vitesse disponible dans la majorité des secteurs. À 27 minutes d'Ottawa pour les rencontres en présentiel ponctuelles." },
+      { icon: Mountain, title: "Télétravailleurs et retraités", text: "Vie en nature, avec Internet haute vitesse offert dans une grande partie du territoire. Le centre-ville d'Ottawa reste accessible pour les rencontres en présentiel ponctuelles." },
     ]}
     inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
