@@ -40,13 +40,13 @@ const faq = [
 
 const BuyFromOttawaPageEn = () => (
   <>
-    <PageMeta title="Buy in Gatineau from Ottawa" description="Living in Ottawa and thinking about buying in Gatineau? Taxes, neighborhoods, advantages and bilingual support for your transition." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
+    <PageMeta title="Buy in Gatineau from Ottawa" description="Living in Ottawa and thinking about buying in Gatineau? Taxes, neighbourhoods, advantages and bilingual support for your transition." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection
       overline="Buy from Ottawa · Gatineau"
       title="Buy in Gatineau from Ottawa"
-      subtitle="More space, more affordable prices, a different quality of life — without being far from work. Here's what you need to know."
+      subtitle="More space and more affordable prices, without moving far from work. What to know before you cross the river."
       primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }}
-      secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }}
+      secondaryCta={{ label: "Explore neighbourhoods", href: "/en/neighborhoods/" }}
       trustLine="Ottawa → Gatineau relocation specialist"
       heroBgImage={heroImg}
     />
@@ -63,8 +63,8 @@ const BuyFromOttawaPageEn = () => (
     />
 
     <SectorLinks
-      overline="Popular areas"
-      title="Top neighborhoods for Ottawa buyers"
+      overline="Areas to consider"
+      title="Neighbourhoods Ottawa buyers look at"
       sectors={sectors}
       background="alt"
     />
@@ -85,15 +85,15 @@ const BuyFromOttawaPageEn = () => (
       </Button>
     </ContentBlock>
 
-    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide — buying in Gatineau" text="Process, budget, neighborhoods and tips, all in a guide sent by email." ctaLabel="Get the Buyer Guide" />
+    <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide: buying in Gatineau" text="Process, budget, neighbourhoods and tips, all in a guide sent by email." ctaLabel="Get the Buyer Guide" />
 
     <CTASection
       dark
       title="Ready to explore Gatineau?"
-      text="Book a free consultation, let's look at the neighborhoods and options that match your profile."
+      text="Book a free consultation, let's look at the neighbourhoods and options that match your profile."
       buttons={[
         { label: "Book a consultation", href: "/en/buyer-consultation/" },
-        { label: "Explore neighborhoods", href: "/en/plateau-aylmer/", variant: "outline" },
+        { label: "Explore neighbourhoods", href: "/en/plateau-aylmer/", variant: "outline" },
       ]}
       trustLine="I give you the options, you decide with full clarity."
     />

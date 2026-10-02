@@ -16,12 +16,12 @@ import heroImg from "@/assets/hero-gatineau-centre-gen.webp";
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "Gatineau centre vs Aylmer — which one to choose?",
-    a: "The main difference comes down to lifestyle and where you work. Gatineau centre offers better access to services (hospital, cégep, big-box stores) and is generally more affordable than Aylmer. Aylmer offers a more nature-oriented lifestyle, newer homes, and a more bilingual environment. If you work in Gatineau, the centre may be more practical. If you're coming from Ottawa, Aylmer is often preferred. I can help you compare honestly based on your situation.",
+    q: "Gatineau centre or Aylmer: which one to choose?",
+    a: "The main difference comes down to lifestyle and where you work. Gatineau centre offers better access to services (hospital, cégep, big-box stores) and is generally more affordable than Aylmer. Aylmer offers newer homes and a lifestyle closer to nature, in a more bilingual setting. If you work in Gatineau, the centre may be more practical. Buyers coming from Ottawa often prefer Aylmer. I can help you compare based on your situation.",
   },
   {
     q: "Is it a good area to invest in a plex?",
-    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand is supported by the Cégep de l'Outaouais, the hospital, and services within accessible reach. As everywhere, an honest return analysis is essential before any purchase. I handle that with you.",
+    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand is supported by the Cégep de l'Outaouais, the hospital, and services within accessible reach. As anywhere, run a return analysis before you buy. I do it with you.",
   },
 ];
 
@@ -33,10 +33,10 @@ const subSectors = [
   },
   {
     title: "Manoir-des-Trembles / La Gappe",
-    text: "Planned neighbourhoods developed mainly in the 1990s, 2000s. Two-storey homes, quiet streets, schools nearby. Popular with young families settling in Gatineau.",
+    text: "Planned neighbourhoods developed mainly in the 1990s, 2000s. Two-storey homes, quiet streets, schools nearby. Many young families settle here.",
   },
   {
-    title: "Plex area — centre",
+    title: "Central plex area",
     text: "Historic concentration of duplexes and triplexes close to shops and STO public transit. Diverse tenant base: cégep students, families, workers. Active investment market.",
   },
   {
@@ -57,7 +57,7 @@ const GatineauCentrePageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Gatineau Centre | Plexes, Homes, Condos | YGS"
-      description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker since 2017 — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker since 2017: Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
       description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker."
@@ -67,7 +67,7 @@ const GatineauCentrePageEn = () => (
     />
     <ServiceJsonLd
       name="Real Estate Broker in Gatineau Centre"
-      description="Real estate brokerage services in Gatineau centre — plexes, homes, condos."
+      description="Real estate brokerage services in Gatineau centre: plexes, homes, condos."
       url="/en/gatineau/"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
@@ -76,8 +76,8 @@ const GatineauCentrePageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
-      title="Real estate broker in Gatineau centre — accessibility, services and value"
-      subtitle="Gatineau's central area is often underestimated. Yet it's the city's best-served sector, hospital, universities, cégep, transit, shops. And one of the most accessible for families and investors."
+      title="Real estate broker in Gatineau centre, close to services"
+      subtitle="Gatineau's central area is often underestimated. Yet it has Hôpital de Gatineau and a Cégep de l'Outaouais campus, with big-box stores nearby. Its prices are still among the most accessible in the city for families and investors."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}
       heroBgImage={heroImg}
@@ -88,10 +88,10 @@ const GatineauCentrePageEn = () => (
       <h2 className="mt-3">Gatineau centre, well served, well positioned</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city, including the Limbour, La Gappe, Manoir-des-Trembles neighbourhoods, and the areas around Boulevard Maloney. It's Gatineau's residential core, with the highest concentration of public services: Gatineau Hospital, Cégep de l'Outaouais, several secondary schools, the STO public transit network, and major retail centres.
+          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city. It includes Limbour, La Gappe, Manoir-des-Trembles and the areas around Boulevard Maloney. It's Gatineau's residential core, with a large share of the city's services and retail: Hôpital de Gatineau, Cégep de l'Outaouais, several secondary schools and major retail centres.
         </p>
         <p className="prose-body">
-          For families who work in Gatineau (rather than Ottawa), this area often offers the best balance between access to services and residential quality of life. For investors, Gatineau centre holds a significant share of the existing plex inventory, well-located duplexes and triplexes, close to services and transit corridors.
+          For families who work in Gatineau (rather than Ottawa), this area often offers a good balance between access to services and residential quality of life. On the investment side, Gatineau centre holds a significant share of the existing plex inventory, well-located duplexes and triplexes, close to services and transit corridors.
         </p>
         <p className="prose-body">
           The City of Gatineau, with a population of 298,000, is the fourth-largest city in Québec. (Source: Ville de Gatineau, 2024). The central area benefits directly from all municipal infrastructure investments.
@@ -138,7 +138,7 @@ const GatineauCentrePageEn = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Gatineau centre" items={faq} />
+    <FAQSection title="Frequently asked questions about Gatineau centre" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -151,7 +151,7 @@ const GatineauCentrePageEn = () => (
     <GuideInlineCTA
       lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Gatineau"
+      headline="Free Buyer Guide: buying in Gatineau"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />

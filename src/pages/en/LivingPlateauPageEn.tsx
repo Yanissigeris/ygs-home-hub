@@ -28,7 +28,7 @@ const faq = [
 const related = [
   { title: "Buy or sell in the Plateau", text: "My work as a broker in the neighbourhood.", href: "/en/plateau/" },
   { title: "Aylmer, Hull or the Plateau?", text: "A comparison of the three areas.", href: "/en/blog/aylmer-hull-plateau-which-neighborhood/" },
-  { title: "All neighborhoods", text: "Compare Gatineau neighborhoods.", href: "/en/neighborhoods/" },
+  { title: "All neighbourhoods", text: "Compare Gatineau neighbourhoods.", href: "/en/neighborhoods/" },
   { title: "First-time buyer", text: "Budget, process and tips for first-time buyers.", href: "/en/first-time-buyer/" },
   { title: "Buyer Consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
 ];
@@ -36,8 +36,8 @@ const related = [
 const LivingPlateauPageEn = () => (
   <>
     <PageMeta title="Living in the Plateau · Lifestyle Guide" description="Everything about life in the Plateau in Gatineau: families, parks, developments and quality of life. Guide to settling in." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <HeroSection overline="Living in the Plateau · Gatineau" title="Living in the Plateau: the guide" subtitle="Day-to-day life in the Plateau, Gatineau: recent homes, schools, parks and Gatineau Park close by." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "See the neighborhood", href: "/en/plateau/" }} heroBgImage={heroImg} />
-    <CardGrid overline="Lifestyle" title="What makes the Plateau unique" items={highlights} />
+    <HeroSection overline="Living in the Plateau · Gatineau" title="Living in the Plateau: the guide" subtitle="Day-to-day life in the Plateau, Gatineau: recent homes, schools, parks and Gatineau Park close by." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "See the neighbourhood", href: "/en/plateau/" }} heroBgImage={heroImg} />
+    <CardGrid overline="Lifestyle" title="What sets the Plateau apart" items={highlights} />
     <ContentBlock narrow>
       <SectionHeading title="Living in the Plateau with children" />
       <p className="prose-body mt-5">The neighbourhood has three French-language elementary schools and borders Gatineau Park. Since the neighbourhood was developed mostly since the late 1990s, families mainly find recent properties here, with fewer major renovations to plan than in older areas.</p>
@@ -46,7 +46,7 @@ const LivingPlateauPageEn = () => (
     <FAQSection title="Questions about living in the Plateau" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide: settling in the Plateau" text="Everything to buy in the Plateau, process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />
-    <CTASection dark title="Ready to discover the Plateau?" text="Let's talk about your criteria, I'll show you the best options in the area." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighborhood", href: "/en/plateau/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <CTASection dark title="Ready to discover the Plateau?" text="Let's talk about your criteria. I'll show you the options in the area that fit your needs." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "See the neighbourhood", href: "/en/plateau/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );

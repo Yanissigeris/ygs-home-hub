@@ -35,25 +35,25 @@ const services = [
 const faqItems = [
   { q: "Do I need a bilingual real estate agent in Outaouais?", a: "In a bilingual region like Outaouais, working with an agent fluent in both French and English is a major advantage. I handle all negotiations, paperwork and communications in your preferred language." },
   { q: "Which areas do you serve in Outaouais?", a: "I serve the entire Outaouais urban region: Gatineau, Hull, Aylmer, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac. Each area has its own character, I help you find the right fit." },
-  { q: "Can you help if I am moving from Ottawa to Gatineau?", a: "Absolutely. I specialize in Ottawa-to-Gatineau relocations. I know the tax differences, school systems, commute patterns and neighbourhood dynamics that matter when crossing the bridge." },
+  { q: "Can you help if I am moving from Ottawa to Gatineau?", a: "Yes. Ottawa-to-Gatineau relocations are one of my specialties, and I know the tax differences, school systems, commute patterns and neighbourhood differences that matter when you cross the bridge." },
   { q: "How do I get a home valuation in Outaouais?", a: "I prepare a free, no-obligation valuation based on recent comparable sales in your specific area. You receive a clear report with a recommended listing price." },
-  { q: "What is the best area to buy in Outaouais?", a: "It depends on your budget, lifestyle and priorities. Aylmer is great for families, Hull for young professionals, Chelsea for nature lovers, and Gatineau centre for accessibility. Let's discuss your needs." },
+  { q: "What is the best area to buy in Outaouais?", a: "It depends on your budget, lifestyle and priorities. Aylmer suits families, Hull young professionals, Chelsea nature lovers and Gatineau centre buyers looking for accessible prices. Let's discuss your needs." },
   { q: "How much does a house cost in Outaouais?", a: "In Q2 2026, the median single-family price was $523,500 in the Gatineau metropolitan area, and the median condo price $308,000 (APCIQ, Centris data). By sector, the single-family median ranged from $419,545 in Buckingham/Masson-Angers to $595,000 in the Gatineau periphery area. Contact me for a current analysis of your target area." },
-  { q: "Why choose a Quebec-licensed broker instead of an Ontario agent?", a: "Only a Quebec-licensed broker can legally represent you in a real estate transaction in Quebec. I understand the local laws, welcome tax, school taxes and market dynamics specific to the Outaouais." },
-  { q: "Is the Outaouais real estate market active?", a: "Yes, the market remains dynamic thanks to Ottawa's proximity, bilingual demand and the region's growing appeal. Conditions vary by sector, a personalized analysis will give you the full picture." },
+  { q: "Why choose a Quebec-licensed broker instead of an Ontario agent?", a: "Only a Quebec-licensed broker can legally represent you in a real estate transaction in Quebec. I understand the local laws, welcome tax, school taxes and how the Outaouais market works." },
+  { q: "Is the Outaouais real estate market active?", a: "Yes. In Q2 2026, 1,310 residential properties sold in the Gatineau metropolitan area. Over 12 months, single-family market conditions favoured sellers in every price range (APCIQ, Centris data). The picture still changes from one sector to another." },
   { q: "Do you help with military relocations?", a: "Yes. I am an approved BGRS/SIRVA broker and I understand the IRP posting process. I help military families buy, sell and relocate smoothly in Outaouais." },
-  { q: "How do I start my real estate project in Outaouais?", a: "Contact me for a free consultation. We discuss your goals, I give you the facts and numbers, and together we define the best strategy for your situation." },
+  { q: "How do I start my real estate project in Outaouais?", a: "Contact me for a free consultation. We discuss your goals, I give you the facts and numbers, and together we define the right strategy for your situation." },
 ];
 
 const OutaouaisHubPageEn = () => (
   <div>
     <PageMeta
       title="Outaouais Real Estate Agent · Gatineau"
-      description="Yanis Gauthier-Sigeris, bilingual real estate broker in Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley — clear strategy to buy, sell or invest."
+      description="Yanis Gauthier-Sigeris, bilingual real estate broker in Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley. A clear strategy to buy, sell or invest."
     ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
       name="Real Estate Broker in Outaouais"
-      description="Residential real estate brokerage services in Outaouais — selling, buying, valuation and plex investment in Gatineau, Hull, Aylmer, Chelsea and Cantley."
+      description="Residential real estate brokerage services in Outaouais: selling, buying, valuation and plex investment in Gatineau, Hull, Aylmer, Chelsea and Cantley."
       url="/en/outaouais-real-estate-agent/"
       serviceType="Real Estate Brokerage"
     />
@@ -61,7 +61,7 @@ const OutaouaisHubPageEn = () => (
     <HeroSection
       overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
       title="Your Real Estate Agent in Outaouais"
-      subtitle="Sell, buy or invest in the region — with local, bilingual guidance based on facts."
+      subtitle="Sell, buy or invest in the region, with bilingual guidance based on facts."
       primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="RE/MAX Hall of Fame"
@@ -138,7 +138,7 @@ const OutaouaisHubPageEn = () => (
         <ul className="mt-8 space-y-3">
           {[
             "RE/MAX Hall of Fame, recognized across Outaouais",
-            "Fully bilingual (French & English), essential for the Ottawa-Gatineau market",
+            "Fully bilingual (French and English), for clients on both sides of the river",
             "Specialized in resale, first-time buying and plex investment",
             "Valuations based on real data, not online estimates",
             "Expert in Ottawa → Gatineau and Montréal → Gatineau relocations",

@@ -29,12 +29,12 @@ const sellerReasons = [
 
 const PlateauAylmerPageEn = () => (
   <>
-    <PageMeta title="Plateau / Aylmer — Neighborhood Guide" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. Complete neighborhood guide for buyers." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighborhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer/" />
+    <PageMeta title="Plateau / Aylmer | Neighbourhood Guide" description="Plateau and Aylmer: family-friendly, newer homes, nature and Ottawa access. A neighbourhood guide for buyers." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+    <NeighborhoodJsonLd name="Plateau / Aylmer" description="Real estate broker specializing in Plateau and Aylmer, Gatineau. Family neighbourhoods, nature and newer homes." lat={45.4500} lng={-75.8100} url="/en/plateau-aylmer/" />
     <HeroSection
-      overline="Neighborhood Guide · Plateau / Aylmer"
+      overline="Neighbourhood Guide · Plateau / Aylmer"
       title="Living in Plateau and Aylmer"
-      subtitle="Family life, amenities, Ottawa access and quality of life — what you need to know to buy or sell in the area."
+      subtitle="Family life, amenities, Ottawa access and quality of life: what you need to know to buy or sell in the area."
       primaryCta={{ label: "Get guidance", href: "/en/contact/" }}
       secondaryCta={{ label: "My property value", href: "/en/home-valuation/" }}
       heroBgImage={heroImg}
@@ -42,7 +42,7 @@ const PlateauAylmerPageEn = () => (
 
     <CardGrid
       overline="For who"
-      title="This area is ideal for…"
+      title="Who this area suits"
       items={profiles}
       background="alt"
     />
@@ -51,7 +51,7 @@ const PlateauAylmerPageEn = () => (
       <SectionHeading
         overline="Sellers in the area"
         title="Already living in Plateau / Aylmer?"
-        subtitle="Now might be the right time to see what your property is worth in today's market."
+        subtitle="Now might be a good time to see what your property is worth."
       />
       <div className="mt-7 space-y-3.5">
         {sellerReasons.map((r) => (
@@ -67,7 +67,7 @@ const PlateauAylmerPageEn = () => (
     </ImageTextSplit>
 
     <SectorLinks
-      overline="Other neighborhoods"
+      overline="Other neighbourhoods"
       title="Explore other areas"
       sectors={[
         { name: "Hull", href: "/en/hull/", detail: "Urban, downtown, condos and plex" },
@@ -77,7 +77,7 @@ const PlateauAylmerPageEn = () => (
 
     <GuideInlineCTA lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Plateau / Aylmer"
+      headline="Free Buyer Guide: buying in Plateau / Aylmer"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
@@ -85,7 +85,7 @@ const PlateauAylmerPageEn = () => (
     <CTASection
       dark
       title="Buyer or seller in Plateau / Aylmer?"
-      text="I can help you see clearly, whether you're buying in the area or want to know your property's value."
+      text="I can help you see clearly, whether you want to buy in the area or find out what your property is worth."
       buttons={[
         { label: "Get my value", href: "/en/home-valuation/" },
         { label: "Book a consultation", href: "/en/contact/", variant: "outline" },

@@ -27,11 +27,11 @@ const faq = [
   },
   {
     q: "Is it better to buy in Aylmer or Ottawa?",
-    a: "I hear this question often. For the same budget, Aylmer typically offers more space, a newer home, and a comparable, or even better, quality of life for families seeking nature. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options honestly.",
+    a: "I hear this question often. For the same budget, Aylmer typically offers more space and a newer home. Families who want nature close by get a comparable, or even better, quality of life. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options based on your situation.",
   },
   {
     q: "Do you specialize in Aylmer specifically?",
-    a: "Aylmer has been one of my primary areas for almost 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. This local knowledge translates directly into results, whether you're selling or buying.",
+    a: "Aylmer has been one of my primary areas for almost 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. That local knowledge works on both the selling and the buying side.",
   },
 ];
 
@@ -39,7 +39,7 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "A sought-after residential area in Aylmer. Established and renovated homes, mature tree-lined streets, close to Lake Deschênes and cycling paths. Family-friendly with excellent access to the Champlain Bridge.",
+    text: "Established residential area with renovated homes on mature, tree-lined streets. Lake Deschênes and the cycling paths are close, as is the Champlain Bridge.",
     tag: "Families · Established · In demand",
   },
   {
@@ -54,7 +54,7 @@ const subSectors = [
   },
   {
     title: "Waterfront · Lake Deschênes",
-    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with exceptional properties. Scarcity = long-term stable value.",
+    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with few properties for sale. That scarcity supports long-term values.",
     tag: "Prestige · Waterfront",
   },
 ];
@@ -74,7 +74,7 @@ const buyerCols = [
   {
     title: "On the market",
     items: [
-      "Good properties sell quickly in popular areas",
+      "Well-priced properties sell quickly in high-demand areas",
       "Multiple offers are common in Lucerne and Rivermead",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
@@ -105,7 +105,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature at your doorstep", text: "Lake Deschênes, the Ottawa River, Gatineau Park, and cycling paths to Ottawa via the Champlain Bridge. Aylmer offers exceptional nature access right in the heart of a residential neighbourhood." },
+  { icon: "🌿", title: "Nature at your doorstep", text: "Lake Deschênes, the Ottawa River, Gatineau Park, and cycling paths to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
   { icon: "🛒", title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
   { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (CS des Portages), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
 ];
@@ -123,7 +123,7 @@ const related = [
 const AylmerPageEn = () => (
   <>
     <PageMeta
-      title="Real Estate Broker Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
+      title="Real Estate Broker Aylmer Gatineau | Yanis Gauthier-Sigeris (YGS)"
       description="Yanis Gauthier-Sigeris, real estate broker specializing in Aylmer, Gatineau. Single-family homes, condos, local expertise. Free home valuation, deep local knowledge." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
@@ -137,8 +137,8 @@ const AylmerPageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
-      title="Real estate broker in Aylmer — your local specialist"
-      subtitle="Aylmer is one of Gatineau's most sought-after areas. Bilingual families, lakes, parks, newer homes, and a competitive market that rewards prepared buyers and well-positioned sellers."
+      title="Real estate broker in Aylmer, your local specialist"
+      subtitle="Aylmer draws many bilingual families, for Lake Deschênes and the parks as much as for its newer homes. The market is competitive and rewards prepared buyers as much as well-positioned sellers."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
@@ -148,12 +148,12 @@ const AylmerPageEn = () => (
     <section className="section-padding bg-[var(--cream)]">
       <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
         <div className="lg:col-span-3 space-y-4">
-          <h2>What makes Aylmer unique in Outaouais</h2>
+          <h2>What sets Aylmer apart in Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer is the western sector of Gatineau, bordered by the Ottawa River and Lake Deschênes. It's the number one choice for bilingual families who want a suburban quality of life without being far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
+            Aylmer is the western sector of Gatineau, bordered by the Ottawa River and Lake Deschênes. It offers suburban living without moving far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
           </p>
           <p className="prose-body">
-            The Lucerne and Rivermead areas are particularly popular, established homes on mature streets, close to Lake Deschênes, parks, and both French and English schools. Old Aylmer offers a distinct heritage charm, with character properties, local shops and a preserved village atmosphere.
+            Lucerne and Rivermead are in high demand, with their established homes on mature streets, close to Lake Deschênes, parks, and both French and English schools. Old Aylmer has a heritage feel, with character properties and local shops in a village atmosphere.
           </p>
           <p className="prose-body">
             For buyers coming from Ottawa, Aylmer often means an immediate gain in space and quality of life for the same budget, or less. For sellers, it's a market where presentation and fair pricing make the difference between a quick sale and a property that sits.
@@ -228,9 +228,9 @@ const AylmerPageEn = () => (
     <section className="section-padding bg-background">
       <div className="section-container grid gap-12 lg:grid-cols-2 lg:items-start">
         <div className="space-y-4">
-          <h2>Sell your Aylmer property for the best price</h2>
+          <h2>Sell your Aylmer property at the right price</h2>
           <p className="prose-body mt-5">
-            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. But "well-positioned" doesn't mean "highest price", it means the right price, the right presentation, and the right strategy.
+            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. Well-positioned means the right price and careful presentation, not always the highest asking price.
           </p>
           <p className="prose-body">
             Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street, not just by area, makes a real difference in your final price.
@@ -280,13 +280,13 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 6 — FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Aylmer" items={faq} />
+    <FAQSection title="Frequently asked questions about Aylmer" items={faq} />
 
     {/* ═══ SECTION 7 — FINAL CTA ═══ */}
     <CTASection
       dark
       title="Ready to take the next step?"
-      text="Whether you're selling your home in Aylmer or looking to buy in this area, I'm your local broker."
+      text="To sell your home in Aylmer or buy in the area, I'm your local broker."
       buttons={[
         { label: "Free valuation →", href: "/en/home-valuation-aylmer/" },
         { label: "Contact me →", href: "/en/contact/", variant: "outline" },
@@ -300,7 +300,7 @@ const AylmerPageEn = () => (
       title="Discover"
       pages={[
         ...related,
-        { title: "Living in Aylmer — the guide", text: "Daily life, schools, parks and neighbourhood feel.", href: "/en/living-aylmer/" },
+        { title: "Living in Aylmer: the guide", text: "Daily life, schools, parks and neighbourhood feel.", href: "/en/living-aylmer/" },
         { title: "Aylmer properties", text: "See current listings.", href: "/en/properties/" },
         { title: "Ottawa → Gatineau relocation", text: "Complete guide for crossing the river.", href: "/en/relocation/" },
       ]}
@@ -310,7 +310,7 @@ const AylmerPageEn = () => (
     <GuideInlineCTA
       lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Aylmer"
+      headline="Free Buyer Guide: buying in Aylmer"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />

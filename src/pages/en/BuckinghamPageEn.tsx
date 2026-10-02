@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Are there services in Buckingham?",
-    a: "Yes, Buckingham has a functional downtown with daily essentials: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. It's not the same offering as Aylmer or Hull, but daily needs are covered. Hôpital de Papineau is also in Buckingham. For big-box stores, you head to central Gatineau: Les Promenades Gatineau are 30 to 36 km away by road, depending on the route.",
+    a: "Yes, Buckingham has a functional downtown with everyday services: grocery stores, pharmacy, medical clinic, restaurants, library, elementary and secondary schools, arena. The offering is smaller than in Aylmer or Hull, but daily needs are covered. Hôpital de Papineau is also in Buckingham. For big-box stores, you head to central Gatineau: Les Promenades Gatineau are 30 to 36 km away by road, depending on the route.",
   },
   {
     q: "Do Buckingham properties have wells?",
@@ -53,11 +53,11 @@ const subSectors = [
   },
   {
     title: "Masson-Angers",
-    text: "Closer to central Gatineau, Masson-Angers runs along the Ottawa River. Quiet residential area, homes on generous lots, access to riverside trails. Attracts families who want to be a bit closer to the city while keeping space and tranquility.",
+    text: "Closer to central Gatineau, Masson-Angers runs along the Ottawa River. Quiet residential area, with homes on large lots and trails along the river. It attracts families who want to be a bit closer to the city without giving up space.",
   },
   {
     title: "Angers / L'Ange-Gardien",
-    text: "Transition zone toward rural MRCs. Large properties, woodlands, silence. For those truly seeking space. Wells and septic systems are common, inspection is crucial in this area.",
+    text: "Transition zone toward rural MRCs. Large properties and wooded lots, for buyers who want space above all. Wells and septic systems are common, so the inspection matters a lot in this area.",
   },
 ];
 
@@ -73,7 +73,7 @@ const BuckinghamPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Buckingham Masson-Angers | Large Lots | YGS"
-      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices. Local Outaouais broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices. Local Outaouais broker: Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Buckingham"
       description="Buy or sell in Buckingham and Masson-Angers, Gatineau. Large lots, space, affordable prices."
@@ -92,8 +92,8 @@ const BuckinghamPageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
-      title="Real estate broker in Buckingham — the space Gatineau no longer offers"
-      subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. This is where lots are large, homes have space, and the pace of life is different. For buyers who've done the math and truly want space, it's often the Outaouais market's revelation."
+      title="Real estate broker in Buckingham, more space in east Gatineau"
+      subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. Lots are large here and homes are roomy, with a slower pace of life. For buyers who've done the math and want space, it's often a pleasant surprise."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=buckingham" }}
       heroBgImage={heroImg}
@@ -104,7 +104,7 @@ const BuckinghamPageEn = () => (
       <h2 className="mt-3">Buckingham and Masson-Angers, the facts</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town, its economy was built on paper mills for over a century, Buckingham is now a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
+          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town, Buckingham lived off its paper mills for more than a century. Today it's a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
         </p>
         <p className="prose-body">
           What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and, since 2020, remote workers who no longer need to be close to Ottawa daily.
@@ -144,7 +144,7 @@ const BuckinghamPageEn = () => (
           For someone working remotely part-time (2-3 days/week) or based in Gatineau, the distance becomes an advantage, you get much more space for the same budget.
         </p>
         <p className="prose-body">
-          It's a lifestyle decision as much as a budget one. I help you weigh it honestly, without selling you a property that wouldn't match your reality.
+          It's a lifestyle decision as much as a budget one. I help you weigh it, without pushing you toward a property that doesn't fit your reality.
         </p>
       </div>
     </ContentBlock>
@@ -154,7 +154,7 @@ const BuckinghamPageEn = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown with essential services on site.",
+            "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown, with everyday services on site.",
             "Masson-Angers runs along the Ottawa River and offers the closest semi-rural atmosphere to central Gatineau in this eastern sector.",
             "In Q2 2026, the median single-family price in the Buckingham/Masson-Angers sector was $419,545, the lowest of the four sectors of the city of Gatineau (APCIQ).",
           ].map((point) => (
@@ -189,7 +189,7 @@ const BuckinghamPageEn = () => (
     </ContentBlock>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Buckingham and Masson-Angers" items={faq} />
+    <FAQSection title="Frequently asked questions about Buckingham and Masson-Angers" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -202,7 +202,7 @@ const BuckinghamPageEn = () => (
     <GuideInlineCTA
       lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Buckingham"
+      headline="Free Buyer Guide: buying in Buckingham"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />

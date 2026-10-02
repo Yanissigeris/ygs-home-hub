@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: "Is Cantley suitable for remote work?",
-    a: "Yes, and it's actually one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers an exceptional quality of life within reasonable access to Gatineau and Ottawa.",
+    a: "Yes, and it's one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers life in nature, within a reasonable distance of Gatineau and Ottawa.",
   },
 ];
 
@@ -60,7 +60,7 @@ const CantleyPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Cantley Outaouais | Families & Large Lots | YGS"
-      description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Nearly 9 years of local experience — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Nearly 9 years of local experience: Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Cantley"
       description="Buy or sell in Cantley, Outaouais. Large lots, family, nature. Local broker."
@@ -70,7 +70,7 @@ const CantleyPageEn = () => (
     />
     <ServiceJsonLd
       name="Real Estate Broker in Cantley"
-      description="Real estate brokerage services in Cantley, Outaouais — homes, land, family properties."
+      description="Real estate brokerage services in Cantley, Outaouais: homes, land, family properties."
       url="/en/cantley/"
       serviceType="Real Estate Brokerage"
       areaServed={["Cantley", "Outaouais"]}
@@ -79,8 +79,8 @@ const CantleyPageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="CANTLEY · OUTAOUAIS"
-      title="Real estate broker in Cantley — space, 13 km from Ottawa"
-      subtitle="Cantley is 13 kilometres from downtown Ottawa. It's a fast-growing municipality known for its large lots, low-density residential development, and family-friendly quality of life. For families who want space without going far, Cantley is often the logical conclusion."
+      title="Real estate broker in Cantley, about 20 km from downtown Ottawa"
+      subtitle="The municipality stands out for its large lots and low-density housing. For families who want space without going too far, Cantley is often the logical conclusion."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=cantley" }}
       heroBgImage={heroImg}
@@ -91,7 +91,7 @@ const CantleyPageEn = () => (
       <h2 className="mt-3">Cantley, verified facts about this growing municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, 13 kilometres from downtown Ottawa. Its population was 11,449 at the 2021 census, up 7% since 2016, sustained growth that reflects the area's enduring appeal. French is the mother tongue of 86.7% of residents. (Source: Statistics Canada, 2021 Census)
+          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, about 20 km from downtown Ottawa by road. Its population was 11,449 at the 2021 census, up 7% since 2016, sustained growth that reflects the area's enduring appeal. French is the mother tongue of 86.7% of residents. (Source: Statistics Canada, 2021 Census)
         </p>
         <p className="prose-body">
           Cantley is known as a low-density residential municipality, one of its main draws. Updated urban planning bylaws in 2025 set the minimum lot size within the urban perimeter at 5,000 m². This preserves the municipality's semi-rural character. (Source: Municipality of Cantley, Urban Plan 2025)
@@ -142,7 +142,7 @@ const CantleyPageEn = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Cantley is 13 km from downtown Ottawa. Population grew 7% between 2016 and 2021. (Source: Statistics Canada, 2021 Census)",
+            "By road, Cantley's town hall is about 20 km from downtown Ottawa. Population grew 7% between 2016 and 2021. (Source: Statistics Canada, 2021 Census)",
             "3 francophone elementary schools on the territory, plus Transcollines transit service to Ottawa and Gatineau. (Source: Municipality of Cantley)",
             "Minimum residential lots of 5,000 m² within the urban perimeter, this bylaw preserves the spacious, semi-rural character. (Source: Urban Plan 2025)",
           ].map((point) => (
@@ -161,7 +161,7 @@ const CantleyPageEn = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Cantley, Outaouais" items={faq} />
+    <FAQSection title="Frequently asked questions about Cantley, Outaouais" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -174,7 +174,7 @@ const CantleyPageEn = () => (
     <GuideInlineCTA
       lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Cantley"
+      headline="Free Buyer Guide: buying in Cantley"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />

@@ -17,11 +17,11 @@ import heroImg from "@/assets/hero-chelsea-gen.webp";
 const faq = [
   {
     q: "Is Chelsea too expensive compared to Gatineau?",
-    a: "Chelsea is indeed a premium market compared to the City of Gatineau, large-lot properties, scarce inventory, and quality of life are reflected in the prices. But 'too expensive' depends on what you're looking for. If access to nature, tranquility, bilingualism, and quality of life are your priorities, Chelsea is often the right choice. I can help you compare Chelsea with Cantley or Aylmer based on your budget and criteria.",
+    a: "Prices are higher in Chelsea than in Gatineau, because lots are large and few homes come up for sale. But 'too expensive' depends on what you're looking for. If nature and bilingualism come first for you, Chelsea is often the right choice. I can help you compare Chelsea with Cantley or Aylmer based on your budget and criteria.",
   },
   {
     q: "Can I build on a lot in Chelsea?",
-    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, the 15-metre riparian protection strip and MRC constraints can limit or regulate projects. Before any land purchase, a thorough verification with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais is essential.",
+    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, the 15-metre riparian protection strip and MRC constraints can limit or regulate projects. Before buying land, check with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais.",
   },
   {
     q: "Can my children go to an English school in Chelsea?",
@@ -32,7 +32,7 @@ const faq = [
     a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Gatineau Park covers roughly 60% of the territory, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
   },
   {
-    q: "How long does the Ottawa commute really take from Chelsea?",
+    q: "How far is downtown Ottawa from Chelsea?",
     a: "Old Chelsea village is about 15 km from downtown Ottawa by road, via Highway 5, and the drive takes longer at the morning rush. Transcollines buses link Chelsea to Gatineau, with transfers to the STO network.",
   },
   {
@@ -76,7 +76,7 @@ const ChelseaPageEn = () => (
   <>
     <PageMeta
       title="Real Estate Broker Chelsea Quebec | Gatineau Park | YGS"
-      description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />
+      description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker: Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-chelsea.jpg" />
     <NeighborhoodJsonLd
       name="Chelsea"
       description="Buy or sell in Chelsea, Quebec. Large-lot homes, Gatineau Park, bilingual community. Local broker."
@@ -86,7 +86,7 @@ const ChelseaPageEn = () => (
     />
     <ServiceJsonLd
       name="Real Estate Broker in Chelsea"
-      description="Real estate brokerage services in Chelsea, Quebec — homes, land, character properties."
+      description="Real estate brokerage services in Chelsea, Quebec: homes, land, character properties."
       url="/en/chelsea/"
       serviceType="Real Estate Brokerage"
       areaServed={["Chelsea", "Quebec"]}
@@ -95,7 +95,7 @@ const ChelseaPageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="CHELSEA · QUÉBEC"
-      title="Real estate broker in Chelsea — living between nature and Ottawa"
+      title="Real estate broker in Chelsea, between nature and Ottawa"
       subtitle="Chelsea is a distinct municipality north of Gatineau. Sixty percent of its territory is occupied by Gatineau Park. Old Chelsea village is about 15 km from downtown Ottawa by road."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
@@ -104,7 +104,7 @@ const ChelseaPageEn = () => (
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
     <ContentBlock background="alt">
-      <h2 className="mt-3">Chelsea, verified facts about this unique municipality</h2>
+      <h2 className="mt-3">Chelsea, verified facts about the municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
           Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was approximately 8,000 at the 2021 census, in steady growth. What fundamentally distinguishes it: approximately 60% of its territory belongs to Gatineau Park, managed by the National Capital Commission. This reality significantly limits available buildable land, which explains the scarcity of properties and their stable long-term value. (Source: Wikipedia/Chelsea, National Capital Commission)
@@ -142,7 +142,7 @@ const ChelseaPageEn = () => (
           Buying in Chelsea means buying in a niche market with limited inventory and constant demand. Several important characteristics to understand:
         </p>
         <p className="prose-body">
-          First, Chelsea's municipal bylaws strictly regulate construction. Lots are subject to MRC des Collines-de-l'Outaouais rules and Gatineau Park protection rules for adjacent properties. Before any purchase of land or a property to renovate or expand, a zoning verification is essential.
+          First, Chelsea's municipal bylaws strictly regulate construction. Lots are subject to MRC des Collines-de-l'Outaouais rules and Gatineau Park protection rules for adjacent properties. Before buying land, or a property you plan to renovate or expand, check the zoning.
         </p>
         <p className="prose-body">
           Second, Chelsea is not served by municipal water and sewer services across its entire territory. Many properties operate with artesian wells and septic systems. A thorough inspection of these systems before purchase is non-negotiable.
@@ -159,7 +159,7 @@ const ChelseaPageEn = () => (
         <div className="space-y-4">
           {[
             "Chelsea is the main gateway to Gatineau Park, 360 km² of nature accessible from your property. (Source: National Capital Commission)",
-            "~70% of Chelsea households are bilingual, a unique environment for both francophone and anglophone families. (Source: Wikipedia/Chelsea, Quebec)",
+            "~70% of Chelsea households are bilingual, which makes life easier for francophone and anglophone families alike. (Source: Wikipedia/Chelsea, Quebec)",
             "Approximately 60% of the territory is Gatineau Park, which limits buildable supply and supports existing property values long-term. (Source: National Capital Commission)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
@@ -181,19 +181,19 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data); that area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Gatineau Park covers roughly 60% of the territory, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
+          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Gatineau Park covers roughly 60% of the territory, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
         </p>
         <p className="prose-body">
-          On the buyer side, Chelsea attracts a very specific demographic: federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region; remote-first knowledge workers who can afford to optimize for quality of life; and Quebec families relocating from Montréal who recognize that this kind of nature-plus-city combination is genuinely rare. The 70% bilingual rate is not marketing, it shapes every PTA meeting, sports league and community event in town, and it's a major reason anglophone families from Ontario find the transition smoother here than in pure-francophone sectors of Gatineau.
+          On the buyer side, Chelsea draws federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region. It also attracts remote workers who can put quality of life first, and Quebec families moving from Montréal for this mix of nature and city access. The 70% bilingual rate shows up in school committees and community events, and it's a big reason anglophone families from Ontario find the move easier here than in mostly francophone parts of Gatineau.
         </p>
         <p className="prose-body">
-          For sellers, the playbook in Chelsea is different from anywhere else in the region. The qualified-buyer pool is smaller but more decisive, when the right family sees the right property, offers come quickly. Pricing has to anchor on genuine comparables (not the next sub-sector over), and presentation matters disproportionately because buyers paying $800K+ expect move-in-ready quality. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
+          For sellers, the playbook in Chelsea is different from anywhere else in the region. The pool of qualified buyers is smaller but more decisive. When the right family sees the right property, offers come quickly. Pricing has to anchor on recent Chelsea comparables (not the next sub-sector over), and presentation weighs heavily because buyers at Chelsea price levels expect a move-in-ready home. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.
         </p>
       </div>
     </ContentBlock>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions — Chelsea, Quebec" items={faq} />
+    <FAQSection title="Frequently asked questions about Chelsea, Quebec" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -206,7 +206,7 @@ const ChelseaPageEn = () => (
     <GuideInlineCTA
       lang="en"
       guideType="buyer_guide"
-      headline="Free Buyer Guide — buying in Chelsea"
+      headline="Free Buyer Guide: buying in Chelsea"
       text="Process, budget and tips for buying in the area, in a guide sent to your email."
       ctaLabel="Get the Buyer Guide"
     />
