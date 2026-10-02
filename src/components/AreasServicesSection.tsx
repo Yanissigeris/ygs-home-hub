@@ -65,7 +65,7 @@ const cfgEn = {
   subtitle: "Real estate broker serving the Gatineau and Outaouais region: selling, buying, valuation, investment and relocation.",
   areasHeading: "Areas served",
   servicesHeading: "Services offered",
-  allNeighborhoods: "All neighborhoods",
+  allNeighborhoods: "All neighbourhoods",
   allNeighborhoodsHref: "/en/neighborhoods/",
   consultation: "Book a consultation",
   consultationHref: "/en/contact/",

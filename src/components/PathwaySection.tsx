@@ -66,7 +66,7 @@ const pathwaysEn: Pathway[] = [
   {
     num: "03",
     title: "Buy in Gatineau",
-    text: "The right neighborhoods, the right budget and hands-on guidance to buy with confidence.",
+    text: "The right neighbourhoods, the right budget and hands-on guidance to buy with confidence.",
     cta: "View properties",
     href: "/en/properties/",
     badge: null,

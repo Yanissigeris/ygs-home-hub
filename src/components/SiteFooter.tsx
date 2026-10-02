@@ -179,7 +179,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           {/* ── Mobile: accordion columns ── */}
           <div className="sm:hidden py-6" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
-              <FooterAccordion key={col.title} title={col.title} links={col.links} twoColumns={col.title === "Quartiers" || col.title === "Neighborhoods"} />
+              <FooterAccordion key={col.title} title={col.title} links={col.links} twoColumns={col.title === "Quartiers" || col.title === "Neighbourhoods"} />
             ))}
           </div>
 

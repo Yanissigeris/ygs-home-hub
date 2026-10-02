@@ -208,7 +208,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
 
       <SectorLinks
         overline={p.sectors.overline ?? (lang === "en" ? "Other sectors" : "Autres secteurs")}
-        title={p.sectors.title ?? (lang === "en" ? "Explore other neighborhoods" : "Explorer d'autres quartiers")}
+        title={p.sectors.title ?? (lang === "en" ? "Explore other neighbourhoods" : "Explorer d'autres quartiers")}
         sectors={p.sectors.list}
       />
 

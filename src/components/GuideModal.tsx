@@ -85,7 +85,7 @@ const guideConfigEn: Record<GuideType, GuideConfigEntry> = {
   },
   relocation_guide: {
     title: "Get the Relocation Guide",
-    description: "Enter your details and I'll send you the relocation guide right away. You'll find useful benchmarks for understanding the Gatineau market, neighborhoods to consider, and steps to plan for a smoother transition.",
+    description: "Enter your details and I'll send you the relocation guide right away. You'll find useful benchmarks for understanding the Gatineau market, neighbourhoods to consider, and steps to plan for a smoother transition.",
     submitLabel: "Send me the guide",
     successTitle: "Your Relocation Guide is on its way!",
     successText: "Check your inbox shortly. Also look in your promotions or spam folder if needed.",
