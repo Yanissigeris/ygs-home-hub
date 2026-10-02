@@ -37,12 +37,12 @@ const sellerReasons = [
 
 const NeighborhoodPage = () => (
    <>
-    <PageMeta title="Plateau et Aylmer — Guide de quartier" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, lac Deschênes, nature, écoles et propriétés." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+    <PageMeta title="Plateau et Aylmer | Guide de quartier" description="Découvrez le Plateau et Aylmer à Gatineau. Quartiers familiaux, lac Deschênes, nature, écoles et propriétés." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd name="Plateau / Aylmer" description="Courtier immobilier spécialisé au Plateau et Aylmer, Gatineau. Quartiers familiaux, nature, écoles et propriétés." lat={45.4500} lng={-75.8100} url="/plateau-aylmer/" />
     <HeroSection
       overline="Guide de quartier · Gatineau"
       title="Vivre dans le Plateau / Aylmer"
-      subtitle="Vie de famille, commodités, accès à Ottawa et qualité de vie — ce qu'il faut savoir pour acheter ou vendre dans le secteur."
+      subtitle="Vie de famille, commodités, accès à Ottawa et qualité de vie : ce qu'il faut savoir pour acheter ou vendre dans le secteur."
       primaryCta={{ label: "Me faire guider", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Valeur de ma propriété", href: "/evaluation-gratuite-gatineau/" }}
       heroBgImage={riverImg}
@@ -51,7 +51,7 @@ const NeighborhoodPage = () => (
 
     <CardGrid
       overline="Pour qui"
-      title="Ce secteur est idéal pour…"
+      title="Les profils qui s'y retrouvent"
       items={profiles}
       background="alt"
     />
@@ -60,7 +60,7 @@ const NeighborhoodPage = () => (
       <SectionHeading
         overline="Vendeurs du secteur"
         title="Vous habitez déjà le Plateau / Aylmer?"
-        subtitle="C'est peut-être le bon moment de voir ce que votre propriété vaut dans le marché actuel."
+        subtitle="C'est peut-être le bon moment de voir ce que vaut votre propriété."
       />
       <div className="mt-7 space-y-3.5">
         {sellerReasons.map((r) => (
@@ -86,7 +86,7 @@ const NeighborhoodPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter dans le Plateau / Aylmer"
+      headline="Guide acheteur gratuit : acheter dans le Plateau / Aylmer"
       text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
@@ -94,7 +94,7 @@ const NeighborhoodPage = () => (
     <CTASection
       dark
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
-      text="Je peux vous aider à y voir clair, que ce soit pour acheter dans le secteur ou connaître la valeur de votre propriété."
+      text="Je peux vous aider à y voir clair, pour acheter dans le secteur ou pour connaître la valeur de votre propriété."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },

@@ -12,7 +12,7 @@ const PlateauPage = () => (
     jsonLd={{ name: "Plateau", description: "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX, plus de 300 transactions en Outaouais. Acheter ou vendre dans le Plateau à Gatineau, évaluation gratuite.", lat: 45.4405, lng: -75.7797, url: "/plateau/" }}
     hero={{ overline: "Courtier immobilier · Plateau, Gatineau", title: "Courtier immobilier dans le Plateau, à Gatineau", subtitle: "Acheter ou vendre dans le Plateau, côté Hull comme côté Aylmer, avec un courtier qui travaille dans le quartier.", image: heroImg }}
     trustSpecialty="Courtier actif dans le Plateau"
-    lifestyle={{ image: heroImg, imageAlt: "Le Plateau, Gatineau", title: "Où se trouve le Plateau à Gatineau?", subtitle: "Le Plateau s'étend à l'ouest du boulevard Saint-Raymond jusqu'au chemin Vanier, entre le parc de la Gatineau au nord et le boulevard des Allumettières au sud. Le boulevard de l'Europe sert de repère : à l'est, les adresses sont dans le secteur Hull; à l'ouest, dans le secteur Aylmer." }}
+    lifestyle={{ image: heroImg, imageAlt: "Le Plateau, Gatineau", title: "Où se trouve le Plateau à Gatineau?", subtitle: "Le Plateau s'étend à l'ouest du boulevard Saint-Raymond jusqu'au chemin Vanier, entre le parc de la Gatineau au nord et le boulevard des Allumettières au sud. Comme repère, le boulevard de l'Europe sépare les adresses du secteur Hull, à l'est, de celles du secteur Aylmer, à l'ouest." }}
     reasons={[
       "Quartier développé surtout depuis la fin des années 1990 (le boulevard du Plateau a été officialisé en 1997)",
       "Surtout des maisons unifamiliales récentes, avec aussi des maisons de ville et des condos",

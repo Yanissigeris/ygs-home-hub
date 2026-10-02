@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Limbour Gatineau — Immobilier et guide de quartier"
+    seoTitle="Limbour Gatineau | Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre dans le quartier Limbour à Gatineau. Secteur familial moderne avec parcs, écoles et accès rapide à Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
     jsonLd={{ name: "Limbour", description: "Courtier immobilier dans le quartier Limbour à Gatineau. Secteur familial moderne.", lat: 45.4850, lng: -75.6600, url: "/limbour/" }}
@@ -31,10 +31,10 @@ const LimbourPage = () => (
       {
         q: "Limbour, Aylmer, Plateau ou Masson-Angers : lequel choisir?",
         a: "Limbour offre des maisons récentes à un prix plus accessible qu'Aylmer ou le Plateau. Le quartier est aussi plus près d'Ottawa que Masson-Angers : environ 12 km du centre-ville par la route, contre environ 36 km depuis Masson-Angers.",
-        detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Si vous tenez au lac Deschênes ou aux commerces du vieux Aylmer, regardez Aylmer. Si vous préférez une construction neuve personnalisée et que le trajet compte moins, regardez Masson-Angers.",
+        detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Pour le lac Deschênes ou les commerces du Vieux-Aylmer, regardez plutôt Aylmer. Masson-Angers convient mieux si vous préférez une construction neuve personnalisée et que le trajet compte moins.",
       },
     ]}
-    profilesTitle="Limbour est idéal pour…"
+    profilesTitle="Qui achète à Limbour"
     profiles={[
       { icon: Users, title: "Jeunes familles", text: "Maisons récentes 5-20 ans avec garage, terrains aérés, écoles, parcs et sentiers à proximité. Pas de rénovations urgentes." },
       { icon: Home, title: "Acheteurs deuxième maison", text: "Familles qui upgradent depuis un condo ou une première maison plus petite. Le sous-secteur Ferme Limbour offre des propriétés plus grandes avec terrains boisés." },
@@ -45,7 +45,7 @@ const LimbourPage = () => (
     faq={{
       title: "Questions sur Limbour",
       items: [
-        { q: "Limbour est-il un quartier récent?", a: "Oui, majoritairement. La plupart des développements datent des années 2000-2020, avec quelques propriétés plus anciennes dans certains coins. Le sous-secteur Ferme Limbour est particulièrement recherché pour ses constructions de qualité." },
+        { q: "Limbour est-il un quartier récent?", a: "Oui, majoritairement. La plupart des développements datent des années 2000-2020, avec quelques propriétés plus anciennes dans certains coins. Le sous-secteur Ferme Limbour attire les acheteurs avec ses grandes propriétés." },
         { q: "Quel est le prix d'une maison à Limbour en 2026?", a: "Limbour fait partie du secteur Gatineau dans les statistiques de l'APCIQ. Au 2e trimestre 2026, le prix médian d'une unifamiliale y était de 490 000 $ (données Centris). À Limbour, le prix varie ensuite selon la grandeur, l'année de construction et le sous-secteur, et les propriétés plus haut de gamme se trouvent dans Ferme Limbour. Pour un chiffre précis, je compare les ventes récentes de maisons semblables à la vôtre." },
         { q: "Y a-t-il des parcs et sentiers à Limbour?", a: "Oui, le quartier est reconnu pour ses espaces verts, sentiers pédestres et parcs de quartier. Le sous-secteur Ferme Limbour est entouré de zones boisées, ce qui contribue au cachet du secteur." },
         { q: "Quels services sont accessibles près de Limbour?", a: "La rue Saint-Louis regroupe des commerces de proximité, dont une épicerie et une pharmacie. L'Hôpital de Gatineau, au 909, boulevard La Vérendrye Ouest, est à quelques minutes en voiture." },
@@ -66,11 +66,11 @@ const LimbourPage = () => (
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
-    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
-      observation: "Ce que je vois à Limbour en ce moment : la plupart de mes acheteurs sont des jeunes familles ou des couples qui veulent upgrader depuis un condo ou une première maison. Ils cherchent une propriété récente, sans grosses rénovations à faire, avec un garage et un terrain aéré. Le sous-secteur Ferme Limbour est particulièrement recherché, les acheteurs viennent souvent y faire des visites avant de décider d'élargir leur recherche.",
+      observation: "Ce que je vois à Limbour en ce moment : la plupart de mes acheteurs sont des jeunes familles ou des couples qui veulent upgrader depuis un condo ou une première maison. Ils cherchent une propriété récente, sans grosses rénovations à faire, avec un garage et un terrain aéré. Le sous-secteur Ferme Limbour attire beaucoup de visites, et plusieurs acheteurs y commencent leur recherche avant de l'élargir.",
       dataPoint: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
-      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estime pas l'effet du sous-secteur sur ton prix. Une maison équivalente dans Ferme Limbour vs une autre rue de Limbour, ça peut faire 30-50k$ d'écart. Inscris au juste prix selon ta vraie zone, pas une moyenne globale du quartier."
+      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Entre Ferme Limbour et une autre rue de Limbour, l'écart peut aller de 30 000 $ à 50 000 $ pour une maison équivalente. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
     }}
     cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />

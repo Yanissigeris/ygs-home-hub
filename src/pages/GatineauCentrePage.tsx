@@ -16,12 +16,12 @@ import heroImg from "@/assets/hero-gatineau-centre-gen.webp";
 /* ── FAQ data ── */
 const faq = [
   {
-    q: "Gatineau centre vs Aylmer — quoi choisir?",
-    a: "La différence principale tient au style de vie et à votre lieu de travail. Gatineau centre offre un meilleur accès aux services (hôpital, cégep, grandes surfaces) et est généralement plus accessible financièrement qu'Aylmer. Aylmer offre une qualité de vie plus orientée nature, des maisons plus récentes, et un environnement plus bilingue. Si vous travaillez à Gatineau, le centre peut être plus pratique. Si vous venez d'Ottawa, Aylmer est souvent préféré. Je peux vous aider à comparer honnêtement selon votre situation.",
+    q: "Gatineau centre ou Aylmer : quoi choisir?",
+    a: "La différence principale tient au style de vie et à votre lieu de travail. Gatineau centre offre un meilleur accès aux services (hôpital, cégep, grandes surfaces) et est généralement plus accessible financièrement qu'Aylmer. Aylmer offre des maisons plus récentes et un mode de vie plus près de la nature, dans un milieu plus bilingue. Si vous travaillez à Gatineau, le centre peut être plus pratique. Pour ceux qui viennent d'Ottawa, Aylmer est souvent préféré. Je peux vous aider à comparer selon votre situation.",
   },
   {
     q: "Est-ce un bon secteur pour investir dans un plex?",
-    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative est soutenue par la présence du Cégep de l'Outaouais, de l'hôpital, et des services dans un rayon accessible. Comme partout, l'analyse de rendement honnête est indispensable avant tout achat. Je m'en occupe avec vous.",
+    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative est soutenue par la présence du Cégep de l'Outaouais, de l'hôpital, et des services dans un rayon accessible. Comme partout, faites une analyse de rendement avant d'acheter. Je la fais avec vous.",
   },
 ];
 
@@ -33,10 +33,10 @@ const subSectors = [
   },
   {
     title: "Manoir-des-Trembles / La Gappe",
-    text: "Quartiers planifiés développés principalement dans les années 1990-2000. Maisons deux étages, rues tranquilles, écoles à proximité. Populaire auprès des jeunes familles qui s'établissent à Gatineau.",
+    text: "Quartiers planifiés développés principalement dans les années 1990-2000. Maisons deux étages, rues tranquilles, écoles à proximité. Beaucoup de jeunes familles s'y établissent.",
   },
   {
-    title: "Secteur plex — centre",
+    title: "Secteur plex du centre",
     text: "Concentration historique de duplex et triplex proches des commerces et des transports en commun STO. Clientèle locative variée : étudiants du Cégep, familles, travailleurs. Marché d'investissement actif.",
   },
   {
@@ -57,7 +57,7 @@ const GatineauCentrePage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Gatineau centre | Plexs, maisons, condos | YGS"
-      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local depuis 2017 — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local depuis 2017 : Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
       description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local."
@@ -67,7 +67,7 @@ const GatineauCentrePage = () => (
     />
     <ServiceJsonLd
       name="Courtier immobilier à Gatineau centre"
-      description="Services de courtage immobilier à Gatineau centre — plexs, maisons, condos."
+      description="Services de courtage immobilier à Gatineau centre : plexs, maisons, condos."
       url="/gatineau/"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
@@ -76,8 +76,8 @@ const GatineauCentrePage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
-      title="Courtier immobilier à Gatineau centre — accessibilité, services et valeur"
-      subtitle="Le secteur central de Gatineau est souvent sous-estimé. C'est pourtant le secteur le mieux desservi de la ville, hôpital, universités, cégep, transports, commerces. Et l'un des plus accessibles pour les familles et les investisseurs."
+      title="Courtier immobilier à Gatineau centre, près des services"
+      subtitle="Le secteur central de Gatineau est souvent sous-estimé. On y trouve pourtant l'Hôpital de Gatineau et un campus du Cégep de l'Outaouais, avec de grandes surfaces à proximité. Ses prix restent parmi les plus accessibles de la ville pour les familles et les investisseurs."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=gatineau" }}
       heroBgImage={heroImg}
@@ -88,13 +88,13 @@ const GatineauCentrePage = () => (
       <h2 className="mt-3">Gatineau centre, bien desservi, bien positionné</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville, incluant les quartiers Limbour, La Gappe, Manoir-des-Trembles, et les abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec la plus forte concentration de services publics : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires, le réseau de transports en commun STO, et les grandes surfaces commerciales.
+          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville. Il comprend Limbour, La Gappe, Manoir-des-Trembles et les abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec une bonne partie des services et des commerces : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires et de grandes surfaces commerciales.
         </p>
         <p className="prose-body">
-          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent le meilleur équilibre entre accessibilité aux services et qualité de vie résidentielle. Pour les investisseurs, Gatineau centre concentre une forte proportion du parc de plexs existants, des duplex et triplex bien situés, proches des services et des axes de transport.
+          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent un bon équilibre entre accessibilité aux services et qualité de vie résidentielle. Côté investissement, Gatineau centre concentre une forte proportion du parc de plexs existants, des duplex et triplex bien situés, proches des services et des axes de transport.
         </p>
         <p className="prose-body">
-          La Ville de Gatineau, avec une population de 298 000 habitants, est la quatrième ville en importance au Québec. (Source: Ville de Gatineau, 2024). Le secteur central bénéficie directement de tous les investissements municipaux en infrastructure.
+          La Ville de Gatineau, avec une population de 298 000 habitants, est la quatrième ville en importance au Québec. (Source : Ville de Gatineau, 2024). Le secteur central bénéficie directement de tous les investissements municipaux en infrastructure.
         </p>
       </div>
     </ContentBlock>
@@ -119,7 +119,7 @@ const GatineauCentrePage = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Gatineau est la 4e ville en importance au Québec avec 298 000 habitants. (Source: Ville de Gatineau, 2024)",
+            "Gatineau est la 4e ville en importance au Québec avec 298 000 habitants. (Source : Ville de Gatineau, 2024)",
             "L'Hôpital de Gatineau, le Cégep de l'Outaouais et le réseau STO sont tous situés dans ce secteur.",
             "Au 2e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Gatineau de l'APCIQ était de 490 000 $, en hausse de 3 % sur un an.",
           ].map((point) => (
@@ -138,7 +138,7 @@ const GatineauCentrePage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes — Gatineau centre" items={faq} />
+    <FAQSection title="Questions fréquentes sur Gatineau centre" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -150,7 +150,7 @@ const GatineauCentrePage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Gatineau"
+      headline="Guide acheteur gratuit : acheter à Gatineau"
       text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />

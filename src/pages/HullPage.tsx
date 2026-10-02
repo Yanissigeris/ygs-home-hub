@@ -17,10 +17,10 @@ import heroImg from "@/assets/hero-hull-gen.webp";
 const faq = [
   {
     q: "Quel type de propriété achète-t-on à Hull?",
-    a: "Hull offre la plus grande variété de Gatineau : condos anciens et neufs, duplex, triplex, maisons unifamiliales, maisons de ville. C'est aussi le secteur avec le plus grand choix de propriétés à revenus. Selon votre objectif, habiter, louer, investir, les options sont différentes. Je peux vous guider selon votre profil lors d'une consultation gratuite.",
+    a: "Hull offre une grande variété de propriétés : condos anciens et neufs, duplex, triplex, maisons unifamiliales, maisons de ville. On y trouve aussi beaucoup de propriétés à revenus. Les options changent selon que vous voulez y habiter ou investir. Je peux vous guider selon votre profil lors d'une consultation gratuite.",
   },
   {
-    q: "Le projet Zibi — est-ce une bonne opportunité?",
+    q: "Le projet Zibi, est-ce un bon achat?",
     a: "Zibi est un développement en cours sur l'île de Hull. Les premières phases résidentielles sont habitées. C'est un secteur moderne, carboneutre, avec une belle vue sur la rivière, mais les condos neufs sont généralement plus chers que la revente dans le secteur adjacent. Les propriétés dans les quartiers autour de Zibi (Vieux-Hull, Wrightville) ont bénéficié de l'effet de valorisation à des prix plus accessibles. Je peux vous aider à comparer les options.",
   },
   {
@@ -51,7 +51,7 @@ const subSectors = [
 
 /* ── Related pages ── */
 const related = [
-  { title: "Vivre à Hull — le guide", text: "Quotidien, culture, restaurants et vie de quartier.", href: "/vivre-a-hull/" },
+  { title: "Vivre à Hull : le guide", text: "Quotidien, culture, restaurants et vie de quartier.", href: "/vivre-a-hull/" },
   { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau/" },
   { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
   { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau/" },
@@ -61,7 +61,7 @@ const related = [
 const HullPage = () => (
   <>
     <PageMeta
-      title="Courtier immobilier Hull Gatineau | Condos, plexs, maisons | YGS — Yanis Gauthier-Sigeris"
+      title="Courtier immobilier Hull Gatineau | Condos, plexs, maisons | Yanis Gauthier-Sigeris (YGS)"
       description="Achetez ou vendez à Hull, Gatineau. Condos, plexs, maisons près d'Ottawa. Projet Zibi, Île de Hull, Vieux-Hull. Courtier local, Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-hull.jpg" />
     <NeighborhoodJsonLd
       name="Hull"
@@ -72,7 +72,7 @@ const HullPage = () => (
     />
     <ServiceJsonLd
       name="Courtier immobilier à Hull"
-      description="Services de courtage immobilier à Hull, Gatineau — condos, plexs, maisons."
+      description="Services de courtage immobilier à Hull, Gatineau : condos, plexs, maisons."
       url="/hull/"
       serviceType="Real Estate Brokerage"
       areaServed={["Hull", "Gatineau"]}
@@ -81,8 +81,8 @@ const HullPage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="HULL · GATINEAU (QUÉBEC)"
-      title="Courtier immobilier à Hull — au cœur de l'Outaouais urbain"
-      subtitle="Hull est le secteur le plus urbain de Gatineau. Directement en face d'Ottawa, en pleine transformation avec le projet Zibi, Hull attire les professionnels, les familles bilingues et les investisseurs. C'est ici que la ville bouge le plus."
+      title="Courtier immobilier à Hull, au cœur de l'Outaouais urbain"
+      subtitle="Hull est le secteur le plus urbain de Gatineau, directement en face d'Ottawa. Le projet Zibi le transforme, et Hull attire autant les professionnels et les familles bilingues que les investisseurs."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-hull/" }}
       secondaryCta={{ label: "Voir les propriétés à Hull →", href: "/proprietes?secteur=hull" }}
       heroBgImage={heroImg}
@@ -96,7 +96,7 @@ const HullPage = () => (
           Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est souvent le premier choix.
         </p>
         <p className="prose-body">
-          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres construit sur les deux rives de la rivière des Outaouais, à la fois à Gatineau et à Ottawa, comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. C'est le premier quartier carboneutre de la région de la capitale nationale, utilisant un système énergétique unique en Amérique du Nord. Les premières phases sont habitées. (Source: zibi.ca, Radio-Canada)
+          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. C'est le premier quartier carboneutre de la région de la capitale nationale, avec son propre réseau d'énergie de quartier. Les premières phases sont habitées. (Source : zibi.ca, Radio-Canada)
         </p>
         <p className="prose-body">
           Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative provient des fonctionnaires fédéraux, des étudiants de l'Université du Québec en Outaouais (UQO), dont le campus est situé à Hull, et des jeunes professionnels. Un marché locatif ancré dans une base d'emploi stable.
@@ -124,10 +124,10 @@ const HullPage = () => (
       <h2 className="mt-3">Investir dans un plex à Hull, ce qu'il faut comprendre</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull est historiquement le secteur de Gatineau le plus actif pour l'investissement en multiplex. La densité résidentielle, la proximité d'Ottawa, la présence de l'UQO et de fonctionnaires fédéraux créent une demande locative soutenue, particulièrement pour les logements à prix abordables.
+          Hull attire depuis longtemps les investisseurs en multiplex. La densité résidentielle, la proximité d'Ottawa, la présence de l'UQO et de fonctionnaires fédéraux créent une demande locative soutenue, particulièrement pour les logements à prix abordables.
         </p>
         <p className="prose-body">
-          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. Ce changement rend l'analyse de rendement encore plus critique. Les anciens plexs à loyers modérés restent les plus demandés.
+          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus. Les anciens plexs à loyers modérés restent très demandés.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.
@@ -164,7 +164,7 @@ const HullPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes — Hull, Gatineau" items={faq} />
+    <FAQSection title="Questions fréquentes sur Hull, Gatineau" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -176,7 +176,7 @@ const HullPage = () => (
 
     <GuideInlineCTA
       guideType="investor_guide"
-      headline="Guide investisseur gratuit — plex à Hull"
+      headline="Guide investisseur gratuit : plex à Hull"
       text="Rendement, fiscalité et stratégie d'investissement, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide investisseur"
     />
@@ -184,7 +184,7 @@ const HullPage = () => (
     {/* ═══ CTA FINAL ═══ */}
     <CTASection
       dark
-      title="Votre projet à Hull — par où commencer?"
+      title="Votre projet à Hull : par où commencer?"
       text="Achat, vente, investissement locatif, Hull est un secteur que je connais en profondeur. Parlons de votre projet."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-maison-hull/" },

@@ -16,7 +16,7 @@ import heroImg from "@/assets/hero-pontiac.webp";
 const faq = [
   {
     q: "La municipalité de Pontiac, c'est la même chose que le Pontiac (MRC)?",
-    a: "Non, et c'est une confusion très fréquente. La municipalité de Pontiac (secteurs Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale. La MRC Pontiac est un territoire beaucoup plus vaste et beaucoup plus à l'ouest (Fort-Coulonge, Shawville, Campbell's Bay), elle est hors de la RCN et forme un bassin de marché complètement différent. (Source: Wikipedia/Pontiac, Quebec)",
+    a: "Non, et c'est une confusion très fréquente. La municipalité de Pontiac (secteurs Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale. Plus vaste et beaucoup plus à l'ouest (Fort-Coulonge, Shawville, Campbell's Bay), la MRC Pontiac est hors de la RCN et forme un bassin de marché complètement différent. (Source : Wikipedia/Pontiac, Québec)",
   },
   {
     q: "Y a-t-il des écoles à Pontiac?",
@@ -39,7 +39,7 @@ const PontiacPage = () => {
     const schema = {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
-      name: "Yanis Gauthier-Sigeris — YGS",
+      name: "Yanis Gauthier-Sigeris (YGS)",
       url: "https://yanisgauthier.com",
       areaServed: { "@type": "Place", name: "Pontiac, MRC des Collines-de-l'Outaouais, Québec, Canada" },
       description: "Courtier immobilier spécialisé dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon.",
@@ -58,15 +58,15 @@ const PontiacPage = () => {
     <>
       <PageMeta
         title="Courtier immobilier Pontiac Outaouais | Luskville & Breckenridge | YGS"
-        description="Achetez ou vendez dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Grands terrains, rivière des Outaouais, bilingue. Courtier local — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+        description="Achetez ou vendez dans la municipalité de Pontiac, Outaouais. Luskville, Breckenridge, Quyon. Grands terrains, rivière des Outaouais, bilingue. Courtier local : Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
       <NeighborhoodJsonLd name="Pontiac" description="Courtier immobilier dans la municipalité de Pontiac. Luskville, Breckenridge, Quyon." lat={45.58} lng={-76.12} url="/pontiac/" />
       <ServiceJsonLd name="Courtier immobilier Pontiac" description="Services immobiliers dans la municipalité de Pontiac, Outaouais" url="/pontiac/" serviceType="Real Estate Brokerage" areaServed={["Pontiac", "Luskville", "Breckenridge", "Quyon"]} />
 
       {/* HERO */}
       <HeroSection
         overline="PONTIAC · OUTAOUAIS · RÉGION DE LA CAPITALE NATIONALE"
-        title="Courtier immobilier à Pontiac — entre la rivière des Outaouais et le Parc de la Gatineau"
-        subtitle="La municipalité de Pontiac est nichée entre la rivière des Outaouais, la rivière Quyon et les collines du Parc de la Gatineau. C'est un territoire unique dans la Région de la capitale nationale : grand, rural, bilingue, et encore accessible. Pour les acheteurs qui veulent l'espace vrai, c'est souvent une découverte."
+        title="Courtier immobilier à Pontiac, entre la rivière des Outaouais et le parc de la Gatineau"
+        subtitle="La municipalité de Pontiac s'étend entre la rivière des Outaouais, la rivière Quyon et les collines du parc de la Gatineau. Dans la Région de la capitale nationale, c'est un grand territoire rural et bilingue, encore abordable. Les acheteurs qui veulent beaucoup d'espace sont souvent surpris par ce qu'ils y trouvent."
         primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
         secondaryCta={{ label: "Me parler de mon projet →", href: "/contact-yanis/" }}
         heroBgImage={heroImg}
@@ -89,9 +89,9 @@ const PontiacPage = () => {
         <h2 className="mb-8">La municipalité de Pontiac, des faits vérifiés</h2>
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
           <div className="md:col-span-3 space-y-5 text-[0.9375rem] text-muted-foreground leading-relaxed">
-            <p>La municipalité de Pontiac a été créée en 1975 par la fusion de quatre municipalités : North Onslow, South Onslow, Quyon et Eardley. Elle fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale du Canada. Son territoire couvre une superficie d'environ 503&nbsp;km² sur la rive nord de la rivière des Outaouais. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec; Municipalité de Pontiac)</span></p>
-            <p>La municipalité de Pontiac est l'une des communautés les plus bilingues de la région. Selon le recensement de 2016, environ 64&nbsp;% des résidents parlent les deux langues officielles, avec le français comme langue maternelle à 55,5&nbsp;% et l'anglais à 38,6&nbsp;%. C'est un environnement naturellement bilingue qui attire les familles francophones et anglophones. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec, Recensement 2016)</span></p>
-            <p>Une grande partie du territoire de la municipalité de Pontiac est incluse dans le Parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité détermine en grande partie le caractère du territoire : peu d'urbanisation, beaucoup de nature, et une offre résidentielle limitée qui soutient la valeur des propriétés existantes. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec)</span></p>
+            <p>La municipalité de Pontiac a été créée en 1975 par la fusion de quatre municipalités : North Onslow, South Onslow, Quyon et Eardley. Elle fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale du Canada. Son territoire couvre une superficie d'environ 503&nbsp;km² sur la rive nord de la rivière des Outaouais. <span className="text-xs italic">(Source : Wikipedia/Pontiac, Québec, et Municipalité de Pontiac)</span></p>
+            <p>La municipalité de Pontiac est l'une des communautés les plus bilingues de la région. Selon le recensement de 2016, environ 64&nbsp;% des résidents parlent les deux langues officielles, avec le français comme langue maternelle à 55,5&nbsp;% et l'anglais à 38,6&nbsp;%. C'est un environnement naturellement bilingue qui attire les familles francophones et anglophones. <span className="text-xs italic">(Source : Wikipedia/Pontiac, Québec, Recensement 2016)</span></p>
+            <p>Une grande partie du territoire de la municipalité de Pontiac est incluse dans le parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité détermine en grande partie le caractère du territoire : peu d'urbanisation et beaucoup de nature, avec une offre résidentielle limitée qui soutient la valeur des propriétés existantes. <span className="text-xs italic">(Source : Wikipedia/Pontiac, Québec)</span></p>
           </div>
           <div className="md:col-span-2">
             <div className="border border-border rounded-lg p-6 space-y-4">
@@ -100,9 +100,9 @@ const PontiacPage = () => {
               <div className="space-y-4 text-[0.875rem]">
                 {[
                   { icon: MapPin, label: "Situation", value: "MRC des Collines-de-l'Outaouais · Région de la capitale nationale" },
-                  { icon: Users, label: "Population", value: "6 142 habitants (Recensement 2021)", source: "(Source: Statistique Canada, 2021)" },
-                  { icon: Globe, label: "Bilinguisme", value: "~64% de résidents bilingues · FR 55,5% · EN 38,6%", source: "(Source: Recensement 2016)" },
-                  { icon: TreePine, label: "Nature", value: "Parc de la Gatineau sur une grande partie du territoire", source: "(Source: Commission de la capitale nationale)" },
+                  { icon: Users, label: "Population", value: "6 142 habitants (Recensement 2021)", source: "(Source : Statistique Canada, 2021)" },
+                  { icon: Globe, label: "Bilinguisme", value: "~64 % de résidents bilingues · FR 55,5 % · EN 38,6 %", source: "(Source : Recensement 2016)" },
+                  { icon: TreePine, label: "Nature", value: "Parc de la Gatineau sur une grande partie du territoire", source: "(Source : Commission de la capitale nationale)" },
                 ].map((f) => (
                   <div key={f.label} className="flex gap-3">
                     <f.icon size={16} className="shrink-0 text-accent mt-0.5" />
@@ -128,9 +128,9 @@ const PontiacPage = () => {
         <p className="text-[0.9rem] text-muted-foreground mb-8">La municipalité de Pontiac regroupe plusieurs communautés distinctes, chacune avec son caractère propre. Voici les principales que je dessers.</p>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { name: "Luskville", text: "La communauté la plus proche de Gatineau et de Chelsea, et donc la plus prisée pour les acheteurs qui veulent être à distance raisonnable des services urbains. Luskville est nichée dans les collines de Gatineau Park, avec des propriétés souvent sur grands terrains boisés. Le sentier des Chutes Luskville est une des randonnées les plus iconiques de toute la région, accessible depuis le village même.", tag: "Proximité Gatineau · Nature · Sentiers" },
-            { name: "Breckenridge", text: "Secteur situé en bordure de la rivière des Outaouais, Breckenridge offre certaines des plus belles propriétés riveraines de la région. Des maisons unifamiliales sur grands terrains, souvent avec vue sur la rivière ou accès direct à l'eau. Un secteur recherché par les acheteurs qui valorisent la vie au bord de l'eau dans un cadre rural.", tag: "Bord de l'eau · Rivière des Outaouais · Rural" },
-            { name: "Quyon", text: "Le village historique de Pontiac, fondé en 1848. Quyon est le secteur le plus rural et le plus éloigné de Gatineau. C'est ici que la vie communautaire traditionnelle est la plus forte, agriculture, activités locales, sentiment d'appartenance. Idéal pour les acheteurs qui cherchent vraiment à sortir de l'agitation urbaine.", tag: "Village historique · Rural · Communauté forte" },
+            { name: "Luskville", text: "La communauté la plus proche de Gatineau et de Chelsea, donc souvent le choix des acheteurs qui veulent rester à distance raisonnable des services urbains. Luskville s'adosse aux collines du parc de la Gatineau, avec des propriétés souvent sur de grands terrains boisés. Le sentier des chutes de Luskville part du village même.", tag: "Proximité Gatineau · Nature · Sentiers" },
+            { name: "Breckenridge", text: "Situé en bordure de la rivière des Outaouais, Breckenridge compte des maisons unifamiliales sur grands terrains, souvent avec vue sur la rivière ou accès direct à l'eau. Il convient aux acheteurs qui veulent vivre au bord de l'eau dans un cadre rural.", tag: "Bord de l'eau · Rivière des Outaouais · Rural" },
+            { name: "Quyon", text: "Le village historique de Pontiac, fondé en 1848. Quyon est le secteur le plus rural et le plus éloigné de Gatineau. La vie communautaire y reste forte, autour de l'agriculture et des activités locales. Un bon choix pour les acheteurs qui veulent s'éloigner de la ville.", tag: "Village historique · Rural · Communauté forte" },
           ].map((s) => (
             <div key={s.name} className="bg-background border border-border rounded-lg p-6 space-y-3">
               <h3 className="font-serif text-lg text-foreground">{s.name}</h3>
@@ -146,9 +146,9 @@ const PontiacPage = () => {
         <h2 className="mb-8">Ce que l'on trouve à Pontiac qu'on ne trouve nulle part ailleurs dans la région</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { icon: TreePine, title: "Le Parc de la Gatineau — dans votre cour", text: "Une grande partie du territoire de Pontiac est incluse dans le Parc de la Gatineau (360 km² de forêts, lacs et rivières, créé en 1938). Le sentier des Chutes Luskville est directement accessible depuis le secteur Luskville. Les résidents ont accès à des centaines de kilomètres de sentiers de randonnée, de ski de fond et de raquettes. (Source: Commission de la capitale nationale)" },
-            { icon: Waves, title: "La rivière des Outaouais en façade", text: "La municipalité de Pontiac longe la rive nord de la rivière des Outaouais. Plusieurs propriétés de Breckenridge offrent un accès direct à la rivière ou une vue sur l'eau. La rivière des Outaouais est navigable, poissonneuse, et l'une des plus grandes rivières du Canada, un atout de qualité de vie rare pour une propriété résidentielle." },
-            { icon: Bus, title: "Transcollines : connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais à Gatineau, avec correspondance vers le réseau de la STO. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source: Municipalité de Pontiac / Transcollines)" },
+            { icon: TreePine, title: "Le parc de la Gatineau dans votre cour", text: "Une grande partie du territoire de Pontiac est incluse dans le parc de la Gatineau (360 km² de forêts, lacs et rivières, créé en 1938). Le sentier des chutes de Luskville est directement accessible depuis le secteur Luskville. Les résidents ont accès à des centaines de kilomètres de sentiers de randonnée, de ski de fond et de raquettes. (Source : Commission de la capitale nationale)" },
+            { icon: Waves, title: "La rivière des Outaouais en façade", text: "La municipalité de Pontiac longe la rive nord de la rivière des Outaouais. Plusieurs propriétés de Breckenridge offrent un accès direct à la rivière ou une vue sur l'eau. La rivière des Outaouais est navigable et poissonneuse, et c'est l'une des plus grandes rivières du Canada. Pour une propriété résidentielle, c'est un atout rare." },
+            { icon: Bus, title: "Transcollines : connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais à Gatineau, avec correspondance vers le réseau de la STO. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source : Municipalité de Pontiac / Transcollines)" },
           ].map((c) => (
             <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
               <c.icon size={24} className="text-accent" />
@@ -164,9 +164,9 @@ const PontiacPage = () => {
         <h2 className="mb-6">Ce qu'il faut savoir avant d'acheter à Pontiac</h2>
         <div className="space-y-4 text-[0.9375rem] text-muted-foreground leading-relaxed">
           <p>Pontiac est une municipalité rurale. Plusieurs réalités importantes à comprendre avant de faire une offre&nbsp;:</p>
-          <p>La grande majorité des propriétés fonctionnent avec puits artésien et fosse septique. L'inspection complète de ces systèmes avant l'achat est indispensable, et non optionnelle. Un système en fin de vie représente une dépense significative à anticiper.</p>
+          <p>La grande majorité des propriétés fonctionnent avec puits artésien et fosse septique. Faites inspecter ces systèmes au complet avant l'achat. Un système en fin de vie représente une grosse dépense à prévoir.</p>
           <p>Les services sur place sont limités. Pontiac n'a pas de grandes surfaces, de cliniques spécialisées ou d'hôpital. Pour ces besoins, on se dirige vers Gatineau (le Vieux-Aylmer est à environ 21 km de Luskville et 41 km de Quyon par la route) ou Ottawa. Les résidents vivent avec cette réalité et en font le calcul lors de leur décision.</p>
-          <p>Le zonage à Pontiac est influencé par les règlements de la MRC des Collines-de-l'Outaouais et par les exigences de la Commission de la capitale nationale pour les zones adjacentes au Parc de la Gatineau. Avant tout projet de construction ou de rénovation majeure, une vérification du zonage auprès de la municipalité est indispensable.</p>
+          <p>Le zonage à Pontiac est influencé par les règlements de la MRC des Collines-de-l'Outaouais et par les exigences de la Commission de la capitale nationale pour les zones adjacentes au parc de la Gatineau. Avant tout projet de construction ou de rénovation majeure, vérifiez le zonage auprès de la municipalité.</p>
           <p>Le marché immobilier de Pontiac est un marché de niche. Les transactions sont moins fréquentes qu'à Gatineau ou Aylmer, ce qui signifie que l'évaluation précise des comparables est encore plus importante. Je connais ce secteur et je surveille les ventes qui y sont conclues.</p>
         </div>
       </ContentBlock>
@@ -179,7 +179,7 @@ const PontiacPage = () => {
             {[
               "Pontiac attire un profil d'acheteur spécifique : familles en télétravail, amoureux de la nature, personnes qui cherchent l'espace vrai dans la RCN. La demande pour ce profil reste constante.",
               "Au 2e trimestre 2026, 535 unifamiliales étaient en vigueur dans la périphérie de Gatineau, qui inclut Pontiac, soit 13 % de plus qu'un an plus tôt (APCIQ). Les acheteurs y ont plus de choix.",
-              "Les transactions à Pontiac sont moins fréquentes que dans les secteurs urbains, ce qui rend l'évaluation précise encore plus critique. Un courtier qui surveille activement ce marché est un avantage réel.",
+              "Les transactions à Pontiac sont moins fréquentes que dans les secteurs urbains, ce qui rend l'évaluation plus délicate. Un courtier qui suit ce marché de près vous aide à fixer le bon prix.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">
                 <CheckCircle2 size={16} className="shrink-0 text-accent mt-0.5" />
@@ -195,12 +195,12 @@ const PontiacPage = () => {
       </ContentBlock>
 
       {/* SECTION 7 — FAQ */}
-      <FAQSection title="Questions fréquentes — Pontiac, Outaouais" items={faq} />
+      <FAQSection title="Questions fréquentes sur Pontiac, Outaouais" items={faq} />
 
       {/* Guide CTA */}
       <GuideInlineCTA
         guideType="buyer_guide"
-        headline="Guide acheteur gratuit — acheter dans le Pontiac"
+        headline="Guide acheteur gratuit : acheter dans le Pontiac"
         text="Processus, budget et conseils pour acheter dans le secteur."
         ctaLabel="Recevoir le guide acheteur"
       />
@@ -213,7 +213,7 @@ const PontiacPage = () => {
           { title: "Chelsea", text: "Village, Parc de la Gatineau.", href: "/chelsea/" },
           { title: "Cantley", text: "Grands terrains, familles.", href: "/cantley/" },
           { title: "Aylmer", text: "Lac Deschênes, quartiers familiaux.", href: "/aylmer/" },
-          { title: "Val-des-Monts", text: "Lacs, nature, tranquillité.", href: "/val-des-monts/" },
+          { title: "Val-des-Monts", text: "Lacs et chalets en nature.", href: "/val-des-monts/" },
         ]}
         background="alt"
       />
@@ -222,7 +222,7 @@ const PontiacPage = () => {
       <CTASection
         dark
         overline="VOTRE PROJET À PONTIAC"
-        title="Pontiac est un marché que peu de courtiers connaissent vraiment"
+        title="Pontiac est un marché que peu de courtiers connaissent bien"
         text="Je couvre la municipalité de Pontiac depuis 2017. Je connais les secteurs, les comparables, et les réalités pratiques, puits, fosses, zonage, accès. Si vous avez un projet ici, je suis votre courtier local."
         buttons={[
           { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },

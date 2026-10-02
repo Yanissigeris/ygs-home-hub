@@ -19,7 +19,7 @@ const faq = [
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
-    a: "Aylmer est effectivement l'un des secteurs les plus bilingues de Gatineau. On y trouve des écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais) et anglophones (Western Québec School Board). L'accès à l'école publique anglaise demande un certificat d'admissibilité. C'est un attrait majeur pour les familles d'Ottawa ou les fonctionnaires fédéraux qui souhaitent conserver un environnement anglophone tout en vivant au Québec.",
+    a: "Aylmer est l'un des secteurs les plus bilingues de Gatineau. On y trouve des écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais) et anglophones (Western Québec School Board). L'accès à l'école publique anglaise demande un certificat d'admissibilité. C'est un attrait majeur pour les familles d'Ottawa ou les fonctionnaires fédéraux qui souhaitent conserver un environnement anglophone tout en vivant au Québec.",
   },
   {
     q: "Combien de temps faut-il pour vendre une maison à Aylmer?",
@@ -27,11 +27,11 @@ const faq = [
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
-    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace, une maison plus récente, et une qualité de vie comparable, voire supérieure pour les familles cherchant la nature. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options honnêtement.",
+    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace et une maison plus récente. Pour les familles qui cherchent la nature, la qualité de vie y est comparable, voire supérieure. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options selon votre situation.",
   },
   {
     q: "Est-ce que vous travaillez spécifiquement à Aylmer?",
-    a: "Aylmer est l'un de mes secteurs principaux depuis presque 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance locale se traduit directement en résultats, que vous vendiez ou achetiez.",
+    a: "Aylmer est l'un de mes secteurs principaux depuis presque 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance du terrain sert autant à la vente qu'à l'achat.",
   },
 ];
 
@@ -39,8 +39,8 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "Secteur résidentiel prisé d'Aylmer. Maisons établies et rénovées, rues matures avec arbres, proximité du lac Deschênes et des pistes cyclables. Ambiance familiale avec un excellent accès au pont Champlain.",
-    tag: "Familles · Établi · Recherché",
+    text: "Secteur résidentiel établi, avec des maisons rénovées sur des rues matures et arborées. Le lac Deschênes et les pistes cyclables sont proches, tout comme le pont Champlain.",
+    tag: "Familles · Établi · En demande",
   },
   {
     title: "Vieux-Aylmer",
@@ -54,7 +54,7 @@ const subSectors = [
   },
   {
     title: "Bord de l'eau · Lac Deschênes",
-    text: "Propriétés en bord de rivière et de lac, accès nautique, terrains plus grands. Marché de niche avec des propriétés exceptionnelles. Rareté = valeur stable à long terme.",
+    text: "Propriétés en bord de rivière et de lac, accès nautique, terrains plus grands. Marché de niche, avec peu de propriétés offertes. Cette rareté soutient les valeurs à long terme.",
     tag: "Prestige · Bord de l'eau",
   },
 ];
@@ -74,7 +74,7 @@ const buyerCols = [
   {
     title: "Sur le marché",
     items: [
-      "Les bonnes propriétés partent rapidement dans les secteurs populaires",
+      "Les propriétés bien positionnées partent vite dans les secteurs en demande",
       "Les offres multiples sont fréquentes à Lucerne et Rivermead",
       "Une visite rapide peut faire la différence",
       "L'inspection pré-offre est une option à considérer",
@@ -105,7 +105,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature à deux pas", text: "Lac Deschênes, rivière des Outaouais, parc de la Gatineau et pistes cyclables vers Ottawa via le pont Champlain. Aylmer offre un accès exceptionnel à la nature en plein cœur du quartier résidentiel." },
+  { icon: "🌿", title: "Nature à deux pas", text: "Lac Deschênes, rivière des Outaouais, parc de la Gatineau et pistes cyclables vers Ottawa via le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
@@ -123,7 +123,7 @@ const related = [
 const AylmerPage = () => (
   <>
     <PageMeta
-  title="Courtier immobilier Aylmer Gatineau | YGS — Yanis Gauthier-Sigeris"
+  title="Courtier immobilier Aylmer Gatineau | Yanis Gauthier-Sigeris (YGS)"
   description="Yanis Gauthier-Sigeris, courtier immobilier spécialisé à Aylmer, Gatineau. Maisons unifamiliales, condos, plex. Évaluation gratuite, connaissance locale approfondie."
   ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
@@ -138,8 +138,8 @@ const AylmerPage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
-      title="Courtier immobilier à Aylmer — votre spécialiste local"
-      subtitle="Aylmer est l'un des secteurs les plus recherchés de Gatineau. Familles bilingues, lacs, parcs, maisons récentes, et un marché compétitif qui récompense les acheteurs bien préparés et les vendeurs bien positionnés."
+      title="Courtier immobilier à Aylmer, votre spécialiste local"
+      subtitle="Aylmer attire beaucoup de familles bilingues, pour le lac Deschênes et les parcs autant que pour ses maisons récentes. Le marché est compétitif et récompense les acheteurs préparés comme les vendeurs bien positionnés."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
@@ -150,12 +150,12 @@ const AylmerPage = () => (
       <div className="section-container grid gap-12 lg:grid-cols-5 lg:items-start">
         {/* Left — text (3 cols) */}
         <div className="lg:col-span-3 space-y-4">
-          <h2>Ce qui rend Aylmer unique en Outaouais</h2>
+          <h2>Ce qui distingue Aylmer en Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. C'est le choix numéro un des familles bilingues qui veulent la qualité de vie de la banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
+            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. On y vit en banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Les secteurs de Lucerne et Rivermead sont particulièrement prisés, des maisons établies sur des rues matures, proches du lac Deschênes, des parcs, des écoles francophones et anglophones. Vieux-Aylmer offre quant à lui un charme patrimonial distinct, avec des propriétés de caractère, des commerces de proximité et une ambiance de village préservée.
+            Lucerne et Rivermead sont très demandés, avec leurs maisons établies sur des rues matures, près du lac Deschênes, des parcs et des écoles francophones et anglophones. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
           </p>
           <p className="prose-body">
             Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.
@@ -232,9 +232,9 @@ const AylmerPage = () => (
       <div className="section-container grid gap-12 lg:grid-cols-2 lg:items-start">
         {/* Left — body */}
         <div className="space-y-4">
-          <h2>Vendre votre propriété à Aylmer au meilleur prix</h2>
+          <h2>Vendre votre propriété à Aylmer au bon prix</h2>
           <p className="prose-body mt-5">
-            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Mais « bien positionné » ne signifie pas « le plus cher », cela signifie le prix juste, la bonne présentation, et la bonne stratégie.
+            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Bien positionné veut dire au juste prix et avec une présentation soignée, pas forcément au prix le plus haut.
           </p>
           <p className="prose-body">
             Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue, pas juste par secteur, fait une différence réelle sur votre prix final.
@@ -285,13 +285,13 @@ const AylmerPage = () => (
     </section>
 
     {/* ═══ SECTION 6 — FAQ ═══ */}
-    <FAQSection title="Questions fréquentes — Aylmer" items={faq} />
+    <FAQSection title="Questions fréquentes sur Aylmer" items={faq} />
 
     {/* ═══ SECTION 7 — CTA FINAL ═══ */}
     <CTASection
       dark
       title="Prêt à passer à l'étape suivante?"
-      text="Que vous vendiez votre maison à Aylmer ou que vous cherchiez à acheter dans ce secteur, je suis votre courtier local."
+      text="Pour vendre votre maison à Aylmer ou acheter dans le secteur, je suis votre courtier local."
       buttons={[
         { label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" },
         { label: "Me contacter →", href: "/contact-yanis/", variant: "outline" },
@@ -305,7 +305,7 @@ const AylmerPage = () => (
       title="Découvrir"
       pages={[
         ...related,
-        { title: "Vivre à Aylmer — le guide", text: "Quotidien, écoles, parcs et vie de quartier.", href: "/vivre-a-aylmer/" },
+        { title: "Vivre à Aylmer : le guide", text: "Quotidien, écoles, parcs et vie de quartier.", href: "/vivre-a-aylmer/" },
         { title: "Propriétés à Aylmer", text: "Voir les inscriptions en cours.", href: "/proprietes/" },
         { title: "Relocalisation Ottawa → Gatineau", text: "Guide complet pour traverser la rivière.", href: "/relocalisation-ottawa-gatineau/" },
       ]}
@@ -314,7 +314,7 @@ const AylmerPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Aylmer"
+      headline="Guide acheteur gratuit : acheter à Aylmer"
       text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />

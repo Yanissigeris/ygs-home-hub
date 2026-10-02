@@ -25,7 +25,7 @@ const zones = [
   { name: "Chelsea", href: "/chelsea/", detail: "Nature, parc de la Gatineau" },
   { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains" },
   { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Abordable, en croissance" },
-  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, tranquillité" },
+  { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets" },
   { name: "Pontiac", href: "/pontiac/", detail: "Campagne, grands espaces" },
 ];
 
@@ -37,27 +37,27 @@ const services = [
 ];
 
 const faqItems = [
-  { q: "Pourquoi travailler avec un courtier immobilier en Outaouais?", a: "Un courtier local connaît les micro-marchés, les tendances de prix par secteur et les particularités de chaque quartier. En Outaouais, la proximité avec Ottawa crée une dynamique unique, un courtier qui comprend cette réalité vous aide à prendre de meilleures décisions." },
+  { q: "Pourquoi travailler avec un courtier immobilier en Outaouais?", a: "Un courtier local connaît les micro-marchés, les tendances de prix par secteur et les particularités de chaque quartier. En Outaouais, la proximité d'Ottawa influence les prix et la demande. Un courtier qui connaît cette réalité vous aide à mieux décider." },
   { q: "Quels secteurs couvrez-vous en Outaouais?", a: "Je couvre l'ensemble de l'Outaouais urbain et périurbain : Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac. Chaque secteur a son profil, je vous aide à trouver celui qui correspond à vos besoins." },
   { q: "Est-ce que vous servez Aylmer, Hull et Gatineau?", a: "Oui, Aylmer, Hull et Gatineau-centre sont mes secteurs principaux. J'y ai réalisé de nombreuses transactions et je connais les rues, les écoles, les prix et les tendances locales en profondeur." },
   { q: "Comment obtenir une évaluation de maison en Outaouais?", a: "Je prépare une évaluation gratuite basée sur les ventes récentes dans votre secteur. Vous recevez un rapport clair avec le prix de vente recommandé, sans engagement et en toute confidentialité." },
-  { q: "Quel est le meilleur secteur pour acheter en Outaouais?", a: "Ça dépend de votre budget, de votre style de vie et de vos priorités. Aylmer est idéal pour les familles, Hull pour les jeunes professionnels, Chelsea pour les amateurs de nature, et Gatineau-centre pour l'accessibilité. On en discute ensemble." },
+  { q: "Quel est le meilleur secteur pour acheter en Outaouais?", a: "Ça dépend de votre budget, de votre style de vie et de vos priorités. Aylmer convient bien aux familles, Hull aux jeunes professionnels, Chelsea aux amateurs de nature et Gatineau-centre à ceux qui cherchent des prix accessibles. On en discute ensemble." },
   { q: "Combien coûte une maison en Outaouais?", a: "Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 523 500 $ dans la région métropolitaine de Gatineau, et celui d'une copropriété de 308 000 $ (APCIQ, données Centris). Selon le secteur, le prix médian d'une unifamiliale allait de 419 545 $ à Buckingham/Masson-Angers à 595 000 $ dans la périphérie de Gatineau. Contactez-moi pour une analyse de votre secteur cible." },
-  { q: "Est-ce que le marché immobilier en Outaouais est actif?", a: "Oui, le marché reste dynamique grâce à la proximité d'Ottawa, à la demande bilingue et à l'attractivité croissante de la région. Les conditions varient par secteur, une analyse personnalisée vous donnera un portrait exact." },
-  { q: "Offrez-vous un service bilingue?", a: "Absolument. Je travaille en français et en anglais, ce qui est essentiel dans une région bilingue comme l'Outaouais. Que vous veniez d'Ottawa, de Montréal ou de l'étranger, je m'adapte à votre langue." },
+  { q: "Est-ce que le marché immobilier en Outaouais est actif?", a: "Oui. Au 2e trimestre 2026, 1 310 propriétés résidentielles se sont vendues dans la région métropolitaine de Gatineau. Sur 12 mois, les conditions favorisaient les vendeurs dans toutes les gammes de prix de l'unifamiliale (APCIQ, données Centris). Le portrait change toutefois d'un secteur à l'autre." },
+  { q: "Offrez-vous un service bilingue?", a: "Oui. Je travaille en français et en anglais, ce qui compte dans une région bilingue comme l'Outaouais. Peu importe d'où vous arrivez, je m'adapte à votre langue." },
   { q: "Pourquoi choisir un courtier local plutôt qu'un courtier d'Ottawa?", a: "Un courtier licencié au Québec connaît les lois, les taxes (taxe de bienvenue, taxe scolaire) et les particularités du marché québécois. Un courtier ontarien ne peut pas légalement vous représenter au Québec." },
-  { q: "Comment commencer mon projet immobilier en Outaouais?", a: "Contactez-moi pour une consultation gratuite. On discute de vos objectifs, je vous donne les faits et les chiffres, et on définit ensemble la meilleure stratégie pour votre situation." },
+  { q: "Comment commencer mon projet immobilier en Outaouais?", a: "Contactez-moi pour une consultation gratuite. On discute de vos objectifs, je vous donne les faits et les chiffres, et on définit ensemble la bonne stratégie pour votre situation." },
 ];
 
 const OutaouaisHubPage = () => (
   <div>
     <PageMeta
       title="Courtier immobilier Outaouais · Gatineau"
-      description="Yanis Gauthier-Sigeris, courtier immobilier en Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley — stratégie claire pour vendre, acheter ou investir."
+      description="Yanis Gauthier-Sigeris, courtier immobilier en Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley. Une stratégie claire pour vendre, acheter ou investir."
     ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
       name="Courtier immobilier en Outaouais"
-      description="Services de courtage immobilier résidentiel en Outaouais — vente, achat, évaluation et investissement plex à Gatineau, Hull, Aylmer, Chelsea et Cantley."
+      description="Services de courtage immobilier résidentiel en Outaouais : vente, achat, évaluation et investissement plex à Gatineau, Hull, Aylmer, Chelsea et Cantley."
       url="/courtier-immobilier-outaouais/"
       serviceType="Real Estate Brokerage"
     />
@@ -65,7 +65,7 @@ const OutaouaisHubPage = () => (
     <HeroSection
       overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
       title="Votre courtier immobilier en Outaouais"
-      subtitle="Vendre, acheter ou investir dans la région — avec un accompagnement local, bilingue et basé sur les faits."
+      subtitle="Vendre, acheter ou investir dans la région, avec un accompagnement bilingue basé sur les faits."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"
@@ -142,7 +142,7 @@ const OutaouaisHubPage = () => (
         <ul className="mt-8 space-y-3">
           {[
             "Courtier RE/MAX, Hall of Fame, reconnu en Outaouais",
-            "Bilingue français-anglais, essentiel pour la clientèle Ottawa-Gatineau",
+            "Bilingue français-anglais, pour la clientèle des deux côtés de la rivière",
             "Spécialisé en revente résidentielle, premier achat et investissement plex",
             "Évaluations basées sur des données réelles, pas des estimations en ligne",
             "Accompagnement de la relocalisation Ottawa → Gatineau et Montréal → Gatineau",

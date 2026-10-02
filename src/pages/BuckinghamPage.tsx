@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Y a-t-il des services à Buckingham?",
-    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. Ce n'est pas l'offre d'Aylmer ou de Hull, mais les besoins quotidiens sont couverts. L'Hôpital de Papineau est aussi à Buckingham. Pour les grandes surfaces, on va vers le centre de Gatineau : Les Promenades Gatineau sont à une trentaine de kilomètres par la route (de 30 à 36 km selon l'itinéraire).",
+    a: "Oui, Buckingham a un centre-ville fonctionnel avec les services du quotidien : épiceries, pharmacie, clinique médicale, restaurants, bibliothèque, école primaire et secondaire, aréna. L'offre est plus petite qu'à Aylmer ou à Hull, mais les besoins quotidiens sont couverts. L'Hôpital de Papineau est aussi à Buckingham. Pour les grandes surfaces, on va vers le centre de Gatineau : Les Promenades Gatineau sont à une trentaine de kilomètres par la route (de 30 à 36 km selon l'itinéraire).",
   },
   {
     q: "Les propriétés à Buckingham ont-elles des puits?",
@@ -37,11 +37,11 @@ const subSectors = [
   },
   {
     title: "Masson-Angers",
-    text: "Plus proche du centre de Gatineau, Masson-Angers longe la rivière des Outaouais. Secteur résidentiel calme, maisons sur terrains généreux, accès à des sentiers riverains. Attire les familles qui veulent être un peu plus proches de la ville tout en gardant l'espace et la tranquillité.",
+    text: "Plus proche du centre de Gatineau, Masson-Angers longe la rivière des Outaouais. Secteur résidentiel calme, avec des maisons sur de grands terrains et des sentiers près de la rivière. Il attire les familles qui veulent se rapprocher un peu de la ville sans perdre d'espace.",
   },
   {
     title: "Angers / L'Ange-Gardien",
-    text: "Zone de transition vers les MRC rurales. Grandes propriétés, boisés, silence. Pour ceux qui cherchent vraiment l'espace. Puits et fosses septiques fréquents, l'inspection est cruciale dans ce secteur.",
+    text: "Zone de transition vers les MRC rurales. Grandes propriétés et terrains boisés, pour les acheteurs qui veulent de l'espace avant tout. Les puits et les fosses septiques sont fréquents, alors l'inspection compte beaucoup dans ce secteur.",
   },
 ];
 
@@ -57,7 +57,7 @@ const BuckinghamPage = () => (
   <>
     <PageMeta
       title="Courtier immobilier Buckingham Masson-Angers | Grands terrains | YGS"
-      description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles. Courtier local Outaouais — Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles. Courtier local Outaouais : Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Buckingham"
       description="Achetez ou vendez à Buckingham et Masson-Angers, Gatineau. Grands terrains, espace, prix accessibles."
@@ -76,8 +76,8 @@ const BuckinghamPage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
-      title="Courtier immobilier à Buckingham — l'espace que Gatineau n'offre plus"
-      subtitle="Buckingham et Masson-Angers sont les secteurs est de Gatineau. C'est ici que les terrains sont grands, que les maisons ont de l'espace, et que le rythme de vie est différent. Pour les acheteurs qui ont fait le calcul et veulent vraiment l'espace, c'est souvent la révélation du marché outaouais."
+      title="Courtier immobilier à Buckingham, de l'espace dans l'est de Gatineau"
+      subtitle="Buckingham et Masson-Angers sont les secteurs est de Gatineau. Les terrains y sont grands et les maisons spacieuses, avec un rythme de vie plus calme. Pour les acheteurs qui ont fait le calcul et veulent de l'espace, c'est souvent une belle surprise."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=buckingham" }}
       heroBgImage={heroImg}
@@ -88,7 +88,7 @@ const BuckinghamPage = () => (
       <h2 className="mt-3">Buckingham et Masson-Angers, les faits</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle, son économie était fondée sur les papetières pendant plus d'un siècle, Buckingham est aujourd'hui un secteur résidentiel tranquille avec une identité communautaire forte et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
+          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle, Buckingham a vécu des papetières pendant plus d'un siècle. C'est aujourd'hui un secteur résidentiel tranquille, avec une forte identité communautaire et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
         </p>
         <p className="prose-body">
           Ce qui distingue fondamentalement ce secteur de tous les autres à Gatineau : l'espace. Les terrains sont plus grands, les maisons sont plus spacieuses, et les rues sont plus calmes. Ce secteur attire principalement des familles établies, des acheteurs en upsizing qui veulent plus d'espace, et, depuis 2020, des travailleurs en télétravail qui n'ont plus besoin d'être proches d'Ottawa au quotidien.
@@ -128,7 +128,7 @@ const BuckinghamPage = () => (
           Pour quelqu'un en télétravail partiel (2-3 jours/semaine) ou qui travaille à Gatineau, la distance devient un avantage, vous obtenez beaucoup plus d'espace pour le même budget.
         </p>
         <p className="prose-body">
-          C'est une décision de style de vie autant que de budget. Je vous aide à la peser honnêtement, sans vous vendre une propriété qui ne correspondrait pas à votre réalité.
+          C'est une décision de style de vie autant que de budget. Je vous aide à la peser, sans vous pousser vers une propriété qui ne correspond pas à votre réalité.
         </p>
       </div>
     </ContentBlock>
@@ -138,7 +138,7 @@ const BuckinghamPage = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Buckingham est un des cinq secteurs historiques qui ont formé la ville de Gatineau. Centre-ville fonctionnel avec services essentiels sur place.",
+            "Buckingham est un des cinq secteurs historiques qui ont formé la ville de Gatineau. Centre-ville fonctionnel, avec les services du quotidien sur place.",
             "Masson-Angers longe la rivière des Outaouais et offre l'ambiance semi-rurale la plus proche du centre de Gatineau dans ce secteur est.",
             "Au 2e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Buckingham/Masson-Angers était de 419 545 $, le plus bas des quatre secteurs de la ville de Gatineau (APCIQ).",
           ].map((point) => (
@@ -157,7 +157,7 @@ const BuckinghamPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes — Buckingham et Masson-Angers" items={faq} />
+    <FAQSection title="Questions fréquentes sur Buckingham et Masson-Angers" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -169,7 +169,7 @@ const BuckinghamPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Buckingham"
+      headline="Guide acheteur gratuit : acheter à Buckingham"
       text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />

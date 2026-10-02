@@ -40,11 +40,11 @@ const faq = [
 
 const BuyFromOttawaPage = () => (
    <>
-    <PageMeta title="Acheter à Gatineau depuis Ottawa" description="Vous habitez Ottawa et pensez acheter à Gatineau? Aylmer, Hull, Plateau — taxes, quartiers, avantages et accompagnement bilingue pour votre transition." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
+    <PageMeta title="Acheter à Gatineau depuis Ottawa" description="Vous habitez Ottawa et pensez acheter à Gatineau? Aylmer, Hull, Plateau : taxes, quartiers, avantages et accompagnement bilingue pour votre transition." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
     <HeroSection
       overline="Acheter depuis Ottawa · Gatineau"
       title="Acheter à Gatineau depuis Ottawa"
-      subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie différente, sans être loin du travail. Voici ce qu'il faut savoir."
+      subtitle="Plus d'espace et des prix plus accessibles, sans vous éloigner du travail. Ce qu'il faut savoir avant de traverser la rivière."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
       trustLine="Spécialiste en relocalisation Ottawa → Gatineau"
@@ -64,8 +64,8 @@ const BuyFromOttawaPage = () => (
 
     <SectorLinks
       id="secteurs"
-      overline="Secteurs populaires"
-      title="Les quartiers les plus recherchés par les Ottaviens"
+      overline="Secteurs à considérer"
+      title="Les quartiers que regardent les acheteurs d'Ottawa"
       sectors={sectors}
       background="alt"
     />
@@ -88,7 +88,7 @@ const BuyFromOttawaPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Gatineau"
+      headline="Guide acheteur gratuit : acheter à Gatineau"
       text="Processus, budget, secteurs et conseils, tout dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />

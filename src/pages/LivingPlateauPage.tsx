@@ -47,7 +47,7 @@ const LivingPlateauPage = () => (
 
     <CardGrid
       overline="Mode de vie"
-      title="Ce qui rend le Plateau unique"
+      title="Ce qui distingue le Plateau"
       items={highlights}
     />
 
@@ -82,7 +82,7 @@ const LivingPlateauPage = () => (
     <CTASection
       dark
       title="Prêt à découvrir le Plateau?"
-      text="Parlons de vos critères, je vous montre les meilleures options du secteur."
+      text="Parlons de vos critères. Je vous montre les options du secteur qui vous conviennent."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Voir le quartier", href: "/plateau/", variant: "outline" },

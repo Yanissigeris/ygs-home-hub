@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 
 const ValDesMontsPage = () => (
   <NeighborhoodTemplate
-    seoTitle="Val-des-Monts — Immobilier et guide de quartier"
+    seoTitle="Val-des-Monts | Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage, au nord de Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts/" }}
@@ -14,7 +14,7 @@ const ValDesMontsPage = () => (
     reasons={[
       "Plus de 125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
       "Prix médian d'une unifamiliale de 595 000 $ au 2e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
-      "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes, chacun avec sa dynamique de marché propre",
+      "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes, chacun avec son propre marché",
       "Terrains de 2 à 50+ acres, intimité totale en pleine nature",
       "Chalets quatre-saisons, résidences permanentes et propriétés de luxe bord de lac",
       "Village de Perkins comme centre de services (épicerie, école primaire, services de proximité)",
@@ -22,9 +22,9 @@ const ValDesMontsPage = () => (
       "Les Promenades Gatineau à une vingtaine de kilomètres de Perkins par la route, pour les services commerciaux",
       "Plus de choix pour les acheteurs : 535 unifamiliales en vigueur au 2e trimestre 2026 dans la périphérie de Gatineau, 13 % de plus qu'un an plus tôt (APCIQ)",
     ]}
-    profilesTitle="Val-des-Monts est idéal pour…"
+    profilesTitle="Pour qui Val-des-Monts a du sens"
     profiles={[
-      { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre offrent les meilleures conditions pour la vie nautique quatre saisons." },
+      { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre se prêtent bien à la vie nautique quatre saisons." },
       { icon: Home, title: "Chercheurs de chalet", text: "Du chalet rustique 200 000 $ au bord de lac luxueux 750 000 $+. Les chalets quatre-saisons sont les plus demandés depuis le télétravail." },
       { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
       { icon: Mountain, title: "Télétravailleurs et retraités", text: "Vie en nature, avec Internet haute vitesse offert dans une grande partie du territoire. Le centre-ville d'Ottawa reste accessible pour les rencontres en présentiel ponctuelles." },
@@ -35,7 +35,7 @@ const ValDesMontsPage = () => (
       items: [
         { q: "Val-des-Monts est-il accessible à l'année?", a: "Oui, la majorité des routes principales sont entretenues à l'année. Certains chemins privés en bord de lac peuvent nécessiter du déneigement supplémentaire ou un véhicule 4×4 pour les accès les plus reculés." },
         { q: "Quel est le prix d'une propriété à Val-des-Monts en 2026?", a: "Val-des-Monts fait partie de la « périphérie de Gatineau » dans les statistiques de l'APCIQ, où le prix médian d'une unifamiliale était de 595 000 $ au 2e trimestre 2026 (données Centris). Ce territoire inclut aussi Chelsea, Cantley et Pontiac : c'est donc un repère large. À Val-des-Monts, les prix dépendent fortement du lac, de l'orientation et du type de propriété, du chalet rustique à la résidence quatre-saisons en bord de lac." },
-        { q: "Quels sont les principaux lacs de Val-des-Monts?", a: "Les plus connus sont McGregor, Saint-Pierre, Achigan et Barnes. Chaque lac a sa propre dynamique : McGregor pour les propriétés haut de gamme et navigation, Saint-Pierre pour les chalets familiaux, Achigan pour la pêche, Barnes pour la tranquillité." },
+        { q: "Quels sont les principaux lacs de Val-des-Monts?", a: "Les plus connus sont McGregor, Saint-Pierre, Achigan et Barnes. Chaque lac a son profil : McGregor pour les propriétés haut de gamme et la navigation, Saint-Pierre pour les chalets familiaux, Achigan pour la pêche, Barnes pour le calme." },
         { q: "Peut-on habiter à Val-des-Monts à l'année?", a: "Absolument. De plus en plus de résidents permanents s'y installent depuis 2020, attirés par le télétravail et la qualité de vie. La municipalité a investi dans l'Internet haute vitesse pour soutenir cette tendance." },
         { q: "Y a-t-il des écoles à Val-des-Monts?", a: "Oui pour le primaire : le Centre de services scolaire des Draveurs y compte trois écoles primaires (de la Colline, L'Équipage et du Sommet). Au secondaire, ses élèves fréquentent des écoles du secteur Gatineau, un facteur à considérer pour les familles avec des ados. En anglais, l'école primaire Poltimore (Western Québec School Board) est à Val-des-Monts, sous réserve de l'admissibilité." },
         { q: "Combien de temps prend une vente à Val-des-Monts?", a: "Ça varie selon le type. Au 2e trimestre 2026, une unifamiliale s'est vendue en 39 jours en moyenne dans la périphérie de Gatineau, qui inclut Val-des-Monts (APCIQ, données Centris). Pour un chalet ou une propriété en bord de lac, je vous montre les ventes récentes comparables." },
@@ -54,11 +54,11 @@ const ValDesMontsPage = () => (
       { title: "Plex et investissement", text: "Analyse pour investisseurs.", href: "/investir-plex-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
-    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit — acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
+    guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
-      observation: "Ce que je vois à Val-des-Monts en ce moment : la demande reste forte pour les bord de lac, mais les chalets rustiques se vendent moins vite qu'avant. Mes acheteurs sont surtout des familles d'Ottawa-Gatineau qui cherchent une résidence principale en pleine nature, ou des couples 45-65 ans qui veulent un chalet quatre-saisons pour préparer leur retraite. Le télétravail a vraiment changé la donne, ce qui était une propriété de fin de semaine avant 2020 devient maintenant une résidence principale pour beaucoup de mes clients.",
-      dataPoint: "Sur les ventes que je conclus à Val-des-Monts, les bord de lac McGregor et Saint-Pierre bien préparés partent en 30-60 jours en saison forte. Les chalets rustiques ou propriétés sans accès lac direct prennent souvent 60-120 jours, et les vendeurs doivent être plus patients ou ajuster leur prix.",
-      takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le timing et la préparation comptent énormément. Inscris ta propriété au printemps idéalement, prépare-la pour les photos l'été précédent si possible, et sois réaliste sur le prix selon le type de lac et l'accès. Une propriété sur McGregor ne se compare pas à une sans accès lac, fais-toi évaluer correctement avant d'inscrire."
+      observation: "Ce que je vois à Val-des-Monts en ce moment : la demande reste forte pour les bords de lac, mais les chalets rustiques se vendent moins vite qu'avant. Mes acheteurs sont surtout des familles d'Ottawa-Gatineau qui cherchent une résidence principale en pleine nature, ou des couples 45-65 ans qui veulent un chalet quatre-saisons pour préparer leur retraite. Le télétravail a tout changé : ce qui était une propriété de fin de semaine avant 2020 devient maintenant une résidence principale pour beaucoup de mes clients.",
+      dataPoint: "Sur les ventes que je conclus à Val-des-Monts, les bords de lac McGregor et Saint-Pierre bien préparés partent en 30-60 jours en saison forte. Les chalets rustiques ou propriétés sans accès lac direct prennent souvent 60-120 jours, et les vendeurs doivent être plus patients ou ajuster leur prix.",
+      takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le moment et la préparation comptent énormément. Inscrivez votre propriété au printemps si possible, et préparez-la pour les photos dès l'été précédent. Soyez réaliste sur le prix selon le type de lac et l'accès : une propriété sur McGregor ne se compare pas à une propriété sans accès au lac. Faites évaluer votre propriété avant de l'inscrire."
     }}
     cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />

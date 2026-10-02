@@ -17,7 +17,7 @@ const sectors = [
   { name: "Hull", href: "/hull/", detail: "Urbain, culture, proximité centre-ville Ottawa" },
   { name: "Plateau", href: "/plateau/", detail: "Familles, développements récents, parcs" },
   { name: "Gatineau (centre)", href: "/gatineau/", detail: "Résidentiel, services, banlieue accessible" },
-  { name: "Chelsea", href: "/chelsea/", detail: "Village pittoresque, parc de la Gatineau" },
+  { name: "Chelsea", href: "/chelsea/", detail: "Village, parc de la Gatineau" },
   { name: "Cantley", href: "/cantley/", detail: "Collines, grands terrains, vie rurale" },
   { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets, nature sauvage" },
   { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Rivière, prix accessibles, nature" },
@@ -34,25 +34,25 @@ const lifestyleGuides = [
 ];
 
 const faq = [
-  { q: "Quel est le meilleur quartier de Gatineau?", a: "Ça dépend de votre profil, familles avec enfants d'âge scolaire, investisseurs en plex, premiers acheteurs, retraités qui rationalisent. Aylmer et le Plateau sont familiaux; Hull convient aux professionnels urbains; Chelsea et Cantley plaisent aux amateurs de nature; Buckingham et Masson-Angers offrent le meilleur rapport pied carré-prix. Contactez-moi pour une recommandation personnalisée." },
+  { q: "Quel est le meilleur quartier de Gatineau?", a: "Ça dépend de votre profil : familles avec enfants d'âge scolaire, investisseurs en plex, premiers acheteurs, retraités qui rationalisent. Aylmer et le Plateau sont familiaux. Hull convient aux professionnels urbains, tandis que Chelsea et Cantley plaisent aux amateurs de nature. Buckingham et Masson-Angers ont le prix médian unifamilial le plus bas des secteurs de la ville (APCIQ, 2e trimestre 2026). Contactez-moi pour une recommandation personnalisée." },
   { q: "Les prix varient-ils beaucoup d'un secteur à l'autre?", a: "Oui. Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 419 545 $ dans le secteur Buckingham/Masson-Angers, 490 000 $ dans le secteur Gatineau, 514 500 $ à Hull et 572 750 $ à Aylmer (APCIQ, données Centris). Dans la périphérie (Cantley, Chelsea, Pontiac, Val-des-Monts et d'autres municipalités), il était de 595 000 $. Le Plateau n'a pas de statistique distincte : il se partage entre les secteurs Hull et Aylmer. Cantley, Chelsea et Val-des-Monts échangent l'accès urbain contre l'espace et la nature." },
-  { q: "Comment choisir entre Aylmer et le Plateau?", a: "Aylmer offre des quartiers plus établis près du lac Deschênes, avec des écoles francophones et anglophones. Le Plateau offre des constructions plus récentes, des parcs et un accès au boulevard des Allumettières. Vos priorités déterminent le meilleur choix." },
+  { q: "Comment choisir entre Aylmer et le Plateau?", a: "Aylmer offre des quartiers plus établis près du lac Deschênes, avec des écoles francophones et anglophones. Le Plateau offre des constructions plus récentes, des parcs et un accès au boulevard des Allumettières. Tout dépend de vos priorités." },
   { q: "Quels secteurs conviennent le mieux aux familles?", a: "Aylmer (surtout autour du lac Deschênes), le Plateau, Limbour et Masson-Angers se classent constamment en tête pour les familles grâce aux écoles, parcs, équipements sportifs et rues plus calmes. L'admissibilité aux commissions scolaires (anglophone vs francophone) peut aussi influencer la décision." },
-  { q: "Quels secteurs sont les meilleurs pour les acheteurs d'Ottawa?", a: "Hull, Aylmer, le Plateau et Côte-d'Azur sont les choix Ottawa-Gatineau les plus populaires en raison de l'accès aux ponts, des services bilingues et du compromis style de vie/valeur. Chacun a un point de prix et une ambiance très distincts." },
+  { q: "Quels secteurs sont les meilleurs pour les acheteurs d'Ottawa?", a: "Hull, Aylmer, le Plateau et Côte-d'Azur sont souvent choisis par les acheteurs d'Ottawa, pour l'accès aux ponts et les services bilingues. Chacun a un point de prix et une ambiance très distincts." },
   { q: "Où chercher un plex ou un immeuble à revenus?", a: "Hull, Gatineau-centre et certaines portions d'Aylmer demeurent les marchés actifs pour le plex, grâce à une demande locative stable des fonctionnaires fédéraux, des étudiants et des professionnels. Chaque poche a son propre profil de rendement, je fais les chiffres avant que vous ne déposiez une offre." },
-  { q: "Combien de temps prend la vente d'une bonne inscription?", a: "Cela varie selon le secteur et le segment. Les maisons clé-en-main à Aylmer, au Plateau ou à Chelsea partent souvent en quelques jours lorsque correctement positionnées; les propriétés plus anciennes ou de prix supérieur peuvent prendre plus longtemps. Les alertes acheteur donnent un vrai avantage." },
+  { q: "Combien de temps prend la vente d'une bonne inscription?", a: "Cela varie selon le secteur et le segment. Les maisons prêtes à habiter à Aylmer, au Plateau ou à Chelsea se vendent souvent vite lorsqu'elles sont bien positionnées. Une propriété plus ancienne ou plus chère peut prendre plus de temps. Avec des alertes acheteur, vous voyez les nouvelles inscriptions dès leur arrivée." },
 ];
 
 const NeighborhoodsOverviewPage = () => (
    <>
-    <PageMeta title="Quartiers de Gatineau — Guide complet" description="Comparez les quartiers de Gatineau et de l'Outaouais: Aylmer, Hull, Plateau, Buckingham et Gatineau-centre. Prix, ambiance, écoles et profil de chaque secteur." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+    <PageMeta title="Quartiers de Gatineau | Comparatif des secteurs" description="Comparez les quartiers de Gatineau et de l'Outaouais : Aylmer, Hull, Plateau, Buckingham et Gatineau-centre. Prix, ambiance, écoles et profil de chaque secteur." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <HeroSection
       overline="Quartiers · Gatineau et Outaouais"
       title="Les quartiers à considérer en Outaouais/Gatineau"
-      subtitle="Chaque secteur de l'Outaouais a sa personnalité, familial, urbain, nature ou investissement. Explorez les quartiers pour trouver celui qui vous correspond."
+      subtitle="Chaque secteur de l'Outaouais a sa personnalité : familial, urbain, nature ou investissement. Comparez les quartiers pour trouver celui qui vous correspond."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
-      trustLine="Expertise locale. "
+      trustLine="Expertise locale."
       heroBgImage={heroImg}
     />
 <SectorLinks
@@ -64,13 +64,13 @@ const NeighborhoodsOverviewPage = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Choisir un secteur" title="Chaque quartier a son caractère" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Le bon secteur dépend de votre budget, de votre trajet, de votre style de vie et de vos priorités familiales. L'Outaouais n'est pas un seul marché, c'est une douzaine de micromarchés distincts, chacun avec son propre plafond de prix, son bassin scolaire, ses options de transport et sa dynamique de revente. Une maison qui a l'air d'être au même prix à Buckingham qu'à Aylmer se comporte rarement de la même manière cinq ans plus tard.
+        Le bon secteur dépend de votre budget, de votre trajet, de votre style de vie et de vos priorités familiales. L'Outaouais compte une douzaine de micromarchés, chacun avec son plafond de prix, son bassin scolaire, ses options de transport et son rythme de revente. Une maison qui a l'air d'être au même prix à Buckingham qu'à Aylmer se comporte rarement de la même manière cinq ans plus tard.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Actif en immobilier en Outaouais depuis 2017, j'ai représenté des acheteurs et vendeurs dans presque chacun des quartiers listés ci-dessous. Cela veut dire que je peux vous dire quelles rues inondent, lesquelles prennent le soleil du matin, quels secteurs s'embourgeoisent tranquillement, et où la prochaine vague d'investissements municipaux va probablement se déposer. C'est le genre de contexte qui n'apparaît pas dans une fiche Centris.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Utilisez les cartes ci-dessus pour explorer les quartiers individuellement, puis réservez une consultation pour qu'on identifie ensemble les deux ou trois secteurs réellement adaptés à vos critères de vie, pas seulement les plus googlés.
+        Parcourez les fiches ci-dessus, quartier par quartier, puis réservez une consultation. On choisira ensemble les deux ou trois secteurs adaptés à vos critères de vie plutôt que les plus connus.
       </p>
     </ContentBlock>
 
@@ -84,7 +84,7 @@ const NeighborhoodsOverviewPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — trouvez le bon secteur"
+      headline="Guide acheteur gratuit : trouvez le bon secteur"
       text="Tout ce qu'il faut savoir pour acheter à Gatineau, processus, budget et quartiers."
       ctaLabel="Recevoir le guide acheteur"
     />
@@ -94,7 +94,7 @@ const NeighborhoodsOverviewPage = () => (
     <CTASection
       dark
       title="Besoin d'aide pour choisir?"
-      text="Parlons de vos critères, je vous recommande les secteurs les plus adaptés à votre situation."
+      text="Parlons de vos critères, je vous recommande les secteurs qui correspondent à votre situation."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },

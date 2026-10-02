@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: "Cantley est-il adapté au télétravail?",
-    a: "Oui, et c'est d'ailleurs l'une des raisons pour lesquelles Cantley a attiré beaucoup de nouveaux résidents depuis 2020. La municipalité soutient activement l'expansion de la fibre optique sur son territoire. Pour les travailleurs en télétravail total ou partiel, Cantley offre un cadre de vie exceptionnel à un accès raisonnable de Gatineau et Ottawa.",
+    a: "Oui, et c'est l'une des raisons pour lesquelles Cantley a attiré beaucoup de nouveaux résidents depuis 2020. La municipalité soutient activement l'expansion de la fibre optique sur son territoire. Pour les gens en télétravail total ou partiel, Cantley offre la vie en nature, à une distance raisonnable de Gatineau et d'Ottawa.",
   },
 ];
 
@@ -34,17 +34,17 @@ const activites = [
   {
     icon: "⛷️",
     title: "Activités récréatives",
-    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du plus grand réseau de ski de fond de la région. La municipalité bénéficie d'un fort potentiel récréotouristique et travaille activement à l'offrir à ses résidents. (Source: Harmonie Construction, site Municipalité de Cantley)",
+    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du plus grand réseau de ski de fond de la région. La municipalité bénéficie d'un fort potentiel récréotouristique et travaille activement à l'offrir à ses résidents. (Source : Harmonie Construction, site Municipalité de Cantley)",
   },
   {
     icon: "🌊",
     title: "Nature et rivière",
-    text: "Cantley est délimitée par la rivière Gatineau à l'ouest. Le territoire est caractérisé par un relief vallonné typique des Collines-de-l'Outaouais, forêts, montées, panoramas. Entourée de forêts montagneuses, Cantley s'est officiellement positionnée comme une municipalité de « nature accueillante ». (Source: Municipalité de Cantley)",
+    text: "Cantley est délimitée par la rivière Gatineau à l'ouest. Le territoire est caractérisé par un relief vallonné typique des Collines-de-l'Outaouais, forêts, montées, panoramas. Entourée de forêts montagneuses, Cantley s'est officiellement positionnée comme une municipalité de « nature accueillante ». (Source : Municipalité de Cantley)",
   },
   {
     icon: "📡",
     title: "Fibre optique et télétravail",
-    text: "Cantley soutient activement l'expansion du réseau de fibre optique sur son territoire, ce qui facilite le télétravail. C'est un facteur qui a contribué à attirer des familles qui travaillent partiellement ou entièrement à distance. (Source: Harmonie Construction/Municipalité de Cantley)",
+    text: "Cantley soutient activement l'expansion du réseau de fibre optique sur son territoire, ce qui facilite le télétravail. C'est un facteur qui a contribué à attirer des familles qui travaillent partiellement ou entièrement à distance. (Source : Harmonie Construction/Municipalité de Cantley)",
   },
 ];
 
@@ -70,7 +70,7 @@ const CantleyPage = () => (
     />
     <ServiceJsonLd
       name="Courtier immobilier à Cantley"
-      description="Services de courtage immobilier à Cantley, Outaouais — maisons, terrains, propriétés familiales."
+      description="Services de courtage immobilier à Cantley, Outaouais : maisons, terrains, propriétés familiales."
       url="/cantley/"
       serviceType="Real Estate Brokerage"
       areaServed={["Cantley", "Outaouais"]}
@@ -79,8 +79,8 @@ const CantleyPage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="CANTLEY · OUTAOUAIS"
-      title="Courtier immobilier à Cantley — l'espace, à 13 km d'Ottawa"
-      subtitle="Cantley est à 13 kilomètres du centre-ville d'Ottawa. C'est une municipalité en pleine croissance, connue pour ses grands terrains, son développement résidentiel à faible densité, et sa qualité de vie familiale. Pour les familles qui veulent l'espace sans s'éloigner, Cantley est souvent la conclusion logique."
+      title="Courtier immobilier à Cantley, de l'espace à environ 20 km du centre-ville d'Ottawa"
+      subtitle="La municipalité se distingue par ses grands terrains et sa faible densité résidentielle. Pour les familles qui veulent de l'espace sans trop s'éloigner, Cantley est souvent la conclusion logique."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=cantley" }}
       heroBgImage={heroImg}
@@ -91,13 +91,13 @@ const CantleyPage = () => (
       <h2 className="mt-3">Cantley, des faits vérifiés sur cette municipalité en croissance</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Cantley est une municipalité de la MRC des Collines-de-l'Outaouais, à 13 kilomètres du centre-ville d'Ottawa. Sa population était de 11 449 habitants au recensement de 2021, en hausse de 7 % depuis 2016, une croissance soutenue qui témoigne de l'attrait constant du secteur. Le français est la langue maternelle de 86,7 % des résidents. (Source: Statistique Canada, Recensement 2021)
+          Cantley est une municipalité de la MRC des Collines-de-l'Outaouais, à environ 20 km du centre-ville d'Ottawa par la route. Sa population était de 11 449 habitants au recensement de 2021, en hausse de 7 % depuis 2016, une croissance soutenue qui témoigne de l'attrait constant du secteur. Le français est la langue maternelle de 86,7 % des résidents. (Source : Statistique Canada, Recensement 2021)
         </p>
         <p className="prose-body">
-          Cantley est reconnue comme une municipalité à faible densité résidentielle, c'est l'un de ses attraits principaux. Les règlements urbanistiques révisés en 2025 fixent la superficie minimale des lots dans le périmètre urbain à 5 000 m². Cela maintient le caractère semi-rural de la municipalité. (Source: Municipalité de Cantley, Plan d'urbanisme 2025)
+          Cantley est reconnue comme une municipalité à faible densité résidentielle, c'est l'un de ses attraits principaux. Les règlements urbanistiques révisés en 2025 fixent la superficie minimale des lots dans le périmètre urbain à 5 000 m². Cela maintient le caractère semi-rural de la municipalité. (Source : Municipalité de Cantley, Plan d'urbanisme 2025)
         </p>
         <p className="prose-body">
-          Cantley dispose de trois écoles primaires francophones : l'école Sainte-Élisabeth, l'école de la Rose-des-Vents, et l'école de l'Orée-des-Bois (ouverte en 2014). Pour le secondaire et les services spécialisés, les résidents se dirigent vers Gatineau. Le service de transport en commun Transcollines relie Cantley à Gatineau, avec correspondance vers le réseau de la STO. (Source: Municipalité de Cantley, Wikipedia)
+          Cantley dispose de trois écoles primaires francophones : l'école Sainte-Élisabeth, l'école de la Rose-des-Vents, et l'école de l'Orée-des-Bois (ouverte en 2014). Pour le secondaire et les services spécialisés, les résidents se dirigent vers Gatineau. Le service de transport en commun Transcollines relie Cantley à Gatineau, avec correspondance vers le réseau de la STO. (Source : Municipalité de Cantley, Wikipedia)
         </p>
       </div>
     </ContentBlock>
@@ -142,9 +142,9 @@ const CantleyPage = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Cantley est à 13 km du centre-ville d'Ottawa. Population en croissance de 7 % entre 2016 et 2021. (Source: Statistique Canada, Recensement 2021)",
-            "3 écoles primaires francophones sur le territoire, plus le service de transport Transcollines vers Ottawa et Gatineau. (Source: Municipalité de Cantley)",
-            "Lots résidentiels minimum de 5 000 m² dans le périmètre urbain, ce règlement maintient le caractère spacieux et semi-rural du secteur. (Source: Plan d'urbanisme 2025)",
+            "Par la route, l'hôtel de ville de Cantley est à environ 20 km du centre-ville d'Ottawa. Population en croissance de 7 % entre 2016 et 2021. (Source : Statistique Canada, Recensement 2021)",
+            "3 écoles primaires francophones sur le territoire, plus le service de transport Transcollines vers Ottawa et Gatineau. (Source : Municipalité de Cantley)",
+            "Lots résidentiels minimum de 5 000 m² dans le périmètre urbain, ce règlement maintient le caractère spacieux et semi-rural du secteur. (Source : Plan d'urbanisme 2025)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -161,7 +161,7 @@ const CantleyPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes — Cantley, Outaouais" items={faq} />
+    <FAQSection title="Questions fréquentes sur Cantley, Outaouais" items={faq} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
@@ -173,7 +173,7 @@ const CantleyPage = () => (
 
     <GuideInlineCTA
       guideType="buyer_guide"
-      headline="Guide acheteur gratuit — acheter à Cantley"
+      headline="Guide acheteur gratuit : acheter à Cantley"
       text="Processus, budget et conseils pour acheter dans le secteur, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide acheteur"
     />
