@@ -61,7 +61,7 @@
   },
   "/acheter-a-gatineau-depuis-ottawa": {
     "title": "Acheter à Gatineau depuis Ottawa · Guide | YGS",
-    "description": "Vous habitez Ottawa et voulez acheter à Gatineau ? Différences fiscales, hypothèques, marché — tout pour franchir la rivière sereinement.",
+    "description": "Vous habitez Ottawa et voulez acheter à Gatineau? Différences fiscales, hypothèques et marché : ce qu'il faut savoir avant de traverser la rivière.",
     "ogImage": "https://yanisgauthier.com/og/og-buyer.jpg"
   },
   "/relocalisation-ottawa-gatineau": {
@@ -80,8 +80,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/quartiers-a-considerer-a-gatineau": {
-    "title": "Quartiers de Gatineau : lequel choisir? Comparatif | YGS",
-    "description": "Aylmer, Hull, Plateau, Buckingham, Masson-Angers : prix médians, profil des familles, accès à Ottawa. Le comparatif secteur par secteur pour choisir.",
+    "title": "Quartiers de Gatineau : lequel choisir? Comparatif | YGS",
+    "description": "Aylmer, Hull, Plateau, Buckingham, Masson-Angers : prix médians, profil des familles, accès à Ottawa. Le comparatif secteur par secteur pour choisir.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/militaire-gatineau": {
@@ -125,28 +125,28 @@
     "ogImage": "https://yanisgauthier.com/og/og-market.jpg"
   },
   "/plateau-aylmer": {
-    "title": "Plateau de Aylmer · Quartier Gatineau | YGS",
-    "description": "Plateau de Aylmer : profil du quartier, prix, écoles, services, ambiance. Guide complet pour acheter ou vendre dans ce secteur recherché.",
+    "title": "Plateau et Aylmer · Quartiers de Gatineau | YGS",
+    "description": "Le Plateau et Aylmer : profil des quartiers, prix, écoles, services. Ce qu'il faut savoir pour acheter ou vendre dans l'ouest de Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/hull": {
     "title": "Courtier immobilier Hull · Gatineau | YGS",
-    "description": "Courtier immobilier Hull : marché du Vieux-Hull, condos, plex, proximité Ottawa. Acheter, vendre ou investir dans ce secteur central.",
+    "description": "Courtier immobilier Hull : marché du Vieux-Hull, condos, plex, proximité Ottawa. Acheter, vendre ou investir dans ce secteur central.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/buckingham-masson-angers": {
     "title": "Buckingham et Masson-Angers · Immobilier | YGS",
-    "description": "Immobilier à Buckingham et Masson-Angers : secteurs paisibles à l'est de Gatineau, maisons familiales, terrains, prix accessibles.",
+    "description": "Immobilier à Buckingham et Masson-Angers : secteurs paisibles à l'est de Gatineau, maisons familiales, terrains, prix accessibles.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/gatineau": {
     "title": "Courtier immobilier Gatineau-centre | YGS",
-    "description": "Courtier immobilier dans le secteur Gatineau-centre : marché, écoles, services. Acheter, vendre ou évaluer avec un courtier local.",
+    "description": "Courtier immobilier dans le secteur Gatineau-centre : marché, écoles, services. Acheter, vendre ou évaluer avec un courtier local.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/aylmer": {
     "title": "Courtier immobilier Aylmer · Gatineau | YGS",
-    "description": "Courtier immobilier Aylmer : marché actuel, secteurs, écoles, prix médians. Acheter, vendre ou faire évaluer votre propriété à Aylmer.",
+    "description": "Courtier immobilier Aylmer : marché actuel, secteurs, écoles, prix médians. Acheter, vendre ou faire évaluer votre propriété à Aylmer.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/plateau": {
@@ -156,37 +156,37 @@
   },
   "/chelsea": {
     "title": "Courtier immobilier Chelsea · Outaouais | YGS",
-    "description": "Courtier immobilier Chelsea : maisons de campagne, terrains boisés, proximité parc Gatineau. Marché et secteurs détaillés.",
+    "description": "Courtier immobilier Chelsea : maisons de campagne sur terrains boisés, près du parc de la Gatineau. Marché et secteurs détaillés.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/cantley": {
     "title": "Courtier immobilier Cantley · Outaouais | YGS",
-    "description": "Courtier immobilier Cantley : maisons sur grand terrain, ambiance rurale, accès rapide à Gatineau. Acheter ou vendre dans la région.",
+    "description": "Courtier immobilier Cantley : maisons sur grand terrain, ambiance rurale, accès rapide à Gatineau. Acheter ou vendre dans la région.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/val-des-monts": {
     "title": "Courtier immobilier Val-des-Monts | YGS",
-    "description": "Courtier immobilier Val-des-Monts : chalets, bord de l'eau, maisons familiales en nature. Marché et opportunités en Outaouais.",
+    "description": "Courtier immobilier Val-des-Monts : chalets et maisons familiales au bord de l'eau ou en nature, dans une municipalité qui compte plus de 125 lacs.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/masson-angers": {
     "title": "Courtier immobilier Masson-Angers · Gatineau | YGS",
-    "description": "Courtier immobilier Masson-Angers : secteur paisible, maisons familiales, terrains. Acheter ou vendre dans ce quartier de Gatineau.",
+    "description": "Courtier immobilier Masson-Angers : secteur paisible, maisons familiales, terrains. Acheter ou vendre dans ce quartier de Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/pontiac": {
     "title": "Courtier immobilier Pontiac · Outaouais | YGS",
-    "description": "Courtier immobilier MRC Pontiac : grandes propriétés, fermettes, bord de l'eau. Marché immobilier rural à l'ouest de Gatineau.",
+    "description": "Courtier immobilier à Pontiac (Luskville, Breckenridge, Quyon) : grandes propriétés et fermettes, dont certaines au bord de l'eau, à l'ouest de Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/cote-dazur-gatineau": {
-    "title": "Côte-d'Azur, Gatineau : maisons à vendre et prix | YGS",
-    "description": "Le quartier Côte-d'Azur à Gatineau : bungalows, prix médian du secteur, ce qui attire les familles, les premiers acheteurs et les retraités.",
+    "title": "Côte-d'Azur, Gatineau : maisons à vendre et prix | YGS",
+    "description": "Le quartier Côte-d'Azur à Gatineau : ses bungalows, le prix médian du secteur, les écoles et ce qui attire les familles comme les retraités.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/limbour": {
-    "title": "Limbour, Gatineau : prix, écoles, services du quartier | YGS",
-    "description": "Le quartier Limbour à Gatineau : prix médian du secteur, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre.",
+    "title": "Limbour, Gatineau : prix, écoles, services du quartier | YGS",
+    "description": "Le quartier Limbour à Gatineau : prix médian du secteur, écoles, parcs et services, accès à l'autoroute 50. Ce qu'il faut savoir avant d'acheter ou de vendre.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/ressources": {
@@ -201,17 +201,17 @@
   },
   "/vivre-a-aylmer": {
     "title": "Vivre à Aylmer · Guide du quartier | YGS",
-    "description": "Vivre à Aylmer : ambiance, écoles, services, restaurants, transport vers Ottawa. Guide complet pour découvrir ce secteur de Gatineau.",
+    "description": "Vivre à Aylmer : ambiance, écoles, services, restaurants, transport vers Ottawa. Le guide pour s'installer dans ce secteur de Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/vivre-a-hull": {
     "title": "Vivre à Hull · Guide du quartier | YGS",
-    "description": "Vivre à Hull : centre-ville dynamique, restaurants, parcs, accès Ottawa. Guide complet pour découvrir le secteur Hull de Gatineau.",
+    "description": "Vivre à Hull : vie urbaine, restaurants, parcs, accès à Ottawa. Le guide pour s'installer dans le secteur Hull de Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/vivre-dans-le-plateau": {
     "title": "Vivre dans le Plateau · Guide du quartier | Yanis Gauthier",
-    "description": "Vivre dans le Plateau à Gatineau : quartier familial à l'ouest du boulevard Saint-Raymond, en bordure du parc de la Gatineau, avec écoles et parcs à proximité.",
+    "description": "Vivre dans le Plateau à Gatineau : quartier familial à l'ouest du boulevard Saint-Raymond, en bordure du parc de la Gatineau, avec écoles et parcs à proximité.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/faq": {
@@ -241,7 +241,7 @@
   },
   "/courtier-immobilier-outaouais": {
     "title": "Courtier immobilier Outaouais · YGS",
-    "description": "Courtier immobilier en Outaouais : Gatineau, Aylmer, Hull, Chelsea, Cantley, Pontiac. Service complet pour vendre, acheter ou investir.",
+    "description": "Courtier immobilier en Outaouais : Gatineau, Aylmer, Hull, Chelsea, Cantley, Pontiac. Service complet pour vendre, acheter ou investir.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/vendre-maison-hull": {
@@ -361,7 +361,7 @@
   },
   "/en/buy-from-ottawa": {
     "title": "Buy in Gatineau from Ottawa · Guide | YGS",
-    "description": "Live in Ottawa and want to buy in Gatineau? Tax differences, mortgages, market — everything to cross the river smoothly.",
+    "description": "Live in Ottawa and want to buy in Gatineau? Tax differences, mortgages and the market: what to know before you cross the river.",
     "ogImage": "https://yanisgauthier.com/og/og-buyer.jpg"
   },
   "/en/relocation": {
@@ -425,8 +425,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-market.jpg"
   },
   "/en/plateau-aylmer": {
-    "title": "Plateau de Aylmer · Gatineau neighborhood | YGS",
-    "description": "Plateau de Aylmer: neighborhood profile, prices, schools, services, vibe. Complete guide to buy or sell in this sought-after area.",
+    "title": "Plateau and Aylmer · Gatineau neighbourhoods | YGS",
+    "description": "The Plateau and Aylmer: neighbourhood profiles, prices, schools, services. What to know before you buy or sell in Gatineau's west end.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/hull": {
@@ -456,7 +456,7 @@
   },
   "/en/chelsea": {
     "title": "Real Estate Broker Chelsea · Outaouais | YGS",
-    "description": "Real estate broker Chelsea: country homes, wooded lots, proximity to Gatineau Park. Detailed market and areas.",
+    "description": "Real estate broker Chelsea: country homes on wooded lots, close to Gatineau Park. Detailed market and areas.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/cantley": {
@@ -466,22 +466,22 @@
   },
   "/en/val-des-monts": {
     "title": "Real Estate Broker Val-des-Monts | YGS",
-    "description": "Real estate broker Val-des-Monts: cottages, waterfront, family homes in nature. Market and opportunities in Outaouais.",
+    "description": "Real estate broker Val-des-Monts: cottages and family homes on the water or in nature, in a municipality with over 125 lakes.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/masson-angers": {
     "title": "Real Estate Broker Masson-Angers · Gatineau | YGS",
-    "description": "Real estate broker Masson-Angers: peaceful area, family homes, lots. Buy or sell in this Gatineau neighborhood.",
+    "description": "Real estate broker Masson-Angers: peaceful area, family homes, lots. Buy or sell in this Gatineau neighbourhood.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/pontiac": {
     "title": "Real Estate Broker Pontiac · Outaouais | YGS",
-    "description": "Real estate broker MRC Pontiac: large properties, hobby farms, waterfront. Rural real estate market west of Gatineau.",
+    "description": "Real estate broker in Pontiac (Luskville, Breckenridge, Quyon): large properties and hobby farms, some on the waterfront, in a rural market west of Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/cote-dazur": {
     "title": "Côte-d'Azur, Gatineau: Homes for Sale and Prices | YGS",
-    "description": "The Côte-d'Azur neighbourhood in Gatineau: bungalows, median prices, schools, and why families, first-time buyers and retirees pick it.",
+    "description": "The Côte-d'Azur neighbourhood in Gatineau: bungalows, median prices, schools and what draws families as well as retirees.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/limbour": {
@@ -500,13 +500,13 @@
     "ogImage": "https://yanisgauthier.com/og/og-blog.jpg"
   },
   "/en/living-aylmer": {
-    "title": "Living in Aylmer · Neighborhood guide | YGS",
-    "description": "Living in Aylmer: vibe, schools, services, restaurants, transit to Ottawa. Complete guide to discover this Gatineau area.",
+    "title": "Living in Aylmer · Neighbourhood guide | YGS",
+    "description": "Living in Aylmer: vibe, schools, services, restaurants, transit to Ottawa. A guide to settling in this Gatineau area.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/living-hull": {
-    "title": "Living in Hull · Neighborhood guide | YGS",
-    "description": "Living in Hull: vibrant downtown, restaurants, parks, Ottawa access. Complete guide to discover the Hull area of Gatineau.",
+    "title": "Living in Hull · Neighbourhood guide | YGS",
+    "description": "Living in Hull: city life, restaurants, parks, Ottawa access. A guide to settling in the Hull area of Gatineau.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/living-plateau": {

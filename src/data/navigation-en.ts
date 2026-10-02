@@ -37,9 +37,9 @@ export const mainNavEn: NavItem[] = [
     ],
   },
   {
-    label: "Neighborhoods",
+    label: "Neighbourhoods",
     children: [
-      { label: "All Neighborhoods", href: "/en/neighborhoods/" },
+      { label: "All Neighbourhoods", href: "/en/neighborhoods/" },
       { label: "Aylmer", href: "/en/aylmer/" },
       { label: "Hull", href: "/en/hull/" },
       { label: "Plateau", href: "/en/plateau/" },
@@ -85,7 +85,7 @@ export const footerColumnsEn = [
     ],
   },
   {
-    title: "Neighborhoods",
+    title: "Neighbourhoods",
     links: [
       { label: "Aylmer", href: "/en/aylmer/" },
       { label: "Hull", href: "/en/hull/" },
@@ -99,7 +99,7 @@ export const footerColumnsEn = [
       { label: "Limbour", href: "/en/limbour/" },
       { label: "Val-des-Monts", href: "/en/val-des-monts/" },
       { label: "Côte-d'Azur", href: "/en/cote-dazur/" },
-      { label: "All Neighborhoods", href: "/en/neighborhoods/" },
+      { label: "All Neighbourhoods", href: "/en/neighborhoods/" },
     ],
   },
   {
