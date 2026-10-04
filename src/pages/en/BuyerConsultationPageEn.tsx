@@ -23,7 +23,7 @@ import heroImg from "@/assets/hero-buyer-consultation.webp";
 
 const benefits = [
   "Personalized discussion about your criteria and priorities",
-  "Overview of neighborhoods suited to your profile",
+  "Overview of neighbourhoods suited to your profile",
   "Explanation of the buying process in Québec",
   "Current market reading and prices by area",
   "Clear next steps, no commitment",
@@ -32,18 +32,18 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Confidential consultation" },
   { icon: Clock, text: "Personalized response" },
-  { icon: Shield, text: "No obligation, no commitment" },
+  { icon: Shield, text: "No commitment" },
 ];
 
 const afterSteps = [
-  { title: "Explore neighborhoods", text: "Compare Gatineau neighborhoods based on your lifestyle, budget and priorities.", href: "/en/neighborhoods", cta: "See neighborhoods", highlight: true },
+  { title: "Compare neighbourhoods", text: "Gatineau neighbourhoods by budget and lifestyle.", href: "/en/neighborhoods", cta: "See neighbourhoods", highlight: true },
   { title: "Buyer guide", text: "The buying process in Québec explained simply, from search to notary.", href: "/en/buyer-guide", cta: "Read the guide" },
 ];
 
 const faq = [
-  { q: "How much does the consultation cost?", a: "It's free and no commitment. The goal is to understand your situation and see if I can help." },
-  { q: "How long does the consultation last?", a: "About 20-30 minutes. We cover your criteria, the current market and next steps." },
-  { q: "I'm not ready to buy yet, is it still useful?", a: "Absolutely. Most buyers start by gathering information. The better you understand the market, the better your decision will be." },
+  { q: "How much does the consultation cost?", a: "It is free, with no commitment. The goal is to understand your situation and see if I can help." },
+  { q: "How long does the consultation last?", a: "Usually 20 to 30 minutes. We go over your criteria and the current market, then set the next steps." },
+  { q: "I'm not ready to buy yet. Is it still useful?", a: "Yes. Starting early gives you time to understand the market and your budget before you search. When the time comes, you decide faster and with more confidence." },
 ];
 
 const BuyerConsultationPageEn = () => {
@@ -76,14 +76,14 @@ const BuyerConsultationPageEn = () => {
 
   return (
     <>
-      <PageMeta title="Buyer Consultation — Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and options with an experienced broker." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <ServiceJsonLd name="Free Buyer Consultation — Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and neighbourhood options with an experienced broker." url="/en/buyer-consultation" serviceType="Real Estate Buyer Consultation" />
+      <PageMeta title="Buyer Consultation · Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and options with an experienced broker." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
+    <ServiceJsonLd name="Free Buyer Consultation in Gatineau" description="Free buyer consultation in Gatineau. Clarify your criteria, budget and neighbourhood options with an experienced broker." url="/en/buyer-consultation" serviceType="Real Estate Buyer Consultation" />
       <HeroSection
         compact
         overline="Buyer consultation · Gatineau"
         title="Book your free buyer consultation"
-        subtitle="Let's discuss your criteria, budget and questions, so you can buy with confidence."
-        trustLine="Free, confidential and no commitment."
+        subtitle="We talk about your criteria and your budget, so you can buy with confidence."
+        trustLine="Free, with no commitment."
         heroBgImage={heroImg}
       />
 
@@ -100,7 +100,7 @@ const BuyerConsultationPageEn = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Book your consultation</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Tell me what you're looking for, I'll get back to you with a personalized plan.
+                  Tell me what you're looking for. I'll get back to you with a personalized plan.
                 </p>
 
                 {submitted ? (
@@ -133,9 +133,9 @@ const BuyerConsultationPageEn = () => {
                           <SelectTrigger id="budget" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="300">Under $300,000</SelectItem>
-                            <SelectItem value="400">$300,000 - $400,000</SelectItem>
-                            <SelectItem value="500">$400,000 - $500,000</SelectItem>
-                            <SelectItem value="600">$500,000 - $600,000</SelectItem>
+                            <SelectItem value="400">$300,000 to $400,000</SelectItem>
+                            <SelectItem value="500">$400,000 to $500,000</SelectItem>
+                            <SelectItem value="600">$500,000 to $600,000</SelectItem>
                             <SelectItem value="700">$600,000 and up</SelectItem>
                           </SelectContent>
                         </Select>
@@ -170,15 +170,15 @@ const BuyerConsultationPageEn = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Questions or details (optional)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighborhood, questions…" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighbourhood, questions" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
                       <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">The more details you share, the more useful our meeting will be.</p>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
-                      {submitting ? "Sending…" : "Book my consultation"}
+                      {submitting ? "Sending" : "Book my consultation"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Free and no commitment, I help you see more clearly.
+                      Free, with no commitment. I help you see more clearly.
                     </p>
                   </form>
                 )}
@@ -222,8 +222,8 @@ const BuyerConsultationPageEn = () => {
 
       <FunnelNextStep
         overline="In the meantime"
-        title="Explore while waiting for your consultation"
-        subtitle="Get familiar with the market and Gatineau neighborhoods."
+        title="Worth reading before your consultation"
+        subtitle="Get familiar with the market and Gatineau neighbourhoods."
         steps={afterSteps}
         background="alt"
       />

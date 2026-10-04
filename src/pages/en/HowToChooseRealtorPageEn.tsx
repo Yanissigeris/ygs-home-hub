@@ -10,21 +10,22 @@ import heroImg from "@/assets/hero-comment-choisir.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "How do I choose the right realtor?", a: "Look for local expertise, a clear communication style, a proven marketing strategy, and strong negotiation skills. Ask for references and check their track record in your area." },
-  { q: "What questions should I ask a realtor?", a: "How well do you know my neighbourhood? What's your marketing strategy? How do you communicate? What's your track record? Can I see recent sales?" },
-  { q: "Is local experience important for a realtor?", a: "Absolutely. A broker who knows the neighbourhoods, the market, and the buyers in your area can price more accurately and sell faster." },
-  { q: "Should I interview multiple realtors?", a: "Yes, meeting 2-3 brokers gives you a good basis for comparison. Look beyond the commission rate and evaluate the overall service and strategy." },
-  { q: "How do I verify a realtor's credentials?", a: "You can verify any broker's licence and standing on the OACIQ registry. This ensures they are legally authorized to practice." },
-  { q: "What's the difference between a realtor and a broker?", a: "In Quebec, real estate professionals are called 'courtiers immobiliers' (brokers). They must hold an OACIQ licence. The term 'realtor' is used more broadly in English Canada." },
-  { q: "Does a higher commission mean better service?", a: "Not automatically. What matters is the strategy, the services included, the local knowledge, and the results achieved for past clients." },
-  { q: "Can I change realtors if I'm not satisfied?", a: "The brokerage contract has specific terms. Discuss expectations upfront. If issues arise, communicate with your broker first, most situations can be resolved." },
+  { q: "How do I choose the right realtor?", a: "Compare their knowledge of your area, their pricing strategy, how they communicate and how open they are about fees. Choose the one who gives you a clear plan backed by comparable sales." },
+  { q: "Should I always choose the broker who suggests the highest price?", a: "No. An inflated price meant to win your listing can leave the property sitting on the market and lead to price reductions. Ask instead for a price backed by recent comparable sales in your area." },
+  { q: "How many brokers should I meet?", a: "Meeting two or three is good practice. Compare their strategy and transparency, in addition to the commission they ask." },
+  { q: "How do I check that a broker is in good standing?", a: "Search the OACIQ register of licence holders on oaciq.com. It shows whether the licence is valid, suspended or subject to conditions. The register also shows whether the broker has faced disciplinary measures. The decisions themselves are published free on citoyens.soquij.qc.ca." },
+  { q: "Is a local broker an advantage?", a: "Often, yes. A broker who knows your neighbourhood understands comparable sales and what local buyers expect. That helps them set a fair price and defend it in negotiation." },
+  { q: "What questions should I ask a broker before signing?", a: "Ask: What is your pricing strategy? How will you market my property? What is your commission? How do you communicate with clients? Can you show me recent results?" },
+  { q: "Is the cheapest broker the best choice?", a: "Not necessarily. What counts is your net result: a higher sale price can offset a slightly higher commission. The commission is negotiated before the brokerage contract is signed." },
+  { q: "Can I change brokers if it isn't working?", a: "The brokerage contract sets its term and the conditions for ending it. If you are an individual and the residential property has fewer than 5 units, you can also cancel it at no cost within 3 days of receiving your signed copy. Read that clause with the broker before signing. If a problem comes up, talk to the broker first, then to the agency's executive officer if needed." },
+  { q: "What's the difference between a realtor and a broker?", a: "REALTOR® is a trademark of the Canadian Real Estate Association that identifies its members. In Quebec, the licensed professional is the real estate broker (courtier immobilier), who must hold an OACIQ licence." },
 ];
 
 const HowToChooseRealtorPageEn = () => (
   <>
     <PageMeta
       title="How to Choose a Realtor in Quebec"
-      description="Essential criteria for choosing the right real estate broker in Quebec. Checklist, tips, and what to look for when selecting a realtor in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
+      description="Criteria for choosing the right real estate broker in Quebec. Checklist, tips, and what to look for when selecting a realtor in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
@@ -36,22 +37,24 @@ const HowToChooseRealtorPageEn = () => (
         >
           <h1 className="text-primary-foreground">How to choose a realtor in Quebec</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            Choosing the right broker is one of the most important decisions in your real estate journey. Here's what to look for.
+            A good broker gives you a clear plan and a price backed by comparable sales. This guide helps you compare brokers on concrete criteria.
           </p>
         </motion.div>
       </div>
     </section>
 
     <ContentBlock narrow>
-      <SectionHeading overline="Checklist" title="What to evaluate in a realtor" />
+      <SectionHeading overline="Checklist" title="8 criteria for choosing your broker" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Local knowledge", text: "Do they know your neighbourhood, comparable sales, and buyer profiles in your area?" },
-          { title: "Communication style", text: "Are they responsive, clear, and proactive? You'll want regular updates throughout the process." },
-          { title: "Marketing strategy", text: "Professional photos, virtual tours, MLS optimization, social media, what's their plan to attract buyers?" },
-          { title: "Negotiation skills", text: "How do they handle multiple offers? What's their approach to getting you the best price?" },
-          { title: "Track record", text: "Ask for recent sales in your area. Look at average days on market and list-to-sale price ratios." },
-          { title: "Trust and transparency", text: "A good broker explains everything upfront, fees, process, timeline, and realistic expectations." },
+          { title: "Local knowledge", text: "Does the broker know your neighbourhood and recent sales near you?" },
+          { title: "Clear communication", text: "Are they easy to reach, and do they answer clearly? Do you feel heard?" },
+          { title: "Pricing strategy", text: "Do they propose a price backed by comparable sales, or an inflated number to win your listing?" },
+          { title: "Marketing plan", text: "Do they have a concrete plan for your property: photos, virtual tour, online exposure, targeted advertising?" },
+          { title: "Negotiation", text: "Do they have the experience to defend your interests with buyers and their brokers?" },
+          { title: "Transparency", text: "Do they clearly explain their commission, the costs, the process and what to expect?" },
+          { title: "Verifiable results", text: "Can they show you recent sales and client testimonials?" },
+          { title: "Personal trust", text: "Beyond skills, is this someone you trust for a transaction this important?" },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -62,42 +65,42 @@ const HowToChooseRealtorPageEn = () => (
     </ContentBlock>
 
     <InlineCTA
-      text="Want to see if we're a good fit? Let's talk, no commitment required."
-      buttonLabel="Book a consultation →"
+      text="Looking for a local broker in the Outaouais? Let's talk about your project."
+      buttonLabel="Talk to Yanis →"
       href="/en/contact/"
     />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Advice" title="Common mistakes when choosing a broker" />
+      <SectionHeading overline="Advice" title="Two pitfalls to avoid, and one key question" />
       <p className="prose-body mt-5">
-        Many people choose a broker based on commission alone. While cost matters, the most important factor is your <strong>net result</strong>, the price you actually receive minus all costs. A skilled broker often achieves a higher sale price that more than compensates for a slightly higher fee.
+        The first pitfall is choosing on commission alone. What counts is your <strong>net result</strong>, the price you receive minus all costs. The second is choosing the broker who quotes the highest price, since some estimates are inflated to win the listing.
       </p>
       <p className="prose-body mt-4">
-        Also avoid choosing based on the highest estimated price. Some brokers inflate valuations to win the listing. A trustworthy broker gives you a realistic, data-backed assessment from the start.
+        Beyond the checklist, one question remains: <strong>do I trust this person to defend my interests?</strong> A good broker listens and gives you straight answers, even when they are not the ones you hoped for.
       </p>
     </ContentBlock>
 
     <RelatedPages
-      overline="Explore"
+      overline="Keep reading"
       title="Related pages"
       pages={[
         { title: "Verify a broker (OACIQ)", text: "How to check a broker's licence.", href: "/en/oaciq-find-a-broker/" },
         { title: "How much does a realtor cost?", text: "Understanding compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
         { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell/" },
-        { title: "About Yanis", text: "Experience, approach, and contact.", href: "/en/contact/" },
+        { title: "Contact", text: "Discuss your project.", href: "/en/contact/" },
       ]}
       background="alt"
     />
 
     <CTASection
       dark
-      title="Ready to find the right broker?"
-      text="Let's discuss your project. I'll explain my approach, my strategy for your property, and what to expect, transparently."
+      title="Want to meet a local broker?"
+      text="Let's discuss your project and your options, with no commitment."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="Local expertise, honest advice, no pressure."
+      trustLine="Over 9 years in the Outaouais · Transparent from the start."
     />
 
     <FAQSection items={faq} />

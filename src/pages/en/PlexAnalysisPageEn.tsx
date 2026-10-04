@@ -21,8 +21,8 @@ import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
   "Current market value estimate of your plex",
-  "Rental revenue vs actual expense analysis",
-  "Rent optimization potential",
+  "Analysis of rental income and expenses",
+  "Rent adjustment potential, under TAL rules",
   "Recommendation: hold, sell or refinance",
   "Concrete next steps, no commitment",
 ];
@@ -30,13 +30,13 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Strictly confidential information" },
   { icon: Clock, text: "Personalized response" },
-  { icon: Shield, text: "No obligation, no commitment" },
+  { icon: Shield, text: "No commitment" },
 ];
 
 const faq = [
-  { q: "What's included in the plex analysis?", a: "Estimated market value, revenue and expense analysis, rental potential, and a strategic recommendation tailored to your situation." },
-  { q: "Is it really free?", a: "Yes. The goal is to help you make an informed decision. If you decide to move forward, we discuss it, but full transparency." },
-  { q: "I'm not sure I want to sell, is it still useful?", a: "Absolutely. Many owners simply want to understand their position before deciding. That's exactly what this service is for." },
+  { q: "What's included in the plex analysis?", a: "A market value estimate, an analysis of income and expenses, the rental potential and a recommendation tailored to your situation." },
+  { q: "Is the analysis free?", a: "Yes. The goal is to help you make an informed decision. If you then decide to move forward, we discuss the terms openly, with no pressure." },
+  { q: "I'm not sure I want to sell. Is it still useful?", a: "Yes. Understanding your position before deciding is exactly what this analysis is for. You remain free to hold, sell or refinance." },
 ];
 
 const PlexAnalysisPageEn = () => {
@@ -70,13 +70,13 @@ const PlexAnalysisPageEn = () => {
   return (
     <>
       <PageMeta title="Request a plex analysis in Gatineau | YGS" description="Request a personalized analysis of your Gatineau plex: value, income, expenses and options suited to your goals. No obligation." ogImage="https://yanisgauthier.com/og/og-plex.jpg" />
-    <ServiceJsonLd name="Plex Analysis in Gatineau" description="Free plex analysis in Gatineau — yield, revenue, expenses and potential by sector in Outaouais." url="/en/plex-analysis" serviceType="Real Estate Investment Analysis" />
+    <ServiceJsonLd name="Plex Analysis in Gatineau" description="Free plex analysis in Gatineau: yield, revenue, expenses and potential by area in the Outaouais." url="/en/plex-analysis" serviceType="Real Estate Investment Analysis" />
       <HeroSection
         compact
         overline="Free Plex Analysis · Gatineau"
         title="Get a clear analysis of your plex"
-        subtitle="Value, revenues, expenses, potential — I give you an objective reading of your investor situation."
-        trustLine="A useful analysis, to help you decide with full knowledge."
+        subtitle="Value, revenues, expenses, potential: I give you an objective reading of your investor situation."
+        trustLine="A useful analysis to help you make an informed decision."
         heroBgImage={heroImg}
       />
 
@@ -93,13 +93,13 @@ const PlexAnalysisPageEn = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Request your plex analysis</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  I'll get back to you personally with a complete analysis, not a generic report.
+                  I prepare your analysis personally, based on your building's numbers.
                 </p>
 
                 {submitted ? (
                   <SuccessMessage
                     title="Thank you! Request sent."
-                    text="I'll get back to you with a personalized response and your analysis."
+                    text="I'll send you a personalized response with your analysis."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
@@ -170,14 +170,14 @@ const PlexAnalysisPageEn = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Additional notes (optional)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Context, questions, relevant details…" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Context, questions, relevant details" />
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" disabled={submitting} className="w-full mt-2 shadow-md font-semibold">
-                      {submitting ? "Sending…" : "Get my plex analysis"}
+                      {submitting ? "Sending" : "Get my plex analysis"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      I give you the numbers and the options, you decide with full clarity.
+                      I give you the numbers and the options. You decide.
                     </p>
                   </form>
                 )}

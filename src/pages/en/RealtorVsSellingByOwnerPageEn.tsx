@@ -10,21 +10,21 @@ import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your experience, time availability, and risk tolerance. A broker provides visibility, negotiation, and full management, selling privately saves on commission but involves more work and risk." },
-  { q: "How much can I save selling without a realtor?", a: "In theory, you save the commission. In practice, private sales often close at a lower price, which can offset the savings. MLS access and marketing reach are also reduced." },
-  { q: "Is it legal to sell by owner in Quebec?", a: "Yes, private sales are legal in Quebec. The seller is still bound by the legal warranty of quality and must disclose what they know about the property. The OACIQ Declarations by the seller form is mandatory when a broker is involved." },
-  { q: "What are the risks of selling without a broker?", a: "Underpricing, poor negotiation, documentation errors, limited exposure, potential legal disputes, and significant stress." },
-  { q: "Can a broker actually sell for more?", a: "A broker can help you get a better price through pricing based on comparable sales, MLS exposure and negotiation. The result always depends on the property and the market." },
-  { q: "What services does a broker provide vs selling alone?", a: "Professional valuation, MLS listing, photos, marketing, showing management, negotiation, offer drafting, and notary coordination. Alone, you handle everything yourself." },
-  { q: "How do I decide if I need a broker?", a: "If you have the time, legal knowledge, and ability to negotiate firmly, private sale is an option. Otherwise, a broker can improve your result and peace of mind." },
-  { q: "Do buyers prefer sellers who have a broker?", a: "Many buyers (and their brokers) prefer working with a listing broker because it simplifies negotiation and reduces misunderstandings." },
+  { q: "Is it better to sell with a realtor or by owner?", a: "It depends on your available time and how comfortable you are negotiating. A broker handles the marketing, showings, negotiation and paperwork. Selling privately avoids the commission, but all that work falls on you." },
+  { q: "How much can I save selling without a broker?", a: "You save the commission and the taxes added to it. However, a poorly set asking price or a difficult negotiation can reduce those savings. Without a broker, you have no access to Centris, which limits the reach of your listing." },
+  { q: "Is it legal to sell by owner in Quebec?", a: "Yes, selling without a broker is legal in Quebec, whether through a platform like DuProprio or a simple sign on the lawn. The seller is still bound by the legal warranty of quality, unless it is excluded in the deed, and must tell the buyer what they know about the property. With a broker, the OACIQ Declarations by the seller form is mandatory when the seller is an individual and the residential property has fewer than 5 units, condos included." },
+  { q: "What are the risks of selling without a broker?", a: "Underpricing, negotiating without experience, paperwork errors or limited exposure for the listing. These mistakes can lead to disputes. A broker helps you reduce these risks." },
+  { q: "Can a broker sell for more?", a: "A broker can help you get a higher price through pricing based on comparable sales, Centris exposure and negotiation. The result always depends on the property and the market." },
+  { q: "What services does a broker provide compared with selling on your own?", a: "Price analysis, Centris listing, photos, marketing, showing management, negotiation, offer drafting and notary coordination. Alone, you handle everything yourself. The notary stays neutral: they prepare and receive the deed of sale, without negotiating for you." },
+  { q: "How do I decide if I need a broker?", a: "If you have time and a good grasp of the paperwork and the seller's obligations, a private sale is an option. Otherwise, a broker handles each step and helps you defend your price." },
+  { q: "Do buyers prefer sellers who have a broker?", a: "It depends on the buyer. Some buyer's brokers prefer dealing with a listing broker, who already has the seller's declarations and documents in hand. A buyer with a broker can still buy a property sold by owner, depending on the agreement on their broker's compensation." },
 ];
 
 const RealtorVsSellingByOwnerPageEn = () => (
   <>
     <PageMeta
       title="Realtor vs Selling by Owner in Quebec"
-      description="Honest comparison between selling with a realtor or by owner in Quebec. Advantages, risks, and what works best for your situation in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
+      description="Selling with a realtor or by owner in Quebec: advantages, risks, seller obligations and net result, to decide based on your situation in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
@@ -36,7 +36,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
         >
           <h1 className="text-primary-foreground">Realtor vs selling by owner in Quebec</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            Both options are legitimate. Here's an honest comparison to help you make the right choice for your situation.
+            Both options are legitimate. This comparison helps you choose for your situation, with the advantages and risks on each side.
           </p>
         </motion.div>
       </div>
@@ -46,12 +46,12 @@ const RealtorVsSellingByOwnerPageEn = () => (
       <SectionHeading overline="Comparison" title="The advantages of each option" />
       <div className="mt-5 grid gap-6 md:grid-cols-2">
         <div>
-          <h3 className="text-[1rem] font-semibold mb-3">With a realtor</h3>
+          <h3 className="text-[1rem] font-semibold mb-3">With a broker</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ MLS access and maximum visibility</li>
-            <li>✓ Data-driven pricing strategy</li>
+            <li>✓ Centris listing</li>
+            <li>✓ Price backed by comparable sales</li>
             <li>✓ Professional photos and targeted marketing</li>
-            <li>✓ Expert negotiation and legal protection</li>
+            <li>✓ Negotiation and OACIQ-regulated forms</li>
             <li>✓ Full coordination through to closing</li>
           </ul>
         </div>
@@ -60,7 +60,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
             <li>✓ No commission to pay</li>
             <li>✓ Full control of the process</li>
-            <li>✗ Reduced visibility (no MLS)</li>
+            <li>✗ No access to Centris (MLS)</li>
             <li>✗ Risk of underpricing</li>
             <li>✗ Full management on your shoulders</li>
           </ul>
@@ -69,17 +69,17 @@ const RealtorVsSellingByOwnerPageEn = () => (
     </ContentBlock>
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Reality" title="What you really need to consider" />
+      <SectionHeading overline="Reality" title="What to consider" />
       <p className="prose-body mt-5">
-        The question isn't just "how much can I save?" but rather "what will my net result be?" A skilled broker can often achieve a sale price that more than compensates for the commission, especially in a market like Gatineau.
+        The question isn't just "how much can I save?" but "how much will I keep?" If a broker gets a higher price, part or all of the commission can be offset. It depends on the property and the market.
       </p>
       <p className="prose-body mt-4">
-        Private sales can work if you have the time, knowledge, and negotiation skills. But for most sellers, a local professional reduces stress, risk, and time on market.
+        A private sale can work if you have time and are comfortable negotiating. In other cases, a local broker handles each step and reduces the risk of errors in the paperwork.
       </p>
     </ContentBlock>
 
     <InlineCTA
-      text="Curious about your property's value? Get a personalized response and a free estimate."
+      text="Curious about your property's value? Get a free valuation, with a personalized response within 24 hours maximum."
       buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
@@ -88,10 +88,10 @@ const RealtorVsSellingByOwnerPageEn = () => (
       <SectionHeading overline="Risks" title="Risks of selling without a broker" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Underpricing", text: "Without access to comparables and market analysis, you risk undervaluing your property." },
-          { title: "Limited exposure", text: "Without MLS, your property reaches far fewer potential buyers." },
+          { title: "Underpricing", text: "Without an analysis of comparable sales, you risk setting the price too low." },
+          { title: "Limited exposure", text: "Without Centris, your listing does not appear in the tool brokers use to search for properties with their clients." },
           { title: "Direct negotiation", text: "Negotiating alone against a buyer (or their broker) can be disadvantageous without experience." },
-          { title: "Administrative errors", text: "Real estate documentation is complex, a mistake can lead to costly disputes." },
+          { title: "Administrative errors", text: "Real estate documentation is complex. A mistake can lead to costly disputes." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -102,7 +102,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     </ContentBlock>
 
     <RelatedPages
-      overline="Explore"
+      overline="Keep reading"
       title="Related pages"
       pages={[
         { title: "How much does a realtor cost?", text: "Guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
@@ -116,7 +116,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
     <CTASection
       dark
       title="Still deciding?"
-      text="Let's discuss your situation, no commitment. I'll help you understand your options and make the best decision."
+      text="Let's discuss your situation, with no commitment. I give you the numbers and the options. You decide."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },

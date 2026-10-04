@@ -10,14 +10,15 @@ import heroImg from "@/assets/hero-combien-courtier.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "How much does a realtor cost in Quebec?", a: "In Quebec, the broker's compensation is typically a percentage of the sale price, agreed upon before listing. There is no fixed rate, every arrangement is negotiated between the seller and their broker." },
-  { q: "Who pays the realtor's commission?", a: "In practice, the seller pays the listing broker's compensation. Buyers generally do not pay a commission directly." },
-  { q: "Is the commission negotiable?", a: "Yes. The OACIQ does not regulate commission rates, the compensation is freely agreed between the parties in the brokerage contract." },
-  { q: "What services are included in the commission?", a: "Price evaluation, marketing strategy, professional photos, showings, negotiation, and coordination through to closing with the notary." },
-  { q: "Is a realtor more expensive than selling privately?", a: "A broker involves a cost, but they can also maximize your sale price through better exposure, a data-driven pricing strategy and professional negotiation." },
-  { q: "Are there hidden fees with a realtor?", a: "No, everything must be clearly stated in the brokerage contract. A good broker explains all costs (commission, notary, location certificate) upfront." },
-  { q: "How much does it cost to buy with a realtor?", a: "Buyers generally do not pay a commission directly. The collaborating broker's compensation is covered through the seller's listing agreement." },
-  { q: "How do I know if the commission is fair?", a: "Compare services offered, local experience, and proposed strategy. The lowest price isn't always the best choice, what matters is your net result." },
+  { q: "How much does a realtor cost in Quebec?", a: "There is no fixed rate. The compensation is negotiated between the seller and the broker, then written into the brokerage contract before listing. It usually takes the form of a percentage of the sale price." },
+  { q: "Who pays the broker's commission?", a: "In practice, the seller pays the listing broker's compensation, out of the sale proceeds. Buyers generally do not pay a commission directly." },
+  { q: "Is the commission negotiable?", a: "Yes. The OACIQ does not set any commission rate. The amount is freely agreed between the seller and their broker, then written into the brokerage contract." },
+  { q: "What services are included in the commission?", a: "Usually: price evaluation, marketing, photos, showings, negotiation and coordination through to the notary. The details vary from one broker to another. Ask for the exact list before you sign." },
+  { q: "Is a broker more expensive than selling privately?", a: "Selling privately avoids the commission. With a broker, you pay for the Centris listing, an analysis of comparable sales, negotiation and follow-up through to the notary. Compare the likely net proceeds of both options." },
+  { q: "Are there hidden fees with a broker?", a: "Everything you pay the broker must be set out in the brokerage contract. A serious broker also walks you through the other costs before you start (taxes on the commission, certificate of location, mortgage discharge at the notary, any mortgage prepayment penalty)." },
+  { q: "Is the commission taxable?", a: "Yes, in general. GST (5%) and QST (9.975%) are added to the broker's compensation, for a total of 14.975%. Check in the brokerage contract whether the agreed amount is stated before or after taxes." },
+  { q: "How much does it cost to buy with a broker?", a: "In general, buyers do not pay a commission directly. In most cases, the buyer's broker is paid out of the compensation set on the seller's side. If you sign a buyer brokerage contract, read its compensation clause first." },
+  { q: "How do I know if the commission is fair?", a: "Compare the services included and the plan proposed for your property. The lowest rate does not always produce the highest net proceeds. Ask for a written estimate of what you will keep after costs." },
 ];
 
 const HowMuchRealtorCostPageEn = () => (
@@ -36,7 +37,7 @@ const HowMuchRealtorCostPageEn = () => (
         >
           <h1 className="text-primary-foreground">How much does a realtor cost in Quebec?</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            Realtor compensation is one of the first questions sellers ask. Here's how it works, explained clearly.
+            Broker compensation is one of the first questions sellers ask. This guide explains how it works in Quebec, in plain terms.
           </p>
         </motion.div>
       </div>
@@ -45,25 +46,25 @@ const HowMuchRealtorCostPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Understanding" title="How does the commission work?" />
       <p className="prose-body mt-5">
-        In Quebec, the real estate broker's compensation is agreed upon <strong>before listing</strong> in the brokerage contract. It typically takes the form of a percentage of the final sale price. There is no fixed rate set by the OACIQ, every agreement is personalized.
+        In Quebec, the real estate broker's compensation is agreed between the seller and the broker <strong>before listing</strong>. It typically takes the form of a percentage of the final sale price. No rate is imposed. The amount is negotiated and written into the brokerage contract, and GST and QST are generally added to it.
       </p>
       <p className="prose-body mt-4">
-        This compensation covers the full range of professional services: market value analysis, pricing strategy, professional photography, marketing, showings, negotiation, and coordination through to the notary.
+        It usually covers the broker's services: market value analysis, pricing strategy, professional photography, marketing, showings, negotiation, and coordination through to the notary.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow background="alt">
       <SectionHeading overline="In practice" title="What this means for you" />
       <p className="prose-body mt-5">
-        Before signing a brokerage contract, a good broker will clearly explain their compensation, the services included, and any other expected costs (notary, location certificate, welcome tax for buyers). Everything is transparent from the start.
+        Before signing a brokerage contract, ask the broker to explain their compensation and the services included. Also ask for the list of other costs to plan for, such as the certificate of location and the mortgage discharge at the notary.
       </p>
       <p className="prose-body mt-4">
-        The real question isn't just "how much does it cost?" but rather "what will my net result be?" An experienced local broker can help you maximize your sale price, reduce time on market, and avoid costly mistakes.
+        The right question: how much will you keep after the sale? A broker who knows your area can set a price backed by comparable sales and defend that price in negotiation.
       </p>
     </ContentBlock>
 
     <InlineCTA
-      text="First step: find out your property's value, it's free and no commitment required."
+      text="First step: find out your property's value. It's free and no commitment is required."
       buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
@@ -72,10 +73,10 @@ const HowMuchRealtorCostPageEn = () => (
       <SectionHeading overline="Factors" title="What influences the cost?" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Property type", text: "Single-family home, condo, plex, the complexity of the transaction can vary." },
-          { title: "Local market", text: "Market conditions in Outaouais influence strategy and time to sell." },
-          { title: "Services offered", text: "Professional photos, virtual tours, targeted marketing, the level of service varies." },
-          { title: "Broker's experience", text: "A locally experienced broker can make a significant difference in the final price." },
+          { title: "Property type", text: "A single-family home, a condo or a plex do not require the same work. The complexity of the file can influence the agreement." },
+          { title: "Local market", text: "Market conditions in the Outaouais influence strategy and time to sell." },
+          { title: "Services offered", text: "Professional photos, virtual tour, floor plans and targeted advertising: the level of service varies from one broker to another." },
+          { title: "Broker's experience", text: "A broker who knows your area well can better support your price with comparable sales." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -86,10 +87,10 @@ const HowMuchRealtorCostPageEn = () => (
     </ContentBlock>
 
     <RelatedPages
-      overline="Explore"
+      overline="Keep reading"
       title="Related pages"
       pages={[
-        { title: "How to choose a realtor", text: "The essential criteria for choosing.", href: "/en/how-to-choose-a-realtor/" },
+        { title: "How to choose a realtor", text: "The criteria to compare before you sign.", href: "/en/how-to-choose-a-realtor/" },
         { title: "Verify a broker (OACIQ)", text: "How to verify a broker is in good standing.", href: "/en/oaciq-find-a-broker/" },
         { title: "Sell in Gatineau", text: "Strategy and support for sellers.", href: "/en/sell/" },
         { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },
@@ -100,12 +101,12 @@ const HowMuchRealtorCostPageEn = () => (
     <CTASection
       dark
       title="Want to understand your options?"
-      text="I'll explain everything clearly, commission, services, strategy, before we even begin."
+      text="Before you sign anything, I'll explain my compensation and the services included. I give you the numbers and the options. You decide."
       buttons={[
         { label: "Free Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
-      trustLine="Transparent, clear, and no commitment."
+      trustLine="Clear answers, no commitment."
     />
 
     <FAQSection items={faq} />

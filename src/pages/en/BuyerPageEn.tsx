@@ -19,61 +19,61 @@ import { CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-acheter.webp";
 
 const profiles = [
-  { icon: CheckCircle2, title: "First-time buyer in Outaouais", text: "Understand the Québec process step by step without feeling overwhelmed, promise to purchase, inspection, notary." },
-  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly Gatineau neighborhood with more rooms, a yard, good schools and the right services nearby." },
-  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local guide who truly knows Aylmer, Hull, the Plateau and Buckingham, prices, taxes and Québec specifics." },
-  { icon: CheckCircle2, title: "Unsure about neighborhoods", text: "Compare Gatineau areas objectively, price, resale potential, Ottawa access, lifestyle, to find the perfect neighborhood for you." },
+  { icon: CheckCircle2, title: "First-time buyer in the Outaouais", text: "Understand each step of buying in Québec, from the promise to purchase to signing at the notary." },
+  { icon: CheckCircle2, title: "Family looking for more space", text: "Find a family-friendly Gatineau neighbourhood with more rooms, a yard, good schools and the right services nearby." },
+  { icon: CheckCircle2, title: "Relocating from Ottawa or Montréal", text: "A local broker who knows Aylmer, Hull, the Plateau and Buckingham, plus local prices and Québec rules, welcome tax included." },
+  { icon: CheckCircle2, title: "Unsure about neighbourhoods", text: "Compare Gatineau areas on price, resale potential, Ottawa access and lifestyle, to choose the one that fits you." },
 ];
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family-friendly, newer homes, Ottawa access" },
-  { name: "Hull", href: "/en/hull/", detail: "Urban, close to downtown, condos and plex" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Land, affordable prices, nature" },
+  { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Newer homes, Ottawa access" },
+  { name: "Hull", href: "/en/hull/", detail: "Condos and plexes, close to Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "More affordable prices, river" },
 ];
 const steps = [
-  { num: "01", title: "Clarify your project", desc: "Budget, target Gatineau neighborhoods, property type, family needs and Ottawa commute, we lay the groundwork together." },
-  { num: "02", title: "Targeted search", desc: "I send you properties that truly match in the neighborhoods that suit you. No noise, no wasted time." },
-  { num: "03", title: "Offer & negotiation", desc: "Offer strategy adapted to the local market, inspection, conditions, through to signing at the notary." },
+  { num: "01", title: "Clarify your project", desc: "Budget, target Gatineau neighbourhoods, property type, family needs and Ottawa commute: we lay the groundwork together." },
+  { num: "02", title: "Targeted search", desc: "I send you properties that match your criteria, in the neighbourhoods you picked. You only visit what is worth the trip." },
+  { num: "03", title: "Offer & negotiation", desc: "An offer suited to the local market, then inspection and conditions, through to signing at the notary." },
 ];
 const nextSteps = [
-  { title: "Free consultation", text: "Let's discuss your criteria, budget and questions, to buy with confidence.", href: "/en/buyer-consultation/", cta: "Book my consultation", highlight: true },
-  { title: "Explore neighborhoods", text: "Compare Gatineau neighborhoods, prices, lifestyle, pros and cons.", href: "/en/neighborhoods/", cta: "See neighborhoods" },
+  { title: "Free consultation", text: "We go over your criteria and budget before any showings.", href: "/en/buyer-consultation/", cta: "Book my consultation", highlight: true },
+  { title: "Compare neighbourhoods", text: "Gatineau neighbourhoods side by side: prices, lifestyle, pros and cons.", href: "/en/neighborhoods/", cta: "See neighbourhoods" },
   { title: "Buyer guide", text: "The buying process in Québec explained simply, from search to notary.", href: "/en/buyer-guide/", cta: "Read the guide" },
 ];
 const faq = [
-  { q: "Is now a good time to buy in Gatineau?", a: "Every situation is different. The Outaouais market has its own dynamics. We evaluate your budget, priorities and current conditions together." },
-  { q: "I'm from Ottawa, how does it work in Québec?", a: "Promise to purchase, inspection, notary, the Québec process has its specifics. Since 2017 in Outaouais, I've guided many Ontario buyers through this transition." },
-  { q: "Do I need a pre-approval?", a: "Highly recommended. It clarifies your budget and strengthens your position when making an offer, especially in popular areas like Aylmer and the Plateau." },
-  { q: "How do I choose the right Gatineau neighborhood?", a: "Lifestyle, budget, family, Ottawa commute, schools, we look at everything together to find the best balance between Aylmer, Hull, the Plateau and Buckingham." },
+  { q: "Is now a good time to buy in Gatineau?", a: "It depends mostly on your situation. Over 12 months, conditions favoured sellers for single-family homes (APCIQ, June 2026). We look together at your budget and recent sales in the area you are targeting." },
+  { q: "I'm from Ottawa, how does it work in Québec?", a: "In Québec, the sale is finalized at a notary. When a broker represents you, the promise to purchase uses an OACIQ form. Plan for the land transfer duties (welcome tax), billed by the municipality after the purchase. I have worked with buyers from Ontario since 2017, and I explain each step before you sign." },
+  { q: "Do I need a mortgage pre-approval?", a: "Yes, it is strongly recommended. A pre-approval clarifies your budget and makes your offer more credible to the seller. It is not final approval: the lender will also review the property you choose." },
+  { q: "How do I choose the right Gatineau neighbourhood?", a: "Lifestyle, budget, family, Ottawa commute, schools: we look at all of it together to find the balance that suits you between Aylmer, Hull, the Plateau and Buckingham. For reference, Gatineau city hall, in Hull, is about 2 km from downtown Ottawa, the Plateau about 9 km and Old Aylmer about 14 km." },
 ];
 
 const BuyerPageEn = () => (
   <>
-    <PageMeta title="Buy a Property in Gatineau" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation, priority access and guidance at your pace." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <ServiceJsonLd name="Buyer Agent Service in Gatineau" description="Buyer representation service in Gatineau and Outaouais — neighborhood analysis, property search, offer strategy and full support." url="/en/buy/" serviceType="Real Estate Buyer Agent Service" />
-    <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First-time buyer, growing family or relocating from Ottawa — I guide you at every step to buy with confidence and clarity." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Explore neighborhoods", href: "/en/neighborhoods/" }} trustLine="Clear strategy. Full transparency. Informed decisions." heroBgImage={heroImg} />
+    <PageMeta title="Buy a Property in Gatineau" description="Find and buy your property in Gatineau with an experienced broker. Personalized consultation and guidance at your pace." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
+    <ServiceJsonLd name="Buyer Agent Service in Gatineau" description="Buyer representation service in Gatineau and the Outaouais: neighbourhood analysis, property search, offer strategy and full support." url="/en/buy/" serviceType="Real Estate Buyer Agent Service" />
+    <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First purchase or a move from Ottawa or Montréal: I guide you at every step, with the numbers in hand." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Compare neighbourhoods", href: "/en/neighborhoods/" }} trustLine="Clear strategy." heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="2026 Context" title="Buying in Gatineau in 2026: a more favourable context" />
+      <SectionHeading overline="2026 Context" title="Buying in Gatineau in 2026: what the numbers say" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Buyers have more choice in 2026. In Q2, the number of active residential listings in the Gatineau metropolitan area was up 30% from a year earlier, while sales fell 15% (APCIQ, Centris data).
+        In Q2 2026, the Gatineau metropolitan area recorded 1,310 residential sales. The single-family median price was $523,500, with a selling time of 27 days (APCIQ, Centris data).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        This does not make it a buyer's market. According to APCIQ, over the 12 months ending in June 2026, conditions still favoured sellers for single-family homes in every price range. Well-located, well-presented properties still sell quickly, but you have more time to analyze, visit and consider before making an offer.
+        According to APCIQ, over the 12 months ending in June 2026, conditions favoured sellers for single-family homes in every price range. A well-located home can therefore sell quickly. Coming in with a pre-approval and clear criteria lets you make an offer without rushing.
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Source: APCIQ, residential barometer for Q2 2026, Gatineau metropolitan area.</p>
     </ContentBlock>
 
-    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighborhood and a strategy" subtitle="Beyond the house, you need to understand the neighborhoods, the real value, taxes, resale potential and the right offer strategy." /></ContentBlock>
-    <CardGrid overline="For you" title="I can help if you are…" items={profiles} background="alt" variant="icon-inline" />
+    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="Beyond the house, you need to understand the neighbourhoods, market value, taxes, resale potential and the right offer strategy." /></ContentBlock>
+    <CardGrid overline="For you" title="The buyers I work with" items={profiles} background="alt" variant="icon-inline" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
-    <SectorLinks overline="Neighborhoods" title="Areas to compare" sectors={sectors} />
+    <SectorLinks overline="Neighbourhoods" title="Areas to compare" sectors={sectors} />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="First time buying? Get the complete guide." text="The buying process in Québec explained simply, from search to notary, step by step." ctaLabel="Get the Buyer Guide" />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
     <CalculatorsSection />
-    <ReviewSection overline="Buyer testimonials" title="They bought with confidence" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
-    <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the step that best fits your situation." steps={nextSteps} />
-    <CTASection dark title="Let's talk about your buying project" text="Budget, neighborhoods, strategy, we clarify everything before starting visits." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
+    <ReviewSection overline="Buyer testimonials" title="What my buyer clients say" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
+    <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the step that fits your situation." steps={nextSteps} />
+    <CTASection dark title="Let's talk about your buying project" text="Budget and neighbourhoods: we sort it all out before the first showings." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation/" }, { label: "Compare neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <FAQSection items={faq} />
   </>
 );
