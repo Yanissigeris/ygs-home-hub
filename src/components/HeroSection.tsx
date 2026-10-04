@@ -105,12 +105,12 @@ interface HeroSectionProps {
 
 /* Stats data */
 const statsFr = [
-  { value: "~9 ans", label: "d'expérience" },
+  { value: "9+ ans", label: "d'expérience" },
   { value: "5/5", label: "Google + Facebook" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 const statsEn = [
-  { value: "~9 yrs", label: "experience" },
+  { value: "9+ yrs", label: "experience" },
   { value: "5/5", label: "Google + Facebook" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
@@ -369,7 +369,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         publisher: {
           "@type": "RealEstateAgent",
           "@id": `${BASE}/#realestateagent`,
-          name: "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
+          name: "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX",
         },
       };
       const script = document.createElement("script");

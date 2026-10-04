@@ -2,13 +2,13 @@ import * as React from "react";
 import { Star } from "lucide-react";
 
 const statsFr = [
-  { value: "~9 ans", label: "Ans d'expérience en Outaouais" },
+  { value: "9+", label: "Ans d'expérience en Outaouais" },
   { value: "5", stars: true, label: "Avis Google + Facebook" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];
 
 const statsEn = [
-  { value: "~9 yrs", label: "Years of experience in Outaouais" },
+  { value: "9+", label: "Years of experience in the Outaouais" },
   { value: "5", stars: true, label: "Google + Facebook reviews" },
   { value: "Hall of Fame 2024", label: "RE/MAX, LLC" },
 ];

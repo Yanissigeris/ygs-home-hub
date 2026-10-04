@@ -23,8 +23,8 @@ const ServiceJsonLd = ({ name, description, url, serviceType, areaServed = ["Gat
       provider: {
         "@type": "RealEstateAgent",
         "@id": `${BASE_URL}/#realestateagent`,
-        name: "Yanis Gauthier-Sigeris — Courtier immobilier RE/MAX",
-        url: BASE_URL,
+        name: "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX",
+        url: `${BASE_URL}/`,
         telephone: "+1-819-210-3044",
         email: "yanis@martywaite.com",
         address: {

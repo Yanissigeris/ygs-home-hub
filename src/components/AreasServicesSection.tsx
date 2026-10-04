@@ -7,7 +7,7 @@ interface AreasServicesSectionProps { lang?: "fr" | "en"; }
 
 const areasFr: AreaLink[] = [
   { name: "Gatineau (centre)", href: "/gatineau/", detail: "Centre-ville, services, plex" },
-  { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, familles, bilingue" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Familles, bilingue" },
   { name: "Plateau", href: "/plateau/", detail: "Maisons récentes, parc de la Gatineau" },
   { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos, projet Zibi" },
   { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Grands terrains, prix accessibles, nature" },
@@ -19,7 +19,7 @@ const areasFr: AreaLink[] = [
 
 const areasEn: AreaLink[] = [
   { name: "Gatineau (centre)", href: "/en/gatineau/", detail: "City core, services, plex" },
-  { name: "Aylmer", href: "/en/aylmer/", detail: "Lac Deschênes, families, bilingual" },
+  { name: "Aylmer", href: "/en/aylmer/", detail: "Families, bilingual" },
   { name: "Plateau", href: "/en/plateau/", detail: "Newer homes, Gatineau Park" },
   { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos, Zibi project" },
   { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Larger lots, affordable, nature" },
