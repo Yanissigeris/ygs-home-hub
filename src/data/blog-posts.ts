@@ -158,7 +158,7 @@ R : 27 jours en moyenne pour une unifamiliale au T2 2026, un délai stable sur u
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `You're thinking of selling your Gatineau home this fall and you keep hearing the market is slowing. The reality is more precise: buyers now have 30% more choice than a year ago, and your pricing strategy is absorbing the difference. Here are the Q2 numbers, and what they mean for you.
 
 > In the second quarter of 2026, 2,007 properties were for sale on Centris in the Gatineau CMA, a 30% year-over-year increase and a fourth consecutive quarter of inventory growth, according to the Chambre immobilière de l'Outaouais and QPAREB.
@@ -192,7 +192,7 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 completed transactions in the region.*`,
   },
   {
     slug: "marche-immobilier-gatineau-avril-2026",
@@ -282,7 +282,7 @@ R : Le délai moyen pour vendre une unifamiliale dans la RMR de Gatineau est de 
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `The Gatineau market no longer moves as a block. In April 2026, a plex sells in 30 days while condos pile up. Here's what the divergence means for you, seller, buyer, or investor.
 
 In April 2026, active listings in the Gatineau CMA climbed to 1,837, a 30% year-over-year increase, according to the Chambre immobilière de l'Outaouais. But this overall increase masks three distinct markets that no longer move at the same pace. Plex are tightening. Condos are collapsing. Single-family is holding.
@@ -316,7 +316,7 @@ A: The average days on market for a single-family home in the Gatineau CMA is 30
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 completed transactions in the region.*`,
   },
   {
     slug: "3-erreurs-prix-vendeur-gatineau-2026",
@@ -431,7 +431,7 @@ R : Il faut nuancer. Au T1 2026, le marché a continué de se rééquilibrer pen
 
 ---
 
-*Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris est courtier immobilier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et propriétés d'investissement à [Gatineau](/vendre-ma-maison-gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `The Gatineau market rebalanced in the first quarter of 2026. Listings jumped 18% while sales fell 10%, and the pricing strategy that worked in 2023 no longer works today. Here are the three mistakes I still see on the ground and what they really cost.
 
 In Q1 2026, the Chambre immobilière de l'Outaouais recorded 936 residential sales in the Gatineau metropolitan area, a 10% drop from the same quarter in 2025. Meanwhile, active listings jumped to 1,394 on a monthly average, 18% more than Q1 2025. Average time on market for single-family homes fell to 38 days, but that average hides a brutal reality: well-priced properties sell in under 30 days, others linger 60 to 90 days and end up cutting their price.
@@ -491,7 +491,7 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
 
 ---
 
-*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for 9 years, specialized in plex and investment properties in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 200 completed transactions in the region.*`,
+*Yanis Gauthier-Sigeris is a RE/MAX real estate broker in the Outaouais for over 9 years, specialized in plex and investment properties in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 completed transactions in the region.*`,
   },
   {
     slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
@@ -547,7 +547,7 @@ R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. La présentati
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 200 transactions complétées dans la région.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `Q1 2026 numbers are out. Sales are down, listings up, and for the first time, the median price of single-family homes in Gatineau shows a slight decline. Before listing your home this spring, here's what really changes.
 
 > "In Gatineau in Q1 2026, the combination of fewer sales and more listings put slight pressure on single-family prices, without overturning the seller advantage, but changing what you need to do to maximize your price.", YGS Analysis based on APCIQ/CIO data, April 2026.
@@ -585,7 +585,7 @@ A: Yes. More inventory means more visual competition. Presentation, photos, and 
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull), and [Aylmer](/en/aylmer). Over 200 transactions completed in the region.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull), and [Aylmer](/en/aylmer). Over 300 transactions completed in the region.*`,
   },
   {
     slug: "plex-gatineau-mars-2026",
@@ -644,7 +644,7 @@ R : Oui, à [Buckingham](/buckingham-masson-angers), [Masson-Angers](/masson-ang
 
 ---
 
-*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
+*Yanis Gauthier-Sigeris, courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à [Gatineau](/gatineau), [Hull](/hull) et [Aylmer](/aylmer). Plus de 300 transactions.*`,
     bodyEn: `While single-family sales drop and condos pile up on the market, one category is doing the exact opposite. Plex in the Outaouais.
 
 > In March 2026, plex in Gatineau sell in an average of 23 days, versus 65 days in March 2025, a 42-day compression in one year, according to the Outaouais Real Estate Board.
@@ -685,7 +685,7 @@ A: Yes, in [Buckingham](/en/buckingham), [Masson-Angers](/en/masson-angers) and 
 
 ---
 
-*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 transactions.*`,
+*Yanis Gauthier-Sigeris, RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in [Gatineau](/en/gatineau), [Hull](/en/hull) and [Aylmer](/en/aylmer). Over 300 transactions.*`,
   },
   {
     slug: "marche-immobilier-gatineau-2025",
@@ -1047,7 +1047,7 @@ Gatineau offre une diversité de quartiers, chacun avec son propre caractère. V
 ### Aylmer
 
 **Idéal pour** : Les familles, les amoureux de la nature
-- Accès au lac Deschênes et au parc de la Gatineau
+- Accès au parc de la Gatineau
 - Écoles réputées (francophones et anglophones)
 - Ambiance de village avec commerces de proximité
 - Prix médian plus élevé mais excellent rapport qualité-prix
@@ -1080,7 +1080,7 @@ Gatineau offers a diversity of neighborhoods, each with its own character. Here'
 ### Aylmer
 
 **Ideal for**: Families, nature lovers
-- Access to Lake Deschênes and Gatineau Park
+- Access to Gatineau Park
 - Reputable schools (French and English)
 - Village atmosphere with local shops
 - Higher median price but excellent value
@@ -1618,11 +1618,11 @@ Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les pr
 **Prix médian** : 480 000 $ à 550 000 $
 
 Aylmer est le secteur le plus recherché par les familles à Gatineau, et pour de bonnes raisons :
-- **Lac Deschênes**: Plage, marina, pistes cyclables le long du lac
-- **Parc de la Gatineau**: Accès direct à des centaines de kilomètres de sentiers
-- **Écoles réputées**: Plusieurs écoles primaires et secondaires bien cotées
-- **Ambiance villageoise**: Le Vieux-Aylmer offre restos, cafés et boutiques locales
-- **Proximité Ottawa**: 15 à 20 minutes du centre-ville via le pont Champlain
+- **Plage et marina** : Baignade l'été et pistes cyclables le long de la rivière
+- **Parc de la Gatineau** : Accès direct à des centaines de kilomètres de sentiers
+- **Écoles réputées** : Plusieurs écoles primaires et secondaires bien cotées
+- **Ambiance villageoise** : Le Vieux-Aylmer offre restos, cafés et boutiques locales
+- **Proximité Ottawa** : 15 à 20 minutes du centre-ville via le pont Champlain
 
 **Idéal pour** : Familles avec enfants de tous âges, amoureux du plein air, professionnels travaillant à Ottawa.
 
@@ -1684,8 +1684,8 @@ Choosing the right neighborhood means choosing your family's daily life for year
 **Median price**: $480,000 to $550,000
 
 Aylmer is the most sought-after area for families in Gatineau, and for good reason:
-- **Lac Deschênes**: Beach, marina, cycling paths along the lake
-- **Gatineau Park**: Direct access to hundreds of kilometers of trails
+- **Beach and marina**: Summer swimming and cycling paths along the river
+- **Gatineau Park**: Direct access to hundreds of kilometres of trails
 - **Reputed schools**: Several well-rated elementary and high schools
 - **Village atmosphere**: Old Aylmer offers restaurants, cafés, and local shops
 - **Ottawa proximity**: 15 to 20 minutes from downtown via Champlain Bridge
@@ -1753,8 +1753,8 @@ I live in Gatineau and know each neighborhood personally. We do a tour together 
     seoTitleEn: "Living in Aylmer Gatineau · Neighborhood Guide 2025 | YGS",
     metaDescription: "Tout savoir sur Aylmer : prix des maisons, écoles, parcs, vie de quartier et pourquoi c'est l'un des secteurs les plus prisés de Gatineau.",
     metaDescriptionEn: "Everything about Aylmer: home prices, schools, parks, lifestyle, and why it's one of Gatineau's most sought-after neighborhoods.",
-    excerpt: "Lac Deschênes, marina, parcs et vie familiale — découvrez pourquoi Aylmer attire autant d'acheteurs.",
-    excerptEn: "Lac Deschênes, marina, parks and family life, discover why Aylmer attracts so many buyers.",
+    excerpt: "Plage, marina, parcs et vie familiale : pourquoi Aylmer attire autant d'acheteurs.",
+    excerptEn: "Beach, marina, parks and family life: why Aylmer attracts so many buyers.",
     category: "Quartiers",
     categoryEn: "Neighborhoods",
     featuredImage: blogAylmerMarina,
@@ -1762,15 +1762,15 @@ I live in Gatineau and know each neighborhood personally. We do a tour together 
     published: true,
     body: `## Aylmer : le joyau résidentiel de Gatineau
 
-Aylmer est souvent considéré comme le quartier le plus prisé de Gatineau. Situé à l'extrémité ouest, il offre un cadre de vie exceptionnel entre le Lac Deschênes et le Parc de la Gatineau.
+Aylmer occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tranquille près du parc de la Gatineau.
 
 ## Pourquoi choisir Aylmer?
 
-### Le Lac Deschênes et la marina
-- **Plage et baignade**: La plage d'Aylmer est un incontournable estival
-- **Marina**: Accès nautique direct, voile, kayak, paddleboard
-- **Piste cyclable**: Le sentier longe le lac sur des kilomètres
-- **Couchers de soleil**: Vue spectaculaire depuis le parc des Cèdres
+### La plage et la marina
+- **Plage et baignade** : La plage d'Aylmer, un classique de l'été
+- **Marina** : Accès nautique direct, voile, kayak, paddleboard
+- **Piste cyclable** : Le sentier longe la rivière sur des kilomètres
+- **Couchers de soleil** : Vue spectaculaire depuis le parc des Cèdres
 
 ### Vie familiale et écoles
 - **Écoles francophones et anglophones**: Grande variété de choix
@@ -1793,7 +1793,7 @@ Le secteur le plus récent avec des constructions neuves, près du Parc de la Ga
 Le cœur historique avec ses commerces de proximité, cafés et restaurants. Charme villageois.
 
 ### Deschênes
-Secteur tranquille près du lac, idéal pour les amoureux de la nature et de la tranquillité.
+Un secteur résidentiel tranquille d'Aylmer, apprécié de ceux qui aiment la nature et le calme.
 
 ## Mon conseil
 
@@ -1802,14 +1802,14 @@ Aylmer est un choix sûr pour la qualité de vie. La demande reste forte, ce qui
 **Lire aussi** : [Vivre près du Parc de la Gatineau](/blogue/vivre-pres-parc-gatineau-immobilier) · [Les meilleurs quartiers pour familles](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## Aylmer: Gatineau's Residential Gem
 
-Aylmer is often considered Gatineau's most desirable neighborhood. Located at the western end, it offers an exceptional lifestyle between Lac Deschênes and Gatineau Park.
+Aylmer sits at the western end of Gatineau. It offers a quiet lifestyle close to Gatineau Park.
 
 ## Why Choose Aylmer?
 
-### Lac Deschênes and the Marina
+### The Beach and the Marina
 - **Beach and swimming**: Aylmer Beach is a summer must
 - **Marina**: Direct waterfront access, sailing, kayaking, paddleboarding
-- **Bike path**: The trail runs along the lake for kilometers
+- **Bike path**: The trail runs along the river for kilometres
 - **Sunsets**: Spectacular views from Parc des Cèdres
 
 ### Family Life and Schools
@@ -1833,7 +1833,7 @@ The newest area with new construction, near Gatineau Park. Perfect for families.
 The historic heart with local shops, cafés, and restaurants. Village charm.
 
 ### Deschênes
-Quiet area near the lake, ideal for nature and tranquility lovers.
+A quiet residential area of Aylmer, popular with people who value nature and calm.
 
 ## My Advice
 
