@@ -218,7 +218,7 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
     },
     publisher: {
       "@type": "Organization",
-      name: "YGS — Yanis Gauthier-Sigeris",
+      name: "YGS · Yanis Gauthier-Sigeris",
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/apple-touch-icon.png`,
