@@ -626,10 +626,9 @@ async function main() {
       html = injectHowToJsonLd(html, {
         name: isFr ? "Comment vendre une propriété à Gatineau" : "How to sell a property in Gatineau",
         description: isFr
-          ? "Guide étape par étape pour vendre votre propriété à Gatineau — prix, préparation, mise en marché et négociation."
-          : "Step-by-step guide to selling your property in Gatineau — pricing, preparation, marketing and negotiation.",
+          ? "Guide étape par étape pour vendre votre propriété à Gatineau : prix, préparation, mise en marché et négociation."
+          : "Step-by-step guide to selling your property in Gatineau: pricing, preparation, marketing and negotiation.",
         steps: guide.steps,
-        totalTime: "P60D",
       });
       html = injectFaqPageJsonLd(html, guide.faq);
     }
