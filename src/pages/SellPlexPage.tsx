@@ -16,23 +16,23 @@ import { Building2, TrendingUp, DollarSign, Users, Clock, Award, Shield } from "
 import heroImg from "@/assets/hero-sell-plex.webp";
 
 const challenges = [
-  { icon: Building2, title: "Évaluer un plex correctement", text: "La valeur d'un plex dépend des revenus, des dépenses et du potentiel, pas juste des comparables." },
-  { icon: TrendingUp, title: "Maximiser le prix de vente", text: "Optimiser les loyers et la présentation avant de vendre peut faire une grande différence." },
-  { icon: DollarSign, title: "Comprendre la fiscalité", text: "Gain en capital, récupération d'amortissement, il y a des implications fiscales à planifier." },
+  { icon: Building2, title: "Évaluer un plex correctement", text: "La valeur d'un plex se calcule surtout à partir de ses revenus et de ses dépenses. Les comparables viennent compléter l'analyse." },
+  { icon: TrendingUp, title: "Aller chercher le bon prix", text: "Une présentation soignée et des baux bien documentés avant la vente peuvent influencer le prix obtenu." },
+  { icon: DollarSign, title: "Comprendre la fiscalité", text: "Gain en capital et récupération d'amortissement : ces implications fiscales se planifient avant la vente." },
   { icon: Users, title: "Gérer les locataires", text: "La transition avec les locataires pendant la vente demande un plan clair." },
 ];
 
 const steps = [
-  { num: "01", title: "Analyse de rentabilité", desc: "Revenus, dépenses, vacance, potentiel d'optimisation, on établit la valeur réelle de votre plex." },
-  { num: "02", title: "Positionnement stratégique", desc: "Prix optimal, améliorations à considérer et stratégie pour attirer les bons acheteurs-investisseurs." },
+  { num: "01", title: "Analyse de rentabilité", desc: "Revenus, dépenses, taux d'inoccupation et potentiel de l'immeuble : on établit la valeur de votre plex." },
+  { num: "02", title: "Positionnement", desc: "Le prix de départ et les améliorations à considérer, avec une stratégie pour attirer les acheteurs-investisseurs." },
   { num: "03", title: "Mise en marché et vente", desc: "Visibilité ciblée, négociation et coordination complète jusqu'au notaire." },
 ];
 
 
 const faq = [
-  { q: "Comment évaluer la valeur d'un plex?", a: "On utilise l'approche des revenus (multiplicateur de revenus bruts) et les ventes comparables. L'état du bâtiment, les loyers actuels et le potentiel d'optimisation comptent aussi." },
-  { q: "Quand est-ce le bon moment pour vendre un plex?", a: "Ça dépend de vos objectifs, revente, refinancement, relocalisation. On analyse votre situation pour déterminer le meilleur timing." },
-  { q: "Qu'arrive-t-il aux locataires quand je vends?", a: "Les baux sont transférés au nouveau propriétaire. La loi protège les locataires, on gère la transition proprement." },
+  { q: "Comment évaluer la valeur d'un plex?", a: "On utilise l'approche des revenus (multiplicateur de revenus bruts) et les ventes comparables. L'état et le potentiel de l'immeuble comptent aussi, tout comme les loyers actuels." },
+  { q: "Quand est-ce le bon moment pour vendre un plex?", a: "Ça dépend de vos objectifs, par exemple réinvestir ailleurs ou alléger votre gestion. On compare aussi la vente à un refinancement avant de choisir le moment." },
+  { q: "Qu'arrive-t-il aux locataires quand je vends?", a: "Les baux suivent l'immeuble et lient le nouveau propriétaire. La loi protège les locataires, et je coordonne la transition avec eux." },
 ];
 
 const SellPlexPage = () => (
@@ -42,10 +42,10 @@ const SellPlexPage = () => (
     <HeroSection
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"
-      subtitle="Duplex, triplex ou plus — je vous aide à maximiser votre prix avec une stratégie adaptée aux propriétés à revenus."
+      subtitle="Duplex, triplex ou plus : je vous aide à vendre au bon prix, avec une stratégie pensée pour les immeubles à revenus."
       primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau/" }}
-      trustLine="Spécialiste plex. "
+      trustLine="Spécialiste plex."
       heroBgImage={heroImg}
     />
 <CardGrid
@@ -55,7 +55,7 @@ const SellPlexPage = () => (
     />
 
     <InlineCTA
-      text="Première étape: connaître la valeur de votre plex, c'est gratuit."
+      text="Première étape : connaître la valeur de votre plex. C'est gratuit."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -63,9 +63,9 @@ const SellPlexPage = () => (
     <ProcessSteps steps={steps} background="alt" />
 
     <ContentBlock narrow>
-      <SectionHeading title="Maximiser sans se compliquer" />
+      <SectionHeading title="Bien vendre sans se compliquer la vie" />
       <p className="prose-body mt-5">
-        Beaucoup de propriétaires de plex sous-estiment la valeur de leur immeuble, ou ne savent pas comment la maximiser avant de vendre. Mon rôle est de vous donner une lecture claire de votre situation et une stratégie pour en tirer le meilleur prix.
+        Beaucoup de propriétaires de plex sous-estiment la valeur de leur immeuble, ou ne savent pas comment la faire valoir avant de vendre. Mon rôle est de vous donner une lecture claire de votre situation et une stratégie pour vendre votre immeuble au bon prix.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/analyse-plex-gatineau/">Recevoir mon analyse plex</Link>
@@ -74,15 +74,15 @@ const SellPlexPage = () => (
 
     <GuideInlineCTA
       guideType="investor_guide"
-      headline="Guide investisseur gratuit — maximisez votre plex"
-      text="Rendement, fiscalité et stratégie de vente, dans un guide envoyé par courriel."
+      headline="Guide investisseur gratuit pour les propriétaires de plex"
+      text="Le rendement et la fiscalité d'un plex, expliqués dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide investisseur"
     />
 
     <CTASection
       dark
-      title="Prêt à explorer vos options?"
-      text="Demandez une analyse de votre plex, valeur, revenus et recommandation."
+      title="Prêt à faire le point sur vos options?"
+      text="Demandez une analyse de votre plex : sa valeur selon ses revenus, avec ma recommandation."
       buttons={[
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
         { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/", variant: "outline" },

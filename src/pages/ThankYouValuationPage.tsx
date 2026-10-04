@@ -9,18 +9,18 @@ import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 const whatsNext = [
   { icon: Clock, text: "Réponse personnalisée" },
   { icon: FileText, text: "Analyse basée sur les ventes comparables récentes" },
-  { icon: Shield, text: "Aucune obligation, aucun engagement" },
+  { icon: Shield, text: "Sans engagement" },
 ];
 
 const nextSteps = [
-  { title: "Plan vendeur", text: "Allez plus loin, recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
-  { title: "Guide vendeur", text: "Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau.", href: "/guide-vendeur-gatineau", cta: "Lire le guide" },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options, sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
+  { title: "Plan vendeur", text: "Pour aller plus loin, recevez un plan complet : prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau", cta: "Recevoir mon plan", highlight: true },
+  { title: "Guide vendeur", text: "Tout ce que vous devez savoir pour vendre au bon prix à Gatineau.", href: "/guide-vendeur-gatineau", cta: "Lire le guide" },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et de vos options, sans engagement.", href: "/contact-yanis", cta: "Réserver un appel" },
 ];
 
 const ThankYouValuationPage = () => (
    <>
-    <PageMeta title="Merci — Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse et votre réponse personnalisées." />
+    <PageMeta title="Merci | Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse et votre réponse personnalisées." />
     <section
       className="section-padding"
       style={{
@@ -38,7 +38,7 @@ const ThankYouValuationPage = () => (
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <CheckCircle2 size={56} className="mx-auto text-accent" />
-          <h1 className="mt-6">Merci! Votre demande d'évaluation est en route.</h1>
+          <h1 className="mt-6">Merci. Votre demande d'évaluation est en route.</h1>
           <p className="prose-body mt-4">
             Je prépare votre évaluation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes.
           </p>

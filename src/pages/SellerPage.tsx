@@ -23,7 +23,7 @@ import heroImg from "@/assets/hero-vendre-gatineau.webp";
 
 const painPoints = [
 { icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Le marché de Gatineau évolue. Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
-{ icon: CheckCircle2, title: "Combien vaut vraiment ma propriété?", text: "Un prix réaliste basé sur les ventes récentes dans votre secteur en Outaouais, pas un chiffre gonflé pour vous attirer." },
+{ icon: CheckCircle2, title: "Combien vaut ma propriété?", text: "Un prix réaliste basé sur les ventes récentes dans votre secteur en Outaouais." },
 { icon: CheckCircle2, title: "Faut-il faire des travaux avant?", text: "Certains investissements rapportent dans le marché local. D'autres non. On fait le tri ensemble." },
 { icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "La coordination vente-achat à Gatineau demande un plan dès le départ, surtout si vous restez dans la région." }];
 
@@ -35,27 +35,27 @@ const fears = [
 
 
 const steps = [
-{ num: "01", title: "Analyse et positionnement", desc: "Ventes comparables dans votre secteur, état du marché en Outaouais, particularités de votre propriété. On établit un prix réaliste et stratégique." },
-{ num: "02", title: "Plan vendeur personnalisé", desc: "Préparation, améliorations qui valent la peine, plan de visibilité ciblé pour les acheteurs de Gatineau et Ottawa." },
-{ num: "03", title: "Accompagnement complet", desc: "Mise en marché, visites, négociation, coordination jusqu'au notaire. Aucune surprise." }];
+{ num: "01", title: "Analyse et positionnement", desc: "Je pars des ventes comparables de votre secteur et de l'état du marché en Outaouais, puis je tiens compte des particularités de votre propriété. Le prix proposé s'appuie sur ces ventes." },
+{ num: "02", title: "Plan vendeur personnalisé", desc: "Les améliorations qui valent la peine et la préparation, puis un plan de visibilité ciblé pour les acheteurs de Gatineau et d'Ottawa." },
+{ num: "03", title: "Jusqu'au notaire", desc: "Je gère les visites et la négociation, puis je coordonne le dossier avec le notaire." }];
 
 
 
 
 const nextSteps = [
-{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété, c'est gratuit, confidentiel et sans engagement.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur", highlight: true },
-{ title: "Plan vendeur", text: "Prix, préparation, mise en marché, un plan clair adapté à votre propriété et votre situation.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
-{ title: "Parler à Yanis", text: "Un appel pour clarifier vos options, pas de pitch, juste des réponses.", href: "/contact-yanis/", cta: "Réserver un appel" }];
+{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété est gratuit et sans engagement. Votre demande reste confidentielle.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur", highlight: true },
+{ title: "Plan vendeur", text: "Un plan clair, du prix à la mise en marché, adapté à votre propriété et à votre situation.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
+{ title: "Parler à Yanis", text: "Un appel pour clarifier vos options et répondre à vos questions.", href: "/contact-yanis/", cta: "Réserver un appel" }];
 
 
 const faq = [
-{ q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend de votre situation, pas seulement du marché. Depuis 2017 en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions, avec le bon plan." },
-{ q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à identifier ce qui vaut la peine pour maximiser votre prix sans gaspiller." },
-{ q: "Combien coûte un courtier immobilier à Gatineau?", a: "La commission est convenue ensemble avant de commencer. Tout est transparent, tout est clair dès le départ." },
+{ q: "Quand est-ce le meilleur moment pour vendre?", a: "Ça dépend d'abord de votre situation. Depuis 2017 en Outaouais, j'ai vu des vendeurs bien réussir dans toutes les conditions, avec le bon plan." },
+{ q: "Est-ce que je dois rénover avant de vendre?", a: "Pas nécessairement. Je vous aide à repérer ce qui vaut la peine pour vendre plus cher, sans gaspiller." },
+{ q: "Combien coûte un courtier immobilier à Gatineau?", a: "La commission est convenue ensemble avant de commencer. Vous connaissez le montant et les conditions avant de signer quoi que ce soit." },
 { q: "Et si je dois acheter en même temps?", a: "C'est fréquent. On planifie la coordination dès le départ pour éviter d'être coincé." },
 { q: "Combien de temps prend la vente d'une maison à Gatineau?", a: "Le délai dépend du prix, du secteur, du type de propriété, de sa préparation et des conditions au moment de la mise en marché." },
-{ q: "Pourquoi travailler avec un courtier pour vendre à Gatineau?", a: "Un courtier local connaît les comparables, les acheteurs actifs et les stratégies qui fonctionnent dans votre secteur, Aylmer, Hull, Plateau ou ailleurs en Outaouais." },
-{ q: "Comment est calculée la valeur de ma maison?", a: "Je me base sur les ventes comparables récentes dans votre rue et votre quartier, l'état de la propriété et les conditions du marché local." },
+{ q: "Pourquoi travailler avec un courtier pour vendre à Gatineau?", a: "Un courtier local connaît les comparables et les acheteurs actifs de votre secteur, à Aylmer, à Hull comme ailleurs en Outaouais. Il sait aussi quelles stratégies y fonctionnent." },
+{ q: "Comment est calculée la valeur de ma maison?", a: "Je pars des ventes comparables récentes dans votre rue et votre quartier. J'ajuste ensuite selon l'état de la propriété et les conditions du marché local." },
 { q: "Faut-il faire du home staging pour vendre?", a: "Pas toujours, mais dans certains cas ça accélère la vente et améliore le prix. Je vous conseille au cas par cas selon votre propriété." },
 { q: "Quels frais dois-je prévoir pour vendre ma maison?", a: "Commission courtier, notaire, certificat de localisation, et parfois des réparations mineures. Je vous donne le portrait complet avant de commencer." },
 { q: "Puis-je vendre ma maison à un acheteur d'Ottawa?", a: "Oui. Selon la propriété et sa clientèle cible, la mise en marché peut aussi rejoindre des acheteurs d'Ottawa." }];
@@ -63,12 +63,12 @@ const faq = [
 
 const SellerPage = () =>
 <>
-    <PageMeta title="Vendre sa maison à Gatineau · Outaouais" description="Vendez votre propriété à Gatineau au meilleur prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais — évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau/" serviceType="Real Estate Listing Service" />
+    <PageMeta title="Vendre sa maison à Gatineau · Outaouais" description="Vendez votre propriété à Gatineau au bon prix. Évaluation réaliste, stratégie de mise en marché et accompagnement complet." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
+    <ServiceJsonLd name="Vente immobilière à Gatineau" description="Service de vente immobilière à Gatineau et en Outaouais : évaluation, stratégie de prix, mise en marché et accompagnement complet jusqu'à la signature chez le notaire." url="/vendre-ma-maison-gatineau/" serviceType="Real Estate Listing Service" />
     <HeroSection
     overline="Pour vendeurs · Gatineau et environs"
     title="Vendre votre propriété à Gatineau avec une vraie stratégie"
-    subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Vous avez surtout besoin d'un plan clair, prix, préparation, mise en marché, négociation."
+    subtitle="Vous n'avez pas besoin de tout décider aujourd'hui. Ce qu'il vous faut d'abord, c'est un plan clair : prix, préparation, mise en marché et négociation."
     primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
     secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/" }}
     trustLine="Stratégie claire."
@@ -77,13 +77,13 @@ const SellerPage = () =>
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Stratégie locale" title="Adapter votre vente au marché de votre secteur" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Les conditions de vente varient selon le secteur, le type de propriété et la gamme de prix. L'analyse des comparables récents permet d'établir une stratégie adaptée à votre propriété au moment de sa mise en marché.
+        Les conditions de vente varient selon le secteur, le type de propriété et la gamme de prix. L'analyse des comparables récents sert à établir une stratégie adaptée à votre propriété au moment de sa mise en marché.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Le prix de départ, la présentation et la stratégie de mise en marché influencent l'intérêt des acheteurs. Une analyse locale aide à positionner la propriété en fonction de ses caractéristiques et de la concurrence au moment de la vente.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        C'est exactement pour ça que mon approche commence toujours par la réalité du marché dans votre secteur précis, pas par un chiffre pour vous faire plaisir.
+        C'est pour ça que mon approche part de la réalité du marché dans votre secteur, pas d'un chiffre pour vous faire plaisir.
       </p>
       <div className="mt-6">
         <Button asChild><Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite →</Link></Button>
@@ -98,7 +98,7 @@ const SellerPage = () =>
   
 
     <InlineCTA
-    text="Première étape: connaître la valeur de votre propriété, c'est gratuit et sans engagement."
+    text="Première étape : connaître la valeur de votre propriété, c'est gratuit et sans engagement."
     buttonLabel="Évaluation gratuite →"
     href="/evaluation-gratuite-gatineau/" />
   
@@ -114,21 +114,21 @@ const SellerPage = () =>
     <ContentBlock narrow>
       <SectionHeading
       overline="Avant de vendre"
-      title="Vous n'avez pas besoin de tout décider aujourd'hui" />
+      title="Savoir où vous en êtes, à votre rythme" />
     
       <p className="prose-body mt-5">
-        Avant de vendre, les propriétaires en Outaouais veulent d'abord connaître la valeur de leur propriété, quel timing est idéal pour eux, et leurs options. Le but est de bâtir un plan clair adapté à votre secteur, que ce soit à Aylmer, Hull, au Plateau ou à Buckingham.
+        Avant de vendre, les propriétaires en Outaouais veulent d'abord savoir ce que vaut leur propriété et quelles options conviennent à leur calendrier. Le but est de bâtir un plan clair adapté à votre secteur, que ce soit à Aylmer, à Hull, au Plateau ou à Buckingham.
       </p>
       <p className="prose-body mt-4">
-        Depuis 2017 à accompagner des vendeurs partout en Outaouais, je sais que la clé d'une bonne vente, c'est la préparation. Valeur réelle basée sur les comparables locaux, positionnement, prix, améliorations stratégiques, et une mise en marché pour attirer les bons acheteurs, incluant ceux d'Ottawa qui cherchent à traverser la rivière.
+        J'aide des vendeurs partout en Outaouais depuis 2017, et je sais qu'une bonne vente se prépare. Tout part d'une valeur basée sur les comparables locaux. Viennent ensuite le prix et les améliorations qui rapportent, puis une mise en marché pensée pour les bons acheteurs, y compris ceux d'Ottawa qui veulent traverser la rivière.
       </p>
     </ContentBlock>
 
     <ProcessSteps steps={steps} background="alt" />
 
     <SectorLinks sectors={[
-      { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, familles, quartiers établis" },
-      { name: "Plateau", href: "/plateau/", detail: "Maisons neuves, familial, accès Ottawa" },
+      { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
+      { name: "Plateau", href: "/plateau/", detail: "Côtés Aylmer et Hull, maisons neuves, familial" },
       { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
       { name: "Chelsea", href: "/chelsea/", detail: "Village, nature, parc de la Gatineau" },
       { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains, collines" },
@@ -146,7 +146,7 @@ const SellerPage = () =>
       title="Articles et ressources pour vendeurs"
       pages={[
         { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
-        { title: "Quand vendre sa maison à Gatineau", text: "Meilleur moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
+        { title: "Quand vendre sa maison à Gatineau", text: "Le bon moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
         { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
         { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
         { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
@@ -168,8 +168,8 @@ const SellerPage = () =>
 
     <GuideInlineCTA
     guideType="seller_guide"
-    headline="Vous pensez vendre? Recevez le guide complet."
-    text="Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau, dans un guide clair envoyé par courriel."
+    headline="Vous pensez vendre? Recevez le guide vendeur."
+    text="Tout ce que vous devez savoir pour vendre au bon prix à Gatineau, dans un guide clair envoyé par courriel."
     ctaLabel="Recevoir le guide vendeur" />
   
 
@@ -177,7 +177,7 @@ const SellerPage = () =>
 
     <ReviewSection
     overline="Témoignages vendeurs"
-    title="Ils ont vendu avec confiance"
+    title="Ce que disent mes vendeurs"
     reviews={getReviewsByCategory("seller").slice(0, 2)}
     columns={2}
     background="alt" />
@@ -186,7 +186,7 @@ const SellerPage = () =>
     <CTASection
     dark
     title="Vous voulez savoir quoi faire dans votre cas?"
-    text="Je vous donne les chiffres, les options et une stratégie adaptée à votre situation."
+    text="Une évaluation gratuite ou un plan vendeur, selon où vous en êtes."
     buttons={[
     { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
     { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/", variant: "outline" }]

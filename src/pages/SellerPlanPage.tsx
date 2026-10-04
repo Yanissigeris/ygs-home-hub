@@ -24,7 +24,7 @@ import heroImg from "@/assets/hero-seller.webp";
 const benefits = [
   "Évaluation réaliste basée sur les ventes comparables récentes",
   "Avis sur les améliorations qui valent la peine (ou pas)",
-  "Positionnement prix stratégique pour votre secteur",
+  "Positionnement de prix adapté à votre secteur",
   "Plan de mise en marché personnalisé",
   "Calendrier et coordination si vous achetez en parallèle",
 ];
@@ -32,13 +32,13 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Réponse personnalisée" },
-  { icon: Shield, text: "Aucune obligation, aucun engagement" },
+  { icon: Shield, text: "Vous décidez de la suite" },
 ];
 
 const faq = [
-  { q: "En quoi le plan vendeur est différent d'une évaluation?", a: "L'évaluation vous donne la valeur. Le plan vendeur va plus loin, positionnement prix, préparation, améliorations stratégiques, calendrier de mise en marché et coordination achat-vente si nécessaire." },
+  { q: "En quoi le plan vendeur est différent d'une évaluation?", a: "L'évaluation vous donne la valeur. Le plan vendeur va plus loin : positionnement de prix, préparation, améliorations qui rapportent, calendrier de mise en marché et coordination achat-vente au besoin." },
   { q: "Est-ce que c'est gratuit?", a: "Oui. L'objectif est de vous donner assez d'information pour prendre une décision éclairée, à votre rythme." },
-  { q: "Je ne suis pas sûr de vouloir vendre tout de suite", a: "Parfait, c'est exactement le bon moment pour planifier. La plupart de mes vendeurs commencent par un plan bien avant de mettre en vente." },
+  { q: "Je ne suis pas sûr de vouloir vendre tout de suite", a: "C'est justement le bon moment pour planifier. Beaucoup de mes vendeurs commencent par un plan bien avant de mettre en vente." },
 ];
 
 const SellerPlanPage = () => {
@@ -76,13 +76,13 @@ const SellerPlanPage = () => {
   return (
    <>
     <PageMeta title="Plan de vente personnalisé · Gatineau" description="Un plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement étape par étape." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Plan de vente personnalisé — Gatineau" description="Plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement complet." url="/plan-vendeur-gatineau" serviceType="Real Estate Marketing Plan Service" />
+    <ServiceJsonLd name="Plan de vente personnalisé à Gatineau" description="Plan de vente sur mesure pour votre propriété à Gatineau et en Outaouais. Stratégie de prix, mise en marché ciblée et accompagnement complet." url="/plan-vendeur-gatineau" serviceType="Real Estate Marketing Plan Service" />
     <HeroSection
         compact
         overline="Plan vendeur personnalisé · Gatineau"
         title="Recevez votre plan vendeur personnalisé"
-        subtitle="Prix, préparation, mise en marché et calendrier — un plan clair adapté à votre propriété et votre situation."
-        trustLine="Un plan stratégique, pas une pitch de vente, pour vous aider à vendre au bon prix, au bon moment."
+        subtitle="Prix, préparation, mise en marché et calendrier : un plan clair, adapté à votre propriété et à votre situation."
+        trustLine="Un plan concret, pas un argumentaire de vente, pour vous aider à vendre au bon prix et au bon moment."
         heroBgImage={heroImg}
       />
 
@@ -99,13 +99,13 @@ const SellerPlanPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre plan vendeur</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Je prépare un plan adapté à votre propriété, pas un template générique.
+                  Je prépare un plan adapté à votre propriété et à votre situation.
                 </p>
 
                 {submitted ? (
                   <SuccessMessage
-                    title="Merci! Demande envoyée."
-                    text="Je vous reviens avec une réponse personnalisée et votre plan vendeur."
+                    title="Merci. Demande envoyée."
+                    text="Je vous enverrai une réponse personnalisée et votre plan vendeur."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
@@ -123,7 +123,7 @@ const SellerPlanPage = () => {
                             <SelectItem value="condo">Condo</SelectItem>
                             <SelectItem value="jumelé">Jumelé</SelectItem>
                             <SelectItem value="rangée">Maison en rangée</SelectItem>
-                            <SelectItem value="plex">Plex (2-5 logements)</SelectItem>
+                            <SelectItem value="plex">Plex (2 à 5 logements)</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -185,11 +185,11 @@ const SellerPlanPage = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Notes (optionnel)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, situation particulière…" value={notes} onChange={(e) => setNotes(e.target.value)} />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions ou situation particulière" value={notes} onChange={(e) => setNotes(e.target.value)} />
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
-                      {submitting ? "Envoi…" : "Recevoir mon plan vendeur"}
+                      {submitting ? "Envoi en cours" : "Recevoir mon plan vendeur"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Je vous donne les chiffres et les options, vous décidez.
@@ -221,7 +221,7 @@ const SellerPlanPage = () => {
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Pas encore prêt?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
-                  Commencez par une évaluation gratuite, c'est la première étape pour comprendre votre position.
+                  Commencez par une évaluation gratuite. C'est la première étape pour savoir où vous en êtes.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
@@ -241,7 +241,7 @@ const SellerPlanPage = () => {
       <ContentBlock narrow centered padSize="md">
         <h3>Planifier ne veut pas dire s'engager</h3>
         <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-          Les meilleurs résultats de vente commencent par une bonne planification. Ce plan est un premier pas, pas un contrat.
+          Une vente réussie se prépare tôt. Ce plan vendeur est un premier pas, sans aucun engagement.
         </p>
         <Button className="mt-6" size="lg" asChild>
           <a href="#top">Remplir le formulaire ↑</a>

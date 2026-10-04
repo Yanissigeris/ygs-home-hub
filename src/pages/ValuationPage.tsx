@@ -30,21 +30,21 @@ const trustBullets = [
 ];
 
 const valuationFaq = [
-  { q: "Comment obtenir une évaluation de maison à Gatineau?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété. Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur." },
-  { q: "Est-ce que l'évaluation est vraiment gratuite?", a: "Oui, c'est gratuit, confidentiel et sans engagement. Vous recevez un rapport clair, aucune obligation de vendre." },
-  { q: "Combien vaut ma maison à Gatineau?", a: "La valeur dépend du quartier, du type de propriété et des ventes récentes. Mon évaluation vous donne une fourchette réaliste basée sur les comparables locaux." },
+  { q: "Comment obtenir une évaluation de maison à Gatineau?", a: "Remplissez le formulaire sur cette page avec l'adresse de votre propriété. Je vous envoie ensuite une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur." },
+  { q: "Est-ce que l'évaluation est gratuite?", a: "Oui, c'est gratuit et votre demande reste confidentielle. Vous n'avez aucune obligation de vendre." },
+  { q: "Combien vaut ma maison à Gatineau?", a: "La valeur dépend surtout des ventes récentes autour de vous et du type de propriété. Mon évaluation vous donne une fourchette réaliste basée sur les comparables locaux." },
   { q: "Sur quoi se base l'évaluation?", a: "Je me base sur les ventes récentes dans votre rue et votre secteur, l'état de votre propriété, la taille du terrain et les conditions du marché en Outaouais." },
-  { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales et de l'état réel de votre propriété, c'est beaucoup plus précis." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée. Pour une analyse approfondie avec visite, on planifie un rendez-vous à votre convenance." },
+  { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales et de l'état de votre propriété, ce qu'un algorithme ne voit pas." },
+  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures maximum. Pour une analyse approfondie avec visite, on planifie un rendez-vous à votre convenance." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée, sans engagement." },
-  { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non, absolument pas. Beaucoup de propriétaires demandent une évaluation simplement pour connaître leur valeur, sans intention immédiate de vendre." },
-  { q: "Mon secteur est-il couvert?", a: "Oui, je couvre tout l'Outaouais : Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts et Pontiac." },
+  { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Vous pouvez demander une évaluation simplement pour connaître la valeur de votre propriété, sans intention immédiate de vendre." },
+  { q: "Mon secteur est-il couvert?", a: "Oui, je couvre tout l'Outaouais : Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts et Pontiac." },
   { q: "Que faire après avoir reçu mon évaluation?", a: "Vous aurez les chiffres et les options. Si vous voulez aller plus loin, je peux préparer un plan vendeur complet ou répondre à vos questions lors d'un appel." },
 ];
 
 const afterSteps = [
-  { title: "Plan vendeur", text: "Allez plus loin, recevez un plan complet: prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan", highlight: true },
-  { title: "Parler à Yanis", text: "Discuter de votre situation et vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
+  { title: "Plan vendeur", text: "Pour aller plus loin, recevez un plan complet : prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan", highlight: true },
+  { title: "Parler à Yanis", text: "Discuter de votre situation et de vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
 const anim = {
@@ -122,12 +122,12 @@ const ValuationPage = () => {
 
               {/* Headline */}
               <h1 className="text-primary-foreground max-w-[520px]">
-                Combien vaut réellement votre propriété?
+                Combien vaut votre propriété?
               </h1>
 
               {/* Subtitle - hidden on mobile to save space */}
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">
-                Recevez une estimation personnalisée et confidentielle, basée sur votre propriété et les ventes comparables récentes dans votre secteur de Gatineau, Aylmer, Hull ou Outaouais.
+                Recevez une estimation personnalisée et confidentielle, basée sur votre propriété et les ventes comparables récentes dans votre secteur, à Gatineau, à Aylmer, à Hull ou ailleurs en Outaouais.
               </p>
               {/* Shorter mobile subtitle */}
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">
@@ -147,7 +147,7 @@ const ValuationPage = () => {
               {/* Credibility strip */}
               <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Près de 9 ans en Outaouais</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Plus de 9 ans en Outaouais</span>
               </div>
             </motion.div>
 
@@ -211,7 +211,7 @@ const ValuationPage = () => {
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      550 000 $
+                      550 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Conservateur
@@ -220,7 +220,7 @@ const ValuationPage = () => {
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
                     <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
-                      570 000 $
+                      570 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Prix recommandé
@@ -229,7 +229,7 @@ const ValuationPage = () => {
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      599 000 $
+                      599 000 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
                       Optimiste
@@ -242,7 +242,7 @@ const ValuationPage = () => {
                 className="mt-8 text-[12px] leading-[1.5] text-[var(--cream)]/60"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                Exemple illustratif, aucun montant réel. Votre analyse personnalisée sera basée sur les ventes comparables récentes de votre secteur.
+                Exemple illustratif, montants fictifs. Votre analyse personnalisée sera basée sur les ventes comparables récentes de votre secteur.
               </p>
             </div>
           </div>
@@ -265,12 +265,12 @@ const ValuationPage = () => {
               className="text-[var(--ink)] italic"
               style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", lineHeight: 1.4 }}
             >
-              « C'est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. »
+              « C'est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. »
               <cite
                 className="block mt-6 not-italic text-[14px] text-[var(--ink)]/70"
                 style={{ fontFamily: "var(--sans)" }}
               >
-, Sylvie, Aylmer, 2026
+Sylvie, Aylmer, 2026
               </cite>
             </blockquote>
           </div>
@@ -282,7 +282,7 @@ const ValuationPage = () => {
         pages={[
           { title: "Évaluation maison Hull", text: "Combien vaut votre propriété à Hull?", href: "/evaluation-maison-hull/" },
           { title: "Évaluation maison Aylmer", text: "Combien vaut votre propriété à Aylmer?", href: "/evaluation-maison-aylmer/" },
-          { title: "Vendre à Gatineau", text: "Stratégie, prix et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+          { title: "Vendre à Gatineau", text: "Ma démarche pour vendre au bon prix.", href: "/vendre-ma-maison-gatineau/" },
           { title: "Courtier Chelsea", text: "Nature et marché de Chelsea.", href: "/chelsea/" },
           { title: "Courtier Cantley", text: "Terrains et vie rurale.", href: "/cantley/" },
           { title: "Tous les quartiers", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
