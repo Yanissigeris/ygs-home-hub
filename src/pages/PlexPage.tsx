@@ -25,44 +25,44 @@ const clientTypes = [
   {
     icon: Building2,
     title: "Propriétaires de plex",
-    text: "Vendre, refinancer ou conserver? On analyse votre situation avec des chiffres réels, pas des suppositions.",
+    text: "Vendre, refinancer ou conserver? On analyse votre situation à partir de vos loyers et de vos dépenses.",
     cta: "Recevoir une analyse",
     href: "/analyse-plex-gatineau/",
   },
   {
     icon: TrendingUp,
     title: "Acheteurs investisseurs",
-    text: "Valeur réelle, potentiel locatif, risques et stratégie d'achat, les chiffres avant la décision.",
+    text: "Valeur marchande, potentiel locatif, risques et stratégie d'achat : les chiffres avant la décision.",
     cta: "Demander une analyse",
     href: "/analyse-plex-gatineau/",
   },
 ];
 
 const questions = [
-  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Rendement actuel, conditions du marché en Outaouais et stratégie à long terme." },
-  { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Revenus réels, dépenses réelles, potentiel locatif dans le secteur, pas juste le prix affiché." },
+  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Votre rendement actuel, comparé à vos objectifs à long terme." },
+  { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Les loyers inscrits aux baux, les dépenses appuyées par des factures et le potentiel locatif du secteur." },
   { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Dépenses, vacance, travaux à prévoir, potentiel de croissance à Gatineau." },
-  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation, certains coûts changent la donne, surtout sur les bâtiments plus anciens de Hull." },
-  { icon: CheckCircle2, title: "Comment maximiser le prix de vente?", text: "Positionnement prix et mise en marché ciblée font la différence sur un plex en Outaouais." },
+  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation : certains travaux changent la donne, surtout dans les immeubles plus anciens de Hull." },
+  { icon: CheckCircle2, title: "Comment bien vendre mon plex?", text: "Un prix bien positionné et une mise en marché qui rejoint les investisseurs de l'Outaouais." },
 ];
 
 const steps = [
-  { num: "01", title: "Analyse des chiffres", desc: "Revenus, dépenses, valeur marchande et potentiel locatif, on part des faits." },
-  { num: "02", title: "Recommandation stratégique", desc: "Garder, vendre, refinancer ou acheter, la meilleure option pour votre situation." },
+  { num: "01", title: "Analyse des chiffres", desc: "Revenus, dépenses, valeur marchande et potentiel locatif : on part des faits." },
+  { num: "02", title: "Recommandation", desc: "Garder, vendre, refinancer ou acheter : l'option qui convient à votre situation." },
   { num: "03", title: "Exécution et accompagnement", desc: "De la décision à la transaction, un accompagnement complet et transparent." },
 ];
 
 
 const nextSteps = [
-  { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses, potentiel, une lecture objective de votre situation.", href: "/analyse-plex-gatineau/", cta: "Recevoir mon analyse", highlight: true },
+  { title: "Analyse plex gratuite", text: "Valeur, revenus, dépenses et potentiel : une lecture objective de votre situation.", href: "/analyse-plex-gatineau/", cta: "Recevoir mon analyse", highlight: true },
   { title: "Évaluation de la valeur", text: "Connaître la valeur marchande actuelle de votre plex, gratuit et confidentiel.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur" },
-  { title: "Parler à Yanis", text: "Un appel pour discuter de votre situation d'investisseur, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
+  { title: "Parler à Yanis", text: "Un échange pour discuter de votre situation d'investisseur, sans engagement.", href: "/contact-yanis/", cta: "Me joindre" },
 ];
 
 const faq = [
-  { q: "Comment évaluer la valeur d'un plex?", a: "Revenus, état de l'immeuble, potentiel locatif et secteur. Depuis 2017 en Outaouais, je connais bien les particularités des plex à Hull, Gatineau-centre et dans les autres secteurs." },
+  { q: "Comment évaluer la valeur d'un plex?", a: "On combine les ventes récentes de plex comparables et l'approche par le revenu : revenu net, taux global d'actualisation (TGA) et multiplicateur de revenu brut (MRB) du secteur. L'état de l'immeuble et le potentiel locatif ajustent ensuite la valeur. J'analyse des plex en Outaouais depuis 2017, à Hull, à Gatineau-centre et ailleurs." },
   { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus, des dépenses, de l'état de l'immeuble et de votre stratégie. Une analyse propre à la propriété permet d'évaluer la situation." },
-  { q: "Comment vendre un plex occupé?", a: "C'est faisable, coordination locataires, visites, documentation. Le processus québécois a ses règles spécifiques. Je vous accompagne à chaque étape." },
+  { q: "Comment vendre un plex occupé?", a: "C'est possible. La vente ne met pas fin aux baux : l'acheteur les reprend tels quels. Les locataires doivent recevoir un préavis de 24 heures avant une visite. On prépare d'avance les baux et l'état des revenus et dépenses à remettre aux acheteurs." },
   { q: "Refinancer ou vendre?", a: "On compare les deux scénarios avec les taux actuels et la valeur marchande de votre secteur pour voir ce qui fait plus de sens." },
 ];
 
@@ -72,8 +72,8 @@ const PlexPage = () => (
     <ServiceJsonLd name="Analyse et investissement plex à Gatineau" description="Service d'analyse et d'accompagnement pour l'achat, la vente ou l'évaluation de plex et immeubles à revenus à Gatineau et en Outaouais." url="/investir-plex-gatineau/" serviceType="Real Estate Investment Analysis" />
     <HeroSection
       overline="Plex et investissement · Gatineau"
-      title="Plex à Gatineau: acheter, vendre ou analyser"
-      subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel, chaque facteur compte dans la décision."
+      title="Plex à Gatineau : acheter, vendre ou analyser"
+      subtitle="Il faut regarder au-delà du prix affiché. Revenus, dépenses, état de l'immeuble, potentiel : chaque facteur compte dans la décision."
       primaryCta={{ label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/" }}
       secondaryCta={{ label: "Valeur de mon plex", href: "/evaluation-gratuite-gatineau/" }}
       trustLine="Stratégie claire."
@@ -83,16 +83,16 @@ const PlexPage = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Analyse" title="Ce qu'il faut analyser avant d'investir dans un plex en Outaouais" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Les conditions varient selon le secteur et le type d'immeuble. Avant d'acheter, il faut examiner les loyers réels, les dépenses, la vacance, l'état du bâtiment et le potentiel propre à la propriété.
+        Les conditions varient selon le secteur et le type d'immeuble. Avant d'acheter, il faut examiner les loyers en place, les dépenses, la vacance, l'état du bâtiment et le potentiel propre à la propriété.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Une analyse de rendement doit tenir compte des loyers en place, des coûts d'entretien, des travaux à prévoir et de votre stratégie à long terme. Ces facteurs peuvent différer sensiblement d'un immeuble et d'un secteur à l'autre.
+        Une analyse de rendement doit tenir compte des loyers en place, des coûts d'entretien, des travaux à prévoir et de votre stratégie à long terme. Elle sert à comparer l'immeuble à vos objectifs.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter, c'est de vous donner l'analyse honnête pour que vous décidiez en toute connaissance de cause.
+        Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter. Je vous donne une analyse franche pour que vous décidiez en toute connaissance de cause.
       </p>
       <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
-        L'ajustement d'un loyer dépend des critères applicables et de la situation de l'immeuble. Le TAL propose un outil de calcul pour aider propriétaires et locataires à établir l'ajustement; il ne fixe pas un taux unique applicable à tous les logements. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Consulter les critères du TAL</a>.
+        L'ajustement d'un loyer dépend des critères applicables et de la situation de l'immeuble. Le TAL publie chaque année les pourcentages qui servent à ce calcul, et son outil aide à établir l'ajustement. Le propriétaire et le locataire restent libres de s'entendre. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Consulter les critères du TAL</a>.
       </p>
       <div className="mt-6">
         <Button asChild><Link to="/contact-yanis/">Analyser un plex avec moi →</Link></Button>
@@ -132,7 +132,7 @@ const PlexPage = () => (
     <GuideInlineCTA
       guideType="investor_guide"
       headline="Investir à Gatineau? Recevez le guide complet."
-      text="Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter, le guide essentiel pour investir à Gatineau."
+      text="Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter : un guide pour investir à Gatineau, envoyé par courriel."
       ctaLabel="Recevoir le guide investisseur"
     />
 
@@ -148,7 +148,7 @@ const PlexPage = () => (
     <CTASection
       dark
       title="Recevez une lecture claire de votre situation"
-      text="Vendre, acheter ou simplement comprendre votre position, je vous aide à y voir plus clair."
+      text="Que vous pensiez vendre ou acheter, on regarde vos chiffres ensemble pour y voir plus clair."
       buttons={[
         { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
@@ -162,9 +162,9 @@ const PlexPage = () => (
       overline="À lire aussi"
       title="Pages connexes"
       pages={[
-        { title: "Analyse plex gratuite", text: "Revenus, dépenses, rendement, obtenez une lecture claire.", href: "/analyse-plex-gatineau/" },
-        { title: "Vendre un plex à Gatineau", text: "Stratégie et accompagnement pour maximiser la vente.", href: "/vendre-un-plex-a-gatineau/" },
-        { title: "Quartiers pour investir", text: "Les secteurs les plus porteurs en Outaouais.", href: "/quartiers-a-considerer-a-gatineau/" },
+        { title: "Analyse plex gratuite", text: "Revenus et dépenses : obtenez une lecture claire de votre immeuble.", href: "/analyse-plex-gatineau/" },
+        { title: "Vendre un plex à Gatineau", text: "Mise en marché et accompagnement pour vendre votre plex.", href: "/vendre-un-plex-a-gatineau/" },
+        { title: "Quartiers à considérer", text: "Comparer les secteurs de Gatineau et de l'Outaouais.", href: "/quartiers-a-considerer-a-gatineau/" },
         { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau/" },
       ]}
       background="alt"

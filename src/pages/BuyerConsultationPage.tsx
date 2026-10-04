@@ -32,18 +32,18 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Consultation confidentielle" },
   { icon: Clock, text: "Réponse personnalisée" },
-  { icon: Shield, text: "Aucune obligation, aucun engagement" },
+  { icon: Shield, text: "Sans engagement" },
 ];
 
 const afterSteps = [
-  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie, votre budget et vos priorités.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers", highlight: true },
+  { title: "Comparer les quartiers", text: "Les secteurs de Gatineau vus selon votre budget et votre style de vie.", href: "/quartiers-a-considerer-a-gatineau", cta: "Voir les quartiers", highlight: true },
   { title: "Guide acheteur", text: "Le processus d'achat au Québec expliqué simplement, de la recherche au notaire.", href: "/guide-acheteur-gatineau", cta: "Lire le guide" },
 ];
 
 const faq = [
   { q: "Combien coûte la consultation?", a: "C'est gratuit et sans engagement. L'objectif est de comprendre votre situation et de voir si je peux vous aider." },
-  { q: "Combien de temps dure la consultation?", a: "Environ 20-30 minutes. On couvre vos critères, le marché actuel et les prochaines étapes." },
-  { q: "Je ne suis pas encore prêt à acheter — c'est quand même utile?", a: "Absolument. La plupart des acheteurs commencent par se renseigner. Mieux vous comprenez le marché, meilleure sera votre décision." },
+  { q: "Combien de temps dure la consultation?", a: "En général, de 20 à 30 minutes. On passe en revue vos critères et le marché actuel, puis on fixe les prochaines étapes." },
+  { q: "Je ne suis pas encore prêt à acheter. Est-ce utile quand même?", a: "Oui. Se renseigner tôt vous laisse le temps de comprendre le marché et votre budget avant de chercher. Le moment venu, vous décidez plus vite et avec plus d'assurance." },
 ];
 
 const BuyerConsultationPage = () => {
@@ -77,13 +77,13 @@ const BuyerConsultationPage = () => {
   return (
      <>
       <PageMeta title="Consultation acheteur gratuite · Gatineau" description="Consultation acheteur gratuite à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." ogImage="https://yanisgauthier.com/og/og-buyer.jpg" />
-    <ServiceJsonLd name="Consultation acheteur gratuite — Gatineau" description="Consultation gratuite pour acheteurs à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." url="/consultation-acheteur" serviceType="Real Estate Buyer Consultation" />
+    <ServiceJsonLd name="Consultation acheteur gratuite à Gatineau" description="Consultation gratuite pour acheteurs à Gatineau. Clarifiez vos critères, budget et options par quartier avec un courtier expérimenté." url="/consultation-acheteur" serviceType="Real Estate Buyer Consultation" />
       <HeroSection
         compact
         overline="Consultation acheteur · Gatineau"
         title="Réservez votre consultation acheteur gratuite"
-        subtitle="On parle de vos critères, votre budget et vos questions — pour que vous puissiez acheter en toute confiance."
-        trustLine="Gratuit, confidentiel et sans engagement."
+        subtitle="On parle de vos critères et de votre budget, pour que vous puissiez acheter en confiance."
+        trustLine="Gratuit et sans engagement."
         heroBgImage={heroImg}
       />
 
@@ -100,13 +100,13 @@ const BuyerConsultationPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Réservez votre consultation</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Dites-moi ce que vous cherchez, je vous reviens avec un plan personnalisé.
+                  Dites-moi ce que vous cherchez. Je vous réponds avec un plan personnalisé.
                 </p>
 
                 {submitted ? (
                   <SuccessMessage
                     title="Merci! Demande envoyée."
-                    text="Je vous reviens avec une réponse personnalisée."
+                    text="Je vous envoie une réponse personnalisée."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
@@ -118,25 +118,25 @@ const BuyerConsultationPage = () => {
                       <div>
                         <Label htmlFor="courriel">Courriel</Label>
                         <Input id="courriel" name="email" type="email" className="mt-1.5" required aria-describedby="bc-courriel-help" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <p id="bc-courriel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format : vous@exemple.com</p>
+                        <p id="bc-courriel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format : vous@exemple.com</p>
                       </div>
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="tel">Téléphone</Label>
                         <Input id="tel" name="phone" type="tel" className="mt-1.5" aria-describedby="bc-tel-help" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <p id="bc-tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel, format : 819-000-0000</p>
+                        <p id="bc-tel-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optionnel, format : 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Budget approximatif</Label>
                         <Select value={budget} onValueChange={setBudget}>
                           <SelectTrigger id="budget" className="mt-1.5"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="300">Moins de 300 000 $</SelectItem>
-                            <SelectItem value="400">300 000 $ - 400 000 $</SelectItem>
-                            <SelectItem value="500">400 000 $ - 500 000 $</SelectItem>
-                            <SelectItem value="600">500 000 $ - 600 000 $</SelectItem>
-                            <SelectItem value="700">600 000 $ et plus</SelectItem>
+                            <SelectItem value="300">Moins de 300 000 $</SelectItem>
+                            <SelectItem value="400">De 300 000 $ à 400 000 $</SelectItem>
+                            <SelectItem value="500">De 400 000 $ à 500 000 $</SelectItem>
+                            <SelectItem value="600">De 500 000 $ à 600 000 $</SelectItem>
+                            <SelectItem value="700">600 000 $ et plus</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -170,15 +170,15 @@ const BuyerConsultationPage = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Questions ou précisions (optionnel)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Type de propriété recherché, quartier préféré, questions…" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Type de propriété, quartier préféré, questions" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
                       <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Plus vous donnez de détails, plus la rencontre sera utile.</p>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
-                      {submitting ? "Envoi…" : "Réserver ma consultation"}
+                      {submitting ? "Envoi en cours" : "Réserver ma consultation"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Gratuit et sans engagement, je vous aide à y voir plus clair.
+                      Gratuit et sans engagement. Je vous aide à y voir plus clair.
                     </p>
                   </form>
                 )}
@@ -226,7 +226,7 @@ const BuyerConsultationPage = () => {
 
       <FunnelNextStep
         overline="En attendant"
-        title="Explorez en attendant votre consultation"
+        title="À lire en attendant votre consultation"
         subtitle="Familiarisez-vous avec le marché et les quartiers de Gatineau."
         steps={afterSteps}
         background="alt"

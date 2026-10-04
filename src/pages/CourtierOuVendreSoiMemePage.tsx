@@ -10,21 +10,21 @@ import heroImg from "@/assets/hero-courtier-vs-fsbo.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "Est-ce mieux de vendre avec un courtier ou seul?", a: "Ça dépend de votre expérience, de votre temps disponible et de votre tolérance au risque. Un courtier offre visibilité, négociation et gestion complète, vendre seul peut réduire les frais mais demande beaucoup plus de travail et comporte des risques." },
-  { q: "Combien peut-on économiser en vendant sans courtier?", a: "En théorie, on économise la commission. En pratique, les ventes sans courtier se concluent souvent à un prix inférieur, ce qui peut annuler l'économie. L'accès au marché MLS et la portée marketing sont aussi réduits." },
-  { q: "Est-ce légal de vendre seul au Québec?", a: "Oui, la vente sans courtier est légale au Québec. Le vendeur reste tenu à la garantie légale de qualité et doit informer l'acheteur de ce qu'il sait sur l'immeuble. Le formulaire Déclarations du vendeur de l'OACIQ est obligatoire quand un courtier est impliqué." },
-  { q: "Quels risques y a-t-il à vendre sans courtier?", a: "Sous-évaluer le prix, mauvaise négociation, erreurs dans les documents, exposition limitée, litiges potentiels et stress important. Un courtier professionnel réduit significativement ces risques." },
-  { q: "Un courtier peut-il vraiment vendre plus cher?", a: "Il peut vous aider à obtenir un meilleur prix grâce à une stratégie basée sur les ventes comparables, à l'exposition sur le système MLS et à la négociation. Le résultat dépend toujours de la propriété et du marché." },
-  { q: "Quels services un courtier offre-t-il vs vendre seul?", a: "Évaluation professionnelle, accès MLS, photos, marketing, gestion des visites, négociation, rédaction des offres et coordination notariale. Seul, vous gérez tout vous-même." },
-  { q: "Comment décider si j'ai besoin d'un courtier?", a: "Si vous avez le temps, les connaissances juridiques et la capacité de négocier fermement, la vente privée est une option. Sinon, un courtier peut vous faire gagner en prix et en tranquillité d'esprit." },
-  { q: "Est-ce que les acheteurs préfèrent un vendeur avec courtier?", a: "Beaucoup d'acheteurs (et leurs courtiers) préfèrent traiter avec un courtier inscripteur, car ça simplifie les négociations et réduit les risques de malentendus." },
+  { q: "Est-ce mieux de vendre avec un courtier ou seul?", a: "Ça dépend de votre temps disponible et de votre aisance à négocier. Un courtier prend en charge la mise en marché, les visites, la négociation et les documents. Vendre seul évite la commission, mais tout ce travail repose sur vous." },
+  { q: "Combien peut-on économiser en vendant sans courtier?", a: "Vous économisez la commission et les taxes qui s'y ajoutent. Par contre, un prix de départ mal établi ou une négociation difficile peut réduire cette économie. Sans courtier, vous n'avez pas accès à Centris, ce qui limite la portée de l'annonce." },
+  { q: "Est-ce légal de vendre seul au Québec?", a: "Oui, vendre sans courtier est légal au Québec, que ce soit avec une plateforme comme DuProprio ou une simple pancarte. Le vendeur reste tenu à la garantie légale de qualité, sauf exclusion prévue à l'acte, et doit informer l'acheteur de ce qu'il sait sur l'immeuble. Avec un courtier, le formulaire Déclarations du vendeur de l'OACIQ est obligatoire si le vendeur est une personne physique et que l'immeuble résidentiel compte moins de 5 logements, copropriété comprise." },
+  { q: "Quels risques y a-t-il à vendre sans courtier?", a: "Fixer un prix trop bas, négocier sans expérience, faire des erreurs dans les documents ou limiter la visibilité de l'annonce. Ces erreurs peuvent mener à des litiges. Un courtier vous aide à réduire ces risques." },
+  { q: "Un courtier peut-il vendre plus cher?", a: "Il peut vous aider à obtenir un prix plus élevé grâce à une stratégie basée sur les ventes comparables, à l'exposition sur Centris et à la négociation. Le résultat dépend toujours de la propriété et du marché." },
+  { q: "Quels services offre un courtier par rapport à la vente sans courtier?", a: "Analyse du prix, inscription sur Centris, photos, marketing, gestion des visites, négociation, rédaction des offres et coordination notariale. Seul, vous gérez tout vous-même. Le notaire, lui, reste neutre : il prépare et reçoit l'acte de vente, sans négocier pour vous." },
+  { q: "Comment décider si j'ai besoin d'un courtier?", a: "Si vous avez du temps et une bonne connaissance des documents et des obligations du vendeur, la vente privée est une option. Sinon, un courtier prend en charge chaque étape et vous aide à défendre votre prix." },
+  { q: "Est-ce que les acheteurs préfèrent un vendeur avec courtier?", a: "Ça dépend des acheteurs. Certains courtiers acheteurs préfèrent traiter avec un courtier inscripteur, qui a déjà les déclarations du vendeur et les documents en main. Un acheteur accompagné peut quand même acheter une propriété vendue sans courtier, selon l'entente sur la rétribution de son courtier." },
 ];
 
 const CourtierOuVendreSoiMemePage = () => (
   <>
     <PageMeta
       title="Courtier immobilier ou vendre seul au Québec?"
-      description="Comparaison honnête entre vendre avec un courtier ou seul au Québec. Avantages, risques et ce qui est le mieux pour votre situation à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
+      description="Vendre avec un courtier ou seul au Québec : avantages, risques, obligations du vendeur et résultat net, pour décider selon votre situation à Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
@@ -34,9 +34,9 @@ const CourtierOuVendreSoiMemePage = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <h1 className="text-primary-foreground">Courtier immobilier ou vendre seul?</h1>
+          <h1 className="text-primary-foreground">Courtier immobilier ou vendre soi-même?</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            Les deux options sont légitimes. Voici une comparaison honnête pour vous aider à faire le bon choix selon votre situation.
+            Les deux options sont légitimes. Cette comparaison vous aide à choisir selon votre situation, avec les avantages et les risques de chaque côté.
           </p>
         </motion.div>
       </div>
@@ -48,10 +48,10 @@ const CourtierOuVendreSoiMemePage = () => (
         <div>
           <h3 className="text-[1rem] font-semibold mb-3">Avec un courtier</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ Accès au réseau MLS et visibilité maximale</li>
-            <li>✓ Stratégie de prix basée sur des données réelles</li>
+            <li>✓ Inscription sur Centris</li>
+            <li>✓ Prix appuyé sur des ventes comparables</li>
             <li>✓ Photos professionnelles et marketing ciblé</li>
-            <li>✓ Négociation experte et protection juridique</li>
+            <li>✓ Négociation et formulaires encadrés par l'OACIQ</li>
             <li>✓ Coordination complète jusqu'au notaire</li>
           </ul>
         </div>
@@ -60,7 +60,7 @@ const CourtierOuVendreSoiMemePage = () => (
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
             <li>✓ Pas de commission à payer</li>
             <li>✓ Contrôle total du processus</li>
-            <li>✗ Visibilité réduite (pas de MLS)</li>
+            <li>✗ Pas d'accès à Centris (MLS)</li>
             <li>✗ Risque de sous-évaluation du prix</li>
             <li>✗ Gestion complète à votre charge</li>
           </ul>
@@ -69,17 +69,17 @@ const CourtierOuVendreSoiMemePage = () => (
     </ContentBlock>
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="Réalité" title="Ce qu'il faut vraiment considérer" />
+      <SectionHeading overline="Réalité" title="Ce qu'il faut considérer" />
       <p className="prose-body mt-5">
-        La question n'est pas seulement « combien je peux économiser? » mais plutôt « quel sera mon résultat net? ». Un courtier compétent peut souvent obtenir un prix de vente supérieur qui compense largement sa commission, surtout dans un marché comme celui de Gatineau.
+        La question n'est pas seulement « combien je peux économiser? », mais « combien me restera-t-il? ». Si un courtier obtient un prix plus élevé, une partie ou la totalité de la commission peut être compensée. Ça dépend de la propriété et du marché.
       </p>
       <p className="prose-body mt-4">
-        La vente privée peut fonctionner si vous avez le temps, les connaissances et la capacité de négocier. Mais pour la plupart des vendeurs, l'accompagnement d'un professionnel local réduit le stress, les risques et le temps sur le marché.
+        La vente privée peut fonctionner si vous avez du temps et de l'aisance en négociation. Dans les autres cas, un courtier local prend en charge les étapes et réduit les risques d'erreur dans les documents.
       </p>
     </ContentBlock>
 
     <InlineCTA
-      text="Curieux de savoir combien vaut votre propriété? Obtenez une réponse personnalisée et une estimation gratuite."
+      text="Curieux de savoir combien vaut votre propriété? Obtenez une évaluation gratuite, avec une réponse personnalisée en 24 heures maximum."
       buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
@@ -88,10 +88,10 @@ const CourtierOuVendreSoiMemePage = () => (
       <SectionHeading overline="Risques" title="Les risques de vendre sans courtier" />
       <div className="mt-5 space-y-3">
         {[
-          { title: "Prix trop bas", text: "Sans accès aux comparables et à l'analyse de marché, vous risquez de sous-évaluer votre propriété." },
-          { title: "Exposition limitée", text: "Sans MLS, votre propriété atteint beaucoup moins d'acheteurs potentiels." },
+          { title: "Prix trop bas", text: "Sans analyse des ventes comparables, vous risquez de fixer un prix trop bas." },
+          { title: "Exposition limitée", text: "Sans Centris, votre annonce n'apparaît pas dans l'outil que les courtiers utilisent pour chercher des propriétés avec leurs clients." },
           { title: "Négociation directe", text: "Négocier seul face à un acheteur (ou son courtier) peut être désavantageux sans expérience." },
-          { title: "Erreurs administratives", text: "La documentation immobilière est complexe, une erreur peut entraîner des litiges coûteux." },
+          { title: "Erreurs administratives", text: "La documentation immobilière est complexe. Une erreur peut entraîner des litiges coûteux." },
         ].map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
@@ -102,7 +102,7 @@ const CourtierOuVendreSoiMemePage = () => (
     </ContentBlock>
 
     <RelatedPages
-      overline="Explorer"
+      overline="À lire aussi"
       title="Pages connexes"
       pages={[
         { title: "Combien coûte un courtier?", text: "Guide sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
@@ -116,7 +116,7 @@ const CourtierOuVendreSoiMemePage = () => (
     <CTASection
       dark
       title="Vous hésitez encore?"
-      text="Discutons de votre situation, sans engagement. Je vous aide à comprendre vos options et à prendre la meilleure décision."
+      text="Discutons de votre situation, sans engagement. Je vous donne les chiffres et les options, vous décidez."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },

@@ -22,22 +22,22 @@ import heroImg from "@/assets/hero-plex.webp";
 
 const benefits = [
   "Estimation de la valeur marchande actuelle de votre plex",
-  "Analyse des revenus locatifs vs dépenses réelles",
-  "Potentiel d'optimisation des loyers",
-  "Recommandation: garder, vendre ou refinancer",
+  "Analyse des revenus locatifs et des dépenses",
+  "Potentiel d'ajustement des loyers, selon les règles du TAL",
+  "Recommandation : garder, vendre ou refinancer",
   "Prochaines étapes concrètes, sans engagement",
 ];
 
 const trustPoints = [
   { icon: Lock, text: "Informations strictement confidentielles" },
   { icon: Clock, text: "Réponse personnalisée" },
-  { icon: Shield, text: "Aucune obligation, aucun engagement" },
+  { icon: Shield, text: "Sans engagement" },
 ];
 
 const faq = [
-  { q: "Qu'est-ce qui est inclus dans l'analyse plex?", a: "Valeur marchande estimée, analyse des revenus et dépenses, potentiel locatif, et une recommandation stratégique adaptée à votre situation." },
-  { q: "Est-ce que c'est vraiment gratuit?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez d'aller de l'avant, on en discute, mais en toute transparence." },
-  { q: "Je ne suis pas sûr de vouloir vendre — est-ce quand même utile?", a: "Absolument. Beaucoup de propriétaires veulent simplement comprendre leur position avant de décider. C'est exactement pour ça que ce service existe." },
+  { q: "Qu'est-ce qui est inclus dans l'analyse plex?", a: "Une estimation de la valeur marchande, l'analyse des revenus et des dépenses, le potentiel locatif et une recommandation adaptée à votre situation." },
+  { q: "L'analyse est-elle gratuite?", a: "Oui. L'objectif est de vous aider à prendre une décision éclairée. Si vous décidez ensuite d'aller de l'avant, on discute des conditions ouvertement, sans pression." },
+  { q: "Je ne suis pas sûr de vouloir vendre. Est-ce utile quand même?", a: "Oui. Comprendre votre position avant de décider, c'est justement le but de cette analyse. Vous restez libre de garder, de vendre ou de refinancer." },
 ];
 
 const PlexAnalysisPage = () => {
@@ -73,12 +73,12 @@ const PlexAnalysisPage = () => {
   return (
      <>
       <PageMeta title="Demander une analyse de plex à Gatineau | YGS" description="Demandez une analyse personnalisée de votre plex à Gatineau : valeur, revenus, dépenses et options adaptées à votre projet. Sans engagement." ogImage="https://yanisgauthier.com/og/og-plex.jpg" />
-    <ServiceJsonLd name="Analyse de plex à Gatineau" description="Analyse gratuite de plex à Gatineau — rendement, revenus, dépenses et potentiel par secteur en Outaouais." url="/analyse-plex-gatineau" serviceType="Real Estate Investment Analysis" />
+    <ServiceJsonLd name="Analyse de plex à Gatineau" description="Analyse gratuite de plex à Gatineau : rendement, revenus, dépenses et potentiel selon le secteur, en Outaouais." url="/analyse-plex-gatineau" serviceType="Real Estate Investment Analysis" />
       <HeroSection
         compact
         overline="Analyse plex gratuite · Gatineau"
         title="Recevez une analyse claire de votre plex"
-        subtitle="Valeur, revenus, dépenses, potentiel — je vous donne une lecture objective de votre situation d'investisseur."
+        subtitle="Valeur, revenus, dépenses, potentiel : je vous donne une lecture objective de votre situation d'investisseur."
         trustLine="Une analyse utile pour vous aider à décider en toute connaissance de cause."
         heroBgImage={heroImg}
       />
@@ -96,13 +96,13 @@ const PlexAnalysisPage = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre analyse plex</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  Je vous reviens personnellement avec une analyse complète, pas un rapport générique.
+                  Je prépare personnellement votre analyse à partir des chiffres de votre immeuble.
                 </p>
 
                 {submitted ? (
                   <SuccessMessage
                     title="Merci! Demande envoyée."
-                    text="Je vous reviens avec une réponse personnalisée et votre analyse."
+                    text="Je vous envoie une réponse personnalisée avec votre analyse."
                   />
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-7 space-y-5">
@@ -151,7 +151,7 @@ const PlexAnalysisPage = () => {
                       </div>
                       <div>
                         <Label htmlFor="revenus">Revenus mensuels bruts (approx.)</Label>
-                        <Input id="revenus" name="revenus" placeholder="Ex: 3 200 $" className="mt-1.5" />
+                        <Input id="revenus" name="revenus" placeholder="Ex. : 3 200 $" className="mt-1.5" />
                       </div>
                     </div>
 
@@ -173,11 +173,11 @@ const PlexAnalysisPage = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Notes additionnelles (optionnel)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, détails pertinents…" />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Contexte, questions, détails pertinents" />
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" disabled={submitting} className="w-full mt-2 shadow-md font-semibold">
-                      {submitting ? "Envoi…" : "Recevoir mon analyse plex"}
+                      {submitting ? "Envoi en cours" : "Recevoir mon analyse plex"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
                       Je vous donne les chiffres et les options, vous décidez.
