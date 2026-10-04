@@ -32,7 +32,7 @@ const LimbourPageEn = () => (
       {
         q: "Limbour, Aylmer, the Plateau or Masson-Angers: which one should I choose?",
         a: "Limbour offers recent homes at a more accessible price than Aylmer or the Plateau. It is also closer to Ottawa than Masson-Angers: about 12 km from downtown by road, compared with about 36 km from Masson-Angers.",
-        detail: "If you want a move-in ready home in an established neighbourhood without over-leveraging, Limbour is often the right compromise. For Lac Deschênes or the shops of Old Aylmer, look at Aylmer instead. Masson-Angers is a better fit if you prefer a customized new build and the commute matters less.",
+        detail: "If you want a move-in ready home in an established neighbourhood without over-leveraging, Limbour is often the right compromise. For the shops of Old Aylmer, look at Aylmer instead. Masson-Angers is a better fit if you prefer a customized new build and the commute matters less.",
       },
     ]}
     profilesTitle="Who buys in Limbour"

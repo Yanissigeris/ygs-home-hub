@@ -69,7 +69,7 @@ const subSectors = [
 const related = [
   { title: "Living in Hull: the guide", text: "Daily life, culture, restaurants and neighbourhood feel.", href: "/en/living-hull/" },
   { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex/" },
-  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer/" },
+  { title: "Aylmer", text: "Families, bilingual.", href: "/en/aylmer/" },
   { title: "Relocating from Ottawa", text: "Buying in Gatineau from Ontario.", href: "/en/relocation/" },
   { title: "Gatineau centre", text: "Residential, services, affordable.", href: "/en/gatineau/" },
 ];

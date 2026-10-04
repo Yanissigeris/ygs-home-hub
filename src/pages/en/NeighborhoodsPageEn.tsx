@@ -12,7 +12,7 @@ import { Clock, Award, Shield, MapPin, Home, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero-neighborhoods.webp";
 
 const sectors = [
-  { name: "Aylmer", href: "/en/aylmer/", detail: "Lake Deschênes, established neighbourhoods, quality of life" },
+  { name: "Aylmer", href: "/en/aylmer/", detail: "Established neighbourhoods, quality of life" },
   { name: "Hull", href: "/en/hull/", detail: "Urban, culture, close to downtown Ottawa" },
   { name: "Plateau", href: "/en/plateau/", detail: "Family-friendly, newer homes, parks" },
   { name: "Gatineau Centre", href: "/en/gatineau/", detail: "Residential, services, accessible suburb" },
@@ -33,7 +33,7 @@ const lifestyleGuides = [
 const faq = [
   { q: "What's the best neighbourhood in Gatineau?", a: "It depends on your profile: families with school-age children, plex investors, first-time buyers, downsizing retirees. Aylmer and the Plateau lean family. Hull suits urban professionals, while Chelsea and Cantley appeal to nature lovers. Buckingham and Masson-Angers have the lowest single-family median of the city's sectors (APCIQ, Q2 2026). Contact me for a personalized recommendation." },
   { q: "Do prices vary a lot between neighbourhoods?", a: "Yes. In Q2 2026, the median single-family price was $419,545 in the Buckingham/Masson-Angers sector, $490,000 in the Gatineau sector, $514,500 in Hull and $572,750 in Aylmer (APCIQ, Centris data). For the periphery (Cantley, Chelsea, Pontiac, Val-des-Monts and other municipalities), the figure was $595,000. The Plateau has no separate figure: it is split between the Hull and Aylmer sectors. Cantley, Chelsea and Val-des-Monts trade urban access for space and nature." },
-  { q: "Which neighbourhoods are best for families?", a: "Aylmer (especially around Lake Deschênes), the Plateau, Limbour and Masson-Angers are often chosen by families for their schools, parks, sports facilities and quieter streets. School-board eligibility (English vs French) can also influence the decision." },
+  { q: "Which neighbourhoods suit families?", a: "Families often choose Aylmer, the Plateau, Limbour and Masson-Angers for the schools, parks, sports facilities and quieter streets. School-board eligibility (English vs French) can also influence the decision." },
   { q: "Which areas are best for buyers from Ottawa?", a: "Hull, Aylmer, the Plateau and Côte-d'Azur are common choices for Ottawa buyers, for bridge access and bilingual services. Each has very different price points and vibes." },
   { q: "Where should I look for a plex or investment property?", a: "Hull, Gatineau Centre and parts of Aylmer remain the active plex markets thanks to stable rental demand from federal workers, students and professionals. Each pocket has its own return profile, I run the numbers before you offer." },
   { q: "How quickly do good listings sell?", a: "It varies by sector and segment. Move-in-ready homes in Aylmer, the Plateau or Chelsea often sell quickly when correctly priced. Older properties or higher price points can take longer. With buyer alerts, you see new listings as soon as they come out." },

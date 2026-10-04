@@ -3,7 +3,7 @@ import PageMeta from "@/components/PageMeta";
 const TermsPageEn = () => (
   <>
     <PageMeta
-      title="Terms of Use | YGS — Yanis Gauthier-Sigeris"
+      title="Terms of Use | YGS · Yanis Gauthier-Sigeris"
       description="Terms of use for yanisgauthier.com. Intellectual property, limitation of liability and applicable law."
       ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />

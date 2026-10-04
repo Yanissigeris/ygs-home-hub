@@ -49,7 +49,7 @@ const subSectors = [
 const related = [
   { title: "Invest in a plex", text: "Return analysis, investment strategy.", href: "/en/plex/" },
   { title: "Hull", text: "Urban, culture, condos.", href: "/en/hull/" },
-  { title: "Aylmer", text: "Lake Deschênes, families, bilingual.", href: "/en/aylmer/" },
+  { title: "Aylmer", text: "Families, bilingual.", href: "/en/aylmer/" },
   { title: "Buy in Gatineau", text: "Complete buyer guide.", href: "/en/buy/" },
 ];
 

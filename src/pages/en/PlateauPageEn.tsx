@@ -40,7 +40,7 @@ const PlateauPageEn = () => (
       },
       {
         q: "Aylmer, Hull or the Plateau: which one should I choose?",
-        a: "It depends on what matters most to you. If you want a recent home near Gatineau Park, the Plateau is a good place to start. Aylmer offers Lac Deschênes and more established neighbourhoods, while Hull is a better fit for an urban lifestyle close to the bridges.",
+        a: "It depends on what matters most to you. If you want a recent home near Gatineau Park, the Plateau is a good place to start. Aylmer offers more established neighbourhoods, while Hull is a better fit for an urban lifestyle close to the bridges.",
         detail: "I wrote a detailed comparison of the three areas. You will find it in the \"Read also\" section further down this page.",
       },
     ]}
@@ -72,7 +72,7 @@ const PlateauPageEn = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Aylmer", href: "/en/aylmer/", detail: "Lac Deschênes, established neighbourhoods" },
+      { name: "Aylmer", href: "/en/aylmer/", detail: "Families, established neighbourhoods" },
       { name: "Hull", href: "/en/hull/", detail: "Urban, culture, condos" },
       { name: "Chelsea", href: "/en/chelsea/", detail: "Village, Gatineau Park" },
     ]}}

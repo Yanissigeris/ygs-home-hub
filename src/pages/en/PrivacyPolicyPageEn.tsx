@@ -4,7 +4,7 @@ import heroPrivacy from "@/assets/hero-privacy.webp";
 const PrivacyPolicyPageEn = () => (
   <>
     <PageMeta
-      title="Privacy Policy | YGS — Yanis Gauthier-Sigeris"
+      title="Privacy Policy | YGS · Yanis Gauthier-Sigeris"
       description="Privacy policy for yanisgauthier.com. Compliance with Quebec's Law 25. Personal data management and cookies."
       ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />

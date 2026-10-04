@@ -31,7 +31,7 @@ const faq = [
   },
   {
     q: "Do you specialize in Aylmer specifically?",
-    a: "Aylmer has been one of my primary areas for almost 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. That local knowledge works on both the selling and the buying side.",
+    a: "Aylmer has been one of my primary areas for over 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. That local knowledge works on both the selling and the buying side.",
   },
 ];
 
@@ -39,7 +39,7 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "Established residential area with renovated homes on mature, tree-lined streets. Lake Deschênes and the cycling paths are close, as is the Champlain Bridge.",
+    text: "Established residential area with renovated homes on mature, tree-lined streets. The cycling paths and the Champlain Bridge are close by.",
     tag: "Families · Established · In demand",
   },
   {
@@ -53,8 +53,8 @@ const subSectors = [
     tag: "Space · Recent · Affordable",
   },
   {
-    title: "Waterfront · Lake Deschênes",
-    text: "Riverfront and lakefront properties with boat access and larger lots. A niche market with few properties for sale. That scarcity supports long-term values.",
+    title: "Waterfront",
+    text: "Riverfront properties on the Ottawa River, with boat access and larger lots. A niche market with few properties for sale. That scarcity supports long-term values.",
     tag: "Prestige · Waterfront",
   },
 ];
@@ -105,7 +105,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature at your doorstep", text: "Lake Deschênes, the Ottawa River, Gatineau Park, and cycling paths to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
+  { icon: "🌿", title: "Nature at your doorstep", text: "Gatineau Park and the Ottawa River are close by, and cycling paths lead to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
   { icon: "🛒", title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
   { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (CS des Portages), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
 ];
@@ -127,7 +127,7 @@ const AylmerPageEn = () => (
       description="Yanis Gauthier-Sigeris, real estate broker specializing in Aylmer, Gatineau. Single-family homes, condos, local expertise. Free home valuation, deep local knowledge." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
-      description="Real estate broker specializing in Aylmer, Gatineau. Lake Deschênes, family neighbourhoods, schools and community."
+      description="Real estate broker in Aylmer, Gatineau. Family neighbourhoods, schools, parks and community life."
       lat={45.3945}
       lng={-75.8486}
       url="/en/aylmer/"
@@ -138,7 +138,7 @@ const AylmerPageEn = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Real estate broker in Aylmer, your local specialist"
-      subtitle="Aylmer draws many bilingual families, for Lake Deschênes and the parks as much as for its newer homes. The market is competitive and rewards prepared buyers as much as well-positioned sellers."
+      subtitle="Aylmer draws many bilingual families, for its parks as much as for its newer homes. The market is competitive and rewards prepared buyers as much as well-positioned sellers."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
@@ -150,10 +150,10 @@ const AylmerPageEn = () => (
         <div className="lg:col-span-3 space-y-4">
           <h2>What sets Aylmer apart in Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer is the western sector of Gatineau, bordered by the Ottawa River and Lake Deschênes. It offers suburban living without moving far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
+            Aylmer is the western sector of Gatineau, bordered by the Ottawa River. It offers suburban living without moving far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
           </p>
           <p className="prose-body">
-            Lucerne and Rivermead are in high demand, with their established homes on mature streets, close to Lake Deschênes, parks, and both French and English schools. Old Aylmer has a heritage feel, with character properties and local shops in a village atmosphere.
+            Lucerne and Rivermead are in high demand, with their established homes on mature streets, close to parks and both French and English schools. Old Aylmer has a heritage feel, with character properties and local shops in a village atmosphere.
           </p>
           <p className="prose-body">
             For buyers coming from Ottawa, Aylmer often means an immediate gain in space and quality of life for the same budget, or less. For sellers, it's a market where presentation and fair pricing make the difference between a quick sale and a property that sits.

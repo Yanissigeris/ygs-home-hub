@@ -13,7 +13,7 @@ import { Home, Users, MapPin, Coffee } from "lucide-react";
 import heroImg from "@/assets/plateau-aylmer-lifestyle.webp";
 
 const highlights = [
-  { icon: MapPin, title: "Lake Deschênes", text: "Beach, water sports and sunsets over the lake, steps from home." },
+  { icon: MapPin, title: "Gatineau Park", text: "Trails close by, for hiking in summer and cross-country skiing in winter." },
   { icon: Home, title: "Established neighbourhoods", text: "Tree-lined streets, character homes and a tight-knit community." },
   { icon: Coffee, title: "Village life", text: "Restaurants, cafés, boutiques and a local market, all within walking distance." },
   { icon: Users, title: "Bilingual community", text: "French and English schools, community activities and local services." },
@@ -21,7 +21,7 @@ const highlights = [
 
 const faq = [
   { q: "Is Aylmer bilingual?", a: "Yes, French and English schools, bilingual services and a mixed community." },
-  { q: "What is there to do in Aylmer?", a: "Lake Deschênes beach, Gatineau Park, farmers market, local restaurants and an active community life." },
+  { q: "What is there to do in Aylmer?", a: "Gatineau Park is close by. Aylmer also has a farmers market, and Old Aylmer offers local restaurants." },
   { q: "Is Aylmer well-served by transit?", a: "Access via the Champlain Bridge, public transit and cycling paths to Ottawa." },
 ];
 
@@ -34,12 +34,12 @@ const related = [
 
 const LivingAylmerPageEn = () => (
   <>
-    <PageMeta title="Living in Aylmer | Lifestyle Guide" description="Everything about life in Aylmer: lake, restaurants, schools, community and quality of life. Your guide to settling in Aylmer." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
-    <HeroSection overline="Living in Aylmer · Gatineau" title="Living in Aylmer: the guide" subtitle="Discover the Aylmer lifestyle: lake, nature, community and Ottawa access. Everything you need to know before settling in." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "See the neighbourhood", href: "/en/aylmer/" }} heroBgImage={heroImg} />
+    <PageMeta title="Living in Aylmer | Lifestyle Guide" description="Everything about life in Aylmer: restaurants, schools, parks, community and quality of life. Your guide to settling in Aylmer." ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
+    <HeroSection overline="Living in Aylmer · Gatineau" title="Living in Aylmer: the guide" subtitle="The Aylmer lifestyle: nature, village life, community and Ottawa access. Everything you need to know before settling in." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "See the neighbourhood", href: "/en/aylmer/" }} heroBgImage={heroImg} />
     <CardGrid overline="Lifestyle" title="What sets Aylmer apart" items={highlights} />
     <ContentBlock narrow>
       <SectionHeading title="Day-to-day life in Aylmer" />
-      <p className="prose-body mt-5">Aylmer keeps a small-town feel while being part of a large metropolitan region. Lake Deschênes and Gatineau Park are close by, and there are both French and English schools. From Old Aylmer, downtown Ottawa is about 14 km away via the Champlain Bridge.</p>
+      <p className="prose-body mt-5">Aylmer keeps a small-town feel while being part of a large metropolitan region. Gatineau Park is close by, and there are both French and English schools. From Old Aylmer, downtown Ottawa is about 14 km away via the Champlain Bridge.</p>
     </ContentBlock>
     <InlineCTA text="Thinking about settling in Aylmer? Book a free consultation." buttonLabel="Book a consultation →" href="/en/buyer-consultation/" />
     <FAQSection title="Questions about living in Aylmer" items={faq} />

@@ -224,7 +224,7 @@ const PontiacPageEn = () => {
         pages={[
           { title: "Chelsea", text: "Village, Gatineau Park.", href: "/en/chelsea/" },
           { title: "Cantley", text: "Large lots, families.", href: "/en/cantley/" },
-          { title: "Aylmer", text: "Lac Deschênes, family neighbourhoods.", href: "/en/aylmer/" },
+          { title: "Aylmer", text: "Family neighbourhoods, bilingual.", href: "/en/aylmer/" },
           { title: "Val-des-Monts", text: "Lakes and cottages in nature.", href: "/en/val-des-monts/" },
         ]}
         background="alt"
