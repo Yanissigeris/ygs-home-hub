@@ -41,10 +41,10 @@ export function useFormSubmit() {
       if (error) {
         console.error("Form submission error:", error);
         toast({
-          title: data.lang === "fr" ? "Erreur" : "Error",
+          title: data.lang === "fr" ? "Demande non envoyée" : "Request not sent",
           description: data.lang === "fr"
-            ? "Une erreur est survenue. Veuillez réessayer."
-            : "Something went wrong. Please try again.",
+            ? "L'envoi n'a pas fonctionné. Réessayez dans un instant ou appelez-moi au 819-210-3044."
+            : "Your request didn't go through. Try again in a moment or call me at 819-210-3044.",
           variant: "destructive",
         });
         return false;
@@ -69,10 +69,10 @@ export function useFormSubmit() {
     } catch (err) {
       console.error("Form submission error:", err);
       toast({
-        title: data.lang === "fr" ? "Erreur" : "Error",
+        title: data.lang === "fr" ? "Demande non envoyée" : "Request not sent",
         description: data.lang === "fr"
-          ? "Une erreur est survenue. Veuillez réessayer."
-          : "Something went wrong. Please try again.",
+          ? "L'envoi n'a pas fonctionné. Réessayez dans un instant ou appelez-moi au 819-210-3044."
+          : "Your request didn't go through. Try again in a moment or call me at 819-210-3044.",
         variant: "destructive",
       });
       return false;
