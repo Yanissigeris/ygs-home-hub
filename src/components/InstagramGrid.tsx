@@ -8,7 +8,7 @@ import ig5 from "@/assets/instagram-5.webp?w=320;640&format=avif;webp&as=picture
 import ig6 from "@/assets/instagram-6.webp?w=320;640&format=avif;webp&as=picture";
 
 const images = [ig1, ig2, ig3, ig4, ig5, ig6];
-const HANDLE = "yanissigeris";
+const HANDLE = "yanisgauthier_remax_gatineau";
 const PROFILE_URL = `https://www.instagram.com/${HANDLE}/`;
 
 const InstagramGrid = () => {
