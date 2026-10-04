@@ -20,6 +20,101 @@ interface EmailRequest {
 }
 
 const NOTIFICATION_EMAIL = "yanis@martywaite.com";
+const FUNCTION_VERSION = "2026-10-04";
+
+// Only the live site may call this function from a browser.
+const ALLOWED_ORIGINS = new Set([
+  "https://yanisgauthier.com",
+  "https://www.yanisgauthier.com",
+  "http://localhost:8080",
+  "http://localhost:5173",
+]);
+
+const FORM_TYPES = new Set(["contact", "valuation", "guide", "analysis", "consultation"]);
+const EMAIL_PATTERN = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/;
+const LINK_PATTERN = /(https?:\/\/|www\.|<|>)/i;
+
+// Best-effort limit per IP (per function instance): 5 submissions per 10 minutes.
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX = 5;
+const hits = new Map<string, number[]>();
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  for (const [key, stamps] of hits) {
+    if (stamps.every((ts) => now - ts >= RATE_WINDOW_MS)) hits.delete(key);
+  }
+  const recent = (hits.get(ip) ?? []).filter((ts) => now - ts < RATE_WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > RATE_MAX;
+}
+
+// Plain guide names for the visitor confirmation (the forms send the CTA heading).
+const GUIDE_NAMES: Record<string, { fr: string; en: string }> = {
+  "Recevez le guide vendeur": { fr: "guide vendeur", en: "Seller Guide" },
+  "Recevez le guide acheteur": { fr: "guide acheteur", en: "Buyer Guide" },
+  "Recevez le guide investisseur": { fr: "guide investisseur", en: "Investor Guide" },
+  "Recevez le guide relocalisation": { fr: "guide relocalisation", en: "Relocation Guide" },
+  "Get the Seller Guide": { fr: "guide vendeur", en: "Seller Guide" },
+  "Get the Buyer Guide": { fr: "guide acheteur", en: "Buyer Guide" },
+  "Get the Investor Guide": { fr: "guide investisseur", en: "Investor Guide" },
+  "Get the Relocation Guide": { fr: "guide relocalisation", en: "Relocation Guide" },
+};
+
+const PLAIN_FIRST_NAME = /^[\p{L}' .-]{1,40}$/u;
+// Bare domains (evil.com, bit.ly/x) that mail clients would turn into links.
+const DOMAIN_PATTERN = /[a-z0-9-]\.[a-z]{2,}\b|\//i;
+
+// Every visitor-supplied value is escaped before it goes into an email.
+function esc(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function tooLong(value: unknown, max: number): boolean {
+  return typeof value === "string" && value.length > max;
+}
+
+function isOptionalString(value: unknown): boolean {
+  return value === undefined || value === null || typeof value === "string";
+}
+
+function hasValidEmail(data: EmailRequest): boolean {
+  return typeof data.email === "string" && EMAIL_PATTERN.test(data.email.trim()) && data.email.length <= 254;
+}
+
+function validate(data: EmailRequest): string | null {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return "Invalid payload";
+  for (const key of ["email", "phone", "message", "objective", "address", "guideTitle", "lastName", "projectType"] as const) {
+    if (!isOptionalString(data[key])) return "Invalid field";
+  }
+  if (!FORM_TYPES.has(data.formType)) return "Invalid form type";
+  if (data.lang !== "fr" && data.lang !== "en") return "Invalid language";
+  if (typeof data.name !== "string" || !data.name.trim()) return "Missing name";
+  if (tooLong(data.name, 200) || LINK_PATTERN.test(data.name)) return "Invalid name";
+  if (data.lastName && (tooLong(data.lastName, 200) || LINK_PATTERN.test(data.lastName))) return "Invalid name";
+  // A mistyped email is not rejected: the lead still reaches Yanis, only the visitor confirmation is skipped.
+  const hasEmail = typeof data.email === "string" && data.email.trim() !== "";
+  const hasPhone = typeof data.phone === "string" && data.phone.trim() !== "";
+  if (!hasEmail && !hasPhone) return "Missing email or phone";
+  if (tooLong(data.email, 320) || tooLong(data.phone, 40)) return "Field too long";
+  if (tooLong(data.message, 5000)) return "Message too long";
+  if (tooLong(data.address, 300) || tooLong(data.objective, 300) || tooLong(data.projectType, 200) || tooLong(data.guideTitle, 200)) {
+    return "Field too long";
+  }
+  return null;
+}
+
+function jsonResponse(body: unknown, status: number): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
+  });
+}
 const DEFAULT_FROM_EMAIL = "YGS <onboarding@resend.dev>";
 
 function isValidFromEmail(value: string): boolean {
@@ -57,23 +152,24 @@ function labelForFormType(t: EmailRequest["formType"]): string {
 
 function buildNotificationHtml(data: EmailRequest): string {
   const fields = [
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type</td><td style="padding:8px 12px">${data.formType} (${data.lang})</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Nom</td><td style="padding:8px 12px">${data.name}${data.lastName ? " " + data.lastName : ""}</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Courriel</td><td style="padding:8px 12px"><a href="mailto:${data.email}">${data.email}</a></td></tr>`,
-    data.phone ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Téléphone</td><td style="padding:8px 12px">${data.phone}</td></tr>` : "",
-    data.objective ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Objectif</td><td style="padding:8px 12px">${data.objective}</td></tr>` : "",
-    data.address ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Adresse</td><td style="padding:8px 12px">${data.address}</td></tr>` : "",
-    data.projectType ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type de projet</td><td style="padding:8px 12px">${data.projectType}</td></tr>` : "",
-    data.guideTitle ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Guide</td><td style="padding:8px 12px">${data.guideTitle}</td></tr>` : "",
-    data.message ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Message</td><td style="padding:8px 12px">${data.message}</td></tr>` : "",
+    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type</td><td style="padding:8px 12px">${esc(data.formType)} (${esc(data.lang)})</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Nom</td><td style="padding:8px 12px">${esc(data.name)}${data.lastName ? " " + esc(data.lastName) : ""}</td></tr>`,
+    data.email ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Courriel</td><td style="padding:8px 12px">${hasValidEmail(data) ? `<a href="mailto:${esc(data.email)}">${esc(data.email)}</a>` : `${esc(data.email)} (courriel à vérifier)`}</td></tr>` : "",
+    data.phone ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Téléphone</td><td style="padding:8px 12px">${esc(data.phone)}</td></tr>` : "",
+    data.objective ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Objectif</td><td style="padding:8px 12px">${esc(data.objective)}</td></tr>` : "",
+    data.address ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Adresse</td><td style="padding:8px 12px">${esc(data.address)}</td></tr>` : "",
+    data.projectType ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Type de projet</td><td style="padding:8px 12px">${esc(data.projectType)}</td></tr>` : "",
+    data.guideTitle ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Guide</td><td style="padding:8px 12px">${esc(data.guideTitle)}</td></tr>` : "",
+    data.message ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Message</td><td style="padding:8px 12px;white-space:pre-wrap">${esc(data.message)}</td></tr>` : "",
   ].filter(Boolean).join("");
 
-  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande — ${labelForFormType(data.formType)}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
+  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande\u00a0: ${labelForFormType(data.formType)}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
 }
 
 function buildConfirmationHtml(data: EmailRequest): { subject: string; html: string } {
   const isFr = data.lang === "fr";
-  const firstName = data.name.split(" ")[0];
+  const rawFirst = data.name.trim().split(" ")[0];
+  const firstName = PLAIN_FIRST_NAME.test(rawFirst) && !DOMAIN_PATTERN.test(rawFirst) ? esc(rawFirst) : "";
   const signature = isFr
     ? `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Courtier immobilier · RE/MAX · Équipe Marty Waite<br>819-210-3044</p>`
     : `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Real Estate Broker · RE/MAX · The Marty Waite Experience<br>819-210-3044</p>`;
@@ -83,60 +179,64 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
   const p = (text: string) => `<p style="color:#555;line-height:1.7">${text}</p>`;
 
   if (data.formType === "contact") {
-    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const heading = firstName ? (isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`) : (isFr ? "Merci!" : "Thanks.");
     const body = isFr
-      ? `${p("J'ai bien reçu votre message et je vous reviens rapidement.")}${p("En attendant, n'hésitez pas à explorer mon site pour en savoir plus sur mes services.")}`
-      : `${p("I got your message and I'll be in touch shortly.")}${p("In the meantime, feel free to browse the site to see how I work.")}`;
+      ? `${p("J'ai bien reçu votre message et je vous réponds rapidement.")}${p("D'ici là, vous trouverez sur mon site comment je travaille avec mes clients.")}`
+      : `${p("I got your message and I'll be in touch shortly.")}${p("In the meantime, my site shows how I work with clients.")}`;
     return {
-      subject: isFr ? "Merci pour votre message — Yanis Gauthier-Sigeris" : "Thank you for your message — Yanis Gauthier-Sigeris",
+      subject: isFr ? "Merci pour votre message, Yanis Gauthier-Sigeris" : "Thank you for your message, Yanis Gauthier-Sigeris",
       html: `${wrapOpen}${h2(heading)}${body}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "valuation") {
-    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
-    const intro = isFr ? "J'ai bien reçu votre demande d'évaluation pour :" : "I got your valuation request for:";
-    const addressBlock = data.address ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${data.address}</p>` : "";
+    const heading = firstName ? (isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`) : (isFr ? "Merci!" : "Thanks.");
+    const showAddress = !!data.address && !LINK_PATTERN.test(data.address) && !DOMAIN_PATTERN.test(data.address);
+    const intro = isFr
+      ? (showAddress ? "J'ai bien reçu votre demande d'évaluation pour\u00a0:" : "J'ai bien reçu votre demande d'évaluation.")
+      : (showAddress ? "I got your valuation request for:" : "I got your valuation request.");
+    const addressBlock = showAddress ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${esc(data.address)}</p>` : "";
     const closing = isFr
-      ? "Je vous reviens avec une réponse personnalisée et une analyse basée sur les ventes comparables récentes dans votre secteur."
-      : "I'll send you a personalized response and analysis based on recent comparable sales in your neighbourhood.";
+      ? "Je vous envoie une réponse personnalisée en 24 heures maximum, avec une analyse basée sur les ventes comparables récentes dans votre secteur."
+      : "I'll send you a personalized response within 24 hours, with an analysis based on recent comparable sales in your neighbourhood.";
     return {
-      subject: isFr ? "Votre évaluation gratuite est en route — YGS" : "Your free valuation is on its way — YGS",
+      subject: isFr ? "Votre demande d'évaluation est reçue | YGS" : "Your valuation request was received | YGS",
       html: `${wrapOpen}${h2(heading)}${p(intro)}${addressBlock}${p(closing)}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "analysis") {
-    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const heading = firstName ? (isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`) : (isFr ? "Merci!" : "Thanks.");
     const body = isFr
-      ? "J'ai bien reçu votre demande d'analyse plex. Je vous reviens avec une réponse personnalisée et une analyse complète — pas un rapport générique."
-      : "I got your plex analysis request. I'll send you a personalized response and a full analysis with real numbers on the property you asked about, not a generic template report.";
+      ? "J'ai bien reçu votre demande d'analyse plex. Je vous enverrai une réponse personnalisée et une analyse faite pour cet immeuble."
+      : "I got your plex analysis request. I'll send you a personalized response and an analysis built for this building.";
     return {
-      subject: isFr ? "Votre analyse plex est en préparation — YGS" : "Your plex analysis is in progress — YGS",
+      subject: isFr ? "Votre analyse plex est en préparation | YGS" : "Your plex analysis is in progress | YGS",
       html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,
     };
   }
 
   if (data.formType === "consultation") {
-    const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+    const heading = firstName ? (isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`) : (isFr ? "Merci!" : "Thanks.");
     const body = isFr
-      ? "J'ai bien reçu votre demande de consultation. Je vous reviens avec une réponse personnalisée."
+      ? "J'ai bien reçu votre demande de consultation. Je vous enverrai une réponse personnalisée pour fixer un moment."
       : "I got your consultation request. I'll be in touch with a personalized response to set up a time.";
     return {
-      subject: isFr ? "Votre demande de consultation est reçue — YGS" : "Your consultation request was received — YGS",
+      subject: isFr ? "Votre demande de consultation est reçue | YGS" : "Your consultation request was received | YGS",
       html: `${wrapOpen}${h2(heading)}${p(body)}${hr}${signature}</div>`,
     };
   }
 
-  const heading = isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`;
+  const heading = firstName ? (isFr ? `Merci ${firstName}!` : `Thanks ${firstName}.`) : (isFr ? "Merci!" : "Thanks.");
+  const guide = GUIDE_NAMES[data.guideTitle ?? ""];
   const p1 = isFr
-    ? `Votre guide « ${data.guideTitle || "Guide"} » vous sera envoyé par courriel sous peu.`
-    : `Your guide "${data.guideTitle || "Guide"}" will arrive by email shortly.`;
+    ? `Votre ${guide ? guide.fr : "guide"} vous sera envoyé par courriel sous peu.`
+    : `Your ${guide ? guide.en : "guide"} will arrive by email shortly.`;
   const p2 = isFr
-    ? "En attendant, n'hésitez pas à me contacter si vous avez des questions."
-    : "If you have questions in the meantime, contact me directly at 819-210-3044 or reply to this email.";
+    ? "Si vous avez des questions d'ici là, appelez-moi au 819-210-3044."
+    : "If you have questions in the meantime, call me at 819-210-3044.";
   return {
-    subject: isFr ? "Votre guide est en route — YGS" : "Your guide is on its way — YGS",
+    subject: isFr ? "Votre guide est en route | YGS" : "Your guide is on its way | YGS",
     html: `${wrapOpen}${h2(heading)}${p(p1)}${p(p2)}${hr}${signature}</div>`,
   };
 }
@@ -146,6 +246,26 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Version check only. Sends nothing.
+  if (req.method === "GET") {
+    return jsonResponse({ ok: true, version: FUNCTION_VERSION }, 200);
+  }
+
+  if (req.method !== "POST") {
+    return jsonResponse({ error: "Method not allowed" }, 405);
+  }
+
+  const origin = req.headers.get("origin") ?? "";
+  if (!ALLOWED_ORIGINS.has(origin)) {
+    return jsonResponse({ error: "Forbidden" }, 403);
+  }
+
+  // If the client IP is unknown, skip the limit rather than put every visitor in one shared bucket.
+  const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim();
+  if (ip && rateLimited(ip)) {
+    return jsonResponse({ error: "Too many requests" }, 429);
+  }
+
   try {
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     if (!RESEND_API_KEY) {
@@ -153,24 +273,28 @@ serve(async (req) => {
     }
 
     const fromEmail = getFromEmail();
-    const data: EmailRequest = await req.json();
-
-    if (!data.name || !data.email || !data.formType || !data.lang) {
-      return new Response(JSON.stringify({ error: "Missing required fields" }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+    let data: EmailRequest;
+    try {
+      data = await req.json();
+    } catch {
+      return jsonResponse({ error: "Invalid JSON" }, 400);
     }
 
+    const invalid = validate(data);
+    if (invalid) {
+      return jsonResponse({ error: invalid }, 400);
+    }
+
+    const who = data.name.replace(/[\r\n\t]+/g, " ").trim().slice(0, 80);
     const notifSubject = data.formType === "contact"
-      ? `Nouveau contact — ${data.name}`
+      ? `Nouveau contact\u00a0: ${who}`
       : data.formType === "valuation"
-        ? `Nouvelle évaluation — ${data.name}`
+        ? `Nouvelle évaluation\u00a0: ${who}`
         : data.formType === "analysis"
-          ? `Nouvelle analyse plex — ${data.name}`
+          ? `Nouvelle analyse plex\u00a0: ${who}`
           : data.formType === "consultation"
-            ? `Nouvelle consultation — ${data.name}`
-            : `Nouveau guide demandé — ${data.name}`;
+            ? `Nouvelle consultation\u00a0: ${who}`
+            : `Nouveau guide demandé\u00a0: ${who}`;
 
     const notifRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -193,13 +317,18 @@ serve(async (req) => {
     }
 
 
+    // Visitor confirmation only when an email address was given (phone-only leads skip it).
+    if (!hasValidEmail(data)) {
+      return jsonResponse({ success: true }, 200);
+    }
+
     const confirmation = buildConfirmationHtml(data);
     const confirmRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: fromEmail,
-        to: [data.email],
+        to: [(data.email as string).trim()],
         subject: confirmation.subject,
         html: confirmation.html,
       }),
