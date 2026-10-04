@@ -5,6 +5,9 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import { trackCTAClick } from "@/lib/analytics";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const RecommendedLabel = () => <>{useLanguage() === "en" ? "Recommended" : "Recommandé"}</>;
 
 interface FunnelStep {
   title: string;
@@ -67,7 +70,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                     className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] bg-[var(--gold)] text-[var(--cream)]"
                     style={{ fontFamily: "var(--sans)" }}
                   >
-                    Recommandé
+                    <RecommendedLabel />
                   </span>
                 )}
                 <h3

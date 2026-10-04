@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
-import { Send, Lock, Shield, Clock, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
+import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import type { Avatar, Offer } from "@/lib/analytics";
@@ -29,7 +29,7 @@ const i18n = {
     formSubtitle: "Remplissez le formulaire pour le recevoir par courriel.",
     bullets: [
       { icon: Shield, text: "Gratuit et sans engagement" },
-      { icon: Clock, text: "Envoyé par courriel en quelques minutes" },
+      { icon: Send, text: "Envoyé par courriel" },
       { icon: CheckCircle2, text: "Contenu adapté au marché de Gatineau" },
     ],
     firstName: "Prénom",
@@ -38,25 +38,25 @@ const i18n = {
     lastNamePh: "Votre nom",
     email: "Courriel",
     emailPh: "vous@exemple.com",
-    emailHint: "Format : vous@exemple.com",
+    emailHint: "Format : vous@exemple.com",
     phone: "Téléphone (optionnel)",
     phonePh: "(819) 000-0000",
-    phoneHint: "Optionnel, format : (819) 000-0000",
+    phoneHint: "Optionnel, format : (819) 000-0000",
     badges: ["Gratuit", "Confidentiel", "Sans engagement"],
     defaultSuccessTitle: "Merci! Votre guide est en route.",
-    defaultSuccessText: "Vous allez le recevoir par courriel dans les prochaines minutes.",
+    defaultSuccessText: "Je vous l'envoie par courriel sous peu.",
     errFirstName: "Veuillez indiquer votre prénom (au moins 2 caractères).",
     errLastName: "Veuillez indiquer votre nom (au moins 2 caractères).",
     errEmail: "Veuillez entrer un courriel valide.",
-    errPhone: "Format attendu : (819) 000-0000",
-    sending: "Envoi…",
+    errPhone: "Format attendu : (819) 000-0000",
+    sending: "Envoi en cours",
   },
   en: {
     overline: "Free Guide",
     formSubtitle: "Fill out the form to receive it by email.",
     bullets: [
       { icon: Shield, text: "Free, no commitment" },
-      { icon: Clock, text: "Sent by email within minutes" },
+      { icon: Send, text: "Sent by email" },
       { icon: CheckCircle2, text: "Content tailored to the Gatineau market" },
     ],
     firstName: "First Name",
@@ -71,12 +71,12 @@ const i18n = {
     phoneHint: "Optional, format: (819) 000-0000",
     badges: ["Free", "Confidential", "No commitment"],
     defaultSuccessTitle: "Thank you! Your guide is on its way.",
-    defaultSuccessText: "You'll receive it by email within the next few minutes.",
+    defaultSuccessText: "I'll send it to you by email shortly.",
     errFirstName: "Please enter your first name (at least 2 characters).",
     errLastName: "Please enter your last name (at least 2 characters).",
     errEmail: "Please enter a valid email address.",
     errPhone: "Expected format: (819) 000-0000",
-    sending: "Sending…",
+    sending: "Sending",
   },
 };
 

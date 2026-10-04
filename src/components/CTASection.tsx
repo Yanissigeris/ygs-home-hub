@@ -2,6 +2,14 @@ import * as React from "react";
 import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { trackCTAClick, trackContactTap } from "@/lib/analytics";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const TrustQuote = ({ text }: { text: string }) => {
+  const lang = useLanguage();
+  const clean = text.replace(/^[\s"“« ]+|[\s"”» ]+$/g, "");
+  if (clean.includes(" · ")) return <>{clean}</>;
+  return lang === "en" ? <>“{clean}”</> : <>{"« "}{clean}{" »"}</>;
+};
 
 interface CTASectionProps {
   overline?: string;
@@ -92,7 +100,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         {trustLine && (
           <div className="mt-8 sm:mt-12 pt-8 sm:pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
             <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.2rem)", fontWeight: 300, color: dark ? "rgba(255,255,255,.55)" : "hsl(var(--muted-foreground))" }}>
-              « {trustLine} »
+              <TrustQuote text={trustLine} />
             </p>
           </div>
         )}
