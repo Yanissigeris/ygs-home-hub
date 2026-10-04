@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useToast } from "@/hooks/use-toast";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
@@ -213,7 +214,6 @@ const ValDesMontsPageEn = React.lazy(() => import("./pages/en/ValDesMontsPageEn"
 const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageEn"));
 const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
 const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
-const AdminImageGen = React.lazy(() => import("./pages/AdminImageGen"));
 const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
 const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
 const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
@@ -367,7 +367,6 @@ const routeTree = React.createElement(
       <Route path="/en/privacy-policy" element={<PrivacyPolicyPageEn />} />
       <Route path="/en/terms" element={<TermsPageEn />} />
     </Route>
-    <Route path="/admin/image-gen" element={<AdminImageGen />} />
     <Route path="*" element={<NotFound />} />
   </>,
 );
@@ -384,6 +383,27 @@ const appRoutes = React.createElement(
   ),
 );
 
-const App = () => appRoutes;
+// Form error messages (useFormSubmit calls toast()). The toast UI is loaded only
+// when a message actually needs to be shown, so it costs nothing on normal visits.
+const LazyToaster = React.lazy(() =>
+  import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
+);
+
+const ToastGate = () => {
+  const { toasts } = useToast();
+  if (toasts.length === 0) return null;
+  return (
+    <React.Suspense fallback={null}>
+      <LazyToaster />
+    </React.Suspense>
+  );
+};
+
+const App = () => (
+  <>
+    {appRoutes}
+    <ToastGate />
+  </>
+);
 
 export default App;
