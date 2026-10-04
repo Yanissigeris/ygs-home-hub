@@ -155,7 +155,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <div className="mt-6 flex items-center gap-4">
               {[
                 { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
-                { href: "https://www.instagram.com/yanissigeris/", label: "Instagram", Icon: InstagramSvg },
+                { href: "https://www.instagram.com/yanisgauthier_remax_gatineau/", label: "Instagram", Icon: InstagramSvg },
               ].map(({ href, label, Icon }) => (
                 <a
                   key={label}
