@@ -12,10 +12,10 @@ import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = [
   "Realistic value range based on recent Hull sales",
-  "Pricing advice adapted to your Hull neighborhood",
-  "Your property's strengths to highlight, condo, plex or house",
+  "Pricing advice adapted to your Hull neighbourhood",
+  "Your property's strengths to highlight, whether it's a condo, a plex or a house",
   "What to fix and what's worth it in the Hull market",
-  "Next steps possible, no commitment",
+  "Possible next steps, no commitment",
 ];
 
 const trustBullets = [
@@ -25,21 +25,21 @@ const trustBullets = [
 ];
 
 const faq = [
-  { q: "How do I get a home valuation in Hull?", a: "Fill out the form on this page with your Hull property address. I'll provide a personalized response and an analysis based on recent comparable sales." },
-  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report, no obligation to sell." },
-  { q: "How much is my house worth in Hull?", a: "The value depends on your street, property type (condo, plex, single-family) and recent sales in your Hull neighborhood." },
+  { q: "How do I get a home valuation in Hull?", a: "Fill out the form on this page with your Hull property address. I'll then send you a personalized response and an analysis based on recent comparable sales." },
+  { q: "Is the valuation free?", a: "Yes, it's free and your request stays confidential. You're under no obligation to sell." },
+  { q: "How much is my house worth in Hull?", a: "The value depends on your street, property type (condo, plex, single-family) and recent sales in your Hull neighbourhood." },
   { q: "What is the valuation based on?", a: "I use recent sales on your street and in your Hull area, your property's condition, lot size and local market conditions." },
-  { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Hull's local specifics and your property's actual condition." },
-  { q: "How long does the valuation take?", a: "You receive a personalized response. For a more detailed analysis with a visit in Hull, we schedule an appointment." },
+  { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Hull's local specifics and your property's condition." },
+  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a more detailed analysis with a visit in Hull, we book an appointment." },
   { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report, no commitment." },
-  { q: "Does the valuation commit me to selling?", a: "No. Many Hull homeowners request a valuation simply to know their value, without any immediate intention to sell." },
-  { q: "Are Hull condos covered?", a: "Yes, I cover all property types in Hull: condos, plexes, single-family homes, regardless of the neighborhood." },
+  { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
+  { q: "Are Hull condos covered?", a: "Yes, I cover condos, plexes and single-family homes throughout Hull." },
   { q: "What do I do after receiving my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan for Hull." },
 ];
 
 const afterSteps = [
-  { title: "Sell in Hull", text: "Go further, get a complete plan to sell your Hull property.", href: "/en/sell-house-hull/", cta: "See the process", highlight: true },
-  { title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact/", cta: "Book a call" },
+  { title: "Sell in Hull", text: "See how I prepare and market a property in Hull.", href: "/en/sell-house-hull/", cta: "See my approach", highlight: true },
+  { title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const anim = {
@@ -53,7 +53,7 @@ const ValuationHullPageEn = () => {
     <>
       <PageMeta
         title="Home Valuation Hull | Free, No Commitment"
-        description="Get a free home valuation in Hull. Analysis based on recent sales in your neighborhood. Personalized response, no commitment."
+        description="Get a free home valuation in Hull. Analysis based on recent sales in your neighbourhood. Personalized response, no commitment."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
@@ -77,7 +77,7 @@ const ValuationHullPageEn = () => {
           <motion.div {...anim}>
             <h1 className="text-primary-foreground">How much is your Hull property worth?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
-              Receive a personalized valuation based on recent sales in your Hull neighborhood, free, confidential and no commitment.
+              Receive a personalized valuation based on recent sales in your Hull neighbourhood. It's free, with no commitment.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (
@@ -109,18 +109,18 @@ const ValuationHullPageEn = () => {
       </section>
 
       <RelatedPages
-        overline="Explore"
+        overline="See also"
         title="Related pages"
         pages={[
           { title: "Sell in Hull", text: "Process and strategy for selling in Hull.", href: "/en/sell-house-hull/" },
-          { title: "Hull — neighborhood profile", text: "Market, profile and trends.", href: "/en/hull/" },
-          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation/" },
+          { title: "Hull: neighbourhood profile", text: "The market and profile of the area.", href: "/en/hull/" },
+          { title: "Home valuation Gatineau", text: "Valuations across the Outaouais.", href: "/en/home-valuation/" },
           { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
         ]}
         background="alt"
       />
 
-      <FunnelNextStep overline="What's next?" title="You have your valuation — here's what comes next" subtitle="Choose the step that fits your situation." steps={afterSteps} />
+      <FunnelNextStep overline="What's next?" title="Once you have your valuation, here's what comes next" subtitle="Choose the step that fits your situation." steps={afterSteps} />
 
       <FAQSection items={faq} />
     </>

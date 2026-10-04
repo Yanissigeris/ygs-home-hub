@@ -12,20 +12,20 @@ import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
-const benefits = ["Realistic value range based on recent sales in your Gatineau neighborhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address, and which ones are worth it in your market","Possible next steps, no commitment"];
+const benefits = ["Realistic value range based on recent sales in your Gatineau neighbourhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address, and which ones are worth it in your market","Possible next steps, no commitment"];
 const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
-const afterSteps = [{ title: "Seller plan", text: "Go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/sell/", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact/", cta: "Book a call" }];
+const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 const valuationFaq = [
   { q: "How do I get a home valuation in Gatineau?", a: "Fill out the form on this page with your property address. I'll provide a personalized response and an analysis based on recent comparable sales in your area." },
-  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report, no obligation to sell." },
-  { q: "How much is my house worth in Gatineau?", a: "The value depends on the neighborhood, property type and recent sales. My valuation gives you a realistic range based on local comparables." },
-  { q: "What is the valuation based on?", a: "I use recent sales on your street and in your area, your property's condition, lot size and current Outaouais market conditions." },
-  { q: "How is this different from an online estimate?", a: "Online tools give an approximate estimate. My valuation accounts for local specifics and your property's actual condition, much more accurate." },
-  { q: "How long does the valuation take?", a: "You receive a personalized response. For a detailed analysis with a visit, we schedule at your convenience." },
+  { q: "Is the valuation free?", a: "Yes, it's free and your request stays confidential. You're under no obligation to sell." },
+  { q: "How much is my house worth in Gatineau?", a: "The value depends mostly on recent sales near you and on the property type. My valuation gives you a realistic range based on local comparables." },
+  { q: "What is the valuation based on?", a: "I use recent sales on your street and in your area, your property's condition, lot size and current market conditions in the Outaouais." },
+  { q: "How is this different from an online estimate?", a: "Online tools give an approximate estimate. My valuation accounts for local specifics and your property's condition, which an algorithm can't see." },
+  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a detailed analysis with a visit, we book a time that suits you." },
   { q: "Do I need a home visit for the valuation?", a: "Not necessarily for a first estimate. If you want a more detailed report, a visit can be arranged, no commitment." },
-  { q: "Does the valuation commit me to selling?", a: "No, not at all. Many homeowners request a valuation simply to know their value, without any immediate intention to sell." },
-  { q: "Is my area covered?", a: "Yes, I cover all of Outaouais: Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts and Pontiac." },
+  { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
+  { q: "Is my area covered?", a: "Yes, I cover the entire Outaouais: Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts and Pontiac." },
   { q: "What happens after I receive my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan or answer your questions on a call." },
 ];
 
@@ -34,7 +34,7 @@ const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, tr
 const ValuationPageEn = () => {
   return (
     <>
-      <PageMeta title="Free Home Valuation — Gatineau" description="Get a free and accurate valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
+      <PageMeta title="Free Home Valuation | Gatineau" description="Get a free valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
     <ServiceJsonLd name="Free Home Valuation in Gatineau" description="Get a free property valuation in Gatineau, Aylmer, Hull or Outaouais. Analysis based on recent comparable sales in your area." url="/en/home-valuation/" serviceType="Real Estate Appraisal Service" />
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
@@ -70,13 +70,13 @@ const ValuationPageEn = () => {
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
-              <h1 className="text-primary-foreground max-w-[520px]">How much is your property really worth?</h1>
-              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">Get a personalized and confidential estimate, based on your property and recent comparable sales in your Gatineau, Aylmer, Hull or Outaouais neighborhood.</p>
+              <h1 className="text-primary-foreground max-w-[520px]">How much is your property worth?</h1>
+              <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">Get a personalized and confidential estimate, based on your property and recent comparable sales in your neighbourhood in Gatineau, Aylmer, Hull or elsewhere in the Outaouais.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free and confidential estimate based on recent sales.</p>
               <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
               <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Nearly 9 years in Outaouais</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Over 9 years in the Outaouais</span>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
@@ -93,10 +93,10 @@ const ValuationPageEn = () => {
         pages={[
           { title: "Hull home valuation", text: "What's your Hull property worth?", href: "/en/home-valuation-hull/" },
           { title: "Aylmer home valuation", text: "What's your Aylmer property worth?", href: "/en/home-valuation-aylmer/" },
-          { title: "Sell in Gatineau", text: "Strategy, pricing and guidance.", href: "/en/sell/" },
-          { title: "Realtor Chelsea", text: "Nature and market.", href: "/en/chelsea/" },
-          { title: "Realtor Cantley", text: "Land and rural living.", href: "/en/cantley/" },
-          { title: "All Neighborhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
+          { title: "Sell in Gatineau", text: "How I help you sell at the right price.", href: "/en/sell/" },
+          { title: "Chelsea broker", text: "Nature and market.", href: "/en/chelsea/" },
+          { title: "Cantley broker", text: "Land and rural living.", href: "/en/cantley/" },
+          { title: "All Neighbourhoods", text: "Compare all areas.", href: "/en/neighborhoods/" },
         ]}
         background="alt"
       />

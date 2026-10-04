@@ -9,18 +9,18 @@ import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 const whatsNext = [
   { icon: Clock, text: "Personalized response" },
   { icon: FileText, text: "Analysis based on recent comparable sales" },
-  { icon: Shield, text: "No obligation, no commitment" },
+  { icon: Shield, text: "No commitment" },
 ];
 
 const nextSteps = [
-  { title: "Seller plan", text: "Go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan", cta: "Get my plan", highlight: true },
-  { title: "Seller guide", text: "Everything you need to know to sell at the best price in Gatineau.", href: "/en/seller-guide", cta: "Read the guide" },
-  { title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact", cta: "Book a call" },
+  { title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan", cta: "Get my plan", highlight: true },
+  { title: "Seller guide", text: "Everything you need to know to sell at the right price in Gatineau.", href: "/en/seller-guide", cta: "Read the guide" },
+  { title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact", cta: "Book a call" },
 ];
 
 const ThankYouValuationPageEn = () => (
   <>
-    <PageMeta title="Thank You — Valuation Requested" description="Your valuation request has been sent. Yanis is preparing your personalized analysis and response." />
+    <PageMeta title="Thank You | Valuation Requested" description="Your valuation request has been sent. Yanis is preparing your personalized analysis and response." />
     <section
       className="section-padding"
       style={{
@@ -38,7 +38,7 @@ const ThankYouValuationPageEn = () => (
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <CheckCircle2 size={56} className="mx-auto text-accent" />
-          <h1 className="mt-6">Thank you! Your valuation request is on its way.</h1>
+          <h1 className="mt-6">Thank you. Your valuation request is on its way.</h1>
           <p className="prose-body mt-4">
             I'm preparing your personalized valuation based on your property, your area and recent comparable sales.
           </p>

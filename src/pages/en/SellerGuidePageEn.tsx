@@ -16,12 +16,12 @@ import HowToJsonLd from "@/components/HowToJsonLd";
 import heroImg from "@/assets/hero-seller-guide.webp";
 
 const sellerSteps = [
-  { name: "Get a property valuation", text: "Have your property evaluated by a local broker to set a competitive price based on the Gatineau market." },
-  { name: "Prepare your property for sale", text: "Identify improvements that maximize your price without over-investing, cleaning, photos and staging." },
-  { name: "Market with the right strategy", text: "Professional photos, optimized description and distribution on the right platforms to attract the right buyers." },
-  { name: "Manage showings and offers", text: "Organize showings strategically and evaluate each offer based on your goals, price, conditions and timelines." },
-  { name: "Negotiate and accept an offer", text: "Protect your price with a solid negotiation strategy and accept the offer that matches your criteria." },
-  { name: "Finalize the sale at the notary", text: "The notary prepares the deed of sale and manages the property transfer. The transaction is finalized." },
+  { name: "Get a property valuation", text: "Have your property valued by a local broker to set a competitive price based on the Gatineau market." },
+  { name: "Prepare your property for sale", text: "Spot the improvements that pay off without over-investing, then take care of cleaning and staging before the photos." },
+  { name: "Market with the right strategy", text: "Professional photos and a well-written description, posted on the platforms where your buyers are looking." },
+  { name: "Manage showings and offers", text: "Plan showings carefully and evaluate each offer based on your goals, the price, the conditions and the timelines." },
+  { name: "Negotiate and accept an offer", text: "Protect your price with a negotiation strategy prepared in advance, then accept the offer that matches your criteria." },
+  { name: "Finalize the sale at the notary", text: "The notary prepares the deed of sale and registers the transfer of ownership. Once it's signed, the sale is final." },
 ];
 
 const topics = [
@@ -30,61 +30,61 @@ const topics = [
   "Preparing your property without over-investing",
   "The selling process step by step in Québec",
   "Negotiation: protecting your price with the right strategy",
-  "Buy-sell coordination: avoiding getting stuck",
+  "Buy-sell coordination: how not to get caught between two deals",
 ];
 
 const faq = [
-  { q: "When is the best time to sell in Gatineau?", a: "It depends on your personal situation, not just the market. We analyze the best timing for you together." },
-  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. Everything is transparent from the start." },
-  { q: "Should I renovate before selling?", a: "Not necessarily. I help you identify what's worth doing to maximize your price without wasting money." },
-  { q: "How long does it take to sell in Gatineau?", a: "In Q2 2026, single-family homes in the Gatineau metropolitan area sold in 27 days on average, and condos in 40 days (APCIQ, Centris data). It varies by neighborhood, price and season." },
+  { q: "When is the best time to sell in Gatineau?", a: "It depends on your personal situation, not just the market. Together, we figure out the right time for you." },
+  { q: "How much does a real estate broker cost?", a: "The commission is agreed upon together before we start. You know the amount and the terms before you sign anything." },
+  { q: "Should I renovate before selling?", a: "Not necessarily. I help you spot what's worth doing to get a better price without wasting money." },
+  { q: "How long does it take to sell in Gatineau?", a: "In Q2 2026, single-family homes in the Gatineau metropolitan area sold in 27 days on average, and condos in 40 days (APCIQ, Centris data). It varies with the asking price and the neighbourhood." },
 ];
 
 const related = [
   { title: "Free Valuation", text: "How much is your property worth? Get a personalized response.", href: "/en/home-valuation/" },
   { title: "Seller Plan", text: "Get a personalized plan: pricing, preparation and marketing.", href: "/en/seller-plan/" },
-  { title: "When to Sell", text: "The right timing depends on your situation, here's how to see clearly.", href: "/en/when-to-sell/" },
+  { title: "When to Sell", text: "The right timing depends on your situation. A few pointers to see it clearly.", href: "/en/when-to-sell/" },
   { title: "Sell a Plex", text: "Selling an income property is different from selling a house.", href: "/en/sell-plex/" },
 ];
 
 const SellerGuidePageEn = () => (
   <>
-    <HowToJsonLd name="How to sell a property in Gatineau" description="Step-by-step guide to selling your property in Gatineau — pricing, preparation, marketing and negotiation." steps={sellerSteps} totalTime="P60D" />
-    <PageMeta title="Seller Guide — Selling in Gatineau" description="Complete guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the best price, with confidence and without bad surprises." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HowToJsonLd name="How to sell a property in Gatineau" description="Step-by-step guide to selling your property in Gatineau: pricing, preparation, marketing and negotiation." steps={sellerSteps} />
+    <PageMeta title="Seller Guide: Selling in Gatineau" description="A guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
+    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the right price." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
     <ContentBlock narrow>
       <SectionHeading title="Selling takes preparation" />
       <p className="prose-body mt-5">
-        The difference between a stressful sale and a successful one is preparation. This guide covers the essential steps to maximize your selling price in Gatineau, from price positioning to final negotiation.
+        The difference between a stressful sale and a successful one is preparation. This guide covers the steps that matter to sell at the right price in Gatineau, from price positioning to final negotiation.
       </p>
       <p className="prose-body mt-4">
-        Since 2017 supporting sellers in Outaouais, I've seen what works and what costs money. This guide summarizes the most important lessons.
+        I've been helping sellers in the Outaouais since 2017, and I've seen what works and what costs money. The main lessons are summed up here.
       </p>
     </ContentBlock>
 
     <InlineCTA text="Want a personalized analysis? Request your free valuation." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
 
     <ContentBlock narrow>
-      <SectionHeading title="The right price is key" />
+      <SectionHeading title="It all starts with the right price" />
       <p className="prose-body mt-5">
-        Overpricing = sitting on the market too long. Underpricing = leaving money on the table. The right price is based on recent comparable sales, the condition of your property and neighborhood dynamics.
+        Overpricing = sitting on the market too long. Underpricing = leaving money on the table. The right price starts from recent comparable sales, adjusted for your property's condition and the pace of your neighbourhood.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow>
       <SectionHeading title="Prepare without overspending" />
       <p className="prose-body mt-5">
-        Some investments pay off, neutral paint, decluttering, staging. Others are wasted money. I help you sort through them so you invest only where it counts.
+        Some investments pay off, like neutral paint or a good declutter. Others are wasted money. I help you sort through them so you only spend where it counts.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow>
       <SectionHeading title="The selling process in Québec" />
       <p className="prose-body mt-5">
-        Valuation → pricing → preparation → marketing → showings → offers → negotiation → inspection → notary → keys. Each step has its pitfalls, and its opportunities. That's why good support makes all the difference.
+        Valuation → pricing → preparation → marketing → showings → offers → negotiation → inspection → notary → keys. Each step has its pitfalls and its opportunities. That's why good guidance matters.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/seller-plan/">Get my personalized seller plan</Link>
@@ -96,19 +96,19 @@ const SellerGuidePageEn = () => (
       offer="guide_vendeur"
       guideTitle="Get the Seller Guide"
       headline="Get your free seller guide"
-      subtitle="Everything you need to know to sell at the best price in Gatineau — preparation, pricing, marketing and negotiation."
+      subtitle="Everything you need to know to sell at the right price in Gatineau: preparation, pricing, marketing and negotiation."
       submitLabel="Get the Seller Guide"
-      successTitle="Thank you! Your guide is on its way."
-      successText="Check your inbox, you'll receive the seller guide within the next few minutes."
+      successTitle="Thank you. Your guide is on its way."
+      successText="Check your inbox. The seller guide should arrive shortly."
     />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Also worth reading" title="Related pages for sellers" pages={related} background="alt" />
 
-    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing and preparation, explained in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 
-    <CTASection dark title="Ready to take action?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
+    <CTASection dark title="Ready to take stock?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
 
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>

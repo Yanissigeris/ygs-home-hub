@@ -12,10 +12,10 @@ import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = [
   "Realistic value range based on recent Aylmer sales",
-  "Pricing advice adapted to your Aylmer neighborhood",
+  "Pricing advice adapted to your Aylmer neighbourhood",
   "Your property's strengths to highlight for buyers",
   "What to fix and what's worth it in the Aylmer market",
-  "Next steps possible, no commitment",
+  "Possible next steps, no commitment",
 ];
 
 const trustBullets = [
@@ -25,21 +25,21 @@ const trustBullets = [
 ];
 
 const faq = [
-  { q: "How do I get a home valuation in Aylmer?", a: "Fill out the form on this page with your Aylmer property address. I'll provide a personalized response and an analysis based on recent comparable sales." },
-  { q: "Is the valuation really free?", a: "Yes, it's free, confidential and no commitment. You receive a clear report, no obligation to sell." },
-  { q: "How much is my house worth in Aylmer?", a: "The value depends on your neighborhood, Plateau, Lake Deschênes, residential areas, and recent sales. The valuation gives you a realistic range." },
+  { q: "How do I get a home valuation in Aylmer?", a: "Fill out the form on this page with your Aylmer property address. I'll then send you a personalized response and an analysis based on recent comparable sales." },
+  { q: "Is the valuation free?", a: "Yes, it's free and your request stays confidential. You're under no obligation to sell." },
+  { q: "How much is my house worth in Aylmer?", a: "Your neighbourhood and recent sales nearby drive the value. My valuation gives you a realistic range." },
   { q: "What is the valuation based on?", a: "I use recent sales on your street and in your Aylmer area, your property's condition, lot size and local market conditions." },
-  { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Aylmer's local specifics and your property's actual condition." },
-  { q: "How long does the valuation take?", a: "You receive a personalized response. For a more detailed analysis with a visit in Aylmer, we schedule an appointment." },
+  { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Aylmer's local specifics and your property's condition." },
+  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a more detailed analysis with a visit in Aylmer, we book an appointment." },
   { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report, no commitment." },
-  { q: "Does the valuation commit me to selling?", a: "No. Many Aylmer homeowners request a valuation simply to know their value, without any immediate intention to sell." },
-  { q: "Which Aylmer neighborhoods do you cover?", a: "All of them, Plateau, Lake Deschênes, Lucerne, Des Jardins, Lakeview and all residential areas of Aylmer." },
+  { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
+  { q: "Which Aylmer neighbourhoods do you cover?", a: "All of them: the Plateau, Lucerne, Jardins Lavigne, Lakeview and the other residential areas of Aylmer." },
   { q: "What do I do after receiving my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan for Aylmer." },
 ];
 
 const afterSteps = [
-  { title: "Sell in Aylmer", text: "Go further, get a complete plan to sell your Aylmer property.", href: "/en/sell-house-aylmer/", cta: "See the process", highlight: true },
-  { title: "Talk to Yanis", text: "Discuss your situation and options, no commitment.", href: "/en/contact/", cta: "Book a call" },
+  { title: "Sell in Aylmer", text: "See how I prepare and market a property in Aylmer.", href: "/en/sell-house-aylmer/", cta: "See my approach", highlight: true },
+  { title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
 const anim = {
@@ -53,7 +53,7 @@ const ValuationAylmerPageEn = () => {
     <>
       <PageMeta
         title="Home Valuation Aylmer | Free, No Commitment"
-        description="Get a free home valuation in Aylmer. Analysis based on recent sales in your neighborhood. Personalized response, no commitment."
+        description="Get a free home valuation in Aylmer. Analysis based on recent sales in your neighbourhood. Personalized response, no commitment."
       ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
 
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
@@ -77,7 +77,7 @@ const ValuationAylmerPageEn = () => {
           <motion.div {...anim}>
             <h1 className="text-primary-foreground">How much is your Aylmer property worth?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
-              Receive a personalized valuation based on recent sales in your Aylmer neighborhood, free, confidential and no commitment.
+              Receive a personalized valuation based on recent sales in your Aylmer neighbourhood. It's free, with no commitment.
             </p>
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (
@@ -109,18 +109,18 @@ const ValuationAylmerPageEn = () => {
       </section>
 
       <RelatedPages
-        overline="Explore"
+        overline="See also"
         title="Related pages"
         pages={[
           { title: "Sell in Aylmer", text: "Process and strategy for selling in Aylmer.", href: "/en/sell-house-aylmer/" },
-          { title: "Aylmer — neighborhood profile", text: "Market, profile and trends.", href: "/en/aylmer/" },
-          { title: "Home valuation Gatineau", text: "Valuation for all of Outaouais.", href: "/en/home-valuation/" },
+          { title: "Aylmer: neighbourhood profile", text: "The market and profile of the area.", href: "/en/aylmer/" },
+          { title: "Home valuation Gatineau", text: "Valuations across the Outaouais.", href: "/en/home-valuation/" },
           { title: "Outaouais agent", text: "Services across the region.", href: "/en/outaouais-real-estate-agent/" },
         ]}
         background="alt"
       />
 
-      <FunnelNextStep overline="What's next?" title="You have your valuation — here's what comes next" subtitle="Choose the step that fits your situation." steps={afterSteps} />
+      <FunnelNextStep overline="What's next?" title="Once you have your valuation, here's what comes next" subtitle="Choose the step that fits your situation." steps={afterSteps} />
 
       <FAQSection items={faq} />
     </>

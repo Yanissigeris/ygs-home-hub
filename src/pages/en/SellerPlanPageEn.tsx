@@ -24,7 +24,7 @@ import heroImg from "@/assets/hero-seller.webp";
 const benefits = [
   "Realistic valuation based on recent comparable sales",
   "Advice on improvements that are worth it (or not)",
-  "Strategic price positioning for your area",
+  "Price positioning suited to your area",
   "Personalized marketing plan",
   "Timeline and coordination if you're buying in parallel",
 ];
@@ -32,13 +32,13 @@ const benefits = [
 const trustPoints = [
   { icon: Lock, text: "Strictly confidential information" },
   { icon: Clock, text: "Personalized response" },
-  { icon: Shield, text: "No obligation, no commitment" },
+  { icon: Shield, text: "You decide what comes next" },
 ];
 
 const faq = [
-  { q: "How is the seller plan different from a valuation?", a: "A valuation gives you the value. The seller plan goes further, price positioning, preparation, strategic improvements, marketing timeline and buy-sell coordination if needed." },
+  { q: "How is the seller plan different from a valuation?", a: "A valuation gives you the value. The seller plan goes further: price positioning, preparation, improvements that pay off, marketing timeline and buy-sell coordination if needed." },
   { q: "Is it free?", a: "Yes. The goal is to give you enough information to make an informed decision, at your own pace." },
-  { q: "I'm not sure I want to sell right away", a: "Perfect, that's exactly the right time to plan. Most of my sellers start with a plan well before listing." },
+  { q: "I'm not sure I want to sell right away", a: "That's the right time to plan. Many of my sellers start with a plan well before listing." },
 ];
 
 const SellerPlanPageEn = () => {
@@ -75,14 +75,14 @@ const SellerPlanPageEn = () => {
 
   return (
     <>
-      <PageMeta title="Personalized Seller Plan — Gatineau" description="A custom selling plan for your Gatineau property. Strategy, pricing, marketing and step-by-step support." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <ServiceJsonLd name="Custom Selling Plan — Gatineau" description="Custom selling plan for your property in Gatineau and Outaouais. Pricing strategy, targeted marketing and step-by-step support." url="/en/seller-plan" serviceType="Real Estate Marketing Plan Service" />
+      <PageMeta title="Personalized Seller Plan in Gatineau" description="A custom selling plan for your Gatineau property. Strategy, pricing, marketing and step-by-step support." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
+    <ServiceJsonLd name="Custom Selling Plan in Gatineau" description="Custom selling plan for your property in Gatineau and Outaouais. Pricing strategy, targeted marketing and step-by-step support." url="/en/seller-plan" serviceType="Real Estate Marketing Plan Service" />
       <HeroSection
         compact
         overline="Personalized Seller Plan · Gatineau"
         title="Get your personalized seller plan"
-        subtitle="Pricing, preparation, marketing and timeline — a clear plan tailored to your property and situation."
-        trustLine="A strategic plan, not a sales pitch, to help you sell at the right price, at the right time."
+        subtitle="Pricing, preparation, marketing and timeline: a clear plan built around your property and your situation."
+        trustLine="A concrete plan, not a sales pitch, to help you sell at the right price and at the right time."
         heroBgImage={heroImg}
       />
 
@@ -99,12 +99,12 @@ const SellerPlanPageEn = () => {
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Request your seller plan</h2>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-                  I prepare a plan tailored to your property, not a generic template.
+                  I prepare a plan built for your property and your situation.
                 </p>
 
                 {submitted ? (
                   <SuccessMessage
-                    title="Thank you! Request sent."
+                    title="Thank you. Request sent."
                     text="I'll get back to you with a personalized response and your seller plan."
                   />
                 ) : (
@@ -123,7 +123,7 @@ const SellerPlanPageEn = () => {
                             <SelectItem value="condo">Condo</SelectItem>
                             <SelectItem value="semi">Semi-detached</SelectItem>
                             <SelectItem value="townhouse">Townhouse</SelectItem>
-                            <SelectItem value="plex">Plex (2-5 units)</SelectItem>
+                            <SelectItem value="plex">Plex (2 to 5 units)</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -185,14 +185,14 @@ const SellerPlanPageEn = () => {
                     </div>
                     <div>
                       <Label htmlFor="notes">Notes (optional)</Label>
-                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Context, questions, special situation…" value={notes} onChange={(e) => setNotes(e.target.value)} />
+                      <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Context, questions or special situation" value={notes} onChange={(e) => setNotes(e.target.value)} />
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
-                      {submitting ? "Sending…" : "Get my seller plan"}
+                      {submitting ? "Sending" : "Get my seller plan"}
                     </Button>
                     <p className="text-center text-[0.8125rem] text-muted-foreground/50">
-                      Full transparency, I give you the numbers and options, you decide.
+                      I give you the numbers and the options. You decide.
                     </p>
                   </form>
                 )}
@@ -221,7 +221,7 @@ const SellerPlanPageEn = () => {
               <div className="card-elevated bg-primary p-7 text-primary-foreground border-0">
                 <p className="text-[1rem] font-semibold">Not ready yet?</p>
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
-                  Start with a free valuation, it's the first step to understanding your position.
+                  Start with a free valuation. It's the first step to knowing where you stand.
                 </p>
                 <Button size="default" variant="hero" className="mt-4 w-full" asChild>
                   <Link to="/en/home-valuation/">Free Valuation</Link>
@@ -237,7 +237,7 @@ const SellerPlanPageEn = () => {
       <ContentBlock narrow centered padSize="md">
         <h3>Planning doesn't mean committing</h3>
         <p className="mt-3 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-          The best selling results start with good planning. This plan is a first step, not a contract.
+          A successful sale is planned early. This seller plan is a first step, with no commitment.
         </p>
         <Button className="mt-6" size="lg" asChild>
           <a href="#top">Fill out the form ↑</a>
