@@ -38,9 +38,6 @@
 /outaouais        /courtier-immobilier-outaouais/       301
 /en/outaouais     /en/outaouais-real-estate-agent/      301
 
-# 200 — Routes SPA-only non pré-rendues (admin)
-/admin                    /index.html    200
-/admin/*                  /index.html    200
 
 # Pas de SPA fallback global. Netlify servira automatiquement
 # public/404.html avec status 404 pour toute URL invalide.
