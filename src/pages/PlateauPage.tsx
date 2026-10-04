@@ -35,7 +35,7 @@ const PlateauPage = () => (
       },
       {
         q: "Aylmer, Hull ou Plateau : lequel choisir?",
-        a: "Ça dépend de ce qui compte le plus pour vous. Si vous cherchez une maison récente près du parc de la Gatineau, le Plateau est un bon point de départ. Aylmer offre le lac Deschênes et des quartiers plus établis, alors que Hull convient mieux à ceux qui veulent la vie urbaine près des ponts.",
+        a: "Ça dépend de ce qui compte le plus pour vous. Si vous cherchez une maison récente près du parc de la Gatineau, le Plateau est un bon point de départ. Aylmer offre des quartiers plus établis, alors que Hull convient mieux à ceux qui veulent la vie urbaine près des ponts.",
         detail: "J'ai préparé un comparatif détaillé des trois secteurs. Vous le trouverez dans la section « À lire aussi », plus bas sur cette page.",
       },
     ]}
@@ -67,7 +67,7 @@ const PlateauPage = () => (
       ],
     }}
     sectors={{ list: [
-      { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, quartiers établis" },
+      { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
       { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos" },
       { name: "Chelsea", href: "/chelsea/", detail: "Village, parc de la Gatineau" },
     ]}}

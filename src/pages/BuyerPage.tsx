@@ -27,7 +27,7 @@ const buyerProfiles = [
 ];
 
 const sectors = [
-  { name: "Aylmer", href: "/aylmer/", detail: "Lac Deschênes, familles, quartiers établis" },
+  { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
   { name: "Plateau", href: "/plateau/", detail: "Maisons neuves, familial, accès Ottawa" },
   { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
   { name: "Chelsea", href: "/chelsea/", detail: "Village, nature, parc de la Gatineau" },

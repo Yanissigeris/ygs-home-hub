@@ -51,7 +51,7 @@ const atouts = [
 /* ── Related pages ── */
 const related = [
   { title: "Cantley", text: "Rural, grands terrains, collines.", href: "/cantley/" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Aylmer", text: "Familles, bilingue.", href: "/aylmer/" },
   { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau/" },
   { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
 ];

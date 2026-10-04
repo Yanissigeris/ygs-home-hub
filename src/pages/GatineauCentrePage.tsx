@@ -49,7 +49,7 @@ const subSectors = [
 const related = [
   { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau/" },
   { title: "Hull", text: "Urbain, culture, condos.", href: "/hull/" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Aylmer", text: "Familles, bilingue.", href: "/aylmer/" },
   { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
 ];
 

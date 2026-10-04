@@ -30,7 +30,7 @@ export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-po
       },
       publisher: {
         "@type": "Organization",
-        name: "YGS — Yanis Gauthier-Sigeris",
+        name: "YGS · Yanis Gauthier-Sigeris",
         url: BASE_URL,
         logo: { "@type": "ImageObject", url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
       },
@@ -681,8 +681,8 @@ const BlogArticlePage = () => {
             </p>
             <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.55 }}>
               {isFr
-                ? "Courtier RE/MAX en Outaouais depuis 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
-                : "RE/MAX broker in the Outaouais for 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
+                ? "Courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
+                : "RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
             </p>
           </div>
         </div>

@@ -31,7 +31,7 @@ const faq = [
   },
   {
     q: "Est-ce que vous travaillez spécifiquement à Aylmer?",
-    a: "Aylmer est l'un de mes secteurs principaux depuis presque 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance du terrain sert autant à la vente qu'à l'achat.",
+    a: "Aylmer est l'un de mes secteurs principaux depuis plus de 9 ans. Je connais les rues, les comparables récents, les micro-tendances par sous-secteur, et les attentes des acheteurs cibles pour chaque type de propriété. Cette connaissance du terrain sert autant à la vente qu'à l'achat.",
   },
 ];
 
@@ -39,7 +39,7 @@ const faq = [
 const subSectors = [
   {
     title: "Lucerne / Rivermead",
-    text: "Secteur résidentiel établi, avec des maisons rénovées sur des rues matures et arborées. Le lac Deschênes et les pistes cyclables sont proches, tout comme le pont Champlain.",
+    text: "Secteur résidentiel établi, avec des maisons rénovées sur des rues matures et arborées. Les pistes cyclables et le pont Champlain sont proches.",
     tag: "Familles · Établi · En demande",
   },
   {
@@ -53,8 +53,8 @@ const subSectors = [
     tag: "Espace · Récent · Accessible",
   },
   {
-    title: "Bord de l'eau · Lac Deschênes",
-    text: "Propriétés en bord de rivière et de lac, accès nautique, terrains plus grands. Marché de niche, avec peu de propriétés offertes. Cette rareté soutient les valeurs à long terme.",
+    title: "Bord de l'eau",
+    text: "Propriétés au bord de la rivière des Outaouais, avec accès nautique et terrains plus grands. Marché de niche, avec peu de propriétés offertes. Cette rareté soutient les valeurs à long terme.",
     tag: "Prestige · Bord de l'eau",
   },
 ];
@@ -105,7 +105,7 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature à deux pas", text: "Lac Deschênes, rivière des Outaouais, parc de la Gatineau et pistes cyclables vers Ottawa via le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
+  { icon: "🌿", title: "Nature à deux pas", text: "Le parc de la Gatineau et la rivière des Outaouais sont tout près, et des pistes cyclables mènent à Ottawa par le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
   { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
@@ -128,7 +128,7 @@ const AylmerPage = () => (
   ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
-      description="Courtier immobilier spécialisé à Aylmer, Gatineau. Lac Deschênes, quartiers familiaux, écoles et communauté."
+      description="Courtier immobilier à Aylmer, Gatineau. Quartiers familiaux, écoles, parcs et vie communautaire."
       lat={45.3945}
       lng={-75.8486}
       url="/aylmer/"
@@ -139,7 +139,7 @@ const AylmerPage = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Courtier immobilier à Aylmer, votre spécialiste local"
-      subtitle="Aylmer attire beaucoup de familles bilingues, pour le lac Deschênes et les parcs autant que pour ses maisons récentes. Le marché est compétitif et récompense les acheteurs préparés comme les vendeurs bien positionnés."
+      subtitle="Aylmer attire beaucoup de familles bilingues, pour ses parcs autant que pour ses maisons récentes. Le marché est compétitif et récompense les acheteurs préparés comme les vendeurs bien positionnés."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
@@ -152,10 +152,10 @@ const AylmerPage = () => (
         <div className="lg:col-span-3 space-y-4">
           <h2>Ce qui distingue Aylmer en Outaouais</h2>
           <p className="prose-body mt-5">
-            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais et le lac Deschênes. On y vit en banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
+            Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais. On y vit en banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Lucerne et Rivermead sont très demandés, avec leurs maisons établies sur des rues matures, près du lac Deschênes, des parcs et des écoles francophones et anglophones. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
+            Lucerne et Rivermead sont très demandés, avec leurs maisons établies sur des rues matures, près des parcs et des écoles francophones et anglophones. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
           </p>
           <p className="prose-body">
             Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Pour les vendeurs, c'est un marché où la présentation et le positionnement au bon prix font toute la différence entre une vente rapide et une propriété qui stagne.

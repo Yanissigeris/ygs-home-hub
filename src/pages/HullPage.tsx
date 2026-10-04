@@ -53,7 +53,7 @@ const subSectors = [
 const related = [
   { title: "Vivre à Hull : le guide", text: "Quotidien, culture, restaurants et vie de quartier.", href: "/vivre-a-hull/" },
   { title: "Investir dans un plex", text: "Analyse de rendement, stratégie d'investissement.", href: "/investir-plex-gatineau/" },
-  { title: "Aylmer", text: "Lac Deschênes, familles, bilingue.", href: "/aylmer/" },
+  { title: "Aylmer", text: "Familles, bilingue.", href: "/aylmer/" },
   { title: "Relocalisation depuis Ottawa", text: "Acheter à Gatineau depuis l'Ontario.", href: "/relocalisation-ottawa-gatineau/" },
   { title: "Gatineau centre", text: "Résidentiel, services, abordable.", href: "/gatineau/" },
 ];

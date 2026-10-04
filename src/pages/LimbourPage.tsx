@@ -31,7 +31,7 @@ const LimbourPage = () => (
       {
         q: "Limbour, Aylmer, Plateau ou Masson-Angers : lequel choisir?",
         a: "Limbour offre des maisons récentes à un prix plus accessible qu'Aylmer ou le Plateau. Le quartier est aussi plus près d'Ottawa que Masson-Angers : environ 12 km du centre-ville par la route, contre environ 36 km depuis Masson-Angers.",
-        detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Pour le lac Deschênes ou les commerces du Vieux-Aylmer, regardez plutôt Aylmer. Masson-Angers convient mieux si vous préférez une construction neuve personnalisée et que le trajet compte moins.",
+        detail: "Si vous voulez une maison prête à habiter dans un quartier déjà établi, sans vous surendetter, Limbour est souvent le bon compromis. Pour les commerces du Vieux-Aylmer, regardez plutôt Aylmer. Masson-Angers convient mieux si vous préférez une construction neuve personnalisée et que le trajet compte moins.",
       },
     ]}
     profilesTitle="Qui achète à Limbour"

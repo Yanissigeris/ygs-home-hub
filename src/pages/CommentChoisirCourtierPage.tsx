@@ -121,7 +121,7 @@ const CommentChoisirCourtierPage = () => (
         { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
-      trustLine="Près de 9 ans en Outaouais · Transparent dès le départ."
+      trustLine="Plus de 9 ans en Outaouais · Transparent dès le départ."
     />
 
     <FAQSection items={faq} />

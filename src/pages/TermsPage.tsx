@@ -4,7 +4,7 @@ import heroPrivacy from "@/assets/hero-privacy.webp";
 const TermsPage = () => (
   <>
     <PageMeta
-      title="Conditions d'utilisation | YGS, Yanis Gauthier-Sigeris"
+      title="Conditions d'utilisation | YGS · Yanis Gauthier-Sigeris"
       description="Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable."
       ogImage="https://yanisgauthier.com/og/og-default.jpg"
     />
