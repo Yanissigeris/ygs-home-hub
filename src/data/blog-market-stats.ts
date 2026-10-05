@@ -17,9 +17,9 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
     quarter: { fr: "T2 2026", en: "Q2 2026" },
     hero: {
       fr: [
-        { value: "+7 %", label: "Prix médian plex" },
-        { value: "32 j", label: "Délai moyen plex" },
-        { value: "599 600 $", label: "Plex · T2 2026" },
+        { value: "+7 %", label: "Prix médian plex" },
+        { value: "32 j", label: "Délai moyen plex" },
+        { value: "599 600 $", label: "Plex · T2 2026" },
       ],
       en: [
         { value: "+7%", label: "Median plex price" },
@@ -30,12 +30,12 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
     ticker: {
       fr: [
         "T2 2026",
-        "Plex +7 %",
+        "Plex +7 %",
         "Délai plex 32 jours",
-        "Médian plex 599 600 $",
-        "Unifamiliale 523 500 $",
-        "Inscriptions +30 %",
-        "Source : Chambre immobilière de l'Outaouais",
+        "Médian plex 599 600 $",
+        "Unifamiliale 523 500 $",
+        "Inscriptions +30 %",
+        "Source : Chambre immobilière de l'Outaouais",
       ],
       en: [
         "Q2 2026",
@@ -48,7 +48,7 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
       ],
     },
     source: {
-      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T2 2026",
+      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T2 2026",
       en: "Source: Outaouais Real Estate Board / QPAREB, Q2 2026",
     },
   },
