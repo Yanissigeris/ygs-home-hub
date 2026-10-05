@@ -329,6 +329,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: fromEmail,
         to: [(data.email as string).trim()],
+        reply_to: "yanis@martywaite.com",
         subject: confirmation.subject,
         html: confirmation.html,
       }),
