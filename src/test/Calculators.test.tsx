@@ -42,14 +42,23 @@ describe("WelcomeTaxCalculator formats amounts per language", () => {
     renderAt("/", <WelcomeTaxCalculator />);
     expect(screen.getByText("Taxe de bienvenue estimée")).toBeInTheDocument();
     expect(screen.getAllByText(FR_CURRENCY).length).toBeGreaterThan(0);
-    // FR rate cells use a space before %
-    expect(screen.getAllByText(/\d\.\d\s%/).length).toBeGreaterThan(0);
+    // FR rate cells use a decimal comma and a space before %
+    expect(screen.getAllByText(/\d,\d+\s%/).length).toBeGreaterThan(0);
   });
 
   it("uses EN currency format and no space before % on /en/", () => {
     renderAt("/en/", <WelcomeTaxCalculator />);
     expect(screen.getByText("Estimated Welcome Tax")).toBeInTheDocument();
     expect(screen.getAllByText(EN_CURRENCY).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/\d\.\d%/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/\d\.\d+%/).length).toBeGreaterThan(0);
+  });
+});
+
+describe("Welcome tax 2026 grids", () => {
+  it("matches the Gatineau 2026 grid on 425 000 $ and 600 000 $", async () => {
+    const { municipalities, calculateWelcomeTax } = await import("@/data/welcome-tax-rates");
+    const gat = municipalities.find((m) => m.id === "gatineau")!;
+    expect(calculateWelcomeTax(425_000, gat).total).toBeCloseTo(4_485.5, 2);
+    expect(calculateWelcomeTax(600_000, gat).total).toBeCloseTo(8_610.5, 2);
   });
 });
