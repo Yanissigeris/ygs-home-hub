@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 
 
 import AwardsStrip from "@/components/AwardsStrip";
-import ValuationWidget from "@/components/ValuationWidget";
+import ValuationCTA from "@/components/ValuationCTA";
 import StatsSection from "@/components/StatsSection";
 import yanisHero from "@/assets/hero-yanis-interior.webp";
 import yanisHeroAvif from "@/assets/hero-yanis-interior.avif";
@@ -69,7 +69,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     
-    <ValuationWidget lang="en" />
+    <ValuationCTA lang="en" />
     <QuickActionStrip />
     <AwardsStrip lang="en" />
 

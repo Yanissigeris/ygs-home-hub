@@ -20,7 +20,7 @@ const CTA_BY_INTENT: Record<"fr" | "en", Record<AvatarIntent | "default", CtaCon
     investir: { label: "Analyser mon projet →", href: "/investir-plex-gatineau/" },
     vendre: { label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" },
     acheter: { label: "Voir les propriétés →", href: "/proprietes/" },
-    default: { label: "Évaluation Gratuite →", href: "/evaluation-gratuite-gatineau/" },
+    default: { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
   },
   en: {
     investir: { label: "Analyze my project →", href: "/en/plex/" },
