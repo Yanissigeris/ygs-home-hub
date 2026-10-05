@@ -10,13 +10,15 @@ export interface TaxBracket {
   rate: number;
 }
 
-/** Default Quebec brackets (2024–2025) */
+/**
+ * Default Quebec grid for 2026 (Loi concernant les droits sur les mutations immobilières, art. 2,
+ * thresholds indexed for 2026). Source: quebec.ca, droits sur les mutations immobilières.
+ * A municipality may add higher rates (max 3 %) on the portion above 500 000 $.
+ */
 export const defaultBrackets: TaxBracket[] = [
-  { max: 58_900, rate: 0.005 },
-  { max: 294_600, rate: 0.01 },
-  { max: 500_000, rate: 0.015 },
-  { max: 1_000_000, rate: 0.02 },
-  { max: Infinity, rate: 0.025 },
+  { max: 62_900, rate: 0.005 },
+  { max: 315_000, rate: 0.01 },
+  { max: Infinity, rate: 0.015 },
 ];
 
 export interface Municipality {
@@ -27,13 +29,72 @@ export interface Municipality {
   brackets?: TaxBracket[];
 }
 
+/** 2026 grids. Verified on each municipality's website (October 2026). */
 export const municipalities: Municipality[] = [
-  { id: "gatineau", label: "Gatineau", labelEn: "Gatineau" },
-  { id: "chelsea", label: "Chelsea", labelEn: "Chelsea" },
-  { id: "cantley", label: "Cantley", labelEn: "Cantley" },
-  { id: "pontiac", label: "Pontiac", labelEn: "Pontiac" },
-  { id: "la-peche", label: "La Pêche", labelEn: "La Pêche" },
-  { id: "val-des-monts", label: "Val-des-Monts", labelEn: "Val-des-Monts" },
+  {
+    // gatineau.ca, base d'imposition: grid in force from February 25, 2026
+    id: "gatineau",
+    label: "Gatineau",
+    labelEn: "Gatineau",
+    brackets: [
+      { max: 62_900, rate: 0.005 },
+      { max: 315_000, rate: 0.01 },
+      { max: 500_000, rate: 0.015 },
+      { max: Infinity, rate: 0.03 },
+    ],
+  },
+  {
+    // chelsea.ca, Taxation: by-law 1367-26, 3 % above 500 000 $
+    id: "chelsea",
+    label: "Chelsea",
+    labelEn: "Chelsea",
+    brackets: [
+      { max: 62_900, rate: 0.005 },
+      { max: 315_000, rate: 0.01 },
+      { max: 500_000, rate: 0.015 },
+      { max: Infinity, rate: 0.03 },
+    ],
+  },
+  {
+    // cantley.ca, Taxes et évaluations (2026)
+    id: "cantley",
+    label: "Cantley",
+    labelEn: "Cantley",
+    brackets: [
+      { max: 62_900, rate: 0.005 },
+      { max: 315_000, rate: 0.01 },
+      { max: 500_000, rate: 0.015 },
+      { max: 750_000, rate: 0.0225 },
+      { max: Infinity, rate: 0.03 },
+    ],
+  },
+  {
+    // villelapeche.qc.ca, Taxation: by-law 19-780
+    id: "la-peche",
+    label: "La Pêche",
+    labelEn: "La Pêche",
+    brackets: [
+      { max: 62_900, rate: 0.005 },
+      { max: 315_000, rate: 0.01 },
+      { max: 500_000, rate: 0.015 },
+      { max: 750_000, rate: 0.02 },
+      { max: 1_000_000, rate: 0.025 },
+      { max: Infinity, rate: 0.03 },
+    ],
+  },
+  {
+    // val-des-monts.net, Droit de mutation: by-law 957-26
+    id: "val-des-monts",
+    label: "Val-des-Monts",
+    labelEn: "Val-des-Monts",
+    brackets: [
+      { max: 62_900, rate: 0.005 },
+      { max: 315_000, rate: 0.01 },
+      { max: 500_000, rate: 0.015 },
+      { max: Infinity, rate: 0.03 },
+    ],
+  },
+  // Pontiac: 2026 grid not confirmed by an official source, left out until confirmed.
 ];
 
 export interface BracketResult {
