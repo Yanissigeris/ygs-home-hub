@@ -14,8 +14,11 @@ const t = {
     bracket: "Tranche",
     rate: "Taux",
     tax: "Taxe",
+    to: "à",
     disclaimer:
-      "Ce calcul est une estimation seulement. Vérifiez les montants finaux avec la municipalité et votre notaire.",
+      "Estimation selon la grille 2026 publiée par chaque municipalité. Votre notaire confirme le montant exact.",
+    credit:
+      "Premier achat\u00a0: le crédit d'impôt remboursable du Québec peut couvrir jusqu'à 5\u00a0875\u00a0$ de ces droits, selon Revenu Québec.",
   },
   en: {
     title: "Welcome Tax Calculator",
@@ -26,8 +29,11 @@ const t = {
     bracket: "Bracket",
     rate: "Rate",
     tax: "Tax",
+    to: "to",
     disclaimer:
-      "This is an estimate only. Please verify final amounts with the municipality and your notary.",
+      "Estimate based on the 2026 grid published by each municipality. Your notary confirms the exact amount.",
+    credit:
+      "First home: Quebec's refundable tax credit can cover up to $5,875 of this tax, according to Revenu Québec.",
   },
 };
 
@@ -36,7 +42,7 @@ function fmt(n: number, lang: "fr" | "en" = "fr") {
 }
 
 function fmtPct(n: number, lang: "fr" | "en" = "fr") {
-  return (n * 100).toFixed(1) + (lang === "en" ? "%" : " %");
+  return n.toLocaleString(lang === "en" ? "en-CA" : "fr-CA", { style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 2 });
 }
 
 const WelcomeTaxCalculator = () => {
@@ -105,7 +111,7 @@ const WelcomeTaxCalculator = () => {
                 {result.breakdown.map((b, i) => (
                   <tr key={i} className="border-b border-border/50 last:border-0">
                     <td className="py-1.5 text-foreground">
-                      {fmt(b.from, lang)}, {fmt(b.to, lang)}
+                      {fmt(b.from, lang)} {l.to} {fmt(b.to, lang)}
                     </td>
                     <td className="py-1.5 text-right text-muted-foreground">{fmtPct(b.rate, lang)}</td>
                     <td className="py-1.5 text-right font-medium text-foreground">{fmt(b.tax, lang)}</td>
@@ -117,6 +123,7 @@ const WelcomeTaxCalculator = () => {
 
           {/* Disclaimer */}
           <p className="text-[0.75rem] leading-relaxed text-muted-foreground/70 italic">{l.disclaimer}</p>
+          <p className="text-[0.75rem] leading-relaxed text-muted-foreground/70 italic">{l.credit}</p>
         </div>
       )}
     </div>
