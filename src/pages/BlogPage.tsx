@@ -25,7 +25,7 @@ const BlogPage = () => {
     <>
       <PageMeta
         title="Blogue immobilier Gatineau · Conseils et analyses"
-        description="Articles, analyses et conseils immobiliers pour Gatineau et l'Outaouais. Vendeurs, acheteurs, investisseurs, par Yanis Gauthier-Sigeris, courtier immobilier."
+        description="Analyses du marché et conseils immobiliers pour Gatineau et l'Outaouais, rédigés par Yanis Gauthier-Sigeris, courtier immobilier résidentiel."
         ogImage="https://yanisgauthier.com/og/og-blog.jpg" />
 
       {/* Editorial hero */}
@@ -54,7 +54,7 @@ const BlogPage = () => {
                 <span style={{ color: "var(--gold-bright)", fontStyle: "italic", fontWeight: 300 }}>Outaouais</span>
               </h1>
               <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.92, fontSize: "13px", lineHeight: 1.6 }}>
-                Articles, analyses et conseils pour vendre, acheter ou investir intelligemment à Gatineau et en Outaouais.
+                Analyses du marché et conseils concrets pour vos projets immobiliers à Gatineau et en Outaouais.
               </p>
             </div>
 
@@ -161,13 +161,13 @@ const BlogPage = () => {
             {/* Right column — pull-quote + stats */}
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                « En mars 2026, les plex à Gatineau se vendent en moyenne en 23 jours, contre 65 jours un an plus tôt. »
+                « En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. »
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[
-                  { value: "+19%", label: "Ventes plex" },
-                  { value: "23 j", label: "Délai moyen" },
-                  { value: "585 500 $", label: "Prix médian" },
+                  { value: "30 j", label: "Délai plex, avril 2026" },
+                  { value: "-34 %", label: "Ventes copro, janv. à avril 2026" },
+                  { value: "510 000 $", label: "Médiane unifamiliale, avril 2026" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>

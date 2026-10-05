@@ -315,7 +315,7 @@ const BlogArticlePage = () => {
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
                 <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
-                  {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
+                  {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
                 </span>
               </div>
             )}
@@ -432,12 +432,9 @@ const BlogArticlePage = () => {
                 {excerpt}
               </p>
             </div>
+            {post.heroStats && post.heroStats.length > 0 && (
             <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
-              {(post.heroStats ?? [
-                { value: "+19%", label: isFr ? "Plex" : "Plex" },
-                { value: "23 j", valueEn: "23 days", label: isFr ? "Délai" : "Days" },
-                { value: "585 500 $", valueEn: "$585,500", label: isFr ? "Prix médian" : "Median" },
-              ]).map((s, idx) => (
+              {post.heroStats.map((s, idx) => (
                 <div key={idx}>
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
                     {isFr ? s.value : (s.valueEn ?? s.value)}
@@ -448,6 +445,7 @@ const BlogArticlePage = () => {
                 </div>
               ))}
             </div>
+            )}
           </div>
         </div>
       </section>
@@ -503,24 +501,20 @@ const BlogArticlePage = () => {
           {/* Sidebar */}
           <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" style={{ padding: "0" }}>
             {/* Source block */}
+            {post.sources && post.sources.length > 0 && (
             <div style={{ borderLeft: "2px solid var(--gold)", background: "#ECEAE2", padding: "20px 22px" }}>
               <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
-                {isFr ? (post.sources && post.sources.length > 1 ? "Sources" : "Source") : (post.sources && post.sources.length > 1 ? "Sources" : "Source")}
+                {post.sources.length > 1 ? "Sources" : "Source"}
               </p>
-              {post.sources && post.sources.length > 0 ? (
-                <ul className="mt-2 space-y-2 list-none">
-                  {post.sources.map((s, i) => (
-                    <li key={i} style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                      {isFr ? s.fr : s.en}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="mt-2" style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                  {isFr ? "Chambre immobilière de l'Outaouais, données de mars 2026." : "Outaouais Real Estate Board, March 2026 data."}
-                </p>
-              )}
+              <ul className="mt-2 space-y-2 list-none">
+                {post.sources.map((s, i) => (
+                  <li key={i} style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
+                    {isFr ? s.fr : s.en}
+                  </li>
+                ))}
+              </ul>
             </div>
+            )}
 
             {/* CTA block */}
             <div style={{ background: "var(--ink)", padding: "28px 24px" }}>
@@ -535,7 +529,7 @@ const BlogArticlePage = () => {
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Pour votre projet, vente, achat ou investissement. Réponse personnalisée." : "For your project, selling, buying or investing. Personalized response."}
+                {isFr ? "Pour votre projet immobilier, plex compris. Réponse personnalisée en 24 heures maximum." : "For your real estate plans, plexes included. Personalized response within 24 hours maximum."}
               </p>
               <Link
                 to={ctaHref}
@@ -619,15 +613,15 @@ const BlogArticlePage = () => {
           <div className="section-container text-center">
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? (
-                <>Vous regardez un plex en Outaouais ? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Parlons-en.</em></>
+                <>Vous regardez un plex en Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Parlons-en.</em></>
               ) : (
                 <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Let's talk.</em></>
               )}
             </h2>
             <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.92)", fontSize: "13px", lineHeight: 1.6 }}>
               {isFr
-                ? "J'analyse les revenus réels, le ratio et la valeur marchande. Sans engagement."
-                : "I analyze real income, the ratio and the market value. No commitment."}
+                ? "J'analyse les revenus et la valeur marchande de l'immeuble. Sans engagement."
+                : "I analyze the building's income and market value. No commitment."}
             </p>
             <Link
               to={ctaHref}
