@@ -25,7 +25,7 @@ const BlogPageEn = () => {
     <>
       <PageMeta
         title="Gatineau Real Estate Blog · Tips & Market Insights"
-        description="Articles, market analysis, and real estate advice for Gatineau and the Outaouais. Sellers, buyers, investors — by Yanis Gauthier-Sigeris, Real Estate Broker."
+        description="Market analysis and real estate advice for Gatineau and the Outaouais, written by Yanis Gauthier-Sigeris, residential real estate broker."
         ogImage="https://yanisgauthier.com/og/og-blog.jpg" />
 
       {/* Editorial hero */}
@@ -53,7 +53,7 @@ const BlogPageEn = () => {
                 <span style={{ color: "var(--gold-bright)", fontStyle: "italic", fontWeight: 300 }}>Real Estate Market</span>
               </h1>
               <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.92, fontSize: "13px", lineHeight: 1.6 }}>
-                Articles, analysis, and advice to help you buy, sell, or invest smartly in Gatineau and the Outaouais.
+                Market analysis and practical advice for your real estate plans in Gatineau and the Outaouais.
               </p>
             </div>
 
@@ -157,13 +157,13 @@ const BlogPageEn = () => {
 
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                "In March 2026, plex in Gatineau sell in an average of 23 days, down from 65 days a year earlier."
+                "In April 2026, a plex sells in 30 days while condos pile up."
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[
-                  { value: "+19%", label: "Plex sales" },
-                  { value: "23 d", label: "Avg. days" },
-                  { value: "$585,500", label: "Median price" },
+                  { value: "30 days", label: "Plex days on market, April 2026" },
+                  { value: "-34%", label: "Condo sales, Jan. to April 2026" },
+                  { value: "$510,000", label: "Single-family median, April 2026" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
