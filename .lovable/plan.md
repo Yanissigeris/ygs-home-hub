@@ -14,4 +14,4 @@
 
 `ValuationWidget.tsx` et ses tests sont conservés. Aucun `npm run build` ; vérification par typecheck et coup d'œil FR/EN à 390 et 1440 px.
 
-Note : le texte fourni promet « en 24 heures maximum », alors que les promesses chiffrées avaient été retirées ailleurs. Il sera copié tel quel, comme demandé.
+Textes du bloc sans délai chiffré : FR « Je compare votre propriété aux ventes récentes de votre secteur et je vous reviens avec une réponse personnalisée. » ; EN « I compare your property to recent sales in your area and get back to you with a personalized answer. »
