@@ -15,7 +15,7 @@ import HeroSection from "@/components/HeroSection";
 
 
 import AwardsStrip from "@/components/AwardsStrip";
-import ValuationWidget from "@/components/ValuationWidget";
+import ValuationCTA from "@/components/ValuationCTA";
 import StatsSection from "@/components/StatsSection";
 
 import PathwaySection from "@/components/PathwaySection";
@@ -75,7 +75,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         rootMargin="700px"
         className="relative z-10"
       >
-        <ValuationWidget />
+        <ValuationCTA />
         <QuickActionStrip />
         <AwardsStrip />
       </LazySection>
@@ -117,7 +117,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       title="Prenez la bonne première étape"
       text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
       buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
