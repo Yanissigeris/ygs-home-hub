@@ -529,7 +529,7 @@ const BlogArticlePage = () => {
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Pour votre projet immobilier, plex compris. Réponse personnalisée en 24 heures maximum." : "For your real estate plans, plexes included. Personalized response within 24 hours maximum."}
+                {isFr ? "Pour votre projet immobilier, plex compris. Je vous réponds avec les chiffres de votre secteur." : "For your real estate plans, plexes included. I answer with the numbers for your area."}
               </p>
               <Link
                 to={ctaHref}

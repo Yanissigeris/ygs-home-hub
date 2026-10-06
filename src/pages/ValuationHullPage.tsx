@@ -30,7 +30,7 @@ const faq = [
   { q: "Combien vaut ma maison à Hull?", a: "La valeur dépend de votre rue, du type de propriété (condo, plex, unifamiliale) et des ventes récentes dans votre secteur de Hull." },
   { q: "Sur quoi se base l'évaluation à Hull?", a: "Je me base sur les ventes récentes dans votre rue et dans votre secteur de Hull, l'état de votre propriété, la taille du terrain et les conditions du marché local." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales de Hull et de l'état de votre propriété." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures maximum. Pour une analyse approfondie avec visite à Hull, on planifie un rendez-vous." },
+  { q: "Qu'est-ce que je reçois après ma demande?", a: "Une réponse personnalisée, avec une analyse basée sur les ventes comparables récentes de votre secteur. Pour une analyse approfondie avec visite à Hull, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Si vous souhaitez un rapport plus détaillé, une visite peut être planifiée, sans engagement." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Vous pouvez demander une évaluation simplement pour connaître la valeur de votre propriété, sans intention immédiate de vendre." },
   { q: "Les condos de Hull sont-ils couverts?", a: "Oui, je couvre les condos, les plex et les unifamiliales partout à Hull." },

@@ -30,7 +30,7 @@ const faq = [
   { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend surtout de votre quartier et des ventes récentes autour de vous. L'évaluation vous donne une fourchette réaliste." },
   { q: "Sur quoi se base l'évaluation à Aylmer?", a: "Je me base sur les ventes récentes dans votre rue et dans votre secteur d'Aylmer, l'état de votre propriété, le terrain et les conditions du marché." },
   { q: "Quelle est la différence avec une évaluation en ligne?", a: "Les outils en ligne donnent une estimation approximative. Mon évaluation tient compte des particularités locales d'Aylmer et de l'état de votre propriété." },
-  { q: "Combien de temps prend l'évaluation?", a: "Vous recevez une réponse personnalisée en 24 heures maximum. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
+  { q: "Qu'est-ce que je reçois après ma demande?", a: "Une réponse personnalisée, avec une analyse basée sur les ventes comparables récentes de votre secteur. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Une visite peut être planifiée pour un rapport plus détaillé." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Vous pouvez demander une évaluation simplement pour connaître la valeur de votre propriété, sans intention immédiate de vendre." },
   { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous les quartiers : le Plateau, Lucerne, Jardins Lavigne, Lakeview et les autres secteurs résidentiels d'Aylmer." },
