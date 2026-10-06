@@ -22,7 +22,7 @@ const valuationFaq = [
   { q: "How much is my house worth in Gatineau?", a: "The value depends mostly on recent sales near you and on the property type. My valuation gives you a realistic range based on local comparables." },
   { q: "What is the valuation based on?", a: "I use recent sales on your street and in your area, your property's condition, lot size and current market conditions in the Outaouais." },
   { q: "How is this different from an online estimate?", a: "Online tools give an approximate estimate. My valuation accounts for local specifics and your property's condition, which an algorithm can't see." },
-  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a detailed analysis with a visit, we book a time that suits you." },
+  { q: "What do I get after my request?", a: "A personalized response, with an analysis based on recent comparable sales in your area. For a detailed analysis with a visit, we book a time that suits you." },
   { q: "Do I need a home visit for the valuation?", a: "Not necessarily for a first estimate. If you want a more detailed report, a visit can be arranged, no commitment." },
   { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
   { q: "Is my area covered?", a: "Yes, I cover the entire Outaouais: Aylmer, Hull, Plateau, Chelsea, Cantley, Buckingham, Masson-Angers, Val-des-Monts and Pontiac." },

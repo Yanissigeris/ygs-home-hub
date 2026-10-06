@@ -30,7 +30,7 @@ const faq = [
   { q: "How much is my house worth in Hull?", a: "The value depends on your street, property type (condo, plex, single-family) and recent sales in your Hull neighbourhood." },
   { q: "What is the valuation based on?", a: "I use recent sales on your street and in your Hull area, your property's condition, lot size and local market conditions." },
   { q: "How is this different from an online valuation?", a: "Online tools give approximate estimates. My valuation accounts for Hull's local specifics and your property's condition." },
-  { q: "How long does the valuation take?", a: "You receive a personalized response within 24 hours. For a more detailed analysis with a visit in Hull, we book an appointment." },
+  { q: "What do I get after my request?", a: "A personalized response, with an analysis based on recent comparable sales in your area. For a more detailed analysis with a visit in Hull, we book an appointment." },
   { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report, no commitment." },
   { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
   { q: "Are Hull condos covered?", a: "Yes, I cover condos, plexes and single-family homes throughout Hull." },
