@@ -16,36 +16,36 @@ import heroImg from "@/assets/hero-military-buyer.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "Prix plus accessibles", text: "Le marché de Gatineau offre souvent un meilleur rapport qualité-prix que les marchés militaires saturés." },
-  { icon: MapPin, title: "Proximité du travail", text: "Accès au campus Carling de la Défense nationale et aux autres installations fédérales de la région, selon le secteur choisi." },
-  { icon: Home, title: "Variété de propriétés", text: "Maisons, condos, jumelés, dans des quartiers familiaux bien desservis." },
+  { icon: DollarSign, title: "Repères de prix", text: "Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 523 500 $ dans la RMR de Gatineau (APCIQ). On le compare ensemble avec le marché que vous quittez." },
+  { icon: MapPin, title: "Proximité du travail", text: "Accès au campus Carling de la Défense nationale, dans l'ouest d'Ottawa, et aux autres installations fédérales de la région, selon le secteur choisi." },
+  { icon: Home, title: "Variété de propriétés", text: "Maisons, jumelés, condos et plex, dans des quartiers familiaux bien desservis." },
   { icon: Shield, title: "Accompagnement bilingue", text: "Service en français et en anglais, adapté à votre réalité militaire." },
 ];
 
 
 const faq = [
-  { q: "Quels secteurs recommandez-vous pour les militaires?", a: "Ça dépend de votre base et vos priorités familiales. Aylmer, le Plateau et Hull sont populaires, on en discute selon votre situation." },
-  { q: "Est-ce que je peux acheter à distance?", a: "Oui. Visites virtuelles, offres à distance et coordination complète, c'est courant pour les mutations." },
-  { q: "Comment fonctionne le processus d'achat au Québec?", a: "Promesse d'achat, inspection, conditions, notaire, c'est différent de l'Ontario. Je vous guide étape par étape." },
+  { q: "Quels secteurs recommandez-vous pour les militaires?", a: "Ça dépend de votre lieu de travail et de vos priorités familiales. Pour le campus Carling, dans l'ouest d'Ottawa, on regarde souvent Aylmer et le Plateau. Hull convient bien si vous travaillez au centre-ville. On en discute selon votre situation." },
+  { q: "Est-ce que je peux acheter à distance?", a: "Oui. Les visites virtuelles et les offres signées à distance sont courantes lors d'une mutation. Si votre dossier prévoit un voyage à la recherche d'un domicile, on planifie les visites en personne autour de ce voyage." },
+  { q: "Comment fonctionne le processus d'achat au Québec?", a: "Au Québec, l'achat passe par une promesse d'achat, des conditions (inspection, financement) et une signature chez le notaire. Le notaire joue le rôle que l'avocat joue en Ontario. Je vous guide étape par étape." },
 ];
 
 const MilitaryBuyerPage = () => (
    <>
-    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Processus BGRS, quartiers selon votre lieu de travail et accompagnement adapté à votre mutation." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Achat immobilier militaire à Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Processus BGRS, quartiers selon votre lieu de travail." url="/acheter-comme-militaire-gatineau/" serviceType="Military Real Estate Buyer Service" />
+    <PageMeta title="Acheter comme militaire à Gatineau" description="Achetez une propriété à Gatineau en tant que militaire FAC. Dossiers SIRVA ou BGRS, quartiers selon votre lieu de travail et accompagnement adapté à votre mutation." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
+    <ServiceJsonLd name="Achat immobilier militaire à Gatineau" description="Accompagnement spécialisé pour militaires FAC achetant à Gatineau. Dossiers SIRVA ou BGRS, quartiers selon votre lieu de travail." url="/acheter-comme-militaire-gatineau/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"
-      subtitle="Mutation vers la RCN? Je vous aide à trouver le bon secteur, la bonne propriété et à naviguer le processus d'achat au Québec."
+      subtitle="Mutation vers la RCN? Je vous aide à choisir le secteur et la propriété, puis je vous guide dans le processus d'achat au Québec."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "/plateau-aylmer/" }}
+      secondaryCta={{ label: "Voir Plateau et Aylmer", href: "/plateau-aylmer/" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
 <section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <p className="text-sm text-muted-foreground">Dossiers SIRVA et BGRS acceptés</p>
           <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" width={200} height={36} className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
       </div>
@@ -53,7 +53,7 @@ const MilitaryBuyerPage = () => (
 
     <CardGrid
       overline="Pourquoi Gatineau"
-      title="Acheter à Gatineau — les avantages pour les militaires"
+      title="Acheter à Gatineau : les avantages pour les militaires"
       items={advantages}
     />
 
@@ -86,12 +86,12 @@ const MilitaryBuyerPage = () => (
     <CTASection
       dark
       title="Prêt à trouver votre propriété à Gatineau?"
-      text="Parlons de votre mutation et de vos critères, je m'occupe du reste."
+      text="Parlons de votre mutation et de vos critères. On bâtit le plan ensemble."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
-      trustLine="Je vous donne les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

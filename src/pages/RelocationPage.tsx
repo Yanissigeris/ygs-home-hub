@@ -19,59 +19,59 @@ import { CheckCircle2, Clock, Award, Shield, MapPin, Home, DollarSign, FileText 
 import heroImg from "@/assets/hero-relocalisation.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Choisir le bon secteur", text: "Aylmer, Hull, Plateau, Buckingham, chaque quartier a sa personnalité. Je vous aide à trouver le bon fit." },
-  { icon: DollarSign, title: "Comprendre les prix", text: "Le marché de Gatineau est différent d'Ottawa ou Montréal. Je vous donne une lecture réaliste des prix par secteur." },
-  { icon: FileText, title: "Naviguer le processus québécois", text: "Promesse d'achat, inspection, notaire, le processus au Québec a ses particularités. Je vous guide étape par étape." },
-  { icon: Home, title: "Trouver la bonne propriété", text: "Pas juste une maison, un quartier, une école, un trajet, un mode de vie. On regarde le portrait complet." },
+  { icon: MapPin, title: "Choisir le bon secteur", text: "Aylmer, Hull, le Plateau ou Buckingham : chaque secteur a sa personnalité. Je vous aide à trouver celui qui vous convient." },
+  { icon: DollarSign, title: "Comprendre les prix", text: "Le marché de Gatineau ne fonctionne pas comme ceux d'Ottawa ou de Montréal. Je vous donne une lecture réaliste des prix par secteur." },
+  { icon: FileText, title: "Le processus d'achat québécois", text: "Promesse d'achat, inspection, notaire : le processus au Québec a ses particularités. Je vous guide étape par étape." },
+  { icon: Home, title: "Trouver la bonne propriété", text: "Une maison, c'est aussi un quartier, une école, un trajet et un mode de vie. On regarde le portrait complet." },
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Quartiers familiaux et maisons récentes, à environ 9 à 14 km du centre-ville d'Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Milieu urbain avec condos et plex, à environ 2 km du centre-ville d'Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Prix médian unifamilial le plus bas des 4 secteurs de la ville (APCIQ, T2 2026) et accès à la nature" },
 ];
 
 const steps = [
   { num: "01", title: "Consultation initiale", desc: "On parle de votre situation, votre budget, vos priorités et vos questions sur Gatineau." },
-  { num: "02", title: "Tour des secteurs", desc: "Je vous présente les quartiers qui correspondent à votre profil, avec les vrais avantages et inconvénients." },
-  { num: "03", title: "Accompagnement complet", desc: "Recherche ciblée, visites, offre, inspection, notaire, je vous accompagne jusqu'aux clés." },
+  { num: "02", title: "Tour des secteurs", desc: "Je vous présente les quartiers qui correspondent à votre profil, avec leurs avantages et leurs inconvénients." },
+  { num: "03", title: "Accompagnement complet", desc: "Recherche ciblée, visites, offre, inspection et notaire : je vous accompagne jusqu'à la remise des clés." },
 ];
 
 
 const nextSteps = [
-  { title: "Réserver un appel", text: "On discute de votre relocalisation, vos priorités et vos questions, 100% gratuit.", href: "/contact-yanis/", cta: "Réserver un appel", highlight: true },
-  { title: "Guide relocalisation", text: "Tout ce qu'il faut savoir pour s'installer à Gatineau, secteurs, prix, processus, écoles.", href: "/guide-relocalisation-gatineau/", cta: "Lire le guide" },
-  { title: "Explorer les quartiers", text: "Comparer les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau/", cta: "Voir les quartiers" },
+  { title: "Réserver un appel", text: "On discute de votre relocalisation et de vos questions. L'appel est gratuit.", href: "/contact-yanis/", cta: "Réserver un appel", highlight: true },
+  { title: "Guide relocalisation", text: "Ce qu'il faut savoir pour s'installer à Gatineau : secteurs, prix, processus et écoles.", href: "/guide-relocalisation-gatineau/", cta: "Lire le guide" },
+  { title: "Comparer les quartiers", text: "Les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau/", cta: "Voir les quartiers" },
 ];
 
 const faq = [
-  { q: "Est-ce vraiment moins cher à Gatineau qu'à Ottawa?", a: "En général, oui, surtout pour les maisons unifamiliales et les terrains. Mais il faut aussi considérer les taxes, les services et le mode de vie. On regarde tout ça ensemble." },
-  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus est différent de l'Ontario, promesse d'achat, inspection, conditions, notaire. Depuis 2017 en Outaouais, j'ai accompagné beaucoup d'acheteurs dans cette transition." },
-  { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de vos priorités, Aylmer et le Plateau sont très populaires pour les familles, mais Hull et Buckingham ont aussi leurs avantages. On en discute." },
-  { q: "Est-ce que je peux travailler à Ottawa et vivre à Gatineau?", a: "Absolument. La majorité de mes clients relocalisés font exactement ça. Les ponts, le transport en commun et les pistes cyclables rendent la chose très faisable." },
+  { q: "Est-ce moins cher d'acheter à Gatineau qu'à Ottawa?", a: "En général, oui, surtout pour les maisons unifamiliales et les terrains. Au T2 2026, le prix médian d'une unifamiliale dans la RMR de Gatineau était de 523 500 $ (APCIQ). Il faut aussi tenir compte des taxes et du coût de la vie. On compare tout ça ensemble." },
+  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus diffère de celui de l'Ontario. Vous signez une promesse d'achat, généralement conditionnelle à l'inspection et au financement. Une fois les conditions remplies, la vente se conclut chez le notaire. Actif en Outaouais depuis 2017, je vous accompagne à chaque étape." },
+  { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de votre budget et de votre trajet vers le travail. Au T2 2026, le prix médian unifamilial était de 572 750 $ à Aylmer et de 419 545 $ à Buckingham/Masson-Angers (APCIQ). Hull et le secteur Gatineau se situent entre les deux. On compare les options selon vos priorités." },
+  { q: "Est-ce que je peux travailler à Ottawa et vivre à Gatineau?", a: "Oui. Le centre-ville d'Ottawa se trouve à environ 2 km de l'hôtel de ville de Gatineau, dans le secteur Hull (pont du Portage) et à environ 14 km du Vieux-Aylmer (pont Champlain). Plusieurs ponts et le transport en commun relient les deux rives." },
 ];
 
 const RelocationPage = () => (
    <>
-    <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais" description="Déménager d'Ottawa à Gatineau? Guide complet: Aylmer, Hull, Plateau, Buckingham, taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Service de relocalisation immobilière Ottawa–Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau, recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau/" serviceType="Real Estate Relocation Service" />
+    <PageMeta title="Relocalisation Ottawa vers Gatineau · Outaouais" description="Déménager d'Ottawa à Gatineau? Le guide : Aylmer, Hull, Plateau, Buckingham, taxes, écoles et accompagnement immobilier personnalisé." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
+    <ServiceJsonLd name="Service de relocalisation immobilière d'Ottawa à Gatineau" description="Accompagnement complet pour déménager d'Ottawa à Gatineau : recherche de quartier, visites, offre d'achat et installation en Outaouais." url="/relocalisation-ottawa-gatineau/" serviceType="Real Estate Relocation Service" />
     <HeroSection
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
-      subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs, les prix, le processus et à trouver la bonne propriété."
+      subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs et les prix, puis à trouver la bonne propriété."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/" }}
-      trustLine="Stratégie claire."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
       heroBgImage={heroImg}
     />
 <ContentBlock narrow>
       <SectionHeading
         overline="La relocalisation"
         title="Acheter à Gatineau quand on ne connaît pas le terrain"
-        subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie différente, mais encore faut-il savoir où chercher et comment naviguer le processus."
+        subtitle="Plus d'espace et des prix souvent plus accessibles. Encore faut-il savoir où chercher et comment fonctionne le processus."
       />
       <p className="prose-body mt-5">
-        Chaque année, des dizaines de familles et de professionnels traversent la rivière. Ce qui fait la différence, c'est d'avoir un guide local qui connaît les deux côtés, et qui peut vous aider à éviter les erreurs classiques.
+        Chaque année, des familles et des professionnels traversent la rivière pour s'installer à Gatineau. Un courtier local qui connaît les deux rives vous aide à éviter les erreurs classiques.
       </p>
     </ContentBlock>
 
@@ -92,15 +92,15 @@ const RelocationPage = () => (
 
     <SectorLinks
       id="secteurs"
-      overline="Secteurs populaires"
-      title="Les quartiers les plus recherchés par les relocalisés"
+      overline="Quelques secteurs"
+      title="Les quartiers à considérer"
       sectors={sectors}
       background="alt"
     />
 
     <ReviewSection
       overline="Témoignages relocalisation"
-      title="Ils se sont installés à Gatineau avec confiance"
+      title="Ils se sont installés à Gatineau"
       reviews={getReviewsByCategory("relocation").slice(0, 2)}
       columns={2}
     />
@@ -116,14 +116,14 @@ const RelocationPage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Guide relocalisation gratuit"
-      text="Tout ce qu'il faut savoir pour s'installer à Gatineau, secteurs, prix, processus et écoles."
+      text="Ce qu'il faut savoir pour s'installer à Gatineau : secteurs, prix, processus et écoles."
       ctaLabel="Recevoir le guide"
     />
 
     <CTASection
       dark
       title="Parlons de votre projet de relocalisation"
-      text="Budget, secteurs, processus québécois, on clarifie tout ça lors d'un premier appel, sans engagement."
+      text="On clarifie votre budget et les secteurs à cibler lors d'un premier appel, sans engagement."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/", variant: "outline" },
@@ -137,8 +137,8 @@ const RelocationPage = () => (
       overline="À lire aussi"
       title="Pages connexes"
       pages={[
-        { title: "Guide relocalisation", text: "Le guide complet pour s'installer à Gatineau.", href: "/guide-relocalisation-gatineau/" },
-        { title: "Acheter à Gatineau depuis Ottawa", text: "Taxes, marché et processus pour traverser la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
+        { title: "Guide relocalisation", text: "Le guide pour s'installer à Gatineau.", href: "/guide-relocalisation-gatineau/" },
+        { title: "Acheter à Gatineau depuis Ottawa", text: "Le marché et les taxes quand on traverse la rivière.", href: "/acheter-a-gatineau-depuis-ottawa/" },
         { title: "Relocalisation depuis Montréal", text: "Ce qui change quand on quitte Montréal pour l'Outaouais.", href: "/relocalisation-montreal-gatineau/" },
         { title: "Quartiers à considérer", text: "Trouvez le secteur qui vous convient à Gatineau.", href: "/quartiers-a-considerer-a-gatineau/" },
       ]}

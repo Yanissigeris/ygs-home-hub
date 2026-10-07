@@ -13,26 +13,26 @@ import heroImg from "@/assets/hero-military-guide.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const topics = [
-  "Comprendre les réalités d'une mutation immobilière",
-  "Acheter vs louer lors d'une relocalisation militaire",
-  "Les meilleurs secteurs de Gatineau pour les familles militaires",
+  "Comprendre les réalités immobilières d'une mutation",
+  "Acheter ou louer lors d'une relocalisation militaire",
+  "Les secteurs de Gatineau à considérer pour les familles militaires",
   "Le processus d'achat au Québec, étape par étape",
   "Vendre rapidement lors d'une mutation sans sacrifier le prix",
   "Programmes et ressources disponibles pour les militaires",
 ];
 
 const faq = [
-  { q: "Ce guide est-il gratuit?", a: "Oui. Mon objectif est de vous aider à planifier votre relocalisation en confiance." },
-  { q: "Travaillez-vous avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
+  { q: "Ce guide est-il gratuit?", a: "Oui. Il vous aide à planifier votre relocalisation étape par étape." },
+  { q: "Travaillez-vous avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant. Je m'adapte aux étapes et aux délais de votre dossier." },
   { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation financière. On en discute ensemble." },
-  { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Aylmer et le Plateau sont très populaires, écoles, familles, nature. Hull est bien aussi pour la proximité au centre." },
+  { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Ça dépend de votre lieu de travail. Pour le campus Carling, dans l'ouest d'Ottawa, Aylmer et le Plateau sont pratiques grâce au pont Champlain. Le centre de Hull est à environ 2 km du centre-ville d'Ottawa, par le pont du Portage. On compare les secteurs selon vos priorités familiales." },
 ];
 
 const related = [
-  { title: "Relocalisation militaire", text: "Mutation vers la RCN, trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau/" },
+  { title: "Relocalisation militaire", text: "Mutation vers la RCN? Trouvez la bonne propriété rapidement.", href: "/relocalisation-militaire-gatineau/" },
   { title: "Acheter comme militaire", text: "Accompagnement adapté aux contraintes de mutation.", href: "/acheter-comme-militaire-gatineau/" },
   { title: "Vendre lors d'une mutation", text: "Vendre rapidement sans sacrifier le prix.", href: "/vendre-lors-dune-mutation-gatineau/" },
-  { title: "Explorer les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau/" },
+  { title: "Voir les quartiers", text: "Trouvez le secteur qui correspond à vos priorités.", href: "/quartiers-a-considerer-a-gatineau/" },
 ];
 
 const MilitaryGuidePage = () => (
@@ -57,7 +57,7 @@ const MilitaryGuidePage = () => (
     <section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <p className="text-sm text-muted-foreground">Dossiers SIRVA et BGRS acceptés</p>
           <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" width={200} height={36} className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
       </div>
@@ -66,7 +66,7 @@ const MilitaryGuidePage = () => (
     <ContentBlock narrow>
       <SectionHeading title="Les mutations, ça se planifie" />
       <p className="prose-body mt-5">
-        Une mutation ne suit pas le calendrier immobilier normal. Il faut un courtier qui comprend vos contraintes de temps, votre réalité familiale et les programmes disponibles. Ce guide couvre les essentiels.
+        Une mutation ne suit pas le calendrier immobilier normal. Il faut un courtier qui comprend vos contraintes de temps et les programmes de réinstallation. Ce guide couvre les grandes étapes.
       </p>
     </ContentBlock>
 
@@ -79,7 +79,7 @@ const MilitaryGuidePage = () => (
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Recevez le guide relocalisation militaire"
-      text="Mutation, achat, vente, tout dans un guide clair envoyé gratuitement par courriel."
+      text="Achat ou vente lors d'une mutation : tout dans un guide clair, envoyé gratuitement par courriel."
       ctaLabel="Recevoir le guide"
     />
 
@@ -94,12 +94,12 @@ const MilitaryGuidePage = () => (
     <CTASection
       dark
       title="Planifions votre relocalisation militaire"
-      text="Réservez un appel gratuit, on adapte le plan à votre mutation et votre calendrier."
+      text="Réservez un appel gratuit. On adapte le plan à votre mutation et à votre calendrier."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
-      trustLine="Je m'adapte à votre rythme, vous décidez quand vous êtes prêt."
+      trustLine="Je m'adapte à votre rythme. Vous décidez quand vous êtes prêt."
     />
   
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation militaire gratuit, recevez-le par courriel" />

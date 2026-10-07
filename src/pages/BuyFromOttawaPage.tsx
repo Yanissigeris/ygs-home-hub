@@ -15,27 +15,27 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "Prix plus accessibles", text: "Les maisons unifamiliales et condos coûtent souvent nettement moins cher à Gatineau qu'à Ottawa, de l'autre côté de la rivière." },
-  { icon: MapPin, title: "Proximité d'Ottawa", text: "Les ponts (Champlain, Alexandra, du Portage), le transport STO et les pistes cyclables rendent le trajet quotidien très faisable." },
-  { icon: Home, title: "Plus d'espace", text: "Pour le même budget, vous obtenez souvent plus de pièces, un plus grand terrain et une meilleure qualité de vie à Aylmer, au Plateau ou à Buckingham." },
-  { icon: FileText, title: "Processus québécois", text: "Le processus d'achat au Québec a ses propres règles, promesse d'achat, notaire, taxes scolaires. Je vous guide étape par étape." },
+  { icon: DollarSign, title: "Prix plus accessibles", text: "Les maisons unifamiliales et les condos coûtent souvent moins cher à Gatineau qu'à Ottawa. Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 523 500 $ dans la RMR de Gatineau (APCIQ)." },
+  { icon: MapPin, title: "Proximité d'Ottawa", text: "Les ponts (Champlain, Alexandra, du Portage) et les autobus de la STO relient les deux rives. Le centre-ville d'Ottawa est à environ 2 km de Hull et à environ 14 km du Vieux-Aylmer." },
+  { icon: Home, title: "Plus d'espace", text: "Pour le même budget, vous obtenez souvent plus de pièces ou un plus grand terrain à Aylmer, au Plateau ou à Buckingham." },
+  { icon: FileText, title: "Processus québécois", text: "Le processus d'achat au Québec a ses propres règles : promesse d'achat, notaire, droits de mutation (taxe de bienvenue) et taxes scolaires. Je vous guide étape par étape." },
 ];
 
 const sectors = [
-  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
-  { name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" },
+  { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Maisons récentes et familiales, accès à Ottawa" },
+  { name: "Hull", href: "/hull/", detail: "Condos et plex, près du centre-ville d'Ottawa" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Plus de terrain, prix plus accessibles" },
 ];
 
 
 const faq = [
-  { q: "Quelles sont les vraies économies en achetant à Gatineau?", a: "Ça dépend du secteur et du type de propriété. Deux repères officiels : le prix médian d'une unifamiliale était de 740 000 $ à Ottawa en août 2026 (Ottawa Real Estate Board) et de 508 000 $ dans la ville de Gatineau au 2e trimestre 2026 (APCIQ). Ces chiffres ne portent ni sur la même période ni sur des maisons identiques : pour comparer net, je mets côte à côte des propriétés semblables et j'intègre les taxes municipales et scolaires." },
-  { q: "Comment fonctionne l'achat quand je suis en Ontario?", a: "Vous pouvez travailler en Ontario et habiter Gatineau. Le processus d'achat se déroule au Québec, promesse d'achat, conditions d'inspection, signature chez le notaire. Si vous êtes représenté, votre courtier doit détenir un permis de l'OACIQ. Je vous accompagne à chaque étape." },
-  { q: "Les taxes sont-elles plus élevées au Québec?", a: "Les taxes municipales et scolaires varient selon le secteur, et Ottawa et Gatineau ne les calculent pas de la même façon. Pour comparer, on regarde les comptes de taxes de propriétés semblables. L'impôt sur le revenu est aussi structuré différemment au Québec : on regarde le portrait complet ensemble." },
-  { q: "Est-ce que je peux garder mon emploi et mon médecin de famille en Ontario?", a: "Oui, beaucoup de mes clients font la navette quotidienne vers le centre-ville d'Ottawa ou travaillent en mode hybride. Vous pouvez souvent garder votre médecin de famille ontarien dans certains cas, bien que la RAMQ couvre les soins une fois résident québécois." },
-  { q: "Et l'école des enfants, français ou anglais?", a: "Les deux options existent en Outaouais. Le Western Québec School Board a des écoles publiques anglophones à Aylmer et à Hull, et les écoles francophones sont présentes dans tous les secteurs. Les règles d'admissibilité au réseau anglophone s'appliquent, on en discute tôt dans le processus." },
+  { q: "Combien peut-on économiser en achetant à Gatineau?", a: "Ça dépend du secteur et du type de propriété. Deux repères officiels : le prix médian d'une unifamiliale était de 740 000 $ à Ottawa en août 2026 (Ottawa Real Estate Board). Dans la ville de Gatineau, il était de 508 000 $ au 2e trimestre 2026 (APCIQ). Ces chiffres ne portent ni sur la même période ni sur des maisons identiques. Pour comparer, je mets côte à côte des propriétés semblables et j'intègre les taxes municipales et scolaires." },
+  { q: "Comment fonctionne l'achat quand je suis en Ontario?", a: "Vous pouvez travailler en Ontario et habiter Gatineau. Le processus d'achat se déroule au Québec : promesse d'achat, conditions d'inspection, signature chez le notaire. Si vous êtes représenté, votre courtier doit détenir un permis de l'OACIQ. Je vous accompagne à chaque étape." },
+  { q: "Les taxes sont-elles plus élevées au Québec?", a: "Ça dépend de la taxe. À l'achat, vous payez la taxe de bienvenue : à Gatineau, environ 4 486 $ pour une propriété de 425 000 $ selon la grille 2026. Les taxes municipales et scolaires varient selon le secteur, et Ottawa et Gatineau ne les calculent pas de la même façon. Pour comparer, on regarde les comptes de taxes de propriétés semblables. L'impôt sur le revenu est aussi structuré différemment au Québec : on regarde le portrait complet ensemble." },
+  { q: "Est-ce que je peux garder mon emploi et mon médecin de famille en Ontario?", a: "Pour l'emploi, oui : bien des résidents de Gatineau travaillent à Ottawa, sur place ou en mode hybride. Quant au médecin de famille, vérifiez avec votre clinique. Une fois résident du Québec, votre couverture publique relève de la RAMQ." },
+  { q: "Et l'école des enfants, français ou anglais?", a: "Les deux options existent en Outaouais. Le Western Québec School Board a des écoles publiques anglophones à Aylmer et à Hull, et les écoles francophones sont présentes dans tous les secteurs. Les règles d'admissibilité au réseau anglophone s'appliquent. On en discute tôt dans le processus." },
   { q: "Quelle distance sépare Gatineau du centre-ville d'Ottawa?", a: "Par la route, le centre-ville d'Ottawa est à environ 2 km de l'hôtel de ville de Gatineau, à Hull. Comptez environ 9 km depuis le Plateau et 14 km depuis le Vieux-Aylmer, avec un temps de trajet qui dépend du pont et de l'heure. Les autobus de la STO et les pistes cyclables sont aussi des options. Le projet de tramway, lui, est en révision par Mobilité Infra Québec et son échéancier reste à confirmer." },
-  { q: "Ai-je besoin d'une hypothèque québécoise?", a: "La plupart des prêteurs canadiens opèrent des deux côtés de la rivière, vous pouvez donc souvent garder votre banque actuelle. L'hypothèque est publiée au Québec par le notaire, selon le droit québécois. Je vous présente des courtiers hypothécaires qui traitent régulièrement des dossiers Ottawa-Gatineau." },
+  { q: "Ai-je besoin d'une hypothèque québécoise?", a: "La plupart des prêteurs canadiens sont présents des deux côtés de la rivière, vous pouvez donc souvent garder votre banque actuelle. L'hypothèque est publiée au Québec par le notaire, selon le droit québécois. Je vous présente des courtiers hypothécaires qui traitent régulièrement des dossiers Ottawa-Gatineau." },
 ];
 
 const BuyFromOttawaPage = () => (
@@ -46,20 +46,20 @@ const BuyFromOttawaPage = () => (
       title="Acheter à Gatineau depuis Ottawa"
       subtitle="Plus d'espace et des prix plus accessibles, sans vous éloigner du travail. Ce qu'il faut savoir avant de traverser la rivière."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
-      secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
+      secondaryCta={{ label: "Voir les secteurs", href: "#secteurs" }}
       trustLine="Spécialiste en relocalisation Ottawa → Gatineau"
       heroBgImage={heroImg}
     />
 <CardGrid
       overline="Les avantages"
-      title="Pourquoi de plus en plus d'Ottaviens traversent la rivière"
+      title="Pourquoi des résidents d'Ottawa choisissent Gatineau"
       items={advantages}
     />
 
     <InlineCTA
-      text="Vous vendez aussi à Ottawa? Connaître la valeur de votre propriété actuelle peut clarifier votre budget d'achat."
-      buttonLabel="Obtenir ma valeur →"
-      href="/evaluation-gratuite-gatineau/"
+      text="Vous voulez savoir ce que votre budget permet de ce côté de la rivière? On regarde les secteurs et les prix ensemble."
+      buttonLabel="Réserver un appel →"
+      href="/contact-yanis/"
     />
 
     <SectorLinks
@@ -73,13 +73,13 @@ const BuyFromOttawaPage = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Expertise locale" title="Un courtier qui connaît les deux côtés de la rivière" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Actif en immobilier en Outaouais depuis 2017, j'ai accompagné des dizaines de ménages ontariens dans leur transition vers Gatineau, fonctionnaires fédéraux, professionnels de la santé, jeunes familles, et retraités à la recherche d'un rythme plus calme. La transition tourne rarement uniquement autour du prix au pied carré. Elle touche la fiabilité du trajet, la scolarité dans la bonne langue, l'accès à un médecin, les standards de déneigement, et la lecture concrète d'un compte de taxes québécois.
+        Actif en immobilier en Outaouais depuis 2017, j'ai accompagné des ménages ontariens vers Gatineau : fonctionnaires fédéraux, professionnels de la santé, jeunes familles et retraités en quête d'un rythme plus calme. La transition tourne rarement uniquement autour du prix au pied carré. Elle touche la fiabilité du trajet, la scolarité dans la bonne langue, l'accès à un médecin, les standards de déneigement et la lecture concrète d'un compte de taxes québécois.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Je sais quelles rues d'Aylmer s'arrachent dès qu'une inscription paraît, quels quadrilatères de Hull cachent une plomberie vieillissante sous une couche de peinture neuve, où les phases récentes du Plateau ont des servitudes de bruit, et quelles poches de Buckingham prennent tranquillement de la valeur grâce aux investissements municipaux récents. Cette connaissance terrain protège un acheteur hors-province des hypothèses coûteuses.
+        Je connais les rues d'Aylmer où les inscriptions partent vite et les secteurs de Hull où le bâti ancien demande une inspection attentive. Au Plateau, je vérifie les servitudes inscrites au registre foncier avant une offre. Cette connaissance du terrain protège un acheteur de l'Ontario des hypothèses coûteuses.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Je coordonne aussi les acteurs de soutien, notaire québécois, courtier hypothécaire bilingue, inspecteur certifié connaissant les bâtiments anciens de Hull, déménageurs habitués aux dossiers interprovinciaux. Vous n'avez pas à monter cette équipe seul depuis l'autre rive.
+        Je coordonne aussi les acteurs de soutien : notaire québécois, courtier hypothécaire bilingue, inspecteur en bâtiment qui connaît les maisons anciennes de Hull et déménageurs habitués aux dossiers interprovinciaux. Vous n'avez pas à monter cette équipe seul depuis l'autre rive.
       </p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/consultation-acheteur/">Réserver ma consultation</Link>
@@ -95,13 +95,13 @@ const BuyFromOttawaPage = () => (
 
     <CTASection
       dark
-      title="Prêt à explorer Gatineau?"
-      text="Réservez une consultation gratuite, on regarde ensemble les secteurs et les options qui correspondent à votre profil."
+      title="Prêt à regarder Gatineau de plus près?"
+      text="Réservez une consultation gratuite. On regarde ensemble les secteurs et les options qui correspondent à votre profil."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
-        { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" },
+        { label: "Voir Plateau et Aylmer", href: "/plateau-aylmer/", variant: "outline" },
       ]}
-      trustLine="Je vous donne les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />

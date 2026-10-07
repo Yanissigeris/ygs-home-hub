@@ -13,47 +13,47 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-montreal-relocation.webp";
 
 const challenges = [
-{ icon: MapPin, title: "Comprendre le marché montréalais vs gatinois", text: "Les prix, les taxes et la qualité de vie sont très différents, souvent à l'avantage de Gatineau." },
-{ icon: DollarSign, title: "Plus d'espace pour moins cher", text: "Pour le même budget, vous obtenez souvent beaucoup plus d'espace et de terrain à Gatineau." },
-{ icon: Home, title: "Quartiers familiaux", text: "Aylmer, le Plateau et d'autres secteurs offrent une qualité de vie difficilement accessible à Montréal." },
-{ icon: FileText, title: "Processus simplifié", text: "Même province, même processus notarié, la transition est plus facile que depuis l'Ontario." }];
+{ icon: MapPin, title: "Les prix des deux marchés", text: "Les prix et la taxe de bienvenue varient d'une ville à l'autre. Je vous donne les chiffres de Gatineau par secteur pour comparer avec votre marché actuel." },
+{ icon: DollarSign, title: "L'espace pour votre budget", text: "Selon le secteur, le même budget peut vous donner plus d'espace ou de terrain à Gatineau. Je vous montre les comparables pour le vérifier." },
+{ icon: Home, title: "Quartiers familiaux", text: "Aylmer, le Plateau et d'autres secteurs comptent surtout des quartiers résidentiels, avec écoles et parcs à proximité." },
+{ icon: FileText, title: "Le même processus", text: "Vous restez au Québec, donc la promesse d'achat et la signature chez le notaire suivent les mêmes règles qu'à Montréal." }];
 
 
 const sectors = [
-{ name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Familial, maisons récentes, accès Ottawa" },
-{ name: "Hull", href: "/hull/", detail: "Urbain, proche centre-ville, condos et plex" },
-{ name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Terrain, prix accessibles, nature" }];
+{ name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Quartiers familiaux et maisons récentes, à environ 9 à 14 km du centre-ville d'Ottawa" },
+{ name: "Hull", href: "/hull/", detail: "Milieu urbain avec condos et plex, à environ 2 km du centre-ville d'Ottawa" },
+{ name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Prix médian unifamilial le plus bas des 4 secteurs de la ville (APCIQ, T2 2026) et accès à la nature" }];
 
 
 
 
 const MontrealRelocationPage = () =>
 <>
-    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
-    <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau — quartiers, coût de vie et processus immobilier en Outaouais." url="/relocalisation-montreal-gatineau/" serviceType="Real Estate Relocation Service" />
+    <PageMeta title="Relocalisation Montréal vers Gatineau" description="Déménager de Montréal à Gatineau? Coût de la vie, quartiers (Aylmer, Hull, Plateau), qualité de vie et accompagnement immobilier en Outaouais." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
+    <ServiceJsonLd name="Relocalisation Montréal vers Gatineau" description="Accompagnement pour déménager de Montréal à Gatineau : quartiers, prix par secteur, promesse d'achat et notaire en Outaouais." url="/relocalisation-montreal-gatineau/" serviceType="Real Estate Relocation Service" />
     <HeroSection
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"
-    subtitle="Plus d'espace, des prix plus accessibles, une qualité de vie familiale, et un marché immobilier en croissance. Découvrez pourquoi de plus en plus de Montréalais choisissent Gatineau."
+    subtitle="Vous quittez Montréal pour l'Outaouais? Je vous aide à comparer les secteurs et les prix de Gatineau avant d'acheter."
     primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
-    secondaryCta={{ label: "Explorer les secteurs", href: "#secteurs" }}
+    secondaryCta={{ label: "Voir les secteurs", href: "#secteurs" }}
     trustLine="Spécialiste en relocalisation."
     heroBgImage={heroImg} />
 <CardGrid
-    overline="Les avantages"
-    title="Pourquoi choisir Gatineau plutôt que Montréal"
+    overline="Avant de partir"
+    title="Comparer Gatineau et Montréal"
     items={challenges} />
   
 
     <InlineCTA
-    text="Vous vendez aussi à Montréal? Connaître la valeur de votre propriété actuelle peut clarifier votre budget."
-    buttonLabel="Obtenir ma valeur →"
-    href="/evaluation-gratuite-gatineau/" />
+    text="Vous voulez savoir ce que votre budget permet à Gatineau? On regarde les secteurs et les prix ensemble."
+    buttonLabel="Réserver un appel →"
+    href="/contact-yanis/" />
   
 
     <SectorLinks
     id="secteurs"
-    overline="Secteurs populaires"
+    overline="Quelques secteurs"
     title="Les quartiers à considérer"
     sectors={sectors}
     background="alt" />
@@ -61,7 +61,7 @@ const MontrealRelocationPage = () =>
 
     <ContentBlock narrow>
       <SectionHeading title="Un courtier local qui comprend votre situation" />
-      <p className="prose-body mt-5">La transition de Montréal à Gatineau est plus simple qu'on pense, même processus notarié, même province. Mon rôle est de vous faire découvrir les meilleurs secteurs et de vous accompagner à chaque étape.
+      <p className="prose-body mt-5">La transition de Montréal à Gatineau est plus simple qu'on le pense : même province, même processus notarié. Mon rôle est de vous présenter les secteurs qui correspondent à vos critères et de vous accompagner à chaque étape.
 
     </p>
     </ContentBlock>
@@ -69,19 +69,19 @@ const MontrealRelocationPage = () =>
     <GuideInlineCTA
     guideType="relocation_guide"
     headline="Guide relocalisation gratuit"
-    text="Tout pour s'installer à Gatineau depuis Montréal, secteurs, prix et processus."
+    text="Ce qu'il faut savoir pour s'installer à Gatineau depuis Montréal : secteurs, prix, processus et écoles."
     ctaLabel="Recevoir le guide" />
   
 
     <CTASection
     dark
-    title="Prêt à explorer Gatineau?"
-    text="Réservez un appel gratuit, on regarde ensemble les secteurs et les options."
+    title="Parlons de votre projet à Gatineau"
+    text="Réservez un appel gratuit. On regarde ensemble les secteurs et les options."
     buttons={[
     { label: "Réserver un appel", href: "/contact-yanis/" },
-    { label: "Explorer les secteurs", href: "/plateau-aylmer/", variant: "outline" }]
+    { label: "Voir Plateau / Aylmer", href: "/plateau-aylmer/", variant: "outline" }]
     }
-    trustLine="Je vous donne les options, vous décidez." />
+    trustLine="Je vous donne les chiffres et les options, vous décidez." />
   
   
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit, recevez-le par courriel" />

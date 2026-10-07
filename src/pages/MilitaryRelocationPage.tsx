@@ -14,31 +14,31 @@ import heroImg from "@/assets/hero-military-relocation.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const challenges = [
-  { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau, je vous guide vers les quartiers qui correspondent à vos priorités." },
+  { icon: MapPin, title: "Trouver le bon secteur à distance", text: "Vous ne connaissez peut-être pas Gatineau. Je vous guide vers les quartiers qui correspondent à vos priorités." },
   { icon: Home, title: "Coordonner vente et achat", text: "Vendre votre propriété actuelle tout en achetant à Gatineau demande une coordination serrée." },
-  { icon: DollarSign, title: "Comprendre le marché", text: "Les prix, les taxes et le processus au Québec sont différents, il faut un guide local." },
+  { icon: DollarSign, title: "Comprendre le marché", text: "Au Québec, les taxes et l'achat chez le notaire diffèrent des autres provinces. Un courtier local vous aide à vous y retrouver." },
 ];
 
 const steps = [
   { num: "01", title: "Évaluation de la situation", desc: "Calendrier de mutation, budget, priorités familiales et secteurs ciblés." },
   { num: "02", title: "Recherche ciblée", desc: "Visites virtuelles ou en personne, sélection adaptée à votre profil militaire." },
-  { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection, notaire, tout est géré pour simplifier votre transition." },
+  { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection et notaire : je coordonne chaque étape jusqu'à votre emménagement." },
 ];
 
 
 const faq = [
-  { q: "Comment se passe une relocalisation militaire immobilière?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), offre et accompagnement complet." },
-  { q: "Est-ce que vous travaillez avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
+  { q: "Comment se passe un achat immobilier lors d'une mutation militaire?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), offre et accompagnement complet." },
+  { q: "Est-ce que vous travaillez avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant. Je m'adapte aux étapes et aux délais de votre dossier." },
 ];
 
 const MilitaryRelocationPage = () => (
    <>
-    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau et l'Outaouais? Guide complet: processus BGRS/SIRVA, quartiers selon votre lieu d'affectation, délais et accompagnement bilingue." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Relocalisation militaire à Gatineau" description="Guide complet pour militaires en mutation vers Gatineau — BGRS/SIRVA, quartiers, délais et accompagnement bilingue." url="/relocalisation-militaire-gatineau" serviceType="Military Relocation Service" />
+    <PageMeta title="Relocalisation militaire à Gatineau" description="Mutation militaire vers Gatineau et l'Outaouais? Processus SIRVA ou BGRS, quartiers selon votre lieu d'affectation, délais et service bilingue." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
+    <ServiceJsonLd name="Relocalisation militaire à Gatineau" description="Service immobilier pour militaires en mutation vers Gatineau : SIRVA ou BGRS, quartiers, délais et service bilingue." url="/relocalisation-militaire-gatineau" serviceType="Military Relocation Service" />
     <HeroSection
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"
-      subtitle="Mutation vers la région? Je vous aide à trouver la bonne propriété rapidement, sans stress et en respectant votre calendrier."
+      subtitle="Mutation vers la région? Je vous aide à trouver la bonne propriété en respectant votre calendrier."
       primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
@@ -46,7 +46,7 @@ const MilitaryRelocationPage = () => (
 <section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <p className="text-sm text-muted-foreground">Partenaire des programmes</p>
+          <p className="text-sm text-muted-foreground">Dossiers SIRVA et BGRS acceptés</p>
           <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" width={200} height={36} className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
       </div>
@@ -64,26 +64,26 @@ const MilitaryRelocationPage = () => (
       <SectionHeading
         overline="Pourquoi YGS"
         title="Un accompagnement adapté à votre rythme"
-        subtitle="Les mutations ne suivent pas le calendrier immobilier normal. Je m'adapte à votre timeline et vos contraintes."
+        subtitle="Les mutations ne suivent pas le calendrier immobilier normal. Je m'adapte à votre calendrier et à vos contraintes."
       />
     </ContentBlock>
 
     <GuideInlineCTA
       guideType="relocation_guide"
       headline="Guide relocalisation militaire gratuit"
-      text="Tout ce qu'il faut savoir pour votre mutation immobilière à Gatineau, dans un guide envoyé par courriel."
+      text="Ce qu'il faut savoir pour acheter ou vendre lors d'une mutation à Gatineau, dans un guide envoyé par courriel."
       ctaLabel="Recevoir le guide"
     />
 
     <CTASection
       dark
       title="Planifions votre relocalisation"
-      text="Parlez-moi de votre mutation, on bâtit un plan ensemble."
+      text="Parlez-moi de votre mutation et on bâtit un plan ensemble."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
         { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
-      trustLine="Je vous donne les options, vous décidez."
+      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <FAQSection items={faq} />
