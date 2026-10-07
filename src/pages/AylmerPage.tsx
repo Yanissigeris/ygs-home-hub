@@ -124,7 +124,7 @@ const AylmerPage = () => (
   <>
     <PageMeta
   title="Courtier immobilier Aylmer Gatineau | Yanis Gauthier-Sigeris (YGS)"
-  description="Yanis Gauthier-Sigeris, courtier immobilier spécialisé à Aylmer, Gatineau. Maisons unifamiliales, condos, plex. Évaluation gratuite, connaissance locale approfondie."
+  description="Yanis Gauthier-Sigeris, courtier immobilier à Aylmer, Gatineau. Maisons unifamiliales, condos, plex. Évaluation gratuite, connaissance locale approfondie."
   ogImage="https://yanisgauthier.com/og/og-aylmer.jpg" />
     <NeighborhoodJsonLd
       name="Aylmer"
@@ -138,7 +138,7 @@ const AylmerPage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
-      title="Courtier immobilier à Aylmer, votre spécialiste local"
+      title="Votre courtier immobilier à Aylmer"
       subtitle="Aylmer attire beaucoup de familles bilingues, pour ses parcs autant que pour ses maisons récentes. Le marché est compétitif et récompense les acheteurs préparés comme les vendeurs bien positionnés."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}

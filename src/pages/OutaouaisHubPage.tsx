@@ -143,10 +143,10 @@ const OutaouaisHubPage = () => (
           {[
             "Courtier RE/MAX, Hall of Fame, reconnu en Outaouais",
             "Bilingue français-anglais, pour la clientèle des deux côtés de la rivière",
-            "Spécialisé en revente résidentielle, premier achat et investissement plex",
-            "Évaluations basées sur des données réelles, pas des estimations en ligne",
+            "Revente résidentielle, premier achat et investissement plex",
+            "Évaluations appuyées sur les ventes comparables du secteur",
             "Accompagnement de la relocalisation Ottawa → Gatineau et Montréal → Gatineau",
-            "Approche honnête, je vous donne les chiffres et les options, vous décidez",
+            "Je vous donne les chiffres et les options, vous décidez",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />
