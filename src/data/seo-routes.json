@@ -61,22 +61,22 @@
   },
   "/acheter-a-gatineau-depuis-ottawa": {
     "title": "Acheter à Gatineau depuis Ottawa · Guide | YGS",
-    "description": "Vous habitez Ottawa et voulez acheter à Gatineau? Différences fiscales, hypothèques et marché : ce qu'il faut savoir avant de traverser la rivière.",
+    "description": "Vous habitez Ottawa et voulez acheter à Gatineau? Taxes, hypothèque, secteurs et processus d'achat : ce qu'il faut savoir avant de traverser la rivière.",
     "ogImage": "https://yanisgauthier.com/og/og-buyer.jpg"
   },
   "/relocalisation-ottawa-gatineau": {
     "title": "Relocalisation Ottawa → Gatineau | YGS Courtier",
-    "description": "Déménager d'Ottawa vers Gatineau : secteurs, écoles, transport, fiscalité Québec vs Ontario. Service de relocalisation complet.",
+    "description": "Déménager d'Ottawa à Gatineau : secteurs, prix, écoles et processus d'achat au Québec. Courtier local depuis 2017, appel gratuit.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/relocalisation-montreal-gatineau": {
     "title": "Relocalisation Montréal → Gatineau | YGS",
-    "description": "Déménager de Montréal à Gatineau : marché, secteurs, qualité de vie, distance avec Ottawa. Accompagnement complet pour votre relocalisation.",
+    "description": "Déménager de Montréal à Gatineau : quartiers, prix, promesse d'achat et notaire. Même province, même processus notarié. Appel gratuit avec un courtier local.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/guide-relocalisation-gatineau": {
     "title": "Guide de relocalisation à Gatineau | YGS",
-    "description": "Guide pratique pour relocaliser à Gatineau : choisir un secteur, écoles, services, transport, démarches. Conseils d'un courtier local.",
+    "description": "Guide pratique pour vous installer à Gatineau : choisir un secteur, écoles, services, transport et démarches. Conseils d'un courtier local.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/quartiers-a-considerer-a-gatineau": {
@@ -86,27 +86,27 @@
   },
   "/militaire-gatineau": {
     "title": "Militaires · Acheter ou vendre à Gatineau | YGS",
-    "description": "Service immobilier dédié aux militaires à Gatineau : mutations, IRP, BFC Petawawa, BFC Ottawa. Courtier qui comprend la réalité militaire.",
+    "description": "Mutation des FAC vers Gatineau? Achat ou vente selon votre calendrier et votre dossier SIRVA ou BGRS. Un courtier qui comprend la réalité militaire.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/relocalisation-militaire-gatineau": {
-    "title": "Relocalisation militaire à Gatineau · IRP | YGS",
-    "description": "Mutation militaire vers Gatineau ou Ottawa : programme IRP, courtiers approuvés, processus accéléré. Accompagnement bilingue complet.",
+    "title": "Relocalisation militaire à Gatineau · FAC | YGS",
+    "description": "Mutation des FAC vers Gatineau? Achat ou vente au rythme de votre dossier SIRVA ou BGRS, choix du secteur selon votre lieu de travail. Service bilingue.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/acheter-comme-militaire-gatineau": {
     "title": "Acheter comme militaire à Gatineau | YGS",
-    "description": "Acheter une maison à Gatineau lors d'une mutation militaire : IRP, indemnités, secteurs proches des bases, hypothèque adaptée.",
+    "description": "Acheter une maison à Gatineau lors d'une mutation militaire : dossier SIRVA ou BGRS et visites planifiées autour du voyage à la recherche d'un domicile.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/vendre-lors-dune-mutation-gatineau": {
     "title": "Vendre lors d'une mutation militaire · Gatineau | YGS",
-    "description": "Vendre votre maison à Gatineau lors d'une mutation : délais serrés, GHRP, IRP, mise en marché accélérée. Service militaire dédié.",
+    "description": "Vendre votre maison à Gatineau lors d'une mutation militaire, avec un dossier SIRVA ou BGRS : échéancier serré et prix appuyé sur des ventes comparables.",
     "ogImage": "https://yanisgauthier.com/og/og-seller.jpg"
   },
   "/guide-militaire-gatineau": {
     "title": "Guide militaire · Immobilier Gatineau | YGS",
-    "description": "Guide complet pour militaires à Gatineau : IRP, GHRP, secteurs, écoles, services aux familles militaires. Tout pour bien s'installer.",
+    "description": "Guide immobilier pour militaires mutés à Gatineau : dossier SIRVA ou BGRS, secteurs, acheter ou louer, processus d'achat au Québec.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/investir-plex-gatineau": {
@@ -361,22 +361,22 @@
   },
   "/en/buy-from-ottawa": {
     "title": "Buy in Gatineau from Ottawa · Guide | YGS",
-    "description": "Live in Ottawa and want to buy in Gatineau? Tax differences, mortgages and the market: what to know before you cross the river.",
+    "description": "Live in Ottawa and want to buy in Gatineau? Taxes, mortgage, neighbourhoods and the buying process: what to know before you cross the river.",
     "ogImage": "https://yanisgauthier.com/og/og-buyer.jpg"
   },
   "/en/relocation": {
     "title": "Relocation Ottawa → Gatineau | YGS Broker",
-    "description": "Moving from Ottawa to Gatineau: areas, schools, transport, Quebec vs Ontario taxes. Full relocation service.",
+    "description": "Moving from Ottawa to Gatineau: areas, prices, schools and the Quebec buying process. Local broker since 2017, free call.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/en/montreal-relocation": {
     "title": "Relocation Montreal → Gatineau | YGS",
-    "description": "Moving from Montreal to Gatineau: market, areas, quality of life, distance to Ottawa. Complete relocation guidance.",
+    "description": "Moving from Montreal to Gatineau: areas, prices, promise to purchase and notary. Same province, same notarial process. Free call with a local broker.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/en/relocation-guide": {
     "title": "Relocation guide · Gatineau | YGS",
-    "description": "Practical guide to relocate to Gatineau: choosing an area, schools, services, transport, paperwork. Local broker advice.",
+    "description": "Practical guide to settling in Gatineau: choosing an area, schools, services, transport and paperwork. Advice from a local broker.",
     "ogImage": "https://yanisgauthier.com/og/og-reloc.jpg"
   },
   "/en/neighborhoods": {
@@ -386,27 +386,27 @@
   },
   "/en/military": {
     "title": "Military · Buy or sell in Gatineau | YGS",
-    "description": "Real estate service for military in Gatineau: postings, IRP, CFB Petawawa, CFB Ottawa. A broker who understands military life.",
+    "description": "CAF posting to Gatineau? Buy or sell on your timeline and around your SIRVA or BGRS file. A broker who understands military life.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/en/military-relocation": {
-    "title": "Military relocation to Gatineau · IRP | YGS",
-    "description": "Military posting to Gatineau or Ottawa: IRP program, approved brokers, expedited process. Full bilingual support.",
+    "title": "Military relocation to Gatineau · CAF | YGS",
+    "description": "CAF posting to Gatineau? Buy or sell around your SIRVA or BGRS file, and choose an area based on where you work. Bilingual service.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/en/military-buyer": {
     "title": "Buying as a military member in Gatineau | YGS",
-    "description": "Buy a home in Gatineau on a military posting: IRP, allowances, areas near bases, suitable mortgage.",
+    "description": "Buy a home in Gatineau on a military posting: SIRVA or BGRS file and showings planned around your House Hunting Trip.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/en/military-seller": {
-    "title": "Selling on military posting · Gatineau | YGS",
-    "description": "Sell your Gatineau home on a military posting: tight deadlines, GHRP, IRP, accelerated marketing. Dedicated military service.",
+    "title": "Selling on a military posting · Gatineau | YGS",
+    "description": "Sell your Gatineau home on a military posting with a SIRVA or BGRS file: tight timeline and a price based on comparable sales.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/en/military-guide": {
     "title": "Military guide · Gatineau real estate | YGS",
-    "description": "Complete guide for military in Gatineau: IRP, GHRP, areas, schools, services for military families. Everything to settle well.",
+    "description": "Real estate guide for military members posted to Gatineau: SIRVA or BGRS file, neighbourhoods, buying or renting, the Quebec buying process.",
     "ogImage": "https://yanisgauthier.com/og/og-military.jpg"
   },
   "/en/plex": {
