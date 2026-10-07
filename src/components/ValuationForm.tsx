@@ -211,7 +211,7 @@ const ValuationForm = ({
 
   // Glass variant input classes
   const glassInput =
-    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/85 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
+    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/65 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
   const glassLabel = "text-primary-foreground text-[0.8125rem]";
   const errClass = cn(
     "mt-1 text-[0.75rem] leading-snug",
@@ -499,7 +499,7 @@ const ValuationForm = ({
           <div
             className={cn(
               "flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem]",
-              isGlass ? "text-primary-foreground/30" : "text-muted-foreground",
+              isGlass ? "text-primary-foreground/70" : "text-muted-foreground",
             )}
           >
             <span className="flex items-center gap-1.5">
