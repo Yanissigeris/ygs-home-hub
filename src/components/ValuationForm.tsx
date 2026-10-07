@@ -236,15 +236,15 @@ const ValuationForm = ({
       {isGlass && (
         <>
           <h2
-            className="text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground"
+            className="hidden sm:block text-[1.25rem] sm:text-[1.375rem] font-semibold text-primary-foreground"
             style={{ fontFamily: "var(--serif)" }}
           >
             {t.glassHeading}
           </h2>
-          <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/85">
+          <p className="hidden sm:block mt-1.5 text-[0.8125rem] leading-relaxed text-primary-foreground/85">
             {t.glassSub}
           </p>
-          <div className="mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
+          <div className="mt-0 sm:mt-5 flex items-center gap-3 pb-4 mb-1 border-b border-white/10">
             <img
               src={yanisPhoto}
               alt=""
