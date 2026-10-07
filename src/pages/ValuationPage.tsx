@@ -135,7 +135,7 @@ const ValuationPage = () => {
               </p>
 
               {/* Trust bullets - compact on mobile */}
-              <div className="mt-4 md:mt-8 space-y-2 md:space-y-3">
+              <div className="hidden sm:block mt-4 md:mt-8 space-y-2 md:space-y-3">
                 {trustBullets.map((b) => (
                   <div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75">
                     <b.icon size={15} className="text-accent shrink-0" />
@@ -145,7 +145,7 @@ const ValuationPage = () => {
               </div>
 
               {/* Credibility strip */}
-              <div className="mt-6 md:mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
+              <div className="hidden sm:flex mt-6 md:mt-10 flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Plus de 9 ans en Outaouais</span>
               </div>
