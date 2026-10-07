@@ -87,31 +87,11 @@ export const reviews: Review[] = [
     rating: 5,
   },
 
-  // — Military —
-  {
-    id: "m1",
-    name: "Cpl. Patrick H.",
-    location: "Petawawa → Gatineau",
-    category: "military",
-    short: "Mutation rapide, Yanis a tout géré à distance. On a acheté avant même d'arriver.",
-    full: "Avec une mutation à court préavis, on n'avait pas le temps de chercher sur place. Yanis a organisé des visites virtuelles, répondu à toutes nos questions sur les secteurs proches de la base, et finalisé l'achat avant notre arrivée. Impressionnant.",
-    rating: 5,
-  },
-  {
-    id: "m2",
-    name: "Sgt. Amélie D.",
-    location: "Valcartier → Gatineau",
-    category: "military",
-    short: "Yanis comprend les réalités militaires. Vente et achat coordonnés sans stress.",
-    full: "Troisième mutation en 6 ans, on connaît le stress. Yanis a été de loin le meilleur courtier qu'on a eu. Il a compris notre réalité, coordonné la vente et l'achat simultanément, et tout s'est fait dans les délais. Un vrai professionnel.",
-    rating: 5,
-  },
-
   // — Plex / Investors —
   {
     id: "p1",
     name: "Clarisse",
-    location: "Aylmer",
+    location: "Hull",
     category: "plex",
     short: "Waouh\nC'est vu ,c'est vendu, just one day.\nIncroyable pourtant vrai.\nMerci encore Yanis ,pour ton efficacité et ton professionnalisme\n\nClarisse",
     full: "Waouh\nC'est vu ,c'est vendu, just one day.\nIncroyable pourtant vrai.\nMerci encore Yanis ,pour ton efficacité et ton professionnalisme\n\nClarisse",

@@ -221,7 +221,7 @@
   },
   "/temoignages": {
     "title": "Témoignages clients · YGS Courtier Gatineau",
-    "description": "Témoignages de clients de Yanis Gauthier-Sigeris : vendeurs, acheteurs, investisseurs et militaires en Outaouais.",
+    "description": "Témoignages de clients de Yanis Gauthier-Sigeris\u00a0: vendeurs, acheteurs, familles relocalisées et investisseurs en Outaouais.",
     "ogImage": "https://yanisgauthier.com/og/og-testimonials.jpg"
   },
   "/contact-yanis": {
@@ -521,7 +521,7 @@
   },
   "/en/testimonials": {
     "title": "Client testimonials · YGS Broker Gatineau",
-    "description": "Testimonials from Yanis Gauthier-Sigeris's clients: sellers, buyers, investors and military members in Outaouais.",
+    "description": "Testimonials from Yanis Gauthier-Sigeris's clients: sellers, buyers, relocating families and investors in the Outaouais.",
     "ogImage": "https://yanisgauthier.com/og/og-testimonials.jpg"
   },
   "/en/contact": {
