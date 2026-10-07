@@ -137,12 +137,12 @@ const OutaouaisHubPageEn = () => (
         <SectionHeading overline="Why me" title="A local, bilingual and transparent broker" centered />
         <ul className="mt-8 space-y-3">
           {[
-            "RE/MAX Hall of Fame, recognized across Outaouais",
+            "RE/MAX Hall of Fame broker, recognized in the Outaouais",
             "Fully bilingual (French and English), for clients on both sides of the river",
-            "Specialized in resale, first-time buying and plex investment",
-            "Valuations based on real data, not online estimates",
-            "Expert in Ottawa → Gatineau and Montréal → Gatineau relocations",
-            "Honest approach, I give you the numbers and options, you decide",
+            "Resale, first-time buying and plex investment",
+            "Valuations based on comparable sales in your area",
+            "Support for Ottawa → Gatineau and Montreal → Gatineau relocations",
+            "I give you the numbers and the options. You decide.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />

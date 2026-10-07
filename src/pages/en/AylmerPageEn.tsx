@@ -30,7 +30,7 @@ const faq = [
     a: "I hear this question often. For the same budget, Aylmer typically offers more space and a newer home. Families who want nature close by get a comparable, or even better, quality of life. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options based on your situation.",
   },
   {
-    q: "Do you specialize in Aylmer specifically?",
+    q: "Is Aylmer one of your main areas?",
     a: "Aylmer has been one of my primary areas for over 9 years. I know the streets, recent comparables, micro-trends by sub-sector, and what target buyers expect for each property type. That local knowledge works on both the selling and the buying side.",
   },
 ];
@@ -137,7 +137,7 @@ const AylmerPageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
-      title="Real estate broker in Aylmer, your local specialist"
+      title="Your real estate broker in Aylmer"
       subtitle="Aylmer draws many bilingual families, for its parks as much as for its newer homes. The market is competitive and rewards prepared buyers as much as well-positioned sellers."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
