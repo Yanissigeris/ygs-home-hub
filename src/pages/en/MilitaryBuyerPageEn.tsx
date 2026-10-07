@@ -16,36 +16,36 @@ import heroImg from "@/assets/hero-military-buyer.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "More affordable prices", text: "Gatineau's market often offers better value than saturated military markets." },
-  { icon: MapPin, title: "Close to work", text: "Access to National Defence's Carling Campus and other federal facilities in the region, depending on the area you choose." },
-  { icon: Home, title: "Variety of properties", text: "Houses, condos, semi-detached, in family-friendly, well-served neighborhoods." },
+  { icon: DollarSign, title: "Price benchmarks", text: "In Q2 2026, the median single-family price in the Gatineau CMA was $523,500 (APCIQ). We compare it together with the market you are leaving." },
+  { icon: MapPin, title: "Close to work", text: "Access to National Defence's Carling Campus, in west Ottawa, and other federal facilities in the region, depending on the area you choose." },
+  { icon: Home, title: "Variety of properties", text: "Houses, semi-detached homes, condos and plexes, in family-friendly, well-served neighbourhoods." },
   { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },
 ];
 
 
 const faq = [
-  { q: "Which neighborhoods do you recommend for military members?", a: "It depends on your base and family priorities. Aylmer, Plateau and Hull are popular, we discuss based on your situation." },
-  { q: "Can I buy remotely?", a: "Yes. Virtual visits, remote offers and full coordination, it's common for postings." },
-  { q: "How does the buying process work in Québec?", a: "Promise to purchase, inspection, conditions, notary, it's different from Ontario. I guide you step by step." },
+  { q: "Which neighbourhoods do you recommend for military members?", a: "It depends on your workplace and your family priorities. For the Carling Campus, in west Ottawa, we often look at Aylmer and the Plateau. Hull works well if you work downtown. We discuss it based on your situation." },
+  { q: "Can I buy remotely?", a: "Yes. Virtual tours and offers signed remotely are common during a posting. If your file includes a House Hunting Trip (HHT), we plan in-person showings around that trip." },
+  { q: "How does the buying process work in Quebec?", a: "In Quebec, you sign a promise to purchase, then work through conditions (inspection, financing) and sign at the notary. The notary plays the role a real estate lawyer plays in Ontario. I guide you step by step." },
 ];
 
 const MilitaryBuyerPageEn = () => (
   <>
-    <PageMeta title="Military Buyer — Buy in Gatineau" description="Buy a property in Gatineau as a military member. BGRS process, strategic neighborhoods and support adapted to CAF." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
-    <ServiceJsonLd name="Military Home Buying in Gatineau" description="Specialized support for CAF members buying in Gatineau. BGRS process, neighbourhoods matched to your workplace." url="/en/military-buyer/" serviceType="Military Real Estate Buyer Service" />
+    <PageMeta title="Military Buyer: Buy in Gatineau" description="Buy a property in Gatineau as a CAF member. SIRVA or BGRS files, neighbourhoods matched to your workplace and support adapted to your posting." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
+    <ServiceJsonLd name="Military Home Buying in Gatineau" description="Specialized support for CAF members buying in Gatineau. SIRVA or BGRS files, neighbourhoods matched to your workplace." url="/en/military-buyer/" serviceType="Military Real Estate Buyer Service" />
     <HeroSection
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"
-      subtitle="Posting to the NCR? I help you find the right area, the right property and navigate the buying process in Québec."
+      subtitle="Posting to the NCR? I help you choose the area and the property, then guide you through the buying process in Quebec."
       primaryCta={{ label: "Book a call", href: "/en/contact/" }}
-      secondaryCta={{ label: "Explore neighborhoods", href: "/en/plateau-aylmer/" }}
+      secondaryCta={{ label: "See Plateau and Aylmer", href: "/en/plateau-aylmer/" }}
       trustLine="Service adapted to military members, at your pace."
       heroBgImage={heroImg}
     />
 <section className="py-8 bg-white border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <p className="text-sm text-muted-foreground">Partner of programs</p>
+          <p className="text-sm text-muted-foreground">SIRVA and BGRS files welcome</p>
           <img src={sirvaBgrsLogo} alt="SIRVA | BGRS" width={200} height={36} className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
       </div>
@@ -53,7 +53,7 @@ const MilitaryBuyerPageEn = () => (
 
     <CardGrid
       overline="Why Gatineau"
-      title="Buying in Gatineau — the advantages for military members"
+      title="Buying in Gatineau: the advantages for military members"
       items={advantages}
     />
 
@@ -81,12 +81,12 @@ const MilitaryBuyerPageEn = () => (
     <CTASection
       dark
       title="Ready to find your property in Gatineau?"
-      text="Let's discuss your posting and criteria, I take care of the rest."
+      text="Let's discuss your posting and your criteria. We'll build the plan together."
       buttons={[
         { label: "Book a call", href: "/en/contact/" },
         { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" },
       ]}
-      trustLine="I give you the options, you decide with full clarity."
+      trustLine="I give you the numbers and the options. You decide."
     />
 
     <FAQSection items={faq} />
