@@ -127,6 +127,23 @@ var listings = [
     remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
     description_fr: "Triplex d\xE9tach\xE9 de 2003 dans un cul-de-sac, sans voisin arri\xE8re, avec 7 chambres au total, 6 stationnements et revenus potentiels de 60 600 $ par ann\xE9e.",
     description_en: "Detached 2003 triplex on a cul-de-sac with no rear neighbours, 7 bedrooms in total, 6 parking spaces and potential revenue of $60,600 per year."
+  },
+  {
+    id: "22864394",
+    mls: "22864394",
+    address: "14 Imp. de la Descente",
+    city: "Gatineau (Aylmer, Vieux Aylmer, Des C\xE8dres, Marina)",
+    price_fr: "524 900 $",
+    price_en: "$524,900",
+    type: "Maison de plain-pied / Bungalow",
+    bedrooms: "3",
+    bathrooms: "2",
+    area: "966 pi\xB2 / sq ft",
+    year_built: "1974",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
+    description_fr: "Plain-pied bien entretenu directement \xE0 la marina d'Aylmer, dans une impasse tranquille. Sous-sol am\xE9nag\xE9 avec 2e cuisine, chambre et salle de bain, id\xE9al pour un interg\xE9n\xE9ration.",
+    description_en: "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite."
   }
 ];
 var list_properties_default = defineTool({

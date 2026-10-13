@@ -11,6 +11,7 @@ import property16828271 from "@/assets/property-16828271.webp";
 import property22872864 from "@/assets/property-22872864.webp";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
+import property22864394 from "@/assets/property-22864394.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -203,6 +204,25 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
     mls: "22872864",
+    status: "active",
+  },
+  {
+    id: "22864394",
+    address: "14 Imp. de la Descente",
+    city: "Gatineau (Aylmer, Old Aylmer, Des Cèdres, Marina)",
+    price: "$524,900",
+    type: "Bungalow",
+    bedrooms: "3",
+    bathrooms: "2",
+    area: "966 sq ft",
+    lotSize: "5,000 sq ft",
+    yearBuilt: "1974",
+    description:
+      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom — ideal for an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
+    image: property22864394,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
+    mls: "22864394",
     status: "active",
   },
   {
