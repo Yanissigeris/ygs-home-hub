@@ -91,6 +91,16 @@ const listings: Listing[] = [
     description_fr: "Triplex détaché de 2003 dans un cul-de-sac, sans voisin arrière, avec 7 chambres au total, 6 stationnements et revenus potentiels de 60 600 $ par année.",
     description_en: "Detached 2003 triplex on a cul-de-sac with no rear neighbours, 7 bedrooms in total, 6 parking spaces and potential revenue of $60,600 per year.",
   },
+  {
+    id: "22864394", mls: "22864394",
+    address: "14 Imp. de la Descente", city: "Gatineau (Aylmer, Vieux Aylmer, Des Cèdres, Marina)",
+    price_fr: "524 900 $", price_en: "$524,900",
+    type: "Maison de plain-pied / Bungalow", bedrooms: "3", bathrooms: "2", area: "966 pi² / sq ft", year_built: "1974",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
+    description_fr: "Plain-pied bien entretenu directement à la marina d'Aylmer, dans une impasse tranquille. Sous-sol aménagé avec 2e cuisine, chambre et salle de bain, idéal pour un intergénération.",
+    description_en: "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite.",
+  },
 ];
 
 export default defineTool({

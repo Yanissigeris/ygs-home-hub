@@ -11,6 +11,7 @@ import property16828271 from "@/assets/property-16828271.webp";
 import property22872864 from "@/assets/property-22872864.webp";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
+import property22864394 from "@/assets/property-22864394.webp";
 
 export interface Property {
   id: string;
@@ -221,6 +222,25 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
     mls: "22872864",
+    status: "active",
+  },
+  {
+    id: "22864394",
+    address: "14 Imp. de la Descente",
+    city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
+    price: "524 900 $",
+    type: "Maison de plain-pied",
+    bedrooms: "3",
+    bathrooms: "2",
+    area: "966 pi²",
+    lotSize: "5 000 pi²",
+    yearBuilt: "1974",
+    description:
+      "Plain-pied bien entretenu directement à la marina d'Aylmer, dans une impasse tranquille. 3 chambres et 2 salles de bain, plancher chauffant dans la cuisine et la salle à manger, fenêtres (2012) et panneau électrique (2016). Sous-sol aménagé avec 2e cuisine, chambre et salle de bain, idéal pour un intergénération ou un proche qui veut son intimité. Rivière des Outaouais, sentiers riverains et commerces du Vieux-Aylmer à distance de marche.",
+    image: property22864394,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
+    mls: "22864394",
     status: "active",
   },
   {
