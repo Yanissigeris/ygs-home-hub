@@ -12,6 +12,7 @@ import property22872864 from "@/assets/property-22872864.webp";
 import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
 import property22864394 from "@/assets/property-22864394.webp";
+import property14821222 from "@/assets/property-14821222.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -223,6 +224,25 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
     mls: "22864394",
+    status: "active",
+  },
+  {
+    id: "14821222",
+    address: "236 Rue Church",
+    city: "Gatineau (Buckingham, Buckingham East)",
+    price: "$448,000",
+    type: "Bungalow",
+    bedrooms: "3",
+    bathrooms: "2",
+    area: "1,148 sq ft",
+    lotSize: "7,200 sq ft",
+    yearBuilt: "1960",
+    description:
+      "Beautifully renovated turn-key bungalow with 3 bedrooms and 2 bathrooms, minutes from downtown Buckingham. Modern kitchen with a large central island, spacious retro family room with a bar corner, double-width attached garage and a fully finished basement. Large yard with a gate for a recreational vehicle. Some rooms are shown with AI virtual staging.",
+    image: property14821222,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-buckingham/236-rue-church/14821222",
+    mls: "14821222",
     status: "active",
   },
   {

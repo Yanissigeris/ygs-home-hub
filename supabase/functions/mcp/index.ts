@@ -144,6 +144,23 @@ var listings = [
     remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
     description_fr: "Plain-pied bien entretenu directement \xE0 la marina d'Aylmer, dans une impasse tranquille. Sous-sol am\xE9nag\xE9 avec 2e cuisine, chambre et salle de bain, id\xE9al pour un interg\xE9n\xE9ration.",
     description_en: "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite."
+  },
+  {
+    id: "14821222",
+    mls: "14821222",
+    address: "236 Rue Church",
+    city: "Gatineau (Buckingham, Buckingham Est)",
+    price_fr: "448 000 $",
+    price_en: "$448,000",
+    type: "Maison de plain-pied / Bungalow",
+    bedrooms: "3",
+    bathrooms: "2",
+    area: "1 148 pi\xB2 / 1,148 sq ft",
+    year_built: "1960",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-buckingham/236-rue-church/14821222",
+    description_fr: "Bungalow r\xE9nov\xE9 cl\xE9 en main de 3 chambres et 2 salles de bains \xE0 Buckingham Est. Cuisine moderne avec grand \xEElot, salle familiale r\xE9tro avec coin bar, garage double largeur et grande cour avec portail pour v\xE9hicule r\xE9cr\xE9atif.",
+    description_en: "Turn-key renovated bungalow with 3 bedrooms and 2 bathrooms in Buckingham East. Modern kitchen with a large island, retro family room with a bar corner, double-width garage and a large yard with a gate for a recreational vehicle."
   }
 ];
 var list_properties_default = defineTool({
