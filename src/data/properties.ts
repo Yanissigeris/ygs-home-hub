@@ -13,6 +13,7 @@ import property18249217 from "@/assets/property-18249217.webp";
 import property15159365 from "@/assets/property-15159365.webp";
 import property22864394 from "@/assets/property-22864394.webp";
 import property14821222 from "@/assets/property-14821222.webp";
+import property12304022 from "@/assets/property-12304022.webp";
 
 export interface Property {
   id: string;
@@ -261,6 +262,25 @@ export const properties: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-buckingham/236-rue-church/14821222",
     mls: "14821222",
+    status: "active",
+  },
+  {
+    id: "12304022",
+    address: "47 Rue Brook",
+    city: "Gatineau (Aylmer, Vieux Aylmer / Des Cèdres / Marina)",
+    price: "399 900 $",
+    type: "Maison à étages",
+    bedrooms: "3",
+    bathrooms: "1 + 1 salle d'eau",
+    area: "1 425 pi²",
+    lotSize: "4 302 pi²",
+    yearBuilt: "1885",
+    description:
+      "Charmante maison unifamiliale rénovée au coeur du Vieux-Aylmer : 3 chambres, 1 salle de bains complète et 1 salle d'eau. Entretien impeccable et nombreuses rénovations au fil des ans. À distance de marche de la marina d'Aylmer, de la rue Principale, de ses cafés, restaurants et boutiques.",
+    image: property12304022,
+    remaxUrl:
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/47-rue-brook/12304022",
+    mls: "12304022",
     status: "active",
   },
   {

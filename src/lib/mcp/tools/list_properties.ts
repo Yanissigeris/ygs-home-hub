@@ -111,6 +111,16 @@ const listings: Listing[] = [
     description_fr: "Bungalow rénové clé en main de 3 chambres et 2 salles de bains à Buckingham Est. Cuisine moderne avec grand îlot, salle familiale rétro avec coin bar, garage double largeur et grande cour avec portail pour véhicule récréatif.",
     description_en: "Turn-key renovated bungalow with 3 bedrooms and 2 bathrooms in Buckingham East. Modern kitchen with a large island, retro family room with a bar corner, double-width garage and a large yard with a gate for a recreational vehicle.",
   },
+  {
+    id: "12304022", mls: "12304022",
+    address: "47 Rue Brook", city: "Gatineau (Aylmer, Vieux Aylmer / Des Cèdres / Marina)",
+    price_fr: "399 900 $", price_en: "$399,900",
+    type: "Maison à étages / Two-storey house", bedrooms: "3", bathrooms: "1 + 1 salle d'eau / 1 + 1 powder room", area: "1 425 pi² / 1,425 sq ft", year_built: "1885",
+    status: "active",
+    remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/47-rue-brook/12304022",
+    description_fr: "Maison unifamiliale rénovée de 3 chambres au coeur du Vieux-Aylmer, à distance de marche de la marina et de la rue Principale.",
+    description_en: "Renovated 3-bedroom single-family home in the heart of Old Aylmer, walking distance to the marina and Rue Principale.",
+  },
 ];
 
 export default defineTool({
