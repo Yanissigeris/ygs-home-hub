@@ -127,11 +127,11 @@ const ValuationPage = () => {
 
               {/* Subtitle - hidden on mobile to save space */}
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">
-                Recevez une estimation personnalisée et confidentielle, basée sur votre propriété et les ventes comparables récentes dans votre secteur, à Gatineau, à Aylmer, à Hull ou ailleurs en Outaouais.
+                Je suis Yanis Gauthier-Sigeris, courtier immobilier résidentiel chez RE/MAX Direct. Votre évaluation est gratuite et je la prépare à partir des ventes récentes de votre secteur, à Gatineau, à Aylmer, à Hull ou ailleurs en Outaouais.
               </p>
               {/* Shorter mobile subtitle */}
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">
-                Estimation gratuite et confidentielle basée sur les ventes récentes.
+                Évaluation gratuite préparée par Yanis Gauthier-Sigeris, courtier immobilier chez RE/MAX Direct, à partir des ventes récentes de votre secteur.
               </p>
 
               {/* Trust bullets - compact on mobile */}
@@ -146,8 +146,8 @@ const ValuationPage = () => {
 
               {/* Credibility strip */}
               <div className="hidden sm:flex mt-6 md:mt-10 flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX</span>
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Plus de 9 ans en Outaouais</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Plus de 300 transactions depuis 2017</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX 2024</span>
               </div>
             </motion.div>
 
