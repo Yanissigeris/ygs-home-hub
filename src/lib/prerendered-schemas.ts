@@ -4,7 +4,7 @@
  * them when navigating away. Global identity schemas are left untouched.
  */
 export function releasePrerenderedSchemas() {
-  const routeTypes = new Set(["BlogPosting", "FAQPage", "HowTo"]);
+  const routeTypes = new Set(["BlogPosting", "FAQPage", "HowTo", "Service"]);
   document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]').forEach((script) => {
     try {
       const schema = JSON.parse(script.textContent || "null");

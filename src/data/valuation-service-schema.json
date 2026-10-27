@@ -1,0 +1,112 @@
+{
+  "/evaluation-gratuite-gatineau": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://yanisgauthier.com/evaluation-gratuite-gatineau/#service",
+    "name": "Évaluation gratuite de propriété à Gatineau",
+    "serviceType": "Analyse comparative de marché",
+    "description": "Analyse des ventes comparables récentes de votre secteur, préparée par un courtier immobilier, avec une fourchette de valeur et trois prix d'affichage. Elle est distincte d'un rapport d'évaluateur agréé.",
+    "url": "https://yanisgauthier.com/evaluation-gratuite-gatineau/",
+    "provider": {
+      "@id": "https://yanisgauthier.com/#realestateagent"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Gatineau"
+      },
+      {
+        "@type": "City",
+        "name": "Aylmer"
+      },
+      {
+        "@type": "City",
+        "name": "Hull"
+      },
+      {
+        "@type": "City",
+        "name": "Buckingham"
+      },
+      {
+        "@type": "City",
+        "name": "Masson-Angers"
+      },
+      {
+        "@type": "City",
+        "name": "Chelsea"
+      },
+      {
+        "@type": "City",
+        "name": "Cantley"
+      },
+      {
+        "@type": "City",
+        "name": "Val-des-Monts"
+      },
+      {
+        "@type": "City",
+        "name": "Pontiac"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    }
+  },
+  "/en/home-valuation": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://yanisgauthier.com/en/home-valuation/#service",
+    "name": "Free home valuation in Gatineau",
+    "serviceType": "Comparative market analysis",
+    "description": "An analysis of recent comparable sales in your area, prepared by a real estate broker, with a value range and three listing prices. It is separate from a chartered appraiser's report.",
+    "url": "https://yanisgauthier.com/en/home-valuation/",
+    "provider": {
+      "@id": "https://yanisgauthier.com/#realestateagent"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Gatineau"
+      },
+      {
+        "@type": "City",
+        "name": "Aylmer"
+      },
+      {
+        "@type": "City",
+        "name": "Hull"
+      },
+      {
+        "@type": "City",
+        "name": "Buckingham"
+      },
+      {
+        "@type": "City",
+        "name": "Masson-Angers"
+      },
+      {
+        "@type": "City",
+        "name": "Chelsea"
+      },
+      {
+        "@type": "City",
+        "name": "Cantley"
+      },
+      {
+        "@type": "City",
+        "name": "Val-des-Monts"
+      },
+      {
+        "@type": "City",
+        "name": "Pontiac"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    }
+  }
+}
