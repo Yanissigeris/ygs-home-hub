@@ -17,6 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FAQ_FR_FILE = path.resolve(__dirname, "..", "src/pages/FAQPage.tsx");
 const FAQ_EN_FILE = path.resolve(__dirname, "..", "src/pages/en/FAQPageEn.tsx");
 const HOME_FAQ_FILE = path.resolve(__dirname, "..", "src/data/home-faq.ts");
+const VALUATION_FAQ_FILE = path.resolve(__dirname, "..", "src/data/valuation-faq.ts");
 
 /**
  * Extract an array of {q, a} pairs from a source file by reading the
@@ -74,4 +75,16 @@ export async function extractHomeFaqFr() {
 export async function extractHomeFaqEn() {
   const src = await fs.readFile(HOME_FAQ_FILE, "utf8");
   return extractFaqItemsFromSource(src, ["homeFaqEn"]);
+}
+
+/** Return the FR valuation page FAQ items from src/data/valuation-faq.ts. */
+export async function extractValuationFaqFr() {
+  const src = await fs.readFile(VALUATION_FAQ_FILE, "utf8");
+  return extractFaqItemsFromSource(src, ["valuationFaqFr"]);
+}
+
+/** Return the EN valuation page FAQ items from src/data/valuation-faq.ts. */
+export async function extractValuationFaqEn() {
+  const src = await fs.readFile(VALUATION_FAQ_FILE, "utf8");
+  return extractFaqItemsFromSource(src, ["valuationFaqEn"]);
 }

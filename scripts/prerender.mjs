@@ -24,7 +24,7 @@ import { execSync } from "node:child_process";
 
 import { SEO_ROUTES, SITE_URL, DEFAULT_OG, SITE_LAST_UPDATE } from "./seo-routes.mjs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
-import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn } from "./faq-extractor.mjs";
+import { extractFaqFr, extractFaqEn, extractHomeFaqFr, extractHomeFaqEn, extractValuationFaqFr, extractValuationFaqEn } from "./faq-extractor.mjs";
 import { extractSellerGuideFr, extractSellerGuideEn } from "./guide-extractor.mjs";
 import { puppeteerRender } from "./puppeteer-render.mjs";
 
@@ -610,6 +610,20 @@ async function main() {
         );
       }
       html = injectFaqPageJsonLd(html, homeFaqItems);
+    }
+
+    // Inject FAQPage JSON-LD for the valuation pages (server-side, crawler-visible)
+    if (route === "/evaluation-gratuite-gatineau" || route === "/en/home-valuation") {
+      const valuationFaqItems = route === "/evaluation-gratuite-gatineau"
+        ? await extractValuationFaqFr()
+        : await extractValuationFaqEn();
+      if (valuationFaqItems.length === 0) {
+        throw new Error(
+          `Prerender: FAQ extraction returned 0 items for valuation route "${route}": ` +
+          `check the format of src/data/valuation-faq.ts (double-quoted { q, a } objects).`
+        );
+      }
+      html = injectFaqPageJsonLd(html, valuationFaqItems);
     }
 
     // Inject HowTo + FAQPage JSON-LD for the seller guide pages (server-side)
