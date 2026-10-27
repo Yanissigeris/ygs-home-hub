@@ -7,6 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
+import ValuationSteps from "@/components/ValuationSteps";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
@@ -202,38 +203,38 @@ const ValuationPage = () => {
                 className="mt-2 text-[var(--cream)]/85 text-[0.9375rem]"
                 style={{ fontFamily: "var(--sans)" }}
               >
-                À quoi ressemble une fourchette de valeur
+                À quoi ressemblent vos trois prix d'affichage
               </p>
 
               <div className="relative mt-10 mb-2">
                 {/* ligne reliant les 3 dots */}
-                <div className="absolute left-[6%] right-[6%] top-[5px] h-px bg-[var(--gold)]/50" aria-hidden="true" />
+                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(168, 138, 90, 0.5)" }} aria-hidden="true" />
                 <div className="relative grid grid-cols-3 gap-2">
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      550 000 $
+                      559 900 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Conservateur
+                      Prix plus compétitif
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
                     <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
-                      570 000 $
+                      569 900 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Prix recommandé
+                      Recommandé
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full bg-[var(--gold)]/40" aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      599 000 $
+                      589 900 $
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Optimiste
+                      Ambitieux
                     </span>
                   </div>
                 </div>
@@ -251,6 +252,7 @@ const ValuationPage = () => {
       </section>
 
       <ValuationOptions lang="fr" />
+      <ValuationSteps lang="fr" />
       <FunnelNextStep
         overline="Et ensuite?"
         title="Après votre évaluation"
