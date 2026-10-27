@@ -6,6 +6,7 @@ import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
+import ValuationOptions from "@/components/ValuationOptions";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
@@ -86,6 +87,7 @@ const ValuationPageEn = () => {
         </div>
       </section>
       <BenefitsList overline="What you receive" title="Your valuation includes" items={benefits} />
+      <ValuationOptions lang="en" />
       <FunnelNextStep overline="What's next?" title="After your valuation" subtitle="You'll have the numbers. Here are the options to go further." steps={afterSteps} background="alt" />
       <RelatedPages
         overline="Also worth reading"
