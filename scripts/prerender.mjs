@@ -612,6 +612,23 @@ async function main() {
       html = injectFaqPageJsonLd(html, homeFaqItems);
     }
 
+    // Inject the Service JSON-LD for the valuation pages (server-side). Same id
+    // and same data as <JsonLdScript> in the page, from src/data/valuation-service-schema.json.
+    if (route === "/evaluation-gratuite-gatineau" || route === "/en/home-valuation") {
+      const serviceSchemas = JSON.parse(
+        await fs.readFile(path.resolve(__dirname, "..", "src/data/valuation-service-schema.json"), "utf8")
+      );
+      const serviceSchema = serviceSchemas[route];
+      if (!serviceSchema) {
+        throw new Error(`Prerender: no Service schema for valuation route "${route}" in src/data/valuation-service-schema.json`);
+      }
+      const serviceJson = JSON.stringify(serviceSchema).replace(/<\//g, "<\\/");
+      html = html.replace(
+        "</head>",
+        `\n    <script id="ygs-jsonld-service-valuation" type="application/ld+json">${serviceJson}</script>\n  </head>`
+      );
+    }
+
     // Inject FAQPage JSON-LD for the valuation pages (server-side, crawler-visible)
     if (route === "/evaluation-gratuite-gatineau" || route === "/en/home-valuation") {
       const valuationFaqItems = route === "/evaluation-gratuite-gatineau"

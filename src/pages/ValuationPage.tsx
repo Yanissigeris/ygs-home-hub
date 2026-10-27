@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
-import ServiceJsonLd from "@/components/ServiceJsonLd";
+import JsonLdScript from "@/components/JsonLdScript";
+import valuationServiceSchema from "@/data/valuation-service-schema.json";
 import FAQSection from "@/components/FAQSection";
 import { valuationFaqFr } from "@/data/valuation-faq";
 import RelatedPages from "@/components/RelatedPages";
@@ -48,7 +49,7 @@ const ValuationPage = () => {
   return (
     <>
       <PageMeta title="Évaluation gratuite · Gatineau et Outaouais" description="Obtenez une évaluation gratuite de votre propriété à Gatineau, Aylmer, Hull ou en Outaouais. Analyse basée sur les ventes récentes de votre secteur." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
-    <ServiceJsonLd name="Évaluation immobilière gratuite à Gatineau" description="Service d'évaluation gratuite de propriétés à Gatineau et en Outaouais, analyse basée sur les ventes comparables récentes de votre secteur." url="/evaluation-gratuite-gatineau/" serviceType="Real Estate Appraisal Service" />
+      <JsonLdScript id="ygs-jsonld-service-valuation" data={valuationServiceSchema["/evaluation-gratuite-gatineau"]} />
 
       {/* ── FORM-FIRST CONVERSION HERO ── */}
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>

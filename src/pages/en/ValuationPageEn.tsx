@@ -1,5 +1,6 @@
 import PageMeta from "@/components/PageMeta";
-import ServiceJsonLd from "@/components/ServiceJsonLd";
+import JsonLdScript from "@/components/JsonLdScript";
+import valuationServiceSchema from "@/data/valuation-service-schema.json";
 import FAQSection from "@/components/FAQSection";
 import { valuationFaqEn } from "@/data/valuation-faq";
 import RelatedPages from "@/components/RelatedPages";
@@ -26,7 +27,7 @@ const ValuationPageEn = () => {
   return (
     <>
       <PageMeta title="Free Home Valuation | Gatineau" description="Get a free valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
-    <ServiceJsonLd name="Free Home Valuation in Gatineau" description="Get a free property valuation in Gatineau, Aylmer, Hull or Outaouais. Analysis based on recent comparable sales in your area." url="/en/home-valuation/" serviceType="Real Estate Appraisal Service" />
+      <JsonLdScript id="ygs-jsonld-service-valuation" data={valuationServiceSchema["/en/home-valuation"]} />
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
