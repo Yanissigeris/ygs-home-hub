@@ -6,6 +6,7 @@ import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
+import ValuationOptions from "@/components/ValuationOptions";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
@@ -249,6 +250,7 @@ const ValuationPage = () => {
         </div>
       </section>
 
+      <ValuationOptions lang="fr" />
       <FunnelNextStep
         overline="Et ensuite?"
         title="Après votre évaluation"
