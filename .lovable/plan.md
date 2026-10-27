@@ -3,19 +3,18 @@
 Trois fichiers seulement. Hero, formulaire et autres sections inchangés. Textes copiés exactement, sans reformulation. Pas de `npm run build`.
 
 ## 1. Nouveau fichier `src/components/ValuationOptions.tsx`
-Contenu copié tel quel depuis le document fourni (textes FR/EN, quatre cartes, la 4e « L'analyse du courtier » sur fond foncé avec liseré doré).
+Contenu copié tel quel depuis le document fourni, avec un seul ajustement au libellé au-dessus de chaque carte :
+- `uppercase` et `tracking-[0.12em]` retirés ; taille `text-[13px]` ; `font-semibold` conservé.
+- Couleur : `var(--gold-text)` sur les trois cartes claires, `var(--gold2)` sur la carte foncée « L'analyse du courtier ».
+- Aucun texte ni autre style modifié.
 
 ## 2. `src/pages/ValuationPage.tsx` (/evaluation-gratuite-gatineau/)
-- Import `ValuationOptions` ajouté sous l'import de `ValuationForm` (ligne 8).
-- `<ValuationOptions lang="fr" />` inséré juste avant `<FunnelNextStep overline="Et ensuite?" ...>` (ligne 252).
+- Import `ValuationOptions` ajouté sous l'import de `ValuationForm`.
+- `<ValuationOptions lang="fr" />` inséré juste avant `<FunnelNextStep overline="Et ensuite?" ...>`.
 
 ## 3. `src/pages/en/ValuationPageEn.tsx` (/en/home-valuation/)
-- Import ajouté sous celui de `ValuationForm` (ligne 8).
-- `<ValuationOptions lang="en" />` inséré entre `<BenefitsList ... />` (ligne 88) et `<FunnelNextStep overline="What's next?" ...>` (ligne 89).
-
-## Points à noter (aucune action sans votre accord)
-- Les petits libellés dorés en majuscules au-dessus de chaque carte (« Pour vos taxes », etc.) ressemblent aux surtitres retirés ailleurs sur le site. Je les garde tels quels, comme demandé.
-- Ces libellés utilisent l'or `--gold` (#A88A5A) sur fond clair, une combinaison dont le contraste est faible (environ 3:1) et qui a été remplacée par `--gold-text` ailleurs. Je le garde tel quel sauf si vous voulez la même correction.
+- Import ajouté sous celui de `ValuationForm`.
+- `<ValuationOptions lang="en" />` inséré entre `<BenefitsList ... />` et `<FunnelNextStep overline="What's next?" ...>`.
 
 ## Vérification
-Typecheck, puis aperçu des deux pages à 390 et 1440 px : section visible au bon endroit, sans débordement.
+Typecheck, puis aperçu des deux pages à 390 et 1440 px : section au bon endroit, sans débordement.
