@@ -5,7 +5,7 @@ export const reviewsEn: Review[] = [
   {
     id: "s1",
     name: "Sylvie",
-    location: "Gatineau",
+    location: "Aylmer",
     category: "seller",
     short: "This is the second time I've used his services and I'm always very satisfied. Yanis is very professional, respectful, honest and trustworthy. Understanding and dedicated. I highly recommend him. Thank you again for everything.",
     full: "This is the second time I've used his services and I'm always very satisfied. Yanis is very professional, respectful, honest and trustworthy. Understanding and dedicated. I highly recommend him. Thank you again for everything.",

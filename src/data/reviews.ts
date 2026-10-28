@@ -13,7 +13,7 @@ export const reviews: Review[] = [
   {
     id: "s1",
     name: "Sylvie",
-    location: "Gatineau",
+    location: "Aylmer",
     category: "seller",
     short: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement\nMerci encore pour tout.",
     full: "Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite  de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. Compréhensif et dévoué. \nJe le recommande très fortement\nMerci encore pour tout.",
