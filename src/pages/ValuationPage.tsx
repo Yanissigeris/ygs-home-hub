@@ -9,6 +9,8 @@ import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
+import ValuationIncludes from "@/components/ValuationIncludes";
+import ValuationTestimonial from "@/components/ValuationTestimonial";
 import ValuationSteps from "@/components/ValuationSteps";
 import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -157,89 +159,7 @@ const ValuationPage = () => {
         </div>
       </section>
 
-      {/* ── Votre évaluation inclut — 2 cols + widget fourchette ── */}
-      <section className="bg-background py-16 md:py-20">
-        <div className="section-container">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-center">
-            <div>
-              <SectionHeading overline="Ce que vous recevez" title="Votre évaluation inclut" />
-              <ul className="mt-8 space-y-4">
-                {benefits.map((item) => (
-                  <li key={item} className="flex items-start gap-3.5">
-                    <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
-                    <span className="text-[1rem] text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Widget fourchette de valeur (statique, illustratif) */}
-            <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[var(--gold)]/30 shadow-sm">
-              <div className="flex items-center justify-between gap-3">
-                <p
-                  className="text-[11px] uppercase tracking-[0.14em] text-[var(--gold)]"
-                  style={{ fontFamily: "var(--sans)" }}
-                >
-                  Aperçu illustratif
-                </p>
-                <span
-                  className="text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[var(--gold)]/40 text-[var(--cream)]/70"
-                  style={{ fontFamily: "var(--sans)" }}
-                >
-                  Exemple
-                </span>
-              </div>
-              <p
-                className="mt-2 text-[var(--cream)]/85 text-[0.9375rem]"
-                style={{ fontFamily: "var(--sans)" }}
-              >
-                À quoi ressemblent vos trois prix d'affichage
-              </p>
-
-              <div className="relative mt-10 mb-2">
-                {/* ligne reliant les 3 dots */}
-                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(168, 138, 90, 0.5)" }} aria-hidden="true" />
-                <div className="relative grid grid-cols-3 gap-2">
-                  <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      559 900 $
-                    </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Prix plus compétitif
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
-                      569 900 $
-                    </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Recommandé
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
-                      589 900 $
-                    </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
-                      Ambitieux
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <p
-                className="mt-8 text-[12px] leading-[1.5] text-[var(--cream)]/60"
-                style={{ fontFamily: "var(--sans)" }}
-              >
-                Exemple illustratif, montants fictifs. Votre analyse personnalisée sera basée sur les ventes comparables récentes de votre secteur.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ValuationIncludes lang="fr" benefits={benefits} />
 
       <ValuationOptions lang="fr" />
       <ValuationSteps lang="fr" />
@@ -252,23 +172,10 @@ const ValuationPage = () => {
       />
 
       {SHOW_TESTIMONIAL && (
-        <section className="bg-[var(--cream)] py-14 md:py-20">
-          <div className="section-container max-w-3xl mx-auto text-center">
-            <div className="mx-auto h-px w-10 bg-[var(--gold)] mb-4" aria-hidden="true" />
-            <blockquote
-              className="text-[var(--ink)] italic"
-              style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", lineHeight: 1.4 }}
-            >
-              « C'est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. »
-              <cite
-                className="block mt-6 not-italic text-[14px] text-[var(--ink)]/70"
-                style={{ fontFamily: "var(--sans)" }}
-              >
-Sylvie, Aylmer, 2026
-              </cite>
-            </blockquote>
-          </div>
-        </section>
+        <ValuationTestimonial
+          quote={"« Cela est la 2e fois que je fais appel à ses services et je suis toujours très satisfaite de son service. Yanis est très professionnel et respectueux, très honnête, un être de confiance. »"}
+          cite="Sylvie, Aylmer, 2026"
+        />
       )}
       <RelatedPages
         overline="À lire aussi"

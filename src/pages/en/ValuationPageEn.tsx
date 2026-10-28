@@ -5,7 +5,8 @@ import FAQSection from "@/components/FAQSection";
 import { valuationFaqEn } from "@/data/valuation-faq";
 import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
-import BenefitsList from "@/components/BenefitsList";
+import ValuationIncludes from "@/components/ValuationIncludes";
+import ValuationTestimonial from "@/components/ValuationTestimonial";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
@@ -77,10 +78,14 @@ const ValuationPageEn = () => {
           </div>
         </div>
       </section>
-      <BenefitsList overline="What you receive" title="Your valuation includes" items={benefits} />
+      <ValuationIncludes lang="en" benefits={benefits} />
       <ValuationOptions lang="en" />
       <ValuationSteps lang="en" />
       <FunnelNextStep overline="What's next?" title="After your valuation" subtitle="You'll have the numbers. Here are the options to go further." steps={afterSteps} background="alt" />
+      <ValuationTestimonial
+        quote="“This is the second time I've used his services and I'm always very satisfied. Yanis is very professional, respectful, honest and trustworthy.”"
+        cite="Sylvie, Aylmer, 2026 (translated from French)"
+      />
       <RelatedPages
         overline="Also worth reading"
         title="Related resources"
