@@ -634,6 +634,24 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           }}
         />
 
+        {/* Mobile text scrim — homepage hero only (petrolGradient={false}).
+            The two mobile overlays above are hidden at scroll top (atTop), so the
+            title and subtitle sat on the bright windows at 1.5-2.7:1 contrast.
+            This one is always on, covers only the text block, and fades out above
+            the portrait so the photo keeps its true colors. Measured on a 390px
+            phone: title 8.4:1, tagline 6.7:1, subtitle 5.7:1. */}
+        {!petrolGradient && heroBgImage && !heroVideo && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 z-[3] md:hidden"
+            style={{
+              height: "78%",
+              background:
+                "linear-gradient(180deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.66) 48%, rgba(23,48,59,0.30) 66%, rgba(23,48,59,0) 78%)",
+            }}
+          />
+        )}
+
         {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
         <div
           className="relative z-[20] flex flex-col pointer-events-none"
