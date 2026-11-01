@@ -46,7 +46,7 @@ const ReviewSlide = ({ review, lang, width }: { review: Review; lang: "fr" | "en
       boxShadow: "0 6px 12px rgba(0, 14, 53, 0.06)",
     }}
   >
-    <p style={{ fontFamily: "var(--sans)", fontSize: "1.125rem", fontWeight: 700, color: "var(--ink)", lineHeight: 1.3 }}>{review.name}</p>
+    <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "1.375rem", fontWeight: 600, color: "var(--ink)", lineHeight: 1.2 }}>{review.name}</p>
     {review.location && (
       <p style={{ fontFamily: "var(--sans)", fontSize: ".8125rem", color: "hsl(var(--muted-foreground))", marginTop: 2 }}>{review.location}</p>
     )}
@@ -57,9 +57,10 @@ const ReviewSlide = ({ review, lang, width }: { review: Review; lang: "fr" | "en
     <blockquote
       style={{
         fontFamily: "var(--sans)",
-        fontSize: "1.0625rem",
-        lineHeight: 1.6,
-        color: "var(--ink)",
+        fontSize: "1rem",
+        fontWeight: 300,
+        lineHeight: 1.75,
+        color: "hsl(var(--foreground))",
         display: "-webkit-box",
         WebkitLineClamp: 8,
         WebkitBoxOrient: "vertical",
