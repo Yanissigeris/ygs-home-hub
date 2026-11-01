@@ -26,7 +26,6 @@ import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
-import QuickActionStrip from "@/components/QuickActionStrip";
 import LazySection from "@/components/LazySection";
 
 import { getReviewsById } from "@/data/reviews";
@@ -74,7 +73,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         className="relative z-10"
       >
         <ValuationCTA />
-        <QuickActionStrip />
         <AwardsStrip />
       </LazySection>
     </div>
