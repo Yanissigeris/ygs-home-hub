@@ -63,7 +63,7 @@ const ValuationPageEn = () => {
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
-              <h1 className="text-primary-foreground max-w-[520px]">How much is your property worth?</h1>
+              <h1 className="h1-sans text-primary-foreground max-w-[560px]">How much is your property <span className="h1-accent">worth?</span></h1>
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">I'm Yanis Gauthier-Sigeris, a residential real estate broker with RE/MAX Direct. Your valuation is free, and I build it from recent sales in your part of Gatineau, Aylmer, Hull or elsewhere in the Outaouais.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free valuation prepared by Yanis Gauthier-Sigeris, real estate broker with RE/MAX Direct, from recent sales in your area.</p>
               <div className="hidden sm:block mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>

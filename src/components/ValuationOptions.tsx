@@ -76,32 +76,25 @@ const ValuationOptions = ({ lang }: { lang: Lang }) => {
         <div className="max-w-3xl">
           <SectionHeading title={c.title} subtitle={c.subtitle} />
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-2 md:gap-5">
+        <div className="mt-10 grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           {c.options.map((o) => (
             <div
               key={o.title}
-              className={
-                o.mine
-                  ? "rounded-lg border border-[var(--gold)]/60 bg-[var(--ink)] p-6 md:p-7"
-                  : "rounded-lg border border-border bg-card p-6 md:p-7"
-              }
+              className={o.mine ? "border-t-[3px] border-[var(--gold-text)] pt-5" : "border-t border-border pt-5"}
             >
               <p
-                className={`text-[13px] font-semibold ${o.mine ? "text-[var(--gold2)]" : "text-[var(--gold-text)]"}`}
+                className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[var(--gold-text)]"
                 style={{ fontFamily: "var(--sans)" }}
               >
                 {o.use}
               </p>
               <h3
-                className={`mt-2 ${o.mine ? "text-[var(--gold)]" : "text-foreground"}`}
-                style={{ fontFamily: "var(--serif)", fontSize: "1.375rem", lineHeight: 1.2 }}
+                className="mt-3 text-foreground"
+                style={{ fontFamily: "var(--sans)", fontSize: "1.25rem", fontWeight: 600, lineHeight: 1.25, letterSpacing: "-0.01em" }}
               >
                 {o.title}
               </h3>
-              <p
-                className={`mt-3 text-[0.9375rem] leading-[1.7] ${o.mine ? "" : "text-muted-foreground"}`}
-                style={o.mine ? { color: "rgba(247, 244, 238, 0.9)" } : undefined}
-              >
+              <p className="mt-3 text-[0.9375rem] leading-[1.7] text-muted-foreground">
                 {o.text}
               </p>
             </div>
