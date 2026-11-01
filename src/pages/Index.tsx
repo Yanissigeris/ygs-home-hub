@@ -24,9 +24,7 @@ import AboutSection from "@/components/AboutSection";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
-import CTASection from "@/components/CTASection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
-import InstagramGrid from "@/components/InstagramGrid";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
 import LazySection from "@/components/LazySection";
@@ -105,22 +103,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       items={homeFaqFr}
       linkHref="/faq/"
       linkLabel="Voir toutes les questions"
-    />
-
-    <LazySection minHeight={300} rootMargin="300px">
-      <InstagramGrid />
-    </LazySection>
-
-    <CTASection
-      dark
-      
-      title="Prenez la bonne première étape"
-      text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
-      buttons={[
-        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
-      ]}
-      trustLine="Je vous donne les chiffres et les options, vous décidez."
     />
 
     <StickyMobileCTA />

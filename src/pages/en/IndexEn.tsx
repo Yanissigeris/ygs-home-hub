@@ -25,8 +25,6 @@ import TestimonialGrid from "@/components/TestimonialGrid";
 import AreasServicesSection from "@/components/AreasServicesSection";
 import GuideOffersSection from "@/components/GuideOffersSection";
 import HomeFAQTeaser from "@/components/HomeFAQTeaser";
-import InstagramGrid from "@/components/InstagramGrid";
-import CTASection from "@/components/CTASection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import QuickActionStrip from "@/components/QuickActionStrip";
 import LazySection from "@/components/LazySection";
@@ -88,22 +86,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       items={homeFaqEn}
       linkHref="/en/faq/"
       linkLabel="See all questions"
-    />
-
-    <LazySection minHeight={300} rootMargin="300px">
-      <InstagramGrid />
-    </LazySection>
-
-    <CTASection
-      dark
-      
-      title="Take the right first step"
-      text="Valuation, buyer consultation or plex analysis, we start where you are."
-      buttons={[
-        { label: "Free Home Valuation", href: "/en/home-valuation/" },
-        { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
-      ]}
-      trustLine="I give you the numbers and the options, you decide."
     />
 
     <StickyMobileCTA />
