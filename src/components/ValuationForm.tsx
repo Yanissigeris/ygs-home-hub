@@ -259,7 +259,7 @@ const ValuationForm = ({
                 Yanis Gauthier-Sigeris
               </p>
               <p className="mt-0.5 text-[0.75rem] text-primary-foreground/85 flex flex-wrap items-center gap-x-1.5">
-                <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" aria-hidden="true" />5/5</span>
+                <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" className="text-[var(--star)]" aria-hidden="true" />5/5</span>
                 <span aria-hidden>·</span>
                 <span>Hall of Fame RE/MAX</span>
                 <span aria-hidden>·</span>
@@ -286,7 +286,7 @@ const ValuationForm = ({
               Yanis Gauthier-Sigeris
             </p>
             <p className="mt-0.5 text-[0.75rem] text-muted-foreground flex flex-wrap items-center gap-x-1.5">
-              <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" aria-hidden="true" />5/5</span>
+              <span className="text-accent font-medium inline-flex items-center gap-1"><Star size={12} strokeWidth={1.5} fill="currentColor" className="text-[var(--star)]" aria-hidden="true" />5/5</span>
               <span aria-hidden>·</span>
               <span>Hall of Fame RE/MAX</span>
               <span aria-hidden>·</span>

@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
 
 const Stars = ({ lang }: { lang: "fr" | "en" }) => (
-  <span role="img" aria-label={lang === "en" ? "5 out of 5 stars" : "5 étoiles sur 5"} style={{ color: "var(--gold-dark)", display: "inline-flex", gap: 2 }}>
+  <span role="img" aria-label={lang === "en" ? "5 out of 5 stars" : "5 étoiles sur 5"} style={{ color: "var(--star)", display: "inline-flex", gap: 2 }}>
     {[0, 1, 2, 3, 4].map((i) => <Star key={i} size={12} strokeWidth={1.5} fill="currentColor" />)}
   </span>
 );
