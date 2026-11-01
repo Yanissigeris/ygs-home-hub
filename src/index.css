@@ -105,6 +105,8 @@
     --warning: #FBBC05;
     /* Review stars: same yellow as the Google badge */
     --star: #FBBC05;
+    /* Review cards: pale navy-tinted panel */
+    --review-card: #E6EAF4;
     --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
