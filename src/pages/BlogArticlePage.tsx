@@ -313,16 +313,16 @@ const BlogArticlePage = () => {
             <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
             {!isPersonal && (
               <div className="mt-4 flex items-center gap-2">
-                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(0,14,53,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
                   {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
                 </span>
               </div>
             )}
             {isPersonal && (
               <div className="mt-4 flex items-center gap-2">
-                <span style={{ width: "20px", height: "1px", background: "rgba(23,48,59,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(23,48,59,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
+                <span className="uppercase" style={{ color: "rgba(0,14,53,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
                   {isFr ? "Regard YGS" : "YGS Insight"}
                 </span>
               </div>
@@ -439,7 +439,7 @@ const BlogArticlePage = () => {
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
                     {isFr ? s.value : (s.valueEn ?? s.value)}
                   </div>
-                  <div className="mt-1.5 uppercase" style={{ color: "rgba(23,48,59,0.78)", fontSize: "9px", letterSpacing: "0.14em" }}>
+                  <div className="mt-1.5 uppercase" style={{ color: "rgba(0,14,53,0.78)", fontSize: "9px", letterSpacing: "0.14em" }}>
                     {isFr ? s.label : (s.labelEn ?? s.label)}
                   </div>
                 </div>
@@ -456,7 +456,7 @@ const BlogArticlePage = () => {
         <div className="grid gap-10 lg:grid-cols-[1fr_240px]">
           {/* Body */}
           <div className="lg:pr-10" style={{ borderRight: "1px solid #E0DBD1" }}>
-            <div className="max-w-none" style={{ color: "#3A4D55" }}>
+            <div className="max-w-none" style={{ color: "#33405E" }}>
               {bodyElements}
             </div>
 
@@ -489,7 +489,7 @@ const BlogArticlePage = () => {
                       </span>
                       <div>
                         <p style={{ color: "var(--ink)", fontSize: "14px", fontWeight: 500, lineHeight: 1.5 }}>{item.q}</p>
-                        <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.65 }}>{item.a}</p>
+                        <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.65 }}>{item.a}</p>
                       </div>
                     </div>
                   ))}
@@ -551,7 +551,7 @@ const BlogArticlePage = () => {
             {/* Tags */}
             {tags.length > 0 && (
               <div>
-                <p className="uppercase mb-3" style={{ color: "rgba(23,48,59,0.78)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+                <p className="uppercase mb-3" style={{ color: "rgba(0,14,53,0.78)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                   Tags
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -673,7 +673,7 @@ const BlogArticlePage = () => {
             <p className="mt-1.5" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "20px", fontWeight: 500, lineHeight: 1.2 }}>
               Yanis Gauthier-Sigeris
             </p>
-            <p className="mt-2" style={{ color: "#5C6B73", fontSize: "13px", lineHeight: 1.55 }}>
+            <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.55 }}>
               {isFr
                 ? "Courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
                 : "RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}

@@ -66,7 +66,7 @@ const FloatingCallButton = () => {
           height: "clamp(48px, 4.5vw, 64px)",
           padding: "clamp(12px, 1.2vw, 18px)",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)",
+          background: "linear-gradient(135deg, #13224F 0%, #000E35 100%)",
           color: "#F7F4EE",
           textDecoration: "none",
           boxShadow: "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)",
@@ -77,14 +77,14 @@ const FloatingCallButton = () => {
         onMouseEnter={(e) => {
           const el = e.currentTarget;
           animate(() => { el.style.transform = "translateY(-3px) scale(1.06)"; });
-          el.style.boxShadow = "0 18px 38px -10px rgba(0,0,0,0.5), 0 6px 14px -2px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 0 4px rgba(168,138,90,0.12)";
-          el.style.background = "linear-gradient(135deg, #2a586c 0%, #1c3a47 100%)";
+          el.style.boxShadow = "0 18px 38px -10px rgba(0,0,0,0.5), 0 6px 14px -2px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 0 4px rgba(51,102,255,0.12)";
+          el.style.background = "linear-gradient(135deg, #24408A 0%, #13224F 100%)";
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget;
           animate(() => { el.style.transform = "translateY(0) scale(1)"; });
           el.style.boxShadow = "0 8px 24px -8px rgba(0,0,0,0.35), 0 2px 6px -2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
-          el.style.background = "linear-gradient(135deg, #1c3a47 0%, #17303B 100%)";
+          el.style.background = "linear-gradient(135deg, #13224F 0%, #000E35 100%)";
         }}
         onMouseDown={(e) => {
           const el = e.currentTarget;
@@ -111,7 +111,7 @@ const FloatingCallButton = () => {
               position: "absolute",
               inset: 0,
               borderRadius: "50%",
-              border: "1px solid rgba(212,180,131,0.45)",
+              border: "1px solid rgba(138,168,255,0.45)",
               animation: "floating-call-pulse 2.4s cubic-bezier(0.22,0.61,0.36,1) infinite",
               pointerEvents: "none",
             }}
@@ -130,7 +130,7 @@ const FloatingCallButton = () => {
             transition: "transform .4s cubic-bezier(0.22, 1, 0.36, 1)",
           }}
           fill="none"
-          stroke="#D4B483"
+          stroke="#8AA8FF"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -150,7 +150,7 @@ const FloatingCallButton = () => {
           width: 48,
           height: 48,
           borderRadius: "50%",
-          background: "#17303B",
+          background: "#000E35",
           transition: "background .2s ease, transform .2s ease",
         }}
       >

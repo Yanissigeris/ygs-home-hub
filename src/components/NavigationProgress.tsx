@@ -58,7 +58,7 @@ const NavigationProgress = () => {
         height: 2,
         width: `${progress}%`,
         background: "var(--gold)",
-        boxShadow: "0 0 8px rgba(168,138,90,.6)",
+        boxShadow: "0 0 8px rgba(51,102,255,.6)",
         transition: "width .3s ease",
         opacity: visible ? 1 : 0,
         pointerEvents: "none",

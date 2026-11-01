@@ -101,15 +101,15 @@ const ValuationCTA = ({ lang: langProp }: Props) => {
               gap: ".6rem",
               minHeight: 56,
               padding: "0 2.25rem",
-              background: "var(--gold-bright)",
-              color: "var(--ink)",
+              background: "var(--action)",
+              color: "var(--on-action)",
               fontFamily: "var(--sans)",
               fontSize: ".95rem",
               fontWeight: 600,
               letterSpacing: ".02em",
               borderRadius: 3,
               textDecoration: "none",
-              boxShadow: "0 4px 18px rgba(23,48,59,.12)",
+              boxShadow: "0 4px 18px rgba(0,14,53,.12)",
             }}
           >
             {c.cta}

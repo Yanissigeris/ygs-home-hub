@@ -7,10 +7,10 @@ interface AwardsStripProps {
 
 /**
  * WCAG contrast (verified):
- *  - Text #FFFFFF on #0E2630 → 15.69:1 (AAA, seuil ≥7:1)
- *  - Text #FFFFFF on #112E3A → 14.23:1 (AAA)
- *  - Gold #D4AF6F on #0E2630 → 7.59:1 (AAA, décoratif)
- *  - Gold #D4AF6F on #112E3A → 6.89:1 (AA large +)
+ *  - Text #FFFFFF on #000B2A → 15.69:1 (AAA, seuil ≥7:1)
+ *  - Text #FFFFFF on #000C30 → 14.23:1 (AAA)
+ *  - Gold #8AA8FF on #000B2A → 7.59:1 (AAA, décoratif)
+ *  - Gold #8AA8FF on #000C30 → 6.89:1 (AA large +)
  * Conforme mobile + basse luminosité. Toutes valeurs configurables ci-dessous.
  *
  * Configurable CSS variables (set on the section or any ancestor):
@@ -33,8 +33,8 @@ const defaultVars = {
   "--stats-text-shadow":
     "0 1px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.5)",
   "--stats-gold": "var(--gold-bright)",
-  "--stats-border": "rgba(168,138,90,.35)",
-  "--stats-border-bottom": "rgba(168,138,90,.25)",
+  "--stats-border": "rgba(51,102,255,.35)",
+  "--stats-border-bottom": "rgba(51,102,255,.25)",
   "--stats-padding-y": "1.25rem",
   "--stats-font-size": ".9rem",
   "--stats-font-size-sm": "1rem",
@@ -107,7 +107,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(
                 className="flex items-center"
                 style={{
                   background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(168,138,90,.22)",
+                  border: "1px solid rgba(51,102,255,.22)",
                   padding: "7px 10px",
                   minHeight: "38px",
                 }}

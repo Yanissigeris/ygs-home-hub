@@ -229,7 +229,7 @@ const ValuationForm = ({
     <div
       className={cn(
         isGlass
-          ? "rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(200_40%_8%_/_0.5)] p-6 sm:p-8"
+          ? "rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
           : "card-elevated rounded-2xl bg-card p-6 shadow-xl sm:p-8",
       )}
     >
@@ -483,7 +483,7 @@ const ValuationForm = ({
           variant="accent"
           className={cn(
             "w-full font-semibold",
-            isGlass && "mt-1 bg-[var(--gold-dark)] text-[#F7F4EE] border-transparent hover:bg-[var(--gold-text)] hover:text-[#F7F4EE] shadow-[0_4px_20px_-4px_hsl(36_45%_48%_/_0.35)]",
+            isGlass && "mt-1 bg-[var(--gold-dark)] text-[#F7F4EE] border-transparent hover:bg-[var(--gold-text)] hover:text-[#F7F4EE] shadow-[0_4px_20px_-4px_hsl(225_100%_60%_/_0.35)]",
           )}
           disabled={submitting}
         >

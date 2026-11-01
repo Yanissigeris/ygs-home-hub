@@ -40,7 +40,7 @@ const RemaxPill = ({ size = "md", lang }: { size?: "sm" | "md" | "lg"; lang: "fr
       className="inline-flex shrink-0 items-center rounded-full"
       style={{
         background: "var(--ygs-cream, #F7F4EE)",
-        border: "1px solid rgba(34, 40, 49, 0.06)",
+        border: "1px solid rgba(30,36,58, 0.06)",
         padding: `${dims.py} ${dims.px}`,
         gap: dims.gap,
         textShadow: "none",
@@ -121,7 +121,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
               borderRadius: 3,
               border: "1px solid var(--border)",
               background: "rgba(247,244,238,1)",
-              boxShadow: "0 18px 50px -10px rgba(23,48,59,.35)",
+              boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)",
               display: "grid",
               gridTemplateColumns: `repeat(${item.columns.length}, minmax(13rem, 1fr))`,
               gap: 0,
@@ -165,12 +165,12 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                       fontSize: "13px",
                       letterSpacing: "0.03em",
                       fontWeight: pathname === child.href ? 700 : 600,
-                      color: pathname === child.href ? "var(--ink)" : "#1f2d3a",
+                      color: pathname === child.href ? "var(--ink)" : "#0B1638",
                       borderRadius: 3,
                       textShadow: "none",
                     }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#1f2d3a"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#0B1638"; }}
                   >
                     {child.label}
                   </Link>
@@ -207,7 +207,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
-        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(23,48,59,.35)" }}>
+        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
           {item.children!.map((child) => (
             <Link
               key={child.href}
@@ -218,12 +218,12 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                 fontSize: "13px",
                 letterSpacing: "0.04em",
                 fontWeight: pathname === child.href ? 700 : 600,
-                color: pathname === child.href ? "var(--ink)" : "#1f2d3a",
+                color: pathname === child.href ? "var(--ink)" : "#0B1638",
                 borderRadius: 3,
                 textShadow: "none",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#1f2d3a"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = ""; if (pathname !== child.href) e.currentTarget.style.color = "#0B1638"; }}
             >
               {child.label}
             </Link>
@@ -311,10 +311,10 @@ const SiteHeader = () => {
     left: 0,
     width: "100%",
     zIndex: 50,
-    background: scrolled ? "rgba(23,48,59,0.92)" : "transparent",
+    background: scrolled ? "rgba(0,14,53,0.92)" : "transparent",
     backdropFilter: scrolled ? "blur(12px)" : "none",
     WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
-    borderBottom: scrolled ? "1px solid rgba(217,225,229,0.15)" : "none",
+    borderBottom: scrolled ? "1px solid rgba(217,222,234,0.15)" : "none",
     boxShadow: "none",
     paddingTop: "env(safe-area-inset-top, 0px)",
     transition: "background-color 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease",

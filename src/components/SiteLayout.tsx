@@ -21,7 +21,7 @@ const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
 const PageFallback = () => (
   <div className="animate-fade-in">
     {/* Hero skeleton — matches real hero layout with portrait */}
-    <div className="min-h-[400px] md:min-h-[440px] lg:min-h-[480px]" style={{ background: "#10242D" }}>
+    <div className="min-h-[400px] md:min-h-[440px] lg:min-h-[480px]" style={{ background: "#000A28" }}>
       <div className="section-container relative pt-[3rem] sm:pt-[3.5rem] md:pt-[4rem] lg:pt-[4.5rem]">
         <div className="grid items-end gap-0 md:grid-cols-[56%_44%] lg:grid-cols-[54%_46%]">
           {/* Text skeleton — heights calibrated to match real hero content */}

@@ -76,10 +76,10 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
 
               <div className="relative mt-10 mb-2">
                 {/* ligne reliant les 3 dots */}
-                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(168, 138, 90, 0.5)" }} aria-hidden="true" />
+                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(51,102,255, 0.5)" }} aria-hidden="true" />
                 <div className="relative grid grid-cols-3 gap-2">
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
                       {t.amounts[0]}
                     </span>
@@ -97,7 +97,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(168, 138, 90, 0.4)" }} aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
                       {t.amounts[2]}
                     </span>

@@ -66,7 +66,7 @@ const t = {
 };
 
 const PROPERTY_TYPES = ["maison", "condo", "plex"] as const;
-const DARK = "#17303B";
+const DARK = "#000E35";
 
 const ValuationWidget = ({ lang: langProp }: Props) => {
   const ctxLang = useLanguage();

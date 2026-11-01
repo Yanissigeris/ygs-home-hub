@@ -62,7 +62,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       href={property.remaxUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(23,48,59,0.08)]"
+      className="group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,14,53,0.08)]"
       style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
     >
       {/* Image */}
@@ -87,7 +87,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
 
       {/* Gold top border — visible on hover */}
       {/* Gold top border — visible on hover */}
-      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#A88A5A]" />
+      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#3366FF]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
@@ -113,7 +113,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
             fontFamily: "var(--serif)",
             fontSize: "22px",
             fontWeight: 700,
-            color: "#17303B",
+            color: "#000E35",
             lineHeight: 1.15,
             marginBottom: ".5rem",
           }}

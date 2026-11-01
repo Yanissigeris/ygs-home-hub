@@ -8,32 +8,32 @@
   :root {
     color-scheme: light;
     --background: 39 29% 95%;
-    --foreground: 200 30% 14%;
+    --foreground: 226 60% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 30% 14%;
+    --card-foreground: 226 60% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 30% 14%;
+    --popover-foreground: 226 60% 12%;
 
-    --primary: 200 42% 16%;
+    --primary: 226 100% 10%;
     --primary-foreground: 40 20% 97%;
 
     --secondary: 39 20% 94%;
-    --secondary-foreground: 200 30% 14%;
+    --secondary-foreground: 226 60% 12%;
 
-    --muted: 200 8% 94%;
-    --muted-foreground: 200 30% 28%;
+    --muted: 226 15% 94%;
+    --muted-foreground: 226 30% 30%;
 
-    --accent: 36 38% 50%;
-    --accent-foreground: 200 42% 16%;
+    --accent: 225 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 14% 87%;
-    --input: 200 10% 90%;
-    --ring: 200 42% 16%;
+    --border: 226 18% 87%;
+    --input: 226 12% 90%;
+    --ring: 226 100% 10%;
 
     --radius: 0.1875rem;
 
@@ -47,32 +47,36 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Brand tokens */
-    --ink: #17303B;
-    --ink2: #1a3645;
+    --ink: #000E35;
+    --ink2: #0A1A45;
     --cream: #F7F4EE;
     --parchment: #ede9e0;
-    --gold: #A88A5A;
-    --gold2: #c4a878;
-    --gold3: rgba(168,138,90,.12);
+    --gold: #3366FF;
+    --gold2: #5A80FF;
+    --gold3: rgba(51,102,255,.12);
     /* === Token additions (Phase 0 of YGS Token Consolidation Pass) ===
        Added to support inline-style migration in subsequent phases.
        Some are unreferenced today; they will be used in Phases 2–6. */
     /* Gold scale */
-    --gold-warm-light: #BFA476;
-    --gold-dark: #7A6038;
-    --gold-bright: #D4AF6F;
+    --gold-warm-light: #5A80FF;
+    --gold-dark: #0036CC;
+    --gold-bright: #8AA8FF;
+    /* RE/MAX palette: filled call-to-action buttons (white text 4.68:1) */
+    --action: #3366FF;
+    --action-hover: #0043FF;
+    --on-action: #FFFFFF;
     /* AAA-grade dark gold for TEXT on light backgrounds (8.29:1 on cream).
        Use --gold for ornaments, borders, backgrounds, decorative icons. */
-    --gold-text: #5C4423;
+    --gold-text: #0043FF;
     /* Ink scale */
-    --ink-deep: #0C1F28;
-    --ink-mid: #0E2630;
-    --ink-soft: #1C3A47;
+    --ink-deep: #00081F;
+    --ink-mid: #000B2A;
+    --ink-soft: #13224F;
     /* === Token additions (Phase 0.1 — closes Phase 2/3 carve-outs) === */
     --cream-light: #FAF8F3;
     --cream-deep: #F5F1EA;
-    --ink-mid-deep: #112E3A;
-    --gold-veil-faint: rgba(168,138,90,.08);
+    --ink-mid-deep: #000C30;
+    --gold-veil-faint: rgba(51,102,255,.08);
     /* White */
     --white: #FFFFFF;
     /* Text-on-dark stack */
@@ -86,10 +90,10 @@
     --shadow-mid: rgba(0,0,0,0.35);
     --shadow-strong: rgba(0,0,0,0.5);
     /* Ink-veil stack (for hero gradients) */
-    --ink-veil-strong: rgba(23,48,59,0.85);
-    --ink-veil: rgba(23,48,59,0.70);
-    --ink-veil-soft: rgba(23,48,59,0.45);
-    --ink-veil-whisper: rgba(23,48,59,0.10);
+    --ink-veil-strong: rgba(0,14,53,0.85);
+    --ink-veil: rgba(0,14,53,0.70);
+    --ink-veil-soft: rgba(0,14,53,0.45);
+    --ink-veil-whisper: rgba(0,14,53,0.10);
     /* Radii (extends existing --radius) */
     --radius-sm: 2px;
     --radius-md: 4px;
@@ -104,10 +108,10 @@
     --ease: cubic-bezier(.22,.61,.36,1);
 
     /* Article body tokens — single source of truth for blog article prose */
-    --article-body-color: #2A3940;
+    --article-body-color: #262F48;
     --article-body-size: 17px;
     --article-body-line-height: 1.75;
-    --article-excerpt-color: #2A3940;
+    --article-excerpt-color: #262F48;
     --article-excerpt-size: 16px;
     --article-excerpt-line-height: 1.7;
 
@@ -115,9 +119,9 @@
        safe-area-inset-bottom appended via env() in calc() consumers). */
     --sticky-cta-height: 76px;
 
-    --hero-gradient: hsl(200 42% 16%);
-    --card-shadow: 0 1px 4px 0 hsl(200 30% 14% / 0.03), 0 1px 2px 0 hsl(200 30% 14% / 0.02);
-    --card-shadow-hover: 0 12px 32px -12px hsl(200 30% 14% / 0.1), 0 4px 8px -2px hsl(200 30% 14% / 0.04);
+    --hero-gradient: hsl(226 100% 10%);
+    --card-shadow: 0 1px 4px 0 hsl(226 60% 12% / 0.03), 0 1px 2px 0 hsl(226 60% 12% / 0.02);
+    --card-shadow-hover: 0 12px 32px -12px hsl(226 60% 12% / 0.1), 0 4px 8px -2px hsl(226 60% 12% / 0.04);
     --card-radius: 3px;
     --section-padding-lg: clamp(5.5rem, 10vw, 8rem);
     --section-padding-md: clamp(4rem, 7vw, 6rem);
@@ -270,7 +274,7 @@
     position: relative;
     isolation: isolate;
     background-image:
-      linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%),
+      linear-gradient(135deg, hsl(226 100% 10% / 0.78) 0%, hsl(226 100% 10% / 0.62) 55%, hsl(226 100% 10% / 0.85) 100%),
       var(--hero-bg-image);
     background-size: cover;
     background-position: center;
@@ -282,13 +286,13 @@
   @supports (background-image: image-set(url("x.avif") type("image/avif"))) {
     .hero-gradient--with-bg {
       background-image:
-        linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%),
+        linear-gradient(135deg, hsl(226 100% 10% / 0.78) 0%, hsl(226 100% 10% / 0.62) 55%, hsl(226 100% 10% / 0.85) 100%),
         image-set(var(--hero-bg-avif, var(--hero-bg-image)) type("image/avif"), var(--hero-bg-image) type("image/webp"));
     }
     @media (max-width: 767px) {
       .hero-gradient--with-bg {
         background-image:
-          linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%),
+          linear-gradient(135deg, hsl(226 100% 10% / 0.78) 0%, hsl(226 100% 10% / 0.62) 55%, hsl(226 100% 10% / 0.85) 100%),
           image-set(var(--hero-bg-avif-sm, var(--hero-bg-avif, var(--hero-bg-image))) type("image/avif"), var(--hero-bg-image) type("image/webp"));
       }
     }
@@ -367,11 +371,11 @@
   /* Testimonial slider */
   .testimonial-card {
     border-radius: var(--card-radius);
-    box-shadow: 0 1px 3px 0 hsl(200 30% 14% / 0.025);
+    box-shadow: 0 1px 3px 0 hsl(226 60% 12% / 0.025);
     transition: box-shadow 0.35s ease, transform 0.35s ease;
   }
   .testimonial-card:hover {
-    box-shadow: 0 6px 24px -8px hsl(200 30% 14% / 0.07);
+    box-shadow: 0 6px 24px -8px hsl(226 60% 12% / 0.07);
   }
 
   .testimonial-nav-btn {
@@ -382,13 +386,13 @@
     border: 1px solid hsl(var(--border) / 0.5);
     background: hsl(var(--card));
     color: hsl(var(--foreground));
-    box-shadow: 0 2px 8px -2px hsl(200 30% 14% / 0.06);
+    box-shadow: 0 2px 8px -2px hsl(226 60% 12% / 0.06);
     transition: border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
     cursor: pointer;
   }
   .testimonial-nav-btn:hover {
     border-color: var(--gold);
-    box-shadow: 0 4px 12px -4px hsl(200 30% 14% / 0.1);
+    box-shadow: 0 4px 12px -4px hsl(226 60% 12% / 0.1);
   }
   .testimonial-nav-btn:disabled {
     opacity: 0.3;
@@ -621,8 +625,8 @@ h1.hero-eyebrow {
     0 8px 24px -8px rgba(0,0,0,0.35),
     0 2px 6px -2px rgba(0,0,0,0.2),
     inset 0 1px 0 rgba(255,255,255,0.06),
-    0 0 0 3px #10242D,
-    0 0 0 6px #D4B483 !important;
+    0 0 0 3px #000A28,
+    0 0 0 6px #8AA8FF !important;
 }
 @media (prefers-reduced-motion: reduce) {
   .floating-call-btn,
@@ -654,9 +658,9 @@ h1.hero-eyebrow {
 @media (hover: hover) and (pointer: fine) {
   .hero-cta-btn:hover {
     transform: translateY(-2px);
-    background: #C4A878 !important;
-    border-color: #C4A878 !important;
-    box-shadow: 0 4px 16px rgba(168, 138, 90, 0.4) !important;
+    background: #5A80FF !important;
+    border-color: #5A80FF !important;
+    box-shadow: 0 4px 16px rgba(51,102,255, 0.4) !important;
   }
 }
 .hero-cta-btn:active {

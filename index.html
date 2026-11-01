@@ -12,13 +12,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#17303B">
+    <meta name="msapplication-TileColor" content="#000E35">
     <meta name="msapplication-TileImage" content="/android-chrome-192.png">
     <meta name="geo.region" content="CA-QC" />
     <meta name="geo.placename" content="Gatineau" />
     <meta name="geo.position" content="45.4765;-75.7013" />
     <meta name="ICBM" content="45.4765, -75.7013" />
-    <meta name="theme-color" content="#17303B" />
+    <meta name="theme-color" content="#000E35" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- Static OG/Twitter fallbacks. Only the *constant* tags live here.
@@ -54,15 +54,15 @@
          or the hashed app CSS). Uses system-ui fallback so text renders
          instantly while local fonts swap in. -->
     <style>
-      html,body{margin:0;padding:0;background:#17303B;color:#F7F4EE;font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
-      #root{min-height:100vh;background:#17303B}
-      .hero-crit{background:#17303B;min-height:88svh}
+      html,body{margin:0;padding:0;background:#000E35;color:#F7F4EE;font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+      #root{min-height:100vh;background:#000E35}
+      .hero-crit{background:#000E35;min-height:88svh}
       h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif}
       /* Pre-paint hero shell — visible before React hydrates, matches HeroSection.
          This becomes the FCP candidate on slow mobile (~1.5-3s earlier). */
-      .ygs-prepaint{position:fixed;inset:0;background:#17303B;z-index:0;pointer-events:none}
+      .ygs-prepaint{position:fixed;inset:0;background:#000E35;z-index:0;pointer-events:none}
       .ygs-prepaint__title{position:absolute;top:38%;left:5%;right:5%;color:#F7F4EE;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.1rem,2.5vw,1.5rem);letter-spacing:.01em;line-height:1.2;text-align:left;opacity:.85}
-      .ygs-prepaint__title b{display:block;color:#A88A5A;font-weight:600;font-size:clamp(2.4rem,9vw,5rem);font-style:italic;line-height:1;margin-top:.3rem}
+      .ygs-prepaint__title b{display:block;color:#3366FF;font-weight:600;font-size:clamp(2.4rem,9vw,5rem);font-style:italic;line-height:1;margin-top:.3rem}
       #root:not(:empty)~.ygs-prepaint{display:none}
       @keyframes img-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
       .img-shimmer{background:linear-gradient(90deg,#F7F4EE 25%,#ede9e0 50%,#F7F4EE 75%);background-size:200% 100%;animation:img-shimmer 1.5s infinite}
@@ -310,7 +310,7 @@
 
     <!-- Noscript fallback for crawlers that don't execute JS -->
     <noscript>
-      <div style="max-width:800px;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;color:#17303B">
+      <div style="max-width:800px;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;color:#000E35">
         <p style="font-size:1.5rem;font-weight:600;margin:0 0 .5rem">Yanis Gauthier-Sigeris, courtier immobilier à Gatineau</p>
         <p>Stratégie claire, conseils basés sur les faits, accompagnement complet pour vendre, acheter ou investir en Outaouais.</p>
         <h2>Services</h2>

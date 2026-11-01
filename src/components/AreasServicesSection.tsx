@@ -78,7 +78,7 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
     className="group flex items-center justify-between gap-3 transition-colors"
     style={{ padding: "clamp(0.65rem, 1.2vw, 0.85rem) clamp(1.25rem, 2vw, 1.5rem)", borderBottom: "1px solid rgba(255,255,255,0.08)", minHeight: 44, transition: "background 200ms ease, box-shadow 200ms ease" }}
     onMouseEnter={(e) => {
-      e.currentTarget.style.background = "rgba(168,138,90,0.06)";
+      e.currentTarget.style.background = "rgba(51,102,255,0.06)";
       e.currentTarget.style.boxShadow = "inset 3px 0 0 var(--gold)";
     }}
     onMouseLeave={(e) => {
@@ -125,7 +125,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               </p>
             </div>
             {areas.slice(0, 6).map((a) => <TableRow key={a.href} name={a.name} detail={a.detail} href={a.href} />)}
-            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
+            <Link to={cfg.allNeighborhoodsHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(51,102,255,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold-bright)" }}>{cfg.allNeighborhoods} →</span>
             </Link>
           </div>
@@ -136,7 +136,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
               </p>
             </div>
             {services.map((s) => <TableRow key={s.href} name={s.label} detail={s.detail} href={s.href} />)}
-            <Link to={cfg.consultationHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(168,138,90,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
+            <Link to={cfg.consultationHref} className="flex items-center justify-between transition-colors" style={{ padding: "clamp(0.75rem, 1.2vw, 0.95rem) clamp(1.25rem, 2vw, 1.5rem)", background: "var(--gold3)", minHeight: 44 }} onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(51,102,255,.18)"; }} onMouseLeave={(e) => { e.currentTarget.style.background = "var(--gold3)"; }}>
               <span style={{ fontSize: ".82rem", fontWeight: 600, color: "var(--gold-bright)" }}>{cfg.consultation} →</span>
             </Link>
           </div>

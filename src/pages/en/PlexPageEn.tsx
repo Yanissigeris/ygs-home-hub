@@ -66,7 +66,7 @@ const PlexPageEn = () => (
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         I am a real estate investor myself. My role is not to convince you to buy. I give you a frank analysis so you can make a fully informed decision.
       </p>
-      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
+      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(51,102,255,.08)", border: "1px solid rgba(51,102,255,.15)" }}>
         A rent adjustment depends on the applicable criteria and the building's circumstances. The TAL publishes the percentages used for this calculation each year, and its tool helps set the adjustment. The landlord and tenant remain free to agree. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/en/renewal-of-the-lease-and-fixing-of-rent/applicable-percentages-to-the-criteria-for-the-fixing-of-rent" target="_blank" rel="noopener noreferrer">Review the TAL criteria</a>.
       </p>
       <div className="mt-6">

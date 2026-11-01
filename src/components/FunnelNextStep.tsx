@@ -61,7 +61,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                 className={`group relative flex flex-col h-full border px-6 py-6 sm:px-7 sm:py-7 transition-all duration-200 ${
                   step.highlight
                     ? "bg-[var(--ink)] border-[var(--ink)] hover:shadow-lg"
-                    : "bg-transparent border-[#D9E1E5] hover:border-[var(--gold)]/40"
+                    : "bg-transparent border-[#D9DEEA] hover:border-[var(--gold)]/40"
                 }`}
                 onClick={() => trackCTAClick(step.cta, "funnel-next-step")}
               >

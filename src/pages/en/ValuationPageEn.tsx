@@ -30,7 +30,7 @@ const ValuationPageEn = () => {
       <PageMeta title="Free Home Valuation | Gatineau" description="Get a free valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
       <JsonLdScript id="ygs-jsonld-service-valuation" data={valuationServiceSchema["/en/home-valuation"]} />
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(200_30%_24%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(226_50%_22%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 
         {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
@@ -38,7 +38,7 @@ const ValuationPageEn = () => {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none hidden md:block"
           style={{
-            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+            background: "linear-gradient(90deg, rgba(0,14,53,0.92) 0%, rgba(0,14,53,0.78) 30%, rgba(0,14,53,0.45) 50%, rgba(0,14,53,0.10) 70%, transparent 85%)",
           }}
         />
         {/* Mobile vertical text-protect */}
@@ -46,7 +46,7 @@ const ValuationPageEn = () => {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none md:hidden"
           style={{
-            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+            background: "linear-gradient(180deg, rgba(0,14,53,0.85) 0%, rgba(0,14,53,0.70) 50%, rgba(0,14,53,0.55) 100%)",
           }}
         />
 

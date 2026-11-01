@@ -67,7 +67,7 @@ const NotFound = () => {
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-x-0 top-0 z-[5]"
-        style={{ height: 96, background: "#17303B" }}
+        style={{ height: 96, background: "#000E35" }}
       />
       <SiteHeader />
       <main className="flex-1 flex items-center justify-center pt-[96px]" style={{ background: "var(--cream)" }}>
@@ -80,7 +80,7 @@ const NotFound = () => {
               fontSize: "clamp(7rem, 20vw, 10rem)",
               fontWeight: 700,
               lineHeight: 1,
-              color: "rgba(23,48,59,.06)",
+              color: "rgba(0,14,53,.06)",
             }}
           >
             404
@@ -133,7 +133,7 @@ const NotFound = () => {
                   boxShadow: "none",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 25px rgba(23,48,59,.08)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 25px rgba(0,14,53,.08)";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLElement).style.boxShadow = "none";
