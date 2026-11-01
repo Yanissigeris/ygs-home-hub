@@ -83,7 +83,11 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const [animate, setAnimate] = React.useState(true);
     const [paused, setPaused] = React.useState(false);
     const [stopped, setStopped] = React.useState(false);
-    const touchX = React.useRef<number | null>(null);
+    const dragStart = React.useRef<number | null>(null);
+    const [dragX, setDragX] = React.useState(0);
+    const [dragging, setDragging] = React.useState(false);
+    const wheelAcc = React.useRef(0);
+    const wheelLock = React.useRef(false);
 
     const reduceMotion = React.useMemo(
       () => typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
@@ -119,16 +123,42 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       setIndex(((i % n) + n) % n);
     };
 
-    const onTouchStart = (e: React.TouchEvent) => { touchX.current = e.touches[0].clientX; };
-    const onTouchEnd = (e: React.TouchEvent) => {
-      if (touchX.current === null) return;
-      const dx = e.changedTouches[0].clientX - touchX.current;
-      touchX.current = null;
-      if (Math.abs(dx) > 40) goTo((index % n) + (dx < 0 ? 1 : -1));
+    // Drag with a finger or the mouse: the cards follow, then snap to the next or previous one.
+    const onPointerDown = (e: React.PointerEvent) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      dragStart.current = e.clientX;
+      setPaused(true);
+      setDragging(true);
+      setDragX(0);
+      (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
+    };
+    const onPointerMove = (e: React.PointerEvent) => {
+      if (dragStart.current === null) return;
+      setDragX(e.clientX - dragStart.current);
+    };
+    const endDrag = () => {
+      if (dragStart.current === null) return;
+      const dx = dragX;
+      dragStart.current = null;
+      setDragging(false);
+      setDragX(0);
+      setPaused(false);
+      if (Math.abs(dx) > 50) goTo((index % n) + (dx < 0 ? 1 : -1));
+    };
+    // Two-finger horizontal swipe on a trackpad.
+    const onWheel = (e: React.WheelEvent) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      wheelAcc.current += e.deltaX;
+      if (wheelLock.current || Math.abs(wheelAcc.current) < 60) return;
+      const dir = wheelAcc.current > 0 ? 1 : -1;
+      wheelAcc.current = 0;
+      wheelLock.current = true;
+      setTimeout(() => { wheelLock.current = false; wheelAcc.current = 0; }, 700);
+      goTo((index % n) + dir);
     };
 
     const cardWidth = `calc((100% - ${GAP * (visible - 1)}px) / ${visible})`;
-    const offset = `calc(-${index} * (100% + ${GAP}px) / ${visible})`;
+    const offset = `calc(-${index} * (100% + ${GAP}px) / ${visible} + ${dragX}px)`;
     const active = index % n;
     const fade = visible > 1 ? "linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%)" : undefined;
 
@@ -145,13 +175,16 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
 
           <div
             className="mt-10 md:mt-12"
-            style={{ overflow: "hidden", WebkitMaskImage: fade, maskImage: fade, padding: "8px 0 16px" }}
+            style={{ overflow: "hidden", WebkitMaskImage: fade, maskImage: fade, padding: "8px 0 16px", touchAction: "pan-y", cursor: dragging ? "grabbing" : "grab", userSelect: dragging ? "none" : undefined }}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
             onFocus={() => setPaused(true)}
             onBlur={() => setPaused(false)}
-            onTouchStart={onTouchStart}
-            onTouchEnd={onTouchEnd}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
+            onWheel={onWheel}
             aria-roledescription="carousel"
           >
             <div
@@ -159,7 +192,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               style={{
                 gap: GAP,
                 transform: `translateX(${offset})`,
-                transition: animate && !reduceMotion ? "transform 700ms cubic-bezier(.22,.61,.36,1)" : "none",
+                transition: animate && !dragging && !reduceMotion ? "transform 700ms cubic-bezier(.22,.61,.36,1)" : "none",
               }}
               onTransitionEnd={onTransitionEnd}
             >
