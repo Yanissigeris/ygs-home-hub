@@ -136,16 +136,8 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "var(--cream-light)" }}>
         <div className="section-container relative">
           <div className="mx-auto max-w-2xl text-center">
-            {overline && (
-              <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[.8125rem] font-medium"
-                style={{ fontFamily: "var(--sans)", background: "var(--review-card)", color: "var(--ink)" }}
-              >
-                <Star size={13} strokeWidth={1.5} fill="var(--star)" color="var(--star)" aria-hidden="true" />
-                {overline}
-              </span>
-            )}
-            <h2 className="mt-4">{title}</h2>
+            {overline && <p className="label-overline mb-2 justify-center">{overline}</p>}
+            <h2>{title}</h2>
             <div className="mt-5 flex justify-center">
               <GoogleReviewBadge />
             </div>
