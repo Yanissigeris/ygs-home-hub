@@ -115,8 +115,8 @@ const ValuationPage = () => {
               </p>
 
               {/* Headline */}
-              <h1 className="text-primary-foreground max-w-[520px]">
-                Combien vaut votre propriété?
+              <h1 className="h1-sans text-primary-foreground max-w-[560px]">
+                Combien vaut votre <span className="h1-accent">propriété?</span>
               </h1>
 
               {/* Subtitle - hidden on mobile to save space */}

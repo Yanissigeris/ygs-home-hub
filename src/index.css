@@ -948,3 +948,16 @@ h1.hero-eyebrow {
   font-size: 16px;
 }
 
+/* Plain sans headline (valuation page): same words, DM Sans, last word in blue */
+h1.h1-sans {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+h1.h1-sans .h1-accent { color: var(--gold-bright); }
+@media (max-width: 639px) {
+  h1.h1-sans { font-size: clamp(2.25rem, 9.5vw, 2.75rem) !important; line-height: 1.05; }
+}
