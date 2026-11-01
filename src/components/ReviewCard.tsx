@@ -22,7 +22,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
       <div className="card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col">
         <div className="relative z-[1] mb-4 flex gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={13} className="fill-accent text-accent" />
+            <Star key={i} size={13} className="fill-[var(--star)] text-[var(--star)]" />
           ))}
         </div>
 

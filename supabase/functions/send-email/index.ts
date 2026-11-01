@@ -163,7 +163,7 @@ function buildNotificationHtml(data: EmailRequest): string {
     data.message ? `<tr><td style="padding:8px 12px;font-weight:600;color:#374151">Message</td><td style="padding:8px 12px;white-space:pre-wrap">${esc(data.message)}</td></tr>` : "",
   ].filter(Boolean).join("");
 
-  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#1e3a5f;border-bottom:2px solid #c9a96e;padding-bottom:12px">Nouvelle demande\u00a0: ${labelForFormType(data.formType)}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
+  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto"><h2 style="color:#000E35;border-bottom:2px solid #0043FF;padding-bottom:12px">Nouvelle demande\u00a0: ${labelForFormType(data.formType)}</h2><table style="width:100%;border-collapse:collapse">${fields}</table></div>`;
 }
 
 function buildConfirmationHtml(data: EmailRequest): { subject: string; html: string } {
@@ -175,7 +175,7 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
     : `<p style="color:#999;font-size:13px">Yanis Gauthier-Sigeris<br>Real Estate Broker · RE/MAX · The Marty Waite Experience<br>819-210-3044</p>`;
   const hr = `<hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">`;
   const wrapOpen = `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px">`;
-  const h2 = (text: string) => `<h2 style="color:#1e3a5f">${text}</h2>`;
+  const h2 = (text: string) => `<h2 style="color:#000E35">${text}</h2>`;
   const p = (text: string) => `<p style="color:#555;line-height:1.7">${text}</p>`;
 
   if (data.formType === "contact") {
@@ -195,7 +195,7 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
     const intro = isFr
       ? (showAddress ? "J'ai bien reçu votre demande d'évaluation pour\u00a0:" : "J'ai bien reçu votre demande d'évaluation.")
       : (showAddress ? "I got your valuation request for:" : "I got your valuation request.");
-    const addressBlock = showAddress ? `<p style="background:#f3f4f6;padding:12px 16px;border-radius:8px;color:#1e3a5f;font-weight:600">${esc(data.address)}</p>` : "";
+    const addressBlock = showAddress ? `<p style="background:#F7F5EE;padding:12px 16px;border-radius:8px;color:#000E35;font-weight:600">${esc(data.address)}</p>` : "";
     const closing = isFr
       ? "Je vous envoie une réponse personnalisée en 24 heures maximum, avec une analyse basée sur les ventes comparables récentes dans votre secteur."
       : "I'll send you a personalized response within 24 hours, with an analysis based on recent comparable sales in your neighbourhood.";
