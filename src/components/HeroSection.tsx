@@ -432,11 +432,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                  />
                </div>
-             <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(23,48,59,${baseStart}) 0%, rgba(23,48,59,${baseMid}) 60%, rgba(23,48,59,${baseEnd}) 100%)`, transition: "background 0.4s ease" }} />
+             <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(0,14,53,${baseStart}) 0%, rgba(0,14,53,${baseMid}) 60%, rgba(0,14,53,${baseEnd}) 100%)`, transition: "background 0.4s ease" }} />
               {/* Left-side text-protect overlay (desktop) — adapts to image brightness */}
-              <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true" style={{ background: `linear-gradient(90deg, rgba(23,48,59,${leftStart}) 0%, rgba(23,48,59,${leftMid}) 35%, rgba(23,48,59,${leftSoft}) 55%, transparent 70%)`, transition: "background 0.4s ease" }} />
+              <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true" style={{ background: `linear-gradient(90deg, rgba(0,14,53,${leftStart}) 0%, rgba(0,14,53,${leftMid}) 35%, rgba(0,14,53,${leftSoft}) 55%, transparent 70%)`, transition: "background 0.4s ease" }} />
               {/* Mobile text-protect overlay — full-width darken since text spans the column */}
-              <div className="pointer-events-none absolute inset-0 md:hidden" aria-hidden="true" style={{ background: `linear-gradient(180deg, rgba(23,48,59,${mTop}) 0%, rgba(23,48,59,${mMid}) 50%, rgba(23,48,59,${mBot}) 100%)`, transition: "background 0.4s ease" }} />
+              <div className="pointer-events-none absolute inset-0 md:hidden" aria-hidden="true" style={{ background: `linear-gradient(180deg, rgba(0,14,53,${mTop}) 0%, rgba(0,14,53,${mMid}) 50%, rgba(0,14,53,${mBot}) 100%)`, transition: "background 0.4s ease" }} />
             </>
           )}
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
@@ -525,7 +525,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{
               zIndex: 2,
               background:
-                "linear-gradient(135deg, hsl(200 42% 16% / 0.78) 0%, hsl(200 42% 16% / 0.62) 55%, hsl(200 42% 16% / 0.85) 100%)",
+                "linear-gradient(135deg, hsl(226 100% 10% / 0.78) 0%, hsl(226 100% 10% / 0.62) 55%, hsl(226 100% 10% / 0.85) 100%)",
             }}
           />
         )}
@@ -588,7 +588,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
           style={{
             background:
-              "linear-gradient(135deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.55) 50%, rgba(0,0,0,0.15) 100%)",
+              "linear-gradient(135deg, rgba(0,14,53,0.85) 0%, rgba(0,14,53,0.55) 50%, rgba(0,0,0,0.15) 100%)",
             opacity: atTop ? 0 : 1,
             transition: "opacity 0.35s ease-out",
           }}
@@ -603,7 +603,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             className="pointer-events-none absolute inset-0 z-[3] hidden md:block"
             style={{
               background:
-                "linear-gradient(90deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.62) 35%, rgba(23,48,59,0.30) 55%, transparent 70%)",
+                "linear-gradient(90deg, rgba(0,14,53,0.78) 0%, rgba(0,14,53,0.62) 35%, rgba(0,14,53,0.30) 55%, transparent 70%)",
               opacity: atTop ? 0 : 1,
               transition: "opacity 0.35s ease-out",
             }}
@@ -616,7 +616,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           className="pointer-events-none absolute inset-0 z-[2] md:hidden"
           style={{
             background:
-              "linear-gradient(180deg, rgba(23,48,59,0.45) 0%, rgba(23,48,59,0.30) 50%, rgba(23,48,59,0.55) 100%)",
+              "linear-gradient(180deg, rgba(0,14,53,0.45) 0%, rgba(0,14,53,0.30) 50%, rgba(0,14,53,0.55) 100%)",
             opacity: atTop ? 0 : 1,
             transition: "opacity 0.35s ease-out",
           }}
@@ -628,7 +628,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           className="pointer-events-none absolute inset-0 z-[3] md:hidden"
           style={{
             background:
-              "linear-gradient(95deg, rgba(23,48,59,0.95) 0%, rgba(23,48,59,0.88) 30%, rgba(23,48,59,0.55) 48%, rgba(23,48,59,0.18) 65%, transparent 80%)",
+              "linear-gradient(95deg, rgba(0,14,53,0.95) 0%, rgba(0,14,53,0.88) 30%, rgba(0,14,53,0.55) 48%, rgba(0,14,53,0.18) 65%, transparent 80%)",
             opacity: atTop ? 0 : 1,
             transition: "opacity 0.35s ease-out",
           }}
@@ -647,7 +647,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             style={{
               height: "78%",
               background:
-                "linear-gradient(180deg, rgba(23,48,59,0.78) 0%, rgba(23,48,59,0.66) 48%, rgba(23,48,59,0.30) 66%, rgba(23,48,59,0) 78%)",
+                "linear-gradient(180deg, rgba(0,14,53,0.78) 0%, rgba(0,14,53,0.66) 48%, rgba(0,14,53,0.30) 66%, rgba(0,14,53,0) 78%)",
             }}
           />
         )}
@@ -783,10 +783,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {primaryCta && (
                     <Link
                       to={canonicalPath(primaryCta.href)}
-                      className={`hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A88A5A]/50${headline ? " sm:whitespace-nowrap" : ""}`}
+                      className={`hero-cta-btn inline-flex items-center justify-center gap-2 w-full max-w-[360px] sm:w-auto sm:max-w-none py-4 px-6 sm:py-3.5 sm:px-8 tracking-normal transition-opacity duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3366FF]/50${headline ? " sm:whitespace-nowrap" : ""}`}
                       style={{
-                        background: "var(--gold-bright)",
-                        color: "var(--ink)",
+                        background: "var(--action)",
+                        color: "var(--on-action)",
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
                         fontSize: ".95rem",

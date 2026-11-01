@@ -78,12 +78,12 @@ const VisibleBreadcrumb = () => {
                   to={crumb.href}
                   className="flex items-center gap-1 no-underline transition-colors"
                   style={{
-                    color: "var(--muted, #647580)",
+                    color: "var(--muted, #5E6A85)",
                     fontSize: "0.72rem",
                     fontWeight: 500,
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold, #C4A265)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted, #647580)")}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold, #4A73FF)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted, #5E6A85)")}
                 >
                   {i === 0 && isHome(crumb.name) && <Home size={12} className="shrink-0" />}
                   <span>{crumb.name}</span>
@@ -106,7 +106,7 @@ const VisibleBreadcrumb = () => {
             className="shrink-0"
             aria-current="page"
             style={{
-              color: "var(--ink, #17303B)",
+              color: "var(--ink, #000E35)",
               fontSize: "0.72rem",
               fontWeight: 600,
               maxWidth: "200px",
@@ -129,7 +129,7 @@ const VisibleBreadcrumb = () => {
               to={parentItem.href}
               className="flex items-center gap-1 no-underline"
               style={{
-                color: "var(--muted, #647580)",
+                color: "var(--muted, #5E6A85)",
                 fontSize: "0.72rem",
                 fontWeight: 500,
               }}

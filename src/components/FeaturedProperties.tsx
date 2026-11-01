@@ -92,7 +92,7 @@ const PropertyCardSkeleton = () => (
     <div className="skeleton-pulse relative overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--cream-deep)" }} />
 
     {/* Gold top border placeholder */}
-    <div className="h-[2px]" style={{ background: "rgba(168,138,90,0.12)" }} />
+    <div className="h-[2px]" style={{ background: "rgba(51,102,255,0.12)" }} />
 
     {/* Body placeholders */}
     <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
@@ -176,8 +176,8 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
             zIndex: 2,
             borderRadius: "2px",
             boxShadow: p.status === "sold"
-              ? "0 3px 10px rgba(168,138,90,0.35)"
-              : "0 3px 10px rgba(23,48,59,0.30)",
+              ? "0 3px 10px rgba(51,102,255,0.35)"
+              : "0 3px 10px rgba(0,14,53,0.30)",
           }}
         >
           {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
@@ -186,7 +186,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
       </div>
 
       {/* Gold top border — always visible, intensifies on hover */}
-      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(168,138,90,0.2)] group-hover:bg-[var(--gold)]" />
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(51,102,255,0.2)] group-hover:bg-[var(--gold)]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>

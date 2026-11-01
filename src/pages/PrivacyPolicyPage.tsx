@@ -11,7 +11,7 @@ const PrivacyPolicyPage = () => (
     <section
       aria-hidden="true"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(23,48,59,0.88), rgba(23,48,59,0.7)), url(${heroPrivacy})`,
+        backgroundImage: `linear-gradient(135deg, rgba(0,14,53,0.88), rgba(0,14,53,0.7)), url(${heroPrivacy})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "180px",

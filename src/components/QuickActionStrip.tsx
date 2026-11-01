@@ -48,7 +48,7 @@ const QuickActionStrip = () => {
                 e.currentTarget.style.color = "white";
                 e.currentTarget.style.borderColor = "var(--gold)";
                 e.currentTarget.style.transform = "translateY(-1px)";
-                e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(168,138,90,.45)";
+                e.currentTarget.style.boxShadow = "0 4px 14px -4px rgba(51,102,255,.45)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "var(--cream)";
@@ -59,7 +59,7 @@ const QuickActionStrip = () => {
               }}
               onFocus={(e) => {
                 e.currentTarget.style.borderColor = "var(--gold)";
-                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(168,138,90,.2)";
+                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(51,102,255,.2)";
               }}
               onBlur={(e) => {
                 e.currentTarget.style.borderColor = "hsl(var(--border))";

@@ -344,9 +344,9 @@ const CookieConsent = () => {
               onClick={handleAccept}
               aria-label={lang === "fr" ? "Tout accepter" : "Accept all"}
               style={{
-                background: "var(--gold-bright)",
-                border: "1px solid var(--gold-bright)",
-                color: "var(--ink)",
+                background: "var(--action)",
+                border: "1px solid var(--action)",
+                color: "var(--on-action)",
                 padding: "7px 12px",
                 fontSize: "10px",
                 borderRadius: "2px",
@@ -410,8 +410,8 @@ const CookieConsent = () => {
               </button>
               <button
                 onClick={handleAccept}
-                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-[var(--ink)] transition-opacity hover:opacity-90"
-                style={{ background: "var(--gold-bright)", border: "none", minHeight: 44 }}
+                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-[var(--on-action)] transition-opacity hover:opacity-90"
+                style={{ background: "var(--action)", border: "none", minHeight: 44 }}
               >
                 {t.accept}
               </button>

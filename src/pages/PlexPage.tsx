@@ -91,7 +91,7 @@ const PlexPage = () => (
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter. Je vous donne une analyse franche pour que vous décidiez en toute connaissance de cause.
       </p>
-      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(168,138,90,.08)", border: "1px solid rgba(168,138,90,.15)" }}>
+      <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(51,102,255,.08)", border: "1px solid rgba(51,102,255,.15)" }}>
         L'ajustement d'un loyer dépend des critères applicables et de la situation de l'immeuble. Le TAL publie chaque année les pourcentages qui servent à ce calcul, et son outil aide à établir l'ajustement. Le propriétaire et le locataire restent libres de s'entendre. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Consulter les critères du TAL</a>.
       </p>
       <div className="mt-6">

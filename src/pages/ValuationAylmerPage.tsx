@@ -62,7 +62,7 @@ const ValuationAylmerPage = () => {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none hidden md:block"
           style={{
-            background: "linear-gradient(90deg, rgba(23,48,59,0.92) 0%, rgba(23,48,59,0.78) 30%, rgba(23,48,59,0.45) 50%, rgba(23,48,59,0.10) 70%, transparent 85%)",
+            background: "linear-gradient(90deg, rgba(0,14,53,0.92) 0%, rgba(0,14,53,0.78) 30%, rgba(0,14,53,0.45) 50%, rgba(0,14,53,0.10) 70%, transparent 85%)",
           }}
         />
         {/* Mobile vertical text-protect */}
@@ -70,7 +70,7 @@ const ValuationAylmerPage = () => {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none md:hidden"
           style={{
-            background: "linear-gradient(180deg, rgba(23,48,59,0.85) 0%, rgba(23,48,59,0.70) 50%, rgba(23,48,59,0.55) 100%)",
+            background: "linear-gradient(180deg, rgba(0,14,53,0.85) 0%, rgba(0,14,53,0.70) 50%, rgba(0,14,53,0.55) 100%)",
           }}
         />
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">

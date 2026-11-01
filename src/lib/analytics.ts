@@ -66,8 +66,8 @@ export function trackEvent(
     // eslint-disable-next-line no-console
     console.info(
       `%c[analytics]%c ${eventName}`,
-      "color:#fff;background:#17303B;padding:2px 6px;border-radius:3px;font-weight:600",
-      "color:#17303B;font-weight:600",
+      "color:#fff;background:#000E35;padding:2px 6px;border-radius:3px;font-weight:600",
+      "color:#000E35;font-weight:600",
       { params: params ?? {}, gtagReady },
     );
   }

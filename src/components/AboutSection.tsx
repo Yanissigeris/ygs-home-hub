@@ -38,7 +38,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
   return (
     <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))", overflow: "hidden" }}>
       {/* Glow effect */}
-      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 40% 55%, rgba(168,138,90,0.1), transparent)", pointerEvents: "none", zIndex: 0 }} />
+      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 40% 55%, rgba(51,102,255,0.1), transparent)", pointerEvents: "none", zIndex: 0 }} />
       <div className="section-container relative grid gap-10 lg:grid-cols-[55%_45%] lg:items-center lg:gap-16 md:min-h-[72vh]" style={{ position: "relative", zIndex: 1 }}>
         {/* ─── Left column: text ─── */}
         <div className="order-2 lg:order-1">

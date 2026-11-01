@@ -31,7 +31,7 @@ const BlogPage = () => {
       {/* Editorial hero */}
       <section
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(23,48,59,0.92), rgba(23,48,59,0.78)), url(${heroBlog})`,
+          backgroundImage: `linear-gradient(135deg, rgba(0,14,53,0.92), rgba(0,14,53,0.78)), url(${heroBlog})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "280px",

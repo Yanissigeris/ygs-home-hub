@@ -4,8 +4,8 @@
   "description": "Courtier immobilier Gatineau & Outaouais",
   "start_url": "/",
   "display": "minimal-ui",
-  "background_color": "#17303B",
-  "theme_color": "#17303B",
+  "background_color": "#000E35",
+  "theme_color": "#000E35",
   "lang": "fr-CA",
   "icons": [
     {

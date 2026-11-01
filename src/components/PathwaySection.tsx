@@ -114,7 +114,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             width: "50%",
             height: "calc(100% - 160px)",
             boxShadow:
-              "0 20px 60px rgba(23,48,59,0.30), 0 8px 20px rgba(23,48,59,0.15)",
+              "0 20px 60px rgba(0,14,53,0.30), 0 8px 20px rgba(0,14,53,0.15)",
             zIndex: 1,
           }}
         >
@@ -139,7 +139,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, rgba(245,241,234,0.15) 0%, rgba(23,48,59,0.10) 100%)",
+                "linear-gradient(135deg, rgba(245,241,234,0.15) 0%, rgba(0,14,53,0.10) 100%)",
             }}
           />
         </div>
@@ -180,7 +180,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             </h2>
             <p
               className="prose-body mt-4"
-              style={{ color: "rgba(23,48,59,0.7)", maxWidth: 520 }}
+              style={{ color: "rgba(0,14,53,0.7)", maxWidth: 520 }}
             >
               {heading.subtitle}
             </p>
@@ -192,7 +192,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             style={{
               borderRadius: 3,
               overflow: "hidden",
-              boxShadow: "0 30px 80px rgba(23,48,59,0.35)",
+              boxShadow: "0 30px 80px rgba(0,14,53,0.35)",
               background: "linear-gradient(175deg, var(--ink-deep), var(--ink))",
             }}
           >
@@ -285,7 +285,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     color: "var(--gold2)",
                     letterSpacing: ".06em",
                     textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(196,168,120,.3)",
+                    borderBottom: "1px solid rgba(90,128,255,.3)",
                     paddingBottom: 2,
                     alignSelf: "flex-start",
                     minHeight: 44,
