@@ -970,8 +970,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   objectPosition: "bottom right",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                  WebkitMaskImage: "linear-gradient(to left, black 72%, transparent 100%)",
-                  maskImage: "linear-gradient(to left, black 72%, transparent 100%)",
+                  WebkitMaskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
+                  maskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
                 }}
                 loading="eager"
                 decoding="async"
