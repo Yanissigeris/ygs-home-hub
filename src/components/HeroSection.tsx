@@ -655,6 +655,18 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           />
         )}
 
+        {/* Accueil : voile marine à gauche (ordinateur) pour garder le titre lisible sur une photo chargée. */}
+        {sansTitle && heroBgImage && !heroVideo && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-[3] hidden md:block"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(0,14,53,0.90) 0%, rgba(0,14,53,0.80) 32%, rgba(0,14,53,0.45) 55%, rgba(0,14,53,0.12) 75%, rgba(0,14,53,0) 100%), linear-gradient(180deg, rgba(0,14,53,0.35) 0%, rgba(0,14,53,0) 30%)",
+            }}
+          />
+        )}
+
         {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
         <div
           className="relative z-[20] flex flex-col pointer-events-none"
