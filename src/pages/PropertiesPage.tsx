@@ -79,7 +79,7 @@ const PropertiesPage = () => {
           href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
         >
           <Home className="h-5 w-5" />
           Voir toutes mes propriétés sur RE/MAX
@@ -106,7 +106,7 @@ const PropertiesPage = () => {
           href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
         >
           <Home className="h-5 w-5" />
           Voir toutes mes propriétés sur RE/MAX

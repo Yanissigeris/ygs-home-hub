@@ -126,7 +126,7 @@ const PontiacPageEn = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/en/home-valuation/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+              <Link to="/en/home-valuation/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
                 Get the real numbers →
               </Link>
             </div>
@@ -199,7 +199,7 @@ const PontiacPageEn = () => {
               </div>
             ))}
           </div>
-          <Link to="/en/home-valuation/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-md py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
+          <Link to="/en/home-valuation/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
             Get the real numbers →
           </Link>
           <p className="text-center text-xs text-muted-foreground">Free · No obligation · Personalized response</p>

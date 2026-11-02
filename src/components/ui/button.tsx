@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-md rounded-[0.625rem] font-semibold",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-[0.625rem] font-semibold",
-        outline: "border border-border bg-background text-foreground hover:bg-secondary hover:border-primary/20 rounded-[0.625rem] font-semibold",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70 rounded-[0.625rem] font-semibold",
+        default: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-md rounded-full font-semibold",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full font-semibold",
+        outline: "border border-border bg-background text-foreground hover:bg-secondary hover:border-primary/20 rounded-full font-semibold",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70 rounded-full font-semibold",
         ghost: "hover:bg-secondary hover:text-foreground rounded-[0.5rem] font-medium",
         link: "text-primary underline-offset-4 hover:underline font-medium",
-        hero: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-none shadow-none transition-all duration-200 ease-out",
-        "hero-outline": "border border-[#F5F1E8]/15 text-[#A6AEC2] bg-transparent hover:bg-[#F5F1E8]/[0.06] hover:border-[#F5F1E8]/25 hover:text-[#F5F1E8]/80 font-medium rounded-none",
-        accent: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-none shadow-none transition-all duration-200 ease-out",
+        hero: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",
+        "hero-outline": "border border-[#F5F1E8]/15 text-[#A6AEC2] bg-transparent hover:bg-[#F5F1E8]/[0.06] hover:border-[#F5F1E8]/25 hover:text-[#F5F1E8]/80 font-medium rounded-full",
+        accent: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",
       },
       size: {
         default: "h-11 px-6 py-2 text-[0.8125rem]",

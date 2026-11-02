@@ -161,7 +161,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
 
         <button
           onClick={() => onSave({ analytics, marketing })}
-          className="mt-6 w-full rounded py-3 text-[.88rem] font-semibold text-white transition-opacity hover:opacity-90"
+          className="mt-6 w-full rounded-full py-3 text-[.88rem] font-semibold text-white transition-opacity hover:opacity-90"
           style={{ background: "var(--ink)" }}
         >
           {t.save}
@@ -313,7 +313,7 @@ const CookieConsent = () => {
                 color: "var(--cream)",
                 padding: "7px 9px",
                 fontSize: "10px",
-                borderRadius: "2px",
+                borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 500,
                 minHeight: "36px",
@@ -331,7 +331,7 @@ const CookieConsent = () => {
                 color: "var(--cream)",
                 padding: "7px 9px",
                 fontSize: "10px",
-                borderRadius: "2px",
+                borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 500,
                 minHeight: "36px",
@@ -349,7 +349,7 @@ const CookieConsent = () => {
                 color: "var(--on-action)",
                 padding: "7px 12px",
                 fontSize: "10px",
-                borderRadius: "2px",
+                borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 600,
                 minHeight: "36px",
@@ -392,7 +392,7 @@ const CookieConsent = () => {
             <div className="flex flex-wrap gap-2 md:gap-3 shrink-0">
               <button
                 onClick={handleRefuse}
-                className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
+                className="flex-1 md:flex-none rounded-full px-5 py-2.5 text-[.78rem] font-medium transition-colors"
                 style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
@@ -401,7 +401,7 @@ const CookieConsent = () => {
               </button>
               <button
                 onClick={() => setShowPrefs(true)}
-                className="flex-1 md:flex-none rounded px-5 py-2.5 text-[.78rem] font-medium transition-colors"
+                className="flex-1 md:flex-none rounded-full px-5 py-2.5 text-[.78rem] font-medium transition-colors"
                 style={{ background: "transparent", border: "1px solid rgba(255,255,255,.25)", color: "rgba(255,255,255,.7)", minHeight: 44 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.5)"; e.currentTarget.style.color = "#fff"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.25)"; e.currentTarget.style.color = "rgba(255,255,255,.7)"; }}
@@ -410,7 +410,7 @@ const CookieConsent = () => {
               </button>
               <button
                 onClick={handleAccept}
-                className="flex-[2] md:flex-none rounded px-6 py-2.5 text-[.78rem] font-semibold text-[var(--on-action)] transition-opacity hover:opacity-90"
+                className="flex-[2] md:flex-none rounded-full px-6 py-2.5 text-[.78rem] font-semibold text-[var(--on-action)] transition-opacity hover:opacity-90"
                 style={{ background: "var(--action)", border: "none", minHeight: 44 }}
               >
                 {t.accept}

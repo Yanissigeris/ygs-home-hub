@@ -85,7 +85,7 @@ const useImagePreload = (srcs: string[]) => {
 const PropertyCardSkeleton = () => (
   <div
     className="featured-property-skeleton flex flex-col h-full"
-    style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden" }}
+    style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden" }}
     aria-hidden="true"
   >
     {/* Image placeholder */}
@@ -114,7 +114,7 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
       rel="noopener noreferrer"
       
       className="group flex flex-col h-full"
-      style={{ background: "var(--white)", borderRadius: 3, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
+      style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 24px 48px var(--gold3)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
     >
@@ -174,7 +174,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
             letterSpacing: "0.14em",
             textTransform: "uppercase",
             zIndex: 2,
-            borderRadius: "2px",
+            borderRadius: 999,
             boxShadow: p.status === "sold"
               ? "0 3px 10px rgba(51,102,255,0.35)"
               : "0 3px 10px rgba(0,14,53,0.30)",

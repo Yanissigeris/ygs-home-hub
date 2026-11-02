@@ -832,7 +832,7 @@ h1.hero-eyebrow {
     padding: 7px 13px !important;
     top: 10px !important;
     left: 10px !important;
-    border-radius: 2px !important;
+    border-radius: 999px !important;
   }
 }
 

@@ -388,7 +388,7 @@ const SiteHeader = () => {
               fontSize: ".78rem",
               fontWeight: 600,
               letterSpacing: ".03em",
-              borderRadius: 0,
+              borderRadius: 999,
               border: `1px solid ${ctaBorderColor}`,
               boxShadow: "none",
               transition: "all .2s ease",
@@ -419,7 +419,7 @@ const SiteHeader = () => {
           <Link
             to={ctaHref}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
+            style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
@@ -477,7 +477,7 @@ const SiteHeader = () => {
           <Link
             to={ctaHref}
             className="hidden md:inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
-            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 0, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
+            style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
             aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}

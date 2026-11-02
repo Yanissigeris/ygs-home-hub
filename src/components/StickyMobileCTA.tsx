@@ -112,7 +112,7 @@ const StickyMobileCTA = () => {
           className="flex-[1.5] inline-flex items-center justify-center text-[var(--on-action)] transition-colors"
           style={{
             background: "var(--action)",
-            borderRadius: "3px",
+            borderRadius: 999,
             padding: ".85rem 1rem",
             fontSize: ".85rem",
             fontWeight: 600,
@@ -133,7 +133,7 @@ const StickyMobileCTA = () => {
             background: "transparent",
             border: "1px solid rgba(255,255,255,.25)",
             color: "rgba(255,255,255,.85)",
-            borderRadius: "3px",
+            borderRadius: 999,
             padding: ".85rem .75rem",
             fontSize: ".82rem",
             minHeight: "48px",
