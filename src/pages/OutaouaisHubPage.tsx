@@ -69,8 +69,8 @@ const OutaouaisHubPage = () => (
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-video-poster.webp"
+      heroBgImage={heroImg}
+      photoCredit={{ text: "Photo : cjuneau, CC BY 2.0, Wikimedia Commons (recadrée)", href: "https://commons.wikimedia.org/wiki/File:Ridge_Road,_Gatineau_Park_(7985502539).jpg" }}
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
       agentImageMd={yanisPortraitMd}
