@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
+import heroImg from "@/assets/hero-outaouais-photo.webp";
 import HeroSection from "@/components/HeroSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -65,8 +66,8 @@ const OutaouaisHubPageEn = () => (
       primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="RE/MAX Hall of Fame"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-video-poster.webp"
+      heroBgImage={heroImg}
+      photoCredit={{ text: "Photo: cjuneau, CC BY 2.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Ridge_Road,_Gatineau_Park_(7985502539).jpg" }}
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
       agentImageMd={yanisPortraitMd}
