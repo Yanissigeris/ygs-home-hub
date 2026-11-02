@@ -9,7 +9,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
-import heroImg from "@/assets/hero-aylmer-gen.webp";
+import heroImg from "@/assets/hero-aylmer-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
@@ -142,6 +142,7 @@ const AylmerPageEn = () => (
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
+      photoCredit={{ text: "Photo: Veillg1, CC BY-SA 4.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Marina_d%27Aylmer-Vue_du_bout_des_jet%C3%A9es_et_de_la_rivi%C3%A8re_des_Outaouais-2023-05-26.jpg" }}
     />
 
     {/* ═══ SECTION 1 — AREA PORTRAIT ═══ */}

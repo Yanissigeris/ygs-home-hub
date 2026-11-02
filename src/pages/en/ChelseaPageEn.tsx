@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-chelsea-gen.webp";
+import heroImg from "@/assets/hero-chelsea-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
@@ -100,6 +100,7 @@ const ChelseaPageEn = () => (
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
+      photoCredit={{ text: "Photo: cjuneau, CC BY 2.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Etienne_Br%C3%BBl%C3%A9_Lookout,_Gatineau_Park_(10396087056).jpg" }}
     />
 
     {/* ═══ SECTION 1 — Portrait ═══ */}

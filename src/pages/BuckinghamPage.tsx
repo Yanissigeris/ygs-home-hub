@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-buckingham-gen.webp";
+import heroImg from "@/assets/hero-buckingham-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
@@ -81,6 +81,7 @@ const BuckinghamPage = () => (
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=buckingham" }}
       heroBgImage={heroImg}
+      photoCredit={{ text: "Photo : Sorcier du Lac, CC BY-SA 4.0, Wikimedia Commons (recadrée)", href: "https://commons.wikimedia.org/wiki/File:Rivi%C3%A8re_du_Li%C3%A8vre,_Buckingham,_Qu%C3%A9bec_2024-20-14_16-20-19.jpg" }}
     />
 
     {/* ═══ SECTION 1 — Portrait ═══ */}

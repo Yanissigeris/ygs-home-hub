@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-cantley-gen.webp";
+import heroImg from "@/assets/hero-cantley-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
@@ -84,6 +84,7 @@ const CantleyPageEn = () => (
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=cantley" }}
       heroBgImage={heroImg}
+      photoCredit={{ text: "Photo: Wesdarou, CC BY-SA 4.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Tiberius_Wright_house_2016-01.jpg" }}
     />
 
     {/* ═══ SECTION 1 — Portrait ═══ */}
