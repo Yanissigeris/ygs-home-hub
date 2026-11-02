@@ -107,7 +107,7 @@ const ValuationCTA = ({ lang: langProp }: Props) => {
               fontSize: ".95rem",
               fontWeight: 600,
               letterSpacing: ".02em",
-              borderRadius: 3,
+              borderRadius: 999,
               textDecoration: "none",
               boxShadow: "0 4px 18px rgba(0,14,53,.12)",
             }}

@@ -790,7 +790,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                         fontFamily: "var(--sans)",
                         fontWeight: 500,
                         fontSize: ".95rem",
-                        borderRadius: 0,
+                        borderRadius: 999,
                         boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
                       }}
                       onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}
