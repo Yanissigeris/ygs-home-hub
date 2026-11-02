@@ -78,7 +78,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
               <Link
                 to={l.href}
                 tabIndex={open ? 0 : -1}
-                style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }}
+                style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }}
                 className="transition-colors duration-200 hover:text-white/80"
               >
                 {l.label}
@@ -115,7 +115,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
         {/* ── Final CTA block ── */}
         <div style={{ background: "var(--ink)" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
               {ctaHeading}
             </h2>
             <p style={{ fontFamily: "var(--sans)", fontSize: 14, color: "rgba(247,244,239,.7)", marginTop: 12, marginBottom: 24 }}>
@@ -193,7 +193,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <ul className="space-y-3">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 300 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
+                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>
@@ -305,7 +305,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           {/* ── RE/MAX mention ── */}
           <div className="text-center py-3">
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 300 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 400 }}>
               {lang === "en" ? "Member of RE/MAX, Marty Waite Team" : "Membre de RE/MAX, Équipe Marty Waite"}
             </p>
           </div>
@@ -329,7 +329,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   </>
                 )}
             </p>
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 300, lineHeight: 1.6, marginTop: 4 }}>
+            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
               <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
               {"  ·  "}

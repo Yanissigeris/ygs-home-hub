@@ -107,7 +107,7 @@
     --star: #FBBC05;
     /* Review cards: pale navy-tinted panel */
     --review-card: #E6EAF4;
-    --serif: 'Cormorant Garamond', Georgia, serif;
+    --serif: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
@@ -180,7 +180,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--sans);
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
@@ -209,17 +209,17 @@
   }
 
   h1 {
-    font-size: clamp(3.52rem, 6.05vw, 6.05rem);
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.6rem, 4.9vw, 4.4rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -0.028em;
   }
 
   h2 {
-    font-size: clamp(2.59rem, 4.32vw, 3.89rem);
-    font-weight: 300;
+    font-size: clamp(1.95rem, 3.3vw, 2.9rem);
+    font-weight: 600;
     line-height: 1.1;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.022em;
   }
 
   h3 {
@@ -305,7 +305,7 @@
   /* Blog article drop cap (first paragraph). Pure CSS so the text node stays
      intact for crawlers, screen readers and AI extraction. */
   .article-dropcap::first-letter {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--serif);
     font-size: 80px;
     line-height: 0.8;
     font-weight: 400;
@@ -330,7 +330,7 @@
     @apply text-[1rem] leading-[1.8];
     color: var(--ink);
     max-width: 38rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .label-overline {
@@ -517,8 +517,8 @@
 
   /* Hero title — max 3 lignes sur iPhone */
   h1 {
-    font-size: clamp(2.4rem, 9.5vw, 3.2rem) !important;
-    line-height: 1.1;
+    font-size: clamp(1.95rem, 8vw, 2.6rem) !important;
+    line-height: 1.08;
   }
 
   /* Footer tap targets mobile */

@@ -44,7 +44,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         <HeroSection
           
           title="Votre courtier immobilier à Gatineau et en Outaouais"
-          headline="Je vous donne les chiffres et les options, vous décidez."
           subtitle="Plus de 300 transactions en Outaouais depuis 2017. Pour vendre, acheter ou investir, on part des ventes comparables de votre secteur."
           subtitleShort="Vendre, acheter ou investir, à partir des ventes de votre secteur."
           sansTitle

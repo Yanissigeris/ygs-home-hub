@@ -271,11 +271,11 @@ const BlogArticlePage = () => {
         const h3Prominent = post?.h3Style === "prominent";
         elements.push(
           h3Prominent ? (
-            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold-text)", fontSize: "clamp(1.375rem, 2.6vw, 2rem)", fontWeight: 500, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--gold-text)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
               {text}
             </h3>
           ) : (
-            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 500, lineHeight: 1.25 }}>
+            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1.25 }}>
               {text}
             </h3>
           )
@@ -284,7 +284,7 @@ const BlogArticlePage = () => {
         flushList();
         const text = line.slice(3);
         elements.push(
-          <h2 key={i} id={slugify(text)} className="mt-12 mb-4 scroll-mt-24" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "30px", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+          <h2 key={i} id={slugify(text)} className="mt-12 mb-4 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "26px", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
             {text}
           </h2>
         );
@@ -302,12 +302,12 @@ const BlogArticlePage = () => {
               borderLeft: "3px solid var(--gold)",
               background: "#ECEAE2",
               padding: "24px 28px",
-              fontFamily: "'Cormorant Garamond', serif",
-              fontStyle: "italic",
-              fontSize: "20px",
-              lineHeight: 1.4,
+              fontFamily: "var(--serif)",
+              fontStyle: "normal",
+              fontSize: "17px",
+              lineHeight: 1.6,
               color: "var(--ink)",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
@@ -404,7 +404,7 @@ const BlogArticlePage = () => {
                 </span>
                 <time style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>{dateStr}</time>
               </div>
-              <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontWeight: 300, fontSize: "clamp(2.25rem, 5vw, 56px)", lineHeight: 0.92, letterSpacing: "-0.01em" }}>
+              <h1 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2.1rem, 4.4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.028em" }}>
                 <span className="block">{titleParts.line1}</span>
                 {titleParts.line2 && (
                   <span className="block" style={{ paddingLeft: "28px" }}>{titleParts.line2}</span>
@@ -424,7 +424,7 @@ const BlogArticlePage = () => {
           >
             <div>
               {titleParts.line3 && (
-                <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: "var(--gold-text)", fontWeight: 300, fontSize: "clamp(2rem, 4.5vw, 56px)", lineHeight: 0.95, letterSpacing: "-0.01em" }}>
+                <h2 style={{ fontFamily: "var(--serif)", fontStyle: "normal", color: "var(--gold-text)", fontWeight: 600, fontSize: "clamp(1.9rem, 3.8vw, 46px)", lineHeight: 1.02, letterSpacing: "-0.028em" }}>
                   {titleParts.line3}
                 </h2>
               )}
@@ -436,7 +436,7 @@ const BlogArticlePage = () => {
             <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
               {post.heroStats.map((s, idx) => (
                 <div key={idx}>
-                  <div style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
+                  <div style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
                     {isFr ? s.value : (s.valueEn ?? s.value)}
                   </div>
                   <div className="mt-1.5 uppercase" style={{ color: "rgba(0,14,53,0.78)", fontSize: "9px", letterSpacing: "0.14em" }}>
@@ -466,10 +466,10 @@ const BlogArticlePage = () => {
                 <h2
                   className="pb-3"
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "var(--serif)",
                     color: "var(--ink)",
-                    fontSize: "clamp(1.875rem, 4vw, 40px)",
-                    fontWeight: 400,
+                    fontSize: "clamp(1.6rem, 3.4vw, 34px)",
+                    fontWeight: 600,
                     lineHeight: 1.1,
                     borderBottom: "2px solid var(--ink)",
                     letterSpacing: "-0.01em",
@@ -484,7 +484,7 @@ const BlogArticlePage = () => {
                       className="grid gap-4 py-6 sm:grid-cols-[40px_1fr]"
                       style={{ borderTop: i === 0 ? "none" : "1px solid #E0DBD1" }}
                     >
-                      <span style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--gold)", fontSize: "22px", fontWeight: 400, lineHeight: 1 }}>
+                      <span style={{ fontFamily: "var(--serif)", color: "var(--gold)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
@@ -521,11 +521,11 @@ const BlogArticlePage = () => {
               <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {isFr ? "Parler à Yanis" : "Talk to Yanis"}
               </p>
-              <h3 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "22px", fontWeight: 400, lineHeight: 1.15 }}>
+              <h3 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "19px", fontWeight: 600, lineHeight: 1.15 }}>
                 {isFr ? (
-                  <>Une analyse <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>sur mesure</em></>
+                  <>Une analyse <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>sur mesure</em></>
                 ) : (
-                  <>A <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>tailored</em> analysis</>
+                  <>A <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>tailored</em> analysis</>
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
@@ -585,7 +585,7 @@ const BlogArticlePage = () => {
             <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
             </p>
-            <h2 className="mt-3" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+            <h2 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? post.ctaOverride.title : post.ctaOverride.titleEn}
             </h2>
             <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.85)", fontSize: "14px", lineHeight: 1.6 }}>
@@ -611,11 +611,11 @@ const BlogArticlePage = () => {
       ) : (
         <section style={{ background: "var(--ink)", padding: "48px 0" }}>
           <div className="section-container text-center">
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--cream)", fontSize: "clamp(1.75rem, 4vw, 36px)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+            <h2 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? (
-                <>Vous regardez un plex en Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Parlons-en.</em></>
+                <>Vous regardez un plex en Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>Parlons-en.</em></>
               ) : (
-                <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>Let's talk.</em></>
+                <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>Let's talk.</em></>
               )}
             </h2>
             <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.92)", fontSize: "13px", lineHeight: 1.6 }}>
@@ -657,7 +657,7 @@ const BlogArticlePage = () => {
               background: "var(--ink)",
               border: "1.5px solid var(--gold)",
               color: "var(--cream)",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "var(--serif)",
               fontSize: "18px",
               fontWeight: 500,
               letterSpacing: "0.05em",
@@ -670,7 +670,7 @@ const BlogArticlePage = () => {
             <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? "À propos" : "About"}
             </p>
-            <p className="mt-1.5" style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "20px", fontWeight: 500, lineHeight: 1.2 }}>
+            <p className="mt-1.5" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "17px", fontWeight: 600, lineHeight: 1.2 }}>
               Yanis Gauthier-Sigeris
             </p>
             <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.55 }}>
@@ -704,7 +704,7 @@ const BlogArticlePage = () => {
                     <span className="block uppercase" style={{ color: "var(--muted)", fontSize: "10px", letterSpacing: "0.14em", marginBottom: "8px" }}>
                       {isFr ? rp.category : rp.categoryEn || rp.category}
                     </span>
-                    <span style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "18px", fontWeight: 500, lineHeight: 1.3 }}>
+                    <span style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "16px", fontWeight: 600, lineHeight: 1.3 }}>
                       {isFr ? rp.title : rp.titleEn}
                     </span>
                   </Link>
@@ -737,7 +737,7 @@ const BlogArticlePage = () => {
               {isFr ? "Article suivant" : "Next article"}
             </div>
             <div className="flex items-center justify-between gap-4">
-              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ink)", fontSize: "20px", fontWeight: 500, lineHeight: 1.25 }}>
+              <h3 style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "17px", fontWeight: 600, lineHeight: 1.25 }}>
                 {isFr ? nextPost.title : nextPost.titleEn}
               </h3>
               <span aria-hidden style={{ color: "var(--gold)", fontSize: "20px" }} className="transition-transform group-hover:translate-x-1">→</span>

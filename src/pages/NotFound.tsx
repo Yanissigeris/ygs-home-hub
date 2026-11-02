@@ -111,7 +111,7 @@ const NotFound = () => {
             className="mx-auto mt-3 max-w-md"
             style={{
               fontSize: ".95rem",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "hsl(var(--muted-foreground))",
               lineHeight: 1.75,
               marginBottom: "2.5rem",
@@ -143,7 +143,7 @@ const NotFound = () => {
                 <div className="mt-1 text-[.9rem] font-semibold" style={{ color: "var(--ink)" }}>
                   {l.title}
                 </div>
-                <div className="text-[.8rem] font-light" style={{ color: "hsl(var(--muted-foreground))" }}>
+                <div className="text-[.8rem] font-normal" style={{ color: "hsl(var(--muted-foreground))" }}>
                   {l.desc}
                 </div>
               </Link>

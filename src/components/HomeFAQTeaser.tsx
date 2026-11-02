@@ -60,7 +60,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
               <p className="label-overline mb-2">{overline}</p>
               <h2>{title}</h2>
               <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
-              <p style={{ fontSize: ".88rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.7 }}>
+              <p style={{ fontSize: ".88rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.7 }}>
                 Voici les réponses aux questions que j'entends le plus souvent.
               </p>
               <Link
@@ -107,7 +107,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                       className="overflow-hidden transition-all duration-300"
                       style={{ maxHeight: isOpen ? 500 : 0, opacity: isOpen ? 1 : 0 }}
                     >
-                      <div style={{ padding: "0 clamp(1.25rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem)", fontSize: ".85rem", fontWeight: 300, color: "var(--muted)", lineHeight: 1.8 }}>
+                      <div style={{ padding: "0 clamp(1.25rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem)", fontSize: ".85rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.8 }}>
                         {item.a}
                       </div>
                     </div>

@@ -99,7 +99,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
 
         {trustLine && (
           <div className="mt-8 sm:mt-12 pt-8 sm:pt-10" style={{ borderTop: dark ? "1px solid rgba(255,255,255,.07)" : "1px solid var(--border)" }}>
-            <p style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.2rem)", fontWeight: 300, color: dark ? "rgba(255,255,255,.55)" : "hsl(var(--muted-foreground))" }}>
+            <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 3vw, 1.15rem)", fontWeight: 500, color: dark ? "rgba(255,255,255,.55)" : "hsl(var(--muted-foreground))" }}>
               <TrustQuote text={trustLine} />
             </p>
           </div>
