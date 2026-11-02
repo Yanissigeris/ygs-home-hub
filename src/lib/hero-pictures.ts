@@ -60,9 +60,9 @@ import HeroFirstBuyerWebp from "@/assets/hero-first-buyer.webp?w=768;1280;1920&f
 import HeroGatineauCentreGenUrl from "@/assets/hero-gatineau-centre-gen.webp";
 import HeroGatineauCentreGenAvif from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroGatineauCentreGenWebp from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
-import HeroHullGenUrl from "@/assets/hero-hull-gen.webp";
-import HeroHullGenAvif from "@/assets/hero-hull-gen.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroHullGenWebp from "@/assets/hero-hull-gen.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroHullGenUrl from "@/assets/hero-hull-photo.webp";
+import HeroHullGenAvif from "@/assets/hero-hull-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
+import HeroHullGenWebp from "@/assets/hero-hull-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroLivingHullUrl from "@/assets/hero-living-hull.webp";
 import HeroLivingHullAvif from "@/assets/hero-living-hull.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroLivingHullWebp from "@/assets/hero-living-hull.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";

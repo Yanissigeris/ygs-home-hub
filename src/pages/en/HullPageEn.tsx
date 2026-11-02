@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-hull-gen.webp";
+import heroImg from "@/assets/hero-hull-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
