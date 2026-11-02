@@ -158,7 +158,7 @@ const AylmerPage = () => (
             Lucerne et Rivermead sont très demandés, avec leurs maisons établies sur des rues matures, près des parcs et des écoles francophones et anglophones. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
           </p>
           <p className="prose-body">
-            Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Pour un vendeur, la présentation et un prix aligné sur les ventes récentes décident si la maison part vite ou si elle reste sur le marché.
+            Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Côté vendeur, la présentation et un prix aligné sur les ventes récentes décident si la maison part vite ou si elle reste sur le marché.
           </p>
         </div>
 
