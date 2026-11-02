@@ -39,7 +39,7 @@ const LimbourPageEn = () => (
     profiles={[
       { icon: Users, title: "Young families", text: "Recent homes 5-20 years old with garages, open lots, schools, parks and trails nearby. No urgent renovations." },
       { icon: Home, title: "Move-up buyers", text: "Families upgrading from a condo or smaller first home. The Ferme Limbour sub-sector offers larger properties with wooded lots." },
-      { icon: TrendingUp, title: "Investors", text: "Growing area with stable rental demand from young families and Gatineau Hospital workers." },
+      { icon: TrendingUp, title: "Investors", text: "Potential tenants include young families and staff at the nearby Gatineau Hospital. I show you recent rents before an offer." },
       { icon: MapPin, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa wanting modern construction without paying Ottawa prices. Quick commute via Highway 50." },
       { icon: MapPin, title: "Commuters", text: "Access to Highway 50, which leads to the bridges into Ottawa." },
     ]}

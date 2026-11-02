@@ -39,10 +39,10 @@ const clientTypes = [
 ];
 
 const questions = [
-  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "Votre rendement actuel, comparé à vos objectifs à long terme." },
+  { icon: CheckCircle2, title: "Est-ce que je garde ou je vends?", text: "On compare ce que l'immeuble vous rapporte aujourd'hui à ce que vous obtiendriez en vendant, puis on regarde vos plans à long terme." },
   { icon: CheckCircle2, title: "Le prix demandé a-t-il du sens?", text: "Les loyers inscrits aux baux, les dépenses appuyées par des factures et le potentiel locatif du secteur." },
-  { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Dépenses, vacance, travaux à prévoir, potentiel de croissance à Gatineau." },
-  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation : certains travaux changent la donne, surtout dans les immeubles plus anciens de Hull." },
+  { icon: CheckCircle2, title: "Quel est le vrai rendement?", text: "Celui qui reste après les dépenses, la vacance et les travaux à prévoir. Il est souvent plus bas que le rendement affiché dans l'inscription." },
+  { icon: CheckCircle2, title: "Quels risques surveiller?", text: "Toiture, plomberie, électricité, fondation : certains travaux pèsent lourd sur le rendement, surtout dans les immeubles plus anciens de Hull." },
   { icon: CheckCircle2, title: "Comment bien vendre mon plex?", text: "Un prix bien positionné et une mise en marché qui rejoint les investisseurs de l'Outaouais." },
 ];
 
@@ -83,13 +83,13 @@ const PlexPage = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Analyse" title="Ce qu'il faut analyser avant d'investir dans un plex en Outaouais" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Les conditions varient selon le secteur et le type d'immeuble. Avant d'acheter, il faut examiner les loyers en place, les dépenses, la vacance, l'état du bâtiment et le potentiel propre à la propriété.
+        Un plex s'achète sur ses chiffres, pas sur ses photos. Avant une offre, je regarde les loyers inscrits aux baux, les dépenses réelles et l'état du bâtiment. Le potentiel vient en dernier, une fois que le reste tient la route.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Une analyse de rendement doit tenir compte des loyers en place, des coûts d'entretien, des travaux à prévoir et de votre stratégie à long terme. Elle sert à comparer l'immeuble à vos objectifs.
+        Ensuite, on compare l'immeuble à votre objectif, que ce soit du revenu chaque mois ou de la plus-value à long terme. Le même plex peut être un bon achat pour un investisseur et un mauvais achat pour un autre.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter. Je vous donne une analyse franche pour que vous décidiez en toute connaissance de cause.
+        Je suis investisseur immobilier moi-même. Mon rôle n'est pas de vous convaincre d'acheter. Je vous donne une analyse franche, et vous décidez avec tous les chiffres en main.
       </p>
       <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(51,102,255,.08)", border: "1px solid rgba(51,102,255,.15)" }}>
         L'ajustement d'un loyer dépend des critères applicables et de la situation de l'immeuble. Le TAL publie chaque année les pourcentages qui servent à ce calcul, et son outil aide à établir l'ajustement. Le propriétaire et le locataire restent libres de s'entendre. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/fr/reconduction-du-bail-et-fixation-de-loyer/pourcentages-applicables-aux-criteres-de-fixation-de-loyer" target="_blank" rel="noopener noreferrer">Consulter les critères du TAL</a>.

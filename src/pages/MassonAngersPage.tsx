@@ -26,7 +26,7 @@ const MassonAngersPage = () => (
     profiles={[
       { icon: Users, title: "Jeunes familles", text: "Maisons neuves abordables, 4 écoles primaires CSSCV à proximité, parcs et sentiers dans les nouveaux développements. La rivière du Lièvre et les espaces verts ajoutent à la qualité de vie." },
       { icon: Home, title: "Premiers acheteurs", text: "Prix d'entrée accessibles entre 400 000 $ et 490 000 $ pour un jumelé ou une maison neuve. Programmes RAP/CELIAPP applicables. Financement plus facile qu'à Hull ou Aylmer." },
-      { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec demande locative stable et plusieurs développements neufs en livraison 2026-2027. Potentiel de plus-value à moyen terme." },
+      { icon: TrendingUp, title: "Investisseurs", text: "Des prix d'entrée plus bas qu'ailleurs à Gatineau et des projets neufs. Avant une offre, je vous montre les loyers récents du secteur." },
       { icon: MapPin, title: "Travailleurs de l'est", text: "Accès direct aux zones d'emploi de Gatineau-est, Buckingham et Thurso. Le centre de Buckingham est à environ 5 km par la route." },
     ]}
     inlineCta={{ text: "Propriétaire à Masson-Angers? Découvrez la valeur actuelle de votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}

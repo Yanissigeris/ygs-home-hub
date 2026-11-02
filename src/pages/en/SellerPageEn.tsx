@@ -21,10 +21,10 @@ import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react"
 import heroImg from "@/assets/hero-vendre-gatineau.webp";
 
 const painPoints = [
-  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "The Gatineau market is evolving. You don't want to miss the window, but you also don't want to sell without a plan." },
-  { icon: CheckCircle2, title: "How much is my property worth?", text: "A realistic price based on recent sales in your Outaouais neighbourhood." },
+  { icon: CheckCircle2, title: "Is now the right time to sell?", text: "It depends on your area and on your next move. I show you current selling times near you, then we pick the timing together." },
+  { icon: CheckCircle2, title: "How much is my property worth?", text: "You get a value range and three listing prices, backed by recent sales in your area." },
   { icon: CheckCircle2, title: "Should I renovate first?", text: "Some investments pay off in the local market. Others don't. We'll sort through them together." },
-  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "Coordinating a sale and purchase in Gatineau requires a plan from the start, especially if you're staying in the area." },
+  { icon: CheckCircle2, title: "How do I sell without getting stuck?", text: "If you're buying too, we set the order from day one: sell first, buy first, or buy with a sale condition. I explain the risk of each option before you sign." },
 ];
 const fears = [
   { icon: AlertTriangle, title: "Underpricing", text: "Leaving thousands on the table due to lack of information on recent sales." },
@@ -63,10 +63,10 @@ const SellerPageEn = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Local strategy" title="Adapting your sale to your local market" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Selling conditions vary by area, property type and price range. Reviewing recent comparable sales helps establish a strategy suited to your property when it enters the market.
+        A house in Aylmer doesn't compare to one in Buckingham, and a condo doesn't sell like a single-family home. Before we talk price, I look at what sold near you, in your type of property, over the last few months.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Listing price, presentation and marketing strategy influence buyer interest. A local analysis helps position the property according to its features and the competition at the time of sale.
+        The starting price matters more than anything else. Listed too high, a house gets few showings and often ends up dropping. Presentation and marketing come next, and they get prepared before the listing goes live.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         That's why my approach starts from the reality of the market in your area, not from a number designed to make you feel good.
@@ -81,7 +81,7 @@ const SellerPageEn = () => (
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
     <ContentBlock narrow>
       <SectionHeading overline="Before selling" title="Know where you stand first" />
-      <p className="prose-body mt-5">Before selling, many Outaouais homeowners mainly want to know what their property is worth and which options fit their timing. The goal is to build a clear plan for your neighbourhood, at your pace, whether in Aylmer, Hull, the Plateau or Buckingham.</p>
+      <p className="prose-body mt-5">Before selling, you probably want to know one thing: what your home is worth, with no pressure. We start there. Then we look at your timing and at what the market in your area allows.</p>
       <p className="prose-body mt-4">I've been helping sellers across the Outaouais since 2017, and I know a good sale takes preparation. It all begins with a value based on local comparables. Then come the price and the improvements that pay off, followed by marketing aimed at the right buyers, including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />

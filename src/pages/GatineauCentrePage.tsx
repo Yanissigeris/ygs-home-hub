@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Est-ce un bon secteur pour investir dans un plex?",
-    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative est soutenue par la présence du Cégep de l'Outaouais, de l'hôpital, et des services dans un rayon accessible. Comme partout, faites une analyse de rendement avant d'acheter. Je la fais avec vous.",
+    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative a baissé depuis la COVID, ici comme ailleurs en Outaouais. Alors, faites une analyse de rendement avant d'acheter. Je la fais avec vous.",
   },
 ];
 
@@ -29,7 +29,7 @@ const faq = [
 const subSectors = [
   {
     title: "Limbour",
-    text: "Quartier résidentiel établi, maisons sur rues arborées, Parc du Bois-Dollard. Clientèle familiale enracinée. Bon accès aux commerces et aux services du boulevard Maloney.",
+    text: "Quartier résidentiel établi, maisons sur rues arborées, Parc du Bois-Dollard. Bon accès aux commerces et aux services du boulevard Maloney.",
   },
   {
     title: "Manoir-des-Trembles / La Gappe",

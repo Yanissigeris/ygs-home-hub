@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-aylmer-photo.webp";
 const faq = [
   {
     q: "How much is a home worth in Aylmer?",
-    a: "In Q2 2026, the median single-family price in Aylmer was $572,750, and the median condo price $325,000 (APCIQ, Centris data). Prices then vary by sub-sector, property type and condition. Lucerne, Rivermead and Old Aylmer each have their own market realities. Contact me for a free comparative analysis based on recent sales on your street.",
+    a: "In Q2 2026, the median single-family price in Aylmer was $572,750, and the median condo price $325,000 (APCIQ, Centris data). Prices then vary by sub-sector, property type and condition. Contact me for a free comparative analysis based on recent sales on your street.",
   },
   {
     q: "Is Aylmer bilingual? Can my child attend an English school?",
@@ -38,13 +38,8 @@ const faq = [
 /* ── Sub-sectors ── */
 const subSectors = [
   {
-    title: "Lucerne / Rivermead",
-    text: "Established residential area with renovated homes on mature, tree-lined streets. The cycling paths and the Champlain Bridge are close by.",
-    tag: "Families · Established · In demand",
-  },
-  {
     title: "Old Aylmer",
-    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees.",
+    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle.",
     tag: "Character · Walkable",
   },
   {
@@ -65,7 +60,7 @@ const buyerCols = [
     title: "Before visiting",
     items: [
       "Get your mortgage pre-approval",
-      "Define your priority area (Lucerne vs Old Aylmer)",
+      "Define your priority area (Old Aylmer, north Aylmer, waterfront)",
       "Check proximity to your preferred schools",
       "Understand the current market (seller's = fast offers)",
       "Budget for a home inspection",
@@ -75,7 +70,6 @@ const buyerCols = [
     title: "On the market",
     items: [
       "Well-priced properties sell quickly in high-demand areas",
-      "Multiple offers are common in Lucerne and Rivermead",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
       "Expect to go above asking price in competitive zones",
@@ -154,7 +148,7 @@ const AylmerPageEn = () => (
             Aylmer is the western sector of Gatineau, bordered by the Ottawa River. It offers suburban living without moving far from Ottawa. Homes here tend to be newer than in Hull or central Gatineau, with larger yards and quiet streets.
           </p>
           <p className="prose-body">
-            Lucerne and Rivermead are in high demand, with their established homes on mature streets, close to parks and both French and English schools. Old Aylmer has a heritage feel, with character properties and local shops in a village atmosphere.
+            You'll find both French and English schools, and many mature streets close to parks. Old Aylmer has a heritage feel, with character properties and local shops in a village atmosphere.
           </p>
           <p className="prose-body">
             For buyers coming from Ottawa, Aylmer often means an immediate gain in space and quality of life for the same budget, or less. For sellers, it's a market where presentation and fair pricing make the difference between a quick sale and a property that sits.
@@ -185,7 +179,7 @@ const AylmerPageEn = () => (
         <p className="prose-body mt-4 max-w-2xl">
           Aylmer isn't homogeneous. Each sub-sector has its own personality, buyer profile, and pricing. Here's what you need to know before looking.
         </p>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {subSectors.map((s) => (
             <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>

@@ -22,7 +22,7 @@ const buyerFaq = [
 ];
 const plexFaq = [
   { q: "How do you evaluate a plex's value?", a: "Income approach (GRM), comparable sales, building condition and rent optimization potential." },
-  { q: "Is it still profitable to buy a plex in Gatineau?", a: "Yes, if the analysis is done right. Entry prices are still accessible and rental demand is strong." },
+  { q: "Is it still profitable to buy a plex in Gatineau?", a: "Yes, if the analysis is done right. Entry prices are still accessible, but rental demand has dropped since COVID. So the analysis starts from the rents in place." },
   { q: "What happens to tenants when I sell?", a: "Leases transfer to the new owner. The law protects tenants, we manage the transition properly." },
 ];
 const militaryFaq = [

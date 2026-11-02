@@ -33,7 +33,7 @@ const faq = [
   { q: "Qu'est-ce que je reçois après ma demande?", a: "Une réponse personnalisée, avec une analyse basée sur les ventes comparables récentes de votre secteur. Pour une analyse approfondie avec visite à Aylmer, on planifie un rendez-vous." },
   { q: "Faut-il faire visiter ma maison pour l'évaluation?", a: "Pas nécessairement pour une première estimation. Une visite peut être planifiée pour un rapport plus détaillé." },
   { q: "L'évaluation m'engage-t-elle à vendre?", a: "Non. Vous pouvez demander une évaluation simplement pour connaître la valeur de votre propriété, sans intention immédiate de vendre." },
-  { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous les quartiers : le Plateau, Lucerne, Jardins Lavigne, Lakeview et les autres secteurs résidentiels d'Aylmer." },
+  { q: "Quels quartiers d'Aylmer couvrez-vous?", a: "Tous les quartiers : le Plateau, Jardins Lavigne, Lakeview, le Vieux-Aylmer et les autres secteurs résidentiels d'Aylmer." },
   { q: "Que faire après avoir reçu mon évaluation?", a: "Vous aurez les chiffres et les options. Si vous voulez aller plus loin, je peux préparer un plan vendeur complet pour Aylmer." },
 ];
 

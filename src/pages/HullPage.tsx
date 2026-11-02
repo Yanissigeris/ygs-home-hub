@@ -11,7 +11,7 @@ import RelatedPages from "@/components/RelatedPages";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import ContentBlock from "@/components/ContentBlock";
-import heroImg from "@/assets/hero-hull-gen.webp";
+import heroImg from "@/assets/hero-hull-photo.webp";
 
 /* ── FAQ data ── */
 const faq = [
@@ -45,7 +45,7 @@ const subSectors = [
   },
   {
     title: "Lac Leamy",
-    text: "Secteur du Casino du Lac-Leamy et du Parc Lac-Leamy. Condos et propriétés avec accès au lac, plage, sentiers. Clientèle plus aisée, vie animée l'été.",
+    text: "Secteur du Casino du Lac-Leamy et du Parc Lac-Leamy. Condos et propriétés avec accès au lac, plage, sentiers. Vie animée l'été autour de la plage et des sentiers.",
   },
 ];
 
@@ -93,13 +93,13 @@ const HullPage = () => (
       <h2 className="mt-3">Hull : le secteur qui se réinvente</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est souvent le premier choix.
+          Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est le secteur le plus proche.
         </p>
         <p className="prose-body">
           Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. C'est le premier quartier carboneutre de la région de la capitale nationale, avec son propre réseau d'énergie de quartier. Les premières phases sont habitées. (Source : zibi.ca, Radio-Canada)
         </p>
         <p className="prose-body">
-          Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative provient des fonctionnaires fédéraux, des étudiants de l'Université du Québec en Outaouais (UQO), dont le campus est situé à Hull, et des jeunes professionnels. Un marché locatif ancré dans une base d'emploi stable.
+          Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative a baissé depuis la COVID, alors je pars des loyers en place avant de parler de rendement.
         </p>
       </div>
     </ContentBlock>
@@ -124,10 +124,10 @@ const HullPage = () => (
       <h2 className="mt-3">Investir dans un plex à Hull, ce qu'il faut comprendre</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull attire depuis longtemps les investisseurs en multiplex. La densité résidentielle, la proximité d'Ottawa, la présence de l'UQO et de fonctionnaires fédéraux créent une demande locative soutenue, particulièrement pour les logements à prix abordables.
+          Hull attire depuis longtemps les investisseurs en multiplex, à cause de la densité résidentielle et de la proximité d'Ottawa. Le marché locatif s'est calmé depuis la COVID.
         </p>
         <p className="prose-body">
-          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus. Les anciens plexs à loyers modérés restent très demandés.
+          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.
@@ -147,7 +147,6 @@ const HullPage = () => (
           {[
             "Hull est le secteur le plus proche d'Ottawa à Gatineau, ponts Alexandra, Champlain, Portage et des Chaudières.",
             "Le projet Zibi est un développement actif en cours, les secteurs adjacents bénéficient de cette transformation.",
-            "L'UQO et les bureaux fédéraux du côté québécois ancrent une demande locative stable à Hull.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

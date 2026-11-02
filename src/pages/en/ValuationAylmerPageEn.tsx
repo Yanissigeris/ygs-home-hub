@@ -33,7 +33,7 @@ const faq = [
   { q: "What do I get after my request?", a: "A personalized response, with an analysis based on recent comparable sales in your area. For a more detailed analysis with a visit in Aylmer, we book an appointment." },
   { q: "Do you need to visit my home for the valuation?", a: "Not necessarily for a first estimate. A visit can be arranged for a more detailed report, no commitment." },
   { q: "Does the valuation commit me to selling?", a: "No. You can request a valuation simply to know what your property is worth, with no immediate plan to sell." },
-  { q: "Which Aylmer neighbourhoods do you cover?", a: "All of them: the Plateau, Lucerne, Jardins Lavigne, Lakeview and the other residential areas of Aylmer." },
+  { q: "Which Aylmer neighbourhoods do you cover?", a: "All of them: the Plateau, Jardins Lavigne, Lakeview, Old Aylmer and the other residential areas of Aylmer." },
   { q: "What do I do after receiving my valuation?", a: "You'll have the numbers and options. If you want to go further, I can prepare a complete seller plan for Aylmer." },
 ];
 

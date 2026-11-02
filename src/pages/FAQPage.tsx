@@ -24,7 +24,7 @@ const buyerFaq = [
 
 const plexFaq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "Approche des revenus (MRB), ventes comparables, état du bâtiment et potentiel d'optimisation des loyers." },
-  { q: "Est-ce rentable d'acheter un plex à Gatineau?", a: "Oui, si l'analyse est bien faite. Les prix d'entrée sont encore accessibles et la demande locative est forte." },
+  { q: "Est-ce rentable d'acheter un plex à Gatineau?", a: "Oui, si l'analyse est bien faite. Les prix d'entrée sont encore accessibles, mais la demande locative a baissé depuis la COVID. L'analyse part donc des loyers en place." },
   { q: "Qu'arrive-t-il aux locataires quand je vends?", a: "Les baux sont transférés au nouveau propriétaire. La loi protège les locataires, on gère la transition proprement." },
 ];
 
