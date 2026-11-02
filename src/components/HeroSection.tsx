@@ -712,7 +712,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
 
                   <h1
-                    className="hero-fade-in"
+                    className={sansTitle ? "hero-fade-in hero-h1-sans" : "hero-fade-in"}
                     style={{
                       fontFamily: sansTitle ? "var(--sans)" : "var(--serif)",
                       fontWeight: sansTitle ? 600 : 400,
