@@ -165,6 +165,10 @@ export default defineConfig(() => ({
             // Loaded only when /blogue/* or /en/blog/* breadcrumb resolves a slug,
             // or when the BlogPage / BlogArticlePage routes mount.
             if (id.includes("/data/blog-posts")) return "blog-data";
+            // Image URL modules shared by blog posts and service pages (hero-pontiac,
+            // hero-limbour...). Without this, Rollup pulls them into "blog-data"
+            // and every page ends up preloading the 250 KB blog chunk.
+            if (id.includes("/src/assets/")) return "asset-urls";
             return;
           }
           // Heavy charting lib — only used by /ui/chart.tsx (currently dead code,
