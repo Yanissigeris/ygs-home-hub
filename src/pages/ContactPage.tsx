@@ -104,13 +104,16 @@ const ContactPage = () => {
         affiliationSlot={<RemaxAgencyBlock lang="fr" />}
       >
         <p className="prose-body mt-6">
-          Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+          Je suis courtier immobilier résidentiel depuis 2017, avec plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Mes clients sont autant des vendeurs et des acheteurs que des investisseurs.
         </p>
         <p className="prose-body mt-4">
-          Courtier immobilier résidentiel depuis 2017, je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis le début et j'ai complété plus de 300 transactions. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Temple de la renommée (2024). Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
+          Avant de parler de prix, je vous montre les ventes comparables de votre secteur. Vous voyez les mêmes chiffres que moi, puis c'est vous qui choisissez.
         </p>
         <p className="prose-body mt-4">
-          Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.
+          Comme investisseur, j'ai rénové et revendu des propriétés, et j'ai une AEC en gestion de projet. Quand vous regardez un plex ou une maison à rénover, je sais lire les loyers et estimer les travaux.
+        </p>
+        <p className="prose-body mt-4">
+          Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Temple de la renommée (2024).
         </p>
         <p className="prose-body mt-4">
           Je détiens un permis de courtier immobilier résidentiel de l'OACIQ (n° 112201). Je travaille en français et en anglais, surtout à Aylmer, Hull, au Plateau, à Gatineau-centre, à Chelsea et à Cantley.
