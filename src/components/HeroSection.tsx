@@ -716,9 +716,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     style={{
                       fontFamily: sansTitle ? "var(--sans)" : "var(--serif)",
                       fontWeight: sansTitle ? 600 : 400,
-                      fontSize: sansTitle ? "clamp(2.25rem, 4.4vw, 3.6rem)" : "clamp(2.25rem, 5.5vw, 4rem)",
+                      fontSize: sansTitle ? "clamp(2rem, 4.4vw, 3.5rem)" : "clamp(2.25rem, 5.5vw, 4rem)",
                       lineHeight: sansTitle ? 1.06 : 1.05,
-                      letterSpacing: sansTitle ? "-0.03em" : "-0.015em",
+                      letterSpacing: sansTitle ? "-0.018em" : "-0.015em",
                       color: "var(--cream)",
                       textShadow: "0 2px 12px rgba(0,0,0,0.5)",
                       margin: 0,
