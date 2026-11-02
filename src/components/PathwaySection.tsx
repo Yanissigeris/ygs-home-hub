@@ -258,7 +258,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   style={{
                     fontFamily: "var(--serif)",
                     fontStyle: "normal",
-                    fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
+                    fontSize: "clamp(1rem, 1.5vw, 1.08rem)",
                     fontWeight: 600,
                     color: "var(--cream-deep)",
                     letterSpacing: "-.01em",
