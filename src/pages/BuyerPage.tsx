@@ -81,7 +81,7 @@ const BuyerPage = () => (
         Au 2e trimestre 2026, la région métropolitaine de Gatineau a enregistré 1 310 ventes résidentielles. Le prix médian d'une unifamiliale y atteignait 523 500 $, avec un délai de vente de 27 jours (APCIQ, données Centris).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Selon l'APCIQ, sur les 12 mois terminés en juin 2026, les conditions étaient favorables aux vendeurs pour les unifamiliales dans toutes les gammes de prix. Une propriété bien située peut donc se vendre vite. Arriver avec une préapprobation et des critères clairs vous permet de faire une offre sans vous précipiter.
+        Selon l'APCIQ, sur les 12 mois terminés en juin 2026, les conditions étaient favorables aux vendeurs pour les unifamiliales dans toutes les gammes de prix. Une propriété bien située peut donc se vendre vite. Avec une préapprobation et des critères clairs, vous pouvez faire une offre sans vous précipiter.
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 2e trimestre 2026, région métropolitaine de Gatineau.</p>
     </ContentBlock>
@@ -90,7 +90,7 @@ const BuyerPage = () => (
       <SectionHeading
         overline="L'achat immobilier"
         title="Choisir une propriété, c'est aussi choisir un secteur et une stratégie"
-        subtitle="Au-delà de la maison, il faut comprendre les secteurs, la valeur marchande, les taxes, le potentiel de revente et la bonne stratégie d'offre d'achat."
+        subtitle="La maison compte, mais le secteur décide souvent du reste, comme le prix de revente et le trajet vers Ottawa. Avant une offre, je vous montre ce qui s'est vendu autour et à quel prix."
       />
     </ContentBlock>
 

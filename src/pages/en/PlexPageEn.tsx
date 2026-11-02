@@ -26,10 +26,10 @@ const clientTypes = [
   { icon: TrendingUp, title: "Investor buyers", text: "Market value, rental potential, risks and buying strategy: the numbers before the decision.", cta: "Request an analysis", href: "/en/plex-analysis/" },
 ];
 const questions = [
-  { icon: CheckCircle2, title: "Should I keep or sell?", text: "Your current return, compared with your long-term goals." },
+  { icon: CheckCircle2, title: "Should I keep or sell?", text: "We compare what the building earns you today with what you'd get by selling, then we look at your long-term plans." },
   { icon: CheckCircle2, title: "Does the asking price make sense?", text: "Rents shown in the leases, expenses backed by invoices and the rental potential of the area." },
-  { icon: CheckCircle2, title: "What's the true return?", text: "Expenses, vacancy, upcoming repairs, growth potential in Gatineau." },
-  { icon: CheckCircle2, title: "What risks to watch for?", text: "Roof, plumbing, electrical, foundation: some repairs change the equation, especially in Hull's older buildings." },
+  { icon: CheckCircle2, title: "What's the true return?", text: "What's left after expenses, vacancy and upcoming repairs. It's often lower than the return shown in the listing." },
+  { icon: CheckCircle2, title: "What risks to watch for?", text: "Roof, plumbing, electrical, foundation: some repairs weigh heavily on the return, especially in Hull's older buildings." },
   { icon: CheckCircle2, title: "How do I sell my plex well?", text: "A well-positioned price and marketing that reaches Outaouais investors." },
 ];
 const steps = [
@@ -58,13 +58,13 @@ const PlexPageEn = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Analysis" title="What to analyze before investing in a plex in the Outaouais" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Conditions vary by area and property type. Before buying, review the rents in place, expenses, vacancy, building condition and the property's specific potential.
+        A plex is bought on its numbers, not its photos. Before an offer, I look at the rents in the leases, the actual expenses and the condition of the building. Upside comes last, once the rest holds up.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        A return analysis should account for rents in place, maintenance costs, anticipated capital expenditures and your long-term strategy. It shows how the building compares with your goals.
+        Then we compare the building with your goal, whether that's monthly income or long-term appreciation. The same plex can be a good buy for one investor and a bad one for another.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        I am a real estate investor myself. My role is not to convince you to buy. I give you a frank analysis so you can make a fully informed decision.
+        I am a real estate investor myself. My role is not to convince you to buy. I give you a frank analysis, and you decide with all the numbers in hand.
       </p>
       <p className="prose-body mt-4 p-4 rounded-md" style={{ background: "rgba(51,102,255,.08)", border: "1px solid rgba(51,102,255,.15)" }}>
         A rent adjustment depends on the applicable criteria and the building's circumstances. The TAL publishes the percentages used for this calculation each year, and its tool helps set the adjustment. The landlord and tenant remain free to agree. <a className="underline underline-offset-4" href="https://www.tal.gouv.qc.ca/en/renewal-of-the-lease-and-fixing-of-rent/applicable-percentages-to-the-criteria-for-the-fixing-of-rent" target="_blank" rel="noopener noreferrer">Review the TAL criteria</a>.

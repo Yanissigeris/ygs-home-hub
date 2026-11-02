@@ -63,7 +63,7 @@ const BuyerPageEn = () => (
       <p className="mt-4 text-xs text-muted-foreground italic">Source: APCIQ, residential barometer for Q2 2026, Gatineau metropolitan area.</p>
     </ContentBlock>
 
-    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="Beyond the house, you need to understand the neighbourhoods, market value, taxes, resale potential and the right offer strategy." /></ContentBlock>
+    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="The house matters, but the area often decides the rest, like resale value and the commute to Ottawa. Before an offer, I show you what sold nearby and at what price." /></ContentBlock>
     <CardGrid overline="For you" title="The buyers I work with" items={profiles} background="alt" variant="icon-inline" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
