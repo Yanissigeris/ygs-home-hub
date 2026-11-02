@@ -115,7 +115,7 @@ const HullPageEn = () => (
           The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River, in both Gatineau and Ottawa, includes residential condos, office space, retail and public spaces. It's the National Capital Region's first carbon-neutral neighbourhood, with its own district energy system. The first phases are occupied. (Source: zibi.ca, Radio-Canada)
         </p>
         <p className="prose-body">
-          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand comes from federal public servants, Université du Québec en Outaouais (UQO) students, whose campus is located in Hull, and young professionals. A rental market anchored in a stable employment base.
+          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand has dropped since COVID, so I start from the rents in place before talking about returns.
         </p>
       </div>
     </ContentBlock>
@@ -140,7 +140,7 @@ const HullPageEn = () => (
       <h2 className="mt-3">Investing in a plex in Hull, what you need to understand</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull has long drawn multiplex investors. Residential density, proximity to Ottawa, the presence of UQO and federal public servants create sustained rental demand, particularly for affordable housing.
+          Hull has long drawn multiplex investors, because of its residential density and its proximity to Ottawa. The rental market has cooled since COVID.
         </p>
         <p className="prose-body">
           Gatineau's rental market underwent a rebalancing in 2025-2026 with the arrival of a large number of new builds. So return analysis matters even more.
@@ -163,7 +163,6 @@ const HullPageEn = () => (
           {[
             "Hull is the closest area to Ottawa in Gatineau, Alexandra, Champlain, Portage and Chaudières bridges.",
             "The Zibi project is an active, ongoing development, adjacent areas benefit from this transformation.",
-            "UQO and federal offices on the Québec side anchor stable rental demand in Hull.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

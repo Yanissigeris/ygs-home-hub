@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-aylmer-photo.webp";
 const faq = [
   {
     q: "Combien vaut une maison à Aylmer?",
-    a: "Au 2e trimestre 2026, le prix médian d'une unifamiliale à Aylmer était de 572 750 $, et celui d'une copropriété de 325 000 $ (APCIQ, données Centris). Les prix varient ensuite selon le sous-secteur, le type de propriété et l'état. Lucerne, Rivermead et le Vieux-Aylmer ont chacun leurs propres réalités. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
+    a: "Au 2e trimestre 2026, le prix médian d'une unifamiliale à Aylmer était de 572 750 $, et celui d'une copropriété de 325 000 $ (APCIQ, données Centris). Les prix varient ensuite selon le sous-secteur, le type de propriété et l'état. Contactez-moi pour une analyse comparative gratuite basée sur les ventes récentes dans votre rue.",
   },
   {
     q: "Aylmer est-il bilingue? Mon enfant peut-il aller à une école anglophone?",
@@ -37,11 +37,6 @@ const faq = [
 
 /* ── Sub-sectors ── */
 const subSectors = [
-  {
-    title: "Lucerne / Rivermead",
-    text: "Secteur résidentiel établi, avec des maisons rénovées sur des rues matures et arborées. Les pistes cyclables et le pont Champlain sont proches.",
-    tag: "Familles · Établi · En demande",
-  },
   {
     title: "Vieux-Aylmer",
     text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable.",
@@ -65,7 +60,7 @@ const buyerCols = [
     title: "Avant de visiter",
     items: [
       "Obtenez votre préapprobation hypothécaire",
-      "Définissez votre secteur prioritaire (Lucerne vs Vieux-Aylmer)",
+      "Définissez votre secteur prioritaire (Vieux-Aylmer, Aylmer nord, bord de l'eau)",
       "Vérifiez la proximité des écoles souhaitées",
       "Comprenez le marché actuel (vendeur = offres rapides)",
       "Prévoyez un budget pour l'inspection",
@@ -75,7 +70,6 @@ const buyerCols = [
     title: "Sur le marché",
     items: [
       "Les propriétés bien positionnées partent vite dans les secteurs en demande",
-      "Les offres multiples sont fréquentes à Lucerne et Rivermead",
       "Quand une propriété est bien placée, visitez vite",
       "L'inspection pré-offre est une option à considérer",
       "Prévoyez une marge au-dessus du prix demandé en zone compétitive",
@@ -156,7 +150,7 @@ const AylmerPage = () => (
             Aylmer est le secteur ouest de Gatineau, bordé par la rivière des Outaouais. On y vit en banlieue sans s'éloigner d'Ottawa. Les maisons y sont en moyenne plus récentes qu'à Hull ou au centre de Gatineau, avec des cours plus grandes et des rues tranquilles.
           </p>
           <p className="prose-body">
-            Lucerne et Rivermead sont très demandés, avec leurs maisons établies sur des rues matures, près des parcs et des écoles francophones et anglophones. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
+            On y trouve des écoles francophones et anglophones, et plusieurs rues matures près des parcs. Le Vieux-Aylmer a un cachet patrimonial, avec des propriétés de caractère et des commerces de proximité dans une ambiance de village.
           </p>
           <p className="prose-body">
             Pour les acheteurs en provenance d'Ottawa, Aylmer représente souvent un gain immédiat en espace et en qualité de vie pour le même budget, ou moins. Côté vendeur, la présentation et un prix aligné sur les ventes récentes décident si la maison part vite ou si elle reste sur le marché.
@@ -188,7 +182,7 @@ const AylmerPage = () => (
         <p className="prose-body mt-4 max-w-2xl">
           Aylmer n'est pas homogène. Chaque sous-secteur a sa personnalité, son profil d'acheteur et ses prix. Voici ce qu'il faut savoir avant de chercher.
         </p>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {subSectors.map((s) => (
             <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>

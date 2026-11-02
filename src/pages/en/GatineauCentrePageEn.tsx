@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Is it a good area to invest in a plex?",
-    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand is supported by the Cégep de l'Outaouais, the hospital, and services within accessible reach. As anywhere, run a return analysis before you buy. I do it with you.",
+    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand has dropped since COVID, here as elsewhere in the Outaouais. So run a return analysis before you buy. I do it with you.",
   },
 ];
 

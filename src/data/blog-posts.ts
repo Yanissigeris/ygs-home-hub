@@ -961,7 +961,7 @@ L'investissement immobilier multi-logements reste une stratégie populaire en Ou
 
 ### L'attrait du plex à Gatineau
 
-Gatineau offre un environnement favorable à l'investissement locatif. La demande locative est forte, portée par la proximité d'Ottawa et de sa fonction publique fédérale, ainsi que par les étudiants.
+Le plex reste populaire à Gatineau, à cause des prix d'entrée et de la proximité d'Ottawa. Mais la demande locative a baissé depuis la COVID, et ça doit entrer dans les chiffres.
 
 ### Analyser la rentabilité
 
@@ -994,7 +994,7 @@ Multi-unit real estate investment remains a popular strategy in the Outaouais. B
 
 ### The Appeal of Plex Investing in Gatineau
 
-Gatineau offers a favourable environment for rental investment. Rental demand is strong, driven by proximity to Ottawa and its federal public service, as well as by students.
+Plexes remain popular in Gatineau, because of entry prices and proximity to Ottawa. But rental demand has dropped since COVID, and that has to show up in the numbers.
 
 ### Analyzing Profitability
 
