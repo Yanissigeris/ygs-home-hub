@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import RelatedPages from "@/components/RelatedPages";
-import heroImg from "@/assets/hero-outaouais-gen.webp";
+import heroImg from "@/assets/hero-outaouais-photo.webp";
 import yanisPortrait from "@/assets/yanis-portrait-nobg.webp";
 import yanisPortraitSm from "@/assets/yanis-portrait-nobg-sm.webp";
 import yanisPortraitMd from "@/assets/yanis-portrait-nobg-md.webp";
@@ -69,8 +69,8 @@ const OutaouaisHubPage = () => (
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"
-      heroVideo="/hero-interior-720.mp4"
-      heroVideoPoster="/hero-video-poster.webp"
+      heroBgImage={heroImg}
+      photoCredit={{ text: "Photo : cjuneau, CC BY 2.0, Wikimedia Commons (recadrée)", href: "https://commons.wikimedia.org/wiki/File:Ridge_Road,_Gatineau_Park_(7985502539).jpg" }}
       agentImage={yanisPortrait}
       agentImageSm={yanisPortraitSm}
       agentImageMd={yanisPortraitMd}

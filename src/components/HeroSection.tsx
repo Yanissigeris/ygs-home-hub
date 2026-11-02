@@ -95,6 +95,8 @@ interface HeroSectionProps {
   heroBgPicture?: HeroPicture;
   heroVideo?: string;
   heroVideoPoster?: string;
+  /** Crédit photo (licence Creative Commons) affiché en petit, en bas à gauche du hero. */
+  photoCredit?: { text: string; href: string };
   hideCredentialsStrip?: boolean;
   hideRecognitionCard?: boolean;
   /** Show the 3-stat proof bar at the bottom of the hero. Home page only. */
@@ -151,6 +153,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       showProofBar = false,
       petrolGradient = true,
       sansTitle = false,
+      photoCredit,
     },
     ref
   ) => {
@@ -981,7 +984,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </>
         )}
 
-
+        {photoCredit && (
+          <a
+            href={photoCredit.href}
+            target="_blank"
+            rel="noopener noreferrer license"
+            className="absolute bottom-2 left-3 z-[25]"
+            style={{ fontSize: "10px", color: "rgba(255,255,255,0.75)", textShadow: "0 1px 3px rgba(0,0,0,0.6)", textDecoration: "none" }}
+          >
+            {photoCredit.text}
+          </a>
+        )}
       </section>
       </>
     );
