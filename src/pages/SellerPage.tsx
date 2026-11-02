@@ -22,10 +22,10 @@ import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "l
 import heroImg from "@/assets/hero-vendre-gatineau.webp";
 
 const painPoints = [
-{ icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Le marché de Gatineau évolue. Vous ne voulez pas manquer la fenêtre, mais pas non plus vendre sans plan." },
-{ icon: CheckCircle2, title: "Combien vaut ma propriété?", text: "Un prix réaliste basé sur les ventes récentes dans votre secteur en Outaouais." },
+{ icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Ça dépend de votre secteur et de votre prochain projet. Je vous montre les délais de vente actuels près de chez vous, puis on choisit le moment ensemble." },
+{ icon: CheckCircle2, title: "Combien vaut ma propriété?", text: "Vous recevez une fourchette de valeur et trois prix d'affichage, appuyés sur les ventes récentes de votre secteur." },
 { icon: CheckCircle2, title: "Faut-il faire des travaux avant?", text: "Certains investissements rapportent dans le marché local. D'autres non. On fait le tri ensemble." },
-{ icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "La coordination vente-achat à Gatineau demande un plan dès le départ, surtout si vous restez dans la région." }];
+{ icon: CheckCircle2, title: "Comment vendre sans me retrouver coincé?", text: "Si vous achetez aussi, on fixe l'ordre dès le départ : vendre d'abord, acheter d'abord ou acheter avec une condition de vente. Je vous explique le risque de chaque option avant que vous signiez." }];
 
 
 const fears = [
@@ -77,10 +77,10 @@ const SellerPage = () =>
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Stratégie locale" title="Adapter votre vente au marché de votre secteur" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Les conditions de vente varient selon le secteur, le type de propriété et la gamme de prix. L'analyse des comparables récents sert à établir une stratégie adaptée à votre propriété au moment de sa mise en marché.
+        Une maison d'Aylmer ne se compare pas à une maison de Buckingham, et un condo ne se vend pas comme une unifamiliale. Avant de parler de prix, je regarde ce qui s'est vendu près de chez vous, dans votre type de propriété, ces derniers mois.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Le prix de départ, la présentation et la stratégie de mise en marché influencent l'intérêt des acheteurs. Une analyse locale aide à positionner la propriété en fonction de ses caractéristiques et de la concurrence au moment de la vente.
+        Le prix de départ compte plus que tout le reste. Affichée trop haut, une maison attire peu de visites et finit souvent par baisser. La présentation et la mise en marché viennent ensuite, et elles se préparent avant la mise en vente.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         C'est pour ça que mon approche part de la réalité du marché dans votre secteur, pas d'un chiffre pour vous faire plaisir.
@@ -117,7 +117,7 @@ const SellerPage = () =>
       title="Savoir où vous en êtes, à votre rythme" />
     
       <p className="prose-body mt-5">
-        Avant de vendre, les propriétaires en Outaouais veulent d'abord savoir ce que vaut leur propriété et quelles options conviennent à leur calendrier. Le but est de bâtir un plan clair adapté à votre secteur, que ce soit à Aylmer, à Hull, au Plateau ou à Buckingham.
+        Avant de vendre, vous voulez probablement savoir une chose : ce que vaut votre maison, sans pression. On part de là. Ensuite, on regarde votre calendrier et ce que le marché de votre secteur permet.
       </p>
       <p className="prose-body mt-4">
         J'aide des vendeurs partout en Outaouais depuis 2017, et je sais qu'une bonne vente se prépare. Tout part d'une valeur basée sur les comparables locaux. Viennent ensuite le prix et les améliorations qui rapportent, puis une mise en marché pensée pour les bons acheteurs, y compris ceux d'Ottawa qui veulent traverser la rivière.
