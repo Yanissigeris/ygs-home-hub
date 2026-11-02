@@ -101,6 +101,8 @@ interface HeroSectionProps {
   showProofBar?: boolean;
   /** Add a diagonal petrol gradient overlay over the hero background image. Defaults to true. Set to false on the homepage. */
   petrolGradient?: boolean;
+  /** Accueil : H1 en DM Sans 600, « Outaouais » en bleu. Mêmes mots, même balise. */
+  sansTitle?: boolean;
 }
 
 /* Stats data */
@@ -148,6 +150,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       hideRecognitionCard,
       showProofBar = false,
       petrolGradient = true,
+      sansTitle = false,
     },
     ref
   ) => {
@@ -709,13 +712,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
 
                   <h1
-                    className="hero-fade-in"
+                    className={sansTitle ? "hero-fade-in hero-h1-sans" : "hero-fade-in"}
                     style={{
-                      fontFamily: "var(--serif)",
-                      fontWeight: 400,
-                      fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
-                      lineHeight: 1.05,
-                      letterSpacing: "-0.015em",
+                      fontFamily: sansTitle ? "var(--sans)" : "var(--serif)",
+                      fontWeight: sansTitle ? 600 : 400,
+                      fontSize: sansTitle ? "clamp(2rem, 4.4vw, 3.5rem)" : "clamp(2.25rem, 5.5vw, 4rem)",
+                      lineHeight: sansTitle ? 1.06 : 1.05,
+                      letterSpacing: sansTitle ? "-0.018em" : "-0.015em",
                       color: "var(--cream)",
                       textShadow: "0 2px 12px rgba(0,0,0,0.5)",
                       margin: 0,
@@ -723,7 +726,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       animationDelay: "0.20s",
                     }}
                   >
-                    {title}
+                    {sansTitle
+                      ? title.split(/(Outaouais)/).map((part, i) =>
+                          part === "Outaouais" ? (
+                            <span key={i} style={{ color: "var(--gold-bright)" }}>{part}</span>
+                          ) : (
+                            <React.Fragment key={i}>{part}</React.Fragment>
+                          )
+                        )
+                      : title}
                   </h1>
                 </>
               )}
