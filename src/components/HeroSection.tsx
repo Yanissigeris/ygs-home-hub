@@ -729,7 +729,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     {sansTitle
                       ? title.split(/(Outaouais)/).map((part, i) =>
                           part === "Outaouais" ? (
-                            <span key={i} style={{ color: "var(--gold-bright)" }}>{part}</span>
+                            <span key={i} style={{ color: "var(--action)" }}>{part}</span>
                           ) : (
                             <React.Fragment key={i}>{part}</React.Fragment>
                           )
