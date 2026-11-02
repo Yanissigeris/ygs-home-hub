@@ -38,7 +38,6 @@
          fonts.googleapis.com / fonts.gstatic.com. font-display: swap conserve le
          paint immédiat avec le fallback système, puis swap sans FOIT. -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-latin.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-latin.woff2" crossorigin />
     <style>
       /* DM Sans — variable, weight 100-1000 covers 300/400/500 requested */
       @font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url('/fonts/dmsans-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
@@ -57,12 +56,12 @@
       html,body{margin:0;padding:0;background:#000E35;color:#F7F4EE;font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
       #root{min-height:100vh;background:#000E35}
       .hero-crit{background:#000E35;min-height:88svh}
-      h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif}
+      h1,h2,h3,h4{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-weight:600}
       /* Pre-paint hero shell — visible before React hydrates, matches HeroSection.
          This becomes the FCP candidate on slow mobile (~1.5-3s earlier). */
       .ygs-prepaint{position:fixed;inset:0;background:#000E35;z-index:0;pointer-events:none}
-      .ygs-prepaint__title{position:absolute;top:38%;left:5%;right:5%;color:#F7F4EE;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.1rem,2.5vw,1.5rem);letter-spacing:.01em;line-height:1.2;text-align:left;opacity:.85}
-      .ygs-prepaint__title b{display:block;color:#3366FF;font-weight:600;font-size:clamp(2.4rem,9vw,5rem);font-style:italic;line-height:1;margin-top:.3rem}
+      .ygs-prepaint__title{position:absolute;top:38%;left:5%;right:5%;color:#F7F4EE;font-family:'DM Sans',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:clamp(1rem,2.2vw,1.3rem);letter-spacing:.01em;line-height:1.2;text-align:left;opacity:.85}
+      .ygs-prepaint__title b{display:block;color:#3366FF;font-weight:600;font-size:clamp(2rem,8vw,4.2rem);font-style:normal;letter-spacing:-.02em;line-height:1;margin-top:.3rem}
       #root:not(:empty)~.ygs-prepaint{display:none}
       @keyframes img-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
       .img-shimmer{background:linear-gradient(90deg,#F7F4EE 25%,#ede9e0 50%,#F7F4EE 75%);background-size:200% 100%;animation:img-shimmer 1.5s infinite}

@@ -446,8 +446,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             <div className="max-w-[40rem]">
               {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
               <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
-              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
-              <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
+              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-normal leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
+              <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-normal leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
                 <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
@@ -661,7 +661,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           style={{ minHeight: "100svh" }}
         >
           <div
-            className={`pointer-events-auto ${headline ? "w-[92%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
+            className={`pointer-events-auto ${headline || sansTitle ? "w-[92%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
           >
             <div className="md:pt-[30px] md:pl-[3%] md:pr-0">
               {(cities && cities.length > 0) ? (
@@ -700,7 +700,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 >
                   {title.split(/(Outaouais)/).map((part, i) =>
                     part === "Outaouais" ? (
-                      <em key={i} style={{ fontStyle: "italic", fontWeight: 300 }}>{part}</em>
+                      <span key={i} style={{ color: "var(--gold-bright)" }}>{part}</span>
                     ) : (
                       <React.Fragment key={i}>{part}</React.Fragment>
                     )
@@ -729,7 +729,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     {sansTitle
                       ? title.split(/(Outaouais)/).map((part, i) =>
                           part === "Outaouais" ? (
-                            <span key={i} style={{ color: "var(--gold-bright)" }}>{part}</span>
+                            <span key={i} style={{ color: "var(--action)" }}>{part}</span>
                           ) : (
                             <React.Fragment key={i}>{part}</React.Fragment>
                           )
@@ -741,13 +741,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {headline && (
                 <p
-                  className="hero-fade-in mt-3 sm:mt-4 max-w-[520px]"
+                  className={`hero-fade-in mt-3 sm:mt-4 ${sansTitle ? "max-w-[640px]" : "max-w-[520px]"}`}
                   style={{
                     animationDelay: "0.26s",
                     color: "var(--cream)",
-                    fontFamily: "var(--serif)",
-                    fontWeight: 400,
-                    fontSize: "clamp(1.15rem, 2vw, 1.6rem)",
+                    fontFamily: sansTitle ? "var(--sans)" : "var(--serif)",
+                    fontWeight: sansTitle ? 500 : 400,
+                    fontStyle: "normal",
+                    textWrap: "balance",
+                    fontSize: sansTitle ? "clamp(1.1rem, 1.6vw, 1.35rem)" : "clamp(1.15rem, 2vw, 1.6rem)",
                     lineHeight: 1.35,
                     textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                   }}
@@ -757,7 +759,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               <p
-                className={`hero-fade-in ${headline ? (subtitleShort ? "mt-2.5 sm:mt-4" : "mt-3 sm:mt-4") : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-light`}
+                className={`hero-fade-in ${headline ? (subtitleShort ? "mt-2.5 sm:mt-4" : "mt-3 sm:mt-4") : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-normal`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -771,7 +773,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {subtitleShort ?? subtitle}
               </p>
               <p
-                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-light`}
+                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-normal`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -787,7 +789,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
 
               {(primaryCta || secondaryCta) && (
                 <div
-                  className={`hero-fade-in ${subtitleShort ? "mt-5" : "mt-6"} sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline ? " sm:flex-wrap" : ""}`}
+                  className={`hero-fade-in ${subtitleShort ? "mt-5" : "mt-6"} sm:mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5${headline || sansTitle ? " sm:flex-wrap" : ""}`}
                   style={{ animationDelay: "0.44s" }}
                 >
 
@@ -810,7 +812,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
-                  {secondaryCta && (headline ? (
+                  {secondaryCta && (headline || sansTitle ? (
                     <HeroCtaLink
                       href={secondaryCta.href}
                       className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"

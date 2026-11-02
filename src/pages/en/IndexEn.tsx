@@ -43,7 +43,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <HeroSection
       
       title="Your real estate broker in Gatineau and Outaouais"
-      headline="I give you the numbers and the options. You decide."
       subtitle="More than 300 transactions in the Outaouais since 2017. To sell, buy or invest, we start from comparable sales in your area."
       subtitleShort="Sell, buy or invest, based on sales in your area."
       sansTitle

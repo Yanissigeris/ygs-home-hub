@@ -63,7 +63,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               >
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold-dark)" }} aria-hidden="true" />
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
-                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 300, color: "hsl(var(--muted-foreground))", lineHeight: 1.75 }}>{g.subtitle}</p>
+                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.75 }}>{g.subtitle}</p>
                 <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
               </button>
             ))}
@@ -81,7 +81,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 onClick={() => setModalGuide(g.guideType)}
               >
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
-                <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 300, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
+                <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
                 <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
                   {lang === "en" ? "Get it →" : "Recevoir →"}
                 </span>

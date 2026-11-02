@@ -4,8 +4,8 @@ const ValuationTestimonial = ({ quote, cite }: { quote: string; cite: string }) 
     <div className="section-container max-w-3xl mx-auto text-center">
       <div className="mx-auto h-px w-10 bg-[var(--gold)] mb-4" aria-hidden="true" />
       <blockquote
-        className="text-[var(--ink)] italic"
-        style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", lineHeight: 1.4 }}
+        className="text-[var(--ink)]"
+        style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 2.1vw, 1.55rem)", fontWeight: 500, lineHeight: 1.45 }}
       >
         {quote}
         <cite

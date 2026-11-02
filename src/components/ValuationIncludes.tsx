@@ -80,7 +80,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                 <div className="relative grid grid-cols-3 gap-2">
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[0]}
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
@@ -89,7 +89,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.75rem", lineHeight: 1.1 }}>
+                    <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.1rem, 4.5vw, 1.6rem)", fontWeight: 600, lineHeight: 1.1 }}>
                       {t.amounts[1]}
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
@@ -98,7 +98,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
-                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", lineHeight: 1.1 }}>
+                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[2]}
                     </span>
                     <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>

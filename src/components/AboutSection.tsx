@@ -56,7 +56,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 fontFamily: "var(--serif)",
                 fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
                 fontWeight: 400,
-                fontStyle: "italic",
+                fontStyle: "normal",
                 color: "var(--cream)",
                 lineHeight: 1.3,
               }}
