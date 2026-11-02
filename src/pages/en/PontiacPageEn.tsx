@@ -36,11 +36,11 @@ const faq = [
   },
   {
     q: "Are wells, septic and propane standard in Pontiac?",
-    a: "Mostly, yes. The Municipality provides water and sewer service in the Quyon sector. Elsewhere, artesian wells and septic systems are the norm, and propane (or oil/wood) heating is common. None of these are problems on their own, they're standard semi-rural Quebec, but they require a thorough professional inspection: water potability, well flow rate, septic tank age and percolation field, propane tank ownership status, and (where relevant) wood-stove WETT certification. I include all of these in every Pontiac inspection clause.",
+    a: "Mostly, yes. The Municipality provides water and sewer service in the Quyon sector. Elsewhere, artesian wells and septic systems are the norm, and propane (or oil/wood) heating is common. None of these are problems on their own. They're standard in semi-rural Quebec, but they call for a thorough professional inspection: water potability, well flow rate, septic tank age and field, propane tank ownership and, where relevant, WETT certification for a wood stove. I include all of these in every Pontiac inspection clause.",
   },
   {
     q: "Is Pontiac in a flood zone along the Ottawa River?",
-    a: "Parts of Pontiac do sit in the regulated 0-20-year and 20-100-year flood zones along the Ottawa River, mapped by the MRC des Collines-de-l'Outaouais after the 2017 and 2019 floods. Properties in those zones can have insurance, financing and reconstruction restrictions. Before any offer on a riverfront or near-river property, I pull the official flood-zone map and the property's location relative to the high-water mark, and I walk you through what that means for insurability and resale.",
+    a: "Parts of Pontiac do sit in the regulated 0-20-year and 20-100-year flood zones along the Ottawa River, mapped by the MRC des Collines-de-l'Outaouais after the 2017 and 2019 floods. Properties in those zones can have insurance, financing and reconstruction restrictions. Before any offer on a riverfront or near-river property, I pull the official flood-zone map and check where the property sits relative to the high-water mark. Then I walk you through what that means for insurance and resale.",
   },
 ];
 

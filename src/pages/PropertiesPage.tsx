@@ -52,14 +52,14 @@ const PropertiesPage = () => {
 
   return (
   <>
-    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau — Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." ogImage="https://yanisgauthier.com/og/og-seller.jpg" canonical={isAlias ? CANONICAL : undefined} />
+    <PageMeta title="Propriétés à vendre · Gatineau et Outaouais" description="Maisons, condos, plex et terrains à Gatineau : Aylmer, Hull, Plateau, Buckingham. Parcourez les propriétés disponibles en Outaouais." ogImage="https://yanisgauthier.com/og/og-seller.jpg" canonical={isAlias ? CANONICAL : undefined} />
     <HeroSection
       overline="Propriétés · Gatineau et Outaouais"
       title="Trouvez votre propriété en Outaouais"
-      subtitle="Maisons, condos, plex et terrains — parcourez les propriétés disponibles dans tous les secteurs de Gatineau et de l'Outaouais."
+      subtitle="Maisons, condos, plex et terrains : parcourez les propriétés disponibles dans tous les secteurs de Gatineau et de l'Outaouais."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
-      trustLine="Accompagnement stratégique."
+      trustLine="Accès à toutes les inscriptions Centris."
       heroBgImage={heroImg}
     />
 
@@ -67,7 +67,7 @@ const PropertiesPage = () => {
       <SectionHeading
         overline="Inscriptions actives"
         title="Mes propriétés actuelles"
-        subtitle="Consultez mes inscriptions — maisons, condos, plex et terrains à Gatineau et en Outaouais."
+        subtitle="Mes inscriptions : maisons, condos, plex et terrains à Gatineau et en Outaouais."
       />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {properties.filter(p => ["active", "rent", "rented"].includes(p.status)).map(property => (
@@ -121,10 +121,10 @@ const PropertiesPage = () => {
         title="Recevez les meilleures propriétés en premier"
       />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Actif en immobilier en Outaouais depuis 2017, j'ai accès à toutes les inscriptions Centris dans Gatineau, Hull, Aylmer, le Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac, y compris les opportunités pré-MLS et les inscriptions pas encore syndiquées sur les portails publics. Bien briefé sur vos critères, je peux vous signaler une propriété pertinente en quelques heures plutôt qu'en quelques jours.
+        Je suis courtier en Outaouais depuis 2017. J'ai accès à toutes les inscriptions Centris de Gatineau et des environs, de Chelsea à Pontiac, y compris des propriétés pas encore affichées sur les portails publics. Quand je connais vos critères, je peux vous signaler une propriété en quelques heures plutôt qu'en quelques jours.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Pour la plupart des acheteurs actifs, cette longueur d'avance fait la différence entre visiter une propriété sans pression et arriver dans une situation à offres multiples. Dites-moi ce que vous cherchez, secteur, plafond de prix, incontournables, dealbreakers, et je fais le travail de filtrage pour vous.
+        Ces quelques heures d'avance vous laissent visiter sans pression, avant que les offres multiples commencent. Dites-moi votre secteur et votre plafond de prix, puis ce qui n'est pas négociable pour vous. Je fais le tri.
       </p>
     </ContentBlock>
 

@@ -45,7 +45,7 @@ const MarketReportPageEn = () => (
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
     {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "market")} />
-    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide — sell at the best price" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
+    <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide: sell at the right price" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
     <CTASection dark title="Get the next market report" text="Contact me to be on the list, you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>

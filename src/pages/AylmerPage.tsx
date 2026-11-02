@@ -76,7 +76,7 @@ const buyerCols = [
     items: [
       "Les propriétés bien positionnées partent vite dans les secteurs en demande",
       "Les offres multiples sont fréquentes à Lucerne et Rivermead",
-      "Une visite rapide peut faire la différence",
+      "Quand une propriété est bien placée, visitez vite",
       "L'inspection pré-offre est une option à considérer",
       "Prévoyez une marge au-dessus du prix demandé en zone compétitive",
     ],
@@ -240,7 +240,7 @@ const AylmerPage = () => (
             Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue, pas juste par secteur, fait une différence réelle sur votre prix final.
           </p>
           <p className="prose-body">
-            Ce que j'apporte concrètement : une évaluation basée sur les vraies ventes récentes dans votre micro-secteur, des photos professionnelles, une stratégie de prix définie avec vous, et une mise en marché ciblée pour atteindre les acheteurs sérieux, incluant les relocalisateurs d'Ottawa qui cherchent activement à Aylmer.
+            Ce que j'apporte concrètement : une évaluation basée sur les ventes récentes de votre micro-secteur, des photos professionnelles et une stratégie de prix définie avec vous. Ensuite, une mise en marché qui rejoint les acheteurs sérieux, y compris ceux d'Ottawa qui cherchent à Aylmer.
           </p>
           <Button className="mt-4" size="lg" asChild>
             <Link to="/evaluation-maison-aylmer/">Évaluation gratuite de votre propriété →</Link>
@@ -270,7 +270,7 @@ const AylmerPage = () => (
       <div className="section-container">
         <h2 className="mt-3">La vie quotidienne à Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
-          Ce que les chiffres ne disent pas sur Aylmer, la qualité de vie réelle au quotidien.
+          Ce que les chiffres ne disent pas sur Aylmer : la vie de tous les jours.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (

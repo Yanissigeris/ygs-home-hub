@@ -25,7 +25,7 @@ const considerations = [
 const steps = [
   { num: "01", title: "Consultation initiale", desc: "On parle de votre budget et de vos priorités, et je réponds à vos questions sur l'achat à Gatineau." },
   { num: "02", title: "Recherche ciblée", desc: "Je vous présente les propriétés qui correspondent à votre profil et à votre budget, à Aylmer, à Hull, au Plateau ou à Buckingham." },
-  { num: "03", title: "Accompagnement complet", desc: "De l'offre à la signature chez le notaire, je vous accompagne jusqu'à la remise des clés de votre première propriété." },
+  { num: "03", title: "Jusqu'à la remise des clés", desc: "De l'offre à la signature chez le notaire, je suis là à chaque étape de votre premier achat." },
 ];
 
 
@@ -45,7 +45,7 @@ const FirstTimeBuyerPage = () => (
       subtitle="Devenir propriétaire pour la première fois, c'est emballant et parfois stressant. Je vous aide à franchir chaque étape : budget, secteur, offre et processus."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Guide acheteur", href: "/guide-acheteur-gatineau/" }}
-      trustLine="Accompagnement personnalisé."
+      trustLine="À votre rythme, chiffres en main."
       heroBgImage={heroImg}
     />
 <CardGrid
@@ -63,7 +63,7 @@ const FirstTimeBuyerPage = () => (
     <ProcessSteps steps={steps} background="alt" />
 
     <ContentBlock narrow>
-      <SectionHeading title="Votre premier achat mérite un bon accompagnement" />
+      <SectionHeading title="Un premier achat, une étape à la fois" />
       <p className="prose-body mt-5">
         La première propriété est souvent le plus gros investissement de votre vie. Mon rôle est de vous aider à prendre une décision éclairée, à votre rythme et chiffres en main.
       </p>

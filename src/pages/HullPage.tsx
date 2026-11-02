@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: "Hull est-il un bon choix pour les fonctionnaires fédéraux?",
-    a: "Oui, plusieurs ministères et organismes fédéraux ont leurs bureaux à Hull, notamment à Place du Portage et aux Terrasses de la Chaudière. Pour ceux qui travaillent à Ottawa, on traverse les ponts à pied ou à vélo depuis plusieurs secteurs de Hull.",
+    a: "Oui, plusieurs ministères et organismes fédéraux ont leurs bureaux à Hull, par exemple à Place du Portage et aux Terrasses de la Chaudière. Pour ceux qui travaillent à Ottawa, on traverse les ponts à pied ou à vélo depuis plusieurs secteurs de Hull.",
   },
 ];
 

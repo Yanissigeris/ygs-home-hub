@@ -49,7 +49,7 @@ const questions = [
 const steps = [
   { num: "01", title: "Analyse des chiffres", desc: "Revenus, dépenses, valeur marchande et potentiel locatif : on part des faits." },
   { num: "02", title: "Recommandation", desc: "Garder, vendre, refinancer ou acheter : l'option qui convient à votre situation." },
-  { num: "03", title: "Exécution et accompagnement", desc: "De la décision à la transaction, un accompagnement complet et transparent." },
+  { num: "03", title: "Jusqu'à la transaction", desc: "De la décision à la signature chez le notaire, je m'occupe de chaque étape et je vous tiens au courant." },
 ];
 
 

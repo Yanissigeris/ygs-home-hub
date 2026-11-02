@@ -31,7 +31,7 @@ const zones = [
 
 const services = [
   { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau/", detail: "Gratuite et sans engagement" },
-  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau/", detail: "Stratégie et accompagnement" },
+  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau/", detail: "Prix et mise en marché" },
   { label: "Acheter à Gatineau", href: "/acheter-a-gatineau/", detail: "Guide acheteur complet" },
   { label: "Consultation personnalisée", href: "/contact-yanis/", detail: "Parlons de votre projet" },
 ];
@@ -84,9 +84,9 @@ const OutaouaisHubPage = () => (
 {/* Intro */}
     <section className="section-padding bg-background">
       <div className="section-container max-w-3xl">
-        <SectionHeading overline="Votre courtier local" title="Un accompagnement clair, partout en Outaouais" centered />
+        <SectionHeading overline="Votre courtier local" title="Des chiffres clairs, partout en Outaouais" centered />
         <p className="mt-6 text-base leading-relaxed text-muted-foreground text-center">
-          Je suis Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau. J'accompagne les vendeurs, acheteurs et investisseurs dans l'ensemble de l'Outaouais, de Hull à Chelsea, d'Aylmer à Cantley. Mon approche : des conseils basés sur les données, une stratégie personnalisée et un accompagnement transparent du début à la fin.
+          Je suis Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau, et je travaille dans toute la région, de Hull à Chelsea et d'Aylmer à Cantley. Avant chaque décision, je vous montre les ventes comparables de votre secteur et je vous explique ce qu'elles veulent dire pour vous.
         </p>
       </div>
     </section>
@@ -138,15 +138,14 @@ const OutaouaisHubPage = () => (
     {/* Why work with me */}
     <section className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-3xl">
-        <SectionHeading overline="Pourquoi moi" title="Un courtier local, bilingue et transparent" centered />
+        <SectionHeading overline="Pourquoi moi" title="Un courtier local et bilingue" centered />
         <ul className="mt-8 space-y-3">
           {[
             "Courtier RE/MAX, Hall of Fame, reconnu en Outaouais",
             "Bilingue français-anglais, pour la clientèle des deux côtés de la rivière",
             "Revente résidentielle, premier achat et investissement plex",
             "Évaluations appuyées sur les ventes comparables du secteur",
-            "Accompagnement de la relocalisation Ottawa → Gatineau et Montréal → Gatineau",
-            "Je vous donne les chiffres et les options, vous décidez",
+            "Relocalisation d'Ottawa ou de Montréal vers Gatineau",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />

@@ -5,11 +5,13 @@ import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;640;900&format=avif;w
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
   quote: "« Je vous donne les chiffres et les options, vous décidez. »",
-  body: `Courtier immobilier en Outaouais, j'accompagne vendeurs, acheteurs et investisseurs avec une approche simple, stratégique et humaine. Mon objectif : vous aider à prendre une bonne décision, au bon moment, avec les bonnes informations.
+  body: `Je suis courtier immobilier résidentiel depuis 2017, avec plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Mes clients sont autant des vendeurs et des acheteurs que des investisseurs.
 
-Membre de l'Équipe Marty Waite depuis le début et actif en immobilier résidentiel depuis 2017, j'ai eu la chance d'être reconnu par RE/MAX : Club Platine, Club 100% et Temple de la renommée. Mais ce qui me motive, c'est de savoir que mes clients prennent des décisions éclairées.
+Avant de parler de prix, je vous montre les ventes comparables de votre secteur. Vous voyez les mêmes chiffres que moi, puis c'est vous qui choisissez.
 
-Investisseur immobilier moi-même, je sais également analyser en profondeur les opportunités en multi-logement. Mon expérience concrète en flips immobiliers, combinée à ma formation en gestion de projet (AEC), fait de moi un allié incontournable pour tout projet immobilier.`,
+Comme investisseur, j'ai rénové et revendu des propriétés, et j'ai une AEC en gestion de projet. Quand vous regardez un plex ou une maison à rénover, je sais lire les loyers et estimer les travaux.
+
+Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Temple de la renommée (2024).`,
   credentials: "Depuis 2017 · Club Platine · Club 100% · Temple de la renommée",
   cta: "En savoir plus",
   ctaHref: "/contact-yanis/",
@@ -19,11 +21,13 @@ Investisseur immobilier moi-même, je sais également analyser en profondeur les
 const contentEn = {
   overline: "WHY YANIS GAUTHIER-SIGERIS?",
   quote: '"I give you the numbers and the options, you decide."',
-  body: `Real estate broker in Outaouais, I support sellers, buyers and investors with a simple, strategic and human approach. My goal: help you make a good decision, at the right time, with the right information.
+  body: `I've been a residential real estate broker since 2017, with more than 300 transactions in the Outaouais, mostly in Aylmer and Hull. I work with sellers and buyers as much as with investors, and I've worked with military families since 2017.
 
-A member of the Marty Waite Team since the beginning and active in residential real estate since 2017, I've been recognized by RE/MAX: Platinum Club, 100% Club and Hall of Fame. But what motivates me is knowing my clients make informed decisions.
+Before we talk price, I show you the comparable sales in your area. You see the same numbers I do, then you choose.
 
-A real estate investor myself, I can also analyze multi-unit opportunities in depth. My hands-on experience in property flips, combined with my project management training, makes me an indispensable ally for any real estate project.`,
+As an investor, I've renovated and resold properties, and I have a college diploma (AEC) in project management. If you're looking at a plex or a house that needs work, I can read the rents and estimate the renovation costs.
+
+I've been with the Marty Waite Team at RE/MAX Direct since day one. RE/MAX has recognized me with the 100% Club, the Platinum Club and the Hall of Fame (2024).`,
   credentials: "Since 2017 · Platinum Club · 100% Club · Hall of Fame",
   cta: "Learn more",
   ctaHref: "/en/contact/",

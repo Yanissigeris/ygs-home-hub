@@ -41,10 +41,10 @@ const related = [
 const PropertiesPageEn = () => (
   <>
     <PageMeta title="Properties for Sale in Gatineau" description="Houses, condos, plexes and land in Gatineau. Browse available properties in all Outaouais neighborhoods." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land — browse available properties in all Gatineau and Outaouais neighborhoods." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Strategic guidance." heroBgImage={heroImg} />
+    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land: browse available properties in every part of Gatineau and the Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Access to every Centris listing." heroBgImage={heroImg} />
 
     <ContentBlock narrow={false}>
-      <SectionHeading overline="Active listings" title="My current listings" subtitle="Browse my listings — houses, condos, plexes and land in Gatineau and Outaouais." />
+      <SectionHeading overline="Active listings" title="My current listings" subtitle="My listings: houses, condos, plexes and land in Gatineau and the Outaouais." />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {properties.filter(p => ["active", "rent", "rented"].includes(p.status)).map(property => (<PropertyCard key={property.id} property={property} />))}
       </div>
@@ -67,10 +67,10 @@ const PropertiesPageEn = () => (
     <ContentBlock narrow>
       <SectionHeading overline="Priority access" title="Get the best properties first" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Active in Outaouais real estate since 2017, I have access to every Centris listing across Gatineau, Hull, Aylmer, the Plateau, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers and Pontiac, including pre-MLS opportunities and listings not yet syndicated to public portals. Properly briefed on your criteria, I can flag a fit within hours of it surfacing instead of days.
+        I've been a broker in the Outaouais since 2017. I have access to every Centris listing in Gatineau and the surrounding area, from Chelsea to Pontiac, including properties not yet posted on public portals. Once I know your criteria, I can flag a property within hours instead of days.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        For most active buyers, that head-start is the difference between visiting a property unhurried and arriving to a multi-offer scenario. Tell me what you're looking for, neighborhood, price ceiling, must-haves, deal-breakers, and I do the screening work for you.
+        Those few hours let you visit without pressure, before multiple offers start coming in. Tell me your area and your price ceiling, then what you won't compromise on. I'll do the sorting.
       </p>
     </ContentBlock>
 

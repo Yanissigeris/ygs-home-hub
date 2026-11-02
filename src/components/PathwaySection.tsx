@@ -18,7 +18,7 @@ const pathwaysFr: Pathway[] = [
   {
     num: "01",
     title: "Plex & investissement",
-    text: "Rendement réel, valeur marchande et timing : les vrais chiffres avant de prendre une décision.",
+    text: "Les loyers et la valeur marchande, chiffrés avant que vous preniez une décision.",
     cta: "Demander une analyse plex",
     href: "/analyse-plex-gatineau/",
     badge: "Priorité investisseurs",
@@ -27,7 +27,7 @@ const pathwaysFr: Pathway[] = [
   {
     num: "02",
     title: "Vendre ma propriété en Outaouais",
-    text: "Évaluation réaliste, stratégie de prix et mise en marché ciblée pour maximiser votre résultat.",
+    text: "Un prix appuyé sur les ventes de votre secteur, puis une mise en marché pensée pour les bons acheteurs.",
     cta: "Obtenir mon évaluation",
     href: "/evaluation-gratuite-gatineau/",
     badge: null,
@@ -36,7 +36,7 @@ const pathwaysFr: Pathway[] = [
   {
     num: "03",
     title: "Acheter à Gatineau",
-    text: "Les bons secteurs, le bon budget et un accompagnement terrain pour acheter avec confiance.",
+    text: "Le secteur qui vous convient et un budget réaliste, avec des visites bien préparées.",
     cta: "Voir les propriétés",
     href: "/proprietes/",
     badge: null,
@@ -48,7 +48,7 @@ const pathwaysEn: Pathway[] = [
   {
     num: "01",
     title: "Plex & Investment",
-    text: "Returns, market value and timing: the real numbers before the decision.",
+    text: "Rents and market value, in numbers, before you make a decision.",
     cta: "Request a plex analysis",
     href: "/en/plex-analysis/",
     badge: "Investors first",
@@ -57,7 +57,7 @@ const pathwaysEn: Pathway[] = [
   {
     num: "02",
     title: "Sell my property",
-    text: "Realistic valuation, pricing strategy and targeted marketing to maximize your result.",
+    text: "A price backed by sales in your area, then marketing aimed at the right buyers.",
     cta: "Get my valuation",
     href: "/en/home-valuation/",
     badge: null,
@@ -78,7 +78,7 @@ const headingFr = {
   overline: "Choisissez votre prochaine étape",
   titleFirst: "Où en êtes-vous dans",
   titleAccent: "votre projet?",
-  subtitle: "Trois chemins selon votre situation. Choisissez celui qui vous correspond, vous serez accompagné de A à Z.",
+  subtitle: "Trois chemins selon votre situation. Choisissez le vôtre, on part de là.",
 };
 
 const headingEn = {
