@@ -28,7 +28,7 @@ const InstagramGrid = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <h2 className="mt-2 font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-light tracking-tight leading-[1.15]" style={{ color: "#F7F4EE" }}>
+            <h2 className="mt-2 font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-semibold tracking-tight leading-[1.15]" style={{ color: "#F7F4EE" }}>
               {t.title}
               <br />
               <em style={{ color: "var(--gold)" }}>{t.titleItalic}</em>

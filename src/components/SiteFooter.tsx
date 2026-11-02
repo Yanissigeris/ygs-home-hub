@@ -115,7 +115,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
         {/* ── Final CTA block ── */}
         <div style={{ background: "var(--ink)" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 32, fontWeight: 300, color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
               {ctaHeading}
             </h2>
             <p style={{ fontFamily: "var(--sans)", fontSize: 14, color: "rgba(247,244,239,.7)", marginTop: 12, marginBottom: 24 }}>

@@ -174,7 +174,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           <div className="max-w-[580px]">
             <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
-              <span style={{ color: "var(--gold-dark)", fontStyle: "italic" }}>
+              <span style={{ color: "var(--gold-dark)", fontStyle: "normal" }}>
                 {heading.titleAccent}
               </span>
             </h2>
@@ -257,7 +257,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 <h3
                   style={{
                     fontFamily: "var(--serif)",
-                    fontStyle: "italic",
+                    fontStyle: "normal",
                     fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
                     fontWeight: 600,
                     color: "var(--cream-deep)",
