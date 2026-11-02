@@ -202,9 +202,15 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
 
         {/* Stats */}
         <p style={{ fontFamily: "var(--sans)", fontSize: "12px", fontWeight: 400, color: "var(--muted)", marginBottom: "1.25rem" }}>
-          {p.bedrooms} {lang === "fr" ? "ch" : "bd"}
-          <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-          {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}
+          {p.bedrooms === "—" ? (
+            <>{lang === "fr" ? "Terrain" : "Land"}</>
+          ) : (
+            <>
+              {p.bedrooms} {lang === "fr" ? "ch" : "bd"}
+              <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
+              {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}
+            </>
+          )}
           {p.status === "sold" && (
             <>
               <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>

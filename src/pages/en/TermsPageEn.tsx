@@ -16,7 +16,7 @@ const TermsPageEn = () => (
         <p>All content on this site, text, images, photographs, logos, videos and graphic design, is the property of Yanis Gauthier-Sigeris or his partners and is protected by Canadian intellectual property laws. Any reproduction, distribution or use without prior written authorization is prohibited.</p>
 
         <h2>2. Use of the Site</h2>
-        <p>This site is intended for informational purposes only. The information presented does not constitute legal, financial or professional advice. For advice tailored to your situation, consult a qualified professional.</p>
+        <p>This site is intended for informational purposes only. The information presented does not constitute legal, financial or professional advice. For advice on your own situation, consult a qualified professional.</p>
 
         <h2>3. Limitation of Liability</h2>
         <p>Yanis Gauthier-Sigeris cannot be held responsible for direct or indirect damages resulting from the use of this site, including errors, omissions or service interruptions. Real estate market information is provided for indicative purposes and may not reflect current market conditions.</p>

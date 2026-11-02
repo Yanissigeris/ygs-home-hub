@@ -34,7 +34,7 @@ import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
 
 const services = [
   { icon: Home, title: "Vente résidentielle", text: "Stratégie, positionnement prix et mise en marché" },
-  { icon: Users, title: "Achat résidentiel", text: "Recherche ciblée, négociation et accompagnement" },
+  { icon: Users, title: "Achat résidentiel", text: "Recherche ciblée et négociation" },
   { icon: TrendingUp, title: "Plex et investissement", text: "Analyse, rendement et stratégie d'acquisition" },
   { icon: MapPin, title: "Relocalisation", text: "Guide local pour acheteurs d'Ottawa et Montréal" },
 ];

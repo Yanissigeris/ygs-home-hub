@@ -220,7 +220,7 @@ const BlogPageEn = () => {
       <CTASection
         dark
         title="Need personalized advice?"
-        text="Articles are a great starting point. For a strategy tailored to your situation, let's talk."
+        text="Articles are a good place to start. For a plan that fits your situation, let's talk."
         buttons={[
           { label: "Free Valuation", href: "/en/home-valuation" },
           { label: "Book a Consultation", href: "/en/contact", variant: "outline" },

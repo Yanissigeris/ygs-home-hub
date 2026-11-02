@@ -19,7 +19,7 @@ const buyerFaq = [
   { q: "Acheter à Gatineau ou Ottawa?", a: "Ça dépend de vos priorités. En général, les prix sont plus accessibles côté Gatineau, mais il faut considérer les taxes et les services." },
   { q: "Combien de temps prend un achat?", a: "60 à 90 jours en général du début de la recherche à la prise de possession." },
   { q: "Le processus est-il différent au Québec?", a: "Oui, promesse d'achat, inspection, notaire (pas d'avocat). Je vous guide à chaque étape." },
-  { q: "Quels sont les frais à prévoir en plus du prix d'achat?", a: "Les honoraires du notaire (demandez une soumission), les droits de mutation (taxe de bienvenue), l'inspection préachat, les ajustements de taxes municipales et scolaires, et la taxe de 9 % sur la prime d'assurance prêt hypothécaire s'il y a lieu. Un premier acheteur peut récupérer une partie des droits de mutation avec le crédit d'impôt de Revenu Québec, jusqu'à 5 875 $ selon les conditions." },
+  { q: "Quels sont les frais à prévoir en plus du prix d'achat?", a: "Les honoraires du notaire (demandez une soumission) et les droits de mutation (taxe de bienvenue). Ajoutez l'inspection préachat, les ajustements de taxes municipales et scolaires, et la taxe de 9 % sur la prime d'assurance prêt hypothécaire s'il y a lieu. Un premier acheteur peut récupérer une partie des droits de mutation avec le crédit d'impôt de Revenu Québec, jusqu'à 5 875 $ selon les conditions." },
 ];
 
 const plexFaq = [

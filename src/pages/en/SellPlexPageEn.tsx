@@ -53,7 +53,7 @@ const SellPlexPageEn = () => (
     <ProcessSteps steps={steps} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="Sell well without overcomplicating it" />
-      <p className="prose-body mt-5">Many plex owners underestimate their building's value, or don't know how to showcase it before selling. My role is to give you a clear picture of your situation and a strategy to get the right price.</p>
+      <p className="prose-body mt-5">Many plex owners underestimate their building's value, or don't know how to present it before selling. My role is to give you a clear picture of your situation and a strategy to get the right price.</p>
       <Button className="mt-8" size="lg" asChild>
         <Link to="/en/plex-analysis/">Get my plex analysis</Link>
       </Button>

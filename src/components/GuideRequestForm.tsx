@@ -57,7 +57,7 @@ const i18n = {
     bullets: [
       { icon: Shield, text: "Free, no commitment" },
       { icon: Send, text: "Sent by email" },
-      { icon: CheckCircle2, text: "Content tailored to the Gatineau market" },
+      { icon: CheckCircle2, text: "Written for the Gatineau market" },
     ],
     firstName: "First Name",
     firstNamePh: "Your first name",

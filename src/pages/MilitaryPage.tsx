@@ -29,7 +29,7 @@ const challenges = [
 const steps = [
   { num: "01", title: "Premier appel", desc: "On fait le point sur votre situation : mutation, calendrier, budget, priorités familiales et secteurs ciblés." },
   { num: "02", title: "Plan personnalisé", desc: "Recherche ciblée et visites virtuelles ou en personne, au rythme de votre horaire de mutation." },
-  { num: "03", title: "Accompagnement complet", desc: "Offre, inspection, notaire et coordination des dates : je vous accompagne jusqu'à la remise des clés." },
+  { num: "03", title: "Jusqu'à la remise des clés", desc: "Offre, inspection, notaire et coordination des dates : je m'en occupe avec vous." },
 ];
 
 

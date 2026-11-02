@@ -144,9 +144,15 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
             marginBottom: "1.25rem",
           }}
         >
-          {property.bedrooms} {t.bed}
-          <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-          {property.bathrooms} {t.bath}
+          {property.bedrooms === "—" ? (
+            <>{t.bed === "ch." ? "Terrain" : "Land"}</>
+          ) : (
+            <>
+              {property.bedrooms} {t.bed}
+              <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
+              {property.bathrooms} {t.bath}
+            </>
+          )}
           {property.powderRooms && (
             <>
               <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>

@@ -55,7 +55,7 @@ const BuyerGuidePageEn = () => (
     <ContentBlock narrow>
       <SectionHeading title="Buying in Gatineau is different" />
       <p className="prose-body mt-5">
-        The buying process in Québec has its specifics: promise to purchase, inspection, conditions and notary. Whether you're coming from Ottawa, Montréal or elsewhere, this guide prepares you for every step.
+        The buying process in Québec has its specifics: promise to purchase, inspection, conditions and notary. If you're coming from Ottawa, Montréal or elsewhere, this guide prepares you for every step.
       </p>
     </ContentBlock>
 

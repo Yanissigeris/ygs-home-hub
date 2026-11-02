@@ -525,7 +525,7 @@ const BlogArticlePage = () => {
                 {isFr ? (
                   <>Une analyse <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>sur mesure</em></>
                 ) : (
-                  <>A <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>tailored</em> analysis</>
+                  <>An analysis <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>of your property</em></>
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>

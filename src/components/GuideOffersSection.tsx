@@ -22,7 +22,7 @@ const guidesEn = [
 ];
 
 const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape : gratuites, sans engagement et envoyées par courriel." };
-const headingEn = { overline: "Free Guides", title: "Get your real estate guide", subtitle: "Comprehensive resources to guide you at every step: free, no commitment, delivered by email." };
+const headingEn = { overline: "Free Guides", title: "Get your real estate guide", subtitle: "Free guides for each step of your project, sent by email, no commitment." };
 
 const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
   const guides = lang === "en" ? guidesEn : guidesFr;

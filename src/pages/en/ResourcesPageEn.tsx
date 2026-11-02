@@ -27,7 +27,7 @@ const tools = [
 const trustPages = [
   { icon: HelpCircle, title: "How Much Does a Realtor Cost?", text: "How realtor compensation works in Québec.", cta: "Read the article", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
   { icon: DollarSign, title: "Realtor Commission Quebec", text: "Commission fees, services included, and what it means for you.", cta: "Read the article", href: "/en/realtor-commission-quebec/" },
-  { icon: CheckCircle, title: "How to Choose a Realtor", text: "The essential criteria for choosing the right real estate broker.", cta: "Read the article", href: "/en/how-to-choose-a-realtor/" },
+  { icon: CheckCircle, title: "How to Choose a Realtor", text: "What to check when choosing a real estate broker.", cta: "Read the article", href: "/en/how-to-choose-a-realtor/" },
   { icon: Search, title: "Verify a Broker (OACIQ)", text: "How to verify a broker's licence and background in Québec.", cta: "Read the article", href: "/en/oaciq-find-a-broker/" },
   { icon: Scale, title: "Realtor vs Selling by Owner", text: "Honest comparison between selling with a broker or on your own.", cta: "Read the article", href: "/en/realtor-vs-selling-by-owner-quebec/" },
 ];

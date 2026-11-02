@@ -34,7 +34,7 @@ const trustPoints = [
 ];
 
 const faq = [
-  { q: "What's included in the plex analysis?", a: "A market value estimate, an analysis of income and expenses, the rental potential and a recommendation tailored to your situation." },
+  { q: "What's included in the plex analysis?", a: "A market value estimate, an analysis of income and expenses, the rental potential and my recommendation for your situation." },
   { q: "Is the analysis free?", a: "Yes. The goal is to help you make an informed decision. If you then decide to move forward, we discuss the terms openly, with no pressure." },
   { q: "I'm not sure I want to sell. Is it still useful?", a: "Yes. Understanding your position before deciding is exactly what this analysis is for. You remain free to hold, sell or refinance." },
 ];
