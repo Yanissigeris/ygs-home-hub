@@ -66,7 +66,6 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     />
 
     
-    <ValuationCTA lang="en" />
     <AwardsStrip lang="en" />
 
     
@@ -75,6 +74,8 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
     <AboutSection lang="en" />
 
     <TestimonialGrid overline="Testimonials" title="What our clients say" reviews={homepageReviews} reviewsPageLabel="See all testimonials" reviewsPageHref="/en/testimonials/" />
+
+    <ValuationCTA lang="en" />
 
     <AreasServicesSection lang="en" />
     <GuideOffersSection lang="en" background="alt" />

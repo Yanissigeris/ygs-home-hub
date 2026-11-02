@@ -72,7 +72,6 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         rootMargin="700px"
         className="relative z-10"
       >
-        <ValuationCTA />
         <AwardsStrip />
       </LazySection>
     </div>
@@ -91,6 +90,8 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
         reviewsPageLabel="Voir tous les témoignages"
         reviewsPageHref="/temoignages/"
       />
+
+      <ValuationCTA />
 
       <AreasServicesSection />
       <GuideOffersSection background="alt" />
