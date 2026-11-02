@@ -35,8 +35,10 @@ const useVisibleCount = () => {
   return n;
 };
 
-const ReviewSlide = ({ review, lang, width }: { review: Review; lang: "fr" | "en"; width: string }) => (
+const ReviewSlide = ({ review, lang, width, clone = false }: { review: Review; lang: "fr" | "en"; width: string; clone?: boolean }) => (
   <article
+    aria-hidden={clone || undefined}
+    data-nosnippet={clone ? "" : undefined}
     className="flex shrink-0 flex-col"
     style={{
       flexBasis: width,
@@ -197,7 +199,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
               onTransitionEnd={onTransitionEnd}
             >
               {slides.map((r, i) => (
-                <ReviewSlide key={`${r.id}-${i}`} review={r} lang={lang} width={cardWidth} />
+                <ReviewSlide key={`${r.id}-${i}`} review={r} lang={lang} width={cardWidth} clone={i >= n} />
               ))}
             </div>
           </div>
