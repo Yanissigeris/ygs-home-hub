@@ -180,7 +180,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--sans);
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
@@ -330,7 +330,7 @@
     @apply text-[1rem] leading-[1.8];
     color: var(--ink);
     max-width: 38rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .label-overline {

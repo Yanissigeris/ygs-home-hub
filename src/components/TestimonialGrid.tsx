@@ -60,7 +60,7 @@ const ReviewSlide = ({ review, lang, width, clone = false }: { review: Review; l
       style={{
         fontFamily: "var(--sans)",
         fontSize: "1rem",
-        fontWeight: 300,
+        fontWeight: 400,
         lineHeight: 1.75,
         color: "hsl(var(--foreground))",
         display: "-webkit-box",

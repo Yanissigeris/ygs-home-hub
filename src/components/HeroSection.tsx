@@ -446,8 +446,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             <div className="max-w-[40rem]">
               {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
               <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
-              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-light leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
-              <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-light leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
+              <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-normal leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
+              <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-normal leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
                 <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
@@ -759,7 +759,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
 
               <p
-                className={`hero-fade-in ${headline ? (subtitleShort ? "mt-2.5 sm:mt-4" : "mt-3 sm:mt-4") : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-light`}
+                className={`hero-fade-in ${headline ? (subtitleShort ? "mt-2.5 sm:mt-4" : "mt-3 sm:mt-4") : "mt-4 sm:mt-6"} block md:hidden max-w-[460px] font-normal`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
@@ -773,7 +773,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 {subtitleShort ?? subtitle}
               </p>
               <p
-                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-light`}
+                className={`hero-fade-in ${headline ? "mt-3 sm:mt-4" : "mt-4 sm:mt-6"} hidden md:block max-w-[460px] font-normal`}
                 style={{
                   animationDelay: "0.32s",
                   color: "var(--white)",
