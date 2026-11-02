@@ -67,7 +67,7 @@ const NeighborhoodsOverviewPage = () => (
         Le bon secteur dépend de votre budget, de votre trajet, de votre style de vie et de vos priorités familiales. L'Outaouais compte une douzaine de micromarchés, chacun avec son plafond de prix, son bassin scolaire, ses options de transport et son rythme de revente. Une maison qui a l'air d'être au même prix à Buckingham qu'à Aylmer se comporte rarement de la même manière cinq ans plus tard.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Actif en immobilier en Outaouais depuis 2017, j'ai représenté des acheteurs et vendeurs dans presque chacun des quartiers listés ci-dessous. Cela veut dire que je peux vous dire quelles rues inondent, lesquelles prennent le soleil du matin, quels secteurs s'embourgeoisent tranquillement, et où la prochaine vague d'investissements municipaux va probablement se déposer. C'est le genre de contexte qui n'apparaît pas dans une fiche Centris.
+        Je suis courtier en Outaouais depuis 2017, et j'ai représenté des acheteurs et des vendeurs dans presque chacun des secteurs ci-dessous. Avant que vous choisissiez, je vous montre les ventes récentes de chaque secteur qui vous intéresse et ce qu'elles veulent dire pour votre budget.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Parcourez les fiches ci-dessus, quartier par quartier, puis réservez une consultation. On choisira ensemble les deux ou trois secteurs adaptés à vos critères de vie plutôt que les plus connus.

@@ -50,7 +50,7 @@ const NeighborhoodsPageEn = () => (
         The right area depends on your budget, commute, lifestyle and family priorities. Outaouais has about a dozen micro-markets, each with its own price ceiling, school catchment, transit options and resale pace. A house that looks like the same money in Buckingham versus Aylmer rarely behaves the same way five years later.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Active in Outaouais real estate since 2017, I've represented buyers and sellers across nearly every neighbourhood listed below. That means I can tell you which streets flood, which ones get the morning sun, which sectors are quietly gentrifying, and where the next round of municipal investment is likely to land. It's the kind of context that doesn't show up in a Centris listing.
+        I've been a broker in the Outaouais since 2017, and I've represented buyers and sellers in nearly every area listed below. Before you choose, I show you the recent sales in each area you're considering and what they mean for your budget.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Use the cards above to explore individual neighbourhoods, then book a consultation so we can match the right two or three to your real-life criteria rather than the best-known ones.
