@@ -29,7 +29,7 @@ const faq = [
 const subSectors = [
   {
     title: "Limbour",
-    text: "Established residential neighbourhood, homes on tree-lined streets, Bois-Dollard Park. Rooted family clientele. Good access to shops and services along Boulevard Maloney.",
+    text: "Established residential neighbourhood, homes on tree-lined streets, Bois-Dollard Park. Good access to shops and services along Boulevard Maloney.",
   },
   {
     title: "Manoir-des-Trembles / La Gappe",

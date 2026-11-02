@@ -44,7 +44,7 @@ const subSectors = [
   },
   {
     title: "Vieux-Aylmer",
-    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable. Clientèle mixte : professionnels, couples, retraités.",
+    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable.",
     tag: "Caractère · Walkable",
   },
   {

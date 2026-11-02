@@ -45,7 +45,7 @@ const subSectors = [
   },
   {
     title: "Lac Leamy",
-    text: "Secteur du Casino du Lac-Leamy et du Parc Lac-Leamy. Condos et propriétés avec accès au lac, plage, sentiers. Clientèle plus aisée, vie animée l'été.",
+    text: "Secteur du Casino du Lac-Leamy et du Parc Lac-Leamy. Condos et propriétés avec accès au lac, plage, sentiers. Vie animée l'été autour de la plage et des sentiers.",
   },
 ];
 
@@ -93,7 +93,7 @@ const HullPage = () => (
       <h2 className="mt-3">Hull : le secteur qui se réinvente</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est souvent le premier choix.
+          Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est le secteur le plus proche.
         </p>
         <p className="prose-body">
           Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. C'est le premier quartier carboneutre de la région de la capitale nationale, avec son propre réseau d'énergie de quartier. Les premières phases sont habitées. (Source : zibi.ca, Radio-Canada)
@@ -127,7 +127,7 @@ const HullPage = () => (
           Hull attire depuis longtemps les investisseurs en multiplex. La densité résidentielle, la proximité d'Ottawa, la présence de l'UQO et de fonctionnaires fédéraux créent une demande locative soutenue, particulièrement pour les logements à prix abordables.
         </p>
         <p className="prose-body">
-          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus. Les anciens plexs à loyers modérés restent très demandés.
+          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.

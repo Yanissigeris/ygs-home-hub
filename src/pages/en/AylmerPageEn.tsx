@@ -44,7 +44,7 @@ const subSectors = [
   },
   {
     title: "Old Aylmer",
-    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle. Mixed clientele: professionals, couples, retirees.",
+    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle.",
     tag: "Character · Walkable",
   },
   {

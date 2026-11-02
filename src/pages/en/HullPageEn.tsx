@@ -61,7 +61,7 @@ const subSectors = [
   },
   {
     title: "Lac Leamy",
-    text: "Home to the Casino du Lac-Leamy and Lac-Leamy Park. Condos and properties with lake access, beach, trails. More affluent clientele, lively summers.",
+    text: "Home to the Casino du Lac-Leamy and Lac-Leamy Park. Condos and properties with lake access, beach, trails. Lively summers around the beach and trails.",
   },
 ];
 
@@ -109,7 +109,7 @@ const HullPageEn = () => (
       <h2 className="mt-3">Hull: the area reinventing itself</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's densest area, condos, plexes, character homes, restaurants, museums. For federal workers who want to cross the bridge on foot or by bike, it's often the first choice.
+          Hull is Gatineau's historic sector, located directly across the Ottawa River from downtown Ottawa. It's the city's densest area, condos, plexes, character homes, restaurants, museums. For federal workers who want to cross the bridge on foot or by bike, it's the closest area.
         </p>
         <p className="prose-body">
           The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River, in both Gatineau and Ottawa, includes residential condos, office space, retail and public spaces. It's the National Capital Region's first carbon-neutral neighbourhood, with its own district energy system. The first phases are occupied. (Source: zibi.ca, Radio-Canada)
@@ -143,7 +143,7 @@ const HullPageEn = () => (
           Hull has long drawn multiplex investors. Residential density, proximity to Ottawa, the presence of UQO and federal public servants create sustained rental demand, particularly for affordable housing.
         </p>
         <p className="prose-body">
-          Gatineau's rental market underwent a rebalancing in 2025-2026 with the arrival of a large number of new builds. So return analysis matters even more. Older plexes with moderate rents are still in high demand.
+          Gatineau's rental market underwent a rebalancing in 2025-2026 with the arrival of a large number of new builds. So return analysis matters even more.
         </p>
         <p className="prose-body">
           I'm a real estate investor myself, my analysis is honest, not a sales pitch.

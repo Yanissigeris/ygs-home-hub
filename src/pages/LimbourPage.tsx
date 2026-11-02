@@ -38,7 +38,7 @@ const LimbourPage = () => (
     profiles={[
       { icon: Users, title: "Jeunes familles", text: "Maisons récentes 5-20 ans avec garage, terrains aérés, écoles, parcs et sentiers à proximité. Pas de rénovations urgentes." },
       { icon: Home, title: "Acheteurs deuxième maison", text: "Familles qui upgradent depuis un condo ou une première maison plus petite. Le sous-secteur Ferme Limbour offre des propriétés plus grandes avec terrains boisés." },
-      { icon: TrendingUp, title: "Investisseurs", text: "Secteur en croissance avec demande locative stable des jeunes familles et travailleurs de l'Hôpital de Gatineau." },
+      { icon: TrendingUp, title: "Investisseurs", text: "Des locataires possibles parmi les jeunes familles et le personnel de l'Hôpital de Gatineau, tout près. Je vous montre les loyers récents avant une offre." },
       { icon: MapPin, title: "Navetteurs", text: "Accès à l'autoroute 50 pour rejoindre les ponts vers Ottawa." },
     ]}
     inlineCta={{ text: "Propriétaire à Limbour? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}

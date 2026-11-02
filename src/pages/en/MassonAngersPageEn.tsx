@@ -27,7 +27,7 @@ const MassonAngersPageEn = () => (
     profiles={[
       { icon: Users, title: "Young families", text: "Affordable new homes, 4 CSSCV French elementary schools nearby, parks and trails in new developments. Rivière du Lièvre and green spaces add to the quality of life." },
       { icon: Home, title: "First-time buyers", text: "Accessible entry prices between $400,000 and $490,000 for a semi-detached or new home. Quebec down-payment programs applicable. Easier financing than Hull or Aylmer." },
-      { icon: TrendingUp, title: "Investors", text: "Growing area with stable rental demand and multiple new developments delivering in 2026-2027. Medium-term appreciation potential." },
+      { icon: TrendingUp, title: "Investors", text: "Lower entry prices than elsewhere in Gatineau, plus new projects. Before an offer, I show you recent rents in the area." },
       { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighbourhoods, willing to commute to downtown Ottawa in exchange for a lower purchase price." },
       { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. Central Buckingham is about 5 km away by road." },
     ]}

@@ -29,7 +29,7 @@ const faq = [
 const subSectors = [
   {
     title: "Limbour",
-    text: "Quartier résidentiel établi, maisons sur rues arborées, Parc du Bois-Dollard. Clientèle familiale enracinée. Bon accès aux commerces et aux services du boulevard Maloney.",
+    text: "Quartier résidentiel établi, maisons sur rues arborées, Parc du Bois-Dollard. Bon accès aux commerces et aux services du boulevard Maloney.",
   },
   {
     title: "Manoir-des-Trembles / La Gappe",
