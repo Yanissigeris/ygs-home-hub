@@ -8,25 +8,25 @@ const ValDesMontsPageEn = () => (
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness, north of Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts/" }}
-    hero={{ overline: "Neighbourhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. Over 125 lakes, and Perkins village 28 to 30 km from downtown Ottawa by road.", image: heroImg }}
+    hero={{ overline: "Neighbourhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. 125 lakes according to the municipality, and Perkins village about 30 km from downtown Ottawa by road.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. Major lakes like McGregor, Saint-Pierre and Achigan drive the demand." }}
     reasons={[
-      "Over 125 lakes according to the municipality, many properties with private lake access",
+      "125 lakes according to the municipality, many properties with private lake access",
       "Median single-family price of $595,000 in Q2 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts",
       "Major lakes: McGregor, Saint-Pierre, Achigan, Barnes, each with its own market",
-      "Lots from 2 to 50+ acres, complete privacy in nature",
+      "Large lots in nature, often near a lake",
       "Four-season cottages, permanent residences and luxury waterfront properties",
       "Perkins village as service hub (grocery, elementary school, local amenities)",
-      "Perkins village 28 to 30 km from downtown Ottawa by road, practical for Ottawa weekend cottage owners and full-time remote workers",
+      "Perkins village about 30 km from downtown Ottawa by road, practical for Ottawa weekend cottage owners and full-time remote workers",
       "Les Promenades Gatineau 20 to 22 km from Perkins by road, for commercial services",
       "More choice for buyers: 535 active single-family listings in Q2 2026 in the Gatineau periphery area, 13% more than a year earlier (APCIQ)",
     ]}
     profilesTitle="Who Val-des-Monts suits"
     profiles={[
       { icon: TreePine, title: "Lake & nature lovers", text: "Private dock, kayaking, swimming, campfires. Major lakes like McGregor and Saint-Pierre suit four-season waterfront living well." },
-      { icon: Home, title: "Cottage seekers", text: "From rustic cottages around $200,000 to luxury waterfront $750,000+. Four-season cottages have been most in demand since remote work expanded." },
-      { icon: Users, title: "Families seeking space", text: "Large 2+ acre lots, elementary school in Perkins, tight-knit community. No high school in Val-des-Monts: students in the French school system attend high school in the Gatineau sector." },
+      { icon: Home, title: "Cottage seekers", text: "From three-season cottages to year-round waterfront homes, prices vary a lot with lake access and condition. I compare with recent sales on the same lake." },
+      { icon: Users, title: "Families seeking space", text: "Large lots, elementary school in Perkins, tight-knit community. No high school in Val-des-Monts: students in the French school system attend high school in the Gatineau sector." },
       { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape." },
       { icon: Mountain, title: "Remote workers & retirees", text: "Life in nature, with high-speed Internet available in much of the territory. Downtown Ottawa stays within reach for occasional in-person meetings." },
     ]}
@@ -57,8 +57,8 @@ const ValDesMontsPageEn = () => (
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide, buying in Val-des-Monts", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide, get it by email" }}
     brokerPerspective={{
-      observation: "What I'm seeing in Val-des-Monts right now: demand stays strong for waterfront, but rustic cottages are selling slower than before. My buyers are mostly Ottawa-Gatineau families looking for a principal residence in nature, or couples 45-65 wanting a four-season cottage to prepare for retirement. Remote work changed everything: what used to be a weekend property before 2020 is now becoming a primary residence for many of my Ottawa clients.",
-      dataPoint: "On the sales I close in Val-des-Monts, well-prepared waterfront properties on McGregor and Saint-Pierre go under contract in 30-60 days during peak season. Rustic cottages or properties without direct lake access often take 60-120 days, and sellers need to be more patient or adjust their pricing.",
+      observation: "What I look at in Val-des-Monts: lake access, the septic system and the well matter as much as the house. A three-season cottage and a year-round home are not comparable.",
+      dataPoint: "In Q2 2026, single-family homes sold in 39 days on average in the Gatineau outskirts, an APCIQ territory that includes Val-des-Monts (Centris data).",
       takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter a lot. List in spring if you can, and get the property photo-ready the summer before. Be realistic on price for your lake type and access: a property on McGregor doesn't compare to one without lake access. Get a proper valuation before listing."
     }}
     cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area, let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}

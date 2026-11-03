@@ -68,7 +68,7 @@ const BuyerPage = () => (
     <HeroSection
       overline="Pour acheteurs · Gatineau"
       title="Acheter à Gatineau avec clarté et confiance"
-      subtitle="Premier achat ou arrivée d'Ottawa ou de Montréal : je vous accompagne à chaque étape, chiffres en main."
+      subtitle="Premier achat ou arrivée d'Ottawa ou de Montréal : on avance étape par étape, chiffres en main."
       primaryCta={{ label: "Réserver une consultation", href: "/consultation-acheteur/" }}
       secondaryCta={{ label: "Comparer les quartiers", href: "/quartiers-a-considerer-a-gatineau/" }}
       trustLine="Stratégie claire."
@@ -96,7 +96,7 @@ const BuyerPage = () => (
 
     <CardGrid
       overline="Pour qui"
-      title="Les acheteurs que j'accompagne"
+      title="Les acheteurs avec qui je travaille"
       items={buyerProfiles}
       background="alt"
       variant="icon-inline"

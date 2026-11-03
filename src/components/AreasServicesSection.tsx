@@ -33,7 +33,7 @@ const servicesFr: ServiceLink[] = [
   { label: "Vendre ma propriété", href: "/vendre-ma-maison-gatineau/", detail: "Prix et mise en marché" },
   { label: "Acheter une maison", href: "/acheter-a-gatineau/", detail: "Recherche, négociation, conseils" },
   { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", detail: "Valeur marchande, sans engagement" },
-  { label: "Premier achat", href: "/premier-achat-gatineau/", detail: "Guide et accompagnement dédié" },
+  { label: "Premier achat", href: "/premier-achat-gatineau/", detail: "Mise de fonds et programmes d'aide" },
   { label: "Investissement plex", href: "/investir-plex-gatineau/", detail: "Analyse, rendement, stratégie" },
   { label: "Relocalisation", href: "/relocalisation-ottawa-gatineau/", detail: "Ottawa → Gatineau, Montréal, militaires" },
 ];

@@ -22,13 +22,13 @@ const challenges = [
 const steps = [
   { num: "01", title: "Évaluation de la situation", desc: "Calendrier de mutation, budget, priorités familiales et secteurs ciblés." },
   { num: "02", title: "Recherche ciblée", desc: "Visites virtuelles ou en personne, sélection adaptée à votre profil militaire." },
-  { num: "03", title: "Accompagnement jusqu'aux clés", desc: "Offre, inspection et notaire : je coordonne chaque étape jusqu'à votre emménagement." },
+  { num: "03", title: "Jusqu'aux clés", desc: "Offre, inspection et notaire : je coordonne chaque étape jusqu'à votre emménagement." },
 ];
 
 
 const faq = [
-  { q: "Comment se passe un achat immobilier lors d'une mutation militaire?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), offre et accompagnement complet." },
-  { q: "Est-ce que vous travaillez avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant. Je m'adapte aux étapes et aux délais de votre dossier." },
+  { q: "Comment se passe un achat immobilier lors d'une mutation militaire?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), puis l'offre et le suivi jusqu'au notaire." },
+  { q: "Est-ce que vous travaillez avec les dossiers SIRVA et BGRS?", a: "Oui. La réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC), dont une version est en vigueur depuis le 1er avril 2026. Le fournisseur de services de réinstallation des FAC est SIRVA (Défense nationale), et j'accepte aussi les dossiers BGRS. Je m'adapte aux étapes et aux délais de votre dossier." },
 ];
 
 const MilitaryRelocationPage = () => (
@@ -63,7 +63,7 @@ const MilitaryRelocationPage = () => (
     <ContentBlock narrow>
       <SectionHeading
         overline="Pourquoi YGS"
-        title="Un accompagnement adapté à votre rythme"
+        title="À votre rythme, selon votre mutation"
         subtitle="Les mutations ne suivent pas le calendrier immobilier normal. Je m'adapte à votre calendrier et à vos contraintes."
       />
     </ContentBlock>

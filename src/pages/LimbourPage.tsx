@@ -25,8 +25,8 @@ const LimbourPage = () => (
     answers={[
       {
         q: "Quel type de maisons trouve-t-on à Limbour?",
-        a: "Surtout des maisons unifamiliales à deux étages avec garage, construites entre 2000 et 2020, plus des maisons de ville et quelques jumelées. Les superficies courantes vont de 1 400 à 2 200 pi², avec un sous-sol souvent fini ou aménageable.",
-        detail: "Pour un acheteur, ça veut dire des matériaux, une isolation et une mécanique récents, donc peu de rénovations majeures à prévoir comparé aux quartiers plus anciens comme Côte-d'Azur. Les terrains sont déjà aménagés et les parcs sont matures. Dans Ferme Limbour, les terrains sont plus grands et souvent boisés, et une maison équivalente peut valoir de 30 000 $ à 50 000 $ de plus qu'ailleurs dans Limbour.",
+        a: "Surtout des maisons unifamiliales à deux étages avec garage, construites entre 2000 et 2020, plus des maisons de ville et quelques jumelées. Le sous-sol est souvent fini ou aménageable.",
+        detail: "Pour un acheteur, ça veut dire des matériaux, une isolation et une mécanique récents, donc peu de rénovations majeures à prévoir comparé aux quartiers plus anciens comme Côte-d'Azur. Les terrains sont déjà aménagés et les parcs sont matures. Dans Ferme Limbour, les terrains sont plus grands et souvent boisés.",
       },
       {
         q: "Limbour, Aylmer, Plateau ou Masson-Angers : lequel choisir?",
@@ -62,15 +62,15 @@ const LimbourPage = () => (
       { title: "Acheter à Limbour", text: "Maisons récentes à bon prix.", href: "/blogue/acheter-limbour-maisons-recentes/" },
       { title: "Acheter depuis Ottawa", text: "Traverser la rivière sans surprise.", href: "/acheter-a-gatineau-depuis-ottawa/" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+      { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
-      observation: "Ce que je vois à Limbour en ce moment : la plupart de mes acheteurs sont des jeunes familles ou des couples qui veulent upgrader depuis un condo ou une première maison. Ils cherchent une propriété récente, sans grosses rénovations à faire, avec un garage et un terrain aéré. Le sous-secteur Ferme Limbour attire beaucoup de visites, et plusieurs acheteurs y commencent leur recherche avant de l'élargir.",
+      observation: "Ce que je regarde à Limbour : je compare avec les ventes du même sous-secteur, Ferme Limbour ou le reste du quartier, avant de parler de prix.",
       dataPoint: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
-      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Entre Ferme Limbour et une autre rue de Limbour, l'écart peut aller de 30 000 $ à 50 000 $ pour une maison équivalente. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
+      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
     }}
     cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />

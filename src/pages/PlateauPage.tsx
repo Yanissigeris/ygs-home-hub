@@ -75,7 +75,7 @@ const PlateauPage = () => (
       { title: "Aylmer, Hull ou Plateau?", text: "Comparatif des trois secteurs.", href: "/blogue/aylmer-hull-plateau-quel-quartier-choisir/" },
       { title: "Vivre dans le Plateau", text: "Le quotidien dans le quartier.", href: "/vivre-dans-le-plateau/" },
       { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+      { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}

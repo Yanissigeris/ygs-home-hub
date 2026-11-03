@@ -36,7 +36,7 @@ const militaryPaths = [
   { title: "Military guide", text: "Everything you need to know for your real estate relocation to Gatineau.", href: "/en/military-guide/", cta: "Read the guide" },
 ];
 const faq = [
-  { q: "Do you know the military programs?", a: "Yes. Since April 1, 2026, CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD). SIRVA handles files authorized on or after January 6, 2026, and BGRS handles files authorized before that date. I adapt my work to the steps and timelines of your file." },
+  { q: "Do you know the military programs?", a: "Yes. CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD), with a version in effect since April 1, 2026. The CAF relocation service provider is SIRVA (National Defence), and I also accept BGRS files. I adapt my work to the steps and timelines of your file." },
   { q: "I need to sell and buy at the same time. Is that possible?", a: "It's common during postings. We plan the coordination from the start to avoid getting stuck." },
   { q: "Which neighbourhoods are close to military workplaces?", a: "It depends on where you work. National Defence has consolidated many of its offices at the Carling Campus, on Carling Avenue in west Ottawa: from Aylmer and the Plateau, you get there via the Champlain Bridge. Other offices are in downtown Ottawa, closer to Hull. We compare your commutes based on your posting and family priorities." },
   { q: "Can you do virtual visits?", a: "Yes. You can buy remotely before you arrive in Gatineau, with virtual visits. I adapt to your schedule and time zone." },

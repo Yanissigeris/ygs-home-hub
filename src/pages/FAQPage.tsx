@@ -29,7 +29,7 @@ const plexFaq = [
 ];
 
 const militaryFaq = [
-  { q: "Comment se passe une relocalisation militaire immobilière?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne) et accompagnement complet." },
+  { q: "Comment se passe une relocalisation militaire immobilière?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), puis l'offre et l'inspection." },
   { q: "Travaillez-vous avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
   { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation. On en discute ensemble pour trouver la meilleure option." },
 ];

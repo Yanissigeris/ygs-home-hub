@@ -29,7 +29,7 @@ const faq = [
   },
   {
     q: "What does a typical Chelsea home cost in 2026?",
-    a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Gatineau Park covers roughly 60% of the territory, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
+    a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Part of the territory is in Gatineau Park, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
   },
   {
     q: "How far is downtown Ottawa from Chelsea?",
@@ -50,7 +50,7 @@ const atouts = [
   {
     icon: "🌲",
     title: "Gatineau Park",
-    text: "Gatineau Park covers 360 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities with Chelsea as the main gateway. Hiking, cycling, cross-country skiing, snowshoeing, swimming at Lac Meech, activities accessible on foot or by bike from residential properties. (Source: National Capital Commission)",
+    text: "Gatineau Park covers 361 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities, including Chelsea. People hike, cycle, cross-country ski, snowshoe and swim at Lac Meech. (Source: National Capital Commission)",
   },
   {
     icon: "♨️",
@@ -108,10 +108,10 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">Chelsea, verified facts about the municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was approximately 8,000 at the 2021 census, in steady growth. What fundamentally distinguishes it: approximately 60% of its territory belongs to Gatineau Park, managed by the National Capital Commission. This reality significantly limits available buildable land, which explains the scarcity of properties and their stable long-term value. (Source: Wikipedia/Chelsea, National Capital Commission)
+          Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was 8,000 at the 2021 census, up from 6,909 in 2016. Part of its territory is in Gatineau Park, managed by the National Capital Commission, which limits buildable land. (Source: Statistics Canada, National Capital Commission)
         </p>
         <p className="prose-body">
-          Chelsea's population is almost equally split between francophones and anglophones, approximately 70% of households speak both official languages. Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Source: Wikipedia/Chelsea, Quebec)
+          Chelsea's population is almost equally split between francophones and anglophones, and 70.8% of residents speak both English and French (Statistics Canada, 2021 Census).
         </p>
         <p className="prose-body">
           Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service links Chelsea to Gatineau, with transfers to the STO network. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
@@ -159,9 +159,9 @@ const ChelseaPageEn = () => (
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
-            "Chelsea is the main gateway to Gatineau Park, 360 km² of nature accessible from your property. (Source: National Capital Commission)",
-            "~70% of Chelsea households are bilingual, which makes life easier for francophone and anglophone families alike. (Source: Wikipedia/Chelsea, Quebec)",
-            "Approximately 60% of the territory is Gatineau Park, which limits buildable supply and supports existing property values long-term. (Source: National Capital Commission)",
+            "Chelsea is the main gateway to Gatineau Park, 361 km² of nature accessible from your property. (Source: National Capital Commission)",
+            "70.8% of Chelsea residents speak both English and French, which makes life easier for francophone and anglophone families alike. (Source: Statistics Canada, 2021 Census)",
+            "Part of the territory is in Gatineau Park. (Source: National Capital Commission)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -182,10 +182,10 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Gatineau Park covers roughly 60% of the territory, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
+          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Part of the territory is in Gatineau Park, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
         </p>
         <p className="prose-body">
-          On the buyer side, Chelsea draws federal executives and senior professionals from Ottawa who want acreage and bilingual schools without leaving the National Capital Region. It also attracts remote workers who can put quality of life first, and Quebec families moving from Montréal for this mix of nature and city access. The 70% bilingual rate shows up in school committees and community events, and it's a big reason anglophone families from Ontario find the move easier here than in mostly francophone parts of Gatineau.
+          According to the 2021 census, 70.8% of Chelsea residents speak both English and French (Statistics Canada). For an anglophone family from Ontario, that makes daily life in Chelsea easier than in mostly francophone parts of Gatineau.
         </p>
         <p className="prose-body">
           For sellers, the playbook in Chelsea is different from anywhere else in the region. The pool of qualified buyers is smaller but more decisive. When the right family sees the right property, offers come quickly. Pricing has to anchor on recent Chelsea comparables (not the next sub-sector over), and presentation weighs heavily because buyers at Chelsea price levels expect a move-in-ready home. I prepare every Chelsea listing with that audience in mind, from the photography brief to the open-house staging.

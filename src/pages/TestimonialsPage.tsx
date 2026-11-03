@@ -10,7 +10,7 @@ import heroImg from "@/assets/hero-testimonials.webp";
 
 const categories: { key: Review["category"]; label: string; title: string }[] = [
   { key: "seller", label: "Vendeurs", title: "Ils ont vendu avec confiance" },
-  { key: "buyer", label: "Acheteurs", title: "Ils ont acheté en toute confiance" },
+  { key: "buyer", label: "Acheteurs", title: "Ils ont acheté avec moi" },
   { key: "relocation", label: "Relocalisation", title: "Ils se sont installés à Gatineau" },
   { key: "military", label: "Militaires", title: "Mutation réussie, sans stress" },
   { key: "plex", label: "Investisseurs", title: "Décisions éclairées, résultats concrets" },

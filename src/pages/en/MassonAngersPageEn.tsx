@@ -17,7 +17,7 @@ const MassonAngersPageEn = () => (
       "Active new construction: multiple builders delivering in 2026 with spring possession available",
       "Two distinct sub-sectors: Masson (west, more mature) and Angers (east, more developing)",
       "French elementary schools (Centre de services scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
-      "Hormisdas-Gamelin secondary school in Buckingham (12 km, IB international program and sport option)",
+      "Hormisdas-Gamelin secondary school in Buckingham (IB Middle Years Programme and sport option)",
       "Western Quebec School Board (English): Buckingham Elementary in Buckingham, high schools in Hull, subject to eligibility",
       "Direct access to Highway 50",
       "Rivière du Lièvre and Grenouillettes marsh, nature access within a residential area",
@@ -26,7 +26,7 @@ const MassonAngersPageEn = () => (
     profilesTitle="Who Masson-Angers suits"
     profiles={[
       { icon: Users, title: "Young families", text: "Affordable new homes, 4 CSSCV French elementary schools nearby, parks and trails in new developments. Rivière du Lièvre and green spaces add to the quality of life." },
-      { icon: Home, title: "First-time buyers", text: "Accessible entry prices between $400,000 and $490,000 for a semi-detached or new home. Quebec down-payment programs applicable. Easier financing than Hull or Aylmer." },
+      { icon: Home, title: "First-time buyers", text: "In Q2 2026, the median single-family price was $419,545 in APCIQ's Buckingham/Masson-Angers sector, the lowest of Gatineau's four sectors. The Home Buyers' Plan (HBP) and the FHSA apply." },
       { icon: TrendingUp, title: "Investors", text: "Lower entry prices than elsewhere in Gatineau, plus new projects. Before an offer, I show you recent rents in the area." },
       { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighbourhoods, willing to commute to downtown Ottawa in exchange for a lower purchase price." },
       { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. Central Buckingham is about 5 km away by road." },
@@ -38,7 +38,7 @@ const MassonAngersPageEn = () => (
       { q: "How much can I save buying in Masson-Angers vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $419,545 in Q2 2026 in APCIQ's Buckingham/Masson-Angers sector. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
       { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has Buckingham Elementary in Buckingham and Greater Gatineau Elementary in the Gatineau sector. Its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). Plan for school transportation, and use the WQSB School Locator on westernquebec.ca to find the school for your address." },
       { q: "Are there new homes in Masson-Angers?", a: "Yes, several builders are active in Masson-Angers. Possession dates vary from one project to another: I check the available projects with you." },
-      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur (which has been the subject of a major $20M expansion announced by the Quebec government) and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham (12 km) with IB program and sport option." },
+      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham, which offers the IB Middle Years Programme (PEI) and a sport option." },
       { q: "What are the sub-sectors of Masson-Angers?", a: "The area splits into two: Masson (west side, more mature, near the Rivière du Lièvre) and Angers (east side, more developing with recent new construction). Prices and inventory differ from one sub-sector to the other." },
     ]}}
     sectors={{ list: [
@@ -54,8 +54,8 @@ const MassonAngersPageEn = () => (
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide, buying in Masson-Angers", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide, get it by email" }}
     brokerPerspective={{
-      observation: "What I'm seeing in Masson-Angers right now: it's become a common choice for a first home in Gatineau. My buyers are mostly young families and couples 25-35 who want a new or recent home with a budget of $400,000 to $500,000. Many come from Ottawa where they can't afford to buy, or are Gatineau first-time buyers who wanted Aylmer but settle here for the price. The Angers side is more developing with new construction, while Masson is more mature with resales.",
-      dataPoint: "On the sales I close in Masson-Angers, new semi-detached and well-prepared recent homes typically go under contract in 25-40 days. Builders are delivering models priced from $400,000 to $490,000 with quick possession, and competition for first-time buyers stays strong despite the increase in supply.",
+      observation: "What I look at in Masson-Angers: I compare a new home with other new homes, and a resale with other resales. The warranty and the delivery date are not the same.",
+      dataPoint: "In Q2 2026, the Buckingham/Masson-Angers sector had 31% more active single-family listings than a year earlier, and sales were down 20% (APCIQ, Centris data).",
       takeaway: "My advice to buyers considering Masson-Angers: compare Masson and Angers carefully before deciding, because they behave like two different markets. If you're targeting new construction, check the builder and the delivery timelines, and negotiate inclusions. My advice to owners thinking about selling: your price should reflect your sub-sector and the competing supply of new builds, not a generic neighbourhood average."
     }}
     cta={{ title: "Buying or selling in Masson-Angers?", text: "I know the area, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}

@@ -86,7 +86,7 @@ const RelocationGuidePage = () => (
     <StickyGuideBanner guideType="relocation_guide" label="Guide relocalisation gratuit, recevez-le par courriel" />
 
     <InlineCTA
-      text="Vous voulez un accompagnement personnalisé? Réservez un appel gratuit."
+      text="Vous voulez qu'on regarde votre situation? Réservez un appel gratuit."
       buttonLabel="Réserver un appel →"
       href="/contact-yanis/"
     />

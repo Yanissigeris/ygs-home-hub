@@ -236,7 +236,7 @@ const ContactPage = () => {
           { q: "Travaillez-vous en anglais?", a: "Oui, je travaille pleinement en français et en anglais, incluant tous les documents, négociations et coordination notariale. C'est essentiel dans une région bilingue comme l'Outaouais." },
           { q: "Quels secteurs couvrez-vous?", a: "Tout l'Outaouais : Aylmer, Hull, le Plateau, Gatineau-centre, Chelsea, Cantley, Val-des-Monts, Buckingham, Masson-Angers et Pontiac." },
           { q: "Peut-on se rencontrer en personne?", a: "Absolument, au bureau RE/MAX, à votre propriété, ou à un endroit pratique dans la région. Plusieurs clients préfèrent un premier appel téléphonique ou vidéo avant la rencontre." },
-          { q: "Et si je ne fais qu'explorer sans être prêt à agir?", a: "C'est en fait un excellent moment pour entrer en contact. Les conversations préparatoires permettent d'éviter les erreurs courantes et de mieux choisir le moment d'agir. Aucune pression pour faire quoi que ce soit avant que vous ne soyez prêt." },
+          { q: "Et si je ne fais qu'explorer sans être prêt à agir?", a: "C'est un bon moment pour en parler. Une conversation d'avance évite les erreurs courantes et aide à choisir le moment d'agir. Aucune pression pour faire quoi que ce soit avant que vous ne soyez prêt." },
         ]}
       />
 

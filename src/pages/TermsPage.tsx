@@ -43,7 +43,7 @@ const TermsPage = () => (
           </Section>
 
           <Section title="4. Exactitude des informations">
-            <p>Nous nous efforçons de maintenir les informations à jour, notamment les prix et les caractéristiques des propriétés. Cependant, les données de marché sont fournies à titre indicatif et peuvent changer sans préavis. Veuillez vérifier directement auprès de nous pour les données les plus récentes.</p>
+            <p>Nous nous efforçons de maintenir les informations à jour, comme les prix et les caractéristiques des propriétés. Cependant, les données de marché sont fournies à titre indicatif et peuvent changer sans préavis. Veuillez vérifier directement auprès de nous pour les données les plus récentes.</p>
           </Section>
 
           <Section title="5. Liens vers des sites tiers">

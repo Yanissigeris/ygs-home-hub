@@ -229,7 +229,7 @@ const BlogPage = () => {
           { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
           { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
         ]}
-        trustLine="Je vous accompagne à votre rythme."
+        trustLine="On avance à votre rythme."
       />
     </>
   );

@@ -40,7 +40,7 @@ const militaryPaths = [
 ];
 
 const faq = [
-  { q: "Est-ce que vous connaissez les programmes pour militaires?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des membres des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant cette date. J'adapte mon travail aux étapes et aux délais de votre dossier." },
+  { q: "Est-ce que vous connaissez les programmes pour militaires?", a: "Oui. La réinstallation des membres des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC), dont une version est en vigueur depuis le 1er avril 2026. Le fournisseur de services de réinstallation des FAC est SIRVA (Défense nationale), et j'accepte aussi les dossiers BGRS. J'adapte mon travail aux étapes et aux délais de votre dossier." },
   { q: "Je dois vendre et acheter en même temps. Est-ce possible?", a: "C'est fréquent dans les mutations. On planifie la coordination dès le départ pour éviter d'être coincé." },
   { q: "Quels secteurs sont proches des installations militaires?", a: "Ça dépend de votre lieu de travail. La Défense nationale regroupe plusieurs de ses bureaux au campus Carling, sur l'avenue Carling dans l'ouest d'Ottawa : depuis Aylmer et le Plateau, on y va par le pont Champlain. D'autres bureaux sont au centre-ville d'Ottawa, plus près de Hull. On compare vos trajets selon votre affectation et vos priorités familiales." },
   { q: "Est-ce que vous pouvez faire des visites virtuelles?", a: "Oui. Il est possible d'acheter à distance avant votre arrivée à Gatineau, avec des visites virtuelles. Je m'adapte à votre horaire et à votre fuseau horaire." },

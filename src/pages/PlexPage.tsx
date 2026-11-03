@@ -61,7 +61,7 @@ const nextSteps = [
 
 const faq = [
   { q: "Comment évaluer la valeur d'un plex?", a: "On combine les ventes récentes de plex comparables et l'approche par le revenu : revenu net, taux global d'actualisation (TGA) et multiplicateur de revenu brut (MRB) du secteur. L'état de l'immeuble et le potentiel locatif ajustent ensuite la valeur. J'analyse des plex en Outaouais depuis 2017, à Hull, à Gatineau-centre et ailleurs." },
-  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus, des dépenses, de l'état de l'immeuble et de votre stratégie. Une analyse propre à la propriété permet d'évaluer la situation." },
+  { q: "Est-ce encore rentable d'acheter un plex à Gatineau?", a: "Ça dépend du secteur, du prix, des revenus, des dépenses, de l'état de l'immeuble et de votre stratégie. Je fais l'analyse de l'immeuble avant que vous décidiez." },
   { q: "Comment vendre un plex occupé?", a: "C'est possible. La vente ne met pas fin aux baux : l'acheteur les reprend tels quels. Les locataires doivent recevoir un préavis de 24 heures avant une visite. On prépare d'avance les baux et l'état des revenus et dépenses à remettre aux acheteurs." },
   { q: "Refinancer ou vendre?", a: "On compare les deux scénarios avec les taux actuels et la valeur marchande de votre secteur pour voir ce qui fait plus de sens." },
 ];
@@ -163,7 +163,7 @@ const PlexPage = () => (
       title="Pages connexes"
       pages={[
         { title: "Analyse plex gratuite", text: "Revenus et dépenses : obtenez une lecture claire de votre immeuble.", href: "/analyse-plex-gatineau/" },
-        { title: "Vendre un plex à Gatineau", text: "Mise en marché et accompagnement pour vendre votre plex.", href: "/vendre-un-plex-a-gatineau/" },
+        { title: "Vendre un plex à Gatineau", text: "Le prix et la mise en marché de votre plex.", href: "/vendre-un-plex-a-gatineau/" },
         { title: "Quartiers à considérer", text: "Comparer les secteurs de Gatineau et de l'Outaouais.", href: "/quartiers-a-considerer-a-gatineau/" },
         { title: "Rapport du marché", text: "Données actuelles du marché immobilier en Outaouais.", href: "/rapport-marche-gatineau/" },
       ]}

@@ -28,7 +28,7 @@ const steps = [
 
 const faq = [
   { q: "How does buying a home during a military posting work?", a: "We start by understanding your timeline and needs. Then, targeted search, visits (virtual or in-person), offer and full support." },
-  { q: "Do you work with SIRVA and BGRS files?", a: "Yes. Since April 1, 2026, CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD). SIRVA handles files authorized on or after January 6, 2026, and BGRS handles those authorized before. I adapt to the steps and timelines of your file." },
+  { q: "Do you work with SIRVA and BGRS files?", a: "Yes. CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD), with a version in effect since April 1, 2026. The CAF relocation service provider is SIRVA (National Defence), and I also accept BGRS files. I adapt to the steps and timelines of your file." },
 ];
 
 const MilitaryRelocationPageEn = () => (

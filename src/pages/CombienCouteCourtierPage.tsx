@@ -92,7 +92,7 @@ const CombienCouteCourtierPage = () => (
       pages={[
         { title: "Comment choisir un courtier?", text: "Les critères à comparer avant de signer.", href: "/comment-choisir-un-courtier-immobilier/" },
         { title: "Vérifier un courtier (OACIQ)", text: "Comment vérifier qu'un courtier est en règle.", href: "/verifier-un-courtier-immobilier-oaciq/" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement pour vendeurs.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Vendre à Gatineau", text: "Prix et mise en marché pour vendeurs.", href: "/vendre-ma-maison-gatineau/" },
         { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"

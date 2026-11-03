@@ -34,7 +34,7 @@ const sectors = [
 const steps = [
   { num: "01", title: "Consultation initiale", desc: "On parle de votre situation, votre budget, vos priorités et vos questions sur Gatineau." },
   { num: "02", title: "Tour des secteurs", desc: "Je vous présente les quartiers qui correspondent à votre profil, avec leurs avantages et leurs inconvénients." },
-  { num: "03", title: "Accompagnement complet", desc: "Recherche ciblée, visites, offre, inspection et notaire : je vous accompagne jusqu'à la remise des clés." },
+  { num: "03", title: "Jusqu'aux clés", desc: "Recherche ciblée, visites, offre, inspection et notaire : je reste là jusqu'à la remise des clés." },
 ];
 
 
@@ -46,7 +46,7 @@ const nextSteps = [
 
 const faq = [
   { q: "Est-ce moins cher d'acheter à Gatineau qu'à Ottawa?", a: "En général, oui, surtout pour les maisons unifamiliales et les terrains. Au T2 2026, le prix médian d'une unifamiliale dans la RMR de Gatineau était de 523 500 $ (APCIQ). Il faut aussi tenir compte des taxes et du coût de la vie. On compare tout ça ensemble." },
-  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus diffère de celui de l'Ontario. Vous signez une promesse d'achat, généralement conditionnelle à l'inspection et au financement. Une fois les conditions remplies, la vente se conclut chez le notaire. Actif en Outaouais depuis 2017, je vous accompagne à chaque étape." },
+  { q: "Comment fonctionne l'achat au Québec?", a: "Le processus diffère de celui de l'Ontario. Vous signez une promesse d'achat, généralement conditionnelle à l'inspection et au financement. Une fois les conditions remplies, la vente se conclut chez le notaire. Je suis courtier en Outaouais depuis 2017." },
   { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de votre budget et de votre trajet vers le travail. Au T2 2026, le prix médian unifamilial était de 572 750 $ à Aylmer et de 419 545 $ à Buckingham/Masson-Angers (APCIQ). Hull et le secteur Gatineau se situent entre les deux. On compare les options selon vos priorités." },
   { q: "Est-ce que je peux travailler à Ottawa et vivre à Gatineau?", a: "Oui. Le centre-ville d'Ottawa se trouve à environ 2 km de l'hôtel de ville de Gatineau, dans le secteur Hull (pont du Portage) et à environ 14 km du Vieux-Aylmer (pont Champlain). Plusieurs ponts et le transport en commun relient les deux rives." },
 ];
