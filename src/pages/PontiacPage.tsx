@@ -91,7 +91,7 @@ const PontiacPage = () => {
           <div className="md:col-span-3 space-y-5 text-[0.9375rem] text-muted-foreground leading-relaxed">
             <p>La municipalité de Pontiac a été créée en 1975 par le regroupement des cantons d'Onslow et d'Eardley. Elle fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale du Canada. Son territoire couvre 503 km² selon la municipalité sur la rive nord de la rivière des Outaouais. <span className="text-xs italic">(Source : Municipalité de Pontiac)</span></p>
             <p>La municipalité de Pontiac est l'une des communautés les plus bilingues de la région. Selon le recensement de 2021, 65,1 % des résidents parlent le français et l'anglais. Le français est la langue maternelle de 54,6 % des résidents, et l'anglais, de 37,1 %. C'est un environnement naturellement bilingue qui attire les familles francophones et anglophones. <span className="text-xs italic">(Source : Statistique Canada, Recensement 2021)</span></p>
-            <p>Une grande partie du territoire de la municipalité de Pontiac est incluse dans le parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité détermine en grande partie le caractère du territoire : peu d'urbanisation et beaucoup de nature, avec une offre résidentielle limitée qui soutient la valeur des propriétés existantes. <span className="text-xs italic">(Source : Wikipedia/Pontiac, Québec)</span></p>
+            <p>Une partie du territoire de la municipalité de Pontiac est incluse dans le parc de la Gatineau, géré par la Commission de la capitale nationale. Cette réalité détermine en grande partie le caractère du territoire : peu d'urbanisation et beaucoup de nature, avec une offre résidentielle limitée qui soutient la valeur des propriétés existantes. <span className="text-xs italic">(Source : Wikipedia/Pontiac, Québec)</span></p>
           </div>
           <div className="md:col-span-2">
             <div className="border border-border rounded-lg p-6 space-y-4">
@@ -102,7 +102,7 @@ const PontiacPage = () => {
                   { icon: MapPin, label: "Situation", value: "MRC des Collines-de-l'Outaouais · Région de la capitale nationale" },
                   { icon: Users, label: "Population", value: "6 142 habitants (Recensement 2021)", source: "(Source : Statistique Canada, 2021)" },
                   { icon: Globe, label: "Bilinguisme", value: "65,1 % de résidents bilingues · FR 54,6 % · EN 37,1 %", source: "(Source : Recensement 2021)" },
-                  { icon: TreePine, label: "Nature", value: "Parc de la Gatineau sur une grande partie du territoire", source: "(Source : Commission de la capitale nationale)" },
+                  { icon: TreePine, label: "Nature", value: "Parc de la Gatineau sur une partie du territoire", source: "(Source : Commission de la capitale nationale)" },
                 ].map((f) => (
                   <div key={f.label} className="flex gap-3">
                     <f.icon size={16} className="shrink-0 text-accent mt-0.5" />
@@ -146,7 +146,7 @@ const PontiacPage = () => {
         <h2 className="mb-8">Ce que l'on trouve à Pontiac qu'on ne trouve nulle part ailleurs dans la région</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { icon: TreePine, title: "Le parc de la Gatineau dans votre cour", text: "Une grande partie du territoire de Pontiac est incluse dans le parc de la Gatineau (361 km² de forêts, lacs et rivières, créé en 1938). Le sentier des chutes de Luskville est directement accessible depuis le secteur Luskville. Les résidents ont accès à des centaines de kilomètres de sentiers de randonnée, de ski de fond et de raquettes. (Source : Commission de la capitale nationale)" },
+            { icon: TreePine, title: "Le parc de la Gatineau dans votre cour", text: "Une partie du territoire de Pontiac est incluse dans le parc de la Gatineau (361 km² de forêts, lacs et rivières, créé en 1938). Le sentier des chutes de Luskville est directement accessible depuis le secteur Luskville. Les résidents ont accès à des centaines de kilomètres de sentiers de randonnée, de ski de fond et de raquettes. (Source : Commission de la capitale nationale)" },
             { icon: Waves, title: "La rivière des Outaouais en façade", text: "La municipalité de Pontiac longe la rive nord de la rivière des Outaouais. Plusieurs propriétés de Breckenridge offrent un accès direct à la rivière ou une vue sur l'eau. La rivière des Outaouais est navigable et poissonneuse, et c'est l'une des plus grandes rivières du Canada. Pour une propriété résidentielle, c'est un atout rare." },
             { icon: Bus, title: "Transcollines : connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais à Gatineau, avec correspondance vers le réseau de la STO. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source : Municipalité de Pontiac / Transcollines)" },
           ].map((c) => (

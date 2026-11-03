@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Le projet Zibi, est-ce un bon achat?",
-    a: "Zibi est un développement en cours sur l'île de Hull. Les premières phases résidentielles sont habitées. C'est un secteur moderne, avec une belle vue sur la rivière, mais les condos neufs sont généralement plus chers que la revente dans le secteur adjacent. Les propriétés dans les quartiers autour de Zibi (Vieux-Hull, Wrightville) ont bénéficié de l'effet de valorisation à des prix plus accessibles. Je peux vous aider à comparer les options.",
+    a: "Zibi est un développement en cours sur l'île de Hull. Les premières phases résidentielles sont habitées. C'est un secteur moderne, avec une belle vue sur la rivière, mais les condos neufs sont généralement plus chers que la revente dans le secteur adjacent. Je compare les deux options avec vous.",
   },
   {
     q: "Hull est-il un bon choix pour les fonctionnaires fédéraux?",
@@ -96,7 +96,7 @@ const HullPage = () => (
           Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est le secteur le plus proche.
         </p>
         <p className="prose-body">
-          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. Le gouvernement fédéral le présente comme la première collectivité carboneutre de la région de la capitale nationale, et Zibi y construit un réseau de chauffage et de climatisation à zéro carbone. Les premières phases sont habitées. (Source : zibi.ca, Ressources naturelles Canada, 2021)
+          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. Le gouvernement fédéral le présente comme la première collectivité nette zéro de la région de la capitale nationale, et Zibi y construit un réseau de chauffage et de climatisation à zéro carbone. Les premières phases sont habitées. (Source : zibi.ca, Ressources naturelles Canada, 2021)
         </p>
         <p className="prose-body">
           Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative a baissé depuis la COVID, alors je pars des loyers en place avant de parler de rendement.

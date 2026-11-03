@@ -103,7 +103,7 @@ const PontiacPageEn = () => {
           <div className="md:col-span-3 space-y-5 text-[0.9375rem] text-muted-foreground leading-relaxed">
             <p>The Municipality of Pontiac was created in 1975 through the merging of the Onslow and Eardley townships. It is part of the MRC des Collines-de-l'Outaouais and is included in Canada's National Capital Region. Its territory covers 503 km² according to the municipality, on the north shore of the Ottawa River. <span className="text-xs italic">(Source: Municipality of Pontiac)</span></p>
             <p>The Municipality of Pontiac is one of the most bilingual communities in the region. According to the 2021 census, 65.1% of residents speak both English and French. French is the mother tongue of 54.6% of residents, and English of 37.1%. It is a naturally bilingual environment that attracts both francophone and anglophone families. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec, 2016 Census)</span></p>
-            <p>A large portion of the Municipality of Pontiac's territory is included in Gatineau Park, managed by the National Capital Commission. This reality largely determines the character of the territory: little urbanization, lots of nature, and a limited residential supply that supports the value of existing properties. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec)</span></p>
+            <p>Part of the Municipality of Pontiac's territory is included in Gatineau Park, managed by the National Capital Commission. This reality largely determines the character of the territory: little urbanization, lots of nature, and a limited residential supply that supports the value of existing properties. <span className="text-xs italic">(Source: Wikipedia/Pontiac, Quebec)</span></p>
           </div>
           <div className="md:col-span-2">
             <div className="border border-border rounded-lg p-6 space-y-4">
@@ -114,7 +114,7 @@ const PontiacPageEn = () => {
                   { icon: MapPin, label: "Location", value: "MRC des Collines-de-l'Outaouais · National Capital Region" },
                   { icon: Users, label: "Population", value: "6,142 residents (2021 Census)", source: "(Source: Statistics Canada, 2021)" },
                   { icon: Globe, label: "Bilingualism", value: "65.1% bilingual residents · FR 54.6% · EN 37.1%", source: "(Source: 2021 Census)" },
-                  { icon: TreePine, label: "Nature", value: "Gatineau Park covers a large portion of the territory", source: "(Source: National Capital Commission)" },
+                  { icon: TreePine, label: "Nature", value: "Gatineau Park covers part of the territory", source: "(Source: National Capital Commission)" },
                 ].map((f) => (
                   <div key={f.label} className="flex gap-3">
                     <f.icon size={16} className="shrink-0 text-accent mt-0.5" />
@@ -158,7 +158,7 @@ const PontiacPageEn = () => {
         <h2 className="mb-8">What you find in Pontiac that you won't find anywhere else in the region</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { icon: TreePine, title: "Gatineau Park in your backyard", text: "A large portion of Pontiac's territory is included in Gatineau Park (361 km² of forests, lakes and rivers, created in 1938). The Luskville Falls trail is directly accessible from the Luskville area. Residents have access to hundreds of kilometres of hiking, cross-country skiing and snowshoeing trails. (Source: National Capital Commission)" },
+            { icon: TreePine, title: "Gatineau Park in your backyard", text: "Part of Pontiac's territory is included in Gatineau Park (361 km² of forests, lakes and rivers, created in 1938). The Luskville Falls trail is directly accessible from the Luskville area. Residents have access to hundreds of kilometres of hiking, cross-country skiing and snowshoeing trails. (Source: National Capital Commission)" },
             { icon: Waves, title: "The Ottawa River as your frontage", text: "The Municipality of Pontiac runs along the north shore of the Ottawa River. Several Breckenridge properties offer direct river access or water views. The Ottawa River is navigable and rich in fish, and it's one of Canada's largest rivers. For a residential property, that's a rare asset." },
             { icon: Bus, title: "Transcollines: urban connection", text: "The Municipality of Pontiac is served by Transcollines, the transit service that links the Collines-de-l'Outaouais municipalities to Gatineau, with transfers to the STO network. A city connection that makes Pontiac more accessible than one might think for those combining remote work with occasional commuting." },
           ].map((c) => (

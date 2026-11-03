@@ -394,8 +394,8 @@ Since 2020, remote work has made Cantley accessible to a new group of buyers: pr
     seoTitleEn: "Buying a Cottage in Val-des-Monts · Guide | YGS",
     metaDescription: "Guide pour acheter un chalet à Val-des-Monts. Lacs, accès, puits, fosse septique et conseils de courtier local en Outaouais.",
     metaDescriptionEn: "Guide to buying a cottage in Val-des-Monts. Lakes, access, wells, septic and local broker advice in the Outaouais.",
-    excerpt: "Val-des-Monts compte plus de 125 lacs. Avant d'y acheter un chalet, quelques points à connaître.",
-    excerptEn: "Val-des-Monts has over 125 lakes. Here's what to know about buying a cottage there.",
+    excerpt: "Val-des-Monts compte 125 lacs. Avant d'y acheter un chalet, quelques points à connaître.",
+    excerptEn: "Val-des-Monts has 125 lakes. Here's what to know about buying a cottage there.",
     category: "Quartiers",
     categoryEn: "Neighbourhoods",
     featuredImage: heroValDesMonts,
@@ -403,7 +403,7 @@ Since 2020, remote work has made Cantley accessible to a new group of buyers: pr
     published: true,
     body: `## Val-des-Monts : le paradis des chalets
 
-Avec plus de 125 lacs, Val-des-Monts est une destination chalet très connue en Outaouais. Voisine de [Gatineau](/gatineau), la municipalité offre de beaux paysages et un accès direct à la nature. Le village de Perkins est à environ 30 km du centre de Gatineau.
+Avec ses 125 lacs, Val-des-Monts est une destination chalet très connue en Outaouais. Voisine de [Gatineau](/gatineau), la municipalité offre de beaux paysages et un accès direct à la nature. Le village de Perkins est à environ 30 km du centre de Gatineau.
 
 ## Bord de lac vs hors bord de lac
 
@@ -429,7 +429,7 @@ Val-des-Monts est un investissement dans votre qualité de vie. Prenez le temps 
 **Lire aussi** : [Val-des-Monts, page quartier](/val-des-monts) · [Guide acheteur](/guide-acheteur-gatineau)`,
     bodyEn: `## Val-des-Monts: Cottage Paradise
 
-With over 125 lakes, Val-des-Monts is a well-known cottage destination in the Outaouais. Right next to [Gatineau](/en/gatineau), the municipality offers beautiful landscapes and direct access to nature. Perkins village is about 30 km from downtown Gatineau.
+With 125 lakes, Val-des-Monts is a well-known cottage destination in the Outaouais. Right next to [Gatineau](/en/gatineau), the municipality offers beautiful landscapes and direct access to nature. Perkins village is about 30 km from downtown Gatineau.
 
 ## Waterfront vs Off-Waterfront
 
@@ -472,7 +472,7 @@ Val-des-Monts is an investment in your quality of life. Take the time to choose 
     published: true,
     body: `## Un lac pour chaque profil
 
-Val-des-Monts compte plus de 125 lacs, mais tous ne sont pas égaux. Certains sont grands et développés, d'autres sont petits et sauvages. Votre choix de lac déterminera votre expérience de propriétaire.
+Val-des-Monts compte 125 lacs, mais tous ne sont pas égaux. Certains sont grands et développés, d'autres sont petits et sauvages. Votre choix de lac déterminera votre expérience de propriétaire.
 
 ## Lac McGregor
 
@@ -493,7 +493,7 @@ Visitez le lac à différentes périodes : un lac animé en été peut être tr
 **Lire aussi** : [Acheter un chalet à Val-des-Monts](/blogue/acheter-chalet-val-des-monts) · [Évaluation gratuite](/evaluation-gratuite-gatineau)`,
     bodyEn: `## A Lake for Every Profile
 
-Val-des-Monts has over 125 lakes, but not all are equal. Some are large and developed, others are small and wild. Your lake choice will determine your ownership experience.
+Val-des-Monts has 125 lakes, but not all are equal. Some are large and developed, others are small and wild. Your lake choice will determine your ownership experience.
 
 ## Lake McGregor
 

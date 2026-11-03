@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Is the Zibi project a good buy?",
-    a: "Zibi is an ongoing development on Île de Hull. The first residential phases are occupied. It's a modern area with beautiful river views, but new condos are generally more expensive than resale in the adjacent area. Properties in neighbourhoods around Zibi (Vieux-Hull, Wrightville) have benefited from the appreciation effect at more accessible prices. I can help you compare options.",
+    a: "Zibi is an ongoing development on Île de Hull. The first residential phases are occupied. It's a modern area with beautiful river views, but new condos are generally more expensive than resale in the adjacent area. I compare both options with you.",
   },
   {
     q: "Is Hull a good choice for federal public servants?",
@@ -33,7 +33,7 @@ const faq = [
   },
   {
     q: "What is the rental yield on a Hull plex right now?",
-    a: "It depends on the price and the rents in place. Rental demand has dropped since COVID: CMHC measured a 3.8% vacancy rate for rental apartments in the Gatineau area in October 2025, up from 1.9% a year earlier. I run the numbers on every property before recommending an offer.",
+    a: "It depends on the price and the rents in place. Rental demand has dropped since COVID, and CMHC measured a 3.8% vacancy rate for rental apartments in the Gatineau area in October 2025, up from 1.9% a year earlier. I run the numbers on every property before recommending an offer.",
   },
   {
     q: "Will the Gatineau-Ottawa tramway change Hull property values?",

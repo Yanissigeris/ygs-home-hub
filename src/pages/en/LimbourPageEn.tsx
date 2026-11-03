@@ -70,7 +70,7 @@ const LimbourPageEn = () => (
     brokerPerspective={{
       observation: "What I look at in Limbour: I compare with sales in the same sub-sector, Ferme Limbour or the rest of the neighbourhood, before talking price.",
       dataPoint: "In Q2 2026, single-family homes in APCIQ's Gatineau sector, which includes Limbour, sold in 22 days on average. When the asking price is aligned with the sub-sector (Ferme Limbour vs. the rest of Limbour), the timeline shortens.",
-      takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. I compare with sales in your sub-sector, not the whole neighbourhood. List at the right price for your zone, not an average for the whole neighbourhood."
+      takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. List at the right price for your zone, not an average for the whole neighbourhood."
     }}
     cta={{ title: "Buying or selling in Limbour?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />

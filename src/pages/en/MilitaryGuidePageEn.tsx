@@ -23,7 +23,7 @@ const topics = [
 
 const faq = [
   { q: "Is this guide free?", a: "Yes. It helps you plan your relocation step by step." },
-  { q: "Do you work with SIRVA and BGRS files?", a: "Yes. Since April 1, 2026, CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD). The CAF relocation service provider is SIRVA (National Defence), and I also accept BGRS files. I adapt to the steps and timelines of your file." },
+  { q: "Do you work with SIRVA and BGRS files?", a: "Yes. CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD), with a version in effect since April 1, 2026. The CAF relocation service provider is SIRVA (National Defence), and I also accept BGRS files. I adapt to the steps and timelines of your file." },
   { q: "Should I buy or rent during a posting?", a: "It depends on the length of your assignment and your financial situation. We discuss it together." },
   { q: "Which neighbourhoods do you recommend for military families?", a: "It depends on where you work. For the Carling Campus in west Ottawa, Aylmer and the Plateau are convenient via the Champlain Bridge. Central Hull is about 2 km from downtown Ottawa, via the Portage Bridge. We compare areas based on your family priorities." },
 ];

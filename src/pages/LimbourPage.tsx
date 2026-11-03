@@ -70,7 +70,7 @@ const LimbourPage = () => (
     brokerPerspective={{
       observation: "Ce que je regarde à Limbour : je compare avec les ventes du même sous-secteur, Ferme Limbour ou le reste du quartier, avant de parler de prix.",
       dataPoint: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
-      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Je compare avec les ventes de votre sous-secteur, pas avec celles de tout le quartier. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
+      takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
     }}
     cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />

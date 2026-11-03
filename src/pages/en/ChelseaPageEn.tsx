@@ -111,7 +111,7 @@ const ChelseaPageEn = () => (
           Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was 8,000 at the 2021 census, up from 6,909 in 2016. Part of its territory is in Gatineau Park, managed by the National Capital Commission, which limits buildable land. (Source: Statistics Canada, National Capital Commission)
         </p>
         <p className="prose-body">
-          Chelsea's population is almost equally split between francophones and anglophones, and 70.8% of residents speak both English and French (Statistics Canada, 2021 Census). Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Source: Wikipedia/Chelsea, Quebec)
+          Chelsea's population is almost equally split between francophones and anglophones, and 70.8% of residents speak both English and French (Statistics Canada, 2021 Census). Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Sources: Statistics Canada, 2021 Census, and Wikipedia/Chelsea)
         </p>
         <p className="prose-body">
           Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service links Chelsea to Gatineau, with transfers to the STO network. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)

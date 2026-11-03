@@ -92,10 +92,10 @@ const ChelseaPage = () => (
       <h2 className="mt-3">Chelsea, des faits vérifiés sur la municipalité</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Chelsea est une municipalité de la MRC des Collines-de-l'Outaouais, chef-lieu de cette MRC. Sa population était de 8 000 habitants au recensement de 2021, contre 6 909 en 2016. Une partie de son territoire est dans le parc de la Gatineau, géré par la Commission de la capitale nationale, ce qui limite les terrains constructibles. (Source : Wikipedia/Chelsea, Commission de la capitale nationale)
+          Chelsea est une municipalité de la MRC des Collines-de-l'Outaouais, chef-lieu de cette MRC. Sa population était de 8 000 habitants au recensement de 2021, contre 6 909 en 2016. Une partie de son territoire est dans le parc de la Gatineau, géré par la Commission de la capitale nationale, ce qui limite les terrains constructibles. (Sources : Statistique Canada, Recensement 2021, et Commission de la capitale nationale)
         </p>
         <p className="prose-body">
-          La population de Chelsea est presque également divisée entre francophones et anglophones, et 70,8 % des résidents parlent le français et l'anglais (Statistique Canada, Recensement 2021). Chelsea fut l'une des premières municipalités au Canada à interdire l'utilisation des pesticides. Ces deux caractéristiques, bilinguisme et sensibilité environnementale, définissent l'identité de la communauté. (Source : Statistique Canada, Recensement 2021)
+          La population de Chelsea est presque également divisée entre francophones et anglophones, et 70,8 % des résidents parlent le français et l'anglais (Statistique Canada, Recensement 2021). Chelsea fut l'une des premières municipalités au Canada à interdire l'utilisation des pesticides. Ces deux caractéristiques, bilinguisme et sensibilité environnementale, définissent l'identité de la communauté. (Sources : Statistique Canada, Recensement 2021, et Wikipedia/Chelsea)
         </p>
         <p className="prose-body">
           L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines relie Chelsea à Gatineau, avec correspondance vers le réseau de la STO. Pour les familles, les activités se concentrent au Centre sportif Meredith (hockey, soccer, espaces communautaires). (Source : Wikipedia/Chelsea, Municipalité de Chelsea)
