@@ -50,7 +50,7 @@ const atouts = [
   {
     icon: "🌲",
     title: "Gatineau Park",
-    text: "Gatineau Park covers 361 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities with Chelsea as the main gateway. Hiking, cycling, cross-country skiing, snowshoeing, swimming at Lac Meech, activities accessible on foot or by bike from residential properties. (Source: National Capital Commission)",
+    text: "Gatineau Park covers 361 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities, including Chelsea. People hike, cycle, cross-country ski, snowshoe and swim at Lac Meech. (Source: National Capital Commission)",
   },
   {
     icon: "♨️",
@@ -111,7 +111,7 @@ const ChelseaPageEn = () => (
           Chelsea is a municipality in the MRC des Collines-de-l'Outaouais, of which it is the county seat. Its population was 8,000 at the 2021 census, up from 6,909 in 2016. Part of its territory is in Gatineau Park, managed by the National Capital Commission, which limits buildable land. (Source: Statistics Canada, National Capital Commission)
         </p>
         <p className="prose-body">
-          Chelsea's population is almost equally split between francophones and anglophones, and 70.8% of residents speak both English and French (Statistics Canada, 2021 Census). Chelsea was one of the first municipalities in Canada to ban the use of pesticides. These two characteristics, bilingualism and environmental awareness, define the community's identity. (Sources: Statistics Canada, 2021 Census, and Wikipedia/Chelsea)
+          Chelsea's population is almost equally split between francophones and anglophones, and 70.8% of residents speak both English and French (Statistics Canada, 2021 Census).
         </p>
         <p className="prose-body">
           Highway 5, known as the Gatineau Highway, connects Chelsea directly to Gatineau and Ottawa. The Transcollines transit service links Chelsea to Gatineau, with transfers to the STO network. The Meredith Centre (hockey, soccer, community spaces) is the heart of family activities in Chelsea. (Source: Wikipedia/Chelsea, Municipality of Chelsea)
@@ -161,7 +161,7 @@ const ChelseaPageEn = () => (
           {[
             "Chelsea is the main gateway to Gatineau Park, 361 km² of nature accessible from your property. (Source: National Capital Commission)",
             "70.8% of Chelsea residents speak both English and French, which makes life easier for francophone and anglophone families alike. (Source: Statistics Canada, 2021 Census)",
-            "Part of the territory is in Gatineau Park, which limits buildable land. (Source: National Capital Commission)",
+            "Part of the territory is in Gatineau Park. (Source: National Capital Commission)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

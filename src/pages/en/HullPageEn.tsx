@@ -143,7 +143,7 @@ const HullPageEn = () => (
           Hull has long drawn multiplex investors, because of its residential density and its proximity to Ottawa. The rental market has cooled since COVID.
         </p>
         <p className="prose-body">
-          According to CMHC, the rental vacancy rate in the Gatineau area rose from 1.9% in October 2024 to 3.8% in October 2025, mostly in Hull and Gatineau, where many new units were completed. So return analysis matters even more.
+          According to CMHC, the rental vacancy rate in the Gatineau area rose from 1.9% in October 2024 to 3.8% in October 2025. So return analysis matters even more.
         </p>
         <p className="prose-body">
           I'm a real estate investor myself, my analysis is honest, not a sales pitch.

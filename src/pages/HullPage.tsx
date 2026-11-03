@@ -127,7 +127,7 @@ const HullPage = () => (
           Hull attire depuis longtemps les investisseurs en multiplex, à cause de la densité résidentielle et de la proximité d'Ottawa. Le marché locatif s'est calmé depuis la COVID.
         </p>
         <p className="prose-body">
-          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. La hausse a été la plus forte à Hull et à Gatineau, où beaucoup de logements neufs ont été livrés. L'analyse de rendement compte donc encore plus.
+          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. L'analyse de rendement compte donc encore plus.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.

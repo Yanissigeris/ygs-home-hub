@@ -26,7 +26,7 @@ const ValDesMontsPage = () => (
     profiles={[
       { icon: TreePine, title: "Amateurs de lac et nature", text: "Quai privé, kayak, baignade et feux de camp. Les grands lacs comme McGregor et Saint-Pierre se prêtent bien à la vie nautique quatre saisons." },
       { icon: Home, title: "Chercheurs de chalet", text: "Du chalet trois-saisons à la maison quatre-saisons au bord de l'eau, les prix varient beaucoup selon l'accès au lac et l'état. Je compare avec les ventes récentes du même lac." },
-      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains de 2 acres et plus, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
+      { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
       { icon: Mountain, title: "Télétravailleurs et retraités", text: "Vie en nature, avec Internet haute vitesse offert dans une grande partie du territoire. Le centre-ville d'Ottawa reste accessible pour les rencontres en présentiel ponctuelles." },
     ]}
     inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}

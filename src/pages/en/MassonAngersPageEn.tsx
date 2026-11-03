@@ -17,7 +17,7 @@ const MassonAngersPageEn = () => (
       "Active new construction: multiple builders delivering in 2026 with spring possession available",
       "Two distinct sub-sectors: Masson (west, more mature) and Angers (east, more developing)",
       "French elementary schools (Centre de services scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
-      "Hormisdas-Gamelin secondary school in Buckingham (12 km, IB Middle Years Programme and sport option)",
+      "Hormisdas-Gamelin secondary school in Buckingham (IB Middle Years Programme and sport option)",
       "Western Quebec School Board (English): Buckingham Elementary in Buckingham, high schools in Hull, subject to eligibility",
       "Direct access to Highway 50",
       "Rivière du Lièvre and Grenouillettes marsh, nature access within a residential area",
@@ -38,7 +38,7 @@ const MassonAngersPageEn = () => (
       { q: "How much can I save buying in Masson-Angers vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $419,545 in Q2 2026 in APCIQ's Buckingham/Masson-Angers sector. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
       { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has Buckingham Elementary in Buckingham and Greater Gatineau Elementary in the Gatineau sector. Its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). Plan for school transportation, and use the WQSB School Locator on westernquebec.ca to find the school for your address." },
       { q: "Are there new homes in Masson-Angers?", a: "Yes, several builders are active in Masson-Angers. Possession dates vary from one project to another: I check the available projects with you." },
-      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham (12 km), which offers the IB Middle Years Programme (PEI) and a sport option." },
+      { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham, which offers the IB Middle Years Programme (PEI) and a sport option." },
       { q: "What are the sub-sectors of Masson-Angers?", a: "The area splits into two: Masson (west side, more mature, near the Rivière du Lièvre) and Angers (east side, more developing with recent new construction). Prices and inventory differ from one sub-sector to the other." },
     ]}}
     sectors={{ list: [
