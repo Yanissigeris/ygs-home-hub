@@ -26,8 +26,8 @@ const LimbourPageEn = () => (
     answers={[
       {
         q: "What kind of homes are in Limbour?",
-        a: "Mostly two-storey single-family homes with a garage, built between 2000 and 2020, plus townhomes and some semi-detached homes. Typical sizes range from 1,400 to 2,200 sq. ft., with a basement that is often finished or ready to finish.",
-        detail: "For a buyer, that means recent materials, insulation and mechanical systems, so few major renovations compared to older areas like Côte-d'Azur. Lots are already landscaped and parks are mature. In Ferme Limbour, lots are larger and often wooded, and an equivalent home can be worth $30,000 to $50,000 more than elsewhere in Limbour.",
+        a: "Mostly two-storey single-family homes with a garage, built between 2000 and 2020, plus townhomes and some semi-detached homes. The basement is often finished or ready to finish.",
+        detail: "For a buyer, that means recent materials, insulation and mechanical systems, so few major renovations compared to older areas like Côte-d'Azur. Lots are already landscaped and parks are mature. In Ferme Limbour, lots are larger and often wooded.",
       },
       {
         q: "Limbour, Aylmer, the Plateau or Masson-Angers: which one should I choose?",
@@ -68,9 +68,9 @@ const LimbourPageEn = () => (
     ]}}
     guide={{ type: "buyer_guide", headline: "Free buyer's guide, buying in Limbour", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide, get it by email" }}
     brokerPerspective={{
-      observation: "What I'm seeing in Limbour right now: most of my buyers are young families or couples upgrading from a condo or smaller first home. They're looking for a recent property, no major renovations needed, with a garage and an open lot. Ferme Limbour gets a lot of visits. More and more buyers from across the river in Ottawa come here for modern construction at a lower price than in comparable Ottawa neighbourhoods.",
+      observation: "What I look at in Limbour: I compare with sales in the same sub-sector, Ferme Limbour or the rest of the neighbourhood, before talking price.",
       dataPoint: "In Q2 2026, single-family homes in APCIQ's Gatineau sector, which includes Limbour, sold in 22 days on average. When the asking price is aligned with the sub-sector (Ferme Limbour vs. the rest of Limbour), the timeline shortens.",
-      takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. An equivalent home in Ferme Limbour vs. another street in Limbour can mean a $30,000-$50,000 difference. List at the right price for your zone, not an average for the whole neighbourhood."
+      takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. I compare with sales in your sub-sector, not the whole neighbourhood. List at the right price for your zone, not an average for the whole neighbourhood."
     }}
     cta={{ title: "Buying or selling in Limbour?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />

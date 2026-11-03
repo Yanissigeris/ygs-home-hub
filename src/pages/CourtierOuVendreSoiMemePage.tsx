@@ -107,7 +107,7 @@ const CourtierOuVendreSoiMemePage = () => (
       pages={[
         { title: "Combien coûte un courtier?", text: "Guide sur la rémunération.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
         { title: "Frais de courtage au Québec", text: "Détail des frais et services.", href: "/frais-de-courtage-immobilier-quebec/" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
         { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"
@@ -121,7 +121,7 @@ const CourtierOuVendreSoiMemePage = () => (
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
-      trustLine="Accompagnement transparent, à votre rythme."
+      trustLine="Des chiffres clairs, à votre rythme."
     />
 
     <FAQSection items={faq} />

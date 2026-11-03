@@ -21,7 +21,7 @@ const guidesEn = [
   { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the guide →" },
 ];
 
-const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Des ressources complètes pour vous accompagner à chaque étape : gratuites, sans engagement et envoyées par courriel." };
+const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Un guide gratuit pour chaque étape, envoyé par courriel, sans engagement." };
 const headingEn = { overline: "Free Guides", title: "Get your real estate guide", subtitle: "Free guides for each step of your project, sent by email, no commitment." };
 
 const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {

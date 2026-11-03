@@ -119,7 +119,7 @@ const VerifierCourtierOaciqPage = () => (
       pages={[
         { title: "Comment choisir un courtier?", text: "Les critères pour bien choisir.", href: "/comment-choisir-un-courtier-immobilier/" },
         { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
         { title: "Contact", text: "Discuter de votre projet.", href: "/contact-yanis/" },
       ]}
       background="alt"

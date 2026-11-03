@@ -25,7 +25,7 @@ const MassonAngersPage = () => (
     profilesTitle="À qui s'adresse Masson-Angers"
     profiles={[
       { icon: Users, title: "Jeunes familles", text: "Maisons neuves abordables, 4 écoles primaires CSSCV à proximité, parcs et sentiers dans les nouveaux développements. La rivière du Lièvre et les espaces verts ajoutent à la qualité de vie." },
-      { icon: Home, title: "Premiers acheteurs", text: "Prix d'entrée accessibles entre 400 000 $ et 490 000 $ pour un jumelé ou une maison neuve. Programmes RAP/CELIAPP applicables. Financement plus facile qu'à Hull ou Aylmer." },
+      { icon: Home, title: "Premiers acheteurs", text: "Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 419 545 $ dans le secteur Buckingham/Masson-Angers (APCIQ), le plus bas des quatre secteurs de Gatineau. Le RAP et le CELIAPP s'appliquent." },
       { icon: TrendingUp, title: "Investisseurs", text: "Des prix d'entrée plus bas qu'ailleurs à Gatineau et des projets neufs. Avant une offre, je vous montre les loyers récents du secteur." },
       { icon: MapPin, title: "Travailleurs de l'est", text: "Accès direct aux zones d'emploi de Gatineau-est, Buckingham et Thurso. Le centre de Buckingham est à environ 5 km par la route." },
     ]}
@@ -51,13 +51,13 @@ const MassonAngersPage = () => (
       { title: "Premier achat à Masson-Angers", text: "Pourquoi c'est le bon moment.", href: "/blogue/premier-achat-masson-angers/" },
       { title: "Constructions neuves", text: "Ce qu'il faut savoir sur le neuf.", href: "/blogue/constructions-neuves-masson-angers/" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
-      { title: "Vendre à Gatineau", text: "Stratégie et accompagnement.", href: "/vendre-ma-maison-gatineau/" },
+      { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Masson-Angers", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
-      observation: "Ce que je vois à Masson-Angers en ce moment : c'est devenu un choix fréquent pour un premier achat à Gatineau. Mes acheteurs sont surtout des jeunes familles et des couples 25-35 ans qui veulent une maison neuve ou récente avec un budget de 400 000 $ à 500 000 $. Beaucoup viennent d'Ottawa où ils ne peuvent pas acheter, ou sont des premiers acheteurs gatinois qui voulaient Aylmer mais se rabattent ici pour le prix. Le côté Angers est plus en développement avec les constructions neuves, le côté Masson est plus mature avec des reventes.",
-      dataPoint: "Sur les ventes que je conclus à Masson-Angers, les jumelés neufs et les maisons récentes bien préparées partent généralement en 25-40 jours. Les promoteurs livrent des modèles entre 400 000 $ et 490 000 $ avec possession rapide, et la concurrence pour les premiers acheteurs reste forte malgré l'augmentation de l'offre.",
+      observation: "Ce que je regarde à Masson-Angers : je compare une maison neuve avec d'autres maisons neuves, et une revente avec d'autres reventes. La garantie et le délai de livraison ne sont pas les mêmes.",
+      dataPoint: "Au 2e trimestre 2026, le secteur Buckingham/Masson-Angers comptait 31 % plus d'unifamiliales en vigueur qu'un an plus tôt, et les ventes avaient baissé de 20 % (APCIQ, données Centris).",
       takeaway: "Mon conseil aux acheteurs qui considèrent Masson-Angers : comparez bien Masson et Angers avant de vous décider, parce que ce sont deux marchés différents. Si vous visez une construction neuve, vérifiez le promoteur et les délais de livraison, et négociez les inclusions. Mon conseil aux propriétaires qui pensent vendre : votre prix doit refléter votre sous-secteur et l'offre concurrente du neuf, pas une moyenne du quartier."
     }}
     cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

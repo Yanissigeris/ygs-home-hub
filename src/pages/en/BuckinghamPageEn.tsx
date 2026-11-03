@@ -178,7 +178,7 @@ const BuckinghamPageEn = () => (
       <h2 className="mt-3">Buckingham &amp; Masson-Angers, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          In Q2 2026, APCIQ counted 121 active single-family listings in the Buckingham/Masson-Angers sector, 31% more than a year earlier, with 94 sales (down 20%) and a median price of $419,545 (Centris data). For an Ottawa family, a useful reference is Ottawa's single-family median of $740,000 in August 2026 (Ottawa Real Estate Board), keeping in mind that the two boards don't cover the same period or identical homes.
+          In Q2 2026, APCIQ counted 121 active single-family listings in the Buckingham/Masson-Angers sector, 31% more than a year earlier, with 94 sales (down 20%) and a median price of $419,545 (Centris data). For an Ottawa family, a useful reference is Ottawa's single-family median of $740,000 in August 2026 (Ottawa Real Estate Board). The two boards don't cover the same period or identical homes.
         </p>
         <p className="prose-body">
           Single-family homes in the sector sold in 27 days on average in Q2 2026 (APCIQ), in line with the metropolitan Gatineau average. The lesson for sellers: pricing strategy and pre-sale preparation affect how long a home stays on the market.

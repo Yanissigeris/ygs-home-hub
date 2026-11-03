@@ -107,7 +107,7 @@ const CommentChoisirCourtierPage = () => (
       pages={[
         { title: "Combien coûte un courtier?", text: "Comment fonctionne la commission au Québec.", href: "/combien-coute-un-courtier-immobilier-au-quebec/" },
         { title: "Vérifier un courtier (OACIQ)", text: "Comment confirmer qu'un courtier est en règle.", href: "/verifier-un-courtier-immobilier-oaciq/" },
-        { title: "Vendre à Gatineau", text: "Stratégie et accompagnement pour vendeurs.", href: "/vendre-ma-maison-gatineau/" },
+        { title: "Vendre à Gatineau", text: "Prix et mise en marché pour vendeurs.", href: "/vendre-ma-maison-gatineau/" },
         { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       ]}
       background="alt"
