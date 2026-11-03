@@ -199,7 +199,7 @@ const escapeHtml = (s) =>
  * Placed right before </head> so it ships in the static HTML for crawlers
  * (Google Discover, Bing, social) without waiting for React to mount.
  */
-function injectBlogPostingJsonLd(html, { url, headline, description, image, datePublished, inLanguage }) {
+function injectBlogPostingJsonLd(html, { url, headline, description, image, datePublished, dateModified, inLanguage }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -208,13 +208,14 @@ function injectBlogPostingJsonLd(html, { url, headline, description, image, date
     description,
     image: [image],
     datePublished,
-    dateModified: datePublished,
+    dateModified: dateModified || datePublished,
     inLanguage,
     author: {
       "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
       name: "Yanis Gauthier-Sigeris",
-      url: SITE_URL,
-      jobTitle: "Real Estate Broker",
+      url: `${SITE_URL}/`,
+      jobTitle: inLanguage === "fr-CA" ? "Courtier immobilier résidentiel" : "Residential Real Estate Broker",
     },
     publisher: {
       "@type": "Organization",
@@ -789,6 +790,7 @@ async function main() {
       description: frMeta.description,
       image: ogImage,
       datePublished: post.publishDate,
+      dateModified: post.updatedDate,
       inLanguage: "fr-CA",
     });
     frHtml = injectBlogBodyFallback(frHtml, {
@@ -829,6 +831,7 @@ async function main() {
       description: enMeta.description,
       image: ogImage,
       datePublished: post.publishDate,
+      dateModified: post.updatedDate,
       inLanguage: "en-CA",
     });
     enHtml = injectBlogBodyFallback(enHtml, {
@@ -855,10 +858,10 @@ async function main() {
   console.log(`✅ Prerender: wrote ${blogHtmlCount} blog article HTML files (with BlogPosting JSON-LD)`);
 
   const blogEntries = blogPosts
-    .map(({ slug, slugEn, publishDate, ogImage }) => {
+    .map(({ slug, slugEn, publishDate, updatedDate, ogImage }) => {
       const frUrl = `${SITE_URL}/blogue/${slug}/`;
       const enUrl = `${SITE_URL}/en/blog/${slugEn}/`;
-      const lastmod = publishDate || today;
+      const lastmod = updatedDate || publishDate || today;
 
       const imageBlock = ogImage
         ? `

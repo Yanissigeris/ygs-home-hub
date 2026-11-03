@@ -36,6 +36,8 @@ export interface BlogPost {
   categoryEn: string;
   featuredImage?: string;
   publishDate: string;
+  /** Date (YYYY-MM-DD) of the last substantive content update. Shown as « Mis à jour le » and used as dateModified. */
+  updatedDate?: string;
   published: boolean;
   featured?: boolean;
   body: string;
@@ -444,7 +446,7 @@ Overpricing by aiming for the "top of the comparable range" is the most expensiv
 
 When the market was tight in 2022 and 2023 with under 2 months of inventory, overpricing 5% worked. An emotional buyer would eventually bite. Today, with rising inventory and buyers actively filtering before booking a showing, an overpriced home attracts no one. No showings, no offers. And without offers, a forced reduction follows after 4 to 6 weeks, with the bonus "stale" label that discourages future offers.
 
-For a median single-family property in Gatineau ($489,950), a 5% overprice that leads to a forced reduction at 8 weeks typically costs between $14,000 and $20,000 in direct loss and mortgage carrying costs combined.
+Take a median single-family property in Gatineau ($489,950). A 5% overprice that leads to a forced reduction at 8 weeks typically costs between $14,000 and $20,000, direct loss and mortgage carrying costs combined.
 
 ### Why is the $620,000 to $740,000 price range becoming critical in Gatineau in 2026?
 
@@ -516,11 +518,15 @@ A: Some nuance is needed. In Q1 2026, the market continued rebalancing while the
 
 ## Les prix ont-ils baissé à Gatineau?
 
-Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ, une première pour Gatineau. Gatineau est aussi la seule RMR du Québec à afficher ce recul ce trimestre. Le recul reste modeste, mais il mérite votre attention. Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché. Ce délai envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
+Oui, légèrement. Le prix médian des unifamiliales a reculé de 1 % au T1 2026 selon l'APCIQ, une première pour Gatineau. Gatineau est aussi la seule RMR du Québec à afficher ce recul ce trimestre. Le recul reste modeste, mais il mérite votre attention.
+
+Avec 10 % de transactions en moins et 18 % de propriétés supplémentaires sur le marché, la pression sur les prix s'est atténuée. Pour un vendeur, ça se traduit concrètement : une inscription trop haute restera plus longtemps sur le marché. Ce délai envoie un mauvais signal aux acheteurs et finit souvent par coûter plus cher qu'un prix juste dès le départ.
 
 ## Est-ce encore un marché de vendeur à Gatineau en 2026?
 
-Oui, mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix. Ce qui a changé : les acheteurs ont maintenant le luxe de comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR, contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
+Oui, mais les conditions ont changé. Malgré le rééquilibrage, les mois d'inventaire restent sous le seuil d'un marché équilibré pour les unifamiliales. Les vendeurs gardent l'avantage, en particulier sur les propriétés bien présentées et bien positionnées en prix.
+
+Par contre, les acheteurs peuvent maintenant comparer. En T1 2026, 1 394 propriétés étaient disponibles sur Centris dans la RMR, contre 1 182 au même trimestre en 2025. Plus de choix signifie des acheteurs plus sélectifs.
 
 ## Quel est le bon moment pour inscrire sa maison à Gatineau ce printemps?
 
@@ -528,7 +534,9 @@ Le printemps reste une bonne saison pour vendre, mais la fenêtre est plus court
 
 ## Ce que je vois sur le terrain
 
-Ce que je vois en ce moment sur le terrain est assez clair. Les maisons prennent plus de temps à vendre qu'il y a un an. L'écart reste modeste, mais il se fait sentir. Les acheteurs ont plus de choix et ils le savent : 18 % d'inscriptions supplémentaires par rapport à l'an dernier, c'est une différence nette que tout le monde ressent sur le marché. Résultat direct : le prix médian des unifamiliales a légèrement reculé. C'est l'offre et la demande, pas de mystère. Les vendeurs qui comprennent ça et inscrivent leur maison au bon prix vendent. Ceux qui visent trop haut attendent.
+Sur le terrain, les maisons prennent plus de temps à vendre qu'il y a un an. L'écart reste modeste, mais il se fait sentir. Les acheteurs ont plus de choix et ils le savent : 18 % d'inscriptions supplémentaires par rapport à l'an dernier, c'est une différence nette que tout le monde ressent sur le marché. Le prix médian des unifamiliales a d'ailleurs légèrement reculé.
+
+Les vendeurs qui comprennent ça et inscrivent leur maison au bon prix vendent. Ceux qui visent trop haut attendent.
 
 ## FAQ
 
@@ -554,11 +562,15 @@ R : Oui. Plus d'inventaire signifie plus de concurrence visuelle. Les photos et
 
 ## Have prices dropped in Gatineau?
 
-Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ, a first for Gatineau. Gatineau was also the only CMA in Quebec to show this decline this quarter. The drop is modest, but it deserves your attention. With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
+Yes, slightly. The median price of single-family homes fell 1% in Q1 2026 according to APCIQ, a first for Gatineau. Gatineau was also the only CMA in Quebec to show this decline this quarter. The drop is modest, but it deserves your attention.
+
+With 10% fewer transactions and 18% more properties on the market, price pressure has eased. For a seller, this translates concretely: an overpriced listing will stay on the market longer, sending a bad signal to buyers and often ending up costing more than a fair price from the start.
 
 ## Is it still a seller's market in Gatineau in 2026?
 
-Yes, but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties. What has changed: buyers now have the luxury of comparing. In Q1 2026, 1,394 properties were available on Centris in the CMA, versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
+Yes, but conditions have changed. Despite the rebalancing, months of inventory remain below the threshold of a balanced market for single-family homes. Sellers retain the advantage, especially on well-presented and well-priced properties.
+
+Buyers, however, can now compare. In Q1 2026, 1,394 properties were available on Centris in the CMA, versus 1,182 in the same quarter in 2025. More choice means more selective buyers.
 
 ## When is the right time to list in Gatineau this spring?
 
@@ -566,7 +578,9 @@ Spring is still a good season to sell, but the window is shorter than before. Wi
 
 ## What I'm seeing on the ground
 
-What I'm seeing right now on the ground is quite clear. Homes are taking longer to sell than a year ago. The gap is modest, but you can feel it. Buyers have more choice and they know it: 18% more listings compared to last year, a clear difference everyone feels in the market. Direct result: the median price of single-family homes has slightly declined. It's supply and demand, no mystery. Sellers who understand this and list at the right price sell. Those who aim too high wait.
+On the ground, homes are taking longer to sell than a year ago. The gap is modest, but you can feel it. Buyers have more choice and they know it: 18% more listings compared to last year, a clear difference everyone feels in the market. The median price of single-family homes has also slightly declined.
+
+Sellers who understand this and list at the right price sell. Those who aim too high wait.
 
 ## FAQ
 
@@ -574,7 +588,7 @@ What I'm seeing right now on the ground is quite clear. Homes are taking longer 
 A: It depends on the area and property type. In Aylmer and Hull, well-maintained single-family homes continue to attract buyers. Send me the word VALUE in DM, I'll give you the analysis of your specific area, with numbers to back it up.
 
 **Q: Should I lower my price to sell quickly in 2026?**
-A: Not necessarily. A listing at the right price from the start is more effective than a high listing followed by a reduction, which often generates fewer offers and a lower final price. I'll give you the numbers for your area to decide. DM: SALE.
+A: Not necessarily. Listing at the right price from the start works better than a high listing followed by a reduction, which often generates fewer offers and a lower final price. I'll give you the numbers for your area to decide. DM: SALE.
 
 **Q: Does the increase in listings change the marketing strategy?**
 A: Yes. More inventory means more visual competition. Photos and price positioning become even more decisive. This is precisely what we work on together before listing. DM: SALE.
@@ -756,60 +770,73 @@ Whether you're thinking of selling or buying, understanding these trends gives y
     titleEn: "When Is the Best Time to Sell in Gatineau?",
     seoTitle: "Quand vendre sa maison à Gatineau? · Le bon moment | YGS",
     seoTitleEn: "When to Sell Your Home in Gatineau | YGS",
-    metaDescription: "Printemps ou automne? Le moment de l'année pour vendre votre propriété à Gatineau et les facteurs locaux qui pèsent sur votre prix de vente.",
-    metaDescriptionEn: "Spring or fall? When to sell your property in Gatineau and the local factors that weigh on your sale price.",
-    excerpt: "Le bon moment de l'année pour inscrire votre propriété, selon le rythme du marché local.",
-    excerptEn: "The right time of year to list your property, based on the local market's seasonal rhythm.",
+    metaDescription: "Inventaire en hausse de 30 % et délai de 27 jours au T2 2026 : comment choisir le moment de vendre votre maison à Gatineau, chiffres à l'appui.",
+    metaDescriptionEn: "Inventory up 30% and a 27-day selling time in Q2 2026: how to choose when to sell your home in Gatineau, based on the numbers.",
+    excerpt: "Le bon moment pour vendre dépend surtout de la concurrence dans votre secteur. Ce que disent les chiffres récents.",
+    excerptEn: "The right time to sell depends mostly on the competition in your area. What the recent numbers say.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     publishDate: "2025-02-10",
+    updatedDate: "2026-11-03",
     published: true,
     body: `## Quand vendre sa maison à Gatineau?
 
-Le moment de l'inscription peut peser sur le prix de vente de votre propriété à Gatineau. Regardons comment le marché local bouge, saison par saison.
+Le meilleur moment, c'est quand votre maison a peu de concurrence dans votre secteur. Au 2e trimestre 2026, 2 007 propriétés étaient à vendre dans la région métropolitaine de Gatineau, 30 % de plus qu'un an plus tôt. La saison compte, mais l'inventaire autour de vous compte davantage.
 
-### Le printemps : la saison classique
+### Que disent les chiffres récents?
 
-Historiquement, le printemps (mars à juin) est la période la plus active du marché immobilier en Outaouais. L'inventaire augmente et les propriétés bien présentées se vendent rapidement.
+Une unifamiliale s'est vendue en 27 jours en moyenne au 2e trimestre 2026, un délai stable sur un an. Son prix médian a monté de 2 %, à 523 500 $. Pour un condo, le portrait est différent : prix médian en baisse de 5 % et délai de 40 jours.
 
-### L'automne : une fenêtre sous-estimée
+Avec autant de choix, un acheteur compare votre maison à plus de propriétés qu'en 2025. Le prix de départ décide en bonne partie du délai.
 
-La période de septembre à novembre offre souvent moins de concurrence entre vendeurs, ce qui peut jouer en votre faveur. Les acheteurs actifs à cette période sont généralement plus sérieux et motivés.
+### Faut-il attendre le printemps?
 
-### Facteurs locaux à considérer
+Au printemps, il y a plus d'acheteurs, mais aussi plus de vendeurs. Une maison bien préparée se démarque mieux quand il y a moins d'inscriptions semblables dans le même secteur, peu importe le mois.
 
-- **Le cycle de mutation militaire** : Les familles militaires mutées dans la région d'Ottawa-Gatineau cherchent activement entre avril et août.
-- **La rentrée scolaire** : Les familles avec enfants préfèrent s'installer avant septembre.
-- **Les taux d'intérêt** : L'évolution des taux influence directement le pouvoir d'achat des acquéreurs.
+### Quels facteurs propres à Gatineau regarder?
 
-### Mon conseil
+Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager avant la rentrée. Pour les militaires mutés dans la région d'Ottawa-Gatineau, c'est le calendrier de la mutation qui fixe la date. Et les taux d'intérêt changent ce qu'un acheteur peut emprunter, donc le prix qu'il peut offrir.
 
-Il n'y a pas de « mauvais » moment pour vendre si votre propriété est bien préparée et bien positionnée. Le reste tient à une mise en marché adaptée à la saison.
+### Comment choisir votre moment?
 
-**Lire aussi** : [Home staging à Gatineau : vendre plus vite](/blogue/home-staging-vendre-plus-vite-gatineau) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
-    bodyEn: `## When Is the Best Time to Sell in Gatineau?
+Regardez trois choses dans votre secteur et votre type de propriété : le nombre d'inscriptions semblables, le délai des dernières ventes et l'écart entre prix demandé et prix vendu. Ces chiffres se lisent dans les ventes comparables des 90 derniers jours.
 
-Timing can weigh on your property's sale price in Gatineau. Let's look at how the local market moves, season by season.
+### Mon approche
 
-### Spring: The Classic Season
+Je vous donne les chiffres et les options, vous décidez. Avant de fixer la date, je vous montre les ventes récentes de votre secteur et les maisons qui seront en concurrence avec la vôtre.
 
-Historically, spring (March to June) is the most active period in the Outaouais real estate market. Inventory increases and well-presented properties sell quickly.
+**Source** : Chambre immobilière de l'Outaouais et APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
-### Fall: An Underrated Window
+**Lire aussi** : [Inventaire +30 % à Gatineau](/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
+    bodyEn: `## When Should You Sell Your Home in Gatineau?
 
-The September to November period often offers less competition among sellers, which can work in your favour. Buyers active during this time are generally more serious and motivated.
+The best time is when your home has little competition in your area. In Q2 2026, 2,007 properties were for sale in the Gatineau metropolitan area, 30% more than a year earlier. The season matters, but the inventory around you matters more.
 
-### Local Factors to Consider
+### What do the recent numbers say?
 
-- **Military posting cycle**: Military families posted to the Ottawa-Gatineau region actively search between April and August.
-- **Back to school**: Families with children prefer to settle before September.
-- **Interest rates**: Rate changes directly impact buyers' purchasing power.
+A single-family home sold in 27 days on average in Q2 2026, unchanged from a year earlier. Its median price rose 2%, to $523,500. Condos tell a different story: the median price fell 5% and the average selling time was 40 days.
 
-### My Advice
+With that much choice, a buyer compares your home with more properties than in 2025. The starting price largely decides how long the sale takes.
 
-There's no "bad" time to sell if your property is well-prepared and well-positioned. The rest comes down to marketing adapted to the season.
+### Is spring still the best season?
 
-**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [Selling Your Home in Winter](/en/blog/selling-home-winter-gatineau-tips)`,
+Spring brings more buyers, but also more sellers. A well-prepared home stands out more when there are fewer similar listings in the same area, whatever the month.
+
+### Which Gatineau-specific factors should you watch?
+
+Families with school-age children often prefer to move before the school year starts. Military members posted to the Ottawa-Gatineau region arrive on their posting schedule. And interest rates change what a buyer can borrow, so the price they can offer.
+
+### How do you pick your timing?
+
+Look at three things for your area and property type: the number of similar listings, how long recent sales took, and the gap between asking and selling prices. You find them in the comparable sales from the last 90 days.
+
+### My approach
+
+I give you the numbers and the options, and you decide. Before we pick a date, I show you the recent sales in your area and the homes that will compete with yours.
+
+**Source**: Outaouais Real Estate Board and QPAREB, residential barometer, Q2 2026 (Centris data).
+
+**Read also**: [Inventory up 30% in Gatineau](/en/blog/gatineau-inventory-2026-30-percent-listings) · [Selling a Home in Winter in Gatineau](/en/blog/selling-home-winter-gatineau-tips)`,
   },
   {
     slug: "premier-achat-gatineau-guide",
@@ -947,80 +974,97 @@ Downtown Ottawa is about 2 km from Hull via the Portage Bridge, 9 km from the Pl
     titleEn: "Investing in a Plex in Gatineau: Is It Still Worth It?",
     seoTitle: "Investir plex Gatineau · Analyse de rentabilité | YGS",
     seoTitleEn: "Investing in a Plex Gatineau · ROI Analysis | YGS",
-    metaDescription: "Taux de cap, cash-flow, secteurs à surveiller et erreurs à éviter : comment analyser un plex à Gatineau avant d'investir.",
-    metaDescriptionEn: "Cap rate, cash flow, areas to watch and mistakes to avoid: how to analyze a plex in Gatineau before you invest.",
-    excerpt: "Taux de cap, cash-flow, secteurs à surveiller et erreurs à éviter pour les investisseurs en plex.",
-    excerptEn: "Cap rate, cash flow, areas to watch and mistakes to avoid for plex investors.",
+    metaDescription: "MRB, TGA, cash-flow, mise de fonds et inoccupation : comment juger un plex à Gatineau en 2026, chiffres APCIQ et SCHL à l'appui.",
+    metaDescriptionEn: "GRM, cap rate, cash flow, down payment and vacancy: how to judge a plex in Gatineau in 2026, with QPAREB and CMHC figures.",
+    excerpt: "MRB, TGA, cash-flow et mise de fonds : les calculs à faire avant une promesse d'achat sur un plex.",
+    excerptEn: "GRM, cap rate, cash flow and down payment: the math to do before you make an offer on a plex.",
     category: "Investissement",
     categoryEn: "Investment",
     publishDate: "2025-04-02",
+    updatedDate: "2026-11-03",
     published: true,
-    body: `## Investir dans un plex à Gatineau : est-ce encore rentable?
+    body: `## Investir dans un plex à Gatineau : encore rentable?
 
-L'investissement immobilier multi-logements reste une stratégie populaire en Outaouais. Mais avec l'évolution des prix et des taux d'intérêt, est-ce que les chiffres fonctionnent encore?
+Ça dépend du prix payé et des baux en place. Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements était de 599 600 $ dans la région métropolitaine de Gatineau, en hausse de 7 % sur un an (APCIQ, données Centris). À ce prix, l'immeuble doit se payer avec ses loyers d'aujourd'hui.
 
-### L'attrait du plex à Gatineau
+### Quels chiffres regarder en premier?
 
-Le plex reste populaire à Gatineau, à cause des prix d'entrée et de la proximité d'Ottawa. Mais la demande locative a baissé depuis la COVID, et ça doit entrer dans les chiffres.
+Le multiplicateur de revenus bruts (MRB) divise le prix par les revenus bruts annuels. C'est un repère rapide pour comparer deux immeubles du même secteur, rien de plus.
 
-### Analyser la rentabilité
+Le taux global d'actualisation (TGA) divise le revenu net par le prix. Ce revenu net, c'est ce qui reste des loyers après les taxes municipales et scolaires, les assurances, l'entretien, l'énergie payée par le propriétaire et une provision pour logement vide. L'hypothèque n'entre pas dans ce calcul.
 
-Avant d'investir, faites une analyse rigoureuse :
-- **Ratio prix/loyers** : Comparez le prix d'achat aux revenus locatifs annuels.
-- **Cash-flow** : Après les dépenses (hypothèque, taxes, assurances, entretien), reste-t-il un flux de trésorerie positif?
-- **Taux de capitalisation** : Visez un taux de cap d'au moins 4 à 5 % pour un investissement sain.
+Le cash-flow, lui, se calcule après l'hypothèque. Un immeuble peut afficher un TGA correct et laisser peu d'argent chaque mois, selon la mise de fonds et le taux obtenu.
 
-### Secteurs à surveiller
+### Combien faut-il de mise de fonds?
 
-- **[Hull](/hull)** : Fort potentiel locatif grâce à la proximité d'Ottawa et à la revitalisation du centre-ville.
-- **[Gatineau centre](/gatineau)** : Prix d'achat encore accessibles avec des loyers en hausse.
-- **[Buckingham](/buckingham-masson-angers)** : Prix d'entrée plus bas que dans les autres secteurs de Gatineau.
+Si vous habitez un des logements, un plex de 2 logements peut s'acheter avec une mise de fonds assurée de 5 % sur les premiers 500 000 $ et de 10 % sur le reste. Pour un immeuble de 3 ou 4 logements occupé par le propriétaire, le minimum assuré est de 10 %. Ces deux règles viennent de l'assurance prêt hypothécaire de la SCHL pour propriétaires-occupants. Pour un immeuble que vous n'habitez pas, elle ne s'applique pas, et les prêteurs demandent habituellement au moins 20 %.
 
-### Erreurs à éviter
+Ces règles changent le rendement plus que n'importe quel secteur. Parlez à votre prêteur avant de visiter.
 
-1. Ne pas faire d'inspection approfondie
-2. Sous-estimer les coûts de rénovation
-3. Ignorer le marché locatif local
-4. Ne pas vérifier la conformité du bâtiment
+### Pourquoi l'inoccupation pèse plus qu'avant?
+
+En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % dans la région de Gatineau, contre 1,9 % un an plus tôt. Un logement qui reste libre deux mois enlève deux mois de revenus. J'en parle en détail dans l'article sur le [marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement).
+
+### Quelles erreurs coûtent le plus cher?
+
+Acheter sur les loyers annoncés plutôt que sur les baux signés. Lisez chaque bail : le loyer, la date de fin, ce qui est inclus (chauffage, électricité, stationnement).
+
+Négliger l'inspection. Un plex a plusieurs entrées électriques et souvent plusieurs chauffe-eau, sous un seul toit. Choisissez un inspecteur qui en fait souvent.
+
+Oublier la conformité. Vérifiez auprès de la Ville que le nombre de logements est permis par le zonage, surtout quand un logement est au sous-sol.
+
+### Où regarder à Gatineau?
+
+Dans le secteur Gatineau, le prix médian d'un plex était de 570 000 $ au 2e trimestre 2026, sous la médiane régionale. L'APCIQ ne publie pas de médiane de plex pour tous les secteurs, comme Buckingham et Masson-Angers. Dans ce cas, je compare avec les ventes récentes d'immeubles semblables.
 
 ### Mon approche
 
-Je vous aide à analyser chaque immeuble avec rigueur, revenus et dépenses en main, avant que vous déposiez une offre.
+Je vous donne les chiffres et les options, vous décidez. Pour un plex, je calcule le MRB, le TGA et le cash-flow avec les baux en place, avant que vous déposiez une promesse d'achat.
 
-**Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
+**Sources** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris). SCHL, Rapport sur le marché locatif, octobre 2025, et assurance prêt hypothécaire pour propriétaires-occupants.
+
+**Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Plex à Gatineau en mars 2026](/blogue/plex-gatineau-mars-2026)`,
     bodyEn: `## Investing in a Plex in Gatineau: Is It Still Worth It?
 
-Multi-unit real estate investment remains a popular strategy in the Outaouais. But with evolving prices and interest rates, do the numbers still work?
+It depends on the price you pay and the leases in place. In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, up 7% over one year (QPAREB, Centris data). At that price, the building has to pay for itself with today's rents.
 
-### The Appeal of Plex Investing in Gatineau
+### Which numbers should you look at first?
 
-Plexes remain popular in Gatineau, because of entry prices and proximity to Ottawa. But rental demand has dropped since COVID, and that has to show up in the numbers.
+The gross rent multiplier (GRM, or MRB in Quebec) divides the price by the annual gross income. It's a quick way to compare two buildings in the same sector, nothing more.
 
-### Analyzing Profitability
+The cap rate (TGA in Quebec) divides net income by the price. Net income is what's left of the rents after municipal and school taxes, insurance, maintenance, any utilities the owner pays and an allowance for vacant units. The mortgage is not part of this calculation.
 
-Before investing, run a rigorous analysis:
-- **Price-to-rent ratio**: Compare the purchase price to annual rental income.
-- **Cash flow**: After expenses (mortgage, taxes, insurance, maintenance), is there positive cash flow?
-- **Cap rate**: Aim for a cap rate of at least 4 to 5% for a sound investment.
+Cash flow comes after the mortgage. A building can show a decent cap rate and still leave little money each month, depending on your down payment and your rate.
 
-### Areas to Watch
+### How much down payment do you need?
 
-- **[Hull](/en/hull)**: Strong rental potential thanks to Ottawa proximity and downtown revitalization.
-- **[Gatineau Centre](/en/gatineau)**: Still accessible purchase prices with rising rents.
-- **[Buckingham](/en/buckingham)**: Lower entry prices than other Gatineau sectors.
+If you live in one of the units, a 2-unit plex can be bought with an insured down payment of 5% on the first $500,000 and 10% on the rest. For an owner-occupied 3 or 4-unit building, the insured minimum is 10%. Both rules come from CMHC mortgage loan insurance for owner-occupants. For a building you don't live in, it doesn't apply, and lenders usually ask for at least 20%.
 
-### Mistakes to Avoid
+These rules change your return more than any sector does. Talk to your lender before you visit.
 
-1. Skipping a thorough inspection
-2. Underestimating renovation costs
-3. Ignoring the local rental market
-4. Not verifying building compliance
+### Why does vacancy matter more than before?
 
-### My Approach
+In October 2025, CMHC measured a 3.8% vacancy rate in the Gatineau area, compared with 1.9% a year earlier. A unit that stays empty for two months takes away two months of income. I cover this in detail in the article on [Gatineau's rental market](/en/blog/rental-market-gatineau-investment).
 
-I help you analyze each building rigorously, with income and expenses in hand, before you make an offer.
+### Which mistakes cost the most?
 
-**Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
+Buying on advertised rents instead of signed leases. Read every lease: the rent, the end date, and what's included (heating, electricity, parking).
+
+Skipping a proper inspection. A plex has several electrical entries and often several water heaters, under a single roof. Pick an inspector who does plexes often.
+
+Forgetting compliance. Check with the City that zoning allows the number of units, especially when one of them is in the basement.
+
+### Where should you look in Gatineau?
+
+In the Gatineau sector, the median plex price was $570,000 in Q2 2026, below the regional median. QPAREB doesn't publish a plex median for every sector, such as Buckingham and Masson-Angers. In that case, I compare with recent sales of similar buildings.
+
+### My approach
+
+I give you the numbers and the options, and you decide. For a plex, I calculate the GRM, the cap rate and the cash flow from the leases in place, before you make an offer.
+
+**Sources**: QPAREB, residential barometer, Q2 2026 (Centris data). CMHC, Rental Market Report, October 2025, and homeowner mortgage loan insurance.
+
+**Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Plex market in Gatineau, March 2026](/en/blog/plex-gatineau-march-2026)`,
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
@@ -1297,96 +1341,77 @@ The key is preparation. I provide a detailed estimate of all these costs at our 
     titleEn: "Home Staging in Gatineau: How to Sell Faster",
     seoTitle: "Home staging Gatineau · Vendre plus vite | YGS",
     seoTitleEn: "Home Staging Gatineau · Sell Faster | YGS",
-    metaDescription: "Le home staging peut accélérer la vente de votre propriété à Gatineau. Les interventions qui rapportent et celles que je déconseille.",
-    metaDescriptionEn: "Home staging can speed up the sale of your Gatineau property. The interventions that pay off and the ones I don't recommend.",
-    excerpt: "Les stratégies de mise en valeur qui aident à vendre plus rapidement, secteur par secteur à Gatineau.",
-    excerptEn: "Presentation strategies that help properties sell faster, area by area in Gatineau.",
+    metaDescription: "Home staging à Gatineau : désencombrer, peindre, soigner les photos. Les interventions qui valent la peine et celles que je déconseille avant de vendre.",
+    metaDescriptionEn: "Home staging in Gatineau: declutter, paint, get the photos right. The changes worth making and the ones I advise against before you sell.",
+    excerpt: "Avec 30 % plus de propriétés à vendre, la présentation compte davantage. Par quoi commencer, et ce que je déconseille.",
+    excerptEn: "With 30% more homes for sale, presentation matters more. Where to start, and what I advise against.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     publishDate: "2025-03-10",
+    updatedDate: "2026-11-03",
     published: true,
-    body: `## Home staging à Gatineau : vendre plus vite
+    body: `## Home staging à Gatineau : vendre plus vite
 
-Le home staging est une stratégie de mise en marché. Bien exécuté, il peut raccourcir votre délai de vente et soutenir le prix obtenu.
+Au 2e trimestre 2026, il y avait 30 % plus de propriétés à vendre dans la région de Gatineau qu'un an plus tôt (APCIQ). Un acheteur visite donc plus de maisons avant de choisir. Le home staging sert à ce que la vôtre soit celle dont il se souvient.
 
-### Pourquoi ça fonctionne
+### Pourquoi la présentation compte autant?
 
-Les acheteurs se font une première impression dès les premières minutes d'une visite. Le home staging soigne cette impression, qui influence souvent la suite de la visite.
+La plupart des acheteurs voient votre maison d'abord en photos, sur Centris. Si les photos ne donnent pas envie, il n'y a pas de visite. La préparation commence donc avant le photographe.
 
-### Les priorités selon le secteur
+### Par quoi commencer?
 
-Chaque quartier de Gatineau a ses propres réalités :
+Désencombrer d'abord. Moins d'objets sur les comptoirs, dans les garde-robes et sur les murs, et les pièces paraissent plus grandes. C'est aussi l'étape qui coûte le moins.
 
-**[Aylmer](/aylmer)** : Les acheteurs cherchent le style de vie familial. Misez sur les espaces extérieurs et le rangement. Des aires de vie lumineuses aident aussi. Quand la concurrence est forte, les maisons bien présentées se démarquent nettement.
+Ensuite, la peinture. Des murs aux couleurs neutres laissent l'acheteur s'imaginer chez lui. Un mur rouge ou une chambre d'enfant très colorée l'en empêche.
 
-**[Hull](/hull)** : Le marché est plus urbain. Les condos et maisons de ville profitent d'une mise en scène épurée et moderne. Ici, les acheteurs veulent du potentiel sans travaux.
+L'éclairage et l'extérieur viennent après. Remplacez les ampoules brûlées, ouvrez les rideaux pour les photos, et soignez l'entrée : c'est la première image de l'annonce.
 
-**[Plateau](/plateau)** : Secteur familial et résidentiel. Montrez les espaces fonctionnels pour les familles, comme le sous-sol aménagé et la cour arrière. Mentionnez aussi les écoles à proximité.
+### Est-ce que ça change selon le secteur?
 
-### Les 5 interventions les plus rentables
+Oui, parce que l'acheteur n'est pas le même. Pour une maison familiale, montrez le rangement, la cour et un sous-sol utilisable. Un condo en ville, lui, gagne à une mise en scène épurée qui met l'espace en valeur.
 
-1. **Peinture neutre** : Budget : 500 $ à 1 500 $. Les murs blancs ou gris clair agrandissent les pièces et plaisent à tous.
+### Qu'est-ce que je déconseille?
 
-2. **Désencombrement radical** : Coût : 0 $. Retour : immédiat. Enlevez 50 % de vos objets personnels. Louez un espace d'entreposage si nécessaire.
-
-3. **Éclairage** : Budget : 200 $ à 500 $. Remplacez les ampoules jaunes par du blanc chaud (3000 K). Ajoutez des lampes d'appoint dans les coins sombres.
-
-4. **Extérieur soigné** : Budget : 300 $ à 800 $. Entrée propre, boîte aux lettres en bon état, platebandes entretenues et pelouse tondue. C'est la première chose que l'acheteur voit.
-
-5. **Cuisine et salle de bain** : Budget : 500 $ à 2 000 $. Remplacez les poignées d'armoires et le miroir. Un dosseret simple peut suffire. Pas besoin de rénover au complet.
-
-### Ce que je ne recommande pas
-
-- Les rénovations majeures juste avant de vendre (cuisine complète, salle de bain au complet), le retour est rarement là
-- Peindre des couleurs « tendance », restez neutres
-- Cacher des problèmes, l'acheteur les trouvera à l'inspection
+Une rénovation complète de cuisine ou de salle de bain juste avant de vendre : vous payez les travaux, et rien ne garantit que l'acheteur les paiera. Cacher un défaut ne marche pas non plus. L'inspection le trouvera, et la négociation reprendra à ce moment-là.
 
 ### Mon approche
 
-Je fais une visite de pré-mise en marché gratuite avec chaque vendeur. Ensemble, nous ciblons les interventions qui rapportent le plus pour leur coût. Une petite dépense bien ciblée pèse souvent plus qu'une grosse rénovation.
+Je vous donne les chiffres et les options, vous décidez. Avant la mise en marché, je vous dis quelles interventions valent la peine dans votre cas et lesquelles vous pouvez sauter.
 
-**Lire aussi** : [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
-    bodyEn: `## Home Staging in Gatineau: How to Sell Faster
+**Source** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
-Home staging is a marketing strategy. Done right, it can shorten your selling time and support the sale price.
+**Lire aussi** : [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau)`,
+    bodyEn: `## Home Staging in Gatineau: Sell Faster
 
-### Why It Works
+In Q2 2026, there were 30% more properties for sale in the Gatineau area than a year earlier (QPAREB). Buyers visit more homes before they choose. Staging is how yours becomes the one they remember.
 
-Buyers form a first impression within the first minutes of a visit. Home staging shapes that impression, which often colours the rest of the visit.
+### Why does presentation matter so much?
 
-### Priorities by Neighbourhood
+Most buyers see your home in photos first, on Centris. If the photos don't make them want to come, there is no visit. So preparation starts before the photographer arrives.
 
-Each Gatineau neighbourhood has its own realities:
+### Where should you start?
 
-**[Aylmer](/en/aylmer)**: Buyers seek the family lifestyle. Focus on outdoor spaces and storage. Bright living areas help too. When competition is strong, well-presented homes stand out clearly.
+Decluttering comes first. Fewer things on counters, in closets and on walls, and rooms look bigger. It's also the step that costs the least.
 
-**[Hull](/en/hull)**: The market is more urban. Condos and townhouses benefit from clean, modern staging. Here, buyers want potential without major renovations.
+Paint comes next. Neutral walls let buyers picture themselves living there. A red accent wall or a very colourful kid's room gets in the way.
 
-**[Plateau](/en/plateau)**: Family-oriented and residential. Show functional family spaces, such as the finished basement and backyard. Mention nearby schools too.
+Lighting and the exterior follow. Replace burnt-out bulbs, open the curtains for the photos, and take care of the entrance: it's the first image in the listing.
 
-### The 5 Most Profitable Interventions
+### Does it change by neighbourhood?
 
-1. **Neutral paint**: Budget: $500 to $1,500. White or light grey walls enlarge rooms and appeal to everyone.
+Yes, because the buyer isn't the same. For a family home, show the storage, the yard and a usable basement. A condo in town does better with a clean, simple setup that shows off the space.
 
-2. **Radical decluttering**: Cost: $0. Return: immediate. Remove 50% of your personal items. Rent a storage unit if necessary.
+### What do I advise against?
 
-3. **Lighting**: Budget: $200 to $500. Replace yellow bulbs with warm white (3000K). Add accent lamps in dark corners.
+A full kitchen or bathroom renovation right before you sell: you pay for the work, and nothing guarantees the buyer will pay for it. Hiding a defect doesn't work either. The inspection will find it, and the negotiation starts over at that point.
 
-4. **Curb appeal**: Budget: $300 to $800. Clean entrance, well-maintained mailbox, tidy flower beds and a mowed lawn. It's the first thing buyers see.
+### My approach
 
-5. **Kitchen and bathroom**: Budget: $500 to $2,000. Replace cabinet handles and the mirror. A simple backsplash may be enough. No need for a full renovation.
+I give you the numbers and the options, and you decide. Before the listing goes live, I tell you which changes are worth it in your case and which ones you can skip.
 
-### What I Don't Recommend
+**Source**: QPAREB, residential barometer, Q2 2026 (Centris data).
 
-- Major renovations just before selling (complete kitchen, full bathroom), the return is rarely there
-- Painting "trendy" colours, stay neutral
-- Hiding problems, the buyer will find them at inspection
-
-### My Approach
-
-I do a free pre-listing visit with every seller. Together, we target the interventions that pay off most for their cost. A small, well-aimed expense often matters more than a big renovation.
-
-**Read also**: [Renovations That Increase Value](/en/blog/renovations-that-increase-home-value) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
+**Read also**: [Renovations That Increase Home Value](/en/blog/renovations-that-increase-home-value) · [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau)`,
   },
   {
     slug: "renovations-qui-augmentent-valeur-maison",
@@ -1396,92 +1421,65 @@ I do a free pre-listing visit with every seller. Together, we target the interve
     titleEn: "Renovations That Increase Home Value in Gatineau",
     seoTitle: "Rénovations valeur maison Gatineau · Guide | YGS",
     seoTitleEn: "Renovations Home Value Gatineau · Guide | YGS",
-    metaDescription: "Quelles rénovations offrent le plus haut retour sur investissement à Gatineau? Cuisine, salle de bain, sous-sol et extérieur, type par type.",
-    metaDescriptionEn: "Which renovations offer the highest ROI in Gatineau? Kitchen, bathroom, basement and landscaping, one type of work at a time.",
-    excerpt: "Quelles rénovations offrent le plus haut retour sur investissement en Outaouais? Ce que chaque type de travaux peut rapporter.",
-    excerptEn: "Which renovations offer the highest return on investment in the Outaouais? What each type of work can bring in.",
+    metaDescription: "Une rénovation se paie-t-elle à la vente à Gatineau? Comment le vérifier avec les ventes comparables de votre secteur, et quels travaux éviter.",
+    metaDescriptionEn: "Will a renovation pay off when you sell in Gatineau? How to check it with comparable sales in your area, and which work to avoid.",
+    excerpt: "Comment savoir, avec les ventes de votre secteur, si des travaux vont se payer au moment de vendre.",
+    excerptEn: "How to tell, with sales in your area, whether a renovation will pay off when you sell.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     publishDate: "2025-04-05",
+    updatedDate: "2026-11-03",
     published: true,
     body: `## Les rénovations qui augmentent la valeur de votre maison
 
-Tous les propriétaires se posent la question : est-ce que cette rénovation va me rapporter au moment de vendre? La réponse dépend du type de travaux et du secteur. Le marché du moment à Gatineau compte aussi.
+La question revient souvent : est-ce que cette rénovation va me rapporter au moment de vendre? Il n'existe pas de pourcentage de retour valable pour toutes les maisons de Gatineau. Ce qui compte, c'est ce que les acheteurs de votre secteur paient pour des maisons semblables, avec et sans ces travaux.
 
-### Les rénovations à fort retour
+### Comment savoir si des travaux vont se payer?
 
-**Cuisine** : retour moyen de **75 à 100 %**
-La cuisine est le cœur de la maison. Mais attention : une rénovation complète à 40 000 $ ne rapporte pas toujours 40 000 $. Les interventions ciblées (comptoirs, dosserets, peinture d'armoires, quincaillerie) rapportent souvent davantage par dollar investi.
+Comparez des ventes récentes dans votre secteur : une maison rénovée et une maison semblable qui ne l'est pas. L'écart de prix entre les deux vous donne un ordre de grandeur. Si les travaux coûtent plus que cet écart, ils ne se paieront pas à la vente.
 
-**Salle de bain principale** : retour moyen de **60 à 80 %**
-Moderniser la salle de bain est l'un des investissements les plus sûrs. Une douche vitrée et un meuble-lavabo contemporain changent l'impression dès la visite.
+### Quels travaux rassurent surtout les acheteurs?
 
-**Sous-sol aménagé** : retour moyen de **50 à 75 %**
-À Gatineau, un sous-sol bien fini ajoute des pieds carrés habitables. Particulièrement rentable dans le Plateau et à Aylmer, où les familles cherchent de l'espace.
+Les composantes que l'inspecteur regarde en premier : la toiture, les fenêtres, le chauffage, l'électricité et la plomberie. Une toiture en fin de vie fait baisser les offres, parce que l'acheteur calcule déjà la facture. Si une composante doit être remplacée de toute façon, le faire avant de vendre retire un argument de négociation.
 
-### Les rénovations à rendement modéré
+### Faut-il refaire la cuisine avant de vendre?
 
-**Fenêtres** : retour moyen de **50 à 60 %**
-Les fenêtres neuves améliorent l'efficacité énergétique et l'apparence, mais le retour financier est modéré. Investissez si vos fenêtres arrivent en fin de vie.
+Rarement au complet. Des interventions ciblées, comme la peinture des armoires, la quincaillerie ou l'éclairage, changent l'impression pour une fraction du prix. Une cuisine neuve choisie à votre goût ne sera pas forcément celle de l'acheteur.
 
-**Toiture** : retour moyen de **40 à 60 %**
-Une toiture neuve rassure les acheteurs et peut éviter des négociations à la baisse. Mais ne refaites pas votre toit juste pour vendre, seulement s'il en a besoin.
+### Quels travaux éviter?
 
-**Aménagement paysager** : retour moyen de **100 à 200 %**
-Paradoxalement, l'extérieur offre le plus haut retour pour le plus petit investissement. Une entrée soignée et des haies taillées coûtent peu et marquent la première impression.
+Les travaux sans permis. Un sous-sol fini ou un agrandissement fait sans permis peut créer un problème à la vente, et la déclaration du vendeur vous oblige à le mentionner. Évitez aussi les finitions très personnelles, qui plaisent à vous plus qu'au marché.
 
-### Les rénovations à éviter avant de vendre
+### Mon approche
 
-- **Piscine creusée** : Coût de 40 000 $ et plus. Retour souvent négatif. Une partie des acheteurs y voit surtout de l'entretien.
-- **Personnalisation extrême** : Mur d'accent rouge vif, comptoir en marbre rose : vos goûts ne sont pas ceux de l'acheteur.
-- **Agrandissement non conforme** : Les travaux sans permis peuvent créer des problèmes légaux et réduire la valeur.
+Je vous donne les chiffres et les options, vous décidez. Avant que vous dépensiez, je compare les ventes de votre secteur pour vous montrer ce que les acheteurs ont payé pour des maisons rénovées et pour des maisons à rénover.
 
-### Spécificités du marché de Gatineau
-
-À [Aylmer](/aylmer), les acheteurs valorisent les espaces extérieurs et les cuisines ouvertes. Du côté de [Hull](/hull), les projets de modernisation urbaine comme Zibi augmentent les attentes de finition. Dans le [Plateau](/plateau), les familles priorisent les sous-sols aménagés et les cours arrière fonctionnelles.
-
-### Mon rôle comme courtier
-
-Avant de dépenser, consultez-moi. Je sais ce que les acheteurs de votre secteur recherchent et je peux vous dire quelles rénovations ont le plus de chances de rapporter dans votre cas.`,
+**Lire aussi** : [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau) · [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau)`,
     bodyEn: `## Renovations That Increase Your Home's Value
 
-Every homeowner asks the question: will this renovation pay off when I sell? The answer depends on the type of work and the area. Gatineau's current market matters too.
+The question comes up all the time: will this renovation pay off when I sell? There is no return percentage that holds for every home in Gatineau. What matters is what buyers in your area pay for similar homes, with and without that work.
 
-### High-Return Renovations
+### How can you tell if the work will pay for itself?
 
-**Kitchen**: average return of **75 to 100%**
-The kitchen is the heart of the home. But be careful: a $40,000 complete renovation doesn't always return $40,000. Targeted improvements (countertops, backsplashes, cabinet painting, hardware) often return more per dollar spent.
+Compare recent sales in your area: a renovated home and a similar one that isn't. The price gap between the two gives you an order of magnitude. If the work costs more than that gap, it won't pay off at the sale.
 
-**Main Bathroom**: average return of **60 to 80%**
-Modernizing the bathroom is one of the safest investments. A glass shower and a contemporary vanity change the impression from the first visit.
+### Which work reassures buyers most?
 
-**Finished Basement**: average return of **50 to 75%**
-In Gatineau, a well-finished basement adds livable square footage. Particularly profitable in the Plateau and Aylmer, where families seek space.
+The components an inspector checks first: the roof, windows, heating, electrical and plumbing. A roof at the end of its life lowers offers, because buyers are already counting the bill. If a component has to be replaced anyway, doing it before you sell removes a negotiating point.
 
-### Moderate-Return Renovations
+### Should you redo the kitchen before selling?
 
-**Windows**: average return of **50 to 60%**
-New windows improve energy efficiency and appearance, but the financial return is moderate. Invest if your windows are reaching the end of their life.
+Rarely in full. Targeted changes, like painting the cabinets, new hardware or better lighting, change the impression for a fraction of the cost. A new kitchen chosen to your taste won't necessarily be the buyer's.
 
-**Roof**: average return of **40 to 60%**
-A new roof reassures buyers and can prevent downward negotiations. But don't redo your roof just to sell, only if it needs it.
+### Which work should you avoid?
 
-**Landscaping**: average return of **100 to 200%**
-Paradoxically, the exterior offers the highest return for the smallest investment. A tidy entrance and trimmed hedges cost little and shape the first impression.
+Work done without a permit. A basement finished or an extension built without a permit can cause a problem at the sale, and the seller's declaration requires you to disclose it. Also avoid very personal finishes that please you more than the market.
 
-### Renovations to Avoid Before Selling
+### My approach
 
-- **In-ground pool**: Cost of $40,000 and up. Return often negative. Some buyers see it mainly as upkeep.
-- **Extreme customization**: Bright red accent wall, pink marble countertop: your tastes aren't the buyer's.
-- **Non-conforming additions**: Work done without permits can create legal problems and reduce value.
+I give you the numbers and the options, and you decide. Before you spend, I compare sales in your area to show you what buyers paid for renovated homes and for homes that need work.
 
-### Gatineau Market Specifics
-
-In [Aylmer](/en/aylmer), buyers value outdoor spaces and open kitchens. Hull's urban modernization projects, such as Zibi, raise finishing expectations. In the [Plateau](/en/plateau), families prioritize finished basements and functional backyards.
-
-### My Role as Your Broker
-
-Before you spend, consult me. I know what buyers in your area are looking for and can tell you which renovations are most likely to pay off in your case.`,
+**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau)`,
   },
   {
     slug: "taxes-municipales-gatineau-vs-ottawa",
@@ -2345,119 +2343,94 @@ Before refinancing, get your property appraised to know its true market value. I
   {
     slug: "marche-locatif-gatineau-investissement",
     slugEn: "rental-market-gatineau-investment",
-    title: "Marché locatif à Gatineau : guide pour investisseurs",
-    titleEn: "Gatineau's Rental Market: A Guide for Investors",
-    seoTitle: "Marché locatif Gatineau · Guide investisseur | YGS",
-    seoTitleEn: "Rental Market Gatineau · Investor Guide | YGS",
-    metaDescription: "Analyse du marché locatif à Gatineau : taux d'inoccupation, loyers moyens, secteurs à considérer et rendements pour investisseurs immobiliers.",
-    metaDescriptionEn: "Analysis of Gatineau's rental market: vacancy rates, average rents, areas to consider, and returns for real estate investors.",
-    excerpt: "Taux d'inoccupation bas et loyers en hausse : Gatineau attire les investisseurs en immobilier locatif.",
-    excerptEn: "Low vacancy rates and rising rents: Gatineau draws rental property investors.",
+    title: "Marché locatif à Gatineau : ce que l'inoccupation change pour un plex",
+    titleEn: "Gatineau's Rental Market: What Rising Vacancy Means for a Plex",
+    seoTitle: "Marché locatif Gatineau 2026 · Inoccupation et plex | YGS",
+    seoTitleEn: "Gatineau Rental Market 2026 · Vacancy and Plexes | YGS",
+    metaDescription: "Taux d'inoccupation de 3,8 % en 2025 selon la SCHL, loyers et prix des plex : ce que les chiffres changent pour un investisseur à Gatineau.",
+    metaDescriptionEn: "A 3.8% vacancy rate in 2025 according to CMHC, rents and plex prices: what the numbers change for an investor in Gatineau.",
+    excerpt: "L'inoccupation a doublé en un an selon la SCHL. Ce que ça change dans le calcul d'un plex à Gatineau.",
+    excerptEn: "Vacancy doubled in one year according to CMHC. What it changes when you run the numbers on a plex in Gatineau.",
     category: "Investissement",
     categoryEn: "Investment",
     featuredImage: blogRentalMarket,
     publishDate: "2025-09-01",
+    updatedDate: "2026-11-03",
     published: true,
-    body: `## Le marché locatif de Gatineau en bref
+    body: `## Le marché locatif de Gatineau en 2026
 
-Un taux d'inoccupation bas et une demande soutenue par les fonctionnaires fédéraux font de Gatineau un marché suivi de près par les investisseurs locatifs.
+En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % pour les appartements locatifs de la région de Gatineau. Un an plus tôt, il était de 1,9 %. Pour un investisseur, ce changement se voit tout de suite dans le calcul d'un plex.
 
-## Les chiffres du marché locatif
+### Que montrent les chiffres de la SCHL?
 
-### Taux d'inoccupation
-- **Gatineau global** : 2,1 % (sous le seuil d'équilibre de 3 %)
-- **Hull** : 1,8 % (le plus serré)
-- **Aylmer** : 2,5 %
-- **Plateau** : 2,3 %
+Le taux d'inoccupation a doublé en un an. Selon la SCHL, la cause principale est l'arrivée de nouveaux logements locatifs, et la hausse a été la plus marquée dans les zones de Hull et de Gatineau.
 
-### Loyers moyens (2025)
-- **3½ (1 chambre)** : 950 $ à 1 200 $ / mois
-- **4½ (2 chambres)** : 1 200 $ à 1 600 $ / mois
-- **5½ (3 chambres)** : 1 500 $ à 2 000 $ / mois
-- **Logement meublé** : Prime de 30 % à 50 %
+Les logements neufs restent vides plus souvent que les autres. Leur taux d'inoccupation était de 10 %, presque trois fois la moyenne de la région.
 
-## Les secteurs à considérer pour investir
+Le loyer moyen d'un appartement de deux chambres s'élevait à 1 460 $ par mois, en hausse de 4,7 % sur un an (SCHL, octobre 2025).
 
-### Hull : le rendement urbain
-- **Proximité Ottawa** : Forte demande des fonctionnaires
-- **Projet Zibi** : Nouveau quartier mixte en développement
-- **Rendement** : 4,5 % à 5,5 % brut
-- **Type visé** : Plex de 2 à 6 logements
+### Combien coûte un plex en ce moment?
 
-### Gatineau (secteur) : le volume abordable
-- **Prix médian des plex (2 à 5 logements)** : 570 000 $ dans le secteur Gatineau, sous la médiane de 599 600 $ de la RMR, selon l'APCIQ (données Centris), au deuxième trimestre de 2026
-- **Rendement** : 5 % à 6,5 % brut
-- **Type visé** : Triplex et quadruplex
-- **Clientèle** : Familles, travailleurs, étudiants UQO
+Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements atteignait 599 600 $ dans la région métropolitaine de Gatineau, 7 % de plus qu'un an plus tôt. Dans le secteur Gatineau, il était de 570 000 $. Un plex s'est vendu en 32 jours en moyenne (APCIQ, données Centris).
 
-### Buckingham : le potentiel caché
-- **Prix des plex** : L'APCIQ ne publie pas de médiane pour ce secteur, à valider avec des ventes comparables
-- **Rendement** : 6 % à 8 % brut
-- **Risque** : Taux de roulement plus élevé
-- **Potentiel** : Développement futur du secteur
+Sur un an, les prix des plex ont donc monté plus vite que le loyer moyen (7 % contre 4,7 %). Ces deux chiffres ne mesurent pas les mêmes immeubles, alors je ne les utilise pas pour juger un plex en particulier.
 
-## Réglementation au Québec
+### Qu'est-ce que ça change dans l'analyse d'un immeuble?
 
-- **Tribunal administratif du logement (TAL)** : Encadre les augmentations
-- **Augmentations suggérées** : Basées sur le taux publié chaque année par le TAL
-- **Bail type** : Obligatoire au Québec
-- **Reprise de logement** : Possible mais encadrée
+Je pars des loyers inscrits aux baux, pas des loyers affichés en ligne pour des logements comparables. Un logement vide pendant deux mois, c'est deux mois de revenus en moins, et ça doit apparaître dans le budget.
 
-## Mon conseil
+Pour un immeuble neuf, je le compare avec d'autres immeubles neufs du même secteur. La moyenne régionale cache justement l'écart entre le neuf et l'existant.
 
-Avant d'investir, analysez les chiffres avec un courtier local. Je fournis des analyses de rentabilité gratuites pour les investisseurs sérieux dans la région de Gatineau.
+### Ce que le Tribunal administratif du logement encadre
 
-**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable) · [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide)`,
-    bodyEn: `## Gatineau's Rental Market at a Glance
+Au Québec, le bail d'un logement se signe sur le formulaire obligatoire du Tribunal administratif du logement (TAL). Un locataire peut refuser une hausse de loyer. Si vous n'arrivez pas à vous entendre, c'est le TAL qui fixe le loyer selon sa méthode de calcul, publiée chaque année.
 
-A low vacancy rate and steady demand from federal employees make Gatineau a market that rental investors watch closely.
+La reprise d'un logement pour s'y loger, ou pour y loger un proche, est possible, mais elle suit des règles précises et des délais d'avis. Avant d'acheter, lisez les baux un par un.
 
-## Rental Market Figures
+### Mon approche
 
-### Vacancy Rates
-- **Overall Gatineau**: 2.1% (below the 3% equilibrium threshold)
-- **Hull**: 1.8% (tightest)
-- **Aylmer**: 2.5%
-- **Plateau**: 2.3%
+Je vous donne les chiffres et les options, vous décidez. Pour un plex, ça veut dire les baux en place, les dépenses appuyées par des factures et un délai réaliste pour relouer un logement libre.
 
-### Average Rents (2025)
-- **3½ (1 bedroom)**: $950 to $1,200/month
-- **4½ (2 bedrooms)**: $1,200 to $1,600/month
-- **5½ (3 bedrooms)**: $1,500 to $2,000/month
-- **Furnished unit**: 30% to 50% premium
+**Sources** : SCHL, Rapport sur le marché locatif, octobre 2025 (région de Gatineau). APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
-## Areas to Consider for Investment
+**Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable) · [Plex à Gatineau en mars 2026](/blogue/plex-gatineau-mars-2026)`,
+    bodyEn: `## Gatineau's Rental Market in 2026
 
-### Hull: Urban Returns
-- **Ottawa proximity**: Strong demand from civil servants
-- **Zibi project**: New mixed-use neighbourhood under development
-- **Yield**: 4.5% to 5.5% gross
-- **Target type**: 2 to 6-unit plex
+In October 2025, CMHC measured a 3.8% vacancy rate for rental apartments in the Gatineau area. A year earlier, it was 1.9%. For an investor, that change shows up right away in the numbers of a plex.
 
-### Gatineau (sector): Affordable Volume
-- **Plex median price (2 to 5 units)**: $570,000 in the Gatineau sector, below the CMA median of $599,600, according to QPAREB (Centris data), in Q2 2026
-- **Yield**: 5% to 6.5% gross
-- **Target type**: Triplex and quadruplex
-- **Tenants**: Families, workers, UQO students
+### What do the CMHC figures show?
 
-### Buckingham: Hidden Potential
-- **Plex prices**: QPAREB does not publish a median for this sector, so check comparable sales
-- **Yield**: 6% to 8% gross
-- **Risk**: Higher turnover rate
-- **Potential**: Future area development
+The vacancy rate doubled in one year. According to CMHC, the main cause is new rental supply, and the increase was most pronounced in the Hull and Gatineau survey zones.
 
-## Quebec Regulations
+New units sit empty more often than the rest. Their vacancy rate was 10%, almost three times the average for the area.
 
-- **Administrative Housing Tribunal (TAL)**: Regulates increases
-- **Suggested increases**: Based on the rate the TAL publishes each year
-- **Standard lease**: Mandatory in Quebec
-- **Unit repossession**: Possible but regulated
+The average rent for a two-bedroom apartment was $1,460 a month, up 4.7% over one year (CMHC, October 2025).
 
-## My Advice
+### What does a plex cost right now?
 
-Before investing, analyze the numbers with a local broker. I provide free profitability analyses for serious investors in the Gatineau area.
+In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, 7% higher than a year earlier. The Gatineau sector median was $570,000. A plex sold in 32 days on average (QPAREB, Centris data).
 
-**Read also**: [Investing in a Plex in Gatineau](/en/blog/investing-plex-gatineau-worth-it) · [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide)`,
+Over one year, plex prices rose faster than the average rent (7% versus 4.7%). Those two figures don't measure the same buildings, so I don't use them to judge a specific plex.
+
+### How does it change the analysis of a building?
+
+I start from the rents written in the leases, not from asking rents posted online for similar units. A unit that stays empty for two months is two months of income gone, and the budget has to show it.
+
+For a new building, I compare it with other new buildings in the same sector. The regional average hides the gap between new and existing units.
+
+### What the Tribunal administratif du logement regulates
+
+In Quebec, a residential lease is signed on the mandatory form of the Tribunal administratif du logement (TAL). A tenant can refuse a rent increase. If you can't agree, the TAL sets the rent using its calculation method, published every year.
+
+Taking back a unit to live in it, or to house a relative, is possible, but it follows specific rules and notice periods. Before you buy, read the leases one by one.
+
+### My approach
+
+I give you the numbers and the options, and you decide. For a plex, that means the leases in place, expenses backed by invoices, and a realistic timeline to re-rent a vacant unit.
+
+**Sources**: CMHC, Rental Market Report, October 2025 (Gatineau area). QPAREB, residential barometer, Q2 2026 (Centris data).
+
+**Read also**: [Investing in a Plex in Gatineau](/en/blog/investing-plex-gatineau-worth-it) · [Plex market in Gatineau, March 2026](/en/blog/plex-gatineau-march-2026)`,
   },
 
   // ── Article 20 – Guide copropriété Gatineau ──
@@ -2585,129 +2558,74 @@ Before buying a condo in Gatineau, always request: meeting minutes, reserve fund
   {
     slug: "vendre-maison-hiver-gatineau-conseils",
     slugEn: "selling-home-winter-gatineau-tips",
-    title: "Vendre sa maison en hiver à Gatineau : 7 conseils",
-    titleEn: "Selling Your Home in Winter in Gatineau: 7 Tips",
-    seoTitle: "Vendre maison hiver Gatineau · 7 conseils | YGS",
-    seoTitleEn: "Sell Home Winter Gatineau · 7 Tips | YGS",
-    metaDescription: "7 conseils pour vendre votre maison en hiver à Gatineau : mise en valeur, photos, prix et pourquoi l'hiver peut être un avantage.",
-    metaDescriptionEn: "7 tips for selling your home in winter in Gatineau: staging, photos, pricing, and why winter can be an advantage.",
-    excerpt: "Moins de concurrence et des acheteurs sérieux : vendre en hiver à Gatineau peut être une stratégie gagnante.",
-    excerptEn: "Less competition and serious buyers: selling in winter in Gatineau can be a winning strategy.",
+    title: "Vendre sa maison en hiver à Gatineau : quoi préparer",
+    titleEn: "Selling Your Home in Winter in Gatineau: What to Prepare",
+    seoTitle: "Vendre maison hiver Gatineau · Quoi préparer | YGS",
+    seoTitleEn: "Selling a Home in Winter Gatineau · What to Prepare | YGS",
+    metaDescription: "Vendre en hiver à Gatineau : moins de concurrence, des acheteurs pressés. Comment préparer la maison, les photos et les factures de chauffage.",
+    metaDescriptionEn: "Selling in winter in Gatineau: less competition, buyers with a reason to move. How to prepare the house, the photos and the heating bills.",
+    excerpt: "Moins de concurrence directe et des acheteurs qui ont une raison de bouger : comment préparer une vente d'hiver.",
+    excerptEn: "Less direct competition and buyers with a reason to move: how to prepare a winter sale.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     featuredImage: blogWinterSelling,
     publishDate: "2025-08-05",
+    updatedDate: "2026-11-03",
     published: true,
-    body: `## Vendre en hiver à Gatineau : une stratégie sous-estimée
+    body: `## Vendre en hiver à Gatineau
 
-Beaucoup de propriétaires attendent le printemps pour vendre. Pourtant, l'hiver offre des avantages bien précis sur le marché de Gatineau.
+Beaucoup de propriétaires attendent le printemps. Pourtant, une maison inscrite en hiver a souvent moins de concurrence directe, et les acheteurs qui visitent en janvier ont généralement une raison de bouger : une mutation, une naissance, un bail qui finit.
 
-## Pourquoi vendre en hiver?
+### Est-ce que les maisons se vendent en hiver?
 
-### Moins de concurrence
-- **Moins de propriétés sur le marché** : Votre maison se démarque
-- **Acheteurs plus sérieux** : Ceux qui cherchent en janvier ont un projet d'achat concret
-- **Pouvoir de négociation** : Moins d'options = moins de pression sur le prix
+Oui. Le marché ralentit, mais il ne s'arrête pas. Au 2e trimestre 2026, une unifamiliale s'est vendue en 27 jours en moyenne dans la région de Gatineau (APCIQ). Ce qui fait la différence en toute saison, c'est le prix de départ par rapport aux ventes comparables.
 
-### Demande constante
-- **Fonctionnaires fédéraux** : Mutations toute l'année
-- **Militaires** : Certaines affectations arrivent hors saison
-- **Nouveaux arrivants** : Immigration continue en hiver
+### Comment préparer la maison pour une visite d'hiver?
 
-## 7 conseils pour vendre en hiver à Gatineau
+Déneigez l'entrée, les marches et le stationnement avant chaque visite, et mettez un tapis à l'entrée. Allumez les lumières, surtout pour les visites de fin de journée. Une maison chaude et éclairée donne envie de rester.
 
-### 1. L'entrée doit être impeccable
-- **Déneigez** l'entrée, les marches et le trottoir
-- **Éclairage extérieur** : Les visites se font souvent en fin de journée
-- **Sel et tapis** : Sécurité et propreté pour les visiteurs
+### Les photos d'été valent-elles encore?
 
-### 2. Misez sur la chaleur et le confort
-- **Température agréable** : 21 à 22 °C lors des visites
-- **Éclairage chaud** : Toutes les lumières allumées
-- **Foyer allumé** : Si vous en avez un, c'est le moment
+Oui, si elles montrent la cour, le terrain ou la piscine que la neige cache. Indiquez la saison dans la description, et ajoutez des photos récentes de l'extérieur pour que l'acheteur ne soit pas surpris en arrivant.
 
-### 3. Photos professionnelles d'été ET d'hiver
-- **Gardez vos photos d'été** : Montrez le potentiel de la cour et du terrain
-- **Ajoutez des photos d'hiver** : Montrez que la maison est belle en toute saison
+### Quoi préparer pour les acheteurs?
 
-### 4. Montrez l'efficacité énergétique
-- **Factures de chauffage** : Préparez-les pour les acheteurs
-- **Isolation** : Mettez en valeur les améliorations
-- **Fenêtres** : Triple vitrage = argument de vente
+Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'acheteur pense au coût de chauffage, et des chiffres clairs répondent à sa question avant qu'il la pose. Ajoutez les factures des travaux récents sur la toiture, les fenêtres ou l'isolation.
 
-### 5. Fixez le bon prix dès le départ
-- **Analyse comparative** : Basée sur les ventes récentes du quartier
-- **Prix réaliste** : Les acheteurs d'hiver sont bien informés
-- **Marge de négociation** : Prévoyez 2 % à 3 %
+### Mon approche
 
-### 6. Flexibilité pour les visites
-- **Horaires souples** : Fin de semaine et soirées
-- **Visites virtuelles** : Pour les acheteurs d'Ottawa ou de loin
-- **Réponse rapide** : Les acheteurs d'hiver sont motivés
+Je vous donne les chiffres et les options, vous décidez. Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
-### 7. Travaillez avec un courtier actif en hiver
-Choisissez un courtier qui garde le même rythme en hiver qu'au printemps.
+**Source** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
-## Mon engagement
+**Lire aussi** : [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau) · [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau)`,
+    bodyEn: `## Selling Your Home in Winter in Gatineau
 
-Je suis actif 12 mois par année. En hiver, j'adapte ma stratégie avec des photos professionnelles et un marketing ciblé. Contactez-moi pour une évaluation gratuite, même en janvier.
+Many owners wait for spring. Yet a home listed in winter often faces less direct competition, and buyers who visit in January usually have a reason to move: a posting, a new baby, a lease that ends.
 
-**Lire aussi** : [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau) · [Pourquoi travailler avec un courtier](/blogue/avantages-courtier-immobilier-gatineau)`,
-    bodyEn: `## Selling in Winter in Gatineau: An Underestimated Strategy
+### Do homes sell in winter?
 
-Many homeowners wait until spring to sell. Yet winter offers specific advantages in the Gatineau market.
+Yes. The market slows down, but it doesn't stop. In Q2 2026, a single-family home sold in 27 days on average in the Gatineau area (QPAREB). Whatever the season, the starting price compared with comparable sales makes the difference.
 
-## Why Sell in Winter?
+### How do you prepare the house for a winter visit?
 
-### Less Competition
-- **Fewer properties on the market**: Your home stands out
-- **More serious buyers**: Those looking in January have firm plans to buy
-- **Negotiating power**: Fewer options = less price pressure
+Clear the entrance, the steps and the driveway before every visit, and put a mat at the door. Turn the lights on, especially for late-afternoon visits. A warm, bright home makes people want to stay.
 
-### Constant Demand
-- **Federal employees**: Transfers year-round
-- **Military**: Some postings happen off-season
-- **Newcomers**: Immigration continues in winter
+### Are summer photos still worth using?
 
-## 7 Tips for Selling in Winter in Gatineau
+Yes, if they show the yard, the lot or the pool the snow is hiding. Mention the season in the description, and add recent exterior photos so buyers aren't surprised when they arrive.
 
-### 1. The Entrance Must Be Impeccable
-- **Shovel** the driveway, steps, and sidewalk
-- **Outdoor lighting**: Showings often happen in the evening
-- **Salt and mats**: Safety and cleanliness for visitors
+### What should you have ready for buyers?
 
-### 2. Focus on Warmth and Comfort
-- **Comfortable temperature**: 21 to 22°C during showings
-- **Warm lighting**: All lights on
-- **Fireplace on**: If you have one, now's the time
+Your heating and electricity bills for the last 12 months. In winter, buyers think about heating costs, and clear numbers answer the question before they ask it. Add the invoices for recent work on the roof, windows or insulation.
 
-### 3. Professional Summer AND Winter Photos
-- **Keep your summer photos**: Show the yard's potential
-- **Add winter photos**: Show the home is beautiful in every season
+### My approach
 
-### 4. Showcase Energy Efficiency
-- **Heating bills**: Prepare them for buyers
-- **Insulation**: Highlight improvements
-- **Windows**: Triple glazing = selling point
+I give you the numbers and the options, and you decide. With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 
-### 5. Set the Right Price from the Start
-- **Comparative analysis**: Based on recent neighbourhood sales
-- **Realistic price**: Winter buyers are well-informed
-- **Negotiation margin**: Plan 2% to 3%
+**Source**: QPAREB, residential barometer, Q2 2026 (Centris data).
 
-### 6. Be Flexible for Showings
-- **Flexible schedule**: Weekends and evenings
-- **Virtual tours**: For Ottawa or out-of-town buyers
-- **Quick response**: Winter buyers are motivated
-
-### 7. Work with a Broker Active in Winter
-Choose a broker who keeps the same pace in winter as in spring.
-
-## My Commitment
-
-I'm active 12 months a year. In winter, I adapt my approach with professional photos and targeted marketing. Contact me for a free valuation, even in January.
-
-**Read also**: [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau) · [Why Work with a Broker](/en/blog/benefits-real-estate-broker-gatineau)`,
+**Read also**: [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau) · [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau)`,
   },
 
   // ── Article 22 – Avantages courtier immobilier ──
@@ -2716,137 +2634,76 @@ I'm active 12 months a year. In winter, I adapt my approach with professional ph
     slugEn: "benefits-real-estate-broker-gatineau",
     title: "Pourquoi choisir un courtier immobilier à Gatineau",
     titleEn: "Why Work with a Real Estate Broker in Gatineau",
-    seoTitle: "Courtier immobilier Gatineau · 8 avantages | YGS",
-    seoTitleEn: "Real Estate Broker Gatineau · 8 Benefits | YGS",
-    metaDescription: "Les 8 avantages de travailler avec un courtier immobilier à Gatineau : négociation, prix, protection légale et accompagnement personnalisé.",
-    metaDescriptionEn: "The 8 benefits of working with a real estate broker in Gatineau: negotiation, pricing, legal protection, and personalized guidance.",
-    excerpt: "Négociation et connaissance du marché local : 8 raisons concrètes de travailler avec un courtier à Gatineau.",
-    excerptEn: "Negotiation and local market knowledge: 8 concrete reasons to work with a broker in Gatineau.",
+    seoTitle: "Courtier immobilier Gatineau · Pourquoi en choisir un | YGS",
+    seoTitleEn: "Real Estate Broker Gatineau · Why Hire One | YGS",
+    metaDescription: "Permis OACIQ, assurance obligatoire, formulaires, prix et négociation : ce qu'un courtier immobilier vous apporte quand vous vendez ou achetez à Gatineau.",
+    metaDescriptionEn: "OACIQ licence, mandatory insurance, forms, pricing and negotiation: what a real estate broker brings when you sell or buy in Gatineau.",
+    excerpt: "Ce que l'encadrement de l'OACIQ vous garantit, et ce qu'un courtier fait du prix à la négociation.",
+    excerptEn: "What OACIQ oversight guarantees you, and what a broker does from pricing to negotiation.",
     category: "Conseils",
     categoryEn: "Tips",
     featuredImage: blogCourtierAvantages,
     publishDate: "2025-07-20",
+    updatedDate: "2026-11-03",
     published: true,
     body: `## Pourquoi travailler avec un courtier immobilier à Gatineau
 
-[Vendre](/vendre-ma-maison-gatineau) ou acheter sans courtier peut sembler économique, mais les risques et le manque à gagner dépassent souvent les économies apparentes. Ces 8 raisons concrètes expliquent l'intérêt de travailler avec un courtier à Gatineau.
+Vendre ou acheter sans courtier est permis au Québec. La question, c'est ce que vous gagnez et ce que vous risquez. Un courtier vous protège d'une façon qu'un particulier ne peut pas offrir, parce que sa pratique est encadrée par la loi.
 
-## 1. Connaissance approfondie du marché local
+### Qu'est-ce que l'encadrement de l'OACIQ vous donne?
 
-Un courtier de Gatineau connaît :
-- **Les prix de vente par quartier** : Au-delà des données générales
-- **Les tendances micro-locales** : Quels secteurs montent, lesquels stagnent
-- **Les projets d'infrastructure** : Tramway et projets de ponts qui peuvent toucher la valeur
-- **Les particularités québécoises** : Réglementation et processus d'achat, dont la taxe de bienvenue
+Pour vous représenter, un courtier doit détenir un permis de l'Organisme d'autoréglementation du courtage immobilier du Québec (OACIQ). Vous pouvez le vérifier au registre public de l'OACIQ. La promesse d'achat se fait sur un formulaire obligatoire, et le courtier doit vérifier les renseignements qu'il vous donne.
 
-## 2. Évaluation juste de votre propriété
+Le courtier détient aussi une assurance responsabilité professionnelle obligatoire. Et le Fonds d'indemnisation du courtage immobilier peut vous indemniser dans certains cas de fraude ou de détournement de fonds.
 
-- **[Analyse comparative de marché (ACM)](/evaluation-gratuite-gatineau)** : Basée sur les ventes conclues
-- **Ajustements précis** : Rénovations, emplacement, superficie, état de la propriété
-- **Prix bien positionné** : Ni trop haut (stagnation) ni trop bas (perte d'argent)
+### Comment un courtier fixe-t-il le prix?
 
-## 3. Négociation professionnelle
+Avec une analyse comparative de marché : les ventes récentes de propriétés semblables dans votre secteur, ajustées pour l'état, la superficie et le terrain. Au 2e trimestre 2026, il y avait 30 % plus de propriétés à vendre dans la région de Gatineau qu'un an plus tôt (APCIQ). Avec autant de concurrence, un prix mal placé se paie en délai.
 
-- **Expérience des contre-offres** : Savoir quand céder et quand tenir
-- **Gestion des émotions** : Un courtier garde la tête froide pendant la négociation
-- **Arguments chiffrés** : Chaque position s'appuie sur les ventes comparables
+### Et la négociation?
 
-## 4. Protection légale
+Le courtier connaît les clauses de la promesse d'achat, les conditions d'inspection et de financement, et les délais qui s'y rattachent. Il négocie avec des ventes comparables en main, pas avec des impressions.
 
-- **Assurance responsabilité** : Le courtier détient une assurance responsabilité professionnelle obligatoire
-- **Conformité OACIQ** : Code de déontologie strict
-- **Documents conformes** : Promesse d'achat et déclarations du vendeur, sur les formulaires obligatoires de l'OACIQ
+### Qu'est-ce qui distingue le marché de Gatineau?
 
-## 5. Marketing professionnel
+Beaucoup d'acheteurs viennent d'Ottawa, où la transaction se fait autrement. Au Québec, la vente se conclut chez le notaire, et la déclaration du vendeur est un formulaire obligatoire quand un courtier est engagé. Les droits de mutation (la taxe de bienvenue) s'ajoutent au budget de l'acheteur.
 
-- **Photos professionnelles** : Première impression déterminante
-- **Visites virtuelles 3D** : Attire les acheteurs d'Ottawa et d'ailleurs
-- **Réseaux MLS et Centris** : Large visibilité
-- **Réseaux sociaux** : Ciblage précis des acheteurs potentiels
+### Mon approche
 
-## 6. Réseau de professionnels
+Je vous donne les chiffres et les options, vous décidez. Courtier immobilier résidentiel chez RE/MAX Direct depuis 2017, j'ai plus de 300 transactions en Outaouais. Mon permis OACIQ porte le numéro 112201.
 
-- **Notaires, inspecteurs, évaluateurs, courtiers hypothécaires** : Références de confiance
-- **Entrepreneurs** : Pour les réparations pré-vente
-- **Autres courtiers** : Réseau de collaboration pour trouver l'acheteur
+**Sources** : OACIQ (registre des titulaires de permis et formulaires obligatoires). APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
-## 7. Du temps gagné
+**Lire aussi** : [Vérifier un courtier immobilier à l'OACIQ](/verifier-un-courtier-immobilier-oaciq/) · [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau)`,
+    bodyEn: `## Why Work With a Real Estate Broker in Gatineau
 
-- **Filtrage des acheteurs** : Seulement les candidats sérieux
-- **Gestion des visites** : Organisation et suivi
-- **Paperasse** : Le courtier gère les documents complexes
+Selling or buying without a broker is allowed in Quebec. The real question is what you gain and what you risk. A broker protects you in ways a private seller can't, because the practice is regulated by law.
 
-## 8. Accompagnement de A à Z
+### What does OACIQ oversight give you?
 
-- **Première rencontre** : Évaluation de vos besoins
-- **Stratégie personnalisée** : Plan adapté à votre situation
-- **Jusqu'à la signature** : Présent chez le notaire
-- **Après-vente** : Disponible pour vos questions
+To represent you, a broker must hold a licence from the Organisme d'autoréglementation du courtage immobilier du Québec (OACIQ). You can check it in the OACIQ's public register. The promise to purchase is drawn up on a mandatory form, and the broker must verify the information they give you.
 
-**Pour aller plus loin** : [Home staging à Gatineau : vendre plus vite](/blogue/home-staging-vendre-plus-vite-gatineau) · [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau)
+Brokers also carry mandatory professional liability insurance. And the real estate brokerage indemnity fund can compensate you in some cases of fraud or misappropriation of funds.
 
-## Mon approche
+### How does a broker set the price?
 
-Je ne suis pas un courtier de volume. Mon choix : un nombre limité de clients, pour offrir un service attentif et personnalisé. Chaque transaction mérite toute mon attention. [Contactez-moi](/contact-yanis) pour parler de votre projet.`,
-    bodyEn: `## Why Work with a Real Estate Broker in Gatineau
+With a comparative market analysis: recent sales of similar properties in your area, adjusted for condition, size and lot. In Q2 2026, there were 30% more properties for sale in the Gatineau area than a year earlier (QPAREB). With that much competition, a badly placed price costs you time.
 
-Selling or buying without a broker may seem economical, but the risks and missed opportunities often exceed the apparent savings. Here are 8 concrete reasons to work with a broker in Gatineau.
+### What about negotiation?
 
-## 1. Deep Local Market Knowledge
+A broker knows the clauses of the promise to purchase, the inspection and financing conditions, and the deadlines tied to them. They negotiate with comparable sales in hand, not impressions.
 
-A Gatineau broker knows:
-- **Sale prices by neighbourhood**: Beyond general data
-- **Micro-local trends**: Which areas are rising, which are stagnating
-- **Infrastructure projects**: LRT and bridge projects that can affect value
-- **Quebec specifics**: Regulations and the purchase process, including the welcome tax
+### What makes the Gatineau market different?
 
-## 2. Fair Property Valuation
+Many buyers come from Ottawa, where transactions work differently. In Quebec, the sale closes at the notary, the seller's declaration is a mandatory form when a broker is involved, and land transfer duties (the welcome tax) add to the buyer's budget.
 
-- **Comparative market analysis (CMA)**: Based on closed sales
-- **Precise adjustments**: Renovations, location, size, property condition
-- **Strategic pricing**: Not too high (stagnation) or too low (lost money)
+### My approach
 
-## 3. Professional Negotiation
+I give you the numbers and the options, and you decide. I've been a residential real estate broker with RE/MAX Direct since 2017, with over 300 transactions in the Outaouais. My OACIQ licence number is 112201.
 
-- **Counter-offer experience**: Knowing when to concede and when to hold
-- **Emotion management**: A broker keeps a cool head during negotiation
-- **Data-backed arguments**: Every position rests on comparable sales
+**Sources**: OACIQ (licence holder register and mandatory forms). QPAREB, residential barometer, Q2 2026 (Centris data).
 
-## 4. Legal Protection
-
-- **Liability insurance**: The broker carries mandatory professional liability insurance
-- **OACIQ compliance**: Strict code of ethics
-- **Compliant documents**: Purchase offer and seller's declarations, on mandatory OACIQ forms
-
-## 5. Professional Marketing
-
-- **Professional photos**: First impression is decisive
-- **3D virtual tours**: Attracts buyers from Ottawa and beyond
-- **MLS and Centris networks**: Broad visibility
-- **Social media**: Precise targeting of potential buyers
-
-## 6. Professional Network
-
-- **Notaries, inspectors, appraisers, mortgage brokers**: Trusted referrals
-- **Contractors**: For pre-sale repairs
-- **Other brokers**: Collaborative network to find the buyer
-
-## 7. Time Saved
-
-- **Buyer screening**: Only serious candidates
-- **Showing management**: Organization and follow-up
-- **Paperwork**: The broker handles complex documents
-
-## 8. End-to-End Support
-
-- **First meeting**: Assessment of your needs
-- **Personalized strategy**: Plan adapted to your situation
-- **Until signing**: Present at the notary
-- **After-sale**: Available for your questions
-
-## My Approach
-
-I'm not a volume broker. My choice is a limited number of clients, to offer attentive and personalized service. Every transaction deserves my full attention.`,
+**Read also**: [How to Check a Broker With the OACIQ](/en/oaciq-find-a-broker) · [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau)`,
   },
 ];
 

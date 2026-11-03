@@ -20,13 +20,14 @@ export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-po
       description: isFr ? post.metaDescription : post.metaDescriptionEn,
       url,
       datePublished: post.publishDate,
-      dateModified: post.publishDate,
+      dateModified: post.updatedDate ?? post.publishDate,
       image: post.featuredImage ? `${BASE_URL}${post.featuredImage}` : undefined,
       author: {
         "@type": "Person",
+        "@id": `${BASE_URL}/#person`,
         name: "Yanis Gauthier-Sigeris",
-        jobTitle: isFr ? "Courtier immobilier" : "Real Estate Broker",
-        url: BASE_URL,
+        jobTitle: isFr ? "Courtier immobilier résidentiel" : "Residential Real Estate Broker",
+        url: `${BASE_URL}/`,
       },
       publisher: {
         "@type": "Organization",
@@ -188,6 +189,9 @@ const BlogArticlePage = () => {
     isFr ? "fr-CA" : "en-CA",
     { year: "numeric", month: "long", day: "numeric" }
   );
+  const updatedStr = post.updatedDate && post.updatedDate !== post.publishDate
+    ? new Date(`${post.updatedDate}T12:00:00`).toLocaleDateString(isFr ? "fr-CA" : "en-CA", { year: "numeric", month: "long", day: "numeric" })
+    : null;
   const blogHref = isFr ? "/blogue/" : "/en/blog/";
   const ctaHref = isFr ? "/evaluation-gratuite-gatineau/" : "/en/home-valuation/";
 
@@ -402,7 +406,13 @@ const BlogArticlePage = () => {
                 >
                   {category}
                 </span>
-                <time style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>{dateStr}</time>
+                <time dateTime={post.publishDate} style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>{dateStr}</time>
+                {updatedStr && (
+                  <span style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>
+                    {isFr ? "Mis à jour le " : "Updated "}
+                    <time dateTime={post.updatedDate}>{updatedStr}</time>
+                  </span>
+                )}
               </div>
               <h1 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2.1rem, 4.4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.028em" }}>
                 <span className="block">{titleParts.line1}</span>
@@ -675,8 +685,8 @@ const BlogArticlePage = () => {
             </p>
             <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.55 }}>
               {isFr
-                ? "Courtier RE/MAX en Outaouais depuis plus de 9 ans, spécialisé en plex et investissement à Gatineau, Hull et Aylmer. Plus de 300 transactions."
-                : "RE/MAX broker in the Outaouais for over 9 years, specialized in plex and investment in Gatineau, Hull and Aylmer. Over 300 transactions."}
+                ? "Courtier immobilier résidentiel chez RE/MAX Direct depuis 2017, plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Permis OACIQ n° 112201."
+                : "Residential real estate broker with RE/MAX Direct since 2017, over 300 transactions in the Outaouais, mostly in Aylmer and Hull. OACIQ licence no. 112201."}
             </p>
           </div>
         </div>
