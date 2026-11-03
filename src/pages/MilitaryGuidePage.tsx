@@ -23,7 +23,7 @@ const topics = [
 
 const faq = [
   { q: "Ce guide est-il gratuit?", a: "Oui. Il vous aide à planifier votre relocalisation étape par étape." },
-  { q: "Travaillez-vous avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant. Je m'adapte aux étapes et aux délais de votre dossier." },
+  { q: "Travaillez-vous avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). Le fournisseur de services de réinstallation des FAC est SIRVA (Défense nationale), et j'accepte aussi les dossiers BGRS. Je m'adapte aux étapes et aux délais de votre dossier." },
   { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation financière. On en discute ensemble." },
   { q: "Quels secteurs recommandez-vous aux familles militaires?", a: "Ça dépend de votre lieu de travail. Pour le campus Carling, dans l'ouest d'Ottawa, Aylmer et le Plateau sont pratiques grâce au pont Champlain. Le centre de Hull est à environ 2 km du centre-ville d'Ottawa, par le pont du Portage. On compare les secteurs selon vos priorités familiales." },
 ];

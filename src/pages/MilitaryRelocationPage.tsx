@@ -28,7 +28,7 @@ const steps = [
 
 const faq = [
   { q: "Comment se passe un achat immobilier lors d'une mutation militaire?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), puis l'offre et le suivi jusqu'au notaire." },
-  { q: "Est-ce que vous travaillez avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). SIRVA gère les dossiers autorisés à compter du 6 janvier 2026, et BGRS, ceux autorisés avant. Je m'adapte aux étapes et aux délais de votre dossier." },
+  { q: "Est-ce que vous travaillez avec les dossiers SIRVA et BGRS?", a: "Oui. Depuis le 1er avril 2026, la réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC). Le fournisseur de services de réinstallation des FAC est SIRVA (Défense nationale), et j'accepte aussi les dossiers BGRS. Je m'adapte aux étapes et aux délais de votre dossier." },
 ];
 
 const MilitaryRelocationPage = () => (

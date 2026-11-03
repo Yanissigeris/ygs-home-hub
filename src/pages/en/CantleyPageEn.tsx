@@ -92,10 +92,10 @@ const CantleyPageEn = () => (
       <h2 className="mt-3">Cantley, verified facts about this growing municipality</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, about 20 km from downtown Ottawa by road. Its population was 11,449 at the 2021 census, up 7% since 2016, sustained growth that reflects the area's enduring appeal. French is the mother tongue of 86.7% of residents. (Source: Statistics Canada, 2021 Census)
+          Cantley is a municipality in the MRC des Collines-de-l'Outaouais, about 20 km from downtown Ottawa by road. Its population was 11,449 at the 2021 census, up 7% since 2016, sustained growth that reflects the area's enduring appeal. French is the mother tongue of 80.7% of residents. (Source: Statistics Canada, 2021 Census)
         </p>
         <p className="prose-body">
-          Cantley is known as a low-density residential municipality, one of its main draws. Updated urban planning bylaws in 2025 set the minimum lot size within the urban perimeter at 5,000 m². This preserves the municipality's semi-rural character. (Source: Municipality of Cantley, Urban Plan 2025)
+          Cantley is known as a low-density residential municipality, one of its main draws. Subdivision bylaw 662-24 requires a lot of at least 1,000 m² inside the urban perimeter, with both services. Outside the urban perimeter, the minimum is 3,700 m². (Source: Municipality of Cantley, subdivision bylaw 662-24, 2025)
         </p>
         <p className="prose-body">
           Cantley has three francophone elementary schools: école Sainte-Élisabeth, école de la Rose-des-Vents, and école de l'Orée-des-Bois (opened in 2014). For high school and specialized services, residents head to Gatineau. The Transcollines transit service links Cantley to Gatineau, with transfers to the STO network. (Source: Municipality of Cantley, Wikipedia)
@@ -145,7 +145,7 @@ const CantleyPageEn = () => (
           {[
             "By road, Cantley's town hall is about 20 km from downtown Ottawa. Population grew 7% between 2016 and 2021. (Source: Statistics Canada, 2021 Census)",
             "3 francophone elementary schools on the territory, plus Transcollines transit service to Ottawa and Gatineau. (Source: Municipality of Cantley)",
-            "Minimum residential lots of 5,000 m² within the urban perimeter, this bylaw preserves the spacious, semi-rural character. (Source: Urban Plan 2025)",
+            "Lots of at least 3,700 m² outside the urban perimeter, which keeps the area semi-rural. (Source: subdivision bylaw 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

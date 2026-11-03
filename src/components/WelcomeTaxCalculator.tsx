@@ -18,7 +18,7 @@ const t = {
     disclaimer:
       "Estimation selon la grille 2026 publiée par chaque municipalité. Votre notaire confirme le montant exact.",
     credit:
-      "Premier achat\u00a0: le crédit d'impôt remboursable du Québec peut couvrir jusqu'à 5\u00a0875\u00a0$ de ces droits, selon Revenu Québec.",
+      "Premier achat\u00a0: depuis le 1er janvier 2026, un crédit d'impôt remboursable du Québec peut couvrir jusqu'à 5\u00a0875\u00a0$ de ces droits. Il diminue pour un prix entre 750\u00a0000\u00a0$ et 1\u00a0M$ (Finances Québec).",
   },
   en: {
     title: "Welcome Tax Calculator",
@@ -33,7 +33,7 @@ const t = {
     disclaimer:
       "Estimate based on the 2026 grid published by each municipality. Your notary confirms the exact amount.",
     credit:
-      "First home: Quebec's refundable tax credit can cover up to $5,875 of this tax, according to Revenu Québec.",
+      "First home: since January 1, 2026, a Quebec refundable tax credit can cover up to $5,875 of this tax. It is reduced for prices between $750,000 and $1M (Finances Québec).",
   },
 };
 

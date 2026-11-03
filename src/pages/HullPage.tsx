@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Le projet Zibi, est-ce un bon achat?",
-    a: "Zibi est un développement en cours sur l'île de Hull. Les premières phases résidentielles sont habitées. C'est un secteur moderne, carboneutre, avec une belle vue sur la rivière, mais les condos neufs sont généralement plus chers que la revente dans le secteur adjacent. Les propriétés dans les quartiers autour de Zibi (Vieux-Hull, Wrightville) ont bénéficié de l'effet de valorisation à des prix plus accessibles. Je peux vous aider à comparer les options.",
+    a: "Zibi est un développement en cours sur l'île de Hull. Les premières phases résidentielles sont habitées. C'est un secteur moderne, avec une belle vue sur la rivière, mais les condos neufs sont généralement plus chers que la revente dans le secteur adjacent. Les propriétés dans les quartiers autour de Zibi (Vieux-Hull, Wrightville) ont bénéficié de l'effet de valorisation à des prix plus accessibles. Je peux vous aider à comparer les options.",
   },
   {
     q: "Hull est-il un bon choix pour les fonctionnaires fédéraux?",
@@ -33,11 +33,11 @@ const faq = [
 const subSectors = [
   {
     title: "Vieux-Hull",
-    text: "Le cœur historique. Le Sentier culturel, les murales, les restaurants de la rue Laramée, les bars du boulevard Fournier. Architecture de caractère, immeubles à revenus anciens, vie de quartier animée. À deux pas du Musée canadien de l'histoire.",
+    text: "Le cœur historique. Le Sentier culturel, les murales, des restaurants et des bars. Architecture de caractère, immeubles à revenus anciens, vie de quartier animée. À deux pas du Musée canadien de l'histoire.",
   },
   {
     title: "Île de Hull / Projet Zibi",
-    text: "Développement en cours sur l'ancienne usine Domtar. Condos neufs, vue sur la rivière, système de chauffage carboneutre, espaces publics riverains. Les premières phases sont habitées. Un secteur en construction active.",
+    text: "Développement en cours sur l'ancienne usine Domtar. Condos neufs, vue sur la rivière, réseau de chauffage à zéro carbone, espaces publics riverains. Les premières phases sont habitées. Un secteur en construction active.",
   },
   {
     title: "Wrightville / Val-Tétreau",
@@ -96,7 +96,7 @@ const HullPage = () => (
           Hull est le secteur historique de Gatineau, situé directement en face d'Ottawa de l'autre côté de la rivière des Outaouais. C'est le secteur le plus dense de la ville, condos, plexs, maisons de caractère, restaurants, musées. Pour les travailleurs fédéraux qui veulent traverser le pont à pied ou à vélo, c'est le secteur le plus proche.
         </p>
         <p className="prose-body">
-          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. C'est le premier quartier carboneutre de la région de la capitale nationale, avec son propre réseau d'énergie de quartier. Les premières phases sont habitées. (Source : zibi.ca, Radio-Canada)
+          Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. Le gouvernement fédéral le présente comme la première collectivité carboneutre de la région de la capitale nationale, et Zibi y construit un réseau de chauffage et de climatisation à zéro carbone. Les premières phases sont habitées. (Source : zibi.ca, Ressources naturelles Canada, 2021)
         </p>
         <p className="prose-body">
           Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative a baissé depuis la COVID, alors je pars des loyers en place avant de parler de rendement.
@@ -127,7 +127,7 @@ const HullPage = () => (
           Hull attire depuis longtemps les investisseurs en multiplex, à cause de la densité résidentielle et de la proximité d'Ottawa. Le marché locatif s'est calmé depuis la COVID.
         </p>
         <p className="prose-body">
-          Le marché locatif de Gatineau a connu un rééquilibrage en 2025-2026 avec l'arrivée d'un grand nombre de nouvelles constructions. L'analyse de rendement compte donc encore plus.
+          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. La hausse a été la plus forte à Hull et à Gatineau, où beaucoup de logements neufs ont été livrés. L'analyse de rendement compte donc encore plus.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.

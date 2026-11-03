@@ -8,11 +8,11 @@ const ValDesMontsPage = () => (
     metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage, au nord de Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts/" }}
-    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs, terrains boisés et chalets, dans une municipalité de villégiature de l'Outaouais. Plus de 125 lacs, et le village de Perkins à près de 30 km du centre-ville d'Ottawa par la route.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs, terrains boisés et chalets, dans une municipalité de villégiature de l'Outaouais. 125 lacs selon la municipalité, et le village de Perkins à près de 30 km du centre-ville d'Ottawa par la route.", image: heroImg }}
     trustSpecialty="Spécialiste Val-des-Monts et environs"
     lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi choisir Val-des-Monts", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande." }}
     reasons={[
-      "Plus de 125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
+      "125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
       "Prix médian d'une unifamiliale de 595 000 $ au 2e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
       "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes, chacun avec son propre marché",
       "Grands terrains en nature, souvent près d'un lac",

@@ -92,10 +92,10 @@ const CantleyPage = () => (
       <h2 className="mt-3">Cantley, des faits vérifiés sur cette municipalité en croissance</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Cantley est une municipalité de la MRC des Collines-de-l'Outaouais, à environ 20 km du centre-ville d'Ottawa par la route. Sa population était de 11 449 habitants au recensement de 2021, en hausse de 7 % depuis 2016, une croissance soutenue qui témoigne de l'attrait constant du secteur. Le français est la langue maternelle de 86,7 % des résidents. (Source : Statistique Canada, Recensement 2021)
+          Cantley est une municipalité de la MRC des Collines-de-l'Outaouais, à environ 20 km du centre-ville d'Ottawa par la route. Sa population était de 11 449 habitants au recensement de 2021, en hausse de 7 % depuis 2016, une croissance soutenue qui témoigne de l'attrait constant du secteur. Le français est la langue maternelle de 80,7 % des résidents. (Source : Statistique Canada, Recensement 2021)
         </p>
         <p className="prose-body">
-          Cantley est reconnue comme une municipalité à faible densité résidentielle, c'est l'un de ses attraits principaux. Les règlements urbanistiques révisés en 2025 fixent la superficie minimale des lots dans le périmètre urbain à 5 000 m². Cela maintient le caractère semi-rural de la municipalité. (Source : Municipalité de Cantley, Plan d'urbanisme 2025)
+          Cantley est reconnue comme une municipalité à faible densité résidentielle, c'est l'un de ses attraits principaux. Le règlement de lotissement 662-24 exige un terrain d'au moins 1 000 m² dans le périmètre urbain, avec les deux services. Hors du périmètre urbain, le minimum passe à 3 700 m². (Source : Municipalité de Cantley, règlement de lotissement 662-24, 2025)
         </p>
         <p className="prose-body">
           Cantley dispose de trois écoles primaires francophones : l'école Sainte-Élisabeth, l'école de la Rose-des-Vents, et l'école de l'Orée-des-Bois (ouverte en 2014). Pour le secondaire et les services spécialisés, les résidents se dirigent vers Gatineau. Le service de transport en commun Transcollines relie Cantley à Gatineau, avec correspondance vers le réseau de la STO. (Source : Municipalité de Cantley, Wikipedia)
@@ -145,7 +145,7 @@ const CantleyPage = () => (
           {[
             "Par la route, l'hôtel de ville de Cantley est à environ 20 km du centre-ville d'Ottawa. Population en croissance de 7 % entre 2016 et 2021. (Source : Statistique Canada, Recensement 2021)",
             "3 écoles primaires francophones sur le territoire, plus le service de transport Transcollines vers Ottawa et Gatineau. (Source : Municipalité de Cantley)",
-            "Lots résidentiels minimum de 5 000 m² dans le périmètre urbain, ce règlement maintient le caractère spacieux et semi-rural du secteur. (Source : Plan d'urbanisme 2025)",
+            "Terrains d'au moins 3 700 m² hors du périmètre urbain, ce qui garde le caractère semi-rural du secteur. (Source : règlement de lotissement 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

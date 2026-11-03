@@ -8,11 +8,11 @@ const ValDesMontsPageEn = () => (
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness, north of Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts/" }}
-    hero={{ overline: "Neighbourhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. Over 125 lakes, and Perkins village 28 to 30 km from downtown Ottawa by road.", image: heroImg }}
+    hero={{ overline: "Neighbourhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. 125 lakes according to the municipality, and Perkins village 28 to 30 km from downtown Ottawa by road.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. Major lakes like McGregor, Saint-Pierre and Achigan drive the demand." }}
     reasons={[
-      "Over 125 lakes according to the municipality, many properties with private lake access",
+      "125 lakes according to the municipality, many properties with private lake access",
       "Median single-family price of $595,000 in Q2 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts",
       "Major lakes: McGregor, Saint-Pierre, Achigan, Barnes, each with its own market",
       "Large lots in nature, often near a lake",
