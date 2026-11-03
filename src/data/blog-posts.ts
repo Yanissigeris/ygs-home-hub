@@ -801,9 +801,9 @@ Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager
 
 Regardez trois choses dans votre secteur et votre type de propriété : le nombre d'inscriptions semblables, le délai des dernières ventes et l'écart entre prix demandé et prix vendu. Ces chiffres se lisent dans les ventes comparables des 90 derniers jours.
 
-### Mon approche
+### Avant de choisir la date
 
-Je vous donne les chiffres et les options, vous décidez. Avant de fixer la date, je vous montre les ventes récentes de votre secteur et les maisons qui seront en concurrence avec la vôtre.
+Je vous montre les ventes récentes de votre secteur et les maisons qui seront en concurrence avec la vôtre.
 
 **Source** : Chambre immobilière de l'Outaouais et APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
@@ -818,7 +818,7 @@ A single-family home sold in 27 days on average in Q2 2026, unchanged from a yea
 
 With that much choice, a buyer compares your home with more properties than in 2025. The starting price largely decides how long the sale takes.
 
-### Is spring still the best season?
+### Should you wait for spring?
 
 Spring brings more buyers, but also more sellers. A well-prepared home stands out more when there are fewer similar listings in the same area, whatever the month.
 
@@ -830,9 +830,9 @@ Families with school-age children often prefer to move before the school year st
 
 Look at three things for your area and property type: the number of similar listings, how long recent sales took, and the gap between asking and selling prices. You find them in the comparable sales from the last 90 days.
 
-### My approach
+### Before you pick a date
 
-I give you the numbers and the options, and you decide. Before we pick a date, I show you the recent sales in your area and the homes that will compete with yours.
+I show you the recent sales in your area and the homes that will compete with yours.
 
 **Source**: Outaouais Real Estate Board and QPAREB, residential barometer, Q2 2026 (Centris data).
 
@@ -991,7 +991,7 @@ Downtown Ottawa is about 2 km from Hull via the Portage Bridge, 9 km from the Pl
 
 Le multiplicateur de revenus bruts (MRB) divise le prix par les revenus bruts annuels. C'est un repère rapide pour comparer deux immeubles du même secteur, rien de plus.
 
-Le taux global d'actualisation (TGA) divise le revenu net par le prix. Ce revenu net, c'est ce qui reste des loyers après les taxes municipales et scolaires, les assurances, l'entretien, l'énergie payée par le propriétaire et une provision pour logement vide. L'hypothèque n'entre pas dans ce calcul.
+Le taux global d'actualisation (TGA) divise le revenu net par le prix. Ce revenu net, c'est ce qui reste des loyers après les dépenses d'exploitation. On y compte les taxes municipales et scolaires, les assurances, l'entretien, l'énergie payée par le propriétaire, les frais de gestion, une réserve de remplacement et une provision pour logement vide. L'hypothèque n'entre pas dans ce calcul.
 
 Le cash-flow, lui, se calcule après l'hypothèque. Un immeuble peut afficher un TGA correct et laisser peu d'argent chaque mois, selon la mise de fonds et le taux obtenu.
 
@@ -999,7 +999,7 @@ Le cash-flow, lui, se calcule après l'hypothèque. Un immeuble peut afficher un
 
 Si vous habitez un des logements, un plex de 2 logements peut s'acheter avec une mise de fonds assurée de 5 % sur les premiers 500 000 $ et de 10 % sur le reste. Pour un immeuble de 3 ou 4 logements occupé par le propriétaire, le minimum assuré est de 10 %. Ces deux règles viennent de l'assurance prêt hypothécaire de la SCHL pour propriétaires-occupants. Pour un immeuble que vous n'habitez pas, elle ne s'applique pas, et les prêteurs demandent habituellement au moins 20 %.
 
-Ces règles changent le rendement plus que n'importe quel secteur. Parlez à votre prêteur avant de visiter.
+La mise de fonds pèse beaucoup sur le rendement. Parlez à votre prêteur avant de visiter.
 
 ### Pourquoi l'inoccupation pèse plus qu'avant?
 
@@ -1009,17 +1009,17 @@ En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % dans la rég
 
 Acheter sur les loyers annoncés plutôt que sur les baux signés. Lisez chaque bail : le loyer, la date de fin, ce qui est inclus (chauffage, électricité, stationnement).
 
-Négliger l'inspection. Un plex a plusieurs entrées électriques et souvent plusieurs chauffe-eau, sous un seul toit. Choisissez un inspecteur qui en fait souvent.
+Négliger l'inspection. Un plex a souvent plusieurs entrées électriques et plusieurs chauffe-eau, sous un seul toit. Choisissez un inspecteur qui en fait souvent.
 
 Oublier la conformité. Vérifiez auprès de la Ville que le nombre de logements est permis par le zonage, surtout quand un logement est au sous-sol.
 
 ### Où regarder à Gatineau?
 
-Dans le secteur Gatineau, le prix médian d'un plex était de 570 000 $ au 2e trimestre 2026, sous la médiane régionale. L'APCIQ ne publie pas de médiane de plex pour tous les secteurs, comme Buckingham et Masson-Angers. Dans ce cas, je compare avec les ventes récentes d'immeubles semblables.
+La médiane régionale cache de grands écarts entre Hull, Aylmer, le secteur Gatineau et Buckingham. Pour un immeuble précis, je compare avec les ventes récentes d'immeubles semblables dans le même secteur.
 
-### Mon approche
+### Ce que je fais avant une offre
 
-Je vous donne les chiffres et les options, vous décidez. Pour un plex, je calcule le MRB, le TGA et le cash-flow avec les baux en place, avant que vous déposiez une promesse d'achat.
+Je calcule le MRB, le TGA et le cash-flow avec les baux en place, avant que vous déposiez une promesse d'achat. Vous avez ensuite les chiffres et les options, et vous décidez.
 
 **Sources** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris). SCHL, Rapport sur le marché locatif, octobre 2025, et assurance prêt hypothécaire pour propriétaires-occupants.
 
@@ -1032,7 +1032,7 @@ It depends on the price you pay and the leases in place. In Q2 2026, the median 
 
 The gross rent multiplier (GRM, or MRB in Quebec) divides the price by the annual gross income. It's a quick way to compare two buildings in the same sector, nothing more.
 
-The cap rate (TGA in Quebec) divides net income by the price. Net income is what's left of the rents after municipal and school taxes, insurance, maintenance, any utilities the owner pays and an allowance for vacant units. The mortgage is not part of this calculation.
+The cap rate (TGA in Quebec) divides net income by the price. Net income is what's left of the rents after municipal and school taxes, insurance, maintenance, any utilities the owner pays, management fees, a replacement reserve and an allowance for vacant units. The mortgage is not part of this calculation.
 
 Cash flow comes after the mortgage. A building can show a decent cap rate and still leave little money each month, depending on your down payment and your rate.
 
@@ -1040,7 +1040,7 @@ Cash flow comes after the mortgage. A building can show a decent cap rate and st
 
 If you live in one of the units, a 2-unit plex can be bought with an insured down payment of 5% on the first $500,000 and 10% on the rest. For an owner-occupied 3 or 4-unit building, the insured minimum is 10%. Both rules come from CMHC mortgage loan insurance for owner-occupants. For a building you don't live in, it doesn't apply, and lenders usually ask for at least 20%.
 
-These rules change your return more than any sector does. Talk to your lender before you visit.
+Your down payment weighs heavily on your return. Talk to your lender before you visit.
 
 ### Why does vacancy matter more than before?
 
@@ -1050,17 +1050,17 @@ In October 2025, CMHC measured a 3.8% vacancy rate in the Gatineau area, compare
 
 Buying on advertised rents instead of signed leases. Read every lease: the rent, the end date, and what's included (heating, electricity, parking).
 
-Skipping a proper inspection. A plex has several electrical entries and often several water heaters, under a single roof. Pick an inspector who does plexes often.
+Skipping a proper inspection. A plex often has several electrical entries and several water heaters, under a single roof. Pick an inspector who does plexes often.
 
 Forgetting compliance. Check with the City that zoning allows the number of units, especially when one of them is in the basement.
 
 ### Where should you look in Gatineau?
 
-In the Gatineau sector, the median plex price was $570,000 in Q2 2026, below the regional median. QPAREB doesn't publish a plex median for every sector, such as Buckingham and Masson-Angers. In that case, I compare with recent sales of similar buildings.
+The regional median hides big gaps between Hull, Aylmer, the Gatineau sector and Buckingham. For a specific building, I compare with recent sales of similar buildings in the same sector.
 
-### My approach
+### What I do before an offer
 
-I give you the numbers and the options, and you decide. For a plex, I calculate the GRM, the cap rate and the cash flow from the leases in place, before you make an offer.
+I calculate the GRM, the cap rate and the cash flow from the leases in place, before you make an offer. You then have the numbers and the options, and you decide.
 
 **Sources**: QPAREB, residential barometer, Q2 2026 (Centris data). CMHC, Rental Market Report, October 2025, and homeowner mortgage loan insurance.
 
@@ -1341,8 +1341,8 @@ The key is preparation. I provide a detailed estimate of all these costs at our 
     titleEn: "Home Staging in Gatineau: How to Sell Faster",
     seoTitle: "Home staging Gatineau · Vendre plus vite | YGS",
     seoTitleEn: "Home Staging Gatineau · Sell Faster | YGS",
-    metaDescription: "Home staging à Gatineau : désencombrer, peindre, soigner les photos. Les interventions qui valent la peine et celles que je déconseille avant de vendre.",
-    metaDescriptionEn: "Home staging in Gatineau: declutter, paint, get the photos right. The changes worth making and the ones I advise against before you sell.",
+    metaDescription: "Home staging à Gatineau : par quoi commencer avant les photos, et les travaux que je déconseille juste avant de vendre.",
+    metaDescriptionEn: "Home staging in Gatineau: where to start before the photos, and the work I advise against right before you sell.",
     excerpt: "Avec 30 % plus de propriétés à vendre, la présentation compte davantage. Par quoi commencer, et ce que je déconseille.",
     excerptEn: "With 30% more homes for sale, presentation matters more. Where to start, and what I advise against.",
     category: "Vendeurs",
@@ -1374,9 +1374,9 @@ Oui, parce que l'acheteur n'est pas le même. Pour une maison familiale, montrez
 
 Une rénovation complète de cuisine ou de salle de bain juste avant de vendre : vous payez les travaux, et rien ne garantit que l'acheteur les paiera. Cacher un défaut ne marche pas non plus. L'inspection le trouvera, et la négociation reprendra à ce moment-là.
 
-### Mon approche
+### Avant la mise en marché
 
-Je vous donne les chiffres et les options, vous décidez. Avant la mise en marché, je vous dis quelles interventions valent la peine dans votre cas et lesquelles vous pouvez sauter.
+Je vous dis quelles interventions valent la peine dans votre cas et lesquelles vous pouvez sauter.
 
 **Source** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
@@ -1405,9 +1405,9 @@ Yes, because the buyer isn't the same. For a family home, show the storage, the 
 
 A full kitchen or bathroom renovation right before you sell: you pay for the work, and nothing guarantees the buyer will pay for it. Hiding a defect doesn't work either. The inspection will find it, and the negotiation starts over at that point.
 
-### My approach
+### Before the listing goes live
 
-I give you the numbers and the options, and you decide. Before the listing goes live, I tell you which changes are worth it in your case and which ones you can skip.
+I tell you which changes are worth it in your case and which ones you can skip.
 
 **Source**: QPAREB, residential barometer, Q2 2026 (Centris data).
 
@@ -1448,9 +1448,9 @@ Rarement au complet. Des interventions ciblées, comme la peinture des armoires,
 
 ### Quels travaux éviter?
 
-Les travaux sans permis. Un sous-sol fini ou un agrandissement fait sans permis peut créer un problème à la vente, et la déclaration du vendeur vous oblige à le mentionner. Évitez aussi les finitions très personnelles, qui plaisent à vous plus qu'au marché.
+Les travaux sans permis. Un sous-sol fini ou un agrandissement fait sans permis peut créer un problème à la vente. Avec un courtier, la déclaration du vendeur, un formulaire obligatoire, vous oblige à le mentionner. Évitez aussi les finitions très personnelles, qui vous plaisent plus qu'aux acheteurs.
 
-### Mon approche
+### Avant de dépenser
 
 Je vous donne les chiffres et les options, vous décidez. Avant que vous dépensiez, je compare les ventes de votre secteur pour vous montrer ce que les acheteurs ont payé pour des maisons rénovées et pour des maisons à rénover.
 
@@ -1473,9 +1473,9 @@ Rarely in full. Targeted changes, like painting the cabinets, new hardware or be
 
 ### Which work should you avoid?
 
-Work done without a permit. A basement finished or an extension built without a permit can cause a problem at the sale, and the seller's declaration requires you to disclose it. Also avoid very personal finishes that please you more than the market.
+Work done without a permit. A basement finished or an extension built without a permit can cause a problem at the sale. With a broker, the seller's declaration, a mandatory form, requires you to disclose it. Also avoid very personal finishes that please you more than the market.
 
-### My approach
+### Before you spend
 
 I give you the numbers and the options, and you decide. Before you spend, I compare sales in your area to show you what buyers paid for renovated homes and for homes that need work.
 
@@ -2363,7 +2363,7 @@ En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % pour les app
 
 ### Que montrent les chiffres de la SCHL?
 
-Le taux d'inoccupation a doublé en un an. Selon la SCHL, la cause principale est l'arrivée de nouveaux logements locatifs, et la hausse a été la plus marquée dans les zones de Hull et de Gatineau.
+Le taux d'inoccupation a doublé en un an. Selon la SCHL, l'arrivée de nouveaux logements locatifs explique une bonne partie de cette hausse, qui a été la plus marquée dans les zones de Hull et de Gatineau.
 
 Les logements neufs restent vides plus souvent que les autres. Leur taux d'inoccupation était de 10 %, presque trois fois la moyenne de la région.
 
@@ -2371,25 +2371,25 @@ Le loyer moyen d'un appartement de deux chambres s'élevait à 1 460 $ par moi
 
 ### Combien coûte un plex en ce moment?
 
-Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements atteignait 599 600 $ dans la région métropolitaine de Gatineau, 7 % de plus qu'un an plus tôt. Dans le secteur Gatineau, il était de 570 000 $. Un plex s'est vendu en 32 jours en moyenne (APCIQ, données Centris).
-
-Sur un an, les prix des plex ont donc monté plus vite que le loyer moyen (7 % contre 4,7 %). Ces deux chiffres ne mesurent pas les mêmes immeubles, alors je ne les utilise pas pour juger un plex en particulier.
+Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements atteignait 599 600 $ dans la région métropolitaine de Gatineau, 7 % de plus qu'un an plus tôt. Un plex s'est vendu en 32 jours en moyenne (APCIQ, données Centris).
 
 ### Qu'est-ce que ça change dans l'analyse d'un immeuble?
 
-Je pars des loyers inscrits aux baux, pas des loyers affichés en ligne pour des logements comparables. Un logement vide pendant deux mois, c'est deux mois de revenus en moins, et ça doit apparaître dans le budget.
+Je pars des loyers inscrits aux baux. Les loyers affichés en ligne pour des logements semblables servent seulement de repère. Un logement vide pendant deux mois, c'est deux mois de revenus en moins, et ça doit apparaître dans le budget.
 
 Pour un immeuble neuf, je le compare avec d'autres immeubles neufs du même secteur. La moyenne régionale cache justement l'écart entre le neuf et l'existant.
 
 ### Ce que le Tribunal administratif du logement encadre
 
-Au Québec, le bail d'un logement se signe sur le formulaire obligatoire du Tribunal administratif du logement (TAL). Un locataire peut refuser une hausse de loyer. Si vous n'arrivez pas à vous entendre, c'est le TAL qui fixe le loyer selon sa méthode de calcul, publiée chaque année.
+Au Québec, le bail d'un logement se signe sur le formulaire obligatoire du Tribunal administratif du logement (TAL). Un locataire peut refuser une hausse de loyer. Le propriétaire a alors un mois pour demander au TAL de fixer le loyer, sinon le bail se renouvelle au même prix. Pour fixer le loyer, le TAL suit la méthode prévue par règlement.
+
+Il y a une exception pour les immeubles neufs. Dans un immeuble de moins de 5 ans, si la section F du bail est remplie, le locataire ne peut pas demander au TAL de fixer son loyer.
 
 La reprise d'un logement pour s'y loger, ou pour y loger un proche, est possible, mais elle suit des règles précises et des délais d'avis. Avant d'acheter, lisez les baux un par un.
 
 ### Mon approche
 
-Je vous donne les chiffres et les options, vous décidez. Pour un plex, ça veut dire les baux en place, les dépenses appuyées par des factures et un délai réaliste pour relouer un logement libre.
+Pour un plex, je regarde les baux en place, les dépenses appuyées par des factures et un délai réaliste pour relouer un logement libre.
 
 **Sources** : SCHL, Rapport sur le marché locatif, octobre 2025 (région de Gatineau). APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
 
@@ -2400,7 +2400,7 @@ In October 2025, CMHC measured a 3.8% vacancy rate for rental apartments in the 
 
 ### What do the CMHC figures show?
 
-The vacancy rate doubled in one year. According to CMHC, the main cause is new rental supply, and the increase was most pronounced in the Hull and Gatineau survey zones.
+The vacancy rate doubled in one year. According to CMHC, new rental supply explains a good part of this increase, which was most pronounced in the Hull and Gatineau survey zones.
 
 New units sit empty more often than the rest. Their vacancy rate was 10%, almost three times the average for the area.
 
@@ -2408,25 +2408,25 @@ The average rent for a two-bedroom apartment was $1,460 a month, up 4.7% over on
 
 ### What does a plex cost right now?
 
-In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, 7% higher than a year earlier. The Gatineau sector median was $570,000. A plex sold in 32 days on average (QPAREB, Centris data).
-
-Over one year, plex prices rose faster than the average rent (7% versus 4.7%). Those two figures don't measure the same buildings, so I don't use them to judge a specific plex.
+In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, 7% higher than a year earlier. A plex sold in 32 days on average (QPAREB, Centris data).
 
 ### How does it change the analysis of a building?
 
-I start from the rents written in the leases, not from asking rents posted online for similar units. A unit that stays empty for two months is two months of income gone, and the budget has to show it.
+I start from the rents written in the leases. Asking rents posted online for similar units are only a reference point. A unit that stays empty for two months is two months of income gone, and the budget has to show it.
 
 For a new building, I compare it with other new buildings in the same sector. The regional average hides the gap between new and existing units.
 
 ### What the Tribunal administratif du logement regulates
 
-In Quebec, a residential lease is signed on the mandatory form of the Tribunal administratif du logement (TAL). A tenant can refuse a rent increase. If you can't agree, the TAL sets the rent using its calculation method, published every year.
+In Quebec, a residential lease is signed on the mandatory form of the Tribunal administratif du logement (TAL). A tenant can refuse a rent increase. The landlord then has one month to ask the TAL to set the rent, or the lease renews at the same rent. To set the rent, the TAL follows the method set out by regulation.
+
+There's an exception for new buildings. In a building less than 5 years old, if section F of the lease is filled in, the tenant can't ask the TAL to set the rent.
 
 Taking back a unit to live in it, or to house a relative, is possible, but it follows specific rules and notice periods. Before you buy, read the leases one by one.
 
 ### My approach
 
-I give you the numbers and the options, and you decide. For a plex, that means the leases in place, expenses backed by invoices, and a realistic timeline to re-rent a vacant unit.
+For a plex, I look at the leases in place, expenses backed by invoices, and a realistic timeline to re-rent a vacant unit.
 
 **Sources**: CMHC, Rental Market Report, October 2025 (Gatineau area). QPAREB, residential barometer, Q2 2026 (Centris data).
 
@@ -2574,11 +2574,11 @@ Before buying a condo in Gatineau, always request: meeting minutes, reserve fund
     published: true,
     body: `## Vendre en hiver à Gatineau
 
-Beaucoup de propriétaires attendent le printemps. Pourtant, une maison inscrite en hiver a souvent moins de concurrence directe, et les acheteurs qui visitent en janvier ont généralement une raison de bouger : une mutation, une naissance, un bail qui finit.
+Beaucoup de propriétaires attendent le printemps. Pourtant, une maison inscrite en hiver a souvent moins de concurrence directe, et les acheteurs qui visitent en janvier ont souvent une raison précise de déménager.
 
 ### Est-ce que les maisons se vendent en hiver?
 
-Oui. Le marché ralentit, mais il ne s'arrête pas. Au 2e trimestre 2026, une unifamiliale s'est vendue en 27 jours en moyenne dans la région de Gatineau (APCIQ). Ce qui fait la différence en toute saison, c'est le prix de départ par rapport aux ventes comparables.
+Oui. Le marché ralentit, mais il ne s'arrête pas. Au 1er trimestre 2026, de janvier à mars, une unifamiliale s'est vendue en 38 jours en moyenne dans la région de Gatineau (Chambre immobilière de l'Outaouais). Ce qui fait la différence en toute saison, c'est le prix de départ par rapport aux ventes comparables.
 
 ### Comment préparer la maison pour une visite d'hiver?
 
@@ -2592,20 +2592,20 @@ Oui, si elles montrent la cour, le terrain ou la piscine que la neige cache. Ind
 
 Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'acheteur pense au coût de chauffage, et des chiffres clairs répondent à sa question avant qu'il la pose. Ajoutez les factures des travaux récents sur la toiture, les fenêtres ou l'isolation.
 
-### Mon approche
+### L'hiver ou le printemps?
 
-Je vous donne les chiffres et les options, vous décidez. Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
+Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
-**Source** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
+**Source** : Chambre immobilière de l'Outaouais et APCIQ, baromètre résidentiel du 1er trimestre 2026 (données Centris).
 
 **Lire aussi** : [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau) · [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau)`,
     bodyEn: `## Selling Your Home in Winter in Gatineau
 
-Many owners wait for spring. Yet a home listed in winter often faces less direct competition, and buyers who visit in January usually have a reason to move: a posting, a new baby, a lease that ends.
+Many owners wait for spring. Yet a home listed in winter often faces less direct competition, and buyers who visit in January often have a specific reason to move.
 
 ### Do homes sell in winter?
 
-Yes. The market slows down, but it doesn't stop. In Q2 2026, a single-family home sold in 27 days on average in the Gatineau area (QPAREB). Whatever the season, the starting price compared with comparable sales makes the difference.
+Yes. The market slows down, but it doesn't stop. In Q1 2026, from January to March, a single-family home sold in 38 days on average in the Gatineau area (Outaouais Real Estate Board). Whatever the season, the starting price compared with comparable sales makes the difference.
 
 ### How do you prepare the house for a winter visit?
 
@@ -2619,11 +2619,11 @@ Yes, if they show the yard, the lot or the pool the snow is hiding. Mention the 
 
 Your heating and electricity bills for the last 12 months. In winter, buyers think about heating costs, and clear numbers answer the question before they ask it. Add the invoices for recent work on the roof, windows or insulation.
 
-### My approach
+### Winter or spring?
 
-I give you the numbers and the options, and you decide. With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
+With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 
-**Source**: QPAREB, residential barometer, Q2 2026 (Centris data).
+**Source**: Outaouais Real Estate Board and QPAREB, residential barometer, Q1 2026 (Centris data).
 
 **Read also**: [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau) · [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau)`,
   },
@@ -2662,13 +2662,13 @@ Avec une analyse comparative de marché : les ventes récentes de propriétés s
 
 ### Et la négociation?
 
-Le courtier connaît les clauses de la promesse d'achat, les conditions d'inspection et de financement, et les délais qui s'y rattachent. Il négocie avec des ventes comparables en main, pas avec des impressions.
+Le courtier connaît les clauses de la promesse d'achat, les conditions d'inspection et de financement, et les délais qui s'y rattachent. Il négocie avec des ventes comparables en main.
 
 ### Qu'est-ce qui distingue le marché de Gatineau?
 
-Beaucoup d'acheteurs viennent d'Ottawa, où la transaction se fait autrement. Au Québec, la vente se conclut chez le notaire, et la déclaration du vendeur est un formulaire obligatoire quand un courtier est engagé. Les droits de mutation (la taxe de bienvenue) s'ajoutent au budget de l'acheteur.
+Beaucoup d'acheteurs viennent d'Ottawa, où la transaction se fait autrement. Au Québec, la vente se conclut chez le notaire. Quand un courtier vend une maison ou un plex de moins de 5 logements, la déclaration du vendeur est un formulaire obligatoire. Les droits de mutation (la taxe de bienvenue) s'ajoutent au budget de l'acheteur.
 
-### Mon approche
+### Qui vous écrit
 
 Je vous donne les chiffres et les options, vous décidez. Courtier immobilier résidentiel chez RE/MAX Direct depuis 2017, j'ai plus de 300 transactions en Outaouais. Mon permis OACIQ porte le numéro 112201.
 
@@ -2683,7 +2683,7 @@ Selling or buying without a broker is allowed in Quebec. The real question is wh
 
 To represent you, a broker must hold a licence from the Organisme d'autoréglementation du courtage immobilier du Québec (OACIQ). You can check it in the OACIQ's public register. The promise to purchase is drawn up on a mandatory form, and the broker must verify the information they give you.
 
-Brokers also carry mandatory professional liability insurance. And the real estate brokerage indemnity fund can compensate you in some cases of fraud or misappropriation of funds.
+Brokers also carry mandatory professional liability insurance. And the Real Estate Indemnity Fund (FICI) can compensate you in some cases of fraud or misappropriation of funds.
 
 ### How does a broker set the price?
 
@@ -2691,13 +2691,13 @@ With a comparative market analysis: recent sales of similar properties in your a
 
 ### What about negotiation?
 
-A broker knows the clauses of the promise to purchase, the inspection and financing conditions, and the deadlines tied to them. They negotiate with comparable sales in hand, not impressions.
+A broker knows the clauses of the promise to purchase, the inspection and financing conditions, and the deadlines tied to them. They negotiate with comparable sales in hand.
 
 ### What makes the Gatineau market different?
 
-Many buyers come from Ottawa, where transactions work differently. In Quebec, the sale closes at the notary, the seller's declaration is a mandatory form when a broker is involved, and land transfer duties (the welcome tax) add to the buyer's budget.
+Many buyers come from Ottawa, where transactions work differently. In Quebec, the sale closes at the notary. When a broker sells a house or a plex of fewer than 5 units, the seller's declaration is a mandatory form. Land transfer duties (the welcome tax) add to the buyer's budget.
 
-### My approach
+### Who's writing
 
 I give you the numbers and the options, and you decide. I've been a residential real estate broker with RE/MAX Direct since 2017, with over 300 transactions in the Outaouais. My OACIQ licence number is 112201.
 

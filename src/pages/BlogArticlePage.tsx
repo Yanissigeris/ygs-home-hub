@@ -185,7 +185,7 @@ const BlogArticlePage = () => {
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
   const category = isFr ? post.category : post.categoryEn;
   const excerpt = isFr ? post.excerpt : post.excerptEn;
-  const dateStr = new Date(post.publishDate).toLocaleDateString(
+  const dateStr = new Date(`${post.publishDate}T12:00:00`).toLocaleDateString(
     isFr ? "fr-CA" : "en-CA",
     { year: "numeric", month: "long", day: "numeric" }
   );
