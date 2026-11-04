@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 
 const ValDesMontsPage = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }}
     seoTitle="Val-des-Monts | Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre à Val-des-Monts. Lacs, chalets, grands terrains et nature sauvage, au nord de Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"

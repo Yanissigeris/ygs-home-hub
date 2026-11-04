@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Est-ce un bon secteur pour investir dans un plex?",
-    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative a baissé depuis la COVID, ici comme ailleurs en Outaouais. Alors, faites une analyse de rendement avant d'acheter. Je la fais avec vous.",
+    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative a baissé depuis la COVID, ici comme ailleurs en Outaouais. Dans mes dossiers, un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie. Faites une analyse de rendement avant d'acheter : je la fais avec vous.",
   },
 ];
 
@@ -37,7 +37,7 @@ const subSectors = [
   },
   {
     title: "Secteur plex du centre",
-    text: "Concentration historique de duplex et triplex proches des commerces et des transports en commun STO. Clientèle locative variée : étudiants du Cégep, familles, travailleurs. Marché d'investissement actif.",
+    text: "Concentration historique de duplex et triplex proches des commerces et des transports en commun STO. Sur les 12 derniers mois, le prix médian d'un plex dans le secteur Gatineau était de 556 000 $, en baisse de 7 % (APCIQ, 3e trimestre 2026).",
   },
   {
     title: "Secteur boulevard Maloney",
@@ -138,7 +138,7 @@ const GatineauCentrePage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Gatineau centre" items={faq} />
+    <FAQSection title="Questions fréquentes sur Gatineau centre" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

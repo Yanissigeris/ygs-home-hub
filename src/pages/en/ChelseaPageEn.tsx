@@ -194,7 +194,7 @@ const ChelseaPageEn = () => (
     </ContentBlock>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions about Chelsea, Quebec" items={faq} />
+    <FAQSection title="Frequently asked questions about Chelsea, Quebec" items={faq} updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

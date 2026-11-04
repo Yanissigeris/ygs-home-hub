@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-cote-dazur.webp";
 
 const CoteDazurPageEn = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Côte-d'Azur Gatineau, Neighbourhood Guide"
     metaDesc="Buy, sell or live in Côte-d'Azur, Gatineau. Established residential area with bungalows, mature trees and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"

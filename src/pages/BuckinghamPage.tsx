@@ -158,7 +158,7 @@ const BuckinghamPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Buckingham et Masson-Angers" items={faq} />
+    <FAQSection title="Questions fréquentes sur Buckingham et Masson-Angers" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

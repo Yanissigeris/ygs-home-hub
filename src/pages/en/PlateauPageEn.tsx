@@ -6,6 +6,7 @@ import heroImg from "@/assets/hero-plateau.webp";
 // seoTitle / metaDesc below are fallbacks only and are kept identical in intent.
 const PlateauPageEn = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Real Estate Broker Plateau · Gatineau | Yanis Gauthier"
     metaDesc="Yanis Gauthier-Sigeris, RE/MAX broker with 300+ transactions in the Outaouais. Buy or sell in the Plateau, Gatineau, with a free home valuation."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
@@ -54,9 +55,9 @@ const PlateauPageEn = () => (
     inlineCta={{ text: "Own property in the Plateau? Find out how much it's worth.", label: "Get my valuation →", href: "/en/home-valuation/" }}
     brokerPerspective={{
       title: "My take on the Plateau",
-      observation: "In February 2026, I helped a first-time buyer purchase a home in the Plateau. I have closed other transactions in the neighbourhood, including a quick sale on Rue du Chinook, on the Hull side.",
+      observation: "In February 2026, I helped a first-time buyer purchase a home in the Plateau. I have closed other transactions in the neighbourhood, including a quick sale on Rue du Chinook, on the Hull side. Early in 2026, the owners of a Plateau triplex asked me how to get top dollar, fast. With careful marketing and the right price from day one, they accepted an offer within a day, at exactly the asking price.",
       dataPoint: "7 Rue du Chinook: sold in one week, at $945,000 (April 2026).",
-      takeaway: "My advice to Plateau homeowners: your price is set by recent sales on your side of the neighbourhood and on your street, not by an average for the whole area.",
+      takeaway: "My advice to Plateau homeowners: the right price is what makes the sale. It's set by recent sales on your side of the neighbourhood and on your street, not by an average for the whole area.",
     }}
     faq={{
       title: "Questions about the Plateau",

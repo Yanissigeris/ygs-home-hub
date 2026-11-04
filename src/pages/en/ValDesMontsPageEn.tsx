@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-val-des-monts-gen.webp";
 
 const ValDesMontsPageEn = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Val-des-Monts QC | Neighbourhood Guide"
     metaDesc="Buy, sell or live in Val-des-Monts, Quebec. Lakes, cottages, large lots and wilderness, north of Gatineau."
     ogImage="https://yanisgauthier.com/og/og-val-des-monts.jpg"

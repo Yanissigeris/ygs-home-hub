@@ -4,16 +4,17 @@ import heroImg from "@/assets/hero-masson-angers-gen.webp";
 
 const MassonAngersPage = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }}
     seoTitle="Masson-Angers | Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre à Masson-Angers, Gatineau. Secteur familial avec des constructions neuves et des prix d'entrée parmi les plus bas de la ville."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Courtier immobilier à Masson-Angers. Secteur familial, constructions neuves et prix accessibles.", lat: 45.5328, lng: -75.4170, url: "/masson-angers/" }}
     hero={{ overline: "Guide de quartier · Masson-Angers", title: "Vivre, acheter ou vendre à Masson-Angers", subtitle: "Secteur familial à l'est de Gatineau, avec des constructions neuves et des prix d'entrée parmi les plus bas de la ville. À environ 36 km du centre-ville d'Ottawa et à une trentaine de kilomètres des Promenades Gatineau par la route.", image: heroImg }}
     trustSpecialty="Spécialiste Masson-Angers"
-    lifestyle={{ image: heroImg, imageAlt: "Quartier résidentiel Masson-Angers", title: "Pourquoi choisir Masson-Angers", subtitle: "Masson-Angers attire principalement les jeunes familles et les premiers acheteurs qui cherchent une maison neuve ou récente sans payer le prix de Hull ou d'Aylmer. Le secteur compte deux sous-secteurs distincts, Masson et Angers, avec plusieurs développements résidentiels actifs et des promoteurs qui livrent du neuf en 2026. Côté prix, le secteur Buckingham/Masson-Angers affiche le prix médian unifamilial le plus bas de la ville (APCIQ, 3e trimestre 2026), en échange d'un trajet plus long vers le centre-ville d'Ottawa." }}
+    lifestyle={{ image: heroImg, imageAlt: "Quartier résidentiel Masson-Angers", title: "Pourquoi choisir Masson-Angers", subtitle: "Le secteur compte deux sous-secteurs distincts, Masson et Angers, avec de la construction neuve et de la revente. Côté prix, le secteur Buckingham/Masson-Angers affiche le prix médian unifamilial le plus bas de la ville, à 395 000 $ (APCIQ, 3e trimestre 2026), en échange d'un trajet plus long vers le centre-ville d'Ottawa." }}
     reasons={[
       "Prix médian d'une unifamiliale de 395 000 $ au 3e trimestre 2026 dans le secteur Buckingham/Masson-Angers, le plus bas des quatre secteurs de la ville de Gatineau (APCIQ)",
-      "Constructions neuves actives : plusieurs promoteurs livrent en 2026 avec possession printemps disponible",
+      "Constructions neuves et reventes : je compare chacune avec des propriétés du même type",
       "Deux sous-secteurs distincts : Masson (côté ouest, plus mature) et Angers (côté est, plus en développement)",
       "Écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "École secondaire Hormisdas-Gamelin à Buckingham (programme d'éducation intermédiaire PEI et option sport)",
@@ -34,7 +35,7 @@ const MassonAngersPage = () => (
       items: [
         { q: "Masson-Angers est-il loin du centre de Gatineau?", a: "Les Promenades Gatineau sont à une trentaine de kilomètres par la route (de 28 à 33 km selon l'itinéraire), et le centre-ville d'Ottawa à environ 36 km. Le trajet dépend de l'heure et du pont utilisé." },
         { q: "Quel est le prix d'une maison à Masson-Angers en 2026?", a: "Masson-Angers fait partie du secteur Buckingham/Masson-Angers dans les statistiques de l'APCIQ. Au 3e trimestre 2026, le prix médian d'une unifamiliale y était de 395 000 $, le plus bas des quatre secteurs de la ville de Gatineau (données Centris). Le prix varie ensuite selon le type, l'année de construction et le sous-secteur : je vous montre les ventes récentes comparables." },
-        { q: "Y a-t-il des maisons neuves à Masson-Angers?", a: "Oui, plusieurs promoteurs sont actifs à Masson-Angers. Les dates de possession varient d'un projet à l'autre : je vérifie avec vous celles des projets disponibles." },
+        { q: "Y a-t-il des maisons neuves à Masson-Angers?", a: "Oui, il y a de la construction neuve à Masson-Angers. Les dates de possession varient d'un projet à l'autre : je vérifie avec vous celles des projets disponibles." },
         { q: "Quelles écoles desservent Masson-Angers?", a: "Quatre écoles primaires francophones du Centre de services scolaire au Cœur-des-Vallées : Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur et St-Jean-de-Brébeuf. Pour le secondaire, l'École secondaire Hormisdas-Gamelin à Buckingham, qui offre le programme d'éducation intermédiaire (PEI) et une option sport." },
         { q: "Le marché est-il en hausse à Masson-Angers?", a: "Les prix sont stables et l'offre augmente. Au 3e trimestre 2026, dans le secteur Buckingham/Masson-Angers, le prix médian d'une unifamiliale est resté au même niveau qu'un an plus tôt (395 000 $). Les ventes d'unifamiliales ont baissé de 23 % et les unifamiliales en vigueur ont augmenté de 47 %. Une unifamiliale s'y est vendue en 34 jours en moyenne (APCIQ, données Centris)." },
         { q: "Quels sont les sous-secteurs de Masson-Angers?", a: "Le territoire se divise en deux : Masson (côté ouest, plus mature, près de la rivière du Lièvre) et Angers (côté est, plus en développement avec les constructions neuves récentes). Les prix et l'inventaire diffèrent d'un sous-secteur à l'autre." },

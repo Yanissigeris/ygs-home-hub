@@ -39,6 +39,7 @@ export interface NeighborhoodProps {
   related: { overline?: string; title?: string; pages: { title: string; text: string; href: string }[] };
   guide: { type: GuideType; headline: string; text: string; ctaLabel: string; stickyLabel: string };
   brokerPerspective?: { title?: string; observation: string; dataPoint?: string; takeaway?: string };
+  updated?: { date: string; source?: string };
   cta: { title: string; text: string; buttons: { label: string; href: string; variant?: "outline" }[]; trustLine: string };
 }
 
@@ -204,7 +205,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
         <BrokerPerspective data={p.brokerPerspective} neighborhoodName={p.jsonLd.name} />
       )}
 
-      <FAQSection title={p.faq.title} items={p.faq.items} />
+      <FAQSection title={p.faq.title} items={p.faq.items} updated={p.updated} />
 
       <SectorLinks
         overline={p.sectors.overline ?? (lang === "en" ? "Other sectors" : "Autres secteurs")}

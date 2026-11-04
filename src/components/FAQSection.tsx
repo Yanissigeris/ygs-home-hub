@@ -19,12 +19,14 @@ interface FAQSectionProps {
   items: FAQItem[];
   /** How many items to show before "Show more" (default 5) */
   initialVisible?: number;
+  /** Last content update (YYYY-MM-DD), shown under the title with the data source. */
+  updated?: { date: string; source?: string };
 }
 
 const FAQ_JSONLD_PREFIX = "ygs-faq-jsonld";
 
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
-  ({ title, items, initialVisible = 5 }, ref) => {
+  ({ title, items, initialVisible = 5, updated }, ref) => {
     const lang = useLanguage();
     const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
     const [expanded, setExpanded] = React.useState(false);
@@ -101,6 +103,15 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
           >
             <p className="label-overline mb-2">FAQ</p>
             <h2>{resolvedTitle}</h2>
+            {updated && (
+              <p className="mt-3 text-xs text-muted-foreground">
+                {lang === "en" ? "Updated " : "Mis à jour le "}
+                <time dateTime={updated.date}>
+                  {new Date(`${updated.date}T12:00:00`).toLocaleDateString(lang === "en" ? "en-CA" : "fr-CA", { year: "numeric", month: "long", day: "numeric" })}
+                </time>
+                {updated.source ? ` · ${updated.source}` : ""}
+              </p>
+            )}
           </motion.div>
 
           <div ref={accordionRef} id={accordionId}>

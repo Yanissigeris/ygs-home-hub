@@ -127,7 +127,10 @@ const HullPage = () => (
           Hull attire depuis longtemps les investisseurs en multiplex, à cause de la densité résidentielle et de la proximité d'Ottawa. Le marché locatif s'est calmé depuis la COVID.
         </p>
         <p className="prose-body">
-          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. L'analyse de rendement compte donc encore plus.
+          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025, et la SCHL note que la hausse a été la plus marquée dans les zones de Hull et de Gatineau. L'analyse de rendement compte donc encore plus.
+        </p>
+        <p className="prose-body">
+          Sur les 12 derniers mois, le prix médian d'un plex à Hull était de 597 750 $, en hausse de 6 % (APCIQ, 3e trimestre 2026). Dans mes dossiers, les plex dont les loyers sont sous le marché partent plus vite. Un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie. Je vois aussi plus de propriétaires-occupants qui achètent un duplex ou un triplex pour y vivre.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.
@@ -163,7 +166,7 @@ const HullPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Hull, Gatineau" items={faq} />
+    <FAQSection title="Questions fréquentes sur Hull, Gatineau" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

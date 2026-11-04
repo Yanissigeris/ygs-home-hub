@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Is it a good area to invest in a plex?",
-    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand has dropped since COVID, here as elsewhere in the Outaouais. So run a return analysis before you buy. I do it with you.",
+    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand has dropped since COVID, here as elsewhere in the Outaouais. In my files, a poorly rented or poorly maintained plex stays on the market longer, and its price gets negotiated. Run a return analysis before you buy: I do it with you.",
   },
 ];
 
@@ -37,7 +37,7 @@ const subSectors = [
   },
   {
     title: "Central plex area",
-    text: "Historic concentration of duplexes and triplexes close to shops and STO public transit. Diverse tenant base: cégep students, families, workers. Active investment market.",
+    text: "Historic concentration of duplexes and triplexes close to shops and STO public transit. Over the last 12 months, the median plex price in the Gatineau sector was $556,000, down 7% (QPAREB, Q3 2026).",
   },
   {
     title: "Boulevard Maloney area",
@@ -138,7 +138,7 @@ const GatineauCentrePageEn = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions about Gatineau centre" items={faq} />
+    <FAQSection title="Frequently asked questions about Gatineau centre" items={faq} updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

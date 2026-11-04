@@ -162,7 +162,7 @@ const CantleyPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Cantley, Outaouais" items={faq} />
+    <FAQSection title="Questions fréquentes sur Cantley, Outaouais" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages
