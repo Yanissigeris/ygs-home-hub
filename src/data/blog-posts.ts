@@ -770,71 +770,71 @@ Whether you're thinking of selling or buying, understanding these trends gives y
     titleEn: "When Is the Best Time to Sell in Gatineau?",
     seoTitle: "Quand vendre sa maison à Gatineau? · Le bon moment | YGS",
     seoTitleEn: "When to Sell Your Home in Gatineau | YGS",
-    metaDescription: "Inventaire en hausse de 30 % et délai de 27 jours au T2 2026 : comment choisir le moment de vendre votre maison à Gatineau, chiffres à l'appui.",
-    metaDescriptionEn: "Inventory up 30% and a 27-day selling time in Q2 2026: how to choose when to sell your home in Gatineau, based on the numbers.",
+    metaDescription: "2 256 propriétés à vendre (+42 %) et 34 jours de délai au T3 2026 : quand vendre votre maison à Gatineau, et pourquoi attendre le printemps n'est pas une règle.",
+    metaDescriptionEn: "2,256 homes for sale (+42%) and 34 days on market in Q3 2026: when to sell your home in Gatineau, and why waiting for spring isn't a rule.",
     excerpt: "Le bon moment pour vendre dépend surtout de la concurrence dans votre secteur. Ce que disent les chiffres récents.",
     excerptEn: "The right time to sell depends mostly on the competition in your area. What the recent numbers say.",
     category: "Vendeurs",
     categoryEn: "Sellers",
     publishDate: "2025-02-10",
-    updatedDate: "2026-11-03",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Quand vendre sa maison à Gatineau?
 
-Le meilleur moment, c'est quand votre maison a peu de concurrence dans votre secteur. Au 2e trimestre 2026, 2 007 propriétés étaient à vendre dans la région métropolitaine de Gatineau, 30 % de plus qu'un an plus tôt. La saison compte, mais l'inventaire autour de vous compte davantage.
+Le meilleur moment, c'est quand votre maison a peu de concurrence dans votre secteur. Au 3e trimestre 2026, 2 256 propriétés étaient à vendre dans la région métropolitaine de Gatineau, 42 % de plus qu'un an plus tôt. La saison compte, mais l'inventaire autour de vous compte davantage.
 
 ### Que disent les chiffres récents?
 
-Une unifamiliale s'est vendue en 27 jours en moyenne au 2e trimestre 2026, un délai stable sur un an. Son prix médian a monté de 2 %, à 523 500 $. Pour un condo, le portrait est différent : prix médian en baisse de 5 % et délai de 40 jours.
+Une unifamiliale s'est vendue en 34 jours en moyenne au 3e trimestre 2026, une semaine de plus qu'un an plus tôt. Son prix médian a baissé de 3 %, à 480 000 $. Les vendeurs gardent l'avantage, mais moins qu'avant, et au-dessus de 740 000 $ le marché est équilibré. Pour un condo, le prix médian a reculé de 5 %, et le marché est maintenant équilibré.
 
-Avec autant de choix, un acheteur compare votre maison à plus de propriétés qu'en 2025. Le prix de départ décide en bonne partie du délai.
+Les écarts entre secteurs sont réels. Une unifamiliale s'est vendue en 23 jours en moyenne à Hull, contre 31 dans le secteur Gatineau.
 
-### Faut-il attendre le printemps?
+### Ce que je dis aux vendeurs en ce moment
 
-Au printemps, il y a souvent plus d'acheteurs, mais aussi plus de vendeurs. Dans la région de Gatineau, le nombre de propriétés à vendre est passé de 1 394 en moyenne au 1er trimestre 2026 à 2 007 au 2e trimestre. Une maison bien préparée se démarque mieux quand il y a moins d'inscriptions semblables dans le même secteur, peu importe le mois.
+On entend souvent qu'il vaut mieux attendre le printemps. Je ne suis pas d'accord comme règle générale : au printemps, il y a aussi beaucoup plus de maisons à vendre. Dans la région de Gatineau, le nombre de propriétés à vendre est passé de 1 394 en moyenne au 1er trimestre 2026 à 2 007 au 2e trimestre.
+
+L'autre idée que je défais souvent : afficher plus haut pour se garder une marge de négociation. Avec 42 % plus d'inscriptions qu'il y a un an, une maison affichée trop haut attend, et elle finit par baisser son prix. Mieux vaut partir du bon prix, appuyé sur les ventes comparables.
 
 ### Quels facteurs propres à Gatineau regarder?
 
-Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager avant la rentrée. Pour les militaires mutés dans la région d'Ottawa-Gatineau, c'est le calendrier de la mutation qui fixe la date. Et les taux d'intérêt changent ce qu'un acheteur peut emprunter, donc le prix qu'il peut offrir.
+Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager avant la rentrée. Pour les militaires mutés dans la région d'Ottawa-Gatineau, c'est le calendrier de la mutation qui fixe la date. Les taux d'intérêt comptent aussi : la Banque du Canada a monté son taux directeur à 2,50 % le 28 octobre 2026, ce qui réduit ce que certains acheteurs peuvent emprunter.
 
 ### Comment choisir votre moment?
 
 Dans votre secteur et pour votre type de propriété, regardez d'abord combien d'inscriptions semblables sont en vigueur et en combien de temps les dernières se sont vendues. L'écart entre le prix demandé et le prix vendu complète le portrait. Tout ça se lit dans les ventes comparables des 90 derniers jours.
 
-### Avant de choisir la date
+Je vous montre ces chiffres avant de fixer la date. Ensuite, c'est vous qui décidez.
 
-Je vous montre les ventes récentes de votre secteur et les maisons qui seront en concurrence avec la vôtre.
-
-**Sources** : Chambre immobilière de l'Outaouais et APCIQ, baromètres résidentiels des 1er et 2e trimestres 2026 (données Centris).
+**Sources** : APCIQ, baromètres résidentiels des trois premiers trimestres de 2026 (données Centris). Banque du Canada, annonce du 28 octobre 2026.
 
 **Lire aussi** : [Inventaire +30 % à Gatineau](/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
     bodyEn: `## When Should You Sell Your Home in Gatineau?
 
-The best time is when your home has little competition in your area. In Q2 2026, 2,007 properties were for sale in the Gatineau metropolitan area, 30% more than a year earlier. The season matters, but the inventory around you matters more.
+The best time is when your home has little competition in your area. In Q3 2026, 2,256 properties were for sale in the Gatineau metropolitan area, 42% more than a year earlier. The season matters, but the inventory around you matters more.
 
 ### What do the recent numbers say?
 
-A single-family home sold in 27 days on average in Q2 2026, unchanged from a year earlier. Its median price rose 2%, to $523,500. Condos tell a different story: the median price fell 5% and the average selling time was 40 days.
+A single-family home sold in 34 days on average in Q3 2026, a week longer than a year earlier. Its median price fell 3%, to $480,000. Sellers keep the advantage, but less than before, and above $740,000 the market is balanced. For condos, the median price dropped 5%, and the market is now balanced.
 
-With that much choice, a buyer compares your home with more properties than in 2025. The starting price largely decides how long the sale takes.
+The gaps between sectors are real. A single-family home sold in 23 days on average in Hull, compared with 31 in the Gatineau sector.
 
-### Should you wait for spring?
+### What I'm telling sellers right now
 
-Spring often brings more buyers, but also more sellers. In the Gatineau area, the number of properties for sale went from an average of 1,394 in Q1 2026 to 2,007 in Q2. A well-prepared home stands out more when there are fewer similar listings in the same area, whatever the month.
+You often hear that it's better to wait for spring. I don't agree as a general rule: in spring, there are also many more homes for sale. In the Gatineau area, the number of properties for sale went from an average of 1,394 in Q1 2026 to 2,007 in Q2.
+
+The other idea I often push back on: listing high to keep room to negotiate. With 42% more listings than a year ago, an overpriced home sits, and it ends up cutting its price. It's better to start from the right price, backed by comparable sales.
 
 ### Which Gatineau-specific factors should you watch?
 
-Families with school-age children often prefer to move before the school year starts. Military members posted to the Ottawa-Gatineau region arrive on their posting schedule. And interest rates change what a buyer can borrow, so the price they can offer.
+Families with school-age children often prefer to move before the school year starts. For military members posted to the Ottawa-Gatineau region, the posting schedule sets the date. Interest rates matter too: the Bank of Canada raised its policy rate to 2.50% on October 28, 2026, which reduces what some buyers can borrow.
 
 ### How do you pick your timing?
 
 For your area and property type, start with how many similar listings are active and how fast the recent ones sold. The gap between asking and selling prices completes the picture. It all shows up in the comparable sales from the last 90 days.
 
-### Before you pick a date
+I show you those numbers before we set a date. Then you decide.
 
-I show you the recent sales in your area and the homes that will compete with yours.
-
-**Sources**: Outaouais Real Estate Board and QPAREB, residential barometers, Q1 and Q2 2026 (Centris data).
+**Sources**: QPAREB, residential barometers for the first three quarters of 2026 (Centris data). Bank of Canada, October 28, 2026 announcement.
 
 **Read also**: [Inventory up 30% in Gatineau](/en/blog/gatineau-inventory-2026-30-percent-listings) · [Selling a Home in Winter in Gatineau](/en/blog/selling-home-winter-gatineau-tips)`,
   },
@@ -981,11 +981,11 @@ Downtown Ottawa is about 2 km from Hull via the Portage Bridge, 9 km from the Pl
     category: "Investissement",
     categoryEn: "Investment",
     publishDate: "2025-04-02",
-    updatedDate: "2026-11-03",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Investir dans un plex à Gatineau : encore rentable?
 
-Ça dépend du prix payé et des baux en place. Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements était de 599 600 $ dans la région métropolitaine de Gatineau, en hausse de 7 % sur un an (APCIQ, données Centris). À ce prix, l'immeuble doit se payer avec ses loyers d'aujourd'hui.
+Ça dépend du prix payé et des baux en place. Au 3e trimestre 2026, le prix médian d'un plex de 2 à 5 logements était de 617 500 $ dans la région métropolitaine de Gatineau, en hausse de 2 % sur un an (APCIQ, données Centris). À ce prix, l'immeuble doit se payer avec ses loyers d'aujourd'hui.
 
 ### Quels chiffres regarder en premier?
 
@@ -1017,16 +1017,24 @@ Oublier la conformité. Vérifiez auprès de la Ville que le nombre de logements
 
 La médiane régionale cache de grands écarts entre Hull, Aylmer, le secteur Gatineau et Buckingham. Pour un immeuble précis, je compare avec les ventes récentes d'immeubles semblables dans le même secteur.
 
+### Ce que je vois dans mes dossiers de plex
+
+La question que mes investisseurs me posent le plus souvent : « Est-ce que ça s'autofinance? » Pour y répondre, je pars des baux, jamais d'une moyenne.
+
+En ce moment, les plex dont les loyers sont sous le marché partent plus vite. L'acheteur y voit une marge pour les prochaines années, dans le cadre des règles du TAL. À l'inverse, un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie.
+
+Je vois aussi plus de propriétaires-occupants qu'avant. Ils achètent un duplex ou un triplex pour y vivre, et comptent sur les loyers pour payer une partie de l'hypothèque.
+
 ### Ce que je fais avant une offre
 
 Je calcule le MRB, le TGA et le cash-flow avec les baux en place, avant que vous déposiez une promesse d'achat. Vous avez ensuite les chiffres et les options, et vous décidez.
 
-**Sources** : APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris). SCHL, Rapport sur le marché locatif, octobre 2025, et assurance prêt hypothécaire pour propriétaires-occupants.
+**Sources** : APCIQ, baromètre résidentiel du 3e trimestre 2026 (données Centris). SCHL, Rapport sur le marché locatif, octobre 2025, et assurance prêt hypothécaire pour propriétaires-occupants.
 
 **Lire aussi** : [Le marché locatif à Gatineau](/blogue/marche-locatif-gatineau-investissement) · [Plex à Gatineau en mars 2026](/blogue/plex-gatineau-mars-2026)`,
     bodyEn: `## Investing in a Plex in Gatineau: Is It Still Worth It?
 
-It depends on the price you pay and the leases in place. In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, up 7% over one year (QPAREB, Centris data). At that price, the building has to pay for itself with today's rents.
+It depends on the price you pay and the leases in place. In Q3 2026, the median price of a 2 to 5 unit plex was $617,500 in the Gatineau metropolitan area, up 2% over one year (QPAREB, Centris data). At that price, the building has to pay for itself with today's rents.
 
 ### Which numbers should you look at first?
 
@@ -1058,11 +1066,19 @@ Forgetting compliance. Check with the City that zoning allows the number of unit
 
 The regional median hides big gaps between Hull, Aylmer, the Gatineau sector and Buckingham. For a specific building, I compare with recent sales of similar buildings in the same sector.
 
+### What I see in my plex files
+
+The question my investors ask me most often: "Does it pay for itself?" To answer it, I start from the leases, never from an average.
+
+Right now, plexes with rents below market sell faster. Buyers see room for the years ahead, within the TAL rules. On the other hand, a poorly rented or poorly maintained plex stays on the market longer, and its price gets negotiated.
+
+I'm also seeing more owner-occupants than before. These are people who buy a duplex or triplex to live in, and who count on the rents to cover part of the mortgage.
+
 ### What I do before an offer
 
 I calculate the GRM, the cap rate and the cash flow from the leases in place, before you make an offer. You then have the numbers and the options, and you decide.
 
-**Sources**: QPAREB, residential barometer, Q2 2026 (Centris data). CMHC, Rental Market Report, October 2025, and homeowner mortgage loan insurance.
+**Sources**: QPAREB, residential barometer, Q3 2026 (Centris data). CMHC, Rental Market Report, October 2025, and homeowner mortgage loan insurance.
 
 **Read also**: [Gatineau's Rental Market](/en/blog/rental-market-gatineau-investment) · [Plex market in Gatineau, March 2026](/en/blog/plex-gatineau-march-2026)`,
   },
@@ -2355,7 +2371,7 @@ Before refinancing, get your property appraised to know its true market value. I
     categoryEn: "Investment",
     featuredImage: blogRentalMarket,
     publishDate: "2025-09-01",
-    updatedDate: "2026-11-03",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Le marché locatif de Gatineau en 2026
 
@@ -2371,7 +2387,7 @@ Le loyer moyen d'un appartement de deux chambres s'élevait à 1 460 $ par moi
 
 ### Combien coûte un plex en ce moment?
 
-Au 2e trimestre 2026, le prix médian d'un plex de 2 à 5 logements atteignait 599 600 $ dans la région métropolitaine de Gatineau, 7 % de plus qu'un an plus tôt. Un plex s'est vendu en 32 jours en moyenne (APCIQ, données Centris).
+Au 3e trimestre 2026, le prix médian d'un plex de 2 à 5 logements atteignait 617 500 $ dans la région métropolitaine de Gatineau, 2 % de plus qu'un an plus tôt. C'est le seul type de propriété dont le prix a monté. Par contre, il s'est vendu 88 plex, 14 % de moins, et il a fallu 38 jours en moyenne (APCIQ, données Centris).
 
 ### Qu'est-ce que ça change dans l'analyse d'un immeuble?
 
@@ -2391,7 +2407,7 @@ La reprise d'un logement pour s'y loger, ou pour y loger un proche, est possible
 
 Pour un plex, je regarde les baux en place, les dépenses appuyées par des factures et un délai réaliste pour relouer un logement libre.
 
-**Sources** : SCHL, Rapport sur le marché locatif, octobre 2025 (région de Gatineau). APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
+**Sources** : SCHL, Rapport sur le marché locatif, octobre 2025 (région de Gatineau). APCIQ, baromètre résidentiel du 3e trimestre 2026 (données Centris).
 
 **Lire aussi** : [Investir dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable) · [Plex à Gatineau en mars 2026](/blogue/plex-gatineau-mars-2026)`,
     bodyEn: `## Gatineau's Rental Market in 2026
@@ -2408,7 +2424,7 @@ The average rent for a two-bedroom apartment was $1,460 a month, up 4.7% over on
 
 ### What does a plex cost right now?
 
-In Q2 2026, the median price of a 2 to 5 unit plex was $599,600 in the Gatineau metropolitan area, 7% higher than a year earlier. A plex sold in 32 days on average (QPAREB, Centris data).
+In Q3 2026, the median price of a 2 to 5 unit plex was $617,500 in the Gatineau metropolitan area, 2% higher than a year earlier. It's the only property type whose price went up. On the other hand, 88 plexes sold, 14% fewer, and it took 38 days on average (QPAREB, Centris data).
 
 ### How does it change the analysis of a building?
 
@@ -2428,7 +2444,7 @@ Taking back a unit to live in it, or to house a relative, is possible, but it fo
 
 For a plex, I look at the leases in place, expenses backed by invoices, and a realistic timeline to re-rent a vacant unit.
 
-**Sources**: CMHC, Rental Market Report, October 2025 (Gatineau area). QPAREB, residential barometer, Q2 2026 (Centris data).
+**Sources**: CMHC, Rental Market Report, October 2025 (Gatineau area). QPAREB, residential barometer, Q3 2026 (Centris data).
 
 **Read also**: [Investing in a Plex in Gatineau](/en/blog/investing-plex-gatineau-worth-it) · [Plex market in Gatineau, March 2026](/en/blog/plex-gatineau-march-2026)`,
   },
@@ -2570,7 +2586,7 @@ Before buying a condo in Gatineau, always request: meeting minutes, reserve fund
     categoryEn: "Sellers",
     featuredImage: blogWinterSelling,
     publishDate: "2025-08-05",
-    updatedDate: "2026-11-03",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Vendre en hiver à Gatineau
 
@@ -2594,9 +2610,11 @@ Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'a
 
 ### L'hiver ou le printemps?
 
+Mon conseil : ça dépend de votre secteur et de votre type de propriété. Au 3e trimestre 2026, une unifamiliale s'est vendue en 23 jours en moyenne à Hull, mais en 44 jours dans la périphérie de Gatineau (APCIQ). Une règle unique ne tient pas devant des écarts pareils.
+
 Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
-**Sources** : Chambre immobilière de l'Outaouais et APCIQ, baromètres résidentiels des 1er et 2e trimestres 2026 (données Centris).
+**Sources** : Chambre immobilière de l'Outaouais et APCIQ, baromètres résidentiels des trois premiers trimestres de 2026 (données Centris).
 
 **Lire aussi** : [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau) · [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau)`,
     bodyEn: `## Selling Your Home in Winter in Gatineau
@@ -2621,9 +2639,11 @@ Your heating and electricity bills for the last 12 months. In winter, buyers thi
 
 ### Winter or spring?
 
+My advice: it depends on your area and your property type. In Q3 2026, a single-family home sold in 23 days on average in Hull, but in 44 days in the Gatineau outskirts (QPAREB). A single rule doesn't hold up against gaps like that.
+
 With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 
-**Sources**: Outaouais Real Estate Board and QPAREB, residential barometers, Q1 and Q2 2026 (Centris data).
+**Sources**: Outaouais Real Estate Board and QPAREB, residential barometers for the first three quarters of 2026 (Centris data).
 
 **Read also**: [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau) · [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau)`,
   },
