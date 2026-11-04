@@ -664,7 +664,7 @@ Acheter du neuf vous donne accès au plan de garantie des maisons neuves adminis
 
 ## Financement et mise de fonds
 
-Avec des prix plus bas, la mise de fonds est plus accessible. Pour une maison au prix médian du secteur, soit 419 545 $, la mise de fonds minimale (5 %) est d'environ 20 977 $, plus réaliste que dans les secteurs plus chers.
+Avec des prix plus bas, la mise de fonds est plus accessible. Pour une maison au prix médian du secteur, soit 395 000 $ au 3e trimestre 2026, la mise de fonds minimale (5 %) est de 19 750 $, plus réaliste que dans les secteurs plus chers.
 
 ## Qualité de vie
 
@@ -685,7 +685,7 @@ Buying new gives you access to the new home warranty plan administered by GCR. Y
 
 ## Financing and Down Payment
 
-With lower prices, the down payment is more accessible. For a home at the sector's median price of $419,545, the minimum down payment (5%) is about $20,977, more realistic than in pricier areas.
+With lower prices, the down payment is more accessible. For a home at the sector's median price of $395,000 in Q3 2026, the minimum down payment (5%) is $19,750, more realistic than in pricier areas.
 
 ## Quality of Life
 
