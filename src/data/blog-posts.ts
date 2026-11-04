@@ -791,7 +791,7 @@ Avec autant de choix, un acheteur compare votre maison à plus de propriétés q
 
 ### Faut-il attendre le printemps?
 
-Au printemps, il y a plus d'acheteurs, mais aussi plus de vendeurs. Une maison bien préparée se démarque mieux quand il y a moins d'inscriptions semblables dans le même secteur, peu importe le mois.
+Au printemps, il y a souvent plus d'acheteurs, mais aussi plus de vendeurs. Dans la région de Gatineau, le nombre de propriétés à vendre est passé de 1 394 en moyenne au 1er trimestre 2026 à 2 007 au 2e trimestre. Une maison bien préparée se démarque mieux quand il y a moins d'inscriptions semblables dans le même secteur, peu importe le mois.
 
 ### Quels facteurs propres à Gatineau regarder?
 
@@ -799,13 +799,13 @@ Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager
 
 ### Comment choisir votre moment?
 
-Regardez trois choses dans votre secteur et votre type de propriété : le nombre d'inscriptions semblables, le délai des dernières ventes et l'écart entre prix demandé et prix vendu. Ces chiffres se lisent dans les ventes comparables des 90 derniers jours.
+Dans votre secteur et pour votre type de propriété, regardez d'abord combien d'inscriptions semblables sont en vigueur et en combien de temps les dernières se sont vendues. L'écart entre le prix demandé et le prix vendu complète le portrait. Tout ça se lit dans les ventes comparables des 90 derniers jours.
 
 ### Avant de choisir la date
 
 Je vous montre les ventes récentes de votre secteur et les maisons qui seront en concurrence avec la vôtre.
 
-**Source** : Chambre immobilière de l'Outaouais et APCIQ, baromètre résidentiel du 2e trimestre 2026 (données Centris).
+**Sources** : Chambre immobilière de l'Outaouais et APCIQ, baromètres résidentiels des 1er et 2e trimestres 2026 (données Centris).
 
 **Lire aussi** : [Inventaire +30 % à Gatineau](/blogue/inventaire-gatineau-2026-30-pourcent-inscriptions) · [Vendre sa maison en hiver à Gatineau](/blogue/vendre-maison-hiver-gatineau-conseils)`,
     bodyEn: `## When Should You Sell Your Home in Gatineau?
@@ -820,7 +820,7 @@ With that much choice, a buyer compares your home with more properties than in 2
 
 ### Should you wait for spring?
 
-Spring brings more buyers, but also more sellers. A well-prepared home stands out more when there are fewer similar listings in the same area, whatever the month.
+Spring often brings more buyers, but also more sellers. In the Gatineau area, the number of properties for sale went from an average of 1,394 in Q1 2026 to 2,007 in Q2. A well-prepared home stands out more when there are fewer similar listings in the same area, whatever the month.
 
 ### Which Gatineau-specific factors should you watch?
 
@@ -828,13 +828,13 @@ Families with school-age children often prefer to move before the school year st
 
 ### How do you pick your timing?
 
-Look at three things for your area and property type: the number of similar listings, how long recent sales took, and the gap between asking and selling prices. You find them in the comparable sales from the last 90 days.
+For your area and property type, start with how many similar listings are active and how fast the recent ones sold. The gap between asking and selling prices completes the picture. It all shows up in the comparable sales from the last 90 days.
 
 ### Before you pick a date
 
 I show you the recent sales in your area and the homes that will compete with yours.
 
-**Source**: Outaouais Real Estate Board and QPAREB, residential barometer, Q2 2026 (Centris data).
+**Sources**: Outaouais Real Estate Board and QPAREB, residential barometers, Q1 and Q2 2026 (Centris data).
 
 **Read also**: [Inventory up 30% in Gatineau](/en/blog/gatineau-inventory-2026-30-percent-listings) · [Selling a Home in Winter in Gatineau](/en/blog/selling-home-winter-gatineau-tips)`,
   },
@@ -1352,11 +1352,11 @@ The key is preparation. I provide a detailed estimate of all these costs at our 
     published: true,
     body: `## Home staging à Gatineau : vendre plus vite
 
-Au 2e trimestre 2026, il y avait 30 % plus de propriétés à vendre dans la région de Gatineau qu'un an plus tôt (APCIQ). Un acheteur visite donc plus de maisons avant de choisir. Le home staging sert à ce que la vôtre soit celle dont il se souvient.
+Au 2e trimestre 2026, il y avait 30 % plus de propriétés à vendre dans la région de Gatineau qu'un an plus tôt (APCIQ). Un acheteur a donc plus de maisons à comparer avant de choisir. Le home staging sert à ce que la vôtre soit celle dont il se souvient.
 
 ### Pourquoi la présentation compte autant?
 
-La plupart des acheteurs voient votre maison d'abord en photos, sur Centris. Si les photos ne donnent pas envie, il n'y a pas de visite. La préparation commence donc avant le photographe.
+Beaucoup d'acheteurs voient votre maison d'abord en photos, sur Centris. Si les photos ne donnent pas envie, il n'y a pas de visite. La préparation commence donc avant le photographe.
 
 ### Par quoi commencer?
 
@@ -1383,11 +1383,11 @@ Je vous dis quelles interventions valent la peine dans votre cas et lesquelles v
 **Lire aussi** : [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison) · [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau)`,
     bodyEn: `## Home Staging in Gatineau: Sell Faster
 
-In Q2 2026, there were 30% more properties for sale in the Gatineau area than a year earlier (QPAREB). Buyers visit more homes before they choose. Staging is how yours becomes the one they remember.
+In Q2 2026, there were 30% more properties for sale in the Gatineau area than a year earlier (QPAREB). Buyers have more homes to compare before they choose. Staging is how yours becomes the one they remember.
 
 ### Why does presentation matter so much?
 
-Most buyers see your home in photos first, on Centris. If the photos don't make them want to come, there is no visit. So preparation starts before the photographer arrives.
+Many buyers see your home in photos first, on Centris. If the photos don't make them want to come, there is no visit. So preparation starts before the photographer arrives.
 
 ### Where should you start?
 
@@ -2574,7 +2574,7 @@ Before buying a condo in Gatineau, always request: meeting minutes, reserve fund
     published: true,
     body: `## Vendre en hiver à Gatineau
 
-Beaucoup de propriétaires attendent le printemps. Pourtant, une maison inscrite en hiver a souvent moins de concurrence directe, et les acheteurs qui visitent en janvier ont souvent une raison précise de déménager.
+Beaucoup de propriétaires attendent le printemps. Pourtant, il y a moins de maisons à vendre en hiver. Au 1er trimestre 2026, la région de Gatineau comptait en moyenne 1 394 propriétés à vendre, contre 2 007 au 2e trimestre (Chambre immobilière de l'Outaouais). Les acheteurs qui visitent en janvier ont aussi, bien souvent, une raison précise de déménager.
 
 ### Est-ce que les maisons se vendent en hiver?
 
@@ -2596,12 +2596,12 @@ Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'a
 
 Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
-**Source** : Chambre immobilière de l'Outaouais et APCIQ, baromètre résidentiel du 1er trimestre 2026 (données Centris).
+**Sources** : Chambre immobilière de l'Outaouais et APCIQ, baromètres résidentiels des 1er et 2e trimestres 2026 (données Centris).
 
 **Lire aussi** : [Quand vendre sa maison à Gatineau?](/blogue/quand-vendre-sa-maison-gatineau) · [Home staging à Gatineau](/blogue/home-staging-vendre-plus-vite-gatineau)`,
     bodyEn: `## Selling Your Home in Winter in Gatineau
 
-Many owners wait for spring. Yet a home listed in winter often faces less direct competition, and buyers who visit in January often have a specific reason to move.
+Many owners wait for spring. Yet fewer homes are for sale in winter. In Q1 2026, the Gatineau area had an average of 1,394 properties for sale, compared with 2,007 in Q2 (Outaouais Real Estate Board). Buyers who visit in January also tend to have a specific reason to move.
 
 ### Do homes sell in winter?
 
@@ -2623,7 +2623,7 @@ Your heating and electricity bills for the last 12 months. In winter, buyers thi
 
 With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 
-**Source**: Outaouais Real Estate Board and QPAREB, residential barometer, Q1 2026 (Centris data).
+**Sources**: Outaouais Real Estate Board and QPAREB, residential barometers, Q1 and Q2 2026 (Centris data).
 
 **Read also**: [When Should You Sell in Gatineau?](/en/blog/best-time-to-sell-gatineau) · [Home Staging in Gatineau](/en/blog/home-staging-sell-faster-gatineau)`,
   },
@@ -2666,7 +2666,7 @@ Le courtier connaît les clauses de la promesse d'achat, les conditions d'inspec
 
 ### Qu'est-ce qui distingue le marché de Gatineau?
 
-Beaucoup d'acheteurs viennent d'Ottawa, où la transaction se fait autrement. Au Québec, la vente se conclut chez le notaire. Quand un courtier vend une maison ou un plex de moins de 5 logements, la déclaration du vendeur est un formulaire obligatoire. Les droits de mutation (la taxe de bienvenue) s'ajoutent au budget de l'acheteur.
+Beaucoup d'acheteurs viennent d'Ottawa, où la transaction se fait autrement. Au Québec, la vente se conclut chez le notaire. Quand le vendeur d'une maison ou d'un plex de moins de 5 logements fait affaire avec un courtier, la déclaration du vendeur est un formulaire obligatoire. Les droits de mutation (la taxe de bienvenue) s'ajoutent au budget de l'acheteur.
 
 ### Qui vous écrit
 
@@ -2695,7 +2695,7 @@ A broker knows the clauses of the promise to purchase, the inspection and financ
 
 ### What makes the Gatineau market different?
 
-Many buyers come from Ottawa, where transactions work differently. In Quebec, the sale closes at the notary. When a broker sells a house or a plex of fewer than 5 units, the seller's declaration is a mandatory form. Land transfer duties (the welcome tax) add to the buyer's budget.
+Many buyers come from Ottawa, where transactions work differently. In Quebec, the sale closes at the notary. When the seller of a house or a plex of fewer than 5 units works with a broker, the seller's declaration is a mandatory form. Land transfer duties (the welcome tax) add to the buyer's budget.
 
 ### Who's writing
 
