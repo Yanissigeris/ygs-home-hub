@@ -30,7 +30,7 @@ const steps = [
 
 
 const faq = [
-  { q: "How much do I need for a first purchase in Gatineau?", a: "At the Q2 2026 single-family median for the Gatineau area ($523,500, APCIQ), the minimum down payment is $27,350 (5% on $500,000, 10% on the rest). Also plan for closing costs: notary, inspection, land transfer duties and tax adjustments. We work out your borrowing capacity together." },
+  { q: "How much do I need for a first purchase in Gatineau?", a: "At the Q3 2026 single-family median for the Gatineau area ($480,000, APCIQ), the minimum down payment is $24,000 (5% of the price, since it's under $500,000). Also plan for closing costs: notary, inspection, land transfer duties and tax adjustments. We work out your borrowing capacity together." },
   { q: "Do I qualify for assistance programs?", a: "Several measures may apply depending on your situation. The HBP lets you withdraw up to $60,000 from your RRSPs, and the FHSA accepts $8,000 in contributions per year, up to $40,000 lifetime. There are also the federal home buyers' amount and Québec's refundable tax credit, which reimburses part of the land transfer duties. We confirm your eligibility together, with your financial institution." },
   { q: "What's different in Québec?", a: "When a broker represents you, the promise to purchase uses an OACIQ form. The sale is then finalized at a notary, and the land transfer duties (welcome tax) are added to your budget. Nothing complicated, as long as you are well guided." },
 ];

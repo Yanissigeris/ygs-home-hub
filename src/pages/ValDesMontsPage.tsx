@@ -13,14 +13,14 @@ const ValDesMontsPage = () => (
     lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi choisir Val-des-Monts", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande." }}
     reasons={[
       "125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
-      "Prix médian d'une unifamiliale de 595 000 $ au 2e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
+      "Prix médian d'une unifamiliale de 530 000 $ au 3e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
       "Lacs principaux : McGregor, Saint-Pierre, Achigan, Barnes, chacun avec son propre marché",
       "Grands terrains en nature, souvent près d'un lac",
       "Chalets quatre-saisons, résidences permanentes et propriétés de luxe bord de lac",
       "Village de Perkins comme centre de services (épicerie, école primaire, services de proximité)",
       "Village de Perkins à près de 30 km du centre-ville d'Ottawa par la route",
       "Les Promenades Gatineau à une vingtaine de kilomètres de Perkins par la route, pour les services commerciaux",
-      "Plus de choix pour les acheteurs : 535 unifamiliales en vigueur au 2e trimestre 2026 dans la périphérie de Gatineau, 13 % de plus qu'un an plus tôt (APCIQ)",
+      "Plus de choix pour les acheteurs : 633 unifamiliales en vigueur au 3e trimestre 2026 dans la périphérie de Gatineau, 23 % de plus qu'un an plus tôt (APCIQ)",
     ]}
     profilesTitle="Pour qui Val-des-Monts a du sens"
     profiles={[
@@ -34,11 +34,11 @@ const ValDesMontsPage = () => (
       title: "Questions sur Val-des-Monts",
       items: [
         { q: "Val-des-Monts est-il accessible à l'année?", a: "Oui, la majorité des routes principales sont entretenues à l'année. Certains chemins privés en bord de lac peuvent nécessiter du déneigement supplémentaire ou un véhicule 4×4 pour les accès les plus reculés." },
-        { q: "Quel est le prix d'une propriété à Val-des-Monts en 2026?", a: "Val-des-Monts fait partie de la « périphérie de Gatineau » dans les statistiques de l'APCIQ, où le prix médian d'une unifamiliale était de 595 000 $ au 2e trimestre 2026 (données Centris). Ce territoire inclut aussi Chelsea, Cantley et Pontiac : c'est donc un repère large. À Val-des-Monts, les prix dépendent fortement du lac, de l'orientation et du type de propriété, du chalet rustique à la résidence quatre-saisons en bord de lac." },
+        { q: "Quel est le prix d'une propriété à Val-des-Monts en 2026?", a: "Val-des-Monts fait partie de la « périphérie de Gatineau » dans les statistiques de l'APCIQ, où le prix médian d'une unifamiliale était de 530 000 $ au 3e trimestre 2026 (données Centris). Ce territoire inclut aussi Chelsea, Cantley et Pontiac : c'est donc un repère large. À Val-des-Monts, les prix dépendent fortement du lac, de l'orientation et du type de propriété, du chalet rustique à la résidence quatre-saisons en bord de lac." },
         { q: "Quels sont les principaux lacs de Val-des-Monts?", a: "Les plus connus sont McGregor, Saint-Pierre, Achigan et Barnes. Chaque lac a son profil : McGregor pour les propriétés haut de gamme et la navigation, Saint-Pierre pour les chalets familiaux, Achigan pour la pêche, Barnes pour le calme." },
         { q: "Peut-on habiter à Val-des-Monts à l'année?", a: "Absolument. De plus en plus de résidents permanents s'y installent depuis 2020, attirés par le télétravail et la qualité de vie. La municipalité a investi dans l'Internet haute vitesse pour soutenir cette tendance." },
         { q: "Y a-t-il des écoles à Val-des-Monts?", a: "Oui pour le primaire : le Centre de services scolaire des Draveurs y compte trois écoles primaires (de la Colline, L'Équipage et du Sommet). Au secondaire, ses élèves fréquentent des écoles du secteur Gatineau, un facteur à considérer pour les familles avec des ados. En anglais, l'école primaire Poltimore (Western Québec School Board) est à Val-des-Monts, sous réserve de l'admissibilité." },
-        { q: "Combien de temps prend une vente à Val-des-Monts?", a: "Ça varie selon le type. Au 2e trimestre 2026, une unifamiliale s'est vendue en 39 jours en moyenne dans la périphérie de Gatineau, qui inclut Val-des-Monts (APCIQ, données Centris). Pour un chalet ou une propriété en bord de lac, je vous montre les ventes récentes comparables." },
+        { q: "Combien de temps prend une vente à Val-des-Monts?", a: "Ça varie selon le type. Au 3e trimestre 2026, une unifamiliale s'est vendue en 46 jours en moyenne dans la périphérie de Gatineau, qui inclut Val-des-Monts (APCIQ, données Centris). Pour un chalet ou une propriété en bord de lac, je vous montre les ventes récentes comparables." },
       ],
     }}
     sectors={{ list: [
@@ -57,7 +57,7 @@ const ValDesMontsPage = () => (
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Val-des-Monts", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
       observation: "Ce que je regarde à Val-des-Monts : l'accès au lac, l'installation septique et le puits pèsent autant que la maison. Un chalet trois-saisons et une maison habitable à l'année ne se comparent pas.",
-      dataPoint: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 39 jours en moyenne dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts (données Centris).",
+      dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 46 jours en moyenne dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts (données Centris).",
       takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le moment et la préparation comptent énormément. Inscrivez votre propriété au printemps si possible, et préparez-la pour les photos dès l'été précédent. Soyez réaliste sur le prix selon le type de lac et l'accès : une propriété sur McGregor ne se compare pas à une propriété sans accès au lac. Faites évaluer votre propriété avant de l'inscrire."
     }}
     cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}

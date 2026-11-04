@@ -121,7 +121,7 @@ const GatineauCentrePageEn = () => (
           {[
             "Gatineau is the 4th-largest city in Québec with 298,000 residents. (Source: Ville de Gatineau, 2024)",
             "Gatineau Hospital, Cégep de l'Outaouais and the STO transit network are all located in this area.",
-            "In Q2 2026, the median single-family price in APCIQ's Gatineau sector was $490,000, up 3% from a year earlier.",
+            "In Q3 2026, the median single-family price in APCIQ's Gatineau sector was $464,900, down 2% from a year earlier.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />

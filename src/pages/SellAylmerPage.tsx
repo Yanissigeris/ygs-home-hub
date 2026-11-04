@@ -26,11 +26,11 @@ const nextSteps = [
 
 const faq = [
   { q: "Comment vendre une maison à Aylmer?", a: "On commence par une évaluation basée sur les ventes récentes dans votre secteur d'Aylmer. Ensuite, un plan de mise en marché adapté à votre quartier et à votre type de propriété." },
-  { q: "Combien de temps prend la vente d'une maison à Aylmer?", a: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 27 jours en moyenne dans la région métropolitaine de Gatineau, et une copropriété en 40 jours (APCIQ, données Centris). À Aylmer, le délai dépend surtout du prix et de la préparation." },
+  { q: "Combien de temps prend la vente d'une maison à Aylmer?", a: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 34 jours en moyenne dans la région métropolitaine de Gatineau, et une copropriété en 36 jours (APCIQ, données Centris). À Aylmer, le délai dépend surtout du prix et de la préparation." },
   { q: "Combien vaut ma maison à Aylmer?", a: "La valeur dépend surtout de votre quartier et des ventes récentes autour de vous. Demandez une évaluation gratuite pour une fourchette de prix réaliste." },
   { q: "Faut-il rénover avant de vendre à Aylmer?", a: "Pas toujours. Certains investissements valent la peine dans le marché d'Aylmer, d'autres non. Je vous conseille selon votre situation." },
   { q: "Quels sont les frais pour vendre à Aylmer?", a: "Commission, notaire, certificat de localisation et parfois des réparations mineures. Tout est clair dès le départ." },
-  { q: "Est-ce un bon moment pour vendre à Aylmer?", a: "Le bon moment dépend surtout de votre situation personnelle. Pour situer le marché, le prix médian d'une unifamiliale à Aylmer était de 572 750 $ au 2e trimestre 2026 (APCIQ)." },
+  { q: "Est-ce un bon moment pour vendre à Aylmer?", a: "Le bon moment dépend surtout de votre situation personnelle. Pour situer le marché, le prix médian d'une unifamiliale à Aylmer était de 530 000 $ au 3e trimestre 2026 (APCIQ)." },
   { q: "Pourquoi travailler avec un courtier local à Aylmer?", a: "Un courtier qui connaît Aylmer suit les acheteurs actifs et les ventes de chaque quartier d'Aylmer." },
   { q: "Puis-je vendre ma maison d'Aylmer à un acheteur d'Ottawa?", a: "Oui. Par le pont Champlain, le Vieux-Aylmer est à environ 14 km du centre-ville d'Ottawa, ce qui attire des acheteurs ontariens. Selon votre propriété, ma mise en marché peut aussi les rejoindre." },
   { q: "Comment se passe la coordination vente-achat à Aylmer?", a: "On aligne les dates de vente et d'achat dès le départ, avec les bonnes conditions dans chaque promesse d'achat. Vous évitez d'être coincé entre deux transactions." },

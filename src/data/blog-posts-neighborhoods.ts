@@ -156,6 +156,7 @@ Chelsea suits families who want to raise kids close to nature. Remote workers an
     categoryEn: "Market",
     featuredImage: heroChelsea,
     publishDate: "2025-09-05",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## L'état du marché à Chelsea
 
@@ -163,7 +164,7 @@ Le marché immobilier de Chelsea reste actif. Les propriétés sur grands terrai
 
 ## Prix médian du secteur
 
-L'APCIQ ne publie pas de prix distinct pour Chelsea. Le chiffre le plus proche couvre l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, Cantley, La Pêche, Pontiac et Val-des-Monts, entre autres. Pour ce groupe, le prix médian unifamilial était de 595 000 $ selon l'APCIQ (données Centris), au deuxième trimestre de 2026. À Chelsea, les prix varient beaucoup d'une propriété à l'autre selon le type et le terrain.
+L'APCIQ ne publie pas de prix distinct pour Chelsea. Le chiffre le plus proche couvre l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, Cantley, La Pêche, Pontiac et Val-des-Monts, entre autres. Pour ce groupe, le prix médian unifamilial était de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026. À Chelsea, les prix varient beaucoup d'une propriété à l'autre selon le type et le terrain.
 
 ## Ce qui influence les prix
 
@@ -184,7 +185,7 @@ Chelsea's real estate market remains active. Properties on large lots with Gatin
 
 ## Median Price for the Area
 
-QPAREB does not publish a separate price for Chelsea. The closest figure covers the Gatineau periphery as a whole, which includes Chelsea, Cantley, La Pêche, Pontiac and Val-des-Monts, among others. For this group, the single-family median price was $595,000 according to QPAREB (Centris data), in Q2 2026. In Chelsea, prices vary a lot from one property to the next, depending on type and lot.
+QPAREB does not publish a separate price for Chelsea. The closest figure covers the Gatineau periphery as a whole, which includes Chelsea, Cantley, La Pêche, Pontiac and Val-des-Monts, among others. For this group, the single-family median price was $530,000 according to QPAREB (Centris data), in Q3 2026. In Chelsea, prices vary a lot from one property to the next, depending on type and lot.
 
 ## What Influences Prices
 
@@ -583,14 +584,15 @@ A cottage-to-residence conversion goes well when it's planned. Set aside a budge
     titleEn: "Masson-Angers: A Developing Area of Gatineau",
     seoTitle: "Masson-Angers en développement · Immobilier Gatineau | YGS",
     seoTitleEn: "Masson-Angers Area Guide · Gatineau Real Estate | YGS",
-    metaDescription: "Buckingham/Masson-Angers : prix médian unifamilial le plus bas de Gatineau (419 545 $, APCIQ, T2 2026), constructions neuves et familles. Analyse.",
-    metaDescriptionEn: "Buckingham/Masson-Angers: Gatineau's lowest single-family median price ($419,545, APCIQ, Q2 2026), new construction and families. Full analysis.",
+    metaDescription: "Buckingham/Masson-Angers : prix médian unifamilial le plus bas de Gatineau (395 000 $, APCIQ, T3 2026), constructions neuves et familles. Analyse.",
+    metaDescriptionEn: "Buckingham/Masson-Angers: Gatineau's lowest single-family median price ($395,000, APCIQ, Q3 2026), new construction and families. Full analysis.",
     excerpt: "Masson-Angers attire des acheteurs avec ses maisons neuves et ses prix plus bas. Ce qu'il faut savoir sur ce secteur de Gatineau.",
     excerptEn: "Masson-Angers draws buyers with new homes and lower prices. What to know about this Gatineau area.",
     category: "Marché",
     categoryEn: "Market",
     featuredImage: heroMassonAngers,
     publishDate: "2025-09-11",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Un secteur en transformation
 
@@ -598,7 +600,7 @@ Masson-Angers change. Ce secteur autrefois rural de Gatineau accueille aujourd'h
 
 ## Des prix encore accessibles
 
-L'un des plus grands attraits de Masson-Angers est le prix. Selon l'APCIQ (T2 2026), le prix médian d'une unifamiliale dans le secteur Buckingham/Masson-Angers était de 419 545 $, le plus bas des 4 secteurs de Gatineau. À Aylmer, il atteignait 572 750 $. Les prix sont aussi plus élevés sur le Plateau. Pour un premier achat, c'est souvent le secteur le plus réaliste financièrement.
+L'un des plus grands attraits de Masson-Angers est le prix. Selon l'APCIQ (T3 2026), le prix médian d'une unifamiliale dans le secteur Buckingham/Masson-Angers était de 395 000 $, le plus bas des 4 secteurs de Gatineau. À Aylmer, il atteignait 530 000 $. Les prix sont aussi plus élevés sur le Plateau. Pour un premier achat, c'est souvent le secteur le plus réaliste financièrement.
 
 ## Les nouveaux développements
 
@@ -619,7 +621,7 @@ Masson-Angers is changing. This once rural area of Gatineau now hosts several re
 
 ## Still Affordable Prices
 
-One of Masson-Angers' biggest draws is price. According to QPAREB (Centris data), in Q2 2026, the median single-family price in the Buckingham/Masson-Angers sector was $419,545, the lowest of Gatineau's 4 sectors. In [Aylmer](/en/aylmer), it reached $572,750. Prices are also higher on the [Plateau](/en/plateau). For a first purchase, it's often the most financially realistic area.
+One of Masson-Angers' biggest draws is price. According to QPAREB (Centris data), in Q3 2026, the median single-family price in the Buckingham/Masson-Angers sector was $395,000, the lowest of Gatineau's 4 sectors. In [Aylmer](/en/aylmer), it reached $530,000. Prices are also higher on the [Plateau](/en/plateau). For a first purchase, it's often the most financially realistic area.
 
 ## New Developments
 
@@ -650,10 +652,11 @@ Masson-Angers may offer mid-term appreciation potential. Continued development i
     categoryEn: "Buyers",
     featuredImage: heroMassonAngers,
     publishDate: "2025-09-04",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Un rapport qualité-prix avantageux à Gatineau
 
-Pour les premiers acheteurs, le budget est souvent le facteur limitant. Selon l'APCIQ (T2 2026), le secteur Buckingham/Masson-Angers affichait un prix médian unifamilial de 419 545 $, le plus bas des 4 secteurs de Gatineau. Dans le secteur Aylmer, la médiane unifamiliale atteignait 572 750 $ selon l'APCIQ (données Centris), au deuxième trimestre de 2026. À Masson-Angers, des options comparables coûtent généralement moins cher.
+Pour les premiers acheteurs, le budget est souvent le facteur limitant. Selon l'APCIQ (T3 2026), le secteur Buckingham/Masson-Angers affichait un prix médian unifamilial de 395 000 $, le plus bas des 4 secteurs de Gatineau. Dans le secteur Aylmer, la médiane unifamiliale atteignait 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026. À Masson-Angers, des options comparables coûtent généralement moins cher.
 
 ## Maisons neuves avec garantie
 
@@ -674,7 +677,7 @@ Si vous êtes premier acheteur et que votre budget est limité, ne négligez pas
 **Lire aussi** : [Guide premier achat](/premier-achat-gatineau) · [Frais de notaire et clôture](/blogue/frais-notaire-achat-maison-gatineau)`,
     bodyEn: `## Strong Value for Money in Gatineau
 
-For first-time buyers, budget is often the limiting factor. According to QPAREB (Centris data), in Q2 2026, the Buckingham/Masson-Angers sector had a median single-family price of $419,545, the lowest of Gatineau's 4 sectors. In the Aylmer sector, the single-family median reached $572,750 according to QPAREB (Centris data), in Q2 2026. In Masson-Angers, comparable options generally cost less.
+For first-time buyers, budget is often the limiting factor. According to QPAREB (Centris data), in Q3 2026, the Buckingham/Masson-Angers sector had a median single-family price of $395,000, the lowest of Gatineau's 4 sectors. In the Aylmer sector, the single-family median reached $530,000 according to QPAREB (Centris data), in Q3 2026. In Masson-Angers, comparable options generally cost less.
 
 ## New Homes with Warranty
 
@@ -772,6 +775,7 @@ Buying new in Masson-Angers is a good option for first-time buyers. Check the bu
     categoryEn: "Neighbourhoods",
     featuredImage: heroPontiac,
     publishDate: "2025-09-13",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Le Pontiac : un vaste territoire rural
 
@@ -779,7 +783,7 @@ Le Pontiac reste méconnu de plusieurs acheteurs de l'Outaouais. Ce vaste territ
 
 ## Types de propriétés
 
-Le Pontiac offre plusieurs types de propriétés : fermes centenaires en pierre, maisons de campagne rénovées, terrains agricoles, propriétés en bord de rivière et résidences récentes dans les villages. Pour l'ensemble de la périphérie de Gatineau, qui comprend le Pontiac, le prix médian unifamilial était de 595 000 $ selon l'APCIQ (données Centris), au deuxième trimestre de 2026. Ce groupe réunit des municipalités très différentes, de Chelsea à Val-des-Monts, et ce chiffre ne décrit pas une propriété précise du Pontiac.
+Le Pontiac offre plusieurs types de propriétés : fermes centenaires en pierre, maisons de campagne rénovées, terrains agricoles, propriétés en bord de rivière et résidences récentes dans les villages. Pour l'ensemble de la périphérie de Gatineau, qui comprend le Pontiac, le prix médian unifamilial était de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026. Ce groupe réunit des municipalités très différentes, de Chelsea à Val-des-Monts, et ce chiffre ne décrit pas une propriété précise du Pontiac.
 
 ## Villages à connaître
 
@@ -800,7 +804,7 @@ Many Outaouais buyers still know little about the Pontiac. This vast territory s
 
 ## Property Types
 
-The Pontiac offers many property types: century-old stone farmhouses, renovated country homes, agricultural land, riverfront properties and recent residences in villages. For the Gatineau periphery as a whole, which includes the Pontiac, the single-family median price was $595,000 according to QPAREB (Centris data), in Q2 2026. This group brings together very different municipalities, from Chelsea to Val-des-Monts, so the figure does not describe any specific Pontiac property.
+The Pontiac offers many property types: century-old stone farmhouses, renovated country homes, agricultural land, riverfront properties and recent residences in villages. For the Gatineau periphery as a whole, which includes the Pontiac, the single-family median price was $530,000 according to QPAREB (Centris data), in Q3 2026. This group brings together very different municipalities, from Chelsea to Val-des-Monts, so the figure does not describe any specific Pontiac property.
 
 ## Villages to Know
 

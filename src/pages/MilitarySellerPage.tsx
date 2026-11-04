@@ -23,7 +23,7 @@ const steps = [
 
 
 const faq = [
-  { q: "Combien de temps faut-il pour vendre lors d'une mutation?", a: "Ça dépend du prix et du type de propriété. Au 2e trimestre 2026, une unifamiliale se vendait en 27 jours en moyenne dans la RMR de Gatineau, et un condo en 40 jours (APCIQ). Il faut ensuite prévoir le délai jusqu'à la signature chez le notaire. On adapte le plan à votre calendrier." },
+  { q: "Combien de temps faut-il pour vendre lors d'une mutation?", a: "Ça dépend du prix et du type de propriété. Au 3e trimestre 2026, une unifamiliale se vendait en 34 jours en moyenne dans la RMR de Gatineau, et un condo en 36 jours (APCIQ). Il faut ensuite prévoir le délai jusqu'à la signature chez le notaire. On adapte le plan à votre calendrier." },
   { q: "Et si je dois partir avant la vente?", a: "La vente peut se poursuivre après votre départ. On prévoit un plan pour les visites, et vous pouvez signer les documents à distance. Pour l'acte de vente, votre notaire peut vous expliquer l'option de la procuration." },
   { q: "Est-ce que je risque de vendre en dessous de la valeur?", a: "Le risque diminue quand le prix est bien positionné dès le départ. Mon rôle est d'appuyer ce prix sur des ventes comparables récentes, même avec un calendrier serré." },
 ];

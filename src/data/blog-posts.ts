@@ -787,7 +787,7 @@ Le meilleur moment, c'est quand votre maison a peu de concurrence dans votre sec
 
 Une unifamiliale s'est vendue en 34 jours en moyenne au 3e trimestre 2026, une semaine de plus qu'un an plus tôt. Son prix médian a baissé de 3 %, à 480 000 $. Les vendeurs gardent l'avantage, mais moins qu'avant, et au-dessus de 740 000 $ le marché est équilibré. Pour un condo, le prix médian a reculé de 5 %, et le marché est maintenant équilibré.
 
-Les écarts entre secteurs sont réels. Une unifamiliale s'est vendue en 23 jours en moyenne à Hull, contre 31 dans le secteur Gatineau.
+Les écarts entre secteurs sont réels. Une unifamiliale s'est vendue en 22 jours en moyenne à Hull, contre 35 dans le secteur Gatineau.
 
 ### Ce que je dis aux vendeurs en ce moment
 
@@ -818,7 +818,7 @@ The best time is when your home has little competition in your area. In Q3 2026,
 
 A single-family home sold in 34 days on average in Q3 2026, a week longer than a year earlier. Its median price fell 3%, to $480,000. Sellers keep the advantage, but less than before, and above $740,000 the market is balanced. For condos, the median price dropped 5%, and the market is now balanced.
 
-The gaps between sectors are real. A single-family home sold in 23 days on average in Hull, compared with 31 in the Gatineau sector.
+The gaps between sectors are real. A single-family home sold in 22 days on average in Hull, compared with 35 in the Gatineau sector.
 
 ### What I'm telling sellers right now
 
@@ -2614,7 +2614,7 @@ Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'a
 
 ### L'hiver ou le printemps?
 
-Mon conseil : ça dépend de votre secteur et de votre type de propriété. Au 3e trimestre 2026, une unifamiliale s'est vendue en 23 jours en moyenne à Hull, mais en 44 jours dans la périphérie de Gatineau (APCIQ). Une règle unique ne tient pas devant des écarts pareils.
+Mon conseil : ça dépend de votre secteur et de votre type de propriété. Au 3e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne à Hull, mais en 46 jours dans la périphérie de Gatineau (APCIQ). Une règle unique ne tient pas devant des écarts pareils.
 
 Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
@@ -2643,7 +2643,7 @@ Your heating and electricity bills for the last 12 months. In winter, buyers thi
 
 ### Winter or spring?
 
-My advice: it depends on your area and your property type. In Q3 2026, a single-family home sold in 23 days on average in Hull, but in 44 days in the Gatineau outskirts (QPAREB). A single rule doesn't hold up against gaps like that.
+My advice: it depends on your area and your property type. In Q3 2026, a single-family home sold in 22 days on average in Hull, but in 46 days in the Gatineau outskirts (QPAREB). A single rule doesn't hold up against gaps like that.
 
 With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 

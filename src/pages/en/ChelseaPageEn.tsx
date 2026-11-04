@@ -29,7 +29,7 @@ const faq = [
   },
   {
     q: "What does a typical Chelsea home cost in 2026?",
-    a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Part of the territory is in Gatineau Park, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
+    a: "Chelsea is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so Chelsea prices can differ a lot from it, especially for waterfront or large-acreage properties around Lac Meech and Lac Mountain. Part of the territory is in Gatineau Park, which limits the land available for building. For a precise figure, I compare recent Chelsea sales.",
   },
   {
     q: "How far is downtown Ottawa from Chelsea?",
@@ -182,7 +182,7 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">Chelsea, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $595,000 in Q2 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Part of the territory is in Gatineau Park, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
+          In APCIQ's statistics, Chelsea belongs to the “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Cantley, Pontiac and Val-des-Monts, so it's only a broad reference for Chelsea. Part of the territory is in Gatineau Park, which limits the land available for building, and building and shoreline rules are strict, including a 15-metre riparian protection strip.
         </p>
         <p className="prose-body">
           According to the 2021 census, 70.8% of Chelsea residents speak both English and French (Statistics Canada). For an anglophone family from Ontario, that makes daily life in Chelsea easier than in mostly francophone parts of Gatineau.

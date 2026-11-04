@@ -26,11 +26,11 @@ const nextSteps = [
 
 const faq = [
   { q: "How do I sell my house in Aylmer?", a: "We start with a valuation based on recent sales in your Aylmer neighbourhood. Then we build a marketing plan suited to your area and your property type." },
-  { q: "How long does it take to sell a house in Aylmer?", a: "In Q2 2026, single-family homes in the Gatineau metropolitan area sold in 27 days on average, and condos in 40 days (APCIQ, Centris data). For a home in Aylmer, the timeline depends mostly on price and preparation." },
+  { q: "How long does it take to sell a house in Aylmer?", a: "In Q3 2026, single-family homes in the Gatineau metropolitan area sold in 34 days on average, and condos in 36 days (APCIQ, Centris data). For a home in Aylmer, the timeline depends mostly on price and preparation." },
   { q: "How much is my house worth in Aylmer?", a: "Your neighbourhood and recent sales nearby drive the value. Request a free valuation for a realistic price range." },
   { q: "Should I renovate before selling in Aylmer?", a: "Not always. Some investments pay off in Aylmer's market, others don't. I advise based on your specific situation." },
   { q: "What are the costs of selling in Aylmer?", a: "Commission, notary fees, certificate of location and sometimes minor repairs. Everything is clear from the start." },
-  { q: "Is it a good time to sell in Aylmer?", a: "The right time depends mostly on your personal situation. For context, the median single-family price in Aylmer was $572,750 in Q2 2026 (APCIQ)." },
+  { q: "Is it a good time to sell in Aylmer?", a: "The right time depends mostly on your personal situation. For context, the median single-family price in Aylmer was $530,000 in Q3 2026 (APCIQ)." },
   { q: "Why work with a local broker in Aylmer?", a: "A broker who knows Aylmer follows active buyers and sales in each Aylmer neighbourhood." },
   { q: "Can I sell my Aylmer house to an Ottawa buyer?", a: "Yes. Via the Champlain Bridge, Old Aylmer is about 14 km from downtown Ottawa, which draws Ontario buyers. Depending on your property, my marketing can reach them too." },
   { q: "How does buy-sell coordination work in Aylmer?", a: "We line up the sale and purchase dates from the start, with the right conditions in each promise to purchase. That way you avoid getting stuck between two transactions." },

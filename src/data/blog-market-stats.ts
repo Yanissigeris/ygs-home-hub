@@ -52,9 +52,48 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
       en: "Source: Outaouais Real Estate Board / QPAREB, Q2 2026",
     },
   },
+  "2026-Q3": {
+    quarter: { fr: "T3 2026", en: "Q3 2026" },
+    hero: {
+      fr: [
+        { value: "+2 %", label: "Prix médian plex" },
+        { value: "38 j", label: "Délai moyen plex" },
+        { value: "617 500 $", label: "Plex · T3 2026" },
+      ],
+      en: [
+        { value: "+2%", label: "Median plex price" },
+        { value: "38 d", label: "Avg. plex days" },
+        { value: "$617,500", label: "Plex · Q3 2026" },
+      ],
+    },
+    ticker: {
+      fr: [
+        "T3 2026",
+        "Plex +2 %",
+        "Délai plex 38 jours",
+        "Médian plex 617 500 $",
+        "Unifamiliale 480 000 $",
+        "Inscriptions +42 %",
+        "Source : Chambre immobilière de l'Outaouais",
+      ],
+      en: [
+        "Q3 2026",
+        "Plex +2%",
+        "Plex days 38",
+        "Median plex $617,500",
+        "Single-family $480,000",
+        "Listings +42%",
+        "Source: Outaouais Real Estate Board",
+      ],
+    },
+    source: {
+      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T3 2026",
+      en: "Source: Outaouais Real Estate Board / QPAREB, Q3 2026",
+    },
+  },
 };
 
-export const CURRENT_QUARTER_KEY = "2026-Q2";
+export const CURRENT_QUARTER_KEY = "2026-Q3";
 
 export const currentBlogStats = (): BlogQuarterStats => {
   if (BLOG_MARKET_STATS[CURRENT_QUARTER_KEY]) {

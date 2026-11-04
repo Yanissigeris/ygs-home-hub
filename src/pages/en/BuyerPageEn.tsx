@@ -55,12 +55,12 @@ const BuyerPageEn = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="2026 Context" title="Buying in Gatineau in 2026: what the numbers say" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        In Q2 2026, the Gatineau metropolitan area recorded 1,310 residential sales. The single-family median price was $523,500, with a selling time of 27 days (APCIQ, Centris data).
+        In Q3 2026, the Gatineau metropolitan area recorded 1,044 residential sales. The single-family median price was $480,000, with a selling time of 34 days (APCIQ, Centris data).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         According to APCIQ, over the 12 months ending in June 2026, conditions favoured sellers for single-family homes in every price range. A well-located home can therefore sell quickly. Coming in with a pre-approval and clear criteria lets you make an offer without rushing.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Source: APCIQ, residential barometer for Q2 2026, Gatineau metropolitan area.</p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Source: APCIQ, residential barometer for Q3 2026, Gatineau metropolitan area.</p>
     </ContentBlock>
 
     <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="The house matters, but the area often decides the rest, like resale value and the commute to Ottawa. Before an offer, I show you what sold nearby and at what price." /></ContentBlock>

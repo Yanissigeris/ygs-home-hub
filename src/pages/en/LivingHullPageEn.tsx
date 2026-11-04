@@ -39,7 +39,7 @@ const LivingHullPageEn = () => (
     <CardGrid overline="Lifestyle" title="What sets Hull apart" items={highlights} />
     <ContentBlock narrow>
       <SectionHeading title="The renaissance of Hull" />
-      <p className="prose-body mt-5">Hull is changing. New projects and a growing restaurant scene are drawing more and more people. In Q2 2026, the median single-family price was $514,500 in Hull, compared with $572,750 in Aylmer (APCIQ, Centris data).</p>
+      <p className="prose-body mt-5">Hull is changing. New projects and a growing restaurant scene are drawing more and more people. In Q3 2026, the median single-family price was $475,000 in Hull, compared with $530,000 in Aylmer (APCIQ, Centris data).</p>
     </ContentBlock>
     <InlineCTA text="Looking for a plex in Hull? Request a return analysis." buttonLabel="Get a plex analysis →" href="/en/plex-analysis/" />
     <FAQSection title="Questions about living in Hull" items={faq} />

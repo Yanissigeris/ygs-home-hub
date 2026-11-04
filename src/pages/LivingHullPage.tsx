@@ -53,7 +53,7 @@ const LivingHullPage = () => (
     <ContentBlock narrow>
       <SectionHeading title="La renaissance de Hull" />
       <p className="prose-body mt-5">
-        Hull se transforme. De nouveaux projets et une scène de restaurants qui grandit attirent de plus en plus de monde. Au 2e trimestre 2026, le prix médian d'une unifamiliale y était de 514 500 $, contre 572 750 $ à Aylmer (APCIQ, données Centris).
+        Hull se transforme. De nouveaux projets et une scène de restaurants qui grandit attirent de plus en plus de monde. Au 3e trimestre 2026, le prix médian d'une unifamiliale y était de 475 000 $, contre 530 000 $ à Aylmer (APCIQ, données Centris).
       </p>
     </ContentBlock>
 
