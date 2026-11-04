@@ -795,6 +795,8 @@ On entend souvent qu'il vaut mieux attendre le printemps. Je ne suis pas d'accor
 
 L'autre idée que je défais souvent : afficher plus haut pour se garder une marge de négociation. Avec 42 % plus d'inscriptions qu'il y a un an, une maison affichée trop haut attend, et elle finit par baisser son prix. Mieux vaut partir du bon prix, appuyé sur les ventes comparables.
 
+Au début de 2026, les propriétaires d'un triplex au Plateau, à Hull, m'ont demandé comment obtenir le maximum, le plus vite possible. On a fait une mise en marché soignée et on a affiché au bon prix dès le départ. Ils ont accepté une offre en une journée, au prix exact qu'on demandait. Pour moi, le bon prix est primordial pour une belle vente.
+
 ### Quels facteurs propres à Gatineau regarder?
 
 Les familles qui ont des enfants d'âge scolaire préfèrent souvent déménager avant la rentrée. Pour les militaires mutés dans la région d'Ottawa-Gatineau, c'est le calendrier de la mutation qui fixe la date. Les taux d'intérêt comptent aussi : la Banque du Canada a monté son taux directeur à 2,50 % le 28 octobre 2026, ce qui réduit ce que certains acheteurs peuvent emprunter.
@@ -823,6 +825,8 @@ The gaps between sectors are real. A single-family home sold in 23 days on avera
 You often hear that it's better to wait for spring. I don't agree as a general rule: in spring, there are also many more homes for sale. In the Gatineau area, the number of properties for sale went from an average of 1,394 in Q1 2026 to 2,007 in Q2.
 
 The other idea I often push back on: listing high to keep room to negotiate. With 42% more listings than a year ago, an overpriced home sits, and it ends up cutting its price. It's better to start from the right price, backed by comparable sales.
+
+Early in 2026, the owners of a triplex in the Plateau, in Hull, asked me how to get top dollar as fast as possible. We did a careful marketing job and listed at the right price from day one. They accepted an offer within a day, at exactly the price we asked. To me, the right price is what makes a good sale.
 
 ### Which Gatineau-specific factors should you watch?
 
