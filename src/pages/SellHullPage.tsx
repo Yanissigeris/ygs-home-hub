@@ -26,11 +26,11 @@ const nextSteps = [
 
 const faq = [
   { q: "Comment vendre une maison à Hull?", a: "On commence par une évaluation basée sur les ventes récentes dans votre secteur de Hull. Ensuite, on bâtit un plan de mise en marché adapté à votre type de propriété (condo, plex ou unifamiliale)." },
-  { q: "Combien de temps prend la vente d'une maison à Hull?", a: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 27 jours en moyenne dans la région métropolitaine de Gatineau, et une copropriété en 40 jours (APCIQ, données Centris). À Hull, le délai dépend surtout du prix et de la préparation." },
+  { q: "Combien de temps prend la vente d'une maison à Hull?", a: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 34 jours en moyenne dans la région métropolitaine de Gatineau, et une copropriété en 36 jours (APCIQ, données Centris). À Hull, le délai dépend surtout du prix et de la préparation." },
   { q: "Combien vaut ma maison à Hull?", a: "La valeur dépend de votre rue, du type de propriété et des ventes récentes. Demandez une évaluation gratuite pour connaître votre fourchette de prix." },
   { q: "Faut-il rénover avant de vendre à Hull?", a: "Pas nécessairement. Certaines améliorations valent la peine dans le marché de Hull, d'autres non. Je vous conseille au cas par cas." },
   { q: "Quels sont les frais pour vendre à Hull?", a: "Commission courtier, notaire, certificat de localisation et parfois des réparations mineures. Tout est transparent dès le départ." },
-  { q: "Est-ce un bon moment pour vendre à Hull?", a: "Le bon moment dépend surtout de votre situation personnelle. Pour situer le marché, le prix médian d'une unifamiliale à Hull était de 514 500 $ au 2e trimestre 2026 (APCIQ)." },
+  { q: "Est-ce un bon moment pour vendre à Hull?", a: "Le bon moment dépend surtout de votre situation personnelle. Pour situer le marché, le prix médian d'une unifamiliale à Hull était de 475 000 $ au 3e trimestre 2026 (APCIQ)." },
   { q: "Pourquoi travailler avec un courtier local à Hull?", a: "Un courtier qui connaît Hull suit les ventes comparables et les acheteurs actifs, des condos du centre-ville aux quartiers résidentiels." },
   { q: "Puis-je vendre à un acheteur d'Ottawa?", a: "Oui. Ottawa est juste en face de Hull et, selon votre propriété, ma mise en marché peut aussi rejoindre les acheteurs ontariens." },
   { q: "Comment se passe la coordination vente-achat?", a: "On aligne les dates de vente et d'achat dès le départ, avec les bonnes conditions dans chaque promesse d'achat. Vous évitez d'être coincé entre deux transactions." },

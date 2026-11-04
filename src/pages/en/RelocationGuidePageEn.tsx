@@ -25,7 +25,7 @@ const topics = [
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family neighbourhoods and newer homes, about 9 to 14 km from downtown Ottawa" },
   { name: "Hull", href: "/en/hull/", detail: "Urban setting with condos and plexes, about 2 km from downtown Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Lowest single-family median of the city's 4 sectors (APCIQ, Q2 2026) and access to nature" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Lowest single-family median of the city's 4 sectors (APCIQ, Q3 2026) and access to nature" },
 ];
 
 const faq = [

@@ -787,7 +787,7 @@ Le meilleur moment, c'est quand votre maison a peu de concurrence dans votre sec
 
 Une unifamiliale s'est vendue en 34 jours en moyenne au 3e trimestre 2026, une semaine de plus qu'un an plus tôt. Son prix médian a baissé de 3 %, à 480 000 $. Les vendeurs gardent l'avantage, mais moins qu'avant, et au-dessus de 740 000 $ le marché est équilibré. Pour un condo, le prix médian a reculé de 5 %, et le marché est maintenant équilibré.
 
-Les écarts entre secteurs sont réels. Une unifamiliale s'est vendue en 23 jours en moyenne à Hull, contre 31 dans le secteur Gatineau.
+Les écarts entre secteurs sont réels. Une unifamiliale s'est vendue en 22 jours en moyenne à Hull, contre 35 dans le secteur Gatineau.
 
 ### Ce que je dis aux vendeurs en ce moment
 
@@ -818,7 +818,7 @@ The best time is when your home has little competition in your area. In Q3 2026,
 
 A single-family home sold in 34 days on average in Q3 2026, a week longer than a year earlier. Its median price fell 3%, to $480,000. Sellers keep the advantage, but less than before, and above $740,000 the market is balanced. For condos, the median price dropped 5%, and the market is now balanced.
 
-The gaps between sectors are real. A single-family home sold in 23 days on average in Hull, compared with 31 in the Gatineau sector.
+The gaps between sectors are real. A single-family home sold in 22 days on average in Hull, compared with 35 in the Gatineau sector.
 
 ### What I'm telling sellers right now
 
@@ -1112,7 +1112,7 @@ Gatineau offre une diversité de quartiers, chacun avec son propre caractère. C
 - Accès au parc de la Gatineau
 - Écoles francophones et anglophones
 - Ambiance de village avec commerces de proximité
-- Prix médian unifamilial de 572 750 $ au 2e trimestre 2026 (APCIQ)
+- Prix médian unifamilial de 530 000 $ au 3e trimestre 2026 (APCIQ)
 
 ### Hull
 
@@ -1120,7 +1120,7 @@ Gatineau offre une diversité de quartiers, chacun avec son propre caractère. C
 - Le secteur le plus proche d'Ottawa, à environ 2 km du centre-ville par le pont du Portage
 - Revitalisation en cours avec nouveaux commerces et restaurants
 - Accès au Musée canadien de l'histoire et à la rivière des Outaouais
-- Prix médian unifamilial de 514 500 $ au 2e trimestre 2026 (APCIQ)
+- Prix médian unifamilial de 475 000 $ au 3e trimestre 2026 (APCIQ)
 
 ### Plateau
 
@@ -1146,7 +1146,7 @@ Gatineau offers a diversity of neighbourhoods, each with its own character. This
 - Access to Gatineau Park
 - French and English schools
 - Village atmosphere with local shops
-- Single-family median price of $572,750 in Q2 2026 (QPAREB)
+- Single-family median price of $530,000 in Q3 2026 (QPAREB)
 
 ### Hull
 
@@ -1154,7 +1154,7 @@ Gatineau offers a diversity of neighbourhoods, each with its own character. This
 - The area closest to Ottawa, about 2 km from downtown via the Portage Bridge
 - Ongoing revitalization with new shops and restaurants
 - Access to the Canadian Museum of History and the Ottawa River
-- Single-family median price of $514,500 in Q2 2026 (QPAREB)
+- Single-family median price of $475,000 in Q3 2026 (QPAREB)
 
 ### Plateau
 
@@ -1633,7 +1633,7 @@ Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les pr
 
 ### Aylmer : le choix haut de gamme pour les familles
 
-**Prix médian unifamilial** : 572 750 $ dans le secteur Aylmer, selon l'APCIQ (données Centris), au deuxième trimestre de 2026
+**Prix médian unifamilial** : 530 000 $ dans le secteur Aylmer, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Aylmer](/aylmer) attire les familles de Gatineau pour plusieurs raisons :
 - **Plage et marina** : Baignade l'été et pistes cyclables le long de la rivière
@@ -1646,7 +1646,7 @@ Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les pr
 
 ### Le Plateau : résidentiel et familial
 
-**Prix médian** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau, qui chevauche Hull et Aylmer. Selon l'APCIQ (données Centris), au deuxième trimestre de 2026, le prix médian unifamilial était de 514 500 $ dans le secteur Hull et de 572 750 $ dans le secteur Aylmer.
+**Prix médian** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau, qui chevauche Hull et Aylmer. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, le prix médian unifamilial était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer.
 
 Le [Plateau](/plateau) est un secteur résidentiel calme :
 - **Maisons spacieuses** : Surtout des constructions récentes
@@ -1659,7 +1659,7 @@ Le [Plateau](/plateau) est un secteur résidentiel calme :
 
 ### Hull : urbain et animé
 
-**Prix médian unifamilial** : 514 500 $ dans le secteur Hull, selon l'APCIQ (données Centris), au deuxième trimestre de 2026
+**Prix médian unifamilial** : 475 000 $ dans le secteur Hull, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Hull](/hull) offre un style de vie plus urbain, qui convient aux familles actives :
 - **Proximité immédiate d'Ottawa** : environ 2 km du centre-ville d'Ottawa via le pont du Portage
@@ -1672,7 +1672,7 @@ Le [Plateau](/plateau) est un secteur résidentiel calme :
 
 ### Buckingham : nature et espace
 
-**Prix médian unifamilial** : 419 545 $ dans le secteur Buckingham/Masson-Angers, selon l'APCIQ (données Centris), au deuxième trimestre de 2026
+**Prix médian unifamilial** : 395 000 $ dans le secteur Buckingham/Masson-Angers, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) offrent beaucoup d'espace pour le prix :
 - **Terrains très grands** : Demi-acres et plus facilement disponibles
@@ -1699,7 +1699,7 @@ Choosing the right neighbourhood means choosing your family's daily life for yea
 
 ### Aylmer: The Premium Family Choice
 
-**Single-family median price**: $572,750 in the Aylmer sector, according to QPAREB (Centris data), in Q2 2026
+**Single-family median price**: $530,000 in the Aylmer sector, according to QPAREB (Centris data), in Q3 2026
 
 [Aylmer](/en/aylmer) draws Gatineau families for several reasons:
 - **Beach and marina**: Summer swimming and cycling paths along the river
@@ -1712,7 +1712,7 @@ Choosing the right neighbourhood means choosing your family's daily life for yea
 
 ### The Plateau: Residential and Family-Friendly
 
-**Median price**: QPAREB does not publish a separate figure for the Plateau, which straddles Hull and Aylmer. According to QPAREB (Centris data), in Q2 2026, the single-family median price was $514,500 in the Hull sector and $572,750 in the Aylmer sector.
+**Median price**: QPAREB does not publish a separate figure for the Plateau, which straddles Hull and Aylmer. According to QPAREB (Centris data), in Q3 2026, the single-family median price was $475,000 in the Hull sector and $530,000 in the Aylmer sector.
 
 The [Plateau](/en/plateau) is a quiet residential area:
 - **Spacious homes**: Mostly recent construction
@@ -1725,7 +1725,7 @@ The [Plateau](/en/plateau) is a quiet residential area:
 
 ### Hull: Urban and Lively
 
-**Single-family median price**: $514,500 in the Hull sector, according to QPAREB (Centris data), in Q2 2026
+**Single-family median price**: $475,000 in the Hull sector, according to QPAREB (Centris data), in Q3 2026
 
 [Hull](/en/hull) offers a more urban lifestyle, well suited to active families:
 - **Steps from Ottawa**: About 2 km to downtown Ottawa via the Portage Bridge
@@ -1738,7 +1738,7 @@ The [Plateau](/en/plateau) is a quiet residential area:
 
 ### Buckingham: Nature and Space
 
-**Single-family median price**: $419,545 in the Buckingham/Masson-Angers sector, according to QPAREB (Centris data), in Q2 2026
+**Single-family median price**: $395,000 in the Buckingham/Masson-Angers sector, according to QPAREB (Centris data), in Q3 2026
 
 [Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) offer a lot of space for the price:
 - **Very large lots**: Half-acres and more readily available
@@ -1797,8 +1797,8 @@ Aylmer occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tranquil
 - **Sécurité** : Quartier résidentiel calme et bien entretenu
 
 ### Prix immobiliers à Aylmer
-- **Maison unifamiliale** : Prix médian de 572 750 $ selon l'APCIQ (données Centris), au deuxième trimestre de 2026
-- **Condo** : Prix médian de 325 000 $ selon l'APCIQ (données Centris), au deuxième trimestre de 2026
+- **Maison unifamiliale** : Prix médian de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
+- **Condo** : Prix médian de 305 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
 - **Terrain** : Offre rare
 
 ## Les sous-secteurs d'Aylmer
@@ -1836,8 +1836,8 @@ Aylmer sits at the western end of Gatineau. It offers a quiet lifestyle close to
 - **Safety**: Quiet, well-maintained residential area
 
 ### Aylmer Real Estate Prices
-- **Single-family home**: Median price of $572,750 according to QPAREB (Centris data), in Q2 2026
-- **Condo**: Median price of $325,000 according to QPAREB (Centris data), in Q2 2026
+- **Single-family home**: Median price of $530,000 according to QPAREB (Centris data), in Q3 2026
+- **Condo**: Median price of $305,000 according to QPAREB (Centris data), in Q3 2026
 - **Land**: Limited supply
 
 ## Aylmer Sub-Areas
@@ -2087,13 +2087,13 @@ Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) e
 
 ### Chelsea
 - **Village pittoresque** au cœur des collines
-- **Prix médian unifamilial** : 595 000 $ pour l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, selon l'APCIQ (données Centris), au deuxième trimestre de 2026
+- **Prix médian unifamilial** : 530 000 $ pour l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 - **Atouts** : Cafés et restaurants, communauté artistique
 - **Accès** : Entrée directe aux sentiers du parc
 
 ### Le Plateau
 - **Quartier récent** avec maisons neuves
-- **Prix médian unifamilial** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau. Selon l'APCIQ (données Centris), au deuxième trimestre de 2026, la médiane était de 514 500 $ dans le secteur Hull et de 572 750 $ dans le secteur Aylmer, que le Plateau chevauche
+- **Prix médian unifamilial** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, la médiane était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer, que le Plateau chevauche
 - **Atouts** : Écoles et parcs de quartier
 - **Accès** : Sentiers accessibles à pied ou vélo
 
@@ -2127,13 +2127,13 @@ Living near Gatineau Park means having access to over 361 km² of wilderness jus
 
 ### Chelsea
 - **Picturesque village** in the hills
-- **Single-family median price**: $595,000 for the Gatineau periphery as a whole, which includes Chelsea, according to QPAREB (Centris data), in Q2 2026
+- **Single-family median price**: $530,000 for the Gatineau periphery as a whole, which includes Chelsea, according to QPAREB (Centris data), in Q3 2026
 - **Perks**: Cafés and restaurants, artistic community
 - **Access**: Direct entry to park trails
 
 ### The Plateau
 - **Recent development** with new builds, straddling Aylmer and Hull
-- **Single-family median price**: QPAREB does not publish a separate figure for the Plateau. According to QPAREB (Centris data), in Q2 2026, the median was $514,500 in the Hull sector and $572,750 in the Aylmer sector, which the Plateau straddles
+- **Single-family median price**: QPAREB does not publish a separate figure for the Plateau. According to QPAREB (Centris data), in Q3 2026, the median was $475,000 in the Hull sector and $530,000 in the Aylmer sector, which the Plateau straddles
 - **Perks**: Schools and neighbourhood parks
 - **Access**: Trails accessible on foot or bike
 
@@ -2614,7 +2614,7 @@ Les factures de chauffage et d'électricité des 12 derniers mois. En hiver, l'a
 
 ### L'hiver ou le printemps?
 
-Mon conseil : ça dépend de votre secteur et de votre type de propriété. Au 3e trimestre 2026, une unifamiliale s'est vendue en 23 jours en moyenne à Hull, mais en 44 jours dans la périphérie de Gatineau (APCIQ). Une règle unique ne tient pas devant des écarts pareils.
+Mon conseil : ça dépend de votre secteur et de votre type de propriété. Au 3e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne à Hull, mais en 46 jours dans la périphérie de Gatineau (APCIQ). Une règle unique ne tient pas devant des écarts pareils.
 
 Avec les ventes récentes de votre secteur et les maisons en vente en ce moment sous les yeux, vous choisissez entre l'hiver et le printemps en connaissant la concurrence.
 
@@ -2643,7 +2643,7 @@ Your heating and electricity bills for the last 12 months. In winter, buyers thi
 
 ### Winter or spring?
 
-My advice: it depends on your area and your property type. In Q3 2026, a single-family home sold in 23 days on average in Hull, but in 44 days in the Gatineau outskirts (QPAREB). A single rule doesn't hold up against gaps like that.
+My advice: it depends on your area and your property type. In Q3 2026, a single-family home sold in 22 days on average in Hull, but in 46 days in the Gatineau outskirts (QPAREB). A single rule doesn't hold up against gaps like that.
 
 With recent sales in your area and the homes for sale right now in front of you, you choose between winter and spring knowing the competition.
 

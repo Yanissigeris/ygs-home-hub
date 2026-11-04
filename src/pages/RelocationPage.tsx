@@ -28,7 +28,7 @@ const challenges = [
 const sectors = [
   { name: "Plateau / Aylmer", href: "/plateau-aylmer/", detail: "Quartiers familiaux et maisons récentes, à environ 9 à 14 km du centre-ville d'Ottawa" },
   { name: "Hull", href: "/hull/", detail: "Milieu urbain avec condos et plex, à environ 2 km du centre-ville d'Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Prix médian unifamilial le plus bas des 4 secteurs de la ville (APCIQ, T2 2026) et accès à la nature" },
+  { name: "Buckingham / Masson-Angers", href: "/buckingham-masson-angers/", detail: "Prix médian unifamilial le plus bas des 4 secteurs de la ville (APCIQ, T3 2026) et accès à la nature" },
 ];
 
 const steps = [
@@ -45,9 +45,9 @@ const nextSteps = [
 ];
 
 const faq = [
-  { q: "Est-ce moins cher d'acheter à Gatineau qu'à Ottawa?", a: "En général, oui, surtout pour les maisons unifamiliales et les terrains. Au T2 2026, le prix médian d'une unifamiliale dans la RMR de Gatineau était de 523 500 $ (APCIQ). Il faut aussi tenir compte des taxes et du coût de la vie. On compare tout ça ensemble." },
+  { q: "Est-ce moins cher d'acheter à Gatineau qu'à Ottawa?", a: "En général, oui, surtout pour les maisons unifamiliales et les terrains. Au T3 2026, le prix médian d'une unifamiliale dans la RMR de Gatineau était de 480 000 $ (APCIQ). Il faut aussi tenir compte des taxes et du coût de la vie. On compare tout ça ensemble." },
   { q: "Comment fonctionne l'achat au Québec?", a: "Le processus diffère de celui de l'Ontario. Vous signez une promesse d'achat, généralement conditionnelle à l'inspection et au financement. Une fois les conditions remplies, la vente se conclut chez le notaire. Je suis courtier en Outaouais depuis 2017." },
-  { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de votre budget et de votre trajet vers le travail. Au T2 2026, le prix médian unifamilial était de 572 750 $ à Aylmer et de 419 545 $ à Buckingham/Masson-Angers (APCIQ). Hull et le secteur Gatineau se situent entre les deux. On compare les options selon vos priorités." },
+  { q: "Quel secteur est le mieux pour une famille?", a: "Ça dépend de votre budget et de votre trajet vers le travail. Au T3 2026, le prix médian unifamilial était de 530 000 $ à Aylmer et de 395 000 $ à Buckingham/Masson-Angers (APCIQ). Hull et le secteur Gatineau se situent entre les deux. On compare les options selon vos priorités." },
   { q: "Est-ce que je peux travailler à Ottawa et vivre à Gatineau?", a: "Oui. Le centre-ville d'Ottawa se trouve à environ 2 km de l'hôtel de ville de Gatineau, dans le secteur Hull (pont du Portage) et à environ 14 km du Vieux-Aylmer (pont Champlain). Plusieurs ponts et le transport en commun relient les deux rives." },
 ];
 

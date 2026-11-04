@@ -16,7 +16,7 @@ import heroImg from "@/assets/hero-military-buyer.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "Repères de prix", text: "Au 2e trimestre 2026, le prix médian d'une unifamiliale était de 523 500 $ dans la RMR de Gatineau (APCIQ). On le compare ensemble avec le marché que vous quittez." },
+  { icon: DollarSign, title: "Repères de prix", text: "Au 3e trimestre 2026, le prix médian d'une unifamiliale était de 480 000 $ dans la RMR de Gatineau (APCIQ). On le compare ensemble avec le marché que vous quittez." },
   { icon: MapPin, title: "Proximité du travail", text: "Accès au campus Carling de la Défense nationale, dans l'ouest d'Ottawa, et aux autres installations fédérales de la région, selon le secteur choisi." },
   { icon: Home, title: "Variété de propriétés", text: "Maisons, jumelés, condos et plex, dans des quartiers familiaux bien desservis." },
   { icon: Shield, title: "Accompagnement bilingue", text: "Service en français et en anglais, adapté à votre réalité militaire." },

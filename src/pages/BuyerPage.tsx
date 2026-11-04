@@ -78,12 +78,12 @@ const BuyerPage = () => (
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Contexte 2026" title="Acheter à Gatineau en 2026 : ce que disent les chiffres" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Au 2e trimestre 2026, la région métropolitaine de Gatineau a enregistré 1 310 ventes résidentielles. Le prix médian d'une unifamiliale y atteignait 523 500 $, avec un délai de vente de 27 jours (APCIQ, données Centris).
+        Au 3e trimestre 2026, la région métropolitaine de Gatineau a enregistré 1 044 ventes résidentielles. Le prix médian d'une unifamiliale y atteignait 480 000 $, avec un délai de vente de 34 jours (APCIQ, données Centris).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         Selon l'APCIQ, sur les 12 mois terminés en juin 2026, les conditions étaient favorables aux vendeurs pour les unifamiliales dans toutes les gammes de prix. Une propriété bien située peut donc se vendre vite. Avec une préapprobation et des critères clairs, vous pouvez faire une offre sans vous précipiter.
       </p>
-      <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 2e trimestre 2026, région métropolitaine de Gatineau.</p>
+      <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 3e trimestre 2026, région métropolitaine de Gatineau.</p>
     </ContentBlock>
 
 <ContentBlock narrow>

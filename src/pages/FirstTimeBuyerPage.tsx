@@ -30,7 +30,7 @@ const steps = [
 
 
 const faq = [
-  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Au prix médian d'une unifamiliale dans la région au 2e trimestre 2026 (523 500 $, APCIQ), la mise de fonds minimale est de 27 350 $ (5 % sur 500 000 $, 10 % sur le reste). Prévoyez aussi les frais de clôture : notaire, inspection, droits de mutation et ajustements de taxes. On calcule ensemble votre capacité d'emprunt." },
+  { q: "Combien faut-il pour un premier achat à Gatineau?", a: "Au prix médian d'une unifamiliale dans la région au 3e trimestre 2026 (480 000 $, APCIQ), la mise de fonds minimale est de 24 000 $ (5 % du prix, puisqu'il est sous 500 000 $). Prévoyez aussi les frais de clôture : notaire, inspection, droits de mutation et ajustements de taxes. On calcule ensemble votre capacité d'emprunt." },
   { q: "Suis-je admissible à des programmes d'aide?", a: "Plusieurs mesures peuvent s'appliquer selon votre situation. Le RAP vous laisse retirer jusqu'à 60 000 $ de vos REER, et le CELIAPP accepte 8 000 $ de cotisations par année, jusqu'à 40 000 $ à vie. S'ajoutent le crédit d'impôt fédéral pour l'achat d'une première habitation et le crédit d'impôt remboursable du Québec, qui rembourse une partie des droits de mutation. On valide votre admissibilité ensemble, avec votre institution financière." },
   { q: "Qu'est-ce qui est différent au Québec?", a: "Quand un courtier vous représente, la promesse d'achat se fait sur un formulaire de l'OACIQ. La vente se conclut ensuite chez un notaire, et les droits de mutation (taxe de bienvenue) s'ajoutent au budget. Rien de compliqué si on prépare les chiffres d'avance." },
 ];

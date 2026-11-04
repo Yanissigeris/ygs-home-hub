@@ -13,7 +13,7 @@ const LimbourPage = () => (
     lifestyle={{ image: heroImg, imageAlt: "Quartier Limbour, Gatineau", title: "Limbour est-il un bon quartier pour une famille?", subtitle: "Oui. C'est le profil d'acheteur que je vois le plus souvent à Limbour : de jeunes familles et des couples qui quittent un condo ou une première maison. Le quartier a été planifié pour eux : des rues en boucle et des culs-de-sac qui limitent la circulation de transit, avec des parcs et des sentiers intégrés. Des écoles primaires du Centre de services scolaire des Draveurs sont à proximité. Le sous-secteur Ferme Limbour regroupe les propriétés plus grandes et plus haut de gamme." }}
     reasons={[
       "Maisons récentes et développements résidentiels modernes (constructions 2000-2020 majoritairement)",
-      "Prix médian d'une unifamiliale de 490 000 $ au 2e trimestre 2026 dans le secteur Gatineau de l'APCIQ, qui inclut Limbour",
+      "Prix médian d'une unifamiliale de 464 900 $ au 3e trimestre 2026 dans le secteur Gatineau de l'APCIQ, qui inclut Limbour",
       "Sous-secteur Ferme Limbour : résidentiel haut de gamme avec sentiers boisés et propriétés plus grandes",
       "Parcs, sentiers pédestres et espaces verts abondants",
       "Hôpital de Gatineau (909, boulevard La Vérendrye Ouest) à quelques minutes en voiture",
@@ -46,10 +46,10 @@ const LimbourPage = () => (
       title: "Questions sur Limbour",
       items: [
         { q: "Limbour est-il un quartier récent?", a: "Oui, majoritairement. La plupart des développements datent des années 2000-2020, avec quelques propriétés plus anciennes dans certains coins. Le sous-secteur Ferme Limbour attire les acheteurs avec ses grandes propriétés." },
-        { q: "Quel est le prix d'une maison à Limbour en 2026?", a: "Limbour fait partie du secteur Gatineau dans les statistiques de l'APCIQ. Au 2e trimestre 2026, le prix médian d'une unifamiliale y était de 490 000 $ (données Centris). À Limbour, le prix varie ensuite selon la grandeur, l'année de construction et le sous-secteur, et les propriétés plus haut de gamme se trouvent dans Ferme Limbour. Pour un chiffre précis, je compare les ventes récentes de maisons semblables à la vôtre." },
+        { q: "Quel est le prix d'une maison à Limbour en 2026?", a: "Limbour fait partie du secteur Gatineau dans les statistiques de l'APCIQ. Au 3e trimestre 2026, le prix médian d'une unifamiliale y était de 464 900 $ (données Centris). À Limbour, le prix varie ensuite selon la grandeur, l'année de construction et le sous-secteur, et les propriétés plus haut de gamme se trouvent dans Ferme Limbour. Pour un chiffre précis, je compare les ventes récentes de maisons semblables à la vôtre." },
         { q: "Y a-t-il des parcs et sentiers à Limbour?", a: "Oui, le quartier est reconnu pour ses espaces verts, sentiers pédestres et parcs de quartier. Le sous-secteur Ferme Limbour est entouré de zones boisées, ce qui contribue au cachet du secteur." },
         { q: "Quels services sont accessibles près de Limbour?", a: "La rue Saint-Louis regroupe des commerces de proximité, dont une épicerie et une pharmacie. L'Hôpital de Gatineau, au 909, boulevard La Vérendrye Ouest, est à quelques minutes en voiture." },
-        { q: "Combien de temps prend une vente à Limbour?", a: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour, contre 27 jours pour l'ensemble de la région métropolitaine (données Centris). Le délai dépend surtout du prix et de la préparation de la maison." },
+        { q: "Combien de temps prend une vente à Limbour?", a: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 35 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour, contre 34 jours pour l'ensemble de la région métropolitaine (données Centris). Le délai dépend surtout du prix et de la préparation de la maison." },
         { q: "Quelles écoles desservent Limbour?", a: "Plusieurs écoles primaires francophones du Centre de services scolaire des Draveurs sont à proximité. Au secondaire, la Polyvalente de l'Érablière et l'École secondaire du Versant desservent le secteur. Pour connaître l'école de votre adresse, consultez le Centre de services scolaire des Draveurs." },
       ],
     }}
@@ -69,7 +69,7 @@ const LimbourPage = () => (
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter à Limbour", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
     brokerPerspective={{
       observation: "Ce que je regarde à Limbour : je compare avec les ventes du même sous-secteur, Ferme Limbour ou le reste du quartier, avant de parler de prix.",
-      dataPoint: "Au 2e trimestre 2026, une unifamiliale s'est vendue en 22 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
+      dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 35 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
       takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
     }}
     cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
