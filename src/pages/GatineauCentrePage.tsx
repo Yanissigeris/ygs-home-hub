@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Est-ce un bon secteur pour investir dans un plex?",
-    a: "Gatineau centre concentre une bonne partie du parc de plexs existants de la ville. La demande locative a baissé depuis la COVID, ici comme ailleurs en Outaouais. Dans mes dossiers, un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie. Faites une analyse de rendement avant d'acheter : je la fais avec vous.",
+    a: "C'est dans le secteur Gatineau qu'il s'est vendu le plus de plex au cours des 12 derniers mois : 135, selon l'APCIQ (3e trimestre 2026). La demande locative a baissé depuis la COVID, ici comme ailleurs en Outaouais. Dans mes dossiers, un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie. Faites une analyse de rendement avant d'acheter : je la fais avec vous.",
   },
 ];
 
@@ -29,11 +29,11 @@ const faq = [
 const subSectors = [
   {
     title: "Limbour",
-    text: "Quartier résidentiel établi, maisons sur rues arborées, Parc du Bois-Dollard. Bon accès aux commerces et aux services du boulevard Maloney.",
+    text: "Quartier résidentiel établi, maisons sur rues arborées. Bon accès aux commerces et aux services du boulevard Maloney.",
   },
   {
-    title: "Manoir-des-Trembles / La Gappe",
-    text: "Quartiers planifiés développés principalement dans les années 1990-2000. Maisons deux étages, rues tranquilles, écoles à proximité. Beaucoup de jeunes familles s'y établissent.",
+    title: "La Gappe",
+    text: "Quartier résidentiel du secteur Gatineau, surtout des maisons unifamiliales, avec des écoles et des parcs à proximité.",
   },
   {
     title: "Secteur plex du centre",
@@ -88,10 +88,10 @@ const GatineauCentrePage = () => (
       <h2 className="mt-3">Gatineau centre, bien desservi, bien positionné</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville. Il comprend Limbour, La Gappe, Manoir-des-Trembles et les abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec une bonne partie des services et des commerces : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires et de grandes surfaces commerciales.
+          Le secteur Gatineau (au sens du district municipal, distinct d'Aylmer et de Hull) couvre une zone étendue au nord et à l'est de la ville. Il comprend entre autres Limbour et La Gappe, jusqu'aux abords du boulevard Maloney. C'est le cœur résidentiel de Gatineau, avec une bonne partie des services et des commerces : l'Hôpital de Gatineau, le Cégep de l'Outaouais, plusieurs écoles secondaires et de grandes surfaces commerciales.
         </p>
         <p className="prose-body">
-          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent un bon équilibre entre accessibilité aux services et qualité de vie résidentielle. Côté investissement, Gatineau centre concentre une forte proportion du parc de plexs existants, des duplex et triplex bien situés, proches des services et des axes de transport.
+          Pour les familles qui travaillent à Gatineau (plutôt qu'à Ottawa), ce secteur offre souvent un bon équilibre entre accessibilité aux services et qualité de vie résidentielle. Côté investissement, on y trouve des duplex et triplex bien situés, proches des services et des axes de transport.
         </p>
         <p className="prose-body">
           La Ville de Gatineau, avec une population de 298 000 habitants, est la quatrième ville en importance au Québec. (Source : Ville de Gatineau, 2024). Le secteur central bénéficie directement de tous les investissements municipaux en infrastructure.

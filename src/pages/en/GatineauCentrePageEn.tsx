@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Is it a good area to invest in a plex?",
-    a: "Gatineau centre holds a significant share of the city's existing plex inventory. Rental demand has dropped since COVID, here as elsewhere in the Outaouais. In my files, a poorly rented or poorly maintained plex stays on the market longer, and its price gets negotiated. Run a return analysis before you buy: I do it with you.",
+    a: "The Gatineau sector had the most plex sales over the last 12 months: 135, according to QPAREB (Q3 2026). Rental demand has dropped since COVID, here as elsewhere in the Outaouais. In the deals I handle, a poorly rented or poorly maintained plex stays on the market longer, and its price gets negotiated. Run a return analysis before you buy: I do it with you.",
   },
 ];
 
@@ -29,11 +29,11 @@ const faq = [
 const subSectors = [
   {
     title: "Limbour",
-    text: "Established residential neighbourhood, homes on tree-lined streets, Bois-Dollard Park. Good access to shops and services along Boulevard Maloney.",
+    text: "Established residential neighbourhood, homes on tree-lined streets. Good access to shops and services along Boulevard Maloney.",
   },
   {
-    title: "Manoir-des-Trembles / La Gappe",
-    text: "Planned neighbourhoods developed mainly in the 1990s, 2000s. Two-storey homes, quiet streets, schools nearby. Many young families settle here.",
+    title: "La Gappe",
+    text: "Residential neighbourhood in the Gatineau sector, mostly single-family homes, with schools and parks nearby.",
   },
   {
     title: "Central plex area",
@@ -88,10 +88,10 @@ const GatineauCentrePageEn = () => (
       <h2 className="mt-3">Gatineau centre, well served, well positioned</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city. It includes Limbour, La Gappe, Manoir-des-Trembles and the areas around Boulevard Maloney. It's Gatineau's residential core, with a large share of the city's services and retail: Hôpital de Gatineau, Cégep de l'Outaouais, several secondary schools and major retail centres.
+          The Gatineau sector (in the municipal district sense, distinct from Aylmer and Hull) covers a large area to the north and east of the city. It includes Limbour and La Gappe, among others, up to the areas around Boulevard Maloney. It's Gatineau's residential core, with a large share of the city's services and retail: Hôpital de Gatineau, Cégep de l'Outaouais, several secondary schools and major retail centres.
         </p>
         <p className="prose-body">
-          For families who work in Gatineau (rather than Ottawa), this area often offers a good balance between access to services and residential quality of life. On the investment side, Gatineau centre holds a significant share of the existing plex inventory, well-located duplexes and triplexes, close to services and transit corridors.
+          For families who work in Gatineau (rather than Ottawa), this area often offers a good balance between access to services and residential quality of life. On the investment side, you'll find well-located duplexes and triplexes, close to services and transit corridors.
         </p>
         <p className="prose-body">
           The City of Gatineau, with a population of 298,000, is the fourth-largest city in Québec. (Source: Ville de Gatineau, 2024). The central area benefits directly from all municipal infrastructure investments.
