@@ -140,7 +140,7 @@ const BlogPage = () => {
                 </span>
                 <span aria-hidden style={{ color: "var(--ink)", opacity: 0.7, fontSize: "11px" }}>·</span>
                 <time style={{ color: "var(--ink)", opacity: 0.85, fontSize: "11px" }}>
-                  {new Date(featured.publishDate).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" })}
+                  {new Date(`${featured.publishDate}T12:00:00`).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               </div>
               <h2 className="mt-5 font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.75rem, 3.5vw, 40px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
@@ -207,7 +207,7 @@ const BlogPage = () => {
               <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <div className="flex flex-wrap items-center gap-2.5">
                   <span className="inline-flex w-fit h-6 items-center rounded-none bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.category}</span>
-                  <time className="text-[0.6875rem] text-muted-foreground">{new Date(post.publishDate).toLocaleDateString("fr-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
+                  <time className="text-[0.6875rem] text-muted-foreground">{new Date(`${post.publishDate}T12:00:00`).toLocaleDateString("fr-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
                 </div>
                 <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.title}</h3>
                 <p className="prose-body mt-2.5 text-[0.875rem] flex-1">{post.excerpt}</p>

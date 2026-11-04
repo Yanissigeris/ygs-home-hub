@@ -53,6 +53,7 @@ export async function extractBlogPosts() {
       const slugEn = matchField(obj, "slugEn");
       const published = /published:\s*true\b/.test(obj);
       const publishDate = matchField(obj, "publishDate");
+      const updatedDate = matchField(obj, "updatedDate");
       const title = matchField(obj, "title");
       const titleEn = matchField(obj, "titleEn");
       const seoTitle = matchField(obj, "seoTitle");
@@ -76,6 +77,7 @@ export async function extractBlogPosts() {
           slug,
           slugEn,
           publishDate,
+          updatedDate,
           title,
           titleEn,
           seoTitle,
