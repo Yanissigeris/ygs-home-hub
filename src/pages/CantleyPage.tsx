@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Les propriétés à Cantley ont-elles des puits et fosses?",
-    a: "Oui, la majorité du territoire de Cantley n'est pas desservie par l'aqueduc et les égouts municipaux. Les propriétés fonctionnent avec puits artésien et fosse septique. Ces systèmes fonctionnent bien quand ils sont bien entretenus, mais l'inspection complète avant l'achat est non négociable. Un puits ou une fosse en fin de vie peut représenter une dépense importante. Je m'assure que cet aspect est rigoureusement vérifié pour chaque transaction à Cantley.",
+    a: "Oui, la majorité du territoire de Cantley n'est pas desservie par l'aqueduc et les égouts municipaux. Les propriétés fonctionnent avec puits artésien et fosse septique. Ces systèmes fonctionnent bien quand ils sont bien entretenus, mais l'inspection complète avant l'achat est non négociable. Un puits ou une fosse en fin de vie peut représenter une dépense importante.",
   },
   {
     q: "Que vérifier avant d'acheter un terrain à Cantley?",
@@ -44,11 +44,6 @@ const activites = [
     icon: "🌊",
     title: "Nature et rivière",
     text: "Cantley est délimitée par la rivière Gatineau à l'ouest. Le territoire est caractérisé par un relief vallonné typique des Collines-de-l'Outaouais, forêts, montées, panoramas. Entourée de forêts montagneuses, Cantley s'est officiellement positionnée comme une municipalité de « nature accueillante ». (Source : Municipalité de Cantley)",
-  },
-  {
-    icon: "📡",
-    title: "Fibre optique et télétravail",
-    text: "Cantley soutient activement l'expansion du réseau de fibre optique sur son territoire, ce qui facilite le télétravail. C'est un facteur qui a contribué à attirer des familles qui travaillent partiellement ou entièrement à distance. (Source : Harmonie Construction/Municipalité de Cantley)",
   },
 ];
 
@@ -111,7 +106,7 @@ const CantleyPage = () => (
     <section className="section-padding bg-background">
       <div className="section-container">
         <h2 className="mt-3">La vie à Cantley, ce qui distingue ce secteur</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {activites.map((c) => (
             <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
               <span className="text-2xl">{c.icon}</span>
