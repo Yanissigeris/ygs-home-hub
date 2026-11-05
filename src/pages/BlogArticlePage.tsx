@@ -237,7 +237,8 @@ const BlogArticlePage = () => {
     const formatInline = (text: string) =>
       text
         .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>${label}</a>`)
-        .replace(/\*\*(.+?)\*\*/g, "<strong style='color:var(--ink)' class='font-semibold'>$1</strong>");
+        .replace(/\*\*(.+?)\*\*/g, "<strong style='color:var(--ink)' class='font-semibold'>$1</strong>")
+        .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
 
     for (let i = 0; i < lines.length; i++) {
       const raw = lines[i];
@@ -249,7 +250,9 @@ const BlogArticlePage = () => {
         inFaq = true;
         continue;
       }
-      if (inFaq && line.startsWith("## ")) {
+      // A horizontal rule (---) or the next ## heading closes the FAQ, so the
+      // CTA and byline that follow aren't glued onto the last answer.
+      if (inFaq && (line.startsWith("## ") || /^-{3,}$/.test(line))) {
         inFaq = false;
         // fall through to normal handling
       }
@@ -319,7 +322,7 @@ const BlogArticlePage = () => {
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
                 <span className="uppercase" style={{ color: "rgba(0,14,53,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
-                  {isFr ? "Source : Chambre immobilière de l'Outaouais" : "Source: Outaouais Real Estate Board"}
+                  {isFr ? "Chiffres de marché" : "Market figures"}
                 </span>
               </div>
             )}
@@ -333,6 +336,9 @@ const BlogArticlePage = () => {
             )}
           </blockquote>
         );
+      } else if (/^-{3,}$/.test(line)) {
+        flushList();
+        elements.push(<hr key={i} className="my-10" style={{ border: 0, borderTop: "1px solid rgba(0,14,53,0.12)" }} />);
       } else if (line.startsWith("- ")) {
         listItems.push(line.slice(2));
       } else if (/^\d+\.\s/.test(line)) {

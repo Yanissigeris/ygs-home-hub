@@ -116,7 +116,7 @@ function extractFaqPairs(body) {
       inFaq = true;
       continue;
     }
-    if (inFaq && line.startsWith("## ")) {
+    if (inFaq && (line.startsWith("## ") || /^-{3,}$/.test(line))) {
       inFaq = false;
       continue;
     }
