@@ -51,6 +51,16 @@ export const BlogPostingJsonLd = ({ post, lang }: { post: import("@/data/blog-po
   return null;
 };
 
+/** Plain text for schema: [label](href) → label, **bold** → bold. */
+const mdToText = (t: string) => t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1").replace(/\*\*(.+?)\*\*/g, "$1");
+
+/** Safe inline HTML for FAQ answers: escape, then links and bold. */
+const faqAnswerHtml = (t: string) =>
+  t
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2' style='color:var(--gold)'>${label}</a>`)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
 export const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
   useEffect(() => {
     if (!items || items.length === 0) return;
@@ -60,7 +70,7 @@ export const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) 
       mainEntity: items.map((it) => ({
         "@type": "Question",
         name: it.q,
-        acceptedAnswer: { "@type": "Answer", text: it.a },
+        acceptedAnswer: { "@type": "Answer", text: mdToText(it.a) },
       })),
     };
     const script = document.getElementById("ygs-faqpage-jsonld") || document.createElement("script");
@@ -505,7 +515,7 @@ const BlogArticlePage = () => {
                       </span>
                       <div>
                         <p style={{ color: "var(--ink)", fontSize: "14px", fontWeight: 500, lineHeight: 1.5 }}>{item.q}</p>
-                        <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.65 }}>{item.a}</p>
+                        <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.65 }} dangerouslySetInnerHTML={{ __html: faqAnswerHtml(item.a) }} />
                       </div>
                     </div>
                   ))}
