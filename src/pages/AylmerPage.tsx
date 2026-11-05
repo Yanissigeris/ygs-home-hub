@@ -27,7 +27,7 @@ const faq = [
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
-    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace et une maison plus récente. Pour les familles qui cherchent la nature, la qualité de vie y est comparable, voire supérieure. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options selon votre situation.",
+    a: "À budget égal, Aylmer offre généralement plus d'espace et une maison plus récente. Pour les familles qui cherchent la nature, la qualité de vie y est comparable. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options selon votre situation.",
   },
   {
     q: "Est-ce que vous travaillez spécifiquement à Aylmer?",
@@ -69,7 +69,7 @@ const buyerCols = [
   {
     title: "Sur le marché",
     items: [
-      "Les propriétés bien positionnées partent vite dans les secteurs en demande",
+      "Une unifamiliale s'est vendue en 25 jours en moyenne à Aylmer au 3e trimestre 2026, contre 34 pour la région (APCIQ)",
       "Quand une propriété est bien placée, visitez vite",
       "L'inspection pré-offre est une option à considérer",
       "Faites-vous préapprouver avant de visiter",
@@ -101,7 +101,7 @@ const sellerSteps = [
 const lifestyleCards = [
   { icon: "🌿", title: "Nature à deux pas", text: "Le parc de la Gatineau et la rivière des Outaouais sont tout près, et des pistes cyclables mènent à Ottawa par le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
-  { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
+  { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais), écoles anglophones (Western Québec). Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
 
 

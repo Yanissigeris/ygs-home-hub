@@ -15,18 +15,18 @@ const CoteDazurPage = () => (
     reasons={[
       "Quartier résidentiel établi avec arbres matures et rues paisibles",
       "Bungalows, split-levels et maisons rénovées, avec un prix médian d'une unifamiliale de 464 900 $ au 3e trimestre 2026 dans le secteur Gatineau de l'APCIQ, qui inclut Côte-d'Azur",
-      "Épiceries, pharmacie et restaurants à proximité, entre autres sur le boulevard Gréber",
+      "Épiceries, pharmacie et restaurants à quelques minutes",
       "Écoles primaires et secondaires francophones dans le secteur. En anglais, les écoles secondaires du Western Quebec School Board sont à Hull",
       "À environ 11 km du centre-ville d'Ottawa par la route. Prévoyez plus de temps aux heures de pointe.",
       "Transport en commun STO avec lignes vers Hull et le centre-ville d'Ottawa",
       "Délai de vente moyen de 35 jours pour une unifamiliale dans le secteur Gatineau au 3e trimestre 2026 (APCIQ)",
-      "Potentiel de plus-value pour les acheteurs qui modernisent une propriété des années 60-80",
+      "Un point de départ pour les acheteurs prêts à moderniser une propriété plus ancienne",
     ]}
     profilesTitle="Côte-d'Azur convient surtout à ces profils"
     profiles={[
       { icon: Users, title: "Familles", text: "Quartier calme avec écoles, parcs et services à proximité." },
       { icon: Home, title: "Premiers acheteurs", text: "Au 3e trimestre 2026, le prix médian d'une unifamiliale était de 464 900 $ dans le secteur Gatineau de l'APCIQ, qui inclut Côte-d'Azur. Une porte d'entrée dans l'unifamilial sans s'éloigner du centre." },
-      { icon: MapPin, title: "Retraités", text: "Plain-pied sans escalier dans un voisinage calme, avec services et pharmacie sur Maloney. Un bon choix pour rester chez soi longtemps." },
+      { icon: MapPin, title: "Retraités", text: "Plain-pied sans escalier dans un voisinage calme, avec les services à quelques minutes. Un bon choix pour rester chez soi longtemps." },
       { icon: Coffee, title: "Acheteurs de revente", text: "Des bungalows plus anciens, souvent à rénover. Je vous montre l'écart de prix entre les maisons rénovées et celles à rénover dans le secteur." },
     ]}
     inlineCta={{ text: "Propriétaire à Côte-d'Azur? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
@@ -36,7 +36,7 @@ const CoteDazurPage = () => (
         { q: "Où se situe le quartier Côte-d'Azur à Gatineau?", a: "Dans le secteur Gatineau (ancienne ville), autour du parc Saint-Exupéry et près de la rue Saint-Louis. Ses rues portent des noms de la Côte d'Azur française : rue de Cannes, rue de Monte-Carlo, rue de Menton, rue de Saint-Tropez. Le centre-ville d'Ottawa est à environ 11 km par la route, et le temps de trajet dépend surtout de l'heure de départ." },
         { q: "Quel est le prix d'une maison à Côte-d'Azur en 2026?", a: "Côte-d'Azur fait partie du secteur Gatineau dans les statistiques de l'APCIQ. Au 3e trimestre 2026, le prix médian d'une unifamiliale y était de 464 900 $ (données Centris). À Côte-d'Azur, le prix dépend ensuite de la superficie habitable, de l'état de la propriété et de la grandeur du terrain. Les bungalows non rénovés se situent plus bas, les propriétés modernisées avec garage plus haut. Pour un chiffre précis, je compare les ventes récentes de maisons semblables à la vôtre." },
         { q: "Combien de temps prend une vente à Côte-d'Azur?", a: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 35 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Côte-d'Azur, contre 34 jours pour l'ensemble de la région métropolitaine (données Centris). Le délai dépend surtout du prix et de la préparation de la maison." },
-        { q: "Quels commerces et services sont accessibles?", a: "Les services du quotidien, épiceries, pharmacie et restaurants, sont à proximité, entre autres sur le boulevard Gréber. Selon votre rue, vous y allez à pied ou en voiture sur une courte distance." },
+        { q: "Quels commerces et services sont accessibles?", a: "Les services du quotidien, épiceries, pharmacie et restaurants, sont à quelques minutes. Selon votre rue, vous y allez à pied ou en voiture sur une courte distance." },
         { q: "Côte-d'Azur est-il un bon quartier pour les familles?", a: "Oui, le quartier attire principalement des familles qui cherchent un secteur résidentiel mature, des écoles à proximité, des parcs et un voisinage stable." },
         { q: "Faut-il prévoir des rénovations sur un bungalow Côte-d'Azur?", a: "Souvent oui, et c'est même l'un des avantages du secteur. Les propriétés datent généralement des années 60 à 90 et plusieurs ont conservé leur cuisine, salle de bain ou planchers d'origine. Une maison à rénover se paie moins cher, et je compare avec les ventes récentes pour que le prix tienne compte des travaux." },
       ],

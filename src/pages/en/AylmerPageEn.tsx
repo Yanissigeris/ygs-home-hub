@@ -27,7 +27,7 @@ const faq = [
   },
   {
     q: "Is it better to buy in Aylmer or Ottawa?",
-    a: "I hear this question often. For the same budget, Aylmer typically offers more space and a newer home. Families who want nature close by get a comparable, or even better, quality of life. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options based on your situation.",
+    a: "For the same budget, Aylmer typically offers more space and a newer home. Families who want nature close by get a comparable quality of life. Property taxes differ (Québec vs Ontario), and mortgage rules are the same. The main deciding factors are usually school language and access to your workplace. I can help you compare both options based on your situation.",
   },
   {
     q: "Is Aylmer one of your main areas?",
@@ -49,7 +49,7 @@ const subSectors = [
   },
   {
     title: "Waterfront",
-    text: "Riverfront properties on the Ottawa River, with boat access and larger lots. A niche market with few properties for sale. That scarcity supports long-term values.",
+    text: "Riverfront properties on the Ottawa River, with boat access and larger lots. Niche market, with few properties for sale at any one time.",
     tag: "Prestige · Waterfront",
   },
 ];
@@ -69,7 +69,7 @@ const buyerCols = [
   {
     title: "On the market",
     items: [
-      "Well-priced properties sell quickly in high-demand areas",
+      "A single-family home sold in 25 days on average in Aylmer in Q3 2026, compared with 34 for the region (QPAREB)",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
       "Get pre-approved before you visit",
@@ -101,7 +101,7 @@ const sellerSteps = [
 const lifestyleCards = [
   { icon: "🌿", title: "Nature at your doorstep", text: "Gatineau Park and the Ottawa River are close by, and cycling paths lead to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
   { icon: "🛒", title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
-  { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (Centre de services scolaire des Portages-de-l'Outaouais), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
+  { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (Centre de services scolaire des Portages-de-l'Outaouais), English schools (Western Québec). A major asset for Ottawa families relocating." },
 ];
 
 
