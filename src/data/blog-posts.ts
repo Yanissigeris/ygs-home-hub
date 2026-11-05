@@ -138,7 +138,7 @@ export const blogPosts: BlogPost[] = [
 
 ### Pourquoi y a-t-il autant de propriétés à vendre à Gatineau en 2026?
 
-L'inventaire de la RMR de Gatineau croît depuis quatre trimestres consécutifs et atteint 2 007 inscriptions en vigueur, selon les données Centris du T2 2026. Deux forces se croisent : les ventes reculent de 15 % pendant que les propriétaires continuent d'inscrire. Résultat, les mois d'inventaire des unifamiliales ont augmenté dans toutes les gammes de prix depuis le trimestre précédent. Pour vous comme vendeur, ça veut dire une chose concrète : votre maison est comparée à davantage de propriétés semblables qu'il y a un an. Chaque détail de présentation et chaque dollar de prix compte davantage qu'en 2025.
+L'inventaire de la RMR de Gatineau est en hausse sur un an pour un quatrième trimestre de suite et atteint 2 007 inscriptions en vigueur, selon les données Centris du T2 2026. Deux forces se croisent : les ventes reculent de 15 % pendant que les propriétaires continuent d'inscrire. Résultat : entre 370 000 $ et 620 000 $, l'inventaire des unifamiliales est passé de 2,9 à 3,3 mois de ventes en un trimestre (APCIQ, 12 derniers mois). Pour vous comme vendeur, ça veut dire une chose concrète : votre maison est comparée à davantage de propriétés semblables qu'il y a un an. Chaque détail de présentation et chaque dollar de prix compte davantage qu'en 2025.
 
 ### Est-ce encore un marché de vendeurs à Gatineau?
 
@@ -178,7 +178,7 @@ R : 27 jours en moyenne pour une unifamiliale au T2 2026, un délai stable sur 
 
 ### Why are there so many homes for sale in Gatineau in 2026?
 
-Gatineau CMA inventory has grown for four consecutive quarters and now sits at 2,007 active listings, according to Centris Q2 2026 data. Two forces are crossing: sales are down 15% while owners keep listing. The result: months of inventory for single-family homes rose in every price range from the previous quarter. For you as a seller, this means one concrete thing: your home is being compared to more similar properties than a year ago. Every staging detail and every dollar of price counts more than it did in 2025.
+Gatineau CMA inventory is up year over year for a fourth quarter in a row and now sits at 2,007 active listings, according to Centris Q2 2026 data. Two forces are crossing: sales are down 15% while owners keep listing. The result: between $370,000 and $620,000, single-family inventory went from 2.9 to 3.3 months of sales in one quarter (QPAREB, last 12 months). For you as a seller, this means one concrete thing: your home is being compared to more similar properties than a year ago. Every staging detail and every dollar of price counts more than it did in 2025.
 
 ### Is Gatineau still a seller's market?
 
@@ -409,7 +409,7 @@ A: In Q3 2026, a single-family home sold in 34 days on average in the CMA. It ra
 
 Parce que l'acheteur filtre avant de visiter. Avec 42 % plus d'inscriptions qu'il y a un an, il voit tout de suite les propriétés semblables à la vôtre et leur prix. Si la vôtre est affichée au-dessus, il ne se déplace pas, et sans visite, il n'y a pas de négociation.
 
-C'est une croyance de vendeur avec laquelle je ne suis pas d'accord. Une maison affichée trop haut reste en ligne, puis baisse son prix. Les acheteurs voient l'historique, et la baisse devient un argument contre vous.
+C'est une croyance de vendeur avec laquelle je ne suis pas d'accord. Une maison affichée trop haut reste en ligne, puis baisse son prix. Cette baisse se remarque, et l'acheteur s'en sert pour négocier.
 
 Le contraire marche. Au début de 2026, des propriétaires d'un triplex au Plateau, à Hull, voulaient le maximum, le plus vite possible. On a soigné la mise en marché et affiché au bon prix dès le départ : ils ont accepté une offre en une journée, au prix exact qu'on demandait. Je raconte ce dossier dans l'article sur le [meilleur moment pour vendre à Gatineau](/blogue/quand-vendre-sa-maison-gatineau).
 
@@ -423,7 +423,7 @@ Plus la tranche est haute, plus l'acheteur a de propriétés à comparer et plus
 
 Sur Centris et Realtor.ca, beaucoup d'acheteurs entrent un prix maximum, souvent un chiffre rond. Une maison affichée à 559 000 $ n'apparaît pas à l'acheteur qui cherche « 550 000 $ et moins ». Elle ne gagne pas non plus de visibilité chez ceux qui cherchent plus haut, parce qu'elle se compare à des maisons plus chères.
 
-Je regarde donc où se trouvent les seuils de recherche autour de votre valeur avant de fixer le prix d'affichage. Quelques milliers de dollars au-dessus d'un seuil peuvent vous enlever une bonne part des acheteurs de votre tranche.
+Je regarde donc où se trouvent les seuils de recherche autour de votre valeur avant de fixer le prix d'affichage. Quelques milliers de dollars au-dessus d'un seuil peuvent vous faire disparaître de ces recherches.
 
 ### Que vaut le prix médian pour votre maison?
 
@@ -456,7 +456,7 @@ R : Ils jouent sur la capacité d'emprunt des acheteurs. Le 28 octobre 2026, la 
 
 Because buyers filter before they visit. With 42% more listings than a year ago, they immediately see the homes similar to yours and their prices. If yours is listed above them, they don't come, and with no visit, there's no negotiation.
 
-It's a common seller belief I disagree with. A home listed too high stays online, then cuts its price. Buyers see the history, and the cut becomes an argument against you.
+It's a common seller belief I disagree with. A home listed too high stays online, then cuts its price. That cut gets noticed, and buyers use it to negotiate.
 
 The opposite works. Early in 2026, the owners of a triplex in the Plateau, in Hull, wanted top dollar as fast as possible. We put care into the marketing and listed at the right price from day one: they accepted an offer in one day, at exactly the asking price. I tell that story in the article on the [best time to sell in Gatineau](/en/blog/best-time-to-sell-gatineau).
 
@@ -470,7 +470,7 @@ The higher the range, the more homes a buyer can compare and the more time they 
 
 On Centris and Realtor.ca, many buyers enter a maximum price, often a round number. A home listed at $559,000 doesn't show up for a buyer searching "$550,000 and under". It doesn't gain visibility with those searching higher either, because it's compared with more expensive homes.
 
-So I look at where the search thresholds sit around your value before setting the list price. A few thousand dollars above a threshold can cost you a good share of the buyers in your range.
+So I look at where the search thresholds sit around your value before setting the list price. A few thousand dollars above a threshold can take you out of those searches.
 
 ### What does the median price say about your home?
 
@@ -643,9 +643,9 @@ A: Yes. More inventory means more visual competition. Photos and price positioni
 
 > Au 3e trimestre 2026, le prix médian d'un plex était de 617 500 $ dans la RMR de Gatineau, en hausse de 2 % sur un an. Un plex s'est vendu en 38 jours en moyenne (APCIQ).
 
-### Pourquoi le prix tient-il pendant que les ventes reculent?
+### Quels plex se vendent le mieux en ce moment?
 
-Parce que les plex qui se vendent sont souvent les bons dossiers. Dans ce que je vois, un plex avec des loyers sous le marché part plus vite. L'acheteur sait qu'il peut aller chercher du revenu avec le temps. Un plex mal loué ou mal entretenu reste plus longtemps et se négocie davantage.
+Dans ce que je vois, un plex avec des loyers sous le marché part plus vite. L'acheteur sait qu'il peut aller chercher du revenu avec le temps. Un plex mal loué ou mal entretenu reste plus longtemps et se négocie davantage.
 
 Je vois aussi plus de propriétaires-occupants qui achètent un duplex ou un triplex pour y habiter. Pour eux, l'assurance prêt hypothécaire de la SCHL permet une mise de fonds plus basse que pour un investisseur. J'en parle dans l'article sur l'[investissement dans un plex à Gatineau](/blogue/investir-plex-gatineau-rentable).
 
@@ -653,7 +653,7 @@ Je vois aussi plus de propriétaires-occupants qui achètent un duplex ou un tri
 
 Sur 12 mois, le prix médian d'un plex était de 815 000 $ à Aylmer (63 ventes) et de 597 750 $ à Hull (106 ventes, +6 %). Dans le secteur Gatineau, il était de 556 000 $ (135 ventes, -7 %), et de 538 500 $ dans le secteur Buckingham/Masson-Angers (52 ventes). Pour toute la RMR, la médiane sur 12 mois était de 590 000 $ (APCIQ).
 
-L'APCIQ ne publie pas de médiane trimestrielle par secteur pour les plex, faute d'un nombre suffisant de ventes. Pour un immeuble précis, je compare avec les ventes récentes d'immeubles semblables.
+Au 3e trimestre 2026, l'APCIQ n'a pas publié de médiane de plex par secteur, faute d'un nombre suffisant de ventes. Pour un immeuble précis, je compare avec les ventes récentes d'immeubles semblables.
 
 ### Est-ce que ça s'autofinance?
 
@@ -686,9 +686,9 @@ R : C'est plus rare. La médiane la plus basse sur 12 mois était de 538 500 $
 
 > In Q3 2026, the median plex price was $617,500 in the Gatineau CMA, up 2% over one year. A plex sold in 38 days on average (QPAREB).
 
-### Why is the price holding while sales drop?
+### Which plexes sell best right now?
 
-Because the plexes that sell are often the good files. In what I see, a plex with below-market rents sells faster. Buyers know they can grow the income over time. A poorly rented or poorly maintained plex stays on the market longer and gets negotiated harder.
+In what I see, a plex with below-market rents sells faster. Buyers know they can grow the income over time. A poorly rented or poorly maintained plex stays on the market longer and gets negotiated harder.
 
 I'm also seeing more owner-occupants buying a duplex or a triplex to live in. For them, CMHC mortgage loan insurance allows a lower down payment than for an investor. I cover this in the article on [investing in a plex in Gatineau](/en/blog/investing-plex-gatineau-worth-it).
 
@@ -696,7 +696,7 @@ I'm also seeing more owner-occupants buying a duplex or a triplex to live in. Fo
 
 Over 12 months, the median plex price was $815,000 in Aylmer (63 sales) and $597,750 in Hull (106 sales, +6%). In the Gatineau sector it was $556,000 (135 sales, -7%), and $538,500 in the Buckingham/Masson-Angers sector (52 sales). For the whole CMA, the 12-month median was $590,000 (QPAREB).
 
-QPAREB doesn't publish a quarterly plex median by sector, because there aren't enough sales. For a specific building, I compare with recent sales of similar buildings.
+In Q3 2026, QPAREB didn't publish a plex median by sector, because there weren't enough sales. For a specific building, I compare with recent sales of similar buildings.
 
 ### Does it pay for itself?
 
