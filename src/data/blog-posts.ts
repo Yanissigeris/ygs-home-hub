@@ -1663,7 +1663,7 @@ Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les pr
 [Aylmer](/aylmer) attire les familles de Gatineau pour plusieurs raisons :
 - **Plage et marina** : Baignade l'été et pistes cyclables le long de la rivière
 - **Parc de la Gatineau** : Accès rapide à un vaste réseau de sentiers
-- **Écoles réputées** : Plusieurs écoles primaires et secondaires bien cotées
+- **Écoles** : francophones et anglophones, selon l'admissibilité
 - **Ambiance villageoise** : Le Vieux-Aylmer offre des cafés et des boutiques locales
 - **Proximité Ottawa** : environ 14 km entre le Vieux-Aylmer et le centre-ville d'Ottawa via le pont Champlain
 
@@ -1678,7 +1678,7 @@ Le [Plateau](/plateau) est un secteur résidentiel calme :
 - **Parcs et espaces verts** : Parcs de quartier, proximité du parc de la Gatineau
 - **Écoles** : Bonnes options en français et en anglais
 - **Accès au boulevard des Allumettières** : vers Hull et les ponts d'Ottawa
-- **Commerces** : Centre commercial du Plateau et épiceries
+- **Commerces** : épiceries et services dans le secteur
 
 **Pour qui** : Jeunes familles et premiers acheteurs qui veulent de l'espace.
 
@@ -1690,8 +1690,8 @@ Le [Plateau](/plateau) est un secteur résidentiel calme :
 - **Proximité immédiate d'Ottawa** : environ 2 km du centre-ville d'Ottawa via le pont du Portage
 - **Projet Zibi** : Quartier en développement avec condos modernes
 - **Culture et restos** : Musée canadien de l'histoire, quartier gastronomique
-- **Transport** : Réseau STO dense, projet de tramway à l'étude
-- **Prix accessibles** : Encore possible de trouver des aubaines
+- **Transport** : réseau STO dense
+- **Prix** : 475 000 $ de médiane, sous Aylmer
 
 **Pour qui** : Familles qui travaillent à Ottawa et amateurs de vie urbaine.
 
@@ -1700,7 +1700,7 @@ Le [Plateau](/plateau) est un secteur résidentiel calme :
 **Prix médian unifamilial** : 395 000 $ dans le secteur Buckingham/Masson-Angers, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) offrent beaucoup d'espace pour le prix :
-- **Terrains très grands** : Demi-acres et plus facilement disponibles
+- **Terrains** : souvent plus grands que dans les secteurs centraux
 - **Rivière du Lièvre** : Activités nautiques et pêche
 - **Communauté tissée serrée** : Ambiance de petite ville
 - **Prix les plus bas** : La médiane unifamiliale la plus basse des quatre secteurs de Gatineau
@@ -1729,7 +1729,7 @@ Choosing the right neighbourhood means choosing your family's daily life for yea
 [Aylmer](/en/aylmer) draws Gatineau families for several reasons:
 - **Beach and marina**: Summer swimming and cycling paths along the river
 - **Gatineau Park**: Quick access to a vast trail network
-- **Well-regarded schools**: Several well-rated elementary and high schools
+- **Schools**: French and English, subject to eligibility
 - **Village atmosphere**: Old Aylmer offers cafés and local shops
 - **Ottawa proximity**: About 14 km from Old Aylmer to downtown Ottawa via the Champlain Bridge
 
@@ -1744,7 +1744,7 @@ The [Plateau](/en/plateau) is a quiet residential area:
 - **Parks and green spaces**: Neighbourhood parks, close to Gatineau Park
 - **Schools**: Good options in French and English
 - **Access to Boulevard des Allumettières**: toward Hull and the Ottawa bridges
-- **Shopping**: Plateau shopping centre and grocery stores
+- **Shopping**: grocery stores and services in the area
 
 **Good fit for**: Young families and first-time buyers who want space.
 
@@ -1756,8 +1756,8 @@ The [Plateau](/en/plateau) is a quiet residential area:
 - **Steps from Ottawa**: About 2 km to downtown Ottawa via the Portage Bridge
 - **Zibi project**: Developing neighbourhood with modern condos
 - **Culture and dining**: Canadian Museum of History, culinary quarter
-- **Transit**: Dense STO network, tramway project under study
-- **Affordable prices**: Still possible to find deals
+- **Transit**: dense STO network
+- **Prices**: a $475,000 median, below Aylmer
 
 **Good fit for**: Families working in Ottawa and urban lifestyle lovers.
 
@@ -1766,7 +1766,7 @@ The [Plateau](/en/plateau) is a quiet residential area:
 **Single-family median price**: $395,000 in the Buckingham/Masson-Angers sector, according to QPAREB (Centris data), in Q3 2026
 
 [Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) offer a lot of space for the price:
-- **Very large lots**: Half-acres and more readily available
+- **Lots**: often larger than in the central sectors
 - **Lièvre River**: Water sports and fishing
 - **Tight-knit community**: Small-town feel
 - **Lowest prices**: The lowest single-family median of Gatineau's four sectors
@@ -1817,9 +1817,7 @@ Aylmer occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tranquil
 
 ### Vie familiale et écoles
 - **Écoles francophones et anglophones** : Grande variété de choix
-- **Parc des Cèdres** : Jeux, piscine publique, terrains de sport
-- **Communauté active** : Marchés fermiers, festivals locaux
-- **Sécurité** : Quartier résidentiel calme et bien entretenu
+- **Parc des Cèdres** : plage, volleyball de plage et sentiers récréatifs
 
 ### Prix immobiliers à Aylmer
 - **Maison unifamiliale** : Prix médian de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
@@ -1839,7 +1837,7 @@ Un secteur résidentiel tranquille d'Aylmer, apprécié de ceux qui aiment la na
 
 ## Mon conseil
 
-Aylmer est un choix sûr pour la qualité de vie. La demande y reste soutenue, un atout à la revente. Contactez-moi pour une visite personnalisée du secteur.
+Au 3e trimestre 2026, une unifamiliale s'est vendue en 25 jours en moyenne à Aylmer, contre 34 pour l'ensemble de la région (APCIQ). Contactez-moi pour une visite personnalisée du secteur.
 
 **Lire aussi** : [Vivre près du Parc de la Gatineau](/blogue/vivre-pres-parc-gatineau-immobilier) · [Quartiers pour familles à Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## Aylmer: Gatineau's Residential West End
@@ -1856,9 +1854,7 @@ Aylmer sits at the western end of Gatineau. It offers a quiet lifestyle close to
 
 ### Family Life and Schools
 - **French and English schools**: Wide variety of choices
-- **Parc des Cèdres**: Playgrounds, public pool, sports fields
-- **Active community**: Farmers' markets, local festivals
-- **Safety**: Quiet, well-maintained residential area
+- **Parc des Cèdres**: beach, beach volleyball and recreational trails
 
 ### Aylmer Real Estate Prices
 - **Single-family home**: Median price of $530,000 according to QPAREB (Centris data), in Q3 2026
@@ -1878,7 +1874,7 @@ A quiet residential area of Aylmer, popular with people who value nature and cal
 
 ## My Advice
 
-Aylmer is a safe bet for quality of life. Demand there remains steady, which helps at resale. Contact me for a personalized tour of the area.
+In Q3 2026, a single-family home sold in 25 days on average in Aylmer, compared with 34 for the whole region (QPAREB). Contact me for a personalized tour of the area.
 
 **Read also**: [Living Near Gatineau Park](/en/blog/living-near-gatineau-park-real-estate) · [Family Neighbourhoods in Gatineau](/en/blog/best-family-neighborhoods-gatineau)`,
   },
@@ -2026,8 +2022,8 @@ Le processus [d'achat au Québec](/acheter-a-gatineau) diffère de l'Ontario. Le
 ## 7. Pensez à la revente
 Même si c'est votre première maison, pensez à sa valeur future. La proximité des transports et des écoles pèse à la revente.
 
-## 8. Soyez prêts à agir vite
-Le marché de Gatineau bouge rapidement. Ayez vos documents prêts et un courtier réactif.
+## 8. Soyez prêts, sans vous presser
+Au 3e trimestre 2026, il y avait 42 % plus de propriétés à vendre qu'un an plus tôt dans la région de Gatineau (APCIQ). Vous avez plus de choix, mais la bonne maison peut partir vite. Ayez votre préapprobation et vos documents prêts.
 
 ## 9. Visitez au moins 5 propriétés
 Ne tombez pas amoureux de la première maison. Comparez pour mieux apprécier.
@@ -2071,8 +2067,8 @@ The process in Quebec differs from Ontario. Timelines and forms are not the same
 ## 7. Think About Resale
 Even if it's your first home, think about future value. Proximity to transit and schools matters at resale.
 
-## 8. Be Ready to Act Fast
-Gatineau's market moves quickly. Have your documents ready and a responsive broker.
+## 8. Be Ready, Without Rushing
+In Q3 2026, there were 42% more properties for sale than a year earlier in the Gatineau area (QPAREB). You have more choice, but the right home can still go quickly. Have your pre-approval and documents ready.
 
 ## 9. Visit at Least 5 Properties
 Don't fall in love with the first house. Compare to better appreciate.
@@ -2104,7 +2100,7 @@ I offer a complete service for first-time buyers, from pre-qualification to key 
     published: true,
     body: `## Le Parc de la Gatineau : un atout résidentiel rare
 
-Vivre à proximité du Parc de la Gatineau, c'est avoir accès à plus de 361 km² de nature sauvage à quelques minutes de chez soi. C'est un avantage immobilier que peu de villes canadiennes peuvent offrir.
+Vivre à proximité du Parc de la Gatineau, c'est avoir accès à plus de 360 km² de nature à quelques minutes de chez soi. C'est un avantage immobilier que peu de villes canadiennes peuvent offrir.
 
 ## Les quartiers aux portes du parc
 
@@ -2130,14 +2126,13 @@ Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) e
 ## Avantages de vivre près du parc
 
 ### Santé et bien-être
-- **200+ km de sentiers** de randonnée et vélo
-- **Ski de fond** : Vaste réseau de pistes entretenu par la CCN
+- **Plus de 165 km de sentiers** de randonnée, en plus des pistes de vélo
+- **Ski de fond** : environ 200 km de pistes entretenues
 - **Lac Philippe** : Baignade, camping, canot
 - **Air pur** : Forêt mature à votre porte
 
 ### Valeur immobilière
 - **Demande ciblée** : une partie des acheteurs cherche précisément ce mode de vie
-- **Qualité de vie** : Argument de vente puissant à la revente
 
 **Pour aller plus loin** : [Chelsea : guide du secteur](/chelsea) · [Vivre à Aylmer : guide du secteur](/blogue/vivre-aylmer-gatineau-guide-quartier)
 
@@ -2146,7 +2141,7 @@ Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) e
 Si ce mode de vie vous attire, je peux [vous alerter](/contact-yanis) dès qu'une occasion se présente dans le secteur.`,
     bodyEn: `## Gatineau Park: A Rare Residential Asset
 
-Living near Gatineau Park means having access to over 361 km² of wilderness just minutes from home. It's a real estate advantage few Canadian cities can offer.
+Living near Gatineau Park means having access to over 360 km² of nature just minutes from home. It's a real estate advantage few Canadian cities can offer.
 
 ## Neighbourhoods at the Park's Doorstep
 
@@ -2170,14 +2165,13 @@ Living near Gatineau Park means having access to over 361 km² of wilderness jus
 ## Benefits of Living Near the Park
 
 ### Health and Wellness
-- **200+ km of trails** for hiking and cycling
+- **Over 165 km of hiking trails**, plus cycling routes
 - **Cross-country skiing**: Large trail network maintained by the NCC
 - **Lac Philippe**: Swimming, camping, canoeing
 - **Fresh air**: Mature forest at your doorstep
 
 ### Property Value
 - **Targeted demand**: some buyers look for this lifestyle specifically
-- **Quality of life**: Powerful selling point at resale
 
 ## My Advice
 
@@ -2209,7 +2203,7 @@ If this lifestyle appeals to you, I can alert you as soon as an opportunity come
 
 ### Un emplacement central
 - **Environ 2 km du centre-ville d'Ottawa** par le pont du Portage, avec le pont Alexandra à proximité
-- **Station du futur tramway** : Un projet à suivre pour la valeur à long terme
+- **Projet de tramway de la STO** : à suivre
 - **Services à pied** : Épiceries, restaurants, bars, boutiques
 - **Transport en commun** : Réseau STO dense
 
@@ -2220,16 +2214,13 @@ If this lifestyle appeals to you, I can alert you as soon as an opportunity come
 
 ## Prix des condos à Hull
 
-Selon l'APCIQ (données Centris), au deuxième trimestre de 2026, le prix médian d'un condo dans le secteur Hull était de 282 000 $.
+Selon l'APCIQ (données Centris), au troisième trimestre de 2026, le prix médian d'un condo dans le secteur Hull était de 289 900 $, en baisse de 3 % sur un an. Un condo s'y est vendu en 38 jours en moyenne.
 
-- **Frais de condo** : 200 $ à 500 $ par mois selon l'immeuble
+Les frais de condo varient beaucoup d'un immeuble à l'autre. Demandez le budget du syndicat avant de faire une offre.
 
-## Potentiel locatif
+## Acheter pour louer?
 
-Hull offre un excellent potentiel locatif grâce à la demande des fonctionnaires fédéraux et des professionnels travaillant à Ottawa :
-- **Rendement brut** : 4 % à 5,5 %
-- **Taux d'occupation** : Généralement élevé, à valider selon l'immeuble
-- **Location meublée** : Forte demande pour les affectations temporaires
+Faites le calcul avec prudence. En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % dans la région de Gatineau, contre 1,9 % un an plus tôt, et la hausse a été la plus marquée dans les zones de Hull et de Gatineau. Partez du loyer réel d'unités comparables dans le même immeuble, et vérifiez si la déclaration de copropriété permet la location.
 
 ## Ce qu'il faut vérifier avant d'acheter
 
@@ -2249,7 +2240,7 @@ Hull convient bien aux acheteurs qui veulent un mode de vie urbain avec un accè
 
 ### A Central Location
 - **About 2 km from downtown Ottawa** via the Portage Bridge, with the Alexandra Bridge close by
-- **Future LRT station**: A project to watch for long-term value
+- **STO tramway project**: one to watch
 - **Walkable services**: Groceries, restaurants, bars, shops
 - **Public transit**: Dense STO network
 
@@ -2260,16 +2251,13 @@ Hull convient bien aux acheteurs qui veulent un mode de vie urbain avec un accè
 
 ## Hull Condo Prices
 
-According to QPAREB (Centris data), in Q2 2026, the median condo price in the Hull sector was $282,000.
+According to QPAREB (Centris data), in Q3 2026, the median condo price in the Hull sector was $289,900, down 3% over one year. A condo sold there in 38 days on average.
 
-- **Condo fees**: $200 to $500 per month depending on building
+Condo fees vary a lot from one building to another. Ask for the syndicate's budget before making an offer.
 
-## Rental Potential
+## Buying to Rent?
 
-Hull offers excellent rental potential thanks to demand from federal employees and professionals working in Ottawa:
-- **Gross yield**: 4% to 5.5%
-- **Occupancy rate**: Generally high, to be confirmed building by building
-- **Furnished rental**: Strong demand for temporary assignments
+Run the numbers carefully. In October 2025, CMHC measured a 3.8% vacancy rate in the Gatineau area, up from 1.9% a year earlier, and the increase was most pronounced in the Hull and Gatineau zones. Start from the actual rent of comparable units in the same building, and check whether the declaration of co-ownership allows renting.
 
 ## What to Check Before Buying
 
@@ -2302,7 +2290,7 @@ Hull suits buyers who want an urban lifestyle with quick access to Ottawa. Wheth
     published: true,
     body: `## Refinancement hypothécaire à Gatineau : tout ce qu'il faut savoir
 
-Le refinancement hypothécaire permet d'accéder à la valeur accumulée dans votre propriété. Avec la hausse des prix à Gatineau, de nombreux propriétaires ont une équité importante à exploiter.
+Le refinancement hypothécaire permet d'accéder à la valeur accumulée dans votre propriété. Si vous avez acheté il y a quelques années, votre équité a pu augmenter, mais seule une évaluation à jour le confirme.
 
 ## Qu'est-ce que le refinancement?
 
@@ -2343,7 +2331,7 @@ Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie 
 **Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-achat-maison-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
     bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
 
-Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have a good amount of equity to tap into.
+Mortgage refinancing lets you access the equity built up in your property. If you bought a few years ago, your equity may have grown, but only an up-to-date valuation can confirm it.
 
 ## What Is Refinancing?
 
