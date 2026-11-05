@@ -35,7 +35,7 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
         "Médian plex 599 600 $",
         "Unifamiliale 523 500 $",
         "Inscriptions +30 %",
-        "Source : Chambre immobilière de l'Outaouais",
+        "Source : APCIQ, données Centris",
       ],
       en: [
         "Q2 2026",
@@ -44,12 +44,12 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
         "Median plex $599,600",
         "Single-family $523,500",
         "Listings +30%",
-        "Source: Outaouais Real Estate Board",
+        "Source: QPAREB, Centris data",
       ],
     },
     source: {
-      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T2 2026",
-      en: "Source: Outaouais Real Estate Board / QPAREB, Q2 2026",
+      fr: "Source : APCIQ, données Centris, T2 2026",
+      en: "Source: QPAREB, Centris data, Q2 2026",
     },
   },
   "2026-Q3": {
@@ -74,7 +74,7 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
         "Médian plex 617 500 $",
         "Unifamiliale 480 000 $",
         "Inscriptions +42 %",
-        "Source : Chambre immobilière de l'Outaouais",
+        "Source : APCIQ, données Centris",
       ],
       en: [
         "Q3 2026",
@@ -83,12 +83,12 @@ export const BLOG_MARKET_STATS: Record<string, BlogQuarterStats> = {
         "Median plex $617,500",
         "Single-family $480,000",
         "Listings +42%",
-        "Source: Outaouais Real Estate Board",
+        "Source: QPAREB, Centris data",
       ],
     },
     source: {
-      fr: "Source : Chambre immobilière de l'Outaouais / APCIQ, T3 2026",
-      en: "Source: Outaouais Real Estate Board / QPAREB, Q3 2026",
+      fr: "Source : APCIQ, données Centris, T3 2026",
+      en: "Source: QPAREB, Centris data, Q3 2026",
     },
   },
 };

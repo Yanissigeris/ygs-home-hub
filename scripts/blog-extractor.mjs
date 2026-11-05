@@ -116,7 +116,7 @@ function extractFaqPairs(body) {
       inFaq = true;
       continue;
     }
-    if (inFaq && line.startsWith("## ")) {
+    if (inFaq && (line.startsWith("## ") || /^-{3,}$/.test(line))) {
       inFaq = false;
       continue;
     }
@@ -132,7 +132,8 @@ function extractFaqPairs(body) {
       items[items.length - 1].a += " " + line;
     }
   }
-  return items.filter((it) => it.q && it.a);
+  const plain = (t) => t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1").replace(/\*\*(.+?)\*\*/g, "$1");
+  return items.filter((it) => it.q && it.a).map((it) => ({ q: plain(it.q), a: plain(it.a) }));
 }
 
 /**

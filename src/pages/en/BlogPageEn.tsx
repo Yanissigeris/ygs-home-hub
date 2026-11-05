@@ -157,13 +157,13 @@ const BlogPageEn = () => {
 
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                "In April 2026, a plex sells in 30 days while condos pile up."
+                "In Q3 2026, inventory rose 42% and sales fell 12%."
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[
-                  { value: "30 days", label: "Plex days on market, April 2026" },
-                  { value: "-34%", label: "Condo sales, Jan. to April 2026" },
-                  { value: "$510,000", label: "Single-family median, April 2026" },
+                  { value: "+42%", label: "Active listings, Q3 2026" },
+                  { value: "-12%", label: "Sales, Q3 2026" },
+                  { value: "$480,000", label: "Single-family median, Q3 2026" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
