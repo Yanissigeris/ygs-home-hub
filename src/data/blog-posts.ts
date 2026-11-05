@@ -2139,7 +2139,7 @@ Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) e
 - **Demande ciblée** : une partie des acheteurs cherche précisément ce mode de vie
 - **Qualité de vie** : Argument de vente puissant à la revente
 
-**Pour aller plus loin** : [Vivre à Chelsea : nature et communauté](/blogue/vivre-chelsea-style-de-vie) · [Vivre à Aylmer : guide du secteur](/blogue/vivre-aylmer-gatineau-guide-quartier)
+**Pour aller plus loin** : [Chelsea : guide du secteur](/chelsea) · [Vivre à Aylmer : guide du secteur](/blogue/vivre-aylmer-gatineau-guide-quartier)
 
 ## Mon conseil
 

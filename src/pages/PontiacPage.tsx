@@ -19,6 +19,10 @@ const faq = [
     a: "Non, et c'est une confusion très fréquente. La municipalité de Pontiac (secteurs Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et est incluse dans la Région de la capitale nationale. Plus vaste et beaucoup plus à l'ouest (Fort-Coulonge, Shawville, Campbell's Bay), la MRC Pontiac est hors de la RCN et forme un bassin de marché complètement différent. (Source : Wikipedia/Pontiac, Québec)",
   },
   {
+    q: "Que vérifier avant d'acheter une terre agricole à Pontiac?",
+    a: "Si la propriété est en zone agricole, la Loi sur la protection du territoire et des activités agricoles s'applique. Pour morceler la terre ou y faire un usage autre qu'agricole, il faut une autorisation de la CPTAQ. Le financement aussi est différent : La Financière agricole du Québec offre des programmes pour les entreprises agricoles.",
+  },
+  {
     q: "Y a-t-il des écoles à Pontiac?",
     a: "La municipalité de Pontiac a des établissements scolaires primaires sur son territoire. Pour le secondaire et les services éducatifs spécialisés, les familles se dirigent généralement vers Gatineau. Pour les familles anglophones, le Western Quebec School Board a l'école primaire Onslow Elementary à Quyon, sous réserve de l'admissibilité à l'enseignement en anglais. Je vous recommande de vérifier directement auprès du centre de services scolaire et de la commission scolaire concernés pour confirmer la carte scolaire de la propriété qui vous intéresse.",
   },

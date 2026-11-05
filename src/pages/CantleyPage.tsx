@@ -24,8 +24,12 @@ const faq = [
     a: "Oui, la majorité du territoire de Cantley n'est pas desservie par l'aqueduc et les égouts municipaux. Les propriétés fonctionnent avec puits artésien et fosse septique. Ces systèmes fonctionnent bien quand ils sont bien entretenus, mais l'inspection complète avant l'achat est non négociable. Un puits ou une fosse en fin de vie peut représenter une dépense importante. Je m'assure que cet aspect est rigoureusement vérifié pour chaque transaction à Cantley.",
   },
   {
+    q: "Que vérifier avant d'acheter un terrain à Cantley?",
+    a: "D'abord le zonage, auprès de la municipalité : il détermine ce que vous pouvez construire et les usages permis, comme la garde de chevaux. Ensuite le sol, parce qu'une fosse septique se conçoit à partir d'une étude de caractérisation du terrain. Vérifiez enfin l'accès au chemin et la couverture Internet.",
+  },
+  {
     q: "Cantley est-il adapté au télétravail?",
-    a: "Oui, et c'est l'une des raisons pour lesquelles Cantley a attiré beaucoup de nouveaux résidents depuis 2020. La municipalité soutient activement l'expansion de la fibre optique sur son territoire. Pour les gens en télétravail total ou partiel, Cantley offre la vie en nature, à une distance raisonnable de Gatineau et d'Ottawa.",
+    a: "Ça dépend de l'adresse. La couverture Internet varie d'un chemin à l'autre à Cantley. Avant de faire une offre, vérifiez auprès des fournisseurs la vitesse offerte à l'adresse exacte.",
   },
 ];
 

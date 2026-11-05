@@ -24,8 +24,12 @@ const faq = [
     a: "Yes, the majority of Cantley's territory is not served by municipal water and sewer. Properties operate with artesian wells and septic systems. These systems work well when properly maintained, but a thorough inspection before purchase is non-negotiable. A well or septic system at end of life can represent a significant expense. I ensure this aspect is rigorously verified for every transaction in Cantley.",
   },
   {
+    q: "What should you check before buying land in Cantley?",
+    a: "Zoning first, with the municipality: it sets what you can build and which uses are allowed, such as keeping horses. Then the soil, because a septic system is designed from a site characterization study. Finally, check road access and Internet coverage.",
+  },
+  {
     q: "Is Cantley suitable for remote work?",
-    a: "Yes, and it's one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers life in nature, within a reasonable distance of Gatineau and Ottawa.",
+    a: "It depends on the address. Internet coverage varies from one road to the next in Cantley. Before making an offer, check with providers what speed is available at the exact address.",
   },
 ];
 

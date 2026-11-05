@@ -26,7 +26,7 @@ export const neighborhoodBlogPosts: BlogPost[] = [
     categoryEn: "Neighbourhoods",
     featuredImage: heroChelsea,
     publishDate: "2025-09-15",
-    published: true,
+    published: false,
     body: `## Pourquoi acheter à Chelsea?
 
 Chelsea est un village à part en Outaouais. Situé aux portes du parc de la Gatineau, il convient à ceux qui cherchent la nature sans sacrifier l'accès à la ville. Le vieux Chelsea se trouve à environ 15 km du centre-ville d'Ottawa, et [Chelsea](/chelsea) garde pourtant son allure de village.
@@ -97,7 +97,7 @@ Chelsea mainly suits people who put nature and village life first. If that's you
     categoryEn: "Neighbourhoods",
     featuredImage: heroChelsea,
     publishDate: "2025-09-10",
-    published: true,
+    published: false,
     body: `## Le parc de la Gatineau à votre porte
 
 Vivre à Chelsea, c'est avoir le parc de la Gatineau comme cour arrière. Ski de fond en hiver, randonnée au printemps, vélo en été, couleurs d'automne : chaque saison apporte son lot d'activités. Les sentiers sont accessibles à pied depuis plusieurs quartiers du village.
@@ -157,7 +157,7 @@ Chelsea suits families who want to raise kids close to nature. Remote workers an
     featuredImage: heroChelsea,
     publishDate: "2025-09-05",
     updatedDate: "2026-11-04",
-    published: true,
+    published: false,
     body: `## L'état du marché à Chelsea
 
 Le marché immobilier de Chelsea reste actif. Les propriétés sur grands terrains avec accès au parc de la Gatineau attirent particulièrement les acheteurs. Le télétravail a amplifié l'attrait du village auprès des familles d'Ottawa.
@@ -220,7 +220,7 @@ Chelsea is a niche market: properties sell to buyers seeking a specific lifestyl
     categoryEn: "Neighbourhoods",
     featuredImage: heroCantley,
     publishDate: "2025-09-12",
-    published: true,
+    published: false,
     body: `## Pourquoi Cantley pour un grand terrain?
 
 Cantley attire les acheteurs qui veulent un grand terrain en Outaouais. Voisine de [Gatineau](/gatineau), elle offre la vie rurale avec la ville à proximité. L'hôtel de ville est à environ 20 km du centre-ville d'Ottawa. Les terrains varient de 1 à plus de 10 acres, avec des prix encore accessibles comparés à Chelsea.
@@ -279,7 +279,7 @@ Cantley will suit you if you're looking for space and tranquillity without isola
     categoryEn: "Neighbourhoods",
     featuredImage: heroCantley,
     publishDate: "2025-09-08",
-    published: true,
+    published: false,
     body: `## Le charme rural de Cantley
 
 Cantley est un endroit où le temps semble ralentir. Des collines verdoyantes et des chevaux dans les pâturages composent un paysage de campagne québécoise à deux pas de Gatineau. L'hôtel de ville se trouve à environ 20 km du centre-ville d'Ottawa.
@@ -338,7 +338,7 @@ If you want a large lot and tranquillity without complete isolation, Cantley is 
     categoryEn: "Neighbourhoods",
     featuredImage: heroCantley,
     publishDate: "2025-09-01",
-    published: true,
+    published: false,
     body: `## L'attrait de l'espace
 
 Quand une famille cherche de l'espace, c'est souvent le facteur déterminant. À Cantley, les terrains de 2 à 5 acres sont courants, offrant aux enfants un terrain de jeu naturel et aux parents la tranquillité qu'ils cherchent. Comparé aux banlieues de [Gatineau](/quartiers-a-considerer-a-gatineau), le rapport espace/prix est souvent avantageux.
@@ -401,7 +401,7 @@ Since 2020, remote work has made Cantley accessible to a new group of buyers: pr
     categoryEn: "Neighbourhoods",
     featuredImage: heroValDesMonts,
     publishDate: "2025-09-14",
-    published: true,
+    published: false,
     body: `## Val-des-Monts : le paradis des chalets
 
 Avec ses 125 lacs, Val-des-Monts est une destination chalet très connue en Outaouais. Voisine de [Gatineau](/gatineau), la municipalité offre de beaux paysages et un accès direct à la nature. Le village de Perkins est à environ 30 km du centre de Gatineau.
@@ -470,7 +470,7 @@ Val-des-Monts is an investment in your quality of life. Take the time to choose 
     categoryEn: "Neighbourhoods",
     featuredImage: heroValDesMonts,
     publishDate: "2025-09-07",
-    published: true,
+    published: false,
     body: `## Un lac pour chaque profil
 
 Val-des-Monts compte 125 lacs, mais tous ne sont pas égaux. Certains sont grands et développés, d'autres sont petits et sauvages. Votre choix de lac déterminera votre expérience de propriétaire.
@@ -529,7 +529,7 @@ Visit the lake at different times: a lively summer lake can be very isolated in 
     categoryEn: "Neighbourhoods",
     featuredImage: heroValDesMonts,
     publishDate: "2025-08-30",
-    published: true,
+    published: false,
     body: `## La tendance à la résidence permanente
 
 Depuis quelques années, plusieurs propriétaires de chalets à Val-des-Monts ont converti leur propriété en résidence principale. Le télétravail et la recherche de qualité de vie alimentent cette tendance.
@@ -593,7 +593,7 @@ A cottage-to-residence conversion goes well when it's planned. Set aside a budge
     featuredImage: heroMassonAngers,
     publishDate: "2025-09-11",
     updatedDate: "2026-11-04",
-    published: true,
+    published: false,
     body: `## Un secteur en transformation
 
 Masson-Angers change. Ce secteur autrefois rural de Gatineau accueille aujourd'hui plusieurs projets résidentiels. Des maisons neuves s'y construisent et attirent de jeunes familles et des premiers acheteurs.
@@ -653,7 +653,7 @@ Masson-Angers may offer mid-term appreciation potential. Continued development i
     featuredImage: heroMassonAngers,
     publishDate: "2025-09-04",
     updatedDate: "2026-11-04",
-    published: true,
+    published: false,
     body: `## Un rapport qualité-prix avantageux à Gatineau
 
 Pour les premiers acheteurs, le budget est souvent le facteur limitant. Selon l'APCIQ (T3 2026), le secteur Buckingham/Masson-Angers affichait un prix médian unifamilial de 395 000 $, le plus bas des 4 secteurs de Gatineau. Dans le secteur Aylmer, la médiane unifamiliale atteignait 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026. À Masson-Angers, des options comparables coûtent généralement moins cher.
@@ -712,7 +712,7 @@ If you're a first-time buyer with a limited budget, don't overlook Masson-Angers
     categoryEn: "Buyers",
     featuredImage: heroMassonAngers,
     publishDate: "2025-08-28",
-    published: true,
+    published: false,
     body: `## La construction résidentielle à Masson-Angers
 
 Masson-Angers accueille plusieurs projets de construction résidentielle. Des promoteurs y développent de nouveaux quartiers avec des maisons de ville, des unifamiliales et des jumelées.
@@ -776,7 +776,7 @@ Buying new in Masson-Angers is a good option for first-time buyers. Check the bu
     featuredImage: heroPontiac,
     publishDate: "2025-09-13",
     updatedDate: "2026-11-04",
-    published: true,
+    published: false,
     body: `## Le Pontiac : un vaste territoire rural
 
 Le Pontiac reste méconnu de plusieurs acheteurs de l'Outaouais. Ce vaste territoire s'étend le long de la rivière des Outaouais et offre de grands terrains.
@@ -835,7 +835,7 @@ The Pontiac suits buyers looking for space. If the commute doesn't bother you an
     categoryEn: "Neighbourhoods",
     featuredImage: heroPontiac,
     publishDate: "2025-09-06",
-    published: true,
+    published: false,
     body: `## Vivre au bord de la rivière
 
 Le Pontiac longe la rivière des Outaouais sur des dizaines de kilomètres. Plusieurs propriétés offrent un accès direct à la rivière pour le kayak, la pêche, le canot ou simplement le coucher de soleil sur l'eau.
@@ -894,7 +894,7 @@ The Pontiac suits people looking for a slower pace of life and close contact wit
     categoryEn: "Neighbourhoods",
     featuredImage: heroPontiac,
     publishDate: "2025-08-25",
-    published: true,
+    published: false,
     body: `## Le Pontiac agricole
 
 Dans le Pontiac, l'agriculture demeure une activité économique importante. Les terres y sont fertiles et les prix sont accessibles comparés aux régions agricoles du sud du Québec.
@@ -957,7 +957,7 @@ Buying a farm in the Pontiac is a life project. Take time to understand zoning a
     categoryEn: "Neighbourhoods",
     featuredImage: heroCoteDazur,
     publishDate: "2025-09-09",
-    published: true,
+    published: false,
     body: `## Un quartier sous-estimé
 
 Côte-d'Azur est un quartier de Gatineau qui passe souvent sous le radar. Situé dans le secteur Gatineau (ancienne ville), il offre des bungalows et des maisons unifamiliales à des prix accessibles pour la région.
@@ -1016,7 +1016,7 @@ If your budget is limited and you're looking for a stable neighbourhood with all
     categoryEn: "Buyers",
     featuredImage: heroCoteDazur,
     publishDate: "2025-09-02",
-    published: true,
+    published: false,
     body: `## Pourquoi un bungalow à Côte-d'Azur?
 
 Les bungalows de Côte-d'Azur se vendent souvent à des prix accessibles pour Gatineau. Ils représentent une bonne porte d'entrée pour les premiers acheteurs et les investisseurs.
@@ -1075,7 +1075,7 @@ A bungalow in Côte-d'Azur can be a good investment if you're willing to renovat
     categoryEn: "Sellers",
     featuredImage: heroCoteDazur,
     publishDate: "2025-08-22",
-    published: true,
+    published: false,
     body: `## Le potentiel de Côte-d'Azur
 
 Les propriétés de Côte-d'Azur, principalement des bungalows des années 60 et 70, offrent un bon potentiel de rénovation. Avec un prix d'achat bas et des rénovations bien ciblées, vous pouvez ajouter de la valeur.
@@ -1197,7 +1197,7 @@ Limbour offers an excellent compromise between new home quality and more reasona
     categoryEn: "Buyers",
     featuredImage: heroLimbour,
     publishDate: "2025-09-03",
-    published: true,
+    published: false,
     body: `## Le juste milieu de Limbour
 
 Acheter à Limbour, c'est trouver le juste milieu : des maisons assez récentes pour être modernes et bien isolées, sans payer le supplément du neuf. Les propriétés de 5 à 15 ans offrent souvent un bon rapport qualité-prix.
