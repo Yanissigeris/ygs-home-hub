@@ -112,8 +112,12 @@ export const blogPosts: BlogPost[] = [
     ],
     sources: [
       {
-        fr: "Chambre immobilière de l'Outaouais / APCIQ, Statistiques T2 2026, RMR de Gatineau, publiées le 14 juillet 2026",
-        en: "Chambre immobilière de l'Outaouais / QPAREB, Q2 2026 Statistics, Gatineau CMA, published July 14, 2026",
+        fr: "APCIQ, baromètres résidentiels de la RMR de Gatineau, 3e trimestre 2025 au 2e trimestre 2026 (données Centris)",
+        en: "QPAREB, residential barometers for the Gatineau CMA, Q3 2025 to Q2 2026 (Centris data)",
+      },
+      {
+        fr: "APCIQ, baromètre résidentiel de la RMR de Gatineau, 3e trimestre 2026, pour la mise à jour",
+        en: "QPAREB, residential barometer for the Gatineau CMA, Q3 2026, for the update",
       },
     ],
     ctaOverride: {
@@ -154,8 +158,6 @@ Si vous vendez une unifamiliale pour acheter un condo, ce trimestre joue pour vo
 
 **Mise à jour** : au 3e trimestre 2026, l'inventaire a encore monté, avec 2 256 propriétés à vendre (+42 %), et le prix médian d'une unifamiliale a reculé de 3 % à 480 000 $ (APCIQ).
 
-**Sources** : APCIQ, baromètre résidentiel de la RMR de Gatineau, 2e trimestre 2026 et trimestres précédents (données Centris). APCIQ, baromètre du 3e trimestre 2026 pour la mise à jour.
-
 ## FAQ
 
 Q : Est-ce le bon moment pour vendre sa maison à Gatineau?
@@ -195,8 +197,6 @@ If you're selling a single-family home to buy a condo, this quarter works in you
 > [YGS] What I was seeing in summer 2026: the market was still resilient when the home is listed at the right price and well presented. The single-family homes I've sold in Gatineau in 2026 have found buyers quickly when the price matched the market and the prep work was done well. Days on market sit around one month for this segment. For a seller, the market is still favourable when the home is well positioned.
 
 **Update**: in Q3 2026, inventory kept rising, with 2,256 properties for sale (+42%), and the median single-family price fell 3% to $480,000 (QPAREB).
-
-**Sources**: QPAREB, residential barometer for the Gatineau CMA, Q2 2026 and previous quarters (Centris data). QPAREB, Q3 2026 barometer for the update.
 
 ## FAQ
 
@@ -360,36 +360,36 @@ A: The average days on market for a single-family home in the Gatineau CMA is 30
     ctaOverride: {
       eyebrow: "ÉVALUATION PERSONNALISÉE",
       title: "Vous envisagez de vendre dans les six prochains mois?",
-      text: "Je fais une évaluation de votre propriété basée sur les ventes comparables du T1 2026 dans votre secteur, avec un prix précis plutôt qu'une fourchette générique.",
+      text: "Je fais une évaluation de votre propriété basée sur les ventes comparables récentes dans votre secteur, avec un prix précis plutôt qu'une fourchette générique.",
       buttonLabel: "Évaluation gratuite",
       buttonHref: "/evaluation-gratuite-gatineau/",
       eyebrowEn: "PERSONALIZED VALUATION",
       titleEn: "Thinking about selling in the next six months?",
-      textEn: "I provide a property valuation based on comparable sales from Q1 2026 in your area, with a precise figure rather than a generic price range.",
+      textEn: "I provide a property valuation based on recent comparable sales in your area, with a precise figure rather than a generic price range.",
       buttonLabelEn: "Free valuation",
       buttonHrefEn: "/en/home-valuation/",
     },
     titleLines: {
       line1: "Les 3 erreurs de prix",
-      line2: "qui coûtent 15 000 $",
-      line3: "aux vendeurs à Gatineau en 2026",
+      line2: "qui allongent la vente",
+      line3: "à Gatineau",
       line1En: "The 3 pricing mistakes",
-      line2En: "costing $15,000",
-      line3En: "to Gatineau sellers in 2026",
+      line2En: "that slow down a sale",
+      line3En: "in Gatineau",
     },
     heroStats: [
-      { value: "+18 %", valueEn: "+18%", label: "Inscriptions T1 2026", labelEn: "Active listings Q1 2026" },
-      { value: "489 950 $", valueEn: "$489,950", label: "Prix médian unifam.", labelEn: "Median single-family price" },
-      { value: "38 j", valueEn: "38 days", label: "Délai moyen de vente", labelEn: "Average days on market" },
+      { value: "+42 %", valueEn: "+42%", label: "Inscriptions T3 2026", labelEn: "Active listings Q3 2026" },
+      { value: "480 000 $", valueEn: "$480,000", label: "Prix médian unifam. T3", labelEn: "Median single-family price Q3" },
+      { value: "34 j", valueEn: "34 days", label: "Délai moyen unifam. T3", labelEn: "Single-family days on market Q3" },
     ],
     sources: [
       {
-        fr: "Chambre immobilière de l'Outaouais et APCIQ, Baromètre résidentiel T1 2026 (publié 15 avril 2026)",
-        en: "Chambre immobilière de l'Outaouais and QPAREB, Q1 2026 Residential Barometer (published April 15, 2026)",
+        fr: "APCIQ, baromètre résidentiel de la RMR de Gatineau, 3e trimestre 2026 (données Centris)",
+        en: "QPAREB, residential barometer for the Gatineau CMA, Q3 2026 (Centris data)",
       },
       {
-        fr: "Banque du Canada, Annonce du taux directeur, 29 avril 2026",
-        en: "Bank of Canada, Policy rate announcement, April 29, 2026",
+        fr: "Banque du Canada, annonce du taux directeur du 28 octobre 2026",
+        en: "Bank of Canada, policy rate announcement of October 28, 2026",
       },
     ],
     body: `Au 3e trimestre 2026, 2 256 propriétés étaient à vendre sur Centris dans la région métropolitaine de Gatineau, 42 % de plus qu'un an plus tôt. Les ventes, elles, ont reculé de 12 % (APCIQ, données Centris). Avec autant de choix, l'acheteur compare davantage, et trois erreurs de prix allongent la vente plus qu'avant.
@@ -421,8 +421,6 @@ Je regarde donc où se trouvent les seuils de recherche autour de votre valeur a
 Rien de précis, et c'est voulu. Le prix médian de 480 000 $ décrit l'ensemble de la RMR. Votre maison vaut ce que les acheteurs ont payé pour des propriétés comparables dans votre secteur, récemment. À Aylmer, par exemple, le prix médian d'une unifamiliale était de 530 000 $ au même trimestre, et de 395 000 $ dans le secteur Buckingham/Masson-Angers (APCIQ).
 
 > [YGS] Ce que je voyais au printemps 2026 : les acheteurs étaient devenus nettement plus sélectifs sur les unifamiliales et les condos qu'il y a deux ans. Ils avaient plus de choix, donc plus de pouvoir. J'avais un condo en mise en marché où la compétition directe était forte et où les frais de condo dépassaient la moyenne du secteur. On a dû baisser le prix deux fois avant de commencer à générer des visites. Mon client voulait son prix de départ, mais le marché a décidé autrement.
-
-**Sources** : APCIQ, baromètre résidentiel de la RMR de Gatineau, 3e trimestre 2026 (données Centris). Banque du Canada, annonce du taux directeur du 28 octobre 2026.
 
 ## FAQ
 
@@ -470,8 +468,6 @@ So I look at where the search thresholds sit around your value before setting th
 Nothing precise, and that's on purpose. The $480,000 median describes the whole CMA. Your home is worth what buyers recently paid for comparable properties in your area. In Aylmer, for example, the median single-family price was $530,000 in the same quarter, and $395,000 in the Buckingham/Masson-Angers sector (QPAREB).
 
 > [YGS] What I was seeing in spring 2026: buyers had become much more selective on single-family homes and condos than two years earlier. They had more choice, so more power. I had a condo on the market with strong direct competition and condo fees above the area average. We had to lower the price twice before we started getting showings. My client wanted his starting price, but the market decided otherwise.
-
-**Sources**: QPAREB, residential barometer for the Gatineau CMA, Q3 2026 (Centris data). Bank of Canada, policy rate announcement of October 28, 2026.
 
 ## FAQ
 
