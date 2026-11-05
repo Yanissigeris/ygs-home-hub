@@ -41,7 +41,7 @@ const faq = [
   },
   {
     q: "Is Chelsea a good place to invest in real estate long-term?",
-    a: "Yes, with one important caveat. The combination of constrained supply (Gatineau Park), constant Ottawa-side demand, and a community committed to preserving its character has historically supported strong property values through every market cycle. The caveat: Chelsea is a niche market, fewer transactions per year than Aylmer or the Plateau, so liquidity at resale takes longer. For a 10-year hold, the fundamentals are excellent. For a 2-3 year flip, less so.",
+    a: "It can be. Part of the land is in Gatineau Park, which limits new supply. The caveat: Chelsea is a niche market with few comparable sales, so a resale can take longer. It suits a long hold better than a quick flip.",
   },
 ];
 
@@ -96,7 +96,7 @@ const ChelseaPageEn = () => (
     <HeroSection
       overline="CHELSEA · QUÉBEC"
       title="Real estate broker in Chelsea, between nature and Ottawa"
-      subtitle="Chelsea is a distinct municipality north of Gatineau. Sixty percent of its territory is occupied by Gatineau Park. Old Chelsea village is about 15 km from downtown Ottawa by road."
+      subtitle="Chelsea is a distinct municipality north of Gatineau. Part of its territory is occupied by Gatineau Park. Old Chelsea village is about 15 km from downtown Ottawa by road."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
@@ -140,7 +140,7 @@ const ChelseaPageEn = () => (
       <h2 className="mt-3">What you need to know before buying in Chelsea</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buying in Chelsea means buying in a niche market with limited inventory and constant demand. Several important characteristics to understand:
+          Buying in Chelsea means buying in a niche market, with few comparable sales. Several characteristics are important to understand:
         </p>
         <p className="prose-body">
           First, Chelsea's municipal bylaws strictly regulate construction. Lots are subject to MRC des Collines-de-l'Outaouais rules and Gatineau Park protection rules for adjacent properties. Before buying land, or a property you plan to renovate or expand, check the zoning.

@@ -6,7 +6,7 @@ const MassonAngersPageEn = () => (
   <NeighborhoodTemplate
     updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Masson-Angers | Neighbourhood Guide Gatineau"
-    metaDesc="Buy, sell or live in Masson-Angers, Gatineau. Growing family-friendly area with new construction and competitive prices."
+    metaDesc="Buy, sell or live in Masson-Angers, Gatineau. Family-friendly area with new construction and prices below central Gatineau."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Real estate broker in Masson-Angers. Growing family area with new homes.", lat: 45.5328, lng: -75.4170, url: "/en/masson-angers/" }}
     hero={{ overline: "Neighbourhood Guide · Masson-Angers", title: "Buy, Sell or Live in Masson-Angers", subtitle: "Family-friendly area in east Gatineau, with new construction and some of the lowest entry prices in the city. About 36 km from downtown Ottawa and 28 to 33 km from Les Promenades Gatineau by road, depending on the route.", image: heroImg }}

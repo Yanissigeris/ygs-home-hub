@@ -34,7 +34,7 @@ const activites = [
   {
     icon: "⛷️",
     title: "Activités récréatives",
-    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du plus grand réseau de ski de fond de la région. La municipalité bénéficie d'un fort potentiel récréotouristique et travaille activement à l'offrir à ses résidents. (Source : Harmonie Construction, site Municipalité de Cantley)",
+    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du club de ski de fond Nakkertok. La municipalité bénéficie d'un fort potentiel récréotouristique et travaille activement à l'offrir à ses résidents. (Source : Harmonie Construction, site Municipalité de Cantley)",
   },
   {
     icon: "🌊",
@@ -133,7 +133,7 @@ const CantleyPage = () => (
           Les services de proximité sont limités à Cantley même, quelques commerces, une épicerie, des garderies, les trois écoles primaires. Pour les grandes surfaces, les spécialistes médicaux, et le secondaire, on se dirige vers Gatineau : Les Promenades Gatineau sont à environ 14 km de l'hôtel de ville de Cantley par la route.
         </p>
         <p className="prose-body">
-          Le télétravail a profondément changé le profil des acheteurs à Cantley. Des familles qui travaillaient en présentiel à Ottawa ou Gatineau ont pu s'y installer depuis 2020 et y trouvent une qualité de vie qu'elles ne quitteraient plus.
+          Cantley convient aux acheteurs qui peuvent composer avec un trajet en voiture, ou qui travaillent de la maison une partie de la semaine.
         </p>
       </div>
     </ContentBlock>
@@ -144,7 +144,7 @@ const CantleyPage = () => (
         <div className="space-y-4">
           {[
             "Par la route, l'hôtel de ville de Cantley est à environ 20 km du centre-ville d'Ottawa. Population en croissance de 7 % entre 2016 et 2021. (Source : Statistique Canada, Recensement 2021)",
-            "3 écoles primaires francophones sur le territoire, plus le service de transport Transcollines vers Ottawa et Gatineau. (Source : Municipalité de Cantley)",
+            "3 écoles primaires francophones sur le territoire, plus le transport Transcollines vers Gatineau, avec correspondance vers la STO. (Source : Municipalité de Cantley)",
             "Terrains d'au moins 3 700 m² hors du périmètre urbain, ce qui garde le caractère semi-rural du secteur. (Source : règlement de lotissement 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">

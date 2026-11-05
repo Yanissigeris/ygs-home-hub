@@ -20,7 +20,7 @@ const MassonAngersPage = () => (
       "École secondaire Hormisdas-Gamelin à Buckingham (programme d'éducation intermédiaire PEI et option sport)",
       "Accès direct à l'autoroute 50",
       "Rivière du Lièvre et marais aux Grenouillettes, accès à la nature en zone résidentielle",
-      "Marché actif avec plusieurs développements en cours et demande croissante des premiers acheteurs",
+      "Au 3e trimestre 2026, il y avait en moyenne 138 unifamiliales à vendre dans le secteur Buckingham/Masson-Angers, 47 % de plus qu'un an plus tôt (APCIQ)",
     ]}
     profilesTitle="À qui s'adresse Masson-Angers"
     profiles={[

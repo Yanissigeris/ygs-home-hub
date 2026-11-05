@@ -27,7 +27,7 @@ const faq = [
   },
   {
     q: "Vaut-il mieux acheter à Aylmer ou à Ottawa?",
-    a: "C'est une question que j'entends souvent. À budget égal, Aylmer offre généralement plus d'espace et une maison plus récente. Pour les familles qui cherchent la nature, la qualité de vie y est comparable, voire supérieure. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options selon votre situation.",
+    a: "À budget égal, Aylmer offre généralement plus d'espace et une maison plus récente. Pour les familles qui cherchent la nature, la qualité de vie y est comparable. Les impôts fonciers sont différents (Québec vs Ontario), et les règles hypothécaires sont les mêmes. Le principal facteur est souvent la langue scolaire et l'accès au marché du travail. Je peux vous aider à comparer les deux options selon votre situation.",
   },
   {
     q: "Est-ce que vous travaillez spécifiquement à Aylmer?",
@@ -39,7 +39,7 @@ const faq = [
 const subSectors = [
   {
     title: "Vieux-Aylmer",
-    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rues piétonnes, cafés, restaurants. Style de vie plus urbain et walkable.",
+    text: "Le cœur historique d'Aylmer. Propriétés de caractère, rue Principale animée, cafés et restaurants. Style de vie plus urbain et walkable.",
     tag: "Caractère · Walkable",
   },
   {
@@ -49,7 +49,7 @@ const subSectors = [
   },
   {
     title: "Bord de l'eau",
-    text: "Propriétés au bord de la rivière des Outaouais, avec accès nautique et terrains plus grands. Marché de niche, avec peu de propriétés offertes. Cette rareté soutient les valeurs à long terme.",
+    text: "Propriétés au bord de la rivière des Outaouais, avec accès nautique et terrains plus grands. Marché de niche, avec peu de propriétés offertes à la fois.",
     tag: "Prestige · Bord de l'eau",
   },
 ];
@@ -62,17 +62,17 @@ const buyerCols = [
       "Obtenez votre préapprobation hypothécaire",
       "Définissez votre secteur prioritaire (Vieux-Aylmer, Aylmer nord, bord de l'eau)",
       "Vérifiez la proximité des écoles souhaitées",
-      "Comprenez le marché actuel (vendeur = offres rapides)",
+      "Regardez les ventes récentes de votre sous-secteur avant de faire une offre",
       "Prévoyez un budget pour l'inspection",
     ],
   },
   {
     title: "Sur le marché",
     items: [
-      "Les propriétés bien positionnées partent vite dans les secteurs en demande",
+      "Une unifamiliale s'est vendue en 25 jours en moyenne à Aylmer au 3e trimestre 2026, contre 34 pour la région (APCIQ)",
       "Quand une propriété est bien placée, visitez vite",
       "L'inspection pré-offre est une option à considérer",
-      "Prévoyez une marge au-dessus du prix demandé en zone compétitive",
+      "Faites-vous préapprouver avant de visiter",
     ],
   },
   {
@@ -101,7 +101,7 @@ const sellerSteps = [
 const lifestyleCards = [
   { icon: "🌿", title: "Nature à deux pas", text: "Le parc de la Gatineau et la rivière des Outaouais sont tout près, et des pistes cyclables mènent à Ottawa par le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
   { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
-  { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (CS des Portages), écoles anglophones (Western Québec), CPE nombreux. Un atout majeur pour les familles d'Ottawa qui relocalisent." },
+  { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais), écoles anglophones (Western Québec). Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
 
 
@@ -133,7 +133,7 @@ const AylmerPage = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Votre courtier immobilier à Aylmer"
-      subtitle="Aylmer attire beaucoup de familles bilingues, pour ses parcs autant que pour ses maisons récentes. Le marché est compétitif et récompense les acheteurs préparés comme les vendeurs bien positionnés."
+      subtitle="Aylmer est un secteur bilingue, avec des parcs et beaucoup de maisons récentes. Au 3e trimestre 2026, une unifamiliale s'y est vendue en 25 jours en moyenne (APCIQ)."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-maison-aylmer/" }}
       secondaryCta={{ label: "Voir les propriétés à Aylmer →", href: "/proprietes?secteur=aylmer" }}
       heroBgImage={heroImg}
@@ -229,7 +229,7 @@ const AylmerPage = () => (
         <div className="space-y-4">
           <h2>Vendre votre propriété à Aylmer au bon prix</h2>
           <p className="prose-body mt-5">
-            Le marché d'Aylmer favorise les vendeurs bien positionnés. Une propriété correctement évaluée et bien mise en marché attire rapidement les acheteurs sérieux, souvent avec plusieurs offres. Bien positionné veut dire au juste prix et avec une présentation soignée, pas forcément au prix le plus haut.
+            Au 3e trimestre 2026, le prix médian d'une unifamiliale à Aylmer était de 530 000 $, en baisse de 5 %, et les ventes ont reculé de 23 % (APCIQ). Une propriété bien positionnée se vend quand même. Bien positionné veut dire au juste prix et avec une présentation soignée, pas forcément au prix le plus haut.
           </p>
           <p className="prose-body">
             Les acheteurs à Aylmer sont exigeants. Ils comparent activement les propriétés, font des offres rapidement sur les coups de cœur, et passent leur chemin sur les maisons surévaluées ou mal présentées. Un courtier qui connaît les comparables récents par rue, pas juste par secteur, fait une différence réelle sur votre prix final.

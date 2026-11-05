@@ -11,7 +11,7 @@ const LimbourPageEn = () => (
     jsonLd={{ name: "Limbour", description: "Real estate broker in Limbour, Gatineau. Modern family neighbourhood.", lat: 45.4850, lng: -75.6600, url: "/en/limbour/" }}
     hero={{ overline: "Neighbourhood Guide · Limbour", title: "Buy, Sell or Live in Limbour", subtitle: "Modern family neighbourhood in the Gatineau sector, near Hôpital de Gatineau and Highway 50. 2000s-2020s homes, parks, trails, about 12 km from downtown Ottawa.", image: heroImg }}
     trustSpecialty="Limbour specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Limbour neighbourhood, Gatineau", title: "Is Limbour a good neighbourhood for families?", subtitle: "Yes. It's the buyer profile I see most often in Limbour: young families and couples moving up from a condo or a first home. The neighbourhood was planned for them, with loop streets and cul-de-sacs that keep through traffic down, parks and trails built into the development, and both French and English schools within the Gatineau sector. In Ferme Limbour, properties are larger and higher-end." }}
+    lifestyle={{ image: heroImg, imageAlt: "Limbour neighbourhood, Gatineau", title: "Is Limbour a good neighbourhood for families?", subtitle: "Yes. The neighbourhood was planned for families, with loop streets and cul-de-sacs that keep through traffic down, parks and trails built into the development. French elementary schools of the Centre de services scolaire des Draveurs are nearby. In Ferme Limbour, properties are larger and higher-end." }}
     reasons={[
       "Recent homes and modern residential developments (mostly 2000-2020 builds)",
       "Median single-family price of $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Limbour",

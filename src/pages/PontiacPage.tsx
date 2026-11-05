@@ -28,7 +28,7 @@ const faq = [
   },
   {
     q: "Pontiac est-il une bonne option pour les familles anglophones?",
-    a: "Oui. Selon le recensement de 2021, 65,1 % des résidents sont bilingues et 37,1 % ont l'anglais comme langue maternelle. Pour l'école en anglais, le Western Quebec School Board a l'école Onslow Elementary à Quyon, sous réserve de l'admissibilité (certificat d'admissibilité).",
+    a: "Oui. Selon le recensement de 2021, 65,1 % des résidents sont bilingues et 37,1 % ont l'anglais comme langue maternelle. Pour l'école en anglais, le Western Quebec School Board a l'école Onslow Elementary à Quyon, sous réserve de l'admissibilité (certificat d'admissibilité). Des rénovations pourraient déplacer temporairement les élèves à Shawville en 2026-2027 : vérifiez auprès du WQSB.",
   },
 ];
 
@@ -128,7 +128,7 @@ const PontiacPage = () => {
         <p className="text-[0.9rem] text-muted-foreground mb-8">La municipalité de Pontiac regroupe plusieurs communautés distinctes, chacune avec son caractère propre. Voici les principales que je dessers.</p>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { name: "Luskville", text: "La communauté la plus proche de Gatineau et de Chelsea, donc souvent le choix des acheteurs qui veulent rester à distance raisonnable des services urbains. Luskville s'adosse aux collines du parc de la Gatineau, avec des propriétés souvent sur de grands terrains boisés. Le sentier des chutes de Luskville part du village même.", tag: "Proximité Gatineau · Nature · Sentiers" },
+            { name: "Luskville", text: "À environ 21 km du Vieux-Aylmer par la route, Luskville convient aux acheteurs qui veulent rester à distance raisonnable des services urbains. Luskville s'adosse aux collines du parc de la Gatineau, avec des propriétés souvent sur de grands terrains boisés. Le sentier des chutes de Luskville part du village même.", tag: "Proximité Gatineau · Nature · Sentiers" },
             { name: "Breckenridge", text: "Situé en bordure de la rivière des Outaouais, Breckenridge compte des maisons unifamiliales sur grands terrains, souvent avec vue sur la rivière ou accès direct à l'eau. Il convient aux acheteurs qui veulent vivre au bord de l'eau dans un cadre rural.", tag: "Bord de l'eau · Rivière des Outaouais · Rural" },
             { name: "Quyon", text: "Le village historique de Pontiac, fondé en 1848. Quyon est le secteur le plus rural et le plus éloigné de Gatineau. La vie communautaire y reste forte, autour de l'agriculture et des activités locales. Un bon choix pour les acheteurs qui veulent s'éloigner de la ville.", tag: "Village historique · Rural · Communauté forte" },
           ].map((s) => (
@@ -177,7 +177,7 @@ const PontiacPage = () => {
           <h3 className="font-serif text-lg text-foreground">Pontiac en 2026</h3>
           <div className="space-y-3.5">
             {[
-              "Pontiac attire un profil d'acheteur spécifique : familles en télétravail, amoureux de la nature, personnes qui cherchent l'espace vrai dans la RCN. La demande pour ce profil reste constante.",
+              "Au 3e trimestre 2026, il y avait en moyenne 633 unifamiliales à vendre dans la périphérie de Gatineau, qui inclut Pontiac, et une unifamiliale s'y vendait en 46 jours en moyenne (APCIQ).",
               "Au 3e trimestre 2026, 633 unifamiliales étaient en vigueur dans la périphérie de Gatineau, qui inclut Pontiac, soit 23 % de plus qu'un an plus tôt (APCIQ). Les acheteurs y ont plus de choix.",
               "Les transactions à Pontiac sont moins fréquentes que dans les secteurs urbains, ce qui rend l'évaluation plus délicate. Un courtier qui suit ce marché de près vous aide à fixer le bon prix.",
             ].map((p) => (

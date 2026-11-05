@@ -11,7 +11,7 @@ const ValDesMontsPageEn = () => (
     jsonLd={{ name: "Val-des-Monts", description: "Real estate broker in Val-des-Monts. Lakes, cottages and recreational properties.", lat: 45.5000, lng: -75.6500, url: "/en/val-des-monts/" }}
     hero={{ overline: "Neighbourhood Guide · Val-des-Monts", title: "Buy, Sell or Live in Val-des-Monts", subtitle: "Lakes, wooded lots and cottages in an Outaouais cottage-country municipality. 125 lakes according to the municipality, and Perkins village about 30 km from downtown Ottawa by road.", image: heroImg }}
     trustSpecialty="Val-des-Monts specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "Val-des-Monts attracts three types of buyers: those looking for a principal residence in nature, those seeking a four-season cottage for weekends, and those investing in a recreational property. Major lakes like McGregor, Saint-Pierre and Achigan drive the demand." }}
+    lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "In Val-des-Monts, people buy a principal residence in nature or a weekend cottage. Here, lake access and the lake itself weigh heavily on price." }}
     reasons={[
       "125 lakes according to the municipality, many properties with private lake access",
       "Median single-family price of $530,000 in Q3 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts",
@@ -60,7 +60,7 @@ const ValDesMontsPageEn = () => (
     brokerPerspective={{
       observation: "What I look at in Val-des-Monts: lake access, the septic system and the well matter as much as the house. A three-season cottage and a year-round home are not comparable.",
       dataPoint: "In Q3 2026, single-family homes sold in 46 days on average in the Gatineau outskirts, an APCIQ territory that includes Val-des-Monts (Centris data).",
-      takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter a lot. List in spring if you can, and get the property photo-ready the summer before. Be realistic on price for your lake type and access: a property on McGregor doesn't compare to one without lake access. Get a proper valuation before listing."
+      takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter a lot. The right time depends on your property type and the competition on your lake. We look at it in the numbers. Be realistic on price for your lake type and access: a property on McGregor doesn't compare to one without lake access. Get a proper valuation before listing."
     }}
     cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area, let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />

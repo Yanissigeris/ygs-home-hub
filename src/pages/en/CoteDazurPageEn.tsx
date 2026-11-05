@@ -17,20 +17,20 @@ const CoteDazurPageEn = () => (
       "Bungalows, split-levels and renovated homes, with a median single-family price of $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Côte-d'Azur",
       "Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), for comparison",
       "About 11 km from downtown Ottawa by road. Plan extra time at rush hour.",
-      "Local shops and services on Boulevard Maloney: IGA, Metro, Jean Coutu, Tim Hortons, Poulet Rouge and more",
+      "Grocery stores, a pharmacy and restaurants a few minutes away",
       "Western Quebec School Board (English): Greater Gatineau Elementary in the Gatineau sector, high schools in Hull, subject to eligibility",
       "STO public transit with bus lines into Hull and downtown Ottawa",
       "Average time on market of 35 days for single-family homes in the Gatineau sector in Q3 2026 (APCIQ)",
-      "Renovation upside for buyers who modernize a 1960s-1980s property",
+      "A starting point for buyers ready to modernize an older property",
       "Quiet, established neighbourhood",
     ]}
     profilesTitle="Who Côte-d'Azur suits best"
     profiles={[
       { icon: Users, title: "Families", text: "Quiet neighbourhood with schools, parks and services close by." },
       { icon: Home, title: "First-time buyers", text: "In Q3 2026, the median single-family price was $464,900 in APCIQ's Gatineau sector, which includes Côte-d'Azur. A way into a single-family home without moving away from the centre." },
-      { icon: MapPin, title: "Retirees", text: "Single-floor living with no stairs on quiet streets, with services and a pharmacy on Maloney. A good fit for aging in place." },
+      { icon: MapPin, title: "Retirees", text: "Single-floor living with no stairs on quiet streets, with services a few minutes away. A good fit for aging in place." },
       { icon: Coffee, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa looking for more space and a mature neighbourhood at a lower price. Downtown Ottawa is reached via Highway 50 and the Macdonald-Cartier Bridge." },
-      { icon: Coffee, title: "Resale buyers", text: "1960s-1980s bungalows with solid bones: lot, brick, structure. Real appreciation potential with a well-executed kitchen and bathroom renovation." },
+      { icon: Coffee, title: "Resale buyers", text: "Older bungalows, often needing work. I show you the price gap between renovated and unrenovated homes in the area." },
     ]}
     inlineCta={{ text: "Own a property in Côte-d'Azur? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
     faq={{
@@ -41,8 +41,8 @@ const CoteDazurPageEn = () => (
         { q: "How much can I save buying in Côte-d'Azur vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Côte-d'Azur. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
         { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has elementary schools in the Gatineau and Hull sectors (Greater Gatineau Elementary, Pierre Elliott Trudeau Elementary). Its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). To find the school for your address, use the WQSB School Locator on westernquebec.ca. I can also point you to the right contacts during a property visit." },
         { q: "How long does a sale take in Côte-d'Azur?", a: "In Q3 2026, single-family homes in APCIQ's Gatineau sector, which includes Côte-d'Azur, sold in 35 days on average, compared with 34 days for the whole metropolitan area (Centris data). The actual timeline depends mostly on price and how well the home is prepared." },
-        { q: "What local shops and services are accessible?", a: "Boulevard Maloney has the everyday services: IGA and Metro grocery stores, Jean Coutu pharmacy, Tim Hortons, Poulet Rouge restaurant, plus other shops. Depending on your street, it's all a short walk or a quick drive away." },
-        { q: "Will a Côte-d'Azur bungalow need renovations?", a: "Often yes, and that's one of the area's advantages. Properties typically date from the 1960s to 1990s, and many have kept their original kitchen, bathroom or flooring. It's the objection I hear most often during showings, but it's also what allows buyers to enter the market at a fair price with appreciation potential." },
+        { q: "What local shops and services are accessible?", a: "Everyday services, grocery stores, a pharmacy and restaurants, are a few minutes away. Depending on your street, it's a short walk or a quick drive." },
+        { q: "Will a Côte-d'Azur bungalow need renovations?", a: "Often yes, and that's one of the area's advantages. Properties typically date from the 1960s to 1990s, and many have kept their original kitchen, bathroom or flooring. A home that needs work costs less, and I compare with recent sales so the price reflects the work ahead." },
       ]}}
     sectors={{ list: [
       { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb, direct neighbour of Côte-d'Azur" },
