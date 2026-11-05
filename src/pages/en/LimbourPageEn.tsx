@@ -60,7 +60,7 @@ const LimbourPageEn = () => (
       { name: "Masson-Angers", href: "/en/masson-angers/", detail: "Developing area with new builds at accessible prices" },
     ]}}
     related={{ overline: "Also worth reading", title: "Related Pages", pages: [
-      { title: "Buying in Limbour", text: "Recent homes at good prices.", href: "/en/blog/buying-limbour-recent-homes/" },
+      { title: "Côte-d'Azur", text: "The neighbouring area, more established.", href: "/en/cote-dazur/" },
       { title: "First-Time Buyer", text: "Tips for first-time buyers.", href: "/en/first-time-buyer/" },
       { title: "Free Valuation", text: "What's your property worth?", href: "/en/home-valuation/" },
       { title: "Buyer's Guide", text: "Home buying process.", href: "/en/buyer-guide/" },

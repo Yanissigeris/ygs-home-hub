@@ -19,6 +19,10 @@ const faq = [
     a: "No, and this is a very common confusion. The Municipality of Pontiac (Luskville, Breckenridge, Quyon areas) is part of the MRC des Collines-de-l'Outaouais and is included in the National Capital Region. The MRC Pontiac is a much larger and much more western territory (Fort-Coulonge, Shawville, Campbell's Bay), it is outside the NCR and an entirely different market basin.",
   },
   {
+    q: "What should you check before buying farmland in Pontiac?",
+    a: "If the property is in the agricultural zone, Quebec's Act respecting the preservation of agricultural land and agricultural activities applies. Subdividing the land or using it for something other than farming requires CPTAQ authorization. Financing is different too: La Financière agricole du Québec offers programs for farm businesses.",
+  },
+  {
     q: "Are there schools in Pontiac?",
     a: "The Municipality of Pontiac has elementary schools on its territory. For secondary school and specialized educational services, families generally travel toward Gatineau. For anglophone families, the Western Quebec School Board runs Onslow Elementary in Quyon, subject to eligibility for English instruction. I recommend verifying directly with the relevant school boards to confirm the school zone for any property you're considering.",
   },

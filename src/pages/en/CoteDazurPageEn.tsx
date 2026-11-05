@@ -43,6 +43,7 @@ const CoteDazurPageEn = () => (
         { q: "How long does a sale take in Côte-d'Azur?", a: "In Q3 2026, single-family homes in APCIQ's Gatineau sector, which includes Côte-d'Azur, sold in 35 days on average, compared with 34 days for the whole metropolitan area (Centris data). The actual timeline depends mostly on price and how well the home is prepared." },
         { q: "What local shops and services are accessible?", a: "Everyday services, grocery stores, a pharmacy and restaurants, are a few minutes away. Depending on your street, it's a short walk or a quick drive." },
         { q: "Will a Côte-d'Azur bungalow need renovations?", a: "Often yes, and that's one of the area's advantages. Properties typically date from the 1960s to 1990s, and many have kept their original kitchen, bathroom or flooring. A home that needs work costs less, and I compare with recent sales so the price reflects the work ahead." },
+        { q: "What should you look at when inspecting an older bungalow?", a: "The roof, the plumbing (copper or galvanized steel), the electrical panel's amperage, the foundation and the insulation. If you plan to add a basement unit, check with the City of Gatineau what zoning allows before you buy, and plan for a permit." },
       ]}}
     sectors={{ list: [
       { name: "Limbour", href: "/en/limbour/", detail: "Family, parks, modern suburb, direct neighbour of Côte-d'Azur" },

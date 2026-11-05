@@ -21,11 +21,15 @@ const faq = [
   },
   {
     q: "Do Cantley properties have wells and septic systems?",
-    a: "Yes, the majority of Cantley's territory is not served by municipal water and sewer. Properties operate with artesian wells and septic systems. These systems work well when properly maintained, but a thorough inspection before purchase is non-negotiable. A well or septic system at end of life can represent a significant expense. I ensure this aspect is rigorously verified for every transaction in Cantley.",
+    a: "Yes, the majority of Cantley's territory is not served by municipal water and sewer. Properties operate with artesian wells and septic systems. These systems work well when properly maintained, but a thorough inspection before purchase is non-negotiable. A well or septic system at end of life can represent a significant expense.",
+  },
+  {
+    q: "What should you check before buying land in Cantley?",
+    a: "Zoning first, with the municipality: it sets what you can build and which uses are allowed, such as keeping horses. Then the soil, because a septic system is designed from a site characterization study. Finally, check road access and Internet coverage.",
   },
   {
     q: "Is Cantley suitable for remote work?",
-    a: "Yes, and it's one of the reasons Cantley has attracted many new residents since 2020. The municipality actively supports fibre optic expansion across its territory. For full or partial remote workers, Cantley offers life in nature, within a reasonable distance of Gatineau and Ottawa.",
+    a: "It depends on the address. Internet coverage varies from one road to the next in Cantley. Before making an offer, check with providers what speed is available at the exact address.",
   },
 ];
 
@@ -40,11 +44,6 @@ const activities = [
     icon: "🌊",
     title: "Nature and river",
     text: "Cantley is bordered by the Gatineau River to the west. The territory features rolling terrain typical of the Collines-de-l'Outaouais, forests, climbs, panoramic views. Surrounded by mountainous forests, Cantley has officially positioned itself as a municipality of 'welcoming nature.' (Source: Municipality of Cantley)",
-  },
-  {
-    icon: "📡",
-    title: "Fibre optic and remote work",
-    text: "Cantley actively supports fibre optic network expansion across its territory, facilitating remote work. This has been a key factor in attracting families who work partially or entirely from home. (Source: Harmonie Construction/Municipality of Cantley)",
   },
 ];
 
@@ -107,7 +106,7 @@ const CantleyPageEn = () => (
     <section className="section-padding bg-background">
       <div className="section-container">
         <h2 className="mt-3">Life in Cantley, what sets this area apart</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {activities.map((c) => (
             <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
               <span className="text-2xl">{c.icon}</span>

@@ -39,6 +39,7 @@ const CoteDazurPage = () => (
         { q: "Quels commerces et services sont accessibles?", a: "Les services du quotidien, épiceries, pharmacie et restaurants, sont à quelques minutes. Selon votre rue, vous y allez à pied ou en voiture sur une courte distance." },
         { q: "Côte-d'Azur est-il un bon quartier pour les familles?", a: "Oui, le quartier attire principalement des familles qui cherchent un secteur résidentiel mature, des écoles à proximité, des parcs et un voisinage stable." },
         { q: "Faut-il prévoir des rénovations sur un bungalow Côte-d'Azur?", a: "Souvent oui, et c'est même l'un des avantages du secteur. Les propriétés datent généralement des années 60 à 90 et plusieurs ont conservé leur cuisine, salle de bain ou planchers d'origine. Une maison à rénover se paie moins cher, et je compare avec les ventes récentes pour que le prix tienne compte des travaux." },
+        { q: "Que regarder à l'inspection d'un bungalow plus ancien?", a: "La toiture, la plomberie (cuivre ou acier galvanisé), l'ampérage du panneau électrique, la fondation et l'isolation. Si vous pensez aménager un logement au sous-sol, vérifiez avant d'acheter avec la Ville de Gatineau ce que le zonage permet, et prévoyez un permis." },
       ],
     }}
     sectors={{ list: [
@@ -47,9 +48,9 @@ const CoteDazurPage = () => (
       { name: "Hull", href: "/hull/", detail: "Urbain, culture, condos, projet Zibi, accès direct à Ottawa" },
     ]}}
     related={{ pages: [
-      { title: "Côte-d'Azur : quartier abordable", text: "Découvrez ce quartier accessible.", href: "/blogue/cote-dazur-gatineau-quartier-abordable/" },
-      { title: "Acheter un bungalow à Côte-d'Azur", text: "Guide pratique pour acheteurs.", href: "/blogue/acheter-bungalow-cote-dazur-gatineau/" },
-      { title: "Rénover à Côte-d'Azur", text: "Potentiel et conseils.", href: "/blogue/renover-cote-dazur-potentiel/" },
+      { title: "Limbour", text: "Le quartier voisin, plus récent.", href: "/limbour/" },
+      { title: "Premier achat", text: "Mise de fonds, préapprobation et étapes.", href: "/premier-achat-gatineau/" },
+      { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
       { title: "Acheter à Gatineau", text: "Guide acheteur complet.", href: "/acheter-a-gatineau/" },
       { title: "Vendre à Gatineau", text: "Prix et mise en marché.", href: "/vendre-ma-maison-gatineau/" },
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
