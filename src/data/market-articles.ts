@@ -35,11 +35,11 @@ export const marketArticles: MarketArticle[] = [
   {
     slug: "marche-immobilier-gatineau-avril-2026",
     slugEn: "gatineau-real-estate-market-april-2026",
-    title: "Marché immobilier Gatineau avril 2026\u00A0: trois vitesses opposées",
-    titleEn: "Gatineau real estate market, April 2026: three opposing speeds",
-    text: "Plex vendus en 30 jours, condos qui s'accumulent\u00A0: la divergence par type de propriété.",
-    textEn: "Plexes selling in 30 days while condos pile up: the divergence by property type.",
-    date: "2026-05-14",
+    title: "Marché immobilier de Gatineau au 3e trimestre 2026\u00A0: trois segments, trois rythmes",
+    titleEn: "Gatineau real estate market, Q3 2026: three segments, three speeds",
+    text: "Inventaire +42\u00A0%, ventes -12\u00A0%\u00A0: ce qui change pour l'unifamiliale, le condo et le plex.",
+    textEn: "Inventory up 42%, sales down 12%: what changes for single-family homes, condos and plexes.",
+    date: "2026-11-05",
     audiences: ["seller", "investor", "market"],
   },
   {
@@ -49,7 +49,7 @@ export const marketArticles: MarketArticle[] = [
     titleEn: "3 pricing mistakes that slow down a sale in Gatineau",
     text: "Inventaire +42\u00A0% au 3e trimestre 2026\u00A0: les réflexes de prix qui allongent une vente.",
     textEn: "Inventory up 42% in Q3 2026: the pricing reflexes that stretch out a sale.",
-    date: "2026-05-06",
+    date: "2026-11-04",
     audiences: ["seller", "market"],
   },
   {
@@ -65,11 +65,11 @@ export const marketArticles: MarketArticle[] = [
   {
     slug: "plex-gatineau-mars-2026",
     slugEn: "plex-gatineau-march-2026",
-    title: "Plex à Gatineau en mars 2026\u00A0: le marché qui résiste à tout",
-    titleEn: "Plex in Gatineau, March 2026: the market that holds strong",
-    text: "Ventes +19\u00A0%, délai de 23 jours\u00A0: les chiffres du segment plex.",
-    textEn: "Sales up 19%, 23 days on market: the plex segment in numbers.",
-    date: "2026-04-18",
+    title: "Plex à Gatineau au 3e trimestre 2026\u00A0: plus de choix pour les acheteurs",
+    titleEn: "Plexes in Gatineau, Q3 2026: more choice for buyers",
+    text: "Médiane de 617\u00A0500\u00A0$, inventaire +51\u00A0%\u00A0: les chiffres du segment plex.",
+    textEn: "A $617,500 median, inventory up 51%: the plex segment in numbers.",
+    date: "2026-11-05",
     audiences: ["investor", "market"],
   },
 ];

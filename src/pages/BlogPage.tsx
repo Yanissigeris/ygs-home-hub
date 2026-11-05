@@ -161,13 +161,13 @@ const BlogPage = () => {
             {/* Right column — pull-quote + stats */}
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
-                « En avril 2026, un plex se vend en 30 jours pendant que les copropriétés s'accumulent. »
+                « Au 3e trimestre 2026, l'inventaire a monté de 42 % et les ventes ont reculé de 12 %. »
               </blockquote>
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[
-                  { value: "30 j", label: "Délai plex, avril 2026" },
-                  { value: "-34 %", label: "Ventes copro, janv. à avril 2026" },
-                  { value: "510 000 $", label: "Médiane unifamiliale, avril 2026" },
+                  { value: "+42 %", label: "Inscriptions, T3 2026" },
+                  { value: "-12 %", label: "Ventes, T3 2026" },
+                  { value: "480 000 $", label: "Médiane unifamiliale, T3 2026" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.25rem, 2.5vw, 28px)", fontWeight: 400, lineHeight: 1 }}>
