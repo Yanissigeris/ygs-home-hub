@@ -28,7 +28,7 @@ const faq = [
   },
   {
     q: "Is Pontiac a good option for anglophone families?",
-    a: "Yes. According to the 2021 Census, 65.1% of residents are bilingual and 37.1% have English as their mother tongue. For English school, the Western Quebec School Board runs Onslow Elementary in Quyon, subject to eligibility (certificate of eligibility).",
+    a: "Yes. According to the 2021 Census, 65.1% of residents are bilingual and 37.1% have English as their mother tongue. For English school, the Western Quebec School Board runs Onslow Elementary in Quyon, subject to eligibility (certificate of eligibility). Renovations may move students temporarily to Shawville in 2026-2027, so check with the WQSB.",
   },
   {
     q: "What does a Pontiac home cost in 2026?",
@@ -140,7 +140,7 @@ const PontiacPageEn = () => {
         <p className="text-[0.9rem] text-muted-foreground mb-8">The Municipality of Pontiac encompasses several distinct communities, each with its own character. Here are the main ones I serve.</p>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { name: "Luskville", text: "The community closest to Gatineau and Chelsea, so it's often the pick for buyers who want to stay within reasonable distance of urban services. Luskville sits against the hills of Gatineau Park, with properties often on large wooded lots. The Luskville Falls trail starts right from the village.", tag: "Close to Gatineau · Nature · Trails" },
+            { name: "Luskville", text: "About 21 km from Old Aylmer by road, Luskville suits buyers who want to stay within reasonable distance of urban services. Luskville sits against the hills of Gatineau Park, with properties often on large wooded lots. The Luskville Falls trail starts right from the village.", tag: "Close to Gatineau · Nature · Trails" },
             { name: "Breckenridge", text: "Located along the Ottawa River, Breckenridge has single-family homes on large lots, often with river views or direct water access. It suits buyers who want waterfront living in a rural setting.", tag: "Waterfront · Ottawa River · Rural" },
             { name: "Quyon", text: "The historic village of Pontiac, founded in 1848. Quyon is the most rural and most distant community from Gatineau. Community life is still strong here, built around farming and local activities. A good fit for buyers who want to get away from the city.", tag: "Historic village · Rural · Strong community" },
           ].map((s) => (
@@ -189,7 +189,7 @@ const PontiacPageEn = () => {
           <h3 className="font-serif text-lg text-foreground">Pontiac in 2026</h3>
           <div className="space-y-3.5">
             {[
-              "Pontiac attracts a specific buyer profile: remote workers, nature lovers, people seeking real space within the NCR. Demand for this profile remains steady.",
+              "In Q3 2026, an average of 633 single-family homes were for sale in the Gatineau outskirts, which includes Pontiac, and a single-family home sold there in 46 days on average (QPAREB).",
               "In Q3 2026, there were 633 active single-family listings in the Gatineau periphery area, which includes Pontiac, 23% more than a year earlier (APCIQ). Buyers there have more choice.",
               "Transactions in Pontiac are less frequent than in urban areas, which makes valuation harder. A broker who follows this market closely helps you set the right price.",
             ].map((p) => (

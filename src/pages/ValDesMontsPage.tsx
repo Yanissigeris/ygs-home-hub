@@ -11,7 +11,7 @@ const ValDesMontsPage = () => (
     jsonLd={{ name: "Val-des-Monts", description: "Courtier immobilier à Val-des-Monts. Lacs, chalets et propriétés de villégiature en Outaouais.", lat: 45.5000, lng: -75.6500, url: "/val-des-monts/" }}
     hero={{ overline: "Guide de quartier · Val-des-Monts", title: "Vivre, acheter ou vendre à Val-des-Monts", subtitle: "Lacs, terrains boisés et chalets, dans une municipalité de villégiature de l'Outaouais. 125 lacs selon la municipalité, et le village de Perkins à près de 30 km du centre-ville d'Ottawa par la route.", image: heroImg }}
     trustSpecialty="Spécialiste Val-des-Monts et environs"
-    lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi choisir Val-des-Monts", subtitle: "Val-des-Monts attire trois types d'acheteurs : ceux qui cherchent une résidence principale en pleine nature, ceux qui veulent un chalet quatre-saisons pour les fins de semaine, et ceux qui investissent dans une propriété de villégiature. Les grands lacs comme McGregor, Saint-Pierre et Achigan dominent la demande." }}
+    lifestyle={{ image: heroImg, imageAlt: "Lac à Val-des-Monts", title: "Pourquoi choisir Val-des-Monts", subtitle: "À Val-des-Monts, on achète une résidence principale en pleine nature ou un chalet pour les fins de semaine. Ici, l'accès au lac et le lac lui-même pèsent lourd dans le prix." }}
     reasons={[
       "125 lacs selon la municipalité, accès privé à un lac pour beaucoup de propriétés",
       "Prix médian d'une unifamiliale de 530 000 $ au 3e trimestre 2026 dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts",
@@ -59,7 +59,7 @@ const ValDesMontsPage = () => (
     brokerPerspective={{
       observation: "Ce que je regarde à Val-des-Monts : l'accès au lac, l'installation septique et le puits pèsent autant que la maison. Un chalet trois-saisons et une maison habitable à l'année ne se comparent pas.",
       dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 46 jours en moyenne dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts (données Centris).",
-      takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le moment et la préparation comptent énormément. Inscrivez votre propriété au printemps si possible, et préparez-la pour les photos dès l'été précédent. Soyez réaliste sur le prix selon le type de lac et l'accès : une propriété sur McGregor ne se compare pas à une propriété sans accès au lac. Faites évaluer votre propriété avant de l'inscrire."
+      takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le moment et la préparation comptent énormément. Le bon moment dépend de votre type de propriété et de la concurrence sur votre lac. On le regarde dans les chiffres. Soyez réaliste sur le prix selon le type de lac et l'accès : une propriété sur McGregor ne se compare pas à une propriété sans accès au lac. Faites évaluer votre propriété avant de l'inscrire."
     }}
     cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />

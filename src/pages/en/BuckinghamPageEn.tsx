@@ -56,8 +56,8 @@ const subSectors = [
     text: "Closer to central Gatineau, Masson-Angers runs along the Ottawa River. Quiet residential area, with homes on large lots and trails along the river. It attracts families who want to be a bit closer to the city without giving up space.",
   },
   {
-    title: "Angers / L'Ange-Gardien",
-    text: "Transition zone toward rural MRCs. Large properties and wooded lots, for buyers who want space above all. Wells and septic systems are common, so the inspection matters a lot in this area.",
+    title: "Angers and the rural edge",
+    text: "Angers is part of Masson-Angers, in Gatineau. Beyond it, the neighbouring municipality of L'Ange-Gardien is part of the MRC des Collines-de-l'Outaouais. Large properties and wooded lots, for buyers who want space above all. Wells and septic systems are common, so the inspection matters a lot in this area.",
   },
 ];
 
@@ -105,7 +105,7 @@ const BuckinghamPageEn = () => (
       <h2 className="mt-3">Buckingham and Masson-Angers, the facts</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town, Buckingham lived off its paper mills for more than a century. Today it's a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
+          Buckingham is one of the five historic sectors that merged to form the City of Gatineau in 2002. A former industrial town, Buckingham long lived off the forest industry: a sawmill from 1864, then a pulp mill in the 20th century. Today it's a quiet residential area with a strong community identity and a functional downtown. Masson-Angers, closer to central Gatineau, runs along the Ottawa River and offers a semi-rural atmosphere favoured by families.
         </p>
         <p className="prose-body">
           What fundamentally sets this area apart from all others in Gatineau: space. Lots are larger, homes are more spacious, and streets are quieter. This area primarily attracts established families, upsizing buyers who want more room, and, since 2020, remote workers who no longer need to be close to Ottawa daily.

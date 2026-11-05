@@ -80,7 +80,7 @@ const ChelseaPage = () => (
     <HeroSection
       overline="CHELSEA · QUÉBEC"
       title="Courtier immobilier à Chelsea, entre la nature et Ottawa"
-      subtitle="Chelsea est une municipalité distincte au nord de Gatineau. Soixante pour cent de son territoire est occupé par le parc de la Gatineau. Le village d'Old Chelsea est à environ 15 km du centre-ville d'Ottawa par la route."
+      subtitle="Chelsea est une municipalité distincte au nord de Gatineau. Une partie de son territoire est occupée par le parc de la Gatineau. Le village d'Old Chelsea est à environ 15 km du centre-ville d'Ottawa par la route."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=chelsea" }}
       heroBgImage={heroImg}
@@ -98,7 +98,7 @@ const ChelseaPage = () => (
           La population de Chelsea est presque également divisée entre francophones et anglophones, et 70,8 % des résidents parlent le français et l'anglais (Statistique Canada, Recensement 2021).
         </p>
         <p className="prose-body">
-          L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines relie Chelsea à Gatineau, avec correspondance vers le réseau de la STO. Pour les familles, les activités se concentrent au Centre sportif Meredith (hockey, soccer, espaces communautaires). (Source : Wikipedia/Chelsea, Municipalité de Chelsea)
+          L'autoroute 5, dite autoroute de la Gatineau, relie Chelsea directement à Gatineau et Ottawa. Le service de transport en commun Transcollines relie Chelsea à Gatineau, avec correspondance vers le réseau de la STO. Pour les familles, les activités se concentrent au Centre Meredith (hockey, soccer, espaces communautaires). (Source : Wikipedia/Chelsea, Municipalité de Chelsea)
         </p>
       </div>
     </ContentBlock>
@@ -124,7 +124,7 @@ const ChelseaPage = () => (
       <h2 className="mt-3">Ce qu'il faut savoir avant d'acheter à Chelsea</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Acheter à Chelsea, c'est acheter dans un marché de niche avec peu d'inventaire et une demande constante. Plusieurs caractéristiques importantes à comprendre :
+          Acheter à Chelsea, c'est acheter dans un marché de niche, avec peu de ventes comparables. Plusieurs caractéristiques sont importantes à comprendre :
         </p>
         <p className="prose-body">
           Premièrement, les règlements municipaux de Chelsea encadrent strictement la construction. Les terrains sont soumis aux règles de la MRC des Collines-de-l'Outaouais et aux règles de protection du parc de la Gatineau pour les propriétés adjacentes. Avant d'acheter un terrain, ou une propriété à rénover ou à agrandir, vérifiez le zonage.

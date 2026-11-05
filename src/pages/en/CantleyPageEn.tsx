@@ -34,7 +34,7 @@ const activities = [
   {
     icon: "⛷️",
     title: "Recreational activities",
-    text: "Cantley has a golf course, water park, alpine ski centre, campground, and the largest cross-country ski network in the region. The municipality has strong recreational tourism potential and actively works to offer it to residents. (Source: Harmonie Construction, Municipality of Cantley)",
+    text: "Cantley has a golf course, water park, alpine ski centre, campground, and the Nakkertok cross-country ski club. The municipality has strong recreational tourism potential and actively works to offer it to residents. (Source: Harmonie Construction, Municipality of Cantley)",
   },
   {
     icon: "🌊",
@@ -133,7 +133,7 @@ const CantleyPageEn = () => (
           Nearby services are limited within Cantley itself, a few shops, a grocery store, daycares, the three elementary schools. For big-box stores, medical specialists, and high school, you head to Gatineau: Les Promenades Gatineau are about 14 km from Cantley's town hall by road.
         </p>
         <p className="prose-body">
-          Remote work has profoundly changed the buyer profile in Cantley. Families who previously commuted to Ottawa or Gatineau have been able to settle here since 2020 and have found a quality of life they wouldn't trade.
+          Cantley suits buyers who can live with a drive, or who work from home part of the week.
         </p>
       </div>
     </ContentBlock>
@@ -144,7 +144,7 @@ const CantleyPageEn = () => (
         <div className="space-y-4">
           {[
             "By road, Cantley's town hall is about 20 km from downtown Ottawa. Population grew 7% between 2016 and 2021. (Source: Statistics Canada, 2021 Census)",
-            "3 francophone elementary schools on the territory, plus Transcollines transit service to Ottawa and Gatineau. (Source: Municipality of Cantley)",
+            "3 francophone elementary schools on the territory, plus Transcollines transit to Gatineau, with transfers to the STO. (Source: Municipality of Cantley)",
             "Lots of at least 3,700 m² outside the urban perimeter, which keeps the area semi-rural. (Source: subdivision bylaw 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">

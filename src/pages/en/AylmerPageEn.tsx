@@ -39,7 +39,7 @@ const faq = [
 const subSectors = [
   {
     title: "Old Aylmer",
-    text: "The historic heart of Aylmer. Character properties, pedestrian streets, cafés, restaurants. A more urban, walkable lifestyle.",
+    text: "The historic heart of Aylmer. Character properties, a lively Rue Principale, cafés and restaurants. A more urban, walkable lifestyle.",
     tag: "Character · Walkable",
   },
   {
@@ -62,7 +62,7 @@ const buyerCols = [
       "Get your mortgage pre-approval",
       "Define your priority area (Old Aylmer, north Aylmer, waterfront)",
       "Check proximity to your preferred schools",
-      "Understand the current market (seller's = fast offers)",
+      "Look at recent sales in your sub-sector before making an offer",
       "Budget for a home inspection",
     ],
   },
@@ -72,7 +72,7 @@ const buyerCols = [
       "Well-priced properties sell quickly in high-demand areas",
       "A quick visit can make the difference",
       "Pre-offer inspection is an option to consider",
-      "Expect to go above asking price in competitive zones",
+      "Get pre-approved before you visit",
     ],
   },
   {
@@ -101,7 +101,7 @@ const sellerSteps = [
 const lifestyleCards = [
   { icon: "🌿", title: "Nature at your doorstep", text: "Gatineau Park and the Ottawa River are close by, and cycling paths lead to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
   { icon: "🛒", title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
-  { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (CS des Portages), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
+  { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (Centre de services scolaire des Portages-de-l'Outaouais), English schools (Western Québec), numerous daycares. A major asset for Ottawa families relocating." },
 ];
 
 
@@ -132,7 +132,7 @@ const AylmerPageEn = () => (
     <HeroSection
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Your real estate broker in Aylmer"
-      subtitle="Aylmer draws many bilingual families, for its parks as much as for its newer homes. The market is competitive and rewards prepared buyers as much as well-positioned sellers."
+      subtitle="Aylmer is a bilingual sector, with parks and many newer homes. In Q3 2026, a single-family home sold there in 25 days on average (QPAREB)."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
@@ -225,7 +225,7 @@ const AylmerPageEn = () => (
         <div className="space-y-4">
           <h2>Sell your Aylmer property at the right price</h2>
           <p className="prose-body mt-5">
-            The Aylmer market favours well-positioned sellers. A properly priced and well-marketed property attracts serious buyers quickly, often with multiple offers. Well-positioned means the right price and careful presentation, not always the highest asking price.
+            In Q3 2026, the median single-family price in Aylmer was $530,000, down 5%, and single-family sales fell 23% (QPAREB). A well-positioned property still sells. Well-positioned means the right price and careful presentation, not always the highest asking price.
           </p>
           <p className="prose-body">
             Buyers in Aylmer are demanding. They actively compare properties, make quick offers on the ones they love, and move on from overpriced or poorly presented homes. A broker who knows recent comparables by street, not just by area, makes a real difference in your final price.

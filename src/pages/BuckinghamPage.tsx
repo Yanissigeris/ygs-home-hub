@@ -40,8 +40,8 @@ const subSectors = [
     text: "Plus proche du centre de Gatineau, Masson-Angers longe la rivière des Outaouais. Secteur résidentiel calme, avec des maisons sur de grands terrains et des sentiers près de la rivière. Il attire les familles qui veulent se rapprocher un peu de la ville sans perdre d'espace.",
   },
   {
-    title: "Angers / L'Ange-Gardien",
-    text: "Zone de transition vers les MRC rurales. Grandes propriétés et terrains boisés, pour les acheteurs qui veulent de l'espace avant tout. Les puits et les fosses septiques sont fréquents, alors l'inspection compte beaucoup dans ce secteur.",
+    title: "Angers et la limite rurale",
+    text: "Angers fait partie de Masson-Angers, à Gatineau. Au-delà, la municipalité voisine de L'Ange-Gardien fait partie de la MRC des Collines-de-l'Outaouais. Grandes propriétés et terrains boisés, pour les acheteurs qui veulent de l'espace avant tout. Les puits et les fosses septiques sont fréquents, alors l'inspection compte beaucoup dans ce secteur.",
   },
 ];
 
@@ -89,7 +89,7 @@ const BuckinghamPage = () => (
       <h2 className="mt-3">Buckingham et Masson-Angers, les faits</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle, Buckingham a vécu des papetières pendant plus d'un siècle. C'est aujourd'hui un secteur résidentiel tranquille, avec une forte identité communautaire et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
+          Buckingham est l'un des cinq secteurs historiques qui ont fusionné pour former la ville de Gatineau en 2002. Ancienne ville industrielle, Buckingham a longtemps vécu de l'industrie forestière : une scierie dès 1864, puis une usine de pâte à papier au 20e siècle. C'est aujourd'hui un secteur résidentiel tranquille, avec une forte identité communautaire et un centre-ville fonctionnel. Masson-Angers, plus proche du centre de Gatineau, longe la rivière des Outaouais et offre une ambiance semi-rurale appréciée des familles.
         </p>
         <p className="prose-body">
           Ce qui distingue fondamentalement ce secteur de tous les autres à Gatineau : l'espace. Les terrains sont plus grands, les maisons sont plus spacieuses, et les rues sont plus calmes. Ce secteur attire principalement des familles établies, des acheteurs en upsizing qui veulent plus d'espace, et, depuis 2020, des travailleurs en télétravail qui n'ont plus besoin d'être proches d'Ottawa au quotidien.
