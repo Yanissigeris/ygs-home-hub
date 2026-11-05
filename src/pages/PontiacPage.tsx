@@ -195,7 +195,7 @@ const PontiacPage = () => {
       </ContentBlock>
 
       {/* SECTION 7 — FAQ */}
-      <FAQSection title="Questions fréquentes sur Pontiac, Outaouais" items={faq} />
+      <FAQSection title="Questions fréquentes sur Pontiac, Outaouais" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
       {/* Guide CTA */}
       <GuideInlineCTA

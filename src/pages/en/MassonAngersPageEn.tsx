@@ -4,17 +4,18 @@ import heroImg from "@/assets/hero-masson-angers-gen.webp";
 
 const MassonAngersPageEn = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Masson-Angers | Neighbourhood Guide Gatineau"
     metaDesc="Buy, sell or live in Masson-Angers, Gatineau. Growing family-friendly area with new construction and competitive prices."
     ogImage="https://yanisgauthier.com/og/og-masson-angers.jpg"
     jsonLd={{ name: "Masson-Angers", description: "Real estate broker in Masson-Angers. Growing family area with new homes.", lat: 45.5328, lng: -75.4170, url: "/en/masson-angers/" }}
     hero={{ overline: "Neighbourhood Guide · Masson-Angers", title: "Buy, Sell or Live in Masson-Angers", subtitle: "Family-friendly area in east Gatineau, with new construction and some of the lowest entry prices in the city. About 36 km from downtown Ottawa and 28 to 33 km from Les Promenades Gatineau by road, depending on the route.", image: heroImg }}
     trustSpecialty="Masson-Angers specialist"
-    lifestyle={{ image: heroImg, imageAlt: "Masson-Angers residential area", title: "Why buyers choose Masson-Angers", subtitle: "Masson-Angers mainly attracts young families and first-time buyers looking for a new or recent home without paying Hull or Aylmer prices. The area has two distinct sub-sectors, Masson and Angers, with several active residential developments and builders delivering new homes in 2026. On price, the Buckingham/Masson-Angers sector has the lowest single-family median in the city (APCIQ, Q3 2026), with a longer commute to downtown Ottawa as the trade-off." }}
+    lifestyle={{ image: heroImg, imageAlt: "Masson-Angers residential area", title: "Why buyers choose Masson-Angers", subtitle: "The area has two distinct sub-sectors, Masson and Angers, with both new construction and resale homes. On price, the Buckingham/Masson-Angers sector has the lowest single-family median in the city, at $395,000 (APCIQ, Q3 2026), with a longer commute to downtown Ottawa as the trade-off." }}
     reasons={[
       "Median single-family price of $395,000 in Q3 2026 in the Buckingham/Masson-Angers sector, the lowest of the four sectors of the city of Gatineau (APCIQ)",
       "Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), for comparison",
-      "Active new construction: multiple builders delivering in 2026 with spring possession available",
+      "New builds and resales: I compare each one with properties of the same type",
       "Two distinct sub-sectors: Masson (west, more mature) and Angers (east, more developing)",
       "French elementary schools (Centre de services scolaire au Cœur-des-Vallées): Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur, St-Jean-de-Brébeuf",
       "Hormisdas-Gamelin secondary school in Buckingham (IB Middle Years Programme and sport option)",
@@ -37,7 +38,7 @@ const MassonAngersPageEn = () => (
       { q: "What is the price of a home in Masson-Angers in 2026?", a: "Masson-Angers is part of APCIQ's Buckingham/Masson-Angers sector. In Q3 2026, the median single-family price there was $395,000, the lowest of the four sectors of the city of Gatineau (Centris data). Prices then vary with type, year of construction and sub-sector: I'll show you the recent comparable sales." },
       { q: "How much can I save buying in Masson-Angers vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $395,000 in Q3 2026 in APCIQ's Buckingham/Masson-Angers sector. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
       { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has Buckingham Elementary in Buckingham and Greater Gatineau Elementary in the Gatineau sector. Its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). Plan for school transportation, and use the WQSB School Locator on westernquebec.ca to find the school for your address." },
-      { q: "Are there new homes in Masson-Angers?", a: "Yes, several builders are active in Masson-Angers. Possession dates vary from one project to another: I check the available projects with you." },
+      { q: "Are there new homes in Masson-Angers?", a: "Yes, there is new construction in Masson-Angers. Possession dates vary from one project to another: I check the available projects with you." },
       { q: "What schools serve Masson-Angers?", a: "Four French elementary schools from the Centre de services scolaire au Cœur-des-Vallées: Aux Quatre-Vents, du Ruisseau, du Sacré-Cœur and St-Jean-de-Brébeuf. For high school, École secondaire Hormisdas-Gamelin in Buckingham, which offers the IB Middle Years Programme (PEI) and a sport option." },
       { q: "What are the sub-sectors of Masson-Angers?", a: "The area splits into two: Masson (west side, more mature, near the Rivière du Lièvre) and Angers (east side, more developing with recent new construction). Prices and inventory differ from one sub-sector to the other." },
     ]}}

@@ -115,7 +115,7 @@ const HullPageEn = () => (
           The Zibi project is currently transforming Île de Hull and Chaudière Island. This 34-acre development built on both banks of the Ottawa River, in both Gatineau and Ottawa, includes residential condos, office space, retail and public spaces. The federal government calls it the National Capital Region's first net-zero community, and Zibi is building a zero-carbon district heating and cooling system. The first phases are occupied. (Source: zibi.ca, Natural Resources Canada, 2021)
         </p>
         <p className="prose-body">
-          For investors, Hull holds the majority of Gatineau's plex inventory. Rental demand has dropped since COVID, so I start from the rents in place before talking about returns.
+          For investors, Hull remains a plex sector: 106 plexes sold there over the last 12 months (QPAREB, Q3 2026). Rental demand has dropped since COVID, so I start from the rents in place before talking about returns.
         </p>
       </div>
     </ContentBlock>
@@ -143,7 +143,10 @@ const HullPageEn = () => (
           Hull has long drawn multiplex investors, because of its residential density and its proximity to Ottawa. The rental market has cooled since COVID.
         </p>
         <p className="prose-body">
-          According to CMHC, the rental vacancy rate in the Gatineau area rose from 1.9% in October 2024 to 3.8% in October 2025. So return analysis matters even more.
+          According to CMHC, the rental vacancy rate in the Gatineau area rose from 1.9% in October 2024 to 3.8% in October 2025. The increase was most pronounced in the Hull and Gatineau zones. So return analysis matters even more.
+        </p>
+        <p className="prose-body">
+          Over the last 12 months, the median plex price in Hull was $597,750, up 6% (QPAREB, Q3 2026). In the deals I handle, plexes with below-market rents sell faster. A poorly rented or poorly maintained plex stays on the market longer, and its price gets negotiated. I'm also seeing more owner-occupants buying a duplex or triplex to live in.
         </p>
         <p className="prose-body">
           I'm a real estate investor myself, my analysis is honest, not a sales pitch.
@@ -195,7 +198,7 @@ const HullPageEn = () => (
     </ContentBlock>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Frequently asked questions about Hull, Gatineau" items={faq} />
+    <FAQSection title="Frequently asked questions about Hull, Gatineau" items={faq} updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

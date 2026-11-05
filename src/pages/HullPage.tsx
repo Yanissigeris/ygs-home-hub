@@ -99,7 +99,7 @@ const HullPage = () => (
           Le projet Zibi transforme actuellement l'île de Hull et l'île Chaudière. Ce développement de 34 acres s'étend sur les deux rives de la rivière des Outaouais, à Gatineau et à Ottawa. Il comprend des condos résidentiels, des espaces de bureaux, des commerces et des espaces publics. Le gouvernement fédéral le présente comme la première collectivité nette zéro de la région de la capitale nationale, et Zibi y construit un réseau de chauffage et de climatisation à zéro carbone. Les premières phases sont habitées. (Source : zibi.ca, Ressources naturelles Canada, 2021)
         </p>
         <p className="prose-body">
-          Pour les investisseurs, Hull concentre la majorité du parc de plexs de Gatineau. La demande locative a baissé depuis la COVID, alors je pars des loyers en place avant de parler de rendement.
+          Pour les investisseurs, Hull reste un secteur de plex : 106 s'y sont vendus au cours des 12 derniers mois (APCIQ, 3e trimestre 2026). La demande locative a baissé depuis la COVID, alors je pars des loyers en place avant de parler de rendement.
         </p>
       </div>
     </ContentBlock>
@@ -127,7 +127,10 @@ const HullPage = () => (
           Hull attire depuis longtemps les investisseurs en multiplex, à cause de la densité résidentielle et de la proximité d'Ottawa. Le marché locatif s'est calmé depuis la COVID.
         </p>
         <p className="prose-body">
-          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. L'analyse de rendement compte donc encore plus.
+          Selon la SCHL, le taux d'inoccupation des logements locatifs de la région de Gatineau est passé de 1,9 % en octobre 2024 à 3,8 % en octobre 2025. La hausse a été la plus marquée dans les zones de Hull et de Gatineau. L'analyse de rendement compte donc encore plus.
+        </p>
+        <p className="prose-body">
+          Sur les 12 derniers mois, le prix médian d'un plex à Hull était de 597 750 $, en hausse de 6 % (APCIQ, 3e trimestre 2026). Dans mes dossiers, les plex dont les loyers sont sous le marché partent plus vite. Un plex mal loué ou mal entretenu reste plus longtemps sur le marché, et son prix se négocie. Je vois aussi plus de propriétaires-occupants qui achètent un duplex ou un triplex pour y vivre.
         </p>
         <p className="prose-body">
           Je suis investisseur immobilier moi-même, mon analyse est honnête, pas un argumentaire de vente.
@@ -163,7 +166,7 @@ const HullPage = () => (
     </section>
 
     {/* ═══ FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Hull, Gatineau" items={faq} />
+    <FAQSection title="Questions fréquentes sur Hull, Gatineau" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ RELATED ═══ */}
     <RelatedPages

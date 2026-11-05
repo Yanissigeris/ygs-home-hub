@@ -275,7 +275,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 6 — FAQ ═══ */}
-    <FAQSection title="Frequently asked questions about Aylmer" items={faq} />
+    <FAQSection title="Frequently asked questions about Aylmer" items={faq} updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }} />
 
     {/* ═══ SECTION 7 — FINAL CTA ═══ */}
     <CTASection

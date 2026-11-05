@@ -6,6 +6,7 @@ import heroImg from "@/assets/hero-plateau.webp";
 // seoTitle / metaDesc below are fallbacks only and are kept identical in intent.
 const PlateauPage = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }}
     seoTitle="Courtier immobilier Plateau · Gatineau | Yanis Gauthier"
     metaDesc="Yanis Gauthier-Sigeris, courtier immobilier RE/MAX, plus de 300 transactions en Outaouais. Acheter ou vendre dans le Plateau à Gatineau, évaluation gratuite."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"
@@ -49,9 +50,9 @@ const PlateauPage = () => (
     inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
     brokerPerspective={{
       title: "Mon regard sur le Plateau",
-      observation: "En février 2026, j'ai aidé un premier acheteur à acheter sa propriété dans le Plateau. J'ai conclu d'autres transactions dans le quartier, dont une vente rapide rue du Chinook, côté Hull.",
+      observation: "En février 2026, j'ai aidé un premier acheteur à acheter sa propriété dans le Plateau. J'ai conclu d'autres transactions dans le quartier, dont une vente rapide rue du Chinook, côté Hull. Au début de 2026, les propriétaires d'un triplex du Plateau m'ont demandé comment obtenir le maximum, vite. Avec une mise en marché soignée et le bon prix dès le départ, ils ont accepté une offre en une journée, au prix exact demandé.",
       dataPoint: "7, rue du Chinook : vendue en une semaine, à 945 000 $ (avril 2026).",
-      takeaway: "Mon conseil aux propriétaires du Plateau : votre prix se décide avec les ventes récentes de votre côté du quartier et de votre rue, pas avec une moyenne de tout le secteur.",
+      takeaway: "Mon conseil aux propriétaires du Plateau : le bon prix est primordial. Il se décide avec les ventes récentes de votre côté du quartier et de votre rue, pas avec une moyenne de tout le secteur.",
     }}
     faq={{
       title: "Questions sur le Plateau",

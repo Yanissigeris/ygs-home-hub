@@ -207,7 +207,7 @@ const PontiacPageEn = () => {
       </ContentBlock>
 
       {/* SECTION 7 — FAQ */}
-      <FAQSection title="Frequently asked questions about Pontiac, Outaouais" items={faq} />
+      <FAQSection title="Frequently asked questions about Pontiac, Outaouais" items={faq} updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }} />
 
       {/* Guide CTA */}
       <GuideInlineCTA

@@ -280,7 +280,7 @@ const AylmerPage = () => (
     </section>
 
     {/* ═══ SECTION 6 — FAQ ═══ */}
-    <FAQSection title="Questions fréquentes sur Aylmer" items={faq} />
+    <FAQSection title="Questions fréquentes sur Aylmer" items={faq} updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }} />
 
     {/* ═══ SECTION 7 — CTA FINAL ═══ */}
     <CTASection

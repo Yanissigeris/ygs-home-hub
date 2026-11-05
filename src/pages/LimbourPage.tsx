@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPage = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }}
     seoTitle="Limbour Gatineau | Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre dans le quartier Limbour à Gatineau. Secteur familial moderne avec parcs, écoles et accès rapide à Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"

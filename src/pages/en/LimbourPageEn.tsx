@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-limbour.webp";
 
 const LimbourPageEn = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Market figures: QPAREB, Q3 2026" }}
     seoTitle="Limbour Gatineau | Neighbourhood Guide"
     metaDesc="Buy, sell or live in Limbour, Gatineau. Modern family neighbourhood with parks, schools and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg"

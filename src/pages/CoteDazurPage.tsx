@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-cote-dazur.webp";
 
 const CoteDazurPage = () => (
   <NeighborhoodTemplate
+    updated={{ date: "2026-11-04", source: "Chiffres de marché : APCIQ, 3e trimestre 2026" }}
     seoTitle="Côte-d'Azur Gatineau, Immobilier et guide de quartier"
     metaDesc="Vivre, acheter ou vendre dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial, bungalows, proximité services et accès Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
