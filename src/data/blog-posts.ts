@@ -1200,76 +1200,85 @@ The right neighbourhood depends on your priorities: proximity to work, schools, 
     slugEn: "military-posting-gatineau",
     title: "Mutation militaire à Gatineau : ce qu'il faut savoir",
     titleEn: "Military Posting to Gatineau: What You Need to Know",
-    seoTitle: "Mutation militaire Gatineau · Guide IRP/BGRS | YGS",
-    seoTitleEn: "Military Posting Gatineau · IRP/BGRS Guide | YGS",
-    metaDescription: "Guide pour les militaires affectés à Gatineau : programme IRP/BGRS, marché local, garderies et conseils pratiques.",
-    metaDescriptionEn: "A guide for military members posted to Gatineau: IRP/BGRS program, local market, childcare and practical tips.",
-    excerpt: "Le programme IRP/BGRS et des conseils pratiques pour les membres des Forces mutés en Outaouais.",
-    excerptEn: "The IRP/BGRS program and practical tips for CAF members posted to the Outaouais.",
+    seoTitle: "Mutation militaire Gatineau · Guide DRFAC et SIRVA | YGS",
+    seoTitleEn: "Military Posting Gatineau · CAFRD and SIRVA Guide | YGS",
+    metaDescription: "Membres des FAC affectés à Gatineau : la directive DRFAC, SIRVA (anciennement BGRS), le voyage de recherche d'un domicile et le marché local.",
+    metaDescriptionEn: "CAF members posted to Gatineau: the CAFRD directive, SIRVA (formerly BGRS), the House Hunting Trip and the local market.",
+    excerpt: "La directive DRFAC, SIRVA (anciennement BGRS) et des conseils pratiques pour les membres des Forces affectés en Outaouais.",
+    excerptEn: "The CAFRD directive, SIRVA (formerly BGRS) and practical tips for CAF members posted to the Outaouais.",
     category: "Militaire",
     categoryEn: "Military",
     publishDate: "2025-05-01",
+    updatedDate: "2026-11-05",
     published: true,
-    body: `## Mutation militaire à Gatineau : ce que vous devez savoir
+    body: `## Mutation militaire à Gatineau : ce que vous devez savoir
 
-Si vous êtes un membre des [Forces armées canadiennes](/militaire-gatineau) affecté à la région de Gatineau, ce guide vous aidera à préparer votre [relocalisation immobilière](/relocalisation-militaire-gatineau).
+Si vous êtes membre des [Forces armées canadiennes](/militaire-gatineau) et que vous êtes affecté dans la région de Gatineau, voici les points à préparer pour votre [relocalisation immobilière](/relocalisation-militaire-gatineau).
 
-### Le programme IRP/BGRS
+### La directive qui s'applique
 
-Le Programme de réinstallation intégrée (PRI) couvre plusieurs aspects de votre déménagement :
-- Frais de déplacement pour visites de recherche de logement
-- Frais juridiques et de clôture pour l'achat/vente
-- Assistance pour la vente de votre propriété actuelle
+Depuis le 1er avril 2026, c'est la Directive sur la réinstallation des Forces armées canadiennes (DRFAC) qui s'applique. Le fournisseur de services de réinstallation est SIRVA. Lisez la directive et votre lettre d'affectation avant de signer quoi que ce soit, parce que les montants et les conditions en dépendent.
 
-### Pourquoi Gatineau?
+### Ce que la directive peut couvrir
 
-Gatineau offre plusieurs avantages pour les militaires :
-- **Proximité des bases** : Accès facile aux installations militaires de la région de la capitale nationale.
-- **Coût de la vie** : Plus abordable qu'Ottawa pour des propriétés comparables.
-- **Garderies** : Accès au réseau de garderies subventionnées du Québec.
-- **Qualité de vie** : Nature, parcs, espaces verts et communauté accueillante.
+Selon le chapitre 8 de la directive, un membre peut être remboursé, à partir du compte de base, pour la commission de courtage à la vente de sa maison, selon les taux négociés. Les frais juridiques et les débours liés à l'achat, y compris la taxe de bienvenue, sont aussi visés. Confirmez votre situation avec SIRVA avant de vous engager.
+
+### Le voyage de recherche d'un domicile
+
+La directive prévoit un voyage de recherche d'un domicile (VRD). Préparez-le : une préapprobation hypothécaire, une liste de secteurs à visiter et des visites planifiées d'avance. Quelques jours passent vite quand on visite une ville qu'on ne connaît pas.
+
+### Où regarder à Gatineau?
+
+Tout dépend de votre lieu de travail et de la langue d'enseignement que vous voulez pour vos enfants. Gatineau compte des écoles francophones et des écoles anglophones, ces dernières selon l'admissibilité. Le prix médian d'une unifamiliale était de 471 000 $ dans la Ville de Gatineau au 3e trimestre 2026 (APCIQ).
 
 ### Conseils pratiques
 
-1. **Commencez tôt** : Dès la confirmation de votre mutation, contactez un courtier local.
-2. **Visite de recherche** : Profitez de votre visite DRA pour parcourir les quartiers.
-3. **Documentation** : Gardez tous vos reçus et documents pour le remboursement IRP.
-4. **Calendrier** : Le marché est plus concurrentiel au printemps. Planifiez en conséquence.
-
-**Pour aller plus loin** : [Déménager d'Ottawa à Gatineau : ce qu'il faut savoir](/blogue/demenager-ottawa-gatineau-guide) · [Choisir un quartier familial à Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)
+Commencez tôt, dès la confirmation de votre affectation, et gardez tous vos reçus pour les réclamations. Prévoyez aussi le calendrier : la date de prise de possession doit cadrer avec votre date de rapport.
 
 ### Mon accompagnement des familles militaires
 
-J'accompagne régulièrement des familles militaires dans leur relocalisation à Gatineau. Comme je connais le processus IRP, je veille à ce que la transition se fasse en douceur. Pour préparer votre dossier, je vous offre une [évaluation gratuite](/evaluation-gratuite-gatineau) de votre situation.`,
+Je travaille avec des familles militaires depuis 2017. Les étapes d'une réinstallation, je les connais, et je planifie la transaction avec vous en fonction de votre date d'affectation. Pour une première discussion, [écrivez-moi](/contact-yanis).
+
+**Sources** : Défense nationale, Directive sur la réinstallation des Forces armées canadiennes (DRFAC), en vigueur le 1er avril 2026, chapitres 4 et 8. Défense nationale, recours et assistance avec SIRVA. APCIQ, baromètre du 3e trimestre 2026.
+
+
+---
+
+*Yanis Gauthier-Sigeris, courtier immobilier RE/MAX en Outaouais depuis plus de 9 ans. Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `## Military Posting to Gatineau: What You Need to Know
 
-If you're a Canadian Armed Forces member posted to the Gatineau area, this guide will help you prepare for your real estate relocation.
+If you're a [Canadian Armed Forces](/en/military) member posted to the Gatineau area, here's what to prepare for your [real estate relocation](/en/military-relocation).
 
-### The IRP/BGRS Program
+### The directive that applies
 
-The Integrated Relocation Program (IRP) covers several aspects of your move:
-- Travel costs for house-hunting trips
-- Legal and closing fees for buying/selling
-- Assistance with selling your current property
+Since April 1, 2026, the Canadian Armed Forces Relocation Directive (CAFRD) applies. The relocation service provider is SIRVA. Read the directive and your posting message before signing anything, because amounts and conditions depend on them.
 
-### Why Gatineau?
+### What the directive can cover
 
-Gatineau offers several advantages for military members:
-- **Base proximity**: Easy access to military installations in the National Capital Region.
-- **Cost of living**: More affordable than Ottawa for comparable properties.
-- **Childcare**: Access to Quebec's subsidized daycare network.
-- **Quality of life**: Nature, parks, green spaces, and a welcoming community.
+According to chapter 8 of the directive, a member can be reimbursed from the Core Account for the real estate commission on the sale of their home, at the negotiated rates. Legal fees and disbursements on the purchase, including land transfer tax or welcome tax, are also covered. Confirm your situation with SIRVA before committing.
 
-### Practical Tips
+### The House Hunting Trip
 
-1. **Start early**: As soon as your posting is confirmed, contact a local broker.
-2. **House-hunting trip**: Use your DIT visit to tour neighbourhoods.
-3. **Documentation**: Keep all receipts and documents for IRP reimbursement.
-4. **Timing**: The market is more competitive in spring. Plan accordingly.
+A House Hunting Trip (HHT) is provided for in the directive. Prepare for it: a mortgage pre-approval, a list of areas to visit and showings booked in advance. A few days go by fast when you're visiting a city you don't know.
 
-### How I Help Military Families
+### Where should you look in Gatineau?
 
-I regularly help military families with their relocation to Gatineau. Since I know the IRP process, I make sure the transition goes smoothly.`,
+It all depends on where you'll work and the language of instruction you want for your children. Gatineau has French-language schools and English-language schools, the latter subject to eligibility. The median single-family price was $471,000 in the City of Gatineau in Q3 2026 (QPAREB).
+
+### Practical tips
+
+Start early, as soon as your posting is confirmed, and keep all your receipts for claims. Plan the timeline too: the possession date has to fit your reporting date.
+
+### How I work with military families
+
+I've worked with military families since 2017. I know the steps of a relocation, and I plan the transaction with you around your posting date. For a first conversation, [get in touch](/en/contact).
+
+**Sources**: National Defence, Canadian Armed Forces Relocation Directive (CAFRD), in force April 1, 2026, chapters 4 and 8. National Defence, relocation assistance and recourse with SIRVA. QPAREB, Q3 2026 barometer.
+
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX real estate broker in the Outaouais for over 9 years. Over 300 completed transactions in the region.*`,
   },
   {
     slug: "frais-notaire-achat-maison-gatineau",
@@ -1286,97 +1295,90 @@ I regularly help military families with their relocation to Gatineau. Since I kn
     category: "Acheteurs",
     categoryEn: "Buyers",
     publishDate: "2025-02-20",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Frais de notaire et frais de clôture à Gatineau
 
-Acheter une maison, c'est excitant, mais les frais supplémentaires peuvent surprendre si vous ne les prévoyez pas. Ce guide fait le portrait des coûts à prévoir au-delà du prix d'achat à Gatineau et en Outaouais.
+Au-delà du prix d'achat et de la mise de fonds, il faut prévoir les frais de clôture. La SCHL les estime entre 1,5 % et 4 % du prix d'achat. Voici ce qu'ils comprennent à Gatineau.
 
 ### Les frais de notaire
 
-Au Québec, c'est un notaire (et non un avocat) qui finalise la transaction immobilière. Les honoraires du notaire varient généralement entre **1 200 $ et 2 000 $**, selon la complexité du dossier.
-
-Le notaire s'occupe de :
-- Vérifier les titres de propriété
-- Enregistrer la vente au Registre foncier
-- Préparer l'acte de vente et l'acte hypothécaire
-- Ajuster les taxes municipales et scolaires
+Au Québec, c'est un notaire qui finalise la vente. Il vérifie les titres, prépare l'acte de vente et l'acte hypothécaire, inscrit la vente au registre foncier et fait les ajustements de taxes municipales et scolaires. Ses honoraires varient selon le notaire et la complexité du dossier : demandez une soumission écrite à deux notaires.
 
 ### La taxe de bienvenue (droits de mutation)
 
-La taxe de bienvenue s'applique à presque tout achat à Gatineau. Elle se calcule par tranches, selon la grille 2026 de la Ville de Gatineau :
-- **0,5 %** sur les premiers 62 900 $
-- **1,0 %** de 62 900 $ à 315 000 $
-- **1,5 %** de 315 000 $ à 500 000 $
-- **3,0 %** au-delà de 500 000 $
+Elle se paie une seule fois, après l'achat. Depuis le 25 février 2026, la grille de la Ville de Gatineau est la suivante :
+- 0,5 % sur les premiers 62 900 $
+- 1 % de 62 900 $ à 315 000 $
+- de 315 000 $ à 500 000 $ : 1,5 %
+- 3 % au-delà de 500 000 $
 
-**Exemple concret** : pour une propriété de 425 000 $ à Aylmer, la taxe de bienvenue serait d'environ **4 486 $**.
+Elle se calcule sur le plus élevé de trois montants : le prix payé (sans les taxes de vente), le montant inscrit à l'acte, ou l'évaluation municipale multipliée par le facteur comparatif. Ce facteur est de 1,02 en 2026.
 
-### L'inspection pré-achat
+Exemple : pour une maison de 425 000 $, la taxe de bienvenue est de 4 485 $. Pour 600 000 $, elle atteint 8 610 $, dont 3 000 $ pour la portion au-delà de 500 000 $.
 
-Même si elle n'est pas obligatoire, l'inspection est fortement recommandée. Comptez entre **500 $ et 700 $** pour une maison unifamiliale. Pour un plex, ajoutez environ 100 $ par logement supplémentaire.
+Bonne nouvelle pour un premier achat : Québec a créé en 2026 un crédit d'impôt remboursable pour l'accès à la propriété. Il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour un premier logement acquis après le 31 décembre 2025. Les conditions sont sur le site de Finances Québec.
 
-### L'assurance titre
+### L'inspection préachat
 
-L'assurance titre protège contre les vices de titre non détectés. Elle se paie une seule fois, environ **250 $ à 350 $**. Je recommande cette protection.
+Elle n'est pas obligatoire, mais je la recommande. La SCHL donne un ordre de grandeur d'environ 500 $. Le prix monte pour une grande maison ou un plex. Voir l'article sur l'[inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide).
 
 ### Le certificat de localisation
 
-Le vendeur doit normalement fournir un certificat de localisation à jour (moins de 10 ans ou reflétant l'état actuel). S'il n'en a pas, le coût est d'environ **1 500 $ à 2 000 $**, généralement à la charge du vendeur.
+En principe, le vendeur fournit un certificat qui reflète l'état actuel de la propriété. S'il faut en faire un nouveau, la SCHL l'estime entre 1 000 $ et 2 000 $. Qui paie dépend de ce qui est écrit dans la promesse d'achat.
 
-### Budget total à prévoir
+### L'assurance titre
 
-Pour un achat de 400 000 $ à Gatineau, le notaire, la taxe de bienvenue, l'inspection et l'assurance titre totalisent environ **6 000 $ à 7 200 $**, en plus de votre mise de fonds. Ajoutez les ajustements de taxes municipales et scolaires ainsi que le déménagement. C'est un montant important à planifier dès le début de vos démarches.
+Elle protège contre certains défauts de titre. Votre notaire peut vous dire si elle est utile dans votre dossier et ce qu'elle coûte.
 
 ### Mon conseil
 
-La clé, c'est la préparation. Je vous fournis une estimation détaillée de tous ces frais dès notre première rencontre. Vous saurez exactement à quoi vous attendre le jour de la signature.
+Préparez ces frais dès votre préapprobation. Avant votre première visite, je vous fais une liste des frais pour le prix que vous visez, taxe de bienvenue calculée.
 
-**Lire aussi** : [Inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide) · [10 conseils pour votre premier achat](/blogue/conseils-premier-achat-maison-gatineau)`,
+**Sources** : Ville de Gatineau, base d'imposition des droits de mutation immobilière (2026). Finances Québec, bulletin d'information 2026-2. SCHL, frais liés à l'achat d'une maison.
+
+**Lire aussi** : [Inspection préachat à Gatineau](/blogue/inspection-preachat-gatineau-guide) · [10 conseils pour votre premier achat](/blogue/conseils-premier-achat-maison-gatineau)`,
     bodyEn: `## Notary Fees and Closing Costs in Gatineau
 
-Buying a home is exciting, but the additional fees can catch you off guard if you don't plan for them. This guide breaks down the costs to expect beyond the purchase price in Gatineau and the Outaouais.
+Beyond the purchase price and the down payment, you need to plan for closing costs. CMHC estimates them at 1.5% to 4% of the purchase price. Here's what they include in Gatineau.
 
-### Notary Fees
+### Notary fees
 
-In Québec, it's a notary (not a lawyer) who finalizes the real estate transaction. Notary fees typically range from **$1,200 to $2,000**, depending on the complexity of the file.
+In Quebec, a notary completes the sale. The notary checks the titles, prepares the deed of sale and the hypothec, registers the sale in the land register and handles the municipal and school tax adjustments. Fees vary by notary and by how complex the file is: get a written quote from two notaries.
 
-The notary handles:
-- Verifying property titles
-- Registering the sale at the Land Registry
-- Preparing the deed of sale and mortgage deed
-- Adjusting municipal and school taxes
+### The welcome tax (transfer duties)
 
-### Welcome Tax (Transfer Duties)
+It's paid once, after the purchase. Since February 25, 2026, the City of Gatineau's grid is:
+- 0.5% on the first $62,900
+- 1% from $62,900 to $315,000
+- from $315,000 to $500,000: 1.5%
+- 3% above $500,000
 
-The welcome tax applies to almost every purchase in Gatineau. It's calculated in brackets, based on the City of Gatineau's 2026 grid:
-- **0.5%** on the first $62,900
-- **1.0%** from $62,900 to $315,000
-- **1.5%** from $315,000 to $500,000
-- **3.0%** above $500,000
+It's calculated on the highest of three amounts: the price paid (excluding sales taxes), the amount stated in the deed, or the municipal assessment multiplied by the comparative factor. That factor is 1.02 in 2026.
 
-**Real example**: for a $425,000 property in Aylmer, the welcome tax would be approximately **$4,486**.
+Example: for a $425,000 home, the welcome tax is $4,485. For $600,000, it reaches $8,610, including $3,000 for the portion above $500,000.
 
-### Pre-Purchase Inspection
+Good news for first-time buyers: in 2026, Quebec created a refundable home ownership access tax credit. It can refund up to $5,875 of welcome tax for a first home acquired after December 31, 2025. The conditions are on the Finances Québec website.
 
-While not mandatory, an inspection is strongly recommended. Budget **$500 to $700** for a single-family home. For a plex, add about $100 per additional unit.
+### The pre-purchase inspection
 
-### Title Insurance
+It isn't mandatory, but I recommend it. CMHC gives a ballpark of about $500. The price goes up for a large home or a plex. See the article on [pre-purchase inspection in Gatineau](/en/blog/pre-purchase-inspection-gatineau-guide).
 
-Title insurance protects against undetected title defects. One-time cost of approximately **$250 to $350**. I recommend this protection.
+### The certificate of location
 
-### Certificate of Location
+As a rule, the seller provides a certificate that reflects the property's current state. If a new one is needed, CMHC puts it at $1,000 to $2,000. Who pays depends on what's written in the promise to purchase.
 
-The seller must normally provide an up-to-date certificate of location (less than 10 years old or reflecting current conditions). If unavailable, the cost is approximately **$1,500 to $2,000**, typically the seller's responsibility.
+### Title insurance
 
-### Total Budget to Plan
+It protects against certain title defects. Your notary can tell you whether it's useful in your file and what it costs.
 
-For a $400,000 purchase in Gatineau, the notary, welcome tax, inspection and title insurance add up to about **$6,000 to $7,200**, on top of your down payment. Add the municipal and school tax adjustments, plus moving costs. This is a large amount to plan for from the start.
+### My advice
 
-### My Advice
+Plan for these costs as soon as you're pre-approved. Before your first showing, I'll give you a list of the costs for your target price, welcome tax included.
 
-The key is preparation. I provide a detailed estimate of all these costs at our first meeting. You'll know exactly what to expect on signing day.
+**Sources**: City of Gatineau, tax base for property transfer duties (2026). Finances Québec, information bulletin 2026-2. CMHC, costs of buying a home.
 
-**Read also**: [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide) · [10 Tips for First-Time Buyers](/en/blog/tips-buying-first-home-gatineau)`,
+**Read also**: [Pre-Purchase Inspection in Gatineau](/en/blog/pre-purchase-inspection-gatineau-guide) · [10 Tips for Your First Purchase](/en/blog/tips-buying-first-home-gatineau)`,
   },
   {
     slug: "home-staging-vendre-plus-vite-gatineau",
@@ -1530,111 +1532,92 @@ I give you the numbers and the options, and you decide. Before you spend, I comp
     slug: "taxes-municipales-gatineau-vs-ottawa",
     slugEn: "property-taxes-gatineau-vs-ottawa",
     featuredImage: blogTaxesGatineau,
-    title: "Taxes municipales Gatineau ou Ottawa : qui paie plus?",
-    titleEn: "Property Taxes in Gatineau vs Ottawa: Who Pays More?",
-    seoTitle: "Taxes municipales Gatineau vs Ottawa · Comparaison | YGS",
-    seoTitleEn: "Property Taxes Gatineau vs Ottawa · Comparison | YGS",
-    metaDescription: "Taux de taxation et services inclus : la comparaison chiffrée entre Gatineau et Ottawa pour des maisons comparables.",
-    metaDescriptionEn: "Detailed comparison of municipal and school taxes and services between Gatineau and Ottawa. Who pays more? The answer is more nuanced than the rates suggest.",
-    excerpt: "Comparaison détaillée des taxes entre Gatineau et Ottawa. La réponse est plus nuancée qu'on le pense.",
-    excerptEn: "Detailed tax comparison between Gatineau and Ottawa. The answer is more nuanced than you'd think.",
+    title: "Taxes municipales Gatineau ou Ottawa : comment comparer",
+    titleEn: "Property Taxes in Gatineau vs Ottawa: How to Compare",
+    seoTitle: "Taxes municipales Gatineau vs Ottawa 2026 | YGS",
+    seoTitleEn: "Property Taxes Gatineau vs Ottawa 2026 | YGS",
+    metaDescription: "Pourquoi les taux de taxe de Gatineau et d'Ottawa ne se comparent pas, et comment comparer deux maisons avec leurs vrais comptes. Chiffres des budgets 2026.",
+    metaDescriptionEn: "Why Gatineau and Ottawa tax rates don't compare, and how to compare two homes using their actual bills. Figures from the 2026 budgets.",
+    excerpt: "Les évaluations d'Ottawa reposent encore sur 2016. Comparer les taux ne mène nulle part : voici comment comparer les vrais comptes.",
+    excerptEn: "Ottawa assessments still rest on 2016 values. Comparing rates leads nowhere: here's how to compare actual bills.",
     category: "Marché",
     categoryEn: "Market",
     publishDate: "2025-05-12",
+    updatedDate: "2026-11-05",
     published: true,
     featured: false,
-    body: `## Taxes municipales à Gatineau vs Ottawa : la comparaison complète
+    body: `## Taxes municipales à Gatineau ou à Ottawa : comment comparer?
 
-C'est la question que tout le monde pose : « est-ce que les taxes sont plus élevées à Gatineau? » La réponse courte : oui, les taux sont plus élevés. Mais l'histoire complète est beaucoup plus nuancée.
+C'est une question que les acheteurs d'Ottawa posent souvent. La réponse courte : on ne peut pas comparer les taux entre les deux villes, parce que les évaluations ne reposent pas sur la même date. Il faut comparer des comptes de taxes.
 
-### Les taux de taxation
+### Pourquoi les taux ne se comparent pas?
 
-**Gatineau** : Le taux combiné (municipal + scolaire) est d'environ **1,4 % à 1,6 %** de l'évaluation municipale.
+À Ottawa, la SÉFM (MPAC) indique que les taxes de 2026 reposent encore sur les valeurs au 1er janvier 2016. Le rôle d'évaluation de Gatineau, lui, couvre 2024-2025-2026, et un nouveau rôle basé sur le marché au 1er juillet 2025 entrera en vigueur en 2027.
 
-**Ottawa** : Le taux est d'environ **1,0 % à 1,2 %** de l'évaluation.
+Une évaluation de 400 000 $ ne représente donc pas la même maison dans les deux villes. Appliquer le taux d'une ville à l'évaluation de l'autre donne un faux résultat.
 
-Sur papier, Gatineau semble plus cher. Mais il faut considérer deux facteurs importants.
+### Ce que paie une maison médiane à Gatineau
 
-### Le facteur d'évaluation
+Gatineau n'a pas un seul taux résidentiel : il varie selon l'unité de voisinage. Dans son budget 2026, la Ville donne l'exemple d'une maison évaluée à 454 600 $. Son compte municipal est d'environ 3 575 $, dont 644 $ pour le transport en commun et 179 $ pour les matières résiduelles.
 
-Les évaluations municipales à Gatineau sont historiquement **plus basses** que la valeur marchande. Dans les deux villes, l'évaluation s'écarte souvent du prix de vente, et c'est elle qui sert au calcul. Résultat : l'écart sur le compte de taxes est plus mince qu'on le croit.
+La taxe scolaire s'ajoute et elle est facturée par le centre de services scolaire. Pour 2026-2027, le taux est de 0,07899 $ par 100 $ de valeur uniformisée, partout au Québec, et les premiers 25 000 $ sont exemptés. Comptez environ 340 $ à 350 $ pour la même maison, selon sa valeur uniformisée.
 
-**Exemple concret** :
-- Maison à Aylmer. Valeur marchande : 500 000 $. Évaluation municipale : 380 000 $. Taxes annuelles : environ **5 700 $**
-- Maison comparable à Ottawa. Valeur marchande : 600 000 $. Évaluation MPAC : 520 000 $. Taxes annuelles : environ **5 700 $**
+### Et à Ottawa?
 
-Le résultat net est souvent similaire, surtout quand on considère que la maison à Gatineau coûte 100 000 $ de moins à l'achat.
+Dans son budget 2026, la Ville d'Ottawa donne l'exemple d'une maison urbaine moyenne évaluée à 415 000 $, avec un compte de 4 593 $. Le document ne précise pas si la taxe scolaire de l'Ontario est incluse dans ce montant. Les deux exemples ne décrivent pas des maisons équivalentes, alors je ne les mets pas côte à côte comme une comparaison.
 
-### Les services inclus
+### Comment comparer pour une maison précise?
 
-À Gatineau, vos taxes incluent :
-- Collecte des ordures et recyclage
-- Service d'eau potable (pas de compteur pour les résidences)
-- Déneigement des rues
-- Accès aux parcs et installations sportives
-- Transport STO (accès au réseau OC Transpo via l'intégration tarifaire)
+Demandez le dernier compte de taxes municipales et scolaires de la propriété qui vous intéresse. À Gatineau, ces montants apparaissent aussi dans la fiche descriptive de l'inscription. Comparez ensuite les comptes de deux maisons qui vous intéressent, une de chaque côté de la rivière.
 
-### L'avantage fiscal québécois
-
-Le Québec offre des avantages que l'Ontario n'a pas :
-- **Garderies à contribution réduite** : un tarif quotidien bas, fixé chaque année par Québec
-- **Assurance médicaments** : Couverture universelle
-- **Crédits d'impôt** : par exemple le crédit pour maintien à domicile des aînés
-
-### Le calcul global
-
-Quand on additionne le prix d'achat inférieur et les garderies subventionnées, une [famille à Gatineau](/relocalisation-ottawa-gatineau) peut économiser **des milliers de dollars par année** par rapport à Ottawa. Ce calcul tient même avec des taxes municipales un peu plus élevées.
-
-**Pour aller plus loin** : [Déménager d'Ottawa à Gatineau : ce qu'il faut savoir](/blogue/demenager-ottawa-gatineau-guide) · [Frais de notaire et frais de clôture à Gatineau](/blogue/frais-notaire-achat-maison-gatineau)
+Pensez aussi à la taxe de bienvenue, payée une seule fois à l'achat. À Gatineau, depuis le 25 février 2026, le taux est de 3 % sur la portion du prix qui dépasse 500 000 $. Je l'explique dans l'article sur les [frais de notaire et frais de clôture](/blogue/frais-notaire-achat-maison-gatineau).
 
 ### Mon avis
 
-Ne laissez pas le taux de taxation vous décourager d'[acheter à Gatineau](/acheter-a-gatineau-depuis-ottawa). Regardez le portrait complet. Je vous aide à faire le [calcul personnalisé](/evaluation-gratuite-gatineau) pour votre situation.`,
-    bodyEn: `## Property Taxes in Gatineau vs Ottawa: The Complete Comparison
+Ne choisissez pas un côté de la rivière sur la base d'un taux. Regardez le prix d'achat, les comptes de taxes réels et vos frais de garde, puis faites le calcul pour votre situation. Si vous le voulez, je le fais avec vous à partir des maisons que vous regardez.
 
-It's the question everyone asks: "are taxes higher in Gatineau?" The short answer: yes, the rates are higher. But the full story is much more nuanced.
+**Sources** : Ville de Gatineau, budget 2026 et notes explicatives du compte de taxes 2026. Ville de Gatineau, base d'imposition des droits de mutation immobilière. SÉFM (MPAC), cycle d'évaluation. Ville d'Ottawa, budget 2026. Taux de la taxe scolaire 2026-2027 (centres de services scolaires du Québec).
 
-### Tax Rates
 
-**Gatineau**: The combined rate (municipal + school) is approximately **1.4% to 1.6%** of the municipal assessment.
+---
 
-**Ottawa**: The rate is approximately **1.0% to 1.2%** of the assessment.
+*Yanis Gauthier-Sigeris, courtier immobilier RE/MAX en Outaouais depuis plus de 9 ans. Plus de 300 transactions complétées dans la région.*`,
+    bodyEn: `## Property Taxes in Gatineau or Ottawa: How Do You Compare?
 
-On paper, Gatineau looks more expensive. But two important factors must be considered.
+It's a question buyers from Ottawa ask often. The short answer: you can't compare tax rates between the two cities, because their assessments aren't based on the same date. You have to compare actual tax bills.
 
-### The Assessment Factor
+### Why don't the rates compare?
 
-Municipal assessments in Gatineau are historically **lower** than market value. In both cities, the assessment often differs from the sale price, and it is the assessment that drives the bill. Result: the gap in taxes paid is smaller than you'd think.
+In Ottawa, MPAC says 2026 taxes are still based on January 1, 2016 values. Gatineau's assessment roll, meanwhile, covers 2024-2025-2026, and a new roll based on the market as of July 1, 2025 takes effect in 2027.
 
-**Example**:
-- Home in Aylmer. Market value: $500,000. Municipal assessment: $380,000. Annual taxes: approximately **$5,700**
-- Comparable home in Ottawa. Market value: $600,000. MPAC assessment: $520,000. Annual taxes: approximately **$5,700**
+So a $400,000 assessment doesn't describe the same house in both cities. Applying one city's rate to the other city's assessment gives a false result.
 
-The net result is often similar, especially when you consider the Gatineau home costs $100,000 less to purchase.
+### What a median home pays in Gatineau
 
-### Services Included
+Gatineau doesn't have a single residential rate: it varies by neighbourhood unit. In its 2026 budget, the City gives the example of a home assessed at $454,600. Its municipal bill is about $3,575, including $644 for public transit and $179 for waste management.
 
-In Gatineau, your taxes include:
-- Garbage collection and recycling
-- Drinking water service (no meter for residences)
-- Street snow removal
-- Access to parks and sports facilities
-- STO transit (access to OC Transpo network via fare integration)
+School tax is added on top and is billed by the school service centre or school board. For 2026-2027, the rate is $0.07899 per $100 of standardized value, everywhere in Quebec, and the first $25,000 is exempt. Expect about $340 to $350 for the same home, depending on its standardized value.
 
-### The Québec Fiscal Advantage
+### And in Ottawa?
 
-Québec offers advantages that Ontario doesn't:
-- **Reduced-contribution daycare**: a low daily rate, set each year by Québec
-- **Drug insurance**: Universal coverage
-- **Tax credits**: for example, the home support credit for seniors
+In its 2026 budget, the City of Ottawa gives the example of an average urban home assessed at $415,000, with a bill of $4,593. The document doesn't say whether Ontario's education tax is included in that amount. These two examples don't describe equivalent homes, so I don't put them side by side as a comparison.
 
-### The Complete Picture
+### How do you compare for a specific home?
 
-Add the lower purchase price and subsidized daycare, and a family in Gatineau can save **thousands of dollars per year** compared to Ottawa. That holds even with slightly higher municipal taxes.
+Ask for the latest municipal and school tax bills of the property you're interested in. In Gatineau, these amounts also appear on the listing's description sheet. Then compare the actual bills of two homes you like, one on each side of the river.
 
-### My Take
+Also think about the welcome tax, paid once at purchase. In Gatineau, since February 25, 2026, the rate is 3% on the portion of the price above $500,000. I explain it in the article on [notary fees and closing costs](/en/blog/notary-fees-buying-home-gatineau).
 
-Don't let the tax rate discourage you from buying in Gatineau. Look at the complete picture. I help you make the personalized calculation for your situation.`,
+### My take
+
+Don't pick a side of the river based on a tax rate. Look at the purchase price, the actual tax bills and your child care costs, then run the math for your situation. If you'd like, I'll do it with you using the homes you're looking at.
+
+**Sources**: City of Gatineau, 2026 budget and 2026 tax bill explanatory notes. City of Gatineau, tax base for property transfer duties. MPAC, assessment cycle. City of Ottawa, 2026 budget. 2026-2027 school tax rate (Quebec school service centres).
+
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX real estate broker in the Outaouais for over 9 years. Over 300 completed transactions in the region.*`,
   },
   {
     slug: "meilleurs-quartiers-familles-gatineau",
@@ -1651,6 +1634,7 @@ Don't let the tax rate discourage you from buying in Gatineau. Look at the compl
     category: "Quartiers",
     categoryEn: "Neighbourhoods",
     publishDate: "2025-06-01",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Les quartiers pour familles à Gatineau
 
@@ -1658,55 +1642,55 @@ Choisir le bon quartier, c'est choisir le quotidien de votre famille pour les pr
 
 ### Aylmer : le choix haut de gamme pour les familles
 
-**Prix médian unifamilial** : 530 000 $ dans le secteur Aylmer, selon l'APCIQ (données Centris), au troisième trimestre de 2026
+Prix médian unifamilial : 530 000 $ dans le secteur Aylmer, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Aylmer](/aylmer) attire les familles de Gatineau pour plusieurs raisons :
-- **Plage et marina** : Baignade l'été et pistes cyclables le long de la rivière
-- **Parc de la Gatineau** : Accès rapide à un vaste réseau de sentiers
-- **Écoles réputées** : Plusieurs écoles primaires et secondaires bien cotées
-- **Ambiance villageoise** : Le Vieux-Aylmer offre des cafés et des boutiques locales
-- **Proximité Ottawa** : environ 14 km entre le Vieux-Aylmer et le centre-ville d'Ottawa via le pont Champlain
+- Plage et marina : Baignade l'été et pistes cyclables le long de la rivière
+- Parc de la Gatineau : Accès rapide à un vaste réseau de sentiers
+- Écoles : francophones et anglophones, selon l'admissibilité
+- Ambiance villageoise : Le Vieux-Aylmer offre des cafés et des boutiques locales
+- Proximité Ottawa : environ 14 km entre le Vieux-Aylmer et le centre-ville d'Ottawa via le pont Champlain
 
-**Pour qui** : Familles amatrices de plein air, y compris celles qui travaillent à Ottawa.
+Pour qui : Familles amatrices de plein air, y compris celles qui travaillent à Ottawa.
 
 ### Le Plateau : résidentiel et familial
 
-**Prix médian** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau, qui chevauche Hull et Aylmer. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, le prix médian unifamilial était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer.
+Prix médian : l'APCIQ ne publie pas de chiffre distinct pour le Plateau, qui chevauche Hull et Aylmer. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, le prix médian unifamilial était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer.
 
 Le [Plateau](/plateau) est un secteur résidentiel calme :
-- **Maisons spacieuses** : Surtout des constructions récentes
-- **Parcs et espaces verts** : Parcs de quartier, proximité du parc de la Gatineau
-- **Écoles** : Bonnes options en français et en anglais
-- **Accès au boulevard des Allumettières** : vers Hull et les ponts d'Ottawa
-- **Commerces** : Centre commercial du Plateau et épiceries
+- Maisons spacieuses : Surtout des constructions récentes
+- Parcs et espaces verts : Parcs de quartier, proximité du parc de la Gatineau
+- Écoles : Bonnes options en français et en anglais
+- Accès au boulevard des Allumettières : vers Hull et les ponts d'Ottawa
+- Commerces : épiceries et services dans le secteur
 
-**Pour qui** : Jeunes familles et premiers acheteurs qui veulent de l'espace.
+Pour qui : Jeunes familles et premiers acheteurs qui veulent de l'espace.
 
 ### Hull : urbain et animé
 
-**Prix médian unifamilial** : 475 000 $ dans le secteur Hull, selon l'APCIQ (données Centris), au troisième trimestre de 2026
+Prix médian unifamilial : 475 000 $ dans le secteur Hull, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Hull](/hull) offre un style de vie plus urbain, qui convient aux familles actives :
-- **Proximité immédiate d'Ottawa** : environ 2 km du centre-ville d'Ottawa via le pont du Portage
-- **Projet Zibi** : Quartier en développement avec condos modernes
-- **Culture et restos** : Musée canadien de l'histoire, quartier gastronomique
-- **Transport** : Réseau STO dense, projet de tramway à l'étude
-- **Prix accessibles** : Encore possible de trouver des aubaines
+- Proximité immédiate d'Ottawa : environ 2 km du centre-ville d'Ottawa via le pont du Portage
+- Projet Zibi : Quartier en développement avec condos modernes
+- Culture et restos : Musée canadien de l'histoire, quartier gastronomique
+- Transport : réseau STO dense
+- Prix : 475 000 $ de médiane, sous Aylmer
 
-**Pour qui** : Familles qui travaillent à Ottawa et amateurs de vie urbaine.
+Pour qui : Familles qui travaillent à Ottawa et amateurs de vie urbaine.
 
 ### Buckingham : nature et espace
 
-**Prix médian unifamilial** : 395 000 $ dans le secteur Buckingham/Masson-Angers, selon l'APCIQ (données Centris), au troisième trimestre de 2026
+Prix médian unifamilial : 395 000 $ dans le secteur Buckingham/Masson-Angers, selon l'APCIQ (données Centris), au troisième trimestre de 2026
 
 [Buckingham](/buckingham-masson-angers) et [Masson-Angers](/masson-angers) offrent beaucoup d'espace pour le prix :
-- **Terrains très grands** : Demi-acres et plus facilement disponibles
-- **Rivière du Lièvre** : Activités nautiques et pêche
-- **Communauté tissée serrée** : Ambiance de petite ville
-- **Prix les plus bas** : La médiane unifamiliale la plus basse des quatre secteurs de Gatineau
-- **Nature omniprésente** : Forêts et sentiers à proximité
+- Terrains : souvent plus grands que dans les secteurs centraux
+- Rivière du Lièvre : Activités nautiques et pêche
+- Communauté tissée serrée : Ambiance de petite ville
+- Prix les plus bas : La médiane unifamiliale la plus basse des quatre secteurs de Gatineau
+- Nature omniprésente : Forêts et sentiers à proximité
 
-**Pour qui** : Familles qui cherchent de l'espace et de la nature avec un budget plus serré.
+Pour qui : Familles qui cherchent de l'espace et de la nature avec un budget plus serré.
 
 ### Comment choisir?
 
@@ -1724,55 +1708,55 @@ Choosing the right neighbourhood means choosing your family's daily life for yea
 
 ### Aylmer: The Premium Family Choice
 
-**Single-family median price**: $530,000 in the Aylmer sector, according to QPAREB (Centris data), in Q3 2026
+Single-family median price: $530,000 in the Aylmer sector, according to QPAREB (Centris data), in Q3 2026
 
 [Aylmer](/en/aylmer) draws Gatineau families for several reasons:
-- **Beach and marina**: Summer swimming and cycling paths along the river
-- **Gatineau Park**: Quick access to a vast trail network
-- **Well-regarded schools**: Several well-rated elementary and high schools
-- **Village atmosphere**: Old Aylmer offers cafés and local shops
-- **Ottawa proximity**: About 14 km from Old Aylmer to downtown Ottawa via the Champlain Bridge
+- Beach and marina: Summer swimming and cycling paths along the river
+- Gatineau Park: Quick access to a vast trail network
+- Schools: French and English, subject to eligibility
+- Village atmosphere: Old Aylmer offers cafés and local shops
+- Ottawa proximity: About 14 km from Old Aylmer to downtown Ottawa via the Champlain Bridge
 
-**Good fit for**: Outdoor-loving families, including those who work in Ottawa.
+Good fit for: Outdoor-loving families, including those who work in Ottawa.
 
 ### The Plateau: Residential and Family-Friendly
 
-**Median price**: QPAREB does not publish a separate figure for the Plateau, which straddles Hull and Aylmer. According to QPAREB (Centris data), in Q3 2026, the single-family median price was $475,000 in the Hull sector and $530,000 in the Aylmer sector.
+Median price: QPAREB does not publish a separate figure for the Plateau, which straddles Hull and Aylmer. According to QPAREB (Centris data), in Q3 2026, the single-family median price was $475,000 in the Hull sector and $530,000 in the Aylmer sector.
 
 The [Plateau](/en/plateau) is a quiet residential area:
-- **Spacious homes**: Mostly recent construction
-- **Parks and green spaces**: Neighbourhood parks, close to Gatineau Park
-- **Schools**: Good options in French and English
-- **Access to Boulevard des Allumettières**: toward Hull and the Ottawa bridges
-- **Shopping**: Plateau shopping centre and grocery stores
+- Spacious homes: Mostly recent construction
+- Parks and green spaces: Neighbourhood parks, close to Gatineau Park
+- Schools: Good options in French and English
+- Access to Boulevard des Allumettières: toward Hull and the Ottawa bridges
+- Shopping: grocery stores and services in the area
 
-**Good fit for**: Young families and first-time buyers who want space.
+Good fit for: Young families and first-time buyers who want space.
 
 ### Hull: Urban and Lively
 
-**Single-family median price**: $475,000 in the Hull sector, according to QPAREB (Centris data), in Q3 2026
+Single-family median price: $475,000 in the Hull sector, according to QPAREB (Centris data), in Q3 2026
 
 [Hull](/en/hull) offers a more urban lifestyle, well suited to active families:
-- **Steps from Ottawa**: About 2 km to downtown Ottawa via the Portage Bridge
-- **Zibi project**: Developing neighbourhood with modern condos
-- **Culture and dining**: Canadian Museum of History, culinary quarter
-- **Transit**: Dense STO network, tramway project under study
-- **Affordable prices**: Still possible to find deals
+- Steps from Ottawa: About 2 km to downtown Ottawa via the Portage Bridge
+- Zibi project: Developing neighbourhood with modern condos
+- Culture and dining: Canadian Museum of History, culinary quarter
+- Transit: dense STO network
+- Prices: a $475,000 median, below Aylmer
 
-**Good fit for**: Families working in Ottawa and urban lifestyle lovers.
+Good fit for: Families working in Ottawa and urban lifestyle lovers.
 
 ### Buckingham: Nature and Space
 
-**Single-family median price**: $395,000 in the Buckingham/Masson-Angers sector, according to QPAREB (Centris data), in Q3 2026
+Single-family median price: $395,000 in the Buckingham/Masson-Angers sector, according to QPAREB (Centris data), in Q3 2026
 
 [Buckingham](/en/buckingham) and [Masson-Angers](/en/masson-angers) offer a lot of space for the price:
-- **Very large lots**: Half-acres and more readily available
-- **Lièvre River**: Water sports and fishing
-- **Tight-knit community**: Small-town feel
-- **Lowest prices**: The lowest single-family median of Gatineau's four sectors
-- **Nature everywhere**: Forests and trails nearby
+- Lots: often larger than in the central sectors
+- Lièvre River: Water sports and fishing
+- Tight-knit community: Small-town feel
+- Lowest prices: The lowest single-family median of Gatineau's four sectors
+- Nature everywhere: Forests and trails nearby
 
-**Good fit for**: Families looking for space and nature on a tighter budget.
+Good fit for: Families looking for space and nature on a tighter budget.
 
 ### How to Choose?
 
@@ -1802,29 +1786,28 @@ I live in Gatineau and know each neighbourhood personally. We do a tour together
     categoryEn: "Neighbourhoods",
     featuredImage: blogAylmerMarina,
     publishDate: "2025-11-20",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Aylmer : l'ouest résidentiel de Gatineau
 
-Aylmer occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tranquille près du parc de la Gatineau.
+Le secteur occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tranquille près du parc de la Gatineau.
 
 ## Pourquoi choisir Aylmer?
 
 ### La plage et la marina
-- **Plage et baignade** : La plage d'Aylmer, un classique de l'été
-- **Marina** : Accès nautique direct, voile, kayak, planche à pagaie
-- **Piste cyclable** : Le sentier longe la rivière sur des kilomètres
-- **Couchers de soleil** : Vue spectaculaire depuis le parc des Cèdres
+- Plage et baignade : La plage d'Aylmer, un classique de l'été
+- Marina : Accès nautique direct, voile, kayak, planche à pagaie
+- Piste cyclable : Le sentier longe la rivière sur des kilomètres
+- Couchers de soleil : Vue spectaculaire depuis le parc des Cèdres
 
 ### Vie familiale et écoles
-- **Écoles francophones et anglophones** : Grande variété de choix
-- **Parc des Cèdres** : Jeux, piscine publique, terrains de sport
-- **Communauté active** : Marchés fermiers, festivals locaux
-- **Sécurité** : Quartier résidentiel calme et bien entretenu
+- Écoles francophones et anglophones : Grande variété de choix
+- Parc des Cèdres : plage et sentier de marche
 
 ### Prix immobiliers à Aylmer
-- **Maison unifamiliale** : Prix médian de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
-- **Condo** : Prix médian de 305 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
-- **Terrain** : Offre rare
+- Maison unifamiliale : Prix médian de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
+- Condo : Prix médian de 305 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
+- Terrain : Offre rare
 
 ## Les sous-secteurs d'Aylmer
 
@@ -1839,31 +1822,29 @@ Un secteur résidentiel tranquille d'Aylmer, apprécié de ceux qui aiment la na
 
 ## Mon conseil
 
-Aylmer est un choix sûr pour la qualité de vie. La demande y reste soutenue, un atout à la revente. Contactez-moi pour une visite personnalisée du secteur.
+Au 3e trimestre 2026, une unifamiliale s'est vendue en 25 jours en moyenne à Aylmer, contre 34 pour l'ensemble de la région (APCIQ). Contactez-moi pour une visite personnalisée du secteur.
 
 **Lire aussi** : [Vivre près du Parc de la Gatineau](/blogue/vivre-pres-parc-gatineau-immobilier) · [Quartiers pour familles à Gatineau](/blogue/meilleurs-quartiers-familles-gatineau)`,
     bodyEn: `## Aylmer: Gatineau's Residential West End
 
-Aylmer sits at the western end of Gatineau. It offers a quiet lifestyle close to Gatineau Park.
+The sector sits at the western end of Gatineau. It offers a quiet lifestyle close to Gatineau Park.
 
 ## Why Choose Aylmer?
 
 ### The Beach and the Marina
-- **Beach and swimming**: Aylmer Beach is a summer must
-- **Marina**: Direct waterfront access, sailing, kayaking, paddleboarding
-- **Bike path**: The trail runs along the river for kilometres
-- **Sunsets**: Spectacular views from Parc des Cèdres
+- Beach and swimming: Aylmer Beach is a summer must
+- Marina: Direct waterfront access, sailing, kayaking, paddleboarding
+- Bike path: The trail runs along the river for kilometres
+- Sunsets: Spectacular views from Parc des Cèdres
 
 ### Family Life and Schools
-- **French and English schools**: Wide variety of choices
-- **Parc des Cèdres**: Playgrounds, public pool, sports fields
-- **Active community**: Farmers' markets, local festivals
-- **Safety**: Quiet, well-maintained residential area
+- French and English schools: Wide variety of choices
+- Parc des Cèdres: beach and walking trail
 
 ### Aylmer Real Estate Prices
-- **Single-family home**: Median price of $530,000 according to QPAREB (Centris data), in Q3 2026
-- **Condo**: Median price of $305,000 according to QPAREB (Centris data), in Q3 2026
-- **Land**: Limited supply
+- Single-family home: Median price of $530,000 according to QPAREB (Centris data), in Q3 2026
+- Condo: Median price of $305,000 according to QPAREB (Centris data), in Q3 2026
+- Land: Limited supply
 
 ## Aylmer Sub-Areas
 
@@ -1878,7 +1859,7 @@ A quiet residential area of Aylmer, popular with people who value nature and cal
 
 ## My Advice
 
-Aylmer is a safe bet for quality of life. Demand there remains steady, which helps at resale. Contact me for a personalized tour of the area.
+In Q3 2026, a single-family home sold in 25 days on average in Aylmer, compared with 34 for the whole region (QPAREB). Contact me for a personalized tour of the area.
 
 **Read also**: [Living Near Gatineau Park](/en/blog/living-near-gatineau-park-real-estate) · [Family Neighbourhoods in Gatineau](/en/blog/best-family-neighborhoods-gatineau)`,
   },
@@ -1899,6 +1880,7 @@ Aylmer is a safe bet for quality of life. Demand there remains steady, which hel
     categoryEn: "Buyers",
     featuredImage: blogInspection,
     publishDate: "2025-11-05",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Pourquoi faire une inspection préachat à Gatineau
 
@@ -1907,38 +1889,35 @@ L'inspection préachat vous protège contre les mauvaises surprises. [À Gatinea
 ## Ce qu'il faut vérifier
 
 ### La fondation
-- **Fissures** : Distinguer les fissures normales des problématiques
-- **Infiltrations d'eau** : Vérifier les traces au sous-sol
-- **Drain français** : Son état et son âge (durée de vie d'environ 25 ans)
-- **Pyrite et ocre ferreux** : Problèmes courants dans certains secteurs de Gatineau
+- Fissures : Distinguer les fissures normales des problématiques
+- Infiltrations d'eau : Vérifier les traces au sous-sol
+- Drain français : son état, et une inspection par caméra en cas de doute
+- Pyrite et ocre ferreux : un test si l'inspecteur voit des signes
 
 ### La toiture
-- **Âge du revêtement** : Les bardeaux d'asphalte durent de 20 à 25 ans
-- **Ventilation d'entretoit** : Prévient les problèmes de condensation
-- **Évents et solins** : Points d'entrée d'eau fréquents
+- Âge du revêtement : demandez la date de la dernière réfection au vendeur
+- Ventilation d'entretoit : Prévient les problèmes de condensation
+- Évents et solins : Points d'entrée d'eau fréquents
 
 ### Plomberie et électricité
-- **Tuyauterie en plomb** : Encore présente dans certaines maisons de Hull
-- **Panneau électrique** : Ampérage suffisant (200A recommandé)
-- **Chauffe-eau** : Âge et état (durée de vie d'environ 10 ans)
+- Tuyauterie et entrée d'eau : plomb possible dans les maisons plus anciennes
+- Panneau électrique : un ampérage suffisant pour vos besoins, surtout si vous ajoutez une thermopompe ou une borne
+- Chauffe-eau : son âge, inscrit sur la plaque
 
 ### Isolation et efficacité énergétique
-- **Isolation du grenier** : R-50 recommandé au Québec
-- **Fenêtres** : Double ou triple vitrage pour nos hivers
-- **Système de chauffage** : Type et âge de la fournaise
+- Grenier : l'épaisseur et l'état de l'isolant
+- Fenêtres : Double ou triple vitrage pour nos hivers
+- Système de chauffage : Type et âge de la fournaise
 
 ## Combien coûte une inspection à Gatineau?
 
-- **Maison unifamiliale** : Entre 500 $ et 700 $
-- **Condo** : Entre 350 $ et 500 $
-- **[Plex](/investir-plex-gatineau)** : Entre 600 $ et 900 $
-- **Tests supplémentaires** (radon, pyrite, eau) : 100 $ à 300 $ chacun
+La SCHL donne un ordre de grandeur d'environ 500 $ pour une inspection. Le prix varie selon la taille de la propriété et l'inspecteur, et il monte pour un [plex](/investir-plex-gatineau), qui compte plusieurs logements. Les tests supplémentaires, comme le radon ou l'analyse de l'eau d'un puits, s'ajoutent. Demandez une soumission écrite.
 
 **Pour aller plus loin** : [10 conseils pour réussir votre premier achat immobilier à Gatineau](/blogue/conseils-premier-achat-maison-gatineau) · [Frais de notaire et frais de clôture à Gatineau](/blogue/frais-notaire-achat-maison-gatineau)
 
 ## Mon conseil
 
-Ne sautez jamais l'inspection, même dans un marché concurrentiel. Les économies potentielles dépassent largement le coût de l'inspection. Je vous recommande des inspecteurs de confiance dans la région et je vous accompagne dans votre [premier achat à Gatineau](/premier-achat-gatineau).`,
+Ne sautez jamais l'inspection. Avec plus de propriétés à vendre qu'il y a un an, vous avez davantage de marge pour la prévoir dans votre promesse d'achat. Je vous recommande des inspecteurs de confiance dans la région et je vous accompagne dans votre [premier achat à Gatineau](/premier-achat-gatineau).`,
     bodyEn: `## Why a Pre-Purchase Inspection Matters in Gatineau
 
 A pre-purchase inspection protects you against costly surprises. In Gatineau, some issues are more common due to the climate and the age of the housing stock.
@@ -1946,36 +1925,33 @@ A pre-purchase inspection protects you against costly surprises. In Gatineau, so
 ## What to Check
 
 ### The Foundation
-- **Cracks**: Distinguish normal cracks from problematic ones
-- **Water infiltration**: Check for traces in the basement
-- **French drain**: Its condition and age (lifespan of about 25 years)
-- **Pyrite and iron ochre**: Common problems in some Gatineau areas
+- Cracks: Distinguish normal cracks from problematic ones
+- Water infiltration: Check for traces in the basement
+- French drain: its condition, and a camera inspection if in doubt
+- Pyrite and iron ochre: a test if the inspector sees signs
 
 ### The Roof
-- **Covering age**: Asphalt shingles last 20 to 25 years
-- **Attic ventilation**: Prevents condensation issues
-- **Vents and flashing**: Frequent water entry points
+- Covering age: ask the seller when the roof was last redone
+- Attic ventilation: Prevents condensation issues
+- Vents and flashing: Frequent water entry points
 
 ### Plumbing and Electrical
-- **Lead pipes**: Still present in some Hull homes
-- **Electrical panel**: Sufficient amperage (200A recommended)
-- **Water heater**: Age and condition (lifespan of about 10 years)
+- Pipes and water entry: lead is possible in older homes
+- Electrical panel: enough amperage for your needs, especially if you add a heat pump or a charger
+- Water heater: its age, shown on the rating plate
 
 ### Insulation and Energy Efficiency
-- **Attic insulation**: R-50 recommended in Quebec
-- **Windows**: Double or triple glazing for our winters
-- **Heating system**: Type and age of the furnace
+- Attic insulation: its depth and condition
+- Windows: Double or triple glazing for our winters
+- Heating system: Type and age of the furnace
 
 ## How Much Does an Inspection Cost in Gatineau?
 
-- **Single-family home**: Between $500 and $700
-- **Condo**: Between $350 and $500
-- **Plex**: Between $600 and $900
-- **Additional tests** (radon, pyrite, water): $100 to $300 each
+CMHC gives a ballpark of about $500 for an inspection. The price varies with the size of the property and the inspector, and it goes up for a plex, which has several units. Extra tests, such as radon or well water analysis, are added on top. Ask for a written quote.
 
 ## My Advice
 
-Never skip the inspection, even in a competitive market. The potential savings far outweigh the inspection cost. I can recommend trusted inspectors in the area.`,
+Never skip the inspection. With more homes for sale than a year ago, you have more room to include it as a condition in your offer. I can recommend trusted inspectors in the area.`,
   },
 
   // ── Article 15 – Conseils premier achat ──
@@ -1994,25 +1970,26 @@ Never skip the inspection, even in a competitive market. The potential savings f
     categoryEn: "Buyers",
     featuredImage: blogFirstHomeTips,
     publishDate: "2025-10-22",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## 10 conseils pour votre premier achat à Gatineau
 
-Acheter sa première maison est excitant, mais aussi stressant. Ces 10 conseils viennent de mes années à accompagner des [premiers acheteurs à Gatineau](/premier-achat-gatineau).
+Acheter sa première maison est excitant, mais aussi stressant. Ces 10 conseils viennent de mes années de travail avec des [premiers acheteurs à Gatineau](/premier-achat-gatineau).
 
 ## 1. Obtenez votre préqualification hypothécaire d'abord
 Avant de visiter, sachez combien vous pouvez emprunter. La préqualification vous donne un budget réaliste et montre aux vendeurs que vous êtes sérieux. Prévoyez aussi la mise de fonds minimale. Pour une maison, un condo ou un duplex occupé par le propriétaire et vendu moins de 1,5 M$, c'est 5 % sur la première tranche de 500 000 $ et 10 % sur l'excédent. Un triplex ou un quadruplex occupé par le propriétaire demande au moins 10 %.
 
 ## 2. Utilisez les programmes pour premiers acheteurs
-- **RAP (Régime d'accession à la propriété)** : Retirez jusqu'à 60 000 $ de votre REER
-- **CELIAPP** : Compte libre d'impôt pour l'achat d'une première propriété, jusqu'à 8 000 $ par année et 40 000 $ à vie
-- **Crédit d'impôt pour l'achat d'une première habitation** : Crédit fédéral de 1 500 $
+- RAP (Régime d'accession à la propriété) : Retirez jusqu'à 60 000 $ de votre REER
+- CELIAPP : Compte libre d'impôt pour l'achat d'une première propriété, jusqu'à 8 000 $ par année et 40 000 $ à vie
+- Crédit d'impôt pour l'achat d'une première habitation : crédit fédéral jusqu'à 1 500 $
+- Nouveau crédit québécois pour l'accès à la propriété : nouveau en 2026, il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour l'achat d'un premier logement, selon les conditions de Finances Québec
 
 ## 3. Prévoyez tous les frais
 Au-delà du prix d'achat, prévoyez :
-- **Droits de mutation (taxe de bienvenue)** : environ 4 486 $ pour une maison de 425 000 $ et 8 611 $ pour 600 000 $ à Gatineau (grille 2026 de la Ville)
-- **Notaire** : 1 200 $ à 2 000 $
-- **Inspection** : 500 $ à 700 $
-- **Déménagement** : 1 000 $ à 3 000 $
+- Droits de mutation (taxe de bienvenue) : environ 4 486 $ pour une maison de 425 000 $ et 8 611 $ pour 600 000 $ à Gatineau (grille 2026 de la Ville)
+- Notaire, inspection et certificat de localisation : la SCHL estime l'ensemble des frais de clôture entre 1,5 % et 4 % du prix d'achat
+- Déménagement : demandez des soumissions
 
 ## 4. Choisissez le bon quartier pour VOUS
 Gatineau offre des réalités très différentes selon le secteur. Visitez à différentes heures et jours de la semaine.
@@ -2026,8 +2003,8 @@ Le processus [d'achat au Québec](/acheter-a-gatineau) diffère de l'Ontario. Le
 ## 7. Pensez à la revente
 Même si c'est votre première maison, pensez à sa valeur future. La proximité des transports et des écoles pèse à la revente.
 
-## 8. Soyez prêts à agir vite
-Le marché de Gatineau bouge rapidement. Ayez vos documents prêts et un courtier réactif.
+## 8. Soyez prêts, sans vous presser
+Au 3e trimestre 2026, il y avait 42 % plus de propriétés à vendre qu'un an plus tôt dans la région de Gatineau (APCIQ). Vous avez plus de choix, mais la bonne maison peut partir vite. Ayez votre préapprobation et vos documents prêts.
 
 ## 9. Visitez au moins 5 propriétés
 Ne tombez pas amoureux de la première maison. Comparez pour mieux apprécier.
@@ -2039,7 +2016,7 @@ Un courtier qui connaît Gatineau peut vous faire gagner du temps et économiser
 
 ## Mon accompagnement
 
-J'offre un service complet aux premiers acheteurs, de la préqualification à la remise des clés. [Contactez-moi](/contact-yanis) pour un accompagnement personnalisé.`,
+J'offre un service complet aux premiers acheteurs, de la préqualification à la remise des clés. [Écrivez-moi](/contact-yanis) pour en parler.`,
     bodyEn: `## 10 Tips for Your First Home Purchase in Gatineau
 
 Buying your first home is exciting but also stressful. These 10 tips come from years of helping first-time buyers in Gatineau.
@@ -2048,16 +2025,16 @@ Buying your first home is exciting but also stressful. These 10 tips come from y
 Before visiting, know how much you can borrow. Pre-qualification gives you a realistic budget and shows sellers you're serious. Also plan for the minimum down payment. For a house, condo or duplex occupied by the owner and priced under $1.5M, it's 5% on the first $500,000 and 10% on the portion above. An owner-occupied triplex or fourplex needs at least 10%.
 
 ## 2. Use First-Time Buyer Programs
-- **HBP (Home Buyers' Plan)**: Withdraw up to $60,000 from your RRSP
-- **FHSA**: Tax-free account for a first home purchase, up to $8,000 per year and $40,000 lifetime
-- **First-Time Home Buyers' Tax Credit**: $1,500 federal credit
+- HBP (Home Buyers' Plan): Withdraw up to $60,000 from your RRSP
+- FHSA: Tax-free account for a first home purchase, up to $8,000 per year and $40,000 lifetime
+- First-Time Home Buyers' Tax Credit: federal credit of up to $1,500
+- Quebec home ownership access tax credit: new in 2026, it can refund up to $5,875 of welcome tax on the purchase of a first home, subject to Finances Québec's conditions
 
 ## 3. Plan for All Costs
 Beyond the purchase price, plan for:
-- **Welcome tax (transfer duties)**: about $4,486 on a $425,000 home and $8,611 on $600,000 in Gatineau (City's 2026 grid)
-- **Notary**: $1,200 to $2,000
-- **Inspection**: $500 to $700
-- **Moving**: $1,000 to $3,000
+- Welcome tax (transfer duties): about $4,486 on a $425,000 home and $8,611 on $600,000 in Gatineau (City's 2026 grid)
+- Notary, inspection and certificate of location: CMHC puts total closing costs at 1.5% to 4% of the purchase price
+- Moving: get quotes
 
 ## 4. Choose the Right Neighbourhood for YOU
 Gatineau offers very different realities by area. Visit at different times and days of the week.
@@ -2071,8 +2048,8 @@ The process in Quebec differs from Ontario. Timelines and forms are not the same
 ## 7. Think About Resale
 Even if it's your first home, think about future value. Proximity to transit and schools matters at resale.
 
-## 8. Be Ready to Act Fast
-Gatineau's market moves quickly. Have your documents ready and a responsive broker.
+## 8. Be Ready, Without Rushing
+In Q3 2026, there were 42% more properties for sale than a year earlier in the Gatineau area (QPAREB). You have more choice, but the right home can still go quickly. Have your pre-approval and documents ready.
 
 ## 9. Visit at Least 5 Properties
 Don't fall in love with the first house. Compare to better appreciate.
@@ -2101,43 +2078,43 @@ I offer a complete service for first-time buyers, from pre-qualification to key 
     categoryEn: "Neighbourhoods",
     featuredImage: blogGatineauPark,
     publishDate: "2025-10-10",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Le Parc de la Gatineau : un atout résidentiel rare
 
-Vivre à proximité du Parc de la Gatineau, c'est avoir accès à plus de 361 km² de nature sauvage à quelques minutes de chez soi. C'est un avantage immobilier que peu de villes canadiennes peuvent offrir.
+Vivre à proximité du Parc de la Gatineau, c'est avoir accès à plus de 360 km² de nature à quelques minutes de chez soi. C'est un avantage immobilier que peu de villes canadiennes peuvent offrir.
 
 ## Les quartiers aux portes du parc
 
-Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) et le [Plateau](/plateau), à cheval sur Aylmer et Hull.
+En bordure du parc, les secteurs résidentiels sont surtout [Chelsea](/chelsea) et le [Plateau](/plateau), à cheval sur Aylmer et Hull.
 
 ### Chelsea
-- **Village pittoresque** au cœur des collines
-- **Prix médian unifamilial** : 530 000 $ pour l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, selon l'APCIQ (données Centris), au troisième trimestre de 2026
-- **Atouts** : Cafés et restaurants, communauté artistique
-- **Accès** : Entrée directe aux sentiers du parc
+- Village pittoresque au cœur des collines
+- Prix médian unifamilial : 530 000 $ pour l'ensemble de la périphérie de Gatineau, qui comprend Chelsea, selon l'APCIQ (données Centris), au troisième trimestre de 2026
+- Atouts : Cafés et restaurants, communauté artistique
+- Accès : Entrée directe aux sentiers du parc
 
 ### Le Plateau
-- **Quartier récent** avec maisons neuves
-- **Prix médian unifamilial** : l'APCIQ ne publie pas de chiffre distinct pour le Plateau. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, la médiane était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer, que le Plateau chevauche
-- **Atouts** : Écoles et parcs de quartier
-- **Accès** : Sentiers accessibles à pied ou vélo
+- Quartier récent avec maisons neuves
+- Prix médian unifamilial : l'APCIQ ne publie pas de chiffre distinct pour le Plateau. Selon l'APCIQ (données Centris), au troisième trimestre de 2026, la médiane était de 475 000 $ dans le secteur Hull et de 530 000 $ dans le secteur Aylmer, que le Plateau chevauche
+- Atouts : Écoles et parcs de quartier
+- Accès : Sentiers accessibles à pied ou vélo
 
 ### Old Chelsea / Kingsmere
-- **Prestige et tranquillité** : Grandes propriétés boisées
-- **Atouts** : Domaine Mackenzie-King, Lac Kingsmere
-- **Accès** : Au cœur même du parc
+- Prestige et tranquillité : Grandes propriétés boisées
+- Atouts : Domaine Mackenzie-King, Lac Kingsmere
+- Accès : Au cœur même du parc
 
 ## Avantages de vivre près du parc
 
 ### Santé et bien-être
-- **200+ km de sentiers** de randonnée et vélo
-- **Ski de fond** : Vaste réseau de pistes entretenu par la CCN
-- **Lac Philippe** : Baignade, camping, canot
-- **Air pur** : Forêt mature à votre porte
+- Plus de 165 km de sentiers de randonnée, en plus des pistes de vélo
+- Ski de fond : environ 200 km de pistes entretenues
+- Lac Philippe : Baignade, camping, canot
+- Air pur : Forêt mature à votre porte
 
 ### Valeur immobilière
-- **Demande ciblée** : une partie des acheteurs cherche précisément ce mode de vie
-- **Qualité de vie** : Argument de vente puissant à la revente
+- Demande ciblée : une partie des acheteurs cherche précisément ce mode de vie
 
 **Pour aller plus loin** : [Chelsea : guide du secteur](/chelsea) · [Vivre à Aylmer : guide du secteur](/blogue/vivre-aylmer-gatineau-guide-quartier)
 
@@ -2146,38 +2123,37 @@ Les secteurs résidentiels en bordure du parc sont surtout [Chelsea](/chelsea) e
 Si ce mode de vie vous attire, je peux [vous alerter](/contact-yanis) dès qu'une occasion se présente dans le secteur.`,
     bodyEn: `## Gatineau Park: A Rare Residential Asset
 
-Living near Gatineau Park means having access to over 361 km² of wilderness just minutes from home. It's a real estate advantage few Canadian cities can offer.
+Living near Gatineau Park means having access to over 360 km² of nature just minutes from home. It's a real estate advantage few Canadian cities can offer.
 
 ## Neighbourhoods at the Park's Doorstep
 
 ### Chelsea
-- **Picturesque village** in the hills
-- **Single-family median price**: $530,000 for the Gatineau periphery as a whole, which includes Chelsea, according to QPAREB (Centris data), in Q3 2026
-- **Perks**: Cafés and restaurants, artistic community
-- **Access**: Direct entry to park trails
+- Picturesque village in the hills
+- Single-family median price: $530,000 for the Gatineau periphery as a whole, which includes Chelsea, according to QPAREB (Centris data), in Q3 2026
+- Perks: Cafés and restaurants, artistic community
+- Access: Direct entry to park trails
 
 ### The Plateau
-- **Recent development** with new builds, straddling Aylmer and Hull
-- **Single-family median price**: QPAREB does not publish a separate figure for the Plateau. According to QPAREB (Centris data), in Q3 2026, the median was $475,000 in the Hull sector and $530,000 in the Aylmer sector, which the Plateau straddles
-- **Perks**: Schools and neighbourhood parks
-- **Access**: Trails accessible on foot or bike
+- Recent development with new builds, straddling Aylmer and Hull
+- Single-family median price: QPAREB does not publish a separate figure for the Plateau. According to QPAREB (Centris data), in Q3 2026, the median was $475,000 in the Hull sector and $530,000 in the Aylmer sector, which the Plateau straddles
+- Perks: Schools and neighbourhood parks
+- Access: Trails accessible on foot or bike
 
 ### Old Chelsea / Kingsmere
-- **Prestige and tranquillity**: Large wooded properties
-- **Perks**: Mackenzie King Estate, Kingsmere Lake
-- **Access**: At the very heart of the park
+- Prestige and tranquillity: Large wooded properties
+- Perks: Mackenzie King Estate, Kingsmere Lake
+- Access: At the very heart of the park
 
 ## Benefits of Living Near the Park
 
 ### Health and Wellness
-- **200+ km of trails** for hiking and cycling
-- **Cross-country skiing**: Large trail network maintained by the NCC
-- **Lac Philippe**: Swimming, camping, canoeing
-- **Fresh air**: Mature forest at your doorstep
+- Over 165 km of hiking trails, plus cycling routes
+- Cross-country skiing: Large trail network maintained by the NCC
+- Lac Philippe: Swimming, camping, canoeing
+- Fresh air: Mature forest at your doorstep
 
 ### Property Value
-- **Targeted demand**: some buyers look for this lifestyle specifically
-- **Quality of life**: Powerful selling point at resale
+- Targeted demand: some buyers look for this lifestyle specifically
 
 ## My Advice
 
@@ -2200,83 +2176,78 @@ If this lifestyle appeals to you, I can alert you as soon as an opportunity come
     categoryEn: "Investment",
     featuredImage: blogCondoHull,
     publishDate: "2025-09-28",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Hull : le marché des condos à Gatineau
 
-[Hull](/hull) attire de nombreux projets de condos à Gatineau, portés par le projet Zibi et la proximité d'Ottawa.
+Le secteur [Hull](/hull) attire de nombreux projets de condos à Gatineau, portés par le projet Zibi et la proximité d'Ottawa.
 
 ## Pourquoi acheter un condo à Hull?
 
 ### Un emplacement central
-- **Environ 2 km du centre-ville d'Ottawa** par le pont du Portage, avec le pont Alexandra à proximité
-- **Station du futur tramway** : Un projet à suivre pour la valeur à long terme
-- **Services à pied** : Épiceries, restaurants, bars, boutiques
-- **Transport en commun** : Réseau STO dense
+- Environ 2 km du centre-ville d'Ottawa par le pont du Portage, avec le pont Alexandra à proximité
+- Projet de tramway de la STO : à suivre
+- Services à pied : Épiceries, restaurants, bars, boutiques
+- Transport en commun : Réseau STO dense
 
 ### Le projet Zibi
-- **Développement mixte** de 37 acres sur les îles Chaudières
-- **Certifié One Planet Living** : Développement durable
-- **Vue sur les chutes et la rivière** : Emplacement en bord de rivière
+- Développement mixte de 37 acres sur les îles Chaudières
+- Certifié One Planet Living : Développement durable
+- Vue sur les chutes et la rivière : Emplacement en bord de rivière
 
 ## Prix des condos à Hull
 
-Selon l'APCIQ (données Centris), au deuxième trimestre de 2026, le prix médian d'un condo dans le secteur Hull était de 282 000 $.
+Selon l'APCIQ (données Centris), au troisième trimestre de 2026, le prix médian d'un condo dans le secteur Hull était de 289 900 $, en baisse de 3 % sur un an. Un condo s'y est vendu en 38 jours en moyenne.
 
-- **Frais de condo** : 200 $ à 500 $ par mois selon l'immeuble
+Les frais de condo varient beaucoup d'un immeuble à l'autre. Demandez le budget du syndicat avant de faire une offre.
 
-## Potentiel locatif
+## Acheter pour louer?
 
-Hull offre un excellent potentiel locatif grâce à la demande des fonctionnaires fédéraux et des professionnels travaillant à Ottawa :
-- **Rendement brut** : 4 % à 5,5 %
-- **Taux d'occupation** : Généralement élevé, à valider selon l'immeuble
-- **Location meublée** : Forte demande pour les affectations temporaires
+Faites le calcul avec prudence. En octobre 2025, la SCHL a mesuré un taux d'inoccupation de 3,8 % dans la région de Gatineau, contre 1,9 % un an plus tôt. La hausse a été la plus marquée dans les zones de Hull et de Gatineau. Partez du loyer réel d'unités comparables dans le même immeuble, et vérifiez si la déclaration de copropriété permet la location.
 
 ## Ce qu'il faut vérifier avant d'acheter
 
-- **Fonds de prévoyance** : Minimum 5 % du budget annuel
-- **Procès-verbaux du syndicat** : Les 3 dernières années
-- **Travaux majeurs prévus** : Toiture, ascenseurs, stationnement, fenêtres
-- **Règlements de copropriété** : Location court terme permise?
+- Fonds de prévoyance : comparez le solde avec celui que recommande l'étude du fonds de prévoyance
+- Procès-verbaux du syndicat : Les 3 dernières années
+- Travaux majeurs prévus : Toiture, ascenseurs, stationnement, fenêtres
+- Règlements de copropriété : Location court terme permise?
 
 ## Mon conseil
 
 Hull convient bien aux acheteurs qui veulent un mode de vie urbain avec un accès rapide à Ottawa. Pour y vivre ou pour investir, je vous aide à trouver le bon condo au bon prix.`,
     bodyEn: `## Hull: Gatineau's Condo Market
 
-[Hull](/en/hull) draws many of Gatineau's condo projects, driven by the Zibi project and proximity to Ottawa.
+The [Hull](/en/hull) sector draws many of Gatineau's condo projects, driven by the Zibi project and proximity to Ottawa.
 
 ## Why Buy a Condo in Hull?
 
 ### A Central Location
-- **About 2 km from downtown Ottawa** via the Portage Bridge, with the Alexandra Bridge close by
-- **Future LRT station**: A project to watch for long-term value
-- **Walkable services**: Groceries, restaurants, bars, shops
-- **Public transit**: Dense STO network
+- About 2 km from downtown Ottawa via the Portage Bridge, with the Alexandra Bridge close by
+- STO tramway project: one to watch
+- Walkable services: Groceries, restaurants, bars, shops
+- Public transit: Dense STO network
 
 ### The Zibi Project
-- **Mixed-use development** of 37 acres on Chaudières Islands
-- **One Planet Living certified**: Sustainable development
-- **Falls and river views**: Riverfront location
+- Mixed-use development of 37 acres on Chaudières Islands
+- One Planet Living certified: Sustainable development
+- Falls and river views: Riverfront location
 
 ## Hull Condo Prices
 
-According to QPAREB (Centris data), in Q2 2026, the median condo price in the Hull sector was $282,000.
+According to QPAREB (Centris data), in Q3 2026, the median condo price in the Hull sector was $289,900, down 3% over one year. A condo sold there in 38 days on average.
 
-- **Condo fees**: $200 to $500 per month depending on building
+Condo fees vary a lot from one building to another. Ask for the syndicate's budget before making an offer.
 
-## Rental Potential
+## Buying to Rent?
 
-Hull offers excellent rental potential thanks to demand from federal employees and professionals working in Ottawa:
-- **Gross yield**: 4% to 5.5%
-- **Occupancy rate**: Generally high, to be confirmed building by building
-- **Furnished rental**: Strong demand for temporary assignments
+Run the numbers carefully. In October 2025, CMHC measured a 3.8% vacancy rate in the Gatineau area, up from 1.9% a year earlier, and the increase was most pronounced in the Hull and Gatineau zones. Start from the actual rent of comparable units in the same building, and check whether the declaration of co-ownership allows renting.
 
 ## What to Check Before Buying
 
-- **Reserve fund**: Minimum 5% of annual budget
-- **Board meeting minutes**: Last 3 years
-- **Planned major work**: Roof, elevators, parking, windows
-- **Condo bylaws**: Short-term rental allowed?
+- Contingency fund: compare its balance with the one recommended by the contingency fund study
+- Board meeting minutes: Last 3 years
+- Planned major work: Roof, lifts, parking, windows
+- Condo bylaws: Short-term rental allowed?
 
 ## My Advice
 
@@ -2299,42 +2270,42 @@ Hull suits buyers who want an urban lifestyle with quick access to Ottawa. Wheth
     categoryEn: "Finance",
     featuredImage: blogRefinancing,
     publishDate: "2025-09-15",
+    updatedDate: "2026-11-05",
     published: true,
     body: `## Refinancement hypothécaire à Gatineau : tout ce qu'il faut savoir
 
-Le refinancement hypothécaire permet d'accéder à la valeur accumulée dans votre propriété. Avec la hausse des prix à Gatineau, de nombreux propriétaires ont une équité importante à exploiter.
+Le refinancement hypothécaire sert à aller chercher une partie de la valeur accumulée dans votre propriété. Si vous avez acheté il y a quelques années, votre équité a pu augmenter, mais seule une évaluation à jour le confirme.
 
 ## Qu'est-ce que le refinancement?
 
-Le refinancement consiste à remplacer votre hypothèque actuelle par une nouvelle, généralement plus élevée, pour accéder à la différence en argent. Vous pouvez refinancer jusqu'à **80 % de la valeur marchande** de votre propriété.
+Le refinancement consiste à remplacer votre hypothèque actuelle par une nouvelle, généralement plus élevée, pour accéder à la différence en argent. Vous pouvez refinancer jusqu'à 80 % de la valeur de votre propriété, le plafond fixé par le BSIF pour un prêt non assuré.
 
 ## Quand refinancer?
 
 ### Bonnes raisons de refinancer
-- **Rénovations majeures** : Cuisine, salle de bain, sous-sol, agrandissement
-- **Consolidation de dettes** : Regrouper des dettes à taux élevé
-- **Investissement immobilier** : Mise de fonds pour un plex ou un condo locatif
-- **Études des enfants** : Financer l'éducation à moindre coût
-- **Fonds d'urgence** : Créer un coussin financier
+- Rénovations majeures : Cuisine, salle de bain, sous-sol, agrandissement
+- Consolidation de dettes : Regrouper des dettes à taux élevé
+- Investissement immobilier : Mise de fonds pour un plex ou un condo locatif
+- Études des enfants : Financer l'éducation à moindre coût
+- Fonds d'urgence : Créer un coussin financier
 
 ### Mauvaises raisons de refinancer
-- **Dépenses de consommation** : Voyages, voiture de luxe
-- **Payer des dettes sans changer vos habitudes** : Risque de retomber dans les dettes
-- **Marché incertain** : Si les taux montent fortement
+- Dépenses de consommation : Voyages, voiture de luxe
+- Payer des dettes sans changer vos habitudes : Risque de retomber dans les dettes
+- Marché incertain : Si les taux montent fortement
 
 ## Combien d'équité avez-vous?
 
 Exemple pour une maison à Gatineau :
-- **Valeur marchande actuelle** : 500 000 $
-- **Solde hypothécaire** : 300 000 $
-- **Équité disponible (80 %)** : 400 000 $ moins 300 000 $ = **100 000 $**
+- Valeur marchande actuelle : 500 000 $
+- Solde hypothécaire : 300 000 $
+- Équité disponible (80 %) : 400 000 $ moins 300 000 $ = **100 000 $**
 
 ## Les coûts du refinancement
 
-- **Pénalité de remboursement anticipé** : 3 mois d'intérêts ou le différentiel de taux
-- **Frais de notaire** : 1 000 $ à 1 500 $
-- **Frais d'évaluation** : 300 $ à 500 $
-- **Frais d'inscription** : Variables selon l'institution
+- Pénalité de remboursement anticipé : selon l'ACFC, c'est habituellement le plus élevé entre 3 mois d'intérêts et le différentiel de taux, et la méthode varie d'un prêteur à l'autre
+- Frais de notaire et frais d'évaluation : demandez une soumission, ils varient selon le dossier
+- Autres frais : variables selon l'institution
 
 ## Mon conseil
 
@@ -2343,39 +2314,38 @@ Avant de refinancer, faites évaluer votre propriété pour connaître sa vraie 
 **Lire aussi** : [Frais de notaire et de clôture](/blogue/frais-notaire-achat-maison-gatineau) · [Les rénovations qui augmentent la valeur](/blogue/renovations-qui-augmentent-valeur-maison)`,
     bodyEn: `## Mortgage Refinancing in Gatineau: Everything You Need to Know
 
-Mortgage refinancing lets you access the equity built up in your property. With rising prices in Gatineau, many homeowners have a good amount of equity to tap into.
+Refinancing lets you tap part of the equity built up in your home. If you bought a few years ago, your equity may have grown, but only an up-to-date valuation can confirm it.
 
 ## What Is Refinancing?
 
-Refinancing means replacing your current mortgage with a new, typically larger one, to access the difference in cash. You can refinance up to **80% of your property's market value**.
+Refinancing means replacing your current mortgage with a new, typically larger one, to access the difference in cash. You can refinance up to 80% of your property's value, the cap OSFI sets for an uninsured mortgage.
 
 ## When to Refinance?
 
 ### Good Reasons to Refinance
-- **Major renovations**: Kitchen, bathroom, basement, addition
-- **Debt consolidation**: Combine high-interest debts
-- **Real estate investment**: Down payment for a plex or rental condo
-- **Children's education**: Fund education at lower cost
-- **Emergency fund**: Create a financial cushion
+- Major renovations: Kitchen, bathroom, basement, addition
+- Debt consolidation: Combine high-interest debts
+- Real estate investment: Down payment for a plex or rental condo
+- Children's education: Fund education at lower cost
+- Emergency fund: Create a financial cushion
 
 ### Bad Reasons to Refinance
-- **Consumer spending**: Travel, luxury car
-- **Paying debts without changing habits**: Risk of falling back into debt
-- **Uncertain market**: If rates are rising sharply
+- Consumer spending: Travel, luxury car
+- Paying debts without changing habits: Risk of falling back into debt
+- Uncertain market: If rates are rising sharply
 
 ## How Much Equity Do You Have?
 
 Example for a Gatineau home:
-- **Current market value**: $500,000
-- **Mortgage balance**: $300,000
-- **Available equity (80%)**: $400,000 minus $300,000 = **$100,000**
+- Current market value: $500,000
+- Mortgage balance: $300,000
+- Available equity (80%): $400,000 minus $300,000 = **$100,000**
 
 ## Refinancing Costs
 
-- **Early repayment penalty**: 3 months' interest or interest rate differential
-- **Notary fees**: $1,000 to $1,500
-- **Appraisal fees**: $300 to $500
-- **Registration fees**: Variable by institution
+- Early repayment penalty: according to FCAC, usually the higher of 3 months' interest and the interest rate differential, and the method varies by lender
+- Notary fees and appraisal fees: ask for a quote, they vary by file
+- Other fees: vary by institution
 
 ## My Advice
 
@@ -2494,109 +2464,76 @@ For a plex, I look at the leases in place, expenses backed by invoices, and a re
     categoryEn: "Buyers",
     featuredImage: blogCopropriete,
     publishDate: "2025-08-18",
+    updatedDate: "2026-11-05",
     published: true,
-    body: `## Copropriété à Gatineau : le guide de l'acheteur
+    body: `## Copropriété à Gatineau : le guide de l'acheteur
 
-La copropriété occupe une place importante à Gatineau, surtout dans les secteurs de Hull et du Plateau. Avant d'acheter, prenez le temps de comprendre les points qui suivent.
+La copropriété a beaucoup changé au Québec avec la loi 16 et son règlement, en vigueur depuis le 14 août 2025. Avant d'acheter un condo à Gatineau, voici ce qui compte.
 
-## Qu'est-ce qu'une copropriété?
+## Qu'est-ce qu'une copropriété divise?
 
-En copropriété divise, vous êtes propriétaire de votre unité (partie privative) et copropriétaire des espaces communs (halls, ascenseurs, stationnement, piscine, etc.) avec les autres résidents.
+Vous êtes propriétaire de votre unité, la partie privative, et copropriétaire des parties communes avec les autres : halls, stationnement, toiture, terrain. Le syndicat de copropriété administre l'immeuble et ses finances.
 
 ## Les frais de condo
 
-### Ce qu'ils couvrent
-- **Assurance de l'immeuble** : Structure et parties communes
-- **Entretien des espaces communs** : Ménage, déneigement, aménagement
-- **Fonds de prévoyance** : Réserve pour les travaux majeurs
-- **Services** : Eau chaude, chauffage (selon l'immeuble)
-- **Administration** : Gestion du syndicat
+Ils financent l'assurance de l'immeuble, l'entretien des parties communes, l'administration et le fonds de prévoyance. Selon l'immeuble, ils peuvent aussi inclure le chauffage ou l'eau chaude. Ils varient beaucoup d'un immeuble à l'autre, alors je compare toujours le budget du syndicat avec les services rendus.
 
-### Frais moyens à Gatineau
-- **Petit immeuble (4 à 12 unités)** : 150 $ à 300 $ / mois
-- **Immeuble moyen (12 à 50 unités)** : 250 $ à 450 $ / mois
-- **Grand immeuble avec services** : 400 $ à 700 $ / mois
+## Le fonds de prévoyance : ce qui a changé
 
-## Le syndicat de copropriété
+Ce fonds sert aux réparations majeures et au remplacement des parties communes. Les cotisations sont maintenant fixées à partir d'une étude du fonds de prévoyance, faite par un professionnel et mise à jour au moins tous les 5 ans. Un syndicat existant a jusqu'au 15 août 2028 pour obtenir leur première étude.
 
-### Rôle du syndicat
-- **Administrer l'immeuble** : Entretien, réparations, contrats
-- **Gérer les finances** : Budget, cotisations, fonds de prévoyance
-- **Faire respecter les règlements** : Déclaration de copropriété
-- **Prendre les décisions collectives** : Assemblée des copropriétaires
+Le carnet d'entretien devient aussi obligatoire, avec la même échéance. Il planifie les travaux majeurs sur au moins 25 ans.
 
-### Ce qu'il faut vérifier
-- **Procès-verbaux des 3 dernières années** : Conflits, travaux prévus
-- **État du fonds de prévoyance** : Minimum 5 % du budget
-- **Cotisations spéciales récentes** : Signe de mauvaise planification
-- **Carnet d'entretien** : Historique des travaux
+## Quel document demander avant d'acheter?
 
-## Le fonds de prévoyance
+L'attestation sur l'état de la copropriété. Le vendeur la demande au syndicat, qui doit la remettre dans les 15 jours. Elle indique entre autres le solde du fonds de prévoyance et celui que recommande l'étude. On y trouve aussi le budget de l'année, les assurances, la franchise la plus élevée, les travaux majeurs prévus et les litiges en cours.
 
-Le fonds de prévoyance est la réserve financière pour les travaux majeurs futurs :
-- **Toiture** : 30 000 $ à 100 000 $+
-- **Ascenseur** : 50 000 $ à 150 000 $
-- **Stationnement souterrain** : 100 000 $+
-- **Fenêtres communes** : Variable
-
-Un fonds bien garni vous protège des cotisations spéciales imprévues.
+Je demande aussi les procès-verbaux des assemblées et la déclaration de copropriété. On y voit les règles sur la location, les animaux et les rénovations, et les cotisations spéciales votées ou discutées.
 
 ## Mon conseil
 
-Avant d'acheter un condo à Gatineau, demandez toujours : les procès-verbaux, l'état du fonds de prévoyance, le carnet d'entretien et la déclaration de copropriété. Je vous aide à analyser ces documents pour éviter les mauvaises surprises.
+Un écart entre le solde du fonds et le solde recommandé par l'étude annonce souvent une hausse des frais ou une cotisation spéciale. On le regarde ensemble avant de fixer le prix de votre offre.
 
-**Lire aussi** : [Acheter un condo à Hull](/blogue/acheter-condo-hull-gatineau-guide) · [Inspection préachat](/blogue/inspection-preachat-gatineau-guide)`,
+**Sources** : Gouvernement du Québec, mesures en copropriété divise (mise à jour du 22 mai 2026). Société d'habitation du Québec, guide explicatif des mesures en copropriété divise (août 2025). Règlement établissant diverses règles en matière de copropriété divise, décret 991-2025.
+
+
+---
+
+*Yanis Gauthier-Sigeris, courtier immobilier RE/MAX en Outaouais depuis plus de 9 ans. Plus de 300 transactions complétées dans la région.*`,
     bodyEn: `## Condo Ownership in Gatineau: The Buyer's Guide
 
-Condos hold an important place in Gatineau's market, especially in Hull and the Plateau. Before buying, take time to understand the points below.
+Quebec's condo rules have changed a lot with Bill 16 and its regulation, in force since August 14, 2025. Before buying a condo in Gatineau, here's what matters.
 
-## What Is Condo Ownership?
+## What is divided co-ownership?
 
-In divided co-ownership, you own your unit (private portion) and co-own common areas (lobbies, elevators, parking, pool, etc.) with other residents.
+You own your unit, the private portion, and you co-own the common portions with the others: halls, parking, roof, land. The syndicate of co-owners runs the building and its finances.
 
-## Condo Fees
+## Condo fees
 
-### What They Cover
-- **Building insurance**: Structure and common areas
-- **Common area maintenance**: Cleaning, snow removal, landscaping
-- **Reserve fund**: Savings for major work
-- **Services**: Hot water, heating (depending on building)
-- **Administration**: Board management
+They pay for the building's insurance, upkeep of the common portions, administration and the contingency fund. Depending on the building, they may also cover heating or hot water. They vary a lot from one building to another, so I always compare the syndicate's budget with the services provided.
 
-### Average Fees in Gatineau
-- **Small building (4 to 12 units)**: $150 to $300/month
-- **Medium building (12 to 50 units)**: $250 to $450/month
-- **Large building with amenities**: $400 to $700/month
+## The contingency fund: what changed
 
-## The Condo Board (Syndicate)
+This fund pays for major repairs and replacement of common portions. Contributions are now set based on a contingency fund study, done by a professional and updated at least every 5 years. Existing syndicates have until August 15, 2028 to get their first study.
 
-### Board's Role
-- **Manage the building**: Maintenance, repairs, contracts
-- **Handle finances**: Budget, fees, reserve fund
-- **Enforce bylaws**: Declaration of co-ownership
-- **Make collective decisions**: Co-owners' assembly
+A maintenance log is also becoming mandatory, with the same deadline. It plans major work over at least 25 years.
 
-### What to Check
-- **Last 3 years of minutes**: Conflicts, planned work
-- **Reserve fund status**: Minimum 5% of budget
-- **Recent special assessments**: Sign of poor planning
-- **Maintenance log**: Work history
+## Which document should you ask for before buying?
 
-## The Reserve Fund
+The certificate on the condition of the co-ownership. It's requested by the seller from the syndicate, which must provide it within 15 days. Among other things, it shows the contingency fund balance and the balance the study recommends, the current budget, the insurance and the highest deductible, planned major work and ongoing litigation.
 
-The reserve fund is the financial reserve for future major work:
-- **Roof**: $30,000 to $100,000+
-- **Elevator**: $50,000 to $150,000
-- **Underground parking**: $100,000+
-- **Common windows**: Variable
+I also ask for the minutes of the meetings and the declaration of co-ownership. They show the rules on renting, pets and renovations, and any special assessments voted or discussed.
 
-A well-funded reserve protects you from unexpected special assessments.
+## My advice
 
-## My Advice
+A gap between the fund's balance and the balance recommended by the study often means higher fees or a special assessment. We look at it together before setting the price of your offer.
 
-Before buying a condo in Gatineau, always request: meeting minutes, reserve fund status, maintenance log, and declaration of co-ownership. I help you analyze these documents to avoid costly surprises.
+**Sources**: Government of Quebec, divided co-ownership measures (updated May 22, 2026). Société d'habitation du Québec, explanatory guide to divided co-ownership measures (August 2025). Regulation establishing various rules respecting divided co-ownership, O.C. 991-2025.
 
-**Read also**: [Buying a Condo in Hull](/en/blog/buying-condo-hull-gatineau-guide) · [Pre-Purchase Inspection Guide](/en/blog/pre-purchase-inspection-gatineau-guide)`,
+
+---
+
+*Yanis Gauthier-Sigeris, RE/MAX real estate broker in the Outaouais for over 9 years. Over 300 completed transactions in the region.*`,
   },
 
   // ── Article 21 – Vendre en hiver ──
