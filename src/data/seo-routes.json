@@ -296,7 +296,7 @@
   },
   "/conditions-utilisation": {
     "title": "Conditions d'utilisation | YGS",
-    "description": "Conditions d'utilisation du site yanisgauthier.com.",
+    "description": "Conditions d'utilisation du site yanisgauthier.com. Propriété intellectuelle, limitation de responsabilité et droit applicable.",
     "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
   },
   "/en": {
@@ -596,7 +596,7 @@
   },
   "/en/terms": {
     "title": "Terms of use | YGS",
-    "description": "Terms of use for yanisgauthier.com.",
+    "description": "Terms of use for yanisgauthier.com. Intellectual property, limitation of liability and applicable law.",
     "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
   }
 }
