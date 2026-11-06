@@ -335,7 +335,7 @@ const BlogArticlePage = () => {
             {!isPersonal && (
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(0,14,53,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span className="uppercase" style={{ color: "rgba(0,14,53,0.65)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
                   {isFr ? "Chiffres de marché" : "Market figures"}
                 </span>
               </div>
@@ -343,7 +343,7 @@ const BlogArticlePage = () => {
             {isPersonal && (
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(0,14,53,0.5)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span className="uppercase" style={{ color: "rgba(0,14,53,0.65)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
                   {isFr ? "Regard YGS" : "YGS Insight"}
                 </span>
               </div>
