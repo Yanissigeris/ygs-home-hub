@@ -149,7 +149,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
         <div className="ps-main">
           <p className="ps-big">
             <Odometer value="300" phase={phase} />
-            <span className="ps-plus">+</span>
+            <span className="ps-plus">+</span>{" "}
           </p>
           <p className="ps-caption">{t.caption}</p>
         </div>
@@ -157,19 +157,22 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
         <div className={rowsClass}>
           <Link to={t.ratingHref} className="ps-row ps-row--link">
             <span className="ps-label">{t.rating}</span>
+            {" "}
             <span className="ps-value">
               <Odometer value={t.ratingValue} phase={phase} delay={120} />
-              <small>/5</small>
+              <small>/5</small>{" "}
             </span>
           </Link>
           <div className="ps-row">
             <span className="ps-label">{t.hof}</span>
+            {" "}
             <span className="ps-value">
               <Odometer value="2024" phase={phase} delay={180} />
             </span>
           </div>
           <div className="ps-row">
             <span className="ps-label">{t.since}</span>
+            {" "}
             <span className="ps-value">
               <Odometer value="2017" phase={phase} delay={240} />
             </span>
