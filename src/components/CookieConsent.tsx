@@ -324,7 +324,7 @@ const CookieConsent = () => {
             </button>
             <button
               onClick={() => setShowPrefs(true)}
-              aria-label={lang === "fr" ? "Personnaliser les préférences" : "Customize preferences"}
+              aria-label={lang === "fr" ? "Options : personnaliser les préférences" : "Options: customize preferences"}
               style={{
                 background: "transparent",
                 border: "1px solid rgba(255,255,255,0.3)",
@@ -342,7 +342,7 @@ const CookieConsent = () => {
             </button>
             <button
               onClick={handleAccept}
-              aria-label={lang === "fr" ? "Tout accepter" : "Accept all"}
+              aria-label={lang === "fr" ? "OK, tout accepter" : "OK, accept all"}
               style={{
                 background: "var(--action)",
                 border: "1px solid var(--action)",

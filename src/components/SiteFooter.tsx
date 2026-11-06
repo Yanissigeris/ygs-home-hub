@@ -281,7 +281,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                       href={logo.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={lang === "en" ? "Visit remax-quebec.com" : "Visiter remax-quebec.com"}
+                      aria-label={lang === "en" ? "RE/MAX Direct Inc., visit remax-quebec.com" : "RE/MAX Direct Inc., visiter remax-quebec.com"}
                       className="flex flex-col items-center justify-center"
                       style={tileStyle}
                     >

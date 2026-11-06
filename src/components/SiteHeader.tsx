@@ -337,7 +337,7 @@ const SiteHeader = () => {
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
       <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en/" : "/"} className="mr-10 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, RE/MAX broker, Home" : "Yanis Gauthier-Sigeris, courtier RE/MAX, Accueil"}>
+        <Link to={lang === "en" ? "/en/" : "/"} className="mr-10 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05 }}>
@@ -401,7 +401,7 @@ const SiteHeader = () => {
               e.currentTarget.style.background = "transparent";
               e.currentTarget.style.color = ctaTextColor;
             }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
@@ -410,7 +410,7 @@ const SiteHeader = () => {
 
       {/* ─── Tablet (sm–lg) ─── */}
       <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, RE/MAX broker, Home" : "Yanis Gauthier-Sigeris, courtier RE/MAX, Accueil"}>
+        <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker, RE/MAX Direct Inc. affiliate, home" : "Yanis Gauthier-Sigeris, courtier immobilier, affilié RE/MAX Direct Inc., accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <RemaxPill size="md" lang={lang as "fr" | "en"} />
         </Link>
@@ -422,7 +422,7 @@ const SiteHeader = () => {
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
@@ -434,7 +434,7 @@ const SiteHeader = () => {
 
       {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
-        <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, RE/MAX broker, Home" : "Yanis Gauthier-Sigeris, courtier RE/MAX, Accueil"}>
+        <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
           <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05, minWidth: 0 }}>
             <span
@@ -480,7 +480,7 @@ const SiteHeader = () => {
             style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
