@@ -6,7 +6,6 @@ import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import logoYgsWhite from "@/assets/ygs-logo.png";
 import logoMW from "@/assets/logo-mw-white.webp";
-import logoSirvaBgrs from "@/assets/logo-sirva-bgrs.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
@@ -39,7 +38,6 @@ const affiliationLogos: AffiliationLogo[] = [
     ),
   },
   { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau" },
-  { src: logoSirvaBgrs, alt: "SIRVA BGRS, programme de relocalisation militaire", filter: "brightness-[1.8] contrast-[1.1]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-[1.4]" },
