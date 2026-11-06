@@ -56,18 +56,18 @@ const related = [
 const GatineauCentrePage = () => (
   <>
     <PageMeta
-      title="Courtier immobilier Gatineau centre | Plexs, maisons, condos | YGS"
-      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local depuis 2017 : Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
+      title="Gatineau centre : maisons, plex et condos | YGS"
+      description="Achetez, vendez ou investissez à Gatineau centre. Plex, maisons unifamiliales et condos. Courtier local depuis 2017 : Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
-      description="Achetez, vendez ou investissez à Gatineau centre. Plexs, maisons unifamiliales, condos. Courtier local."
+      description="Achetez, vendez ou investissez à Gatineau centre. Plex, maisons unifamiliales et condos. Courtier local."
       lat={45.4765}
       lng={-75.7013}
       url="/gatineau/"
     />
     <ServiceJsonLd
       name="Courtier immobilier à Gatineau centre"
-      description="Services de courtage immobilier à Gatineau centre : plexs, maisons, condos."
+      description="Services de courtage immobilier à Gatineau centre : plex, maisons et condos."
       url="/gatineau/"
       serviceType="Real Estate Brokerage"
       areaServed={["Gatineau (centre)", "Québec"]}
@@ -76,7 +76,7 @@ const GatineauCentrePage = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
-      title="Courtier immobilier à Gatineau centre, près des services"
+      title="Acheter ou vendre à Gatineau centre, près des services"
       subtitle="Le secteur central de Gatineau est souvent sous-estimé. On y trouve pourtant l'Hôpital de Gatineau et un campus du Cégep de l'Outaouais, avec de grandes surfaces à proximité. Ses prix restent parmi les plus accessibles de la ville pour les familles et les investisseurs."
       primaryCta={{ label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Voir les propriétés →", href: "/proprietes?secteur=gatineau" }}
