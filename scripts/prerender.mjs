@@ -507,6 +507,49 @@ function categoryOgImage(route) {
   return DEFAULT_OG;
 }
 
+// The site-wide JSON-LD blocks in index.html (RealEstateAgent, Person) are
+// written in French. On /en/ routes, swap their French text values for the
+// English ones so crawlers and AI search see one language per page.
+// Each French string must be found exactly once in its block: if index.html
+// changes, the build fails here instead of silently shipping French on /en/.
+const STATIC_JSONLD_EN = {
+  "ygs-jsonld-static": [
+    ['"name": "Yanis Gauthier-Sigeris, courtier immobilier RE/MAX"', '"name": "Yanis Gauthier-Sigeris, RE/MAX real estate broker"'],
+    ['"description": "Courtier immobilier à Gatineau. Vendre, acheter ou investir en Outaouais : je vous donne les chiffres et les options, vous décidez."',
+     '"description": "Real estate broker in Gatineau. Selling, buying or investing in the Outaouais: I give you the numbers and the options. You decide."'],
+    ['"Immobilier résidentiel Gatineau", "Vente de maisons Outaouais"', '"Residential real estate Gatineau", "Home selling Outaouais"'],
+    ['"Achat de propriétés Gatineau", "Investissement plex Gatineau"', '"Buying property Gatineau", "Plex investing Gatineau"'],
+    ['"Premier achat immobilier Québec", "Relocalisation Ottawa Gatineau"', '"First-time home buying Quebec", "Ottawa to Gatineau relocation"'],
+    ['"Relocalisation militaire BGRS", "Marché immobilier Outaouais"', '"BGRS military relocation", "Outaouais real estate market"'],
+    ['"Évaluation de propriété Gatineau"', '"Home valuation Gatineau"'],
+  ],
+  "ygs-person-jsonld": [
+    ['"jobTitle": "Courtier immobilier résidentiel"', '"jobTitle": "Residential Real Estate Broker"'],
+    ['"description": "Courtier immobilier RE/MAX à Gatineau, spécialisé en vente, achat et investissement plex en Outaouais. Plus de 9 ans d\'expérience, Hall of Fame RE/MAX."',
+     '"description": "RE/MAX real estate broker in Gatineau, specializing in selling, buying and plex investing in the Outaouais. Over 9 years of experience, RE/MAX Hall of Fame."'],
+    ['"credentialCategory": "Permis de courtier immobilier résidentiel"', '"credentialCategory": "Residential real estate broker licence"'],
+  ],
+};
+
+function localizeStaticJsonLdEn(html, route) {
+  for (const [id, pairs] of Object.entries(STATIC_JSONLD_EN)) {
+    const re = new RegExp(`(<script type="application/ld\\+json" id="${id}">)([\\s\\S]*?)(</script>)`);
+    const m = html.match(re);
+    if (!m) throw new Error(`Prerender: JSON-LD block #${id} not found in shell (route "${route}")`);
+    let body = m[2];
+    for (const [fr, en] of pairs) {
+      const count = body.split(fr).length - 1;
+      if (count !== 1) {
+        throw new Error(`Prerender: expected 1 match of ${fr.slice(0, 60)}… in #${id}, found ${count} (route "${route}")`);
+      }
+      body = body.replace(fr, en);
+    }
+    JSON.parse(body); // still valid JSON after the swap
+    html = html.replace(m[0], m[1] + body + m[3]);
+  }
+  return html;
+}
+
 function buildHtmlForRoute(shell, route, meta, override = {}) {
   const isEn = route.startsWith("/en");
   const lang = isEn ? "en" : "fr";
@@ -519,7 +562,7 @@ function buildHtmlForRoute(shell, route, meta, override = {}) {
   const frPath = override.frPath || (isEn ? enToFr[route] : route);
   const enPath = override.enPath || (isEn ? route : frToEn[route]);
 
-  let html = shell;
+  let html = isEn ? localizeStaticJsonLdEn(shell, route) : shell;
 
   // 0. Replace og:type if override provided (e.g. "article" for blog posts)
   if (override.ogType) {
