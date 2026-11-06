@@ -882,6 +882,7 @@ I show you those numbers before we set a date. Then you decide.
     category: "Acheteurs",
     categoryEn: "Buyers",
     publishDate: "2025-03-05",
+    updatedDate: "2026-10-04",
     published: true,
     body: `## Premier achat à Gatineau : par où commencer?
 
@@ -945,6 +946,7 @@ A real estate broker who knows the local market can save you time and money. The
     category: "Relocalisation",
     categoryEn: "Relocation",
     publishDate: "2025-03-20",
+    updatedDate: "2026-10-04",
     published: true,
     body: `## Déménager d'Ottawa à Gatineau : tout ce que vous devez savoir
 
@@ -1126,6 +1128,7 @@ I calculate the GRM, the cap rate and the cash flow from the leases in place, be
     category: "Quartiers",
     categoryEn: "Neighbourhoods",
     publishDate: "2025-04-18",
+    updatedDate: "2026-11-04",
     published: true,
     body: `## Aylmer, Hull ou Plateau : quel quartier choisir?
 

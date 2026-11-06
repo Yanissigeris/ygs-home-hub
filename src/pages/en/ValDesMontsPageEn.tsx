@@ -14,14 +14,14 @@ const ValDesMontsPageEn = () => (
     lifestyle={{ image: heroImg, imageAlt: "Lake in Val-des-Monts", title: "Why buyers choose Val-des-Monts", subtitle: "In Val-des-Monts, people buy a principal residence in nature or a weekend cottage. Here, lake access and the lake itself weigh heavily on price." }}
     reasons={[
       "125 lakes according to the municipality, many properties with private lake access",
-      "Median single-family price of $530,000 in Q3 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts",
+      "Median single-family price of $530,000 in Q3 2026 in QPAREB's Gatineau periphery area, which includes Val-des-Monts",
       "Major lakes: McGregor, Saint-Pierre, Achigan, Barnes, each with its own market",
       "Large lots in nature, often near a lake",
       "Four-season cottages, permanent residences and luxury waterfront properties",
       "Perkins village as service hub (grocery, elementary school, local amenities)",
       "Perkins village about 30 km from downtown Ottawa by road, practical for Ottawa weekend cottage owners and full-time remote workers",
       "Les Promenades Gatineau 20 to 22 km from Perkins by road, for commercial services",
-      "More choice for buyers: 633 active single-family listings in Q3 2026 in the Gatineau periphery area, 23% more than a year earlier (APCIQ)",
+      "More choice for buyers: 633 active single-family listings in Q3 2026 in the Gatineau periphery area, 23% more than a year earlier (QPAREB)",
     ]}
     profilesTitle="Who Val-des-Monts suits"
     profiles={[
@@ -36,13 +36,13 @@ const ValDesMontsPageEn = () => (
       title: "Questions about Val-des-Monts",
       items: [
         { q: "Is Val-des-Monts accessible year-round?", a: "Yes, most main roads are maintained year-round. Some private waterfront roads may require additional plowing or a 4×4 vehicle for the more remote accesses." },
-        { q: "What is the price of a property in Val-des-Monts in 2026?", a: "Val-des-Monts is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Chelsea, Cantley and Pontiac, so it's a broad reference. In Val-des-Monts, prices depend heavily on the lake, orientation and property type, from a rustic cottage to a four-season waterfront home." },
+        { q: "What is the price of a property in Val-des-Monts in 2026?", a: "Val-des-Monts is part of QPAREB's “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Chelsea, Cantley and Pontiac, so it's a broad reference. In Val-des-Monts, prices depend heavily on the lake, orientation and property type, from a rustic cottage to a four-season waterfront home." },
         { q: "What are the main lakes in Val-des-Monts?", a: "Among the best known are McGregor, Saint-Pierre, Achigan and Barnes lakes. Boating rules and access vary from one lake to another: check with the municipality and the lake association." },
         { q: "How do you choose a lake in Val-des-Monts?", a: "The value of a waterfront property depends on the lake itself: its size, water quality, motorboat rules and access to a boat launch. Sun exposure and the type of shoreline matter too. Visit the lake in summer and in winter, because a lake that's busy in July can be very quiet in January." },
-        { q: "How much can I save buying in Val-des-Monts vs. comparable Ottawa cottage country?", a: "Official figures don't track cottage country separately, so no reliable savings figure exists. As a reference, the median single-family price was $530,000 in Q3 2026 in APCIQ's Gatineau periphery area, which includes Val-des-Monts. Ottawa's single-family benchmark price was $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI), a different measure from a median. For a waterfront or cottage property, I compare recent sales on the same lake or of the same type. Property taxes and Quebec-specific costs should also be factored into your decision." },
+        { q: "How much can I save buying in Val-des-Monts vs. comparable Ottawa cottage country?", a: "Official figures don't track cottage country separately, so no reliable savings figure exists. As a reference, the median single-family price was $530,000 in Q3 2026 in QPAREB's Gatineau periphery area, which includes Val-des-Monts. Ottawa's single-family benchmark price was $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI), a different measure from a median. For a waterfront or cottage property, I compare recent sales on the same lake or of the same type. Property taxes and Quebec-specific costs should also be factored into your decision." },
         { q: "Are there English-language schools nearby?", a: "Yes. Poltimore Elementary (Western Quebec School Board) is in Val-des-Monts, subject to eligibility for English instruction. For high school, the WQSB School Locator on westernquebec.ca will tell you which school applies to your address." },
         { q: "Can you live in Val-des-Monts year-round?", a: "Yes, if the property and the road allow it. Before buying a cottage to live in year-round, check that zoning allows a permanent residence and that the road is plowed in winter, since some roads are private. Also check the insulation, the heating and whether the septic system complies with Quebec's regulation on isolated dwellings (Q-2, r. 22). Have the well water tested and confirm Internet coverage at the exact address." },
-        { q: "How long does a sale take in Val-des-Monts?", a: "It varies by property type. In Q3 2026, single-family homes in APCIQ's Gatineau periphery area, which includes Val-des-Monts, sold in 46 days on average (Centris data). For a cottage or waterfront property, I'll show you the recent comparable sales." },
+        { q: "How long does a sale take in Val-des-Monts?", a: "It varies by property type. In Q3 2026, single-family homes in QPAREB's Gatineau periphery area, which includes Val-des-Monts, sold in 46 days on average (Centris data). For a cottage or waterfront property, I'll show you the recent comparable sales." },
       ],
     }}
     sectors={{ list: [
@@ -60,7 +60,7 @@ const ValDesMontsPageEn = () => (
     guide={{ type: "buyer_guide", headline: "Free buyer's guide, buying in Val-des-Monts", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the buyer's guide", stickyLabel: "Free buyer's guide, get it by email" }}
     brokerPerspective={{
       observation: "What I look at in Val-des-Monts: lake access, the septic system and the well matter as much as the house. A three-season cottage and a year-round home are not comparable.",
-      dataPoint: "In Q3 2026, single-family homes sold in 46 days on average in the Gatineau outskirts, an APCIQ territory that includes Val-des-Monts (Centris data).",
+      dataPoint: "In Q3 2026, single-family homes sold in 46 days on average in the Gatineau outskirts, an QPAREB territory that includes Val-des-Monts (Centris data).",
       takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter a lot. The right time depends on your property type and the competition on your lake. We look at it in the numbers. Be realistic on price for your lake type and access: a property on McGregor doesn't compare to one without lake access. Get a proper valuation before listing."
     }}
     cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area, let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}

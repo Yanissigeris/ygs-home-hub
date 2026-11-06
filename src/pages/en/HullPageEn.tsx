@@ -29,7 +29,7 @@ const faq = [
   },
   {
     q: "What does a Hull condo or single-family home cost in 2026?",
-    a: "In Q3 2026, APCIQ's Hull sector recorded a median price of $289,900 for condos and $475,000 for single-family homes (Centris data). Over the previous 12 months, the median plex price was $597,750. Within Hull, prices vary a lot with the building's age, parking and view, so I compare recent sales of similar properties before any offer.",
+    a: "In Q3 2026, QPAREB's Hull sector recorded a median price of $289,900 for condos and $475,000 for single-family homes (Centris data). Over the previous 12 months, the median plex price was $597,750. Within Hull, prices vary a lot with the building's age, parking and view, so I compare recent sales of similar properties before any offer.",
   },
   {
     q: "What is the rental yield on a Hull plex right now?",
@@ -186,7 +186,7 @@ const HullPageEn = () => (
       <h2 className="mt-3">Hull, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          Hull mixes older condos, older plexes, single-family homes and new-build condos in the same sector. In Q3 2026, APCIQ's Hull sector recorded a median price of $289,900 for condos and $475,000 for single-family homes (Centris data). Over the previous 12 months, the median plex price was $597,750. Condos took longer to sell than houses: 38 days on average, compared with 22 days for single-family homes.
+          Hull mixes older condos, older plexes, single-family homes and new-build condos in the same sector. In Q3 2026, QPAREB's Hull sector recorded a median price of $289,900 for condos and $475,000 for single-family homes (Centris data). Over the previous 12 months, the median plex price was $597,750. Condos took longer to sell than houses: 38 days on average, compared with 22 days for single-family homes.
         </p>
         <p className="prose-body">
           On the income side, plexes are the main reason Hull is on Outaouais investors' shortlists. Federal offices at Place du Portage, Place du Centre and Terrasses de la Chaudière generate stable demand from public servants who want to walk to work. The 2025-2026 cycle did rebalance the rental market. New builds delivered in Hull and on Île de Hull pushed vacancy slightly higher and capped rent growth, but older plexes with below-market tenants and renovation upside still trade actively. Cap rates on those older buildings typically land between 5% and 7% gross.

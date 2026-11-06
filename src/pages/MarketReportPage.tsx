@@ -19,7 +19,7 @@ const faq = [
 
 const related = [
   { title: "Évaluation gratuite", text: "Combien vaut votre propriété? Réponse personnalisée.", href: "/evaluation-gratuite-gatineau/" },
-  { title: "Vendu récemment", text: "Les ventes récentes dans votre secteur.", href: "/vendu-recemment/" },
+  { title: "Vendu récemment", text: "Les ventes récentes dans votre secteur.", href: "/proprietes/" },
   { title: "Guide vendeur", text: "Tout pour vendre au meilleur prix.", href: "/guide-vendeur-gatineau/" },
   { title: "Investir en plex", text: "Analyse et stratégie pour les plex à Gatineau.", href: "/investir-plex-gatineau/" },
 ];

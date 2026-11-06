@@ -26,7 +26,7 @@ const challenges = [
 const sectors = [
   { name: "Plateau / Aylmer", href: "/en/plateau-aylmer/", detail: "Family neighbourhoods and newer homes, about 9 to 14 km from downtown Ottawa" },
   { name: "Hull", href: "/en/hull/", detail: "Urban setting with condos and plexes, about 2 km from downtown Ottawa" },
-  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Lowest single-family median of the city's 4 sectors (APCIQ, Q3 2026) and access to nature" },
+  { name: "Buckingham / Masson-Angers", href: "/en/buckingham/", detail: "Lowest single-family median of the city's 4 sectors (QPAREB, Q3 2026) and access to nature" },
 ];
 const steps = [
   { num: "01", title: "Initial consultation", desc: "We discuss your situation, budget, priorities and questions about Gatineau." },
@@ -39,9 +39,9 @@ const nextSteps = [
   { title: "Compare neighbourhoods", text: "Gatineau neighbourhoods by lifestyle and budget.", href: "/en/neighborhoods/", cta: "See neighbourhoods" },
 ];
 const faq = [
-  { q: "Is it cheaper to buy in Gatineau than in Ottawa?", a: "Generally yes, especially for single-family homes and lots. In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (APCIQ). You also need to factor in taxes and the cost of living. We compare it all together." },
+  { q: "Is it cheaper to buy in Gatineau than in Ottawa?", a: "Generally yes, especially for single-family homes and lots. In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (QPAREB). You also need to factor in taxes and the cost of living. We compare it all together." },
   { q: "How does buying work in Quebec?", a: "The process differs from Ontario. You sign a promise to purchase, usually conditional on inspection and financing. Once the conditions are met, the sale closes at the notary's office. Active in the Outaouais since 2017, I guide you through each step." },
-  { q: "Which neighbourhood is best for families?", a: "It depends on your budget and your commute. In Q3 2026, the median single-family price was $530,000 in Aylmer and $395,000 in Buckingham/Masson-Angers (APCIQ). Hull and the Gatineau sector fall in between. We compare the options based on your priorities." },
+  { q: "Which neighbourhood is best for families?", a: "It depends on your budget and your commute. In Q3 2026, the median single-family price was $530,000 in Aylmer and $395,000 in Buckingham/Masson-Angers (QPAREB). Hull and the Gatineau sector fall in between. We compare the options based on your priorities." },
   { q: "Can I work in Ottawa and live in Gatineau?", a: "Yes. Downtown Ottawa is about 2 km from Gatineau city hall, in Hull (Portage Bridge) and about 14 km from Old Aylmer (Champlain Bridge). Several bridges and public transit connect both sides of the river." },
 ];
 

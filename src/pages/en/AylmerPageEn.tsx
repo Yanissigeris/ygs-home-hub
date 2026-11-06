@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-aylmer-photo.webp";
 const faq = [
   {
     q: "How much is a home worth in Aylmer?",
-    a: "In Q3 2026, the median single-family price in Aylmer was $530,000, and the median condo price $305,000 (APCIQ, Centris data). Prices then vary by sub-sector, property type and condition. Contact me for a free comparative analysis based on recent sales on your street.",
+    a: "In Q3 2026, the median single-family price in Aylmer was $530,000, and the median condo price $305,000 (QPAREB, Centris data). Prices then vary by sub-sector, property type and condition. Contact me for a free comparative analysis based on recent sales on your street.",
   },
   {
     q: "Is Aylmer bilingual? Can my child attend an English school?",

@@ -26,11 +26,11 @@ const nextSteps = [
 
 const faq = [
   { q: "How do I sell my house in Hull?", a: "We start with a valuation based on recent sales in your Hull neighbourhood. Then we build a marketing plan suited to your property type (condo, plex or single-family)." },
-  { q: "How long does it take to sell a house in Hull?", a: "In Q3 2026, single-family homes in the Gatineau metropolitan area sold in 34 days on average, and condos in 36 days (APCIQ, Centris data). For a home in Hull, the timeline depends mostly on price and preparation." },
+  { q: "How long does it take to sell a house in Hull?", a: "In Q3 2026, single-family homes in the Gatineau metropolitan area sold in 34 days on average, and condos in 36 days (QPAREB, Centris data). For a home in Hull, the timeline depends mostly on price and preparation." },
   { q: "How much is my house worth in Hull?", a: "The value depends on your street, property type and recent sales. Request a free valuation to get a realistic price range." },
   { q: "Should I renovate before selling in Hull?", a: "Not necessarily. Some improvements pay off in Hull's market, others don't. I advise on a case-by-case basis." },
   { q: "What are the costs of selling in Hull?", a: "Broker commission, notary fees, certificate of location and sometimes minor repairs. Everything is transparent from the start." },
-  { q: "Is it a good time to sell in Hull?", a: "The right time depends mostly on your personal situation. For context, the median single-family price in Hull was $475,000 in Q3 2026 (APCIQ)." },
+  { q: "Is it a good time to sell in Hull?", a: "The right time depends mostly on your personal situation. For context, the median single-family price in Hull was $475,000 in Q3 2026 (QPAREB)." },
   { q: "Why work with a local broker in Hull?", a: "A broker who knows Hull follows comparable sales and active buyers, from downtown condos to residential neighbourhoods." },
   { q: "Can I sell to an Ottawa buyer?", a: "Yes. Ottawa is right across the river, and depending on your property, my marketing can also reach Ontario buyers." },
   { q: "How does buy-sell coordination work?", a: "We line up the sale and purchase dates from the start, with the right conditions in each promise to purchase. That way you avoid getting stuck between two transactions." },

@@ -29,7 +29,7 @@ const faq = [
   },
   {
     q: "What does a single-family home cost in Buckingham in 2026?",
-    a: "In Q3 2026, the median single-family price in APCIQ's Buckingham/Masson-Angers sector was $395,000, the lowest of the four sectors of the city of Gatineau (Centris data). For comparison, it was $530,000 in Aylmer over the same period. In Buckingham, prices then vary with year of construction, lot size and condition.",
+    a: "In Q3 2026, the median single-family price in QPAREB's Buckingham/Masson-Angers sector was $395,000, the lowest of the four sectors of the city of Gatineau (Centris data). For comparison, it was $530,000 in Aylmer over the same period. In Buckingham, prices then vary with year of construction, lot size and condition.",
   },
   {
     q: "Which schools serve Buckingham and Masson-Angers?",
@@ -37,7 +37,7 @@ const faq = [
   },
   {
     q: "Is the Buckingham and Masson-Angers market moving fast in 2026?",
-    a: "In Q3 2026, single-family homes in APCIQ's Buckingham/Masson-Angers sector sold in 34 days on average, the same as the metropolitan average. Single-family sales fell 23% from a year earlier while active listings rose 47%, so buyers have more choice (Centris data). Pricing strategy and the home's condition affect how long it takes.",
+    a: "In Q3 2026, single-family homes in QPAREB's Buckingham/Masson-Angers sector sold in 34 days on average, the same as the metropolitan average. Single-family sales fell 23% from a year earlier while active listings rose 47%, so buyers have more choice (Centris data). Pricing strategy and the home's condition affect how long it takes.",
   },
   {
     q: "Can I get a home valuation in Buckingham specifically?",
@@ -157,7 +157,7 @@ const BuckinghamPageEn = () => (
           {[
             "Buckingham is one of the five historic sectors that formed the City of Gatineau. Functional downtown, with everyday services on site.",
             "Masson-Angers runs along the Ottawa River and offers the closest semi-rural atmosphere to central Gatineau in this eastern sector.",
-            "In Q3 2026, the median single-family price in the Buckingham/Masson-Angers sector was $395,000, the lowest of the four sectors of the city of Gatineau (APCIQ).",
+            "In Q3 2026, the median single-family price in the Buckingham/Masson-Angers sector was $395,000, the lowest of the four sectors of the city of Gatineau (QPAREB).",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
@@ -178,10 +178,10 @@ const BuckinghamPageEn = () => (
       <h2 className="mt-3">Buckingham &amp; Masson-Angers, what the 2026 numbers say</h2>
       <div className="mt-6 space-y-4 max-w-3xl">
         <p className="prose-body">
-          In Q3 2026, APCIQ counted 138 active single-family listings in the Buckingham/Masson-Angers sector, 47% more than a year earlier, with 89 sales (down 23%) and a median price of $395,000 (Centris data). For an Ottawa family, a useful reference is Ottawa's single-family benchmark price of $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI). The two figures aren't the same measure (benchmark price vs. median) and don't cover the same period.
+          In Q3 2026, QPAREB counted 138 active single-family listings in the Buckingham/Masson-Angers sector, 47% more than a year earlier, with 89 sales (down 23%) and a median price of $395,000 (Centris data). For an Ottawa family, a useful reference is Ottawa's single-family benchmark price of $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI). The two figures aren't the same measure (benchmark price vs. median) and don't cover the same period.
         </p>
         <p className="prose-body">
-          Single-family homes in the sector sold in 34 days on average in Q3 2026 (APCIQ), in line with the metropolitan Gatineau average. The lesson for sellers: pricing strategy and pre-sale preparation affect how long a home stays on the market.
+          Single-family homes in the sector sold in 34 days on average in Q3 2026 (QPAREB), in line with the metropolitan Gatineau average. The lesson for sellers: pricing strategy and pre-sale preparation affect how long a home stays on the market.
         </p>
         <p className="prose-body">
           For first-time buyers, the federal Home Buyers' Plan (HBP, up to $60,000 per person from RRSP) and the Tax-Free First Home Savings Account (FHSA, up to $40,000 lifetime) stack with provincial programs. Combined with Buckingham's entry prices, the math for a couple with two solid jobs in Gatineau or partial-remote in Ottawa often beats anything available on the Ontario side at the same down-payment level. I walk every first-time buyer through this calculation before we visit a single property, it usually changes their search radius.
