@@ -53,7 +53,7 @@ const MilitarySellerPageEn = () => (
     <ProcessSteps steps={steps} />
 
     <InlineCTA
-      text="First step: know the value of your property. It's free, with a personalized response within 24 hours maximum."
+      text="First step: know the value of your property. It's free, with a personalized response."
       buttonLabel="Get my valuation →"
       href="/en/home-valuation/"
     />

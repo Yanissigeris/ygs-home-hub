@@ -9,7 +9,7 @@
 - **Titre :** Courtier immobilier résidentiel, titulaire d'un permis de l'OACIQ (Québec)
 - **Numéro de permis OACIQ :** 112201
 - **Accréditations RE/MAX :** Hall of Fame · Platinum Club · 100% Club
-- **Courtage :** RE/MAX Direct — Équipe Marty Waite
+- **Courtage :** RE/MAX Direct, Équipe Marty Waite
 - **Bureau :** 216, chemin d'Aylmer, Gatineau (Québec) J9H 1A4
 - **Langues :** Français (principal) · Anglais
 - **Téléphone :** 819-210-3044
@@ -34,6 +34,7 @@
 - [Quand vendre à Gatineau](https://yanisgauthier.com/quand-vendre-a-gatineau/)
 - [Vendre un plex à Gatineau](https://yanisgauthier.com/vendre-un-plex-a-gatineau/)
 - [Vendre une maison à Aylmer](https://yanisgauthier.com/vendre-maison-aylmer/) · [à Hull](https://yanisgauthier.com/vendre-maison-hull/)
+- [Évaluation gratuite d'une maison à Aylmer](https://yanisgauthier.com/evaluation-maison-aylmer/) · [à Hull](https://yanisgauthier.com/evaluation-maison-hull/)
 
 ## Acheter
 
@@ -80,6 +81,7 @@
 
 - [Combien coûte un courtier immobilier au Québec?](https://yanisgauthier.com/combien-coute-un-courtier-immobilier-au-quebec/)
 - [Frais de courtage immobilier au Québec](https://yanisgauthier.com/frais-de-courtage-immobilier-quebec/)
+- [Courtier immobilier en Outaouais](https://yanisgauthier.com/courtier-immobilier-outaouais/) : Gatineau, Aylmer, Hull, Chelsea, Cantley et Pontiac.
 - [Comment choisir un courtier immobilier](https://yanisgauthier.com/comment-choisir-un-courtier-immobilier/)
 - [Vérifier un courtier au registre de l'OACIQ](https://yanisgauthier.com/verifier-un-courtier-immobilier-oaciq/)
 - [Courtier ou vendre soi-même?](https://yanisgauthier.com/courtier-immobilier-ou-vendre-soi-meme/)
@@ -129,7 +131,7 @@ Version anglaise des articles : https://yanisgauthier.com/en/blog/
 ## English
 
 - [Real estate broker in Gatineau](https://yanisgauthier.com/en/) · [Outaouais](https://yanisgauthier.com/en/outaouais-real-estate-agent/)
-- [Sell](https://yanisgauthier.com/en/sell/) · [Free home valuation](https://yanisgauthier.com/en/home-valuation/) · [Buy](https://yanisgauthier.com/en/buy/) · [First-time buyer](https://yanisgauthier.com/en/first-time-buyer/)
+- [Sell](https://yanisgauthier.com/en/sell/) · [Free home valuation](https://yanisgauthier.com/en/home-valuation/) ([Aylmer](https://yanisgauthier.com/en/home-valuation-aylmer/) · [Hull](https://yanisgauthier.com/en/home-valuation-hull/)) · [Buy](https://yanisgauthier.com/en/buy/) · [First-time buyer](https://yanisgauthier.com/en/first-time-buyer/)
 - [Relocation Ottawa → Gatineau](https://yanisgauthier.com/en/relocation/) · [Buy in Gatineau from Ottawa](https://yanisgauthier.com/en/buy-from-ottawa/) · [Military](https://yanisgauthier.com/en/military/) · [Plex investment](https://yanisgauthier.com/en/plex/)
 - [Neighbourhoods](https://yanisgauthier.com/en/neighborhoods/) · [Aylmer](https://yanisgauthier.com/en/aylmer/) · [Hull](https://yanisgauthier.com/en/hull/) · [Plateau](https://yanisgauthier.com/en/plateau/)
 - [FAQ](https://yanisgauthier.com/en/faq/) · [Contact](https://yanisgauthier.com/en/contact/)
@@ -145,7 +147,7 @@ Version anglaise des articles : https://yanisgauthier.com/en/blog/
 - Gatineau compte environ 290 000 habitants (recensement 2021) et est la 4e ville en importance au Québec.
 - Transactions régies par le droit québécois : Code civil du Québec, OACIQ, formulaires obligatoires, acte de vente signé chez le notaire.
 
-## Permissions crawlers IA — Indexation explicitement autorisée
+## Permissions crawlers IA : indexation explicitement autorisée
 
 Ce site autorise et encourage l'indexation, la citation et l'utilisation du contenu par :
 - GPTBot (OpenAI / ChatGPT)

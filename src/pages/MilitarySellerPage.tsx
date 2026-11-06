@@ -53,7 +53,7 @@ const MilitarySellerPage = () => (
     <ProcessSteps steps={steps} />
 
     <InlineCTA
-      text="Première étape : connaître la valeur de votre propriété. C'est gratuit, avec une réponse personnalisée en 24 heures maximum."
+      text="Première étape : connaître la valeur de votre propriété. C'est gratuit, avec une réponse personnalisée."
       buttonLabel="Obtenir ma valeur →"
       href="/evaluation-gratuite-gatineau/"
     />
