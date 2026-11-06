@@ -175,6 +175,28 @@ const AylmerPage = () => (
       </div>
     </section>
 
+    {/* ═══ REGARD TERRAIN : mots de Yanis, entrevue du 6 nov. 2026 ═══ */}
+    <section className="section-padding bg-background border-b border-border/60">
+      <div className="section-container max-w-3xl space-y-4">
+        <h2>Le marché d'Aylmer, vu du terrain</h2>
+          <p className="prose-body mt-5">
+            Sur le terrain, je vois un marché plus équilibré à Aylmer. Il y a plus de propriétés à vendre, et les acheteurs prennent leur temps. La négociation a donc un peu plus de place qu'avant.
+          </p>
+          <p className="prose-body">
+            Pour un vendeur, ça demande d'accepter la nouvelle réalité du marché et de s'y ajuster dès la mise en vente.
+          </p>
+          <p className="prose-body">
+            La question qu'on me pose le plus en ce moment, c'est quand le marché va reprendre. Je ne peux pas vous donner de date. Trop d'éléments jouent en même temps, comme les taux d'intérêt, l'économie en général, le prix des maisons et l'incertitude sur les emplois. À Gatineau, tout près d'Ottawa, beaucoup de gens travaillent au fédéral, et il y a eu plusieurs coupures.
+          </p>
+          <p className="prose-body">
+            On me dit souvent aussi qu'Aylmer est surtout anglophone. À mon avis, c'est plutôt un bon moitié-moitié.
+          </p>
+          <p className="text-[0.8125rem] text-muted-foreground pt-2">
+            <Link to="/contact-yanis/" className="underline underline-offset-2 hover:text-foreground">Yanis Gauthier-Sigeris</Link>, courtier immobilier · novembre 2026
+          </p>
+      </div>
+    </section>
+
     {/* ═══ SECTION 2 — SOUS-SECTEURS ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">

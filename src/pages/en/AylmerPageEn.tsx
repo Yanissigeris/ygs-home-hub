@@ -172,6 +172,28 @@ const AylmerPageEn = () => (
       </div>
     </section>
 
+    {/* ═══ REGARD TERRAIN : mots de Yanis, entrevue du 6 nov. 2026 ═══ */}
+    <section className="section-padding bg-background border-b border-border/60">
+      <div className="section-container max-w-3xl space-y-4">
+        <h2>Aylmer's market, from the ground</h2>
+          <p className="prose-body mt-5">
+            On the ground, I'm seeing a more balanced market in Aylmer. There are more homes for sale, and buyers are taking their time. That leaves a bit more room to negotiate than before.
+          </p>
+          <p className="prose-body">
+            For sellers, it means accepting the market as it is now and adjusting from the day the home is listed.
+          </p>
+          <p className="prose-body">
+            The question I get most right now is when the market will pick up again. I can't give you a date. Too many things are at play, like interest rates, the wider economy, home prices and job uncertainty. On the Gatineau side, right next to Ottawa, a lot of people work for the federal government, and there have been several job cuts.
+          </p>
+          <p className="prose-body">
+            People also often tell me Aylmer is mostly English-speaking. In my view, it's closer to a solid 50-50.
+          </p>
+          <p className="text-[0.8125rem] text-muted-foreground pt-2">
+            <Link to="/en/contact/" className="underline underline-offset-2 hover:text-foreground">Yanis Gauthier-Sigeris</Link>, real estate broker · November 2026
+          </p>
+      </div>
+    </section>
+
     {/* ═══ SECTION 2 — SUB-SECTORS ═══ */}
     <section className="section-padding bg-background">
       <div className="section-container">

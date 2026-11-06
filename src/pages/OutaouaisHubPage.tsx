@@ -52,8 +52,8 @@ const faqItems = [
 const OutaouaisHubPage = () => (
   <div>
     <PageMeta
-      title="Courtier immobilier Outaouais · Gatineau"
-      description="Yanis Gauthier-Sigeris, courtier immobilier en Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley. Une stratégie claire pour vendre, acheter ou investir."
+      title="Courtier immobilier en Outaouais, secteur par secteur | YGS"
+      description="Les secteurs de l'Outaouais un par un, de Hull à Pontiac : le prix et le profil de chacun, avec l'avis d'un courtier local qui y travaille."
     ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
       name="Courtier immobilier en Outaouais"
@@ -63,9 +63,9 @@ const OutaouaisHubPage = () => (
     />
 
     <HeroSection
-      overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
-      title="Votre courtier immobilier en Outaouais"
-      subtitle="Vendre, acheter ou investir dans la région, avec un accompagnement bilingue basé sur les faits."
+      overline="SECTEURS ET MUNICIPALITÉS DE L'OUTAOUAIS"
+      title="L'immobilier en Outaouais, secteur par secteur"
+      subtitle="Le prix et le profil de chaque secteur, de Hull à Chelsea et d'Aylmer à Val-des-Monts, pour choisir où acheter ou comment vendre."
       primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"

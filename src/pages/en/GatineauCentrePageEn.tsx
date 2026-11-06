@@ -56,7 +56,7 @@ const related = [
 const GatineauCentrePageEn = () => (
   <>
     <PageMeta
-      title="Real Estate Broker Gatineau Centre | Plexes, Homes, Condos | YGS"
+      title="Gatineau Centre: Homes, Plexes and Condos | YGS"
       description="Buy, sell or invest in Gatineau centre. Plexes, single-family homes, condos. Local broker since 2017: Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
     <NeighborhoodJsonLd
       name="Gatineau (centre)"
@@ -76,7 +76,7 @@ const GatineauCentrePageEn = () => (
     {/* ═══ HERO ═══ */}
     <HeroSection
       overline="GATINEAU CENTRE · QUÉBEC"
-      title="Real estate broker in Gatineau centre, close to services"
+      title="Buying or selling in Gatineau centre, close to services"
       subtitle="Gatineau's central area is often underestimated. Yet it has Hôpital de Gatineau and a Cégep de l'Outaouais campus, with big-box stores nearby. Its prices are still among the most accessible in the city for families and investors."
       primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}

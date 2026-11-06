@@ -49,7 +49,7 @@ const faqItems = [
 const OutaouaisHubPageEn = () => (
   <div>
     <PageMeta
-      title="Outaouais Real Estate Agent · Gatineau"
+      title="Outaouais Real Estate Agent, Area by Area | YGS"
       description="Yanis Gauthier-Sigeris, bilingual real estate broker in Outaouais. Gatineau, Hull, Aylmer, Chelsea, Cantley. A clear strategy to buy, sell or invest."
     ogImage="https://yanisgauthier.com/og/og-home.jpg" />
     <ServiceJsonLd
@@ -60,9 +60,9 @@ const OutaouaisHubPageEn = () => (
     />
 
     <HeroSection
-      overline="OUTAOUAIS · GATINEAU · HULL · AYLMER"
-      title="Your Real Estate Agent in Outaouais"
-      subtitle="Sell, buy or invest in the region, with bilingual guidance based on facts."
+      overline="OUTAOUAIS AREAS AND TOWNS"
+      title="Outaouais real estate, area by area"
+      subtitle="Prices and profile for each area, from Hull to Chelsea and Aylmer to Val-des-Monts, so you can choose where to buy or how to sell."
       primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="RE/MAX Hall of Fame"
