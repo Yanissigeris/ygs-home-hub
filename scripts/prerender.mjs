@@ -71,10 +71,10 @@ const ROOT = path.resolve(__dirname, "..");
  * Priorité : SEO_ROUTES[route].lastmod > date git > SITE_LAST_UPDATE.
  */
 
-/** Same rule as BlogArticlePage: "<title> | YGS", or the post's seoTitle when that runs past 60 characters. */
+/** Same rule as BlogArticlePage: "<title> | YGS", or the post's seoTitle when that runs past 65 characters. */
 function titleTag(title, seoTitle) {
   const long = `${title} | YGS`;
-  return long.length > 60 && seoTitle ? seoTitle : long;
+  return long.length > 65 && seoTitle ? seoTitle : long;
 }
 
 async function buildRouteGitDates() {
