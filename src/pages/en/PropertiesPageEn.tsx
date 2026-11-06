@@ -27,9 +27,9 @@ const sectors = [
 const faq = [
   { q: "How are featured properties selected?", a: "I select properties based on location, potential, value and relevance for active buyers in Gatineau." },
   { q: "How can I be notified of new listings?", a: "Contact me with your criteria, I'll let you know as soon as a matching property hits the market." },
-  { q: "Do properties sell quickly in Gatineau?", a: "Yes, the best ones often sell within days. Being informed first makes all the difference." },
-  { q: "What are the prices of sold homes in Gatineau?", a: "Sale prices are not public in Québec. As a broker, I have access to the data." },
-  { q: "Do you have access to properties not listed publicly?", a: "Yes. As an active broker in Gatineau since 2017, I have access to properties before they hit the public market." },
+  { q: "Do properties sell quickly in Gatineau?", a: "It depends on the area and the price. In Q3 2026, a single-family home sold in 34 days on average in the Gatineau area (QPAREB). A well-located, well-presented property can go faster." },
+  { q: "What are the prices of sold homes in Gatineau?", a: "Sold prices don't show on Centris for the public. As a broker, I have access to completed sales, and I show you the ones that compare to the property you like." },
+  { q: "How do I avoid missing a new listing?", a: "I let you know as soon as a new Centris listing matches your criteria, with comparable sales in the area to judge the price." },
 ];
 const related = [
   { title: "Buyer consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
@@ -65,12 +65,12 @@ const PropertiesPageEn = () => (
     </ContentBlock>
 
     <ContentBlock narrow>
-      <SectionHeading overline="Priority access" title="Get the best properties first" />
+      <SectionHeading overline="Listing alerts" title="Hear about new listings right away" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        I've been a broker in the Outaouais since 2017. I have access to every Centris listing in Gatineau and the surrounding area, from Chelsea to Pontiac, including properties not yet posted on public portals. Once I know your criteria, I can flag a property within hours instead of days.
+        I've been a broker in the Outaouais since 2017. I have access to every Centris listing in Gatineau and the surrounding area, from Chelsea to Pontiac. Once I know your criteria, I flag every new listing that matches them.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Those few hours let you visit without pressure, before multiple offers start coming in. Tell me your area and your price ceiling, then what you won't compromise on. I'll do the sorting.
+        You visit without pressure, and you don't waste time on homes that don't fit. Tell me your area and your price ceiling, then what you won't compromise on. I'll do the sorting.
       </p>
     </ContentBlock>
 
@@ -94,7 +94,7 @@ const PropertiesPageEn = () => (
 
     <RelatedPages overline="Explore also" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria, I'll send you the best options before anyone else." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <CTASection dark title="Looking for a property in Gatineau?" text="Tell me your criteria, I'll send you matching properties as soon as they're listed." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Explore neighborhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
   </>
 );
 export default PropertiesPageEn;

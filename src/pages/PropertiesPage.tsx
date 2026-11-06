@@ -32,9 +32,9 @@ const sectors = [
 const faq = [
   { q: "Comment sont sélectionnées les propriétés vedettes?", a: "Je sélectionne les propriétés selon leur emplacement, leur potentiel, leur rapport qualité-prix et leur pertinence pour les acheteurs actifs à Gatineau." },
   { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères, je vous avise dès qu'une propriété correspondante arrive sur le marché." },
-  { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Oui, les meilleures se vendent souvent en quelques jours. Être informé en priorité fait toute la différence." },
-  { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix de vente ne sont pas publics au Québec. En tant que courtier, j'ai accès aux données" },
-  { q: "Avez-vous accès à des propriétés qui ne sont pas affichées publiquement?", a: "Oui. En tant que courtier actif à Gatineau depuis 2017, j'ai accès à des propriétés avant leur mise en marché officielle." },
+  { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Ça dépend du secteur et du prix. Au 3e trimestre 2026, une unifamiliale s'est vendue en 34 jours en moyenne dans la région de Gatineau (APCIQ). Une propriété bien située et bien affichée peut partir plus vite." },
+  { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix vendus n'apparaissent pas sur Centris pour le public. En tant que courtier, j'ai accès aux ventes conclues et je vous montre celles qui se comparent à la propriété qui vous intéresse." },
+  { q: "Comment ne pas manquer une nouvelle inscription?", a: "Je vous avertis dès qu'une nouvelle inscription Centris correspond à vos critères, avec les ventes comparables du secteur pour juger le prix." },
 ];
 
 const related = [
@@ -117,14 +117,14 @@ const PropertiesPage = () => {
 
     <ContentBlock narrow>
       <SectionHeading
-        overline="Accès prioritaire"
-        title="Recevez les meilleures propriétés en premier"
+        overline="Alertes d'inscriptions"
+        title="Soyez avisé dès qu'une propriété sort"
       />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
-        Je suis courtier en Outaouais depuis 2017. J'ai accès à toutes les inscriptions Centris de Gatineau et des environs, de Chelsea à Pontiac, y compris des propriétés pas encore affichées sur les portails publics. Quand je connais vos critères, je peux vous signaler une propriété en quelques heures plutôt qu'en quelques jours.
+        Je suis courtier en Outaouais depuis 2017. J'ai accès à toutes les inscriptions Centris de Gatineau et des environs, de Chelsea à Pontiac. Quand je connais vos critères, je vous signale chaque nouvelle inscription qui y correspond.
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Ces quelques heures d'avance vous laissent visiter sans pression, avant que les offres multiples commencent. Dites-moi votre secteur et votre plafond de prix, puis ce qui n'est pas négociable pour vous. Je fais le tri.
+        Vous visitez sans pression, et vous ne perdez pas votre temps avec des propriétés qui ne vous conviennent pas. Dites-moi votre secteur et votre plafond de prix, puis ce qui n'est pas négociable pour vous. Je fais le tri.
       </p>
     </ContentBlock>
 
@@ -173,7 +173,7 @@ const PropertiesPage = () => {
     <CTASection
       dark
       title="Vous cherchez une propriété à Gatineau?"
-      text="Dites-moi vos critères, je vous envoie les meilleures options avant tout le monde."
+      text="Dites-moi vos critères, je vous envoie les propriétés qui y correspondent dès qu'elles sont inscrites."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
         { label: "Explorer les secteurs", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },

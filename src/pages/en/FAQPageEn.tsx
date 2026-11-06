@@ -18,7 +18,7 @@ const buyerFaq = [
   { q: "Buy in Gatineau or Ottawa?", a: "It depends on your priorities. Generally, prices are more affordable on the Gatineau side, but you need to consider taxes and services." },
   { q: "How long does a purchase take?", a: "60 to 90 days generally from the start of your search to taking possession." },
   { q: "Is the process different in Québec?", a: "Yes, promise to purchase, inspection, notary (not a lawyer). I guide you every step of the way." },
-  { q: "What additional fees should I expect beyond the purchase price?", a: "Notary fees (ask for a quote), the land transfer duties (welcome tax), a pre-purchase inspection, municipal and school tax adjustments, and the 9% Québec tax on the mortgage insurance premium if it applies. First-time buyers can recover part of the transfer duties through Revenu Québec's tax credit, up to $5,875 subject to conditions." },
+  { q: "What additional fees should I expect beyond the purchase price?", a: "Notary fees (ask for a quote), the land transfer duties (welcome tax), a pre-purchase inspection, municipal and school tax adjustments, and the 9% Québec tax on the mortgage insurance premium if it applies. For a first home acquired since 2026, a Québec refundable tax credit can refund up to $5,875 of transfer duties, subject to conditions." },
 ];
 const plexFaq = [
   { q: "How do you evaluate a plex's value?", a: "Income approach (GRM), comparable sales, building condition and rent optimization potential." },
