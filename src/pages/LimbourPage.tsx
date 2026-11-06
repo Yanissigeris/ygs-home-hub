@@ -19,7 +19,7 @@ const LimbourPage = () => (
       "Parcs, sentiers pédestres et espaces verts abondants",
       "Hôpital de Gatineau (909, boulevard La Vérendrye Ouest) à quelques minutes en voiture",
       "Tim Hortons et restaurants accessibles à courte distance (boul. Maloney, boul. La Vérendrye)",
-      "Écoles secondaires desservant le secteur : Polyvalente de l'Érablière et École secondaire du Versant (CSSD Draveurs)",
+      "Écoles francophones du Centre de services scolaire des Draveurs, selon l'adresse",
       "Accès à l'autoroute 50, à environ 12 km du centre-ville d'Ottawa par la route",
       "Quartier en croissance : peu de rénovations à prévoir comparé aux quartiers plus anciens",
     ]}
