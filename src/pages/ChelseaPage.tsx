@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Puis-je construire sur un terrain à Chelsea?",
-    a: "Chelsea a des règlements stricts sur la construction, particulièrement en zones adjacentes au parc de la Gatineau et en bord de rivière. Le zonage agricole, la bande de protection riveraine de 15 mètres et les contraintes de la MRC peuvent limiter ou encadrer les projets. Avant d'acheter un terrain, vérifiez auprès de la municipalité de Chelsea et de la MRC des Collines-de-l'Outaouais.",
+    a: "Chelsea a des règlements stricts sur la construction, particulièrement en zones adjacentes au parc de la Gatineau et en bord de rivière. Le zonage agricole, la bande de protection riveraine et les contraintes de la MRC peuvent limiter ou encadrer les projets. Avant d'acheter un terrain, vérifiez auprès de la municipalité de Chelsea et de la MRC des Collines-de-l'Outaouais.",
   },
   {
     q: "Mes enfants peuvent-ils fréquenter une école anglophone à Chelsea?",

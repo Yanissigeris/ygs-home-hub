@@ -18,7 +18,7 @@ const CoteDazurPage = () => (
       "Épiceries, pharmacie et restaurants à quelques minutes",
       "Écoles primaires et secondaires francophones dans le secteur. En anglais, les écoles secondaires du Western Quebec School Board sont à Hull",
       "À environ 11 km du centre-ville d'Ottawa par la route. Prévoyez plus de temps aux heures de pointe.",
-      "Transport en commun STO avec lignes vers Hull et le centre-ville d'Ottawa",
+      "Transport en commun de la STO",
       "Délai de vente moyen de 35 jours pour une unifamiliale dans le secteur Gatineau au 3e trimestre 2026 (APCIQ)",
       "Un point de départ pour les acheteurs prêts à moderniser une propriété plus ancienne",
     ]}

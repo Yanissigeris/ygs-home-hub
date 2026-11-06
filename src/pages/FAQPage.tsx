@@ -30,7 +30,7 @@ const plexFaq = [
 
 const militaryFaq = [
   { q: "Comment se passe une relocalisation militaire immobilière?", a: "On commence par comprendre votre calendrier et vos besoins. Ensuite, recherche ciblée, visites (virtuelles ou en personne), puis l'offre et l'inspection." },
-  { q: "Travaillez-vous avec les programmes IRP/BGRS?", a: "Je connais les réalités de ces programmes et je m'adapte aux contraintes et délais qu'ils imposent." },
+  { q: "Travaillez-vous avec les dossiers de réinstallation militaire (SIRVA, BGRS)?", a: "Oui. La réinstallation des FAC suit la Directive sur la réinstallation des Forces armées canadiennes (DRFAC), et le fournisseur actuel est SIRVA. J'accepte aussi les dossiers BGRS, et je m'adapte aux étapes et aux délais de votre dossier." },
   { q: "Faut-il acheter ou louer lors d'une mutation?", a: "Ça dépend de la durée de votre affectation et de votre situation. On en discute ensemble pour trouver la meilleure option." },
 ];
 

@@ -27,7 +27,7 @@ const plexFaq = [
 ];
 const militaryFaq = [
   { q: "How does a military real estate relocation work?", a: "We start by understanding your timeline and needs. Then, targeted search, visits (virtual or in-person) and complete support." },
-  { q: "Do you work with IRP/BGRS programs?", a: "I understand the realities of these programs and adapt to the constraints and deadlines they impose." },
+  { q: "Do you work with military relocation files (SIRVA, BGRS)?", a: "Yes. CAF relocations follow the Canadian Armed Forces Relocation Directive (CAFRD), and the current service provider is SIRVA. I also accept BGRS files, and I adapt to the steps and timelines of your file." },
   { q: "Should I buy or rent during a posting?", a: "It depends on the length of your assignment and your situation. We discuss it together to find the best option." },
 ];
 const resources = [

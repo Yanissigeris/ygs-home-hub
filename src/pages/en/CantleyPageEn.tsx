@@ -38,7 +38,7 @@ const activities = [
   {
     icon: "⛷️",
     title: "Recreational activities",
-    text: "Cantley has a golf course, water park, alpine ski centre, campground, and the Nakkertok cross-country ski club. The municipality has strong recreational tourism potential and actively works to offer it to residents. (Source: Harmonie Construction, Municipality of Cantley)",
+    text: "Cantley has a golf course, water park, alpine ski centre, campground, and the Nakkertok cross-country ski club.",
   },
   {
     icon: "🌊",
