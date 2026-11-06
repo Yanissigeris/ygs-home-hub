@@ -19,7 +19,7 @@ const CoteDazurPageEn = () => (
       "About 11 km from downtown Ottawa by road. Plan extra time at rush hour.",
       "Grocery stores, a pharmacy and restaurants a few minutes away",
       "Western Quebec School Board (English): Greater Gatineau Elementary in the Gatineau sector, high schools in Hull, subject to eligibility",
-      "STO public transit with bus lines into Hull and downtown Ottawa",
+      "STO public transit",
       "Average time on market of 35 days for single-family homes in the Gatineau sector in Q3 2026 (APCIQ)",
       "A starting point for buyers ready to modernize an older property",
       "Quiet, established neighbourhood",

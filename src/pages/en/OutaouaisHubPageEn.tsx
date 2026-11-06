@@ -42,7 +42,7 @@ const faqItems = [
   { q: "How much does a house cost in Outaouais?", a: "In Q3 2026, the median single-family price was $480,000 in the Gatineau metropolitan area, and the median condo price $297,450 (APCIQ, Centris data). By sector, the single-family median ranged from $395,000 in Buckingham/Masson-Angers to $530,000 in the Gatineau periphery area. Contact me for a current analysis of your target area." },
   { q: "Why choose a Quebec-licensed broker instead of an Ontario agent?", a: "Only a Quebec-licensed broker can legally represent you in a real estate transaction in Quebec. I understand the local laws, welcome tax, school taxes and how the Outaouais market works." },
   { q: "Is the Outaouais real estate market active?", a: "Yes. In Q3 2026, 1,044 residential properties sold in the Gatineau metropolitan area. Over 12 months, single-family conditions favoured sellers below $740,000, and the market was balanced above that (APCIQ, Centris data). The picture still changes from one sector to another." },
-  { q: "Do you help with military relocations?", a: "Yes. I am an approved BGRS/SIRVA broker and I understand the IRP posting process. I help military families buy, sell and relocate smoothly in Outaouais." },
+  { q: "Do you help with military relocations?", a: "Yes. Military families have been part of my work since 2017. I accept SIRVA and BGRS files and plan the transaction around your posting date, for buying or selling in the Outaouais." },
   { q: "How do I start my real estate project in Outaouais?", a: "Contact me for a free consultation. We discuss your goals, I give you the facts and numbers, and together we define the right strategy for your situation." },
 ];
 

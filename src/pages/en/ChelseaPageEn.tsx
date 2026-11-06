@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "Can I build on a lot in Chelsea?",
-    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, the 15-metre riparian protection strip and MRC constraints can limit or regulate projects. Before buying land, check with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais.",
+    a: "Chelsea has strict building regulations, particularly in areas adjacent to Gatineau Park and along waterways. Agricultural zoning, the riparian protection strip and MRC constraints can limit or regulate projects. Before buying land, check with the Municipality of Chelsea and the MRC des Collines-de-l'Outaouais.",
   },
   {
     q: "Can my children go to an English school in Chelsea?",

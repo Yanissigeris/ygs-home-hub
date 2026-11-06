@@ -38,7 +38,7 @@ const activites = [
   {
     icon: "⛷️",
     title: "Activités récréatives",
-    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du club de ski de fond Nakkertok. La municipalité bénéficie d'un fort potentiel récréotouristique et travaille activement à l'offrir à ses résidents. (Source : Harmonie Construction, site Municipalité de Cantley)",
+    text: "Cantley dispose d'un golf, d'un parc aquatique, d'un centre de ski alpin, d'un terrain de camping, et du club de ski de fond Nakkertok.",
   },
   {
     icon: "🌊",

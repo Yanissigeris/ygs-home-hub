@@ -239,7 +239,7 @@ const PontiacPageEn = () => {
         dark
         overline="YOUR PROJECT IN PONTIAC"
         title="Pontiac is a market few brokers know well"
-        text="I have been covering the Municipality of Pontiac since 2017. I know the areas, the comparables, and the practical realities, wells, septic systems, zoning, access. If you have a project here, I am your local broker."
+        text="A broker in the Outaouais since 2017, Pontiac included, I know the areas, the comparables and the practical realities: wells, septic systems, zoning, access. If you have a project here, I am your local broker."
         buttons={[
           { label: "Free valuation →", href: "/en/home-valuation/" },
           { label: "Contact me →", href: "/en/contact/", variant: "outline" },
