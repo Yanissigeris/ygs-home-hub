@@ -40,7 +40,7 @@ const nextSteps = [
   { title: "Buyer guide", text: "The buying process in Québec explained simply, from search to notary.", href: "/en/buyer-guide/", cta: "Read the guide" },
 ];
 const faq = [
-  { q: "Is now a good time to buy in Gatineau?", a: "It depends mostly on your situation. Over 12 months, conditions favoured sellers for single-family homes (APCIQ, June 2026). We look together at your budget and recent sales in the area you are targeting." },
+  { q: "Is now a good time to buy in Gatineau?", a: "It depends mostly on your situation. In Q3 2026, there were 42% more properties for sale than a year earlier in the area (APCIQ), so you have more choice. We look together at your budget and recent sales in the area you are targeting." },
   { q: "I'm from Ottawa, how does it work in Québec?", a: "In Québec, the sale is finalized at a notary. When a broker represents you, the promise to purchase uses an OACIQ form. Plan for the land transfer duties (welcome tax), billed by the municipality after the purchase. I have worked with buyers from Ontario since 2017, and I explain each step before you sign." },
   { q: "Do I need a mortgage pre-approval?", a: "Yes, it is strongly recommended. A pre-approval clarifies your budget and makes your offer more credible to the seller. It is not final approval: the lender will also review the property you choose." },
   { q: "How do I choose the right Gatineau neighbourhood?", a: "Lifestyle, budget, family, Ottawa commute, schools: we look at all of it together to find the balance that suits you between Aylmer, Hull, the Plateau and Buckingham. For reference, Gatineau city hall, in Hull, is about 2 km from downtown Ottawa, the Plateau about 9 km and Old Aylmer about 14 km." },
@@ -58,7 +58,7 @@ const BuyerPageEn = () => (
         In Q3 2026, the Gatineau metropolitan area recorded 1,044 residential sales. The single-family median price was $480,000, with a selling time of 34 days (APCIQ, Centris data).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        According to APCIQ, over the 12 months ending in June 2026, conditions favoured sellers for single-family homes in every price range. A well-located home can therefore sell quickly. Coming in with a pre-approval and clear criteria lets you make an offer without rushing.
+        According to APCIQ, over the 12 months ending in Q3 2026, conditions still favoured sellers for single-family homes under $740,000, and the market was balanced at $740,000 and up. Inventory rose 42% in a year, but a well-located home can still sell quickly. Coming in with a pre-approval and clear criteria lets you make an offer without rushing.
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Source: APCIQ, residential barometer for Q3 2026, Gatineau metropolitan area.</p>
     </ContentBlock>

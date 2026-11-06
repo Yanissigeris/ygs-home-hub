@@ -55,7 +55,7 @@ const nextSteps = [
 ];
 
 const faq = [
-  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Ça dépend surtout de votre situation. Sur 12 mois, les conditions favorisaient les vendeurs pour les unifamiliales (APCIQ, juin 2026). On regarde ensemble votre budget et les ventes récentes du secteur visé." },
+  { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Ça dépend surtout de votre situation. Au 3e trimestre 2026, il y avait 42 % plus de propriétés à vendre qu'un an plus tôt dans la région (APCIQ), donc plus de choix pour vous. On regarde ensemble votre budget et les ventes récentes du secteur visé." },
   { q: "Je viens d'Ottawa, comment ça fonctionne au Québec?", a: "Au Québec, la vente se conclut chez un notaire. Quand un courtier vous représente, la promesse d'achat se fait sur un formulaire de l'OACIQ. Prévoyez aussi les droits de mutation (taxe de bienvenue), facturés par la municipalité après l'achat. J'accompagne des acheteurs de l'Ontario depuis 2017 et je vous explique chaque étape avant que vous signiez." },
   { q: "Dois-je obtenir une préapprobation hypothécaire?", a: "Oui, c'est fortement recommandé. La préapprobation clarifie votre budget et rend votre offre plus crédible aux yeux du vendeur. Ce n'est pas une approbation finale : le prêteur analysera aussi la propriété choisie." },
   { q: "Comment choisir le bon secteur à Gatineau?", a: "Mode de vie, budget, famille, trajet vers Ottawa, écoles : on regarde tout ça ensemble pour trouver l'équilibre qui vous convient entre Aylmer, Hull, le Plateau et Buckingham. Pour situer le trajet, l'hôtel de ville de Gatineau, dans Hull, est à environ 2 km du centre-ville d'Ottawa, le Plateau à environ 9 km et le Vieux-Aylmer à environ 14 km." },
@@ -81,7 +81,7 @@ const BuyerPage = () => (
         Au 3e trimestre 2026, la région métropolitaine de Gatineau a enregistré 1 044 ventes résidentielles. Le prix médian d'une unifamiliale y atteignait 480 000 $, avec un délai de vente de 34 jours (APCIQ, données Centris).
       </p>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
-        Selon l'APCIQ, sur les 12 mois terminés en juin 2026, les conditions étaient favorables aux vendeurs pour les unifamiliales dans toutes les gammes de prix. Une propriété bien située peut donc se vendre vite. Avec une préapprobation et des critères clairs, vous pouvez faire une offre sans vous précipiter.
+        Selon l'APCIQ, sur les 12 mois terminés au 3e trimestre 2026, les conditions favorisaient encore les vendeurs pour les unifamiliales sous 740 000 $, et le marché était équilibré à 740 000 $ et plus. L'inventaire a monté de 42 % en un an, mais une propriété bien située peut encore partir vite. Avec une préapprobation et des critères clairs, vous pouvez faire une offre sans vous précipiter.
       </p>
       <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 3e trimestre 2026, région métropolitaine de Gatineau.</p>
     </ContentBlock>

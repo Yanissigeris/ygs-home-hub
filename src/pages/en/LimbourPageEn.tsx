@@ -15,7 +15,7 @@ const LimbourPageEn = () => (
     reasons={[
       "Recent homes and modern residential developments (mostly 2000-2020 builds)",
       "Median single-family price of $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Limbour",
-      "Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), for comparison",
+      "Ottawa's single-family benchmark price was $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI), for comparison",
       "Ferme Limbour sub-sector: higher-end residential with wooded trails and larger properties",
       "Abundant parks, walking trails and green spaces",
       "Gatineau Hospital (909 Boulevard La Vérendrye Ouest) a few minutes away by car",
@@ -48,7 +48,7 @@ const LimbourPageEn = () => (
     faq={{ title: "Questions about Limbour", items: [
       { q: "Is Limbour a new neighbourhood?", a: "Yes, mostly. Most developments date from the 2000s-2020s, with a few older properties in certain pockets. The Ferme Limbour sub-sector draws buyers with its large homes." },
       { q: "What is the price of a home in Limbour in 2026?", a: "Limbour is part of APCIQ's Gatineau sector. In Q3 2026, the median single-family price there was $464,900 (Centris data). In Limbour, prices then vary with size, year of construction and sub-sector, and the higher-end properties are in Ferme Limbour. For a precise figure, I compare recent sales of homes like yours." },
-      { q: "How much can I save buying in Limbour vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's median single-family price was $740,000 in August 2026 (Ottawa Real Estate Board), and it was $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Limbour. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
+      { q: "How much can I save buying in Limbour vs. Ottawa?", a: "It depends on the homes you compare. Two official reference points: Ottawa's single-family benchmark price was $705,100 in September 2026 (Ottawa Real Estate Board, MLS® HPI), and it was $464,900 in Q3 2026 in APCIQ's Gatineau sector, which includes Limbour. The two boards don't cover the same period or identical homes, so for a real comparison I put similar properties side by side. Property taxes and Quebec-specific costs should also be factored into your decision." },
       { q: "Are there English-language schools nearby?", a: "Yes, subject to eligibility for English instruction (certificate of eligibility). The Western Quebec School Board has elementary schools in the Gatineau and Hull sectors (Greater Gatineau Elementary, Pierre Elliott Trudeau Elementary). Its closest high schools are in Hull (Hadley Junior High, Philemon Wright High School). To find the school for your address, use the WQSB School Locator on westernquebec.ca. I can also point you to the right contacts during a property visit." },
       { q: "Are there parks and trails in Limbour?", a: "Yes, the neighbourhood is known for its green spaces, walking trails and neighbourhood parks. The Ferme Limbour sub-sector is surrounded by wooded areas, which contributes to the area's appeal." },
       { q: "What services are accessible near Limbour?", a: "Grocery stores, pharmacies and services are a few minutes away by car, as is Gatineau Hospital, at 909 Boulevard La Vérendrye Ouest." },
