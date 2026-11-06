@@ -28,7 +28,7 @@ export const propertiesEn: Property[] = [
     area: "2 157 sq ft",
     yearBuilt: "1999",
     description:
-      "Rare detached triplex with garage in the Plateau de la Capitale, steps from Gatineau Park. 3 units of 2 bedrooms each with bathroom and laundry. Private backyard with no rear neighbours. Current rents are below market, so there's room to raise them over time.",
+      "Rare detached triplex with garage in the Plateau de la Capitale, steps from Gatineau Park. 3 units of 2 bedrooms each with bathroom and laundry. Private backyard with no rear neighbours. Current rents below market, strong optimization potential.",
     image: property11366995,
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
@@ -220,7 +220,7 @@ export const propertiesEn: Property[] = [
     lotSize: "5,000 sq ft",
     yearBuilt: "1974",
     description:
-      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom, suited to an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
+      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
     image: property22864394,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
@@ -296,7 +296,7 @@ export const propertiesEn: Property[] = [
     area: "1.7 acres (6,884.7 m²)",
     lotSize: "1.7 acres",
     description:
-      "Beautiful 1.7-acre wooded lot (6,884.7 m²) with potential views of Lake Newcombe. A rare find: acquired rights and access are confirmed in writing by the Municipality, letter on file, and the lot benefits from a notarized, perpetual right of way from Chemin du Fort, on foot and by vehicle. Set back from the road, about 30 minutes from Gatineau, it offers a peaceful, private setting surrounded by nature, for your building project. Electricity available at the road.",
+      "Beautiful 1.7-acre wooded lot (6,884.7 m²) with potential views of Lake Newcombe. A rare find: acquired rights and access are confirmed in writing by the Municipality, letter on file, and the lot benefits from a notarized, perpetual right of way from Chemin du Fort, on foot and by vehicle. Set back from the road, about 30 minutes from Gatineau, it offers a peaceful, private setting surrounded by nature, ideal for your building project. Electricity available at the road.",
     image: property15159365,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/val-des-monts/767-ch-du-fort/15159365",
