@@ -401,7 +401,7 @@ const SiteHeader = () => {
               e.currentTarget.style.background = "transparent";
               e.currentTarget.style.color = ctaTextColor;
             }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite de votre propriété"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
@@ -422,7 +422,7 @@ const SiteHeader = () => {
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
@@ -480,7 +480,7 @@ const SiteHeader = () => {
             style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
-            aria-label={lang === "en" ? "Get a free home valuation" : "Obtenez une évaluation gratuite"}
+            aria-label={lang === "en" ? "Free valuation of your home" : "Évaluation gratuite de votre propriété"}
           >
             {ctaLabel}
           </Link>
