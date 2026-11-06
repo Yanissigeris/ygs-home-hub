@@ -34,7 +34,7 @@ const faq = [
   { q: "Comment être informé des nouvelles inscriptions?", a: "Contactez-moi avec vos critères, je vous avise dès qu'une propriété correspondante arrive sur le marché." },
   { q: "Les propriétés se vendent-elles vite à Gatineau?", a: "Ça dépend du secteur et du prix. Au 3e trimestre 2026, une unifamiliale s'est vendue en 34 jours en moyenne dans la région de Gatineau (APCIQ). Une propriété bien située et bien affichée peut partir plus vite." },
   { q: "Quels sont les prix des maisons déjà vendues à Gatineau?", a: "Les prix vendus n'apparaissent pas sur Centris pour le public. En tant que courtier, j'ai accès aux ventes conclues et je vous montre celles qui se comparent à la propriété qui vous intéresse." },
-  { q: "Comment ne pas manquer une nouvelle inscription?", a: "La grande majorité des propriétés à vendre sont inscrites sur Centris. Je vous avertis dès qu'une nouvelle inscription correspond à vos critères." },
+  { q: "Comment ne pas manquer une nouvelle inscription?", a: "Je vous avertis dès qu'une nouvelle inscription Centris correspond à vos critères, avec les ventes comparables du secteur pour juger le prix." },
 ];
 
 const related = [

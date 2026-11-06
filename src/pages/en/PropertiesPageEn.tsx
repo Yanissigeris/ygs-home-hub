@@ -29,7 +29,7 @@ const faq = [
   { q: "How can I be notified of new listings?", a: "Contact me with your criteria, I'll let you know as soon as a matching property hits the market." },
   { q: "Do properties sell quickly in Gatineau?", a: "It depends on the area and the price. In Q3 2026, a single-family home sold in 34 days on average in the Gatineau area (QPAREB). A well-located, well-presented property can go faster." },
   { q: "What are the prices of sold homes in Gatineau?", a: "Sold prices don't show on Centris for the public. As a broker, I have access to completed sales, and I show you the ones that compare to the property you like." },
-  { q: "How do I avoid missing a new listing?", a: "The vast majority of homes for sale are listed on Centris. I let you know as soon as a new listing matches your criteria." },
+  { q: "How do I avoid missing a new listing?", a: "I let you know as soon as a new Centris listing matches your criteria, with comparable sales in the area to judge the price." },
 ];
 const related = [
   { title: "Buyer consultation", text: "Clarify your criteria and options.", href: "/en/buyer-consultation/" },
