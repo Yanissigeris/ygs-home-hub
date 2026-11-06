@@ -1291,14 +1291,14 @@ I've worked with military families since 2017. I know the steps of a relocation,
     titleEn: "Notary Fees and Closing Costs in Gatineau",
     seoTitle: "Frais de notaire achat maison Gatineau · Guide | YGS",
     seoTitleEn: "Notary Fees Buying Home Gatineau · Guide | YGS",
-    metaDescription: "Combien coûtent le notaire, la taxe de bienvenue, l'inspection et les autres frais de clôture pour acheter une maison à Gatineau? Exemples concrets.",
-    metaDescriptionEn: "How much are notary fees, welcome tax, inspection and other closing costs when buying a home in Gatineau? Details and real examples.",
+    metaDescription: "Dans mes dossiers, le notaire coûte souvent de 1 800 $ à 2 500 $ pour un achat standard. La taxe de bienvenue et les autres frais de clôture à Gatineau, avec exemples.",
+    metaDescriptionEn: "In my files, a notary often costs $1,800 to $2,500 for a standard purchase. The welcome tax and other closing costs in Gatineau, with examples.",
     excerpt: "Frais de notaire, taxe de bienvenue, inspection et autres coûts à prévoir lors d'un achat immobilier à Gatineau.",
     excerptEn: "Notary fees, welcome tax, inspection and other costs to plan for when buying a home in Gatineau.",
     category: "Acheteurs",
     categoryEn: "Buyers",
     publishDate: "2025-02-20",
-    updatedDate: "2026-11-05",
+    updatedDate: "2026-11-06",
     published: true,
     body: `## Frais de notaire et frais de clôture à Gatineau
 
@@ -1306,7 +1306,7 @@ Au-delà du prix d'achat et de la mise de fonds, il faut prévoir les frais de c
 
 ### Les frais de notaire
 
-Au Québec, c'est un notaire qui finalise la vente. Il vérifie les titres, prépare l'acte de vente et l'acte hypothécaire, inscrit la vente au registre foncier et fait les ajustements de taxes municipales et scolaires. Ses honoraires varient selon le notaire et la complexité du dossier : demandez une soumission écrite à deux notaires.
+Au Québec, c'est un notaire qui finalise la vente. Il vérifie les titres, prépare l'acte de vente et l'acte hypothécaire, inscrit la vente au registre foncier et fait les ajustements de taxes municipales et scolaires. Dans mes dossiers, pour une transaction standard, je vois souvent des honoraires de 1 800 $ à 2 500 $. Le montant varie selon le notaire et la complexité du dossier : demandez une soumission écrite à deux notaires.
 
 ### La taxe de bienvenue (droits de mutation)
 
@@ -1320,7 +1320,7 @@ Elle se calcule sur le plus élevé de trois montants : le prix payé (sans les 
 
 Exemple : pour une maison de 425 000 $, la taxe de bienvenue est de 4 485 $. Pour 600 000 $, elle atteint 8 610 $, dont 3 000 $ pour la portion au-delà de 500 000 $.
 
-Bonne nouvelle pour un premier achat : Québec a créé en 2026 un crédit d'impôt remboursable pour l'accès à la propriété. Il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour un premier logement acquis après le 31 décembre 2025. Les conditions sont sur le site de Finances Québec.
+Pour un premier achat, Québec a créé en 2026 un crédit d'impôt remboursable pour l'accès à la propriété. Il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour un premier logement acquis après le 31 décembre 2025. Les conditions sont sur le site de Finances Québec.
 
 ### L'inspection préachat
 
@@ -1347,7 +1347,7 @@ Beyond the purchase price and the down payment, you need to plan for closing cos
 
 ### Notary fees
 
-In Quebec, a notary completes the sale. The notary checks the titles, prepares the deed of sale and the hypothec, registers the sale in the land register and handles the municipal and school tax adjustments. Fees vary by notary and by how complex the file is: get a written quote from two notaries.
+In Quebec, a notary completes the sale. The notary checks the titles, prepares the deed of sale and the hypothec, registers the sale in the land register and handles the municipal and school tax adjustments. In my files, for a standard transaction, I often see fees of $1,800 to $2,500. The amount varies by notary and by how complex the file is: get a written quote from two notaries.
 
 ### The welcome tax (transfer duties)
 
@@ -1361,7 +1361,7 @@ It's calculated on the highest of three amounts: the price paid (excluding sales
 
 Example: for a $425,000 home, the welcome tax is $4,485. For $600,000, it reaches $8,610, including $3,000 for the portion above $500,000.
 
-Good news for first-time buyers: in 2026, Quebec created a refundable home ownership access tax credit. It can refund up to $5,875 of welcome tax for a first home acquired after December 31, 2025. The conditions are on the Finances Québec website.
+For first-time buyers, Quebec created a refundable home ownership access tax credit in 2026. It can refund up to $5,875 of welcome tax for a first home acquired after December 31, 2025. The conditions are on the Finances Québec website.
 
 ### The pre-purchase inspection
 
