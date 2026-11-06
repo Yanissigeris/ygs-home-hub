@@ -1317,7 +1317,7 @@ Elle se calcule sur le plus élevé de trois montants : le prix payé (sans les 
 
 Exemple : pour une maison de 425 000 $, la taxe de bienvenue est de 4 485 $. Pour 600 000 $, elle atteint 8 610 $, dont 3 000 $ pour la portion au-delà de 500 000 $.
 
-Bonne nouvelle pour un premier achat : Québec a créé en 2026 un crédit d'impôt remboursable pour l'accès à la propriété. Il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour une habitation acquise après le 31 décembre 2025. Les conditions sont sur le site de Finances Québec.
+Bonne nouvelle pour un premier achat : Québec a créé en 2026 un crédit d'impôt remboursable pour l'accès à la propriété. Il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour un premier logement acquis après le 31 décembre 2025. Les conditions sont sur le site de Finances Québec.
 
 ### L'inspection préachat
 
@@ -1358,7 +1358,7 @@ It's calculated on the highest of three amounts: the price paid (excluding sales
 
 Example: for a $425,000 home, the welcome tax is $4,485. For $600,000, it reaches $8,610, including $3,000 for the portion above $500,000.
 
-Good news for first-time buyers: in 2026, Quebec created a refundable home ownership access tax credit. It can refund up to $5,875 of welcome tax for a home acquired after December 31, 2025. The conditions are on the Finances Québec website.
+Good news for first-time buyers: in 2026, Quebec created a refundable home ownership access tax credit. It can refund up to $5,875 of welcome tax for a first home acquired after December 31, 2025. The conditions are on the Finances Québec website.
 
 ### The pre-purchase inspection
 
@@ -1558,9 +1558,9 @@ Une évaluation de 400 000 $ ne représente donc pas la même maison dans les 
 
 ### Ce que paie une maison médiane à Gatineau
 
-Gatineau n'a pas un seul taux résidentiel : il varie selon l'unité de voisinage depuis 2024. Dans son budget 2026, la Ville donne l'exemple d'une maison évaluée à 454 600 $. Son compte municipal est d'environ 3 575 $, dont 644 $ pour le transport en commun et 179 $ pour les matières résiduelles.
+Gatineau n'a pas un seul taux résidentiel : il varie selon l'unité de voisinage. Dans son budget 2026, la Ville donne l'exemple d'une maison évaluée à 454 600 $. Son compte municipal est d'environ 3 575 $, dont 644 $ pour le transport en commun et 179 $ pour les matières résiduelles.
 
-La taxe scolaire s'ajoute et elle est facturée par le centre de services scolaire. Pour 2026-2027, le taux est de 0,07899 $ par 100 $ d'évaluation, et les premiers 25 000 $ sont exemptés. Ça donne environ 340 $ pour la même maison.
+La taxe scolaire s'ajoute et elle est facturée par le centre de services scolaire. Pour 2026-2027, le taux est de 0,07899 $ par 100 $ de valeur uniformisée, partout au Québec, et les premiers 25 000 $ sont exemptés. Pour la même maison, comptez environ 340 $ à 350 $, selon la valeur uniformisée.
 
 ### Et à Ottawa?
 
@@ -1594,9 +1594,9 @@ So a $400,000 assessment doesn't describe the same house in both cities. Applyin
 
 ### What a median home pays in Gatineau
 
-Gatineau doesn't have a single residential rate: it varies by neighbourhood unit since 2024. In its 2026 budget, the City gives the example of a home assessed at $454,600. Its municipal bill is about $3,575, including $644 for public transit and $179 for waste management.
+Gatineau doesn't have a single residential rate: it varies by neighbourhood unit. In its 2026 budget, the City gives the example of a home assessed at $454,600. Its municipal bill is about $3,575, including $644 for public transit and $179 for waste management.
 
-School tax is added on top and is billed by the school service centre or school board. For 2026-2027, the rate is $0.07899 per $100 of assessment, and the first $25,000 is exempt. That comes to about $340 for the same home.
+School tax is added on top and is billed by the school service centre or school board. For 2026-2027, the rate is $0.07899 per $100 of standardized value, everywhere in Quebec, and the first $25,000 is exempt. For the same home, expect about $340 to $350, depending on the standardized value.
 
 ### And in Ottawa?
 
@@ -1802,7 +1802,7 @@ Le secteur occupe l'extrémité ouest de Gatineau. Il offre un cadre de vie tran
 
 ### Vie familiale et écoles
 - Écoles francophones et anglophones : Grande variété de choix
-- Parc des Cèdres : plage, volleyball de plage et sentiers récréatifs
+- Parc des Cèdres : plage et sentier de marche
 
 ### Prix immobiliers à Aylmer
 - Maison unifamiliale : Prix médian de 530 000 $ selon l'APCIQ (données Centris), au troisième trimestre de 2026
@@ -1839,7 +1839,7 @@ The sector sits at the western end of Gatineau. It offers a quiet lifestyle clos
 
 ### Family Life and Schools
 - French and English schools: Wide variety of choices
-- Parc des Cèdres: beach, beach volleyball and recreational trails
+- Parc des Cèdres: beach and walking trail
 
 ### Aylmer Real Estate Prices
 - Single-family home: Median price of $530,000 according to QPAREB (Centris data), in Q3 2026
@@ -1983,7 +1983,7 @@ Avant de visiter, sachez combien vous pouvez emprunter. La préqualification vou
 - RAP (Régime d'accession à la propriété) : Retirez jusqu'à 60 000 $ de votre REER
 - CELIAPP : Compte libre d'impôt pour l'achat d'une première propriété, jusqu'à 8 000 $ par année et 40 000 $ à vie
 - Crédit d'impôt pour l'achat d'une première habitation : crédit fédéral jusqu'à 1 500 $
-- Nouveau crédit québécois pour l'accès à la propriété : nouveau en 2026, il rembourse jusqu'à 5 875 $ de taxe de bienvenue aux premiers acheteurs admissibles (Finances Québec)
+- Nouveau crédit québécois pour l'accès à la propriété : nouveau en 2026, il peut rembourser jusqu'à 5 875 $ de taxe de bienvenue pour l'achat d'un premier logement, selon les conditions de Finances Québec
 
 ## 3. Prévoyez tous les frais
 Au-delà du prix d'achat, prévoyez :
@@ -2028,7 +2028,7 @@ Before visiting, know how much you can borrow. Pre-qualification gives you a rea
 - HBP (Home Buyers' Plan): Withdraw up to $60,000 from your RRSP
 - FHSA: Tax-free account for a first home purchase, up to $8,000 per year and $40,000 lifetime
 - First-Time Home Buyers' Tax Credit: federal credit of up to $1,500
-- Quebec home ownership access tax credit: new in 2026, it refunds up to $5,875 of welcome tax to eligible first-time buyers (Finances Québec)
+- Quebec home ownership access tax credit: new in 2026, it can refund up to $5,875 of welcome tax on the purchase of a first home, subject to Finances Québec's conditions
 
 ## 3. Plan for All Costs
 Beyond the purchase price, plan for:
