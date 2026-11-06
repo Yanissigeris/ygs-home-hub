@@ -1560,7 +1560,7 @@ Une évaluation de 400 000 $ ne représente donc pas la même maison dans les 
 
 Gatineau n'a pas un seul taux résidentiel : il varie selon l'unité de voisinage. Dans son budget 2026, la Ville donne l'exemple d'une maison évaluée à 454 600 $. Son compte municipal est d'environ 3 575 $, dont 644 $ pour le transport en commun et 179 $ pour les matières résiduelles.
 
-La taxe scolaire s'ajoute et elle est facturée par le centre de services scolaire. Pour 2026-2027, le taux est de 0,07899 $ par 100 $ de valeur uniformisée, partout au Québec, et les premiers 25 000 $ sont exemptés. Pour la même maison, comptez environ 340 $ à 350 $, selon la valeur uniformisée.
+La taxe scolaire s'ajoute et elle est facturée par le centre de services scolaire. Pour 2026-2027, le taux est de 0,07899 $ par 100 $ de valeur uniformisée, partout au Québec, et les premiers 25 000 $ sont exemptés. Comptez environ 340 $ à 350 $ pour la même maison, selon sa valeur uniformisée.
 
 ### Et à Ottawa?
 
@@ -1596,7 +1596,7 @@ So a $400,000 assessment doesn't describe the same house in both cities. Applyin
 
 Gatineau doesn't have a single residential rate: it varies by neighbourhood unit. In its 2026 budget, the City gives the example of a home assessed at $454,600. Its municipal bill is about $3,575, including $644 for public transit and $179 for waste management.
 
-School tax is added on top and is billed by the school service centre or school board. For 2026-2027, the rate is $0.07899 per $100 of standardized value, everywhere in Quebec, and the first $25,000 is exempt. For the same home, expect about $340 to $350, depending on the standardized value.
+School tax is added on top and is billed by the school service centre or school board. For 2026-2027, the rate is $0.07899 per $100 of standardized value, everywhere in Quebec, and the first $25,000 is exempt. Expect about $340 to $350 for the same home, depending on its standardized value.
 
 ### And in Ottawa?
 
