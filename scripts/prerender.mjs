@@ -70,6 +70,13 @@ const ROOT = path.resolve(__dirname, "..");
  * dernier commit ayant touché ce fichier.
  * Priorité : SEO_ROUTES[route].lastmod > date git > SITE_LAST_UPDATE.
  */
+
+/** Same rule as BlogArticlePage: "<title> | YGS", or the post's seoTitle when that runs past 60 characters. */
+function titleTag(title, seoTitle) {
+  const long = `${title} | YGS`;
+  return long.length > 60 && seoTitle ? seoTitle : long;
+}
+
 async function buildRouteGitDates() {
   /* Guard : dans un clone shallow, git log retourne la date du HEAD
    * pour tous les fichiers (sans erreur) — dates fausses. On désactive. */
@@ -775,7 +782,7 @@ async function main() {
     const frRoute = `/blogue/${post.slug}`;
     const frUrlAbs = `${SITE_URL}${frRoute}`;
     const frMeta = {
-      title: `${post.title} | YGS`,
+      title: titleTag(post.title, post.seoTitle),
       description: post.metaDescription || post.excerpt || "Article du blogue YGS.",
       ogImage,
     };
@@ -816,7 +823,7 @@ async function main() {
     const enRoute = `/en/blog/${post.slugEn}`;
     const enUrlAbs = `${SITE_URL}${enRoute}`;
     const enMeta = {
-      title: `${post.titleEn} | YGS`,
+      title: titleTag(post.titleEn, post.seoTitleEn),
       description: post.metaDescriptionEn || post.excerptEn || "YGS blog article.",
       ogImage,
     };

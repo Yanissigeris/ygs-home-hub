@@ -191,7 +191,11 @@ const BlogArticlePage = () => {
   }
 
   const title = isFr ? post.title : post.titleEn;
-  const seoTitle = `${title} | YGS`;
+  // Keep "<title> | YGS" unless it runs past ~60 characters (truncated in Google);
+  // then fall back to the shorter seoTitle written for the post, if any.
+  const longSeoTitle = `${title} | YGS`;
+  const shortSeoTitle = isFr ? post.seoTitle : post.seoTitleEn;
+  const seoTitle = longSeoTitle.length > 60 && shortSeoTitle ? shortSeoTitle : longSeoTitle;
   const metaDesc = isFr ? post.metaDescription : post.metaDescriptionEn;
   const category = isFr ? post.category : post.categoryEn;
   const excerpt = isFr ? post.excerpt : post.excerptEn;
