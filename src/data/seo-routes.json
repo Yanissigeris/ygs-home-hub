@@ -155,8 +155,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/chelsea": {
-    "title": "Courtier immobilier Chelsea · Outaouais | YGS",
-    "description": "Courtier immobilier Chelsea : maisons de campagne sur terrains boisés, près du parc de la Gatineau. Marché et secteurs détaillés.",
+    "title": "Courtier immobilier Chelsea : maisons et terrains | YGS",
+    "description": "Maisons sur grands terrains et terrains à bâtir à Chelsea, près du parc de la Gatineau. Les règles de construction et les écoles, expliquées par un courtier local.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/cantley": {
@@ -165,8 +165,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/val-des-monts": {
-    "title": "Courtier immobilier Val-des-Monts | YGS",
-    "description": "Courtier immobilier Val-des-Monts : chalets et maisons familiales au bord de l'eau ou en nature, dans une municipalité qui compte 125 lacs.",
+    "title": "Courtier immobilier Val-des-Monts : chalets et lacs | YGS",
+    "description": "Chalets et maisons à Val-des-Monts, une municipalité de 125 lacs. Comment choisir son lac et quoi vérifier avant d'acheter un chalet.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/masson-angers": {
@@ -221,7 +221,7 @@
   },
   "/temoignages": {
     "title": "Témoignages clients · YGS Courtier Gatineau",
-    "description": "Témoignages de clients de Yanis Gauthier-Sigeris\u00a0: vendeurs, acheteurs, familles relocalisées et investisseurs en Outaouais.",
+    "description": "Témoignages de clients de Yanis Gauthier-Sigeris : vendeurs, acheteurs, familles relocalisées et investisseurs en Outaouais.",
     "ogImage": "https://yanisgauthier.com/og/og-testimonials.jpg"
   },
   "/contact-yanis": {
@@ -275,8 +275,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/verifier-un-courtier-immobilier-oaciq": {
-    "title": "Registre OACIQ : vérifier ou trouver un courtier | YGS",
-    "description": "Comment consulter le registre public de l'OACIQ pour vérifier le permis d'un courtier avant de signer. Les étapes et ce qu'il faut regarder.",
+    "title": "Registre OACIQ : trouver et vérifier un courtier | YGS",
+    "description": "Le registre de l'OACIQ, étape par étape : chercher un courtier par son nom et vérifier son permis, avec ses mesures disciplinaires s'il y en a. C'est gratuit.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/frais-de-courtage-immobilier-quebec": {
@@ -455,8 +455,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/chelsea": {
-    "title": "Real Estate Broker Chelsea · Outaouais | YGS",
-    "description": "Real estate broker Chelsea: country homes on wooded lots, close to Gatineau Park. Detailed market and areas.",
+    "title": "Chelsea Real Estate Broker: Homes and Land | YGS",
+    "description": "Homes on large lots and building land in Chelsea, near Gatineau Park. Building rules and schools, explained by a local broker.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/cantley": {
@@ -465,8 +465,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/val-des-monts": {
-    "title": "Real Estate Broker Val-des-Monts | YGS",
-    "description": "Real estate broker Val-des-Monts: cottages and family homes on the water or in nature, in a municipality with 125 lakes.",
+    "title": "Val-des-Monts Real Estate: Cottages and Lakes | YGS",
+    "description": "Cottages and homes in Val-des-Monts, a municipality with 125 lakes. How to choose a lake and what to check before you buy a cottage.",
     "ogImage": "https://yanisgauthier.com/og/og-neighborhoods.jpg"
   },
   "/en/masson-angers": {
