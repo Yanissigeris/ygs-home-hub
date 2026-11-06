@@ -98,7 +98,7 @@ const PlexAnalysisPageEn = () => {
 
                 {submitted ? (
                   <SuccessMessage
-                    title="Thank you! Request sent."
+                    title="Thank you, request sent."
                     text="I'll send you a personalized response with your analysis."
                   />
                 ) : (

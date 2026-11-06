@@ -46,7 +46,7 @@ export const properties: Property[] = [
     area: "2 157 pi²",
     yearBuilt: "1999",
     description:
-      "Rare triplex isolé avec garage dans le Plateau de la Capitale, à deux pas du parc de la Gatineau. 3 logements de 2 chambres chacun avec salle de bain et salle de lavage. Cour arrière privée sans voisins à l'arrière. Revenus sous le marché — potentiel d'optimisation intéressant.",
+      "Rare triplex isolé avec garage dans le Plateau de la Capitale, à deux pas du parc de la Gatineau. 3 logements de 2 chambres chacun avec salle de bain et salle de lavage. Cour arrière privée sans voisins à l'arrière. Les loyers actuels sont sous le marché, ce qui laisse de la place pour les ajuster avec le temps.",
     image: property11366995,
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
@@ -98,7 +98,7 @@ export const properties: Property[] = [
     address: "310 Boul. d'Europe, app. 6",
     city: "Gatineau (Aylmer, Plateau de la Capitale)",
     price: "1 975 $/mois",
-    type: "Condo — Appartement (location)",
+    type: "Condo, appartement (location)",
     bedrooms: "2",
     bathrooms: "1",
     area: "1 240 pi²",
@@ -179,7 +179,7 @@ export const properties: Property[] = [
     area: "673,30 m² (terrain)",
     yearBuilt: "1968",
     description:
-      "Opportunité d'investissement rare. Évaluation agréée 2025 en main (1,15 M$). Revenu potentiel de 64 140 $/an avec 2 logements de 3 chambres aux étages et 2 logements d'une chambre au sous-sol — entièrement reconstruits en 2024-2025 (charpente, électricité, plomberie, finition, fenêtres Energy Star). Canalisation sous-dalle en PVC, échangeur d'air, entrée électrique refaite avec compteurs individuels à l'extérieur. Chauffage à l'eau chaude au gaz naturel. Garage détaché double, 9 stationnements. Rue tranquille en coin, à distance de marche des commerces, écoles et transport en commun.",
+      "Opportunité d'investissement rare. Évaluation agréée 2025 en main (1,15 M$). Revenu potentiel de 64 140 $/an avec 2 logements de 3 chambres aux étages et 2 logements d'une chambre au sous-sol, entièrement reconstruits en 2024-2025 (charpente, électricité, plomberie, finition, fenêtres Energy Star). Canalisation sous-dalle en PVC, échangeur d'air, entrée électrique refaite avec compteurs individuels à l'extérieur. Chauffage à l'eau chaude au gaz naturel. Garage détaché double, 9 stationnements. Rue tranquille en coin, à distance de marche des commerces, écoles et transport en commun.",
     image: property19326119,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/71-rue-lessard/19326119",

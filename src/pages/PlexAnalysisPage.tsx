@@ -101,7 +101,7 @@ const PlexAnalysisPage = () => {
 
                 {submitted ? (
                   <SuccessMessage
-                    title="Merci! Demande envoyée."
+                    title="Merci, demande envoyée."
                     text="Je vous envoie une réponse personnalisée avec votre analyse."
                   />
                 ) : (

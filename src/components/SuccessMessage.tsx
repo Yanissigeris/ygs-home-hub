@@ -8,7 +8,7 @@ interface SuccessMessageProps {
 }
 
 const SuccessMessage = ({
-  title = "Merci! Demande envoyée.",
+  title = "Merci, demande envoyée.",
   text = "Je vous reviens rapidement.",
   variant = "card",
 }: SuccessMessageProps) => {
