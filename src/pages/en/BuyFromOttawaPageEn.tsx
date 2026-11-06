@@ -15,7 +15,7 @@ import { MapPin, DollarSign, Home, FileText, Clock, Award, Shield } from "lucide
 import heroImg from "@/assets/hero-buy-from-ottawa.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes and condos often cost less in Gatineau than in Ottawa. In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (APCIQ)." },
+  { icon: DollarSign, title: "More affordable prices", text: "Single-family homes and condos often cost less in Gatineau than in Ottawa. In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (QPAREB)." },
   { icon: MapPin, title: "Ottawa proximity", text: "Bridges (Champlain, Alexandra, du Portage) and STO buses connect both sides of the river. Downtown Ottawa is about 2 km from Hull and about 14 km from Old Aylmer." },
   { icon: Home, title: "More space", text: "For the same budget, you often get more rooms or a bigger yard in Aylmer, the Plateau or Buckingham." },
   { icon: FileText, title: "Quebec process", text: "The buying process in Quebec has its own rules: promise to purchase, notary, transfer duties (welcome tax) and school taxes. I guide you step by step." },
@@ -29,7 +29,7 @@ const sectors = [
 
 
 const faq = [
-  { q: "How much can I save buying in Gatineau?", a: "It depends on the area and property type. Two official reference points: the single-family benchmark price was $705,100 in Ottawa in September 2026 (Ottawa Real Estate Board, MLS® HPI). In the city of Gatineau, the median single-family price was $471,000 in Q3 2026 (APCIQ). They aren't the same measure (benchmark price vs. median) and don't cover the same period, so to compare costs I put similar properties side by side and factor in municipal and school taxes." },
+  { q: "How much can I save buying in Gatineau?", a: "It depends on the area and property type. Two official reference points: the single-family benchmark price was $705,100 in Ottawa in September 2026 (Ottawa Real Estate Board, MLS® HPI). In the city of Gatineau, the median single-family price was $471,000 in Q3 2026 (QPAREB). They aren't the same measure (benchmark price vs. median) and don't cover the same period, so to compare costs I put similar properties side by side and factor in municipal and school taxes." },
   { q: "How does buying work when I'm in Ontario?", a: "You can work in Ontario and live in Gatineau. The buying process takes place in Quebec: promise to purchase, inspection conditions, notary signing. If you are represented, your broker must hold an OACIQ licence. I guide you at every step." },
   { q: "Are taxes higher in Quebec?", a: "It depends on the tax. When you buy, you pay the welcome tax: in Gatineau, about $4,486 on a $425,000 property under the 2026 grid. Municipal and school taxes vary by sector, and Ottawa and Gatineau calculate them differently. To compare, we look at the tax bills of similar homes. Personal income tax is also structured differently in Quebec, so we look at the full picture together." },
   { q: "Can I keep my Ontario job and family doctor?", a: "For your job, yes: many Gatineau residents work in Ottawa, on site or hybrid. As for your family doctor, check with your clinic. Once you are a Quebec resident, your public health coverage falls under RAMQ." },

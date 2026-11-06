@@ -23,7 +23,7 @@ const steps = [
 
 
 const faq = [
-  { q: "How long does it take to sell during a posting?", a: "It depends on the price and the property type. In Q3 2026, a single-family home sold in 34 days on average in the Gatineau CMA, and a condo in 36 days (APCIQ). Add the time until the notary signing. We adapt the plan to your schedule." },
+  { q: "How long does it take to sell during a posting?", a: "It depends on the price and the property type. In Q3 2026, a single-family home sold in 34 days on average in the Gatineau CMA, and a condo in 36 days (QPAREB). Add the time until the notary signing. We adapt the plan to your schedule." },
   { q: "What if I have to leave before the sale?", a: "The sale can go ahead after you leave. We set up a plan for showings, and you can sign documents remotely. For the deed of sale, your notary can explain the power of attorney option." },
   { q: "Do I risk selling below market value?", a: "The risk goes down when the price is set right from the start. My role is to base that price on recent comparable sales, even with a tight timeline." },
 ];

@@ -16,7 +16,7 @@ import heroImg from "@/assets/hero-military-buyer.webp";
 import sirvaBgrsLogo from "@/assets/logo-sirva-bgrs.webp";
 
 const advantages = [
-  { icon: DollarSign, title: "Price benchmarks", text: "In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (APCIQ). We compare it together with the market you are leaving." },
+  { icon: DollarSign, title: "Price benchmarks", text: "In Q3 2026, the median single-family price in the Gatineau CMA was $480,000 (QPAREB). We compare it together with the market you are leaving." },
   { icon: MapPin, title: "Close to work", text: "Access to National Defence's Carling Campus, in west Ottawa, and other federal facilities in the region, depending on the area you choose." },
   { icon: Home, title: "Variety of properties", text: "Houses, semi-detached homes, condos and plexes, in family-friendly, well-served neighbourhoods." },
   { icon: Shield, title: "Bilingual support", text: "Service in French and English, adapted to your military reality." },

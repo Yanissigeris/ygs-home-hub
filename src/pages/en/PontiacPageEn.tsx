@@ -36,7 +36,7 @@ const faq = [
   },
   {
     q: "What does a Pontiac home cost in 2026?",
-    a: "Pontiac is part of APCIQ's “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Chelsea, Cantley and Val-des-Monts, so it's a broad reference. In Pontiac, prices depend mostly on lot size, the condition of the house and access to the Ottawa River. For a precise figure, I compare recent Pontiac sales.",
+    a: "Pontiac is part of QPAREB's “Gatineau periphery” area, where the median single-family price was $530,000 in Q3 2026 (Centris data). That area also includes Chelsea, Cantley and Val-des-Monts, so it's a broad reference. In Pontiac, prices depend mostly on lot size, the condition of the house and access to the Ottawa River. For a precise figure, I compare recent Pontiac sales.",
   },
   {
     q: "Are wells, septic and propane standard in Pontiac?",
@@ -194,7 +194,7 @@ const PontiacPageEn = () => {
           <div className="space-y-3.5">
             {[
               "In Q3 2026, an average of 633 single-family homes were for sale in the Gatineau outskirts, which includes Pontiac, and a single-family home sold there in 46 days on average (QPAREB).",
-              "In Q3 2026, there were 633 active single-family listings in the Gatineau periphery area, which includes Pontiac, 23% more than a year earlier (APCIQ). Buyers there have more choice.",
+              "In Q3 2026, there were 633 active single-family listings in the Gatineau periphery area, which includes Pontiac, 23% more than a year earlier (QPAREB). Buyers there have more choice.",
               "Transactions in Pontiac are less frequent than in urban areas, which makes valuation harder. A broker who follows this market closely helps you set the right price.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">

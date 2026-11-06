@@ -585,7 +585,7 @@ A cottage-to-residence conversion goes well when it's planned. Set aside a budge
     seoTitle: "Masson-Angers en développement · Immobilier Gatineau | YGS",
     seoTitleEn: "Masson-Angers Area Guide · Gatineau Real Estate | YGS",
     metaDescription: "Buckingham/Masson-Angers : prix médian unifamilial le plus bas de Gatineau (395 000 $, APCIQ, T3 2026), constructions neuves et familles. Analyse.",
-    metaDescriptionEn: "Buckingham/Masson-Angers: Gatineau's lowest single-family median price ($395,000, APCIQ, Q3 2026), new construction and families. Full analysis.",
+    metaDescriptionEn: "Buckingham/Masson-Angers: Gatineau's lowest single-family median price ($395,000, QPAREB, Q3 2026), new construction and families. Full analysis.",
     excerpt: "Masson-Angers attire des acheteurs avec ses maisons neuves et ses prix plus bas. Ce qu'il faut savoir sur ce secteur de Gatineau.",
     excerptEn: "Masson-Angers draws buyers with new homes and lower prices. What to know about this Gatineau area.",
     category: "Marché",
