@@ -13,6 +13,7 @@ import {
   MEDIAN_HISTORY,
   type MedianCategory,
   formatChange,
+  yoyChange,
   formatPrice,
   quarterLabel,
 } from "@/data/market-median-history";
@@ -47,7 +48,7 @@ const MedianPriceChart = ({ lang, category }: Props) => {
     latestLabel: quarterLabel(row.quarter, row.latestYear, lang),
     previous: row[category].previous,
     latest: row[category].latest,
-    change: formatChange(row[category].change, lang),
+    change: formatChange(yoyChange(row[category].previous, row[category].latest), lang),
   }));
 
   const tick = (v: number) =>

@@ -6,6 +6,7 @@ import {
   MEDIAN_HISTORY_SOURCE_RANGE,
   type MedianCategory,
   formatChange,
+  yoyChange,
   formatPrice,
   quarterLabel,
 } from "@/data/market-median-history";
@@ -29,7 +30,7 @@ const copy = {
     colPrevious: "Un an plus tôt",
     colLatest: "Prix médian",
     colChange: "Variation",
-    source: `Source : APCIQ par le système Centris, région métropolitaine de Gatineau, baromètres ${MEDIAN_HISTORY_SOURCE_RANGE.fr}. Les variations sont celles publiées par l'APCIQ.`,
+    source: `Source : APCIQ par le système Centris, région métropolitaine de Gatineau, baromètres ${MEDIAN_HISTORY_SOURCE_RANGE.fr}. Les variations sont calculées à partir des prix médians affichés.`,
     plexNote:
       "Depuis le T3 2025, les plex comptent entre 88 et 107 ventes par trimestre. Avec si peu de ventes, le prix médian bouge davantage d'un trimestre à l'autre.",
     loading: "Chargement du graphique",
@@ -49,7 +50,7 @@ const copy = {
     colPrevious: "One year earlier",
     colLatest: "Median price",
     colChange: "Change",
-    source: `Source: QPAREB via the Centris system, Gatineau metropolitan area, quarterly barometers ${MEDIAN_HISTORY_SOURCE_RANGE.en}. Changes are as published by QPAREB.`,
+    source: `Source: QPAREB via the Centris system, Gatineau metropolitan area, quarterly barometers ${MEDIAN_HISTORY_SOURCE_RANGE.en}. Changes are calculated from the median prices shown.`,
     plexNote:
       "Plexes have had between 88 and 107 sales per quarter since Q3 2025. With so few sales, the median price moves more from one quarter to the next.",
     loading: "Loading chart",
@@ -131,7 +132,7 @@ const MedianPriceSection = ({ lang = "fr" }: Props) => {
                     <th scope="row" className="py-2.5 pr-4 font-medium">{quarterLabel(row.quarter, row.latestYear, lang)}</th>
                     <td className="py-2.5 pr-4 text-right text-muted-foreground">{formatPrice(row[category].previous, lang)}</td>
                     <td className="py-2.5 pr-4 text-right font-semibold">{formatPrice(row[category].latest, lang)}</td>
-                    <td className="py-2.5 text-right">{formatChange(row[category].change, lang)}</td>
+                    <td className="py-2.5 text-right">{formatChange(yoyChange(row[category].previous, row[category].latest), lang)}</td>
                   </tr>
                 ))}
               </tbody>
