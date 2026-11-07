@@ -52,7 +52,7 @@ const PlateauPageEn = () => (
       { icon: TrendingUp, title: "Buyers who want newer homes", text: "Recent construction, often with fewer major renovations ahead." },
       { icon: MapPin, title: "Ottawa commuters", text: "Access via Boulevard des Allumettières toward the bridges." },
     ]}
-    inlineCta={{ text: "Own property in the Plateau? Find out how much it's worth.", label: "Get my valuation →", href: "/en/home-valuation/" }}
+    inlineCta={{ text: "Own property in the Plateau? Find out how much it's worth.", label: "Free Home Valuation →", href: "/en/home-valuation/" }}
     brokerPerspective={{
       title: "My take on the Plateau",
       observation: "In February 2026, I helped a first-time buyer purchase a home in the Plateau. I have closed other transactions in the neighbourhood, including a quick sale on Rue du Chinook, on the Hull side. Early in 2026, the owners of a Plateau triplex asked me how to get top dollar, fast. With careful marketing and the right price from day one, they accepted an offer within a day, at exactly the asking price.",
@@ -86,7 +86,7 @@ const PlateauPageEn = () => (
       { title: "All neighbourhoods", text: "Compare all Outaouais areas.", href: "/en/neighborhoods/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Free Buyer Guide: buying in the Plateau", text: "Process, budget and tips for buying in the area.", ctaLabel: "Get the Buyer Guide", stickyLabel: "Free Buyer Guide, get it by email" }}
-    cta={{ title: "Buyer or seller in the Plateau?", text: "Write to me and we will look at your project together, on the Hull side or the Aylmer side.", buttons: [{ label: "Free valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and the options, you decide." }}
+    cta={{ title: "Buyer or seller in the Plateau?", text: "Write to me and we will look at your project together, on the Hull side or the Aylmer side.", buttons: [{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and the options, you decide." }}
   />
 );
 

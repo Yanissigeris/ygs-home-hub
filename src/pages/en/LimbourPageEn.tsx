@@ -44,7 +44,7 @@ const LimbourPageEn = () => (
       { icon: MapPin, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa wanting modern construction without paying Ottawa prices. Quick commute via Highway 50." },
       { icon: MapPin, title: "Commuters", text: "Access to Highway 50, which leads to the bridges into Ottawa." },
     ]}
-    inlineCta={{ text: "Own a property in Limbour? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
+    inlineCta={{ text: "Own a property in Limbour? Find out what it's worth.", label: "Free Home Valuation →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Limbour", items: [
       { q: "Is Limbour a new neighbourhood?", a: "Yes, mostly. Most developments date from the 2000s-2020s, with a few older properties in certain pockets. The Ferme Limbour sub-sector draws buyers with its large homes." },
       { q: "What is the price of a home in Limbour in 2026?", a: "Limbour is part of QPAREB's Gatineau sector. In Q3 2026, the median single-family price there was $464,900 (Centris data). Prices in Limbour then vary with size, year of construction and sub-sector, and the higher-end properties are in Ferme Limbour. For a precise figure, I compare recent sales of homes like yours." },
@@ -73,7 +73,7 @@ const LimbourPageEn = () => (
       dataPoint: "In Q3 2026, single-family homes in QPAREB's Gatineau sector, which includes Limbour, sold in 35 days on average. When the asking price is aligned with the sub-sector (Ferme Limbour vs. the rest of Limbour), the timeline shortens.",
       takeaway: "My advice to Limbour owners thinking about selling: don't underestimate the impact of your sub-sector on your final price. List at the right price for your zone, not an average for the whole neighbourhood."
     }}
-    cta={{ title: "Buying or selling in Limbour?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
+    cta={{ title: "Buying or selling in Limbour?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />
 );
 

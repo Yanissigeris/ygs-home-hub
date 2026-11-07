@@ -96,7 +96,7 @@ const NeighborhoodPage = () => (
       title="Acheteur ou vendeur dans le Plateau / Aylmer?"
       text="Je peux vous aider à y voir clair, pour acheter dans le secteur ou pour connaître la valeur de votre propriété."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

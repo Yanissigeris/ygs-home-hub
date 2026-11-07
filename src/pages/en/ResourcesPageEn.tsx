@@ -40,14 +40,14 @@ const faq = [
 const ResourcesPageEn = () => (
   <>
     <PageMeta title="Free Real Estate Guides and Resources" description="Free guides for sellers, buyers and investors in Gatineau. Real estate resources by Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
-    <HeroSection overline="Resources · YGS" title="Free real estate resources" subtitle="Guides, analyses and information to help you make the best real estate decisions in Gatineau." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Resources · YGS" title="Free real estate resources" subtitle="Guides, analyses and information to help you make the best real estate decisions in Gatineau." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 <LinkedCardGrid overline="Guides" title="Complete free guides" items={guides} columns={3} />
     <LinkedCardGrid overline="Tools" title="Tools and analyses" items={tools} columns={3} background="alt" />
     <LinkedCardGrid overline="Trust" title="Understanding real estate brokerage" items={trustPages} columns={3} />
     <GuideOffersSection lang="en" />
     <ContentBlock narrow><SectionHeading title="Need personalized help?" /><p className="prose-body mt-5">Guides are a good starting point, but every situation is unique. Book a call to get advice adapted to your project.</p><Button className="mt-8" size="lg" asChild><Link to="/en/contact/">Talk to Yanis</Link></Button></ContentBlock>
     <FAQSection items={faq} />
-    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis, choose your next step." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/contact/", variant: "outline" }]} trustLine="I support you at your pace, you decide when you're ready." />
+    <CTASection dark title="Start your real estate project" text="Free valuation, buyer consultation or plex analysis, choose your next step." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/contact/", variant: "outline" }]} trustLine="I support you at your pace, you decide when you're ready." />
   </>
 );
 export default ResourcesPageEn;

@@ -32,7 +32,7 @@ const CoteDazurPageEn = () => (
       { icon: Coffee, title: "Ottawa relocators", text: "Cross-river buyers from Ottawa looking for more space and a mature neighbourhood at a lower price. Downtown Ottawa is reached via Highway 50 and the Macdonald-Cartier Bridge." },
       { icon: Coffee, title: "Resale buyers", text: "Older bungalows, often needing work. I show you the price gap between renovated and unrenovated homes in the area." },
     ]}
-    inlineCta={{ text: "Own a property in Côte-d'Azur? Find out what it's worth.", label: "Get my value →", href: "/en/home-valuation/" }}
+    inlineCta={{ text: "Own a property in Côte-d'Azur? Find out what it's worth.", label: "Free Home Valuation →", href: "/en/home-valuation/" }}
     faq={{
       title: "Questions about Côte-d'Azur",
       items: [
@@ -62,7 +62,7 @@ const CoteDazurPageEn = () => (
       dataPoint: "In Q3 2026, single-family homes in QPAREB's Gatineau sector, which includes Côte-d'Azur, sold in 35 days on average. When the asking price is too optimistic from the start, the timeline stretches out noticeably.",
       takeaway: "My advice to Côte-d'Azur owners thinking about selling: prepare your home properly, small details included, and list at the right price from day one. Otherwise the sale takes longer and the final price suffers."
     }}
-    cta={{ title: "Buying or selling in Côte-d'Azur?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
+    cta={{ title: "Buying or selling in Côte-d'Azur?", text: "I know the neighbourhood, let's talk.", buttons: [{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />
 );
 

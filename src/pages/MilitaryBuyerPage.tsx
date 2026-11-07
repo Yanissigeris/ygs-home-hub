@@ -59,7 +59,7 @@ const MilitaryBuyerPage = () => (
 
     <InlineCTA
       text="Vous devez aussi vendre? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 

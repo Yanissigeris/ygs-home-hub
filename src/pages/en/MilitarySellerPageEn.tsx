@@ -36,7 +36,7 @@ const MilitarySellerPageEn = () => (
       overline="Sell during a posting · Gatineau"
       title="Sell your property during a posting"
       subtitle="Time is tight, but price matters. I help you sell within your timeline, with a price backed by market numbers."
-      primaryCta={{ label: "Get my valuation", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="A clear plan, numbers you can check."
       heroBgImage={heroImg}
@@ -54,7 +54,7 @@ const MilitarySellerPageEn = () => (
 
     <InlineCTA
       text="First step: know the value of your property. It's free, with a personalized response."
-      buttonLabel="Get my valuation →"
+      buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
 
@@ -83,7 +83,7 @@ const MilitarySellerPageEn = () => (
       title="Posting coming up?"
       text="Let's discuss your timeline and your options. The sooner we start, the more room we have to work."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Book a call", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options. You decide."

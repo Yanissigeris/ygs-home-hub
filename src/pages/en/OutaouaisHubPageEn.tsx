@@ -63,7 +63,7 @@ const OutaouaisHubPageEn = () => (
       overline="OUTAOUAIS AREAS AND TOWNS"
       title="Outaouais real estate, area by area"
       subtitle="Prices and profile for each area, from Hull to Chelsea and Aylmer to Val-des-Monts, so you can choose where to buy or how to sell."
-      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="RE/MAX Hall of Fame"
       heroBgImage={heroImg}
@@ -174,7 +174,7 @@ const OutaouaisHubPageEn = () => (
       title="Start your real estate project in Outaouais"
       text="Valuation, buyer consultation or plex analysis, we start where you are."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Book a Consultation", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and options, you decide."

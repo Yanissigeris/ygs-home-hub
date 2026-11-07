@@ -54,7 +54,7 @@ const SellHullPageEn = () => (
       overline="Sell in Hull · Outaouais"
       title="Sell your property in Hull with a local broker"
       subtitle="In Hull, a condo doesn't sell the same way as a plex or a single-family home. You need a plan built around your property type and neighbourhood."
-      primaryCta={{ label: "Free valuation", href: "/en/home-valuation-hull/" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation-hull/" }}
       secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }}
       trustLine="Clear strategy · Hull and area"
       heroBgImage={heroImg}
@@ -69,7 +69,7 @@ const SellHullPageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="First step: find out what your Hull property is worth. It's free." buttonLabel="Free valuation →" href="/en/home-valuation-hull/" />
+    <InlineCTA text="First step: find out what your Hull property is worth. It's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation-hull/" />
 
     <ProcessSteps steps={steps} background="alt" />
 
@@ -91,7 +91,7 @@ const SellHullPageEn = () => (
       title="Thinking of selling in Hull?"
       text="A free valuation to start, or a call to talk through your sale in Hull."
       buttons={[
-        { label: "Free valuation", href: "/en/home-valuation-hull/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation-hull/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Free, no commitment."

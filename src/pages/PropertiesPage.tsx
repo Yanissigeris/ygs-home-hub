@@ -158,7 +158,7 @@ const PropertiesPage = () => {
 
     <InlineCTA
       text="Vous vendez? Découvrez combien vaut votre propriété, c'est gratuit."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 

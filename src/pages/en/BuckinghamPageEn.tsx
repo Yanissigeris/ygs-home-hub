@@ -94,7 +94,7 @@ const BuckinghamPageEn = () => (
       overline="BUCKINGHAM · MASSON-ANGERS · GATINEAU"
       title="Real estate broker in Buckingham, more space in east Gatineau"
       subtitle="Buckingham and Masson-Angers are Gatineau's eastern sectors. Lots are large here and homes are roomy, with a slower pace of life. For buyers who've done the math and want space, it's often a pleasant surprise."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=buckingham" }}
       heroBgImage={heroImg}
       photoCredit={{ text: "Photo: Sorcier du Lac, CC BY-SA 4.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Rivi%C3%A8re_du_Li%C3%A8vre,_Buckingham,_Qu%C3%A9bec_2024-20-14_16-20-19.jpg" }}
@@ -167,7 +167,7 @@ const BuckinghamPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation/">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Free Home Valuation →</Link>
           </Button>
         </div>
       </div>
@@ -214,7 +214,7 @@ const BuckinghamPageEn = () => (
       title="Buying or selling in Buckingham?"
       text="I know the area, let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

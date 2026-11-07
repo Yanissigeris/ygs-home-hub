@@ -19,7 +19,7 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
 const TestimonialsPageEn = () => (
   <>
     <PageMeta title="Client Testimonials | YGS" description="Read what sellers, buyers, relocating families and investors say about working with Yanis Gauthier-Sigeris, real estate broker in Gatineau." ogImage="https://yanisgauthier.com/og/og-testimonials.jpg" />
-    <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Book a consultation", href: "/en/contact" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
+    <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Book a consultation", href: "/en/contact" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     {/* Google Reviews badge */}
     <section className="section-padding bg-background pb-0">
       <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
@@ -53,7 +53,7 @@ const TestimonialsPageEn = () => (
         </a>
       </div>
     </section>
-    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, honest conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
+    <CTASection dark overline="Next step" title="Ready for a similar experience?" text="Whatever your project, we start with a simple, honest conversation." buttons={[{ label: "Book a consultation", href: "/en/contact" }, { label: "Free Home Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options, you decide with full clarity." />
   </>
 );
 export default TestimonialsPageEn;

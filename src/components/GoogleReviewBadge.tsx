@@ -39,7 +39,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
         className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
         style={{ fontSize: ".75rem", color: "rgba(255,255,255,.6)" }}
       >
-        <Stars label={starsLabel} /> 5.0 {lang === "en" ? "on Google" : "sur Google"}
+        <Stars label={starsLabel} /> {lang === "en" ? "5.0 on Google" : "5,0 sur Google"}
       </a>
     );
   }
@@ -55,11 +55,11 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
       <GoogleIcon />
       <div className="flex flex-col">
         <span className="text-[.68rem] font-medium uppercase tracking-[.04em]" style={{ color: "hsl(var(--muted-foreground))" }}>
-          Google Reviews
+          {lang === "en" ? "Google Reviews" : "Avis Google"}
         </span>
         <span className="flex items-center gap-1.5">
           <Stars label={starsLabel} />
-          <span className="text-[.88rem] font-semibold" style={{ color: "var(--ink)" }}>5.0</span>
+          <span className="text-[.88rem] font-semibold" style={{ color: "var(--ink)" }}>{lang === "en" ? "5.0" : "5,0"}</span>
           
         </span>
       </div>

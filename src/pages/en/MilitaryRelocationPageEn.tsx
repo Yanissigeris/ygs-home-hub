@@ -50,7 +50,7 @@ const MilitaryRelocationPageEn = () => (
       <SectionHeading overline="Why YGS" title="Support adapted to your pace" subtitle="Postings don't follow the normal real estate calendar. I adapt to your timeline and constraints." />
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="What you need to know about buying or selling during a posting to Gatineau, in a guide sent to your email." ctaLabel="Get the guide" />
-    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting and we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting and we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Home Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <FAQSection items={faq} />
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide, get it by email" />
   </>

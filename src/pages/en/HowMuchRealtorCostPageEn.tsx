@@ -97,7 +97,7 @@ const HowMuchRealtorCostPageEn = () => (
 
     <InlineCTA
       text="First step: find out what your property is worth. It's free, with no commitment."
-      buttonLabel="Free valuation →"
+      buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
 
@@ -118,7 +118,7 @@ const HowMuchRealtorCostPageEn = () => (
       title="Want to understand your options?"
       text="Before you sign anything, I'll explain my compensation and the services included. I give you the numbers and the options. You decide."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Clear answers, no commitment."

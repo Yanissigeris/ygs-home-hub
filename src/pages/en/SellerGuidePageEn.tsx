@@ -51,7 +51,7 @@ const SellerGuidePageEn = () => (
   <>
     <HowToJsonLd name="How to sell a property in Gatineau" description="Step-by-step guide to selling your property in Gatineau: pricing, preparation, marketing and negotiation." steps={sellerSteps} />
     <PageMeta title="Seller Guide: Selling in Gatineau" description="A guide to selling your property in Gatineau. Pricing, preparation, marketing and negotiation." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the right price." primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Seller Guide · Gatineau" title="Complete guide to selling your property in Gatineau" subtitle="Everything you need to know to sell at the right price." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
@@ -65,7 +65,7 @@ const SellerGuidePageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="Want a personalized analysis? Request your free valuation." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Want a personalized analysis? Request your free valuation." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
 
     <ContentBlock narrow>
       <SectionHeading title="It all starts with the right price" />
@@ -108,7 +108,7 @@ const SellerGuidePageEn = () => (
 
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide" text="Pricing and preparation, explained in a guide sent to your email." ctaLabel="Get the Seller Guide" />
 
-    <CTASection dark title="Ready to take stock?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Ready to take stock?" text="Request your free valuation or talk directly to Yanis." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
 
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>

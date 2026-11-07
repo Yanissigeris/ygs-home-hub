@@ -58,7 +58,7 @@ const MilitaryGuidePageEn = () => (
       </p>
     </ContentBlock>
 
-    <InlineCTA text="Need to sell before buying? Start by knowing the value of your property." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Need to sell before buying? Start by knowing the value of your property." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
 
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Get the Military Relocation Guide" text="Buying or selling during a posting: everything in a clear guide, sent free to your email." ctaLabel="Get the guide" />
 
@@ -66,7 +66,7 @@ const MilitaryGuidePageEn = () => (
 
     <RelatedPages overline="Also worth reading" title="Related pages for military members" pages={related} background="alt" />
 
-    <CTASection dark title="Let's plan your military relocation" text="Book a free call. We adapt the plan to your posting and your timeline." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I adapt to your pace. You decide when you're ready." />
+    <CTASection dark title="Let's plan your military relocation" text="Book a free call. We adapt the plan to your posting and your timeline." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I adapt to your pace. You decide when you're ready." />
 
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Military Guide, get it by email" />
   </>

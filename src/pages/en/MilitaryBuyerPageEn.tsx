@@ -59,7 +59,7 @@ const MilitaryBuyerPageEn = () => (
 
     <InlineCTA
       text="Need to sell too? Start by knowing the value of your property."
-      buttonLabel="Get my valuation →"
+      buttonLabel="Free Home Valuation →"
       href="/en/home-valuation/"
     />
 
@@ -84,7 +84,7 @@ const MilitaryBuyerPageEn = () => (
       text="Let's discuss your posting and your criteria. We'll build the plan together."
       buttons={[
         { label: "Book a call", href: "/en/contact/" },
-        { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options. You decide."
     />

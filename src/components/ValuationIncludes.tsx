@@ -38,8 +38,8 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
       {/* ── Votre évaluation inclut — 2 cols + widget fourchette ── */}
       <section className="bg-background py-16 md:py-20">
         <div className="section-container">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-center">
-            <div>
+          <div className="grid gap-10">
+            <div className="max-w-2xl">
               <SectionHeading overline={t.overline} title={t.title} />
               <ul className="mt-8 space-y-4">
                 {benefits.map((item) => (
@@ -51,8 +51,9 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
               </ul>
             </div>
 
-            {/* Widget fourchette de valeur (statique, illustratif) */}
-            <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[rgba(247,244,238,0.15)] shadow-sm">
+            {/* Widget fourchette de valeur (statique, illustratif). Téléphone seulement :
+                dès la tablette, le même aperçu est déjà en haut de page (ValuationHeroPreview). */}
+            <div className="sm:hidden bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[rgba(247,244,238,0.15)] shadow-sm">
               <div className="flex items-center justify-between gap-3">
                 <p
                   className="text-[11px] uppercase tracking-[0.14em] text-[rgba(247,244,238,0.8)]"

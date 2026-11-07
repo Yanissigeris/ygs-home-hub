@@ -127,7 +127,7 @@ const RealtorCommissionPageEn = () => (
       title="Want clarity on costs?"
       text="Before you sign anything, I'll explain my compensation and the other costs. There's no commitment."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Clarity and transparency, from the first call."

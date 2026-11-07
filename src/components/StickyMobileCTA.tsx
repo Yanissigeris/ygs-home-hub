@@ -18,15 +18,15 @@ type CtaConfig = { label: string; href: string };
 const CTA_BY_INTENT: Record<"fr" | "en", Record<AvatarIntent | "default", CtaConfig>> = {
   fr: {
     investir: { label: "Analyser mon projet →", href: "/investir-plex-gatineau/" },
-    vendre: { label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" },
+    vendre: { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
     acheter: { label: "Voir les propriétés →", href: "/proprietes/" },
     default: { label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" },
   },
   en: {
     investir: { label: "Analyze my project →", href: "/en/plex/" },
-    vendre: { label: "Get my value →", href: "/en/home-valuation/" },
+    vendre: { label: "Free Home Valuation →", href: "/en/home-valuation/" },
     acheter: { label: "View properties →", href: "/en/properties/" },
-    default: { label: "Free Valuation →", href: "/en/home-valuation/" },
+    default: { label: "Free Home Valuation →", href: "/en/home-valuation/" },
   },
 };
 

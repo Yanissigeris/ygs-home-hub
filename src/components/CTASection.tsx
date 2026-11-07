@@ -77,7 +77,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                 onClick={() => trackCTAClick(btn.label, "cta-section")}
                 aria-label={btn.label}
               >
-                {btn.label === "Obtenir ma valeur" ? "Évaluation gratuite" : btn.label}
+                {isOutline ? btn.label : btn.label.replace(/\s*→$/, "")}
                 {!isOutline && " →"}
               </Link>
             );

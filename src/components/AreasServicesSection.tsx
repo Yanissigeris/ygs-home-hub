@@ -41,7 +41,7 @@ const servicesFr: ServiceLink[] = [
 const servicesEn: ServiceLink[] = [
   { label: "Sell your property", href: "/en/sell/", detail: "Strategy and full support" },
   { label: "Buy a home", href: "/en/buy/", detail: "Search, negotiation, guidance" },
-  { label: "Free home valuation", href: "/en/home-valuation/", detail: "Market value, no obligation" },
+  { label: "Free Home Valuation", href: "/en/home-valuation/", detail: "Market value, no obligation" },
   { label: "First-time buyer", href: "/en/first-time-buyer/", detail: "Dedicated guidance and support" },
   { label: "Plex investment", href: "/en/plex/", detail: "Analysis, returns, strategy" },
   { label: "Relocation", href: "/en/relocation/", detail: "Ottawa → Gatineau, Montréal, military" },

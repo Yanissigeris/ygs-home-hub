@@ -32,7 +32,7 @@ const MassonAngersPageEn = () => (
       { icon: MapPin, title: "Ottawa cross-river first-time buyers", text: "Buyers priced out of comparable Ottawa neighbourhoods, willing to commute to downtown Ottawa in exchange for a lower purchase price." },
       { icon: MapPin, title: "East-side workers", text: "Direct access to east Gatineau, Buckingham and Thurso employment zones. Central Buckingham is about 5 km away by road." },
     ]}
-    inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
+    inlineCta={{ text: "Own a property in Masson-Angers? Find out its current value.", label: "Free Home Valuation →", href: "/en/home-valuation/" }}
     faq={{ title: "Questions about Masson-Angers", items: [
       { q: "Is Masson-Angers far from downtown Gatineau?", a: "Les Promenades Gatineau are 28 to 33 km away by road depending on the route, and downtown Ottawa about 36 km. Drive time depends on the hour and the bridge you take." },
       { q: "What is the price of a home in Masson-Angers in 2026?", a: "Masson-Angers is part of QPAREB's Buckingham/Masson-Angers sector. In Q3 2026, the median single-family price there was $395,000, the lowest of the four sectors of the city of Gatineau (Centris data). Prices then vary with type, year of construction and sub-sector: I'll show you the recent comparable sales." },
@@ -60,7 +60,7 @@ const MassonAngersPageEn = () => (
       dataPoint: "In Q3 2026, the Buckingham/Masson-Angers sector had 47% more active single-family listings than a year earlier, and single-family sales were down 23% (QPAREB, Centris data).",
       takeaway: "My advice to buyers considering Masson-Angers: compare Masson and Angers carefully before deciding, because they behave like two different markets. If you're targeting new construction, check the builder and the delivery timelines, and negotiate inclusions. My advice to owners thinking about selling: your price should reflect your sub-sector and the competing supply of new builds, not a generic neighbourhood average."
     }}
-    cta={{ title: "Buying or selling in Masson-Angers?", text: "I know the area, let's talk.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
+    cta={{ title: "Buying or selling in Masson-Angers?", text: "I know the area, let's talk.", buttons: [{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />
 );
 

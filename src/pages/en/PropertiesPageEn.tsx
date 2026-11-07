@@ -41,7 +41,7 @@ const related = [
 const PropertiesPageEn = () => (
   <>
     <PageMeta title="Properties for Sale in Gatineau" description="Houses, condos, plexes and land in Gatineau. Browse available properties in all Outaouais neighborhoods." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
-    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land: browse available properties in every part of Gatineau and the Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Access to every Centris listing." heroBgImage={heroImg} />
+    <HeroSection overline="Properties · Gatineau and Outaouais" title="Find your property in Outaouais" subtitle="Houses, condos, plexes and land: browse available properties in every part of Gatineau and the Outaouais." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} trustLine="Access to every Centris listing." heroBgImage={heroImg} />
 
     <ContentBlock narrow={false}>
       <SectionHeading overline="Active listings" title="My current listings" subtitle="My listings: houses, condos, plexes and land in Gatineau and the Outaouais." />
@@ -88,7 +88,7 @@ const PropertiesPageEn = () => (
 
     <SectorLinks overline="By neighborhood" title="Properties by area" sectors={sectors} background="alt" />
 
-    <InlineCTA text="Selling? Find out how much your property is worth, it's free." buttonLabel="Get my valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Selling? Find out how much your property is worth, it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
 
     <FAQSection items={faq} />
 

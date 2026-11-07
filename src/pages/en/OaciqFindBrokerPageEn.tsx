@@ -104,7 +104,7 @@ const OaciqFindBrokerPageEn = () => (
       title="Want a transparent broker in good standing?"
       text="Let's discuss your project. I'll answer your questions clearly, with no pressure."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Valid OACIQ licence · Platinum Club · RE/MAX Hall of Fame"

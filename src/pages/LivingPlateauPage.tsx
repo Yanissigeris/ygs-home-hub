@@ -60,7 +60,7 @@ const LivingPlateauPage = () => (
 
     <InlineCTA
       text="Vous êtes propriétaire dans le Plateau? Découvrez combien vaut votre propriété."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 

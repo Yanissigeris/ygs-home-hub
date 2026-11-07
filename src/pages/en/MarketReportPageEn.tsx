@@ -40,13 +40,13 @@ const MarketReportPageEn = () => (
       <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
       <p className="prose-body mt-5">The next Gatineau real estate market report is being prepared. Contact me for publication updates or to discuss the market in your area now.</p>
     </ContentBlock>
-    <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <FAQSection items={faq} />
     <RelatedPages overline="Also worth reading" title="Explore also" pages={related} background="alt" />
     {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "market")} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Free Seller Guide: sell at the right price" text="Pricing, preparation and strategy, everything in a guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <CTASection dark title="Get the next market report" text="Contact me to be on the list, you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
+    <CTASection dark title="Get the next market report" text="Contact me to be on the list, you'll receive the analysis as soon as it's published." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" }]} trustLine="Objective data and clear local analysis." />
     <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
   </>
 );

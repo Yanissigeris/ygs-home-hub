@@ -77,14 +77,14 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           letterSpacing: "0.04em",
           fontWeight: active ? 700 : 600,
           color: active ? activeColor : defaultColor,
-          padding: ".4rem .7rem",
+          padding: ".4rem var(--nav-px, .7rem)",
           borderRadius: 3,
         }}
         onMouseEnter={(e) => { e.currentTarget.style.color = hoverColor; }}
         onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = defaultColor; }}
       >
         {item.label}
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: active ? "scaleX(1)" : "scaleX(0)" }} />
       </Link>
     );
   }
@@ -102,7 +102,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
             letterSpacing: "0.04em",
             fontWeight: isChildActive ? 700 : 600,
             color: isChildActive ? activeColor : defaultColor,
-            padding: ".4rem .7rem",
+            padding: ".4rem var(--nav-px, .7rem)",
             borderRadius: 3,
           }}
           onClick={() => setOpen((p) => !p)}
@@ -113,7 +113,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         >
           {item.label}
           <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-          <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
+          <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
         </button>
         <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
           <div
@@ -195,7 +195,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           letterSpacing: "0.04em",
           fontWeight: isChildActive ? 700 : 600,
           color: isChildActive ? activeColor : defaultColor,
-          padding: ".4rem .7rem",
+          padding: ".4rem var(--nav-px, .7rem)",
           borderRadius: 3,
         }}
         onClick={() => setOpen((p) => !p)}
@@ -205,7 +205,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
       >
         {item.label}
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-        <span className="absolute bottom-0 left-[.7rem] right-[.7rem] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
+        <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
@@ -246,7 +246,7 @@ const SiteHeader = () => {
   const lang = useLanguage();
   const nav = lang === "en" ? mainNavEn : mainNav;
   const ctaHref = lang === "en" ? "/en/home-valuation/" : "/evaluation-gratuite-gatineau/";
-  const ctaLabel = lang === "en" ? "Free Valuation" : "Évaluation gratuite";
+  const ctaLabel = lang === "en" ? "Free Home Valuation" : "Évaluation gratuite";
 
   // Header is permanently transparent; no dark-hero detection needed.
 
@@ -338,11 +338,12 @@ const SiteHeader = () => {
   return (
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
-      <div className="section-container hidden md:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
-        <Link to={lang === "en" ? "/en/" : "/"} className="mr-10 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }}>
+      <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
+        <Link to={lang === "en" ? "/en/" : "/"} className="mr-5 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
-          <span aria-hidden="true" style={{ display: "inline-block", width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
-          <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05 }}>
+          <span aria-hidden="true" className="hidden xl:inline-block" style={{ width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
+          {/* Nom et titre : seulement dès 1280 px, sinon le bouton d'évaluation déborde de l'écran. */}
+          <span className="hidden xl:inline-flex" style={{ flexDirection: "column", lineHeight: 1.05 }}>
             <span
               className="text-[15px] lg:text-[17px]"
               style={{
@@ -370,21 +371,20 @@ const SiteHeader = () => {
               {lang === "en" ? "Real estate broker" : "Courtier immobilier"}
             </span>
           </span>
-          <span className="ml-3 inline-flex items-center"><RemaxPill size="lg" lang={lang as "fr" | "en"} /></span>
+          <span className="ml-3 xl:ml-3 inline-flex items-center"><RemaxPill size="lg" lang={lang as "fr" | "en"} /></span>
         </Link>
-        <nav className="flex flex-1 items-center justify-center gap-0" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
+        <nav className="flex flex-1 items-center justify-center gap-0 [--nav-px:.5rem] xl:[--nav-px:.7rem]" role="navigation" aria-label={getA11yLabel("nav.main", lang)}>
           {nav.map((item) => (<DesktopNavItem key={item.label} item={item} pathname={location.pathname} transparent={true} />))}
         </nav>
-        <div className="ml-4 shrink-0 xl:ml-6">
+        <div className="ml-2 shrink-0 xl:ml-6">
           <LanguageSwitch transparent={true} />
         </div>
-        <div className="ml-4 shrink-0 xl:ml-5">
+        <div className="ml-3 shrink-0 xl:ml-5">
           <Link
             to={ctaHref}
-            className="inline-flex items-center justify-center whitespace-nowrap"
+            className="inline-flex items-center justify-center whitespace-nowrap px-4 xl:px-[1.4rem]"
             style={{
               height: 40,
-              padding: "0 1.4rem",
               background: "transparent",
               color: ctaTextColor,
               fontSize: ".78rem",
@@ -411,7 +411,7 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Tablet (sm–lg) ─── */}
-      <div className="section-container hidden sm:flex md:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
+      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
         <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker, RE/MAX Direct Inc. affiliate, home" : "Yanis Gauthier-Sigeris, courtier immobilier, affilié RE/MAX Direct Inc., accueil"}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <RemaxPill size="md" lang={lang as "fr" | "en"} />

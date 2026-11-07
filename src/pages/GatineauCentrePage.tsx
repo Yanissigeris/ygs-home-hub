@@ -131,7 +131,7 @@ const GatineauCentrePage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-gratuite-gatineau/">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite →</Link>
           </Button>
         </div>
       </div>

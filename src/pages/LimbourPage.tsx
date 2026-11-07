@@ -42,7 +42,7 @@ const LimbourPage = () => (
       { icon: TrendingUp, title: "Investisseurs", text: "Des locataires possibles parmi les jeunes familles et le personnel de l'Hôpital de Gatineau, tout près. Je vous montre les loyers récents avant une offre." },
       { icon: MapPin, title: "Navetteurs", text: "Accès à l'autoroute 50 pour rejoindre les ponts vers Ottawa." },
     ]}
-    inlineCta={{ text: "Propriétaire à Limbour? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
+    inlineCta={{ text: "Propriétaire à Limbour? Découvrez combien vaut votre propriété.", label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur Limbour",
       items: [
@@ -73,7 +73,7 @@ const LimbourPage = () => (
       dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 35 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Limbour. Quand le prix est aligné avec le sous-secteur (Ferme Limbour vs reste du quartier), les délais sont plus courts.",
       takeaway: "Mon conseil aux propriétaires de Limbour qui pensent vendre : ne sous-estimez pas l'effet du sous-secteur sur votre prix. Inscrivez votre maison au juste prix selon votre zone, pas selon une moyenne du quartier."
     }}
-    cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Limbour?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

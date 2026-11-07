@@ -43,7 +43,7 @@ const SellPlexPage = () => (
       overline="Vendre un plex · Gatineau"
       title="Vendre votre plex à Gatineau"
       subtitle="Duplex, triplex ou plus : je vous aide à vendre au bon prix, avec une stratégie pensée pour les immeubles à revenus."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Recevoir une analyse", href: "/analyse-plex-gatineau/" }}
       trustLine="Spécialiste plex."
       heroBgImage={heroImg}
@@ -56,7 +56,7 @@ const SellPlexPage = () => (
 
     <InlineCTA
       text="Première étape : connaître la valeur de votre plex. C'est gratuit."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 
@@ -84,7 +84,7 @@ const SellPlexPage = () => (
       title="Prêt à faire le point sur vos options?"
       text="Demandez une analyse de votre plex : sa valeur selon ses revenus, avec ma recommandation."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Analyse plex gratuite", href: "/analyse-plex-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

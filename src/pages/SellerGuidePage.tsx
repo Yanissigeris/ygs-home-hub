@@ -55,7 +55,7 @@ const SellerGuidePage = () => (
       overline="Guide vendeur · Gatineau"
       title="Guide complet pour vendre votre propriété à Gatineau"
       subtitle="Tout ce que vous devez savoir pour vendre au bon prix."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
@@ -79,7 +79,7 @@ const SellerGuidePage = () => (
 
     <InlineCTA
       text="Vous voulez une analyse personnalisée? Demandez votre évaluation gratuite."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 
@@ -138,7 +138,7 @@ const SellerGuidePage = () => (
       title="Prêt à faire le point?"
       text="Demandez votre évaluation gratuite ou parlez directement à Yanis."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

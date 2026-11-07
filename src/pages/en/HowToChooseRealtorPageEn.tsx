@@ -97,7 +97,7 @@ const HowToChooseRealtorPageEn = () => (
       title="Want to meet a local broker?"
       text="Let's discuss your project and your options, with no commitment."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Over 9 years in the Outaouais · Transparent from the start."

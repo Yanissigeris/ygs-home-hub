@@ -42,7 +42,7 @@ const faq = [
 const NeighborhoodsPageEn = () => (
   <>
     <PageMeta title="Gatineau Neighbourhoods | Area Comparison" description="Compare Gatineau neighbourhoods: Aylmer, Hull, Plateau, Buckingham and more. Prices, vibe and profile of each area." ogImage="https://yanisgauthier.com/og/og-neighborhoods.jpg" />
-    <HeroSection overline="Neighbourhoods · Gatineau and Outaouais" title="Neighbourhoods to consider in Outaouais" subtitle="Each Outaouais neighbourhood has its own personality: family-friendly, urban, nature or investment. Browse them to find the one that fits you." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }} trustLine="Local expertise. Full transparency." heroBgImage={heroImg} />
+    <HeroSection overline="Neighbourhoods · Gatineau and Outaouais" title="Neighbourhoods to consider in Outaouais" subtitle="Each Outaouais neighbourhood has its own personality: family-friendly, urban, nature or investment. Browse them to find the one that fits you." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} trustLine="Local expertise. Full transparency." heroBgImage={heroImg} />
 <SectorLinks overline="Explore neighbourhoods" title="Some Outaouais neighbourhoods" sectors={sectors} />
     <ContentBlock narrow>
       <SectionHeading overline="Choosing a sector" title="Every neighbourhood has its character" />
@@ -59,7 +59,7 @@ const NeighborhoodsPageEn = () => (
     <LinkedCardGrid overline="Lifestyle" title="Neighbourhood lifestyle guides" items={lifestyleGuides} columns={3} background="alt" />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide: find the right neighbourhood" text="Everything you need to know to buy in Gatineau, process, budget and neighbourhoods." ctaLabel="Get the Buyer Guide" />
     <FAQSection title="Questions about neighbourhoods" items={faq} />
-    <CTASection dark title="Need help choosing?" text="Let's talk about your criteria, I'll suggest the neighbourhoods that fit your situation." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Get my valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
+    <CTASection dark title="Need help choosing?" text="Let's talk about your criteria, I'll suggest the neighbourhoods that fit your situation." buttons={[{ label: "Book a consultation", href: "/en/buyer-consultation/" }, { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
   </>
 );

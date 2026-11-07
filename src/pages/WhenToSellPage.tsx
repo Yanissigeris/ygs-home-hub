@@ -33,7 +33,7 @@ const WhenToSellPage = () => (
       overline="Quand vendre · Gatineau"
       title="Quand vendre sa propriété à Gatineau?"
       subtitle="Le bon moment pour vendre dépend de votre situation, pas seulement du marché. Quelques repères pour y voir plus clair."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
@@ -57,7 +57,7 @@ const WhenToSellPage = () => (
 
     <InlineCTA
       text="Commencez par connaître la valeur actuelle de votre propriété. C'est gratuit."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 
@@ -73,7 +73,7 @@ const WhenToSellPage = () => (
       title="Vous hésitez sur le moment de vendre?"
       text="Demandez une évaluation gratuite. On regardera ensemble si le moment est bon pour vous."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

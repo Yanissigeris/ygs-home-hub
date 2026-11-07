@@ -47,7 +47,7 @@ const PlateauPage = () => (
       { icon: TrendingUp, title: "Acheteurs qui veulent du récent", text: "Constructions récentes, souvent moins de rénovations majeures à prévoir." },
       { icon: MapPin, title: "Travailleurs d'Ottawa", text: "Accès par le boulevard des Allumettières vers les ponts." },
     ]}
-    inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
+    inlineCta={{ text: "Propriétaire dans le Plateau? Découvrez combien vaut votre propriété.", label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
     brokerPerspective={{
       title: "Mon regard sur le Plateau",
       observation: "En février 2026, j'ai aidé un premier acheteur à acheter sa propriété dans le Plateau. J'ai conclu d'autres transactions dans le quartier, dont une vente rapide rue du Chinook, côté Hull. Au début de 2026, les propriétaires d'un triplex du Plateau m'ont demandé comment obtenir le maximum, vite. Avec une mise en marché soignée et le bon prix dès le départ, ils ont accepté une offre en une journée, au prix exact demandé.",
@@ -81,7 +81,7 @@ const PlateauPage = () => (
       { title: "Quartiers de l'Outaouais", text: "Comparez tous les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
     ]}}
     guide={{ type: "buyer_guide", headline: "Guide acheteur gratuit : acheter dans le Plateau", text: "Processus, budget et conseils pour acheter dans le secteur.", ctaLabel: "Recevoir le guide acheteur", stickyLabel: "Guide acheteur gratuit, recevez-le par courriel" }}
-    cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Écrivez-moi, côté Hull ou côté Aylmer, et on regarde votre projet ensemble.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur dans le Plateau?", text: "Écrivez-moi, côté Hull ou côté Aylmer, et on regarde votre projet ensemble.", buttons: [{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 
