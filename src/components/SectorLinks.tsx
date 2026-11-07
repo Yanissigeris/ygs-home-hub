@@ -62,7 +62,7 @@ const SectorLinks = ({
                   <ArrowRight size={14} className="ml-auto text-muted-foreground/20 group-hover:text-primary transition-colors" />
                 </div>
                 {s.detail && (
-                  <p className="mt-2 text-[0.875rem] text-muted-foreground/60">{s.detail}</p>
+                  <p className="mt-2 text-[0.875rem] text-muted-foreground">{s.detail}</p>
                 )}
               </Link>
             </motion.div>

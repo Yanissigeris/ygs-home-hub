@@ -41,13 +41,13 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
                   {headline}
                 </h3>
                 <p className="mt-2 text-[0.8125rem] text-primary-foreground/70 leading-relaxed max-w-md">{text}</p>
-                <div className="mt-2 flex gap-4 text-[0.7rem] text-primary-foreground/40">
+                <div className="mt-2 flex gap-4 text-[0.7rem] text-[rgba(247,244,238,0.75)]">
                   <span className="flex items-center gap-1"><BadgeCheck size={11} /> {d.free}</span>
                   <span className="flex items-center gap-1"><Lock size={11} /> {d.noCommitment}</span>
                 </div>
               </div>
               <div className="shrink-0">
-                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto" onClick={() => { trackCTAClick(label, "guide-inline-cta"); setOpen(true); }}>
+                <Button variant="accent" size="lg" className="font-semibold w-full sm:w-auto bg-[var(--action)] border-[var(--action)] text-white hover:bg-[var(--action-hover)] hover:border-[var(--action-hover)] hover:text-white" onClick={() => { trackCTAClick(label, "guide-inline-cta"); setOpen(true); }}>
                   {label}<ArrowRight size={14} className="ml-1.5" />
                 </Button>
               </div>

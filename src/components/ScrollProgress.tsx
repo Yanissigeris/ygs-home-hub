@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 const ScrollProgress = () => {
   const [progress, setProgress] = useState(0);
+  // Collée sous l'en-tête, dont la hauteur change au défilement.
+  const [top, setTop] = useState(70);
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -17,6 +19,8 @@ requestAnimationFrame(() => {
     1
   );
   setProgress(total > 0 ? (scrolled / total) * 100 : 0);
+  const header = document.querySelector("header");
+  if (header) setTop(Math.max(0, Math.round(header.getBoundingClientRect().bottom)));
   ticking.current = false;
       });
     };
@@ -28,11 +32,13 @@ requestAnimationFrame(() => {
     <div
       className="fixed left-0 z-[199] md:hidden"
       style={{
-        top: 70,
+        top,
         height: 2,
-        width: `${progress}%`,
-        background: "var(--gold)",
-        transition: "width .1s linear",
+        width: "100%",
+        transform: `scaleX(${progress / 100})`,
+        transformOrigin: "left",
+        background: "var(--ink)",
+        transition: "transform .1s linear",
         pointerEvents: "none",
       }}
       aria-hidden="true"
