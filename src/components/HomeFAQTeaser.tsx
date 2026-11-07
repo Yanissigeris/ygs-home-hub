@@ -59,7 +59,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
             <div className="lg:sticky lg:top-[100px] lg:self-start mb-6 lg:mb-0">
               <p className="label-overline mb-2">{overline}</p>
               <h2>{title}</h2>
-              <div style={{ width: 48, height: 1, background: "var(--gold)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
+              <div style={{ width: 48, height: 1, background: "var(--ink)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
               <p style={{ fontSize: ".88rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.7 }}>
                 Voici les réponses aux questions que j'entends le plus souvent.
               </p>

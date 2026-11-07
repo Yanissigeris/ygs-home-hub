@@ -67,7 +67,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
               >
                 {step.highlight && (
                   <span
-                    className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] bg-[var(--gold)] text-[var(--cream)]"
+                    className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] border border-[rgba(247,244,238,0.4)] text-[var(--cream)]"
                     style={{ fontFamily: "var(--sans)" }}
                   >
                     <RecommendedLabel />
@@ -85,7 +85,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                 >
                   {step.text}
                 </p>
-                <span className={`mt-5 inline-flex items-center gap-2 text-[0.875rem] font-semibold ${step.highlight ? "text-[var(--gold)]" : "text-[var(--ink)]"}`}>
+                <span className={`mt-5 inline-flex items-center gap-2 text-[0.875rem] font-semibold ${step.highlight ? "text-[var(--gold-bright)]" : "text-[var(--ink)]"}`}>
                   {step.cta}
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>

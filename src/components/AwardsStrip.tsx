@@ -20,7 +20,7 @@ interface AwardsStripProps {
  * Contraste (WCAG) :
  *  - #000E35 sur #F5F1EA → 17,4:1 (AAA)
  *  - #4A5475 sur #F5F1EA → 7,2:1 (AAA)
- *  - #2B4FD6 (+) sur #F5F1EA → 5,6:1 (AA)
+ *  - (+) en encre (--ink) sur #F5F1EA, le bleu est réservé aux actions
  */
 
 type Phase = "final" | "reset" | "run";
@@ -186,10 +186,10 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
       <style>{`
         .proof-strip{background:var(--cream-deep);color:var(--ink);border-bottom:1px solid rgba(0,14,53,.12);padding:44px 0 40px}
         .proof-strip .ps-grid{display:block}
-        .proof-strip .ps-big{display:block;white-space:nowrap;font-weight:300;line-height:1;font-size:clamp(7.25rem,30vw,8.25rem);margin:0 0 0 -.04em}
+        .proof-strip .ps-big{display:block;white-space:nowrap;font-weight:300;line-height:1;font-size:clamp(5.25rem,22vw,6rem);margin:0 0 0 -.04em}
         .proof-strip .ps-big .ps-d{margin-right:-.11em}
         .proof-strip .ps-big .ps-d:last-of-type{margin-right:-.06em}
-        .proof-strip .ps-plus{display:inline-block;vertical-align:top;font-size:.34em;line-height:1;font-weight:300;color:#2B4FD6;margin:.12em 0 0 .12em}
+        .proof-strip .ps-plus{display:inline-block;vertical-align:top;font-size:.34em;line-height:1;font-weight:300;color:var(--ink);margin:.12em 0 0 .12em}
         .proof-strip .ps-caption{margin:14px 0 30px;font-size:.9375rem;line-height:1.45;color:#4A5475}
         .proof-strip .ps-rows{transition:opacity .5s ease .1s,transform .6s cubic-bezier(.22,1,.36,1) .1s}
         .proof-strip .ps-rows--hidden{opacity:0;transform:translateY(6px);transition:none}

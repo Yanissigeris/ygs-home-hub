@@ -9,10 +9,9 @@ import SectionHeading from "@/components/SectionHeading";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
-import ValuationIncludes from "@/components/ValuationIncludes";
+import ValuationIncludes, { ValuationHeroPreview } from "@/components/ValuationIncludes";
 import ValuationTestimonial from "@/components/ValuationTestimonial";
 import ValuationSteps from "@/components/ValuationSteps";
-import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
@@ -29,11 +28,6 @@ const benefits = [
   "Prochaines étapes possibles, sans engagement",
 ];
 
-const trustBullets = [
-  { icon: Shield, text: "Gratuit et sans engagement" },
-  { icon: Clock, text: "Réponse personnalisée" },
-  { icon: CheckCircle2, text: "Basé sur les ventes comparables récentes" },
-];
 
 
 const afterSteps = [
@@ -108,9 +102,9 @@ const ValuationPage = () => {
             {/* ── LEFT: Value proposition ── */}
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
               {/* Eyebrow */}
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}>
                 <span>Évaluation gratuite</span>
-                <span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" />
+                <span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" />
                 <span>Gatineau</span>
               </p>
 
@@ -128,21 +122,11 @@ const ValuationPage = () => {
                 Évaluation gratuite préparée par Yanis Gauthier-Sigeris, courtier immobilier chez RE/MAX Direct, à partir des ventes récentes de votre secteur.
               </p>
 
-              {/* Trust bullets - compact on mobile */}
-              <div className="hidden sm:block mt-4 md:mt-8 space-y-2 md:space-y-3">
-                {trustBullets.map((b) => (
-                  <div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75">
-                    <b.icon size={15} className="text-accent shrink-0" />
-                    <span>{b.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Credibility strip */}
-              <div className="hidden sm:flex mt-6 md:mt-10 flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Plus de 300 transactions depuis 2017</span>
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> Hall of Fame RE/MAX 2024</span>
-              </div>
+              {/* Ce que le vendeur reçoit, avant le formulaire (tablette et ordinateur) */}
+              <ValuationHeroPreview lang="fr" className="hidden sm:block mt-6 md:mt-9" />
+              <p className="hidden sm:block mt-5 text-[0.8125rem] text-primary-foreground/80">
+                Plus de 300 transactions depuis 2017 <span aria-hidden="true" className="mx-2 text-primary-foreground/40">·</span> Hall of Fame RE/MAX 2024
+              </p>
             </motion.div>
 
             {/* ── RIGHT: Form card ── */}

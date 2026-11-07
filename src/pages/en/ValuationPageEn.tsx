@@ -5,20 +5,18 @@ import FAQSection from "@/components/FAQSection";
 import { valuationFaqEn } from "@/data/valuation-faq";
 import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
-import ValuationIncludes from "@/components/ValuationIncludes";
+import ValuationIncludes, { ValuationHeroPreview } from "@/components/ValuationIncludes";
 import ValuationTestimonial from "@/components/ValuationTestimonial";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
 import ValuationSteps from "@/components/ValuationSteps";
-import { Clock, Shield, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = ["Realistic value range based on recent sales in your Gatineau neighbourhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address, and which ones are worth it in your market","Possible next steps, no commitment"];
-const trustBullets = [{ icon: Shield, text: "Free, no commitment" },{ icon: Clock, text: "Personalized response" },{ icon: CheckCircle2, text: "Based on recent comparable sales" }];
 const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 
@@ -62,15 +60,16 @@ const ValuationPageEn = () => {
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
             <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/30" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-accent/40" /><span>Gatineau</span></p>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property worth?</h1>
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">I'm Yanis Gauthier-Sigeris, a residential real estate broker with RE/MAX Direct. Your valuation is free, and I build it from recent sales in your part of Gatineau, Aylmer, Hull or elsewhere in the Outaouais.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free valuation prepared by Yanis Gauthier-Sigeris, real estate broker with RE/MAX Direct, from recent sales in your area.</p>
-              <div className="hidden sm:block mt-4 md:mt-8 space-y-2 md:space-y-3">{trustBullets.map((b) => (<div key={b.text} className="flex items-center gap-3 text-[0.8125rem] md:text-[0.875rem] text-primary-foreground/75"><b.icon size={15} className="text-accent shrink-0" /><span>{b.text}</span></div>))}</div>
-              <div className="hidden sm:flex mt-6 md:mt-10 flex-wrap gap-x-7 gap-y-2 text-[0.75rem] text-primary-foreground/55 font-medium">
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> 300+ transactions since 2017</span>
-                <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-accent/50" /> RE/MAX Hall of Fame 2024</span>
-              </div>
+              
+              {/* Ce que le vendeur reçoit, avant le formulaire (tablette et ordinateur) */}
+              <ValuationHeroPreview lang="en" className="hidden sm:block mt-6 md:mt-9" />
+              <p className="hidden sm:block mt-5 text-[0.8125rem] text-primary-foreground/80">
+                300+ transactions since 2017 <span aria-hidden="true" className="mx-2 text-primary-foreground/40">·</span> RE/MAX Hall of Fame 2024
+              </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
               <ValuationForm lang="en" variant="glass" addressPlaceholder="123 Example St, Gatineau" />

@@ -50,7 +50,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           {/* Pull quote */}
           <blockquote
             style={{
-              borderLeft: "3px solid var(--gold)",
+              borderLeft: "2px solid var(--ink)",
               paddingLeft: "20px",
               margin: "0 0 2rem 0",
             }}

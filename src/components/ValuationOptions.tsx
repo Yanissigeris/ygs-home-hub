@@ -82,18 +82,18 @@ const ValuationOptions = ({ lang }: { lang: Lang }) => {
               key={o.title}
               className={
                 o.mine
-                  ? "rounded-lg border border-[var(--gold)]/60 bg-[var(--ink)] p-6 md:p-7"
+                  ? "rounded-lg border border-[rgba(247,244,238,0.2)] bg-[var(--ink)] p-6 md:p-7"
                   : "rounded-lg border border-border bg-card p-6 md:p-7"
               }
             >
               <p
-                className={`text-[13px] font-semibold ${o.mine ? "text-[var(--gold2)]" : "text-[var(--gold-text)]"}`}
+                className={`text-[13px] font-semibold ${o.mine ? "text-[rgba(247,244,238,0.75)]" : "text-[var(--ink-soft)]"}`}
                 style={{ fontFamily: "var(--sans)" }}
               >
                 {o.use}
               </p>
               <h3
-                className={`mt-2 ${o.mine ? "text-[var(--gold)]" : "text-foreground"}`}
+                className={`mt-2 ${o.mine ? "text-[var(--cream)]" : "text-foreground"}`}
                 style={{ fontFamily: "var(--serif)", fontSize: "1.375rem", lineHeight: 1.2 }}
               >
                 {o.title}
