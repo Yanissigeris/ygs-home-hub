@@ -118,7 +118,7 @@ const RealtorVsSellingByOwnerPageEn = () => (
       title="Still deciding?"
       text="Let's discuss your situation, with no commitment. I give you the numbers and the options. You decide."
       buttons={[
-        { label: "Free Valuation", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="Transparent guidance, at your pace."

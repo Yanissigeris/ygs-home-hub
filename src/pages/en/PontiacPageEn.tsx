@@ -83,7 +83,7 @@ const PontiacPageEn = () => {
         overline="PONTIAC · OUTAOUAIS · NATIONAL CAPITAL REGION"
         title="Real estate broker in Pontiac, between the Ottawa River and Gatineau Park"
         subtitle="The Municipality of Pontiac stretches between the Ottawa River, the Quyon River and the hills of Gatineau Park. Within the National Capital Region, it's a large rural and bilingual territory that is still affordable. Buyers who want a lot of space are often surprised by what they find here."
-        primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+        primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation/" }}
         secondaryCta={{ label: "Discuss my project →", href: "/en/contact/" }}
         heroBgImage={heroImg}
       />
@@ -131,7 +131,7 @@ const PontiacPageEn = () => {
                 ))}
               </div>
               <Link to="/en/home-valuation/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
-                Get the real numbers →
+                Free Home Valuation →
               </Link>
             </div>
           </div>
@@ -204,7 +204,7 @@ const PontiacPageEn = () => {
             ))}
           </div>
           <Link to="/en/home-valuation/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
-            Get the real numbers →
+            Free Home Valuation →
           </Link>
           <p className="text-center text-xs text-muted-foreground">Free · No obligation · Personalized response</p>
         </div>
@@ -241,7 +241,7 @@ const PontiacPageEn = () => {
         title="Pontiac is a market few brokers know well"
         text="A broker in the Outaouais since 2017, Pontiac included, I know the areas, the comparables and the practical realities: wells, septic systems, zoning, access. If you have a project here, I am your local broker."
         buttons={[
-          { label: "Free valuation →", href: "/en/home-valuation/" },
+          { label: "Free Home Valuation →", href: "/en/home-valuation/" },
           { label: "Contact me →", href: "/en/contact/", variant: "outline" },
         ]}
         trustLine="« I give you the numbers and options, you decide. »"

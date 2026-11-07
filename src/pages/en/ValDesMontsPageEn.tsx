@@ -31,7 +31,7 @@ const ValDesMontsPageEn = () => (
       { icon: Mountain, title: "Ottawa weekend & permanent buyers", text: "Cross-river buyers from Ottawa wanting a recreational property or full-time nature escape." },
       { icon: Mountain, title: "Remote workers & retirees", text: "Life in nature. Check Internet coverage at the exact address before you buy. Downtown Ottawa stays within reach for occasional in-person meetings." },
     ]}
-    inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Get my value →", href: "/en/home-valuation/" }}
+    inlineCta={{ text: "Own a cottage in Val-des-Monts? Find out its current value.", label: "Free Home Valuation →", href: "/en/home-valuation/" }}
     faq={{
       title: "Questions about Val-des-Monts",
       items: [
@@ -64,7 +64,7 @@ const ValDesMontsPageEn = () => (
       dataPoint: "In Q3 2026, single-family homes sold in 46 days on average in the Gatineau outskirts, an QPAREB territory that includes Val-des-Monts (Centris data).",
       takeaway: "My advice to Val-des-Monts owners thinking about selling: timing and preparation matter a lot. The right time depends on your property type and the competition on your lake. We look at it in the numbers. Be realistic on price for your lake type and access: a property on McGregor doesn't compare to one without lake access. Get a proper valuation before listing."
     }}
-    cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area, let's talk about your project.", buttons: [{ label: "Get my value", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
+    cta={{ title: "Buying or selling in Val-des-Monts?", text: "I know the area, let's talk about your project.", buttons: [{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Book a consultation", href: "/en/buyer-consultation/", variant: "outline" }], trustLine: "I give you the numbers and options, you decide." }}
   />
 );
 

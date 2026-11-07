@@ -82,7 +82,7 @@ const PlexPageEn = () => (
     <GuideInlineCTA lang="en" guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid: a guide to investing in Gatineau, sent by email." ctaLabel="Get the Investor Guide" />
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide, get it by email" />
     <ReviewSection overline="Investor testimonials" title="Informed decisions, real results" reviews={getReviewsByCategory("plex").slice(0, 2)} columns={2} />
-    <CTASection dark title="Get a clear reading of your situation" text="Whether you are thinking of selling or buying, we look at your numbers together to see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }, { label: "Free Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Get a clear reading of your situation" text="Whether you are thinking of selling or buying, we look at your numbers together to see more clearly." buttons={[{ label: "Free Plex Analysis", href: "/en/plex-analysis/" }, { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "investor")} />
     <FAQSection items={faq} />

@@ -39,6 +39,14 @@ const T = {
     submitting: "Envoi…",
     successTitle: "Merci, demande envoyée.",
     successText: "Je vous reviens avec votre évaluation personnalisée.",
+    thanksTitle: "Merci, c'est bien reçu.",
+    thanksLead: "Voici ce qui se passe maintenant.",
+    thanksSteps: [
+      "Je compare les ventes récentes de votre secteur.",
+      "S'il me manque un détail sur l'état de la maison, je vous contacte.",
+      "Vous recevez une fourchette de valeur et trois prix d'affichage.",
+    ],
+    thanksQuestion: "Une question d'ici là?",
     glassHeading: "Demandez votre évaluation gratuite",
     glassSub: "Je vous reviens avec une réponse personnalisée et une analyse claire.",
     badgeFree: "Gratuit",
@@ -71,6 +79,14 @@ const T = {
     submitting: "Sending…",
     successTitle: "Thank you, request sent.",
     successText: "I'll get back to you with your personalized valuation.",
+    thanksTitle: "Thanks, I've got your request.",
+    thanksLead: "Here's what happens next.",
+    thanksSteps: [
+      "I compare recent sales in your area.",
+      "If I'm missing a detail about the home's condition, I'll get in touch.",
+      "You receive a value range and three listing prices.",
+    ],
+    thanksQuestion: "Any questions in the meantime?",
     glassHeading: "Request your free valuation",
     glassSub: "I'll get back to you with a personalized response and a clear analysis.",
     badgeFree: "Free",
@@ -204,6 +220,54 @@ const ValuationForm = ({
       setSubmitted(true);
     }
   };
+
+  if (submitted && isGlass) {
+    return (
+      <div
+        role="status"
+        aria-live="polite"
+        className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
+      >
+        <div className="flex items-center gap-3.5">
+          <img
+            src={yanisPhoto}
+            alt=""
+            aria-hidden="true"
+            className="w-14 h-14 rounded-full object-cover ring-2 ring-white/20 bg-white/5"
+            width={56}
+            height={56}
+          />
+          <div className="min-w-0">
+            <h2 className="text-[1.375rem] font-semibold leading-tight text-primary-foreground" style={{ fontFamily: "var(--serif)" }}>
+              {t.thanksTitle}
+            </h2>
+            <p className="mt-1 text-[0.875rem] text-primary-foreground/80">Yanis Gauthier-Sigeris</p>
+          </div>
+        </div>
+        <p className="mt-6 text-[0.9375rem] font-medium text-primary-foreground">{t.thanksLead}</p>
+        <ol className="mt-4 space-y-4">
+          {t.thanksSteps.map((step, i) => (
+            <li key={i} className="flex gap-4">
+              <span
+                aria-hidden="true"
+                className="shrink-0 text-primary-foreground"
+                style={{ fontSize: "1.375rem", fontWeight: 300, lineHeight: 1.1, width: "1.25rem", fontVariantNumeric: "tabular-nums" }}
+              >
+                {i + 1}
+              </span>
+              <span className="text-[0.9375rem] leading-relaxed text-primary-foreground/90">{step}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-6 pt-5 border-t border-white/10 text-[0.9375rem] text-primary-foreground/85">
+          {t.thanksQuestion}{" "}
+          <a href="tel:+18192103044" className="font-semibold text-[var(--gold-bright)] underline underline-offset-4 whitespace-nowrap">
+            819-210-3044
+          </a>
+        </p>
+      </div>
+    );
+  }
 
   if (submitted) {
     return <SuccessMessage title={t.successTitle} text={t.successText} variant={variant} />;

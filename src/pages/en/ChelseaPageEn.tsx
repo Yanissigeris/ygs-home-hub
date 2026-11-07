@@ -97,7 +97,7 @@ const ChelseaPageEn = () => (
       overline="CHELSEA · QUÉBEC"
       title="Real estate broker in Chelsea, between nature and Ottawa"
       subtitle="Chelsea is a distinct municipality north of Gatineau. Part of its territory is occupied by Gatineau Park. Old Chelsea village is about 15 km from downtown Ottawa by road."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=chelsea" }}
       heroBgImage={heroImg}
       photoCredit={{ text: "Photo: cjuneau, CC BY 2.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Etienne_Br%C3%BBl%C3%A9_Lookout,_Gatineau_Park_(10396087056).jpg" }}
@@ -171,7 +171,7 @@ const ChelseaPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation/">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Free Home Valuation →</Link>
           </Button>
         </div>
       </div>
@@ -218,7 +218,7 @@ const ChelseaPageEn = () => (
       title="Buying or selling in Chelsea?"
       text="I know Chelsea inside out, let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

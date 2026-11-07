@@ -30,7 +30,7 @@ const ValDesMontsPage = () => (
       { icon: Users, title: "Familles en quête d'espace", text: "Grands terrains, école primaire à Perkins, communauté tissée serrée. Pas d'école secondaire à Val-des-Monts : les élèves du Centre de services scolaire des Draveurs vont au secondaire dans le secteur Gatineau." },
       { icon: Mountain, title: "Télétravailleurs et retraités", text: "Vie en nature. Vérifiez la couverture Internet à l'adresse exacte avant d'acheter. Le centre-ville d'Ottawa reste accessible pour les rencontres en présentiel ponctuelles." },
     ]}
-    inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
+    inlineCta={{ text: "Vous possédez un chalet à Val-des-Monts? Découvrez sa valeur actuelle.", label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur Val-des-Monts",
       items: [
@@ -63,7 +63,7 @@ const ValDesMontsPage = () => (
       dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 46 jours en moyenne dans la périphérie de Gatineau, un territoire de l'APCIQ qui inclut Val-des-Monts (données Centris).",
       takeaway: "Mon conseil aux propriétaires de Val-des-Monts qui pensent vendre : le moment et la préparation comptent énormément. Le bon moment dépend de votre type de propriété et de la concurrence sur votre lac. On le regarde dans les chiffres. Soyez réaliste sur le prix selon le type de lac et l'accès : une propriété sur McGregor ne se compare pas à une propriété sans accès au lac. Faites évaluer votre propriété avant de l'inscrire."
     }}
-    cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Val-des-Monts?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

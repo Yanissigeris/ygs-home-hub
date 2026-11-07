@@ -42,7 +42,7 @@ const LivingPlateauPageEn = () => (
       <SectionHeading title="Living in the Plateau with children" />
       <p className="prose-body mt-5">The neighbourhood has three French-language elementary schools and borders Gatineau Park. Since the neighbourhood was developed mostly since the late 1990s, families mainly find recent properties here, with fewer major renovations to plan than in older areas.</p>
     </ContentBlock>
-    <InlineCTA text="Own a property in the Plateau? Find out how much it's worth." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="Own a property in the Plateau? Find out how much it's worth." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <FAQSection title="Questions about living in the Plateau" items={faq} />
     <RelatedPages overline="Also worth reading" title="Also read" pages={related} background="alt" />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="Free Buyer Guide: settling in the Plateau" text="Everything to buy in the Plateau, process, budget and tips sent to your email." ctaLabel="Get the Buyer Guide" />

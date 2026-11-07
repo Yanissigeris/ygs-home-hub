@@ -159,7 +159,7 @@ const HullPage = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/evaluation-maison-hull/">Obtenir les vrais chiffres →</Link>
+            <Link to="/evaluation-maison-hull/">Évaluation gratuite →</Link>
           </Button>
         </div>
       </div>

@@ -99,7 +99,7 @@ const HullPageEn = () => (
       overline="HULL · GATINEAU (QUÉBEC)"
       title="Real estate broker in Hull, at the heart of urban Outaouais"
       subtitle="Hull is Gatineau's most urban area, directly across from Ottawa. The Zibi project is reshaping the area, which draws professionals and bilingual families as much as investors."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-hull/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation-hull/" }}
       secondaryCta={{ label: "See Hull properties →", href: "/en/properties?area=hull" }}
       heroBgImage={heroImg}
     />
@@ -175,7 +175,7 @@ const HullPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation-hull/">Get the real numbers →</Link>
+            <Link to="/en/home-valuation-hull/">Free Home Valuation →</Link>
           </Button>
         </div>
       </div>
@@ -222,7 +222,7 @@ const HullPageEn = () => (
       title="Your Hull project: where to start?"
       text="Buying, selling, rental investment, Hull is an area I know in depth. Let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation-hull/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation-hull/" },
         { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

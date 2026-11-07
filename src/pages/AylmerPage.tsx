@@ -165,7 +165,7 @@ const AylmerPage = () => (
               Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/evaluation-maison-aylmer/">Obtenir les vrais chiffres →</Link>
+              <Link to="/evaluation-maison-aylmer/">Évaluation gratuite →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Gratuit · Sans engagement · Réponse personnalisée

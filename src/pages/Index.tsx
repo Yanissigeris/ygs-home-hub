@@ -47,7 +47,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
           subtitle="Plus de 300 transactions en Outaouais depuis 2017. Pour vendre, acheter ou investir, on part des ventes comparables de votre secteur."
           subtitleShort="Vendre, acheter ou investir, à partir des ventes de votre secteur."
           sansTitle
-          primaryCta={{ label: "Obtenir mon évaluation", href: "/evaluation-gratuite-gatineau/" }}
+          primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
           secondaryCta={{ label: "Parlons de votre projet", href: "/contact-yanis/" }}
           socialProof="Hall of Fame RE/MAX"
           heroBgImage={yanisHero}

@@ -43,13 +43,13 @@ const SellPlexPageEn = () => (
       overline="Sell a Plex · Gatineau"
       title="Sell your plex in Gatineau"
       subtitle="Duplex, triplex or more: I help you sell at the right price, with a strategy built for income properties."
-      primaryCta={{ label: "Free Valuation", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Get an analysis", href: "/en/plex-analysis/" }}
       trustLine="Plex specialist."
       heroBgImage={heroImg}
     />
 <CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} />
-    <InlineCTA text="First step: find out what your plex is worth. It's free." buttonLabel="Free Valuation →" href="/en/home-valuation/" />
+    <InlineCTA text="First step: find out what your plex is worth. It's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <ProcessSteps steps={steps} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="Sell well without overcomplicating it" />
@@ -59,7 +59,7 @@ const SellPlexPageEn = () => (
       </Button>
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="investor_guide" headline="Free Investor Guide for plex owners" text="Plex returns and taxes, explained in a guide sent to your email." ctaLabel="Get the Investor Guide" />
-    <CTASection dark title="Ready to look at your options?" text="Request an analysis of your plex: its value based on its income, with my recommendation." buttons={[{ label: "Free Valuation", href: "/en/home-valuation/" }, { label: "Free Plex Analysis", href: "/en/plex-analysis/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Ready to look at your options?" text="Request an analysis of your plex: its value based on its income, with my recommendation." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Free Plex Analysis", href: "/en/plex-analysis/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <FAQSection items={faq} />
     <StickyGuideBanner lang="en" guideType="investor_guide" label="Free Investor Guide, get it by email" />
   </>

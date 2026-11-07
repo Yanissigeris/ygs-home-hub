@@ -87,7 +87,7 @@ const PlateauAylmerPageEn = () => (
       title="Buyer or seller in Plateau / Aylmer?"
       text="I can help you see clearly, whether you want to buy in the area or find out what your property is worth."
       buttons={[
-        { label: "Get my value", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation", href: "/en/home-valuation/" },
         { label: "Book a consultation", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

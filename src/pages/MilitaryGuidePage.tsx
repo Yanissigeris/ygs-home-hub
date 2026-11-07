@@ -72,7 +72,7 @@ const MilitaryGuidePage = () => (
 
     <InlineCTA
       text="Vous devez vendre avant d'acheter? Commencez par connaître la valeur de votre propriété."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 
@@ -97,7 +97,7 @@ const MilitaryGuidePage = () => (
       text="Réservez un appel gratuit. On adapte le plan à votre mutation et à votre calendrier."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis/" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je m'adapte à votre rythme. Vous décidez quand vous êtes prêt."
     />

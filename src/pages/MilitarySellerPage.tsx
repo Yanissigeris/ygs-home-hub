@@ -36,7 +36,7 @@ const MilitarySellerPage = () => (
       overline="Vendre lors d'une mutation · Gatineau"
       title="Vendre votre propriété lors d'une mutation"
       subtitle="Le temps presse, mais le prix compte. Je vous aide à vendre dans vos délais, avec un prix appuyé sur les chiffres du marché."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Un plan clair, des chiffres vérifiables."
       heroBgImage={heroImg}
@@ -54,7 +54,7 @@ const MilitarySellerPage = () => (
 
     <InlineCTA
       text="Première étape : connaître la valeur de votre propriété. C'est gratuit, avec une réponse personnalisée."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 

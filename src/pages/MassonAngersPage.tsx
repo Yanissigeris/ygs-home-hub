@@ -29,7 +29,7 @@ const MassonAngersPage = () => (
       { icon: TrendingUp, title: "Investisseurs", text: "Des prix d'entrée plus bas qu'ailleurs à Gatineau et des projets neufs. Avant une offre, je vous montre les loyers récents du secteur." },
       { icon: MapPin, title: "Travailleurs de l'est", text: "Accès direct aux zones d'emploi de Gatineau-est, Buckingham et Thurso. Le centre de Buckingham est à environ 5 km par la route." },
     ]}
-    inlineCta={{ text: "Propriétaire à Masson-Angers? Découvrez la valeur actuelle de votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
+    inlineCta={{ text: "Propriétaire à Masson-Angers? Découvrez la valeur actuelle de votre propriété.", label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur Masson-Angers",
       items: [
@@ -61,7 +61,7 @@ const MassonAngersPage = () => (
       dataPoint: "Au 3e trimestre 2026, le secteur Buckingham/Masson-Angers comptait 47 % plus d'unifamiliales en vigueur qu'un an plus tôt, et les ventes d'unifamiliales avaient baissé de 23 % (APCIQ, données Centris).",
       takeaway: "Mon conseil aux acheteurs qui considèrent Masson-Angers : comparez bien Masson et Angers avant de vous décider, parce que ce sont deux marchés différents. Si vous visez une construction neuve, vérifiez le promoteur et les délais de livraison, et négociez les inclusions. Mon conseil aux propriétaires qui pensent vendre : votre prix doit refléter votre sous-secteur et l'offre concurrente du neuf, pas une moyenne du quartier."
     }}
-    cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Masson-Angers?", text: "Je connais le secteur, parlons de votre projet.", buttons: [{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

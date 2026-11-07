@@ -97,7 +97,7 @@ const NeighborhoodsOverviewPage = () => (
       text="Parlons de vos critères, je vous recommande les secteurs qui correspondent à votre situation."
       buttons={[
         { label: "Réserver une consultation", href: "/consultation-acheteur/" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les options, vous décidez."
     />

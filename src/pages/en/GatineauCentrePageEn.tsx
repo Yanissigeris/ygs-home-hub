@@ -78,7 +78,7 @@ const GatineauCentrePageEn = () => (
       overline="GATINEAU CENTRE · QUÉBEC"
       title="Buying or selling in Gatineau centre, close to services"
       subtitle="Gatineau's central area is often underestimated. Yet it has Hôpital de Gatineau and a Cégep de l'Outaouais campus, with big-box stores nearby. Its prices are still among the most accessible in the city for families and investors."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=gatineau" }}
       heroBgImage={heroImg}
     />
@@ -131,7 +131,7 @@ const GatineauCentrePageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation/">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Free Home Valuation →</Link>
           </Button>
         </div>
       </div>
@@ -162,7 +162,7 @@ const GatineauCentrePageEn = () => (
       title="Buyer or seller in Gatineau centre?"
       text="I know the area, let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation/" },
         { label: "Analyze a plex →", href: "/en/plex/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

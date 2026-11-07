@@ -133,7 +133,7 @@ const AylmerPageEn = () => (
       overline="AYLMER · GATINEAU (QUÉBEC)"
       title="Your real estate broker in Aylmer"
       subtitle="Aylmer is a bilingual sector, with parks and many newer homes. In Q3 2026, a single-family home sold there in 25 days on average (QPAREB)."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation-aylmer/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation-aylmer/" }}
       secondaryCta={{ label: "See Aylmer properties →", href: "/en/properties?area=aylmer" }}
       heroBgImage={heroImg}
       photoCredit={{ text: "Photo: Veillg1, CC BY-SA 4.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Marina_d%27Aylmer-Vue_du_bout_des_jet%C3%A9es_et_de_la_rivi%C3%A8re_des_Outaouais-2023-05-26.jpg" }}
@@ -162,7 +162,7 @@ const AylmerPageEn = () => (
               Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
             </p>
             <Button className="w-full" size="lg" asChild>
-              <Link to="/en/home-valuation-aylmer/">Get the real numbers →</Link>
+              <Link to="/en/home-valuation-aylmer/">Free Home Valuation →</Link>
             </Button>
             <p className="text-[0.72rem] text-muted-foreground italic text-center">
               Free · No obligation · Personalized response
@@ -305,7 +305,7 @@ const AylmerPageEn = () => (
       title="Ready to take the next step?"
       text="To sell your home in Aylmer or buy in the area, I'm your local broker."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation-aylmer/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation-aylmer/" },
         { label: "Contact me →", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine={'"I give you the numbers and the options, you decide."'}

@@ -574,7 +574,7 @@ const BlogArticlePage = () => {
                   fontWeight: 500,
                 }}
               >
-                {isFr ? "Évaluation gratuite" : "Free valuation"} <span aria-hidden>→</span>
+                {isFr ? "Évaluation gratuite" : "Free Home Valuation"} <span aria-hidden>→</span>
               </Link>
             </div>
 

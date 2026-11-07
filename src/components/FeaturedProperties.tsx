@@ -145,12 +145,6 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
               {p.bathrooms} {lang === "fr" ? "sdb" : "ba"}
             </>
           )}
-          {p.status === "sold" && (
-            <>
-              <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-              <span style={{ color: "var(--ink)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
-            </>
-          )}
         </p>
 
         {/* View link */}

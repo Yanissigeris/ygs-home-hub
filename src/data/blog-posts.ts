@@ -375,7 +375,7 @@ A: In Q3 2026, a single-family home sold in 34 days on average in the CMA. It ra
       eyebrowEn: "PERSONALIZED VALUATION",
       titleEn: "Thinking about selling in the next six months?",
       textEn: "I provide a property valuation based on recent comparable sales in your area, with a precise figure rather than a generic price range.",
-      buttonLabelEn: "Free valuation",
+      buttonLabelEn: "Free Home Valuation",
       buttonHrefEn: "/en/home-valuation/",
     },
     titleLines: {

@@ -31,7 +31,7 @@ const MarketReportPage = () => (
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"
       subtitle="Le prochain rapport est en préparation. En attendant, demandez une analyse personnalisée du marché dans votre secteur."
-      primaryCta={{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
@@ -50,7 +50,7 @@ const MarketReportPage = () => (
 
     <InlineCTA
       text="Vous voulez connaître la valeur de votre propriété? Demandez une évaluation gratuite."
-      buttonLabel="Obtenir ma valeur →"
+      buttonLabel="Évaluation gratuite →"
       href="/evaluation-gratuite-gatineau/"
     />
 
@@ -80,7 +80,7 @@ const MarketReportPage = () => (
       title="Recevez le prochain rapport marché"
       text="Contactez-moi pour être sur la liste, vous recevrez l'analyse dès sa publication."
       buttons={[
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Données objectives et analyse locale claire."

@@ -41,7 +41,7 @@ export const reviews: Review[] = [
   // — Buyers —
   {
     id: "b1",
-    name: "Geneviève et Salah.",
+    name: "Geneviève et Salah",
     location: "Aylmer",
     category: "buyer",
     short: " Sérieux, je suis trop contente d’avoir trouvé Yanis!! Il a fait en sorte que notre première achat de maison se fasse le plus smooth possible malgré le stresse et les petits problèmes que moi et mon mari ont à rencontrer! Il nous a bien conseillé et je le recommande à vraiment tout le monde! Merci encore Yanis!!",
@@ -50,7 +50,7 @@ export const reviews: Review[] = [
   },
   {
     id: "b2",
-    name: "Isabelle.",
+    name: "Isabelle",
     location: "Aylmer",
     category: "buyer",
     short: "Je recommande fortement Yanis comme agent, nous avons faite affaire avec lui pour l'achat de notre premiere maison et wow quel service exceptionnel et a l'ecoute de nos besoins!! Merci pour tout Yanis!!.",
@@ -70,7 +70,7 @@ export const reviews: Review[] = [
   // — Relocation —
   {
     id: "r1",
-    name: "Alexandre.",
+    name: "Alexandre",
     location: "Aylmer/Gatineau",
     category: "relocation",
     short: "Excellente disponibilité, patient et honnête. Je le recommande fortement pour vendre ou pour acheter\n.",
@@ -79,7 +79,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r2",
-    name: "John.",
+    name: "John",
     location: "Ottawa → Gatineau",
     category: "relocation",
     short: "En tant qu'acheteur ontarien, je suis très satisfait de l'aide précieuse que Yanis m'a apportée lors de l'achat de mon condo à Gatineau\u00a0! Il connaît parfaitement le marché local et sait comment faire la meilleure offre possible pour les propriétés concurrentielles au Québec. Merci beaucoup Yanis, je vous recommande vivement\u00a0!",

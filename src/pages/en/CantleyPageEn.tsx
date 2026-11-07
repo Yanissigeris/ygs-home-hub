@@ -80,7 +80,7 @@ const CantleyPageEn = () => (
       overline="CANTLEY · OUTAOUAIS"
       title="Real estate broker in Cantley, about 20 km from downtown Ottawa"
       subtitle="The municipality stands out for its large lots and low-density housing. For families who want space without going too far, Cantley is often the logical conclusion."
-      primaryCta={{ label: "Free valuation →", href: "/en/home-valuation/" }}
+      primaryCta={{ label: "Free Home Valuation →", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "See properties →", href: "/en/properties?area=cantley" }}
       heroBgImage={heroImg}
       photoCredit={{ text: "Photo: Wesdarou, CC BY-SA 4.0, Wikimedia Commons (cropped)", href: "https://commons.wikimedia.org/wiki/File:Tiberius_Wright_house_2016-01.jpg" }}
@@ -154,7 +154,7 @@ const CantleyPageEn = () => (
         </div>
         <div className="mt-8">
           <Button size="lg" asChild>
-            <Link to="/en/home-valuation/">Get the real numbers →</Link>
+            <Link to="/en/home-valuation/">Free Home Valuation →</Link>
           </Button>
         </div>
       </div>
@@ -185,7 +185,7 @@ const CantleyPageEn = () => (
       title="Buying or selling in Cantley?"
       text="I know the area, let's talk about your project."
       buttons={[
-        { label: "Free valuation →", href: "/en/home-valuation/" },
+        { label: "Free Home Valuation →", href: "/en/home-valuation/" },
         { label: "Book a consultation →", href: "/en/buyer-consultation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options, you decide."

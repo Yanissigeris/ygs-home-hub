@@ -29,7 +29,7 @@ const CoteDazurPage = () => (
       { icon: MapPin, title: "Retraités", text: "Plain-pied sans escalier dans un voisinage calme, avec les services à quelques minutes. Un bon choix pour rester chez soi longtemps." },
       { icon: Coffee, title: "Acheteurs de revente", text: "Des bungalows plus anciens, souvent à rénover. Je vous montre l'écart de prix entre les maisons rénovées et celles à rénover dans le secteur." },
     ]}
-    inlineCta={{ text: "Propriétaire à Côte-d'Azur? Découvrez combien vaut votre propriété.", label: "Obtenir ma valeur →", href: "/evaluation-gratuite-gatineau/" }}
+    inlineCta={{ text: "Propriétaire à Côte-d'Azur? Découvrez combien vaut votre propriété.", label: "Évaluation gratuite →", href: "/evaluation-gratuite-gatineau/" }}
     faq={{
       title: "Questions sur Côte-d'Azur",
       items: [
@@ -61,7 +61,7 @@ const CoteDazurPage = () => (
       dataPoint: "Au 3e trimestre 2026, une unifamiliale s'est vendue en 35 jours en moyenne dans le secteur Gatineau de l'APCIQ, qui inclut Côte-d'Azur. Quand le prix est trop optimiste au départ, le délai s'allonge nettement.",
       takeaway: "Mon conseil aux propriétaires de Côte-d'Azur qui pensent vendre : préparez bien votre maison, petits détails compris, et inscrivez-la au bon prix dès le départ. Sinon, la vente prend plus de temps et le prix final en souffre."
     }}
-    cta={{ title: "Acheteur ou vendeur à Côte-d'Azur?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
+    cta={{ title: "Acheteur ou vendeur à Côte-d'Azur?", text: "Je connais le quartier, parlons de votre projet.", buttons: [{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }, { label: "Réserver une consultation", href: "/consultation-acheteur/", variant: "outline" }], trustLine: "Je vous donne les chiffres et les options, vous décidez." }}
   />
 );
 

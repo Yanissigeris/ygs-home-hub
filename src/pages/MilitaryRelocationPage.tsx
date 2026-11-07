@@ -81,7 +81,7 @@ const MilitaryRelocationPage = () => (
       text="Parlez-moi de votre mutation et on bâtit un plan ensemble."
       buttons={[
         { label: "Réserver un appel", href: "/contact-yanis" },
-        { label: "Obtenir ma valeur", href: "/evaluation-gratuite-gatineau", variant: "outline" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

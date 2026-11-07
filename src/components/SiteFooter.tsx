@@ -5,7 +5,7 @@ import { getA11yLabel } from "@/lib/a11y";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import logoYgsWhite from "@/assets/ygs-logo.png";
-import logoMW from "@/assets/logo-mw-white.webp";
+import logoMW from "@/assets/logo-mw-white-transparent.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
@@ -18,6 +18,7 @@ import { trackContactTap } from "@/lib/analytics";
 type AffiliationLogo = {
   alt: string;
   filter?: string;
+  heightClass?: string;
   href?: string;
   caption?: string;
   src?: string;
@@ -37,7 +38,7 @@ const affiliationLogos: AffiliationLogo[] = [
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau" },
+  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[22px]" },
   { src: logoTemple, alt: "Temple de la renommée RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-[1.4]" },
@@ -106,7 +107,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const ctaSubtext = lang === "en"
       ? "Get your free home valuation, no commitment."
       : "Obtenez votre évaluation gratuite, sans engagement.";
-    const ctaLabel = lang === "en" ? "Free valuation →" : "Évaluation gratuite →";
+    const ctaLabel = lang === "en" ? "Free Home Valuation →" : "Évaluation gratuite →";
 
     return (
       <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "var(--cream)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
@@ -247,7 +248,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`h-10 w-auto object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 ${logo.filter ?? ""}`}
+                    className={`${logo.heightClass ?? "h-10"} w-auto object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 ${logo.filter ?? ""}`}
                   />
                 );
                 const caption = logo.caption ? (

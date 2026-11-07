@@ -4,7 +4,7 @@ import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;640;900&format=avif;w
 
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
-  quote: "« Je vous donne les chiffres et les options, vous décidez. »",
+  quote: "«\u00A0Je vous donne les chiffres et les options, vous décidez.\u00A0»",
   body: `Je suis courtier immobilier résidentiel depuis 2017, avec plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Mes clients sont autant des vendeurs et des acheteurs que des investisseurs.
 
 Avant de parler de prix, je vous montre les ventes comparables de votre secteur. Vous voyez les mêmes chiffres que moi, puis c'est vous qui choisissez.

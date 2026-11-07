@@ -66,7 +66,7 @@ const OutaouaisHubPage = () => (
       overline="SECTEURS ET MUNICIPALITÉS DE L'OUTAOUAIS"
       title="L'immobilier en Outaouais, secteur par secteur"
       subtitle="Le prix et le profil de chaque secteur, de Hull à Chelsea et d'Aylmer à Val-des-Monts, pour choisir où acheter ou comment vendre."
-      primaryCta={{ label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" }}
+      primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={heroImg}
@@ -176,7 +176,7 @@ const OutaouaisHubPage = () => (
       title="Commençons votre projet immobilier en Outaouais"
       text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
       buttons={[
-        { label: "Évaluation Gratuite", href: "/evaluation-gratuite-gatineau/" },
+        { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
         { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

@@ -119,7 +119,7 @@ const PontiacPage = () => {
                 ))}
               </div>
               <Link to="/evaluation-gratuite-gatineau/" className="block w-full mt-4 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
-                Obtenir les vrais chiffres →
+                Évaluation gratuite →
               </Link>
             </div>
           </div>
@@ -192,7 +192,7 @@ const PontiacPage = () => {
             ))}
           </div>
           <Link to="/evaluation-gratuite-gatineau/" className="block w-full mt-2 text-center bg-accent text-accent-foreground rounded-full py-2.5 text-[0.875rem] font-medium hover:bg-accent/90 transition-colors">
-            Obtenir les vrais chiffres →
+            Évaluation gratuite →
           </Link>
           <p className="text-center text-xs text-muted-foreground">Gratuit · Sans engagement · Réponse personnalisée</p>
         </div>

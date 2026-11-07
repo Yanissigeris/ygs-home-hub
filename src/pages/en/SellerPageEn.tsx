@@ -58,7 +58,8 @@ const SellerPageEn = () => (
   <>
     <PageMeta title="Sell Your Home in Gatineau" description="Sell your property in Gatineau at the right price, with a clear marketing strategy and personal support from Yanis Gauthier-Sigeris." ogImage="https://yanisgauthier.com/og/og-seller.jpg" />
     <ServiceJsonLd name="Home Selling Service in Gatineau" description="Full-service home selling in Gatineau and Outaouais: valuation, pricing strategy, marketing and support from listing to closing." url="/en/sell/" serviceType="Real Estate Listing Service" />
-    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a local strategy" subtitle="You don't have to decide everything today. What you need first is a clear plan: pricing, preparation, marketing and negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="Clear strategy." heroBgImage={heroImg} />
+    <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a local strategy" subtitle="You don't have to decide everything today. What you need first is a clear plan: pricing, preparation, marketing and negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="Clear strategy." sansTitle
+    heroBgImage={heroImg} />
 
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Local strategy" title="Adapting your sale to your local market" />
