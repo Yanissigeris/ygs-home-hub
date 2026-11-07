@@ -309,7 +309,7 @@
     font-size: 80px;
     line-height: 0.8;
     font-weight: 400;
-    color: var(--gold);
+    color: var(--ink);
     float: left;
     margin-right: 8px;
     margin-top: 4px;
@@ -348,7 +348,7 @@
 
   .divider-line {
     @apply mx-auto h-px w-12;
-    background: var(--gold);
+    background: var(--ink);
     opacity: 0.25;
   }
 
@@ -890,7 +890,7 @@ h1.hero-eyebrow {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: #4A5475;
 }
 
 /* Overline eyebrow — dark backgrounds (ink). Uses --gold2 (small text safe). */
@@ -900,7 +900,7 @@ h1.hero-eyebrow {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold2);
+  color: var(--text-on-dark-muted);
 }
 
 /* Arrow tertiary link — light background variant (default). */
@@ -953,7 +953,7 @@ h1.hero-eyebrow {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold2);
+  color: var(--text-on-dark-muted);
   margin: 0;
 }
 

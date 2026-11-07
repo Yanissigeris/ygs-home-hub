@@ -124,7 +124,7 @@ const GatineauCentrePage = () => (
             "Au 3e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Gatineau de l'APCIQ était de 464 900 $, en baisse de 2 % sur un an.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

@@ -91,9 +91,9 @@ const PontiacPageEn = () => {
       {/* SECTION 1 — Important clarification */}
       <ContentBlock background="alt" padSize="md">
         <div className="max-w-[44rem] mx-auto">
-          <div className="border-l-[3px] border-accent bg-background rounded-sm px-5 py-4">
+          <div className="border-l-2 border-[var(--ink)] bg-background rounded-sm px-5 py-4">
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
-              <AlertTriangle size={14} className="inline mr-1.5 text-accent -mt-0.5" />
+              <AlertTriangle size={14} className="inline mr-1.5 text-[var(--ink-soft)] -mt-0.5" />
               <strong>Not to be confused</strong>: the Municipality of Pontiac (Luskville, Breckenridge, Quyon area) is part of the MRC des Collines-de-l'Outaouais and the National Capital Region. It is distinct from the MRC Pontiac, a much more western territory not included in the National Capital Region. Yanis Gauthier-Sigeris covers the Municipality of Pontiac (Collines-de-l'Outaouais).
             </p>
           </div>
@@ -112,7 +112,7 @@ const PontiacPageEn = () => {
           <div className="md:col-span-2">
             <div className="border border-border rounded-lg p-6 space-y-4">
               <h3 className="font-serif text-lg text-foreground">Pontiac, key facts</h3>
-              <div className="w-8 h-0.5 bg-accent" />
+              <div className="w-8 h-0.5 bg-[var(--ink)]" />
               <div className="space-y-4 text-[0.875rem]">
                 {[
                   { icon: MapPin, label: "Location", value: "MRC des Collines-de-l'Outaouais · National Capital Region" },
@@ -121,7 +121,7 @@ const PontiacPageEn = () => {
                   { icon: TreePine, label: "Nature", value: "Gatineau Park covers part of the territory", source: "(Source: National Capital Commission)" },
                 ].map((f) => (
                   <div key={f.label} className="flex gap-3">
-                    <f.icon size={16} className="shrink-0 text-accent mt-0.5" />
+                    <f.icon size={16} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
                     <div>
                       <div className="font-medium text-foreground">{f.label}</div>
                       <div className="text-muted-foreground">{f.value}</div>
@@ -151,7 +151,7 @@ const PontiacPageEn = () => {
             <div key={s.name} className="bg-background border border-border rounded-lg p-6 space-y-3">
               <h3 className="font-serif text-lg text-foreground">{s.name}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{s.text}</p>
-              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[var(--gold-text)]">{s.tag}</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#4A5475]">{s.tag}</span>
             </div>
           ))}
         </div>
@@ -167,7 +167,7 @@ const PontiacPageEn = () => {
             { icon: Bus, title: "Transcollines: urban connection", text: "The Municipality of Pontiac is served by Transcollines, the transit service that links the Collines-de-l'Outaouais municipalities to Gatineau, with transfers to the STO network. A city connection that makes Pontiac more accessible than one might think for those combining remote work with occasional commuting." },
           ].map((c) => (
             <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
-              <c.icon size={24} className="text-accent" />
+              <c.icon size={24} className="text-[var(--ink-soft)]" />
               <h3 className="font-serif text-lg text-foreground">{c.title}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>
@@ -198,7 +198,7 @@ const PontiacPageEn = () => {
               "Transactions in Pontiac are less frequent than in urban areas, which makes valuation harder. A broker who follows this market closely helps you set the right price.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">
-                <CheckCircle2 size={16} className="shrink-0 text-accent mt-0.5" />
+                <CheckCircle2 size={16} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
                 <span className="text-[0.9rem] text-muted-foreground">{p}</span>
               </div>
             ))}

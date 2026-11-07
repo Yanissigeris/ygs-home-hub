@@ -136,7 +136,7 @@ const PreferencesModal = ({ open, onClose, onSave, lang }: {
             </div>
             <div className="flex flex-col items-end gap-1">
               <Toggle checked disabled id="toggle-necessary" onChange={() => {}} />
-              <span className="text-[.65rem] font-medium" style={{ color: "var(--gold)" }}>{t.alwaysOn}</span>
+              <span className="text-[.65rem] font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>{t.alwaysOn}</span>
             </div>
           </div>
 
@@ -287,7 +287,7 @@ const CookieConsent = () => {
           className="fixed bottom-0 inset-x-0 z-[9999] md:hidden"
           style={{
             background: "var(--ink)",
-            borderTop: "2px solid var(--gold)",
+            borderTop: "1px solid rgba(255,255,255,.12)",
             padding: "10px 12px",
             paddingBottom: "calc(10px + env(safe-area-inset-bottom, 0px))",
             display: "flex",
@@ -365,7 +365,7 @@ const CookieConsent = () => {
           className="fixed bottom-0 left-0 right-0 z-[9999]"
           style={{
             background: "var(--ink)",
-            borderTop: "2px solid var(--gold)",
+            borderTop: "1px solid rgba(255,255,255,.12)",
             boxShadow: "0 -4px 30px rgba(0,0,0,.2)",
             transform: visible ? "translateY(0)" : "translateY(100%)",
             transition: "transform .4s cubic-bezier(.22,.61,.36,1)",

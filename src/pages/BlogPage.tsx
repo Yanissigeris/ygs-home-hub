@@ -43,15 +43,15 @@ const BlogPage = () => {
             {/* Left: editorial title */}
             <div>
               <div className="flex items-center gap-3">
-                <span className="block h-px w-8" style={{ background: "var(--gold)" }} />
-                <span style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
+                <span className="block h-px w-8" style={{ background: "rgba(247,244,238,0.4)" }} />
+                <span style={{ color: "rgba(247,244,238,0.75)", fontSize: "10px", letterSpacing: "0.18em" }} className="uppercase font-medium">
                   YGS · Analyses & perspectives
                 </span>
               </div>
               <h1 className="mt-5 font-display" style={{ color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2.1rem, 4.4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.028em" }}>
                 Marché immobilier
                 <br />
-                <span style={{ color: "var(--gold-bright)", fontWeight: 600 }}>Outaouais</span>
+                Outaouais
               </h1>
               <p className="mt-5 max-w-md" style={{ color: "var(--cream)", opacity: 0.92, fontSize: "13px", lineHeight: 1.6 }}>
                 Analyses du marché et conseils concrets pour vos projets immobiliers à Gatineau et en Outaouais.
@@ -71,7 +71,7 @@ const BlogPage = () => {
                   <span className="font-display" style={{ color: "var(--cream)", fontSize: "32px", fontWeight: 600, lineHeight: 1 }}>
                     {stat.value}
                   </span>
-                  <span className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                  <span className="uppercase" style={{ color: "rgba(247,244,238,0.75)", fontSize: "10px", letterSpacing: "0.16em" }}>
                     {stat.label}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ const BlogPage = () => {
       {/* Ticker */}
       <div
         className="w-full overflow-hidden"
-        style={{ background: "var(--gold)", height: "38px" }}
+        style={{ background: "var(--ink-soft)", height: "38px" }}
         aria-hidden="true"
       >
         <div className="flex h-full items-center" style={{ animation: "blog-ticker 30s linear infinite", whiteSpace: "nowrap" }}>
@@ -135,7 +135,7 @@ const BlogPage = () => {
             {/* Left column */}
             <div className="p-8 sm:p-10 lg:p-12 bg-background flex flex-col">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="uppercase font-semibold" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.16em" }}>
+                <span className="uppercase font-semibold" style={{ color: "#4A5475", fontSize: "10px", letterSpacing: "0.16em" }}>
                   {featured.category}
                 </span>
                 <span aria-hidden style={{ color: "var(--ink)", opacity: 0.7, fontSize: "11px" }}>·</span>
@@ -159,7 +159,7 @@ const BlogPage = () => {
             </div>
 
             {/* Right column — pull-quote + stats */}
-            <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "3px solid var(--gold)" }}>
+            <div className="p-8 sm:p-10 lg:p-12 flex flex-col" style={{ background: "#ECEAE2", borderTop: "2px solid var(--ink)" }}>
               <blockquote className="font-display italic" style={{ color: "var(--ink)", fontSize: "18px", lineHeight: 1.5, fontWeight: 400 }}>
                 « Au 3e trimestre 2026, l'inventaire a monté de 42 % et les ventes ont reculé de 12 %. »
               </blockquote>
@@ -206,7 +206,7 @@ const BlogPage = () => {
               )}
               <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="inline-flex w-fit h-6 items-center rounded-none bg-accent/10 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-accent">{post.category}</span>
+                  <span className="inline-flex w-fit h-6 items-center rounded-none bg-muted px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--ink-soft)]">{post.category}</span>
                   <time className="text-[0.6875rem] text-muted-foreground">{new Date(`${post.publishDate}T12:00:00`).toLocaleDateString("fr-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
                 </div>
                 <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug group-hover:text-accent transition-colors duration-200">{post.title}</h3>

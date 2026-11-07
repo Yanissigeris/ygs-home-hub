@@ -292,7 +292,7 @@ const BlogArticlePage = () => {
         const h3Prominent = post?.h3Style === "prominent";
         elements.push(
           h3Prominent ? (
-            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--gold-text)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
               {text}
             </h3>
           ) : (
@@ -320,7 +320,7 @@ const BlogArticlePage = () => {
             key={i}
             className="my-7"
             style={{
-              borderLeft: "3px solid var(--gold)",
+              borderLeft: "2px solid var(--ink)",
               background: "#ECEAE2",
               padding: "24px 28px",
               fontFamily: "var(--serif)",
@@ -416,8 +416,8 @@ const BlogArticlePage = () => {
                 <span
                   className="inline-flex items-center uppercase font-semibold"
                   style={{
-                    border: "1px solid var(--gold)",
-                    color: "var(--gold-bright)",
+                    border: "1px solid rgba(247,244,239,0.3)",
+                    color: "rgba(247,244,239,0.85)",
                     fontSize: "10px",
                     letterSpacing: "0.16em",
                     padding: "6px 12px",
@@ -442,19 +442,19 @@ const BlogArticlePage = () => {
               </h1>
             </div>
             <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.92)", fontSize: "10px", letterSpacing: "0.18em" }}>
-              <span style={{ width: "16px", height: "1px", background: "var(--gold)" }} />
+              <span style={{ width: "16px", height: "1px", background: "rgba(247,244,239,0.5)" }} />
               {readingTime} {isFr ? "min de lecture" : "min read"}
             </div>
           </div>
 
           {/* Right — cream */}
           <div
-            style={{ background: "var(--cream)", borderLeft: "3px solid var(--gold)", padding: "48px" }}
+            style={{ background: "var(--cream)", borderLeft: "2px solid var(--ink)", padding: "48px" }}
             className="flex flex-col justify-between gap-8"
           >
             <div>
               {titleParts.line3 && (
-                <h2 style={{ fontFamily: "var(--serif)", fontStyle: "normal", color: "var(--gold-text)", fontWeight: 600, fontSize: "clamp(1.9rem, 3.8vw, 46px)", lineHeight: 1.02, letterSpacing: "-0.028em" }}>
+                <h2 style={{ fontFamily: "var(--serif)", fontStyle: "normal", color: "var(--ink)", fontWeight: 600, fontSize: "clamp(1.9rem, 3.8vw, 46px)", lineHeight: 1.02, letterSpacing: "-0.028em" }}>
                   {titleParts.line3}
                 </h2>
               )}
@@ -514,7 +514,7 @@ const BlogArticlePage = () => {
                       className="grid gap-4 py-6 sm:grid-cols-[40px_1fr]"
                       style={{ borderTop: i === 0 ? "none" : "1px solid #E0DBD1" }}
                     >
-                      <span style={{ fontFamily: "var(--serif)", color: "var(--gold)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
+                      <span style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
@@ -532,8 +532,8 @@ const BlogArticlePage = () => {
           <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" style={{ padding: "0" }}>
             {/* Source block */}
             {post.sources && post.sources.length > 0 && (
-            <div style={{ borderLeft: "2px solid var(--gold)", background: "#ECEAE2", padding: "20px 22px" }}>
-              <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+            <div style={{ borderLeft: "2px solid var(--ink)", background: "#ECEAE2", padding: "20px 22px" }}>
+              <p className="uppercase" style={{ color: "#4A5475", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {post.sources.length > 1 ? "Sources" : "Source"}
               </p>
               <ul className="mt-2 space-y-2 list-none">
@@ -548,14 +548,14 @@ const BlogArticlePage = () => {
 
             {/* CTA block */}
             <div style={{ background: "var(--ink)", padding: "28px 24px" }}>
-              <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+              <p className="uppercase" style={{ color: "rgba(247,244,238,0.75)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
                 {isFr ? "Parler à Yanis" : "Talk to Yanis"}
               </p>
               <h3 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "19px", fontWeight: 600, lineHeight: 1.15 }}>
                 {isFr ? (
-                  <>Une analyse <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>sur mesure</em></>
+                  <>Une analyse <em style={{ fontStyle: "normal" }}>sur mesure</em></>
                 ) : (
-                  <>An analysis <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>of your property</em></>
+                  <>An analysis <em style={{ fontStyle: "normal" }}>of your property</em></>
                 )}
               </h3>
               <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
@@ -612,7 +612,7 @@ const BlogArticlePage = () => {
       {post.ctaOverride ? (
         <section style={{ background: "var(--ink)", padding: "48px 0" }}>
           <div className="section-container text-center">
-            <p className="uppercase" style={{ color: "var(--gold-bright)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+            <p className="uppercase" style={{ color: "rgba(247,244,238,0.75)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
             </p>
             <h2 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
@@ -643,9 +643,9 @@ const BlogArticlePage = () => {
           <div className="section-container text-center">
             <h2 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
               {isFr ? (
-                <>Vous regardez un plex en Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>Parlons-en.</em></>
+                <>Vous regardez un plex en Outaouais? <em style={{ fontStyle: "normal" }}>Parlons-en.</em></>
               ) : (
-                <>Looking at a plex in the Outaouais? <em style={{ color: "var(--gold-bright)", fontStyle: "normal" }}>Let's talk.</em></>
+                <>Looking at a plex in the Outaouais? <em style={{ fontStyle: "normal" }}>Let's talk.</em></>
               )}
             </h2>
             <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.92)", fontSize: "13px", lineHeight: 1.6 }}>
@@ -685,7 +685,7 @@ const BlogArticlePage = () => {
               height: "52px",
               borderRadius: "50%",
               background: "var(--ink)",
-              border: "1.5px solid var(--gold)",
+              border: "1.5px solid rgba(247,244,239,0.3)",
               color: "var(--cream)",
               fontFamily: "var(--serif)",
               fontSize: "18px",
@@ -697,7 +697,7 @@ const BlogArticlePage = () => {
           </div>
           <div className="hidden sm:block self-stretch" style={{ width: "1px", background: "#E0DBD1" }} />
           <div>
-            <p className="uppercase" style={{ color: "var(--gold-text)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
+            <p className="uppercase" style={{ color: "#4A5475", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
               {isFr ? "À propos" : "About"}
             </p>
             <p className="mt-1.5" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "17px", fontWeight: 600, lineHeight: 1.2 }}>
@@ -729,7 +729,7 @@ const BlogArticlePage = () => {
                   <Link
                     to={`${blogHref}${isFr ? rp.slug : rp.slugEn}/`}
                     className="group block h-full transition-opacity hover:opacity-90"
-                    style={{ background: "#F7F5F0", padding: "18px 20px", borderLeft: "3px solid var(--gold)" }}
+                    style={{ background: "#F7F5F0", padding: "18px 20px", borderLeft: "2px solid var(--ink)" }}
                   >
                     <span className="block uppercase" style={{ color: "var(--muted)", fontSize: "10px", letterSpacing: "0.14em", marginBottom: "8px" }}>
                       {isFr ? rp.category : rp.categoryEn || rp.category}

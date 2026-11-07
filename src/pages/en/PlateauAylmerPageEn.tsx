@@ -56,7 +56,7 @@ const PlateauAylmerPageEn = () => (
       <div className="mt-7 space-y-3.5">
         {sellerReasons.map((r) => (
           <div key={r} className="flex items-center gap-3">
-            <CheckCircle2 size={16} className="shrink-0 text-accent" />
+            <CheckCircle2 size={16} className="shrink-0 text-[var(--ink-soft)]" />
             <span className="text-[0.9375rem] text-muted-foreground">{r}</span>
           </div>
         ))}

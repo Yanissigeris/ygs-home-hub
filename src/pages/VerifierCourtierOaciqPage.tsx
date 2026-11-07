@@ -81,8 +81,8 @@ const VerifierCourtierOaciqPage = () => (
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-5 py-4">
-          <Shield size={18} className="shrink-0 text-accent" />
+        <div className="mt-6 flex items-center gap-2 rounded-xl border border-border bg-muted/40 px-5 py-4">
+          <Shield size={18} className="shrink-0 text-[var(--ink-soft)]" />
           <p className="text-[0.875rem] text-muted-foreground">
             Lien officiel : <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 inline-flex items-center gap-1">oaciq.com <ExternalLink size={12} /></a>
           </p>
