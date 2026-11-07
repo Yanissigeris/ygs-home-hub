@@ -964,3 +964,35 @@ h1.hero-eyebrow {
   font-size: 16px;
 }
 
+
+/* ── Motion polish (nov. 2026) ──
+   Courbe : celle du compteur 300+ (AwardsStrip), cubic-bezier(.22,1,.36,1).
+   Animations d'une seule fois (keyframes) : rien n'est caché dans le HTML prérendu. */
+
+/* Panneau de remerciement après l'envoi d'un formulaire */
+@keyframes ygs-enter {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ygs-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.motion-enter {
+  animation: ygs-enter 350ms cubic-bezier(.22, 1, .36, 1) both;
+}
+/* Étapes numérotées : arrivent l'une après l'autre (60 ms d'écart) */
+.motion-enter-step {
+  animation: ygs-enter 350ms cubic-bezier(.22, 1, .36, 1) both;
+  animation-delay: calc(120ms + var(--i, 0) * 60ms);
+}
+
+/* Mouvement réduit : fondu doux seulement, sans déplacement.
+   (La règle globale plus haut ramène tout à 0,01 ms ; une classe l'emporte sur *.) */
+@media (prefers-reduced-motion: reduce) {
+  .motion-enter,
+  .motion-enter-step {
+    animation: ygs-fade 200ms ease both !important;
+    animation-delay: 0ms !important;
+  }
+}

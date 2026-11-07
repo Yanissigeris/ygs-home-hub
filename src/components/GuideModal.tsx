@@ -160,7 +160,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
           </DialogHeader>
 
           {submitted ? (
-            <div className="mt-8 text-center py-4">
+            <div className="mt-8 text-center py-4 motion-enter">
               <CheckCircle2 size={40} className="mx-auto text-accent" />
               <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold" style={{ fontFamily: "var(--serif)" }}>
                 {config.successTitle}
