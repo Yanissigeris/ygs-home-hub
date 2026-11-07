@@ -987,6 +987,15 @@ h1.hero-eyebrow {
   animation-delay: calc(120ms + var(--i, 0) * 60ms);
 }
 
+/* Message d'erreur sous un champ */
+@keyframes ygs-err-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+.motion-err {
+  animation: ygs-err-in 150ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
 /* Mouvement réduit : fondu doux seulement, sans déplacement.
    (La règle globale plus haut ramène tout à 0,01 ms ; une classe l'emporte sur *.) */
 @media (prefers-reduced-motion: reduce) {
@@ -994,5 +1003,8 @@ h1.hero-eyebrow {
   .motion-enter-step {
     animation: ygs-fade 200ms ease both !important;
     animation-delay: 0ms !important;
+  }
+  .motion-err {
+    animation: ygs-fade 150ms ease both !important;
   }
 }
