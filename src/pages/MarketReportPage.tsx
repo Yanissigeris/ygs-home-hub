@@ -10,6 +10,7 @@ import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import InlineCTA from "@/components/InlineCTA";
 import heroImg from "@/assets/hero-market-report.webp";
+import MedianPriceSection from "@/components/market/MedianPriceSection";
 
 const faq = [
   { q: "Comment accéder au rapport du marché?", a: "Contactez-moi pour être informé de la publication du prochain rapport. En attendant, vous pouvez demander une analyse personnalisée de votre secteur." },
@@ -36,6 +37,8 @@ const MarketReportPage = () => (
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
     />
+
+    <MedianPriceSection />
 
     <ContentBlock narrow>
       <SectionHeading

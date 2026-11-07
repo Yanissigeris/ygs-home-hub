@@ -10,6 +10,7 @@ import InlineCTA from "@/components/InlineCTA";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import heroImg from "@/assets/hero-market-report.webp";
+import MedianPriceSection from "@/components/market/MedianPriceSection";
 
 const faq = [
   { q: "How can I access the market report?", a: "Contact me for updates when the next report is published. In the meantime, you can request a personalized analysis of your area." },
@@ -36,6 +37,7 @@ const MarketReportPageEn = () => (
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
       heroBgImage={heroImg}
     />
+    <MedianPriceSection lang="en" />
     <ContentBlock narrow>
       <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
       <p className="prose-body mt-5">The next Gatineau real estate market report is being prepared. Contact me for publication updates or to discuss the market in your area now.</p>
