@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { VALUATION_FORM_ID } from "@/lib/valuationAnchor";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -233,7 +233,7 @@ const ValuationForm = ({
       <div
         role="status"
         aria-live="polite"
-        className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
+        className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8 motion-enter"
       >
         <div className="flex items-center gap-3.5">
           <img
@@ -254,7 +254,7 @@ const ValuationForm = ({
         <p className="mt-6 text-[0.9375rem] font-medium text-primary-foreground">{t.thanksLead}</p>
         <ol className="mt-4 space-y-4">
           {t.thanksSteps.map((step, i) => (
-            <li key={i} className="flex gap-4">
+            <li key={i} className="flex gap-4 motion-enter-step" style={{ "--i": i } as CSSProperties}>
               <span
                 aria-hidden="true"
                 className="shrink-0 text-primary-foreground"

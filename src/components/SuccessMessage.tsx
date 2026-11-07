@@ -18,7 +18,7 @@ const SuccessMessage = ({
       role="status"
       aria-live="polite"
       className={cn(
-        "p-10 text-center",
+        "p-10 text-center motion-enter",
         isGlass
           ? "rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)]"
           : "mt-10 card-elevated border border-accent/25 bg-accent/5",

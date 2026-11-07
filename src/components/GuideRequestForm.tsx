@@ -193,7 +193,7 @@ const GuideRequestForm = ({
             <p className="mt-1 text-[0.8125rem] text-muted-foreground">{t.formSubtitle}</p>
 
             {submitted ? (
-              <div className="mt-8 text-center py-6" role="status" aria-live="polite">
+              <div className="mt-8 text-center py-6 motion-enter" role="status" aria-live="polite">
                 <CheckCircle2 size={36} className="mx-auto text-accent" aria-hidden="true" />
                 <h4 className="mt-4 text-foreground text-[1.125rem] font-semibold">{finalSuccessTitle}</h4>
                 <p className="mt-2 text-[0.875rem] text-muted-foreground">{finalSuccessText}</p>
