@@ -93,14 +93,14 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
         {/* Status label */}
         <p
-          className={isRent ? "inline-block self-start bg-[var(--gold-dark)] text-[#F7F4EE] px-2 py-0.5 rounded-sm" : undefined}
+          className={isRent ? "inline-block self-start bg-[var(--ink)] text-[#F7F4EE] px-2 py-0.5 rounded-sm" : undefined}
           style={{
             fontFamily: "var(--sans)",
             fontSize: "10px",
             fontWeight: 500,
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: isRent ? "#F7F4EE" : "var(--gold-text)",
+            color: isRent ? "#F7F4EE" : "#4A5475",
             marginBottom: ".5rem",
           }}
         >

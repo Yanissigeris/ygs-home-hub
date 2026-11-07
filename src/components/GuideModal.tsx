@@ -145,11 +145,10 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-[480px] rounded-2xl border-border bg-card p-0 overflow-hidden">
-        <div className="h-1.5 w-full bg-accent" />
-        <div className="px-6 pt-5 pb-7 sm:px-8 sm:pt-6 sm:pb-8">
+                <div className="px-6 pt-5 pb-7 sm:px-8 sm:pt-6 sm:pb-8">
           <DialogHeader className="text-left">
             <p className="mb-2 flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/60">
-              <BookOpen size={13} className="text-accent" />
+              <BookOpen size={13} className="text-[var(--ink-soft)]" />
               {l.overline}
             </p>
             <DialogTitle className="text-[1.25rem] font-semibold text-foreground leading-tight" style={{ fontFamily: "var(--serif)" }}>

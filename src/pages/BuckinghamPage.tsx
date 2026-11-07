@@ -144,7 +144,7 @@ const BuckinghamPage = () => (
             "Au 3e trimestre 2026, le prix médian d'une unifamiliale dans le secteur Buckingham/Masson-Angers était de 395 000 $, le plus bas des quatre secteurs de la ville de Gatineau (APCIQ).",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

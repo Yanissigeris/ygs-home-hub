@@ -79,9 +79,9 @@ const PontiacPage = () => {
       {/* SECTION 1 — Précision importante */}
       <ContentBlock background="alt" padSize="md">
         <div className="max-w-[44rem] mx-auto">
-          <div className="border-l-[3px] border-accent bg-background rounded-sm px-5 py-4">
+          <div className="border-l-2 border-[var(--ink)] bg-background rounded-sm px-5 py-4">
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
-              <AlertTriangle size={14} className="inline mr-1.5 text-accent -mt-0.5" />
+              <AlertTriangle size={14} className="inline mr-1.5 text-[var(--ink-soft)] -mt-0.5" />
               <strong>À ne pas confondre</strong> : la municipalité de Pontiac (secteur Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et de la Région de la capitale nationale. Elle est distincte de la MRC Pontiac, un territoire beaucoup plus à l'ouest, non inclus dans la capitale nationale. Yanis Gauthier-Sigeris couvre la municipalité de Pontiac (Collines-de-l'Outaouais).
             </p>
           </div>
@@ -100,7 +100,7 @@ const PontiacPage = () => {
           <div className="md:col-span-2">
             <div className="border border-border rounded-lg p-6 space-y-4">
               <h3 className="font-serif text-lg text-foreground">Pontiac, faits clés</h3>
-              <div className="w-8 h-0.5 bg-accent" />
+              <div className="w-8 h-0.5 bg-[var(--ink)]" />
               <div className="space-y-4 text-[0.875rem]">
                 {[
                   { icon: MapPin, label: "Situation", value: "MRC des Collines-de-l'Outaouais · Région de la capitale nationale" },
@@ -109,7 +109,7 @@ const PontiacPage = () => {
                   { icon: TreePine, label: "Nature", value: "Parc de la Gatineau sur une partie du territoire", source: "(Source : Commission de la capitale nationale)" },
                 ].map((f) => (
                   <div key={f.label} className="flex gap-3">
-                    <f.icon size={16} className="shrink-0 text-accent mt-0.5" />
+                    <f.icon size={16} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
                     <div>
                       <div className="font-medium text-foreground">{f.label}</div>
                       <div className="text-muted-foreground">{f.value}</div>
@@ -139,7 +139,7 @@ const PontiacPage = () => {
             <div key={s.name} className="bg-background border border-border rounded-lg p-6 space-y-3">
               <h3 className="font-serif text-lg text-foreground">{s.name}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{s.text}</p>
-              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[var(--gold-text)]">{s.tag}</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#4A5475]">{s.tag}</span>
             </div>
           ))}
         </div>
@@ -155,7 +155,7 @@ const PontiacPage = () => {
             { icon: Bus, title: "Transcollines : connexion urbaine", text: "La municipalité de Pontiac est desservie par Transcollines, le service de transport en commun qui relie les municipalités des Collines-de-l'Outaouais à Gatineau, avec correspondance vers le réseau de la STO. Un lien avec la ville qui rend Pontiac plus accessible qu'on pourrait le croire pour ceux qui combinent télétravail et déplacements occasionnels. (Source : Municipalité de Pontiac / Transcollines)" },
           ].map((c) => (
             <div key={c.title} className="bg-card border border-border rounded-lg p-6 space-y-3">
-              <c.icon size={24} className="text-accent" />
+              <c.icon size={24} className="text-[var(--ink-soft)]" />
               <h3 className="font-serif text-lg text-foreground">{c.title}</h3>
               <p className="text-[0.875rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>
@@ -186,7 +186,7 @@ const PontiacPage = () => {
               "Les transactions à Pontiac sont moins fréquentes que dans les secteurs urbains, ce qui rend l'évaluation plus délicate. Un courtier qui suit ce marché de près vous aide à fixer le bon prix.",
             ].map((p) => (
               <div key={p} className="flex items-start gap-3">
-                <CheckCircle2 size={16} className="shrink-0 text-accent mt-0.5" />
+                <CheckCircle2 size={16} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
                 <span className="text-[0.9rem] text-muted-foreground">{p}</span>
               </div>
             ))}

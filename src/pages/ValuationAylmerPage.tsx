@@ -82,7 +82,7 @@ const ValuationAylmerPage = () => {
             <ul className="mt-6 space-y-2">
               {trustBullets.map((b) => (
                 <li key={b.text} className="flex items-center gap-2 text-[0.875rem] text-primary-foreground/75">
-                  <b.icon size={15} className="text-accent" />
+                  <b.icon size={15} className="text-[rgba(247,244,238,0.75)]" />
                   {b.text}
                 </li>
               ))}
@@ -101,7 +101,7 @@ const ValuationAylmerPage = () => {
             <img src={yanisPhoto} alt="Yanis Gauthier" width={56} height={56} className="h-14 w-14 rounded-full object-cover" loading="lazy" decoding="async" />
             <div>
               <p className="font-semibold text-[0.9375rem]">Yanis Gauthier-Sigeris</p>
-              <p className="text-[0.8125rem] text-muted-foreground flex items-center gap-1"><BadgeCheck size={13} className="text-accent" /> Courtier immobilier · Aylmer et Outaouais</p>
+              <p className="text-[0.8125rem] text-muted-foreground flex items-center gap-1"><BadgeCheck size={13} className="text-[var(--ink-soft)]" /> Courtier immobilier · Aylmer et Outaouais</p>
             </div>
           </motion.div>
           <BenefitsList title="Ce que vous recevez" items={benefits} />

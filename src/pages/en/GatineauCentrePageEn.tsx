@@ -124,7 +124,7 @@ const GatineauCentrePageEn = () => (
             "In Q3 2026, the median single-family price in QPAREB's Gatineau sector was $464,900, down 2% from a year earlier.",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

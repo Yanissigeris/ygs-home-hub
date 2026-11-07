@@ -52,7 +52,7 @@ const ThankYouValuationPage = () => (
         >
           {whatsNext.map((item) => (
             <div key={item.text} className="flex items-center gap-3.5 rounded-xl border border-border/40 bg-card px-5 py-4">
-              <item.icon size={18} className="text-accent shrink-0" />
+              <item.icon size={18} className="text-[var(--ink-soft)] shrink-0" />
               <span className="text-[0.9375rem] font-medium text-foreground">{item.text}</span>
             </div>
           ))}

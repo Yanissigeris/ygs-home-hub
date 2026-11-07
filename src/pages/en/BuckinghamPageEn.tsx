@@ -160,7 +160,7 @@ const BuckinghamPageEn = () => (
             "In Q3 2026, the median single-family price in the Buckingham/Masson-Angers sector was $395,000, the lowest of the four sectors of the city of Gatineau (QPAREB).",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

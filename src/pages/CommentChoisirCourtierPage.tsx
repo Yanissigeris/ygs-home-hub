@@ -77,7 +77,7 @@ const CommentChoisirCourtierPage = () => (
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.35, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             >
-              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
+              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
               <div>
                 <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
                 <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{item.text}</p>

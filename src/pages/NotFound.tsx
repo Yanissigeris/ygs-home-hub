@@ -89,7 +89,7 @@ const NotFound = () => {
           {/* Gold line */}
           <div
             className="relative z-[1] mx-auto mb-6"
-            style={{ width: 48, height: 2, background: "var(--gold)" }}
+            style={{ width: 48, height: 2, background: "var(--ink)" }}
           />
 
           {/* Heading */}
@@ -139,7 +139,7 @@ const NotFound = () => {
                   (e.currentTarget as HTMLElement).style.boxShadow = "none";
                 }}
               >
-                <l.icon width={22} height={22} style={{ color: "var(--gold)" }} />
+                <l.icon width={22} height={22} style={{ color: "var(--ink-soft)" }} />
                 <div className="mt-1 text-[.9rem] font-semibold" style={{ color: "var(--ink)" }}>
                   {l.title}
                 </div>

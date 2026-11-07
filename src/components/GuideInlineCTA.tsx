@@ -30,12 +30,11 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
         className="section-padding"
       >
         <div className="section-container max-w-[52rem]">
-          <div className="relative overflow-hidden rounded-2xl border border-accent/15 bg-gradient-to-br from-primary via-primary to-[hsl(226_80%_16%)] px-6 py-8 sm:px-10 sm:py-10">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
-            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+          <div className="relative overflow-hidden rounded-2xl border border-[rgba(247,244,238,0.12)] bg-gradient-to-br from-primary via-primary to-[hsl(226_80%_16%)] px-6 py-8 sm:px-10 sm:py-10">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <div className="flex-1">
-                <p className="flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-accent/80 mb-2">
-                  <BookOpen size={13} className="text-accent" />
+                <p className="flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-[rgba(247,244,238,0.75)] mb-2">
+                  <BookOpen size={13} className="text-[rgba(247,244,238,0.75)]" />
                   {d.overline}
                 </p>
                 <h3 className="text-[1.15rem] sm:text-[1.3rem] font-semibold text-primary-foreground leading-tight" style={{ fontFamily: "var(--serif)" }}>

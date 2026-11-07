@@ -196,7 +196,7 @@ const PlexAnalysisPageEn = () => {
                 <div className="mt-4 space-y-3.5">
                   {trustPoints.map((t) => (
                     <div key={t.text} className="flex items-center gap-3">
-                      <t.icon size={15} className="shrink-0 text-accent" />
+                      <t.icon size={15} className="shrink-0 text-[var(--ink-soft)]" />
                       <span className="text-[0.9375rem] text-muted-foreground">{t.text}</span>
                     </div>
                   ))}

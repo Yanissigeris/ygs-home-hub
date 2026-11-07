@@ -168,7 +168,7 @@ const GuideRequestForm = ({
           {/* Left: value proposition */}
           <div className="pt-2">
             <p className="mb-3 flex items-center gap-2.5 text-[0.75rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/60">
-              <BookOpen size={14} className="text-accent" aria-hidden="true" />
+              <BookOpen size={14} className="text-[var(--ink-soft)]" aria-hidden="true" />
               <span>{t.overline}</span>
             </p>
             <h2 className="text-foreground">{headline}</h2>
@@ -178,7 +178,7 @@ const GuideRequestForm = ({
             <div className="mt-6 space-y-2.5">
               {t.bullets.map((b) => (
                 <div key={b.text} className="flex items-center gap-2.5 text-[0.85rem] text-muted-foreground/70">
-                  <b.icon size={15} className="text-accent shrink-0" aria-hidden="true" />
+                  <b.icon size={15} className="text-[var(--ink-soft)] shrink-0" aria-hidden="true" />
                   <span>{b.text}</span>
                 </div>
               ))}
