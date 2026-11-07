@@ -1300,6 +1300,7 @@ I've worked with military families since 2017. I know the steps of a relocation,
     publishDate: "2025-02-20",
     updatedDate: "2026-11-06",
     published: true,
+    emitFaqSchema: true,
     body: `## Frais de notaire et frais de clôture à Gatineau
 
 Au-delà du prix d'achat et de la mise de fonds, il faut prévoir les frais de clôture. La SCHL les estime entre 1,5 % et 4 % du prix d'achat. Voici ce qu'ils comprennent à Gatineau.
@@ -1337,6 +1338,17 @@ Elle protège contre certains défauts de titre. Votre notaire peut vous dire si
 ### Mon conseil
 
 Préparez ces frais dès votre préapprobation. Avant votre première visite, je vous fais une liste des frais pour le prix que vous visez, taxe de bienvenue calculée.
+
+## FAQ
+
+Q : Qui paie les frais de notaire, l'acheteur ou le vendeur?
+R : Chacun paie sa part. C'est la promesse d'achat qui dit qui paie quoi. À défaut d'entente, l'acheteur paie les frais de la transaction au notaire qu'il a choisi. Le vendeur, lui, paie les vérifications liées à ses titres et la radiation de son hypothèque.
+
+Q : Combien coûte un notaire pour l'achat d'une maison à Gatineau?
+R : Dans mes dossiers, pour un achat standard, je vois souvent des honoraires de 1 800 $ à 2 500 $. La Chambre des notaires ne fixe aucun tarif. Le montant varie selon le notaire et la complexité du dossier.
+
+Q : Qui choisit le notaire?
+R : Le choix se fait par entente et s'inscrit dans la promesse d'achat. Le plus souvent, c'est l'acheteur qui le choisit, puisqu'il paie la transaction. Si l'acheteur doit encore un solde au vendeur après la vente, le vendeur peut choisir le notaire.
 
 **Sources** : Ville de Gatineau, base d'imposition des droits de mutation immobilière (2026). Finances Québec, bulletin d'information 2026-2. SCHL, frais liés à l'achat d'une maison.
 
@@ -1378,6 +1390,17 @@ It protects against certain title defects. Your notary can tell you whether it's
 ### My advice
 
 Plan for these costs as soon as you're pre-approved. Before your first showing, I'll give you a list of the costs for your target price, welcome tax included.
+
+## FAQ
+
+Q: Who pays the notary fees, the buyer or the seller?
+A: Each pays their share. The promise to purchase sets out who pays what. Without an agreement, the buyer pays the transaction fees to the notary they chose. The seller pays for the checks on their own titles and for discharging their mortgage.
+
+Q: How much does a notary cost to buy a house in Gatineau?
+A: In my files, for a standard purchase, I often see fees of $1,800 to $2,500. The Chambre des notaires doesn't set fees, so the amount varies with the notary and how complex the file is.
+
+Q: Who chooses the notary?
+A: It's agreed between the parties and written into the promise to purchase. Most often, the buyer chooses, since they pay for the transaction. If the buyer still owes a balance to the seller after the sale, the seller can choose the notary.
 
 **Sources**: City of Gatineau, tax base for property transfer duties (2026). Finances Québec, information bulletin 2026-2. CMHC, costs of buying a home.
 

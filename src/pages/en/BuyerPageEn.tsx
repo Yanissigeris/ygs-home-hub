@@ -40,6 +40,7 @@ const nextSteps = [
   { title: "Buyer guide", text: "The buying process in Québec explained simply, from search to notary.", href: "/en/buyer-guide/", cta: "Read the guide" },
 ];
 const faq = [
+  { q: "How do I buy a house in Gatineau?", a: "Start with a mortgage pre-approval, which sets your real budget. Then narrow it down to one or two neighbourhoods and visit homes. When a home fits, you submit a promise to purchase, often with financing and inspection conditions. Once those conditions are removed, the purchase closes at the notary." },
   { q: "Is now a good time to buy in Gatineau?", a: "It depends mostly on your situation. In Q3 2026, there were 42% more properties for sale than a year earlier in the area (QPAREB), so you have more choice. We look together at your budget and recent sales in the area you are targeting." },
   { q: "I'm from Ottawa, how does it work in Québec?", a: "In Québec, the sale is finalized at a notary. When a broker represents you, the promise to purchase uses an OACIQ form. Plan for the land transfer duties (welcome tax), billed by the municipality after the purchase. I have worked with buyers from Ontario since 2017, and I explain each step before you sign." },
   { q: "Do I need a mortgage pre-approval?", a: "Yes, it is strongly recommended. A pre-approval clarifies your budget and makes your offer more credible to the seller. It is not final approval: the lender will also review the property you choose." },

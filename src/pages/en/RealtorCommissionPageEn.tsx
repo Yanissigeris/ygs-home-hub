@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -10,21 +11,28 @@ import heroImg from "@/assets/hero-frais-courtage.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const faq = [
-  { q: "What is the typical realtor commission in Quebec?", a: "There is no fixed rate. The commission usually takes the form of a percentage of the sale price, agreed between the seller and their broker before listing. No rate is regulated. GST and QST are generally added to this amount." },
-  { q: "Is the commission regulated by the OACIQ?", a: "No. The OACIQ regulates professional conduct and ethics, but does not set commission rates. The amount is agreed in the brokerage contract." },
-  { q: "What do commission fees cover?", a: "Price evaluation, marketing, photos, showings, negotiation, coordination with the notary and follow-up on the whole transaction. The details vary from one broker to another." },
-  { q: "Are there additional costs beyond the commission?", a: "Besides the commission, the seller usually plans for an up-to-date certificate of location and mortgage discharge fees at the notary. The buyer pays the land transfer duties (welcome tax). Your broker should present these costs clearly." },
-  { q: "Who pays the commission?", a: "The seller typically pays the listing broker's commission. Buyers generally do not pay a direct commission." },
-  { q: "How can I compare commission rates fairly?", a: "Don't compare the percentage alone. Look at the whole picture: services offered, local experience, marketing strategy and past results." },
-  { q: "Is a lower commission always better?", a: "Not necessarily. What counts is your net proceeds: the price obtained minus all costs. Time on market matters too." },
-  { q: "Does commission vary by property type?", a: "Yes. A plex, a condo or a single-family home can involve different levels of complexity, which can influence the agreement." },
+  { q: "How is a realtor's commission calculated in Quebec?", a: "Most often, it's a percentage of the accepted sale price. You negotiate it with your broker and it goes into the brokerage contract, then taxes are added. A fixed amount or another method is also possible." },
+  { q: "Is the commission rate regulated in Quebec?", a: "No. Quebec law doesn't set a rate, and neither does the OACIQ. The percentage is negotiated between you and your broker." },
+  { q: "Does the percentage apply to the asking price?", a: "No. It applies to the price in the promise to purchase you accept. If you list at $500,000 and accept $495,000, the calculation is based on $495,000." },
+  { q: "How much tax is added to the commission?", a: "GST at 5% and QST at 9.975%, so 14.975% of the commission amount. On a $10,000 commission, that comes to $1,497.50 in taxes." },
+  { q: "When is the commission paid?", a: "It's paid after the deed of sale is signed, out of the sale proceeds. The right to the commission starts earlier, once an accepted promise to purchase has all its conditions met." },
+  { q: "Do I owe the commission if I refuse an offer?", a: "Yes, if the offer meets the sale conditions set out in your brokerage contract. It's one of the four cases in clause 7.1 of the OACIQ contract." },
+  { q: "What if I sell after my brokerage contract ends?", a: "The commission can be owed if you sell within 180 days to someone who showed interest in the property during the contract. It isn't owed if you signed an exclusive contract with another broker in good faith." },
+  { q: "Is the commission shared with the buyer's broker?", a: "Yes. When the buyer has a broker, the seller's broker shares the remuneration with them." },
+];
+
+const cases = [
+  { title: "A promise to purchase is accepted", text: "During the contract, an agreement to sell is reached and all its conditions are met. Only the deed of sale is left to sign." },
+  { title: "You refuse a matching offer", text: "A promise to purchase meets the sale conditions in your contract, but you turn it down." },
+  { title: "You sell after the contract ends", text: "Within 180 days after the contract ends, you sell to someone who showed interest in the property during the contract. This doesn't apply if you signed an exclusive contract with another broker in good faith." },
+  { title: "You block the sale", text: "For example, you prevent showings or can't be reached to receive an offer." },
 ];
 
 const RealtorCommissionPageEn = () => (
   <>
     <PageMeta
-      title="Realtor Commission in Quebec · Guide"
-      description="Understand realtor commission fees in Quebec: how they work, what's included, and what it means for selling your home in Gatineau." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
+      title="Realtor Commission in Quebec: Calculation and Taxes"
+      description="How a realtor's commission is calculated in Quebec: which price the percentage applies to and when it's owed, with a worked tax example." ogImage="https://yanisgauthier.com/og/og-guides.jpg" />
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
@@ -34,62 +42,79 @@ const RealtorCommissionPageEn = () => (
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <h1 className="text-primary-foreground">Realtor commission in Quebec</h1>
+          <h1 className="text-primary-foreground">Realtor commission in Quebec: how it's calculated</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            How much does a broker cost? What services are included? This guide explains brokerage fees in Quebec in clear terms.
+            Which price the percentage applies to and when the commission becomes owed, based on the OACIQ brokerage contract.
           </p>
         </motion.div>
       </div>
     </section>
 
     <ContentBlock narrow>
-      <SectionHeading overline="Understanding" title="How is the commission calculated?" />
+      <SectionHeading overline="The calculation" title="Which price does the percentage apply to?" />
       <p className="prose-body mt-5">
-        In Quebec, the broker's compensation is agreed upon <strong>before listing</strong> in the brokerage contract. It's typically a percentage of the final sale price. The OACIQ imposes no rate scale. GST (5%) and QST (9.975%) are generally added to the compensation.
+        In Quebec, no law sets the broker's commission, and neither does the OACIQ. You negotiate it with your broker, and it goes into the brokerage contract before the listing. Most often, it's a percentage of the sale price.
       </p>
       <p className="prose-body mt-4">
-        This fee usually covers the broker's services: market value analysis, pricing strategy, photography, marketing, showings, negotiation, and coordination through to the notary signing.
+        That percentage applies to the <strong>price you accept</strong>, not the asking price. The OACIQ gives this example: for a home listed at $500,000 and sold for $495,000, the commission is based on $495,000.
+      </p>
+      <p className="prose-body mt-4">
+        Other formulas exist. The contract can set a fixed amount, whatever the sale price. An hourly rate or another method goes in an annex to the contract, called Annex RC.
       </p>
     </ContentBlock>
 
     <ContentBlock narrow background="alt">
-      <SectionHeading overline="In practice" title="Other costs to expect" />
+      <SectionHeading overline="Taxes" title="How much do GST and QST add?" />
       <p className="prose-body mt-5">
-        Beyond the commission, a real estate sale involves other costs: certificate of location, mortgage discharge at the notary and, in some cases, tax adjustments. A good broker presents <strong>the complete cost picture</strong> from day one to avoid surprises.
+        The commission is taxable. GST (5%) and QST (9.975%) are added to the agreed amount, for 14.975% more.
       </p>
-      <p className="prose-body mt-4">
-        Your broker should also help you calculate your <strong>net proceeds</strong>, what remains in your pocket after all costs. That's the number that counts for an informed decision.
+      <div className="mt-5 rounded-xl border border-border/40 bg-card p-5">
+        <p className="text-[0.9375rem] font-semibold">Worked example</p>
+        <p className="mt-2 text-[0.9375rem] leading-[1.6]">
+          On a $10,000 commission, GST comes to $500 and QST to $997.50. The total paid is $11,497.50.
+        </p>
+        <p className="mt-2 text-[0.8125rem] leading-[1.6] text-muted-foreground">
+          This amount only shows how the taxes work. Your actual commission depends on your agreement with your broker.
+        </p>
+      </div>
+      <p className="prose-body mt-5">
+        Check whether the contract states the amount before or after taxes. To see what selling will cost you in total, with the seller's other costs, read{" "}
+        <Link to="/en/how-much-does-a-realtor-cost-in-quebec/" className="underline underline-offset-2">how much a realtor costs in Quebec</Link>.
       </p>
     </ContentBlock>
 
-    <InlineCTA
-      text="First step: find out your property's market value. It's free."
-      buttonLabel="Free Home Valuation →"
-      href="/en/home-valuation/"
-    />
-
     <ContentBlock narrow>
-      <SectionHeading overline="Tips" title="How to evaluate if fees are fair" />
+      <SectionHeading overline="Payment rules" title="When does the commission become owed?" />
+      <p className="prose-body mt-5">
+        The OACIQ exclusive brokerage contract sets out four situations, in clause 7.1.
+      </p>
       <div className="mt-5 space-y-3">
-        {[
-          { title: "Compare the services", text: "Photos, virtual tour, targeted advertising, floor plans: look at what the percentage includes." },
-          { title: "Check local experience", text: "A broker who knows Gatineau and the Outaouais backs the price with comparable sales from the area." },
-          { title: "Ask for net proceeds", text: "A transparent broker will show you the complete calculation before you sign." },
-          { title: "Evaluate the strategy", text: "Ask how the broker plans to set the price and defend it in negotiation." },
-        ].map((item) => (
+        {cases.map((item) => (
           <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
             <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
             <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{item.text}</p>
           </div>
         ))}
       </div>
+      <p className="prose-body mt-5">
+        In practice, the commission is paid after the deed of sale is signed at the notary, out of the sale proceeds. If the buyer has their own broker, the seller's broker shares the remuneration with them.
+      </p>
+      <p className="text-[0.8125rem] text-muted-foreground pt-3">
+        Source: OACIQ, remuneration payable by the seller (exclusive brokerage contract, sale).
+      </p>
     </ContentBlock>
+
+    <InlineCTA
+      text="If you'd like, I can prepare an estimate of what you'd have left in your pocket after the sale."
+      buttonLabel="Ask for an estimate →"
+      href="/en/contact/"
+    />
 
     <RelatedPages
       overline="Keep reading"
       title="Related pages"
       pages={[
-        { title: "How much does a realtor cost?", text: "Complete guide on compensation.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
+        { title: "How much does a realtor cost?", text: "To sell or to buy, and what you keep.", href: "/en/how-much-does-a-realtor-cost-in-quebec/" },
         { title: "Realtor vs selling by owner", text: "Advantages and risks compared.", href: "/en/realtor-vs-selling-by-owner-quebec/" },
         { title: "How to choose a realtor", text: "The criteria to compare.", href: "/en/how-to-choose-a-realtor/" },
         { title: "Free Home Valuation", text: "How much is your property worth?", href: "/en/home-valuation/" },

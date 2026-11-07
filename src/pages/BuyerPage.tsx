@@ -55,6 +55,7 @@ const nextSteps = [
 ];
 
 const faq = [
+  { q: "Comment acheter une maison à Gatineau?", a: "Commencez par une préapprobation hypothécaire, qui fixe votre budget réel. Ciblez ensuite un ou deux secteurs, puis visitez. Quand une maison vous convient, vous déposez une promesse d'achat, souvent avec des conditions de financement et d'inspection. Une fois ces conditions levées, l'achat se conclut chez le notaire." },
   { q: "Est-ce le bon moment pour acheter à Gatineau?", a: "Ça dépend surtout de votre situation. Au 3e trimestre 2026, il y avait 42 % plus de propriétés à vendre qu'un an plus tôt dans la région (APCIQ), donc plus de choix pour vous. On regarde ensemble votre budget et les ventes récentes du secteur visé." },
   { q: "Je viens d'Ottawa, comment ça fonctionne au Québec?", a: "Au Québec, la vente se conclut chez un notaire. Quand un courtier vous représente, la promesse d'achat se fait sur un formulaire de l'OACIQ. Prévoyez aussi les droits de mutation (taxe de bienvenue), facturés par la municipalité après l'achat. J'accompagne des acheteurs de l'Ontario depuis 2017 et je vous explique chaque étape avant que vous signiez." },
   { q: "Dois-je obtenir une préapprobation hypothécaire?", a: "Oui, c'est fortement recommandé. La préapprobation clarifie votre budget et rend votre offre plus crédible aux yeux du vendeur. Ce n'est pas une approbation finale : le prêteur analysera aussi la propriété choisie." },
