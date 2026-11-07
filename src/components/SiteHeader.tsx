@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback, lazy, Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { onValuationCtaClick } from "@/lib/valuationAnchor";
 
 // Heavy framer-motion drawer is split out — only loaded when the user opens
 // the mobile menu. Saves ~128 KB / 42 KB gz from the initial bundle.
@@ -379,6 +380,7 @@ const SiteHeader = () => {
         <div className="ml-4 shrink-0 xl:ml-5">
           <Link
             to={ctaHref}
+            onClick={onValuationCtaClick}
             className="inline-flex items-center justify-center whitespace-nowrap"
             style={{
               height: 40,
@@ -418,6 +420,7 @@ const SiteHeader = () => {
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <Link
             to={ctaHref}
+            onClick={onValuationCtaClick}
             className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
@@ -476,6 +479,7 @@ const SiteHeader = () => {
           </button>
           <Link
             to={ctaHref}
+            onClick={onValuationCtaClick}
             className="hidden md:inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
             style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}

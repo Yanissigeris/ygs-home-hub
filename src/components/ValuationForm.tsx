@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { VALUATION_FORM_ID } from "@/lib/valuationAnchor";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -298,7 +299,7 @@ const ValuationForm = ({
         </div>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className={cn(isGlass ? "mt-6 space-y-4" : "space-y-4")}>
+      <form id={isGlass ? VALUATION_FORM_ID : undefined} onSubmit={handleSubmit(onSubmit)} noValidate className={cn(isGlass ? "mt-6 space-y-4" : "space-y-4")}>
         <div
           className={cn(
             "flex items-center gap-2 text-[0.8125rem]",
