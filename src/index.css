@@ -521,6 +521,15 @@
     line-height: 1.08;
   }
 
+  /* Hiérarchie mobile : le H1 reste nettement plus grand que les titres de section */
+  h2 {
+    font-size: clamp(1.5rem, 6.6vw, 1.75rem);
+    line-height: 1.15;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
   /* Footer tap targets mobile */
   footer a {
     display: inline-flex;

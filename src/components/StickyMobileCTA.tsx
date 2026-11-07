@@ -98,7 +98,7 @@ const StickyMobileCTA = () => {
         transform: visible ? "translateY(0)" : "translateY(100%)",
         transition: "transform .35s cubic-bezier(.22,.61,.36,1)",
         background: "var(--ink)",
-        borderTop: "2px solid var(--gold)",
+        borderTop: "1px solid rgba(255,255,255,.12)",
         boxShadow: "0 -4px 30px rgba(0,0,0,.25)",
         padding: "0.85rem 1.25rem",
         paddingBottom: "calc(0.85rem + env(safe-area-inset-bottom))",

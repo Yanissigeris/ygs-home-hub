@@ -684,7 +684,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 <p
                   className="hero-eyebrow hero-fade-in mb-5 sm:mb-8 uppercase font-semibold hidden md:block"
                   style={{
-                    color: "var(--gold2)",
+                    color: "var(--text-on-dark-muted)",
                     fontFamily: "var(--sans)",
                     fontSize: ".72rem",
                     letterSpacing: ".22em",
@@ -744,7 +744,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     {sansTitle
                       ? title.split(/(Outaouais)/).map((part, i) =>
                           part === "Outaouais" ? (
-                            <span key={i} style={{ color: "var(--action)" }}>{part}</span>
+                            <span key={i}>{part}</span>
                           ) : (
                             <React.Fragment key={i}>{part}</React.Fragment>
                           )

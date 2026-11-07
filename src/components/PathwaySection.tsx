@@ -17,21 +17,21 @@ interface Pathway {
 const pathwaysFr: Pathway[] = [
   {
     num: "01",
-    title: "Plex & investissement",
-    text: "Les loyers et la valeur marchande, chiffrés avant que vous preniez une décision.",
-    cta: "Demander une analyse plex",
-    href: "/analyse-plex-gatineau/",
-    badge: "Priorité investisseurs",
-    intent: "investir",
-  },
-  {
-    num: "02",
     title: "Vendre ma propriété en Outaouais",
     text: "Un prix appuyé sur les ventes de votre secteur, puis une mise en marché pensée pour les bons acheteurs.",
     cta: "Obtenir mon évaluation",
     href: "/evaluation-gratuite-gatineau/",
     badge: null,
     intent: "vendre",
+  },
+  {
+    num: "02",
+    title: "Plex & investissement",
+    text: "Les loyers et la valeur marchande, chiffrés avant que vous preniez une décision.",
+    cta: "Demander une analyse plex",
+    href: "/analyse-plex-gatineau/",
+    badge: null,
+    intent: "investir",
   },
   {
     num: "03",
@@ -47,21 +47,21 @@ const pathwaysFr: Pathway[] = [
 const pathwaysEn: Pathway[] = [
   {
     num: "01",
-    title: "Plex & Investment",
-    text: "Rents and market value, in numbers, before you make a decision.",
-    cta: "Request a plex analysis",
-    href: "/en/plex-analysis/",
-    badge: "Investors first",
-    intent: "investir",
-  },
-  {
-    num: "02",
     title: "Sell my property",
     text: "A price backed by sales in your area, then marketing aimed at the right buyers.",
     cta: "Get my valuation",
     href: "/en/home-valuation/",
     badge: null,
     intent: "vendre",
+  },
+  {
+    num: "02",
+    title: "Plex & Investment",
+    text: "Rents and market value, in numbers, before you make a decision.",
+    cta: "Request a plex analysis",
+    href: "/en/plex-analysis/",
+    badge: null,
+    intent: "investir",
   },
   {
     num: "03",
@@ -174,7 +174,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
           <div className="max-w-[580px]">
             <h2 style={{ color: "var(--ink)" }}>
               {heading.titleFirst}{" "}
-              <span style={{ color: "var(--gold-dark)", fontStyle: "normal" }}>
+              <span style={{ color: "var(--ink)", fontStyle: "normal" }}>
                 {heading.titleAccent}
               </span>
             </h2>
@@ -196,8 +196,6 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
               background: "linear-gradient(175deg, var(--ink-deep), var(--ink))",
             }}
           >
-            {/* Gold top filet */}
-            <div aria-hidden="true" style={{ height: 2, background: "var(--gold)" }} />
 
           <div
             className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px overflow-hidden"
@@ -258,7 +256,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   style={{
                     fontFamily: "var(--serif)",
                     fontStyle: "normal",
-                    fontSize: "clamp(1rem, 1.5vw, 1.08rem)",
+                    fontSize: "clamp(1.25rem, 1.6vw, 1.375rem)",
                     fontWeight: 600,
                     color: "var(--cream-deep)",
                     letterSpacing: "-.01em",
@@ -270,8 +268,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                 <p
                   className="flex-1"
                   style={{
-                    fontSize: "0.8rem",
-                    color: "rgba(245,241,234,0.72)",
+                    fontSize: "0.9375rem",
+                    color: "rgba(245,241,234,0.78)",
                     lineHeight: 1.55,
                   }}
                 >
@@ -293,7 +291,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                     alignItems: "center",
                   }}
                 >
-                  {p.cta} →
+                  {p.cta}{"\u00A0"}→
                 </span>
               </Link>
             ))}

@@ -52,6 +52,7 @@ const T = {
     errMessageMax: "Maximum 500 caractères.",
     trustAlt: "Yanis Gauthier-Sigeris, courtier immobilier",
     trustTransactions: "300+ transactions",
+    receive: "Vous recevez une fourchette de valeur et trois prix d'affichage.",
   },
   en: {
     confidential: "Confidential, no obligation",
@@ -83,6 +84,7 @@ const T = {
     errMessageMax: "Maximum 500 characters.",
     trustAlt: "Yanis Gauthier-Sigeris, real estate broker",
     trustTransactions: "300+ transactions",
+    receive: "You'll receive a value range and three listing prices.",
   },
 } as const;
 
@@ -475,6 +477,12 @@ const ValuationForm = ({
               <ErrorLine id="message-err" msg={errors.message?.message} />
             </div>
           </>
+        )}
+
+        {isGlass && (
+          <p className="sm:hidden text-[0.9375rem] font-medium leading-snug text-primary-foreground">
+            {t.receive}
+          </p>
         )}
 
         <Button

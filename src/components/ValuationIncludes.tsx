@@ -52,23 +52,23 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
             </div>
 
             {/* Widget fourchette de valeur (statique, illustratif) */}
-            <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[var(--gold)]/30 shadow-sm">
+            <div className="bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[rgba(247,244,238,0.15)] shadow-sm">
               <div className="flex items-center justify-between gap-3">
                 <p
-                  className="text-[11px] uppercase tracking-[0.14em] text-[var(--gold)]"
+                  className="text-[11px] uppercase tracking-[0.14em] text-[rgba(247,244,238,0.8)]"
                   style={{ fontFamily: "var(--sans)" }}
                 >
                   {t.preview}
                 </p>
                 <span
-                  className="text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[var(--gold)]/40 text-[var(--cream)]/70"
+                  className="text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.8)]"
                   style={{ fontFamily: "var(--sans)" }}
                 >
                   {t.example}
                 </span>
               </div>
               <p
-                className="mt-2 text-[var(--cream)]/85 text-[0.9375rem]"
+                className="mt-2 text-[rgba(247,244,238,0.85)] text-[0.9375rem]"
                 style={{ fontFamily: "var(--sans)" }}
               >
                 {t.sub}
@@ -76,32 +76,32 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
 
               <div className="relative mt-10 mb-2">
                 {/* ligne reliant les 3 dots */}
-                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(51,102,255, 0.5)" }} aria-hidden="true" />
+                <div className="absolute left-[6%] right-[6%] top-[5px] h-px" style={{ backgroundColor: "rgba(247,244,238, 0.25)" }} aria-hidden="true" />
                 <div className="relative grid grid-cols-3 gap-2">
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(247,244,238, 0.45)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[0]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.low}
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-3 h-3 rounded-full bg-[var(--gold)] -mt-0.5" aria-hidden="true" />
-                    <span className="mt-4 text-[var(--gold)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.1rem, 4.5vw, 1.6rem)", fontWeight: 600, lineHeight: 1.1 }}>
+                    <span className="block w-3 h-3 rounded-full bg-[var(--cream)] -mt-0.5" aria-hidden="true" />
+                    <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 4.8vw, 1.75rem)", fontWeight: 700, lineHeight: 1.1 }}>
                       {t.amounts[1]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.mid}
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(51,102,255, 0.4)" }} aria-hidden="true" />
+                    <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: "rgba(247,244,238, 0.45)" }} aria-hidden="true" />
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[2]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[var(--cream)]/70" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.high}
                     </span>
                   </div>
@@ -109,7 +109,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
               </div>
 
               <p
-                className="mt-8 text-[12px] leading-[1.5] text-[var(--cream)]/60"
+                className="mt-8 text-[12px] leading-[1.5] text-[rgba(247,244,238,0.6)]"
                 style={{ fontFamily: "var(--sans)" }}
               >
                 {t.foot}
@@ -119,6 +119,44 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
         </div>
       </section>
     </>
+  );
+};
+
+/**
+ * Compact three-price preview for the valuation hero (desktop and tablet).
+ * Same approved copy and fictional amounts as the full widget above, shown
+ * before the form so sellers see what they receive before they commit.
+ */
+export const ValuationHeroPreview = ({ lang, className = "" }: { lang: Lang; className?: string }) => {
+  const t = copy[lang];
+  const cols = [
+    { amount: t.amounts[0], label: t.low, main: false },
+    { amount: t.amounts[1], label: t.mid, main: true },
+    { amount: t.amounts[2], label: t.high, main: false },
+  ];
+  return (
+    <figure
+      className={`max-w-[30rem] rounded-lg border border-[rgba(247,244,238,0.15)] bg-[rgba(0,14,53,0.7)] p-5 md:p-6 ${className}`}
+      style={{ fontFamily: "var(--sans)" }}
+    >
+      <figcaption className="text-[0.9375rem] font-semibold leading-snug text-[var(--cream)]">
+        {t.sub}
+      </figcaption>
+      <dl className="mt-5 grid grid-cols-3 gap-3 border-t border-[rgba(247,244,238,0.15)] pt-4">
+        {cols.map((c) => (
+          <div key={c.label} className="flex flex-col-reverse">
+            <dt className="mt-1.5 text-[0.75rem] leading-tight text-[rgba(247,244,238,0.75)]">{c.label}</dt>
+            <dd
+              className="whitespace-nowrap text-[var(--cream)]"
+              style={{ fontSize: c.main ? "1.375rem" : "1.0625rem", fontWeight: c.main ? 700 : 500, lineHeight: 1.1, letterSpacing: "-0.01em", fontVariantNumeric: "tabular-nums" }}
+            >
+              {c.amount}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <p className="mt-4 text-[0.75rem] leading-[1.5] text-[rgba(247,244,238,0.7)]">{t.foot}</p>
+    </figure>
   );
 };
 
