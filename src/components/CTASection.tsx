@@ -89,7 +89,8 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
           <div className="mt-4 md:hidden">
             <a
               href="tel:+18192103044"
-              style={{ color: "rgba(255,255,255,.65)", fontSize: ".78rem" }}
+              className="inline-flex min-h-[44px] items-center px-3"
+              style={{ color: "rgba(255,255,255,.75)", fontSize: ".84rem" }}
               onClick={() => trackContactTap({ channel: "phone", location: "inline", destination: "+18192103044" })}
             >
               📞 819-210-3044

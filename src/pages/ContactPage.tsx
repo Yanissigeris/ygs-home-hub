@@ -113,7 +113,7 @@ const ContactPage = () => {
           Comme investisseur, j'ai rénové et revendu des propriétés, et j'ai une AEC en gestion de projet. Quand vous regardez un plex ou une maison à rénover, je sais lire les loyers et estimer les travaux.
         </p>
         <p className="prose-body mt-4">
-          Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Temple de la renommée (2024).
+          Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Hall of Fame (2024).
         </p>
         <p className="prose-body mt-4">
           Je détiens un permis de courtier immobilier résidentiel de l'OACIQ (n° 112201). Je travaille en français et en anglais, surtout à Aylmer, Hull, au Plateau, à Gatineau-centre, à Chelsea et à Cantley.

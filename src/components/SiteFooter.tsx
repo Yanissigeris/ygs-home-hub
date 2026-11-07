@@ -39,7 +39,7 @@ const affiliationLogos: AffiliationLogo[] = [
     ),
   },
   { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[22px]" },
-  { src: logoTemple, alt: "Temple de la renommée RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
+  { src: logoTemple, alt: "Hall of Fame RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-[1.4]" },
 ];
@@ -78,7 +78,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
                 to={l.href}
                 tabIndex={open ? 0 : -1}
                 style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }}
-                className="transition-colors duration-200 hover:text-white/80"
+                className="inline-flex min-h-[44px] min-w-[44px] items-center transition-colors duration-200 hover:text-white/80"
               >
                 {l.label}
               </Link>
@@ -163,7 +163,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   rel="noopener noreferrer"
                   aria-label={label}
                   className="flex items-center justify-center rounded-full transition-colors duration-200"
-                  style={{ width: 36, height: 36, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.65)" }}
+                  style={{ width: 44, height: 44, border: "1px solid rgba(255,255,255,.1)", color: "rgba(255,255,255,.65)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.35)"; e.currentTarget.style.color = "var(--white)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,.1)"; e.currentTarget.style.color = "rgba(255,255,255,.65)"; }}
                 >

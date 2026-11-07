@@ -149,9 +149,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
 
         {/* View link */}
         <span className="mt-auto inline-flex items-center gap-1.5" style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 500, color: "var(--gold-text)" }}>
-          {p.status === "sold"
-            ? (lang === "fr" ? "Voir la fiche" : "View listing")
-            : strings.viewProperty}{" "}
+          {strings.viewProperty}{" "}
           <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1" aria-hidden>→</span>
         </span>
       </div>

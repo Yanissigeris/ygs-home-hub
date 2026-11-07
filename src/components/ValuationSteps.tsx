@@ -75,7 +75,7 @@ const ValuationSteps = ({ lang }: { lang: Lang }) => {
               <span
                 aria-hidden="true"
                 className="row-span-2 text-[var(--ink)]"
-                style={{ fontFamily: "var(--serif)", fontSize: "2rem", lineHeight: 1 }}
+                style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.5rem, 6vw, 2rem)", lineHeight: 1 }}
               >
                 {i + 1}
               </span>
