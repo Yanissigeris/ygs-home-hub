@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -14,7 +15,6 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
-import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
@@ -87,12 +87,12 @@ const SellerPageEn = () => (
     <ProcessSteps steps={steps} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the seller guide." text="Everything you need to know to sell at the right price in Gatineau, in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <StickyGuideBanner lang="en" guideType="seller_guide" label="Free Seller Guide, get it by email" />
     <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
     <CTASection dark title="Want to know what to do in your situation?" text="A free valuation or a seller plan, depending on where you are." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Get my seller plan", href: "/en/seller-plan/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
     <FAQSection items={faq} />
+    <StickyMobileCTA forceIntent="vendre" />
   </>
 );
 

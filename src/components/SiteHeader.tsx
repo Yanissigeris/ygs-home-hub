@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback, lazy, Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { installValuationAnchor } from "@/lib/valuationAnchor";
 
 // Heavy framer-motion drawer is split out — only loaded when the user opens
 // the mobile menu. Saves ~128 KB / 42 KB gz from the initial bundle.
@@ -250,6 +251,7 @@ const SiteHeader = () => {
   // Header is permanently transparent; no dark-hero detection needed.
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
+  useEffect(() => installValuationAnchor(), []);
   const closeMenu = useCallback(() => setOpen(false), []);
 
   // All breakpoints, all routes: switch from transparent → solid dark blur after 80px scroll.

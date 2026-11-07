@@ -30,7 +30,8 @@ const CTA_BY_INTENT: Record<"fr" | "en", Record<AvatarIntent | "default", CtaCon
   },
 };
 
-const StickyMobileCTA = () => {
+/** forceIntent : sur une page dont l'intention est connue (ex. page vendeur), ignore le témoin d'intention. */
+const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) => {
   const lang = useLanguage();
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
@@ -58,7 +59,7 @@ const StickyMobileCTA = () => {
 
   const hidden = HIDDEN_PATHS.some((p) => pathname === p || pathname === p + "/");
 
-  const cta = CTA_BY_INTENT[lang][intent ?? "default"];
+  const cta = CTA_BY_INTENT[lang][forceIntent ?? intent ?? "default"];
   const ctaLabel = cta.label;
   const ctaHref = cta.href;
   const callLabel = lang === "en" ? "📞 Call" : "📞 Appeler";

@@ -31,7 +31,7 @@ const benefits = [
 
 
 const afterSteps = [
-  { title: "Plan vendeur", text: "Pour aller plus loin, recevez un plan complet : prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan", highlight: true },
+  { title: "Plan vendeur", text: "Pour aller plus loin, recevez un plan complet : prix, préparation, mise en marché et calendrier.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
   { title: "Parler à Yanis", text: "Discuter de votre situation et de vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 

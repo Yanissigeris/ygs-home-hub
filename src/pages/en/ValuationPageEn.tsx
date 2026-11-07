@@ -17,7 +17,7 @@ import heroImg from "@/assets/hero-valuation-pro.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
 const benefits = ["Realistic value range based on recent sales in your Gatineau neighbourhood","Advice on price positioning adapted to your Outaouais area","Your property's strengths to highlight for local and Ottawa buyers","Issues to address, and which ones are worth it in your market","Possible next steps, no commitment"];
-const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan", highlight: true },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
+const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan" },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 
 const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
