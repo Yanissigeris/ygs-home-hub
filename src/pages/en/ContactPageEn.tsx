@@ -71,8 +71,8 @@ const ContactPageEn = () => {
   };
   return (
     <>
-      <PageMeta title="Contact | Real Estate Broker Gatineau" description="Get in touch with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation — let's talk about your project." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
-    <ServiceJsonLd name="Free Real Estate Consultation — Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
+      <PageMeta title="Contact | Real Estate Broker Gatineau" description="Get in touch with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation: let's talk about your project." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
+    <ServiceJsonLd name="Free Real Estate Consultation, Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
       <HeroSection compact overline="Yanis Gauthier-Sigeris" title="Yanis Gauthier-Sigeris" subtitle="Real estate broker in Gatineau and the Outaouais since 2017. Thinking it over or ready to move, I can help you see more clearly." primaryCta={{ label: "Send a text message", href: "sms:+18192103044?body=Hello%20Yanis%2C%20I%27d%20like%20to%20discuss%20my%20real%20estate%20project%20in%20Outaouais." }} secondaryCta={{ label: "Free Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
 <ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS" affiliationSlot={<RemaxAgencyBlock lang="en" />}>
         <p className="prose-body mt-6">I've been a residential real estate broker since 2017, with more than 300 transactions in the Outaouais, mostly in Aylmer and Hull. I work with sellers and buyers as much as with investors, and I've worked with military families since 2017.</p>
@@ -114,7 +114,7 @@ const ContactPageEn = () => {
       </ProfileSection>
       <CardGrid overline="Services" title="How I can help" items={services} background="alt" />
       <FormSection id="contact-form" title="Tell me where you are">
-        {submitted ? <SuccessMessage title="Thank you! Message sent." text="I'll get back to you shortly." /> : (
+        {submitted ? <SuccessMessage title="Thank you, message sent." text="I'll get back to you shortly." /> : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-5">
             <div><Label htmlFor="objective">I want to…</Label><Select name="objective"><SelectTrigger id="objective" className="mt-1.5"><SelectValue placeholder="Select" /></SelectTrigger><SelectContent><SelectItem value="sell">Sell</SelectItem><SelectItem value="buy">Buy</SelectItem><SelectItem value="invest">Invest</SelectItem><SelectItem value="info">Get information</SelectItem></SelectContent></Select></div>
             <div className="grid gap-5 sm:grid-cols-2"><div><Label htmlFor="name">Name</Label><Input id="name" name="name" className="mt-1.5" required /></div><div><Label htmlFor="email">Email</Label><Input id="email" name="email" type="email" className="mt-1.5" required aria-describedby="email-help" /><p id="email-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format: you@example.com</p></div></div>

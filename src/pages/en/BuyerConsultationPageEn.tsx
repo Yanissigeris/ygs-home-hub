@@ -105,7 +105,7 @@ const BuyerConsultationPageEn = () => {
 
                 {submitted ? (
                   <SuccessMessage
-                    title="Thank you! Request sent."
+                    title="Thank you, request sent."
                     text="I'll get back to you with a personalized response."
                   />
                 ) : (

@@ -78,7 +78,7 @@ const BuyerGuidePageEn = () => (
       headline="Get your free buyer guide"
       subtitle="A clear, step-by-step guide to buying in Gatineau. I'll send it to you by email."
       submitLabel="Get the Buyer Guide"
-      successTitle="Thank you! Your guide is on its way."
+      successTitle="Thank you, your guide is on its way."
       successText="Check your inbox. The buyer guide should arrive shortly."
     />
 

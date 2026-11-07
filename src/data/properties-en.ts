@@ -28,7 +28,7 @@ export const propertiesEn: Property[] = [
     area: "2 157 sq ft",
     yearBuilt: "1999",
     description:
-      "Rare detached triplex with garage in the Plateau de la Capitale, steps from Gatineau Park. 3 units of 2 bedrooms each with bathroom and laundry. Private backyard with no rear neighbours. Current rents below market — strong optimization potential.",
+      "Rare detached triplex with garage in the Plateau de la Capitale, steps from Gatineau Park. 3 units of 2 bedrooms each with bathroom and laundry. Private backyard with no rear neighbours. Current rents below market, strong optimization potential.",
     image: property11366995,
     remaxUrl:
       "https://www.remax-quebec.com/fr/proprietes/triplex-a-vendre/7-rue-du-chinook-gatineau-hull-plateau-de-la-capitale-11366995",
@@ -80,7 +80,7 @@ export const propertiesEn: Property[] = [
     address: "310 Boul. d'Europe, apt. 6",
     city: "Gatineau (Aylmer, Plateau de la Capitale)",
     price: "$1,975/month",
-    type: "Condo — Apartment (for rent)",
+    type: "Condo, apartment (for rent)",
     bedrooms: "2",
     bathrooms: "1",
     area: "1,240 sq ft",
@@ -161,7 +161,7 @@ export const propertiesEn: Property[] = [
     area: "7,248 sq ft (lot)",
     yearBuilt: "1968",
     description:
-      "Rare investment opportunity. 2025 certified appraisal in hand ($1.15M). Potential income of $64,140/year with two 3-bedroom upper units and two 1-bedroom basement units — fully rebuilt in 2024-2025 (framing, electrical, plumbing, finishes, Energy Star windows). PVC under-slab plumbing, air exchanger, upgraded electrical service with individual meters outside. Natural gas hot-water heating. Detached double garage, 9 parking spots. Quiet corner street, walking distance to shops, schools and transit.",
+      "Rare investment opportunity. 2025 certified appraisal in hand ($1.15M). Potential income of $64,140/year with two 3-bedroom upper units and two 1-bedroom basement units, fully rebuilt in 2024-2025 (framing, electrical, plumbing, finishes, Energy Star windows). PVC under-slab plumbing, air exchanger, upgraded electrical service with individual meters outside. Natural gas hot-water heating. Detached double garage, 9 parking spots. Quiet corner street, walking distance to shops, schools and transit.",
     image: property19326119,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/71-rue-lessard/19326119",
@@ -220,7 +220,7 @@ export const propertiesEn: Property[] = [
     lotSize: "5,000 sq ft",
     yearBuilt: "1974",
     description:
-      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom — ideal for an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
+      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
     image: property22864394,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
@@ -296,7 +296,7 @@ export const propertiesEn: Property[] = [
     area: "1.7 acres (6,884.7 m²)",
     lotSize: "1.7 acres",
     description:
-      "Beautiful 1.7-acre wooded lot (6,884.7 m²) with potential views of Lake Newcombe. A rare find: acquired rights and access are confirmed in writing by the Municipality, letter on file, and the lot benefits from a notarized, perpetual right of way from Chemin du Fort, on foot and by vehicle. Set back from the road, about 30 minutes from Gatineau, it offers a peaceful, private setting surrounded by nature — ideal for your building project. Electricity available at the road.",
+      "Beautiful 1.7-acre wooded lot (6,884.7 m²) with potential views of Lake Newcombe. A rare find: acquired rights and access are confirmed in writing by the Municipality, letter on file, and the lot benefits from a notarized, perpetual right of way from Chemin du Fort, on foot and by vehicle. Set back from the road, about 30 minutes from Gatineau, it offers a peaceful, private setting surrounded by nature, ideal for your building project. Electricity available at the road.",
     image: property15159365,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/val-des-monts/767-ch-du-fort/15159365",

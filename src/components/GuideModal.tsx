@@ -33,30 +33,30 @@ type GuideConfigEntry = { title: string; description: string; submitLabel: strin
 const guideConfigFr: Record<GuideType, GuideConfigEntry> = {
   seller_guide: {
     title: "Recevez le guide vendeur",
-    description: "Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau — préparation, prix, mise en marché et négociation.",
+    description: "Tout ce que vous devez savoir pour vendre au meilleur prix à Gatineau : préparation, prix, mise en marché et négociation.",
     submitLabel: "Envoyer mon guide vendeur",
-    successTitle: "Parfait — votre guide est en route!",
+    successTitle: "Parfait, votre guide est en route.",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
   buyer_guide: {
     title: "Recevez le guide acheteur",
     description: "Le processus d'achat au Québec expliqué simplement, de la recherche au notaire, étape par étape.",
     submitLabel: "Envoyer mon guide acheteur",
-    successTitle: "Parfait — votre guide est en route!",
+    successTitle: "Parfait, votre guide est en route.",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
   investor_guide: {
     title: "Recevez le guide investisseur",
     description: "Rendement, analyse de plex, stratégie d'acquisition et pièges à éviter, le guide essentiel pour investir à Gatineau.",
     submitLabel: "Envoyer mon guide investisseur",
-    successTitle: "Parfait — votre guide investisseur est en route!",
+    successTitle: "Parfait, votre guide investisseur est en route.",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes.",
   },
   relocation_guide: {
     title: "Recevez le guide relocalisation",
     description: "Entrez vos coordonnées et je vous envoie immédiatement le guide relocalisation par courriel. Vous y trouverez des repères utiles pour mieux comprendre le marché de Gatineau, les secteurs à considérer et les étapes à prévoir pour une transition plus simple.",
     submitLabel: "Envoyer mon guide",
-    successTitle: "Parfait — votre guide relocalisation est en route!",
+    successTitle: "Parfait, votre guide relocalisation est en route.",
     successText: "Vérifiez votre boîte courriel dans les prochaines minutes. Regardez aussi vos promotions ou indésirables au besoin.",
   },
 };
@@ -64,30 +64,30 @@ const guideConfigFr: Record<GuideType, GuideConfigEntry> = {
 const guideConfigEn: Record<GuideType, GuideConfigEntry> = {
   seller_guide: {
     title: "Get the Seller Guide",
-    description: "Everything you need to know to sell at the best price in Gatineau — preparation, pricing, marketing and negotiation.",
+    description: "Everything you need to know to sell at the best price in Gatineau: preparation, pricing, marketing and negotiation.",
     submitLabel: "Send me the Seller Guide",
-    successTitle: "Your guide is on its way!",
+    successTitle: "Your guide is on its way.",
     successText: "Check your inbox, you'll receive the Seller Guide within minutes.",
   },
   buyer_guide: {
     title: "Get the Buyer Guide",
-    description: "The home buying process in Québec explained simply — from search to notary, step by step.",
+    description: "The home buying process in Québec explained simply, from search to notary, step by step.",
     submitLabel: "Send me the Buyer Guide",
-    successTitle: "Your guide is on its way!",
+    successTitle: "Your guide is on its way.",
     successText: "Check your inbox, you'll receive the Buyer Guide within minutes.",
   },
   investor_guide: {
     title: "Get the Investor Guide",
-    description: "Returns, plex analysis, acquisition strategy and pitfalls to avoid — the essential guide for investing in Gatineau.",
+    description: "Returns, plex analysis, acquisition strategy and pitfalls to avoid: the guide for investing in Gatineau.",
     submitLabel: "Send me the Investor Guide",
-    successTitle: "Your Investor Guide is on its way!",
+    successTitle: "Your Investor Guide is on its way.",
     successText: "Check your inbox, you'll receive the guide within minutes.",
   },
   relocation_guide: {
     title: "Get the Relocation Guide",
     description: "Enter your details and I'll send you the relocation guide right away. You'll find useful benchmarks for understanding the Gatineau market, neighbourhoods to consider, and steps to plan for a smoother transition.",
     submitLabel: "Send me the guide",
-    successTitle: "Your Relocation Guide is on its way!",
+    successTitle: "Your Relocation Guide is on its way.",
     successText: "Check your inbox shortly. Also look in your promotions or spam folder if needed.",
   },
 };

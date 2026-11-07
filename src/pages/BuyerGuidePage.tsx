@@ -97,7 +97,7 @@ const BuyerGuidePage = () => (
       headline="Recevez votre guide acheteur gratuit"
       subtitle="Un guide clair, étape par étape, pour acheter à Gatineau. Je vous l'envoie par courriel."
       submitLabel="Recevoir le guide acheteur"
-      successTitle="Merci! Votre guide est en route."
+      successTitle="Merci, votre guide est en route."
       successText="Vérifiez votre boîte courriel. Le guide acheteur devrait y arriver sous peu."
     />
 
