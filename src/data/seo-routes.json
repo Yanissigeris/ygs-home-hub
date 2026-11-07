@@ -266,7 +266,7 @@
   },
   "/combien-coute-un-courtier-immobilier-au-quebec": {
     "title": "Combien coûte un courtier immobilier au Québec? | YGS",
-    "description": "Combien coûte un courtier immobilier au Québec? Commission négociable, TPS et TVQ, services inclus et autres frais. Une explication claire avant de signer.",
+    "description": "Ce que coûte un courtier immobilier au Québec pour vendre ou pour acheter, les autres frais du vendeur et ce qui vous reste après la vente.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/comment-choisir-un-courtier-immobilier": {
@@ -280,8 +280,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/frais-de-courtage-immobilier-quebec": {
-    "title": "Frais de courtage immobilier au Québec · Guide | YGS",
-    "description": "Frais de courtage au Québec : pourcentage négociable, TPS et TVQ, services inclus et autres frais. Comprendre la commission avant de vendre.",
+    "title": "Frais de courtage immobilier au Québec : calcul et taxes | YGS",
+    "description": "Comment se calcule la commission d'un courtier au Québec : sur quel prix s'applique le pourcentage et dans quels cas elle est due, avec un exemple de taxes.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/courtier-immobilier-ou-vendre-soi-meme": {
@@ -566,12 +566,12 @@
   },
   "/en/how-much-does-a-realtor-cost-in-quebec": {
     "title": "How much does a realtor cost in Quebec? | YGS",
-    "description": "How much does a realtor cost in Quebec? Negotiable commission, GST and QST, services included and other costs. A clear explanation before you sign.",
+    "description": "What a realtor costs in Quebec to sell or to buy, the seller's other costs and what you have left after the sale.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/en/realtor-commission-quebec": {
-    "title": "Realtor commission in Quebec · Guide | YGS",
-    "description": "Realtor commission in Quebec: negotiable rate, taxes, services included and other costs. Understand the fee before you sell.",
+    "title": "Realtor Commission in Quebec: Calculation and Taxes | YGS",
+    "description": "How a realtor's commission is calculated in Quebec: which price the percentage applies to and when it's owed, with a worked tax example.",
     "ogImage": "https://yanisgauthier.com/og/og-guides.jpg"
   },
   "/en/how-to-choose-a-realtor": {
