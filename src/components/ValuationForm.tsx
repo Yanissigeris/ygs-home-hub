@@ -556,7 +556,7 @@ const ValuationForm = ({
           variant="accent"
           className={cn(
             "w-full font-semibold",
-            isGlass && "mt-1 bg-[var(--gold-dark)] text-[#F7F4EE] border-transparent hover:bg-[var(--gold-text)] hover:text-[#F7F4EE] shadow-[0_4px_20px_-4px_hsl(225_100%_60%_/_0.35)]",
+            isGlass && "mt-1 bg-[var(--action)] text-white border-transparent hover:bg-[var(--action-hover)] hover:text-white shadow-[0_4px_20px_-4px_hsl(225_100%_60%_/_0.35)]",
           )}
           disabled={submitting}
         >

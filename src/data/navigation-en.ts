@@ -8,6 +8,7 @@ export const mainNavEn: NavItem[] = [
     children: [
       { label: "Sell in Gatineau", href: "/en/sell/" },
       { label: "Free Home Valuation", href: "/en/home-valuation/" },
+      { label: "Sell a Plex", href: "/en/sell-plex/" },
       { label: "Seller Plan", href: "/en/seller-plan/" },
       { label: "Seller Guide", href: "/en/seller-guide/" },
       { label: "When to Sell", href: "/en/when-to-sell/" },

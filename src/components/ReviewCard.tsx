@@ -41,7 +41,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
           </span>
           <div>
             <p className="text-[0.875rem] font-semibold text-foreground">{review.name}</p>
-            {review.location && <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60">{review.location}</p>}
+            {review.location && <p className="mt-0.5 text-[0.8125rem] text-muted-foreground">{review.location}</p>}
           </div>
         </div>
       </div>

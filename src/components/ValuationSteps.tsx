@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 
 type Lang = "fr" | "en";
@@ -58,6 +60,8 @@ const copy: Record<Lang, { title: string; subtitle: string; steps: { title: stri
 };
 
 const ValuationSteps = ({ lang }: { lang: Lang }) => {
+  const formHref = lang === "en" ? "/en/home-valuation/" : "/evaluation-gratuite-gatineau/";
+  const formLabel = lang === "en" ? "Free Home Valuation" : "Évaluation gratuite";
   const c = copy[lang];
   return (
     <section className="bg-background pb-16 md:pb-20">
@@ -82,6 +86,12 @@ const ValuationSteps = ({ lang }: { lang: Lang }) => {
             </li>
           ))}
         </ol>
+        {/* Retour au formulaire : sur la page d'évaluation, ce lien défile jusqu'au formulaire (valuationAnchor). */}
+        <div className="mt-10">
+          <Button asChild size="lg">
+            <Link to={formHref}>{formLabel} →</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

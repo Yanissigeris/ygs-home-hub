@@ -23,6 +23,7 @@ export const mainNav: NavItem[] = [
     children: [
       { label: "Vendre à Gatineau", href: "/vendre-ma-maison-gatineau/" },
       { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
+      { label: "Vendre un plex", href: "/vendre-un-plex-a-gatineau/" },
       { label: "Plan vendeur", href: "/plan-vendeur-gatineau/" },
       { label: "Guide vendeur", href: "/guide-vendeur-gatineau/" },
       { label: "Quand vendre", href: "/quand-vendre-a-gatineau/" },

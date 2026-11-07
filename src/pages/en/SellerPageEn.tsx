@@ -3,7 +3,6 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
-import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategoryEn as getReviewsByCategory } from "@/data/reviews-en";
 import FAQSection from "@/components/FAQSection";
@@ -37,7 +36,7 @@ const steps = [
   { num: "03", title: "Through to the notary", desc: "I handle showings and negotiation, then coordinate the file with the notary." },
 ];
 const nextSteps = [
-  { title: "Free home valuation", text: "Knowing your property's value is free, with no commitment. Your request stays confidential.", href: "/en/home-valuation/", cta: "Get my valuation", highlight: true },
+  { title: "Free home valuation", text: "Knowing your property's value is free, with no commitment. Your request stays confidential.", href: "/en/home-valuation/", cta: "Get my valuation" },
   { title: "Seller plan", text: "A clear plan, from pricing to marketing, built around your property and your situation.", href: "/en/seller-plan/", cta: "Get my plan" },
   { title: "Talk to Yanis", text: "A call to clarify your options and answer your questions.", href: "/en/contact/", cta: "Book a call" },
 ];
@@ -89,7 +88,6 @@ const SellerPageEn = () => (
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the seller guide." text="Everything you need to know to sell at the right price in Gatineau, in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
     <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
-    <CTASection dark title="Want to know what to do in your situation?" text="A free valuation or a seller plan, depending on where you are." buttons={[{ label: "Free Home Valuation", href: "/en/home-valuation/" }, { label: "Get my seller plan", href: "/en/seller-plan/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
     <FAQSection items={faq} />

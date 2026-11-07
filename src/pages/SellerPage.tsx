@@ -8,7 +8,6 @@ import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
-import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
@@ -43,7 +42,7 @@ const steps = [
 
 
 const nextSteps = [
-{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété est gratuit et sans engagement. Votre demande reste confidentielle.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur", highlight: true },
+{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété est gratuit et sans engagement. Votre demande reste confidentielle.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur" },
 { title: "Plan vendeur", text: "Un plan clair, du prix à la mise en marché, adapté à votre propriété et à votre situation.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
 { title: "Parler à Yanis", text: "Un appel pour clarifier vos options et répondre à vos questions.", href: "/contact-yanis/", cta: "Réserver un appel" }];
 
@@ -181,17 +180,6 @@ const SellerPage = () =>
     reviews={getReviewsByCategory("seller").slice(0, 2)}
     columns={2}
     background="alt" />
-  
-
-    <CTASection
-    dark
-    title="Vous voulez savoir quoi faire dans votre cas?"
-    text="Une évaluation gratuite ou un plan vendeur, selon où vous en êtes."
-    buttons={[
-    { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-    { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/", variant: "outline" }]
-    }
-    trustLine="Je vous donne les chiffres et les options, vous décidez." />
   
 
     <FAQSection items={faq} />
