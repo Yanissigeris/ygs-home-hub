@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { VALUATION_FORM_ID } from "@/lib/valuationAnchor";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,6 +12,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Lock, Clock, Shield, Send, BadgeCheck, Loader2, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
+
+// Défini hors du formulaire : un composant créé dans le rendu serait remonté
+// à chaque frappe, et son animation d'entrée rejouerait sans arrêt.
+const FieldError = ({ id, msg, className }: { id: string; msg?: string; className: string }) =>
+  msg ? (
+    <p id={id} role="alert" className={cn(className, "motion-err")}>
+      {msg}
+    </p>
+  ) : null;
 
 export interface ValuationFormProps {
   lang: "fr" | "en";
@@ -233,7 +242,7 @@ const ValuationForm = ({
       <div
         role="status"
         aria-live="polite"
-        className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
+        className="rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8 motion-enter"
       >
         <div className="flex items-center gap-3.5">
           <img
@@ -254,7 +263,7 @@ const ValuationForm = ({
         <p className="mt-6 text-[0.9375rem] font-medium text-primary-foreground">{t.thanksLead}</p>
         <ol className="mt-4 space-y-4">
           {t.thanksSteps.map((step, i) => (
-            <li key={i} className="flex gap-4">
+            <li key={i} className="flex gap-4 motion-enter-step" style={{ "--i": i } as CSSProperties}>
               <span
                 aria-hidden="true"
                 className="shrink-0 text-primary-foreground"
@@ -292,12 +301,6 @@ const ValuationForm = ({
     isGlass ? "text-red-300/80" : "text-destructive",
   );
 
-  const ErrorLine = ({ id, msg }: { id: string; msg?: string }) =>
-    msg ? (
-      <p id={id} role="alert" className={errClass}>
-        {msg}
-      </p>
-    ) : null;
 
   return (
     <div
@@ -395,7 +398,7 @@ const ValuationForm = ({
                 aria-describedby={errors.address ? "address-err" : undefined}
                 {...register("address")}
               />
-              <ErrorLine id="address-err" msg={errors.address?.message} />
+              <FieldError id="address-err" msg={errors.address?.message} className={errClass} />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
@@ -411,7 +414,7 @@ const ValuationForm = ({
                   aria-describedby={errors.name ? "name-err" : undefined}
                   {...register("name")}
                 />
-                <ErrorLine id="name-err" msg={errors.name?.message} />
+                <FieldError id="name-err" msg={errors.name?.message} className={errClass} />
               </div>
               <div>
                 <Label htmlFor="email" className={glassLabel}>
@@ -428,7 +431,7 @@ const ValuationForm = ({
                   aria-describedby={errors.email ? "email-err" : undefined}
                   {...register("email")}
                 />
-                <ErrorLine id="email-err" msg={errors.email?.message} />
+                <FieldError id="email-err" msg={errors.email?.message} className={errClass} />
               </div>
             </div>
             <div>
@@ -454,7 +457,7 @@ const ValuationForm = ({
                   />
                 )}
               />
-              <ErrorLine id="phone-err" msg={errors.phone?.message} />
+              <FieldError id="phone-err" msg={errors.phone?.message} className={errClass} />
             </div>
             <div>
               <Label htmlFor="message" className={glassLabel}>
@@ -470,7 +473,7 @@ const ValuationForm = ({
                 aria-describedby={errors.message ? "message-err" : undefined}
                 {...register("message")}
               />
-              <ErrorLine id="message-err" msg={errors.message?.message} />
+              <FieldError id="message-err" msg={errors.message?.message} className={errClass} />
             </div>
           </>
         ) : (
@@ -485,7 +488,7 @@ const ValuationForm = ({
                 aria-describedby={errors.name ? "name-err" : undefined}
                 {...register("name")}
               />
-              <ErrorLine id="name-err" msg={errors.name?.message} />
+              <FieldError id="name-err" msg={errors.name?.message} className={errClass} />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="email">{t.email}</Label>
@@ -499,7 +502,7 @@ const ValuationForm = ({
                 aria-describedby={errors.email ? "email-err" : undefined}
                 {...register("email")}
               />
-              <ErrorLine id="email-err" msg={errors.email?.message} />
+              <FieldError id="email-err" msg={errors.email?.message} className={errClass} />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="phone">{t.phone}</Label>
@@ -521,7 +524,7 @@ const ValuationForm = ({
                   />
                 )}
               />
-              <ErrorLine id="phone-err" msg={errors.phone?.message} />
+              <FieldError id="phone-err" msg={errors.phone?.message} className={errClass} />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="address">{t.address}</Label>
@@ -533,7 +536,7 @@ const ValuationForm = ({
                 aria-describedby={errors.address ? "address-err" : undefined}
                 {...register("address")}
               />
-              <ErrorLine id="address-err" msg={errors.address?.message} />
+              <FieldError id="address-err" msg={errors.address?.message} className={errClass} />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="message">{t.message}</Label>
@@ -546,7 +549,7 @@ const ValuationForm = ({
                 aria-describedby={errors.message ? "message-err" : undefined}
                 {...register("message")}
               />
-              <ErrorLine id="message-err" msg={errors.message?.message} />
+              <FieldError id="message-err" msg={errors.message?.message} className={errClass} />
             </div>
           </>
         )}

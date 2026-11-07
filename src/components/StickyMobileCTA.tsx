@@ -110,7 +110,7 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
         <Link
           to={ctaHref}
           onClick={() => trackCTAClick(ctaLabel, "sticky-mobile-cta")}
-          className="flex-[1.5] inline-flex items-center justify-center text-[var(--on-action)] transition-colors"
+          className="flex-[1.5] inline-flex items-center justify-center text-[var(--on-action)] motion-press"
           style={{
             background: "var(--action)",
             borderRadius: 999,
@@ -129,7 +129,7 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
             trackCTAClick("call", "sticky-mobile-cta");
             trackContactTap({ channel: "phone", location: "sticky_cta", destination: "+18192103044" });
           }}
-          className="flex-1 inline-flex items-center justify-center transition-colors"
+          className="flex-1 inline-flex items-center justify-center motion-press"
           style={{
             background: "transparent",
             border: "1px solid rgba(255,255,255,.25)",
