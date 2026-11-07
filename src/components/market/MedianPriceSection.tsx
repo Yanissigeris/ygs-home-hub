@@ -14,6 +14,13 @@ import {
 // recharts lives in its own "charts" chunk (vite.config.ts) and only loads here.
 const MedianPriceChart = lazy(() => import("./MedianPriceChart"));
 
+// recharts always renders an empty <title> in its <svg>. In the static HTML that
+// becomes a second <title> (scripts/audit-seo.mjs fails on it), so the chart is
+// skipped during the Puppeteer prerender. The data table below stays in the HTML.
+const isPrerender = () =>
+  typeof window !== "undefined" &&
+  Boolean((window as unknown as { __PRERENDER__?: boolean }).__PRERENDER__);
+
 const copy = {
   fr: {
     title: "Prix médian à Gatineau, comparé à l'an passé",
@@ -100,9 +107,13 @@ const MedianPriceSection = ({ lang = "fr" }: Props) => {
 
         <figure className="mt-6">
           <div role="img" aria-label={t.chartLabel(categoryName)} className="h-[300px] w-full sm:h-[360px]">
-            <Suspense fallback={<div className="h-full w-full rounded-2xl bg-muted/60" aria-label={t.loading} />}>
-              <MedianPriceChart lang={lang} category={category} />
-            </Suspense>
+            {isPrerender() ? (
+              <div className="h-full w-full rounded-2xl bg-muted/60" />
+            ) : (
+              <Suspense fallback={<div className="h-full w-full rounded-2xl bg-muted/60" aria-label={t.loading} />}>
+                <MedianPriceChart lang={lang} category={category} />
+              </Suspense>
+            )}
           </div>
 
           <figcaption className="mt-5 space-y-2 text-sm leading-relaxed text-muted-foreground">
