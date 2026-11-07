@@ -79,7 +79,7 @@ const PontiacPage = () => {
       {/* SECTION 1 — Précision importante */}
       <ContentBlock background="alt" padSize="md">
         <div className="max-w-[44rem] mx-auto">
-          <div className="border-l-2 border-[var(--ink)] bg-background rounded-sm px-5 py-4">
+          <div className="border border-[rgba(0,14,53,0.16)] bg-background rounded-sm px-5 py-4">
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
               <AlertTriangle size={14} className="inline mr-1.5 text-[var(--ink-soft)] -mt-0.5" />
               <strong>À ne pas confondre</strong> : la municipalité de Pontiac (secteur Luskville, Breckenridge, Quyon) fait partie de la MRC des Collines-de-l'Outaouais et de la Région de la capitale nationale. Elle est distincte de la MRC Pontiac, un territoire beaucoup plus à l'ouest, non inclus dans la capitale nationale. Yanis Gauthier-Sigeris couvre la municipalité de Pontiac (Collines-de-l'Outaouais).

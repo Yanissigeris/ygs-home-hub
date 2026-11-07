@@ -79,6 +79,9 @@ const headingFr = {
   titleFirst: "Où en êtes-vous dans",
   titleAccent: "votre projet?",
   subtitle: "Trois chemins selon votre situation. Choisissez le vôtre, on part de là.",
+  calcLead: "Vous achetez?",
+  calcLabel: "Calculez votre taxe de bienvenue",
+  calcHref: "/acheter-a-gatineau/#calculateurs",
 };
 
 const headingEn = {
@@ -86,6 +89,9 @@ const headingEn = {
   titleFirst: "Where are you in",
   titleAccent: "your project?",
   subtitle: "Three paths depending on your situation. Choose the one that fits, you'll be guided from A to Z.",
+  calcLead: "Buying?",
+  calcLabel: "Estimate your welcome tax",
+  calcHref: "/en/buy/#calculators",
 };
 
 interface PathwaySectionProps {
@@ -297,6 +303,18 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             ))}
           </div>
           </div>
+
+          <p className="relative z-10 mt-5 text-[0.9375rem]" style={{ color: "rgba(0,14,53,0.72)" }}>
+            {heading.calcLead}{" "}
+            <Link
+              to={heading.calcHref}
+              onClick={() => trackEvent("home_welcome_tax_link", { lang: heading.calcHref.startsWith("/en") ? "en" : "fr" })}
+              className="inline-flex min-h-[44px] items-center font-semibold underline decoration-[rgba(0,14,53,0.35)] underline-offset-4 hover:decoration-[var(--ink)]"
+              style={{ color: "var(--ink)" }}
+            >
+              {heading.calcLabel}{"\u00A0"}→
+            </Link>
+          </p>
         </div>
       </section>
     );

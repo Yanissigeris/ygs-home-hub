@@ -338,9 +338,9 @@ const SiteHeader = () => {
   return (
     <header id="site-header" style={{ ...headerStyle, textShadow }}>
       {/* ─── Desktop (lg+) ─── */}
-      <div className="section-container hidden lg:flex items-center transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
+      <div className="section-container hidden lg:flex items-center" style={{ height: 70 }}>
         <Link to={lang === "en" ? "/en/" : "/"} className="mr-5 flex shrink-0 items-center rounded-sm xl:mr-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }}>
-          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: scrolled ? 47 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="object-contain" style={{ height: 52, width: "auto", filter: logoFilter, transform: scrolled ? "scale(0.9)" : "none", transformOrigin: "left center", transition: "transform .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <span aria-hidden="true" className="hidden xl:inline-block" style={{ width: 1, height: 20, background: dividerColor, margin: "0 12px", transition: "background-color .3s ease" }} />
           {/* Nom et titre : seulement dès 1280 px, sinon le bouton d'évaluation déborde de l'écran. */}
           <span className="hidden xl:inline-flex" style={{ flexDirection: "column", lineHeight: 1.05 }}>
@@ -411,9 +411,9 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Tablet (sm–lg) ─── */}
-      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6 transition-all duration-300" style={{ height: scrolled ? 62 : 70 }}>
+      <div className="section-container hidden sm:flex lg:hidden items-center justify-between gap-6" style={{ height: 70 }}>
         <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 shrink items-center gap-3.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} aria-label={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker, RE/MAX Direct Inc. affiliate, home" : "Yanis Gauthier-Sigeris, courtier immobilier, affilié RE/MAX Direct Inc., accueil"}>
-          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: scrolled ? 48 : 52, width: "auto", filter: logoFilter, transition: "height .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={160} height={52} className="min-w-0 object-contain" style={{ height: 52, width: "auto", filter: logoFilter, transform: scrolled ? "scale(0.92)" : "none", transformOrigin: "left center", transition: "transform .2s ease, filter .3s ease" }} loading="eager" decoding="async" />
           <RemaxPill size="md" lang={lang as "fr" | "en"} />
         </Link>
         <div className="flex shrink-0 items-center gap-3">
@@ -437,7 +437,7 @@ const SiteHeader = () => {
       {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
       <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
         <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu}>
-          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-all duration-300" style={{ height: scrolled ? 34 : 40, width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
+          <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-transform duration-300" style={{ height: 40, transform: scrolled ? "scale(0.85)" : "none", transformOrigin: "left center", width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
           <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05, minWidth: 0 }}>
             <span
               style={{

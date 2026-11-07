@@ -921,31 +921,6 @@ h1.hero-eyebrow {
 .cta-arrow-link--dark { color: var(--gold2); border-bottom-color: rgba(255,255,255,.18); }
 .cta-arrow-link--dark:hover { color: var(--white); }
 
-/* Pill toggle — carousel dot / pagination target. Wrapper is 44×44, bar is inner. */
-.pill-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-.pill-toggle > span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--border);
-  transition: width .45s cubic-bezier(.16,1,.3,1), background .3s;
-}
-.pill-toggle[aria-current="true"] > span,
-.pill-toggle.is-active > span {
-  width: 44px;
-  background: var(--gold-dark);
-}
-
 /* Footer heading — uppercase label on dark ink surface. */
 .footer-heading {
   font-family: var(--sans);
