@@ -114,7 +114,7 @@ const ReadingProgressBar = () => {
         background: "var(--gold3)",
       }}
     >
-      <div style={{ height: "100%", width: `${progress}%`, background: "var(--gold)", transition: "width 0.05s linear" }} />
+      <div style={{ height: "100%", width: "100%", background: "var(--gold)", transform: `scaleX(${progress / 100})`, transformOrigin: "left", transition: "transform 0.05s linear" }} />
     </div>
   );
 };
