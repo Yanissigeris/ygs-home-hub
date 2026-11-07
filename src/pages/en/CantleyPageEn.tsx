@@ -147,7 +147,7 @@ const CantleyPageEn = () => (
             "Lots of at least 3,700 m² outside the urban perimeter, which keeps the area semi-rural. (Source: subdivision bylaw 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

@@ -20,14 +20,14 @@ const PrivacyPolicyPageEn = () => (
     />
     <article className="section-padding" style={{ background: "var(--white)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
-        <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--gold-text)" }} className="mb-3">
+        <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "#4A5475" }} className="mb-3">
           LEGAL · QUEBEC
         </p>
         <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
           Privacy Policy
         </h1>
         <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Last updated: April 2026</p>
-        <div style={{ width: 48, height: 2, background: "var(--gold)", marginBottom: "2.5rem" }} />
+        <div style={{ width: 48, height: 2, background: "var(--ink)", marginBottom: "2.5rem" }} />
 
         <div style={{ fontSize: ".95rem", lineHeight: 1.9, color: "var(--ink)" }} className="space-y-0">
           <Section title="1. Data Controller">

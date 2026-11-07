@@ -147,7 +147,7 @@ const CantleyPage = () => (
             "Terrains d'au moins 3 700 m² hors du périmètre urbain, ce qui garde le caractère semi-rural du secteur. (Source : règlement de lotissement 662-24)",
           ].map((point) => (
             <div key={point} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="shrink-0 text-accent mt-0.5" />
+              <CheckCircle2 size={18} className="shrink-0 text-[var(--ink-soft)] mt-0.5" />
               <p className="text-[0.9375rem] text-foreground leading-relaxed">{point}</p>
             </div>
           ))}

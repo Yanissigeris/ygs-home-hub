@@ -209,7 +209,7 @@ const AylmerPage = () => (
             <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
-              <span className="inline-block text-xs font-medium text-accent">{s.tag}</span>
+              <span className="inline-block text-xs font-medium text-[var(--ink-soft)]">{s.tag}</span>
             </div>
           ))}
         </div>
@@ -227,7 +227,7 @@ const AylmerPage = () => (
               <ul className="space-y-3">
                 {col.items.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={15} className="shrink-0 mt-0.5 text-accent" />
+                    <CheckCircle2 size={15} className="shrink-0 mt-0.5 text-[var(--ink-soft)]" />
                     <span className="text-[0.9375rem] text-muted-foreground leading-snug">{item}</span>
                   </li>
                 ))}
@@ -269,7 +269,7 @@ const AylmerPage = () => (
           <h3 className="font-serif text-lg font-semibold text-foreground mb-6">Mon plan vendeur, Aylmer</h3>
           {sellerSteps.map((s, i) => (
             <div key={s.title} className="flex gap-4 items-start py-4 border-b border-border last:border-0">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm shrink-0">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-muted text-[var(--ink)] font-semibold text-sm shrink-0">
                 {i + 1}
               </span>
               <div>

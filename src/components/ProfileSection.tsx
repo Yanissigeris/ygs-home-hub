@@ -75,7 +75,7 @@ const ProfileSection = ({
       >
         {/* overline retiré (cohérence accueil) */}
         <h2>{name}</h2>
-        <p className="mt-2 text-[1.0625rem] font-medium text-accent">{role}</p>
+        <p className="mt-2 text-[1.0625rem] font-medium text-[var(--ink-soft)]">{role}</p>
         {subtitle && <p className="mt-1.5 text-[0.875rem] text-muted-foreground/45">{subtitle}</p>}
         {children}
       </motion.div>

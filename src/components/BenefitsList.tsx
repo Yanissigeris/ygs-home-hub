@@ -30,7 +30,7 @@ const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsLi
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.3, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
-            <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
+            <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
             <span className="text-[1rem] text-foreground">{item}</span>
           </motion.div>
         ))}

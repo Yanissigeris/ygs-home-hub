@@ -44,7 +44,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
               <ul className="mt-8 space-y-4">
                 {benefits.map((item) => (
                   <li key={item} className="flex items-start gap-3.5">
-                    <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent" />
+                    <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
                     <span className="text-[1rem] text-foreground">{item}</span>
                   </li>
                 ))}

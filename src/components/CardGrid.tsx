@@ -54,7 +54,7 @@ const CardGrid = ({
             >
               {variant === "icon-inline" ? (
                 <>
-                  <Icon size={18} className="mt-0.5 shrink-0 text-accent" />
+                  <Icon size={18} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
                   <div>
                     <p className="text-[1rem] font-semibold text-foreground">{item.title}</p>
                     <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-muted-foreground">{item.text}</p>

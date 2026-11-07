@@ -70,7 +70,7 @@ const ValuationSteps = ({ lang }: { lang: Lang }) => {
             <li key={s.title} className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-border py-6 md:grid-cols-[3.5rem_1fr] md:gap-x-6">
               <span
                 aria-hidden="true"
-                className="row-span-2 text-[var(--gold-text)]"
+                className="row-span-2 text-[var(--ink)]"
                 style={{ fontFamily: "var(--serif)", fontSize: "2rem", lineHeight: 1 }}
               >
                 {i + 1}

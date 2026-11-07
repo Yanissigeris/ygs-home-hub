@@ -38,7 +38,7 @@ const ContactCard = ({ title = "Coordonnées", items, onTap }: ContactCardProps)
         );
         return (
           <div key={`${item.label ?? ""}-${display}-${idx}`} className="flex items-center gap-3">
-            <item.icon size={16} className="text-accent/50 shrink-0" />
+            <item.icon size={16} className="text-muted-foreground shrink-0" />
             <span>
               {item.label ? <span className="text-foreground/70">{item.label} : </span> : null}
               {inner}

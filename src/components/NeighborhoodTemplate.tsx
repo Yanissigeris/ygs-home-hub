@@ -69,7 +69,7 @@ const BrokerPerspective = ({
         >
           <div
             className="text-xs uppercase tracking-[0.18em] font-medium"
-            style={{ color: "var(--gold-text)", fontFamily: "var(--sans)" }}
+            style={{ color: "#4A5475", fontFamily: "var(--sans)" }}
           >
             {label}
           </div>
@@ -121,7 +121,7 @@ const BrokerPerspective = ({
           {data.dataPoint && (
             <div
               className="mt-5 border-l-2 pl-4 py-1 text-[0.9375rem] leading-relaxed text-muted-foreground"
-              style={{ borderColor: "var(--gold)", fontFamily: "var(--sans)" }}
+              style={{ borderColor: "var(--ink)", fontFamily: "var(--sans)" }}
             >
               {data.dataPoint}
             </div>
@@ -169,7 +169,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
         <div className="mt-7 space-y-3.5">
           {p.reasons.map((r) => (
             <div key={r} className="flex items-center gap-3">
-              <CheckCircle2 size={16} className="shrink-0 text-accent" />
+              <CheckCircle2 size={16} className="shrink-0 text-[var(--ink-soft)]" />
               <span className="text-[0.9375rem] text-foreground">{r}</span>
             </div>
           ))}

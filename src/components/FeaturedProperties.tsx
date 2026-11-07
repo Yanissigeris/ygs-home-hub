@@ -100,8 +100,8 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
             position: "absolute",
             top: "12px",
             left: "12px",
-            background: p.status === "sold" ? "var(--gold)" : "var(--ink)",
-            color: "var(--white)",
+            background: p.status === "sold" ? "var(--cream)" : "var(--ink)",
+            color: p.status === "sold" ? "var(--ink)" : "var(--white)",
             padding: "6px 12px",
             fontSize: "10.5px",
             fontWeight: 700,
@@ -110,7 +110,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
             zIndex: 2,
             borderRadius: 999,
             boxShadow: p.status === "sold"
-              ? "0 3px 10px rgba(51,102,255,0.35)"
+              ? "0 3px 10px rgba(0,14,53,0.25)"
               : "0 3px 10px rgba(0,14,53,0.30)",
           }}
         >
@@ -148,7 +148,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
           {p.status === "sold" && (
             <>
               <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
-              <span style={{ color: "var(--gold-text)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
+              <span style={{ color: "var(--ink)", fontWeight: 600 }}>{lang === "fr" ? "Vendu" : "Sold"}</span>
             </>
           )}
         </p>
