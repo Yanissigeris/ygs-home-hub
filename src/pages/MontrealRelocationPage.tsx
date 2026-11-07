@@ -35,7 +35,7 @@ const MontrealRelocationPage = () =>
     overline="Relocalisation · Montréal → Gatineau"
     title="S'installer à Gatineau depuis Montréal"
     subtitle="Vous quittez Montréal pour l'Outaouais? Je vous aide à comparer les secteurs et les prix de Gatineau avant d'acheter."
-    primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+    primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
     secondaryCta={{ label: "Voir les secteurs", href: "#secteurs" }}
     trustLine="Spécialiste en relocalisation."
     heroBgImage={heroImg} />
@@ -47,7 +47,7 @@ const MontrealRelocationPage = () =>
 
     <InlineCTA
     text="Vous voulez savoir ce que votre budget permet à Gatineau? On regarde les secteurs et les prix ensemble."
-    buttonLabel="Réserver un appel →"
+    buttonLabel="Parler à Yanis →"
     href="/contact-yanis/" />
   
 
@@ -78,7 +78,7 @@ const MontrealRelocationPage = () =>
     title="Parlons de votre projet à Gatineau"
     text="Réservez un appel gratuit. On regarde ensemble les secteurs et les options."
     buttons={[
-    { label: "Réserver un appel", href: "/contact-yanis/" },
+    { label: "Parler à Yanis", href: "/contact-yanis/" },
     { label: "Voir Plateau / Aylmer", href: "/plateau-aylmer/", variant: "outline" }]
     }
     trustLine="Je vous donne les chiffres et les options, vous décidez." />

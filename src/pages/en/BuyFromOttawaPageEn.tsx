@@ -58,7 +58,7 @@ const BuyFromOttawaPageEn = () => (
 
     <InlineCTA
       text="Want to know what your budget gets you on this side of the river? We'll look at areas and prices together."
-      buttonLabel="Book a call →"
+      buttonLabel="Talk to Yanis →"
       href="/en/contact/"
     />
 

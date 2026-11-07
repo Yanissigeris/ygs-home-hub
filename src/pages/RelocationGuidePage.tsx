@@ -50,7 +50,7 @@ const RelocationGuidePage = () => (
       overline="Guide relocalisation · Gatineau"
       title="S'installer à Gatineau : le guide"
       subtitle="Ce qu'il faut savoir pour préparer votre relocalisation : secteurs, prix, processus, écoles et mode de vie."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Voir les secteurs", href: "/quartiers-a-considerer-a-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
@@ -87,7 +87,7 @@ const RelocationGuidePage = () => (
 
     <InlineCTA
       text="Vous voulez qu'on regarde votre situation? Réservez un appel gratuit."
-      buttonLabel="Réserver un appel →"
+      buttonLabel="Parler à Yanis →"
       href="/contact-yanis/"
     />
 
@@ -104,7 +104,7 @@ const RelocationGuidePage = () => (
       title="Planifions votre installation"
       text="Réservez un appel gratuit. On clarifie vos options et vos prochaines étapes."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Voir les secteurs", href: "/quartiers-a-considerer-a-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

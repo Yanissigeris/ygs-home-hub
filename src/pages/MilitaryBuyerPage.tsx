@@ -37,7 +37,7 @@ const MilitaryBuyerPage = () => (
       overline="Acheter comme militaire · Gatineau"
       title="Acheter à Gatineau en tant que militaire"
       subtitle="Mutation vers la RCN? Je vous aide à choisir le secteur et la propriété, puis je vous guide dans le processus d'achat au Québec."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Voir Plateau et Aylmer", href: "/plateau-aylmer/" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
@@ -72,7 +72,7 @@ const MilitaryBuyerPage = () => (
         Je sais que les mutations imposent des délais serrés. Mon rôle est de simplifier chaque étape pour que vous puissiez vous concentrer sur votre transition.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/contact-yanis/">Réserver un appel</Link>
+        <Link to="/contact-yanis/">Parler à Yanis</Link>
       </Button>
     </ContentBlock>
 
@@ -88,7 +88,7 @@ const MilitaryBuyerPage = () => (
       title="Prêt à trouver votre propriété à Gatineau?"
       text="Parlons de votre mutation et de vos critères. On bâtit le plan ensemble."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

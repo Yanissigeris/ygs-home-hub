@@ -39,7 +39,7 @@ const MilitaryRelocationPage = () => (
       overline="Relocalisation militaire · Gatineau"
       title="Relocalisation militaire à Gatineau"
       subtitle="Mutation vers la région? Je vous aide à trouver la bonne propriété en respectant votre calendrier."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
     />
@@ -80,7 +80,7 @@ const MilitaryRelocationPage = () => (
       title="Planifions votre relocalisation"
       text="Parlez-moi de votre mutation et on bâtit un plan ensemble."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis" },
+        { label: "Parler à Yanis", href: "/contact-yanis" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

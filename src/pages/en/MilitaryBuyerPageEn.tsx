@@ -37,7 +37,7 @@ const MilitaryBuyerPageEn = () => (
       overline="Military · Buying in Gatineau"
       title="Buy in Gatineau as a military member"
       subtitle="Posting to the NCR? I help you choose the area and the property, then guide you through the buying process in Quebec."
-      primaryCta={{ label: "Book a call", href: "/en/contact/" }}
+      primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       secondaryCta={{ label: "See Plateau and Aylmer", href: "/en/plateau-aylmer/" }}
       trustLine="Service adapted to military members, at your pace."
       heroBgImage={heroImg}
@@ -72,7 +72,7 @@ const MilitaryBuyerPageEn = () => (
         I know postings come with tight deadlines. My role is to simplify every step so you can focus on your transition.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/en/contact/">Book a call</Link>
+        <Link to="/en/contact/">Talk to Yanis</Link>
       </Button>
     </ContentBlock>
 
@@ -83,7 +83,7 @@ const MilitaryBuyerPageEn = () => (
       title="Ready to find your property in Gatineau?"
       text="Let's discuss your posting and your criteria. We'll build the plan together."
       buttons={[
-        { label: "Book a call", href: "/en/contact/" },
+        { label: "Talk to Yanis", href: "/en/contact/" },
         { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options. You decide."

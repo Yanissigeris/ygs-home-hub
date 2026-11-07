@@ -140,8 +140,11 @@ export const ValuationHeroPreview = ({ lang, className = "" }: { lang: Lang; cla
       className={`max-w-[30rem] rounded-lg border border-[rgba(247,244,238,0.15)] bg-[rgba(0,14,53,0.7)] p-5 md:p-6 ${className}`}
       style={{ fontFamily: "var(--sans)" }}
     >
-      <figcaption className="text-[0.9375rem] font-semibold leading-snug text-[var(--cream)]">
-        {t.sub}
+      <figcaption className="flex items-start justify-between gap-3">
+        <span className="text-[0.9375rem] font-semibold leading-snug text-[var(--cream)]">{t.sub}</span>
+        <span className="shrink-0 text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.85)]">
+          {t.example}
+        </span>
       </figcaption>
       <dl className="mt-5 grid grid-cols-3 gap-3 border-t border-[rgba(247,244,238,0.15)] pt-4">
         {cols.map((c) => (
@@ -156,7 +159,7 @@ export const ValuationHeroPreview = ({ lang, className = "" }: { lang: Lang; cla
           </div>
         ))}
       </dl>
-      <p className="mt-4 text-[0.75rem] leading-[1.5] text-[rgba(247,244,238,0.7)]">{t.foot}</p>
+      <p className="mt-4 text-[0.8125rem] leading-[1.5] text-[rgba(247,244,238,0.85)]">{t.foot}</p>
     </figure>
   );
 };

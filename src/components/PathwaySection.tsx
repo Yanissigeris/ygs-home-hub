@@ -280,10 +280,10 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   style={{
                     fontSize: ".78rem",
                     fontWeight: 600,
-                    color: "var(--gold2)",
+                    color: "var(--gold-bright)",
                     letterSpacing: ".06em",
                     textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(90,128,255,.3)",
+                    borderBottom: "1px solid rgba(138,168,255,.4)",
                     paddingBottom: 2,
                     alignSelf: "flex-start",
                     minHeight: 44,

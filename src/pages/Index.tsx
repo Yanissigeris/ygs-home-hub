@@ -48,7 +48,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
           subtitleShort="Vendre, acheter ou investir, à partir des ventes de votre secteur."
           sansTitle
           primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
-          secondaryCta={{ label: "Parlons de votre projet", href: "/contact-yanis/" }}
+          secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
           socialProof="Hall of Fame RE/MAX"
           heroBgImage={yanisHero}
           heroBgImageMobile={yanisHeroMobileAvif}

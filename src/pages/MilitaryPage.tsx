@@ -54,7 +54,7 @@ const MilitaryPage = () => (
       overline="Militaire · Gatineau"
       title="Militaire? Trouvez votre propriété à Gatineau"
       subtitle="Acheter ou vendre lors d'une mutation? Je vous aide à comprendre le marché de Gatineau et à respecter votre calendrier."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Guide militaire", href: "/guide-militaire-gatineau/" }}
       trustLine="Service adapté aux militaires."
       heroBgImage={heroImg}
@@ -101,7 +101,7 @@ const MilitaryPage = () => (
         Depuis 2017 à Gatineau, j'ai accompagné des familles militaires dans toutes sortes de situations. Mon rôle est de simplifier le processus pour que vous puissiez vous concentrer sur votre mission.
       </p>
       <Button className="mt-8" size="lg" asChild>
-        <Link to="/contact-yanis/">Réserver un appel</Link>
+        <Link to="/contact-yanis/">Parler à Yanis</Link>
       </Button>
     </ContentBlock>
 
@@ -118,7 +118,7 @@ const MilitaryPage = () => (
       title="Prêt à planifier votre relocalisation?"
       text="Parlons de votre mutation et de votre calendrier. Je m'adapte à vous."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Guide militaire", href: "/guide-militaire-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

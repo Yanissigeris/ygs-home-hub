@@ -123,12 +123,14 @@ const VisibleBreadcrumb = () => {
         {parentItem && (
           <div
             className="flex md:hidden items-center"
-            style={{ padding: "0.5rem 0" }}
+            style={{ padding: "0" }}
           >
             <Link
               to={parentItem.href}
               className="flex items-center gap-1 no-underline"
               style={{
+                minHeight: 44,
+                paddingRight: 16,
                 color: "var(--muted, #5E6A85)",
                 fontSize: "0.72rem",
                 fontWeight: 500,

@@ -101,7 +101,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="label-overline mb-2">FAQ</p>
+            <p className="label-overline mb-2 justify-center">FAQ</p>
             <h2>{resolvedTitle}</h2>
             {updated && (
               <p className="mt-3 text-xs text-muted-foreground">
@@ -150,7 +150,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
               onClick={() => setExpanded(true)}
               aria-expanded={expanded}
               aria-controls={accordionId}
-              className="mt-4 mx-auto flex items-center gap-1.5 text-[0.875rem] font-medium text-primary hover:text-primary/80 transition-colors"
+              className="mt-4 mx-auto flex min-h-[44px] items-center gap-1.5 px-3 text-[0.875rem] font-medium text-primary hover:text-primary/80 transition-colors"
             >
               {lang === "en" ? `Show all ${items.length} questions` : `Voir les ${items.length} questions`}
               <ChevronDown size={14} aria-hidden="true" />

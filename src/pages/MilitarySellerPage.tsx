@@ -84,7 +84,7 @@ const MilitarySellerPage = () => (
       text="Parlons de votre calendrier et de vos options. Plus on s'y prend tôt, plus on a de marge de manœuvre."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-        { label: "Réserver un appel", href: "/contact-yanis/", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

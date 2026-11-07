@@ -1,14 +1,11 @@
 import PageMeta from "@/components/PageMeta";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
-import { Link } from "react-router-dom";
 import SectorLinks from "@/components/SectorLinks";
 import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
-import CTASection from "@/components/CTASection";
 import ReviewSection from "@/components/ReviewSection";
 import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
@@ -86,9 +83,6 @@ const SellerPage = () =>
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         C'est pour ça que mon approche part de la réalité du marché dans votre secteur, pas d'un chiffre pour vous faire plaisir.
       </p>
-      <div className="mt-6">
-        <Button asChild><Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite →</Link></Button>
-      </div>
     </ContentBlock>
 
 <CardGrid
@@ -127,6 +121,34 @@ const SellerPage = () =>
 
     <ProcessSteps steps={steps} background="alt" />
 
+    <ReviewSection
+    overline="Témoignages vendeurs"
+    title="Ce que disent mes vendeurs"
+    reviews={getReviewsByCategory("seller").slice(0, 2)}
+    columns={2}
+    background="alt" />
+
+
+
+    <FunnelNextStep
+    overline="Prochaine étape"
+    title="Par où commencer?"
+    subtitle="Chaque vendeur a une situation différente. Choisissez l'étape qui vous convient."
+    steps={nextSteps} />
+  
+
+    <GuideInlineCTA
+    guideType="seller_guide"
+    headline="Vous pensez vendre? Recevez le guide vendeur."
+    text="Tout ce que vous devez savoir pour vendre au bon prix à Gatineau, dans un guide clair envoyé par courriel."
+    ctaLabel="Recevoir le guide vendeur" />
+  
+
+
+  
+
+    <FAQSection items={faq} />
+
     <SectorLinks sectors={[
       { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
       { name: "Plateau", href: "/plateau/", detail: "Côtés Aylmer et Hull, maisons neuves, familial" },
@@ -146,7 +168,6 @@ const SellerPage = () =>
       overline="À lire aussi"
       title="Articles et ressources pour vendeurs"
       pages={[
-        { title: "Évaluation gratuite", text: "Combien vaut votre propriété?", href: "/evaluation-gratuite-gatineau/" },
         { title: "Quand vendre sa maison à Gatineau", text: "Le bon moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
         { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
         { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
@@ -159,42 +180,6 @@ const SellerPage = () =>
       title={marketBlockCopy.fr.title}
       pages={marketArticlePages("fr", "seller")}
     />
-
-    <FunnelNextStep
-    overline="Prochaine étape"
-    title="Par où commencer?"
-    subtitle="Chaque vendeur a une situation différente. Choisissez l'étape qui vous convient."
-    steps={nextSteps} />
-  
-
-    <GuideInlineCTA
-    guideType="seller_guide"
-    headline="Vous pensez vendre? Recevez le guide vendeur."
-    text="Tout ce que vous devez savoir pour vendre au bon prix à Gatineau, dans un guide clair envoyé par courriel."
-    ctaLabel="Recevoir le guide vendeur" />
-  
-
-
-    <ReviewSection
-    overline="Témoignages vendeurs"
-    title="Ce que disent mes vendeurs"
-    reviews={getReviewsByCategory("seller").slice(0, 2)}
-    columns={2}
-    background="alt" />
-  
-
-    <CTASection
-    dark
-    title="Vous voulez savoir quoi faire dans votre cas?"
-    text="Une évaluation gratuite ou un plan vendeur, selon où vous en êtes."
-    buttons={[
-    { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-    { label: "Recevoir mon plan vendeur", href: "/plan-vendeur-gatineau/", variant: "outline" }]
-    }
-    trustLine="Je vous donne les chiffres et les options, vous décidez." />
-  
-
-    <FAQSection items={faq} />
     <StickyMobileCTA forceIntent="vendre" />
   </>;
 

@@ -97,7 +97,7 @@ const NeighborhoodPage = () => (
       text="Je peux vous aider à y voir clair, pour acheter dans le secteur ou pour connaître la valeur de votre propriété."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

@@ -133,7 +133,7 @@ const VerifierCourtierOaciqPage = () => (
         { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
-      trustLine="Permis OACIQ valide · Club Platine · Temple de la renommée RE/MAX"
+      trustLine="Permis OACIQ valide · Club Platine · Hall of Fame RE/MAX"
     />
 
     <FAQSection items={faq} />

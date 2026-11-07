@@ -85,6 +85,7 @@ const ValuationPageEn = () => {
         quote="“This is the second time I've used his services and I'm always very satisfied. Yanis is very professional, respectful, honest and trustworthy.”"
         cite="Sylvie, Aylmer, 2026 (translated from French)"
       />
+      <FAQSection title="Valuation questions" items={valuationFaqEn} />
       <RelatedPages
         overline="Also worth reading"
         title="Related resources"
@@ -100,7 +101,6 @@ const ValuationPageEn = () => {
       />
       {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
       <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
-      <FAQSection title="Valuation questions" items={valuationFaqEn} />
     </>
   );
 };

@@ -161,6 +161,7 @@ const ValuationPage = () => {
           cite="Sylvie, Aylmer, 2026"
         />
       )}
+      <FAQSection title="Questions sur l'évaluation" items={valuationFaqFr} />
       <RelatedPages
         overline="À lire aussi"
         title="Ressources liées"
@@ -180,7 +181,6 @@ const ValuationPage = () => {
         title={marketBlockCopy.fr.title}
         pages={marketArticlePages("fr", "seller")}
       />
-      <FAQSection title="Questions sur l'évaluation" items={valuationFaqFr} />
     </>
   );
 };

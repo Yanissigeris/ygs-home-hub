@@ -205,7 +205,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
           </div>
 
           {n > visible && (
-            <div className="mt-6 flex justify-center gap-2">
+            <div className="mt-6 flex justify-center gap-0">
               {reviews.map((_, i) => (
                 <button
                   key={i}
@@ -213,7 +213,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                   aria-label={getA11yLabel("testimonial.goTo", lang, { n: i + 1 })}
                   aria-current={i === active ? "true" : undefined}
                   onClick={() => goTo(i)}
-                  className="flex h-11 w-6 items-center justify-center"
+                  className="flex h-11 w-11 items-center justify-center"
                 >
                   <span
                     className="block rounded-full transition-all duration-300"

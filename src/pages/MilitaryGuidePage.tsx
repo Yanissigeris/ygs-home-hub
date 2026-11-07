@@ -42,7 +42,7 @@ const MilitaryGuidePage = () => (
       overline="Guide militaire · Gatineau"
       title="Guide immobilier pour militaires à Gatineau"
       subtitle="Mutation vers la RCN? Tout ce que vous devez savoir pour acheter, vendre ou vous installer à Gatineau en tant que militaire."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Voir le service militaire", href: "/militaire-gatineau/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
       heroBgImage={heroImg}
@@ -96,7 +96,7 @@ const MilitaryGuidePage = () => (
       title="Planifions votre relocalisation militaire"
       text="Réservez un appel gratuit. On adapte le plan à votre mutation et à votre calendrier."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/", variant: "outline" },
       ]}
       trustLine="Je m'adapte à votre rythme. Vous décidez quand vous êtes prêt."

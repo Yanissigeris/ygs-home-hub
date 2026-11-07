@@ -62,6 +62,7 @@ const T = {
     trustAlt: "Yanis Gauthier-Sigeris, courtier immobilier",
     trustTransactions: "300+ transactions",
     receive: "Vous recevez une fourchette de valeur et trois prix d'affichage.",
+    beforeSend: "S'il me manque un détail sur l'état de la maison, je vous contacte.",
   },
   en: {
     confidential: "Confidential, no obligation",
@@ -102,6 +103,7 @@ const T = {
     trustAlt: "Yanis Gauthier-Sigeris, real estate broker",
     trustTransactions: "300+ transactions",
     receive: "You'll receive a value range and three listing prices.",
+    beforeSend: "If I'm missing a detail about the home's condition, I'll get in touch.",
   },
 } as const;
 
@@ -159,7 +161,12 @@ const makeSchema = (lang: "fr" | "en") => {
       .optional()
       .transform((v) => v ?? "")
       .refine(isValidCAPhone, { message: t.errPhone }),
-    address: z.string().trim().min(5, { message: t.errAddress }),
+    // Une vraie adresse : un numéro civique, ou un nom de chemin assez long (terrain, rang).
+    address: z
+      .string()
+      .trim()
+      .min(5, { message: t.errAddress })
+      .refine((v) => (/\d/.test(v) && v.length >= 6) || v.length >= 12, { message: t.errAddress }),
     message: z
       .string()
       .max(500, { message: t.errMessageMax })
@@ -556,7 +563,7 @@ const ValuationForm = ({
           variant="accent"
           className={cn(
             "w-full font-semibold",
-            isGlass && "mt-1 bg-[var(--gold-dark)] text-[#F7F4EE] border-transparent hover:bg-[var(--gold-text)] hover:text-[#F7F4EE] shadow-[0_4px_20px_-4px_hsl(225_100%_60%_/_0.35)]",
+            isGlass && "mt-1 bg-[var(--action)] text-white border-transparent hover:bg-[var(--action-hover)] hover:text-white shadow-[0_4px_20px_-4px_hsl(225_100%_60%_/_0.35)]",
           )}
           disabled={submitting}
         >
@@ -567,6 +574,10 @@ const ValuationForm = ({
           )}
           {submitting ? t.submitting : submitText}
         </Button>
+
+        {isGlass && (
+          <p className="text-center text-[0.8125rem] leading-snug text-primary-foreground/85">{t.beforeSend}</p>
+        )}
 
         {showTrustBadges && (
           <div

@@ -55,7 +55,7 @@ const cfgFr = {
   servicesHeading: "Services offerts",
   allNeighborhoods: "Voir tous les quartiers",
   allNeighborhoodsHref: "/quartiers-a-considerer-a-gatineau/",
-  consultation: "Réserver une consultation",
+  consultation: "Parler à Yanis",
   consultationHref: "/contact-yanis/",
 };
 
@@ -67,7 +67,7 @@ const cfgEn = {
   servicesHeading: "Services offered",
   allNeighborhoods: "All neighbourhoods",
   allNeighborhoodsHref: "/en/neighborhoods/",
-  consultation: "Book a consultation",
+  consultation: "Talk to Yanis",
   consultationHref: "/en/contact/",
 };
 
@@ -153,8 +153,8 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "areas" ? "var(--cream-deep)" : "rgba(245,241,234,0.4)",
-                borderBottom: activeTab === "areas" ? "2px solid var(--gold)" : "2px solid transparent",
+                color: activeTab === "areas" ? "var(--cream-deep)" : "rgba(245,241,234,0.72)",
+                borderBottom: activeTab === "areas" ? "2px solid var(--cream-deep)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
               }}
@@ -168,8 +168,8 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
                 padding: ".75rem",
                 fontSize: ".8rem",
                 fontWeight: 600,
-                color: activeTab === "services" ? "var(--cream-deep)" : "rgba(245,241,234,0.4)",
-                borderBottom: activeTab === "services" ? "2px solid var(--gold)" : "2px solid transparent",
+                color: activeTab === "services" ? "var(--cream-deep)" : "rgba(245,241,234,0.72)",
+                borderBottom: activeTab === "services" ? "2px solid var(--cream-deep)" : "2px solid transparent",
                 background: "transparent",
                 cursor: "pointer",
               }}

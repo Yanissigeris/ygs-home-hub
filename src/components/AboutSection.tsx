@@ -11,8 +11,8 @@ Avant de parler de prix, je vous montre les ventes comparables de votre secteur.
 
 Comme investisseur, j'ai rénové et revendu des propriétés, et j'ai une AEC en gestion de projet. Quand vous regardez un plex ou une maison à rénover, je sais lire les loyers et estimer les travaux.
 
-Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Temple de la renommée (2024).`,
-  credentials: "Depuis 2017 · Club Platine · Club 100% · Temple de la renommée",
+Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. RE/MAX m'a reconnu au Club 100 %, au Club Platine et au Hall of Fame (2024).`,
+  credentials: "Depuis 2017 · Club Platine · Club 100% · Hall of Fame",
   cta: "En savoir plus",
   ctaHref: "/contact-yanis/",
   imgAlt: "Yanis Gauthier-Sigeris, Courtier immobilier, Gatineau",
