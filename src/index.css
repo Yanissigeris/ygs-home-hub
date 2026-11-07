@@ -109,6 +109,7 @@
     --review-card: #E6EAF4;
     --serif: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --sans: 'DM Sans', system-ui, sans-serif;
+    --display: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
     --ease: cubic-bezier(.22,.61,.36,1);
 
     /* Article body tokens — single source of truth for blog article prose */
@@ -206,6 +207,15 @@
     font-family: var(--serif);
     color: hsl(var(--foreground));
     text-wrap: balance;
+  }
+
+  /* Grands titres en Playfair Display (choix de Yanis, 7 nov. 2026).
+     !important : plusieurs titres fixent leur police en style inline.
+     Le texte et la structure HTML ne changent pas. */
+  h1, h2 {
+    font-family: var(--display) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
   }
 
   h1 {
