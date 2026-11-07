@@ -95,7 +95,7 @@ const ResourcesPage = () => (
       text="Évaluation gratuite, consultation acheteur ou analyse plex, choisissez votre prochaine étape."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="On avance à votre rythme."
     />

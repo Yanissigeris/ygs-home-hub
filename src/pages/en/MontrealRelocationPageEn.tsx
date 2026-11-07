@@ -34,20 +34,20 @@ const MontrealRelocationPageEn = () => (
       overline="Relocation · Montreal → Gatineau"
       title="Moving to Gatineau from Montreal"
       subtitle="Leaving Montreal for the Outaouais? I help you compare Gatineau's sectors and prices before you buy."
-      primaryCta={{ label: "Book a call", href: "/en/contact/" }}
+      primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       secondaryCta={{ label: "See neighbourhoods", href: "/en/neighborhoods/" }}
       trustLine="Relocation specialist. Full transparency."
       heroBgImage={heroImg}
     />
 <CardGrid overline="Before you move" title="Comparing Gatineau and Montreal" items={challenges} />
-    <InlineCTA text="Want to know what your budget gets you in Gatineau? We'll look at areas and prices together." buttonLabel="Book a call →" href="/en/contact/" />
+    <InlineCTA text="Want to know what your budget gets you in Gatineau? We'll look at areas and prices together." buttonLabel="Talk to Yanis →" href="/en/contact/" />
     <SectorLinks overline="A few areas" title="Neighbourhoods to consider" sectors={sectors} background="alt" />
     <ContentBlock narrow>
       <SectionHeading title="A local broker who understands your situation" />
       <p className="prose-body mt-5">The transition from Montreal to Gatineau is simpler than you think: same province, same notarial process. My role is to show you the neighbourhoods that match your criteria and support you through every step.</p>
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Relocation Guide" text="What you need to know to settle in Gatineau from Montreal: neighbourhoods, prices, process and schools." ctaLabel="Get the guide" />
-    <CTASection dark title="Let's talk about your move to Gatineau" text="Book a free call. We'll look at neighbourhoods and options together." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "See neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Let's talk about your move to Gatineau" text="Book a free call. We'll look at neighbourhoods and options together." buttons={[{ label: "Talk to Yanis", href: "/en/contact/" }, { label: "See neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide, get it by email" />
   </>
 );

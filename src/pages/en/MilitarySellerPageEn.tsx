@@ -84,7 +84,7 @@ const MilitarySellerPageEn = () => (
       text="Let's discuss your timeline and your options. The sooner we start, the more room we have to work."
       buttons={[
         { label: "Free Home Valuation", href: "/en/home-valuation/" },
-        { label: "Book a call", href: "/en/contact/", variant: "outline" },
+        { label: "Talk to Yanis", href: "/en/contact/", variant: "outline" },
       ]}
       trustLine="I give you the numbers and the options. You decide."
     />

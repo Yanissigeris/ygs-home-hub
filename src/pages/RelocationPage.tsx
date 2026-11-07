@@ -39,7 +39,7 @@ const steps = [
 
 
 const nextSteps = [
-  { title: "Réserver un appel", text: "On discute de votre relocalisation et de vos questions. L'appel est gratuit.", href: "/contact-yanis/", cta: "Réserver un appel", highlight: true },
+  { title: "Réserver un appel", text: "On discute de votre relocalisation et de vos questions. L'appel est gratuit.", href: "/contact-yanis/", cta: "Parler à Yanis", highlight: true },
   { title: "Guide relocalisation", text: "Ce qu'il faut savoir pour s'installer à Gatineau : secteurs, prix, processus et écoles.", href: "/guide-relocalisation-gatineau/", cta: "Lire le guide" },
   { title: "Comparer les quartiers", text: "Les secteurs de Gatineau selon votre style de vie et votre budget.", href: "/quartiers-a-considerer-a-gatineau/", cta: "Voir les quartiers" },
 ];
@@ -59,7 +59,7 @@ const RelocationPage = () => (
       overline="Ottawa → Gatineau"
       title="S'installer à Gatineau depuis Ottawa ou ailleurs"
       subtitle="Vous pensez traverser la rivière? Je vous aide à comprendre les secteurs et les prix, puis à trouver la bonne propriété."
-      primaryCta={{ label: "Réserver un appel", href: "/contact-yanis/" }}
+      primaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       secondaryCta={{ label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/" }}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
       heroBgImage={heroImg}
@@ -125,7 +125,7 @@ const RelocationPage = () => (
       title="Parlons de votre projet de relocalisation"
       text="On clarifie votre budget et les secteurs à cibler lors d'un premier appel, sans engagement."
       buttons={[
-        { label: "Réserver un appel", href: "/contact-yanis/" },
+        { label: "Parler à Yanis", href: "/contact-yanis/" },
         { label: "Guide relocalisation", href: "/guide-relocalisation-gatineau/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."

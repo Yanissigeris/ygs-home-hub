@@ -227,7 +227,7 @@ const BlogPage = () => {
         text="Les articles sont un bon point de départ. Pour une stratégie adaptée à votre situation, parlons-en."
         buttons={[
           { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau" },
-          { label: "Réserver une consultation", href: "/contact-yanis", variant: "outline" },
+          { label: "Parler à Yanis", href: "/contact-yanis", variant: "outline" },
         ]}
         trustLine="On avance à votre rythme."
       />

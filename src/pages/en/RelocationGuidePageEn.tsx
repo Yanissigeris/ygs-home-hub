@@ -46,7 +46,7 @@ const RelocationGuidePageEn = () => (
   <>
     <PageMeta title="Relocation Guide: Moving to Gatineau" description="Complete relocation guide for moving to Gatineau. Neighbourhoods, prices, process and schools." ogImage="https://yanisgauthier.com/og/og-reloc.jpg" />
     <ServiceJsonLd name="Relocation Guide to Gatineau" description="A guide to settling in Gatineau from Ottawa. Neighbourhoods, schools, services and Quebec process explained." url="/en/relocation-guide/" serviceType="Real Estate Relocation Guide" />
-    <HeroSection overline="Relocation Guide · Gatineau" title="Relocating to Gatineau: the guide" subtitle="What you need to know to prepare your move: neighbourhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Book a call", href: "/en/contact/" }} secondaryCta={{ label: "See neighbourhoods", href: "/en/neighborhoods/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
+    <HeroSection overline="Relocation Guide · Gatineau" title="Relocating to Gatineau: the guide" subtitle="What you need to know to prepare your move: neighbourhoods, prices, process, schools and lifestyle." primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} secondaryCta={{ label: "See neighbourhoods", href: "/en/neighborhoods/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
 
     <BenefitsList overline="In this guide" title="What you'll learn" items={topics} />
 
@@ -63,13 +63,13 @@ const RelocationGuidePageEn = () => (
 
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide, get it by email" />
 
-    <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Book a call →" href="/en/contact/" />
+    <InlineCTA text="Want personalized support? Book a free call." buttonLabel="Talk to Yanis →" href="/en/contact/" />
 
     <FAQSection items={faq} />
 
     <RelatedPages overline="Also worth reading" title="Related pages" pages={related} background="alt" />
 
-    <CTASection dark title="Let's plan your move" text="Book a free call. We'll clarify your options and next steps." buttons={[{ label: "Book a call", href: "/en/contact/" }, { label: "See neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Let's plan your move" text="Book a free call. We'll clarify your options and next steps." buttons={[{ label: "Talk to Yanis", href: "/en/contact/" }, { label: "See neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
   </>
 );
 export default RelocationGuidePageEn;

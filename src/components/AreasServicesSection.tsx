@@ -55,7 +55,7 @@ const cfgFr = {
   servicesHeading: "Services offerts",
   allNeighborhoods: "Voir tous les quartiers",
   allNeighborhoodsHref: "/quartiers-a-considerer-a-gatineau/",
-  consultation: "Réserver une consultation",
+  consultation: "Parler à Yanis",
   consultationHref: "/contact-yanis/",
 };
 
@@ -67,7 +67,7 @@ const cfgEn = {
   servicesHeading: "Services offered",
   allNeighborhoods: "All neighbourhoods",
   allNeighborhoodsHref: "/en/neighborhoods/",
-  consultation: "Book a consultation",
+  consultation: "Talk to Yanis",
   consultationHref: "/en/contact/",
 };
 

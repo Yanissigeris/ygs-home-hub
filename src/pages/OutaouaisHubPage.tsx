@@ -177,7 +177,7 @@ const OutaouaisHubPage = () => (
       text="Évaluation, consultation achat ou analyse plex, on commence là où vous êtes rendu."
       buttons={[
         { label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" },
-        { label: "Réserver une consultation", href: "/contact-yanis/", variant: "outline" },
+        { label: "Parler à Yanis", href: "/contact-yanis/", variant: "outline" },
       ]}
       trustLine="Je vous donne les chiffres et les options, vous décidez."
     />

@@ -35,7 +35,7 @@ const MilitaryRelocationPageEn = () => (
   <>
     <PageMeta title="Military Relocation to Gatineau" description="Military posting to Gatineau and the Outaouais? SIRVA or BGRS process, neighbourhoods based on your workplace, timelines and bilingual service." ogImage="https://yanisgauthier.com/og/og-military.jpg" />
     <ServiceJsonLd name="Military Relocation to Gatineau" description="Real estate service for military members posted to Gatineau: SIRVA or BGRS, neighbourhoods, timelines and bilingual service." url="/en/military-relocation" serviceType="Military Relocation Service" />
-    <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property on your timeline." primaryCta={{ label: "Book a call", href: "/en/contact" }} trustLine="Service adapted to military members." heroBgImage={heroImg} />
+    <HeroSection overline="Military Relocation · Gatineau" title="Military relocation to Gatineau" subtitle="Posting to the area? I help you find the right property on your timeline." primaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} trustLine="Service adapted to military members." heroBgImage={heroImg} />
 <section className="py-8 bg-card border-y border-border/30">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
@@ -50,7 +50,7 @@ const MilitaryRelocationPageEn = () => (
       <SectionHeading overline="Why YGS" title="Support adapted to your pace" subtitle="Postings don't follow the normal real estate calendar. I adapt to your timeline and constraints." />
     </ContentBlock>
     <GuideInlineCTA lang="en" guideType="relocation_guide" headline="Free Military Relocation Guide" text="What you need to know about buying or selling during a posting to Gatineau, in a guide sent to your email." ctaLabel="Get the guide" />
-    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting and we'll build a plan together." buttons={[{ label: "Book a call", href: "/en/contact" }, { label: "Free Home Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
+    <CTASection dark title="Let's plan your relocation" text="Tell me about your posting and we'll build a plan together." buttons={[{ label: "Talk to Yanis", href: "/en/contact" }, { label: "Free Home Valuation", href: "/en/home-valuation", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <FAQSection items={faq} />
     <StickyGuideBanner lang="en" guideType="relocation_guide" label="Free Relocation Guide, get it by email" />
   </>

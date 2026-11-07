@@ -14,8 +14,6 @@ import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
 import heroImg from "@/assets/hero-vendre-gatineau.webp";
 
@@ -71,9 +69,6 @@ const SellerPageEn = () => (
       <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
         That's why my approach starts from the reality of the market in your area, not from a number designed to make you feel good.
       </p>
-      <div className="mt-6">
-        <Button asChild><Link to="/en/home-valuation/">Free Home Valuation →</Link></Button>
-      </div>
     </ContentBlock>
 
 <CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
@@ -85,12 +80,11 @@ const SellerPageEn = () => (
       <p className="prose-body mt-4">I've been helping sellers across the Outaouais since 2017, and I know a good sale takes preparation. It all begins with a value based on local comparables. Then come the price and the improvements that pay off, followed by marketing aimed at the right buyers, including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
     <ProcessSteps steps={steps} background="alt" />
+    <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the seller guide." text="Everything you need to know to sell at the right price in Gatineau, in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
-    <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
-    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
-    <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
     <FAQSection items={faq} />
+    <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />
     <StickyMobileCTA forceIntent="vendre" />
   </>
 );

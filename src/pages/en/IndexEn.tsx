@@ -47,7 +47,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       subtitleShort="Sell, buy or invest, based on sales in your area."
       sansTitle
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
-      secondaryCta={{ label: "Let's discuss your plans", href: "/en/contact/" }}
+      secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="Hall of Fame RE/MAX"
       heroBgImage={yanisHero}
       heroBgImageMobile={yanisHeroMobileAvif}
