@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 ease-out active:scale-[0.97] active:duration-150 motion-reduce:active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -14,7 +14,7 @@ const buttonVariants = cva(
         outline: "border border-border bg-background text-foreground hover:bg-secondary hover:border-primary/20 rounded-full font-semibold",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70 rounded-full font-semibold",
         ghost: "hover:bg-secondary hover:text-foreground rounded-[0.5rem] font-medium",
-        link: "text-primary underline-offset-4 hover:underline font-medium",
+        link: "text-primary underline-offset-4 hover:underline font-medium active:scale-100",
         hero: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",
         "hero-outline": "border border-[#F5F1E8]/15 text-[#A6AEC2] bg-transparent hover:bg-[#F5F1E8]/[0.06] hover:border-[#F5F1E8]/25 hover:text-[#F5F1E8]/80 font-medium rounded-full",
         accent: "bg-transparent border-[1.5px] border-[#3366FF] text-[var(--gold-text)] hover:bg-[var(--gold-dark)] hover:text-white font-semibold rounded-full shadow-none transition-all duration-200 ease-out",

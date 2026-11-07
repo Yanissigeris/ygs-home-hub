@@ -996,6 +996,14 @@ h1.hero-eyebrow {
   animation: ygs-err-in 150ms cubic-bezier(.22, 1, .36, 1) both;
 }
 
+/* Retour tactile à la pression (barre collante mobile) */
+.motion-press {
+  transition: color 150ms ease, background-color 150ms ease, transform 150ms cubic-bezier(.22, 1, .36, 1);
+}
+.motion-press:active {
+  transform: scale(0.97);
+}
+
 /* Mouvement réduit : fondu doux seulement, sans déplacement.
    (La règle globale plus haut ramène tout à 0,01 ms ; une classe l'emporte sur *.) */
 @media (prefers-reduced-motion: reduce) {
@@ -1006,5 +1014,8 @@ h1.hero-eyebrow {
   }
   .motion-err {
     animation: ygs-fade 150ms ease both !important;
+  }
+  .motion-press:active {
+    transform: none;
   }
 }
