@@ -36,7 +36,7 @@ const steps = [
   { num: "03", title: "Through to the notary", desc: "I handle showings and negotiation, then coordinate the file with the notary." },
 ];
 const nextSteps = [
-  { title: "Free home valuation", text: "Knowing your property's value is free, with no commitment. Your request stays confidential.", href: "/en/home-valuation/", cta: "Get my valuation" },
+  { title: "Free home valuation", text: "Knowing your property's value is free, with no commitment. Your request stays confidential.", href: "/en/home-valuation/", cta: "Get my valuation", highlight: true },
   { title: "Seller plan", text: "A clear plan, from pricing to marketing, built around your property and your situation.", href: "/en/seller-plan/", cta: "Get my plan" },
   { title: "Talk to Yanis", text: "A call to clarify your options and answer your questions.", href: "/en/contact/", cta: "Book a call" },
 ];

@@ -42,7 +42,7 @@ const steps = [
 
 
 const nextSteps = [
-{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété est gratuit et sans engagement. Votre demande reste confidentielle.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur" },
+{ title: "Évaluation gratuite", text: "Connaître la valeur de votre propriété est gratuit et sans engagement. Votre demande reste confidentielle.", href: "/evaluation-gratuite-gatineau/", cta: "Obtenir ma valeur", highlight: true },
 { title: "Plan vendeur", text: "Un plan clair, du prix à la mise en marché, adapté à votre propriété et à votre situation.", href: "/plan-vendeur-gatineau/", cta: "Recevoir mon plan" },
 { title: "Parler à Yanis", text: "Un appel pour clarifier vos options et répondre à vos questions.", href: "/contact-yanis/", cta: "Réserver un appel" }];
 
