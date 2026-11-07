@@ -58,13 +58,13 @@ export const MEDIAN_HISTORY_SOURCE_RANGE = { fr: "T4 2024 à T3 2026", en: "Q4 2
 
 export const formatPrice = (value: number, lang: "fr" | "en") =>
   lang === "fr"
-    ? `${new Intl.NumberFormat("fr-CA").format(value)} $`
+    ? `${new Intl.NumberFormat("fr-CA").format(value)}\u00a0$`
     : `$${new Intl.NumberFormat("en-CA").format(value)}`;
 
 export const formatChange = (change: number, lang: "fr" | "en") => {
   const sign = change > 0 ? "+" : change < 0 ? "−" : "";
-  return lang === "fr" ? `${sign}${Math.abs(change)} %` : `${sign}${Math.abs(change)}%`;
+  return lang === "fr" ? `${sign}${Math.abs(change)}\u00a0%` : `${sign}${Math.abs(change)}%`;
 };
 
 export const quarterLabel = (quarter: number, year: number, lang: "fr" | "en") =>
-  lang === "fr" ? `T${quarter} ${year}` : `Q${quarter} ${year}`;
+  lang === "fr" ? `T${quarter}\u00a0${year}` : `Q${quarter}\u00a0${year}`;

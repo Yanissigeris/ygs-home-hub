@@ -42,7 +42,7 @@ const MedianPriceChart = ({ lang, category }: Props) => {
 
   const data = MEDIAN_HISTORY.map((row) => ({
     key: `${row.quarter}`,
-    axis: lang === "fr" ? `T${row.quarter}` : `Q${row.quarter}`,
+    axis: quarterLabel(row.quarter, row.latestYear, lang),
     previousLabel: quarterLabel(row.quarter, row.previousYear, lang),
     latestLabel: quarterLabel(row.quarter, row.latestYear, lang),
     previous: row[category].previous,
@@ -51,7 +51,7 @@ const MedianPriceChart = ({ lang, category }: Props) => {
   }));
 
   const tick = (v: number) =>
-    lang === "fr" ? `${Math.round(v / 1000)} k$` : `$${Math.round(v / 1000)}K`;
+    lang === "fr" ? `${Math.round(v / 1000)}\u00a0k$` : `$${Math.round(v / 1000)}K`;
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -61,11 +61,12 @@ const MedianPriceChart = ({ lang, category }: Props) => {
           dataKey="axis"
           tickLine={false}
           axisLine={false}
-          tick={{ fill: MUTED_TEXT, fontSize: 13 }}
+          tick={{ fill: MUTED_TEXT, fontSize: 12 }}
+          interval={0}
           dy={6}
         />
         <YAxis
-          width={52}
+          width={56}
           tickLine={false}
           axisLine={false}
           tickFormatter={tick}
