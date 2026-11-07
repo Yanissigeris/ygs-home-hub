@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { onValuationCtaClick } from "@/lib/valuationAnchor";
 import { Link } from "react-router-dom";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import type { NavItem, NavChild } from "@/data/navigation";
@@ -102,7 +101,7 @@ const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, cl
           >
             <Link
               to={ctaHref}
-              onClick={(e) => { onValuationCtaClick(e); closeMenu(); }}
+              onClick={closeMenu}
               className="flex w-full items-center justify-center transition-all duration-200"
               style={{ height: 48, background: "transparent", color: "var(--gold)", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid var(--gold)", transition: "all .2s ease" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }}

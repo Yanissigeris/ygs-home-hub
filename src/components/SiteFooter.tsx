@@ -1,5 +1,4 @@
 import * as React from "react";
-import { onValuationCtaClick } from "@/lib/valuationAnchor";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
@@ -122,7 +121,6 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
             <Link
               to={ctaHref}
-              onClick={onValuationCtaClick}
               className="inline-block transition-colors duration-200"
               style={{ background: "var(--action)", color: "var(--on-action)", borderRadius: 999, padding: "14px 32px", fontFamily: "var(--sans)", fontSize: 14, fontWeight: 600, textDecoration: "none" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--action-hover)"; }}
