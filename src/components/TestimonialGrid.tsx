@@ -1,4 +1,5 @@
 import * as React from "react";
+import { flushSync } from "react-dom";
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import type { Review } from "@/data/reviews";
@@ -90,6 +91,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     const [dragging, setDragging] = React.useState(false);
     const wheelAcc = React.useRef(0);
     const wheelLock = React.useRef(false);
+    const trackRef = React.useRef<HTMLDivElement>(null);
 
     const reduceMotion = React.useMemo(
       () => typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
@@ -125,6 +127,25 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       setIndex(((i % n) + n) % n);
     };
 
+    // Swipe d'une carte. Sans ce détour, reculer depuis le 1er avis (ou avancer depuis
+    // le dernier) faisait défiler toute la rangée. On saute d'abord, sans animation,
+    // sur la copie identique de la carte affichée, puis on glisse d'une seule carte.
+    const step = (dir: 1 | -1) => {
+      setStopped(true);
+      const real = index % n;
+      const from = dir === -1 && real === 0 ? n : real;
+      if (from !== index) {
+        flushSync(() => {
+          setAnimate(false);
+          setIndex(from);
+        });
+        // Lecture forcée : le navigateur applique le saut avant de relancer la transition.
+        void trackRef.current?.offsetWidth;
+      }
+      setAnimate(true);
+      setIndex(from + dir);
+    };
+
     // Drag with a finger or the mouse: the cards follow, then snap to the next or previous one.
     const onPointerDown = (e: React.PointerEvent) => {
       if (e.pointerType === "mouse" && e.button !== 0) return;
@@ -142,10 +163,11 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       if (dragStart.current === null) return;
       const dx = dragX;
       dragStart.current = null;
+      // Le saut éventuel se fait pendant que la carte suit encore le doigt (pas de transition).
+      if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
       setDragging(false);
       setDragX(0);
       setPaused(false);
-      if (Math.abs(dx) > 50) goTo((index % n) + (dx < 0 ? 1 : -1));
     };
     // Two-finger horizontal swipe on a trackpad.
     const onWheel = (e: React.WheelEvent) => {
@@ -156,7 +178,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
       wheelAcc.current = 0;
       wheelLock.current = true;
       setTimeout(() => { wheelLock.current = false; wheelAcc.current = 0; }, 700);
-      goTo((index % n) + dir);
+      step(dir);
     };
 
     const cardWidth = `calc((100% - ${GAP * (visible - 1)}px) / ${visible})`;
@@ -190,6 +212,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
             aria-roledescription="carousel"
           >
             <div
+              ref={trackRef}
               className="flex items-stretch"
               style={{
                 gap: GAP,
