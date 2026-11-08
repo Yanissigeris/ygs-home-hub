@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import ReviewCard from "@/components/ReviewCard";
 import type { Review } from "@/data/reviews";
@@ -32,16 +31,12 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
   }, ref) => (
     <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
       <div className="section-container">
-        <motion.div
+        <div
           className="text-center mb-6 sm:mb-8"
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* overline retiré (cohérence accueil) */}
           <h2>{title}</h2>
-        </motion.div>
+        </div>
         <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} ${quote ? "max-w-[64rem] sm:gap-14" : "max-w-[52rem]"} ${columns === 3 ? "lg:max-w-none" : ""} mx-auto`}>
           {reviews.map((review, i) => (
             <ReviewCard key={review.id} review={review} variant={variant} index={i} quote={quote} />

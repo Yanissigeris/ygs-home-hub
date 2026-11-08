@@ -6,7 +6,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-frais-courtage.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
@@ -36,17 +35,14 @@ const RealtorCommissionPageEn = () => (
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Realtor commission in Quebec: how it's calculated</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Which price the percentage applies to and when the commission becomes owed, based on the OACIQ brokerage contract.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
 

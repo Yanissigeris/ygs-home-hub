@@ -2,7 +2,6 @@ import * as React from "react";
 import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import { trackCTAClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -38,23 +37,15 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
       className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}
     >
       <div className="section-container max-w-[56rem]">
-        <motion.div
+        <div
           className="text-center mb-10 max-w-[40rem] mx-auto"
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <SectionHeading overline={overline} title={title} subtitle={subtitle} centered />
-        </motion.div>
+        </div>
         <div className={`grid gap-5 ${steps.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
           {steps.map((step, i) => (
-            <motion.div
+            <div
               key={step.title}
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
                 to={canonicalPath(step.href)}
@@ -90,7 +81,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

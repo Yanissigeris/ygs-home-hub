@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { LucideIcon, CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -29,25 +28,17 @@ const CardGrid = ({
 }: CardGridProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
     <div className="section-container max-w-[52rem]">
-      <motion.div
+      <div
         className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading overline={overline} title={title} centered={centered} />
-      </motion.div>
+      </div>
       <div className={`grid gap-5 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {items.map((item, i) => {
           const Icon = item.icon || CheckCircle2;
           return (
-            <motion.div
+            <div
               key={item.title}
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className={`card-elevated border border-border/40 bg-card p-7 ${
                 variant === "icon-inline" ? "flex items-start gap-4" : ""
               }`}
@@ -69,7 +60,7 @@ const CardGrid = ({
                   <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{item.text}</p>
                 </>
               )}
-            </motion.div>
+            </div>
           );
         })}
       </div>

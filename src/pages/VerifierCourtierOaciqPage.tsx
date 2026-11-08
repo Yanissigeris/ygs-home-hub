@@ -5,7 +5,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import { motion } from "framer-motion";
 import { Shield, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-verifier-oaciq.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
@@ -31,17 +30,14 @@ const VerifierCourtierOaciqPage = () => (
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Vérifier un courtier immobilier avec l'OACIQ</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Avant de confier la vente ou l'achat de votre propriété à un courtier, vérifiez qu'il est en règle. C'est gratuit et ça prend quelques minutes.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
 
@@ -65,19 +61,15 @@ const VerifierCourtierOaciqPage = () => (
             { num: "03", title: "Vérifiez le statut", text: "Assurez-vous que le permis est actif, ni suspendu ni assorti de conditions." },
             { num: "04", title: "Consultez l'historique", text: "Regardez si le registre signale des mesures disciplinaires. Le texte des décisions est publié sur citoyens.soquij.qc.ca." },
           ].map((step) => (
-            <motion.div
+            <div
               key={step.num}
               className="rounded-xl border border-border/40 bg-card p-5"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <div>
                 <h3 className="text-[0.9375rem] font-semibold">{step.title}</h3>
                 <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{step.text}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { canonicalPath } from "@/lib/url-utils";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 interface RelatedPage {
@@ -25,23 +24,15 @@ const RelatedPages = ({
 }: RelatedPagesProps) => (
   <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
-      <motion.div
+      <div
         className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading overline={overline} title={title} centered />
-      </motion.div>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {pages.map((page, i) => (
-          <motion.div
+          <div
             key={page.href}
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link
               to={canonicalPath(page.href)}
@@ -53,7 +44,7 @@ const RelatedPages = ({
               </div>
               <ArrowRight size={16} className="mt-1 shrink-0 text-muted-foreground/30 group-hover:text-primary transition-[color,transform] group-hover:translate-x-0.5" />
             </Link>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

@@ -5,7 +5,6 @@ import BenefitsList from "@/components/BenefitsList";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import { Clock, Shield, CheckCircle2, BadgeCheck } from "lucide-react";
-import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-aylmer.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
@@ -42,11 +41,6 @@ const afterSteps = [
   { title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" },
 ];
 
-const anim = {
-  initial: false as const,
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-};
 
 const ValuationAylmerPageEn = () => {
   return (
@@ -74,7 +68,7 @@ const ValuationAylmerPageEn = () => {
           }}
         />
         <div className="section-container relative grid items-center gap-8 py-12 md:grid-cols-[1fr_420px] md:py-20 lg:gap-14">
-          <motion.div {...anim}>
+          <div>
             <h1 className="text-primary-foreground">How much is your Aylmer property worth?</h1>
             <p className="mt-4 max-w-md text-[1.0625rem] leading-[1.6] text-primary-foreground/85">
               Receive a personalized valuation based on recent sales in your Aylmer neighbourhood. It's free, with no commitment.
@@ -87,23 +81,23 @@ const ValuationAylmerPageEn = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div {...anim} transition={{ ...anim.transition, delay: 0.15 }}>
+          <div>
             <ValuationForm lang="en" variant="card" locationTag="Aylmer" addressPlaceholder="123 Example St, Aylmer" />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <section className="section-padding bg-background">
         <div className="section-container max-w-[44rem]">
-          <motion.div {...anim} className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-6">
             <img src={yanisPhoto} alt="Yanis Gauthier" width={56} height={56} className="h-14 w-14 rounded-full object-cover" loading="lazy" decoding="async" />
             <div>
               <p className="font-semibold text-[0.9375rem]">Yanis Gauthier-Sigeris</p>
               <p className="text-[0.8125rem] text-muted-foreground flex items-center gap-1"><BadgeCheck size={13} className="text-[var(--ink-soft)]" /> Real estate broker · Aylmer & Outaouais</p>
             </div>
-          </motion.div>
+          </div>
           <BenefitsList title="What you receive" items={benefits} />
         </div>
       </section>

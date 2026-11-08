@@ -6,7 +6,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-frais-courtage.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
@@ -36,17 +35,14 @@ const FraisCourtagePage = () => (
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Frais de courtage immobilier au Québec : comment la commission se calcule</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Sur quel prix s'applique le pourcentage et à quel moment la commission devient due, selon le contrat de courtage de l'OACIQ.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
 

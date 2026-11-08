@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 interface FormSectionProps {
@@ -23,15 +22,11 @@ const FormSection = ({
 }: FormSectionProps) => (
   <section id={id} className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className={`section-container ${narrow ? "max-w-[36rem]" : ""}`}>
-      <motion.div
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      <div
       >
         {title && <SectionHeading title={title} subtitle={subtitle} centered={centered} />}
         {children}
-      </motion.div>
+      </div>
     </div>
   </section>
 );

@@ -2,7 +2,6 @@ import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import heroThankYou from "@/assets/hero-thank-you.webp";
 
@@ -25,11 +24,8 @@ const ThankYouPage = () => (
       }}
     >
       <div className="section-container max-w-[36rem]">
-        <motion.div
+        <div
           className="text-center"
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Merci, votre demande a été envoyée.</h1>
@@ -39,7 +35,7 @@ const ThankYouPage = () => (
           <Button className="mt-8" size="lg" asChild>
             <Link to="/">Retour à l'accueil</Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
 

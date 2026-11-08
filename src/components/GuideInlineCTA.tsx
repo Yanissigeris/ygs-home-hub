@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { BookOpen, ArrowRight, Lock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModal, { type GuideType } from "@/components/GuideModal";
@@ -22,11 +21,7 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
 
   return (
     <>
-      <motion.section
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      <section
         className="section-padding"
       >
         <div className="section-container max-w-[52rem]">
@@ -54,7 +49,7 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
       <GuideModal open={open} onOpenChange={setOpen} guideType={guideType} lang={lang} />
     </>
   );

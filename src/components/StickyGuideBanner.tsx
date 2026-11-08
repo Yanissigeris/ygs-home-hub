@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GuideModal, { type GuideType } from "@/components/GuideModal";
@@ -13,6 +12,10 @@ interface StickyGuideBannerProps {
 
 const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerProps) => {
   const [visible, setVisible] = useState(false);
+  // Ajouté à la page seulement la première fois qu'il doit paraître (le HTML
+  // enregistré reste le même), puis gardé pour pouvoir glisser vers le bas en sortant.
+  const [mounted, setMounted] = useState(false);
+  const [shown, setShown] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -28,14 +31,33 @@ const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerP
     return () => window.removeEventListener("scroll", onScroll);
   }, [dismissed]);
 
+  const wantShown = visible && !dismissed;
+  useEffect(() => {
+    if (wantShown && !mounted) { setMounted(true); return; }
+    if (!mounted) return;
+    // Une image plus tard, pour que le navigateur parte de la position cachée.
+    const id = requestAnimationFrame(() => setShown(wantShown));
+    return () => cancelAnimationFrame(id);
+  }, [wantShown, mounted]);
+
   const handleDismiss = () => { setDismissed(true); setVisible(false); };
 
   return (
     <>
       <span data-sticky-guide-banner="true" hidden aria-hidden="true" />
-      <AnimatePresence>
-        {visible && !dismissed && (
-          <motion.div initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }} transition={{ type: "spring", stiffness: 300, damping: 30 }} className="fixed bottom-0 inset-x-0 z-50 pointer-events-none">
+      {mounted && (
+          <div
+            className="fixed bottom-0 inset-x-0 z-50 pointer-events-none"
+            aria-hidden={!shown}
+            style={{
+              transform: shown ? "translateY(0)" : "translateY(calc(100% + 16px))",
+              opacity: shown ? 1 : 0,
+              visibility: shown ? "visible" : "hidden",
+              transition: shown
+                ? "transform 320ms cubic-bezier(0.32, 0.72, 0, 1), opacity 200ms ease, visibility 0s"
+                : "transform 200ms ease-out, opacity 200ms ease, visibility 0s linear 200ms",
+            }}
+          >
             <div className="pointer-events-auto mx-auto max-w-2xl px-4 pb-4">
               <div className="flex items-center gap-3 rounded-2xl border border-[rgba(247,244,238,0.12)] bg-primary px-4 py-3 shadow-[0_8px_32px_-8px_hsl(226_60%_12%/0.35)]">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[rgba(247,244,238,0.08)]"><BookOpen size={16} className="text-[rgba(247,244,238,0.75)]" /></div>
@@ -48,9 +70,8 @@ const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerP
                 </button>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      )}
       <GuideModal open={modalOpen} onOpenChange={setModalOpen} guideType={guideType} lang={lang} />
     </>
   );

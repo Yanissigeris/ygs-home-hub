@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 
 interface ContentBlockProps {
   children: ReactNode;
@@ -21,15 +20,11 @@ const ContentBlock = ({
 }: ContentBlockProps) => (
   <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
     <div className={`section-container ${narrow && !split ? "max-w-[44rem]" : ""}${split ? " max-w-[72rem]" : ""} ${centered ? "text-center" : ""}`}>
-      <motion.div
+      <div
         className={split ? "content-split" : undefined}
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
-      </motion.div>
+      </div>
     </div>
   </section>
 );
