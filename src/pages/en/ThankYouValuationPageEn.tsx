@@ -21,6 +21,7 @@ const ThankYouValuationPageEn = () => (
   <>
     <PageMeta title="Thank You | Valuation Requested" description="Your valuation request has been sent. Yanis is preparing your personalized analysis and response." />
     <section
+      data-page-cta=""
       className="section-padding"
       style={{
         backgroundImage: `linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%), url(${heroThankYouVal})`,

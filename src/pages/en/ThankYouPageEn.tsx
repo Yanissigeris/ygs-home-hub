@@ -15,6 +15,7 @@ const ThankYouPageEn = () => (
   <>
     <PageMeta title="Thank You, Request Sent" description="Your request has been sent successfully. Yanis will provide a personalized response." />
     <section
+      data-page-cta=""
       className="section-padding"
       style={{
         backgroundImage: `linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%), url(${heroThankYou})`,

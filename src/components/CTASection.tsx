@@ -24,6 +24,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
   ({ overline, title, text, buttons, trustLine, dark }, ref) => (
     <section
       ref={ref}
+      data-page-cta=""
       className="relative overflow-hidden section-rhythm"
       style={{
         background: dark ? "var(--ink)" : "var(--cream)",

@@ -111,8 +111,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
     return (
       <footer ref={ref} className={className} style={{ background: "var(--ink)", color: "var(--cream)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }} {...props}>
-        {/* ── Final CTA block ── */}
-        <div style={{ background: "var(--ink)" }}>
+        {/* ── Final CTA block : masqué par CSS quand la page a déjà son propre appel à l'action (data-page-cta) ── */}
+        <div className="footer-cta" style={{ background: "var(--ink)" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
             <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
               {ctaHeading}
