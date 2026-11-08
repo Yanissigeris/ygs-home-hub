@@ -25,7 +25,7 @@ const ThankYouPageEn = () => (
       }}
     >
       <div className="section-container max-w-[36rem]">
-        <motion.div className="text-center" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.div className="text-center" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Thank you, your request has been sent.</h1>
           <p className="prose-body mt-4">I'll get back to you with a personalized response adapted to your situation. In the meantime, explore the resources below.</p>
