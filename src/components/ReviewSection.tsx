@@ -10,10 +10,12 @@ interface ReviewSectionProps {
   title?: string;
   reviews: Review[];
   variant?: "compact" | "full";
-  background?: "default" | "alt";
+  background?: "default" | "alt" | "white";
   columns?: 2 | 3;
   reviewsPageLabel?: string;
   reviewsPageHref?: string;
+  /** Avis présentés comme des citations (grand guillemet, texte plus gros, sans boîte). */
+  quote?: boolean;
 }
 
 const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
@@ -26,8 +28,9 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
     columns = reviews.length >= 3 ? 3 : 2,
     reviewsPageLabel,
     reviewsPageHref,
+    quote = false,
   }, ref) => (
-    <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : "bg-background"}`}>
+    <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
       <div className="section-container">
         <motion.div
           className="text-center mb-6 sm:mb-8"
@@ -39,9 +42,9 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
           {/* overline retiré (cohérence accueil) */}
           <h2>{title}</h2>
         </motion.div>
-        <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} max-w-[52rem] ${columns === 3 ? "lg:max-w-none" : ""} mx-auto`}>
+        <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} ${quote ? "max-w-[64rem] sm:gap-14" : "max-w-[52rem]"} ${columns === 3 ? "lg:max-w-none" : ""} mx-auto`}>
           {reviews.map((review, i) => (
-            <ReviewCard key={review.id} review={review} variant={variant} index={i} />
+            <ReviewCard key={review.id} review={review} variant={variant} index={i} quote={quote} />
           ))}
         </div>
         {reviewsPageHref && reviewsPageLabel && (

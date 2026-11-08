@@ -14,7 +14,7 @@ export interface SectorLinksProps {
   overline?: string;
   title?: string;
   sectors: Sector[];
-  background?: "default" | "alt";
+  background?: "default" | "alt" | "white";
   /** Show only first N sectors + "see all" link */
   teaserCount?: number;
   /** Label for "see all" link */
@@ -35,7 +35,7 @@ const SectorLinks = ({
 }: SectorLinksProps) => {
   const visible = teaserCount ? sectors.slice(0, teaserCount) : sectors;
   return (
-    <section id={id} className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
+    <section id={id} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
       <div className="section-container max-w-[52rem]">
         <motion.div
           className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
