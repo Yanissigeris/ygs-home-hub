@@ -58,16 +58,16 @@ const FAQPage = () => (
     />
 
     <FAQSection title="Vendre à Gatineau" items={sellerFaq} />
-    <FAQSection title="Acheter à Gatineau" items={buyerFaq} />
+    <FAQSection title="Acheter à Gatineau" items={buyerFaq} background="alt" />
     <FAQSection title="Investir en plex" items={plexFaq} />
-    <FAQSection title="Militaire et relocalisation" items={militaryFaq} />
+    <FAQSection title="Militaire et relocalisation" items={militaryFaq} background="alt" />
 
     <LinkedCardGrid
       overline="Ressources"
       title="Guides et outils"
       items={relatedResources}
       columns={3}
-      background="alt"
+      background="white"
     />
 
     <CTASection

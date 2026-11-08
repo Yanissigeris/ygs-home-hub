@@ -115,7 +115,7 @@ const PropertiesPage = () => {
       </div>
     </ContentBlock>
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading
         overline="Alertes d'inscriptions"
         title="Soyez avisé dès qu'une propriété sort"
@@ -133,10 +133,10 @@ const PropertiesPage = () => {
       title="Quel type de propriété cherchez-vous?"
       items={profileCards}
       columns={3}
-      background="alt"
+      background="white"
     />
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading
         overline="Comment je travaille"
         title="Acheter avec un courtier qui vous représente"
@@ -153,7 +153,7 @@ const PropertiesPage = () => {
       overline="Par secteur"
       title="Propriétés par quartier"
       sectors={sectors}
-      background="alt"
+      background="white"
     />
 
     <InlineCTA

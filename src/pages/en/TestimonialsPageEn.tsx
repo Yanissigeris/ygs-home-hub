@@ -15,12 +15,17 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
   { key: "plex", label: "Investors", title: "Informed decisions, real results" },
 ];
 
+// Seules les catégories qui ont des avis s'affichent : l'alternance blanc/crème suit cet ordre,
+// et le lien Google du bas prend la couleur de la dernière catégorie affichée.
+const visibleCategories = categories.filter((c) => getReviewsByCategory(c.key).length > 0);
+const lastCategoryBg = visibleCategories.length % 2 === 0 ? "var(--cream)" : "#fff";
+
 const TestimonialsPageEn = () => (
   <>
     <PageMeta title="Client Testimonials | YGS" description="Read what sellers, buyers, relocating families and investors say about working with Yanis Gauthier-Sigeris, real estate broker in Gatineau." ogImage="https://yanisgauthier.com/og/og-testimonials.jpg" />
     <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     {/* Google Reviews badge */}
-    <section className="section-padding bg-background pb-0">
+    <section className="section-padding pb-0" style={{ background: "#fff" }}>
       <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
         <div>
           <h2>Our clients on Google</h2>
@@ -28,11 +33,10 @@ const TestimonialsPageEn = () => (
         <GoogleReviewBadge />
       </div>
     </section>
-    {categories.map((cat, idx) => {
+    {visibleCategories.map((cat, idx) => {
       const catReviews = getReviewsByCategory(cat.key);
-      if (!catReviews.length) return null;
       return (
-        <section key={cat.key} className={`section-padding ${idx % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}>
+        <section key={cat.key} className={`section-padding ${idx % 2 === 1 ? "bg-[var(--cream)]" : "bg-white"}`}>
           <div className="section-container">
             <div className="mb-10">
               <h2>{cat.title}</h2>
@@ -45,7 +49,7 @@ const TestimonialsPageEn = () => (
       );
     })}
     {/* Google review link */}
-    <section className="section-padding bg-background pt-0">
+    <section className="section-padding pt-0" style={{ background: lastCategoryBg }}>
       <div className="section-container text-center">
         <a href="https://maps.app.goo.gl/BkkH6Zrw7Yj3XdpA9" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
           Leave a Google review →

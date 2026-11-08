@@ -20,12 +20,13 @@ interface FAQSectionProps {
   initialVisible?: number;
   /** Last content update (YYYY-MM-DD), shown under the title with the data source. */
   updated?: { date: string; source?: string };
+  background?: "default" | "alt" | "white";
 }
 
 const FAQ_JSONLD_PREFIX = "ygs-faq-jsonld";
 
 const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
-  ({ title, items, initialVisible = 5, updated }, ref) => {
+  ({ title, items, initialVisible = 5, updated, background = "default" }, ref) => {
     const lang = useLanguage();
     const resolvedTitle = title ?? (lang === "en" ? "Frequently asked questions" : "Questions fréquentes");
     const [expanded, setExpanded] = React.useState(false);
@@ -91,7 +92,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     const accordionId = React.useId();
 
     return (
-      <section ref={ref} className="section-padding bg-background">
+      <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
         <div className="section-container max-w-[44rem]">
           <div
             className="text-center mb-5 sm:mb-8"

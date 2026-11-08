@@ -58,6 +58,7 @@ const ResourcesPage = () => (
       title="Guides complets et gratuits"
       items={guides}
       columns={3}
+      background="alt"
     />
 
     <LinkedCardGrid
@@ -65,7 +66,6 @@ const ResourcesPage = () => (
       title="Outils et analyses"
       items={tools}
       columns={3}
-      background="alt"
     />
 
     <LinkedCardGrid
@@ -73,11 +73,12 @@ const ResourcesPage = () => (
       title="Comprendre le courtage immobilier"
       items={trustPages}
       columns={3}
+      background="alt"
     />
 
     <GuideOffersSection />
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading title="Besoin d'aide personnalisée?" />
       <p className="prose-body mt-5">
         Les guides sont un bon point de départ, mais chaque situation est unique. Réservez un appel pour obtenir des conseils adaptés à votre projet.

@@ -45,10 +45,10 @@ const FAQPageEn = () => (
     
     <HeroSection overline="FAQ · YGS" title="Frequently Asked Questions" subtitle="Answers to the most common questions about selling, buying, investing and relocating in Gatineau." primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau" heroBgImage={heroImg} />
     <FAQSection title="Selling in Gatineau" items={sellerFaq} />
-    <FAQSection title="Buying in Gatineau" items={buyerFaq} />
+    <FAQSection title="Buying in Gatineau" items={buyerFaq} background="alt" />
     <FAQSection title="Plex Investment" items={plexFaq} />
-    <FAQSection title="Military and Relocation" items={militaryFaq} />
-    <LinkedCardGrid overline="Resources" title="Guides and Tools" items={resources} columns={3} background="alt" />
+    <FAQSection title="Military and Relocation" items={militaryFaq} background="alt" />
+    <LinkedCardGrid overline="Resources" title="Guides and Tools" items={resources} columns={3} background="white" />
     <CTASection dark title="Have a specific question?" text="Contact me directly, I'll give you a clear and personalized answer." buttons={[{ label: "Talk to Yanis", href: "/en/contact/" }, { label: "Free Home Valuation", href: "/en/home-valuation/", variant: "outline" }]} trustLine="I give you the options, you decide with full clarity." />
   </>
 );
