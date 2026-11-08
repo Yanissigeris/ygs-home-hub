@@ -100,7 +100,7 @@ const GatineauCentrePageEn = () => (
     </ContentBlock>
 
     {/* ═══ SECTION 2 — Sub-sectors ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">Gatineau centre neighbourhoods to know</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
