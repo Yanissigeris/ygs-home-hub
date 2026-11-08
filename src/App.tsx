@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useToast } from "@/hooks/use-toast";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, createRoutesFromElements, matchRoutes } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -103,130 +103,148 @@ if (typeof window !== "undefined") {
 }
 
 // FR pages
+// Pages chargées à la demande. lazyPage garde le module en mémoire une fois chargé :
+// si main.tsx l'a préchargé avant le premier rendu, React l'affiche tout de suite,
+// sans passer par le squelette gris (PageFallback) qui remplaçait la page enregistrée.
+type PageModule = { default: React.ComponentType<object> };
+type PreloadablePage = React.LazyExoticComponent<React.ComponentType<object>> & { preload: () => Promise<PageModule> };
+function lazyPage(loader: () => Promise<PageModule>): PreloadablePage {
+  let loaded: PageModule | undefined;
+  const load = () => loader().then((m) => (loaded = m));
+  const Page = React.lazy(() =>
+    loaded
+      ? // « then » synchrone : React voit le module déjà prêt et ne suspend pas.
+        ({ then: (resolve: (m: PageModule) => void) => resolve(loaded as PageModule) } as unknown as Promise<PageModule>)
+      : load(),
+  ) as PreloadablePage;
+  Page.preload = load;
+  return Page;
+}
+
 import Index from "./pages/Index";
-const SellerPage = React.lazy(() => import("./pages/SellerPage"));
-const ValuationPage = React.lazy(() => import("./pages/ValuationPage"));
-const BuyerPage = React.lazy(() => import("./pages/BuyerPage"));
-const PlexPage = React.lazy(() => import("./pages/PlexPage"));
-const ContactPage = React.lazy(() => import("./pages/ContactPage"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
-const PropertiesPage = React.lazy(() => import("./pages/PropertiesPage"));
-const SellerPlanPage = React.lazy(() => import("./pages/SellerPlanPage"));
-const SellerGuidePage = React.lazy(() => import("./pages/SellerGuidePage"));
-const WhenToSellPage = React.lazy(() => import("./pages/WhenToSellPage"));
-const SellPlexPage = React.lazy(() => import("./pages/SellPlexPage"));
-const BuyerConsultationPage = React.lazy(() => import("./pages/BuyerConsultationPage"));
-const BuyerGuidePage = React.lazy(() => import("./pages/BuyerGuidePage"));
-const FirstTimeBuyerPage = React.lazy(() => import("./pages/FirstTimeBuyerPage"));
-const BuyFromOttawaPage = React.lazy(() => import("./pages/BuyFromOttawaPage"));
-const RelocationPage = React.lazy(() => import("./pages/RelocationPage"));
-const MontrealRelocationPage = React.lazy(() => import("./pages/MontrealRelocationPage"));
-const RelocationGuidePage = React.lazy(() => import("./pages/RelocationGuidePage"));
-const NeighborhoodsOverviewPage = React.lazy(() => import("./pages/NeighborhoodsOverviewPage"));
-const MilitaryPage = React.lazy(() => import("./pages/MilitaryPage"));
-const MilitaryRelocationPage = React.lazy(() => import("./pages/MilitaryRelocationPage"));
-const MilitaryBuyerPage = React.lazy(() => import("./pages/MilitaryBuyerPage"));
-const MilitarySellerPage = React.lazy(() => import("./pages/MilitarySellerPage"));
-const MilitaryGuidePage = React.lazy(() => import("./pages/MilitaryGuidePage"));
-const PlexAnalysisPage = React.lazy(() => import("./pages/PlexAnalysisPage"));
-const MarketReportPage = React.lazy(() => import("./pages/MarketReportPage"));
-const NeighborhoodPage = React.lazy(() => import("./pages/NeighborhoodPage"));
-const HullPage = React.lazy(() => import("./pages/HullPage"));
-const BuckinghamPage = React.lazy(() => import("./pages/BuckinghamPage"));
-const GatineauCentrePage = React.lazy(() => import("./pages/GatineauCentrePage"));
-const AylmerPage = React.lazy(() => import("./pages/AylmerPage"));
-const PlateauPage = React.lazy(() => import("./pages/PlateauPage"));
-const ChelseaPage = React.lazy(() => import("./pages/ChelseaPage"));
-const CantleyPage = React.lazy(() => import("./pages/CantleyPage"));
-const ValDesMontsPage = React.lazy(() => import("./pages/ValDesMontsPage"));
-const MassonAngersPage = React.lazy(() => import("./pages/MassonAngersPage"));
-const PontiacPage = React.lazy(() => import("./pages/PontiacPage"));
-const CoteDazurPage = React.lazy(() => import("./pages/CoteDazurPage"));
-const LimbourPage = React.lazy(() => import("./pages/LimbourPage"));
-const OutaouaisHubPage = React.lazy(() => import("./pages/OutaouaisHubPage"));
-const SellHullPage = React.lazy(() => import("./pages/SellHullPage"));
-const SellAylmerPage = React.lazy(() => import("./pages/SellAylmerPage"));
-const ValuationHullPage = React.lazy(() => import("./pages/ValuationHullPage"));
-const ValuationAylmerPage = React.lazy(() => import("./pages/ValuationAylmerPage"));
-const CombienCouteCourtierPage = React.lazy(() => import("./pages/CombienCouteCourtierPage"));
-const CommentChoisirCourtierPage = React.lazy(() => import("./pages/CommentChoisirCourtierPage"));
-const VerifierCourtierOaciqPage = React.lazy(() => import("./pages/VerifierCourtierOaciqPage"));
-const FraisCourtagePage = React.lazy(() => import("./pages/FraisCourtagePage"));
-const CourtierOuVendreSoiMemePage = React.lazy(() => import("./pages/CourtierOuVendreSoiMemePage"));
-const ResourcesPage = React.lazy(() => import("./pages/ResourcesPage"));
-const BlogPage = React.lazy(() => import("./pages/BlogPage"));
-const BlogArticlePage = React.lazy(() => import("./pages/BlogArticlePage"));
-const LivingAylmerPage = React.lazy(() => import("./pages/LivingAylmerPage"));
-const LivingHullPage = React.lazy(() => import("./pages/LivingHullPage"));
-const LivingPlateauPage = React.lazy(() => import("./pages/LivingPlateauPage"));
-const FAQPage = React.lazy(() => import("./pages/FAQPage"));
-const ThankYouPage = React.lazy(() => import("./pages/ThankYouPage"));
-const ThankYouValuationPage = React.lazy(() => import("./pages/ThankYouValuationPage"));
-const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
-const PrivacyPolicyPage = React.lazy(() => import("./pages/PrivacyPolicyPage"));
-const TermsPage = React.lazy(() => import("./pages/TermsPage"));
+const SellerPage = lazyPage(() => import("./pages/SellerPage"));
+const ValuationPage = lazyPage(() => import("./pages/ValuationPage"));
+const BuyerPage = lazyPage(() => import("./pages/BuyerPage"));
+const PlexPage = lazyPage(() => import("./pages/PlexPage"));
+const ContactPage = lazyPage(() => import("./pages/ContactPage"));
+const NotFound = lazyPage(() => import("./pages/NotFound"));
+const PropertiesPage = lazyPage(() => import("./pages/PropertiesPage"));
+const SellerPlanPage = lazyPage(() => import("./pages/SellerPlanPage"));
+const SellerGuidePage = lazyPage(() => import("./pages/SellerGuidePage"));
+const WhenToSellPage = lazyPage(() => import("./pages/WhenToSellPage"));
+const SellPlexPage = lazyPage(() => import("./pages/SellPlexPage"));
+const BuyerConsultationPage = lazyPage(() => import("./pages/BuyerConsultationPage"));
+const BuyerGuidePage = lazyPage(() => import("./pages/BuyerGuidePage"));
+const FirstTimeBuyerPage = lazyPage(() => import("./pages/FirstTimeBuyerPage"));
+const BuyFromOttawaPage = lazyPage(() => import("./pages/BuyFromOttawaPage"));
+const RelocationPage = lazyPage(() => import("./pages/RelocationPage"));
+const MontrealRelocationPage = lazyPage(() => import("./pages/MontrealRelocationPage"));
+const RelocationGuidePage = lazyPage(() => import("./pages/RelocationGuidePage"));
+const NeighborhoodsOverviewPage = lazyPage(() => import("./pages/NeighborhoodsOverviewPage"));
+const MilitaryPage = lazyPage(() => import("./pages/MilitaryPage"));
+const MilitaryRelocationPage = lazyPage(() => import("./pages/MilitaryRelocationPage"));
+const MilitaryBuyerPage = lazyPage(() => import("./pages/MilitaryBuyerPage"));
+const MilitarySellerPage = lazyPage(() => import("./pages/MilitarySellerPage"));
+const MilitaryGuidePage = lazyPage(() => import("./pages/MilitaryGuidePage"));
+const PlexAnalysisPage = lazyPage(() => import("./pages/PlexAnalysisPage"));
+const MarketReportPage = lazyPage(() => import("./pages/MarketReportPage"));
+const NeighborhoodPage = lazyPage(() => import("./pages/NeighborhoodPage"));
+const HullPage = lazyPage(() => import("./pages/HullPage"));
+const BuckinghamPage = lazyPage(() => import("./pages/BuckinghamPage"));
+const GatineauCentrePage = lazyPage(() => import("./pages/GatineauCentrePage"));
+const AylmerPage = lazyPage(() => import("./pages/AylmerPage"));
+const PlateauPage = lazyPage(() => import("./pages/PlateauPage"));
+const ChelseaPage = lazyPage(() => import("./pages/ChelseaPage"));
+const CantleyPage = lazyPage(() => import("./pages/CantleyPage"));
+const ValDesMontsPage = lazyPage(() => import("./pages/ValDesMontsPage"));
+const MassonAngersPage = lazyPage(() => import("./pages/MassonAngersPage"));
+const PontiacPage = lazyPage(() => import("./pages/PontiacPage"));
+const CoteDazurPage = lazyPage(() => import("./pages/CoteDazurPage"));
+const LimbourPage = lazyPage(() => import("./pages/LimbourPage"));
+const OutaouaisHubPage = lazyPage(() => import("./pages/OutaouaisHubPage"));
+const SellHullPage = lazyPage(() => import("./pages/SellHullPage"));
+const SellAylmerPage = lazyPage(() => import("./pages/SellAylmerPage"));
+const ValuationHullPage = lazyPage(() => import("./pages/ValuationHullPage"));
+const ValuationAylmerPage = lazyPage(() => import("./pages/ValuationAylmerPage"));
+const CombienCouteCourtierPage = lazyPage(() => import("./pages/CombienCouteCourtierPage"));
+const CommentChoisirCourtierPage = lazyPage(() => import("./pages/CommentChoisirCourtierPage"));
+const VerifierCourtierOaciqPage = lazyPage(() => import("./pages/VerifierCourtierOaciqPage"));
+const FraisCourtagePage = lazyPage(() => import("./pages/FraisCourtagePage"));
+const CourtierOuVendreSoiMemePage = lazyPage(() => import("./pages/CourtierOuVendreSoiMemePage"));
+const ResourcesPage = lazyPage(() => import("./pages/ResourcesPage"));
+const BlogPage = lazyPage(() => import("./pages/BlogPage"));
+const BlogArticlePage = lazyPage(() => import("./pages/BlogArticlePage"));
+const LivingAylmerPage = lazyPage(() => import("./pages/LivingAylmerPage"));
+const LivingHullPage = lazyPage(() => import("./pages/LivingHullPage"));
+const LivingPlateauPage = lazyPage(() => import("./pages/LivingPlateauPage"));
+const FAQPage = lazyPage(() => import("./pages/FAQPage"));
+const ThankYouPage = lazyPage(() => import("./pages/ThankYouPage"));
+const ThankYouValuationPage = lazyPage(() => import("./pages/ThankYouValuationPage"));
+const TestimonialsPage = lazyPage(() => import("./pages/TestimonialsPage"));
+const PrivacyPolicyPage = lazyPage(() => import("./pages/PrivacyPolicyPage"));
+const TermsPage = lazyPage(() => import("./pages/TermsPage"));
 
 // EN pages
-const IndexEn = React.lazy(() => import("./pages/en/IndexEn"));
-const SellerPageEn = React.lazy(() => import("./pages/en/SellerPageEn"));
-const BuyerPageEn = React.lazy(() => import("./pages/en/BuyerPageEn"));
-const RelocationPageEn = React.lazy(() => import("./pages/en/RelocationPageEn"));
-const MilitaryPageEn = React.lazy(() => import("./pages/en/MilitaryPageEn"));
-const PlexPageEn = React.lazy(() => import("./pages/en/PlexPageEn"));
-const PropertiesPageEn = React.lazy(() => import("./pages/en/PropertiesPageEn"));
-const ContactPageEn = React.lazy(() => import("./pages/en/ContactPageEn"));
-const FAQPageEn = React.lazy(() => import("./pages/en/FAQPageEn"));
-const TestimonialsPageEn = React.lazy(() => import("./pages/en/TestimonialsPageEn"));
-const ResourcesPageEn = React.lazy(() => import("./pages/en/ResourcesPageEn"));
-const BlogPageEn = React.lazy(() => import("./pages/en/BlogPageEn"));
-const NeighborhoodsPageEn = React.lazy(() => import("./pages/en/NeighborhoodsPageEn"));
-const ValuationPageEn = React.lazy(() => import("./pages/en/ValuationPageEn"));
-const ThankYouPageEn = React.lazy(() => import("./pages/en/ThankYouPageEn"));
-const ThankYouValuationPageEn = React.lazy(() => import("./pages/en/ThankYouValuationPageEn"));
-const BuyerGuidePageEn = React.lazy(() => import("./pages/en/BuyerGuidePageEn"));
-const SellerGuidePageEn = React.lazy(() => import("./pages/en/SellerGuidePageEn"));
-const MilitaryBuyerPageEn = React.lazy(() => import("./pages/en/MilitaryBuyerPageEn"));
-const MilitarySellerPageEn = React.lazy(() => import("./pages/en/MilitarySellerPageEn"));
-const MilitaryGuidePageEn = React.lazy(() => import("./pages/en/MilitaryGuidePageEn"));
-const RelocationGuidePageEn = React.lazy(() => import("./pages/en/RelocationGuidePageEn"));
-const FirstTimeBuyerPageEn = React.lazy(() => import("./pages/en/FirstTimeBuyerPageEn"));
-const BuyFromOttawaPageEn = React.lazy(() => import("./pages/en/BuyFromOttawaPageEn"));
-const BuyerConsultationPageEn = React.lazy(() => import("./pages/en/BuyerConsultationPageEn"));
-const PlexAnalysisPageEn = React.lazy(() => import("./pages/en/PlexAnalysisPageEn"));
-const PlateauAylmerPageEn = React.lazy(() => import("./pages/en/PlateauAylmerPageEn"));
-const HullPageEn = React.lazy(() => import("./pages/en/HullPageEn"));
-const BuckinghamPageEn = React.lazy(() => import("./pages/en/BuckinghamPageEn"));
-const WhenToSellPageEn = React.lazy(() => import("./pages/en/WhenToSellPageEn"));
-const SellerPlanPageEn = React.lazy(() => import("./pages/en/SellerPlanPageEn"));
-const SellPlexPageEn = React.lazy(() => import("./pages/en/SellPlexPageEn"));
-const MontrealRelocationPageEn = React.lazy(() => import("./pages/en/MontrealRelocationPageEn"));
-const MarketReportPageEn = React.lazy(() => import("./pages/en/MarketReportPageEn"));
-const LivingAylmerPageEn = React.lazy(() => import("./pages/en/LivingAylmerPageEn"));
-const LivingHullPageEn = React.lazy(() => import("./pages/en/LivingHullPageEn"));
-const LivingPlateauPageEn = React.lazy(() => import("./pages/en/LivingPlateauPageEn"));
-const GatineauCentrePageEn = React.lazy(() => import("./pages/en/GatineauCentrePageEn"));
-const AylmerPageEn = React.lazy(() => import("./pages/en/AylmerPageEn"));
-const PlateauPageEn = React.lazy(() => import("./pages/en/PlateauPageEn"));
-const MilitaryRelocationPageEn = React.lazy(() => import("./pages/en/MilitaryRelocationPageEn"));
-const ChelseaPageEn = React.lazy(() => import("./pages/en/ChelseaPageEn"));
-const CantleyPageEn = React.lazy(() => import("./pages/en/CantleyPageEn"));
-const ValDesMontsPageEn = React.lazy(() => import("./pages/en/ValDesMontsPageEn"));
-const MassonAngersPageEn = React.lazy(() => import("./pages/en/MassonAngersPageEn"));
-const PontiacPageEn = React.lazy(() => import("./pages/en/PontiacPageEn"));
-const CoteDazurPageEn = React.lazy(() => import("./pages/en/CoteDazurPageEn"));
-const LimbourPageEn = React.lazy(() => import("./pages/en/LimbourPageEn"));
-const OutaouaisHubPageEn = React.lazy(() => import("./pages/en/OutaouaisHubPageEn"));
-const SellHullPageEn = React.lazy(() => import("./pages/en/SellHullPageEn"));
-const SellAylmerPageEn = React.lazy(() => import("./pages/en/SellAylmerPageEn"));
-const ValuationHullPageEn = React.lazy(() => import("./pages/en/ValuationHullPageEn"));
-const ValuationAylmerPageEn = React.lazy(() => import("./pages/en/ValuationAylmerPageEn"));
-const HowMuchRealtorCostPageEn = React.lazy(() => import("./pages/en/HowMuchRealtorCostPageEn"));
-const RealtorCommissionPageEn = React.lazy(() => import("./pages/en/RealtorCommissionPageEn"));
-const HowToChooseRealtorPageEn = React.lazy(() => import("./pages/en/HowToChooseRealtorPageEn"));
-const OaciqFindBrokerPageEn = React.lazy(() => import("./pages/en/OaciqFindBrokerPageEn"));
-const RealtorVsSellingByOwnerPageEn = React.lazy(() => import("./pages/en/RealtorVsSellingByOwnerPageEn"));
-const PrivacyPolicyPageEn = React.lazy(() => import("./pages/en/PrivacyPolicyPageEn"));
-const TermsPageEn = React.lazy(() => import("./pages/en/TermsPageEn"));
+const IndexEn = lazyPage(() => import("./pages/en/IndexEn"));
+const SellerPageEn = lazyPage(() => import("./pages/en/SellerPageEn"));
+const BuyerPageEn = lazyPage(() => import("./pages/en/BuyerPageEn"));
+const RelocationPageEn = lazyPage(() => import("./pages/en/RelocationPageEn"));
+const MilitaryPageEn = lazyPage(() => import("./pages/en/MilitaryPageEn"));
+const PlexPageEn = lazyPage(() => import("./pages/en/PlexPageEn"));
+const PropertiesPageEn = lazyPage(() => import("./pages/en/PropertiesPageEn"));
+const ContactPageEn = lazyPage(() => import("./pages/en/ContactPageEn"));
+const FAQPageEn = lazyPage(() => import("./pages/en/FAQPageEn"));
+const TestimonialsPageEn = lazyPage(() => import("./pages/en/TestimonialsPageEn"));
+const ResourcesPageEn = lazyPage(() => import("./pages/en/ResourcesPageEn"));
+const BlogPageEn = lazyPage(() => import("./pages/en/BlogPageEn"));
+const NeighborhoodsPageEn = lazyPage(() => import("./pages/en/NeighborhoodsPageEn"));
+const ValuationPageEn = lazyPage(() => import("./pages/en/ValuationPageEn"));
+const ThankYouPageEn = lazyPage(() => import("./pages/en/ThankYouPageEn"));
+const ThankYouValuationPageEn = lazyPage(() => import("./pages/en/ThankYouValuationPageEn"));
+const BuyerGuidePageEn = lazyPage(() => import("./pages/en/BuyerGuidePageEn"));
+const SellerGuidePageEn = lazyPage(() => import("./pages/en/SellerGuidePageEn"));
+const MilitaryBuyerPageEn = lazyPage(() => import("./pages/en/MilitaryBuyerPageEn"));
+const MilitarySellerPageEn = lazyPage(() => import("./pages/en/MilitarySellerPageEn"));
+const MilitaryGuidePageEn = lazyPage(() => import("./pages/en/MilitaryGuidePageEn"));
+const RelocationGuidePageEn = lazyPage(() => import("./pages/en/RelocationGuidePageEn"));
+const FirstTimeBuyerPageEn = lazyPage(() => import("./pages/en/FirstTimeBuyerPageEn"));
+const BuyFromOttawaPageEn = lazyPage(() => import("./pages/en/BuyFromOttawaPageEn"));
+const BuyerConsultationPageEn = lazyPage(() => import("./pages/en/BuyerConsultationPageEn"));
+const PlexAnalysisPageEn = lazyPage(() => import("./pages/en/PlexAnalysisPageEn"));
+const PlateauAylmerPageEn = lazyPage(() => import("./pages/en/PlateauAylmerPageEn"));
+const HullPageEn = lazyPage(() => import("./pages/en/HullPageEn"));
+const BuckinghamPageEn = lazyPage(() => import("./pages/en/BuckinghamPageEn"));
+const WhenToSellPageEn = lazyPage(() => import("./pages/en/WhenToSellPageEn"));
+const SellerPlanPageEn = lazyPage(() => import("./pages/en/SellerPlanPageEn"));
+const SellPlexPageEn = lazyPage(() => import("./pages/en/SellPlexPageEn"));
+const MontrealRelocationPageEn = lazyPage(() => import("./pages/en/MontrealRelocationPageEn"));
+const MarketReportPageEn = lazyPage(() => import("./pages/en/MarketReportPageEn"));
+const LivingAylmerPageEn = lazyPage(() => import("./pages/en/LivingAylmerPageEn"));
+const LivingHullPageEn = lazyPage(() => import("./pages/en/LivingHullPageEn"));
+const LivingPlateauPageEn = lazyPage(() => import("./pages/en/LivingPlateauPageEn"));
+const GatineauCentrePageEn = lazyPage(() => import("./pages/en/GatineauCentrePageEn"));
+const AylmerPageEn = lazyPage(() => import("./pages/en/AylmerPageEn"));
+const PlateauPageEn = lazyPage(() => import("./pages/en/PlateauPageEn"));
+const MilitaryRelocationPageEn = lazyPage(() => import("./pages/en/MilitaryRelocationPageEn"));
+const ChelseaPageEn = lazyPage(() => import("./pages/en/ChelseaPageEn"));
+const CantleyPageEn = lazyPage(() => import("./pages/en/CantleyPageEn"));
+const ValDesMontsPageEn = lazyPage(() => import("./pages/en/ValDesMontsPageEn"));
+const MassonAngersPageEn = lazyPage(() => import("./pages/en/MassonAngersPageEn"));
+const PontiacPageEn = lazyPage(() => import("./pages/en/PontiacPageEn"));
+const CoteDazurPageEn = lazyPage(() => import("./pages/en/CoteDazurPageEn"));
+const LimbourPageEn = lazyPage(() => import("./pages/en/LimbourPageEn"));
+const OutaouaisHubPageEn = lazyPage(() => import("./pages/en/OutaouaisHubPageEn"));
+const SellHullPageEn = lazyPage(() => import("./pages/en/SellHullPageEn"));
+const SellAylmerPageEn = lazyPage(() => import("./pages/en/SellAylmerPageEn"));
+const ValuationHullPageEn = lazyPage(() => import("./pages/en/ValuationHullPageEn"));
+const ValuationAylmerPageEn = lazyPage(() => import("./pages/en/ValuationAylmerPageEn"));
+const HowMuchRealtorCostPageEn = lazyPage(() => import("./pages/en/HowMuchRealtorCostPageEn"));
+const RealtorCommissionPageEn = lazyPage(() => import("./pages/en/RealtorCommissionPageEn"));
+const HowToChooseRealtorPageEn = lazyPage(() => import("./pages/en/HowToChooseRealtorPageEn"));
+const OaciqFindBrokerPageEn = lazyPage(() => import("./pages/en/OaciqFindBrokerPageEn"));
+const RealtorVsSellingByOwnerPageEn = lazyPage(() => import("./pages/en/RealtorVsSellingByOwnerPageEn"));
+const PrivacyPolicyPageEn = lazyPage(() => import("./pages/en/PrivacyPolicyPageEn"));
+const TermsPageEn = lazyPage(() => import("./pages/en/TermsPageEn"));
 
 
 const routeTree = React.createElement(
@@ -382,6 +400,17 @@ const appRoutes = React.createElement(
     routeTree,
   ),
 );
+
+/** Précharge le code de la page demandée (appelé par main.tsx avant le premier rendu). */
+export function preloadCurrentRoute(pathname: string): Promise<unknown> {
+  const fragment = (routeTree as React.ReactElement<{ children: React.ReactNode }>).props.children;
+  const matches = matchRoutes(createRoutesFromElements(fragment), pathname) ?? [];
+  const jobs = matches
+    .map((m) => (m.route.element as React.ReactElement | undefined)?.type as Partial<PreloadablePage> | undefined)
+    .filter((t): t is PreloadablePage => typeof t?.preload === "function")
+    .map((t) => t.preload());
+  return Promise.all(jobs);
+}
 
 // Form error messages (useFormSubmit calls toast()). The toast UI is loaded only
 // when a message actually needs to be shown, so it costs nothing on normal visits.
