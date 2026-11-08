@@ -76,7 +76,7 @@ const BuyerPage = () => (
       heroBgImage={heroImg}
     />
 
-    <ContentBlock narrow background="alt">
+    <ContentBlock narrow split background="alt">
       <SectionHeading overline="Contexte 2026" title="Acheter à Gatineau en 2026 : ce que disent les chiffres" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         Au 3e trimestre 2026, la région métropolitaine de Gatineau a enregistré 1 044 ventes résidentielles. Le prix médian d'une unifamiliale y atteignait 480 000 $, avec un délai de vente de 34 jours (APCIQ, données Centris).
@@ -87,7 +87,7 @@ const BuyerPage = () => (
       <p className="mt-4 text-xs text-muted-foreground italic">Source&nbsp;: APCIQ, baromètre résidentiel du 3e trimestre 2026, région métropolitaine de Gatineau.</p>
     </ContentBlock>
 
-<ContentBlock narrow>
+<ContentBlock narrow background="white">
       <SectionHeading
         overline="L'achat immobilier"
         title="Choisir une propriété, c'est aussi choisir un secteur et une stratégie"
@@ -103,7 +103,7 @@ const BuyerPage = () => (
       variant="icon-inline"
     />
 
-    <ProcessSteps steps={steps} />
+    <ProcessSteps steps={steps} background="white" />
 
     <InlineCTA
       text="Vous êtes aussi vendeur? Connaître la valeur de votre propriété peut clarifier votre budget d'achat."
@@ -129,7 +129,8 @@ const BuyerPage = () => (
       title="Ce que disent mes clients acheteurs"
       reviews={getReviewsByCategory("buyer").slice(0, 2)}
       columns={2}
-      background="alt"
+      quote
+      background="white"
     />
 
     <FunnelNextStep

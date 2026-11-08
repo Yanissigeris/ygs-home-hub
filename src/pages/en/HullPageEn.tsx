@@ -121,7 +121,7 @@ const HullPageEn = () => (
     </ContentBlock>
 
     {/* ═══ SECTION 2 — Sub-sectors ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">Hull's areas to know</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -160,7 +160,7 @@ const HullPageEn = () => (
     </ContentBlock>
 
     {/* ═══ QUALITY CTA ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[

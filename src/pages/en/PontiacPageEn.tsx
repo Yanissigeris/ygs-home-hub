@@ -101,7 +101,7 @@ const PontiacPageEn = () => {
       </ContentBlock>
 
       {/* SECTION 2 — Portrait */}
-      <ContentBlock>
+      <ContentBlock background="white">
         <h2 className="mb-8">The Municipality of Pontiac, verified facts</h2>
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
           <div className="md:col-span-3 space-y-5 text-[0.9375rem] text-muted-foreground leading-relaxed">
@@ -158,7 +158,7 @@ const PontiacPageEn = () => {
       </ContentBlock>
 
       {/* SECTION 4 — What attracts buyers */}
-      <ContentBlock>
+      <ContentBlock background="white">
         <h2 className="mb-8">What you find in Pontiac that you won't find anywhere else in the region</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
@@ -188,7 +188,7 @@ const PontiacPageEn = () => {
       </ContentBlock>
 
       {/* SECTION 6 — Market context 2026 */}
-      <ContentBlock narrow>
+      <ContentBlock narrow background="white">
         <div className="border border-border rounded-lg p-6 space-y-4">
           <h3 className="font-serif text-lg text-foreground">Pontiac in 2026</h3>
           <div className="space-y-3.5">

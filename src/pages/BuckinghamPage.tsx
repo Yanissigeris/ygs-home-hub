@@ -101,7 +101,7 @@ const BuckinghamPage = () => (
     </ContentBlock>
 
     {/* ═══ SECTION 2 — Sous-secteurs ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">Buckingham vs Masson-Angers</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -135,7 +135,7 @@ const BuckinghamPage = () => (
     </ContentBlock>
 
     {/* ═══ CTA QUALITÉ ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[

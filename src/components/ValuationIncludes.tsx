@@ -36,7 +36,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
   return (
     <>
       {/* ── Votre évaluation inclut — 2 cols + widget fourchette ── */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20">
         <div className="section-container">
           <div className="grid gap-10">
             <div className="max-w-2xl">

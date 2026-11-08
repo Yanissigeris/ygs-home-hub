@@ -120,7 +120,7 @@ const ChelseaPageEn = () => (
     </ContentBlock>
 
     {/* ═══ SECTION 2 — Highlights ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">What you'll find in Chelsea</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -155,7 +155,7 @@ const ChelseaPageEn = () => (
     </ContentBlock>
 
     {/* ═══ QUALITY CTA ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-white">
       <div className="section-container max-w-3xl">
         <div className="space-y-4">
           {[
