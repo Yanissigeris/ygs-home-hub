@@ -116,6 +116,7 @@ export const footerColumns = [
       { label: "Limbour", href: "/limbour/" },
       { label: "Val-des-Monts", href: "/val-des-monts/" },
       { label: "Côte-d'Azur", href: "/cote-dazur-gatineau/" },
+      { label: "L'Outaouais, secteur par secteur", href: "/courtier-immobilier-outaouais/" },
       { label: "Tous les quartiers", href: "/quartiers-a-considerer-a-gatineau/" },
     ],
   },
@@ -136,15 +137,3 @@ export const footerColumns = [
   },
 ];
 
-export const footerPopularLinks = [
-  { label: "Courtier immobilier Outaouais", href: "/courtier-immobilier-outaouais/" },
-  { label: "Courtier immobilier Gatineau", href: "/gatineau/" },
-  { label: "Courtier immobilier Aylmer", href: "/aylmer/" },
-  { label: "Courtier immobilier Hull", href: "/hull/" },
-  { label: "Courtier immobilier Plateau", href: "/plateau/" },
-  { label: "Courtier immobilier Chelsea", href: "/chelsea/" },
-  { label: "Courtier immobilier Cantley", href: "/cantley/" },
-  { label: "Évaluation maison Gatineau", href: "/evaluation-gratuite-gatineau/" },
-  { label: "Vendre maison Gatineau", href: "/vendre-ma-maison-gatineau/" },
-  { label: "Acheter à Gatineau", href: "/acheter-a-gatineau/" },
-];

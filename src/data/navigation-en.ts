@@ -100,6 +100,7 @@ export const footerColumnsEn = [
       { label: "Limbour", href: "/en/limbour/" },
       { label: "Val-des-Monts", href: "/en/val-des-monts/" },
       { label: "Côte-d'Azur", href: "/en/cote-dazur/" },
+      { label: "Outaouais, area by area", href: "/en/outaouais-real-estate-agent/" },
       { label: "All Neighbourhoods", href: "/en/neighborhoods/" },
     ],
   },
@@ -121,14 +122,3 @@ export const footerColumnsEn = [
   },
 ];
 
-export const footerPopularLinksEn = [
-  { label: "Outaouais Real Estate Agent", href: "/en/outaouais-real-estate-agent/" },
-  { label: "Realtor Gatineau", href: "/en/gatineau/" },
-  { label: "Real Estate Agent Aylmer", href: "/en/aylmer/" },
-  { label: "Realtor Hull", href: "/en/hull/" },
-  { label: "Real Estate Broker Plateau", href: "/en/plateau/" },
-  { label: "Realtor Chelsea", href: "/en/chelsea/" },
-  { label: "Home Valuation Gatineau", href: "/en/home-valuation/" },
-  { label: "Sell My House Gatineau", href: "/en/sell/" },
-  { label: "Buy in Gatineau", href: "/en/buy/" },
-];

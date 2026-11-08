@@ -11,8 +11,8 @@ import logoTranquillit from "@/assets/logo-tranquillit.webp";
 import logoEnfantSoleil from "@/assets/logo-enfant-soleil.webp";
 import remaxLogotypeBlack from "@/assets/remax-logotype-black.png";
 import remaxBalloonOfficial from "@/assets/remax-balloon-official.png";
-import { footerColumns, footerPopularLinks } from "@/data/navigation";
-import { footerColumnsEn, footerPopularLinksEn } from "@/data/navigation-en";
+import { footerColumns } from "@/data/navigation";
+import { footerColumnsEn } from "@/data/navigation-en";
 import { trackContactTap } from "@/lib/analytics";
 
 type AffiliationLogo = {
@@ -94,9 +94,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
   ({ className, ...props }, ref) => {
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
-    const popularLinks = lang === "en" ? footerPopularLinksEn : footerPopularLinks;
     const tagline = lang === "en" ? "Your real estate ally in Outaouais. Clear strategy." : "Votre allié en immobilier en Outaouais. Stratégie claire.";
-    const popularLabel = lang === "en" ? "Popular areas & services" : "Zones et services populaires";
     const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
       ? `© ${new Date().getFullYear()} Yanis Gauthier-Sigeris, Real Estate Broker, Gatineau. All rights reserved.`
@@ -204,34 +202,6 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
-          {/* ── SEO Popular links ── */}
-          <div className="py-5 sm:py-8">
-            <h3 className="footer-heading mb-3 sm:mb-5">
-              {popularLabel}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {popularLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  to={l.href}
-                  className="transition-colors duration-200"
-                  style={{
-                    fontSize: ".75rem",
-                    color: "rgba(255,255,255,.6)",
-                    border: "1px solid rgba(255,255,255,.06)",
-                    borderRadius: 3,
-                    padding: ".2rem .55rem",
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.65)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.06)"; }}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── Affiliations ── */}
           <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
