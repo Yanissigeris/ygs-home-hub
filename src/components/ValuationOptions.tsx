@@ -71,7 +71,7 @@ const copy: Record<Lang, { title: string; subtitle: string; options: Option[] }>
 const ValuationOptions = ({ lang }: { lang: Lang }) => {
   const c = copy[lang];
   return (
-    <section className="bg-background py-16 md:py-20">
+    <section className="bg-[var(--cream)] py-16 md:py-20">
       <div className="section-container">
         <div className="max-w-3xl">
           <SectionHeading title={c.title} subtitle={c.subtitle} />

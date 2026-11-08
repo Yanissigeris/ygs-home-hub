@@ -53,7 +53,7 @@ const BuyerPageEn = () => (
     <ServiceJsonLd name="Buyer Agent Service in Gatineau" description="Buyer representation service in Gatineau and the Outaouais: neighbourhood analysis, property search, offer strategy and full support." url="/en/buy/" serviceType="Real Estate Buyer Agent Service" />
     <HeroSection overline="For buyers · Gatineau" title="Buy in Gatineau with clarity and confidence" subtitle="First purchase or a move from Ottawa or Montréal: I guide you at every step, with the numbers in hand." primaryCta={{ label: "Book a consultation", href: "/en/buyer-consultation/" }} secondaryCta={{ label: "Compare neighbourhoods", href: "/en/neighborhoods/" }} trustLine="Clear strategy." heroBgImage={heroImg} />
 
-    <ContentBlock narrow background="alt">
+    <ContentBlock narrow split background="alt">
       <SectionHeading overline="2026 Context" title="Buying in Gatineau in 2026: what the numbers say" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         In Q3 2026, the Gatineau metropolitan area recorded 1,044 residential sales. The single-family median price was $480,000, with a selling time of 34 days (QPAREB, Centris data).
@@ -64,15 +64,15 @@ const BuyerPageEn = () => (
       <p className="mt-4 text-xs text-muted-foreground italic">Source: QPAREB, residential barometer for Q3 2026, Gatineau metropolitan area.</p>
     </ContentBlock>
 
-    <ContentBlock narrow><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="The house matters, but the area often decides the rest, like resale value and the commute to Ottawa. Before an offer, I show you what sold nearby and at what price." /></ContentBlock>
+    <ContentBlock narrow background="white"><SectionHeading overline="Buying real estate" title="Choosing a property also means choosing a neighbourhood and a strategy" subtitle="The house matters, but the area often decides the rest, like resale value and the commute to Ottawa. Before an offer, I show you what sold nearby and at what price." /></ContentBlock>
     <CardGrid overline="For you" title="The buyers I work with" items={profiles} background="alt" variant="icon-inline" />
-    <ProcessSteps steps={steps} />
+    <ProcessSteps steps={steps} background="white" />
     <InlineCTA text="Also selling? Knowing the value of your property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <SectorLinks overline="Neighbourhoods" title="Areas to compare" sectors={sectors} />
     <GuideInlineCTA lang="en" guideType="buyer_guide" headline="First time buying? Get the complete guide." text="The buying process in Québec explained simply, from search to notary, step by step." ctaLabel="Get the Buyer Guide" />
     <StickyGuideBanner lang="en" guideType="buyer_guide" label="Free Buyer Guide, get it by email" />
     <CalculatorsSection />
-    <ReviewSection overline="Buyer testimonials" title="What my buyer clients say" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} background="alt" />
+    <ReviewSection overline="Buyer testimonials" title="What my buyer clients say" reviews={getReviewsByCategory("buyer").slice(0, 2)} columns={2} quote background="white" />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the step that fits your situation." steps={nextSteps} />
     <CTASection dark title="Let's talk about your buying project" text="Budget and neighbourhoods: we sort it all out before the first showings." buttons={[{ label: "Book my consultation", href: "/en/buyer-consultation/" }, { label: "Compare neighbourhoods", href: "/en/neighborhoods/", variant: "outline" }]} trustLine="I give you the numbers and the options. You decide." />
     <FAQSection items={faq} />

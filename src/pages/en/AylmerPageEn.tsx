@@ -173,8 +173,9 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ REGARD TERRAIN : mots de Yanis, entrevue du 6 nov. 2026 ═══ */}
-    <section className="section-padding bg-background border-b border-border/60">
-      <div className="section-container max-w-3xl space-y-4">
+    <section className="section-padding bg-white">
+      <div className="section-container max-w-[72rem]">
+        <div className="content-split">
         <h2>Aylmer's market, from the ground</h2>
           <p className="prose-body mt-5">
             On the ground, I'm seeing a more balanced market in Aylmer. There are more homes for sale, and buyers are taking their time. That leaves a bit more room to negotiate than before.
@@ -192,10 +193,11 @@ const AylmerPageEn = () => (
             <Link to="/en/contact/" className="underline underline-offset-2 hover:text-foreground">Yanis Gauthier-Sigeris</Link>, real estate broker · November 2026
           </p>
       </div>
+      </div>
     </section>
 
     {/* ═══ SECTION 2 — SUB-SECTORS ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container">
         <h2 className="mt-3">Choosing the right neighbourhood in Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">
@@ -214,7 +216,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 3 — BUYING IN AYLMER ═══ */}
-    <section className="section-padding bg-[var(--cream)]">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">What you need to know before buying in Aylmer</h2>
         <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -242,7 +244,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 4 — SELLING IN AYLMER ═══ */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-[var(--cream)]">
       <div className="section-container grid gap-12 lg:grid-cols-2 lg:items-start">
         <div className="space-y-4">
           <h2>Sell your Aylmer property at the right price</h2>
@@ -278,7 +280,7 @@ const AylmerPageEn = () => (
     </section>
 
     {/* ═══ SECTION 5 — LIFE IN AYLMER ═══ */}
-    <section className="section-padding bg-[var(--cream)]">
+    <section className="section-padding bg-white">
       <div className="section-container">
         <h2 className="mt-3">Daily life in Aylmer</h2>
         <p className="prose-body mt-4 max-w-2xl">

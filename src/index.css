@@ -1029,6 +1029,7 @@ h1.hero-eyebrow {
 }
 .process-night { background: var(--ink); }
 .process-night h2 { color: var(--cream); }
+.process-night .prose-body { color: rgba(247, 244, 238, 0.78); }
 .review-quote::before {
   content: "\201C";
   display: block;

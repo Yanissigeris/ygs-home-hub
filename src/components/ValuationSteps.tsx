@@ -64,25 +64,25 @@ const ValuationSteps = ({ lang }: { lang: Lang }) => {
   const formLabel = lang === "en" ? "Free Home Valuation" : "Évaluation gratuite";
   const c = copy[lang];
   return (
-    <section className="bg-background pb-16 md:pb-20">
+    <section className="process-night py-16 md:py-20">
       <div className="section-container">
         <div className="max-w-3xl">
           <SectionHeading title={c.title} subtitle={c.subtitle} />
         </div>
-        <ol className="mt-10 border-t border-border">
+        <ol className="mt-10 border-t border-[rgba(247,244,238,0.18)]">
           {c.steps.map((s, i) => (
-            <li key={s.title} className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-border py-6 md:grid-cols-[3.5rem_1fr] md:gap-x-6">
+            <li key={s.title} className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-[rgba(247,244,238,0.18)] py-6 md:grid-cols-[3.5rem_1fr] md:gap-x-6">
               <span
                 aria-hidden="true"
-                className="row-span-2 text-[var(--ink)]"
+                className="row-span-2 text-[var(--gold-bright)]"
                 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.5rem, 6vw, 2rem)", lineHeight: 1 }}
               >
                 {i + 1}
               </span>
-              <h3 className="text-foreground" style={{ fontFamily: "var(--serif)", fontSize: "1.375rem", lineHeight: 1.2 }}>
+              <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.375rem", lineHeight: 1.2, color: "var(--cream)" }}>
                 {s.title}
               </h3>
-              <p className="mt-2 max-w-[62ch] text-[0.9375rem] leading-[1.7] text-muted-foreground">{s.text}</p>
+              <p className="mt-2 max-w-[62ch] text-[0.9375rem] leading-[1.7] text-[rgba(247,244,238,0.78)]">{s.text}</p>
             </li>
           ))}
         </ol>

@@ -177,10 +177,10 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
       </ImageTextSplit>
 
       {p.answers && p.answers.length > 0 && (
-        <section className="section-padding bg-background">
-          <div className="section-container max-w-[44rem] space-y-12">
+        <section className="section-padding bg-white">
+          <div className="section-container max-w-[72rem] space-y-12 md:space-y-16">
             {p.answers.map((item) => (
-              <div key={item.q}>
+              <div key={item.q} className="content-split">
                 <h2>{item.q}</h2>
                 <p className="mt-4 text-[1.0625rem] leading-relaxed text-foreground">{item.a}</p>
                 {item.detail && (
@@ -208,6 +208,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
       <FAQSection title={p.faq.title} items={p.faq.items} updated={p.updated} />
 
       <SectorLinks
+        background="white"
         overline={p.sectors.overline ?? (lang === "en" ? "Other sectors" : "Autres secteurs")}
         title={p.sectors.title ?? (lang === "en" ? "Explore other neighbourhoods" : "Explorer d'autres quartiers")}
         sectors={p.sectors.list}
