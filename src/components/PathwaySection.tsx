@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import lifestyleBg from "@/assets/pathway-lifestyle-bg.webp?w=480;720;900;1280&format=avif;webp&as=picture";
+import plexPhoto from "@/assets/pathway-plex-maisons-de-ville.webp?w=400;640&format=avif;webp&as=picture";
+import buyPhoto from "@/assets/pathway-acheter-cuisine.webp?w=400;640&format=avif;webp&as=picture";
+import lifestyleBg from "@/assets/pathway-vendre-bungalow.webp?w=480;720;1122&format=avif;webp&as=picture";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
@@ -103,218 +105,158 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     const pathways = lang === "en" ? pathwaysEn : pathwaysFr;
     const heading = lang === "en" ? headingEn : headingFr;
 
-    return (
-      <section
-        ref={ref}
-        className="section-pathway section-rhythm relative overflow-hidden md:py-24"
-        style={{ background: "var(--cream-deep)" }}
+    const [sell, ...others] = pathways;
+    const select = (p: Pathway) => {
+      setAvatarIntent(p.intent);
+      trackEvent("avatar_router_select", { avatar: p.intent });
+    };
+    const Photo = ({ sizes, className }: { sizes: string; className: string }) => (
+      <picture>
+        {lifestyleBg.sources.avif && <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes={sizes} />}
+        {lifestyleBg.sources.webp && <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes={sizes} />}
+        <img
+          src={lifestyleBg.img.src}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          width={1122}
+          height={1402}
+          className={className}
+        />
+      </picture>
+    );
+
+    const calc = (
+      <p className="text-[0.9375rem]" style={{ color: "rgba(0,14,53,0.72)" }}>
+        {heading.calcLead}{" "}
+        <Link
+          to={heading.calcHref}
+          onClick={() => trackEvent("home_welcome_tax_link", { lang: heading.calcHref.startsWith("/en") ? "en" : "fr" })}
+          className="inline-flex min-h-[44px] items-center font-semibold underline decoration-[rgba(0,14,53,0.35)] underline-offset-4 hover:decoration-[var(--ink)]"
+          style={{ color: "var(--ink)" }}
+        >
+          {heading.calcLabel}{" "}→
+        </Link>
+      </p>
+    );
+
+    const pill = (label: string) => (
+      <span
+        className="inline-flex items-center gap-2 transition-[gap] duration-300 [@media(hover:hover)]:group-hover:gap-3"
+        style={{
+          minHeight: 52,
+          padding: "0 1.75rem",
+          borderRadius: 999,
+          background: "var(--action)",
+          color: "var(--on-action)",
+          fontSize: ".95rem",
+          fontWeight: 600,
+        }}
       >
-        {/* Desktop: photo lifestyle as a floating frame, asymmetric on all sides */}
-        <div
-          aria-hidden="true"
-          role="presentation"
-          className="hidden md:block absolute overflow-hidden"
-          style={{
-            top: "80px",
-            right: "4%",
-            width: "50%",
-            height: "calc(100% - 160px)",
-            boxShadow:
-              "0 20px 60px rgba(0,14,53,0.30), 0 8px 20px rgba(0,14,53,0.15)",
-            zIndex: 1,
-          }}
-        >
-          <picture>
-            {lifestyleBg.sources.avif && (
-              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="(min-width: 1280px) 640px, 50vw" />
-            )}
-            {lifestyleBg.sources.webp && (
-              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="(min-width: 1280px) 640px, 50vw" />
-            )}
-            <img
-              src={lifestyleBg.img.src}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              width={1280}
-              height={714}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </picture>
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(245,241,234,0.15) 0%, rgba(0,14,53,0.10) 100%)",
-            }}
-          />
+        {label}{" "}→
+      </span>
+    );
+
+    const display = { fontFamily: "var(--display)", fontWeight: 600, color: "var(--ink)" } as const;
+
+    /* Photo bord à bord, bloc Vendre qui la chevauche, photos de propriétés pour Plex et Acheter */
+    const thumbs: Record<string, typeof plexPhoto> = { investir: plexPhoto, acheter: buyPhoto };
+    const thumbAlt: Record<string, string> =
+      lang === "en"
+        ? { investir: "Row of townhouses seen from above", acheter: "Kitchen with island and bar stools" }
+        : { investir: "Rangée de maisons de ville vue du ciel", acheter: "Cuisine avec îlot et tabourets" };
+
+    return (
+      <section ref={ref} className="section-pathway relative grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]" style={{ background: "var(--cream-deep)" }}>
+        <div className="relative h-[300px] md:h-[440px] lg:h-auto overflow-hidden">
+          <Photo sizes="(min-width: 1024px) 45vw, 100vw" className="absolute inset-0 h-full w-full object-cover object-[50%_62%] lg:object-[38%_center]" />
         </div>
 
-        {/* Mobile: photo full-width band on top */}
-        <div
-          aria-hidden="true"
-          role="presentation"
-          className="md:hidden w-full h-[200px] mb-8 relative overflow-hidden"
-        >
-          <picture>
-            {lifestyleBg.sources.avif && (
-              <source type="image/avif" srcSet={lifestyleBg.sources.avif} sizes="100vw" />
-            )}
-            {lifestyleBg.sources.webp && (
-              <source type="image/webp" srcSet={lifestyleBg.sources.webp} sizes="100vw" />
-            )}
-            <img
-              src={lifestyleBg.img.src}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              width={720}
-              height={402}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </picture>
-        </div>
-
-        <div className="section-container relative z-10">
-          {/* Editorial header on cream */}
-          <div className="max-w-[580px]">
-            <h2 style={{ color: "var(--ink)" }}>
-              {heading.titleFirst}{" "}
-              <span style={{ color: "var(--ink)", fontStyle: "normal" }}>
-                {heading.titleAccent}
-              </span>
-            </h2>
-            <p
-              className="prose-body mt-4"
-              style={{ color: "rgba(0,14,53,0.7)", maxWidth: 520 }}
-            >
-              {heading.subtitle}
-            </p>
+        <div className="relative px-5 sm:px-6 md:px-14 lg:pl-0 lg:pr-16 xl:pr-24 pb-16 md:pb-24 lg:py-28">
+          <div className="lg:pl-20 xl:pl-24" style={{ maxWidth: 680 }}>
+            <div className="pt-12 md:pt-16 lg:pt-0">
+              <h2 style={{ color: "var(--ink)", maxWidth: 520 }}>
+                {heading.titleFirst} {heading.titleAccent}
+              </h2>
+              <p className="mt-5" style={{ fontSize: "1.0625rem", lineHeight: 1.65, color: "rgba(0,14,53,0.62)", maxWidth: 440 }}>
+                {heading.subtitle}
+              </p>
+            </div>
           </div>
 
-          {/* Floating cards block with deep shadow */}
-          <div
-            className="relative z-10 mt-10 md:mt-14 md:w-[62%]"
+          {/* Bloc marine : déborde sur la photo à gauche (ordinateur) */}
+          <div style={{ maxWidth: 780 }}>
+          <Link
+            to={sell.href}
+            onClick={() => select(sell)}
+            className="group relative z-10 mt-10 md:mt-14 block p-8 md:p-11 lg:-ml-28 xl:-ml-32"
             style={{
-              borderRadius: 3,
-              overflow: "hidden",
-              boxShadow: "0 30px 80px rgba(0,14,53,0.35)",
-              background: "linear-gradient(175deg, var(--ink-deep), var(--ink))",
+              background: "var(--ink)",
+              borderRadius: 20,
+              boxShadow: "0 40px 80px -20px rgba(0,14,53,0.45)",
             }}
           >
-
-          <div
-            className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-[0.75rem] md:gap-px overflow-hidden"
-            style={{ background: "rgba(255,255,255,0.06)" }}
-          >
-
-            {pathways.map((p, i) => (
-              <Link
-                key={p.href}
-                to={p.href}
-                onClick={() => {
-                  setAvatarIntent(p.intent);
-                  trackEvent("avatar_router_select", { avatar: p.intent });
-                }}
-                className="group flex flex-col transition-[color,background-color,box-shadow,transform] duration-300 relative overflow-hidden p-[1.5rem] md:p-[1.75rem_1.5rem]"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  borderRight:
-                    i < pathways.length - 1
-                      ? "1px solid rgba(255,255,255,0.06)"
-                      : "none",
-                  minHeight: "270px",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.zIndex = "2";
-                  e.currentTarget.style.boxShadow =
-                    "0 4px 0 var(--gold), 0 24px 48px var(--gold3)";
-                  e.currentTarget.style.transform = "translateY(-5px)";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.07)";
-                  const title = e.currentTarget.querySelector('h3');
-                  if (title) title.style.color = "var(--gold-warm-light)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.zIndex = "";
-                  e.currentTarget.style.boxShadow = "";
-                  e.currentTarget.style.transform = "";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.03)";
-                  const title = e.currentTarget.querySelector('h3');
-                  if (title) title.style.color = "var(--cream-deep)";
-                }}
-              >
-                {p.badge && (
-                  <span
-                    style={{
-                      fontSize: "0.75rem",
-                      color: "var(--gold2)",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.12em",
-                      fontWeight: 600,
-                      marginBottom: "0.75rem",
-                      display: "block",
-                    }}
-                  >
-                    {p.badge}
-                  </span>
-                )}
-                <h3
-                  style={{
-                    fontFamily: "var(--serif)",
-                    fontStyle: "normal",
-                    fontSize: "clamp(1.25rem, 1.6vw, 1.375rem)",
-                    fontWeight: 600,
-                    color: "var(--cream-deep)",
-                    letterSpacing: "-.01em",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {p.title}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:items-end gap-8">
+              <div>
+                <h3 style={{ ...display, color: "var(--cream)", fontSize: "clamp(1.85rem, 2.9vw, 2.6rem)", lineHeight: 1.02, letterSpacing: "-0.04em", maxWidth: 440 }}>
+                  {sell.title}
                 </h3>
-                <p
-                  className="flex-1"
-                  style={{
-                    fontSize: "0.9375rem",
-                    color: "rgba(245,241,234,0.78)",
-                    lineHeight: 1.55,
-                  }}
-                >
-                  {p.text}
+                <p className="mt-5" style={{ fontSize: "1.03rem", lineHeight: 1.6, color: "rgba(245,241,234,0.74)", maxWidth: 400 }}>
+                  {sell.text}
                 </p>
-                <span
-                  className="mt-4 inline-flex items-center gap-2 transition-[gap] group-hover:gap-3"
-                  style={{
-                    fontSize: ".78rem",
-                    fontWeight: 600,
-                    color: "var(--gold-bright)",
-                    letterSpacing: ".06em",
-                    textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(138,168,255,.4)",
-                    paddingBottom: 2,
-                    alignSelf: "flex-start",
-                    minHeight: 44,
-                    display: "inline-flex",
-                    alignItems: "center",
-                  }}
-                >
-                  {p.cta}{"\u00A0"}→
-                </span>
-              </Link>
-            ))}
-          </div>
+              </div>
+              <div className="md:pb-1">{pill(sell.cta)}</div>
+            </div>
+          </Link>
           </div>
 
-          <p className="relative z-10 mt-5 text-[0.9375rem]" style={{ color: "rgba(0,14,53,0.72)" }}>
-            {heading.calcLead}{" "}
-            <Link
-              to={heading.calcHref}
-              onClick={() => trackEvent("home_welcome_tax_link", { lang: heading.calcHref.startsWith("/en") ? "en" : "fr" })}
-              className="inline-flex min-h-[44px] items-center font-semibold underline decoration-[rgba(0,14,53,0.35)] underline-offset-4 hover:decoration-[var(--ink)]"
-              style={{ color: "var(--ink)" }}
-            >
-              {heading.calcLabel}{"\u00A0"}→
-            </Link>
-          </p>
+          <div className="lg:pl-20 xl:pl-24" style={{ maxWidth: 780 }}>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {others.map((p) => {
+                const t = thumbs[p.intent];
+                return (
+                  <Link
+                    key={p.href}
+                    to={p.href}
+                    onClick={() => select(p)}
+                    className="group grid grid-cols-[80px_minmax(0,1fr)] sm:grid-cols-1 gap-4 sm:gap-0 overflow-hidden p-3 sm:p-0"
+                    style={{ background: "var(--white)", borderRadius: 20, border: "1px solid rgba(0,14,53,0.07)" }}
+                  >
+                    <div className="relative h-[80px] sm:h-[150px] overflow-hidden rounded-[14px] sm:rounded-none">
+                      <picture>
+                        {t.sources.avif && <source type="image/avif" srcSet={t.sources.avif} sizes="(min-width: 640px) 320px, 80px" />}
+                        {t.sources.webp && <source type="image/webp" srcSet={t.sources.webp} sizes="(min-width: 640px) 320px, 80px" />}
+                        <img
+                          src={t.img.src}
+                          alt={thumbAlt[p.intent]}
+                          loading="lazy"
+                          decoding="async"
+                          width={640}
+                          height={480}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] [@media(hover:hover)]:group-hover:scale-[1.04] motion-reduce:transition-none"
+                        />
+                      </picture>
+                    </div>
+                    <div className="sm:p-6 self-center sm:self-auto">
+                      <h3
+                        className="transition-colors duration-300 [@media(hover:hover)]:group-hover:text-[var(--action)]"
+                        style={{ ...display, fontSize: "1.2rem", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+                      >
+                        {p.title}
+                      </h3>
+                      <p className="mt-2 hidden sm:block" style={{ fontSize: "0.9375rem", lineHeight: 1.55, color: "rgba(0,14,53,0.62)" }}>{p.text}</p>
+                      <span className="mt-1 sm:mt-3 inline-flex items-center gap-2 whitespace-nowrap font-semibold text-[.875rem] sm:text-[.9375rem]" style={{ minHeight: 40, color: "var(--action)" }}>
+                        {p.cta}
+                        <span aria-hidden="true" className="transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-x-1">→</span>
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="mt-8">{calc}</div>
+          </div>
         </div>
       </section>
     );
