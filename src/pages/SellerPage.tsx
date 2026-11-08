@@ -72,7 +72,7 @@ const SellerPage = () =>
     sansTitle
     heroBgImage={heroImg} />
 
-    <ContentBlock narrow background="alt">
+    <ContentBlock narrow split background="alt">
       <SectionHeading overline="Stratégie locale" title="Adapter votre vente au marché de votre secteur" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         Une maison d'Aylmer ne se compare pas à une maison de Buckingham, et un condo ne se vend pas comme une unifamiliale. Avant de parler de prix, je regarde ce qui s'est vendu près de chez vous, dans votre type de propriété, ces derniers mois.
@@ -86,6 +86,7 @@ const SellerPage = () =>
     </ContentBlock>
 
 <CardGrid
+    background="white"
     overline="Vos questions"
     title="Vous vous posez probablement ces questions"
     items={painPoints}
@@ -106,7 +107,7 @@ const SellerPage = () =>
     variant="icon-top" />
   
 
-    <ContentBlock narrow>
+    <ContentBlock narrow split>
       <SectionHeading
       overline="Avant de vendre"
       title="Savoir où vous en êtes, à votre rythme" />
@@ -119,18 +120,20 @@ const SellerPage = () =>
       </p>
     </ContentBlock>
 
-    <ProcessSteps steps={steps} background="alt" />
+    <ProcessSteps steps={steps} tone="night" />
 
     <ReviewSection
     overline="Témoignages vendeurs"
     title="Ce que disent mes vendeurs"
     reviews={getReviewsByCategory("seller").slice(0, 2)}
     columns={2}
-    background="alt" />
+    quote
+    background="white" />
 
 
 
     <FunnelNextStep
+    background="white"
     overline="Prochaine étape"
     title="Par où commencer?"
     subtitle="Chaque vendeur a une situation différente. Choisissez l'étape qui vous convient."
@@ -149,7 +152,7 @@ const SellerPage = () =>
 
     <FAQSection items={faq} />
 
-    <SectorLinks sectors={[
+    <SectorLinks background="white" sectors={[
       { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
       { name: "Plateau", href: "/plateau/", detail: "Côtés Aylmer et Hull, maisons neuves, familial" },
       { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },

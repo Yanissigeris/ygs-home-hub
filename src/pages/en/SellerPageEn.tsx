@@ -58,7 +58,7 @@ const SellerPageEn = () => (
     <HeroSection overline="For sellers · Gatineau and area" title="Sell your property in Gatineau with a local strategy" subtitle="You don't have to decide everything today. What you need first is a clear plan: pricing, preparation, marketing and negotiation." primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }} secondaryCta={{ label: "Get my seller plan", href: "/en/seller-plan/" }} trustLine="Clear strategy." sansTitle
     heroBgImage={heroImg} />
 
-    <ContentBlock narrow background="alt">
+    <ContentBlock narrow split background="alt">
       <SectionHeading overline="Local strategy" title="Adapting your sale to your local market" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         A house in Aylmer doesn't compare to one in Buckingham, and a condo doesn't sell like a single-family home. Before we talk price, I look at what sold near you, in your type of property, over the last few months.
@@ -71,17 +71,17 @@ const SellerPageEn = () => (
       </p>
     </ContentBlock>
 
-<CardGrid overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
+<CardGrid background="white" overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
     <InlineCTA text="First step: find out what your property is worth. It's free, with no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
-    <ContentBlock narrow>
+    <ContentBlock narrow split>
       <SectionHeading overline="Before selling" title="Know where you stand first" />
       <p className="prose-body mt-5">Before selling, you probably want to know one thing: what your home is worth, with no pressure. We start there. Then we look at your timing and at what the market in your area allows.</p>
       <p className="prose-body mt-4">I've been helping sellers across the Outaouais since 2017, and I know a good sale takes preparation. It all begins with a value based on local comparables. Then come the price and the improvements that pay off, followed by marketing aimed at the right buyers, including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
-    <ProcessSteps steps={steps} background="alt" />
-    <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} background="alt" />
-    <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
+    <ProcessSteps steps={steps} tone="night" />
+    <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} quote background="white" />
+    <FunnelNextStep background="white" overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the seller guide." text="Everything you need to know to sell at the right price in Gatineau, in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />
     <FAQSection items={faq} />
     <RelatedPages overline={marketBlockCopy.en.overline} title={marketBlockCopy.en.title} pages={marketArticlePages("en", "seller")} />

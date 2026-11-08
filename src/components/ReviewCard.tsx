@@ -7,10 +7,12 @@ interface ReviewCardProps {
   review: Review;
   variant?: "compact" | "full";
   index?: number;
+  /** Présentation en citation : sans boîte, grand guillemet (CSS), texte plus gros. */
+  quote?: boolean;
 }
 
 const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
-  ({ review, variant = "compact", index = 0 }, ref) => (
+  ({ review, variant = "compact", index = 0, quote = false }, ref) => (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
@@ -19,7 +21,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
       transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
-      <div className="card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col">
+      <div className={quote ? "review-quote relative h-full flex flex-col" : "card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col"}>
         <div className="relative z-[1] mb-4 flex gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star key={i} size={13} className="fill-[var(--star)] text-[var(--star)]" />
@@ -27,7 +29,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
         </div>
 
         <blockquote className="relative z-[1] flex-1">
-          <p className="text-[0.9375rem] italic leading-[1.65] text-foreground/85">
+          <p className={quote ? "review-quote-text italic text-foreground" : "text-[0.9375rem] italic leading-[1.65] text-foreground/85"}>
             "{variant === "full" ? review.full : review.short}"
           </p>
         </blockquote>
