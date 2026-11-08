@@ -71,7 +71,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
           ref={imgRef}
           src={property.image}
           alt={`${property.type}, ${property.address}, ${property.city} · YGS Yanis Gauthier-Sigeris`}
-          className={`h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`h-full w-full object-cover transition-[transform,opacity] duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           loading="lazy"
           decoding="async"
           width={648}

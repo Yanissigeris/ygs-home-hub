@@ -216,7 +216,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   setAvatarIntent(p.intent);
                   trackEvent("avatar_router_select", { avatar: p.intent });
                 }}
-                className="group flex flex-col transition-all duration-300 relative overflow-hidden p-[1.5rem] md:p-[1.75rem_1.5rem]"
+                className="group flex flex-col transition-[color,background-color,box-shadow,transform] duration-300 relative overflow-hidden p-[1.5rem] md:p-[1.75rem_1.5rem]"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   borderRight:
@@ -282,7 +282,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   {p.text}
                 </p>
                 <span
-                  className="mt-4 inline-flex items-center gap-2 transition-all group-hover:gap-3"
+                  className="mt-4 inline-flex items-center gap-2 transition-[gap] group-hover:gap-3"
                   style={{
                     fontSize: ".78rem",
                     fontWeight: 600,

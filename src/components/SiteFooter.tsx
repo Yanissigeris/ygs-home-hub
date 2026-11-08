@@ -66,7 +66,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
       </h3>
       <div
         id={panelId}
-        className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}
+        className={`overflow-hidden transition-[max-height,padding] duration-200 ${open ? "max-h-[500px] pb-4" : "max-h-0"}`}
         role="region"
         aria-label={title}
         {...(!open ? { inert: "" as unknown as boolean } : {})}

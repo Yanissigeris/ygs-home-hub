@@ -29,7 +29,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
         {item.label}
         <ChevronDownIcon size={14} className={`opacity-35 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
-      <div className={`overflow-hidden transition-all duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
+      <div className={`overflow-hidden transition-[max-height,opacity] duration-250 ease-out ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="pb-2 pl-3">
           {sections.map((sec, idx) => (
             <div key={sec.title ?? idx} className={idx > 0 ? "mt-3 pt-3" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
@@ -102,7 +102,7 @@ const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, cl
             <Link
               to={ctaHref}
               onClick={closeMenu}
-              className="flex w-full items-center justify-center transition-all duration-200"
+              className="flex w-full items-center justify-center transition-[color,background-color] duration-200"
               style={{ height: 48, background: "transparent", color: "var(--gold)", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid var(--gold)", transition: "all .2s ease" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}

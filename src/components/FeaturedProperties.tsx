@@ -197,7 +197,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
             </div>
             <Link
               to={strings.viewAllHref}
-              className="hidden sm:inline-flex items-center gap-2 transition-all hover:gap-3 shrink-0"
+              className="hidden sm:inline-flex items-center gap-2 transition-[gap] hover:gap-3 shrink-0"
               style={{
                 fontSize: ".8rem",
                 fontWeight: 600,

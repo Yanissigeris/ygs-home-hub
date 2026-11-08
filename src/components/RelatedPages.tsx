@@ -51,7 +51,7 @@ const RelatedPages = ({
                 <h3 className="text-[1rem] font-semibold group-hover:text-primary transition-colors">{page.title}</h3>
                 <p className="mt-1.5 text-[0.875rem] leading-[1.6] text-muted-foreground">{page.text}</p>
               </div>
-              <ArrowRight size={16} className="mt-1 shrink-0 text-muted-foreground/30 group-hover:text-primary transition-all group-hover:translate-x-0.5" />
+              <ArrowRight size={16} className="mt-1 shrink-0 text-muted-foreground/30 group-hover:text-primary transition-[color,transform] group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
         ))}

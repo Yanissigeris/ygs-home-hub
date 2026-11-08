@@ -49,7 +49,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               <button
                 key={g.guideType}
                 type="button"
-                className="group relative flex flex-col text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="group relative flex flex-col text-left transition-[background-color,box-shadow] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 style={{
                   padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
                   background: "var(--cream)",
@@ -63,7 +63,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold-dark)" }} aria-hidden="true" />
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
                 <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.75 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-all group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
+                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-[gap] group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
               </button>
             ))}
           </div>

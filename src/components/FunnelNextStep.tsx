@@ -58,7 +58,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
             >
               <Link
                 to={canonicalPath(step.href)}
-                className={`group relative flex flex-col h-full border px-6 py-6 sm:px-7 sm:py-7 transition-all duration-200 ${
+                className={`group relative flex flex-col h-full border px-6 py-6 sm:px-7 sm:py-7 transition-[border-color,box-shadow] duration-200 ${
                   step.highlight
                     ? "bg-[var(--ink)] border-[var(--ink)] hover:shadow-lg"
                     : "bg-transparent border-[#D9DEEA] hover:border-[var(--gold)]/40"

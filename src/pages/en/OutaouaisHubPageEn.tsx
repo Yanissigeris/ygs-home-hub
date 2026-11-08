@@ -97,13 +97,13 @@ const OutaouaisHubPageEn = () => (
             <Link
               key={z.href}
               to={z.href}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-all duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
+              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-[border-color,box-shadow,transform] duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
             >
               <div className="min-w-0">
                 <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{z.name}</p>
                 <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">{z.detail}</p>
               </div>
-              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-all group-hover:text-primary group-hover:translate-x-0.5" />
+              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
             </Link>
           ))}
         </div>
@@ -119,13 +119,13 @@ const OutaouaisHubPageEn = () => (
             <Link
               key={s.href}
               to={s.href}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-all duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
+              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-[border-color,box-shadow,transform] duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
             >
               <div className="min-w-0">
                 <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{s.label}</p>
                 <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">{s.detail}</p>
               </div>
-              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-all group-hover:text-primary group-hover:translate-x-0.5" />
+              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
             </Link>
           ))}
         </div>
