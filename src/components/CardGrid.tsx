@@ -13,7 +13,7 @@ interface CardGridProps {
   title: string;
   items: CardItem[];
   columns?: 2 | 3;
-  background?: "default" | "alt";
+  background?: "default" | "alt" | "white";
   variant?: "icon-top" | "icon-inline";
   centered?: boolean;
 }
@@ -27,7 +27,7 @@ const CardGrid = ({
   variant = "icon-top",
   centered = true,
 }: CardGridProps) => (
-  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
+  <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
     <div className="section-container max-w-[52rem]">
       <motion.div
         className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}

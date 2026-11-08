@@ -22,7 +22,7 @@ interface FunnelNextStepProps {
   title: string;
   subtitle?: string;
   steps: FunnelStep[];
-  background?: "default" | "alt";
+  background?: "default" | "alt" | "white";
 }
 
 const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
@@ -35,7 +35,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
   }, ref) => (
     <section
       ref={ref}
-      className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}
+      className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}
     >
       <div className="section-container max-w-[56rem]">
         <motion.div
