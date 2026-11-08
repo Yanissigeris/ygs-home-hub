@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
-import App, { preloadCurrentRoute } from "./App.tsx";
+import App from "./App.tsx";
+import { preloadRoute } from "./lib/route-preload";
 import "./index.css";
 import { installHmrFallback } from "./lib/hmr-fallback";
 import { releasePrerenderedSchemas } from "./lib/prerendered-schemas";
@@ -24,6 +25,6 @@ const start = () => {
   started = true;
   render();
 };
-Promise.race([preloadCurrentRoute(window.location.pathname), new Promise((r) => setTimeout(r, 3000))])
+Promise.race([preloadRoute(window.location.pathname), new Promise((r) => setTimeout(r, 3000))])
   .catch(() => undefined)
   .finally(start);

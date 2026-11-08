@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
 import { usePageView } from "@/hooks/usePageView";
+import { registerRoutePreloader } from "@/lib/route-preload";
 
 const PageViewTracker = () => {
   usePageView();
@@ -401,8 +402,9 @@ const appRoutes = React.createElement(
   ),
 );
 
-/** Précharge le code de la page demandée (appelé par main.tsx avant le premier rendu). */
-export function preloadCurrentRoute(pathname: string): Promise<unknown> {
+/** Précharge le code de la page demandée (main.tsx l'appelle avant le premier rendu,
+ *  via route-preload.ts, pour que ce fichier n'exporte qu'un composant). */
+function preloadCurrentRoute(pathname: string): Promise<unknown> {
   const fragment = (routeTree as React.ReactElement<{ children: React.ReactNode }>).props.children;
   const matches = matchRoutes(createRoutesFromElements(fragment), pathname) ?? [];
   const jobs = matches
@@ -411,6 +413,7 @@ export function preloadCurrentRoute(pathname: string): Promise<unknown> {
     .map((t) => t.preload());
   return Promise.all(jobs);
 }
+registerRoutePreloader(preloadCurrentRoute);
 
 // Form error messages (useFormSubmit calls toast()). The toast UI is loaded only
 // when a message actually needs to be shown, so it costs nothing on normal visits.
