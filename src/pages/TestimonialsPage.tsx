@@ -50,7 +50,7 @@ const TestimonialsPage = () => (
           <div className="section-container">
             <motion.div
               className="mb-10"
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

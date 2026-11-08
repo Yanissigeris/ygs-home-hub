@@ -19,7 +19,7 @@ const ContentBlock = ({
   <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-[var(--cream)]" : "bg-background"}`}>
     <div className={`section-container ${narrow ? "max-w-[44rem]" : ""} ${centered ? "text-center" : ""}`}>
       <motion.div
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

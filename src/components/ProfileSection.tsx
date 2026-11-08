@@ -36,7 +36,7 @@ const ProfileSection = ({
     <div className={`section-container grid gap-12 lg:gap-16 ${imagePosition === "left" ? "lg:grid-cols-[38%_62%]" : "lg:grid-cols-[62%_38%]"} lg:items-start`}>
       <motion.div
         className={imagePosition === "right" ? "order-2" : ""}
-        initial={{ opacity: 0, x: imagePosition === "left" ? -12 : 12 }}
+        initial={false}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -68,7 +68,7 @@ const ProfileSection = ({
       </motion.div>
       <motion.div
         className={imagePosition === "right" ? "order-1" : ""}
-        initial={{ opacity: 0, x: imagePosition === "left" ? 12 : -12 }}
+        initial={false}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}

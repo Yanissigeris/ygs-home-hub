@@ -29,7 +29,7 @@ const ProcessSteps = ({
     <div className="section-container">
       <motion.div
         className="text-center mb-12 max-w-[40rem] mx-auto"
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -40,7 +40,7 @@ const ProcessSteps = ({
         {steps.map((s, i) => (
           <motion.div
             key={s.num}
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.35, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}

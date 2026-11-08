@@ -35,7 +35,7 @@ const CalculatorsSection = () => {
     <section id={lang === "en" ? "calculators" : "calculateurs"} className="section-padding bg-[var(--cream)]">
       <div className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

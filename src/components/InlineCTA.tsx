@@ -14,7 +14,7 @@ const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonL
   <section ref={ref} className="cta-band">
     <motion.div
       className="section-container"
-      initial={{ opacity: 0, y: 10 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

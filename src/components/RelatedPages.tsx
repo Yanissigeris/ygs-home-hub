@@ -27,7 +27,7 @@ const RelatedPages = ({
     <div className="section-container max-w-[52rem]">
       <motion.div
         className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -38,7 +38,7 @@ const RelatedPages = ({
         {pages.map((page, i) => (
           <motion.div
             key={page.href}
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}

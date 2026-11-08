@@ -31,7 +31,7 @@ const LinkedCardGrid = ({
     <div className="section-container max-w-[52rem]">
       <motion.div
         className="text-center mb-12 max-w-[40rem] mx-auto"
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -42,7 +42,7 @@ const LinkedCardGrid = ({
         {items.map((card, i) => (
           <motion.div
             key={card.title}
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.35, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}

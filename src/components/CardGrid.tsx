@@ -31,7 +31,7 @@ const CardGrid = ({
     <div className="section-container max-w-[52rem]">
       <motion.div
         className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -44,7 +44,7 @@ const CardGrid = ({
           return (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}

@@ -13,7 +13,7 @@ const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsLi
   <section className={background === "alt" ? "section-padding bg-secondary/25" : "section-padding bg-background"}>
     <div className="section-container max-w-[44rem]">
       <motion.div
-        initial={{ opacity: 0, y: 12 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -25,7 +25,7 @@ const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsLi
           <motion.div
             key={item}
             className="flex items-start gap-3.5"
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.3, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
