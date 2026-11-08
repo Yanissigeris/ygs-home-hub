@@ -1004,3 +1004,7 @@ h1.hero-eyebrow {
   line-height: 1.45;
   letter-spacing: -0.01em;
 }
+
+/* ── Rythme global (8 nov. 2026) : les sections « par défaut » passent en blanc
+   pour alterner nettement avec les sections crème sur toutes les pages. ── */
+section.bg-background { background-color: #fff; }
