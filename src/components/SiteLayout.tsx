@@ -15,8 +15,11 @@ const CookieConsent = React.lazy(() => import("@/components/CookieConsent"));
 
 
 import { Outlet, useLocation } from "react-router-dom";
+import { lazyWithPreload, registerPreloader } from "@/lib/route-preload";
 
-const SiteFooter = React.lazy(() => import("@/components/SiteFooter"));
+// Préchargé avant le premier rendu (main.tsx) : le pied de page enregistré ne disparaît plus.
+const SiteFooter = lazyWithPreload(() => import("@/components/SiteFooter"));
+registerPreloader(() => SiteFooter.preload());
 
 const PageFallback = () => (
   <div className="animate-fade-in">

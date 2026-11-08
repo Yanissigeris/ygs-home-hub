@@ -5,7 +5,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import SiteLayout from "@/components/SiteLayout";
 import ScrollToTop from "@/components/ScrollToTop";
 import { usePageView } from "@/hooks/usePageView";
-import { registerRoutePreloader } from "@/lib/route-preload";
+import { lazyWithPreload, registerPreloader, type Preloadable } from "@/lib/route-preload";
 
 const PageViewTracker = () => {
   usePageView();
@@ -104,23 +104,8 @@ if (typeof window !== "undefined") {
 }
 
 // FR pages
-// Pages chargées à la demande. lazyPage garde le module en mémoire une fois chargé :
-// si main.tsx l'a préchargé avant le premier rendu, React l'affiche tout de suite,
-// sans passer par le squelette gris (PageFallback) qui remplaçait la page enregistrée.
-type PageModule = { default: React.ComponentType<object> };
-type PreloadablePage = React.LazyExoticComponent<React.ComponentType<object>> & { preload: () => Promise<PageModule> };
-function lazyPage(loader: () => Promise<PageModule>): PreloadablePage {
-  let loaded: PageModule | undefined;
-  const load = () => loader().then((m) => (loaded = m));
-  const Page = React.lazy(() =>
-    loaded
-      ? // « then » synchrone : React voit le module déjà prêt et ne suspend pas.
-        ({ then: (resolve: (m: PageModule) => void) => resolve(loaded as PageModule) } as unknown as Promise<PageModule>)
-      : load(),
-  ) as PreloadablePage;
-  Page.preload = load;
-  return Page;
-}
+// Pages chargées à la demande, préchargeables (voir lib/route-preload.ts).
+const lazyPage = lazyWithPreload;
 
 import Index from "./pages/Index";
 const SellerPage = lazyPage(() => import("./pages/SellerPage"));
@@ -403,17 +388,17 @@ const appRoutes = React.createElement(
 );
 
 /** Précharge le code de la page demandée (main.tsx l'appelle avant le premier rendu,
- *  via route-preload.ts, pour que ce fichier n'exporte qu'un composant). */
+ *  via lib/route-preload.ts, pour que ce fichier n'exporte qu'un composant). */
 function preloadCurrentRoute(pathname: string): Promise<unknown> {
   const fragment = (routeTree as React.ReactElement<{ children: React.ReactNode }>).props.children;
   const matches = matchRoutes(createRoutesFromElements(fragment), pathname) ?? [];
   const jobs = matches
-    .map((m) => (m.route.element as React.ReactElement | undefined)?.type as Partial<PreloadablePage> | undefined)
-    .filter((t): t is PreloadablePage => typeof t?.preload === "function")
+    .map((m) => (m.route.element as React.ReactElement | undefined)?.type as Partial<Preloadable> | undefined)
+    .filter((t): t is Preloadable => typeof t?.preload === "function")
     .map((t) => t.preload());
   return Promise.all(jobs);
 }
-registerRoutePreloader(preloadCurrentRoute);
+registerPreloader(preloadCurrentRoute);
 
 // Form error messages (useFormSubmit calls toast()). The toast UI is loaded only
 // when a message actually needs to be shown, so it costs nothing on normal visits.

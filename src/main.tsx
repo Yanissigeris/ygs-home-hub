@@ -18,13 +18,14 @@ const render = () =>
 
 // La page enregistrée (HTML prérendu) reste affichée pendant que le code de la page
 // se charge, puis React la remplace par la même page. Sans cette attente, un squelette
-// gris s'affichait entre les deux. Au pire on attend 3 s, puis on affiche quand même.
+// gris s'affichait entre les deux. Au plus 1 s d'attente (menu et formulaires ne répondent
+// pas pendant ce temps), puis on affiche quand même.
 let started = false;
 const start = () => {
   if (started) return;
   started = true;
   render();
 };
-Promise.race([preloadRoute(window.location.pathname), new Promise((r) => setTimeout(r, 3000))])
+Promise.race([preloadRoute(window.location.pathname), new Promise((r) => setTimeout(r, 1000))])
   .catch(() => undefined)
   .finally(start);
