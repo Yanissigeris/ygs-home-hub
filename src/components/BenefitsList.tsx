@@ -1,5 +1,4 @@
 import { CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 interface BenefitsListProps {
@@ -12,27 +11,19 @@ interface BenefitsListProps {
 const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsListProps) => (
   <section className={background === "alt" ? "section-padding bg-secondary/25" : "section-padding bg-background"}>
     <div className="section-container max-w-[44rem]">
-      <motion.div
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      <div
       >
         <SectionHeading overline={overline} title={title} />
-      </motion.div>
+      </div>
       <div className="mt-8 space-y-4">
         {items.map((item, i) => (
-          <motion.div
+          <div
             key={item}
             className="flex items-start gap-3.5"
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.3, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
             <CheckCircle2 size={17} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
             <span className="text-[1rem] text-foreground">{item}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

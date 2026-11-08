@@ -2,7 +2,6 @@ import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Clock, Shield, FileText } from "lucide-react";
-import { motion } from "framer-motion";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import heroThankYouVal from "@/assets/hero-thank-you-valuation.webp";
 
@@ -31,24 +30,18 @@ const ThankYouValuationPage = () => (
       }}
     >
       <div className="section-container max-w-[36rem]">
-        <motion.div
+        <div
           className="text-center"
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <CheckCircle2 size={56} className="mx-auto text-accent" />
           <h1 className="mt-6">Merci. Votre demande d'évaluation est en route.</h1>
           <p className="prose-body mt-4">
             Je prépare votre évaluation personnalisée basée sur votre propriété, votre secteur et les ventes comparables récentes.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           className="mt-10 flex flex-col gap-4"
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           {whatsNext.map((item) => (
             <div key={item.text} className="flex items-center gap-3.5 rounded-xl border border-border/40 bg-card px-5 py-4">
@@ -56,7 +49,7 @@ const ThankYouValuationPage = () => (
               <span className="text-[0.9375rem] font-medium text-foreground">{item.text}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         <div className="mt-8 text-center">
           <Button size="lg" asChild>

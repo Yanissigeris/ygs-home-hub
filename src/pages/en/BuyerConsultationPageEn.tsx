@@ -17,7 +17,6 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { Lock, Clock, Shield } from "lucide-react";
-import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero.webp";
 import heroImg from "@/assets/hero-buyer-consultation.webp";
 
@@ -90,12 +89,8 @@ const BuyerConsultationPageEn = () => {
       <section className="section-padding bg-background">
         <div className="section-container">
           <div className="grid gap-10 lg:grid-cols-5">
-            <motion.div
+            <div
               className="lg:col-span-3"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Book your consultation</h2>
@@ -183,14 +178,10 @@ const BuyerConsultationPageEn = () => {
                   </form>
                 )}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.aside
+            <aside
               className="lg:col-span-2 space-y-5 lg:pt-2"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.35, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="card-elevated border border-border/40 bg-secondary/30 p-7">
                 <p className="text-[1rem] font-semibold text-foreground">Free and confidential</p>
@@ -213,7 +204,7 @@ const BuyerConsultationPageEn = () => {
                   <Link to="/en/home-valuation/">Free Home Valuation</Link>
                 </Button>
               </div>
-            </motion.aside>
+            </aside>
           </div>
         </div>
       </section>

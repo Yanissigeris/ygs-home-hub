@@ -12,7 +12,6 @@ import ValuationOptions from "@/components/ValuationOptions";
 import ValuationIncludes, { ValuationHeroPreview } from "@/components/ValuationIncludes";
 import ValuationTestimonial from "@/components/ValuationTestimonial";
 import ValuationSteps from "@/components/ValuationSteps";
-import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
@@ -35,11 +34,6 @@ const afterSteps = [
   { title: "Parler à Yanis", text: "Discuter de votre situation et de vos options, sans engagement.", href: "/contact-yanis/", cta: "Réserver un appel" },
 ];
 
-const anim = {
-  initial: false as const,
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-};
 
 const ValuationPage = () => {
   return (
@@ -71,11 +65,9 @@ const ValuationPage = () => {
         />
 
         {/* Portrait – positioned behind the form on desktop */}
-        <motion.div
+        <div
           className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 0.2, y: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          style={{ opacity: 0.2 }}
           aria-hidden="true"
         >
           <div style={{
@@ -94,13 +86,13 @@ const ValuationPage = () => {
               decoding="async"
             />
           </div>
-        </motion.div>
+        </div>
 
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
 
             {/* ── LEFT: Value proposition ── */}
-            <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
+            <div className="pt-1 md:pt-6 lg:pt-10">
               {/* Eyebrow */}
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}>
                 <span>Évaluation gratuite</span>
@@ -127,14 +119,14 @@ const ValuationPage = () => {
               <p className="hidden sm:block mt-5 text-[0.8125rem] text-primary-foreground/80">
                 Plus de 300 transactions depuis 2017 <span aria-hidden="true" className="mx-2 text-primary-foreground/40">·</span> Hall of Fame RE/MAX 2024
               </p>
-            </motion.div>
+            </div>
 
             {/* ── RIGHT: Form card ── */}
-            <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
+            <div>
               <div className="form-16-inputs">
                 <ValuationForm lang="fr" variant="glass" addressPlaceholder="123 rue Exemple, Gatineau" />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

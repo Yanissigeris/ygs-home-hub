@@ -1,5 +1,4 @@
 import PageMeta from "@/components/PageMeta";
-import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ReviewCard from "@/components/ReviewCard";
@@ -48,15 +47,11 @@ const TestimonialsPage = () => (
           className={`section-padding ${categories.indexOf(cat) % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}
         >
           <div className="section-container">
-            <motion.div
+            <div
               className="mb-10"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <h2>{cat.title}</h2>
-            </motion.div>
+            </div>
             <div className={`grid gap-6 ${catReviews.length >= 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"}`}>
               {catReviews.map((review, i) => (
                 <ReviewCard key={review.id} review={review} variant="full" index={i} />

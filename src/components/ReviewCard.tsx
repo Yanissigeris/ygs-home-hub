@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Star } from "lucide-react";
-import { motion } from "framer-motion";
 import type { Review } from "@/data/reviews";
 
 interface ReviewCardProps {
@@ -13,12 +12,8 @@ interface ReviewCardProps {
 
 const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
   ({ review, variant = "compact", index = 0, quote = false }, ref) => (
-    <motion.div
+    <div
       ref={ref}
-      initial={false}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.35, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
       <div className={quote ? "review-quote relative h-full flex flex-col" : "card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col"}>
@@ -47,7 +42,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   ),
 );
 

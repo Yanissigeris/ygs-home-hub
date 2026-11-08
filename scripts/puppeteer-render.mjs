@@ -116,6 +116,9 @@ function startStaticServer(distDir) {
   });
 }
 
+// 1x1 transparent GIF used as a stand-in for every image during the snapshot.
+const TRANSPARENT_GIF = Buffer.from("R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", "base64");
+
 /** Render a single route and write its HTML back into dist. */
 async function renderRoute(browser, route) {
   const page = await browser.newPage();
@@ -135,10 +138,16 @@ async function renderRoute(browser, route) {
   });
 
   // Block heavy/non-essential assets to speed things up.
+  // Images: answer with a 1x1 transparent GIF instead of aborting. An aborted image
+  // fires onError, and several components then hide it (display: none) or never mark
+  // it loaded (opacity-0), which got saved into the HTML. A tiny valid image fires
+  // onLoad instead, so the saved HTML keeps every photo visible with its real src.
   await page.setRequestInterception(true);
   page.on("request", (req) => {
     const t = req.resourceType();
-    if (t === "image" || t === "media" || t === "font") {
+    if (t === "image") {
+      req.respond({ status: 200, contentType: "image/gif", body: TRANSPARENT_GIF });
+    } else if (t === "media" || t === "font") {
       req.abort();
     } else {
       req.continue();

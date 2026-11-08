@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 import OptimizedImage from "@/components/OptimizedImage";
 
 interface ImageTextSplitProps {
@@ -21,12 +20,8 @@ const ImageTextSplit = ({
 }: ImageTextSplitProps) => (
   <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
-      <motion.div
+      <div
         className={imagePosition === "right" ? "" : "order-2 lg:order-1"}
-        initial={false}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         {imagePosition === "right" ? (
           children
@@ -40,13 +35,9 @@ const ImageTextSplit = ({
             height={486}
           />
         )}
-      </motion.div>
-      <motion.div
+      </div>
+      <div
         className={imagePosition === "right" ? "" : "order-1 lg:order-2"}
-        initial={false}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
         {imagePosition === "right" ? (
           <OptimizedImage
@@ -60,7 +51,7 @@ const ImageTextSplit = ({
         ) : (
           children
         )}
-      </motion.div>
+      </div>
     </div>
   </section>
 );

@@ -5,7 +5,6 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { motion } from "framer-motion";
 import { Send, Lock, Shield, BadgeCheck, CheckCircle2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
@@ -158,11 +157,7 @@ const GuideRequestForm = ({
   return (
     <section id="recevoir-guide" className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[56rem]">
-        <motion.div
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="grid gap-8 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_420px] items-start"
         >
           {/* Left: value proposition */}
@@ -290,7 +285,7 @@ const GuideRequestForm = ({
               </form>
             )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

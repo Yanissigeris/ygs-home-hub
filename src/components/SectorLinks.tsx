@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 interface Sector {
@@ -37,23 +36,15 @@ const SectorLinks = ({
   return (
     <section id={id} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
       <div className="section-container max-w-[52rem]">
-        <motion.div
+        <div
           className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <SectionHeading overline={overline} title={title} centered />
-        </motion.div>
+        </div>
         <div className={`grid gap-4 sm:gap-5 ${teaserCount ? "sm:grid-cols-3" : "sm:grid-cols-2 md:grid-cols-3"}`}>
           {visible.map((s, i) => (
-            <motion.div
+            <div
               key={s.name}
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link to={s.href} className="card-elevated group flex flex-col border border-border/40 bg-card px-6 py-5 transition-[border-color,box-shadow,transform] duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                 <div className="flex items-center gap-3">
@@ -65,7 +56,7 @@ const SectorLinks = ({
                   <p className="mt-2 text-[0.875rem] text-muted-foreground">{s.detail}</p>
                 )}
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
         {seeAllHref && seeAllLabel && (

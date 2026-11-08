@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { trackCTAClick } from "@/lib/analytics";
 
 interface InlineCTAProps {
@@ -12,12 +11,8 @@ interface InlineCTAProps {
 
 const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonLabel, href }, ref) => (
   <section ref={ref} className="cta-band">
-    <motion.div
+    <div
       className="section-container"
-      initial={false}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
     >
       <p>{text}</p>
       {/* The "hero" variant uses dark --gold-text for light backgrounds. This band is dark (--ink),
@@ -31,7 +26,7 @@ const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonL
       >
         <Link to={href}>{buttonLabel}</Link>
       </Button>
-    </motion.div>
+    </div>
   </section>
 ));
 

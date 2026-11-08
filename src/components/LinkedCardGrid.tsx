@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { canonicalPath } from "@/lib/url-utils";
 import { ArrowRight, LucideIcon } from "lucide-react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 interface LinkedCard {
@@ -29,23 +28,15 @@ const LinkedCardGrid = ({
 }: LinkedCardGridProps) => (
   <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
     <div className="section-container max-w-[52rem]">
-      <motion.div
+      <div
         className="text-center mb-12 max-w-[40rem] mx-auto"
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading overline={overline} title={title} centered />
-      </motion.div>
+      </div>
       <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {items.map((card, i) => (
-          <motion.div
+          <div
             key={card.title}
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.35, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link to={canonicalPath(card.href)} className="card-elevated group block border border-border/40 bg-card p-7 sm:p-8 h-full">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary mb-5">
@@ -57,7 +48,7 @@ const LinkedCardGrid = ({
                 {card.cta} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </span>
             </Link>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

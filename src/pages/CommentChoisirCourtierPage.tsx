@@ -5,7 +5,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import heroImg from "@/assets/hero-comment-choisir.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
@@ -40,17 +39,14 @@ const CommentChoisirCourtierPage = () => (
 
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-2xl"
         >
           <h1 className="text-primary-foreground">Comment choisir un courtier immobilier?</h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.6] text-primary-foreground/90" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
             Le bon courtier vous donne un plan clair et un prix appuyé sur des ventes comparables. Ce guide vous aide à comparer les courtiers sur des critères concrets.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
 
@@ -69,20 +65,16 @@ const CommentChoisirCourtierPage = () => (
         <SectionHeading overline="Checklist" title="8 critères pour choisir votre courtier" centered />
         <div className="mt-8 space-y-3">
           {checklist.map((item, i) => (
-            <motion.div
+            <div
               key={item.title}
               className="rounded-xl border border-border/40 bg-card p-4 flex gap-3.5"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.35, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             >
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
               <div>
                 <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
                 <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{item.text}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

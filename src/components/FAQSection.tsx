@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
 
@@ -94,12 +93,8 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
     return (
       <section ref={ref} className="section-padding bg-background">
         <div className="section-container max-w-[44rem]">
-          <motion.div
+          <div
             className="text-center mb-5 sm:mb-8"
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="label-overline mb-2 justify-center">FAQ</p>
             <h2>{resolvedTitle}</h2>
@@ -112,7 +107,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
                 {updated.source ? ` · ${updated.source}` : ""}
               </p>
             )}
-          </motion.div>
+          </div>
 
           <div ref={accordionRef} id={accordionId}>
             <Accordion type="single" collapsible defaultValue="faq-0">

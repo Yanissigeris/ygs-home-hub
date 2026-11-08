@@ -11,7 +11,6 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ValuationForm from "@/components/ValuationForm";
 import ValuationOptions from "@/components/ValuationOptions";
 import ValuationSteps from "@/components/ValuationSteps";
-import { motion } from "framer-motion";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 import heroImg from "@/assets/hero-valuation-pro.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
@@ -20,7 +19,6 @@ const benefits = ["Realistic value range based on recent sales in your Gatineau 
 const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan" },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 
-const anim = { initial: false as const, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
 
 const ValuationPageEn = () => {
   return (
@@ -48,18 +46,18 @@ const ValuationPageEn = () => {
           }}
         />
 
-        <motion.div className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 0.2, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }} aria-hidden="true">
+        <div className="absolute bottom-0 right-[2%] lg:right-[4%] xl:right-[8%] hidden md:block pointer-events-none select-none" style={{ opacity: 0.2 }} aria-hidden="true">
           <div style={{
             maskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
             WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to right, transparent 0%, black 35%), linear-gradient(to left, transparent 0%, black 15%)',
             maskComposite: 'intersect',
             WebkitMaskComposite: 'destination-in',
           }}><img src={yanisPhoto} alt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" width={896} height={1200} className="w-[380px] lg:w-[440px] xl:w-[500px] h-auto object-contain object-bottom" loading="eager" decoding="async" /></div>
-        </motion.div>
+        </div>
 
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
-            <motion.div className="pt-1 md:pt-6 lg:pt-10" {...anim}>
+            <div className="pt-1 md:pt-6 lg:pt-10">
               <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property worth?</h1>
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">I'm Yanis Gauthier-Sigeris, a residential real estate broker with RE/MAX Direct. Your valuation is free, and I build it from recent sales in your part of Gatineau, Aylmer, Hull or elsewhere in the Outaouais.</p>
@@ -70,10 +68,10 @@ const ValuationPageEn = () => {
               <p className="hidden sm:block mt-5 text-[0.8125rem] text-primary-foreground/80">
                 300+ transactions since 2017 <span aria-hidden="true" className="mx-2 text-primary-foreground/40">·</span> RE/MAX Hall of Fame 2024
               </p>
-            </motion.div>
-            <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
+            </div>
+            <div>
               <ValuationForm lang="en" variant="glass" addressPlaceholder="123 Example St, Gatineau" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

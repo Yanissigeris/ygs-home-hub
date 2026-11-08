@@ -1,5 +1,4 @@
 import { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -34,11 +33,7 @@ const CalculatorsSection = () => {
   return (
     <section id={lang === "en" ? "calculators" : "calculateurs"} className="section-padding bg-[var(--cream)]">
       <div className="section-container">
-        <motion.div
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        <div
         >
           <SectionHeading overline={l.overline} title={l.title} subtitle={l.subtitle} centered />
 
@@ -62,7 +57,7 @@ const CalculatorsSection = () => {
               <a href={l.ctaHref}>{l.ctaLabel}</a>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
