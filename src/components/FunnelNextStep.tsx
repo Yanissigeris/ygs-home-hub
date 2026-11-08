@@ -58,7 +58,7 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
               >
                 {step.highlight && (
                   <span
-                    className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] border border-[rgba(247,244,238,0.4)] text-[var(--cream)]"
+                    className="self-start mb-4 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.18em] border border-[rgba(247,244,238,0.4)] text-[var(--cream)]"
                     style={{ fontFamily: "var(--sans)" }}
                   >
                     <RecommendedLabel />

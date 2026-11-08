@@ -1020,3 +1020,9 @@ section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + :is(section.bg-b
 section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] { background-color: #fff; }
 :is(section.bg-background, section.bg-white, section.bg-card) + :is(section.bg-background, section.bg-white, section.bg-card) + :is(section.bg-background, section.bg-white, section.bg-card) + section.bg-\[var\(--cream\)\] { background-color: var(--cream); }
 section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + :is(section.bg-background, section.bg-white, section.bg-card) { background-color: #fff; }
+
+/* Un seul appel à l'action en fin de page : le bloc du pied de page
+   s'efface quand la page affiche déjà le sien (CTASection, pages merci). */
+body:has([data-page-cta]) .footer-cta {
+  display: none;
+}

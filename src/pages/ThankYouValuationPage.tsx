@@ -21,6 +21,7 @@ const ThankYouValuationPage = () => (
    <>
     <PageMeta title="Merci | Évaluation demandée" description="Votre demande d'évaluation a été envoyée. Yanis prépare votre analyse et votre réponse personnalisées." />
     <section
+      data-page-cta=""
       className="section-padding"
       style={{
         backgroundImage: `linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%), url(${heroThankYouVal})`,
