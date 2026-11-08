@@ -1,6 +1,6 @@
 /** Single client quote block used on the FR and EN valuation pages. */
 const ValuationTestimonial = ({ quote, cite }: { quote: string; cite: string }) => (
-  <section className="bg-[var(--cream)] py-14 md:py-20">
+  <section className="py-14 md:py-20" style={{ background: "var(--cream)" }}>
     <div className="section-container max-w-3xl mx-auto text-center">
       <div className="mx-auto h-px w-10 bg-[var(--ink)] mb-4" aria-hidden="true" />
       <blockquote

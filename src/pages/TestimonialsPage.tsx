@@ -15,6 +15,11 @@ const categories: { key: Review["category"]; label: string; title: string }[] = 
   { key: "plex", label: "Investisseurs", title: "Décisions éclairées, résultats concrets" },
 ];
 
+// Seules les catégories qui ont des avis s'affichent : l'alternance blanc/crème suit cet ordre,
+// et le lien Google du bas prend la couleur de la dernière catégorie affichée.
+const visibleCategories = categories.filter((c) => getReviewsByCategory(c.key).length > 0);
+const lastCategoryBg = visibleCategories.length % 2 === 0 ? "var(--cream)" : "#fff";
+
 const TestimonialsPage = () => (
    <>
     <PageMeta title="Témoignages clients · Gatineau et Outaouais" description="Lisez ce que disent les clients de Yanis Gauthier-Sigeris. Témoignages de vendeurs, d'acheteurs, de familles relocalisées et d'investisseurs à Gatineau, Aylmer et Hull." ogImage="https://yanisgauthier.com/og/og-testimonials.jpg" />
@@ -29,7 +34,7 @@ const TestimonialsPage = () => (
     />
 
     {/* Google Reviews badge */}
-    <section className="section-padding bg-background pb-0">
+    <section className="section-padding pb-0" style={{ background: "#fff" }}>
       <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
         <div>
           <h2>Nos clients sur Google</h2>
@@ -38,13 +43,12 @@ const TestimonialsPage = () => (
       </div>
     </section>
 
-    {categories.map((cat) => {
+    {visibleCategories.map((cat, idx) => {
       const catReviews = getReviewsByCategory(cat.key);
-      if (catReviews.length === 0) return null;
       return (
         <section
           key={cat.key}
-          className={`section-padding ${categories.indexOf(cat) % 2 === 1 ? "bg-[var(--cream)]" : "bg-background"}`}
+          className={`section-padding ${idx % 2 === 1 ? "bg-[var(--cream)]" : "bg-white"}`}
         >
           <div className="section-container">
             <div
@@ -63,7 +67,7 @@ const TestimonialsPage = () => (
     })}
 
     {/* Google review link */}
-    <section className="section-padding bg-background pt-0">
+    <section className="section-padding pt-0" style={{ background: lastCategoryBg }}>
       <div className="section-container text-center">
         <a href="https://maps.app.goo.gl/BkkH6Zrw7Yj3XdpA9" target="_blank" rel="noopener noreferrer" className="text-[.78rem] transition-colors" style={{ color: "hsl(var(--muted-foreground))" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--gold)"} onMouseLeave={(e) => e.currentTarget.style.color = "hsl(var(--muted-foreground))"}>
           Laisser un avis Google →

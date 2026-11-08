@@ -16,7 +16,7 @@ interface LinkedCardGridProps {
   title: string;
   items: LinkedCard[];
   columns?: 2 | 3;
-  background?: "default" | "alt";
+  background?: "default" | "alt" | "white";
 }
 
 const LinkedCardGrid = ({
@@ -26,7 +26,7 @@ const LinkedCardGrid = ({
   columns = 2,
   background = "default",
 }: LinkedCardGridProps) => (
-  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
+  <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
     <div className="section-container max-w-[52rem]">
       <div
         className="text-center mb-12 max-w-[40rem] mx-auto"

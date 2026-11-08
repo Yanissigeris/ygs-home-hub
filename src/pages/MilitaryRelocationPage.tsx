@@ -56,11 +56,12 @@ const MilitaryRelocationPage = () => (
       overline="Les défis"
       title="Ce qui bloque souvent les militaires relocalisés"
       items={challenges}
+      background="alt"
     />
 
-    <ProcessSteps steps={steps} background="alt" />
+    <ProcessSteps steps={steps} background="white" />
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading
         overline="Pourquoi YGS"
         title="À votre rythme, selon votre mutation"

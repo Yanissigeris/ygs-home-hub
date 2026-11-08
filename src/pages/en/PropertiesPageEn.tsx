@@ -64,7 +64,7 @@ const PropertiesPageEn = () => (
       )}
     </ContentBlock>
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading overline="Listing alerts" title="Hear about new listings right away" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         I've been a broker in the Outaouais since 2017. I have access to every Centris listing in Gatineau and the surrounding area, from Chelsea to Pontiac. Once I know your criteria, I flag every new listing that matches them.
@@ -74,9 +74,9 @@ const PropertiesPageEn = () => (
       </p>
     </ContentBlock>
 
-    <CardGrid overline="Your profile" title="What type of property are you looking for?" items={profileCards} columns={3} background="alt" />
+    <CardGrid overline="Your profile" title="What type of property are you looking for?" items={profileCards} columns={3} background="white" />
 
-    <ContentBlock narrow>
+    <ContentBlock narrow background="alt">
       <SectionHeading overline="How I work" title="Buying with a broker who represents you" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         In Québec, a buyer who works directly with the listing broker isn't independently represented. When you sign a buyer brokerage contract with me, my legal duty is to you, your budget, your interests, your downside protection. I run comparable sales, structure conditions (financing, inspection, sale of current home), negotiate the offer, and stay on the file all the way through the notary signing.
@@ -86,7 +86,7 @@ const PropertiesPageEn = () => (
       </p>
     </ContentBlock>
 
-    <SectorLinks overline="By neighborhood" title="Properties by area" sectors={sectors} background="alt" />
+    <SectorLinks overline="By neighborhood" title="Properties by area" sectors={sectors} background="white" />
 
     <InlineCTA text="Selling? Find out how much your property is worth, it's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
 
