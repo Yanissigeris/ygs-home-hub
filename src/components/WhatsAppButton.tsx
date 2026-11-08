@@ -112,7 +112,7 @@ const FloatingCallButton = () => {
               inset: 0,
               borderRadius: "50%",
               border: "1px solid rgba(138,168,255,0.45)",
-              animation: "floating-call-pulse 2.4s cubic-bezier(0.22,0.61,0.36,1) infinite",
+              animation: "floating-call-pulse 2.4s cubic-bezier(0.22,0.61,0.36,1) 3s 1 both",
               pointerEvents: "none",
             }}
           />

@@ -40,10 +40,10 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
       <div className="section-container max-w-[56rem]">
         <motion.div
           className="text-center mb-10 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <SectionHeading overline={overline} title={title} subtitle={subtitle} centered />
         </motion.div>
@@ -51,10 +51,10 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
                 to={canonicalPath(step.href)}

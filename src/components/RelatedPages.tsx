@@ -27,10 +27,10 @@ const RelatedPages = ({
     <div className="section-container max-w-[52rem]">
       <motion.div
         className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading overline={overline} title={title} centered />
       </motion.div>
@@ -38,10 +38,10 @@ const RelatedPages = ({
         {pages.map((page, i) => (
           <motion.div
             key={page.href}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link
               to={canonicalPath(page.href)}

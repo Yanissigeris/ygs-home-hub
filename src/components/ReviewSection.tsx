@@ -31,10 +31,10 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
       <div className="section-container">
         <motion.div
           className="text-center mb-6 sm:mb-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* overline retiré (cohérence accueil) */}
           <h2>{title}</h2>

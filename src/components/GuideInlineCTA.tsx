@@ -23,10 +23,10 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
   return (
     <>
       <motion.section
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className="section-padding"
       >
         <div className="section-container max-w-[52rem]">

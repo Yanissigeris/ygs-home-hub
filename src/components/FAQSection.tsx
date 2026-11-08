@@ -96,10 +96,10 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
         <div className="section-container max-w-[44rem]">
           <motion.div
             className="text-center mb-5 sm:mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="label-overline mb-2 justify-center">FAQ</p>
             <h2>{resolvedTitle}</h2>
