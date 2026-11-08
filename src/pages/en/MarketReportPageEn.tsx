@@ -27,11 +27,11 @@ const related = [
 
 const MarketReportPageEn = () => (
   <>
-    <PageMeta title="Gatineau market report · Coming soon | YGS" description="The next Gatineau real estate market report is coming soon. Contact Yanis for publication updates or to request an analysis of your area." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
+    <PageMeta title="Gatineau median price by quarter · Market report | YGS" description="Single-family and plex median prices in Gatineau, each quarter compared with last year. QPAREB data from Q4 2024 to Q3 2026." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
     <HeroSection
       overline="Market Report · Gatineau"
       title="Gatineau real estate market report"
-      subtitle="The next report is being prepared. In the meantime, request a personalized market analysis for your area."
+      subtitle="Official QPAREB median prices, compared with the same quarter last year. For your area, request a personalized analysis."
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
@@ -39,8 +39,8 @@ const MarketReportPageEn = () => (
     />
     <MedianPriceSection lang="en" />
     <ContentBlock narrow>
-      <SectionHeading overline="Coming soon" title="The market report is coming soon" subtitle="In the meantime, contact me to receive a personalized market analysis for your area." />
-      <p className="prose-body mt-5">The next Gatineau real estate market report is being prepared. Contact me for publication updates or to discuss the market in your area now.</p>
+      <SectionHeading overline="Your area" title="The median price doesn't tell the whole story for your street" />
+      <p className="prose-body mt-5">A regional median groups very different areas, from Aylmer all the way to Buckingham. If you're thinking of selling or buying, I can show you recent sales in your area and what they mean for your property.</p>
     </ContentBlock>
     <InlineCTA text="Want to know the value of your property? Request a free valuation." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <FAQSection items={faq} />

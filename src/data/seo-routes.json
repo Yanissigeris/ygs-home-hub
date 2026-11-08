@@ -120,8 +120,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-plex.jpg"
   },
   "/rapport-marche-gatineau": {
-    "title": "Rapport immobilier Gatineau · À venir | YGS",
-    "description": "Le prochain rapport du marché immobilier de Gatineau est à venir. Contactez Yanis pour être informé de sa publication ou demander une analyse de votre secteur.",
+    "title": "Prix médian à Gatineau par trimestre · Rapport marché | YGS",
+    "description": "Prix médian des maisons unifamiliales et des plex à Gatineau, chaque trimestre comparé à l'an passé. Données APCIQ du T4 2024 au T3 2026.",
     "ogImage": "https://yanisgauthier.com/og/og-market.jpg"
   },
   "/plateau-aylmer": {
@@ -420,8 +420,8 @@
     "ogImage": "https://yanisgauthier.com/og/og-plex.jpg"
   },
   "/en/market-report": {
-    "title": "Gatineau market report · Coming soon | YGS",
-    "description": "The next Gatineau real estate market report is coming soon. Contact Yanis for publication updates or to request an analysis of your area.",
+    "title": "Gatineau median price by quarter · Market report | YGS",
+    "description": "Single-family and plex median prices in Gatineau, each quarter compared with last year. QPAREB data from Q4 2024 to Q3 2026.",
     "ogImage": "https://yanisgauthier.com/og/og-market.jpg"
   },
   "/en/plateau-aylmer": {

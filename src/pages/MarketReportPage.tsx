@@ -27,11 +27,11 @@ const related = [
 
 const MarketReportPage = () => (
    <>
-    <PageMeta title="Rapport immobilier Gatineau · À venir | YGS" description="Le prochain rapport du marché immobilier de Gatineau est à venir. Contactez Yanis pour être informé de sa publication ou demander une analyse de votre secteur." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
+    <PageMeta title="Prix médian à Gatineau par trimestre · Rapport marché | YGS" description="Prix médian des maisons unifamiliales et des plex à Gatineau, chaque trimestre comparé à l'an passé. Données APCIQ du T4 2024 au T3 2026." ogImage="https://yanisgauthier.com/og/og-market.jpg" />
     <HeroSection
       overline="Rapport marché · Gatineau"
       title="Rapport du marché immobilier à Gatineau"
-      subtitle="Le prochain rapport est en préparation. En attendant, demandez une analyse personnalisée du marché dans votre secteur."
+      subtitle="Les prix médians officiels de l'APCIQ, comparés au même trimestre de l'an passé. Pour votre secteur, demandez une analyse personnalisée."
       primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
       secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
       trustLine="Par Yanis Gauthier-Sigeris · Courtier immobilier, Gatineau"
@@ -42,12 +42,11 @@ const MarketReportPage = () => (
 
     <ContentBlock narrow>
       <SectionHeading
-        overline="Bientôt disponible"
-        title="Le rapport marché arrive bientôt"
-        subtitle="En attendant, contactez-moi pour recevoir une analyse personnalisée du marché dans votre secteur."
+        overline="Votre secteur"
+        title="Le prix médian ne dit pas tout sur votre rue"
       />
       <p className="prose-body mt-5">
-        Le prochain rapport du marché immobilier de Gatineau est en préparation. Contactez-moi pour être informé de sa publication ou pour discuter dès maintenant du marché dans votre secteur.
+        Une médiane régionale regroupe des secteurs très différents, d'Aylmer jusqu'à Buckingham. Si vous pensez vendre ou acheter, je peux vous montrer les ventes récentes de votre secteur et ce qu'elles changent pour votre propriété.
       </p>
     </ContentBlock>
 
