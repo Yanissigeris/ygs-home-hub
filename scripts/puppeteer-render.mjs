@@ -179,7 +179,18 @@ async function renderRoute(browser, route) {
 
     const rootHtml = await page.evaluate(() => {
       const r = document.getElementById("root");
-      return r ? r.innerHTML : "";
+      if (!r) return "";
+      // Blocs « fondu au défilement » (framer-motion whileInView) : au moment de la
+      // capture, ceux qui sont plus bas que l'écran ont encore leur état de départ
+      // en style en ligne (opacity: 0 + translate). On le retire pour que le HTML
+      // servi à Google et aux outils d'IA montre ce contenu visible. Les visiteurs
+      // gardent le fondu : React redessine la page et framer remet l'état de départ.
+      // Seul ce motif exact est visé (rien d'autre n'écrit ce style en ligne).
+      const FRAMER_START = /^opacity: 0; transform: translate[XY]\([^)]*\);?$/;
+      for (const el of r.querySelectorAll("[style]")) {
+        if (FRAMER_START.test((el.getAttribute("style") || "").trim())) el.removeAttribute("style");
+      }
+      return r.innerHTML;
     });
 
     if (!rootHtml || rootHtml.length < 500) {

@@ -332,9 +332,11 @@
     transition: box-shadow 0.22s ease, transform 0.22s ease;
   }
 
-  .card-elevated:hover {
-    box-shadow: var(--card-shadow-hover);
-    transform: translateY(-2px);
+  @media (hover: hover) and (pointer: fine) {
+    .card-elevated:hover {
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-2px);
+    }
   }
 
   .prose-body {
@@ -837,9 +839,13 @@ h1.hero-eyebrow {
 /* Page transition overlay removed — PageTransition is now a passthrough. */
 
 /* QuickActionStrip — micro icon animation on hover/focus */
-.qas-btn:hover .qas-icon,
 .qas-btn:focus-visible .qas-icon {
   transform: translateX(2px) scale(1.08);
+}
+@media (hover: hover) and (pointer: fine) {
+  .qas-btn:hover .qas-icon {
+    transform: translateX(2px) scale(1.08);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .qas-btn,

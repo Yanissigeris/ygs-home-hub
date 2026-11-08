@@ -142,9 +142,13 @@ export default defineConfig(() => ({
     mcpPlugin(),
   ],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: [
+      { find: "@", replacement: path.resolve(__dirname, "./src") },
+      // Tous les imports « framer-motion » passent par src/lib/framer-motion.ts,
+      // qui coupe les animations si le téléphone demande « réduire les animations ».
+      { find: /^framer-motion$/, replacement: path.resolve(__dirname, "./src/lib/framer-motion.ts") },
+      { find: /^framer-motion-original$/, replacement: path.resolve(__dirname, "./node_modules/framer-motion/dist/es/index.mjs") },
+    ],
     dedupe: ["react", "react-dom", "react/jsx-runtime"],
   },
   build: {
@@ -160,6 +164,9 @@ export default defineConfig(() => ({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Le relais framer-motion reste dans le morceau « motion » (jamais chargé
+          // sur les pages qui n'animent rien, comme l'accueil).
+          if (id.includes("/src/lib/framer-motion")) return "motion";
           if (!id.includes("node_modules")) {
             // Application code: keep blog markdown out of the main chunk.
             // Loaded only when /blogue/* or /en/blog/* breadcrumb resolves a slug,
