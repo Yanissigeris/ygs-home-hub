@@ -115,7 +115,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
           <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
         </button>
-        <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
+        <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform] duration-200 ease-out ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
           <div
             className="overflow-hidden p-5"
             style={{
@@ -207,7 +207,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
         <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
-      <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-all duration-200 ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
+      <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform] duration-200 ease-out ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
           {item.children!.map((child) => (
             <Link
@@ -420,7 +420,7 @@ const SiteHeader = () => {
           <div className="hidden md:flex"><LanguageSwitch transparent={true} /></div>
           <Link
             to={ctaHref}
-            className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-all duration-200"
+            className="hidden md:inline-flex items-center justify-center whitespace-nowrap transition-[color,background-color,border-color] duration-200"
             style={{ height: 38, padding: "0 1.1rem", background: "transparent", color: ctaTextColor, fontSize: ".78rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--ink)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}
@@ -435,7 +435,7 @@ const SiteHeader = () => {
       </div>
 
       {/* ─── Mobile (<640px) — logo left, hamburger right (transparent over hero, cream when scrolled) ─── */}
-      <div className="flex items-center justify-between gap-2 px-4 sm:hidden transition-all duration-300" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
+      <div className="flex items-center justify-between gap-2 px-4 sm:hidden" style={{ height: scrolled ? 50 : 56, background: "transparent" }}>
         <Link to={lang === "en" ? "/en/" : "/"} className="flex min-w-0 items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" style={{ background: "transparent" }} onClick={closeMenu}>
           <img src={logoYgsHorizontal} alt="" aria-hidden="true" width={123} height={40} className="min-w-0 shrink-0 object-contain transition-transform duration-300" style={{ height: 40, transform: scrolled ? "scale(0.85)" : "none", transformOrigin: "left center", width: "auto", maxWidth: "min(40vw, 120px)", filter: logoFilter }} loading="eager" decoding="async" />
           <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05, minWidth: 0 }}>
@@ -478,7 +478,7 @@ const SiteHeader = () => {
           </button>
           <Link
             to={ctaHref}
-            className="hidden md:inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all duration-200"
+            className="hidden md:inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-[color,background-color,border-color] duration-200"
             style={{ height: 38, minWidth: 0, padding: "0 .9rem", background: "transparent", color: ctaTextColor, fontSize: ".75rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${ctaBorderColor}`, transition: "all .2s ease" }}
             onMouseEnter={(e) => { e.currentTarget.style.background = ctaBorderColor; e.currentTarget.style.color = "var(--white)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ctaTextColor; }}

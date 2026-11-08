@@ -88,10 +88,10 @@ const PlexAnalysisPage = () => {
           <div className="grid gap-10 lg:grid-cols-5">
             <motion.div
               className="lg:col-span-3"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="card-elevated border border-border/40 bg-card p-7 sm:p-9">
                 <h2 className="text-[1.375rem] sm:text-[1.625rem]">Demandez votre analyse plex</h2>
@@ -189,10 +189,10 @@ const PlexAnalysisPage = () => {
 
             <motion.aside
               className="lg:col-span-2 space-y-5 lg:pt-2"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.35, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="card-elevated border border-border/40 bg-secondary/30 p-7">
                 <p className="text-[1rem] font-semibold text-foreground">Confidentiel et sans engagement</p>

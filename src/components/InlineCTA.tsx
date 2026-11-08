@@ -14,10 +14,10 @@ const InlineCTA = React.forwardRef<HTMLElement, InlineCTAProps>(({ text, buttonL
   <section ref={ref} className="cta-band">
     <motion.div
       className="section-container"
-      initial={{ opacity: 0, y: 14 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
     >
       <p>{text}</p>
       {/* The "hero" variant uses dark --gold-text for light backgrounds. This band is dark (--ink),

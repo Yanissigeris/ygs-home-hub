@@ -459,7 +459,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                     </Button>
                   )}
                   {secondaryCta && (
-                    <HeroCtaLink href={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-all duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</HeroCtaLink>
+                    <HeroCtaLink href={secondaryCta.href} className="inline-flex items-center text-[0.85rem] font-medium transition-colors duration-200" style={{ color: "rgba(255,255,255,.95)", borderBottom: "1px solid rgba(255,255,255,.6)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }} onClick={() => trackCTAClick(secondaryCta.label, "hero-secondary")}>{secondaryCta.label}</HeroCtaLink>
                   )}
                 </div>
               )}
@@ -830,7 +830,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   {secondaryCta && (headline || sansTitle ? (
                     <HeroCtaLink
                       href={secondaryCta.href}
-                      className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      className="hero-secondary-cta inline-flex items-center justify-center self-start sm:self-auto text-center transition-opacity duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
                         minHeight: 44,
@@ -849,7 +849,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   ) : (
                     <HeroCtaLink
                       href={secondaryCta.href}
-                      className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-all duration-200 hover:opacity-100"
+                      className="hero-secondary-cta inline-flex items-center self-start sm:self-auto text-center transition-opacity duration-200 hover:opacity-100"
                       style={{
                         color: "rgba(255,255,255,.92)",
                         borderBottom: "1px solid rgba(255,255,255,.55)",

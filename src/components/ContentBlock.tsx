@@ -23,10 +23,10 @@ const ContentBlock = ({
     <div className={`section-container ${narrow && !split ? "max-w-[44rem]" : ""}${split ? " max-w-[72rem]" : ""} ${centered ? "text-center" : ""}`}>
       <motion.div
         className={split ? "content-split" : undefined}
-        initial={{ opacity: 0, y: 20 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
       </motion.div>

@@ -128,7 +128,7 @@ const NotFound = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group rounded-[3px] border border-border bg-white p-5 text-left transition-all duration-200 hover:-translate-y-0.5"
+                className="group rounded-[3px] border border-border bg-white p-5 text-left transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5"
                 style={{
                   boxShadow: "none",
                 }}

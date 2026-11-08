@@ -27,7 +27,7 @@ const ThankYouPage = () => (
       <div className="section-container max-w-[36rem]">
         <motion.div
           className="text-center"
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >

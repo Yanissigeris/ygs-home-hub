@@ -56,7 +56,7 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
               <Link
                 key={btn.label}
                 to={canonicalPath(btn.href)}
-                className="inline-flex items-center justify-center transition-all duration-200 w-full sm:w-auto text-center"
+                className="inline-flex items-center justify-center transition-[color,background-color,border-color] duration-200 w-full sm:w-auto text-center"
                 style={
                   dark
                     ? isOutline

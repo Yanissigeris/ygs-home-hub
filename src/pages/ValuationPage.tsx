@@ -36,7 +36,7 @@ const afterSteps = [
 ];
 
 const anim = {
-  initial: { opacity: 0, y: 24 },
+  initial: false as const,
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
@@ -130,11 +130,7 @@ const ValuationPage = () => {
             </motion.div>
 
             {/* ── RIGHT: Form card ── */}
-            <motion.div
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
-            >
+            <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
               <div className="form-16-inputs">
                 <ValuationForm lang="fr" variant="glass" addressPlaceholder="123 rue Exemple, Gatineau" />
               </div>

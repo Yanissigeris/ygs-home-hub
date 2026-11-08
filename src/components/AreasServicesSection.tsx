@@ -90,7 +90,7 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
       <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
       <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,0.55)" }} className="truncate">{detail}</p>
     </div>
-    <span className="shrink-0 transition-all duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.55)", fontSize: ".75rem" }}>
+    <span className="shrink-0 transition-transform duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.55)", fontSize: ".75rem" }}>
       <span className="group-hover:hidden">→</span>
       <span className="hidden group-hover:inline" style={{ color: "var(--gold)" }}>→</span>
     </span>

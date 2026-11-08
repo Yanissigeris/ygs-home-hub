@@ -239,7 +239,7 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
                   className="flex h-11 w-11 items-center justify-center"
                 >
                   <span
-                    className="block rounded-full transition-all duration-300"
+                    className="block rounded-full transition-[width,height,background-color] duration-300"
                     style={{ width: i === active ? 10 : 8, height: i === active ? 10 : 8, background: i === active ? "var(--ink)" : "hsl(var(--border))" }}
                   />
                 </button>

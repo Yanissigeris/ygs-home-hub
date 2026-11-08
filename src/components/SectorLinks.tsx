@@ -39,10 +39,10 @@ const SectorLinks = ({
       <div className="section-container max-w-[52rem]">
         <motion.div
           className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <SectionHeading overline={overline} title={title} centered />
         </motion.div>
@@ -50,12 +50,12 @@ const SectorLinks = ({
           {visible.map((s, i) => (
             <motion.div
               key={s.name}
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.35, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
-              <Link to={s.href} className="card-elevated group flex flex-col border border-border/40 bg-card px-6 py-5 transition-all duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
+              <Link to={s.href} className="card-elevated group flex flex-col border border-border/40 bg-card px-6 py-5 transition-[border-color,box-shadow,transform] duration-300 hover:border-accent/25 hover:shadow-[0_4px_24px_-6px_hsl(var(--accent)/0.10)] hover:-translate-y-0.5">
                 <div className="flex items-center gap-3">
                   <MapPin size={15} className="text-[var(--ink-soft)] shrink-0" />
                   <span className="text-[1rem] font-semibold text-foreground group-hover:text-primary transition-colors">{s.name}</span>

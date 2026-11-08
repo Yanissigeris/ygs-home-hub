@@ -20,7 +20,7 @@ const benefits = ["Realistic value range based on recent sales in your Gatineau 
 const afterSteps = [{ title: "Seller plan", text: "To go further, get a complete plan: pricing, preparation, marketing and timeline.", href: "/en/seller-plan/", cta: "Get my plan" },{ title: "Talk to Yanis", text: "Discuss your situation and your options, with no commitment.", href: "/en/contact/", cta: "Book a call" }];
 
 
-const anim = { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
+const anim = { initial: false as const, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } };
 
 const ValuationPageEn = () => {
   return (
@@ -71,7 +71,7 @@ const ValuationPageEn = () => {
                 300+ transactions since 2017 <span aria-hidden="true" className="mx-2 text-primary-foreground/40">·</span> RE/MAX Hall of Fame 2024
               </p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}>
+            <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
               <ValuationForm lang="en" variant="glass" addressPlaceholder="123 Example St, Gatineau" />
             </motion.div>
           </div>

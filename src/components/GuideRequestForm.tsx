@@ -159,10 +159,10 @@ const GuideRequestForm = ({
     <section id="recevoir-guide" className="section-padding bg-[var(--cream)]">
       <div className="section-container max-w-[56rem]">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="grid gap-8 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_420px] items-start"
         >
           {/* Left: value proposition */}

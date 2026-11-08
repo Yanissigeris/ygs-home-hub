@@ -32,7 +32,7 @@ const VerifierCourtierOaciqPage = () => (
     <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
       <div className="section-container relative py-12 md:py-20">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
@@ -68,7 +68,7 @@ const VerifierCourtierOaciqPage = () => (
             <motion.div
               key={step.num}
               className="rounded-xl border border-border/40 bg-card p-5"
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

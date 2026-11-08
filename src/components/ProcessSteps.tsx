@@ -33,10 +33,10 @@ const ProcessSteps = ({
     <div className="section-container">
       <motion.div
         className="text-center mb-12 max-w-[40rem] mx-auto"
-        initial={{ opacity: 0, y: 20 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <SectionHeading overline={resolvedOverline} title={resolvedTitle} centered />
       </motion.div>
@@ -44,10 +44,10 @@ const ProcessSteps = ({
         {steps.map((s, i) => (
           <motion.div
             key={s.num}
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.45, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={night ? "border border-[rgba(247,244,238,0.18)] p-7 sm:p-8 h-full rounded-[var(--radius)]" : "card-elevated border border-border/40 bg-card p-7 sm:p-8 h-full"}>
               <h3 className="text-[1.125rem]" style={night ? { color: "var(--cream)" } : undefined}>{s.title}</h3>

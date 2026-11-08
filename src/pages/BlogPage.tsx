@@ -111,7 +111,7 @@ const BlogPage = () => {
             <span className="text-[0.75rem] font-medium uppercase tracking-[0.1em] text-muted-foreground mr-2">Catégories</span>
             <button
               onClick={() => setActiveCategory(null)}
-              className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${!activeCategory ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
+              className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-[color,background-color,border-color,box-shadow] duration-200 ${!activeCategory ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
             >
               Tous
             </button>
@@ -119,7 +119,7 @@ const BlogPage = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-all duration-200 ${activeCategory === cat ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
+                className={`inline-flex h-8 items-center rounded-none border px-4 text-[0.8125rem] font-medium transition-[color,background-color,border-color,box-shadow] duration-200 ${activeCategory === cat ? "border-accent/40 bg-accent/10 text-accent" : "border-border/40 bg-background text-muted-foreground hover:border-accent/30 hover:text-foreground hover:shadow-sm"}`}
               >
                 {cat}
               </button>
@@ -192,7 +192,7 @@ const BlogPage = () => {
             <Link
               key={post.slug}
               to={`/blogue/${post.slug}/`}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-all duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-[border-color,box-shadow,transform] duration-300 hover:border-accent/25 hover:shadow-lg hover:-translate-y-0.5"
             >
               <span
                 aria-hidden

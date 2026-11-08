@@ -15,10 +15,10 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
   ({ review, variant = "compact", index = 0, quote = false }, ref) => (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.35, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
       <div className={quote ? "review-quote relative h-full flex flex-col" : "card-elevated relative border border-border/40 bg-card p-5 sm:p-6 h-full flex flex-col"}>
