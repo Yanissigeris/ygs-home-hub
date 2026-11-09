@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick, trackContactTap } from "@/lib/analytics";
@@ -62,7 +63,7 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
   const cta = CTA_BY_INTENT[lang][forceIntent ?? intent ?? "default"];
   const ctaLabel = cta.label;
   const ctaHref = cta.href;
-  const callLabel = lang === "en" ? "📞 Call" : "📞 Appeler";
+  const callLabel = lang === "en" ? "Call" : "Appeler";
   const callAriaLabel = lang === "en"
     ? "Call Yanis Gauthier-Sigeris at 819-210-3044"
     : "Appeler Yanis Gauthier-Sigeris au 819-210-3044";
@@ -141,7 +142,7 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
             fontWeight: 500,
           }}
         >
-          <span aria-hidden="true">{callLabel}</span>
+          <span aria-hidden="true" className="inline-flex items-center gap-1.5"><Phone size={15} strokeWidth={1.75} />{callLabel}</span>
         </a>
       </div>
     </div>

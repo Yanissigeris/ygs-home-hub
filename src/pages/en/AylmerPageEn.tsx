@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Leaf, School, ShoppingBag } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -99,9 +99,9 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature at your doorstep", text: "Gatineau Park and the Ottawa River are close by, and cycling paths lead to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
-  { icon: "🛒", title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
-  { icon: "🏫", title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (Centre de services scolaire des Portages-de-l'Outaouais), English schools (Western Québec). A major asset for Ottawa families relocating." },
+  { icon: Leaf, title: "Nature at your doorstep", text: "Gatineau Park and the Ottawa River are close by, and cycling paths lead to Ottawa via the Champlain Bridge. Nature is within reach without leaving the residential streets." },
+  { icon: ShoppingBag, title: "Full services", text: "Local shops, big stores (IGA, Maxi), restaurants, medical clinics, library. Old Aylmer offers local boutiques and lively terraces in summer. Everything without leaving the area." },
+  { icon: School, title: "French and English schools", text: "Particularly well-served for bilingual families. French schools (Centre de services scolaire des Portages-de-l'Outaouais), English schools (Western Québec). A major asset for Ottawa families relocating." },
 ];
 
 
@@ -289,7 +289,7 @@ const AylmerPageEn = () => (
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
             <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
+              <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>

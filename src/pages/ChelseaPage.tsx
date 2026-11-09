@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { Bath, CheckCircle2, MountainSnow, Trees } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -32,17 +32,17 @@ const faq = [
 /* ── Atouts cards ── */
 const atouts = [
   {
-    icon: "🌲",
+    icon: Trees,
     title: "Parc de la Gatineau",
     text: "Le parc de la Gatineau couvre 361 km² de forêts, lacs et rivières. Créé en 1938, il s'étend sur plusieurs municipalités, dont Chelsea. On y fait de la randonnée, du vélo, du ski de fond, de la raquette et de la baignade au lac Meech. (Source : Commission de la capitale nationale)",
   },
   {
-    icon: "♨️",
+    icon: Bath,
     title: "Nordik Spa-Nature",
     text: "Le Nordik Spa-Nature est situé à Chelsea. C'est un des plus grands spas nordiques en Amérique du Nord. Sa présence contribue à l'attractivité et au rayonnement de la municipalité, et attire une clientèle qui découvre souvent Chelsea comme destination résidentielle. (Source : nordikspanature.com)",
   },
   {
-    icon: "⛷️",
+    icon: MountainSnow,
     title: "Old Chelsea / Camp Fortune",
     text: "Le village d'Old Chelsea est le cœur historique de la municipalité. Quelques commerces, restaurants locaux, et un caractère de village préservé. Camp Fortune, tout proche, est un club de ski alpin à environ 21 km du centre-ville d'Ottawa par la route. (Source : Wikipedia/Chelsea)",
   },
@@ -110,7 +110,7 @@ const ChelseaPage = () => (
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {atouts.map((c) => (
             <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
+              <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>
