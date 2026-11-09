@@ -104,6 +104,8 @@ const BlogPage = () => {
         <style>{`@keyframes blog-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
       </div>
 
+      {/* Fond blanc explicite : #root est bleu nuit (index.html), ces sections n'ont pas de fond propre */}
+      <div className="bg-white">
       {/* Categories strip */}
       <section className="border-b border-border/30 bg-secondary/30">
         <div className="section-container py-5">
@@ -220,6 +222,8 @@ const BlogPage = () => {
           <p className="mt-10 text-center text-muted-foreground">Aucun article dans cette catégorie pour le moment.</p>
         )}
       </section>
+
+      </div>
 
       <CTASection
         dark
