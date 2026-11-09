@@ -87,7 +87,7 @@ jobs:
         with:
           urls: |
             https://yanisgauthier.com/
-            https://yanisgauthier.com/en
+            https://yanisgauthier.com/en/
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: ./.lighthouserc.mobile.json
