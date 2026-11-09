@@ -96,13 +96,14 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
       aria-label={lang === "en" ? "Quick actions" : "Actions rapides"}
       className="fixed bottom-0 inset-x-0 z-[500] md:hidden"
       style={{
+        bottom: "var(--cookie-bar-h, 0px)",
         transform: visible ? "translateY(0)" : "translateY(100%)",
-        transition: "transform .35s cubic-bezier(.22,.61,.36,1)",
+        transition: "transform .35s cubic-bezier(.22,.61,.36,1), bottom .35s cubic-bezier(.22,.61,.36,1)",
         background: "var(--ink)",
         borderTop: "1px solid rgba(255,255,255,.12)",
         boxShadow: "0 -4px 30px rgba(0,0,0,.25)",
         padding: "0.85rem 1.25rem",
-        paddingBottom: "calc(0.85rem + env(safe-area-inset-bottom))",
+        paddingBottom: "calc(0.85rem + var(--cookie-bar-safe, env(safe-area-inset-bottom)))",
       }}
       aria-hidden={!visible}
     >
