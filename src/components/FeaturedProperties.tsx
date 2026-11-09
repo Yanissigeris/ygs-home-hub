@@ -71,8 +71,8 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
               />
             );
           }
-          // Cards display ~648px on desktop, ~half-viewport on tablet, full-width on mobile
-          const sizes = "(max-width: 480px) 90vw, (max-width: 1024px) 50vw, 648px";
+          // Largeur utile mesurée (nov. 2026), recadrage object-cover compris : ~380 px mobile, ~385 px tablette, ~425 px ordinateur
+          const sizes = "(max-width: 480px) 95vw, (max-width: 1023px) 50vw, 430px";
           return (
             <picture>
               <source type="image/avif" srcSet={set.avifSrcSet} sizes={sizes} />

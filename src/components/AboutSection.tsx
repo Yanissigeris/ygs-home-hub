@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;640;900&format=avif;webp&as=picture";
+import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;560;720;760;900&format=avif;webp&as=picture";
 
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
@@ -116,14 +116,14 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 <source
                   type="image/avif"
                   srcSet={yanisAbout.sources.avif}
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 565px"
+                  sizes="(max-width: 1023px) 410px, 680px"
                 />
               )}
               {yanisAbout.sources.webp && (
                 <source
                   type="image/webp"
                   srcSet={yanisAbout.sources.webp}
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 565px"
+                  sizes="(max-width: 1023px) 410px, 680px"
                 />
               )}
               <img

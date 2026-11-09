@@ -2,25 +2,25 @@
 // vite-imagetools generates 400 / 640 / 900-wide AVIF + WebP variants at build,
 // returning a <picture>-shaped object with srcsets for each format.
 
-import p24069166 from "@/assets/property-24069166.webp?w=400;640;900&format=avif;webp&as=picture";
-import p26501194 from "@/assets/property-26501194.webp?w=400;640;900&format=avif;webp&as=picture";
-import p28743871 from "@/assets/property-28743871.webp?w=400;640;900&format=avif;webp&as=picture";
-import p15163372 from "@/assets/property-15163372.webp?w=400;640;900&format=avif;webp&as=picture";
-import p17113358 from "@/assets/property-17113358.webp?w=400;640;900&format=avif;webp&as=picture";
+import p24069166 from "@/assets/property-24069166.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p26501194 from "@/assets/property-26501194.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p28743871 from "@/assets/property-28743871.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p15163372 from "@/assets/property-15163372.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p17113358 from "@/assets/property-17113358.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 // 11366995 : ajout du palier 500 pour que mobile (~452 CSS px @2×) pioche ~500w au lieu de 900w
-import p11366995 from "@/assets/property-11366995.webp?w=400;500;640;900&format=avif;webp&as=picture";
+import p11366995 from "@/assets/property-11366995.webp?w=400;440;500;560;640;760;900&format=avif;webp&as=picture";
 // Fiches précédemment servies en .webp brut hors pipeline — passage <picture>
 // AVIF + WebP avec mêmes paliers que les autres cartes.
-import p17464620 from "@/assets/property-17464620.webp?w=400;640;900&format=avif;webp&as=picture";
-import p19326119 from "@/assets/property-19326119.webp?w=400;640;900&format=avif;webp&as=picture";
-import p16828271 from "@/assets/property-16828271.webp?w=400;640;900&format=avif;webp&as=picture";
-import p22872864 from "@/assets/property-22872864.webp?w=400;640;900&format=avif;webp&as=picture";
-import p18249217 from "@/assets/property-18249217.webp?w=400;640;900&format=avif;webp&as=picture";
+import p17464620 from "@/assets/property-17464620.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p19326119 from "@/assets/property-19326119.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p16828271 from "@/assets/property-16828271.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p22872864 from "@/assets/property-22872864.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p18249217 from "@/assets/property-18249217.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 // Photo source 640×480 (terrain) — paliers limités à la résolution native.
-import p15159365 from "@/assets/property-15159365.webp?w=400;640&format=avif;webp&as=picture";
-import p22864394 from "@/assets/property-22864394.webp?w=400;640;900&format=avif;webp&as=picture";
-import p14821222 from "@/assets/property-14821222.webp?w=400;640;900&format=avif;webp&as=picture";
-import p12304022 from "@/assets/property-12304022.webp?w=400;640;900&format=avif;webp&as=picture";
+import p15159365 from "@/assets/property-15159365.webp?w=400;440;560;640&format=avif;webp&as=picture";
+import p22864394 from "@/assets/property-22864394.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p14821222 from "@/assets/property-14821222.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p12304022 from "@/assets/property-12304022.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 
 interface PictureImport {
   sources: { avif?: string; webp?: string };

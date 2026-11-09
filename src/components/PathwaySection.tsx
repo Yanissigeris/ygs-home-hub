@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import plexPhoto from "@/assets/pathway-plex-maisons-de-ville.webp?w=400;640&format=avif;webp&as=picture";
-import buyPhoto from "@/assets/pathway-acheter-cuisine.webp?w=400;640&format=avif;webp&as=picture";
-import lifestyleBg from "@/assets/pathway-vendre-bungalow.webp?w=480;720;1122&format=avif;webp&as=picture";
+import plexPhoto from "@/assets/pathway-plex-maisons-de-ville.webp?w=160;240;400;640&format=avif;webp&as=picture";
+import buyPhoto from "@/assets/pathway-acheter-cuisine.webp?w=160;240;400;640&format=avif;webp&as=picture";
+import lifestyleBg from "@/assets/pathway-vendre-bungalow.webp?w=480;760;960;1122&format=avif;webp&as=picture";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
@@ -170,7 +170,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
     return (
       <section ref={ref} className="section-pathway relative grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]" style={{ background: "var(--cream-deep)" }}>
         <div className="relative h-[300px] md:h-[440px] lg:h-auto overflow-hidden">
-          <Photo sizes="(min-width: 1024px) 45vw, 100vw" className="absolute inset-0 h-full w-full object-cover object-[50%_62%] lg:object-[38%_center]" />
+          <Photo sizes="(min-width: 1024px) 960px, 100vw" className="absolute inset-0 h-full w-full object-cover object-[50%_62%] lg:object-[38%_center]" />
         </div>
 
         <div className="relative px-5 sm:px-6 md:px-14 lg:pl-0 lg:pr-16 xl:pr-24 pb-16 md:pb-24 lg:py-28">
@@ -225,8 +225,8 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
                   >
                     <div className="relative h-[80px] sm:h-[150px] overflow-hidden rounded-[14px] sm:rounded-none">
                       <picture>
-                        {t.sources.avif && <source type="image/avif" srcSet={t.sources.avif} sizes="(min-width: 640px) 320px, 80px" />}
-                        {t.sources.webp && <source type="image/webp" srcSet={t.sources.webp} sizes="(min-width: 640px) 320px, 80px" />}
+                        {t.sources.avif && <source type="image/avif" srcSet={t.sources.avif} sizes="(min-width: 640px) 320px, 110px" />}
+                        {t.sources.webp && <source type="image/webp" srcSet={t.sources.webp} sizes="(min-width: 640px) 320px, 110px" />}
                         <img
                           src={t.img.src}
                           alt={thumbAlt[p.intent]}
