@@ -78,7 +78,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           fontWeight: active ? 700 : 600,
           color: active ? activeColor : defaultColor,
           padding: ".4rem var(--nav-px, .7rem)",
-          borderRadius: 3,
+          borderRadius: 8,
         }}
         onMouseEnter={(e) => { e.currentTarget.style.color = hoverColor; }}
         onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = defaultColor; }}
@@ -103,7 +103,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
             fontWeight: isChildActive ? 700 : 600,
             color: isChildActive ? activeColor : defaultColor,
             padding: ".4rem var(--nav-px, .7rem)",
-            borderRadius: 3,
+            borderRadius: 8,
           }}
           onClick={() => setOpen((p) => !p)}
           aria-expanded={open}
@@ -119,7 +119,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           <div
             className="overflow-hidden p-5"
             style={{
-              borderRadius: 3,
+              borderRadius: 8,
               border: "1px solid var(--border)",
               background: "rgba(247,244,238,1)",
               boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)",
@@ -167,7 +167,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                       letterSpacing: "0.03em",
                       fontWeight: pathname === child.href ? 700 : 600,
                       color: pathname === child.href ? "var(--ink)" : "#0B1638",
-                      borderRadius: 3,
+                      borderRadius: 8,
                       textShadow: "none",
                     }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
@@ -196,7 +196,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           fontWeight: isChildActive ? 700 : 600,
           color: isChildActive ? activeColor : defaultColor,
           padding: ".4rem var(--nav-px, .7rem)",
-          borderRadius: 3,
+          borderRadius: 8,
         }}
         onClick={() => setOpen((p) => !p)}
         aria-expanded={open}
@@ -208,7 +208,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
       <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform] duration-200 ease-out ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
-        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 3, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
+        <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 12, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
           {item.children!.map((child) => (
             <Link
               key={child.href}
@@ -220,7 +220,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
                 letterSpacing: "0.04em",
                 fontWeight: pathname === child.href ? 700 : 600,
                 color: pathname === child.href ? "var(--ink)" : "#0B1638",
-                borderRadius: 3,
+                borderRadius: 8,
                 textShadow: "none",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold3)"; e.currentTarget.style.color = "var(--ink)"; }}
@@ -428,7 +428,7 @@ const SiteHeader = () => {
           >
             {ctaLabel}
           </Link>
-          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 3, border: `1px solid ${transparent ? "rgba(247,244,238,.3)" : "var(--border)"}`, color: iconColor }} aria-label={getA11yLabel(open ? "menu.close" : "menu.open", lang)} aria-expanded={open} aria-controls="mobile-navigation">
+          <button onClick={toggleMenu} className="flex items-center justify-center transition-colors" style={{ height: 42, width: 42, borderRadius: 12, border: `1px solid ${transparent ? "rgba(247,244,238,.3)" : "var(--border)"}`, color: iconColor }} aria-label={getA11yLabel(open ? "menu.close" : "menu.open", lang)} aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <XIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>

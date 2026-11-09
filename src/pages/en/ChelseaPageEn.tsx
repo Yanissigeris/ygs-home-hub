@@ -125,7 +125,7 @@ const ChelseaPageEn = () => (
         <h2 className="mt-3">What you'll find in Chelsea</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {atouts.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
               <span className="text-2xl">{c.icon}</span>
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>

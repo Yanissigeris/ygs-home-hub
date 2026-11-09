@@ -156,7 +156,7 @@ const AylmerPageEn = () => (
         </div>
 
         <div className="lg:col-span-2">
-          <div className="rounded-md border border-border bg-background p-6 space-y-5">
+          <div className="rounded-lg border border-border bg-background p-6 space-y-5">
             <h3 className="font-serif text-lg font-semibold text-foreground">What is a property worth here?</h3>
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
               Prices vary based on the exact location, property type, condition, and recent sales on your street. The only way to get a reliable number is a comparative analysis based on current real comparables.
@@ -205,7 +205,7 @@ const AylmerPageEn = () => (
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {subSectors.map((s) => (
-            <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
+            <div key={s.title} className="rounded-lg border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
               <span className="inline-block text-xs font-medium text-[var(--ink-soft)]">{s.tag}</span>
@@ -288,7 +288,7 @@ const AylmerPageEn = () => (
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
               <span className="text-2xl">{c.icon}</span>
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>

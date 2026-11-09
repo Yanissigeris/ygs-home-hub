@@ -48,8 +48,8 @@ const PageFallback = () => (
             </div>
             {/* Buttons — stacked on ≤390, row on wider */}
             <div className="mt-7 flex flex-col gap-3 min-[391px]:flex-row">
-              <div className="h-[52px] w-full rounded-lg bg-white/[0.07] min-[391px]:w-44" />
-              <div className="h-[52px] w-full rounded-lg bg-white/[0.05] min-[391px]:w-40" />
+              <div className="h-[52px] w-full rounded-full bg-white/[0.07] min-[391px]:w-44" />
+              <div className="h-[52px] w-full rounded-full bg-white/[0.05] min-[391px]:w-40" />
             </div>
           </div>
           {/* Portrait placeholder — desktop */}

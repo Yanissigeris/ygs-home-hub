@@ -105,7 +105,7 @@ const GatineauCentrePageEn = () => (
         <h2 className="mt-3">Gatineau centre neighbourhoods to know</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {subSectors.map((s) => (
-            <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
+            <div key={s.title} className="rounded-lg border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
             </div>
