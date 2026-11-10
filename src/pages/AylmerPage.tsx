@@ -159,7 +159,7 @@ const AylmerPage = () => (
 
         {/* Right — CTA facts card (2 cols) */}
         <div className="lg:col-span-2">
-          <div className="rounded-md border border-border bg-background p-6 space-y-5">
+          <div className="rounded-lg border border-border bg-background p-6 space-y-5">
             <h3 className="font-serif text-lg font-semibold text-foreground">Combien vaut une propriété ici?</h3>
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
               Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
@@ -208,7 +208,7 @@ const AylmerPage = () => (
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {subSectors.map((s) => (
-            <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
+            <div key={s.title} className="rounded-lg border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
               <span className="inline-block text-xs font-medium text-[var(--ink-soft)]">{s.tag}</span>
@@ -293,7 +293,7 @@ const AylmerPage = () => (
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
               <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>

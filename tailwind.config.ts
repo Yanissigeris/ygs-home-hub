@@ -69,8 +69,9 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "0.75rem", /* champs, petits blocs : 12 px */
+        sm: "0.5rem",  /* éléments compacts : 8 px */
+        "2xl": "1.25rem", /* aligné sur les cartes : 20 px */
       },
       keyframes: {
         "accordion-down": {

@@ -31,7 +31,7 @@ const affiliationLogos: AffiliationLogo[] = [
     href: "https://www.remax-quebec.com",
     caption: "RE/MAX Direct Inc.",
     custom: (
-      <div className="flex items-center gap-1.5" style={{ background: "var(--cream)", padding: "8px 12px", borderRadius: 3 }}>
+      <div className="flex items-center gap-1.5" style={{ background: "var(--cream)", padding: "8px 12px", borderRadius: 999 }}>
         <img src={remaxLogotypeBlack} alt="Logo RE/MAX" width={122} height={28} style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
         <img src={remaxBalloonOfficial} alt="" aria-hidden="true" width={25} height={28} style={{ height: 28, width: "auto" }} loading="lazy" decoding="async" />
 
@@ -219,7 +219,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     fontSize: ".75rem",
                     color: "rgba(255,255,255,.6)",
                     border: "1px solid rgba(255,255,255,.06)",
-                    borderRadius: 3,
+                    borderRadius: 999,
                     padding: ".2rem .55rem",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
@@ -262,7 +262,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 const tileStyle: React.CSSProperties = {
                   background: "rgba(255,255,255,.04)",
                   border: "1px solid rgba(255,255,255,.06)",
-                  borderRadius: 3,
+                  borderRadius: 12,
                   padding: ".5rem .75rem",
                   minHeight: 56,
                   minWidth: 80,

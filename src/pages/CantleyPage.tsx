@@ -108,7 +108,7 @@ const CantleyPage = () => (
         <h2 className="mt-3">La vie à Cantley, ce qui distingue ce secteur</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {activites.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
               <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>

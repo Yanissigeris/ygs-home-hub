@@ -81,7 +81,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                 return (
                   <div
                     key={i}
-                    style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 3 }}
+                    style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 12 }}
                   >
                     <button
                       onClick={() => setOpenIndex(isOpen ? -1 : i)}
