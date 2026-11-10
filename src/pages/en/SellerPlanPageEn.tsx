@@ -186,7 +186,7 @@ const SellerPlanPageEn = () => {
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
                       {submitting ? "Sending" : "Get my seller plan"}
                     </Button>
-                    <p className="text-center text-[0.8125rem] text-muted-foreground/50">
+                    <p className="text-center text-[0.8125rem] text-muted-foreground/80">
                       I give you the numbers and the options. You decide.
                     </p>
                   </form>
@@ -214,7 +214,7 @@ const SellerPlanPageEn = () => {
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Start with a free valuation. It's the first step to knowing where you stand.
                 </p>
-                <Button size="default" variant="hero" className="mt-4 w-full" asChild>
+                <Button size="default" variant="default" className="mt-4 w-full" asChild>
                   <Link to="/en/home-valuation/">Free Home Valuation</Link>
                 </Button>
               </div>

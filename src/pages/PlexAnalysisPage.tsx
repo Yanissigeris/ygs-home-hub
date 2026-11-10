@@ -174,7 +174,7 @@ const PlexAnalysisPage = () => {
                     <Button type="submit" size="xl" variant="accent" disabled={submitting} className="w-full mt-2 shadow-md font-semibold">
                       {submitting ? "Envoi en cours" : "Recevoir mon analyse plex"}
                     </Button>
-                    <p className="text-center text-[0.8125rem] text-muted-foreground/50">
+                    <p className="text-center text-[0.8125rem] text-muted-foreground/80">
                       Je vous donne les chiffres et les options, vous décidez.
                     </p>
                   </form>
@@ -202,7 +202,7 @@ const PlexAnalysisPage = () => {
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Connaître la valeur actuelle est la première étape, avant de décider quoi que ce soit.
                 </p>
-                <Button size="default" variant="hero" className="mt-4 w-full" asChild>
+                <Button size="default" variant="default" className="mt-4 w-full" asChild>
                   <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
                 </Button>
               </div>

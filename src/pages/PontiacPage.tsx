@@ -113,7 +113,7 @@ const PontiacPage = () => {
                     <div>
                       <div className="font-medium text-foreground">{f.label}</div>
                       <div className="text-muted-foreground">{f.value}</div>
-                      {f.source && <div className="text-xs italic text-muted-foreground/70">{f.source}</div>}
+                      {f.source && <div className="text-xs italic text-muted-foreground/80">{f.source}</div>}
                     </div>
                   </div>
                 ))}
