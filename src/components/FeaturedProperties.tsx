@@ -169,7 +169,6 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       "26501194", // Condo 383 boul. des Grives (actif, 294 900 $)
       "19326119", // Quadruplex 71 rue Lessard (actif, 1 029 900 $)
       "16828271", // Maison 312 rue Le Gallois (vendu, 649 900 $)
-      "24069166", // Maison Gatineau (active, 479 900 $)
       "15163372", // Maison Limbour (vendu, 649 900 $)
     ];
     const featured = strategicOrder

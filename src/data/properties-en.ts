@@ -3,7 +3,6 @@ import property15163372 from "@/assets/property-15163372.webp";
 
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
-import property24069166 from "@/assets/property-24069166.webp";
 import property26501194 from "@/assets/property-26501194.webp";
 import property17464620 from "@/assets/property-17464620.webp";
 import property19326119 from "@/assets/property-19326119.webp";
@@ -109,26 +108,6 @@ export const propertiesEn: Property[] = [
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
     mls: "26501194",
-    status: "active",
-  },
-  {
-    id: "24069166",
-    address: "1535 Rue Atmec",
-    city: "Gatineau (Gatineau, Des Fleurs / Rémi Berthiaume / Cheval Blanc)",
-    price: "$479,900",
-    type: "Semi-detached two-storey",
-    bedrooms: "3",
-    bathrooms: "1",
-    powderRooms: "1",
-    area: "1,355 sq ft",
-    lotSize: "2,906 sq ft",
-    yearBuilt: "2012",
-    description:
-      "Semi-detached home built in 2012 with three finished levels, 2 minutes from Highway 50. Kitchen with island and stainless steel appliances, 3 bedrooms including a primary bedroom with walk-in closet, and bathroom with separate shower and tub. Finished basement with 8-foot ceiling and large family room. Fenced yard with gazebo and cedar hedge, shed, and paved parking for 5 cars. Wall-mounted heat pump and air exchanger.",
-    image: property24069166,
-    remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/1535-rue-atmec/24069166",
-    mls: "24069166",
     status: "active",
   },
   {
