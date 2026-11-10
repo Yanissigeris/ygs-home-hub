@@ -219,6 +219,33 @@ const CookieConsent = () => {
     setShowPrefs(true);
   };
 
+  /* Mobile: expose the banner height so the sticky bars (StickyMobileCTA,
+     StickyGuideBanner) sit right above it instead of being covered. */
+  const mobileBannerRef = React.useRef<HTMLDivElement | null>(null);
+  React.useEffect(() => {
+    const root = document.documentElement;
+    const clear = () => {
+      root.style.removeProperty("--cookie-bar-h");
+      root.style.removeProperty("--cookie-bar-safe");
+    };
+    const el = mobileBannerRef.current;
+    if (!isMobile || !visible || !el) {
+      clear();
+      return;
+    }
+    const apply = () => {
+      root.style.setProperty("--cookie-bar-h", `${el.offsetHeight}px`);
+      root.style.setProperty("--cookie-bar-safe", "0px");
+    };
+    apply();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(apply) : null;
+    ro?.observe(el);
+    return () => {
+      ro?.disconnect();
+      clear();
+    };
+  }, [isMobile, visible]);
+
   /* Mobile reopen button: fade-cycle 6s + scroll-aware (>200px hide, <=50px show + reset timer). */
   const [reopenVisible, setReopenVisible] = React.useState(true);
   const fadeTimerRef = React.useRef<number | null>(null);
@@ -282,6 +309,7 @@ const CookieConsent = () => {
       {/* Banner */}
       {isMobile ? (
         <div
+          ref={mobileBannerRef}
           role="dialog"
           aria-live="polite"
           aria-label={t.title}

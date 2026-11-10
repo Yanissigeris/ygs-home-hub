@@ -147,7 +147,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
       <DialogContent className="sm:max-w-[480px] rounded-2xl border-border bg-card p-0 overflow-hidden">
                 <div className="px-6 pt-5 pb-7 sm:px-8 sm:pt-6 sm:pb-8">
           <DialogHeader className="text-left">
-            <p className="mb-2 flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/60">
+            <p className="mb-2 flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/80">
               <BookOpen size={13} className="text-[var(--ink-soft)]" />
               {l.overline}
             </p>
@@ -199,7 +199,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
               <Button type="submit" size="lg" variant="accent" className="w-full mt-1 font-semibold" disabled={submitting}>
                 <Send size={16} className="mr-1.5" />{submitting ? l.sending : config.submitLabel}
               </Button>
-              <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.72rem] text-muted-foreground/50">
+              <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.72rem] text-muted-foreground/80">
                 <span className="flex items-center gap-1.5"><BadgeCheck size={12} /> {l.free}</span>
                 <span className="flex items-center gap-1.5"><Lock size={12} /> {l.confidential}</span>
                 <span className="flex items-center gap-1.5"><Shield size={12} /> {l.noCommitment}</span>

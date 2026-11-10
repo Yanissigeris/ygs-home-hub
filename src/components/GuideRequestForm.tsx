@@ -162,7 +162,7 @@ const GuideRequestForm = ({
         >
           {/* Left: value proposition */}
           <div className="pt-2">
-            <p className="mb-3 flex items-center gap-2.5 text-[0.75rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/60">
+            <p className="mb-3 flex items-center gap-2.5 text-[0.75rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/80">
               <BookOpen size={14} className="text-[var(--ink-soft)]" aria-hidden="true" />
               <span>{t.overline}</span>
             </p>
@@ -172,7 +172,7 @@ const GuideRequestForm = ({
             </p>
             <div className="mt-6 space-y-2.5">
               {t.bullets.map((b) => (
-                <div key={b.text} className="flex items-center gap-2.5 text-[0.85rem] text-muted-foreground/70">
+                <div key={b.text} className="flex items-center gap-2.5 text-[0.85rem] text-muted-foreground/80">
                   <b.icon size={15} className="text-[var(--ink-soft)] shrink-0" aria-hidden="true" />
                   <span>{b.text}</span>
                 </div>
@@ -240,7 +240,7 @@ const GuideRequestForm = ({
                   {errors.email ? (
                     <ErrorLine id="guide-courriel-err" msg={errors.email.message} />
                   ) : (
-                    <p id="guide-courriel-help" className="mt-1 text-[0.7rem] text-muted-foreground/70">{t.emailHint}</p>
+                    <p id="guide-courriel-help" className="mt-1 text-[0.7rem] text-muted-foreground/80">{t.emailHint}</p>
                   )}
                 </div>
 
@@ -268,7 +268,7 @@ const GuideRequestForm = ({
                   {errors.phone ? (
                     <ErrorLine id="guide-tel-err" msg={errors.phone.message} />
                   ) : (
-                    <p id="guide-tel-help" className="mt-1 text-[0.7rem] text-muted-foreground/70">{t.phoneHint}</p>
+                    <p id="guide-tel-help" className="mt-1 text-[0.7rem] text-muted-foreground/80">{t.phoneHint}</p>
                   )}
                 </div>
 
@@ -277,7 +277,7 @@ const GuideRequestForm = ({
                   {submitting ? t.sending : submitLabel}
                 </Button>
 
-                <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-muted-foreground/60">
+                <div className="flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem] text-muted-foreground/80">
                   <span className="flex items-center gap-1.5"><BadgeCheck size={13} aria-hidden="true" /> {t.badges[0]}</span>
                   <span className="flex items-center gap-1.5"><Lock size={13} aria-hidden="true" /> {t.badges[1]}</span>
                   <span className="flex items-center gap-1.5"><Shield size={13} aria-hidden="true" /> {t.badges[2]}</span>

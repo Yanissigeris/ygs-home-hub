@@ -101,7 +101,7 @@ const OutaouaisHubPageEn = () => (
             >
               <div className="min-w-0">
                 <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{z.name}</p>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">{z.detail}</p>
+                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/80 truncate">{z.detail}</p>
               </div>
               <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
             </Link>
@@ -123,7 +123,7 @@ const OutaouaisHubPageEn = () => (
             >
               <div className="min-w-0">
                 <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{s.label}</p>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/60 truncate">{s.detail}</p>
+                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/80 truncate">{s.detail}</p>
               </div>
               <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
             </Link>
