@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import GuideModal, { type GuideType } from "@/components/GuideModal";
+import { ArrowRight } from "lucide-react";
 
 interface GuideOffersSectionProps {
   background?: "default" | "alt";
@@ -8,17 +9,17 @@ interface GuideOffersSectionProps {
 }
 
 const guidesFr = [
-  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix\u00a0: prix, mise en marché, négociation.", cta: "Recevoir le guide →" },
-  { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide →" },
-  { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide →" },
-  { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Guide vendeur", subtitle: "Vendre au meilleur prix\u00a0: prix, mise en marché, négociation.", cta: "Recevoir le guide" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Guide acheteur", subtitle: "Le processus d'achat au Québec, de la recherche au notaire.", cta: "Recevoir le guide" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Guide investisseur", subtitle: "Rendement, plex et stratégie d'investissement à Gatineau.", cta: "Recevoir le guide" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Guide relocalisation", subtitle: "Acheter à Gatineau en venant d'Ottawa ou d'ailleurs.", cta: "Recevoir le guide" },
 ];
 
 const guidesEn = [
-  { num: "01", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price: pricing, marketing, negotiation.", cta: "Get the guide →" },
-  { num: "02", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the guide →" },
-  { num: "03", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the guide →" },
-  { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the guide →" },
+  { num: "01", guideType: "seller_guide" as GuideType, title: "Seller Guide", subtitle: "Sell at the best price: pricing, marketing, negotiation.", cta: "Get the guide" },
+  { num: "02", guideType: "buyer_guide" as GuideType, title: "Buyer Guide", subtitle: "The Québec buying process, from search to notary.", cta: "Get the guide" },
+  { num: "03", guideType: "investor_guide" as GuideType, title: "Investor Guide", subtitle: "Returns, plex analysis and investing in Gatineau.", cta: "Get the guide" },
+  { num: "04", guideType: "relocation_guide" as GuideType, title: "Relocation Guide", subtitle: "Buying in Gatineau from Ottawa or elsewhere.", cta: "Get the guide" },
 ];
 
 const headingFr = { overline: "Guides gratuits", title: "Recevez votre guide immobilier", subtitle: "Un guide gratuit pour chaque étape, envoyé par courriel, sans engagement." };
@@ -63,7 +64,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold-dark)" }} aria-hidden="true" />
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
                 <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.75 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-1 transition-[gap] group-hover:gap-2 group-focus-visible:gap-2" style={{ fontSize: ".72rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{g.cta}</span>
+                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-2 text-[0.875rem] font-semibold" style={{ color: "var(--gold-text)", minHeight: 44 }}>{g.cta}<ArrowRight size={14} className="transition-transform [@media(hover:hover)]:group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
               </button>
             ))}
           </div>
@@ -80,8 +81,9 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
               >
                 <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
                 <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-3 inline-flex items-center" style={{ fontSize: ".7rem", fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".06em", textTransform: "uppercase" as const, lineHeight: 1.3, minHeight: 44 }}>
-                  {lang === "en" ? "Get it →" : "Recevoir →"}
+                <span aria-hidden="true" className="mt-3 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold" style={{ color: "var(--gold-text)", lineHeight: 1.3, minHeight: 44 }}>
+                  {lang === "en" ? "Get it" : "Recevoir"}
+                  <ArrowRight size={13} />
                 </span>
               </button>
             ))}
