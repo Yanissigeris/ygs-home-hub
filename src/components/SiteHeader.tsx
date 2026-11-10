@@ -457,7 +457,7 @@ const SiteHeader = () => {
             <span
               style={{
                 fontFamily: "var(--sans)",
-                fontSize: "9px",
+                fontSize: "10px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 color: "rgba(255,255,255,0.7)",

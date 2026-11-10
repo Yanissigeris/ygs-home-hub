@@ -36,6 +36,7 @@ export type ContactLocation =
   | "hero"
   | "inline"
   | "sticky_cta"
+  | "mobile_menu"
   | "contact_page";
 
 /**

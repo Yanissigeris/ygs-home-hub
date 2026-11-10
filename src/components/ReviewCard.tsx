@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Star } from "lucide-react";
 import type { Review } from "@/data/reviews";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ReviewCardProps {
   review: Review;
@@ -11,7 +12,11 @@ interface ReviewCardProps {
 }
 
 const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
-  ({ review, variant = "compact", index = 0, quote = false }, ref) => (
+  ({ review, variant = "compact", index = 0, quote = false }, ref) => {
+    const isEn = useLanguage() === "en";
+    /* Citation : le grand guillemet décoratif (CSS) suffit. Cartes : guillemets selon la langue. */
+    const [open, close] = quote ? ["", ""] : isEn ? ["\u201C", "\u201D"] : ["«\u00A0", "\u00A0»"];
+    return (
     <div
       ref={ref}
       className="h-full"
@@ -25,7 +30,7 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
 
         <blockquote className="relative z-[1] flex-1">
           <p className={quote ? "review-quote-text italic text-foreground" : "text-[0.9375rem] italic leading-[1.65] text-foreground/85"}>
-            "{variant === "full" ? review.full : review.short}"
+            {open}{variant === "full" ? review.full : review.short}{close}
           </p>
         </blockquote>
 
@@ -43,7 +48,8 @@ const ReviewCard = React.forwardRef<HTMLDivElement, ReviewCardProps>(
         </div>
       </div>
     </div>
-  ),
+    );
+  },
 );
 
 ReviewCard.displayName = "ReviewCard";

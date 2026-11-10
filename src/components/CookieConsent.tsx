@@ -329,10 +329,10 @@ const CookieConsent = () => {
             transition: "transform .35s cubic-bezier(.22,.61,.36,1)",
           }}
         >
-          <span style={{ flex: 1, lineHeight: 1.3, fontSize: "11px" }}>
+          <span style={{ flex: 1, lineHeight: 1.3, fontSize: "12px" }}>
             {lang === "fr" ? "Cookies. Loi 25 du Québec." : "Cookies. Quebec Law 25."}
           </span>
-          <div style={{ display: "flex", gap: "5px", flexShrink: 0 }}>
+          <div style={{ display: "flex", gap: "6px", flexShrink: 0 }}>
             <button
               onClick={handleRefuse}
               aria-label={lang === "fr" ? "Tout refuser" : "Refuse all"}
@@ -340,12 +340,12 @@ const CookieConsent = () => {
                 background: "transparent",
                 border: "1px solid rgba(255,255,255,0.3)",
                 color: "var(--cream)",
-                padding: "7px 9px",
-                fontSize: "10px",
+                padding: "8px 12px",
+                fontSize: "12px",
                 borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 500,
-                minHeight: "36px",
+                minHeight: "44px",
                 whiteSpace: "nowrap",
               }}
             >
@@ -358,12 +358,12 @@ const CookieConsent = () => {
                 background: "transparent",
                 border: "1px solid rgba(255,255,255,0.3)",
                 color: "var(--cream)",
-                padding: "7px 9px",
-                fontSize: "10px",
+                padding: "8px 12px",
+                fontSize: "12px",
                 borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 500,
-                minHeight: "36px",
+                minHeight: "44px",
                 whiteSpace: "nowrap",
               }}
             >
@@ -376,12 +376,12 @@ const CookieConsent = () => {
                 background: "var(--action)",
                 border: "1px solid var(--action)",
                 color: "var(--on-action)",
-                padding: "7px 12px",
-                fontSize: "10px",
+                padding: "8px 14px",
+                fontSize: "12px",
                 borderRadius: 999,
                 cursor: "pointer",
                 fontWeight: 600,
-                minHeight: "36px",
+                minHeight: "44px",
                 whiteSpace: "nowrap",
               }}
             >

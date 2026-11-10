@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import type { NavItem, NavChild } from "@/data/navigation";
 import { useState } from "react";
+import { Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { trackContactTap } from "@/lib/analytics";
 
 const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
@@ -61,10 +64,26 @@ interface Props {
   closeMenu: () => void;
 }
 
-const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, closeMenu }: Props) => (
+const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, closeMenu }: Props) => {
+  const isEn = useLanguage() === "en";
+  return (
   <AnimatePresence>
     {open && (
       <motion.div
+        key="mobile-nav-backdrop"
+        aria-hidden="true"
+        onClick={closeMenu}
+        className="lg:hidden fixed inset-0"
+        style={{ zIndex: -1, background: "rgba(0, 14, 53, 0.45)" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      />
+    )}
+    {open && (
+      <motion.div
+        key="mobile-nav-panel"
         id="mobile-navigation"
         role="navigation"
         aria-label={ariaLabel}
@@ -103,12 +122,24 @@ const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, cl
               to={ctaHref}
               onClick={closeMenu}
               className="flex w-full items-center justify-center transition-[color,background-color] duration-200"
-              style={{ height: 48, background: "transparent", color: "var(--gold)", fontSize: ".94rem", fontWeight: 600, borderRadius: 0, border: "1.5px solid var(--gold)", transition: "all .2s ease" }}
+              style={{ height: 48, background: "transparent", color: "var(--gold)", fontSize: ".94rem", fontWeight: 600, borderRadius: 999, border: "1.5px solid var(--gold)", transition: "all .2s ease" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--white)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
             >
               {ctaLabel}
             </Link>
+            <a
+              href="tel:+18192103044"
+              onClick={() => {
+                trackContactTap({ channel: "phone", location: "mobile_menu", destination: "+18192103044" });
+                closeMenu();
+              }}
+              className="mt-2 flex w-full items-center justify-center gap-2 text-[.9rem] font-medium"
+              style={{ minHeight: 44, color: "var(--ink)" }}
+            >
+              <Phone size={16} strokeWidth={1.75} aria-hidden="true" />
+              {isEn ? "Call 819-210-3044" : "Appeler au 819-210-3044"}
+            </a>
           </motion.div>
           <motion.div
             className="flex justify-center pb-4"
@@ -122,6 +153,7 @@ const MobileNavDrawer = ({ open, nav, pathname, ariaLabel, ctaHref, ctaLabel, cl
       </motion.div>
     )}
   </AnimatePresence>
-);
+  );
+};
 
 export default MobileNavDrawer;

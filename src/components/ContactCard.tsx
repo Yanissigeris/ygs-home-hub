@@ -21,14 +21,14 @@ interface ContactCardProps {
 
 const ContactCard = ({ title = "Coordonnées", items, onTap }: ContactCardProps) => (
   <div className="mt-10 card-elevated border border-border/40 bg-secondary/25 p-7">
-    <p className="text-[1.0625rem] font-semibold text-foreground mb-5">{title}</p>
-    <div className="space-y-3.5 text-[0.9375rem] text-muted-foreground">
+    <p className="text-[1.0625rem] font-semibold text-foreground mb-3">{title}</p>
+    <div className="text-[0.9375rem] text-muted-foreground">
       {items.map((item, idx) => {
         const display = item.value ?? item.text ?? "";
         const inner = item.href ? (
           <a
             href={item.href}
-            className="hover:text-foreground transition-colors"
+            className="inline-flex min-h-[44px] items-center hover:text-foreground transition-colors"
             onClick={() => onTap?.(item)}
           >
             {display}
@@ -37,7 +37,7 @@ const ContactCard = ({ title = "Coordonnées", items, onTap }: ContactCardProps)
           <span>{display}</span>
         );
         return (
-          <div key={`${item.label ?? ""}-${display}-${idx}`} className="flex items-center gap-3">
+          <div key={`${item.label ?? ""}-${display}-${idx}`} className="flex min-h-[44px] items-center gap-3">
             <item.icon size={16} className="text-muted-foreground shrink-0" />
             <span>
               {item.label ? <span className="text-foreground/70">{item.label} : </span> : null}
