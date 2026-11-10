@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Cookie } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
@@ -218,6 +219,33 @@ const CookieConsent = () => {
     setShowPrefs(true);
   };
 
+  /* Mobile: expose the banner height so the sticky bars (StickyMobileCTA,
+     StickyGuideBanner) sit right above it instead of being covered. */
+  const mobileBannerRef = React.useRef<HTMLDivElement | null>(null);
+  React.useEffect(() => {
+    const root = document.documentElement;
+    const clear = () => {
+      root.style.removeProperty("--cookie-bar-h");
+      root.style.removeProperty("--cookie-bar-safe");
+    };
+    const el = mobileBannerRef.current;
+    if (!isMobile || !visible || !el) {
+      clear();
+      return;
+    }
+    const apply = () => {
+      root.style.setProperty("--cookie-bar-h", `${el.offsetHeight}px`);
+      root.style.setProperty("--cookie-bar-safe", "0px");
+    };
+    apply();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(apply) : null;
+    ro?.observe(el);
+    return () => {
+      ro?.disconnect();
+      clear();
+    };
+  }, [isMobile, visible]);
+
   /* Mobile reopen button: fade-cycle 6s + scroll-aware (>200px hide, <=50px show + reset timer). */
   const [reopenVisible, setReopenVisible] = React.useState(true);
   const fadeTimerRef = React.useRef<number | null>(null);
@@ -281,6 +309,7 @@ const CookieConsent = () => {
       {/* Banner */}
       {isMobile ? (
         <div
+          ref={mobileBannerRef}
           role="dialog"
           aria-live="polite"
           aria-label={t.title}
@@ -378,7 +407,7 @@ const CookieConsent = () => {
             {/* Text */}
             <div className="max-w-[580px]">
               <p className="flex items-center gap-2 font-serif text-[1rem] font-semibold text-white mb-1">
-                <span>🍪</span> {t.title}
+                <Cookie size={18} strokeWidth={1.75} aria-hidden="true" /> {t.title}
               </p>
               <p className="text-[.78rem] leading-[1.6]" style={{ color: "rgba(255,255,255,.6)" }}>
                 {t.body}{" "}
@@ -444,7 +473,7 @@ const CookieConsent = () => {
           aria-label={lang === "en" ? "Cookie preferences" : "Préférences cookies"}
           aria-hidden={isMobile && !reopenVisible ? true : undefined}
         >
-          🍪
+          <Cookie size={18} strokeWidth={1.75} aria-hidden="true" style={{ color: "#fff" }} />
         </button>
       )}
 

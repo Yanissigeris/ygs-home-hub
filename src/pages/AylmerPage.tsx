@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Leaf, School, ShoppingBag } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -99,9 +99,9 @@ const sellerSteps = [
 
 /* ── Lifestyle cards ── */
 const lifestyleCards = [
-  { icon: "🌿", title: "Nature à deux pas", text: "Le parc de la Gatineau et la rivière des Outaouais sont tout près, et des pistes cyclables mènent à Ottawa par le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
-  { icon: "🛒", title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
-  { icon: "🏫", title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais), écoles anglophones (Western Québec). Un atout majeur pour les familles d'Ottawa qui relocalisent." },
+  { icon: Leaf, title: "Nature à deux pas", text: "Le parc de la Gatineau et la rivière des Outaouais sont tout près, et des pistes cyclables mènent à Ottawa par le pont Champlain. La nature est accessible sans quitter les rues résidentielles." },
+  { icon: ShoppingBag, title: "Services complets", text: "Commerces de proximité, grandes surfaces (IGA, Maxi), restaurants, cliniques médicales, bibliothèque. Vieux-Aylmer offre boutiques locales et terrasses animées l'été. Tout sans quitter le secteur." },
+  { icon: School, title: "Écoles francophones et anglophones", text: "Secteur particulièrement bien desservi pour les familles bilingues. Écoles francophones (Centre de services scolaire des Portages-de-l'Outaouais), écoles anglophones (Western Québec). Un atout majeur pour les familles d'Ottawa qui relocalisent." },
 ];
 
 
@@ -159,7 +159,7 @@ const AylmerPage = () => (
 
         {/* Right — CTA facts card (2 cols) */}
         <div className="lg:col-span-2">
-          <div className="rounded-md border border-border bg-background p-6 space-y-5">
+          <div className="rounded-lg border border-border bg-background p-6 space-y-5">
             <h3 className="font-serif text-lg font-semibold text-foreground">Combien vaut une propriété ici?</h3>
             <p className="text-[0.88rem] text-muted-foreground leading-relaxed">
               Les prix varient selon le secteur précis, le type de propriété, l'état, et les ventes récentes dans votre rue. La seule façon d'obtenir un chiffre fiable, c'est une analyse comparative basée sur les vrais comparables actuels.
@@ -208,7 +208,7 @@ const AylmerPage = () => (
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {subSectors.map((s) => (
-            <div key={s.title} className="rounded-md border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
+            <div key={s.title} className="rounded-lg border border-border bg-background p-6 space-y-3 hover:-translate-y-0.5 transition-transform">
               <h3 className="font-semibold text-foreground">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{s.text}</p>
               <span className="inline-block text-xs font-medium text-[var(--ink-soft)]">{s.tag}</span>
@@ -293,8 +293,8 @@ const AylmerPage = () => (
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {lifestyleCards.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
+              <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>

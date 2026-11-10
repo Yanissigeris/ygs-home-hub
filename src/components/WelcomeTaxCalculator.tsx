@@ -122,8 +122,8 @@ const WelcomeTaxCalculator = () => {
           </div>
 
           {/* Disclaimer */}
-          <p className="text-[0.75rem] leading-relaxed text-muted-foreground/70 italic">{l.disclaimer}</p>
-          <p className="text-[0.75rem] leading-relaxed text-muted-foreground/70 italic">{l.credit}</p>
+          <p className="text-[0.75rem] leading-relaxed text-muted-foreground/80 italic">{l.disclaimer}</p>
+          <p className="text-[0.75rem] leading-relaxed text-muted-foreground/80 italic">{l.credit}</p>
         </div>
       )}
     </div>

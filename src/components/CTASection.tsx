@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Phone } from "lucide-react";
 import { canonicalPath } from "@/lib/url-utils";
 import { Link } from "react-router-dom";
 import { trackCTAClick, trackContactTap } from "@/lib/analytics";
@@ -90,11 +91,12 @@ const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
           <div className="mt-4 md:hidden">
             <a
               href="tel:+18192103044"
-              className="inline-flex min-h-[44px] items-center px-3"
+              className="inline-flex min-h-[44px] items-center gap-1.5 px-3"
               style={{ color: "rgba(255,255,255,.75)", fontSize: ".84rem" }}
               onClick={() => trackContactTap({ channel: "phone", location: "inline", destination: "+18192103044" })}
             >
-              📞 819-210-3044
+              <Phone size={14} strokeWidth={1.75} aria-hidden="true" />
+              819-210-3044
             </a>
           </div>
         )}

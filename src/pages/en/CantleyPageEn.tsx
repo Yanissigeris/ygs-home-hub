@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MountainSnow, Waves } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -36,12 +36,12 @@ const faq = [
 /* ── Activity cards ── */
 const activities = [
   {
-    icon: "⛷️",
+    icon: MountainSnow,
     title: "Recreational activities",
     text: "Cantley has a golf course, water park, alpine ski centre, campground, and the Nakkertok cross-country ski club.",
   },
   {
-    icon: "🌊",
+    icon: Waves,
     title: "Nature and river",
     text: "Cantley is bordered by the Gatineau River to the west. The territory features rolling terrain typical of the Collines-de-l'Outaouais, forests, climbs, panoramic views. Surrounded by mountainous forests, Cantley has officially positioned itself as a municipality of 'welcoming nature.' (Source: Municipality of Cantley)",
   },
@@ -108,8 +108,8 @@ const CantleyPageEn = () => (
         <h2 className="mt-3">Life in Cantley, what sets this area apart</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {activities.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
+              <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>

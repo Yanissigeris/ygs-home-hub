@@ -186,7 +186,7 @@ const SellerPlanPage = () => {
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
                       {submitting ? "Envoi en cours" : "Recevoir mon plan vendeur"}
                     </Button>
-                    <p className="text-center text-[0.8125rem] text-muted-foreground/50">
+                    <p className="text-center text-[0.8125rem] text-muted-foreground/80">
                       Je vous donne les chiffres et les options, vous décidez.
                     </p>
                   </form>
@@ -214,7 +214,7 @@ const SellerPlanPage = () => {
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Commencez par une évaluation gratuite. C'est la première étape pour savoir où vous en êtes.
                 </p>
-                <Button size="default" variant="hero" className="mt-4 w-full" asChild>
+                <Button size="default" variant="default" className="mt-4 w-full" asChild>
                   <Link to="/evaluation-gratuite-gatineau/">Évaluation gratuite</Link>
                 </Button>
               </div>

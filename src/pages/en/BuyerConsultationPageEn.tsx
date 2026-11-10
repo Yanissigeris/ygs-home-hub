@@ -113,14 +113,14 @@ const BuyerConsultationPageEn = () => {
                       <div>
                         <Label htmlFor="email">Email</Label>
                         <Input id="email" name="email" type="email" className="mt-1.5" required aria-describedby="bc-email-help" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <p id="bc-email-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Format: you@example.com</p>
+                        <p id="bc-email-help" className="mt-1 text-[0.75rem] text-muted-foreground/80">Format: you@example.com</p>
                       </div>
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <Label htmlFor="phone">Phone</Label>
                         <Input id="phone" name="phone" type="tel" className="mt-1.5" aria-describedby="bc-phone-help" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">Optional, format: 819-000-0000</p>
+                        <p id="bc-phone-help" className="mt-1 text-[0.75rem] text-muted-foreground/80">Optional, format: 819-000-0000</p>
                       </div>
                       <div>
                         <Label htmlFor="budget">Approximate budget</Label>
@@ -166,13 +166,13 @@ const BuyerConsultationPageEn = () => {
                     <div>
                       <Label htmlFor="notes">Questions or details (optional)</Label>
                       <Textarea id="notes" name="notes" rows={3} className="mt-1.5" placeholder="Property type, preferred neighbourhood, questions" aria-describedby="bc-notes-help" value={notes} onChange={(e) => setNotes(e.target.value)} />
-                      <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/70">The more details you share, the more useful our meeting will be.</p>
+                      <p id="bc-notes-help" className="mt-1 text-[0.75rem] text-muted-foreground/80">The more details you share, the more useful our meeting will be.</p>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="w-full mt-2 shadow-md font-semibold" disabled={submitting}>
                       {submitting ? "Sending" : "Book my consultation"}
                     </Button>
-                    <p className="text-center text-[0.8125rem] text-muted-foreground/50">
+                    <p className="text-center text-[0.8125rem] text-muted-foreground/80">
                       Free, with no commitment. I help you see more clearly.
                     </p>
                   </form>
@@ -200,7 +200,7 @@ const BuyerConsultationPageEn = () => {
                 <p className="mt-2 text-[0.9375rem] leading-[1.6] text-primary-foreground/60">
                   Get your free valuation to clarify your buying budget.
                 </p>
-                <Button size="default" variant="hero" className="mt-4 w-full" asChild>
+                <Button size="default" variant="default" className="mt-4 w-full" asChild>
                   <Link to="/en/home-valuation/">Free Home Valuation</Link>
                 </Button>
               </div>

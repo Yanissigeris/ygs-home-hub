@@ -128,7 +128,7 @@ const NotFound = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group rounded-[3px] border border-border bg-white p-5 text-left transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5"
+                className="group rounded-[20px] border border-border bg-white p-5 text-left transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5"
                 style={{
                   boxShadow: "none",
                 }}
@@ -153,7 +153,7 @@ const NotFound = () => {
           {/* Back home button */}
           <Link
             to={isEn ? "/en" : "/"}
-            className="mt-6 inline-flex items-center justify-center rounded-[3px] px-8 py-3 text-[.85rem] font-semibold text-white transition-colors"
+            className="mt-6 inline-flex items-center justify-center rounded-full px-8 py-3 text-[.85rem] font-semibold text-white transition-colors"
             style={{ background: "var(--ink)" }}
           >
             {isEn ? "← Back to home" : "← Retour à l'accueil"}

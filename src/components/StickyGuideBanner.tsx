@@ -50,6 +50,7 @@ const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerP
             className="fixed bottom-0 inset-x-0 z-50 pointer-events-none"
             aria-hidden={!shown}
             style={{
+              bottom: "var(--cookie-bar-h, 0px)",
               transform: shown ? "translateY(0)" : "translateY(calc(100% + 16px))",
               opacity: shown ? 1 : 0,
               visibility: shown ? "visible" : "hidden",

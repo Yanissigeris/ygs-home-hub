@@ -116,7 +116,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         {/* Desktop: 2-column bordered table */}
         <div
           className="hidden md:grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
-          style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 3 }}
+          style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 20 }}
         >
           <div className="lg:border-r" style={{ borderRight: "none" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
@@ -143,7 +143,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         </div>
 
         {/* Mobile: tab switcher */}
-        <div className="md:hidden overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 3 }}>
+        <div className="md:hidden overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.06)", borderRadius: 20 }}>
           {/* Tab bar */}
           <div className="flex" style={{ background: "rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
             <button

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { Bath, CheckCircle2, MountainSnow, Trees } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import NeighborhoodJsonLd from "@/components/NeighborhoodJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -48,17 +48,17 @@ const faq = [
 /* ── Atouts cards ── */
 const atouts = [
   {
-    icon: "🌲",
+    icon: Trees,
     title: "Gatineau Park",
     text: "Gatineau Park covers 361 km² of forests, lakes and rivers. Created in 1938, it spans several municipalities, including Chelsea. People hike, cycle, cross-country ski, snowshoe and swim at Lac Meech. (Source: National Capital Commission)",
   },
   {
-    icon: "♨️",
+    icon: Bath,
     title: "Nordik Spa-Nature",
     text: "Nordik Spa-Nature is located in Chelsea. It is one of the largest Nordic spas in North America. Its presence contributes to the municipality's appeal and attracts visitors who often discover Chelsea as a residential destination. (Source: nordikspanature.com)",
   },
   {
-    icon: "⛷️",
+    icon: MountainSnow,
     title: "Old Chelsea / Camp Fortune",
     text: "Old Chelsea village is the historic heart of the municipality. A few local shops, restaurants, and a preserved village character. Camp Fortune, nearby, is a ski club about 21 km from downtown Ottawa by road. (Source: Wikipedia/Chelsea)",
   },
@@ -125,8 +125,8 @@ const ChelseaPageEn = () => (
         <h2 className="mt-3">What you'll find in Chelsea</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {atouts.map((c) => (
-            <div key={c.title} className="rounded-md border border-border bg-background p-6 space-y-3">
-              <span className="text-2xl">{c.icon}</span>
+            <div key={c.title} className="rounded-lg border border-border bg-background p-6 space-y-3">
+              <c.icon size={26} strokeWidth={1.5} aria-hidden="true" style={{ color: "var(--ink)" }} />
               <h3 className="font-semibold text-foreground">{c.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{c.text}</p>
             </div>
