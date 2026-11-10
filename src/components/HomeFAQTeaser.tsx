@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface FAQTeaserProps {
@@ -59,8 +60,7 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
             <div className="lg:sticky lg:top-[100px] lg:self-start mb-6 lg:mb-0">
               <p className="label-overline mb-2">{overline}</p>
               <h2>{title}</h2>
-              <div style={{ width: 48, height: 1, background: "var(--ink)", marginTop: "1.25rem", marginBottom: "1.5rem" }} aria-hidden="true" />
-              <p style={{ fontSize: ".88rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.7 }}>
+              <p className="mt-4" style={{ fontSize: ".88rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.7 }}>
                 Voici les réponses aux questions que j'entends le plus souvent.
               </p>
               <Link
@@ -90,18 +90,13 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                       aria-expanded={isOpen}
                     >
                       <span className="pr-4">{item.q}</span>
-                      <span
-                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-[color,background-color,border-color,transform] duration-200"
-                        style={{
-                          border: isOpen ? "1px solid var(--gold)" : "1px solid var(--border)",
-                          background: isOpen ? "var(--gold)" : "transparent",
-                          color: isOpen ? "var(--white)" : "var(--muted)",
-                          transform: isOpen ? "rotate(180deg)" : "",
-                          fontSize: ".75rem",
-                        }}
-                      >
-                        ▾
-                      </span>
+                      <ChevronDown
+                        size={16}
+                        strokeWidth={1.75}
+                        aria-hidden="true"
+                        className="shrink-0 transition-transform duration-200"
+                        style={{ color: "var(--muted)", transform: isOpen ? "rotate(180deg)" : undefined }}
+                      />
                     </button>
                     <div
                       className="overflow-hidden transition-[max-height,opacity] duration-300"
