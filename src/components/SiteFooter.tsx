@@ -238,7 +238,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <h3 className="footer-heading mb-4 sm:mb-10">
               {affiliationsLabel}
             </h3>
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[46rem]">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[56rem]">
               {affiliationLogos.map((logo) => {
                 const inner = logo.custom ?? (
                   <img
