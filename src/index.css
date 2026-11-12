@@ -569,6 +569,14 @@ h1.hero-eyebrow {
   }
 }
 
+/* Accueil : le héros couvre tout l'écran à l'ouverture, y compris la zone
+   derrière la barre flottante de Safari iOS (100lvh). 100svh reste en repli
+   pour les navigateurs qui ne connaissent pas lvh. Ordinateur : identique. */
+.hero-fill-screen {
+  min-height: 100svh;
+  min-height: 100lvh;
+}
+
 /* Hero background image — clean interior, no subject to track. */
 .hero-bg-image {
   object-position: center center;

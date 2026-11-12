@@ -105,6 +105,8 @@ interface HeroSectionProps {
   petrolGradient?: boolean;
   /** Accueil : H1 en DM Sans 600, « Outaouais » en bleu. Mêmes mots, même balise. */
   sansTitle?: boolean;
+  /** Accueil : le héros remplit tout l'écran du cellulaire, jusque derrière la barre de Safari (100lvh). */
+  fillScreen?: boolean;
 }
 
 /* Stats data */
@@ -153,6 +155,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       showProofBar = false,
       petrolGradient = true,
       sansTitle = false,
+      fillScreen = false,
       photoCredit,
     },
     ref
@@ -474,9 +477,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       <section
         ref={combinedRef}
         data-hero-dark
-        className="relative overflow-hidden w-full"
+        className={`relative overflow-hidden w-full${fillScreen ? " hero-fill-screen" : ""}`}
         style={{
-          minHeight: "100svh",
+          ...(fillScreen ? {} : { minHeight: "100svh" }),
           backgroundColor: "var(--ink)",
         }}
       >
