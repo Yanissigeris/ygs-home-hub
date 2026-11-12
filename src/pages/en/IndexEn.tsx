@@ -46,6 +46,7 @@ const IndexEn = React.forwardRef<HTMLDivElement>((_, ref) => (
       subtitle="More than 300 transactions in the Outaouais since 2017. To sell, buy or invest, we start from comparable sales in your area."
       subtitleShort="Sell, buy or invest, based on sales in your area."
       sansTitle
+      fillScreen
       primaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation/" }}
       secondaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }}
       socialProof="Hall of Fame RE/MAX"

@@ -40,13 +40,14 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <div className="relative">
-      <div className="sticky top-0 z-0 h-screen">
+      <div className="sticky top-0 z-0">
         <HeroSection
           
           title="Votre courtier immobilier à Gatineau et en Outaouais"
           subtitle="Plus de 300 transactions en Outaouais depuis 2017. Pour vendre, acheter ou investir, on part des ventes comparables de votre secteur."
           subtitleShort="Vendre, acheter ou investir, à partir des ventes de votre secteur."
           sansTitle
+          fillScreen
           primaryCta={{ label: "Évaluation gratuite", href: "/evaluation-gratuite-gatineau/" }}
           secondaryCta={{ label: "Parler à Yanis", href: "/contact-yanis/" }}
           socialProof="Hall of Fame RE/MAX"
