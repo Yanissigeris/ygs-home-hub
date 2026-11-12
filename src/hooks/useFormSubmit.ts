@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { trackGuideRequest, trackLead, type Avatar, type Offer } from "@/lib/analytics";
 
-// Lazy-loaded supabase client. Keeps ~127 KB out of the routes that *render*
-// a form but where most users never submit (contact, guide modal, valuation).
-const loadSupabase = () => import("@/integrations/supabase/client").then(m => m.supabase);
+// Les formulaires passent par la fonction Netlify du site
+// (netlify/functions/send-email.mts), sans dépendre de Lovable Cloud.
+const SEND_EMAIL_ENDPOINT = "/.netlify/functions/send-email";
 
 interface FormData {
   formType: "contact" | "valuation" | "guide" | "analysis" | "consultation";
@@ -18,7 +18,7 @@ interface FormData {
   guideTitle?: string;
   lastName?: string;
   projectType?: string;
-  // Analytics-only — NOT forwarded to the send-email edge function
+  // Analytics-only — NOT forwarded to the send-email function
   avatar?: Avatar;
   offer?: Offer;
   sourcePage?: string;
@@ -31,15 +31,16 @@ export function useFormSubmit() {
   const submit = async (data: FormData): Promise<boolean> => {
     setSubmitting(true);
     try {
-      const supabase = await loadSupabase();
-      // Strip analytics-only fields before sending to the edge function
+      // Strip analytics-only fields before sending to the function
       const { avatar, offer, sourcePage, ...emailPayload } = data;
-      const { data: result, error } = await supabase.functions.invoke("send-email", {
-        body: emailPayload,
+      const response = await fetch(SEND_EMAIL_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(emailPayload),
       });
 
-      if (error) {
-        console.error("Form submission error:", error);
+      if (!response.ok) {
+        console.error("Form submission error: HTTP", response.status);
         toast({
           title: data.lang === "fr" ? "Demande non envoyée" : "Request not sent",
           description: data.lang === "fr"
