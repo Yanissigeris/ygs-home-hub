@@ -40,7 +40,7 @@ const Index = React.forwardRef<HTMLDivElement>((_, ref) => (
       ogImage="https://yanisgauthier.com/og/og-home.jpg"
     />
     <div className="relative">
-      <div className="sticky top-0 z-0 h-screen">
+      <div className="sticky top-0 z-0">
         <HeroSection
           
           title="Votre courtier immobilier à Gatineau et en Outaouais"
