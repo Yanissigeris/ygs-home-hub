@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivi de valeur | Yanis Gauthier-Sigeris</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000E35">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/intertight-latin.woff2" crossorigin>
+<style>
+/* Page d'inscription au Suivi de valeur. Autonome : elle ne charge ni l'application du site, ni Google Analytics. */
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url('/fonts/dmsans-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500 700;font-display:swap;src:url('/fonts/intertight-latin.woff2') format('woff2')}
+:root{
+  --navy:#000E35; --ink:#0C1A3F; --muted:#3B4560; --line:#DDE0E8; --cream:#F7F4EE; --card:#FFFFFF;
+  --blue:#3366FF; --soft:#EEF1F8; --red:#FF1200;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --head:'Inter Tight','DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--head);letter-spacing:-.02em;text-wrap:balance}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.in{max-width:1120px;margin:0 auto;padding:0 20px}
+[hidden]{display:none!important}
+
+.top{background:var(--navy);color:#fff}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+.brand img{height:44px;width:44px;object-fit:contain}
+.brand span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.agent{display:flex;align-items:center;gap:10px}
+.agent img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 8%;background:#fff}
+.agent small{display:block;font-size:12px;color:rgba(255,255,255,.8)}
+.agent b{font-size:14px;font-weight:600}
+
+
+.wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;padding:48px 0 64px;align-items:start}
+.pitch{display:flex;flex-direction:column;gap:24px;min-width:0}
+.eye{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.eye i{width:28px;height:3px;background:var(--red)}
+.pitch h1{font-size:clamp(34px,5.4vw,52px);line-height:1.05;font-weight:600}
+.lead{font-size:18px;line-height:1.6;color:var(--muted);max-width:580px}
+.block{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:14px;max-width:580px}
+.block h2{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.steps,.gets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.steps li{display:flex;gap:14px;align-items:flex-start}
+.steps b{font-family:var(--head);font-size:20px;font-weight:600;line-height:1.3;width:22px;flex:none;font-variant-numeric:tabular-nums}
+.gets li{padding-left:18px;position:relative}
+.gets li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--navy)}
+.who{display:flex;gap:18px;align-items:center;max-width:580px}
+.who img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 8%;flex:none;background:#fff}
+.who q{display:block;font-size:19px;font-weight:600;line-height:1.35;quotes:"«\00a0" "\00a0»"}
+.who small{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--muted)}
+
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.card h2{font-size:26px;line-height:1.15;font-weight:600}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f label,.f legend{font-size:14px;font-weight:500}
+input[type=text],input[type=email],input[type=tel],select{width:100%;height:48px;padding:0 14px;border:1px solid #C5C9D2;border-radius:8px;background:#fff;font:400 16px var(--body);color:var(--ink)}
+input:focus-visible,select:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:#B3261E}
+.err{font-size:13px;color:#B3261E}
+fieldset{margin:0;padding:0;border:0;display:flex;flex-direction:column;gap:2px;min-width:0}
+legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
+.opt{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;padding:8px 0;min-height:40px}
+.opt input,.chk input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--navy);flex:none}
+.cons{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.fine{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.send{height:52px;border:0;border-radius:999px;background:var(--navy);color:#fff;font:600 16px var(--body);cursor:pointer}
+.send[disabled]{opacity:.6;cursor:default}
+.fail{background:#FDECEA;border-radius:10px;padding:12px 14px;font-size:14.5px;color:#7A1C16}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.done{display:flex;flex-direction:column;gap:16px}
+.done h2{font-size:30px}
+.recap{background:var(--cream);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;font-size:15px}
+.recap span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.btn{min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 18px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent}
+.btn.white{background:#fff;color:var(--navy)}
+.btn.ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn.line{border-color:var(--navy);color:var(--navy)}
+.btn.navy{background:var(--navy);color:#fff}
+.jump{display:none;align-self:flex-start}
+#box{scroll-margin-top:16px}
+.foot{background:var(--navy);color:rgba(255,255,255,.86);font-size:13px;line-height:1.55}
+.foot .in{padding-top:22px;padding-bottom:28px;display:flex;flex-direction:column;gap:12px}
+.foot .line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:center}
+.logos{display:flex;align-items:center;gap:12px}
+.logos i{width:1px;height:16px;background:var(--red)}
+.logos img.mw{height:13px;width:auto}
+.logos img.rx{height:24px;width:auto}
+
+
+@media (max-width:900px){.jump{display:flex}.wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding:32px 0 48px}.agent small{display:none}}
+@media (max-width:420px){.card{padding:20px}.two{grid-template-columns:minmax(0,1fr)}.agent b{display:none}.who img{width:72px;height:72px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://yanisgauthier.com/" id="home"><img src="/ma-propriete/logo-ygs-white.webp" alt="YGS" width="44" height="44"><span id="t-brand"></span></a>
+  <div class="agent"><img src="/ma-propriete/yanis-about-sm.webp" alt="" width="40" height="40"><div><small id="t-agent"></small><b>Yanis Gauthier-Sigeris</b></div></div>
+</div></header>
+
+<main class="in"><div class="wrap">
+  <section class="pitch">
+    <p class="eye"><i aria-hidden="true"></i><span id="t-eye"></span></p>
+    <h1 id="t-h1"></h1>
+    <p class="lead" id="t-lead"></p>
+    <a class="btn navy jump" href="#box" id="t-jump"></a>
+    <div class="block"><h2 id="t-how"></h2><ol class="steps" id="t-steps"></ol></div>
+    <div class="block"><h2 id="t-get"></h2><ul class="gets" id="t-gets"></ul><p><a id="t-demo" href="/ma-propriete/?c=demo"></a></p></div>
+    <div class="who"><img src="/ma-propriete/yanis-about-sm.webp" alt="Yanis Gauthier-Sigeris" width="96" height="96"><div><q id="t-quote"></q><small id="t-who"></small></div></div>
+  </section>
+
+  <section class="card" id="box" aria-live="polite">
+    <form id="form" novalidate>
+      <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 id="t-form"></h2>
+      <div class="two">
+        <div class="f"><label for="pre" id="l-pre"></label><input id="pre" type="text" autocomplete="given-name" maxlength="80" required><span class="err" id="e-pre" hidden></span></div>
+        <div class="f"><label for="nom" id="l-nom"></label><input id="nom" type="text" autocomplete="family-name" maxlength="80" required><span class="err" id="e-nom" hidden></span></div>
+      </div>
+      <div class="f"><label for="cou" id="l-cou"></label><input id="cou" type="email" autocomplete="email" inputmode="email" maxlength="254" required><span class="err" id="e-cou" hidden></span></div>
+      <div class="f"><label for="cel" id="l-cel"></label><input id="cel" type="tel" autocomplete="tel" inputmode="tel" maxlength="40"></div>
+      <div class="f"><label for="adr" id="l-adr"></label><input id="adr" type="text" autocomplete="street-address" maxlength="200" required><span class="err" id="e-adr" hidden></span></div>
+      <div class="f"><label for="typ" id="l-typ"></label><select id="typ"></select></div>
+      <div class="hp" aria-hidden="true"><label for="site">Site</label><input id="site" type="text" tabindex="-1" autocomplete="off"></div>
+      <fieldset><legend id="l-freq"></legend><div id="freqs"></div></fieldset>
+      <div class="cons">
+        <label class="chk"><input type="checkbox" id="c1" required><span id="t-c1"></span></label>
+        <span class="err" id="e-c1" hidden></span>
+        <label class="chk"><input type="checkbox" id="c2"><span id="t-c2"></span></label>
+        <p class="fine" id="t-id1"></p>
+      </div>
+      <p class="fail" id="fail" role="alert" hidden></p>
+      <button class="send" type="submit" id="send"></button>
+      <p class="fine"><span id="t-fine"></span> <a id="t-pol"></a></p>
+      </div>
+    </form>
+    <div class="done" id="done" hidden>
+      <h2 id="t-dh" tabindex="-1"></h2>
+      <p id="t-dp"></p>
+      <div class="recap"><span id="t-dr"></span><b id="d-adr"></b><em id="d-freq" style="font-style:normal;color:var(--muted);font-size:14px"></em></div>
+      <p id="t-dt" style="color:var(--muted)"></p>
+      <div class="duo"><a class="btn navy" id="b-tel" href="tel:+18192103044"></a><a class="btn line" id="b-mail" href="mailto:yanis@martywaite.com"></a></div>
+    </div>
+  </section>
+</div></main>
+
+<footer class="foot"><div class="in">
+  <p id="t-legal"></p>
+  <div class="line">
+    <span id="t-id"></span>
+    <div class="logos"><img class="mw" src="/ma-propriete/logo-mw-white-transparent.webp" alt="Équipe Marty Waite" width="83" height="13"><i aria-hidden="true"></i><img class="rx" src="/ma-propriete/logo-remax.webp" alt="RE/MAX" width="21" height="24"></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var EN=/^\/en\//.test(location.pathname);
+  var T={
+    fr:{
+      title:"Suivi de valeur | Yanis Gauthier-Sigeris",brand:"Suivi de valeur",agent:"Votre courtier",eye:"Suivi de valeur",
+      h1:"Suivez la valeur de votre propriété.",
+      lead:"Je commence par évaluer votre propriété moi-même, avec les ventes comparables de votre secteur. Ensuite, vous avez une page privée qui montre votre fourchette de valeur et le marché autour de chez vous. C'est gratuit et vous ne vous engagez à rien.",
+      how:"Comment ça se passe",
+      steps:["Vous me donnez l'adresse et vos coordonnées.","Je vous réponds en 24 heures au plus avec une fourchette de valeur. S'il me manque un détail sur l'état de la propriété, je vous écris d'abord.","Vous recevez le lien de votre page privée. Les chiffres du marché s'y mettent à jour chaque trimestre, et votre fourchette change seulement après que je l'ai revue."],
+      get:"Ce que vous voyez sur votre page",
+      gets:["Votre fourchette, avec l'écart depuis mon analyse.","Le prix médian et le nombre de ventes de votre secteur, trimestre par trimestre (source : baromètre de l'APCIQ).","Quand vous voulez un chiffre précis, je refais une analyse complète avec les ventes comparables."],
+      demo:"Voir un exemple de page",
+      quote:"Je vous donne les chiffres et les options, vous décidez.",
+      who:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. Plus de 300 transactions en Outaouais depuis 2017 (source : mon historique Centris).",
+      form:"Demander mon suivi",pre:"Prénom",nom:"Nom",cou:"Courriel",cel:"Cellulaire (facultatif)",adr:"Adresse de la propriété",typ:"Type de propriété",
+      types:["Maison","Condo","Plex","Autre"],
+      freq:"À quelle fréquence voulez-vous de mes nouvelles?",
+      freqs:["Une fois par année.","À l'anniversaire de mon analyse, et si le marché bouge de façon marquée (recommandé).","Chaque trimestre."],
+      c1:"Oui, j'accepte de recevoir de Yanis Gauthier-Sigeris des courriels et des textos au sujet de la valeur de ma propriété et du marché de mon secteur. Je peux retirer ce consentement en tout temps.",
+      c2:"J'accepte aussi que Yanis voie quand j'ouvre ses courriels, pour me contacter au bon moment (facultatif).",
+      id1:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. RE/MAX Direct inc., agence immobilière, 216, chemin d'Aylmer, Gatineau. 819-210-3044, yanis@martywaite.com",
+      send:"Envoyer ma demande",sending:"Envoi en cours",
+      fine:"Estimation indicative, pas une évaluation agréée. Si votre propriété est déjà inscrite avec un autre courtier, je ne peux pas vous offrir ce suivi pour l'instant. Vos renseignements ne sont jamais vendus. Ils sont conservés chez mes fournisseurs, dont certains sont situés hors du Québec.",
+      pol:"Politique de confidentialité",polUrl:"/politique-de-confidentialite/",
+      ePre:"Entrez votre prénom.",eNom:"Entrez votre nom.",eCou:"Entrez une adresse courriel valide.",eAdr:"Entrez l'adresse de la propriété.",eC1:"Cochez cette case pour que je puisse vous écrire.",
+      fail:"L'envoi n'a pas fonctionné. Réessayez dans un instant ou appelez-moi au 819-210-3044.",
+      dh:"Votre demande est bien reçue.",
+      dp:"Je vous réponds en 24 heures au plus avec votre fourchette de valeur. Votre suivi part de cette analyse, et je vous envoie ensuite le lien de votre page privée.",
+      dr:"Votre demande",dt:"Si vous préférez qu'on en parle de vive voix, écrivez-moi ou appelez-moi.",tel:"Appeler",mail:"Écrire",
+      legal:"Le Suivi de valeur part de mon analyse et suit le marché de votre secteur. Ce n'est pas une évaluation agréée.",
+      id:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. RE/MAX Direct inc., agence immobilière."
+    },
+    en:{
+      title:"Home value tracker | Yanis Gauthier-Sigeris",brand:"Home value tracker",agent:"Your broker",eye:"Home value tracker",
+      h1:"Keep track of what your home is worth.",
+      lead:"I start by valuing your home myself, using comparable sales in your area. After that, you get a private page showing your value range and the market around you. It's free and you're not committing to anything.",
+      how:"How it works",
+      steps:["You give me the address and your contact details.","I get back to you within 24 hours with a value range. If I'm missing a detail about the condition of the home, I'll write to you first.","You receive the link to your private page. The market numbers update every quarter, and your range only changes after I've reviewed it."],
+      get:"What you see on your page",
+      gets:["Your range, with the change since my analysis.","The median price and number of sales in your area, quarter by quarter (source: APCIQ barometer).","When you want a precise number, I redo a full analysis with comparable sales."],
+      demo:"See a sample page",
+      quote:"I give you the numbers and the options, you decide.",
+      who:"Yanis Gauthier-Sigeris, residential real estate broker. Over 300 transactions in the Outaouais since 2017 (source: my Centris history).",
+      form:"Request my tracker",pre:"First name",nom:"Last name",cou:"Email",cel:"Cell phone (optional)",adr:"Property address",typ:"Property type",
+      types:["House","Condo","Plex","Other"],
+      freq:"How often would you like to hear from me?",
+      freqs:["Once a year.","On the anniversary of my analysis, and if the market moves noticeably (recommended).","Every quarter."],
+      c1:"Yes, I agree to receive emails and texts from Yanis Gauthier-Sigeris about the value of my property and the market in my area. I can withdraw this consent at any time.",
+      c2:"I also agree to let Yanis see when I open his emails, so he can contact me at the right time (optional).",
+      id1:"Yanis Gauthier-Sigeris, residential real estate broker. RE/MAX Direct inc., real estate agency, 216 chemin d'Aylmer, Gatineau. 819-210-3044, yanis@martywaite.com",
+      send:"Send my request",sending:"Sending",
+      fine:"Indicative estimate, not a certified appraisal. If your property is already listed with another broker, I can't offer you this tracker for now. Your information is never sold. It is stored with my service providers, some of which are located outside Quebec.",
+      pol:"Privacy policy",polUrl:"/en/privacy-policy/",
+      ePre:"Enter your first name.",eNom:"Enter your last name.",eCou:"Enter a valid email address.",eAdr:"Enter the property address.",eC1:"Check this box so I can write to you.",
+      fail:"Your request didn't go through. Try again in a moment or call me at 819-210-3044.",
+      dh:"I got your request.",
+      dp:"I'll get back to you within 24 hours with your value range. Your tracker starts from that analysis, and I'll then send you the link to your private page.",
+      dr:"Your request",dt:"If you'd rather talk it over, write or call me.",tel:"Call",mail:"Email",
+      legal:"The home value tracker starts from my analysis and follows the market in your area. It is not a certified appraisal.",
+      id:"Yanis Gauthier-Sigeris, residential real estate broker. RE/MAX Direct inc., real estate agency."
+    }
+  };
+  var t=EN?T.en:T.fr, $=function(id){return document.getElementById(id);};
+  document.documentElement.lang=EN?"en-CA":"fr-CA"; document.title=t.title;
+  function txt(id,s){$(id).textContent=s;}
+  txt("t-brand",t.brand);txt("t-agent",t.agent);txt("t-eye",t.eye);txt("t-h1",t.h1);txt("t-lead",t.lead);txt("t-how",t.how);txt("t-get",t.get);
+  txt("t-demo",t.demo);txt("t-quote",t.quote);txt("t-who",t.who);txt("t-form",t.form);txt("t-jump",t.form);
+  txt("l-pre",t.pre);txt("l-nom",t.nom);txt("l-cou",t.cou);txt("l-cel",t.cel);txt("l-adr",t.adr);txt("l-typ",t.typ);txt("l-freq",t.freq);
+  txt("t-c1",t.c1);txt("t-c2",t.c2);txt("t-id1",t.id1);txt("send",t.send);txt("t-fine",t.fine);txt("t-pol",t.pol);$("t-pol").href=t.polUrl;
+  txt("t-dh",t.dh);txt("t-dp",t.dp);txt("t-dr",t.dr);txt("t-dt",t.dt);txt("b-tel",t.tel);txt("b-mail",t.mail);txt("t-legal",t.legal);txt("t-id",t.id);
+  if(EN){$("home").href="https://yanisgauthier.com/en/";$("t-demo").href="/en/my-property/?c=demo&l=en";}
+  t.steps.forEach(function(s,i){var li=document.createElement("li"),b=document.createElement("b"),p=document.createElement("span");b.textContent=String(i+1);p.textContent=s;li.appendChild(b);li.appendChild(p);$("t-steps").appendChild(li);});
+  t.gets.forEach(function(s){var li=document.createElement("li");li.textContent=s;$("t-gets").appendChild(li);});
+  t.types.forEach(function(s){var o=document.createElement("option");o.textContent=s;$("typ").appendChild(o);});
+  t.freqs.forEach(function(s,i){var l=document.createElement("label"),r=document.createElement("input"),p=document.createElement("span");l.className="opt";r.type="radio";r.name="freq";r.value=String(i);if(i===1)r.checked=true;p.textContent=s;l.appendChild(r);l.appendChild(p);$("freqs").appendChild(l);});
+
+  var MAIL=/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/;
+  function bad(id,eid,msg,isBad){var el=$(id),e=$(eid);if(isBad){el.setAttribute("aria-invalid","true");e.textContent=msg;e.hidden=false;}else{el.removeAttribute("aria-invalid");e.hidden=true;}return isBad;}
+  function stamp(){try{return new Intl.DateTimeFormat("fr-CA",{timeZone:"America/Toronto",dateStyle:"long",timeStyle:"short"}).format(new Date());}catch(e){return new Date().toISOString();}}
+
+  $("form").addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var v={pre:$("pre").value.trim(),nom:$("nom").value.trim(),cou:$("cou").value.trim(),cel:$("cel").value.trim(),adr:$("adr").value.trim()};
+    var first=null;
+    [["pre","e-pre",t.ePre,!v.pre],["nom","e-nom",t.eNom,!v.nom],["cou","e-cou",t.eCou,!MAIL.test(v.cou)],["adr","e-adr",t.eAdr,v.adr.length<5],["c1","e-c1",t.eC1,!$("c1").checked]]
+      .forEach(function(r){if(bad(r[0],r[1],r[2],r[3])&&!first)first=r[0];});
+    if(first){$(first).focus();return;}
+    var fi=Number((document.querySelector("input[name=freq]:checked")||{value:"1"}).value);
+    var FR=T.fr;
+    function done(){$("form").hidden=true;txt("d-adr",v.adr);txt("d-freq",t.freqs[fi]);$("done").hidden=false;$("t-dh").focus();$("box").scrollIntoView({block:"start"});}
+    if($("site").value){done();return;}
+    var message=["INSCRIPTION AU SUIVI DE VALEUR (page "+location.pathname+")",
+      "Type de propriété : "+FR.types[$("typ").selectedIndex],
+      "Fréquence choisie : "+FR.freqs[fi],
+      "Consentement aux courriels et aux textos : OUI, coché le "+stamp()+" (heure de Toronto)",
+      "Suivi des ouvertures de courriels : "+($("c2").checked?"OUI":"non"),
+      "Texte du consentement affiché ("+(EN?"version anglaise":"version française")+") : « "+t.c1+" »",
+      "À faire : évaluer la propriété, puis ajouter la personne au Suivi de valeur du Brief avec la date de consentement ci-dessus."].join("\n");
+    var btn=$("send");btn.disabled=true;btn.textContent=t.sending;$("fail").hidden=true;
+    fetch("/.netlify/functions/send-email",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({formType:"valuation",lang:EN?"en":"fr",name:v.pre,lastName:v.nom,email:v.cou,phone:v.cel||undefined,address:v.adr,objective:"Suivi de valeur",message:message})})
+      .then(function(r){if(!r.ok)throw new Error("http");done();})
+      .catch(function(){$("fail").textContent=t.fail;$("fail").hidden=false;btn.disabled=false;btn.textContent=t.send;});
+  });
+})();
+</script>
+</body>
+</html>

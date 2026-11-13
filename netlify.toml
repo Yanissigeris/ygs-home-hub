@@ -131,3 +131,16 @@
     X-Robots-Tag = "noindex, nofollow"
     Referrer-Policy = "no-referrer"
     Cache-Control = "no-cache"
+
+# Suivi de valeur : page d'inscription publique. Hors index pour l'instant.
+[[headers]]
+  for = "/suivi-de-valeur/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/en/home-value-tracker/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache"
