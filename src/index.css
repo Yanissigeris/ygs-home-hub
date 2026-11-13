@@ -925,7 +925,8 @@ h1.hero-eyebrow {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-on-dark-muted);
-  margin: 0;
+  /* No margin reset here: it overrode the mb-* utilities on footer headings
+     (RE/MAX logo touching "Affiliations" on phones). Preflight already zeroes h3. */
 }
 
 /* 16px input scope — used on /evaluation-gratuite-gatineau to prevent iOS zoom. */
