@@ -19,8 +19,8 @@ interface CardGridProps {
 
 /**
  * Editorial grid: each item is a title and a short text under a hairline.
- * No card boxes, no icons (the `icon` and `variant` props are kept for
- * compatibility with existing call sites and are ignored).
+ * No card boxes, no icons (the `icon` prop is kept for compatibility and
+ * ignored; `variant` only decides whether titles are h3 or p, as before).
  */
 const CardGrid = ({
   overline,
@@ -28,6 +28,7 @@ const CardGrid = ({
   items,
   columns = 2,
   background = "default",
+  variant = "icon-top",
   centered = true,
 }: CardGridProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
@@ -40,7 +41,12 @@ const CardGrid = ({
       <div className={`grid gap-x-12 gap-y-10 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {items.map((item) => (
           <div key={item.title} className="border-t border-[rgba(0,14,53,0.14)] pt-6">
-            <h3 className="text-[1.125rem] leading-snug text-foreground">{item.title}</h3>
+            {variant === "icon-top" ? (
+              <h3 className="text-[1.125rem] leading-snug text-foreground">{item.title}</h3>
+            ) : (
+              // Kept as <p> to leave the page heading outline exactly as before.
+              <p className="text-[1.125rem] font-semibold leading-snug tracking-[-0.01em] text-foreground">{item.title}</p>
+            )}
             <p className="mt-2.5 max-w-[34rem] text-[0.9375rem] leading-[1.65] text-muted-foreground">{item.text}</p>
           </div>
         ))}
