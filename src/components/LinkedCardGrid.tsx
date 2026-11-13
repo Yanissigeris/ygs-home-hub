@@ -27,11 +27,11 @@ const LinkedCardGrid = ({
   background = "default",
 }: LinkedCardGridProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className="section-container max-w-[52rem]">
+    <div className="section-container">
       <div
-        className="text-center mb-12 max-w-[40rem] mx-auto"
+        className="mb-12 max-w-[40rem]"
       >
-        <SectionHeading overline={overline} title={title} centered />
+        <SectionHeading overline={overline} title={title} />
       </div>
       <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {items.map((card, i) => (

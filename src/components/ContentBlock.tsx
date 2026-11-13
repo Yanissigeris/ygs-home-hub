@@ -19,9 +19,11 @@ const ContentBlock = ({
   split = false,
 }: ContentBlockProps) => (
   <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className={`section-container ${narrow && !split ? "max-w-[44rem]" : ""} ${centered ? "text-center" : ""}`}>
+    <div className={`section-container ${narrow && !split && centered ? "max-w-[44rem]" : ""} ${centered ? "text-center" : ""}`}>
+      {/* Narrow reading blocks keep their 44rem measure but start on the
+          page's left edge, like every other section. */}
       <div
-        className={split ? "content-split" : undefined}
+        className={split ? "content-split" : narrow && !centered ? "max-w-[44rem]" : undefined}
       >
         {children}
       </div>

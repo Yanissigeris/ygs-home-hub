@@ -31,9 +31,9 @@ const ProcessSteps = ({
   <section className={`section-padding ${night ? "process-night" : background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
     <div className="section-container">
       <div
-        className="text-center mb-12 max-w-[40rem] mx-auto"
+        className="mb-12 max-w-[40rem]"
       >
-        <SectionHeading overline={resolvedOverline} title={resolvedTitle} centered />
+        <SectionHeading overline={resolvedOverline} title={resolvedTitle} />
       </div>
       <div className="grid gap-6 sm:gap-7 sm:grid-cols-3">
         {steps.map((s, i) => (

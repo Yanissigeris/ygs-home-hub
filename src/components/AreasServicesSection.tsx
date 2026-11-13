@@ -107,7 +107,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
     <section className="section-rhythm" style={{ background: "linear-gradient(175deg, var(--ink-deep), var(--ink))" }}>
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-6 sm:mb-8 max-w-[44rem] mx-auto">
+        <div className="mb-6 sm:mb-8 max-w-[44rem]">
           
           <h2 style={{ color: "var(--cream-deep)" }}>{cfg.title}</h2>
           <p className="mt-3" style={{ fontSize: ".88rem", color: "rgba(245,241,234,0.7)", lineHeight: 1.7 }}>{cfg.subtitle}</p>

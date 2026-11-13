@@ -23,11 +23,11 @@ const RelatedPages = ({
   background = "default",
 }: RelatedPagesProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className="section-container max-w-[52rem]">
+    <div className="section-container">
       <div
-        className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
+        className="mb-6 sm:mb-10 max-w-[40rem]"
       >
-        <SectionHeading overline={overline} title={title} centered />
+        <SectionHeading overline={overline} title={title} />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {pages.map((page, i) => (
