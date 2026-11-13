@@ -50,19 +50,19 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           {/* Pull quote */}
           <blockquote
             style={{
-              borderLeft: "2px solid var(--ink)",
-              paddingLeft: "20px",
               margin: "0 0 2rem 0",
             }}
           >
           <p
               style={{
-                fontFamily: "var(--serif)",
-                fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
-                fontWeight: 400,
+                fontFamily: "var(--display)",
+                fontSize: "clamp(1.75rem, 3.2vw, 2.5rem)",
+                fontWeight: 500,
                 fontStyle: "normal",
+                letterSpacing: "-0.025em",
                 color: "var(--cream)",
-                lineHeight: 1.3,
+                lineHeight: 1.15,
+                textWrap: "balance",
               }}
             >
               {c.quote}
@@ -110,7 +110,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
 
         {/* ─── Right column: photo ─── */}
         <div className="order-1 lg:order-2 relative mx-auto max-w-[320px] lg:max-w-none">
-          <div className="relative overflow-hidden" style={{ borderRadius: 0 }}>
+          <div className="relative overflow-hidden" style={{ borderRadius: 24 }}>
             <picture>
               {yanisAbout.sources.avif && (
                 <source
