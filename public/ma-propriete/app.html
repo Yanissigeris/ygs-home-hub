@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ma propriété | Yanis Gauthier-Sigeris</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#000E35">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/intertight-latin.woff2" crossorigin>
+<style>
+/* Page privée du Suivi de valeur. Autonome : elle ne charge ni l'application du site, ni Google Analytics. */
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url('/fonts/dmsans-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500 700;font-display:swap;src:url('/fonts/intertight-latin.woff2') format('woff2')}
+:root{
+  --navy:#000E35; --ink:#0C1A3F; --muted:#3B4560; --line:#DDE0E8; --cream:#F7F4EE; --card:#FFFFFF;
+  --blue:#3366FF; --soft:#EEF1F8; --red:#FF1200;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --head:'Inter Tight','DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--head);letter-spacing:-.02em;text-wrap:balance}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.in{max-width:1120px;margin:0 auto;padding:0 20px}
+[hidden]{display:none!important}
+
+.top{background:var(--navy);color:#fff}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+.brand img{height:44px;width:44px;object-fit:contain}
+.brand span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.agent{display:flex;align-items:center;gap:10px}
+.agent img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 8%;background:#fff}
+.agent small{display:block;font-size:12px;color:rgba(255,255,255,.8)}
+.agent b{font-size:14px;font-weight:600}
+
+.demo{background:#FFF4D6;border-bottom:1px solid #EAD9A6;color:#4A3B00;font-size:14px}
+.demo .in{padding-top:9px;padding-bottom:9px}
+
+.hello{padding:34px 0 6px;display:flex;flex-direction:column;gap:8px}
+.hello h1{font-size:clamp(28px,4.6vw,40px);line-height:1.08;font-weight:600}
+.hello p{color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:22px;padding:20px 0 56px;align-items:start}
+.col{display:flex;flex-direction:column;gap:22px;min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:16px}
+.card h2{font-size:21px;line-height:1.2;font-weight:600}
+.eyebrow{font-size:13px;font-weight:600;color:var(--muted)}
+.range{overflow-wrap:anywhere;font-family:var(--head);font-weight:600;font-size:clamp(30px,5.4vw,46px);line-height:1.05;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.meta{font-size:14px;color:var(--muted)}
+.delta{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.note{background:var(--soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
+
+.chart{position:relative;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:18px}
+.chart h3{font-size:15px;font-weight:600}
+.chart svg{width:100%;height:auto;display:block}
+.chart .cap{font-size:12.5px;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stat{background:var(--cream);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat span{font-size:13px;color:var(--muted)}
+.stat b{font-family:var(--head);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.read{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding-top:16px}
+.read img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 8%;flex:none;background:var(--cream)}
+.read p{font-size:16px;line-height:1.6}
+
+.cta{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.88);font-size:15px}
+.btn{min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 18px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent}
+.btn.white{background:#fff;color:var(--navy)}
+.btn.ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn.line{border-color:var(--navy);color:var(--navy)}
+.rows{display:flex;flex-direction:column;gap:8px;font-size:14.5px}
+.rows div{display:flex;justify-content:space-between;gap:12px}
+.rows b{font-weight:600;text-align:right}
+.links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14.5px}
+
+.foot{background:var(--navy);color:rgba(255,255,255,.86);font-size:13px;line-height:1.55}
+.foot .in{padding-top:22px;padding-bottom:28px;display:flex;flex-direction:column;gap:12px}
+.foot .line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:center}
+.logos{display:flex;align-items:center;gap:12px}
+.logos i{width:1px;height:16px;background:var(--red)}
+.logos img.mw{height:13px;width:auto}
+.logos img.rx{height:24px;width:auto}
+
+.state{max-width:560px;margin:0 auto;padding:72px 20px;display:flex;flex-direction:column;gap:14px;text-align:left}
+.state h1{font-size:30px;line-height:1.12;font-weight:600}
+.state p{color:var(--muted)}
+.state .btn{align-self:flex-start}
+
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:1fr 1fr}.agent small{display:none}}
+@media (max-width:420px){.card{padding:20px}.stats{grid-template-columns:1fr}.agent b{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://yanisgauthier.com/" id="home"><img src="/ma-propriete/logo-ygs-white.webp" alt="YGS" width="44" height="44"><span id="t-brand">Ma propriété</span></a>
+  <div class="agent"><img src="/ma-propriete/yanis-about-sm.webp" alt="" width="40" height="40"><div><small id="t-agent">Votre courtier</small><b>Yanis Gauthier-Sigeris</b></div></div>
+</div></header>
+<div class="demo" id="demo" hidden><div class="in" id="t-demo"></div></div>
+
+<main id="app" aria-live="polite"><div class="state"><p id="t-load">Chargement de votre page…</p></div></main>
+
+<footer class="foot"><div class="in">
+  <p id="t-legal"></p>
+  <div class="line">
+    <span id="t-id"></span>
+    <div class="logos"><img class="mw" src="/ma-propriete/logo-mw-white-transparent.webp" alt="Équipe Marty Waite" width="83" height="13"><i aria-hidden="true"></i><img class="rx" src="/ma-propriete/logo-remax.webp" alt="RE/MAX" width="21" height="24"></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var MAIL="yanis@martywaite.com", TEL="819-210-3044", TELH="tel:+18192103044";
+  var esc=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
+  var $=function(id){return document.getElementById(id);};
+
+  /* Textes : vouvoiement, tutoiement et anglais. */
+  var T={
+    vous:{
+      brand:"Ma propriété", agent:"Votre courtier", load:"Chargement de votre page…",
+      demo:"Exemple. La propriété et la fourchette sont fictives. Les chiffres du marché sont ceux de l'APCIQ pour les unifamiliales d'Aylmer.",
+      hello:function(p){return "Bonjour "+p+", voici où en est votre propriété.";},
+      eyebrow:"Fourchette indexée", eyebrow0:"Ma fourchette de départ",
+      upd:function(d,q){return "Revue par Yanis le "+d+", avec les ventes publiées au "+q+".";},
+      upd0:function(d){return "Mon analyse du "+d+". La première mise à jour s'affichera ici après ma prochaine révision.";},
+      since:function(d){return "depuis mon analyse du "+d;}, same:"Inchangée",
+      newer:function(q){return "Les chiffres du "+q+" sont sortis. Je révise votre fourchette et je vous écris dès que c'est fait.";},
+      chartT:function(ty,loc){return "Prix médian des "+ty+" "+loc+", par trimestre";},
+      chartC:"Chaque point est le prix médian des 12 mois qui finissent ce trimestre. Source : baromètre résidentiel de l'APCIQ.",
+      sector:function(q){return "Votre secteur, sur 12 mois ("+q+")";},
+      med:"Prix médian", ventes:"Ventes", mov:"Médiane depuis mon analyse", stable:"Stable",
+      src:function(loc,q){return "Source : APCIQ, baromètre résidentiel, "+loc+", "+q+".";},
+      nomkt:"Les chiffres de votre secteur s'afficheront ici au prochain relevé.",
+      lecture:"Ma lecture",
+      ctaT:"Vous voulez un chiffre précis?", ctaP:"Je refais une analyse complète avec les ventes comparables de votre secteur, et on la regarde ensemble.",
+      cta1:"Demander une nouvelle analyse", cta2:"Appeler Yanis",
+      startT:"Point de départ", start:function(d){return "Mon analyse du "+d+".";},
+      worksT:"Avez-vous fait des travaux depuis?", worksP:"Une cuisine refaite ou un sous-sol aménagé change votre valeur, et le marché seul ne le voit pas. Dites-le-moi, j'en tiens compte.", works:"Me parler de mes travaux",
+      prefT:"Mes préférences", freq:"Courriels de mise à jour", prefs:"Changer la fréquence", unsub:"Arrêter le suivi",
+      F:{C:"À l'anniversaire, et si le marché bouge beaucoup",annuel:"Une fois par année",trimestriel:"Chaque trimestre"},
+      legal:"Fourchette tirée de mon analyse, indexée selon le marché de votre secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
+      id:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. RE/MAX Direct inc., agence immobilière, 216, chemin d'Aylmer, Gatineau. "+TEL,
+      nfT:"Ce lien ne mène à aucune page.", nfP:"Il a peut-être été mal copié, ou le suivi a été arrêté. Écrivez-moi et je vous renvoie le bon lien.", nfB:"Écrire à Yanis",
+      errT:"La page ne se charge pas pour l'instant.", errP:"Réessayez dans quelques minutes. Si ça continue, écrivez-moi.", errB:"Réessayer",
+      sAna:"Nouvelle analyse de ma propriété", sWorks:"Travaux faits à ma propriété", sFreq:"Fréquence de mes mises à jour", sStop:"Arrêter mon suivi de valeur", sLink:"Mon lien Ma propriété",
+      types:{"Unifamiliale":"unifamiliales","Copropriété":"copropriétés"}, peri:"dans la périphérie de Gatineau", a:"à ", et:" et "
+    },
+    en:{
+      brand:"My property", agent:"Your broker", load:"Loading your page…",
+      demo:"Sample. The property and the range are fictional. Market figures are QPAREB's for single-family homes in Aylmer.",
+      hello:function(p){return "Hi "+p+", here's where your property stands.";},
+      eyebrow:"Indexed range", eyebrow0:"My starting range",
+      upd:function(d,q){return "Reviewed by Yanis on "+d+", with sales published as of "+q+".";},
+      upd0:function(d){return "My analysis from "+d+". Your first update will show here after my next review.";},
+      since:function(d){return "since my analysis of "+d;}, same:"Unchanged",
+      newer:function(q){return q+" figures are out. I'm reviewing your range and I'll write you as soon as it's done.";},
+      chartT:function(ty,loc){return "Median price of "+ty+" "+loc+", by quarter";},
+      chartC:"Each point is the median price for the 12 months ending that quarter. Source: QPAREB residential barometer.",
+      sector:function(q){return "Your area, over 12 months ("+q+")";},
+      med:"Median price", ventes:"Sales", mov:"Median since my analysis", stable:"Stable",
+      src:function(loc,q){return "Source: QPAREB residential barometer, "+loc+", "+q+".";},
+      nomkt:"Figures for your area will show here after the next reading.",
+      lecture:"My take",
+      ctaT:"Want a precise number?", ctaP:"I'll redo a full analysis with comparable sales in your area, and we'll go over it together.",
+      cta1:"Ask for a new analysis", cta2:"Call Yanis",
+      startT:"Starting point", start:function(d){return "My analysis from "+d+".";},
+      worksT:"Any renovations since?", worksP:"A new kitchen or a finished basement changes your value, and the market alone can't see it. Let me know and I'll factor it in.", works:"Tell me about my renovations",
+      prefT:"My preferences", freq:"Update emails", prefs:"Change the frequency", unsub:"Stop the tracking",
+      F:{C:"On the anniversary, and if the market moves a lot",annuel:"Once a year",trimestriel:"Every quarter"},
+      legal:"Range taken from my analysis, indexed to the market in your area. This is not a new opinion of value or a certified appraisal.",
+      id:"Yanis Gauthier-Sigeris, residential real estate broker. RE/MAX Direct inc., real estate agency, 216 chemin d'Aylmer, Gatineau. "+TEL,
+      nfT:"This link doesn't lead to a page.", nfP:"It may have been copied incorrectly, or the tracking was stopped. Write me and I'll send you the right link.", nfB:"Write to Yanis",
+      errT:"The page isn't loading right now.", errP:"Try again in a few minutes. If it keeps happening, write me.", errB:"Try again",
+      sAna:"New analysis of my property", sWorks:"Renovations to my property", sFreq:"Frequency of my updates", sStop:"Stop my value tracking", sLink:"My property link",
+      types:{"Unifamiliale":"single-family homes","Copropriété":"condos"}, peri:"in the area around Gatineau", a:"in ", et:" and "
+    }
+  };
+  T.tu=Object.assign({},T.vous,{
+    agent:"Ton courtier", load:"Chargement de ta page…",
+    hello:function(p){return "Salut "+p+", voici où en est ta propriété.";},
+    newer:function(q){return "Les chiffres du "+q+" sont sortis. Je révise ta fourchette et je t'écris dès que c'est fait.";},
+    sector:function(q){return "Ton secteur, sur 12 mois ("+q+")";},
+    nomkt:"Les chiffres de ton secteur s'afficheront ici au prochain relevé.",
+    ctaT:"Tu veux un chiffre précis?", ctaP:"Je refais une analyse complète avec les ventes comparables de ton secteur, et on la regarde ensemble.",
+    worksT:"As-tu fait des travaux depuis?", worksP:"Une cuisine refaite ou un sous-sol aménagé change ta valeur, et le marché seul ne le voit pas. Dis-le-moi, j'en tiens compte.",
+    legal:"Fourchette tirée de mon analyse, indexée selon le marché de ton secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
+    nfP:"Il a peut-être été mal copié, ou le suivi a été arrêté. Écris-moi et je te renvoie le bon lien.",
+    errP:"Réessaie dans quelques minutes. Si ça continue, écris-moi."
+  });
+
+  var L="vous", t=T.vous;
+  function setLang(l){L=T[l]?l:"vous";t=T[L];document.documentElement.lang=L==="en"?"en-CA":"fr-CA";
+    $("t-brand").textContent=t.brand;$("t-agent").textContent=t.agent;$("t-legal").textContent=t.legal;$("t-id").textContent=t.id;
+    document.title=t.brand+" | Yanis Gauthier-Sigeris";$("home").href=L==="en"?"https://yanisgauthier.com/en/":"https://yanisgauthier.com/";}
+  var money=function(n){return L==="en"?"$"+Math.round(n).toLocaleString("en-CA"):Math.round(n).toLocaleString("fr-CA").replace(/[  ]/g," ")+" $";};
+  var num=function(n){return L==="en"?Math.round(n).toLocaleString("en-CA"):Math.round(n).toLocaleString("fr-CA").replace(/[  ]/g," ");};
+  var pct=function(x){var v=Math.round(Math.abs(x)*1000)/10,s=x>0?"+":(x<0?"−":"");return L==="en"?s+v+"%":s+String(v).replace(".",",")+" %";};
+  var date=function(iso){var d=new Date(iso+"T12:00:00");return isNaN(d)?iso:new Intl.DateTimeFormat(L==="en"?"en-CA":"fr-CA",{day:"numeric",month:"long",year:"numeric"}).format(d);};
+  var quarter=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");if(!m)return q||"";return L==="en"?"Q"+m[1]+" "+m[2]:(m[1]==="1"?"1er":m[1]+"e")+" trimestre de "+m[2];};
+  var qshort=function(q){return L==="en"?String(q).replace(/^T/,"Q"):q;};
+  var qn=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");return m?(+m[2])*4+(+m[1]):0;};
+  function place(ind){var m=/\(([^)]+)\)/.exec(ind||""),x=m?m[1]:String(ind||"");if(x==="Périphérie de Gatineau")return t.peri;return t.a+x.replace(" et ",t.et);}
+  function placeName(ind){var m=/\(([^)]+)\)/.exec(ind||""),x=m?m[1]:String(ind||"");if(x==="Périphérie de Gatineau")return L==="en"?"area around Gatineau":"périphérie de Gatineau";return x.replace(" et ",t.et);}
+  function mailto(subject,c){return "mailto:"+MAIL+"?subject="+encodeURIComponent(subject+(c&&c.adresse?", "+c.adresse:""));}
+
+  function chart(serie,W){
+    if(!serie||serie.length<2) return "";
+    var H=220,pl=8,pr=8,pt=30,pb=30,vals=serie.map(function(s){return s.med;});
+    var lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals),pad=Math.max((hi-lo)*0.6,hi*0.01);lo-=pad;hi+=pad;
+    var x=function(i){return pl+14+(W-pl-pr-28)*i/(serie.length-1);},y=function(v){return pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));};
+    var pts=serie.map(function(s,i){return x(i).toFixed(1)+","+y(s.med).toFixed(1);}).join(" ");
+    var area="M"+x(0).toFixed(1)+","+(H-pb)+" L"+pts.replace(/ /g," L")+" L"+x(serie.length-1).toFixed(1)+","+(H-pb)+" Z";
+    var g='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(serie.map(function(s){return qshort(s.t)+" : "+money(s.med);}).join(", "))+'">'+
+      '<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" stroke="#DDE0E8"/>'+
+      '<path d="'+area+'" fill="#EEF1F8"/><polyline points="'+pts+'" fill="none" stroke="#000E35" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    serie.forEach(function(s,i){var last=i===serie.length-1,first=i===0,anchor=first?"start":(last?"end":"middle"),tx=first?x(i)-6:(last?x(i)+6:x(i));
+      g+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(s.med).toFixed(1)+'" r="'+(last?5.5:4)+'" fill="'+(last?"#3366FF":"#000E35")+'" stroke="#fff" stroke-width="2"/>'+
+        (first||last?'<text x="'+tx.toFixed(1)+'" y="'+(y(s.med)-12).toFixed(1)+'" text-anchor="'+anchor+'" font-size="14" font-weight="600" fill="#0C1A3F" font-family="DM Sans, system-ui, sans-serif">'+esc(money(s.med))+'</text>':'')+
+        (W<460&&!first&&!last&&!(serie.length%2===1&&i===(serie.length-1)/2)?'':'<text x="'+tx.toFixed(1)+'" y="'+(H-9)+'" text-anchor="'+anchor+'" font-size="12.5" fill="#3B4560" font-family="DM Sans, system-ui, sans-serif">'+esc(qshort(s.t))+'</text>');});
+    return g+'</svg>';
+  }
+
+  function cw(){return Math.round(Math.min(640,Math.max(280,Math.min(window.innerWidth,1120)*(window.innerWidth>860?0.56:1)-(window.innerWidth>420?94:82))));}
+  var lastData=null,lastW=0;
+  function view(d){lastData=d;lastW=cw();
+    var c=d.client,m=d.marche||[],a=c.actuel,dep=c.depart,last=m.length?m[m.length-1]:null,base=m.length?m[0]:null;
+    var cur=a||dep,changed=a&&(a.basse!==dep.basse||a.haute!==dep.haute);
+    var ecart=a?((a.basse+a.haute)/(dep.basse+dep.haute)-1):0;
+    var newer=a&&last&&qn(last.t)>qn(a.trimestre);
+    var mov=last&&base&&last!==base?last.med/base.med-1:null;
+    var loc=place(c.secteurIndice),ty=t.types[c.type]||"";
+    var h='<div class="in"><div class="hello"><h1>'+esc(t.hello(c.prenom))+'</h1><p>'+esc(c.adresse)+'</p></div><div class="grid"><div class="col">';
+    h+='<section class="card"><p class="eyebrow">'+esc(a?t.eyebrow:t.eyebrow0)+'</p><p class="range">'+esc(money(cur.basse))+(L==="en"?" to ":" à ")+esc(money(cur.haute))+'</p>'+
+       '<p class="meta">'+esc(a?t.upd(date(a.approuveLe),quarter(a.trimestre)):t.upd0(date(dep.date)))+'</p>'+
+       (a?'<div class="delta"><span class="pill">'+esc(changed?pct(ecart):t.same)+'</span><span class="meta">'+esc(t.since(date(dep.date)))+'</span></div>':'')+
+       (newer?'<p class="note">'+esc(t.newer(quarter(last.t)))+'</p>':'');
+    if(m.length>=2&&ty) h+='<div class="chart"><h3>'+esc(t.chartT(ty,loc))+'</h3>'+chart(m,cw())+'<p class="cap">'+esc(t.chartC)+'</p>'+
+       '<div class="sr"><table><caption>'+esc(t.chartT(ty,loc))+'</caption><tbody>'+m.map(function(s){return '<tr><th scope="row">'+esc(qshort(s.t))+'</th><td>'+esc(money(s.med))+'</td></tr>';}).join("")+'</tbody></table></div></div>';
+    h+='</section>';
+    h+='<section class="card"><h2>'+esc(last?t.sector(qshort(last.t)):t.sector("…"))+'</h2>';
+    if(last){h+='<div class="stats"><div class="stat"><span>'+esc(t.med)+'</span><b>'+esc(money(last.med))+'</b></div><div class="stat"><span>'+esc(t.ventes)+'</span><b>'+esc(num(last.ventes))+'</b></div>'+
+        (mov!==null?'<div class="stat"><span>'+esc(t.mov)+'</span><b>'+esc(Math.abs(mov)<0.005?t.stable:pct(mov))+'</b></div>':'')+'</div><p class="meta">'+esc(t.src(placeName(c.secteurIndice),qshort(last.t)))+'</p>';}
+    else h+='<p class="meta">'+esc(t.nomkt)+'</p>';
+    if(c.lecture) h+='<div class="read"><img src="/ma-propriete/yanis-about-sm.webp" alt="Yanis Gauthier-Sigeris" width="52" height="52"><div><p class="eyebrow">'+esc(t.lecture)+'</p><p>'+esc(c.lecture)+'</p></div></div>';
+    h+='</section></div><aside class="col">';
+    h+='<section class="card cta"><h2>'+esc(t.ctaT)+'</h2><p>'+esc(t.ctaP)+'</p><a class="btn white" href="'+esc(mailto(t.sAna,c))+'">'+esc(t.cta1)+'</a><a class="btn ghost" href="'+TELH+'">'+esc(t.cta2)+' · '+TEL+'</a></section>';
+    if(a) h+='<section class="card"><p class="eyebrow">'+esc(t.startT)+'</p><p class="range" style="font-size:24px">'+esc(money(dep.basse))+(L==="en"?" to ":" à ")+esc(money(dep.haute))+'</p><p class="meta">'+esc(t.start(date(dep.date)))+'</p></section>';
+    h+='<section class="card"><h2>'+esc(t.worksT)+'</h2><p class="meta">'+esc(t.worksP)+'</p><a class="btn line" href="'+esc(mailto(t.sWorks,c))+'">'+esc(t.works)+'</a></section>';
+    h+='<section class="card"><h2>'+esc(t.prefT)+'</h2><div class="rows"><div><span>'+esc(t.freq)+'</span><b>'+esc(t.F[c.frequence]||t.F.C)+'</b></div></div><div class="links"><a href="'+esc(mailto(t.sFreq,c))+'">'+esc(t.prefs)+'</a><a href="'+esc(mailto(t.sStop,c))+'">'+esc(t.unsub)+'</a></div></section>';
+    h+='</aside></div></div>';
+    $("app").innerHTML=h;
+  }
+  function state(title,p,label,href,retry){
+    $("app").innerHTML='<div class="state"><h1>'+esc(title)+'</h1><p>'+esc(p)+'</p>'+(retry?'<button class="btn line" type="button" id="retry" style="background:none;cursor:pointer;font:inherit;font-weight:600">'+esc(label)+'</button>':'<a class="btn line" href="'+esc(href)+'">'+esc(label)+'</a>')+'</div>';
+    if(retry) $("retry").addEventListener("click",load);
+  }
+
+  function token(){var h=(location.hash||"").replace(/^#/,""),q=new URLSearchParams(location.search);return (q.get("c")||h||"").trim();}
+  function load(){
+    var tk=token(),q=new URLSearchParams(location.search),ql=q.get("l");
+    setLang(/^\/en\//.test(location.pathname)||ql==="en"?"en":(ql==="tu"?"tu":"vous"));
+    $("t-load")&&($("t-load").textContent=t.load);
+    if(!tk){state(t.nfT,t.nfP,t.nfB,mailto(t.sLink));return;}
+    fetch("/.netlify/functions/ma-propriete?c="+encodeURIComponent(tk)+(tk==="demo"&&ql?"&l="+encodeURIComponent(ql):""),{headers:{Accept:"application/json"},cache:"no-store",referrerPolicy:"no-referrer"})
+      .then(function(r){return r.json().then(function(j){return {s:r.status,j:j};});})
+      .then(function(x){
+        if(x.s===404||(x.j&&x.j.erreur==="introuvable")){state(t.nfT,t.nfP,t.nfB,mailto(t.sLink));return;}
+        if(!x.j||!x.j.ok||!x.j.client){state(t.errT,t.errP,t.errB,"",true);return;}
+        setLang(x.j.client.langue);
+        if(x.j.demo){$("demo").hidden=false;$("t-demo").textContent=t.demo;}
+        view(x.j);
+      })
+      .catch(function(){state(t.errT,t.errP,t.errB,"",true);});
+  }
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(lastData&&cw()!==lastW)view(lastData);},150);});
+  load();
+})();
+</script>
+</body>
+</html>
