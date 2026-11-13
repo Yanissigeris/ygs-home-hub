@@ -306,7 +306,7 @@ const ValuationForm = ({
     <div
       className={cn(
         isGlass
-          ? "rounded-[1.25rem] border border-white/[0.08] bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
+          ? "rounded-[1.25rem] border border-white/[0.10] bg-[rgba(0,14,53,0.80)] backdrop-blur-xl shadow-[0_8px_40px_-12px_hsl(226_100%_6%_/_0.5)] p-6 sm:p-8"
           : "card-elevated rounded-2xl bg-card p-6 shadow-xl sm:p-8",
       )}
     >
