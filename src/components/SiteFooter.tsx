@@ -38,10 +38,10 @@ const affiliationLogos: AffiliationLogo[] = [
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[22px]" },
+  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[22px]", filter: "brightness-0 invert" },
   { src: logoTemple, alt: "Hall of Fame RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
-  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-[1.4]" },
+  { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-0 invert" },
 ];
 
 /* ── Social SVG icons ── */
@@ -186,10 +186,10 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
-                <h3 className="footer-heading mb-5">
+                <h3 className="footer-heading mb-3">
                   {col.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-0.5">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
                       <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
@@ -209,26 +209,19 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <h3 className="footer-heading mb-3 sm:mb-5">
               {popularLabel}
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-x-5 gap-y-1">
               {popularLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  to={l.href}
-                  className="transition-colors duration-200"
-                  style={{
-                    fontSize: ".75rem",
-                    color: "rgba(255,255,255,.6)",
-                    border: "1px solid rgba(255,255,255,.06)",
-                    borderRadius: 999,
-                    padding: ".2rem .55rem",
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.15)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,.65)"; e.currentTarget.style.borderColor = "rgba(255,255,255,.06)"; }}
-                >
-                  {l.label}
-                </Link>
+                <li key={l.href}>
+                  <Link
+                    to={l.href}
+                    className="inline-block py-1 transition-colors duration-200 hover:text-white/85"
+                    style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)" }}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
@@ -238,7 +231,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             <h3 className="footer-heading mb-4 sm:mb-10">
               {affiliationsLabel}
             </h3>
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-5 w-full max-w-[30rem] sm:max-w-[36rem] lg:max-w-[56rem]">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:gap-x-12 w-full max-w-[30rem] sm:max-w-[40rem] lg:max-w-[56rem]">
               {affiliationLogos.map((logo) => {
                 const inner = logo.custom ?? (
                   <img
@@ -248,7 +241,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`${logo.heightClass ?? "h-10"} w-auto object-contain opacity-75 transition-opacity duration-300 hover:opacity-100 ${logo.filter ?? ""}`}
+                    className={`${logo.heightClass ?? "h-9"} w-auto object-contain opacity-80 ${logo.filter ?? ""}`}
                   />
                 );
                 const caption = logo.caption ? (
@@ -260,12 +253,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   </p>
                 ) : null;
                 const tileStyle: React.CSSProperties = {
-                  background: "rgba(255,255,255,.04)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  borderRadius: 12,
-                  padding: ".5rem .75rem",
                   minHeight: 56,
-                  minWidth: 80,
+                  padding: "0 .25rem",
                 };
                 const content = (
                   <>

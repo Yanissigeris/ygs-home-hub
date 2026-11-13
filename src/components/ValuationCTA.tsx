@@ -39,6 +39,7 @@ const ValuationCTA = ({ lang: langProp }: Props) => {
 
   return (
     <section
+      data-page-cta=""
       style={{
         background: "var(--white)",
         paddingTop: isMobile ? "4rem" : "6rem",
