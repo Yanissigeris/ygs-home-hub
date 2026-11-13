@@ -177,7 +177,7 @@ const AylmerPage = () => (
 
     {/* ═══ REGARD TERRAIN : mots de Yanis, entrevue du 6 nov. 2026 ═══ */}
     <section className="section-padding bg-white">
-      <div className="section-container max-w-[72rem]">
+      <div className="section-container">
         <div className="content-split">
         <h2>Le marché d'Aylmer, vu du terrain</h2>
           <p className="prose-body mt-5">

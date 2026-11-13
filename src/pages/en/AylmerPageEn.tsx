@@ -174,7 +174,7 @@ const AylmerPageEn = () => (
 
     {/* ═══ REGARD TERRAIN : mots de Yanis, entrevue du 6 nov. 2026 ═══ */}
     <section className="section-padding bg-white">
-      <div className="section-container max-w-[72rem]">
+      <div className="section-container">
         <div className="content-split">
         <h2>Aylmer's market, from the ground</h2>
           <p className="prose-body mt-5">

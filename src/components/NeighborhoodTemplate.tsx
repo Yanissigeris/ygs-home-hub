@@ -178,7 +178,7 @@ const NeighborhoodTemplate = (p: NeighborhoodProps) => {
 
       {p.answers && p.answers.length > 0 && (
         <section className="section-padding bg-white">
-          <div className="section-container max-w-[72rem] space-y-12 md:space-y-16">
+          <div className="section-container space-y-12 md:space-y-16">
             {p.answers.map((item) => (
               <div key={item.q} className="content-split">
                 <h2>{item.q}</h2>

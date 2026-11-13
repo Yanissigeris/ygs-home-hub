@@ -19,7 +19,7 @@ const ContentBlock = ({
   split = false,
 }: ContentBlockProps) => (
   <section className={`${padSize === "md" ? "section-padding-md" : "section-padding"} ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className={`section-container ${narrow && !split ? "max-w-[44rem]" : ""}${split ? " max-w-[72rem]" : ""} ${centered ? "text-center" : ""}`}>
+    <div className={`section-container ${narrow && !split ? "max-w-[44rem]" : ""} ${centered ? "text-center" : ""}`}>
       <div
         className={split ? "content-split" : undefined}
       >
