@@ -18,41 +18,65 @@ interface CardGridProps {
 }
 
 /**
- * Editorial grid: each item is a title and a short text under a hairline.
- * No card boxes, no icons (the `icon` prop is kept for compatibility and
- * ignored; `variant` only decides whether titles are h3 or p, as before).
+ * Asymmetric boxed grid. The first box leads in navy, the others are white.
+ * Widths alternate on a 12-column grid (desktop); boxes stack on phones.
+ * No icons: the `icon` prop is kept for compatibility and ignored.
+ * `variant` only decides whether titles are h3 (icon-top) or p (icon-inline),
+ * exactly as before, so heading outlines do not change.
  */
+const layoutFor = (n: number): string[] => {
+  if (n === 3) return ["lg:col-span-5 lg:row-span-2", "lg:col-span-7", "lg:col-span-7"];
+  if (n === 4) return ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7"];
+  if (n === 5) return ["lg:col-span-5 lg:row-span-2", "lg:col-span-7", "lg:col-span-7", "lg:col-span-6", "lg:col-span-6"];
+  return Array.from({ length: n }, (_, i) => (i % 4 === 0 || i % 4 === 3 ? "lg:col-span-7" : "lg:col-span-5"));
+};
+
 const CardGrid = ({
-  overline,
   title,
   items,
-  columns = 2,
   background = "default",
   variant = "icon-top",
-  centered = true,
-}: CardGridProps) => (
-  <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className="section-container">
-      <div
-        className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}
-      >
-        <SectionHeading overline={overline} title={title} centered={centered} />
+}: CardGridProps) => {
+  const bg = background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background";
+  const spans = layoutFor(items.length);
+  return (
+    <section className={`section-padding ${bg}`}>
+      <div className="section-container">
+        <h2 className="max-w-[36rem]">{title}</h2>
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:gap-4 lg:mt-14 lg:grid-cols-12 lg:gap-5">
+          {items.map((item, i) => {
+            const lead = i === 0;
+            const titleClass = `[font-family:var(--display)] font-semibold tracking-[-0.03em] ${
+              lead ? "text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.02] text-[var(--cream)]" : "text-[clamp(1.375rem,1.9vw,1.75rem)] leading-[1.08] text-[var(--ink)]"
+            }`;
+            return (
+              <div
+                key={item.title}
+                className={`${spans[i]} flex flex-col rounded-[1.5rem] p-6 sm:p-8 lg:p-10 ${
+                  lead
+                    ? "justify-end bg-[var(--ink)] lg:min-h-[17rem]"
+                    : "bg-white border border-[rgba(0,14,53,0.09)] shadow-[0_1px_2px_rgba(0,14,53,0.04),0_18px_40px_-24px_rgba(0,14,53,0.28)]"
+                }`}
+              >
+                {variant === "icon-top" ? (
+                  <h3 className={titleClass}>{item.title}</h3>
+                ) : (
+                  <p className={titleClass}>{item.title}</p>
+                )}
+                <p
+                  className={`mt-3 max-w-[32rem] text-[1rem] leading-[1.6] lg:mt-4 ${
+                    lead ? "text-[rgba(247,244,238,0.78)]" : "text-[#4A5475]"
+                  }`}
+                >
+                  {item.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div className={`grid gap-x-12 gap-y-10 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
-        {items.map((item) => (
-          <div key={item.title} className="border-t border-[rgba(0,14,53,0.14)] pt-6">
-            {variant === "icon-top" ? (
-              <h3 className="text-[1.125rem] leading-snug text-foreground">{item.title}</h3>
-            ) : (
-              // Kept as <p> to leave the page heading outline exactly as before.
-              <p className="text-[1.125rem] font-semibold leading-snug tracking-[-0.01em] text-foreground">{item.title}</p>
-            )}
-            <p className="mt-2.5 max-w-[34rem] text-[0.9375rem] leading-[1.65] text-muted-foreground">{item.text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default CardGrid;
