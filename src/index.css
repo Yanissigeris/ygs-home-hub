@@ -288,7 +288,7 @@
   /* Navy shade behind the text only (left on desktop, top on phones) so the
      photo keeps its true colours on the right. Same treatment as HeroSection. */
   .hero-gradient--with-bg {
-    --hero-veil: linear-gradient(90deg, hsl(226 100% 10% / 0.84) 0%, hsl(226 100% 10% / 0.70) 32%, hsl(226 100% 10% / 0.28) 55%, hsl(226 100% 10% / 0) 72%);
+    --hero-veil: linear-gradient(90deg, hsl(226 100% 10% / 0.84) 0%, hsl(226 100% 10% / 0.74) 38%, hsl(226 100% 10% / 0.34) 58%, hsl(226 100% 10% / 0) 74%);
   }
   @media (max-width: 767px) {
     .hero-gradient--with-bg {
