@@ -198,8 +198,8 @@ function buildConfirmationHtml(data: EmailRequest): { subject: string; html: str
       : (showAddress ? "I got your valuation request for:" : "I got your valuation request.");
     const addressBlock = showAddress ? `<p style="background:#F7F5EE;padding:12px 16px;border-radius:8px;color:#000E35;font-weight:600">${esc(data.address)}</p>` : "";
     const closing = isFr
-      ? "Je vous envoie une réponse personnalisée en 24 heures maximum, avec une analyse basée sur les ventes comparables récentes dans votre secteur."
-      : "I'll send you a personalized response within 24 hours, with an analysis based on recent comparable sales in your neighbourhood.";
+      ? "Je vous envoie une réponse personnalisée dans les plus brefs délais, avec une analyse basée sur les ventes comparables récentes dans votre secteur."
+      : "I'll send you a personalized response as soon as possible, with an analysis based on recent comparable sales in your neighbourhood.";
     return {
       subject: isFr ? "Votre demande d'évaluation est reçue | YGS" : "Your valuation request was received | YGS",
       html: `${wrapOpen}${h2(heading)}${p(intro)}${addressBlock}${p(closing)}${hr}${signature}</div>`,
