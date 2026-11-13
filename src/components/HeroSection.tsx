@@ -191,6 +191,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
     const perfStartRef = React.useRef<number>(0);
     const lang = useLanguage();
     const responsiveHero = heroBgPicture ?? getHeroPicture(heroBgImage);
+    /* Interior pages (every photo hero except the homepage): shorter hero, photo in
+     * true colours, navy shade only behind the text block. The homepage keeps its
+     * own full-screen treatment (petrolGradient={false} / fillScreen). */
+    const interior = petrolGradient && !fillScreen && !!heroBgImage && !heroVideo;
+    const heroMinH = interior ? "min(78svh, 760px)" : "100svh";
     const stats = lang === "en" ? statsEn : statsFr;
     const combinedRef = React.useCallback(
       (node: HTMLElement | null) => {
@@ -479,7 +484,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         data-hero-dark
         className={`relative overflow-hidden w-full${fillScreen ? " hero-fill-screen" : ""}`}
         style={{
-          ...(fillScreen ? {} : { minHeight: "100svh" }),
+          ...(fillScreen ? {} : { minHeight: heroMinH }),
           backgroundColor: "var(--ink)",
         }}
       >
@@ -526,17 +531,28 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           </div>
         )}
 
-        {/* Petrol gradient overlay — diagonal ink veil over the hero image (opt-out via petrolGradient={false}). */}
-        {petrolGradient && heroBgImage && !heroVideo && (
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0"
-            style={{
-              zIndex: 2,
-              background:
-                "linear-gradient(135deg, hsl(226 100% 10% / 0.78) 0%, hsl(226 100% 10% / 0.62) 55%, hsl(226 100% 10% / 0.85) 100%)",
-            }}
-          />
+        {/* Interior pages: navy shade behind the text only, photo keeps its colours. */}
+        {interior && (
+          <>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 hidden md:block"
+              style={{
+                zIndex: 2,
+                background:
+                  "linear-gradient(90deg, rgba(0,14,53,0.84) 0%, rgba(0,14,53,0.70) 30%, rgba(0,14,53,0.28) 52%, rgba(0,14,53,0) 68%)",
+              }}
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 md:hidden"
+              style={{
+                zIndex: 2,
+                background:
+                  "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.68) 50%, rgba(0,14,53,0.30) 80%, rgba(0,14,53,0.12) 100%)",
+              }}
+            />
+          </>
         )}
 
         {/* Poster image — always visible UNDER the video. Acts as the LCP candidate
@@ -592,6 +608,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         />
 
         {/* Main gradient overlay — desktop. */}
+        {!interior && (
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] hidden md:block"
@@ -602,11 +619,12 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             transition: "opacity 0.35s ease-out",
           }}
         />
+        )}
 
         {/* Extra left-half text-protect overlay — desktop, hero-image pages only.
             Guarantees subtitle + secondary CTA legibility over bright photo zones
             (sky, sunlit paper, windows). Has zero effect on the home/video hero. */}
-        {heroBgImage && !heroVideo && (
+        {heroBgImage && !heroVideo && !interior && (
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 z-[3] hidden md:block"
@@ -620,6 +638,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         )}
 
         {/* Main gradient overlay — mobile (atmospheric base, z-2) */}
+        {!interior && (
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2] md:hidden"
@@ -630,8 +649,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             transition: "opacity 0.35s ease-out",
           }}
         />
+        )}
 
         {/* Left-side text-protect gradient — mobile only (z-3, anchor-corner composition) */}
+        {!interior && (
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[3] md:hidden"
@@ -642,6 +663,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             transition: "opacity 0.35s ease-out",
           }}
         />
+        )}
 
         {/* Mobile text scrim — homepage hero only (petrolGradient={false}).
             The two mobile overlays above are hidden at scroll top (atTop), so the
@@ -662,7 +684,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         )}
 
         {/* Accueil : voile marine à gauche (ordinateur) pour garder le titre lisible sur une photo chargée. */}
-        {sansTitle && heroBgImage && !heroVideo && (
+        {sansTitle && heroBgImage && !heroVideo && !interior && (
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 z-[3] hidden md:block"
@@ -676,7 +698,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {/* ─── TEXT CONTENT ─── (z-20 on mobile so it sits above portrait+gradients; desktop unchanged) */}
         <div
           className="relative z-[20] flex flex-col pointer-events-none"
-          style={{ minHeight: "100svh" }}
+          style={{ minHeight: heroMinH }}
         >
           <div
             className={`pointer-events-auto ${headline || sansTitle || !agentImage ? "w-[92%]" : "w-[58%]"} pt-[90px] pb-[90px] pl-[18px] pr-[18px] md:w-auto md:max-w-[50%] md:pt-[90px] md:pb-0 md:pl-[20px] md:pr-[20px]`}
