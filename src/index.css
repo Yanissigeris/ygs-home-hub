@@ -577,16 +577,13 @@ h1.hero-eyebrow {
   min-height: 100lvh;
 }
 
-/* Accueil, cellulaire : la photo de Yanis reste entière dans la zone toujours
-   visible (100svh, au-dessus des barres de Chrome et Safari). Le paysage continue
-   dessous jusqu'au bas de l'écran. Le bas du veston se fond dans le paysage
-   pour éviter une coupe nette au milieu de l'image. */
+/* Accueil, cellulaire : la photo de Yanis repose sur le bas du héros, comme
+   le paysage. Elle est plus grande (79vw au lieu de 62vw) pour que la tête
+   monte plus haut à l'écran, au-dessus des barres de Chrome et Safari. */
 .hero-fill-screen .hero-portrait-fill {
   bottom: 0;
-  bottom: calc(100lvh - 100svh);
-  max-height: 68svh;
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  width: 79vw;
+  max-height: 74svh;
 }
 
 /* Hero background image — clean interior, no subject to track. */

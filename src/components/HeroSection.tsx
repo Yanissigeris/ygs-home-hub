@@ -969,7 +969,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 style={{
                   ...(fillScreen ? {} : { bottom: "env(safe-area-inset-bottom, 0px)" }),
                   right: "-2vw",
-                  width: "62vw",
+                  ...(fillScreen ? {} : { width: "62vw" }),
                   height: "auto",
                   ...(fillScreen ? {} : { maxHeight: "68%" }),
                   objectFit: "contain",
