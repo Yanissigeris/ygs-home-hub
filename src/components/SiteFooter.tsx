@@ -135,7 +135,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
         <div className="section-container">
           {/* ── Brand row ── */}
-          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-14 sm:pb-12">
+          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-12 sm:pb-12">
             <img
               src={logoYgsWhite}
               alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
@@ -176,7 +176,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── Mobile: accordion columns ── */}
-          <div className="sm:hidden py-6" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
+          <div className="sm:hidden py-8" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <FooterAccordion key={col.title} title={col.title} links={col.links} twoColumns={col.title === "Quartiers" || col.title === "Neighbourhoods"} />
             ))}
@@ -317,13 +317,13 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   </>
                 )}
             </p>
-            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
-              {lang === "en" ? "Office: " : "Bureau : "}
-              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
-              {"  ·  "}
-              {lang === "en" ? "Mobile: " : "Cellulaire : "}
-              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18192103044" })}>819-210-3044</a>
-              {"  ·  "}
+            <p className="flex flex-col items-center sm:block" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
+              <span>{lang === "en" ? "Office: " : "Bureau : "}
+              <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a></span>
+              <span aria-hidden="true" className="hidden sm:inline">{"  ·  "}</span>
+              <span>{lang === "en" ? "Mobile: " : "Cellulaire : "}
+              <a href="tel:+18192103044" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18192103044" })}>819-210-3044</a></span>
+              <span aria-hidden="true" className="hidden sm:inline">{"  ·  "}</span>
               <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "email", location: "footer", destination: "yanis@martywaite.com" })}>yanis@martywaite.com</a>
             </p>
           </address>
