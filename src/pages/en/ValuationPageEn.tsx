@@ -26,7 +26,6 @@ const ValuationPageEn = () => {
       <PageMeta title="Free Home Valuation | Gatineau" description="Get a free valuation of your property in Gatineau. Analysis based on recent sales by an experienced broker." ogImage="https://yanisgauthier.com/og/og-eval.jpg" />
       <JsonLdScript id="ygs-jsonld-service-valuation" data={valuationServiceSchema["/en/home-valuation"]} />
       <section className="hero-gradient hero-gradient--with-bg relative overflow-hidden" style={heroBgStyle(heroImg)}>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_55%,_hsl(226_50%_22%_/_0.45)_0%,_transparent_70%)] pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
 
         {/* Left-side text-protect — guarantees headline/subtitle legibility regardless of photo brightness */}
