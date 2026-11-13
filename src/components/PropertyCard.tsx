@@ -11,7 +11,7 @@ const i18n = {
   fr: {
     active: "À VENDRE",
     pending: "OFFRE ACCEPTÉE",
-    sold: "VENDUE",
+    sold: "Vendue · prix demandé",
     rent: "À LOUER",
     rented: "LOUÉ",
     bed: "ch.",
@@ -22,7 +22,7 @@ const i18n = {
   en: {
     active: "FOR SALE",
     pending: "OFFER ACCEPTED",
-    sold: "SOLD",
+    sold: "Sold · asking price",
     rent: "FOR RENT",
     rented: "RENTED",
     bed: "bed",

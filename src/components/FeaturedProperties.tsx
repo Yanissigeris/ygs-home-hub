@@ -20,6 +20,7 @@ const t = {
     statusNew: "Nouveau",
     statusSold: "Vendu",
     statusFeatured: "En vedette",
+    askingPrice: "Prix demandé",
   },
   en: {
     overline: "FEATURED PROPERTIES",
@@ -30,6 +31,7 @@ const t = {
     statusNew: "New",
     statusSold: "Sold",
     statusFeatured: "Featured",
+    askingPrice: "Asking price",
   },
 };
 
@@ -124,6 +126,12 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+        {/* Sold cards show the listing price, so say so. */}
+        {p.status === "sold" && (
+          <p style={{ fontFamily: "var(--sans)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5475", marginBottom: ".25rem" }}>
+            {strings.askingPrice}
+          </p>
+        )}
         {/* Price */}
         <p style={{ fontFamily: "var(--display)", fontSize: "clamp(1.375rem, 2.5vw, 1.625rem)", fontWeight: 600, letterSpacing: "-0.025em", color: "var(--ink)", lineHeight: 1.1, marginBottom: ".5rem" }}>
           {p.price}
