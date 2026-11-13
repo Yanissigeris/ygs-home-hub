@@ -1043,3 +1043,7 @@ section.bg-\[var\(--cream\)\] + section.bg-\[var\(--cream\)\] + section.bg-\[var
 body:has([data-page-cta]) .footer-cta {
   display: none;
 }
+
+/* CardGrid: horizontal swipe row on phones, scrollbar hidden */
+.cardgrid-track { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.cardgrid-track::-webkit-scrollbar { display: none; }

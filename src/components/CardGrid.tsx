@@ -1,3 +1,4 @@
+import * as React from "react";
 import type { LucideIcon } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -39,20 +40,48 @@ const CardGrid = ({
 }: CardGridProps) => {
   const bg = background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background";
   const spans = layoutFor(items.length);
+  const trackRef = React.useRef<HTMLDivElement>(null);
+  const [active, setActive] = React.useState(0);
+
+  // Phones: boxes sit in a horizontal row the visitor swipes through.
+  // The counter follows the box closest to the left edge.
+  const onScroll = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    const kids = Array.from(el.children) as HTMLElement[];
+    const left = el.scrollLeft;
+    let best = 0;
+    kids.forEach((k, i) => {
+      if (Math.abs(k.offsetLeft - el.offsetLeft - left) < Math.abs(kids[best].offsetLeft - el.offsetLeft - left)) best = i;
+    });
+    setActive(best);
+  };
+
   return (
     <section className={`section-padding ${bg}`}>
       <div className="section-container">
-        <h2 className="max-w-[36rem]">{title}</h2>
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:gap-4 lg:mt-14 lg:grid-cols-12 lg:gap-5">
+        <div className="flex items-end justify-between gap-6">
+          <h2 className="max-w-[36rem]">{title}</h2>
+          <p className="shrink-0 pb-1 text-[0.8125rem] font-medium tabular-nums tracking-[0.02em] text-[#4A5475] lg:hidden" aria-hidden="true">
+            {String(active + 1).padStart(2, "0")} <span className="text-[rgba(0,14,53,0.3)]">/ {String(items.length).padStart(2, "0")}</span>
+          </p>
+        </div>
+        <div
+          ref={trackRef}
+          onScroll={onScroll}
+          className="cardgrid-track scroll-px-5 sm:scroll-px-6 md:scroll-px-8 lg:scroll-px-0 -mx-5 mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6 md:-mx-8 md:px-8 lg:mx-0 lg:mt-14 lg:grid lg:snap-none lg:grid-cols-12 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0"
+        >
           {items.map((item, i) => {
             const lead = i === 0;
             const titleClass = `[font-family:var(--display)] font-semibold tracking-[-0.03em] ${
-              lead ? "text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.02] text-[var(--cream)]" : "text-[clamp(1.375rem,1.9vw,1.75rem)] leading-[1.08] text-[var(--ink)]"
+              lead
+                ? "text-[1.625rem] leading-[1.05] lg:text-[clamp(1.75rem,3vw,2.5rem)] lg:leading-[1.02] text-[var(--cream)]"
+                : "text-[1.375rem] leading-[1.1] lg:text-[clamp(1.375rem,1.9vw,1.75rem)] lg:leading-[1.08] text-[var(--ink)]"
             }`;
             return (
               <div
                 key={item.title}
-                className={`${spans[i]} flex flex-col rounded-[1.5rem] p-6 sm:p-8 lg:p-10 ${
+                className={`${spans[i]} flex w-[84%] max-w-[22rem] shrink-0 snap-start flex-col rounded-[1.25rem] p-6 sm:w-[60%] lg:w-auto lg:max-w-none lg:shrink lg:rounded-[1.5rem] lg:p-10 ${
                   lead
                     ? "justify-end bg-[var(--ink)] lg:min-h-[17rem]"
                     : "bg-white border border-[rgba(0,14,53,0.09)] shadow-[0_1px_2px_rgba(0,14,53,0.04),0_18px_40px_-24px_rgba(0,14,53,0.28)]"
@@ -64,7 +93,7 @@ const CardGrid = ({
                   <p className={titleClass}>{item.title}</p>
                 )}
                 <p
-                  className={`mt-3 max-w-[32rem] text-[1rem] leading-[1.6] lg:mt-4 ${
+                  className={`mt-3 max-w-[32rem] text-[0.9375rem] leading-[1.6] lg:mt-4 lg:text-[1rem] ${
                     lead ? "text-[rgba(247,244,238,0.78)]" : "text-[#4A5475]"
                   }`}
                 >
