@@ -577,6 +577,15 @@ h1.hero-eyebrow {
   min-height: 100lvh;
 }
 
+/* Accueil, cellulaire : la photo de Yanis repose sur le bas du héros, comme
+   le paysage. Elle est plus grande (79vw au lieu de 62vw) pour que la tête
+   monte plus haut à l'écran, au-dessus des barres de Chrome et Safari. */
+.hero-fill-screen .hero-portrait-fill {
+  bottom: 0;
+  width: 79vw;
+  max-height: 74svh;
+}
+
 /* Hero background image — clean interior, no subject to track. */
 .hero-bg-image {
   object-position: center center;

@@ -965,19 +965,21 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 alt={lang === "en" ? "Yanis Gauthier-Sigeris, real estate broker in Gatineau, Outaouais" : "Yanis Gauthier-Sigeris, courtier immobilier à Gatineau en Outaouais"}
                 width={320}
                 height={480}
-                className="md:hidden absolute pointer-events-none select-none"
+                className={`md:hidden absolute pointer-events-none select-none${fillScreen ? " hero-portrait-fill" : ""}`}
                 style={{
-                  bottom: "env(safe-area-inset-bottom, 0px)",
+                  ...(fillScreen ? {} : { bottom: "env(safe-area-inset-bottom, 0px)" }),
                   right: "-2vw",
-                  width: "62vw",
+                  ...(fillScreen ? {} : { width: "62vw" }),
                   height: "auto",
-                  maxHeight: "68%",
+                  ...(fillScreen ? {} : { maxHeight: "68%" }),
                   objectFit: "contain",
                   objectPosition: "bottom right",
                   zIndex: 4,
                   filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))",
-                  WebkitMaskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
-                  maskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
+                  ...(fillScreen ? {} : {
+                    WebkitMaskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
+                    maskImage: sansTitle ? "none" : "linear-gradient(to left, black 72%, transparent 100%)",
+                  }),
                 }}
                 loading="eager"
                 decoding="async"
