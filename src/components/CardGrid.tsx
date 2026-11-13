@@ -1,4 +1,4 @@
-import { LucideIcon, CheckCircle2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 interface CardItem {
@@ -17,52 +17,33 @@ interface CardGridProps {
   centered?: boolean;
 }
 
+/**
+ * Editorial grid: each item is a title and a short text under a hairline.
+ * No card boxes, no icons (the `icon` and `variant` props are kept for
+ * compatibility with existing call sites and are ignored).
+ */
 const CardGrid = ({
   overline,
   title,
   items,
   columns = 2,
   background = "default",
-  variant = "icon-top",
   centered = true,
 }: CardGridProps) => (
   <section className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-    <div className="section-container max-w-[52rem]">
+    <div className="section-container">
       <div
         className={centered ? "text-center mb-12 max-w-[40rem] mx-auto" : "mb-12"}
       >
         <SectionHeading overline={overline} title={title} centered={centered} />
       </div>
-      <div className={`grid gap-5 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
-        {items.map((item, i) => {
-          const Icon = item.icon || CheckCircle2;
-          return (
-            <div
-              key={item.title}
-              className={`card-elevated border border-border/40 bg-card p-7 ${
-                variant === "icon-inline" ? "flex items-start gap-4" : ""
-              }`}
-            >
-              {variant === "icon-inline" ? (
-                <>
-                  <Icon size={18} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
-                  <div>
-                    <p className="text-[1rem] font-semibold text-foreground">{item.title}</p>
-                    <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-muted-foreground">{item.text}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary mb-4">
-                    <Icon size={20} />
-                  </div>
-                  <h3 className="text-[1.0625rem]">{item.title}</h3>
-                  <p className="mt-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">{item.text}</p>
-                </>
-              )}
-            </div>
-          );
-        })}
+      <div className={`grid gap-x-12 gap-y-10 ${columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+        {items.map((item) => (
+          <div key={item.title} className="border-t border-[rgba(0,14,53,0.14)] pt-6">
+            <h3 className="text-[1.125rem] leading-snug text-foreground">{item.title}</h3>
+            <p className="mt-2.5 max-w-[34rem] text-[0.9375rem] leading-[1.65] text-muted-foreground">{item.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
