@@ -109,7 +109,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         </div>
 
         {/* ─── Right column: photo ─── */}
-        <div className="order-1 lg:order-2 relative mx-auto max-w-[320px] lg:max-w-none">
+        <div className="order-1 lg:order-2 relative w-full max-w-[420px] lg:max-w-none">
           <div className="relative overflow-hidden" style={{ borderRadius: 24 }}>
             <picture>
               {yanisAbout.sources.avif && (
