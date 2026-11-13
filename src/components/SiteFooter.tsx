@@ -38,8 +38,8 @@ const affiliationLogos: AffiliationLogo[] = [
       </div>
     ),
   },
-  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[22px]", filter: "brightness-0 invert" },
-  { src: logoTemple, alt: "Hall of Fame RE/MAX, distinction courtier", filter: "brightness-0 invert", caption: "RE/MAX, LLC, 2024" },
+  { src: logoMW, alt: "Équipe Marty Waite, courtiers immobiliers Gatineau", heightClass: "h-[26px]", filter: "brightness-0 invert" },
+  { src: logoTemple, alt: "Hall of Fame RE/MAX, distinction courtier", filter: "brightness-0 invert", heightClass: "h-10", caption: "RE/MAX, LLC, 2024" },
   { src: logoTranquillit, alt: "Programme Tranquilli-T RE/MAX, garantie immobilière", filter: "brightness-0 invert" },
   { src: logoEnfantSoleil, alt: "Opération Enfant Soleil, partenaire caritatif", filter: "brightness-0 invert" },
 ];
@@ -77,7 +77,7 @@ const FooterAccordion = ({ title, links, twoColumns = false }: { title: string; 
               <Link
                 to={l.href}
                 tabIndex={open ? 0 : -1}
-                style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }}
+                style={{ fontSize: ".875rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }}
                 className="inline-flex min-h-[44px] min-w-[44px] items-center transition-colors duration-200 hover:text-white/80"
               >
                 {l.label}
@@ -114,10 +114,10 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
         {/* ── Final CTA block : masqué par CSS quand la page a déjà son propre appel à l'action (data-page-cta) ── */}
         <div className="footer-cta" style={{ background: "var(--ink)" }}>
           <div className="section-container" style={{ paddingTop: 48, paddingBottom: 48, textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--cream)", lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--display)", fontSize: "clamp(1.75rem, 2.4vw, 2rem)", fontWeight: 600, letterSpacing: "-0.03em", color: "var(--cream)", lineHeight: 1.1, margin: 0 }}>
               {ctaHeading}
             </h2>
-            <p style={{ fontFamily: "var(--sans)", fontSize: 14, color: "rgba(247,244,239,.7)", marginTop: 12, marginBottom: 24 }}>
+            <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: "rgba(247,244,239,.72)", marginTop: 12, marginBottom: 24 }}>
               {ctaSubtext}
             </p>
             <Link
@@ -135,7 +135,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
         <div className="section-container">
           {/* ── Brand row ── */}
-          <div className="flex flex-col items-center pt-8 pb-6 sm:pt-16 sm:pb-12 lg:pt-20 lg:pb-14">
+          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-14 sm:pb-12">
             <img
               src={logoYgsWhite}
               alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
@@ -146,7 +146,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-5 text-center" style={{ fontSize: ".78rem", color: "rgba(255,255,255,.7)", fontStyle: "italic" }}>
+            <p className="mt-5 text-center" style={{ fontSize: ".875rem", color: "rgba(255,255,255,.7)" }}>
               {tagline}
             </p>
 
@@ -183,16 +183,16 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Desktop: 4 columns (2-col on sm) ── */}
-          <div className="hidden sm:grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:py-14" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
+          <div className="hidden sm:grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
-                <h3 className="footer-heading mb-3">
+                <h3 className="footer-heading mb-4">
                   {col.title}
                 </h3>
                 <ul className="space-y-0.5">
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
-                      <Link to={l.href} style={{ fontSize: ".78rem", color: "rgba(255,255,255,.65)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
+                      <Link to={l.href} style={{ fontSize: ".875rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
                         {l.label}
                       </Link>
                     </li>
@@ -205,17 +205,17 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── SEO Popular links ── */}
-          <div className="py-5 sm:py-8">
-            <h3 className="footer-heading mb-3 sm:mb-5">
+          <div className="py-8 sm:py-12">
+            <h3 className="footer-heading mb-3 sm:mb-4">
               {popularLabel}
             </h3>
-            <ul className="flex flex-wrap gap-x-5 gap-y-1">
+            <ul className="grid grid-cols-2 gap-x-4 sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-1">
               {popularLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     to={l.href}
                     className="inline-block py-1 transition-colors duration-200 hover:text-white/85"
-                    style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)" }}
+                    style={{ fontSize: ".875rem", color: "rgba(255,255,255,.72)" }}
                   >
                     {l.label}
                   </Link>
@@ -227,8 +227,8 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── Affiliations ── */}
-          <div className="flex flex-col items-center py-5 sm:py-12 lg:py-14">
-            <h3 className="footer-heading mb-4 sm:mb-10">
+          <div className="flex flex-col items-center py-8 sm:py-12">
+            <h3 className="footer-heading mb-6 sm:mb-8">
               {affiliationsLabel}
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:gap-x-12 w-full max-w-[30rem] sm:max-w-[40rem] lg:max-w-[56rem]">
@@ -241,7 +241,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                     height={38}
                     loading="lazy"
                     decoding="async"
-                    className={`${logo.heightClass ?? "h-9"} w-auto object-contain opacity-80 ${logo.filter ?? ""}`}
+                    className={`${logo.heightClass ?? "h-8"} w-auto object-contain opacity-80 ${logo.filter ?? ""}`}
                   />
                 );
                 const caption = logo.caption ? (
@@ -287,20 +287,20 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Google Reviews badge ── */}
-          <div className="flex justify-center py-4">
+          <div className="flex justify-center pt-2 pb-1">
             <GoogleReviewBadge variant="compact" />
           </div>
 
           {/* ── RE/MAX mention ── */}
-          <div className="text-center py-3">
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", fontWeight: 400 }}>
+          <div className="text-center pb-5">
+            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }}>
               {lang === "en" ? "Member of RE/MAX, Marty Waite Team" : "Membre de RE/MAX, Équipe Marty Waite"}
             </p>
           </div>
 
           {/* ── Agency identification block ── */}
-          <address className="py-4 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
+          <address className="py-6 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? (
                   <>
@@ -317,7 +317,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   </>
                 )}
             </p>
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
+            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
               {lang === "en" ? "Office: " : "Bureau : "}
               <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a>
               {"  ·  "}
@@ -328,18 +328,18 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </p>
           </address>
           {/* ── Copyright ── */}
-          <div className="py-5 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)", padding: "0 1rem" }}>{legalText}</p>
-            <p className="mt-2" style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)", padding: "0 1rem" }}>
+          <div className="py-6 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", padding: "0 1rem" }}>{legalText}</p>
+            <p className="mt-2" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.68)", padding: "0 1rem" }}>
               {lang === "en"
                 ? "Independently owned and operated franchisee of RE/MAX Québec"
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
             <div className="mt-2 flex justify-center gap-4">
-              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
+              <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
-              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".75rem", color: "rgba(255,255,255,.7)" }} className="hover:text-white/85 transition-colors">
+              <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
               </Link>
             </div>
