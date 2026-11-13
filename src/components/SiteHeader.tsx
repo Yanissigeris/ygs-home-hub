@@ -347,11 +347,11 @@ const SiteHeader = () => {
             <span
               className="text-[15px] lg:text-[17px]"
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "var(--display)",
                 fontWeight: 500,
                 color: nameColor,
                 whiteSpace: "nowrap",
-                letterSpacing: "0.005em",
+                letterSpacing: "-0.01em",
                 transition: "color 0.3s ease",
               }}
             >
@@ -441,12 +441,12 @@ const SiteHeader = () => {
           <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 1.05, minWidth: 0 }}>
             <span
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "var(--display)",
                 fontWeight: 500,
                 color: nameColor,
                 fontSize: "0.75rem",
                 whiteSpace: "nowrap",
-                letterSpacing: "0.005em",
+                letterSpacing: "-0.01em",
                 textShadow: "0 1px 4px rgba(0,0,0,0.4)",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
