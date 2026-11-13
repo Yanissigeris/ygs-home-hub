@@ -135,7 +135,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
         <div className="section-container">
           {/* ── Brand row ── */}
-          <div className="flex flex-col items-center pt-10 pb-8 sm:pt-12 sm:pb-12">
+          <div className="flex flex-col items-center pt-8 pb-8 sm:pt-12 sm:pb-12">
             <img
               src={logoYgsWhite}
               alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
@@ -146,7 +146,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-5 text-center" style={{ fontSize: ".875rem", color: "rgba(255,255,255,.7)" }}>
+            <p className="mt-5 max-w-[22rem] text-center" style={{ fontSize: ".875rem", color: "rgba(255,255,255,.7)", textWrap: "balance" }}>
               {tagline}
             </p>
 
