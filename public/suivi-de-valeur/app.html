@@ -114,6 +114,7 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
     <h1 id="t-h1"></h1>
     <p class="lead" id="t-lead"></p>
     <a class="btn navy jump" href="#box" id="t-jump"></a>
+    <div class="block"><h2 id="t-whyT"></h2><p id="t-why"></p></div>
     <div class="block"><h2 id="t-how"></h2><ol class="steps" id="t-steps"></ol></div>
     <div class="block"><h2 id="t-get"></h2><ul class="gets" id="t-gets"></ul><p><a id="t-demo" href="/ma-propriete/?c=demo"></a></p></div>
     <div class="who"><img src="/ma-propriete/yanis-about-sm.webp" alt="Yanis Gauthier-Sigeris" width="96" height="96"><div><q id="t-quote"></q><small id="t-who"></small></div></div>
@@ -171,10 +172,12 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       title:"Suivi de valeur | Yanis Gauthier-Sigeris",brand:"Suivi de valeur",agent:"Votre courtier",eye:"Suivi de valeur",
       h1:"Suivez la valeur de votre propriété.",
       lead:"Je commence par évaluer votre propriété moi-même, avec les ventes comparables de votre secteur. Ensuite, vous avez une page privée qui montre votre fourchette de valeur et le marché autour de chez vous. C'est gratuit et vous ne vous engagez à rien.",
+      whyT:"À quoi ça sert",
+      why:"Vous savez où en est la valeur de votre propriété sans la mettre en vente. Le jour où vous pensez à vendre, vous partez d'un chiffre à jour au lieu de repartir de zéro.",
       how:"Comment ça se passe",
       steps:["Vous me donnez l'adresse et vos coordonnées.","Je vous réponds dans les plus brefs délais avec une fourchette de valeur. S'il me manque un détail sur l'état de la propriété, je vous écris d'abord.","Vous recevez le lien de votre page privée. Les chiffres du marché s'y mettent à jour chaque trimestre, et votre fourchette change seulement après que je l'ai revue."],
       get:"Ce que vous voyez sur votre page",
-      gets:["Votre fourchette, avec l'écart depuis mon analyse.","Le prix médian et le nombre de ventes de votre secteur, trimestre par trimestre (source : baromètre de l'APCIQ).","Quand vous voulez un chiffre précis, je refais une analyse complète avec les ventes comparables."],
+      gets:["Votre fourchette de valeur : un prix bas et un prix haut qui situent votre propriété dans le marché, avec l'écart depuis mon analyse.","Les prix de vente et le nombre de ventes dans votre secteur, mis à jour chaque trimestre (source : baromètre de l'APCIQ).","Quand vous voulez un chiffre précis, je refais une analyse complète avec les ventes comparables."],
       demo:"Voir un exemple de page",
       quote:"Je vous donne les chiffres et les options, vous décidez.",
       who:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. Plus de 300 transactions en Outaouais depuis 2017 (source : mon historique Centris).",
@@ -200,10 +203,12 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       title:"Home value tracker | Yanis Gauthier-Sigeris",brand:"Home value tracker",agent:"Your broker",eye:"Home value tracker",
       h1:"Keep track of what your home is worth.",
       lead:"I start by valuing your home myself, using comparable sales in your area. After that, you get a private page showing your value range and the market around you. It's free and you're not committing to anything.",
+      whyT:"What it's for",
+      why:"You know where your home's value stands without putting it up for sale. The day you think about selling, you start from a current number instead of starting over.",
       how:"How it works",
       steps:["You give me the address and your contact details.","I get back to you as soon as possible with a value range. If I'm missing a detail about the condition of the home, I'll write to you first.","You receive the link to your private page. The market numbers update every quarter, and your range only changes after I've reviewed it."],
       get:"What you see on your page",
-      gets:["Your range, with the change since my analysis.","The median price and number of sales in your area, quarter by quarter (source: APCIQ barometer).","When you want a precise number, I redo a full analysis with comparable sales."],
+      gets:["Your value range: a low price and a high price that place your home in the market, with the change since my analysis.","Sale prices and the number of sales in your area, updated every quarter (source: QPAREB barometer).","When you want a precise number, I redo a full analysis with comparable sales."],
       demo:"See a sample page",
       quote:"I give you the numbers and the options, you decide.",
       who:"Yanis Gauthier-Sigeris, residential real estate broker. Over 300 transactions in the Outaouais since 2017 (source: my Centris history).",
@@ -229,7 +234,7 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
   var t=EN?T.en:T.fr, $=function(id){return document.getElementById(id);};
   document.documentElement.lang=EN?"en-CA":"fr-CA"; document.title=t.title;
   function txt(id,s){$(id).textContent=s;}
-  txt("t-brand",t.brand);txt("t-agent",t.agent);txt("t-eye",t.eye);txt("t-h1",t.h1);txt("t-lead",t.lead);txt("t-how",t.how);txt("t-get",t.get);
+  txt("t-brand",t.brand);txt("t-agent",t.agent);txt("t-eye",t.eye);txt("t-h1",t.h1);txt("t-lead",t.lead);txt("t-whyT",t.whyT);txt("t-why",t.why);txt("t-how",t.how);txt("t-get",t.get);
   txt("t-demo",t.demo);txt("t-quote",t.quote);txt("t-who",t.who);txt("t-form",t.form);txt("t-jump",t.form);
   txt("l-pre",t.pre);txt("l-nom",t.nom);txt("l-cou",t.cou);txt("l-cel",t.cel);txt("l-adr",t.adr);txt("l-typ",t.typ);txt("l-freq",t.freq);
   txt("t-c1",t.c1);txt("t-c2",t.c2);txt("t-id1",t.id1);txt("send",t.send);txt("t-fine",t.fine);txt("t-pol",t.pol);$("t-pol").href=t.polUrl;

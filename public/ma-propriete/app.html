@@ -45,6 +45,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .hello{padding:34px 0 6px;display:flex;flex-direction:column;gap:8px}
 .hello h1{font-size:clamp(28px,4.6vw,40px);line-height:1.08;font-weight:600}
 .hello p{color:var(--muted)}
+.hello .what{color:var(--ink);font-size:17px;max-width:640px;margin-top:6px}
 
 .grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:22px;padding:20px 0 56px;align-items:start}
 .col{display:flex;flex-direction:column;gap:22px;min-width:0}
@@ -56,14 +57,25 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .delta{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .pill{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
 .note{background:var(--soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.cmp{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.cmp div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cmp span{font-size:14.5px;color:var(--muted)}
+.cmp b{font-family:var(--head);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.cmp .now span{color:var(--ink);font-weight:600}
+.why{font-size:16px;line-height:1.55}
+.lim{font-size:14.5px;color:var(--muted);border-left:3px solid var(--line);padding-left:12px}
+.how{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.how li{display:flex;gap:12px}
+.how b{font-family:var(--head);font-weight:600;width:16px;flex:none}
+.sub{font-size:15px;color:var(--muted);margin-top:-10px}
 
-.chart{position:relative;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:18px}
+.chart{position:relative;display:flex;flex-direction:column;gap:10px}
 .chart h3{font-size:15px;font-weight:600}
 .chart svg{width:100%;height:auto;display:block}
-.chart .cap{font-size:12.5px;color:var(--muted)}
+.chart .cap{font-size:14px;color:var(--muted)}
 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .stat{background:var(--cream);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
 .stat span{font-size:13px;color:var(--muted)}
 .stat b{font-family:var(--head);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
@@ -96,8 +108,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .state p{color:var(--muted)}
 .state .btn{align-self:flex-start}
 
-@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:1fr 1fr}.agent small{display:none}}
-@media (max-width:420px){.card{padding:20px}.stats{grid-template-columns:1fr}.agent b{display:none}}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}.agent small{display:none}}
+@media (max-width:420px){.card{padding:20px}.stats{grid-template-columns:1fr}.agent b{display:none}.cmp div{flex-direction:column;gap:2px}.cmp b{text-align:left}}
 </style>
 </head>
 <body>
@@ -130,70 +142,94 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
       brand:"Ma propriété", agent:"Votre courtier", load:"Chargement de votre page…",
       demo:"Exemple. La propriété et la fourchette sont fictives. Les chiffres du marché sont ceux de l'APCIQ pour les unifamiliales d'Aylmer.",
       hello:function(p){return "Bonjour "+p+", voici où en est votre propriété.";},
-      eyebrow:"Fourchette indexée", eyebrow0:"Ma fourchette de départ",
-      upd:function(d,q){return "Revue par Yanis le "+d+", avec les ventes publiées au "+q+".";},
-      upd0:function(d){return "Mon analyse du "+d+". La première mise à jour s'affichera ici après ma prochaine révision.";},
-      since:function(d){return "depuis mon analyse du "+d;}, same:"Inchangée",
-      newer:function(q){return "Les chiffres du "+q+" sont sortis. Je révise votre fourchette et je vous écris dès que c'est fait.";},
-      chartT:function(ty,loc){return "Prix médian des "+ty+" "+loc+", par trimestre";},
-      chartC:"Chaque point est le prix médian des 12 mois qui finissent ce trimestre. Source : baromètre résidentiel de l'APCIQ.",
-      sector:function(q){return "Votre secteur, sur 12 mois ("+q+")";},
-      med:"Prix médian", ventes:"Ventes", mov:"Médiane depuis mon analyse", stable:"Stable",
-      src:function(loc,q){return "Source : APCIQ, baromètre résidentiel, "+loc+", "+q+".";},
+      what:"Cette page suit votre fourchette de valeur entre deux analyses, selon les prix de vente dans votre secteur.",
+      eyebrow:"Votre fourchette, ajustée au marché", eyebrow0:"Votre fourchette de départ",
+      upd:function(d){return "Revue par Yanis le "+d+".";},
+      upd0:function(d){return "Mon analyse du "+d+". Je n'ai pas encore fait de mise à jour. La première s'affichera ici.";},
+      cmpA:function(d){return "Mon analyse du "+d;}, cmpB:"Aujourd'hui",
+      down:function(x,p){return "C'est environ "+x+" de moins. Les prix de vente dans votre secteur ont baissé de "+p+" depuis mon analyse.";},
+      up:function(x,p){return "C'est environ "+x+" de plus. Les prix de vente dans votre secteur ont monté de "+p+" depuis mon analyse.";},
+      downN:function(x){return "C'est environ "+x+" de moins qu'à mon analyse.";},
+      upN:function(x){return "C'est environ "+x+" de plus qu'à mon analyse.";},
+      same:"Votre fourchette n'a pas bougé. Les prix de vente dans votre secteur n'ont pas assez changé depuis mon analyse.", sameN:"Votre fourchette n'a pas bougé depuis mon analyse.",
+      lim:"Ce chiffre suit le marché de votre secteur. Il ne tient pas compte de vos travaux ni de l'état actuel de la propriété. Pour un prix précis, je refais une analyse complète.",
+      newer:"Des chiffres plus récents viennent de sortir. Je révise votre fourchette et je vous écris dès que c'est fait.",
+      howT:"Comment je calcule",
+      how:["Je pars de la fourchette de mon analyse.","Chaque trimestre, je regarde de combien les prix de vente ont bougé dans votre secteur.","J'applique ce mouvement à votre fourchette et je la revois avant de la publier. Si le marché bouge de moins de 1 %, je ne la change pas."],
+      mktT:"Les prix de vente dans votre secteur",
+      chartC:"Le prix médian est le prix du milieu : la moitié des propriétés se sont vendues plus cher, l'autre moitié moins cher. Chaque point couvre 12 mois de ventes. Ce sont les ventes du secteur, pas la valeur de votre propriété.",
+      med:function(m){return "Prix médian, 12 mois se terminant en "+m;}, ventes:"Propriétés vendues pendant ces 12 mois",
+      src:function(loc){return "Source : baromètre résidentiel de l'APCIQ, "+loc+".";},
       nomkt:"Les chiffres de votre secteur s'afficheront ici au prochain relevé.",
       lecture:"Ma lecture",
       ctaT:"Vous voulez un chiffre précis?", ctaP:"Je refais une analyse complète avec les ventes comparables de votre secteur, et on la regarde ensemble.",
       cta1:"Demander une nouvelle analyse", cta2:"Appeler Yanis",
-      startT:"Point de départ", start:function(d){return "Mon analyse du "+d+".";},
       worksT:"Avez-vous fait des travaux depuis?", worksP:"Une cuisine refaite ou un sous-sol aménagé change votre valeur, et le marché seul ne le voit pas. Dites-le-moi, j'en tiens compte.", works:"Me parler de mes travaux",
       prefT:"Mes préférences", freq:"Courriels de mise à jour", prefs:"Changer la fréquence", unsub:"Arrêter le suivi",
       F:{C:"À l'anniversaire, et si le marché bouge beaucoup",annuel:"Une fois par année",trimestriel:"Chaque trimestre"},
-      legal:"Fourchette tirée de mon analyse, indexée selon le marché de votre secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
+      legal:"Fourchette tirée de mon analyse et ajustée selon le marché de votre secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
       id:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. RE/MAX Direct inc., agence immobilière, 216, chemin d'Aylmer, Gatineau. "+TEL,
       nfT:"Ce lien ne mène à aucune page.", nfP:"Il a peut-être été mal copié, ou le suivi a été arrêté. Écrivez-moi et je vous renvoie le bon lien.", nfB:"Écrire à Yanis",
       errT:"La page ne se charge pas pour l'instant.", errP:"Réessayez dans quelques minutes. Si ça continue, écrivez-moi.", errB:"Réessayer",
       sAna:"Nouvelle analyse de ma propriété", sWorks:"Travaux faits à ma propriété", sFreq:"Fréquence de mes mises à jour", sStop:"Arrêter mon suivi de valeur", sLink:"Mon lien Ma propriété",
-      types:{"Unifamiliale":"unifamiliales","Copropriété":"copropriétés"}, peri:"dans la périphérie de Gatineau", a:"à ", et:" et "
+      types:{"Unifamiliale":"Maisons unifamiliales","Copropriété":"Copropriétés"}, peri:"dans la périphérie de Gatineau", a:"à ", et:" et ",
+      mois:["mars","juin","septembre","décembre"], moisC:["mars","juin","sept.","déc."]
     },
     en:{
       brand:"My property", agent:"Your broker", load:"Loading your page…",
       demo:"Sample. The property and the range are fictional. Market figures are QPAREB's for single-family homes in Aylmer.",
       hello:function(p){return "Hi "+p+", here's where your property stands.";},
-      eyebrow:"Indexed range", eyebrow0:"My starting range",
-      upd:function(d,q){return "Reviewed by Yanis on "+d+", with sales published as of "+q+".";},
-      upd0:function(d){return "My analysis from "+d+". Your first update will show here after my next review.";},
-      since:function(d){return "since my analysis of "+d;}, same:"Unchanged",
-      newer:function(q){return q+" figures are out. I'm reviewing your range and I'll write you as soon as it's done.";},
-      chartT:function(ty,loc){return "Median price of "+ty+" "+loc+", by quarter";},
-      chartC:"Each point is the median price for the 12 months ending that quarter. Source: QPAREB residential barometer.",
-      sector:function(q){return "Your area, over 12 months ("+q+")";},
-      med:"Median price", ventes:"Sales", mov:"Median since my analysis", stable:"Stable",
-      src:function(loc,q){return "Source: QPAREB residential barometer, "+loc+", "+q+".";},
+      what:"This page tracks your value range between two analyses, based on sale prices in your area.",
+      eyebrow:"Your range, adjusted to the market", eyebrow0:"Your starting range",
+      upd:function(d){return "Reviewed by Yanis on "+d+".";},
+      upd0:function(d){return "My analysis from "+d+". I haven't done an update yet. The first one will show here.";},
+      cmpA:function(d){return "My analysis from "+d;}, cmpB:"Today",
+      down:function(x,p){return "That's about "+x+" less. Sale prices in your area have gone down "+p+" since my analysis.";},
+      up:function(x,p){return "That's about "+x+" more. Sale prices in your area have gone up "+p+" since my analysis.";},
+      downN:function(x){return "That's about "+x+" less than at my analysis.";},
+      upN:function(x){return "That's about "+x+" more than at my analysis.";},
+      same:"Your range hasn't moved. Sale prices in your area haven't changed enough since my analysis.", sameN:"Your range hasn't moved since my analysis.",
+      lim:"This number follows the market in your area. It doesn't account for your renovations or the current condition of the property. For a precise price, I redo a full analysis.",
+      newer:"Newer figures just came out. I'm reviewing your range and I'll write you as soon as it's done.",
+      howT:"How I calculate it",
+      how:["I start from the range in my analysis.","Every quarter, I look at how much sale prices have moved in your area.","I apply that movement to your range and review it before publishing. If the market moves less than 1%, I leave it as is."],
+      mktT:"Sale prices in your area",
+      chartC:"The median price is the middle price: half the properties sold for more, the other half for less. Each point covers 12 months of sales. These are sales in the area, not the value of your property.",
+      med:function(m){return "Median price, 12 months ending "+m;}, ventes:"Properties sold during those 12 months",
+      src:function(loc){return "Source: QPAREB residential barometer, "+loc+".";},
       nomkt:"Figures for your area will show here after the next reading.",
       lecture:"My take",
       ctaT:"Want a precise number?", ctaP:"I'll redo a full analysis with comparable sales in your area, and we'll go over it together.",
       cta1:"Ask for a new analysis", cta2:"Call Yanis",
-      startT:"Starting point", start:function(d){return "My analysis from "+d+".";},
       worksT:"Any renovations since?", worksP:"A new kitchen or a finished basement changes your value, and the market alone can't see it. Let me know and I'll factor it in.", works:"Tell me about my renovations",
       prefT:"My preferences", freq:"Update emails", prefs:"Change the frequency", unsub:"Stop the tracking",
       F:{C:"On the anniversary, and if the market moves a lot",annuel:"Once a year",trimestriel:"Every quarter"},
-      legal:"Range taken from my analysis, indexed to the market in your area. This is not a new opinion of value or a certified appraisal.",
+      legal:"Range taken from my analysis and adjusted to the market in your area. This is not a new opinion of value or a certified appraisal.",
       id:"Yanis Gauthier-Sigeris, residential real estate broker. RE/MAX Direct inc., real estate agency, 216 chemin d'Aylmer, Gatineau. "+TEL,
       nfT:"This link doesn't lead to a page.", nfP:"It may have been copied incorrectly, or the tracking was stopped. Write me and I'll send you the right link.", nfB:"Write to Yanis",
       errT:"The page isn't loading right now.", errP:"Try again in a few minutes. If it keeps happening, write me.", errB:"Try again",
       sAna:"New analysis of my property", sWorks:"Renovations to my property", sFreq:"Frequency of my updates", sStop:"Stop my value tracking", sLink:"My property link",
-      types:{"Unifamiliale":"single-family homes","Copropriété":"condos"}, peri:"in the area around Gatineau", a:"in ", et:" and "
+      types:{"Unifamiliale":"Single-family homes","Copropriété":"Condos"}, peri:"in the area around Gatineau", a:"in ", et:" and ",
+      mois:["March","June","September","December"], moisC:["Mar","Jun","Sep","Dec"]
     }
   };
   T.tu=Object.assign({},T.vous,{
     agent:"Ton courtier", load:"Chargement de ta page…",
     hello:function(p){return "Salut "+p+", voici où en est ta propriété.";},
-    newer:function(q){return "Les chiffres du "+q+" sont sortis. Je révise ta fourchette et je t'écris dès que c'est fait.";},
-    sector:function(q){return "Ton secteur, sur 12 mois ("+q+")";},
+    what:"Cette page suit ta fourchette de valeur entre deux analyses, selon les prix de vente dans ton secteur.",
+    eyebrow:"Ta fourchette, ajustée au marché", eyebrow0:"Ta fourchette de départ",
+    down:function(x,p){return "C'est environ "+x+" de moins. Les prix de vente dans ton secteur ont baissé de "+p+" depuis mon analyse.";},
+    up:function(x,p){return "C'est environ "+x+" de plus. Les prix de vente dans ton secteur ont monté de "+p+" depuis mon analyse.";},
+    same:"Ta fourchette n'a pas bougé. Les prix de vente dans ton secteur n'ont pas assez changé depuis mon analyse.", sameN:"Ta fourchette n'a pas bougé depuis mon analyse.",
+    lim:"Ce chiffre suit le marché de ton secteur. Il ne tient pas compte de tes travaux ni de l'état actuel de la propriété. Pour un prix précis, je refais une analyse complète.",
+    newer:"Des chiffres plus récents viennent de sortir. Je révise ta fourchette et je t'écris dès que c'est fait.",
+    how:["Je pars de la fourchette de mon analyse.","Chaque trimestre, je regarde de combien les prix de vente ont bougé dans ton secteur.","J'applique ce mouvement à ta fourchette et je la revois avant de la publier. Si le marché bouge de moins de 1 %, je ne la change pas."],
+    mktT:"Les prix de vente dans ton secteur",
+    chartC:"Le prix médian est le prix du milieu : la moitié des propriétés se sont vendues plus cher, l'autre moitié moins cher. Chaque point couvre 12 mois de ventes. Ce sont les ventes du secteur, pas la valeur de ta propriété.",
     nomkt:"Les chiffres de ton secteur s'afficheront ici au prochain relevé.",
     ctaT:"Tu veux un chiffre précis?", ctaP:"Je refais une analyse complète avec les ventes comparables de ton secteur, et on la regarde ensemble.",
     worksT:"As-tu fait des travaux depuis?", worksP:"Une cuisine refaite ou un sous-sol aménagé change ta valeur, et le marché seul ne le voit pas. Dis-le-moi, j'en tiens compte.",
-    legal:"Fourchette tirée de mon analyse, indexée selon le marché de ton secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
+    legal:"Fourchette tirée de mon analyse et ajustée selon le marché de ton secteur. Ce n'est pas une nouvelle opinion de valeur ni une évaluation agréée.",
     nfP:"Il a peut-être été mal copié, ou le suivi a été arrêté. Écris-moi et je te renvoie le bon lien.",
     errP:"Réessaie dans quelques minutes. Si ça continue, écris-moi."
   });
@@ -207,7 +243,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
   var pct=function(x){var v=Math.round(Math.abs(x)*1000)/10,s=x>0?"+":(x<0?"−":"");return L==="en"?s+v+"%":s+String(v).replace(".",",")+" %";};
   var date=function(iso){var d=new Date(iso+"T12:00:00");return isNaN(d)?iso:new Intl.DateTimeFormat(L==="en"?"en-CA":"fr-CA",{day:"numeric",month:"long",year:"numeric"}).format(d);};
   var quarter=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");if(!m)return q||"";return L==="en"?"Q"+m[1]+" "+m[2]:(m[1]==="1"?"1er":m[1]+"e")+" trimestre de "+m[2];};
-  var qshort=function(q){return L==="en"?String(q).replace(/^T/,"Q"):q;};
+  var qshort=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");return m?t.moisC[+m[1]-1]+" "+m[2]:(q||"");};
+  var qlong=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");return m?t.mois[+m[1]-1]+" "+m[2]:(q||"");};
+  var pabs=function(x){var v=Math.round(Math.abs(x)*1000)/10;return L==="en"?v+"%":String(v).replace(".",",")+" %";};
   var qn=function(q){var m=/^T([1-4]) (\d{4})$/.exec(q||"");return m?(+m[2])*4+(+m[1]):0;};
   function place(ind){var m=/\(([^)]+)\)/.exec(ind||""),x=m?m[1]:String(ind||"");if(x==="Périphérie de Gatineau")return t.peri;return t.a+x.replace(" et ",t.et);}
   function placeName(ind){var m=/\(([^)]+)\)/.exec(ind||""),x=m?m[1]:String(ind||"");if(x==="Périphérie de Gatineau")return L==="en"?"area around Gatineau":"périphérie de Gatineau";return x.replace(" et ",t.et);}
@@ -235,26 +273,31 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
   function view(d){lastData=d;lastW=cw();
     var c=d.client,m=d.marche||[],a=c.actuel,dep=c.depart,last=m.length?m[m.length-1]:null,base=m.length?m[0]:null;
     var cur=a||dep,changed=a&&(a.basse!==dep.basse||a.haute!==dep.haute);
-    var ecart=a?((a.basse+a.haute)/(dep.basse+dep.haute)-1):0;
+    var diff=a?((a.basse+a.haute)-(dep.basse+dep.haute))/2:0;
     var newer=a&&last&&qn(last.t)>qn(a.trimestre);
-    var mov=last&&base&&last!==base?last.med/base.med-1:null;
-    var loc=place(c.secteurIndice),ty=t.types[c.type]||"";
-    var h='<div class="in"><div class="hello"><h1>'+esc(t.hello(c.prenom))+'</h1><p>'+esc(c.adresse)+'</p></div><div class="grid"><div class="col">';
-    h+='<section class="card"><p class="eyebrow">'+esc(a?t.eyebrow:t.eyebrow0)+'</p><p class="range">'+esc(money(cur.basse))+(L==="en"?" to ":" à ")+esc(money(cur.haute))+'</p>'+
-       '<p class="meta">'+esc(a?t.upd(date(a.approuveLe),quarter(a.trimestre)):t.upd0(date(dep.date)))+'</p>'+
-       (a?'<div class="delta"><span class="pill">'+esc(changed?pct(ecart):t.same)+'</span><span class="meta">'+esc(t.since(date(dep.date)))+'</span></div>':'')+
-       (newer?'<p class="note">'+esc(t.newer(quarter(last.t)))+'</p>':'');
-    if(m.length>=2&&ty) h+='<div class="chart"><h3>'+esc(t.chartT(ty,loc))+'</h3>'+chart(m,cw())+'<p class="cap">'+esc(t.chartC)+'</p>'+
-       '<div class="sr"><table><caption>'+esc(t.chartT(ty,loc))+'</caption><tbody>'+m.map(function(s){return '<tr><th scope="row">'+esc(qshort(s.t))+'</th><td>'+esc(money(s.med))+'</td></tr>';}).join("")+'</tbody></table></div></div>';
-    h+='</section>';
-    h+='<section class="card"><h2>'+esc(last?t.sector(qshort(last.t)):t.sector("…"))+'</h2>';
-    if(last){h+='<div class="stats"><div class="stat"><span>'+esc(t.med)+'</span><b>'+esc(money(last.med))+'</b></div><div class="stat"><span>'+esc(t.ventes)+'</span><b>'+esc(num(last.ventes))+'</b></div>'+
-        (mov!==null?'<div class="stat"><span>'+esc(t.mov)+'</span><b>'+esc(Math.abs(mov)<0.005?t.stable:pct(mov))+'</b></div>':'')+'</div><p class="meta">'+esc(t.src(placeName(c.secteurIndice),qshort(last.t)))+'</p>';}
+    /* Mouvement du marché entre le trimestre de l'analyse et celui de la fourchette approuvée. */
+    var at=null;if(a)m.forEach(function(x){if(x.t===a.trimestre)at=x;});
+    var mov=at&&base&&at!==base?at.med/base.med-1:null;
+    var okMov=mov!==null&&Math.abs(mov)>=0.001&&((diff<0&&mov<0)||(diff>0&&mov>0));
+    var why=!a?"":(!changed||diff===0?(mov!==null&&Math.abs(mov)>=0.01?t.sameN:t.same):(diff<0?(okMov?t.down(money(-diff),pabs(mov)):t.downN(money(-diff))):(okMov?t.up(money(diff),pabs(mov)):t.upN(money(diff)))));
+    var loc=place(c.secteurIndice),ty=t.types[c.type]||"",to=L==="en"?" to ":" à ";
+    var h='<div class="in"><div class="hello"><h1>'+esc(t.hello(c.prenom))+'</h1><p>'+esc(c.adresse)+'</p><p class="what">'+esc(t.what)+'</p></div><div class="grid"><div class="col">';
+    h+='<section class="card"><p class="eyebrow">'+esc(a?t.eyebrow:t.eyebrow0)+'</p><p class="range">'+esc(money(cur.basse))+to+esc(money(cur.haute))+'</p>'+
+       '<p class="meta">'+esc(a?t.upd(date(a.approuveLe)):t.upd0(date(dep.date)))+'</p>'+
+       (a?'<div class="cmp"><div><span>'+esc(t.cmpA(date(dep.date)))+'</span><b>'+esc(money(dep.basse))+to+esc(money(dep.haute))+'</b></div>'+
+          '<div class="now"><span>'+esc(t.cmpB)+'</span><b>'+esc(money(a.basse))+to+esc(money(a.haute))+'</b></div></div><p class="why">'+esc(why)+'</p>':'')+
+       '<p class="lim">'+esc(t.lim)+'</p>'+
+       (newer?'<p class="note">'+esc(t.newer)+'</p>':'')+'</section>';
+    h+='<section class="card"><h2>'+esc(t.mktT)+'</h2>'+(ty?'<p class="sub">'+esc(ty+" "+loc)+'</p>':'');
+    if(m.length>=2&&ty) h+='<div class="chart">'+chart(m,cw())+'<p class="cap">'+esc(t.chartC)+'</p>'+
+       '<div class="sr"><table><caption>'+esc(t.mktT)+'</caption><tbody>'+m.map(function(x){return '<tr><th scope="row">'+esc(qshort(x.t))+'</th><td>'+esc(money(x.med))+'</td></tr>';}).join("")+'</tbody></table></div></div>';
+    if(last){h+='<div class="stats"><div class="stat"><span>'+esc(t.med(qlong(last.t)))+'</span><b>'+esc(money(last.med))+'</b></div><div class="stat"><span>'+esc(t.ventes)+'</span><b>'+esc(num(last.ventes))+'</b></div></div>'+
+        '<p class="meta">'+esc(t.src(placeName(c.secteurIndice)))+'</p>';}
     else h+='<p class="meta">'+esc(t.nomkt)+'</p>';
     if(c.lecture) h+='<div class="read"><img src="/ma-propriete/yanis-about-sm.webp" alt="Yanis Gauthier-Sigeris" width="52" height="52"><div><p class="eyebrow">'+esc(t.lecture)+'</p><p>'+esc(c.lecture)+'</p></div></div>';
     h+='</section></div><aside class="col">';
     h+='<section class="card cta"><h2>'+esc(t.ctaT)+'</h2><p>'+esc(t.ctaP)+'</p><a class="btn white" href="'+esc(mailto(t.sAna,c))+'">'+esc(t.cta1)+'</a><a class="btn ghost" href="'+TELH+'">'+esc(t.cta2)+' · '+TEL+'</a></section>';
-    if(a) h+='<section class="card"><p class="eyebrow">'+esc(t.startT)+'</p><p class="range" style="font-size:24px">'+esc(money(dep.basse))+(L==="en"?" to ":" à ")+esc(money(dep.haute))+'</p><p class="meta">'+esc(t.start(date(dep.date)))+'</p></section>';
+    h+='<section class="card"><h2>'+esc(t.howT)+'</h2><ol class="how">'+t.how.map(function(x,i){return '<li><b>'+(i+1)+'</b><span>'+esc(x)+'</span></li>';}).join("")+'</ol></section>';
     h+='<section class="card"><h2>'+esc(t.worksT)+'</h2><p class="meta">'+esc(t.worksP)+'</p><a class="btn line" href="'+esc(mailto(t.sWorks,c))+'">'+esc(t.works)+'</a></section>';
     h+='<section class="card"><h2>'+esc(t.prefT)+'</h2><div class="rows"><div><span>'+esc(t.freq)+'</span><b>'+esc(t.F[c.frequence]||t.F.C)+'</b></div></div><div class="links"><a href="'+esc(mailto(t.sFreq,c))+'">'+esc(t.prefs)+'</a><a href="'+esc(mailto(t.sStop,c))+'">'+esc(t.unsub)+'</a></div></section>';
     h+='</aside></div></div>';
