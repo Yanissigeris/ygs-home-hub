@@ -549,7 +549,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{
                 zIndex: 2,
                 background:
-                  "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.68) 50%, rgba(0,14,53,0.30) 80%, rgba(0,14,53,0.12) 100%)",
+                  "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.72) 55%, rgba(0,14,53,0.46) 80%, rgba(0,14,53,0.28) 100%)",
               }}
             />
           </>
@@ -1016,8 +1016,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             href={photoCredit.href}
             target="_blank"
             rel="noopener noreferrer license"
-            className="absolute bottom-2 left-3 z-[25]"
-            style={{ fontSize: "10px", color: "rgba(255,255,255,0.75)", textShadow: "0 1px 3px rgba(0,0,0,0.6)", textDecoration: "none" }}
+            className="absolute bottom-2 left-3 z-[25] rounded-full px-2 py-0.5"
+            style={{ fontSize: "10px", color: "rgba(255,255,255,0.9)", background: "rgba(0,14,53,0.6)", textDecoration: "none" }}
           >
             {photoCredit.text}
           </a>
