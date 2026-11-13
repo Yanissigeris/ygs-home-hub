@@ -35,11 +35,11 @@ const SectorLinks = ({
   const visible = teaserCount ? sectors.slice(0, teaserCount) : sectors;
   return (
     <section id={id} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-      <div className="section-container max-w-[52rem]">
+      <div className="section-container">
         <div
-          className="text-center mb-6 sm:mb-10 max-w-[40rem] mx-auto"
+          className="mb-6 sm:mb-10 max-w-[40rem]"
         >
-          <SectionHeading overline={overline} title={title} centered />
+          <SectionHeading overline={overline} title={title} />
         </div>
         <div className={`grid gap-4 sm:gap-5 ${teaserCount ? "sm:grid-cols-3" : "sm:grid-cols-2 md:grid-cols-3"}`}>
           {visible.map((s, i) => (
@@ -60,7 +60,7 @@ const SectorLinks = ({
           ))}
         </div>
         {seeAllHref && seeAllLabel && (
-          <div className="mt-5 text-center">
+          <div className="mt-5">
             <Link to={seeAllHref} className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary hover:underline">
               {seeAllLabel}
               <ArrowRight size={14} />

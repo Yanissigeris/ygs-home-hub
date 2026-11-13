@@ -32,18 +32,18 @@ const ReviewSection = React.forwardRef<HTMLElement, ReviewSectionProps>(
     <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
       <div className="section-container">
         <div
-          className="text-center mb-6 sm:mb-8"
+          className="mb-6 sm:mb-8 max-w-[40rem]"
         >
           {/* overline retiré (cohérence accueil) */}
           <h2>{title}</h2>
         </div>
-        <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} ${quote ? "max-w-[64rem] sm:gap-14" : "max-w-[52rem]"} ${columns === 3 ? "lg:max-w-none" : ""} mx-auto`}>
+        <div className={`grid gap-6 ${columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"} ${quote ? "max-w-[64rem] sm:gap-14" : "max-w-[52rem]"} ${columns === 3 ? "lg:max-w-none" : ""}`}>
           {reviews.map((review, i) => (
             <ReviewCard key={review.id} review={review} variant={variant} index={i} quote={quote} />
           ))}
         </div>
         {reviewsPageHref && reviewsPageLabel && (
-          <div className="mt-5 text-center">
+          <div className="mt-5">
             <Link to={reviewsPageHref} className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-primary hover:underline">
               {reviewsPageLabel}
               <ArrowRight size={14} />

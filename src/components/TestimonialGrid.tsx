@@ -189,10 +189,9 @@ const TestimonialGrid = React.forwardRef<HTMLElement, TestimonialGridProps>(
     return (
       <section ref={ref} className="relative overflow-hidden section-rhythm" style={{ background: "var(--cream-light)" }}>
         <div className="section-container relative">
-          <div className="mx-auto max-w-2xl text-center">
-            {overline && <p className="label-overline mb-2 justify-center">{overline}</p>}
+          <div className="max-w-2xl">
             <h2>{title}</h2>
-            <div className="mt-5 flex justify-center">
+            <div className="mt-5 flex">
               <GoogleReviewBadge />
             </div>
           </div>

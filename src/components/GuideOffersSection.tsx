@@ -32,65 +32,56 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
 
   return (
     <>
-      <section className="relative overflow-hidden section-rhythm" style={{ background: "var(--white)" }}>
-        {/* Radial gradient */}
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse at top center, rgba(0,14,53,.03) 0%, transparent 60%)" }} aria-hidden="true" />
-
-        <div className="section-container relative">
+      <section className="section-rhythm" style={{ background: "var(--white)" }}>
+        <div className="section-container">
           {/* Header */}
           <div className="mb-8 sm:mb-12 max-w-[36rem]">
-            
             <h2>{heading.title}</h2>
             <p className="mt-3" style={{ fontSize: ".92rem", color: "hsl(var(--muted-foreground))", lineHeight: 1.7 }}>{heading.subtitle}</p>
           </div>
 
-          {/* Desktop: 4-col grid */}
-          <div className="hidden md:grid grid-cols-1 min-[481px]:grid-cols-2 lg:grid-cols-4">
-            {guides.map((g, i) => (
-              <button
-                key={g.guideType}
-                type="button"
-                className="group relative flex flex-col text-left transition-[background-color,box-shadow] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                style={{
-                  padding: "clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem)",
-                  background: "var(--cream)",
-                  borderRight: i < guides.length - 1 ? "1px solid var(--border)" : "none",
-                  borderBottom: "1px solid var(--border)",
-                }}
-                onClick={() => setModalGuide(g.guideType)}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "var(--parchment)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "var(--cream)"; }}
-              >
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100" style={{ background: "var(--gold-dark)" }} aria-hidden="true" />
-                <h3 style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 3vw, 1.35rem)", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em" }}>{g.title}</h3>
-                <p className="mt-2 flex-1" style={{ fontSize: ".82rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.75 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-4 inline-flex items-center gap-2 text-[0.875rem] font-semibold" style={{ color: "var(--gold-text)", minHeight: 44 }}>{g.cta}<ArrowRight size={14} className="transition-transform [@media(hover:hover)]:group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile: 2x2 compact grid */}
-          <div className="md:hidden grid grid-cols-2" style={{ gap: 1, background: "var(--border)" }}>
-            {guides.map((g) => (
-              <button
-                key={g.guideType}
-                type="button"
-                className="flex flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-dark)] focus-visible:ring-inset"
-                style={{ padding: "1.25rem", background: "var(--white)" }}
-                onClick={() => setModalGuide(g.guideType)}
-              >
-                <h3 style={{ fontFamily: "var(--serif)", fontSize: "1rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "-.01em", lineHeight: 1.3 }}>{g.title}</h3>
-                <p className="mt-1.5 flex-1" style={{ fontSize: ".78rem", fontWeight: 400, color: "hsl(var(--muted-foreground))", lineHeight: 1.6 }}>{g.subtitle}</p>
-                <span aria-hidden="true" className="mt-3 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold" style={{ color: "var(--gold-text)", lineHeight: 1.3, minHeight: 44 }}>
-                  {lang === "en" ? "Get it" : "Recevoir"}
-                  <ArrowRight size={13} />
-                </span>
-              </button>
-            ))}
+          {/* One set of guide covers: swipe row on phones, 4 columns on desktop.
+              Same box language as the CardGrid sections (navy lead, white boxes). */}
+          <div className="cardgrid-track -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:scroll-px-6 sm:px-6 md:mx-0 md:grid md:snap-none md:grid-cols-2 md:gap-4 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-4 lg:gap-5">
+            {guides.map((g, i) => {
+              const lead = i === 0;
+              return (
+                <button
+                  key={g.guideType}
+                  type="button"
+                  className={`group flex w-[72%] max-w-[17rem] shrink-0 snap-start flex-col rounded-[1.25rem] p-6 text-left transition-[transform,box-shadow] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--action)] focus-visible:ring-offset-2 md:w-auto md:max-w-none md:shrink lg:min-h-[19rem] lg:rounded-[1.5rem] lg:p-8 [@media(hover:hover)]:hover:-translate-y-0.5 ${
+                    lead
+                      ? "bg-[var(--ink)]"
+                      : "border border-[rgba(0,14,53,0.09)] bg-[var(--cream)] shadow-[0_1px_2px_rgba(0,14,53,0.04),0_18px_40px_-24px_rgba(0,14,53,0.28)]"
+                  }`}
+                  onClick={() => setModalGuide(g.guideType)}
+                >
+                  <h3
+                    className="[font-family:var(--display)] text-[1.5rem] font-semibold leading-[1.05] tracking-[-0.03em] lg:text-[1.75rem]"
+                    style={{ color: lead ? "var(--cream)" : "var(--ink)" }}
+                  >
+                    {g.title}
+                  </h3>
+                  <p
+                    className="mt-3 flex-1 text-[0.9375rem] leading-[1.6]"
+                    style={{ color: lead ? "rgba(247,244,238,0.78)" : "#4A5475" }}
+                  >
+                    {g.subtitle}
+                  </p>
+                  <span
+                    aria-hidden="true"
+                    className="mt-8 inline-flex min-h-[44px] items-center gap-2 text-[0.875rem] font-semibold"
+                    style={{ color: lead ? "var(--cream)" : "var(--gold-text)" }}
+                  >
+                    {g.cta}
+                    <ArrowRight size={14} className="transition-transform [@media(hover:hover)]:group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
-
       {modalGuide && (
         <GuideModal open={!!modalGuide} onOpenChange={(v) => { if (!v) setModalGuide(null); }} guideType={modalGuide} lang={lang} />
       )}

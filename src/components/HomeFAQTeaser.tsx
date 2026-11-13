@@ -58,7 +58,6 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
           <div className="flex flex-col lg:grid lg:grid-cols-[minmax(360px,1.1fr)_2fr] lg:gap-[6rem]">
             {/* Left sidebar — sticky on desktop, normal block on mobile */}
             <div className="lg:sticky lg:top-[100px] lg:self-start mb-6 lg:mb-0">
-              <p className="label-overline mb-2">{overline}</p>
               <h2>{title}</h2>
               <p className="mt-4" style={{ fontSize: ".88rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.7 }}>
                 Voici les réponses aux questions que j'entends le plus souvent.

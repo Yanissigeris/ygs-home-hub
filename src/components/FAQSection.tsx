@@ -93,11 +93,10 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
 
     return (
       <section ref={ref} className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}>
-        <div className="section-container max-w-[44rem]">
+        <div className="section-container lg:grid lg:grid-cols-[5fr_7fr] lg:gap-x-[4.5rem]">
           <div
-            className="text-center mb-5 sm:mb-8"
+            className="mb-6 sm:mb-8 lg:mb-0 lg:sticky lg:top-[110px] lg:self-start"
           >
-            <p className="label-overline mb-2 justify-center">FAQ</p>
             <h2>{resolvedTitle}</h2>
             {updated && (
               <p className="mt-3 text-xs text-muted-foreground">
@@ -110,6 +109,7 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
             )}
           </div>
 
+          <div>
           <div ref={accordionRef} id={accordionId}>
             <Accordion type="single" collapsible defaultValue="faq-0">
               {visibleItems.map((item, i) => (
@@ -146,12 +146,13 @@ const FAQSection = React.forwardRef<HTMLElement, FAQSectionProps>(
               onClick={() => setExpanded(true)}
               aria-expanded={expanded}
               aria-controls={accordionId}
-              className="mt-4 mx-auto flex min-h-[44px] items-center gap-1.5 px-3 text-[0.875rem] font-medium text-primary hover:text-primary/80 transition-colors"
+              className="mt-4 flex min-h-[44px] items-center gap-1.5 px-3 text-[0.875rem] font-medium text-primary hover:text-primary/80 transition-colors"
             >
               {lang === "en" ? `Show all ${items.length} questions` : `Voir les ${items.length} questions`}
               <ChevronDown size={14} aria-hidden="true" />
             </button>
           )}
+          </div>
         </div>
       </section>
     );

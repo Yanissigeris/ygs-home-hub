@@ -50,19 +50,19 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
           {/* Pull quote */}
           <blockquote
             style={{
-              borderLeft: "2px solid var(--ink)",
-              paddingLeft: "20px",
               margin: "0 0 2rem 0",
             }}
           >
           <p
               style={{
-                fontFamily: "var(--serif)",
-                fontSize: "clamp(1.5rem, 3.2vw, 2.2rem)",
-                fontWeight: 400,
+                fontFamily: "var(--display)",
+                fontSize: "clamp(1.75rem, 3.2vw, 2.5rem)",
+                fontWeight: 500,
                 fontStyle: "normal",
+                letterSpacing: "-0.025em",
                 color: "var(--cream)",
-                lineHeight: 1.3,
+                lineHeight: 1.15,
+                textWrap: "balance",
               }}
             >
               {c.quote}
@@ -109,8 +109,8 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
         </div>
 
         {/* ─── Right column: photo ─── */}
-        <div className="order-1 lg:order-2 relative mx-auto max-w-[320px] lg:max-w-none">
-          <div className="relative overflow-hidden" style={{ borderRadius: 0 }}>
+        <div className="order-1 lg:order-2 relative w-full max-w-[420px] lg:max-w-none">
+          <div className="relative overflow-hidden" style={{ borderRadius: 24 }}>
             <picture>
               {yanisAbout.sources.avif && (
                 <source
@@ -137,16 +137,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </picture>
-            {/* Warm overlay */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "var(--ink)",
-                opacity: 0.2,
-                mixBlendMode: "multiply",
-              }}
-              aria-hidden="true"
-            />
           </div>
         </div>
       </div>

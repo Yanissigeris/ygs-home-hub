@@ -47,19 +47,6 @@ const ValuationCTA = ({ lang: langProp }: Props) => {
     >
       <div className="section-container">
         <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
-          <p
-            style={{
-              fontSize: ".72rem",
-              fontWeight: 600,
-              letterSpacing: ".18em",
-              textTransform: "uppercase",
-              color: "hsl(var(--muted-foreground))",
-              margin: 0,
-            }}
-          >
-            {c.eyebrow}
-          </p>
-
           <h2
             style={{
               fontFamily: "var(--serif)",

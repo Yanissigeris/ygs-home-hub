@@ -36,11 +36,11 @@ const FunnelNextStep = React.forwardRef<HTMLElement, FunnelNextStepProps>(
       ref={ref}
       className={`section-padding ${background === "alt" ? "bg-[var(--cream)]" : background === "white" ? "bg-white" : "bg-background"}`}
     >
-      <div className="section-container max-w-[56rem]">
+      <div className="section-container">
         <div
-          className="text-center mb-10 max-w-[40rem] mx-auto"
+          className="mb-10 max-w-[40rem]"
         >
-          <SectionHeading overline={overline} title={title} subtitle={subtitle} centered />
+          <SectionHeading overline={overline} title={title} subtitle={subtitle} />
         </div>
         <div className={`grid gap-5 ${steps.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
           {steps.map((step, i) => (

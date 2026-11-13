@@ -35,7 +35,7 @@ const CalculatorsSection = () => {
       <div className="section-container">
         <div
         >
-          <SectionHeading overline={l.overline} title={l.title} subtitle={l.subtitle} centered />
+          <SectionHeading overline={l.overline} title={l.title} subtitle={l.subtitle} />
 
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <Suspense fallback={<div className="h-64 animate-pulse rounded-[var(--card-radius)] bg-muted/30" />}>
@@ -47,8 +47,8 @@ const CalculatorsSection = () => {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-10 text-center">
-            <p className="prose-body mx-auto mb-5">{l.cta}</p>
+          <div className="mt-10">
+            <p className="prose-body mb-5">{l.cta}</p>
             <Button
               asChild
               size="lg"
