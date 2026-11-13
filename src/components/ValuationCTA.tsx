@@ -50,14 +50,14 @@ const ValuationCTA = ({ lang: langProp }: Props) => {
         <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
           <h2
             style={{
-              fontFamily: "var(--serif)",
-              fontSize: isMobile ? "1.85rem" : "2.4rem",
-              fontWeight: 500,
+              fontFamily: "var(--display)",
+              fontSize: isMobile ? "1.875rem" : "2.5rem",
+              fontWeight: 600,
               color: "var(--ink)",
-              lineHeight: 1.15,
-              marginTop: "1.25rem",
+              lineHeight: 1.08,
+              marginTop: 0,
               marginBottom: 0,
-              letterSpacing: "-0.01em",
+              letterSpacing: "-0.03em",
             }}
           >
             {c.heading}

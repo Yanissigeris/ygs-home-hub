@@ -87,10 +87,10 @@ const TableRow = ({ name, detail, href }: { name: string; detail: string; href: 
     }}
   >
     <div className="min-w-0">
-      <p style={{ fontSize: ".88rem", fontWeight: 600, color: "rgba(255,255,255,0.75)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
-      <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,0.55)" }} className="truncate">{detail}</p>
+      <p style={{ fontSize: ".9375rem", fontWeight: 600, color: "rgba(255,255,255,0.92)", letterSpacing: "-.01em" }} className="truncate">{name}</p>
+      <p className="mt-0.5 truncate" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,0.66)" }}>{detail}</p>
     </div>
-    <span className="shrink-0 transition-transform duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.55)", fontSize: ".75rem" }}>
+    <span className="shrink-0 transition-transform duration-200 group-hover:translate-x-1" style={{ color: "rgba(255,255,255,0.6)", fontSize: ".875rem" }}>
       <span className="group-hover:hidden">→</span>
       <span className="hidden group-hover:inline" style={{ color: "var(--gold)" }}>→</span>
     </span>
@@ -120,7 +120,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         >
           <div className="lg:border-r" style={{ borderRight: "none" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
+              <p style={{ fontSize: ".6875rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.78)" }}>
                 {cfg.areasHeading}
               </p>
             </div>
@@ -131,7 +131,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
           </div>
           <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.7)" }}>
+              <p style={{ fontSize: ".6875rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.78)" }}>
                 {cfg.servicesHeading}
               </p>
             </div>

@@ -20,6 +20,7 @@ const t = {
     statusNew: "Nouveau",
     statusSold: "Vendu",
     statusFeatured: "En vedette",
+    askingPrice: "Prix demandé",
   },
   en: {
     overline: "FEATURED PROPERTIES",
@@ -30,6 +31,7 @@ const t = {
     statusNew: "New",
     statusSold: "Sold",
     statusFeatured: "Featured",
+    askingPrice: "Asking price",
   },
 };
 
@@ -67,7 +69,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
                 decoding="async"
                 width={648}
                 height={486}
-                style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
+                style={{ transition: "transform 0.7s cubic-bezier(.16,1,.3,1)" }}
               />
             );
           }
@@ -85,47 +87,51 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
                 decoding="async"
                 width={648}
                 height={486}
-                style={{ filter: "saturate(0.88)", transition: "transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s" }}
-                onMouseEnter={(e) => { e.currentTarget.style.filter = "saturate(1)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.filter = "saturate(0.88)"; }}
+                style={{ transition: "transform 0.7s cubic-bezier(.16,1,.3,1)" }}
                 onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.parentElement!.classList.remove("img-shimmer"); }}
                 onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; const wrap = t.parentElement!.parentElement!; wrap.style.background = "var(--ink)"; wrap.classList.remove("img-shimmer"); }}
               />
             </picture>
           );
         })()}
+        {/* One badge style for every status; a small dot carries the difference. */}
         <span
-          className="featured-badge"
+          className="featured-badge inline-flex items-center gap-1.5"
           style={{
             position: "absolute",
             top: "12px",
             left: "12px",
-            background: p.status === "sold" ? "var(--cream)" : "var(--ink)",
-            color: p.status === "sold" ? "var(--ink)" : "var(--white)",
-            padding: "6px 12px",
-            fontSize: "10.5px",
-            fontWeight: 700,
-            letterSpacing: "0.14em",
+            background: "rgba(247,244,238,0.94)",
+            color: "var(--ink)",
+            padding: "6px 11px 6px 10px",
+            fontSize: "11px",
+            fontWeight: 600,
+            letterSpacing: "0.1em",
             textTransform: "uppercase",
             zIndex: 2,
             borderRadius: 999,
-            boxShadow: p.status === "sold"
-              ? "0 3px 10px rgba(0,14,53,0.25)"
-              : "0 3px 10px rgba(0,14,53,0.30)",
+            boxShadow: "0 2px 8px rgba(0,14,53,0.18)",
           }}
         >
+          <span
+            aria-hidden="true"
+            style={{ width: 6, height: 6, borderRadius: 999, background: p.status === "sold" ? "rgba(0,14,53,0.45)" : "var(--action)" }}
+          />
           {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
         </span>
-        <div className="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(255,255,255,0.8), transparent)" }} />
       </div>
 
-      {/* Gold top border — always visible, intensifies on hover */}
-      <div className="h-[2px] transition-colors duration-300 ease-out bg-[rgba(51,102,255,0.2)] group-hover:bg-[var(--gold)]" />
+      {/* Accent line, shown on hover only */}
+      <div className="h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[var(--gold)]" />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+        {/* Every card shows the listing price (sold ones too), so say so; same row on every card keeps prices aligned. */}
+        <p style={{ fontFamily: "var(--sans)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5475", marginBottom: ".25rem" }}>
+          {strings.askingPrice}
+        </p>
         {/* Price */}
-        <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.3rem, 2.5vw, 1.6rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.15, marginBottom: ".5rem" }}>
+        <p style={{ fontFamily: "var(--display)", fontSize: "clamp(1.375rem, 2.5vw, 1.625rem)", fontWeight: 600, letterSpacing: "-0.025em", color: "var(--ink)", lineHeight: 1.1, marginBottom: ".5rem" }}>
           {p.price}
         </p>
 
