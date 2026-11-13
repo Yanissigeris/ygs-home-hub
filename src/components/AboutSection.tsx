@@ -137,16 +137,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
                 onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </picture>
-            {/* Warm overlay */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "var(--ink)",
-                opacity: 0.2,
-                mixBlendMode: "multiply",
-              }}
-              aria-hidden="true"
-            />
           </div>
         </div>
       </div>
