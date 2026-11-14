@@ -335,12 +335,15 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 ? "Independently owned and operated franchisee of RE/MAX Québec"
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
-            <div className="mt-2 flex justify-center gap-4">
+            <div className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1">
               <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
               <Link to={lang === "en" ? "/en/terms/" : "/conditions-utilisation/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Terms of Use" : "Conditions d'utilisation"}
+              </Link>
+              <Link to={lang === "en" ? "/en/photo-credits/" : "/credits-photos/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
+                {lang === "en" ? "Photo credits" : "Crédits photos"}
               </Link>
             </div>
           </div>

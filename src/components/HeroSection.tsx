@@ -1010,18 +1010,6 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             </picture>
           </>
         )}
-
-        {photoCredit && (
-          <a
-            href={photoCredit.href}
-            target="_blank"
-            rel="noopener noreferrer license"
-            className="absolute bottom-2 left-3 z-[25] rounded-full px-2 py-0.5"
-            style={{ fontSize: "10px", color: "rgba(255,255,255,0.9)", background: "rgba(0,14,53,0.6)", textDecoration: "none" }}
-          >
-            {photoCredit.text}
-          </a>
-        )}
       </section>
       </>
     );

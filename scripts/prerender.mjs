@@ -59,6 +59,8 @@ const NOINDEX_ROUTES = new Set([
   "/merci-evaluation",
   "/en/thank-you",
   "/en/thank-you-valuation",
+  "/credits-photos",
+  "/en/photo-credits",
 ]);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -191,6 +193,7 @@ const frToEn = {
   "/courtier-immobilier-ou-vendre-soi-meme": "/en/realtor-vs-selling-by-owner-quebec",
   "/politique-de-confidentialite": "/en/privacy-policy",
   "/conditions-utilisation": "/en/terms",
+  "/credits-photos": "/en/photo-credits",
 };
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 

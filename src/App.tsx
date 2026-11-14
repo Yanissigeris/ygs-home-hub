@@ -169,6 +169,8 @@ const ThankYouValuationPage = lazyPage(() => import("./pages/ThankYouValuationPa
 const TestimonialsPage = lazyPage(() => import("./pages/TestimonialsPage"));
 const PrivacyPolicyPage = lazyPage(() => import("./pages/PrivacyPolicyPage"));
 const TermsPage = lazyPage(() => import("./pages/TermsPage"));
+const PhotoCreditsPage = lazyPage(() => import("./pages/PhotoCreditsPage"));
+const PhotoCreditsPageEn = lazyPage(() => import("./pages/en/PhotoCreditsPageEn"));
 
 // EN pages
 const IndexEn = lazyPage(() => import("./pages/en/IndexEn"));
@@ -306,6 +308,7 @@ const routeTree = React.createElement(
       <Route path="/courtier-immobilier-ou-vendre-soi-meme" element={<CourtierOuVendreSoiMemePage />} />
       <Route path="/politique-de-confidentialite" element={<PrivacyPolicyPage />} />
       <Route path="/conditions-utilisation" element={<TermsPage />} />
+      <Route path="/credits-photos" element={<PhotoCreditsPage />} />
 
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
@@ -370,6 +373,7 @@ const routeTree = React.createElement(
       <Route path="/en/realtor-vs-selling-by-owner-quebec" element={<RealtorVsSellingByOwnerPageEn />} />
       <Route path="/en/privacy-policy" element={<PrivacyPolicyPageEn />} />
       <Route path="/en/terms" element={<TermsPageEn />} />
+      <Route path="/en/photo-credits" element={<PhotoCreditsPageEn />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </>,
