@@ -26,7 +26,7 @@ const PrivacyPolicyPageEn = () => (
         <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
           Privacy Policy
         </h1>
-        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Last updated: April 2026</p>
+        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Last updated: November 2026</p>
         <div style={{ width: 48, height: 2, background: "var(--ink)", marginBottom: "2.5rem" }} />
 
         <div style={{ fontSize: ".95rem", lineHeight: 1.9, color: "var(--ink)" }} className="space-y-0">
@@ -39,7 +39,7 @@ const PrivacyPolicyPageEn = () => (
               <li>Full name (contact forms)</li>
               <li>Email address (forms, guides)</li>
               <li>Phone number (forms)</li>
-              <li>Property address (valuation widget)</li>
+              <li>Property address (valuation form, home value tracker)</li>
               <li>Browsing data (analytics cookies, with consent)</li>
             </ul>
           </Section>
@@ -74,7 +74,11 @@ const PrivacyPolicyPageEn = () => (
             <ul className="list-disc pl-5 space-y-1">
               <li>Google Analytics (web analytics, with consent)</li>
               <li>Meta/Facebook Pixel (advertising, with consent)</li>
-              <li>Email service providers (guides)</li>
+              <li>Netlify (hosting of the site and private pages)</li>
+              <li>Resend (sending of site emails)</li>
+              <li>AVA Client (client management and home value tracker emails)</li>
+              <li>Google Workspace (email and working documents)</li>
+              <li>Claude, by Anthropic (assistance tool used to prepare updates, reviewed by Yanis before sending)</li>
             </ul>
             <p className="mt-2">We do not sell data to third parties.</p>
           </Section>
@@ -100,14 +104,25 @@ const PrivacyPolicyPageEn = () => (
           </Section>
 
           <Section title="9. Transfers Outside Quebec">
-            <p>Some services used (Google, Meta) may process data outside Quebec according to their own policies, available on their respective websites.</p>
+            <p>Some providers (Google, Meta, Netlify, Resend, AVA Client, Anthropic) store or process data outside Quebec, including in the United States, according to their own policies.</p>
           </Section>
 
           <Section title="10. Changes">
             <p>This policy may be updated. The update date is shown at the top of this page.</p>
           </Section>
 
-          <Section title="11. Contact">
+          <Section title="11. Home Value Tracker and “My Property” Page">
+            <p>If you are signed up for the home value tracker:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Information used: property address and type, value range, chosen frequency, date and wording of your consent.</li>
+              <li>Tracker emails may show whether they were opened.</li>
+              <li>Your private page opens through a link, with no password. Anyone who has this link can see it.</li>
+              <li>Retention: as long as the tracker is active. When the tracker stops, your private page is closed.</li>
+              <li>To stop the tracker, have your link changed or have your information deleted: <a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a></li>
+            </ul>
+          </Section>
+
+          <Section title="12. Contact">
             <p>For any questions about this policy:<br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a> | 819-210-3044</p>
           </Section>
         </div>

@@ -96,6 +96,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14.5px}
 
 .foot{background:var(--navy);color:rgba(255,255,255,.86);font-size:13px;line-height:1.55}
+.foot a{color:rgba(255,255,255,.86)}
 .foot .in{padding-top:22px;padding-bottom:28px;display:flex;flex-direction:column;gap:12px}
 .foot .line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:center}
 .logos{display:flex;align-items:center;gap:12px}
@@ -122,7 +123,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 <main id="app" aria-live="polite"><div class="state"><p id="t-load">Chargement de votre page…</p></div></main>
 
 <footer class="foot"><div class="in">
-  <p id="t-legal"></p>
+  <p><span id="t-legal"></span> <a id="t-pol"></a></p>
   <div class="line">
     <span id="t-id"></span>
     <div class="logos"><img class="mw" src="/ma-propriete/logo-mw-white-transparent.webp" alt="Équipe Marty Waite" width="83" height="13"><i aria-hidden="true"></i><img class="rx" src="/ma-propriete/logo-remax.webp" alt="RE/MAX" width="21" height="24"></div>
@@ -142,6 +143,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
       brand:"Ma propriété", agent:"Votre courtier", load:"Chargement de votre page…",
       demo:"Exemple. La propriété et la fourchette sont fictives. Les chiffres du marché sont ceux de l'APCIQ pour les unifamiliales d'Aylmer.",
       hello:function(p){return "Bonjour "+p+", voici où en est votre propriété.";},
+      pol:"Politique de confidentialité", polUrl:"/politique-de-confidentialite/",
       what:"Cette page suit votre fourchette de valeur entre deux analyses, selon les prix de vente dans votre secteur.",
       eyebrow:"Votre fourchette, ajustée au marché", eyebrow0:"Votre fourchette de départ",
       upd:function(d){return "Revue par Yanis le "+d+".";},
@@ -179,6 +181,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
       brand:"My property", agent:"Your broker", load:"Loading your page…",
       demo:"Sample. The property and the range are fictional. Market figures are QPAREB's for single-family homes in Aylmer.",
       hello:function(p){return "Hi "+p+", here's where your property stands.";},
+      pol:"Privacy policy", polUrl:"/en/privacy-policy/",
       what:"This page tracks your value range between two analyses, based on sale prices in your area.",
       eyebrow:"Your range, adjusted to the market", eyebrow0:"Your starting range",
       upd:function(d){return "Reviewed by Yanis on "+d+".";},
@@ -236,7 +239,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 
   var L="vous", t=T.vous;
   function setLang(l){L=T[l]?l:"vous";t=T[L];document.documentElement.lang=L==="en"?"en-CA":"fr-CA";
-    $("t-brand").textContent=t.brand;$("t-agent").textContent=t.agent;$("t-legal").textContent=t.legal;$("t-id").textContent=t.id;
+    $("t-brand").textContent=t.brand;$("t-agent").textContent=t.agent;$("t-legal").textContent=t.legal;$("t-pol").textContent=t.pol;$("t-pol").href=t.polUrl;$("t-id").textContent=t.id;
     document.title=t.brand+" | Yanis Gauthier-Sigeris";$("home").href=L==="en"?"https://yanisgauthier.com/en/":"https://yanisgauthier.com/";}
   var money=function(n){return L==="en"?"$"+Math.round(n).toLocaleString("en-CA"):Math.round(n).toLocaleString("fr-CA").replace(/[  ]/g," ")+" $";};
   var num=function(n){return L==="en"?Math.round(n).toLocaleString("en-CA"):Math.round(n).toLocaleString("fr-CA").replace(/[  ]/g," ");};
