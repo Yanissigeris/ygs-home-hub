@@ -8,7 +8,6 @@
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-latin.woff2" crossorigin>
-<link rel="preload" as="image" href="/ma-propriete/yanis-cutout.webp">
 <style>
 /* Page d'inscription au Suivi de valeur. Autonome : elle ne charge ni l'application du site, ni Google Analytics. */
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url('/fonts/dmsans-latin.woff2') format('woff2')}
@@ -43,12 +42,10 @@ img{display:block;max-width:100%}
 .agent img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:var(--wash)}
 
 .hero{background:var(--navy);color:#fff;overflow:hidden}
-.hero .in{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px}
+.hero .in{display:block}
 .hero-txt{padding:48px 0 104px;display:flex;flex-direction:column;gap:16px;max-width:600px}
 .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.04;letter-spacing:-.035em}
 .lead{font-size:17.5px;line-height:1.6;color:rgba(255,255,255,.86)}
-.me{width:300px;margin-right:-10px}
-.me img{width:100%;height:auto}
 
 .wrap{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;margin-top:-72px;padding-bottom:64px;position:relative;align-items:start}
 .pitch{display:flex;flex-direction:column;gap:24px;min-width:0}
@@ -123,10 +120,8 @@ legend{padding:0;margin-bottom:8px;font-size:14px;font-weight:600}
 }
 @media (max-width:640px){
   .in{padding:0 16px}
-  .hero .in{grid-template-columns:minmax(0,1fr) 120px}
   .hero-txt{padding:28px 0 84px;gap:12px}
   .lead{font-size:16px}
-  .me{width:150px;margin-right:-16px}
   .jump{align-self:stretch}
   .block,.card{padding:22px 20px}
   .two{grid-template-columns:minmax(0,1fr)}
@@ -147,7 +142,6 @@ legend{padding:0;margin-bottom:8px;font-size:14px;font-weight:600}
     <p class="lead" id="t-lead"></p>
     <a class="btn white jump" href="#box" id="t-jump"></a>
   </div>
-  <div class="me"><img src="/ma-propriete/yanis-cutout.webp" alt="Yanis Gauthier-Sigeris" width="480" height="720"></div>
 </div></section>
 
 <main class="in"><div class="wrap">

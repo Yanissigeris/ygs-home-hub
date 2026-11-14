@@ -9,7 +9,6 @@
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-latin.woff2" crossorigin>
-<link rel="preload" as="image" href="/ma-propriete/yanis-cutout.webp">
 <style>
 /* Page privée du Suivi de valeur. Autonome : elle ne charge ni l'application du site, ni Google Analytics. */
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url('/fonts/dmsans-latin.woff2') format('woff2')}
@@ -53,13 +52,11 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 
 /* Bandeau */
 .hero{background:var(--navy);color:#fff;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;min-height:290px}
-.hero-txt{padding:40px 0 92px;display:flex;flex-direction:column;gap:10px;max-width:620px}
+.hero .wrap{display:block}
+.hero-txt{padding:44px 0 100px;display:flex;flex-direction:column;gap:10px;max-width:620px}
 .hero h1{font-size:clamp(28px,4.4vw,44px);line-height:1.06;font-weight:650;letter-spacing:-.03em}
 .hero .addr{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:15px}
 .hero .what{color:rgba(255,255,255,.88);font-size:16.5px;max-width:520px;margin-top:4px}
-.hero .me{width:270px;align-self:end;margin-right:-10px}
-.hero .me img{width:100%;height:auto}
 
 /* Grille */
 .grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);gap:24px;margin-top:-64px;padding-bottom:64px;position:relative}
@@ -161,10 +158,8 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 }
 @media (max-width:640px){
   .wrap{padding:0 16px}
-  .hero .wrap{grid-template-columns:minmax(0,1fr) 128px;min-height:0}
   .hero-txt{padding:28px 0 84px}
   .hero .what{display:none}
-  .hero .me{width:150px;margin-right:-16px}
   .card,.range-card{padding:22px 20px}
   .me-card{padding:0}
   .me-top{padding:20px 20px 16px}
@@ -361,8 +356,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
     var pos=function(r){return {l:((r.basse-lo)/(hi-lo)*100).toFixed(2),w:((r.haute-r.basse)/(hi-lo)*100).toFixed(2)};};
     var pd=pos(dep),pc=pos(cur);
     var h='';
-    h+='<section class="hero"><div class="wrap"><div class="hero-txt"><h1>'+esc(t.hello(c.prenom))+'</h1><p class="addr">'+ICON.pin+'<span>'+esc(c.adresse)+'</span></p><p class="what">'+esc(t.what)+'</p></div>'+
-       '<div class="me"><img src="/ma-propriete/yanis-cutout.webp" alt="Yanis Gauthier-Sigeris" width="480" height="720"></div></div></section>';
+    h+='<section class="hero"><div class="wrap"><div class="hero-txt"><h1>'+esc(t.hello(c.prenom))+'</h1><p class="addr">'+ICON.pin+'<span>'+esc(c.adresse)+'</span></p><p class="what">'+esc(t.what)+'</p></div>'+'</div></section>';
     h+='<div class="wrap"><div class="grid"><div class="col">';
     h+='<section class="card range-card"><p class="what-m">'+esc(t.what)+'</p><h2>'+esc(a?t.eyebrow:t.eyebrow0)+'</h2>'+
        '<p class="big"><span class="num">'+esc(money(cur.basse))+'</span> <span class="to">'+esc(to().trim())+'</span> <span class="num">'+esc(money(cur.haute))+'</span></p>'+
