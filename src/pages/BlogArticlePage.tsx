@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
 import { useLanguage } from "@/contexts/LanguageContext";
+import yanisPortrait from "@/assets/yanis-about-sm.webp";
+import { blogCtaFor } from "@/data/blog-cta";
 
 const BASE_URL = "https://yanisgauthier.com";
 
@@ -265,11 +267,11 @@ const BlogArticlePage = () => {
         const h3Prominent = post?.h3Style === "prominent";
         elements.push(
           h3Prominent ? (
-            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
               {text}
             </h3>
           ) : (
-            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1.25 }}>
+            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.25rem", fontWeight: 600, lineHeight: 1.25, letterSpacing: "-0.015em" }}>
               {text}
             </h3>
           )
@@ -278,7 +280,7 @@ const BlogArticlePage = () => {
         flushList();
         const text = line.slice(3);
         elements.push(
-          <h2 key={i} id={slugify(text)} className="mt-12 mb-4 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "26px", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
+          <h2 key={i} id={slugify(text)} className="mt-14 mb-4 scroll-mt-24" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "clamp(1.5rem, 2.4vw, 1.875rem)", fontWeight: 600, lineHeight: 1.12, letterSpacing: "-0.025em" }}>
             {text}
           </h2>
         );
@@ -293,10 +295,11 @@ const BlogArticlePage = () => {
             key={i}
             className="my-7"
             style={{
-              borderLeft: "2px solid var(--ink)",
-              background: "#ECEAE2",
+              borderLeft: "3px solid var(--action)",
+              background: "var(--cream)",
+              borderRadius: "0 16px 16px 0",
               padding: "24px 28px",
-              fontFamily: "var(--serif)",
+              fontFamily: "var(--sans)",
               fontStyle: "normal",
               fontSize: "17px",
               lineHeight: 1.6,
@@ -308,7 +311,7 @@ const BlogArticlePage = () => {
             {!isPersonal && (
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(0,14,53,0.65)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span style={{ color: "var(--ink-soft)", fontSize: "12px", fontFamily: "var(--sans)", fontStyle: "normal", fontWeight: 500 }}>
                   {isFr ? "Chiffres de marché" : "Market figures"}
                 </span>
               </div>
@@ -316,7 +319,7 @@ const BlogArticlePage = () => {
             {isPersonal && (
               <div className="mt-4 flex items-center gap-2">
                 <span style={{ width: "20px", height: "1px", background: "rgba(0,14,53,0.3)" }} />
-                <span className="uppercase" style={{ color: "rgba(0,14,53,0.65)", fontSize: "10px", letterSpacing: "0.16em", fontFamily: "Inter, sans-serif", fontStyle: "normal" }}>
+                <span style={{ color: "var(--ink-soft)", fontSize: "12px", fontFamily: "var(--sans)", fontStyle: "normal", fontWeight: 500 }}>
                   {isFr ? "Regard YGS" : "YGS Insight"}
                 </span>
               </div>
@@ -343,7 +346,7 @@ const BlogArticlePage = () => {
           elements.push(
             <p
               key={i}
-              className="my-4 article-dropcap"
+              className="my-4"
               style={{ color: "var(--article-body-color)", fontSize: "var(--article-body-size)", lineHeight: "var(--article-body-line-height)" }}
               dangerouslySetInnerHTML={{ __html: formatInline(line) }}
             />
@@ -372,85 +375,83 @@ const BlogArticlePage = () => {
       {post.emitFaqSchema && faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <ReadingProgressBar />
 
-      {/* Editorial split hero */}
-      <section className="w-full">
-        <div className="grid md:grid-cols-2" style={{ minHeight: "360px" }}>
-          {/* Left — petrol */}
-          <div style={{ background: "var(--ink)", padding: "48px" }} className="flex flex-col justify-between gap-8">
-            <div>
-              <nav className="mb-6 flex items-center gap-2 text-[11px]" style={{ color: "rgba(247,244,239,0.92)" }}>
-                <Link to={blogHref} className="transition-opacity hover:opacity-80" style={{ color: "var(--gold-bright)" }}>
-                  {isFr ? "Blogue" : "Blog"}
-                </Link>
-                <span>/</span>
-                <span style={{ color: "rgba(247,244,239,0.85)" }} className="truncate">{category}</span>
-              </nav>
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <span
-                  className="inline-flex items-center uppercase font-semibold"
-                  style={{
-                    border: "1px solid rgba(247,244,239,0.3)",
-                    color: "rgba(247,244,239,0.85)",
-                    fontSize: "10px",
-                    letterSpacing: "0.16em",
-                    padding: "6px 12px",
-                    borderRadius: "0",
-                  }}
-                >
-                  {category}
+      {/* Hero : titre, résumé, puis la photo en vraies couleurs */}
+      <section className="w-full bg-[var(--cream)]">
+        <div className="section-container pt-10 pb-10 sm:pt-14 lg:pt-16">
+          <nav className="flex items-center gap-2 text-[0.8125rem]" style={{ color: "var(--ink-soft)" }}>
+            <Link to={blogHref} className="underline-offset-4 hover:underline" style={{ color: "var(--gold-text)" }}>
+              {isFr ? "Blogue" : "Blog"}
+            </Link>
+            <span aria-hidden>/</span>
+            <span className="truncate">{category}</span>
+          </nav>
+          <h1 className="mt-6 max-w-[22ch]" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontWeight: 600, fontSize: "clamp(2.125rem, 4.6vw, 3.5rem)", lineHeight: 1.04, letterSpacing: "-0.035em", textWrap: "balance" }}>
+            {title}
+          </h1>
+          <p className="mt-6 max-w-[40rem]" style={{ color: "var(--article-excerpt-color)", fontSize: "clamp(1.0625rem, 1.4vw, 1.1875rem)", lineHeight: 1.6 }}>
+            {excerpt}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.875rem]" style={{ color: "var(--ink-soft)" }}>
+            <span className="font-medium" style={{ color: "var(--ink)" }}>Yanis Gauthier-Sigeris</span>
+            <span aria-hidden>·</span>
+            <time dateTime={post.publishDate}>{dateStr}</time>
+            {updatedStr && (
+              <>
+                <span aria-hidden>·</span>
+                <span>
+                  {isFr ? "Mis à jour le " : "Updated "}
+                  <time dateTime={post.updatedDate}>{updatedStr}</time>
                 </span>
-                <time dateTime={post.publishDate} style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>{dateStr}</time>
-                {updatedStr && (
-                  <span style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>
-                    {isFr ? "Mis à jour le " : "Updated "}
-                    <time dateTime={post.updatedDate}>{updatedStr}</time>
-                  </span>
-                )}
-              </div>
-              <h1 style={{ fontFamily: "var(--display)", color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2rem, 3.6vw, 44px)", lineHeight: 1.06, letterSpacing: "-0.03em", textWrap: "balance" }}>
-                {title}
-              </h1>
-            </div>
-            <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.92)", fontSize: "10px", letterSpacing: "0.18em" }}>
-              <span style={{ width: "16px", height: "1px", background: "rgba(247,244,239,0.5)" }} />
-              {readingTime} {isFr ? "min de lecture" : "min read"}
-            </div>
+              </>
+            )}
+            <span aria-hidden>·</span>
+            <span>{readingTime} {isFr ? "min de lecture" : "min read"}</span>
           </div>
-
-          {/* Right — cream */}
-          <div
-            style={{ background: "var(--cream)", borderLeft: "2px solid var(--ink)", padding: "48px" }}
-            className="flex flex-col justify-between gap-8"
-          >
-            <div>
-              <p style={{ color: "var(--article-excerpt-color)", fontSize: "var(--article-excerpt-size)", lineHeight: "var(--article-excerpt-line-height)" }}>
-                {excerpt}
-              </p>
-            </div>
-            {post.heroStats && post.heroStats.length > 0 && (
-            <div className="grid grid-cols-3 gap-4 pt-6" style={{ borderTop: "1px solid #E0DBD1" }}>
+          {post.heroStats && post.heroStats.length > 0 && (
+            <dl className="mt-8 grid max-w-[40rem] grid-cols-3 gap-6 border-t pt-6" style={{ borderColor: "rgba(0,14,53,0.12)" }}>
               {post.heroStats.map((s, idx) => (
                 <div key={idx}>
-                  <div style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
+                  <dt className="sr-only">{isFr ? s.label : (s.labelEn ?? s.label)}</dt>
+                  <dd style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "clamp(1.375rem, 2.4vw, 1.75rem)", fontWeight: 600, lineHeight: 1, letterSpacing: "-0.02em" }}>
                     {isFr ? s.value : (s.valueEn ?? s.value)}
-                  </div>
-                  <div className="mt-1.5 uppercase" style={{ color: "rgba(0,14,53,0.78)", fontSize: "9px", letterSpacing: "0.14em" }}>
+                  </dd>
+                  <dd aria-hidden className="mt-2 text-[0.8125rem] leading-snug" style={{ color: "var(--ink-soft)" }}>
                     {isFr ? s.label : (s.labelEn ?? s.label)}
-                  </div>
+                  </dd>
                 </div>
               ))}
-            </div>
-            )}
-          </div>
+            </dl>
+          )}
         </div>
+        {post.featuredImage && (
+          <figure className="section-container pb-12 sm:pb-16">
+            <img
+              src={post.featuredImage}
+              alt={post.featuredImageCredit ? (isFr ? post.featuredImageCredit.alt : post.featuredImageCredit.altEn) : ""}
+              width={1600}
+              height={900}
+              fetchPriority="high"
+              decoding="async"
+              className="aspect-[16/10] w-full object-cover sm:aspect-[16/8]"
+              style={{ borderRadius: 24 }}
+            />
+            {post.featuredImageCredit && (
+              <figcaption className="mt-3 text-[0.75rem]" style={{ color: "var(--ink-soft)" }}>
+                <a href={post.featuredImageCredit.href} target="_blank" rel="noopener noreferrer license nofollow" className="underline-offset-2 hover:underline">
+                  {isFr ? "Photo : " : "Photo: "}{post.featuredImageCredit.artist}, {post.featuredImageCredit.license}, Wikimedia Commons{isFr ? " (recadrée)" : " (cropped)"}
+                </a>
+              </figcaption>
+            )}
+          </figure>
+        )}
       </section>
 
       {/* Body + sidebar */}
-      <div style={{ background: "var(--cream)" }}>
-      <article className="section-container py-12 sm:py-16">
-        <div className="grid gap-10 lg:grid-cols-[1fr_240px]">
+      <div className="bg-white">
+      <article className="section-container pt-14 pb-16 sm:pt-16">
+        <div className={post.sources && post.sources.length > 0 ? "grid gap-12 lg:grid-cols-[minmax(0,42rem)_260px] lg:justify-between" : "max-w-[42rem]"}>
           {/* Body */}
-          <div className="lg:pr-10" style={{ borderRight: "1px solid #E0DBD1" }}>
+          <div>
             <div className="max-w-none" style={{ color: "#33405E" }}>
               {bodyElements}
             </div>
@@ -459,15 +460,15 @@ const BlogArticlePage = () => {
             {hasFaq && faqItems.length > 0 && (
               <section className="mt-16">
                 <h2
-                  className="pb-3"
+                  className="pb-4"
                   style={{
-                    fontFamily: "var(--serif)",
+                    fontFamily: "var(--display)",
                     color: "var(--ink)",
-                    fontSize: "clamp(1.6rem, 3.4vw, 34px)",
+                    fontSize: "clamp(1.5rem, 2.4vw, 1.875rem)",
                     fontWeight: 600,
-                    lineHeight: 1.1,
-                    borderBottom: "2px solid var(--ink)",
-                    letterSpacing: "-0.01em",
+                    lineHeight: 1.12,
+                    borderBottom: "1px solid rgba(0,14,53,0.15)",
+                    letterSpacing: "-0.025em",
                   }}
                 >
                   FAQ
@@ -477,14 +478,14 @@ const BlogArticlePage = () => {
                     <div
                       key={i}
                       className="grid gap-4 py-6 sm:grid-cols-[40px_1fr]"
-                      style={{ borderTop: i === 0 ? "none" : "1px solid #E0DBD1" }}
+                      style={{ borderTop: i === 0 ? "none" : "1px solid rgba(0,14,53,0.1)" }}
                     >
-                      <span style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1 }}>
+                      <span style={{ fontFamily: "var(--display)", color: "var(--gold-text)", fontSize: "1rem", fontWeight: 600, lineHeight: 1.5 }}>
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <p style={{ color: "var(--ink)", fontSize: "14px", fontWeight: 500, lineHeight: 1.5 }}>{item.q}</p>
-                        <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.65 }} dangerouslySetInnerHTML={{ __html: faqAnswerHtml(item.a) }} />
+                        <p style={{ color: "var(--ink)", fontSize: "1.0625rem", fontWeight: 600, lineHeight: 1.45 }}>{item.q}</p>
+                        <p className="mt-2" style={{ color: "var(--article-body-color)", fontSize: "1rem", lineHeight: 1.65 }} dangerouslySetInnerHTML={{ __html: faqAnswerHtml(item.a) }} />
                       </div>
                     </div>
                   ))}
@@ -493,253 +494,110 @@ const BlogArticlePage = () => {
             )}
           </div>
 
-          {/* Sidebar */}
-          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" style={{ padding: "0" }}>
-            {/* Source block */}
-            {post.sources && post.sources.length > 0 && (
-            <div style={{ borderLeft: "2px solid var(--ink)", background: "#ECEAE2", padding: "20px 22px" }}>
-              <p className="uppercase" style={{ color: "#4A5475", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
+          {post.sources && post.sources.length > 0 && (
+          <aside className="lg:sticky lg:top-24 lg:self-start">
+            <div style={{ background: "var(--cream)", borderRadius: 16, padding: "20px 22px" }}>
+              <p style={{ color: "var(--ink)", fontSize: "0.875rem", fontWeight: 600 }}>
                 {post.sources.length > 1 ? "Sources" : "Source"}
               </p>
               <ul className="mt-2 space-y-2 list-none">
-                {post.sources.map((s, i) => (
-                  <li key={i} style={{ color: "var(--ink)", fontSize: "12px", lineHeight: 1.5 }}>
-                    {isFr ? s.fr : s.en}
+                {post.sources.map((src, i) => (
+                  <li key={i} style={{ color: "var(--ink-soft)", fontSize: "0.8125rem", lineHeight: 1.5 }}>
+                    {isFr ? src.fr : src.en}
                   </li>
                 ))}
               </ul>
             </div>
-            )}
-
-            {/* CTA block */}
-            <div style={{ background: "var(--ink)", padding: "28px 24px" }}>
-              <p className="uppercase" style={{ color: "rgba(247,244,238,0.75)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
-                {isFr ? "Parler à Yanis" : "Talk to Yanis"}
-              </p>
-              <h3 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "19px", fontWeight: 600, lineHeight: 1.15 }}>
-                {isFr ? (
-                  <>Une analyse <em style={{ fontStyle: "normal" }}>sur mesure</em></>
-                ) : (
-                  <>An analysis <em style={{ fontStyle: "normal" }}>of your property</em></>
-                )}
-              </h3>
-              <p className="mt-2" style={{ color: "rgba(247,244,239,0.92)", fontSize: "12px", lineHeight: 1.5 }}>
-                {isFr ? "Pour votre projet immobilier, plex compris. Je vous réponds avec les chiffres de votre secteur." : "For your real estate plans, plexes included. I answer with the numbers for your area."}
-              </p>
-              <Link
-                to={ctaHref}
-                className="mt-5 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-                style={{
-                  border: "1px solid var(--gold)",
-                  color: "var(--gold-bright)",
-                  fontSize: "11px",
-                  letterSpacing: "0.12em",
-                  padding: "10px 16px",
-                  textTransform: "uppercase",
-                  fontWeight: 500,
-                }}
-              >
-                {isFr ? "Évaluation gratuite" : "Free Home Valuation"} <span aria-hidden>→</span>
-              </Link>
-            </div>
-
-            {/* Tags */}
-            {tags.length > 0 && (
-              <div>
-                <p className="uppercase mb-3" style={{ color: "rgba(0,14,53,0.78)", fontSize: "9px", letterSpacing: "0.18em", fontWeight: 600 }}>
-                  Tags
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {tags.map((t) => (
-                    <span
-                      key={t}
-                      style={{
-                        border: "1px solid #E0DBD1",
-                        color: "var(--ink)",
-                        fontSize: "10px",
-                        letterSpacing: "0.1em",
-                        padding: "5px 10px",
-                        textTransform: "uppercase",
-                        fontWeight: 500,
-                      }}
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
           </aside>
+          )}
         </div>
       </article>
 
-      {/* Full-width CTA */}
-      {post.ctaOverride ? (
-        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
-          <div className="section-container text-center">
-            <p className="uppercase" style={{ color: "rgba(247,244,238,0.75)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
-              {isFr ? post.ctaOverride.eyebrow : post.ctaOverride.eyebrowEn}
-            </p>
-            <h2 className="mt-3" style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
-              {isFr ? post.ctaOverride.title : post.ctaOverride.titleEn}
-            </h2>
-            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.85)", fontSize: "14px", lineHeight: 1.6 }}>
-              {isFr ? post.ctaOverride.text : post.ctaOverride.textEn}
-            </p>
-            <Link
-              to={isFr ? post.ctaOverride.buttonHref : post.ctaOverride.buttonHrefEn}
-              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-              style={{
-                border: "1px solid var(--gold)",
-                color: "var(--gold-bright)",
-                fontSize: "11px",
-                letterSpacing: "0.14em",
-                padding: "13px 22px",
-                textTransform: "uppercase",
-                fontWeight: 500,
-              }}
-            >
-              {isFr ? post.ctaOverride.buttonLabel : post.ctaOverride.buttonLabelEn} <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </section>
-      ) : (
-        <section style={{ background: "var(--ink)", padding: "48px 0" }}>
-          <div className="section-container text-center">
-            <h2 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontSize: "clamp(1.6rem, 3.4vw, 30px)", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>
-              {isFr ? (
-                <>Vous regardez un plex en Outaouais? <em style={{ fontStyle: "normal" }}>Parlons-en.</em></>
-              ) : (
-                <>Looking at a plex in the Outaouais? <em style={{ fontStyle: "normal" }}>Let's talk.</em></>
-              )}
-            </h2>
-            <p className="mt-4 mx-auto max-w-xl" style={{ color: "rgba(247,244,239,0.92)", fontSize: "13px", lineHeight: 1.6 }}>
-              {isFr
-                ? "J'analyse les revenus et la valeur marchande de l'immeuble. Sans engagement."
-                : "I analyze the building's income and market value. No commitment."}
-            </p>
-            <Link
-              to={ctaHref}
-              className="mt-7 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-              style={{
-                border: "1px solid var(--gold)",
-                color: "var(--gold-bright)",
-                fontSize: "11px",
-                letterSpacing: "0.14em",
-                padding: "13px 22px",
-                textTransform: "uppercase",
-                fontWeight: 500,
-              }}
-            >
-              {isFr ? "Envoyer PLEX" : "Send PLEX"} <span aria-hidden>→</span>
-            </Link>
-            <p className="mt-3" style={{ color: "rgba(247,244,239,0.92)", fontSize: "11px" }}>
-              {isFr ? "Réponse personnalisée" : "Personalized response"}
-            </p>
-          </div>
-        </section>
-      )}
+      {/* Un seul appel à l'action, adapté au sujet de l'article */}
+      {(() => {
+        const c = blogCtaFor(post, isFr);
+        return (
+          <section data-page-cta="" style={{ background: "var(--ink)" }}>
+            <div className="section-container py-16 sm:py-20 text-center">
+              <h2 className="mx-auto max-w-[24ch]" style={{ fontFamily: "var(--display)", color: "var(--cream)", fontSize: "clamp(1.875rem, 3.4vw, 2.5rem)", fontWeight: 600, lineHeight: 1.08, letterSpacing: "-0.03em", textWrap: "balance" }}>
+                {c.title}
+              </h2>
+              <p className="mx-auto mt-4 max-w-[34rem]" style={{ color: "rgba(247,244,238,0.85)", fontSize: "1.0625rem", lineHeight: 1.6 }}>
+                {c.text}
+              </p>
+              <Link
+                to={c.href}
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--action)] px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-[var(--action-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ink)]"
+              >
+                {c.label} <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </section>
+        );
+      })()}
 
-      {/* Author bio */}
-      <section className="section-container py-12">
-        <div className="grid gap-6 sm:grid-cols-[auto_1px_1fr] items-center pt-10" style={{ borderTop: "1px solid #E0DBD1" }}>
-          <div
-            className="flex items-center justify-center shrink-0"
-            style={{
-              width: "52px",
-              height: "52px",
-              borderRadius: "50%",
-              background: "var(--ink)",
-              border: "1.5px solid rgba(247,244,239,0.3)",
-              color: "var(--cream)",
-              fontFamily: "var(--serif)",
-              fontSize: "18px",
-              fontWeight: 500,
-              letterSpacing: "0.05em",
-            }}
-          >
-            YG
-          </div>
-          <div className="hidden sm:block self-stretch" style={{ width: "1px", background: "#E0DBD1" }} />
-          <div>
-            <p className="uppercase" style={{ color: "#4A5475", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600 }}>
-              {isFr ? "À propos" : "About"}
-            </p>
-            <p className="mt-1.5" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "17px", fontWeight: 600, lineHeight: 1.2 }}>
-              Yanis Gauthier-Sigeris
-            </p>
-            <p className="mt-2" style={{ color: "#56627C", fontSize: "13px", lineHeight: 1.55 }}>
-              {isFr
-                ? "Courtier immobilier résidentiel chez RE/MAX Direct depuis 2017, plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Permis OACIQ n° 112201."
-                : "Residential real estate broker with RE/MAX Direct since 2017, over 300 transactions in the Outaouais, mostly in Aylmer and Hull. OACIQ licence no. 112201."}
-            </p>
+      {/* Auteur */}
+      <section className="bg-white">
+        <div className="section-container pt-14 pb-4">
+          <div className="flex max-w-[42rem] items-center gap-5">
+            <img src={yanisPortrait} alt="" width={72} height={72} loading="lazy" decoding="async" className="h-[72px] w-[72px] shrink-0 object-cover object-top" style={{ borderRadius: "50%" }} />
+            <div>
+              <p style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.125rem", fontWeight: 600, lineHeight: 1.2, letterSpacing: "-0.01em" }}>
+                Yanis Gauthier-Sigeris
+              </p>
+              <p className="mt-1.5" style={{ color: "var(--ink-soft)", fontSize: "0.9375rem", lineHeight: 1.55 }}>
+                {isFr
+                  ? "Courtier immobilier résidentiel chez RE/MAX Direct depuis 2017, plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Permis OACIQ n° 112201."
+                  : "Residential real estate broker with RE/MAX Direct since 2017, over 300 transactions in the Outaouais, mostly in Aylmer and Hull. OACIQ licence no. 112201."}
+              </p>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Related articles (same topic first) */}
+      {/* À lire aussi (même sujet d'abord) */}
       {relatedPosts.length > 0 && (
-        <section className="section-container pb-12" aria-labelledby="related-articles-title">
-          <div className="pt-8" style={{ borderTop: "1px solid #E0DBD1" }}>
-            <p
-              id="related-articles-title"
-              className="uppercase"
-              style={{ color: "var(--ink)", fontSize: "10px", letterSpacing: "0.18em", fontWeight: 600, marginBottom: "16px" }}
-            >
-              {isFr ? "À lire aussi" : "Related reading"}
-            </p>
-            <ul className="grid gap-4 sm:grid-cols-3" style={{ listStyle: "none", margin: 0, padding: 0 }}>
-              {relatedPosts.map((rp) => (
-                <li key={rp.slug}>
-                  <Link
-                    to={`${blogHref}${isFr ? rp.slug : rp.slugEn}/`}
-                    className="group block h-full transition-opacity hover:opacity-90"
-                    style={{ background: "#F7F5F0", padding: "18px 20px", borderLeft: "2px solid var(--ink)" }}
-                  >
-                    <span className="block uppercase" style={{ color: "var(--muted)", fontSize: "10px", letterSpacing: "0.14em", marginBottom: "8px" }}>
-                      {isFr ? rp.category : rp.categoryEn || rp.category}
-                    </span>
-                    <span style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "16px", fontWeight: 600, lineHeight: 1.3 }}>
-                      {isFr ? rp.title : rp.titleEn}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
+        <div className="section-container pt-12 pb-16" aria-labelledby="related-articles-title">
+          <p id="related-articles-title" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.5rem", fontWeight: 600, letterSpacing: "-0.025em", lineHeight: 1.1 }}>
+            {isFr ? "À lire aussi" : "Related reading"}
+          </p>
+          <ul className="mt-6 grid gap-6 sm:grid-cols-3" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+            {relatedPosts.map((rp) => (
+              <li key={rp.slug}>
+                <Link to={`${blogHref}${isFr ? rp.slug : rp.slugEn}/`} className="group block">
+                  {rp.featuredImage && (
+                    <div className="aspect-[16/10] overflow-hidden" style={{ borderRadius: 16 }}>
+                      <img src={rp.featuredImage} alt="" loading="lazy" decoding="async" width={800} height={500} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                  )}
+                  <span className="mt-4 block text-[0.8125rem]" style={{ color: "var(--ink-soft)" }}>
+                    {isFr ? rp.category : rp.categoryEn || rp.category}
+                  </span>
+                  <span className="mt-1 block group-hover:underline underline-offset-4" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.125rem", fontWeight: 600, lineHeight: 1.25, letterSpacing: "-0.01em" }}>
+                    {isFr ? rp.title : rp.titleEn}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-      {/* Next article */}
-      {nextPost && (
-        <section className="section-container pb-16">
-          <Link
-            to={`${blogHref}${isFr ? nextPost.slug : nextPost.slugEn}/`}
-            className="grid gap-6 sm:grid-cols-[140px_1fr] items-center pt-8 group transition-opacity hover:opacity-90"
-            style={{ borderTop: "1px solid #E0DBD1" }}
-          >
-            <div
-              className="flex items-center justify-center uppercase"
-              style={{
-                background: "#ECEAE2",
-                color: "var(--ink)",
-                fontSize: "10px",
-                letterSpacing: "0.18em",
-                fontWeight: 600,
-                padding: "14px 16px",
-              }}
+          {nextPost && (
+            <Link
+              to={`${blogHref}${isFr ? nextPost.slug : nextPost.slugEn}/`}
+              className="group mt-12 flex items-center justify-between gap-6 border-t pt-8"
+              style={{ borderColor: "rgba(0,14,53,0.12)" }}
             >
-              {isFr ? "Article suivant" : "Next article"}
-            </div>
-            <div className="flex items-center justify-between gap-4">
-              <h3 style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "17px", fontWeight: 600, lineHeight: 1.25 }}>
-                {isFr ? nextPost.title : nextPost.titleEn}
-              </h3>
-              <span aria-hidden style={{ color: "var(--gold)", fontSize: "20px" }} className="transition-transform group-hover:translate-x-1">→</span>
-            </div>
-          </Link>
-        </section>
+              <span>
+                <span className="block text-[0.8125rem]" style={{ color: "var(--ink-soft)" }}>{isFr ? "Article suivant" : "Next article"}</span>
+                <span className="mt-1 block group-hover:underline underline-offset-4" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.125rem", fontWeight: 600, lineHeight: 1.25 }}>
+                  {isFr ? nextPost.title : nextPost.titleEn}
+                </span>
+              </span>
+              <span aria-hidden style={{ color: "var(--gold-text)", fontSize: "1.25rem" }} className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          )}
+        </div>
       )}
+      </section>
       </div>
     </>
   );
