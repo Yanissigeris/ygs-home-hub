@@ -153,7 +153,7 @@ const BlogPageEn = () => {
               <li key={p.slugEn}>
                 {p.titleEn}:{" "}
                 <a href={p.featuredImageCredit!.href} target="_blank" rel="noopener noreferrer license nofollow" className="underline underline-offset-2">
-                  {p.featuredImageCredit!.artist}, {p.featuredImageCredit!.license}
+                  {p.featuredImageCredit!.altEn} · {p.featuredImageCredit!.artist}, {p.featuredImageCredit!.license}
                 </a>
               </li>
             ))}
