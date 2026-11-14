@@ -137,7 +137,6 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       <div class="cons">
         <label class="chk"><input type="checkbox" id="c1" required><span id="t-c1"></span></label>
         <span class="err" id="e-c1" hidden></span>
-        <label class="chk"><input type="checkbox" id="c2"><span id="t-c2"></span></label>
         <p class="fine" id="t-id1"></p>
       </div>
       <p class="fail" id="fail" role="alert" hidden></p>
@@ -186,7 +185,6 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       freq:"À quelle fréquence voulez-vous de mes nouvelles?",
       freqs:["Une fois par année.","À l'anniversaire de mon analyse, et si le marché bouge de façon marquée (recommandé).","Chaque trimestre."],
       c1:"Oui, j'accepte de recevoir de Yanis Gauthier-Sigeris des courriels et des textos au sujet de la valeur de ma propriété et du marché de mon secteur. Je peux retirer ce consentement en tout temps.",
-      c2:"J'accepte aussi que Yanis voie quand j'ouvre ses courriels, pour me contacter au bon moment (facultatif).",
       id1:"Yanis Gauthier-Sigeris, courtier immobilier résidentiel. RE/MAX Direct inc., agence immobilière, 216, chemin d'Aylmer, Gatineau. 819-210-3044, yanis@martywaite.com",
       send:"Envoyer ma demande",sending:"Envoi en cours",
       fine:"Estimation indicative, pas une évaluation agréée. Si votre propriété est déjà inscrite avec un autre courtier, je ne peux pas vous offrir ce suivi pour l'instant. Vos renseignements ne sont jamais vendus. Ils sont conservés chez mes fournisseurs, dont certains sont situés hors du Québec.",
@@ -217,7 +215,6 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       freq:"How often would you like to hear from me?",
       freqs:["Once a year.","On the anniversary of my analysis, and if the market moves noticeably (recommended).","Every quarter."],
       c1:"Yes, I agree to receive emails and texts from Yanis Gauthier-Sigeris about the value of my property and the market in my area. I can withdraw this consent at any time.",
-      c2:"I also agree to let Yanis see when I open his emails, so he can contact me at the right time (optional).",
       id1:"Yanis Gauthier-Sigeris, residential real estate broker. RE/MAX Direct inc., real estate agency, 216 chemin d'Aylmer, Gatineau. 819-210-3044, yanis@martywaite.com",
       send:"Send my request",sending:"Sending",
       fine:"Indicative estimate, not a certified appraisal. If your property is already listed with another broker, I can't offer you this tracker for now. Your information is never sold. It is stored with my service providers, some of which are located outside Quebec.",
@@ -237,7 +234,7 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
   txt("t-brand",t.brand);txt("t-agent",t.agent);txt("t-eye",t.eye);txt("t-h1",t.h1);txt("t-lead",t.lead);txt("t-whyT",t.whyT);txt("t-why",t.why);txt("t-how",t.how);txt("t-get",t.get);
   txt("t-demo",t.demo);txt("t-quote",t.quote);txt("t-who",t.who);txt("t-form",t.form);txt("t-jump",t.form);
   txt("l-pre",t.pre);txt("l-nom",t.nom);txt("l-cou",t.cou);txt("l-cel",t.cel);txt("l-adr",t.adr);txt("l-typ",t.typ);txt("l-freq",t.freq);
-  txt("t-c1",t.c1);txt("t-c2",t.c2);txt("t-id1",t.id1);txt("send",t.send);txt("t-fine",t.fine);txt("t-pol",t.pol);$("t-pol").href=t.polUrl;
+  txt("t-c1",t.c1);txt("t-id1",t.id1);txt("send",t.send);txt("t-fine",t.fine);txt("t-pol",t.pol);$("t-pol").href=t.polUrl;
   txt("t-dh",t.dh);txt("t-dp",t.dp);txt("t-dr",t.dr);txt("t-dt",t.dt);txt("b-tel",t.tel);txt("b-mail",t.mail);txt("t-legal",t.legal);txt("t-id",t.id);
   if(EN){$("home").href="https://yanisgauthier.com/en/";$("t-demo").href="/en/my-property/?c=demo&l=en";}
   t.steps.forEach(function(s,i){var li=document.createElement("li"),b=document.createElement("b"),p=document.createElement("span");b.textContent=String(i+1);p.textContent=s;li.appendChild(b);li.appendChild(p);$("t-steps").appendChild(li);});
@@ -264,7 +261,6 @@ legend{padding:0;margin-bottom:6px;font-size:14px;font-weight:600}
       "Type de propriété : "+FR.types[$("typ").selectedIndex],
       "Fréquence choisie : "+FR.freqs[fi],
       "Consentement aux courriels et aux textos : OUI, coché le "+stamp()+" (heure de Toronto)",
-      "Suivi des ouvertures de courriels : "+($("c2").checked?"OUI":"non"),
       "Texte du consentement affiché ("+(EN?"version anglaise":"version française")+") : « "+t.c1+" »",
       "À faire : évaluer la propriété, puis ajouter la personne au Suivi de valeur du Brief avec la date de consentement ci-dessus."].join("\n");
     var btn=$("send");btn.disabled=true;btn.textContent=t.sending;$("fail").hidden=true;
