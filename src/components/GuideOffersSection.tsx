@@ -57,7 +57,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                   onClick={() => setModalGuide(g.guideType)}
                 >
                   <h3
-                    className="[font-family:var(--display)] text-[1.5rem] font-semibold leading-[1.05] tracking-[-0.03em] lg:text-[1.75rem]"
+                    className="[font-family:var(--display)] text-[1.5rem] font-semibold leading-[1.05] tracking-[-0.03em] lg:min-h-[2.1em] lg:text-[1.75rem]"
                     style={{ color: lead ? "var(--cream)" : "var(--ink)" }}
                   >
                     {g.title}

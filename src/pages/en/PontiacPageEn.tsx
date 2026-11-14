@@ -247,7 +247,7 @@ const PontiacPageEn = () => {
         trustLine="« I give you the numbers and options, you decide. »"
       />
 
-      <StickyGuideBanner guideType="buyer_guide" label="Free buyer's guide, get it by email" />
+      <StickyGuideBanner guideType="buyer_guide" label="Free buyer's guide, get it by email" lang="en" />
     </>
   );
 };

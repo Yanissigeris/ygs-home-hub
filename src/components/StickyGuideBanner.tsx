@@ -63,10 +63,10 @@ const StickyGuideBanner = ({ guideType, label, lang = "fr" }: StickyGuideBannerP
               <div className="flex items-center gap-3 rounded-2xl border border-[rgba(247,244,238,0.12)] bg-primary px-4 py-3 shadow-[0_8px_32px_-8px_hsl(226_60%_12%/0.35)]">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[rgba(247,244,238,0.08)]"><BookOpen size={16} className="text-[rgba(247,244,238,0.75)]" /></div>
                 <p className="flex-1 text-[0.8125rem] font-medium text-primary-foreground leading-snug">{label}</p>
-                <Button variant="accent" size="sm" className="shrink-0 font-semibold" onClick={() => { trackCTAClick(btnLabel, "sticky-guide-banner"); setModalOpen(true); }}>
+                <Button variant="accent" size="sm" className="shrink-0 font-semibold border-transparent bg-[var(--action)] text-white hover:bg-[var(--action-hover)] hover:text-white" onClick={() => { trackCTAClick(btnLabel, "sticky-guide-banner"); setModalOpen(true); }}>
                   {btnLabel}<ArrowRight size={13} className="ml-1" />
                 </Button>
-                <button onClick={handleDismiss} className="shrink-0 rounded-lg p-1.5 text-primary-foreground/40 hover:text-primary-foreground/70 hover:bg-white/5 transition-colors" aria-label={closeLabel}>
+                <button onClick={handleDismiss} className="shrink-0 rounded-lg p-1.5 text-primary-foreground/70 hover:text-primary-foreground hover:bg-white/5 transition-colors" aria-label={closeLabel}>
                   <X size={16} />
                 </button>
               </div>

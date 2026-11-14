@@ -58,7 +58,7 @@ const mdToText = (t: string) => t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1").repl
 const faqAnswerHtml = (t: string) =>
   t
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2' style='color:var(--gold)'>${label}</a>`)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2' style='color:var(--gold-text)'>${label}</a>`)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 
 export const FaqPageJsonLd = ({ items }: { items: { q: string; a: string }[] }) => {
@@ -158,33 +158,6 @@ const BlogArticlePage = () => {
     return Math.max(1, Math.round(words / 200));
   }, [body, post]);
 
-  // Split title into 2-3 lines for hero (ligne 3 = part after first colon if present)
-  const titleParts = useMemo(() => {
-    if (post && post.published && post.titleLines) {
-      const tl = post.titleLines;
-      return isFr
-        ? { line1: tl.line1, line2: tl.line2 ?? "", line3: tl.line3 ?? "" }
-        : { line1: tl.line1En, line2: tl.line2En ?? "", line3: tl.line3En ?? "" };
-    }
-    const t = post && post.published ? (isFr ? post.title : post.titleEn) : "";
-    const colonIdx = t.indexOf(":");
-    if (colonIdx > 0) {
-      const left = t.slice(0, colonIdx).trim();
-      const right = t.slice(colonIdx + 1).trim();
-      const half = Math.floor(left.length / 2);
-      const spaceIdx = left.indexOf(" ", half);
-      if (spaceIdx > 0) {
-        return { line1: left.slice(0, spaceIdx).trim(), line2: left.slice(spaceIdx + 1).trim(), line3: right };
-      }
-      return { line1: left, line2: "", line3: right };
-    }
-    const half = Math.floor(t.length / 2);
-    const spaceIdx = t.indexOf(" ", half);
-    if (spaceIdx > 0) {
-      return { line1: t.slice(0, spaceIdx).trim(), line2: t.slice(spaceIdx + 1).trim(), line3: "" };
-    }
-    return { line1: t, line2: "", line3: "" };
-  }, [post, isFr]);
 
   if (!post || !post.published) {
     return <Navigate to={lang === "en" ? "/en/blog" : "/blogue"} replace />;
@@ -250,7 +223,7 @@ const BlogArticlePage = () => {
 
     const formatInline = (text: string) =>
       text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2 transition-colors' style='color:var(--gold)'>${label}</a>`)
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => `<a href='${canonicalPath(href)}' class='underline underline-offset-2 transition-colors' style='color:var(--gold-text)'>${label}</a>`)
         .replace(/\*\*(.+?)\*\*/g, "<strong style='color:var(--ink)' class='font-semibold'>$1</strong>")
         .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
 
@@ -434,11 +407,8 @@ const BlogArticlePage = () => {
                   </span>
                 )}
               </div>
-              <h1 style={{ fontFamily: "var(--serif)", color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2.1rem, 4.4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.028em" }}>
-                <span className="block">{titleParts.line1}</span>
-                {titleParts.line2 && (
-                  <span className="block" style={{ paddingLeft: "28px" }}>{titleParts.line2}</span>
-                )}
+              <h1 style={{ fontFamily: "var(--display)", color: "var(--cream)", fontWeight: 600, fontSize: "clamp(2rem, 3.6vw, 44px)", lineHeight: 1.06, letterSpacing: "-0.03em", textWrap: "balance" }}>
+                {title}
               </h1>
             </div>
             <div className="flex items-center gap-2 uppercase" style={{ color: "rgba(247,244,239,0.92)", fontSize: "10px", letterSpacing: "0.18em" }}>
@@ -453,12 +423,7 @@ const BlogArticlePage = () => {
             className="flex flex-col justify-between gap-8"
           >
             <div>
-              {titleParts.line3 && (
-                <h2 style={{ fontFamily: "var(--serif)", fontStyle: "normal", color: "var(--ink)", fontWeight: 600, fontSize: "clamp(1.9rem, 3.8vw, 46px)", lineHeight: 1.02, letterSpacing: "-0.028em" }}>
-                  {titleParts.line3}
-                </h2>
-              )}
-              <p className="mt-6" style={{ color: "var(--article-excerpt-color)", fontSize: "var(--article-excerpt-size)", lineHeight: "var(--article-excerpt-line-height)" }}>
+              <p style={{ color: "var(--article-excerpt-color)", fontSize: "var(--article-excerpt-size)", lineHeight: "var(--article-excerpt-line-height)" }}>
                 {excerpt}
               </p>
             </div>

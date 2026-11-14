@@ -9,8 +9,9 @@ interface BenefitsListProps {
 }
 
 const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsListProps) => (
-  <section className={background === "alt" ? "section-padding bg-secondary/25" : "section-padding bg-background"}>
-    <div className="section-container max-w-[44rem]">
+  <section className={background === "alt" ? "section-padding bg-[var(--cream)]" : "section-padding bg-background"}>
+    <div className="section-container">
+      <div className="max-w-[44rem]">
       <div
       >
         <SectionHeading overline={overline} title={title} />
@@ -25,6 +26,7 @@ const BenefitsList = ({ overline, title, items, background = "alt" }: BenefitsLi
             <span className="text-[1rem] text-foreground">{item}</span>
           </div>
         ))}
+      </div>
       </div>
     </div>
   </section>
