@@ -440,13 +440,6 @@ const BlogArticlePage = () => {
               className="aspect-[16/10] w-full object-cover sm:aspect-[16/8]"
               style={{ borderRadius: 24 }}
             />
-            {post.featuredImageCredit && (
-              <figcaption className="mt-3 text-[0.75rem]" style={{ color: "var(--ink-soft)" }}>
-                <a href={post.featuredImageCredit.href} target="_blank" rel="noopener noreferrer license nofollow" className="underline-offset-2 hover:underline">
-                  {isFr ? post.featuredImageCredit.alt : post.featuredImageCredit.altEn}. {isFr ? "Photo : " : "Photo: "}{post.featuredImageCredit.artist}, {post.featuredImageCredit.license}, Wikimedia Commons{isFr ? " (recadrée)" : " (cropped)"}
-                </a>
-              </figcaption>
-            )}
           </figure>
         )}
       </section>

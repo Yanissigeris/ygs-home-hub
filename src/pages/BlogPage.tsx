@@ -39,15 +39,6 @@ const BlogPage = () => {
             Analyses du marché et conseils concrets pour vos projets immobiliers à Gatineau et en Outaouais.
           </p>
         </div>
-        <a
-          href="https://commons.wikimedia.org/wiki/File:DowntownGatineauAug2022.jpg"
-          target="_blank"
-          rel="noopener noreferrer license nofollow"
-          className="absolute bottom-3 right-3 rounded-full px-3 py-1 text-[0.6875rem] text-white/85 hover:text-white"
-          style={{ background: "rgba(0,14,53,0.72)" }}
-        >
-          Photo : Harleyd613, CC BY-SA 4.0, Wikimedia Commons (recadrée)
-        </a>
       </section>
 
       {/* Chiffres du trimestre, sans défilement */}
@@ -144,21 +135,6 @@ const BlogPage = () => {
         {nonFeaturedPosts.length === 0 && (
           <p className="mt-10" style={{ color: "var(--ink-soft)" }}>Aucun article dans cette catégorie pour le moment.</p>
         )}
-
-        <details className="mt-16 border-t pt-6 text-[0.8125rem]" style={{ borderColor: "rgba(0,14,53,0.12)", color: "var(--ink-soft)" }}>
-          <summary className="cursor-pointer font-medium" style={{ color: "var(--ink)" }}>Crédits photos</summary>
-          <p className="mt-3">Photos sous licence libre, Wikimedia Commons, recadrées pour le site.</p>
-          <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
-            {allPosts.filter((p) => p.featuredImageCredit).map((p) => (
-              <li key={p.slug}>
-                {p.title} :{" "}
-                <a href={p.featuredImageCredit!.href} target="_blank" rel="noopener noreferrer license nofollow" className="underline underline-offset-2">
-                  {p.featuredImageCredit!.alt} · {p.featuredImageCredit!.artist}, {p.featuredImageCredit!.license}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </details>
       </section>
 
       </div>

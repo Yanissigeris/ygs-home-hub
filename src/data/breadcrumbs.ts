@@ -160,8 +160,10 @@ export const breadcrumbMap: Record<string, BreadcrumbConfig> = {
   // ── FR: Legal ──
   "/politique-de-confidentialite": { trail: [{ name: "Accueil", href: "/" }], current: "Politique de confidentialité" },
   "/conditions-utilisation": { trail: [{ name: "Accueil", href: "/" }], current: "Conditions d'utilisation" },
+  "/credits-photos": { trail: [{ name: "Accueil", href: "/" }], current: "Crédits photos" },
 
   // ── EN: Legal ──
   "/en/privacy-policy": { trail: [{ name: "Home", href: "/en/" }], current: "Privacy Policy" },
   "/en/terms": { trail: [{ name: "Home", href: "/en/" }], current: "Terms of Use" },
+  "/en/photo-credits": { trail: [{ name: "Home", href: "/en/" }], current: "Photo credits" },
 };

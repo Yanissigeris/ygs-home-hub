@@ -598,5 +598,15 @@
     "title": "Terms of use | YGS",
     "description": "Terms of use for yanisgauthier.com. Intellectual property, limitation of liability and applicable law.",
     "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/credits-photos": {
+    "title": "Crédits photos | YGS",
+    "description": "Auteurs et licences des photos libres de droits utilisées sur yanisgauthier.com.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/photo-credits": {
+    "title": "Photo credits | YGS",
+    "description": "Authors and licences of the freely licensed photos used on yanisgauthier.com.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
   }
 }
