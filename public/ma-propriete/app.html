@@ -128,6 +128,17 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .rows b{font-weight:600;text-align:right}
 .links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:14.5px}
 
+
+/* Ligne de temps des étapes */
+.tl{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:22px;counter-reset:tl}
+.tl li{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start}
+.tl li:not(:last-child)::before{content:"";position:absolute;left:27px;top:62px;bottom:-18px;width:2.5px;border-radius:2px;background:var(--navy);opacity:.9}
+.tl .ic{position:relative;width:56px;height:56px;border-radius:50%;border:2.5px solid var(--navy);background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:0 8px 18px -10px rgba(0,14,53,.45)}
+.tl .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tl .ic::after{counter-increment:tl;content:counter(tl);position:absolute;right:-6px;bottom:-4px;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;box-shadow:0 0 0 2.5px #fff}
+.tl h3{font-size:17px;font-weight:650;letter-spacing:-.01em;line-height:1.25;color:var(--ink);margin:2px 0 4px}
+.tl p{font-size:15px;line-height:1.55;color:var(--muted)}
+
 /* Barre d'action mobile */
 .bar{display:none}
 
@@ -218,7 +229,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
       same:"Votre fourchette n'a pas bougé. Les prix de vente dans votre secteur n'ont pas assez changé depuis mon analyse.", sameN:"Votre fourchette n'a pas bougé depuis mon analyse.",
       lim:"Ce chiffre suit le marché de votre secteur. Il ne tient pas compte de vos travaux ni de l'état actuel de la propriété. Pour un prix précis, je refais une analyse complète.",
       newer:"Des chiffres plus récents viennent de sortir. Je révise votre fourchette et je vous écris dès que c'est fait.",
-      howT:"Comment je calcule",
+      howT:"Comment je calcule", howH:["Mon analyse","Le marché","Ma révision"],
       how:["Je pars de la fourchette de mon analyse.","Chaque trimestre, je regarde de combien les prix de vente ont bougé dans votre secteur.","J'applique ce mouvement à votre fourchette et je la revois avant de la publier. Si le marché bouge de moins de 1 %, je ne la change pas."],
       mktT:"Les prix de vente dans votre secteur",
       chartC:"Le prix médian est le prix du milieu : la moitié des propriétés se sont vendues plus cher, l'autre moitié moins cher. Chaque point couvre 12 mois de ventes. Ce sont les ventes du secteur, pas la valeur de votre propriété.",
@@ -257,7 +268,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
       same:"Your range hasn't moved. Sale prices in your area haven't changed enough since my analysis.", sameN:"Your range hasn't moved since my analysis.",
       lim:"This number follows the market in your area. It doesn't account for your renovations or the current condition of the property. For a precise price, I redo a full analysis.",
       newer:"Newer figures just came out. I'm reviewing your range and I'll write you as soon as it's done.",
-      howT:"How I calculate it",
+      howT:"How I calculate it", howH:["My analysis","The market","My review"],
       how:["I start from the range in my analysis.","Every quarter, I look at how much sale prices have moved in your area.","I apply that movement to your range and review it before publishing. If the market moves less than 1%, I leave it as is."],
       mktT:"Sale prices in your area",
       chartC:"The median price is the middle price: half the properties sold for more, the other half for less. Each point covers 12 months of sales. These are sales in the area, not the value of your property.",
@@ -379,7 +390,8 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
     h+='<section class="card me-card"><div class="me-top"><img src="/ma-propriete/yanis-about-sm.webp" alt="" width="64" height="64"><div><small>'+esc(t.contactT)+'</small><b>Yanis Gauthier-Sigeris</b><em>'+esc(t.role)+'</em></div></div>'+
        '<div class="me-body"><q>'+esc(t.sig)+'</q><h3>'+esc(t.ctaT)+'</h3><p>'+esc(t.ctaP)+'</p><div class="btns" style="display:flex;flex-direction:column;gap:10px">'+
        '<a class="btn primary" href="'+esc(mailto(t.sAna,c))+'">'+ICON.mail+esc(t.cta1)+'</a><a class="btn line" href="'+TELH+'">'+ICON.phone+esc(t.cta2)+' · '+TEL+'</a></div></div></section>';
-    h+='<section class="card"><h2>'+esc(t.howT)+'</h2><ol class="how">'+t.how.map(function(x){return '<li><span>'+esc(x)+'</span></li>';}).join("")+'</ol></section>';
+    var HI=['<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="5" width="13" height="15.5" rx="2"/><path d="M9.5 3.5h5v3h-5z"/><path d="m9 13.2 2.2 2.2 4-4.4"/></svg>','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5h15"/><path d="M6.5 15.5 10 11.5l3 2.5 4.5-6"/><circle cx="17.5" cy="8" r="1.2" fill="currentColor"/></svg>','<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.2"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>'];
+    h+='<section class="card"><h2>'+esc(t.howT)+'</h2><ol class="tl">'+t.how.map(function(x,i){return '<li><span class="ic">'+HI[i]+'</span><div><h3>'+esc(t.howH[i])+'</h3><p>'+esc(x)+'</p></div></li>';}).join("")+'</ol></section>';
     h+='<section class="card small"><h2>'+esc(t.worksT)+'</h2><p>'+esc(t.worksP)+'</p><a class="btn line" href="'+esc(mailto(t.sWorks,c))+'">'+esc(t.works)+'</a></section>';
     h+='<section class="card small"><h2>'+esc(t.prefT)+'</h2><div class="rows"><div><span>'+esc(t.freq)+'</span><b>'+esc(t.F[c.frequence]||t.F.C)+'</b></div></div><div class="links"><a href="'+esc(mailto(t.sFreq,c))+'">'+esc(t.prefs)+'</a><a href="'+esc(mailto(t.sStop,c))+'">'+esc(t.unsub)+'</a></div></section>';
     h+='</aside></div></div>';
