@@ -56,7 +56,7 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
                 {s.value}
                 {"stars" in s && s.stars ? <Stars lang={lang} /> : null}
               </span>
-              <span className="relative mt-1" style={{ fontSize: ".65rem", fontWeight: 500, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
+              <span className="relative mt-1" style={{ fontSize: ".8125rem", fontWeight: 500, letterSpacing: "0", color: "rgba(255,255,255,.65)" }}>
                 {s.label}
               </span>
             </div>
@@ -71,7 +71,7 @@ const StatsSection = React.forwardRef<HTMLElement, StatsSectionProps>(({ lang = 
                 {s.value}
                 {"stars" in s && s.stars ? <Stars lang={lang} /> : null}
               </span>
-              <span className="relative mt-1" style={{ fontSize: ".58rem", fontWeight: 500, letterSpacing: ".08em", textTransform: "uppercase", color: "rgba(255,255,255,.65)" }}>
+              <span className="relative mt-1" style={{ fontSize: ".75rem", fontWeight: 500, letterSpacing: "0", color: "rgba(255,255,255,.65)" }}>
                 {s.label}
               </span>
             </div>

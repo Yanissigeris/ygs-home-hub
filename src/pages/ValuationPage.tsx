@@ -93,7 +93,7 @@ const ValuationPage = () => {
             {/* ── LEFT: Value proposition ── */}
             <div className="pt-1 md:pt-6 lg:pt-10">
               {/* Eyebrow */}
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.875rem] font-medium text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}>
                 <span>Évaluation gratuite</span>
                 <span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" />
                 <span>Gatineau</span>

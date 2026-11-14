@@ -162,7 +162,7 @@ const GuideRequestForm = ({
         >
           {/* Left: value proposition */}
           <div className="pt-2">
-            <p className="mb-3 flex items-center gap-2.5 text-[0.75rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/80">
+            <p className="mb-3 flex items-center gap-2.5 text-[0.8125rem] font-medium text-muted-foreground">
               <BookOpen size={14} className="text-[var(--ink-soft)]" aria-hidden="true" />
               <span>{t.overline}</span>
             </p>
