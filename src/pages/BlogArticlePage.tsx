@@ -207,6 +207,9 @@ const BlogArticlePage = () => {
     let listItems: string[] = [];
     let firstParagraphRendered = false;
     let inFaq = false;
+    // Un « ### » placé avant tout « ## » est rendu en <h2> (même style), pour ne
+    // pas sauter du <h1> à un <h3> depuis que le titre complet est dans le <h1>.
+    let seenH2 = false;
 
     const flushList = () => {
       if (listItems.length > 0) {
@@ -263,19 +266,21 @@ const BlogArticlePage = () => {
         flushList();
         const text = line.slice(4);
         const h3Prominent = post?.h3Style === "prominent";
+        const Sub = seenH2 ? "h3" : "h2";
         elements.push(
           h3Prominent ? (
-            <h3 key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
+            <Sub key={i} id={slugify(text)} className="scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "clamp(1.25rem, 2.2vw, 1.6rem)", fontWeight: 600, lineHeight: 1.3, marginTop: "48px", marginBottom: "16px" }}>
               {text}
-            </h3>
+            </Sub>
           ) : (
-            <h3 key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1.25 }}>
+            <Sub key={i} id={slugify(text)} className="mt-10 mb-3 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "19px", fontWeight: 600, lineHeight: 1.25 }}>
               {text}
-            </h3>
+            </Sub>
           )
         );
       } else if (line.startsWith("## ")) {
         flushList();
+        seenH2 = true;
         const text = line.slice(3);
         elements.push(
           <h2 key={i} id={slugify(text)} className="mt-12 mb-4 scroll-mt-24" style={{ fontFamily: "var(--serif)", color: "var(--ink)", fontSize: "26px", fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.005em" }}>

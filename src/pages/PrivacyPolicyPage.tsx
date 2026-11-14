@@ -27,7 +27,7 @@ const PrivacyPolicyPage = () => (
         <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
           Politique de confidentialité
         </h1>
-        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Dernière mise à jour : Avril 2026</p>
+        <p style={{ fontSize: ".85rem", color: "hsl(var(--muted-foreground))" }} className="mb-4">Dernière mise à jour : Novembre 2026</p>
         <div style={{ width: 48, height: 2, background: "var(--ink)", marginBottom: "2.5rem" }} />
 
         <div style={{ fontSize: ".95rem", lineHeight: 1.9, color: "var(--ink)" }} className="space-y-0">
@@ -40,7 +40,7 @@ const PrivacyPolicyPage = () => (
               <li>Nom et prénom (formulaires de contact)</li>
               <li>Adresse courriel (formulaires, guides)</li>
               <li>Numéro de téléphone (formulaires)</li>
-              <li>Adresse de propriété (widget d'évaluation)</li>
+              <li>Adresse de propriété (formulaire d'évaluation, Suivi de valeur)</li>
               <li>Données de navigation (cookies analytiques, avec consentement)</li>
             </ul>
           </Section>
@@ -75,7 +75,11 @@ const PrivacyPolicyPage = () => (
             <ul className="list-disc pl-5 space-y-1">
               <li>Google Analytics (analytique web, avec consentement)</li>
               <li>Meta/Facebook Pixel (publicité, avec consentement)</li>
-              <li>Fournisseurs de service courriel (guides)</li>
+              <li>Netlify (hébergement du site et des pages privées)</li>
+              <li>Resend (envoi des courriels du site)</li>
+              <li>AVA Client (gestion des clients et courriels du Suivi de valeur)</li>
+              <li>Google Workspace (courriel et documents de travail)</li>
+              <li>Claude, d'Anthropic (outil d'assistance pour préparer les mises à jour, revues par Yanis avant l'envoi)</li>
             </ul>
             <p className="mt-2">Aucune vente de données à des tiers.</p>
           </Section>
@@ -101,14 +105,25 @@ const PrivacyPolicyPage = () => (
           </Section>
 
           <Section title="9. Transferts hors Québec">
-            <p>Certains services utilisés (Google, Meta) peuvent traiter des données hors Québec selon leurs politiques propres, disponibles sur leurs sites respectifs.</p>
+            <p>Certains fournisseurs (Google, Meta, Netlify, Resend, AVA Client, Anthropic) conservent ou traitent des données à l'extérieur du Québec, notamment aux États-Unis, selon leurs politiques propres.</p>
           </Section>
 
           <Section title="10. Modifications">
             <p>Nous pouvons modifier cette politique. La date de mise à jour est indiquée en haut de cette page.</p>
           </Section>
 
-          <Section title="11. Contact">
+          <Section title="11. Suivi de valeur et page « Ma propriété »">
+            <p>Si vous êtes inscrit au Suivi de valeur :</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Renseignements utilisés : adresse et type de la propriété, fourchette de valeur, fréquence choisie, date et texte de votre consentement.</li>
+              <li>Les courriels du suivi peuvent indiquer s'ils ont été ouverts.</li>
+              <li>Votre page privée s'ouvre par un lien, sans mot de passe. Toute personne qui a ce lien peut la voir.</li>
+              <li>Conservation : tant que le suivi est actif. À l'arrêt du suivi, votre page privée est fermée.</li>
+              <li>Pour arrêter le suivi, faire changer votre lien ou faire supprimer vos renseignements : <a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a></li>
+            </ul>
+          </Section>
+
+          <Section title="12. Contact">
             <p>Pour toute question sur cette politique :<br /><a href="mailto:yanis@martywaite.com" className="underline">yanis@martywaite.com</a> | 819-210-3044</p>
           </Section>
         </div>
