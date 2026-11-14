@@ -72,12 +72,12 @@ const BlogPageEn = () => {
       <div className="bg-white">
       {/* Categories strip */}
       <section className="border-b" style={{ borderColor: "rgba(0,14,53,0.08)" }}>
-        <div className="section-container py-6">
-          <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Categories">
+        <div className="section-container py-5 sm:py-6">
+          <div className="cardgrid-track -mx-5 flex snap-x items-center gap-2 overflow-x-auto px-5 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Categories">
             <button
               onClick={() => setActiveCategory(null)}
               aria-pressed={!activeCategory}
-              className={`inline-flex h-9 items-center rounded-full border px-4 text-[0.875rem] font-medium transition-colors duration-200 ${!activeCategory ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[rgba(0,14,53,0.18)] bg-white text-[var(--ink)] hover:border-[var(--ink)]"}`}
+              className={`inline-flex h-9 shrink-0 snap-start items-center whitespace-nowrap rounded-full border px-4 text-[0.875rem] font-medium transition-colors duration-200 ${!activeCategory ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[rgba(0,14,53,0.18)] bg-white text-[var(--ink)] hover:border-[var(--ink)]"}`}
             >
               All
             </button>
@@ -86,7 +86,7 @@ const BlogPageEn = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 aria-pressed={activeCategory === cat}
-                className={`inline-flex h-9 items-center rounded-full border px-4 text-[0.875rem] font-medium transition-colors duration-200 ${activeCategory === cat ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[rgba(0,14,53,0.18)] bg-white text-[var(--ink)] hover:border-[var(--ink)]"}`}
+                className={`inline-flex h-9 shrink-0 snap-start items-center whitespace-nowrap rounded-full border px-4 text-[0.875rem] font-medium transition-colors duration-200 ${activeCategory === cat ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[rgba(0,14,53,0.18)] bg-white text-[var(--ink)] hover:border-[var(--ink)]"}`}
               >
                 {cat}
               </button>
@@ -97,7 +97,7 @@ const BlogPageEn = () => {
 
       {/* Article vedette : texte à gauche, photo à droite */}
       {featured && !activeCategory && (
-        <section className="section-container pt-14 sm:pt-20">
+        <section className="section-container pt-14 pb-4 sm:pt-20">
           <Link to={`/en/blog/${featured.slugEn}/`} className="group grid items-center gap-8 md:grid-cols-[1fr_1.15fr] md:gap-12">
             <div className="order-2 md:order-1">
               <p className="text-[0.875rem]" style={{ color: "var(--ink-soft)" }}>
@@ -123,7 +123,7 @@ const BlogPageEn = () => {
       )}
 
       {/* Grille d'articles */}
-      <section className="section-container section-spacing">
+      <section className="section-container pt-16 pb-20 sm:pt-24 sm:pb-28">
         <h2 className="font-display" style={{ color: "var(--ink)", fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.08, letterSpacing: "-0.03em" }}>Latest articles</h2>
         <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {nonFeaturedPosts.map((post) => (

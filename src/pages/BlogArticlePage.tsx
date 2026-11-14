@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import PageMeta from "@/components/PageMeta";
 import { getPostBySlug, getPublishedPosts } from "@/data/blog-posts";
 import { useLanguage } from "@/contexts/LanguageContext";
-import yanisPortrait from "@/assets/yanis-about-sm.webp";
+import yanisPortrait from "@/assets/yanis-avatar.webp";
 import { blogCtaFor } from "@/data/blog-cta";
 
 const BASE_URL = "https://yanisgauthier.com";
@@ -540,7 +540,7 @@ const BlogArticlePage = () => {
       <section className="bg-white">
         <div className="section-container pt-14 pb-4">
           <div className="flex max-w-[42rem] items-center gap-5">
-            <img src={yanisPortrait} alt="" width={72} height={72} loading="lazy" decoding="async" className="h-[72px] w-[72px] shrink-0 object-cover object-top" style={{ borderRadius: "50%" }} />
+            <img src={yanisPortrait} alt="" width={72} height={72} loading="lazy" decoding="async" className="h-[72px] w-[72px] shrink-0 object-cover" style={{ borderRadius: "50%", background: "var(--cream)" }} />
             <div>
               <p style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.125rem", fontWeight: 600, lineHeight: 1.2, letterSpacing: "-0.01em" }}>
                 Yanis Gauthier-Sigeris
