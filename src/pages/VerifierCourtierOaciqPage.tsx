@@ -79,7 +79,7 @@ const VerifierCourtierOaciqPage = () => (
         <div className="mt-4 flex items-center gap-2 border-t pt-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}>
           <Shield size={18} className="shrink-0 text-[var(--ink-soft)]" />
           <p className="text-[0.875rem] text-muted-foreground">
-            Lien officiel : <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 inline-flex items-center gap-1">oaciq.com <ExternalLink size={12} /></a>
+            Lien officiel : <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-[var(--gold-text)] underline underline-offset-2 inline-flex items-center gap-1">oaciq.com <ExternalLink size={12} /></a>
           </p>
         </div>
         </div>
