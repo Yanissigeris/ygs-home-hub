@@ -560,7 +560,7 @@ const BlogArticlePage = () => {
           <p id="related-articles-title" style={{ fontFamily: "var(--display)", color: "var(--ink)", fontSize: "1.5rem", fontWeight: 600, letterSpacing: "-0.025em", lineHeight: 1.1 }}>
             {isFr ? "À lire aussi" : "Related reading"}
           </p>
-          <ul className="mt-6 grid gap-6 sm:grid-cols-3" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+          <ul className="mt-6 grid gap-8 sm:grid-cols-3" style={{ listStyle: "none", padding: 0 }}>
             {relatedPosts.map((rp) => (
               <li key={rp.slug}>
                 <Link to={`${blogHref}${isFr ? rp.slug : rp.slugEn}/`} className="group block">
