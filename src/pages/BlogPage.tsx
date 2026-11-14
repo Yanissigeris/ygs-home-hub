@@ -28,7 +28,7 @@ const BlogPage = () => {
 
       {/* Hero : vraie photo de Gatineau, voile seulement derrière le texte */}
       <section
-        className="hero-gradient--with-bg relative w-full"
+        className="hero-gradient--with-bg blog-hero relative w-full"
         style={{ ["--hero-bg-image" as string]: `url(${heroBlog})`, backgroundPosition: "60% center" }}
       >
         <div className="section-container flex min-h-[min(60svh,520px)] flex-col justify-end pb-12 pt-28 sm:pb-16">

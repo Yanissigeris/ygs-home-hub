@@ -1057,3 +1057,10 @@ body:has([data-page-cta]) .footer-cta {
 /* CardGrid: horizontal swipe row on phones, scrollbar hidden */
 .cardgrid-track { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .cardgrid-track::-webkit-scrollbar { display: none; }
+
+/* Page Blogue : sur téléphone, voile seulement au bas de la photo, derrière le texte. */
+@media (max-width: 767px) {
+  .hero-gradient--with-bg.blog-hero {
+    --hero-veil: linear-gradient(180deg, hsl(226 100% 10% / 0.12) 0%, hsl(226 100% 10% / 0.30) 38%, hsl(226 100% 10% / 0.80) 72%, hsl(226 100% 10% / 0.90) 100%);
+  }
+}
