@@ -917,14 +917,13 @@ h1.hero-eyebrow {
 .cta-arrow-link--dark { color: var(--gold2); border-bottom-color: rgba(255,255,255,.18); }
 .cta-arrow-link--dark:hover { color: var(--white); }
 
-/* Footer heading — uppercase label on dark ink surface. */
+/* Footer heading — sentence-case label on dark ink surface. */
 .footer-heading {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-on-dark-muted);
+  font-family: var(--display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--cream);
   /* No margin reset here: it overrode the mb-* utilities on footer headings
      (RE/MAX logo touching "Affiliations" on phones). Preflight already zeroes h3. */
 }
@@ -1058,3 +1057,10 @@ body:has([data-page-cta]) .footer-cta {
 /* CardGrid: horizontal swipe row on phones, scrollbar hidden */
 .cardgrid-track { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .cardgrid-track::-webkit-scrollbar { display: none; }
+
+/* Page Blogue : sur téléphone, voile seulement au bas de la photo, derrière le texte. */
+@media (max-width: 767px) {
+  .hero-gradient--with-bg.blog-hero {
+    --hero-veil: linear-gradient(180deg, hsl(226 100% 10% / 0.12) 0%, hsl(226 100% 10% / 0.30) 38%, hsl(226 100% 10% / 0.80) 72%, hsl(226 100% 10% / 0.90) 100%);
+  }
+}

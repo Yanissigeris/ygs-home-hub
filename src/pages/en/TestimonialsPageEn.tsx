@@ -26,7 +26,7 @@ const TestimonialsPageEn = () => (
     <HeroSection compact overline="Testimonials" title="What our clients say" subtitle="Sellers, buyers, relocators and investors share their experience with Yanis." primaryCta={{ label: "Talk to Yanis", href: "/en/contact" }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
     {/* Google Reviews badge */}
     <section className="section-padding pb-0" style={{ background: "#fff" }}>
-      <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
+      <div className="section-container flex flex-col items-start sm:flex-row sm:justify-between sm:items-end gap-4">
         <div>
           <h2>Our clients on Google</h2>
         </div>

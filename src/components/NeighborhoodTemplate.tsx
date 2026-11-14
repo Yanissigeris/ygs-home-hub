@@ -68,7 +68,7 @@ const BrokerPerspective = ({
           style={{ background: "#fff", borderColor: "hsl(var(--border))" }}
         >
           <div
-            className="text-xs uppercase tracking-[0.18em] font-medium"
+            className="text-[0.8125rem] font-medium"
             style={{ color: "#4A5475", fontFamily: "var(--sans)" }}
           >
             {label}

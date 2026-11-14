@@ -54,7 +54,7 @@ const GoogleReviewBadge = ({ variant = "full" }: GoogleReviewBadgeProps) => {
     >
       <GoogleIcon />
       <div className="flex flex-col">
-        <span className="text-[.68rem] font-medium uppercase tracking-[.04em]" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <span className="text-[.75rem] font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>
           {lang === "en" ? "Google Reviews" : "Avis Google"}
         </span>
         <span className="flex items-center gap-1.5">

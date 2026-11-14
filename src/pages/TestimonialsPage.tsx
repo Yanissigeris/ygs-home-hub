@@ -35,7 +35,7 @@ const TestimonialsPage = () => (
 
     {/* Google Reviews badge */}
     <section className="section-padding pb-0" style={{ background: "#fff" }}>
-      <div className="section-container flex flex-col items-center sm:flex-row sm:justify-between sm:items-end gap-4">
+      <div className="section-container flex flex-col items-start sm:flex-row sm:justify-between sm:items-end gap-4">
         <div>
           <h2>Nos clients sur Google</h2>
         </div>

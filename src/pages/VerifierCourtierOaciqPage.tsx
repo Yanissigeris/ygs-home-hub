@@ -52,9 +52,10 @@ const VerifierCourtierOaciqPage = () => (
     </ContentBlock>
 
     <section className="section-padding bg-[var(--cream)]">
-      <div className="section-container max-w-[44rem]">
-        <SectionHeading overline="Comment faire" title="4 étapes pour vérifier un courtier" centered />
-        <div className="mt-8 space-y-4">
+      <div className="section-container">
+        <div className="max-w-[44rem]">
+        <SectionHeading overline="Comment faire" title="4 étapes pour vérifier un courtier" />
+        <div className="mt-8">
           {[
             { num: "01", title: "Visitez le registre de l'OACIQ", text: "Rendez-vous sur oaciq.com et utilisez l'outil de recherche « Trouver un courtier »." },
             { num: "02", title: "Cherchez par nom", text: "Entrez le nom du courtier pour afficher sa fiche, avec son permis et l'agence où il exerce." },
@@ -63,21 +64,24 @@ const VerifierCourtierOaciqPage = () => (
           ].map((step) => (
             <div
               key={step.num}
-              className="rounded-xl border border-border/40 bg-card p-5"
+              className="flex gap-4 border-t py-5"
+              style={{ borderColor: "rgba(0,14,53,0.12)" }}
             >
+              <span className="font-display text-[1.0625rem] font-semibold text-[var(--gold-text)]">{step.num}</span>
               <div>
-                <h3 className="text-[0.9375rem] font-semibold">{step.title}</h3>
-                <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{step.text}</p>
+                <h3 className="font-display text-[1.0625rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">{step.title}</h3>
+                <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-[var(--ink-soft)]">{step.text}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-2 rounded-xl border border-border bg-muted/40 px-5 py-4">
+        <div className="mt-4 flex items-center gap-2 border-t pt-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}>
           <Shield size={18} className="shrink-0 text-[var(--ink-soft)]" />
           <p className="text-[0.875rem] text-muted-foreground">
-            Lien officiel : <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 inline-flex items-center gap-1">oaciq.com <ExternalLink size={12} /></a>
+            Lien officiel : <a href="https://www.oaciq.com/fr/trouver-un-courtier" target="_blank" rel="noopener noreferrer" className="text-[var(--gold-text)] underline underline-offset-2 inline-flex items-center gap-1">oaciq.com <ExternalLink size={12} /></a>
           </p>
+        </div>
         </div>
       </div>
     </section>

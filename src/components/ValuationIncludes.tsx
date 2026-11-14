@@ -56,13 +56,13 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
             <div className="sm:hidden bg-[var(--ink)] text-[var(--cream)] rounded-lg p-6 md:p-8 border border-[rgba(247,244,238,0.15)] shadow-sm">
               <div className="flex items-center justify-between gap-3">
                 <p
-                  className="text-[11px] uppercase tracking-[0.14em] text-[rgba(247,244,238,0.8)]"
+                  className="text-[0.8125rem] font-medium text-[rgba(247,244,238,0.8)]"
                   style={{ fontFamily: "var(--sans)" }}
                 >
                   {t.preview}
                 </p>
                 <span
-                  className="text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.8)]"
+                  className="text-[0.75rem] font-medium px-2.5 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.85)]"
                   style={{ fontFamily: "var(--sans)" }}
                 >
                   {t.example}
@@ -84,7 +84,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[0]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[0.8125rem] text-[rgba(247,244,238,0.78)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.low}
                     </span>
                   </div>
@@ -93,7 +93,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.2rem, 4.8vw, 1.75rem)", fontWeight: 700, lineHeight: 1.1 }}>
                       {t.amounts[1]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[0.8125rem] text-[rgba(247,244,238,0.78)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.mid}
                     </span>
                   </div>
@@ -102,7 +102,7 @@ const ValuationIncludes = ({ lang, benefits }: { lang: Lang; benefits: string[] 
                     <span className="mt-4 text-[var(--cream)] whitespace-nowrap" style={{ fontFamily: "var(--serif)", fontSize: "clamp(1rem, 4vw, 1.4rem)", fontWeight: 500, lineHeight: 1.1 }}>
                       {t.amounts[2]}
                     </span>
-                    <span className="mt-2 text-[11px] uppercase tracking-[0.12em] text-[rgba(247,244,238,0.7)]" style={{ fontFamily: "var(--sans)" }}>
+                    <span className="mt-2 text-[0.8125rem] text-[rgba(247,244,238,0.78)]" style={{ fontFamily: "var(--sans)" }}>
                       {t.high}
                     </span>
                   </div>
@@ -142,7 +142,7 @@ export const ValuationHeroPreview = ({ lang, className = "" }: { lang: Lang; cla
     >
       <figcaption className="flex items-start justify-between gap-3">
         <span className="text-[0.9375rem] font-semibold leading-snug text-[var(--cream)]">{t.sub}</span>
-        <span className="shrink-0 text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.85)]">
+        <span className="shrink-0 text-[0.75rem] font-medium px-2.5 py-0.5 rounded-full border border-[rgba(247,244,238,0.3)] text-[rgba(247,244,238,0.85)]">
           {t.example}
         </span>
       </figcaption>

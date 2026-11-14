@@ -37,7 +37,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
           {sections.map((sec, idx) => (
             <div key={sec.title ?? idx} className={idx > 0 ? "mt-3 pt-3" : ""} style={idx > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
               {sec.title && (
-                <div className="px-6 pt-1 pb-1.5" style={{ fontSize: 10.5, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 500, color: "var(--muted)", opacity: 0.7 }}>
+                <div className="px-6 pt-1 pb-1.5" style={{ fontSize: 12.5, fontWeight: 600, color: "var(--ink-soft)" }}>
                   {sec.title}
                 </div>
               )}

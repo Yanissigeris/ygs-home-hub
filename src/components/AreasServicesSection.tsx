@@ -120,7 +120,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
         >
           <div className="lg:border-r" style={{ borderRight: "none" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6875rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.78)" }}>
+              <p style={{ fontFamily: "var(--display)", fontSize: ".9375rem", fontWeight: 600, letterSpacing: "-0.01em", color: "rgba(245,241,234,0.92)" }}>
                 {cfg.areasHeading}
               </p>
             </div>
@@ -131,7 +131,7 @@ const AreasServicesSection = ({ lang = "fr" }: AreasServicesSectionProps) => {
           </div>
           <div className="border-t lg:border-t-0 lg:border-l" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
             <div style={{ background: "rgba(255,255,255,0.04)", padding: "clamp(1rem, 2vw, 1.2rem) clamp(1.25rem, 2vw, 1.75rem)" }}>
-              <p style={{ fontSize: ".6875rem", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(245,241,234,0.78)" }}>
+              <p style={{ fontFamily: "var(--display)", fontSize: ".9375rem", fontWeight: 600, letterSpacing: "-0.01em", color: "rgba(245,241,234,0.92)" }}>
                 {cfg.servicesHeading}
               </p>
             </div>

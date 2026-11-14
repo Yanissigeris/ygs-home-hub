@@ -21,8 +21,8 @@ const PrivacyPolicyPage = () => (
     <article className="section-padding" style={{ background: "var(--white)" }}>
       <div className="section-container max-w-[760px] mx-auto" style={{ padding: "5rem 2.5rem" }}>
         {/* Eyebrow */}
-        <p style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", color: "#4A5475" }} className="mb-3">
-          LÉGAL · QUÉBEC
+        <p style={{ fontSize: ".8125rem", fontWeight: 500, color: "#4A5475" }} className="mb-3">
+          Légal · Québec
         </p>
         <h1 className="font-serif" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", marginBottom: ".5rem" }}>
           Politique de confidentialité

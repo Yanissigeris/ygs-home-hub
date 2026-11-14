@@ -57,7 +57,7 @@ const ValuationPageEn = () => {
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
             <div className="pt-1 md:pt-6 lg:pt-10">
-              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" /><span>Gatineau</span></p>
+              <p className="mb-3 md:mb-5 flex items-center gap-3 text-[0.875rem] font-medium text-primary-foreground/75" style={{ fontFamily: "var(--sans)" }}><span>Free Valuation</span><span className="inline-block h-[3px] w-[3px] rounded-full bg-primary-foreground/50" /><span>Gatineau</span></p>
               <h1 className="text-primary-foreground max-w-[520px]">How much is your property worth?</h1>
               <p className="hidden sm:block mt-5 max-w-[28rem] text-[1.0625rem] leading-[1.75] text-primary-foreground/85">I'm Yanis Gauthier-Sigeris, a residential real estate broker with RE/MAX Direct. Your valuation is free, and I build it from recent sales in your part of Gatineau, Aylmer, Hull or elsewhere in the Outaouais.</p>
               <p className="sm:hidden mt-3 text-[0.9375rem] leading-[1.6] text-primary-foreground/85">Free valuation prepared by Yanis Gauthier-Sigeris, real estate broker with RE/MAX Direct, from recent sales in your area.</p>

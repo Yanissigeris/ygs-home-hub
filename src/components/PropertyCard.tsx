@@ -9,22 +9,22 @@ interface PropertyCardProps {
 
 const i18n = {
   fr: {
-    active: "À VENDRE",
-    pending: "OFFRE ACCEPTÉE",
+    active: "À vendre",
+    pending: "Offre acceptée",
     sold: "Vendue · prix demandé",
-    rent: "À LOUER",
-    rented: "LOUÉ",
+    rent: "À louer",
+    rented: "Loué",
     bed: "ch.",
     bath: "sdb",
     powder: "s.e.",
     viewListing: "Voir la propriété",
   },
   en: {
-    active: "FOR SALE",
-    pending: "OFFER ACCEPTED",
+    active: "For sale",
+    pending: "Offer accepted",
     sold: "Sold · asking price",
-    rent: "FOR RENT",
-    rented: "RENTED",
+    rent: "For rent",
+    rented: "Rented",
     bed: "bed",
     bath: "bath",
     powder: "pw",
@@ -96,10 +96,8 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
           className={isRent ? "inline-block self-start bg-[var(--ink)] text-[#F7F4EE] px-2 py-0.5 rounded-sm" : undefined}
           style={{
             fontFamily: "var(--sans)",
-            fontSize: "10px",
-            fontWeight: 500,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
+            fontSize: "12.5px",
+            fontWeight: 600,
             color: isRent ? "#F7F4EE" : "#4A5475",
             marginBottom: ".5rem",
           }}

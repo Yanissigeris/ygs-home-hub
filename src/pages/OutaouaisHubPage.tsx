@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Clock, Award, Shield } from "lucide-react";
+import { ArrowRight, Clock, Award, Shield } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
 import HeroSection from "@/components/HeroSection";
@@ -83,30 +83,32 @@ const OutaouaisHubPage = () => (
     />
 {/* Intro */}
     <section className="section-padding bg-background">
-      <div className="section-container max-w-3xl">
-        <SectionHeading overline="Votre courtier local" title="Des chiffres clairs, partout en Outaouais" centered />
-        <p className="mt-6 text-base leading-relaxed text-muted-foreground text-center">
+      <div className="section-container">
+        <div className="max-w-[44rem]">
+        <SectionHeading overline="Votre courtier local" title="Des chiffres clairs, partout en Outaouais" />
+        <p className="prose-body mt-6">
           Je suis Yanis Gauthier-Sigeris, courtier immobilier RE/MAX à Gatineau, et je travaille dans toute la région, de Hull à Chelsea et d'Aylmer à Cantley. Avant chaque décision, je vous montre les ventes comparables de votre secteur et je vous explique ce qu'elles veulent dire pour vous.
         </p>
+        </div>
       </div>
     </section>
 
     {/* Zones served */}
     <section className="section-padding bg-[var(--cream)]">
-      <div className="section-container max-w-[56rem]">
-        <SectionHeading overline="Secteurs desservis" title="Les municipalités que je dessers en Outaouais" centered />
-        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="section-container">
+        <div className="max-w-[40rem]"><SectionHeading overline="Secteurs desservis" title="Les municipalités que je dessers en Outaouais" /></div>
+        <div className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           {zones.map((z) => (
             <Link
               key={z.href}
               to={z.href}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-[border-color,box-shadow,transform] duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
+              className="group flex items-center justify-between gap-4 border-t py-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}
             >
               <div className="min-w-0">
-                <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{z.name}</p>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/80 truncate">{z.detail}</p>
+                <p className="font-display text-[1.0625rem] font-semibold tracking-[-0.01em] text-[var(--ink)] group-hover:underline underline-offset-4">{z.name}</p>
+                <p className="mt-1 text-[0.875rem] text-[var(--ink-soft)]">{z.detail}</p>
               </div>
-              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
+              <ArrowRight size={16} className="shrink-0 text-[var(--gold-text)] transition-transform group-hover:translate-x-0.5" />
             </Link>
           ))}
         </div>
@@ -115,20 +117,20 @@ const OutaouaisHubPage = () => (
 
     {/* Services */}
     <section className="section-padding bg-background">
-      <div className="section-container max-w-[56rem]">
-        <SectionHeading overline="Services" title="Ce que je peux faire pour vous" centered />
-        <div className="mt-10 grid gap-3 sm:grid-cols-2">
+      <div className="section-container">
+        <div className="max-w-[40rem]"><SectionHeading overline="Services" title="Ce que je peux faire pour vous" /></div>
+        <div className="mt-10 grid gap-x-10 sm:grid-cols-2">
           {services.map((s) => (
             <Link
               key={s.href}
               to={s.href}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-card px-5 py-4 transition-[border-color,box-shadow,transform] duration-200 hover:border-accent/25 hover:shadow-sm hover:-translate-y-0.5"
+              className="group flex items-center justify-between gap-4 border-t py-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}
             >
               <div className="min-w-0">
-                <p className="text-[0.9375rem] font-semibold text-foreground group-hover:text-primary transition-colors truncate">{s.label}</p>
-                <p className="mt-0.5 text-[0.8125rem] text-muted-foreground/80 truncate">{s.detail}</p>
+                <p className="font-display text-[1.0625rem] font-semibold tracking-[-0.01em] text-[var(--ink)] group-hover:underline underline-offset-4">{s.label}</p>
+                <p className="mt-1 text-[0.875rem] text-[var(--ink-soft)]">{s.detail}</p>
               </div>
-              <ArrowRight size={14} className="shrink-0 text-muted-foreground/30 transition-[color,transform] group-hover:text-primary group-hover:translate-x-0.5" />
+              <ArrowRight size={16} className="shrink-0 text-[var(--gold-text)] transition-transform group-hover:translate-x-0.5" />
             </Link>
           ))}
         </div>
@@ -137,22 +139,22 @@ const OutaouaisHubPage = () => (
 
     {/* Why work with me */}
     <section className="section-padding bg-[var(--cream)]">
-      <div className="section-container max-w-3xl">
-        <SectionHeading overline="Pourquoi moi" title="Un courtier local et bilingue" centered />
-        <ul className="mt-8 space-y-3">
+      <div className="section-container">
+        <div className="max-w-[40rem]"><SectionHeading overline="Pourquoi moi" title="Un courtier local et bilingue" /></div>
+        <ol className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           {[
             "Courtier RE/MAX, Hall of Fame, reconnu en Outaouais",
             "Bilingue français-anglais, pour la clientèle des deux côtés de la rivière",
             "Revente résidentielle, premier achat et investissement plex",
             "Évaluations appuyées sur les ventes comparables du secteur",
             "Relocalisation d'Ottawa ou de Montréal vers Gatineau",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" />
-              <span className="text-[0.9375rem] text-foreground/90">{item}</span>
+          ].map((item, i) => (
+            <li key={item} className="flex gap-4 border-t py-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}>
+              <span className="font-display text-[0.9375rem] font-semibold text-[var(--gold-text)]">{String(i + 1).padStart(2, "0")}</span>
+              <span className="text-[1rem] leading-[1.55] text-[var(--ink)]">{item}</span>
             </li>
-          ))}
-        </ul>
+            ))}
+        </ol>
       </div>
     </section>
 

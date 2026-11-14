@@ -147,7 +147,7 @@ const GuideModal = ({ open, onOpenChange, guideType, lang = "fr" }: GuideModalPr
       <DialogContent className="sm:max-w-[480px] rounded-2xl border-border bg-card p-0 overflow-hidden">
                 <div className="px-6 pt-5 pb-7 sm:px-8 sm:pt-6 sm:pb-8">
           <DialogHeader className="text-left">
-            <p className="mb-2 flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-muted-foreground/80">
+            <p className="mb-2 flex items-center gap-2 text-[0.8125rem] font-medium text-muted-foreground">
               <BookOpen size={13} className="text-[var(--ink-soft)]" />
               {l.overline}
             </p>

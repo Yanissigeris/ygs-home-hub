@@ -28,7 +28,7 @@ const GuideInlineCTA = ({ guideType, headline, text, ctaLabel, lang = "fr" }: Gu
           <div className="relative overflow-hidden rounded-2xl border border-[rgba(247,244,238,0.12)] bg-gradient-to-br from-primary via-primary to-[hsl(226_80%_16%)] px-6 py-8 sm:px-10 sm:py-10">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <div className="flex-1">
-                <p className="flex items-center gap-2 text-[0.7rem] font-medium tracking-[0.12em] uppercase text-[rgba(247,244,238,0.75)] mb-2">
+                <p className="flex items-center gap-2 text-[0.8125rem] font-medium text-[rgba(247,244,238,0.8)] mb-2">
                   <BookOpen size={13} className="text-[rgba(247,244,238,0.75)]" />
                   {d.overline}
                 </p>

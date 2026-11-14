@@ -1,25 +1,55 @@
-import blogMarket from "@/assets/blog/blog-market-2025.webp";
-import blogWhenToSell from "@/assets/blog/blog-when-to-sell.webp";
-import blogFirstTimeBuyer from "@/assets/blog/blog-first-time-buyer.webp";
-import blogOttawaGatineau from "@/assets/blog/blog-ottawa-gatineau.webp";
-import blogPlexInvestment from "@/assets/blog/blog-plex-investment.webp";
-import blogNeighborhoods from "@/assets/blog/blog-neighborhoods.webp";
-import blogMilitary from "@/assets/blog/blog-military.webp";
-import blogNotaryClosing from "@/assets/blog/blog-notary-closing.webp";
-import blogHomeStaging from "@/assets/blog/blog-home-staging.webp";
-import blogRenovationValue from "@/assets/blog/blog-renovation-value.webp";
-import blogTaxesGatineau from "@/assets/blog/blog-taxes-gatineau.webp";
-import blogFamilyNeighborhood from "@/assets/blog/blog-family-neighborhood.webp";
-import blogAylmerMarina from "@/assets/blog/blog-aylmer-marina.webp";
-import blogInspection from "@/assets/blog/blog-inspection.webp";
-import blogFirstHomeTips from "@/assets/blog/blog-first-home-tips.webp";
-import blogGatineauPark from "@/assets/blog/blog-gatineau-park.webp";
-import blogCondoHull from "@/assets/blog/blog-condo-hull.webp";
-import blogRefinancing from "@/assets/blog/blog-refinancing.webp";
-import blogRentalMarket from "@/assets/blog/blog-rental-market.webp";
-import blogCopropriete from "@/assets/blog/blog-copropriete.webp";
-import blogWinterSelling from "@/assets/blog/blog-winter-selling.webp";
-import blogCourtierAvantages from "@/assets/blog/blog-courtier-avantages.webp";
+import photoInventaireGatineau202630PourcentInscriptions from "@/assets/blog/photo-inventaire-gatineau-2026-30-pourcent-inscriptions.webp";
+import photoInventaireGatineau202630PourcentInscriptionsSm from "@/assets/blog/photo-inventaire-gatineau-2026-30-pourcent-inscriptions-sm.webp";
+import photoMarcheImmobilierGatineauAvril2026 from "@/assets/blog/photo-marche-immobilier-gatineau-avril-2026.webp";
+import photoMarcheImmobilierGatineauAvril2026Sm from "@/assets/blog/photo-marche-immobilier-gatineau-avril-2026-sm.webp";
+import photo3ErreursPrixVendeurGatineau2026 from "@/assets/blog/photo-3-erreurs-prix-vendeur-gatineau-2026.webp";
+import photo3ErreursPrixVendeurGatineau2026Sm from "@/assets/blog/photo-3-erreurs-prix-vendeur-gatineau-2026-sm.webp";
+import photoVendreGatineauPrintemps2026MarcheReequilibre from "@/assets/blog/photo-vendre-gatineau-printemps-2026-marche-reequilibre.webp";
+import photoVendreGatineauPrintemps2026MarcheReequilibreSm from "@/assets/blog/photo-vendre-gatineau-printemps-2026-marche-reequilibre-sm.webp";
+import photoPlexGatineauMars2026 from "@/assets/blog/photo-plex-gatineau-mars-2026.webp";
+import photoPlexGatineauMars2026Sm from "@/assets/blog/photo-plex-gatineau-mars-2026-sm.webp";
+import photoQuandVendreSaMaisonGatineau from "@/assets/blog/photo-quand-vendre-sa-maison-gatineau.webp";
+import photoQuandVendreSaMaisonGatineauSm from "@/assets/blog/photo-quand-vendre-sa-maison-gatineau-sm.webp";
+import photoPremierAchatGatineauGuide from "@/assets/blog/photo-premier-achat-gatineau-guide.webp";
+import photoPremierAchatGatineauGuideSm from "@/assets/blog/photo-premier-achat-gatineau-guide-sm.webp";
+import photoDemenagerOttawaGatineauGuide from "@/assets/blog/photo-demenager-ottawa-gatineau-guide.webp";
+import photoDemenagerOttawaGatineauGuideSm from "@/assets/blog/photo-demenager-ottawa-gatineau-guide-sm.webp";
+import photoInvestirPlexGatineauRentable from "@/assets/blog/photo-investir-plex-gatineau-rentable.webp";
+import photoInvestirPlexGatineauRentableSm from "@/assets/blog/photo-investir-plex-gatineau-rentable-sm.webp";
+import photoAylmerHullPlateauQuelQuartierChoisir from "@/assets/blog/photo-aylmer-hull-plateau-quel-quartier-choisir.webp";
+import photoAylmerHullPlateauQuelQuartierChoisirSm from "@/assets/blog/photo-aylmer-hull-plateau-quel-quartier-choisir-sm.webp";
+import photoMutationMilitaireGatineau from "@/assets/blog/photo-mutation-militaire-gatineau.webp";
+import photoMutationMilitaireGatineauSm from "@/assets/blog/photo-mutation-militaire-gatineau-sm.webp";
+import photoFraisNotaireAchatMaisonGatineau from "@/assets/blog/photo-frais-notaire-achat-maison-gatineau.webp";
+import photoFraisNotaireAchatMaisonGatineauSm from "@/assets/blog/photo-frais-notaire-achat-maison-gatineau-sm.webp";
+import photoHomeStagingVendrePlusViteGatineau from "@/assets/blog/photo-home-staging-vendre-plus-vite-gatineau.webp";
+import photoHomeStagingVendrePlusViteGatineauSm from "@/assets/blog/photo-home-staging-vendre-plus-vite-gatineau-sm.webp";
+import photoRenovationsQuiAugmententValeurMaison from "@/assets/blog/photo-renovations-qui-augmentent-valeur-maison.webp";
+import photoRenovationsQuiAugmententValeurMaisonSm from "@/assets/blog/photo-renovations-qui-augmentent-valeur-maison-sm.webp";
+import photoTaxesMunicipalesGatineauVsOttawa from "@/assets/blog/photo-taxes-municipales-gatineau-vs-ottawa.webp";
+import photoTaxesMunicipalesGatineauVsOttawaSm from "@/assets/blog/photo-taxes-municipales-gatineau-vs-ottawa-sm.webp";
+import photoMeilleursQuartiersFamillesGatineau from "@/assets/blog/photo-meilleurs-quartiers-familles-gatineau.webp";
+import photoMeilleursQuartiersFamillesGatineauSm from "@/assets/blog/photo-meilleurs-quartiers-familles-gatineau-sm.webp";
+import photoVivreAylmerGatineauGuideQuartier from "@/assets/blog/photo-vivre-aylmer-gatineau-guide-quartier.webp";
+import photoVivreAylmerGatineauGuideQuartierSm from "@/assets/blog/photo-vivre-aylmer-gatineau-guide-quartier-sm.webp";
+import photoInspectionPreachatGatineauGuide from "@/assets/blog/photo-inspection-preachat-gatineau-guide.webp";
+import photoInspectionPreachatGatineauGuideSm from "@/assets/blog/photo-inspection-preachat-gatineau-guide-sm.webp";
+import photoConseilsPremierAchatMaisonGatineau from "@/assets/blog/photo-conseils-premier-achat-maison-gatineau.webp";
+import photoConseilsPremierAchatMaisonGatineauSm from "@/assets/blog/photo-conseils-premier-achat-maison-gatineau-sm.webp";
+import photoVivrePresParcGatineauImmobilier from "@/assets/blog/photo-vivre-pres-parc-gatineau-immobilier.webp";
+import photoVivrePresParcGatineauImmobilierSm from "@/assets/blog/photo-vivre-pres-parc-gatineau-immobilier-sm.webp";
+import photoAcheterCondoHullGatineauGuide from "@/assets/blog/photo-acheter-condo-hull-gatineau-guide.webp";
+import photoAcheterCondoHullGatineauGuideSm from "@/assets/blog/photo-acheter-condo-hull-gatineau-guide-sm.webp";
+import photoRefinancementHypothecaireGatineauGuide from "@/assets/blog/photo-refinancement-hypothecaire-gatineau-guide.webp";
+import photoRefinancementHypothecaireGatineauGuideSm from "@/assets/blog/photo-refinancement-hypothecaire-gatineau-guide-sm.webp";
+import photoMarcheLocatifGatineauInvestissement from "@/assets/blog/photo-marche-locatif-gatineau-investissement.webp";
+import photoMarcheLocatifGatineauInvestissementSm from "@/assets/blog/photo-marche-locatif-gatineau-investissement-sm.webp";
+import photoGuideCoproprieteGatineauToutSavoir from "@/assets/blog/photo-guide-copropriete-gatineau-tout-savoir.webp";
+import photoGuideCoproprieteGatineauToutSavoirSm from "@/assets/blog/photo-guide-copropriete-gatineau-tout-savoir-sm.webp";
+import photoVendreMaisonHiverGatineauConseils from "@/assets/blog/photo-vendre-maison-hiver-gatineau-conseils.webp";
+import photoVendreMaisonHiverGatineauConseilsSm from "@/assets/blog/photo-vendre-maison-hiver-gatineau-conseils-sm.webp";
+import photoAvantagesCourtierImmobilierGatineau from "@/assets/blog/photo-avantages-courtier-immobilier-gatineau.webp";
+import photoAvantagesCourtierImmobilierGatineauSm from "@/assets/blog/photo-avantages-courtier-immobilier-gatineau-sm.webp";
 
 export interface BlogPost {
   slug: string;
@@ -35,6 +65,10 @@ export interface BlogPost {
   category: string;
   categoryEn: string;
   featuredImage?: string;
+  /** Version réduite (720 px) pour les cartes. */
+  featuredImageSm?: string;
+  /** Crédit et texte de remplacement de la photo (licence libre, Wikimedia Commons). */
+  featuredImageCredit?: { artist: string; license: string; href: string; alt: string; altEn: string };
   publishDate: string;
   /** Date (YYYY-MM-DD) of the last substantive content update. Shown as « Mis à jour le » and used as dateModified. */
   updatedDate?: string;
@@ -79,7 +113,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "inventaire-gatineau-2026-30-pourcent-inscriptions",
-    featuredImage: blogMarket,
+    featuredImage: photoInventaireGatineau202630PourcentInscriptions,
+    featuredImageSm: photoInventaireGatineau202630PourcentInscriptionsSm,
+    featuredImageCredit: { artist: "P199", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Angers_QC.jpg", alt: "Rue résidentielle du secteur Angers, à Gatineau", altEn: "Residential street in Angers, Gatineau" },
     slugEn: "gatineau-inventory-2026-30-percent-listings",
     title: "Inventaire +30 % à Gatineau : baissez-vous votre prix?",
     titleEn: "Gatineau Listings Up 30%: What It Means for Your Price",
@@ -89,8 +125,8 @@ export const blogPosts: BlogPost[] = [
     metaDescriptionEn: "2,007 homes for sale in Gatineau in Q2 2026, up 30% year-over-year. What rising inventory means for your list price. Numbers and strategy.",
     excerpt: "Vous pensez vendre votre maison à Gatineau cet automne et vous entendez que le marché ralentit. La réalité est plus précise que ça : les acheteurs ont maintenant 30 % plus de choix qu'il y a un an, et c'est votre stratégie de prix qui absorbe la différence. Les chiffres du deuxième trimestre mesurent l'effet sur votre vente.",
     excerptEn: "You're thinking of selling your Gatineau home this fall and you keep hearing the market is slowing. The reality is more precise: buyers now have 30% more choice than a year ago, and your pricing strategy is absorbing the difference. Here are the Q2 numbers, and what they mean for you.",
-    category: "MARCHÉ · MISE À JOUR T2 2026",
-    categoryEn: "MARKET · Q2 2026 UPDATE",
+    category: "Marché",
+    categoryEn: "Market",
     publishDate: "2026-07-24",
     updatedDate: "2026-11-04",
     published: true,
@@ -124,12 +160,12 @@ export const blogPosts: BlogPost[] = [
       eyebrow: "ÉVALUATION PERSONNALISÉE",
       title: "Votre maison vaut-elle plus ou moins qu'il y a un an?",
       text: "Avec 30 % plus de concurrence sur le marché, la réponse dépend de votre secteur et des ventes des 90 derniers jours. Écrivez-moi VALEUR et je vous prépare une évaluation gratuite basée sur les ventes comparables récentes de votre quartier, avec une réponse personnalisée. Les chiffres et les options. Vous décidez.",
-      buttonLabel: "Demander VALEUR",
+      buttonLabel: "Évaluation gratuite",
       buttonHref: "/evaluation-gratuite-gatineau/",
       eyebrowEn: "PERSONALIZED VALUATION",
       titleEn: "Is your home worth more or less than a year ago?",
       textEn: "With 30% more competition on the market, the answer depends on your area and the last 90 days of sales. Message me VALUE and I'll prepare a free valuation based on recent comparable sales from your neighbourhood, with a personalized response. The numbers and the options. You decide.",
-      buttonLabelEn: "Request VALUE",
+      buttonLabelEn: "Free Home Valuation",
       buttonHrefEn: "/en/home-valuation/",
     },
     body: `Vous pensez vendre votre maison à Gatineau cet automne et vous entendez que le marché ralentit. La réalité est plus précise que ça : les acheteurs ont maintenant 30 % plus de choix qu'il y a un an, et c'est votre stratégie de prix qui absorbe la différence. Les chiffres du deuxième trimestre mesurent l'effet sur votre vente.
@@ -215,7 +251,9 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
   },
   {
     slug: "marche-immobilier-gatineau-avril-2026",
-    featuredImage: blogMarket,
+    featuredImage: photoMarcheImmobilierGatineauAvril2026,
+    featuredImageSm: photoMarcheImmobilierGatineauAvril2026Sm,
+    featuredImageCredit: { artist: "Andrijko Z.", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(view_from_the_Peace_Tower_of_Parliament_Centre_Block).JPG", alt: "Vue du secteur Hull, à Gatineau, depuis la tour de la Paix", altEn: "View of Hull, Gatineau, from the Peace Tower" },
     slugEn: "gatineau-real-estate-market-april-2026",
     title: "Marché immobilier de Gatineau au 3e trimestre 2026 : trois segments, trois rythmes",
     titleEn: "Gatineau Real Estate Market, Q3 2026: Three Segments, Three Speeds",
@@ -225,8 +263,8 @@ A: 27 days on average for a single-family home in Q2 2026, a stable timeline yea
     metaDescriptionEn: "Q3 2026 in Gatineau: inventory +42%, sales -12%, single-family at $480,000. What changes for single-family homes, condos and plexes, with QPAREB figures.",
     excerpt: "Au 3e trimestre 2026, l'inventaire a monté de 42 % et les ventes ont reculé de 12 % à Gatineau. Les trois segments ont ralenti, chacun à sa façon.",
     excerptEn: "In Q3 2026, inventory rose 42% and sales fell 12% in Gatineau. All three segments slowed down, each in its own way.",
-    category: "MARCHÉ · MISE À JOUR TRIMESTRIELLE",
-    categoryEn: "MARKET · QUARTERLY UPDATE",
+    category: "Marché",
+    categoryEn: "Market",
     publishDate: "2026-05-14",
     updatedDate: "2026-11-05",
     published: true,
@@ -348,7 +386,9 @@ A: In Q3 2026, a single-family home sold in 34 days on average in the CMA. It ra
   },
   {
     slug: "3-erreurs-prix-vendeur-gatineau-2026",
-    featuredImage: blogMarket,
+    featuredImage: photo3ErreursPrixVendeurGatineau2026,
+    featuredImageSm: photo3ErreursPrixVendeurGatineau2026Sm,
+    featuredImageCredit: { artist: "Matti Blume", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Rue_Jacques-Cartier,_Gatineau_(2013-09-14_17.55.11).jpg", alt: "Rue Jacques-Cartier, à Gatineau", altEn: "Rue Jacques-Cartier in Gatineau" },
     slugEn: "3-pricing-mistakes-gatineau-sellers-2026",
     title: "3 erreurs de prix qui allongent la vente à Gatineau",
     titleEn: "3 Pricing Mistakes That Slow Down a Sale in Gatineau",
@@ -358,8 +398,8 @@ A: In Q3 2026, a single-family home sold in 34 days on average in the CMA. It ra
     metaDescriptionEn: "Inventory up 42% in Gatineau in Q3 2026: the three pricing mistakes that stretch out a sale, with QPAREB figures.",
     excerpt: "Avec 42 % plus de propriétés à vendre qu'il y a un an, l'acheteur compare davantage. Trois erreurs de prix qui allongent la vente.",
     excerptEn: "With 42% more homes for sale than a year ago, buyers compare more. Three pricing mistakes that stretch out a sale.",
-    category: "VENDEUR · Stratégie de prix",
-    categoryEn: "SELLER · Pricing Strategy",
+    category: "Vendeurs",
+    categoryEn: "Sellers",
     publishDate: "2026-05-06",
     updatedDate: "2026-11-04",
     published: true,
@@ -498,7 +538,9 @@ A: They affect how much buyers can borrow. On October 28, 2026, the Bank of Cana
   },
   {
     slug: "vendre-gatineau-printemps-2026-marche-reequilibre",
-    featuredImage: blogMarket,
+    featuredImage: photoVendreGatineauPrintemps2026MarcheReequilibre,
+    featuredImageSm: photoVendreGatineauPrintemps2026MarcheReequilibreSm,
+    featuredImageCredit: { artist: "abdallahh", license: "CC BY 2.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(3937579439).jpg", alt: "Le centre-ville de Gatineau vu de la rivière des Outaouais", altEn: "Downtown Gatineau seen from the Ottawa River" },
     slugEn: "sell-gatineau-spring-2026-market-rebalancing",
     title: "Le marché de Gatineau se rééquilibre.",
     titleEn: "The Gatineau market is rebalancing.",
@@ -508,8 +550,8 @@ A: They affect how much buyers can borrow. On October 28, 2026, the Bank of Cana
     metaDescriptionEn: "More listings, slight pressure on prices. What Gatineau sellers need to know before listing their home this spring.",
     excerpt: "Les chiffres du T1 2026 sont sortis. Côté volume, les ventes reculent pendant que les inscriptions augmentent. Le prix médian des unifamiliales à Gatineau affiche un léger recul.",
     excerptEn: "Q1 2026 numbers are out. Sales are down while listings are up. The median price of single-family homes in Gatineau shows a slight decline.",
-    category: "MARCHÉ · VENDEUR",
-    categoryEn: "MARKET · SELLER",
+    category: "Marché",
+    categoryEn: "Market",
     publishDate: "2026-04-19",
     updatedDate: "2026-11-04",
     published: true,
@@ -613,7 +655,9 @@ A: Yes. More inventory means more visual competition. Photos and price positioni
   },
   {
     slug: "plex-gatineau-mars-2026",
-    featuredImage: blogPlexInvestment,
+    featuredImage: photoPlexGatineauMars2026,
+    featuredImageSm: photoPlexGatineauMars2026Sm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:314_-_318,_rue_de_Notre-Dame-de-l_Ile.jpg", alt: "Triplex de la rue Notre-Dame-de-l'Île, dans le secteur Hull", altEn: "Triplex on rue Notre-Dame-de-l'Île in Hull" },
     slugEn: "plex-gatineau-march-2026",
     title: "Plex à Gatineau au 3e trimestre 2026 : plus de choix pour les acheteurs",
     titleEn: "Plexes in Gatineau, Q3 2026: More Choice for Buyers",
@@ -623,8 +667,8 @@ A: Yes. More inventory means more visual competition. Photos and price positioni
     metaDescriptionEn: "Gatineau plexes in Q3 2026: $617,500 median, inventory up 51%, prices by sector and vacancy. QPAREB and CMHC figures.",
     excerpt: "190 plex à vendre au 3e trimestre 2026, 51 % de plus qu'un an plus tôt. Prix par secteur, inoccupation et la question que mes investisseurs posent le plus.",
     excerptEn: "190 plexes for sale in Q3 2026, 51% more than a year earlier. Prices by sector, vacancy, and the question my investors ask most.",
-    category: "MARCHÉ · PLEX",
-    categoryEn: "MARKET · PLEX",
+    category: "Investissement",
+    categoryEn: "Investment",
     publishDate: "2026-04-18",
     updatedDate: "2026-11-05",
     published: true,
@@ -728,7 +772,9 @@ A: It's less common. The lowest 12-month median was $538,500, in the [Buckingham
   },
   {
     slug: "marche-immobilier-gatineau-2025",
-    featuredImage: blogMarket,
+    featuredImage: photoMarcheImmobilierGatineauAvril2026,
+    featuredImageSm: photoMarcheImmobilierGatineauAvril2026Sm,
+    featuredImageCredit: { artist: "Andrijko Z.", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(view_from_the_Peace_Tower_of_Parliament_Centre_Block).JPG", alt: "Vue du secteur Hull, à Gatineau, depuis la tour de la Paix", altEn: "View of Hull, Gatineau, from the Peace Tower" },
     slugEn: "gatineau-real-estate-market-2025",
     title: "Le marché immobilier à Gatineau en 2025 : ce que les chiffres révèlent",
     titleEn: "Gatineau Real Estate Market in 2025: What the Numbers Reveal",
@@ -789,7 +835,9 @@ Whether you're thinking of selling or buying, understanding these trends gives y
   },
   {
     slug: "quand-vendre-sa-maison-gatineau",
-    featuredImage: blogWhenToSell,
+    featuredImage: photoQuandVendreSaMaisonGatineau,
+    featuredImageSm: photoQuandVendreSaMaisonGatineauSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(QC)-rivi%C3%A8re_des_Outaouais_(en_amont_du_pont_de_l%27avenue_du_Pont)-2022-10-23.jpg", alt: "La rivière des Outaouais en automne, à Gatineau", altEn: "The Ottawa River in autumn, Gatineau" },
     slugEn: "best-time-to-sell-gatineau",
     title: "Quand vendre sa maison à Gatineau pour un bon prix?",
     titleEn: "When Is the Best Time to Sell in Gatineau?",
@@ -869,7 +917,9 @@ I show you those numbers before we set a date. Then you decide.
   },
   {
     slug: "premier-achat-gatineau-guide",
-    featuredImage: blogFirstTimeBuyer,
+    featuredImage: photoPremierAchatGatineauGuide,
+    featuredImageSm: photoPremierAchatGatineauGuideSm,
+    featuredImageCredit: { artist: "Cantons-de-l'Est", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:188,_rue_James-Murray,_Gatineau.jpg", alt: "Maison de la rue James-Murray, à Gatineau", altEn: "House on rue James-Murray, Gatineau" },
     slugEn: "first-time-buyer-gatineau-guide",
     title: "Premier achat à Gatineau : les 5 étapes",
     titleEn: "First-Time Buyer in Gatineau: 5 Steps",
@@ -933,7 +983,9 @@ A real estate broker who knows the local market can save you time and money. The
   },
   {
     slug: "demenager-ottawa-gatineau-guide",
-    featuredImage: blogOttawaGatineau,
+    featuredImage: photoDemenagerOttawaGatineauGuide,
+    featuredImageSm: photoDemenagerOttawaGatineauGuideSm,
+    featuredImageCredit: { artist: "SimonP", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Alexandra_Bridge2.JPG", alt: "Le pont Alexandra entre Ottawa et Gatineau", altEn: "The Alexandra Bridge between Ottawa and Gatineau" },
     slugEn: "moving-ottawa-to-gatineau-guide",
     title: "Déménager d'Ottawa à Gatineau : ce qu'il faut savoir",
     titleEn: "Moving from Ottawa to Gatineau: What to Know",
@@ -999,7 +1051,9 @@ Downtown Ottawa is about 2 km from Hull via the Portage Bridge, 9 km from the Pl
   },
   {
     slug: "investir-plex-gatineau-rentable",
-    featuredImage: blogPlexInvestment,
+    featuredImage: photoInvestirPlexGatineauRentable,
+    featuredImageSm: photoInvestirPlexGatineauRentableSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:95_rue_Victoria.jpg", alt: "Immeuble de logements de la rue Victoria, dans le secteur Hull", altEn: "Apartment building on rue Victoria in Hull" },
     slugEn: "investing-plex-gatineau-worth-it",
     title: "Investir dans un plex à Gatineau : encore rentable?",
     titleEn: "Investing in a Plex in Gatineau: Is It Still Worth It?",
@@ -1115,7 +1169,9 @@ I calculate the GRM, the cap rate and the cash flow from the leases in place, be
   },
   {
     slug: "aylmer-hull-plateau-quel-quartier-choisir",
-    featuredImage: blogNeighborhoods,
+    featuredImage: photoAylmerHullPlateauQuelQuartierChoisir,
+    featuredImageSm: photoAylmerHullPlateauQuelQuartierChoisirSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Secteur_d%27Aylmer-Vue_vers_l%27est_de_la_rue_Principale-2023.jpg", alt: "La rue Principale, dans le secteur Aylmer", altEn: "Rue Principale in Aylmer" },
     slugEn: "aylmer-hull-plateau-which-neighborhood",
     title: "Aylmer, Hull ou Plateau : quel quartier choisir?",
     titleEn: "Aylmer, Hull or Plateau: Which Neighbourhood Fits You?",
@@ -1199,7 +1255,9 @@ The right neighbourhood depends on your priorities: proximity to work, schools, 
   },
   {
     slug: "mutation-militaire-gatineau",
-    featuredImage: blogMilitary,
+    featuredImage: photoMutationMilitaireGatineau,
+    featuredImageSm: photoMutationMilitaireGatineauSm,
+    featuredImageCredit: { artist: "Iouri Goussev", license: "CC BY-SA 2.0", href: "https://commons.wikimedia.org/wiki/File:Nortel_-_Carling_Campus_(3443785027).jpg", alt: "Le campus Carling, quartier général de la Défense nationale, à Ottawa", altEn: "The Carling Campus, National Defence Headquarters, Ottawa" },
     slugEn: "military-posting-gatineau",
     title: "Mutation militaire à Gatineau : ce qu'il faut savoir",
     titleEn: "Military Posting to Gatineau: What You Need to Know",
@@ -1286,7 +1344,9 @@ I've worked with military families since 2017. I know the steps of a relocation,
   {
     slug: "frais-notaire-achat-maison-gatineau",
     slugEn: "notary-fees-buying-home-gatineau",
-    featuredImage: blogNotaryClosing,
+    featuredImage: photoFraisNotaireAchatMaisonGatineau,
+    featuredImageSm: photoFraisNotaireAchatMaisonGatineauSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:169_-_175_promenade_du_Portage.jpg", alt: "Immeubles de la promenade du Portage, dans le secteur Hull", altEn: "Buildings on Promenade du Portage in Hull" },
     title: "Frais de notaire pour l'achat d'une maison à Gatineau",
     titleEn: "Notary Fees and Closing Costs in Gatineau",
     seoTitle: "Frais de notaire achat maison Gatineau · Guide | YGS",
@@ -1409,7 +1469,9 @@ A: It's agreed between the parties and written into the promise to purchase. Mos
   {
     slug: "home-staging-vendre-plus-vite-gatineau",
     slugEn: "home-staging-sell-faster-gatineau",
-    featuredImage: blogHomeStaging,
+    featuredImage: photoHomeStagingVendrePlusViteGatineau,
+    featuredImageSm: photoHomeStagingVendrePlusViteGatineauSm,
+    featuredImageCredit: { artist: "Jarosław Ceborski", license: "CC0", href: "https://commons.wikimedia.org/wiki/File:Living_room_(Unsplash).jpg", alt: "Salon lumineux et épuré", altEn: "Bright, uncluttered living room" },
     title: "Home staging à Gatineau : vendre plus vite",
     titleEn: "Home Staging in Gatineau: How to Sell Faster",
     seoTitle: "Home staging Gatineau · Vendre plus vite | YGS",
@@ -1489,7 +1551,9 @@ I tell you which changes are worth it in your case and which ones you can skip.
   {
     slug: "renovations-qui-augmentent-valeur-maison",
     slugEn: "renovations-that-increase-home-value",
-    featuredImage: blogRenovationValue,
+    featuredImage: photoRenovationsQuiAugmententValeurMaison,
+    featuredImageSm: photoRenovationsQuiAugmententValeurMaisonSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:163-165_promenade_du_Portage.jpg", alt: "Bâtiment patrimonial restauré de la promenade du Portage, dans le secteur Hull", altEn: "Restored heritage building on Promenade du Portage in Hull" },
     title: "Rénovations qui augmentent la valeur à Gatineau",
     titleEn: "Renovations That Increase Home Value in Gatineau",
     seoTitle: "Rénovations valeur maison Gatineau · Guide | YGS",
@@ -1557,7 +1621,9 @@ I give you the numbers and the options, and you decide. Before you spend, I comp
   {
     slug: "taxes-municipales-gatineau-vs-ottawa",
     slugEn: "property-taxes-gatineau-vs-ottawa",
-    featuredImage: blogTaxesGatineau,
+    featuredImage: photoTaxesMunicipalesGatineauVsOttawa,
+    featuredImageSm: photoTaxesMunicipalesGatineauVsOttawaSm,
+    featuredImageCredit: { artist: "Andrevruas", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Gatineauparlamento.jpg", alt: "La colline du Parlement vue de la rive de Gatineau", altEn: "Parliament Hill seen from the Gatineau shore" },
     title: "Taxes municipales Gatineau ou Ottawa : comment comparer",
     titleEn: "Property Taxes in Gatineau vs Ottawa: How to Compare",
     seoTitle: "Taxes municipales Gatineau vs Ottawa 2026 | YGS",
@@ -1648,7 +1714,9 @@ Don't pick a side of the river based on a tax rate. Look at the purchase price, 
   {
     slug: "meilleurs-quartiers-familles-gatineau",
     slugEn: "best-family-neighborhoods-gatineau",
-    featuredImage: blogFamilyNeighborhood,
+    featuredImage: photoMeilleursQuartiersFamillesGatineau,
+    featuredImageSm: photoMeilleursQuartiersFamillesGatineauSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Secteur_d%27Aylmer-Parc_de_l%27imaginaire-2023-05-26.jpg", alt: "Parc de l'Imaginaire, dans le secteur Aylmer", altEn: "Parc de l'Imaginaire in Aylmer" },
     title: "Quartiers pour familles à Gatineau : le comparatif",
     titleEn: "Family Neighbourhoods in Gatineau: A Comparison",
     seoTitle: "Quartiers familles Gatineau · Comparatif | YGS",
@@ -1810,7 +1878,9 @@ I live in Gatineau and know each neighbourhood personally. We do a tour together
     excerptEn: "Beach, marina, parks and family life: why Aylmer appeals to buyers.",
     category: "Quartiers",
     categoryEn: "Neighbourhoods",
-    featuredImage: blogAylmerMarina,
+    featuredImage: photoVivreAylmerGatineauGuideQuartier,
+    featuredImageSm: photoVivreAylmerGatineauGuideQuartierSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Marina_d%27Aylmer-Vue_de_bateaux_de_plaisance_au_quai-2023-05-26.jpg", alt: "La marina d'Aylmer, à Gatineau", altEn: "The Aylmer marina in Gatineau" },
     publishDate: "2025-11-20",
     updatedDate: "2026-11-05",
     published: true,
@@ -1904,7 +1974,9 @@ In Q3 2026, a single-family home sold in 25 days on average in Aylmer, compared 
     excerptEn: "Foundation, roof, plumbing and electrical: what your inspector should check before buying.",
     category: "Acheteurs",
     categoryEn: "Buyers",
-    featuredImage: blogInspection,
+    featuredImage: photoInspectionPreachatGatineauGuide,
+    featuredImageSm: photoInspectionPreachatGatineauGuideSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(secteur_Aylmer)-2023-05-26.jpg", alt: "Le Vieux-Aylmer et ses bâtiments de pierre", altEn: "Old Aylmer and its stone buildings" },
     publishDate: "2025-11-05",
     updatedDate: "2026-11-05",
     published: true,
@@ -1994,7 +2066,9 @@ Never skip the inspection. With more homes for sale than a year ago, you have mo
     excerptEn: "From pre-qualification to closing day: 10 steps for first-time buyers.",
     category: "Acheteurs",
     categoryEn: "Buyers",
-    featuredImage: blogFirstHomeTips,
+    featuredImage: photoConseilsPremierAchatMaisonGatineau,
+    featuredImageSm: photoConseilsPremierAchatMaisonGatineauSm,
+    featuredImageCredit: { artist: "Cantons-de-l'Est", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:180,_rue_James-Murray,_Gatineau.jpg", alt: "Maison de la rue James-Murray, à Gatineau", altEn: "House on rue James-Murray, Gatineau" },
     publishDate: "2025-10-22",
     updatedDate: "2026-11-05",
     published: true,
@@ -2102,7 +2176,9 @@ I offer a complete service for first-time buyers, from pre-qualification to key 
     excerptEn: "Trails and cross-country skiing nearby: living steps from Gatineau Park is possible.",
     category: "Quartiers",
     categoryEn: "Neighbourhoods",
-    featuredImage: blogGatineauPark,
+    featuredImage: photoVivrePresParcGatineauImmobilier,
+    featuredImageSm: photoVivrePresParcGatineauImmobilierSm,
+    featuredImageCredit: { artist: "cjuneau", license: "CC BY 2.0", href: "https://commons.wikimedia.org/wiki/File:Champlain_Lookout,_Gatineau_Park_(10396089076).jpg", alt: "Le belvédère Champlain, dans le parc de la Gatineau", altEn: "Champlain Lookout in Gatineau Park" },
     publishDate: "2025-10-10",
     updatedDate: "2026-11-05",
     published: true,
@@ -2200,7 +2276,9 @@ If this lifestyle appeals to you, I can alert you as soon as an opportunity come
     excerptEn: "From the Zibi project to downtown, what to know before buying a condo in Hull to live in or invest.",
     category: "Investissement",
     categoryEn: "Investment",
-    featuredImage: blogCondoHull,
+    featuredImage: photoAcheterCondoHullGatineauGuide,
+    featuredImageSm: photoAcheterCondoHullGatineauGuideSm,
+    featuredImageCredit: { artist: "Cossette.phil", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Centre-ville_de_Hull.jpg", alt: "Les tours du centre-ville de Hull en hiver", altEn: "Downtown Hull towers in winter" },
     publishDate: "2025-09-28",
     updatedDate: "2026-11-05",
     published: true,
@@ -2294,7 +2372,9 @@ Hull suits buyers who want an urban lifestyle with quick access to Ottawa. Wheth
     excerptEn: "Access your equity to consolidate debt or fund renovations through mortgage refinancing.",
     category: "Finances",
     categoryEn: "Finance",
-    featuredImage: blogRefinancing,
+    featuredImage: photoRefinancementHypothecaireGatineauGuide,
+    featuredImageSm: photoRefinancementHypothecaireGatineauGuideSm,
+    featuredImageCredit: { artist: "Veillg1", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Gatineau_(Qu%C3%A9bec)-Pont_de_l%27avenue_du_Pont_sur_rivi%C3%A8re_des_Outaouais-2022-10-23.jpg", alt: "La rivière des Outaouais à Gatineau, en automne", altEn: "The Ottawa River in Gatineau, in autumn" },
     publishDate: "2025-09-15",
     updatedDate: "2026-11-05",
     published: true,
@@ -2394,7 +2474,9 @@ Before refinancing, get your property appraised to know its true market value. I
     excerptEn: "Vacancy doubled in one year according to CMHC. What it changes when you run the numbers on a plex in Gatineau.",
     category: "Investissement",
     categoryEn: "Investment",
-    featuredImage: blogRentalMarket,
+    featuredImage: photoMarcheLocatifGatineauInvestissement,
+    featuredImageSm: photoMarcheLocatifGatineauInvestissementSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:85_promenade_du_Portage.jpg", alt: "Immeuble résidentiel de la promenade du Portage, dans le secteur Hull", altEn: "Residential building on Promenade du Portage in Hull" },
     publishDate: "2025-09-01",
     updatedDate: "2026-11-04",
     published: true,
@@ -2488,7 +2570,9 @@ For a plex, I look at the leases in place, expenses backed by invoices, and a re
     excerptEn: "Condo fees and reserve fund: what to understand before buying a condo in Gatineau.",
     category: "Acheteurs",
     categoryEn: "Buyers",
-    featuredImage: blogCopropriete,
+    featuredImage: photoGuideCoproprieteGatineauToutSavoir,
+    featuredImageSm: photoGuideCoproprieteGatineauToutSavoirSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Eglise_de_Notre-Dame-de-l_Ile.jpg", alt: "Tour résidentielle du secteur Hull", altEn: "Residential tower in Hull" },
     publishDate: "2025-08-18",
     updatedDate: "2026-11-05",
     published: true,
@@ -2576,7 +2660,9 @@ A gap between the fund's balance and the balance recommended by the study often 
     excerptEn: "Less direct competition and buyers with a reason to move: how to prepare a winter sale.",
     category: "Vendeurs",
     categoryEn: "Sellers",
-    featuredImage: blogWinterSelling,
+    featuredImage: photoVendreMaisonHiverGatineauConseils,
+    featuredImageSm: photoVendreMaisonHiverGatineauConseilsSm,
+    featuredImageCredit: { artist: "P199", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Masson_QC_1.jpg", alt: "Rue résidentielle du secteur Masson-Angers en hiver", altEn: "Residential street in Masson-Angers in winter" },
     publishDate: "2025-08-05",
     updatedDate: "2026-11-04",
     published: true,
@@ -2654,7 +2740,9 @@ With recent sales in your area and the homes for sale right now in front of you,
     excerptEn: "What OACIQ oversight guarantees you, and what a broker does from pricing to negotiation.",
     category: "Conseils",
     categoryEn: "Tips",
-    featuredImage: blogCourtierAvantages,
+    featuredImage: photoAvantagesCourtierImmobilierGatineau,
+    featuredImageSm: photoAvantagesCourtierImmobilierGatineauSm,
+    featuredImageCredit: { artist: "Jeangagnon", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:177_promenade_du_Portage_-_01.jpg", alt: "Maisons de brique de la promenade du Portage, dans le secteur Hull", altEn: "Brick houses on Promenade du Portage in Hull" },
     publishDate: "2025-07-20",
     updatedDate: "2026-11-03",
     published: true,
