@@ -5,7 +5,6 @@ import FAQSection from "@/components/FAQSection";
 import ContentBlock from "@/components/ContentBlock";
 import RelatedPages from "@/components/RelatedPages";
 import InlineCTA from "@/components/InlineCTA";
-import { CheckCircle2 } from "lucide-react";
 import heroImg from "@/assets/hero-comment-choisir.webp";
 import { heroBgStyle } from "@/lib/hero-backgrounds";
 
@@ -61,21 +60,21 @@ const CommentChoisirCourtierPage = () => (
     </ContentBlock>
 
     <section className="section-padding bg-[var(--cream)]">
-      <div className="section-container max-w-[44rem]">
-        <SectionHeading overline="Checklist" title="8 critères pour choisir votre courtier" centered />
-        <div className="mt-8 space-y-3">
+      <div className="section-container">
+        <div className="max-w-[44rem]">
+        <SectionHeading overline="Checklist" title="8 critères pour choisir votre courtier" />
+        <div className="mt-8">
           {checklist.map((item, i) => (
             <div
               key={item.title}
-              className="rounded-xl border border-border/40 bg-card p-4 flex gap-3.5"
+              className="border-t py-5"
+              style={{ borderColor: "rgba(0,14,53,0.12)" }}
             >
-              <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--ink-soft)]" />
-              <div>
-                <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
-                <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{item.text}</p>
-              </div>
+              <h3 className="font-display text-[1.0625rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">{item.title}</h3>
+              <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-[var(--ink-soft)]">{item.text}</p>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

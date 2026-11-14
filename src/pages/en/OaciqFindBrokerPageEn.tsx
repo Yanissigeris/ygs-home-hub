@@ -52,16 +52,16 @@ const OaciqFindBrokerPageEn = () => (
 
     <ContentBlock narrow background="alt">
       <SectionHeading overline="How" title="4 steps to verify a broker" />
-      <div className="mt-5 space-y-3">
+      <div className="mt-6">
         {[
           { title: "1. Visit the OACIQ register", text: "Go to oaciq.com and use the search tool of the register of licence holders." },
           { title: "2. Search by name", text: "Enter the broker's name to see their profile, with their licence and the agency where they work." },
           { title: "3. Check licence status", text: "Make sure the licence is active, not suspended or subject to conditions." },
           { title: "4. Review the history", text: "Check whether the register reports any disciplinary measures. The decisions are published on citoyens.soquij.qc.ca." },
         ].map((item) => (
-          <div key={item.title} className="rounded-xl border border-border/40 bg-card p-4">
-            <h3 className="text-[0.9375rem] font-semibold">{item.title}</h3>
-            <p className="mt-1 text-[0.875rem] leading-[1.6] text-muted-foreground">{item.text}</p>
+          <div key={item.title} className="border-t py-5" style={{ borderColor: "rgba(0,14,53,0.12)" }}>
+            <h3 className="font-display text-[1.0625rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">{item.title}</h3>
+            <p className="mt-1.5 text-[0.9375rem] leading-[1.6] text-[var(--ink-soft)]">{item.text}</p>
           </div>
         ))}
       </div>
