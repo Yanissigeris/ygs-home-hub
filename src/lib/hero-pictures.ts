@@ -158,6 +158,8 @@ export interface HeroPicture {
   sizes?: string;
   /** Lighter navy shade behind the text, for real photos Yanis supplied. */
   lightVeil?: boolean;
+  /** CSS object-position for the photo (cropping happens on screen only). */
+  position?: string;
   /** srcset strings with width descriptors, e.g. "/assets/x-480.avif 480w, …" */
   avif: string;
   webp: string;
@@ -197,7 +199,7 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroPlexUrl]: { avif: HeroPlexAvif, webp: HeroPlexWebp },
   [HeroPontiacUrl]: { avif: HeroPontiacAvif, webp: HeroPontiacWebp },
   [HeroPropertiesUrl]: { avif: HeroPropertiesAvif, webp: HeroPropertiesWebp },
-  [HeroRelocalisationUrl]: { avif: HeroRelocalisationAvif, webp: HeroRelocalisationWebp, sizes: SHARP_SIZES, lightVeil: true },
+  [HeroRelocalisationUrl]: { avif: HeroRelocalisationAvif, webp: HeroRelocalisationWebp, sizes: SHARP_SIZES, lightVeil: true, position: "right top" },
   [HeroRelocationGuideUrl]: { avif: HeroRelocationGuideAvif, webp: HeroRelocationGuideWebp },
   [HeroResourcesUrl]: { avif: HeroResourcesAvif, webp: HeroResourcesWebp },
   [HeroSellPlexUrl]: { avif: HeroSellPlexAvif, webp: HeroSellPlexWebp },
