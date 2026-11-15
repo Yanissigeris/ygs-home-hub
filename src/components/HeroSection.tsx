@@ -509,17 +509,17 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {/* Width-based sources (768/1280/1920) for every other hero.
                   Explicit heroBgImageMobile/Avif props above win when present. */}
               {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
-                <source type="image/avif" srcSet={responsiveHero.avif} sizes="100vw" />
+                <source type="image/avif" srcSet={responsiveHero.avif} sizes={responsiveHero.sizes ?? "100vw"} />
               )}
               {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
-                <source type="image/webp" srcSet={responsiveHero.webp} sizes="100vw" />
+                <source type="image/webp" srcSet={responsiveHero.webp} sizes={responsiveHero.sizes ?? "100vw"} />
               )}
               <img
                 src={heroBgImage}
                 alt=""
                 role="presentation"
                 className="hero-bg-image h-full w-full object-cover"
-                style={{ transition: "filter 0.35s ease-out" }}
+                style={{ transition: "filter 0.35s ease-out", ...(responsiveHero?.position ? { objectPosition: responsiveHero.position } : {}) }}
                 width={1920}
                 height={1080}
                 sizes="100vw"
@@ -540,7 +540,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{
                 zIndex: 2,
                 background:
-                  "linear-gradient(90deg, rgba(0,14,53,0.84) 0%, rgba(0,14,53,0.70) 30%, rgba(0,14,53,0.28) 52%, rgba(0,14,53,0) 68%)",
+                  "linear-gradient(90deg, rgba(0,14,53,0.70) 0%, rgba(0,14,53,0.52) 30%, rgba(0,14,53,0.16) 50%, rgba(0,14,53,0) 62%)"
               }}
             />
             <div
@@ -549,7 +549,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               style={{
                 zIndex: 2,
                 background:
-                  "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.72) 55%, rgba(0,14,53,0.46) 80%, rgba(0,14,53,0.28) 100%)",
+                  "linear-gradient(180deg, rgba(0,14,53,0.66) 0%, rgba(0,14,53,0.56) 50%, rgba(0,14,53,0.22) 78%, rgba(0,14,53,0.06) 100%)"
               }}
             />
           </>
