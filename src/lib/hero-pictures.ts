@@ -156,6 +156,8 @@ export interface HeroPicture {
   /** Optional `sizes` override. Real photos use a portrait-aware value so phones
    *  (where object-cover scales the photo to the hero height) get a sharp file. */
   sizes?: string;
+  /** Lighter navy shade behind the text, for real photos Yanis supplied. */
+  lightVeil?: boolean;
   /** srcset strings with width descriptors, e.g. "/assets/x-480.avif 480w, …" */
   avif: string;
   webp: string;
@@ -171,7 +173,7 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroAcheterUrl]: { avif: HeroAcheterAvif, webp: HeroAcheterWebp },
   [HeroAylmerGenUrl]: { avif: HeroAylmerGenAvif, webp: HeroAylmerGenWebp },
   [HeroBuckinghamGenUrl]: { avif: HeroBuckinghamGenAvif, webp: HeroBuckinghamGenWebp },
-  [HeroBuyFromOttawaUrl]: { avif: HeroBuyFromOttawaAvif, webp: HeroBuyFromOttawaWebp, sizes: SHARP_SIZES },
+  [HeroBuyFromOttawaUrl]: { avif: HeroBuyFromOttawaAvif, webp: HeroBuyFromOttawaWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroBuyerConsultationUrl]: { avif: HeroBuyerConsultationAvif, webp: HeroBuyerConsultationWebp },
   [HeroBuyerGuideUrl]: { avif: HeroBuyerGuideAvif, webp: HeroBuyerGuideWebp },
   [HeroCantleyGenUrl]: { avif: HeroCantleyGenAvif, webp: HeroCantleyGenWebp },
@@ -180,8 +182,8 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroFaqUrl]: { avif: HeroFaqAvif, webp: HeroFaqWebp },
   [HeroFirstBuyerUrl]: { avif: HeroFirstBuyerAvif, webp: HeroFirstBuyerWebp },
   [HeroGatineauCentreGenUrl]: { avif: HeroGatineauCentreGenAvif, webp: HeroGatineauCentreGenWebp },
-  [HeroHullGenUrl]: { avif: HeroHullGenAvif, webp: HeroHullGenWebp, sizes: SHARP_SIZES },
-  [HeroLivingHullUrl]: { avif: HeroLivingHullAvif, webp: HeroLivingHullWebp, sizes: SHARP_SIZES },
+  [HeroHullGenUrl]: { avif: HeroHullGenAvif, webp: HeroHullGenWebp, sizes: SHARP_SIZES, lightVeil: true },
+  [HeroLivingHullUrl]: { avif: HeroLivingHullAvif, webp: HeroLivingHullWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroLivingPlateauUrl]: { avif: HeroLivingPlateauAvif, webp: HeroLivingPlateauWebp },
   [HeroMarketReportUrl]: { avif: HeroMarketReportAvif, webp: HeroMarketReportWebp },
   [HeroMilitaryBuyerUrl]: { avif: HeroMilitaryBuyerAvif, webp: HeroMilitaryBuyerWebp },
@@ -190,12 +192,12 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroMilitarySellerUrl]: { avif: HeroMilitarySellerAvif, webp: HeroMilitarySellerWebp },
   [HeroMilitaryUrl]: { avif: HeroMilitaryAvif, webp: HeroMilitaryWebp },
   [HeroMontrealRelocationUrl]: { avif: HeroMontrealRelocationAvif, webp: HeroMontrealRelocationWebp },
-  [HeroNeighborhoodsUrl]: { avif: HeroNeighborhoodsAvif, webp: HeroNeighborhoodsWebp, sizes: SHARP_SIZES },
+  [HeroNeighborhoodsUrl]: { avif: HeroNeighborhoodsAvif, webp: HeroNeighborhoodsWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroPlateauUrl]: { avif: HeroPlateauAvif, webp: HeroPlateauWebp },
   [HeroPlexUrl]: { avif: HeroPlexAvif, webp: HeroPlexWebp },
   [HeroPontiacUrl]: { avif: HeroPontiacAvif, webp: HeroPontiacWebp },
   [HeroPropertiesUrl]: { avif: HeroPropertiesAvif, webp: HeroPropertiesWebp },
-  [HeroRelocalisationUrl]: { avif: HeroRelocalisationAvif, webp: HeroRelocalisationWebp, sizes: SHARP_SIZES },
+  [HeroRelocalisationUrl]: { avif: HeroRelocalisationAvif, webp: HeroRelocalisationWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroRelocationGuideUrl]: { avif: HeroRelocationGuideAvif, webp: HeroRelocationGuideWebp },
   [HeroResourcesUrl]: { avif: HeroResourcesAvif, webp: HeroResourcesWebp },
   [HeroSellPlexUrl]: { avif: HeroSellPlexAvif, webp: HeroSellPlexWebp },
@@ -205,7 +207,7 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroVendreGatineauUrl]: { avif: HeroVendreGatineauAvif, webp: HeroVendreGatineauWebp },
   [HomeInteriorUrl]: { avif: HomeInteriorAvif, webp: HomeInteriorWebp },
   [PlateauAylmerLifestyleUrl]: { avif: PlateauAylmerLifestyleAvif, webp: PlateauAylmerLifestyleWebp },
-  [HeroCoteDazurUrl]: { avif: HeroCoteDazurAvif, webp: HeroCoteDazurWebp, sizes: SHARP_SIZES },
+  [HeroCoteDazurUrl]: { avif: HeroCoteDazurAvif, webp: HeroCoteDazurWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroLimbourUrl]: { avif: HeroLimbourAvif, webp: HeroLimbourWebp },
   [HeroMassonAngersGenUrl]: { avif: HeroMassonAngersGenAvif, webp: HeroMassonAngersGenWebp },
   [HeroOutaouaisGenUrl]: { avif: HeroOutaouaisGenAvif, webp: HeroOutaouaisGenWebp },

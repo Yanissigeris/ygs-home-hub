@@ -539,8 +539,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="pointer-events-none absolute inset-0 hidden md:block"
               style={{
                 zIndex: 2,
-                background:
-                  "linear-gradient(90deg, rgba(0,14,53,0.84) 0%, rgba(0,14,53,0.70) 30%, rgba(0,14,53,0.28) 52%, rgba(0,14,53,0) 68%)",
+                background: responsiveHero?.lightVeil
+                  ? "linear-gradient(90deg, rgba(0,14,53,0.70) 0%, rgba(0,14,53,0.52) 30%, rgba(0,14,53,0.16) 50%, rgba(0,14,53,0) 62%)"
+                  : "linear-gradient(90deg, rgba(0,14,53,0.84) 0%, rgba(0,14,53,0.70) 30%, rgba(0,14,53,0.28) 52%, rgba(0,14,53,0) 68%)",
               }}
             />
             <div
@@ -548,8 +549,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className="pointer-events-none absolute inset-0 md:hidden"
               style={{
                 zIndex: 2,
-                background:
-                  "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.72) 55%, rgba(0,14,53,0.46) 80%, rgba(0,14,53,0.28) 100%)",
+                background: responsiveHero?.lightVeil
+                  ? "linear-gradient(180deg, rgba(0,14,53,0.66) 0%, rgba(0,14,53,0.56) 50%, rgba(0,14,53,0.22) 78%, rgba(0,14,53,0.06) 100%)"
+                  : "linear-gradient(180deg, rgba(0,14,53,0.80) 0%, rgba(0,14,53,0.72) 55%, rgba(0,14,53,0.46) 80%, rgba(0,14,53,0.28) 100%)",
               }}
             />
           </>
