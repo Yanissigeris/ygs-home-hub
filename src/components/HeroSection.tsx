@@ -509,10 +509,10 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {/* Width-based sources (768/1280/1920) for every other hero.
                   Explicit heroBgImageMobile/Avif props above win when present. */}
               {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
-                <source type="image/avif" srcSet={responsiveHero.avif} sizes="100vw" />
+                <source type="image/avif" srcSet={responsiveHero.avif} sizes={responsiveHero.sizes ?? "100vw"} />
               )}
               {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
-                <source type="image/webp" srcSet={responsiveHero.webp} sizes="100vw" />
+                <source type="image/webp" srcSet={responsiveHero.webp} sizes={responsiveHero.sizes ?? "100vw"} />
               )}
               <img
                 src={heroBgImage}
