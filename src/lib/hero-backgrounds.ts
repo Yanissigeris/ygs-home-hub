@@ -32,9 +32,9 @@ import HeroValuationAylmerAvif from "@/assets/hero-valuation-aylmer.webp?w=1280&
 import HeroValuationAylmerAvifSm from "@/assets/hero-valuation-aylmer.webp?w=768&format=avif&quality=40&as=url";
 import HeroValuationAylmerWebp from "@/assets/hero-valuation-aylmer.webp?w=1280&format=webp&quality=65&as=url";
 import HeroValuationHullUrl from "@/assets/hero-valuation-hull.webp";
-import HeroValuationHullAvif from "@/assets/hero-valuation-hull.webp?w=1280&format=avif&quality=40&as=url";
-import HeroValuationHullAvifSm from "@/assets/hero-valuation-hull.webp?w=768&format=avif&quality=40&as=url";
-import HeroValuationHullWebp from "@/assets/hero-valuation-hull.webp?w=1280&format=webp&quality=65&as=url";
+import HeroValuationHullAvif from "@/assets/hero-valuation-hull.webp?w=2560&format=avif&quality=60&as=url";
+import HeroValuationHullAvifSm from "@/assets/hero-valuation-hull.webp?w=1280&format=avif&quality=60&as=url";
+import HeroValuationHullWebp from "@/assets/hero-valuation-hull.webp?w=1920&format=webp&quality=82&as=url";
 import HeroValuationProUrl from "@/assets/hero-valuation-pro.webp";
 import HeroValuationProAvif from "@/assets/hero-valuation-pro.webp?w=1280&format=avif&quality=40&as=url";
 import HeroValuationProAvifSm from "@/assets/hero-valuation-pro.webp?w=768&format=avif&quality=40&as=url";

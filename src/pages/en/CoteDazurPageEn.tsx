@@ -9,7 +9,7 @@ const CoteDazurPageEn = () => (
     metaDesc="Buy, sell or live in Côte-d'Azur, Gatineau. Established residential area with bungalows, mature trees and quick access to Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Real estate broker in Côte-d'Azur, Gatineau. Established residential neighbourhood.", lat: 45.4700, lng: -75.7000, url: "/en/cote-dazur/" }}
-    hero={{ overline: "Neighbourhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Mature residential neighbourhood in the Gatineau sector, around Parc Saint-Exupéry. 1960s-1990s bungalows, quiet streets.", image: heroImg }}
+    hero={{ overline: "Neighbourhood Guide · Côte-d'Azur", title: "Buy, Sell or Live in Côte-d'Azur", subtitle: "Mature residential neighbourhood in the Gatineau sector, around Parc Saint-Exupéry. Quiet streets, at lower prices than Aylmer or the Plateau.", image: heroImg }}
     trustSpecialty="Côte-d'Azur specialist"
     lifestyle={{ image: heroImg, imageAlt: "Côte-d'Azur neighbourhood, Gatineau", title: "Why Côte-d'Azur is appreciated", subtitle: "Côte-d'Azur attracts families looking for an established neighbourhood close to services, without paying Aylmer or Plateau prices. Most properties are bungalows and split-levels. The area remains an accessible way into a single-family home in central Gatineau." }}
     reasons={[

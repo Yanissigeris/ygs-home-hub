@@ -9,7 +9,7 @@ const CoteDazurPage = () => (
     metaDesc="Vivre, acheter ou vendre dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial, bungalows, proximité services et accès Ottawa."
     ogImage="https://yanisgauthier.com/og/og-cote-dazur.jpg"
     jsonLd={{ name: "Côte-d'Azur", description: "Courtier immobilier dans le quartier Côte-d'Azur à Gatineau. Secteur résidentiel familial.", lat: 45.4700, lng: -75.7000, url: "/cote-dazur-gatineau/" }}
-    hero={{ overline: "Guide de quartier · Côte-d'Azur", title: "Vivre, acheter ou vendre à Côte-d'Azur", subtitle: "Quartier résidentiel mature du secteur Gatineau, autour du parc Saint-Exupéry. Bungalows des années 60-90, rues paisibles.", image: heroImg }}
+    hero={{ overline: "Guide de quartier · Côte-d'Azur", title: "Vivre, acheter ou vendre à Côte-d'Azur", subtitle: "Quartier résidentiel mature du secteur Gatineau, autour du parc Saint-Exupéry. Des rues paisibles, à des prix plus accessibles qu'à Aylmer ou au Plateau.", image: heroImg }}
     trustSpecialty="Spécialiste Côte-d'Azur et environs"
     lifestyle={{ image: heroImg, imageAlt: "Quartier Côte-d'Azur, Gatineau", title: "Pourquoi Côte-d'Azur est apprécié", subtitle: "Côte-d'Azur attire surtout les familles qui cherchent un quartier établi près des services, sans payer le prix d'Aylmer ou du Plateau. La majorité des propriétés sont des bungalows et des split-levels. Le secteur reste une porte d'entrée accessible vers l'unifamiliale au centre de Gatineau." }}
     reasons={[

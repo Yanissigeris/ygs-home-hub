@@ -28,11 +28,11 @@ import HeroAcheterUrl from "@/assets/hero-acheter.webp";
 import HeroAcheterAvif from "@/assets/hero-acheter.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroAcheterWebp from "@/assets/hero-acheter.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroAylmerGenUrl from "@/assets/hero-aylmer-photo.webp";
-import HeroAylmerGenAvif from "@/assets/hero-aylmer-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroAylmerGenWebp from "@/assets/hero-aylmer-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroAylmerGenAvif from "@/assets/hero-aylmer-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroAylmerGenWebp from "@/assets/hero-aylmer-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroBuckinghamGenUrl from "@/assets/hero-buckingham-photo.webp";
-import HeroBuckinghamGenAvif from "@/assets/hero-buckingham-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroBuckinghamGenWebp from "@/assets/hero-buckingham-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroBuckinghamGenAvif from "@/assets/hero-buckingham-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroBuckinghamGenWebp from "@/assets/hero-buckingham-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroBuyFromOttawaUrl from "@/assets/hero-buy-from-ottawa.webp";
 import HeroBuyFromOttawaAvif from "@/assets/hero-buy-from-ottawa.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
 import HeroBuyFromOttawaWebp from "@/assets/hero-buy-from-ottawa.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
@@ -43,11 +43,11 @@ import HeroBuyerGuideUrl from "@/assets/hero-buyer-guide.webp";
 import HeroBuyerGuideAvif from "@/assets/hero-buyer-guide.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroBuyerGuideWebp from "@/assets/hero-buyer-guide.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroCantleyGenUrl from "@/assets/hero-cantley-photo.webp";
-import HeroCantleyGenAvif from "@/assets/hero-cantley-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroCantleyGenWebp from "@/assets/hero-cantley-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroCantleyGenAvif from "@/assets/hero-cantley-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroCantleyGenWebp from "@/assets/hero-cantley-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroChelseaGenUrl from "@/assets/hero-chelsea-photo.webp";
-import HeroChelseaGenAvif from "@/assets/hero-chelsea-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroChelseaGenWebp from "@/assets/hero-chelsea-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroChelseaGenAvif from "@/assets/hero-chelsea-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroChelseaGenWebp from "@/assets/hero-chelsea-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroContactUrl from "@/assets/hero-contact.webp";
 import HeroContactAvif from "@/assets/hero-contact.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroContactWebp from "@/assets/hero-contact.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
@@ -58,8 +58,8 @@ import HeroFirstBuyerUrl from "@/assets/hero-first-buyer.webp";
 import HeroFirstBuyerAvif from "@/assets/hero-first-buyer.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroFirstBuyerWebp from "@/assets/hero-first-buyer.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroGatineauCentreGenUrl from "@/assets/hero-gatineau-centre-gen.webp";
-import HeroGatineauCentreGenAvif from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroGatineauCentreGenWebp from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroGatineauCentreGenAvif from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroGatineauCentreGenWebp from "@/assets/hero-gatineau-centre-gen.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroHullGenUrl from "@/assets/hero-hull-photo.webp";
 import HeroHullGenAvif from "@/assets/hero-hull-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
 import HeroHullGenWebp from "@/assets/hero-hull-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
@@ -100,8 +100,8 @@ import HeroPlexUrl from "@/assets/hero-plex.webp";
 import HeroPlexAvif from "@/assets/hero-plex.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroPlexWebp from "@/assets/hero-plex.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroPontiacUrl from "@/assets/hero-pontiac.webp";
-import HeroPontiacAvif from "@/assets/hero-pontiac.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroPontiacWebp from "@/assets/hero-pontiac.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroPontiacAvif from "@/assets/hero-pontiac.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroPontiacWebp from "@/assets/hero-pontiac.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroPropertiesUrl from "@/assets/hero-properties.webp";
 import HeroPropertiesAvif from "@/assets/hero-properties.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroPropertiesWebp from "@/assets/hero-properties.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
@@ -146,11 +146,11 @@ import HeroMassonAngersGenUrl from "@/assets/hero-masson-angers-gen.webp";
 import HeroMassonAngersGenAvif from "@/assets/hero-masson-angers-gen.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
 import HeroMassonAngersGenWebp from "@/assets/hero-masson-angers-gen.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
 import HeroOutaouaisGenUrl from "@/assets/hero-outaouais-photo.webp";
-import HeroOutaouaisGenAvif from "@/assets/hero-outaouais-photo.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroOutaouaisGenWebp from "@/assets/hero-outaouais-photo.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroOutaouaisGenAvif from "@/assets/hero-outaouais-photo.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroOutaouaisGenWebp from "@/assets/hero-outaouais-photo.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HeroValDesMontsGenUrl from "@/assets/hero-val-des-monts-gen.webp";
-import HeroValDesMontsGenAvif from "@/assets/hero-val-des-monts-gen.webp?w=768;1280;1920&format=avif&quality=38&as=srcset";
-import HeroValDesMontsGenWebp from "@/assets/hero-val-des-monts-gen.webp?w=768;1280;1920&format=webp&quality=68&as=srcset";
+import HeroValDesMontsGenAvif from "@/assets/hero-val-des-monts-gen.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroValDesMontsGenWebp from "@/assets/hero-val-des-monts-gen.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 
 export interface HeroPicture {
   /** Optional `sizes` override. Real photos use a portrait-aware value so phones
@@ -173,17 +173,17 @@ const SHARP_SIZES = "(orientation: portrait) 180vh, 100vw";
 export const HERO_PICTURES: Record<string, HeroPicture> = {
   [GatineauRiverViewUrl]: { avif: GatineauRiverViewAvif, webp: GatineauRiverViewWebp },
   [HeroAcheterUrl]: { avif: HeroAcheterAvif, webp: HeroAcheterWebp },
-  [HeroAylmerGenUrl]: { avif: HeroAylmerGenAvif, webp: HeroAylmerGenWebp },
-  [HeroBuckinghamGenUrl]: { avif: HeroBuckinghamGenAvif, webp: HeroBuckinghamGenWebp },
+  [HeroAylmerGenUrl]: { avif: HeroAylmerGenAvif, webp: HeroAylmerGenWebp, sizes: SHARP_SIZES },
+  [HeroBuckinghamGenUrl]: { avif: HeroBuckinghamGenAvif, webp: HeroBuckinghamGenWebp, sizes: SHARP_SIZES },
   [HeroBuyFromOttawaUrl]: { avif: HeroBuyFromOttawaAvif, webp: HeroBuyFromOttawaWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroBuyerConsultationUrl]: { avif: HeroBuyerConsultationAvif, webp: HeroBuyerConsultationWebp },
   [HeroBuyerGuideUrl]: { avif: HeroBuyerGuideAvif, webp: HeroBuyerGuideWebp },
-  [HeroCantleyGenUrl]: { avif: HeroCantleyGenAvif, webp: HeroCantleyGenWebp },
-  [HeroChelseaGenUrl]: { avif: HeroChelseaGenAvif, webp: HeroChelseaGenWebp },
+  [HeroCantleyGenUrl]: { avif: HeroCantleyGenAvif, webp: HeroCantleyGenWebp, sizes: SHARP_SIZES },
+  [HeroChelseaGenUrl]: { avif: HeroChelseaGenAvif, webp: HeroChelseaGenWebp, sizes: SHARP_SIZES },
   [HeroContactUrl]: { avif: HeroContactAvif, webp: HeroContactWebp },
   [HeroFaqUrl]: { avif: HeroFaqAvif, webp: HeroFaqWebp },
   [HeroFirstBuyerUrl]: { avif: HeroFirstBuyerAvif, webp: HeroFirstBuyerWebp },
-  [HeroGatineauCentreGenUrl]: { avif: HeroGatineauCentreGenAvif, webp: HeroGatineauCentreGenWebp },
+  [HeroGatineauCentreGenUrl]: { avif: HeroGatineauCentreGenAvif, webp: HeroGatineauCentreGenWebp, sizes: SHARP_SIZES },
   [HeroHullGenUrl]: { avif: HeroHullGenAvif, webp: HeroHullGenWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroLivingHullUrl]: { avif: HeroLivingHullAvif, webp: HeroLivingHullWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroLivingPlateauUrl]: { avif: HeroLivingPlateauAvif, webp: HeroLivingPlateauWebp },
@@ -197,7 +197,7 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroNeighborhoodsUrl]: { avif: HeroNeighborhoodsAvif, webp: HeroNeighborhoodsWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroPlateauUrl]: { avif: HeroPlateauAvif, webp: HeroPlateauWebp },
   [HeroPlexUrl]: { avif: HeroPlexAvif, webp: HeroPlexWebp },
-  [HeroPontiacUrl]: { avif: HeroPontiacAvif, webp: HeroPontiacWebp },
+  [HeroPontiacUrl]: { avif: HeroPontiacAvif, webp: HeroPontiacWebp, sizes: SHARP_SIZES },
   [HeroPropertiesUrl]: { avif: HeroPropertiesAvif, webp: HeroPropertiesWebp },
   [HeroRelocalisationUrl]: { avif: HeroRelocalisationAvif, webp: HeroRelocalisationWebp, sizes: SHARP_SIZES, lightVeil: true, position: "right top" },
   [HeroRelocationGuideUrl]: { avif: HeroRelocationGuideAvif, webp: HeroRelocationGuideWebp },
@@ -212,8 +212,8 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroCoteDazurUrl]: { avif: HeroCoteDazurAvif, webp: HeroCoteDazurWebp, sizes: SHARP_SIZES, lightVeil: true },
   [HeroLimbourUrl]: { avif: HeroLimbourAvif, webp: HeroLimbourWebp },
   [HeroMassonAngersGenUrl]: { avif: HeroMassonAngersGenAvif, webp: HeroMassonAngersGenWebp },
-  [HeroOutaouaisGenUrl]: { avif: HeroOutaouaisGenAvif, webp: HeroOutaouaisGenWebp },
-  [HeroValDesMontsGenUrl]: { avif: HeroValDesMontsGenAvif, webp: HeroValDesMontsGenWebp },
+  [HeroOutaouaisGenUrl]: { avif: HeroOutaouaisGenAvif, webp: HeroOutaouaisGenWebp, sizes: SHARP_SIZES },
+  [HeroValDesMontsGenUrl]: { avif: HeroValDesMontsGenAvif, webp: HeroValDesMontsGenWebp, sizes: SHARP_SIZES },
 };
 
 export function getHeroPicture(src?: string): HeroPicture | undefined {
