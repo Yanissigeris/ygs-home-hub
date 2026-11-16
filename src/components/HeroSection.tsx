@@ -431,20 +431,31 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
         {heroBgImage && (
              <>
                <div className="absolute inset-0 overflow-hidden">
-                 <img
-                   src={heroBgImage}
-                   alt=""
-                   role="presentation"
-                   className="h-full w-full object-cover"
-                   style={{ filter: `brightness(${imgBrightness}) saturate(${imgSaturate})`, transition: "filter 0.4s ease" }}
-                   width={1920}
-                   height={720}
-                   sizes="100vw"
-                   loading="eager"
-                   decoding="async"
-                   {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                   onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                 />
+                 {/* Same responsive AVIF/WebP widths as the full hero (hero-pictures.ts),
+                     so compact heroes no longer ship the raw source file. */}
+                 <picture>
+                   {/* Compact heroes are short and wide on every screen: 100vw is enough. */}
+                   {responsiveHero && (
+                     <source type="image/avif" srcSet={responsiveHero.avif} sizes="100vw" />
+                   )}
+                   {responsiveHero && (
+                     <source type="image/webp" srcSet={responsiveHero.webp} sizes="100vw" />
+                   )}
+                   <img
+                     src={heroBgImage}
+                     alt=""
+                     role="presentation"
+                     className="h-full w-full object-cover"
+                     style={{ filter: `brightness(${imgBrightness}) saturate(${imgSaturate})`, transition: "filter 0.4s ease", ...(responsiveHero?.position ? { objectPosition: responsiveHero.position } : {}) }}
+                     width={1920}
+                     height={720}
+                     sizes="100vw"
+                     loading="eager"
+                     decoding="async"
+                     {...({ fetchpriority: "high" } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                   />
+                 </picture>
                </div>
              <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(0,14,53,${baseStart}) 0%, rgba(0,14,53,${baseMid}) 60%, rgba(0,14,53,${baseEnd}) 100%)`, transition: "background 0.4s ease" }} />
               {/* Left-side text-protect overlay (desktop) — adapts to image brightness */}

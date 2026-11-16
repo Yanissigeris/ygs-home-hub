@@ -12,6 +12,8 @@ import SectorLinks from "@/components/SectorLinks";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import riverImg from "@/assets/gatineau-river-view.webp";
+// Section photo: a 1200 px version (shown about 556 px wide), not the 2400 px hero source.
+import riverSplitImg from "@/assets/gatineau-river-view.webp?w=1200&format=webp&quality=82&as=url";
 
 const reasons = [
   "Plus d'espace à un prix encore accessible comparé à Ottawa",
@@ -56,7 +58,7 @@ const NeighborhoodPage = () => (
       background="alt"
     />
 
-    <ImageTextSplit image={riverImg} imageAlt="Vue sur la rivière, Gatineau" imagePosition="left">
+    <ImageTextSplit image={riverSplitImg} imageAlt="Vue sur la rivière, Gatineau" imagePosition="left">
       <SectionHeading
         overline="Vendeurs du secteur"
         title="Vous habitez déjà le Plateau / Aylmer?"
