@@ -10,6 +10,11 @@ import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
+import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
+import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
+import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
+import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
+
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
@@ -71,15 +76,22 @@ const SellerPageEn = () => (
       </p>
     </ContentBlock>
 
-<CardGrid background="white" overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" />
+<CardGrid background="white" overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" layout="select" />
     <InlineCTA text="First step: find out what your property is worth. It's free, with no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
-    <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" />
+    <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" layout="strike" image={{ src: photoWinter, alt: "Bungalow in Gatineau in the fall", width: 1200, height: 800 }} />
     <ContentBlock narrow split>
       <SectionHeading overline="Before selling" title="Know where you stand first" />
       <p className="prose-body mt-5">Before selling, you probably want to know one thing: what your home is worth, with no pressure. We start there. Then we look at your timing and at what the market in your area allows.</p>
       <p className="prose-body mt-4">I've been helping sellers across the Outaouais since 2017, and I know a good sale takes preparation. It all begins with a value based on local comparables. Then come the price and the improvements that pay off, followed by marketing aimed at the right buyers, including those from Ottawa looking to cross the river.</p>
     </ContentBlock>
-    <ProcessSteps steps={steps} tone="night" />
+    <ProcessSteps
+      steps={steps}
+      tone="night"
+      images={[
+        { src: photoDusk, alt: "Aerial view of Aylmer and the Ottawa River", width: 1200, height: 900 },
+        { src: photoKitchen, alt: "Kitchen with blue cabinets", width: 1200, height: 800 },
+        { src: photoBrick, alt: "Front entrance of a house in Aylmer", width: 1200, height: 800 },
+      ]} />
     <ReviewSection overline="Seller testimonials" title="What my sellers say" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} quote background="white" />
     <FunnelNextStep background="white" overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
     <GuideInlineCTA lang="en" guideType="seller_guide" headline="Thinking about selling? Get the seller guide." text="Everything you need to know to sell at the right price in Gatineau, in a clear guide sent to your email." ctaLabel="Get the Seller Guide" />

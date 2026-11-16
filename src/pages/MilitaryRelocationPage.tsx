@@ -56,7 +56,7 @@ const MilitaryRelocationPage = () => (
       overline="Les défis"
       title="Ce qui bloque souvent les militaires relocalisés"
       items={challenges}
-      background="alt"
+      background="alt" layout="select"
     />
 
     <ProcessSteps steps={steps} background="white" />

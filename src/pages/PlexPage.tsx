@@ -116,7 +116,7 @@ const PlexPage = () => (
       title="Les vraies questions derrière un plex"
       items={questions}
       variant="icon-inline"
-      background="alt"
+      background="alt" layout="select"
     />
 
     <ProcessSteps steps={steps} />

@@ -48,7 +48,7 @@ const SellPlexPageEn = () => (
       trustLine="Plex specialist."
       heroBgImage={heroImg}
     />
-<CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} />
+<CardGrid overline="The challenges" title="Selling a plex is different from selling a house" items={challenges} layout="select" />
     <InlineCTA text="First step: find out what your plex is worth. It's free." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <ProcessSteps steps={steps} background="alt" />
     <ContentBlock narrow>

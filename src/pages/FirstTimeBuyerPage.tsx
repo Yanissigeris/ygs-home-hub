@@ -51,7 +51,7 @@ const FirstTimeBuyerPage = () => (
 <CardGrid
       overline="À considérer"
       title="Ce que tout premier acheteur doit savoir"
-      items={considerations}
+      items={considerations} layout="select"
     />
 
     <InlineCTA

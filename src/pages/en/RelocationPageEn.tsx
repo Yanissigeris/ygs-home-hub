@@ -51,7 +51,7 @@ const RelocationPageEn = () => (
     <ServiceJsonLd name="Real Estate Relocation Service, Ottawa to Gatineau" description="Full relocation support from Ottawa to Gatineau: neighbourhood search, visits, offer and settling in the Outaouais." url="/en/relocation/" serviceType="Real Estate Relocation Service" />
     <HeroSection overline="Ottawa → Gatineau" title="Relocating to Gatineau from Ottawa or beyond" subtitle="Thinking about crossing the river? I help you understand the neighbourhoods and prices, then find the right property." primaryCta={{ label: "Talk to Yanis", href: "/en/contact/" }} secondaryCta={{ label: "Relocation Guide", href: "/en/relocation-guide/" }} trustLine="Clear strategy." heroBgImage={heroImg} />
 <ContentBlock narrow><SectionHeading overline="Relocation" title="Buying in Gatineau when you don't know the area" subtitle="More space and often more affordable prices. You still need to know where to look and how the process works." /><p className="prose-body mt-5">Every year, families and professionals cross the river to settle in Gatineau. A local broker who knows both sides helps you avoid the classic mistakes.</p></ContentBlock>
-    <CardGrid overline="The challenges" title="What often holds back relocated buyers" items={challenges} background="alt" />
+    <CardGrid overline="The challenges" title="What often holds back relocated buyers" items={challenges} background="alt" layout="select" />
     <ProcessSteps steps={steps} />
     <InlineCTA text="Also selling? Knowing the value of your current property can clarify your buying budget." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
     <SectorLinks id="sectors" overline="A few areas" title="Neighbourhoods to consider" sectors={sectors} background="alt" />

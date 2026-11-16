@@ -38,7 +38,7 @@ const WhenToSellPageEn = () => (
       trustLine="By Yanis Gauthier-Sigeris · Real Estate Broker, Gatineau"
       heroBgImage={heroImg}
     />
-<CardGrid overline="Key factors" title="What influences the right timing" items={factors} columns={3} />
+<CardGrid overline="Key factors" title="What influences the right timing" items={factors} columns={3} layout="select" />
     <ContentBlock narrow>
       <SectionHeading title="The market peak doesn't announce itself" />
       <p className="prose-body mt-5">Many sellers wait for the market to peak, but a peak is almost impossible to spot while it's happening. What matters most is preparation: the right price and well-planned marketing.</p>

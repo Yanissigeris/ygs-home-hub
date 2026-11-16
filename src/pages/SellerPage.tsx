@@ -11,6 +11,11 @@ import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
+import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
+import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
+import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
+import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
+
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
@@ -90,7 +95,8 @@ const SellerPage = () =>
     overline="Vos questions"
     title="Vous vous posez probablement ces questions"
     items={painPoints}
-    variant="icon-inline" />
+    variant="icon-inline"
+    layout="select" />
   
 
     <InlineCTA
@@ -104,7 +110,9 @@ const SellerPage = () =>
     items={fears}
     columns={3}
     background="alt"
-    variant="icon-top" />
+    variant="icon-top"
+    layout="strike"
+    image={{ src: photoWinter, alt: "Bungalow à Gatineau, en automne", width: 1200, height: 800 }} />
   
 
     <ContentBlock narrow split>
@@ -120,7 +128,14 @@ const SellerPage = () =>
       </p>
     </ContentBlock>
 
-    <ProcessSteps steps={steps} tone="night" />
+    <ProcessSteps
+      steps={steps}
+      tone="night"
+      images={[
+        { src: photoDusk, alt: "Vue aérienne d'Aylmer et de la rivière des Outaouais", width: 1200, height: 900 },
+        { src: photoKitchen, alt: "Cuisine aux armoires bleues", width: 1200, height: 800 },
+        { src: photoBrick, alt: "Entrée d'une maison à Aylmer", width: 1200, height: 800 },
+      ]} />
 
     <ReviewSection
     overline="Témoignages vendeurs"
