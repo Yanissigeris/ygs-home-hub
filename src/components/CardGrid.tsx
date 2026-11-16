@@ -93,14 +93,15 @@ const CardGrid = ({
                       onMouseEnter={() => setOpen(i)}
                       onFocus={() => setOpen(i)}
                       className={`group flex w-full items-start justify-between gap-6 py-6 text-left [font-family:var(--display)] text-[1.5rem] font-semibold leading-[1.12] tracking-[-0.03em] transition-colors duration-200 lg:py-8 lg:text-[clamp(1.625rem,2.5vw,2.375rem)] ${
-                        active ? "text-[var(--ink)]" : "text-[rgba(0,14,53,0.34)] hover:text-[var(--ink)]"
+                        active ? "text-[var(--ink)]" : "text-[rgba(0,14,53,0.5)] hover:text-[var(--ink)]"
                       }`}
                     >
                       <span>{item.title}</span>
-                      <span
-                        aria-hidden="true"
-                        className={`mt-2 inline-block h-3 w-3 shrink-0 rounded-full transition-colors duration-200 lg:mt-4 ${active ? "bg-[var(--action)]" : "bg-transparent"}`}
-                      />
+                      {active ? (
+                        <span aria-hidden="true" className="mt-2 inline-block h-3 w-3 shrink-0 rounded-full bg-[var(--action)] lg:mt-4" />
+                      ) : (
+                        <span aria-hidden="true" className="mt-0.5 shrink-0 text-[1.75rem] font-light leading-none text-[rgba(0,14,53,0.45)] lg:invisible">+</span>
+                      )}
                     </button>
                   </Title>
                   <div
@@ -109,7 +110,7 @@ const CardGrid = ({
                     className={`${active ? "block" : "hidden"} pb-7 lg:col-span-5 lg:col-start-8 lg:self-start lg:pb-0`}
                   >
                     <div className="lg:sticky lg:top-28 lg:rounded-[1.5rem] lg:bg-[var(--ink)] lg:p-12">
-                      <p className="text-[1rem] leading-[1.65] text-[#4A5475] lg:[font-family:var(--display)] lg:text-[1.625rem] lg:font-medium lg:leading-[1.35] lg:tracking-[-0.02em] lg:text-[var(--cream)]">
+                      <p className={`text-[1rem] leading-[1.65] text-[#4A5475] lg:[font-family:var(--display)] ${item.text.split(" ").length > 32 ? "lg:text-[1.3125rem]" : "lg:text-[1.625rem]"} lg:font-medium lg:leading-[1.35] lg:tracking-[-0.02em] lg:text-[var(--cream)]`}>
                         {item.text}
                       </p>
                       <div className="mt-10 hidden items-center gap-3 border-t border-[rgba(247,244,238,0.14)] pt-6 lg:flex">

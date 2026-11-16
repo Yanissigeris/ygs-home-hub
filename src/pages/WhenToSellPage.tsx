@@ -42,7 +42,7 @@ const WhenToSellPage = () => (
       overline="Les facteurs"
       title="Ce qui influence le bon moment"
       items={factors}
-      columns={3}
+      columns={3} layout="select"
     />
 
     <ContentBlock narrow>

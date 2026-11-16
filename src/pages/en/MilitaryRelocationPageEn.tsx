@@ -44,7 +44,7 @@ const MilitaryRelocationPageEn = () => (
         </div>
       </div>
     </section>
-    <CardGrid overline="The challenges" title="What often blocks relocated military members" items={challenges} background="alt" />
+    <CardGrid overline="The challenges" title="What often blocks relocated military members" items={challenges} background="alt" layout="select" />
     <ProcessSteps steps={steps} background="white" />
     <ContentBlock narrow background="alt">
       <SectionHeading overline="Why YGS" title="Support adapted to your pace" subtitle="Postings don't follow the normal real estate calendar. I adapt to your timeline and constraints." />

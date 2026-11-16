@@ -48,7 +48,7 @@ const FirstTimeBuyerPageEn = () => (
       trustLine="Personalized support at your pace."
       heroBgImage={heroImg}
     />
-<CardGrid overline="To consider" title="What every first-time buyer needs to know" items={considerations} />
+<CardGrid overline="To consider" title="What every first-time buyer needs to know" items={considerations} layout="select" />
 
     <InlineCTA text="Not sure about your budget? We can discuss it during a free consultation." buttonLabel="Book a consultation →" href="/en/buyer-consultation/" />
 

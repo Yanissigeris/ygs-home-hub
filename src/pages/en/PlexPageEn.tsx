@@ -76,7 +76,7 @@ const PlexPageEn = () => (
 
 <LinkedCardGrid overline="For you" title="I help two types of clients" items={clientTypes} />
     <InlineCTA text="Own a plex? Start by knowing its current value." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
-    <CardGrid overline="Analysis" title="The real questions behind a plex" items={questions} variant="icon-inline" background="alt" />
+    <CardGrid overline="Analysis" title="The real questions behind a plex" items={questions} variant="icon-inline" background="alt" layout="select" />
     <ProcessSteps steps={steps} />
     <FunnelNextStep overline="Next step" title="Where to start?" subtitle="Choose the option that fits your investor situation." steps={nextSteps} background="alt" />
     <GuideInlineCTA lang="en" guideType="investor_guide" headline="Investing in Gatineau? Get the complete guide." text="Returns, plex analysis, acquisition strategy and pitfalls to avoid: a guide to investing in Gatineau, sent by email." ctaLabel="Get the Investor Guide" />

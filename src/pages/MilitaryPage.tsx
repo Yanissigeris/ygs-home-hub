@@ -71,7 +71,7 @@ const MilitaryPage = () => (
     <CardGrid
       overline="Vos défis"
       title="Les réalités immobilières d'une mutation"
-      items={challenges}
+      items={challenges} layout="select"
     />
 
     <InlineCTA

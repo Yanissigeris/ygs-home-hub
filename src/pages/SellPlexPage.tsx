@@ -51,7 +51,7 @@ const SellPlexPage = () => (
 <CardGrid
       overline="Les enjeux"
       title="Vendre un plex, c'est différent d'une maison"
-      items={challenges}
+      items={challenges} layout="select"
     />
 
     <InlineCTA

@@ -79,7 +79,7 @@ const RelocationPage = () => (
       overline="Les défis"
       title="Ce qui bloque souvent les acheteurs relocalisés"
       items={challenges}
-      background="alt"
+      background="alt" layout="select"
     />
 
     <ProcessSteps steps={steps} />
