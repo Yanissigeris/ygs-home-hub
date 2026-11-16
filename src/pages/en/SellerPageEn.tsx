@@ -78,7 +78,7 @@ const SellerPageEn = () => (
 
 <CardGrid background="white" overline="Your questions" title="You're probably asking yourself these questions" items={painPoints} variant="icon-inline" layout="select" />
     <InlineCTA text="First step: find out what your property is worth. It's free, with no commitment." buttonLabel="Free Home Valuation →" href="/en/home-valuation/" />
-    <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" layout="strike" image={{ src: photoWinter, alt: "Bungalow in Gatineau in the fall", width: 1200, height: 800 }} />
+    <CardGrid title="What sellers want to avoid" items={fears} columns={3} background="alt" variant="icon-top" layout="strike" image={{ src: photoWinter, alt: "Bungalow in Gatineau in the fall", width: 1600, height: 1067 }} />
     <ContentBlock narrow split>
       <SectionHeading overline="Before selling" title="Know where you stand first" />
       <p className="prose-body mt-5">Before selling, you probably want to know one thing: what your home is worth, with no pressure. We start there. Then we look at your timing and at what the market in your area allows.</p>
