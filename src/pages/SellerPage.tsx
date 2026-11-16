@@ -11,6 +11,11 @@ import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
+import photoDusk from "@/assets/property-16828271.webp";
+import photoKitchen from "@/assets/pathway-acheter-cuisine.webp";
+import photoBrick from "@/assets/property-11366995.webp";
+import photoWinter from "@/assets/property-15163372.webp";
+
 import InlineCTA from "@/components/InlineCTA";
 import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
@@ -90,7 +95,8 @@ const SellerPage = () =>
     overline="Vos questions"
     title="Vous vous posez probablement ces questions"
     items={painPoints}
-    variant="icon-inline" />
+    variant="icon-inline"
+    layout="select" />
   
 
     <InlineCTA
@@ -104,7 +110,9 @@ const SellerPage = () =>
     items={fears}
     columns={3}
     background="alt"
-    variant="icon-top" />
+    variant="icon-top"
+    layout="strike"
+    image={{ src: photoWinter, alt: "Maison à étages vendue à Gatineau (Limbour), en hiver", width: 1095, height: 730 }} />
   
 
     <ContentBlock narrow split>
@@ -120,7 +128,14 @@ const SellerPage = () =>
       </p>
     </ContentBlock>
 
-    <ProcessSteps steps={steps} tone="night" />
+    <ProcessSteps
+      steps={steps}
+      tone="night"
+      images={[
+        { src: photoDusk, alt: "Maison à étages à Gatineau au crépuscule", width: 1088, height: 730 },
+        { src: photoKitchen, alt: "Cuisine avec îlot et tabourets", width: 640, height: 480 },
+        { src: photoBrick, alt: "Triplex en brique à Hull, en hiver", width: 1600, height: 1074 },
+      ]} />
 
     <ReviewSection
     overline="Témoignages vendeurs"
