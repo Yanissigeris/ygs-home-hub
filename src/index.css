@@ -306,7 +306,7 @@
     background-repeat: no-repeat;
   }
   /* Responsive variants supplied by heroBgStyle() (src/lib/hero-backgrounds.ts):
-     AVIF where supported, 768 px on phones, 1280 px above. Browsers without
+     AVIF where supported, 1280 px on phones, 2560 px above. Browsers without
      image-set()/AVIF keep the WebP in --hero-bg-image above. */
   @supports (background-image: image-set(url("x.avif") type("image/avif"))) {
     .hero-gradient--with-bg {

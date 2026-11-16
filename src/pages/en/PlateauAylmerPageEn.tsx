@@ -12,6 +12,8 @@ import GuideInlineCTA from "@/components/GuideInlineCTA";
 import StickyGuideBanner from "@/components/StickyGuideBanner";
 import { CheckCircle2, Users, Home, TrendingUp, MapPin } from "lucide-react";
 import heroImg from "@/assets/gatineau-river-view.webp";
+// Section photo: a 1200 px version (shown about 556 px wide), not the 2400 px hero source.
+import riverSplitImg from "@/assets/gatineau-river-view.webp?w=1200&format=webp&quality=82&as=url";
 
 const profiles = [
   { icon: Users, title: "Families", text: "More space, yard, French and English schools nearby." },
@@ -47,7 +49,7 @@ const PlateauAylmerPageEn = () => (
       background="alt"
     />
 
-    <ImageTextSplit image={heroImg} imageAlt="River view, Gatineau" imagePosition="left">
+    <ImageTextSplit image={riverSplitImg} imageAlt="River view, Gatineau" imagePosition="left">
       <SectionHeading
         overline="Sellers in the area"
         title="Already living in Plateau / Aylmer?"

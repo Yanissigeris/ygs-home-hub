@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import plexPhoto from "@/assets/pathway-plex-maisons-de-ville.webp?w=160;240;400;640&format=avif;webp&as=picture";
 import buyPhoto from "@/assets/pathway-acheter-cuisine.webp?w=160;240;400;640&format=avif;webp&as=picture";
-import lifestyleBg from "@/assets/pathway-vendre-bungalow.webp?w=480;760;960;1122&format=avif;webp&as=picture";
+import lifestyleBg from "@/assets/pathway-vendre-bungalow.webp?w=480;760;960;1280;1600;2244&format=avif;webp&as=picture";
 import { setAvatarIntent, type AvatarIntent } from "@/lib/avatar";
 import { trackEvent } from "@/lib/analytics";
 
