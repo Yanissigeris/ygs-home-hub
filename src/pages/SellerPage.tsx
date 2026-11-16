@@ -112,7 +112,7 @@ const SellerPage = () =>
     background="alt"
     variant="icon-top"
     layout="strike"
-    image={{ src: photoWinter, alt: "Bungalow à Gatineau, en automne", width: 1200, height: 800 }} />
+    image={{ src: photoWinter, alt: "Bungalow à Gatineau, en automne", width: 1600, height: 1067 }} />
   
 
     <ContentBlock narrow split>
