@@ -133,14 +133,14 @@ export const properties: Property[] = [
     address: "516 Rue Notre-Dame",
     city: "Gatineau (Gatineau, Achbar)",
     price: "364 900 $",
-    type: "Maison à étages",
+    type: "Maison de plain-pied",
     bedrooms: "3",
     bathrooms: "1",
     area: "1 187 pi²",
     lotSize: "5 000 pi²",
     yearBuilt: "1930",
     description:
-      "Maison de 1930 dans Achbar, rénovée en profondeur et prête à habiter. On y trouve 3 chambres, une salle de bain, du bois franc au salon et à la salle à manger, plus un poêle au bois. Tous les électroménagers sont inclus. Le sous-sol de plus de 6 pieds reste à finir à votre goût. Terrain de 5 000 pi² près du boulevard Maloney et des services du quartier.",
+      "Bungalow de 1930 dans Achbar, avec plusieurs rénovations majeures et prêt à habiter. On y trouve 3 chambres, une salle de bain, du bois franc au salon et à la salle à manger, plus un poêle au bois. Tous les électroménagers sont inclus. Le sous-sol de plus de 6 pieds reste à finir à votre goût. Terrain de 5 000 pi² près du boulevard Maloney et des services du quartier.",
     image: property21600052,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/516-rue-notre-dame/21600052",

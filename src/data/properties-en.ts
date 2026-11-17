@@ -115,14 +115,14 @@ export const propertiesEn: Property[] = [
     address: "516 Rue Notre-Dame",
     city: "Gatineau (Gatineau, Achbar)",
     price: "$364,900",
-    type: "Two-storey house",
+    type: "Bungalow",
     bedrooms: "3",
     bathrooms: "1",
     area: "1,187 sq ft",
     lotSize: "5,000 sq ft",
     yearBuilt: "1930",
     description:
-      "Built in 1930 in Achbar, this house has been extensively renovated and is ready to move in. It offers 3 bedrooms, one bathroom, hardwood in the living and dining rooms, plus a wood stove. All appliances are included. You can finish the basement, over 6 feet high, to your taste. Sitting on a 5,000 sq ft lot, it is close to Maloney Boulevard and local services.",
+      "Built in 1930 in Achbar, this bungalow has had several major renovations and is ready to move in. It offers 3 bedrooms, one bathroom, hardwood in the living and dining rooms, plus a wood stove. All appliances are included. You can finish the basement, over 6 feet high, to your taste. Sitting on a 5,000 sq ft lot, it is close to Maloney Boulevard and local services.",
     image: property21600052,
     remaxUrl:
       "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/516-rue-notre-dame/21600052",

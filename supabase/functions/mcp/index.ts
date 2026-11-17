@@ -101,15 +101,15 @@ var listings = [
     city: "Gatineau (Gatineau, Achbar)",
     price_fr: "364 900 $",
     price_en: "$364,900",
-    type: "Maison \xE0 \xE9tages / Two-storey house",
+    type: "Maison de plain-pied / Bungalow",
     bedrooms: "3",
     bathrooms: "1",
     area: "1 187 pi\xB2 / 1,187 sq ft",
     year_built: "1930",
     status: "active",
     remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/516-rue-notre-dame/21600052",
-    description_fr: "Maison de 1930 r\xE9nov\xE9e en profondeur dans Achbar, 3 chambres, bois franc, po\xEAle au bois, \xE9lectrom\xE9nagers inclus et sous-sol \xE0 finir.",
-    description_en: "Extensively renovated 1930 house in Achbar with 3 bedrooms, hardwood, a wood stove, all appliances included and a basement to finish."
+    description_fr: "Bungalow de 1930 dans Achbar avec plusieurs r\xE9novations majeures, 3 chambres, bois franc, po\xEAle au bois, \xE9lectrom\xE9nagers inclus et sous-sol \xE0 finir.",
+    description_en: "1930 bungalow in Achbar with several major renovations, 3 bedrooms, hardwood, a wood stove, all appliances included and a basement to finish."
   },
   {
     id: "22864394",
@@ -152,7 +152,7 @@ var listings = [
     city: "Gatineau (Aylmer, Vieux Aylmer / Des C\xE8dres / Marina)",
     price_fr: "399 900 $",
     price_en: "$399,900",
-    type: "Maison \xE0 \xE9tages / Two-storey house",
+    type: "Maison de plain-pied / Bungalow",
     bedrooms: "3",
     bathrooms: "1 + 1 salle d'eau / 1 + 1 powder room",
     area: "1 425 pi\xB2 / 1,425 sq ft",
