@@ -10,7 +10,7 @@ import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
-import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
+import photoDusk from "@/assets/vendre-etape-analyse-avis-valeur-en.webp";
 import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
 import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
 import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
@@ -89,7 +89,7 @@ const SellerPageEn = () => (
       steps={steps}
       tone="night"
       images={[
-        { src: photoDusk, alt: "Aerial view of Aylmer and the Ottawa River", width: 1200, height: 900 },
+        { src: photoDusk, alt: "Sample market value opinion prepared by Yanis, on a desk with a coffee", width: 1284, height: 1599 },
         { src: photoKitchen, alt: "Kitchen with blue cabinets", width: 1200, height: 800 },
         { src: photoBrick, alt: "Front entrance of a house in Aylmer", width: 1200, height: 800 },
       ]} />

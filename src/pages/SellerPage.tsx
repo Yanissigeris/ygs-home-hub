@@ -11,7 +11,7 @@ import { getReviewsByCategory } from "@/data/reviews";
 import FAQSection from "@/components/FAQSection";
 import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
-import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
+import photoDusk from "@/assets/vendre-etape-analyse-avis-valeur.webp";
 import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
 import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
 import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
@@ -133,7 +133,7 @@ const SellerPage = () =>
       steps={steps}
       tone="night"
       images={[
-        { src: photoDusk, alt: "Vue aérienne d'Aylmer et de la rivière des Outaouais", width: 1200, height: 900 },
+        { src: photoDusk, alt: "Exemple d'avis de valeur marchande préparé par Yanis, posé sur un bureau avec un café", width: 1284, height: 1599 },
         { src: photoKitchen, alt: "Cuisine aux armoires bleues", width: 1200, height: 800 },
         { src: photoBrick, alt: "Entrée d'une maison à Aylmer", width: 1200, height: 800 },
       ]} />
