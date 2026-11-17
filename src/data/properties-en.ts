@@ -4,7 +4,7 @@ import property15163372 from "@/assets/property-15163372.webp";
 import property11366995 from "@/assets/property-11366995.webp";
 import property19674845 from "@/assets/property-19674845.webp";
 import property26501194 from "@/assets/property-26501194.webp";
-import property17464620 from "@/assets/property-17464620.webp";
+import property21600052 from "@/assets/property-21600052.webp";
 import property19326119 from "@/assets/property-19326119.webp";
 import property16828271 from "@/assets/property-16828271.webp";
 import property22872864 from "@/assets/property-22872864.webp";
@@ -111,22 +111,22 @@ export const propertiesEn: Property[] = [
     status: "active",
   },
   {
-    id: "17464620",
-    address: "14 Rue de la Cime",
-    city: "Gatineau (Hull, Richelieu / Hautes-Plaines / Dôme)",
-    price: "$1,029,900",
-    type: "Detached triplex",
-    bedrooms: "7",
-    bathrooms: "3",
-    area: "6,649 sq ft (lot)",
-    lotSize: "6,649 sq ft",
-    yearBuilt: "2003",
+    id: "21600052",
+    address: "516 Rue Notre-Dame",
+    city: "Gatineau (Gatineau, Achbar)",
+    price: "$364,900",
+    type: "Bungalow",
+    bedrooms: "3",
+    bathrooms: "1",
+    area: "1,187 sq ft",
+    lotSize: "5,000 sq ft",
+    yearBuilt: "1930",
     description:
-      "Rare detached triplex built in 2003 on a cul-de-sac in Hautes-Plaines, with no rear neighbours. Ideal for an owner-occupant with a vacant garden-level 5½ unit, or for an investor. Spacious 3-bedroom 6½ with cathedral ceilings, potential revenue of $60,600 per year, 6 parking spaces and a shed. Close to Gatineau Park, schools and Ottawa.",
-    image: property17464620,
+      "Built in 1930 in Achbar, this bungalow has had several major renovations and is ready to move in. It offers 3 bedrooms, one bathroom, hardwood in the living and dining rooms, plus a wood stove. All appliances are included. You can finish the basement, over 6 feet high, to your taste. Sitting on a 5,000 sq ft lot, it is close to Maloney Boulevard and local services.",
+    image: property21600052,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/14-rue-de-la-cime/17464620",
-    mls: "17464620",
+      "https://remax-direct.com/fr/nos-proprietes/gatineau-gatineau/516-rue-notre-dame/21600052",
+    mls: "21600052",
     status: "active",
   },
   {
