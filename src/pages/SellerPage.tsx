@@ -78,7 +78,7 @@ const SellerPage = () =>
     heroBgImage={heroImg} />
 
     <ContentBlock narrow split background="alt">
-      <SectionHeading overline="Stratégie locale" title="Adapter votre vente au marché de votre secteur" />
+      <SectionHeading overline="Stratégie locale" title="Un prix qui part des ventes de votre secteur, pas d'une moyenne régionale" />
       <p className="prose-body mt-5" style={{ lineHeight: 1.85 }}>
         Une maison d'Aylmer ne se compare pas à une maison de Buckingham, et un condo ne se vend pas comme une unifamiliale. Avant de parler de prix, je regarde ce qui s'est vendu près de chez vous, dans votre type de propriété, ces derniers mois.
       </p>
@@ -93,7 +93,7 @@ const SellerPage = () =>
 <CardGrid
     background="white"
     overline="Vos questions"
-    title="Vous vous posez probablement ces questions"
+    title="Quatre questions à régler avant de mettre en vente"
     items={painPoints}
     variant="icon-inline"
     layout="select" />
@@ -106,7 +106,7 @@ const SellerPage = () =>
   
 
     <CardGrid
-    title="Ce que les vendeurs veulent éviter"
+    title="Trois erreurs qui coûtent cher à un vendeur"
     items={fears}
     columns={3}
     background="alt"
@@ -118,7 +118,7 @@ const SellerPage = () =>
     <ContentBlock narrow split>
       <SectionHeading
       overline="Avant de vendre"
-      title="Savoir où vous en êtes, à votre rythme" />
+      title="Commencez par savoir combien vaut votre propriété" />
     
       <p className="prose-body mt-5">
         Avant de vendre, vous voulez probablement savoir une chose : ce que vaut votre maison, sans pression. On part de là. Ensuite, on regarde votre calendrier et ce que le marché de votre secteur permet.
@@ -129,6 +129,7 @@ const SellerPage = () =>
     </ContentBlock>
 
     <ProcessSteps
+      title="De la première analyse à la signature chez le notaire"
       steps={steps}
       tone="night"
       images={[
@@ -139,7 +140,7 @@ const SellerPage = () =>
 
     <ReviewSection
     overline="Témoignages vendeurs"
-    title="Ce que disent mes vendeurs"
+    title="Mes vendeurs, dans leurs mots"
     reviews={getReviewsByCategory("seller").slice(0, 2)}
     columns={2}
     quote
@@ -184,7 +185,7 @@ const SellerPage = () =>
 
     <RelatedPages
       overline="À lire aussi"
-      title="Articles et ressources pour vendeurs"
+      title="À lire avant de vendre"
       pages={[
         { title: "Quand vendre sa maison à Gatineau", text: "Le bon moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
         { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
