@@ -10,7 +10,7 @@ import p17113358 from "@/assets/property-17113358.webp?w=400;440;560;640;760;900
 import p11366995 from "@/assets/property-11366995.webp?w=400;440;500;560;640;760;900&format=avif;webp&as=picture";
 // Fiches précédemment servies en .webp brut hors pipeline — passage <picture>
 // AVIF + WebP avec mêmes paliers que les autres cartes.
-import p17464620 from "@/assets/property-17464620.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
+import p21600052 from "@/assets/property-21600052.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 import p19326119 from "@/assets/property-19326119.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 import p16828271 from "@/assets/property-16828271.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
 import p22872864 from "@/assets/property-22872864.webp?w=400;440;560;640;760;900&format=avif;webp&as=picture";
@@ -44,7 +44,7 @@ export const propertyImages: Record<string, PropertyImageSet> = {
   "15163372": toSet(p15163372 as PictureImport),
   "17113358": toSet(p17113358 as PictureImport),
   "11366995": toSet(p11366995 as PictureImport),
-  "17464620": toSet(p17464620 as PictureImport),
+  "21600052": toSet(p21600052 as PictureImport),
   "19326119": toSet(p19326119 as PictureImport),
   "16828271": toSet(p16828271 as PictureImport),
   "22872864": toSet(p22872864 as PictureImport),
