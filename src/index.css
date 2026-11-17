@@ -1068,3 +1068,11 @@ body:has([data-page-cta]) .footer-cta {
 @media (prefers-reduced-motion: reduce) {
   .strike-line { transform: scaleX(1) !important; transition: none !important; }
 }
+
+/* Mobile: while the cookie banner is open, the sticky action bars step aside
+   so the bottom of the screen shows one bar, not two stacked (first visit only). */
+html[data-cookie-bar="open"] [data-sticky-mobile-cta],
+html[data-cookie-bar="open"] [data-sticky-guide-banner] {
+  transform: translateY(calc(100% + var(--cookie-bar-h, 0px))) !important;
+  pointer-events: none;
+}

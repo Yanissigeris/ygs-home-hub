@@ -227,6 +227,7 @@ const CookieConsent = () => {
     const clear = () => {
       root.style.removeProperty("--cookie-bar-h");
       root.style.removeProperty("--cookie-bar-safe");
+      delete root.dataset.cookieBar;
     };
     const el = mobileBannerRef.current;
     if (!isMobile || !visible || !el) {
@@ -236,6 +237,7 @@ const CookieConsent = () => {
     const apply = () => {
       root.style.setProperty("--cookie-bar-h", `${el.offsetHeight}px`);
       root.style.setProperty("--cookie-bar-safe", "0px");
+      root.dataset.cookieBar = "open";
     };
     apply();
     const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(apply) : null;
