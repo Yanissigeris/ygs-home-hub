@@ -12,7 +12,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
 import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
-import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
+import photoNotary from "@/assets/vendre-etape-notaire-signature.webp";
 import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
 
 import InlineCTA from "@/components/InlineCTA";
@@ -91,7 +91,7 @@ const SellerPageEn = () => (
       images={[
         { src: photoDusk, alt: "Aerial view of Aylmer and the Ottawa River", width: 1200, height: 900 },
         { src: photoKitchen, alt: "Kitchen with blue cabinets", width: 1200, height: 800 },
-        { src: photoBrick, alt: "Front entrance of a house in Aylmer", width: 1200, height: 800 },
+        { src: photoNotary, alt: "Signing the documents at the notary", width: 1720, height: 2064 },
       ]} />
     <ReviewSection overline="Seller testimonials" title="My sellers, in their own words" reviews={getReviewsByCategory("seller").slice(0, 2)} columns={2} quote background="white" />
     <FunnelNextStep background="white" overline="Next step" title="Where to start?" subtitle="Every seller has a different situation. Choose the step that fits yours." steps={nextSteps} />
