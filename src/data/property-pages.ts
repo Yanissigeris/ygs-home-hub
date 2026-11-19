@@ -16,7 +16,15 @@ export const PHOTO_COUNTS: Record<string, number> = {
   "12304022": 35,
   "18249217": 34,
   "15159365": 3,
+  "21358006": 29,
+  "15191323": 37,
 };
+
+/**
+ * Inscriptions dont certaines photos ont une mise en scène virtuelle faite par IA.
+ * La page affiche la divulgation sous la galerie (règle OACIQ, comme sur la fiche RE/MAX).
+ */
+export const AI_STAGED = new Set<string>(["21358006", "14821222"]);
 
 /** Numéro Centris → slug d'URL (même slug en FR et en EN). */
 export const PROPERTY_SLUGS: Record<string, string> = slugsJson;

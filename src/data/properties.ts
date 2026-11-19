@@ -186,10 +186,10 @@ export const properties: Property[] = [
     status: "sold",
   },
   {
-    id: "22872864",
+    id: "21358006",
     address: "188 Rue des Hautes-Rives",
     city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
-    price: "479 900 $",
+    price: "459 900 $",
     type: "Maison à étages",
     bedrooms: "3",
     bathrooms: "1",
@@ -201,15 +201,15 @@ export const properties: Property[] = [
       "Charmante maison jumelée de 3 chambres dans un secteur familial du Vieux-Aylmer. Salle de bain rénovée avec douche vitrée en coin et bain autoportant. Le sous-sol aménagé offre un espace de vie supplémentaire. À proximité de la marina d'Aylmer, des parcs, des commerces et des services. Libre immédiatement avec possibilité de prise de possession rapide.",
     image: property22872864,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
-    mls: "22872864",
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-21358006",
+    mls: "21358006",
     status: "active",
   },
   {
-    id: "22864394",
+    id: "15191323",
     address: "14 Imp. de la Descente",
     city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
-    price: "524 900 $",
+    price: "517 900 $",
     type: "Maison de plain-pied",
     bedrooms: "3",
     bathrooms: "2",
@@ -217,11 +217,11 @@ export const properties: Property[] = [
     lotSize: "5 000 pi²",
     yearBuilt: "1974",
     description:
-      "Plain-pied bien entretenu directement à la marina d'Aylmer, dans une impasse tranquille. 3 chambres et 2 salles de bain, plancher chauffant dans la cuisine et la salle à manger, fenêtres (2012) et panneau électrique (2016). Sous-sol aménagé avec 2e cuisine, chambre et salle de bain, idéal pour un intergénération ou un proche qui veut son intimité. Rivière des Outaouais, sentiers riverains et commerces du Vieux-Aylmer à distance de marche.",
+      "Plain-pied bien entretenu directement à la marina d'Aylmer, dans une impasse tranquille. 3 chambres et 2 salles de bain, plancher chauffant dans la cuisine et la salle à manger, fenêtres (2012) et panneau électrique (2016). Sous-sol aménagé avec 2e cuisine, chambre et salle de bain, pratique pour un proche qui veut son intimité. Rivière des Outaouais, sentiers riverains et commerces du Vieux-Aylmer à distance de marche.",
     image: property22864394,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
-    mls: "22864394",
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/14-imp-de-la-descente-gatineau-aylmer-vieux-aylmer-des-cedres-marina-15191323",
+    mls: "15191323",
     status: "active",
   },
   {

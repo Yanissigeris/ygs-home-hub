@@ -168,10 +168,10 @@ export const propertiesEn: Property[] = [
     status: "sold",
   },
   {
-    id: "22872864",
+    id: "21358006",
     address: "188 Rue des Hautes-Rives",
     city: "Gatineau (Aylmer, Old Aylmer, Des Cèdres, Marina)",
-    price: "$479,900",
+    price: "$459,900",
     type: "Two-storey house",
     bedrooms: "3",
     bathrooms: "1",
@@ -183,15 +183,15 @@ export const propertiesEn: Property[] = [
       "Charming 3-bedroom semi-detached home in a family-friendly Old Aylmer neighbourhood. Renovated bathroom with a corner glass shower and freestanding tub. The finished basement provides valuable additional living space. Close to the Aylmer marina, parks, shops and services. Available immediately with quick possession possible.",
     image: property22872864,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/188-rue-des-hautes-rives/22872864",
-    mls: "22872864",
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-21358006",
+    mls: "21358006",
     status: "active",
   },
   {
-    id: "22864394",
+    id: "15191323",
     address: "14 Imp. de la Descente",
     city: "Gatineau (Aylmer, Old Aylmer, Des Cèdres, Marina)",
-    price: "$524,900",
+    price: "$517,900",
     type: "Bungalow",
     bedrooms: "3",
     bathrooms: "2",
@@ -199,11 +199,11 @@ export const propertiesEn: Property[] = [
     lotSize: "5,000 sq ft",
     yearBuilt: "1974",
     description:
-      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom, ideal for an in-law suite or a relative seeking privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
+      "Well-maintained bungalow directly at the Aylmer marina, on a quiet dead-end street. 3 bedrooms and 2 bathrooms, radiant floor heating in the kitchen and dining room, windows (2012) and electrical panel (2016). Finished basement with a second kitchen, bedroom and bathroom, handy for a relative who wants their privacy. Ottawa River, riverside trails and Old Aylmer shops within walking distance.",
     image: property22864394,
     remaxUrl:
-      "https://remax-direct.com/fr/nos-proprietes/gatineau-aylmer/14-imp-de-la-descente/22864394",
-    mls: "22864394",
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/14-imp-de-la-descente-gatineau-aylmer-vieux-aylmer-des-cedres-marina-15191323",
+    mls: "15191323",
     status: "active",
   },
   {

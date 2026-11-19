@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { properties, type Property } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
-import { galleryFor, propertyIdFromSlug, PROPERTY_SLUGS } from "@/data/property-pages";
+import { AI_STAGED, galleryFor, propertyIdFromSlug, PROPERTY_SLUGS } from "@/data/property-pages";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import { trackContactTap } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -59,6 +59,7 @@ const copy = {
     contact: "Parler à Yanis",
     contactHref: "/contact-yanis/",
     others: "Mes autres propriétés",
+    aiStaging: "Certaines pièces ont été aménagées et décorées virtuellement à l'aide de l'intelligence artificielle (IA) pour illustrer leur potentiel. Le mobilier et les éléments décoratifs ne sont pas inclus.",
     objective: "Demande de visite",
   },
   en: {
@@ -99,6 +100,7 @@ const copy = {
     contact: "Talk to Yanis",
     contactHref: "/en/contact/",
     others: "My other properties",
+    aiStaging: "Some rooms were virtually furnished and decorated using artificial intelligence (AI) to show their potential. Furniture and decor are not included.",
     objective: "Visit request",
   },
 };
@@ -182,6 +184,11 @@ const PropertyDetailPage = () => {
           </div>
 
           <PropertyGallery photos={photos} alt={`${property.type}, ${property.address}, ${property.city}`} lang={lang} />
+          {AI_STAGED.has(property.id) && (
+            <p className="mt-3 text-[13px] leading-relaxed" style={{ color: "#4A5475" }}>
+              {c.aiStaging}
+            </p>
+          )}
         </div>
       </section>
 
