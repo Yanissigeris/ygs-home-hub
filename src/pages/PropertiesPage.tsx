@@ -10,7 +10,7 @@ import RelatedPages from "@/components/RelatedPages";
 import SectorLinks from "@/components/SectorLinks";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
-import { Search, Star, Home, Building2, TrendingUp, MapPin, ExternalLink } from "lucide-react";
+import { Search, Star, Home, Building2, TrendingUp, MapPin } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import heroImg from "@/assets/hero-properties.webp";
 
@@ -74,18 +74,6 @@ const PropertiesPage = () => {
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>
-      <div className="mt-8 text-center">
-        <a
-          href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
-        >
-          <Home className="h-5 w-5" />
-          Voir toutes mes propriétés sur RE/MAX
-          <ExternalLink className="h-4 w-4" />
-        </a>
-      </div>
 
       {properties.filter(p => p.status === "sold").length > 0 && (
         <div className="mt-16">
@@ -101,18 +89,6 @@ const PropertiesPage = () => {
           </div>
         </div>
       )}
-      <div className="mt-8 text-center">
-        <a
-          href="https://www.remax-quebec.com/fr/courtiers-immobiliers/yanis.gauthier-sigeris"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
-        >
-          <Home className="h-5 w-5" />
-          Voir toutes mes propriétés sur RE/MAX
-          <ExternalLink className="h-4 w-4" />
-        </a>
-      </div>
     </ContentBlock>
 
     <ContentBlock narrow background="alt">
