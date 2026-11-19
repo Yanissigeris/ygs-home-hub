@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { withTrailingSlash, stripTrailingSlash } from "@/lib/url-utils";
+import propertySlugs from "@/data/property-slugs.json";
 
 const frToEn: Record<string, string> = {
   "/": "/en",
@@ -66,6 +67,11 @@ const frToEn: Record<string, string> = {
   "/conditions-utilisation": "/en/terms",
   "/credits-photos": "/en/photo-credits",
 };
+
+// Pages propriété : même slug en FR et en EN.
+for (const slug of Object.values(propertySlugs)) {
+  frToEn[`/proprietes/${slug}`] = `/en/properties/${slug}`;
+}
 
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 

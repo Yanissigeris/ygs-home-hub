@@ -3,6 +3,8 @@ import type { Property } from "@/data/properties";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatSector } from "@/lib/format-sector";
 import { shiftLine } from "@/lib/shift-line";
+import { Link } from "react-router-dom";
+import { propertyPath } from "@/data/property-pages";
 
 interface PropertyCardProps {
   property: Property;
@@ -59,10 +61,8 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
   const isRent = property.status === "rent" || property.status === "rented";
 
   return (
-    <a
-      href={property.remaxUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={propertyPath(property, lang)}
       className="shift-card group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,14,53,0.08)]"
       style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden" }}
     >
@@ -189,7 +189,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
           </span>
         </span>
       </div>
-    </a>
+    </Link>
   );
 };
 

@@ -10,7 +10,7 @@ import SectorLinks from "@/components/SectorLinks";
 import RelatedPages from "@/components/RelatedPages";
 import PropertyCard from "@/components/PropertyCard";
 import { propertiesEn as properties } from "@/data/properties-en";
-import { Search, Home, Building2, ExternalLink } from "lucide-react";
+import { Search, Home, Building2 } from "lucide-react";
 import heroImg from "@/assets/hero-properties.webp";
 
 const profileCards = [
@@ -47,11 +47,6 @@ const PropertiesPageEn = () => (
       <SectionHeading overline="Active listings" title="My current listings" subtitle="My listings: houses, condos, plexes and land in Gatineau and the Outaouais." />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {properties.filter(p => ["active", "rent", "rented"].includes(p.status)).map(property => (<PropertyCard key={property.id} property={property} />))}
-      </div>
-      <div className="mt-8 text-center">
-        <a href="https://www.remax-quebec.com/en/real-estate-brokers/yanis.gauthier-sigeris" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
-          <Home className="h-5 w-5" />See all my properties on RE/MAX<ExternalLink className="h-4 w-4" />
-        </a>
       </div>
 
       {properties.filter(p => p.status === "sold").length > 0 && (

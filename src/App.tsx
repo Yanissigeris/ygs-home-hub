@@ -180,6 +180,7 @@ const RelocationPageEn = lazyPage(() => import("./pages/en/RelocationPageEn"));
 const MilitaryPageEn = lazyPage(() => import("./pages/en/MilitaryPageEn"));
 const PlexPageEn = lazyPage(() => import("./pages/en/PlexPageEn"));
 const PropertiesPageEn = lazyPage(() => import("./pages/en/PropertiesPageEn"));
+const PropertyDetailPage = lazyPage(() => import("./pages/PropertyDetailPage"));
 const ContactPageEn = lazyPage(() => import("./pages/en/ContactPageEn"));
 const FAQPageEn = lazyPage(() => import("./pages/en/FAQPageEn"));
 const TestimonialsPageEn = lazyPage(() => import("./pages/en/TestimonialsPageEn"));
@@ -243,6 +244,7 @@ const routeTree = React.createElement(
       {/* FR routes */}
       <Route path="/" element={<Index />} />
       <Route path="/proprietes" element={<PropertiesPage />} />
+      <Route path="/proprietes/:slug" element={<PropertyDetailPage />} />
       <Route path="/proprietes-vedettes" element={<Navigate to="/proprietes/" replace />} />
       <Route path="/nouvelles-inscriptions" element={<Navigate to="/proprietes/" replace />} />
       <Route path="/nouvelles-inscriptions-gatineau" element={<Navigate to="/proprietes/" replace />} />
@@ -313,6 +315,7 @@ const routeTree = React.createElement(
       {/* EN routes */}
       <Route path="/en" element={<IndexEn />} />
       <Route path="/en/properties" element={<PropertiesPageEn />} />
+      <Route path="/en/properties/:slug" element={<PropertyDetailPage />} />
       <Route path="/en/sell" element={<SellerPageEn />} />
       <Route path="/en/home-valuation" element={<ValuationPageEn />} />
       <Route path="/en/seller-guide" element={<SellerGuidePageEn />} />

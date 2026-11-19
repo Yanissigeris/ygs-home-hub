@@ -608,5 +608,145 @@
     "title": "Photo credits | YGS",
     "description": "Authors and licences of the freely licensed photos used on yanisgauthier.com.",
     "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/7-rue-du-chinook": {
+    "title": "7 Rue du Chinook, Hull · Triplex vendu | YGS",
+    "description": "Triplex vendu à Hull, prix demandé 949 900 $. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/7-rue-du-chinook": {
+    "title": "7 Rue du Chinook, Hull · Triplex sold | YGS",
+    "description": "Triplex sold in Hull, asking price $949,900. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/32-rue-de-laperriere": {
+    "title": "32 Rue de Laperrière, Limbour · Maison à étages vendue | YGS",
+    "description": "Maison à étages vendue à Limbour, prix demandé 649 900 $. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/32-rue-de-laperriere": {
+    "title": "32 Rue de Laperrière, Limbour · Two-storey house sold | YGS",
+    "description": "Two-storey house sold in Limbour, asking price $649,900. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/10-rue-laviolette": {
+    "title": "10 Rue Laviolette, Cantley · Maison à paliers vendue | YGS",
+    "description": "Maison à paliers vendue à Cantley, prix demandé 559 800 $. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/10-rue-laviolette": {
+    "title": "10 Rue Laviolette, Cantley · Split level sold | YGS",
+    "description": "Split level sold in Cantley, asking price $559,800. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/310-boul-d-europe-app-6": {
+    "title": "310 Boul. d'Europe, app. 6, Aylmer · Condo loué | YGS",
+    "description": "Condo loué à Aylmer, 1 975 $/mois. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/310-boul-d-europe-app-6": {
+    "title": "310 Boul. d'Europe, app. 6, Aylmer · Condo rented | YGS",
+    "description": "Condo rented in Aylmer, $1,975/month. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/383-boul-des-grives-app-4": {
+    "title": "383 Boul. des Grives, app. 4, Hull · Condo à vendre | YGS",
+    "description": "Condo à vendre à Hull, 294 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/383-boul-des-grives-app-4": {
+    "title": "383 Boul. des Grives, app. 4, Hull · Condo for sale | YGS",
+    "description": "Condo for sale in Hull, $294,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/516-rue-notre-dame": {
+    "title": "516 Rue Notre-Dame, Gatineau · Plain-pied à vendre | YGS",
+    "description": "Plain-pied à vendre à Gatineau, 364 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/516-rue-notre-dame": {
+    "title": "516 Rue Notre-Dame, Gatineau · Bungalow for sale | YGS",
+    "description": "Bungalow for sale in Gatineau, $364,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/71-rue-lessard": {
+    "title": "71 Rue Lessard, Hull · Quadruplex vendu | YGS",
+    "description": "Quadruplex vendu à Hull, prix demandé 1 029 900 $. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/71-rue-lessard": {
+    "title": "71 Rue Lessard, Hull · Quadruplex sold | YGS",
+    "description": "Quadruplex sold in Hull, asking price $1,029,900. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/312-rue-le-gallois": {
+    "title": "312 Rue Le Gallois, Gatineau · Maison à étages vendue | YGS",
+    "description": "Maison à étages vendue à Gatineau, prix demandé 649 900 $. Photos et détails, avec Yanis Gauthier-Sigeris, courtier RE/MAX.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/312-rue-le-gallois": {
+    "title": "312 Rue Le Gallois, Gatineau · Two-storey house sold | YGS",
+    "description": "Two-storey house sold in Gatineau, asking price $649,900. Photos and details, with Yanis Gauthier-Sigeris, RE/MAX broker.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/188-rue-des-hautes-rives": {
+    "title": "188 Rue des Hautes-Rives, Aylmer · Maison à étages | YGS",
+    "description": "Maison à étages à vendre à Aylmer, 459 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/188-rue-des-hautes-rives": {
+    "title": "188 Rue des Hautes-Rives, Aylmer · Two-storey house | YGS",
+    "description": "Two-storey house for sale in Aylmer, $459,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/14-imp-de-la-descente": {
+    "title": "14 Imp. de la Descente, Aylmer · Plain-pied à vendre | YGS",
+    "description": "Plain-pied à vendre à Aylmer, 517 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/14-imp-de-la-descente": {
+    "title": "14 Imp. de la Descente, Aylmer · Bungalow for sale | YGS",
+    "description": "Bungalow for sale in Aylmer, $517,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/236-rue-church": {
+    "title": "236 Rue Church, Buckingham · Plain-pied à vendre | YGS",
+    "description": "Plain-pied à vendre à Buckingham, 448 000 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/236-rue-church": {
+    "title": "236 Rue Church, Buckingham · Bungalow for sale | YGS",
+    "description": "Bungalow for sale in Buckingham, $448,000. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/47-rue-brook": {
+    "title": "47 Rue Brook, Aylmer · Maison à étages à vendre | YGS",
+    "description": "Maison à étages à vendre à Aylmer, 399 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/47-rue-brook": {
+    "title": "47 Rue Brook, Aylmer · Two-storey house for sale | YGS",
+    "description": "Two-storey house for sale in Aylmer, $399,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/1609-boul-st-rene-e": {
+    "title": "1609 Boul. St-René E., Gatineau · Maison à étages | YGS",
+    "description": "Maison à étages à vendre à Gatineau, 499 900 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/1609-boul-st-rene-e": {
+    "title": "1609 Boul. St-René E., Gatineau · Two-storey house | YGS",
+    "description": "Two-storey house for sale in Gatineau, $499,900. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/proprietes/767-ch-du-fort": {
+    "title": "767 Ch. du Fort, Val-des-Monts · Terrain à vendre | YGS",
+    "description": "Terrain à vendre à Val-des-Monts, 59 999 $. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
+  },
+  "/en/properties/767-ch-du-fort": {
+    "title": "767 Ch. du Fort, Val-des-Monts · Residential lot | YGS",
+    "description": "Residential lot for sale in Val-des-Monts, $59,999. Photos, details and visit requests with Yanis Gauthier-Sigeris.",
+    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"
   }
 }
