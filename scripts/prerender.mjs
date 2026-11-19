@@ -195,6 +195,12 @@ const frToEn = {
   "/conditions-utilisation": "/en/terms",
   "/credits-photos": "/en/photo-credits",
 };
+// Pages propriété : même slug en FR et en EN (src/data/property-slugs.json).
+for (const slug of Object.values(
+  JSON.parse(readFileSync(new URL("../src/data/property-slugs.json", import.meta.url), "utf8")),
+)) {
+  frToEn[`/proprietes/${slug}`] = `/en/properties/${slug}`;
+}
 const enToFr = Object.fromEntries(Object.entries(frToEn).map(([k, v]) => [v, k]));
 
 const escapeHtml = (s) =>

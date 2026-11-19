@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { propertyImages } from "@/data/property-images";
+import { propertyPath } from "@/data/property-pages";
 import { formatSector } from "@/lib/format-sector";
 import { shiftLine } from "@/lib/shift-line";
 
@@ -45,11 +46,8 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
   
 
   return (
-    <a
-      href={p.remaxUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      
+    <Link
+      to={propertyPath(p, lang === "en" ? "en" : "fr")}
       className="shift-card group flex flex-col h-full"
       style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 24px 48px var(--gold3)"; }}
@@ -162,7 +160,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
           <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1" aria-hidden>→</span>
         </span>
       </div>
-    </a>
+    </Link>
   );
 };
 
