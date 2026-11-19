@@ -1068,3 +1068,52 @@ body:has([data-page-cta]) .footer-cta {
 @media (prefers-reduced-motion: reduce) {
   .strike-line { transform: scaleX(1) !important; transition: none !important; }
 }
+
+/* Shift Card (nov. 2026) : au survol, la photo cède une bande au bas et une
+   ligne de plus (type · année de construction) glisse sous le prix.
+   Hauteur de carte constante : seulement transform, clip-path et opacity.
+   Au repos, la carte est identique à avant. Sur écran tactile, l'état
+   survolé est affiché en permanence. */
+.shift-card { --shift: 1.5rem; --shift-ease: cubic-bezier(.16,1,.3,1); }
+.shift-card__media {
+  margin-bottom: calc(-1 * var(--shift));
+  clip-path: inset(0 0 0 0);
+  transition: clip-path .5s var(--shift-ease);
+}
+.shift-card__img { transform: translateY(0) scale(1); transition: transform .7s var(--shift-ease); }
+.shift-card__accent { position: absolute; left: 0; right: 0; bottom: var(--shift); z-index: 2; }
+.shift-card__body { position: relative; z-index: 1; }
+.shift-card__head { transform: translateY(var(--shift)); transition: transform .5s var(--shift-ease); }
+.shift-card__line {
+  height: var(--shift);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #4A5475;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .35s ease-out, transform .5s var(--shift-ease);
+}
+@media (hover: hover) {
+  .shift-card:hover .shift-card__media,
+  .shift-card:focus-visible .shift-card__media { clip-path: inset(0 0 var(--shift) 0); }
+  .shift-card:hover .shift-card__img,
+  .shift-card:focus-visible .shift-card__img { transform: translateY(calc(var(--shift) * -0.5)) scale(1.05); }
+  .shift-card:hover .shift-card__head,
+  .shift-card:focus-visible .shift-card__head { transform: translateY(0); }
+  .shift-card:hover .shift-card__line,
+  .shift-card:focus-visible .shift-card__line { opacity: 1; transform: translateY(0); transition-delay: .06s, 0s; }
+}
+@media (hover: none) {
+  .shift-card__media { clip-path: inset(0 0 var(--shift) 0); }
+  .shift-card__img { transform: translateY(calc(var(--shift) * -0.5)); }
+  .shift-card__head { transform: none; }
+  .shift-card__line { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shift-card__media, .shift-card__img, .shift-card__head, .shift-card__line { transition: none !important; }
+}
