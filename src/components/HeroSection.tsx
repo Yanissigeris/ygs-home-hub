@@ -10,6 +10,16 @@ import { getHeroPicture, type HeroPicture } from "@/lib/hero-pictures";
 
 import { VideoPerfOverlay, type VideoPerfMetrics } from "@/components/VideoPerfOverlay";
 
+/** Keeps « Gauthier-Sigeris » on one line in hero titles (the browser may otherwise break at the hyphen). Text is unchanged. */
+const keepNameTogether = (text: string) =>
+  text.split(/(Gauthier-Sigeris)/).map((part, i) =>
+    part === "Gauthier-Sigeris" ? (
+      <span key={i} className="whitespace-nowrap">{part}</span>
+    ) : (
+      <React.Fragment key={i}>{part}</React.Fragment>
+    ),
+  );
+
 
 /** Detect mobile synchronously at first render (SSR-safe).
  *  Used to skip the <video> element entirely on phones — the poster
@@ -467,7 +477,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           <div className="section-container relative z-20 py-8 sm:py-20 md:py-24">
             <div className="max-w-[40rem]">
               {/* overline retiré : le H1 arrive en premier (cohérence accueil) */}
-              <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{title}</h1>
+              <h1 style={{ color: "var(--cream)", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{keepNameTogether(title)}</h1>
               <p className="mt-3 hidden max-w-[28rem] text-[1rem] font-normal leading-[1.8] sm:mt-6 sm:block" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               <p className="mt-3 block max-w-[28rem] text-[0.95rem] font-normal leading-[1.7] sm:hidden" style={{ color: "rgba(255,255,255,.92)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>{subtitle}</p>
               {(primaryCta || secondaryCta) && (
@@ -785,7 +795,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                             <React.Fragment key={i}>{part}</React.Fragment>
                           )
                         )
-                      : title}
+                      : keepNameTogether(title)}
                   </h1>
                 </>
               )}

@@ -94,6 +94,7 @@ const StickyMobileCTA = ({ forceIntent }: { forceIntent?: AvatarIntent } = {}) =
   return (
     <div
       role="region"
+      data-sticky-mobile-cta
       aria-label={lang === "en" ? "Quick actions" : "Actions rapides"}
       className="fixed bottom-0 inset-x-0 z-[500] md:hidden"
       style={{
