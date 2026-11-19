@@ -4,6 +4,7 @@ import { properties } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { propertyImages } from "@/data/property-images";
 import { formatSector } from "@/lib/format-sector";
+import { shiftLine } from "@/lib/shift-line";
 
 
 interface FeaturedPropertiesProps {
@@ -49,13 +50,13 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
       target="_blank"
       rel="noopener noreferrer"
       
-      className="group flex flex-col h-full"
+      className="shift-card group flex flex-col h-full"
       style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden", transition: "transform 0.5s cubic-bezier(.16,1,.3,1), box-shadow 0.5s cubic-bezier(.16,1,.3,1)" }}
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 4px 0 var(--gold), 0 24px 48px var(--gold3)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+      <div className="shift-card__media relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
         {(() => {
           const set = propertyImages[p.id as string];
           // Fallback to legacy single image if id not in map
@@ -64,12 +65,11 @@ const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings;
               <img
                 src={p.image}
 alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
-                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                className="shift-card__img h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
                 width={648}
                 height={486}
-                style={{ transition: "transform 0.7s cubic-bezier(.16,1,.3,1)" }}
               />
             );
           }
@@ -82,12 +82,11 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
               <img
                 src={set.fallback}
                 alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
-                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                className="shift-card__img h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
                 width={648}
                 height={486}
-                style={{ transition: "transform 0.7s cubic-bezier(.16,1,.3,1)" }}
                 onLoad={(e) => { (e.target as HTMLImageElement).parentElement!.parentElement!.classList.remove("img-shimmer"); }}
                 onError={(e) => { const t = e.target as HTMLImageElement; t.style.display = "none"; const wrap = t.parentElement!.parentElement!; wrap.style.background = "var(--ink)"; wrap.classList.remove("img-shimmer"); }}
               />
@@ -119,13 +118,13 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
           />
           {p.status === "sold" ? strings.statusSold : strings.statusFeatured}
         </span>
+        {/* Accent line, shown on hover only; sits on the edge of the photo's hover crop */}
+        <div className="shift-card__accent h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[var(--gold)]" />
       </div>
 
-      {/* Accent line, shown on hover only */}
-      <div className="h-[2px] transition-colors duration-300 ease-out bg-transparent group-hover:bg-[var(--gold)]" />
-
       {/* Card body */}
-      <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+      <div className="shift-card__body flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+        <div className="shift-card__head">
         {/* Every card shows the listing price (sold ones too), so say so; same row on every card keeps prices aligned. */}
         <p style={{ fontFamily: "var(--sans)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5475", marginBottom: ".25rem" }}>
           {strings.askingPrice}
@@ -134,6 +133,10 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
         <p style={{ fontFamily: "var(--display)", fontSize: "clamp(1.375rem, 2.5vw, 1.625rem)", fontWeight: 600, letterSpacing: "-0.025em", color: "var(--ink)", lineHeight: 1.1, marginBottom: ".5rem" }}>
           {p.price}
         </p>
+        </div>
+
+        {/* Shift Card: revealed on hover (always shown on touch screens) */}
+        <p className="shift-card__line">{shiftLine(p.type, p.yearBuilt, lang === "en" ? "en" : "fr")}</p>
 
         {/* Address */}
         <p style={{ fontFamily: "var(--sans)", fontSize: "13px", fontWeight: 400, color: "var(--muted)", marginBottom: ".75rem" }}>

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import type { Property } from "@/data/properties";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatSector } from "@/lib/format-sector";
+import { shiftLine } from "@/lib/shift-line";
 
 interface PropertyCardProps {
   property: Property;
@@ -62,16 +63,17 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
       href={property.remaxUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,14,53,0.08)]"
+      className="shift-card group flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,14,53,0.08)]"
       style={{ background: "var(--white)", borderRadius: 20, overflow: "hidden" }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden bg-[var(--cream-deep)]" style={{ aspectRatio: "4/3" }}>
+      <div className="shift-card__media relative overflow-hidden bg-[var(--cream-deep)]" style={{ aspectRatio: "4/3" }}>
         <img
           ref={imgRef}
           src={property.image}
           alt={`${property.type}, ${property.address}, ${property.city} · YGS Yanis Gauthier-Sigeris`}
-          className={`h-full w-full object-cover transition-[transform,opacity] duration-500 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`shift-card__img h-full w-full object-cover ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          style={{ transition: "transform .7s cubic-bezier(.16,1,.3,1), opacity .5s ease-out" }}
           loading="lazy"
           decoding="async"
           width={648}
@@ -83,14 +85,13 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
             el.parentElement!.style.background = "var(--ink)";
           }}
         />
+        {/* Accent line, visible on hover; sits on the edge of the photo's hover crop */}
+        <div className="shift-card__accent h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#3366FF]" />
       </div>
 
-      {/* Gold top border — visible on hover */}
-      {/* Gold top border — visible on hover */}
-      <div className="h-px transition-colors duration-300 ease-out bg-transparent group-hover:bg-[#3366FF]" />
-
       {/* Card body */}
-      <div className="flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+      <div className="shift-card__body flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+        <div className="shift-card__head">
         {/* Status label */}
         <p
           className={isRent ? "inline-block self-start bg-[var(--ink)] text-[#F7F4EE] px-2 py-0.5 rounded-sm" : undefined}
@@ -118,6 +119,10 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
         >
           {property.price}
         </p>
+        </div>
+
+        {/* Shift Card: revealed on hover (always shown on touch screens) */}
+        <p className="shift-card__line">{shiftLine(property.type, property.yearBuilt, lang)}</p>
 
         {/* Address */}
         <p
