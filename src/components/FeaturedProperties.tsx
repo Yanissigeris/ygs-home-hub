@@ -40,6 +40,11 @@ const t = {
 type PropertyLike = (typeof properties)[number];
 type Strings = (typeof t)["fr"];
 
+// Plex : les chambres d'un seul logement induisent en erreur (ex. triplex affiché « 2 ch »).
+// On montre plutôt le type et le nombre de logements.
+const PLEX_UNITS: Record<string, number> = { duplex: 2, triplex: 3, quadruplex: 4, quintuplex: 5 };
+const plexUnits = (type: string | undefined): number | null => PLEX_UNITS[(type ?? "").trim().toLowerCase()] ?? null;
+
 
 
 const PropertyCard = ({ p, strings, lang }: { p: PropertyLike; strings: Strings; lang: string }) => {
@@ -101,10 +106,9 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
             background: "rgba(247,244,238,0.94)",
             color: "var(--ink)",
             padding: "6px 11px 6px 10px",
-            fontSize: "11px",
+            fontSize: "12px",
             fontWeight: 600,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
+            letterSpacing: "0.01em",
             zIndex: 2,
             borderRadius: 999,
             boxShadow: "0 2px 8px rgba(0,14,53,0.18)",
@@ -124,7 +128,7 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
       <div className="shift-card__body flex flex-1 flex-col" style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
         <div className="shift-card__head">
         {/* Every card shows the listing price (sold ones too), so say so; same row on every card keeps prices aligned. */}
-        <p style={{ fontFamily: "var(--sans)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5475", marginBottom: ".25rem" }}>
+        <p style={{ fontFamily: "var(--sans)", fontSize: "12px", fontWeight: 500, color: "#4A5475", marginBottom: ".25rem" }}>
           {strings.askingPrice}
         </p>
         {/* Price */}
@@ -145,6 +149,12 @@ alt={`${p.type} à ${p.city}, ${p.address}, YGS Yanis Gauthier-Sigeris`}
         <p style={{ fontFamily: "var(--sans)", fontSize: "12px", fontWeight: 400, color: "var(--muted)", marginBottom: "1.25rem" }}>
           {p.bedrooms === "—" ? (
             <>{lang === "fr" ? "Terrain" : "Land"}</>
+          ) : plexUnits(p.type) ? (
+            <>
+              {p.type}
+              <span style={{ margin: "0 .5em", opacity: 0.4 }}>|</span>
+              {plexUnits(p.type)} {lang === "fr" ? "logements" : "units"}
+            </>
           ) : (
             <>
               {p.bedrooms} {lang === "fr" ? "ch" : "bd"}

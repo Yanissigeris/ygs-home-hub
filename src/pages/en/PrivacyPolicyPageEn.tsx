@@ -89,7 +89,7 @@ const PrivacyPolicyPageEn = () => (
               <li><strong>Analytics cookies:</strong> Google Analytics (GA4), activated only with your consent.</li>
               <li><strong>Marketing cookies:</strong> Meta Pixel, activated only with your consent.</li>
             </ul>
-            <p className="mt-2">You can modify your preferences via the 🍪 button at the bottom left of the screen.</p>
+            <p className="mt-2">You can change your preferences with the “Cookie settings” link at the bottom of every page.</p>
           </Section>
 
           <Section title="8. Your Rights (Quebec Law 25)">

@@ -90,7 +90,7 @@ const PrivacyPolicyPage = () => (
               <li><strong>Cookies analytiques :</strong> Google Analytics (GA4), activés uniquement avec votre consentement.</li>
               <li><strong>Cookies marketing :</strong> Meta Pixel, activés uniquement avec votre consentement.</li>
             </ul>
-            <p className="mt-2">Vous pouvez modifier vos préférences via le bouton 🍪 en bas à gauche de l'écran.</p>
+            <p className="mt-2">Vous pouvez modifier vos préférences avec le lien « Gérer les cookies », au bas de chaque page.</p>
           </Section>
 
           <Section title="8. Vos droits (Loi 25 Québec)">

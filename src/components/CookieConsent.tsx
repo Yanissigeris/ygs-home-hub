@@ -3,6 +3,7 @@ import { Cookie } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
+import { OPEN_COOKIE_PREFS_EVENT } from "@/lib/cookie-events";
 
 const STORAGE_KEY = "ygs_cookie_consent";
 const STORAGE_PREFS_KEY = "ygs_cookie_prefs";
@@ -215,9 +216,13 @@ const CookieConsent = () => {
     setDismissed(true);
     applyConsent();
   };
-  const handleReopen = () => {
-    setShowPrefs(true);
-  };
+  /* Le lien « Gérer les cookies » du pied de page rouvre les préférences
+     (remplace l'ancien bouton flottant). */
+  React.useEffect(() => {
+    const open = () => setShowPrefs(true);
+    window.addEventListener(OPEN_COOKIE_PREFS_EVENT, open);
+    return () => window.removeEventListener(OPEN_COOKIE_PREFS_EVENT, open);
+  }, []);
 
   /* Mobile: expose the banner height so the sticky bars (StickyMobileCTA,
      StickyGuideBanner) sit right above it instead of being covered. */
@@ -245,46 +250,6 @@ const CookieConsent = () => {
       clear();
     };
   }, [isMobile, visible]);
-
-  /* Mobile reopen button: fade-cycle 6s + scroll-aware (>200px hide, <=50px show + reset timer). */
-  const [reopenVisible, setReopenVisible] = React.useState(true);
-  const fadeTimerRef = React.useRef<number | null>(null);
-
-  const startFadeTimer = React.useCallback(() => {
-    if (fadeTimerRef.current) {
-      window.clearTimeout(fadeTimerRef.current);
-    }
-    setReopenVisible(true);
-    fadeTimerRef.current = window.setTimeout(() => setReopenVisible(false), 6000);
-  }, []);
-
-  React.useEffect(() => {
-    if (!isMobile) return;
-    if (!dismissed || visible || showPrefs) return;
-    startFadeTimer();
-    let lastShown = true;
-    const onScroll = () => {
-      if (window.scrollY > 200 && lastShown) {
-        lastShown = false;
-        setReopenVisible(false);
-        if (fadeTimerRef.current) {
-          window.clearTimeout(fadeTimerRef.current);
-          fadeTimerRef.current = null;
-        }
-      } else if (window.scrollY <= 50 && !lastShown) {
-        lastShown = true;
-        startFadeTimer();
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (fadeTimerRef.current) {
-        window.clearTimeout(fadeTimerRef.current);
-        fadeTimerRef.current = null;
-      }
-    };
-  }, [isMobile, dismissed, visible, showPrefs, startFadeTimer]);
 
   const t = lang === "en" ? {
     title: "This site uses cookies",
@@ -448,35 +413,6 @@ const CookieConsent = () => {
           </div>
         </div>
       )}
-      {/* Re-open cookie button: desktop bottom-left fixed; mobile bottom-right above sticky CTA, fade-cycle. */}
-      {dismissed && !visible && !showPrefs && (
-        <button
-          onClick={handleReopen}
-          className="fixed flex items-center justify-center rounded-full hover:opacity-80"
-          style={{
-            bottom: isMobile
-              ? "calc(var(--sticky-cta-height) + 1.5rem + env(safe-area-inset-bottom, 0px))"
-              : "5.5rem",
-            right: isMobile ? "1rem" : undefined,
-            left: isMobile ? undefined : "1rem",
-            width: 32,
-            height: 32,
-            background: "var(--ink)",
-            border: "1px solid rgba(255,255,255,.1)",
-            fontSize: "1rem",
-            lineHeight: 1,
-            zIndex: isMobile ? 30 : 9998,
-            opacity: isMobile ? (reopenVisible ? 1 : 0) : 1,
-            pointerEvents: isMobile && !reopenVisible ? "none" : "auto",
-            transition: "opacity 0.5s ease",
-          }}
-          aria-label={lang === "en" ? "Cookie preferences" : "Préférences cookies"}
-          aria-hidden={isMobile && !reopenVisible ? true : undefined}
-        >
-          <Cookie size={18} strokeWidth={1.75} aria-hidden="true" style={{ color: "#fff" }} />
-        </button>
-      )}
-
       {/* Preferences Modal */}
       <PreferencesModal open={showPrefs} onClose={() => setShowPrefs(false)} onSave={handleSavePrefs} lang={lang} />
     </>

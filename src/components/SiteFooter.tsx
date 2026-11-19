@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getA11yLabel } from "@/lib/a11y";
+import { OPEN_COOKIE_PREFS_EVENT } from "@/lib/cookie-events";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
 import logoYgsWhite from "@/assets/ygs-logo.png";
@@ -95,7 +96,6 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
     const lang = useLanguage();
     const columns = lang === "en" ? footerColumnsEn : footerColumns;
     const popularLinks = lang === "en" ? footerPopularLinksEn : footerPopularLinks;
-    const tagline = lang === "en" ? "Your real estate ally in Outaouais. Clear strategy." : "Votre allié en immobilier en Outaouais. Stratégie claire.";
     const popularLabel = lang === "en" ? "Popular areas & services" : "Zones et services populaires";
     const affiliationsLabel = lang === "en" ? "Affiliations & Recognition" : "Affiliations & reconnaissances";
     const legalText = lang === "en"
@@ -146,9 +146,6 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-5 max-w-[22rem] text-center" style={{ fontSize: ".875rem", color: "rgba(255,255,255,.7)", textWrap: "balance" }}>
-              {tagline}
-            </p>
 
             {/* Social icons */}
             <div className="mt-6 flex items-center gap-4">
@@ -345,6 +342,14 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               <Link to={lang === "en" ? "/en/photo-credits/" : "/credits-photos/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Photo credits" : "Crédits photos"}
               </Link>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_PREFS_EVENT))}
+                style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", background: "none", border: 0, padding: 0, cursor: "pointer", fontFamily: "inherit" }}
+                className="hover:text-white/85 transition-colors"
+              >
+                {lang === "en" ? "Cookie settings" : "Gérer les cookies"}
+              </button>
             </div>
           </div>
         </div>
