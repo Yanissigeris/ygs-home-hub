@@ -5,7 +5,7 @@ import yanisAbout from "@/assets/yanis-about-new.jpg?w=400;560;720;760;900&forma
 const contentFr = {
   overline: "QUI EST YANIS GAUTHIER-SIGERIS? ",
   quote: "«\u00A0Je vous donne les chiffres et les options, vous décidez.\u00A0»",
-  body: `Je suis courtier immobilier résidentiel depuis 2017, avec plus de 300 transactions en Outaouais, surtout à Aylmer et à Hull. Mes clients sont autant des vendeurs et des acheteurs que des investisseurs.
+  body: `Je suis courtier immobilier résidentiel en Outaouais, surtout à Aylmer et à Hull. Mes clients sont autant des vendeurs et des acheteurs que des investisseurs.
 
 Avant de parler de prix, je vous montre les ventes comparables de votre secteur. Vous voyez les mêmes chiffres que moi, puis c'est vous qui choisissez.
 
@@ -21,7 +21,7 @@ Je fais partie de l'Équipe Marty Waite chez RE/MAX Direct depuis mes débuts. R
 const contentEn = {
   overline: "WHY YANIS GAUTHIER-SIGERIS?",
   quote: '"I give you the numbers and the options, you decide."',
-  body: `I've been a residential real estate broker since 2017, with more than 300 transactions in the Outaouais, mostly in Aylmer and Hull. I work with sellers and buyers as much as with investors, and I've worked with military families since 2017.
+  body: `I'm a residential real estate broker in the Outaouais, mostly in Aylmer and Hull. I work with sellers and buyers as much as with investors, and I've worked with military families since 2017.
 
 Before we talk price, I show you the comparable sales in your area. You see the same numbers I do, then you choose.
 

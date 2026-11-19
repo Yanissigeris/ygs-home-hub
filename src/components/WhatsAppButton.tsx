@@ -58,7 +58,7 @@ const FloatingCallButton = () => {
         href="tel:+18192103044"
         aria-label={ariaLabelDesktop}
         onClick={() => trackContactTap({ channel: "phone", location: "sticky_cta", destination: "+18192103044" })}
-        className="floating-call-btn group fixed z-[490] hidden md:inline-flex items-center justify-center"
+        className="floating-call-btn group fixed z-[490] hidden md:inline-flex lg:hidden items-center justify-center"
         style={{
           bottom: "clamp(20px, 2.5vw, 32px)",
           right: "clamp(20px, 2.5vw, 32px)",

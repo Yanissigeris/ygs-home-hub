@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback, lazy, Suspense } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, FocusEvent as ReactFocusEvent } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { installValuationAnchor } from "@/lib/valuationAnchor";
 
@@ -60,6 +61,17 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const timeout = useRef<ReturnType<typeof setTimeout>>();
   const enter = () => { clearTimeout(timeout.current); setOpen(true); };
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 140); };
+  // Clavier : un menu fermé est masqué (invisible), donc hors de l'ordre de tabulation.
+  // Échap le ferme et redonne le focus au bouton; quitter le menu au clavier le ferme aussi.
+  const onMenuKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Escape" && open) {
+      setOpen(false);
+      (e.currentTarget.querySelector("button") as HTMLButtonElement | null)?.focus();
+    }
+  };
+  const onMenuBlur = (e: ReactFocusEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
+  };
 
   const defaultColor = "var(--white)";
   const activeColor = "var(--white)";
@@ -94,7 +106,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
     const allLinks = item.columns.flatMap((c) => c.links);
     const isChildActive = allLinks.some((l) => pathname === l.href);
     return (
-      <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+      <div className="relative" onMouseEnter={enter} onMouseLeave={leave} onKeyDown={onMenuKeyDown} onBlur={onMenuBlur}>
         <button
           className="group relative flex items-center gap-1 whitespace-nowrap transition-colors"
           style={{
@@ -115,7 +127,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
           <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
           <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
         </button>
-        <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform] duration-200 ease-out ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
+        <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform,visibility] duration-200 ease-out ${open ? "visible pointer-events-auto translate-y-0 opacity-100" : "invisible pointer-events-none -translate-y-1.5 opacity-0"}`}>
           <div
             className="overflow-hidden p-5"
             style={{
@@ -185,7 +197,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const isChildActive = item.children!.some((c) => pathname === c.href);
 
   return (
-    <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+    <div className="relative" onMouseEnter={enter} onMouseLeave={leave} onKeyDown={onMenuKeyDown} onBlur={onMenuBlur}>
       <button
         className="group relative flex items-center gap-1 whitespace-nowrap transition-colors"
         style={{
@@ -205,7 +217,7 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
         <ChevronDownIcon size={11} className={`mt-px opacity-30 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
         <span className="absolute bottom-0 left-[var(--nav-px,.7rem)] right-[var(--nav-px,.7rem)] h-[1.5px] rounded-full transition-transform duration-300 ease-out origin-left group-hover:scale-x-100" style={{ background: underlineColor, transform: isChildActive ? "scaleX(1)" : "scaleX(0)" }} />
       </button>
-      <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform] duration-200 ease-out ${open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"}`}>
+      <div className={`absolute left-1/2 top-full z-50 pt-2.5 -translate-x-1/2 transition-[opacity,transform,visibility] duration-200 ease-out ${open ? "visible pointer-events-auto translate-y-0 opacity-100" : "invisible pointer-events-none -translate-y-1.5 opacity-0"}`}>
         <div className="min-w-[13.5rem] overflow-hidden p-1.5" style={{ borderRadius: 12, border: "1px solid var(--border)", background: "rgba(247,244,238,1)", boxShadow: "0 18px 50px -10px rgba(0,14,53,.35)" }}>
           {item.children!.map((child) => (
             <Link
