@@ -13,6 +13,7 @@ import property15159365 from "@/assets/property-15159365.webp";
 import property22864394 from "@/assets/property-22864394.webp";
 import property14821222 from "@/assets/property-14821222.webp";
 import property12304022 from "@/assets/property-12304022.webp";
+import property18600312 from "@/assets/property-18600312.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -73,6 +74,26 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
     status: "sold",
+  },
+  {
+    id: "18600312",
+    address: "45 Rue des Louveteaux",
+    city: "Gatineau (Aylmer, Plateau de la Capitale)",
+    price: "$639,900",
+    type: "Two-storey house",
+    bedrooms: "4",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,725 sq ft",
+    lotSize: "4,876 sq ft",
+    yearBuilt: "2008",
+    description:
+      "Two-storey 4-bedroom home in a family area of the Plateau de la Capitale. The living room has a gas fireplace and the basement is fully finished, with a ceiling height of 6 feet or more. Attached garage and paved driveway. The flat, fenced backyard has an above-ground pool. There is also a wooden gazebo and a shed. Schools, daycares, parks and bike paths nearby, with quick highway access.",
+    image: property18600312,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/45-rue-des-louveteaux-gatineau-aylmer-plateau-de-la-capitale-18600312",
+    mls: "18600312",
+    status: "active",
   },
   {
     id: "19674845",

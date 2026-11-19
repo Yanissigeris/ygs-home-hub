@@ -18,6 +18,7 @@ export const PHOTO_COUNTS: Record<string, number> = {
   "15159365": 3,
   "21358006": 29,
   "15191323": 37,
+  "18600312": 44,
 };
 
 /**
