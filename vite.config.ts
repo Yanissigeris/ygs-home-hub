@@ -131,7 +131,8 @@ export default defineConfig(() => ({
       // intended quality (src/lib/hero-pictures.ts, src/lib/hero-backgrounds.ts).
       // Re-optimising them costs ~5 build minutes and is skipped anyway
       // (the re-encoded file is larger), so leave the hero families alone.
-      exclude: /\/(hero-[^/]+|gatineau-river-view-[^/]+|home-interior-[^/]+|plateau-aylmer-lifestyle-[^/]+)\.(avif|webp)$/,
+      // The « Jusqu'au notaire » step photo is committed at full quality (q92).
+      exclude: /\/(hero-[^/]+|gatineau-river-view-[^/]+|home-interior-[^/]+|plateau-aylmer-lifestyle-[^/]+|vendre-etape-notaire-signature[^/]*)\.(avif|webp)$/,
       png: { quality: 80 },
       jpeg: { quality: 80, mozjpeg: true },
       jpg: { quality: 80, mozjpeg: true },

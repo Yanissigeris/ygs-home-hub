@@ -13,7 +13,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CardGrid from "@/components/CardGrid";
 import photoDusk from "@/assets/vendre-etape-analyse-aylmer.webp";
 import photoKitchen from "@/assets/vendre-etape-plan-cuisine.webp";
-import photoBrick from "@/assets/vendre-etape-notaire-facade.webp";
+import photoNotary from "@/assets/vendre-etape-notaire-signature.webp";
 import photoWinter from "@/assets/vendre-eviter-bungalow.webp";
 
 import InlineCTA from "@/components/InlineCTA";
@@ -135,7 +135,7 @@ const SellerPage = () =>
       images={[
         { src: photoDusk, alt: "Vue aérienne d'Aylmer et de la rivière des Outaouais", width: 1200, height: 900 },
         { src: photoKitchen, alt: "Cuisine aux armoires bleues", width: 1200, height: 800 },
-        { src: photoBrick, alt: "Entrée d'une maison à Aylmer", width: 1200, height: 800 },
+        { src: photoNotary, alt: "Signature des documents chez le notaire", width: 1720, height: 2064 },
       ]} />
 
     <ReviewSection
