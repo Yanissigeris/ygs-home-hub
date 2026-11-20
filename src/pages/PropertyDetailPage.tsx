@@ -173,8 +173,8 @@ const PropertyDetailPage = () => {
       </section>
 
       <section className="pb-16 pt-10 md:pb-24 md:pt-14" style={{ background: "var(--cream)" }}>
-        <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
-          <div>
+        <div className="section-container grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
+          <div className="min-w-0">
             <StatBand property={property} lang={lang} />
 
             <h2 className="mt-12" style={{ fontFamily: "var(--display)", fontSize: "clamp(1.5rem, 2.4vw, 2rem)", color: "var(--ink)" }}>

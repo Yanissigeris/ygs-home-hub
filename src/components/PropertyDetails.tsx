@@ -255,7 +255,7 @@ const Section = ({
 );
 
 const Rows = ({ rows }: { rows: Row[] }) => (
-  <dl className="grid gap-x-10 md:grid-cols-2">
+  <dl className="grid grid-cols-[minmax(0,1fr)] gap-x-10 md:grid-cols-[repeat(2,minmax(0,1fr))]">
     {rows.map(([label, value]) => (
       <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
         <dt className="shrink-0 whitespace-nowrap" style={{ color: MUTED }}>{label}</dt>
