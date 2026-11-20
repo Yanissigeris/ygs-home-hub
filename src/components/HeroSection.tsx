@@ -529,6 +529,11 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               )}
               {/* Width-based sources (768/1280/1920) for every other hero.
                   Explicit heroBgImageMobile/Avif props above win when present. */}
+              {/* Phones: lighter 1280/1920 AVIF. The hero is ~78vh tall there, so
+                  object-cover draws the photo about 140vh wide. */}
+              {!heroBgImageMobile && !heroBgImageAvif && responsiveHero?.mobileAvif && (
+                <source type="image/avif" media="(max-width: 767px)" srcSet={responsiveHero.mobileAvif} sizes="(orientation: portrait) 140vh, 100vw" />
+              )}
               {!heroBgImageMobile && !heroBgImageAvif && responsiveHero && (
                 <source type="image/avif" srcSet={responsiveHero.avif} sizes={responsiveHero.sizes ?? "100vw"} />
               )}

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useId } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -93,6 +93,7 @@ const MortgageCalculator = () => {
     { value: "weekly", label: l.weekly },
   ];
 
+  const uid = useId();
   return (
     <div className="bg-card rounded-[var(--card-radius)] border border-border shadow-[var(--card-shadow)] p-6 sm:p-8">
       <h3 className="mb-6">{l.title}</h3>
@@ -100,15 +101,16 @@ const MortgageCalculator = () => {
       <div className="grid gap-5 sm:grid-cols-2">
         {/* Price */}
         <div className="space-y-1.5">
-          <Label>{l.price}</Label>
-          <Input type="number" min={0} step={1000} value={price} onChange={(e) => setPrice(Number(e.target.value))} />
+          <Label htmlFor={`${uid}-price`}>{l.price}</Label>
+          <Input id={`${uid}-price`} type="number" min={0} step={1000} value={price} onChange={(e) => setPrice(Number(e.target.value))} />
         </div>
 
         {/* Down payment */}
         <div className="space-y-1.5">
-          <Label>{l.down}</Label>
+          <Label htmlFor={`${uid}-down`}>{l.down}</Label>
           <div className="flex gap-2">
             <Input
+              id={`${uid}-down`}
               type="number"
               min={0}
               step={downMode === "%" ? 1 : 1000}
@@ -127,6 +129,7 @@ const MortgageCalculator = () => {
                   setDownRaw(Math.round(price * (downRaw / 100)));
                 }
               }}
+              aria-label={lang === "en" ? (downMode === "$" ? "Switch to percent" : "Switch to dollars") : (downMode === "$" ? "Passer en pourcentage" : "Passer en dollars")}
               className="h-12 w-12 shrink-0 rounded-xl border border-input bg-secondary/40 text-[0.875rem] font-medium text-foreground transition-colors hover:bg-secondary"
             >
               {downMode}
@@ -138,6 +141,7 @@ const MortgageCalculator = () => {
             step={downMode === "%" ? 1 : 1000}
             value={[downRaw]}
             onValueChange={([v]) => setDownRaw(v)}
+            thumbLabel={l.down}
             className="mt-2"
           />
           <p className="text-[0.75rem] text-muted-foreground">
@@ -147,41 +151,44 @@ const MortgageCalculator = () => {
 
         {/* Rate */}
         <div className="space-y-1.5">
-          <Label>{l.rate}</Label>
-          <Input type="number" min={0} max={15} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
+          <Label htmlFor={`${uid}-rate`}>{l.rate}</Label>
+          <Input id={`${uid}-rate`} type="number" min={0} max={15} step={0.05} value={rate} onChange={(e) => setRate(Number(e.target.value))} />
           <Slider
             min={0}
             max={15}
             step={0.05}
             value={[rate]}
             onValueChange={([v]) => setRate(v)}
+            thumbLabel={l.rate}
             className="mt-2"
           />
         </div>
 
         {/* Amort */}
         <div className="space-y-1.5">
-          <Label>{l.amort}</Label>
-          <Input type="number" min={1} max={30} step={1} value={amort} onChange={(e) => setAmort(Number(e.target.value))} />
+          <Label htmlFor={`${uid}-amort`}>{l.amort}</Label>
+          <Input id={`${uid}-amort`} type="number" min={1} max={30} step={1} value={amort} onChange={(e) => setAmort(Number(e.target.value))} />
           <Slider
             min={1}
             max={30}
             step={1}
             value={[amort]}
             onValueChange={([v]) => setAmort(v)}
+            thumbLabel={l.amort}
             className="mt-2"
           />
         </div>
 
         {/* Frequency */}
         <div className="space-y-1.5 sm:col-span-2">
-          <Label>{l.freq}</Label>
-          <div className="flex flex-wrap gap-2">
+          <p id={`${uid}-freq`} className="text-[0.875rem] font-medium leading-none text-foreground/80">{l.freq}</p>
+          <div className="flex flex-wrap gap-2" role="group" aria-labelledby={`${uid}-freq`}>
             {freqOptions.map((o) => (
               <button
                 key={o.value}
                 type="button"
                 onClick={() => setFreq(o.value)}
+                aria-pressed={freq === o.value}
                 className={`h-10 rounded-[0.625rem] border px-4 text-[0.8125rem] font-medium transition-colors ${
                   freq === o.value
                     ? "border-primary bg-primary text-primary-foreground"
