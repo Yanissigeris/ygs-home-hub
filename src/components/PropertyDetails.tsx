@@ -1,5 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { Bath, BedDouble, CalendarDays, ChevronDown, House, LandPlot, LayoutGrid, ListChecks, Receipt, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import type { Property } from "@/data/properties";
 import details from "@/data/property-details.json";
 
 type Row = [string, string];
@@ -29,30 +33,43 @@ const EXAMPLE_RATE = 4.5;
 
 const copy = {
   fr: {
-    rooms: "Pièces par étage",
-    roomsGroup: "Choisir un étage",
+    bedrooms: "Chambres",
+    bathrooms: "Salles de bain",
+    area: "Superficie habitable",
+    lot: "Terrain",
+    year: "Construction",
+    features: "Caractéristiques",
+    type: "Type",
+    yearBuilt: "Année de construction",
+    lotSize: "Terrain",
+    mls: "No Centris",
+    near: "À proximité",
+    rooms: "Détails des pièces",
+    roomsSummary: (n: number, l: number) => `${n} pièces sur ${l} ${l > 1 ? "niveaux" : "niveau"}`,
+    roomsGroup: "Choisir un niveau",
     room: "Pièce",
     dim: "Dimensions",
     floor: "Plancher",
-    details: "Détails",
+    incl: "Inclus et exclus",
     included: "Inclus",
-    excluded: "Exclusions",
-    calcTitle: "Combien coûterait votre paiement?",
-    calcIntro:
-      "Un ordre de grandeur pour bâtir votre budget. Votre prêteur confirmera le taux et le montant exact. Le taux affiché est un exemple, changez-le pour le vôtre.",
-    price: "Prix",
+    excluded: "Exclus",
+    costs: "Évaluation, taxes et frais",
+    taxesSummary: (t: string) => `Taxes de ${t} par année`,
+    calcTitle: "Calculatrice hypothécaire",
+    calcIntro: "Un ordre de grandeur pour votre budget. Votre prêteur confirmera le taux et le montant exact.",
+    price: "Prix de la propriété",
     down: "Mise de fonds",
+    downMode: "Entrer la mise de fonds en",
+    minDown: (m: string) => `Mise de fonds minimale pour ce prix : ${m}.`,
     rate: "Taux d'intérêt (exemple)",
-    rateDown: "Baisser le taux",
-    rateUp: "Monter le taux",
     amort: "Amortissement",
     years: (y: number) => `${y} ans`,
-    freq: "Versements",
-    monthly: "Mensuels",
+    freq: "Fréquence des versements",
+    monthly: "Mensuelle",
     biweekly: "Aux 2 semaines",
-    payMonthly: "Paiement hypothécaire par mois",
-    payBiweekly: "Paiement hypothécaire aux 2 semaines",
-    loan: "Prêt hypothécaire",
+    weekly: "Hebdomadaire",
+    pay: { m: "Paiement par mois", b: "Paiement aux 2 semaines", w: "Paiement par semaine" },
+    loan: "Montant hypothécaire",
     insurance: "Assurance prêt incluse",
     none: "Aucune",
     withTaxes: "Avec les taxes, par mois",
@@ -60,35 +77,47 @@ const copy = {
     talk: "Parler à Yanis",
     talkHref: "/contact-yanis/",
     disclaimer:
-      "Estimation seulement, à titre indicatif. Ne constitue pas une offre de financement. L'assurance prêt hypothécaire s'ajoute au prêt quand la mise de fonds est sous 20 %.",
-    area: "Le secteur",
+      "Estimation seulement, à titre indicatif. Ne constitue pas une offre de financement. Le taux est un exemple. L'assurance prêt hypothécaire s'ajoute au prêt quand la mise de fonds est sous 20 %.",
     openHouse: "Visite libre",
   },
   en: {
-    rooms: "Rooms by floor",
-    roomsGroup: "Choose a floor",
+    bedrooms: "Bedrooms",
+    bathrooms: "Bathrooms",
+    area: "Living area",
+    lot: "Lot",
+    year: "Built",
+    features: "Features",
+    type: "Type",
+    yearBuilt: "Year built",
+    lotSize: "Lot",
+    mls: "Centris no.",
+    near: "Nearby",
+    rooms: "Room details",
+    roomsSummary: (n: number, l: number) => `${n} rooms on ${l} ${l > 1 ? "levels" : "level"}`,
+    roomsGroup: "Choose a level",
     room: "Room",
     dim: "Dimensions",
     floor: "Flooring",
-    details: "Details",
+    incl: "Inclusions and exclusions",
     included: "Included",
-    excluded: "Exclusions",
-    calcTitle: "What would your payment be?",
-    calcIntro:
-      "A ballpark figure to build your budget. Your lender will confirm the rate and the exact amount. The rate shown is an example, so change it to yours.",
-    price: "Price",
+    excluded: "Excluded",
+    costs: "Assessment, taxes and fees",
+    taxesSummary: (t: string) => `Taxes of ${t} a year`,
+    calcTitle: "Mortgage calculator",
+    calcIntro: "A ballpark figure for your budget. Your lender will confirm the rate and the exact amount.",
+    price: "Property price",
     down: "Down payment",
+    downMode: "Enter the down payment in",
+    minDown: (m: string) => `Minimum down payment for this price: ${m}.`,
     rate: "Interest rate (example)",
-    rateDown: "Lower the rate",
-    rateUp: "Raise the rate",
     amort: "Amortization",
     years: (y: number) => `${y} years`,
-    freq: "Payments",
+    freq: "Payment frequency",
     monthly: "Monthly",
     biweekly: "Every 2 weeks",
-    payMonthly: "Mortgage payment per month",
-    payBiweekly: "Mortgage payment every 2 weeks",
-    loan: "Mortgage loan",
+    weekly: "Weekly",
+    pay: { m: "Payment per month", b: "Payment every 2 weeks", w: "Payment per week" },
+    loan: "Mortgage amount",
     insurance: "Mortgage insurance included",
     none: "None",
     withTaxes: "With taxes, per month",
@@ -96,11 +125,14 @@ const copy = {
     talk: "Talk to Yanis",
     talkHref: "/en/contact/",
     disclaimer:
-      "Estimate only, for information. Not a financing offer. Mortgage default insurance is added to the loan when the down payment is under 20%.",
-    area: "The area",
+      "Estimate only, for information. Not a financing offer. The rate is an example. Mortgage default insurance is added to the loan when the down payment is under 20%.",
     openHouse: "Open house",
   },
 };
+
+const INK = "var(--ink)";
+const MUTED = "#4A5475";
+const LINE = "rgba(0,14,53,.12)";
 
 const money = (n: number, lang: Lang) => {
   const v = Math.round(n);
@@ -116,9 +148,40 @@ const sentence = (s: string) => {
   return /[.!?]$/.test(up) ? up : `${up}.`;
 };
 
-const h2Style = { fontFamily: "var(--display)", fontSize: "clamp(1.5rem, 2.4vw, 2rem)", color: "var(--ink)" } as const;
-const MUTED = "#4A5475";
-const LINE = "rgba(0,14,53,.12)";
+const has = (v?: string) => Boolean(v && v.trim() && v.trim() !== "—");
+
+/* ---------- Bandeau des chiffres clés ---------- */
+
+export const StatBand = ({ property, lang }: { property: Property; lang: Lang }) => {
+  const c = copy[lang];
+  const baths =
+    has(property.powderRooms) && property.powderRooms !== "0" ? `${property.bathrooms} + ${property.powderRooms}` : property.bathrooms;
+  const items = [
+    { icon: BedDouble, value: property.bedrooms, label: c.bedrooms },
+    { icon: Bath, value: baths, label: c.bathrooms },
+    { icon: Ruler, value: property.area, label: c.area },
+    { icon: LandPlot, value: property.lotSize, label: c.lot },
+    { icon: CalendarDays, value: property.yearBuilt, label: c.year },
+  ]
+    .filter((i) => has(i.value))
+    .slice(0, 4);
+  if (!items.length) return null;
+  return (
+    <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-[20px] bg-[rgba(0,14,53,.08)] sm:grid-cols-4">
+      {items.map(({ icon: Icon, value, label }) => (
+        <li key={label} className="flex items-center gap-3 bg-white px-4 py-5 sm:px-5">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full" style={{ background: "var(--cream)" }}>
+            <Icon size={20} strokeWidth={1.75} aria-hidden="true" style={{ color: INK }} />
+          </span>
+          <span className="min-w-0">
+            <span className="block text-[18px] font-semibold leading-tight tabular-nums" style={{ color: INK }}>{value}</span>
+            <span className="block text-[13px]" style={{ color: MUTED }}>{label}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 /* ---------- Visite libre ---------- */
 
@@ -155,305 +218,370 @@ export const OpenHouseBadge = ({ id, lang }: { id: string; lang: Lang }) => {
   const next = d?.openHouses.find((o) => !today || o.date >= today);
   if (!next) return null;
   return (
-    <span
-      className="inline-flex items-center rounded-full bg-white px-3 py-1 text-[13px] font-semibold"
-      style={{ color: "var(--ink)" }}
-    >
+    <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-[13px] font-semibold" style={{ color: INK }}>
       {copy[lang].openHouse} {formatOpenHouse(next, lang)}
     </span>
   );
 };
 
-/* ---------- Calculatrice ---------- */
+/* ---------- Sections repliables ---------- */
 
-const insurancePremium = (downPct: number) => (downPct < 10 ? 0.04 : downPct < 15 ? 0.031 : downPct < 20 ? 0.028 : 0);
+const Section = ({
+  icon: Icon,
+  title,
+  summary,
+  open,
+  children,
+}: {
+  icon: typeof House;
+  title: string;
+  summary?: string;
+  open?: boolean;
+  children: ReactNode;
+}) => (
+  <details open={open} className="group rounded-[20px] border bg-white" style={{ borderColor: LINE }}>
+    <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-5 md:px-6 [&::-webkit-details-marker]:hidden">
+      <Icon size={22} strokeWidth={1.75} aria-hidden="true" className="shrink-0" style={{ color: INK }} />
+      <span className="min-w-0 flex-1">
+        <span className="block text-[17px] font-semibold" style={{ color: INK }}>{title}</span>
+        {summary && <span className="mt-0.5 block truncate text-[14px]" style={{ color: MUTED }}>{summary}</span>}
+      </span>
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full" style={{ background: "var(--cream)" }}>
+        <ChevronDown size={18} aria-hidden="true" className="transition-transform group-open:rotate-180" style={{ color: INK }} />
+      </span>
+    </summary>
+    <div className="px-5 pb-6 md:px-6">{children}</div>
+  </details>
+);
 
-const Pill = ({ on, onClick, children, dark }: { on: boolean; onClick: () => void; children: React.ReactNode; dark?: boolean }) => (
+const Rows = ({ rows }: { rows: Row[] }) => (
+  <dl className="grid gap-x-10 md:grid-cols-2">
+    {rows.map(([label, value]) => (
+      <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
+        <dt style={{ color: MUTED }}>{label}</dt>
+        <dd className="text-right font-semibold" style={{ color: INK }}>{value}</dd>
+      </div>
+    ))}
+  </dl>
+);
+
+const Pill = ({ on, onClick, children }: { on: boolean; onClick: () => void; children: ReactNode }) => (
   <button
     type="button"
     onClick={onClick}
     aria-pressed={on}
     className="min-h-[44px] rounded-full border px-4 text-[14px] font-semibold transition-colors"
-    style={
-      dark
-        ? on
-          ? { background: "#FFFFFF", color: "var(--ink)", borderColor: "#FFFFFF" }
-          : { background: "transparent", color: "#FFFFFF", borderColor: "rgba(255,255,255,.4)" }
-        : on
-          ? { background: "var(--ink)", color: "#FFFFFF", borderColor: "var(--ink)" }
-          : { background: "transparent", color: "var(--ink)", borderColor: "rgba(0,14,53,.2)" }
-    }
+    style={on ? { background: INK, color: "#FFFFFF", borderColor: INK } : { background: "transparent", color: INK, borderColor: "rgba(0,14,53,.2)" }}
   >
     {children}
   </button>
 );
 
-export const MortgageCalculator = ({
-  price,
-  priceLabel,
-  monthlyTaxes,
-  monthlyFees,
-  lang,
-}: {
-  price: number;
-  priceLabel: string;
-  monthlyTaxes: number;
-  monthlyFees: number;
-  lang: Lang;
-}) => {
+export const PropertySections = ({ property, lang }: { property: Property; lang: Lang }) => {
   const c = copy[lang];
-  const [down, setDown] = useState(20);
-  const [rate, setRate] = useState(EXAMPLE_RATE);
-  const [years, setYears] = useState(25);
-  const [freq, setFreq] = useState<"m" | "b">("m");
-
-  const r = useMemo(() => {
-    const downAmt = (price * down) / 100;
-    const base = price - downAmt;
-    const prem = insurancePremium(down);
-    const insurance = base * prem;
-    const loan = base + insurance;
-    const perYear = freq === "m" ? 12 : 26;
-    // Taux canadien : intérêt composé semestriellement.
-    const i = Math.pow(1 + rate / 200, 2 / perYear) - 1;
-    const pay = (loan * i) / (1 - Math.pow(1 + i, -years * perYear));
-    const monthly = freq === "m" ? pay : (pay * 26) / 12;
-    return { downAmt, insurance, prem, loan, pay, monthly };
-  }, [price, down, rate, years, freq]);
-
-  const label = "text-[13px] font-semibold";
-  const labelColor = { color: "rgba(255,255,255,.78)" };
-
-  return (
-    <div id="calculatrice" className="mt-14 scroll-mt-28 rounded-[24px] p-6 text-white md:p-10" style={{ background: "var(--ink)" }}>
-      <h2 style={{ ...h2Style, color: "#FFFFFF" }}>{c.calcTitle}</h2>
-      <p className="mt-3 max-w-[600px] text-[15px]" style={{ lineHeight: 1.7, color: "rgba(255,255,255,.82)" }}>
-        {c.calcIntro}
-      </p>
-
-      <div className="mt-7 flex flex-wrap gap-8">
-        <div className="flex min-w-0 flex-[999_1_320px] flex-col gap-6">
-          <div>
-            <p className={label} style={labelColor}>{c.price}</p>
-            <p className="mt-1 text-[22px] font-bold tabular-nums">{priceLabel}</p>
-          </div>
-          <div>
-            <p className={label} style={labelColor}>
-              {c.down} · {money(r.downAmt, lang)}
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={c.down}>
-              {[10, 15, 20, 25].map((p) => (
-                <Pill key={p} dark on={p === down} onClick={() => setDown(p)}>
-                  {lang === "fr" ? `${p} %` : `${p}%`}
-                </Pill>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className={label} style={labelColor}>{c.rate}</p>
-            <div className="mt-2 flex items-center gap-2.5">
-              <button
-                type="button"
-                aria-label={c.rateDown}
-                onClick={() => setRate((v) => Math.max(0.5, Math.round((v - 0.1) * 100) / 100))}
-                className="h-11 w-11 rounded-full border text-[20px]"
-                style={{ borderColor: "rgba(255,255,255,.4)" }}
-              >
-                −
-              </button>
-              <span className="min-w-[84px] text-center text-[22px] font-bold tabular-nums" aria-live="polite">
-                {lang === "fr" ? `${rate.toFixed(2).replace(".", ",")} %` : `${rate.toFixed(2)}%`}
-              </span>
-              <button
-                type="button"
-                aria-label={c.rateUp}
-                onClick={() => setRate((v) => Math.min(12, Math.round((v + 0.1) * 100) / 100))}
-                className="h-11 w-11 rounded-full border text-[20px]"
-                style={{ borderColor: "rgba(255,255,255,.4)" }}
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-6">
-            <div>
-              <p className={label} style={labelColor}>{c.amort}</p>
-              <div className="mt-2 flex gap-2" role="group" aria-label={c.amort}>
-                {[25, 30].map((y) => (
-                  <Pill key={y} dark on={y === years} onClick={() => setYears(y)}>
-                    {c.years(y)}
-                  </Pill>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className={label} style={labelColor}>{c.freq}</p>
-              <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={c.freq}>
-                <Pill dark on={freq === "m"} onClick={() => setFreq("m")}>{c.monthly}</Pill>
-                <Pill dark on={freq === "b"} onClick={() => setFreq("b")}>{c.biweekly}</Pill>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="min-w-0 flex-[1_1_280px] rounded-[20px] bg-white p-6" style={{ color: "var(--ink)" }}>
-          <p className="text-[13px] font-semibold" style={{ color: MUTED }}>
-            {freq === "m" ? c.payMonthly : c.payBiweekly}
-          </p>
-          <p
-            className="mt-1.5 tabular-nums"
-            aria-live="polite"
-            style={{ fontFamily: "var(--display)", fontSize: "44px", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" }}
-          >
-            {money(r.pay, lang)}
-          </p>
-          <dl className="mt-5 border-t text-[14px]" style={{ borderColor: LINE }}>
-            <div className="flex justify-between gap-3 py-2.5">
-              <dt style={{ color: MUTED }}>{c.loan}</dt>
-              <dd className="font-semibold tabular-nums">{money(r.loan, lang)}</dd>
-            </div>
-            <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(0,14,53,.08)" }}>
-              <dt style={{ color: MUTED }}>{c.insurance}</dt>
-              <dd className="font-semibold tabular-nums">{r.prem ? money(r.insurance, lang) : c.none}</dd>
-            </div>
-            {monthlyTaxes > 0 && (
-              <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(0,14,53,.08)" }}>
-                <dt style={{ color: MUTED }}>{monthlyFees > 0 ? c.withTaxesFees : c.withTaxes}</dt>
-                <dd className="font-semibold tabular-nums">{money(r.monthly + monthlyTaxes + monthlyFees, lang)}</dd>
-              </div>
-            )}
-          </dl>
-          <Button asChild size="lg" className="mt-4 w-full">
-            <a href={c.talkHref}>{c.talk}</a>
-          </Button>
-        </div>
-      </div>
-      <p className="mt-5 text-[12px]" style={{ lineHeight: 1.6, color: "rgba(255,255,255,.7)" }}>
-        {c.disclaimer}
-      </p>
-    </div>
-  );
-};
-
-/* ---------- Sections ---------- */
-
-const PropertyDetailsSections = ({
-  id,
-  lang,
-  price,
-  priceLabel,
-  showCalculator,
-}: {
-  id: string;
-  lang: Lang;
-  price: number;
-  priceLabel: string;
-  showCalculator: boolean;
-}) => {
-  const c = copy[lang];
-  const d = getPropertyDetails(id, lang);
+  const d = getPropertyDetails(property.id, lang);
   const [level, setLevel] = useState(0);
-  if (!d) return null;
 
-  const roomCount = d.levels.reduce((n, l) => n + l.rooms.length, 0);
-  const taxTotal = d.taxes?.total ?? 0;
-  const feesTotal = d.expenses?.total ?? 0;
-  const current = d.levels[Math.min(level, d.levels.length - 1)];
-  const hasFloor = d.levels.some((l) => l.rooms.some((r) => r.floor));
+  const features = (
+    [
+      [c.type, property.type],
+      [c.yearBuilt, property.yearBuilt ?? ""],
+      [c.lotSize, property.lotSize ?? ""],
+      ...((d?.facts ?? []) as Row[]),
+      [c.near, d?.near.join(", ") ?? ""],
+      [c.mls, property.mls ?? ""],
+    ] as Row[]
+  ).filter(([, v]) => has(v));
+
+  const levels = d?.levels ?? [];
+  const roomCount = levels.reduce((n, l) => n + l.rooms.length, 0);
+  const current = levels[Math.min(level, Math.max(levels.length - 1, 0))];
+  const hasFloor = levels.some((l) => l.rooms.some((r) => r.floor));
+
+  const fixMoney = (v: string) => (lang === "en" ? v.replace(/\$\s+/g, "$") : v);
+  const costRows: Row[] = [];
+  if (d?.taxes?.total) {
+    costRows.push(...d.taxes.rows.map(([l, v]) => [lang === "fr" ? `Taxes ${l.charAt(0).toLowerCase()}${l.slice(1)}` : `${l} taxes`, fixMoney(v)] as Row));
+  }
+  if (d?.assessment?.total) {
+    costRows.push([lang === "fr" ? `Évaluation municipale (${d.assessment.year})` : `Municipal assessment (${d.assessment.year})`, money(d.assessment.total, lang)]);
+  }
+  if (d?.expenses?.rows) {
+    costRows.push(...d.expenses.rows.filter(([l]) => !/^total$/i.test(l)).map(([l, v]) => [l, fixMoney(v)] as Row));
+  }
+
+  const inclPreview = d?.inclusions ? sentence(d.inclusions).replace(/\.$/, "") : "";
 
   return (
-    <>
+    <div className="mt-10 flex flex-col gap-3">
+      <Section icon={House} title={c.features} summary={[property.type, property.yearBuilt].filter(has).join(" · ")} open>
+        <Rows rows={features} />
+      </Section>
+
       {roomCount > 0 && current && (
-        <>
-          <h2 className="mt-12" style={h2Style}>{c.rooms}</h2>
-          {d.levels.length > 1 && (
-            <div className="mt-5 flex flex-wrap gap-2" role="group" aria-label={c.roomsGroup}>
-              {d.levels.map((l, k) => (
+        <Section icon={LayoutGrid} title={c.rooms} summary={c.roomsSummary(roomCount, levels.length)}>
+          {levels.length > 1 && (
+            <div className="mb-4 flex flex-wrap gap-2" role="group" aria-label={c.roomsGroup}>
+              {levels.map((l, k) => (
                 <Pill key={l.level} on={k === level} onClick={() => setLevel(k)}>
                   {l.level} · {l.rooms.length}
                 </Pill>
               ))}
             </div>
           )}
-          <div className="mt-4 overflow-x-auto rounded-[20px] bg-white">
-            <table className="w-full min-w-[460px] border-collapse text-[15px]" style={{ color: "var(--ink)" }}>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[420px] border-collapse text-[15px]" style={{ color: INK }}>
               <caption className="sr-only">{`${c.rooms} · ${current.level}`}</caption>
               <thead>
                 <tr className="text-left text-[13px]" style={{ color: MUTED }}>
-                  <th scope="col" className="px-5 py-4 font-semibold">{c.room}</th>
-                  <th scope="col" className="px-5 py-4 font-semibold">{c.dim}</th>
-                  {hasFloor && <th scope="col" className="px-5 py-4 font-semibold">{c.floor}</th>}
+                  <th scope="col" className="py-3 pr-4 font-semibold">{c.room}</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">{c.dim}</th>
+                  {hasFloor && <th scope="col" className="py-3 font-semibold">{c.floor}</th>}
                 </tr>
               </thead>
               <tbody>
                 {current.rooms.map((r, k) => (
-                  <tr key={`${r.name}-${k}`} className="border-t" style={{ borderColor: "rgba(0,14,53,.08)" }}>
-                    <td className="px-5 py-3.5 font-semibold">
+                  <tr key={`${r.name}-${k}`} className="border-t" style={{ borderColor: LINE }}>
+                    <td className="py-3 pr-4 font-semibold">
                       {r.name}
-                      {r.note && <span className="block text-[13px] font-normal" style={{ color: MUTED }}>{sentence(r.note).replace(/\.$/, "")}</span>}
+                      {r.note && (
+                        <span className="block text-[13px] font-normal" style={{ color: MUTED }}>
+                          {sentence(r.note).replace(/\.$/, "")}
+                        </span>
+                      )}
                     </td>
-                    <td className="px-5 py-3.5 tabular-nums">{r.dim}</td>
-                    {hasFloor && <td className="px-5 py-3.5" style={{ color: MUTED }}>{r.floor}</td>}
+                    <td className="py-3 pr-4 tabular-nums">{r.dim}</td>
+                    {hasFloor && <td className="py-3" style={{ color: MUTED }}>{r.floor}</td>}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        </>
+        </Section>
       )}
 
-      {(d.facts.length > 0 || d.inclusions || d.exclusions) && (
-        <>
-          <h2 className="mt-12" style={h2Style}>{c.details}</h2>
-          {d.facts.length > 0 && (
-            <dl className="mt-4 grid gap-x-10 md:grid-cols-2">
-              {d.facts.map(([label, value]) => (
-                <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
-                  <dt style={{ color: MUTED }}>{label}</dt>
-                  <dd className="text-right font-semibold" style={{ color: "var(--ink)" }}>{value}</dd>
-                </div>
-              ))}
-            </dl>
-          )}
-          {d.inclusions && (
-            <p className="mt-6 text-[15px]" style={{ lineHeight: 1.75, color: "var(--ink)" }}>
+      {(d?.inclusions || d?.exclusions) && (
+        <Section icon={ListChecks} title={c.incl} summary={inclPreview}>
+          {d?.inclusions && (
+            <p className="text-[15px]" style={{ lineHeight: 1.75, color: INK }}>
               <span className="font-semibold">{lang === "fr" ? `${c.included} : ` : `${c.included}: `}</span>
               {sentence(d.inclusions)}
             </p>
           )}
-          {d.exclusions && (
+          {d?.exclusions && (
             <p className="mt-2 text-[15px]" style={{ lineHeight: 1.75, color: MUTED }}>
-              <span className="font-semibold" style={{ color: "var(--ink)" }}>{lang === "fr" ? `${c.excluded} : ` : `${c.excluded}: `}</span>
+              <span className="font-semibold" style={{ color: INK }}>{lang === "fr" ? `${c.excluded} : ` : `${c.excluded}: `}</span>
               {sentence(d.exclusions)}
             </p>
           )}
-        </>
+        </Section>
       )}
 
-      {showCalculator && price > 0 && (
-        <MortgageCalculator
-          price={price}
-          priceLabel={priceLabel}
-          monthlyTaxes={taxTotal / 12}
-          monthlyFees={feesTotal / 12}
-          lang={lang}
-        />
+      {costRows.length > 0 && (
+        <Section icon={Receipt} title={c.costs} summary={d?.taxes?.total ? c.taxesSummary(money(d.taxes.total, lang)) : undefined}>
+          <Rows rows={costRows} />
+        </Section>
       )}
-
-      {d.near.length > 0 && (
-        <>
-          <h2 className="mt-14" style={h2Style}>{c.area}</h2>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {d.near.map((n) => (
-              <li key={n} className="rounded-full border px-3.5 py-1.5 text-[14px]" style={{ borderColor: "rgba(0,14,53,.18)", color: "var(--ink)" }}>
-                {n}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </>
+    </div>
   );
 };
 
-export default PropertyDetailsSections;
+/* ---------- Calculatrice ---------- */
+
+const minimumDown = (price: number) =>
+  price >= 1_500_000 ? price * 0.2 : price <= 500_000 ? price * 0.05 : 25_000 + (price - 500_000) * 0.1;
+
+const insurancePremium = (pct: number, price: number) =>
+  price >= 1_500_000 || pct >= 20 ? 0 : pct >= 15 ? 0.028 : pct >= 10 ? 0.031 : 0.04;
+
+const digits = (v: string) => Number(v.replace(/[^\d]/g, "")) || 0;
+const fmtInput = (n: number, lang: Lang) =>
+  n ? n.toLocaleString(lang === "fr" ? "fr-CA" : "en-CA").replace(/[\u202f\u00a0]/g, " ") : "";
+
+export const MortgageCalculator = ({
+  price: listPrice,
+  monthlyTaxes,
+  monthlyFees,
+  lang,
+}: {
+  price: number;
+  monthlyTaxes: number;
+  monthlyFees: number;
+  lang: Lang;
+}) => {
+  const c = copy[lang];
+  const [price, setPrice] = useState(listPrice);
+  const [mode, setMode] = useState<"amount" | "pct">("pct");
+  const [downPctText, setDownPctText] = useState("20");
+  const [downAmt, setDownAmt] = useState(Math.round(listPrice * 0.2));
+  const [rateText, setRateText] = useState(lang === "fr" ? "4,50" : "4.50");
+  const [years, setYears] = useState(25);
+  const [freq, setFreq] = useState<"m" | "b" | "w">("m");
+
+  const r = useMemo(() => {
+    const downPct = Math.min(100, Number(downPctText.replace(",", ".")) || 0);
+    const down = mode === "pct" ? (price * downPct) / 100 : downAmt;
+    const pct = price ? (down / price) * 100 : 0;
+    const min = minimumDown(price);
+    const base = Math.max(price - down, 0);
+    const prem = insurancePremium(pct, price);
+    const loan = base * (1 + prem);
+    const rate = Number(rateText.replace(",", ".")) || EXAMPLE_RATE;
+    const perYear = freq === "m" ? 12 : freq === "b" ? 26 : 52;
+    const i = Math.pow(1 + rate / 200, 2 / perYear) - 1; // intérêt composé semestriellement (Canada)
+    const pay = loan ? (loan * i) / (1 - Math.pow(1 + i, -years * perYear)) : 0;
+    const monthly = (pay * perYear) / 12;
+    return { down, pct, min, prem, insurance: base * prem, loan, pay, monthly, short: price > 0 && down + 0.5 < min };
+  }, [price, mode, downPctText, downAmt, rateText, years, freq]);
+
+  const fieldLabel = "text-[14px] font-semibold";
+  const pctLabel = (p: number) => {
+    const v = Math.round(p * 10) / 10;
+    return lang === "fr" ? `${String(v).replace(".", ",")} %` : `${v}%`;
+  };
+
+  return (
+    <section id="calculatrice" className="mt-10 scroll-mt-28 rounded-[24px] border bg-white p-5 md:p-8" style={{ borderColor: LINE }}>
+      <h2 style={{ fontFamily: "var(--display)", fontSize: "clamp(1.4rem, 2.2vw, 1.85rem)", color: INK }}>{c.calcTitle}</h2>
+      <p className="mt-2 text-[15px]" style={{ color: MUTED, lineHeight: 1.7 }}>{c.calcIntro}</p>
+
+      <div className="mt-6 flex flex-wrap gap-6">
+        <div className="grid min-w-0 flex-[999_1_340px] gap-5">
+          <div>
+            <Label htmlFor="calc-prix" className={fieldLabel}>{c.price}</Label>
+            <div className="relative mt-1.5">
+              <Input
+                id="calc-prix"
+                inputMode="numeric"
+                value={fmtInput(price, lang)}
+                onChange={(e) => setPrice(digits(e.target.value))}
+                className="h-12 pr-10 text-[16px] tabular-nums"
+              />
+              <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[15px]" style={{ color: MUTED }}>$</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between gap-3">
+              <Label htmlFor="calc-mise" className={fieldLabel}>{c.down}</Label>
+              <div className="flex overflow-hidden rounded-full border" role="group" aria-label={c.downMode} style={{ borderColor: "rgba(0,14,53,.2)" }}>
+                {(["pct", "amount"] as const).map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    aria-pressed={mode === m}
+                    onClick={() => {
+                      if (m === "amount") setDownAmt(Math.round(r.down));
+                      else setDownPctText(String(Math.round(r.pct * 10) / 10).replace(".", lang === "fr" ? "," : "."));
+                      setMode(m);
+                    }}
+                    className="h-11 min-w-[48px] px-3 text-[14px] font-semibold"
+                    style={mode === m ? { background: INK, color: "#FFFFFF" } : { color: INK }}
+                  >
+                    {m === "pct" ? "%" : "$"}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="relative mt-1.5">
+              {mode === "pct" ? (
+                <Input
+                  id="calc-mise"
+                  inputMode="decimal"
+                  value={downPctText}
+                  onChange={(e) => setDownPctText(e.target.value)}
+                  className="h-12 pr-10 text-[16px] tabular-nums"
+                />
+              ) : (
+                <Input
+                  id="calc-mise"
+                  inputMode="numeric"
+                  value={fmtInput(downAmt, lang)}
+                  onChange={(e) => setDownAmt(digits(e.target.value))}
+                  className="h-12 pr-10 text-[16px] tabular-nums"
+                />
+              )}
+              <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[15px]" style={{ color: MUTED }}>
+                {mode === "pct" ? "%" : "$"}
+              </span>
+            </div>
+            <p className="mt-1.5 text-[13px]" style={{ color: r.short ? "#B42318" : MUTED }} aria-live="polite">
+              {mode === "pct" ? money(r.down, lang) : pctLabel(r.pct)}
+              {r.short && ` · ${c.minDown(money(r.min, lang))}`}
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <Label htmlFor="calc-taux" className={fieldLabel}>{c.rate}</Label>
+              <div className="relative mt-1.5">
+                <Input
+                  id="calc-taux"
+                  inputMode="decimal"
+                  value={rateText}
+                  onChange={(e) => setRateText(e.target.value)}
+                  className="h-12 pr-10 text-[16px] tabular-nums"
+                />
+                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[15px]" style={{ color: MUTED }}>%</span>
+              </div>
+            </div>
+            <div>
+              <Label htmlFor="calc-amort" className={fieldLabel}>{c.amort}</Label>
+              <select
+                id="calc-amort"
+                value={years}
+                onChange={(e) => setYears(Number(e.target.value))}
+                className="mt-1.5 h-12 w-full rounded-md border bg-background px-3 text-[16px]"
+                style={{ borderColor: "hsl(var(--input))", color: INK }}
+              >
+                {[10, 15, 20, 25, 30].map((y) => (
+                  <option key={y} value={y}>{c.years(y)}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <p className={fieldLabel} id="calc-freq" style={{ color: INK }}>{c.freq}</p>
+            <div className="mt-2 flex flex-wrap gap-2" role="group" aria-labelledby="calc-freq">
+              <Pill on={freq === "m"} onClick={() => setFreq("m")}>{c.monthly}</Pill>
+              <Pill on={freq === "b"} onClick={() => setFreq("b")}>{c.biweekly}</Pill>
+              <Pill on={freq === "w"} onClick={() => setFreq("w")}>{c.weekly}</Pill>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex min-w-0 flex-[1_1_260px] flex-col rounded-[20px] p-6 text-white" style={{ background: INK }}>
+          <p className="text-[13px] font-semibold" style={{ color: "rgba(255,255,255,.78)" }}>{c.pay[freq]}</p>
+          <p
+            className="mt-1.5 tabular-nums"
+            aria-live="polite"
+            style={{ fontFamily: "var(--display)", fontSize: "42px", fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" }}
+          >
+            {money(r.pay, lang)}
+          </p>
+          <dl className="mt-5 border-t text-[14px]" style={{ borderColor: "rgba(255,255,255,.18)" }}>
+            <div className="flex justify-between gap-3 py-2.5">
+              <dt style={{ color: "rgba(255,255,255,.78)" }}>{c.loan}</dt>
+              <dd className="font-semibold tabular-nums">{money(r.loan, lang)}</dd>
+            </div>
+            <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(255,255,255,.12)" }}>
+              <dt style={{ color: "rgba(255,255,255,.78)" }}>{c.insurance}</dt>
+              <dd className="font-semibold tabular-nums">{r.prem ? money(r.insurance, lang) : c.none}</dd>
+            </div>
+            {monthlyTaxes > 0 && (
+              <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(255,255,255,.12)" }}>
+                <dt style={{ color: "rgba(255,255,255,.78)" }}>{monthlyFees > 0 ? c.withTaxesFees : c.withTaxes}</dt>
+                <dd className="font-semibold tabular-nums">{money(r.monthly + monthlyTaxes + monthlyFees, lang)}</dd>
+              </div>
+            )}
+          </dl>
+          <Button asChild size="lg" className="mt-6 w-full">
+            <a href={c.talkHref}>{c.talk}</a>
+          </Button>
+        </div>
+      </div>
+      <p className="mt-5 text-[12px]" style={{ lineHeight: 1.6, color: MUTED }}>{c.disclaimer}</p>
+    </section>
+  );
+};
