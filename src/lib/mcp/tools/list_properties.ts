@@ -82,6 +82,16 @@ const listings: Listing[] = [
     description_en: "1930 bungalow in Achbar with several major renovations, 3 bedrooms, hardwood, a wood stove, all appliances included and a basement to finish.",
   },
   {
+    id: "18600312", mls: "18600312",
+    address: "45 Rue des Louveteaux", city: "Gatineau (Aylmer, Plateau de la Capitale)",
+    price_fr: "639 900 $", price_en: "$639,900",
+    type: "Maison à étages / Two-storey house", bedrooms: "4", bathrooms: "1", area: "1 725 pi² / 1,725 sq ft", year_built: "2008",
+    status: "active",
+    remax_url: "https://www.remax-quebec.com/fr/proprietes/maison-a-vendre-outaouais/45-rue-des-louveteaux-gatineau-aylmer-plateau-de-la-capitale-18600312",
+    description_fr: "Maison à étages de 4 chambres avec garage dans un secteur familial du Plateau de la Capitale. Cour clôturée avec piscine hors terre.",
+    description_en: "Two-storey 4-bedroom home with a garage in a family area of the Plateau de la Capitale. Fenced backyard with an above-ground pool.",
+  },
+  {
     id: "15191323", mls: "15191323",
     address: "14 Imp. de la Descente", city: "Gatineau (Aylmer, Vieux Aylmer, Des Cèdres, Marina)",
     price_fr: "517 900 $", price_en: "$517,900",
