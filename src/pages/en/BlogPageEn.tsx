@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { listingDate } from "@/lib/blog-date";
 import { Link } from "react-router-dom";
 import PageMeta from "@/components/PageMeta";
 import CTASection from "@/components/CTASection";
@@ -92,7 +93,7 @@ const BlogPageEn = () => {
           <Link to={`/en/blog/${featured.slugEn}/`} className="group grid items-center gap-8 md:grid-cols-[1fr_1.15fr] md:gap-12">
             <div className="order-2 md:order-1">
               <p className="text-[0.875rem]" style={{ color: "var(--ink-soft)" }}>
-                {featured.categoryEn} · <time dateTime={featured.publishDate}>{new Date(`${featured.publishDate}T12:00:00`).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}</time>
+                {featured.categoryEn} · <time dateTime={listingDate(featured, "en-CA", "long").iso}>{listingDate(featured, "en-CA", "long").label}</time>
               </p>
               <h2 className="mt-4 font-display group-hover:underline underline-offset-[6px] decoration-2" style={{ color: "var(--ink)", fontSize: "clamp(1.875rem, 3.6vw, 2.75rem)", fontWeight: 600, lineHeight: 1.06, letterSpacing: "-0.03em", textWrap: "balance" }}>
                 {featured.titleEn}
@@ -125,7 +126,7 @@ const BlogPageEn = () => {
                 </div>
               )}
               <p className="mt-5 text-[0.8125rem]" style={{ color: "var(--ink-soft)" }}>
-                {post.categoryEn} · <time dateTime={post.publishDate}>{new Date(`${post.publishDate}T12:00:00`).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}</time>
+                {post.categoryEn} · <time dateTime={listingDate(post, "en-CA", "short").iso}>{listingDate(post, "en-CA", "short").label}</time>
               </p>
               <h3 className="mt-2 font-display group-hover:underline underline-offset-4" style={{ color: "var(--ink)", fontSize: "1.25rem", fontWeight: 600, lineHeight: 1.22, letterSpacing: "-0.015em" }}>{post.titleEn}</h3>
               <p className="mt-2.5 text-[0.9375rem] leading-[1.6]" style={{ color: "var(--ink-soft)" }}>{post.excerptEn}</p>
