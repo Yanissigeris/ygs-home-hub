@@ -4,6 +4,7 @@ import { ArrowLeft, Phone, MessageSquare } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import PropertyGallery from "@/components/PropertyGallery";
 import PropertyCard from "@/components/PropertyCard";
+import PropertyDetailsSections, { getPropertyDetails, OpenHouseBadge } from "@/components/PropertyDetails";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,7 +36,9 @@ const copy = {
       lot: "Terrain",
       year: "Année de construction",
       mls: "No Centris",
+      taxes: "Taxes",
     },
+    estimate: "Estimer mon paiement",
     about: "La propriété",
     role: "Courtier immobilier résidentiel, RE/MAX Direct",
     visitTitle: "Planifier une visite",
@@ -76,7 +79,9 @@ const copy = {
       lot: "Lot",
       year: "Year built",
       mls: "Centris no.",
+      taxes: "Taxes",
     },
+    estimate: "Estimate my payment",
     about: "The property",
     role: "Residential real estate broker, RE/MAX Direct",
     visitTitle: "Book a visit",
@@ -122,6 +127,12 @@ const PropertyDetailPage = () => {
   const others = list.filter((p) => p.id !== property.id && isOpen(p) && PROPERTY_SLUGS[p.id]).slice(0, 3);
   const route = lang === "fr" ? `/proprietes/${slug}` : `/en/properties/${slug}`;
 
+  const details = open ? getPropertyDetails(property.id, lang) : undefined;
+  const priceNumber = Number(property.price.replace(/[^\d]/g, "")) || 0;
+  const isLand = /terrain|lot/i.test(property.type) && !property.bedrooms?.match(/\d/);
+  const showCalculator = Boolean(details) && !isLand && property.status === "active";
+  const taxTotal = details?.taxes?.total;
+
   const specs: { label: string; value?: string }[] = [
     { label: c.specs.type, value: property.type },
     { label: c.specs.bedrooms, value: property.bedrooms },
@@ -130,6 +141,7 @@ const PropertyDetailPage = () => {
     { label: c.specs.area, value: property.area },
     { label: c.specs.lot, value: property.lotSize },
     { label: c.specs.year, value: property.yearBuilt },
+    { label: c.specs.taxes, value: taxTotal ? (lang === "fr" ? `${taxTotal.toLocaleString("fr-CA").replace(/[\u202f\u00a0]/g, " ")} $ / an` : `$${taxTotal.toLocaleString("en-CA")} / yr`) : undefined },
     { label: c.specs.mls, value: property.mls },
   ].filter((s) => s.value && s.value !== "—");
 
@@ -159,9 +171,12 @@ const PropertyDetailPage = () => {
 
           <div className="mt-6 flex flex-col gap-4 pb-8 md:flex-row md:items-end md:justify-between md:pb-10">
             <div>
-              <p className="text-[13px] font-semibold tracking-[0.02em]" style={{ color: "var(--text-on-dark-muted)" }}>
-                {c.status[property.status]}
-              </p>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <p className="text-[13px] font-semibold tracking-[0.02em]" style={{ color: "var(--text-on-dark-muted)" }}>
+                  {c.status[property.status]}
+                </p>
+                {details && <OpenHouseBadge id={property.id} lang={lang} />}
+              </div>
               <h1
                 className="mt-2 text-white"
                 style={{ fontFamily: "var(--display)", fontSize: "clamp(2rem, 4.4vw, 3.25rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
@@ -210,6 +225,15 @@ const PropertyDetailPage = () => {
             <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
               {property.description}
             </p>
+            {details && (
+              <PropertyDetailsSections
+                id={property.id}
+                lang={lang}
+                price={priceNumber}
+                priceLabel={property.price}
+                showCalculator={showCalculator}
+              />
+            )}
           </div>
 
           <aside className="lg:sticky lg:top-28 lg:self-start">
@@ -251,6 +275,11 @@ const PropertyDetailPage = () => {
                   <MessageSquare size={16} aria-hidden="true" /> {c.text}
                 </a>
               </div>
+              {showCalculator && (
+                <a href="#calculatrice" className="mt-4 block text-center text-[14px] font-semibold" style={{ color: "var(--gold-text)" }}>
+                  {c.estimate}
+                </a>
+              )}
               <p className="mt-3 text-center text-[13px]" style={{ color: "#4A5475" }}>{PHONE_DISPLAY}</p>
             </div>
           </aside>

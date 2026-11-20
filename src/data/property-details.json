@@ -1,0 +1,3320 @@
+{
+ "18600312": {
+  "fr": {
+   "highlights": [
+    "4 chambres à l'étage",
+    "Salon avec foyer au gaz",
+    "Sous-sol entièrement aménagé, 6 pieds et plus",
+    "Garage attaché, allée asphaltée pour 3 autos",
+    "Cour plate et clôturée avec piscine hors terre",
+    "Gazebo en bois et remise"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Hall d'entrée/Vestibule",
+       "dim": "6'4\" × 6'",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Penderie (Walk-in)",
+       "dim": "6' × 4'3\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "15'7\" × 12'",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Salle d'eau",
+       "dim": "8'2\" × 8'",
+       "floor": "Céramique",
+       "note": "salle de lavage"
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "11'2\" × 9'5\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "12'7\" × 8'2\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Étage",
+     "rooms": [
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "12'1\" × 12'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "12' × 10'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10' × 9'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "12' × 6'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "11'5\" × 10'",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Salle familiale",
+       "dim": "15'2\" × 11'1\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Salle de jeux",
+       "dim": "8'9\" × 21'6\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Salle mécanique",
+       "dim": "8'2\" × 6'8\"",
+       "floor": "Béton",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "6'9\" × 6'7\"",
+       "floor": "Béton",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Garage",
+     "Attaché, Simple largeur"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus, Totalement aménagé"
+    ],
+    [
+     "Mode de chauffage",
+     "Air soufflé (pulsé)"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Gaz naturel"
+    ],
+    [
+     "Foyer-Poêle",
+     "Foyer au gaz"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "49' 6\" × 98' 5\""
+    ],
+    [
+     "Topographie",
+     "Plat"
+    ],
+    [
+     "Allée",
+     "Asphalte"
+    ],
+    [
+     "Stationnement (total)",
+     "Allée (3), Garage (1)"
+    ],
+    [
+     "Piscine",
+     "Hors terre"
+    ]
+   ],
+   "near": [
+    "Piste cyclable",
+    "École primaire",
+    "Autoroute",
+    "Ski de fond",
+    "Transport en commun",
+    "École secondaire",
+    "Garderie/CPE",
+    "Parc"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "256 500 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "367 900 $"
+     ],
+     [
+      "Total",
+      "624 400 $"
+     ]
+    ],
+    "total": 624400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "5 579 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "486 $"
+     ],
+     [
+      "Total",
+      "6 065 $"
+     ]
+    ],
+    "total": 6065
+   },
+   "expenses": null,
+   "inclusions": "luminaires, gazebo, remise, foyer au gaz, piscine et accessoires, meubles extérieur, lave-vaisselle, laveuse et sécheuse, réfrigérateur, cuisinière, chauffe-eau et fournaise loué, pôles et rideaux",
+   "exclusions": "",
+   "openHouses": [
+    {
+     "date": "2026-11-22",
+     "start": "14:00",
+     "end": "16:00"
+    }
+   ]
+  },
+  "en": {
+   "highlights": [
+    "4 bedrooms upstairs",
+    "Living room with a gas fireplace",
+    "Fully finished basement, 6 ft or more",
+    "Attached garage, paved driveway for 3 cars",
+    "Flat, fenced backyard with an above-ground pool",
+    "Wooden gazebo and shed"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Hall",
+       "dim": "6'4\" × 6'",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Walk-in closet",
+       "dim": "6' × 4'3\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "15'7\" × 12'",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Powder room",
+       "dim": "8'2\" × 8'",
+       "floor": "Ceramic",
+       "note": "laundry room"
+      },
+      {
+       "name": "Dining room",
+       "dim": "11'2\" × 9'5\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "12'7\" × 8'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Upper floor",
+     "rooms": [
+      {
+       "name": "Primary bedroom",
+       "dim": "12'1\" × 12'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "12' × 10'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10' × 9'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "12' × 6'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "11'5\" × 10'",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Family room",
+       "dim": "15'2\" × 11'1\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Playroom",
+       "dim": "8'9\" × 21'6\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Salle mécanique",
+       "dim": "8'2\" × 6'8\"",
+       "floor": "Concrete",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "6'9\" × 6'7\"",
+       "floor": "Concrete",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Garage",
+     "Attached, Single width"
+    ],
+    [
+     "Basement",
+     "6 feet and more, Finished basement"
+    ],
+    [
+     "Heating System",
+     "Forced air"
+    ],
+    [
+     "Heating Energy",
+     "Natural gas"
+    ],
+    [
+     "Fireplace-Stove",
+     "Gas fireplace"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "49' 6\" × 98' 5\""
+    ],
+    [
+     "Topography",
+     "Flat"
+    ],
+    [
+     "Driveway",
+     "Asphalt"
+    ],
+    [
+     "Parking (total)",
+     "Driveway (3), Garage (1)"
+    ],
+    [
+     "Pool",
+     "Above-ground"
+    ]
+   ],
+   "near": [
+    "Bicycle path",
+    "Elementary school",
+    "Highway",
+    "Cross-country skiing",
+    "Public transportation",
+    "High school",
+    "Daycare centre",
+    "Park"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 256,500"
+     ],
+     [
+      "Building assessment",
+      "$ 367,900"
+     ],
+     [
+      "Total",
+      "$ 624,400"
+     ]
+    ],
+    "total": 624400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 5,579"
+     ],
+     [
+      "School (2026)",
+      "$ 486"
+     ],
+     [
+      "Total",
+      "$ 6,065"
+     ]
+    ],
+    "total": 6065
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, gazebo, shed, gas fireplace, swimming pool and accessories, outdoor furniture, dishwasher, washer and dryer, refrigerator, stove, rented hot water tank and furnace, curtain rods and curtains.",
+   "exclusions": "",
+   "openHouses": [
+    {
+     "date": "2026-11-22",
+     "start": "14:00",
+     "end": "16:00"
+    }
+   ]
+  }
+ },
+ "26501194": {
+  "fr": {
+   "highlights": [
+    "2 chambres, dont une avec penderie (walk-in)",
+    "Condo de 1 144 pi² au 3e étage",
+    "Salle de lavage dans l'unité",
+    "Climatiseur mural et échangeur d'air",
+    "1 place de stationnement",
+    "Commerces et transport en commun à distance de marche"
+   ],
+   "levels": [
+    {
+     "level": "3e étage",
+     "rooms": [
+      {
+       "name": "Salon",
+       "dim": "15'1\" × 13'6\" irr.",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "10' × 9'",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "9' × 8'8\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "16'3\" × 11'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Penderie (Walk-in)",
+       "dim": "7'9\" × 6'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "14' × 11'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "8'9\" × 8'6\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Salle de lavage",
+       "dim": "6' × 3'5\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "5'7\" × 5'3\"",
+       "floor": "",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Fenestration",
+     "PVC"
+    ],
+    [
+     "Type de fenestration",
+     "Coulissante, Manivelle (battant), Porte-fenêtre"
+    ],
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Installation laveuse-sécheuse",
+     "salle de lavage (3)"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Climatiseur mural, Échangeur d'air"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Stationnement (total)",
+     "Allée (1)"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "124 800 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "204 200 $"
+     ],
+     [
+      "Total",
+      "329 000 $"
+     ]
+    ],
+    "total": 329000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "2 765 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "242 $"
+     ],
+     [
+      "Total",
+      "3 007 $"
+     ]
+    ],
+    "total": 3007
+   },
+   "expenses": {
+    "rows": [
+     [
+      "Frais de copropriété",
+      "3 624 $"
+     ],
+     [
+      "Total",
+      "3 624 $"
+     ]
+    ],
+    "total": 3624
+   },
+   "inclusions": "air climatisé mural, échangeur d'air, cuisinière, lave-vaisselle, luminaires, foyer électrique, sommier en bois.",
+   "exclusions": "chauffe-eau en location",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "2 bedrooms, one with a walk-in closet",
+    "1,144 sq ft condo on the 3rd floor",
+    "In-unit laundry room",
+    "Wall air conditioner and air exchanger",
+    "1 parking spot",
+    "Shops and public transit within walking distance"
+   ],
+   "levels": [
+    {
+     "level": "3rd floor",
+     "rooms": [
+      {
+       "name": "Living room",
+       "dim": "15'1\" × 13'6\" irr.",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "10' × 9'",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "9' × 8'8\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Primary bedroom",
+       "dim": "16'3\" × 11'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Walk-in closet",
+       "dim": "7'9\" × 6'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "14' × 11'3\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "8'9\" × 8'6\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Laundry room",
+       "dim": "6' × 3'5\"",
+       "floor": "",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "5'7\" × 5'3\"",
+       "floor": "",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Windows",
+     "PVC"
+    ],
+    [
+     "Window Type",
+     "Sliding, Casement, French door"
+    ],
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Washer/Dryer (installation)",
+     "laundry room (3)"
+    ],
+    [
+     "Property or unit amenity",
+     "Wall-mounted air conditioning, Air exchange system"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Parking (total)",
+     "Driveway (1)"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 124,800"
+     ],
+     [
+      "Building assessment",
+      "$ 204,200"
+     ],
+     [
+      "Total",
+      "$ 329,000"
+     ]
+    ],
+    "total": 329000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 2,765"
+     ],
+     [
+      "School (2026)",
+      "$ 242"
+     ],
+     [
+      "Total",
+      "$ 3,007"
+     ]
+    ],
+    "total": 3007
+   },
+   "expenses": {
+    "rows": [
+     [
+      "Condominium fees",
+      "$ 3,624"
+     ],
+     [
+      "Total",
+      "$ 3,624"
+     ]
+    ],
+    "total": 3624
+   },
+   "inclusions": "Wall-mounted air conditioner, air exchanger, stove, dishwasher, light fixtures, electric fireplace, wooden bed base.",
+   "exclusions": "Rented water heater",
+   "openHouses": []
+  }
+ },
+ "21600052": {
+  "fr": {
+   "highlights": [
+    "Bungalow de 3 chambres",
+    "Plusieurs rénovations au fil des ans",
+    "Thermopompe murale et poêle à bois",
+    "Sous-sol de 6 pieds et plus, non aménagé",
+    "Réfrigérateur, cuisinière et lave-vaisselle inclus",
+    "Accès rapide au boulevard Maloney"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Salon",
+       "dim": "14'4\" × 13'",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "14'4\" × 7'",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'6\" × 10'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10' × 8'",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "13' × 11'",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "10' × 6'",
+       "floor": "PVC",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "13'1\" × 8'6\"",
+       "floor": "PVC",
+       "note": ""
+      },
+      {
+       "name": "Salle familiale",
+       "dim": "12'3\" × 11'6\"",
+       "floor": "Bois",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Rangement",
+       "dim": "28'6\" × 25'1\"",
+       "floor": "Béton",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Installation laveuse-sécheuse",
+     "salle de lavage (SS)"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus, Non aménagé"
+    ],
+    [
+     "Mode de chauffage",
+     "Plinthes électriques"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Électricité"
+    ],
+    [
+     "Foyer-Poêle",
+     "Poêle au bois"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Thermopompe murale"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [],
+   "near": [
+    "Autoroute",
+    "Golf",
+    "Parc",
+    "École primaire",
+    "Transport en commun"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "182 500 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "104 900 $"
+     ],
+     [
+      "Total",
+      "287 400 $"
+     ]
+    ],
+    "total": 287400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "2 264 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "207 $"
+     ],
+     [
+      "Total",
+      "2 471 $"
+     ]
+    ],
+    "total": 2471
+   },
+   "expenses": null,
+   "inclusions": "Tous les luminaires, chauffe-eau, 2 unités murales, hotte micro-ondes, réfrigérateur, thermopompe, lave-vaisselle, cuisinière, poêle à bois et remise.",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "3-bedroom bungalow",
+    "Several renovations over the years",
+    "Wall heat pump and wood stove",
+    "Unfinished basement, 6 ft or more",
+    "Fridge, stove and dishwasher included",
+    "Quick access to Maloney Boulevard"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Living room",
+       "dim": "14'4\" × 13'",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "14'4\" × 7'",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'6\" × 10'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10' × 8'",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Primary bedroom",
+       "dim": "13' × 11'",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "10' × 6'",
+       "floor": "PVC",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "13'1\" × 8'6\"",
+       "floor": "PVC",
+       "note": ""
+      },
+      {
+       "name": "Family room",
+       "dim": "12'3\" × 11'6\"",
+       "floor": "Wood",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Storage",
+       "dim": "28'6\" × 25'1\"",
+       "floor": "Concrete",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Washer/Dryer (installation)",
+     "laundry room (SS)"
+    ],
+    [
+     "Basement",
+     "6 feet and more, Unfinished"
+    ],
+    [
+     "Heating System",
+     "Electric baseboard units"
+    ],
+    [
+     "Heating Energy",
+     "Electricity"
+    ],
+    [
+     "Fireplace-Stove",
+     "Wood stove"
+    ],
+    [
+     "Property or unit amenity",
+     "Wall-mounted heat pump"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [],
+   "near": [
+    "Highway",
+    "Golf",
+    "Park",
+    "Elementary school",
+    "Public transportation"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 182,500"
+     ],
+     [
+      "Building assessment",
+      "$ 104,900"
+     ],
+     [
+      "Total",
+      "$ 287,400"
+     ]
+    ],
+    "total": 287400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 2,264"
+     ],
+     [
+      "School (2026)",
+      "$ 207"
+     ],
+     [
+      "Total",
+      "$ 2,471"
+     ]
+    ],
+    "total": 2471
+   },
+   "expenses": null,
+   "inclusions": "All light fixtures, water heater, 2 wall units, microwave hood fan, refrigerator, thermopump, dishwasher, range stove, wood stove, shed",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
+ "21358006": {
+  "fr": {
+   "highlights": [
+    "Jumelé de 3 chambres",
+    "Sous-sol aménagé avec bureau",
+    "Climatiseur central",
+    "Libre immédiatement",
+    "Marina d'Aylmer à 8 minutes de marche",
+    "Parc et plage des Cèdres à 10 minutes à pied"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Cuisine",
+       "dim": "11'1\" × 9'2\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "13'2\" × 11'3\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "14'6\" × 11'8\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Hall d'entrée/Vestibule",
+       "dim": "7'8\" × 5'11\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle d'eau",
+       "dim": "8'11\" × 5'1\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Étage",
+     "rooms": [
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "14'11\" × 12'2\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'9\" × 9'10\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'7\" × 9'6\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "12'5\" × 7'10\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Bureau",
+       "dim": "13'1\" × 10'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle familiale",
+       "dim": "15'11\" × 14'",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "16'8\" × 8'6\"",
+       "floor": "Béton",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Fenestration",
+     "PVC"
+    ],
+    [
+     "Revêtement",
+     "Brique, Vinyle"
+    ],
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Installation laveuse-sécheuse",
+     "Salle d'eau (RC)"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus, Totalement aménagé"
+    ],
+    [
+     "Mode de chauffage",
+     "Air soufflé (pulsé)"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Gaz naturel"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Climatiseur central"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "31' × 152' irr."
+    ],
+    [
+     "Topographie",
+     "Plat"
+    ],
+    [
+     "Allée",
+     "Asphalte"
+    ],
+    [
+     "Stationnement (total)",
+     "Allée (2)"
+    ]
+   ],
+   "near": [
+    "Garderie/CPE",
+    "Parc",
+    "Piste cyclable",
+    "Transport en commun",
+    "Autoroute"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "195 800 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "287 000 $"
+     ],
+     [
+      "Total",
+      "482 800 $"
+     ]
+    ],
+    "total": 482800
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "3 244 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "304 $"
+     ],
+     [
+      "Total",
+      "3 548 $"
+     ]
+    ],
+    "total": 3548
+   },
+   "expenses": null,
+   "inclusions": "luminaires, climatiseur central, souffleuse, tondeuse, remise, laveuse, lave-vaisselle",
+   "exclusions": "chauffe-eau au gaz loué, fournaise au gaz loué",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "3-bedroom semi-detached home",
+    "Finished basement with an office",
+    "Central air conditioning",
+    "Available right away",
+    "Aylmer marina an 8-minute walk away",
+    "Parc des Cèdres and its beach a 10-minute walk away"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Kitchen",
+       "dim": "11'1\" × 9'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "13'2\" × 11'3\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "14'6\" × 11'8\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Hall",
+       "dim": "7'8\" × 5'11\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Powder room",
+       "dim": "8'11\" × 5'1\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Upper floor",
+     "rooms": [
+      {
+       "name": "Primary bedroom",
+       "dim": "14'11\" × 12'2\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'9\" × 9'10\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'7\" × 9'6\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "12'5\" × 7'10\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Office",
+       "dim": "13'1\" × 10'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Family room",
+       "dim": "15'11\" × 14'",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "16'8\" × 8'6\"",
+       "floor": "Concrete",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Windows",
+     "PVC"
+    ],
+    [
+     "Siding",
+     "Brick, Vinyl"
+    ],
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Washer/Dryer (installation)",
+     "Powder room (RC)"
+    ],
+    [
+     "Basement",
+     "6 feet and more, Finished basement"
+    ],
+    [
+     "Heating System",
+     "Forced air"
+    ],
+    [
+     "Heating Energy",
+     "Natural gas"
+    ],
+    [
+     "Property or unit amenity",
+     "Central air conditioning"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "31' × 152' irr."
+    ],
+    [
+     "Topography",
+     "Flat"
+    ],
+    [
+     "Driveway",
+     "Asphalt"
+    ],
+    [
+     "Parking (total)",
+     "Driveway (2)"
+    ]
+   ],
+   "near": [
+    "Daycare centre",
+    "Park",
+    "Bicycle path",
+    "Public transportation",
+    "Highway"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 195,800"
+     ],
+     [
+      "Building assessment",
+      "$ 287,000"
+     ],
+     [
+      "Total",
+      "$ 482,800"
+     ]
+    ],
+    "total": 482800
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 3,244"
+     ],
+     [
+      "School (2026)",
+      "$ 304"
+     ],
+     [
+      "Total",
+      "$ 3,548"
+     ]
+    ],
+    "total": 3548
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, central air conditioning, snow blower, lawn mower, shed, washer, dishwasher.",
+   "exclusions": "Rented gas water heater, rented gas furnace.",
+   "openHouses": []
+  }
+ },
+ "15191323": {
+  "fr": {
+   "highlights": [
+    "Plain-pied de 3 chambres dans une impasse",
+    "Sous-sol intergénération avec 2e cuisine",
+    "Fenêtres remplacées en 2012",
+    "Panneau électrique remplacé en 2016",
+    "Plancher chauffant dans la cuisine et la salle à manger",
+    "Parc de la Marina à environ 450 m"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Cuisine",
+       "dim": "14'3\" × 9'1\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "12'3\" × 10'5\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "12'3\" × 8'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "12'2\" × 7'2\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "14'3\" × 12'2\"",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "12'6\" × 9'2\"",
+       "floor": "Bois",
+       "note": ""
+      },
+      {
+       "name": "Hall d'entrée/Vestibule",
+       "dim": "6'2\" × 4'8\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Salon",
+       "dim": "11'1\" × 10'6\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "13'8\" × 10'2\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "13'1\" × 10'2\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "11'7\" × 9'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "8'1\" × 5'9\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle de lavage",
+       "dim": "12' × 7'8\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "11'1\" × 10'6\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "13'8\" × 10'2\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "13'1\" × 10'2\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "11'7\" × 9'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "8'1\" × 5'9\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "12'0\" × 7'8\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Particularités du bâtiment",
+     "Intergénération - Sous-sol"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus"
+    ],
+    [
+     "Mode de chauffage",
+     "Plinthes électriques"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Électricité"
+    ],
+    [
+     "Foyer-Poêle",
+     "Foyer au bois"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "50' × 100'"
+    ],
+    [
+     "Topographie",
+     "Plat"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "216 700 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "282 500 $"
+     ],
+     [
+      "Total",
+      "499 200 $"
+     ]
+    ],
+    "total": 499200
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "3 910 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "382 $"
+     ],
+     [
+      "Total",
+      "4 292 $"
+     ]
+    ],
+    "total": 4292
+   },
+   "expenses": null,
+   "inclusions": "Remise, tous les luminaires, rideaux, stores et tringles, réfrigérateur et cuisinière (rez-de-chaussée), chauffe-eau, 2 lave-vaisselle et meuble mural dans la chambre principale.",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "3-bedroom bungalow on a quiet cul-de-sac",
+    "Intergenerational basement with a 2nd kitchen",
+    "Windows replaced in 2012",
+    "Electrical panel replaced in 2016",
+    "Heated floor in the kitchen and dining room",
+    "Marina park about 450 m away"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Kitchen",
+       "dim": "14'3\" × 9'1\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "12'3\" × 10'5\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "12'3\" × 8'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "12'2\" × 7'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "14'3\" × 12'2\"",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Primary bedroom",
+       "dim": "12'6\" × 9'2\"",
+       "floor": "Wood",
+       "note": ""
+      },
+      {
+       "name": "Hall",
+       "dim": "6'2\" × 4'8\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Living room",
+       "dim": "11'1\" × 10'6\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "13'8\" × 10'2\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "13'1\" × 10'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "11'7\" × 9'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "8'1\" × 5'9\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Laundry room",
+       "dim": "12' × 7'8\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "11'1\" × 10'6\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "13'8\" × 10'2\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "13'1\" × 10'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "11'7\" × 9'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "8'1\" × 5'9\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "12'0\" × 7'8\"",
+       "floor": "Laminate floor",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Building's distinctive features",
+     "Intergenerational - Basement"
+    ],
+    [
+     "Basement",
+     "6 feet and more"
+    ],
+    [
+     "Heating System",
+     "Electric baseboard units"
+    ],
+    [
+     "Heating Energy",
+     "Electricity"
+    ],
+    [
+     "Fireplace-Stove",
+     "Wood fireplace"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "50' × 100'"
+    ],
+    [
+     "Topography",
+     "Flat"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 216,700"
+     ],
+     [
+      "Building assessment",
+      "$ 282,500"
+     ],
+     [
+      "Total",
+      "$ 499,200"
+     ]
+    ],
+    "total": 499200
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 3,910"
+     ],
+     [
+      "School (2026)",
+      "$ 382"
+     ],
+     [
+      "Total",
+      "$ 4,292"
+     ]
+    ],
+    "total": 4292
+   },
+   "expenses": null,
+   "inclusions": "shed, all light fixtures, curtians, blinds and rods, fridge and stove (main floor), hot water tank, dishwasher x2, wall furniture in master bedroom.",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
+ "14821222": {
+  "fr": {
+   "highlights": [
+    "Bungalow rénové de 3 chambres",
+    "2 salles de bain complètes",
+    "Cuisine avec grand îlot",
+    "Garage double attaché",
+    "Terrain de coin de 7 200 pi²",
+    "Électroménagers de 2022 inclus"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Cuisine",
+       "dim": "16'3\" × 14'5\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "12'7\" × 9'4\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "12'8\" × 12'1\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "11'9\" × 7'4\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'5\" × 9'1\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "13'5\" × 10'4\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "6'5\" × 5'3\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Salle de bains",
+       "dim": "8'9\" × 4'8\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle de lavage",
+       "dim": "8'5\" × 8'9\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle mécanique",
+       "dim": "10'7\" × 8'1\"",
+       "floor": "Béton",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "9'5\" × 5'3\"",
+       "floor": "Béton",
+       "note": ""
+      },
+      {
+       "name": "Bureau",
+       "dim": "10'9\" × 9'2\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle familiale",
+       "dim": "17'5\" × 17'2\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Cave/Chambre froide",
+       "dim": "5'7\" × 5'1\"",
+       "floor": "Béton",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "10'3\" × 7'9\"",
+       "floor": "Béton",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "9' × 7'7\"",
+       "floor": "Béton",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Garage",
+     "Attaché, Double largeur ou plus"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus, Totalement aménagé"
+    ],
+    [
+     "Mode de chauffage",
+     "Air soufflé (pulsé)"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Électricité"
+    ],
+    [
+     "Foyer-Poêle",
+     "Foyer au bois"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Climatiseur central, Ouvre-porte électrique (garage)"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "60' × 120'"
+    ],
+    [
+     "Topographie",
+     "Plat"
+    ],
+    [
+     "Particularités du site",
+     "Coin de rue"
+    ],
+    [
+     "Allée",
+     "Asphalte"
+    ],
+    [
+     "Stationnement (total)",
+     "Garage (2), Allée (3)"
+    ]
+   ],
+   "near": [
+    "École primaire",
+    "École secondaire",
+    "Transport en commun",
+    "Garderie/CPE",
+    "Autoroute",
+    "Hôpital"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "142 100 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "260 900 $"
+     ],
+     [
+      "Total",
+      "403 000 $"
+     ]
+    ],
+    "total": 403000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "2 582 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "246 $"
+     ],
+     [
+      "Total",
+      "2 828 $"
+     ]
+    ],
+    "total": 2828
+   },
+   "expenses": null,
+   "inclusions": "Tous les luminaires, fournaise, chauffe-eau, abri d'auto, réfrigérateur (2022), cuisinière (2022), lave-vaisselle (2022), laveuse et sécheuse (2022), climatisation centrale, stores sur mesure électriques intelligents avec télécommande et système d'alarme.",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "Renovated 3-bedroom bungalow",
+    "2 full bathrooms",
+    "Kitchen with a large island",
+    "Attached double garage",
+    "7,200 sq ft corner lot",
+    "2022 appliances included"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Kitchen",
+       "dim": "16'3\" × 14'5\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "12'7\" × 9'4\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "12'8\" × 12'1\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "11'9\" × 7'4\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'5\" × 9'1\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Primary bedroom",
+       "dim": "13'5\" × 10'4\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "6'5\" × 5'3\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Bathroom",
+       "dim": "8'9\" × 4'8\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Laundry room",
+       "dim": "8'5\" × 8'9\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Salle mécanique",
+       "dim": "10'7\" × 8'1\"",
+       "floor": "Concrete",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "9'5\" × 5'3\"",
+       "floor": "Concrete",
+       "note": ""
+      },
+      {
+       "name": "Office",
+       "dim": "10'9\" × 9'2\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Family room",
+       "dim": "17'5\" × 17'2\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Cellar/Cold room",
+       "dim": "5'7\" × 5'1\"",
+       "floor": "Concrete",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "10'3\" × 7'9\"",
+       "floor": "Concrete",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "9' × 7'7\"",
+       "floor": "Concrete",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Garage",
+     "Attached, Double width or more"
+    ],
+    [
+     "Basement",
+     "6 feet and more, Finished basement"
+    ],
+    [
+     "Heating System",
+     "Forced air"
+    ],
+    [
+     "Heating Energy",
+     "Electricity"
+    ],
+    [
+     "Fireplace-Stove",
+     "Wood fireplace"
+    ],
+    [
+     "Property or unit amenity",
+     "Central air conditioning, Electric garage door opener"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "60' × 120'"
+    ],
+    [
+     "Topography",
+     "Flat"
+    ],
+    [
+     "Distinctive Features",
+     "Street corner"
+    ],
+    [
+     "Driveway",
+     "Asphalt"
+    ],
+    [
+     "Parking (total)",
+     "Garage (2), Driveway (3)"
+    ]
+   ],
+   "near": [
+    "Elementary school",
+    "High school",
+    "Public transportation",
+    "Daycare centre",
+    "Highway",
+    "Hospital"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 142,100"
+     ],
+     [
+      "Building assessment",
+      "$ 260,900"
+     ],
+     [
+      "Total",
+      "$ 403,000"
+     ]
+    ],
+    "total": 403000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 2,582"
+     ],
+     [
+      "School (2026)",
+      "$ 246"
+     ],
+     [
+      "Total",
+      "$ 2,828"
+     ]
+    ],
+    "total": 2828
+   },
+   "expenses": null,
+   "inclusions": "All light fixtures, furnace, water heater, carport, fridge (2022), stove (2022), dishwasher (2022), washer and dryer (2022), central air conditioning, custom blinds (custom electric intelligent/smart with remote, alarm system.",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
+ "12304022": {
+  "fr": {
+   "highlights": [
+    "Maison de 1885 au cœur du Vieux-Aylmer",
+    "3 chambres, 1 salle de bain et 1 salle d'eau",
+    "Plusieurs rénovations majeures récentes",
+    "Thermopompe centrale",
+    "Allée pour 3 autos",
+    "Près de la marina et du parc des Cèdres"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Hall d'entrée/Vestibule",
+       "dim": "4'7\" × 5'5\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "11'2\" × 13'2\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "11'6\" × 13'2\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "15'5\" × 10'9\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle d'eau",
+       "dim": "6'7\" × 4'4\"",
+       "floor": "vinyle",
+       "note": ""
+      },
+      {
+       "name": "Salle de lavage",
+       "dim": "8'4\" × 5'",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Étage",
+     "rooms": [
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "16' × 9'1\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Penderie (Walk-in)",
+       "dim": "5'5\" × 5'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "7'1\" × 5'5\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "9'8\" × 13'1\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "14'1\" × 9'6\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Fenestration",
+     "PVC"
+    ],
+    [
+     "Type de fenestration",
+     "Guillotine, Manivelle (battant), Coulissante"
+    ],
+    [
+     "Revêtement",
+     "Vinyle"
+    ],
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Armoires de cuisine",
+     "Mélamine"
+    ],
+    [
+     "Sous-sol",
+     "Vide sanitaire, Bas (moins de 6 pieds)"
+    ],
+    [
+     "Mode de chauffage",
+     "Air soufflé (pulsé)"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Électricité"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Détecteur d'incendie (N), Thermopompe centrale, Climatiseur central, Cour privée"
+    ],
+    [
+     "Appareils en location (mensuel)",
+     "Chauffe-eau (1)"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "34' 1\" × 126' 3\""
+    ],
+    [
+     "Topographie",
+     "Plat"
+    ],
+    [
+     "Allée",
+     "Asphalte"
+    ],
+    [
+     "Stationnement (total)",
+     "Allée (3)"
+    ]
+   ],
+   "near": [
+    "Parc",
+    "Piste cyclable",
+    "École primaire",
+    "École secondaire",
+    "Transport en commun",
+    "Garderie/CPE",
+    "Autoroute"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "189 900 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "229 400 $"
+     ],
+     [
+      "Total",
+      "419 300 $"
+     ]
+    ],
+    "total": 419300
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "2 658 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "221 $"
+     ],
+     [
+      "Total",
+      "2 879 $"
+     ]
+    ],
+    "total": 2879
+   },
+   "expenses": null,
+   "inclusions": "luminaires, chauffe-eau (location), remise, fournaise, air climatisé central, tringles.",
+   "exclusions": "Réfrigérateur, poêle, lave-vaisselle, laveuse, sécheuse, rideaux, stores. Les électroménagers sont négociables.",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "1885 home in the heart of Old Aylmer",
+    "3 bedrooms, 1 bathroom and 1 powder room",
+    "Several major renovations in recent years",
+    "Central heat pump",
+    "Driveway for 3 cars",
+    "Close to the marina and Parc des Cèdres"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Hall",
+       "dim": "4'7\" × 5'5\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "11'2\" × 13'2\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "11'6\" × 13'2\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "15'5\" × 10'9\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Powder room",
+       "dim": "6'7\" × 4'4\"",
+       "floor": "vinyl",
+       "note": ""
+      },
+      {
+       "name": "Laundry room",
+       "dim": "8'4\" × 5'",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Upper floor",
+     "rooms": [
+      {
+       "name": "Primary bedroom",
+       "dim": "16' × 9'1\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Walk-in closet",
+       "dim": "5'5\" × 5'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "7'1\" × 5'5\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "9'8\" × 13'1\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "14'1\" × 9'6\"",
+       "floor": "Laminate floor",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Windows",
+     "PVC"
+    ],
+    [
+     "Window Type",
+     "Guillotine, Casement, Sliding"
+    ],
+    [
+     "Siding",
+     "Vinyl"
+    ],
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Kitchen Cabinets",
+     "Melamine"
+    ],
+    [
+     "Basement",
+     "Crawl space, Low (less than 6 feet)"
+    ],
+    [
+     "Heating System",
+     "Forced air"
+    ],
+    [
+     "Heating Energy",
+     "Electricity"
+    ],
+    [
+     "Property or unit amenity",
+     "Fire detector (N), Central heat pump, Central air conditioning, Private yard"
+    ],
+    [
+     "Rented Equipment (monthly)",
+     "Water heater (1)"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "34' 1\" × 126' 3\""
+    ],
+    [
+     "Topography",
+     "Flat"
+    ],
+    [
+     "Driveway",
+     "Asphalt"
+    ],
+    [
+     "Parking (total)",
+     "Driveway (3)"
+    ]
+   ],
+   "near": [
+    "Park",
+    "Bicycle path",
+    "Elementary school",
+    "High school",
+    "Public transportation",
+    "Daycare centre",
+    "Highway"
+   ],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 189,900"
+     ],
+     [
+      "Building assessment",
+      "$ 229,400"
+     ],
+     [
+      "Total",
+      "$ 419,300"
+     ]
+    ],
+    "total": 419300
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 2,658"
+     ],
+     [
+      "School (2026)",
+      "$ 221"
+     ],
+     [
+      "Total",
+      "$ 2,879"
+     ]
+    ],
+    "total": 2879
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, hot water tank (rental), shed, furnace, central air conditioning, curtain rods.",
+   "exclusions": "Refrigerator, stove, dishwasher, washer, dryer, curtains, blinds. The appliances are negotiable.",
+   "openHouses": []
+  }
+ },
+ "18249217": {
+  "fr": {
+   "highlights": [
+    "Construction 2024, vendue avec garantie légale",
+    "Chaque chambre de l'étage a sa salle de bain",
+    "Sous-sol aménagé avec 3e chambre",
+    "Climatisation centrale et échangeur d'air",
+    "Stationnement pour 5 autos sur 2 entrées",
+    "Secteur familial de La Blanche"
+   ],
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Salon",
+       "dim": "22'8\" × 12'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "8'5\" × 6'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Cuisine",
+       "dim": "16'10\" × 9'7\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Étage",
+     "rooms": [
+      {
+       "name": "Salle d'eau",
+       "dim": "6'5\" × 4'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "12'1\" × 11'10\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "11'10\" × 5'5\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Penderie (Walk-in)",
+       "dim": "6'5\" × 4'6\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "13'3\" × 10'8\"",
+       "floor": "Tapis",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Salle de bains",
+       "dim": "9'1\" × 6'9\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle familiale",
+       "dim": "12'11\" × 11'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "11'2\" × 10'11\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "10'7\" × 9'7\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "11'9\" × 9'7\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Fenestration",
+     "PVC"
+    ],
+    [
+     "Revêtement de la toiture",
+     "Bardeaux d'asphalte"
+    ],
+    [
+     "Mode de chauffage",
+     "Air soufflé (pulsé)"
+    ],
+    [
+     "Énergie pour le chauffage",
+     "Gaz naturel"
+    ],
+    [
+     "Commodités de la propriété ou de l'unité",
+     "Climatiseur central, Échangeur d'air"
+    ],
+    [
+     "Approvisionnement en eau",
+     "Municipalité"
+    ],
+    [
+     "Système d'égouts",
+     "Municipalité"
+    ]
+   ],
+   "land": [
+    [
+     "Dimensions du terrain",
+     "88' × 41' 8\""
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "168 800 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "422 500 $"
+     ],
+     [
+      "Total",
+      "591 300 $"
+     ]
+    ],
+    "total": 591300
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "3 491 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "345 $"
+     ],
+     [
+      "Total",
+      "3 836 $"
+     ]
+    ],
+    "total": 3836
+   },
+   "expenses": null,
+   "inclusions": "Fournaise au gaz, chauffe-eau au gaz, climatiseur central, échangeur d'air, hotte de cuisine, four à micro-ondes, cuisinière, réfrigérateur, lave-vaisselle, laveuse, sécheuse, stores et tringles.",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "Built in 2024, sold with the legal warranty",
+    "Each upstairs bedroom has its own bathroom",
+    "Finished basement with a 3rd bedroom",
+    "Central air and air exchanger",
+    "Parking for 5 cars on 2 driveways",
+    "Family area of La Blanche"
+   ],
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Living room",
+       "dim": "22'8\" × 12'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "8'5\" × 6'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Kitchen",
+       "dim": "16'10\" × 9'7\"",
+       "floor": "Laminate floor",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Upper floor",
+     "rooms": [
+      {
+       "name": "Powder room",
+       "dim": "6'5\" × 4'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Primary bedroom",
+       "dim": "12'1\" × 11'10\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "11'10\" × 5'5\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Walk-in closet",
+       "dim": "6'5\" × 4'6\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "13'3\" × 10'8\"",
+       "floor": "Carpet",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Bathroom",
+       "dim": "9'1\" × 6'9\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Family room",
+       "dim": "12'11\" × 11'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "11'2\" × 10'11\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "10'7\" × 9'7\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "11'9\" × 9'7\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "building": [
+    [
+     "Windows",
+     "PVC"
+    ],
+    [
+     "Roofing",
+     "Asphalt shingles"
+    ],
+    [
+     "Heating System",
+     "Forced air"
+    ],
+    [
+     "Heating Energy",
+     "Natural gas"
+    ],
+    [
+     "Property or unit amenity",
+     "Central air conditioning, Air exchange system"
+    ],
+    [
+     "Water Supply",
+     "Municipality"
+    ],
+    [
+     "Sewage System",
+     "Municipality"
+    ]
+   ],
+   "land": [
+    [
+     "Lot size",
+     "88' × 41' 8\""
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 168,800"
+     ],
+     [
+      "Building assessment",
+      "$ 422,500"
+     ],
+     [
+      "Total",
+      "$ 591,300"
+     ]
+    ],
+    "total": 591300
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 3,491"
+     ],
+     [
+      "School (2026)",
+      "$ 345"
+     ],
+     [
+      "Total",
+      "$ 3,836"
+     ]
+    ],
+    "total": 3836
+   },
+   "expenses": null,
+   "inclusions": "gas furnace, gas hot water tank, central air conditioning, air exchanger, hood fan, microwave, stove, refrigerator, dishwasher, washer, dryer, blinds and poles",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
+ "15159365": {
+  "fr": {
+   "highlights": [
+    "Terrain boisé de 1,69 acre",
+    "Vue panoramique sur le lac Newcombe",
+    "Droits acquis confirmés par la Municipalité (août 2026)",
+    "Accès par servitude de passage publiée",
+    "Puits et installation septique à prévoir",
+    "Environ 30 à 40 minutes de Gatineau et d'Ottawa"
+   ],
+   "levels": [],
+   "building": [
+    [
+     "Approvisionnement en eau",
+     "Aucun"
+    ],
+    [
+     "Système d'égouts",
+     "Aucun"
+    ]
+   ],
+   "land": [
+    [
+     "Topographie",
+     "En pente, Plat"
+    ],
+    [
+     "Vue",
+     "Sur l'eau, Panoramique"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2025",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "13 400 $"
+     ],
+     [
+      "Total",
+      "13 400 $"
+     ]
+    ],
+    "total": 13400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2025)",
+      "103 $"
+     ],
+     [
+      "",
+      ""
+     ],
+     [
+      "Total",
+      "103 $"
+     ]
+    ],
+    "total": 103
+   },
+   "expenses": null,
+   "inclusions": "",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "highlights": [
+    "1.69-acre wooded lot",
+    "Panoramic view of Lac Newcombe",
+    "Acquired rights confirmed by the municipality (August 2026)",
+    "Access by a registered right-of-way",
+    "Well and septic system to be installed",
+    "About 30 to 40 minutes from Gatineau and Ottawa"
+   ],
+   "levels": [],
+   "building": [
+    [
+     "Water Supply",
+     "None"
+    ],
+    [
+     "Sewage System",
+     "None"
+    ]
+   ],
+   "land": [
+    [
+     "Topography",
+     "Sloped, Flat"
+    ],
+    [
+     "View",
+     "View of the water, Panoramic"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2025",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 13,400"
+     ],
+     [
+      "Total",
+      "$ 13,400"
+     ]
+    ],
+    "total": 13400
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2025)",
+      "$ 103"
+     ],
+     [
+      "",
+      ""
+     ],
+     [
+      "Total",
+      "$ 103"
+     ]
+    ],
+    "total": 103
+   },
+   "expenses": null,
+   "inclusions": "",
+   "exclusions": "",
+   "openHouses": []
+  }
+ }
+}
