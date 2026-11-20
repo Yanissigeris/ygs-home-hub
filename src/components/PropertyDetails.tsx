@@ -386,6 +386,9 @@ const PropertyDetailsSections = ({
   const rentedText = `${d.inclusions} ${d.exclusions}`;
   const hasRented = /\blou[ée]e?s?\b|location|rented|rental/i.test(rentedText);
   const current = d.levels[Math.min(level, d.levels.length - 1)];
+  const hasFloor = d.levels.some((l) => l.rooms.some((r) => r.floor));
+  const cap = (v: string) => (v ? v.charAt(0).toUpperCase() + v.slice(1) : v);
+  const amt = (v: string) => (lang === "en" ? v.replace(/\$\s+/g, "$") : v);
 
   return (
     <>
@@ -422,7 +425,7 @@ const PropertyDetailsSections = ({
                 <tr className="text-left text-[13px]" style={{ color: MUTED }}>
                   <th scope="col" className="px-5 py-4 font-semibold">{c.room}</th>
                   <th scope="col" className="px-5 py-4 font-semibold">{c.dim}</th>
-                  <th scope="col" className="px-5 py-4 font-semibold">{c.floor}</th>
+                  {hasFloor && <th scope="col" className="px-5 py-4 font-semibold">{c.floor}</th>}
                 </tr>
               </thead>
               <tbody>
@@ -433,7 +436,7 @@ const PropertyDetailsSections = ({
                       {r.note && <span className="block text-[13px] font-normal" style={{ color: MUTED }}>{sentence(r.note).replace(/\.$/, "")}</span>}
                     </td>
                     <td className="px-5 py-3.5 tabular-nums">{r.dim}</td>
-                    <td className="px-5 py-3.5" style={{ color: MUTED }}>{r.floor}</td>
+                    {hasFloor && <td className="px-5 py-3.5" style={{ color: MUTED }}>{r.floor}</td>}
                   </tr>
                 ))}
               </tbody>
@@ -452,7 +455,7 @@ const PropertyDetailsSections = ({
                   {rows.map(([label, value]) => (
                     <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
                       <dt style={{ color: MUTED }}>{label}</dt>
-                      <dd className="text-right font-semibold" style={{ color: "var(--ink)" }}>{value}</dd>
+                      <dd className="text-right font-semibold" style={{ color: "var(--ink)" }}>{cap(value)}</dd>
                     </div>
                   ))}
                 </dl>
@@ -494,7 +497,7 @@ const PropertyDetailsSections = ({
                             style={total ? { borderColor: LINE } : undefined}
                           >
                             <dt>{label.replace(/\s*\(\d{4}\)/, "")}</dt>
-                            <dd className="tabular-nums">{value}</dd>
+                            <dd className="tabular-nums">{amt(value)}</dd>
                           </div>
                         );
                       })}
