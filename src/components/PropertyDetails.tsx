@@ -258,7 +258,7 @@ const Rows = ({ rows }: { rows: Row[] }) => (
   <dl className="grid gap-x-10 md:grid-cols-2">
     {rows.map(([label, value]) => (
       <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
-        <dt style={{ color: MUTED }}>{label}</dt>
+        <dt className="shrink-0 whitespace-nowrap" style={{ color: MUTED }}>{label}</dt>
         <dd className="text-right font-semibold" style={{ color: INK }}>{value}</dd>
       </div>
     ))}
@@ -329,9 +329,10 @@ export const PropertySections = ({ property, lang }: { property: Property; lang:
               ))}
             </div>
           )}
-          <div className="overflow-x-auto">
+          {levels.map((lv, li) => (
+          <div key={lv.level} className="overflow-x-auto" hidden={li !== Math.min(level, levels.length - 1)}>
             <table className="w-full min-w-[420px] border-collapse text-[15px]" style={{ color: INK }}>
-              <caption className="sr-only">{`${c.rooms} · ${current.level}`}</caption>
+              <caption className="sr-only">{`${c.rooms} · ${lv.level}`}</caption>
               <thead>
                 <tr className="text-left text-[13px]" style={{ color: MUTED }}>
                   <th scope="col" className="py-3 pr-4 font-semibold">{c.room}</th>
@@ -340,7 +341,7 @@ export const PropertySections = ({ property, lang }: { property: Property; lang:
                 </tr>
               </thead>
               <tbody>
-                {current.rooms.map((r, k) => (
+                {lv.rooms.map((r, k) => (
                   <tr key={`${r.name}-${k}`} className="border-t" style={{ borderColor: LINE }}>
                     <td className="py-3 pr-4 font-semibold">
                       {r.name}
@@ -357,6 +358,7 @@ export const PropertySections = ({ property, lang }: { property: Property; lang:
               </tbody>
             </table>
           </div>
+          ))}
         </Section>
       )}
 
@@ -563,16 +565,16 @@ export const MortgageCalculator = ({
           <dl className="mt-5 border-t text-[14px]" style={{ borderColor: "rgba(255,255,255,.18)" }}>
             <div className="flex justify-between gap-3 py-2.5">
               <dt style={{ color: "rgba(255,255,255,.78)" }}>{c.loan}</dt>
-              <dd className="font-semibold tabular-nums">{money(r.loan, lang)}</dd>
+              <dd className="whitespace-nowrap font-semibold tabular-nums">{money(r.loan, lang)}</dd>
             </div>
             <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(255,255,255,.12)" }}>
               <dt style={{ color: "rgba(255,255,255,.78)" }}>{c.insurance}</dt>
-              <dd className="font-semibold tabular-nums">{r.prem ? money(r.insurance, lang) : c.none}</dd>
+              <dd className="whitespace-nowrap font-semibold tabular-nums">{r.prem ? money(r.insurance, lang) : c.none}</dd>
             </div>
             {monthlyTaxes > 0 && (
               <div className="flex justify-between gap-3 border-t py-2.5" style={{ borderColor: "rgba(255,255,255,.12)" }}>
                 <dt style={{ color: "rgba(255,255,255,.78)" }}>{monthlyFees > 0 ? c.withTaxesFees : c.withTaxes}</dt>
-                <dd className="font-semibold tabular-nums">{money(r.monthly + monthlyTaxes + monthlyFees, lang)}</dd>
+                <dd className="whitespace-nowrap font-semibold tabular-nums">{money(r.monthly + monthlyTaxes + monthlyFees, lang)}</dd>
               </div>
             )}
           </dl>
