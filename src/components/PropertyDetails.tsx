@@ -331,7 +331,7 @@ export const PropertySections = ({ property, lang }: { property: Property; lang:
           )}
           {levels.map((lv, li) => (
           <div key={lv.level} className="overflow-x-auto" hidden={li !== Math.min(level, levels.length - 1)}>
-            <table className="w-full min-w-[420px] border-collapse text-[15px]" style={{ color: INK }}>
+            <table className="w-full border-collapse text-[15px]" style={{ color: INK }}>
               <caption className="sr-only">{`${c.rooms} · ${lv.level}`}</caption>
               <thead>
                 <tr className="text-left text-[13px]" style={{ color: MUTED }}>
