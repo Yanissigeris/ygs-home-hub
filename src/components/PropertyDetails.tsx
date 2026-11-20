@@ -7,10 +7,8 @@ type Room = { name: string; dim: string; floor: string; note: string };
 type LevelGroup = { level: string; rooms: Room[] };
 type Money = { rows: Row[]; total: number | null } | null;
 export type PropertyDetailsData = {
-  highlights: string[];
   levels: LevelGroup[];
-  building: Row[];
-  land: Row[];
+  facts: Row[];
   near: string[];
   assessment: { year: string; rows: Row[]; total: number | null } | null;
   taxes: Money;
@@ -31,23 +29,13 @@ const EXAMPLE_RATE = 4.5;
 
 const copy = {
   fr: {
-    highlights: "Points forts",
     rooms: "Pièces par étage",
-    roomsIntro: (n: number) => `Les ${n} pièces avec leurs dimensions et leur revêtement de plancher.`,
     roomsGroup: "Choisir un étage",
     room: "Pièce",
     dim: "Dimensions",
     floor: "Plancher",
-    buildingLand: "Bâtiment et terrain",
-    costs: "Coûts annuels",
-    costsIntro: (taxes: string, year: string, monthly: string) =>
-      `Taxes totales de ${taxes}${year ? ` en ${year}` : ""}, soit environ ${monthly} par mois.`,
-    condoFees: (fees: string) => `Frais de copropriété de ${fees} par année.`,
-    rented: "Certains appareils sont en location, à prévoir dans votre budget.",
-    assessment: (y: string) => `Évaluation municipale${y ? ` ${y}` : ""}`,
-    taxesTitle: (y: string) => `Taxes${y ? ` ${y}` : ""}`,
-    expensesTitle: "Frais annuels",
-    included: "Ce qui est inclus",
+    details: "Détails",
+    included: "Inclus",
     excluded: "Exclusions",
     calcTitle: "Combien coûterait votre paiement?",
     calcIntro:
@@ -77,23 +65,13 @@ const copy = {
     openHouse: "Visite libre",
   },
   en: {
-    highlights: "Highlights",
     rooms: "Rooms by floor",
-    roomsIntro: (n: number) => `All ${n} rooms with their dimensions and flooring.`,
     roomsGroup: "Choose a floor",
     room: "Room",
     dim: "Dimensions",
     floor: "Flooring",
-    buildingLand: "Building and lot",
-    costs: "Annual costs",
-    costsIntro: (taxes: string, year: string, monthly: string) =>
-      `Total taxes of ${taxes}${year ? ` in ${year}` : ""}, or about ${monthly} a month.`,
-    condoFees: (fees: string) => `Condo fees of ${fees} a year.`,
-    rented: "Some equipment is rented, so plan for it in your budget.",
-    assessment: (y: string) => `Municipal assessment${y ? ` ${y}` : ""}`,
-    taxesTitle: (y: string) => `Taxes${y ? ` ${y}` : ""}`,
-    expensesTitle: "Annual fees",
-    included: "What's included",
+    details: "Details",
+    included: "Included",
     excluded: "Exclusions",
     calcTitle: "What would your payment be?",
     calcIntro:
@@ -127,7 +105,7 @@ const copy = {
 const money = (n: number, lang: Lang) => {
   const v = Math.round(n);
   return lang === "fr"
-    ? `${v.toLocaleString("fr-CA").replace(/[  ]/g, " ")} $`
+    ? `${v.toLocaleString("fr-CA").replace(/[\u202f\u00a0]/g, " ")} $`
     : `$${v.toLocaleString("en-CA")}`;
 };
 
@@ -137,8 +115,6 @@ const sentence = (s: string) => {
   const up = t.charAt(0).toUpperCase() + t.slice(1);
   return /[.!?]$/.test(up) ? up : `${up}.`;
 };
-
-const yearOf = (label?: string) => label?.match(/\((\d{4})\)/)?.[1] ?? "";
 
 const h2Style = { fontFamily: "var(--display)", fontSize: "clamp(1.5rem, 2.4vw, 2rem)", color: "var(--ink)" } as const;
 const MUTED = "#4A5475";
@@ -381,34 +357,15 @@ const PropertyDetailsSections = ({
 
   const roomCount = d.levels.reduce((n, l) => n + l.rooms.length, 0);
   const taxTotal = d.taxes?.total ?? 0;
-  const taxYear = yearOf(d.taxes?.rows[0]?.[0]);
   const feesTotal = d.expenses?.total ?? 0;
-  const rentedText = `${d.inclusions} ${d.exclusions}`;
-  const hasRented = /\blou[ée]e?s?\b|location|rented|rental/i.test(rentedText);
   const current = d.levels[Math.min(level, d.levels.length - 1)];
   const hasFloor = d.levels.some((l) => l.rooms.some((r) => r.floor));
-  const cap = (v: string) => (v ? v.charAt(0).toUpperCase() + v.slice(1) : v);
-  const amt = (v: string) => (lang === "en" ? v.replace(/\$\s+/g, "$") : v);
 
   return (
     <>
-      {d.highlights.length > 0 && (
-        <>
-          <h2 className="mt-12" style={h2Style}>{c.highlights}</h2>
-          <ul className="mt-4 grid gap-x-8 sm:grid-cols-2">
-            {d.highlights.map((h) => (
-              <li key={h} className="border-t py-3.5 text-[16px]" style={{ borderColor: LINE, color: "var(--ink)" }}>
-                {h}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-
       {roomCount > 0 && current && (
         <>
           <h2 className="mt-12" style={h2Style}>{c.rooms}</h2>
-          <p className="mt-2.5 text-[15px]" style={{ color: MUTED }}>{c.roomsIntro(roomCount)}</p>
           {d.levels.length > 1 && (
             <div className="mt-5 flex flex-wrap gap-2" role="group" aria-label={c.roomsGroup}>
               {d.levels.map((l, k) => (
@@ -445,78 +402,27 @@ const PropertyDetailsSections = ({
         </>
       )}
 
-      {(d.building.length > 0 || d.land.length > 0) && (
+      {(d.facts.length > 0 || d.inclusions || d.exclusions) && (
         <>
-          <h2 className="mt-12" style={h2Style}>{c.buildingLand}</h2>
-          <div className="mt-4 grid gap-x-10 md:grid-cols-2">
-            {[d.building, d.land].map((rows, k) =>
-              rows.length ? (
-                <dl key={k}>
-                  {rows.map(([label, value]) => (
-                    <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
-                      <dt style={{ color: MUTED }}>{label}</dt>
-                      <dd className="text-right font-semibold" style={{ color: "var(--ink)" }}>{cap(value)}</dd>
-                    </div>
-                  ))}
-                </dl>
-              ) : null,
-            )}
-          </div>
-        </>
-      )}
-
-      {(d.assessment || d.taxes) && (
-        <>
-          <h2 className="mt-12" style={h2Style}>{c.costs}</h2>
-          {taxTotal > 0 && (
-            <p className="mt-2.5 max-w-[640px] text-[15px]" style={{ lineHeight: 1.7, color: MUTED }}>
-              {c.costsIntro(money(taxTotal, lang), taxYear, money(taxTotal / 12, lang))}
-              {feesTotal > 0 && ` ${c.condoFees(money(feesTotal, lang))}`}
-              {hasRented && ` ${c.rented}`}
+          <h2 className="mt-12" style={h2Style}>{c.details}</h2>
+          {d.facts.length > 0 && (
+            <dl className="mt-4 grid gap-x-10 md:grid-cols-2">
+              {d.facts.map(([label, value]) => (
+                <div key={label} className="flex justify-between gap-4 border-t py-3 text-[15px]" style={{ borderColor: LINE }}>
+                  <dt style={{ color: MUTED }}>{label}</dt>
+                  <dd className="text-right font-semibold" style={{ color: "var(--ink)" }}>{value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+          {d.inclusions && (
+            <p className="mt-6 text-[15px]" style={{ lineHeight: 1.75, color: "var(--ink)" }}>
+              <span className="font-semibold">{lang === "fr" ? `${c.included} : ` : `${c.included}: `}</span>
+              {sentence(d.inclusions)}
             </p>
           )}
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {[
-              d.assessment && { title: c.assessment(d.assessment.year), rows: d.assessment.rows },
-              d.taxes && { title: c.taxesTitle(taxYear), rows: d.taxes.rows },
-              d.expenses && { title: c.expensesTitle, rows: d.expenses.rows },
-            ]
-              .filter(Boolean)
-              .map((card) => {
-                const { title, rows } = card as { title: string; rows: Row[] };
-                return (
-                  <div key={title} className="rounded-[20px] bg-white px-6 py-5" style={{ color: "var(--ink)" }}>
-                    <p className="text-[13px] font-semibold" style={{ color: MUTED }}>{title}</p>
-                    <dl className="mt-2.5">
-                      {rows.map(([label, value], k) => {
-                        const total = k === rows.length - 1 && rows.length > 1;
-                        return (
-                          <div
-                            key={label}
-                            className={total ? "mt-1.5 flex justify-between border-t pt-3 text-[17px] font-bold" : "flex justify-between py-1.5 text-[15px]"}
-                            style={total ? { borderColor: LINE } : undefined}
-                          >
-                            <dt>{label.replace(/\s*\(\d{4}\)/, "")}</dt>
-                            <dd className="tabular-nums">{amt(value)}</dd>
-                          </div>
-                        );
-                      })}
-                    </dl>
-                  </div>
-                );
-              })}
-          </div>
-        </>
-      )}
-
-      {(d.inclusions || d.exclusions) && (
-        <>
-          <h2 className="mt-12" style={h2Style}>{c.included}</h2>
-          {d.inclusions && (
-            <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>{sentence(d.inclusions)}</p>
-          )}
           {d.exclusions && (
-            <p className="mt-3 text-[15px]" style={{ lineHeight: 1.7, color: MUTED }}>
+            <p className="mt-2 text-[15px]" style={{ lineHeight: 1.75, color: MUTED }}>
               <span className="font-semibold" style={{ color: "var(--ink)" }}>{lang === "fr" ? `${c.excluded} : ` : `${c.excluded}: `}</span>
               {sentence(d.exclusions)}
             </p>

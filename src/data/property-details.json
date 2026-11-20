@@ -1,14 +1,6 @@
 {
  "18600312": {
   "fr": {
-   "highlights": [
-    "4 chambres à l'étage",
-    "Salon avec foyer au gaz",
-    "Sous-sol entièrement aménagé, 6 pieds et plus",
-    "Garage attaché, allée asphaltée pour 3 autos",
-    "Cour plate et clôturée avec piscine hors terre",
-    "Gazebo en bois et remise"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -116,60 +108,42 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
+     "Chauffage",
+     "Air pulsé, gaz naturel"
     ],
     [
-     "Garage",
-     "Attaché, Simple largeur"
+     "Foyer",
+     "Au gaz"
     ],
     [
      "Sous-sol",
-     "6 pieds et plus, Totalement aménagé"
+     "6 pieds et plus, totalement aménagé"
     ],
     [
-     "Mode de chauffage",
-     "Air soufflé (pulsé)"
+     "Garage",
+     "Attaché, simple largeur"
     ],
     [
-     "Énergie pour le chauffage",
-     "Gaz naturel"
+     "Stationnement",
+     "4 (allée 3, garage 1)"
     ],
     [
-     "Foyer-Poêle",
-     "Foyer au gaz"
+     "Piscine",
+     "Hors terre"
     ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
     [
      "Dimensions du terrain",
      "49' 6\" × 98' 5\""
     ],
     [
-     "Topographie",
-     "Plat"
+     "Eau et égout",
+     "Municipaux"
     ],
     [
-     "Allée",
-     "Asphalte"
-    ],
-    [
-     "Stationnement (total)",
-     "Allée (3), Garage (1)"
-    ],
-    [
-     "Piscine",
-     "Hors terre"
+     "Évaluation municipale (2026)",
+     "624 400 $"
     ]
    ],
    "near": [
@@ -229,14 +203,6 @@
    ]
   },
   "en": {
-   "highlights": [
-    "4 bedrooms upstairs",
-    "Living room with a gas fireplace",
-    "Fully finished basement, 6 ft or more",
-    "Attached garage, paved driveway for 3 cars",
-    "Flat, fenced backyard with an above-ground pool",
-    "Wooden gazebo and shed"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -344,60 +310,42 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Heating",
+     "Forced air, natural gas"
     ],
     [
-     "Garage",
-     "Attached, Single width"
-    ],
-    [
-     "Basement",
-     "6 feet and more, Finished basement"
-    ],
-    [
-     "Heating System",
-     "Forced air"
-    ],
-    [
-     "Heating Energy",
-     "Natural gas"
-    ],
-    [
-     "Fireplace-Stove",
+     "Fireplace",
      "Gas fireplace"
     ],
     [
-     "Water Supply",
-     "Municipality"
+     "Basement",
+     "6 feet and more, finished basement"
     ],
     [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
+     "Garage",
+     "Attached, single width"
+    ],
+    [
+     "Parking",
+     "4 (driveway 3, garage 1)"
+    ],
+    [
+     "Pool",
+     "Above-ground"
+    ],
     [
      "Lot size",
      "49' 6\" × 98' 5\""
     ],
     [
-     "Topography",
-     "Flat"
+     "Water and sewer",
+     "Municipal"
     ],
     [
-     "Driveway",
-     "Asphalt"
-    ],
-    [
-     "Parking (total)",
-     "Driveway (3), Garage (1)"
-    ],
-    [
-     "Pool",
-     "Above-ground"
+     "Municipal assessment (2026)",
+     "$624,400"
     ]
    ],
    "near": [
@@ -459,14 +407,6 @@
  },
  "26501194": {
   "fr": {
-   "highlights": [
-    "2 chambres, dont une avec penderie (walk-in)",
-    "Condo de 1 144 pi² au 3e étage",
-    "Salle de lavage dans l'unité",
-    "Climatiseur mural et échangeur d'air",
-    "1 place de stationnement",
-    "Commerces et transport en commun à distance de marche"
-   ],
    "levels": [
     {
      "level": "3e étage",
@@ -528,40 +468,26 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Fenestration",
-     "PVC"
+     "Climatisation",
+     "Climatiseur mural, échangeur d'air"
     ],
     [
-     "Type de fenestration",
-     "Coulissante, Manivelle (battant), Porte-fenêtre"
+     "Stationnement",
+     "1 (allée)"
     ],
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
+     "Eau et égout",
+     "Municipaux"
     ],
     [
-     "Installation laveuse-sécheuse",
-     "salle de lavage (3)"
+     "Évaluation municipale (2027)",
+     "329 000 $"
     ],
     [
-     "Commodités de la propriété ou de l'unité",
-     "Climatiseur mural, Échangeur d'air"
-    ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
-    [
-     "Stationnement (total)",
-     "Allée (1)"
+     "Frais de copropriété",
+     "3 624 $ / an"
     ]
    ],
    "near": [],
@@ -618,14 +544,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "2 bedrooms, one with a walk-in closet",
-    "1,144 sq ft condo on the 3rd floor",
-    "In-unit laundry room",
-    "Wall air conditioner and air exchanger",
-    "1 parking spot",
-    "Shops and public transit within walking distance"
-   ],
    "levels": [
     {
      "level": "3rd floor",
@@ -687,40 +605,26 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Windows",
-     "PVC"
+     "Cooling",
+     "Wall-mounted air conditioning, air exchange system"
     ],
     [
-     "Window Type",
-     "Sliding, Casement, French door"
+     "Parking",
+     "1 (driveway)"
     ],
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Water and sewer",
+     "Municipal"
     ],
     [
-     "Washer/Dryer (installation)",
-     "laundry room (3)"
+     "Municipal assessment (2027)",
+     "$329,000"
     ],
     [
-     "Property or unit amenity",
-     "Wall-mounted air conditioning, Air exchange system"
-    ],
-    [
-     "Water Supply",
-     "Municipality"
-    ],
-    [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
-    [
-     "Parking (total)",
-     "Driveway (1)"
+     "Condo fees",
+     "$3,624 / yr"
     ]
    ],
    "near": [],
@@ -779,14 +683,6 @@
  },
  "21600052": {
   "fr": {
-   "highlights": [
-    "Bungalow de 3 chambres",
-    "Plusieurs rénovations au fil des ans",
-    "Thermopompe murale et poêle à bois",
-    "Sous-sol de 6 pieds et plus, non aménagé",
-    "Réfrigérateur, cuisinière et lave-vaisselle inclus",
-    "Accès rapide au boulevard Maloney"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -853,45 +749,32 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
-    ],
-    [
-     "Installation laveuse-sécheuse",
-     "salle de lavage (SS)"
-    ],
-    [
-     "Sous-sol",
-     "6 pieds et plus, Non aménagé"
-    ],
-    [
-     "Mode de chauffage",
+     "Chauffage",
      "Plinthes électriques"
     ],
     [
-     "Énergie pour le chauffage",
-     "Électricité"
-    ],
-    [
-     "Foyer-Poêle",
-     "Poêle au bois"
-    ],
-    [
-     "Commodités de la propriété ou de l'unité",
+     "Climatisation",
      "Thermopompe murale"
     ],
     [
-     "Approvisionnement en eau",
-     "Municipalité"
+     "Foyer",
+     "Poêle au bois"
     ],
     [
-     "Système d'égouts",
-     "Municipalité"
+     "Sous-sol",
+     "6 pieds et plus, non aménagé"
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2026)",
+     "287 400 $"
     ]
    ],
-   "land": [],
    "near": [
     "Autoroute",
     "Golf",
@@ -940,14 +823,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "3-bedroom bungalow",
-    "Several renovations over the years",
-    "Wall heat pump and wood stove",
-    "Unfinished basement, 6 ft or more",
-    "Fridge, stove and dishwasher included",
-    "Quick access to Maloney Boulevard"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -1014,45 +889,32 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Heating",
+     "Electric baseboards"
     ],
     [
-     "Washer/Dryer (installation)",
-     "laundry room (SS)"
-    ],
-    [
-     "Basement",
-     "6 feet and more, Unfinished"
-    ],
-    [
-     "Heating System",
-     "Electric baseboard units"
-    ],
-    [
-     "Heating Energy",
-     "Electricity"
-    ],
-    [
-     "Fireplace-Stove",
-     "Wood stove"
-    ],
-    [
-     "Property or unit amenity",
+     "Cooling",
      "Wall-mounted heat pump"
     ],
     [
-     "Water Supply",
-     "Municipality"
+     "Fireplace",
+     "Wood stove"
     ],
     [
-     "Sewage System",
-     "Municipality"
+     "Basement",
+     "6 feet and more, unfinished"
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2026)",
+     "$287,400"
     ]
    ],
-   "land": [],
    "near": [
     "Highway",
     "Golf",
@@ -1103,14 +965,6 @@
  },
  "21358006": {
   "fr": {
-   "highlights": [
-    "Jumelé de 3 chambres",
-    "Sous-sol aménagé avec bureau",
-    "Climatiseur central",
-    "Libre immédiatement",
-    "Marina d'Aylmer à 8 minutes de marche",
-    "Parc et plage des Cèdres à 10 minutes à pied"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -1200,64 +1054,34 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Fenestration",
-     "PVC"
+     "Chauffage",
+     "Air pulsé, gaz naturel"
     ],
     [
-     "Revêtement",
-     "Brique, Vinyle"
-    ],
-    [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
-    ],
-    [
-     "Installation laveuse-sécheuse",
-     "Salle d'eau (RC)"
-    ],
-    [
-     "Sous-sol",
-     "6 pieds et plus, Totalement aménagé"
-    ],
-    [
-     "Mode de chauffage",
-     "Air soufflé (pulsé)"
-    ],
-    [
-     "Énergie pour le chauffage",
-     "Gaz naturel"
-    ],
-    [
-     "Commodités de la propriété ou de l'unité",
+     "Climatisation",
      "Climatiseur central"
     ],
     [
-     "Approvisionnement en eau",
-     "Municipalité"
+     "Sous-sol",
+     "6 pieds et plus, totalement aménagé"
     ],
     [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
+     "Stationnement",
+     "2 (allée)"
+    ],
     [
      "Dimensions du terrain",
      "31' × 152' irr."
     ],
     [
-     "Topographie",
-     "Plat"
+     "Eau et égout",
+     "Municipaux"
     ],
     [
-     "Allée",
-     "Asphalte"
-    ],
-    [
-     "Stationnement (total)",
-     "Allée (2)"
+     "Évaluation municipale (2027)",
+     "482 800 $"
     ]
    ],
    "near": [
@@ -1308,14 +1132,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "3-bedroom semi-detached home",
-    "Finished basement with an office",
-    "Central air conditioning",
-    "Available right away",
-    "Aylmer marina an 8-minute walk away",
-    "Parc des Cèdres and its beach a 10-minute walk away"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -1405,64 +1221,34 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Windows",
-     "PVC"
+     "Heating",
+     "Forced air, natural gas"
     ],
     [
-     "Siding",
-     "Brick, Vinyl"
-    ],
-    [
-     "Roofing",
-     "Asphalt shingles"
-    ],
-    [
-     "Washer/Dryer (installation)",
-     "Powder room (RC)"
-    ],
-    [
-     "Basement",
-     "6 feet and more, Finished basement"
-    ],
-    [
-     "Heating System",
-     "Forced air"
-    ],
-    [
-     "Heating Energy",
-     "Natural gas"
-    ],
-    [
-     "Property or unit amenity",
+     "Cooling",
      "Central air conditioning"
     ],
     [
-     "Water Supply",
-     "Municipality"
+     "Basement",
+     "6 feet and more, finished basement"
     ],
     [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
+     "Parking",
+     "2 (driveway)"
+    ],
     [
      "Lot size",
      "31' × 152' irr."
     ],
     [
-     "Topography",
-     "Flat"
+     "Water and sewer",
+     "Municipal"
     ],
     [
-     "Driveway",
-     "Asphalt"
-    ],
-    [
-     "Parking (total)",
-     "Driveway (2)"
+     "Municipal assessment (2027)",
+     "$482,800"
     ]
    ],
    "near": [
@@ -1515,14 +1301,6 @@
  },
  "15191323": {
   "fr": {
-   "highlights": [
-    "Plain-pied de 3 chambres dans une impasse",
-    "Sous-sol intergénération avec 2e cuisine",
-    "Fenêtres remplacées en 2012",
-    "Panneau électrique remplacé en 2016",
-    "Plancher chauffant dans la cuisine et la salle à manger",
-    "Parc de la Marina à environ 450 m"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -1649,48 +1427,34 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
+     "Chauffage",
+     "Plinthes électriques"
     ],
     [
-     "Particularités du bâtiment",
-     "Intergénération - Sous-sol"
+     "Foyer",
+     "Au bois"
     ],
     [
      "Sous-sol",
      "6 pieds et plus"
     ],
     [
-     "Mode de chauffage",
-     "Plinthes électriques"
-    ],
-    [
-     "Énergie pour le chauffage",
-     "Électricité"
-    ],
-    [
-     "Foyer-Poêle",
-     "Foyer au bois"
-    ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
-    [
      "Dimensions du terrain",
      "50' × 100'"
     ],
     [
-     "Topographie",
-     "Plat"
+     "Particularité",
+     "Intergénération - Sous-sol"
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2027)",
+     "499 200 $"
     ]
    ],
    "near": [],
@@ -1735,14 +1499,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "3-bedroom bungalow on a quiet cul-de-sac",
-    "Intergenerational basement with a 2nd kitchen",
-    "Windows replaced in 2012",
-    "Electrical panel replaced in 2016",
-    "Heated floor in the kitchen and dining room",
-    "Marina park about 450 m away"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -1869,48 +1625,34 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Heating",
+     "Electric baseboards"
     ],
     [
-     "Building's distinctive features",
-     "Intergenerational - Basement"
+     "Fireplace",
+     "Wood fireplace"
     ],
     [
      "Basement",
      "6 feet and more"
     ],
     [
-     "Heating System",
-     "Electric baseboard units"
-    ],
-    [
-     "Heating Energy",
-     "Electricity"
-    ],
-    [
-     "Fireplace-Stove",
-     "Wood fireplace"
-    ],
-    [
-     "Water Supply",
-     "Municipality"
-    ],
-    [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
-    [
      "Lot size",
      "50' × 100'"
     ],
     [
-     "Topography",
-     "Flat"
+     "Feature",
+     "Intergenerational - Basement"
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2027)",
+     "$499,200"
     ]
    ],
    "near": [],
@@ -1957,14 +1699,6 @@
  },
  "14821222": {
   "fr": {
-   "highlights": [
-    "Bungalow rénové de 3 chambres",
-    "2 salles de bain complètes",
-    "Cuisine avec grand îlot",
-    "Garage double attaché",
-    "Terrain de coin de 7 200 pi²",
-    "Électroménagers de 2022 inclus"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -2073,64 +1807,46 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
+     "Chauffage",
+     "Air pulsé, électricité"
     ],
     [
-     "Garage",
-     "Attaché, Double largeur ou plus"
+     "Climatisation",
+     "Climatiseur central"
+    ],
+    [
+     "Foyer",
+     "Au bois"
     ],
     [
      "Sous-sol",
-     "6 pieds et plus, Totalement aménagé"
+     "6 pieds et plus, totalement aménagé"
     ],
     [
-     "Mode de chauffage",
-     "Air soufflé (pulsé)"
+     "Garage",
+     "Attaché, double largeur ou plus"
     ],
     [
-     "Énergie pour le chauffage",
-     "Électricité"
+     "Stationnement",
+     "5 (garage 2, allée 3)"
     ],
-    [
-     "Foyer-Poêle",
-     "Foyer au bois"
-    ],
-    [
-     "Commodités de la propriété ou de l'unité",
-     "Climatiseur central, Ouvre-porte électrique (garage)"
-    ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
     [
      "Dimensions du terrain",
      "60' × 120'"
     ],
     [
-     "Topographie",
-     "Plat"
-    ],
-    [
-     "Particularités du site",
+     "Particularité",
      "Coin de rue"
     ],
     [
-     "Allée",
-     "Asphalte"
+     "Eau et égout",
+     "Municipaux"
     ],
     [
-     "Stationnement (total)",
-     "Garage (2), Allée (3)"
+     "Évaluation municipale (2027)",
+     "403 000 $"
     ]
    ],
    "near": [
@@ -2182,14 +1898,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "Renovated 3-bedroom bungalow",
-    "2 full bathrooms",
-    "Kitchen with a large island",
-    "Attached double garage",
-    "7,200 sq ft corner lot",
-    "2022 appliances included"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -2298,64 +2006,46 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Heating",
+     "Forced air, electricity"
     ],
     [
-     "Garage",
-     "Attached, Double width or more"
+     "Cooling",
+     "Central air conditioning"
     ],
     [
-     "Basement",
-     "6 feet and more, Finished basement"
-    ],
-    [
-     "Heating System",
-     "Forced air"
-    ],
-    [
-     "Heating Energy",
-     "Electricity"
-    ],
-    [
-     "Fireplace-Stove",
+     "Fireplace",
      "Wood fireplace"
     ],
     [
-     "Property or unit amenity",
-     "Central air conditioning, Electric garage door opener"
+     "Basement",
+     "6 feet and more, finished basement"
     ],
     [
-     "Water Supply",
-     "Municipality"
+     "Garage",
+     "Attached, double width or more"
     ],
     [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
+     "Parking",
+     "5 (garage 2, driveway 3)"
+    ],
     [
      "Lot size",
      "60' × 120'"
     ],
     [
-     "Topography",
-     "Flat"
-    ],
-    [
-     "Distinctive Features",
+     "Feature",
      "Street corner"
     ],
     [
-     "Driveway",
-     "Asphalt"
+     "Water and sewer",
+     "Municipal"
     ],
     [
-     "Parking (total)",
-     "Garage (2), Driveway (3)"
+     "Municipal assessment (2027)",
+     "$403,000"
     ]
    ],
    "near": [
@@ -2409,14 +2099,6 @@
  },
  "12304022": {
   "fr": {
-   "highlights": [
-    "Maison de 1885 au cœur du Vieux-Aylmer",
-    "3 chambres, 1 salle de bain et 1 salle d'eau",
-    "Plusieurs rénovations majeures récentes",
-    "Thermopompe centrale",
-    "Allée pour 3 autos",
-    "Près de la marina et du parc des Cèdres"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -2495,72 +2177,38 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Fenestration",
-     "PVC"
+     "Chauffage",
+     "Air pulsé, électricité"
     ],
     [
-     "Type de fenestration",
-     "Guillotine, Manivelle (battant), Coulissante"
-    ],
-    [
-     "Revêtement",
-     "Vinyle"
-    ],
-    [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
-    ],
-    [
-     "Armoires de cuisine",
-     "Mélamine"
+     "Climatisation",
+     "Thermopompe centrale, climatiseur central"
     ],
     [
      "Sous-sol",
-     "Vide sanitaire, Bas (moins de 6 pieds)"
+     "Vide sanitaire, bas (moins de 6 pieds)"
     ],
     [
-     "Mode de chauffage",
-     "Air soufflé (pulsé)"
+     "Stationnement",
+     "3 (allée)"
     ],
-    [
-     "Énergie pour le chauffage",
-     "Électricité"
-    ],
-    [
-     "Commodités de la propriété ou de l'unité",
-     "Détecteur d'incendie (N), Thermopompe centrale, Climatiseur central, Cour privée"
-    ],
-    [
-     "Appareils en location (mensuel)",
-     "Chauffe-eau (1)"
-    ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
     [
      "Dimensions du terrain",
      "34' 1\" × 126' 3\""
     ],
     [
-     "Topographie",
-     "Plat"
+     "Eau et égout",
+     "Municipaux"
     ],
     [
-     "Allée",
-     "Asphalte"
+     "En location",
+     "Chauffe-eau"
     ],
     [
-     "Stationnement (total)",
-     "Allée (3)"
+     "Évaluation municipale (2027)",
+     "419 300 $"
     ]
    ],
    "near": [
@@ -2613,14 +2261,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "1885 home in the heart of Old Aylmer",
-    "3 bedrooms, 1 bathroom and 1 powder room",
-    "Several major renovations in recent years",
-    "Central heat pump",
-    "Driveway for 3 cars",
-    "Close to the marina and Parc des Cèdres"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -2699,72 +2339,38 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Windows",
-     "PVC"
+     "Heating",
+     "Forced air, electricity"
     ],
     [
-     "Window Type",
-     "Guillotine, Casement, Sliding"
-    ],
-    [
-     "Siding",
-     "Vinyl"
-    ],
-    [
-     "Roofing",
-     "Asphalt shingles"
-    ],
-    [
-     "Kitchen Cabinets",
-     "Melamine"
+     "Cooling",
+     "Central heat pump, central air conditioning"
     ],
     [
      "Basement",
-     "Crawl space, Low (less than 6 feet)"
+     "Crawl space, low (less than 6 feet)"
     ],
     [
-     "Heating System",
-     "Forced air"
+     "Parking",
+     "3 (driveway)"
     ],
-    [
-     "Heating Energy",
-     "Electricity"
-    ],
-    [
-     "Property or unit amenity",
-     "Fire detector (N), Central heat pump, Central air conditioning, Private yard"
-    ],
-    [
-     "Rented Equipment (monthly)",
-     "Water heater (1)"
-    ],
-    [
-     "Water Supply",
-     "Municipality"
-    ],
-    [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
     [
      "Lot size",
      "34' 1\" × 126' 3\""
     ],
     [
-     "Topography",
-     "Flat"
+     "Water and sewer",
+     "Municipal"
     ],
     [
-     "Driveway",
-     "Asphalt"
+     "Rented",
+     "Water heater"
     ],
     [
-     "Parking (total)",
-     "Driveway (3)"
+     "Municipal assessment (2027)",
+     "$419,300"
     ]
    ],
    "near": [
@@ -2819,14 +2425,6 @@
  },
  "18249217": {
   "fr": {
-   "highlights": [
-    "Construction 2024, vendue avec garantie légale",
-    "Chaque chambre de l'étage a sa salle de bain",
-    "Sous-sol aménagé avec 3e chambre",
-    "Climatisation centrale et échangeur d'air",
-    "Stationnement pour 5 autos sur 2 entrées",
-    "Secteur familial de La Blanche"
-   ],
    "levels": [
     {
      "level": "Rez-de-chaussée",
@@ -2922,40 +2520,26 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Fenestration",
-     "PVC"
+     "Chauffage",
+     "Air pulsé, gaz naturel"
     ],
     [
-     "Revêtement de la toiture",
-     "Bardeaux d'asphalte"
+     "Climatisation",
+     "Climatiseur central, échangeur d'air"
     ],
-    [
-     "Mode de chauffage",
-     "Air soufflé (pulsé)"
-    ],
-    [
-     "Énergie pour le chauffage",
-     "Gaz naturel"
-    ],
-    [
-     "Commodités de la propriété ou de l'unité",
-     "Climatiseur central, Échangeur d'air"
-    ],
-    [
-     "Approvisionnement en eau",
-     "Municipalité"
-    ],
-    [
-     "Système d'égouts",
-     "Municipalité"
-    ]
-   ],
-   "land": [
     [
      "Dimensions du terrain",
      "88' × 41' 8\""
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2027)",
+     "591 300 $"
     ]
    ],
    "near": [],
@@ -3000,14 +2584,6 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "Built in 2024, sold with the legal warranty",
-    "Each upstairs bedroom has its own bathroom",
-    "Finished basement with a 3rd bedroom",
-    "Central air and air exchanger",
-    "Parking for 5 cars on 2 driveways",
-    "Family area of La Blanche"
-   ],
    "levels": [
     {
      "level": "Ground floor",
@@ -3103,40 +2679,26 @@
      ]
     }
    ],
-   "building": [
+   "facts": [
     [
-     "Windows",
-     "PVC"
+     "Heating",
+     "Forced air, natural gas"
     ],
     [
-     "Roofing",
-     "Asphalt shingles"
+     "Cooling",
+     "Central air conditioning, air exchange system"
     ],
-    [
-     "Heating System",
-     "Forced air"
-    ],
-    [
-     "Heating Energy",
-     "Natural gas"
-    ],
-    [
-     "Property or unit amenity",
-     "Central air conditioning, Air exchange system"
-    ],
-    [
-     "Water Supply",
-     "Municipality"
-    ],
-    [
-     "Sewage System",
-     "Municipality"
-    ]
-   ],
-   "land": [
     [
      "Lot size",
      "88' × 41' 8\""
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2027)",
+     "$591,300"
     ]
    ],
    "near": [],
@@ -3183,33 +2745,19 @@
  },
  "15159365": {
   "fr": {
-   "highlights": [
-    "Terrain boisé de 1,69 acre",
-    "Vue panoramique sur le lac Newcombe",
-    "Droits acquis confirmés par la Municipalité (août 2026)",
-    "Accès par servitude de passage publiée",
-    "Puits et installation septique à prévoir",
-    "Environ 30 à 40 minutes de Gatineau et d'Ottawa"
-   ],
    "levels": [],
-   "building": [
-    [
-     "Approvisionnement en eau",
-     "Aucun"
-    ],
-    [
-     "Système d'égouts",
-     "Aucun"
-    ]
-   ],
-   "land": [
-    [
-     "Topographie",
-     "En pente, Plat"
-    ],
+   "facts": [
     [
      "Vue",
-     "Sur l'eau, Panoramique"
+     "Sur l'eau, panoramique"
+    ],
+    [
+     "Eau et égout",
+     "Aucun service"
+    ],
+    [
+     "Évaluation municipale (2025)",
+     "13 400 $"
     ]
    ],
    "near": [],
@@ -3250,33 +2798,19 @@
    "openHouses": []
   },
   "en": {
-   "highlights": [
-    "1.69-acre wooded lot",
-    "Panoramic view of Lac Newcombe",
-    "Acquired rights confirmed by the municipality (August 2026)",
-    "Access by a registered right-of-way",
-    "Well and septic system to be installed",
-    "About 30 to 40 minutes from Gatineau and Ottawa"
-   ],
    "levels": [],
-   "building": [
-    [
-     "Water Supply",
-     "None"
-    ],
-    [
-     "Sewage System",
-     "None"
-    ]
-   ],
-   "land": [
-    [
-     "Topography",
-     "Sloped, Flat"
-    ],
+   "facts": [
     [
      "View",
-     "View of the water, Panoramic"
+     "View of the water, panoramic"
+    ],
+    [
+     "Water and sewer",
+     "No services"
+    ],
+    [
+     "Municipal assessment (2025)",
+     "$13,400"
     ]
    ],
    "near": [],
