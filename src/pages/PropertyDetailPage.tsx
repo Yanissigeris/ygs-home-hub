@@ -4,6 +4,7 @@ import { ArrowLeft, Phone, MessageSquare } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import PropertyGallery from "@/components/PropertyGallery";
 import PropertyCard from "@/components/PropertyCard";
+import { getPropertyDetails, MortgageCalculator, OpenHouseBadge, PropertySections, StatBand } from "@/components/PropertyDetails";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,16 +27,7 @@ const copy = {
     backHref: "/proprietes/",
     status: { active: "À vendre", pending: "Offre acceptée", sold: "Vendue", rent: "À louer", rented: "Louée" },
     askingPrice: "Prix demandé",
-    specs: {
-      type: "Type",
-      bedrooms: "Chambres",
-      bathrooms: "Salles de bain",
-      powder: "Salle d'eau",
-      area: "Superficie",
-      lot: "Terrain",
-      year: "Année de construction",
-      mls: "No Centris",
-    },
+    estimate: "Estimer mon paiement",
     about: "La propriété",
     role: "Courtier immobilier résidentiel, RE/MAX Direct",
     visitTitle: "Planifier une visite",
@@ -67,16 +59,7 @@ const copy = {
     backHref: "/en/properties/",
     status: { active: "For sale", pending: "Offer accepted", sold: "Sold", rent: "For rent", rented: "Rented" },
     askingPrice: "Asking price",
-    specs: {
-      type: "Type",
-      bedrooms: "Bedrooms",
-      bathrooms: "Bathrooms",
-      powder: "Powder room",
-      area: "Living area",
-      lot: "Lot",
-      year: "Year built",
-      mls: "Centris no.",
-    },
+    estimate: "Estimate my payment",
     about: "The property",
     role: "Residential real estate broker, RE/MAX Direct",
     visitTitle: "Book a visit",
@@ -122,16 +105,10 @@ const PropertyDetailPage = () => {
   const others = list.filter((p) => p.id !== property.id && isOpen(p) && PROPERTY_SLUGS[p.id]).slice(0, 3);
   const route = lang === "fr" ? `/proprietes/${slug}` : `/en/properties/${slug}`;
 
-  const specs: { label: string; value?: string }[] = [
-    { label: c.specs.type, value: property.type },
-    { label: c.specs.bedrooms, value: property.bedrooms },
-    { label: c.specs.bathrooms, value: property.bathrooms },
-    { label: c.specs.powder, value: property.powderRooms },
-    { label: c.specs.area, value: property.area },
-    { label: c.specs.lot, value: property.lotSize },
-    { label: c.specs.year, value: property.yearBuilt },
-    { label: c.specs.mls, value: property.mls },
-  ].filter((s) => s.value && s.value !== "—");
+  const details = open ? getPropertyDetails(property.id, lang) : undefined;
+  const priceNumber = Number(property.price.replace(/[^\d]/g, "")) || 0;
+  const isLand = /terrain|lot/i.test(property.type) && !property.bedrooms?.match(/\d/);
+  const showCalculator = Boolean(details) && !isLand && property.status === "active";
 
   return (
     <>
@@ -159,9 +136,12 @@ const PropertyDetailPage = () => {
 
           <div className="mt-6 flex flex-col gap-4 pb-8 md:flex-row md:items-end md:justify-between md:pb-10">
             <div>
-              <p className="text-[13px] font-semibold tracking-[0.02em]" style={{ color: "var(--text-on-dark-muted)" }}>
-                {c.status[property.status]}
-              </p>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <p className="text-[13px] font-semibold tracking-[0.02em]" style={{ color: "var(--text-on-dark-muted)" }}>
+                  {c.status[property.status]}
+                </p>
+                {details && <OpenHouseBadge id={property.id} lang={lang} />}
+              </div>
               <h1
                 className="mt-2 text-white"
                 style={{ fontFamily: "var(--display)", fontSize: "clamp(2rem, 4.4vw, 3.25rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
@@ -193,16 +173,9 @@ const PropertyDetailPage = () => {
       </section>
 
       <section className="pb-16 pt-10 md:pb-24 md:pt-14" style={{ background: "var(--cream)" }}>
-        <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
-          <div>
-            <dl className="grid grid-cols-2 gap-x-6 sm:grid-cols-3">
-              {specs.map((s) => (
-                <div key={s.label} className="border-t py-4" style={{ borderColor: "rgba(0,14,53,.12)" }}>
-                  <dt className="text-[13px]" style={{ color: "#4A5475" }}>{s.label}</dt>
-                  <dd className="mt-1 text-[17px] font-semibold" style={{ color: "var(--ink)" }}>{s.value}</dd>
-                </div>
-              ))}
-            </dl>
+        <div className="section-container grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
+          <div className="min-w-0">
+            <StatBand property={property} lang={lang} />
 
             <h2 className="mt-12" style={{ fontFamily: "var(--display)", fontSize: "clamp(1.5rem, 2.4vw, 2rem)", color: "var(--ink)" }}>
               {c.about}
@@ -210,6 +183,15 @@ const PropertyDetailPage = () => {
             <p className="prose-body mt-4" style={{ lineHeight: 1.85 }}>
               {property.description}
             </p>
+            <PropertySections property={property} lang={lang} />
+            {showCalculator && (
+              <MortgageCalculator
+                price={priceNumber}
+                monthlyTaxes={(details?.taxes?.total ?? 0) / 12}
+                monthlyFees={(details?.expenses?.total ?? 0) / 12}
+                lang={lang}
+              />
+            )}
           </div>
 
           <aside className="lg:sticky lg:top-28 lg:self-start">
@@ -251,6 +233,11 @@ const PropertyDetailPage = () => {
                   <MessageSquare size={16} aria-hidden="true" /> {c.text}
                 </a>
               </div>
+              {showCalculator && (
+                <a href="#calculatrice" className="mt-4 block text-center text-[14px] font-semibold" style={{ color: "var(--gold-text)" }}>
+                  {c.estimate}
+                </a>
+              )}
               <p className="mt-3 text-center text-[13px]" style={{ color: "#4A5475" }}>{PHONE_DISPLAY}</p>
             </div>
           </aside>
