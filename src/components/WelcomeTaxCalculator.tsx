@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useId } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -59,6 +59,7 @@ const WelcomeTaxCalculator = () => {
     return calculateWelcomeTax(price, muni);
   }, [price, muni]);
 
+  const uid = useId();
   return (
     <div className="bg-card rounded-[var(--card-radius)] border border-border shadow-[var(--card-shadow)] p-6 sm:p-8">
       <h3 className="mb-6">{l.title}</h3>
@@ -66,14 +67,15 @@ const WelcomeTaxCalculator = () => {
       <div className="grid gap-5 sm:grid-cols-2">
         {/* Price */}
         <div className="space-y-1.5">
-          <Label>{l.price}</Label>
-          <Input type="number" min={0} step={1000} value={price} onChange={(e) => setPrice(Number(e.target.value))} />
+          <Label htmlFor={`${uid}-price`}>{l.price}</Label>
+          <Input id={`${uid}-price`} type="number" min={0} step={1000} value={price} onChange={(e) => setPrice(Number(e.target.value))} />
         </div>
 
         {/* Municipality */}
         <div className="space-y-1.5">
-          <Label>{l.municipality}</Label>
+          <Label htmlFor={`${uid}-muni`}>{l.municipality}</Label>
           <select
+            id={`${uid}-muni`}
             value={muniId}
             onChange={(e) => setMuniId(e.target.value)}
             className="flex h-12 w-full rounded-xl border border-input bg-background px-4 py-2.5 text-[0.9375rem] text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/20 focus-visible:border-primary/30"
