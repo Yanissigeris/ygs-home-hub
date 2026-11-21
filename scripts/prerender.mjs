@@ -119,6 +119,23 @@ async function buildRouteGitDates() {
       /* fichier hors git — fallback */
     }
   }
+  /* Pages propriété : une seule route dynamique (/proprietes/:slug). Date =
+   * dernier commit sur le gabarit OU sur les données des fiches. */
+  const propFiles = [
+    "src/pages/PropertyDetailPage.tsx",
+    "src/data/properties.ts",
+    "src/data/properties-en.ts",
+    "src/data/property-details.json",
+    "src/data/property-pages.ts",
+  ];
+  let propDate = "";
+  for (const f of propFiles) {
+    try {
+      const d = execSync(`git log -1 --format=%cs -- "${f}"`, { cwd: ROOT }).toString().trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(d) && d > propDate) propDate = d;
+    } catch { /* fichier absent */ }
+  }
+  if (propDate) dates.__property = propDate;
   console.log(`✅ Sitemap: lastmod git résolu pour ${Object.keys(dates).length} routes`);
   return dates;
 }
@@ -795,7 +812,7 @@ async function main() {
 
       return `  <url>
     <loc>${xmlEscape(loc)}</loc>
-    <lastmod>${meta?.lastmod || routeGitDates[route] || SITE_LAST_UPDATE}</lastmod>
+    <lastmod>${meta?.lastmod || routeGitDates[route] || (/^\/(proprietes|en\/properties)\/./.test(route) ? routeGitDates.__property : "") || SITE_LAST_UPDATE}</lastmod>
     <changefreq>${changefreqFor(route)}</changefreq>
     <priority>${priorityFor(route)}</priority>${alternates}
   </url>`;
