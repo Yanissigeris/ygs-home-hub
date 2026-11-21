@@ -666,8 +666,8 @@ h1.hero-eyebrow {
 @media (hover: hover) and (pointer: fine) {
   .hero-cta-btn:hover {
     transform: translateY(-2px);
-    background: #5A80FF !important;
-    border-color: #5A80FF !important;
+    background: var(--action-hover) !important;
+    border-color: var(--action-hover) !important;
     box-shadow: 0 4px 16px rgba(51,102,255, 0.4) !important;
   }
 }
@@ -1096,7 +1096,8 @@ body:has([data-page-cta]) .footer-cta {
   color: #4A5475;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity .35s ease-out, transform .5s var(--shift-ease);
+  /* Leaving: fade fast so the line is gone before the price slides back over it */
+  transition: opacity .12s ease-out, transform .5s var(--shift-ease);
 }
 @media (hover: hover) {
   .shift-card:hover .shift-card__media,
@@ -1106,7 +1107,7 @@ body:has([data-page-cta]) .footer-cta {
   .shift-card:hover .shift-card__head,
   .shift-card:focus-visible .shift-card__head { transform: translateY(0); }
   .shift-card:hover .shift-card__line,
-  .shift-card:focus-visible .shift-card__line { opacity: 1; transform: translateY(0); transition-delay: .06s, 0s; }
+  .shift-card:focus-visible .shift-card__line { opacity: 1; transform: translateY(0); transition: opacity .35s ease-out .06s, transform .5s var(--shift-ease); }
 }
 @media (hover: none) {
   .shift-card__media { clip-path: inset(0 0 var(--shift) 0); }

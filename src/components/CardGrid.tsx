@@ -213,7 +213,7 @@ const CardGrid = ({
         <div className="flex items-end justify-between gap-6">
           <h2 className="max-w-[36rem]">{title}</h2>
           <p className="shrink-0 pb-1 text-[0.8125rem] font-medium tabular-nums tracking-[0.02em] text-[#4A5475] lg:hidden" aria-hidden="true">
-            {String(active + 1).padStart(2, "0")} <span className="text-[rgba(0,14,53,0.55)]">/ {String(items.length).padStart(2, "0")}</span>
+            {String(active + 1).padStart(2, "0")} <span className="text-[rgba(0,14,53,0.64)]">/ {String(items.length).padStart(2, "0")}</span>
           </p>
         </div>
         <div
