@@ -64,7 +64,7 @@ const listings: Listing[] = [
   {
     id: "26501194", mls: "26501194",
     address: "383 Boul. des Grives, app. 4", city: "Gatineau (Hull, Plateau de la Capitale)",
-    price_fr: "294 900 $", price_en: "$294,900",
+    price_fr: "282 900 $", price_en: "$282,900",
     type: "Appartement / Condominium apartment", bedrooms: "2", bathrooms: "1", area: "1 144 pi² / sq ft", year_built: "2006",
     status: "active",
     remax_url: "https://remax-direct.com/fr/nos-proprietes/gatineau-hull/383-boul-des-grives/26501194",
