@@ -99,7 +99,7 @@ async function buildRouteGitDates() {
   const compToFile = {};
   for (const m of appSrc.matchAll(/import\s+(\w+)\s+from\s+["']\.\/pages\/([^"']+)["']/g))
     compToFile[m[1]] = `src/pages/${m[2]}`;
-  for (const m of appSrc.matchAll(/const\s+(\w+)\s*=\s*React\.lazy\(\(\)\s*=>\s*import\(["']\.\/pages\/([^"']+)["']\)\)/g))
+  for (const m of appSrc.matchAll(/const\s+(\w+)\s*=\s*(?:React\.lazy|lazyPage|lazyWithPreload)\(\(\)\s*=>\s*import\(["']\.\/pages\/([^"']+)["']\)\)/g))
     compToFile[m[1]] = `src/pages/${m[2]}`;
 
   const routeToComp = {};

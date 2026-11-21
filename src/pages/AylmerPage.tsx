@@ -264,6 +264,9 @@ const AylmerPage = () => (
           <Button className="mt-4" size="lg" asChild>
             <Link to="/evaluation-maison-aylmer/">Évaluation gratuite de votre propriété →</Link>
           </Button>
+          <p className="prose-body pt-2">
+            Le processus complet, de l'évaluation jusqu'au notaire, est expliqué sur ma page <Link to="/vendre-maison-aylmer/" className="text-accent underline underline-offset-2">Vendre une maison à Aylmer</Link>.
+          </p>
         </div>
 
         {/* Right — steps */}

@@ -161,6 +161,9 @@ const HullPage = () => (
           <Button size="lg" asChild>
             <Link to="/evaluation-maison-hull/">Évaluation gratuite →</Link>
           </Button>
+          <p className="prose-body mt-6">
+            Chaque étape de la vente, de l'évaluation à la signature, est expliquée sur ma page <Link to="/vendre-maison-hull/" className="text-accent underline underline-offset-2">Vendre une maison à Hull</Link>.
+          </p>
         </div>
       </div>
     </section>
