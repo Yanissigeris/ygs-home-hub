@@ -117,7 +117,7 @@ export const propertiesEn: Property[] = [
     id: "26501194",
     address: "383 Boul. des Grives, apt. 4",
     city: "Gatineau (Hull, Plateau de la Capitale)",
-    price: "$294,900",
+    price: "$282,900",
     type: "Condominium apartment",
     bedrooms: "2",
     bathrooms: "1",

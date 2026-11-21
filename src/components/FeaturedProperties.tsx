@@ -184,7 +184,7 @@ const FeaturedProperties = React.forwardRef<HTMLElement, FeaturedPropertiesProps
       "11366995", // Triplex Hull/Plateau (vendu, flagship 949 900 $)
       "18600312", // Maison 45 rue des Louveteaux (actif, 639 900 $)
       "21600052", // Maison 516 rue Notre-Dame (actif, 364 900 $)
-      "26501194", // Condo 383 boul. des Grives (actif, 294 900 $)
+      "26501194", // Condo 383 boul. des Grives (actif, 282 900 $)
       "19326119", // Quadruplex 71 rue Lessard (vendu, 1 029 900 $)
       "16828271", // Maison 312 rue Le Gallois (vendu, 649 900 $)
     ];
