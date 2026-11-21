@@ -7,7 +7,7 @@
 
 [build]
   publish = "dist"
-  command = "npm ci --include=dev && npx --no-install puppeteer browsers install chrome && npm run build"
+  command = "(git rev-parse --is-shallow-repository | grep -q true && git fetch --unshallow --quiet) || true; npm ci --include=dev && npx --no-install puppeteer browsers install chrome && npm run build"
 
      # IndexNow : soumet à Bing les URLs modifiées, après chaque déploiement de
    # production réussi (voir netlify/plugins/indexnow/index.js).
