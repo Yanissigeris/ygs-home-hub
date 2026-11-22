@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, type CSSProperties } from "react";
 import { VALUATION_FORM_ID } from "@/lib/valuationAnchor";
 import { useForm, Controller } from "react-hook-form";
@@ -72,6 +73,9 @@ const T = {
     trustTransactions: "300+ transactions",
     receive: "Vous recevez une fourchette de valeur et trois prix d'affichage.",
     beforeSend: "S'il me manque un détail sur l'état de la maison, je vous contacte.",
+    reassure: "Je vous réponds moi-même. Vous recevez les chiffres, puis vous décidez si vous voulez aller plus loin.",
+    privacy: "Politique de confidentialité",
+    privacyHref: "/politique-de-confidentialite/",
   },
   en: {
     confidential: "Confidential, no obligation",
@@ -113,6 +117,9 @@ const T = {
     trustTransactions: "300+ transactions",
     receive: "You'll receive a value range and three listing prices.",
     beforeSend: "If I'm missing a detail about the home's condition, I'll get in touch.",
+    reassure: "I reply myself. You get the numbers, then you decide whether to go further.",
+    privacy: "Privacy policy",
+    privacyHref: "/en/privacy-policy/",
   },
 } as const;
 
@@ -582,6 +589,17 @@ const ValuationForm = ({
         {isGlass && (
           <p className="text-center text-[0.8125rem] leading-snug text-primary-foreground/85">{t.beforeSend}</p>
         )}
+
+        {/* Réassurance au moment de cliquer : qui répond, pas de pression, lien de confidentialité */}
+        <p className={cn("text-center text-[0.8125rem] leading-snug", isGlass ? "text-primary-foreground/85" : "text-muted-foreground")}>
+          {t.reassure}{" "}
+          <Link
+            to={t.privacyHref}
+            className={cn("underline underline-offset-2", isGlass ? "text-primary-foreground" : "text-[var(--gold-text)]")}
+          >
+            {t.privacy}
+          </Link>
+        </p>
 
         {showTrustBadges && (
           <div
