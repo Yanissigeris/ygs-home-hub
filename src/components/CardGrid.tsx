@@ -1,5 +1,6 @@
 import * as React from "react";
 import type { LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import yanisAvatar from "@/assets/yanis-avatar.webp";
 
@@ -113,10 +114,16 @@ const CardGrid = ({
                       onMouseEnter={() => setOpen(i)}
                       onFocus={() => setOpen(i)}
                       className={`flex w-full items-baseline justify-between gap-6 py-6 text-left [font-family:var(--display)] text-[1.5rem] font-semibold leading-[1.1] tracking-[-0.035em] transition-colors duration-200 lg:py-7 lg:text-[clamp(1.75rem,2.6vw,2.5rem)] ${
-                        active ? "text-[var(--ink)]" : "text-[rgba(0,14,53,0.5)] hover:text-[var(--ink)]"
+                        active ? "text-[var(--ink)]" : "text-[rgba(0,14,53,0.72)] hover:text-[var(--ink)]"
                       }`}
                     >
                       <span>{item.title}</span>
+                      {/* Ordinateur : flèche qui montre que la question s'ouvre à droite (les questions inactives ne paraissent plus désactivées) */}
+                      <ArrowRight
+                        aria-hidden="true"
+                        strokeWidth={2}
+                        className={`hidden h-6 w-6 shrink-0 self-center transition-[color,transform] duration-200 lg:block ${active ? "translate-x-1 text-[var(--action)]" : "text-[rgba(0,14,53,0.35)]"}`}
+                      />
                       <span aria-hidden="true" className="relative h-4 w-4 shrink-0 lg:hidden">
                         <span className="absolute left-0 top-1/2 h-[1.5px] w-4 -translate-y-1/2 bg-current" />
                         <span className={`absolute left-1/2 top-0 h-4 w-[1.5px] -translate-x-1/2 bg-current transition-transform duration-200 ${active ? "scale-y-0" : "scale-y-100"}`} />
