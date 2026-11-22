@@ -90,7 +90,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
         rating: "Average rating on Google and Facebook",
         ratingValue: "5.0",
         ratingHref: "/en/testimonials/",
-        hof: "RE/MAX, LLC Hall of Fame",
+        hof: "RE/MAX Hall of Fame",
         since: "Broker in the Outaouais since",
         aria: "Track record",
       }
@@ -99,7 +99,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
         rating: "Note moyenne sur Google et Facebook",
         ratingValue: "5,0",
         ratingHref: "/temoignages/",
-        hof: "Hall of Fame RE/MAX, LLC",
+        hof: "Temple de la renommée RE/MAX",
         since: "Courtier en Outaouais depuis",
         aria: "Parcours en chiffres",
       };

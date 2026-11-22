@@ -1119,9 +1119,15 @@ body:has([data-page-cta]) .footer-cta {
   .shift-card__media, .shift-card__img, .shift-card__head, .shift-card__line { transition: none !important; }
 }
 
-/* Mobile: while the cookie banner is open, the sticky action bars step aside
-   so the bottom of the screen shows one bar, not two stacked (first visit only). */
-html[data-cookie-bar="open"] [data-sticky-mobile-cta],
+/* Mobile: while the cookie banner is open, the sticky action bar sits right on top of it
+   and the two read as one navy panel (no gap, no double shadow, tighter padding).
+   The action bar stays reachable even if the visitor never answers the banner. */
+html[data-cookie-bar="open"] [data-sticky-mobile-cta] {
+  border-top-color: rgba(255,255,255,.12) !important;
+  padding-top: .6rem !important;
+  padding-bottom: .55rem !important;
+}
+/* The guide banner (seller pages) still steps aside, so the panel never holds three rows */
 html[data-cookie-bar="open"] [data-sticky-guide-banner] {
   transform: translateY(calc(100% + var(--cookie-bar-h, 0px))) !important;
   pointer-events: none;

@@ -283,15 +283,16 @@ const CookieConsent = () => {
           className="fixed bottom-0 inset-x-0 z-[9999] md:hidden"
           style={{
             background: "var(--ink)",
-            borderTop: "1px solid rgba(255,255,255,.12)",
-            padding: "10px 12px",
-            paddingBottom: "calc(10px + env(safe-area-inset-bottom, 0px))",
+            borderTop: "1px solid rgba(255,255,255,.08)",
+            padding: "6px 12px",
+            paddingBottom: "calc(6px + env(safe-area-inset-bottom, 0px))",
             display: "flex",
             alignItems: "center",
             gap: "8px",
             color: "var(--cream)",
             fontSize: "11px",
-            boxShadow: "0 -4px 16px rgba(0,0,0,0.3)",
+            /* Pas d'ombre propre : quand la barre d'action se pose dessus, les deux forment un seul panneau */
+            boxShadow: "none",
             transform: visible ? "translateY(0)" : "translateY(100%)",
             transition: "transform .35s cubic-bezier(.22,.61,.36,1)",
           }}
