@@ -370,10 +370,9 @@ const SiteHeader = () => {
             <span
               style={{
                 fontFamily: "var(--sans)",
-                fontSize: "10px",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.7)",
+                fontSize: "12px",
+                letterSpacing: "0",
+                color: "rgba(255,255,255,0.78)",
                 fontWeight: 500,
                 marginTop: 2,
               }}
@@ -467,10 +466,9 @@ const SiteHeader = () => {
             <span
               style={{
                 fontFamily: "var(--sans)",
-                fontSize: "10px",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.7)",
+                fontSize: "12px",
+                letterSpacing: "0",
+                color: "rgba(255,255,255,0.78)",
                 fontWeight: 500,
                 whiteSpace: "nowrap",
                 marginTop: 1,

@@ -1,8 +1,7 @@
 import PageMeta from "@/components/PageMeta";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import LinkColumns from "@/components/LinkColumns";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
-import SectorLinks from "@/components/SectorLinks";
-import RelatedPages from "@/components/RelatedPages";
 import { marketArticlePages, marketBlockCopy } from "@/data/market-articles";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -168,37 +167,40 @@ const SellerPage = () =>
 
     <FAQSection items={faq} />
 
-    <SectorLinks background="white" sectors={[
-      { name: "Aylmer", href: "/aylmer/", detail: "Familles, quartiers établis" },
-      { name: "Plateau", href: "/plateau/", detail: "Côtés Aylmer et Hull, maisons neuves, familial" },
-      { name: "Hull", href: "/hull/", detail: "Urbain, condos, plex, proximité Ottawa" },
-      { name: "Chelsea", href: "/chelsea/", detail: "Village, nature, parc de la Gatineau" },
-      { name: "Cantley", href: "/cantley/", detail: "Rural, grands terrains, collines" },
-      { name: "Buckingham", href: "/buckingham-masson-angers/", detail: "Rivière, prix accessibles, nature" },
-      { name: "Masson-Angers", href: "/masson-angers/", detail: "Neufs, familles, en croissance" },
-      { name: "Val-des-Monts", href: "/val-des-monts/", detail: "Lacs, chalets, villégiature" },
-      { name: "Pontiac", href: "/pontiac/", detail: "Rural, grands espaces, rivière" },
-      { name: "Côte-d'Azur", href: "/cote-dazur-gatineau/", detail: "Bungalows, résidentiel établi" },
-      { name: "Limbour", href: "/limbour/", detail: "Familial moderne, parcs" },
-      { name: "Gatineau-centre", href: "/gatineau/", detail: "Services, central, plex" },
+    {/* Fin de page compacte : mêmes liens et mêmes titres qu'avant (secteurs, lectures, marché), en listes plutôt qu'en grilles de cartes */}
+    <LinkColumns columns={[
+      {
+        title: "Secteurs à comparer",
+        twoUp: true,
+        links: [
+          { label: "Aylmer", href: "/aylmer/" },
+          { label: "Plateau", href: "/plateau/" },
+          { label: "Hull", href: "/hull/" },
+          { label: "Chelsea", href: "/chelsea/" },
+          { label: "Cantley", href: "/cantley/" },
+          { label: "Buckingham", href: "/buckingham-masson-angers/" },
+          { label: "Masson-Angers", href: "/masson-angers/" },
+          { label: "Val-des-Monts", href: "/val-des-monts/" },
+          { label: "Pontiac", href: "/pontiac/" },
+          { label: "Côte-d'Azur", href: "/cote-dazur-gatineau/" },
+          { label: "Limbour", href: "/limbour/" },
+          { label: "Gatineau-centre", href: "/gatineau/" },
+        ],
+      },
+      {
+        title: "À lire avant de vendre",
+        links: [
+          { label: "Quand vendre sa maison à Gatineau", href: "/quand-vendre-a-gatineau/" },
+          { label: "Home staging à Gatineau", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
+          { label: "Blogue immobilier", href: "/blogue/" },
+          { label: "Quartiers de l'Outaouais", href: "/quartiers-a-considerer-a-gatineau/" },
+        ],
+      },
+      {
+        title: marketBlockCopy.fr.title,
+        links: marketArticlePages("fr", "seller").map((a) => ({ label: a.title, href: a.href })),
+      },
     ]} />
-
-    <RelatedPages
-      overline="À lire aussi"
-      title="À lire avant de vendre"
-      pages={[
-        { title: "Quand vendre sa maison à Gatineau", text: "Le bon moment pour vendre en Outaouais.", href: "/quand-vendre-a-gatineau/" },
-        { title: "Home staging à Gatineau", text: "Conseils pour préparer sa vente.", href: "/blogue/home-staging-vendre-plus-vite-gatineau/" },
-        { title: "Blogue immobilier", text: "Tous nos articles et analyses.", href: "/blogue/" },
-        { title: "Quartiers de l'Outaouais", text: "Comparez les secteurs.", href: "/quartiers-a-considerer-a-gatineau/" },
-      ]}
-    />
-    {/* Internal links to the latest market articles (SEO: they had a single inlink from the blog index) */}
-    <RelatedPages
-      overline={marketBlockCopy.fr.overline}
-      title={marketBlockCopy.fr.title}
-      pages={marketArticlePages("fr", "seller")}
-    />
     <StickyMobileCTA forceIntent="vendre" />
   </>;
 

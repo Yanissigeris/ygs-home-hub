@@ -261,7 +261,7 @@ const AylmerPageEn = () => (
             <Link to="/en/home-valuation-aylmer/">Free property valuation →</Link>
           </Button>
           <p className="prose-body pt-2">
-            Every step, from valuation to the notary, is on my <Link to="/en/sell-house-aylmer/" className="text-accent underline underline-offset-2">Selling a house in Aylmer</Link> page.
+            Every step, from valuation to the notary, is on my <Link to="/en/sell-house-aylmer/" className="text-[var(--gold-text)] underline underline-offset-2">Selling a house in Aylmer</Link> page.
           </p>
         </div>
 

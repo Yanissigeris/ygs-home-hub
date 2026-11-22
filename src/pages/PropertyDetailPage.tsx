@@ -4,6 +4,7 @@ import { ArrowLeft, Phone, MessageSquare } from "lucide-react";
 import PageMeta from "@/components/PageMeta";
 import PropertyGallery from "@/components/PropertyGallery";
 import PropertyCard from "@/components/PropertyCard";
+import PropertyStickyBar from "@/components/PropertyStickyBar";
 import { getPropertyDetails, MortgageCalculator, OpenHouseBadge, PropertySections, StatBand } from "@/components/PropertyDetails";
 import SuccessMessage from "@/components/SuccessMessage";
 import { Button } from "@/components/ui/button";
@@ -172,7 +173,8 @@ const PropertyDetailPage = () => {
         </div>
       </section>
 
-      <section className="pb-16 pt-10 md:pb-24 md:pt-14" style={{ background: "var(--cream)" }}>
+      {/* data-page-cta : la fiche a déjà son appel à l'action (visite ou évaluation), la bande générique du pied de page est masquée */}
+      <section data-page-cta="" className="pb-16 pt-10 md:pb-24 md:pt-14" style={{ background: "var(--cream)" }}>
         <div className="section-container grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
           <div className="min-w-0">
             <StatBand property={property} lang={lang} />
@@ -194,7 +196,7 @@ const PropertyDetailPage = () => {
             )}
           </div>
 
-          <aside className="lg:sticky lg:top-28 lg:self-start">
+          <aside id="visite" className="scroll-mt-24 lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-[20px] bg-white p-6 md:p-7" style={{ boxShadow: "0 1px 0 rgba(0,14,53,.06), 0 18px 40px rgba(0,14,53,.07)" }}>
               <div className="flex items-center gap-3">
                 <img src={yanisAvatar} alt="Yanis Gauthier-Sigeris" width={56} height={56} className="h-14 w-14 rounded-full object-cover" />
@@ -254,6 +256,8 @@ const PropertyDetailPage = () => {
           </div>
         </section>
       )}
+
+      {open && <PropertyStickyBar lang={lang} targetId="visite" />}
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, type CSSProperties } from "react";
 import { VALUATION_FORM_ID } from "@/lib/valuationAnchor";
 import { useForm, Controller } from "react-hook-form";
@@ -72,6 +73,9 @@ const T = {
     trustTransactions: "300+ transactions",
     receive: "Vous recevez une fourchette de valeur et trois prix d'affichage.",
     beforeSend: "S'il me manque un détail sur l'état de la maison, je vous contacte.",
+    reassure: "Je vous réponds moi-même. Vous recevez les chiffres, puis vous décidez si vous voulez aller plus loin.",
+    privacy: "Politique de confidentialité",
+    privacyHref: "/politique-de-confidentialite/",
   },
   en: {
     confidential: "Confidential, no obligation",
@@ -113,6 +117,9 @@ const T = {
     trustTransactions: "300+ transactions",
     receive: "You'll receive a value range and three listing prices.",
     beforeSend: "If I'm missing a detail about the home's condition, I'll get in touch.",
+    reassure: "I reply myself. You get the numbers, then you decide whether to go further.",
+    privacy: "Privacy policy",
+    privacyHref: "/en/privacy-policy/",
   },
 } as const;
 
@@ -294,7 +301,7 @@ const ValuationForm = ({
 
   // Glass variant input classes
   const glassInput =
-    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/65 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
+    "mt-1 bg-white/[0.08] border-white/[0.18] text-primary-foreground placeholder:text-primary-foreground/50 focus-visible:ring-accent/30 focus-visible:border-accent/40 h-11";
   const glassLabel = "text-primary-foreground text-[0.8125rem]";
   const errClass = cn(
     "mt-1 text-[0.75rem] leading-snug",
@@ -400,6 +407,7 @@ const ValuationForm = ({
               />
               <FieldError id="address-err" msg={errors.address?.message} className={errClass} />
             </div>
+            {/* Nom et téléphone côte à côte, courriel sur sa propre ligne (plus de courriel tronqué sur ordinateur) */}
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <Label htmlFor="name" className={glassLabel}>
@@ -417,47 +425,47 @@ const ValuationForm = ({
                 <FieldError id="name-err" msg={errors.name?.message} className={errClass} />
               </div>
               <div>
-                <Label htmlFor="email" className={glassLabel}>
-                  {t.email}
+                <Label htmlFor="phone" className={glassLabel}>
+                  {t.phone}
                 </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder={t.emailPh}
-                  className={glassInput}
-                  autoComplete="email"
-                  inputMode="email"
-                  aria-invalid={!!errors.email}
-                  aria-describedby={errors.email ? "email-err" : undefined}
-                  {...register("email")}
+                <Controller
+                  name="phone"
+                  control={control}
+                  render={({ field }) => (
+                    <Input
+                      id="phone"
+                      type="tel"
+                      placeholder={t.phonePh}
+                      className={glassInput}
+                      autoComplete="tel"
+                      inputMode="tel"
+                      aria-invalid={!!errors.phone}
+                      aria-describedby={errors.phone ? "phone-err" : undefined}
+                      value={field.value ?? ""}
+                      onBlur={field.onBlur}
+                      onChange={(e) => field.onChange(formatCAPhone(e.target.value))}
+                    />
+                  )}
                 />
-                <FieldError id="email-err" msg={errors.email?.message} className={errClass} />
+                <FieldError id="phone-err" msg={errors.phone?.message} className={errClass} />
               </div>
             </div>
             <div>
-              <Label htmlFor="phone" className={glassLabel}>
-                {t.phone}
+              <Label htmlFor="email" className={glassLabel}>
+                {t.email}
               </Label>
-              <Controller
-                name="phone"
-                control={control}
-                render={({ field }) => (
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder={t.phonePh}
-                    className={glassInput}
-                    autoComplete="tel"
-                    inputMode="tel"
-                    aria-invalid={!!errors.phone}
-                    aria-describedby={errors.phone ? "phone-err" : undefined}
-                    value={field.value ?? ""}
-                    onBlur={field.onBlur}
-                    onChange={(e) => field.onChange(formatCAPhone(e.target.value))}
-                  />
-                )}
+              <Input
+                id="email"
+                type="email"
+                placeholder={t.emailPh}
+                className={glassInput}
+                autoComplete="email"
+                inputMode="email"
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-err" : undefined}
+                {...register("email")}
               />
-              <FieldError id="phone-err" msg={errors.phone?.message} className={errClass} />
+              <FieldError id="email-err" msg={errors.email?.message} className={errClass} />
             </div>
             <div>
               <Label htmlFor="message" className={glassLabel}>
@@ -581,6 +589,17 @@ const ValuationForm = ({
         {isGlass && (
           <p className="text-center text-[0.8125rem] leading-snug text-primary-foreground/85">{t.beforeSend}</p>
         )}
+
+        {/* Réassurance au moment de cliquer : qui répond, pas de pression, lien de confidentialité */}
+        <p className={cn("text-center text-[0.8125rem] leading-snug", isGlass ? "text-primary-foreground/85" : "text-muted-foreground")}>
+          {t.reassure}{" "}
+          <Link
+            to={t.privacyHref}
+            className={cn("underline underline-offset-2", isGlass ? "text-primary-foreground" : "text-[var(--gold-text)]")}
+          >
+            {t.privacy}
+          </Link>
+        </p>
 
         {showTrustBadges && (
           <div

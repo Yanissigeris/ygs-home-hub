@@ -178,7 +178,7 @@ const HullPageEn = () => (
             <Link to="/en/home-valuation-hull/">Free Home Valuation →</Link>
           </Button>
           <p className="prose-body mt-6">
-            The full selling process, step by step, is on my <Link to="/en/sell-house-hull/" className="text-accent underline underline-offset-2">Selling a house in Hull</Link> page.
+            The full selling process, step by step, is on my <Link to="/en/sell-house-hull/" className="text-[var(--gold-text)] underline underline-offset-2">Selling a house in Hull</Link> page.
           </p>
         </div>
       </div>
