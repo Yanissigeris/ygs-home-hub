@@ -5,7 +5,7 @@ import { getA11yLabel } from "@/lib/a11y";
 import { OPEN_COOKIE_PREFS_EVENT } from "@/lib/cookie-events";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
-import logoYgsWhite from "@/assets/ygs-logo.png";
+import logoYgsWhite from "@/assets/ygs-logo-updated.png";
 import logoMW from "@/assets/logo-mw-white-transparent.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
@@ -136,16 +136,22 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
         <div className="section-container">
           {/* ── Brand row ── */}
           <div className="flex items-center justify-between gap-6 py-7 sm:py-9">
-            <img
-              src={logoYgsWhite}
-              alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
-              width={160}
-              height={180}
-              className="h-auto block"
-              style={{ width: "clamp(56px, 14vw, 72px)" }}
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="flex items-center gap-4">
+              <img
+                src={logoYgsWhite}
+                alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
+                width={160}
+                height={180}
+                className="h-auto block shrink-0"
+                style={{ width: "clamp(40px, 11vw, 52px)" }}
+                loading="lazy"
+                decoding="async"
+              />
+              <div aria-hidden="true" className="leading-tight" style={{ borderLeft: "1px solid rgba(255,255,255,.2)", paddingLeft: 16 }}>
+                <p style={{ fontFamily: "var(--display)", fontSize: "1.0625rem", fontWeight: 600, letterSpacing: "-0.01em", color: "var(--cream)", margin: 0 }}>Yanis Gauthier-Sigeris</p>
+                <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", margin: 0 }}>{lang === "en" ? "Real estate broker" : "Courtier immobilier"}</p>
+              </div>
+            </div>
 
             {/* Social icons */}
             <div className="flex items-center gap-3">
