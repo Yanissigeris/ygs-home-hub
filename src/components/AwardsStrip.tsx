@@ -159,7 +159,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
             <span className="ps-label">{t.rating}</span>
             {" "}
             <span className="ps-value">
-              <Odometer value={t.ratingValue} phase={phase} delay={120} />
+              <span className="ps-odo ps-static">{t.ratingValue}</span>
               <small>/5</small>
             </span>
             {" "}
@@ -168,7 +168,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
             <span className="ps-label">{t.hof}</span>
             {" "}
             <span className="ps-value">
-              <Odometer value="2024" phase={phase} delay={180} />
+              <span className="ps-odo ps-static">2024</span>
             </span>
             {" "}
           </div>
@@ -176,7 +176,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
             <span className="ps-label">{t.since}</span>
             {" "}
             <span className="ps-value">
-              <Odometer value="2017" phase={phase} delay={240} />
+              <span className="ps-odo ps-static">2017</span>
             </span>
             {" "}
           </div>
@@ -200,6 +200,7 @@ const AwardsStrip = React.forwardRef<HTMLElement, AwardsStripProps>(({ lang = "f
         .proof-strip .ps-value .ps-d:last-of-type{margin-right:-.06em}
         .proof-strip .ps-punct{display:inline-block;vertical-align:top;line-height:1}
         .proof-strip .ps-value .ps-odo{vertical-align:bottom}
+        .proof-strip .ps-static{letter-spacing:-.04em}
         .proof-strip .ps-value small{display:inline-block;vertical-align:bottom;line-height:1.1;font-size:.875rem;color:#4A5475;margin-left:3px;letter-spacing:0}
         .proof-strip .ps-row--link .ps-label{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s ease,color .2s ease}
         .proof-strip .ps-row--link:hover .ps-label,.proof-strip .ps-row--link:focus-visible .ps-label{background-size:100% 1px;color:var(--ink)}

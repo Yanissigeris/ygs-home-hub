@@ -52,7 +52,7 @@ const GuideOffersSection = ({ lang = "fr" }: GuideOffersSectionProps) => {
                   className={`group flex w-[72%] max-w-[17rem] shrink-0 snap-start flex-col rounded-[1.25rem] p-6 text-left transition-[transform,box-shadow] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--action)] focus-visible:ring-offset-2 md:w-auto md:max-w-none md:shrink lg:min-h-[19rem] lg:rounded-[1.5rem] lg:p-8 [@media(hover:hover)]:hover:-translate-y-0.5 ${
                     lead
                       ? "bg-[var(--ink)]"
-                      : "border border-[rgba(0,14,53,0.09)] bg-[var(--cream)] shadow-[0_1px_2px_rgba(0,14,53,0.04),0_18px_40px_-24px_rgba(0,14,53,0.28)]"
+                      : "border border-[rgba(0,14,53,0.09)] bg-[var(--cream)] shadow-none"
                   }`}
                   onClick={() => setModalGuide(g.guideType)}
                 >
