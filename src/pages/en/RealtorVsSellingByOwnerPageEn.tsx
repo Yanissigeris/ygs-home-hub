@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import { Check, X } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -44,21 +45,21 @@ const RealtorVsSellingByOwnerPageEn = () => (
         <div>
           <h3 className="text-[1rem] font-semibold mb-3">With a broker</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ Centris listing</li>
-            <li>✓ Price backed by comparable sales</li>
-            <li>✓ Professional photos and targeted marketing</li>
-            <li>✓ Negotiation and OACIQ-regulated forms</li>
-            <li>✓ Full coordination through to closing</li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Centris listing</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Price backed by comparable sales</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Professional photos and targeted marketing</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Negotiation and OACIQ-regulated forms</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Full coordination through to closing</span></li>
           </ul>
         </div>
         <div>
           <h3 className="text-[1rem] font-semibold mb-3">Selling by owner</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ No commission to pay</li>
-            <li>✓ Full control of the process</li>
-            <li>✗ No access to Centris (MLS)</li>
-            <li>✗ Risk of underpricing</li>
-            <li>✗ Full management on your shoulders</li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>No commission to pay</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Pro: </span>Full control of the process</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Con: </span>No access to Centris (MLS)</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Con: </span>Risk of underpricing</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Con: </span>Full management on your shoulders</span></li>
           </ul>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import PageMeta from "@/components/PageMeta";
+import { Check, X } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
@@ -44,21 +45,21 @@ const CourtierOuVendreSoiMemePage = () => (
         <div>
           <h3 className="text-[1rem] font-semibold mb-3">Avec un courtier</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ Inscription sur Centris</li>
-            <li>✓ Prix appuyé sur des ventes comparables</li>
-            <li>✓ Photos professionnelles et marketing ciblé</li>
-            <li>✓ Négociation et formulaires encadrés par l'OACIQ</li>
-            <li>✓ Coordination complète jusqu'au notaire</li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Inscription sur Centris</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Prix appuyé sur des ventes comparables</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Photos professionnelles et marketing ciblé</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Négociation et formulaires encadrés par l'OACIQ</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Coordination complète jusqu'au notaire</span></li>
           </ul>
         </div>
         <div>
           <h3 className="text-[1rem] font-semibold mb-3">Vendre seul</h3>
           <ul className="space-y-2 text-[0.9375rem] leading-[1.6] text-muted-foreground">
-            <li>✓ Pas de commission à payer</li>
-            <li>✓ Contrôle total du processus</li>
-            <li>✗ Pas d'accès à Centris (MLS)</li>
-            <li>✗ Risque de sous-évaluation du prix</li>
-            <li>✗ Gestion complète à votre charge</li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Pas de commission à payer</span></li>
+            <li className="flex gap-2.5"><Check size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-[var(--ink-soft)]" /><span><span className="sr-only">Avantage : </span>Contrôle total du processus</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Inconvénient : </span>Pas d'accès à Centris (MLS)</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Inconvénient : </span>Risque de sous-évaluation du prix</span></li>
+            <li className="flex gap-2.5"><X size={17} aria-hidden="true" className="mt-[3px] shrink-0 text-muted-foreground/70" /><span><span className="sr-only">Inconvénient : </span>Gestion complète à votre charge</span></li>
           </ul>
         </div>
       </div>

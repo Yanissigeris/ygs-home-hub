@@ -75,6 +75,8 @@ interface HeroSectionProps {
   /** Optional shorter subtitle rendered only on mobile (<768px). Falls back to `subtitle`. */
   subtitleShort?: string;
   primaryCta?: { label: string; href: string };
+  /** Compact hero only: replaces primaryCta from 1024 px up (ex. texto on phones, contact form on desktop). */
+  primaryCtaDesktop?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   trustLine?: string;
   socialProof?: string;
@@ -153,6 +155,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
       subtitle,
       subtitleShort,
       primaryCta,
+      primaryCtaDesktop,
       secondaryCta,
       compact,
       backgroundImage,
@@ -494,8 +497,13 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               {(primaryCta || secondaryCta) && (
                 <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                   {primaryCta && (
-                    <Button size="xl" variant="accent" className="tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02] hover:opacity-90" style={{ background: "var(--action)", color: "var(--on-action)", borderColor: "var(--action)", boxShadow: "0 4px 18px rgba(0,0,0,0.25)" }} asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
+                    <Button size="xl" variant="accent" className={`tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02] hover:opacity-90${primaryCtaDesktop ? " lg:hidden" : ""}`} style={{ background: "var(--action)", color: "var(--on-action)", borderColor: "var(--action)", boxShadow: "0 4px 18px rgba(0,0,0,0.25)" }} asChild onClick={() => trackCTAClick(primaryCta.label, "hero-primary")}>
                       <Link to={canonicalPath(primaryCta.href)}>{primaryCta.label.replace(/\s*→$/, "")} →</Link>
+                    </Button>
+                  )}
+                  {primaryCtaDesktop && (
+                    <Button size="xl" variant="accent" className="hidden lg:inline-flex tracking-[0.02em] text-[0.85rem] font-semibold transition-transform duration-200 ease-out hover:scale-[1.02] hover:opacity-90" style={{ background: "var(--action)", color: "var(--on-action)", borderColor: "var(--action)", boxShadow: "0 4px 18px rgba(0,0,0,0.25)" }} asChild>
+                      <HeroCtaLink href={primaryCtaDesktop.href} onClick={() => trackCTAClick(primaryCtaDesktop.label, "hero-primary")}>{primaryCtaDesktop.label} →</HeroCtaLink>
                     </Button>
                   )}
                   {secondaryCta && (
