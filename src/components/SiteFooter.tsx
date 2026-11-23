@@ -147,7 +147,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 loading="lazy"
                 decoding="async"
               />
-              <div aria-hidden="true" className="leading-tight" style={{ borderLeft: "1px solid rgba(255,255,255,.2)", paddingLeft: 16 }}>
+              <div aria-hidden="true" className="hidden sm:block leading-tight whitespace-nowrap" style={{ borderLeft: "1px solid rgba(255,255,255,.2)", paddingLeft: 16 }}>
                 <p style={{ fontFamily: "var(--display)", fontSize: "1.0625rem", fontWeight: 600, letterSpacing: "-0.01em", color: "var(--cream)", margin: 0 }}>Yanis Gauthier-Sigeris</p>
                 <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", margin: 0 }}>{lang === "en" ? "Real estate broker" : "Courtier immobilier"}</p>
               </div>
