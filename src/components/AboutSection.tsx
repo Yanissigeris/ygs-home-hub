@@ -80,6 +80,7 @@ const AboutSection = React.forwardRef<HTMLElement, AboutSectionProps>(({ lang = 
               lineHeight: 1.8,
               marginBottom: "1.5rem",
               whiteSpace: "pre-line",
+              maxWidth: "60ch",
             }}
           >
             {c.body}

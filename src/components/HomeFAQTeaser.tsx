@@ -98,11 +98,13 @@ const HomeFAQTeaser = React.forwardRef<HTMLElement, FAQTeaserProps>(
                       />
                     </button>
                     <div
-                      className="overflow-hidden transition-[max-height,opacity] duration-300"
-                      style={{ maxHeight: isOpen ? 500 : 0, opacity: isOpen ? 1 : 0 }}
+                      className="grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none"
+                      style={{ gridTemplateRows: isOpen ? "1fr" : "0fr", opacity: isOpen ? 1 : 0 }}
                     >
-                      <div style={{ padding: "0 clamp(1.25rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem)", fontSize: ".85rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.8 }}>
-                        {item.a}
+                      <div className="min-h-0 overflow-hidden">
+                        <div style={{ padding: "0 clamp(1.25rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem)", fontSize: ".85rem", fontWeight: 400, color: "var(--muted)", lineHeight: 1.8 }}>
+                          {item.a}
+                        </div>
                       </div>
                     </div>
                   </div>
