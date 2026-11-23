@@ -64,10 +64,6 @@ const ReviewSlide = ({ review, lang, width, clone = false }: { review: Review; l
         fontWeight: 400,
         lineHeight: 1.75,
         color: "hsl(var(--foreground))",
-        display: "-webkit-box",
-        WebkitLineClamp: 8,
-        WebkitBoxOrient: "vertical",
-        overflow: "hidden",
       }}
     >
       {review.short.trim()}

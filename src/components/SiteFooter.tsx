@@ -5,7 +5,7 @@ import { getA11yLabel } from "@/lib/a11y";
 import { OPEN_COOKIE_PREFS_EVENT } from "@/lib/cookie-events";
 import { ChevronDown } from "lucide-react";
 import GoogleReviewBadge from "@/components/GoogleReviewBadge";
-import logoYgsWhite from "@/assets/ygs-logo.png";
+import logoYgsWhite from "@/assets/ygs-logo-updated.png";
 import logoMW from "@/assets/logo-mw-white-transparent.webp";
 import logoTemple from "@/assets/logo-temple-renommee.webp";
 import logoTranquillit from "@/assets/logo-tranquillit.webp";
@@ -135,20 +135,26 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
 
         <div className="section-container">
           {/* ── Brand row ── */}
-          <div className="flex flex-col items-center pt-8 pb-8 sm:pt-12 sm:pb-12">
-            <img
-              src={logoYgsWhite}
-              alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
-              width={160}
-              height={180}
-              className="h-auto mx-auto block"
-              style={{ width: "clamp(110px, 28vw, 160px)" }}
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="flex items-center justify-between gap-6 py-7 sm:py-9">
+            <div className="flex items-center gap-4">
+              <img
+                src={logoYgsWhite}
+                alt="YGS, Yanis Gauthier-Sigeris, courtier immobilier Gatineau"
+                width={160}
+                height={180}
+                className="h-auto block shrink-0"
+                style={{ width: "clamp(40px, 11vw, 52px)" }}
+                loading="lazy"
+                decoding="async"
+              />
+              <div aria-hidden="true" className="hidden sm:block leading-tight whitespace-nowrap" style={{ borderLeft: "1px solid rgba(255,255,255,.2)", paddingLeft: 16 }}>
+                <p style={{ fontFamily: "var(--display)", fontSize: "1.0625rem", fontWeight: 600, letterSpacing: "-0.01em", color: "var(--cream)", margin: 0 }}>Yanis Gauthier-Sigeris</p>
+                <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", margin: 0 }}>{lang === "en" ? "Real estate broker" : "Courtier immobilier"}</p>
+              </div>
+            </div>
 
             {/* Social icons */}
-            <div className="mt-6 flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {[
                 { href: "https://www.facebook.com/YanisGauthierSigeris", label: "Facebook", Icon: FacebookSvg },
                 { href: "https://www.instagram.com/yanisgauthier_remax_gatineau/", label: "Instagram", Icon: InstagramSvg },
@@ -180,13 +186,13 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           </div>
 
           {/* ── Desktop: 4 columns (2-col on sm) ── */}
-          <div className="hidden sm:grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
+          <div className="hidden sm:grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.6fr_1.3fr] lg:gap-8" role="navigation" aria-label={getA11yLabel("nav.footer", lang)}>
             {columns.map((col) => (
               <div key={col.title}>
                 <h3 className="footer-heading mb-4">
                   {col.title}
                 </h3>
-                <ul className="space-y-0.5">
+                <ul className={col.title === "Quartiers" || col.title === "Neighbourhoods" ? "columns-2 gap-x-6 [&>li]:break-inside-avoid" : "space-y-0.5"}>
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
                       <Link to={l.href} style={{ fontSize: ".875rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
@@ -202,7 +208,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── SEO Popular links ── */}
-          <div className="py-8 sm:py-12">
+          <div className="py-8 sm:py-9">
             <h3 className="footer-heading mb-3 sm:mb-4">
               {popularLabel}
             </h3>
@@ -224,11 +230,11 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
           <div style={{ height: 1, background: "rgba(255,255,255,.07)" }} />
 
           {/* ── Affiliations ── */}
-          <div className="flex flex-col items-center py-8 sm:py-12">
-            <h3 className="footer-heading mb-6 sm:mb-8">
+          <div className="flex flex-col items-center py-8 sm:py-9 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+            <h3 className="footer-heading mb-6 lg:mb-0 lg:shrink-0">
               {affiliationsLabel}
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:gap-x-12 w-full max-w-[30rem] sm:max-w-[40rem] lg:max-w-[56rem]">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:gap-x-10 w-full max-w-[30rem] sm:max-w-[40rem] lg:max-w-none lg:w-auto lg:flex-nowrap lg:justify-end">
               {affiliationLogos.map((logo) => {
                 const inner = logo.custom ?? (
                   <img
@@ -283,20 +289,22 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
             </div>
           </div>
 
+          <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-start lg:py-6 lg:border-t" style={{ borderColor: "rgba(255,255,255,.06)" }}>
+          <div className="lg:text-left">
           {/* ── Google Reviews badge ── */}
-          <div className="flex justify-center pt-2 pb-1">
+          <div className="flex justify-center lg:justify-start pt-6 pb-1 lg:pt-0">
             <GoogleReviewBadge variant="compact" />
           </div>
 
           {/* ── RE/MAX mention ── */}
-          <div className="text-center pb-5">
+          <div className="text-center lg:text-left pb-5 lg:pb-3">
             <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }}>
               {lang === "en" ? "Member of RE/MAX, Marty Waite Team" : "Membre de RE/MAX, Équipe Marty Waite"}
             </p>
           </div>
 
           {/* ── Agency identification block ── */}
-          <address className="py-6 text-center not-italic" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
+          <address className="footer-address border-t lg:border-t-0 py-6 lg:py-0 text-center lg:text-left not-italic" style={{ borderColor: "rgba(255,255,255,.06)" }}>
             <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.82)", fontWeight: 500, lineHeight: 1.6 }}>
               {lang === "en"
                 ? (
@@ -314,7 +322,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                   </>
                 )}
             </p>
-            <p className="flex flex-col items-center sm:block" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
+            <p className="flex flex-col items-center sm:block lg:text-left" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", fontWeight: 400, lineHeight: 1.6, marginTop: 4 }}>
               <span>{lang === "en" ? "Office: " : "Bureau : "}
               <a href="tel:+18196840000" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "phone", location: "footer", destination: "+18196840000" })}>819-684-0000</a></span>
               <span aria-hidden="true" className="hidden sm:inline">{"  ·  "}</span>
@@ -324,15 +332,16 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
               <a href="mailto:yanis@martywaite.com" style={{ color: "inherit", textDecoration: "none" }} onClick={() => trackContactTap({ channel: "email", location: "footer", destination: "yanis@martywaite.com" })}>yanis@martywaite.com</a>
             </p>
           </address>
+          </div>
           {/* ── Copyright ── */}
-          <div className="py-6 sm:py-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,.06)" }}>
-            <p style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)", padding: "0 1rem" }}>{legalText}</p>
-            <p className="mt-2" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.68)", padding: "0 1rem" }}>
+          <div className="footer-legal border-t lg:border-t-0 py-6 sm:py-8 lg:py-0 text-center lg:text-right" style={{ borderColor: "rgba(255,255,255,.06)" }}>
+            <p className="px-4 lg:px-0" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }}>{legalText}</p>
+            <p className="mt-2 px-4 lg:px-0" style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.68)" }}>
               {lang === "en"
                 ? "Independently owned and operated franchisee of RE/MAX Québec"
                 : "Franchisé indépendant et autonome de RE/MAX Québec"}
             </p>
-            <div className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1">
+            <div className="mt-2 flex flex-wrap justify-center lg:justify-end gap-x-4 gap-y-1">
               <Link to={lang === "en" ? "/en/privacy-policy/" : "/politique-de-confidentialite/"} style={{ fontSize: ".8125rem", color: "rgba(255,255,255,.72)" }} className="hover:text-white/85 transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
               </Link>
@@ -351,6 +360,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 {lang === "en" ? "Cookie settings" : "Gérer les cookies"}
               </button>
             </div>
+          </div>
           </div>
         </div>
       </footer>
