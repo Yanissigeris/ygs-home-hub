@@ -196,7 +196,7 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
             style={{
               background: "var(--ink)",
               borderRadius: 20,
-              boxShadow: "0 40px 80px -20px rgba(0,14,53,0.45)",
+              boxShadow: "0 14px 28px -18px rgba(0,14,53,0.55)",
             }}
           >
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:items-end gap-8">

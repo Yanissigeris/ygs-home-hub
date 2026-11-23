@@ -99,6 +99,20 @@ const SiteLayout = () => {
   // Defer non-critical UI (cookie consent, WhatsApp button, footer) to idle
   // time to free the main thread during LCP/TBT window.
   const [deferredReady, setDeferredReady] = React.useState(false);
+  // Le voile sombre sous l'en-tête ne sert qu'au-dessus des photos de haut de page.
+  // Il disparaît au même seuil que l'en-tête devient bleu nuit (80 px), sinon il
+  // laisse une bande grise sous l'en-tête sur les sections claires.
+  const [pastTop, setPastTop] = React.useState(false);
+  React.useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => setPastTop(window.scrollY > 80));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("scroll", onScroll); };
+  }, []);
   // Puppeteer prerender (scripts/puppeteer-render.mjs) sets window.__PRERENDER__.
   // Floating widgets mount on idle, so without this they landed in some static
   // snapshots and not others. Visitors are unaffected: the app re-renders on load.
@@ -139,6 +153,8 @@ const SiteLayout = () => {
           top: 0,
           zIndex: 49,
           pointerEvents: "none",
+          opacity: pastTop ? 0 : 1,
+          transition: "opacity .3s ease",
           background:
             "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)",
         }}
