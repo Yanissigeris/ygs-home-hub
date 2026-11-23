@@ -33,10 +33,10 @@ import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
 
 const services = [
-  { icon: Home, title: "Vente résidentielle", text: "Stratégie, positionnement prix et mise en marché" },
-  { icon: Users, title: "Achat résidentiel", text: "Recherche ciblée et négociation" },
-  { icon: TrendingUp, title: "Plex et investissement", text: "Analyse, rendement et stratégie d'acquisition" },
-  { icon: MapPin, title: "Relocalisation", text: "Guide local pour acheteurs d'Ottawa et Montréal" },
+  { icon: Home, title: "Vente résidentielle", text: "Stratégie, positionnement prix et mise en marché", href: "/vendre-ma-maison-gatineau/" },
+  { icon: Users, title: "Achat résidentiel", text: "Recherche ciblée et négociation", href: "/acheter-a-gatineau/" },
+  { icon: TrendingUp, title: "Plex et investissement", text: "Analyse, rendement et stratégie d'acquisition", href: "/investir-plex-gatineau/" },
+  { icon: MapPin, title: "Relocalisation", text: "Guide local pour acheteurs d'Ottawa et Montréal", href: "/relocalisation-ottawa-gatineau/" },
 ];
 
 
@@ -97,6 +97,7 @@ const ContactPage = () => {
         image={yanisPhoto}
         imageAlt="Yanis Gauthier-Sigeris, courtier immobilier à Gatineau"
         name="Yanis Gauthier-Sigeris"
+        heading="Mon parcours"
         role="Courtier immobilier · Gatineau et Outaouais"
         subtitle="Affilié RE/MAX · Équipe Marty Waite"
         logo={logoYgsVertical}

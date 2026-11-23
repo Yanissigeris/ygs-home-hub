@@ -28,6 +28,12 @@ const logoYgsSymbolBlue = ygsLogo;
 import { mainNav, type NavItem, type NavChild } from "@/data/navigation";
 import { mainNavEn } from "@/data/navigation-en";
 
+// Les fiches propriété (/proprietes/<adresse>/) gardent « Propriétés » actif dans le menu.
+const SECTION_PREFIXES = ["/proprietes/", "/en/properties/"];
+const isNavActive = (pathname: string, href?: string) =>
+  !!href && (pathname === href || (SECTION_PREFIXES.includes(href) && pathname.startsWith(href)));
+
+
 /* ── RE/MAX cream affiliation pill ── */
 const RemaxPill = ({ size = "md", lang }: { size?: "sm" | "md" | "lg"; lang: "fr" | "en" }) => {
   const dims = size === "lg"
@@ -79,10 +85,11 @@ const DesktopNavItem = ({ item, pathname, transparent }: { item: NavItem; pathna
   const underlineColor = "var(--white)";
 
   if (!item.children && !item.columns) {
-    const active = pathname === item.href;
+    const active = isNavActive(pathname, item.href);
     return (
       <Link
         to={item.href!}
+        aria-current={active ? "page" : undefined}
         className="group relative whitespace-nowrap transition-colors"
         style={{
           fontSize: "13px",

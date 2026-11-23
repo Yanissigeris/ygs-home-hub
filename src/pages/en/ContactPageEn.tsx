@@ -27,10 +27,10 @@ import yanisPhoto from "@/assets/yanis-photo.webp";
 import logoYgsVertical from "@/assets/logo-ygs-vertical-blue.webp";
 
 const services = [
-  { icon: Home, title: "Residential sales", text: "Strategy, price positioning and marketing" },
-  { icon: Users, title: "Residential buying", text: "Targeted search, negotiation and support" },
-  { icon: TrendingUp, title: "Plex & investment", text: "Analysis, returns and acquisition strategy" },
-  { icon: MapPin, title: "Relocation", text: "Local guide for buyers from Ottawa and Montréal" },
+  { icon: Home, title: "Residential sales", text: "Strategy, price positioning and marketing", href: "/en/sell/" },
+  { icon: Users, title: "Residential buying", text: "Targeted search, negotiation and support", href: "/en/buy/" },
+  { icon: TrendingUp, title: "Plex & investment", text: "Analysis, returns and acquisition strategy", href: "/en/plex/" },
+  { icon: MapPin, title: "Relocation", text: "Local guide for buyers from Ottawa and Montréal", href: "/en/relocation/" },
 ];
 const contactItems = [
   { icon: Phone, label: "Office", value: "819-684-0000", href: "tel:+18196840000" },
@@ -74,7 +74,7 @@ const ContactPageEn = () => {
       <PageMeta title="Contact | Real Estate Broker Gatineau" description="Get in touch with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Free consultation: let's talk about your project." ogImage="https://yanisgauthier.com/og/og-default.jpg" />
     <ServiceJsonLd name="Free Real Estate Consultation, Gatineau" description="Free consultation with Yanis Gauthier-Sigeris, real estate broker in Gatineau. Let's discuss your buying, selling or investment project." url="/en/contact" serviceType="Real Estate Consultation Service" />
       <HeroSection compact overline="Yanis Gauthier-Sigeris" title="Yanis Gauthier-Sigeris" subtitle="Real estate broker in Gatineau and the Outaouais since 2017. Thinking it over or ready to move, I can help you see more clearly." primaryCta={{ label: "Send a text message", href: "sms:+18192103044?body=Hello%20Yanis%2C%20I%27d%20like%20to%20discuss%20my%20real%20estate%20project%20in%20Outaouais." }} secondaryCta={{ label: "Free Home Valuation", href: "/en/home-valuation" }} heroBgImage={heroImg} />
-<ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS" affiliationSlot={<RemaxAgencyBlock lang="en" />}>
+<ProfileSection image={yanisPhoto} imageAlt="Yanis Gauthier-Sigeris, real estate broker in Gatineau" name="Yanis Gauthier-Sigeris" heading="My background" role="Real Estate Broker · Gatineau and Outaouais" subtitle="Affiliated with RE/MAX · Marty Waite Team" logo={logoYgsVertical} logoAlt="YGS" affiliationSlot={<RemaxAgencyBlock lang="en" />}>
         <p className="prose-body mt-6">I've been a residential real estate broker since 2017, with more than 300 transactions in the Outaouais, mostly in Aylmer and Hull. I work with sellers and buyers as much as with investors, and I've worked with military families since 2017.</p>
         <p className="prose-body mt-4">Before we talk price, I show you the comparable sales in your area. You see the same numbers I do, then you choose.</p>
         <p className="prose-body mt-4">As an investor, I've renovated and resold properties, and I have a college diploma (AEC) in project management. If you're looking at a plex or a house that needs work, I can read the rents and estimate the renovation costs.</p>

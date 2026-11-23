@@ -15,7 +15,7 @@ import { properties, type Property } from "@/data/properties";
 import { propertiesEn } from "@/data/properties-en";
 import { AI_STAGED, galleryFor, propertyIdFromSlug, PROPERTY_SLUGS } from "@/data/property-pages";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
-import { trackContactTap } from "@/lib/analytics";
+import { trackCTAClick, trackContactTap } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import yanisAvatar from "@/assets/yanis-avatar.webp";
 
@@ -111,6 +111,17 @@ const PropertyDetailPage = () => {
   const isLand = /terrain|lot/i.test(property.type) && !property.bedrooms?.match(/\d/);
   const showCalculator = Boolean(details) && !isLand && property.status === "active";
 
+  // Même comportement que la barre collante du téléphone : descend au formulaire de visite et place le curseur dans le premier champ.
+  const goToVisit = () => {
+    trackCTAClick(c.visitTitle, "property-header");
+    const target = document.getElementById("visite");
+    if (!target) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    const first = target.querySelector<HTMLInputElement>("input, textarea");
+    if (first) window.setTimeout(() => first.focus({ preventScroll: true }), reduce ? 0 : 450);
+  };
+
   return (
     <>
       <PageMeta
@@ -160,6 +171,12 @@ const PropertyDetailPage = () => {
               </p>
               {property.status === "sold" && (
                 <p className="mt-1.5 text-[13px] text-white/70">{c.askingPrice}</p>
+              )}
+              {/* Ordinateur seulement : sur téléphone, la barre collante offre déjà « Planifier une visite ». */}
+              {open && (
+                <Button size="lg" className="mt-5 hidden md:inline-flex" onClick={goToVisit}>
+                  {c.visitTitle}
+                </Button>
               )}
             </div>
           </div>
