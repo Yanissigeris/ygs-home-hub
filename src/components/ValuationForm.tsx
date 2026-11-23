@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Lock, Clock, Shield, Send, BadgeCheck, Loader2, Star } from "lucide-react";
+import { Lock, Send, Loader2, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import yanisPhoto from "@/assets/yanis-hero-cutout.webp";
 
@@ -29,7 +29,6 @@ export interface ValuationFormProps {
   variant?: "glass" | "card";
   addressPlaceholder?: string;
   submitLabel?: string;
-  showTrustBadges?: boolean;
 }
 
 const T = {
@@ -59,10 +58,6 @@ const T = {
     thanksQuestion: "Une question d'ici là?",
     glassHeading: "Demandez votre évaluation gratuite",
     glassSub: "Je vous reviens avec une réponse personnalisée et une analyse claire.",
-    badgeFree: "Gratuit",
-    badgeConfidential: "Confidentiel",
-    badgeNoCommit: "Sans engagement",
-    badge24h: "Réponse personnalisée",
     errName: "Veuillez indiquer votre nom (au moins 2 caractères).",
     errEmail: "Veuillez entrer un courriel valide.",
     errEmailTypo: "Cet email semble incorrect. Vérifiez l'orthographe.",
@@ -103,10 +98,6 @@ const T = {
     thanksQuestion: "Any questions in the meantime?",
     glassHeading: "Request your free valuation",
     glassSub: "I'll get back to you with a personalized response and a clear analysis.",
-    badgeFree: "Free",
-    badgeConfidential: "Confidential",
-    badgeNoCommit: "No commitment",
-    badge24h: "Personalized response",
     errName: "Please enter your name (at least 2 characters).",
     errEmail: "Please enter a valid email address.",
     errEmailTypo: "This email looks incorrect. Please check the spelling.",
@@ -205,7 +196,6 @@ const ValuationForm = ({
   variant = "card",
   addressPlaceholder,
   submitLabel,
-  showTrustBadges = true,
 }: ValuationFormProps) => {
   const t = T[lang];
   const [submitted, setSubmitted] = useState(false);
@@ -601,27 +591,6 @@ const ValuationForm = ({
           </Link>
         </p>
 
-        {showTrustBadges && (
-          <div
-            className={cn(
-              "flex flex-wrap justify-center gap-x-5 gap-y-1.5 pt-1 text-[0.75rem]",
-              isGlass ? "text-primary-foreground/70" : "text-muted-foreground",
-            )}
-          >
-            <span className="flex items-center gap-1.5">
-              <BadgeCheck size={13} aria-hidden="true" /> {t.badgeFree}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Lock size={13} aria-hidden="true" /> {t.badgeConfidential}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Shield size={13} aria-hidden="true" /> {t.badgeNoCommit}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Clock size={13} aria-hidden="true" /> {t.badge24h}
-            </span>
-          </div>
-        )}
       </form>
     </div>
   );
