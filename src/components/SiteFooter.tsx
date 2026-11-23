@@ -186,7 +186,7 @@ const SiteFooter = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<
                 <h3 className="footer-heading mb-4">
                   {col.title}
                 </h3>
-                <ul className={col.title === "Quartiers" || col.title === "Neighbourhoods" ? "grid grid-cols-2 gap-x-6 gap-y-0.5" : "space-y-0.5"}>
+                <ul className={col.title === "Quartiers" || col.title === "Neighbourhoods" ? "columns-2 gap-x-6 [&>li]:break-inside-avoid" : "space-y-0.5"}>
                   {col.links.map((l) => (
                     <li key={l.href + l.label}>
                       <Link to={l.href} style={{ fontSize: ".875rem", color: "rgba(255,255,255,.72)", fontWeight: 400 }} className="inline-block py-1 transition-colors duration-200 hover:text-white/80">
