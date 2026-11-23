@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import yanisAvatar from "@/assets/yanis-avatar.webp";
 
@@ -8,6 +9,8 @@ interface CardItem {
   icon?: LucideIcon;
   title: string;
   text: string;
+  /** Boxes layout only: the whole box becomes a link to this page. */
+  href?: string;
 }
 
 interface CardGridProps {
@@ -235,13 +238,25 @@ const CardGrid = ({
                 ? "text-[1.625rem] leading-[1.05] lg:text-[clamp(1.75rem,3vw,2.5rem)] lg:leading-[1.02] text-[var(--cream)]"
                 : "text-[1.375rem] leading-[1.1] lg:text-[clamp(1.375rem,1.9vw,1.75rem)] lg:leading-[1.08] text-[var(--ink)]"
             }`;
+            // Une boîte avec href devient un lien entier (flèche + survol) ; sans href, rien ne change.
+            const Box = (item.href ? Link : "div") as React.ElementType;
+            const linkProps = item.href ? { to: item.href } : {};
             return (
-              <div
+              <Box
                 key={item.title}
+                {...linkProps}
                 className={`${spans[i]} flex w-[84%] max-w-[22rem] shrink-0 snap-start flex-col rounded-[1.25rem] p-6 sm:w-[60%] lg:w-auto lg:max-w-none lg:shrink lg:rounded-[1.5rem] lg:p-10 ${
                   lead
                     ? "justify-end bg-[var(--ink)] lg:min-h-[17rem]"
                     : "bg-white border border-[rgba(0,14,53,0.09)] shadow-[0_1px_2px_rgba(0,14,53,0.04),0_18px_40px_-24px_rgba(0,14,53,0.28)]"
+                }${
+                  item.href
+                    ? ` group cursor-pointer transition-[border-color,box-shadow,background-color] duration-200 ease-out ${
+                        lead
+                          ? "hover:bg-[#0B1A4A]"
+                          : "hover:border-[rgba(51,102,255,0.45)] hover:shadow-[0_1px_2px_rgba(0,14,53,0.05),0_22px_44px_-22px_rgba(0,14,53,0.34)]"
+                      }`
+                    : ""
                 }`}
               >
                 {variant === "icon-top" ? (
@@ -256,7 +271,16 @@ const CardGrid = ({
                 >
                   {item.text}
                 </p>
-              </div>
+                {item.href && (
+                  <ArrowRight
+                    size={20}
+                    aria-hidden="true"
+                    className={`mt-5 transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 ${
+                      lead ? "text-[var(--cream)]" : "text-[var(--action)]"
+                    }`}
+                  />
+                )}
+              </Box>
             );
           })}
         </div>

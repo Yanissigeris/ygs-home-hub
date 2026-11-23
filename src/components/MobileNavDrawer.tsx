@@ -7,6 +7,12 @@ import { Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackContactTap } from "@/lib/analytics";
 
+// Les fiches propriété (/proprietes/<adresse>/) gardent « Propriétés » actif dans le menu.
+const SECTION_PREFIXES = ["/proprietes/", "/en/properties/"];
+const isNavActive = (pathname: string, href?: string) =>
+  !!href && (pathname === href || (SECTION_PREFIXES.includes(href) && pathname.startsWith(href)));
+
+
 const ChevronDownIcon = ({ size = 11, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
 );
@@ -16,7 +22,7 @@ const MobileNavGroup = ({ item, pathname, onNavigate }: { item: NavItem; pathnam
 
   if (!item.children && !item.columns) {
     return (
-      <Link to={item.href!} onClick={onNavigate} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: pathname === item.href ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
+      <Link to={item.href!} onClick={onNavigate} aria-current={isNavActive(pathname, item.href) ? "page" : undefined} className="block px-6 py-3.5 text-[.9rem] font-medium transition-colors" style={{ color: isNavActive(pathname, item.href) ? "var(--ink)" : "var(--muted)", borderBottom: "1px solid var(--border)", minHeight: 44 }}>
         {item.label}
       </Link>
     );

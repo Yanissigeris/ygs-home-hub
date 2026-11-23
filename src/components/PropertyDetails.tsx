@@ -206,16 +206,29 @@ const formatOpenHouse = (o: { date: string; start: string; end: string }, lang: 
   return `${day}, ${h(o.start)} to ${h(o.end)} ${suffix}`;
 };
 
-const todayIso = () => {
-  const n = new Date();
-  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}-${String(n.getDate()).padStart(2, "0")}`;
+/* Heure de Gatineau (America/Toronto) au format « AAAA-MM-JJTHH:MM », comparable aux dates des visites libres.
+   Calculée au rendu : la page prérendue (version lue par Google) et le navigateur cachent toutes deux
+   une visite libre dès son heure de fin passée. Pas d'hydratation (createRoot), donc aucun décalage. */
+const nowInGatineau = () => {
+  const p = Object.fromEntries(
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Toronto",
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+    }).formatToParts(new Date()).map((x) => [x.type, x.value]),
+  );
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}`;
 };
 
 export const OpenHouseBadge = ({ id, lang }: { id: string; lang: Lang }) => {
   const d = getPropertyDetails(id, lang);
-  const [today, setToday] = useState<string | null>(null);
-  useEffect(() => setToday(todayIso()), []);
-  const next = d?.openHouses.find((o) => !today || o.date >= today);
+  const [now, setNow] = useState(nowInGatineau);
+  // Une page laissée ouverte pendant la visite libre retire le badge à l'heure de fin (vérifié chaque minute).
+  useEffect(() => {
+    const t = window.setInterval(() => setNow(nowInGatineau()), 60_000);
+    return () => window.clearInterval(t);
+  }, []);
+  const next = d?.openHouses.find((o) => `${o.date}T${o.end}` > now);
   if (!next) return null;
   return (
     <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-[13px] font-semibold" style={{ color: INK }}>
