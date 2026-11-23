@@ -168,22 +168,24 @@ const PathwaySection = React.forwardRef<HTMLElement, PathwaySectionProps>(
         : { investir: "Rangée de maisons de ville vue du ciel", acheter: "Cuisine avec îlot et tabourets" };
 
     return (
-      <section ref={ref} className="section-pathway relative grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]" style={{ background: "var(--cream-deep)" }}>
-        <div className="relative h-[300px] md:h-[440px] lg:h-auto overflow-hidden">
+      <section ref={ref} className="section-pathway relative grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr]" style={{ background: "var(--cream-deep)" }}>
+        {/* Titre d'abord sur téléphone et tablette, puis la photo ; sur ordinateur la photo occupe toute la hauteur à gauche */}
+        <div className="relative px-5 sm:px-6 md:px-14 lg:pl-0 lg:pr-16 xl:pr-24 pt-12 md:pt-16 lg:pt-28 pb-10 md:pb-12 lg:pb-0 lg:col-start-2 lg:row-start-1">
+          <div className="lg:pl-20 xl:pl-24" style={{ maxWidth: 680 }}>
+            <h2 style={{ color: "var(--ink)", maxWidth: 520 }}>
+              {heading.titleFirst} {heading.titleAccent}
+            </h2>
+            <p className="mt-5" style={{ fontSize: "1.0625rem", lineHeight: 1.65, color: "rgba(0,14,53,0.62)", maxWidth: 440 }}>
+              {heading.subtitle}
+            </p>
+          </div>
+        </div>
+
+        <div className="relative h-[300px] md:h-[440px] lg:h-auto overflow-hidden lg:col-start-1 lg:row-start-1 lg:row-span-2">
           <Photo sizes="(min-width: 1024px) 960px, 100vw" className="absolute inset-0 h-full w-full object-cover object-[50%_62%] lg:object-[38%_center]" />
         </div>
 
-        <div className="relative px-5 sm:px-6 md:px-14 lg:pl-0 lg:pr-16 xl:pr-24 pb-16 md:pb-24 lg:py-28">
-          <div className="lg:pl-20 xl:pl-24" style={{ maxWidth: 680 }}>
-            <div className="pt-12 md:pt-16 lg:pt-0">
-              <h2 style={{ color: "var(--ink)", maxWidth: 520 }}>
-                {heading.titleFirst} {heading.titleAccent}
-              </h2>
-              <p className="mt-5" style={{ fontSize: "1.0625rem", lineHeight: 1.65, color: "rgba(0,14,53,0.62)", maxWidth: 440 }}>
-                {heading.subtitle}
-              </p>
-            </div>
-          </div>
+        <div className="relative px-5 sm:px-6 md:px-14 lg:pl-0 lg:pr-16 xl:pr-24 pb-16 md:pb-24 lg:pb-28 lg:col-start-2 lg:row-start-2">
 
           {/* Bloc marine : déborde sur la photo à gauche (ordinateur) */}
           <div style={{ maxWidth: 780 }}>
