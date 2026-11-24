@@ -88,7 +88,7 @@ const ValuationPage = () => {
         </div>
 
         <div className="section-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
-          <div className="grid gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_380px] lg:grid-cols-[1fr_460px] md:gap-8 lg:gap-16 items-start">
 
             {/* ── LEFT: Value proposition ── */}
             <div className="pt-1 md:pt-6 lg:pt-10">
