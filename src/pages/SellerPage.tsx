@@ -20,7 +20,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import { CheckCircle2, AlertTriangle, ArrowRight, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-vendre-gatineau.webp";
+import heroImg from "@/assets/hero-vendre-louveteaux.webp";
 
 const painPoints = [
 { icon: CheckCircle2, title: "Est-ce le bon moment pour vendre?", text: "Ça dépend de votre secteur et de votre prochain projet. Je vous montre les délais de vente actuels près de chez vous, puis on choisit le moment ensemble." },

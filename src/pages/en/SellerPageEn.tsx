@@ -20,7 +20,7 @@ import FunnelNextStep from "@/components/FunnelNextStep";
 import ContentBlock from "@/components/ContentBlock";
 import GuideInlineCTA from "@/components/GuideInlineCTA";
 import { CheckCircle2, AlertTriangle, Clock, Award, Shield } from "lucide-react";
-import heroImg from "@/assets/hero-vendre-gatineau.webp";
+import heroImg from "@/assets/hero-vendre-louveteaux.webp";
 
 const painPoints = [
   { icon: CheckCircle2, title: "Is now the right time to sell?", text: "It depends on your area and on your next move. I show you current selling times near you, then we pick the timing together." },

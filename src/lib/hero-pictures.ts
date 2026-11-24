@@ -128,9 +128,10 @@ import HeroSellerWebp from "@/assets/hero-seller.webp?w=768;1280;1920;2560&forma
 import HeroTestimonialsUrl from "@/assets/hero-testimonials.webp";
 import HeroTestimonialsAvif from "@/assets/hero-testimonials.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
 import HeroTestimonialsWebp from "@/assets/hero-testimonials.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
-import HeroVendreGatineauUrl from "@/assets/hero-vendre-gatineau.webp";
-import HeroVendreGatineauAvif from "@/assets/hero-vendre-gatineau.webp?w=768;1280;1920;2560&format=avif&quality=60&as=srcset";
-import HeroVendreGatineauWebp from "@/assets/hero-vendre-gatineau.webp?w=768;1280;1920;2560&format=webp&quality=82&as=srcset";
+// Vendre FR/EN : photo de façade de son inscription du 45 rue des Louveteaux (vraie photo, agrandie 2x avec Real-ESRGAN, nov. 2026).
+import HeroVendreGatineauUrl from "@/assets/hero-vendre-louveteaux.webp";
+import HeroVendreGatineauAvif from "@/assets/hero-vendre-louveteaux.webp?w=768;1280;1920;2560&format=avif&quality=75&as=srcset";
+import HeroVendreGatineauWebp from "@/assets/hero-vendre-louveteaux.webp?w=768;1280;1920;2560&format=webp&quality=90&as=srcset";
 import HomeInteriorUrl from "@/assets/home-interior.webp";
 import HomeInteriorAvif from "@/assets/home-interior.webp?w=768;1280;1920;2560&format=avif&quality=60&as=srcset";
 import HomeInteriorWebp from "@/assets/home-interior.webp?w=768;1280;1920;2560&format=webp&quality=82&as=srcset";
@@ -208,7 +209,7 @@ export const HERO_PICTURES: Record<string, HeroPicture> = {
   [HeroSellerGuideUrl]: { avif: HeroSellerGuideAvif, webp: HeroSellerGuideWebp, sizes: SHARP_SIZES },
   [HeroSellerUrl]: { avif: HeroSellerAvif, webp: HeroSellerWebp, sizes: SHARP_SIZES },
   [HeroTestimonialsUrl]: { avif: HeroTestimonialsAvif, webp: HeroTestimonialsWebp, sizes: SHARP_SIZES },
-  [HeroVendreGatineauUrl]: { avif: HeroVendreGatineauAvif, webp: HeroVendreGatineauWebp, sizes: SHARP_SIZES },
+  [HeroVendreGatineauUrl]: { avif: HeroVendreGatineauAvif, webp: HeroVendreGatineauWebp, sizes: SHARP_SIZES, position: "40% 45%" },
   [HomeInteriorUrl]: { avif: HomeInteriorAvif, webp: HomeInteriorWebp, sizes: SHARP_SIZES },
   [PlateauAylmerLifestyleUrl]: { avif: PlateauAylmerLifestyleAvif, webp: PlateauAylmerLifestyleWebp, sizes: SHARP_SIZES },
   [HeroCoteDazurUrl]: { avif: HeroCoteDazurAvif, webp: HeroCoteDazurWebp, sizes: SHARP_SIZES, lightVeil: true },
