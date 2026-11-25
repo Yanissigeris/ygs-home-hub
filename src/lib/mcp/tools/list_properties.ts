@@ -22,6 +22,16 @@ interface Listing {
 
 const listings: Listing[] = [
   {
+    id: "23538045", mls: "23538045",
+    address: "6 Ch. du Carrefour", city: "Pontiac (Luskville)",
+    price_fr: "76 500 $", price_en: "$76,500",
+    type: "Terrain (résidentiel) / Residential lot", bedrooms: "—", bathrooms: "—", area: "— / —", year_built: "—",
+    status: "active",
+    remax_url: "https://www.centris.ca/fr/terrain~a-vendre~pontiac/23538045",
+    description_fr: "Terrain boisé d'environ 1 acre (4 166,2 m²) dans le secteur de la Plage Bélisle, à Luskville, à quelques minutes de marche de la rivière des Outaouais.",
+    description_en: "Wooded lot of about 1 acre (4,166.2 m²) in the Plage Bélisle area of Luskville, a few minutes' walk from the Ottawa River.",
+  },
+  {
     id: "11366995", mls: "11366995",
     address: "7 Rue du Chinook", city: "Gatineau (Hull, Plateau de la Capitale)",
     price_fr: "949 900 $", price_en: "$949,900",
