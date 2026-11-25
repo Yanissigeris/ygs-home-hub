@@ -20,7 +20,7 @@ export const PhotoCredits = ({ lang = "fr" }: { lang?: "fr" | "en" }) => {
       <PageMeta
         title={fr ? "Crédits photos | YGS" : "Photo credits | YGS"}
         description={fr ? "Auteurs et licences des photos libres de droits utilisées sur yanisgauthier.com." : "Authors and licences of the freely licensed photos used on yanisgauthier.com."}
-        ogImage="https://yanisgauthier.com/og/og-default.jpg"
+        ogImage="https://yanisgauthier.com/og/og-ygs.jpg"
       />
       <article className="bg-white">
         <div className="section-container pt-32 pb-20 sm:pt-40">
