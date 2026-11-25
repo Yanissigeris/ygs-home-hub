@@ -23,7 +23,7 @@ import { readFileSync } from "node:fs";
 import { extractBlogPosts } from "./blog-extractor.mjs";
 
 export const SITE_URL = "https://yanisgauthier.com";
-export const DEFAULT_OG = `${SITE_URL}/og/og-default.jpg`;
+export const DEFAULT_OG = `${SITE_URL}/og/og-ygs.jpg`;
 export const SITE_LAST_UPDATE = "2026-05-13";
 const BLOG_OG = `${SITE_URL}/og/og-blog.jpg`;
 

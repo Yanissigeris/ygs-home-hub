@@ -6,7 +6,7 @@ const PrivacyPolicyPage = () => (
     <PageMeta
       title="Politique de confidentialité | YGS · Yanis Gauthier-Sigeris"
       description="Politique de confidentialité du site yanisgauthier.com. Conformité à la Loi 25 du Québec. Gestion des données personnelles et cookies."
-      ogImage="https://yanisgauthier.com/og/og-default.jpg"
+      ogImage="https://yanisgauthier.com/og/og-ygs.jpg"
     />
     <section
       aria-hidden="true"

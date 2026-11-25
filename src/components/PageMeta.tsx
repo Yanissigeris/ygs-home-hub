@@ -12,7 +12,7 @@ interface PageMetaProps {
 
 // (og:site_name lives statically in index.html — single source of truth)
 const BASE_URL = "https://yanisgauthier.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og/og-default.jpg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og/og-ygs.jpg`;
 
 const ensureMetaTag = (selector: string, attributes: Record<string, string>) => {
   let element = document.head.querySelector<HTMLMetaElement>(selector);

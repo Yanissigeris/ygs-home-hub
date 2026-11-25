@@ -352,12 +352,12 @@ def write_entry(e, desc_fr, desc_en):
         f'  "/proprietes/{e["slug"]}": {{\n'
         f'    "title": "{js(e["address"])}, {js(e["sector"])} · {js(t_fr)} | YGS",\n'
         f'    "description": "{js(t_fr)} à vendre à {js(e["sector"])}, {fr_money(e["price"])}. Photos, détails et demande de visite avec Yanis Gauthier-Sigeris.",\n'
-        f'    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"\n'
+        f'    "ogImage": "https://yanisgauthier.com/og/og-ygs.jpg"\n'
         f"  }},\n"
         f'  "/en/properties/{e["slug"]}": {{\n'
         f'    "title": "{js(e["address"])}, {js(e["sector"])} · {js(t_en)} | YGS",\n'
         f'    "description": "{js(t_en)} for sale in {js(e["sector"])}, {en_money(e["price"])}. Photos, details and visit requests with Yanis Gauthier-Sigeris.",\n'
-        f'    "ogImage": "https://yanisgauthier.com/og/og-default.jpg"\n'
+        f'    "ogImage": "https://yanisgauthier.com/og/og-ygs.jpg"\n'
         f"  }},\n"
     )
     s = insert_before_first(s, ['  "/proprietes/'], block, "seo-routes.json")
