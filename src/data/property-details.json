@@ -1,4 +1,128 @@
 {
+ "23538045": {
+  "fr": {
+   "levels": [],
+   "facts": [
+    [
+     "Dimensions du terrain",
+     "Façade de 67,65 m, profondeur irrégulière"
+    ],
+    [
+     "Zonage",
+     "Résidentiel, zone R-18"
+    ],
+    [
+     "Eau et égout",
+     "Aucun service"
+    ],
+    [
+     "Évaluation municipale (2026)",
+     "67 000 $"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Terrain",
+      "65 600 $"
+     ],
+     [
+      "Bâtiment",
+      "1 400 $"
+     ],
+     [
+      "Total",
+      "67 000 $"
+     ]
+    ],
+    "total": 67000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipales (2026)",
+      "341 $"
+     ],
+     [
+      "Scolaires (2026)",
+      "25 $"
+     ],
+     [
+      "Total",
+      "366 $"
+     ]
+    ],
+    "total": 366
+   },
+   "expenses": null,
+   "inclusions": "",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "levels": [],
+   "facts": [
+    [
+     "Lot size",
+     "67.65 m frontage, irregular depth"
+    ],
+    [
+     "Zoning",
+     "Residential, zone R-18"
+    ],
+    [
+     "Water and sewer",
+     "No services"
+    ],
+    [
+     "Municipal assessment (2026)",
+     "$67,000"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Lot",
+      "$65,600"
+     ],
+     [
+      "Building",
+      "$1,400"
+     ],
+     [
+      "Total",
+      "$67,000"
+     ]
+    ],
+    "total": 67000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$341"
+     ],
+     [
+      "School (2026)",
+      "$25"
+     ],
+     [
+      "Total",
+      "$366"
+     ]
+    ],
+    "total": 366
+   },
+   "expenses": null,
+   "inclusions": "",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
  "18600312": {
   "fr": {
    "levels": [

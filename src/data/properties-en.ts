@@ -14,6 +14,7 @@ import property22864394 from "@/assets/property-22864394.webp";
 import property14821222 from "@/assets/property-14821222.webp";
 import property12304022 from "@/assets/property-12304022.webp";
 import property18600312 from "@/assets/property-18600312.webp";
+import property23538045 from "@/assets/property-23538045.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -74,6 +75,25 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
     status: "sold",
+  },
+  {
+    id: "23538045",
+    address: "6 Ch. du Carrefour",
+    city: "Pontiac (Luskville)",
+    price: "$76,500",
+    type: "Residential lot",
+    bedrooms: "—",
+    bathrooms: "—",
+    area: "—",
+    lotSize: "44,845 sq ft",
+    yearBuilt: "—",
+    description:
+      "Wooded lot of about 1 acre (4,166.2 m²) in the Plage Bélisle area of Luskville, a few minutes' walk from the Ottawa River. It has 67.65 m of frontage on a private road. In September 2026, the Municipality of Pontiac confirmed in writing that building is possible and that the lot size is protected by acquired rights. The lot is unserviced, so plan for a well and a septic system. GST and QST are added to the price, and the full file is available on request.",
+    image: property23538045,
+    remaxUrl:
+      "https://www.centris.ca/fr/terrain~a-vendre~pontiac/23538045",
+    mls: "23538045",
+    status: "active",
   },
   {
     id: "18600312",
