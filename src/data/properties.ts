@@ -15,6 +15,8 @@ import property14821222 from "@/assets/property-14821222.webp";
 import property12304022 from "@/assets/property-12304022.webp";
 import property18600312 from "@/assets/property-18600312.webp";
 import property23538045 from "@/assets/property-23538045.webp";
+import property27781728 from "@/assets/property-27781728.webp";
+import property26634717 from "@/assets/property-26634717.webp";
 
 export interface Property {
   id: string;
@@ -95,6 +97,45 @@ export const properties: Property[] = [
     status: "sold",
   },
   {
+    id: "26634717",
+    address: "188 Rue des Hautes-Rives",
+    city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
+    price: "2 485 $/mois",
+    type: "Maison à étages (location)",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1 455 pi²",
+    lotSize: "4 718 pi²",
+    yearBuilt: "1994",
+    description:
+      "Jumelé de 3 chambres à louer dans Des Cèdres, à Aylmer, disponible dès le 1er décembre 2026. La salle de bains de l'étage a une douche vitrée en coin et un bain autoportant, avec une salle d'eau au rez-de-chaussée. Le sous-sol aménagé ajoute une salle familiale et un bureau. La climatisation centrale est incluse, tout comme la laveuse et le lave-vaisselle. Côté extérieur, le terrain clôturé a une remise et deux places dans l'allée. Bail de 1 an, à distance de marche de la marina d'Aylmer et de la piste cyclable.",
+    image: property26634717,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-louer-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-26634717",
+    mls: "26634717",
+    status: "rent",
+  },
+  {
+    id: "27781728",
+    address: "307 Rue Champlain",
+    city: "Gatineau (Hull, Île de Hull)",
+    price: "529 900 $",
+    type: "Triplex",
+    bedrooms: "1",
+    bathrooms: "1",
+    area: "1 685 pi²",
+    lotSize: "3 267 pi²",
+    yearBuilt: "1903",
+    description:
+      "Triplex détaché de 1903 sur l'Île de Hull, près du parc Jacques-Cartier et des ponts vers Ottawa. Les trois logements sont loués, dont un loft sur deux niveaux, pour des revenus bruts de 35 400 $ par année. L'immeuble a gardé son caractère d'origine sur une rue résidentielle desservie par l'autobus, avec l'aqueduc et l'égout de la Ville et un terrain clôturé. Selon le vendeur, la salle de bain du logement 3 a été refaite au complet et une poutre de soutien a été ajoutée au vide sanitaire en 2025. Vente sans garantie légale.",
+    image: property27781728,
+    remaxUrl:
+      "https://www.centris.ca/fr/triplex~a-vendre~gatineau-hull/27781728",
+    mls: "27781728",
+    status: "active",
+  },
+  {
     id: "23538045",
     address: "6 Ch. du Carrefour",
     city: "Pontiac (Luskville)",
@@ -109,7 +150,7 @@ export const properties: Property[] = [
       "Terrain boisé d'environ 1 acre (4 166,2 m²) dans le secteur de la Plage Bélisle, à Luskville, à quelques minutes de marche de la rivière des Outaouais. La façade fait 67,65 m sur un chemin privé. En septembre 2026, la Municipalité de Pontiac a confirmé par écrit qu'on peut y construire et que la superficie du lot est protégée par droits acquis. Le terrain n'est pas desservi, donc il faut prévoir un puits et une installation septique. TPS et TVQ en sus du prix, et le dossier complet est disponible sur demande.",
     image: property23538045,
     remaxUrl:
-      "https://www.centris.ca/fr/terrain~a-vendre~pontiac/23538045",
+      "https://www.remax-quebec.com/fr/proprietes/terrain-a-vendre-outaouais/6-ch-du-carrefour-pontiac-luskville-23538045",
     mls: "23538045",
     status: "active",
   },

@@ -1,4 +1,152 @@
 {
+ "27781728": {
+  "fr": {
+   "levels": [],
+   "facts": [
+    [
+     "Style de bâtiment",
+     "Détaché, deux étages"
+    ],
+    [
+     "Nombre d'unités",
+     "3 logements résidentiels, tous loués"
+    ],
+    [
+     "Revenus bruts potentiels",
+     "35 400 $"
+    ],
+    [
+     "Chauffage",
+     "Électrique"
+    ],
+    [
+     "Dimensions du terrain",
+     "Façade de 10,06 m, terrain clôturé"
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2027)",
+     "461 700 $"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "252 500 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "209 200 $"
+     ],
+     [
+      "Total",
+      "461 700 $"
+     ]
+    ],
+    "total": 461700
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "4 758 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "375 $"
+     ],
+     [
+      "Total",
+      "5 133 $"
+     ]
+    ],
+    "total": 5133
+   },
+   "expenses": null,
+   "inclusions": "Luminaires, 2 chauffe-eau, électroménagers selon les baux",
+   "exclusions": "1 chauffe-eau loué",
+   "openHouses": []
+  },
+  "en": {
+   "levels": [],
+   "facts": [
+    [
+     "Building style",
+     "Detached, two storeys"
+    ],
+    [
+     "Number of units",
+     "3 residential units, all rented"
+    ],
+    [
+     "Potential gross revenue",
+     "$35,400"
+    ],
+    [
+     "Heating",
+     "Electric"
+    ],
+    [
+     "Lot size",
+     "10.06 m frontage, fenced lot"
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2027)",
+     "$461,700"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$252,500"
+     ],
+     [
+      "Building assessment",
+      "$209,200"
+     ],
+     [
+      "Total",
+      "$461,700"
+     ]
+    ],
+    "total": 461700
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$4,758"
+     ],
+     [
+      "School (2026)",
+      "$375"
+     ],
+     [
+      "Total",
+      "$5,133"
+     ]
+    ],
+    "total": 5133
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, 2 water heaters, appliances as per the leases",
+   "exclusions": "1 rented water heater",
+   "openHouses": []
+  }
+ },
  "23538045": {
   "fr": {
    "levels": [],
@@ -2971,6 +3119,342 @@
    },
    "expenses": null,
    "inclusions": "",
+   "exclusions": "",
+   "openHouses": []
+  }
+ },
+ "26634717": {
+  "fr": {
+   "levels": [
+    {
+     "level": "Rez-de-chaussée",
+     "rooms": [
+      {
+       "name": "Cuisine",
+       "dim": "11'1\" × 9'2\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle à manger",
+       "dim": "13'2\" × 11'3\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salon",
+       "dim": "14'6\" × 11'8\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Hall d'entrée/Vestibule",
+       "dim": "7'8\" × 5'11\"",
+       "floor": "Céramique",
+       "note": ""
+      },
+      {
+       "name": "Salle d'eau",
+       "dim": "8'11\" × 5'1\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Étage",
+     "rooms": [
+      {
+       "name": "Chambre à coucher principale",
+       "dim": "14'11\" × 12'2\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'9\" × 9'10\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Chambre à coucher",
+       "dim": "10'7\" × 9'6\"",
+       "floor": "Couvre-sols souples",
+       "note": ""
+      },
+      {
+       "name": "Salle de bains",
+       "dim": "12'5\" × 7'10\"",
+       "floor": "Céramique",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Sous-sol",
+     "rooms": [
+      {
+       "name": "Bureau",
+       "dim": "13'1\" × 10'5\"",
+       "floor": "Plancher flottant",
+       "note": ""
+      },
+      {
+       "name": "Salle familiale",
+       "dim": "15'11\" × 14'0\"",
+       "floor": "Tapis",
+       "note": ""
+      },
+      {
+       "name": "Rangement",
+       "dim": "16'8\" × 8'6\"",
+       "floor": "Béton",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "facts": [
+    [
+     "Chauffage",
+     "Air pulsé, gaz naturel"
+    ],
+    [
+     "Climatisation",
+     "Climatiseur central"
+    ],
+    [
+     "Sous-sol",
+     "6 pieds et plus, totalement aménagé"
+    ],
+    [
+     "Stationnement",
+     "2 (allée)"
+    ],
+    [
+     "Dimensions du terrain",
+     "31' × 152' irr."
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2026)",
+     "411 000 $"
+    ]
+   ],
+   "near": [
+    "Garderie/CPE",
+    "Parc",
+    "Piste cyclable",
+    "Transport en commun",
+    "Autoroute"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "144 000 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "267 000 $"
+     ],
+     [
+      "Total",
+      "411 000 $"
+     ]
+    ],
+    "total": 411000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "3 244 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "304 $"
+     ],
+     [
+      "Total",
+      "3 548 $"
+     ]
+    ],
+    "total": 3548
+   },
+   "expenses": null,
+   "inclusions": "Luminaires, climatiseur central, remise, laveuse, lave-vaisselle.",
+   "exclusions": "",
+   "openHouses": []
+  },
+  "en": {
+   "levels": [
+    {
+     "level": "Ground floor",
+     "rooms": [
+      {
+       "name": "Kitchen",
+       "dim": "11'1\" × 9'2\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Dining room",
+       "dim": "13'2\" × 11'3\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Living room",
+       "dim": "14'6\" × 11'8\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Hall",
+       "dim": "7'8\" × 5'11\"",
+       "floor": "Ceramic",
+       "note": ""
+      },
+      {
+       "name": "Powder room",
+       "dim": "8'11\" × 5'1\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Upper floor",
+     "rooms": [
+      {
+       "name": "Primary bedroom",
+       "dim": "14'11\" × 12'2\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'9\" × 9'10\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bedroom",
+       "dim": "10'7\" × 9'6\"",
+       "floor": "Flexible floor coverings",
+       "note": ""
+      },
+      {
+       "name": "Bathroom",
+       "dim": "12'5\" × 7'10\"",
+       "floor": "Ceramic",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "level": "Basement",
+     "rooms": [
+      {
+       "name": "Office",
+       "dim": "13'1\" × 10'5\"",
+       "floor": "Laminate floor",
+       "note": ""
+      },
+      {
+       "name": "Family room",
+       "dim": "15'11\" × 14'0\"",
+       "floor": "Carpet",
+       "note": ""
+      },
+      {
+       "name": "Storage",
+       "dim": "16'8\" × 8'6\"",
+       "floor": "Concrete",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "facts": [
+    [
+     "Heating",
+     "Forced air, natural gas"
+    ],
+    [
+     "Cooling",
+     "Central air conditioning"
+    ],
+    [
+     "Basement",
+     "6 feet and more, finished basement"
+    ],
+    [
+     "Parking",
+     "2 (driveway)"
+    ],
+    [
+     "Lot size",
+     "31' × 152' irr."
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2026)",
+     "$411,000"
+    ]
+   ],
+   "near": [
+    "Daycare centre",
+    "Park",
+    "Bicycle path",
+    "Public transportation",
+    "Highway"
+   ],
+   "assessment": {
+    "year": "2026",
+    "rows": [
+     [
+      "Lot assessment",
+      "$ 144,000"
+     ],
+     [
+      "Building assessment",
+      "$ 267,000"
+     ],
+     [
+      "Total",
+      "$ 411,000"
+     ]
+    ],
+    "total": 411000
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$ 3,244"
+     ],
+     [
+      "School (2026)",
+      "$ 304"
+     ],
+     [
+      "Total",
+      "$ 3,548"
+     ]
+    ],
+    "total": 3548
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, central air conditioner, shed, washer, dishwasher.",
    "exclusions": "",
    "openHouses": []
   }

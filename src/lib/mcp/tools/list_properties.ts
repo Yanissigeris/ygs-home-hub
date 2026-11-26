@@ -22,12 +22,32 @@ interface Listing {
 
 const listings: Listing[] = [
   {
+    id: "26634717", mls: "26634717",
+    address: "188 Rue des Hautes-Rives", city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
+    price_fr: "2 485 $/mois", price_en: "$2,485/month",
+    type: "Maison à étages (location / rental)", bedrooms: "3", bathrooms: "1", area: "1 455 pi² / 1,455 sq ft", year_built: "1994",
+    status: "rent",
+    remax_url: "https://www.remax-quebec.com/fr/proprietes/maison-a-louer-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-26634717",
+    description_fr: "Jumelé de 3 chambres à louer dans Des Cèdres, à Aylmer, disponible dès le 1er décembre 2026.",
+    description_en: "3-bedroom semi-detached home for rent in Des Cèdres, Aylmer, available December 1, 2026.",
+  },
+  {
+    id: "27781728", mls: "27781728",
+    address: "307 Rue Champlain", city: "Gatineau (Hull, Île de Hull)",
+    price_fr: "529 900 $", price_en: "$529,900",
+    type: "Triplex / Triplex", bedrooms: "1", bathrooms: "1", area: "1 685 pi² / 1,685 sq ft", year_built: "1903",
+    status: "active",
+    remax_url: "https://www.centris.ca/fr/triplex~a-vendre~gatineau-hull/27781728",
+    description_fr: "Triplex détaché de 1903 sur l'Île de Hull, près du parc Jacques-Cartier et des ponts vers Ottawa.",
+    description_en: "Detached 1903 triplex on Île de Hull, near Jacques-Cartier Park and the bridges to Ottawa.",
+  },
+  {
     id: "23538045", mls: "23538045",
     address: "6 Ch. du Carrefour", city: "Pontiac (Luskville)",
     price_fr: "76 500 $", price_en: "$76,500",
     type: "Terrain (résidentiel) / Residential lot", bedrooms: "—", bathrooms: "—", area: "— / —", year_built: "—",
     status: "active",
-    remax_url: "https://www.centris.ca/fr/terrain~a-vendre~pontiac/23538045",
+    remax_url: "https://www.remax-quebec.com/fr/proprietes/terrain-a-vendre-outaouais/6-ch-du-carrefour-pontiac-luskville-23538045",
     description_fr: "Terrain boisé d'environ 1 acre (4 166,2 m²) dans le secteur de la Plage Bélisle, à Luskville, à quelques minutes de marche de la rivière des Outaouais.",
     description_en: "Wooded lot of about 1 acre (4,166.2 m²) in the Plage Bélisle area of Luskville, a few minutes' walk from the Ottawa River.",
   },

@@ -15,6 +15,8 @@ import property14821222 from "@/assets/property-14821222.webp";
 import property12304022 from "@/assets/property-12304022.webp";
 import property18600312 from "@/assets/property-18600312.webp";
 import property23538045 from "@/assets/property-23538045.webp";
+import property27781728 from "@/assets/property-27781728.webp";
+import property26634717 from "@/assets/property-26634717.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -77,6 +79,45 @@ export const propertiesEn: Property[] = [
     status: "sold",
   },
   {
+    id: "26634717",
+    address: "188 Rue des Hautes-Rives",
+    city: "Gatineau (Aylmer, Old Aylmer, Des Cèdres, Marina)",
+    price: "$2,485/month",
+    type: "Two-storey house (for rent)",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,455 sq ft",
+    lotSize: "4,718 sq ft",
+    yearBuilt: "1994",
+    description:
+      "3-bedroom semi-detached home for rent in Des Cèdres, Aylmer, available December 1, 2026. The upstairs bathroom has a glass corner shower and a freestanding tub, and there is a powder room on the main floor. A finished basement adds a family room and an office. Central air is included, along with the washer and dishwasher. Outside, the fenced yard has a shed and two spots in the driveway. One-year lease, within walking distance of the Aylmer marina and the bike path.",
+    image: property26634717,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-louer-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-26634717",
+    mls: "26634717",
+    status: "rent",
+  },
+  {
+    id: "27781728",
+    address: "307 Rue Champlain",
+    city: "Gatineau (Hull, Île de Hull)",
+    price: "$529,900",
+    type: "Triplex",
+    bedrooms: "1",
+    bathrooms: "1",
+    area: "1,685 sq ft",
+    lotSize: "3,267 sq ft",
+    yearBuilt: "1903",
+    description:
+      "Detached 1903 triplex on Île de Hull, near Jacques-Cartier Park and the bridges to Ottawa. All three units are rented, one of them a two-level loft, for gross revenue of $35,400 a year. The building has kept its original character on a residential street served by city buses, with city water and sewer and a fenced lot. According to the seller, the bathroom in unit 3 was fully redone and a support beam was added in the crawl space in 2025. Sold without legal warranty.",
+    image: property27781728,
+    remaxUrl:
+      "https://www.centris.ca/fr/triplex~a-vendre~gatineau-hull/27781728",
+    mls: "27781728",
+    status: "active",
+  },
+  {
     id: "23538045",
     address: "6 Ch. du Carrefour",
     city: "Pontiac (Luskville)",
@@ -91,7 +132,7 @@ export const propertiesEn: Property[] = [
       "Wooded lot of about 1 acre (4,166.2 m²) in the Plage Bélisle area of Luskville, a few minutes' walk from the Ottawa River. It has 67.65 m of frontage on a private road. In September 2026, the Municipality of Pontiac confirmed in writing that building is possible and that the lot size is protected by acquired rights. The lot is unserviced, so plan for a well and a septic system. GST and QST are added to the price, and the full file is available on request.",
     image: property23538045,
     remaxUrl:
-      "https://www.centris.ca/fr/terrain~a-vendre~pontiac/23538045",
+      "https://www.remax-quebec.com/fr/proprietes/terrain-a-vendre-outaouais/6-ch-du-carrefour-pontiac-luskville-23538045",
     mls: "23538045",
     status: "active",
   },

@@ -10,6 +10,8 @@ import slugsJson from "./property-slugs.json";
 
 /** Nombre de photos de galerie par numéro Centris. */
 export const PHOTO_COUNTS: Record<string, number> = {
+  "26634717": 27,
+  "27781728": 35,
   "23538045": 12,
   "26501194": 20,
   "21600052": 24,
