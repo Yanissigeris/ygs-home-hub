@@ -22,6 +22,16 @@ interface Listing {
 
 const listings: Listing[] = [
   {
+    id: "26634717", mls: "26634717",
+    address: "188 Rue des Hautes-Rives", city: "Gatineau (Aylmer, Vieux-Aylmer, Des Cèdres, Marina)",
+    price_fr: "2 485 $/mois", price_en: "$2,485/month",
+    type: "Maison à étages (location / rental)", bedrooms: "3", bathrooms: "1", area: "1 455 pi² / 1,455 sq ft", year_built: "1994",
+    status: "rent",
+    remax_url: "https://www.remax-quebec.com/fr/proprietes/maison-a-louer-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-26634717",
+    description_fr: "Jumelé de 3 chambres à louer dans Des Cèdres, à Aylmer, disponible dès le 1er décembre 2026.",
+    description_en: "3-bedroom semi-detached home for rent in Des Cèdres, Aylmer, available December 1, 2026.",
+  },
+  {
     id: "27781728", mls: "27781728",
     address: "307 Rue Champlain", city: "Gatineau (Hull, Île de Hull)",
     price_fr: "529 900 $", price_en: "$529,900",

@@ -16,6 +16,7 @@ import property12304022 from "@/assets/property-12304022.webp";
 import property18600312 from "@/assets/property-18600312.webp";
 import property23538045 from "@/assets/property-23538045.webp";
 import property27781728 from "@/assets/property-27781728.webp";
+import property26634717 from "@/assets/property-26634717.webp";
 import type { Property } from "./properties";
 
 export const propertiesEn: Property[] = [
@@ -76,6 +77,26 @@ export const propertiesEn: Property[] = [
       "https://www.remax-quebec.com/en/properties/house-for-sale-outaouais/10-rue-laviolette-cantley-cantley-28743871",
     mls: "28743871",
     status: "sold",
+  },
+  {
+    id: "26634717",
+    address: "188 Rue des Hautes-Rives",
+    city: "Gatineau (Aylmer, Old Aylmer, Des Cèdres, Marina)",
+    price: "$2,485/month",
+    type: "Two-storey house (for rent)",
+    bedrooms: "3",
+    bathrooms: "1",
+    powderRooms: "1",
+    area: "1,455 sq ft",
+    lotSize: "4,718 sq ft",
+    yearBuilt: "1994",
+    description:
+      "3-bedroom semi-detached home for rent in Des Cèdres, Aylmer, available December 1, 2026. The upstairs bathroom has a glass corner shower and a freestanding tub, and there is a powder room on the main floor. A finished basement adds a family room and an office. Central air is included, along with the washer and dishwasher. Outside, the fenced yard has a shed and two spots in the driveway. One-year lease, within walking distance of the Aylmer marina and the bike path.",
+    image: property26634717,
+    remaxUrl:
+      "https://www.remax-quebec.com/fr/proprietes/maison-a-louer-outaouais/188-rue-des-hautes-rives-gatineau-aylmer-vieux-aylmer-des-cedres-marina-26634717",
+    mls: "26634717",
+    status: "rent",
   },
   {
     id: "27781728",
