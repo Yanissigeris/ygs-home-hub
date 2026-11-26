@@ -1,4 +1,152 @@
 {
+ "27781728": {
+  "fr": {
+   "levels": [],
+   "facts": [
+    [
+     "Style de bâtiment",
+     "Détaché, deux étages"
+    ],
+    [
+     "Nombre d'unités",
+     "3 logements résidentiels, tous loués"
+    ],
+    [
+     "Revenus bruts potentiels",
+     "35 400 $"
+    ],
+    [
+     "Chauffage",
+     "Électrique"
+    ],
+    [
+     "Dimensions du terrain",
+     "Façade de 10,06 m, terrain clôturé"
+    ],
+    [
+     "Eau et égout",
+     "Municipaux"
+    ],
+    [
+     "Évaluation municipale (2027)",
+     "461 700 $"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Évaluation du terrain",
+      "252 500 $"
+     ],
+     [
+      "Évaluation du bâtiment",
+      "209 200 $"
+     ],
+     [
+      "Total",
+      "461 700 $"
+     ]
+    ],
+    "total": 461700
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipale (2026)",
+      "4 758 $"
+     ],
+     [
+      "Scolaire (2026)",
+      "375 $"
+     ],
+     [
+      "Total",
+      "5 133 $"
+     ]
+    ],
+    "total": 5133
+   },
+   "expenses": null,
+   "inclusions": "Luminaires, 2 chauffe-eau, électroménagers selon les baux",
+   "exclusions": "1 chauffe-eau loué",
+   "openHouses": []
+  },
+  "en": {
+   "levels": [],
+   "facts": [
+    [
+     "Building style",
+     "Detached, two storeys"
+    ],
+    [
+     "Number of units",
+     "3 residential units, all rented"
+    ],
+    [
+     "Potential gross revenue",
+     "$35,400"
+    ],
+    [
+     "Heating",
+     "Electric"
+    ],
+    [
+     "Lot size",
+     "10.06 m frontage, fenced lot"
+    ],
+    [
+     "Water and sewer",
+     "Municipal"
+    ],
+    [
+     "Municipal assessment (2027)",
+     "$461,700"
+    ]
+   ],
+   "near": [],
+   "assessment": {
+    "year": "2027",
+    "rows": [
+     [
+      "Lot assessment",
+      "$252,500"
+     ],
+     [
+      "Building assessment",
+      "$209,200"
+     ],
+     [
+      "Total",
+      "$461,700"
+     ]
+    ],
+    "total": 461700
+   },
+   "taxes": {
+    "rows": [
+     [
+      "Municipal (2026)",
+      "$4,758"
+     ],
+     [
+      "School (2026)",
+      "$375"
+     ],
+     [
+      "Total",
+      "$5,133"
+     ]
+    ],
+    "total": 5133
+   },
+   "expenses": null,
+   "inclusions": "Light fixtures, 2 water heaters, appliances as per the leases",
+   "exclusions": "1 rented water heater",
+   "openHouses": []
+  }
+ },
  "23538045": {
   "fr": {
    "levels": [],
